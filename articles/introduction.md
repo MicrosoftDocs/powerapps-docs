@@ -1,4 +1,4 @@
-<properties pageTitle="Intro" description="Intro" services="kratosapps"
+<properties pageTitle="Intro" description="Intro" services="kratosapps" authors="bursteg"
  />
 
 # Introduction
