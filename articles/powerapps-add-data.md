@@ -3,5 +3,6 @@
 
 # Add data in PowerApps Studio
 **Prerequisites**
+
 - [Create an app](powerapps-create-an-app.md) to understand how to perform basic tasks, such as adding a control.
 
