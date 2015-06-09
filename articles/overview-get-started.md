@@ -371,7 +371,6 @@ After clicking the smile or frown icon, you can enter the feedback and submit.
 
 	We require an org-ID to register with PowerApps. If you have an o365 account, you automatically have an org-ID. If you don't, you can sign up for an Azure trial account at [http://www.azure.com](http://www.azure.com) using your work email account.
 
-	
 [0]: ./media/overview-get-started/microsoft.png
 [1]: ./media/overview-get-started/power-apps-tools.png
 [2]: ./media/overview-get-started/kratosapps-register.png
@@ -410,3 +409,16 @@ After clicking the smile or frown icon, you can enter the feedback and submit.
 [35]: ./media/overview-get-started/share-app-from-studio.png
 [36]: ./media/overview-get-started/shared-succedeed.png
 [37]: ./media/overview-get-started/edit-permissions-on-shared.png
+[38]: ./media/overview-get-started/show-apiapp-from-data-source.png
+[39]: ./media/overview-get-started/deploy-api-app.png
+[40]: ./media/overview-get-started/successfully-deploy-api-app.png
+[41]: ./media/overview-get-started/deployed-api-app.png
+[42]: ./media/overview-get-started/insert-label.png
+[43]: ./media/overview-get-started/function-geo-location.png
+[44]: ./media/overview-get-started/label-with-adress.png
+[45]: ./media/overview-get-started/delete-app.png
+[46]: ./media/overview-get-started/uninstall-from-portal.png
+[47]: ./media/overview-get-started/confirm-uninstallation.png
+[48]: ./media/overview-get-started/support-tab.png
+[49]: ./media/overview-get-started/send-smile-frown.png
+[50]: ./media/overview-get-started/feedback-submit.png
