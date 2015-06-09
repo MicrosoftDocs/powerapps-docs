@@ -1,10 +1,8 @@
-﻿![Microsoft][0]
-
-# PowerApps
+﻿# PowerApps
 
 ### Guide for Private Preview
 
-May 2015
+**May 2015**
 
 This document outlines the scenarios and capabilities of PowerApps in Private Preview.  Microsoft PowerApps is a fully managed SaaS offering for Business Optimizers which makes designing, creating, acquiring, and sharing mobile apps easy using PowerPoint and Excel-like skills without relying on developer or IT help.
 
@@ -371,7 +369,6 @@ After clicking the smile or frown icon, you can enter the feedback and submit.
 
 	We require an org-ID to register with PowerApps. If you have an o365 account, you automatically have an org-ID. If you don't, you can sign up for an Azure trial account at [http://www.azure.com](http://www.azure.com) using your work email account.
 
-[0]: ./media/overview-get-started/microsoft.png
 [1]: ./media/overview-get-started/power-apps-tools.png
 [2]: ./media/overview-get-started/kratosapps-register.png
 [3]: ./media/overview-get-started/kratosapps-register-completed.png
