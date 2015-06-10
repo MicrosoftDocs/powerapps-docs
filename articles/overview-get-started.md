@@ -6,7 +6,7 @@
 
 This document outlines the scenarios and capabilities of PowerApps in Private Preview.  Microsoft PowerApps is a fully managed SaaS offering for Business Optimizers which makes designing, creating, acquiring, and sharing mobile apps easy using PowerPoint and Excel-like skills without relying on developer or IT help.
 
-# 1. Welcome to PowerApps
+# Welcome to PowerApps
 
 Today's workforce requires experiences that enterprise business applications and LOB systems can't provide. This challenge, along with the growth and maturity of Cloud and SaaS as pillars of modern apps, has given rise to the proliferation of SaaS solutions.
 
@@ -28,7 +28,7 @@ PowerApps offers the following tools and services:
 | An iPad or an iPhone that's running iOS 8.2 or later | Yes | Yes | No |
 | Any device with a browser | Yes | No | No |
 
-# 2. Setup
+# Setup
 
 **First time registration**
 
@@ -74,7 +74,7 @@ PowerApps offers the following tools and services:
 
 		![Install PowerApps on iOS][9]
 
-# 3. Install & run an app
+# Install & run an app
 
 1. Sign in to the PowerApps homepage, and then click **App Gallery** to show pre-made apps that you can install, run, modify, and publish.
 
@@ -112,7 +112,7 @@ PowerApps offers the following tools and services:
 
 	To show a list of apps that you've downloaded to the Player, show the navigation bar by swiping down from the top (or right-clicking anywhere), and then click the Back arrow.
 
-# 4. Create and publish an app (Windows only)
+# Create and publish an app (Windows only)
 
 In the Studio, you can create your own app from nothing, publish it to the Portal, and share the app with others. To more quickly understand the process, you'll download a sample app, modify it slightly, and then publish and share it.
 
@@ -189,7 +189,7 @@ In the Studio, you can create your own app from nothing, publish it to the Porta
 
 	![Your new app was installed][26]
 
-# 5. Update and republish an app (Windows only)
+# Update and republish an app (Windows only)
 
 1. Open the app in the Studio:
 
@@ -218,7 +218,7 @@ In the Studio, you can create your own app from nothing, publish it to the Porta
 
 When the app is updated, it runs automatically.
 
-# 6. Share an app
+# Share an app
 
 One of the cool features in PowerApps is the ability to share the apps you create with your co-workers. The ability to share apps enables others to know and use your app and given feedback. Sharing apps sends an email to the users with a link to download the app.
 
@@ -258,7 +258,7 @@ You can edit the permissions assigned to a user from any of the above tools. For
 
 ![Edit permissions on a shared app][37]
 
-# 7. Use API Apps
+# Use API Apps
 
 You can easily connect an app to popular SaaS and Enterprise platforms by using API Apps. Refer to more details [here](http://azure.microsoft.com/en-us/services/app-service/api/). PowerApps can harness the power of API Apps by exposing the APIs in the Studio.
 
@@ -303,7 +303,7 @@ You can easily connect an app to popular SaaS and Enterprise platforms by using 
 
 	![The label shows the address of your current location][44]
 
-# 8. Delete an app
+# Delete an app
 
 You can delete an app from the Player and uninstall the app from the Portal.
 
@@ -324,7 +324,7 @@ Confirm uninstallation of the app by typing or pasting the name of the app in th
 
 ![Confirm uninstallation][47]
 
-# 9. Sending feedback
+# Sending feedback
 
 You can send feedback to the product team from the PowerApps Studio, PowerApps Player or the PowerApps Portal.
 
@@ -343,7 +343,7 @@ After clicking the smile or frown icon, you can enter the feedback and submit.
 ![Feedback submit][50]
 
 
-# 10. FAQs
+# FAQs
 
 - **How can I submit an idea/feature that is not present in the current release of PowerApps?** 
 
