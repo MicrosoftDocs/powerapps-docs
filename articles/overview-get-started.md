@@ -1,4 +1,7 @@
-﻿# PowerApps
+<properties pageTitle="Guide for Private Preview" description="Provides step-by-step instructions for getting started with the private preview." services="kratosapps" authors="jamescon"
+ />
+ 
+ # PowerApps
 
 ### Guide for Private Preview
 
@@ -6,7 +9,7 @@
 
 This document outlines the scenarios and capabilities of PowerApps in Private Preview.  Microsoft PowerApps is a fully managed SaaS offering for Business Optimizers which makes designing, creating, acquiring, and sharing mobile apps easy using PowerPoint and Excel-like skills without relying on developer or IT help.
 
-# 1. Welcome to PowerApps
+# Welcome to PowerApps
 
 Today's workforce requires experiences that enterprise business applications and LOB systems can't provide. This challenge, along with the growth and maturity of Cloud and SaaS as pillars of modern apps, has given rise to the proliferation of SaaS solutions.
 
@@ -28,7 +31,7 @@ PowerApps offers the following tools and services:
 | An iPad or an iPhone that's running iOS 8.2 or later | Yes | Yes | No |
 | Any device with a browser | Yes | No | No |
 
-# 2. Setup
+# Setup
 
 **First time registration**
 
@@ -36,27 +39,27 @@ PowerApps offers the following tools and services:
 	
 	![Register using your org-id][2]
 
-2. Click **Accept**. You will land on a page like below. Please copy the information in the table (Tenant ID and your email address) and send an email to [cfang@microsoft.com](mailto:cfang@microsoft.com) to have your organization whitelisted to access PowerApps. Whitelisting will complete in 72 hours.
+1. Click **Accept**. You will land on a page like below. Please copy the information in the table (Tenant ID and your email address) and send an email to [cfang@microsoft.com](mailto:cfang@microsoft.com) to have your organization whitelisted to access PowerApps. Whitelisting will complete in 72 hours.
 	
 	![Thanks for your interest][3]
 
 **Subsequent registrations**
 
-2. Sign in using your org-id work account from a browser at [the PowerApps homepage](https://www.kratosapps.com/) ([https://www.kratosapps.com/](https://www.kratosapps.com/)). 
+1. Sign in using your org-id work account from a browser at [the PowerApps homepage](https://www.kratosapps.com/) ([https://www.kratosapps.com/](https://www.kratosapps.com/)). 
 	
 	![Sign in using your org-id][4]
 
-3. Click on **Try it now** to sign up. 
+1. Click on **Try it now** to sign up. 
 	
 	![Try it now][5]
 
-4. (optional) Add the email addresses of people who might want to try PowerApps. You can skip if you don't want to add more users now.
+1. (optional) Add the email addresses of people who might want to try PowerApps. You can skip if you don't want to add more users now.
 
 	**Note:** This option appears only the first time that you sign in.
 	
 	![Invite cooworkers][6]
 
-5. Navigate to the [downloads page](http://www.kratosapps.com/en-us/downloads/) to acquire the installer or do the following:
+1. Navigate to the [downloads page](http://www.kratosapps.com/en-us/downloads/) to acquire the installer or do the following:
 
 	1. To install the Studio and the Player on Windows, click [this link](http://www.kratosapps.com/files/PowerAppsPreviewInstaller.exe), follow the prompts in the wizard that appears, and then wait a few minutes for the installation to finish. When the installation finishes, you can open the Studio and the Player from the Start screen.
 
@@ -64,7 +67,7 @@ PowerApps offers the following tools and services:
 
 		> [AZURE.NOTE] The PowerApps installer will replace any previous versions of the Studio or Player
 
-	2. To install the Player on iOS we use Apple's TestFlight. Navigate to [https://www.kratosapps.com/en-us/downloads/](http://www.kratosapps.com/en-us/downloads/) and enter your Apple ID. You should receive an email invitation in 1-2 business days.  
+	1. To install the Player on iOS we use Apple's TestFlight. Navigate to [https://www.kratosapps.com/en-us/downloads/](http://www.kratosapps.com/en-us/downloads/) and enter your Apple ID. You should receive an email invitation in 1-2 business days.  
 
 		iOS devices registered with this ID can be used to run the PowerApps Player using TestFlight.
 		
@@ -74,37 +77,37 @@ PowerApps offers the following tools and services:
 
 		![Install PowerApps on iOS][9]
 
-# 3. Install & run an app
+# Install & run an app
 
 1. Sign in to the PowerApps homepage, and then click **App Gallery** to show pre-made apps that you can install, run, modify, and publish.
 
 	![PowerApps app Gallery][10]
 
-2. Click **Kudos Phone**, click **Install**, and then wait up to five minutes for the installation to finish.
+1. Click **Kudos Phone**, click **Install**, and then wait up to five minutes for the installation to finish.
 
 	When you install an app from the App Gallery, that app become available for you to download and run on a local device on which you've installed the Player.
 
 	![Install Kudos Phone app][11]
 
-3. Click **My Apps** to show the list of apps that you can download and run in the Player.
+1. Click **My Apps** to show the list of apps that you can download and run in the Player.
 
 	You can download and run apps that you created and published and apps that others have created, published, and shared with you.
 
 	![Apps installed by me][12]
 
-4. Under either **Apps installed by me** or **Apps shared with me**, click the ellipsis (…), and then click **Open**
+1. Under either **Apps installed by me** or **Apps shared with me**, click the ellipsis (…), and then click **Open**
 	
 	![Open an installed app][13]
 
-5. When your browser prompts you, click **Allow**. 
+1. When your browser prompts you, click **Allow**. 
 
 	![Allow to open an app on your computer][14]
 
-6. If you've never used the Player before, sign in by using the same credentials that you use to sign in to the Portal.
+1. If you've never used the Player before, sign in by using the same credentials that you use to sign in to the Portal.
 
 	![Connecting to a service][15]
 
-7. Click Yes to confirm that you want to download the app. 
+1. Click Yes to confirm that you want to download the app. 
 
 	![Are you sure you want to download this app][16]
 
@@ -112,7 +115,7 @@ PowerApps offers the following tools and services:
 
 	To show a list of apps that you've downloaded to the Player, show the navigation bar by swiping down from the top (or right-clicking anywhere), and then click the Back arrow.
 
-# 4. Create and publish an app (Windows only)
+# Create and publish an app (Windows only)
 
 In the Studio, you can create your own app from nothing, publish it to the Portal, and share the app with others. To more quickly understand the process, you'll download a sample app, modify it slightly, and then publish and share it.
 
@@ -120,40 +123,40 @@ In the Studio, you can create your own app from nothing, publish it to the Porta
 
 	![PowerApps Studio][17]
 
-2. Click on File > Open, and then click **Browse**.  
+1. Click on File > Open, and then click **Browse**.  
 
 	![Open file][18]
 
-3. Browse to the location where you extracted the contents of the compressed file, and then open the TravelTranslator folder.
+1. Browse to the location where you extracted the contents of the compressed file, and then open the TravelTranslator folder.
 
-4. Click TravelTranslator.siena, and then click **Open**.
+1. Click TravelTranslator.siena, and then click **Open**.
 
 	![Opened TravelTranslator][19]
 
 	The app opens in the design workspace, where you can create or update an app by adding and configuring UI elements, called controls or visuals. However, not all functions work in the design workspace, so you'll open Preview so that you can briefly explore how TravelTranslator works.
 
-5. Press the Play button on the top right or F5 to open **Preview**, choose a language from the list in the big blue arrow, and then write some text in the top pane of the app.
+1. Press the Play button on the top right or F5 to open **Preview**, choose a language from the list in the big blue arrow, and then write some text in the top pane of the app.
 
 	In the lower-left pane, your text appears as typed English words. In the lower-right pane, your text is translated into the language that you specified.
 
 	![TravelTranslator demo][20]
 
-6. Press Esc to return to the design workspace. 
+1. Press Esc to return to the design workspace. 
 
 **Update and publish an app**
 
 1. Open TravelTranslator, as the previous procedure describes.
-2. Click the lower-left pane, click **Fill** on the **Home** tab, and then click a fairly light color.
+1. Click the lower-left pane, click **Fill** on the **Home** tab, and then click a fairly light color.
 
 	The background of the pane changes to the color that you specified.
 
-3. Press Ctrl-S to save your change, click **Sign in** near the upper-right corner of the Studio, and then provide your credentials.
+1. Press Ctrl-S to save your change, click **Sign in** near the upper-right corner of the Studio, and then provide your credentials.
 
 	**Note:** You must sign in to publish an app to the Portal.
 
 	![Connecting to a service][21]
 
-4. Do one of the following:
+1. Do one of the following:
 
 	1. To convert written text to typed text and then translate it:
 
@@ -161,23 +164,23 @@ In the Studio, you can create your own app from nothing, publish it to the Porta
 
 			**Note**: you MUST create a registered application in Azure Data Marketplace to generate the correct Client ID and Secret for the online translation to work
 
-		2. In the Studio, go the **File** menu, click **App Settings** in the left navigation bar, and then click **BingTranslator** under **Service keys** in the right pane.
+		1. In the Studio, go the **File** menu, click **App Settings** in the left navigation bar, and then click **BingTranslator** under **Service keys** in the right pane.
     
-		3. Specify your Client ID and Client Secret, and then click **Apply**.
+		1. Specify your Client ID and Client Secret, and then click **Apply**.
 		
 			![All services successfully updated to use unique keys][22]
 
-	2. To just convert written text to typed text:
+	1. To just convert written text to typed text:
     
 		1. Press File menu go to **Data Sources**, and then click **BingTranslator** under **Existing sources.** 
     
-		2. Delete that data source by clicking the trash-can icon, and then press Esc.
+		1. Delete that data source by clicking the trash-can icon, and then press Esc.
 
-5. From the File menu, click **Publish** in the left navigation bar.
+1. From the File menu, click **Publish** in the left navigation bar.
 
 	![Publish to PowerApps][23]
 
-6. In the text box, give your updated app a distinct name, select the check box to download and include media files, and then click **Publish**.
+1. In the text box, give your updated app a distinct name, select the check box to download and include media files, and then click **Publish**.
 
 	![Publishing in PowerApps][24]
 
@@ -185,11 +188,11 @@ In the Studio, you can create your own app from nothing, publish it to the Porta
 
 	![App was successfully published to PowerApps][25]
 
-7. (optional) Confirm that the app you published appears under **My Apps** in the Portal, [install your app](), and then test drive it.
+1. (optional) Confirm that the app you published appears under **My Apps** in the Portal, [install your app](), and then test drive it.
 
 	![Your new app was installed][26]
 
-# 5. Update and republish an app (Windows only)
+# Update and republish an app (Windows only)
 
 1. Open the app in the Studio:
 
@@ -200,25 +203,25 @@ In the Studio, you can create your own app from nothing, publish it to the Porta
 
 			![Runn the app][27]
 
-		2. Show the navigation bar (by swiping down from the top or right-clicking anywhere), and then click the Edit icon near the right edge.
+		1. Show the navigation bar (by swiping down from the top or right-clicking anywhere), and then click the Edit icon near the right edge.
 
 			![Show the navigation bar][28]
 
 			The app opens in the Studio.
 
-2. Change the **Fill** of the box that contains translated text. 
+1. Change the **Fill** of the box that contains translated text. 
 
 	![Change the Fill of the box that contains translated text][29]
 
-3. Publish the app again, as described earlier in this guide, and then wait a couple of minutes for the Player to be updated.
+1. Publish the app again, as described earlier in this guide, and then wait a couple of minutes for the Player to be updated.
 
-4. In the Player, click the Refresh icon, click the update icon that appears in the app, and then click **Yes** when prompted to update the app.
+1. In the Player, click the Refresh icon, click the update icon that appears in the app, and then click **Yes** when prompted to update the app.
 
 	![Click the update icon][30]
 
 When the app is updated, it runs automatically.
 
-# 6. Share an app
+# Share an app
 
 One of the cool features in PowerApps is the ability to share the apps you create with your co-workers. The ability to share apps enables others to know and use your app and given feedback. Sharing apps sends an email to the users with a link to download the app.
 
@@ -258,7 +261,7 @@ You can edit the permissions assigned to a user from any of the above tools. For
 
 ![Edit permissions on a shared app][37]
 
-# 7. Use API Apps
+# Use API Apps
 
 You can easily connect an app to popular SaaS and Enterprise platforms by using API Apps. Refer to more details [here](http://azure.microsoft.com/en-us/services/app-service/api/). PowerApps can harness the power of API Apps by exposing the APIs in the Studio.
 
@@ -268,9 +271,9 @@ You can easily connect an app to popular SaaS and Enterprise platforms by using 
 
 	![Show apiApps from DataSources][38]
 
-2. If you haven't signed-in using your work account, enter your credentials.
+1. If you haven't signed-in using your work account, enter your credentials.
 
-3. In the list of ApiApps, click **Deploy** on the ApiApp that you want to use.
+1. In the list of ApiApps, click **Deploy** on the ApiApp that you want to use.
 
 	![Deploy on the ApiApp][39]
 
@@ -285,25 +288,25 @@ You can easily connect an app to popular SaaS and Enterprise platforms by using 
 	![ApiApp Deployed][41]
 
 
-4. Under **Existing Sources**, click **Geolocation**, click **Add data**, and then press Esc to return to the design workspace.
+1. Under **Existing Sources**, click **Geolocation**, click **Add data**, and then press Esc to return to the design workspace.
 
-5. On the **Insert** tab, click **Label**.
+1. On the **Insert** tab, click **Label**.
 
 	![Insert label][42]
 
-6. Click the label that you just added, and then set its **Text** property to this 
+1. Click the label that you just added, and then set its **Text** property to this 
 
 		GeoLocation!Address\_Lookup(Location!Latitude,Location!Longitude)
 
 	![GeoLocation!Address\_Lookup(Location!Latitude,Location!Longitude)][43]
 
-7. If prompted, click **Allow**.
+1. If prompted, click **Allow**.
 
 	The label shows the address of your current location.
 
 	![The label shows the address of your current location][44]
 
-# 8. Delete an app
+# Delete an app
 
 You can delete an app from the Player and uninstall the app from the Portal.
 
@@ -324,7 +327,7 @@ Confirm uninstallation of the app by typing or pasting the name of the app in th
 
 ![Confirm uninstallation][47]
 
-# 9. Sending feedback
+# Sending feedback
 
 You can send feedback to the product team from the PowerApps Studio, PowerApps Player or the PowerApps Portal.
 
@@ -343,7 +346,7 @@ After clicking the smile or frown icon, you can enter the feedback and submit.
 ![Feedback submit][50]
 
 
-# 10. FAQs
+# FAQs
 
 - **How can I submit an idea/feature that is not present in the current release of PowerApps?** 
 
