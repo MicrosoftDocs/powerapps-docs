@@ -1,7 +1,7 @@
 <properties pageTitle="Guide for Private Preview" description="Provides step-by-step instructions for getting started with the private preview." services="kratosapps" authors="jamescon"
  />
  
- # PowerApps
+# PowerApps
 
 ### Guide for Private Preview
 
