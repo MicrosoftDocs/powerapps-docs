@@ -9,6 +9,6 @@ Get an [overview](readme.md) of Project Siena, and check out [other sample apps]
 
 Create an app for tracking inventory by showing a picture of each product, its name, and the number of units in stock. As products are sold, update the quantity to reflect your current inventory.
 
-![Final result](./media/siena-tutorial-inventory/final.png)
+![Final result](./media/kratosapps-tutorial-inventory/final.png)
 
 **Prerequisites**
