@@ -5,11 +5,11 @@
 	authors="AFTOwen"
  />
 
-#Add data from users in PowerApps Studio
+#Add data from users in KratosApps Studio
 Add data from the user to a collection if you want to keep that data after your app is closed and reopened. Track temporary data from the user (for example, a running total of costs that automatically updates as the user adds items) in a context variable.
 
 ###Prerequisites
-* [Create an app](Create+your+first+app+in+PowerApps+Studio.md) to understand how to perform basic tasks, such as adding a control.
+* [Create an app](kratosapps-tutorial-inventory.md) to understand how to perform basic tasks, such as adding a control.
 
 ##Add data from the user to a collection
 
@@ -23,7 +23,7 @@ Add data from the user to a collection if you want to keep that data after your 
  **Collect(Destinations, Destination!Text)**
 1. (optional) Name the button **AddButton**, and set its **Text** property to **Add**.
 
- ![An input-text box, named Destination, and a button, named AddButton.](../Image/AddUserData/sienaUser1Col.jpg)
+ ![An input-text box, named Destination, and a button, named AddButton.](./media/kratosapps-add-user-data/one-column.png)
  
 1. Press F5, type some text into the box, and then click the button.
 
@@ -31,7 +31,7 @@ Add data from the user to a collection if you want to keep that data after your 
 
 3. (optional) To display the collection that you created, press Alt-D, and then click **Collections** in the left navigation bar.
 
- ![Preview of a one-column collection, named Destinations](../Image/AddUserData/sienaUser1ColPreview.jpg)
+ ![Preview of a one-column collection, named Destinations](./media/kratosapps-add-user-data/one-column-preview.png)
 
 ###Create a collection that has more than one column
 1. On the **Insert** tab, click **Text**, and then click **Input Text**.
@@ -48,7 +48,7 @@ Add data from the user to a collection if you want to keep that data after your 
  
 5. (optional) Name the button **AddButton**, and set its **Text** property to **Add**.
 
- ![Two input-text boxes, named City and State, and an Add button](../Image/AddUserData/sienaUserCityStateAdd.jpg)
+ ![Two input-text boxes, named City and State, and an Add button](./media/kratosapps-add-user-data/city-state-add.png)
 
 6. Press F5 to open **Preview**, type some text into each box, and then click the button.
 
@@ -56,18 +56,18 @@ Add data from the user to a collection if you want to keep that data after your 
  
  To display the collection that you created, press Alt-D, and then click **Collections** in the left navigation bar.
 
- ![Preview of a two-column collection named Destinations](../Image/AddUserData/sienaUserCityStatePreview.jpg)
+ ![Preview of a two-column collection named Destinations](./media/kratosapps-add-user-data/city-state-preview.png)
  
 ###Add one or more columns to an existing collection
-1. Show a set of data in a custom gallery, as the first procedure in [this topic](Create+your+first+app+in+PowerApps+Studio.md) describes, and name the gallery **PriceGallery**.
+1. Show a set of data in a custom gallery, as the first procedure in [this topic](kratosapps-show-data.md) describes, and name the gallery **PriceGallery**.
 
-2. (optional) Indicate which gallery item is selected, as [Create an app](Create+your+first+app+in+PowerApps+Studio.md) describes.
+2. (optional) Indicate which gallery item is selected, as [Create an app](KratosApps-tutorial-inventory.md) describes.
 
 3. Add a slider, name it **OrderQty**, and move it under the gallery.
 
 4. Add a button, set its **Text** property to **Add**, and move it under the **OrderQty** slider.
 
- ![A gallery (with two columns), a slider, and an Add button](../Image/AddUserData/sienaFilterAddOrder.jpg)
+ ![A gallery (with two columns), a slider, and an Add button](./media/kratosapps-add-user-data/filter-add-order.png)
 
 5. Set the **OnSelect** property of the **Add** button to this expression:
 
@@ -87,7 +87,7 @@ Add data from the user to a collection if you want to keep that data after your 
 
 10. Press Alt-D, and then click **Collections** to display a preview of the **OrderList** collection.
 
- ![A preview of the OrderList collection, which has three columns](../Image/AddUserData/sienaFilterOrderList.jpg)
+ ![A preview of the OrderList collection, which has three columns](./media/kratosapps-add-user-data/filter-order-list.png)
  
 11. Press Esc to return to the design workspace.
 
@@ -105,9 +105,9 @@ To remove one item at a time, show the **OrderList** collection in a gallery, an
 
 2. On the **Insert** tab, click **New Screen**, and name the new screen **GalleryScreen**.
 
-3. Show the **GalleryScreen** by clicking it in the left navigation bar, and then create the custom gallery that the first procedure in [Show a set of data](Show+a+set+of+data+in+PowerApps+Studio.md) describes.
+3. Show the **GalleryScreen** by clicking it in the left navigation bar, and then create the custom gallery that the first procedure in [Show a set of data](kratosapps-show-data.md) describes.
 
- ![A gallery with three columns and five rows](../Image/AddUserData/DELsienaFilterPriceGallery.jpg)
+ ![A gallery with three columns and five rows](./media/kratosapps-add-user-data/filter-price-gallery.png)
 
 4. On the **FilterScreen**, click the **Insert** tab, click **Controls**, and then click **Drop-down**.
 
