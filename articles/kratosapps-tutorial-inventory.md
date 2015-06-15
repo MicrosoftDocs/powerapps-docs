@@ -1,4 +1,8 @@
-<properties pageTitle="Create an app in KratosApps Studio" description="Create your first app in KratosApps Studio, including importing data and adding controls" services="kratosapps" authors="AFTOwen"
+<properties
+	pageTitle="Create an app in KratosApps Studio"
+	description="In KratosApps Studio, combine data with UI elements to create an app for tracking inventory"
+	services="kratosapps"
+	authors="AFTOwen"
  />
 
 # Create an app in KratosApps Studio
@@ -181,14 +185,14 @@ In this section, you'll show the **Inventory** collection in a gallery that supp
  If you perform this step, you can click a gallery label to select it without the rectangle getting in the way.
 
 ##Develop your own app
-* [Add one or more sets of data](Add+a+data+set+in+PowerApps+Studio.md) from Excel, SharePoint, Office 365, Bing, social media, a REST service, or another source.
+* [Add one or more sets of data](KratosApps-add-data.md) from Excel, SharePoint, Office 365, Bing, social media, a REST service, or another source.
 
-* [Add data from your users](Add+data+from+users+in+PowerApps+Studio.md).
+* [Add data from your users](KratosApps-add-user-data.md).
 
-* [Show, sort, and filter data](Show+a+set+of+data+in+PowerApps+Studio.md) in a custom gallery, or show it in a chart.
+* [Show, sort, and filter data](KratosApps-show-data.md) in a custom gallery, or show it in a chart.
 
-* [Add and configure controls](Configure+a+control+in+PowerApps+Studio.md), such as lists and toggles, to add and show particular kinds of data.
+* [Add and configure controls](KratosApps-configure-control.md), such as lists and toggles, to add and show particular kinds of data.
 
-* [Share data](Share+data+in+PowerApps+Studio.md) by exporting it and then importing it into another app that was created in KratosApps Studio, posting the data in a SharePoint list, or sending the data in an e-mail message. 
+* [Share data](KratosApps-share.md) by exporting it and then importing it into another app that was created in KratosApps Studio, posting the data in a SharePoint list, or sending the data in an e-mail message. 
 
-* [Build a function](Build+a+function+in+PowerApps+Studio.md) to calculate, update, and customize data.
+* [Build a function](KratosApps-build-function.md) to calculate, update, and customize data.
