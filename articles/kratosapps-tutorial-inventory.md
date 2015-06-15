@@ -83,7 +83,7 @@ You can add text, numbers, and images to an app by adding one label or image con
  
 3. On the **Behavior** tab, click **OnSelect**.
 
- ![The OnSelect option on the Behavior tab](./media/kratosapps-tutorial-inventory/sienaCFA2OnSelect.png)
+ ![The OnSelect option on the Behavior tab](./media/kratosapps-tutorial-inventory/onselect.png)
  
   **OnSelect** appears in the properties list so that you can specify what happens when a user (in this case, you) clicks the control that you just added.
   
