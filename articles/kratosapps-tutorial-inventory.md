@@ -98,15 +98,17 @@ You can add text, numbers, and images to an app by adding one label or image con
  
 6. Click the Import control, browse to CreateFirstApp.zip, and then click it.
 
- ![UI for browsing to and then opening a file](./media/kratosapps-tutorial-inventory/sienaCFA2OpenZip.png)
+ ![UI for browsing to and then opening a file](./media/kratosapps-tutorial-inventory/open-zip.png)
  
 7. Click **Open**, and then press Esc to return to the design workspace.
 
 You've just created the **Inventory** collection, which contains information about five products, including a design image, a product name, and the number of units in stock.
 
 8. Preview the collection by pressing Alt-D and then clicking **Collections** in the left navigation bar.
- ![The first three items in the Inventory collection](./media/kratosapps-tutorial-inventory/sienaCFAInventoryPreview.png)
+ ![The first three items in the Inventory collection](./media/kratosapps-tutorial-inventory/inventory-preview.png)
+
   The first five rows in the **Inventory** collection appear.
+
 9. Press Esc to return to the design workspace.
 
 **Note:** If you delete the Import control, you'll also delete the collection that you just created. To hide the Import control, click it, click **Visible** in the list of properties, and then type **false** in the Function Bar.
@@ -121,7 +123,7 @@ In this section, you'll show the **Inventory** collection in a gallery that supp
 
 1. On the **Insert** tab, click **Gallery**, and then click the horizontal image gallery with text.
 
- ![Icon to add a horizontal image gallery with text](./media/kratosapps-tutorial-inventory/sienaCFA2AddGallery.png)
+ ![Icon to add a horizontal image gallery with text](./media/kratosapps-tutorial-inventory/add-gallery.png)
  
  The gallery appears, and the properties list automatically shows the **Items** property.
 2. In the Formula Bar, type or paste **Inventory**.
@@ -130,13 +132,13 @@ In this section, you'll show the **Inventory** collection in a gallery that supp
  
 3. Just as you did with the label, rename the gallery from **Gallery1** to **ProductGallery**, move it down and to the right so that it doesn't block the other controls, and widen it to show three products.
 
- ![Inventory collection in a gallery](./media/kratosapps-tutorial-inventory/sienaCFAInventoryDefault.png)
+ ![Inventory collection in a gallery](./media/kratosapps-tutorial-inventory/inventory-default.png)
  
  The gallery contains an image control, which shows the design of each product, and two labels. You'll configure the lower label to show the number of units in stock for each product.
 
 4. In the first item of the gallery, click the bottom label.
 
- ![A horizontal gallery with the Subhead element selected](./media/kratosapps-tutorial-inventory/sienaCFAGallerySubhead.png)
+ ![A horizontal gallery with the Subhead element selected](./media/kratosapps-tutorial-inventory/gallery-subhead.png)
  
  The first item in any gallery is a template. By changing the first item, you automatically change all other items in the gallery.
 
@@ -146,13 +148,13 @@ In this section, you'll show the **Inventory** collection in a gallery that supp
 
  The bottom label shows the number of units in stock for each product.
  
- ![Four items in a gallery: picture, name, quantity](./media/kratosapps-tutorial-inventory/sienaCFAProductGallery.png)
+ ![Four items in a gallery: picture, name, quantity](./media/kratosapps-tutorial-inventory/product-gallery.png)
  
 ###Show which gallery item is selected
 
 1. Select the gallery template by clicking any item in the gallery except the first one and then clicking the icon that appears in the upper-left corner.
 
- ![Icon for editing the template of a gallery](./media/kratosapps-tutorial-inventory/sienaUIEditTemplate.png)
+ ![Icon for editing the template of a gallery](./media/kratosapps-tutorial-inventory/edit-template.png)
  
 2. On the **Insert** tab, click **Shapes**, and then click the rectangle.
  
@@ -162,7 +164,7 @@ In this section, you'll show the **Inventory** collection in a gallery that supp
 
 4. Open the **Border** list, click **Border Style**, and then click the solid line.
 
- ![List of border styles, including Solid](./media/kratosapps-tutorial-inventory/sienaCFA2BorderStyle.png)
+ ![List of border styles, including Solid](./media/kratosapps-tutorial-inventory/border-style.png)
 
 5. Open the **Border** list, set the **Border Thickness** to 3, and then resize the rectangle so that it surrounds each gallery item.
 
@@ -170,7 +172,7 @@ In this section, you'll show the **Inventory** collection in a gallery that supp
 
  **If(ThisItem!IsSelected, true)**
 
- ![A blue rectangle surrounds the current selection in a gallery](./media/kratosapps-tutorial-inventory/sienaCFA2BlueRect.png)
+ ![A blue rectangle surrounds the current selection in a gallery](./media/kratosapps-tutorial-inventory/blue-rectangle.png)
  
 7. Click a few gallery items to confirm that the rectangle appears only around the item that you clicked most recently.
  
