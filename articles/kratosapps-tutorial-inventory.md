@@ -106,7 +106,9 @@ You've just created the **Inventory** collection, which contains information abo
 
 8. Preview the collection by pressing Alt-D and then clicking **Collections** in the left navigation bar.
  ![The first three items in the Inventory collection](./media/kratosapps-tutorial-inventory/inventory-preview.png)
+
   The first five rows in the **Inventory** collection appear.
+
 9. Press Esc to return to the design workspace.
 
 **Note:** If you delete the Import control, you'll also delete the collection that you just created. To hide the Import control, click it, click **Visible** in the list of properties, and then type **false** in the Function Bar.
