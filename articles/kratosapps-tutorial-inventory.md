@@ -185,14 +185,14 @@ In this section, you'll show the **Inventory** collection in a gallery that supp
  If you perform this step, you can click a gallery label to select it without the rectangle getting in the way.
 
 ##Develop your own app
-* [Add one or more sets of data](KratosApps-add-data.md) from Excel, SharePoint, Office 365, Bing, social media, a REST service, or another source.
+* [Add one or more sets of data](kratosapps-add-data.md) from Excel, SharePoint, Office 365, Bing, social media, a REST service, or another source.
 
-* [Add data from your users](KratosApps-add-user-data.md).
+* [Add data from your users](kratosapps-add-user-data.md).
 
-* [Show, sort, and filter data](KratosApps-show-data.md) in a custom gallery, or show it in a chart.
+* [Show, sort, and filter data](kratosapps-show-data.md) in a custom gallery, or show it in a chart.
 
-* [Add and configure controls](KratosApps-configure-control.md), such as lists and toggles, to add and show particular kinds of data.
+* [Add and configure controls](kratosapps-configure-control.md), such as lists and toggles, to add and show particular kinds of data.
 
-* [Share data](KratosApps-share.md) by exporting it and then importing it into another app that was created in KratosApps Studio, posting the data in a SharePoint list, or sending the data in an e-mail message. 
+* [Share data](kratosapps-share.md) by exporting it and then importing it into another app that was created in KratosApps Studio, posting the data in a SharePoint list, or sending the data in an e-mail message. 
 
-* [Build a function](KratosApps-build-function.md) to calculate, update, and customize data.
+* [Build a function](kratosapps-build-function.md) to calculate, update, and customize data.
