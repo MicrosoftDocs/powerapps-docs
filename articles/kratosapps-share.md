@@ -41,7 +41,7 @@ To transfer data from one app created in KratosApps Studio to another, first exp
 
 1. In SharePoint, create a list that's named **Locations** and that contains columns named **Cities** and **CountriesRegions**.
 
-	![A SharePoint list with columns named Cities and CountriesRegions](./media/kratosapps-share/splist.png)
+	![A SharePoint list with columns named Cities and CountriesRegions](./media/kratosapps-share/SPlist.png)
 
 1. (optional) Add one or more entries to the list.
 
