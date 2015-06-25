@@ -204,9 +204,9 @@ When you add items in KratosApps Studio that use these functions, you can specif
 
 Each WADL file needs the following elements:
 
-- <application/> - the root element.
+- <application\> - the root element.
 - <grammars\> - defines formats of the returned data. 
-- <resources\> - contains the REST API call and any parameters for each method that you call. 
+- <res:ources\> - contains the REST API call and any parameters for each method that you call. 
 - <siena:authenticationProviders\> - empty unless you need authentication to access the REST API.
 - <siena:template\> - provides the details for the authentication if it is required; otherwise, it's empty.
 
@@ -362,6 +362,6 @@ Unsupported elements: <representation\>, <resource type\>
 | KratosApps Studio Specific Attribute | Required | Description |
 | ------------------------------------ | -------- |------------ |
 | siena:serviceid | Required | This attribute identifies the name of the service when you import the WADL file into KratosApps Studio |
-| siena:author | Optional | This attribute doesn't apppear in KratosApps Studio, but it could be useful to know who created the WADL file. |
+| siena:author | Optional | This attribute doesn't appear in KratosApps Studio, but it could be useful to know who created the WADL file. |
 
 ## Load a WADL file and access the data ##
