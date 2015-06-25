@@ -206,7 +206,7 @@ Each WADL file needs the following elements:
 
 - <application\> - the root element.
 - <grammars\> - defines formats of the returned data. 
-- <res:ources\> - contains the REST API call and any parameters for each method that you call. 
+- \<resources\> - contains the REST API call and any parameters for each method that you call. 
 - <siena:authenticationProviders\> - empty unless you need authentication to access the REST API.
 - <siena:template\> - provides the details for the authentication if it is required; otherwise, it's empty.
 
