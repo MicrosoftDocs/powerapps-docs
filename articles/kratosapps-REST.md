@@ -100,7 +100,9 @@ This file uses OAuth 2.0 authentication and contains two functions:
 When you add items in KratosApps Studio that use these functions, you can specify the folder and the location for the image. These strings can be the text from another field in your app. That field could be data from a call to a REST API too.
 
 	<?xml version="1.0" encoding="utf-16"?>
-	<application xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sienatool="http://www.todo.com" siena:serviceId="Dropbox" xmlns="http://wadl.dev.java.net/2009/02">
+	<application xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11"
+						xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sienatool="http://www.todo.com" siena:serviceId="Dropbox"
+						xmlns="http://wadl.dev.java.net/2009/02">
 	  <grammars>
 		<siena:jsonTypes targetNamespace="http://www.todo.com" xmlns:wadl="http://wadl.dev.java.net/2009/02">
 		  <siena:object name="GetFileAndFolderInfo_Root">
@@ -202,27 +204,164 @@ When you add items in KratosApps Studio that use these functions, you can specif
 
 Each WADL file needs the following elements:
 
-- &lt;application&gt; - the root element.
-- &lt;grammars&gt; - defines formats of the returned data. 
-- &lt;resources&gt; - contains the REST API call and any parameters for each method that you call. 
-- &lt;siena:authenticationProviders&gt; - empty unless you need authentication to access the REST API.
-- &lt;siena:template&gt; - provides the details for the authentication if it is required; otherwise, it's empty.
+- <application/> - the root element.
+- <grammars\> - defines formats of the returned data. 
+- <resources\> - contains the REST API call and any parameters for each method that you call. 
+- <siena:authenticationProviders\> - empty unless you need authentication to access the REST API.
+- <siena:template\> - provides the details for the authentication if it is required; otherwise, it's empty.
 
 Some elements differ from or extend the [WADL standard](http://www.w3.org/Submission/wadl/) in ways that are specific to KratosApps Studio. These [differences and extensions](#differences-and-extensions) are described later in this topic. 
 
-**&lt;application&gt;**
+**<application\>**
 
-Add this root element to your XML file, but replace &lt;name-of-your-service&gt; with whatever your service is called. KratosApps Studio shows this name when you load your WADL file.
+Add this root element to your XML file, but replace <name\_of\_your_service> with whatever your service is called. KratosApps Studio shows this name when you load your WADL file.
 
 	<application xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" 
-                                     xmlns:xs="http://www.w3.org/2001/XMLSchema"  
-                                     siena:serviceId="<name-of-your-service>" 
-                                     xmlns="http://wadl.dev.java.net/2009/02">
+						xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+						siena:serviceId="<name_of_your_service>" 
+						xmlns="http://wadl.dev.java.net/2009/02">
              <!-- Add the other elements here -->
 	</application
 
+**<grammars\>**
 
+This element defines whether the data is in JSON or XML format and the name and the type of each field. In this example, the data is JSON. If your REST API call returns XML, add an element <siena:sampleXmlTypes> instead.
+
+	<grammars>
+	  <siena:jsonTypes targetNamespace="http://www.todo.com" xmlns:wadl="http://wadl.dev.java.net/2009/02">
+		<siena:object name="GetFileAndFolderInfo_Root">
+		  <siena:property name="read_only" type="boolean" />
+		  <siena:property name="hash" type="string" />
+		  <siena:property name="revision" type="number" />
+		  <siena:property name="bytes" type="number" />
+		  <siena:property name="thumb_exists" type="boolean" />
+		  <siena:property name="rev" type="string" />
+		  <siena:property name="modified" type="string" />
+		  <siena:property name="size" type="string" />
+		  <siena:property name="path" type="string" />
+		  <siena:property name="is_dir" type="boolean" />
+		  <siena:property name="modifier" type="string" />
+		  <siena:property name="root" type="string" />
+		  <siena:property name="contents" typeRef="GetFileAndFolderInfo_contents_Array" />
+		  <siena:property name="icon" type="string" />
+		</siena:object>
+		<siena:object name="GetFileAndFolderInfo_contents_Object">
+		  <siena:property name="rev" type="string" />
+		  <siena:property name="thumb_exists" type="boolean" />
+		  <siena:property name="path" type="string" />
+		  <siena:property name="is_dir" type="boolean" />
+		  <siena:property name="client_mtime" type="string" />
+		  <siena:property name="icon" type="string" />
+		  <siena:property name="read_only" type="boolean" />
+		  <siena:property name="modifier" type="string" />
+		  <siena:property name="bytes" type="number" />
+		  <siena:property name="modified" type="string" />
+		  <siena:property name="size" type="string" />
+		  <siena:property name="root" type="string" />
+		  <siena:property name="mime_type" type="string" />
+		  <siena:property name="revision" type="number" />
+		</siena:object>
+		<siena:array name="GetFileAndFolderInfo_contents_Array" typeRef="GetFileAndFolderInfo_contents_Object" />
+	  </siena:jsonTypes>
+	  <siena:jsonTypes targetNamespace="http://www.todo.com" xmlns:wadl="http://wadl.dev.java.net/2009/02">
+		<siena:object name="DisplayImage_Root">
+		  <siena:property name="url" type="string" dtype="hyperlink" />
+		  <siena:property name="expires" type="string" />
+		</siena:object>
+	  </siena:jsonTypes>
+	</grammars>
+
+**<resources\>**
+
+When accessing a REST resource, a typical starting point is a resource URI, which is also known as a REST endpoint. For example, https://api.dropbox.com.
+
+In WADL, the <resources\> and <resource\> elements are used to describe a resource URI. The complete path name of the resource is generated by concatenating the value of the base attribute in the <resources> element and the value of the path attribute in the <resource\> element. In the example below, the resource URIs are:
+
+https://api.dropbox.com/1/metadata/auto/photos
+
+https://api.dropbox.com/1/media/auto
+
+The sample below shows a <resources\> element for each specific URI that you want to use as a function in KratosApps Studio. When you create your own file, you can have multiple <resource\> child elements if the base path for each URI is the same as the one in the <resources\> element.
+
+Methods associated with a REST resource are described using the <method\> element. A <resource\> element can have one or more <method\> elements as its children. The <method\> element basically describes an HTTP protocol method that can be applied to the REST resource. The id attribute in the <method\> element is the identifier that appears in the list of functions in KratosApps Studio.
+
+Each <method\> element has a <request\> and <response\> element. Parameters to the resource URI are defined with a <param\> element which is a child of the <request\> element. For example, the list parameter is supplied for the GetFileAndFolderInfo method.
+
+	<resources base="https://api.dropbox.com" siena:authenticationProviderHref="#Dropbox_Auth">
+	<resource path="1/metadata/auto/photos">
+	  <method name="Get" id="GetFileAndFolderInfo" siena:requiresAuthentication="true">
+		<request>
+		  <param name="list" style="Query" required="true" siena:sampleDefault="true" />
+		</request>
+		<response siena:resultForm="single">
+		  <representation mediaType="application/json">
+			<param name="GetFileAndFolderInfo_Name" type="sienatool:GetFileAndFolderInfo_Root" style="plain" path="" />
+		  </representation>
+		</response>
+	  </method>
+	</resource>
+	</resources>
+	<resources base="https://api.dropbox.com" siena:authenticationProviderHref="#Dropbox_Auth">
+	<resource path="1/media/auto/">
+	  <method name="Get" id="DisplayImage" siena:requiresAuthentication="true">
+		<request>
+		  <param name="path" style="Query" required="true" siena:sampleDefault="/Photos/i-b858zMh-M.jpg" />
+		</request>
+		<response siena:resultForm="single">
+		  <representation mediaType="application/json">
+			<param name="DisplayImage_Name" type="sienatool:DisplayImage_Root" style="plain" path="" />
+		  </representation>
+		</response>
+	  </method>
+	</resource>
+	</resources>
+
+**<siena:authenticationProviders> and <siena:template>**
+
+These elements handle the authentication process depending on the authentication method. This example is for Dropbox using OAuth 2.0 and needs a callback url. Your app isn't a web app and doesn't have a URL, so you must pass a valid URL as a placeholder.
+
+	<siena:authenticationProviders>
+	  <siena:oauth2 id="Dropbox_Auth">
+		<siena:grantType>
+		  <siena:implicit>
+			<siena:endpoints>
+			  <siena:authorization url="https://www.dropbox.com/1/oauth2/authorize" />
+			  <siena:callback url="https://fabrikam-prime-oauth.azurewebsites.net/" />
+			</siena:endpoints>
+			<siena:credentials clientId="[templated]" />
+		  </siena:implicit>
+		</siena:grantType>
+		<siena:resourceAuthorization placement="Query" />
+	  </siena:oauth2>
+	</siena:authenticationProviders>
+	<siena:template>
+	  <siena:variable name="Dropbox__ClientID">
+		<siena:doc title="Client ID/API Key" />
+		<siena:modifyAuth tag="credentials" href="#Dropbox_Auth" attribute="clientId" />
+	  </siena:variable>
+	  <siena:variable name="Dropbox__URI">
+		<siena:doc title="Redirect URI" />
+		<siena:modifyAuth tag="callback" href="#Dropbox_Auth" attribute="url" />
+	  </siena:variable>
+	</siena:template>
 
 ###Differences and extensions###
+
+This section contains extensions to the WADL standard that KratosApps Studio supports, in addition to parts of the same standard that KratosApps Studio doesn't support. The section numbers refer to the sections in the WADL standard itself. 
+
+**Cross-referencing is not supported ([Section 2.1](http://www.w3.org/Submission/wadl/#x3-60002.1))**
+
+Section 2.1 refers to cross-referencing, but KratosApps Studio supports only self-contained WADLs. All types must be listed inline.
+
+**Application support [(Section 2.2)](http://www.w3.org/Submission/wadl/#x3-70002.2)**
+
+Supported elements: <doc\>, <grammars\>, <resources\>, <method\>
+
+Unsupported elements: <representation\>, <resource type\>
+
+| KratosApps Studio Specific Attribute | Required | Description |
+| ------------------------------------ | -------- |------------ |
+| siena:serviceid | Required | This attribute identifies the name of the service when you import the WADL file into KratosApps Studio |
+| siena:author | Optional | This attribute doesn't apppear in KratosApps Studio, but it could be useful to know who created the WADL file. |
 
 ## Load a WADL file and access the data ##
