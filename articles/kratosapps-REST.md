@@ -349,7 +349,7 @@ These elements handle the authentication process depending on the authentication
 
 This section contains extensions to the WADL standard that KratosApps Studio supports, in addition to parts of the same standard that KratosApps Studio doesn't support. The section numbers refer to the sections in the WADL standard itself. 
 
-**Cross-referencing is not supported ([Section 2.1](http://www.w3.org/Submission/wadl/#x3-60002.1))**
+**Cross-referencing isn't supported ([Section 2.1](http://www.w3.org/Submission/wadl/#x3-60002.1))**
 
 Section 2.1 refers to cross-referencing, but KratosApps Studio supports only self-contained WADLs. All types must be listed inline.
 
@@ -364,4 +364,169 @@ Unsupported elements: &lt;representation>, &lt;resource type\>
 | siena:serviceid | Required | This attribute identifies the name of the service when you import the WADL file into KratosApps Studio |
 | siena:author | Optional | This attribute doesn't appear in KratosApps Studio, but it could be useful to know who created the WADL file. |
 
+**Documentation [(Section 2.3)](http://www.w3.org/Submission/wadl/#x3-80002.3)**
+
+This is supported on all nodes in the WADL file, but only the &lt;method> and &lt;siena:function> elements use the &lt;doc> element.
+
+**Grammars [(Section 2.4)](http://www.w3.org/Submission/wadl/#x3-90002.4)**
+
+The WADL file must be self-contained, so the &lt;include> element isn't supported.
+
+KratosApps Studio supports only two types of elements for &lt;grammars>: &lt;siena:sampleXmlTypes> and &lt;siena:jsonTypes>.
+
+**Resources [(Section 2.5)](http://www.w3.org/Submission/wadl/#x3-110002.5)**
+
+A new attribute is supported: siena:authenticationProviderhref.
+
+**Resource [(Section 2.6)](http://www.w3.org/Submission/wadl/#x3-120002.6)**
+
+Child elements: &lt;doc>, &lt;method>, &lt;param> (supported attributes: template / unsupported attributes: matrix, query, header)
+
+Supported attributes: path
+
+Unsupported attributes: id, type, queryType
+
+Attributes that are specific to KratosApps Studio: siena: authenticationProviderHref, siena: additionalParameters
+
+**Resource Type [(Section 2.7)](http://www.w3.org/Submission/wadl/#x3-140002.7)**
+
+Resource type isn't supported.
+
+**Method [(Section 2.8)](http://www.w3.org/Submission/wadl/#x3-150002.8)**
+
+Supported child elements: &lt;doc> (optional), &lt;request> (optional), &lt;response> (optional)
+
+Supported attributes:
+
+- Name - this is the HTTP method (PUT, GET, POST, DELETE and PATCH are supported)
+- id is supported. KratosApps Studio requires this id for locally defined methods. This is the default name for the function for the method.
+
+| KratosApps Studio Specific Attribute | Required | Description |
+| ------------------------------------ | -------- |------------ |
+| siena:requiresAuthentication       | Optional |Indicates the method needs authentication (false by default)|
+| siena:disableTryIt | Optional | Disables the Try It button for this function in KratosApps Studio |
+
+**Request [(Section 2.9)](http://www.w3.org/Submission/wadl/)**
+
+Supported child elements: &lt;doc> (optional), &lt;representation> (optional), &lt;param> (optional) - supports query and header
+
+Extensions for KratosApps Studio: siena:additionalParameters
+
+**Response [(Section 2.10)](http://www.w3.org/Submission/wadl/)**
+
+Supported child elements: &lt;doc> (optional), &lt;representation> (zero or one)
+
+Unsupported child element: &lt;param>
+
+Unsupported attributes: status
+
+KratosApps Studio extensions: resultform attribute
+
+**Representation [(Section 2.11)](http://www.w3.org/Submission/wadl/)**
+
+For KratosApps Studio, there are differences between the &lt;representation> element as a child of the &lt;request> or &lt;response> element.
+
+*For &lt;representation> as a child of either request or response:*
+
+- Supported child element: &lt;doc> (optional)
+- Unsupported child elements and attributes: &lt;representation> reference element, id attribute, profile attribute
+
+*For &lt;representation> as a child of request:*
+
+- Supported MediaTypes: application/json, application/x-www-form-urlencoded, multipart/form-data
+- Unsupported attributes: element
+
+*For &lt;representation> as a child of response:*
+
+- Supported MediaTypes: application/json, application/xml, image (equivalent to image/\*), audio (equivalent to audio/\*) 
+- Only application/json and application/xml support child &lt;param> elements. 
+- The &lt;representation> element as a child of the &lt;response> element is supported only when the siena:resultform attribute for the response has a value of either single or aggregate.
+
+**Parameter [(Section 2.12)](http://www.w3.org/Submission/wadl/)**
+
+Parameter refers to the &lt;param> element.
+
+Supported as a child of these elements: &lt;request>, &lt;resource>, &lt;representation>
+
+Not supported as a child of these elements: &lt;parameter reference>, &lt;application>, &lt;response>
+
+Supported attributes: name, style, type, path, required, fixed, default (as the parameter default and not the server default) 
+
+Unsupported attributes: id, repeating
+
+Supported values for the style attribute of the &lt;param> element:
+
+| Value    | Parent element of &lt;param> | Usage |
+|----------|------------------------------|------ |
+| header   | <request>                    | Specifies an HTTP header for the HTTP request. |
+| query    | <request>                    | Specifies a URI query parameter based on the rules for the media type specified by the queryType attribute. |
+| query    | <representation>             | Specifies a component of the representation as a name value pair formatted according to the rules of the media type. (Typically used with these media types: application/x-www-form-urlencoded, multipart/form-data.) |
+| template | <resource>                   | The parameter is represented as a string encoding of the parameter value and is substituted into the value of the path attribute of the resource element |
+| plain    | <representation>             | Specifies a component of the representation formatted as a string encoding of the parameter value according to the rules of the media type. |
+
+**Option [(Section 2.12.3)](http://www.w3.org/Submission/wadl/)**
+
+The &lt;option> element can be used to supply the possible values for &lt;param> elements that are used as parameters for functions in KratosApps Studio. This element is then used for IntelliSense in KratosApps Studio.
+
+**Link [(Section 2.12.4)](http://www.w3.org/Submission/wadl/)**
+
+This isn't supported for KratosApps Studio.
+
+**Extensions for KratosApps Studio**
+
+*siena: additionalParameters*
+
+This element defines an additional parameter that can be used with all functions in KratosApps Studio. This is supported for &lt;resource> and &lt;request> elements only.
+
+*siena: resultForm*
+
+This lets you create a WADL that's easier for others to use by adding rules for the return values for methods and functions. This is only supported for &lt;response> elements.
+
+These types of variables are supported:
+
+| Variable  | Description                                               |
+|-----------|-----------------------------------------------------------|
+| void      | Ignores the returned response but checks it is successful |
+| self      | Returns the body of the response based on the media type  |
+| single    | Returns the value identified by the single &lt;param>     |
+| aggregate | Returns a record for each &lt;param> with key value pairs |
+
+*siena: authenticationProviderhref*
+
+Identifies the authentication provider used for the resource or method. This is supported by the &lt;resources> and &lt;resource> elements. OAuth1 and OAuth2 are supported. See the sample WADL file for [Dropbox](#sample-file-for-dropbox).
+
+*siena: function*
+
+This supports custom functions. It takes the user supplied information and passes this to the REST API.
+
 ## Load a WADL file and access the data ##
+
+1. On the **Data** menu, click **Data Sources**.
+1. Under **Add new source**, click **REST**.
+1. Click **Choose your configuration file**, browse to your WADL file, and then click **Open**.
+
+	The data source appears.
+1. To verify that the correct data is returned, select a function, and then click **Try it**.
+1. To show the data, add a gallery, and then set its **Items** property to a function that follows this syntax:
+
+	*DataSourceName*!*FunctionName*()!*Elements*
+
+	For example: CourseraREST!GetCourses()!elements
+
+	KratosApps Studio makes this easier by helping you with the syntax.
+
+	![Set the Items property for a gallery](./media/kratosapps-REST/function-syntax.png)
+
+	Data from your REST API service appears in your app. KratosApps Studio guesses which fields from your data you want to show in each gallery element. If these choices are incorrect or a warning icon appears, you can manually choose which fields to show.
+
+If your REST API service uses OAuth authentication, the username and password aren't stored in your app. The user must enter a valid username and password for the service to authorize their access. An authorization token is normally valid for a specific period of time for a service. The user will be prompted to re-enter a valid username and password if the token has expired.
+
+##Q & A##
+
+**Q:** How can I use the value of another field when I access data from a REST API?
+
+**A:** In the expression for **Items**, pass the value of that field into the function that calls the REST API. For example, to show the photo for a course, use the value from the gallery that displays all the courses. In this case, the gallery is called **CoursesGallery**, and the field with the ID is **courseID**: 
+
+CourseraREST!GetCourseDetails(CoursesGallery!Selected!courseID!Text)!elements!photo
+
+Then, as you click each item in the gallery, the correct photo appears.
