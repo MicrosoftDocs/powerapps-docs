@@ -39,13 +39,13 @@ If the REST API service that you want to access uses OAuth to authenticate users
 
 	Don't forget to save a WADL generation file when you close the tool. That way, you can use the tool to add more functions in the future to your WADL file.
 
-Look at a [sample WADL file](#sample-wadl-files) to review its structure.
+Look at a [sample WADL file](#modify-a-sample-wadl-file) to review its structure.
 
 [Load a WADL file and access the data](#load-a-wadl-file-and-access-the-data) in KratosApps Studio to confirm whether it behaves as you expect.
 
 ###Modify a sample WADL file###
 
-You can create your own .xml file by copying the XML from a sample file for [Coursera](#sample-file-for-coursera) or [Dropbox](#sample-file-for-dropbox).
+You can create your own .xml file by copying the XML from a sample file for [Coursera](#sample-file-for-coursera) or [Dropbox](#sample-file-for-dropbox). (The Dropbox sample uses OAuth 2.0 authentication.)
 
 ####Sample file for Coursera####
 
@@ -94,8 +94,8 @@ This WADL file is very basic, simply accessing course information from Coursera 
 
 This file uses OAuth 2.0 authentication and contains two functions:
 
-- GetFileAndFolderInfo gets the file and folder information from Dropbox for a specific folder
-- DisplayImage gets the URL to display an image stored on Dropbox.
+- **GetFileAndFolderInfo** gets the file and folder information from Dropbox for a specific folder
+- **DisplayImage** gets the URL to display an image stored on Dropbox.
 
 When you add items in KratosApps Studio that use these functions, you can specify the folder and the location for the image. These strings can be the text from another field in your app. That field could be data from a call to a REST API too.
 
@@ -288,32 +288,32 @@ Methods associated with a REST resource are described using the &lt;method> elem
 Each &lt;method> element has a &lt;request\> and &lt;response> element. Parameters to the resource URI are defined with a &lt;param> element which is a child of the &lt;request> element. For example, the list parameter is supplied for the GetFileAndFolderInfo method.
 
 	<resources base="https://api.dropbox.com" siena:authenticationProviderHref="#Dropbox_Auth">
-	<resource path="1/metadata/auto/photos">
-	  <method name="Get" id="GetFileAndFolderInfo" siena:requiresAuthentication="true">
-		<request>
-		  <param name="list" style="Query" required="true" siena:sampleDefault="true" />
-		</request>
-		<response siena:resultForm="single">
-		  <representation mediaType="application/json">
-			<param name="GetFileAndFolderInfo_Name" type="sienatool:GetFileAndFolderInfo_Root" style="plain" path="" />
-		  </representation>
-		</response>
-	  </method>
-	</resource>
+	  <resource path="1/metadata/auto/photos">
+		<method name="Get" id="GetFileAndFolderInfo" siena:requiresAuthentication="true">
+		  <request>
+			<param name="list" style="Query" required="true" siena:sampleDefault="true" />
+		  </request>
+		  <response siena:resultForm="single">
+			<representation mediaType="application/json">
+			  <param name="GetFileAndFolderInfo_Name" type="sienatool:GetFileAndFolderInfo_Root" style="plain" path="" />
+			</representation>
+		  </response>
+		</method>
+	  </resource>
 	</resources>
 	<resources base="https://api.dropbox.com" siena:authenticationProviderHref="#Dropbox_Auth">
-	<resource path="1/media/auto/">
-	  <method name="Get" id="DisplayImage" siena:requiresAuthentication="true">
-		<request>
-		  <param name="path" style="Query" required="true" siena:sampleDefault="/Photos/i-b858zMh-M.jpg" />
-		</request>
-		<response siena:resultForm="single">
-		  <representation mediaType="application/json">
-			<param name="DisplayImage_Name" type="sienatool:DisplayImage_Root" style="plain" path="" />
-		  </representation>
-		</response>
-	  </method>
-	</resource>
+	  <resource path="1/media/auto/">
+		<method name="Get" id="DisplayImage" siena:requiresAuthentication="true">
+		  <request>
+			<param name="path" style="Query" required="true" siena:sampleDefault="/Photos/i-b858zMh-M.jpg" />
+		  </request>
+		  <response siena:resultForm="single">
+			<representation mediaType="application/json">
+			  <param name="DisplayImage_Name" type="sienatool:DisplayImage_Root" style="plain" path="" />
+			</representation>
+		  </response>
+		</method>
+	  </resource>
 	</resources>
 
 **&lt;siena:authenticationProviders> and &lt;siena:template>**
@@ -458,11 +458,11 @@ Supported values for the style attribute of the &lt;param> element:
 
 | Value    | Parent element of &lt;param> | Usage |
 |----------|------------------------------|------ |
-| header   | <request>                    | Specifies an HTTP header for the HTTP request. |
-| query    | <request>                    | Specifies a URI query parameter based on the rules for the media type specified by the queryType attribute. |
-| query    | <representation>             | Specifies a component of the representation as a name value pair formatted according to the rules of the media type. (Typically used with these media types: application/x-www-form-urlencoded, multipart/form-data.) |
-| template | <resource>                   | The parameter is represented as a string encoding of the parameter value and is substituted into the value of the path attribute of the resource element |
-| plain    | <representation>             | Specifies a component of the representation formatted as a string encoding of the parameter value according to the rules of the media type. |
+| header   | &lt;request>                    | Specifies an HTTP header for the HTTP request. |
+| query    | &lt;request>                    | Specifies a URI query parameter based on the rules for the media type specified by the queryType attribute. |
+| query    | &lt;representation>             | Specifies a component of the representation as a name value pair formatted according to the rules of the media type. (Typically used with these media types: application/x-www-form-urlencoded, multipart/form-data.) |
+| template | &lt;resource>                   | The parameter is represented as a string encoding of the parameter value and is substituted into the value of the path attribute of the resource element |
+| plain    | &lt;representation>             | Specifies a component of the representation formatted as a string encoding of the parameter value according to the rules of the media type. |
 
 **Option [(Section 2.12.3)](http://www.w3.org/Submission/wadl/)**
 
@@ -511,7 +511,7 @@ This supports custom functions. It takes the user supplied information and passe
 
 	*DataSourceName*!*FunctionName*()!*Elements*
 
-	For example: CourseraREST!GetCourses()!elements
+	For example: **CourseraREST!GetCourses()!elements**
 
 	KratosApps Studio makes this easier by helping you with the syntax.
 
@@ -527,6 +527,6 @@ If your REST API service uses OAuth authentication, the username and password ar
 
 **A:** In the expression for **Items**, pass the value of that field into the function that calls the REST API. For example, to show the photo for a course, use the value from the gallery that displays all the courses. In this case, the gallery is called **CoursesGallery**, and the field with the ID is **courseID**: 
 
-CourseraREST!GetCourseDetails(CoursesGallery!Selected!courseID!Text)!elements!photo
+**CourseraREST!GetCourseDetails(CoursesGallery!Selected!courseID!Text)!elements!photo**
 
 Then, as you click each item in the gallery, the correct photo appears.
