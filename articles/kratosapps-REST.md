@@ -527,6 +527,6 @@ If your REST API service uses OAuth authentication, the username and password ar
 
 **A:** In the expression for **Items**, pass the value of that field into the function that calls the REST API. For example, to show the photo for a course, use the value from the gallery that displays all the courses. In this case, the gallery is called **CoursesGallery**, and the field with the ID is **courseID**: 
 
-**CourseraREST!GetCourseDetails(CoursesGallery!Selected!courseID!Text)!elements!photo
-**
+**CourseraREST!GetCourseDetails(CoursesGallery!Selected!courseID!Text)!elements!photo**
+
 Then, as you click each item in the gallery, the correct photo appears.
