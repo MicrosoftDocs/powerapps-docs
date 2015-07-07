@@ -103,64 +103,72 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Examples|**Abs(-55)** returns 55.<br /><br />If a table contained a column named Trend, you could use **Abs(Trend)** in a Result column to return the absolute value of each number in the Trend column.<br/><br/>![Abs function to calculate absolute values](.\media\kratosapps-build-function\abs.png)|
 
 ### <a name="addcolumns"></a>AddColumns
-|Syntax|**AddColumns**(*Table*, *Column1*, *Expression1*[, *Column2*, *Expression2*, ...])|
+|&nbsp;|&nbsp;|
 |---|---|
+|Syntax|**AddColumns**(*Table*, *Column1*, *Expression1*[, *Column2*, *Expression2*, ...])|
 |Description|Returns a table that has one or more added columns that contain results of the specified expressions evaluated over the rows in the original input table.|
 |Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, you could create a second table that contained both of those columns plus a third column, named TotalSales, that showed the results of multiplying the values in the first two columns.<br /><br />**AddColumns(Sales, &quot;TotalSales&quot;, CostPerUnit \* UnitsSold)**<br/><br/>![AddColumns puts calculated results in new column](.\media\kratosapps-build-function\addcolumns.png)</br><blockquote><p>[AZURE.NOTE] This function doesn't modify the original table.</p></blockquote>If you had an Employees table that contained a FirstName column and a LastName column, you could create a second table that contained both of those columns plus a third column, named FullName, that showed the results of concatenating the strings in the first two columns.<br /><br />**AddColumns(Employees, &quot;FullName&quot;, FirstName &amp; &quot; &quot; &amp; LastName)**|
 
 ### <a name="and"></a>And
-|Syntax|**And**(*LogicalExpression1*[, *LogicalExpression2*, ...])|
+|&nbsp;|&nbsp;|
 |---|---|
+|Syntax|**And**(*LogicalExpression1*[, *LogicalExpression2*, ...])|
 |Description|Determines whether one or more Boolean values or sub-expressions are all true. (Accomplishes the same outcome as the inline &amp;&amp; operator.)|
 |Examples|This function determines whether a slider's value falls between 50 and 100:<br/><br/> **And(Slider1!Value &gt; 50, Slider1!Value &lt; 100)**<br /><br />If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR and the value in the Salary column was larger than 200000.<br /><br />**And(Dept = &quot;HR&quot;, Salary &gt; 200000)**<br /><br />![And returns true if all conditions are true](.\media\kratosapps-build-function\and.png)<br /><br />These functions use the &amp;&amp; operator but return the same results as the previous examples:<br /><br />**Slider1!Value &gt; 50 &amp;&amp; Slider1!Value &lt; 100**<br /><br />**Dept = HR &amp;&amp; Salary &gt; 200000**|
 
 
 
 ### <a name="average"></a>Average
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Average**(*Table*, *Expression*)<br /><br />**Average**(*Expression1*[, *Expression2*, …])|
-|------|------|
 |Description|Returns the average (arithmetic mean) of its arguments. You can use this function in these contexts:<ul><li>In a table, this function returns the average of the numbers that the specified expression evaluates to.</li><li>When provided scalar numeric inputs—or expressions that evaluate to scalar numeric values—this function returns their average.</li></ul>|
 |Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, this function would compute the average sales:<br /><br />**Average(Sales, CostPerUnit * UnitsSold)**<br /><br />If you had three sliders, this function would compute the average of their values:<br /><br />**Average(Slider1!Value, Slider2!Value, Slider3!Value)**|
 
 ### <a name="char"></a>Char
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Char**(*Number*)|
-|-----|-----|
 |Description|Returns the appropriate ASCII character for your platform, based on the value that you supply.|
 |Example|**Char(65)**returns:<br /><br />A<br /><br />**Char(105)** returns:<br /><br />i<br /><br />**Char(35)** returns:<br /><br />#|
 
 ### <a name="clear"></a>Clear
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Clear**(*Collection*)|
-|-----|-----|
 |Description|Clears all of the items from a collection and returns an empty collection.<br /><br /><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
 |Example|<ol><li>Create or import a collection named <strong>Inventory</strong>, as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add a button, and then set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Clear(Inventory)</strong></li><li>Press F5, click the <strong>Clear</strong> button, and then press Esc to return to the design screen.</li></ol>To confirm that your collection is empty, press Alt-D, and then click **Collections** in the left navigation bar.|
 
 ### <a name="collect"></a>Collect
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Collect**(*CollectionName*, *Item1*[, *Item2*,...])|
-|-----|-----|
 |Description|Adds a table, a column within a table, or one or more individual items to a collection. If the specified collection doesn't exist, this function creates it and adds the item(s).<br /><br /><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
 |Examples|To create a collection that contains one column of values that you specify:<br/><br/><ol><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)</strong><br /><br />This function creates a collection that's named <strong>Products</strong> and that contains a row for each of three product names.</li><li>Press F5, click the button, and then press Esc to return to the design workspace.</li><li>(optional) To display a preview of the collection that you created, press Alt-D, and then click <strong>Collections</strong> in the left navigation bar.</li></ol>[Add data from the user](kratosapps-add-user-data.md) for more examples of how to use this function.|
 
 ### <a name="colorfade"></a>ColorFade
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**ColorFade**(*Color*, *FadeDelta*)|
-|-----|-----|
 |Description|Returns a faded version of a color based on a fade delta that ranges from -1 to 1, inclusive.|
 |Examples|**ColorFade(Color!AliceBlue, -1)**<br /><br />**ColorFade(Color!DarkBlue, 1)**<br /><br />**ColorFade(RGBA(255, 255, 255, 1), 1)**|
 
 ### <a name="colorvalue"></a>ColorValue
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**ColorValue**(*ColorText*)|
-|-----|-----|
 |Description|Returns the color value that corresponds to a CSS (cascading style sheet) color string.|
 |Examples|**ColorValue(&quot;Blue&quot;)**<br /><br />**ColorValue(&quot;Fuschia&quot;)**|
 
 ### <a name="concat"></a>Concat
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Concat(***CollectionName***,** *Expression***)**|
-|-----|-----|
 |Description|Concatenates all strings in a column that you specify in a data source that you specify. You can concatenate data in a collection or imported from, for example, Excel or a SharePoint list.|
 |Examples|<ol><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Collect(Products, {String:&quot;Violin&quot;, Wind:&quot;Trombone&quot;, Percussion:&quot;Bongos&quot;}, {String:&quot;Cello&quot;, Wind:&quot;Trumpet&quot;, Percussion:&quot;Tambourine&quot;})</strong></li><li>Press F5, click the button, and then press Esc to return to the design workspace.</li><li>Add a label, and set its <strong>Text</strong> property to this function:<br /><br /><strong>Concat(Products, String &amp; &quot; &quot;)</strong><br /><br />The label shows <strong>Violin Cello</strong>.</li></ol>|
 
 ### <a name="concatenate"></a>Concatenate
 |Syntax|**Concatenate**(*Text1*[, Text2, ...])<br /><br />**Concatenate**(*ColumnExpression1*[, *ColumnExpression2*, ...])|
-|-----|-----|
 |Description|Joins several text strings into one string, or concatenates the output of several expressions that return text but appear in different columns in a table, and returns the concatenated text in its own column.|
 |Examples|If you created an input-text control named AuthorName, the following function would prepend &quot;By&quot; to text that the user typed in that control:<br /><br />**Concatenate(&quot;By &quot;, AuthorName!Text)**<br /><br />If you had an Employees table that contained a FirstName column and a LastName column, the following function would concatenate the data in each row of those columns.<br /><br />**Concatenate(Employees!FirstName, &quot; &quot;, Employees!LastName)**<br/><br/>
 
