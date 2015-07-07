@@ -53,7 +53,7 @@ KratosApps Studio supports these operators:
 ### <a name="in_and_exactin_operators"></a>in and exactin operators
 You can use the **in** and **exactin** operators to find a string in a data source, such as a collection or an imported table. The **in** operator identifies matches regardless of case, and the **exactin** operator identifies matches only if they're capitalized the same way. Here's an example:
 
-1.  Create or import a collection named **Inventory**, and show it in a gallery, as [Create your first app](https://technet.microsoft.com/library/dn497701\(v=vs.111\).aspx) describes.
+1.  Create or import a collection named **Inventory**, and show it in a gallery, as [Create your first app](kratosapps-tutorial-inventory.md) describes.
 
 2.  Set the **Items** property of the gallery to this function:
 
@@ -68,7 +68,7 @@ You can use the **in** and **exactin** operators to find a string in a data sour
     The gallery shows only Europa because only its name contains the letter you specified in the case that you specified.
 
 ### <a name="thisitem_operator_for_galleries"></a>ThisItem operator for galleries
-You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the **ThisItem** operator to specify the column of data that each control shows. For example, that operator in the product gallery for [Create your first app](https://technet.microsoft.com/library/dn497701\(v=vs.111\).aspx) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the **ThisItem** operator to specify the column of data that each control shows. For example, that operator in the product gallery for [Create your first app](kratosapps-tutorial-inventory.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
 
 For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly—this approach enables rules in an inner gallery to refer to an outer gallery's items.
 
@@ -85,7 +85,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 
 **Date and Time** -- [Date](#date), [DateAdd](#dateadd), [DateDiff](#datediff), [DateTimeValue](#datetimevalue), [DateValue](#datevalue), [Day](#day), [Hour](#hour), [Minute](#minute), [Month](#month), [Now](#now), [Second](#second), [Time](#time), [TimeValue](#timevalue), [Today](#today), [Year](#year)
 
-[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.
+[More examples](kratosapps-manage-dates.md) of how to manage dates and times.
 
 **Math** -- [Abs](#abs), [Average](#average), [Max](#max), [Min](#min), [Rand](#rand), [Round](#round), [RoundDown](#rounddown), [RoundUp](#roundup), [Sqrt](#sqrt), [StdevP](#stdevp), [Sum](#sum), [VarP](#varp)
 
@@ -99,19 +99,19 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|Abs(*Number*)<br /><br />Abs(*ColumnExpression*|
 |---|---|
 |Description|Returns the absolute value of a number—that is, the number without its sign.<ul><li><strong>Abs</strong>(<em>Number</em>) returns the absolute value of a number.</li><li>**Abs**(<em>ColumnExpression</em>), given a one-column table of numeric values, returns a one-column table of their corresponding absolute values.</li></ul>|
-|Examples|**Abs(-55)** returns 55.<br /><br />If a table contained a column named Trend, you could use **Abs(Trend)** in a Result column to return the absolute value of each number in the Trend column.<br/><br/>![Abs function to calculate absolute values](media/build-function-in-kratosapps-studio/IC757737.jpg)|
+|Examples|**Abs(-55)** returns 55.<br /><br />If a table contained a column named Trend, you could use **Abs(Trend)** in a Result column to return the absolute value of each number in the Trend column.<br/><br/>![Abs function to calculate absolute values](.\media\kratosapps-build-function\abs.png)|
 
 ### <a name="addcolumns"></a>AddColumns
 |Syntax|**AddColumns**(*Table*, *Column1*, *Expression1*[, *Column2*, *Expression2*, ...])|
 |---|---|
 |Description|Returns a table that has one or more added columns that contain results of the specified expressions evaluated over the rows in the original input table.|
-|Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, you could create a second table that contained both of those columns plus a third column, named TotalSales, that showed the results of multiplying the values in the first two columns.<br /><br />**AddColumns(Sales, &quot;TotalSales&quot;, CostPerUnit * UnitsSold)**<br/><br/>![AddColumns puts calculated results in new column](media/build-function-in-kratosapps-studio/IC750773.jpg)</br><blockquote><p>[AZURE.NOTE] This function doesn't modify the original table.</p></blockquote>If you had an Employees table that contained a FirstName column and a LastName column, you could create a second table that contained both of those columns plus a third column, named FullName, that showed the results of concatenating the strings in the first two columns.<br /><br />**AddColumns(Employees, &quot;FullName&quot;, FirstName &amp; &quot; &quot; &amp; LastName)**|
+|Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, you could create a second table that contained both of those columns plus a third column, named TotalSales, that showed the results of multiplying the values in the first two columns.<br /><br />**AddColumns(Sales, &quot;TotalSales&quot;, CostPerUnit \* UnitsSold)**<br/><br/>![AddColumns puts calculated results in new column](.\media\kratosapps-build-function\addcolumns.png)</br><blockquote><p>[AZURE.NOTE] This function doesn't modify the original table.</p></blockquote>If you had an Employees table that contained a FirstName column and a LastName column, you could create a second table that contained both of those columns plus a third column, named FullName, that showed the results of concatenating the strings in the first two columns.<br /><br />**AddColumns(Employees, &quot;FullName&quot;, FirstName &amp; &quot; &quot; &amp; LastName)**|
 
 ### <a name="and"></a>And
 |Syntax|**And**(*LogicalExpression1*[, *LogicalExpression2*, ...])|
 |---|---|
 |Description|Determines whether one or more Boolean values or sub-expressions are all true. (Accomplishes the same outcome as the inline &amp;&amp; operator.)|
-|Examples|This function determines whether a slider's value falls between 50 and 100:<br/><br/> **And(Slider1!Value &gt; 50, Slider1!Value &lt; 100)**<br /><br />If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR and the value in the Salary column was larger than 200000.<br /><br />**And(Dept = &quot;HR&quot;, Salary &gt; 200000)**<br /><br />![](media/build-function-in-kratosapps-studio/IC750774.jpg)<br /><br />These functions use the &amp;&amp; operator but return the same results as the previous examples:<br /><br />**Slider1!Value &gt; 50 &amp;&amp; Slider1!Value &lt; 100**<br /><br />**Dept = HR &amp;&amp; Salary &gt; 200000**|
+|Examples|This function determines whether a slider's value falls between 50 and 100:<br/><br/> **And(Slider1!Value &gt; 50, Slider1!Value &lt; 100)**<br /><br />If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR and the value in the Salary column was larger than 200000.<br /><br />**And(Dept = &quot;HR&quot;, Salary &gt; 200000)**<br /><br />![And returns true if all conditions are true](.\media\kratosapps-build-function\and.png)<br /><br />These functions use the &amp;&amp; operator but return the same results as the previous examples:<br /><br />**Slider1!Value &gt; 50 &amp;&amp; Slider1!Value &lt; 100**<br /><br />**Dept = HR &amp;&amp; Salary &gt; 200000**|
 
 
 
@@ -137,7 +137,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Collect**(*CollectionName*, *Item1*[, *Item2*,...])|
 |-----|-----|
 |Description|Adds a table, a column within a table, or one or more individual items to a collection. If the specified collection doesn't exist, this function creates it and adds the item(s).<br /><br /><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
-|Examples|To create a collection that contains one column of values that you specify:<br/><br/><ol><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)</strong><br /><br />This function creates a collection that's named <strong>Products</strong> and that contains a row for each of three product names.</li><li>Press F5, click the button, and then press Esc to return to the design workspace.</li><li>(optional) To display a preview of the collection that you created, press Alt-D, and then click <strong>Collections</strong> in the left navigation bar.</li></ol>[Add data from the user](https://technet.microsoft.com/library/dn705718\(v=vs.111\).aspx) for more examples of how to use this function.|
+|Examples|To create a collection that contains one column of values that you specify:<br/><br/><ol><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)</strong><br /><br />This function creates a collection that's named <strong>Products</strong> and that contains a row for each of three product names.</li><li>Press F5, click the button, and then press Esc to return to the design workspace.</li><li>(optional) To display a preview of the collection that you created, press Alt-D, and then click <strong>Collections</strong> in the left navigation bar.</li></ol>[Add data from the user](kratosapps-add-user-data.md) for more examples of how to use this function.|
 
 ### <a name="colorfade"></a>ColorFade
 |Syntax|**ColorFade**(*Color*, *FadeDelta*)|
@@ -191,38 +191,38 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Date**(*Year*, *Month*, *Day*)|
 |-----|-----|
 |Description|Returns the sequential serial number that represents the specified date. You can use the DateValue function to customize the date display.<ul><li><em>Year</em><ul><li>If <em>Year</em> is between 0 and 1899 (inclusive), the function adds that value to 1900 to calculate the year.</li><li>If <em>Year</em> is between 1900 and 9999 (inclusive), the function uses that value as the year.</li><li>If <em>Year</em> is less than 0 or is 10000 or greater, the function returns an error value.</li></ul></li><li><em>Month</em><ul><li>If <em>Month</em> is greater than 12, the function adds that number of months to the first month of the specified year.</li><li>If <em>Month</em> is less than 1, the function subtracts that many months, plus 1, from the first month of the specified year.</li></ul></li><li><em>Day</em><ul><li>If <em>Day</em> is greater than the number of days in the specified month, the function adds that many days to the first day of the month and returns the corresponding date from a subsequent month.</li><li>If <em>Day</em> is less than 1, the function subtracts that many days, plus 1, from the first day of the specified month.</li></ul></li></ul>|
-|Example|If a user typed 1979 in an input-text control named HireYear, 3 in an input-text control named HireMonth, and 17 in an input-text control named HireDay, this function would return 3/17/1979:<br /><br />**Date(Value(HireYear!Text), Value(HireMonth!Text), Value(HireDay!Text))**<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|If a user typed 1979 in an input-text control named HireYear, 3 in an input-text control named HireMonth, and 17 in an input-text control named HireDay, this function would return 3/17/1979:<br /><br />**Date(Value(HireYear!Text), Value(HireMonth!Text), Value(HireDay!Text))**<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 
 ### <a name="dateadd"></a>DateAdd
 |Syntax|**DateAdd**(*Date*, *NumberOfUnits*[, *Units*])|
 |-----|-----|
 |Description|Returns a date that's a specified number of time units (days, quarters, months, or years) after a specified date. The first argument specifies the original date, and the second argument specifies the number of time units to add. By default, this function adds **Days**, but you can use a third optional argument to add **Months**, **Quarters**, or **Years** to the original date.|
-|Examples|If today were 7/15/2013:<ul><li><strong>DateAdd(Now(), 3)</strong> would return 7/18/2013.</li><li><strong>DateAdd(Today(), 1, Days)</strong> and <strong>DateAdd(Today(), 1)</strong> would both return 7/16/2013.</li><li><strong>DateAdd(Today(), 1, Months)</strong> would return 8/15/2013.</li></ul>[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.<br/><br/>
+|Examples|If today were 7/15/2013:<ul><li><strong>DateAdd(Now(), 3)</strong> would return 7/18/2013.</li><li><strong>DateAdd(Today(), 1, Days)</strong> and <strong>DateAdd(Today(), 1)</strong> would both return 7/16/2013.</li><li><strong>DateAdd(Today(), 1, Months)</strong> would return 8/15/2013.</li></ul>[More examples](kratosapps-manage-dates.md) of how to manage dates and times.<br/><br/>
 
 ### <a name="datediff"></a>DateDiff
 |Syntax|**DateDiff**(*StartDate*, *EndDate*[, *Units*])|
 |-----|-----|
 |Description|Returns the difference between two dates. By default, this function returns the result in **Days**, but you can specify a third optional argument to return the results in **Years**, **Quarters**, or **Months**.|
-|Examples|If today were 7/15/2013:<br /><br />**DateDiff(Now(), 1/1/2014)** and **DateDiff(Now(), 1/1/2014, Days)** would both return 170 days.<br /><br />**DateDiff(Now(), 1/1/2014, Months)** would return 6 months.<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Examples|If today were 7/15/2013:<br /><br />**DateDiff(Now(), 1/1/2014)** and **DateDiff(Now(), 1/1/2014, Days)** would both return 170 days.<br /><br />**DateDiff(Now(), 1/1/2014, Months)** would return 6 months.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="datetimevalue"></a>DateTimeValue
 |Syntax|**DateTimeValue(***DateTimeText***)**<br /><br />**DateTimeValue (***DateTimeText***, &quot;***LanguageCode***&quot;)**|
 |-----|-----|
 |Description|Converts a text representation of a date and a time to a value on which you can perform a mathematical or Boolean operation, such as comparing two dates. You can also specify a language code to ensure that a date structured with slashes is interpreted appropriately as MM/DD/YYYY or DD/MM/YYYY.|
-|Examples|If you typed 10/11/2014 1:50:24.765 PM into an input-text control named **Start** and then set the **Text** property of a label to this function:<ul><li><strong>Text(DateTimeValue(Start!Text), DateTimeFormat!LongDateTime)</strong><br /><br />The label would show Saturday, October 11, 2014 1:50:24 PM if your computer were set to the &quot;en&quot; locale.<br /><br />You can use several options, other than <strong>LongDateTime</strong>, with the <strong>DateTimeFormat</strong> parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.<br /></li><li><strong>Text(DateTimeValue(Start!Text, &quot;fr&quot;), DateTimeFormat!LongDateTime)</strong><br /><br />The label would show Monday, November 10, 2014 1:50:24 PM.<br /></li><li><strong>Text(DateTimeValue(Start!Text), &quot;dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM&quot;)</strong><br /><br />The label would show Saturday, October 11, 2014 01:50:24:765 PM if your computer were set to the &quot;en&quot; locale.<br /><br />As an alternative, you can specify <strong>hh:mm:ss.f</strong> or <strong>hh:mm:ss.ff</strong> to round the time to the nearest tenth or hundredth of a second.</li></ul>[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Examples|If you typed 10/11/2014 1:50:24.765 PM into an input-text control named **Start** and then set the **Text** property of a label to this function:<ul><li><strong>Text(DateTimeValue(Start!Text), DateTimeFormat!LongDateTime)</strong><br /><br />The label would show Saturday, October 11, 2014 1:50:24 PM if your computer were set to the &quot;en&quot; locale.<br /><br />You can use several options, other than <strong>LongDateTime</strong>, with the <strong>DateTimeFormat</strong> parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.<br /></li><li><strong>Text(DateTimeValue(Start!Text, &quot;fr&quot;), DateTimeFormat!LongDateTime)</strong><br /><br />The label would show Monday, November 10, 2014 1:50:24 PM.<br /></li><li><strong>Text(DateTimeValue(Start!Text), &quot;dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM&quot;)</strong><br /><br />The label would show Saturday, October 11, 2014 01:50:24:765 PM if your computer were set to the &quot;en&quot; locale.<br /><br />As an alternative, you can specify <strong>hh:mm:ss.f</strong> or <strong>hh:mm:ss.ff</strong> to round the time to the nearest tenth or hundredth of a second.</li></ul>[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="datevalue"></a>DateValue
 |Syntax|**DateValue(***DateText***)**<br /><br />**DateValue (***DateText***, &quot;***LanguageCode***&quot;)**|
 |-----|-----|
 |Description|Converts a text representation of a date to a value on which you can perform a mathematical or Boolean operation, such as comparing two dates. The source data must follow one of these patterns:<ul><li>*<em>MM/DD/YYYY</em>*</li><li>*<em>DD/MM/YYYY</em>*</li><li>*<em>DD Mon YYYY</em>*</li><li>*<em>Month DD, YYYY</em>*</li></ul>You can also specify a language code to ensure that a date structured with slashes is interpreted appropriately as MM/DD/YYYY or DD/MM/YYYY.|
-|Examples|If you typed 10/11/2014 into an input-text control named <strong>Startdate</strong> and then set the Text property of a label to this function:<ul><li><strong>Text(DateValue(Startdate!Text), DateTimeFormat!LongDate)</strong><br /><br />The label would show Saturday, October 11, 2014, if your computer were set to the &quot;en&quot; locale.<br /><br />You can use several options, other than <strong>LongDateTime</strong>, with the <strong>DateTimeFormat</strong> parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.<br /></li><li><strong>Text(DateValue(Startdate!Text, &quot;fr&quot;), DateTimeFormat!LongDate)</strong><br /><br />The label would show Monday, November 10, 2014.</li></ul>If you did the same thing on October 20, 2014:<ul><li><strong>DateDiff(DateValue(Startdate!Text), Today())</strong><br /><br />If your computer were set to the <strong>en</strong> language code, the label would show 9, indicating the number of days between October 11 and October 20. [DateDiff](#datediff) can also show the difference in months, quarters, or years.</li></ul>[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Examples|If you typed 10/11/2014 into an input-text control named <strong>Startdate</strong> and then set the Text property of a label to this function:<ul><li><strong>Text(DateValue(Startdate!Text), DateTimeFormat!LongDate)</strong><br /><br />The label would show Saturday, October 11, 2014, if your computer were set to the &quot;en&quot; locale.<br /><br />You can use several options, other than <strong>LongDateTime</strong>, with the <strong>DateTimeFormat</strong> parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.<br /></li><li><strong>Text(DateValue(Startdate!Text, &quot;fr&quot;), DateTimeFormat!LongDate)</strong><br /><br />The label would show Monday, November 10, 2014.</li></ul>If you did the same thing on October 20, 2014:<ul><li><strong>DateDiff(DateValue(Startdate!Text), Today())</strong><br /><br />If your computer were set to the <strong>en</strong> language code, the label would show 9, indicating the number of days between October 11 and October 20. [DateDiff](#datediff) can also show the difference in months, quarters, or years.</li></ul>[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="day"></a>Day
 |Syntax|**Day**(*DateTime*)|
 |-----|-----|
 |Description|Returns the day from a DateValue function. The returned value can range from 1 to 31.|
-|Example|If you added an input-text control named Text1, **Day(DateValue(Text1!Text))** would return 15 if a user typed any of these strings into that control:<br /><br />07/15/2013<br /><br />15 July 2013<br /><br />July 15, 2013<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|If you added an input-text control named Text1, **Day(DateValue(Text1!Text))** would return 15 if a user typed any of these strings into that control:<br /><br />07/15/2013<br /><br />15 July 2013<br /><br />July 15, 2013<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="disable"></a>Disable
 |Syntax|**Disable**(*Signal*)|
@@ -258,8 +258,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Filter**(*Table*, *Condition1*[, *Condition2*, ...])|
 |-----|-----|
 |Description|Returns the rows in the specified table that satisfy the given conditions. By default, if you specify more than one condition, And (that is, &amp;&amp;) joins are used.|
-|Example|If you had an Employees table that contained a Salary column, this function would identify the employees whose salaries were greater than 100,000:<br /><br />**Filter(Employees, Salary &gt; 100000)**<br /><br />For more information about how to use this function, see [Show, sort and filter a data set in KratosApps Studio](https://technet.microsoft.com/library/dn966104(v=vs.111).aspx).|
-
+|Example|If you had an Employees table that contained a Salary column, this function would identify the employees whose salaries were greater than 100,000:<br /><br />**Filter(Employees, Salary &gt; 100000)**<br /><br />For more information about how to use this function, see [Show a set of data in KratosApps Studio](kratosapps-show-data.md
 ### <a name="find"></a>Find
 |Syntax|**Find**(*FindText*, *WithinText*[, *StartNum*])|
 |-----|-----|
@@ -270,13 +269,13 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**First**(*Table*)|
 |-----|-----|
 |Description|Returns the first row from the specified table.|
-|Example|If you had an Employees table, this function would return the first row from that table:<br /><br />**First(Employees)|
+|Example|If you had an Employees table, this function would return the first row from that table:<br /><br />**First(Employees)**|
 
 ### <a name="firstn"></a>FirstN
 |Syntax|**FirstN**(*Table*[, *NumRows*])|
 |-----|-----|
 |Description|Returns the specified number of rows from the beginning of the specified table. The NumRows argument is optional; if it isn't specified, only the first row is returned.|
-|Example|If you had an Employees table, this function would return the first 10 rows from that table:<br /><br />**FirstN(Employees, 10)**</p|
+|Example|If you had an Employees table, this function would return the first 10 rows from that table:<br /><br />**FirstN(Employees, 10)**|
 
 
 ### <a name="hashtags"></a>HashTags
@@ -289,7 +288,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Hour**(*DateTime*)|
 |-----|-----|
 |Description|Returns the hour of a given TimeValue as a number between 0 (12:00:00 A.M.) and 23 (11:00:00 P.M.), inclusive.|
-|Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 22 if its text property were set to **Hour(TimeValue(EventTime!Text))**.<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 22 if its text property were set to **Hour(TimeValue(EventTime!Text))**.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="if"></a>If
 |Syntax|**If**(*Condition1*, *Result1*[, *Condition2*, *Result2*, *ConditionN*, *ResultN*, *DefaultResult*])|
@@ -350,7 +349,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**LoadData**(*Collection*, *Filename*)|
 |-----|-----|
 |Description|Decrypts the data in the specified file and inserts it into the specified collection. Use this function together with the SaveData function to save and load application data to and from app local storage.<br /><br />LoadData is an asynchronous function and can't be used in predicates. We recommend that the result of LoadData be piped into a collection whose schema is known, because LoadData itself doesn't provide a schema.|
-|Example|[Create your first app](https://technet.microsoft.com/library/dn497701\(v=vs.111\).aspx) for an example.|
+|Example|[Create your first app](kratosapps-tutorial-inventory.md) for an example.|
 
 
 ### <a name="lookup"></a>LookUp
@@ -389,13 +388,13 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Minute**(*DateTime*)|
 |-----|-----|
 |Description|Returns the minute from a given TimeValue as a number between 0 and 59 (inclusive).|
-|Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 20 if its text property were set to **Minute(TimeValue(EventTime!Text))**.<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 20 if its text property were set to **Minute(TimeValue(EventTime!Text))**.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="month"></a>Month
 |Syntax|**Month**(*DateTime*)|
 |-----|-----|
 |Description|Returns the month from a given DateValue as a number between 1 and 12 (inclusive).|
-|Example|The function **Month(DateValue(&quot;03/17/1979&quot;))** returns 3.<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.<br/><br/>
+|Example|The function **Month(DateValue(&quot;03/17/1979&quot;))** returns 3.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.<br/><br/>
 
 ### <a name="navigate"></a>Navigate
 |Syntax|**Navigate**(*TargetScreen*, *Animation*[, *Context*])|
@@ -415,7 +414,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Now()**|
 |-----|-----|
 |Description|Returns the current date and time in the device's locale-specific format. To format it, use the [Text](#text) function.|
-|Example|If today were October 11, 2014, at exactly 3:25 PM and you set the text property of a label to **Text(Now(), &quot;mm/dd/yyyy hh:mm:ss.fff&quot;)**, the label would show 10/11/2014 3:25:00:000 PM if your computer were set to the **en** language code. The label would show 11/10/2014 3:25:00:000 PM if your computer were set to the **fr** language code.<br /><br />As an alternative, you can specify **hh:mm:ss.f** or **hh:mm:ss.ff** to round the time to the nearest tenth or hundredth of a second.<br /><br />If fractions of seconds don't matter in your app, you can use the DateTimeFormat parameter to specify the date, time, or both in any of several built-in formats. For example, you can replace the function in this example with **Text(Now(), DateTimeFormat!ShortDateTime)** to get the same results but without the milliseconds. To display a list of options for this parameter, type it, immediately followed by an exclamation mark, in the function box.<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|If today were October 11, 2014, at exactly 3:25 PM and you set the text property of a label to **Text(Now(), &quot;mm/dd/yyyy hh:mm:ss.fff&quot;)**, the label would show 10/11/2014 3:25:00:000 PM if your computer were set to the **en** language code. The label would show 11/10/2014 3:25:00:000 PM if your computer were set to the **fr** language code.<br /><br />As an alternative, you can specify **hh:mm:ss.f** or **hh:mm:ss.ff** to round the time to the nearest tenth or hundredth of a second.<br /><br />If fractions of seconds don't matter in your app, you can use the DateTimeFormat parameter to specify the date, time, or both in any of several built-in formats. For example, you can replace the function in this example with **Text(Now(), DateTimeFormat!ShortDateTime)** to get the same results but without the milliseconds. To display a list of options for this parameter, type it, immediately followed by an exclamation mark, in the function box.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="or"></a>Or
 |Syntax|**Or**(*LogicalExpression1*[, *LogicalExpression2*, ...])|
@@ -512,14 +511,14 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**SaveData**(*Collection*, *FileName*)|
 |---|---|
 |Description|Encrypts the data in the specified collection and saves it to the specified file. This file is located in the app's own protected space. Use this function together with the LoadData function to save and load application data to and from app local storage.<br /><br />SaveData is an asynchronous function and can't be used in predicates such as predicates of Filter and CountIf.|
-|Example|[Create your first app](https://technet.microsoft.com/library/dn497701\(v=vs.111\).aspx) for an example.|
+|Example|[Create your first app](kratosapps-tutorial-inventory.md) for an example.|
 
 ### <a name="second"></a>Second
 
 |Syntax|**Second**(*DateTime*)|
 |---|---|
 |Description|Returns the second from a given TimeValue as a number between 0 and 59 (inclusive).|
-|Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 30 if its text property were set to **Second(TimeValue(EventTime!Text))**.<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 30 if its text property were set to **Second(TimeValue(EventTime!Text))**.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="showcolumns"></a>ShowColumns
 
@@ -589,21 +588,21 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Time**(*Hour*, *Minute*, *Second*)|
 |---|---|
 |Description|Converts the specified hours, minutes, and seconds into a decimal.|
-|Example|If a user typed 14 in an input-text control named BirthHour, 50 in an input-text control named BirthMinute, and 24 in an input-text control named BirthSecond, this function would return 02:50:24 p.<br /><br />**Text(Time(Value(BirthHour!Text), Value(BirthMinute!Text), Value(BirthSecond!Text)), &quot;hh:mm:ss a/p&quot;)**<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|If a user typed 14 in an input-text control named BirthHour, 50 in an input-text control named BirthMinute, and 24 in an input-text control named BirthSecond, this function would return 02:50:24 p.<br /><br />**Text(Time(Value(BirthHour!Text), Value(BirthMinute!Text), Value(BirthSecond!Text)), &quot;hh:mm:ss a/p&quot;)**<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="timevalue"></a>TimeValue
 
 |Syntax|**TimeValue**(*TimeText*)<br /><br />**TimeValue**(*TimeText*, &quot;*LanguageCode*&quot;)|
 |---|---|
 |Description|Converts a time value stored as text to a value on which you can perform a mathematical or Boolean operation, such as comparing two times. For consistency, all times are converted from the local time zone to UTC (Coordinated Universal Time). As a result, a user in the Pacific time zone might specify 1:50:24 PM, a user in the Eastern time zone might specify 4:50:24 PM, and both values would appear as 5:50:24 AM.<br /><br />You can also specify a language code to ensure that a time value is interpreted and formatted appropriately.|
-|Example|Name an input-text control **FinishedAt**, and set the **Text** property of a label to this function:<br /><br />**If(TimeValue(FinishedAt!Text)&lt;TimeValue(&quot;5:00:00.000 PM&quot;), &quot;You made it!&quot;, &quot;Too late!&quot;)**<ul><li>If you type 4:59:59.999 PM into the <strong>FinishedAt</strong> control, the label shows <strong>&quot;You made it!&quot;</strong></li><li>If you type 5:00:00.000 PM into the <strong>FinishedAt</strong> control, the label shows <strong>&quot;Too late!&quot;</strong></li></ul>[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|Name an input-text control **FinishedAt**, and set the **Text** property of a label to this function:<br /><br />**If(TimeValue(FinishedAt!Text)&lt;TimeValue(&quot;5:00:00.000 PM&quot;), &quot;You made it!&quot;, &quot;Too late!&quot;)**<ul><li>If you type 4:59:59.999 PM into the <strong>FinishedAt</strong> control, the label shows <strong>&quot;You made it!&quot;</strong></li><li>If you type 5:00:00.000 PM into the <strong>FinishedAt</strong> control, the label shows <strong>&quot;Too late!&quot;</strong></li></ul>[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="today"></a>Today
 
 |Syntax|Today()|
 |---|---|
 |Description|Returns the current date, in the device's locale-specific format.|
-|Example|If today were October 11, 2014, and you set the Text property of a label tothis function:<ul><li><strong>Today()</strong><br /><br />The label would show 10/11/2014 12:00 AM if your computer were set to the <strong>en</strong> language code or 11/10/2014 12:00 AM if your computer were set to the <strong>fr</strong> language code.</li><li><strong>Text(Today(), &quot;mm/dd/yyyy&quot;)</strong><br /><br />The label would show 10/11/2014 regardless of the language code to which your computer was set.</li><li>**T<strong>ext(Today(), DateTimeFormat!ShortDate)</strong><br /><br />The label would show 10/11/2014 regardless of the language code to which your computer was set.<br /><br />You can use several options, other than ShortDate, with the <strong>DateTimeFormat</strong> parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.</li></ul>[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|If today were October 11, 2014, and you set the Text property of a label tothis function:<ul><li><strong>Today()</strong><br /><br />The label would show 10/11/2014 12:00 AM if your computer were set to the <strong>en</strong> language code or 11/10/2014 12:00 AM if your computer were set to the <strong>fr</strong> language code.</li><li><strong>Text(Today(), &quot;mm/dd/yyyy&quot;)</strong><br /><br />The label would show 10/11/2014 regardless of the language code to which your computer was set.</li><li>**T<strong>ext(Today(), DateTimeFormat!ShortDate)</strong><br /><br />The label would show 10/11/2014 regardless of the language code to which your computer was set.<br /><br />You can use several options, other than ShortDate, with the <strong>DateTimeFormat</strong> parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.</li></ul>[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="trim"></a>Trim
 
@@ -617,7 +616,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Update**(*Collection*, *Record1*, *Record2*[, &quot;**All**&quot;])|
 |---|---|
 |Description|In a specified collection, replaces the matching record with the specified record and returns the resulting collection. To update all matches, specify the optional argument &quot;All&quot;.<br/><br/><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection</p></blockquote>|
-|Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as [Create your first app](https://technet.microsoft.com/library/dn497701\(v=vs.111\).aspx) describes.</li><li>Name the gallery <strong>ProductGallery</strong>.</li><li>Add a slider named <strong>UnitsSold</strong>, and set its <strong>Max</strong> property to this expression:<br /><br /><strong>ProductGallery!Selected!UnitsInStock</strong></li><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Update(Inventory, {ProductDesign:ProductGallery!Selected!ProductDesign, ProductName:ProductGallery!Selected!ProductName, UnitsInStock:ProductGallery!Selected!UnitsInStock}, {ProductDesign:ProductGallery!Selected!ProductDesign, ProductName:ProductGallery!Selected!ProductName, UnitsInStock:ProductGallery!Selected!UnitsInStock-UnitsSold!Value})</strong></li><li>Press F5, click a product in the gallery, specify a value with the slider, and then click the button.<br /><br />The number of units in stock decreases by the amount that you specified.</li></ol>|
+|Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as [Create your first app](kratosapps-tutorial-inventory.md) describes.</li><li>Name the gallery <strong>ProductGallery</strong>.</li><li>Add a slider named <strong>UnitsSold</strong>, and set its <strong>Max</strong> property to this expression:<br /><br /><strong>ProductGallery!Selected!UnitsInStock</strong></li><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Update(Inventory, {ProductDesign:ProductGallery!Selected!ProductDesign, ProductName:ProductGallery!Selected!ProductName, UnitsInStock:ProductGallery!Selected!UnitsInStock}, {ProductDesign:ProductGallery!Selected!ProductDesign, ProductName:ProductGallery!Selected!ProductName, UnitsInStock:ProductGallery!Selected!UnitsInStock-UnitsSold!Value})</strong></li><li>Press F5, click a product in the gallery, specify a value with the slider, and then click the button.<br /><br />The number of units in stock decreases by the amount that you specified.</li></ol>|
 
 ### <a name="updatecontext"></a>UpdateContext
 
@@ -631,21 +630,21 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**UpdateIf**(*Collection*, *Condition1*, {*Column1*: *Expression1*, …}[, *Condition2*, {*Column1*: *Expression2*, …} …])|
 |---|---|
 |Description|Updates the specified columns by using the results of the corresponding expressions for the rows that satisfy the specified conditions, and returns the modified collection.<br/><br/><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
-|Example|[Create your first app](https://technet.microsoft.com/library/dn497701\(v=vs.111\).aspx) for an example.|
+|Example|[Create your first app](kratosapps-tutorial-inventory.md) for an example.|
 
 ### <a name="upper"></a>Upper
 
 |Syntax|**Upper**(*Text*)<br /><br />**Upper**(*ColumnExpression*)|
 |---|---|
 |Description|<ul><li><strong>Upper</strong>(<em>Text</em>)<br />Converts the letters in the specified text string to uppercase.</li><li><strong>Upper</strong> (<em>ColumnExpression</em>)<br />Given a one-column table of string values, returns a one-column table of the corresponding uppercase values.</li></ul>|
-|Examples|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as [Create your first app](https://technet.microsoft.com/library/dn497701\(v=vs.111\).aspx) describes.</li><li>Set the <strong>Text</strong> property of the lower label in the gallery to this function:<br /><br /><strong>Upper(ThisItem!ProductName)</strong><br /><br />The label shows the name of each product in all capital letters.</li></ol>|
+|Examples|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as [Create your first app](kratosapps-tutorial-inventory.md) describes.</li><li>Set the <strong>Text</strong> property of the lower label in the gallery to this function:<br /><br /><strong>Upper(ThisItem!ProductName)</strong><br /><br />The label shows the name of each product in all capital letters.</li></ol>|
 
 ### <a name="value"></a>Value
 
 |Syntax|Value(*Text*)|
 |---|---|
 |Description|Converts a text string that represents a number to a number.|
-|Example|[Store data from the user](https://technet.microsoft.com/library/dn705718\(v=vs.111\).aspx) for an example.|
+|Example|[Add data from the user](kratosapps-add-user-data.md) for an example.|
 
 ### <a name="varp"></a>VarP
 
@@ -659,4 +658,4 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**Year**(*DateTime*)|
 |---|---|
 |Description|Returns the year of a given date as a number between 1900 and 9999 (inclusive).|
-|Example|Year(DateValue(&quot;03/17/1979&quot;))** returns 1979.<br /><br />[More examples](https://technet.microsoft.com/library/dn955337\(v=vs.111\).aspx) of how to manage dates and times.|
+|Example|Year(DateValue(&quot;03/17/1979&quot;))** returns 1979.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
