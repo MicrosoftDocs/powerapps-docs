@@ -40,7 +40,7 @@ Make your app information-rich by adding data from one or more of these sources:
 3. On the **Design** tab of the ribbon, specify a name (such as **Revenue**) in the **Table Name** box, and then save and close the workbook.
 
 	![Naming a table in Excel](./media/kratosapps-add-data/name-excel-table.png)
-4. In KratosApps Studio, press Alt+D to open the list of data sources.
+4. In KratosApps Studio, press Alt+D to open the list of data sources.<Test123!> 
 5. Under **Add new source**, click **Excel**.
 6. Browse for the workbook from which you want to import data, click it, and then click **Open**.
 7. Ensure that the check box for each table that you want to import is selected, and then click **Import Data**.
@@ -57,7 +57,7 @@ Make your app information-rich by adding data from one or more of these sources:
 4. (optional) Show your **Inbox** in a gallery:
 	1. On the **Insert** tab, click **Gallery**, and then click a landscape or portrait **Text Gallery**.
 	2. Set the **Items** property of the gallery to this function:
-	
+
 		**Office365!Emails("Inbox")!items**
 	1. Set the **Text** property of the **Heading1** label to **ThisItem!Subject**.
 	2. Set the **Text** property of the **Body1** label to **ThisItem!BodyPreview**.
@@ -137,7 +137,7 @@ Make your app information-rich by adding data from one or more of these sources:
 2. When prompted, enter your credentials, click **Sign in**, and then click **Authorize app**.
 
 	**Note:** You must authorize the app only once.
-	
+
 	The accounts that you follow appear in a gallery.
 
 	![Gallery that shows Twitter accounts](./media/kratosapps-add-data/twitter-follow.png)
@@ -193,7 +193,7 @@ Before you can publish your app, you'll need a client ID and a redirect URI. If 
 1. Select the video control by clicking in its center, and then set its **Media** property to the URL of the video you want to show.
 
 	**Note:** Keep the double quotation marks around the URL.
- 
+
 1. Press F5, and then click the play button the middle of the video player.
 
 	The video that you specified plays.
@@ -249,4 +249,3 @@ If you use other YouTube functions, such as showing videos from a playlist, you'
 		The **Favorites** collection contains the name and the estimated workload (in hours per week) of each class that you specified.
 
 	1. [Show your list in a gallery](kratosapps-show-data.md).
-
