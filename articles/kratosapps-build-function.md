@@ -168,6 +168,8 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Examples|<ol><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Collect(Products, {String:&quot;Violin&quot;, Wind:&quot;Trombone&quot;, Percussion:&quot;Bongos&quot;}, {String:&quot;Cello&quot;, Wind:&quot;Trumpet&quot;, Percussion:&quot;Tambourine&quot;})</strong></li><li>Press F5, click the button, and then press Esc to return to the design workspace.</li><li>Add a label, and set its <strong>Text</strong> property to this function:<br /><br /><strong>Concat(Products, String &amp; &quot; &quot;)</strong><br /><br />The label shows <strong>Violin Cello</strong>.</li></ol>|
 
 ### <a name="concatenate"></a>Concatenate
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Concatenate**(*Text1*[, Text2, ...])<br /><br />**Concatenate**(*ColumnExpression1*[, *ColumnExpression2*, ...])|
 |Description|Joins several text strings into one string, or concatenates the output of several expressions that return text but appear in different columns in a table, and returns the concatenated text in its own column.|
 |Examples|If you created an input-text control named AuthorName, the following function would prepend &quot;By&quot; to text that the user typed in that control:<br /><br />**Concatenate(&quot;By &quot;, AuthorName!Text)**<br /><br />If you had an Employees table that contained a FirstName column and a LastName column, the following function would concatenate the data in each row of those columns.<br /><br />**Concatenate(Employees!FirstName, &quot; &quot;, Employees!LastName)**<br/><br/>
