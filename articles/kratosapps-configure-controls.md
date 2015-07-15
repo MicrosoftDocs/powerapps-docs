@@ -305,6 +305,34 @@ You can configure a toggle the same way as you configure a [checkbox](#checkbox)
 
 ### Data ###
 
+| Property | Description  |
+|----------|--------------|
+| AutoPause   | Set to true if you want the timer, audio player, or video player to pause automatically when, for example, the user navigates to a different screen. Otherwise, set to false. |
+| AutoStart   | Set to true if you want the timer, audio player, or video player to start automatically if, for example, the user opens the screen that contains the control you're configuring. Otherwise, set to false. |
+| Brightness  | Specify the level of brightness in the image that appears in the camera. |
+| Clear       | Set to true if you want to clear all input from a pen control. Otherwise, set to false. |
+| Contrast    | Specify the level of contrast in the image that appears in the camera. |
+| Data Source | Specify the list that you want to update when a user clicks a SharePoint Update control. |
+| Default     | Specify the default text that appears in an input-text control; the default value for a rating, slider, or toggle control; or the default option in a listbox or radio-button control. For a gallery, specify the item or items to show by default, as this forum post describes. |
+| Duration    | Specify how much time, in milliseconds, will elapse between when the timer starts and when it finishes if it isn't interrupted. |
+| HTML Text   | Specify the text that appears in an HTML label, including markup that you want the control to render. |
+| Image       | Specify the image that appears in an image control, an audio player, a video player, or a microphone. |
+| Items       | Specify the data that you want to show in a gallery, a listbox, or a dropdown list. |
+| Loop        | Set to true if you want the audio or video player to restart the clip automatically when the player finishes. Otherwise, set to false. |
+| Max         | Specify the maximum value to which a user can set a slider or a rating control. |
+| Media       | Specify the audio or video clip that you want a player to play. |
+| Min         | Specify the minimum value to which a user can set a slider. |
+| ReadOnly    | Set to true if you want a rating control to show a value but ignore user input. |
+| Repeat      | Set to true if you want a timer that finishes to automatically start again from zero. |
+| Reset       | Set to true if you want a timer to stop counting and return to zero. |
+| Start       | Set to true if you want a timer to start and false if you want it to stop. |
+| StartTime   | Specify how long, in seconds, from the start of a clip you want an audio or video player to start playing. |
+| Text        | Specify the text that appears in a label, next to a checkbox, or on a button, an export control, an import control, or a SharePoint Update control. |
+| Tooltip     | Specify the text that appears when a user hovers over a control. For example, you can display the percentage of an audio clip that has been played:
+
+Concatenate(Text(Round(AudioPlayback1!Time/AudioPlayback1!Duration*100,1)), "% complete") |
+| Zoom        | Specify the default zoom for a camera. |
+
 ### Behavior ###
 
 ### Design ###
