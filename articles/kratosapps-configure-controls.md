@@ -328,9 +328,7 @@ You can configure a toggle the same way as you configure a [checkbox](#checkbox)
 | Start       | Set to true if you want a timer to start and false if you want it to stop. |
 | StartTime   | Specify how long, in seconds, from the start of a clip you want an audio or video player to start playing. |
 | Text        | Specify the text that appears in a label, next to a checkbox, or on a button, an export control, an import control, or a SharePoint Update control. |
-| Tooltip     | Specify the text that appears when a user hovers over a control. For example, you can display the percentage of an audio clip that has been played:
-
-Concatenate(Text(Round(AudioPlayback1!Time/AudioPlayback1!Duration*100,1)), "% complete") |
+| Tooltip     | Specify the text that appears when a user hovers over a control. For example, you can display the percentage of an audio clip that has been played: **Concatenate(Text(Round(AudioPlayback1!Time/AudioPlayback1!Duration*100,1)), "% complete")** |
 | Zoom        | Specify the default zoom for a camera. |
 
 ### Behavior ###
