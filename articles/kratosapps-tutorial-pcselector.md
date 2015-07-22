@@ -18,7 +18,7 @@ Create an app that shows descriptions and images of desktop computers and mobile
 
 1. [Add a rectangle](nameoffile.md), and then [set its **Fill** property](nameoffile.md) to **Color!Orange**.
 
-	![Orange banner with a icon for each type of device](.\media\kratosapps-tutorial-pcselector\rectangle-orange.jpg)
+	![Orange banner with a icon for each type of device](./media/kratosapps-tutorial-pcselector/rectangle-orange.jpg)
 2. [Move the rectangle](nameoffile.md) to the top of the screen, and widen it to span the entire screen.
 
 ## Show the device categories ##
