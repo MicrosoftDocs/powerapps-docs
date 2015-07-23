@@ -6,7 +6,11 @@
  />
 
 # Create a gallery-based app in KratosApps #
-Create an app that shows descriptions and images of desktop computers and mobile devices from various manufacturers. In this app, users can choose one or more devices, specify quantities, and automatically calculate the total cost.
+Create an app that shows sample data about tablets, laptops, and desktop computers from various manufacturers. Learn how to import a set of data from Excel, add and configure controls such as shapes and checkboxes, show images and other data in a gallery. Create a collection and perform mathematical calculations based on user choices.
+
+The first screen of this app shows an image of each device, its manufacturer, and its price. Users can filter the list of devices by category or manufacturer and add one or more devices to a list of favorites.
+
+The second screen of this app shows the list of favorite devices. Users can specify a quantity for each device, and the screen shows the total cost.
 
 **Prerequisites**
 
@@ -14,12 +18,20 @@ Create an app that shows descriptions and images of desktop computers and mobile
 
 - Download and run the file that contains sample data for this app.
 
-## Create a banner ##
+## Import sample data
 1. Open KratosApps.
 
 	![App tile for KratosApps on Start screen](./media/kratosapps-tutorial-pcselector/app-tile.jpg)
 
-	KratosApps opens and shows a blank screen by default. Above the top of the screen, a ribbon contains tabs that you can click to show groups of options. A list of properties and the Function Bar, separated by an equals sign, appear betweeen the ribbon and the screen. A thumbnail view of each screen appears near the left edge of the screen.
+	KratosApps opens and shows a blank screen by default.
+
+	Above the top of the screen, a ribbon contains tabs that you can click to show groups of options.
+
+	A list of properties and the Function Bar, separated by an equals sign, appear betweeen the ribbon and the screen.
+
+	A thumbnail view of each screen appears near the left edge of the screen.
+## Create a banner ##
+
 2. On the ribbon, click the **Insert** tab.
 
 	![Insert tab in the ribbon](./media/kratosapps-tutorial-pcselector/insert-tab.jpg)
@@ -29,7 +41,9 @@ Create an app that shows descriptions and images of desktop computers and mobile
 
 	Find out how to [add other controls](nameofffile.md) to your app.
 
-	The rectangle appears near the upper-left corner of the screen. By default, a thick, gray box surrounds the rectangle to indicate that it's selected. When a control is selected, you can change properties of that control, such as the color of its fill. To select a control, click it. To select a screen so that you can change its properties, click a blank area of that screen.
+	The rectangle appears near the upper-left corner of the screen.
+
+	By default, a thick, gray box surrounds the rectangle to indicate that it's selected. When a control is selected, you can change properties of that control, such as the color of its fill. To select a control, click it. To select a screen so that you can change its properties, click a blank area of that screen.
 4. On the **Home** tab of the ribbon, click **Fill**, and then click the orange option in the middle of the left column.
 
 	![The Fill item on the Home tab of the ribbon](./media/kratosapps-tutorial-pcselector/fill-menu.jpg)
@@ -42,6 +56,7 @@ Create an app that shows descriptions and images of desktop computers and mobile
 	![Selected rectangle with orange fill in upper-left corner](./media/kratosapps-tutorial-pcselector/rectangle-orange.jpg)
 
 6. Resize the rectangle to create a banner by dragging a white square or triangle in its selection box.
+	
 	A thumbnail of the screen you're creating appears near its left edge.
 
 	![A thumbnail of a blank screen with an orange banner](./media/kratosapps-tutorial-pcselector/banner-thumbnail.jpg)
