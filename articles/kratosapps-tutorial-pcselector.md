@@ -203,7 +203,7 @@ In an expression, you indicate literal text (in this case, a dollar sign) betwee
 	![Vertical gallery that shows four OEM logos](./media/kratosapps-tutorial-pcselector/device-gallery.jpg)
 
 ## Filter the devices ##
-In this procedure, you'll use an expression to filter the **DeviceGallery** by both manufacturer and category. The expression includes the **Filter** function, which is one of many [functions in KratosApps]().
+In this procedure, you'll use an expression to filter the **DeviceGallery** by both manufacturer and category. The expression includes the **Filter** function, which is one of many [functions that KratosApps supports]().
 
 To confirm that the filter works, you'll open Preview. As you develop your app, you can test some behavior in the default workspace. However, you open Preview to interact with your app exactly as a user will. By testing your app in Preview, you can confirm that your app works the way you expect before you share it with others.
 
@@ -335,7 +335,7 @@ In this procedure, you'll add items to a custom list and then show it in a galle
 	*Screen shot*
 
 ##Specify a quantity for each device ##
-In this procedure, you'll replace the checkbox in each item of the gallery with a slider.
+In this procedure, you'll replace the checkbox in each item of the gallery with a slider and add a label for clarity. Users will adjust the slider for each device to specify a quantity so that, in the next procedure, the app can show the total cost of all devices.
 
 1. In the first item of the **SelectedDevicesGallery**, click the checkbox, and then press Delete.
 2. Select the template for the **SelectedDevicesGallery** by clicking any item except the first one and then clicking the pencil icon in the upper-left corner of the gallery.
@@ -358,3 +358,31 @@ In this procedure, you'll replace the checkbox in each item of the gallery with 
 
 	*Screen shot*
 
+## Show total cost ##
+In this procedure, you'll add a label and configure it with an expression that calculates the overall cost of all devices in the custom list. The expression combines the following:
+
+- A literal string, surrounded by quotation marks, to indicate what the value represents and precede it with a dollar sign
+- An ampersand to concatenate the literal string and the value
+- A **Sum** function inside a **Text** function
+	- The **Sum** function uses parameters to multiply the per-unit price of each device in the list by the quantity that you specify with the slider for that device. 
+	- The **Text** function uses parameters to add a comma if the value includes four or more digits.
+
+KratosApps supports [many functions]() besides **Sum** and **Text**.
+
+1.  Click a blank area of the **SummaryScreen**, click the **Insert** tab, and then click **Label**.
+2.  Move the label so it appears near the right edge of the banner.
+
+	*Screen shot*
+
+3. With the label selected, open the properties list, click **Text**, and then replace the default text with this expression:
+
+	**"Total Cost: $" & Text(Sum(SelectedDevicesGallery!AllItems, Price * QuantitySlider!Value), "###,###")**
+
+	After you add the expression, the label will resemble this graphic, though the actual value will depend on which devices you selected.
+
+	*Screen shot*
+
+1. (optional) Press F5 to open Preview, and then adjust the sliders to verify that the total cost updates to reflect your changes.
+
+## Next Steps ##
+- [Share your app]() with others
