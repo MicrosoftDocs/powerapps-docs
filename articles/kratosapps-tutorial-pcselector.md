@@ -164,11 +164,17 @@ In this procedure, you'll add another gallery and configure it to show the logos
 
 	![OEM gallery with four truncated logos](./media/kratosapps-tutorial-pcselector/four-logos.jpg)
 
-8. Click the first the image in the gallery, click **ImagePosition** in the property list, and type **ImagePosition!Fit** in the Function Bar.
+8. Click the first the image in the gallery to select the gallery template.
+
+	*Screen shot*
+
+9. On the **Image** tab, click **ImagePosition**, and then click **ImagePosition!Fit**.
+
+	*Screen shot*
 
 	Each logo appears entirely in the gallery.
 
-	![Vertical gallery that shows four OEM logos](./media/kratosapps-tutorial-pcselector/oemlogo-fit.jpg)
+	*Screen shot*
 
 ## Show the devices ##
 In this procedure, you'll add a third gallery, which will show not just an image of each device but also its manufacturer and its category. In the last step, you'll configure a label in the gallery to show the price. The prices in Excel don't appear with a dollar sign so you'll add one by specifying an expression. 
@@ -197,18 +203,20 @@ In an expression, you indicate literal text (in this case, a dollar sign) betwee
 	![Vertical gallery that shows four OEM logos](./media/kratosapps-tutorial-pcselector/device-gallery.jpg)
 
 ## Filter the devices ##
-In this procedure, you'll use an expression to filter the DeviceGallery by both manufacturer and category. The expression includes the **Filter** function, which is one of many [functions in KratosApps]().
+In this procedure, you'll use an expression to filter the **DeviceGallery** by both manufacturer and category. The expression includes the **Filter** function, which is one of many [functions in KratosApps]().
 
-To confirm that the filter works, you'll open Preview. As you develop your app, you can test some behavior in the default workspace. However, you'll need to open Preview to interact with your app exactly as a user will. By testing your app in Preview, you can completely confirm that your app works the way you expect before you share it with others.
+To confirm that the filter works, you'll open Preview. As you develop your app, you can test some behavior in the default workspace. However, you open Preview to interact with your app exactly as a user will. By testing your app in Preview, you can confirm that your app works the way you expect before you share it with others.
 
 1. Set the **Items** property of the **DevicesGallery** to this expression:
 
 	**Filter(Devices, MFR = OemGallery!Selected!MFR && DeviceType = CategoryGallery!Selected!PcCategory)**
 
-2. Open Preview, click a category and an OEM logo to show only devices in that category from that manufacturer, and then return to the default workspace.
+2. Press F5 to open Preview.
+3. Click a category and an OEM logo to filter the **DevicesGallery** so that it shows only devices in that category from that manufacturer. 
+4. Press Esc to return to the default workspace.
 
 ## Highlight devices by price##
-In this procedure, you'll use the **If** function to highlight less expensive devices. With this function, you specify a condition (for example, whether the price of a device is less than $700) and the result if the condition is true.
+In this procedure, you'll use the **If** function to highlight less expensive devices. With this function, you specify a condition (for example, whether the price of a device is less than $700) and the result if the condition is true. You can also specify a result if the condition is false.
 
 In this case, you'll specify that the fill of the price label is light green if the condition is true and light gray if the condition is false. You'll also change the text in that label to a black bold font.
 
@@ -219,3 +227,134 @@ In this case, you'll specify that the fill of the price label is light green if 
 3. (optional) Find a device that costs less than $700, and verify that its price appears in a green, not gray, box.
 
 	![Devices that are less than $700 are highlighted in green](./media/kratosapps-tutorial-pcselector/price-highlight.jpg)
+
+## Create a custom list ##
+In this procedure, you'll add a checkbox to each item in the **DevicesGallery**. Users can select the checkbox for one or more devices to add them to a custom list, called a [collection](). Users can remove a device from the list by clearing the checkbox.
+
+To automatically add a control, such as a checkbox, to each item in the gallery, you add the control to the gallery template. You can't click the template itself to select it because the image and two labels completely cover it. But, as the procedure describes, KratosApps offers an icon you can click instead.
+
+After you add the checkbox, you then specify what you want the app to do when the user selects or clears it. You can [add similar behavior properties]() to any control in KratosApps so that the app responds appropriately to user input.
+
+1. In the **DevicesGallery**, click any item except the first one, and then click the pencil icon in the upper-left corner of the gallery.
+
+	*Screen shot*
+
+	You've selected the gallery template, instead of a specific element in the template.
+
+	*Screen shot*
+
+1. On the **Insert** tab, click **Controls**, and then click **Checkbox**.
+
+	*Screen shot*
+
+1. Shrink the height of the image element, and then move the checkbox under it.
+
+	*Screen shot*
+
+1. Change the checkbox's text by double-clicking **Option** and then typing **Save**.
+
+	*Screen shot*
+
+1. With the checkbox still selected, click the **Behavior** tab, and then click **OnCheck**.
+
+	*Screen shot*
+
+1. Click **Collect**, click the down arrow for the lower list, and then click **ThisItem**.
+
+	*Screen shot*
+
+	The properties list shows **OnCheck**, and the Function Bar shows the expression for adding the selected item to a collection, named **Collection1**.
+
+	*Screen shot*
+
+1. With the checkbox still selected, click **OnUncheck** on the **Behavior** tab.
+
+1. Click **Remove**, click the down arrow for the lower list, and then click **ThisItem**.
+
+## Add a screen and navigation##
+In this procedure, you'll start to create the screen that will show the custom list of devices. To navigate between the two screens, you'll add a button to the first screen and a back arrow to the second screen. When users click either of these controls, the other screen will appear.
+
+1. On the **Home** tab, click **New Screen**.
+
+	*Screen shot*
+
+1. Name the new screen **SummaryScreen**, and then return to the **MainScreen** by clicking it in the left navigation bar.
+2. On the **Insert** tab, click **Button**.
+
+	*Screen shot*
+
+1. Move the button near the right edge of the banner, change its text to **View Device Mix**, and change its fill to black.
+
+	*Screen shot*
+
+1. With the button still selected, click the **Behavior** tab, and then click **Navigate**.
+
+	*Screen shot*
+
+	The properties list autotmatically shows the **OnSelect** property, and the Function Bar shows the expression for navigating to the **SummaryScreen** with a fade transition.
+
+	*Screen shot*
+
+1. Show the **SummaryScreen** by clicking it in the left navigation bar.
+2. On the **Insert** tab, click **Shapes**, and then click the back arrow to add it to the screen.
+
+	*Screen shot*
+
+1. With the arrow still selected, click the **Behavior** tab, and then click **Navigate**.
+
+	The properties list shows the **OnSelect** property, and the Function Bar shows the expression for navigating to the **MainScreen** with a fade transition.
+
+	*Screen shot*
+
+1. (optional) Test navigation:
+	1. Press F5 to open Preview.
+	2. Alternate clicking the button on the **MainScreen** and the arrow on the **SummaryScreen**.
+	3. Press Esc to return to the default workspace.
+
+## Show the custom list ##
+In this procedure, you'll add items to a custom list and then show it in a gallery. To keep this procedure short, you'll copy the gallery from the **MainScreen**, paste it into the **SummaryScreen**, and then change the gallery's data source to the collection you created.
+
+1. On the **MainScreen**, select the checkbox for more than one device.
+
+2. Select the orange banner and the **DevicesGallery** by clicking one and then, while holding down Ctrl, clicking the other.
+
+	*Screen shot*
+
+3. Press Ctrl-C to copy those controls to the Clipboard, show the **SummaryScreen**, and then press Ctrl-V to paste them onto that screen.
+
+1. Rename the gallery that you pasted to **SelectedDevicesGallery**, and set its **Items** property to **Collection1**.
+
+	*Screen shot*
+
+4. Click the banner, click **Reorder** on the **Home** tab, and then click **Send to Back**.
+
+	*Screen shot*
+
+6. Change the **Fill** property of the back arrow to white, and move it to the closer to the left edge of the banner, near the vertical center.
+
+	*Screen shot*
+
+##Specify a quantity for each device ##
+In this procedure, you'll replace the checkbox in each item of the gallery with a slider.
+
+1. In the first item of the **SelectedDevicesGallery**, click the checkbox, and then press Delete.
+2. Select the template for the **SelectedDevicesGallery** by clicking any item except the first one and then clicking the pencil icon in the upper-left corner of the gallery.
+
+	*Screen shot*
+
+3. On the **Insert** tab, click **Controls**, and then click **Slider**.
+
+	*Screen shot*
+
+4. Rename the slider **QuantitySlider**, and move it below the image in the template.
+
+	*Screen shot*
+
+1. With the template still selected, click **Label** on the **Insert** tab.
+
+	*Screen shot*
+
+2. Change the text of the label by double-clicking it and then typing **QTY:** and then move the label near the left edge of the slider.
+
+	*Screen shot*
+
