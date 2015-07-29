@@ -382,7 +382,48 @@ KratosApps supports [many functions]() besides **Sum** and **Text**.
 
 	*Screen shot*
 
-1. (optional) Press F5 to open Preview, and then adjust the sliders to verify that the total cost updates to reflect your changes.
+1. (optional) Press F5 to open Preview, adjust the sliders to verify that the total cost updates to reflect your changes, and then press Esc to return to the default workspace.
+
+## Add pen input ##
+In this procedure, you'll add a pen control so that users can use a mouse or a stylus to add notes about each device in the custom list. With a couple more clicks, you'll show controls with which users can:
+
+- switch between write and erase mode
+- clear all lines from the control
+- change the color or width of the lines they can draw
+
+You can also [add and configure controls]() such as a camera and a microphone so that users can add data other than text and values to your app.
+
+1. On the **SummaryScreen**, select the **SelectedDevicesGallery**, and then double its height.
+
+	*Screen shot*
+
+2. In the template of that gallery, move the two labels so that they appear near the bottom of the slider.
+
+	*Screen shot*
+
+1. With the same template selected, click the **Insert** tab, click **Text**, and then click **Pen**.
+
+	*Screen shot*
+
+2. Move and resize the pen control so that it fits in the template, under the bottom label.
+
+	*Screen shot*
+
+1. With the pen control still selected in the gallery template, click the **Pen** tab, and then click **ShowControls**, so that **true** appears in the Function Bar.
+
+	*Screen shot*
+
+	A set of buttons appears near the bottom of the pen control.
+
+	*Screen shot*
+
+1. (optional) Test the pen control:
+	1. Press F5 to open Preview.
+	2. Write some text or draw a picture in the pen control.
+	3. Erase some or all of the text or picture that you created.
+	3. Press Esc to return to the default workspace.
 
 ## Next Steps ##
-- [Share your app]() with others
+
+- [Save your custom list]() When you close this app, the information in your custom list will be lost unless you save it on your local device.
+- [Publish your app]() After you finish developing and testing your app, share it with others by publishing it to the KratosApps portal.
