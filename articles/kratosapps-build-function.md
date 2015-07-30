@@ -175,350 +175,391 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Examples|If you created an input-text control named AuthorName, the following function would prepend &quot;By&quot; to text that the user typed in that control:<br /><br />**Concatenate(&quot;By &quot;, AuthorName!Text)**<br /><br />If you had an Employees table that contained a FirstName column and a LastName column, the following function would concatenate the data in each row of those columns.<br /><br />**Concatenate(Employees!FirstName, &quot; &quot;, Employees!LastName)**<br/><br/>
 
 ### <a name="count"></a>Count
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Count**(*Column*)|
-|-----|-----|
 |Description|Counts the cells in a table column that contains only numbers.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add a label, and set its <strong>Text</strong> property to this function:<br /><br /><strong>Count(Inventory!UnitsInStock)</strong><br /><br />The label shows <strong>5</strong>, the number of non-empty cells in the <strong>UnitsInStock</strong> column.</li></ol>|
 
 ### <a name="counta"></a>CountA
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**CountA**(*Column*)|
-|-----|-----|
 |Description|Counts the cells that aren't empty in a table column. This function includes error values and empty text (&quot;&quot;) in the count.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add a label, and set its <strong>Text</strong> property to this function:<br /><br /><strong>CountA(Inventory!UnitsInStock)</strong><br /><br />The label shows <strong>5</strong>, the number of non-empty cells in the <strong>UnitsInStock</strong> column.</li></ol>|
 
 ### <a name="countif"></a>CountIf
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**CountIf**(*Table, Expression*)|
-|-----|-----|
 |Description|Counts the rows in a table that satisfy the given condition.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add a label, and set its <strong>Text</strong> property to this function:<br /><br /><strong>CountIf(Inventory, UnitsInStock<30)</strong><br /><br />The label shows <strong>2</strong> because two products (Ganymede and Callisto) have fewer than 30 units in stock.</li></ol>|
 
 ### <a name="countrows"></a>CountRows
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**CountRows**(*Table*)|
-|-----|-----|
 |Description|Counts the rows in a table.|
 |Example|<ol><li>Import or create a collection named **Inventory**, as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add a label, and set its **Text** property to this function:<br /><br />**CountRows(Inventory)**<br /><br />The label shows **5** because the collection contains five rows.</li></ol>|
 
 ### <a name="date"></a>Date
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Date**(*Year*, *Month*, *Day*)|
-|-----|-----|
 |Description|Returns the sequential serial number that represents the specified date. You can use the DateValue function to customize the date display.<ul><li><em>Year</em><ul><li>If <em>Year</em> is between 0 and 1899 (inclusive), the function adds that value to 1900 to calculate the year.</li><li>If <em>Year</em> is between 1900 and 9999 (inclusive), the function uses that value as the year.</li><li>If <em>Year</em> is less than 0 or is 10000 or greater, the function returns an error value.</li></ul></li><li><em>Month</em><ul><li>If <em>Month</em> is greater than 12, the function adds that number of months to the first month of the specified year.</li><li>If <em>Month</em> is less than 1, the function subtracts that many months, plus 1, from the first month of the specified year.</li></ul></li><li><em>Day</em><ul><li>If <em>Day</em> is greater than the number of days in the specified month, the function adds that many days to the first day of the month and returns the corresponding date from a subsequent month.</li><li>If <em>Day</em> is less than 1, the function subtracts that many days, plus 1, from the first day of the specified month.</li></ul></li></ul>|
 |Example|If a user typed 1979 in an input-text control named HireYear, 3 in an input-text control named HireMonth, and 17 in an input-text control named HireDay, this function would return 3/17/1979:<br /><br />**Date(Value(HireYear!Text), Value(HireMonth!Text), Value(HireDay!Text))**<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
-
 ### <a name="dateadd"></a>DateAdd
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**DateAdd**(*Date*, *NumberOfUnits*[, *Units*])|
-|-----|-----|
 |Description|Returns a date that's a specified number of time units (days, quarters, months, or years) after a specified date. The first argument specifies the original date, and the second argument specifies the number of time units to add. By default, this function adds **Days**, but you can use a third optional argument to add **Months**, **Quarters**, or **Years** to the original date.|
 |Examples|If today were 7/15/2013:<ul><li><strong>DateAdd(Now(), 3)</strong> would return 7/18/2013.</li><li><strong>DateAdd(Today(), 1, Days)</strong> and <strong>DateAdd(Today(), 1)</strong> would both return 7/16/2013.</li><li><strong>DateAdd(Today(), 1, Months)</strong> would return 8/15/2013.</li></ul>[More examples](kratosapps-manage-dates.md) of how to manage dates and times.<br/><br/>
 
 ### <a name="datediff"></a>DateDiff
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**DateDiff**(*StartDate*, *EndDate*[, *Units*])|
-|-----|-----|
 |Description|Returns the difference between two dates. By default, this function returns the result in **Days**, but you can specify a third optional argument to return the results in **Years**, **Quarters**, or **Months**.|
 |Examples|If today were 7/15/2013:<br /><br />**DateDiff(Now(), 1/1/2014)** and **DateDiff(Now(), 1/1/2014, Days)** would both return 170 days.<br /><br />**DateDiff(Now(), 1/1/2014, Months)** would return 6 months.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="datetimevalue"></a>DateTimeValue
-|Syntax|**DateTimeValue(***DateTimeText***)**<br /><br />**DateTimeValue (***DateTimeText***, &quot;***LanguageCode***&quot;)**|
-|-----|-----|
+|&nbsp;|&nbsp;|
+|---|---|
+|Syntax|**DateTimeValue(***DateTimeText***)**<br /><br />**DateTimeValue (***DateTimeText***, &quot;***LanguageCode***&quot;)**||
 |Description|Converts a text representation of a date and a time to a value on which you can perform a mathematical or Boolean operation, such as comparing two dates. You can also specify a language code to ensure that a date structured with slashes is interpreted appropriately as MM/DD/YYYY or DD/MM/YYYY.|
 |Examples|If you typed 10/11/2014 1:50:24.765 PM into an input-text control named **Start** and then set the **Text** property of a label to this function:<ul><li><strong>Text(DateTimeValue(Start!Text), DateTimeFormat!LongDateTime)</strong><br /><br />The label would show Saturday, October 11, 2014 1:50:24 PM if your computer were set to the &quot;en&quot; locale.<br /><br />You can use several options, other than <strong>LongDateTime</strong>, with the <strong>DateTimeFormat</strong> parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.<br /></li><li><strong>Text(DateTimeValue(Start!Text, &quot;fr&quot;), DateTimeFormat!LongDateTime)</strong><br /><br />The label would show Monday, November 10, 2014 1:50:24 PM.<br /></li><li><strong>Text(DateTimeValue(Start!Text), &quot;dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM&quot;)</strong><br /><br />The label would show Saturday, October 11, 2014 01:50:24:765 PM if your computer were set to the &quot;en&quot; locale.<br /><br />As an alternative, you can specify <strong>hh:mm:ss.f</strong> or <strong>hh:mm:ss.ff</strong> to round the time to the nearest tenth or hundredth of a second.</li></ul>[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="datevalue"></a>DateValue
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**DateValue(***DateText***)**<br /><br />**DateValue (***DateText***, &quot;***LanguageCode***&quot;)**|
-|-----|-----|
 |Description|Converts a text representation of a date to a value on which you can perform a mathematical or Boolean operation, such as comparing two dates. The source data must follow one of these patterns:<ul><li>*<em>MM/DD/YYYY</em>*</li><li>*<em>DD/MM/YYYY</em>*</li><li>*<em>DD Mon YYYY</em>*</li><li>*<em>Month DD, YYYY</em>*</li></ul>You can also specify a language code to ensure that a date structured with slashes is interpreted appropriately as MM/DD/YYYY or DD/MM/YYYY.|
 |Examples|If you typed 10/11/2014 into an input-text control named <strong>Startdate</strong> and then set the Text property of a label to this function:<ul><li><strong>Text(DateValue(Startdate!Text), DateTimeFormat!LongDate)</strong><br /><br />The label would show Saturday, October 11, 2014, if your computer were set to the &quot;en&quot; locale.<br /><br />You can use several options, other than <strong>LongDateTime</strong>, with the <strong>DateTimeFormat</strong> parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.<br /></li><li><strong>Text(DateValue(Startdate!Text, &quot;fr&quot;), DateTimeFormat!LongDate)</strong><br /><br />The label would show Monday, November 10, 2014.</li></ul>If you did the same thing on October 20, 2014:<ul><li><strong>DateDiff(DateValue(Startdate!Text), Today())</strong><br /><br />If your computer were set to the <strong>en</strong> language code, the label would show 9, indicating the number of days between October 11 and October 20. [DateDiff](#datediff) can also show the difference in months, quarters, or years.</li></ul>[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="day"></a>Day
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Day**(*DateTime*)|
-|-----|-----|
 |Description|Returns the day from a DateValue function. The returned value can range from 1 to 31.|
 |Example|If you added an input-text control named Text1, **Day(DateValue(Text1!Text))** would return 15 if a user typed any of these strings into that control:<br /><br />07/15/2013<br /><br />15 July 2013<br /><br />July 15, 2013<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="disable"></a>Disable
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Disable**(*Signal*)|
-|-----|-----|
 |Description|Disables a signal data source so that an app can't pull signals (data) from it. Location is the only signal data source that this release supports.|
 |Example|**Disable(Location)**|
 
 ### <a name="distinct"></a>Distinct
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Distinct**(*Table*, *Expression*)|
-|-----|-----|
 |Description|Evaluates an expression over one or more columns of a table and returns a one-column table that contains distinct values for the evaluated expression.|
 |Example|If you had an Employees table that contained a Department column, this function would list each unique department name in that column, no matter how many times each name appeared in that column:<br /><br />**Distinct(Employees, Department)**|
 
 ### <a name="dropcolumns"></a>DropColumns
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**DropColumns**(*Table*, *Column1*[, *Column2*, …])|
-|-----|-----|
 |Description|Returns a table that is based on the specified table but doesn't contain the specified columns.|
 |Example|If you had an Employees table that contained a FirstName column, a LastName column, and an Address column, this function would return the same table except without those columns:<br /><br />**DropColumns(Employees, &quot;FirstName&quot;, &quot;LastName&quot;, &quot;Address&quot;)**|
 
 ### <a name="enable"></a>Enable
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Enable**(*Signal*)|
-|-----|-----|
 |Description|Enables a signal data source so that an app can pull data (signals) from it. Location is the only signal data source that this release supports.|
 |Example|**Enable(Location)**|
 
 ### <a name="encodeurl"></a>EncodeUrl
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**EncodeUrl**(*Text*)|
-|-----|-----|
 |Description|Encodes all instances of non-alphanumeric characters in a string that represents a URL. For example, you can use this function to help create a mail link by merging strings that contain From:, To:, Subject: and Body: fields.|
 |Example|**EncodeUrl(&quot;'http://example/page/url.aspx&quot;)** returns:<br /><br />%27http%3A%2F%2Fexample%2Fpage%2Furl.aspx|
 
 ### <a name="filter"></a>Filter
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Filter**(*Table*, *Condition1*[, *Condition2*, ...])|
-|-----|-----|
 |Description|Returns the rows in the specified table that satisfy the given conditions. By default, if you specify more than one condition, And (that is, &amp;&amp;) joins are used.|
 |Example|If you had an Employees table that contained a Salary column, this function would identify the employees whose salaries were greater than 100,000:<br /><br />**Filter(Employees, Salary &gt; 100000)**<br /><br />For more information about how to use this function, see [Show a set of data in KratosApps Studio](kratosapps-show-data.md
+
 ### <a name="find"></a>Find
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Find**(*FindText*, *WithinText*[, *StartNum*])|
-|-----|-----|
 |Description|Indicates where one string appears in another string for the first time. The first argument specifies the string that you want to search for in another string. The second argument specifies the string in which you want to search. You can also include a third optional argument to ignore any instances before a certain location in the string in which you're searching. This function is case-sensitive and returns nothing if the string that you're looking for doesn't appear in the string that you're searching.|
 |Example|**Find(&quot;me&quot;, &quot;time&quot;)** returns 3 because &quot;me&quot; appears in &quot;time&quot; starting with the third letter.<br /><br />**Find(&quot;my&quot;, &quot;time&quot;)** returns nothing because &quot;my&quot; doesn't appear in &quot;time&quot; anywhere.<br /><br />**Find(&quot;in&quot;, &quot;Honorificabilitudinitatibus&quot;, 4)** returns 18.<br /><br />**Find(&quot;in&quot;, &quot;Honorificabilitudinitatibus&quot;, 19)** returns nothing because no match was found after the 18th letter.|
 
 ### <a name="first"></a>First
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**First**(*Table*)|
-|-----|-----|
 |Description|Returns the first row from the specified table.|
 |Example|If you had an Employees table, this function would return the first row from that table:<br /><br />**First(Employees)**|
 
 ### <a name="firstn"></a>FirstN
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**FirstN**(*Table*[, *NumRows*])|
-|-----|-----|
 |Description|Returns the specified number of rows from the beginning of the specified table. The NumRows argument is optional; if it isn't specified, only the first row is returned.|
 |Example|If you had an Employees table, this function would return the first 10 rows from that table:<br /><br />**FirstN(Employees, 10)**|
 
-
 ### <a name="hashtags"></a>HashTags
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**HashTags**(*Text*)|
-|-----|-----|
 |Description|Creates a list of hashtags that start with a pound sign (\#) and contain any combination of these kinds of characters:<ul><li>upper and lowercase letters</li><li>numerals</li><li>underscores (_)</li><li>currency symbols (such as $)</li></ul>Listed hashtags can't contain any other special characters.|
 |Example|<ol><li>Add an input-text control, name it <strong>Tweet</strong>, and type this sentence into it:<br /><br /><strong>This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$*(#@&quot;)</strong></li><li>Add a vertical custom gallery, and set its <strong>Items</strong> property to this function:<br /><br /><strong>HashTags(Tweet!Text)</strong></li><li>Add a label to the gallery template.<br /><br /><br />The label shows these hashtags.<ul><li>#app</li><li>#AMAZING</li><li>#coUnt123</li><li>#123abc</li><li>#1</li></ul></li></ol>|
 
 ### <a name="hour"></a>Hour
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Hour**(*DateTime*)|
-|-----|-----|
 |Description|Returns the hour of a given TimeValue as a number between 0 (12:00:00 A.M.) and 23 (11:00:00 P.M.), inclusive.|
 |Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 22 if its text property were set to **Hour(TimeValue(EventTime!Text))**.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="if"></a>If
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**If**(*Condition1*, *Result1*[, *Condition2*, *Result2*, *ConditionN*, *ResultN*, *DefaultResult*])|
-|-----|-----|
 |Description|Returns the result that corresponds to the first condition matched. If none of the conditions match, the Default result is returned. If you specify a string as a result, you must surround it with quotation marks.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Set the <strong>Text</strong> property of the lower label in the gallery to this function:<br /><br /><strong>If(UnitsInStock&lt;30, &quot;Order more!&quot;, UnitsInStock)</strong><br /><br />If the number of units in stock is fewer than 30, the label shows the message between the quotation marks. Otherwise, the label shows the number of units in stock.</li></ol>|
 
 ### <a name="isblank"></a>IsBlank
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**IsBlank**(*Expression*)|
-|-----|-----|
 |Description|Returns true if an expression evaluates to blank (no value); otherwise, returns false. For example, you could combine this function with the If function to notify users when they leave a required field blank.|
 |Example|If you created an input-text control named Quantity on an order form, a label with a Text property of **If(IsBlank(Quantity!Text), &quot;Please add a quantity.&quot;)** would remind you if you forgot to specify a quantity in that form.|
 
 ### <a name="isempty"></a>IsEmpty
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**IsEmpty**(*Source*)|
-|-----|-----|
 |Description|Identifies whether a table or a collection contains any data.|
 |Example|If a table named Employees contains data, **IsEmpty(Employees)** returns false; otherwise, the function returns true.|
 
 ### <a name="language"></a>Language
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Language()**<br/><br/>
-|-----|-----|
 |Description|Returns the currently active language from the language preferences for an app that hasn't yet been published. If you change the language preference while KratosApps Studio is open, you must restart KratosApps Studio for the function to reflect the change.<br /><br />For a published app, this function returns the language with which the app was branded just before it was published.|
 |Example|**Language()** could return en-US based on your configuration.|
 
 ### <a name="last"></a>Last
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Last**(*Table*)|
-|-----|-----|
 |Description|Returns the last row from the specified table.|
 |Example|If you had a table named Employees, this function would return the last row from that table:<br /><br />**Last(Employees)**|
 
 ### <a name="lastn"></a>LastN
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**LastN**(*Table*[, *NumRows*])|
-|-----|-----|
 |Description|Returns the specified number of rows from the end of the table. The *NumRows* argument is optional; if it isn't specified, this function returns only the last row.|
 |Example|If you had a table named Employees, this function would return the last 15 rows from that table:<br /><br />**LastN(Employees, 15)**|
 
 ### <a name="launch"></a>Launch
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Launch**(*Hyperlink*)|
-|-----|-----|
 |Description|Runs the app that's associated with the specified hyperlink and opens the hyperlink itself.|
 |Example|<ol><li>Set the <strong>OnSelect</strong> property of a button to this function:<br /><br /><strong>Launch(&quot;http://www.bing.com&quot;)</strong></li><li>Press F5, and then click the button.<br /><br />The Bing homepage opens.</li></ol>|
 
 ### <a name="left"></a>Left
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Left**(*Text*, *NumChars*)<br /><br />**Left**(*ColumnExpression*, *NumericExpression*)|
-|-----|-----|
 |Description|Returns the specified number of characters from the beginning of the given string.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Set the <strong>Text</strong> property of the lower label in the gallery to this function:<br /><br /><strong>Left(ThisItem!ProductName, 3)</strong><br /><br />The label shows the first three characters in each product name.</li></ol>|
 
-
 ### <a name="len"></a>Len
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Len**(*Text*)<br /><br />**Len**(*ColumnExpression*)|
-|-----|-----|
 |Description|<ul><li><strong>Len</strong>(*<em>Text</em>*)<br />Returns the number of characters in a string.</li><li><strong>Len</strong>(*<em>ColumnExpression</em>*)<br />Given a one-column table of strings, returns a one-column table that contains the corresponding string lengths.<br /><br /></li></ul>|
 |Example|If you typed &quot;F@V0riteBandName&quot; into a text-input control named Password, **Len(Password!Text)** would return 16.|
 
 ### <a name="loaddata"></a>LoadData
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**LoadData**(*Collection*, *Filename*)|
-|-----|-----|
 |Description|Decrypts the data in the specified file and inserts it into the specified collection. Use this function together with the SaveData function to save and load application data to and from app local storage.<br /><br />LoadData is an asynchronous function and can't be used in predicates. We recommend that the result of LoadData be piped into a collection whose schema is known, because LoadData itself doesn't provide a schema.|
 |Example|[Create your first app](kratosapps-tutorial-inventory.md) for an example.|
 
-
 ### <a name="lookup"></a>LookUp
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**LookUp**(*Table*, *Condition*, *Expression*)|
-|-----|-----|
 |Description|This function takes three arguments: a table, a condition that evaluates to true or false for each row in the table, and an expression. For the first row for which the condition evaluates to true, the expression is evaluated, and the result is returned.|
 |Example|If you had an Employees table that contained a FirstName column and a LastName column, this function would return the salary for the employee named &quot;John Smith&quot;:<br /><br />**LookUp(Employees, FirstName = &quot;John&quot; &amp;&amp; LastName = &quot;Smith&quot;, Salary)**|
 
 ### <a name="lower"></a>Lower
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Lower**(*Text*)<br /><br />**Lower**(*ColumnExpression*)|
-|-----|-----|
 |Description|<ul><li><strong>Lower</strong>(*<em>Text</em>*)<br />Converts the letters in the specified text string to lowercase.</li><li><strong>Lower</strong>(*<em>ColumnExpression</em>*)<br />Given a one-column table of string values, returns a one-column table of the corresponding lowercase values.</li></ul>|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Set the <strong>Text</strong> property of the lower label in the gallery to this function:<br /><br /><strong>Lower(ThisItem!ProductName)</strong><br /><br />The label shows the name of each product in all lowercase letters.</li></ol>|
 
 ### <a name="max"></a>Max
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Max**(*Table*, *Expression*)<br /><br />**Max**(*Expression1*[, *Expression2*, ...])|
-|-----|-----|
 |Description|Returns the largest value among its arguments.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong> as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add a label, and set its <strong>Text</strong> property to this function:<br /><br /><strong>Max(Inventory, UnitsInStock)</strong><br /><br />The label shows the highest value in the <strong>UnitsInStock</strong> column of the <strong>Inventory</strong> collection.</li></ol>|
 
-
 ### <a name="mid"></a>Mid
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Mid**(*Text*, *StartPosition*, *NumChars*)<br /><br />**Mid**(*TextColumn*, *StartPositions*, *NumChars*)|
-|-----|-----|
 |Description|Returns the characters from a string, given the position of the starting character and the number of characters to extract. You can run this function on a table of strings.|
 |Example|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Set the **Text** property of the lower label in the gallery to this function:<br /><br />**Mid(ThisItem!ProductName, 2, 3)**<br /><br />The label shows second, third, and fourth letters in the name of each product.</li></ol>|
 
 ### <a name="min"></a>Min
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Min**(*Table*, *Expression*)<br /><br />**Min**(*Expression1*[, *Expression2*, …])|
-|-----|-----|
 |Description|Returns the smallest value among its arguments.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong> as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add a label, and set its <strong>Text</strong> property to this function:<br /><br /><strong>Min(Inventory, UnitsInStock)</strong><br /><br />The label shows the lowest value in the <strong>UnitsInStock</strong> column of the <strong>Inventory</strong> collection.</li></ol>|
 
-
 ### <a name="minute"></a>Minute
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Minute**(*DateTime*)|
-|-----|-----|
 |Description|Returns the minute from a given TimeValue as a number between 0 and 59 (inclusive).|
 |Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 20 if its text property were set to **Minute(TimeValue(EventTime!Text))**.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="month"></a>Month
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Month**(*DateTime*)|
-|-----|-----|
 |Description|Returns the month from a given DateValue as a number between 1 and 12 (inclusive).|
 |Example|The function **Month(DateValue(&quot;03/17/1979&quot;))** returns 3.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.<br/><br/>
 
 ### <a name="navigate"></a>Navigate
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Navigate**(*TargetScreen*, *Animation*[, *Context*])|
-|-----|-----|
 |Description|Changes the view to the specified target screen. These transition animations are supported: ScreenTransition!Cover, ScreenTransition!UnCover, and ScreenTransition!Fade. By specifying a *Context* argument, you can pass a state/context record to the target screen that it can then use to guide its computations. The target screen has unqualified access to the fields in the context record.<br /><br /><blockquote><p>[AZURE.IMPORTANT] If you pass a <em>Context/<em> record to a target screen, its own context may be modified.</p></blockquote>|
 |Example|<ol><li>Name the default screen <strong>DefaultScreen</strong>, and add a label to it so that you can verify which screen is showing in <strong>Preview</strong>.</li><li>Add a second screen, name it <strong>AddlScreen</strong>, and add a label to it.</li><li>Add a button to <strong>DefaultScreen</strong>, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Navigate(AddlScreen, ScreenTransition!Fade)</strong></li><li>From the <strong>DefaultScreen</strong>, press F5, and then click the button.<br /><br /><strong>AddlScreen</strong> appears.</li></ol>|
 
 ### <a name="not"></a>Not
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Not**(*BooleanExpression*)|
-|-----|-----|
 |Description|Computes the logical negation of a Boolean expression.|
 |Example**<br /><br />This function makes sure a radio button isn't selected:|**Not(RadioButton1!Selected)**|
 
-
-
 ### <a name="now"></a>Now
-|Syntax|**Now()**|
-|-----|-----|
+|&nbsp;|&nbsp;|
+|---|---|
+|Syntax|**Now()**||
 |Description|Returns the current date and time in the device's locale-specific format. To format it, use the [Text](#text) function.|
 |Example|If today were October 11, 2014, at exactly 3:25 PM and you set the text property of a label to **Text(Now(), &quot;mm/dd/yyyy hh:mm:ss.fff&quot;)**, the label would show 10/11/2014 3:25:00:000 PM if your computer were set to the **en** language code. The label would show 11/10/2014 3:25:00:000 PM if your computer were set to the **fr** language code.<br /><br />As an alternative, you can specify **hh:mm:ss.f** or **hh:mm:ss.ff** to round the time to the nearest tenth or hundredth of a second.<br /><br />If fractions of seconds don't matter in your app, you can use the DateTimeFormat parameter to specify the date, time, or both in any of several built-in formats. For example, you can replace the function in this example with **Text(Now(), DateTimeFormat!ShortDateTime)** to get the same results but without the milliseconds. To display a list of options for this parameter, type it, immediately followed by an exclamation mark, in the function box.<br /><br />[More examples](kratosapps-manage-dates.md) of how to manage dates and times.|
 
 ### <a name="or"></a>Or
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Or**(*LogicalExpression1*[, *LogicalExpression2*, ...])|
-|-----|-----|
 |Description|Returns true if any specified expression is true; otherwise, returns false. In contrast, the And function returns true only if all specified expressions are true.<br /><br />The Or function accomplishes the same outcome as using the inline **&#124;&#124;** operator.|
 |Example|You can use this function to determine whether a slider's value falls outside the 50 to 100 range:<br /><br />**Or(Slider1!Value &lt; 50, Slider1!Value&gt; 100)**<br /><br />If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR or the value in the Salary column was larger than 200000:<br /><br />**Or(Dept = HR, Salary &gt;= 200000)**<br /><br />As an alternative, you can use the **&#124;&#124;** operator to get the same results as what the previous functions return:<br /><br />**Slider1!Value &lt; 50 &#124;&#124; Slider1!Value&gt; 100**<br /><br />**Dept = &quot;HR&quot; &#124;&#124; Salary &gt; 200000**|
 
 ### <a name="plaintext"></a>PlainText
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**PlainText(*TextWithTags*)**|
-|-----|-----|
 |Description|Strips HTML and XML tags from text or converts the tags to an appropriate symbol.|
 |Example|If you bind a text gallery to an RSS feed and then set the Text property (in the Data category) of a label in that gallery to ThisItem!description, the label might show raw HTML or XML code as in this example:<br /><br />&lt;p&gt;We have done an unusually&amp;nbsp;&amp;quot;deep&amp;quot; globalization and localization.&lt;p&gt;<br /><br />If you set the Text property of the label to **PlainText(ThisItem!description)**, the text appears as in this example:<br /><br />We have done an unusually &quot;deep&quot; globalization and localization.|
 
 ### <a name="proper"></a>Proper
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Proper**(*Text*)<br /><br />**Proper**(*ColumnExpression*)|
-|-----|-----|
 |Description|Converts words in a text string to proper case; that is, the first letter in every word is uppercase, and the other letters are lowercase.<ul><li><strong>Proper</strong>(*Text*)<br />Converts a string to proper case.</li><li><strong>Proper</strong>(*<em>Expression</em>*)<br />Given a one-column table of string values, returns a one-column table that contains the corresponding proper-case values.<br /><br /></li></ul>|
 |Example|<ol><li>Add an input-text control, and name it <em>Slogan</em>.<br /></li><li>Add a label, and set its <em>Text</em> property to this function:<br /><br /><em>Proper(Slogan!Text)</em><br /><br />If you type &quot;WE ARE THE BEST!&quot; into the text-input control, the label shows &quot;We Are The Best!&quot;</li></ol>|
 
 ### <a name="rand"></a>Rand
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Rand()**|
-|-----|-----|
 |Description|Returns a pseudo-random number that's greater than or equal to 0 but less than 1.|
 |Example|**Rand()** could return 0.85116235, 0.76728732, 0.27591115, or any other number greater than or equal to 0 but less than 1.|
 
 ### <a name="refresh"></a>Refresh
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Refresh**(*ServiceDataSource*)|
-|-----|-----|
 |Description|Refreshes the data from the specified data source so that the app has the most recent state.<br /><br /><blockquote><p>[AZURE.IMPORTANT] You can't use this function to refresh data from Excel tables. For an example of how to work with Excel data, see <a href="https://technet.microsoft.com/library/dn638292(v=vs.111).aspx">Show Excel data in a KratosApps Studio app</a></p></blockquote>|
 |Example|If you added an RSS feed named **rss_1**, **Refresh(rss_1)** would refresh that feed.|
 
 ### <a name="remove"></a>Remove
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Remove**(*Collection*, *Record1*[, *Record2*, ..., **All**])<br /><br />**Remove**(*Collection*, *Table*[, **All**])|
-|-----|-----|
 |Description|Removes one or more rows from a collection. Because a collection can have duplicate records, this function also accepts an optional argument All that removes duplicates.<br /><br /><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Set the <strong>OnSelect</strong> property of the image in the gallery to this function:<br /><br /><strong>Remove(Inventory, ThisItem)</strong><br /></li><li>Press F5, and then click an image in the gallery.<br /><br />The item is removed from the gallery and the collection.</li></ol>|
 
 ### <a name="removeif"></a>RemoveIf
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**RemoveIf**(*Collection*, *Condition1*[, *Condition2* ...])|
-|-----|-----|
 |Description|Removes from a collection all rows that satisfy the specified conditions and returns the modified collection.|
 |Example|If you had a collection named ShoppingCart that contained a field named Price, this function would remove from the collection any item for which the price was more than 200.<br /><br />**RemoveIf(Cart, Price &gt; 200)**|
 
-
 ### <a name="renamecolumns"></a>RenameColumns
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**RenameColumns(***CollectionName***, &quot;***OldName***&quot;, &quot;***NewName***&quot;)**|
-|-----|-----|
 |Description|Creates a temporary table that contains the same data as a data source except that one column has a different name. You can rename columns in a collection or in data imported from, for example, Excel or a SharePoint list.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong> as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add an image gallery with text, name it <strong>TableHolder</strong>, and set its <strong>Items</strong> property to this function:<br /><br /><strong>RenameColumns(Inventory, &quot;ProductName&quot;, &quot;JacketID&quot;)</strong></li><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Collect(Inventory2, TableHolder!AllItems)</strong></li><li>Press F5, click the button you just created, and then press Esc to return to the design workspace.</li><li>Press Alt-D, and then click <strong>Collections</strong> in the left navigation bar.</li><li>Confirm that you've duplicated the <strong>Inventory</strong> collection, except that the new collection, named <strong>Inventory2</strong>, contains the same information in a column named <strong>JacketID</strong> as the original collection did in a column named <strong>ProductName</strong>.</li></ol>|
 
 ### <a name="replace"></a>Replace
+|&nbsp;|&nbsp;|
+|---|---|
 |Syntax|**Replace**(*Text*, *StartIndex*, *Count*, *NewText*)<br /><br />**Replace**(*Column*, *StartIndex*, *Count*, *NewText*)|
-|-----|-----|
 |Description|Replaces part of a text string with a different text string, given the position of the starting character and the number of characters to replace. You can run this function on a table of strings.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong> as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Add an image gallery with text, and set its <strong>Items</strong> property to this function:<br /><br /><strong>Replace(Inventory!ProductName, 3, 2, &quot;zz&quot;)</strong><br /><br />In each product name, &quot;zz&quot; replaces the third and fourth letters.</li></ol>|
 
 ### <a name="rgba"></a>RGBA
-
-|Syntax|**RGBA**(*Red*, *Green*, *Blue*, *Alpha*)|
+|&nbsp;|&nbsp;|
 |---|---|
+|Syntax|**RGBA**(*Red*, *Green*, *Blue*, *Alpha*)|
 |Description|Returns a color value that has the specified red, green, blue, and alpha components.|
 |Example|Add a label, and set its **Color** property to this function:<br /><br />**RGBA(112, 48, 160, 1)**<br /><br />The text of the label becomes purple.|
 
 ### <a name="right"></a>Right
-
-|Syntax|Right**(*Text*, *NumChars*)<br /><br />**Right**(*ColumnExpression*, *NumericExpression*)|
+|&nbsp;|&nbsp;|
 |---|---|
+|Syntax|Right**(*Text*, *NumChars*)<br /><br />**Right**(*ColumnExpression*, *NumericExpression*)|
 |Description|Returns the specified number of characters from the end of the given string.|
 |Example|<ol><li>Import or create a collection named <strong>Inventory</strong>, and show it in a gallery as <a href="https://technet.microsoft.com/library/dn497701(v=vs.111).aspx">Create your first app</a> describes.</li><li>Set the <strong>Text</strong> property of the lower label in the gallery to this function:<br /><br /><strong>Right(ThisItem!ProductName, 3)</strong><br /><br />The label shows the last three characters in each product name.</li></ol>|
 
 ### <a name="round"></a>Round
-
-|Syntax|**Round**(*Number*, *DecimalPlaces*)<br /><br />**Round**(*Column*, *DecimalPlaces*)|
+|&nbsp;|&nbsp;|
 |---|---|
+|Syntax|**Round**(*Number*, *DecimalPlaces*)<br /><br />**Round**(*Column*, *DecimalPlaces*)|
 |Description|Rounds the given number to the specified number of decimal places. You can run this function on a table of numbers.|
 |Examples|To use this function with data that you provide manually:<br/><br/><ol><li>Add an input-text control, and name it Decimal.<br /></li><li>Add a label, and set its Text property to this function:</li><li><strong>Round(Value(Decimal!Text), 2)</strong><br /></li><li>In the text-input control, type a decimal value such as .634 or .635, and confirm that the label shows the appropriate value (for example, .63 or .64).</li></ol>|
 
 ### <a name="rounddown"></a>RoundDown
-
-|Syntax|**RoundDown**(*Number*, *DecimalPlaces*)<br /><br />**RoundDown**(*Column*, *DecimalPlaces*)|
+|&nbsp;|&nbsp;|
 |---|---|
+|Syntax|**RoundDown**(*Number*, *DecimalPlaces*)<br /><br />**RoundDown**(*Column*, *DecimalPlaces*)|
 |Description|Rounds down the given number to the specified number of decimal places.|
 |Example|RoundDown(23.54, 0)** returns 23.|
 
 ### <a name="roundup"></a>RoundUp
-
-|Syntax|**RoundUp**(*Number*, *DecimalPlaces*)<br /><br />**RoundUp**(*Column*, *DecimalPlaces*)|
+|&nbsp;|&nbsp;|
 |---|---|
+|Syntax|**RoundUp**(*Number*, *DecimalPlaces*)<br /><br />**RoundUp**(*Column*, *DecimalPlaces*)|
 |Description|Rounds up the given number to the specified number of decimal places.|
 |Example|RoundUp(23.44, 1)** returns 23.5.|
 
 ### <a name="savedata"></a>SaveData
-
 |Syntax|**SaveData**(*Collection*, *FileName*)|
 |---|---|
 |Description|Encrypts the data in the specified collection and saves it to the specified file. This file is located in the app's own protected space. Use this function together with the LoadData function to save and load application data to and from app local storage.<br /><br />SaveData is an asynchronous function and can't be used in predicates such as predicates of Filter and CountIf.|
