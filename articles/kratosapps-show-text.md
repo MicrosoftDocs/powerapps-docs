@@ -31,55 +31,28 @@
 2. Rename the label by typing **TestLabel** in the box that appears.
 
 ## Show text in a label ##
-Show words, numbers, dates, or currency values in a label by setting the value of its **Text** property. Set that value by typing directly into the label or by using the Function Bar. Specify the value of that property as literal string, which appears exactly as you type it, or to an expression. For example, use an expression to show data from another control.
+Show text in a label by setting the value of its **Text** property. You can set this property by typing directly into the label or by specifying an expression in the Function Bar. If you type directly into the label, it shows exactly what you type. If you specify an expression, the label shows the result of the expression.
 
-1. Follow the steps in the previous procedure.
-2. Double-click the default text in the label, and then type **This is my app.**
-
-	*Screen shot*
-
-	You can change the text that a label shows by typing it directly in the label, as you just did, or by setting the **Text** property of the label, as you'll do throughout the rest of this procedure.
-
-2. In the property list, click **Text**, and then type **"This is my new app."** (including the quotation marks) in the Function Bar.
+1. Based on the steps in the previous procedure, add a label named **ShowText**.
+2. In **ShowText**, double-click the default text to select it.
 
 	*Screen shot*
 
-	The label shows only the text between the quotation marks, not the marks themselves. Quotation marks indicate a literal string, which means that the label shows exactly the text that you type between the quotation marks.
+4. Replace it by typing **This is my app** directly into **ShowText**.
 
 	*Screen shot*
 
-1. In the Function Bar, type this expression:
+1. In the properties list, click **Text**, and then type or paste this expression in the Function Bar:
 
-	**"Seattle" & "," & "Washington"**
+	**DateDiff(Today(), DateValue("01/01/2020"))**
 
-	*Screen shot*
+	The label shows the number of days between today and January 1, 2020. This expression combines these functions:
 
-	The expression contains three literal strings (the name of a city, a comma, and the name of a state) and two ampersands. The ampersands concatenate the name of the city, the comma, and the name of the state. That is, the ampersands show the three separate strings as a continuous piece of text.
-1. In the Function Bar, type this string:
+	- **DateDiff**, which calculates the number of days, quarters, or years between two dates.
+	- **Today**, which calculates the current day as a value.
+	- **DateValue**, which converts a literal string, as shown between quotation marks, to a value on which calculations can be performed.
 
-	 **"Now()"**
-
-	*Screen shot*
-
-1. In the Function Bar, remove the quotation marks.
-
-	*Screen shot*
-
-	The label shows the current date and time. Because you removed the quotation marks, the app interpreted the value as a function instead of a literal string. Use [functions in KratosApps]() to change how your app behaves.
-
-1. In the Function Bar, type this expression:
-
-	**Text(Value("123456"), "$#,#")**
-
-	*Screen shot*
-
-	The label shows the number in the quotation marks as a dollar value with a comma after the thousands digit. The expression combines the **Value** function with the **Text** function. The **Value** function converts the string between the quotation marks into a value, which KratosApps can format and use in mathematic operations. The **Text** function formats the value based on the symbols in the second set of quotation marks.
-
-	**Note:** You could have gotten the same result by just typing **$123,456**. But labels often show input from other controls. For example, a user might specify a dollar value by using a slider. In that case, you could show the slider's value in a label but use the **Text** function to add the comma and the dollar sign.
-
-## Show data from another control in a label ##
-1. Follow the steps in the previous procedure.
-2. On the **Insert** tab, click **Text**, and then click **Input Text**.
+1. On the **Insert** tab, click **Text**, and then click **Input Text**.
 
 	*Screen shot*
 
@@ -87,35 +60,17 @@ Show words, numbers, dates, or currency values in a label by setting the value o
 
 	*Screen shot*
 
-1. Rename the new control **CityName**.
+1. Name the new box **Birthdate**.
+2. Change the **Text** property of **ShowText** to this expression:
 
-	*Screen shot*
+	**DateDiff(Today(), DateValue(Birthdate!Text))**
 
-2. Move **CityName** over **TestLabel**.
+	This expression will show the number of days between today and whatever date the user types into **Birthdate**. When the user types a date into **Birthdate**, the **Text** property of that control is set to that value.
 
-	*Screen shot*
+1. Double-click the default text in **Birthdate**, and then replace it by typing the date of your next birthday.
 
-3. Repeat the previous three steps of this procedure, except name the control **StateName**.
+	**ShowText** shows the number of days between today and your next birthday.
 
-	*Screen shot*
-
-4. Set the **Text** property of **TestLabel** to this expression:
-
-	**CityName!Text & ", " & StateName!Text**
-
-	*Screen shot*
-
-	This expression concatenates the values of the **Text** properties of **CityName** and **StateName**.
-
-	*Screen shot*
-
-1. Press F5, type the name of a city in **CityName**, and type the name of a state in **StateName**.
-
-	The label shows the names that you typed as a single piece of text, with a comma.
-
-	*Screen shot*
-
-1. Click the Back button (or press Esc) to return to the default workspace.
 ## Format a label ##
 
 1. With the label selected, click **Fill** on the **Home** tab, and then click a color in the list that appears.
