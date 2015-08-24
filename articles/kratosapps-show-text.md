@@ -71,7 +71,7 @@ Show text in a label by setting the value of its **Text** property. You can set 
 
 	**ShowText** shows the number of days between today and your next birthday.
 
-## Format a label ##
+## Format a label and its text##
 
 1. With the label selected, click **Fill** on the **Home** tab, and then click a color in the list that appears.
 
