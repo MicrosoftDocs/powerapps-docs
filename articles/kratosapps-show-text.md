@@ -17,7 +17,7 @@
 
 	If you click outside the label, it's no longer selected, and the selection box disappears from the label. To select the label again, click it.
 
-	Important: The label must be selected for any subsequent step in this procedure to work or for you to configure any other property of the label.
+	**Important:** The label must be selected for any subsequent step in this procedure to work or for you to configure any other property of the label.
 
 1. Move the label to the center of the screen by dragging the selection box itself (not a white square in an edge of the selection box or a white triangle in a corner of the selection box).
 2. Double the width and height of the label by dragging a white square in the edge of the selection box or a white triangle in the corner of the selection box.
@@ -31,52 +31,27 @@
 2. Rename the label by typing **TestLabel** in the box that appears.
 
 ## Show text in a label ##
-Show words, numbers, dates, or currency values in a label by setting the value of its **Text** property. Set that value by typing directly into the label or by using the Function Bar. Specify the value of that property as literal string, which appears exactly as you type it, or to an expression. For example, use an expression to show data from another control.
+Show text in a label by setting the value of its **Text** property. You can set this property by typing directly into the label or by specifying an expression in the Function Bar. If you type directly into the label, it shows exactly what you type. If you specify an expression, the label shows the result of the expression.
 
-1. Double-click the default text in the label, and then type **This is my app.**
-
-	*Screen shot*
-
-	You can change the text that a label shows by typing it directly in the label, as you just did, or by setting the **Text** property of the label, as you'll do throughout the rest of this procedure.
-
-2. In the property list, click **Text**, and then type **"This is my new app."** (including the quotation marks) in the Function Bar.
+1. Based on the steps in the previous procedure, add a label named **ShowText**.
+2. In **ShowText**, double-click the default text to select it.
 
 	*Screen shot*
 
-	The label shows only the text between the quotation marks, not the marks themselves. Quotation marks indicate a literal string, which means that the label shows exactly the text that you type between the quotation marks.
+4. Replace it by typing **This is my app** directly into **ShowText**.
 
 	*Screen shot*
 
-1. In the Function Bar, type this expression:
+1. In the properties list, click **Text**, and then type or paste this expression in the Function Bar:
 
-	**"Seattle" & "," & "Washington"**
+	**DateDiff(Today(), DateValue("01/01/2020"))**
 
-	*Screen shot*
+	The label shows the number of days between today and January 1, 2020. This expression combines these functions:
 
-	The expression contains three literal strings (the name of a city, a comma, and the name of a state) and two ampersands. The ampersands concatenate the name of the city, the comma, and the name of the state. That is, the ampersands show the three separate strings as a continuous piece of text.
-1. In the Function Bar, type this string:
+	- **DateDiff**, which calculates the number of days, quarters, or years between two dates.
+	- **Today**, which calculates the current day as a value.
+	- **DateValue**, which converts a literal string, as shown between quotation marks, to a value on which calculations can be performed.
 
-	 **"Now()"**
-
-	*Screen shot*
-
-1. In the Function Bar, remove the quotation marks.
-
-	*Screen shot*
-
-	The label shows the current date and time. Because you removed the quotation marks, the app interpreted the value as a function instead of a literal string. Use [functions in KratosApps]() to change how your app behaves.
-
-1. In the Function Bar, type this expression:
-
-	**Text(Value("123456"), "$#,#")**
-
-	*Screen shot*
-
-	The label shows the number in the quotation marks as a dollar value with a comma after the thousands digit. The expression combines the **Value** function with the **Text** function. The **Value** function converts the string between the quotation marks into a value, which KratosApps can format and use in mathematic operations. The **Text** function formats the value based on the symbols in the second set of quotation marks.
-
-	**Note:** You could have gotten the same result by just typing **$123,456**. But labels often show input from other controls. For example, a user might specify a dollar value by using a slider. In that case, you could show the slider's value in a label but use the **Text** function to add the comma and the dollar sign.
-
-## Show data from another control in a label ##
 1. On the **Insert** tab, click **Text**, and then click **Input Text**.
 
 	*Screen shot*
@@ -85,35 +60,17 @@ Show words, numbers, dates, or currency values in a label by setting the value o
 
 	*Screen shot*
 
-1. Rename the new control **CityName**.
+1. Name the new box **Birthdate**.
+2. Change the **Text** property of **ShowText** to this expression:
 
-	*Screen shot*
+	**DateDiff(Today(), DateValue(Birthdate!Text))**
 
-2. Move **CityName** over **TestLabel**.
+	This expression will show the number of days between today and whatever date the user types into **Birthdate**. When the user types a date into **Birthdate**, the **Text** property of that control is set to that value.
 
-	*Screen shot*
+1. Double-click the default text in **Birthdate**, and then replace it by typing the date of your next birthday.
 
-3. Repeat the first three steps of this procedure, except name the control **StateName**.
+	**ShowText** shows the number of days between today and your next birthday.
 
-	*Screen shot*
-
-4. Set the **Text** property of **TestLabel** to this expression:
-
-	**CityName!Text & StateName!Text**
-
-	*Screen shot*
-
-	This expression will concatenate the values of the **Text** properties of **CityName** and **StateName**.
-
-1. Click **FirstNumber** to select it, double-click its default text, and then type a number, such as **46**.
-
-	*Screen shot*
-
-	In this step, you set the **Text** property of **FirstNumber**.
-
-1. Set the **Text** property of **SecondNumber** to a number, such as **29**.
-
-	**TestLabel** shows the sum of numbers that you specified in **FirstNumber** and **SecondNumber**
 ## Format a label ##
 
 1. With the label selected, click **Fill** on the **Home** tab, and then click a color in the list that appears.
@@ -168,3 +125,108 @@ Show words, numbers, dates, or currency values in a label by setting the value o
 
 	*Screen shot*
 
+## Show text in a gallery ##
+1. On the **Insert** tab, click **Gallery**, and then click a text gallery in landscape orientation.
+
+	*Screen shot*
+
+1. On the **File** menu, click **Data Sources** (or press Ctrl-D).
+
+	*Screen shot*
+
+1. Under **Add new source**, click **RSS Feed**.
+
+	*Screen shot*
+
+1. In the text box that appears, type or paste this URL, and then click **Import data**:
+
+	**http://blogs.technet.com/b/projectsiena/rss.aspx**
+
+	The RSS feed that you just added appears under **Existing Sources**, and a preview of its text appears in the pane to the right.
+
+	*Screen shot*
+
+1. Near the upper-left corner, click the Back button (or press Esc) to return to the default workspace.
+
+	*Screen shot*
+
+1. On the **Insert** tab, click **Gallery**, and then click a text gallery in landscape orientation.
+
+	*Screen shot*
+
+1. With the gallery selected and the properties list set to **Items**, type or paste **rss_1** in the Function Bar.
+
+	*Screen shot*
+
+	The gallery shows text from the RSS feed, but you probably want to change the kind of information that appears in each label, as the next procedure describes.
+
+## Change the text that appears in each element of a gallery ##
+1. Complete the steps in the previous procedure.
+2. Select the **Heading1** label by clicking inside the leftmost item of the gallery, near the top.
+
+	*Screen shot*
+
+1. With the properties list set to **Text**, replace the default value with **ThisItem!title** in the Function Bar.
+
+	*Screen shot*
+
+	The first part of the title of each article appears near the top of the gallery.
+
+	*Screen shot*
+
+1. Set the size of the text to **11**, and make it bold.
+
+	*Screen shot*
+
+	The entire title of each article appears near the top of the gallery.
+
+	**Note:** To avoid showing a partial item, widen the gallery to show more than one item, or shrink the gallery's width to show only one item.
+
+	*Screen shot*
+
+1. Select **Subtitle1** by clicking just under **Heading1** in the leftmost item of the gallery.
+
+	*Screen shot*
+
+1. With the properties list set to **Text**, replace the default value with **ThisItem!pubDate** in the Function Bar.
+
+	*Screen shot*
+
+	The publication date and time of each article appears under its title.
+
+	*Screen shot*
+
+1. Select the **Body1** label by clicking inside the leftmost item in the gallery, near the bottom.
+
+	*Screen shot*
+
+1. With the properties list set to **Text**, replace the default value with **ThisItem!description** in the Function Bar.
+
+	*Screen shot*
+
+	The body of each article appears with some HTML tags appearing as plain text. You can use an HTML label to render those tags properly, as the next procedure describes.
+
+	*Screen shot*
+
+## Show text in an HTML label ##
+1. Follow the steps in the previous procedure.
+2. Delete the **Body1** label by clicking the content of the article that appears in the leftmost item of the gallery and then pressing Delete.
+3. Select the gallery template by clicking under the **Subtitle1** label in the leftmost item of the gallery.
+
+	*Screen shot*
+
+3. On the **Insert** tab, click **Text**, and then click **HTML Label**.
+
+	*Screen shot*
+
+	An HTML label appears in each item of the gallery.
+
+1. In the leftmost item of the gallery, move and resize the HTML label to fit in the area that was taken by the label that you deleted.
+
+	*Screen shot*
+
+1. With the HTML label selected and the properties list showing **HtmlText**, replace the default value with **ThisItem!description** in the Function Bar.
+
+	The HTML tags render properly.
+
+	*Screen shot*

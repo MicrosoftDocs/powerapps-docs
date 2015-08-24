@@ -10,7 +10,7 @@ Create an app that shows sample data about tablets, laptops, and desktop compute
 
 The first screen of this app shows an image of each device, its manufacturer, and its price. Users can filter the list of devices by category or manufacturer and then create a custom list of devices that interest them.
 
-*Screen shot*
+![Fully configured MainScreen](./media/kratosapps-tutorial-pcselector/main-screen.jpg)
 
 The second screen of this app shows the custom list of devices. Users can specify a quantity for each device, and the app shows the total cost.
 
@@ -166,15 +166,15 @@ In this procedure, you'll add another gallery and configure it to show the logos
 
 8. Click the first the image in the gallery to select the gallery template.
 
-	*Screen shot*
+	![OEM gallery with gallery selected](./media/kratosapps-tutorial-pcselector/oem-gallery-template.jpg)
 
 9. On the **Image** tab, click **ImagePosition**, and then click **ImagePosition!Fit**.
 
-	*Screen shot*
+	![Image Position menu on Image tab](./media/kratosapps-tutorial-pcselector/image-position.jpg)
 
 	Each logo appears entirely in the gallery.
 
-	*Screen shot*
+	![OEM gallery](./media/kratosapps-tutorial-pcselector/oem-gallery.jpg)
 
 ## Show the devices ##
 In this procedure, you'll add a third gallery, which will show not just an image of each device but also its manufacturer and its category. In the last step, you'll configure a label in the gallery to show the price. The prices in Excel don't appear with a dollar sign so you'll add one by specifying an expression. 
@@ -183,24 +183,19 @@ In an expression, you indicate literal text (in this case, a dollar sign) betwee
 
 1. On the **Insert** tab, click **Gallery**, and then click the horizontal **Image With Text** gallery.
 
-*Screen shot*
+	![Add Image gallery with text](./media/kratosapps-tutorial-pcselector/add-device-gallery.jpg)
 
 2. Name the newest gallery **DevicesGallery**, and set its **Items** property to **Devices**.
+
+	![Image gallery with text set to show devices](./media/kratosapps-tutorial-pcselector/device-gallery-default.jpg)
+
 2. Position the **DevicesGallery** so that it touches the right edge of the **OemGallery**, near the vertical center.
-
-*Screen shot*
-
-3. With the **DevicesGallery** selected, click **Width** in the properties list, and then type **250** in the Function Bar.
-4. Using the previous step as a guide, set the **Height** property of the same gallery to **200**.
-
-*Screen shot*
-
 3. Click the first image in the **DevicesGallery**, and then set its **ImagePosition** property to **Fit**.
 4. Under the first image in the **DevicesGallery**, click the bottom label, and then set its **Text** property to this expression, so that the price of each device appears:
 
 	**"$" & ThisItem!Price**
 
-	![Vertical gallery that shows four OEM logos](./media/kratosapps-tutorial-pcselector/device-gallery.jpg)
+	![Device gallery showing price](./media/kratosapps-tutorial-pcselector/device-price.jpg)
 
 ## Filter the devices ##
 In this procedure, you'll use an expression to filter the **DeviceGallery** by both manufacturer and category. The expression includes the **Filter** function, which is one of many [functions that KratosApps supports]().
@@ -314,13 +309,17 @@ In this procedure, you'll start to create the screen that will show the custom l
 ## Show the custom list ##
 In this procedure, you'll add items to a custom list and then show it in a gallery. To keep this procedure short, you'll copy the gallery from the **MainScreen**, paste it into the **SummaryScreen**, and then change the gallery's data source to the collection you created.
 
-1. On the **MainScreen**, select the checkbox for more than one device.
+1. From the **MainScreen**, press F5 to open Preview.
 
-2. Select the orange banner and the **DevicesGallery** by clicking one and then, while holding down Ctrl, clicking the other.
+2. Select the checkbox for more than one device, and then press Esc to return to the default workspace.
+
+2. Click the orange banner, and then hold down Ctrl as you click any item in the **DevicesGallery** except the first one.
+
+	A selection box appears around both the banner and the **DevicesGallery**.
 
 	*Screen shot*
 
-3. Press Ctrl-C to copy those controls to the Clipboard, show the **SummaryScreen**, and then press Ctrl-V to paste them onto that screen.
+3. Press Ctrl-C to copy those two controls to the Clipboard, show the **SummaryScreen**, and then press Ctrl-V to paste them onto that screen.
 
 1. Rename the gallery that you pasted to **SelectedDevicesGallery**, and set its **Items** property to **Collection1**.
 
@@ -354,7 +353,8 @@ In this procedure, you'll replace the checkbox in each item of the gallery with 
 
 	*Screen shot*
 
-2. Change the text of the label by double-clicking it and then typing **QTY:** and then move the label near the left edge of the slider.
+2. Double-click the label, and then type **QTY:** to change its text.
+3. Move the label near the left edge of the slider.
 
 	*Screen shot*
 
