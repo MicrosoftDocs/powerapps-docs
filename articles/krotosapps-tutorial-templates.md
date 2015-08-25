@@ -45,11 +45,12 @@ A template is a pre-built app that comes with:
 6. Click *Choose* to use the selected template
 	
 	!["Click "Choose" to use the selected template](./media/kratosapps-tutorial-templates/choose.png)
+	
 	Your sample data and images will be uploaded to the connection you chose and your app will be launched in *Edit* mode.
 
 ## Modifying Data ##
 
-1. In KratosApps Studio, press Alt+D, and then click **Office 365 Preview** in the list of data sources.
+<TODO: Take the user though the steps of making changes to the data in their app and then seeing the changes on the excel file on their connection>
 
 ## Saving Your App##
 
