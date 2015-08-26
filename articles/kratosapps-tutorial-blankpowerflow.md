@@ -37,7 +37,7 @@ You'll then connect to this Excel file from a PowerFlow.
 
 3. In the list of templates, click **Create from Scratch**.
 
-	![Create from Scratch](./media/kratosapps-tutorial-powerflow/sratch.png)
+	![Create from Scratch](./media/kratosapps-tutorial-powerflow/scratch.png)
 
 4. In the text box that says *Start your logic*, type **Excel**.
 
