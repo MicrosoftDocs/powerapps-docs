@@ -1,130 +1,97 @@
 <properties
 	pageTitle="KratosApps tutorial: Create a PowerFlow from scratch"
-	description="Create an app from scratch by importing a set of sample data, filtering the data, adding items to a custom list, specifying a quantity for each item, and calculating the total cost."
+	description="Create a PowerFlow to take action when one or more conditions are met. For example, get an email whenever someone adds a row to an Excel file in the cloud."
 	services="kratosapps"
 	authors="stepsic-microsoft-com"
  />
 
 # Create a PowerFlow from scratch #
-Create an flow that shows sends out notifications when data is added to an Excel spreadsheet. Learn how to use a set of data from Excel, add and configure actions on top of it.
+Create a PowerFlow to take action when one or more conditions are met. For example, get an email whenever someone adds a row to an Excel file in the cloud.
 
 **Prerequisites**
 
-- Sign up for [KratosApps](https://www.kratosapps.com/).
-- A cloud file storage account, such as **Dropbox**, **OneDrive** or **SharePoint**.
-- An Office 365 account to send email.
+- [KratosApps](https://www.kratosapps.com/)
+- An account, such as Dropbox, OneDrive, or SharePoint, for storing files in the cloud
+- An Office 365 account (from which you can send email)
 
-## Create your trigger
-In this procedure, you'll creata a PowerFlow that uses an Excel file, which contains three tables:
+## Create a trigger
 
-- names and logos for OEMs
-- names and icons for device categories
-- names, images, and other information about specific devices
+1. Download [this Excel file](), and then upload it to your account for storing files in the cloud.
 
-You'll then connect to this Excel file from a PowerFlow.
+2. Open KratosApps, and then click **Flows** in the left navigation bar.
 
-1. Download [this Excel file]().
+	![Click Flows in the left navigation bar](./media/kratosapps-tutorial-blankpowerflow/nav_flows.png)
 
-2. Navigate to your cloud file account, such as **Dropbox** and upload the file. 
+3. Click **Create from blank**.
 
-	![Uploading file](./media/kratosapps-tutorial-blankpowerflow/uploading.png)
+	![Create a PowerFlow from blank](./media/kratosapps-tutorial-blankpowerflow/create_blank.png)
 
-2. Open KratosApps.
+4. In the text box that says *Start your logic*, type **Excel**, and then click **When a row is added to an Excel table** in the drop-down list.
 
-	![Gallery](./media/kratosapps-tutorial-blankpowerflow/gallery.png)
+	![Excel in the list of triggers](./media/kratosapps-tutorial-blankpowerflow/add-excel-data2.png)
+5. Click the account in which you stored the Excel file at the start of this procedure, and then provide your credentials.
 
-	KratosApps opens and shows a featured screen by default. Click **PowerFlows** on the left to filter to just PowerFlow templates. 
+6. Click **...** next to the **Excel file** field, and then navigate to the file that you uploaded.
 
-3. In the list of templates, click **Create from Scratch**.
+	![File picker](./media/kratosapps-tutorial-blankpowerflow/select-file2.png)
 
-	![Create from Scratch](./media/kratosapps-tutorial-blankpowerflow/scratch.png)
+8. Under **TABLE TO WATCH**, click *NameOfTable*.
 
-4. In the text box that says *Start your logic*, type **Excel**.
+	![A list of the tables that you imported from Excel](./media/kratosapps-tutorial-blankpowerflow/list-table2.png)
 
-	![Excel in the list of triggers](./media/kratosapps-tutorial-blankpowerflow/add-excel-data.png)
+8. (optional) Click **Add a filter...**, and then specify conditions under which email should be sent.
 
-4. Click **When a row is added to an Excel table**.
+	For example, specify that email should be sent only if a user adds a row to *NameOfTable* and lists you in the Owner column of that table.
 
-5. Click on the cloud file service that you stored your Excel file in step #2.
+	![A preview of the filter](./media/kratosapps-tutorial-blankpowerflow/filter2.png)
 
-	![List of cloud file providers](./media/kratosapps-tutorial-blankpowerflow/listproviders.png)
+7. Save your PowerFlow by clicking **Done** near the bottom of the screen.
 
-	You will need to re-enter your sign in credentials. 
-
-6. Click **...** next to the **Excel file** field and navigate to the particular file you uploaded.
-
-	![File picker](./media/kratosapps-tutorial-blankpowerflow/select-file.png)
-
-	The three tables in that Excel file should now appear appear under the **Tables** dropdown.
-
-	![A list of the tables that you imported from Excel](./media/kratosapps-tutorial-blankpowerflow/list-table.png)
-
-7. Select the third table.
-
-8. (optional) Click add a filter and select a column from the table to filter by.
-
-	For example, you could use the **Owner** column to only receive notifications for devices that you own.
-
-	![A preview of the filter](./media/kratosapps-tutorial-blankpowerflow/filter.png)
-
-7. Save your PowerFlow by clicking the Done button at the bottom.
-
-	![Click the done button](./media/kratosapps-tutorial-blankpowerflow/done.png)
+	![Click the done button](./media/kratosapps-tutorial-blankpowerflow/done2.png)
 
 ## Create the action ##
-In this procedure, you'll add an action to Send Email in your PowerFlows and test it. By following these steps, you'll learn the basics of actions, and how to pass parameters between steps in your PowerFlow to make it work the way you want.
+In this procedure, you'll add an action to send email in your PowerFlow and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your PowerFlow to make it work the way you want.
 
-1. In the list of PowerFlows, click on the PowerFlow you created in the first procedure. 
-
-	![List of PowerFlows](./media/kratosapps-tutorial-blankpowerflow/list.png)
-
-2. Click **Add action**, and then click Send Email action.
+1. In the list of PowerFlows, click the one that you created in the previous procedure, and then click **Add action after**. 
 
 	![List of actions](./media/kratosapps-tutorial-blankpowerflow/addaction.png)
 
-3. You will be asked to sign in with your Office 365 account. 
+2. In the list of actions, click **Outlook - Send an email**, and then provide the credentials for your Office 365 account.
 
-4. In the **To** field type in your Email address. Enter a subject in the **Subject** field.
+	![List of actions](./media/kratosapps-tutorial-blankpowerflow/send_mail.png)
 
-5. Click on the **Message** field. Enter same placeholder text such as *Device added to Excel:*. Then, click **Device Name**, in the list of parameters below the Message field. 
+4. In the form that appears, type your email address in the **TO EMAILS** field and a subject in the **SUBJECT** field.
 
-	![The list of parameters](./media/kratosapps-tutorial-blankpowerflow/listfields.png)
+	![The list of parameters](./media/kratosapps-tutorial-blankpowerflow/listfields2.png)
 
-	A token representing the Device Name will appear in your Message field.
+5. Type **Device Added To Excel:** in the **MESSAGE** field, and then click **Device Name** in the list of parameters. 
 
-	![Token added to the field](./media/kratosapps-tutorial-blankpowerflow/message-token.png)
+	A placeholder for the name of a device appears in your message.
 
-	Type the end of your message. 
+	![Token added to the field](./media/kratosapps-tutorial-blankpowerflow/message-token2.png)
 
-4. Click the **Done** button.
+4. Type the end of your message, and then click **Done**.
 
 	The list of flows reflects your changes.
 
-	![New list of flows](./media/kratosapps-tutorial-blankpowerflow/newlist.png)
-	
 ## Test and pause your PowerFlow ##
-In this procedure, you'll test your PowerFlow and pause it. 
 
-1. Navigate to your cloud file provider and open up the Excel file.
-
-	![Opened excel file](./media/kratosapps-tutorial-blankpowerflow/openfile.png)
-
-2. Select the third table and click **Add row** in the ribbon. 
+1. Open the Excel file in the cloud, and then click the third table.
+2. On the **Home** tab of the ribbon, click **Insert**, and then click **Insert Table Row Below**. 
 
 	![Adding a row](./media/kratosapps-tutorial-blankpowerflow/addrow.png)
 
-3. Type in the data for this device. If you added a filter in the first procedure, be sure to enter content that matches that filter. 
+3. Specify data in each column of the new row, save the file, and then return to the list of PowerFlows.
+
+	**Important:** If you added a filter earlier in this topic, be sure to specify data that matches your filter. 
 	![Data added](./media/kratosapps-tutorial-blankpowerflow/filldata.png)
 
-	Save the file once you're complete.
+	Within a minute, you'll receive an email that notifies you of the changes in Excel.
 
-4. You may now have to wait up to a minute. Return to the list of PowerFlows.
+	**Note:** If you don't receive an email, click the status icon. A message indicating what happened might appear.
 
-	**Note:** If you do not receive an email after a minute, click on the status icon. It may contain a message indicating what happened.
+5. Click the **Pause** button to stop being notified whenever a row is added to the spreadsheet. 
 
-5. Now that you have completed testing the PowerFlow, click the **Pause** button. Now you will no longer get emails when rows are added to the spreadsheet. 
-
-	
 ## Next Steps ##
 
-- [Add additional steps]() You can now add more steps, such as different ways to be notified, to your PowerFlow.
+- [Add additional steps]() Add more steps, such as different ways to be notified, to your PowerFlow.
