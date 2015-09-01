@@ -6,13 +6,13 @@
  />
 
 # Create an app from scratch in KratosApps #
-Create an app that shows sample data about tablets, laptops, and desktop computers from various manufacturers. Learn how to import a set of data from Excel, add and configure controls such as shapes and checkboxes, show images and other data in a gallery. Create a custom list, called a collection, and perform mathematical calculations based on user choices.
+Create an app that shows sample data about tablets, laptops, and desktop computers from various manufacturers. Import text and images from an Excel file, show a list from which users can choose one or more devices, and dynamically update the total cost based on a quantity for each device.
 
-The first screen of this app shows an image of each device, its manufacturer, and its price. Users can filter the list of devices by category or manufacturer and then create a custom list of devices that interest them.
+The first screen of this app shows icons for device categories along the top and manufacturers (OEMs) along the left edge. Users can click these icons to filter the list of devices in the middle of the screen. Users create a list of devices that interest them by selecting the check box for each device. To show the list on the next screen, users click **View Device Mix**.
 
 ![Fully configured MainScreen](./media/kratosapps-tutorial-pcselector/main-screen.jpg)
 
-The second screen of this app shows the custom list of devices. Users can specify a quantity for each device, and the app shows the total cost.
+The second screen of this app shows a list of the devices that the user specified on the first screen. Users can specify a quantity for each device, and the app shows the total cost.
 
 *Screen shot*
 
@@ -21,41 +21,24 @@ The second screen of this app shows the custom list of devices. Users can specif
 - Download and install [KratosApps](https://www.kratosapps.com/downloads).
 
 ## Import sample data
-In this procedure, you'll download and decompress an executable file to install sample data in a folder on your local device. Then you'll configure the folder so that KratosApps can find the data that you downloaded. The sample data includes images and an Excel file, which contains three tables:
+In this procedure, you'll download an Excel file and a three sets of graphics. The Excel file contains these tables:
 
-- names and logos for OEMs
-- names and icons for device categories
-- names, images, and other information about specific devices
+- the name of each OEM and a link to its logo
+- the name of each device category and a link to its icon
+- the name of each device, a link to its image, and other information
 
-You'll then import the sample data using techniques that are similar to [importing data from other sources]().
+After you install the sample data, you'll configure the folder that contains the data so that KratosApps can find it.
 
-1. Download [this executable file](), and then double-click it to decompress sample data.
+1. Download [this file](), and then double-click it.
 
-	When you double-click the executable file, the Excel file and the graphics are installed in this folder:
+	The sample data is installed in this folder:
 
 	**C:\\Users\\Public\\Pictures\\SienaAssets\\PcSelector**
 1. In **C:\\Users\\Public\\Pictures**, right-click **SienaAssets**, point to **Include in library**, and then click **Pictures**.
 
 	![Inluding the SienaAssets in a library](./media/kratosapps-tutorial-pcselector/include-library.jpg)
 
-2. Open KratosApps.
-
-	![App tile for KratosApps on Start screen](./media/kratosapps-tutorial-pcselector/app-tile.jpg)
-
-	KratosApps opens and shows a blank screen by default.
-
-	Above the top of the screen, a ribbon contains tabs that you can click to show groups of options. For example, the **Data** tab shows options for adding data to your app.
-
-	![Data tab in the ribbon](./media/kratosapps-tutorial-pcselector/data-tab.jpg)
-
-	A list of properties and the Function Bar appear betweeen the ribbon and the screen. For example, the **Background Image** property appears by default, so that you can add a background image to the default screen.
-
-	![A property in the properties list and the Function Bar](./media/kratosapps-tutorial-pcselector/function-bar.jpg)
-
-	A thumbnail view of each screen appears near the left edge of the screen.
-
-	![A thumbnail representation of the default screen](./media/kratosapps-tutorial-pcselector/screen-thumbnail.jpg)
-3. On the **File** menu, click **Data Sources** (or press Alt-D).
+2. Open KratosApps, and then press Alt-D (or open the **File** menu and then click **Data Sources**).
 
 	![File menu](./media/kratosapps-tutorial-pcselector/file-menu.jpg)
 
@@ -63,7 +46,7 @@ You'll then import the sample data using techniques that are similar to [importi
 
 	![List of data sources, including Excel](./media/kratosapps-tutorial-pcselector/add-excel-data.jpg)
 
-5. Browse to the Excel file that you downloaded and decompressed at the start of this procedure, and then click that file.
+5. Browse to the Excel file that you installed at the start of this procedure, and then click that file.
 
 	![Sample data, including the Excel file](./media/kratosapps-tutorial-pcselector/win8devices.jpg)
 
@@ -86,7 +69,7 @@ You'll then import the sample data using techniques that are similar to [importi
 	![Back arrow from the list of data sources](./media/kratosapps-tutorial-pcselector/back-arrow.jpg)
 
 ## Create a banner ##
-In this procedure, you'll add a rectangle to the first screen of your app, and then you'll configure the color, location, and size of the rectangle. By following these steps, you'll learn the basics of [adding other controls](), such as labels and buttons, and [configuring design properties]() to make the controls look the way you want.
+In this procedure, you'll add a rectangle to the first screen of your app, and then you'll configure the color, location, and size of the rectangle.
 
 2. On the ribbon, click the **Insert** tab.
 
@@ -102,7 +85,7 @@ In this procedure, you'll add a rectangle to the first screen of your app, and t
 
 	By default, a thick, gray box surrounds the rectangle to indicate that it's selected.
 
-	**Important:** To change the property of a control, click it so that it's selected, and then update the property. To change a property of a screen, click a blank area of that screen so that it's selected, and then update the property. To delete a control, click it, and then press Delete.
+	**Important:** To change the property of a control or a screen, click it so that it's selected, and then update the property. To delete a control, click it, and then press Delete.
 
 4. On the **Home** tab of the ribbon, click **Fill**, and then click a color in the list that appears.
 
@@ -110,23 +93,27 @@ In this procedure, you'll add a rectangle to the first screen of your app, and t
 
 	![The Fill item on the Home tab of the ribbon](./media/kratosapps-tutorial-pcselector/fill-menu.jpg)
 
-5. Move the rectangle to the upper-left corner of the screen, and then widen the rectangle to create a banner across the top of the screen.
+5. Move the rectangle to the upper-left corner of the screen by dragging the selection box around it up and to the left.
 
-	**Important:** To move a control, first select it, and then drag the selection box that surrounds the control. To resize a control, first select it, and then drag a white square or triangle in its selection box. 
+6. Widen the rectangle by dragging the white square in the right side of the selection box to the right until the rectangle becomes a banner across the top of the screen.
 
-	The thumbnail view of your screen reflects your changes.
+	The thumbnail view of your screen, near its left edge, reflects your changes.
 
 	![A thumbnail of a blank screen with an orange banner](./media/kratosapps-tutorial-pcselector/banner-thumbnail.jpg)
 ## Show the device categories ##
-In this procedure, you'll add a gallery that shows an icon for each category of device that the app will show. In KratosApps, each gallery contains multiple controls, such as images or labels, in which you can show a set of related data. The category gallery will contain only images, but you'll add another gallery later in this topic that will show not only an image but also other information about each device.
-
-To specify the data that appears in a gallery, you set its **Items** property in the Function Bar. You can also [configure other controls]() to show specific types of information.
+In this procedure, you'll add a gallery that shows an icon for each device category. A gallery is a UI element that contains other UI elements, so that you can show sets of related data.
 
 1. On the **Insert** tab, click **Gallery**, and then click the horizontal **Image Only** gallery to add it to your screen.
 
 	![Gallery tab with the horizontal Image Only gallery selected](./media/kratosapps-tutorial-pcselector/add-category-gallery.jpg)
 
-1. In the Function Bar, type **PcCategory** to set the **Items** property of the gallery.
+1. Confirm that **Items** appears in the properties list, which is near the upper-left corner of the screen.
+
+	**Tip:** You can configure some properties of a control, such as its size and location, by clicking, dragging, or typing in the control itself. You can change other properties, such as Fill, by clicking options in the ribbon. But all properties appear alphabetically in the properties list, so you can always find the property you need by looking for its name.
+
+3. Set the **Items** property of the gallery by typing **PcCategory** in the Function Bar, which is to the right of the function button.
+
+	**PcCategory** is the name of a table in the Excel file that you imported. That table contains links to icons that the gallery should show.
 
 	![Property list showing Items and Function Bar showing PcCategory](./media/kratosapps-tutorial-pcselector/items-pccategory.jpg)
 
@@ -135,25 +122,20 @@ To specify the data that appears in a gallery, you set its **Items** property in
 	![Orange banner with a icon for each type of device](./media/kratosapps-tutorial-pcselector/category-gallery.jpg)
 
 ## Rename a screen and a gallery
-In this procedure, you'll rename the default screen and the gallery that you added. If you give screens and controls descriptive names, you can identify them more easily as you continue to develop an app.
+In this procedure, you'll rename the default screen and the gallery that you added. You can more easily develop an app if you rename, for example, screens from the default names of **Screen1**, **Screen2**, and so forth.
 
-For example, you'll add navigation between screens later in this tutorial. If your app has several screens, you'll be able to specify them more easily if they have names more descriptive than **Screen1**, **Screen2**, and so forth.
+4. Select the gallery by clicking any item in it *except* the first one.
 
-At the end of this procedure, you'll save the app by using either the **File** menu or one of several [keyboard shortcuts]() that you can use in KratosApps.
-
-4. Select the gallery, and then click **Gallery1** in the box in the lower-left corner of the screen.
-
-	![List of controls on the screen, including Gallery1](./media/kratosapps-tutorial-pcselector/rename-gallery.jpg)
+6. On the **Home** tab, click **Gallery1**, and then type **CategoryGallery**.
 
 	**Note:** If you've added and deleted a gallery before you added this one, the name of the gallery will end with a number that's greater than 1.
 
-6. Rename the gallery by typing **CategoryGallery** in the box.
-7. Click an empty area of the screen to select it, and then rename the screen by typing **MainScreen** in the box near the lower-left corner.
+7. Click an empty area of the screen to select it, click **Screen1** on the **Home** tab, and then  type **MainScreen**.
 
 8. Save your changes by opening the **File** menu and then clicking **Save** (or by pressing Ctrl-S).
 
 ## Show the OEM logos ##
-In this procedure, you'll add another gallery and configure it to show the logos of each OEM. You'll also update the first item in the gallery, which is a template for all items in the gallery. By updating the template, you'll automatically configure every other item in the gallery to match.
+In this procedure, you'll add another gallery and configure it to show the logos of each OEM. You'll also update the first item in the gallery, which is a template for all items in that gallery. By updating the template, you'll automatically configure every other item in the gallery to match.
 
 6. On the **Insert** tab, click **Gallery**, and then click the vertical **Image Only** gallery.
 
