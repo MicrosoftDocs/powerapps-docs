@@ -1,11 +1,11 @@
 <properties
-	pageTitle="KratosApps tutorial: Create an app from scratch"
+	pageTitle="KratosApps tutorial: Create an app from a blank screen"
 	description="Create an app from scratch by importing a set of sample data, filtering the data, adding items to a custom list, specifying a quantity for each item, and calculating the total cost."
 	services="kratosapps"
 	authors="AFTOwen"
  />
 
-# Create an app from scratch in KratosApps #
+# Create an app from a blank screen in KratosApps #
 Create an app that shows sample data about tablets, laptops, and desktop computers from various manufacturers. Import text and images from an Excel file, show a list from which users can choose one or more devices, and dynamically update the total cost based on a quantity for each device.
 
 The first screen of this app shows icons for device categories along the top and manufacturers (OEMs) along the left edge. Users can click these icons to filter the list of devices in the middle of the screen. Users create a list of devices that interest them by selecting the check box for each device. To show the list on the next screen, users click **View Device Mix**.
