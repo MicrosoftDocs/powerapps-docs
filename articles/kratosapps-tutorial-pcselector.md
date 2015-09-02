@@ -1,12 +1,12 @@
 <properties
-	pageTitle="KratosApps tutorial: Create an app from scratch"
+	pageTitle="KratosApps tutorial: Create an app from a blank screen"
 	description="Create an app from scratch by importing a set of sample data, filtering the data, adding items to a custom list, specifying a quantity for each item, and calculating the total cost."
 	services="kratosapps"
 	authors="AFTOwen"
  />
 
-# Create an app from scratch in KratosApps #
-Create an app that shows sample data about tablets, laptops, and desktop computers from various manufacturers. Import text and images from an Excel file, show a list from which users can choose one or more devices, and dynamically update the total cost based on a quantity for each device.
+# Create an app from a blank screen in KratosApps #
+Create an app that shows sample data about tablets, laptops, and desktop computers from various manufacturers. Import text and images from an Excel file, show a list from which users can choose one or more devices, and dynamically update the total cost based on a variable quantity for each device.
 
 The first screen of this app shows icons for device categories along the top and manufacturers (OEMs) along the left edge. Users can click these icons to filter the list of devices in the middle of the screen. Users create a list of devices that interest them by selecting the check box for each device. To show the list on the next screen, users click **View Device Mix**.
 
@@ -20,25 +20,31 @@ The second screen of this app shows a list of the devices that the user specifie
 
 - Download and install [KratosApps](https://www.kratosapps.com/downloads).
 
-## Import sample data
-In this procedure, you'll download an Excel file and a three sets of graphics. The Excel file contains these tables:
+## Install sample data
+In this procedure, you'll download an Excel file and three sets of graphics. The Excel file contains these tables:
 
-- the name of each OEM and a link to its logo
-- the name of each device category and a link to its icon
-- the name of each device, a link to its image, and other information
+- **PcCategory**, which contains a name and a link to a graphic for each category
+- **OEM**, which contains a name and a link to a graphic for each manufacturer
+- **Devices**, which contains a name, a link to a graphic, and other information for each device
 
 After you install the sample data, you'll configure the folder that contains the data so that KratosApps can find it.
 
-1. Download [this file](), and then double-click it.
+1. Download [this file](), and then double-click it to install the sample data in this folder:
 
-	The sample data is installed in this folder:
-
-	**C:\\Users\\Public\\Pictures\\SienaAssets\\PcSelector**
+	**C:\\Users\\Public\\Public Pictures\\SienaAssets\\PcSelector**
 1. In **C:\\Users\\Public\\Pictures**, right-click **SienaAssets**, point to **Include in library**, and then click **Pictures**.
 
-	![Inluding the SienaAssets in a library](./media/kratosapps-tutorial-pcselector/include-library.jpg)
+	![Including the SienaAssets in a library](./media/kratosapps-tutorial-pcselector/include-library.jpg)
 
-2. Open KratosApps, and then press Alt-D (or open the **File** menu and then click **Data Sources**).
+1. (optional) Open the Excel file to understand how the tables are structured.
+
+	For example, the **OEM** table has a column for the name of each manufacturer and a column for links to each logo:
+
+	![The OEM table, with names and links to logos](./media/kratosapps-tutorial-pcselector/oem-table.jpg)
+
+##Import sample data##
+
+2. Open KratosApps, and then press Alt-D (or open the **File** menu, and then click **Data Sources**).
 
 	![File menu](./media/kratosapps-tutorial-pcselector/file-menu.jpg)
 
@@ -54,22 +60,22 @@ After you install the sample data, you'll configure the folder that contains the
 
 	![A checkbox for each table in Excel that you can import](./media/kratosapps-tutorial-pcselector/select-tables.jpg)
 
-	The three tables that you just imported appear under **Existing sources**.
+	The three tables in the Excel file appear under **Existing sources**.
 
 	![A list of the tables that you imported from Excel](./media/kratosapps-tutorial-pcselector/existing-sources.jpg)
 
 1. (optional) Click each table to display a preview of the data that it contains.
 
-	For example, the **OEM** table contains the logos that will appear along the left edge of the first screen of your app.
+	For example, the **OEM** table shows the name and a logo for each manufacturer. The logos will appear along the left edge of the first screen of the app.
 
 	![A preview of the OEM table](./media/kratosapps-tutorial-pcselector/oem-preview.jpg)
 
-7. Return to the default workspace by clicking the Back arrow in the upper-left corner of the screen (or by pressing Esc).
+7. Return to the default workspace by pressing Esc (or by clicking the Back arrow in the upper-left corner of the screen).
 
 	![Back arrow from the list of data sources](./media/kratosapps-tutorial-pcselector/back-arrow.jpg)
 
 ## Create a banner ##
-In this procedure, you'll add a rectangle to the first screen of your app, and then you'll configure the color, location, and size of the rectangle.
+In this procedure, you'll add a rectangle to the first screen of your app, and then you'll configure the **Fill** color, location, and size of the rectangle.
 
 2. On the ribbon, click the **Insert** tab.
 
@@ -83,9 +89,9 @@ In this procedure, you'll add a rectangle to the first screen of your app, and t
 
 	![The shapes that you can add to a screen in your app](./media/kratosapps-tutorial-pcselector/default-rectangle.jpg)
 
-	By default, a thick, gray box surrounds the rectangle to indicate that it's selected.
+	By default, a thick, gray box surrounds the rectangle to indicate that it's selected by default.
 
-	**Important:** To change the property of a control or a screen, click it so that it's selected, and then update the property. To delete a control, click it, and then press Delete.
+	**Important:** If you click away from the rectangle, it's no longer selected, and you can't configure it. To modify the rectangle (or any other control or screen), click it to select it, and then you can change any of its properties, such as its **Fill** color.
 
 4. On the **Home** tab of the ribbon, click **Fill**, and then click a color in the list that appears.
 
@@ -95,13 +101,13 @@ In this procedure, you'll add a rectangle to the first screen of your app, and t
 
 5. Move the rectangle to the upper-left corner of the screen by dragging the selection box around it up and to the left.
 
-6. Widen the rectangle by dragging the white square in the right side of the selection box to the right until the rectangle becomes a banner across the top of the screen.
+6. In the right side of the same selection box, drag the white square to the right edge of the screen, so that the rectangle becomes a banner.
 
 	The thumbnail view of your screen, near its left edge, reflects your changes.
 
 	![A thumbnail of a blank screen with an orange banner](./media/kratosapps-tutorial-pcselector/banner-thumbnail.jpg)
 ## Show the device categories ##
-In this procedure, you'll add a gallery that shows an icon for each device category. A gallery is a UI element that contains other UI elements, so that you can show sets of related data.
+In this procedure, you'll add a gallery that shows an icon for each device category. A gallery is a UI element that contains other UI elements. By adding and configuring a gallery, you can show a set of related data more easily than by adding and configuring individual elements.
 
 1. On the **Insert** tab, click **Gallery**, and then click the horizontal **Image Only** gallery to add it to your screen.
 
@@ -109,7 +115,7 @@ In this procedure, you'll add a gallery that shows an icon for each device categ
 
 1. Confirm that **Items** appears in the properties list, which is near the upper-left corner of the screen.
 
-	**Tip:** You can configure some properties of a control, such as its size and location, by clicking, dragging, or typing in the control itself. You can change other properties, such as Fill, by clicking options in the ribbon. But all properties appear alphabetically in the properties list, so you can always find the property you need by looking for its name.
+	**Tip:** You can configure some properties of a control, such as its size and location, by clicking, dragging, or typing in the control itself. You can change other properties, such as **Fill**, by clicking options in the ribbon. But all properties appear alphabetically in the properties list, so you can always find a property by looking for its name in that list.
 
 3. Set the **Items** property of the gallery by typing **PcCategory** in the Function Bar, which is to the right of the function button.
 
@@ -124,18 +130,24 @@ In this procedure, you'll add a gallery that shows an icon for each device categ
 ## Rename a screen and a gallery
 In this procedure, you'll rename the default screen and the gallery that you added. You can more easily develop an app if you rename, for example, screens from the default names of **Screen1**, **Screen2**, and so forth.
 
-4. Select the gallery by clicking any item in it *except* the first one.
+4. Select the gallery by clicking the icon for the **Laptop** or the **All-in-one** category.
+
+	![Selecting the PcCategory gallery](./media/kratosapps-tutorial-pcselector/select-pccategory-gallery.jpg)
 
 6. On the **Home** tab, click **Gallery1**, and then type **CategoryGallery**.
 
 	**Note:** If you've added and deleted a gallery before you added this one, the name of the gallery will end with a number that's greater than 1.
 
-7. Click an empty area of the screen to select it, click **Screen1** on the **Home** tab, and then  type **MainScreen**.
+	![Renaming the PcCategory gallery](./media/kratosapps-tutorial-pcselector/rename-gallery.jpg)
 
-8. Save your changes by opening the **File** menu and then clicking **Save** (or by pressing Ctrl-S).
+7. Click an empty area of the screen to select it, click **Screen1** on the **Home** tab, and then type **MainScreen**.
+
+	![Renaming the first screen](./media/kratosapps-tutorial-pcselector/rename-screen.jpg)
+
+8. Save your changes by pressing Ctrl-S (or by opening the **File** menu and then clicking **Save**).
 
 ## Show the OEM logos ##
-In this procedure, you'll add another gallery and configure it to show the logos of each OEM. You'll also update the first item in the gallery, which is a template for all items in that gallery. By updating the template, you'll automatically configure every other item in the gallery to match.
+In this procedure, you'll add another gallery and then configure it to show the logo of each OEM. You'll also update the template for that gallery, which will automatically update every item in the gallery to match.
 
 6. On the **Insert** tab, click **Gallery**, and then click the vertical **Image Only** gallery.
 
@@ -159,7 +171,7 @@ In this procedure, you'll add another gallery and configure it to show the logos
 	![OEM gallery](./media/kratosapps-tutorial-pcselector/oem-gallery.jpg)
 
 ## Show the devices ##
-In this procedure, you'll add a third gallery, which will show not just an image of each device but also its manufacturer and its category. In the last step, you'll configure a label in the gallery to show the price. The prices in Excel don't appear with a dollar sign so you'll add one by specifying an expression. 
+In this procedure, you'll add a third gallery, which will show an image of each device, its manufacturer, and its category. In the last step, you'll configure the gallery to show the price of each device instead of its category. The prices in Excel don't appear with a dollar sign so you'll add one by specifying an expression. 
 
 In an expression, you indicate literal text (in this case, a dollar sign) between quotes. You also concatenate two pieces of text by separating them with an ampersand. For an element in a gallery, you specify which column of a table to show by using **ThisItem**, followed by an exclamation mark, followed by the column name.
 
@@ -179,23 +191,29 @@ In an expression, you indicate literal text (in this case, a dollar sign) betwee
 
 	![Device gallery showing price](./media/kratosapps-tutorial-pcselector/device-price.jpg)
 
-## Filter the devices ##
-In this procedure, you'll use an expression to filter the **DeviceGallery** by both manufacturer and category. The expression includes the **Filter** function, which is one of many [functions that KratosApps supports]().
+	**Note:** The price expression contains two elements and an ampersand:
 
-To confirm that the filter works, you'll open Preview. As you develop your app, you can test some behavior in the default workspace. However, you open Preview to interact with your app exactly as a user will. By testing your app in Preview, you can confirm that your app works the way you expect before you share it with others.
+	- The first element (the dollar sign) is a literal string, which means that it will appear exactly as you type it. To specify a literal string in an expression, you surround the string with quotation marks.
+	- The ampersand concatenates whatever elements precede and follow it, so they appear as a continuous element.
+	- The last element is a placeholder for the price of the device. The element is automatically converted to whatever value is in the **Price** column of the table that the gallery shows.
+
+## Filter the devices ##
+In this procedure, you'll configure the **DeviceGallery** so that users can filter it by both category and manufacturer. You'll also test the filter in Preview, with which you can verify that your app works exactly as you expect.
 
 1. Set the **Items** property of the **DevicesGallery** to this expression:
 
 	**Filter(Devices, MFR = OemGallery!Selected!MFR && DeviceType = CategoryGallery!Selected!PcCategory)**
 
+	[More information]() about **Filter** and other functions in KratosApps
+
 2. Press F5 to open Preview.
-3. Click a category and an OEM logo to filter the **DevicesGallery** so that it shows only devices in that category from that manufacturer. 
-4. Press Esc to return to the default workspace.
+3. Click a category and an OEM logo to show only devices in that category from that manufacturer. 
+4. Return to the default workspace by pressing Esc.
 
 ## Highlight devices by price##
-In this procedure, you'll use the **If** function to highlight less expensive devices. With this function, you specify a condition (for example, whether the price of a device is less than $700) and the result if the condition is true. You can also specify a result if the condition is false.
+In this procedure, you'll highlight less expensive devices by using a conditional statement. With the **If** function, you specify a condition that is either true or false and a result if the condition is true. You can also specify a result if the condition is false.
 
-In this case, you'll specify that the fill of the price label is light green if the condition is true and light gray if the condition is false. You'll also change the text in that label to a black bold font.
+In this case, you'll specify that if the price of the device is less than $700, the **Fill** color of the price label will be light green. If the price is $700 or more, the **Fill** color will be light gray. You'll also change the text in that label to a black bold font.
 
 1. Under the first image in the **DevicesGallery**, click the bottom label, and then set its **Fill** property to this expression:
 
