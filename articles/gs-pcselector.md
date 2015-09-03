@@ -10,7 +10,7 @@ Create an app that shows sample data about tablets, laptops, and desktop compute
 
 The first screen of this app shows icons for device categories along the top and manufacturers (OEMs) along the left edge. Users can click these icons to filter the list of devices in the middle of the screen. Users create a list of devices that interest them by selecting the check box for each device. To show the list on the next screen, users click **View Device Mix**.
 
-![Fully configured MainScreen](./media/kratosapps-tutorial-pcselector/main-screen.jpg)
+![Fully configured MainScreen](./media/gs-pcselector/main-screen.jpg)
 
 The second screen of this app shows a list of the devices that the user specified on the first screen. Users can specify a quantity for each device, and the app shows the total cost.
 
@@ -34,60 +34,60 @@ After you install the sample data, you'll configure the folder that contains the
 	**C:\\Users\\Public\\Public Pictures\\SienaAssets\\PcSelector**
 1. In **C:\\Users\\Public\\Pictures**, right-click **SienaAssets**, point to **Include in library**, and then click **Pictures**.
 
-	![Including the SienaAssets in a library](./media/kratosapps-tutorial-pcselector/include-library.jpg)
+	![Including the SienaAssets in a library](./media/gs-pcselector/include-library.jpg)
 
 1. (optional) Open the Excel file to understand how the tables are structured.
 
 	For example, the **OEM** table has a column for the name of each manufacturer and a column for links to each logo:
 
-	![The OEM table, with names and links to logos](./media/kratosapps-tutorial-pcselector/oem-table.jpg)
+	![The OEM table, with names and links to logos](./media/gs-pcselector/oem-table.jpg)
 
 ##Import sample data##
 
 2. Open KratosApps, and then press Alt-D (or open the **File** menu, and then click **Data Sources**).
 
-	![File menu](./media/kratosapps-tutorial-pcselector/file-menu.jpg)
+	![File menu](./media/gs-pcselector/file-menu.jpg)
 
 4. In the list of data sources, click **Excel**.
 
-	![List of data sources, including Excel](./media/kratosapps-tutorial-pcselector/add-excel-data.jpg)
+	![List of data sources, including Excel](./media/gs-pcselector/add-excel-data.jpg)
 
 5. Browse to the Excel file that you installed at the start of this procedure, and then click that file.
 
-	![Sample data, including the Excel file](./media/kratosapps-tutorial-pcselector/win8devices.jpg)
+	![Sample data, including the Excel file](./media/gs-pcselector/win8devices.jpg)
 
 6. Click **Open**, confirm that all three checkboxes are selected, and then click **Import Data**.
 
-	![A checkbox for each table in Excel that you can import](./media/kratosapps-tutorial-pcselector/select-tables.jpg)
+	![A checkbox for each table in Excel that you can import](./media/gs-pcselector/select-tables.jpg)
 
 	The three tables in the Excel file appear under **Existing sources**.
 
-	![A list of the tables that you imported from Excel](./media/kratosapps-tutorial-pcselector/existing-sources.jpg)
+	![A list of the tables that you imported from Excel](./media/gs-pcselector/existing-sources.jpg)
 
 1. (optional) Click each table to display a preview of the data that it contains.
 
 	For example, the **OEM** table shows the name and a logo for each manufacturer. The logos will appear along the left edge of the first screen of the app.
 
-	![A preview of the OEM table](./media/kratosapps-tutorial-pcselector/oem-preview.jpg)
+	![A preview of the OEM table](./media/gs-pcselector/oem-preview.jpg)
 
 7. Return to the default workspace by pressing Esc (or by clicking the Back arrow in the upper-left corner of the screen).
 
-	![Back arrow from the list of data sources](./media/kratosapps-tutorial-pcselector/back-arrow.jpg)
+	![Back arrow from the list of data sources](./media/gs-pcselector/back-arrow.jpg)
 
 ## Create a banner ##
 In this procedure, you'll add a rectangle to the first screen of your app, and then you'll configure the **Fill** color, location, and size of the rectangle.
 
 2. On the ribbon, click the **Insert** tab.
 
-	![Insert tab in the ribbon](./media/kratosapps-tutorial-pcselector/insert-tab.jpg)
+	![Insert tab in the ribbon](./media/gs-pcselector/insert-tab.jpg)
 
 3. On the **Insert** tab, click **Shapes**, and then click the rectangle to add it to the first screen of your app.
 
-	![The shapes that you can add to a screen in your app](./media/kratosapps-tutorial-pcselector/add-rectangle.jpg)
+	![The shapes that you can add to a screen in your app](./media/gs-pcselector/add-rectangle.jpg)
 
 	The rectangle appears near the upper-left corner of the screen.
 
-	![The shapes that you can add to a screen in your app](./media/kratosapps-tutorial-pcselector/default-rectangle.jpg)
+	![The shapes that you can add to a screen in your app](./media/gs-pcselector/default-rectangle.jpg)
 
 	By default, a thick, gray box surrounds the rectangle to indicate that it's selected by default.
 
@@ -97,7 +97,7 @@ In this procedure, you'll add a rectangle to the first screen of your app, and t
 
 	To follow this tutorial exactly, click the orange option in the middle of the leftmost column.
 
-	![The Fill item on the Home tab of the ribbon](./media/kratosapps-tutorial-pcselector/fill-menu.jpg)
+	![The Fill item on the Home tab of the ribbon](./media/gs-pcselector/fill-menu.jpg)
 
 5. Move the rectangle to the upper-left corner of the screen by dragging the selection box around it up and to the left.
 
@@ -105,13 +105,13 @@ In this procedure, you'll add a rectangle to the first screen of your app, and t
 
 	The thumbnail view of your screen, near its left edge, reflects your changes.
 
-	![A thumbnail of a blank screen with an orange banner](./media/kratosapps-tutorial-pcselector/banner-thumbnail.jpg)
+	![A thumbnail of a blank screen with an orange banner](./media/gs-pcselector/banner-thumbnail.jpg)
 ## Show the device categories ##
 In this procedure, you'll add a gallery that shows an icon for each device category. A gallery is a UI element that contains other UI elements. By adding and configuring a gallery, you can show a set of related data more easily than by adding and configuring individual elements.
 
 1. On the **Insert** tab, click **Gallery**, and then click the horizontal **Image Only** gallery to add it to your screen.
 
-	![Gallery tab with the horizontal Image Only gallery selected](./media/kratosapps-tutorial-pcselector/add-category-gallery.jpg)
+	![Gallery tab with the horizontal Image Only gallery selected](./media/gs-pcselector/add-category-gallery.jpg)
 
 1. Confirm that **Items** appears in the properties list, which is near the upper-left corner of the screen.
 
@@ -121,28 +121,28 @@ In this procedure, you'll add a gallery that shows an icon for each device categ
 
 	**PcCategory** is the name of a table in the Excel file that you imported. That table contains links to icons that the gallery should show.
 
-	![Property list showing Items and Function Bar showing PcCategory](./media/kratosapps-tutorial-pcselector/items-pccategory.jpg)
+	![Property list showing Items and Function Bar showing PcCategory](./media/gs-pcselector/items-pccategory.jpg)
 
 2. Move the gallery to the center of the orange banner, and resize the gallery to fit inside the banner.
 
-	![Orange banner with a icon for each type of device](./media/kratosapps-tutorial-pcselector/category-gallery.jpg)
+	![Orange banner with a icon for each type of device](./media/gs-pcselector/category-gallery.jpg)
 
 ## Rename a screen and a gallery
 In this procedure, you'll rename the default screen and the gallery that you added. You can more easily develop an app if you rename, for example, screens from the default names of **Screen1**, **Screen2**, and so forth.
 
 4. Select the gallery by clicking the icon for the **Laptop** or the **All-in-one** category.
 
-	![Selecting the PcCategory gallery](./media/kratosapps-tutorial-pcselector/select-pccategory-gallery.jpg)
+	![Selecting the PcCategory gallery](./media/gs-pcselector/select-pccategory-gallery.jpg)
 
 6. On the **Home** tab, click **Gallery1**, and then type **CategoryGallery**.
 
 	**Note:** If you've added and deleted a gallery before you added this one, the name of the gallery will end with a number that's greater than 1.
 
-	![Renaming the PcCategory gallery](./media/kratosapps-tutorial-pcselector/rename-gallery.jpg)
+	![Renaming the PcCategory gallery](./media/gs-pcselector/rename-gallery.jpg)
 
 7. Click an empty area of the screen to select it, click **Screen1** on the **Home** tab, and then type **MainScreen**.
 
-	![Renaming the first screen](./media/kratosapps-tutorial-pcselector/rename-screen.jpg)
+	![Renaming the first screen](./media/gs-pcselector/rename-screen.jpg)
 
 8. Save your changes by pressing Ctrl-S (or by opening the **File** menu and then clicking **Save**).
 
@@ -151,24 +151,24 @@ In this procedure, you'll add another gallery and then configure it to show the 
 
 6. On the **Insert** tab, click **Gallery**, and then click the vertical **Image Only** gallery.
 
-	![Gallery tab with the vertical Image Only gallery selected](./media/kratosapps-tutorial-pcselector/add-oem-gallery.jpg)
+	![Gallery tab with the vertical Image Only gallery selected](./media/gs-pcselector/add-oem-gallery.jpg)
 
 8. Name the gallery that you just added **OemGallery**, and set its **Items** property to **OEM**.
 7. Move the **OemGallery** to the left edge of the screen (under the orange banner), and resize the gallery so that it shows most of four logos.
 
-	![OEM gallery with four truncated logos](./media/kratosapps-tutorial-pcselector/four-logos.jpg)
+	![OEM gallery with four truncated logos](./media/gs-pcselector/four-logos.jpg)
 
 8. Click the first the image in the gallery to select the gallery template.
 
-	![OEM gallery with gallery selected](./media/kratosapps-tutorial-pcselector/oem-gallery-template.jpg)
+	![OEM gallery with gallery selected](./media/gs-pcselector/oem-gallery-template.jpg)
 
 9. On the **Image** tab, click **ImagePosition**, and then click **ImagePosition!Fit**.
 
-	![Image Position menu on Image tab](./media/kratosapps-tutorial-pcselector/image-position.jpg)
+	![Image Position menu on Image tab](./media/gs-pcselector/image-position.jpg)
 
 	Each logo appears entirely in the gallery.
 
-	![OEM gallery](./media/kratosapps-tutorial-pcselector/oem-gallery.jpg)
+	![OEM gallery](./media/gs-pcselector/oem-gallery.jpg)
 
 ## Show the devices ##
 In this procedure, you'll add a third gallery, which will show an image of each device, its manufacturer, and its category. In the last step, you'll configure the gallery to show the price of each device instead of its category. The prices in Excel don't appear with a dollar sign so you'll add one by specifying an expression. 
@@ -177,11 +177,11 @@ In an expression, you indicate literal text (in this case, a dollar sign) betwee
 
 1. On the **Insert** tab, click **Gallery**, and then click the horizontal **Image With Text** gallery.
 
-	![Add Image gallery with text](./media/kratosapps-tutorial-pcselector/add-device-gallery.jpg)
+	![Add Image gallery with text](./media/gs-pcselector/add-device-gallery.jpg)
 
 2. Name the newest gallery **DevicesGallery**, and set its **Items** property to **Devices**.
 
-	![Image gallery with text set to show devices](./media/kratosapps-tutorial-pcselector/device-gallery-default.jpg)
+	![Image gallery with text set to show devices](./media/gs-pcselector/device-gallery-default.jpg)
 
 2. Position the **DevicesGallery** so that it touches the right edge of the **OemGallery**, near the vertical center.
 3. Click the first image in the **DevicesGallery**, and then set its **ImagePosition** property to **Fit**.
@@ -189,7 +189,7 @@ In an expression, you indicate literal text (in this case, a dollar sign) betwee
 
 	**"$" & ThisItem!Price**
 
-	![Device gallery showing price](./media/kratosapps-tutorial-pcselector/device-price.jpg)
+	![Device gallery showing price](./media/gs-pcselector/device-price.jpg)
 
 	**Note:** The price expression contains two elements and an ampersand:
 
@@ -221,7 +221,7 @@ In this case, you'll specify that if the price of the device is less than $700, 
 2. Set the **Color** property of the same label to **Black**, and set its **FontWeight** property to **Bold**.
 3. (optional) Find a device that costs less than $700, and verify that its price appears in a green, not gray, box.
 
-	![Devices that are less than $700 are highlighted in green](./media/kratosapps-tutorial-pcselector/price-highlight.jpg)
+	![Devices that are less than $700 are highlighted in green](./media/gs-pcselector/price-highlight.jpg)
 
 ## Create a custom list ##
 In this procedure, you'll add a checkbox to each item in the **DevicesGallery**. Users can select the checkbox for one or more devices to add them to a custom list, called a [collection](). Users can remove a device from the list by clearing the checkbox.
