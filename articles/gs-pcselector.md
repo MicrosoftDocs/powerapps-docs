@@ -394,7 +394,27 @@ In this procedure, you'll add a label and configure it with an expression that c
 
 1. (optional) Press F5 to open Preview, adjust the sliders to verify that the total cost updates to reflect your changes, and then press Esc to return to the default workspace.
 
+## Publish the app ##
+1. On the **File** menu, click **Publish**.
+
+	![The Publish option on the File menu](./media/gs-pcselector/file-publish.jpg)
+
+2. In the text box, type a name for the app, and then click **Publish**.
+
+	![Specify a name for the app](./media/gs-pcselector/name-app.jpg)
+
+	If you sign in to the product website, the app will appear under **My apps**.
+
+3. (optional) To allow others to use or modify your app:
+	1. Type their email addresses in the **To:** text box.
+	2. In the drop-down list, click **Can view** to allow them to run the app, or click **Can edit** to allow them to run or modify the app.
+	3. Customize the **Subject** and **Message** text if you want, and then click **Share**.
+
+	![Mail template for sharing an app](./media/gs-pcselector/share-app.jpg)
+
+	If any of the users that you specified sign in to the product website, the app will appear under **My apps**.
+
+1. Press Esc (or click the back arrow in the upper-left corner) to return to the default workspace.
 ## Next Steps ##
 
 - [Save your custom list]() When you close this app, the information in your custom list will be lost unless you save it on your local device.
-- [Publish your app]() After you finish developing and testing your app, share it with others by publishing it to the KratosApps portal.
