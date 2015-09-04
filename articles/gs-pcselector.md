@@ -14,7 +14,7 @@ The first screen of this app shows icons for device categories along the top and
 
 The second screen of this app shows a list of the devices that the user specified on the first screen. Users can specify a quantity for each device, and the app shows the total cost.
 
-*Screen shot*
+![Summary screen](./media/gs-pcselector/summary-screen.jpg)
 
 **Prerequisites**
 
@@ -158,7 +158,7 @@ In this procedure, you'll add another gallery and then configure it to show the 
 
 	![OEM gallery with four truncated logos](./media/gs-pcselector/four-logos.jpg)
 
-8. Click the first the image in the gallery to select the gallery template.
+8. Click the first the image in the gallery to update the gallery template.
 
 	![OEM gallery with gallery selected](./media/gs-pcselector/oem-gallery-template.jpg)
 
@@ -171,10 +171,7 @@ In this procedure, you'll add another gallery and then configure it to show the 
 	![OEM gallery](./media/gs-pcselector/oem-gallery.jpg)
 
 ## Show the devices ##
-In this procedure, you'll add a third gallery, which will show an image of each device, its manufacturer, and its category. In the last step, you'll configure the gallery to show the price of each device instead of its category. The prices in Excel don't appear with a dollar sign so you'll add one by specifying an expression. 
-
-In an expression, you indicate literal text (in this case, a dollar sign) between quotes. You also concatenate two pieces of text by separating them with an ampersand. For an element in a gallery, you specify which column of a table to show by using **ThisItem**, followed by an exclamation mark, followed by the column name.
-
+In this procedure, you'll add a third gallery, which will show an image of each device, its manufacturer, and its category. In the last step, you'll configure the gallery to show the price of each device instead of its category. 
 1. On the **Insert** tab, click **Gallery**, and then click the horizontal **Image With Text** gallery.
 
 	![Add Image gallery with text](./media/gs-pcselector/add-device-gallery.jpg)
@@ -184,8 +181,8 @@ In an expression, you indicate literal text (in this case, a dollar sign) betwee
 	![Image gallery with text set to show devices](./media/gs-pcselector/device-gallery-default.jpg)
 
 2. Position the **DevicesGallery** so that it touches the right edge of the **OemGallery**, near the vertical center.
-3. Click the first image in the **DevicesGallery**, and then set its **ImagePosition** property to **Fit**.
-4. Under the first image in the **DevicesGallery**, click the bottom label, and then set its **Text** property to this expression, so that the price of each device appears:
+3. 4. Just as you did for the **OemGallery**, set the **ImagePosition** property for images in the **DevicesGallery** to **Fit**.
+4. Under the first image in the **DevicesGallery**, click the bottom label, and then set its **Text** property to this expression, so that the price of each device appears with a dollar sign:
 
 	**"$" & ThisItem!Price**
 
@@ -194,8 +191,8 @@ In an expression, you indicate literal text (in this case, a dollar sign) betwee
 	**Note:** The price expression contains two elements and an ampersand:
 
 	- The first element (the dollar sign) is a literal string, which means that it will appear exactly as you type it. To specify a literal string in an expression, you surround the string with quotation marks.
-	- The ampersand concatenates whatever elements precede and follow it, so they appear as a continuous element.
-	- The last element is a placeholder for the price of the device. The element is automatically converted to whatever value is in the **Price** column of the table that the gallery shows.
+	- The ampersand concatenates whatever elements precede and follow it, so that they appear as a continuous element.
+	- The last element is a placeholder for the price of the device. The element is automatically replaced with whatever value is in the **Price** column of the table that the gallery shows.
 
 ## Filter the devices ##
 In this procedure, you'll configure the **DeviceGallery** so that users can filter it by both category and manufacturer. You'll also test the filter in Preview, with which you can verify that your app works exactly as you expect.
@@ -204,110 +201,126 @@ In this procedure, you'll configure the **DeviceGallery** so that users can filt
 
 	**Filter(Devices, MFR = OemGallery!Selected!MFR && DeviceType = CategoryGallery!Selected!PcCategory)**
 
-	[More information]() about **Filter** and other functions in KratosApps
+	[More information]() about **Filter** and other functions
 
 2. Press F5 to open Preview.
-3. Click a category and an OEM logo to show only devices in that category from that manufacturer. 
+
+3. Click a category and an OEM logo to show only devices in that category from that manufacturer.
+
 4. Return to the default workspace by pressing Esc.
 
 ## Highlight devices by price##
-In this procedure, you'll highlight less expensive devices by using a conditional statement. With the **If** function, you specify a condition that is either true or false and a result if the condition is true. You can also specify a result if the condition is false.
+In this procedure, you'll highlight less expensive devices by using a conditional statement. For the **If** function, you specify a condition that is either true or false and a result if the condition is true. You can also specify a result if the condition is false.
 
-In this case, you'll specify that if the price of the device is less than $700, the **Fill** color of the price label will be light green. If the price is $700 or more, the **Fill** color will be light gray. You'll also change the text in that label to a black bold font.
+In this case, you'll specify that, if the price of the device is less than $700, the **Fill** color of the price label will be light green. If the price is $700 or more, the **Fill** color will be light gray. You'll also change the text in that label to a black bold font.
 
 1. Under the first image in the **DevicesGallery**, click the bottom label, and then set its **Fill** property to this expression:
 
 	**If(Price<700,LightGreen,LightGray)**
+
+	[More information]() about **If** and other functions
+
 2. Set the **Color** property of the same label to **Black**, and set its **FontWeight** property to **Bold**.
 3. (optional) Find a device that costs less than $700, and verify that its price appears in a green, not gray, box.
 
 	![Devices that are less than $700 are highlighted in green](./media/gs-pcselector/price-highlight.jpg)
 
 ## Create a custom list ##
-In this procedure, you'll add a checkbox to each item in the **DevicesGallery**. Users can select the checkbox for one or more devices to add them to a custom list, called a [collection](). Users can remove a device from the list by clearing the checkbox.
-
-To automatically add a control, such as a checkbox, to each item in the gallery, you add the control to the gallery template. You can't click the template itself to select it because the image and two labels completely cover it. But, as the procedure describes, KratosApps offers an icon you can click instead.
-
-After you add the checkbox, you then specify what you want the app to do when the user selects or clears it. You can [add similar behavior properties]() to any control in KratosApps so that the app responds appropriately to user input.
+In this procedure, you'll add a checkbox to each item in the **DevicesGallery**. Users can select or clear the checkbox for one or more devices to add them to a custom list or to remove them from the list.
 
 1. In the **DevicesGallery**, click any item except the first one, and then click the pencil icon in the upper-left corner of the gallery.
 
-	*Screen shot*
+	![Select a gallery template](./media/gs-pcselector/select-gallery-template.jpg)
 
 	You've selected the gallery template, instead of a specific element in the template.
 
-	*Screen shot*
+	![The template for the DevicesGallery is selected](./media/gs-pcselector/device-gallery-template.jpg)
 
 1. On the **Insert** tab, click **Controls**, and then click **Checkbox**.
 
-	*Screen shot*
+	![Add a checkbox](./media/gs-pcselector/insert-checkbox.jpg)
 
 1. Shrink the height of the image element, and then move the checkbox under it.
 
-	*Screen shot*
+	![Move a checkbox under image](./media/gs-pcselector/checkbox-under-image.jpg)
 
-1. Change the checkbox's text by double-clicking **Option** and then typing **Save**.
+1. In the first item of the gallery change the checkbox's text by double-clicking **Option** and then typing **Save**.
 
-	*Screen shot*
+1. Ensure that the checkbox element is still selected.
 
-1. With the checkbox still selected, click the **Behavior** tab, and then click **OnCheck**.
+	![The checkbox element, not the checkbox itself, is selected](./media/gs-pcselector/checkbox-element-selected.jpg)
 
-	*Screen shot*
+3. On the **Behavior** tab, click **OnCheck**.
+
+	![Setting the OnCheck behavior property](./media/gs-pcselector/behavior-oncheck.jpg)
+
+	**OnCheck** and other behavior properties determine how your app responds when an event that you specify occurs. In this case, you're specifying what happens when the user adds a checkmark to the checkbox.
 
 1. Click **Collect**, click the down arrow for the lower list, and then click **ThisItem**.
 
-	*Screen shot*
+	![Create a collection](./media/gs-pcselector/create-collection.jpg)
 
-	The properties list shows **OnCheck**, and the Function Bar shows the expression for adding the selected item to a collection, named **Collection1**.
+	The properties list shows **OnCheck**, and the Function Bar shows the expression for adding the selected item to a collection named **Collection1**.
 
-	*Screen shot*
+	![OnCheck in the properties list and the Collect function in the Function Bar](./media/gs-pcselector/collect-property-function.jpg)
 
-1. With the checkbox still selected, click **OnUncheck** on the **Behavior** tab.
+	[More information]() about collections
+
+1. With the checkbox control still selected, click **OnUncheck** on the **Behavior** tab.
+
+	![Setting the OnUncheck behavior property](./media/gs-pcselector/behavior-onuncheck.jpg)
 
 1. Click **Remove**, click the down arrow for the lower list, and then click **ThisItem**.
 
+	![Remove ThisItem from Collection1](./media/gs-pcselector/remove-thisitem.jpg)
+
 ## Add a screen and navigation##
-In this procedure, you'll start to create the screen that will show the custom list of devices. To navigate between the two screens, you'll add a button to the first screen and a back arrow to the second screen. When users click either of these controls, the other screen will appear.
+In this procedure, you'll add the SummaryScreen. On the MainScreen, you'll add a button that users can click to show the SummaryScreen. On the SummaryScreen, you'll add a back arrow that users can click to show the MainScreen.
 
 1. On the **Home** tab, click **New Screen**.
 
-	*Screen shot*
+	![Add a screen](./media/gs-pcselector/add-screen.jpg)
 
 1. Name the new screen **SummaryScreen**, and then return to the **MainScreen** by clicking it in the left navigation bar.
 2. On the **Insert** tab, click **Button**.
 
-	*Screen shot*
+	![Add a button](./media/gs-pcselector/add-button.jpg)
 
 1. Move the button near the right edge of the banner, change its text to **View Device Mix**, and change its fill to black.
 
-	*Screen shot*
+	![Move button and change its text and color](./media/gs-pcselector/configure-button.jpg)
 
 1. With the button still selected, click the **Behavior** tab, and then click **Navigate**.
 
-	*Screen shot*
+	![Add Navigate behavior to button](./media/gs-pcselector/navigate-button.jpg)
 
-	The properties list autotmatically shows the **OnSelect** property, and the Function Bar shows the expression for navigating to the **SummaryScreen** with a fade transition.
+	The properties list automatically shows the **OnSelect** property, which determines how the app responds when users click the button. The Function Bar shows the expression for showing the **SummaryScreen** with a fade transition:
 
-	*Screen shot*
+	**Navigate(SummaryScreen, ScreenTransition!Fade)**
+
+	[More information]() about how to navigate between screens
 
 1. Show the **SummaryScreen** by clicking it in the left navigation bar.
+
+	![Choose the SummaryScreen in the left navigation bar](./media/gs-pcselector/navigate-summary.jpg)
+
 2. On the **Insert** tab, click **Shapes**, and then click the back arrow to add it to the screen.
 
-	*Screen shot*
+	![Add a back arrow](./media/gs-pcselector/add-back-arrow.jpg)
 
 1. With the arrow still selected, click the **Behavior** tab, and then click **Navigate**.
 
-	The properties list shows the **OnSelect** property, and the Function Bar shows the expression for navigating to the **MainScreen** with a fade transition.
+	The properties list shows the **OnSelect** property, and the Function Bar shows the expression for navigating to the **MainScreen** with a fade transition:
 
-	*Screen shot*
+	**Navigate(MainScreen, ScreenTransition!Fade)**
 
 1. (optional) Test navigation:
 	1. Press F5 to open Preview.
-	2. Alternate clicking the button on the **MainScreen** and the arrow on the **SummaryScreen**.
+	2. Show each screen by clicking the button on the **MainScreen** and the back arrow on the **SummaryScreen**.
 	3. Press Esc to return to the default workspace.
 
 ## Show the custom list ##
-In this procedure, you'll add items to a custom list and then show it in a gallery. To keep this procedure short, you'll copy the gallery from the **MainScreen**, paste it into the **SummaryScreen**, and then change the gallery's data source to the collection you created.
+In this procedure, you'll add items to a custom list and then show it in a gallery. To keep this procedure short, you'll copy the gallery from the **MainScreen**, paste it into the **SummaryScreen**. Then you'll change the gallery's data source to the custom list that you create in **Collection1**.
 
 1. From the **MainScreen**, press F5 to open Preview.
 
@@ -317,111 +330,68 @@ In this procedure, you'll add items to a custom list and then show it in a galle
 
 	A selection box appears around both the banner and the **DevicesGallery**.
 
-	*Screen shot*
+	![Select both the banner and the DevicesGallery](./media/gs-pcselector/select-banner-gallery.jpg)
 
 3. Press Ctrl-C to copy those two controls to the Clipboard, show the **SummaryScreen**, and then press Ctrl-V to paste them onto that screen.
 
 1. Rename the gallery that you pasted to **SelectedDevicesGallery**, and set its **Items** property to **Collection1**.
 
-	*Screen shot*
-
 4. Click the banner, click **Reorder** on the **Home** tab, and then click **Send to Back**.
 
-	*Screen shot*
+	![Send banner to back to show arrow](./media/gs-pcselector/send-to-back.jpg)
+
+	The back arrow appears in front of the banner.
 
 6. Change the **Fill** property of the back arrow to white, and move it to the closer to the left edge of the banner, near the vertical center.
 
-	*Screen shot*
+	![Show the custom list, the banner, and the back arrow](./media/gs-pcselector/custom-list.jpg)
 
 ##Specify a quantity for each device ##
-In this procedure, you'll replace the checkbox in each item of the gallery with a slider and add a label for clarity. Users will adjust the slider for each device to specify a quantity so that, in the next procedure, the app can show the total cost of all devices.
+In this procedure, you'll replace the checkbox in each item of the gallery with a slider and add a label for clarity. Users will adjust the slider for each device to specify a quantity for that device.
 
 1. In the first item of the **SelectedDevicesGallery**, click the checkbox, and then press Delete.
-2. Select the template for the **SelectedDevicesGallery** by clicking any item except the first one and then clicking the pencil icon in the upper-left corner of the gallery.
 
-	*Screen shot*
+2. Select the template for the **SelectedDevicesGallery** by clicking any item *except* the first one and then clicking the pencil icon in the upper-left corner of the gallery.
+
+	![Select the template for the SelectedDevicesGallery](./media/gs-pcselector/select-template.jpg)
 
 3. On the **Insert** tab, click **Controls**, and then click **Slider**.
 
-	*Screen shot*
+	![Add a slider](./media/gs-pcselector/add-slider.jpg)
 
 4. Rename the slider **QuantitySlider**, and move it below the image in the template.
 
-	*Screen shot*
+	![Move slider under device image](./media/gs-pcselector/slider-under-image.jpg)
 
 1. With the template still selected, click **Label** on the **Insert** tab.
 
-	*Screen shot*
+	![Add a label](./media/gs-pcselector/add-label.jpg)
 
 2. Double-click the label, and then type **QTY:** to change its text.
 3. Move the label near the left edge of the slider.
 
-	*Screen shot*
+	![Configure the text of the label and move it](./media/gs-pcselector/qty-label.jpg)
 
 ## Show total cost ##
 In this procedure, you'll add a label and configure it with an expression that calculates the overall cost of all devices in the custom list. The expression combines the following:
 
-- A literal string, surrounded by quotation marks, to indicate what the value represents and precede it with a dollar sign
+- A literal string, surrounded by quotation marks, to explain what the value is and precede it with a dollar sign
 - An ampersand to concatenate the literal string and the value
-- A **Sum** function inside a **Text** function
-	- The **Sum** function uses parameters to multiply the per-unit price of each device in the list by the quantity that you specify with the slider for that device. 
-	- The **Text** function uses parameters to add a comma if the value includes four or more digits.
+- A **Sum** function that multiplies the per-unit price of each device in the list by the quantity that you specify with the slider for that device
 
-KratosApps supports [many functions]() besides **Sum** and **Text**.
+[More information]() about functions such as **Sum**
 
-1.  Click a blank area of the **SummaryScreen**, click the **Insert** tab, and then click **Label**.
-2.  Move the label so it appears near the right edge of the banner.
+1.  On the **SummaryScreen**, add a label, and move it near the right edge of the banner.
 
-	*Screen shot*
+3. With the label still selected, click **Text** in the properties list, and then replace the default text with this expression:
 
-3. With the label selected, open the properties list, click **Text**, and then replace the default text with this expression:
+	**"Total Cost: $" & Sum(SelectedDevicesGallery!AllItems, Price * QuantitySlider!Value)**
 
-	**"Total Cost: $" & Text(Sum(SelectedDevicesGallery!AllItems, Price * QuantitySlider!Value), "###,###")**
+	After you add the expression, the label will resemble this graphic, though the actual value will depend on which devices you selected and which quantities you specified.
 
-	After you add the expression, the label will resemble this graphic, though the actual value will depend on which devices you selected.
-
-	*Screen shot*
+	![Summary screen](./media/gs-pcselector/summary-screen.jpg)
 
 1. (optional) Press F5 to open Preview, adjust the sliders to verify that the total cost updates to reflect your changes, and then press Esc to return to the default workspace.
-
-## Add pen input ##
-In this procedure, you'll add a pen control so that users can use a mouse or a stylus to add notes about each device in the custom list. With a couple more clicks, you'll show controls with which users can:
-
-- switch between write and erase mode
-- clear all lines from the control
-- change the color or width of the lines they can draw
-
-You can also [add and configure controls]() such as a camera and a microphone so that users can add data other than text and values to your app.
-
-1. On the **SummaryScreen**, select the **SelectedDevicesGallery**, and then double its height.
-
-	*Screen shot*
-
-2. In the template of that gallery, move the two labels so that they appear near the bottom of the slider.
-
-	*Screen shot*
-
-1. With the same template selected, click the **Insert** tab, click **Text**, and then click **Pen**.
-
-	*Screen shot*
-
-2. Move and resize the pen control so that it fits in the template, under the bottom label.
-
-	*Screen shot*
-
-1. With the pen control still selected in the gallery template, click the **Pen** tab, and then click **ShowControls**, so that **true** appears in the Function Bar.
-
-	*Screen shot*
-
-	A set of buttons appears near the bottom of the pen control.
-
-	*Screen shot*
-
-1. (optional) Test the pen control:
-	1. Press F5 to open Preview.
-	2. Write some text or draw a picture in the pen control.
-	3. Erase some or all of the text or picture that you created.
-	3. Press Esc to return to the default workspace.
 
 ## Next Steps ##
 
