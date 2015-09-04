@@ -171,7 +171,8 @@ In this procedure, you'll add another gallery and then configure it to show the 
 	![OEM gallery](./media/gs-pcselector/oem-gallery.jpg)
 
 ## Show the devices ##
-In this procedure, you'll add a third gallery, which will show an image of each device, its manufacturer, and its category. In the last step, you'll configure the gallery to show the price of each device instead of its category. 
+In this procedure, you'll add a third gallery, which will show an image of each device, its manufacturer, and its category. In the last step, you'll configure the gallery to show the price of each device instead of its category.
+
 1. On the **Insert** tab, click **Gallery**, and then click the horizontal **Image With Text** gallery.
 
 	![Add Image gallery with text](./media/gs-pcselector/add-device-gallery.jpg)
