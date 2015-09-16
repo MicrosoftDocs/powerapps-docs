@@ -31,28 +31,28 @@ Open the **Event SignUp** template in the default workspace, where you'll spend 
 
 	The splash screen for the Event Signup template appears.
 
-	![Splash screen for the Event Signup template](./media/gs-test-drive/splash-screen.jpg)
+	![Splash screen for the Event Signup template](./media/get-started-test-drive/splash-screen.jpg)
 
 1. Switch to the **VolunteerDetails** screen by clicking its thumbnail in the left navigation bar.
 
-	![Thumbnail for the VolunteerDetails screen](./media/gs-test-drive/vdetails-thumbnail.jpg)
+	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.jpg)
 
 1. Press F5 (or click the right arrow in the upper-right corner) to open **Preview**.
 
-	![Button to open Preview](./media/gs-test-drive/preview-button.jpg)
+	![Button to open Preview](./media/get-started-test-drive/preview-button.jpg)
 
 1. In the text boxes, specify the name, the email address, and the phone number of a fictional volunteer.
 
-	![Text boxes to specify the name, the email address, and the phone number of a volunteer](./media/gs-test-drive/enter-vdata.jpg)
+	![Text boxes to specify the name, the email address, and the phone number of a volunteer](./media/get-started-test-drive/enter-vdata.jpg)
 
 1. Click a t-shirt size, and then click **Next**.
 
-	![Options for specifying a t-shirt size and a Next button](./media/gs-test-drive/tshirt-size.jpg)
+	![Options for specifying a t-shirt size and a Next button](./media/get-started-test-drive/tshirt-size.jpg)
 
 	The **Schedule** screen appears with columns for days, timeslots, and names of volunteers.
 1. Click a **Sign up** button to schedule your fictional volunteer for a timeslot.
 
-	![Button for signing up a volunteer for a particular timeslot](./media/gs-test-drive/signup-button.jpg)
+	![Button for signing up a volunteer for a particular timeslot](./media/get-started-test-drive/signup-button.jpg)
 
 	**Note:** If you sign up someone for a timeslot (for example, as **Volunteer1**), you can't sign that person up for another option in that timeslot (for example, **Volunteer2** and **Backup**).
 
@@ -62,7 +62,7 @@ Open the **Event SignUp** template in the default workspace, where you'll spend 
 ## Configure a control ##
 1.  Near the top of the screen, click **PowerApps at OneWeek**.
 
-	![A label surrounded by a selection box](./media/gs-test-drive/selected-label.jpg)
+	![A label surrounded by a selection box](./media/get-started-test-drive/selected-label.jpg)
 
 	This element of the UI is called a label and, when you click it, it becomes selected. If an element is selected, a thick, gray box surrounds it, which indicates that you can change the way it looks or behaves.
 
