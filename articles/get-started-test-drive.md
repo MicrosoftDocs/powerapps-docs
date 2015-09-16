@@ -68,6 +68,20 @@ Open the **Event SignUp** template in the default workspace, where you'll spend 
 
 	**Important:** If you click another element or a blank area of the screen, that element or screen becomes selected, and you can no longer configure the first element.
 
+1. Resize the label by dragging the white triangle in the lower-right corner of the selection box.
+
+	![Resizing a control](./media/get-started-test-drive/resize-label.jpg)
+
+1. Move the label to the right side of the screen by dragging the selection box itself (not a triangle or square in the selection box).
+
 1. Change the text in the label by triple-clicking it and then typing in anything you want.
 
-	To follow this tutorial exactly, type **Best Conference Ever**.
+	To follow this tutorial exactly, type your name, followed by an apostrophe and an "s", followed by **Best Event Ever**.
+
+	![Change label text](./media/get-started-test-drive/change-label-text.jpg)
+
+1. Rename the label by clicking **Label1_1** on the **Home** tab and then typing **Banner**.
+
+	![Renaming a control](./media/get-started-test-drive/rename-label.jpg)
+
+	**Note:** You can more easily develop an app if you give each control a descriptive name. For example, you'll want to configure buttons to navigate to different screens, and you'll want names that are easier to remember than **Screen1**, **Screen2**, and so on.
