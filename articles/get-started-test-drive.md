@@ -20,18 +20,29 @@
 
 1. (optional) If someone shared an app with you, run it, and then click **New** in the left navigation bar when you're ready to explore KratosApps further.
 
-## Open and explore an app template ##
-Open the **Event SignUp** template in the default workspace, where you'll spend most of your time customizing a template or creating an app from scratch. Before you make any changes, open the template in **Preview**, and explore how the app works before you add your touches.
-
-**Note:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
-
+## Open an app template ##
 1. Under **Start from Template**, click **Get started**.
-1. In the list of template categories, click **Events & Calendar**, and then click **Event SignUp**.
-1. Specify where you want to store the data for your app (for example, DropBox).
 
-	The splash screen for the Event Signup template appears.
+	![Open an app template](./media/get-started-test-drive/open-template.jpg)
+
+1. Click the **Tablet** option to specify that you want to create an app that's designed for a larger screen in landscape orientation.
+
+	![Option buttons to create a tablet app or a phone app](./media/get-started-test-drive/tablet-option.jpg)
+
+1. Under **Apps**, click **Events & Calendar** in the list of template categories.
+
+	![Events & Calendar in the list of template categories](./media/get-started-test-drive/template-categories.jpg)
+
+2. Click **Event SignUp**, and then specify where you want to store the data for your app (for example, DropBox).
+
+	The splash screen for the **Event Signup** template appears.
 
 	![Splash screen for the Event Signup template](./media/get-started-test-drive/splash-screen.jpg)
+
+## Explore the app's default appearance and behavior ##
+App templates open in the default workspace, where you'll spend most of your time customizing a template or creating an app from scratch. Before you make changes, you'll explore how the app works in **Preview**.
+
+**Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
 
 1. Switch to the **VolunteerDetails** screen by clicking its thumbnail in the left navigation bar.
 
@@ -60,13 +71,23 @@ Open the **Event SignUp** template in the default workspace, where you'll spend 
 1. Return to the default workspace by pressing Esc (or by clicking the "X" icon in the upper-right corner).
 
 ## Configure a control ##
-1.  Near the top of the screen, click **PowerApps at OneWeek**.
+As you customize the interface of an app or develop one from scratch, you'll add and configure elements that show text, images, and other information. To configure how an element appears or what it does, you first click it so that a thick, gray selection box appears around it.
+
+**Important:** If you click another element or a blank area of the screen, that element or screen becomes selected, and you can no longer configure the first element.
+
+When an element is selected, you can configure it in these ways:
+
+- Change it directly (for example, by moving it).
+- Click a tab on the ribbon near the top of the screen, and then click an option on that tab.
+- Click an option in the properties list, and then type a value in the Function Bar. These elements appear near the top of the screen and are separated by an equals sign and the function button. In this example, the **Items** property appears in the properties list, and the value of that property (**ScheduleItems**) appears in the Function Bar.
+
+	![Properties list and Function Bar](./media/get-started-test-drive/properties-list.jpg)
+
+As this procedure demonstrates, you can change many properties by using more than one method. If you can't figure out how to change a property, find it in the properties list, which shows all properties alphabetically.
+
+1. Near the top of the screen, click **PowerApps at OneWeek** to select that label.
 
 	![A label surrounded by a selection box](./media/get-started-test-drive/selected-label.jpg)
-
-	This element of the UI is called a label and, when you click it, it becomes selected. If an element is selected, a thick, gray box surrounds it, which indicates that you can change the way it looks or behaves.
-
-	**Important:** If you click another element or a blank area of the screen, that element or screen becomes selected, and you can no longer configure the first element.
 
 1. Resize the label by dragging the white triangle in the lower-right corner of the selection box.
 
@@ -74,14 +95,25 @@ Open the **Event SignUp** template in the default workspace, where you'll spend 
 
 1. Move the label to the right side of the screen by dragging the selection box itself (not a triangle or square in the selection box).
 
-1. Change the text in the label by triple-clicking it and then typing in anything you want.
-
-	To follow this tutorial exactly, type your name, followed by an apostrophe and an "s", followed by **Best Event Ever**.
-
-	![Change label text](./media/get-started-test-drive/change-label-text.jpg)
-
-1. Rename the label by clicking **Label1_1** on the **Home** tab and then typing **Banner**.
+1. With the label still selected, rename it by clicking **Label1_1** on the **Home** tab and then typing **Banner**.
 
 	![Renaming a control](./media/get-started-test-drive/rename-label.jpg)
 
 	**Note:** You can more easily develop an app if you give each control a descriptive name. For example, you'll want to configure buttons to navigate to different screens, and you'll want names that are easier to remember than **Screen1**, **Screen2**, and so on.
+
+1. With the label still selected, click **Text** in the properties list, and then type **Today()** in the Function Bar.
+
+	The label shows the current date.
+
+1. Change the text in the label by triple-clicking it and then typing in anything you want.
+
+	For example, you could type your name, followed by an apostrophe and an "s", followed by **Best Event Ever**.
+
+	![Change label text](./media/get-started-test-drive/change-label-text.jpg)
+
+## Publish an app ##
+1. On the **File** menu, click **Share**.
+
+	![The Share option on the File menu](./media/get-started-test-drive/file-share.jpg)
+
+1. 
