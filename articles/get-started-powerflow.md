@@ -2,11 +2,11 @@
 	pageTitle="KratosApps tutorial: Create a PowerFlow from scratch"
 	description="Create a PowerFlow to take action when one or more conditions are met. For example, get an email whenever someone adds a row to an Excel file in the cloud."
 	services="kratosapps"
-	authors="stepsic-microsoft-com"
+	authors="aftowen"
  />
 
 # Create a PowerFlow from scratch #
-Create a PowerFlow to take action when one or more conditions are met. For example, get an email whenever someone adds a row to an Excel file in the cloud.
+Create a PowerFlow to take action when one or more conditions are met. For example, create a PowerFlow so that you get an email message whenever someone adds a row to an Excel file in the cloud. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
 
 **Prerequisites**
 
@@ -26,7 +26,7 @@ Create a PowerFlow to take action when one or more conditions are met. For examp
 
 	![Create a PowerFlow from blank](./media/get-started-powerflow/create_blank.png)
 
-4. In the text box that says *Start your logic*, type **Excel**, and then click **When a row is added to an Excel table** in the drop-down list.
+4. In the text box that says **Start your logic**, type **Excel**, and then click **When a row is added to an Excel table** in the drop-down list.
 
 	![Excel in the list of triggers](./media/get-started-powerflow/add-excel-data2.png)
 5. Click the account in which you stored the Excel file at the start of this procedure, and then provide your credentials.
