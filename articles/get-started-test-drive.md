@@ -111,9 +111,24 @@ As this procedure demonstrates, you can change many properties by using more tha
 
 	![Change label text](./media/get-started-test-drive/change-label-text.jpg)
 
-## Publish an app ##
-1. On the **File** menu, click **Share**.
+## Save and share your app ##
+After you finish developing and testing your app, you share it with other people by saving it to the portal and then sending mail that your app is available. You specify which people can run your app or even customize it to create their own versions.
 
-	![The Share option on the File menu](./media/get-started-test-drive/file-share.jpg)
+1. On the **File** menu, click **App Settings**.
+2. Update any of these settings.
 
-1. 
+	- the name of your app
+	- the color of your app's tile
+	- the image on your app's tile
+	- the aspect ratio of your app
+
+	If you change the aspect ratio, click **Apply**.
+
+2. On the **File** menu, click **Save As**.
+
+	![The Save As option on the File menu](./media/get-started-test-drive/file-save.jpg)
+
+3. Under **Save As**, leave the default value of **PowerApps**.
+
+5. Click **Save** to save your app to the portal.
+6. On the **File** menu, click **Share**.
