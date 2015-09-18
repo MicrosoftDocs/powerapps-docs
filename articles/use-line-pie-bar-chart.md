@@ -5,7 +5,7 @@
 	documentationCenter="" 
 	authors="MandiOhlinger"
 	manager="dwrede"
-	editor="cgronlun"/>
+	editor=""/>
 
 <tags
    ms.service="power-apps"
@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/16/2015"
+   ms.date="09/17/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
@@ -30,14 +30,14 @@ You can create and use these charts within PowerApps. Let's get started.
 
 ### Prerequisites 
 - Install PowerApps. Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with PowerApps and creating apps, step through the [Create an app from scratch - NEED TOPIC](). It walks you through performing some key tasks, including adding controls.
-
+- To familiarize yourself with PowerApps and creating apps, step through the [Get Started](get-started-test-drive.md ). It walks you through performing some key tasks, including adding controls.
+- These steps use the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) as sample input data. You can use this sample data, or import your own.
 
 ## Add a pie chart to display your data
 In these steps, we download a sample file. Using a collection, we import this sample data and display it in a pie chart and a column chart. 
 
-1. Download the [ChartData.zip](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
-2.  Create a collection named **ProductRevenue**. Steps include:  
+1. Download the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
+2. Create a collection named **ProductRevenue**. Steps include:  
 	a) Open your app in PowerApps.
 	b) On the **Insert** tab, select **Controls**, and then select **Import**.
 	c) Set the **OnSelect** property to the following function:  

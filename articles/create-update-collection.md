@@ -5,7 +5,7 @@
 	documentationCenter="" 
 	authors="MandiOhlinger"
 	manager="dwrede"
-	editor="cgronlun"/>
+	editor=""/>
 
 <tags
    ms.service="power-apps"
@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/16/2015"
+   ms.date="09/17/2015"
    ms.author="mandia"/>
 
 
@@ -24,7 +24,7 @@ You can create and use collections within PowerApps. Let's get started.
 
 ### Prerequisites 
 - Install PowerApps. Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with PowerApps and creating apps, step through the [Create an app from scratch - NEED TOPIC](). It walks you through performing some key tasks, including adding controls.
+- To familiarize yourself with PowerApps and creating apps, step through the [Get Started](get-started-test-drive.md ). It walks you through performing some key tasks, including adding controls.
 
 ## Create a collection that has one column
 The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection. 
