@@ -6,6 +6,12 @@
  />
 
 # Test drive KratosApps
+Create an app automatically based on your data or a template, or create your own app from nothing except a blank screen.
+
+- **Create from data** If you already have a set of data, you can automatically create an app that displays your data and provides an interface so that you can add, update, and delete records. If the app's interface or behavior isn't quite what you need, you can tweak it to better suit your goals.
+- **Create from a template** As this topic describes, you can automatically create an app based on one of several templates for a variety of scenarios. The app will have a pre-built interface and sample data, with which you can explore how the app works. You can then connect it to your own data, if it matches what the app expects, or you can create a set of data from scratch. As with the previous bullet, you can, if necessary, customize the app's behavior or interface to meet your exact requirements.
+- **Create from blank** You can create an app completely from scratch, building the interface yourself and configuring it so that users can manage whatever data helps your organization thrive. For this option, you use a tablet, laptop, or computer that's running Windows.
+
 
 ## Sign in and open KratosApps ##
 1. Perform either of these steps:
