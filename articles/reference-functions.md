@@ -118,8 +118,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 ### <a name="average"></a>Average
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Average**(*Table*, *Expression*)<br /><br />
-**Average**(*Expression1*[, *Expression2*, …])|
+|Syntax|**Average**(*Table*, *Expression*)<br /><br />**Average**(*Expression1*[, *Expression2*, …])|
 |Description|Returns the average (arithmetic mean) of its arguments. You can use this function in these contexts:<ul><li>In a table, this function returns the average of the numbers that the specified expression evaluates to.</li><li>When provided scalar numeric inputs—or expressions that evaluate to scalar numeric values—this function returns their average.</li></ul>|
 |Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, this function would compute the average sales:<br /><br />**Average(Sales, CostPerUnit * UnitsSold)**<br /><br />If you had three sliders, this function would compute the average of their values:<br /><br />**Average(Slider1!Value, Slider2!Value, Slider3!Value)**|
 
