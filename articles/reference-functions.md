@@ -106,8 +106,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**AddColumns**(*Table*, *Column1*, *Expression1*[, *Column2*, *Expression2*, ...])|
 |---|---|
 |Description|Returns a table that has one or more added columns that contain results of the specified expressions evaluated over the rows in the original input table.|
-|Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, you could create a second table that contained both of those columns plus a third column, named TotalSales, that showed the results of multiplying the values in the first two columns.<br /><br />**AddColumns(Sales, &quot;TotalSales&quot;, CostPerUnit \* UnitsSold)**<br/><br/>
-![AddColumns puts calculated results in new column](.\media\reference-functions\add-columns.jpg)<blockquote><p>[AZURE.NOTE] This function doesn't modify the original table.</p></blockquote>If you had an Employees table that contained a FirstName column and a LastName column, you could create a second table that contained both of those columns plus a third column, named FullName, that showed the results of concatenating the strings in the first two columns.<br /><br />**AddColumns(Employees, &quot;FullName&quot;, FirstName &amp; &quot; &quot; &amp; LastName)**|
+|Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, you could create a second table that contained both of those columns plus a third column, named TotalSales, that showed the results of multiplying the values in the first two columns.<br /><br />**AddColumns(Sales, &quot;TotalSales&quot;, CostPerUnit \* UnitsSold)**<br/><br/>![AddColumns puts calculated results in new column](./media/reference-functions/add-columns.jpg)<blockquote><p>[AZURE.NOTE] This function doesn't modify the original table.</p></blockquote>If you had an Employees table that contained a FirstName column and a LastName column, you could create a second table that contained both of those columns plus a third column, named FullName, that showed the results of concatenating the strings in the first two columns.<br /><br />**AddColumns(Employees, &quot;FullName&quot;, FirstName &amp; &quot; &quot; &amp; LastName)**|
 
 ### <a name="and"></a>And
 |&nbsp;|&nbsp;|
@@ -115,10 +114,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |Syntax|**And**(*LogicalExpression1*[, *LogicalExpression2*, ...])|
 |Description|Determines whether one or more Boolean values or sub-expressions are all true. (Accomplishes the same outcome as the inline &amp;&amp; operator.)|
 |Examples|This function determines whether a slider's value falls between 50 and 100:<br/><br/> **And(Slider1!Value &gt; 50, Slider1!Value &lt; 100)**
-<br /><br />If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR and the value in the Salary column was larger than 200000.<br /><br />**And(Dept = &quot;HR&quot;, Salary &gt; 200000)**<br /><br />
-![And returns true if all conditions are true](.\media\reference-functions\and.jpg)
-
-These functions use the &amp;&amp; operator but return the same results as the previous examples:<br /><br />**Slider1!Value &gt; 50 &amp;&amp; Slider1!Value &lt; 100**<br /><br />**Dept = HR &amp;&amp; Salary &gt; 200000**|
+<br /><br />If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR and the value in the Salary column was larger than 200000.<br /><br />**And(Dept = &quot;HR&quot;, Salary &gt; 200000)**<br /><br />![And returns true if all conditions are true](./media/reference-functions/and.jpg)These functions use the &amp;&amp; operator but return the same results as the previous examples:<br /><br />**Slider1!Value &gt; 50 &amp;&amp; Slider1!Value &lt; 100**<br /><br />**Dept = HR &amp;&amp; Salary &gt; 200000**|
 
 ### <a name="average"></a>Average
 |&nbsp;|&nbsp;|
