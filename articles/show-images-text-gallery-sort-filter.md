@@ -13,29 +13,33 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/17/2015"
+   ms.date="09/21/2015"
    ms.author="mandia"/>
 
 
 # Show images and text in a gallery, including gallery selection, sort, and filter
+Create a gallery to show several images, and to sort and filter these images. 
+
+In PowerApps, use a gallery to show several items of something, almost like a catalog. Galleries are great for showing product information, their descriptions, and their prices. In this topic, we create a gallery, and sort and filter the images using Excel-like functions. Also, when an image is selected, a border is placed around the image. 
+
 
 ### Prerequisites 
 - Install PowerApps. Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with PowerApps and creating apps, step through the [Get Started](get-started-test-drive.md ). It walks you through performing some key tasks, including adding controls.
+- To familiarize yourself with PowerApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
 - These steps use the [CreateFirstApp](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7) as sample input data, which includes .jpg images. You can use this sample data, or import your own.
 
 ## Add a gallery to show images and text
 
 1. Download the [CreateFirstApp](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7) zip file.
 2. Create a collection named **Inventory**. Steps include:  
-	a) Open your app in PowerApps.
+	a) Open your app in PowerApps.  
 	b) On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
-	c) Set the **OnSelect** property to the following function: 
+	c) Set the **OnSelect** property to the following function:  
 	```Collect(Inventory, Import1!Data)```  
 		![][12]  
-	d) Preview ![][2] your output.  Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**. 
-	e) ESC or close the preview window.
+	d) Preview ![][2] your output.  Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  
+	e) ESC or close the preview window.  
 	f) In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
 	![][3]  
 
@@ -51,7 +55,7 @@
 ![][7]  
 	> [AZURE.TIP] When you select the the first item in any gallery, you automatically change all other items in the gallery.  
 
-7. Set the **Text** property of the label to the following expression: 
+7. Set the **Text** property of the label to the following expression:  
 ```ThisItem!UnitsInStock``` <br/>
 
 	When you do this, the label shows the units in stock for each product:  
@@ -68,7 +72,7 @@ Using these steps, you imported data that includes .jpeg picture images into a c
 4. Select **Border**, select **Border Style**, and then select the solid line.
 5. Select **Border** again and set the thickness to 3. Resize the rectangle so that it surrounds each gallery item. Your gallery looks similar to the following:  
 ![][10]  
-6. On the Shape tab, select **Visible**, and then enter the following expression in the function bar: 
+6. On the Shape tab, select **Visible**, and then enter the following expression in the function bar:  
 ```If(ThisItem!IsSelected, true)```
 
 	A blue rectangle surrounds the current selection in a gallery. Click a few gallery items to confirm that the rectangle appears around the item that you selected. Remember, you can also preview ![][2] to see and test what you're creating. 
@@ -83,13 +87,13 @@ Using these steps, you added a border around the current selection in the galler
 #### Sort in ascending or descending order
 
 1. In your screen, select any item in the gallery *except* the first one. 
-2. The **Items** property is currently set to Inventory (the name of your collection). Change it to the following: 
+2. The **Items** property is currently set to Inventory (the name of your collection). Change it to the following:  
 ```Sort(Inventory, ProductName)```
 
 	When you do this, the items in the gallery are sorted by the product name in ascending order: 
 	![][11]  
 
-	Try descending order. Set the **Items** property of the gallery to the following function: 
+	Try descending order. Set the **Items** property of the gallery to the following function:  
 ```Sort(Inventory, ProductName, Descending)```  
 
 #### Add a slider control and filter items in the gallery
