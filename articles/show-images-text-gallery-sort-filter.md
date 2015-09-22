@@ -13,29 +13,33 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/17/2015"
+   ms.date="09/21/2015"
    ms.author="mandia"/>
 
 
 # Show images and text in a gallery, including gallery selection, sort, and filter
+Create a gallery to show several images, and to sort and filter these images. 
+
+In PowerApps, use a gallery to show several items of something, almost like a catalog. Galleries are great for showing product information, their descriptions, and their prices. In this topic, we create a gallery, and sort and filter the images using Excel-like functions. Also, when an image is selected, a border is placed around the image. 
+
 
 ### Prerequisites 
 - Install PowerApps. Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with PowerApps and creating apps, step through the [Get Started](get-started-test-drive.md ). It walks you through performing some key tasks, including adding controls.
+- To familiarize yourself with PowerApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
 - These steps use the [CreateFirstApp](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7) as sample input data, which includes .jpg images. You can use this sample data, or import your own.
 
 ## Add a gallery to show images and text
 
 1. Download the [CreateFirstApp](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7) zip file.
 2. Create a collection named **Inventory**. Steps include:  
-	a) Open your app in PowerApps.
+	a) Open your app in PowerApps.  
 	b) On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
 	c) Set the **OnSelect** property to the following function: 
 	```Collect(Inventory, Import1!Data)```  
 		![][12]  
 	d) Preview ![][2] your output.  Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**. 
-	e) ESC or close the preview window.
+	e) ESC or close the preview window. 
 	f) In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
 	![][3]  
 
