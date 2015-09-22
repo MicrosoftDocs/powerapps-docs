@@ -34,9 +34,8 @@ In PowerApps, use a gallery to show several items of something, almost like a ca
 2. Create a collection named **Inventory**. Steps include:  
 	a) Open your app in PowerApps.  
 	b) On the **Insert** tab, select **Controls**, and then select **Import**:  
-
-		![][1]  
-	c) Set the **OnSelect** property to the following function: 
+	![][1]  
+	c) Set the **OnSelect** property to the following function:  
 	```Collect(Inventory, Import1!Data)```  
 		![][12]  
 	d) Preview ![][2] your output.  Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  
@@ -56,7 +55,7 @@ In PowerApps, use a gallery to show several items of something, almost like a ca
 ![][7]  
 	> [AZURE.TIP] When you select the the first item in any gallery, you automatically change all other items in the gallery.  
 
-7. Set the **Text** property of the label to the following expression: 
+7. Set the **Text** property of the label to the following expression:  
 ```ThisItem!UnitsInStock``` <br/>
 
 	When you do this, the label shows the units in stock for each product:  
