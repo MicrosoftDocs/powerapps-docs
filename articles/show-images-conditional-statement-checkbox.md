@@ -18,9 +18,9 @@
 
 
 # Show an image and use a conditional statement in a checkbox
-Use a checkbox with a conditional statement for an JPEG image.
+Use a checkbox with a conditional statement for a JPEG image.
 
-You add a .jpeg image and include a checkbox with a conditional statement. If the checkbox is enabled, it displays certain text in a label. If it's unchecked, the checkbox displays other text in the same label. 
+You add a .jpeg image and include a checkbox with a conditional statement. If the checkbox is enabled, it displays certain text in a label. If it's unchecked, the checkbox displays different text in the same label. 
 
 You can use this feature in your PowerApps apps for different scenarios. For example, there is a product image in your PowerApps app. When your users select the checkbox for the product image, additional information is displayed, like the price, or quantity in stock, maybe colors available, and so on.
 
