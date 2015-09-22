@@ -1,6 +1,6 @@
 <properties
-   pageTitle="Build a function in KratosApps Studio | Microsoft Azure"
-   description="In KratosApps Studio, you can use the operators and functions that this topic describes."
+   pageTitle="Build an expression in KratosApps"
+   description="In KratosApps, you can use the operators and functions that this topic describes."
    services="na"
    documentationCenter="na"
    authors="AFTOwen"
@@ -8,20 +8,21 @@
    editor=""
    tags=""/>
 <tags
-   ms.service="na"
+   ms.service="kratosapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="07/01/2015"
    ms.author="anneta"/>
-#Build a function in KratosApps Studio
-In KratosApps Studio, you can use the operators and functions that this topic describes.
+
+#Build an expression in KratosApps
+In KratosApps, you can use the operators and functions that this topic describes.
 
 All references to data in the following examples are hypothetical. No data samples accompany this reference.
 
 ##Operators
-KratosApps Studio supports these operators:
+KratosApps supports these operators:
 
 |Symbol|Operator type|Syntax|Description|
 |---|---|---|---|
@@ -68,12 +69,12 @@ You can use the **in** and **exactin** operators to find a string in a data sour
     The gallery shows only Europa because only its name contains the letter you specified in the case that you specified.
 
 ### <a name="thisitem_operator_for_galleries"></a>ThisItem operator for galleries
-You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the **ThisItem** operator to specify the column of data that each control shows. For example, that operator in the product gallery for [Create your first app](kratosapps-tutorial-inventory.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+When you [show data in a gallery](show-images-text-gallery-sort-filter.md), you use the **ThisItem** operator to specify which type of data each control in the gallery shows. For example, you can use that operator to specify that an image control shows the design of a product in a catalog, a label shows the name of the same product, and another label shows its price.
 
-For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly—this approach enables rules in an inner gallery to refer to an outer gallery's items.
+For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
 ##Functions
-KratosApps Studio supports the following functions. If you use functions in Excel, you may recognize many of them.
+KratosApps supports the following functions. If you use functions in Excel, you may recognize many of them.
 
 >[AZURE.NOTE]
 >In the syntax sections of this topic, italics indicate generic text that you replace with values that are specific for your app, and square brackets enclose optional arguments. If a comma appears before an optional argument, you must include the comma if you want to use the argument that it precedes.
@@ -281,7 +282,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |---|---|
 |Syntax|**Filter**(*Table*, *Condition1*[, *Condition2*, ...])|
 |Description|Returns the rows in the specified table that satisfy the given conditions. By default, if you specify more than one condition, And (that is, &amp;&amp;) joins are used.|
-|Example|If you had an Employees table that contained a Salary column, this function would identify the employees whose salaries were greater than 100,000:<br /><br />**Filter(Employees, Salary &gt; 100000)**<br /><br />For more information about how to use this function, see [Show a set of data in KratosApps Studio](kratosapps-show-data.md
+|Example|If you had an Employees table that contained a Salary column, this function would identify the employees whose salaries were greater than 100,000:<br /><br />**Filter(Employees, Salary &gt; 100000)**<br /><br />For more information about how to use this function, see [Show a set of data in KratosApps](kratosapps-show-data.md
 
 ### <a name="find"></a>Find
 |&nbsp;|&nbsp;|
@@ -343,7 +344,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Language()**<br/><br/>
-|Description|Returns the currently active language from the language preferences for an app that hasn't yet been published. If you change the language preference while KratosApps Studio is open, you must restart KratosApps Studio for the function to reflect the change.<br /><br />For a published app, this function returns the language with which the app was branded just before it was published.|
+|Description|Returns the currently active language from the language preferences for an app that hasn't yet been published. If you change the language preference while KratosApps is open, you must restart KratosApps for the function to reflect the change.<br /><br />For a published app, this function returns the language with which the app was branded just before it was published.|
 |Example|**Language()** could return en-US based on your configuration.|
 
 ### <a name="last"></a>Last
@@ -490,7 +491,7 @@ KratosApps Studio supports the following functions. If you use functions in Exce
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Refresh**(*ServiceDataSource*)|
-|Description|Refreshes the data from the specified data source so that the app has the most recent state.<br /><br /><blockquote><p>[AZURE.IMPORTANT] You can't use this function to refresh data from Excel tables. For an example of how to work with Excel data, see <a href="https://technet.microsoft.com/library/dn638292(v=vs.111).aspx">Show Excel data in a KratosApps Studio app</a></p></blockquote>|
+|Description|Refreshes the data from the specified data source so that the app has the most recent state.<br /><br /><blockquote><p>[AZURE.IMPORTANT] You can't use this function to refresh data from Excel tables. For an example of how to work with Excel data, see <a href="https://technet.microsoft.com/library/dn638292(v=vs.111).aspx">Show Excel data in a KratosApps app</a></p></blockquote>|
 |Example|If you added an RSS feed named **rss_1**, **Refresh(rss_1)** would refresh that feed.|
 
 ### <a name="remove"></a>Remove
