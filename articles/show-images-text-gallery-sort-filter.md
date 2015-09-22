@@ -34,12 +34,13 @@ In PowerApps, use a gallery to show several items of something, almost like a ca
 2. Create a collection named **Inventory**. Steps include:  
 	a) Open your app in PowerApps.  
 	b) On the **Insert** tab, select **Controls**, and then select **Import**:  
-	![][1]  
+
+		![][1]  
 	c) Set the **OnSelect** property to the following function: 
 	```Collect(Inventory, Import1!Data)```  
 		![][12]  
-	d) Preview ![][2] your output.  Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**. 
-	e) ESC or close the preview window. 
+	d) Preview ![][2] your output.  Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  
+	e) ESC or close the preview window.  
 	f) In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
 	![][3]  
 
@@ -72,7 +73,7 @@ Using these steps, you imported data that includes .jpeg picture images into a c
 4. Select **Border**, select **Border Style**, and then select the solid line.
 5. Select **Border** again and set the thickness to 3. Resize the rectangle so that it surrounds each gallery item. Your gallery looks similar to the following:  
 ![][10]  
-6. On the Shape tab, select **Visible**, and then enter the following expression in the function bar: 
+6. On the Shape tab, select **Visible**, and then enter the following expression in the function bar:  
 ```If(ThisItem!IsSelected, true)```
 
 	A blue rectangle surrounds the current selection in a gallery. Click a few gallery items to confirm that the rectangle appears around the item that you selected. Remember, you can also preview ![][2] to see and test what you're creating. 
@@ -87,13 +88,13 @@ Using these steps, you added a border around the current selection in the galler
 #### Sort in ascending or descending order
 
 1. In your screen, select any item in the gallery *except* the first one. 
-2. The **Items** property is currently set to Inventory (the name of your collection). Change it to the following: 
+2. The **Items** property is currently set to Inventory (the name of your collection). Change it to the following:  
 ```Sort(Inventory, ProductName)```
 
 	When you do this, the items in the gallery are sorted by the product name in ascending order: 
 	![][11]  
 
-	Try descending order. Set the **Items** property of the gallery to the following function: 
+	Try descending order. Set the **Items** property of the gallery to the following function:  
 ```Sort(Inventory, ProductName, Descending)```  
 
 #### Add a slider control and filter items in the gallery
