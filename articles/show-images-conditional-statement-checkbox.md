@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/21/2015"
+   ms.date="09/23/2015"
    ms.author="mandia"/>
 
 
@@ -39,7 +39,7 @@ You can use this feature in your PowerApps apps for different scenarios. For exa
 ![][5]  
 
 
-## Add a checkbox
+## Add a checkbox to change the label 
 1. On the **Insert** tab, select **Controls**, and then select **Checkbox**. 
 2. Rename the checkbox to **MyCheckbox**, and set its **Text** property to **Pick me**:  
 ![][6]  
@@ -51,8 +51,26 @@ You can use this feature in your PowerApps apps for different scenarios. For exa
 	![][4]  
 5. Move the label anywhere you like on the screen. Preview ![][3] the screen. Check and uncheck the checkbox. When it's checked, the "Great Choice" text is displayed in your label. When not checked, "Great for fall" is displayed.
 
+Now, let's get creative with the image control. When **MyCheckbox** is enabled, show the picture. If **MyCheckbox** is not enabled, don't show the picture. To do this:
+
+1. Select the image control.
+2. In the Function Bar, select **Visible** and set it's function to the following:  
+```If(MyCheckbox!Value = true, true, false)```  
+
+	![][7]  
+3. Preview ![][3] the screen. Check and uncheck the checkbox. When it's checked, the picture is displayed. When not checked, the picture is not displayed.
+
+You can also add another checkbox named **ShowPicCheckbox** with the "Show picture" text. If you do this, set the **Visible** property of the image control to the following function: 
+
+```If(ShowPicCheckbox!Value = true, true, false)```
+
+![][8] 
+Preview ![][3] the screen. Check and uncheck the "Show picture" checkbox. When it's checked, the picture is displayed. When not checked, the picture is not displayed.
+
+
+
 ## Tips and Tricks
-- At anytime, you can select the Preview button (![][3]) to see what you created and test it.
+- At anytime, you can select the preview button (![][3]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window. 
 
@@ -62,6 +80,7 @@ In this topic, you:
 
 - Added an image, added a checkbox, and added a label.
 - Using the label, you used an Excel-like function to display different text depending if the checkbox was enabled or cleared. This is known as a conditional statement.
+- Used the **Visible** property of the image control to hide and show the picture, depending if the checkbox is checked or unchecked. 
 
 
 [1]: ./media/show-images-conditional-statement-checkbox/image.png
@@ -70,3 +89,5 @@ In this topic, you:
 [4]: ./media/show-images-conditional-statement-checkbox/textfunction.png
 [5]: ./media/show-images-conditional-statement-checkbox/imagewithpicture.png
 [6]: ./media/show-images-conditional-statement-checkbox/mycheckbox.png
+[7]: ./media/show-images-conditional-statement-checkbox/visible.png
+[8]: ./media/show-images-conditional-statement-checkbox/showpicture.png
