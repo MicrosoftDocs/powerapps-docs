@@ -17,9 +17,9 @@
    ms.author="mandia"/>
 
 
-# Add a list box, drop-down list, or a radio button control
+# Add a list box, drop-down list, or radio button control
 
-PowerApps includes multi-select options, including a listbox, drop-down list. and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls within the app.
+PowerApps includes multi-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
 
 ### Prerequisites 
 
@@ -65,7 +65,7 @@ In these steps, you use the Table function to create a list of items in a listbo
 
 	![][11]  
 
-2. Set radio control **Items** property to the following function:  
+2. Set the radio control **Items** property to the following function:  
 ```Table({Color:"red"}, {Color:"green"}, {Color:"blue"})```
 
 	![][12]  
@@ -87,7 +87,7 @@ In these steps, you used a Table to create the items in the radio button control
 
 
 ## Tips and Tricks
-- You can also different data sources to populate the items within these controls. For example, you can use an Excel table as a data source. Then display the Excel data in a list box, and so on.
+- You can also use different data sources to populate the items within these controls. For example, you can use an Excel table as a data source. Then display the Excel data in a list box, and so on.
 - At anytime, you can select the preview button (![][1]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window. 
@@ -98,7 +98,7 @@ In this topic, you:
 
 - Added radio buttons and a listbox to the app.
 - Using the Table function, you populated the items within the lists.
-- You used Excel-like functions to update properties on other controls. For exmaple, if a list item or radio button is selected, a shape changes color or is displayed in the app. 
+- You used Excel-like functions to update properties on other controls. For example, if a list item or radio button is selected, a shape changes color or is displayed in the app. 
 
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/preview.png
