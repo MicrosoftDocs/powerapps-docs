@@ -12,34 +12,24 @@ Create an app automatically based on your data or a template, or create your own
 - **Create from a template** As this topic describes, you can automatically create an app based on one of several templates for a variety of scenarios. The app will have a pre-built interface and sample data, with which you can explore how the app works. You can then connect it to your own data, if it matches what the app expects, or you can create a set of data from scratch. As with the previous bullet, you can, if necessary, customize the app's behavior or interface to meet your exact requirements.
 - **Create from blank** You can create an app completely from scratch, building the interface yourself and configuring it so that users can manage whatever data helps your organization thrive. For this option, you use a tablet, laptop, or computer that's running Windows.
 
+**Prerequisites**
 
-## Sign in and open KratosApps ##
-1. Perform either of these steps:
-	- If someone shared an app with you or invited you to try the product, click the link in the email message.
-	- If you found the product in a search engine or the Windows Store, click the result.
-1. Type your email address, and then click **Sign up**.
-1. Open the email message from the Microsoft Office 365 Team, and then click the link to finish signing up.
-1. Specify your country or region, your full name, and your password.
-1. Specify your password again, and then click **Start**.
-
-	KratosApps opens.
-
-1. (optional) If someone shared an app with you, run it, and then click **New** in the left navigation bar when you're ready to explore KratosApps further.
+In addition to signing up for and installing KratosApps, you'll also need an account, such as DropBox or OneDrive, for storing sample data in the cloud.
 
 ## Open an app template ##
+1. Sign in to KratosApps, and then click **New** in the left navigation bar.
+
+	![The New option in the left navigation bar](./media/get-started-test-drive/file-new.jpg)
+
+1. Leave the default option to create a phone app.
+
+	![The options buttons for creating a tablet or phone app](./media/get-started-test-drive/phone-app.jpg)
+
 1. Under **Start from Template**, click **Get started**.
 
 	![Open an app template](./media/get-started-test-drive/open-template.jpg)
 
-1. Click the **Tablet** option to specify that you want to create an app that's designed for a larger screen in landscape orientation.
-
-	![Option buttons to create a tablet app or a phone app](./media/get-started-test-drive/tablet-option.jpg)
-
-1. Under **Apps**, click **Events & Calendar** in the list of template categories.
-
-	![Events & Calendar in the list of template categories](./media/get-started-test-drive/template-categories.jpg)
-
-2. Click **Event SignUp**, and then specify where you want to store the data for your app (for example, DropBox).
+2. Click **Event SignUp**, and then specify where you want to store data for your app in the cloud (for example, DropBox or OneDrive).
 
 	The splash screen for the **Event Signup** template appears.
 
@@ -50,31 +40,34 @@ App templates open in the default workspace, where you'll spend most of your tim
 
 **Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
 
-1. Switch to the **VolunteerDetails** screen by clicking its thumbnail in the left navigation bar.
+1. In the left navigation bar, click the thumbnail for the **VolunteerDetails** screen.
 
 	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.jpg)
+
+	By default, your information appears in the text boxes for name and address. You can change that information if you want.
+
+	![Text boxes to specify the name and the email address of a volunteer](./media/get-started-test-drive/enter-vdata.jpg)
 
 1. Press F5 (or click the right arrow in the upper-right corner) to open **Preview**.
 
 	![Button to open Preview](./media/get-started-test-drive/preview-button.jpg)
-
-1. In the text boxes, specify the name, the email address, and the phone number of a fictional volunteer.
-
-	![Text boxes to specify the name, the email address, and the phone number of a volunteer](./media/get-started-test-drive/enter-vdata.jpg)
 
 1. Click a t-shirt size, and then click **Next**.
 
 	![Options for specifying a t-shirt size and a Next button](./media/get-started-test-drive/tshirt-size.jpg)
 
 	The **Schedule** screen appears with columns for days, timeslots, and names of volunteers.
-1. Click a **Sign up** button to schedule your fictional volunteer for a timeslot.
+1. Click a **Sign up** button to schedule yourself (or a fictional volunteer) for a timeslot.
 
 	![Button for signing up a volunteer for a particular timeslot](./media/get-started-test-drive/signup-button.jpg)
 
-	**Note:** If you sign up someone for a timeslot (for example, as **Volunteer1**), you can't sign that person up for another option in that timeslot (for example, **Volunteer2** and **Backup**).
+	**Note:** If you click a **Sign up** button, the other **Sign up** button for the same timeslot stops being available.
 
-1. (optional) Remove your volunteer from a timeslot by clicking the "X" icon to the right of the volunteer's name.
+1. (optional) Remove yourself or the volunteer from a timeslot by clicking the "X" icon to the right of the volunteer's name.
+
 1. Return to the default workspace by pressing Esc (or by clicking the "X" icon in the upper-right corner).
+
+1. (optional) Verify that the data in the cloud reflects your changes.
 
 ## Configure a control ##
 As you customize the interface of an app or develop one from scratch, you'll add and configure elements that show text, images, and other information. To configure how an element appears or what it does, you first click it so that a thick, gray selection box appears around it.
@@ -89,7 +82,7 @@ When an element is selected, you can configure it in these ways:
 
 	![Properties list and Function Bar](./media/get-started-test-drive/properties-list.jpg)
 
-As this procedure demonstrates, you can change many properties by using more than one method. If you can't figure out how to change a property, find it in the properties list, which shows all properties alphabetically.
+If you can't find a property on the ribbon, find it in the properties list, which shows all properties alphabetically.
 
 1. Near the top of the screen, click **PowerApps at OneWeek** to select that label.
 
@@ -112,10 +105,6 @@ As this procedure demonstrates, you can change many properties by using more tha
 	The label shows the current date.
 
 1. Change the text in the label by triple-clicking it and then typing in anything you want.
-
-	For example, you could type your name, followed by an apostrophe and an "s", followed by **Best Event Ever**.
-
-	![Change label text](./media/get-started-test-drive/change-label-text.jpg)
 
 ## Save and share your app ##
 After you finish developing and testing your app, you share it with other people by saving it to the portal and then sending mail that your app is available. You specify which people can run your app or even customize it to create their own versions.
@@ -159,3 +148,5 @@ After you finish developing and testing your app, you share it with other people
 	![Drop-down list for specifying permissions on an app you share](./media/get-started-test-drive/share-level.jpg)
 
 1. Edit the text in the **Subject** and **Message** text boxes, and then click **Share**.
+
+	The people with whom you shared your app will receive an email message that contains a link to that app.

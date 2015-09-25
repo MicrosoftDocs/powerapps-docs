@@ -17,11 +17,13 @@
    ms.author="anneta"/>
 
 #Build an expression in KratosApps
+
 In KratosApps, you can use the operators and functions that this topic describes.
 
-All references to data in the following examples are hypothetical. No data samples accompany this reference.
+**Note** All references to data in the following examples are hypothetical. No data samples accompany this reference.
 
 ##Operators
+
 KratosApps supports these operators:
 
 |Symbol|Operator type|Syntax|Description|
@@ -39,7 +41,7 @@ KratosApps supports these operators:
 |&lt; ||Price &lt; 100|Less than|
 |&lt;=||Price &lt;= 100|Less than or equal to|
 |&lt;&gt; ||Price &lt;&gt; 100|Not equal to|
-|&amp;|String concatenation operator|&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;|Concatenation|
+|&amp;|String concatenation operator|&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;|Makes multiple strings appear continuous|
 |&amp;&amp;|Logical operators|Price &lt; 100 &amp;&amp; slider!value = 20|Logical conjunction|
 |&#124;&#124;||Price &lt; 100 &#124;&#124; slider!value = 20|Logical disjunction|
 |!||!(Price &lt; 100)|Logical negation|
@@ -74,10 +76,10 @@ When you [show data in a gallery](show-images-text-gallery-sort-filter.md), you 
 For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
 ##Functions
+
 KratosApps supports the following functions. If you use functions in Excel, you may recognize many of them.
 
->[AZURE.NOTE]
->In the syntax sections of this topic, italics indicate generic text that you replace with values that are specific for your app, and square brackets enclose optional arguments. If a comma appears before an optional argument, you must include the comma if you want to use the argument that it precedes.
+**Note **In the syntax sections of this topic, italics indicate generic text that you replace with values that are specific for your app, and square brackets enclose optional arguments. If a comma appears before an optional argument, you must include the comma if you want to use the argument that follows it.
 
 ### <a name="functions_by_category"></a>Functions by category
 **Boolean** -- [And](#and), [If](#if), [IsBlank](#isblank), [IsEmpty](#isempty), [Not](#not), [Or](#or)
@@ -99,29 +101,30 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 ### <a name="abs"></a>Abs
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Abs**(*Number*)<br /><br />**Abs**(*ColumnExpression*|
+|Syntax|**Abs**(*Number*)<br />**Abs**(*ColumnExpression*)|
 |Description|Returns the absolute value of a number—that is, the number without its sign.<ul><li><strong>Abs</strong>(<em>Number</em>) returns the absolute value of a number.</li><li>**Abs**(<em>ColumnExpression</em>), given a one-column table of numeric values, returns a one-column table of their corresponding absolute values.</li></ul>|
 |Examples|**Abs(-55)** returns 55.<br /><br />If a table contained a column named Trend, you could use **Abs(Trend)** in a Result column to return the absolute value of each number in the Trend column.<br/><br/>![Abs function to calculate absolute values](./media/reference-functions/abs.jpg)|
 
 ### <a name="addcolumns"></a>AddColumns
-|Syntax|**AddColumns**(*Table*, *Column1*, *Expression1*[, *Column2*, *Expression2*, ...])|
+|&nbsp;|&nbsp;|
 |---|---|
+|Syntax|**AddColumns**(*TableName*, *ColumnName1*, *Subexpression1*[, *ColumnName2*, *Subexpression2*, ...])|
 |Description|Returns a table that has one or more added columns that contain results of the specified expressions evaluated over the rows in the original input table.|
-|Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, you could create a second table that contained both of those columns plus a third column, named TotalSales, that showed the results of multiplying the values in the first two columns.<br /><br />**AddColumns(Sales, &quot;TotalSales&quot;, CostPerUnit \* UnitsSold)**<br/><br/>![AddColumns puts calculated results in new column](./media/reference-functions/add-columns.jpg)<blockquote><p>[AZURE.NOTE] This function doesn't modify the original table.</p></blockquote>If you had an Employees table that contained a FirstName column and a LastName column, you could create a second table that contained both of those columns plus a third column, named FullName, that showed the results of concatenating the strings in the first two columns.<br /><br />**AddColumns(Employees, &quot;FullName&quot;, FirstName &amp; &quot; &quot; &amp; LastName)**|
+|Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, you could create a second table that contained both of those columns plus a third column, named TotalSales, that showed the results of multiplying the values in the first two columns.<br /><br />**AddColumns(Sales, &quot;TotalSales&quot;, CostPerUnit \* UnitsSold)**<br/><br/>![AddColumns puts calculated results in new column](./media/reference-functions/add-columns.jpg)<br/>**Note:** This function doesn't modify the original table.</p></blockquote>If you had an Employees table that contained a FirstName column and a LastName column, you could create a second table that contained both of those columns plus a third column, named FullName, that showed the results of concatenating the strings in the first two columns.<br /><br />**AddColumns(Employees, &quot;FullName&quot;, FirstName &amp; &quot; &quot; &amp; LastName)**|
 
 ### <a name="and"></a>And
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**And**(*LogicalExpression1*[, *LogicalExpression2*, ...])|
+|Syntax|**And**(*Subexpression1*[, *Subexpression2*, ...])|
 |Description|Determines whether one or more Boolean values or sub-expressions are all true. (Accomplishes the same outcome as the inline &amp;&amp; operator.)|
-|Examples|This function determines whether a slider's value falls between 50 and 100:<br/><br/> **And(Slider1!Value &gt; 50, Slider1!Value &lt; 100)**<br /><br />If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR and the value in the Salary column was larger than 200000.<br /><br />**And(Dept = &quot;HR&quot;, Salary &gt; 200000)**<br /><br />![And returns true if all conditions are true](./media/reference-functions/and.jpg)<br /><br />These functions use the &amp;&amp; operator but return the same results as the previous examples:<br /><br />**Slider1!Value &gt; 50 &amp;&amp; Slider1!Value &lt; 100**<br /><br />**Dept = HR &amp;&amp; Salary &gt; 200000**|
+|Examples|This expression determines whether a slider's value falls between 50 and 100:<br/><br/> **And(Slider1!Value &gt; 50, Slider1!Value &lt; 100)**<br /><br />If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR and the value in the Salary column was larger than 200000.<br /><br />**And(Dept = &quot;HR&quot;, Salary &gt; 200000)**<br /><br />![And returns true if all conditions are true](./media/reference-functions/and.jpg)<br /><br />These expressions use the &amp;&amp; operator but return the same results as the previous examples:<br /><br />**Slider1!Value &gt; 50 &amp;&amp; Slider1!Value &lt; 100**<br /><br />**Dept = HR &amp;&amp; Salary &gt; 200000**|
 
 ### <a name="average"></a>Average
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Average**(*Table*, *Expression*)<br /><br />**Average**(*Expression1*[, *Expression2*, …])|
-|Description|Returns the average (arithmetic mean) of its arguments. You can use this function in these contexts:<ul><li>In a table, this function returns the average of the numbers that the specified expression evaluates to.</li><li>When provided scalar numeric inputs—or expressions that evaluate to scalar numeric values—this function returns their average.</li></ul>|
-|Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, this function would compute the average sales:<br /><br />**Average(Sales, CostPerUnit * UnitsSold)**<br /><br />If you had three sliders, this function would compute the average of their values:<br /><br />**Average(Slider1!Value, Slider2!Value, Slider3!Value)**|
+|Syntax|**Average**(*Table*, *Subexpression*)<br /><br />**Average**(*Subexpression1*[, *Subexpression2*, …])|
+|Description|Returns the average (arithmetic mean) of its arguments. You can use this function in these contexts:<ul><li>In a table, this function returns the average of the numbers that the specified subexpression evaluates to.</li><li>When provided scalar numeric inputs—or subexpressions that evaluate to scalar numeric values—this function returns their average.</li></ul>|
+|Examples|If you had a Sales table that contained a CostPerUnit column and a UnitsSold column, this expression would compute the average sales:<br /><br />**Average(Sales, CostPerUnit * UnitsSold)**<br /><br />If you had three sliders, this expression would compute the average of their values:<br /><br />**Average(Slider1!Value, Slider2!Value, Slider3!Value)**|
 
 ### <a name="char"></a>Char
 |&nbsp;|&nbsp;|
@@ -134,22 +137,22 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Clear**(*Collection*)|
-|Description|Clears all of the items from a collection and returns an empty collection.<br /><br /><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
+|Description|Clears all of the items from a collection and returns an empty collection.<br /><br />**Important** This function modifies the underlying collection.|
 |Example|<ol><li>Create or import a collection named <strong>Inventory</strong>, as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Add a button, and then set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Clear(Inventory)</strong></li><li>Press F5, click the <strong>Clear</strong> button, and then press Esc to return to the design screen.</li></ol>To confirm that your collection is empty, press Alt-D, and then click **Collections** in the left navigation bar.|
 
 ### <a name="collect"></a>Collect
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Collect**(*CollectionName*, *Item1*[, *Item2*,...])|
-|Description|Adds a table, a column within a table, or one or more individual items to a collection. If the specified collection doesn't exist, this function creates it and adds the item(s).<br /><br /><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
-|Examples|To create a collection that contains one column of values that you specify:<br/><br/><ol><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)</strong><br /><br />This function creates a collection that's named <strong>Products</strong> and that contains a row for each of three product names.</li><li>Press F5, click the button, and then press Esc to return to the design workspace.</li><li>(optional) To display a preview of the collection that you created, press Alt-D, and then click <strong>Collections</strong> in the left navigation bar.</li></ol>[Create and update a collection](create-update-collection.md) for more examples.|
+|Description|Adds a table, a column within a table, or at least one item to a collection. If the specified collection doesn't exist, this function creates it and adds the item.<br /><br />**Important** This function modifies the underlying collection.|
+|Examples|To create a collection that contains a column of values that you specify:<br/><br/><ol><li>Add a button, and set its <strong>OnSelect</strong> property to this function:<br /><br /><strong>Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)</strong><br /><br />This function creates a collection that's named <strong>Products</strong> and that contains a row for each of three product names.</li><li>Press F5, click the button, and then press Esc to return to the design workspace.</li><li>(optional) To display a preview of the collection that you created, press Alt-D, and then click <strong>Collections</strong> in the left navigation bar.</li></ol>[Create and update a collection](create-update-collection.md) for more examples.|
 
 ### <a name="colorfade"></a>ColorFade
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**ColorFade**(*Color*, *FadeDelta*)|
-|Description|Returns a faded version of a color based on a fade delta that ranges from -1 to 1, inclusive.|
-|Examples|**ColorFade(Color!AliceBlue, -1)**<br /><br />**ColorFade(Color!DarkBlue, 1)**<br /><br />**ColorFade(RGBA(255, 255, 255, 1), 1)**|
+|Description|Returns a faded or darker version of a color based on a value between -1 and 1, inclusive.|
+|Examples|If you add a shape and set its **Fill** property to **Blue** or **Color!Blue**, the shape is a medium blue. If you set that property to **ColorFade(Color!Blue, .5)** or **ColorFade(Color!Blue, -.5)**, the shape is a lighter or darker (respectively) version of the same color.|
 
 ### <a name="colorvalue"></a>ColorValue
 |&nbsp;|&nbsp;|
