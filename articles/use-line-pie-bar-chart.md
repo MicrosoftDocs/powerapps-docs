@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/21/2015"
+   ms.date="09/24/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
