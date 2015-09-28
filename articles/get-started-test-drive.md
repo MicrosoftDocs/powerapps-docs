@@ -6,11 +6,9 @@
  />
 
 # Test drive KratosApps
-Create an app automatically based on your data or a template, or create your own app from nothing except a blank screen.
+Create an app automatically based on one of several templates for a variety of scenarios. The app will have a default interface and sample data, so that you can explore how the app works out of the box. If you want to build or manage a set of data differently, you can customize the app to better fit the way you work.
 
-- **Create from data** If you already have a set of data, you can automatically create an app that displays your data and provides an interface so that you can add, update, and delete records. If the app's interface or behavior isn't quite what you need, you can tweak it to better suit your goals.
-- **Create from a template** As this topic describes, you can automatically create an app based on one of several templates for a variety of scenarios. The app will have a pre-built interface and sample data, with which you can explore how the app works. You can then connect it to your own data, if it matches what the app expects, or you can create a set of data from scratch. As with the previous bullet, you can, if necessary, customize the app's behavior or interface to meet your exact requirements.
-- **Create from blank** You can create an app completely from scratch, building the interface yourself and configuring it so that users can manage whatever data helps your organization thrive. For this option, you use a tablet, laptop, or computer that's running Windows.
+[Find out more about KratosApps](), such as how to automatically [create an app based on an existing data set]() or [build your own app from scratch]().
 
 **Prerequisites**
 
@@ -149,4 +147,4 @@ After you finish developing and testing your app, you share it with other people
 
 1. Edit the text in the **Subject** and **Message** text boxes, and then click **Share**.
 
-	The people with whom you shared your app will receive an email message that contains a link to that app.
+	The people with whom you shared your app will receive an email message that contains a link they can click to install KratosApps and run your app.
