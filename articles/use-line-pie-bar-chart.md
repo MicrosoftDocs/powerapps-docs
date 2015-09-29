@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Create and add line charts, pie charts, and bar charts in PowerApps | Microsoft Azure"
+	pageTitle="Create and add line charts, pie charts, and bar charts in KratosApps | Microsoft Azure"
 	description="Create collections and add columns to existing collections"
 	services="power-apps"
 	documentationCenter="" 
@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/24/2015"
+   ms.date="09/28/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
@@ -26,11 +26,11 @@ Use line charts, pie charts, and bar charts to display your data. When working w
 For example, your data should look similar to the following:  
 ![][9]
 
-You can create and use these charts within PowerApps. Let's get started.
+You can create and use these charts within KratosApps. Let's get started.
 
 ### Prerequisites 
-- Install PowerApps. Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with PowerApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
+- Install KratosApps. Create a new app or open an existing app in KratosApps.
+- To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
 - These steps use the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) as sample input data. You can use this sample data, or import your own.
 
 ## Add a pie chart to display your data
@@ -38,7 +38,7 @@ In these steps, we download a sample file. Using a collection, we import this sa
 
 1. Download the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
 2. Create a collection named **ProductRevenue**. Steps include:  
-	a) Open your app in PowerApps.
+	a) Open your app in KratosApps.
 	b) On the **Insert** tab, select **Controls**, and then select **Import**.
 	c) Set the **OnSelect** property to the following function:  
 ```Collect(ProductRevenue, Import1!Data)```  
@@ -77,11 +77,6 @@ In these steps, we download a sample file. Using a collection, we import this sa
 
 ## Next Steps
 [Create and update a collection](create-update-collection.md)
-
-Check out some getting started tutorials:
-[Create a PowerFlow from scratch](powerapps-tutorial-blankpowerflow.md) 
-[Create an app from scratch](powerapps-tutorial-pcselector.md) 
-[Using Templates in PowerApps](powerapps-tutorial-templates.md)
 
 
 [1]: ./media/use-line-pie-bar-chart/productrevenuecollection.png

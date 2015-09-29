@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Show images and use a checkbox with a conditional statement in PowerApps | Microsoft Azure"
+	pageTitle="Show images and use a checkbox with a conditional statement in KratosApps | Microsoft Azure"
 	description=""
 	services="power-apps"
 	documentationCenter="" 
@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/24/2015"
+   ms.date="09/28/2015"
    ms.author="mandia"/>
 
 
@@ -22,12 +22,12 @@ Use a checkbox with a conditional statement for a JPEG image.
 
 You add a .jpeg image and include a checkbox with a conditional statement. If the checkbox is enabled, it displays certain text in a label. If it's unchecked, the checkbox displays different text in the same label. 
 
-You can use this feature in your PowerApps apps for different scenarios. For example, there is a product image in your PowerApps app. When your users select the checkbox for the product image, additional information is displayed, like the price, or quantity in stock, maybe colors available, and so on.
+You can use this feature in your KratosApps apps for different scenarios. For example, there is a product image in your KratosApps app. When your users select the checkbox for the product image, additional information is displayed, like the price, or quantity in stock, maybe colors available, and so on.
 
 
 ### Prerequisites 
-- Install PowerApps. Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with PowerApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
+- Install KratosApps. Create a new app or open an existing app in KratosApps.
+- To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
 - These steps use the [CreateFirstApp](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7) as sample input data, which includes .jpg images. You can use this sample data, or import your own.
 
 
