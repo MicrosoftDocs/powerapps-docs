@@ -1,5 +1,5 @@
 <properties
-	pageTitle=" Identify current user, show text, and format a date or time value in KratosApps | Microsoft Azure"
+	pageTitle=" Identify current user, show text, and format a date or time in KratosApps | Microsoft Azure"
 	description=""
 	services="power-apps"
 	documentationCenter=""
@@ -13,18 +13,15 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload=""
-   ms.date="09/28/2015"
+   ms.date="09/29/2015"
    ms.author="mandia"/>
 
-# THIS TOPIC IS IN PROGRESS
 
-https://github.com/AFTOwen/kratosapps-content-pr/blob/old/articles/kratosapps-manage-dates.md
-
-# Identify current user, show text, and format a date or time value
+# Identify current user, show text, and format dates and times
 
 Add dates and times, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
 
-For example, add data from users about stock trades or client meetings, data from an external source, or data from another app created in KratosApps Studio. If that data includes times down to the millisecond, round it to the nearest minute for simplicity. Calculate how many days remain before a major milestone. If you want to schedule client meetings every five days, calculate those dates automatically. If May 10, 1985, is stored in separate fields for the day, the month, and the year, consolidate them into a single value. Conversely, break each date into separate values if your app manages them separately.
+For example, add data from users about stock trades or client meetings, data from an external source, or data from another app created in KratosApps. If that data includes times down to the millisecond, round it to the nearest minute for simplicity. Calculate how many days remain before a major milestone. If you want to schedule client meetings every five days, calculate those dates automatically. If May 10, 1985, is stored in separate fields for the day, the month, and the year, consolidate them into a single value. Conversely, break each date into separate values if your app manages them separately.
 
 ### Prerequisites 
 
@@ -32,8 +29,15 @@ For example, add data from users about stock trades or client meetings, data fro
 - To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
 
 
+## Identify current user
+
+Not started. Waiting on new build with this feature. 
+
+
 ## Show text in a label
-Show text in a label by setting the value of its Text property. You can set this property by typing directly into the label or by specifying an expression in the Function Bar. If you type directly into the label, it shows exactly what you type. If you specify an expression, the label shows the result of the expression.
+Show text in a label by setting the value of its **Text** property. You can set this property by typing directly into the label or by entering an expression in the Function Bar. If you type directly into the label, it shows exactly what you type. If you enter an expression, the label shows the result of the expression. 
+
+Here are some examples. 
 
 1. On the **Insert** tab, select **Label**, and rename it to **ShowText**:  
 ![][2]  
@@ -69,11 +73,13 @@ In these steps, you:
 - Used the DateDiff, DateValue, and Today functions to show different date calculations.
 - Used a "ShowText" label that is updated to show the output or calculated values from another input text control. 
 
-
-## Format date and time values
+## Working with dates and times
 In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within KratosApps. 
 
 Let's get started.
+
+### Format date and time values
+There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your KratosApps app. We suggest creating a blank screen and stepping through the different scenarios. 
 
 #### Format date time using the DateTimeValue, DateTimeFormat, and DateValue functions
 
@@ -120,23 +126,23 @@ Let's get started.
 	> [AZURE.TIP] To round the time to the nearest tenth or hundredth of a second, enter **hh:mm:ss.f** or **hh:mm:ss.ff** in the expression.
 
 #### Format a date using the DateValue and DateTimeFormat functions 
-1. Add an **Input Text** box, name it ArrivalDate, and then in a date. For example, enter ```5/10/85```.
+1. Add an **Input Text** box, name it ArrivalDate, and then type in a date. For example, enter ```5/10/85```.
 2. Add a label, and set its **Text** property to the following expression:  
 ```DateValue(ArrivalDate!Text)```  <br/>
 	The label shows the date that you typed, followed by 12:00 AM. 
 
-4. Change the **Text** property of the label to the following expression:  
-```DateValue(ArrivalDate!Text, "fr")```
-
-5. To use one of several built-in formats, change the **Text** property of the label to the following expression:  
+3. Change the **Text** property of the label to the following expression:  
+```DateValue(ArrivalDate!Text, "fr")```  
+	Now you see the day, the month, and the year, just as a French user would. 
+4. To use one of several built-in formats, change the **Text** property of the label to the following expression:  
 ```Text(DateValue(ArrivalDate!Text), DateTimeFormat!LongDate)```
 
 	The label shows the day of the week, in addition to the month, the day, and the year.
 
-6. To use a custom format, change the Text property of the label to the following expression:  
+5. To use a custom format, change the **Text** property of the label to the following expression:  
 ```Text(DateValue(ArrivalDate!Text), "mm/dd/yy")```
 
-	The label shows the date that you entered in the format that you specified.
+	The label shows the date that you entered in the format that you entered.
 
 #### Format a time using the DateTimeValue and DateTimeFormat functions
 
@@ -154,8 +160,7 @@ Let's get started.
 	> [AZURE.TIP] To round the time to the nearest tenth or hundredth of a second, enter **hh:mm:ss.f** or **hh:mm:ss.ff** in the expression.
 
 
-## Compare dates using the DateDiff and DateAdd functions
-
+### Compare dates using the DateDiff and DateAdd functions
 Use the DateDiff function to calculate time between dates, or use the DateAdd function to identify the date that's a certain number of days, months, quarters, or years before or after a specified date.
 
 #### Show the time between dates
@@ -192,12 +197,10 @@ Use the DateDiff function to calculate time between dates, or use the DateAdd fu
 	The label shows **8/10/1985**, which is three months *after* the date in the Start box. Instead of Months, choose **Quarters** or **Years** to identify a date that's the number of quarters or years before or after the date in the Start box.
 
 
-## Calculate dates and times using the Date and Time functions
-
+### Calculate dates and times using the Date and Time functions
+Use a Table within drop-down lists to select a differet day, month, and year. You can then use the Text and Date functions to display the output based on the choices in the drop-down lists. You can also calculate dates based on separate values for years, months, and days, even from from an external source. For example, you can use "sale" dates, month-end dates, or inventory restocking dates.
 
 #### Calculate dates based on years, months, and days using the Date function
-
-Calculate dates based on separate values for years, months, and days (for example, from an external source).
 
 1. From the **Insert** menu, **Controls**, add three **Drop-down** lists. Name them **Year**, **Month**, and **Day**.
 2. Set the **Items** property of the **Year** list to the following expression:  
@@ -226,19 +229,22 @@ You may need to convert data that you didn't expect. If you create **Input Text*
 - If a day value is less than 1, the function subtracts that many days, plus 1, from the first day of the specified month.
 
 
-#### Calculate times based hours, minutes, and seconds using the Time function
+#### Calculate times based on hours, minutes, and seconds using the Time function
 
 1. From the **Insert** menu, **Controls**, add two **Drop-down** lists. Name them **Hour** and **Minute**.
 2. Set the **Items** property of the **Hour** list to the following expression:  
 ```Table({Hour:"9"}, {Hour:"10"}, {Hour:"11"}, {Hour:"12"}, {Hour:"13"}, {Hour:"14"}, {Hour:"15"}, {Hour:"16"}, {Hour:"17"})```
+
 3. Set the **Items** property of the **Minute** list to the following expression:  
 ```Table({Minute:"0"}, {Minute:"15"}, {Minute:"30"}, {Minute:"45"})```
+
 4. Add a label, and set its **Text** property to the following expression:  
 ```Text(Time(Value(Hour!Selected!Value), Value(Minute!Selected!Value), 0), DateTimeFormat!ShortTime)```
+
 5. Choose 15 in the Hour list and 45 in the Minute list. The label shows **3:45 PM**:  
 ![][20]
 
-	You can add entries to the lists so that users can specify a bigger range of hours and a more precise number of minutes. You can also add a third dropdown list so that users can choose seconds. If you add a third list, change the **Text** property of the label to the following expression:  
+	You can add entries to the lists so that users can choose a bigger range of hours and a more precise number of minutes. You can also add a third dropdown list so that users can choose seconds. If you add a third list, change the **Text** property of the label to the following expression:  
 	```Text(Time(Value(Hour!Selected!Value), Value(Minute!Selected!Value), Value(Second!Selected!Value)), DateTimeFormat!LongTime)```
 
 
@@ -250,6 +256,18 @@ Task | Steps | Output
 Use the Now function to display the current date and time | On the **Insert** tab, add a **Label**, and rename it to **MyLabel**. Set the **Text** property of the label to ```Now()```: <br/>![][8] | The date and time displayed depends on your computer's localization settings:  <ul><li>For the "en" locale, the date and time is ```5/10/2015 5:27 PM``` (month/day/year).</li><li>If using another locale, like "fr", it displays as ```10/5/2015 5:27 PM``` (day/month/year).</li></ul>
 Enter a date and a time, and have them displayed in another label  | <ol><li>On the **Insert** tab, select **Text**, add two **Input Text** boxes, and name them **ArrivalDate** and **ArrivalTime**.</li><li>In **ArrivalDate**, type in a date. For example, enter ```5/10/85```. </li><li>In **ArrivalTime**, type in a time. For example, enter ```6:15 AM```.</li><li>From the **Insert** tab, add a **Label**, and set its **Text** property to the following expression: ```"The product was launched on " & ArrivalDate!Text & " at " & ArrivalTime!Text & "."```</li></ol> | When done, your screen looks similar to the following: ![][9]  
 
+
+## Tips and Tricks
+- At anytime, you can select the Preview button (![][1]) to see what you've created. You can also test your controls. 
+- When designing your app, you can re-size the controls and move them around using click-and-drag.
+- When working with dates and times, there are many built-in functions that let you get creative with your output. For example, you can use LongDateTime, LongTime, and even create your own custom format. 
+
+## What you learned
+In this topic, you:
+
+- Displayed text in a label by typing it directly in the label, and by using the label to show output from another control. In this example, we used an Input Text box with an Excel-like expression and displayed the output in the label. 
+- Formatted different date and time values to include different languages, show milliseconds, calculate days and months between dates, calculate time in hours and minutes, and more.
+- Used different date and time functions, including DateDiff, DateValue, Today,   DateTimeValue, DateValue, DateAdd, Date, and Time. 
 
 
 [1]: ./media/show-text-dates-times/preview.png
@@ -272,11 +290,6 @@ Enter a date and a time, and have them displayed in another label  | <ol><li>On 
 [18]: ./media/show-text-dates-times/datediff.png
 [19]: ./media/show-text-dates-times/datedropdownlists.png
 [20]: ./media/show-text-dates-times/timedropdownlists.png
-
-[21]: ./media/show-text-dates-times/
-[22]: ./media/show-text-dates-times/
-[23]: ./media/show-text-dates-times/
-[24]: ./media/show-text-dates-times/
 
 
 
