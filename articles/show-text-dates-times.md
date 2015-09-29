@@ -1,5 +1,5 @@
 <properties
-	pageTitle=" Identify current user, show text, and format a date or time value in PowerApps | Microsoft Azure"
+	pageTitle=" Identify current user, show text, and format a date or time value in KratosApps | Microsoft Azure"
 	description=""
 	services="power-apps"
 	documentationCenter=""
@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload=""
-   ms.date="09/24/2015"
+   ms.date="09/28/2015"
    ms.author="mandia"/>
 
 # THIS TOPIC IS IN PROGRESS
@@ -28,8 +28,8 @@ For example, add data from users about stock trades or client meetings, data fro
 
 ### Prerequisites 
 
-- Install PowerApps. Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with PowerApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
+- Install KratosApps. Create a new app or open an existing app in KratosApps.
+- To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
 
 
 ## Show text in a label
@@ -70,12 +70,12 @@ In these steps, you:
 - Used a "ShowText" label that is updated to show the output or calculated values from another input text control. 
 
 
-## Working with dates and times
-In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within PowerApps. 
+## Format date and time values
+In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within KratosApps. 
 
 Let's get started.
 
-### Use the DateTimeValue, DateTimeFormat, and DateValue functions to format a date and a time
+#### Format date time using the DateTimeValue, DateTimeFormat, and DateValue functions
 
 > [AZURE.NOTE] The **DateTimeValue** and **DateValue** functions can convert dates in any of the following formats into values: 
 > - MM/DD/YYYY
@@ -119,7 +119,7 @@ Let's get started.
 
 	> [AZURE.TIP] To round the time to the nearest tenth or hundredth of a second, enter **hh:mm:ss.f** or **hh:mm:ss.ff** in the expression.
 
-### Use the DateValue and DateTimeFormat functions to format a date
+#### Format a date using the DateValue and DateTimeFormat functions 
 1. Add an **Input Text** box, name it ArrivalDate, and then in a date. For example, enter ```5/10/85```.
 2. Add a label, and set its **Text** property to the following expression:  
 ```DateValue(ArrivalDate!Text)```  <br/>
@@ -138,7 +138,7 @@ Let's get started.
 
 	The label shows the date that you entered in the format that you specified.
 
-### Use the DateTimeValue and DateTimeFormat functions to format a time
+#### Format a time using the DateTimeValue and DateTimeFormat functions
 
 1. Add an **Input Text** box, name it ArrivalTime, and then type in 6:15 AM.
 2. To use one of several built-in formats, set the **Text** property of the label to the following expression:  
@@ -154,6 +154,95 @@ Let's get started.
 	> [AZURE.TIP] To round the time to the nearest tenth or hundredth of a second, enter **hh:mm:ss.f** or **hh:mm:ss.ff** in the expression.
 
 
+## Compare dates using the DateDiff and DateAdd functions
+
+Use the DateDiff function to calculate time between dates, or use the DateAdd function to identify the date that's a certain number of days, months, quarters, or years before or after a specified date.
+
+#### Show the time between dates
+
+1. Add two **Input Text** boxes. Rename them **Start** and **End**.
+2. In **Start**, type ```4/1/2015```. In **End**, type ```1/1/2016```.
+3. Add a label, and set its **Text** property to the following function:  
+```DateDiff(DateValue(Start!Text), DateValue(End!Text))```
+
+	The label shows **275**, which is the number of days between April 1, 2015, and January 1, 2016:  
+	![][18]
+4. Change the **Text** property of the label to the following function:  
+```DateDiff(DateValue(Start!Text), DateValue(End!Text), Months)```
+
+	The label shows **9**, which is the number of months between April 1, 2015, and January 1, 2016. Instead of Months, choose **Quarters** or **Years** to show the time in those units.
+
+
+#### Identify a date before or after another date
+
+1. Add an **Input Text** box. Name it **Start**, and type ```5/10/1985``` in the text box.
+2. Add a label, and set its **Text** property to the following expression:  
+```Text(DateAdd(DateValue(Start!Text), 3), "mm/dd/yyyy")```
+
+	The label shows **5/13/1985**, which is three days *after* the date in the Start box.
+
+3. Change the **Text** property of the label to the following expression:  
+```Text(DateAdd(DateValue(Start!Text), -3), "mm/dd/yyyy")```
+
+	The label shows **5/7/1985**, which is three days *before* the date in the Start box.
+
+4. Change the **Text** property of the label to the following expression:  
+```Text(DateAdd(DateValue(Start!Text), 3, Months), "mm/dd/yyyy")```
+
+	The label shows **8/10/1985**, which is three months *after* the date in the Start box. Instead of Months, choose **Quarters** or **Years** to identify a date that's the number of quarters or years before or after the date in the Start box.
+
+
+## Calculate dates and times using the Date and Time functions
+
+
+#### Calculate dates based on years, months, and days using the Date function
+
+Calculate dates based on separate values for years, months, and days (for example, from an external source).
+
+1. From the **Insert** menu, **Controls**, add three **Drop-down** lists. Name them **Year**, **Month**, and **Day**.
+2. Set the **Items** property of the **Year** list to the following expression:  
+```Table({Year:"2014"}, {Year:"2015"}, {Year:"2016"})```  
+
+3. Set the **Items** property of the **Month** list to the following expression:  
+```Table({Month:"1"}, {Month:"2"}, {Month:"3"}, {Month:"4"}, {Month:"5"}, {Month:"6"}, {Month:"7"}, {Month:"8"}, {Month:"9"}, {Month:"10"}, {Month:"11"}, {Month:"12"})```  
+
+4. Set the **Items** property of the **Day** list to the following expression:  
+```Table({Day:"1"}, {Day:"2"}, {Day:"3"}, {Day:"4"}, {Day:"5"}, {Day:"6"}, {Day:"7"}, {Day:"8"}, {Day:"9"}, {Day:"10"}, {Day:"11"}, {Day:"12"}, {Day:"13"}, {Day:"14"}, {Day:"15"}, {Day:"16"}, {Day:"17"}, {Day:"18"}, {Day:"19"}, {Day:"20"}, {Day:"21"}, {Day:"22"}, {Day:"23"}, {Day:"24"}, {Day:"25"}, {Day:"26"}, {Day:"27"}, {Day:"28"}, {Day:"29"}, {Day:"30"}, {Day:"31"})```  
+
+5. Add a label, and set its **Text** property to the following function:  
+```Text(Date(Value(Year!Selected!Value), Value(Month!Selected!Value), Value(Day!Selected!Value)), DateTimeFormat!LongDate)```
+
+	**Wednesday, January 1, 2014** is listed by default. Choose different options in the dropdown lists to update the label:  
+	![][19] 
+
+You may need to convert data that you didn't expect. If you create **Input Text** boxes instead of Drop-down lists, a user may enter an incorrect date, such as May 45. The **Date** function handles atypical data in the following ways:
+
+- If a year value is between 0 and 1899 (inclusive), the function adds that value to 1900 to calculate the year.
+- If a year value is between 1900 and 9999 (inclusive), the function uses that value as the year.
+- If a year value is less than 0 or is 10000 or greater, the function returns an error value.
+- If a month value is greater than 12, the function adds that number of months to the first month of the specified year.
+- If a month value is less than 1, the function subtracts that many months, plus 1, from the first month of the specified year.
+- If a day value is greater than the number of days in the specified month, the function adds that many days to the first day of the month and returns the corresponding date from a subsequent month.
+- If a day value is less than 1, the function subtracts that many days, plus 1, from the first day of the specified month.
+
+
+#### Calculate times based hours, minutes, and seconds using the Time function
+
+1. From the **Insert** menu, **Controls**, add two **Drop-down** lists. Name them **Hour** and **Minute**.
+2. Set the **Items** property of the **Hour** list to the following expression:  
+```Table({Hour:"9"}, {Hour:"10"}, {Hour:"11"}, {Hour:"12"}, {Hour:"13"}, {Hour:"14"}, {Hour:"15"}, {Hour:"16"}, {Hour:"17"})```
+3. Set the **Items** property of the **Minute** list to the following expression:  
+```Table({Minute:"0"}, {Minute:"15"}, {Minute:"30"}, {Minute:"45"})```
+4. Add a label, and set its **Text** property to the following expression:  
+```Text(Time(Value(Hour!Selected!Value), Value(Minute!Selected!Value), 0), DateTimeFormat!ShortTime)```
+5. Choose 15 in the Hour list and 45 in the Minute list. The label shows **3:45 PM**:  
+![][20]
+
+	You can add entries to the lists so that users can specify a bigger range of hours and a more precise number of minutes. You can also add a third dropdown list so that users can choose seconds. If you add a third list, change the **Text** property of the label to the following expression:  
+	```Text(Time(Value(Hour!Selected!Value), Value(Minute!Selected!Value), Value(Second!Selected!Value)), DateTimeFormat!LongTime)```
+
+
+
 ## More examples and fun stuff with dates and times
 
 Task | Steps | Output
@@ -161,23 +250,7 @@ Task | Steps | Output
 Use the Now function to display the current date and time | On the **Insert** tab, add a **Label**, and rename it to **MyLabel**. Set the **Text** property of the label to ```Now()```: <br/>![][8] | The date and time displayed depends on your computer's localization settings:  <ul><li>For the "en" locale, the date and time is ```5/10/2015 5:27 PM``` (month/day/year).</li><li>If using another locale, like "fr", it displays as ```10/5/2015 5:27 PM``` (day/month/year).</li></ul>
 Enter a date and a time, and have them displayed in another label  | <ol><li>On the **Insert** tab, select **Text**, add two **Input Text** boxes, and name them **ArrivalDate** and **ArrivalTime**.</li><li>In **ArrivalDate**, type in a date. For example, enter ```5/10/85```. </li><li>In **ArrivalTime**, type in a time. For example, enter ```6:15 AM```.</li><li>From the **Insert** tab, add a **Label**, and set its **Text** property to the following expression: ```"The product was launched on " & ArrivalDate!Text & " at " & ArrivalTime!Text & "."```</li></ol> | When done, your screen looks similar to the following: ![][9]  
 
-#### Use the Now function to display the current date and time
-On the **Insert** tab, add a **Label**, and rename it to **MyLabel**. Set the **Text** property of the label to ```Now()```:  
-![][8]
 
-The date and time displayed depends on your computer's localization settings: 
-- For the "en" locale, the date and time is ```5/10/2015 5:27 PM``` (month / day / year).
-- If using another locale, like "fr", it displays as ```10/5/2015 5:27 PM``` (day / month / year).
-
-#### Enter a date and a time, and have them displayed in another label 
-1. On the **Insert** tab, select **Text**, add two **Input Text** boxes, and name them **ArrivalDate** and **ArrivalTime**.
-2. In **ArrivalDate**, type in a date. For example, enter ```5/10/85```. 
-3. In **ArrivalTime**, type in a time. For example, enter ```6:15 AM```.
-4. From the **Insert** tab, add a **Label**, and set its **Text** property to the following expression:  
-```"The product was launched on " & ArrivalDate!Text & " at " & ArrivalTime!Text & "."```  
-
-When done, your screen looks similar to the following:  
-![][9]  
 
 [1]: ./media/show-text-dates-times/preview.png
 [2]: ./media/show-text-dates-times/label.png
@@ -196,4 +269,14 @@ When done, your screen looks similar to the following:
 [15]: ./media/show-text-dates-times/longdatelabel.png
 [16]: ./media/show-text-dates-times/custom.png
 [17]: ./media/show-text-dates-times/milliseconds.png
+[18]: ./media/show-text-dates-times/datediff.png
+[19]: ./media/show-text-dates-times/datedropdownlists.png
+[20]: ./media/show-text-dates-times/timedropdownlists.png
+
+[21]: ./media/show-text-dates-times/
+[22]: ./media/show-text-dates-times/
+[23]: ./media/show-text-dates-times/
+[24]: ./media/show-text-dates-times/
+
+
 
