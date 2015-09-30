@@ -1,11 +1,11 @@
 <properties
-    pageTitle="KratosApps tutorial: Create a PowerFlow from scratch"
+    pageTitle="KratosApps tutorial: Create a PowerFlow"
     description="Create a PowerFlow to take action when one or more conditions are met. For example, get an email whenever someone adds a row to an Excel file in the cloud."
     services="kratosapps"
     authors="aftowen"
  />
 
-# Create a PowerFlow from scratch #
+# Create a PowerFlow #
 Create a PowerFlow to take action when one or more conditions are met. For example, create a PowerFlow so that you get an email message whenever someone adds a row to an Excel file in the cloud. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
 
 **Prerequisites**
@@ -52,7 +52,7 @@ Create a PowerFlow to take action when one or more conditions are met. For examp
 ## Create the action ##
 In this procedure, you'll add an action to send email in your PowerFlow and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your PowerFlow to make it work the way you want.
 
-1. In the list of PowerFlows, click the one that you created in the previous procedure, and then click **Add action after**. 
+1. In the list of PowerFlows, click the one that you created in the previous procedure, and then click **Add action after**.
 
     ![List of actions](./media/get-started-powerflow/addaction.png)
 
@@ -64,7 +64,7 @@ In this procedure, you'll add an action to send email in your PowerFlow and then
 
     ![The list of parameters](./media/get-started-powerflow/listfields2.png)
 
-5. Type **Device Added To Excel:** in the **MESSAGE** field, and then click **Device Name** in the list of parameters. 
+5. Type **Device Added To Excel:** in the **MESSAGE** field, and then click **Device Name** in the list of parameters.
 
     A placeholder for the name of a device appears in your message.
 
@@ -77,20 +77,20 @@ In this procedure, you'll add an action to send email in your PowerFlow and then
 ## Test and pause your PowerFlow ##
 
 1. Open the Excel file in the cloud, and then click the third table.
-2. On the **Home** tab of the ribbon, click **Insert**, and then click **Insert Table Row Below**. 
+2. On the **Home** tab of the ribbon, click **Insert**, and then click **Insert Table Row Below**.
 
     ![Adding a row](./media/get-started-powerflow/addrow.png)
 
 3. Specify data in each column of the new row, save the file, and then return to the list of PowerFlows.
 
-    **Important:** If you added a filter earlier in this topic, be sure to specify data that matches your filter. 
+    **Important:** If you added a filter earlier in this topic, be sure to specify data that matches your filter.
     ![Data added](./media/get-started-powerflow/filldata.png)
 
     Within a minute, you'll receive an email that notifies you of the changes in Excel.
 
     **Note:** If you don't receive an email, click the status icon. A message indicating what happened might appear.
 
-5. Click the **Pause** button to stop being notified whenever a row is added to the spreadsheet. 
+5. Click the **Pause** button to stop being notified whenever a row is added to the spreadsheet.
 
 ## Next Steps ##
 
