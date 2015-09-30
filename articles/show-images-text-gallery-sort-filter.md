@@ -8,11 +8,11 @@
 	editor=""/>
 
 <tags
-   ms.service=""
+   ms.service="na"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload=""
+   ms.workload="na"
    ms.date="09/30/2015"
    ms.author="mandia"/>
 

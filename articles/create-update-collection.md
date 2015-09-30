@@ -2,34 +2,34 @@
 	pageTitle="Create and update a collection in KratosApps | Microsoft Azure"
 	description="Create collections and add columns to existing collections"
 	services=""
-	documentationCenter="" 
+	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service=""
+   ms.service="na"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na" 
    ms.date="09/30/2015"
    ms.author="mandia"/>
 
 
 # Create and update a collection in your app
-Use a collection to store data that can be used in your app. A collection is a group of items that are similar. For example, you create a MyImages collection that stores all the product images your company sells. Within KratosApps, you can add your MyImages collection and create an app that displays all the pictures of these products. In another example, you can create a PriceList collection that lists the products and the price of each product. 
+Use a collection to store data that can be used in your app. A collection is a group of items that are similar. For example, you create a MyImages collection that stores all the product images your company sells. Within KratosApps, you can add your MyImages collection and create an app that displays all the pictures of these products. In another example, you can create a PriceList collection that lists the products and the price of each product.
 
 You can create and use collections within KratosApps. Let's get started.
 
 **Need some conceptual info on collections, including what are they and why do you need them. Input encouraged. **
 
-### Prerequisites 
+### Prerequisites
 - Install KratosApps. Create a new app or open an existing app in KratosApps.
 - To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
 
 ## Create a collection that has one column
-The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection. 
+The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.
 
 1. Open your app in KratosApps.
 1. On the **Insert** tab, select **Text**, and then select **Input Text**:  
@@ -63,7 +63,7 @@ In these steps, you used the Collect function to create a collection named **Des
 
 
 ## Create a collection that has more than one column
-The following steps show you how to create a collection within your app using the Collect function, and how to add multiple rows to your collection. 
+The following steps show you how to create a collection within your app using the Collect function, and how to add multiple rows to your collection.
 
 1. Open your app in KratosApps.
 1. On the **Insert** tab, select **Text**, and then select **Input Text**.
@@ -75,10 +75,10 @@ The following steps show you how to create a collection within your app using th
 	**Note**: You can replace 'Input Text' with something like 'Enter the City' or 'Enter the State', which was done in the screen shot.
 5. On the **Insert** tab, select **Button**. Set its **OnSelect** property to the following function:  
 ```Collect(Destinations, {Cities:City!Text, States:State!Text})```  
-It should look like the following: 
+It should look like the following:
 ![][11]  
 	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column: `Collect(Destinations, {Cities:City!Text, States:State!Text}, {Countries:Country!Text})`
- 
+
 6. Rename the button control **AddCityStateButton**, and set its **Text** property to **Add City and State**:  
 ![][12]  
 
@@ -91,11 +91,11 @@ In these steps, you added a **Cities** column and a **States** column to the **D
 3. Add a few more cities and states.
 4. Press the **Esc** key to close the Preview window.
 5. To see the items you added to the Destinations collection, select the **File** tab, and then select **Collections**:  
-![][13] 
+![][13]
 
 
 ## Add more columns to an existing collection
-There are a few sections in this walk-through. When complete, you'll know how to import data into your app, create a gallery that shows data in a price list, and use a slider control that determines the quantity of a product. 
+There are a few sections in this walk-through. When complete, you'll know how to import data into your app, create a gallery that shows data in a price list, and use a slider control that determines the quantity of a product.
 
 ### Import the price list
 1. Download the [PriceList](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
@@ -106,7 +106,7 @@ There are a few sections in this walk-through. When complete, you'll know how to
 4. Preview your app, select **Import Data** button, select the PriceList.zip file, and select **Open**.
 5. Close the Preview window.
 6. Select the **File** tab, and select **Collections**. The items you imported are listed:  
-![][15] 
+![][15]
 
 
 ### Add the gallery
@@ -120,13 +120,13 @@ There are a few sections in this walk-through. When complete, you'll know how to
 ``Text(ThisItem!Price, "$#")``  
 ``ThisItem!Maker``   
 5. Resize and arrange the labels in a row near the top of the gallery. You an also adjust the size of the gallery template by selecting it, and then moving the borders. When complete, your gallery looks similar to the following:  
-![][19] 
+![][19]
 
 
 ### Add the controls and update the collection
 1. On the **Insert** menu, select **Controls**, and select **Slider**. Name the slider **OrderQty**, and move it under the gallery.
 2. Add a button, set its **Text** property to **Add**, and move it under the **OrderQty** slider. Your app looks similar to the following:  
-![A gallery (with two columns), a slider, and an Add button][20] 
+![A gallery (with two columns), a slider, and an Add button][20]
 3. Set the **OnSelect** property of the **Add** button to the following expression:  
 ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
 **Note** When you click this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
@@ -140,7 +140,7 @@ Now, see what you created:
 > [AZURE.IMPORTANT] When you select a product, that product is not highlighted to indicate you selected it. When we created the gallery, we didn't add this functionality. Know that clicking the product does select it.
 3. Repeat these steps to add a couple more products. Press **Esc** to close the Preview window.
 4. On the **File** tab, select **Collections** to display a preview of the **OrderList** collection you created:  
-![Preview the OrderList collection][21] 
+![Preview the OrderList collection][21]
 
 
 > [AZURE.TIP] To remove all items from the order list, add a button, set its **Text** property to **Clear**, and set its **OnSelect** property to the following expression:  

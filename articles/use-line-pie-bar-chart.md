@@ -2,17 +2,17 @@
 	pageTitle="Create and add line charts, pie charts, and bar charts in KratosApps | Microsoft Azure"
 	description="Create collections and add columns to existing collections"
 	services=""
-	documentationCenter="" 
+	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service=""
+   ms.service="na"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na" 
    ms.date="09/30/2015"
    ms.author="mandia"/>
 
@@ -28,13 +28,13 @@ For example, your data should look similar to the following:
 
 You can create and use these charts within KratosApps. Let's get started.
 
-### Prerequisites 
+### Prerequisites
 - Install KratosApps. Create a new app or open an existing app in KratosApps.
 - To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
 - These steps use the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) as sample input data. You can use this sample data, or import your own.
 
 ## Add a pie chart to display your data
-In these steps, we download a sample file. Using a collection, we import this sample data and display it in a pie chart and a column chart. 
+In these steps, we download a sample file. Using a collection, we import this sample data and display it in a pie chart and a column chart.
 
 1. Download the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
 2. Create a collection named **ProductRevenue**. Steps include:  

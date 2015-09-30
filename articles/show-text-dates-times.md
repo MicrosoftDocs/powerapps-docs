@@ -8,11 +8,11 @@
 	editor=""/>
 
 <tags
-   ms.service=""
+   ms.service="na"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload=""
+   ms.workload="na"
    ms.date="09/30/2015"
    ms.author="mandia"/>
 
@@ -23,7 +23,7 @@ Add dates and times, and format them to show the right level of detail or to ref
 
 For example, add data from users about stock trades or client meetings, data from an external source, or data from another app created in KratosApps. If that data includes times down to the millisecond, round it to the nearest minute for simplicity. Calculate how many days remain before a major milestone. If you want to schedule client meetings every five days, calculate those dates automatically. If May 10, 1985, is stored in separate fields for the day, the month, and the year, consolidate them into a single value. Conversely, break each date into separate values if your app manages them separately.
 
-### Prerequisites 
+### Prerequisites
 
 - Install KratosApps. Create a new app or open an existing app in KratosApps.
 - To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
@@ -31,13 +31,13 @@ For example, add data from users about stock trades or client meetings, data fro
 
 ## Identify current user
 
-Not started. Waiting on new build with this feature. 
+Not started. Waiting on new build with this feature.
 
 
 ## Show text in a label
-Show text in a label by setting the value of its **Text** property. You can set this property by typing directly into the label or by entering an expression in the Function Bar. If you type directly into the label, it shows exactly what you type. If you enter an expression, the label shows the result of the expression. 
+Show text in a label by setting the value of its **Text** property. You can set this property by typing directly into the label or by entering an expression in the Function Bar. If you type directly into the label, it shows exactly what you type. If you enter an expression, the label shows the result of the expression.
 
-Here are some examples. 
+Here are some examples.
 
 1. On the **Insert** tab, select **Label**, and rename it to **ShowText**:  
 ![][2]  
@@ -71,26 +71,26 @@ DateValue | Converts a literal string, as shown between quotation marks, to a va
 In these steps, you:
 
 - Used the DateDiff, DateValue, and Today functions to show different date calculations.
-- Used a "ShowText" label that is updated to show the output or calculated values from another input text control. 
+- Used a "ShowText" label that is updated to show the output or calculated values from another input text control.
 
 ## Working with dates and times
-In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within KratosApps. 
+In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within KratosApps.
 
 Let's get started.
 
 ### Format date and time values
-There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your KratosApps app. We suggest creating a blank screen and stepping through the different scenarios. 
+There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your KratosApps app. We suggest creating a blank screen and stepping through the different scenarios.
 
 #### Format date time using the DateTimeValue, DateTimeFormat, and DateValue functions
 
-> [AZURE.NOTE] The **DateTimeValue** and **DateValue** functions can convert dates in any of the following formats into values: 
+> [AZURE.NOTE] The **DateTimeValue** and **DateValue** functions can convert dates in any of the following formats into values:
 > - MM/DD/YYYY
 > - DD/MM/YYYY
 > - DD Mon YYYY
 > - Month DD, YYYY
 
 1. From the **Insert** tab, select **Text**, add an **Input Text** box, and rename it to **ArrivalDateTime**.
-2. In **ArrivalDateTime**, enter a date, a space, and a time. For example, enter ```5/10/85 6:15 AM```. 
+2. In **ArrivalDateTime**, enter a date, a space, and a time. For example, enter ```5/10/85 6:15 AM```.
 3. Add a label, and set its **Text** property to the following expression:   
 ```DateTimeValue(ArrivalDateTime!Text)```  <br/>
 	![][10]  
@@ -113,7 +113,7 @@ There are many functions you can use to format dates and times. You can even use
 	The label shows the day of the week, the date, and the time:  
 	![][15]  
 
-	> [AZURE.TIP] The **DateTimeFormat** parameter supports several other built-in formats. To use intellisense to see the other formats, remove *LongDateTime* from the Text property in the function bar. 
+	> [AZURE.TIP] The **DateTimeFormat** parameter supports several other built-in formats. To use intellisense to see the other formats, remove *LongDateTime* from the Text property in the function bar.
 
 6. To use a custom format, change the **Text** property of the label to the following expression:  
 ```Text(DateTimeValue(ArrivalDateTime!Text), "mm/dd/yyyy hh:mm:ss.fff AM/PM")```  
@@ -125,15 +125,15 @@ There are many functions you can use to format dates and times. You can even use
 
 	> [AZURE.TIP] To round the time to the nearest tenth or hundredth of a second, enter **hh:mm:ss.f** or **hh:mm:ss.ff** in the expression.
 
-#### Format a date using the DateValue and DateTimeFormat functions 
+#### Format a date using the DateValue and DateTimeFormat functions
 1. Add an **Input Text** box, name it ArrivalDate, and then type in a date. For example, enter ```5/10/85```.
 2. Add a label, and set its **Text** property to the following expression:  
 ```DateValue(ArrivalDate!Text)```  <br/>
-	The label shows the date that you typed, followed by 12:00 AM. 
+	The label shows the date that you typed, followed by 12:00 AM.
 
 3. Change the **Text** property of the label to the following expression:  
 ```DateValue(ArrivalDate!Text, "fr")```  
-	Now you see the day, the month, and the year, just as a French user would. 
+	Now you see the day, the month, and the year, just as a French user would.
 4. To use one of several built-in formats, change the **Text** property of the label to the following expression:  
 ```Text(DateValue(ArrivalDate!Text), DateTimeFormat!LongDate)```
 
@@ -216,7 +216,7 @@ Use a Table within drop-down lists to select a differet day, month, and year. Yo
 ```Text(Date(Value(Year!Selected!Value), Value(Month!Selected!Value), Value(Day!Selected!Value)), DateTimeFormat!LongDate)```
 
 	**Wednesday, January 1, 2014** is listed by default. Choose different options in the dropdown lists to update the label:  
-	![][19] 
+	![][19]
 
 You may need to convert data that you didn't expect. If you create **Input Text** boxes instead of Drop-down lists, a user may enter an incorrect date, such as May 45. The **Date** function handles atypical data in the following ways:
 
@@ -258,16 +258,16 @@ Enter a date and a time, and have them displayed in another label  | <ol><li>On 
 
 
 ## Tips and Tricks
-- At anytime, you can select the Preview button (![][1]) to see what you've created. You can also test your controls. 
+- At anytime, you can select the Preview button (![][1]) to see what you've created. You can also test your controls.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
-- When working with dates and times, there are many built-in functions that let you get creative with your output. For example, you can use LongDateTime, LongTime, and even create your own custom format. 
+- When working with dates and times, there are many built-in functions that let you get creative with your output. For example, you can use LongDateTime, LongTime, and even create your own custom format.
 
 ## What you learned
 In this topic, you:
 
-- Displayed text in a label by typing it directly in the label, and by using the label to show output from another control. In this example, we used an Input Text box with an Excel-like expression and displayed the output in the label. 
+- Displayed text in a label by typing it directly in the label, and by using the label to show output from another control. In this example, we used an Input Text box with an Excel-like expression and displayed the output in the label.
 - Formatted different date and time values to include different languages, show milliseconds, calculate days and months between dates, calculate time in hours and minutes, and more.
-- Used different date and time functions, including DateDiff, DateValue, Today,   DateTimeValue, DateValue, DateAdd, Date, and Time. 
+- Used different date and time functions, including DateDiff, DateValue, Today,   DateTimeValue, DateValue, DateAdd, Date, and Time.
 
 
 [1]: ./media/show-text-dates-times/preview.png
@@ -290,6 +290,3 @@ In this topic, you:
 [18]: ./media/show-text-dates-times/datediff.png
 [19]: ./media/show-text-dates-times/datedropdownlists.png
 [20]: ./media/show-text-dates-times/timedropdownlists.png
-
-
-
