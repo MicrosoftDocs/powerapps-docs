@@ -1,19 +1,19 @@
 <properties
 	pageTitle=" Identify current user, show text, and format a date or time in KratosApps | Microsoft Azure"
 	description=""
-	services="power-apps"
+	services=""
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service=""
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload=""
-   ms.date="09/29/2015"
+   ms.date="09/30/2015"
    ms.author="mandia"/>
 
 
