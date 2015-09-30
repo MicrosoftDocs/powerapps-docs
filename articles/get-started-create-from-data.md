@@ -14,7 +14,7 @@ Create an app automatically based on a set of data that you specify. The app wil
 
 In addition to signing up for and installing KratosApps, you'll also need a set of data in the cloud, such as in DropBox or OneDrive.
 
-## First steps ##
+## Connect to data ##
 1. Sign in to KratosApps, and then click **New** in the left navigation bar.
 
 	![The New option in the left navigation bar](./media/get-started-create-from-data/file-new.jpg)
@@ -23,11 +23,15 @@ In addition to signing up for and installing KratosApps, you'll also need a set 
 
 	![The option buttons for creating a tablet or phone app](./media/get-started-create-from-data/phone-app.jpg)
 
-1. Under **Start from Template**, click **Get started**.
+1. Under **Start from Data**, click **Get started**.
 
 	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.jpg)
 
+1. Under **My Connections**, click a data source that you or your organization created.
 
+1. Click a data set, and then click **Connect**.
+
+1. Click a table, and then click **Connect**.
 ## Save and share your app ##
 After you finish developing and testing your app, you share it with other people by saving it to the portal and then sending mail that your app is available. You specify which people can run your app or even customize it to create their own versions.
 
