@@ -1,19 +1,19 @@
 <properties
 	pageTitle="Create and add line charts, pie charts, and bar charts in KratosApps | Microsoft Azure"
 	description="Create collections and add columns to existing collections"
-	services="power-apps"
+	services=""
 	documentationCenter="" 
 	authors="MandiOhlinger"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service=""
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/28/2015"
+   ms.date="09/30/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app

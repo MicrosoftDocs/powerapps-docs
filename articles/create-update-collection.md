@@ -1,19 +1,19 @@
 <properties
 	pageTitle="Create and update a collection in KratosApps | Microsoft Azure"
 	description="Create collections and add columns to existing collections"
-	services="power-apps"
+	services=""
 	documentationCenter="" 
 	authors="MandiOhlinger"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service=""
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="09/28/2015"
+   ms.date="09/30/2015"
    ms.author="mandia"/>
 
 
@@ -21,6 +21,8 @@
 Use a collection to store data that can be used in your app. A collection is a group of items that are similar. For example, you create a MyImages collection that stores all the product images your company sells. Within KratosApps, you can add your MyImages collection and create an app that displays all the pictures of these products. In another example, you can create a PriceList collection that lists the products and the price of each product. 
 
 You can create and use collections within KratosApps. Let's get started.
+
+**Need some conceptual info on collections, including what are they and why do you need them. Input encouraged. **
 
 ### Prerequisites 
 - Install KratosApps. Create a new app or open an existing app in KratosApps.
