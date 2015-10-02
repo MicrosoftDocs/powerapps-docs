@@ -471,134 +471,134 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**PlainText(*TextWithTags*)**|
-|Description|Strips HTML and XML tags from text or converts the tags to an appropriate symbol.|
-|Example|If you bind a text gallery to an RSS feed and then set the Text property of a label in that gallery to ThisItem!description, the label might show raw HTML or XML code as in this example:<br><br>&lt;p&gt;We have done an unusually&amp;nbsp;&amp;quot;deep&amp;quot; globalization and localization.&lt;p&gt;<br><br>If you set the Text property of the label to **PlainText(ThisItem!description)**, the text appears as in this example:<br><br>We have done an unusually &quot;deep&quot; globalization and localization.|
+|Description|Strips HTML and XML tags from text or converts them to an appropriate symbol.|
+|Example|If you show an RSS feed in a gallery and set the **Text** property of a label in that gallery to **ThisItem!description**, the label might show raw HTML or XML code as in this example:<br>**&lt;p&gt;We have done an unusually&amp;nbsp;&amp;quot;deep&amp;quot; globalization and localization.&lt;p&gt;**<br><br>If you set the **Text** property of the same label to **PlainText(ThisItem!description)**, the text appears as in this example:<br>**We have done an unusually &quot;deep&quot; globalization and localization.**|
 
 ### <a name="proper"></a>Proper
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Proper**(*Text*)<br><br>**Proper**(*ColumnExpression*)|
+|Syntax|**Proper**(*Text*)<br>**Proper**(*ColumnExpression*)|
 |Description|Converts words in a text string to proper case; that is, the first letter in every word is uppercase, and the other letters are lowercase.<ul><li>**Proper**(*Text*)<br>Converts a string to proper case.</li><li>**Proper**(*<em>Expression</em>*)<br>Given a one-column table of string values, returns a one-column table that contains the corresponding proper-case values.<br><br></li></ul>|
-|Example|<ol><li>Add an input-text control, and name it <em>Slogan</em>.<br></li><li>Add a label, and set its <em>Text</em> property to this function:<br><br><em>Proper(Slogan!Text)</em><br><br>If you type &quot;WE ARE THE BEST!&quot; into the text-input control, the label shows &quot;We Are The Best!&quot;</li></ol>|
+|Example|<ol><li>Add an input-text control, and name it **Slogan**.<br></li><li>Add a label, and set its **Text** property to this function:<br>**Proper(Slogan!Text)**</li><li>Press F5, and then type **WE ARE THE BEST!** into the **Slogan** box.<br>The label shows **We Are The Best!**</li></ol>|
 
 ### <a name="rand"></a>Rand
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Rand()**|
 |Description|Returns a pseudo-random number that's greater than or equal to 0 but less than 1.|
-|Example|**Rand()** could return 0.85116235, 0.76728732, 0.27591115, or any other number greater than or equal to 0 but less than 1.|
+|Example|If you set the **Text** property of a label to **Rand()**, the label could show:<ul><li>0.85116235</li><li>0.76728732</li><li>0.27591115</li><li>any other number greater than or equal to 0 but less than 1</li></ul>|
 
 ### <a name="refresh"></a>Refresh
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Refresh**(*ServiceDataSource*)|
 |Description|Refreshes the data from the specified data source so that the app has the most recent state.<br><br><blockquote><p>[AZURE.IMPORTANT] You can't use this function to refresh data from Excel tables. </p></blockquote>|
-|Example|If you added an RSS feed named **rss_1**, **Refresh(rss_1)** would refresh that feed.|
+|Example|<ol><li>Add an RSS feed named **rss_1**.</li><li>Add a button, and set its **OnSelect** property to **Refresh(rss_1)**.</li><li>Press F5, and then click the button. </li>Your app has the most recent data from that feed.</ol>|
 
 ### <a name="remove"></a>Remove
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Remove**(*Collection*, *Record1*[, *Record2*, ..., **All**])<br><br>**Remove**(*Collection*, *Table*[, **All**])|
-|Description|Removes one or more rows from a collection. Because a collection can have duplicate records, this function also accepts an optional argument All that removes duplicates.<br><br><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
-|Example|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Set the **OnSelect** property of the image in the gallery to this function:<br><br>**Remove(Inventory, ThisItem)**<br></li><li>Press F5, and then click an image in the gallery.<br><br>The item is removed from the gallery and the collection.</li></ol>|
+|Syntax|**Remove**(*Collection*, *Record1*[, *Record2*, ..., **All**])<br>**Remove**(*Collection*, *Table*[, **All**])|
+|Description|Removes one or more items (rows) from a collection. Because a collection can have duplicate items, this function also accepts an optional argument **All**, which removes duplicates.<br>**Important:** This function modifies the underlying collection.|
+|Example|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>In the gallery, set the **OnSelect** property of the image to this expression:<br>**Remove(Inventory, ThisItem)**<br></li><li>Press F5, and then click an image in the gallery.<br>The item is removed from the gallery and the collection.</li></ol>|
 
 ### <a name="removeif"></a>RemoveIf
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**RemoveIf**(*Collection*, *Condition1*[, *Condition2* ...])|
-|Description|Removes from a collection all rows that satisfy the specified conditions and returns the modified collection.|
-|Example|If you had a collection named ShoppingCart that contained a field named Price, this function would remove from the collection any item for which the price was more than 200.<br><br>**RemoveIf(Cart, Price &gt; 200)**|
+|Description|Removes from a collection all items that satisfy the specified conditions and returns the modified collection.|
+|Example|If a collection named **Products** contained a field named **Vendor**, you could add a button and set its **OnSelect** property to this expression:<br>**RemoveIf(Products, "Contoso" in Vendor)**<br>If you pressed F5 and then clicked the button, you would remove all items for which Contoso is listed as the vendor.|
 
 ### <a name="renamecolumns"></a>RenameColumns
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**RenameColumns(***CollectionName***, &quot;***OldName***&quot;, &quot;***NewName***&quot;)**|
+|Syntax|**RenameColumns**(*CollectionName*, "*OldName*", "*NewName*")|
 |Description|Creates a temporary table that contains the same data as a data source except that one column has a different name. You can rename columns in a collection or in data imported from, for example, Excel or a SharePoint list.|
-|Example|<ol><li>Import or create a collection named **Inventory** as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Add an image gallery with text, name it **TableHolder**, and set its **Items** property to this function:<br><br>**RenameColumns(Inventory, &quot;ProductName&quot;, &quot;JacketID&quot;)**</li><li>Add a button, and set its **OnSelect** property to this function:<br><br>**Collect(Inventory2, TableHolder!AllItems)**</li><li>Press F5, click the button you just created, and then press Esc to return to the design workspace.</li><li>Press Alt-D, and then click **Collections** in the left navigation bar.</li><li>Confirm that you've duplicated the **Inventory** collection, except that the new collection, named **Inventory2**, contains the same information in a column named **JacketID** as the original collection did in a column named **ProductName**.</li></ol>|
+|Example|<ol><li>Import or create a collection named **Inventory** as the first step in the first procedure of [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Add an image gallery with text, name it **TableHolder**, and set its **Items** property to this expression:<br>**RenameColumns(Inventory, &quot;ProductName&quot;, &quot;JacketID&quot;)**</li><li>Add a button, and set its **OnSelect** property to this function:<br>**Collect(Inventory2, TableHolder!AllItems)**</li><li>Press F5, click the button you just created, and then press Esc to return to the design workspace.</li><li>Press Alt-D, and then click **Collections** in the left navigation bar.</li><li>Confirm that you've duplicated the **Inventory** collection, except that the new collection, named **Inventory2**, contains the same information in a column named **JacketID** as the original collection did in a column named **ProductName**.</li></ol>|
 
 ### <a name="replace"></a>Replace
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Replace**(*Text*, *StartIndex*, *Count*, *NewText*)<br><br>**Replace**(*Column*, *StartIndex*, *Count*, *NewText*)|
+|Syntax|**Replace**(*Text*, *StartIndex*, *Count*, *NewText*)<br>**Replace**(*Column*, *StartIndex*, *Count*, *NewText*)|
 |Description|Replaces part of a text string with a different text string, given the position of the starting character and the number of characters to replace. You can run this function on a table of strings.|
-|Example|<ol><li>Import or create a collection named **Inventory** as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Add an image gallery with text, and set its **Items** property to this function:<br><br>**Replace(Inventory!ProductName, 3, 2, &quot;zz&quot;)**<br><br>In each product name, &quot;zz&quot; replaces the third and fourth letters.</li></ol>|
+|Example|<ol><li>Import or create a collection named **Inventory** as the first step in the first procedure in [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Add an image gallery with text, and set its **Items** property to this function:<br>**Replace(Inventory!ProductName, 3, 2, &quot;zz&quot;)**<br>In each product name, &quot;zz&quot; replaces the third and fourth letters.</li></ol>|
 
 ### <a name="rgba"></a>RGBA
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**RGBA**(*Red*, *Green*, *Blue*, *Alpha*)|
-|Description|Returns a color value that has the specified red, green, blue, and alpha components.|
-|Example|Add a label, and set its **Color** property to this function:<br><br>**RGBA(112, 48, 160, 1)**<br><br>The text of the label becomes purple.|
+|Description|Returns a color value that has the red, green, blue, and alpha components that you specify.|
+|Example|Add a label, and set its **Color** property to this function:<br>**RGBA(112, 48, 160, 1)**<br>The text of the label becomes purple.|
 
 ### <a name="right"></a>Right
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|Right**(*Text*, *NumChars*)<br><br>**Right**(*ColumnExpression*, *NumericExpression*)|
+|Syntax|**Right**(*Text*, *NumChars*)<br>**Right**(*ColumnExpression*, *NumericExpression*)|
 |Description|Returns the specified number of characters from the end of the given string.|
-|Example|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Set the **Text** property of the lower label in the gallery to this function:<br><br>**Right(ThisItem!ProductName, 3)**<br><br>The label shows the last three characters in each product name.</li></ol>|
+|Example|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Set the **Text** property of the lower label in the gallery to this function:<br>**Right(ThisItem!ProductName, 3)**<br>The label shows the last three characters in each product name.</li></ol>|
 
 ### <a name="round"></a>Round
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Round**(*Number*, *DecimalPlaces*)<br><br>**Round**(*Column*, *DecimalPlaces*)|
+|Syntax|**Round**(*Number*, *DecimalPlaces*)<br>**Round**(*Column*, *DecimalPlaces*)|
 |Description|Rounds the given number to the specified number of decimal places. You can run this function on a table of numbers.|
-|Examples|To use this function with data that you provide manually:<br/><br/><ol><li>Add an input-text control, and name it Decimal.<br></li><li>Add a label, and set its Text property to this function:</li><li>**Round(Value(Decimal!Text), 2)**<br></li><li>In the text-input control, type a decimal value such as .634 or .635, and confirm that the label shows the appropriate value (for example, .63 or .64).</li></ol>|
+|Examples|<ol><li>Add an input-text control, and name it **Decimal**.<br></li><li>Add a label, and set its **Text** property to this function:<br>**Round(Value(Decimal!Text), 2)**<br></li><li>In the **Decimal** box, type a decimal value (for example, **.634** or **.635**), and confirm that the label shows the appropriate value (for example, **.63** or **.64**).</li></ol>|
 
 ### <a name="rounddown"></a>RoundDown
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**RoundDown**(*Number*, *DecimalPlaces*)<br><br>**RoundDown**(*Column*, *DecimalPlaces*)|
+|Syntax|**RoundDown**(*Number*, *DecimalPlaces*)<br>**RoundDown**(*Column*, *DecimalPlaces*)|
 |Description|Rounds down the given number to the specified number of decimal places.|
-|Example|RoundDown(23.54, 0)** returns 23.|
+|Example|<ol><li>Add an input-text control, and name it **Decimal**.<br></li><li>Add a label, and set its **Text** property to this function:<br>**RoundDown(Value(Decimal!Text), 2)**<br></li><li>In the **Decimal** box, type a decimal value (for example, **.634** or **.635**), and confirm that the label shows the appropriate value (for example, **.63**).</li></ol>|
 
 ### <a name="roundup"></a>RoundUp
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**RoundUp**(*Number*, *DecimalPlaces*)<br><br>**RoundUp**(*Column*, *DecimalPlaces*)|
+|Syntax|**RoundUp**(*Number*, *DecimalPlaces*)<br>**RoundUp**(*Column*, *DecimalPlaces*)|
 |Description|Rounds up the given number to the specified number of decimal places.|
-|Example|RoundUp(23.44, 1)** returns 23.5.|
+|Example|<ol><li>Add an input-text control, and name it **Decimal**.<br></li><li>Add a label, and set its **Text** property to this function:<br>**RoundUp(Value(Decimal!Text), 2)**<br></li><li>In the **Decimal** box, type a decimal value (for example, **.634** or **.635**), and confirm that the label shows the appropriate value (for example, **.64**).</li></ol>|
 
 ### <a name="savedata"></a>SaveData
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**SaveData**(*Collection*, *FileName*)|
 |Description|Encrypts the data in the specified collection and saves it to the specified file. This file is located in the app's own protected space. Use this function together with the **LoadData** function to save and load application data to and from app local storage.<br><br>SaveData is an asynchronous function and can't be used in predicates such as predicates of Filter and CountIf.|
-|Example|1. [Create a collection](create-update-collection.md) that has one column.<br>2. Change the **OnSelect** property of the button to this expression:<br>**Collect(Destinations, Destination!Text);SaveData(Destinations, "destfile")**<br>3. Click a blank area of the screen to select it, and then set its **OnVisible** property to this expression:<br/>**If(IsEmpty(Destinations), LoadData(Destinations, "destfile"))**<br><br>Step 2 saves the collection whenever a destination is added. Step 3 loads the data into the collection but only if it's empty when the screen appears.<br/><ul><li>When you close and reopen an app, all collections are empty by default, so the app can't show your saved data. In that case, the saved data is loaded when the screen appears.</li><li>If the app has multiple screens and you navigate to that screen from another screen, the collection might already contain data. If it does, the expression does nothing so that it doesn't create duplicates.|
+|Example|1. [Create a collection](create-update-collection.md) that has one column.<br>2. Change the **OnSelect** property of the button to this expression:<br>**Collect(Destinations, Destination!Text);SaveData(Destinations, "destfile")**<br>3. Click a blank area of the screen to select it, and then set its **OnVisible** property to this expression:<br/>**If(IsEmpty(Destinations), LoadData(Destinations, "destfile"))**<br><br>Step 2 saves the collection whenever a destination is added to it. Step 3 loads the data into the collection but only if it's empty when the screen appears.<br/><ul><li>When you close and reopen an app, all collections are empty by default. In that case, the saved data is loaded into the collection when the screen appears.</li><li>If the app has multiple screens and you navigate to that screen from another screen, the collection might already contain data. If it does, the expression does nothing so that it doesn't create duplicates.|
 
 ### <a name="second"></a>Second
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Second**(*DateTime*)|
-|Description|Returns the second from a given TimeValue as a number between 0 and 59 (inclusive).|
-|Example|If you typed 10:20:30 PM into an input-control named EventTime, a label would show 30 if its text property were set to **Second(TimeValue(EventTime!Text))**.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+|Description|Returns the second from a given time value as a number between 0 and 59 (inclusive).|
+|Example|<ol><li>Add an input-text control, and name it **EventTime**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Second(TimeValue(EventTime!Text))**</li><li>Press F5, and then type or paste **10:20:30 PM** into the **EventTime** box.<br>The label shows **30**.</li></ol>[More examples](show-text-dates-times.md) of how to manage dates and times.|
 
 ### <a name="showcolumns"></a>ShowColumns
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**ShowColumns(***CollectionName*, &quot;*Column1*&quot;, &quot;*Column2*&quot;...**)**|
+|Syntax|**ShowColumns**(*CollectionName*, "*Column1*", "*Column2*"...)|
 |Description|Creates a temporary table that contains only the columns that you specify from a data source that you specify. You can specify columns from a collection or data imported from, for example, Excel or a SharePoint list.|
-|Examples|<ol><li>Import or create a collection named **Inventory** as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Add a text gallery, name it **TableHolder**, and set its **Items** property to this function:<br><br>**ShowColumns(Inventory, &quot;ProductName&quot;, &quot;UnitsInStock&quot;)**</li><li>Add a button, and set its **OnSelect** property to this function:<br><br>**Collect(Inventory2, TableHolder!AllItems)**</li><li>Press F5, click the button you just created, and then press Esc to return to the design workspace.</li><li>Press Alt-D, and then click **Collections** in the left navigation bar.</li><li>Confirm that you've created a collection, named **Inventory2**, that contains the **ProductName** and **UnitsInStock** columns (but not the **ProductDesign** column) from the **Inventory** collection.</li></ol>|
+|Examples|<ol><li>Import or create a collection named **Inventory**, as the first step in the first procedure of [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Add a text gallery, name it **TableHolder**, and set its **Items** property to this expression:<br>**ShowColumns(Inventory, &quot;ProductName&quot;, &quot;UnitsInStock&quot;)**</li>The gallery shows the name of each product and the number of units in stock but not its product design.<li>Add a button, and set its **OnSelect** property to this function:<br>**Collect(Inventory2, TableHolder!AllItems)**</li><li>Press F5, click the button you just created, and then press Esc to return to the design workspace.</li><li>Press Alt-D, and then click **Collections** in the left navigation bar.</li><li>Confirm that you've created a collection, named **Inventory2**, that contains the **ProductName** and **UnitsInStock** columns (but not the **ProductDesign** column) from the **Inventory** collection.</li></ol>|
 
 ### <a name="shuffle"></a>Shuffle
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Shuffle**(*Collection*)|
 |Description|Returns a copy of the given collection, in which rows in the table are randomly reordered.|
-|Example|If you stored details about playing cards in a collection named Deck, this function would shuffle that collection:<br><br>**Shuffle(Deck)**|
+|Example|If you stored details about playing cards in a collection named **Deck**, this function would shuffle that collection:<br>**Shuffle(Deck)**|
 
 ### <a name="sort"></a>Sort
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Sort**(*Table*, *Expression*[, **SortOrder!Descending**])|
+|Syntax|**Sort**(*Table*, *Expression*[, **Descending**])|
 |Description|Returns a copy of a collection, in which the rows in the given table are sorted based on the result of the specified expression evaluated to one of the supported expression types—number and its subtypes, string and its subtypes, and Boolean types. The function doesn't support sorting on aggregate values such as table and rows. The function also accepts an optional argument that indicates that the table should be sorted in descending order.|
-|Example|[Show data in a gallery](show-images-text-gallery-sort-filter.md) for an example.|
+|Example|<ol><li>Add a listbox, and set its **Items** property to this expression:<br>**Table({Color:"Yellow"},{Color:"Blue"},{Color:"Red"},{Color:"Green"})**<br>The list shows the colors in the order that you specified.</li><br><li>Set the **Items** property to this expression:<br>**Sort(Table({Color:"Yellow"},{Color:"Blue"},{Color:"Red"},{Color:"Green"}), Color)**<br>The list shows the colors alphabetically.</li><br><li>Set the **Items** property to this expression:<br>**Sort(Table({Color:"Yellow"},{Color:"Blue"},{Color:"Red"},{Color:"Green"}), Color, Descending)**<br>The list shows the colors in reverse alphabetical order.</li></ol>[Show data in a gallery](show-images-text-gallery-sort-filter.md) for another example.|
 
 ### <a name="sqrt"></a>Sqrt
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Sqrt**(*Number*)<br><br>**Sqrt**(*ColumnExpression1*)|
+|Syntax|**Sqrt**(*Number*)<br>**Sqrt**(*ColumnExpression1*)|
 |Description|Returns the square root of a positive number. You can run this function on a table of numbers.|
-|Examples|<ol><li>Add an input-text control, and name it **Source**.<br></li><li>Add a label, and set its **Text** property to this function:<br><br>**Sqrt(Value(Source!Text))**<br></li><li>Type a number into the input-text control, and confirm that the label shows the square root of the number that you typed.</li></ol>|
+|Examples|<ol><li>Add an input-text control, and name it **Source**.<br></li><li>Add a label, and set its **Text** property to this function:<br>**Sqrt(Value(Source!Text))**<br></li><li>Type a number into the **Source** box, and confirm that the label shows the square root of the number that you typed.</li></ol>|
 
 ### <a name="stdevp"></a>StdevP
 |&nbsp;|&nbsp;|
@@ -610,104 +610,104 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 ### <a name="substitute"></a>Substitute
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Substitute**(*Text*, *OldText*, *NewText*[,*InstanceNum*])<br><br>**Substitute**(*TextColumn*, *OldTextColumn*, *NewTextColumn*[, *InstanceNumColumn*])|
+|Syntax|**Substitute**(*Text*, *OldText*, *NewText*[, *InstanceNum*])<br>**Substitute**(*TextColumn*, *OldTextColumn*, *NewTextColumn*[, *InstanceNumColumn*])|
 |Description|Replaces part of a text string with a different text string. If the optional fourth argument is used, it specifies the instance to match and replace, starting with 1, which means the first instance.|
-|Example|This function replaces &quot; &amp; &quot; with &quot; and &quot;:<br><br>**Substitute(Text1!Text, &quot; &amp; &quot;, &quot; and &quot;)**|
+|Example|<ol><li>Add an input-text control, and name it **Source**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Substitute(Source!Text, "College", "University")**</li><li>Press F5, and then type or paste **State College** in the **Source** box.<br>The label shows **State University**.|
 
 ### <a name="sum"></a>Sum
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Sum**(*Table*, *Expression*)<br><br>**Sum**(*Expression1*[, *Expression2*, ...])|
+|Syntax|**Sum**(*Expression1*[, *Expression2*, ...])<br>**Sum**(*Table*, *Expression*)|
 |Description|Returns the sum of the arguments, for the specified range.|
-|Examples|If you had a table named Sales that contained a CostPerUnit column and a UnitsSold column, this function would compute total sales:<br><br>**Sum(Sales, CostPerUnit * UnitsSold)**<br><br>To compute the sum of the values set for sliders 1, 2, and 3:<br><br>**Sum(Slider1!Value, Slider2!Value, Slider3!Value)**|
+|Examples|<ol><li>Add three sliders, and name them **January**, **February**, and **March**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Sum(January!Value, February!Value, March!Value)**</li><li>Press F5, and then adjust the sliders.<br>The label shows the sum of the sliders as you change them.|
 
 ### <a name="table"></a>Table
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Table**({*Column1*:*Row1*, *Column2*:*Row1*...}, {*Column1*:*Row2*, *Column2*:*Row2*...})|
 |Description|Creates a temporary table that contains the data that you specify. You don't have to specify data in every column for every row.|
-|Examples|<ul><li>Add a listbox, and then set its **Items** property to this function:<br><br>**Table({Color:&quot;red&quot;}, {Color:&quot;green&quot;}, {Color:&quot;blue&quot;})**</li><li>Add a text gallery, and set its **Items** property to this function:<br><br>**Table({Item:&quot;Violin123&quot;, Location:&quot;France&quot;, Owner:&quot;Fabrikam&quot;}, {Item:&quot;Violin456&quot;, Location:&quot;Chile&quot;})**<br><br>(optional) Set the **Text** property of the **Heading1** label to **ThisItem!Item**, set the **Text** property of the **Subtitle1** label to **ThisItem!Owner**, and set the **Text** property of the **Body1** label to **ThisItem!Location**.</li></ul>|
+|Examples|<ul><li>Add a listbox, and then set its **Items** property to this function:<br>**Table({Color:&quot;red&quot;}, {Color:&quot;green&quot;}, {Color:&quot;blue&quot;})**<br>The list shows the colors that you specified.</li><br><li>Add a text gallery, and set its **Items** property to this function:<br>**Table({Item:&quot;Violin123&quot;, Location:&quot;France&quot;, Owner:&quot;Fabrikam&quot;}, {Item:&quot;Violin456&quot;, Location:&quot;Chile&quot;})**<br>(optional) Set the **Text** property of the **Heading1** label to **ThisItem!Item**, set the **Text** property of the **Subtitle1** label to **ThisItem!Owner**, and set the **Text** property of the **Body1** label to **ThisItem!Location**.</li></ul>|
 
 ### <a name="text"></a>Text
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Text**(*Value*, *Format*)|
 |Description|Converts a value to a formatted text output.|
-|Examples|<ol><li>Add a text-input control, name it **Source**, and then type **56.75** in it.</li><li>Add a label, and set its **Text** property to this expression:<br><br>**Text(Value(Source!Text), &quot;$#.##&quot;)**<br><br>The label shows **$56.75**.</li><li>Change the **Text** property of the label to this expression:<br><br>**Text(Value(Source!Text), &quot;#.##%&quot;)**<br><br>The label shows **56.75%**.</li></ol><a href="https://technet.microsoft.com/library/dn955337(v=vs.111).aspx">Format dates and times</a>.|
+|Examples|<ol><li>Add a text-input control, name it **Source**, and then type **56.75** in it.</li><br><li>Add a label, and set its **Text** property to this expression:<br>**Text(Value(Source!Text), &quot;$#.##&quot;)**<br>The label shows **$56.75**.</li><br><li>Change the **Text** property of the label to this expression:<br>**Text(Value(Source!Text), &quot;#.##%&quot;)**<br>The label shows **56.75%**.</li></ol><a href="https://technet.microsoft.com/library/dn955337(v=vs.111).aspx">Format dates and times</a>.|
 
 ### <a name="time"></a>Time
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Time**(*Hour*, *Minute*, *Second*)|
 |Description|Converts the specified hours, minutes, and seconds into a decimal.|
-|Example|If a user typed 14 in an input-text control named BirthHour, 50 in an input-text control named BirthMinute, and 24 in an input-text control named BirthSecond, this function would return 02:50:24 p.<br><br>**Text(Time(Value(BirthHour!Text), Value(BirthMinute!Text), Value(BirthSecond!Text)), &quot;hh:mm:ss a/p&quot;)**<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+|Example|<ol><li>Add three input-text controls, and name them **BirthHour**, **BirthMinute**, and **BirthSecond**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Text(Time(Value(BirthHour!Text), Value(BirthMinute!Text), Value(BirthSecond!Text)), "hh:mm:ss a/p")**</li><li>Press F5, and then type **14** in **BirthHour**, **50** in **BirthMinute**, and **24** in **BirthSecond**.<br>The label shows **02:50:24 p**.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
 
 ### <a name="timevalue"></a>TimeValue
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**TimeValue**(*TimeText*)<br><br>**TimeValue**(*TimeText*, &quot;*LanguageCode*&quot;)|
-|Description|Converts a time value stored as text to a value on which you can perform a mathematical or Boolean operation, such as comparing two times. For consistency, all times are converted from the local time zone to UTC (Coordinated Universal Time). As a result, a user in the Pacific time zone might specify 1:50:24 PM, a user in the Eastern time zone might specify 4:50:24 PM, and both values would appear as 5:50:24 AM.<br><br>You can also specify a language code to ensure that a time value is interpreted and formatted appropriately.|
-|Example|Name an input-text control **FinishedAt**, and set the **Text** property of a label to this function:<br><br>**If(TimeValue(FinishedAt!Text)&lt;TimeValue(&quot;5:00:00.000 PM&quot;), &quot;You made it!&quot;, &quot;Too late!&quot;)**<ul><li>If you type 4:59:59.999 PM into the **FinishedAt** control, the label shows **&quot;You made it!&quot;**</li><li>If you type 5:00:00.000 PM into the **FinishedAt** control, the label shows **&quot;Too late!&quot;**</li></ul>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+|Description|Converts a time value stored as text to a value on which you can perform a mathematical or Boolean operation, such as comparing two times. You can also specify a language code to ensure that a time value is interpreted and formatted appropriately.|
+|Example|<ol><li>Add an input-text control, and name it **FinishTime**.</li><li>Add a label, and set its **Text** property to this expression:<br>**If(TimeValue(FinishTime!Text)&lt;TimeValue(&quot;5:00:00.000 PM&quot;), &quot;You made it!&quot;, &quot;Too late!&quot;)**<li>Type 4:59:59.999 PM in the **FinishTime** box.<br>The label shows **&quot;You made it!&quot;**</li><li>Type 5:00:00.000 PM in the **FinishTime** box.<br>The label shows **&quot;Too late!&quot;**</li><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
 
 ### <a name="today"></a>Today
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|Today()|
+|Syntax|**Today()**|
 |Description|Returns the current date, in the device's locale-specific format.|
-|Example|If today were October 11, 2014, and you set the Text property of a label tothis function:<ul><li>**Today()**<br><br>The label would show 10/11/2014 12:00 AM if your computer were set to the **en** language code or 11/10/2014 12:00 AM if your computer were set to the **fr** language code.</li><li>**Text(Today(), &quot;mm/dd/yyyy&quot;)**<br><br>The label would show 10/11/2014 regardless of the language code to which your computer was set.</li><li>**T**ext(Today(), DateTimeFormat!ShortDate)**<br><br>The label would show 10/11/2014 regardless of the language code to which your computer was set.<br><br>You can use several options, other than ShortDate, with the **DateTimeFormat** parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.</li></ul>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+|Example|If today were October 11, 2014, and you set the **Text** property of a label to this function:<ul><li>**Today()**<br>The label would show **10/11/2014 12:00 AM** if your computer were set to the **en** language code or **11/10/2014 12:00 AM** if your computer were set to the **fr** language code.</li><br><li>**Text(Today(), &quot;mm/dd/yyyy&quot;)**<br>The label would show **10/11/2014** regardless of the language code to which your computer was set.</li><br><li>**Text(Today(), DateTimeFormat!ShortDate)**<br>The label would show **10/11/2014** regardless of the language code to which your computer was set.<br>**Note:** You can use several options, other than **ShortDate**, with the **DateTimeFormat** parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the Function Bar.</li></ul>[More examples](show-text-dates-times.md) of how to manage dates and times.|
 
 ### <a name="trim"></a>Trim
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Trim**(*Text*)<br><br>**Trim**(*ColumnExpression*)|
+|Syntax|**Trim**(*Text*)<br>**Trim**(*ColumnExpression*)|
 |Description|Removes all spaces from a text string except for single spaces between words.|
-|Examples|If you typed &quot;We are    the best!&quot; into an input-text control named Slogan, a label with a text property of **Trim(Slogan!Text)** would return &quot;We are the best!&quot;|
+|Examples|<ol><li>Add an input text control, and name it **Source**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Trim(Slogan!Text)**</li><li>Press F5, and then type or paste **We are&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the best!** in the **Source** box.<br>The label shows **We are the best!**|
 
 ### <a name="update"></a>Update
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Update**(*Collection*, *Record1*, *Record2*[, &quot;**All**&quot;])|
-|Description|In a specified collection, replaces the matching record with the specified record and returns the resulting collection. To update all matches, specify the optional argument &quot;All&quot;.<br/><br/><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection</p></blockquote>|
-|Example|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Name the gallery **ProductGallery**.</li><li>Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery!Selected!UnitsInStock**</li><li>Add a button, and set its **OnSelect** property to this expression:<br>**Update(Inventory, {ProductDesign:ProductGallery!Selected!ProductDesign, ProductName:ProductGallery!Selected!ProductName, UnitsInStock:ProductGallery!Selected!UnitsInStock}, {ProductDesign:ProductGallery!Selected!ProductDesign, ProductName:ProductGallery!Selected!ProductName, UnitsInStock:ProductGallery!Selected!UnitsInStock-UnitsSold!Value})**</li><li>Press F5, click a product in the gallery, specify a value with the slider, and then click the button.<br>The number of units in stock decreases by the amount that you specified.</li></ol>|
+|Syntax|**Update**(*Collection*, *Record1*, *Record2*[, **"All"**])|
+|Description|In a specified collection, replaces the matching record with the specified record and returns the resulting collection. To update all matches, specify the optional argument **"All"**.<br>**Important:** This function modifies the underlying collection.|
+|Example|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Name the gallery **ProductGallery**.</li><li>Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery!Selected!UnitsInStock**</li><li>Add a button, and set its **OnSelect** property to this expression:<br>**Update(Inventory, {ProductDesign:ProductGallery!Selected!ProductDesign, ProductName:ProductGallery!Selected!ProductName, UnitsInStock:ProductGallery!Selected!UnitsInStock}, {ProductDesign:ProductGallery!Selected!ProductDesign, ProductName:ProductGallery!Selected!ProductName, UnitsInStock:ProductGallery!Selected!UnitsInStock-UnitsSold!Value})**</li><li>Press F5, click a product in the gallery, specify a value with the slider, and then click the button.<br>The number of units in stock for the product that you specified decreases by the amount that you specified.</li></ol>|
 
 ### <a name="updatecontext"></a>UpdateContext
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**UpdateContext**({*Name1*: *Expression1*, *Name2*: *Expression2*, …})|
-|Description|Updates the context of the current screen and binds the specified variables to the results from the evaluation of the specified expressions.<br/><br/><blockquote><p>[AZURE.IMPORTANT]This function modifies the underlying screen context.</p></blockquote>|
-|Example|UpdateContext({page: 5, displayItem: &quot;Tablets&quot;})|
+|Syntax|**UpdateContext**({*Name1*: *Expression1*[, *Name2*: *Expression2*, …]})|
+|Description|Updates the context of the current screen and binds the specified variables to the results from the evaluation of the specified expressions.<br>**Important:** This function modifies the underlying screen context.|
+|Example|<ol><li>Add a button, and set its **OnSelect** property to this expression:<br>**UpdateContext({CurrentValue:CurrentValue+5})**</li><li>Add a label, and set its **Text** property to this expression:<br>**CurrentValue**</li><li>Press F5, and then click the button multiple times.<br>The label shows a value that increases by five every time you click the button.</li><br>[Another example](add-screen-context-variable.md)|
 
 ### <a name="updateif"></a>UpdateIf
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**UpdateIf**(*Collection*, *Condition1*, {*Column1*: *Expression1*, …}[, *Condition2*, {*Column1*: *Expression2*, …} …])|
-|Description|Updates the specified columns by using the results of the corresponding expressions for the rows that satisfy the specified conditions, and returns the modified collection.<br/><br/><blockquote><p>[AZURE.IMPORTANT] This function modifies the underlying collection.</p></blockquote>|
+|Description|Updates the specified columns by using the results of the corresponding expressions for the rows that satisfy the specified conditions, and returns the modified collection.<br>**Important:** This function modifies the underlying collection.|
 |Example|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Name the gallery **ProductGallery**.</li><li>Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery!Selected!UnitsInStock**</li><li>Add a button, and set its **OnSelect** property to this expression:<br>**UpdateIf(Inventory, ProductName = ProductGallery!Selected!ProductName, {UnitsInStock:UnitsInStock-UnitsSold!Value})**</li><li>Press F5, click a product in the gallery, specify a value with the slider, and then click the button.<br>The number of units in stock for the product you specified decreases by the amount that you specified.</li></ol>|
 
 ### <a name="upper"></a>Upper
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Upper**(*Text*)<br><br>**Upper**(*ColumnExpression*)|
+|Syntax|**Upper**(*Text*)<br>**Upper**(*ColumnExpression*)|
 |Description|<ul><li>**Upper**(<em>Text</em>)<br>Converts the letters in the specified text string to uppercase.</li><li>**Upper** (<em>ColumnExpression</em>)<br>Given a one-column table of string values, returns a one-column table of the corresponding uppercase values.</li></ul>|
-|Examples|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Set the **Text** property of the lower label in the gallery to this function:<br><br>**Upper(ThisItem!ProductName)**<br><br>The label shows the name of each product in all capital letters.</li></ol>|
+|Examples|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><li>Set the **Text** property of the lower label in the gallery to this function:<br>**Upper(ThisItem!ProductName)**<br>The label shows the name of each product in all capital letters.</li></ol>|
 
 ### <a name="value"></a>Value
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|Value(*Text*)|
+|Syntax|**Value**(*Text*)|
 |Description|Converts a text string that represents a value to an actual value.|
-|Example|1. Add a text-input control, and name it **Price**.<br/>2. Add a label, and set its **Text** property to this expression:<br/>**Text(Value(Price!Text), "$#")**<br/>3. Press F5, and then type a number in the **Price** control.<br/>The label automatically shows the value as a dollar amount.|
+|Example|<ol><li>Add an input-text control, and name it **Source**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Text(Value(Source!Text), "$#,#")**</li><li>Press F5, and then type or paste **5000** in the **Source** box.<br>The label shows **$5,000**.</li></ol>|
 
 ### <a name="varp"></a>VarP
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**VarP**(*Table*, *Expression*)<br><br>**VarP**(*Expression1*[, *Expression2*, ...])|
+|Syntax|**VarP**(*Table*, *Expression*)<br>**VarP**(*Expression1*[, *Expression2*, ...])|
 |Description|Returns the variance of its arguments.|
-|Examples|If you had a Sales table that not only contained a CostPerUnit column and a UnitsSold column but also listed each region in a different row, this function would compute variance of sales by region:<br><br>**VarP(Sales, CostPerUnit * UnitsSold)**<br><br>To compute the standard deviation of the values set for sliders 1 through 7:<br><br>**VarP(Slider1!Value, Slider2!Value, Slider3!Value, Slider4!Value, Slider5!Value, Slider6!Value, Slider7!Value)**|
+|Examples|If you had a **Sales** table that not only contained a **CostPerUnit** column and a **UnitsSold** column but also listed each region in a different row, this expression would compute variance of sales by region:<br>**VarP(Sales, CostPerUnit * UnitsSold)**<br><br>To compute the standard deviation of the values set for sliders 1 through 7:<br>**VarP(Slider1!Value, Slider2!Value, Slider3!Value, Slider4!Value, Slider5!Value, Slider6!Value, Slider7!Value)**|
 
 ### <a name="year"></a>Year
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Year**(*DateTime*)|
 |Description|Returns the year of a given date as a number between 1900 and 9999 (inclusive).|
-|Example|Year(DateValue(&quot;03/17/1979&quot;))** returns 1979.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+|Example|<ol><li>Add an input-text control, and name it **EventDate**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Year(DateValue(EventDate!Text))**</li><li>Press F5, and then type any of these dates into the **EventDate** box:<ul><li>07/15/2013</li><li>15 July 2013</li><li>July 15, 2013<br></li></ol>The label shows **1979**.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
