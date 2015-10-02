@@ -442,23 +442,23 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 ### <a name="navigate"></a>Navigate
 |&nbsp;|&nbsp;|
 |---|---|
-|Syntax|**Navigate**(*TargetScreen*, *Animation*[, *Context*])|
-|Description|Changes the view to the specified target screen. These transition animations are supported: ScreenTransition!Cover, ScreenTransition!UnCover, and ScreenTransition!Fade. By specifying a *Context* argument, you can pass a state/context record to the target screen that it can then use to guide its computations. The target screen has unqualified access to the fields in the context record.<br><br><blockquote><p>[AZURE.IMPORTANT] If you pass a <em>Context/<em> record to a target screen, its own context may be modified.</p></blockquote>|
-|Example|<ol><li>Name the default screen **DefaultScreen**, and add a label to it so that you can verify which screen is showing in **Preview**.</li><li>Add a second screen, name it **AddlScreen**, and add a label to it.</li><li>Add a button to **DefaultScreen**, and set its **OnSelect** property to this function:<br><br>**Navigate(AddlScreen, ScreenTransition!Fade)**</li><li>From the **DefaultScreen**, press F5, and then click the button.<br><br>**AddlScreen** appears.</li></ol>|
+|Syntax|**Navigate**(*TargetScreen*, *Transition*[, *ContextVariable*])|
+|Description|Opens the screen you specify with one of these transitions:<ul><li>ScreenTransition!Cover</li><li> ScreenTransition!UnCover</li><li>ScreenTransition!Fade.</li></ul> By specifying a *ContextVariable* argument, you can pass information to the target screen that changes what appears on that screen or how it functions. The target screen has unqualified access to the fields in the context record.<br>**Important:** If you pass a *ContextVariable* to a target screen, its own context may be modified.|
+|Example|<ol><li>Name the default screen **DefaultScreen**, add a label to it, and set the **Text** property of that label so that it shows **Default**.</li><li>Add a screen, and name it **AddlScreen**.</li><li>Add a label to **AddlScreen**, and set the **Text** property of the label so that it shows **Addl**.</li><li>Add a button to **AddlScreen**, and set its **OnSelect** property to this function:<br>**Navigate(DefaultScreen, ScreenTransition!Fade)**</li><li>From the **AddlScreen**, press F5, and then click the button.<br>**DefaultScreen** appears.</li></ol><br<br>[Another example](add-screen-context-variable.md)|
 
 ### <a name="not"></a>Not
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Not**(*BooleanExpression*)|
 |Description|Computes the logical negation of a Boolean expression.|
-|Example**<br><br>This function makes sure a radio button isn't selected:|**Not(RadioButton1!Selected)**|
+|Example|This expression makes sure a radio button isn't selected:<br>**Not(RadioButton1!Selected)**|
 
 ### <a name="now"></a>Now
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Now()**||
 |Description|Returns the current date and time in the device's locale-specific format. To format it, use the [Text](#text) function.|
-|Example|If today were October 11, 2014, at exactly 3:25 PM and you set the text property of a label to **Text(Now(), &quot;mm/dd/yyyy hh:mm:ss.fff&quot;)**, the label would show 10/11/2014 3:25:00:000 PM if your computer were set to the **en** language code. The label would show 11/10/2014 3:25:00:000 PM if your computer were set to the **fr** language code.<br><br>As an alternative, you can specify **hh:mm:ss.f** or **hh:mm:ss.ff** to round the time to the nearest tenth or hundredth of a second.<br><br>If fractions of seconds don't matter in your app, you can use the DateTimeFormat parameter to specify the date, time, or both in any of several built-in formats. For example, you can replace the function in this example with **Text(Now(), DateTimeFormat!ShortDateTime)** to get the same results but without the milliseconds. To display a list of options for this parameter, type it, immediately followed by an exclamation mark, in the function box.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+|Example|If today were October 11, 2014, at exactly 3:25 PM and you set the text property of a label to **Text(Now(), &quot;mm/dd/yyyy hh:mm:ss.fff&quot;)**, the label would show **10/11/2014 3:25:00:000 PM** if your computer were set to the **en** language code. The label would show **11/10/2014 3:25:00:000 PM** if your computer were set to the **fr** language code.<br><br>As an alternative, you can specify **hh:mm:ss.f** or **hh:mm:ss.ff** to round the time to the nearest tenth or hundredth of a second.<br><br>If fractions of seconds don't matter in your app, you can use the DateTimeFormat parameter to specify the date, time, or both in any of several built-in formats. For example, you can replace the function in this example with **Text(Now(), DateTimeFormat!ShortDateTime)** to get the same results but without the milliseconds. To display a list of options for this parameter, type it, immediately followed by an exclamation mark, in the Function Bar.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
 
 ### <a name="or"></a>Or
 |&nbsp;|&nbsp;|
@@ -472,7 +472,7 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 |---|---|
 |Syntax|**PlainText(*TextWithTags*)**|
 |Description|Strips HTML and XML tags from text or converts the tags to an appropriate symbol.|
-|Example|If you bind a text gallery to an RSS feed and then set the Text property (in the Data category) of a label in that gallery to ThisItem!description, the label might show raw HTML or XML code as in this example:<br><br>&lt;p&gt;We have done an unusually&amp;nbsp;&amp;quot;deep&amp;quot; globalization and localization.&lt;p&gt;<br><br>If you set the Text property of the label to **PlainText(ThisItem!description)**, the text appears as in this example:<br><br>We have done an unusually &quot;deep&quot; globalization and localization.|
+|Example|If you bind a text gallery to an RSS feed and then set the Text property of a label in that gallery to ThisItem!description, the label might show raw HTML or XML code as in this example:<br><br>&lt;p&gt;We have done an unusually&amp;nbsp;&amp;quot;deep&amp;quot; globalization and localization.&lt;p&gt;<br><br>If you set the Text property of the label to **PlainText(ThisItem!description)**, the text appears as in this example:<br><br>We have done an unusually &quot;deep&quot; globalization and localization.|
 
 ### <a name="proper"></a>Proper
 |&nbsp;|&nbsp;|
