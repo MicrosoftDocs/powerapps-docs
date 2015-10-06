@@ -12,7 +12,7 @@
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="na" 
+   ms.workload="na"
    ms.date="09/30/2015"
    ms.author="mandia"/>
 
@@ -65,9 +65,8 @@ You can also add another checkbox named **ShowPicCheckbox** with the "Show pictu
 ```If(ShowPicCheckbox!Value = true, true, false)```
 
 ![][8]
+
 Preview ![][3] the screen. Check and uncheck the "Show picture" checkbox. When it's checked, the picture is displayed. When not checked, the picture is not displayed.
-
-
 
 ## Tips and Tricks
 - At anytime, you can select the preview button (![][3]) to see what you created and test it.
