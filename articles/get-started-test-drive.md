@@ -5,6 +5,14 @@
 	authors="AFTOwen"
  />
 
+<tags
+   ms.service="kratosapps"
+   ms.devlang="na"
+   ms.topic="hero-article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="10/06/2015"
+   ms.author="anneta"/>
 # Create an app from a template
 Create an app automatically based on one of several templates for a variety of scenarios. The app will have a default interface and sample data, so that you can explore how the app works out of the box. If you want to build or manage a set of data differently, you can customize the app to better fit the way you work.
 

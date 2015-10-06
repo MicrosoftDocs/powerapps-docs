@@ -5,6 +5,15 @@
 	authors="AFTOwen"
  />
 
+<tags
+   ms.service="kratosapps"
+   ms.devlang="na"
+   ms.topic="get-started-article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="10/06/2015"
+   ms.author="anneta"/>
+
 # Create an app from data
 Create an app automatically based on a set of data that you specify. The app will have a sample interface, so that you can explore how the app works by default. If you want to manage your data differently, you can customize the app to better fit how you work.
 
