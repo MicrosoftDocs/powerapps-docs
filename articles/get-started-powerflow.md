@@ -5,6 +5,15 @@
     authors="aftowen"
  />
 
+<tags
+   ms.service="kratosapps"
+   ms.devlang="na"
+   ms.topic="get-started-article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="10/06/2015"
+   ms.author="anneta"/>
+
 # Create a PowerFlow #
 Create a PowerFlow to take action when one or more conditions are met. For example, create a PowerFlow so that you get an email message whenever someone adds a row to an Excel file in the cloud. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
 
