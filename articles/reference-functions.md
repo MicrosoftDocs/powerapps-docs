@@ -16,64 +16,13 @@
    ms.date="10/06/2015"
    ms.author="anneta"/>
 
-#Build an expression in KratosApps
+# Build an expression #
 
-As you develop an app, specify its appearance and behavior by building expressions that include the operators and functions in this topic.
+As you develop an app, specify its appearance and behavior by building expressions that include the functions and operators in this topic.
 
 **Note** All references to data in the following examples are hypothetical. No data samples accompany this reference.
 
-##Operators
-
-|Symbol|Operator type|Syntax|Description|
-|---|---|---|---|
-|( )|Parentheses|Filter(T, A &lt; 10)<br><br>(1 + 2) * 3|Precedence-order enforcement, and grouping of sub-expressions in a larger expression|
-|+|Arithmetic operators|1 + 2|Addition|
-|-||2 - 1|Subtraction and sign|
-|\*||2 * 3|Multiplication|
-|/||2 / 3|Division|
-|^||2 ^ 3|Exponentiation|
-|%||20%|Percentage (equivalent to &quot;* 1/100&quot;)|
-|=|Comparison operators|Price = 100|Equal to|
-|&gt; ||Price &gt; 100|Greater than|
-|&gt;=||Price &gt;= 100|Greater than or equal to|
-|&lt; ||Price &lt; 100|Less than|
-|&lt;=||Price &lt;= 100|Less than or equal to|
-|&lt;&gt; ||Price &lt;&gt; 100|Not equal to|
-|&amp;|String concatenation operator|&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;|Makes multiple strings appear continuous|
-|&amp;&amp;|Logical operators|Price &lt; 100 &amp;&amp; slider!value = 20|Logical conjunction|
-|&#124;&#124;||Price &lt; 100 &#124;&#124; slider!value = 20|Logical disjunction|
-|!||!(Price &lt; 100)|Logical negation|
-|exactin|Membership operators|gallery!Selected exactin SavedItems|Belonging to a collection or table|
-|exactin||&quot;Windows&quot; exactin “To display windows in the Windows operating system...”|Substring test (case-sensitive)|
-|in||gallery!Selected in SavedItems|Belonging to a collection or table<br><br>|
-|in||&quot;The&quot; in &quot;The keyboard and the monitor...&quot;|Substring test (case-insensitive)|
-|@|Disambiguation operator|MyTable[@fieldname]|Field disambiguation|
-|||[@MyTable]|Global disambiguation|
-|;|Expression chaining|Collect(T, A); Navigate(S1, &quot;&quot;)|Separate invocations of functions in behavior properties|
-
-### <a name="in_and_exactin_operators"></a>in and exactin operators
-You can use the **in** and **exactin** operators to find a string in a data source, such as a collection or an imported table. The **in** operator identifies matches regardless of case, and the **exactin** operator identifies matches only if they're capitalized the same way. Here's an example:
-
-1.  [Show data in a gallery](show-images-text-gallery-sort-filter.md).
-
-2.  Set the **Items** property of the gallery to this function:
-
-    **Filter(Inventory, "E" in ProductName)**
-
-    The gallery shows all products except Callisto because the name of that product is the only one that doesn't contain the letter you specified.
-
-3.  Change the **Items** property of the gallery to this function:
-
-    **Filter(Inventory, "E" exactin ProductName)**
-
-    The gallery shows only Europa because only its name contains the letter you specified in the case that you specified.
-
-### <a name="thisitem_operator_for_galleries"></a>ThisItem operator for galleries
-When you [show data in a gallery](show-images-text-gallery-sort-filter.md), you use the **ThisItem** operator to specify which type of data each control in the gallery shows. For example, you can use that operator to specify that an image control shows the design of a product in a catalog, a label shows the name of the same product, and another label shows its price.
-
-For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
-
-##Functions
+## Functions ##
 
 KratosApps supports the following functions. If you use functions in Excel, you may recognize many of them.
 
@@ -711,3 +660,54 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 |Syntax|**Year**(*DateTime*)|
 |Description|Returns the year of a given date as a number between 1900 and 9999 (inclusive).|
 |Example|<ol><li>Add an input-text control, and name it **EventDate**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Year(DateValue(EventDate!Text))**</li><li>Press F5, and then type any of these dates into the **EventDate** box:<ul><li>07/15/2013</li><li>15 July 2013</li><li>July 15, 2013<br></li></ol>The label shows **1979**.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+
+## <a name="in_and_exactin_operators"></a>in and exactin
+You can use the **in** and **exactin** operators to find a string in a data source, such as a collection or an imported table. The **in** operator identifies matches regardless of case, and the **exactin** operator identifies matches only if they're capitalized the same way. Here's an example:
+
+1.  [Show data in a gallery](show-images-text-gallery-sort-filter.md).
+
+2.  Set the **Items** property of the gallery to this function:
+
+    **Filter(Inventory, "E" in ProductName)**
+
+    The gallery shows all products except Callisto because the name of that product is the only one that doesn't contain the letter you specified.
+
+3.  Change the **Items** property of the gallery to this function:
+
+    **Filter(Inventory, "E" exactin ProductName)**
+
+    The gallery shows only Europa because only its name contains the letter you specified in the case that you specified.
+
+## <a name="thisitem_operator_for_galleries"></a>ThisItems
+When you [show data in a gallery](show-images-text-gallery-sort-filter.md), you use the **ThisItem** operator to specify which type of data each control in the gallery shows. For example, you can use that operator to specify that an image control shows the design of a product in a catalog, a label shows the name of the same product, and another label shows its price.
+
+For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
+
+##Other operators
+
+|Symbol|Operator type|Syntax|Description|
+|---|---|---|---|
+|( )|Parentheses|Filter(T, A &lt; 10)<br><br>(1 + 2) * 3|Precedence-order enforcement, and grouping of sub-expressions in a larger expression|
+|+|Arithmetic operators|1 + 2|Addition|
+|-||2 - 1|Subtraction and sign|
+|\*||2 * 3|Multiplication|
+|/||2 / 3|Division|
+|^||2 ^ 3|Exponentiation|
+|%||20%|Percentage (equivalent to &quot;* 1/100&quot;)|
+|=|Comparison operators|Price = 100|Equal to|
+|&gt; ||Price &gt; 100|Greater than|
+|&gt;=||Price &gt;= 100|Greater than or equal to|
+|&lt; ||Price &lt; 100|Less than|
+|&lt;=||Price &lt;= 100|Less than or equal to|
+|&lt;&gt; ||Price &lt;&gt; 100|Not equal to|
+|&amp;|String concatenation operator|&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;|Makes multiple strings appear continuous|
+|&amp;&amp;|Logical operators|Price &lt; 100 &amp;&amp; slider!value = 20|Logical conjunction|
+|&#124;&#124;||Price &lt; 100 &#124;&#124; slider!value = 20|Logical disjunction|
+|!||!(Price &lt; 100)|Logical negation|
+|exactin|Membership operators|gallery!Selected exactin SavedItems|Belonging to a collection or table|
+|exactin||&quot;Windows&quot; exactin “To display windows in the Windows operating system...”|Substring test (case-sensitive)|
+|in||gallery!Selected in SavedItems|Belonging to a collection or table<br><br>|
+|in||&quot;The&quot; in &quot;The keyboard and the monitor...&quot;|Substring test (case-insensitive)|
+|@|Disambiguation operator|MyTable[@fieldname]|Field disambiguation|
+|||[@MyTable]|Global disambiguation|
+|;|Expression chaining|Collect(T, A); Navigate(S1, &quot;&quot;)|Separate invocations of functions in behavior properties|
