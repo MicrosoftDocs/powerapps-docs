@@ -13,13 +13,13 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="09/30/2015"
+   ms.date="10/06/2015"
    ms.author="mandia"/>
 
 
 # Add a list box, drop-down list, or radio button control
 
-KratosApps includes multi-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
+KratosApps includes multi-select and single-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
 
 ### Prerequisites
 
@@ -33,17 +33,18 @@ KratosApps includes multi-select options, including a listbox, drop-down list, a
 ![][2]  
 2. Rename the listbox to **MyListBox**:  
 ![][3]  
-3. Set its **Items** property to the following function:  
-```Table({Shape:"circle"}, {Shape:"triangle"}, {Shape:"rectangle"})```  
+3. Set its **Items** property to the following expression:  
+```["circle","triangle","rectangle"]```  <br/>
 
+	Your designer looks similar to the following:  
 	![][4]  
-3. On the **Insert** tab, select **Shapes**, select the **circle**, and move it under the listbox:  
+4. On the **Insert** tab, select **Shapes**, select the **circle**, and move it under the listbox:  
 ![][5]  
 
-4. Add a triangle and a rectangle, and then arrange the shapes in a row under the listbox:  
+5. Add a triangle and a rectangle, and then arrange the shapes in a row under the listbox:  
 ![][6]  
 
-5. Set the **Visible** property of the following shapes to the following functions:  
+6. Set the **Visible** property of the following shapes to the following functions:  
 
 	Shape | Set function to | Screen shot
 --- | --- | ---
@@ -51,9 +52,9 @@ circle | ```If("circle" in MyListbox!SelectedItems!Value, true)``` | ![][7]
 triangle | ```If("triangle" in MyListbox!SelectedItems!Value, true)``` | ![][8]
 rectangle | ```If("rectangle" in MyListbox!SelectedItems!Value, true)``` | ![][9]
 
-6. Preview ![][1] what you've created. Select the different shapes in the listbox. Only the shape or shapes you select appear. Press ESC to go back to your screen.
+7. Preview what you've created ![][1]. Select the different shapes in the listbox. Only the shape or shapes you select appear. Press ESC to go back to your screen.
 
-In these steps, you use the Table function to create a list of items in a listbox. Depending on what you choose in the list box, different shapes are displayed. You can apply this to other elements within your business. For example, you can use a listbox to display product images, product descriptions, and so on.
+In these steps, you used an expression to create a list of items in a listbox. Depending on what you choose in the list box, different shapes are displayed. You can apply this to other elements within your business. For example, you can use a listbox to display product images, product descriptions, and so on.
 
 
 ## Add a drop-down list and a radio button control
@@ -66,7 +67,7 @@ In these steps, you use the Table function to create a list of items in a listbo
 	![][11]  
 
 2. Set the radio control **Items** property to the following function:  
-```Table({Color:"red"}, {Color:"green"}, {Color:"blue"})```
+```["red","green","blue"]```  <br/>
 
 	![][12]  
 
@@ -81,23 +82,25 @@ In these steps, you use the Table function to create a list of items in a listbo
 
 5. Move the circle under the radio control. You setup should look similar to the following:  
 ![][14]  
-6. Preview ![][1] what you've created. Select the different radio buttons to change the color of the circle. Press ESC to go back to your screen.
+6. Preview what you've created: ![][1]. Select the different radio buttons to change the color of the circle. Press ESC to go back to your screen.
 
-In these steps, you used a Table to create the items in the radio button control. When you click an item within the control, the property of another control (the circle) changes.
+In these steps, you used an expression to create the items in the radio button control. When you click an item within the control, the property of another control (the circle) changes.
 
 
 ## Tips and Tricks
 - You can also use different data sources to populate the items within these controls. For example, you can use an Excel table as a data source. Then display the Excel data in a list box, and so on.
 - At anytime, you can select the preview button (![][1]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
-- Press **ESC** to close the preview window.
+- Press **ESC** to close the preview window and go back to the designer.
+- We renamed some controls, including the listbox. Renaming controls is optional. When using controls in expressions, it's easier to remember the control names if you rename them. 
+
 
 ## What you learned
 
 In this topic, you:
 
 - Added radio buttons and a listbox to the app.
-- Using the Table function, you populated the items within the lists.
+- Using an expression, you populated the items within the lists.
 - You used Excel-like functions to update properties on other controls. For example, if a list item or radio button is selected, a shape changes color or is displayed in the app.
 
 

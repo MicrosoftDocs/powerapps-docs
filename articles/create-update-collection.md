@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="09/30/2015"
+   ms.date="10/06/2015"
    ms.author="mandia"/>
 
 
@@ -32,19 +32,15 @@ You can create and use collections within KratosApps. Let's get started.
 The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.
 
 1. Open your app in KratosApps.
-1. On the **Insert** tab, select **Text**, and then select **Input Text**:  
+2. On the **Insert** tab, select **Text**, and then select **Input Text**:  
 ![][1]  
-
-2. In the top left corner, select **Text1**, and rename the control to **Destination**:  
+3. In the top left corner, select **Text1**, and rename the control to **Destination**:  
 ![][2]  
-
-3. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **OnSelect** property is listed. Set it to the following function:  
+4. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **OnSelect** property is listed. Set it to the following function:  
 ```Collect(Destinations, Destination!Text)```  
 It should look like the following:  
 ![][3]  
 
-4. Rename the button control to **AddButton**:  
-![][4]  
 5. Click the button text, and enter **Add**:  
 ![][5]  
 6. Select the Add button, and move it under your text control. You can move it anywhere:  
@@ -54,32 +50,47 @@ It should look like the following:
 In these steps, you used the Collect function to create a collection named **Destinations**. You also added a button control and when clicked, adds new items to your collection. Now, see what you created:
 
 1. Select Preview:  
-![][7]  
-2. Type some text into the box, and then select the **Add** button.
-3. Alternate typing text into the box and select the **Add** button a few times.
+![][7]    
+2. Type a city name into the box, and then select the **Add** button.
+3. Enter some additional city names and select the **Add** button each time.
 4. Press the **Esc** key to close the Preview window.
 5. To see the Destinations collection and the text values you entered, select the **File** tab, and then select **Collections**. The text you entered is listed under **Preview**:  
 ![][8]
+
+
+#### Extra Credit 
+Now, let's bind the Destinations collection to a listbox:
+
+1. On the **Insert** tab, select **Controls**, and then select **ListBox**:  
+![][22]  
+2. Move the listbox so you can easily see it. Set its **Items** property to the following expression:  
+```Destinations!Value```  <br/>
+
+	When you do this, the listbox is automatically populated with the items you previously entered in the Destinations collection:  
+![][4]  
+
+Preview your changes: ![][7]. In the listbox, you can select the different cities. In the Input Text box, enter a new city and select the **Add** button. The listbox is automatically updated to include the new city you entered. 
+
 
 
 ## Create a collection that has more than one column
 The following steps show you how to create a collection within your app using the Collect function, and how to add multiple rows to your collection.
 
 1. Open your app in KratosApps.
-1. On the **Insert** tab, select **Text**, and then select **Input Text**.
-2. In the top left corner, select **Text1**, and rename the control to **City**:  
+2. On the **Insert** tab, select **Text**, and then select **Input Text**.
+3. In the top left corner, select **Text1**, and rename the control to **City**:  
 ![][9]  
-3. Add another input text control, and rename it **State**.
-4. Move the City and State text controls so they are side-by-side:  
+4. Add another input text control, and rename it **State**.
+5. Move the City and State text controls so they are side-by-side:  
 ![][10]  
 	**Note**: You can replace 'Input Text' with something like 'Enter the City' or 'Enter the State', which was done in the screen shot.
-5. On the **Insert** tab, select **Button**. Set its **OnSelect** property to the following function:  
+6. On the **Insert** tab, select **Button**. Set its **OnSelect** property to the following function:  
 ```Collect(Destinations, {Cities:City!Text, States:State!Text})```  
 It should look like the following:
 ![][11]  
 	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column: `Collect(Destinations, {Cities:City!Text, States:State!Text}, {Countries:Country!Text})`
 
-6. Rename the button control **AddCityStateButton**, and set its **Text** property to **Add City and State**:  
+7. Rename the button control **AddCityStateButton**, and set its **Text** property to **Add City and State**:  
 ![][12]  
 
 
@@ -153,7 +164,7 @@ To remove one item at a time, show the **OrderList** collection in a gallery, an
 [1]: ./media/create-update-collection/insertmenu-inputtext.png
 [2]: ./media/create-update-collection/renametext.png
 [3]: ./media/create-update-collection/buttononselect.png
-[4]: ./media/create-update-collection/renamebutton.png
+[4]: ./media/create-update-collection/listboxpreview.png
 [5]: ./media/create-update-collection/buttontext.png
 [6]: ./media/create-update-collection/buttonundertext.png
 [7]: ./media/create-update-collection/preview.png
@@ -170,3 +181,4 @@ To remove one item at a time, show the **OrderList** collection in a gallery, an
 [19]: ./media/create-update-collection/gallerylabels.png
 [20]: ./media/create-update-collection/slider.png
 [21]: ./media/create-update-collection/existingcollectionsorderlist.png
+[22]: ./media/create-update-collection/listbox.png
