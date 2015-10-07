@@ -13,12 +13,12 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/01/2015"
+   ms.date="10/05/2015"
    ms.author="mandia"/>
 
 # Using the image, picture, audio, and video multimedia options
 
-**IN PROGRESS; NEED SCREEN SHOTS FOR PEN AND MICROPHONE; UPDATE YOUTUBE STEPS**
+**UPDATE YOUTUBE STEPS**
 
 In KratosApps, there are several multimedia options available. You can use these options to do various things, including: 
 
@@ -130,33 +130,34 @@ Using the microphone to create recordings, and show these recordings in a galler
 5. Select the first item in the gallery, select the **Insert** tab, select **Media**, and then select **Audio**.
 6. Set the **Media** property for the audio control to ```ThisItem!Recordings```.  
 	**Note** You can save visual space by shrinking the audio control so that only the play button appears.
-7. Add a label to the first item in that gallery, and set the label's **Text** property to  ```ThisItem!Notes```.
+7. Add a label to the first item in that gallery, and set the label's **Text** property to  ```ThisItem!Notes```. Your gallery control looks similar to the following:  
+![][17]
 8. Preview (![][1]) your app. Type a phrase in the Description box, and then select **MyMicrophone** to start recording. When done recording, select **MyMicrophone** again to stop recording.
 
 	Your description appears in the first item of the gallery, and your recording plays if you click the play button in the audio control.
 
-9. Type something else in the **Description** box, make another recording, and repeat as many times as you want. Each description and recording appears in the gallery.
+	Type something else in the **Description** box, and make another recording. Repeat as many times as you want. Each description and recording appears in the gallery.
 
 Press the **Esc** key to return to the app designer.
 
 #### Use the pen to write or draw directly within the app
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
 
-1. On the **Insert** tab, select **Text**, select **Pen**, and then rename the new control to **Sketches**.
-2. On the **Pen** tab, select **Show Controls**, and confirm that ```true``` is in the Function Bar.
+1. On the **Insert** tab, select **Text**, select **Pen**, and then rename the new control to **Sketches**. 
+2. On the **Pen** tab, select **Show Controls**:  
+![][18]  
+	Confirm that ```ShowControls``` is equal to ```true``` in the Function Bar. 
 3. Add a button, set its **Text** property to ```Add``` and set its **OnSelect** property to the following function:  
 ```Collect(Creativity, {Captures:Sketches!Image})```
-4. On the **Insert** tab, select **Gallery**, select the vertical **Image Only** gallery, and then set the gallery's **Items** property to ```Creativity```.
-5. Shrink the width of the gallery to show three items, and then Preview (![][1]). 
+4. On the **Insert** tab, select **Gallery**, and select the vertical **Image Only** gallery. Shrink the width of the gallery to show three items. 
+5. Set the gallery's **Items** property to ```Creativity```. 
+6. Preview (![][1]) to see what you created. 
 
-	Draw or write something in **Sketches**, and then click the button that you added. The contents of the pen control appear in the first item of the gallery.
+	Draw or write something in **Sketches**, and then select the **Add** button. The contents of the pen control appear in the first item of the gallery.
 
-	Select the clear button (with the "x") in Sketches, write or draw something else in it, and then select the **Add** button again.
+	Select the clear button (with the "x") in Sketches, write or draw something else in it, and then select the **Add** button again. The contents of the pen control appear in the second item in the gallery.
 
-	The contents of the pen control appear in the second item of the gallery.
-
-
-Repeat the steps as many times as you like. Press the **Esc** key to return to the design workspace. In the **File** menu, you can **Save** your work.
+Repeat these steps as many times as you like. Press the **Esc** key to return to the designer. 
 
 You can also convert written text to typed text:
 
@@ -167,6 +168,7 @@ You can also convert written text to typed text:
 - At anytime, you can select the preview button (![][1]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window.
+- **Save** your work using the **File** menu, or press **Ctrl** + **S**,
 
 ## What you learned
 
@@ -193,5 +195,9 @@ In this topic, you:
 [14]: ./media/add-images-pictures-audio-video/youtube.png
 [15]: ./media/add-images-pictures-audio-video/youtubevideo.png
 [16]: ./media/add-images-pictures-audio-video/microphoneonstop.png
+[17]: ./media/add-images-pictures-audio-video/gallery.png
+[18]: ./media/add-images-pictures-audio-video/pentab.png
 
-[17]: ./media/add-images-pictures-audio-video/
+[19]: ./media/add-images-pictures-audio-video/
+[20]: ./media/add-images-pictures-audio-video/
+[21]: ./media/add-images-pictures-audio-video/
