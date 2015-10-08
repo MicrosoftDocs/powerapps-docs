@@ -16,8 +16,9 @@
    ms.date="10/07/2015"
    ms.author="mandia"/>
 
-REDO TITLE
 # Show an image and use a conditional statement in a checkbox
+
+REDO TITLE
 
 Use a checkbox with a conditional statement for a JPEG image.
 
