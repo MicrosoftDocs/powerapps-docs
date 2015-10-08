@@ -13,17 +13,19 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/30/2015"
+   ms.date="10/07/2015"
    ms.author="mandia"/>
 
-
+REDO TITLE
 # Show an image and use a conditional statement in a checkbox
+
 Use a checkbox with a conditional statement for a JPEG image.
 
 You add a .jpeg image and include a checkbox with a conditional statement. If the checkbox is enabled, it displays certain text in a label. If it's unchecked, the checkbox displays different text in the same label.
 
 You can use this feature in your KratosApps apps for different scenarios. For example, there is a product image in your KratosApps app. When your users select the checkbox for the product image, additional information is displayed, like the price, or quantity in stock, maybe colors available, and so on.
 
+> [AZURE.TIP] New to KratosApps? Curious about what we're talking about? Go to [LandingPage](landing page link.md).
 
 ### Prerequisites
 - Install KratosApps. Create a new app or open an existing app in KratosApps.
@@ -49,7 +51,7 @@ You can use this feature in your KratosApps apps for different scenarios. For ex
 ```If(MyCheckbox!Value = true, "Great choice!", "Great for fall")```  
 
 	![][4]  
-5. Move the label anywhere you like on the screen. Preview ![][3] the screen. Check and uncheck the checkbox. When it's checked, the "Great Choice" text is displayed in your label. When not checked, "Great for fall" is displayed.
+5. Move the label anywhere you like on the screen. Preview the screen: ![][3]. Check and uncheck the checkbox. When it's checked, the "Great Choice" text is displayed in your label. When not checked, "Great for fall" is displayed.
 
 Now, let's get creative with the image control. When **MyCheckbox** is enabled, show the picture. If **MyCheckbox** is not enabled, don't show the picture. To do this:
 
@@ -58,7 +60,7 @@ Now, let's get creative with the image control. When **MyCheckbox** is enabled, 
 ```If(MyCheckbox!Value = true, true, false)```  
 
 	![][7]  
-3. Preview ![][3] the screen. Check and uncheck the checkbox. When it's checked, the picture is displayed. When not checked, the picture is not displayed.
+3. Preview your app: ![][3]. Check and uncheck the checkbox. When it's checked, the picture is displayed. When not checked, the picture is not displayed.
 
 You can also add another checkbox named **ShowPicCheckbox** with the "Show picture" text. If you do this, set the **Visible** property of the image control to the following function:
 
@@ -66,7 +68,7 @@ You can also add another checkbox named **ShowPicCheckbox** with the "Show pictu
 
 ![][8]
 
-Preview ![][3] the screen. Check and uncheck the "Show picture" checkbox. When it's checked, the picture is displayed. When not checked, the picture is not displayed.
+Preview your app: ![][3]. Check and uncheck the "Show picture" checkbox. When it's checked, the picture is displayed. When not checked, the picture is not displayed.
 
 ## Tips and Tricks
 - At anytime, you can select the preview button (![][3]) to see what you created and test it.
