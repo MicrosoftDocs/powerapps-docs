@@ -22,13 +22,7 @@ As you develop an app, specify its appearance and behavior by building expressio
 
 **Note** All references to data in the following examples are hypothetical. No data samples accompany this reference.
 
-## Functions ##
-
-KratosApps supports the following functions. If you use functions in Excel, you may recognize many of them.
-
-**Note** In the syntax sections of this topic, italics indicate generic text that you replace with values that are specific for your app, and square brackets enclose optional arguments. If a comma appears before an optional argument, you must include the comma if you want to use the argument that follows it.
-
-### <a name="functions_by_category"></a>Functions by category
+## <a name="functions_by_category"></a>Functions by category
 **Boolean** -- [And](#and), [If](#if), [IsBlank](#isblank), [IsEmpty](#isempty), [Not](#not), [Or](#or)
 
 **Collections** -- [Clear](#clear), [Collect](#collect), [LoadData](#loaddata), [Remove](#remove), [RemoveIf](#removeif), [SaveData](#savedata)
@@ -44,6 +38,8 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 **Strings** -- [Char](#char), [Concat](#concat), [Concatenate](#concatenate), [EncodeUrl](#encodeurl), [Find](#find), [HashTags](#hashtags), [Len](#len), [Left](#left), [Lower](#lower), [PlainText](#plaintext), [Proper](#proper), [Right](#right), [Substitute](#substitute), [Text](#text), [Trim](#trim), [Upper](#upper), [Value](#value)
 
 **Table** -- [AddColumns](#addcolumns), [Count](#count), [CountA](#counta), [CountIf](#countif), [CountRows](#countrows), [Distinct](#distinct), [DropColumns](#dropcolumns), [Filter](#filter), [First](#first), [FirstN](#firstn), [Last](#last),[LastN](#lastn), [LookUp](#lookup), [RenameColumns](#renamecolumns), [Replace](#replace), [Sort](#sort), [Shuffle](#shuffle), [ShowColumns](#showcolumns), [Table](#table), [Update](#update), [UpdateIf](#updateif)
+
+**Note** In the syntax sections of this topic, italics indicate generic text that you replace with values that are specific for your app, and square brackets enclose optional arguments. If a comma appears before an optional argument, you must include the comma if you want to use the argument that follows it.
 
 ### <a name="abs"></a>Abs
 |&nbsp;|&nbsp;|
