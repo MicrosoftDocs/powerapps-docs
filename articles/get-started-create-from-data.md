@@ -15,7 +15,7 @@
    ms.author="anneta"/>
 
 # Create an app from data
-Create an app automatically based on a set of data that you specify. The app will have a sample interface, so that you can explore how the app works by default. If you want to manage your data differently, you can customize the app to better fit how you work.
+Create an app automatically based on data that you specify, explore how the app works by default, and then customize the app to better fit how you work.
 
 [What is KratosApps?]()
 
@@ -23,10 +23,10 @@ Create an app automatically based on a set of data that you specify. The app wil
 
 - Sign up for and install [KratosApps]()
 - A set of data in the cloud, such as in DropBox or OneDrive
-- Familiarity with selecting elements, as [Create an app with a template](get-started-test-drive.md) describes
+- Familiarity with how to [configure a control](get-started-test-drive.md#configure-a-control) in KratosApps
 
 ## Connect to data ##
-You can create an app based on data based on any of several kinds of sources. For this tutorial, the data source is an Excel file in Dropbox. The file, named **eventsignup.xls**, contains this data [formatted as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) and named **Schedule**.
+You can create an app based on data from any of several kinds of sources. For this tutorial, the data source is an Excel file in Dropbox. The file, named **eventsignup.xls**, contains this data [formatted as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) and named **Schedule**.
 
 ![Source data in Excel](./media/get-started-create-from-data/excel-source.jpg)
 
@@ -95,7 +95,7 @@ When the app is created, it appears in the default workspace, where you can cust
 1. Press Esc to return to the default workspace, in which you can customize the app.
 
 ## Customizing the app ##
-You can customize elements on any of the default screens, and you can even [add and delete screens]() to better suit your needs. To customize how the **BrowseScreen** shows data, you change an element in the first item, which automatically updates the same element for all other items.
+You can customize elements on any of the default screens, and you can even [add and delete screens]() to better suit your needs. To change how the **BrowseScreen** shows data, you configure an element in the first item, which automatically updates the same element in all other items.
 
 1. In the first item, click the day name to select that label.
 
