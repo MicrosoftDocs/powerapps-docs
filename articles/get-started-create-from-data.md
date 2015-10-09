@@ -109,12 +109,6 @@ You can customize elements on any of the default screens, and you can even [add 
 
 	![Each day appears in green](./media/get-started-create-from-data/green-days.jpg)
 
-1. In the first item, click the name that appears in the upper-right corner, and move it until the two names are aligned on their right edges.
-
-	![Select Heading1](./media/get-started-create-from-data/select-heading1.jpg)
-
-	All names are aligned on their right edges.
-
 1. If **Express Mode** isn't already showing, click **Express Mode** near the lower-right corner.
 
 	![Open Express Mode](./media/get-started-create-from-data/open-express-mode.jpg)
@@ -123,8 +117,8 @@ You can customize elements on any of the default screens, and you can even [add 
 
 	![Show Content options](./media/get-started-create-from-data/content-tab.jpg)
 
-1. In the **Heading1** list, choose **Shift**.
-1. In the **Subtitle1** list, choose **Leader**.
+1. In the **Body1** list, choose **StartTime**.
+1. In the **Subtitle1** list, choose **Staff1**.
 
  	The time for each shift moves to the upper-right corner of each item, and both people appear near the bottom instead of near the right edge.
 
