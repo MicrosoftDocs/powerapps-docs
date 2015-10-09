@@ -55,8 +55,11 @@ In addition to signing up for and installing KratosApps, you'll also need a set 
 	![Specify a table in an Excel file](./media/get-started-create-from-data/choose-table.jpg)
 
 An app is created from the data that you specified.
+
 ## Exploring the app ##
+
 When the app is created, it appears in the default workspace, where you can customize the app to better fit your needs. Before you make changes, you'll explore how the app works in **Preview**. By running an app in **Preview**, you can completely test an app before you share it with others.
+
 1. Press F5 to open **Preview**.
 
 	![The default BrowseScreen](./media/get-started-create-from-data/default-browsescreen.jpg)
