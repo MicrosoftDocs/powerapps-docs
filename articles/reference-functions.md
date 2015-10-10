@@ -424,7 +424,7 @@ As you develop an app, specify its appearance and behavior by building expressio
 |---|---|
 |Syntax|**Proper**(*Text*)<br>**Proper**(*ColumnExpression*)|
 |Description|Converts words in a text string to proper case; that is, the first letter in every word is uppercase, and the other letters are lowercase.<ul><li>**Proper**(*Text*)<br>Converts a string to proper case.</li><br><li>**Proper**(**Expression**)<br>Given a one-column table of string values, returns a one-column table that contains the corresponding proper-case values.<br><br></li></ul>|
-|Example|<ol><li>Add an input-text control, and name it **Slogan**.</li><br><li>Add a label, and set its **Text** property to this function:<br>**Proper(Slogan!Text)**</li><br><li>Press F5, and then type **WE ARE THE BEST!** into the **Slogan** box.<br>The label shows **We Are The Best!**</li></ol>|
+|Example|<ol><li>Add an input-text control, and name it **Source**.</li><br><li>Add a label, and set its **Text** property to this function:<br>**Proper(Source!Text)**</li><br><li>Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**</li></ol>|
 
 ### <a name="rand"></a>Rand
 |&nbsp;|&nbsp;|
@@ -634,7 +634,7 @@ As you develop an app, specify its appearance and behavior by building expressio
 |---|---|
 |Syntax|**Upper**(*Text*)<br>**Upper**(*ColumnExpression*)|
 |Description|<ul><li>**Upper**(*Text*)<br>Converts the letters in the specified text string to uppercase.</li><li>**Upper** (*ColumnExpression*)<br>Given a one-column table of string values, returns a one-column table of the corresponding uppercase values.</li></ul>|
-|Examples|<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><br><li>Set the **Text** property of the lower label in the gallery to this function:<br>**Upper(ThisItem!ProductName)**<br>The label shows the name of each product in all capital letters.</li></ol>|
+|Examples|**Example 1:**<ol><li>Add an input-text control, and name it **Source**.</li><br><li>Add a label, and set its **Text** property to this function:<br>**Upper(Source!Text)**</li><br><li>Press F5, and then type **We are the best!** into the **Source** box.<br>The label shows **WE ARE THE BEST!**</li></ol>**Example 2:**<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><br><li>Set the **Text** property of the lower label in the gallery to this function:<br>**Upper(ThisItem!ProductName)**<br>The label shows the name of each product in all capital letters.</li></ol>|
 
 ### <a name="value"></a>Value
 |&nbsp;|&nbsp;|
@@ -655,7 +655,7 @@ As you develop an app, specify its appearance and behavior by building expressio
 |---|---|
 |Syntax|**Year**(*DateTime*)|
 |Description|Returns the year of a given date as a number between 1900 and 9999 (inclusive).|
-|Example|<ol><li>Add an input-text control, and name it **EventDate**.</li><br><li>Add a label, and set its **Text** property to this expression:<br>**Year(DateValue(EventDate!Text))**</li><br><li>Press F5, and then type any of these dates into the **EventDate** box:<ul><li>07/15/2013</li><li>15 July 2013</li><li>July 15, 2013<br></li></ol>The label shows **1979**.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+|Example|<ol><li>Add an input-text control, and name it **EventDate**.</li><br><li>Add a label, and set its **Text** property to this expression:<br>**Year(DateValue(EventDate!Text))**</li><br><li>Press F5, and then type any of these dates into the **EventDate** box:<ul><li>07/15/2013</li><li>15 July 2013</li><li>July 15, 2013<br></li></ol>The label shows **2013**.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
 
 ## <a name="thisitem_operator_for_galleries"></a>ThisItem
 When you [show data in a gallery](show-images-text-gallery-sort-filter.md), you use the **ThisItem** operator to specify which type of data each control in the gallery shows. For example, you can use that operator to specify that an image control shows the design of a product in a catalog, a label shows the name of the same product, and another label shows its price.

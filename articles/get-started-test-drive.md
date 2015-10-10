@@ -52,8 +52,6 @@ App templates open in the default workspace, where you'll spend most of your tim
 
 	By default, your information appears in the text boxes for name and address. You can change that information if you want.
 
-	![Text boxes to specify the name and the email address of a volunteer](./media/get-started-test-drive/enter-vdata.jpg)
-
 1. Press F5 (or click the right arrow in the upper-right corner) to open **Preview**.
 
 	![Button to open Preview](./media/get-started-test-drive/preview-button.jpg)
@@ -100,7 +98,7 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 1. Move the label to the right side of the screen by dragging the selection box itself (not a triangle or square in the selection box).
 
-1. With the label still selected, rename it by clicking **Label1_1** on the **Home** tab and then typing **Banner**.
+1. With the label still selected, rename it by clicking **Label11_7** on the **Home** tab and then typing **Banner**.
 
 	![Renaming a control](./media/get-started-test-drive/rename-label.jpg)
 
