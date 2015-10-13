@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="09/30/2015"
+   ms.date="10/12/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
@@ -30,7 +30,7 @@ You can create and use these charts within KratosApps. Let's get started.
 
 ### Prerequisites
 - Install KratosApps. Create a new app or open an existing app in KratosApps.
-- To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
+- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - These steps use the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) as sample input data. You can use this sample data, or import your own.
 
 ## Add a pie chart to display your data
@@ -38,8 +38,8 @@ In these steps, we download a sample file. Using a collection, we import this sa
 
 1. Download the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
 2. Create a collection named **ProductRevenue**. Steps include:  
-	a) Open your app in KratosApps.
-	b) On the **Insert** tab, select **Controls**, and then select **Import**.
+	a) Open your app in KratosApps. 
+	b) On the **Insert** tab, select **Controls**, and then select **Import**. 
 	c) Set the **OnSelect** property to the following function:  
 ```Collect(ProductRevenue, Import1!Data)```  
 	d) Select the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  
@@ -48,21 +48,23 @@ In these steps, we download a sample file. Using a collection, we import this sa
 ![][1]  
 
 
-3. On the **Insert** tab, select **Charts**, and then select **Pie Chart**.
-4. Set the **Items** property of the pie chart to **ProductRevenue**:  
+3. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button. 
+4. In the pie chart control, select the middle so the pie chart circle is selected:   
+![][10]  
+5. Set the **Items** property of the pie chart to **ProductRevenue**:  
 ![][2]  
 
 	When you do this, the pie chart shows the relative revenue of the products:  
 ![][3]  
-5. On the **Insert** tab, click **Charts**, and then click **Column Chart**.
-6. Set the **Items** property of the column chart to **ProductRevenue**:  
+6. On the **Insert** tab, click **Charts**, and then click **Column Chart**. Click-and-drag to move the column chart so it doesn't overlap with other controls. 
+7. Select the middle of the column chart. Set the **Items** property of the column chart to **ProductRevenue**:  
 ![][2]  
 
 	When you do this, the column chart shows the revenue for each product:  
 ![][4]  
-7. In the column chart, select the center square:  
+8. In the column chart, select the center square:  
 ![][5]  
-8. On the **Chart** tab, select **Number of Series**, and then enter **3** in the Function Bar:  
+9. On the **Chart** tab, select **Number of Series**, and then enter **3** in the Function Bar:  
 ![][6]  
 
 	The column chart shows revenue data for each product over three years:  
@@ -88,3 +90,4 @@ In these steps, we download a sample file. Using a collection, we import this sa
 [7]: ./media/use-line-pie-bar-chart/columnchartthreeyears.png
 [8]: ./media/use-line-pie-bar-chart/preview.png
 [9]: ./media/use-line-pie-bar-chart/tableformat.png
+[10]: ./media/use-line-pie-bar-chart/middlepiechart.png

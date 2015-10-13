@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/07/2015"
+   ms.date="10/12/2015"
    ms.author="mandia"/>
 
 # Using the image, picture, audio, and video multimedia options
@@ -24,8 +24,8 @@ In KratosApps, there are several multimedia options available. You can use these
 
 - Upload images to your app
 - Take pictures using the camera on your mobile device
-- Import audio and play it on within your app
-- Add a video and play it on within your app
+- Import audio and play it within your app
+- Add a video and play it within your app
 - Use the microphone on your mobile device to make a recording
 - Use a pen on a tablet to create a sketch or a drawing
 
@@ -37,10 +37,15 @@ This topic shows you how to do add these multimedia options to your KratosApps a
 
 - Install KratosApps. Create a new app or open an existing app in KratosApps. The following multimedia options are available within your app:  
 ![][19] 
-- To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
+- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+
 
 ## Upload an image or add a picture
-**NEED TO EXPLAIN THE DIFFERENCE, INCLUDING WHEN TO USE AN IMAGE AND WHEN TO USE A PICTURE**
+In your KratosApps App, you can add an image and add a picture. Use the **Image** option to add a stationary picture when creating your app, like a company logo. If you're creating a travel app, you can add pictures of exotic travel destinations, city skylines, and common attractions. If you're creating a pet adoption app, you can add pictures of the animals available for adoption. 
+
+Use the **Picture** option to give your app users the ability to upload pictures. If you have an insurance app, users can upload pictures of the items they want to insure, like a car or a motorcycle. If you have a dating app, users can upload pictures of themselves.
+
+This section lists the steps to add an Image and Picture controls to your app.
 
 #### Add an image 
 1. On the **Insert** tab, select **Image**:  
@@ -66,12 +71,11 @@ Take multiple pictures with the camera on your computer or mobile device. Then, 
 If your camera is enabled, it shows a live image of wherever it's pointed, which may be you. Smile.
 
 3. Set the **OnSelect** property of **MyCamera** to the following function:  
-```Collect(MyImages, {SinglePicture:MyCamera!Photo})```
+```Collect(MyImages, {SinglePicture:MyCamera!Photo})```  
+![][6]  
+When you click the camera, a picture is taken, and saved to a collection named **MyImages**; which we'll show you shortly. 
 
-	![][6]  
-	When you click the camera, a picture is taken, and saved to a collection named **MyImages**; which we'll show you shortly. 
-
-4. On the **Insert** tab, select **Gallery**, and then select the vertical **Image Only** gallery:
+4. On the **Insert** tab, select **Gallery**, and then select the vertical **Image Only** gallery:  
 ![][7]  
 5. In the image gallery, select the middle image. This puts a grey border around the entire control. Use your mouse to shrink the width of the gallery so it shows three items:  
 ![][8]  
@@ -178,12 +182,13 @@ You can also convert written text to typed text:
 - At anytime, you can select the preview button (![][1]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window.
-- **Save** your work using the **File** menu, or press **Ctrl** + **S**,
+- **Save** your work using the **File** menu, or press **Ctrl** + **S**.
 
 ## What you learned
 
 In this topic, you:
 
+- Learned the difference between adding an image control and adding a picture control to your app. 
 - Added single images and used the Camera control to take pictures. You used Excel-like functions to create a collection to display the pictures you took. 
 - Used the Audio and Video control to add sound and videos to your app, including playing a YouTube video. 
 - Additional multimedia options, including the Microphone and Pen controls, are available to make recordings, and write text directly in the app. 

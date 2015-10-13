@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/30/2015"
+   ms.date="10/13/2015"
    ms.author="mandia"/>
 
 
@@ -26,7 +26,7 @@ For example, add data from users about stock trades or client meetings, data fro
 ### Prerequisites
 
 - Install KratosApps. Create a new app or open an existing app in KratosApps.
-- To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
+- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
 ## Identify current user

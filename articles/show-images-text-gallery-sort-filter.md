@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/30/2015"
+   ms.date="10/13/2015"
    ms.author="mandia"/>
 
 
@@ -25,7 +25,7 @@ In KratosApps, use a gallery to show several related items, as in a catalog. Gal
 
 ### Prerequisites
 - Install KratosApps. Create an app or open an existing app in KratosApps.
-- To familiarize yourself with how to create an app in KratosApps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
+- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - Download this [sample data](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7), or import your own data. The download includes .jpg images in a zip file.
 
 ## Add a gallery to show images and text
@@ -44,8 +44,8 @@ In KratosApps, use a gallery to show several related items, as in a catalog. Gal
 
 	You've just created the Inventory collection, which contains information about five products, including a design image, the name of the product, and the number of units in stock.
 
-2. Press Esc to return to the default workspace.
-3. On the **Insert** tab, select **Gallery**, and then select the **With Text** image gallery:  
+2. Select the back arrow or press the Esc key to return to the designer.
+3. On the **Insert** tab, select **Gallery**, and then select the horizontal **With Text** image gallery:  
 ![][4]  
 3. Set the **Items** property of the gallery to **Inventory**:  
 ![][5]  
@@ -53,13 +53,15 @@ In KratosApps, use a gallery to show several related items, as in a catalog. Gal
 ![][6]  
 5. In the first item of the gallery, select the bottom label:  
 ![][7]  
-	> [AZURE.TIP] When you change the first item in any gallery, you automatically change all other items in the gallery.  
-
+	> [AZURE.NOTE] When you change the first item in any gallery, you automatically change all other items in the gallery.  
+ 
 6. Set the **Text** property of the label to the following expression:  
 ```ThisItem!UnitsInStock``` <br/>
 
 	When you do this, the label shows the units in stock for each product:  
 ![][8]  
+
+> [AZURE.NOTE] By default, the **Text** property of the top label is set to ```ThisItem!ProductName```. You can change it to any other item in your collection. For example, if your collection has *ProductDescription* or *Quantity* fields, you can set it the label to ```ThisItem!ProductDescription``` or ```ThisItem!Quantity```.
 
 Using these steps, you imported data that includes .jpg images into a collection. You then added a gallery that displays the data and configured a label to show the units in stock for each product.
 
