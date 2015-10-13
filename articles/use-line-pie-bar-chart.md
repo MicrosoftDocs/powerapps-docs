@@ -38,11 +38,10 @@ In these steps, we download a sample file. Using a collection, we import this sa
 
 1. Download the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
 2. Create a collection named **ProductRevenue**. Steps include:  
-	a) Open your app in KratosApps. 
-	b) On the **Insert** tab, select **Controls**, and then select **Import**. 
-	c) Set the **OnSelect** property to the following function:  
+	a) Open your app in KratosApps. On the **Insert** tab, select **Controls**, and then select **Import**.  
+	b) Set the **OnSelect** property to the following function:  
 ```Collect(ProductRevenue, Import1!Data)```  
-	d) Select the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  
+	c) Select the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  
 
 	In the **File** menu, select **Collections**. The ProductRevenue collection is listed with the chart data you imported:    
 ![][1]  
@@ -75,10 +74,6 @@ In these steps, we download a sample file. Using a collection, we import this sa
 - At anytime, you can select the Preview button (![][8]) to view your charts, and to see how they look with data.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - You can set the **X** and **Y** values for your charts.
-
-
-## Next Steps
-[Create and update a collection](create-update-collection.md)
 
 
 [1]: ./media/use-line-pie-bar-chart/productrevenuecollection.png
