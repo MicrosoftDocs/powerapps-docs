@@ -18,8 +18,6 @@
 
 # Using the image, picture, audio, and video multimedia options
 
-**UPDATE YOUTUBE STEPS**
-
 In KratosApps, there are several multimedia options available. You can use these options to do various things, including: 
 
 - Upload images to your app
@@ -31,7 +29,7 @@ In KratosApps, there are several multimedia options available. You can use these
 
 This topic shows you how to do add these multimedia options to your KratosApps app. 
 
-> [AZURE.TIP] New to KratosApps? Curious about what we're talking about? Go to [LandingPage](landing page link.md).
+> [AZURE.TIP] New to KratosApps? Curious about what we're talking about? Go to [LandingPage - NEED LINK](landing page link.md).
 > 
 ### Prerequisites
 
