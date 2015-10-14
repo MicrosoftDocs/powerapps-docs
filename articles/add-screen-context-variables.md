@@ -66,4 +66,29 @@ Create an app with multiple screens, add ways for users to navigate between them
 
 1. Press Esc to return to the default workspace.
 
-## Add a context variable ##
+## Add navigation with a context variable ##
+Context variables often determine what a screen shows when you navigate to it.
+### Simple example ###
+1. On the **Source** screen, add two buttons, and set their **Text** properties so that one says **English** and the other says **Spanish**.
+
+1. Set the **OnSelect** property of the **English** button to this expression:
+
+ 	**Navigate(Target, ScreenTransition!Fade, {Language:"English"})**
+
+1. Set the **OnSelect** property of the **Spanish** button to this expression:
+
+ 	**Navigate(Target, ScreenTransition!Fade, {Language:"Spanish"})**
+
+1. On the **Target** screen, add a label, and set its **Text** property to this expression:
+
+	**If(Language="English", "Hello!", "Hola!")**
+
+1. From the **Source** screen, press F5, and then click the button for either language.
+
+	On the **Target** screen, the label appears in the language that corresponds to the button that you clicked.
+
+1. Click the Back arrow to return to the **Source** screen, and then click the button for the other button.
+
+	On the **Target** screen, the label appears in the language that corresponds to the button that you clicked.
+
+1. Press Esc to return to the default workspace.
