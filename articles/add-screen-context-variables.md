@@ -92,4 +92,26 @@ You can use a context variable in many ways, but you'll perhaps most often use o
 
 1. Add four input-text controls, and arrange the elements so that each label appears over one input-text control.
 
-1. Set the **Text** property of 
+1. Under the **StartDay** label, set the **Text** property of the input-text control to this expression:
+
+	**If(Mode="Add", "", "Sunday")**
+
+1. Under the **StartTime** label, set the **Text** property of the input-text control to this expression:
+
+	**If(Mode="Add", "", "10a-noon")**
+
+1. Under the **Staff1** label, set the **Text** property of the input-text control to this expression:
+
+	**If(Mode="Add", "", "Kawasaki")**
+
+1. Under the **Staff2** label, set the **Text** property of the input-text control to this expression:
+
+	**If(Mode="Add", "", "Dubois")**
+
+1. From the **Source** screen, press F5, and then click the **Add** button.
+
+	The **Target** screen appears with the input-text controls blank so that you can easily add a record.
+
+1. Click the Back arrow to return to the **Source** screen, and then click the **Edit** button.
+
+	The **Target** screen appears with information in each input-text control so that you easily edit the record.
