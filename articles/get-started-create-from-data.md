@@ -58,7 +58,7 @@ You can create an app based on data from any of several kinds of sources. For th
 
 An app is created from the data that you specified.
 
-## Exploring the app ##
+## Explore the app ##
 
 When the app is created, it appears in the default workspace, where you can customize the app to better fit your needs. Before you make changes, you'll explore how the app works in **Preview**. By running an app in **Preview**, you can completely test an app before you share it with others.
 
@@ -94,34 +94,69 @@ When the app is created, it appears in the default workspace, where you can cust
 
 1. Press Esc to return to the default workspace, in which you can customize the app.
 
-## Customizing the app ##
-You can customize elements on any of the default screens, and you can even [add and delete screens]() to better suit your needs. To change how the **BrowseScreen** shows data, you configure an element in the first item, which automatically updates the same element in all other items.
+## Change the layout, the content, and the theme ##
+You can customize the default app by adding or deleting a screen, changing a property of a screen, and changing a specific element on a screen.
 
-1. In the first item, click the day name to select that label.
+1. If the Quick Start pane isn't showing, click **Quick start** near the lower-right corner.
 
-	![Select Body1](./media/get-started-create-from-data/select-body1.jpg)
+	The Quick Start pane opens and shows the **Layout** tab by default.
 
-1. On the **Home** tab, click the text-color option, and then click the green option in the list that appears.
+1. With **BrowseScreen1** showing, choose a different layout, such as **List4**.
 
-	![Change text color](./media/get-started-create-from-data/change-text-color.jpg)
+	**BrowseScreen1** shows the day and staff information but not the time information from the shift schedule.
 
-	The day in each item appears in green.
+1. In the Quick Start pane, click **Content**.
 
-	![Each day appears in green](./media/get-started-create-from-data/green-days.jpg)
+	The **Content** tab opens.
 
-1. If **Express Mode** isn't already showing, click **Express Mode** near the lower-right corner.
+1. In the **Heading2** list, click **StartDay**. and, in the **Subtitle2** list, click **StartTime**.
 
-	![Open Express Mode](./media/get-started-create-from-data/open-express-mode.jpg)
+	**StartDay** and **StartTime** appear near the left edge of the screen, and **Staff1** appears near the right edge.
 
-1. In **Express Mode**, click **Content** to show options for changing the kinds of data that appear in each element on the screen.
+1. In the Quick Start pane, click **Theme**.
 
-	![Show Content options](./media/get-started-create-from-data/content-tab.jpg)
+	The **Theme** tab opens.
 
-1. In the **Body1** list, choose **StartTime**.
-1. In the **Subtitle1** list, choose **Staff1**.
+1. Click a different theme, such as **Burgundy**.
 
- 	The time for each shift moves to the upper-right corner of each item, and both people appear near the bottom instead of near the right edge.
+	The colors on all screens in the app change to reflect the new theme.
 
-	![Change data in two labels](./media/get-started-create-from-data/swapped-positions.jpg)
+## Customize the app further ##
+
+1. On the **BrowseScreen1** screen, click **Sunday** just under the search icon.
+
+	The label is now selected so that you can change its properties. When you change the property of an element in the first item of a gallery, you automatically change that property of the same element in all other items of the gallery.
+
+1. On the **Home** tab of the ribbon, click the **FontWeight** button, and then click **Bold**.
+
+	The day information in all items of the gallery appear in bold.
+
+1. Click the time information in the first item of the gallery to select that label.
+
+1. Drag the white square on the right edge of the selection box so that the label just fits the information it contains.
+
+1. Move all three labels, by dragging their selection boxes, so that they appear in a row, horizontally aligned with the arrow for each item.
+
+## Change the sort and filter criteria
+
+1. With **BrowseScreen1** showing, click below the last item.
+
+	The gallery that contains the schedule data is selected so that you can change its properties. In the properties list, the **Items** property is selected automatically, and its default value is this expression:
+
+	![The default value of the **Items** property](./media/get-started-create-from-data/sort-before.jpg)
+
+1. Change value of the **Items** property to this expression, which shows the updates in red bold.
+
+	![The value of the **Items** property, set to sort by StartDay](./media/get-started-create-from-data/sort-after.jpg)
+
+1. Press F5, and then click the sort button, near the top of the screen, more than once.
+
+	The items are sorted alphabetically by **StartDay**, switching between ascending and descending order.
+
+1. In the search box, type one or more letters in at least one of the **Staff1** names.
+
+	The screen shows only shifts that are staffed by people whose names contain the text that you specify. 
+
+1. Press Esc to return to the default workspace.
 
 When you finish customizing your app, you can share it with other people, as the last procedure in [Create an app with a template](get-started-test-drive.md) describes.
