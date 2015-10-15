@@ -44,6 +44,8 @@ Create an app with multiple screens, add ways for users to navigate between them
 1. Name the new screen **Target**.
 
 ## Add navigation ##
+1. Follow the steps in the previous procedure.
+
 1. On the **Source** screen, add a Next arrow by clicking **Shapes** on the **Insert** tab and then clicking the shape that you want to add.
 
 	![The Shapes option on the Insert tab](./media/add-screen-context-variables/add-next-arrow.jpg)
@@ -67,28 +69,49 @@ Create an app with multiple screens, add ways for users to navigate between them
 1. Press Esc to return to the default workspace.
 
 ## Add navigation with a context variable ##
-Context variables often determine what a screen shows when you navigate to it.
-### Simple example ###
-1. On the **Source** screen, add two buttons, and set their **Text** properties so that one says **English** and the other says **Spanish**.
+You can use a context variable in many ways, but you'll perhaps most often use one to determine what a screen shows when you navigate to it. For example, users might click a button to add a record or update one. You can save time by configuring both buttons to open the same form but configure the form differently for either adding or updating a record.
 
-1. Set the **OnSelect** property of the **English** button to this expression:
+1. Follow the steps in the previous two procedures.
 
- 	**Navigate(Target, ScreenTransition!Fade, {Language:"English"})**
+1. (optional) On the **Source** screen, delete the **Next** button.
 
-1. Set the **OnSelect** property of the **Spanish** button to this expression:
+1. On the **Source** screen, add a button, configure its **Text** property to show **Add**, and set its **OnSelect** property to this expression:
 
- 	**Navigate(Target, ScreenTransition!Fade, {Language:"Spanish"})**
+	**Navigate(Target, ScreenTransition!Fade, {Mode:"Add"})**
 
-1. On the **Target** screen, add a label, and set its **Text** property to this expression:
+1. On the **Source** screen, add a button, configure its **Text** property to show **Edit**, and set its **OnSelect** property to this expression:
 
-	**If(Language="English", "Hello!", "Hola!")**
+	**Navigate(Target, ScreenTransition!Fade, {Mode:"Edit"})**
 
-1. From the **Source** screen, press F5, and then click the button for either language.
+1. On the **Target** screen, add four labels, and configure their **Text** properties to show these strings:
 
-	On the **Target** screen, the label appears in the language that corresponds to the button that you clicked.
+	- **StartDay**
+	- **StartTime**
+	- **Staff1**
+	- **Staff2**
 
-1. Click the Back arrow to return to the **Source** screen, and then click the button for the other button.
+1. Add four input-text controls, and arrange the elements so that each label appears over one input-text control.
 
-	On the **Target** screen, the label appears in the language that corresponds to the button that you clicked.
+1. Under the **StartDay** label, set the **Text** property of the input-text control to this expression:
 
-1. Press Esc to return to the default workspace.
+	**If(Mode="Add", "", "Sunday")**
+
+1. Under the **StartTime** label, set the **Text** property of the input-text control to this expression:
+
+	**If(Mode="Add", "", "10a-noon")**
+
+1. Under the **Staff1** label, set the **Text** property of the input-text control to this expression:
+
+	**If(Mode="Add", "", "Kawasaki")**
+
+1. Under the **Staff2** label, set the **Text** property of the input-text control to this expression:
+
+	**If(Mode="Add", "", "Dubois")**
+
+1. From the **Source** screen, press F5, and then click the **Add** button.
+
+	The **Target** screen appears with the input-text controls blank so that you can easily add a record.
+
+1. Click the Back arrow to return to the **Source** screen, and then click the **Edit** button.
+
+	The **Target** screen appears with information in each input-text control so that you easily edit the record.
