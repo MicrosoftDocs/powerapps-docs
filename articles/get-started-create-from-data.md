@@ -143,7 +143,7 @@ You can customize the default app by adding or deleting a screen, changing a pro
 
 	The day information in all items of the gallery appear in bold text.
 
-	![BrowseScreen1 with day information in bold](./media/get-started-create-from-data/BrowseScreen-bold.jpg)
+	![BrowseScreen1 with day information in bold](./media/get-started-create-from-data/browseScreen-bold.jpg)
 
 1. Click the time information in the first item of the gallery to select that label.
 
