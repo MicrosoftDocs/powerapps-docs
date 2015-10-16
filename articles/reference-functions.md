@@ -16,7 +16,7 @@
    ms.date="10/06/2015"
    ms.author="anneta"/>
 
-# Build an expression #
+# Build a formula #
 
 As you develop an app, specify its appearance and behavior by building expressions that include the functions and operators in this topic.
 
