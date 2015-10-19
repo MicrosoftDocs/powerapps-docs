@@ -64,7 +64,7 @@ In this procedure, you'll add an action to send email in your PowerFlow and then
 
 2. In the list of actions, search for **Send email**, and click it. As with SharePoint, if you haven't already connected to Office 365, you will need to provide the credentials for your account too.
 
-    ![List of actions](./media/get-started-powerflow/send_mail.png)
+    ![List of actions](./media/get-started-powerflow/send_email.png)
 
 4. In the form that appears, type your email address in the **To** field and a subject in the **Subject** field.
 
@@ -93,4 +93,4 @@ In this procedure, you'll add an action to send email in your PowerFlow and then
 
 ## Next Steps ##
 
-- [Add additional steps](advanced-parameters-powerflows.md) Add more steps, such as different ways to be notified, to your PowerFlow.
+- [Add additional steps](advanced-parameters-powerflow.md) Add more steps, such as different ways to be notified, to your PowerFlow.
