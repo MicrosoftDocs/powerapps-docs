@@ -49,8 +49,8 @@ KratosApps supports the following functions. If you use functions in Excel, you 
 |&nbsp;|&nbsp;|
 |---|---|
 |Syntax|**Abs**(*Number*)<br>**Abs**(*ColumnExpression*)|
-|Description|Returns the absolute value of a number—that is, the number without its sign.<ul><li>**Abs**(<em>Number</em>) returns the absolute value of a number.</li><li>**Abs**(<em>ColumnExpression</em>), given a one-column table of numeric values, returns a one-column table of their corresponding absolute values.</li></ul>|
-|Examples|**Abs(-55)** returns 55.<br><br>If a table contained a column named Trend, you could use **Abs(Trend)** in a Result column to return the absolute value of each number in the Trend column.<br/><br/>![Abs function to calculate absolute values](./media/reference-functions/abs.jpg)|
+|Description|Returns the absolute value of a number—that is, the number without its sign.<ul><li>**Abs**(*Number*) returns the absolute value of a number.</li><li>**Abs**(*ColumnExpression*), given a one-column table of numeric values, returns a one-column table of their corresponding absolute values.</li></ul>|
+|Examples|<ol><li>Add an input-text control, and name it **Source**.</li><li>Add a label, and set its **Text** property to this expression:<br>**Abs(Value(Source!Text))** returns 55.<br><br>If a table contained a column named **Trend**, you could use **Abs(Trend)** in a **Result** column to show the absolute value of each number in the **Trend** column.<br/><br/>![Abs function to calculate absolute values](./media/reference-functions/abs.jpg)|
 
 ### <a name="addcolumns"></a>AddColumns
 |&nbsp;|&nbsp;|
