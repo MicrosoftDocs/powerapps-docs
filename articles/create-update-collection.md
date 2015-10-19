@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/06/2015"
+   ms.date="10/12/2015"
    ms.author="mandia"/>
 
 
@@ -26,7 +26,8 @@ You can create and use collections within KratosApps. Let's get started.
 
 ### Prerequisites
 - Install KratosApps. Create a new app or open an existing app in KratosApps.
-- To familiarize yourself with KratosApps and creating apps, step through the [Test Drive](get-started-test-drive.md ). It walks you through performing some key tasks.
+- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+
 
 ## Create a collection that has one column
 The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.

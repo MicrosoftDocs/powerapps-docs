@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Test drive KratosApps"
-	description=""
+	pageTitle="Create an app from a template in KratosApps"
+	description="Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, and then customize the app to better fit the way you work."
 	services="kratosapps"
 	authors="AFTOwen"
  />
@@ -11,12 +11,12 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/06/2015"
+   ms.date="10/09/2015"
    ms.author="anneta"/>
 # Create an app from a template
-Create an app automatically based on one of several templates for a variety of scenarios. The app will have a default interface and sample data, so that you can explore how the app works out of the box. If you want to build or manage a set of data differently, you can customize the app to better fit the way you work.
+Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, and then customize the app to better fit the way you work.
 
-[Find out more about KratosApps](), such as how to automatically [create an app based on an existing data set]() or [build your own app from scratch]().
+[What is KratosApps?]()
 
 **Prerequisites**
 
@@ -51,8 +51,6 @@ App templates open in the default workspace, where you'll spend most of your tim
 	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.jpg)
 
 	By default, your information appears in the text boxes for name and address. You can change that information if you want.
-
-	![Text boxes to specify the name and the email address of a volunteer](./media/get-started-test-drive/enter-vdata.jpg)
 
 1. Press F5 (or click the right arrow in the upper-right corner) to open **Preview**.
 
@@ -100,7 +98,7 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 1. Move the label to the right side of the screen by dragging the selection box itself (not a triangle or square in the selection box).
 
-1. With the label still selected, rename it by clicking **Label1_1** on the **Home** tab and then typing **Banner**.
+1. With the label still selected, rename it by clicking **Label11_7** on the **Home** tab and then typing **Banner**.
 
 	![Renaming a control](./media/get-started-test-drive/rename-label.jpg)
 
