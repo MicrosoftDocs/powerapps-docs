@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Build an expression"
+   pageTitle="Build a formula"
    description="In KratosApps, you can use the operators and functions that this topic describes."
    services="na"
    documentationCenter="na"
@@ -707,3 +707,4 @@ You can use the **in** and **exactin** operators to find a string in a data sour
 |@|Disambiguation operator|MyTable[@fieldname]|Field disambiguation|
 |||[@MyTable]|Global disambiguation|
 |;|Expression chaining|Collect(T, A); Navigate(S1, &quot;&quot;)|Separate invocations of functions in behavior properties|
+
