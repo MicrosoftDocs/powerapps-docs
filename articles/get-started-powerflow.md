@@ -80,7 +80,7 @@ In this procedure, you'll add an action to send email in your PowerFlow and then
 
     The list of flows reflects your changes.
 
-## Test and pause your PowerFlow ##
+## Test your PowerFlow ##
 
 1. Open the SharePoint online list..
 2. On the main page for the list, click **new item**
@@ -91,8 +91,6 @@ In this procedure, you'll add an action to send email in your PowerFlow and then
 
     Within a minute, you'll receive an email that notifies you of the changes in SharePoint.
 
-4. Click the **Pause** button to stop being notified whenever a row is added to the spreadsheet.
-
 ## Next Steps ##
 
-- [Add additional steps]() Add more steps, such as different ways to be notified, to your PowerFlow.
+- [Add additional steps](advanced-parameters-powerflows.md) Add more steps, such as different ways to be notified, to your PowerFlow.
