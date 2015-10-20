@@ -1,23 +1,23 @@
 <properties
 	pageTitle="Sign-up or get started with PowerApps using your Azure subscription | Microsoft Azure"
 	description="IT Doc: sign-up for Azure subscription administrator for enterprises"
-	services="power-apps"
-	documentationCenter="" 
+	services="powerapps"
+	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na"
    ms.date="09/15/2015"
    ms.author="mandia"/>
 
 # Sign-up overview
-PowerApps is a new offering available to companies with an Azure subscription. You can sign-up for PowerApps and allow anyone within your company to create and use PowerApps within your company subscription. 
+PowerApps is a new offering available to companies with an Azure subscription. You can sign-up for PowerApps and allow anyone within your company to create and use PowerApps within your company subscription.
 
 
 #### Requirements to get started
@@ -26,9 +26,9 @@ PowerApps is a new offering available to companies with an Azure subscription. Y
 - Subscription Administrator signs-in to the Azure portal
 
 
-## Sign-up your company to use PowerApps 
+## Sign-up your company to use PowerApps
 
-> [AZURE.NOTE] The following steps require the subscription Administrator to sign-in to the Azure portal and submit a request. 
+> [AZURE.NOTE] The following steps require the subscription Administrator to sign-in to the Azure portal and submit a request.
 
 To sign-up your company, the subscription administrator submits a request for *@yourCompany.com* email accounts. Use the following steps to sign-up:
 
