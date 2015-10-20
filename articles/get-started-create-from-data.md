@@ -17,7 +17,7 @@
 # Create an app from data
 Create an app automatically based on data that you specify, explore how the app works by default, and then customize the app to better fit how you work.
 
-[What is PowerApps?](http://www.kratosapps.com/en-us/tutorials)
+[What is PowerApps?](http://www.kratosapps.com/tutorials)
 
 **Prerequisites**
 
