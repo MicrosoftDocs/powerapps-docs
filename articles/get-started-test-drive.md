@@ -16,7 +16,7 @@
 # Create an app from a template
 Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, customize it to better fit the way you work, and then publish it.
 
-[What is PowerApps?](http://www.kratosapps.com/en-us/tutorials)
+[What is PowerApps?](http://www.kratosapps.com/tutorials)
 
 **Prerequisites**
 
