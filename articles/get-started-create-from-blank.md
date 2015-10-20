@@ -9,13 +9,13 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/18/2015"
+   ms.date="10/20/2015"
    ms.author="anneta"/>
 
 # Create an app from a blank screen #
 Create your own app from scratch using any of a variety of data sources. (more intro)
 
-[What is PowerApps?]()
+[What is PowerApps?](http://www.kratosapps.com/en-us/tutorials)
 
 By following this tutorial, you'll create an app that shows users a set of data on its first screen:
 

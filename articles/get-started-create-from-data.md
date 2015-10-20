@@ -11,13 +11,13 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/16/2015"
+   ms.date="10/20/2015"
    ms.author="anneta"/>
 
 # Create an app from data
 Create an app automatically based on data that you specify, explore how the app works by default, and then customize the app to better fit how you work.
 
-[What is PowerApps?]()
+[What is PowerApps?](http://www.kratosapps.com/en-us/tutorials)
 
 **Prerequisites**
 

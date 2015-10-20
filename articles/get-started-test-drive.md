@@ -11,12 +11,12 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/19/2015"
+   ms.date="10/20/2015"
    ms.author="anneta"/>
 # Create an app from a template
 Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, customize it to better fit the way you work, and then publish it.
 
-[What is PowerApps?]()
+[What is PowerApps?](http://www.kratosapps.com/en-us/tutorials)
 
 **Prerequisites**
 
