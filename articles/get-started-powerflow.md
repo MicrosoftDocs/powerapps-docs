@@ -1,18 +1,21 @@
 <properties
-    pageTitle="PowerApps tutorial: Create a PowerFlow"
-    description="Create a PowerFlow to take action when one or more conditions are met. For example, get an email whenever someone adds a row to a SharePoint list"
+    pageTitle="PowerApps: Create a PowerFlow"
+    description="Create a PowerFlow to automate routine tasks in your workflow, such as sending email when an item is added to a list in Excel or SharePoint."
     services="powerapps"
-    authors="aftowen"
- />
+    documentationCenter="na"
+    authors="AFTOwen"
+    manager="dwrede"
+    editor=""
+    tags=""/>
 
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="get-started-article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/19/2015"
-   ms.author="anneta"/>
+    ms.service="powerapps"
+    ms.devlang="na"
+    ms.topic="article"
+    ms.tgt_pltfrm="na"
+    ms.workload="na"
+    ms.date="10/21/2015"
+    ms.author="anneta"/>
 
 # Create a PowerFlow #
 Create a PowerFlow to take action when something happens. For example, create a PowerFlow so that you get an email message whenever someone adds a row to a SharePoint list. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
