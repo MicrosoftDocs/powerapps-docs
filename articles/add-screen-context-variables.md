@@ -1,9 +1,12 @@
 <properties
-	pageTitle="Add a screen, navigation, and a context variable"
-	description=""
+	pageTitle="PowerApps: Add a screen, navigation, and a context variable"
+	description="In PowerApps, add a screen to an app, arrows to open one screen from another, and a context variable to track information between screens."
 	services="powerapps"
+	documentationCenter="na"
 	authors="AFTOwen"
- />
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
    ms.service="powerapps"
@@ -11,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2015"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 
 # Add a screen, navigation, and context variables #
@@ -22,11 +25,11 @@ Create an app with multiple screens, add ways for users to navigate between them
 
 **Prerequisites**
 
-- Sign up for and install [PowerApps]()
-- Familiarity with how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall)
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps Studio
 
 ## Add and rename a screen ##
-1. Sign in to PowerApps, and then click **New** in the left navigation bar.
+1. In PowerApps Studio, click **New** in the left navigation bar.
 
 	![New option in left navigation bar](./media/add-screen-context-variables/file-new.jpg)
 
