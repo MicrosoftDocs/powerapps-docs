@@ -78,6 +78,7 @@ In this procedure, you'll add an action in the middle of the flow. This action w
 ## Delete your PowerFlow ##
 
 Delete a PowerFlow from the portal if you're done with that PowerFlow and no longer want to get notifications from it.
+
 1. Open the PowerApps portal, and then click **Flows** in the left navigation bar.
 
 2. In the list of PowerFlows, click the delete icon, which looks like a trash can, next to the PowerFlow that you want to delete.

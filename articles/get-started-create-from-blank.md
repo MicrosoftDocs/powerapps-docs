@@ -62,17 +62,17 @@ To follow this tutorial exactly:
 
 	1. Open the **File** menu, and then click **Connections**.
 
-	![Connections option on the File menu](./media/get-started-create-from-blank/file-connections.jpg)
+		![Connections option on the File menu](./media/get-started-create-from-blank/file-connections.jpg)
 
 	1. Click **Available Connections**, click the connection that you want to use (such as **Dropbox**), and then click **Connect**.
 
-	![Dropbox option and Connect button](./media/get-started-create-from-blank/add-dropbox.jpg)
+		![Dropbox option and Connect button](./media/get-started-create-from-blank/add-dropbox.jpg)
 
 	1. Provide the requested credentials, and then click **Sign in**.
 
 	1. In the upper-left corner, click the Back arrow to return to the default workspace.
 
-	![Back arrow from Connections to default workspace](./media/get-started-create-from-blank/back-from-connections.jpg)
+		![Back arrow from Connections to default workspace](./media/get-started-create-from-blank/back-from-connections.jpg)
 
 1. On the bottom edge of the screen, click **Options**.
 
