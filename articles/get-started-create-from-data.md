@@ -33,7 +33,7 @@ You can create an app based on data from any of several kinds of sources. For th
 
 ![Source data in Excel](./media/get-started-create-from-data/excel-source.jpg)
 
-1. Sign in to PowerApps, and then click **New** in the left navigation bar.
+1. In PowerApps Studio, click **New** in the left navigation bar.
 
 	![The New option in the left navigation bar](./media/get-started-create-from-data/file-new.jpg)
 
@@ -67,7 +67,7 @@ When the app is created, it appears in the default workspace, where you can cust
 
 	![The default BrowseScreen](./media/get-started-create-from-data/default-browsescreen.jpg)
 
-	The first screen, named **BrowseScreen**, shows which people are signed up for each shift in a schedule. You can sort the data, add an item, and search for an item by using the elements near the top of the screen.
+	The first screen, named **BrowseScreen**, shows which people are signed up for each shift in a schedule. You'll be able to sort the data, add an item, and search for an item by using the elements near the top of the screen.
 
 1. Click the arrow for the first item to show details about that item.
 
@@ -91,7 +91,7 @@ When the app is created, it appears in the default workspace, where you can cust
 
 	![Updating an item](./media/get-started-create-from-data/replace-name.jpg)
 
-	The updated data appears in the app and the source.
+	Your change or changes appear in the gallery on the **BrowseScreen** and in the data source in the cloud.
 
 1. Press Esc to return to the default workspace, in which you can customize the app.
 
@@ -168,7 +168,7 @@ You can customize the default app by adding or deleting a screen, changing a pro
 
 	![The default value of the **Items** property](./media/get-started-create-from-data/sort-before.jpg)
 
-1. Change value of the **Items** property to this expression, which shows the updates in red bold.
+1. Change value of the **Items** property to this expression (updates in red bold text):
 
 	![The value of the **Items** property, set to sort by StartDay](./media/get-started-create-from-data/sort-after.jpg)
 
