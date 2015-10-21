@@ -63,7 +63,7 @@ Create a PowerFlow to take action when something happens. For example, create a 
 ## Create the action ##
 In this procedure, you'll add an action to send email in your PowerFlow, and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your PowerFlow to make it work the way you want.
 
-1. In the list of PowerFlows, find the PowerFlow that you created in the previous procedure, and then click the edit icon, which looks like a pencil, next to it.
+1. In the list of PowerFlows, click the edit icon, which looks like a pencil, next to the PowerFlow that you created in the previous procedure.
 
 2. Click the "+" button, and then click **Add action**
 
