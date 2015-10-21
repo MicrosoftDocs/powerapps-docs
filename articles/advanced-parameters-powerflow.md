@@ -2,8 +2,6 @@
     pageTitle="PowerFlows: Add an advanced parameter and multiple actions"
     description="Expand an existing PowerFlow to include an advanced parameter, such as setting email to high priority, and add another action for the same trigger."
     services="powerapps"
-    authors="aftowen"
-    services="powerapps"
     documentationCenter="na"
     authors="AFTOwen"
     manager="dwrede"
