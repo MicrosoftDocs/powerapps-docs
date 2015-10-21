@@ -1,9 +1,12 @@
 <properties
-	pageTitle="Create an app from a template in PowerApps"
-	description="Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, and then customize the app to better fit the way you work."
+	pageTitle="PowerApps: Create an app from a template"
+	description="Step-by-step instructions for creating an app automatically based on a template in PowerApps, customizing the app, and then publishing it."
 	services="powerapps"
+	documentationCenter="na"
 	authors="AFTOwen"
- />
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
    ms.service="powerapps"
@@ -11,7 +14,7 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2015"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 # Create an app from a template
 Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, customize it to better fit the way you work, and then publish it.
@@ -19,11 +22,11 @@ Create an app automatically based on one of several templates for a variety of s
 [What is PowerApps?](http://www.kratosapps.com/tutorials)
 
 **Prerequisites**
-
-In addition to signing up for and installing PowerApps, you'll also need an account, such as DropBox or OneDrive, for storing sample data in the cloud.
+- [Install PowerApps Studio](http://aka.ms/powerappsinstall)
+- An account, such as DropBox or OneDrive, for storing sample data in the cloud
 
 ## Open an app template ##
-1. Open PowerApps, and then click **Connections** in the left naviation bar.
+1. Open PowerApps Studio, and then click **Connections** in the left navigation bar.
 
 	![The Connections option in the left navigation bar](./media/get-started-test-drive/file-connections.jpg)
 
