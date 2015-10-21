@@ -1,9 +1,12 @@
 <properties
-	pageTitle="Create an app from data in PowerApps"
-	description=""
+	pageTitle="PowerApps: Create an app from an existing data set"
+	description="In PowerApps, create an app automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
 	services="powerapps"
+	documentationCenter="na"
 	authors="AFTOwen"
- />
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
    ms.service="powerapps"
@@ -11,7 +14,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2015"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 
 # Create an app from data
@@ -21,9 +24,9 @@ Create an app automatically based on data that you specify, explore how the app 
 
 **Prerequisites**
 
-- Sign up for and install [PowerApps]()
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall )
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 - A set of data in the cloud, such as in DropBox or OneDrive
-- Familiarity with how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
 ## Connect to data ##
 You can create an app based on data from any of several kinds of sources. For this tutorial, the data source is an Excel file in Dropbox. The file, named **eventsignup.xls**, contains this data [formatted as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) and named **Schedule**.
