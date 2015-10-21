@@ -16,15 +16,6 @@
    ms.date="10/21/2015"
    ms.author="anneta"/>
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="get-started-article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/21/2015"
-   ms.author="anneta"/>
-
 # Create an app from a blank screen #
 Create your own app from scratch using any of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the app to meet your exact goals and workflow.
 
