@@ -44,11 +44,12 @@ This section lists both steps.
 
 
 ### Create an API from your PowerApps blade
+
 1. In the Azure portal, select **PowerApps**. In PowerApps, select **Registered APIs**:  
 ![][11]  
 2. In Registered APIs, select **Add**:  
 ![][12]  
-3. In **Add API**, enter the API properties:     
+3. In **Add API**, enter the API properties:  
 ![][13]  
 In **Name**, enter a descriptive name for your API. For example, if you're adding the SQL API, you can name it *SQLOrdersDB* or *SQLAddNewCustomer*.  
 
@@ -57,12 +58,11 @@ In **Name**, enter a descriptive name for your API. For example, if you're addin
 	- **Import from API App** to choose an API you created (the .json and .manifest files are needed). 
 	- **Import from other backend** to add the .json file to an API app.
 
-4. Choose the API you want to add and configure that API's properties. Every API has different properties. For example, the SQL API can connect to an Azure SQL Database or an on-premises SQL Server. These options determine the settings or properties you configure. 
-	
-	In the following example, the SharePoint Online API is selected and SharePoint Online-specific properties are displayed:
-	![][4]  
+4. Choose the API you want to add and configure that API's properties. Every API has different properties. For example, the SQL API can connect to an Azure SQL Database or an on-premises SQL Server. These options determine the settings or properties you configure.  
 
-	> [AZURE.TIP] When you add an API, you're adding the API to your app service environment. Once in the app service environment, it can be used by other apps within the same app service environment, including PowerApps.
+	In the following example, the SharePoint Online API is selected and SharePoint Online-specific properties are displayed:  
+![][4]  
+> [AZURE.TIP] When you add an API, you're adding the API to your app service environment. Once in the app service environment, it can be used by other apps within the same app service environment, including PowerApps.
 
 5. Select **OK** and **Add** to complete these steps.  
 
