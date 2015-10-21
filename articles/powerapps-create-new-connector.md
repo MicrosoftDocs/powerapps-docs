@@ -82,12 +82,11 @@ In **Name**, enter a descriptive name for your API. For example, if you're addin
 	- **Import from API App** to choose an API you added to your app service environment. Typically, this is chosen when you create a custom API app and the custom API app is added to your app service environment. 
 	- **Import from other backend** to add the .json file to an API app.
 
-4. Choose the API you want to add and configure that API's properties. Every API has different properties. For example, the SQL API can connect to an Azure SQL Database or an on-premises SQL Server. These options determine the settings or properties you configure. 
+4. Choose the API you want to add and configure that API's properties. Every API has different properties. For example, the SQL API can connect to an Azure SQL Database or an on-premises SQL Server. These options determine the settings or properties you configure.  
 	
-	In the following example, the SharePoint Online API is selected and SharePoint Online-specific properties are displayed:
-	![][4]  
-
-	> [AZURE.TIP] When you add an API, you're adding the API to your app service environment. Once in the app service environment, it can be used by other apps within the same app service environment, including PowerApps.
+	In the following example, the SharePoint Online API is selected and SharePoint Online-specific properties are displayed:  
+![][4]  
+> [AZURE.TIP] When you add an API, you're adding the API to your app service environment. Once in the app service environment, it can be used by other apps within the same app service environment, including PowerApps.
 
 5. Select **OK** and **Add** to complete these steps.  
 
