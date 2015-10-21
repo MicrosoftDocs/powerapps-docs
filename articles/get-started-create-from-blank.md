@@ -1,15 +1,28 @@
-<properties	pageTitle="Create an app from a blank screen in PowerApps"
-	description="Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, and then customize the app to better fit the way you work."
+<properties	pageTitle="PowerApps: Create an app from a blank screen"
+	description="In PowerApps, create an app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business."
 	services="powerapps"
-	authors="AFTOwen"/>
+	documentationCenter="na"
+	authors="AFTOwen"
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
    ms.service="powerapps"
    ms.devlang="na"
-   ms.topic="hero-article"
+   ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2015"
+   ms.date="10/21/2015"
+   ms.author="anneta"/>
+
+<tags
+   ms.service="powerapps"
+   ms.devlang="na"
+   ms.topic="get-started-article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 
 # Create an app from a blank screen #
@@ -27,9 +40,9 @@ On another screen, users can create, update, or delete a record in that set of d
 
 **Prerequisites**
 
-- Sign up for and install [PowerApps](http://aka.ms/powerappsinstall)
-- Familiarity with how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
-- A set of data in the cloud, such as in DropBox or OneDrive
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall)
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
+- A cloud-storage account, such as DropBox or OneDrive
 
 To follow this tutorial exactly:
 
