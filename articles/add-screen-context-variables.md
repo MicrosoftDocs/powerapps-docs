@@ -2,8 +2,11 @@
 	pageTitle="PowerApps: Add a screen, navigation, and a context variable"
 	description="In PowerApps, add a screen to an app, arrows to open one screen from another, and a context variable to track information between screens."
 	services="powerapps"
+	documentationCenter="na"
 	authors="AFTOwen"
- />
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
    ms.service="powerapps"
@@ -11,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2015"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 
 # Add a screen, navigation, and context variables #
