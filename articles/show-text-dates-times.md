@@ -17,7 +17,7 @@
    ms.author="mandia"/>
 
 
-# Identify current user, show text, and format dates and times
+# Show text and format dates and times values in your app
 
 Add dates and times, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
 
