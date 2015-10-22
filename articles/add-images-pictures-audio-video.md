@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Upload images, take a picture, play an audio and video file in KratosApps | Microsoft Azure"
-	description=""
+	pageTitle="Upload images, take a picture, play an audio and video file in PowerApps Studio | Microsoft Azure"
+	description="Use PowerApps Studio to add images, audio, video, microphone, and pen features to your app"
 	services=""
 	documentationCenter=""
 	authors="MandiOhlinger"
@@ -13,12 +13,12 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/12/2015"
+   ms.date="10/22/2015"
    ms.author="mandia"/>
 
 # Using the image, picture, audio, and video multimedia options
 
-In KratosApps, there are several multimedia options available. You can use these options to do various things, including: 
+In PowerApps Studio, there are several multimedia options available. You can use these options to do various things, including: 
 
 - Upload images to your app
 - Take pictures using the camera on your mobile device
@@ -27,19 +27,19 @@ In KratosApps, there are several multimedia options available. You can use these
 - Use the microphone on your mobile device to make a recording
 - Use a pen on a tablet to create a sketch or a drawing
 
-This topic shows you how to do add these multimedia options to your KratosApps app. 
+This topic shows you how to do add these multimedia options to your app in PowerApps Studio. 
 
-> [AZURE.TIP] New to KratosApps? Curious about what we're talking about? Go to [LandingPage - NEED LINK](landing page link.md).
-> 
+> [AZURE.TIP] New to PowerApps? Curious about what we're talking about? Go to [PowerApps](http://www.kratosapps.com).
+
 ### Prerequisites
 
-- Install KratosApps. Create a new app or open an existing app in KratosApps. The following multimedia options are available within your app:  
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. The following multimedia options are available within your app:  
 ![][19] 
-- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
 ## Upload an image or add a picture
-In your KratosApps App, you can add an image and add a picture. Use the **Image** option to add a stationary picture when creating your app, like a company logo. If you're creating a travel app, you can add pictures of exotic travel destinations, city skylines, and common attractions. If you're creating a pet adoption app, you can add pictures of the animals available for adoption. 
+In your PowerApps app, you can add an image and add a picture. Use the **Image** option to add a stationary picture when creating your app, like a company logo. If you're creating a travel app, you can add pictures of exotic travel destinations, city skylines, and common attractions. If you're creating a pet adoption app, you can add pictures of the animals available for adoption. 
 
 Use the **Picture** option to give your app users the ability to upload pictures. If you have an insurance app, users can upload pictures of the items they want to insure, like a car or a motorcycle. If you have a dating app, users can upload pictures of themselves.
 
@@ -212,4 +212,3 @@ In this topic, you:
 [18]: ./media/add-images-pictures-audio-video/pentab.png
 [19]: ./media/add-images-pictures-audio-video/allmedia.png
 [20]: ./media/add-images-pictures-audio-video/addpicture.png
-[21]: ./media/add-images-pictures-audio-video/

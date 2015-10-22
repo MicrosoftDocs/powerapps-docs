@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Add a listbox, drop-down list, and radio button controls in KratosApps | Microsoft Azure"
+	pageTitle="Add a listbox, drop-down list, and radio button controls in PowerApps Studio | Microsoft Azure"
 	description=""
 	services=""
 	documentationCenter=""
@@ -13,18 +13,18 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/12/2015"
+   ms.date="10/22/2015"
    ms.author="mandia"/>
 
 
 # Add a list box, drop-down list, or radio button control
 
-KratosApps includes multi-select and single-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
+PowerApps Studio includes multi-select and single-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
 
 ### Prerequisites
 
-- Install KratosApps. Create a new app or open an existing app in KratosApps.
-- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
 ## Add a listbox

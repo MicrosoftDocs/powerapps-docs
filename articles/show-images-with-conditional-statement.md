@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Show images and use a checkbox with a conditional statement in KratosApps | Microsoft Azure"
+	pageTitle="Show images and use a checkbox with a conditional statement in PowerApps Studio | Microsoft Azure"
 	description=""
 	services=""
 	documentationCenter=""
@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/12/2015"
+   ms.date="10/22/2015"
    ms.author="mandia"/>
 
 # Show images using a conditional statement
@@ -21,13 +21,13 @@ Use a conditional statement to display or hide an image.
 
 You add a .jpeg image and include a checkbox with a conditional statement. If the checkbox is enabled, it displays certain text in a label. If it's unchecked, the checkbox displays different text in the same label.
 
-You can use this feature in your KratosApps apps for different scenarios. For example, there is a product image in your KratosApps app. When your users select the checkbox for the product image, additional information is displayed, like the price, or quantity in stock, maybe colors available, and so on.
+You can use this feature in your PowerApps apps for different scenarios. For example, there is a product image in your PowerApps app. When your users select the checkbox for the product image, additional information is displayed, like the price, or quantity in stock, maybe colors available, and so on.
 
-> [AZURE.TIP] New to KratosApps? Curious about what we're talking about? Go to [LandingPage](landing page link.md).
+> [AZURE.TIP] New to PowerApps? Curious about what we're talking about? Go to [PowerApps](http://www.kratosapps.com).
 
 ### Prerequisites
-- Install KratosApps. Create a new app or open an existing app in KratosApps.
-- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - These steps use the [CreateFirstApp](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7) as sample input data, which includes .jpg images. You can use this sample data, or import your own.
 
 

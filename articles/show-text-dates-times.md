@@ -1,6 +1,6 @@
 <properties
-	pageTitle=" Identify current user, show text, and format a date or time in KratosApps | Microsoft Azure"
-	description=""
+	pageTitle=" Show text and format a date or time in PowerApps Studio | Microsoft Azure"
+	description="Add and format dates and times using PowerApps"
 	services=""
 	documentationCenter=""
 	authors="MandiOhlinger"
@@ -13,26 +13,20 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/13/2015"
+   ms.date="10/22/2015"
    ms.author="mandia"/>
 
 
-# Identify current user, show text, and format dates and times
+# Show text and format dates and times values in your app
 
 Add dates and times, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
 
-For example, add data from users about stock trades or client meetings, data from an external source, or data from another app created in KratosApps. If that data includes times down to the millisecond, round it to the nearest minute for simplicity. Calculate how many days remain before a major milestone. If you want to schedule client meetings every five days, calculate those dates automatically. If May 10, 1985, is stored in separate fields for the day, the month, and the year, consolidate them into a single value. Conversely, break each date into separate values if your app manages them separately.
+For example, add data from users about stock trades or client meetings, data from an external source, or data from another app created in PowerApps. If that data includes times down to the millisecond, round it to the nearest minute for simplicity. Calculate how many days remain before a major milestone. If you want to schedule client meetings every five days, calculate those dates automatically. If May 10, 1985, is stored in separate fields for the day, the month, and the year, consolidate them into a single value. Conversely, break each date into separate values if your app manages them separately.
 
 ### Prerequisites
 
-- Install KratosApps. Create a new app or open an existing app in KratosApps.
-- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
-
-
-## Identify current user
-
-Not started. Waiting on new build with this feature.
-
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 ## Show text in a label
 Show text in a label by setting the value of its **Text** property. You can set this property by typing directly into the label or by entering an expression in the Function Bar. If you type directly into the label, it shows exactly what you type. If you enter an expression, the label shows the result of the expression.
@@ -74,12 +68,12 @@ In these steps, you:
 - Used a "ShowText" label that is updated to show the output or calculated values from another input text control.
 
 ## Working with dates and times
-In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within KratosApps.
+In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within PowerApps.
 
 Let's get started.
 
 ### Format date and time values
-There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your KratosApps app. We suggest creating a blank screen and stepping through the different scenarios.
+There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your PowerApps app. We suggest creating a blank screen and stepping through the different scenarios.
 
 #### Format date time using the DateTimeValue, DateTimeFormat, and DateValue functions
 
