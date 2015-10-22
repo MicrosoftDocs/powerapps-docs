@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Show images and text in a gallery; Sort and filter the gallery in KratosApps | Microsoft Azure"
-	description=""
+	pageTitle="Show images and text in a gallery; Sort and filter the gallery in PowerApps Studio | Microsoft Azure"
+	description="Use a gallery to display images and text. Sort and filter the images in PowerApps."
 	services=""
 	documentationCenter=""
 	authors="MandiOhlinger"
@@ -13,25 +13,25 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/13/2015"
+   ms.date="10/22/2015"
    ms.author="mandia"/>
 
 
 # Show images and text in a gallery, including gallery selection, sort, and filter
 Create a gallery to show images and text about several products, and sort and filter that information.
 
-In KratosApps, use a gallery to show several related items, as in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.
+In PowerApps, use a gallery to show several related items, as in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.
 
 
 ### Prerequisites
-- Install KratosApps. Create an app or open an existing app in KratosApps.
-- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - Download this [sample data](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7), or import your own data. The download includes .jpg images in a zip file.
 
 ## Add a gallery to show images and text
 
 1. Create a collection named **Inventory** based on the sample data. Steps include:  
-	a) Open an app in KratosApps. On the **Insert** tab, select **Controls**, and then select **Import**:  
+	a) Open an app in PowerApps Studio. On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
 	b) Set the **OnSelect** property of the import control to the following expression:  
 	```Collect(Inventory, Import1!Data)```  
@@ -97,7 +97,6 @@ Using these steps, you added a border around the current selection in the galler
 ```Sort(Inventory, ProductName, Descending)```  
 
 #### Add a slider control and filter items in the gallery
-
 
 1. Add a slider control, name it **StockFilter**, and move it near the gallery.
 2. Configure the slider so that users can't set it to a value outside the range of units in stock:  

@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create and update a collection in KratosApps | Microsoft Azure"
-	description="Create collections and add columns to existing collections"
+	pageTitle="Create and update a collection in PowerApps Studio | Microsoft Azure"
+	description="Create collections and add columns to existing collections in PowerApps Studio"
 	services=""
 	documentationCenter=""
 	authors="MandiOhlinger"
@@ -13,26 +13,24 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/12/2015"
+   ms.date="10/22/2015"
    ms.author="mandia"/>
 
 
 # Create and update a collection in your app
-Use a collection to store data that can be used in your app. A collection is a group of items that are similar. For example, you create a MyImages collection that stores all the product images your company sells. Within KratosApps, you can add your MyImages collection and create an app that displays all the pictures of these products. In another example, you can create a PriceList collection that lists the products and the price of each product.
+Use a collection to store data that can be used in your app. A collection is a group of items that are similar. For example, you create a MyImages collection that stores all the product images your company sells. Within PowerApps, you can add your MyImages collection and create an app that displays all the pictures of these products. In another example, you can create a PriceList collection that lists the products and the price of each product.
 
-You can create and use collections within KratosApps. Let's get started.
-
-**Need some conceptual info on collections, including what are they and why do you need them. Input encouraged. **
+You can create and use collections within PowerApps. Let's get started.
 
 ### Prerequisites
-- Install KratosApps. Create a new app or open an existing app in KratosApps.
-- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps Studio. 
+- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
 ## Create a collection that has one column
 The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.
 
-1. Open your app in KratosApps.
+1. Open your app in PowerApps Studio.
 2. On the **Insert** tab, select **Text**, and then select **Input Text**:  
 ![][1]  
 3. In the top left corner, select **Text1**, and rename the control to **Destination**:  
@@ -77,7 +75,7 @@ Preview your changes: ![][7]. In the listbox, you can select the different citie
 ## Create a collection that has more than one column
 The following steps show you how to create a collection within your app using the Collect function, and how to add multiple rows to your collection.
 
-1. Open your app in KratosApps.
+1. Open your app in PowerApps Studio.
 2. On the **Insert** tab, select **Text**, and then select **Input Text**.
 3. In the top left corner, select **Text1**, and rename the control to **City**:  
 ![][9]  
@@ -111,7 +109,7 @@ There are a few sections in this walk-through. When complete, you'll know how to
 
 ### Import the price list
 1. Download the [PriceList](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
-2. Within your app in KratosApps, select the **Insert** tab, select **Controls**, and then select **Import**:  
+2. Within your app, select the **Insert** tab, select **Controls**, and then select **Import**:  
 ![][14]  
 3. On the **Behavior** tab, select **OnSelect**. Enter the following function:  
 ```Collect(PriceList, Import1!Data)```  
