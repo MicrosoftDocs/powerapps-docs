@@ -52,6 +52,8 @@ When you do this, the label is automatically populated with your full name. Move
 When you do this, the label is automatically populated with your email address. Move the label so it's below the first label, similar to the following:  
 ![][7]
 
+Now, let's see what you've created. Select the Preview button ![][9]. When you view the screen, you get an idea of what your app looks like; and it shows the picture, full name, and email address of the signed-in user.
+
 ## Tips and Tricks
 - The [Create an app from a template](get-started-test-drive.md) scenario provides another example that uses the signed-in user information. 
 - At anytime, you can select the preview button (![][9]) to see what you created and test it.
