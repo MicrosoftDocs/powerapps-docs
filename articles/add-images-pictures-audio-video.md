@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/22/2015"
+   ms.date="10/27/2015"
    ms.author="mandia"/>
 
 # Using the image, picture, audio, and video multimedia options
@@ -48,97 +48,105 @@ This section lists the steps to add an Image and Picture controls to your app.
 #### Add an image 
 1. On the **Insert** tab, select **Image**:  
 ![][2]  
-2. On the **Data** tab, select **Image**, and then select **Add an image file**.
+2. On the **Content** tab, select **Image**, and then select **Add an image file**.
 3. Browse and select the file that you want to use, and then select **Open**. The image you selected appears in the control you added:  
 ![][3]  
 
 ####  Add a picture
 1. On the **Insert** tab, select **Media**, and then select **Add Picture**:  
 ![][20]  
-2. Preview your app: ![][1]. The picture control automatically includes an **Add Picture** button. When you select it, an explorer window opens. Select your picture and select **Open**.
+2. Preview your app: ![][1]. The picture control automatically adds an **Add Picture** button. When you select it, an explorer window opens. Select your picture and select **Open**.  
 	The picture is displayed in the control you added. 
 
 
 ## Take a picture using the camera control
-Take multiple pictures with the camera on your computer or mobile device. Then, show the pictures in an image gallery. These steps use the camera on your computer. To test the camera control, start the camera on your computer or mobile device. 
+Take multiple pictures with the camera on your computer or mobile device. Then, show the pictures in an image gallery. These steps use the camera on your computer. To follow these steps, start the camera on your computer or mobile device. 
 
-1. On the **Insert** tab, select **Media**, and then select **Camera**:  
+1. On the **Home** tab, select **New Screen**.
+2. On the **Insert** tab, select **Media**, and then select **Camera**:  
 ![][4]  
-2. Select **Allow** if prompted for permissions. Rename the control to **MyCamera**:  
+3. Select **Allow** if prompted. Rename the control to **MyCamera**:  
 ![][5]  
 If your camera is enabled, it shows a live image of wherever it's pointed, which may be you. Smile.
 
-3. Set the **OnSelect** property of **MyCamera** to the following function:  
+4. Set the **OnSelect** property of **MyCamera** to the following function:  
 ```Collect(MyImages, {SinglePicture:MyCamera!Photo})```  
-![][6]  
+
+	![][6]  
 When you click the camera, a picture is taken, and saved to a collection named **MyImages**; which we'll show you shortly. 
 
-4. On the **Insert** tab, select **Gallery**, and then select the vertical **Image Only** gallery:  
+5. On the **Insert** tab, select **Gallery**, and then select the vertical **Image Only** gallery:  
 ![][7]  
-5. In the image gallery, select the middle image. This puts a grey border around the entire control. Use your mouse to shrink the width of the gallery so it shows three items:  
+You can easily resize the image gallery by clicking-and-dragging the corner. This control also has a scroll bar. 
+5. Resize the image gallery until you see three images in the gallery. Select the second image. This puts a grey border around the entire control:  
 ![][8]  
 	Set its **Items** property to MyImages:  
 	![][9]  
-6. Preview your app: ![][1]. To take pictures, select **MyCamera** multiple times. Press the **Esc** key to go back to the app designer. Each picture that you take is shown in the gallery.
+6. Preview your app: ![][1]. To take pictures, select **MyCamera** multiple times. Each picture that you take is shown in the gallery. Press the **Esc** key to go back to the app designer. 
 7. Select the first image in the gallery. Set its **OnSelect** property to the following function:  
 ```Remove(MyImages, ThisItem)```
 
-8. Preview your app: ![][1]. Select any image in the gallery to remove it. Press the **Esc** key to go back to the app designer.
+8. Preview your app: ![][1]. Select any image in the gallery. The image you select is now removed. Press the **Esc** key to go back to the app designer.
 
 > [AZURE.NOTE] 
-> - When you create a collection, you can see what's in your collection by going to the **File** tab, and then select **Collections**. 
-> - When you select the first item in the gallery, any changes you make apply to everything in the gallery. In this example, we selected the first image in the gallery and updated it's **OnSelect** property. This means that the changes you make apply to all images in the gallery.
+> - When you create a collection, you can see what's in your collection by going to the **File** tab, and then select **Collections**.  
+> - When you select the first item in the gallery, any changes you make apply to everything in the gallery. In this example, we selected the first image in the gallery and updated it's **OnSelect** property. This means that the changes you make apply to all images in the gallery.  
 > - If you close the app, you'll lose the images that you've collected. If you want to keep them, go to the **File** tab, select **Save**.
 
 
 ## Add audio and play it in your app
-Configure an audio control to play a file in any format that Internet Explorer supports, including the audio portion of a video file. For example, you can use a .wma file. If you don't have an audio recording, you create your own using the **Sound Recorder** or **Voice Recorder** in Windows. Search for **Sound Recorder** or **Voice Recorder** to open it.
+Configure an audio control to play a file in any format that Internet Explorer supports, including the audio portion of a video file. For example, you can use a .wma file. If you don't have an audio recording, you can create your own using the **Sound Recorder** or **Voice Recorder** apps in Windows. Search for **Sound Recorder** or **Voice Recorder** to open it.
 
-1. On the **Insert** tab, select **Media**, and then select **Audio**:  
+1. On the **Home** tab, select **New Screen**.
+2. On the **Insert** tab, select **Media**, and then select **Audio**:  
 ![][10]  
-2. Press **Alt-D**, select **Media** in the left navigation bar, and then select **Import Media**.
-3. Browse for the audio file that you want to play, select **Open**. Press the **Esc** key to go back to the app designer.
-4. Set the **Media** property of the audio control to the name of the file that you added. Then select the play button near the left side of the audio control:  
+3. On the **Content** tab, select **Media**, and then select **Add an audio**.
+4. Browse for the audio file that you want to play. Select **Open**. The **Media** property of the audio control is set to the name of the file that you added. Select the play button near the left side of the audio control:  
 ![][11]  
 
 	The file plays. You can also use the audio control to play sounds that you record using the **Microphone** control (also on the **Insert** tab > **Media**).
 
 ## Add video and play it in your app
-Configure a video control to play a file in any format that Internet Explorer supports. For example, you can use a .wmv file. If you don't have a video, you can create your own using the  video recording feature of your webcam.
+Configure a video control to play a file in any format that Internet Explorer supports. For example, you can use a .wmv file. If you don't have a video, you can create your own using the video recording feature of your webcam.
 
+1. On the **Home** tab, select **New Screen**.
 1. On the **Insert** tab, select **Media**, and then select **Video**:  
 ![][12]  
-2. Press **Alt-D**, select **Media** in the left navigation bar, and then select **Import Media**.
-3. Browse for the file that you want to play, select **Open**. Press the **Esc** key to go back to the app designer.
-4. Set the **Media** property to the name of the file that you added. Then select the play button near the center of the control to watch your video:  
+2. On the **Content** tab, select **Media**, and then select **Add a video**.
+3. Browse for the file that you want to play. Select **Open**. The **Media** property is set to the name of the file that you added. Select the play button in the center of the control to watch your video:  
 ![][13]  
 
 
 #### Play a YouTube video
 You can also play videos from external sources, including YouTube. 
 
-1. On the **Insert** tab, select **Connected Visuals**, and then select **YouTube Watch**:  
-![][14]  
-2. Select the video control by clicking in its center, and then set its **Media** property to the URL of the video you want to show. For example, set it to the following video on the Microsoft YouTube channel:  
+Select the video control. Set its **Media** property to the URL of the video you want to show. For example, set it to the following video on the Microsoft YouTube channel:  
 [https://www.youtube.com/watch?v=tGGCHmb9bro](https://www.youtube.com/watch?v=tGGCHmb9bro)  
+![][14]
+
+
+**Note** Use double quotation marks around the URL.
+
+Preview your app: ![][1]. Select the play button and watch the video:  
 ![][15]  
 
-	**Note** Use the double quotation marks around the URL.
-
-3. Preview your app: ![][1]. Select the play button the middle of the video player. To return to the app designer, press the **Esc** key.
+To return to the app designer, press the **Esc** key.
 
 
 ## Use the microphone to make recordings and play them in your app
 Using the microphone to create recordings, and show these recordings in a gallery. 
 
-1. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control **Description**.
+1. On the **Home** tab, select **New Screen**.
+1. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control **Description**:  
+![][21]  
 2. On the **Insert** tab, select **Media**, and select **Microphone**. If prompted for permissions, select **Allow**.
 3. Rename the control to **MyMicrophone**, and set its **OnStop** property to the following function:  
 ```Collect(Interviews, {Recordings:MyMicrophone!Audio, Notes:Description!Text})```  
+
 	![][16]  
 	By using this function, you create a collection named **Interviews**, which contains a column named **Recordings** and a column named **Notes**. Each row contains a sound file that you create by using the microphone and any text that the Input Text control contains when you stop recording.
 
-4. On the **Insert** tab, select **Gallery**, select the vertical **Custom Gallery**, and then set its **Items** property to **Interviews**.
+4. On the **Insert** tab, select **Gallery**, and under **Custom Galleries**, select **Portrait**. Set the Portrait gallery's **Items** property to **Interviews**.
 5. Select the first item in the gallery, select the **Insert** tab, select **Media**, and then select **Audio**.
 6. Set the **Media** property for the audio control to ```ThisItem!Recordings```.  
 	**Note** You can save visual space by shrinking the audio control so that only the play button appears.
@@ -155,14 +163,16 @@ Press the **Esc** key to return to the app designer.
 ## Use the pen to write or draw directly within the app
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
 
-1. On the **Insert** tab, select **Text**, select **Pen**, and then rename the new control to **Sketches**. 
+1. On the **Home** tab, select **New Screen**.
+1. On the **Insert** tab, select **Text**, select **Pen**, and then rename the new  pen control to **Sketches**. 
 2. On the **Pen** tab, select **Show Controls**:  
 ![][18]  
 	Confirm that ```ShowControls``` is equal to ```true``` in the Function Bar. 
 3. Add a button, set its **Text** property to ```Add``` and set its **OnSelect** property to the following function:  
 ```Collect(Creativity, {Captures:Sketches!Image})```
 4. On the **Insert** tab, select **Gallery**, and select the vertical **Image Only** gallery. Shrink the width of the gallery to show three items. 
-5. Set the gallery's **Items** property to ```Creativity```. 
+5. Set the gallery's **Items** property to ```Creativity```.  
+> [AZURE.NOTE] At anytime, you can resize and move the controls. 
 6. Preview (![][1]) to see what you created. 
 
 	Draw or write something in **Sketches**, and then select the **Add** button. The contents of the pen control appear in the first item of the gallery.
@@ -177,10 +187,12 @@ You can also convert written text to typed text:
 2. Preview your app: ![][1]. Write a word in the pen control. The label shows the word as typed text.
 
 ## Tips and Tricks
+- In the **File** tab > **Media**, you can also upload images, videos, and audio files. When you add one of these controls to your app, set the **Media** property to the name of the file. For example, you uploaded an audio file named MySuperAudio.wmv. In your app, set the **Media** property of the Audio control to ```MySuperAudio```.
 - At anytime, you can select the preview button (![][1]) to see what you created and test it.
-- When designing your app, you can re-size the controls and move them around using click-and-drag.
+- When designing your app, you can resize the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window.
 - **Save** your work using the **File** menu, or press **Ctrl** + **S**.
+
 
 ## What you learned
 
@@ -205,10 +217,11 @@ In this topic, you:
 [11]: ./media/add-images-pictures-audio-video/audiorecording.png
 [12]: ./media/add-images-pictures-audio-video/video.png
 [13]: ./media/add-images-pictures-audio-video/videorecording.png
-[14]: ./media/add-images-pictures-audio-video/youtube.png
+[14]: ./media/add-images-pictures-audio-video/youtubemedia.png
 [15]: ./media/add-images-pictures-audio-video/youtubevideo.png
 [16]: ./media/add-images-pictures-audio-video/microphoneonstop.png
 [17]: ./media/add-images-pictures-audio-video/gallery.png
 [18]: ./media/add-images-pictures-audio-video/pentab.png
 [19]: ./media/add-images-pictures-audio-video/allmedia.png
 [20]: ./media/add-images-pictures-audio-video/addpicture.png
+[21]: ./media/add-images-pictures-audio-video/renameinputtext.png
