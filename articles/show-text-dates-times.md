@@ -8,16 +8,16 @@
 	editor=""/>
 
 <tags
-   ms.service="na"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/22/2015"
+   ms.date="10/29/2015"
    ms.author="mandia"/>
 
 
-# Show text and format dates and times values in your app
+# Show text and format dates and times in your app
 
 Add dates and times, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
 
@@ -53,14 +53,15 @@ DateValue | Converts a literal string, as shown between quotation marks, to a va
 ![][5]  
 ![][6]  
 
-4. In the **ShowText** label (created in step 1), set its **Text** property to the following expression:    
+4. Move the Birthdate text so it all controls are shown. 
+5. In the **ShowText** label (created in step 1), set its **Text** property to the following expression:    
 ```DateDiff(Today(), DateValue(Birthdate!Text))```  
 
 	![][7]  
 
-	This expression shows the number of days between today and whatever date you type into Birthdate. When you type a date into **Birthdate**, the Text property is automatically set to that value.
+	This expression shows the number of days between today and whatever date you type into Birthdate. When you type a date into **Birthdate**, the Text property is automatically set to that value. 
 
-5. In **Birthdate**, enter the month and day of your birthday. **ShowText** shows the number of days between today and the birth date you enter.
+5. In **Birthdate**, enter the month and day of your birthday. **ShowText** shows the number of days between today and the birth date you enter. You can type in text (March 17) or enter number date (3/17). If you don't enter a year, the current year is assumed.
 
 In these steps, you:
 
@@ -77,14 +78,14 @@ There are many functions you can use to format dates and times. You can even use
 
 #### Format date time using the DateTimeValue, DateTimeFormat, and DateValue functions
 
-> [AZURE.NOTE] The **DateTimeValue** and **DateValue** functions can convert dates in any of the following formats into values:
-> - MM/DD/YYYY
-> - DD/MM/YYYY
-> - DD Mon YYYY
-> - Month DD, YYYY
+> [AZURE.NOTE] The **DateTimeValue** and **DateValue** functions can convert dates in any of the following formats into values:  
+> - MM/DD/YYYY  
+> - DD/MM/YYYY  
+> - DD Mon YYYY  
+> - Month DD, YYYY  
 
-1. From the **Insert** tab, select **Text**, add an **Input Text** box, and rename it to **ArrivalDateTime**.
-2. In **ArrivalDateTime**, enter a date, a space, and a time. For example, enter ```5/10/85 6:15 AM```.
+1. From the **Insert** tab, select **Text**, select **Input Text**, and rename it to **ArrivalDateTime**.
+2. Directly in **ArrivalDateTime**, enter a date, a space, and a time. For example, enter ```5/10/85 6:15 AM```.
 3. Add a label, and set its **Text** property to the following expression:   
 ```DateTimeValue(ArrivalDateTime!Text)```  <br/>
 	![][10]  

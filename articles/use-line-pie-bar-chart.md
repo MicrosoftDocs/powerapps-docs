@@ -8,12 +8,12 @@
 	editor=""/>
 
 <tags
-   ms.service="na"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/22/2015"
+   ms.date="10/29/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
@@ -38,7 +38,7 @@ In these steps, we download a sample file. Using a collection, we import this sa
 
 1. Download the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
 2. Create a collection named **ProductRevenue**. Steps include:  
-	a) In your PowerApps app, go to the **Insert** tab, select **Controls**, and then select **Import**.  
+	a) On the **Insert** tab, select **Controls**, and then select **Import**.  
 	b) Set the **OnSelect** property to the following function:  
 ```Collect(ProductRevenue, Import1!Data)```  
 	c) Select the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  

@@ -8,12 +8,12 @@
 	editor=""/>
 
 <tags
-   ms.service="na"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/22/2015"
+   ms.date="10/29/2015"
    ms.author="mandia"/>
 
 # Show images using a conditional statement
@@ -23,7 +23,6 @@ You add a .jpeg image and include a checkbox with a conditional statement. If th
 
 You can use this feature in your PowerApps apps for different scenarios. For example, there is a product image in your PowerApps app. When your users select the checkbox for the product image, additional information is displayed, like the price, or quantity in stock, maybe colors available, and so on.
 
-> [AZURE.TIP] New to PowerApps? Curious about what we're talking about? Go to [PowerApps](http://www.kratosapps.com).
 
 ### Prerequisites
 - Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 

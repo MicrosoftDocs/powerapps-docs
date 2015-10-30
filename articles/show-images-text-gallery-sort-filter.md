@@ -8,12 +8,12 @@
 	editor=""/>
 
 <tags
-   ms.service="na"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/22/2015"
+   ms.date="10/29/2015"
    ms.author="mandia"/>
 
 
@@ -31,7 +31,7 @@ In PowerApps, use a gallery to show several related items, as in a catalog. Gall
 ## Add a gallery to show images and text
 
 1. Create a collection named **Inventory** based on the sample data. Steps include:  
-	a) Open an app in PowerApps Studio. On the **Insert** tab, select **Controls**, and then select **Import**:  
+	a) On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
 	b) Set the **OnSelect** property of the import control to the following expression:  
 	```Collect(Inventory, Import1!Data)```  
@@ -42,24 +42,24 @@ In PowerApps, use a gallery to show several related items, as in a catalog. Gall
 
 	You've just created the Inventory collection, which contains information about five products, including a design image, the name of the product, and the number of units in stock. 
 
-2. Select the back arrow or press the Esc key to return to the designer.
-3. On the **Insert** tab, select **Gallery**, and then select the horizontal **With Text** image gallery:  
+2. Select the back arrow to return to the designer.
+3. On the **Insert** tab, select **Gallery**. Under **Image Galleries**, select the horizontal **With Text** image gallery:  
 ![][4]  
-3. Set the **Items** property of the gallery to **Inventory**:  
+4. Set the **Items** property of the gallery to **Inventory**:  
 ![][5]  
-4. Rename the gallery to **ProductGallery**, and move the gallery so it doesn't block the other controls. Widen it to show three products:  
+5. Rename the gallery to **ProductGallery**, and move the gallery so it doesn't block the other controls. Resize the gallery so it shows three products:  
 ![][6]  
-5. In the first item of the gallery, select the bottom label:  
+6. In the first item of the gallery, select the bottom label:  
 ![][7]  
 	> [AZURE.NOTE] When you change the first item in any gallery, you automatically change all other items in the gallery.  
  
-6. Set the **Text** property of the label to the following expression:  
+7. Set the **Text** property of the label to the following expression:  
 ```ThisItem!UnitsInStock``` <br/>
 
 	When you do this, the label shows the units in stock for each product:  
 ![][8]  
 
-> [AZURE.NOTE] By default, the **Text** property of the top label is set to ```ThisItem!ProductName```. You can change it to any other item in your collection. For example, if your collection has *ProductDescription* or *Quantity* fields, you can set the label to ```ThisItem!ProductDescription``` or ```ThisItem!Quantity```.
+> [AZURE.NOTE] By default, the **Text** property of the top label is set to ```ThisItem!ProductName```. You can change it to any other item in your collection. For example, if your collection has *ProductDescription* or *Price* fields, you can set the label to ```ThisItem!ProductDescription``` or ```ThisItem!Price```.
 
 Using these steps, you imported data that includes .jpg images into a collection. You then added a gallery that displays the data and configured a label to show the units in stock for each product.
 
@@ -70,19 +70,20 @@ Using these steps, you imported data that includes .jpg images into a collection
 2. On the **Insert** tab, select **Shapes**, and then select the rectangle. A blue solid rectangle appears in each gallery item.
 3. On the **Home** tab, select **Fill**, and then select **No Fill**.
 4. Select **Border**, select **Border Style**, and then select the solid line.
-5. Select **Border** again, and set the thickness to 3. Resize the rectangle so that it surrounds each gallery item. The items in your gallery now have a blue border and should looks similar to the following:  
+5. Select **Border** again, and set the thickness to 3. Resize the rectangle so that it surrounds the gallery item. The items in your gallery now have a blue border and should look similar to the following:  
 ![][10]  
 6. On the **Shape** tab, select **Visible**, and then enter the following expression in the Function Bar:  
 ```If(ThisItem!IsSelected, true)```
 
 	A blue rectangle surrounds the current selection in a gallery. Click a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![][2] to see and test what you're creating.
 
-> [AZURE.TIP] Click the rectangle, click **Reorder** on the **Home** tab, and then click **Send to Back**. Using this step, you can click a gallery label to select it without the rectangle getting in the way.
+> [AZURE.TIP] Click the rectangle, click **Reorder** on the **Home** tab, and then click **Send to Back**. Using this feature, you can select a gallery item without the border blocking anything.
 
 Using these steps, you added a border around the current selection in the gallery.
 
 
 ## Sort and filter items in the gallery
+In these steps, we are going to sort the gallery items in ascending and descending order. Also, we'll add a slider control to 'filter' gallery items by the units in stock that you choose. 
 
 #### Sort in ascending or descending order
 
@@ -98,20 +99,24 @@ Using these steps, you added a border around the current selection in the galler
 
 #### Add a slider control and filter items in the gallery
 
-1. Add a slider control, name it **StockFilter**, and move it near the gallery.
+1. Add a Slider control (Insert tab > Controls), rename it to **StockFilter**, and move it under the gallery.
 2. Configure the slider so that users can't set it to a value outside the range of units in stock:  
-	a) On the **Data** tab, click **Min**, and then enter the following expression:  
-	```Min(Inventory, UnitsinStock)```  
-	b) On the **Data** tab, click **Max**, and then enter the following expression:  
-	```Max(Inventory, UnitsinStock)```
+	a) On the **Content** tab, select **Min**, and then enter the following expression:  
+	```Min(Inventory, UnitsInStock)```  
+	b) On the **Content** tab, click **Max**, and then enter the following expression:  
+	```Max(Inventory, UnitsInStock)```
 3. Set the **Items** property of the gallery to the following expression:  
-```Filter(Inventory, UnitsinStock<=StockFilter!Value)```
-4. In **Preview**, adjust the slider to a value that's between the highest and the lowest price in the gallery. As you adjust the slider, the gallery shows only those products that cost less than the value you choose:  
+```Filter(Inventory, UnitsInStock<=StockFilter!Value)```
+4. In **Preview**, adjust the slider to a value that's between the highest and the lowest quantity in the gallery. As you adjust the slider, the gallery shows only those products that are less than the value you choose:  
 ![][13]  
-5. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control to **NameFilter**.
-6. Set the **Items** property of the gallery to the following expression:  
-```Filter(Inventory, UnitsinStock<=StockFilter!Value && NameFilter!Text in ProductName)```
-7. In **Preview**, set the slider to *30*, and type the letter *g* in the input text box. The gallery shows the only product with fewer than 30 units in stock *and* has a name with the letter "g":  
+
+Now, let's add to our filter: 
+
+1. Go back to the designer.
+2. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control to **NameFilter**. Move the text control below the slider.
+3. Set the **Items** property of the gallery to the following expression:  
+```Filter(Inventory, UnitsInStock<=StockFilter!Value && NameFilter!Text in ProductName)```
+4. In **Preview**, set the slider to *30*, and type the letter *g* in the input text box. The gallery shows the only product with less than 30 units in stock *and* has a name with the letter "g":  
 ![][14]  
 
 
