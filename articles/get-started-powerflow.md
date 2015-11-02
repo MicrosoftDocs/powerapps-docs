@@ -1,6 +1,6 @@
 <properties
-    pageTitle="KratosApps tutorial: Create a PowerFlow"
-    description="Create a PowerFlow to take action when one or more conditions are met. For example, get an email whenever someone adds a row to a Sharepoint list."
+    pageTitle="KratosApps tutorial: Create PowerApps Logic"
+    description="Create a Logic to take action when one or more conditions are met. For example, get an email whenever someone adds a row to a Sharepoint list."
     services="kratosapps"
     authors="aftowen"
  />
@@ -14,8 +14,8 @@
    ms.date="10/06/2015"
    ms.author="anneta"/>
 
-# Create a PowerFlow #
-Create a PowerFlow to take action when something happens. For example, create a PowerFlow so that you get an email message whenever someone adds a row to a SharePoint List. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
+# Create Logic #
+Create PowerApps Logic to take action when something happens. For example, create Logic so that you get an email message whenever someone adds a row to a SharePoint List. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
 
 **Prerequisites**
 
@@ -25,13 +25,13 @@ Create a PowerFlow to take action when something happens. For example, create a 
 
 ## Create a trigger
 
-1. Open KratosApps, and then click **Create a flow** in the landing page.
+1. Open KratosApps, and then click **Create Logic** in the landing page.
 
-    ![Click Flows on the right](./media/get-started-powerflow/landingpage.png)
+    ![Click Logic on the right](./media/get-started-powerflow/landingpage.png)
 
 3. Click **Create from blank**.
 
-    ![Create a PowerFlow from blank](./media/get-started-powerflow/gallery.png)
+    ![Create Logic from blank](./media/get-started-powerflow/gallery.png)
 
 4. In the text box that says **Start your logic**, type **SharePoint**, and then click **When a new item is added in a list** in the set of actions.
 
@@ -47,16 +47,16 @@ Create a PowerFlow to take action when something happens. For example, create a 
 
     ![SharePoint lists](./media/get-started-powerflow/select-list.png)
 
-8. Enter a name for your flow in the **Flow name** text box near the bottom of the screen. 
+8. Enter a name for your logic in the **Logic name** text box near the bottom of the screen. 
 
-7. Save your PowerFlow by clicking **Done** near the bottom of the screen.
+7. Save your logic by clicking **Done** near the bottom of the screen.
 
     ![Click the done button](./media/get-started-powerflow/done2.png)
 
 ## Create the action ##
-In this procedure, you'll add an action to send email in your PowerFlow and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your PowerFlow to make it work the way you want.
+In this procedure, you'll add an action to send email in your logic and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your logic to make it work the way you want.
 
-1. In the list of PowerFlows, click the edit icon next to one that you created in the previous procedure (the *pencil* icon).
+1. In the list of your logic, click the edit icon next to one that you created in the previous procedure (the *pencil* icon).
 
 2. Click the "+" button and select **Add action**
 
@@ -78,9 +78,9 @@ In this procedure, you'll add an action to send email in your PowerFlow and then
 
 4. Type the end of your message, including any other fields you want to include, and then click **Done**.
 
-    The list of flows reflects your changes.
+    The list of your logic reflects your changes.
 
-## Test your PowerFlow ##
+## Test your Logic ##
 
 1. Open the SharePoint online list..
 2. On the main page for the list, click **new item**
@@ -93,4 +93,4 @@ In this procedure, you'll add an action to send email in your PowerFlow and then
 
 ## Next Steps ##
 
-- [Add additional steps](advanced-parameters-powerflow.md) Add more steps, such as different ways to be notified, to your PowerFlow.
+- [Add additional steps](advanced-parameters-powerflow.md) Add more steps, such as different ways to be notified, to your Logic.
