@@ -606,7 +606,7 @@ As you develop an app, specify its appearance and behavior by building expressio
 |---|---|
 |Syntax|**Trim**(*Text*)<br>**Trim**(*ColumnExpression*)|
 |Description|Removes all spaces from a text string except for single spaces between words.|
-|Examples|<ol><li>Add an input text control, and name it **Source**.</li><br><li>Add a label, and set its **Text** property to this expression:<br>**Trim(Slogan!Text)**</li><br><li>Press F5, and then type or paste **We are&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the best!** in the **Source** box.<br>The label shows **We are the best!**|
+|Examples|<ol><li>Add an input text control, and name it **Source**.</li><br><li>Add a label, and set its **Text** property to this expression:<br>**Trim(Source!Text)**</li><br><li>Press F5, and then type or paste **We are&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the best!** in the **Source** box.<br>The label shows **We are the best!**|
 
 ### <a name="update"></a>Update
 |&nbsp;|&nbsp;|
