@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Build a formula"
+   pageTitle="Build a formula in PowerApps"
    description="In PowerApps, you can use the operators and functions that this topic describes."
    services="na"
    documentationCenter="na"
@@ -8,7 +8,7 @@
    editor=""
    tags=""/>
 <tags
-   ms.service="kratosapps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
@@ -19,9 +19,9 @@
 
 #Formula reference
 
-**Note** : This page is under construction. 
+**Note:** This page is under construction. 
 
-![][1]
+![Construction icon][1]
 
 
 - [Patch](functions/function-patch.md)
