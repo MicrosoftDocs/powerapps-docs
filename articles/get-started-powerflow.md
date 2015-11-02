@@ -1,24 +1,25 @@
 <properties
-    pageTitle="PowerApps: Create a PowerFlow"
-    description="Create a PowerFlow to automate routine tasks in your workflow, such as sending email when an item is added to a list in Excel or SharePoint."
+    pageTitle="PowerApps: Create PowerApps Logic"
+    description="Create a Logic to take action when one or more conditions are met. For example, get an email whenever someone adds a row to a Sharepoint list."
     services="powerapps"
     documentationCenter="na"
     authors="AFTOwen"
     manager="dwrede"
     editor=""
-    tags=""/>
-
+    tags=""
+ />
 <tags
     ms.service="powerapps"
     ms.devlang="na"
     ms.topic="get-started-article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/21/2015"
+    ms.date="11/02/2015"
     ms.author="anneta"/>
 
-# Create a PowerFlow #
-Create a PowerFlow to take action when something happens. For example, create a PowerFlow so that you get an email message whenever someone adds a row to a SharePoint list. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
+# Create Logic #
+Create PowerApps Logic to take action when something happens. For example, create Logic so that you get an email message whenever someone adds a row to a SharePoint List. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
+
 
 **Prerequisites**
 
@@ -28,13 +29,13 @@ Create a PowerFlow to take action when something happens. For example, create a 
 
 ## Create a trigger
 
-1. In Chrome, open [the PowerApps portal](https://portal.kratosapps.com/), and then click **Create a flow**.
+1. In Chrome, open [the PowerApps portal](https://portal.kratosapps.com/), and then click **Create logic**.
 
-    ![Click Flows on the right](./media/get-started-powerflow/landingpage.png)
+    ![Click Logic on the right](./media/get-started-powerflow/landingpage.png)
 
 3. Click **Create from blank**.
 
-    ![Create a PowerFlow from blank](./media/get-started-powerflow/gallery.png)
+    ![Create Logic from blank](./media/get-started-powerflow/gallery.png)
 
 4. In the text box that says **How would you like to start?**, type **SharePoint**.
 
@@ -61,9 +62,9 @@ Create a PowerFlow to take action when something happens. For example, create a 
     ![Click the done button](./media/get-started-powerflow/done2.png)
 
 ## Create the action ##
-In this procedure, you'll add an action to send email in your PowerFlow, and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your PowerFlow to make it work the way you want.
+In this procedure, you'll add an action to send email in your logic and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your logic to make it work the way you want.
 
-1. In the list of PowerFlows, click the edit icon, which looks like a pencil, next to the PowerFlow that you created in the previous procedure.
+1. In the list of your logic, click the edit icon, which looks like a pencil, next to the logic that you created in the previous procedure.
 
 2. Click the "+" button, and then click **Add action**
 
@@ -87,9 +88,9 @@ In this procedure, you'll add an action to send email in your PowerFlow, and the
 
 4. Type the end of your message, including any other parameters you want to include, and then click **Done** at the bottom of the screen.
 
-    The list of flows reflects your changes.
+    The list of your logic reflects your changes.
 
-## Test your PowerFlow ##
+## Test your Logic ##
 
 1. On the main page for the SharePoint Online list, click **new item**.
 
@@ -101,4 +102,4 @@ In this procedure, you'll add an action to send email in your PowerFlow, and the
 
 ## Next Steps ##
 
-- [Add steps](advanced-parameters-powerflow.md), such as different ways to be notified, to your PowerFlow.
+- [Add steps](advanced-parameters-powerflow.md), such as different ways to be notified, to your logic.
