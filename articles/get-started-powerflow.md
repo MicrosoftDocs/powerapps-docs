@@ -14,7 +14,7 @@
     ms.topic="get-started-article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/21/2015"
+    ms.date="11/02/2015"
     ms.author="anneta"/>
 
 # Create Logic #

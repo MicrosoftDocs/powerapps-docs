@@ -1,17 +1,21 @@
 <properties
     pageTitle="KratosApps tutorial: Create PowerApps Logic from a template"
     description="There are a number of built-in templates to create logic from."
-    services="kratosapps"
-    authors="aftowen"
+    services="powerapps"
+    documentationCenter="na"
+    authors="AFTOwen"
+    manager="dwrede"
+    editor=""
+    tags=""
  />
 
 <tags
-   ms.service="kratosapps"
-   ms.devlang="na"
-   ms.topic="get-started-article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/02/2015"
+  ms.service="powerapps"
+    ms.devlang="na"
+    ms.topic="get-started-article"
+    ms.tgt_pltfrm="na"
+    ms.workload="na"
+    ms.date="11/02/2015"
    ms.author="anneta"/>
 
 # Create Logic from a template #
