@@ -165,7 +165,7 @@ As you develop an app, specify its appearance and behavior by building expressio
 |---|---|
 |Syntax|**DateDiff**(*StartDate*, *EndDate*[, *Units*])|
 |Description|Returns the difference between two dates. By default, this function returns the result in **Days**, but you can specify a third argument to return the results in **Years**, **Quarters**, or **Months**.|
-|Examples|If today were July 15, 2013,  and you set the **Text** property of a label to this expression:<br><ul><li>**DateDiff(Today(), 1/1/2014)**<br>The label would show **170** as the number of days between today and the first day of the next year.</li><br><li>**DateDiff(Today(), 1/1/2014, Months)**<br>The label would show 6 because the number of months between the dates is more than five and less than seven.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
+|Examples|If today were July 15, 2015,  and you set the **Text** property of a label to this expression:<br><ul><li>**DateDiff(Today(), DateValue("1/1/2016"))**<br>The label would show **170** as the number of days between today and the first day of the next year.</li><br><li>**DateDiff(Today(), DateValue("1/1/2016"), Months)**<br>The label would show **6** because the number of months between the dates is more than five and less than seven.<br><br>[More examples](show-text-dates-times.md) of how to manage dates and times.|
 
 ### <a name="datetimevalue"></a>DateTimeValue
 |&nbsp;|&nbsp;|
