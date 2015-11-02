@@ -22,6 +22,7 @@ Create an app automatically based on one of several templates for a variety of s
 [What is PowerApps?](http://www.kratosapps.com/tutorials)
 
 **Prerequisites**
+
 - [Install PowerApps Studio](http://aka.ms/powerappsinstall)
 - An account, such as DropBox or OneDrive, for storing sample data in the cloud
 
