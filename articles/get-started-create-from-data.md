@@ -1,9 +1,12 @@
 <properties
-	pageTitle="Create an app from data in PowerApps"
-	description=""
+	pageTitle="PowerApps: Create an app from an existing data set"
+	description="In PowerApps, create an app automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
 	services="powerapps"
+	documentationCenter="na"
 	authors="AFTOwen"
- />
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
    ms.service="powerapps"
@@ -11,26 +14,26 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/16/2015"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 
 # Create an app from data
 Create an app automatically based on data that you specify, explore how the app works by default, and then customize the app to better fit how you work.
 
-[What is PowerApps?]()
+[What is PowerApps?](http://www.kratosapps.com/tutorials)
 
 **Prerequisites**
 
-- Sign up for and install [PowerApps]()
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall )
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 - A set of data in the cloud, such as in DropBox or OneDrive
-- Familiarity with how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
 ## Connect to data ##
 You can create an app based on data from any of several kinds of sources. For this tutorial, the data source is an Excel file in Dropbox. The file, named **eventsignup.xls**, contains this data [formatted as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) and named **Schedule**.
 
 ![Source data in Excel](./media/get-started-create-from-data/excel-source.jpg)
 
-1. Sign in to PowerApps, and then click **New** in the left navigation bar.
+1. In PowerApps Studio, click **New** in the left navigation bar.
 
 	![The New option in the left navigation bar](./media/get-started-create-from-data/file-new.jpg)
 
@@ -64,7 +67,7 @@ When the app is created, it appears in the default workspace, where you can cust
 
 	![The default BrowseScreen](./media/get-started-create-from-data/default-browsescreen.jpg)
 
-	The first screen, named **BrowseScreen**, shows which people are signed up for each shift in a schedule. You can sort the data, add an item, and search for an item by using the elements near the top of the screen.
+	The first screen, named **BrowseScreen**, shows which people are signed up for each shift in a schedule. You'll be able to sort the data, add an item, and search for an item by using the elements near the top of the screen.
 
 1. Click the arrow for the first item to show details about that item.
 
@@ -88,7 +91,7 @@ When the app is created, it appears in the default workspace, where you can cust
 
 	![Updating an item](./media/get-started-create-from-data/replace-name.jpg)
 
-	The updated data appears in the app and the source.
+	Your change or changes appear in the gallery on the **BrowseScreen** and in the data source in the cloud.
 
 1. Press Esc to return to the default workspace, in which you can customize the app.
 
@@ -165,7 +168,7 @@ You can customize the default app by adding or deleting a screen, changing a pro
 
 	![The default value of the **Items** property](./media/get-started-create-from-data/sort-before.jpg)
 
-1. Change value of the **Items** property to this expression, which shows the updates in red bold.
+1. Change value of the **Items** property to this expression (updates in red bold text):
 
 	![The value of the **Items** property, set to sort by StartDay](./media/get-started-create-from-data/sort-after.jpg)
 

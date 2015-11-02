@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Add a listbox, drop-down list, and radio button controls in KratosApps | Microsoft Azure"
+	pageTitle="Add a listbox, drop-down list, and radio button controls in PowerApps Studio | Microsoft Azure"
 	description=""
 	services=""
 	documentationCenter=""
@@ -8,23 +8,23 @@
 	editor=""/>
 
 <tags
-   ms.service="na"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/12/2015"
+   ms.date="10/28/2015"
    ms.author="mandia"/>
 
 
 # Add a list box, drop-down list, or radio button control
 
-KratosApps includes multi-select and single-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
+PowerApps Studio includes multi-select and single-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
 
 ### Prerequisites
 
-- Install KratosApps. Create a new app or open an existing app in KratosApps.
-- To familiarize yourself with configuring controls in KratosApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
 ## Add a listbox
@@ -46,7 +46,7 @@ KratosApps includes multi-select and single-select options, including a listbox,
 
 6. Set the **Visible** property of the following shapes to the following functions:  
 
-	Shape | Set function to | Screen shot
+	Shape | Set function to | Example
 --- | --- | ---
 circle | ```If("circle" in MyListbox!SelectedItems!Value, true)``` | ![][7]
 triangle | ```If("triangle" in MyListbox!SelectedItems!Value, true)``` | ![][8]
@@ -61,36 +61,45 @@ In these steps, you used an expression to create a list of items in a listbox. D
 
 > [AZURE.NOTE] The following steps apply to radio button controls and drop-down lists. Both controls are created the same way.
 
-1. On the **Insert** tab, select **Controls**, select **Radio**, and then rename the radio control to **Choices**:  
+1. On the **Home** tab, select **New Screen**.
+2. On the **Insert** tab, select **Controls**, select **Radio**, and then rename the radio control to **Choices**:  
 ![][10]  
 
 	![][11]  
 
-2. Set the radio control **Items** property to the following function:  
+3. Set the radio control **Items** property to the following function:  
 ```["red","green","blue"]```  <br/>
 
 	![][12]  
 
 	If needed, resize the control to show all the options.
 
-3. On the Insert tab, select **Shapes**, and select the circle. Set the **Fill** property of the circle to the following function:  
+4. On the Insert tab, select **Shapes**, and select the circle. Set the **Fill** property of the circle to the following function:  
 ```If(Choices!Selected!Value = "red", RGBA(192, 0, 0, 1), Choices!Selected!Value = "green", RGBA(0, 176, 80, 1), Choices!Selected!Value = "blue", RGBA(0, 32, 96, 1))```  
 
 	![][13]  
 
-	In this function, you enter different color values based on which radio button you choose.
+	In this function, the circle changes its color depending on which radio button you choose.
 
 5. Move the circle under the radio control. You setup should look similar to the following:  
 ![][14]  
 6. Preview what you've created: ![][1]. Select the different radio buttons to change the color of the circle. Press ESC to go back to your screen.
 
-In these steps, you used an expression to create the items in the radio button control. When you click an item within the control, the property of another control (the circle) changes.
+Now, try the same steps using the drop-down control:  
+	![][15]  
+
+1. Add a new screen, add the drop-down control, and rename it to **DDChoices**. Add the circle and set its **Fill** property to the following function:  
+```If(DDChoices!Selected!Value = "red", RGBA(192, 0, 0, 1), DDChoices!Selected!Value = "green", RGBA(0, 176, 80, 1), DDChoices!Selected!Value = "blue", RGBA(0, 32, 96, 1))```
+
+2. Preview what you've created: ![][1]. Select the different options to change the color of the circle.
+
+In these steps, you used an expression to create the items in a radio button and  a drop-down control. When you click an item within the control (radio or drop-down), the property of another control (the circle) changes.
 
 
 ## Tips and Tricks
 - You can also use different data sources to populate the items within these controls. For example, you can use an Excel table as a data source. Then display the Excel data in a list box, and so on.
 - At anytime, you can select the preview button (![][1]) to see what you created and test it.
-- When designing your app, you can re-size the controls and move them around using click-and-drag.
+- When designing your app, you can resize the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window and go back to the designer.
 - We renamed some controls, including the listbox. Renaming controls is optional. When using controls in expressions, it's easier to remember the control names if you rename them. 
 
@@ -118,3 +127,4 @@ In this topic, you:
 [12]: ./media/add-list-box-drop-down-list-radio-button/itemsradio.png
 [13]: ./media/add-list-box-drop-down-list-radio-button/fillradio.png
 [14]: ./media/add-list-box-drop-down-list-radio-button/radiocircle.png
+[15]: ./media/add-list-box-drop-down-list-radio-button/dropdown.png

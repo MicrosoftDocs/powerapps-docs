@@ -1,21 +1,25 @@
-<properties	pageTitle="Create an app from a blank screen in PowerApps"
-	description="Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, and then customize the app to better fit the way you work."
+<properties	pageTitle="PowerApps: Create an app from a blank screen"
+	description="In PowerApps, create an app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business."
 	services="powerapps"
-	authors="AFTOwen"/>
+	documentationCenter="na"
+	authors="AFTOwen"
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
    ms.service="powerapps"
    ms.devlang="na"
-   ms.topic="hero-article"
+   ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/18/2015"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 
 # Create an app from a blank screen #
-Create your own app from scratch using any of a variety of data sources. (more intro)
+Create your own app from scratch using any of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the app to meet your exact goals and workflow.
 
-[What is PowerApps?]()
+[What is PowerApps?](http://www.kratosapps.com/tutorials)
 
 By following this tutorial, you'll create an app that shows users a set of data on its first screen:
 
@@ -27,11 +31,12 @@ On another screen, users can create, update, or delete a record in that set of d
 
 **Prerequisites**
 
-- Sign up for and install [PowerApps]()
-- Familiarity with how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
-- A set of data in the cloud, such as in DropBox or OneDrive
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall)
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
+- A cloud-storage account, such as DropBox or OneDrive
 
 To follow this tutorial exactly:
+
 1. Create an Excel file, and name it **eventsignup.xlsx**.
 
 1. Add this data, which shows who has signed up to cover which shifts during a fictional event.
@@ -54,18 +59,20 @@ To follow this tutorial exactly:
 	![Option to create an app from scratch](./media/get-started-create-from-blank/blank-app.jpg)
 
 1. If you haven't created a data connection, follow these steps:
+
 	1. Open the **File** menu, and then click **Connections**.
 
-	![Connections option on the File menu](./media/get-started-create-from-blank/file-connections.jpg)
+		![Connections option on the File menu](./media/get-started-create-from-blank/file-connections.jpg)
+
 	1. Click **Available Connections**, click the connection that you want to use (such as **Dropbox**), and then click **Connect**.
 
-	![Dropbox option and Connect button](./media/get-started-create-from-blank/add-dropbox.jpg)
+		![Dropbox option and Connect button](./media/get-started-create-from-blank/add-dropbox.jpg)
 
 	1. Provide the requested credentials, and then click **Sign in**.
 
 	1. In the upper-left corner, click the Back arrow to return to the default workspace.
 
-	![Back arrow from Connections to default workspace](./media/get-started-create-from-blank/back-from-connections.jpg)
+		![Back arrow from Connections to default workspace](./media/get-started-create-from-blank/back-from-connections.jpg)
 
 1. On the bottom edge of the screen, click **Options**.
 
@@ -149,6 +156,11 @@ To follow this tutorial exactly:
 1. Move the arrow to the right edge of the gallery, and then set its **OnSelect** property to this formula:
 
 	**Navigate(ChangeScreen,ScreenTransition!Fade,{Record:ThisItem})**
+
+	This formula includes the **Navigate** function, which you use to open one screen from another. That function requires at least two pieces of information (named arguments): the name of the screen that you want to open and the visual effect of that transition. In this example, the first argument specifies that you want to open the **ChangeScreen**, and the second argument specifies that you want that screen to fade into view.
+
+	In addition, this formula specifies a context variable, named **Record,** that's set to a value of **ThisItem**. In other words, this formula tracks the gallery item in which the arrow was clicked, so that the controls on the **ChangeScreen** will automatically show the data from that item.
+
 1. Click anywhere outside the gallery, click the **Insert** tab on the ribbon, and then click **Button**.
 
 	![Button option on the Insert tab](./media/get-started-create-from-blank/insert-button.jpg)
@@ -160,6 +172,8 @@ To follow this tutorial exactly:
 1. Set the **OnSelect** property of the button to this formula:
 
  	**Navigate(ChangeScreen,ScreenTransition!Fade,{Record:Defaults(Schedule)})**
+
+	As with the Next arrow in the gallery, this formula includes the **Navigate** function, and you use the same arguments to specify which screen to open and the visual effect to use. In this case, this formula sets the value of the **Record** context variable to the default values of the **Schedule** data source. That data source has no default values, so the  controls on the **ChangeScreen** will be blank. If the data source had default values, they would appear in the controls so that users could more easily accept or modify them.
 
 1. On the **ChangeScreen**, add a label that identifies it, and [add a Back arrow](add-screen-context-variables.md#add-a-screen-and-navigation) that returns to the **ViewScreen** when a user clicks the arrow.
 
@@ -179,6 +193,13 @@ To follow this tutorial exactly:
 
 	![Move text-input control under Day label](./media/get-started-create-from-blank/move-input-text.jpg)
 1. Name the input-text control **inputDay**, and set its **Default** property to **Record!Day**.
+
+	You'll refer to that control by its name later in this topic, when you configure the **Save** button.
+
+	By setting the **Default** property as the previous step instructs, you configure the input-text control to show the **Day** value that's stored in the **Record** context variable.
+
+	- If the user navigated to this screen by clicking the Next arrow in a gallery item on the **ViewScreen**, this control shows the **Day** value for that item.
+	- If the user navigated to this screen by clicking the **New** button on the **ViewScreen**, this control shows the data source's default value for the **Day** column. Because this data source has no defaults, the control will be blank.
 
 1. Copy the label and the input-text control, paste them three times, and arrange them in a column that alternates labels with input-text controls.
 
@@ -218,12 +239,20 @@ To follow this tutorial exactly:
 
 1. Set the **OnSelect** property of the **Save** button to this formula:
 
-	**UpdateContext({Record:Patch(Schedule,Record,{StartDay:inputDay!Text,StartTime:inputTime!Text,Staff1:inputStaff1!Text,Staff2:inputStaff2!Text})});If(IsBlank(Errors(Schedule,Record)),Navigate(ViewScreen,ScreenTransition!Fade))**
+	**UpdateContext({Record:Patch(Schedule,Record,{StartDay:inputDay!Text,StartTime:inputTime!Text,Staff1:inputStaff1!Text,Staff2:inputStaff2!Text})});If(IsEmpty(Errors(Schedule,Record)),Navigate(ViewScreen,ScreenTransition!Fade))**
+
+	In this formula, you use the **UpdateContext** function to change the value of the **Record** variable to the output of the **Patch** function. The **Patch** function adds or updates a record in a data source and requires three arguments: the name of the data source to update, the record to update, and the information that the record should contain after the change. In this case, the **Patch** function will update the **Schedule** data source. If the user clicked the **New** button on the **ViewScreen** to open the **ChangeScreen**, a record will be created. If the user clicked a Next arrow for a gallery item, the record for that item will be updated. In either case, the new or updated record will contain the information from each text-input control on the **ChangeScreen**.
+
+ 	In addition, you use the **If** function in this formula to open the **ViewScreen** only if the output of the **Errors** function is empty. The **Errors** function tracks whether any errors occurred when the app tried to create or update the record. (For example, an error would occur if the device wasn't connected to the network and couldn't update the **Schedule** data source.) If no errors occurred, the **ViewScreen** would fade open. If an error occurred, the **ChangeScreen** would remain open.
 
 1. Set the **OnSelect** property of the **Remove** button to this formula:
 
 	**UpdateContext({NewRecord:Remove(Schedule,Record)});If(IsEmpty(Errors(Schedule,Record)),Navigate(ViewScreen,ScreenTransition!Fade))**
 
+	In this formula, you use the **UpdateContext** function to create a context variable named **NewRecord**, and you set the value of that variable to the output of the **Remove** function. The **Remove** function is simpler to use than **Patch** in that **Remove** requires the same two arguments to specify a data source and a record, but you don't need to specify any data to add or update. This formula also includes the same **If** that returns to the **ViewScreen** only if no errors occurred when the app tried to remove the record.  
+
 1. Add a label, move it below the last input-text control, and set the label's **Text** property to this formula:
 
 	**First(Filter(Errors(Schedule,Record),IsBlank(Column)))!Message**
+
+	In this formula, you're configuring the label to show information about an error that might have occurred when the app tried to add, update, or remove a record. The formula centers around the **Errors** function, which tracks error information in a table. Overall, the formula shows the data from the **Message** column of that table for the **First** record in which the **Column** column is blank.

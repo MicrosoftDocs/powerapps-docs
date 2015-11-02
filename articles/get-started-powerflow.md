@@ -1,31 +1,35 @@
 <properties
-    pageTitle="KratosApps tutorial: Create PowerApps Logic"
+    pageTitle="PowerApps: Create PowerApps Logic"
     description="Create a Logic to take action when one or more conditions are met. For example, get an email whenever someone adds a row to a Sharepoint list."
-    services="kratosapps"
-    authors="aftowen"
+    services="powerapps"
+    documentationCenter="na"
+    authors="AFTOwen"
+    manager="dwrede"
+    editor=""
+    tags=""
  />
-
 <tags
-   ms.service="kratosapps"
-   ms.devlang="na"
-   ms.topic="get-started-article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/06/2015"
-   ms.author="anneta"/>
+    ms.service="powerapps"
+    ms.devlang="na"
+    ms.topic="get-started-article"
+    ms.tgt_pltfrm="na"
+    ms.workload="na"
+    ms.date="10/21/2015"
+    ms.author="anneta"/>
 
 # Create Logic #
 Create PowerApps Logic to take action when something happens. For example, create Logic so that you get an email message whenever someone adds a row to a SharePoint List. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
 
+
 **Prerequisites**
 
-- [KratosApps](https://www.kratosapps.com/)
 - An account, such as Dropbox, OneDrive, or SharePoint, for storing files in the cloud
 - An Office 365 account (from which you can send email)
+- Chrome browser
 
 ## Create a trigger
 
-1. Open KratosApps, and then click **Create Logic** in the landing page.
+1. In Chrome, open [the PowerApps portal](https://portal.kratosapps.com/), and then click **Create logic**.
 
     ![Click Logic on the right](./media/get-started-powerflow/landingpage.png)
 
@@ -33,64 +37,69 @@ Create PowerApps Logic to take action when something happens. For example, creat
 
     ![Create Logic from blank](./media/get-started-powerflow/gallery.png)
 
-4. In the text box that says **Start your logic**, type **SharePoint**, and then click **When a new item is added in a list** in the set of actions.
+4. In the text box that says **How would you like to start?**, type **SharePoint**.
+
+1. In the list of actions, click **SharePoint Online - When a new Item is added in a List**
 
     ![Sharepoint triggers](./media/get-started-powerflow/add-sp-data.png)
 
-5. If you haven't already connected your SharePoint Online account to **PowerApps**, you'll need to click **Sign in to SharePoint** and provide your credentials. 
+5. If you haven't already connected your SharePoint Online account to PowerApps, click **Sign in to SharePoint**, and then provide your credentials.
 
-6. Paste in the URL of the SharePoint site that you want to connect to. Be sure to include just the site URL and not the full path of the list
+6. In the **SITE URL** box, type or paste the URL of the SharePoint site that contains the list you want to use.
 
-    ![Enter site](./media/get-started-powerflow/enter-site.png)
+  **Important:** Include only the site URL, not the full path of the list.
 
-7. Click in the **List name** box and the Lists in that SharePoint site will appear. If it says "**Could not retrieve values**", double check your site URL, it is not correct.
+  ![Enter site](./media/get-started-powerflow/enter-site.png)
 
-    ![SharePoint lists](./media/get-started-powerflow/select-list.png)
+1. Under **LIST NAME**, click the down arrow to show the names of all lists in the site you specified.
 
-8. Enter a name for your logic in the **Logic name** text box near the bottom of the screen. 
+  ![SharePoint lists](./media/get-started-powerflow/select-list.png)
 
-7. Save your logic by clicking **Done** near the bottom of the screen.
+  **Note:** If **Could not retrieve values** appears, correct your site URL.
+
+8.  Click the name of a list, name your PowerFlow in the box near the bottom of the screen, and then click **Done**.
 
     ![Click the done button](./media/get-started-powerflow/done2.png)
 
 ## Create the action ##
 In this procedure, you'll add an action to send email in your logic and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your logic to make it work the way you want.
 
-1. In the list of your logic, click the edit icon next to one that you created in the previous procedure (the *pencil* icon).
+1. In the list of your logic, click the edit icon, which looks like a pencil, next to the logic that you created in the previous procedure.
 
-2. Click the "+" button and select **Add action**
+2. Click the "+" button, and then click **Add action**
 
     ![Add action](./media/get-started-powerflow/addaction.png)
 
-2. In the list of actions, search for **Send email**, and click it. As with SharePoint, if you haven't already connected to Office 365, you will need to provide the credentials for your account too.
+2. In the box that shows **What would you like to do next?**, type or paste **send email**, and then click **Office365 - Send Email**.
 
-    ![List of actions](./media/get-started-powerflow/send_email.png)
+  ![List of actions](./media/get-started-powerflow/send_email.png)
 
-4. In the form that appears, type your email address in the **To** field and a subject in the **Subject** field.
+1. If prompted, provide your Office 365 credentials.
+
+4. In the form that appears, type a subject in the **Subject** box and your email address in the **To** box.
 
     ![The list of parameters](./media/get-started-powerflow/listfields2.png)
 
-5. Type **Item added to a list:** in the **Body** field, and then click **Title** in the list of parameters.
+5. In the **Body** box, type or paste **Item added to a list:**, and then click a parameter (such as **Title**) to add a placeholder for it to your message.
 
-    A placeholder for the title of the SharePoint item appears in your message.
+  **Note:** The available parameters reflect the column headings of whatever list you specify.
 
     ![Token added to the field](./media/get-started-powerflow/message-token2.png)
 
-4. Type the end of your message, including any other fields you want to include, and then click **Done**.
+4. Type the end of your message, including any other parameters you want to include, and then click **Done** at the bottom of the screen.
 
     The list of your logic reflects your changes.
 
 ## Test your Logic ##
 
-1. Open the SharePoint online list..
-2. On the main page for the list, click **new item**
+1. On the main page for the SharePoint Online list, click **new item**.
 
     ![Adding a row](./media/get-started-powerflow/addrow.png)
 
-3. Specify data in each field of the list item, and click Save.
+3. Specify data in each field, and then click **Save**.
 
-    Within a minute, you'll receive an email that notifies you of the changes in SharePoint.
+    Within a minute, an email notifies you of the changes.
 
 ## Next Steps ##
 
-- [Add additional steps](advanced-parameters-powerflow.md) Add more steps, such as different ways to be notified, to your Logic.
+- [Add steps](advanced-parameters-powerflow.md), such as different ways to be notified, to your logic.

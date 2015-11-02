@@ -1,29 +1,43 @@
 <properties
-	pageTitle="Create an app from a template in KratosApps"
-	description="Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, and then customize the app to better fit the way you work."
-	services="kratosapps"
+	pageTitle="PowerApps: Create an app from a template"
+	description="Step-by-step instructions for creating an app automatically based on a template in PowerApps, customizing the app, and then publishing it."
+	services="powerapps"
+	documentationCenter="na"
 	authors="AFTOwen"
- />
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
-   ms.service="kratosapps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/09/2015"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 # Create an app from a template
-Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, and then customize the app to better fit the way you work.
+Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, customize it to better fit the way you work, and then publish it.
 
-[What is KratosApps?]()
+[What is PowerApps?](http://www.kratosapps.com/tutorials)
 
 **Prerequisites**
 
-In addition to signing up for and installing KratosApps, you'll also need an account, such as DropBox or OneDrive, for storing sample data in the cloud.
+- [Install PowerApps Studio](http://aka.ms/powerappsinstall)
+- An account, such as DropBox or OneDrive, for storing sample data in the cloud
 
 ## Open an app template ##
-1. Sign in to KratosApps, and then click **New** in the left navigation bar.
+1. Open PowerApps Studio, and then click **Connections** in the left navigation bar.
+
+	![The Connections option in the left navigation bar](./media/get-started-test-drive/file-connections.jpg)
+
+1. Click **Available Connections**, click **Dropbox** or another cloud-storage account, and then click **Connect**.
+
+	![Option to add Dropbox as a data connection](./media/get-started-test-drive/add-dropbox.jpg)
+
+1. Provide your credentials, and then click **Sign in**.
+
+1. Click **New** in the left navigation bar.
 
 	![The New option in the left navigation bar](./media/get-started-test-drive/file-new.jpg)
 
@@ -35,18 +49,18 @@ In addition to signing up for and installing KratosApps, you'll also need an acc
 
 	![Open an app template](./media/get-started-test-drive/open-template.jpg)
 
-2. Click **Event SignUp**, and then specify where you want to store data for your app in the cloud (for example, DropBox or OneDrive).
+2. Click **Event SignUp**, and then click **Choose**.
 
-	The splash screen for the **Event Signup** template appears.
+	The **VolunteerDetailsScreen** of your app appears.
 
-	![Splash screen for the Event Signup template](./media/get-started-test-drive/splash-screen.jpg)
+	![VolunteerDetailsScreen with default information](./media/get-started-test-drive/volunteer-default.jpg)
 
 ## Explore the app's default appearance and behavior ##
 App templates open in the default workspace, where you'll spend most of your time customizing a template or creating an app from scratch. Before you make changes, you'll explore how the app works in **Preview**.
 
 **Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
 
-1. In the left navigation bar, click the thumbnail for the **VolunteerDetails** screen.
+1. In the left navigation bar, click the thumbnail for the **VolunteerDetailsScreen**.
 
 	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.jpg)
 
@@ -102,7 +116,7 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 	![Renaming a control](./media/get-started-test-drive/rename-label.jpg)
 
-	**Note:** You can more easily develop an app if you give each control a descriptive name. For example, you'll want to configure buttons to navigate to different screens, and you'll want names that are easier to remember than **Screen1**, **Screen2**, and so on.
+	**Note:** As you develop or customize an app, you'll configure some controls to reference other controls. For example, you'll probably configure a button or other control to open one screen from another. That configuration will be much easier if the screens have names that are easier to remember than **Screen1**, **Screen2**, and so on.
 
 1. With the label still selected, click **Text** in the properties list, and then type **Today()** in the Function Bar.
 
@@ -120,6 +134,9 @@ After you finish developing and testing your app, you share it with other people
 2. Update any of these settings.
 
 	- the name of your app
+
+		![Option to rename the app](./media/get-started-test-drive/rename-app.jpg)
+
 	- the color of your app's tile
 
 		![Color options for your app's time](./media/get-started-test-drive/tile-color.jpg)
@@ -128,13 +145,12 @@ After you finish developing and testing your app, you share it with other people
 
 		![Import an image to appear on your app's tile](./media/get-started-test-drive/tile-image.jpg)
 
-	- the aspect ratio of your app
+	- the screen size and orientation of your app
 
 		![Aspect-ratio options, such as 3:2 and 4:3](./media/get-started-test-drive/aspect-ratio.jpg)
 
-	If you change the aspect ratio, click **Apply**.
-
 2. On the **File** menu, click **Save As**.
+
 3. Under **Save As**, leave the default value of **PowerApps**, and then click **Save**.
 
 	![Save an app to PowerApps](./media/get-started-test-drive/save-powerapps.jpg)
@@ -153,4 +169,4 @@ After you finish developing and testing your app, you share it with other people
 
 1. Edit the text in the **Subject** and **Message** text boxes, and then click **Share**.
 
-	The people with whom you shared your app will receive an email message that contains a link they can click to install KratosApps and run your app.
+	The people with whom you shared your app will receive an email message that contains a link they can click to install PowerApps and run your app.

@@ -1,23 +1,35 @@
 <properties
-	pageTitle=""
-	description=""
-	services="kratosapps"
+	pageTitle="PowerApps: Add a screen, navigation, and a context variable"
+	description="In PowerApps, add a screen to an app, arrows to open one screen from another, and a context variable to track information between screens."
+	services="powerapps"
+	documentationCenter="na"
 	authors="AFTOwen"
- />
+	manager="dwrede"
+	editor=""
+	tags=""/>
 
 <tags
-   ms.service="kratosapps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/12/2015"
+   ms.date="10/21/2015"
    ms.author="anneta"/>
 
 # Add a screen, navigation, and context variables #
+
 Create an app with multiple screens, add ways for users to navigate between them, and manage data in your app by creating and updating one or more context variables. Store data in a context variable if a piece of information helps determine how the app appears or what it does but you don't need to retain the information after the app is closed.
-## Add and rename a screen ###
-1. Sign in to KratosApps, and then click **New** in the left navigation bar.
+
+[What is PowerApps?](http://www.kratosapps.com/tutorials)
+
+**Prerequisites**
+
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall)
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps Studio
+
+## Add and rename a screen ##
+1. In PowerApps Studio, click **New** in the left navigation bar.
 
 	![New option in left navigation bar](./media/add-screen-context-variables/file-new.jpg)
 
@@ -69,6 +81,7 @@ Create an app with multiple screens, add ways for users to navigate between them
 1. Press Esc to return to the default workspace.
 
 ## Add navigation with a context variable ##
+
 You can use a context variable in many ways, but you'll perhaps most often use one to determine what a screen shows when you navigate to it. For example, users might click a button to add a record or update one. You can save time by configuring both buttons to open the same form but configure the form differently for either adding or updating a record.
 
 1. Follow the steps in the previous two procedures.
