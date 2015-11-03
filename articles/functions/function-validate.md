@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/1/2015"
+   ms.date="11/01/2015"
    ms.author="gregli"/>
 
 # Validate function in PowerApps #
