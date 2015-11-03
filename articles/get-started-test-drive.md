@@ -45,7 +45,7 @@ Create an app automatically based on one of several templates for a variety of s
 
 	![The options buttons for creating a tablet or phone app](./media/get-started-test-drive/phone-app.jpg)
 
-1. Under **Start from Template**, click **Get started**.
+1. Under **Start from a template**, click **Get started**.
 
 	![Open an app template](./media/get-started-test-drive/open-template.jpg)
 
