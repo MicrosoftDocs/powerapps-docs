@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/29/2015"
+   ms.date="11/02/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
@@ -41,39 +41,42 @@ In these steps, we download a sample file. Using a collection, we import this sa
 	a) On the **Insert** tab, select **Controls**, and then select **Import**.  
 	b) Set the **OnSelect** property to the following function:  
 ```Collect(ProductRevenue, Import1!Data)```  
-	c) Select the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  
+	c) Double-click the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  
 
 	In the **File** menu, select **Collections**. The ProductRevenue collection is listed with the chart data you imported:    
 ![][1]  
 
-
-3. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button. 
+3. Go back to your designer.
+4. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button. 
 4. In the pie chart control, select the middle so the pie chart circle is selected:   
 ![][10]  
 5. Set the **Items** property of the pie chart to **ProductRevenue**:  
 ![][2]  
 
-	When you do this, the pie chart shows the relative revenue of the products:  
+	When you do this, the pie chart shows the revenue of the products:  
 ![][3]  
-6. On the **Insert** tab, click **Charts**, and then click **Column Chart**. Click-and-drag to move the column chart so it doesn't overlap with other controls. 
-7. Select the middle of the column chart. Set the **Items** property of the column chart to **ProductRevenue**:  
+
+Now, let's use thie ProductRevenue collection in a bar chart: 
+
+1. On the **Home** tab, create a new screen.
+2. On the **Insert** tab, select **Charts**, and then select **Column Chart**. 
+3. Select the middle of the column chart. Set the **Items** property of the column chart to **ProductRevenue**:  
 ![][2]  
 
-	When you do this, the column chart shows the revenue for each product:  
+	When you do this, the column chart shows the 2012 revenue for the products:  
 ![][4]  
-8. In the column chart, select the center square:  
+4. In the column chart, select the center square:  
 ![][5]  
-9. On the **Chart** tab, select **Number of Series**, and then enter **3** in the Function Bar:  
+5. On the **Chart** tab, select **Number of Series**, and then enter **3** in the Function Bar:  
 ![][6]  
 
 	The column chart shows revenue data for each product over three years:  
 ![][7]  
 
-
 ## Tips and Tricks
 - At anytime, you can select the Preview button (![][8]) to view your charts, and to see how they look with data.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
-- You can set the **X** and **Y** values for your charts.
+- Select the middle of the column chart. In the property list, you can set the **GridStyle** to All, XOnly, YOnly, and even None.
 
 
 [1]: ./media/use-line-pie-bar-chart/productrevenuecollection.png
