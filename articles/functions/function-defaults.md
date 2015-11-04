@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="bills"
+	manager="dwrede"
 	editor=""
 	tags=""/>
 
@@ -23,13 +23,13 @@ The **Defaults** function returns the default values for a [Data Source](file-na
 
 ## Description ##
 
-You can use the Defaults function to pre-populate a data entry form with values, making forms easier to fill. 
+You can use the **Defaults** function to pre-populate a data entry form with values, making forms easier to fill. 
 
-Defaults returns a [Record](file-name.md) that contains the default values for the data source.  If a [Column](file-name.md) within the data source does not have a default value, it will have no value in the Defaults return value.  
+This function returns a [Record](file-name.md) that contains the default values for the data source.  If a [Column](file-name.md) within the data source doesn't have a default value, the column won't be present.
 
-Data sources vary in how much default information they provide, including not providing any at all.  When working with a [Collection](file-name.md) or other data source that does not support default values, the Defaults function will return Blank.
+Data sources vary in how much default information they provide, including not providing any at all.  When you work with a [Collection](file-name.md) or another data source that does not support default values, the **Defaults** function will return [Blank](file-name.md).
 
-Defaults will not return any values for columns that are part of a [Primary Key](file-name.md).  Without primary key information, when passed as the original record to the [Patch](file-name.md) function used with a data source, a new record will be created.
+The **Defaults** function will not return any values for columns that are part of a [Primary Key](file-name.md).  You can combine this behavior with the **[Patch](function-patch.md)** function to [create a record](file-name.md).
 
 ## Syntax ##
 
