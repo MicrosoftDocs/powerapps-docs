@@ -19,11 +19,14 @@
 
 #Formula reference
 
-**Note:** This page is under construction. 
+**Note:** This page is under construction.
 
 ![Construction icon][1]
 
 
 - [Patch](functions/function-patch.md)
+- [Validate](functions/function-validate.md)
+- [Defaults](functions/function-defaults.md)
+- [ClearCollect](functions/function-clearcollect.md)
 
-[1]: ./media/formula-reference/construction.png 
+[1]: ./media/formula-reference/construction.png
