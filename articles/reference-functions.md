@@ -18,7 +18,7 @@
 
 # Build a formula #
 
-As you develop an app, specify its appearance and behavior by building expressions that include the functions and operators in this topic.
+As you develop an app, specify its appearance and behavior by building [formulas](formula-reference.md) that include the functions and operators in this topic.
 
 **Note** All references to data in the following examples are hypothetical. No data samples accompany this reference.
 
