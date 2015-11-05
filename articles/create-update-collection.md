@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="10/29/2015"
+   ms.date="11/04/2015"
    ms.author="mandia"/>
 
 
@@ -80,14 +80,14 @@ The following steps show you how to create a collection within your app using th
 3. Rename the text control to **City**:  
 ![][9]  
 4. Insert another input text control, and rename it to **States**.
-5. Move the City and State text controls so you can see them both:  
+5. Move the City and States text controls so you can see them both:  
 ![][10]  
 	**Note**: You can replace 'Input Text' with something like 'City' or 'State', which was done in the image.
 6. On the **Insert** tab, select **Button**. Set its **OnSelect** property to the following function:  
 ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
 It should look like the following:  
 ![][11]  
-	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column: `Collect(Destinations, {Cities:City!Text, States:State!Text}, {Countries:Country!Text})`
+	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column: `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
 
 7. Rename the button control **AddCityStateButton**, and set its **Text** property to **Add City and State**:  
 ![][12]  
