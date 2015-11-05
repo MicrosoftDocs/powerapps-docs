@@ -149,6 +149,8 @@ After you finish developing and testing your app, you share it with other people
 
 		![Aspect-ratio options, such as 3:2 and 4:3](./media/get-started-test-drive/aspect-ratio.jpg)
 
+		**Note:** If you change the size and orientation, click **Apply**.
+
 2. On the **File** menu, click **Save As**.
 
 3. Under **Save As**, leave the default value of **PowerApps**, and then click **Save**.
