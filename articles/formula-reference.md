@@ -21,7 +21,8 @@
 
 **Note:** This page is under construction. Click [here](reference-functions.md) for information about a greater variety of functions.
 
-![Construction icon][./media/formula-reference/construction.png]
+![Construction icon][1]
+[1]: ./media/formula-reference/construction.png
 
 ## A ##
 ## C ##
