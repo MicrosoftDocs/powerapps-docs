@@ -13,37 +13,46 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/29/2015"
+   ms.date="11/04/2015"
    ms.author="mandia"/>
 
 # Use the landscape or portrait view 
 
-When you create an app, you can use a Landscape or Portrait view. 
+When you create an app, you can use the Landscape or Portrait view. You can also lock the aspect ratio. This topic provides more information on these options. 
+
+> [AZURE.IMPORTANT] Currently, there is no auto-scaling between portrait and landscape. The screen orientation you choose (landscape or portrait) is locked and remains the layout used by your app. 
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- Install [PowerApps](http://aka.ms/powerappsinstall) from the Windows Store. Create a new app or open an existing app in PowerApps. 
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 ## Set landscape or portrait for a phone app
 1. On the **File** tab, select **App Settings**.
-2. Select **Landscape** or **Portrait**:  
-![][1]  
+2. Select **Screen size + orientation**.
+3. Select **Landscape** or **Portrait**:  
+![][5]  
 
-You can also enable **Lock aspect ratio**.
+You can also enable **Lock aspect ratio**:  
+![][1]  
 
 ## Set landscape or portrait for a tablet
 1. On the **File** tab, select **App Settings**.
-2. Select **Landscape** or **Portrait**:  
+2. Select **Screen size + orientation**.
+3. In the drop-down list, select **Landscape** or **Portrait**:  
+![][4]  
+
+You can also enable **Lock aspect ratio**:  
 ![][2]  
 
-You can also enable **Lock aspect ratio**.
-
 ## What is Lock aspect ratio
-The **Lock aspect ratio** applies more to tablet apps. When you enable this setting, you lock your app to the aspect ratio you choose. For example:
+Put simply, not enabling this feature allows your app to run everywhere. When you enable this setting, you lock your app to the aspect ratio you choose. For example:
 
-You create a tablet app and set the aspect ratio to iPad 4:3. You enable the **Lock aspect ratio** setting. When you do this, it always renders to the 4.3 aspect ratio. When your apps runs on Surface Pro 3 or other aspect ratios, it displays incorrectly and may even show some undesirable results. 
+You create a tablet app and set the aspect ratio to 4:3 (iPad). You enable the **Lock aspect ratio** setting. When you do this, it locks in this ratio and the app *always* renders to the 4:3 aspect ratio. When your apps runs on Surface Pro or other mobile devices with different aspect ratios, the app displays incorrectly and may even show some undesirable results. 
 
-If you don't enable the **Lock aspect ratio** settings, it automatically scales to  the other aspect ratios.  
+
+The same applies for phone apps. When this setting is enabled, the app *always* renders to the default iPhone aspect ratio. When your app runs on other mobile phone with different aspect ratios, the app displays incorrectly and may even show some undesirable results. When **Lock aspect ratio** is not checked, the same app automatically scales to Windows Phone, Androids, and so on, with no additional settings. 
+
+To summarize, if you don't enable the **Lock aspect ratio** setting, PowerApps automatically scales to the mobile device using the app. 
 
 ## Tips and Tricks
 - At anytime, you can select the Preview button (![][3]) to see how your app looks  with the options you choose.
@@ -53,3 +62,5 @@ If you don't enable the **Lock aspect ratio** settings, it automatically scales 
 [1]: ./media/set-aspect-ratio-portrait-landscape/phoneratio.png
 [2]: ./media/set-aspect-ratio-portrait-landscape/tabletratio.png
 [3]: ./media/set-aspect-ratio-portrait-landscape/preview.png
+[4]: ./media/set-aspect-ratio-portrait-landscape/tabletorientation.png
+[5]: ./media/set-aspect-ratio-portrait-landscape/phoneorientation.png
