@@ -23,7 +23,7 @@ Modifies or creates a [record](file-name.md) in a [data source](file-name.md), o
 
 ## Overview ##
 
-In a data source, you can use the **Patch** function to modify the value of a [column](file-name.md) in a record without affecting the other columns in that record. In contrast, you can use the **[Update](function-update.md)** function to modify a record, but you must specify data for each column of that record.
+In a data source, you can use the **Patch** function to modify the value of a [column](file-name.md) in a record without affecting the other columns in that record. In contrast, you can use the **[Update](function-update.md)** function to modify a record, but you must specify a value for each column of that record.
 
 You can also create a record in a data source by combining **Patch** with the **[Defaults](function-defaults.md)** function. As a result, you can build a single [screen](file-name.md) in which users can either modify or create a record. You can also create a record by using the **[Collect](function-collect.md)** function.
 
@@ -35,11 +35,11 @@ Even if you're not updating a data source, you can use **Patch** to merge two or
 
 To use this function with a data source, specify it first, and then do either of the following:
 
-- Identify the name of the [primary-key](file-name.md) column for the data source and the value in that column for the record that you want to modify.
+- Specify the name of the data source's [primary-key](file-name.md) column and the value in that column for the record that you want to modify.
 
 - Use the **[Defaults]** function to create a record that contains the default values for the data source that you specified.
 
-Then specify one or more change records, which contain the name of at least one column in that source and a value for that column. The value in each column of a change record takes priority over the value in the same column of the record that you're modifying or creating or of the previous change record.
+Then specify one or more change records, which contain the name of at least one column in the data source and a value for that column. The value in each column of a change record takes priority over the value in the same column of the record that you're modifying/creating or of the previous change record.
 
 The [return value](file-name.md) of **Patch** contains the value of each column as specified in the record that's closest to the end of the [argument list](file-name.md). If you created a record, the return value might also include a primary key that the was generated automatically from the data source.
 
@@ -52,7 +52,7 @@ Use the **[Errors](function-errors.md)** function to test for and examine these 
 
 ### Merge records outside of a data source ###
 
-In each argument, specify a record that you want to merge. If the same column appears in more than one record, the return value contains the value in the record that's closest to the end of the argument list.
+Specify two or more records that you want to merge. If the same column appears in more than one record, the return value contains the value in the record that's closest to the end of the argument list.
 
 **Patch** returns the merged record without any [side effects](file-name.md).
 
@@ -62,11 +62,11 @@ In each argument, specify a record that you want to merge. If the same column ap
 
 **Patch**( *DataSource*, *StartingRecord*, *ChangeRecord1* [, *ChangeRecord2*, … ])
 
-- *DataSource* – Required. The data source that contains the record that you want to modify.
+- *DataSource* – Required. The data source that contains the record that you want to modify or create.
 
-- *StartingRecord* – Required. A record that contains the name of at least one column in the data source and a value for that column. If you want to modify a record, include the name of a primary-key column and the value in that column for the record that you want to modify. Otherwise, **Patch** creates a record in the data source that you specify in the first argument. The new record contains any columns and values that you specify in this argument. For example, you can use **Defaults** to create a record that contains the default values for the data source.
+- *StartingRecord* – Required. A record that contains the name of at least one column in the data source and a value for that column. If you want to modify a record, include the name of the primary-key column and the value in that column for the record that you want to modify. Otherwise, **Patch** creates a record that contains any columns and values that you specify in this argument. For example, you can use **Defaults** to create a record that contains the default values for the data source.
 
-- *ChangeRecord1* – Required.  A record that contains the name of at least one column in the data source and a value for that column. If any column names match a column name in the *StartingRecord*, the value in *StartingRecord* is discarded, and the value in this record is retained.
+- *ChangeRecord1* – Required.  A record that contains the name of at least one column in the data source and a value for that column. If any column names match a column name in the *StartingRecord*, the value of that column in this argument takes priority.
 
 - *ChangeRecord2*, ... – Optional. If you specify multiple change records that contain the same column, the return value contains the value in the record that's closest to the end of the argument list.
 
@@ -74,13 +74,13 @@ In each argument, specify a record that you want to merge. If the same column ap
 
 **Patch**( *Record1*, *Record2*, … )
 
-- *Record(s)* - Required.  At least two records that you want to merge. If you specify multiple records that contain the same column, the return value contains the value in the record that's closest to the end of the argument list.
+- *Record(s)* - Required.  At least two records that you want to merge. The return value contains every column in any record. If you specify multiple records that contain the same column, the return value contains the value in the record that's closest to the end of the argument list.
 
 ## Examples ##
 
 #### Modify or create a record (in a data source) ###
 
-In these examples, you'll modify or create a record in a data source that's named **IceCream**. The data source contains this data, and the ID column contains a primary key that the data source generates:
+In these examples, you'll modify or create a record in a data source that's named **IceCream**. The data source contains the data in this table, and the ID column contains a primary key that the data source generates:
 
 | ID  | Flavor    | Quantity |
 |-----|-----------|----------|
