@@ -1,6 +1,6 @@
 <properties
-	pageTitle=" Show text and format a date or time in PowerApps Studio | Microsoft Azure"
-	description="Add and format dates and times using PowerApps"
+	pageTitle=" Show text and format a date or time in PowerApps | Microsoft Azure"
+	description="Add and format dates and times using Microsoft PowerApps"
 	services=""
 	documentationCenter=""
 	authors="MandiOhlinger"
@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/29/2015"
+   ms.date="11/05/2015"
    ms.author="mandia"/>
 
 
@@ -25,7 +25,7 @@ For example, add data from users about stock trades or client meetings, data fro
 
 ### Prerequisites
 
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- Install [PowerApps](http://aka.ms/powerappsinstall) from the Windows Store. Create a new app or open an existing app in PowerApps. 
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 ## Show text in a label
@@ -124,7 +124,7 @@ There are many functions you can use to format dates and times. You can even use
 1. Add an **Input Text** box, name it ArrivalDate, and then type in a date. For example, enter ```5/10/85```.
 2. Add a label, and set its **Text** property to the following expression:  
 ```DateValue(ArrivalDate!Text)```  <br/>
-	The label shows the date that you typed, followed by 12:00 AM.
+	The label shows the date that you typed, and formatted it to include the full year.
 
 3. Change the **Text** property of the label to the following expression:  
 ```DateValue(ArrivalDate!Text, "fr")```  
