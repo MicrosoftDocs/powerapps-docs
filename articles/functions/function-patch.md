@@ -60,13 +60,13 @@ Specify two or more records that you want to merge. If the same column appears i
 
 #### Modify or create a record in a data source ####
 
-**Patch**( *DataSource*, *StartingRecord*, *ChangeRecord1* [, *ChangeRecord2*, … ])
+**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord1* [, *ChangeRecord2*, … ])
 
 - *DataSource* – Required. The data source that contains the record that you want to modify or create.
 
-- *StartingRecord* – Required. A record that contains the name of at least one column in the data source and a value for that column. If you want to modify a record, include the name of the primary-key column and the value in that column for the record that you want to modify. Otherwise, **Patch** creates a record that contains any columns and values that you specify in this argument. For example, you can use **Defaults** to create a record that contains the default values for the data source.
+- *BaseRecord* – Required. A record that contains the name of at least one column in the data source and a value for that column. If you want to modify a record, include the name of the primary-key column and the value in that column for the record that you want to modify. Otherwise, **Patch** creates a record that contains any columns and values that you specify in this argument. For example, you can use **Defaults** to create a record that contains the default values for the data source.
 
-- *ChangeRecord1* – Required.  A record that contains the name of at least one column in the data source and a value for that column. If any column names match a column name in the *StartingRecord*, the value of that column in this argument takes priority.
+- *ChangeRecord1* – Required.  A record that contains the name of at least one column in the data source and a value for that column. If any column names match a column name in the *BaseRecord*, the value of that column in this argument takes priority.
 
 - *ChangeRecord2*, ... – Optional. If you specify multiple change records that contain the same column, the return value contains the value in the record that's closest to the end of the argument list.
 
@@ -96,4 +96,4 @@ In these examples, you'll modify or create a record in a data source that's name
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Patch(&nbsp;{&nbsp;Name:&nbsp;"James",&nbsp;Score:&nbsp;90&nbsp;}, {&nbsp;Name:&nbsp;"Jim",&nbsp;Passed:&nbsp;true&nbsp;} )** | Merges two records outside of a data source:<br><ul><li>The values in the **Name** column of each record don't match. The result contains the value in the second record (**Jim**) instead of the value in the first record (**James**).</li><li>The first record contains a column (**Score**) that doesn't exist in the second record. The result contains that column with its value (**90**).</li><li>The second record contains a column (**Passed**) that doesn't exist in the second record. The result contains that column with its value (**true**). | {&nbsp;Name:&nbsp;"Jim", Score:&nbsp;90, Passed:&nbsp;true&nbsp;} |
+|**Patch(&nbsp;{&nbsp;Name:&nbsp;"James",&nbsp;Score:&nbsp;90&nbsp;}, {&nbsp;Name:&nbsp;"Jim",&nbsp;Passed:&nbsp;true&nbsp;} )** | Merges two records outside of a data source:<br><ul><li>The values in the **Name** column of each record don't match. The result contains the value (**Jim**) in the record that's closer to the end of the argument list instead of the value (**James**) in the record that's closer to the start.</li><li>The first record contains a column (**Score**) that doesn't exist in the second record. The result contains that column with its value (**90**).</li><li>The second record contains a column (**Passed**) that doesn't exist in the first record. The result contains that column with its value (**true**). | {&nbsp;Name:&nbsp;"Jim", Score:&nbsp;90, Passed:&nbsp;true&nbsp;} |
