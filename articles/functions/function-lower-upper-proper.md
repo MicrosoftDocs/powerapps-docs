@@ -14,66 +14,59 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/21/2015"
+   ms.date="11/07/2015"
    ms.author="gregli"/>
 
 # Lower, Upper, and Proper functions in PowerApps #
 
-Converts a string to all lower case, all upper case, or to proper case.
+Converts letters in a string of text to all lowercase, all uppercase, or proper case.
 
 ## Description ##
 
-The **Lower**, **Upper**, and **Proper** functions convert the case of strings.
-- The **Lower** function converts all characters to lower case.
-- The **Upper** function converts all characters to upper case.
-- The **Proper** function converts the first character of all words to upper case and all other characters to lower case.
+The **Lower**, **Upper**, and **Proper** functions convert the case of letters in strings.
+- **Lower** converts any uppercase letters to lowercase.
+- **Upper** converts any lowercase letters to uppercase.
+- **Proper** converts the first letter in each word to uppercase if it's lowercase and any other uppercase letters to lowercase.
 
-For all three functions, characters that are not letters are not altered.
+All three functions ignore characters that aren't letters.
 
-Pass a single string to return the converted version of that string.  You can also pass a single column table that contains strings, resulting in a single column table of converted strings.  See [Working with Tables](file-name.md) for information on shaping a multi-column data source into a single column table. 
+If you [pass](file-name.md) a single string, the [return value](file-name.md) is the converted version of that string.  If you pass a single-column table that contains strings, the return value is a single-column table of converted strings. If you have a multi-column [data source](file-name.md), you can shape it into a single-column table, as [Working with Tables](file-name.md) describes.
 
 ## Syntax ##
 
-**Lower**( *String* )
-**Upper**( *String* )
-**Proper**( *String* )
+**Lower**( *String* )<br>**Upper**( *String* )<br>**Proper**( *String* )
 
-- *String* - Required. String to convert.
+- *String* - Required. The string to convert.
 
-**Lower**( *OneColumnTable* )
-**Upper**( *OneColumnTable* )
-**Proper**( *OneColumnTable* )
+**Lower**( *SingleColumnTable* )<br>**Upper**( *SingleColumnTable* )<br>**Proper**( *SingleColumnTable* )
 
-- *OneColumnTable* - Required. A single column table of strings to convert. 
+- *SingleColumnTable* - Required. A single-column table of strings to convert.
 
 ## Examples ##
 
-### Single String ###
+### Single string ###
+The examples in this section use an input-text control, named **Author**, as their data source. The control contains the string **E. E. CummINGS**.
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Lower(&nbsp;"E.&nbsp;E.&nbsp;CummINGS"&nbsp;)** | Converts all characters of the string to lower case. | "e. e. cummings" |
-| **Upper(&nbsp;"E.&nbsp;E.&nbsp;CummINGS"&nbsp;)** | Converts all characters of the string to upper case. | "E. E. CUMMINGS" |
-| **Proper(&nbsp;"E.&nbsp;E.&nbsp;CummINGS"&nbsp;)** | Converts characters of the string to proper case.  The first letter of each word is upper case, the rest are lower case. | "E. E. Cummings" |
+| **Lower(&nbsp;Author!Text&nbsp;)** | Converts any uppercase letters in the string to lowercase. | "e. e. cummings" |
+| **Upper(&nbsp;Author!Text&nbsp;)** | Converts any lowercase letters in the string to uppercase. | "E. E. CUMMINGS" |
+| **Proper(&nbsp;Author!Text&nbsp;)** | Converts the first letter of each word to uppercase if it's lowercase, and converts any other uppercase letters to lowercase. | "E. E. Cummings" |
 
-### Single Column Table
+### Single-column table
+The examples in this section use this table, named **People**, as their data source:
 
-#### People Data Source ####
-
-| Name | Address | 
+| Name  | Address |
 |-------|---------|
-| Jean |  123 Main St. NE |
+| Jean  | 123 Main St. NE |
 | Frank | 789 SW 39th #3B |
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | Converts all characters of each string in the single column table to lower case. | <table><tr><th>Address</th></tr><td>123&nbsp;main st.&nbsp;ne</td></tr><tr><td>789&nbsp;sw&nbsp;39th&nbsp;#3b</td></tr></table> |
-| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | Converts all characters of each string in the single column table to to upper case. | <table><tr><th>Address</th></tr><td>123&nbsp;MAIN ST.&nbsp;NE</td></tr><tr><td>789&nbsp;SW&nbsp;39th&nbsp;#3B</td></tr></table> |
-| **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | Converts characters of each string in the single column table to to proper case.  The first letter of each word is upper case, the rest are lower case. | <table><tr><th>Address</th></tr><td>123&nbsp;Main St.&nbsp;Ne</td></tr><tr><td>789&nbsp;Sw&nbsp;39th&nbsp;#3b</td></tr></table> |
+| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | <table><tr><th>Address</th></tr><td>123&nbsp;main st.&nbsp;ne</td></tr><tr><td>789&nbsp;sw&nbsp;39th&nbsp;#3b</td></tr></table> |
+| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | <table><tr><th>Address</th></tr><td>123&nbsp;MAIN ST.&nbsp;NE</td></tr><tr><td>789&nbsp;SW&nbsp;39th&nbsp;#3B</td></tr></table> |
+| **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any first letter of a word that's lowercase to uppercase.</li><li>Converts any other letter that's uppercase to lowercase.</li><li>Returns a single-column table that contains the converted strings.</li> | <table><tr><th>Address</th></tr><td>123&nbsp;Main St.&nbsp;Ne</td></tr><tr><td>789&nbsp;Sw&nbsp;39th&nbsp;#3b</td></tr></table> |
 
-## Step-by-step Example ##
+### Step-by-step example ###
 
 <ol><li>Add an input-text control, and name it **Source**.</li><br><li>Add a label, and set its **Text** property to this function:<br>**Proper(Source!Text)**</li><br><li>Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**</li></ol>
-
-
-
