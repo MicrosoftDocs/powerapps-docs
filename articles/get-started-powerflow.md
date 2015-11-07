@@ -1,6 +1,6 @@
 <properties
-    pageTitle="PowerApps: Create PowerApps Logic"
-    description="Create a Logic to take action when one or more conditions are met. For example, get an email whenever someone adds a row to a Sharepoint list."
+    pageTitle="PowerApps: Automate tasks by creating Logic Flows"
+    description="Create Logic Flows to automatically perform one or more actions, such as sending mail, when one or more conditions are met, such as someone adding a row to a SharePoint list."
     services="powerapps"
     documentationCenter="na"
     authors="AFTOwen"
@@ -17,9 +17,8 @@
     ms.date="11/02/2015"
     ms.author="anneta"/>
 
-# Create Logic #
-Create PowerApps Logic to take action when something happens. For example, create Logic so that you get an email message whenever someone adds a row to a SharePoint List. In this example, the condition (or trigger) is that a row was added, and the action is that you were sent mail.
-
+# Create Logic Flows in PowerApps#
+Create a logic flow to perform a task automatically when a condition triggers an action. For example, create a logic flow that notifies you by mail as soon as someone adds a row to a SharePoint list. In this scenario, adding a row is the trigger, and sending mail is the action.
 
 **Prerequisites**
 
@@ -29,7 +28,7 @@ Create PowerApps Logic to take action when something happens. For example, creat
 
 ## Create a trigger
 
-1. In Chrome, open [the PowerApps portal](https://portal.kratosapps.com/), and then click **Create logic**.
+1. In Chrome, open [powerapps.com](), and then click **Create a flow**.
 
     ![Click Logic on the right](./media/get-started-powerflow/landingpage.png)
 
@@ -39,11 +38,11 @@ Create PowerApps Logic to take action when something happens. For example, creat
 
 4. In the text box that says **How would you like to start?**, type **SharePoint**.
 
-1. In the list of actions, click **SharePoint Online - When a new Item is added in a List**
+1. In the list of actions, click **SharePoint Online - When a new item is created**
 
     ![Sharepoint triggers](./media/get-started-powerflow/add-sp-data.png)
 
-5. If you haven't already connected your SharePoint Online account to PowerApps, click **Sign in to SharePoint**, and then provide your credentials.
+5. If you haven't already connected your SharePoint Online account to PowerApps, click **Sign in to SharePoint Online**, and then provide your credentials.
 
 6. In the **SITE URL** box, type or paste the URL of the SharePoint site that contains the list you want to use.
 

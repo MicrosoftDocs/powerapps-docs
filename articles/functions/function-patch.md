@@ -23,9 +23,9 @@ Modifies or creates a [record](file-name.md) in a [data source](file-name.md), o
 
 ## Overview ##
 
-In a data source, use the **Patch** function to modify the value of a [column](file-name.md) in a record without affecting the other columns in that record. If you use the **[Update](function-update.md)** function to modify a record, you must specify a value for each column of that record.
+In a data source, use the **Patch** function to modify the value of a [column](file-name.md) in a record without affecting the other columns in that record.
 
-Create a record in a data source by combining **Patch** with the **[Defaults](function-defaults.md)** function. For example, use this approach to build a single [screen](file-name.md) in which users can either modify or create a record. You can also create a record by using the **[Collect](function-collect.md)** function.
+Create a record in a data source by combining **Patch** with the **[Defaults](function-defaults.md)** function. For example, use this approach to build a single [screen](file-name.md) in which users can either modify or create a record.
 
 Even if you're not updating a data source, you can use **Patch** to merge two or more records.
 
@@ -44,11 +44,20 @@ Then specify one or more change records, each of which contains the name of at l
 The [return value](file-name.md) of **Patch** is the record that you modified or created. If you created a record, the return value might include a primary key that was generated automatically from the data source.
 
 **Note**: When you try to update a data source, problems such as these might occur:
+
 - You might try to update a record at the same time as someone else.
+
 - The data might not pass validation that the data source requires.
+
 - You might not have permission to update that data source.
 
 Use the **[Errors](function-errors.md)** function to identify and examine these types of issues, as [Working with Data Sources](file-name.md) describes.
+
+Related functions include:
+
+- If you use the **[Update](function-update.md)** function to modify a record, you must specify a value for each column of that record.
+
+- You can also create a record by using the **[Collect](function-collect.md)** function.
 
 ### Merge records outside of a data source ###
 
