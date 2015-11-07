@@ -52,8 +52,6 @@ Create a logic flow to perform a task automatically when a condition triggers an
 
 1. Under **LIST NAME**, click the down arrow to show the names of all lists in the site you specified.
 
-  ![SharePoint lists](./media/get-started-powerflow/select-list.png)
-
   **Note:** If **Could not retrieve values** appears, correct your site URL.
 
 8.  Click the name of a list, name your PowerFlow in the box near the bottom of the screen, and then click **Done**.
