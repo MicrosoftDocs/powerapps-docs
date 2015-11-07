@@ -27,13 +27,11 @@
 ## A ##
 ## C ##
 
-##### [ClearCollect](functions/function-clearcollect.md) #####
-Clears all data from a data source and then immediately adds a different set of data to the same data source.
+[ClearCollect](functions/function-clearcollect.md) Clears all data from a data source and then immediately adds a different set of data to the same data source.
 
 ## D ##
 
-##### [Defaults](functions/function-defaults.md) #####
-Returns the default values for a data source.
+[Defaults](functions/function-defaults.md) Returns the default values for a data source.
 
 ## E ##
 ## F ##
@@ -44,8 +42,7 @@ Returns the default values for a data source.
 ## O ##
 ## P ##
 
-##### [Patch](functions/function-patch.md) #####
-Modifies a record by comparing it to at least one other record and overwriting any data that doesn’t match. Also, creates a record in a data source if you specify a record that has no primary key.
+[Patch](functions/function-patch.md) Modifies a record by comparing it to at least one other record and overwriting any data that doesn’t match. Also, creates a record in a data source if you specify a record that has no primary key.
 
 ## R ##
 ## S ##
@@ -53,7 +50,6 @@ Modifies a record by comparing it to at least one other record and overwriting a
 ## U ##
 ## V ##
 
-##### [Validate](functions/function-validate.md) #####
-Checks whether the value of a single column or a complete record is valid for a data source.
+[Validate](functions/function-validate.md) Checks whether the value of a single column or a complete record is valid for a data source.
 
 ## Y ##
