@@ -26,7 +26,7 @@ Converts letters in a string of text to all lowercase, all uppercase, or proper 
 The **Lower**, **Upper**, and **Proper** functions convert the case of letters in strings.
 - **Lower** converts any uppercase letters to lowercase.
 - **Upper** converts any lowercase letters to uppercase.
-- **Proper** converts the first letter in each word to uppercase if it's lowercase and any other uppercase letters to lowercase.
+- **Proper** converts the first letter in each word to uppercase if it's lowercase and converts any other uppercase letters to lowercase.
 
 All three functions ignore characters that aren't letters.
 
@@ -69,4 +69,8 @@ The examples in this section use this table, named **People**, as their data sou
 
 ### Step-by-step example ###
 
-<ol><li>Add an input-text control, and name it **Source**.</li><br><li>Add a label, and set its **Text** property to this function:<br>**Proper(Source!Text)**</li><br><li>Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**</li></ol>
+1. Add an input-text control, and name it **Source**.
+
+1. Add a label, and set its **Text** property to this function:<br>**Proper(Source!Text)**
+
+1. Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**
