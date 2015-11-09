@@ -19,7 +19,7 @@
 
 # UpdateContext function in PowerApps #
 
-Updates the value of any [context variables](file-name.md) of the current [screen](file-name.md).
+Creates or updates [context variables](file-name.md) of the current [screen](file-name.md).
 
 ## Overview ##
 
@@ -31,27 +31,27 @@ PowerApps isn't a traditional programming tool.  At its core, PowerApps has a [d
 
 ## Description ##
 
- In a formula that's based on **UpdateContext**, create or update one or more context variables by specifying a single [record](file-name.md) argument for each. In each record, specify the name of at least one column, which defines or matches the name of the variable, and the value to which you want to set that variable.
+ To create or update context variables, pass a single [record](file-name.md) to the **UpdateContext** function. In each record, specify the name of a column, which defines or matches the name of the variable, and the value to which you want to set that variable.
 
-- If you specify the name of a variable that you've defined elsewhere, **UpdateContext** sets the value of the variable to the value that you specify.
+- If you specify the name of a variable that you've previously defined, **UpdateContext** sets the value of the variable to the value that you specify.
 - If you specify the name of a variable that doesn't yet exist, **UpdateContext** creates a variable with that name and sets the value of that variable to the value that you specify.
-- If you define a variable elsewhere but don't specify it in a particular **UpdateContext** formula, its value remains the same.
+- If you previously defined a variable but don't specify it in this particular **UpdateContext** formula, its value remains the same.
 
 You can't remove a context variable after you define it.
 
-You reference a context variable in a formula by using the variable's column name. For example, **UpdateContext( { ShowLogo: "true" } )** creates a context variable, named **ShowLogo**, and sets its value to **true**. You can then set the **Visible** property of an image control to **ShowLogo** and show or hide that image based on whether the value of the variable is **true** or **false**.
+You reference a context variable in a formula by using the variable's column name. For example, **UpdateContext( { ShowLogo: true } )** creates a context variable, named **ShowLogo**, and sets its value to **true**. You can then use the value of this context variable by using the name **ShowLogo** in formulas.  You can write "**ShowLogo**" as the formula for the **Visible** property of an image control and show or hide that image control based on the value of the context variable.
 
 As the examples later in this topic show, context variables can hold several kinds of information, including these:
 
 - a single value
 - a record
 - a collection
-- an object references
+- an object reference
 - any result from a formula
 
 A context variable holds its value until the user closes the app.  If you define a context variable and set its value on a particular screen, that information remains intact even if the user switches to a different screen.
 
-Every context variable is scoped to a screen. If you want to define a context variable on one screen and refer to or modify that variable from another screen, you must build a formula that's based on the **[Navigate](function-navigate.md)** function.
+Every context variable is scoped to a screen. If you want to define a context variable on one screen and modify that variable from another screen, you must build a formula that's based on the **[Navigate](function-navigate.md)** function.
 
 **UpdateContext** has no return value, and you can use it only within a [behavior formula](file-name.md).
 
