@@ -25,21 +25,21 @@ Creates or updates [context variables](file-name.md) of the current [screen](fil
 
 Use the **UpdateContext** function to create a context variable, which temporarily holds a piece of information such as the number of times the user has clicked a button or the result of a data operation.
 
-Context variables are scoped to a screen, which means that a formula on one screen can't access the value of a context variable on another screen.  In this way, context variables are similar to local variables in other programming tools. If you want the equivalent of a global variable, create a [collection](file-name.md) by using the **[Collect](function-collect.md)** or **[ClearCollect](function-clearcollect.md)** function.
+Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable. If you want the equivalent of a global variable, create a [collection](file-name.md) by using the **[Collect](function-collect.md)** or **[ClearCollect](function-clearcollect.md)** function.
 
 PowerApps isn't a traditional programming tool.  At its core, PowerApps has a [data-flow model](file-name.md) that's automatically kept up to date, similar to how Excel automatically recalculates when a cell changes value. A context variable doesn't benefit from the data-flow model and isn't automatically updated. You must manage the state of each variable explicitly, which can be tedious and error prone.  Before you create a context variable, consider carefully whether you can achieve the same effect more efficiently by building a formula that's based on control, screen, or system state, as [Working with state](file-name.md) describes.
 
 ## Description ##
 
- To create or update context variables, pass a single [record](file-name.md) to the **UpdateContext** function. In each record, specify the name of a column, which defines or matches the name of the variable, and the value to which you want to set that variable.
+ To create or update a context variable, pass a single [record](file-name.md) to the **UpdateContext** function. In each record, specify the name of a column, which defines or matches the name of the variable, and the value to which you want to set that variable.
 
 - If you specify the name of a variable that you've previously defined, **UpdateContext** sets the value of the variable to the value that you specify.
 - If you specify the name of a variable that doesn't yet exist, **UpdateContext** creates a variable with that name and sets the value of that variable to the value that you specify.
-- If you previously defined a variable but don't specify it in this particular **UpdateContext** formula, its value remains the same.
+- If you've previously defined a variable but don't specify it in this particular **UpdateContext** formula, its value remains the same.
 
 You can't remove a context variable after you define it.
 
-You reference a context variable in a formula by using the variable's column name. For example, **UpdateContext( { ShowLogo: true } )** creates a context variable, named **ShowLogo**, and sets its value to **true**. You can then use the value of this context variable by using the name **ShowLogo** in formulas.  You can write "**ShowLogo**" as the formula for the **Visible** property of an image control and show or hide that image control based on the value of the context variable.
+You reference a context variable in a formula by using the variable's column name. For example, **UpdateContext( { ShowLogo: true } )** creates a context variable, named **ShowLogo**, and sets its value to **true**. You can then use the value of this context variable by using the name **ShowLogo** in a formula.  You can write "**ShowLogo**" as the formula for the **Visible** property of an image control and show or hide that control based on the value of the context variable.
 
 As the examples later in this topic show, context variables can hold several kinds of information, including these:
 
