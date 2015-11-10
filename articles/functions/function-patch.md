@@ -19,45 +19,34 @@
 
 # Patch function in PowerApps #
 
-Modifies or creates a [record](file-name.md) in a [data source](file-name.md), or merges records outside of a data source.
+Modifies or creates a [record](working-with-tables.md) in a [data source](working-with-data-sources.md), or merges records outside of a data source.
 
 ## Overview ##
 
-In a data source, use the **Patch** function to modify the value of a [column](file-name.md) in a record without affecting the other columns in that record.
+Use the **Patch** function to modify a record of a data source.  The values of specific [columns](file-name.md) are modified without affecting other columns.
 
-Create a record in a data source by combining **Patch** with the **[Defaults](function-defaults.md)** function. For example, use this approach to build a single [screen](file-name.md) in which users can either modify or create a record.
+Use **Patch** with the **[Defaults](function-defaults.md)** to create records. You can use this behavior to build a [single screen](working-with-data-sources.md) for both creating and editing records.  
 
-Even if you're not updating a data source, you can use **Patch** to merge two or more records.
+Even if you're not working with a data source, you can use **Patch** to merge two or more records.
 
 ## Description ##
 
 ### Modify or create a record in a data source ###
 
-To use this function with a data source, specify the function and the data source, and then specify a base record.
+To use this function with a data source, specify the data source, and then specify a base record.
 
-- If you want to modify a record, the base record must include the name of the data source's [primary-key](file-name.md) column and the value in that column for the record that you want to modify.
+- If you want to modify a record, the base record needs to be found in the data source. In most cases, you will have obtained this record from the data source through a gallery control or a function such as **[First](function-first.md)**. The record will contain [primary key](working-with-data-sources.md) values which uniquely identify the record to be modified.
 
-- If you want to create a record, you can use the **[Defaults]** function to create a base record that contains the columns and default values for the data source that you specified.
+- If you want to create a record, you can use the **[Defaults](function-defaults.md)** function to create a base record with default values.  The values for primary key columns will be blank.
 
-Then specify one or more change records, each of which contains the name of at least one column in the data source and a value for that column. The value in each column of a change record takes priority over the value in the same column of not only the base record but also any change records that are closer to the start of the [argument list](file-name.md).
+Then specify one or more change records, each of which contains named values for the columns to be modified from the base.  Change records are processed in order from the beginning of the [argument list](file-name.md) to the end, with later named values overriding earlier ones.
 
-The [return value](file-name.md) of **Patch** is the record that you modified or created. If you created a record, the return value might include a primary key that was generated automatically from the data source.
+The [return value](file-name.md) of **Patch** is the record that you modified or created. If you created a record, the return value might include a primary key that was generated automatically by the data source.
 
-**Note**: When you try to update a data source, problems such as these might occur:
-
-- You might try to update a record at the same time as someone else.
-
-- The data might not pass validation that the data source requires.
-
-- You might not have permission to update that data source.
-
+When you update a data source, a number of issues may arise. 
 Use the **[Errors](function-errors.md)** function to identify and examine these types of issues, as [Working with Data Sources](file-name.md) describes.
 
-Related functions include:
-
-- If you use the **[Update](function-update.md)** function to modify a record, you must specify a value for each column of that record.
-
-- You can also create a record by using the **[Collect](function-collect.md)** function.
+Related functions include the **[Update](function-update.md)** function for replacing a whole record and the **[Collect](function-collect.md)** function for creating records.
 
 ### Merge records outside of a data source ###
 
@@ -73,19 +62,15 @@ Specify two or more records that you want to merge. If the same column appears i
 
 - *DataSource* – Required. The data source that contains the record that you want to modify or create.
 
-- *BaseRecord* – Required. A record that contains the name of at least one column in the data source and a value for that column.
-	- To modify a record, include the name of the primary-key column and the value in that column for the record that you want to modify.
-	- To create a record, use **Defaults** to create a record that contains the columns and default values for the data source.
+- *BaseRecord* – Required. The record to modify or create.  If primary key columns are specified, the record is found and modified; if not a new record is created.
 
-- *ChangeRecord1* – Required.  A record that contains the name of at least one column in the data source and a value for that column. If any column names match a column name in the *BaseRecord*, the value of that column in this argument takes priority.
-
-- *ChangeRecord2*, ... – Optional. If you specify multiple change records that contain the same column, the return value contains the value in the record that's closest to the end of the argument list.
+- *ChangeRecord(s)* – Required.  One or more records that contain named values to modify in the *BaseRecord*.  Change records are processed from the beginning of the argument list to the end.
 
 #### Merge records ####
 
-**Patch**( *Record1*, *Record2*, … )
+**Patch**( *Record1*, *Record2* [, …] )
 
-- *Record(s)* - Required.  At least two records that you want to merge. The return value contains every column in any record. If you specify multiple records that contain the same column, the return value contains the value in the record that's closest to the end of the argument list.
+- *Record(s)* - Required.  At least two records that you want to merge. Records are processed from the beginning of the argument list to the end.  The return value contains every column in any record. If you specify multiple records that contain the same column, the return value contains the value in the record that's closest to the end of the argument list.
 
 ## Examples ##
 

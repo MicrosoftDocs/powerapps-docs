@@ -62,7 +62,6 @@ What differentiates a data source from a table is the ability to write back chan
 
 ## Primary Keys ##
 
-
 ## Collections ##
 
 Collections are a special kind of Data Source.  They are local to the app and not backed by a connection.
@@ -71,5 +70,11 @@ LoadData
 SaveData
 
 Import from Excel
+
+## Updating ##
+
+## Error Handling ##
+
+
 
 
