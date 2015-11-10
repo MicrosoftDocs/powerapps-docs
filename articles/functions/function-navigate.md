@@ -19,19 +19,15 @@
 
 # Navigate function in PowerApps #
 
-Changes which [screen](file-name.md) appears.
+Changes which [screen](file-name.md) is displayed.
 
 ## Overview ##
 
-Most apps have multiple screens, and you use the **Navigate** function to change which screen appears at any given time. For example, set the [**OnSelect**](file-name.md) property of a button to a formula that's based on **Navigate** if you want to show a different screen when a user clicks that button. In that formula, you can specify a visual transition, such as Fade, to control how one screen changes to another.  
+Most apps have multiple screens, and you use the **Navigate** function to change which screen is displayed at any given time. For example, set the [**OnSelect**](file-name.md) property of a button to a formula that includes a **Navigate** if you want to show a different screen when a user clicks that button. In that formula, you can specify a visual transition, such as Fade, to control how one screen changes to another.  
 
-**Navigate** changes only which screen appears.
+**Navigate** changes only which screen is displayed. Screens that are not currently displayed continue to operate behind the scenes - control properties are still available throughout the app for formulas to use.  For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and see how it affects what happens in the new screen.  The user can then navigate back to the original screen and see that the slider has retained its value.
 
-- You can set a property on one screen and refer to that property from another screen. For example, a user can change the value of a slider on one screen, navigate to a different screen, and see how that change affects what happens in the new screen.
-
-- If you set the property of a control to a formula, it will continue to be calculated even when the screen that contains the control doesn't appear. For example, you can set the [**Text**](file-name.md) property of a label to a formula that calculates how many employees have responded to an HR survey. If the user navigates to a screen other than the one that contains the label, the new screen can update as more employees respond to the survey.
-
-- If you set the value of a [context variable](file-name.md) on one screen, that value is preserved when the user navigates to a different screen unless you specify an argument to update the value. This is similar to passing parameters to procedures in other programming tools.
+[Context variables](file-name.md) are also preserved when navigating between screens.  **Navigate** has the ability to set context variables for the screen it is navigating to, the only way in which context variables can be set from outside the screen.  This can be used to pass parameters to a screen, similar to passing parameters to procedures in other programming tools.
 
 ## Description ##
 
@@ -48,7 +44,7 @@ In the first argument, specify the name of the screen to display.
 
 TODO: What does it mean to pass "" for transition?
 
-As an optional third argument, preserve one or more aspects of [app state](file-name.md) by specifying a [record](file-name.md) that contains the name of at least one column and a value for each column. This approach is similar to using the the **[UpdateContext](function-updatecontext.md)** function to manage the user experience in the new screen.  Note that context variables on the new screen are updated and not the old screen.
+**Navigate** can create or update context variables of the new screen.  As an optional third argument, pass a [record](file-name.md) that contains the context variable name as column name and the new value for the context variable.  This record is the same as the record used with the **[UpdateContext](function-updatecontext.md)** function.
 
 Set the **[OnHidden](file-name.md)** property of the old screen, the **[OnVisible](file-name.md)** property of the new screen, or both to make additional changes during the transition. The **[App!ActiveScreen](file-name.md)** property will be updated to reflect the change.
 
