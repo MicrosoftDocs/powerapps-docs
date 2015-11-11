@@ -41,17 +41,30 @@
 ## F ##
 ## I ##
 ## L ##
+
+[Lower](functions/function-lower-upper-proper.md) Converts letters in a string of text to all lowercase.
+
 ## M ##
 ## N ##
+
+[Navigate](functions/function-navigate.md) Changes which screen is displayed.
+
 ## O ##
 ## P ##
 
-[Patch](functions/function-patch.md) Modifies a record by comparing it to at least one other record and overwriting any data that doesn’t match. Also, creates a record in a data source if you specify a record that has no primary key.
+[Patch](functions/function-patch.md) Modifies or creates a record in a data source, or merges records outside of a data source.
+
+[Proper](functions/function-lower-upper-proper.md) Converts letters in a string of text to proper case (first letter of each word is uppercase, the rest are lowercase).
 
 ## R ##
 ## S ##
 ## T ##
 ## U ##
+
+[UpdateContext](functions/function-updatecontext.md) Creates or updates context variables of the current screen].
+
+[Upper](functions/function-lower-upper-proper.md) Converts letters in a string of text to all uppercase.
+
 ## V ##
 
 [Validate](functions/function-validate.md) Checks whether the value of a single column or a complete record is valid for a data source.

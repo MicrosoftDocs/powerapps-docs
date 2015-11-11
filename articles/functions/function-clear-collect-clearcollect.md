@@ -27,27 +27,37 @@ Clears and/or adds to a [data source](working-with-data-sources.md).
 
 The **Clear** function clears all data from a data source.
 
+You can use the **[Remove](function-remove.md)** function to selectively remove records.
+
+**Clear** has no return value.  **Clear** can only be used in a [behavior](file-name.md) formula.
+
 TODO: Clear for data source safety.
 
 ### Collect ###
 
 The **Collect** function adds data to a data source.
 
-Collect will create one or more new records in the data source.  The item to be added can be:
+Collect will create one or more new records in the data source.  The items to be added can be:
 
 - A single value: The value is placed in the **Value** property of a new record.  All other properties are left blank.
 
 - A [record](working-with-tables.md): Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
   
-- A [table](working-with-tables.md): Each record of the table is added as a separate record to the data source as described above.  The table is not added as whole to a record, to accomplish this wrap the table in a record before using **Collect**. 
+- A [table](working-with-tables.md): Each record of the table is added as a separate record to the data source as described above.  The table is not added as whole to a record, to accomplish this wrap the table in a record first. 
 
 When used with a [collection](working-with-data-sources.md#collections), additional columns will be created as needed.  This cannot be done for other data sources where the columns are set by the data storage.
 
-If the data source does not already exist, a new [collection](working-with-data-sources.md#collections) is created.    
+If the data source does not already exist, a new [collection](working-with-data-sources.md#collections) is created.
+
+You can also use the **[Patch](function-patch.md)** function to create records.
+
+**Collect** returns the modified data source as a table.  **Collect** can only be used in a behavior formula.
 
 ### ClearCollect ###  
 
-The **ClearCollect** function clears all data from a data source and then adds a different set of data to the same data source.  With a single function, **ClearCollect** offers the equivalent of evaluating **Clear** and then **Collect**.
+The **ClearCollect** function clears all data from a data source and then adds a different set of data to the same data source.  With a single function, **ClearCollect** offers the equivalent of **Clear** and then **Collect**.
+
+**ClearCollect** returns the modified data source as a table.  **ClearCollect** can only be used in a behavior formula.
 
 ## Syntax ##
 
@@ -71,7 +81,7 @@ The **ClearCollect** function clears all data from a data source and then adds a
 
 ### Clearing and adding records to a data source ###
 
-In these examples, you'll erase and add to a data source that's named **IceCream**. The ID column contains a primary key that the data source generates.  The data source begins with the data in this table:
+In these examples, you'll erase and add to a data source that's named **IceCream**. The ID column contains a primary key that the data source generates.  The data source begins with these contents:
 
 | ID (automatically generated<br>primary key) | Flavor    | Quantity |
 |-----|-----------|----------|
@@ -84,7 +94,7 @@ We use the **ClearCollect** function to clear and then add records to **IceCream
 |---------|--------------|---------------------|
 | **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} ) **| This formula clears all data from the **IceCream** data source and then adds a record that includes a quantity of strawberry ice cream. | The value of the changed data source as a [table](working-with-tables.md) (see below).<br><br>The data source will also be modified. |
 
-After the above formula has been evaluated, the **IceCream** data source looks like this:
+After the above formula has been evaluated, the **IceCream** data source contains:
 
 | ID (automatically generated<br>primary key) | Flavor    | Quantity |
 |-----|-----------|----------|
@@ -96,7 +106,7 @@ We then add another record to **IceCream** with a **Collect** function:
 |---------|--------------|---------------------|
 | **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  ) **| This formula adds a record to the **IceCream** data source that includes a quantity of pistachio ice cream. | The value of the changed data source as a table (see below).<br><br>The data source will also be modified. |
 
-After the above formula has been evaluated, the **IceCream** data source looks like this:
+After the above formula has been evaluated, the **IceCream** data source contains:
 
 | ID (automatically generated<br>primary key) | Flavor    | Quantity |
 |-----|-----------|----------|
