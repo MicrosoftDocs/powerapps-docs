@@ -12,9 +12,10 @@
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na" 
    ms.date="11/11/2015"
    ms.author="litran"/>
+
 
 # Create a new SharePoint Online API from Azure Marketplace
 
@@ -26,7 +27,7 @@
 4. Click *OK* on *Configure API* blade
 5. Click *OK* on *Create API* blade
 
-# Configure SharePoint Online Settings and API Definition
+## Configure SharePoint Online Settings and API Definition
 1. Back in your API blade, select **All settings**, and select **General**:  
 ![][3]  
 2. In General settings, set the following properties. Remember, the settings vary depending on the API you're using:  
