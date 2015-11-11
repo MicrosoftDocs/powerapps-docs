@@ -12,7 +12,7 @@
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na" 
    ms.date="11/02/2015"
    ms.author="litran"/>
 
@@ -48,4 +48,4 @@
 5. Click **OK**. Office 365 Users API is now added to the list of **Registered APIs** in your App Service Environment.
 
 <!--References-->
-[1]: https://azure.microsoft.com/en-us/documentation/articles/active-directory-integrating-applications/  
+[1]: https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/  
