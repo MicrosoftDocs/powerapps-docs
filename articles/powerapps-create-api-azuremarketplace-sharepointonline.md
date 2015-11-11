@@ -1,28 +1,27 @@
 <properties
 	pageTitle="Create a new SharePoint Online API"
 	description=""
-	services="power-apps"
+	services="powerapps"
 	documentationCenter="" 
 	authors="LinhTran"
 	manager="gautamt"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="" 
-   ms.date="11/02/2015"
+   ms.date="11/11/2015"
    ms.author="litran"/>
 
 # Create a new SharePoint Online API from Azure Marketplace
 
-1. Select SharePoint Online from Azure Marketplace
+1. Select SharePoint Online from Azure Marketplace:  
 ![][1]  
 2. Select *Settings - Configure required settings*
-3. Enter *App Key* and *App Secret* for SharePoint Online
-	- If you don't have a SharePoint Online, go [here]() to obtain one.
+3. Enter *App Key* and *App Secret* for SharePoint Online. If you don't have a SharePoint Online, go [here]() to obtain one.  
 ![][2]  
 4. Click *OK* on *Configure API* blade
 5. Click *OK* on *Create API* blade
@@ -40,7 +39,7 @@ OAuth Settings | When using a PaaS (Platform as a Service) API, that service may
 
 3. **Save** your changes.
 
-4. In these Settings, you can also upload a policy file and view the API definition, which is the Swagger file associated with your API. 
+4. In these Settings, you can also upload a policy file and view the API definition, which is the Swagger file associated with your API:  
 ![][4]  
 
 [1]: ./media/powerapps-create-api-azuremarketplace-sharepointonline/marketplace.png
