@@ -1,14 +1,14 @@
 <properties
 	pageTitle="Create a new Office 365 Users API in your organization's App Service Environment"
 	description="Create a new Office 365 Users API in your organization's App Service Environment"
-	services="power-apps"
+	services="powerapps"
 	documentationCenter="" 
 	authors="LinhTran"
 	manager="gautamt"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
