@@ -1,22 +1,22 @@
 <properties
 	pageTitle="Create a new SharePoint Server API in your organization's App Service Environment"
 	description="Create a new SharePoint Server API in your organization's App Service Environment"
-	services="power-apps"
+	services="powerapps"
 	documentationCenter="" 
 	authors="rajram"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na" 
    ms.date="11/03/2015"
    ms.author="rajram"/>
 
-#Create a new SharePoint Server API in your organization's App Service Environment
+# Create a new SharePoint Server API in your organization's App Service Environment
 
 1. In the Azure portal, open **PowerApps**. In PowerApps, select **Registered APIs** tile or select it from *Settings*:  
 
@@ -46,7 +46,7 @@
 
 5. Click **OK**. SharePoint Server API is now added to the list of **Registered APIs** in your App Service Environment.
 
-#Configure connectivity to an on-premises SharePoint Server
+## Configure connectivity to an on-premises SharePoint Server
 
 SharePoint Server makes use of AD for user authentication. APIs in ASE are authenticated via AAD. There is a need to exchange the user’s AAD token and convert it to AD token. This AD token can then be used to connect to the service on-premises.
 
