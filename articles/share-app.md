@@ -14,75 +14,58 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="11/02/2015"
+    ms.date="11/11/2015"
     ms.author="anneta"/>
 
 # Share an app#
-You can share your app with co-workers so that they can use your app too! If you share an app with ‘view’ permissions, your co-worker may use the app; and if you share an app with ‘edit’ permissions, your co-worker may edit the app to make improvements to it and share the app with others.
+Share your app with co-workers or other users by giving them permission either to just run the app or to not only run it but also to customize it and then share their own versions.
 
-**Prerequisites**
-- PowerApps on iOS or Windows device
-- An app that you have built from data or a template. For more information on how to build an app, look [here]().
+Share an app with multiple co-workers at the same time or with a group in Active Directory. If you share an app with a group, everyone in that group will have the permissions that you assign to it. If users are added to or deleted from the group, they will gain and lose permissions accordingly.
 
-You may share an app from
+## Prerequisites ##
+- An account with which you've signed in to [powerapps.com]() or PowerApps.
+- Either of the following:
+	- An app that you built (from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)).
+	- An app that someone else built and given you permission to run, customize, and share.
 
-## Share an app from the web and from PowerApps ##
-1. Sign into your account on [powerapps.com]() or on PowerApps.
+## Share an app ##
+1. Do either of the following:
+	- In [powerapps.com](), select **Apps** near the left edge of the screen.
 
-1. Navigate to an app that you’ve built.
+	![List apps on powerapps.com the web](./media/share-app/file-apps-portal.png)
 
-	On the **web**:
+	- In PowerApps, select **Open** near the left edge of the screen.
 
-	Click on the Apps tab in the navigation menu and select an app that you have built.
+	![List apps on powerapps.com the web](./media/share-app/open-apps.png)
 
-	![Open an app from the web](./media/share-app/open-app-web.png)
-
-	In **PowerApps**:
-
-	Click on the Open tab in the navigation menu and select an app that you have built.
-
-	![Open an app from PowerApps](./media/share-app/open-app-powerapps.png)
-
-1. Click on the share icon of the app that you want to share with your co-worker.
+1. Select the share icon for the app that you want to share.
 
 	![Share icon](./media/share-app/share-icon.png)
 
-1. In the Share dialog, start to type your co-worker’s name or email, and select the appropriate person from the list.
+1. In the dialog box that appears, type the first few letters of your co-worker’s name or email address, and then select the person you want in the list that appears.
 
-	On the **web**, a pop-up will appear:
+	On **powerapps.com**
 
-	![Choose a user from a list on the web](./media/share-app/name-list-web.png)
+	![Specify a user](./media/share-app/specify-user-portal.png)
 
-	In **PowerApps**:
+	In **PowerApps**
 
-	![Choose a user from a list in PowerApps](./media/share-app/name-list-pa.png)
+	![Specify a user](./media/share-app/specify-user.png)
 
-1. If you’d like your co-worker to use the app but not edit it, share the app with ‘Can View’ permissions.
+1. In the list of permission types, select **Can view** to allow the user to just run the app, or select **Can edit** to allow the user to run your app, customize it, and share a new version of your app.
 
-	If you’d like your co-worker to help make changes to the app, share the app with ‘Can Edit’ permissions. Co-workers who have ‘Can Edit’ permissions on your app will be able to share it on further with other co-workers.
+	On **powerapps.com**
 
-	On the **web**, permissions can be selected next to your co-worker’s name:
+	![Choose permissions](./media/share-app/permission-list-portal.png)
 
-	![Choose permissions on the web](./media/share-app/permissions-web.png)
+	In **PowerApps**
 
-	Make sure to click on ‘Save’ to share the app with your co-worker.
+	![Choose permissions](./media/share-app/permissions-pa.png)
 
-	![Save permissions on the web](./media/share-app/save-permissions-web.png)
+1. Select **Save** on powerapps.com or **Share** in PowerApps to send a message that notifies the user or users you've specified of your shared app.
 
-	In PowerApps, permissions can be selected right below your co-worker’s name:
+	The message contains a link that a user can select to access the app. Any users who don't have PowerApps (or aren’t signed up to use it) are prompted to install it and sign up for it.
 
-	![Choose permissions in PowerApps](./media/share-app/permissions-pa.png)
-
-	Make sure to click on Share to share the app with your co-worker.
-
-	![Save permissions in PowerApps](./media/share-app/save-permissions-pa.png)
-
-1.	Your co-worker will now get an email indicating that an app was shared by you. All your co-worker has to do is to click the link in the email to access the app. If your co-worker doesn’t have PowerApps or isn’t signed up to use it, he/she will be taken through the process to download PowerApps and sign up for it.
-
-	![Message that notifies user of shared app](./media/share-app/mail-notification.png)
-
-1.	You may share an app with multiple co-workers at the same time, or with an AD group. When you share an app with an AD group, the permissions that you assign to the group will apply to all the users in the AD group. If a user is added to the AD group, he/she will be able to access the app with the assigned permissions. If a user is deleted from the AD group, he/she will no longer have access to the app.
-
-1. You may revoke a user’s access to the app by clicking on the ‘X’ next to his/her name in the Share dialog on the web.
-
-	![Remove permissions from shared app](./media/share-app/remove-permissions.png)
+## Change or remove permission ##
+- Change a user's or a group’s permission for a shared app by selecting the other option in the list of permissions next to the appropriate name.
+- Remove a user's or a group's permission for a shared app by selecting the **X** next to the appropriate name.
