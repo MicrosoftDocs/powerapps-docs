@@ -1,22 +1,22 @@
 <properties
 	pageTitle="Create connection for SQL Connector"
 	description="IT Doc: steps to do before you can sign up for PowerApps Enterprise"
-	services="power-apps"
+	services="powerapps"
 	documentationCenter="" 
 	authors="LinhTran"
 	manager="gautamt"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na" 
    ms.date="11/02/2015"
    ms.author="litran"/>
 
-## Create connection for SQL Connector
+# Create connection for SQL Connector
 
 1. In the Azure portal, open PowerApps, and select **Manage APIs**. A list of the configured APIs is displayed:  
 ![][1]  
