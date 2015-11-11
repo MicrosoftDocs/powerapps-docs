@@ -1,18 +1,18 @@
 <properties
 	pageTitle="Create a new Excel API in your organization's App Service Environment"
 	description="Create a new Excel API in your organization's App Service Environment"
-	services="power-apps"
+	services="powerapps"
 	documentationCenter="" 
 	authors="rajram"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na" 
    ms.date="11/03/2015"
    ms.author="rajram"/>
 
