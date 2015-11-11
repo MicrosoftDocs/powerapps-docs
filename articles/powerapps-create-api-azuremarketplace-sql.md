@@ -38,7 +38,7 @@
 	
 7. Select **OK**. SQL Server API is now added to the list of **Registered APIs** in your app service environment.  
 
-# Configure connectivity to SQL Server on-premises
+## Configure connectivity to SQL Server on-premises
 You can connect to SQL Server on-premise. In order to establish this hybrid connectivity, you can leverage existing hybrid networking solutions in Azure such as
 
 - [ExpressRoute][1]
