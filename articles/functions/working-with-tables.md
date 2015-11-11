@@ -29,9 +29,9 @@ Tables make working with a group of related information easier.  They can be fou
 
 Records contain detailed information for a person, place, or thing.  In the above example, there are three records shown horizontally, one each for the products Chocolate, Bread, and Water.  For each product, price and quantity information is available.
 
-Records can be used in formulas as a whole.  For example, **First(Proudcts)** returns the first record of the above table.
+Records can be used by themselves in formulas, outside of a table's context.  For example, **First(Proudcts)** returns the first record of the above table.  Records can be expressed in formulas using curly braces, for example **{ Name: "Chcocolate" }**.
 
-You may have referred to records as "rows" or "items" in other tools.
+You may have seen records referred to as "rows" or "items" in other tools.
 
 ### Columns ###
 
@@ -69,7 +69,7 @@ Functions that return a Property include Lookup.
 
 Records and tables can be written in a formula as a literal value, just as the number 4 or the string "Hello, World" is written.  
 
-Records can be expressed using curly braces that contain property name and value pairs.  For example, the first record in the table above could be written:
+Records can be expressed using curly braces that contain named property values.  For example, the first record in the table above could be written:
 
 **{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quanityt on Order': 10 }**
 
