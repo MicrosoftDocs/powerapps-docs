@@ -1,23 +1,23 @@
 <properties
 	pageTitle="Create a new SQL Server API in your organization's App Service Environment"
 	description="Create a new SQL Server API in your organization's App Service Environment"
-	services="power-apps"
+	services="powerapps"
 	documentationCenter="" 
 	authors="rajram"
 	manager="dwrede"
 	editor=""/>
 
 <tags
-   ms.service="power-apps"
+   ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="" 
+   ms.workload="na" 
    ms.date="11/03/2015"
    ms.author="rajram"/>
 
 
-#Create a new SQL Server API in your organization's App Service Environment
+# Create a new SQL Server API in your organization's App Service Environment
 
 1. In the Azure portal, open **PowerApps**. In PowerApps, select **Registered APIs** tile or select it from *Settings*:  
 
@@ -38,7 +38,7 @@
 	
 7. Select **OK**. SQL Server API is now added to the list of **Registered APIs** in your app service environment.  
 
-#Configure connectivity to SQL Server on-premises
+# Configure connectivity to SQL Server on-premises
 You can connect to SQL Server on-premise. In order to establish this hybrid connectivity, you can leverage existing hybrid networking solutions in Azure such as
 
 - [ExpressRoute][1]
@@ -49,8 +49,8 @@ You can connect to SQL Server on-premise. In order to establish this hybrid conn
 	>Note: Every registered API in your ASE has a corresponding web app. You can establish hybrid connections from this web app just like you can from any other web app.
 
 <!--References-->
-[1]: https://azure.microsoft.com/en-us/documentation/articles/expressroute-introduction/
-[2]: https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-create-site-to-site-rm-powershell/
-[3]: https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-point-to-site-create/
-[4]: https://azure.microsoft.com/en-us/documentation/articles/web-sites-hybrid-connection-get-started/
+[1]: https://azure.microsoft.com/documentation/articles/expressroute-introduction/
+[2]: https://azure.microsoft.com/documentation/articles/vpn-gateway-create-site-to-site-rm-powershell/
+[3]: https://azure.microsoft.com/documentation/articles/vpn-gateway-point-to-site-create/
+[4]: https://azure.microsoft.com/documentation/articles/web-sites-hybrid-connection-get-started/
 
