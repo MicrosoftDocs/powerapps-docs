@@ -76,4 +76,4 @@ Now, your API is registered and ready for users to use from their apps. One thin
 [11]: ./media/powerapps-register-api-hosted-in-app-service/registered-apis-part.png
 [12]: ./media/powerapps-register-api-hosted-in-app-service/add-api-button.png
 [13]: ./media/powerapps-register-api-hosted-in-app-service/add-api-blade.png
-[14]: ./media/powerapps-register-api-hosted-in-app-service/add-api-select-from-api-app-blade.png
+[14]: ./media/powerapps-register-api-hosted-in-app-service/add-api-select-from-marketplace-blade.png
