@@ -69,7 +69,7 @@ Functions that return a Property include Lookup.
 
 Records and tables can be written in a formula as a literal value, just as the number 4 or the string "Hello, World" is written.  
 
-Records can be expressed using curly braces that contain property name and value pairs.  For example, the first record in the table above could be written:
+Records can be expressed using curly braces that contain named property values.  For example, the first record in the table above could be written:
 
 **{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quanityt on Order': 10 }**
 

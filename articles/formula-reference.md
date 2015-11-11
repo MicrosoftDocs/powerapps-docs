@@ -27,7 +27,11 @@
 ## A ##
 ## C ##
 
-[ClearCollect](functions/function-clearcollect.md) Clears all data from a data source and then immediately adds a different set of data to the same data source.
+[Clear](functions/function-celar-collect-clearcollect.md) Clears all data from a data source.
+
+[ClearCollect](functions/function-celar-collect-clearcollect.md) Clears all data from a data source and then adds a different set of data to the same data source.
+
+[Collect](functions/function-celar-collect-clearcollect.md) Adds data to a data source.
 
 ## D ##
 
