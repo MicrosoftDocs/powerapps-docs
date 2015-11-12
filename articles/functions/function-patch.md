@@ -45,7 +45,7 @@ The [return value](file-name.md) of **Patch** is the record that you modified or
 
 When you update a data source, a number of issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine as issues, as described in [Working with Data Sources](working-with-data-sources.md#errors).
 
-Related functions include the **[Update](function-update.md)** function for replacing an entire record and the **[Collect](function-collect.md)** function for creating records.
+Related functions include the **[Update](function-update-updateif.md)** function for replacing an entire record and the **[Collect](function-collect.md)** function for creating records.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
 
 ### Merge records outside of a data source ###
 
