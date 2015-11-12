@@ -91,9 +91,9 @@ The data source has also provided this information:
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!DisplayName,&nbsp;"Quantity"&nbsp;)** | Returns the display name for the **Quantity** column of the **IceCream** data source. | "Quantity on Hand" |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxLength,&nbsp;"Flavor"&nbsp;)** | Returns the maximum length string for the **Flavor** column of the **IceCream** data source. | 30 |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!Required,&nbsp;"Flavor"&nbsp;)** | Is the **Flavor** column of the **IceCream** data source required? | **true** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!Required,&nbsp;"Flavor"&nbsp;)** | Is the **Quantity** column of the **IceCream** data source required? | **false** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxValue,&nbsp;"Flavor"&nbsp;)** | Returns the maximum numeric value for the **Quantity** column of the **IceCream** data source. | 100 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxValue,&nbsp;"Flavor"&nbsp;)** | Returns the minimum numeric value for the **Quantity** column of the **IceCream** data source. | 0 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!Required,&nbsp;"Quantity"&nbsp;)** | Is the **Quantity** column of the **IceCream** data source required? | **false** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxValue,&nbsp;"Quantity"&nbsp;)** | Returns the maximum numeric value for the **Quantity** column of the **IceCream** data source. | 100 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MinValue,&nbsp;"Quantity"&nbsp;)** | Returns the minimum numeric value for the **Quantity** column of the **IceCream** data source. | 0 |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!ReadPermission)** | Is the current user able to read records in the **IceCream** data source? | **true** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!EditPermission)** | Is the current user able to edit records in the **IceCream** data source? | **true** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!CreatePermission)** | Is the current user able to create records in the **IceCream** data source? | **false** |

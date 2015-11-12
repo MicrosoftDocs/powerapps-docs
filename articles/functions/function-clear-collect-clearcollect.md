@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Clear, Collect, and ClearCollect functions"
-	description="Reference information for the Clear, Collect, and ClearCollect functions in PowerApps, including syntax and examples"
+	pageTitle="PowerApps: Collect, Clear, and ClearCollect functions"
+	description="Reference information for the Collect, Clear, and ClearCollect functions in PowerApps, including syntax and examples"
 	services="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
@@ -17,21 +17,11 @@
    ms.date="11/01/2015"
    ms.author="gregli"/>
 
-# Clear, Collect, and ClearCollect functions in PowerApps #
+# Collect, Clear, and ClearCollect functions in PowerApps #
 
 Clears and/or adds records to a [data source](working-with-data-sources.md).
 
 ## Description ##
-
-### Clear ###
-
-The **Clear** function deletes the records from a data source.  The columns of the data source will remain.    
-
-You can use the **[Remove](function-remove.md)** function to selectively remove records.
-
-**Clear** has no return value.  It can only be used in a [behavior](file-name.md) formula.
-
-TODO: Clear for data source safety.
 
 ### Collect ###
 
@@ -52,6 +42,16 @@ If the data source does not already exist, a new [collection](working-with-data-
 You can also use the **[Patch](function-patch.md)** function to create records.
 
 **Collect** returns the modified data source as a table.  **Collect** can only be used in a behavior formula.
+
+### Clear ###
+
+The **Clear** function deletes the records from a data source.  The columns of the data source will remain.    
+
+You can use the **[Remove](function-remove.md)** function to selectively remove records.
+
+**Clear** has no return value.  It can only be used in a [behavior](file-name.md) formula.
+
+TODO: Clear for data source safety.
 
 ### ClearCollect ###
 
