@@ -86,13 +86,13 @@ For this example, we'll be working with the **IceCream** data source:
 
 Through PowerApps, a user loads the Chocolate record into a data entry form and changes the value of **Quantity** to 90.  To make this change in the data source, the **Patch** function is used
 
-**Patch( IceCream, { ID: 1 }, Canvas!Updates )**
+- **Patch( IceCream, { ID: 1 }, Canvas!Updates )**
 
 where **Canvas!Updates** evaluates to **{ Quanitty: 90 }**, since only the **Quantity** was modified.
 
 Unfortunately, just before the **Patch** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula
 
-**IsEmpty( Errors( IceCream, { ID: 1 } ) )**
+- **IsEmpty( Errors( IceCream, { ID: 1 } ) )**
 
 which returns **false**, because the **Errors** function returned
 
@@ -106,8 +106,8 @@ You can place a label on the form to show this error to the user with the formul
 
 You can also place a "Reload" button on the form, so that the user can efficiently resolve the conflict
 
-**ReloadButton!OnSelect = Refresh( IceCream )**
-**ReloadButton!Visible = !IsEmpty( Lookup( Errors( IceCream, { ID: 1 } ), Error = ErrorKind!Conflict ) )**
+- **ReloadButton!OnSelect = Refresh( IceCream )**
+- **ReloadButton!Visible = !IsEmpty( Lookup( Errors( IceCream, { ID: 1 } ), Error = ErrorKind!Conflict ) )**
 
 
 

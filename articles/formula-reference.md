@@ -62,11 +62,22 @@
 [Proper](functions/function-lower-upper-proper.md) Converts letters in a string of text to proper case (first letter of each word is uppercase, the rest are lowercase).
 
 ## R ##
+
+[Refresh](functions/function-refesh.md) Refreshes a data source, including changes made by other users.
+
+[Remove](functions/function-remove-removeif.md) Removes specific records from a data source.
+
+[RemoveIf](functions/function-remove-removeif.md) Removes records from a data source based on a condition.
+
 ## S ##
 ## T ##
 ## U ##
 
+[Update](functions/function-update.md) Replaces a record in a data source.
+
 [UpdateContext](functions/function-updatecontext.md) Creates or updates context variables of the current screen].
+
+[UpdateIf](functions/function-update-updateif.md) Modifies a set of records in a data source based on a condition.
 
 [Upper](functions/function-lower-upper-proper.md) Converts letters in a string of text to all uppercase.
 
