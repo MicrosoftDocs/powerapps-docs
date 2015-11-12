@@ -25,9 +25,7 @@ Clears and/or adds records to a [data source](working-with-data-sources.md).
 
 ### Collect ###
 
-The **Collect** function adds data to a data source.
-
-Collect will create one or more new records in the data source.  The items to be added can be:
+The **Collect** function adds records to a data source.  The items to be added can be:
 
 - A single value: The value is placed in the **Value** property of a new record.  All other properties are left blank.
 
@@ -35,7 +33,7 @@ Collect will create one or more new records in the data source.  The items to be
   
 - A [table](working-with-tables.md): Each record of the table is added as a separate record to the data source as described above.  The table is not added as whole to a record.  To accomplish this, wrap the table in a record first. 
 
-When used with a [collection](working-with-data-sources.md#collections), additional columns will be created as needed.  This cannot be done for other data sources where the columns are set by the data storage.
+When used with a [collection](working-with-data-sources.md#collections), additional columns will be created as needed.  For other data sources this cannot be done, additional columns must be added where the data source is stored.  
 
 If the data source does not already exist, a new [collection](working-with-data-sources.md#collections) is created.
 
@@ -117,4 +115,10 @@ After the above formula has been evaluated, the **IceCream** data source contain
 
 ### Step by step ###
 
-<ol><li>Add a button, and set its **OnSelect** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**<br><br>This function creates a collection that's named **Products** and that contains a row for each of three product names.</li><br><li>Press F5, click the button, and then press Esc to return to the design workspace.</li><br><li>(optional) To display a preview of the collection that you created, click **Collections**  on the **Content** tab.</li></ol>
+1. Add a button, and set its **OnSelect** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
+
+	This function creates a collection that's named **Products** that contains a row for each of three product names.
+
+1. Press F5, click the button, and then press the Esc key to return to the design workspace.
+
+1. (optional) To display a preview of the collection that you created, click **Collections**  on the **Content** tab.
