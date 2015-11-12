@@ -27,7 +27,7 @@ Updates [records](working-with-tables.md) in a [data source](working-with-data-s
 
 Use the **Update** function to replace specific records in a data source.  Records are matched based on their [primary key](working-with-data-sources.md) columns and other columns are ignored.  The entire record is replaced and not modified as is done with **UpdateIf** and the **[Patch](function-patch.md)** function.
 
-For [collections](working-with-data-sources.md) that do not have a primary key, the entire record must match.  You can use the **All** argument to update all copies of a record, otherwise only one copy of the record is updated. 
+For [collections](working-with-data-sources.md) that do not have a primary key, the entire record must match.  There may also be more than one record that matches as duplicate records are allowed.  You can use the **All** argument to update all copies of a record, otherwise only one copy of the record is updated. 
 
 TODO: can reaffirm primary key values, or must not be there?
 
@@ -84,4 +84,12 @@ In these examples, you'll replace or modify records in a data source that's name
 
 ### Step by step ###
 
-<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><br><li>Name the gallery **ProductGallery**.</li><br><li>Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery!Selected!UnitsInStock**</li><br><li>Add a button, and set its **OnSelect** property to this expression:<br>**UpdateIf(Inventory, ProductName = ProductGallery!Selected!ProductName, {UnitsInStock:UnitsInStock-UnitsSold!Value})**</li><br><li>Press F5, click a product in the gallery, specify a value with the slider, and then click the button.<br>The number of units in stock for the product you specified decreases by the amount that you specified.</li></ol>
+1. Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.
+
+1. Name the gallery **ProductGallery**.
+
+1. Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery!Selected!UnitsInStock**
+
+1. Add a button, and set its **OnSelect** property to this expression:<br>**UpdateIf(Inventory, ProductName = ProductGallery!Selected!ProductName, {UnitsInStock:UnitsInStock-UnitsSold!Value})**
+
+1. Press F5, click a product in the gallery, specify a value with the slider, and then click the button.<br>The number of units in stock for the product you specified decreases by the amount that you specified.

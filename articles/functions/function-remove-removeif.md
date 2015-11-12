@@ -83,4 +83,8 @@ In these examples, you'll modify or create a record in a data source that's name
 
 ### Step by step ###
 
-<ol><li>Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.</li><br><li>In the gallery, set the **OnSelect** property of the image to this expression:<br>**Remove(Inventory, ThisItem)**</li><br><li>Press F5, and then click an image in the gallery.<br>The item is removed from the gallery and the collection.</li></ol>
+1. Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](show-images-text-gallery-sort-filter.md) describes.
+
+1. In the gallery, set the **OnSelect** property of the image to this expression:<br>**Remove(Inventory, ThisItem)**
+
+1. Press F5, and then click an image in the gallery.<br>The item is removed from the gallery and the collection.
