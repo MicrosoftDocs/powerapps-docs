@@ -1,0 +1,109 @@
+<properties
+	pageTitle="PowerApps: DataSourceInfo function"
+	description="Reference information for the DataSourceInfo function in PowerApps, including syntax and examples"
+	services="powerapps"
+	documentationCenter="na"
+	authors="gregli-msft"
+	manager="dwrede"
+	editor=""
+	tags=""/>
+
+<tags
+   ms.service="powerapps"
+   ms.devlang="na"
+   ms.topic="article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="11/11/2015"
+   ms.author="gregli"/>
+
+# DataSourceInfo function in PowerApps #
+
+Provides information about a [data source](working-wtih-data-sources.md).
+
+## Overview ##
+
+Data sources can provide a wealth of information to optimize the user experience.
+
+You can use column level information in formulas to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function.  The **[Validate](function-validate.md)** function uses this same information.
+
+You can use data source level information in formulas to disable or hide "Edit" and "New" buttons for users that do not have permissions to edit and create records.
+
+Data sources vary in how much information they provide, including not providing any at all.  **[Collections](working-with-data-sources.md) provide no information.  If a piece of information is not provided, a default is used or *blank* is the result. 
+
+## Description ##
+
+### Column Information ###
+
+You can use **DataSourceInfo** to obtain information about a particular column of a data source:  
+
+| Information Argument | Result Type | Description |
+|-------------|-------------|-------------|
+| **DataSourceInfo!DisplayName** | String | Display Name for the column.  If no display name is defined, returns the column name. |
+| **DataSourceInfo!MaxLength** | Number | Maximum number of characters that the column can hold.  Applies only to columns that contain strings.  If a maximum is not set, returns *blank*. |
+| **DataSourceInfo!MaxValue** | Number | Maximum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a maximum is not set, returns *blank*.|
+| **DataSourceInfo!MinValue** | Number | Minimum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a minimum is not set, returns *blank*.|
+| **DataSourceInfo!Required** | Boolean | Is a value required for this column?  If not set by the data source, returns **false**.  |
+
+The third argument is the name of a column as a string.  For example, column **Phone** in collection **People** would be passed as **"Phone"** including the double quotes. 
+
+### Data Source Information ###
+
+You can also use **DataSourceInfo** to obtain information about a data source as a whole:
+
+| Information Argument | Result Type | Description | 
+|-------------|-------------|-------------|
+| **DataSourceInfo!CreatePermission** | Boolean | Does the current user have permission to create records in this data source?  If not set by the data source, returns **true**. |  
+| **DataSourceInfo!DeletePermission** | Boolean | Does the current user have permission to delete records in this data source?  If not set by the data source, returns **true**.|   
+| **DataSourceInfo!EditPermission** | Boolean | Does the current user have permission to edit records in this data source?  If not set by the data source, returns **true**.|   
+| **DataSourceInfo!ReadPermission** | Boolean | Does the current user have permission to read records in this data source?  If not set by the data source, returns **true**.|   
+
+## Syntax ##
+
+**DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
+
+- *DataSource* – Required. The data source to use.
+
+- *Information* – Required.  The information desired.
+
+- *ColumnName* – Optional.  For column level information, the column name as a string.  Column **Phone** would be passed as **"Phone"**, including the double quotes.  For data source level information, this argument cannot be used.
+
+## Examples ##
+
+The examples in this section use this data source, named **IceCream**:
+
+| Flavor | Quantity |
+|-------|---------|
+| "Chocolate"  | 10 |
+| "Vanilla" | 20 |
+
+The data source has also provided this information:
+
+- The display name for **Quantity** is "Quantity on Hand".
+- The maximum length of **Flavor** is 30 characters.
+- The **Flavor** column must contain a value.  The **Quantity** column is not required.
+- The minimum **Quantity** is 0.
+- The maximum **Quantity** is 100.
+- The current user can read and edit the records of the **IceCream** data source, but cannot create or delete records.
+
+| Formula | Description | Result |
+|---------|-------------|--------|
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!DisplayName,&nbsp;"Quantity"&nbsp;)** | Returns the display name for the **Quantity** column of the **IceCream** data source. | "Quantity on Hand" |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxLength,&nbsp;"Flavor"&nbsp;)** | Returns the maximum length string for the **Flavor** column of the **IceCream** data source. | 30 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!Required,&nbsp;"Flavor"&nbsp;)** | Is the **Flavor** column of the **IceCream** data source required? | **true** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!Required,&nbsp;"Flavor"&nbsp;)** | Is the **Quantity** column of the **IceCream** data source required? | **false** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxValue,&nbsp;"Flavor"&nbsp;)** | Returns the maximum numeric value for the **Quantity** column of the **IceCream** data source. | 100 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxValue,&nbsp;"Flavor"&nbsp;)** | Returns the minimum numeric value for the **Quantity** column of the **IceCream** data source. | 0 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!ReadPermission)** | Is the current user able to read records in the **IceCream** data source? | **true** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!EditPermission)** | Is the current user able to edit records in the **IceCream** data source? | **true** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!CreatePermission)** | Is the current user able to create records in the **IceCream** data source? | **false** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!DeletePermission)** | Is the current user able to delete records in the **IceCream** data source? | **false** |
+
+
+
+
+
+
+
+
+
