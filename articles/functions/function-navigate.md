@@ -1,4 +1,4 @@
-<properties
+	<properties
 	pageTitle="PowerApps: Navigate function"
 	description="Reference information for the Navigate function in PowerApps, including syntax and examples"
 	services="powerapps"
@@ -35,7 +35,7 @@ In the first argument, specify the name of the screen to display.
 
  In the second argument, specify how the old screen changes to the new screen:
 
-| Transition | Description |
+| Transition Argument | Description |
 |------------|-------------|
 | **ScreenTransition!Cover** | The new screen slides into view, covering the current screen. |
 | **ScreenTransition!Fade** | The old screen fades away to reveal the new screen. |

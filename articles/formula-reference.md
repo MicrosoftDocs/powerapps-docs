@@ -27,17 +27,22 @@
 ## A ##
 ## C ##
 
-[Clear](functions/function-celar-collect-clearcollect.md) Clears all data from a data source.
+[Clear](functions/function-clear-collect-clearcollect.md) Clears all data from a data source.
 
-[ClearCollect](functions/function-celar-collect-clearcollect.md) Clears all data from a data source and then adds a different set of data to the same data source.
+[ClearCollect](functions/function-clear-collect-clearcollect.md) Clears all data from a data source and then adds a different set of data to the same data source.
 
-[Collect](functions/function-celar-collect-clearcollect.md) Adds data to a data source.
+[Collect](functions/function-clear-collect-clearcollect.md) Adds data to a data source.
 
 ## D ##
+
+[DataSourceInfo](functions/function-datasourceinfo.md) Provides information about a data source.
 
 [Defaults](functions/function-defaults.md) Returns the default values for a data source.
 
 ## E ##
+
+[Errors](functions/function-errors.md) Provides error information for previous changes to a data source.
+
 ## F ##
 ## I ##
 ## L ##
