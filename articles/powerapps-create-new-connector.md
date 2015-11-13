@@ -39,7 +39,7 @@ When these steps are complete, your users can add these APIs to their PowerApps.
 ## Add a new API to your app service environment
 There are three different sources that can be used to create an API:
 
-- [Azure Marketplace](powerapps-create-api-azuremarketplace.md)
+- [Azure Marketplace](powerapps-register-from-available-apis.md)
 - [Import from an existing API app]()
 - [Import from Swagger 2.0]()
 
@@ -59,7 +59,7 @@ Now that the API is created and added to your app service environment, it's time
 After the API is created, the next step is to create the "connection", which is just like a connection string. This allows the API to successfully connect to your "backend" system. For PowerApps Enterprise public preview, only SQL connector and Bing Search's connections can be added and configured. More will be added in the future. 
 
 - [Create SQL Connector's connection](powerapps-create-connection-sql-connector.md)
-- [Create Bing Search's connection](powerapps-create-api-azuremarketplace-bingsearch.md)
+- [Create Bing Search's connection](powerapps-register-from-available-apis-bingsearch.md)
 
 
 ## Give users runtime access to the connection

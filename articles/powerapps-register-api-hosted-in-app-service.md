@@ -20,7 +20,7 @@
 
 There are three ways to register an API so that users can use them from their apps:
 
-1. [From Marketplace](powerapps-register-api-from-marketplace.md)
+1. [From Marketplace](powerapps-register-from-available-apis.md)
 2. From APIs hosted in your App Service Environment
 3. [From Swagger 2.0 API definition](powerapps-register-existing-api-from-api-definition.md)
 

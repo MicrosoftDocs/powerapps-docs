@@ -43,7 +43,7 @@ OAuth Settings | When using a PaaS (Platform as a Service) API, that service may
 4. In these Settings, you can also upload a policy file and view the API definition, which is the Swagger file associated with your API:  
 ![][4]  
 
-[1]: ./media/powerapps-create-api-azuremarketplace-sharepointonline/marketplace.png
-[2]: ./media/powerapps-create-api-azuremarketplace-sharepointonline/configure.png
-[3]: ./media/powerapps-create-api-azuremarketplace-sharepointonline/generalsettings.png
-[4]: ./media/powerapps-create-api-azuremarketplace-sharepointonline/policy.png
+[1]: ./media/powerapps-register-from-available-apis-sharepointonline/marketplace.png
+[2]: ./media/powerapps-register-from-available-apis-sharepointonline/configure.png
+[3]: ./media/powerapps-register-from-available-apis-sharepointonline/generalsettings.png
+[4]: ./media/powerapps-register-from-available-apis-sharepointonline/policy.png
