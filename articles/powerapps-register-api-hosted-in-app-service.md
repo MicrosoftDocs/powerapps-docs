@@ -54,9 +54,9 @@ You also have a lot of options to deploy your web API into App Service Environme
 
 After the API is deployed to your App Service Environment, registering it is simple. Following are the steps:
 
-1. In the Azure portal, select **PowerApps**. In PowerApps, select **Registered APIs**:  
+1. In the Azure portal, select **PowerApps**. In PowerApps, select **Manage APIs**:  
 	![][11]
-2. In Registered APIs, select **Add**:
+2. In Manage APIs, select **Add**:
 	![][12]  
 3. In **Add API**, enter the API properties:
 	In **Name**, enter a name for your API. Notice that it will be part of the runtime URL of the API, which should be meaningful and unique within your organization.
@@ -66,14 +66,19 @@ After the API is deployed to your App Service Environment, registering it is sim
 	![][14]
 5. Click **ADD** to complete these steps.
 
-Now, your API is registered and ready for users to use from their apps. One thing to notice is that because you are hosting the API in App Service Environment, we can actually secure it automatically so that nobody can access your backend API app directly.
+> [AZURE.TIP] When you register an API, you're registering the API to your App Service environment. Once in the app service environment, it can be used by other apps within the same app service environment, especially PowerApps apps.
 
 ## Summary and next steps
 
+In this topic, you've seen how to register APIs hosted in the App Service environment. Here are some related topics and resources for learning more about PowerApps.
 
+- [Configure APIs][21]
+- [Add a new API, add a connection, and give users access][22]
 
-
+<!--Reference-->
 [11]: ./media/powerapps-register-api-hosted-in-app-service/registered-apis-part.png
 [12]: ./media/powerapps-register-api-hosted-in-app-service/add-api-button.png
 [13]: ./media/powerapps-register-api-hosted-in-app-service/add-api-blade.png
-[14]: ./media/powerapps-register-api-hosted-in-app-service/add-api-select-from-marketplace-blade.png
+[14]: ./media/powerapps-register-api-hosted-in-app-service/add-api-select-from-ase.png
+[21]: powerapps-configure-apis.md
+[22]: powerapps-create-new-connector.md
