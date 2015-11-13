@@ -69,7 +69,7 @@ In this procedure, you'll add an action in the middle of the flow. This action w
 8. To test the flow:
   1. In SharePoint Online, click **new item** on the main page for the list.
 
-    ![Adding a row](./media/get-started-powerflow/addrow.png)
+    ![Adding a row](./media/advanced-parameters-powerflow/add-row.png)
 
   1. Specify data in each field, and then click **Save**.
 
