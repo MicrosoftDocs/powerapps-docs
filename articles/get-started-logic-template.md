@@ -1,9 +1,9 @@
 <properties
-    pageTitle="KratosApps tutorial: Create PowerApps Logic from a template"
-    description="There are a number of built-in templates to create logic from."
+    pageTitle="PowerApps tutorial: Create Logic Flows from a template"
+    description="Create Logic Flows from any of several built-in templates."
     services="powerapps"
     documentationCenter="na"
-    authors="AFTOwen"
+    authors="stepsic-msft"
     manager="dwrede"
     editor=""
     tags=""
@@ -12,52 +12,51 @@
 <tags
   ms.service="powerapps"
     ms.devlang="na"
-    ms.topic="get-started-article"
+    ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="11/02/2015"
-   ms.author="anneta"/>
+    ms.date="11/13/2015"
+   ms.author="stepsic"/>
 
-# Create Logic from a template #
-There are a number of built-in templates to create logic from. You can also[create from scratch](get-started-powerflow.md) if you are interested in starting from a blank canvas. This tutorial walks through specifically a template that listens to a keyword you provide on twitter and sends you an email notification when there is a new tweet matching that keyword.
+# Create Logic Flows from a template #
+Create Logic Flows from any of several built-in templates that can, for example, send you an email message when anyone sends a tweet that includes a particular keyword.
+
+**Note:** [Create a logic flow from scratch](get-started-powerflow.md) if you want to start from a blank canvas.
 
 **Prerequisites**
 
-- [KratosApps](https://www.kratosapps.com/)
-- An account for Twitter
-- An Office 365 account (from which you can send email)
+- An account on [powerapps.com]()
+- An account on Twitter
+- An account on Office 365 (from which you can send email)
 
 ## Choose your template
 
-1. Open KratosApps, and then click **Create Logic** in the landing page.
+1. Open [powerapps.com](), and then select **Create a flow**.
 
-    ![Click Logic on the right](./media/get-started-logic-template/landingpage.png)
+	![Create a flow](./media/get-started-logic-template/landingpage.png)
 
-2. You are now presented with the list of all of the templates.
+	A list of categories appears on the left, and all of the templates appear on the right.
 
-    ![Create Logic from blank](./media/get-started-logic-template/alltemplates.png)
+    ![List of templates for Logic Flows](./media/get-started-logic-template/alltemplates.png)
 
-3. In the categories on the left-hand-side, click on a category, such as **Social** to narrow your list.
+1. Narrow your list by selecting a category, such as **Social**.
 
-    ![Social category](./media/get-started-logic-template/logiccategories.png)
+	![Social category](./media/get-started-logic-template/logiccategories.png)
 
-4. Select the template you want. For this tutorial we'll use **Send email on new tweets**. 
+1. Select **Send email on new tweets**, and then provide your credentials for Twitter and Office 365.
 
-5. You will now be prompted for credentials to use for Twitter and Office 365.
+	Your logic flow appears, showing all trigger conditions and actions.
 
-6. The all of the logic will be visible to you now. You'll need to fill out the required fields that aren't provided. You can see those fields marked with a red `*`. In this template, the only field you need to fill out is the email address you want to send the emails to. 
+	![Fill out fields](./media/get-started-logic-template/two-step-logic.png)
 
-    ![Fill out fields](./media/get-started-logic-template/two-step-logic.png)
+1. Specify data in any empty fields that are marked with a red asterisk (*), such as the address to which you want messages sent.
 
-7. You can also change the keyword that is being listened to in the first text box.
+1. (optional) In the **QUERY** box, specify a different keyword.
 
-8. Enter a name for your logic in the **Logic name** text box near the bottom of the screen. 
+1. Near the bottom of the screen, specify a name for your logic flow, and then select **Done**.
 
-9. Save your logic by clicking **Done** near the bottom of the screen.
+	![Done button](./media/get-started-logic-template/done2.png)
 
-    ![Click the done button](./media/get-started-logic-template/done2.png)
+## Next steps ##
 
-
-## Next Steps ##
-
-- [Add additional steps](advanced-parameters-powerflow.md) Add more steps, such as different ways to be notified, to your Logic.
+- [Add steps](advanced-parameters-powerflow.md), such as different ways to be notified, to your logic flow.
