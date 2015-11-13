@@ -19,13 +19,11 @@
 
 # Refresh function in PowerApps #
 
-Refreshes [records](working-with-tables.md) a [data source](working-with-data-sources.md), including changes made by other users.
+Refreshes the [records](working-with-tables.md) of a [data source](working-with-data-sources.md).
 
 ## Description ##
 
-The **Refresh** function retrieves a fresh copy of the data source.  You will see changes made by other users. 
-
-If a conflict is reported by the **[Errors](function-errors.md)** function after a **[Patch](function-patch.md)** or other data operation, **Refresh** the data source and reapply the change.
+The **Refresh** function retrieves a fresh copy of a data source.  You will see changes made by other users. 
 
 **Refresh** has no return value.  It can only be used in [behavior](file-name.md) formulas. 
 

@@ -27,11 +27,11 @@
 ## A ##
 ## C ##
 
-[Clear](functions/function-clear-collect-clearcollect.md) Clears all data from a data source.
+[Clear](functions/function-clear-collect-clearcollect.md) Deletes all data from a collection.
 
-[ClearCollect](functions/function-clear-collect-clearcollect.md) Clears all data from a data source and then adds a different set of data to the same data source.
+[ClearCollect](functions/function-clear-collect-clearcollect.md) Deletes all data from a collection and then adds a set of records.
 
-[Collect](functions/function-clear-collect-clearcollect.md) Adds data to a data source.
+[Collect](functions/function-clear-collect-clearcollect.md) Creates collections and adds data to a data source.
 
 ## D ##
 
@@ -63,11 +63,13 @@
 
 ## R ##
 
-[Refresh](functions/function-refesh.md) Refreshes a data source, including changes made by other users.
+[Refresh](functions/function-refesh.md) Refreshes the records of a data source.
 
 [Remove](functions/function-remove-removeif.md) Removes specific records from a data source.
 
 [RemoveIf](functions/function-remove-removeif.md) Removes records from a data source based on a condition.
+
+[Revert](functions/function-revert.md) Reloads and clears errors for the records of a data source. 
 
 ## S ##
 ## T ##
