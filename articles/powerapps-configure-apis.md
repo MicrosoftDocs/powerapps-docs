@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Configure APIs in PowerApps in the Azure portal| Microsoft Azure"
+	pageTitle="Configure APIs in PowerApps in the Azure portal | Microsoft Azure"
 	description="Configure APIs"
 	services="powerapps"
 	documentationCenter="" 
