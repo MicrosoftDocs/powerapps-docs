@@ -28,21 +28,21 @@ Create a logic flow to perform a task automatically when a condition triggers an
 
 ## Create a trigger
 
-1. In Chrome, open [powerapps.com](), and then click **Create a flow**.
+1. In Chrome, open [powerapps.com](), and then select **Create a flow**.
 
     ![Click Logic on the right](./media/get-started-powerflow/landingpage.png)
 
-3. Click **Create from blank**.
+3. Select **Create from blank**.
 
-    ![Create Logic from blank](./media/get-started-powerflow/gallery.png)
+    ![Create Logic from blank](./media/get-started-powerflow/from-blank.png)
 
-4. In the text box that says **How would you like to start?**, type **SharePoint**.
+4. In the box that says **How would you like to start?**, type or paste **SharePoint**.
 
-1. In the list of actions, click **SharePoint Online - When a new item is created**
+1. In the list of actions, select **SharePoint Online - When a new item is created**.
 
     ![Sharepoint triggers](./media/get-started-powerflow/add-sp-data.png)
 
-5. If you haven't already connected your SharePoint Online account to PowerApps, click **Sign in to SharePoint Online**, and then provide your credentials.
+5. If you haven't already connected your SharePoint Online account to PowerApps, select **Sign in to SharePoint Online**, and then provide your credentials.
 
 6. In the **SITE URL** box, type or paste the URL of the SharePoint site that contains the list you want to use.
 
@@ -50,53 +50,63 @@ Create a logic flow to perform a task automatically when a condition triggers an
 
   ![Enter site](./media/get-started-powerflow/enter-site.png)
 
-1. Under **LIST NAME**, click the down arrow to show the names of all lists in the site you specified.
+1. Under **LIST NAME**, select the down arrow to show the names of all lists in the site you specified.
 
-  **Note:** If **Could not retrieve values** appears, correct your site URL.
+	**Note:** If **Could not retrieve values** appears, correct your site URL.
 
-8.  Click the name of a list, name your PowerFlow in the box near the bottom of the screen, and then click **Done**.
+8.  Select the name of a list, name your PowerFlow in the box near the bottom of the screen, and then select **Done**.
 
-    ![Click the done button](./media/get-started-powerflow/done2.png)
+	![Done button](./media/get-started-powerflow/done-button.png)
 
-## Create the action ##
-In this procedure, you'll add an action to send email in your logic and then you'll test that action. By following these steps, you'll learn the basics of actions and how to pass parameters between steps in your logic to make it work the way you want.
+## Create an action ##
+In this procedure, you'll add an action to send email and then you'll test that action. By following these steps, you'll learn the basics of actions and how to configure your logic flow to make it work the way you want.
 
-1. In the list of your logic, click the edit icon, which looks like a pencil, next to the logic that you created in the previous procedure.
+1. In the list of your logic flows, select the edit icon, which looks like a pencil, next to the logic flow that you created in the previous procedure.
 
-2. Click the "+" button, and then click **Add action**
+	![Edit icon](./media/get-started-powerflow/edit-icon.png)
 
-    ![Add action](./media/get-started-powerflow/addaction.png)
+1. Under the trigger condition that you created in the previous procedure, select the "+" button.
+
+	![Add action icon](./media/get-started-powerflow/add-action-icon.png)
+
+1. Select **Add action**.
+
+    ![Add action bar](./media/get-started-powerflow/add-action-bar.png)
 
 2. In the box that shows **What would you like to do next?**, type or paste **send email**, and then click **Office365 - Send Email**.
 
-  ![List of actions](./media/get-started-powerflow/send_email.png)
+  ![List of actions](./media/get-started-powerflow/send-email.png)
 
 1. If prompted, provide your Office 365 credentials.
 
+  ![Sign in to Office](./media/get-started-powerflow/sign-in-office.png)
+
 4. In the form that appears, type a subject in the **Subject** box and your email address in the **To** box.
 
-    ![The list of parameters](./media/get-started-powerflow/listfields2.png)
+	![Blank email message](./media/get-started-powerflow/blank-email.png)
 
-5. In the **Body** box, type or paste **Item added to a list:**, and then click a parameter (such as **Title**) to add a placeholder for it to your message.
+5. In the **Body** box, type or paste **Item added to a list:**, and then select a parameter (such as **Title**) to add a placeholder for it to your message.
 
   **Note:** The available parameters reflect the column headings of whatever list you specify.
 
-    ![Token added to the field](./media/get-started-powerflow/message-token2.png)
+	![Token added to the field](./media/get-started-powerflow/message-token2.png)
 
-4. Type the end of your message, including any other parameters you want to include, and then click **Done** at the bottom of the screen.
+4. Type the end of your message, including any other parameters you want to include, and then select **Done** at the bottom of the screen.
 
-    The list of your logic reflects your changes.
+	![Select the done button](./media/get-started-powerflow/done-button.png)
 
-## Test your Logic ##
+    The list of your logic flow reflects your changes.
 
-1. On the main page for the SharePoint Online list, click **new item**.
+## Test your logic flow ##
 
-    ![Adding a row](./media/get-started-powerflow/addrow.png)
+1. On the main page for the list that you specified, select **new item**.
 
-3. Specify data in each field, and then click **Save**.
+	![Adding a row](./media/get-started-powerflow/add-row.png)
 
-    Within a minute, an email notifies you of the changes.
+3. Specify data in each field, and then select **Save**.
+
+    Within a minute, an email message notifies you of the new item.
 
 ## Next Steps ##
 
-- [Add steps](advanced-parameters-powerflow.md), such as different ways to be notified, to your logic.
+- [Add steps](advanced-parameters-powerflow.md), such as different ways to be notified, to your logic flow.
