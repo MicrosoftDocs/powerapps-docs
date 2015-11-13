@@ -52,11 +52,11 @@ Create a logic flow to perform a task automatically when a condition triggers an
 
 1. Under **LIST NAME**, select the down arrow to show the names of all lists in the site you specified.
 
-  **Note:** If **Could not retrieve values** appears, correct your site URL.
+	**Note:** If **Could not retrieve values** appears, correct your site URL.
 
 8.  Select the name of a list, name your PowerFlow in the box near the bottom of the screen, and then select **Done**.
 
-	![Select the done button](./media/get-started-powerflow/done-button.png)
+	![Done button](./media/get-started-powerflow/done2.png)
 
 ## Create an action ##
 In this procedure, you'll add an action to send email and then you'll test that action. By following these steps, you'll learn the basics of actions and how to configure your logic flow to make it work the way you want.
@@ -93,7 +93,7 @@ In this procedure, you'll add an action to send email and then you'll test that 
 
 4. Type the end of your message, including any other parameters you want to include, and then select **Done** at the bottom of the screen.
 
-	![Select the done button](./media/get-started-powerflow/done-button.png)
+	![Select the done button](./media/get-started-powerflow/done2.png)
 
     The list of your logic flow reflects your changes.
 

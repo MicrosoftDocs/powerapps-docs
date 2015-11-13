@@ -38,7 +38,7 @@ Customize a PowerFlow by adding one or more advanced parameters and multiple act
 
 6. Near the bottom of the screen, click **Done** to save your change.
 
-    ![Click the done button](./media/advanced-parameters-powerflow/done-button.png)
+    ![Click the done button](./media/advanced-parameters-powerflow/done2.png)
 
 ## Add another action ##
 
