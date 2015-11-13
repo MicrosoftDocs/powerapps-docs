@@ -3,7 +3,7 @@
 	description="IT Doc: steps to do before you can sign up for PowerApps Enterprise"
 	services="powerapps"
 	documentationCenter="" 
-	authors="guayan"
+	authors="guangyang"
 	manager="gautamt"
 	editor=""/>
 
