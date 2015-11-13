@@ -19,7 +19,7 @@
 
 # Collect, Clear, and ClearCollect functions in PowerApps #
 
-Clears and/or adds records to a [data source](working-with-data-sources.md).
+Creates and clears [collections](working-with-data-sources.md) and adds records to a [data source](working-with-data-sources.md).
 
 ## Description ##
 
@@ -37,41 +37,41 @@ When used with a [collection](working-with-data-sources.md#collections), additio
 
 If the data source does not already exist, a new [collection](working-with-data-sources.md#collections) is created.
 
-You can also use the **[Patch](function-patch.md)** function to create records.
+You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
 **Collect** returns the modified data source as a table.  **Collect** can only be used in a behavior formula.
 
 ### Clear ###
 
-The **Clear** function deletes the records from a data source.  The columns of the data source will remain.    
+The **Clear** function deletes the records from a collection.  The columns of the collection will remain.
+
+Note that **Clear** only operates on collections and not other data sources.  You can use **[RemoveIf](function-remove-removeif.md)( *DataSource*, true )** for this purpose, but use caution as this will remove all records from the data source's storage that may be permanent. 
 
 You can use the **[Remove](function-remove.md)** function to selectively remove records.
 
 **Clear** has no return value.  It can only be used in a [behavior](file-name.md) formula.
 
-TODO: Clear for data source safety.
-
 ### ClearCollect ###
 
-The **ClearCollect** function deletes all the records from a data source and then adds a different set of records to the same data source.  With a single function, **ClearCollect** offers the combination of **Clear** and then **Collect**.
+The **ClearCollect** function deletes all the records from a collection and then adds a different set of records to the same collection.  With a single function, **ClearCollect** offers the combination of **Clear** and then **Collect**.
 
-**ClearCollect** returns the modified data source as a table.  **ClearCollect** can only be used in a behavior formula.
+**ClearCollect** returns the modified collection as a table.  **ClearCollect** can only be used in a behavior formula.
 
 ## Syntax ##
 
-**Clear**( *DataSource* )
-
-- *DataSource* – Required. The data source that you want to clear.
-
 **Collect**( *DataSource*, *Item*, ... )
 
-- *DataSource* – Required. The data source that you want to add data to.
+- *DataSource* – Required. The data source that you want to add data to.  If it does not exist, a new collection is created.
 
 - *Item(s)* - Required.  One or more items to add to the data source. 
+ 
+**Clear**( *Collection* )
 
-**ClearCollect**( *DataSource*, *Item*, ... )
+- *Collection* – Required. The collection that you want to clear.
 
-- *DataSource* – Required. The data source that you want to clear and then add data to.
+**ClearCollect**( *Collection*, *Item*, ... )
+
+- *Collection* – Required. The collection that you want to clear and then add data to.
 
 - *Item(s)* - Required.  One or more items to add to the data source.  
 
@@ -79,7 +79,7 @@ The **ClearCollect** function deletes all the records from a data source and the
 
 ### Clearing and adding records to a data source ###
 
-In these examples, you'll erase and add to a data source that's named **IceCream**. The ID column contains a primary key that the data source generates.  The data source begins with these contents:
+In these examples, you'll erase and add to a collection that's named **IceCream**. The ID column contains a primary key that the data source generates.  The data source begins with these contents:
 
 | ID (primary key) | Flavor    | Quantity |
 |-----|-----------|----------|
