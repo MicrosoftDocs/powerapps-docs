@@ -3,7 +3,7 @@
     description="Create Logic Flows from any of several built-in templates."
     services="powerapps"
     documentationCenter="na"
-    authors="stepsic-msft"
+    authors="stepsic-microsoft-com"
     manager="dwrede"
     editor=""
     tags=""
