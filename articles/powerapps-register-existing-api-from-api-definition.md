@@ -56,7 +56,7 @@ It's a common scenario that you've already had some existing APIs in your organi
 
 ## Summary and next steps
 
-In this topic, you've seen how to register your own instance of the available APIs PowerApps provides out-of-box. Here are some related topics and resources for learning more about PowerApps.
+In this topic, you've seen how to register an API from Swagger 2.0 API definition. Here are some related topics and resources for learning more about PowerApps.
 
 - [Configure APIs][21]
 - [Add a new API, add a connection, and give users access][22]
