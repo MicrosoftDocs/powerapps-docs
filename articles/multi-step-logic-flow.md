@@ -75,7 +75,7 @@ When you have more than one step, you may want to change the order of them. In t
     
 	**Note:** You cannot move a step before another if you are using any outputs from that step.
 
-## Deleting actions ## 
+## Deleting actions
 
 If you no longer need a step, you can delete it from the menu at the top right of the action. 
 
