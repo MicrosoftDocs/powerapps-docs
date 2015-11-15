@@ -27,17 +27,22 @@
 ## A ##
 ## C ##
 
-[Clear](functions/function-celar-collect-clearcollect.md) Clears all data from a data source.
+[Clear](functions/function-clear-collect-clearcollect.md) Deletes all data from a collection.
 
-[ClearCollect](functions/function-celar-collect-clearcollect.md) Clears all data from a data source and then adds a different set of data to the same data source.
+[ClearCollect](functions/function-clear-collect-clearcollect.md) Deletes all data from a collection and then adds a set of records.
 
-[Collect](functions/function-celar-collect-clearcollect.md) Adds data to a data source.
+[Collect](functions/function-clear-collect-clearcollect.md) Creates collections and adds data to a data source.
 
 ## D ##
+
+[DataSourceInfo](functions/function-datasourceinfo.md) Provides information about a data source.
 
 [Defaults](functions/function-defaults.md) Returns the default values for a data source.
 
 ## E ##
+
+[Errors](functions/function-errors.md) Provides error information for previous changes to a data source.
+
 ## F ##
 ## I ##
 ## L ##
@@ -57,11 +62,24 @@
 [Proper](functions/function-lower-upper-proper.md) Converts letters in a string of text to proper case (first letter of each word is uppercase, the rest are lowercase).
 
 ## R ##
+
+[Refresh](functions/function-refesh.md) Refreshes the records of a data source.
+
+[Remove](functions/function-remove-removeif.md) Removes specific records from a data source.
+
+[RemoveIf](functions/function-remove-removeif.md) Removes records from a data source based on a condition.
+
+[Revert](functions/function-revert.md) Reloads and clears errors for the records of a data source. 
+
 ## S ##
 ## T ##
 ## U ##
 
+[Update](functions/function-update.md) Replaces a record in a data source.
+
 [UpdateContext](functions/function-updatecontext.md) Creates or updates context variables of the current screen].
+
+[UpdateIf](functions/function-update-updateif.md) Modifies a set of records in a data source based on a condition.
 
 [Upper](functions/function-lower-upper-proper.md) Converts letters in a string of text to all uppercase.
 

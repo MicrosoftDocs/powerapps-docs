@@ -38,7 +38,7 @@ Customize a PowerFlow by adding one or more advanced parameters and multiple act
 
 6. Near the bottom of the screen, click **Done** to save your change.
 
-    ![Click the done button](./media/get-started-powerflow/done2.png)
+    ![Click the done button](./media/advanced-parameters-powerflow/done2.png)
 
 ## Add another action ##
 
@@ -69,7 +69,7 @@ In this procedure, you'll add an action in the middle of the flow. This action w
 8. To test the flow:
   1. In SharePoint Online, click **new item** on the main page for the list.
 
-    ![Adding a row](./media/get-started-powerflow/addrow.png)
+    ![Adding a row](./media/advanced-parameters-powerflow/add-row.png)
 
   1. Specify data in each field, and then click **Save**.
 

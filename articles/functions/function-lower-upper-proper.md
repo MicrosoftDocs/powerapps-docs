@@ -24,6 +24,7 @@ Converts letters in a string of text to all lowercase, all uppercase, or proper 
 ## Description ##
 
 The **Lower**, **Upper**, and **Proper** functions convert the case of letters in strings.
+
 - **Lower** converts any uppercase letters to lowercase.
 - **Upper** converts any lowercase letters to uppercase.
 - **Proper** converts the first letter in each word to uppercase if it's lowercase and converts any other uppercase letters to lowercase.
@@ -54,7 +55,7 @@ The examples in this section use an input-text control, named **Author**, as the
 | **Proper(&nbsp;Author!Text&nbsp;)** | Converts the first letter of each word to uppercase if it's lowercase, and converts any other uppercase letters to lowercase. | "E. E. Cummings" |
 
 ### Single-column table
-The examples in this section use this table, named **People**, as their data source:
+The examples in this section use this data source, named **People**:
 
 | Name  | Address |
 |-------|---------|
