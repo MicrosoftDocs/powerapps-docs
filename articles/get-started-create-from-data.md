@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Create a Powerapp from an existing data set"
-	description="In PowerApps, create a PowerApp automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
+	pageTitle="Create a PowerApp from an existing data set"
+	description="Create a PowerApp automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
 	services="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
@@ -33,25 +33,6 @@ For this tutorial, the data source is an Excel file in Dropbox. The file, named 
 ![Source data in Excel](./media/get-started-create-from-data/excel-source.jpg)
 
 ## Connect to data ##
-1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
-
-	![The Connections option on the File menu](./media/get-started-create-from-data/file-connections.jpg)
-
-1. Select **Available Connections**, select the account that contains your data (such as **Dropbox**), and then select **Connect**.
-
-	![Option to add Dropbox as a data connection](./media/get-started-create-from-data/add-dropbox.jpg)
-
-1. Provide your credentials, and then select **Sign in**.
-
-	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.jpg)
-
-1. Select **New** on the **File** menu (near the left edge of the screen).
-
-	![The New option in the File menu](./media/get-started-create-from-data/file-new.jpg)
-
-1. Leave the default option to create a phone app.
-
-	![The option buttons for creating a PowerApp for tablets or phones](./media/get-started-create-from-data/phone-app.jpg)
 
 1. Under **Start from your data**, select **Get started**.
 
