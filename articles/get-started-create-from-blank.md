@@ -249,6 +249,6 @@ To follow this tutorial exactly:
 
 1. Add a label, move it below the last input-text control, and set the label's **Text** property to this formula:
 
-	**First(Filter(Errors(Schedule,Record),IsBlank(Column)))!Message**
+	**Lookup(Errors(Schedule,Record),IsBlank(Column),Message)**
 
-	In this formula, the [**First**](function-first.md) function identifies the first record in a table of [**errors**](function-errors.md) that might have occurred when the data source was updated. The [**Filter**](function-filter.md) function ensures that the label will show only errors that have **Column** information.
+	In this formula, the [**Lookup**](function-first.md) function shows any errors that occurred when the data source was being updated.
