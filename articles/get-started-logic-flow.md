@@ -28,7 +28,7 @@ Create a logic flow to perform a task automatically when a condition triggers an
 
 ## Create a trigger
 
-1. In your web browser, open [powerapps.com](https://portal.kratosapps.com/), and then select **Create a flow**.
+1. In your web browser, open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
 
     ![Click Logic on the right](./media/get-started-logic-flow/landingpage.png)
 
@@ -85,15 +85,15 @@ In this procedure, you'll add the action to send email and then you'll test that
 
 7. Type the end of your message, including any other parameters you want to include.
 
-8. Name your PowerFlow in the box near the bottom of the screen, and then select **Done**. 
+8. Name your PowerFlow in the box near the bottom of the screen, and then select **Done**.
 	![Select the done button](./media/get-started-logic-flow/done-button.png)
 
     The list of your logic flow reflects your changes.
-    
+
 9. In the future, if you want to change the logic flow, select the edit icon, which looks like a pencil, next to the logic flow that you created in this procedure.
 
 	![Edit icon](./media/get-started-logic-flow/edit-icon.png)
-	
+
 ## Test your logic flow ##
 
 1. On the main page for the list that you specified, select **new item**.
@@ -106,14 +106,14 @@ In this procedure, you'll add the action to send email and then you'll test that
 
 ## Turn on or off your Logic Flow ##
 
-You don't need to always keep your Logic Flow running. If you want to temporarily stop receiving email notifications, you can turn your flow off. 
+You don't need to always keep your Logic Flow running. If you want to temporarily stop receiving email notifications, you can turn your flow off.
 
 1. Open the PowerApps portal, and then click **Flows** in the left navigation bar.
 
 2. In the list of Logic Flows, click the turn-off icon, which looks like a pause button, next to the Logic Flow that you want to turn off.
 
     ![Delete confirmation](./media/multi-step-logic-flow/turnoffflow.png)
-    
+
 3. To turn it on again, in the list of Logic Flows, click the turn-on icon, which looks like a play button, next to the Logic Flow that you want to turn on.
 
 ## Delete your Logic Flow ##
@@ -132,5 +132,5 @@ You can delete a Logic Flow from the portal if you're done with that Logic Flow 
 ## Next Steps ##
 
 - [Add steps](multi-step-logic-flow.md), such as different ways to be notified, to your logic flow.
-- [Run tasks on a schedule](run-tasks-on-a-schedule.md), when you want something to happen every day or every hour 
+- [Run tasks on a schedule](run-tasks-on-a-schedule.md), when you want something to happen every day or every hour
 - [Add a logic flow to a PowerApp](add-logic-flow.md) to allow your app to kick off logic in the cloud.

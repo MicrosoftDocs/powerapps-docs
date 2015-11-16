@@ -13,7 +13,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/15/2015"
+   ms.date="11/16/2015"
    ms.author="anneta"/>
 
 # Create a PowerApp from a blank screen #
