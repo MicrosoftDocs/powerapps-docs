@@ -19,7 +19,7 @@
 
 # Add a condition to a logic flow #
 
-Logic flows can contain conditions, which means that they can check some value and execute steps only if that value is something you specifically want. 
+Logic flows can contain conditions, which means that they can check some value and execute steps only if that value is something you specifically want.
 
 **Prerequisites**
 
@@ -27,14 +27,14 @@ Logic flows can contain conditions, which means that they can check some value a
 
 ## Adding the condition ##
 
-1. In Chrome, open [the PowerApps portal](https://portal.kratosapps.com/), and then click **Flows** in the left navigation bar.
+1. In Chrome, open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then click **Flows** in the left navigation bar.
 
 2. In the list of Logic Flows, click the edit icon, which looks like a pencil, next to the Logic Flow that you want to add a condition to.
 
 3. At the bottom of the flow, click the plus button and select **Add Condition**.
 
     ![Condition button](./media/add-a-condition/addconditionbutton.png)
-    
+
 4. In the top field in the condition, select a parameter that you want to check.
 
     ![Condition box](./media/add-a-condition/conditionbox.png)
@@ -46,4 +46,3 @@ Logic flows can contain conditions, which means that they can check some value a
     ![Add action inside](./media/add-a-condition/ifyes.png)
 
 7. Fill out the parameters inside the action and click **Done**
-

@@ -25,13 +25,13 @@ Create Logic Flows from any of several built-in templates that can, for example,
 
 **Prerequisites**
 
-- An account on [powerapps.com](https://portal.kratosapps.com)
+- An account on [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209)
 - An account on Twitter
 - An account on Office 365 (from which you can send email)
 
 ## Choose your template
 
-1. Open [powerapps.com](), and then select **Create a flow**.
+1. Open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
 
 	![Create a flow](./media/get-started-logic-template/landingpage.png)
 

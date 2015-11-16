@@ -28,7 +28,7 @@ Customize a Logic Flow by adding one or more advanced parameters and multiple ac
 
 In this procedure, you'll add an action in the middle of the flow. This action will save a file in your Dropbox, archiving the item in the list.
 
-1. In Chrome, open [the PowerApps portal](https://portal.kratosapps.com/), and then click **Flows** in the left navigation bar.
+1. In Chrome, open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then click **Flows** in the left navigation bar.
 
 2. In the list of Logic Flows, click the edit icon, which looks like a pencil, next to the Logic Flow that you want to edit.
 
@@ -61,23 +61,23 @@ In this procedure, you'll add an action in the middle of the flow. This action w
 
 ## Changing the order of your actions ##
 
-When you have more than one step, you may want to change the order of them. In this example, assume you want to get the email only once the file has been successfully created in Dropbox. 
+When you have more than one step, you may want to change the order of them. In this example, assume you want to get the email only once the file has been successfully created in Dropbox.
 
 1. Click-and-hold on the title bar of the Dropbox action
 
-2. Move you mouse up on page to drag the action. 
+2. Move you mouse up on page to drag the action.
 
     ![Dragging the action](./media/multi-step-logic-flow/draggingaction.png)
-    
+
 3. Leave the mouse over the arrow between the two steps. The cursor will indicate that you can drop the action. Release the mouse.
 
     The actions should now be re-ordered.
-    
+
 	**Note:** You cannot move a step before another if you are using any outputs from that step.
 
 ## Deleting actions
 
-If you no longer need a step, you can delete it from the menu at the top right of the action. 
+If you no longer need a step, you can delete it from the menu at the top right of the action.
 
 1. Click the menu at the top-right of the action you want to delete.
 
@@ -85,11 +85,11 @@ If you no longer need a step, you can delete it from the menu at the top right o
 
 2. You will be asked for a confirmation that you want to delete the step. Click **OK**.
 
-	**Note:** You cannot delete actions if you are using any outputs from it anywhere in the logic flow. First, remove those outputs from the fields and then you will be able to delete it. 
-	
+	**Note:** You cannot delete actions if you are using any outputs from it anywhere in the logic flow. First, remove those outputs from the fields and then you will be able to delete it.
+
 ## Adding advanced parameters
 
-Start with a logic flow that has a step for **Send email**. 
+Start with a logic flow that has a step for **Send email**.
 
 1. Near the bottom of the **Send email** form, click the **...** icon to show advanced parameters.
 
