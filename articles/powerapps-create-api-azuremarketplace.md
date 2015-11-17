@@ -3,7 +3,7 @@
 	description="IT Doc: steps to do before you can sign up for PowerApps Enterprise"
 	services="powerapps"
 	documentationCenter="" 
-	authors="LinhTran"
+	authors="guangyang"
 	manager="gautamt"
 	editor=""/>
 
@@ -14,7 +14,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na" 
    ms.date="11/05/2015"
-   ms.author="litran"/>
+   ms.author="guayan"/>
 
 # Create a new API from Azure Marketplace
 

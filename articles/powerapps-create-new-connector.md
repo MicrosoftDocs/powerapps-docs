@@ -39,7 +39,7 @@ When these steps are complete, your users can add these APIs to their PowerApps.
 ## Add a new API to your app service environment
 There are three different sources that can be used to create an API:
 
-- [Azure Marketplace](powerapps-create-api-azuremarketplace.md)
+- [Azure Marketplace](powerapps-register-from-available-apis.md)
 - [Import from an existing API app]()
 - [Import from Swagger 2.0]()
 

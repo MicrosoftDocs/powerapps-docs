@@ -19,7 +19,7 @@
 
 # Using your organization's data #
 
-With PowerApps Enterprise, as an IT administrator, not only you can manage all apps published by users in your organization, you can also create APIs that connect to your organization data and let your business users use these APIs to connect to the data, on-premise or in the cloud. You can tightly manage the permissions to the APIs and connections to your data. You can use any API from this [list of APIs](https://github.com/Azure/azure-content-pr/blob/release-power-apps/articles/power-apps/powerapps-create-api-azuremarketplace.md) we have in the marketplace or create your own custom APIs *insert link to create custom APIs here once it's submitted*.
+With PowerApps Enterprise, as an IT administrator, not only you can manage all apps published by users in your organization, you can also create APIs that connect to your organization data and let your business users use these APIs to connect to the data, on-premise or in the cloud. You can tightly manage the permissions to the APIs and connections to your data. You can use any API from this [list of APIs](https://github.com/Azure/azure-content-pr/blob/release-power-apps/articles/power-apps/powerapps-register-from-available-apis.md) we have in the marketplace or create your own custom APIs *insert link to create custom APIs here once it's submitted*.
 
 Below are the tutorials on how you can configure and enable your business users to connect to data on a SQL database on-premise and to data in Saleforces.
 
