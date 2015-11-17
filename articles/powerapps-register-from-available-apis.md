@@ -80,13 +80,13 @@ Register from available APIs is very simple. Following are the general steps.
 
 1. In the Azure portal, select **PowerApps**. In PowerApps, select **Manage APIs**:  
 	![][17]
-2. In Manage APIs, select **Add**:
+2. In Manage APIs, select **Add**:  
 	![][18]  
 3. In **Add API**, enter the API properties:
 	In **Name**, enter a name for your API. Notice that it will be part of the runtime URL of the API, which should be meaningful and unique within your organization.
-	In **Source**, select **From available APIs**.
+	In **Source**, select **From available APIs**.  
 	![][19]
-4. Click the **API** chevron and then choose the API you want to register from the **Select from available APIs** blade.
+4. Click the **API** chevron and then choose the API you want to register from the **Select from available APIs** blade.  
 	![][20]
 5. Follow the available API specific articles to configure additional settings if there is any.
 6. Click **ADD** to complete these steps.

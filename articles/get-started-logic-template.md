@@ -15,23 +15,23 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="11/13/2015"
+    ms.date="11/14/2015"
    ms.author="stepsic"/>
 
 # Create Logic Flows from a template #
 Create Logic Flows from any of several built-in templates that can, for example, send you an email message when anyone sends a tweet that includes a particular keyword.
 
-**Note:** [Create a logic flow from scratch](get-started-powerflow.md) if you want to start from a blank canvas.
+**Note:** [Create a logic flow from scratch](get-started-logic-flow.md) if you want to start from a blank canvas.
 
 **Prerequisites**
 
-- An account on [powerapps.com]()
+- An account on [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209)
 - An account on Twitter
 - An account on Office 365 (from which you can send email)
 
 ## Choose your template
 
-1. Open [powerapps.com](), and then select **Create a flow**.
+1. Open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
 
 	![Create a flow](./media/get-started-logic-template/landingpage.png)
 
@@ -59,4 +59,4 @@ Create Logic Flows from any of several built-in templates that can, for example,
 
 ## Next steps ##
 
-- [Add steps](advanced-parameters-powerflow.md), such as different ways to be notified, to your logic flow.
+- [Add steps](multi-step-logic-flow.md), such as different ways to be notified, to your logic flow.

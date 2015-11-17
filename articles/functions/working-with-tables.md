@@ -17,7 +17,7 @@
    ms.date="11/10/2015"
    ms.author="gregli"/>
 
-# Working with Tables #
+# Working with Tables and Records in PowerApps #
 
 Tables make working with a group of related information easier.  They can be found in Excel, SharePoint, SQL Server, and a wide variety of other sources.  They can also be the result of a calculation.  
 
@@ -49,7 +49,7 @@ Properties refer to each individual piece of information for a record.
 
 Just as with controls, properties of a record can be obtained by using the **!** operator in formulas.  
 
-## Tables in Formulas ##
+## Formulas ##
 
 In PowerApps, you can write formulas for numbers just as you do in Excel.  A label's **Text** property may use the formula **TextBox!Text * 2** and will display the number **4** if the user has entered 2 in the textbox.  If the user enters 4 in the textbox, then 8 will be displayed in the label as formulas are recalculated.
 
@@ -65,7 +65,7 @@ Functions that return Records include First, Last, Patch, and Update.
 
 Functions that return a Property include Lookup.
 
-## Table Syntax ##
+## Syntax ##
 
 Records and tables can be written in a formula as a literal value, just as the number 4 or the string "Hello, World" is written.  
 
@@ -94,6 +94,8 @@ Browse Screen, Gallery, bound to Table
 Detail screen passed a record from Gallery
 
 Editing -> Working with Data Sources
+
+## Nesting ##
 
 ## Shaping a Table ##
 
