@@ -41,7 +41,7 @@
 
 9. Click **OK** to close the configure API blade.
 
-10. Click **OK** to create a new Dropbox in your ASE.
+10. Click **OK** to create a new Dropbox API in your ASE.
 
 On successful completion, a new API is added to your ASE.
 
