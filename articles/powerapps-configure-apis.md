@@ -22,8 +22,7 @@ The API you registered in App Service Environment is essentially a proxy to your
 
 #### Prerequisites to get started
 
-- Sign up for PowerApps Enterprise
-- Create an App Service Environment
+- [Sign up for PowerApps Enterprise and create an App Service Environment][10]
 
 ## General settings
 
@@ -79,7 +78,11 @@ To learn more about Azure API Management policy, see [Policies in Azure API Mana
 
 ## Summary and next steps
 
+In this topic, you've seen how to configure an API. Here are some related topics and resources for learning more about PowerApps.
 
+- [][]
+
+[10]: powerapps-get-started-azure-portal.md
 [11]: ./media/powerapps-configure-apis/api-settings-general.png
 [12]: ./media/powerapps-configure-apis/api-default-icon.png
 [13]: ./media/powerapps-configure-apis/api-settings-api-definition.png
