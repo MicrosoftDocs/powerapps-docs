@@ -25,11 +25,11 @@ Provides information about a [data source](working-wtih-data-sources.md).
 
 Data sources can provide a wealth of information to optimize the user experience.
 
-You can use column level information in formulas to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function.  The **[Validate](function-validate.md)** function uses this same information.
+You can use column level information to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function.  The **[Validate](function-validate.md)** function uses this same information.
 
-You can use data source level information in formulas to disable or hide "Edit" and "New" buttons for users that do not have permissions to edit and create records.
+You can use data source level information to, for example, disable or hide "Edit" and "New" buttons for users that do not have permissions to edit and create records.
 
-Data sources vary in how much information they provide, including not providing any at all.  **[Collections](working-with-data-sources.md) provide no information.  If a piece of information is not provided, a default is used or *blank* is the result. 
+Data sources vary in how much information they provide, including not providing any at all.  **[Collections](working-with-data-sources.md) provide no information.  If a piece of information is not provided, a default is used or *blank* is returned. 
 
 ## Description ##
 
@@ -66,7 +66,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 
 - *Information* – Required.  The information desired.
 
-- *ColumnName* – Optional.  For column level information, the column name as a string.  Column **Phone** would be passed as **"Phone"**, including the double quotes.  For data source level information, this argument cannot be used.
+- *ColumnName* – Optional.  For column level information, the column name as a string.  Column **Phone** would be passed as **"Phone"**, including the double quotes.  For data source level information, the *ColumnName* argument cannot be used.
 
 ## Examples ##
 
