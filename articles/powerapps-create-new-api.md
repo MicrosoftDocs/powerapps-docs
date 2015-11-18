@@ -14,59 +14,55 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="11/12/2015"
+   ms.date="11/17/2015"
    ms.author="litran"/>
 
 
 # Add a new API, add a connection, and give users access
 
-APIs exist within an [App Service environment](powerapps-create-new-ase.md). APIs can be created from the Azure Marketplace, from your API Hub (Existing API), or from Swagger 2.0. The Azure Marketplace offers many pre-built APIs available to you that can be easily added to your PowerApps. API Hub (Existing API) lets you upload your own API (JSON format) or Swagger 2.0. 
+APIs exist within an [App Service environment](powerapps-get-started-azure-portal.md). APIs can be created from available APIs for PowerApps, from your API app that hosted on the App Service Environment, or from Swagger 2.0. There are many pre-built APIs available to you that can be easily added to your PowerApps. You can also upload your own API (JSON format) or Swagger 2.0. 
 
 This topic:
 
 - Lists the steps to add an API to PowerApps, and give users within your company permissions to use the API, including changing its properties.
 - Lists the steps to add a connection to your API, and give users within your company permissions to use the connection.
 
-Once you create the API, you can create a connection to that API.
-
-When these steps are complete, your users can add these APIs to their PowerApps.  
 
 #### Prerequisites to get started
 
-- Enable [PowerApps in your Azure subscription](powerapps-portal-signup.md).
-- Create an [App Service environment](powerapps-create-new-ase.md).
+- Enable [PowerApps in your Azure subscription](powerapps-get-started-azure-portal.md).
+- Create an [App Service environment](powerapps-get-started-azure-portal.md).
 
 ## Add a new API to your app service environment
 There are three different sources that can be used to create an API:
 
-- [Azure Marketplace](powerapps-register-from-available-apis.md)
-- [Import from an existing API app]()
-- [Import from Swagger 2.0]()
+- [From available APIs](powerapps-register-from-available-apis.md)
+- [From APIs hosted in your App Service Environment](powerapps-register-api-hosted-in-app-service.md)
+- [From Swagger 2.0 API definition](powerapps-register-existing-api-from-api-definition.md)
 
-### Delete a API
+## Delete a API
 You can also delete an API you previously added. In PowerApps, select the **Manage APIs**, select the API, and select **Delete**. 
 
+![][4]
 
 ## Give users access to the API
 Now that the API is created and added to your app service environment, it's time to give users within your company the permissions to use it. 
 
-1. In PowerApps, select **Manage APIs**, and select your API. For example, if you created a SharePoint Online API, select it to open its blade. Select **API user access**:  
+1. In PowerApps, select **Manage APIs**, and select your API. For example, if you created a *MS Power BI* API, select it to open its blade. Select **API user access**:  
 ![][1]  
 2. Select **Add** to add users, and select the rights. When done, select **Add** to save your changes. The Users or Groups count increases in the **API user access** window.
 
 
 ## Add a new connection to your API
-After the API is created, the next step is to create the "connection", which is just like a connection string. This allows the API to successfully connect to your "backend" system. For PowerApps Enterprise public preview, only SQL connector and Bing Search's connections can be added and configured. More will be added in the future. 
+After the API is created, the next step is to create the "connection", which is just like a connection string. This allows the API to successfully connect to your "backend" system. For PowerApps Enterprise public preview, only SQL Server's connection can be added and configured. More will be added in the future. 
 
-- [Create SQL Connector's connection](powerapps-create-connection-sql-connector.md)
-- [Create Bing Search's connection](powerapps-create-api-azuremarketplace-bingsearch.md)
-
+- [Create SQL Server's connection](powerapps-create-connection-sql-connector.md)
 
 ## Give users runtime access to the connection
 Now give users within your company permissions to use the connection.
 
 1. Open your API, select **Connections**, and then select your specific connection. This opens a new blade that lists your connection name at the top. 
-2. In this new blade, select **Connection user access**.  In the following example, the **Sales database on-premises** connection is selected. The new blade opens and this is where you select **Connection user access**:  
+2. In this new blade, select **Connection user access**.  In the following example, the **Hybrid Tunnel** connection is selected. The new blade opens and this is where you select **Connection user access**:  
 ![][2]  
 3. In **Connection user access**, select **Add**, and then select the permission you want to give:  
 ![][3]  
@@ -74,8 +70,8 @@ Now give users within your company permissions to use the connection.
 
 Now that users have permissions to the API and its connection, your users can add these APIs to their apps created in PowerApps. Specifically: 
 
-- Users can see the API listed under **My Connections** in PowerApps.
-- Users can see the connection under **Available Connections** in PowerApps.
+- Users can see the API listed under **Available Connections** in PowerApps.
+- Users can see the connection under **My Connections** in PowerApps.
 
 
 ## Summary and next steps
@@ -88,6 +84,7 @@ In this topic, you:
 
 Next, you can [manage and monitor your PowerApps](powerapps-manage-monitor-usage.md).
 
-[1]: ./media/powerapps-create-new-connector/runtimeuseraccess.png
-[2]: ./media/powerapps-create-new-connector/runtimeaccessconn.png
-[3]: ./media/powerapps-create-new-connector/selectpermission.png
+[1]: ./media/powerapps-create-new-api/apiuseraccess.png
+[2]: ./media/powerapps-create-new-api/connectionuseraccess.png
+[3]: ./media/powerapps-create-new-api/selectpermission.png
+[4]: ./media/powerapps-create-new-api/deleteapi.png

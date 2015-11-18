@@ -13,23 +13,25 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="11/11/2015"
+   ms.date="11/17/2015"
    ms.author="guayan"/>
 
-# Register from Available APIs
+# Register an API from available APIs
+
+To use these APIs, you must "register" the APIs in the Azure portal. The following options are available: 
 
 There are three ways to register an API so that users can use them from their apps:
 
-1. From available APIs
-2. [From APIs hosted in your App Service Environment][1]
-3. [From Swagger 2.0 API definition][2]
+- Register an API available APIs
+- Register an API hosted within [your App Service Environment][1]
+- Register using a [Swagger 2.0 API definition][2]
 
-This article describes what are the available APIs PowerApps provides out-of-box, why you want to register them for your organization and how to register one.
+This article describes what are the available APIs PowerApps provides out-of-box, why you want to register them for your organization, and how to register an API.
 
 #### Prerequisites to get started
 
-- Sign up for PowerApps Enterprise
-- Create an App Service Environment
+- Sign up for [PowerApps Enterprise]()
+- Create an [app service environment]()
 
 ## Available APIs
 
@@ -55,13 +57,13 @@ There are also additional APIs which are only available for you to register your
 
 ## Why register your own instances
 
-Using the out-of-box Microsoft managed APIs is convenient. Having said that, registering your own instances as IT managed APIs has many benefits. At a high level, we recommend you to do so when you want to
+Using the out-of-box Microsoft managed APIs is convenient. Having said that, registering your own instances as IT managed APIs has many benefits. At a high level, we recommend you to do so when you want to: 
 
-- Have full manageability on the APIs, including user access, security when connecting to other systems, API call limits, monitoring and advanced features like policies, etc..
-- Access on-premises data since App Service Environment supports virtual network.
-- Set up the APIs for business users which they may not be able to use by themselves.
+- Have full manageability on the APIs, including user access, security when connecting to other systems, API call limits, monitoring and advanced features like policies, and more.
+- Access on-premises data since App Service Environment supports virtual networks.
+- Set up the APIs for business users, which they may not be able to use by themselves.
 
-Following is a table comparing the capabilities you get in both cases.
+The following is a table comparing the capabilities you get in both cases.
 
 | Capability | Microsoft Managed | IT Managed |
 | ---------- | ----------------- | ------------ |
@@ -79,19 +81,19 @@ Following is a table comparing the capabilities you get in both cases.
 Register from available APIs is very simple. Following are the general steps.
 
 1. In the Azure portal, select **PowerApps**. In PowerApps, select **Manage APIs**:  
-	![][17]
+![][17]
 2. In Manage APIs, select **Add**:  
-	![][18]  
-3. In **Add API**, enter the API properties:
-	In **Name**, enter a name for your API. Notice that it will be part of the runtime URL of the API, which should be meaningful and unique within your organization.
-	In **Source**, select **From available APIs**.  
+![][18]  
+3. In **Add API**, enter the API properties:  
+	- In **Name**, enter a name for your API. Notice that the name you enter is included in the runtime URL of the API. Make the name meaningful and unique within your organization.
+	- In **Source**, select **From available APIs**:  
 	![][19]
-4. Click the **API** chevron and then choose the API you want to register from the **Select from available APIs** blade.  
-	![][20]
+4. Click the **API** chevron and then choose the API you want to register from the **Select from available APIs** blade:  
+![][20]
 5. Follow the available API specific articles to configure additional settings if there is any.
-6. Click **ADD** to complete these steps.
+6. Select **ADD** to complete these steps.
 
-> [AZURE.TIP] When you register an API, you're registering the API to your App Service environment. Once in the app service environment, it can be used by other apps within the same app service environment, especially PowerApps apps.
+> [AZURE.TIP] When you register an API, you're registering the API to your app  service environment. Once in the app service environment, it can be used by other apps within the same app service environment, especially PowerApps.
 
 For specific settings needed for each API, you can follow the API specific articles referenced below:
 
