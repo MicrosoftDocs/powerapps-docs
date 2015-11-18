@@ -28,8 +28,8 @@ This article describes how to register an API hosted in your App Service Environ
 
 #### Prerequisites to get started
 
-- Sign up for PowerApps Enterprise
-- Create an App Service Environment
+- Sign up for [PowerApps Enterprise](powerapps-get-started-azure-portal.md).
+- Create an [app service environment](powerapps-get-started-azure-portal.md).
 
 ## Overview
 
@@ -38,7 +38,7 @@ We support registering existing APIs hosted anywhere, in the cloud or on-premise
 - You want to implement some new functionalities for your organization to use.
 - You want to build on top of some existing functionalities or data to provide a better experience for users when using it building their apps.
 
-In this case, hosting the API in your App Service Environment lets you leverage all the existing capabilities of [App Service]() and also provides you the best integration experience.
+In this case, hosting the API in your App Service Environment lets you leverage all the existing capabilities of [App Service Environment](https://azure.microsoft.com/documentation/articles/app-service-app-service-environment-intro/) and also provides you the best integration experience.
 
 ## Develop and deploy an API in App Service Environment
 
@@ -60,9 +60,9 @@ After the API is deployed to your App Service Environment, registering it is sim
 	![][12]  
 3. In **Add API**, enter the API properties:
 	In **Name**, enter a name for your API. Notice that it is added to the runtime URL of the API, which should be meaningful and unique within your organization.
-	In **Source**, select **Import from API app**.  
+	In **Source**, select **Import from APIs hosted in App Service Environment**.  
 	![][13]
-4. In **API**, select the API app you want to import from.  
+4. In **API hosted in App Service Environment**, select the one you want to import from. Here it will show every web app, API app and mobile app in your App Service Environment which has its **apiDefinition.url** property configured. It will use the Swagger 2.0 API definition exposed via this property to import the API. Make sure this URL is public accessible during the API registration time.  
 	![][14]
 5. Select **ADD** to complete these steps.
 
