@@ -29,8 +29,8 @@ This article shows you how to register a Swagger 2.0 API definition that you cre
 
 #### Prerequisites to get started
 
-- Sign up for [PowerApps Enterprise]()
-- Create an [app service environment]()
+- Sign up for [PowerApps Enterprise](powerapps-get-started-azure-portal.md)
+- Create an [app service environment](powerapps-get-started-azure-portal.md)
 
 ## Register an existing API using Swagger 2.0 API definition
 
