@@ -37,7 +37,7 @@ The **Refresh** function retrieves a fresh copy of a data source.  You will see 
 
 In these examples, you'll refresh the data source named **IceCream**. The data source begins with this data:
 
-| ID (automatically generated<br>primary key) | Flavor    | Quantity |
+| ID  | Flavor    | Quantity |
 |-----|-----------|----------|
 | 1   | "Chocolate" | 100      |
 | 2   | "Vanilla"   | 200      |
@@ -49,7 +49,7 @@ A user on another device makes a modification to the Strawberry record, changing
 
 After this has been done, galleries that are bound to the **IceCream** data source will show the new value for Strawberry:
 
-| ID (automatically generated<br>primary key) | Flavor    | Quantity |
+| ID  | Flavor    | Quantity |
 |-----|-----------|----------|
 | 1   | "Chocolate" | 100      |
 | 2   | "Vanilla"   | 200      |

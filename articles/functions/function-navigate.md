@@ -1,4 +1,4 @@
-	<properties
+<properties
 	pageTitle="PowerApps: Navigate function"
 	description="Reference information for the Navigate function in PowerApps, including syntax and examples"
 	services="powerapps"
@@ -23,7 +23,7 @@ Changes which [screen](file-name.md) is displayed.
 
 ## Overview ##
 
-Most apps have multiple screens, and you use the **Navigate** function to change which screen is displayed at any given time. For example, set the [**OnSelect**](file-name.md) property of a button to a formula that includes a **Navigate** function if you want to show a different screen when a user clicks that button. In that formula, you can specify a visual transition, such as Fade, to control how one screen changes to another.  
+Most apps contain multiple screens.  Use the **Navigate** function to change which screen is displayed at any given time. For example, set the [**OnSelect**](file-name.md) property of a button to a formula that includes a **Navigate** function if you want to show a different screen when a user clicks that button. In that formula, you can specify a visual transition, such as Fade, to control how one screen changes to another.  
 
 **Navigate** changes only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on another screen. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and see how it affects what happens in the new screen.  The user can then navigate back to the original screen and see that the slider has retained its value.
 
