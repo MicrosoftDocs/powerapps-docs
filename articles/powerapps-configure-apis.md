@@ -24,14 +24,12 @@ The API you register in the App Service Environment is essentially a proxy to yo
 - Change how you secure the backend used by the API. 
 - Update the display name of your API to a more user friendly name.
 
-This topic explains how to change the properties of an existing API using the [Azure portal](https://portal.azure.com).
-
 
 #### Prerequisites to get started
 
-- Sign up for [PowerApps Enterprise]().
-- Create an [app service environment]().
-- Create an [API]().
+- Sign up for [PowerApps Enterprise](powerapps-get-started-azure-portal.md).
+- Create an [app service environment](powerapps-get-started-azure-portal.md).
+- Register an [API](powerapps-register-from-available-apis).
 
 ## Add a custom icon or add a user friendly display name
 
@@ -82,6 +80,10 @@ To learn more about Azure API Management policy, see [Policies in Azure API Mana
 ## Summary and next steps
 After you create your API, you can use the steps in this topic to change its settings and even customize some settings. 
 
+In this topic, you've seen how to configure an API. Here are some related topics and resources for learning more about PowerApps.
+
+- [Configure an API to Connect to AAD Protected Backend](powerapps-configure-apis-aad.md)
+- [Develop an API for PowerApps](powerapps-develop-api.md)
 
 [11]: ./media/powerapps-configure-apis/api-settings-general.png
 [12]: ./media/powerapps-configure-apis/api-default-icon.png
