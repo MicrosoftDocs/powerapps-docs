@@ -85,7 +85,6 @@ In this topic, you've seen how to configure an API. Here are some related topics
 - [Configure an API to Connect to AAD Protected Backend](powerapps-configure-apis-aad.md)
 - [Develop an API for PowerApps](powerapps-develop-api.md)
 
-[10]: powerapps-get-started-azure-portal.md
 [11]: ./media/powerapps-configure-apis/api-settings-general.png
 [12]: ./media/powerapps-configure-apis/api-default-icon.png
 [13]: ./media/powerapps-configure-apis/api-settings-api-definition.png
