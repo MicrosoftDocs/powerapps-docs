@@ -62,7 +62,7 @@ After the API is deployed to your App Service Environment, registering it is sim
 	In **Name**, enter a name for your API. Notice that it is added to the runtime URL of the API, which should be meaningful and unique within your organization.
 	In **Source**, select **Import from APIs hosted in App Service Environment**.  
 	![][13]
-4. In **API hosted in App Service Environment**, select the one you want to import from. Here it will show every web app, API app and mobile app in your App Service Environment which has its **apiDefinition.url** property configured. It will use the Swagger 2.0 API definition exposed via this property to import the API. Make sure this URL is public accessible during the API registration time.
+4. In **API hosted in App Service Environment**, select the one you want to import from. Here it will show every web app, API app and mobile app in your App Service Environment which has its **apiDefinition.url** property configured. It will use the Swagger 2.0 API definition exposed via this property to import the API. Make sure this URL is public accessible during the API registration time.  
 	![][14]
 5. Select **ADD** to complete these steps.
 
