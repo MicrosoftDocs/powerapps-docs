@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="11/13/2015"
+   ms.date="11/17/2015"
    ms.author="guayan"/>
 
 # Configure an API to Connect to AAD Protected Backend
@@ -31,23 +31,23 @@ Sometimes your existing backend is protected by Azure Active Directory (AAD). Yo
 
 The first thing you need to do is to create an AAD application and give it the proper permissions to your existing backend (which is also an AAD application). Following are the steps:
 
-1. In [Azure portal][13], go to your Azure Active Directory and select **applications** tab.
+1. In [Azure portal][13], go to your Azure Active Directory and select **applications** tab.  
 	![][14]
-2. Click the **Add** button at the bottom, then
-	a. Choose **Add an application my organization is developing**.
-	b. Give it a name and then keep type as **Web application and/or web API**.
-	c. Give it a unqiue **Sign-on URL** and **App ID URI**.
-3. In the newly created AAD application page, go to the **Configure** tab.
+2. Click the **Add** button at the bottom, then:  
+	a. Choose **Add an application my organization is developing**.  
+	b. Give it a name and then keep type as **Web application and/or web API**.  
+	c. Give it a unqiue **Sign-on URL** and **App ID URI**.  
+3. In the newly created AAD application page, go to the **Configure** tab:  
 	![][15]
-4. In **keys** section, use the dropdown list to create a key. The key will show up after you click Save.
+4. In **keys** section, use the dropdown list to create a key. The key shows up after you select **Save**:  
 	![][16]
 5. In **single sign-on** section, add ``https://<your App Service Environment name>.azure-apim.net:456/redirect`` as a **reply URL**.
-6. In **permissions to other applications** section
-	a. Click **Add application**, then in the pop up dialog, choose the AAD application protecting your existing backend.
+6. In **permissions to other applications** section:  
+	a. Click **Add application**, then in the pop up dialog, choose the AAD application protecting your existing backend:  
 	![][17]
-	b. Use the dropdown list to add proper permissions.
+	b. Use the dropdown list to add proper permissions:  
 	![][18]
-7. Click **Save** button at the bottom. After this, please copy the **client ID** and **key** and keep them in some place temporarily. Especially the key, since it won't show again after you close Azure portal.
+7. Select **Save** at the bottom. After this, please copy the **client ID** and **key** and keep them in some place temporarily. Especially the key, since it won't show again after you close Azure portal.
 
 For more information, please refer to [Integrating Applications with Azure Active Directory][12].
 
