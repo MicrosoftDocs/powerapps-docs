@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Create a new Dropbox API in your organization's App Service Environment"
+	pageTitle="Add Dropbox API in your App Service Environment| Azure"
 	description="Create a new Dropbox API in your organization's App Service Environment"
 	services="powerapps"
 	documentationCenter="" 
@@ -18,37 +18,37 @@
 
 #Create a new Dropbox API in your organization's App Service Environment
 
-1. In the Azure portal, open **PowerApps**. In PowerApps, select **Registered APIs** tile or select it from *Settings*:  
+1. In the Azure portal, click on _Browse_ and select _PowerApps Services_. 
+2. In **PowerApps Services**, select **Registered APIs** tile or select it from *Settings*:  
+![Browse to registered apis][4]
 
+3. In the **Registered APIs** blade, select **Add** to add a new API
+![Add API][5]
 
-2. In the **Registered APIs** blade, select **Add** to add a new API
-
-3. Configure the API properties:  
-
-
-	a) Enter a descriptive **name** for your API. For example, if you're adding the SQL connector, you can name it *SQLOrdersDB*.  
+4. Enter a descriptive **name** for your API.  
 	
-	b) In **Source**, select **Marketplace** to select a pre-built connector. Select **Existing API** to choose a connector you created (the .json and .manifest files are needed).  
+5. In **Source**, select **Marketplace** to select a pre-built API. 
 	
-	c) Select **API** from Azure Marketplace.  
+6. Select **Dropbox** from the marketplace
+![select dropbox api][6]
 
-4. Select Dropbox from Azure Marketplace
+7. Select *Settings - Configure required settings*
+![configure dropbox API settings][7]
 
-	a) Select *Settings - Configure required settings*
-	
-	b) Enter *App Key* and *App Secret* for Salesforce
-		
-		Note the *Redirect URL*
-	- If you don't have a Dropbox app, follow these steps:
-		- Step 1: Sign in new Dropbox account [here][1], and create your Dropbox app [here][2]
-		- Step 2: There are 2 options available creating a app, Drops-in App & Dropbox API App. You have to select **Dropbox API app** and give the name of your app. 
-		- Step 3: Go to [App Console][3] and select your created app. Under settings tab you can see the APP_KEY(App key) and SECRET_KEY(App secret)
+8. Enter *App Key* and *App Secret* for Dropbox. If you dont already have one, see the section below titled "Register a Dropbox app for use with PowerApps". 
+> Note the _redirect URL_ here before starting to register the Dropbox app
 
-	c) Click *OK* on *Configure API* blade
+9. Click **OK** to close the configure API blade.
 
-5. Click **OK**. Dropbox API is now added to the list of **Registered APIs** in your App Service Environment.  
+10. Click **OK** to create a new Dropbox in your ASE.
+
+On successful completion, a new API is added to your ASE.
 
 <!--References-->
 [1]: https://www.dropbox.com/login
 [2]: https://www.dropbox.com/developers/apps/create
 [3]: https://www.dropbox.com/developers/apps
+[4]: ./media/powerapps-create-api-from-marketplace-dropbox/browse-to-registered-apis.PNG
+[5]: ./media/powerapps-create-api-from-marketplace-dropbox/add-api.PNG
+[6]: ./media/powerapps-create-api-from-marketplace-dropbox/select-dropbox-api.PNG
+[7]: ./media/powerapps-create-api-from-marketplace-dropbox/configure-dropbox-api.PNG
