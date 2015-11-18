@@ -1,9 +1,9 @@
 <properties
 	pageTitle="What is PowerApps Enterprise and how to get started | Microsoft Azure"
-	description=""
+	description="Get started with PowerApps Enterprise and create App Service Environment"
 	services="powerapps"
 	documentationCenter="" 
-	authors="MandiOhlinger"
+	authors="linhtranms"
 	manager="dwrede"
 	editor=""/>
 
@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="11/10/2015"
+   ms.date="11/17/2015"
    ms.author="litran"/>
 
 # What is PowerApps Enterprise?
@@ -114,11 +114,11 @@ An email opens that is sent to the PowerApps group. After you submit your reques
 If the request is approved, you can then: 
 
 - Add users within your company and using [role-based access control](../role-based-access-control-configure.md), give these users PowerApps Admin roles to access the PowerApps Enterprise management portal.
-- Create APIs and connections to run within your dedicated App Service environment (ASE).
-- View performance metrics for your App Service environment.
+- Create a dedicated App Service Environment to host your apps.
+- Create APIs and connections to run within your dedicated App Service Environment.
 - In addition to PowerApps, you can add additional apps to your app service environment, including web apps, mobile apps, and logic apps.
 
-In the following example, the Contoso company signed-up for PowerApps. In this new **PowerApps** blade, you can see a summary of the different type of apps created using this app service environment. In **Registered APIs**, you can see a summary of the Microsoft-created APIs (Microsoft managed) and see the Contoso-created APIs (IT managed):  
+In the following example, the Contoso company signed-up for PowerApps. In this new **PowerApps** blade, you can see a summary of the different type of apps created using this app service environment. In **Manage APIs**, you can see a summary of the Microsoft-created APIs (Microsoft managed) and see the Contoso-created APIs (IT managed):  
 
 ![Sample company PowerApps blade][4]  
 
@@ -130,10 +130,83 @@ For users who are not subscription administrators or have been assigned a PowerA
 
 ![No Access PowerApps blade][5]  
 
-## Next steps 
-Now that you're company is signed up for PowerApps, [create an app service environment](powerapps-create-new-ase.md). When the app service environment is created, you you can add APIs and connections that can be used by PowerApps or other kinds of apps. 
+## Step 3: Create an App Service Environment
+Create an App Service Environment to host your PowerApps APIs and connections, as well as Mobile apps, Web apps, API apps, and Logic apps. 
 
-[Create an app service environment](powerapps-create-new-app-service-environment.md)  
+An App Service Environment is an isolated and dedicated environment that securely runs all of your apps. Compute resources are per app service environment and are exclusively dedicated to running only your apps. When you sign-up for PowerApps Enterprise, a dedicated App Service environment is used to host the APIs and connections used by your PowerApps apps. This app service environment is a "special" type of app service environment. Specifically: 
+
+- You can use this app service environment for whatever you want. It's tied to your company, not the subscription.
+- You configure APIs and connections to be used by your PowerApps. But, you can also add web apps, mobile apps, logic apps, and API apps to this same app service environment. 
+- Billing is fixed and included with PowerApps.  
+- Scale is automatically managed for you. You don't have to monitor the environment to determine if additional compute resources are needed.
+
+The regular Azure app service environment has different features. See [Introduction to App Service Environment](https://azure.microsoft.com/documentation/articles/app-service-app-service-environment-intro) for those details.
+
+#### Requirements to get started
+
+- Azure company subscription
+- The Subscription Administrator within your company [signed up your company for PowerApps](powerapps-get-started-azure-portal.md) Enterprise.
+- You are signed into the Azure portal as the PowerApps Administrator ("owner" of PowerApps) or the Subscription Administrator.
+
+### Create an app service environment
+> [AZURE.NOTE] If you do not see the option to create the App Service Environment, it was already created for your tenant. You can just open the App Service Environment via Settings to view the details. 
+
+1. In the [Azure portal](https://portal.azure.com/), sign-in with your work account. For example, sign-in with *yourUserName*@*YourCompany*.com. When you do this, you are automatically signed in to your company subscription.
+ 
+2. Select **Browse All** in the task bar:  
+![Browse for PowerApps][1]
+  
+3. In the list, you can scroll to find PowerApps. You can also select **Resources**, and type in *powerapps*:  
+![Search for PowerApps in Resources][2]  
+
+4. In the **PowerApps** blade, click **Create App Service Environment to get started** or select **App Service Environment** under *Settings*:  
+![][7]
+  
+5. Next, enter the name, select the subscription you want to use, select or create a new resource group, select a Virtual network and then select **Add**:  
+![][8]   
+	Some pointers:
+	- For the name, be specific. If different departments within your company will have their own app service environment, you can include that in the name. For example, you can name it *HRApps* or *ContosoITApps*. You can also name it by its purpose. For example, you can name it *FieldSalesGroupApps* or *GlobalSupportApps*. If your company will use one app service environment for all your apps, you can name it *ContosoApps*.
+	- Resource groups acts as containers for items that are related. If your apps use a database server, then you can create your apps and your database server within the same resource group. All items within the resource group are deployed together, updated together, and even deleted together. See [Azure Resource Manager overview](https://azure.microsoft.com/documentation/articles/resource-group-overview) for more specific information.
+
+6. Select **Add** to complete creating the app service environment. 
+
+Remember, you can also add web apps and mobile apps to this app service environment. In fact, it's your environment to add anything you want. 
+
+### Add Administrator(s) to manage the App Service Environment
+To get access to the App Service Environment and create APIs and connections, user  must be added as the Owner role.
+
+When you create the app service environment, you add users or groups to PowerApps, and you can remove users or groups from PowerApps. For example, you can add specific Administrator groups within your company to the *Owners* role; which allows them to grant users access to PowerApps and more.
+
+1. Select the App Service Environment you just created.
+2. Select the RBAC icon to manage permissions:  
+![][9]  
+3. Select **Add**.
+4. Select the **Owner** role.
+5. Select the users or groups you want to add to manage this App Service Environment.
+6. Select **OK**.
+
+Adding users and assigning roles is just like using [Role-based access control](https://azure.microsoft.com/documentation/articles/role-based-access-control-configure) within Azure. Some roles include:   
+
+Role | Description
+--- | ---
+Contributor | Manages everything, but can't grant access to users.
+Reader | Can view everything, but can't make any changes.
+Owner | Can manage everything and grant users access.
+
+Using these roles, you can make userA an owner of the app service environment. You can make groupB a Contributor of the app service environment. You can remove userC from all roles. You can really get granular with these rights or add everyone as a Reader. It really depends on your business needs. 
+
+
+
+## Summary and next steps
+In this topic, you created a new App Service environment to host your PowerApps. 
+
+Next, [add some APIs](powerapps-create-new-connector.md) to your app service environment and give users within your company access.
+
+
+
+## Next steps 
+Now that you're company is signed up for PowerApps and created an App Service Environment. Now you you can add APIs and connections that can be used by PowerApps or other kinds of apps. 
+
 [Add APIs and connections](powerapps-create-new-connector.md)  
 [Monitor your PowerApps apps](powerapps-manage-monitor-usage.md)
 
@@ -144,4 +217,7 @@ Now that you're company is signed up for PowerApps, [create an app service envir
 [4]: ./media/powerapps-get-started-azure-portal/powerappsblade.png
 [5]: ./media/powerapps-get-started-azure-portal/noaccess.png
 [6]: ./media/powerapps-get-started-azure-portal/alllogicapps.png
+[7]: ./media/powerapps-get-started-azure-portal/createase.png
+[8]: ./media/powerapps-get-started-azure-portal/aseproperties.png
+[9]: ./media/powerapps-get-started-azure-portal/addaseowner.png
 
