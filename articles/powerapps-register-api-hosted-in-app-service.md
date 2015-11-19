@@ -13,7 +13,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="11/18/2015"
+   ms.date="11/19/2015"
    ms.author="guayan"/>
 
 # Register an API hosted in your App Service Environment
@@ -46,7 +46,7 @@ Developing an API in the app service environment is straightforward. You choose 
 - [Build and deploy a Java API app in Azure App Service](https://azure.microsoft.com/documentation/articles/app-service-api-java-api-app/)
 - [Build and deploy a Node.js API app in Azure App Service](https://azure.microsoft.com/documentation/articles/app-service-api-nodejs-api-app/)
 
-You also have options to deploy your web API into an app service environment, including deploying from Visual Studio, and deploying continuously using a source control system. For more information, see [Deploy a web app in Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-deploy/).
+You also have options to deploy your web API into an app service environment, including deploying from Visual Studio, and deploying continuously using a source control system.  [Deploy a web app in Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-deploy/) is a good resource. 
 
 ## Register your custom API in the app service environment
 
