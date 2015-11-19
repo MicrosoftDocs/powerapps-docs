@@ -7,6 +7,7 @@
    manager="dwrede"
    editor=""
    tags=""/>
+
 <tags
    ms.service="powerapps"
    ms.devlang="na"
@@ -25,7 +26,18 @@
 [1]: ./media/formula-reference/construction.png
 
 ## A ##
+
+[Abs](functions/function-numerical.md) Absolute value of a number.  *Coming Soon.*
+
+[AddColumns](functions/function-table-shape.md) Calculates a table with additional columns. *Coming Soon.*
+
+[And](functions/function-logical.md) Logical AND.  Returns **true** if all arguments are **true**.  *Coming Soon.*
+
+[Average](functions/function-aggregates.md) Numerical average of a table column or set of arguments.  *Coming Soon.*
+
 ## C ##
+
+[Char](functions/function-char.md) Translates a character code into a string.  *Coming Soon.*
 
 [Clear](functions/function-clear-collect-clearcollect.md) Deletes all data from a collection.
 
@@ -33,7 +45,31 @@
 
 [Collect](functions/function-clear-collect-clearcollect.md) Creates collections and adds data to a data source.
 
+[ColorFade](functions/function-colorfade-colorvalue-rgba.md) Fades a color value.  *Coming Soon.*
+
+[ColorValue](functions/function-colorfade-colorvalue-rgba.md) Translates a CSS color name to a color value.  *Coming Soon.*
+
+[Concat](functions/function-concat-concatenate.md) Concatenates strings in a data source.  *Coming Soon.*
+
+[Concatenate](functions/function-concat-concatenate.md) Concatenates strings.  *Coming Soon.*
+
+[Count](functions/function-table-count.md) Counts table records that contain numbers. *Coming Soon.*
+
+[CountA](functions/function-table-count.md) Counts table records that are not empty. *Coming Soon.*
+
+[CountIf](functions/function-table-count.md) Counts table records that satisfy a condition.   *Coming Soon.*
+
+[CountRows](functions/function-table-count.md) Counts table records that satisfy a condition.   *Coming Soon.*
+
 ## D ##
+
+[Date](functions/function-date.md) Returns a date/time value, based on Year, Month, and Day values.  *Coming Soon.*
+
+[DateAdd](functions/function-dateadd-datediff.md) 
+
+[DateDiff](functions/function-dateadd-datediff.md) 
+
+[DateValue](functions/function-date.md) Returns a date/time value, based on a date string. *Coming Soon.*
 
 [DataSourceInfo](functions/function-datasourceinfo.md) Provides information about a data source.
 
