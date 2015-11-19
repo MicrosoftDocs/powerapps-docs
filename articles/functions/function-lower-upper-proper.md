@@ -57,16 +57,13 @@ The examples in this section use an input-text control, named **Author**, as the
 ### Single-column table
 The examples in this section use this data source, named **People**:
 
-| Name  | Address |
-|-------|---------|
-| Jean  | 123 Main St. NE |
-| Frank | 789 SW 39th #3B |
+![](media/function-lower-upper-proper/people-table.png)
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | <table><tr><th>Address</th></tr><td>123&nbsp;main st.&nbsp;ne</td></tr><tr><td>789&nbsp;sw&nbsp;39th&nbsp;#3b</td></tr></table> |
-| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | <table><tr><th>Address</th></tr><td>123&nbsp;MAIN ST.&nbsp;NE</td></tr><tr><td>789&nbsp;SW&nbsp;39th&nbsp;#3B</td></tr></table> |
-| **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any first letter of a word that's lowercase to uppercase.</li><li>Converts any other letter that's uppercase to lowercase.</li><li>Returns a single-column table that contains the converted strings.</li> | <table><tr><th>Address</th></tr><td>123&nbsp;Main St.&nbsp;Ne</td></tr><tr><td>789&nbsp;Sw&nbsp;39th&nbsp;#3b</td></tr></table> |
+| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-lower.png) |
+| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-upper.png) |
+| **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any first letter of a word that's lowercase to uppercase.</li><li>Converts any other letter that's uppercase to lowercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-proper.png) |
 
 ### Step-by-step example ###
 
