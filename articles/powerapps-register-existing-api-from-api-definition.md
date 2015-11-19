@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Create Swagger 2.0 API Definition from an API in PowerApps | Microsoft Azure"
-	description="Register API from Swagger 2.0 API defition created using your existing API"
+	description="Learn how to register an API from Swagger 2.0 API defition created from an existing API"
 	services="powerapps"
 	documentationCenter="" 
 	authors="MandiOhlinger"
@@ -13,15 +13,15 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="11/17/2015"
+   ms.date="11/18/2015"
    ms.author="guayan"/>
 
-# Register API from Swagger 2.0 API Definition  
+# Register an API from Swagger 2.0 API Definition  
 Many organizations already have some existing APIs that users can use and consume   within their PowerApps.
 
 To use these APIs, you must "register" the APIs in the Azure portal. The following options are available: 
 
-- Register an API available from the [Azure Marketplace](powerapps-register-from-available-apis.md)
+- Register a [Microsoft managed API or an IT managed API](powerapps-register-from-available-apis.md)
 - Register an API hosted within [your App Service Environment](powerapps-register-api-hosted-in-app-service.md)
 - Register using a Swagger 2.0 API definition
 
@@ -42,13 +42,16 @@ It's very easy to register these existing APIs. Steps include:
 2. Make sure your existing API is accessible by your app service environment securely:  <br/><br/>
 	a) If you are comfortable with making your API accessible using the internet, you can set up HTTP basic access authentication between your app service environment and your existing API. Go [here][14] to see how.  <br/><br/>
 	b) If you want to keep your API within your organization's network, you can set up a virtual network on the app service environment to access your organization's network securely. Go [here][15] to see how.
-3. In the Azure portal, select **PowerApps**. In PowerApps, select **Manage APIs**:  
+
+3. In the [Azure portal](https://portal.azure.com/), select **PowerApps**. In PowerApps, select **Manage APIs**:  
 ![][11]
 4. In Manage APIs, select **Add**:  
 ![][12]
 5. In **Add API**, enter the API properties:  
+
 	- In **Name**, enter a name for your API. Notice that the name you enter is included in the runtime URL of the API. Make the name meaningful and unique within your organization.
 	- In **Source**, select **Import from Swagger 2.0**.
+
 6. In **API definition (Swagger 2.0)**, upload your Swagger 2.0 API definition file:  
  ![][13]
 7. Select **ADD** to complete these steps.
