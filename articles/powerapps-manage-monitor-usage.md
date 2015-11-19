@@ -161,9 +161,9 @@ In this topic, you read about the different options to manage your PowerApps and
 
 Now that your Azure portal experience is configured, let's start creating your PowerApps. These are good starters:
 
-[Create an app from a template in PowerApps](get-started-test-drive.md)  
-[Create an app from data in PowerApps](get-started-create-from-data.md)  
-[Create an app from scratch in PowerApps](get-started-create-from-blank.md)
+- [Create an app from a template in PowerApps](get-started-test-drive.md) 
+- [Create an app from data in PowerApps](get-started-create-from-data.md) 
+- [Create an app from scratch in PowerApps](get-started-create-from-blank.md)
 
 
 [1]: ./media/powerapps-manage-monitor-usage/addadmin.png
