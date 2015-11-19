@@ -21,8 +21,12 @@ Create a screen that users can scroll to show more types of content than the scr
 
 [What are PowerApps?](http://www.powerapps.com)
 
+**Prerequisites**
+- [Install PowerApps](http://aka.ms/installpowerapps)
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
+
 ## Create a scrolling screen, and add an element
-1. In [PowerApps](http://aka.ms/installpowerapps), do one of the following:
+1. Open PowerApps, and then do one of the following:
 
 	- [Add a screen](add-screen-context-variables.md) to a PowerApp.
 
