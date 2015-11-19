@@ -65,6 +65,7 @@ To do so, use the following steps. Alternatively, you may wish to create a new t
 4.	Select the **Users** tab at the top. There is a single user listed with “Microsoft account” in the Sourced From column.
 5.	Select **Add User** at the bottom. 
 6.	In **Add User Form**, enter the following details:  
+	
 	Property | Description
 --- | ---
 Type of User | New user in your organization
