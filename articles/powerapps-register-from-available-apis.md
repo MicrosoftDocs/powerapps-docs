@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Create and configure Microsoft managed and IT managed APIs in PowerApps | Microsoft Azure"
-	description="Learn about the available APIs in PowerApps in the Azure portal"
+	description="Learn about the available APIs in PowerApps and how to register them in the Azure portal"
 	services="powerapps"
 	documentationCenter="" 
 	authors="MandiOhlinger"
@@ -31,8 +31,8 @@ This article focuses on the Microsoft managed APIs and the IT managed APIs.
 
 #### Prerequisites to get started
 
-- Sign up for [PowerApps Enterprise]()
-- Create an [app service environment]()
+- Sign up for [PowerApps Enterprise](powerapps-get-started-azure-portal.md).
+- Create an [app service environment](powerapps-get-started-azure-portal.md).
 
 
 ## View the available Microsoft managed APIs
