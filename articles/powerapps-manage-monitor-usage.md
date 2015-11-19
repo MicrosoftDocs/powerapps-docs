@@ -1,7 +1,7 @@
 
 <properties
 	pageTitle="Check your app usage in PowerApps | Microsoft Azure"
-	description="IT Pro: See all apps, APIs, users, app requests, and update permissions in the Azure portal"
+	description="See all apps, APIs, users, app requests, and update permissions in the Azure portal"
 	services="powerapps"
 	documentationCenter="" 
 	authors="MandiOhlinger"
@@ -14,14 +14,14 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="11/18/2015"
+   ms.date="11/19/2015"
    ms.author="litran"/>
 
 
-# Manage and secure your apps
+# Manage and secure your PowerApps
 Once you create your app service environment and add APIs and their connections,  users in your organization can start consuming these APIs and connections. You can also manage all apps created in your organization. These options include:
 
-- See the different apps within your app service environment, including PowerApps, web apps, logic apps, mobile apps and more.
+- See the different apps within your app service environment, including PowerApps, web apps, logic apps, mobile apps, and more.
 - See all the APIs used by specific apps.
 - View and manage user access to the apps within the app service environment. 
 - View and manage user access to the APIs and their connections. 
@@ -33,20 +33,17 @@ Remember, your app service environment is yours to add other apps, including web
 After PowerApps Enterprise is enabled and ready to be used, you can add administrators, monitor the requests made to your app service environment, and monitor other apps within your app service environment.
 
 1. In the [Azure portal](https://portal.azure.com/), open **PowerApps**.
-2. Go to **Settings**.
-3. Select **Admin**:  
-
-	![][1]  
-
-4. Select **Add**.
+2. Select **Settings**.
+3. In **Settings**, select **Admin**:  
+![][1]  
+4. In **Users**, select **Add**.
 5. Select the **Owner** role:  
+![][2]  
 
-	![][2]  
+	> [AZURE.IMPORTANT] Make sure that you select **Owner** role if you are assigning someone as a PowerApps Admin. Other roles listed won't give users full access to manage PowerApps. 
 
-	> [AZURE.IMPORTANT] Make sure that you select **Owner** role if you are to assign someone as a PowerApps Admin. Other roles listed won't give them full access to manage PowerApps. 
-
-6. Select users or groups.
-7. Select **OK** to add a PowerApps Admin.
+6. Select your users or groups.
+7. Select **OK** to complete the steps.
 
 When you add Administrators to PowerApps, the users and groups you add as administrators can:
 
@@ -54,88 +51,80 @@ When you add Administrators to PowerApps, the users and groups you add as admini
 - Manage all apps as well as their user access.
 - Cannot change the billing.
 
-> [AZURE.IMPORTANT] PowerApps Administrators cannot make changes to the App Service Environment until they are given the Owner role on the App Service Environment's resource group. To do this, see the steps within this [article](powerapps-get-started-azure-portal.md).
+> [AZURE.IMPORTANT] PowerApps Administrators cannot make changes to the App Service Environment until they are given the Owner role on the app service environment's resource group. To do this, see [this article](powerapps-get-started-azure-portal.md).
 
-Once given the Owner role on the App Service Environment's resource group, the PowerApps administrators can also: 
+Once given the Owner role on the app service environment's resource group, the PowerApps administrators can also: 
 
 - Create and configure APIs and their connections.
-- Make changes to the PowerApps settings, including the App Service Environment.
-- Add other users and groups and give them roles and permissions to the APIs, connections and the App Service Environment. 
+- Make changes to the PowerApps settings, including the app service environment.
+- Add other users and groups and give them roles and permissions to the APIs,  thier connections, and the app service environment. 
 
 
 ## Manage your PowerApps and other types of apps
-Once you enable PowerApps and your app service environment, you can add other apps, like web apps and logic apps to the same App Service Environment. After you do this, they are listed under *All apps* along with PowerApps. You can click on each type of app to browse through the apps. 
+Once you enable PowerApps and your app service environment, you can add other apps, like web apps and logic apps to the same app service environment. After you do this, the apps are listed under *All apps* along with PowerApps. You can click on each type of app to browse through the apps. 
 
-### PowerApps
+### View and manage your PowerApps
 
 1. In the [Azure portal](https://portal.azure.com/), open **PowerApps**.
 2. From the **All apps** tile, select **PowerApps**:  
 ![][3]  
-3. Select a PowerApps to view details of the app, including:  
-	- The APIs the app uses
-	- Users and groups who have access to the app 
-	- App's analytics (coming soon)
+3. Select a PowerApp to view details of the app, including:  
+	- The APIs the PowerApp uses
+	- Users and groups who have access to the PowerApp 
+	- The PowerApp's analytics (coming soon)
 
-#### Add a PowerApps
+#### Add a PowerApp
 
-You cannot add a PowerApps through the Azure portal. To do it today, you need to go to [PowerApps portal](https://web.powerapps.com)
+You cannot add a PowerApp through the Azure portal. Currently, you need to go to [PowerApps portal](https://web.powerapps.com).
 
 #### Delete your apps created in PowerApps
-As a PowerApps Admin, you can delete any app, including PowerApps and other types of apps in your app service environment. To delete your app, select the **All apps** tile, select your app, and then select **Delete**:
-  
+As a PowerApps Admin, you can delete any app, including PowerApps and other types of apps in your app service environment. To delete your app, select the **All apps** tile, select your app, and then select **Delete**:    
 ![][4]
 
 
-#### Add user or group access to an app
+#### Give users or groups access to use a PowerApp
 As a PowerApps admin, you can add or remove users and groups to PowerApps.
 
 1. In the [Azure portal](https://portal.azure.com/), open **PowerApps**.
-2. In the **All apps** tile, select **PowerApps**
-	
-	![][3]  
-
-3. Select a PowerApps such as **Service Desk**.
- 
-4. Select **App user access**:  
-
-	![][5]
-
-5. Select **Add**. 
+2. In the **All apps** tile, select **PowerApps**:  	
+![][3]  
+3. Select a PowerApp, such as **Service Desk**. 
+4. In **Settings**, select **App user access**:  
+![][5]  
+5. Select **Add** to add a new user or group. 
 6. Select a role:  
 	- **Can Edit**
 	- **Can View**
-7. Select users or groups.
-8. Select **OK**.
+7. Select the users or groups.
+8. Select **OK** to complete the steps.
 
-### Logic apps
-
-1. In the [Azure portal](https://portal.azure.com/), open **PowerApps**.
-2. From the **All apps** tile, select **Logic apps**:  
-
-	![][8]  
-3. Select a Logic apps to view details of the app. Make sure you select the right subscription for PowerApps to have the correct Logic apps displayed.
-
-	![][7]  
-
-	> [AZURE.IMPORTANT] At public preview, you might see the inconsistency in the count of Logic apps in browsing blade vs. the count displayed on the main PowerApps blade. That is because we are displaying all Logic apps across all hosting plans and not filtering the Logic apps under the App Service Environment deployed for PowerApps. We will be fixing it shortly.
-
-	**To learn more about Logic apps and how to manage them, please follow [these instructions](https://azure.microsoft.com/en-us/documentation/services/app-service/logic/)**
-
-### Web Apps
+### View and manage your Logic apps
 
 1. In the [Azure portal](https://portal.azure.com/), open **PowerApps**.
-2. From the **All apps** tile, select **Web apps**:  
-	![][9]  
+2. In the **All apps** tile, select **Logic apps**:  
+![][8]  
+3. Select a logic app to view details of the app. Make sure you select the correction subscription for PowerApps to  list the correct logic apps:  
+![][7]  
 
-	**To learn more about Web apps and how to manage them, please follow [these instructions](https://azure.microsoft.com/en-us/documentation/services/app-service/web/)**
+	> [AZURE.IMPORTANT] At public preview, you may see some inconsistency in the count of logic apps in the browsing blade vs. the count displayed on the main PowerApps blade. This is expected. The portal is displaying all logic apps across all hosting plans and not filtering the logic apps under the app service environment deployed for PowerApps. This behavior will be fixed in a future updates.
 
-### Mobile Apps
+	**To learn more about Logic apps and how to manage them, see [these instructions](https://azure.microsoft.com/documentation/services/app-service/logic/).**
+
+### View and manage your Web Apps
 
 1. In the [Azure portal](https://portal.azure.com/), open **PowerApps**.
-2. From the **All apps** tile, select **Mobile apps**:  
-	![][10]  
+2. In the **All apps** tile, select **Web apps**:  
+![][9]  
 
-	**To learn more about Mobile apps and how to manage them, please follow [these instructions](https://azure.microsoft.com/en-us/documentation/services/app-service/mobile/)**
+	**To learn more about web apps and how to manage them, see [these instructions](https://azure.microsoft.com/documentation/services/app-service/web/).**
+
+### View and manage your Mobile Apps
+
+1. In the [Azure portal](https://portal.azure.com/), open **PowerApps**.
+2. In the **All apps** tile, select **Mobile apps**:  
+![][10]  
+
+	**To learn more about mobile apps and how to manage them, see [these instructions](https://azure.microsoft.com/documentation/services/app-service/mobile/).**
 
 
 ## Review the security options
@@ -170,11 +159,11 @@ Using these roles, you can grant userA **Can View** permission to a Twitter dail
 ## Summary and next steps
 In this topic, you read about the different options to manage your PowerApps and the security methods implemented within PowerApps. 
 
-Now that your Azure portal experience is configured, let's start creating your  apps in PowerApps. These are good starters:
+Now that your Azure portal experience is configured, let's start creating your PowerApps. These are good starters:
 
-[Create an app from a template in PowerApps](get-started-test-drive.md)  
-[Create an app from data in PowerApps](get-started-create-from-data.md)  
-[Create an app from scratch in PowerApps](get-started-create-from-blank.md)
+- [Create an app from a template in PowerApps](get-started-test-drive.md) 
+- [Create an app from data in PowerApps](get-started-create-from-data.md) 
+- [Create an app from scratch in PowerApps](get-started-create-from-blank.md)
 
 
 [1]: ./media/powerapps-manage-monitor-usage/addadmin.png
