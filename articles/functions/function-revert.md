@@ -45,7 +45,7 @@ If a conflict is reported by the **Errors** function after a **[Patch](function-
 
 In this example, you'll revert the data source named **IceCream**. The data source begins with:
 
-| ID (automatically generated<br>primary key) | Flavor    | Quantity |
+| ID  | Flavor    | Quantity |
 |-----|-----------|----------|
 | 1   | "Chocolate" | 100      |
 | 2   | "Vanilla"   | 200      |
@@ -55,7 +55,7 @@ A user on another device makes a modification to the Strawberry record, changing
 
 You **Patch** your change:
 
-- **Patch( IceCream, { ID: 3 }, { Quantity: 500 } )**
+- **Patch( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ), { Quantity: 500 } )**
 
 You check the **Errors** table and find there is an error:
 
@@ -65,11 +65,11 @@ You check the **Errors** table and find there is an error:
 
 Based on the **Error** column, you have a "Reload" button with an OnSubmit formula of:
 
-- **Revert( IceCream, { ID: 3 } )**
+- **Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**
 
 The **Errors** table is now empty, and the new value for Strawberry has been loaded:
 
-| ID (automatically generated<br>primary key) | Flavor    | Quantity |
+| ID |  Flavor    | Quantity |
 |-----|-----------|----------|
 | 1   | "Chocolate" | 100      |
 | 2   | "Vanilla"   | 200      |
@@ -77,7 +77,7 @@ The **Errors** table is now empty, and the new value for Strawberry has been loa
 
 Now you can reapply your change on top of the previous change, there is no longer a conflict, and the change succeeds. 
 
-| ID (automatically generated<br>primary key) | Flavor    | Quantity |
+| ID  | Flavor    | Quantity |
 |-----|-----------|----------|
 | 1   | "Chocolate" | 100      |
 | 2   | "Vanilla"   | 200      |

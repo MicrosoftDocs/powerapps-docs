@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Parking Citation Sample App"
+    pageTitle="Parking Citation Sample App | Microsoft Azure"
     description="Sample PowerApp with SharePoint Online as a data source"
     services="powerapps"
     documentationCenter="na"
@@ -58,4 +58,7 @@ To get started, download this sample. In the zip, you'll find:
 - Select the two lists you set up in the second step of this tutorial and you're good to go. 
 
 ### 4. (Optional): Ask your IT Admin to register the Address Lookup API in your organization's ASE
-Ask your IT admin to register the Address Lookup API in your organizationsLearn more about registering APIs here.
+Instead of requiring users to type in an address, you can use the Address Lookup API included in the sample to calculate an address based on the user's latitude and longitude. 
+
+- Ask your IT admin to register the Address Lookup API in your organization's ASE following this [tutorial](www.powerapps.com/en-us/articles/powerapps-register-api-hosted-in-app-service). 
+- Add a connection to the registered API
