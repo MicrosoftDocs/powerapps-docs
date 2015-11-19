@@ -44,7 +44,7 @@
 
 On successful completion, a new Microsoft Translator API is added to your ASE.
 
-#Register a Microsoft Translator app for use with PowerApps
+##Register a Microsoft Translator app for use with PowerApps
 
 1. Navigate to [Azure Data Market developer's page][5] and sign in with your Microsoft Account
 

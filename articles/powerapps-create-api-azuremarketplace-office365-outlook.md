@@ -45,7 +45,7 @@
 
 On successful completion, a new Office 365 Outlook API is added to your ASE.
 
-#Register an AAD app for use with PowerApps Office 365 API
+##Register an AAD app for use with PowerApps Office 365 API
 
 1. Open [Azure Portal][5].
 

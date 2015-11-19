@@ -45,7 +45,7 @@
 
 On successful completion, a new API is added to your ASE.
 
-#Register a Dropbox app for use with PowerApps
+##Register a Dropbox app for use with PowerApps
 
 1. Launch [Dropbox][1] and sign in with your account.
 

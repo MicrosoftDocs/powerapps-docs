@@ -45,7 +45,7 @@
 
 On successful completion, a new API is added to your ASE.
 
-#Register a Google Drive app for use with PowerApps
+##Register a Google Drive app for use with PowerApps
 
 1. Login to [Google Developers Console][5]
 ![Google developers console][6]

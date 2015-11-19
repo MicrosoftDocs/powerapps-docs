@@ -45,7 +45,7 @@
 
 On successful completion, a new Office 365 Users API is added to your ASE.
 
-#Register an AAD app for use with PowerApps Office 365 Users API
+##Register an AAD app for use with PowerApps Office 365 Users API
 
 1. Open [Azure Portal][5].
 
