@@ -42,6 +42,7 @@ It's very easy to register these existing APIs. Steps include:
 2. Make sure your existing API is accessible by your app service environment securely:  <br/><br/>
 	a) If you are comfortable with making your API accessible using the internet, you can set up HTTP basic access authentication between your app service environment and your existing API. Go [here][14] to see how.  <br/><br/>
 	b) If you want to keep your API within your organization's network, you can set up a virtual network on the app service environment to access your organization's network securely. Go [here][15] to see how.
+
 3. In the [Azure portal](https://portal.azure.com/), select **PowerApps**. In PowerApps, select **Manage APIs**:  
 ![][11]
 4. In Manage APIs, select **Add**:  
@@ -50,6 +51,7 @@ It's very easy to register these existing APIs. Steps include:
 
 	- In **Name**, enter a name for your API. Notice that the name you enter is included in the runtime URL of the API. Make the name meaningful and unique within your organization.
 	- In **Source**, select **Import from Swagger 2.0**.
+
 6. In **API definition (Swagger 2.0)**, upload your Swagger 2.0 API definition file:  
  ![][13]
 7. Select **ADD** to complete these steps.
