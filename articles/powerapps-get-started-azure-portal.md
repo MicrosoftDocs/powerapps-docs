@@ -16,9 +16,9 @@
    ms.date="11/18/2015"
    ms.author="litran"/>
 
-# What is PowerApps Enterprise?
+# What is Microsoft PowerApps enterprise?
 
-PowerApps Enterprise is a new Microsoft Azure service. PowerApps Enterprise extends creating mobile apps to business users within your company and allows IT Admins to tightly manage these apps. 
+Microsoft PowerApps enterprise is a new Microsoft Azure service. Microsoft PowerApps enterprise extends creating mobile apps to business users within your company and allows IT Admins to tightly manage these apps. 
 
 Using an Office-style interface with ribbons and Excel formulas, business users can create apps that:
 
@@ -199,7 +199,7 @@ Using these roles, you can make userA an Owner of the app service environment. Y
 ## Summary and next steps
 Now that you're company is signed up for PowerApps and created an app service environment, you can add APIs and connections. These APIs and their connections are used by PowerApps or other kinds of apps.
 
-[Add APIs and connections](powerapps-create-new-connector.md)  
+[Add APIs and connections](powerapps-create-new-api.md)  
 [Monitor your PowerApps apps](powerapps-manage-monitor-usage.md)
 
 
