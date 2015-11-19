@@ -161,31 +161,31 @@ The regular Azure app service environment has different features. See [Introduct
 4. In the **PowerApps** blade, select **Create App Service Environment to get started** or select **App Service Environment** under *Settings*:  
 ![][7]
   
-5. Next, enter the name, select the subscription you want to use, select or create a new resource group, select a virtual network. **Notice** that after you choose a virtual network, it cannot be changed. For more information about how virtual network works with App Service Environment, please see [How to Create an App Service Environment](https://azure.microsoft.com/documentation/articles/app-service-web-how-to-create-an-app-service-environment/)  
-![][8]
+5. Next, enter the name, select the subscription you want to use, select or create a new resource group, and select a virtual network. **Notice** that after you choose a virtual network, it cannot be changed:  
+![][8]  
+For more information how virtual networks work with an app service environment, see [How to Create an App Service Environment](https://azure.microsoft.com/documentation/articles/app-service-web-how-to-create-an-app-service-environment/). 
 
 6. Select **Add** to complete creating the app service environment. 
 
-> AZURE.TIP The App Service Environment created via PowerApps doesn't ask you to configure compute resource pools. It is abstracted away from you and is handled automatically by the system.
+> AZURE.TIP When creating the app service environment using PowerApps, you are not prompted to configure compute resource pools. This step is handled automatically.
 
 Remember, you can also add web apps, mobile apps and API apps to this app service environment. In fact, it's your environment to add anything App Service Environment supports.
 
 ### Add Administrator(s) to manage the App Service Environment
 
-To get access to the App Service Environment, create APIs, connections and other resources, users must be added as the Owner role.
+To get access to the app service environment, create APIs, connections and other resources, users must be added with the Owner role.
 
-1. Select the App Service Environment you just created.
-2. Click the **Resource group** property in Essentials to navigate to the resource group containing the App Service Environment.
+1. Select the app service environment you just created.
+2. In Essentials, select the **Resource group** property. This opens the resource group that contains the app service environment:  
 ![][9]
-3. Select the RBAC icon to manage permissions  
-![][10]
-4. Adding users and assigning roles is just like using [Role-based access control](https://azure.microsoft.com/documentation/articles/role-based-access-control-configure) within Azure.
+3. Select the RBAC icon to manage permissions:  
+![][10]  
+	Adding users and assigning roles is just like using [Role-based access control](https://azure.microsoft.com/documentation/articles/role-based-access-control-configure) within Azure.
 
-> AZURE.TIP Right now, you cannot give RBAC permission to the App Service Environment itself so you need to perform it at the parent resource group level.
+> AZURE.NOTE Currently, you cannot give RBAC permissions to the app service environment. You can give RBAC permissions at the parent resource group level.
 
 ## Summary and next steps
-
-Now that you're company is signed up for PowerApps and created an App Service Environment. Now you you can add APIs and connections that can be used by PowerApps or other kinds of apps. 
+Your company is now signed up for PowerApps and has an app service environment. Next, you can add APIs and connections that can be used by your PowerApps or other kinds of apps. 
 
 - [Monitor your PowerApps apps](powerapps-manage-monitor-usage.md)
 - [Develop an API for PowerApps](powerapps-develop-api.md)
