@@ -13,10 +13,13 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/18/2015"
+   ms.date="11/19/2015"
    ms.author="anneta"/>
 
-# Create a card gallery #
+# Create a card gallery in PowerApps#
+Show a set of data for which each [record](working-with-tables.md) contains more information than can appear at one time on the screen. For example, a product catalog might contain an image of each product, a description, quantity in stock, technical specifications, and enough other information that it can't all fit on a screen without scrolling. In a card gallery, you add sections that hold one or more types of information, and users can scroll through the sections to display it all.
+
+[What are PowerApps?](http://www.powerapps.com)
 
 **Prerequisites**
 - [Install PowerApps](http://aka.ms/installpowerapps)
@@ -40,6 +43,8 @@
 1. Resize the gallery to cover almost the entire screen, but leave enough room at the top for a label to identify the screen.
 
 	![Resize a card gallery](./media/create-card-gallery/resize-gallery.png)
+
+## Add sections and controls ##
 
 1. Select **Add section** three times.
 
