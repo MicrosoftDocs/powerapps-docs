@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="11/17/2015"
+   ms.date="11/19/2015"
    ms.author="litran"/>
 
 
@@ -36,7 +36,7 @@ This topic:
 ## Add a new API to your app service environment
 There are three different sources that can be used to create an API:
 
-- [From available APIs](powerapps-register-from-available-apis.md)
+- [Available APIs](powerapps-register-from-available-apis.md)
 - [From APIs hosted in your App Service Environment](powerapps-register-api-hosted-in-app-service.md)
 - [From Swagger 2.0 API definition](powerapps-register-existing-api-from-api-definition.md)
 
@@ -49,23 +49,29 @@ You can also delete an API you previously added. In PowerApps, select the **Mana
 Now that the API is created and added to your app service environment, it's time to give users within your company the permissions to use it. 
 
 1. In PowerApps, select **Manage APIs**, and select your API. For example, if you created a *MS Power BI* API, select it to open its blade. Select **API user access**:  
-![][1]  
+
+	![][1]  
+
 2. Select **Add** to add users, and select the rights. When done, select **Add** to save your changes. The Users or Groups count increases in the **API user access** window.
 
 
 ## Add a new connection to your API
 After the API is created, the next step is to create the "connection", which is just like a connection string. This allows the API to successfully connect to your "backend" system. For PowerApps Enterprise public preview, only SQL Server's connection can be added and configured. More will be added in the future. 
 
-- [Create SQL Server's connection](powerapps-create-connection-sql-connector.md)
+- [Create SQL Server's connection](powerapps-create-api-sqlserver.md)
 
 ## Give users runtime access to the connection
 Now give users within your company permissions to use the connection.
 
 1. Open your API, select **Connections**, and then select your specific connection. This opens a new blade that lists your connection name at the top. 
 2. In this new blade, select **Connection user access**.  In the following example, the **Hybrid Tunnel** connection is selected. The new blade opens and this is where you select **Connection user access**:  
-![][2]  
+
+	![][2]
+  
 3. In **Connection user access**, select **Add**, and then select the permission you want to give:  
-![][3]  
+
+	![][3]
+  
 4. Add your user or group and select **Add** in the blades to save your changes.
 
 Now that users have permissions to the API and its connection, your users can add these APIs to their apps created in PowerApps. Specifically: 
@@ -84,7 +90,7 @@ In this topic, you:
 
 Next, you can [manage and monitor your PowerApps](powerapps-manage-monitor-usage.md).
 
-[1]: ./media/powerapps-create-new-api/apiuseraccess.png
-[2]: ./media/powerapps-create-new-api/connectionuseraccess.png
-[3]: ./media/powerapps-create-new-api/selectpermission.png
-[4]: ./media/powerapps-create-new-api/deleteapi.png
+[1]: ./media/powerapps-manage-api-connection-user-access/apiuseraccess.png
+[2]: ./media/powerapps-manage-api-connection-user-access/connectionuseraccess.png
+[3]: ./media/powerapps-manage-api-connection-user-access/selectpermission.png
+[4]: ./media/powerapps-manage-api-connection-user-access/deleteapi.png
