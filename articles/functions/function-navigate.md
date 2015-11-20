@@ -1,5 +1,5 @@
 <properties
-	pageTitle="PowerApps: Navigate function"
+	pageTitle="PowerApps: Back and Navigate function"
 	description="Reference information for the Navigate function in PowerApps, including syntax and examples"
 	services="powerapps"
 	documentationCenter="na"
@@ -17,19 +17,25 @@
    ms.date="11/08/2015"
    ms.author="gregli"/>
 
-# Navigate function in PowerApps #
+# Back and Navigate function in PowerApps #
 
 Changes which [screen](file-name.md) is displayed.
 
 ## Overview ##
 
-Most apps contain multiple screens.  Use the **Navigate** function to change which screen is displayed at any given time. For example, set the [**OnSelect**](file-name.md) property of a button to a formula that includes a **Navigate** function if you want to show a different screen when a user clicks that button. In that formula, you can specify a visual transition, such as Fade, to control how one screen changes to another.  
+Most apps contain multiple screens.  Use the **Back** and **Navigate** function to change which screen is displayed. For example, set the [**OnSelect**](file-name.md) property of a button to a formula that includes a **Navigate** function if you want to show a different screen when a user clicks that button. In that formula, you can specify a visual transition, such as Fade, to control how one screen changes to another.  
 
-**Navigate** changes only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on another screen. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and see how it affects what happens in the new screen.  The user can then navigate back to the original screen and see that the slider has retained its value.
+**Back** and **Navigate** change only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on another screen. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and see how it affects what happens in the new screen.  The user can then navigate back to the original screen and see that the slider has retained its value.
 
 [Context variables](file-name.md) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to [pass parameters](file-name.md) to a screen. If you've used another programming tool, this approach is similar to passing parameters to [procedures](file-name.md).
 
 ## Description ##
+
+### Back ###
+
+Back displays the screen that was most recently seen.
+
+### Navigate ###
 
 In the first argument, specify the name of the screen to display.  
 
@@ -44,13 +50,15 @@ In the first argument, specify the name of the screen to display.
 
 TODO: What does it mean to pass "" for transition?
 
-You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](file-name.md) that contains the context variable name as column name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
+You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](file-name.md) that contains the context variable name as column name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function. 
 
 Set the **[OnHidden](file-name.md)** property of the old screen, the **[OnVisible](file-name.md)** property of the new screen, or both to make additional changes during the transition. The **[App!ActiveScreen](file-name.md)** property will be updated to reflect the change.
 
-**Navigate** has no return value, and you can use it only within a [behavior formula](file-name.md).
+**Back** and **Navigate** have no return values, and you can use them only within a [behavior formula](file-name.md).
 
 ## Syntax ##
+
+**Back**()
 
 **Navigate**( *Screen*, *Transition* [, *UpdateContextRecord* ] )
 
@@ -69,8 +77,9 @@ Set the **[OnHidden](file-name.md)** property of the old screen, the **[OnVisibl
 | **Navigate( Details, ScreenTransition!Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** | Displays the **Details** screen with a **Fade** transition, and updates the value of the **ID** context variable to **12**.   | The current screen fades away to show the **Details** screen, and the context variable **ID** on that screen is set to **12**. |
 | **Navigate( Details, ScreenTransition!Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color!Red&nbsp;} )** | Displays the **Details** screen with a **Fade** transition. Updates the value of the **ID** context variable to **12**, and updates the value of the **Shade** context variable to **Color!Red**. | The current screen fades away to show the **Details** screen. The context variable **ID** on the **Details** screen is set to 12, and the context variable **Shade** is set to **Color!Red**. If you set the **Fill** property of a control on the **Details** screen to **Shade**, that control would display as red.  |
 
+TODO: Back example. 
 
-## Step-by-step example ##
+### Step-by-step ###
 
 1. Name the default screen **DefaultScreen**, add a label to it, and set the **Text** property of that label so that it shows **Default**.
 
@@ -82,4 +91,4 @@ Set the **[OnHidden](file-name.md)** property of the old screen, the **[OnVisibl
 
 1. From the **AddlScreen**, press F5, and then click the button.<br>**DefaultScreen** appears.
 
-[Another example](add-screen-context-variables.md)
+[Another example](../add-screen-context-variables.md)

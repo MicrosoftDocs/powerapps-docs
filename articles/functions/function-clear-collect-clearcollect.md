@@ -81,38 +81,15 @@ The **ClearCollect** function deletes all the records from a collection and then
 
 ### Clearing and adding records to a data source ###
 
-In these examples, you'll erase and add to a collection that's named **IceCream**. The ID column contains a property that the data source automatically generates.  The data source begins with these contents:
+In these examples, you'll erase and add to a collection that's named **IceCream**.  The data source begins with these contents:
 
-| ID (auto generated) | Flavor    | Quantity |
-|-----|-----------|----------|
-| 1   | Chocolate | 100      |
-| 2   | Vanilla   | 200      |
-
-We use the **ClearCollect** function to clear and then add records to **IceCream**:
+![](media/function-clear-collect-clearcollect/icecream.png)
 
 | Formula | Description  | Result              |
 |---------|--------------|---------------------|
-| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )**| This formula clears all data from the **IceCream** data source and then adds a record that includes a quantity of strawberry ice cream. | The value of the changed data source as a [table](working-with-tables.md) (see below).<br><br>The data source will also be modified. |
-
-After the above formula has been evaluated, the **IceCream** data source contains:
-
-| ID (auto generated) | Flavor    | Quantity |
-|-----|-----------|----------|
-| 3   | Strawberry | 300      |
-
-We then add another record to **IceCream** with a **Collect** function:
-
-| Formula | Description  | Result              |
-|---------|--------------|---------------------|
-| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  ) **| This formula adds a record to the **IceCream** data source that includes a quantity of pistachio ice cream. | The value of the changed data source as a table (see below).<br><br>The data source will also be modified. |
-
-After the above formula has been evaluated, the **IceCream** data source contains:
-
-| ID (auto generated) | Flavor    | Quantity |
-|-----|-----------|----------|
-| 3   | Strawberry | 300      |
-| 4   | Pistachio | 40 |
-| 5   | Orange | 200 |
+| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )**| Clears all data from the **IceCream** collection and then adds a record that includes a quantity of strawberry ice cream. | ![](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>The **IceCream** data source has also been modified. |
+| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  ) **| Adds two records to the **IceCream** collection that includes a quantity of pistachio and Orange ice cream. | ![](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>The **IceCream** data source has also been modified. |
+| **Clear( IceCream ) **| Removes all records from the **IceCream** collection. | ![](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** data source has also been modified. |
 
 
 ### Step by step ###
