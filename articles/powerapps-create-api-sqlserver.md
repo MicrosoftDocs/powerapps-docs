@@ -32,7 +32,7 @@
 	
 	c) Select **Available APIs** for Source.  
 
-4. Select **SQL Server** from Availavle APIs
+4. Select **SQL Server** from **Availavle APIs**
 
 	
 7. Select **OK**. SQL Server API is now added to the list of **Manage APIs** in your App Service Environment.  
@@ -58,7 +58,7 @@ The below is an example showing how to create a hybrid connection assuming that 
 
 	![Sql Web app](./media/powerapps-create-api-sqlserver/sqlwebapp.png)
 
-3.   Select on Networking under Settings and follow [these instructions](https://azure.microsoft.com/documentation/articles/web-sites-hybrid-connection-get-started/) to create the hybrid connection.
+3.   Select on Networking under Settings, click **Configure your hybrid connection endpoints** and follow [these instructions](https://azure.microsoft.com/documentation/articles/web-sites-hybrid-connection-get-started/) to create the hybrid connection.
 
 	![Networking](./media/powerapps-create-api-sqlserver/network.png)
 
