@@ -75,10 +75,7 @@ If there are no errors, the table returned by **Errors** will be empty and can b
 
 For this example, we'll be working with the **IceCream** data source:
 
-| ID  | Flavor    | Quantity |
-|-----|-----------|----------|
-| 1   | Chocolate | 100      |
-| 2   | Vanilla   | 200      |
+![](media/function-errors/icecream.png)
 
 Through PowerApps, a user loads the Chocolate record into a data entry form and changes the value of **Quantity** to 90.  The record to be worked with is placed in the context variable **EditRecord**:
 
@@ -86,19 +83,19 @@ Through PowerApps, a user loads the Chocolate record into a data entry form and 
 
 To make this change in the data source, the **Patch** function is used:
 
-- **Patch( IceCream, EditRecord, Canvas!Updates )**
+- **Patch( IceCream, EditRecord, Gallery!Updates )**
 
-where **Canvas!Updates** evaluates to **{ Quanitty: 90 }**, since only the **Quantity** was modified.
+where **Gallery!Updates** evaluates to **{ Quanitty: 90 }**, since only the **Quantity** has been modified.
 
 Unfortunately, just before the **Patch** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
 
 - **IsEmpty( Errors( IceCream, EditRecord ) )**
 
-which returns **false**, because the **Errors** function returned
+which returns **false**, because the **Errors** function returned the following table:
 
 | Record | Column | Message | Error |
 |--------|--------|---------|-------|
-| { ID: 1, Flavor: "Chocoalte", Quantity: 100 } | *blank* | "The record you are trying to modify has been modified by another user.  Please reload the record and try again. | ErrorKind!Conflict |
+| { Flavor: "Chocolate", Quantity: 100 } | *blank* | "The record you are trying to modify has been modified by another user.  Please reload the record and try again." | ErrorKind!Conflict |
 
 You can place a label on the form to show this error to the user with the formula
 

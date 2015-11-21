@@ -72,10 +72,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 
 The examples in this section use this data source, named **IceCream**:
 
-| Flavor | Quantity |
-|-------|---------|
-| "Chocolate"  | 10 |
-| "Vanilla" | 20 |
+![](media/function-datasourceinfo/icecream.png)
 
 The data source has also provided this information:
 

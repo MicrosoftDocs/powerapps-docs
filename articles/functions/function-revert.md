@@ -45,11 +45,7 @@ If a conflict is reported by the **Errors** function after a **[Patch](function-
 
 In this example, you'll revert the data source named **IceCream**. The data source begins with:
 
-| ID  | Flavor    | Quantity |
-|-----|-----------|----------|
-| 1   | "Chocolate" | 100      |
-| 2   | "Vanilla"   | 200      |
-| 3   | "Strawberry" | 300 |
+![](media/function-revert/icecream.png)
 
 A user on another device makes a modification to the Strawberry record, changing the **Quantity** to 400.  At about the same time, you change the same record's **Quantity** to 500, not knowing about the other change.
 
@@ -69,17 +65,9 @@ Based on the **Error** column, you have a "Reload" button with an OnSubmit formu
 
 The **Errors** table is now empty, and the new value for Strawberry has been loaded:
 
-| ID |  Flavor    | Quantity |
-|-----|-----------|----------|
-| 1   | "Chocolate" | 100      |
-| 2   | "Vanilla"   | 200      |
-| 3   | "Strawberry" | 400 |
+![](media/function-revert/icecream-after.png)
 
 Now you can reapply your change on top of the previous change, there is no longer a conflict, and the change succeeds. 
 
-| ID  | Flavor    | Quantity |
-|-----|-----------|----------|
-| 1   | "Chocolate" | 100      |
-| 2   | "Vanilla"   | 200      |
-| 3   | "Strawberry" | 500 |
+![](media/function-revert/icecream-success.png)
 

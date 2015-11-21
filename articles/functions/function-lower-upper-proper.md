@@ -31,7 +31,7 @@ The **Lower**, **Upper**, and **Proper** functions convert the case of letters i
 
 All three functions ignore characters that aren't letters.
 
-If you [pass](file-name.md) a single string, the [return value](file-name.md) is the converted version of that string.  If you pass a single-column table that contains strings, the return value is a single-column table of converted strings. If you have a multi-column [data source](file-name.md), you can shape it into a single-column table, as [Working with Tables](file-name.md) describes.
+If you [pass](file-name.md) a single string, the [return value](file-name.md) is the converted version of that string.  If you pass a single-column table that contains strings, the return value is a single-column table of converted strings. If you have a multi-column [table](file-name.md), you can shape it into a single-column table, as [working with tables](file-name.md) describes.
 
 ## Syntax ##
 
