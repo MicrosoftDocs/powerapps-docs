@@ -1,7 +1,8 @@
 <properties
    pageTitle="Create a card gallery | Microsoft PowerApps"
    description=""
-   services="na"
+   services=""
+	suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
    manager="dwrede"
