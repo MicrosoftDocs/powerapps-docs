@@ -1,7 +1,7 @@
 <properties
 	pageTitle="PowerApps: Back and Navigate function"
 	description="Reference information for the Navigate function in PowerApps, including syntax and examples"
-	services="powerapps"
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -48,8 +48,6 @@ In the first argument, specify the name of the screen to display.
 | **ScreenTransition!None** | The old screen is quickly replaced with the new screen. |
 | **ScreenTransition!UnCover** | The old screen slides out of view, uncovering the new screen.|
 
-TODO: What does it mean to pass "" for transition?
-
 You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](file-name.md) that contains the context variable name as column name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function. 
 
 Set the **[OnHidden](file-name.md)** property of the old screen, the **[OnVisible](file-name.md)** property of the new screen, or both to make additional changes during the transition. The **[App!ActiveScreen](file-name.md)** property will be updated to reflect the change.
@@ -77,7 +75,7 @@ Set the **[OnHidden](file-name.md)** property of the old screen, the **[OnVisibl
 | **Navigate( Details, ScreenTransition!Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** | Displays the **Details** screen with a **Fade** transition, and updates the value of the **ID** context variable to **12**.   | The current screen fades away to show the **Details** screen, and the context variable **ID** on that screen is set to **12**. |
 | **Navigate( Details, ScreenTransition!Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color!Red&nbsp;} )** | Displays the **Details** screen with a **Fade** transition. Updates the value of the **ID** context variable to **12**, and updates the value of the **Shade** context variable to **Color!Red**. | The current screen fades away to show the **Details** screen. The context variable **ID** on the **Details** screen is set to 12, and the context variable **Shade** is set to **Color!Red**. If you set the **Fill** property of a control on the **Details** screen to **Shade**, that control would display as red.  |
 
-TODO: Back example. 
+<!-- TODO: Back example. -->
 
 ### Step-by-step ###
 

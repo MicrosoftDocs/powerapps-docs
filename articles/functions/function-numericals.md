@@ -1,7 +1,7 @@
 <properties
 	pageTitle="PowerApps: Abs and Sqrt functions"
 	description="Reference information for the Abs and Sqrt functions in PowerApps, including syntax and examples"
-	services="powerapps"
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -29,16 +29,14 @@ The **Sqrt** function returns the number, that when multiplied by itself, equals
 
 If you [pass](file-name.md) a single number, the [return value](file-name.md) is the converted version of that string.  If you pass a single-column table that contains numbers, the return value is a single-column table of answers. If you have a multi-column [table](file-name.md), you can shape it into a single-column table, as [working with tables](file-name.md) describes.  
 
-TODO: square root of negative numbers
-
 ## Syntax ##
 
-**Abs**( *Number* )
+**Abs**( *Number* )<br>
 **Sqrt**( *Number* )
 
 - *Number* - Required. Number to be operated on.
 
-**Abs**( *SingleColumnTable* )
+**Abs**( *SingleColumnTable* )<br>
 **Sqrt**( *SingleColumnTable* )
 
 - *Number* - Required. A single-column table of numbers to operate on.

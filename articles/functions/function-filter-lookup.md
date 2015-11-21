@@ -1,7 +1,7 @@
 <properties
 	pageTitle="PowerApps: Filter and LookUp functions"
 	description="Reference information for the Filter and LookUp function in PowerApps, including syntax and examples"
-	services="powerapps"
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -48,7 +48,7 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 
 ## Examples ##
 
-TODO: Examples.
+<!-- TODO: Examples. -->
 
 ### Step by step ###
 

@@ -1,7 +1,7 @@
 <properties
 	pageTitle="PowerApps: AddColumns, DropColumns, RenameColumns, and ShowColumns functions"
 	description="Reference information for the AddColumns, DropColumns, RenameColumns, and ShowColumns functions in PowerApps, including syntax and examples"
-	services="powerapps"
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -63,7 +63,7 @@ The result is a new table with the transform applied.
 
 ## Examples ##
 
-TODO: Examples
+<!-- TODO: Examples -->
 
 ### Step by step ###
 

@@ -1,7 +1,7 @@
 <properties
 	pageTitle="PowerApps: Patch function"
 	description="Reference information for the Patch function in PowerApps, including syntax and examples"
-	services="powerapps"
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"

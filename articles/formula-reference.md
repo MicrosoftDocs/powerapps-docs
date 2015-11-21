@@ -164,6 +164,8 @@ Reference information is also available for:
 
 [Minute](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  *Coming Soon.*
 
+[Mod]
+
 [Month](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  *Coming Soon.*
 
 ## N ##
@@ -181,6 +183,7 @@ Reference information is also available for:
 ## P ##
 
 [Param](functions/function-params.md) Param. *Coming Soon.*
+
 
 [Patch](functions/function-patch.md) Modifies or creates a record in a data source, or merges records outside of a data source.
 

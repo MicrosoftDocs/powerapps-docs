@@ -1,7 +1,7 @@
 <properties
 	pageTitle="PowerApps: Working with Tables"
 	description="Reference information for working with tables, columns, and records"
-	services="powerapps"
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -167,7 +167,9 @@ A record can contain nested records by nesting curly braces, for example:
 
 **{ 'Quantity': { 'OnHand': ThisItem!QuantOnHand, 'OnOrder': ThisItem!QuantOnOrder } }**
 
-Column names that contain special characters, such as a space or a colon, can be enclosed in single quotes.  TODO: Escaping single quote.
+Column names that contain special characters, such as a space or a colon, can be enclosed in single quotes.  
+
+<!-- TODO: Escaping single quote. -->
 
 Note that the dollar sign does not appear in the Price.  This is formatting that is applied to a number when displayed.  
 

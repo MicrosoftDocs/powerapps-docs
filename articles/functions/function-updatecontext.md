@@ -1,7 +1,7 @@
 <properties
 	pageTitle="PowerApps: UpdateContext function"
 	description="Reference information for the UpdateContext function in PowerApps, including syntax and examples"
-	services="powerapps"
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"

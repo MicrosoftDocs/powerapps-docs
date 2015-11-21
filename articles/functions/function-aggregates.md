@@ -1,7 +1,7 @@
 <properties
 	pageTitle="PowerApps: Average, Max, Min, and Sum functions"
 	description="Reference information for the Average, Max, Min, and Sum functions in PowerApps, including syntax and examples"
-	services="powerapps"
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -40,16 +40,16 @@ These functions only operate on numeric values.  Other types of values, such as 
  
 ## Syntax ##
 
-**Average**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
-**Max**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
-**Min**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
+**Average**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>
+**Max**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>
+**Min**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>
 **Sum**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
 
 - *NumericalFormula(s)* - Required.  Numeric values to operate on.
 
-**Average**( *Table*, *NumericalFormula* )
-**Max**( *Table*, *NumericalFormula* )
-**Min**( *Table*, *NumericalFormula* )
+**Average**( *Table*, *NumericalFormula* )<br>
+**Max**( *Table*, *NumericalFormula* )<br>
+**Min**( *Table*, *NumericalFormula* )<br>
 **Sum**( *Table*, *NumericalFormula* )
 
 - *Table* - Required.  Table to operate on.
@@ -57,7 +57,7 @@ These functions only operate on numeric values.  Other types of values, such as 
 
 ## Examples ##
 
-TODO: Examples.
+<!-- TODO: Examples. -->
 
 ### Step by step ###
 
