@@ -164,7 +164,7 @@ Reference information is also available for:
 
 [Minute](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  *Coming Soon.*
 
-[Mod]
+[Mod](functions/function-mod.md) Returns the remainder after a number is divided by a divisor. *Coming Soon.*
 
 [Month](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  *Coming Soon.*
 
