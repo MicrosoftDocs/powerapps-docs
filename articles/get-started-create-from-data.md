@@ -1,7 +1,8 @@
 <properties
-	pageTitle="Create a PowerApp from an existing data set"
+	pageTitle="Create a PowerApp from a set of data | Microsoft PowerApps"
 	description="Create a PowerApp automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
 	manager="dwrede"
@@ -14,159 +15,116 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/15/2015"
+   ms.date="11/21/2015"
    ms.author="anneta"/>
 
-# Create a PowerApp from data
+# Create a PowerApp from a set of data
 Create a PowerApp automatically based on data that you specify, explore how the PowerApp works by default, and then customize it to better fit how you work.
 
-[What are PowerApps?](http://www.kratosapps.com/tutorials)
+[What are PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall )
+- Install [PowerApps](http://aka.ms/powerappsinstall)
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
-- A set of data in the cloud, such as in DropBox or OneDrive
+- A set of data, such as a list in SharePoint
 
-For this tutorial, the data source is an Excel file in Dropbox. The file, named **eventsignup.xls**, contains this data [formatted as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) and named **Schedule**.
+For this tutorial, the data source is a list named **Top Charts** in a SharePoint Online site.
 
-![Source data in Excel](./media/get-started-create-from-data/excel-source.jpg)
+![Source data in SharePoint](./media/get-started-create-from-data/sharepoint-source.png)
 
-## Connect to data ##
+## Build a PowerApp ##
+
+1. In PowerApps, select **Connections** on the **File** menu (near the left edge of the screen).
+
+	![Connections option on the File menu](./media/get-started-create-from-data/file-connections.jpg)
+
+1. Select **Add connection**.
+
+	![Icon to add a connection](./media/get-started-create-from-data/add-connection.png)
+
+1. Select the kind of data source you want to use, and then select **Connect**.
+
+	![Connect to SharePoint](./media/get-started-create-from-data/add-sharepoint.png)
+
+1. Provide your credentials, and then select **New** on the **File** menu.
+
+	![New option on the File menu](./media/get-started-create-from-data/file-new.jpg)
 
 1. Under **Start from your data**, select **Get started**.
 
 	![Option to create a PowerApp from data](./media/get-started-create-from-data/create-from-data.jpg)
 
-1. In the list of connections, select the one that contains the data you want to use, select the data, and then select **Connect**.
+1. Specify the data source that you want to use, as in this example:
 
-	![Specify an Excel file in a Dropbox account](./media/get-started-create-from-data/choose-excel-file.jpg)
+	1. Under **My Connections**, select **SharePoint Online**.
 
-1. Select a table, and then select **Connect**.
+	![SharePoint Online in My Connections](./media/get-started-create-from-data/my-connections.png)
 
-	![Specify a table in an Excel file](./media/get-started-create-from-data/choose-table.jpg)
+	1. Under **Select a site**, select **New site**, type or paste the URL of the site you want to use, and then select **Connect**.
 
-A PowerApp is created from the data that you specified.
+	**Note:** Provide the URL of the site itself, without the specific list.
 
-## Explore the PowerApp ##
+	![SharePoint Online in My Connections](./media/get-started-create-from-data/new-site.png)
 
-When the PowerApp is created, it appears in the default workspace, where you can customize the PowerApp to better fit your needs. Before you make changes, you'll explore how the PowerApp works in **Preview**. By running a PowerApp in **Preview**, you can completely test the PowerApp before you share it with others.
+	1. Under **Select a list**, select the list that you want to use, and then select **Connect**.
 
-1. Press F5 to open **Preview**.
+		![Select a list in a SharePoint site](./media/get-started-create-from-data/choose-list.png)
 
-	The first screen, named **BrowseScreen1**, shows which people are signed up for each shift in a schedule.
+Your PowerApp is built.
 
-	![The default BrowseScreen1](./media/get-started-create-from-data/default-browsescreen.jpg)
+## Customize a PowerApp ##
+When a PowerApp is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
 
-1. Select the up and down arrows near the top of the screen to reverse the sort order (by the name of the first volunteer).
+1. If **BrowseScreen1** isn't already showing, show it by selecting its thumbnail in the left navigation pane.
 
-	![BrowseScreen1 in reverse alphabetical order](./media/get-started-create-from-data/browsescreen-sorted.jpg)
+	![Thumbnails of all three screens in the left navigation bar](./media/get-started-create-from-data/browse-thumbnail.png)
 
-1. In the **Search items** box, type **n** to show only those shifts for which the name of the first volunteer contains that letter.
+1. If the **Quick tools** pane isn't already showing, show it by selecting **Quick tools** near the lower-left corner.
 
-	![BrowseScreen1 filtered by name](./media/get-started-create-from-data/browsescreen-filtered.jpg)
+	![Icon to open the Quick tools pane](./media/get-started-create-from-data/open-quick-tools.jpg)
 
-1. Select the arrow for the first item to show details about that item.
+1. In the **Quick tools** pane, select the **Layout** tab, and then select the option that includes icons.
 
-	![Navigate from BrowseScreen1 to DetailScreen1](./media/get-started-create-from-data/right-arrow.jpg)
+	![Layout option with icons](./media/get-started-create-from-data/choose-layout.png)
 
-	The **DetailScreen1** appears, showing all data for the item you specified. You can delete or update that item by using the elements near the top of the screen.
+	The layout of **BrowseScreen1** changes to reflect your selection.
 
-	![The default DetailScreen1](./media/get-started-create-from-data/default-detailscreen.jpg)
+	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
-1. Select the pencil icon to update the item.
+	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can select options that reflect the data on that screen.
 
-	![The pencil icon](./media/get-started-create-from-data/pencil-icon.jpg)
+1. In the **Quick tools** pane, select the **Content** tab.
 
-	The **EditScreen1** appears, with text boxes so that you can change the item, a cancel icon in the upper-left corner, and a save icon in the upper-right corner.
+1. Select **Title** in the **Heading2** list, select **PicURL** in the **Image1** list, and select **Category** in the **Subtitle2** list.
 
-	![The default EditScreen1](./media/get-started-create-from-data/default-editscreen.jpg)
+	![Content tab with new options for BrowseScreen1](./media/get-started-create-from-data/choose-content.png)
 
-	**Note:** If you select the plus sign on **BrowseScreen1**, **EditScreen1** appears with all the text boxes blank so that you can create an item.
+	The content of **BrowseScreen1** changes to reflect your selections.
 
-1. Replace either or both of the names with whatever names you want, and then select the save icon.
+	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
 
-	![Updating an item](./media/get-started-create-from-data/replace-name.jpg)
+1. In the **Quick tools** pane, select the **Theme** tab, and then select a different theme, such as **Lavender**.
 
-	Your change or changes appear in **DetailsScreen1** and in your data source in the cloud.
+	![Change the theme](./media/get-started-create-from-data/choose-theme.png)
 
-1. Press Esc to return to the default workspace, in which you can customize your PowerApp.
+	As the thumbnails in the left navigation bar shows, each screen in the app changes to reflect your selection.
 
-## Change the layout, the content, and the theme ##
-You can customize a PowerApp by adding or deleting a screen, changing a property of a screen, and changing a specific element on a screen.
+	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final.png)
 
-1. Display **BrowseScreen1** by selecting its thumbnail in the left navigation bar.
+## Run the PowerApp ##
+1. With **BrowseScreen1** showing, open Preview by pressing F5 or by selecting the Preview icon near the upper-right corner.
 
-	![Thumbnail for BrowseScreen1](./media/get-started-create-from-data/browsescreen1-thumbnail.jpg)
+	![Preview icon](./media/get-started-create-from-data/open-preview.png)
 
-1. Near the lower-right corner of the screen, select **Quick tools**.
+1. On **BrowseScreen1**, select the arrow for a record to show details about that record.
 
-	![Button to open Quick tools pane](./media/get-started-create-from-data/open-quick-tools.jpg)
+	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record.png)
 
-1. In the **Quick tools** pane, select the **Layout** tab, and then select a different layout, such as the one shown in this graphic.
+1. On **DetailsScreen1**, select the edit icon (in the upper-right corner) to edit the record.
 
-	![Change layout](./media/get-started-create-from-data/change-layout.jpg)
+	![Edit a record](./media/get-started-create-from-data/edit-record.png)
 
-	**BrowseScreen1** shows the day of each shift and the name of each volunteer but not the time of each shift.
+1. One **EditScreen1**, change the information in one or more fields, and then select the checkmark in the upper-right corner to save your changes.
 
-	![BrowseScreen1 in new layout, default](./media/get-started-create-from-data/new-layout-default.jpg)
-
-1. In the **Quick tools** pane, select the **Content** tab, and then select **StartTime** in the **Heading12** list.
-
-	![Change what the heading control shows](./media/get-started-create-from-data/change-heading.jpg)
-
-	The time of each shift appears above the day and the name of a volunteer.
-
-	![BrowseScreen1 with ShiftTime added](./media/get-started-create-from-data/list4-fixed.jpg)
-
-1. In the **Quick tools** pane, select **Theme**, and then select a different theme, such as **Red**.
-
-	![Change the theme](./media/get-started-create-from-data/change-theme.jpg)
-
-	The colors on all screens in the PowerApp change to reflect the new theme, as the left navigation bar shows.
-
-	![Left navigation bar shows all screens with updated theme](./media/get-started-create-from-data/new-theme.jpg)
-
-## Customize the app further ##
-
-1. On **BrowseScreen1**, select the name of the volunteer for the first shift in the list.
-
-	![Volunteer name selected](./media/get-started-create-from-data/select-volunteer.jpg)
-
-	The label is now selected so that you can change its properties. When you change the property of an element in the first item of a gallery, you automatically change that property of the same element in all other items of the gallery.
-
-1. On the **Home** tab of the ribbon, click the **FontWeight** button, and then click **Bold**.
-
-	![The option to make text bold](./media/get-started-create-from-data/label-bold.jpg)
-
-	The volunteer name in each item of the gallery appears in bold text.
-
-	![BrowseScreen1 with volunteer name in bold](./media/get-started-create-from-data/browsescreen-bold.jpg)
-
-1. Select the time information for the first shift in the list.
-
-	![Shift time selected](./media/get-started-create-from-data/select-shifttime.jpg)
-
-1. Drag the white square on the right edge of the selection box so that the label just fits the information it contains.
-
-	![Resizing label for shift time](./media/get-started-create-from-data/resize-shifttime.jpg)
-
-1. Resize the other two labels the same way, and then move all three labels (by dragging their selection boxes) so that they appear in a row that's horizontally aligned with the arrow for each item.
-
-	![Align all labels in a row on BrowseScreen1](./media/get-started-create-from-data/browsescreen-aligned.jpg)
-
-1. Select the line near the bottom of the first item in the list, and then press Delete.
-
-	![Select the separator line](./media/get-started-create-from-data/select-separator.jpg)
-
-1. Select the empty space in the first item in the list, below the labels that you just aligned.
-
-	The gallery template is selected.
-
-	![Select the gallery template in BrowseScreen1](./media/get-started-create-from-data/select-browsescreen-template.jpg)
-
-1. Resize the gallery template to show more items on the screen.
-
-	![Show more items in BrowseScreen1](./media/get-started-create-from-data/browsescreen-condensed.jpg)
-
-When you finish customizing your app, you can [save and share it with other people](get-started-test-drive.md#save-and-share-your-app).
+When you finish customizing your app, you can [save and share it with other people](get-started-test-drive.md#save-and-share-your-powerapp).
