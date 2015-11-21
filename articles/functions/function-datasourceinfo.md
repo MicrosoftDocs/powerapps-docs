@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: DataSourceInfo function"
 	description="Reference information for the DataSourceInfo function in PowerApps, including syntax and examples"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"

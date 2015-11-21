@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: First, FirstN, Last, and LastN functions"
 	description="Reference information for the First, FirstN, Last, and LastN functions in PowerApps, including syntax and examples"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -31,16 +32,16 @@ The **Last** function returns the last record of a table.
 
 The **LastN** function returns the last set of records of a table, the second argument specifies the number of records to return.
 
-**First** and **Last** return a single record.  **FirstN** and **LastN** return a table, even if only a single record is specified.  TODO: Confirm.
+**First** and **Last** return a single record.  **FirstN** and **LastN** return a table, even if only a single record is specified.
 
 ## Syntax ##
 
-**First**( *Table* )
+**First**( *Table* )<br>
 **Last**( *Table* )
 
 - *Table* - Rquired. Table to operate on.
 
-**FirstN**( *Table* [, *NumberOfRecords* ] )
+**FirstN**( *Table* [, *NumberOfRecords* ] )<br>
 **LastN**( *Table* [, *NumberOfRecords* ] )
 
 - *Table* - Rquired. Table to operate on.
@@ -48,7 +49,7 @@ The **LastN** function returns the last set of records of a table, the second ar
 
 ## Examples ##
 
-TODO: Examples.
+<!-- TODO: Examples. -->
 
 ### Step by step ###
 

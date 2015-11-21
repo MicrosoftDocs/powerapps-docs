@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: Operators"
 	description="Reference information for the Operators in PowerApps, including syntax and examples"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
