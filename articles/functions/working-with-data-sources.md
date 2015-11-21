@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: Working with Data Sources"
 	description="Reference information for working with connections and data sources"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -211,12 +212,10 @@ Collections are a special kind of data source.  They are local to the app and no
 
 Collections are commonly used to hold global state for the app.  See [working with state](working-with-state.md) for the different options available for managing state.
 
-TODO: lifetime of a collection
+<!-- TODO: lifetime of a collection -->
 
-## Static data sources ##
-
-TODO: Refresh from local Excel file, Read only
-
+<!-- TODO: Static data sources -->
+<!-- TODO: Refresh from local Excel file, Read only -->
 
 
 

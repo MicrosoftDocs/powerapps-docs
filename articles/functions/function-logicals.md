@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: And, Or, and Not functions"
 	description="Reference information for the And, Or, and Not functions in PowerApps, including syntax and examples"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -33,15 +34,15 @@ These functions work with logical values.  They cannot be passed a number or str
 
 ## Syntax ##
 
-**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )
-**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )
+**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
 **Not**( *LogicalFormula* )
 
 - *LogicalFormula(s)* - Required.  Logical formulas to evaluate and operate on.
 
 ## Examples ##
 
-TODO: Examples.
+<!-- TODO: Examples. -->
 
 ### Step by step ###
 

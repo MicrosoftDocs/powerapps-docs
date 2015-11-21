@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: Lower, Upper, and Proper functions"
 	description="Reference information for the Lower, Upper, and Proper functions in PowerApps, including syntax and examples"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"

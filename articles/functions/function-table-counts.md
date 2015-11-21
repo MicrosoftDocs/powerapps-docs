@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: Count, CountA, CountIf, and CountRows functions"
 	description="Reference information for the Count, CountA, CounfIf, and CountRows functions in PowerApps, including syntax and examples"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
 	manager="dwrede"
@@ -25,7 +26,7 @@ Counts the number of records in a table that satisfy a condition, or all records
 
 The **Count** function counts the number of records in a single-column table that contain a number.
 
-The **CountaA** function counts the number of records in a single-column table that are not *blank*.  This function includes error values and empty text ("") in the count.  TODO: not consistent.
+The **CountA** function counts the number of records in a single-column table that are not *blank*.  This function includes empty text ("") in the count.
 
 The **CountIf** functions counts the number of records in a table that are **true** for a logical formula.  The formula can reference columns of the table.
 
@@ -35,7 +36,7 @@ All of these functions return a number.
 
 ## Syntax ##
 
-**Count**( *SingleColumnTable* )
+**Count**( *SingleColumnTable* )<br>
 **CountA**( *SingleColumnTable* )
 
 - *SingleColumnTable* - Required.  Column of records to count.  
@@ -51,9 +52,9 @@ All of these functions return a number.
 
 ## Examples ##
 
-TODO: Examples.
+<!-- TODO: Examples. -->
 
-TODO: Single column notation.
+<!-- TODO: Single column notation. -->
 
 ### Step by step ###
 
