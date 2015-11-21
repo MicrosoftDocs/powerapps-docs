@@ -125,6 +125,8 @@ When a PowerApp is built automatically, heuristics are used to suggest the best 
 
 	![Edit a record](./media/get-started-create-from-data/edit-record.png)
 
-1. One **EditScreen1**, change the information in one or more fields, and then select the checkmark in the upper-right corner to save your changes.
+1. On **EditScreen1**, change the information in one or more fields, and then select the checkmark in the upper-right corner to save your changes.
+
+	![Save changes on EditScreen1](./media/get-started-create-from-data/save-changes.png)
 
 When you finish customizing your app, you can [save and share it with other people](get-started-test-drive.md#save-and-share-your-powerapp).
