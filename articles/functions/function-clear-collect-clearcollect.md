@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Collect, Clear, and ClearCollect functions"
 	description="Reference information for the Collect, Clear, and ClearCollect functions in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

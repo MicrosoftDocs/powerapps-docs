@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Filter and LookUp functions"
 	description="Reference information for the Filter and LookUp function in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

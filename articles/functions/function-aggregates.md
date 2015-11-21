@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Average, Max, Min, and Sum functions"
 	description="Reference information for the Average, Max, Min, and Sum functions in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

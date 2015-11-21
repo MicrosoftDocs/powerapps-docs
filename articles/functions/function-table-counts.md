@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Count, CountA, CountIf, and CountRows functions"
 	description="Reference information for the Count, CountA, CounfIf, and CountRows functions in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

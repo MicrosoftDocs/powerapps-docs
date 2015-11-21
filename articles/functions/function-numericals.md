@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Abs and Sqrt functions"
 	description="Reference information for the Abs and Sqrt functions in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

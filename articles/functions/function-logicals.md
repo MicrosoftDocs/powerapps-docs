@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: And, Or, and Not functions"
 	description="Reference information for the And, Or, and Not functions in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

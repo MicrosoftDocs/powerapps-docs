@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Update and UdpateIf functions"
 	description="Reference information for the Update and UpdateIf functions in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

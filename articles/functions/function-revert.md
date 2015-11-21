@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Revert function"
 	description="Reference information for the Revert function in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

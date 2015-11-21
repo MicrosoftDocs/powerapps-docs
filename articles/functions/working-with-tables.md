@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Working with Tables"
 	description="Reference information for working with tables, columns, and records"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

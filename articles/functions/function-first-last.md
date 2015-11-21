@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: First, FirstN, Last, and LastN functions"
 	description="Reference information for the First, FirstN, Last, and LastN functions in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

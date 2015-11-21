@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Working with Data Sources"
 	description="Reference information for working with connections and data sources"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

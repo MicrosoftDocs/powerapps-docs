@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Working with State"
 	description="Reference information for working with state, context variables, and collections"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"

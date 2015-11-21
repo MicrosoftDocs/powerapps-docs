@@ -1,6 +1,7 @@
 <properties
 	pageTitle="PowerApps: Remove and RemoveIf functions"
 	description="Reference information for the Remove and RemoveIf functions in PowerApps, including syntax and examples"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
