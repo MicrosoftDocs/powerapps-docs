@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create Logic Flows | Microsoft PowerApps"
-	description="Business User: How to use Logic Flows in PowerApps"
+	pageTitle="Start a logic flow in a PowerApp  | Microsoft PowerApps"
+	description="Create a logic flow that performs one or more tasks after a trigger, such as a user selecting a button, occurs in a PowerApp."
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -17,9 +17,9 @@
    ms.date="11/05/2015"
    ms.author="prkumarms"/>
 
-# Logic Flows in PowerApps #
+# Start a logic flow in a PowerApp #
 
-Logic Flows provides an easy way to run a series of actions from PowerApps. These actions can be to read or update data, send notifications on email, update your calendar or tasks in Office 365 or SharePoint, and even wait on tasks to be updated by you or other people you work with. You can configure any control in your PowerApp to start the flow, which runs in the cloud even when you have closed PowerApps to carry out the steps automatically.
+Create a logic flow that performs one or more tasks when a trigger occurs in a PowerApp. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a record is updated in the cloud, or all of these. You can configure any control in a PowerApp to start the flow, which runs even if you close PowerApps.
 
 [What are PowerApps?](http://aka.ms/pamktg)
 
@@ -28,20 +28,7 @@ Logic Flows provides an easy way to run a series of actions from PowerApps. Thes
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
 ## Create a logic flow ##
-
-1. Open PowerApps, and then select **Get started** under **Start from scratch**.
-
-	![Get started button](./media/use-logic-flows/get-started.png)
-
-1. On the **Action** tab, select **Logic Flows**.
-
-	![Logic Flows option on the Action tab](./media/use-logic-flows/action-tab.png)
-
-1. In the **Logic Flows** pane, select **Create a new Logic Flow**.
-
-	![Option to create a logic flow](./media/use-logic-flows/task-pane.png)
-
-1. Provide the credentials for your account to open powerapps.com in your browser.
+1. Open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) in your browser.
 
 1. Under **Make a workflow**, select **Create a flow**.
 
@@ -55,11 +42,7 @@ Logic Flows provides an easy way to run a series of actions from PowerApps. Thes
 
 	![Specify the trigger that initiates the logic flow](./media/use-logic-flows/set-trigger.png)
 
-1. Select the plus icon to add an action to your logic flow.
-
-	![Plus icon](./media/use-logic-flows/plus-icon.png)
-
-1. Select **Add action**.
+1. Select the plus icon, and then select **Add action**.
 
 	![Option to add an action](./media/use-logic-flows/add-action.png)
 
@@ -84,42 +67,41 @@ Logic Flows provides an easy way to run a series of actions from PowerApps. Thes
 
 	![Name and save your flow](./media/use-logic-flows/name-flow.png)
 
-## Use a Logic Flow in a PowerApp ##
+## Add a logic flow to a PowerApp ##
 
-1. In PowerApps, open the Logic Flows pane if it isn't open already. The new flow that you created on powerapps.com would now appear in the list of flows on the task pane under "All Logic Flows".
+1. Open PowerApps, and then select **Get started** under **Start from scratch**.
 
-	**Note:** Only flows that are have the trigger *When a control is selected* will be available to run in the Task Pane.
+	![Get started button](./media/use-logic-flows/get-started.png)
 
-	You can associate your logic flow as an action with any control in your app:
+1. On the **Insert** tab, select **Text**, and then select **Input text**.
 
-1. Select the control using which you want to run the flow (for example, you can add a button in your app and configure it to run a flow when the button is selected by a user).
+	![Add input-text control](./media/use-logic-flows/add-input-text.png)
 
-2. From the **Actions** tab, select **Logic Flows** to open the task pane.
+1. On the **Content** tab, name the new control **RecordTitle**.
 
-3. From the list of "All flows", select the flow you want to run. It may take a few seconds while the flow is added to your app:
+	![Rename input-text control](./media/use-logic-flows/rename-text.png)
 
-	![](./media/use-logic-flows/add-flow.png)
+1. On the **Insert** tab, add a button, and move it under the text box.
 
-4. Once the flow is added, the formula bar will be partly filled with the formula to run the flow. It will look something like this:
+	![Rename input-text control](./media/use-logic-flows/rename-text.png)
 
-	![](./media/use-logic-flows/formula-bar-prefilled.png)
+1. With the button selected, select **Logic Flows** on the **Action** tab.
 
-5. If your flow doesn't require any parameters, simply close the parenthesis to complete the formula.
+	![Logic Flows option on the Action tab](./media/use-logic-flows/action-tab.png)
 
-Your app is now ready to run the flow when this button is selected.
+1. In the pane that appears, select the logic flow that you created in the previous procedure.
 
-## Sending data to a flow ##
-With Logic Flows, you can not only pass data between the various steps of the flow, but also send data to a flow to use when the steps execute. This can be useful in cases where you don't know all the settings for each of the steps when you create the flow, but these would be known when users of your app fill in data in the app.
-For example, consider an app that registers information about a new user into a SharePoint list and sends a welcome email to the user who just registered. For this, your logic flow will need to use the email address provided by the user when filling up data in the app.
+	![Add logic flow to button](./media/use-logic-flows/add-flow-from-pane.png)
 
-1. To identify an input in a flow step that will be specified in a PowerApp, simply fill in the value with the "Ask in PowerApps" token:
+1. In the formula bar, type or paste **RecordTitle!Text)** at the end of the formula that's been automatically added.
 
-	![](./media/use-logic-flows/ask-in-powerapps-parameter-before-selection.png)
+	![OnSelect property that includes the logic flow](./media/use-logic-flows/onselect-with-flow.png)
 
-1. The value will be automatically filled in with the name of the action and the setting. For example, if you need to use the email address provided by a user of the app, just select the "To" configuration of the "Send Email" action. This tells the flow that the "SendEmail_To" value will be provided later when using the flow in app.
+## Test the logic flow ##
+1. Open Preview by pressing F5 or selecting the arrow near the upper-right corner.
 
-	![](./media/use-logic-flows/ask-in-powerapps-parameter-after-selection.png)
+	![OnSelect property that includes the logic flow](./media/use-logic-flows/open-preview.png)
 
-1. Next, when you use the flow in a PowerApp (as described in the **Using a Logic Flow in a PowerApp** section, the formula will be partly filled and PowerApps will assist you in filling up the values for the formula to run the Logic Flow. Any values you choose when filling up the formula will be used at the corresponding places when the flow runs.
+1. Type or paste text in the text box, and then click the button.
 
-	![](./media/use-logic-flows/flow-filled-in.png)
+	A SharePoint item is created with the text you specified as the title.
