@@ -1,7 +1,8 @@
 <properties
     pageTitle="PowerApps: Automate tasks by creating Logic Flows"
     description="Create Logic Flows to automatically perform one or more actions, such as sending mail, when one or more conditions are met, such as someone adding a row to a SharePoint list."
-    services="powerapps"
+    services=""
+    suite="powerapps"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="dwrede"

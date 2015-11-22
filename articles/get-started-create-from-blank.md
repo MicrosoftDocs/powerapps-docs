@@ -1,6 +1,7 @@
 <properties	pageTitle="Create a PowerApp from a blank screen"
 	description="Create a PowerApp from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business."
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
 	manager="dwrede"

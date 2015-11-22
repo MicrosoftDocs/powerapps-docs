@@ -1,7 +1,8 @@
 <properties
     pageTitle="PowerApps: Share an app"
     description=""
-    services="powerapps"
+    services=""
+    suite="powerapps"
     documentationCenter="na"
     authors="AFTOwen"
     manager="dwrede"

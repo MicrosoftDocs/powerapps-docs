@@ -2,6 +2,7 @@
 	pageTitle="Add a listbox, drop-down list, and radio button controls in PowerApps Studio | Microsoft Azure"
 	description=""
 	services=""
+	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
@@ -12,7 +13,7 @@
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="na" 
+   ms.workload="na"
    ms.date="10/28/2015"
    ms.author="mandia"/>
 
@@ -23,7 +24,7 @@ PowerApps Studio includes multi-select and single-select options, including a li
 
 ### Prerequisites
 
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
@@ -101,7 +102,7 @@ In these steps, you used an expression to create the items in a radio button and
 - At anytime, you can select the preview button (![][1]) to see what you created and test it.
 - When designing your app, you can resize the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window and go back to the designer.
-- We renamed some controls, including the listbox. Renaming controls is optional. When using controls in expressions, it's easier to remember the control names if you rename them. 
+- We renamed some controls, including the listbox. Renaming controls is optional. When using controls in expressions, it's easier to remember the control names if you rename them.
 
 
 ## What you learned

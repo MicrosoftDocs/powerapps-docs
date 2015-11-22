@@ -2,6 +2,7 @@
 	pageTitle="Create and add line charts, pie charts, and bar charts in PowerApps | Microsoft Azure"
 	description="Create collections and add columns to existing collections"
 	services=""
+	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
@@ -12,7 +13,7 @@
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="na" 
+   ms.workload="na"
    ms.date="11/02/2015"
    ms.author="mandia"/>
 
@@ -29,7 +30,7 @@ For example, your data should look similar to the following:
 You can create and use these charts within PowerApps. Let's get started.
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - These steps use the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) as sample input data. You can use this sample data, or import your own.
 
@@ -47,7 +48,7 @@ In these steps, we download a sample file. Using a collection, we import this sa
 ![][1]  
 
 3. Go back to your designer.
-4. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button. 
+4. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button.
 4. In the pie chart control, select the middle so the pie chart circle is selected:   
 ![][10]  
 5. Set the **Items** property of the pie chart to **ProductRevenue**:  
@@ -56,10 +57,10 @@ In these steps, we download a sample file. Using a collection, we import this sa
 	When you do this, the pie chart shows the revenue of the products:  
 ![][3]  
 
-Now, let's use thie ProductRevenue collection in a bar chart: 
+Now, let's use thie ProductRevenue collection in a bar chart:
 
 1. On the **Home** tab, create a new screen.
-2. On the **Insert** tab, select **Charts**, and then select **Column Chart**. 
+2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
 3. Select the middle of the column chart. Set the **Items** property of the column chart to **ProductRevenue**:  
 ![][2]  
 

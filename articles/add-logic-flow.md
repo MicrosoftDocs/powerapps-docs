@@ -1,7 +1,8 @@
 <properties
 	pageTitle="Use Logic Flows in a PowerApp"
 	description="Business User: How to use a Logic Flow in a PowerApp"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter=""
 	authors="aftowen"
 	manager="dwrede"

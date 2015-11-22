@@ -2,6 +2,7 @@
 	pageTitle=" Show text and format a date or time in PowerApps | Microsoft Azure"
 	description="Add and format dates and times using Microsoft PowerApps"
 	services=""
+	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
@@ -25,7 +26,7 @@ For example, add data from users about stock trades or client meetings, data fro
 
 ### Prerequisites
 
-- Install [PowerApps](http://aka.ms/powerappsinstall) from the Windows Store. Create a new app or open an existing app in PowerApps. 
+- Install [PowerApps](http://aka.ms/powerappsinstall) from the Windows Store. Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 ## Show text in a label
@@ -53,13 +54,13 @@ DateValue | Converts a literal string, as shown between quotation marks, to a va
 ![][5]  
 ![][6]  
 
-4. Move the Birthdate text so it all controls are shown. 
+4. Move the Birthdate text so it all controls are shown.
 5. In the **ShowText** label (created in step 1), set its **Text** property to the following expression:    
 ```DateDiff(Today(), DateValue(Birthdate!Text))```  
 
 	![][7]  
 
-	This expression shows the number of days between today and whatever date you type into Birthdate. When you type a date into **Birthdate**, the Text property is automatically set to that value. 
+	This expression shows the number of days between today and whatever date you type into Birthdate. When you type a date into **Birthdate**, the Text property is automatically set to that value.
 
 5. In **Birthdate**, enter the month and day of your birthday. **ShowText** shows the number of days between today and the birth date you enter. You can type in text (March 17) or enter number date (3/17). If you don't enter a year, the current year is assumed.
 

@@ -1,7 +1,8 @@
 <properties
    pageTitle="Read about the API functions in PowerApps | Microsoft PowerApps"
    description="How to use the API functions available in PowerApps"
-   services="powerapps"
+   services=""
+   suite="powerapps"
    documentationCenter="na"
    authors="rajeshramabathiran"
    manager="dwrede"
@@ -20,9 +21,9 @@
 
 PowerApps supports native functions, including math, date time operations, and more. See [Build a formula][1] for a complete list of these operations.
 
-PowerApps enables connectivity to different services out-of-the-box. These are managed by Microsoft and are available as soon you sign into PowerApps. 
+PowerApps enables connectivity to different services out-of-the-box. These are managed by Microsoft and are available as soon you sign into PowerApps.
 
-This article describes the functions and actions available with the Microsoft Translator, Office 365 Outlook,  Office 365 Users, and the Twitter APIs. There are also examples of how to use these functions with your PowerApps. 
+This article describes the functions and actions available with the Microsoft Translator, Office 365 Outlook,  Office 365 Users, and the Twitter APIs. There are also examples of how to use these functions with your PowerApps.
 
 ## Types of API functions
 PowerApps uses the following types of API functions:
@@ -44,7 +45,7 @@ The following APIs expose tabular data:
 - Google Sheets
 
 
-PowerApps provides the following functions for tabular data: 
+PowerApps provides the following functions for tabular data:
 
 - Get items: Binds a control to a datasource
 - Update an item: Uses the _UpdateContext_ function
@@ -63,7 +64,7 @@ Actions are functions that can be called on individual APIs. For example, you ca
 
 ## Microsoft Translator API
 
-Microsoft Translator is a cloud-based automatic translation service. You can connect to Microsoft Translator to translate text, and complete different actions such as detect languages, translate text, and  more. 
+Microsoft Translator is a cloud-based automatic translation service. You can connect to Microsoft Translator to translate text, and complete different actions such as detect languages, translate text, and  more.
 
 In this section:
 
@@ -94,7 +95,7 @@ In this section:
 5. A new data source is added for _Microsoft Translator_:  
 ![Microsoft Translator data source][8]
 
-The following functions are available in the Microsoft Translator API. 
+The following functions are available in the Microsoft Translator API.
 
 #### Get languages function
 
@@ -108,7 +109,7 @@ Languages() | Retrieves all languages that Microsoft Translator supports.
 2. In the list of controls, select _Drop-down_. A drop-down control is created. Then:    
 
 	a) In the function bar, the _Items_ property of the drop-down control is bound to _DropDownSample_ by default.  
-	b) Remove _DropDownSample_ and replace it with `microsofttranslator!Languages()`. 
+	b) Remove _DropDownSample_ and replace it with `microsofttranslator!Languages()`.
 
 3. Select the dropdown. Notice that the dropdown is populated with the list of available languages from _Microsoft Translator_.
 
@@ -126,19 +127,19 @@ Translate(query, languageTo[, languageFrom, Category]) | Translates text to a sp
 3. On the _Insert_ tab, select _Label_. A new label is added to the screen. Then:  
 
 	a) Drag and drop the label below the input text.  
-	b) Set its _Text_ property to _"Select destination language"_. 
+	b) Set its _Text_ property to _"Select destination language"_.
 
 4. On the _Insert_ tab, select _Controls_.
-5. In the list of controls, select _Drop-down_. A drop-down control is created. Then: 
+5. In the list of controls, select _Drop-down_. A drop-down control is created. Then:
 
 	a) Drag and drop the control below the label.  
-	b) Set its _Items_ property to _microsofttranslator!Languages()_. 
+	b) Set its _Items_ property to _microsofttranslator!Languages()_.
 
 6. On the _Insert_ tab, select _Text_.
 7. In the list of options, select _Input Text_. A new text box is added to the screen. Then:  
 
 	a) Drag and drop the text box below the drop down list.  
-	b) Set its _Default_ property to `microsofttranslator!Translate(Text1!Text, Dropdown1!Selected!Value)`. 
+	b) Set its _Default_ property to `microsofttranslator!Translate(Text1!Text, Dropdown1!Selected!Value)`.
 
 8. When the first text box or the destination language drop-down is updated, the second text box automatically updates with the translated text.
 
@@ -155,7 +156,7 @@ Detect(query) | Detects source language of given text
 3. On the _Insert_ tab, select _Label_. A new label is added to the screen. Next:  
 
 	a) Drag and drop the label below the input text.  
-	b) Set its _Text_ property to `microsofttranslator!Detect(Text1!Text)`. 
+	b) Set its _Text_ property to `microsofttranslator!Detect(Text1!Text)`.
 
 4. When the text box value changes, the label is automatically updated with the detected language.
 
@@ -171,13 +172,13 @@ SpeechLanguages() | Retrieves the languages available for speech synthesis
 2. In the list of controls, select _drop-down_. A drop-down control is created. Next:  
 
 	a) In the function bar, the control's _Items_ is bound to _DropDownSample_ by default.  
-	b) Remove the _DropDownSample_ and replace it with `microsofttranslator!SpeechLanguages()`. 
+	b) Remove the _DropDownSample_ and replace it with `microsofttranslator!SpeechLanguages()`.
 
 3. Select the drop down. Notice that the drop down is populated with the list of  the available speech languages from _Microsoft Translator_.
 
 
 ## Office 365 Outlook API
-Office 365 is a service that uses Office applications and other productivity services over the Internet. Using this API, you can connect to Office 365 Outlook to manage your mail. 
+Office 365 is a service that uses Office applications and other productivity services over the Internet. Using this API, you can connect to Office 365 Outlook to manage your mail.
 
 In this section:
 
@@ -187,7 +188,7 @@ In this section:
 
 #### Create a new connection for Office 365 Outlook
 1.  Open an existing PowerApps application or [create a new app][2].
-2.  On the **File** tab, select **Connections**. 
+2.  On the **File** tab, select **Connections**.
 3.  If you don't have an existing connection to _Office 365 Outlook_ under **My Connections**, select **Available Connections**:  
 ![powerapps connections][3]
 4.  Under **Available Connections**, select _Office 365 Outlook_, and select **Connect**.  
@@ -229,13 +230,13 @@ SendEmail(Subject, Body, To[, Attachments, From, CC, BCC, Importance, IsHtml]) |
 7. On the _Insert_ tab, select _Button_. Then:  
 
 	a) Set its _OnSelect_ property to `office365!SendEmail(text1!text, text2!text, text3!text)`.  
-	b) Set its _Text_ property to _Send email_. 
+	b) Set its _Text_ property to _Send email_.
 
 8. Run the app and set the values in the text boxes. Select the _Send email_ button to send the email to your recipient.
 
 
 ## Office 365 Users API
-Office 365 is a service that uses Office applications and other productivity services over the Internet. You can connect to Office 365 Users to access user profiles in your organization. You can perform various actions such as get a user's profile, get a user's manager or direct reports, and more. 
+Office 365 is a service that uses Office applications and other productivity services over the Internet. You can connect to Office 365 Users to access user profiles in your organization. You can perform various actions such as get a user's profile, get a user's manager or direct reports, and more.
 
 In this section:
 
@@ -271,19 +272,19 @@ The following functions are available in the Office 365 Users API.
 #### Get my profile function
 
 Syntax | Description
---- | --- 
+--- | ---
 MyProfile() | Retrieves the profile for the current user
 
 **Usage Example**
 
-1. On a new screen, select the _Insert_ tab, and select _Label_. Set its _Text_ property to `office365users!MyProfile()!JobTitle`. 
+1. On a new screen, select the _Insert_ tab, and select _Label_. Set its _Text_ property to `office365users!MyProfile()!JobTitle`.
 2. The label is populated with your job title.
 
 
 #### Get user profile function
 
 Syntax | Description
---- | --- 
+--- | ---
 UserProfile(userId) | Retrieves a specific user profile
 
 **Usage Example**
@@ -298,7 +299,7 @@ UserProfile(userId) | Retrieves a specific user profile
 #### Get manager function
 
 Syntax | Description
---- | --- 
+--- | ---
 Manager(userId) | Retrieves user profile for the manager of the specified user.
 
 **Usage Example**
@@ -314,7 +315,7 @@ Manager(userId) | Retrieves user profile for the manager of the specified user.
 
 Syntax | Description
 --- | ---
-DirectReports(userId) | Gets the direct reports. 
+DirectReports(userId) | Gets the direct reports.
 
 **Usage Example**
 
@@ -327,7 +328,7 @@ DirectReports(userId) | Gets the direct reports.
 
 	a) Set its _Items_ property to `office365users!DirectReports(Text1!Text)`.  
 	b) Select _Options_ in the bottom of the screen.  
-	c) In the gallery pane, set _Body1_ to _Department_, _Heading1_ to _DisplayName_, and _Subtitle1_ to _GivenName_. 
+	c) In the gallery pane, set _Body1_ to _Department_, _Heading1_ to _DisplayName_, and _Subtitle1_ to _GivenName_.
 
 6. Direct reports of the specified user are displayed.
 
@@ -342,18 +343,18 @@ SearchUser(searchTerm) | Retrieves search results of user profiles.
 1. On a new screen, select the _Insert_ tab, and select _Text_.
 2. In the list of options, select _Input text_. Set its _Default_ property to "user@domain.com".  
 	**Note**: Set the value to a user you want to search in your organization.
-3. On the _Insert_ tab, select _Label_. Set its _Text_ property to `"Search results"`. 
+3. On the _Insert_ tab, select _Label_. Set its _Text_ property to `"Search results"`.
 4. On the _Insert_ tab, select _Gallery_.
 5. In the list of options, select _Portrait_ in _Text Galleries_ section. Then:  
 
 	a) Set its _Items_ property to `office365users!SearchUser({searchTerm: Text1!Text})`.  
 	b) Select _Options_ in the bottom of the screen.  
-	c) In the gallery pane, set _Body1_ to _Department_, _Heading1_ to _DisplayName_, and _Subtitle1_ to _GivenName_. 
+	c) In the gallery pane, set _Body1_ to _Department_, _Heading1_ to _DisplayName_, and _Subtitle1_ to _GivenName_.
 
 6. Users matching the search term are displayed.
 
 ## Twitter API
-Twitter is an online social networking service that enables users to send and receive short messages called 'tweets'.  You can connect to Twitter to manage your tweets. You can also perform various actions such as send tweet, search, view followers, and more. 
+Twitter is an online social networking service that enables users to send and receive short messages called 'tweets'.  You can connect to Twitter to manage your tweets. You can also perform various actions such as send tweet, search, view followers, and more.
 
 In this section:
 
@@ -371,7 +372,7 @@ In this section:
 ![powerapps connections twitter][9]
 5. Enter your credentials and select **Authorize**:  
 ![powerapps twitter connection authorize][10]
-6. A new connection to _Twitter_ is created and is listed in **My Connections**. 
+6. A new connection to _Twitter_ is created and is listed in **My Connections**.
 
 The following functions are available in the Twitter API.
 
@@ -403,7 +404,7 @@ UserTimeline(userName[, maxResults]) | Retrieves a collection of the most recent
 
 	a) Set its _Items_ property to `twitter!UserTimeline(Text1!Text)`.  
 	b) Select _Insert a visual_ and then select _Label_.  
-	c) Set its _Text_ property to `ThisItem!TweetText`. 
+	c) Set its _Text_ property to `ThisItem!TweetText`.
 
 6. The latest tweets of the specified twitter user are displayed.
 
@@ -421,7 +422,7 @@ HomeTimeline([maxResults]) | Retrieves the most recent tweets and re-tweets post
 
 	a) Set its _Items_ property to `twitter!HomeTimeline()`.  
 	b) Select _Insert a visual_ and then select _Label_.  
-	c) Set its _Text_ property to `ThisItem!TweetText`. 
+	c) Set its _Text_ property to `ThisItem!TweetText`.
 
 4. The latest tweets of the current twitter user are displayed.
 
@@ -441,7 +442,7 @@ SearchTweet(searchQuery[, maxResults]) | Retrieves a collection of relevant twee
 
 	a) Set its _Items_ property to `twitter!SearchTweet(Text1!Text)`.  
 	b) Select _Insert a visual_ and then select _Label_.  
-	c) Set its _Text_ property to `ThisItem!TweetText`. 
+	c) Set its _Text_ property to `ThisItem!TweetText`.
 
 6. Tweets matching the specified search term are displayed.
 
@@ -462,7 +463,7 @@ Followers(userName[, maxResults]) | Retrieves users following the specified user
 
 	a) Set its _Items_ property to `twitter!Followers(Text1!Text)`.  
 	b) Select _Options_ in the bottom of the screen.  
-	c) In the gallery pane, set _Body1_ to _Description_, _Heading1_ to _FullName_, and _Subtitle1_ to _UserName_. 
+	c) In the gallery pane, set _Body1_ to _Description_, _Heading1_ to _FullName_, and _Subtitle1_ to _UserName_.
 
 6. Followers of the specified user are displayed.
 
@@ -480,7 +481,7 @@ MyFollowers([maxResults]) | Retrieves users who are following me.
 
 	a) Set its _Items_ property to `twitter!MyFollowers()`.  
 	b) Select _Options_ in the bottom of the screen.  
-	c) In the gallery pane, set _Body1_ to _Description_, _Heading1_ to _FullName_, and _Subtitle1_ to _UserName_. 
+	c) In the gallery pane, set _Body1_ to _Description_, _Heading1_ to _FullName_, and _Subtitle1_ to _UserName_.
 
 4. Followers of the current user are displayed.
 
@@ -501,7 +502,7 @@ Following(userName[, maxResults]) | Retrieves users who the specified user is fo
 
 	a) Set its _Items_ property to `twitter!Following(Text1!Text)`.  
 	b) Select _Options_ in the bottom of the screen.  
-	c) In the gallery pane, set _Body1_ to _Description_, _Heading1_ to _FullName_, and _Subtitle1_ to _UserName_. 
+	c) In the gallery pane, set _Body1_ to _Description_, _Heading1_ to _FullName_, and _Subtitle1_ to _UserName_.
 
 6. Followers of the specified user are displayed.
 
@@ -520,7 +521,7 @@ MyFollowing([maxResults])| Retrieves users that I am following.
 
 	a) Set its _Items_ property to `twitter!MyFollowing()`.  
 	b) Select _Options_ in the bottom of the screen.  
-	c) In the gallery pane, set _Body1_ to _Description_, _Heading1_ to _FullName_, and _Subtitle1_ to _UserName_. 
+	c) In the gallery pane, set _Body1_ to _Description_, _Heading1_ to _FullName_, and _Subtitle1_ to _UserName_.
 
 4. Followers of the current user are displayed.
 
@@ -553,7 +554,7 @@ Tweet([tweetText, body])| Tweets a post.
 3. On the _Insert_ tab, select _Button_. Then:  
 
 	a) Set its _OnSelect_ property to `twitter!Tweet({tweetText: Text1!Text})`.  
-	b) Set its _Text_ property to _Tweet_. 
+	b) Set its _Text_ property to _Tweet_.
 
 4. Run the app and select the _Tweet_ button to send a tweet.
 
