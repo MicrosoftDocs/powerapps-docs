@@ -25,6 +25,7 @@ Reference information is also available for:
 
 - [Operators](functions/operators.md)
 - [Control Properties]((reference-properties.md)
+- [Sensors](functions/sensors.md) 
 - "Working with ..." guides:
 	- [Formulas](functions/working-with-formulas.md) *Coming Soon.*
 	- [Tables](functions/working-with-tables.md)
@@ -35,9 +36,13 @@ Reference information is also available for:
 
 [Abs](functions/function-numericals.md) Absolute value of a number.  
 
+[Acceleration](functions/sensors.md) Reads the acceleration sensor in your device.
+
 [AddColumns](functions/function-table-shaping.md) Returns a table with columns added. 
 
 [And](functions/function-logicals.md) Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the **&&** operator.
+
+[App](functions/sensors.md) Returns information about the currently running app, such as which screen is currently displayed.
 
 [Average](functions/function-aggregates.md) Calculates the average of a table expression or set of arguments. 
 
@@ -59,9 +64,15 @@ Reference information is also available for:
 
 [ColorValue](functions/function-colors.md) Translates a CSS color name to a color value.  *Coming Soon.*
 
+[Compass](functions/sensors.md) Returns your compass heading.
+
 [Concat](functions/function-concatenate.md) Concatenates strings in a data source.  *Coming Soon.*
 
+<!-- TODO: Rename concat -->
+
 [Concatenate](functions/function-concatenate.md) Concatenates strings.  *Coming Soon.*
+
+[Connection](functions/sensors.md) Returns information about your network connection.
 
 [Count](functions/function-table-counts.md) Counts table records that contain numbers. 
 
@@ -149,6 +160,8 @@ Reference information is also available for:
 [Len](functions/function-len.md) Returns the length of a string. *Coming Soon.*
 
 [LoadData](functions/functions-loaddata-savedata.md) Loads a collection from app private storage. *Coming Soon.*
+
+[Location](functions/sensors.md) Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
 
 [LookUp](functions/functions-filter-lookup) Looks up a single record in a table based on a criteria. 
 
