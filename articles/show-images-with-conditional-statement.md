@@ -2,6 +2,7 @@
 	pageTitle="Show images and use a checkbox with a conditional statement in PowerApps Studio | Microsoft Azure"
 	description=""
 	services=""
+	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
@@ -25,7 +26,7 @@ You can use this feature in your PowerApps apps for different scenarios. For exa
 
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - These steps use the [CreateFirstApp](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7) as sample input data, which includes .jpg images. You can use this sample data, or import your own.
 

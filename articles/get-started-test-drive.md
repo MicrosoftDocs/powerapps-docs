@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: Create a PowerApp from a template"
 	description="Step-by-step instructions for creating a PowerApp automatically based on a template, customizing the PowerApp, and then publishing it."
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
 	manager="dwrede"

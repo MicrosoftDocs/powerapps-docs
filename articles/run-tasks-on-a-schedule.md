@@ -1,7 +1,8 @@
 <properties
     pageTitle="Scheduling in a Logic Flow"
     description="Run a logic flow on a schedule for recurring tasks, such as every day, or every hour."
-    services="powerapps"
+    services=""
+    suite="powerapps"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="dwrede"

@@ -2,7 +2,7 @@
    pageTitle="Create a card gallery | Microsoft PowerApps"
    description="Create a gallery in which users can scroll to show all data in an individual record, even if it contains more information than a screen can show at once."
    services=""
-	suite="powerapps"
+   suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
    manager="dwrede"

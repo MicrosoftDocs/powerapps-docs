@@ -1,20 +1,21 @@
 <properties
-   pageTitle="Add a scrolling screen | Microsoft PowerApps"
-   description=""
-   services="na"
-   documentationCenter="na"
-   authors="aftowen"
-   manager="dwrede"
-   editor=""
-   tags=""/>
+	pageTitle="Add a scrolling screen | Microsoft PowerApps"
+	description=""
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="aftowen"
+	manager="dwrede"
+	editor=""
+	tags=""/>
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/18/2015"
-   ms.author="anneta"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="11/18/2015"
+	ms.author="anneta"/>
 
 # Add a scrolling screen in PowerApps #
 Create a screen that users can scroll to show more types of content than the screen can show at a time. For example, you might want to juxtapose multiple charts, videos, or other kinds of data from different sources on the same screen while keeping each element big enough to see clearly. If you add controls to multiple sections, the relative position of each element is maintained, even if the screen orientation changes between portrait and landscape.  
