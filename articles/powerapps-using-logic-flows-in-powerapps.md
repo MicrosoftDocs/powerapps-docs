@@ -31,7 +31,6 @@ Logic Flows provides an easy way to run a series of actions from PowerApps. Thes
 
 1. In PowerApps, select **New** on the **File** menu (near the left edge of the screen).
 
-	![The New option in the File menu](./media/powerapps-using-logic-flows-in-powerapps/file-new.jpg)
 
 1. select **choose the option to create a new app. You can add Logic Flows to any kind of app, so you can choose any of the options to create a new app (from a template, from data or blank).
 
