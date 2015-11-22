@@ -1,11 +1,11 @@
 <properties
-	pageTitle="PowerApps: Using your organization's data"
-	description="Using data from SQL Server on-premise or Saleforces to build apps."
+	pageTitle="Connect to data in your organization | Microsoft PowerApps"
+	description="Build a PowerApp based on data from on-premise SQL Server or Salesforce."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="linhtranms"
-	manager="gautamt"
+	manager="dwrede"
 	editor=""
 	tags=""/>
 
@@ -18,18 +18,11 @@
    ms.date="11/19/2015"
    ms.author="litran"/>
 
-# Using your organization's data #
+# Connect to data in your organization #
 
-With Microsoft PowerApps enterprise enabled, as business user, you can connect to your organization's data easily. All you need to do is contact your IT Admins in your organization to request access to specific data whether it resides on-premise or in the cloud. Your IT Admins have an overview into all apps published in your organization including control user access to the apps. They can also create APIs that connect to specific organization's data and let business users use these APIs by managing the permissions to the APIs and connections.
+Create a PowerApp to manage your organization's data, from sources such as SalesForce and an on-premise server that's running SQL Server. By setting your organization up with Microsoft PowerApps Enterprise, an IT administrator can make this data available to you and other business users, in addition to performing these tasks:
+- Manage PowerApps within your organization, including managing user access.
+- Create APIs that connect to specific sources of organizational data.
+- Manage permissions for the APIs and connections.
 
-These are the steps that IT Admins can follow to get their organization set up with Microsoft PowerApps enterprise:
-
-- [Microsoft PowerApps enterprise - how to get started](powerapps-get-started-azure-portal.md)
-- [Add APIs and connections](powerapps-create-new-api.md)  
-- [Monitor your PowerApps apps](powerapps-manage-monitor-usage.md)
-
-
-Once your organization get Microsoft PowerApps enterprise set up, here are some specific examples of how your PowerApps/IT Administrator can configure and enable you, as a business user, to connect to data on a SQL database on-premise or to data on Saleforces.
-
-- [Enable business users to connect to data on SQL database on-premise](powerapps-create-api-sqlserver.md)
-- [Enable business users to connect to data on Saleforces](powerapps-create-api-saleforce.md)
+To set an organization up with Microsoft PowerApps Enterprise, administrators [get started](https://azure.microsoft.com/documentation/articles/powerapps-get-started-azure-portal), [add APIs and connections](https://azure.microsoft.com/documentation/articles/powerapps-develop-api), and [monitor PowerApps](https://azure.microsoft.com/documentation/articles/powerapps-manage-monitor-usage.md). After the organization is set up, administrators can configure connections to data in a [SQL database on-premise](https://azure.microsoft.com/documentation/articles/powerapps-create-api-sqlserver) and [Salesforce](https://azure.microsoft.com/documentation/articles/powerapps-create-api-salesforce).
