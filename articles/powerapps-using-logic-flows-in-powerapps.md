@@ -1,10 +1,10 @@
 <properties
-	pageTitle="Use Logic Flows with PowerApp"
-	description="Business User: How to use Logic Flows in apps created using PowerApps"
+	pageTitle="Create Logic Flows | Microsoft PowerApps"
+	description="Business User: How to use Logic Flows in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="MandiOhlinger"
+	authors="prkumarms"
 	manager="dwrede"
 	editor=""/>
 
@@ -15,17 +15,24 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/05/2015"
-   ms.author="anneta"/>
+   ms.author="prkumarms"/>
 
-# Logic Flows in PowerApps
+# Logic Flows in PowerApps #
 
-Logic Flows provides an easy way to run a series of actions from apps created using PowerApps. These actions can be to  read or update data, send notifications on email, update your calendar or tasks in Office 365 or SharePoint, and even wait on tasks to be updated by you or other people you work with. You can configure any control in your app to start the flow and the flow runs in the cloud even when you have closed PowerApps to carry out the steps automatically.
+Logic Flows provides an easy way to run a series of actions from PowerApps. These actions can be to read or update data, send notifications on email, update your calendar or tasks in Office 365 or SharePoint, and even wait on tasks to be updated by you or other people you work with. You can configure any control in your PowerApp to start the flow, which runs in the cloud even when you have closed PowerApps to carry out the steps automatically.
 
-This article describes how you can create such a flow and use it in an app.
+[What are PowerApps?](http://aka.ms/pamktg)
 
-## Creating a Logic Flow for your PowerApp
+**Prerequisites**
+- [Install PowerApps](http://aka.ms/installpowerapps)
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
-To create a app that uses Logic Flows, you need to install PowerApps on your Windows PC or tablet. Once you've installed and signed in to PowerApps, choose the option to create a new app. You can add Logic Flows to any kind of app, so you can choose any of the options to create a new app (from a template, from data or blank).
+## Create a logic flow for your PowerApp ##
+
+1. In PowerApps, select **New** on the **File** menu (near the left edge of the screen).
+
+
+1. select **choose the option to create a new app. You can add Logic Flows to any kind of app, so you can choose any of the options to create a new app (from a template, from data or blank).
 
 To create a new Logic Flow, select **Action** from the ribbon menu and select **Logic Flows**.
 
