@@ -21,6 +21,8 @@
 # Create a PowerApp from a set of data
 Create a PowerApp automatically based on data that you specify, explore how the PowerApp works by default, and then customize it to better fit how you work.
 
+You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/AppFromData.mp4) that shows how to create a PowerApp from your data.
+
 [What are PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**

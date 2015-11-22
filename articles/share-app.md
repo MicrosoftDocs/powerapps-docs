@@ -18,10 +18,12 @@
     ms.date="11/11/2015"
     ms.author="anneta"/>
 
-# Share an app#
+# Share an app #
 Share your app with co-workers or other users by giving them permission either to just run the app or to not only run it but also to customize it and then share their own versions.
 
 Share an app with multiple co-workers at the same time or with a group in Active Directory. If you share an app with a group, everyone in that group will have the permissions that you assign to it. If users are added to or deleted from the group, they will gain and lose permissions accordingly.
+
+You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/SharingAnApp.mp4) that shows how to share a PowerApp.
 
 ## Prerequisites ##
 - An account with which you've signed in to [powerapps.com]() or PowerApps.

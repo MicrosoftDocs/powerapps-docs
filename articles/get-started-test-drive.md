@@ -17,8 +17,11 @@
    ms.workload="na"
    ms.date="11/14/2015"
    ms.author="anneta"/>
-# Create a PowerApp from a template
+
+# Create a PowerApp from a template #
 Create a PowerApp automatically based on one of several templates for a variety of scenarios. Explore how the PowerApp works by default, customize it to better fit the way you work, and then publish it.
+
+You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/AppFromTemplate.mp4) that shows how to create a PowerApp from a template
 
 [What are PowerApps?](http://www.kratosapps.com/tutorials)
 
