@@ -20,15 +20,14 @@
 
 # Formula reference #
 
-Functions are the building blocks of formulas, listed below.  
+Functions and signals are the building blocks of formulas, listed below.  
 
 Reference information is also available for:
 
 - [Operators](functions/operators.md)
 - [Control Properties]((reference-properties.md)
-- [Sensors](functions/sensors.md) 
 - "Working with ..." guides:
-	- [Formulas](functions/working-with-formulas.md) *Coming Soon.*
+	- [Formulas](working-with-formulas.md)
 	- [Tables](functions/working-with-tables.md)
 	- [Data Sources](functions/working-with-data-sources.md)
 	- [Variables](functions/working-with-variables.md)
@@ -101,7 +100,7 @@ Reference information is also available for:
 
 [Day](functions/function-datetime-parts.md) Retrieves the day portion of a date/time value.  *Coming Soon.*
 
-[Disable](functions/function-enable-disable.md) Disables a signal data source, such as **Location** (GPS). *Coming Soon.*
+[Disable](functions/function-enable-disable.md) Disables a signal, such as **Location** (GPS). *Coming Soon.*
 
 [Distinct](functions/function-distinct.md) Returns the non-duplicate values of an expression evaluated across a table.  *Coming Soon.*
 
@@ -111,7 +110,7 @@ Reference information is also available for:
 
 ## E ##
 
-[Enable](functions/function-enable-disable.md) Enables a signal data source, such as **Location** (GPS). *Coming Soon.*
+[Enable](functions/function-enable-disable.md) Enables a signal, such as **Location** (GPS). *Coming Soon.*
 
 [Errors](functions/function-errors.md) Provides error information for previous changes to a data source.
 

@@ -1,5 +1,5 @@
 <properties
-	pageTitle="PowerApps: Acceleration, App, Compass, Connection, and Location sensors"
+	pageTitle="PowerApps: Acceleration, App, Compass, Connection, and Location signals"
 	description="Reference information for the Acceleration, App, Compass, Connection, and Location senors in PowerApps, including syntax and examples"
 	services=""
 	suite="powerapps"
@@ -18,66 +18,66 @@
    ms.date="11/07/2015"
    ms.author="gregli"/>
 
-# Acceleration, App, Compass, Connection, and Location sensors in PowerApps #
+# Acceleration, App, Compass, Connection, and Location signals in PowerApps #
 
 Access to the app's environment, such as where the user is located in the world and which screen is currently displayed.  
 
-<!-- TODO: If a device doesn't have a sensor?  Return null? -->
+<!-- TODO: If a device doesn't have a signal?  Return null? -->
 
 ## Description and syntax ##
 
-All sensors return a record of information. You can use and store this information as a record, or extract individual properties with the **!** operator.
+All signals return a record of information. You can use and store this information as a record, or extract individual properties with the **!** operator.
 
 ### Acceleration ###
 
-The **Acceleration** sensor returns the device's acceleration in three dimensions relative to the device's screen.  
+The **Acceleration** signal returns the device's acceleration in three dimensions relative to the device's screen.  
 
-Acceleration is measured in *g* units of 9.81 m/second<sup>2</sup> or 32.2 ft/second<sup>2</sup, the acceleration that the Earth imparts to objects at its surface due to gravity.
+Acceleration is measured in *g* units of 9.81 m/second<sup>2</sup> or 32.2 ft/second<sup>2</sup>, the acceleration that the Earth imparts to objects at its surface due to gravity.
 
-| Sensor Property | Description |
+| Signal Property | Description |
 |--------------------|-------------|
 | **Acceleration!X** | Right and left.  Right is a positive number. |
-| **Acceleration!Y** | Forward and back.  Forward is a positive number. | 
-| **Acceleration!Z** | Up and down.  Up is a positive number. |  
+| **Acceleration!Y** | Forward and back.  Forward is a positive number. |
+| **Acceleration!Z** | Up and down.  Up is a positive number. |
 
 ### App ###
 
-The **App** sensor returns information about the running app.
+The **App** signal returns information about the running app.
 
-| Sensor Property | Description |
+| Signal Property | Description |
 |--------------------|-------------|
 | **App!ActiveScreen** | Screen that is currently displayed.  Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determeine which screen is currently displayed.  You change the currently displayed screen with the **Back** and **Navigate** functions.  |
 
 ### Compass ###
 
-The **Compass** sensor returns the compass heading of the top of the screen.  
+The **Compass** signal returns the compass heading of the top of the screen.  
 
 The heading is based on magnetic north.
 
-| Sensor Property | Description |
+| Signal Property | Description |
 |--------------------|-------------|
 | **Compass!Heading** | Heading in degrees.  Returns a number 0 to 360, 0 is north. |
 
 ### Connection ###
 
-The **Connection** sensor returns the information about the network connection.
+The **Connection** signal returns the information about the network connection.
 
 When on a metered connection, you may want to limit how much data you send or receive over the network. 
 
-| Sensor Property | Description |
+| Signal Property | Description |
 |--------------------|-------------|
 | **Connection!Connected** | Is the device connected to a network? Returns a Boolean **true** or **false** value.  |
 | **Connection!Metered** | Is the connection metered?  Returns a Boolean **true** or **false** value.  |
 
 ### Location ###
 
-The **Location** sensor returns the location of the device, based on the Global Positioning System (GPS) and other device information such as cell tower communications and and IP address.
+The **Location** signal returns the location of the device, based on the Global Positioning System (GPS) and other device information such as cell tower communications and and IP address.
 
 When accessing the location information for the first time, the device may prompt the user to allow access to this information.
 
 As the location changes, dependencies on the location will continuously recalculate, which will consume power from the device's battery.  To conserve battery life, you can use the **Enable** and **Disable** functions to turn location updates on and off.  Location is automatically turned off if the currently displayed screen does not depend on location information.
 
-| Sensor Property | Description |
+| Signal Property | Description |
 |--------------------|-------------|
 | **Location!Attitude** | The altitude above sea level.  Returns a number, measured in feet.
 | **Location!Latitude** | The latitude, measured in degrees from the equator.  Returns a number from -90 to 90, north is positive.  |
