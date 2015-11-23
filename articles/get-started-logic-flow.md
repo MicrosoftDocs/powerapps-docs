@@ -21,7 +21,9 @@
 # Create Logic Flows in PowerApps#
 Create a logic flow to perform a task automatically when a condition triggers an action. For example, create a logic flow that notifies you by mail as soon as someone adds a row to a SharePoint list. In this scenario, adding a row is the trigger, and sending mail is the action.
 
-You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/LogicFlows.mp4) that shows how to create Logic Flows.
+## Video example ##
+
+[AZURE.VIDEO nb:cid:uuid:b95d313a-0d00-80c4-bb62-f1e5920004d6]
 
 **Prerequisites**
 

@@ -1,5 +1,5 @@
 <properties
-    pageTitle="PowerApps: Share an app"
+    pageTitle="Share a PowerApp | Microsoft PowerApps"
     description=""
     services=""
     suite="powerapps"
@@ -23,17 +23,19 @@ Share your app with co-workers or other users by giving them permission either t
 
 Share an app with multiple co-workers at the same time or with a group in Active Directory. If you share an app with a group, everyone in that group will have the permissions that you assign to it. If users are added to or deleted from the group, they will gain and lose permissions accordingly.
 
-You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/SharingAnApp.mp4) that shows how to share a PowerApp.
-
 ## Prerequisites ##
-- An account with which you've signed in to [powerapps.com]() or PowerApps.
+- An account with which you've signed in to [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) or PowerApps.
 - Either of the following:
 	- An app that you built (from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)).
 	- An app that someone else built and given you permission to run, customize, and share.
 
+## Video demonstration ##
+
+[AZURE.VIDEO nb:cid:uuid:4a51313a-0d00-80c4-1ead-f1e5920c334e]
+
 ## Share an app ##
 1. Do either of the following:
-	- In [powerapps.com](), select **Apps** near the left edge of the screen.
+	- In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Apps** near the left edge of the screen.
 
 	![List apps on powerapps.com the web](./media/share-app/file-apps-portal.png)
 

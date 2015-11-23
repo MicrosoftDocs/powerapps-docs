@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Use Logic Flows in a PowerApp"
+	pageTitle="Use Logic Flows | Microsoft PowerApps"
 	description="Business User: How to use a Logic Flow in a PowerApp"
 	services=""
 	suite="powerapps"
