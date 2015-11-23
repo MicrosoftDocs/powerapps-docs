@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Use Logic Flows in a PowerApp"
+	pageTitle="Use Logic Flows | Microsoft PowerApps"
 	description="Business User: How to use a Logic Flow in a PowerApp"
 	services=""
 	suite="powerapps"
@@ -20,6 +20,9 @@
 # Logic Flows in PowerApps
 
 Logic Flows provides an easy way to run a series of actions from a PowerApp that can read or update data, send notifications on email, update your calendar or tasks in Office 365 or SharePoint, and even wait on tasks to be updated by you or other people you work with. Logic Flows run in the cloud even when you have closed PowerApps on your phone to carry out the steps in automatically.
+
+## Video example ##
+[AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-bb62-f1e5920004d6]
 
 ## Creating Logic Flows for your PowerApp
 

@@ -21,14 +21,16 @@
 # Create a PowerApp from a template #
 Create a PowerApp automatically based on one of several templates for a variety of scenarios. Explore how the PowerApp works by default, customize it to better fit the way you work, and then publish it.
 
-You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/AppFromTemplate.mp4) that shows how to create a PowerApp from a template.
-
 [What are PowerApps?](http://www.kratosapps.com/tutorials)
 
 **Prerequisites**
 
 - [Install PowerApps](http://aka.ms/powerappsinstall)
 - An account on DropBox, OneDrive, or GoogleDrive for storing sample data in the cloud
+
+## Video demonstration ##
+
+[AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-8bbc-f1e59201f745]
 
 ## Open a PowerApp template ##
 1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
