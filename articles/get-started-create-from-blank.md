@@ -1,4 +1,4 @@
-<properties	pageTitle="Create a PowerApp from a blank screen"
+<properties	pageTitle="Create a PowerApp from scratch | Microsoft PowerApps"
 	description="Create a PowerApp from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business."
 	services=""
 	suite="powerapps"
@@ -14,13 +14,13 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/16/2015"
+   ms.date="11/22/2015"
    ms.author="anneta"/>
 
-# Create a PowerApp from a blank screen #
+# Create a PowerApp from scratch #
 Create your own PowerApp from scratch using any of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
 
-[What are PowerApps?]()
+[What are PowerApps?](https://aka.ms/pamktg)
 
 By following this tutorial, you'll create a PowerApp that shows users a set of data on the first screen:
 
@@ -67,7 +67,7 @@ To follow this tutorial exactly:
 
 	![The option buttons for creating a PowerApp for tablets or phones](./media/get-started-create-from-blank/phone-app.jpg)
 
-1. Under **Blank App**, select **Get Started**.
+1. Under **Start from scratch**, select **Get Started**.
 
 	![Option to create an app from scratch](./media/get-started-create-from-blank/blank-app.jpg)
 
@@ -91,6 +91,8 @@ To follow this tutorial exactly:
 	The **Screen** tab shows which data sources you've added to your app. This tutorial requires only one source, but you can add more sources to better fit your needs.
 
 1. In the upper-right corner of the **Options** pane, select the **Close** icon.
+
+	![Icon to close the Options pane](./media/get-started-create-from-blank/close-options.png)
 
 ## Show the data ##
 1. On the **Insert** tab of the ribbon, select **Gallery**, and then select the text gallery in **Portrait** orientation.
@@ -131,7 +133,7 @@ To follow this tutorial exactly:
 
 	![The Label option on the Insert tab of the ribbon](./media/get-started-create-from-blank/insert-label.jpg)
 
-1. On the **Content** tab of the **Quick tools** pane, select **Staff2** in the **Label1** list.
+1. On the **Content** tab of the **Quick tools** pane, select **Staff2** in the **Label2** list.
 
 1. On the **Home** tab of the ribbon, set the **Size** of the label's font to **11**.
 
@@ -160,7 +162,7 @@ To follow this tutorial exactly:
 
 	This formula comprises the [**Navigate**](function-navigate.md) function and a [context variable](function-updatecontext.md).
 
-1. Select the label at the top of the screen, select the **Insert** tab on the ribbon, and then click **Button**.
+1. Select any item in the gallery except the first one, select the **Insert** tab on the ribbon, and then select **Button**.
 
 	![Button option on the Insert tab](./media/get-started-create-from-blank/insert-button.jpg)
 
@@ -174,7 +176,7 @@ To follow this tutorial exactly:
 
 	This formula comprises the [**Navigate**](function-navigate.md) function and sets a [context variable](function-updatecontext.md) to the [default values](function-defaults.md) of the **Schedule** data source.
 
-1. On the **ChangeScreen**, add a label that identifies it, and [add a Back arrow](add-screen-context-variables.md#add-a-screen-and-navigation) that returns to the **ViewScreen** when a user selects the arrow.
+1. On the **ChangeScreen**, add a label that identifies it, and [add a Back arrow](add-screen-context-variables.md) that returns to the **ViewScreen** when a user selects the arrow.
 
 	![ChangeScreen with label and arrow](./media/get-started-create-from-blank/change-screen-blank.jpg)
 
@@ -252,4 +254,4 @@ To follow this tutorial exactly:
 
 	**Lookup(Errors(Schedule,Record),IsBlank(Column),Message)**
 
-	In this formula, the [**Lookup**](function-first.md) function shows any errors that occurred when the data source was being updated.
+	In this formula, the [**Lookup**](function-first.md) function shows the message from any errors that occurred when the data source was being updated.
