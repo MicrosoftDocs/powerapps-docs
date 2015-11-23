@@ -1,7 +1,8 @@
 <properties
    pageTitle="Build a formula in PowerApps"
    description="In PowerApps, you can use the operators and functions that this topic describes."
-   services="na"
+   services=""
+   suite="powerapps"
    documentationCenter="na"
    authors="gregli-msft"
    manager="dwrede"
@@ -35,6 +36,7 @@ Reference information is also available for:
 ## A ##
 
 [Abs](functions/function-numericals.md) Absolute value of a number.  
+
 
 [Acceleration](functions/sensors.md) Reads the acceleration sensor in your device.
 
@@ -72,11 +74,12 @@ Reference information is also available for:
 
 [Concatenate](functions/function-concatenate.md) Concatenates strings.  *Coming Soon.*
 
+
 [Connection](functions/sensors.md) Returns information about your network connection.
 
 [Count](functions/function-table-counts.md) Counts table records that contain numbers. 
 
-[CountA](functions/function-table-counts.md) Counts table records that are not empty. 
+[CountA](functions/function-table-counts.md) Counts table records that are not empty.
 
 [CountIf](functions/function-table-counts.md) Counts table records that satisfy a condition.  
 
@@ -102,7 +105,7 @@ Reference information is also available for:
 
 [Distinct](functions/function-distinct.md) Returns the non-duplicate values of an expression evaluated across a table.  *Coming Soon.*
 
-[DropColumns](functions/function-table-shaping.md) Returns a table with columns removed. 
+[DropColumns](functions/function-table-shaping.md) Returns a table with columns removed.
 
 [Defaults](functions/function-defaults.md) Returns the default values for a data source.
 
@@ -116,13 +119,14 @@ Reference information is also available for:
 
 ## F ##
 
-[Filter](functions/function-filter-lookup.md) Returns a filtered table based on a criteria. 
+[Filter](functions/function-filter-lookup.md) Returns a filtered table based on a criteria.
 
 [Find](functions/function-find.md) Checks if one string appears within another and returns the location. *Coming Soon.*
 
-[First](functions/function-first-last.md) Returns the first record of a table. 
+[First](functions/function-first-last.md) Returns the first record of a table.
 
-[FirstN](functions/function-first-last.md) Returns the first N records of a table. 
+[FirstN](functions/function-first-last.md) Returns the first N records of a table.
+
 ## G ##
 
 [GrounBy](functions/function-groupby.md) Returns a table with records grouped together.  *Coming Soon.*
@@ -149,9 +153,9 @@ Reference information is also available for:
 
 [Language](functions/function-language.md) Language.  *Coming Soon.*
 
-[Last](functions/function-first-last.md) Returns the last record of a table. 
+[Last](functions/function-first-last.md) Returns the last record of a table.
 
-[LastN](functions/function-first-last.md) Returns the last set of records (N records) of a table. 
+[LastN](functions/function-first-last.md) Returns the last set of records (N records) of a table.
 
 [Launch](functions/function-launch.md) Launches a URL, often used to open a web page. *Coming Soon.*
 
@@ -160,6 +164,7 @@ Reference information is also available for:
 [Len](functions/function-len.md) Returns the length of a string. *Coming Soon.*
 
 [LoadData](functions/functions-loaddata-savedata.md) Loads a collection from app private storage. *Coming Soon.*
+
 
 [Location](functions/sensors.md) Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
 
@@ -173,7 +178,7 @@ Reference information is also available for:
 
 [Mid](functions/function-left-mid-right.md) Returns the middle portion of a string. *Coming Soon.*
 
-[Min](functions/function-aggregates.md) Minimum value of a table expression or set of arguments. 
+[Min](functions/function-aggregates.md) Minimum value of a table expression or set of arguments.
 
 [Minute](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  *Coming Soon.*
 
@@ -197,7 +202,6 @@ Reference information is also available for:
 
 [Param](functions/function-params.md) Param. *Coming Soon.*
 
-
 [Patch](functions/function-patch.md) Modifies or creates a record in a data source, or merges records outside of a data source.
 
 [PlainText](functions/function-plaintext.md) Removes HTML and XML tags from a string. *Coming Soon.*
@@ -214,11 +218,11 @@ Reference information is also available for:
 
 [RemoveIf](functions/function-remove-removeif.md) Removes records from a data source based on a condition.
 
-[RenameColumns](functions/function-table-shaping.md) Renames columns of a table. 
+[RenameColumns](functions/function-table-shaping.md) Renames columns of a table.
 
 [Replace](functions/function-replace-substitute.md) Replaces part of a string with another string. *Coming Soon.*
 
-[Revert](functions/function-revert.md) Reloads and clears errors for the records of a data source. 
+[Revert](functions/function-revert.md) Reloads and clears errors for the records of a data source.
 
 [RGBA](functions/function-colors.md) Returns a color value for a set of red, green, blue, and alpha components. *Coming Soon.*
 
@@ -236,11 +240,11 @@ Reference information is also available for:
 
 [Second](functions/function-datetime-parts.md) Retrieves the second portion of a date/time value.  *Coming Soon.*
 
-[ShowColumns](functions/function-table-shaping.md) Returns a table with only selected columns. 
+[ShowColumns](functions/function-table-shaping.md) Returns a table with only selected columns.
 
 [Shuffle](functions/function-shuffle.md) Returns a randomly shuffled version of a table.  *Coming Soon.*
 
-[Sort](functions/function-sort.md) Returns a sorted table. 
+[Sort](functions/function-sort.md) Returns a sorted table.
 
 [Sqrt](functions/function-numericals.md) Returns a square root of a number.  
 
@@ -289,5 +293,3 @@ Reference information is also available for:
 ## Y ##
 
 [Year](functions/function-datetime-parts.md) Retrieves the year portion of a date/time value.  *Coming Soon.*
-
-

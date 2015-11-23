@@ -1,7 +1,8 @@
 <properties
-    pageTitle="PowerApps: Automate tasks by creating Logic Flows"
+    pageTitle="Automate tasks by creating Logic Flows | Microsoft PowerApps"
     description="Create Logic Flows to automatically perform one or more actions, such as sending mail, when one or more conditions are met, such as someone adding a row to a SharePoint list."
-    services="powerapps"
+    services=""
+    suite="powerapps"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="dwrede"
@@ -19,6 +20,8 @@
 
 # Create Logic Flows in PowerApps#
 Create a logic flow to perform a task automatically when a condition triggers an action. For example, create a logic flow that notifies you by mail as soon as someone adds a row to a SharePoint list. In this scenario, adding a row is the trigger, and sending mail is the action.
+
+You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/LogicFlows.mp4) that shows how to create Logic Flows.
 
 **Prerequisites**
 

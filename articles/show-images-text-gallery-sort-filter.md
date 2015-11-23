@@ -2,6 +2,7 @@
 	pageTitle="Show images and text in a gallery; Sort and filter the gallery in PowerApps Studio | Microsoft Azure"
 	description="Use a gallery to display images and text. Sort and filter the images in PowerApps."
 	services=""
+	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
@@ -24,7 +25,7 @@ In PowerApps, use a gallery to show several related items, as in a catalog. Gall
 
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. 
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - Download this [sample data](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7), or import your own data. The download includes .jpg images in a zip file.
 
@@ -40,7 +41,7 @@ In PowerApps, use a gallery to show several related items, as in a catalog. Gall
 	d) In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
 	![][3]  
 
-	You've just created the Inventory collection, which contains information about five products, including a design image, the name of the product, and the number of units in stock. 
+	You've just created the Inventory collection, which contains information about five products, including a design image, the name of the product, and the number of units in stock.
 
 2. Select the back arrow to return to the designer.
 3. On the **Insert** tab, select **Gallery**. Under **Image Galleries**, select the horizontal **With Text** image gallery:  
@@ -52,7 +53,7 @@ In PowerApps, use a gallery to show several related items, as in a catalog. Gall
 6. In the first item of the gallery, select the bottom label:  
 ![][7]  
 	> [AZURE.NOTE] When you change the first item in any gallery, you automatically change all other items in the gallery.  
- 
+
 7. Set the **Text** property of the label to the following expression:  
 ```ThisItem!UnitsInStock``` <br/>
 
@@ -83,7 +84,7 @@ Using these steps, you added a border around the current selection in the galler
 
 
 ## Sort and filter items in the gallery
-In these steps, we are going to sort the gallery items in ascending and descending order. Also, we'll add a slider control to 'filter' gallery items by the units in stock that you choose. 
+In these steps, we are going to sort the gallery items in ascending and descending order. Also, we'll add a slider control to 'filter' gallery items by the units in stock that you choose.
 
 #### Sort in ascending or descending order
 
@@ -110,7 +111,7 @@ In these steps, we are going to sort the gallery items in ascending and descendi
 4. In **Preview**, adjust the slider to a value that's between the highest and the lowest quantity in the gallery. As you adjust the slider, the gallery shows only those products that are less than the value you choose:  
 ![][13]  
 
-Now, let's add to our filter: 
+Now, let's add to our filter:
 
 1. Go back to the designer.
 2. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control to **NameFilter**. Move the text control below the slider.

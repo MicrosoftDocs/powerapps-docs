@@ -1,7 +1,8 @@
 <properties
 	pageTitle="Show the current user information in PowerApps | Microsoft Azure"
 	description="Insert the User function to display the name and email address of the signed-in user in PowerApps Studio"
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
@@ -17,15 +18,15 @@
    ms.author="mandia"/>
 
 # Get the signed-in user details
-The User feature can show the full name, email address, and picture associated with the current signed-in user. You can use this information to automatically fill in a form. 
+The User feature can show the full name, email address, and picture associated with the current signed-in user. You can use this information to automatically fill in a form.
 
-For example, you can use this feature to: 
+For example, you can use this feature to:
 
 - Create a sign-up "sheet" for users to attend training, volunteer for events, check-in at a kiosk, and more.
 - Display the full name on a Human Resources app.
-- Automatically enter an email address when contacting your Help Desk. 
+- Automatically enter an email address when contacting your Help Desk.
 
-Basically, you can use this anywhere users would benefit from an automatically-populated form or automatically-populated labels. 
+Basically, you can use this anywhere users would benefit from an automatically-populated form or automatically-populated labels.
 
 
 ### Prerequisites
@@ -55,7 +56,7 @@ When you do this, the label is automatically populated with your email address. 
 Now, let's see what you've created. Select the Preview button ![][9]. When you view the screen, you get an idea of what your app looks like; and it shows the picture, full name, and email address of the signed-in user.
 
 ## Tips and Tricks
-- The [Create an app from a template](get-started-test-drive.md) scenario provides another example that uses the signed-in user information. 
+- The [Create an app from a template](get-started-test-drive.md) scenario provides another example that uses the signed-in user information.
 - At anytime, you can select the preview button (![][9]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window.
@@ -66,7 +67,7 @@ Now, let's see what you've created. Select the Preview button ![][9]. When you v
 In this topic, you:
 
 - Used the Insert menu to add an image and labels to your app.
-- You used Excel-like functions to display some user properties. 
+- You used Excel-like functions to display some user properties.
 - With the User() function, you accessed some information specific to the signed-in user, including the user's full name and the user's email address.
 - Saw that when you configure a property, like the Text property, the labels are automatically updated.
 

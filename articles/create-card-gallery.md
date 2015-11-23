@@ -1,8 +1,8 @@
 <properties
    pageTitle="Create a card gallery | Microsoft PowerApps"
-   description=""
+   description="Create a gallery in which users can scroll to show all data in an individual record, even if it contains more information than a screen can show at once."
    services=""
-	suite="powerapps"
+   suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
    manager="dwrede"
@@ -14,13 +14,13 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/19/2015"
+   ms.date="11/20/2015"
    ms.author="anneta"/>
 
 # Create a card gallery in PowerApps#
 Show a set of data for which each [record](working-with-tables.md) contains more information than can appear at one time on the screen. For example, a product catalog might contain an image of each product, a description, quantity in stock, technical specifications, and enough other information that it can't all fit on a screen without scrolling. In a card gallery, you add sections that hold one or more types of information, and users can scroll through the sections to display it all.
 
-[What are PowerApps?](http://www.powerapps.com)
+[What are PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
 - [Install PowerApps](http://aka.ms/installpowerapps)
@@ -37,9 +37,9 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 	![Option to create an app from scratch](./media/create-card-gallery/blank-app.png)
 
-1. On the **Insert** tab, select **Gallery**, and then select **Card Gallery**.
+1. On the **Insert** tab, select **Gallery**, and then select the **Portrait** option under **Card Galleries**.
 
-	![Option to add a card gallery](./media/create-card-gallery/add-gallery.png)
+	![Option to add a card gallery in portrait orientation](./media/create-card-gallery/add-gallery.png)
 
 1. Resize the gallery to cover almost the entire screen, but leave enough room at the top for a label to identify the screen.
 
@@ -78,3 +78,17 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 1. On the **Insert** tab, select **Controls,** select **Rating**, and then move the rating control so it appears under the label.
 
 	![Three built-in cards and one custom card](./media/create-card-gallery/add-rating.png)
+
+## Add or change a data source ##
+
+1. Select the icon next to **CardStackGallerySample** or the name of the data source you're already using.
+
+	![Icon next to name of data source](./media/create-card-gallery/data-source-icon.png)
+
+1. In the list of data sources, select the data source that you want to use, and then follow the prompts to specify the exact table that you want to use.
+
+	For example, the data source for [creating a PowerApp from scratch](get-started-create-from-blank.md) is an Excel file in Dropbox. To connect to that data source, select **Dropbox**, select the file name (**eventsignup.xls**), select the table name (**Schedule**), and then select **Insert.**
+
+1. If you add another data source (for example, named **Cast**), switch between them by selecting the icon next to the name of the data source you're using and then selecting the data source you want to use.
+
+	![Icon next to name of data source](./media/create-card-gallery/change-data-source.png)

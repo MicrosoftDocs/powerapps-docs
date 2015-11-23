@@ -2,6 +2,7 @@
 	pageTitle="Create and update a collection in PowerApps Studio | Microsoft Azure"
 	description="Create collections and add columns to existing collections in PowerApps Studio"
 	services=""
+	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="dwrede"
@@ -12,7 +13,7 @@
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="na" 
+   ms.workload="na"
    ms.date="11/04/2015"
    ms.author="mandia"/>
 
@@ -23,7 +24,7 @@ Use a collection to store data that can be used in your app. A collection is a g
 You can create and use collections within PowerApps. Let's get started.
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps Studio. 
+- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps Studio.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
@@ -57,7 +58,7 @@ In these steps, you used the Collect function to create a collection named **Des
 ![][8]
 
 
-#### Extra credit 
+#### Extra credit
 Now, let's bind the Destinations collection to a listbox:
 
 1. Go back to your designer.
@@ -69,7 +70,7 @@ Now, let's bind the Destinations collection to a listbox:
 	When you do this, the listbox is automatically populated with the items you previously entered in the Destinations collection:  
 ![][4]  
 
-Preview your changes: ![][7]. In the listbox, you can see the different cities you entered. In the input text box, enter a new city, and select the **Add** button. The listbox is automatically updated to include the new city you entered. 
+Preview your changes: ![][7]. In the listbox, you can see the different cities you entered. In the input text box, enter a new city, and select the **Add** button. The listbox is automatically updated to include the new city you entered.
 
 
 ## Create a collection that has more than one column
@@ -125,8 +126,8 @@ There are a few sections in this walk-through. When complete, you'll know how to
 ![][16]  
 3. Rename the gallery to **PriceGallery** and set the **Items** property to **PriceList**:  
 ![][18]  
-4. Move the PriceList gallery below the **Import Data** control. Select the gallery borders and use click-and-drag to resize the gallery so three squares are shown. 
-5. In the gallery, select the first square, and add three labels (**Insert** tab > **Label**). 
+4. Move the PriceList gallery below the **Import Data** control. Select the gallery borders and use click-and-drag to resize the gallery so three squares are shown.
+5. In the gallery, select the first square, and add three labels (**Insert** tab > **Label**).
 6. Resize and arrange the labels in a row near the top of the first square. Your gallery looks similar to the following:  
 ![][19]
 7. Set the **Text** property of each label to the following expression:  
@@ -137,7 +138,7 @@ Label1 | ``ThisItem!Name``
 Label2 | ``Text(ThisItem!Price, "$#")``
 Label3 | ``ThisItem!Maker``
 
-	When you do this, the labels are automatically updated with the name, price, and maker values within the PriceList collection. 
+	When you do this, the labels are automatically updated with the name, price, and maker values within the PriceList collection.
 
 8. Resize the labels and the gallery to remove any extra spaces. Your screen look similar to the following:  
 ![][17]

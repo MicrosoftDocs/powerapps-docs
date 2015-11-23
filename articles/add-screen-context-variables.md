@@ -1,7 +1,8 @@
 <properties
 	pageTitle="PowerApps: Add a screen, navigation, and a context variable"
 	description="In PowerApps, add a screen to an app, arrows to open one screen from another, and a context variable to track information between screens."
-	services="powerapps"
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
 	manager="dwrede"

@@ -1,7 +1,8 @@
 <properties
-    pageTitle="Scheduling in a Logic Flow"
-    description="Run a logic flow on a schedule for recurring tasks, such as every day, or every hour."
-    services="powerapps"
+    pageTitle="Run Logic Flows on a schedule | Microsoft PowerApps"
+    description="Automate recurring tasks by running Logic Flows on a schedule, such as every day or every hour."
+    services=""
+    suite="powerapps"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="dwrede"
@@ -17,43 +18,46 @@
    ms.date="11/14/2015"
    ms.author="stepsic"/>
 
-# Scheduling in a Logic Flow #
-Sometimes you will want to run a process that should run on a fixed period of time and do some task. For example, sending out an email reminder every day.
-
-In addition, you can schedule a task in the middle of a Logic flow, by having it wait a fixed period of time.
+# Run Logic Flows on a schedule #
+Create a logic flow that performs the same task or tasks, such as sending reports in email, every day, hour, or minute. As an alternative, create a logic flow that waits a certain number of minutes or until a certain date before performing a task or tasks.
 
 **Prerequisites**
 - An account on [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209)
-- An account on Office 365 (from which you can send email)
+- Chrome browser
 
-## Add a recurrence trigger
+## Run a logic flow every day, hour, or minute
 
-1. In your web browser, open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
+1. In Chrome, open  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
 
-    ![Click Logic on the right](./media/run-tasks-on-a-schedule/landingpage.png)
+	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-flow.png)
 
-2. Select **Create from blank**.
+1. Select **Create from blank**.
 
-    ![Create Logic from blank](./media/run-tasks-on-a-schedule/from-blank.png)
+	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-from-blank.png)
 
-3. In the box that says **How would you like to start?** select **Every day**.
+1. In the box that says **How would you like to start?** select **Every day**, **Every hour**, or **Every minute**.
 
-    ![Every day](./media/run-tasks-on-a-schedule/everyday.png)
+	![Every day](./media/run-tasks-on-a-schedule/every-day.png)
 
-4. You can now add the action that you want to run, for example **Send email**.
+1. Add the action or actions that you want the logic flow to take, as [Create a logic flow from scratch](get-started-logic-flow) describes.
 
-## Waiting as an action ##
+## Run a logic flow after a certain number of minutes or on a particular date ##
 
-In this procedure, you'll add an action that waits for a fixed period of time. One example of this is if you want to send out a reminder after a certain amount of time, or, on a certain day.
+1. In Chrome, open  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
 
-1. In Chrome, open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then click **Flows** in the left navigation bar.
+	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-flow.png)
 
-2. In the list of Logic Flows, click the edit icon, which looks like a pencil, next to the Logic Flow that you want to edit.
+1. Select **Create from blank**.
 
-3. Now, click the add button at the bottom of the logic flow.
+	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-from-blank.png)
+1. Specify a trigger as [Create a logic flow from scratch](get-started-logic-flow) describes.
 
-4. Search for **Wait** and click it in the list.
+1. Select the plus icon, and then select **Add action**.
 
-5. Choose exactly how long you want to wait.
+	![Option to add an action to a logic flow](./media/run-tasks-on-a-schedule/add-action.png)
 
-6. Click **Done**.
+1. In the list of actions, do either of the following:
+	- Select **Delay**, and then specify a number of minutes,
+	- Select **Delay until**, and then specify a date.
+
+	![Option to add an action to a logic flow](./media/run-tasks-on-a-schedule/add-delay.png)

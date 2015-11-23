@@ -1,7 +1,8 @@
 <properties
    pageTitle="Properties in PowerApps"
    description="In PowerApps, you can use the properties that this topic describes."
-   services="na"
+   services=""
+   suite="powerapps"
    documentationCenter="na"
    authors="gregli-msft"
    manager="dwrede"

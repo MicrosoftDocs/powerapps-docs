@@ -1,7 +1,8 @@
 <properties
     pageTitle="PowerApps tutorial: Create Logic Flows from a template"
     description="Create Logic Flows from any of several built-in templates."
-    services="powerapps"
+    services=""
+    suite="powerapps"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="dwrede"

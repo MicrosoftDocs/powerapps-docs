@@ -1,7 +1,8 @@
 <properties
-    pageTitle="PowerApps: Add a condition"
-    description="Logic flows can run certain steps only if the condition you match is true."
-    services="powerapps"
+    pageTitle="Add a condition to a logic flow | Microsoft PowerApps"
+    description="Specify that a logic flow performs one or more tasks only if a particular condition is true."
+    services=""
+    suite="powerapps"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="dwrede"
@@ -14,35 +15,47 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/14/2015"
+   ms.date="11/20/2015"
    ms.author="stepsic"/>
 
 # Add a condition to a logic flow #
 
-Logic flows can contain conditions, which means that they can check some value and execute steps only if that value is something you specifically want.
+Specify that a logic flow performs one or more tasks only if a particular condition is true. For example, specify that you'll get an email only if a tweet that contains a keyword is retweeted at least 10 times.
 
 **Prerequisites**
 
-- An Office 365 account (from which you can send email)
+- [Create a logic flow](get-started-logic-template.md) from a template
 
-## Adding the condition ##
+## Add a condition ##
 
 1. In Chrome, open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then click **Flows** in the left navigation bar.
 
-2. In the list of Logic Flows, click the edit icon, which looks like a pencil, next to the Logic Flow that you want to add a condition to.
+1. In the list of logic flows, click the edit icon next to the logic flow that you created from a template.
 
-3. At the bottom of the flow, click the plus button and select **Add Condition**.
+    ![Icon to edit the azuretweets flow](./media/add-a-condition/edit-flow.png)
 
-    ![Condition button](./media/add-a-condition/addconditionbutton.png)
+1. In the title bar of the action, select the ellipsis icon (...), and then select **Delete**.
 
-4. In the top field in the condition, select a parameter that you want to check.
+    ![Icon to delete an action](./media/add-a-condition/delete-action.png)
 
-    ![Condition box](./media/add-a-condition/conditionbox.png)
+1. Under the trigger, select the plus button.
 
-5. In the second field, enter the value that you want to compare it to.
+    ![Icon to add an action or a condition](./media/add-a-condition/plus-button.png)
 
-6. Now, click **Add action inside** and search for the action you want.
+1. Select **Add condition**.
+
+    ![Condition button](./media/add-a-condition/add-condition.png)
+
+1. Select an empty area of **OBJECT NAME**, and then select the **Retweet count** parameter to add it to the box.
+
+1. In the **RELATIONSHIP** box, select **is greater than or equal to**.
+
+1. In the **VALUE** box, type **10**.
+
+    ![The OBJECT NAME box with a parameter in it](./media/add-a-condition/specify-condition.png)
+
+1. Select **Add action inside**, and then type **send email**.
 
     ![Add action inside](./media/add-a-condition/ifyes.png)
 
-7. Fill out the parameters inside the action and click **Done**
+1. Specify what the email should contain, just as you did when you created the flow, and then select **Done**.
