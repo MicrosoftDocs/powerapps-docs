@@ -1,6 +1,6 @@
 <properties
-    pageTitle="PowerApps: Wait for an approval"
-    description="Logic flows can wait for external events, such as when an approver approves a task assigned to them."
+    pageTitle="Wait for approval in Logic Flows | Microsoft PowerApps"
+    description="Logic flows can wait for external events, such as users indicating approval in email or SharePoint."
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,44 +18,44 @@
    ms.date="11/14/2015"
    ms.author="stepsic"/>
 
-# Wait for an approval in a Logic Flow #
+# Wait for approval in Logic Flows #
 
-One very common scenario in business processes is to have an approver check an request and then approve or reject it. With Logic Flows you can wait for external events, such as an approval.
+Create a logic flow that performs one or more tasks only after a user indicates approval by either clicking a link in email or updating an item in a SharePoint list.
 
 **Prerequisites**
+- [Create a logic flow from scratch](get-started-logic-flow.md)
 
-- An Office 365 account (from which you can send email)
+## Request approval in email ##
 
-## Approvals via Email ##
+1. In Chrome, open  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Flows** in the left navigation bar.
 
-In this procedure, you'll add an action that will wait for approval when an item is added to a SharePoint list.
+	![Flows option in left navigation bar](./media/wait-for-approvals/nav-flows.png)
 
-1. Follow the steps in [Create a Logic Flow](get-started-logicflow.md) to add a trigger to your logic flow.
+1. In the list of logic flows, select the edit icon for the logic flow that you created from scratch.
 
-2. Instead of adding **Send email**, search for **Approval**
+	![Icon to edit a logic flow](./media/wait-for-approvals/edit-flow.png)
 
-    ![Search for approval](./media/wait-for-approvals/approvalsearch.png)
+1. Select the plus icon after the action, and then select **Add action**.
 
-3. By default the approval options are *Approve* and *Reject*, but you can edit to choose your set of options.
+	![Option to add an action](./media/wait-for-approvals/add-action.png)
 
-    ![Options](./media/wait-for-approvals/approvaloptions.png)
+1. In the box that shows **What would you like to do next?**, type or paste **approval**, and then select **Office 365 Outlook - Send approval email**.
 
-4. Fill out the other fields including **To** and the **Subject**.
+	![Search for approval](./media/wait-for-approvals/approval-search.png)
 
-5. Add another step using the Add button, such as **Send email**, which can say that the approver either approved or rejected.
+1. (optional) Edit the subject line, the approval options, or both.
 
-6. Save your logic flow.
+    ![Options](./media/wait-for-approvals/approval-mail.png)
 
-Now, add an item to the SharePoint list. The Approver should receive an email:
+1. In the **TO** box, type or paste the email address of the approver.
 
-![Email](./media/wait-for-approvals/approvalemail.png)
+1. Drag the approval action so it appears just below the trigger, and then save your logic flow.
 
-After the approver chooses the option your final step will fire.
+	![Move the approval action between the trigger and the other action](./media/wait-for-approvals/flow-sequence.png)
 
-## Approval via a data source
+If you add an item to the SharePoint list, an email message should be sent to the approver, as you specified in the first action. If the approver selects **Yes** in that message, a second message should be sent, as you specified in the second action.
 
-You can also use a data source to indicate approval.
-
+## Request approval in SharePoint
 1. Create a SharePoint list with a column called **Status**.
 
 2. Instead of adding the approval action, add **Create an item** and create an item in the list with the **Status** equal to pending.
