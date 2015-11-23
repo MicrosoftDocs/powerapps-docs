@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/21/2015"
+   ms.date="11/22/2015"
    ms.author="anneta"/>
 
 # Create a PowerApp from a set of data
@@ -76,7 +76,7 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 Your PowerApp is built.
 
 ## Customize a PowerApp ##
-When a PowerApp is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
+When a PowerApp is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the PowerApp for your needs.
 
 1. If **BrowseScreen1** isn't already showing, show it by selecting its thumbnail in the left navigation pane.
 
@@ -94,7 +94,7 @@ When a PowerApp is built automatically, heuristics are used to suggest the best 
 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
-	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can select options that reflect the data on that screen.
+	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can select different options, which reflect the data on that screen.
 
 1. In the **Quick tools** pane, select the **Content** tab.
 
@@ -110,7 +110,7 @@ When a PowerApp is built automatically, heuristics are used to suggest the best 
 
 	![Change the theme](./media/get-started-create-from-data/choose-theme.png)
 
-	As the thumbnails in the left navigation bar shows, each screen in the app changes to reflect your selection.
+	As the thumbnails in the left navigation bar show, each screen in the app changes to reflect your selection.
 
 	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final.png)
 
@@ -131,4 +131,5 @@ When a PowerApp is built automatically, heuristics are used to suggest the best 
 
 	![Save changes on EditScreen1](./media/get-started-create-from-data/save-changes.png)
 
+## Next step ##
 When you finish customizing your app, you can [save and share it with other people](get-started-test-drive.md#save-and-share-your-powerapp).
