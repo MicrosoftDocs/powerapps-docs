@@ -1,8 +1,8 @@
 <properties
    pageTitle="Build a formula in PowerApps"
    description="In PowerApps, you can use the operators and functions that this topic describes."
-	services=""
-	suite="powerapps"
+   services=""
+   suite="powerapps"
    documentationCenter="na"
    authors="gregli-msft"
    manager="dwrede"
@@ -26,6 +26,7 @@ Reference information is also available for:
 
 - [Operators](functions/operators.md)
 - [Control Properties]((reference-properties.md)
+- [Sensors](functions/sensors.md) 
 - "Working with ..." guides:
 	- [Formulas](functions/working-with-formulas.md) *Coming Soon.*
 	- [Tables](functions/working-with-tables.md)
@@ -36,11 +37,16 @@ Reference information is also available for:
 
 [Abs](functions/function-numericals.md) Absolute value of a number.  
 
-[AddColumns](functions/function-table-shaping.md) Returns a table with columns added.
+
+[Acceleration](functions/sensors.md) Reads the acceleration sensor in your device.
+
+[AddColumns](functions/function-table-shaping.md) Returns a table with columns added. 
 
 [And](functions/function-logicals.md) Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the **&&** operator.
 
-[Average](functions/function-aggregates.md) Calculates the average of a table expression or set of arguments.
+[App](functions/sensors.md) Returns information about the currently running app, such as which screen is currently displayed.
+
+[Average](functions/function-aggregates.md) Calculates the average of a table expression or set of arguments. 
 
 ## B ##
 
@@ -60,11 +66,18 @@ Reference information is also available for:
 
 [ColorValue](functions/function-colors.md) Translates a CSS color name to a color value.  *Coming Soon.*
 
+[Compass](functions/sensors.md) Returns your compass heading.
+
 [Concat](functions/function-concatenate.md) Concatenates strings in a data source.  *Coming Soon.*
+
+<!-- TODO: Rename concat -->
 
 [Concatenate](functions/function-concatenate.md) Concatenates strings.  *Coming Soon.*
 
-[Count](functions/function-table-counts.md) Counts table records that contain numbers.
+
+[Connection](functions/sensors.md) Returns information about your network connection.
+
+[Count](functions/function-table-counts.md) Counts table records that contain numbers. 
 
 [CountA](functions/function-table-counts.md) Counts table records that are not empty.
 
@@ -113,6 +126,7 @@ Reference information is also available for:
 [First](functions/function-first-last.md) Returns the first record of a table.
 
 [FirstN](functions/function-first-last.md) Returns the first N records of a table.
+
 ## G ##
 
 [GrounBy](functions/function-groupby.md) Returns a table with records grouped together.  *Coming Soon.*
@@ -151,7 +165,10 @@ Reference information is also available for:
 
 [LoadData](functions/functions-loaddata-savedata.md) Loads a collection from app private storage. *Coming Soon.*
 
-[LookUp](functions/functions-filter-lookup) Looks up a single record in a table based on a criteria.
+
+[Location](functions/sensors.md) Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
+
+[LookUp](functions/functions-filter-lookup) Looks up a single record in a table based on a criteria. 
 
 [Lower](functions/function-lower-upper-proper.md) Converts letters in a string of text to all lowercase.
 
@@ -184,7 +201,6 @@ Reference information is also available for:
 ## P ##
 
 [Param](functions/function-params.md) Param. *Coming Soon.*
-
 
 [Patch](functions/function-patch.md) Modifies or creates a record in a data source, or merges records outside of a data source.
 
