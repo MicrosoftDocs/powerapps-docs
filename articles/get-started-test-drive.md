@@ -30,7 +30,7 @@ Create a PowerApp automatically based on one of several templates for a variety 
 
 ## Video demonstration ##
 
-[AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-8bbc-f1e59201f745]
+[AZURE.VIDEO nb:cid:uuid:b95d313a-0d00-80c4-8bbc-f1e59201f745]
 
 ## Open a PowerApp template ##
 1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).

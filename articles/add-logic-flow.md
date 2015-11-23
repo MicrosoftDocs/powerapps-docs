@@ -21,9 +21,6 @@
 
 Logic Flows provides an easy way to run a series of actions from a PowerApp that can read or update data, send notifications on email, update your calendar or tasks in Office 365 or SharePoint, and even wait on tasks to be updated by you or other people you work with. Logic Flows run in the cloud even when you have closed PowerApps on your phone to carry out the steps in automatically.
 
-## Video example ##
-[AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-bb62-f1e5920004d6]
-
 ## Creating Logic Flows for your PowerApp
 
 To create a PowerApp that uses Logic Flows, you need to install PowerApps on your Windows PC. Once you've installed and signed in to PowerApps, choose the option to create a new app. You can add Logic Flows to any kind of app, so you can choose any of the options to create a new app (from a template, from data or blank). Once your new app is open, you can add a variety of controls onto the screen, like a button to associate a Logic Flow with.
