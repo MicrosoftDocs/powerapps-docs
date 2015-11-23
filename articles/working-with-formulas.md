@@ -1,8 +1,10 @@
-<properties	pageTitle="Working with formulas in PowerApps"
-	description="User formulas to cusotmize a PowerApp."
-	services="powerapps"
+<properties
+	pageTitle="Working with formulas | Microsoft PowerApps"
+	description="User formulas to customize a PowerApp."
+	services=""
+	suite="powerapps"
 	documentationCenter="na"
-	authors="GregLi"
+	authors="gregli-msft"
 	manager="dwrede"
 	editor=""
 	tags=""/>
@@ -10,7 +12,7 @@
 <tags
    ms.service="powerapps"
    ms.devlang="na"
-   ms.topic="get-started-article"
+   ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/23/2015"
@@ -31,9 +33,7 @@ This article provides only an overview of working with formulas.  Browse the [fo
 
 ## Getting started ##
 
-1. Launch PowerApps
-
-1. Select **New** on the **File** menu (near the left edge of the screen).
+1. Open PowerApps, and then select **New** on the **File** menu (near the left edge of the screen).
 
 	![The New option in the File menu](./media/working-with-formulas/file-new.jpg)
 
@@ -45,114 +45,124 @@ This article provides only an overview of working with formulas.  Browse the [fo
 
 	![Option to create an app from scratch](./media/working-with-formulas/blank-app.jpg)
 
-1. You will see the formula bar at the top of the screen.
+	You'll see the formula bar at the top of the screen.
 
 	![Formula bar](./media/working-with-formulas/formula-bar.png)
 
 	This bar has two parts:
 
-	- *Property*:  Each control and screen has a [set of properties](reference-properties.md).  Use this selector to show and edit the formula for a specific property.  
-	
-	- *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md). 
+	- *Property list*:  Each control and screen has a [set of properties](reference-properties.md).  Use this list to select a specific property.  
 
-1. The formula bar shows and edits properties for the currently selected control, or for the screen if no controls are selected.  You can see the name of the current selection on the **Content** tab:
+	- *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md).
+
+	In the formula bar, you can see and edit properties for the selected control or for the screen if no controls are selected.  You can see the name of the selected control on the **Content** tab:
 
 	![Content bar shows the currently selected control](./media/working-with-formulas/content-tab-selection.png)
 
-	The name of the control can also be changed in the **Content** tab, but clicking on the name.
+	You can change the name of the selected control in the **Content** tab by clicking the name.
 
-1. Let's add a label control to our screen.  From the **Insert** tab, select **Label**, and a label control will be added at the top of the screen:
+1. Add a label by selecting **Label** on the **Insert** tab.
+
+ 	A label is added at the top of the screen:
 
 	![Added a label control](./media/working-with-formulas/add-a-label.png)
 
-1. The property shown by default for the **Label** control is the **Text** property.  The value of this property drives what is shown in the label control.  It has a default value of **"Label"**.  
+	When you add a label, the property list automatically shows the **Text** property, which drives what the label shows. By default, the value of this property is **"Label"**.  
 
-1. Let's change this value to **"Hello World"**, by typing that string into the formula bar, complete with the double quotes (") on each end:
+1. Set the value of the **Text** property to **"Hello World"** by typing that string, surrounded by double quotes, into the formula bar:
 
 	![Using the label "Hello World"](./media/working-with-formulas/label-hello-world.png)
 
-	The control on the screen will reflect this new value as you type it.  The screen may show yellow exclamation point errors while you are typing, as the value may be incomplete until you are done.  For example, a string without a double quotes on both ends is not valid.
+	The label reflects this new value as you type it.  The screen may show yellow exclamation-point icons while you type. These icons indicate errors, but they'll go away when you finish entering a valid value.  For example, a string without double quotes on both ends isn't valid.
 
-	Unlike Excel, you do not need to enter the equal sign (=) when starting a formula.  All entries in the formula bar are formulas, as if all of them started with an equal sign in Excel.  The formula bar even shows a permanent equal sign between the proeprty and the formula.  This is why strings must be enclosed in double quotation marks (").
+	Unlike Excel, you don't need to enter the equal sign (=) when you start a formula.  Any entry in the formula bar is a formula, as if it started with an equal sign in Excel.  The formula bar even shows a permanent equal sign between the property and the formula.  This is why you must enclose strings in double quotation marks (").
 
-1. Let's change our formula to do a calculation.  Replace **"Hello World"** with **Sum(1,2,3)** and note there are no double quotes:
+1. Replace the **"Hello World"** string with the formula **Sum(1,2,3)** to do a calculation:
+
+	**Note:** You don't surround a formula with double quotation marks as you do with a string.
 
 	![Typing the partial function Sum(1,2,3 without a closing parenthesis shows errors](./media/working-with-formulas/label-sum-partial.png)
 
-	While you are typing, the formula bar helps you by showing the descripotion and expected arguments for this function.  As with final double quote of **"Hello World"**, the screen is showing yellow exclamation points to indicate there is a problem, until we type the final parenthesis of this formula:
+	While you type, the formula bar helps you by showing the description and the expected arguments for this function.  As with the final double quotation mark in **"Hello World"**, the screen shows yellow exclamation points to indicate an error until you type the final parenthesis of this formula:
 
 	![Using the complete formula Sum(1,2,3)](./media/working-with-formulas/label-sum.png)
 
 ## Just like Excel ##
 
-If you are an Excel user, the above should look familiar.  PowerApps is modeled after Excel.  Many of the same formulas that you use in Excel also work in PowerApps.
+If you're an Excel user, the above should look familiar.  PowerApps is modeled after Excel.  Many of the same formulas that you use in Excel also work in PowerApps.
 
-Let's review how Excel works.  A cell can contain a value, such as a number or a string, or it can contain a formula that is based on and floats with the values of other cells.  After a user enters a new value into a cell, Excel dutifully recalculates all the dependent formulas based on the new value.  This behavior is automatic.
+Let's review how Excel works.  A cell can contain a value, such as a number or a string, or it can contain a formula that's based on and floats with the values of other cells.  After a user enters a value into a cell, Excel dutifully recalculates all the dependent formulas based on the new value.  This behavior is automatic.
 
 ![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.png)
 
-PowerApps behave very much like Excel.  Instead of cells, controls are used that can be named and placed wherever you desires on screens.  The equivalent PowerApp of the Excel example consists of:
+PowerApps behave very much like Excel.  Instead of cells, you add, name, and place controls wherever you want on screens.  The Excel example looks like this in a PowerApp:
 
-- Input Text control, named **Text1**.  This takes the place of cell **A1**.  This allows the user to type in the first value to add.
-- Another Input Text control, named **Text2**.  This takes the place of cell **A2**.  This allows the user to type in the second value to add.
-- Label control, named **Label1**.  This takes the place of cell **A3**.  This will show the result of the addition.
-- Formula for the **Text** property of **Label1** which performs the addition: **Label1!Text = Text1 + Text2**.  Control properties are accessed with the **!** operator.  **Label1!Text** refers to the Label's **Text** property, while for example **Label1!Fill** refers to its background color property.
+- An input-text control, named **Text1**, which takes the place of cell **A1**. In this control, the user types in the first value to add.
+- Another input-text control, named **Text2**, which takes the place of cell **A2**. In this control, the user types in the second value to add.
+- A label, named **Label1**, which takes the place of cell **A3**.  This control shows the result of the addition.
+- Formula for the **Text** property of **Label1**, which performs the addition:<br>**Label1!Text = Text1 + Text2**<br>You access control properties by using the **!** operator.  **Label1!Text** refers to the label's **Text** property, and **Label1!Fill**,  for example, refers to its background-color property.
 
-This app has the same recalculation behavior as Excel.  Change the value of either of the text boxes, and the label's formula is recalculated automatically and the new result displayed.
+This PowerApp has the same recalculation behavior as Excel. If you change the value of either of the text boxes, the label's formula is recalculated automatically, and the new result is displayed.
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc.png)
 
-PowerApps can use formulas for more than the primary value of a control.  For example formulas can be used to control formatting.  In this next example, a formula for the Color property of the label will automatically show negative values in Red.  The **If** function should look very familiar from Excel.
+PowerApps can use formulas for more than the primary value of a control.  For example, you can use a formula to control formatting.  In this next example, a formula for the **Color** property of the label will automatically show negative values in red.  The **If** function should look very familiar from Excel.
 
 ![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color.png)
 
-Formulas can be used for a wide variety of scenarios.  For example, by using your device's GPS, a map control can display you current location with a formula that uses **Location!Latitude** and **Location!Longitude**.  As you move, the map will automatically track your location.
+You can use formulas for a wide variety of scenarios.  For example, you can use your device's GPS, a map control, and a formula that uses **Location!Latitude** and **Location!Longitude**  to display your current location.  As you move, the map will automatically track your location.
 
 ## Controls working together ##
 
-In this example, we will use three sliders to govern the background color of a screen.
+In this example, you'll use three sliders to govern the background color of a screen.
 
-1. Remove the label control from our previous example, or create a new blank app as we did previously.
+1. Remove the label control from the previous example, or create a blank app as you did previously.
 
-1. Add three slider controls to the screen.  Slide controls are located on the **Insert** tab under **Controls**:
+1. Add three slider controls to the screen by selecting **Controls** on the **Insert** tab and then selecting **Slider**:
 
 	![Insert a slider control](./media/working-with-formulas/insert-slider.png)
 
-1. Arrange the slider controls so they do not overlap, by dragging and dropping the controls on the screen.  Add three label controls and change their text to "Red", "Green", and "Blue":
+1. Arrange the sliders so they don't overlap, add three labels, and configure them to show **Red**, **Green**, and **Blue**:
 
 	![Arrange sliders and add labels for each color component](./media/working-with-formulas/three-sliders.png)
 
-1. At any time, you can reveal the names of the controls and their boundaries on the screen by holding down the **Alt** key: 
+	**Note:** At any time, you can reveal the names of the controls and their boundaries on the screen by holding down the **Alt** key:
 
-	![Ideitfy controls with the Alt key](./media/working-with-formulas/three-sliders-identified.png)
+	![Identify controls with the Alt key](./media/working-with-formulas/three-sliders-identified.png)
 
-1. For each slider, change the **Max** value to 255, the maximum value of a color component  for the **RGBA** function.  The **Max** property is easy to reach through the **Content** ribbon, or by picking the property in the formula bar:
+1. Change the **Max** value of each slider to 255, which is the maximum value of a color component for the **RGBA** function.
+
+	You can specify the **Max** property by selecting it on the **Content** tab or in the property list:
 
 	![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-max.png)
 
-1. Select the screen by clicking away from any control.  For the **Fill** property, enter the formula **RGBA( Slider1!Value, Slider2!Value, Slider3!Value, 1 )**.  Control properties are accessed with the **!** operator.  **Slider1!Value** refers to the slider's **Value** property which reflects where the user has placed the slider between **Min** and **Max** values.  As you enter this formula, each control that appears in the formula will be color coded between the screen and the formula bar:
+1. Select the screen by clicking away from any control, and then set **Fill** property to this formula:<br>**RGBA( Slider1!Value, Slider2!Value, Slider3!Value, 1 )**
+
+	You access control properties by using the **!** operator.  **Slider1!Value** refers to the slider's **Value** property, which reflects where the user has placed the slider between the **Min** and **Max** values.  As you type this formula, each control that it contains is color coded between the screen and the formula bar:
 
 	![Change the formula for the background fill color of the screen, but not yet complete](./media/working-with-formulas/three-sliders-partial-rgba.png)
 
-	As you type the closing parenthesis, the screen's background will change a dark gray.  At the moment the formula is complete, it is calculated, and used as the value of the background fill color.  Apps that are being editing are live and do not need to be in preview mode in order to start interacting with it:
+	As you type the closing parenthesis, the screen's background will change to dark gray.  At the moment when you finish typing the formula, it's calculated and used as the value of the background fill color.  PowerApps are live as you edit them, and you can interact with them to a large degree in the default workspace (without opening Preview):
 
 	![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-complete-rgba.png)
 
-1. Now we can change the values of the sliders and see what effect they have on the background color.  As each slider changes, **RGBA** is recalculated which immediately changes how the screen appears.
+1. Adjust the sliders, and see how your changes affect the background color.
+
+	As each slider changes, the formula that contains the **RGBA** function is recalculated, which immediately changes how the screen appears.
 
 	![Change the formula for the background fill color of the screen, now complete](./media/working-with-formulas/three-sliders-example-colors.png)
 
 ## Behavior formulas ##
 
-Besides calculations, formulas are used to take action.  For example, the **OnSelect** formula of a button control is evaluated when the button is pressed, and with it, we can change from one screen to another.
+You can use formulas not only to perform calculations but also to take action.  For example, the **OnSelect** formula of a button is evaluated when the button is selected, so we can leverage that event to change from one screen to another.
 
-Some functions can only appear in behavior formulas, such as **Navigate** and **Collect**.  The formula reference calls out if a function can only be used in this context.  
+Some functions, such as **Navigate** and **Collect**, can appear only in behavior formulas.  The formula reference calls out if a function can be used only in this context.  
 
-Sometimes you will want to take more than one action at a time.  For example, updating a context variable, pushing data to a data source, and finally navigating to another screen.  To accomplish this, use the **;** operator.    
+You use the **;** operator to take more than one action at a time.  For example, you might want to update a context variable, push data to a data source, and finally navigate to another screen.
 
 ## Advanced view ##
 
-To view and change all the properties of a control, open the **Advanced** view on the **View** tab: 
+The properties list shows properties alphabetically, but you can also view all the properties of a control, organized by category, if you select the **Advanced** option on the **View** tab:
 
 ![Advanced view](./media/working-with-formulas/advanced-closed.png)
 
@@ -163,6 +173,3 @@ Initially, this view shows a limited selection of the most important properties.
 ![Advanced view expanded to show all properties](./media/working-with-formulas/advanced-open.png)
 
 Each control has a long list of properties that govern all aspects of the control's behavior and appearance.  You may need to scroll through a long list.  To find a specific property, you can use the search box at the top of the pane.
-
-
-
