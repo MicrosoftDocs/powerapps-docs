@@ -106,19 +106,19 @@ You can use a [context variable](working-with-variables.md) in many ways, but yo
 
 1. Add four input-text controls, and arrange the elements so that each label appears over one input-text control.
 
-1. Under the **StartDay** label, set the **Text** property of the input-text control to this expression:
+1. Under the **StartDay** label, set the **Default** property of the input-text control to this expression:
 
 	**If(Mode="Add", "", "Sunday")**
 
-1. Under the **StartTime** label, set the **Text** property of the input-text control to this expression:
+1. Under the **StartTime** label, set the **Default** property of the input-text control to this expression:
 
 	**If(Mode="Add", "", "10a-noon")**
 
-1. Under the **Staff1** label, set the **Text** property of the input-text control to this expression:
+1. Under the **Staff1** label, set the **Default** property of the input-text control to this expression:
 
 	**If(Mode="Add", "", "Kawasaki")**
 
-1. Under the **Staff2** label, set the **Text** property of the input-text control to this expression:
+1. Under the **Staff2** label, set the **Default** property of the input-text control to this expression:
 
 	**If(Mode="Add", "", "Dubois")**
 
