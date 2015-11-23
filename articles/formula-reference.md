@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Build a formula in PowerApps"
+   pageTitle="Build a formula | Microsoft PowerApps"
    description="In PowerApps, you can use the operators and functions that this topic describes."
    services=""
    suite="powerapps"
@@ -20,16 +20,16 @@
 
 # Formula reference #
 
-Functions and signals are the building blocks of formulas, listed below.  
+Functions and signals, listed below, are the building blocks of formulas.  
 
 Reference information is also available for:
 
 - [Operators](functions/operators.md)
-- [Control Properties]((reference-properties.md)
+- [Control properties](reference-properties.md)
 - "Working with ..." guides:
 	- [Formulas](working-with-formulas.md)
 	- [Tables](functions/working-with-tables.md)
-	- [Data Sources](functions/working-with-data-sources.md)
+	- [Data sources](functions/working-with-data-sources.md)
 	- [Variables](functions/working-with-variables.md)
 
 ## A ##
@@ -39,13 +39,13 @@ Reference information is also available for:
 
 [Acceleration](functions/sensors.md) Reads the acceleration sensor in your device.
 
-[AddColumns](functions/function-table-shaping.md) Returns a table with columns added. 
+[AddColumns](functions/function-table-shaping.md) Returns a table with columns added.
 
 [And](functions/function-logicals.md) Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the **&&** operator.
 
 [App](functions/sensors.md) Returns information about the currently running app, such as which screen is currently displayed.
 
-[Average](functions/function-aggregates.md) Calculates the average of a table expression or set of arguments. 
+[Average](functions/function-aggregates.md) Calculates the average of a table expression or set of arguments.
 
 ## B ##
 
@@ -76,9 +76,9 @@ Reference information is also available for:
 
 [Connection](functions/sensors.md) Returns information about your network connection.
 
-[Count](functions/function-table-counts.md) Counts table records that contain numbers. 
+[Count](functions/function-table-counts.md) Counts table records that contain numbers.
 
-[CountA](functions/function-table-counts.md) Counts table records that are not empty.
+[CountA](functions/function-table-counts.md) Counts table records that aren't empty.
 
 [CountIf](functions/function-table-counts.md) Counts table records that satisfy a condition.  
 
@@ -90,11 +90,11 @@ Reference information is also available for:
 
 [DateAdd](functions/function-dateadd-datediff.md) Add days, months, quarters, or years to a date/time value. *Coming Soon.*
 
-[DateDiff](functions/function-dateadd-datediff.md) Subract two date values, the result in days, months, quarters, or years. *Coming Soon.*
+[DateDiff](functions/function-dateadd-datediff.md) Subtracts two date values, and shows the result in days, months, quarters, or years. *Coming Soon.*
 
 [DateTimeValue](functions/function-date.md) Converts a date and time string to a date/time value. *Coming Soon.*
 
-[DateValue](functions/function-date.md) Converts a date only string to a date/time value. *Coming Soon.*
+[DateValue](functions/function-date.md) Converts a date-only string to a date/time value. *Coming Soon.*
 
 [DataSourceInfo](functions/function-datasourceinfo.md) Provides information about a data source.
 
@@ -118,7 +118,7 @@ Reference information is also available for:
 
 ## F ##
 
-[Filter](functions/function-filter-lookup.md) Returns a filtered table based on a criteria.
+[Filter](functions/function-filter-lookup.md) Returns a filtered table based on one or more criteria.
 
 [Find](functions/function-find.md) Checks if one string appears within another and returns the location. *Coming Soon.*
 
@@ -128,7 +128,7 @@ Reference information is also available for:
 
 ## G ##
 
-[GrounBy](functions/function-groupby.md) Returns a table with records grouped together.  *Coming Soon.*
+[GroupBy](functions/function-groupby.md) Returns a table with records grouped together.  *Coming Soon.*
 
 ## H ##
 
@@ -138,7 +138,7 @@ Reference information is also available for:
 
 ## I ##
 
-[If](functions/function-if.md) Conditional logic: return one value if a condition is true and another value if it's false. *Coming Soon.*
+[If](functions/function-if.md) Conditional logic: returns one value if a condition is true and another value if it's false. *Coming Soon.*
 
 [IsBlank](functions/function-isblank-isempty.md) Checks for a blank value. *Coming Soon.*
 
@@ -156,34 +156,34 @@ Reference information is also available for:
 
 [LastN](functions/function-first-last.md) Returns the last set of records (N records) of a table.
 
-[Launch](functions/function-launch.md) Launches a URL, often used to open a web page. *Coming Soon.*
+[Launch](functions/function-launch.md) Launches a URL, often used to open a webpage. *Coming Soon.*
 
 [Left](functions/function-left-mid-right.md) Returns the left portion of a string. *Coming Soon.*
 
 [Len](functions/function-len.md) Returns the length of a string. *Coming Soon.*
 
-[LoadData](functions/functions-loaddata-savedata.md) Loads a collection from app private storage. *Coming Soon.*
+[LoadData](functions/functions-loaddata-savedata.md) Loads a collection from PowerApp private storage. *Coming Soon.*
 
 
 [Location](functions/sensors.md) Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
 
-[LookUp](functions/functions-filter-lookup) Looks up a single record in a table based on a criteria. 
+[LookUp](functions/functions-filter-lookup) Looks up a single record in a table based on one or more criteria.
 
 [Lower](functions/function-lower-upper-proper.md) Converts letters in a string of text to all lowercase.
 
 ## M ##
 
-[Max](functions/function-aggregates.md) Maximum value of a table expression or set of arguments.
+[Max](functions/function-aggregates.md) Maximum value of a table expression or a set of arguments.
 
 [Mid](functions/function-left-mid-right.md) Returns the middle portion of a string. *Coming Soon.*
 
-[Min](functions/function-aggregates.md) Minimum value of a table expression or set of arguments.
+[Min](functions/function-aggregates.md) Minimum value of a table expression or a set of arguments.
 
 [Minute](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  *Coming Soon.*
 
 [Mod](functions/function-mod.md) Returns the remainder after a number is divided by a divisor. *Coming Soon.*
 
-[Month](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  *Coming Soon.*
+[Month](functions/function-datetime-parts.md) Retrieves the month portion of a date/time value.  *Coming Soon.*
 
 ## N ##
 
@@ -205,7 +205,7 @@ Reference information is also available for:
 
 [PlainText](functions/function-plaintext.md) Removes HTML and XML tags from a string. *Coming Soon.*
 
-[Proper](functions/function-lower-upper-proper.md) Converts letters in a string of text to proper case (first letter of each word is uppercase, the rest are lowercase).
+[Proper](functions/function-lower-upper-proper.md) Converts letters in a string of text to proper case. (The first letter of each word is uppercase, and the rest are lowercase.)
 
 ## R ##
 
@@ -235,7 +235,7 @@ Reference information is also available for:
 
 ## S ##
 
-[SaveData](functions/functions-loaddata-savedata.md) Saves a collection to app private storage. *Coming Soon.*
+[SaveData](functions/functions-loaddata-savedata.md) Saves a collection to PowerApp private storage. *Coming Soon.*
 
 [Second](functions/function-datetime-parts.md) Retrieves the second portion of a date/time value.  *Coming Soon.*
 
@@ -245,13 +245,13 @@ Reference information is also available for:
 
 [Sort](functions/function-sort.md) Returns a sorted table.
 
-[Sqrt](functions/function-numericals.md) Returns a square root of a number.  
+[Sqrt](functions/function-numericals.md) Returns the square root of a number.  
 
 [StdevP](functions/function-statistical.md) Returns the standard deviation of its arguments.  *Coming Soon.*
 
 [Substitute](functions/function-replace-substitute.md) Replaces part of a string with another string. *Coming Soon.*
 
-[Sum](functions/function-aggregates.md) Calculates the sum of a table expression or set of arguments.  
+[Sum](functions/function-aggregates.md) Calculates the sum of a table expression or a set of arguments.  
 
 ## T ##
 
@@ -261,7 +261,7 @@ Reference information is also available for:
 
 [Time](functions/function-date.md) Returns a date/time value, based on Hour, Minute, and Second values.  *Coming Soon.*
 
-[TimeValue](functions/function-date.md) Converts a time only string to a date/time value. *Coming Soon.*
+[TimeValue](functions/function-date.md) Converts a time-only string to a date/time value. *Coming Soon.*
 
 [Today](functions/function-now-today.md) Returns the current date/time value. *Coming Soon.*
 
@@ -269,11 +269,11 @@ Reference information is also available for:
 
 ## U ##
 
-[Ungroup](functions/function-group-ungroup.md) Removed a grouping. *Coming Soon.*
+[Ungroup](functions/function-group-ungroup.md) Removes a grouping. *Coming Soon.*
 
 [Update](functions/function-update.md) Replaces a record in a data source.
 
-[UpdateContext](functions/function-updatecontext.md) Creates or updates context variables of the current screen.
+[UpdateContext](functions/function-updatecontext.md) Creates or updates one or more context variables of the current screen.
 
 [UpdateIf](functions/function-update-updateif.md) Modifies a set of records in a data source based on a condition.
 
