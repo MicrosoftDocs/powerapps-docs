@@ -42,7 +42,7 @@ Excel does not have variables.  While a cell's value can float with a formula, t
 
 ### PowerApps ###
 
-PowerApps behave very much like Excel.  Instead of cells, controls are used that can be named and placed wherever the author desires on to screens.  The equivalent PowerApp of the Excel example consists of:
+PowerApps behave very much like Excel.  Instead of cells, controls are used that can be named and placed wherever you desire on screens.  The equivalent PowerApp of the Excel example consists of:
 
 - Input Text control, named **Text1**.  This takes the place of cell **A1**.  This allows the user to type in the first value to add.
 - Another Input Text control, named **Text2**.  This takes the place of cell **A2**.  This allows the user to type in the second value to add.
@@ -57,9 +57,9 @@ PowerApps can use formulas for more than the primary value of a control.  For ex
 
 ![](media/working-with-variables/recalc-color.png)
 
-Formulas can be used for a wide spectrum of situations:
+Formulas can be used for a wide variety of scenarios:
 
-- By using your device's GPS, a map control can display you current location with a formula that uses **Location!Lattitude** and **Location!Longtitude**.  As you move, the map will automatically track your location.
+- By using your device's GPS, a map control can display you current location with a formula that uses **Location!Latitude** and **Location!Longitude**.  As you move, the map will automatically track your location.
 - [Data sources](working-with-data-sources) can be updated by other users.  For example, items in a SharePoint list might be edited by others on your team.  When you refresh a data source, any dependent formulas are automatically recalculated and displayed on the updated data.  Furthering the example, a gallery's **Items** property may be set to the formula **Filter( SharePointList )** which will automatically display the newly filtered set of records.
 
 ### Benefits ###
