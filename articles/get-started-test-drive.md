@@ -1,5 +1,5 @@
 <properties
-	pageTitle="PowerApps: Create a PowerApp from a template"
+	pageTitle="Create a PowerApp from a template | Microsoft PowerApps"
 	description="Step-by-step instructions for creating a PowerApp automatically based on a template, customizing the PowerApp, and then publishing it."
 	services=""
 	suite="powerapps"
@@ -15,13 +15,13 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/14/2015"
+   ms.date="11/22/2015"
    ms.author="anneta"/>
 
 # Create a PowerApp from a template #
 Create a PowerApp automatically based on one of several templates for a variety of scenarios. Explore how the PowerApp works by default, customize it to better fit the way you work, and then publish it.
 
-You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/AppFromTemplate.mp4) that shows how to create a PowerApp from a template
+You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/AppFromTemplate.mp4) that shows how to create a PowerApp from a template.
 
 [What are PowerApps?](http://www.kratosapps.com/tutorials)
 
@@ -61,12 +61,12 @@ You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples
 
 	![Open the Event Signup template template](./media/get-started-test-drive/choose-template.jpg)
 
-	The **VolunteerDetailsScreen** of your PowerApp appears.
+	The **VolunteerDetailsScreen_1** of your PowerApp appears.
 
-	![VolunteerDetailsScreen with default information](./media/get-started-test-drive/volunteer-default.jpg)
+	![VolunteerDetailsScreen_1 with default information](./media/get-started-test-drive/volunteer-default.jpg)
 
 ## Explore the PowerApp's default appearance and behavior ##
-Templates for PowerApps open in the default workspace, where you'll spend most of your time customizing a template or creating a PowerApp from scratch. Before you make changes, you'll explore how the PowerApp works in **Preview**.
+PowerApps from templates open in the default workspace, where you'll spend most of your time customizing a PowerApp from a template or creating a PowerApp from scratch. Before you make changes, you'll explore how the PowerApp works in **Preview**.
 
 **Tip:** Design and develop PowerApps in the default workspace, but test them in **Preview** before you share them with others.
 
@@ -95,6 +95,8 @@ Templates for PowerApps open in the default workspace, where you'll spend most o
 1. (optional) Remove yourself or the volunteer from a timeslot by selecting the "X" icon next to the name of the person whom you want to remove.
 
 1. Return to the default workspace by selecting the "X" icon in the upper-right corner (under the PowerApps title bar).
+
+	![Button to close Preview](./media/get-started-test-drive/close-preview.png)
 
 1. (optional) Verify that the data in your cloud account reflects your changes.
 
@@ -133,7 +135,7 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 	The label shows the current date.
 
-1. Select the text in the label, and then type anything you want.
+1. Triple-click the text in the label, and then type anything you want.
 
 ## Save and share your PowerApp ##
 After you finish developing and testing your PowerApp, share it with other people by saving it to powerapps.com and sending mail that your app is available. Specify which people can run your app or even customize it to create their own versions.
@@ -160,7 +162,7 @@ After you finish developing and testing your PowerApp, share it with other peopl
 
 		![Aspect-ratio options, such as 3:2 and 4:3](./media/get-started-test-drive/aspect-ratio.jpg)
 
-		**Note:** If you change the size and orientation, select **Apply** to save the changes.
+		**Note:** If you change the size and orientation, select **Apply** (near the lower-right corner) to save the changes.
 
 		![Apply button](./media/get-started-test-drive/apply-button.jpg)
 
@@ -186,4 +188,4 @@ After you finish developing and testing your PowerApp, share it with other peopl
 
 1. Edit the text in the **Subject** and **Message** boxes, and then select **Share**.
 
-	The people with whom you shared your PowerApp will receive an email message that contains a link they can click to install PowerApps and run your PowerApp.
+	The people with whom you shared your PowerApp will receive an email message that contains a link they can select to install PowerApps and run your PowerApp.
