@@ -44,7 +44,7 @@ The **Errors** function returns a table of errors with the following columns:
 
 | ErrorKind | Description |
 |------------|-------------|
-| ErrorKind!Conflict | There was another change to the same record, resulting in a change conflict.  Use **[Revert](function-refresh.md)** to reload the record and try the change again. |
+| ErrorKind!Conflict | There was another change to the same record, resulting in a change conflict.  Use **[Revert](function-revert.md)** to reload the record and try the change again. |
 | ErrorKind!ConstraintViolation | One or more constraints have been violated. |
 | ErrorKind!CreatePermission | An attempt was made to create a record, and the current user does not have permission to create records. |
 | ErrorKind!DeletePermission | An attempt was made to delete a record, and the current user does not have permission to delete records. |
@@ -58,7 +58,7 @@ The **Errors** function returns a table of errors with the following columns:
 
 Errors can be returned for the entire data source, or for only a selected row by providing the *Record* argument to the function.  
 
-In some cases, **Patch** or another data function may return a *blank* value, if for example, a record could not be created.  You can pass *blank* to **Errors** and it will return appropriate error information in these cases.  Subsequent use of data functions on the same data source will clear this error information. 
+In some cases, **[Patch](function-patch.md)** or another data function may return a *blank* value, if for example, a record could not be created.  You can pass *blank* to **Errors** and it will return appropriate error information in these cases.  Subsequent use of data functions on the same data source will clear this error information. 
 
 If there are no errors, the table returned by **Errors** will be empty and can be tested with the **IsEmpty** function.
 
@@ -82,13 +82,13 @@ Through PowerApps, a user loads the Chocolate record into a data entry form and 
 
 - **UpdateContext( { EditRecord: First( Filter( IceCream, Flavor = "Chocoalte" ) ) } )**
 
-To make this change in the data source, the **Patch** function is used:
+To make this change in the data source, the **[Patch](function-patch.md)** function is used:
 
 - **Patch( IceCream, EditRecord, Gallery!Updates )**
 
 where **Gallery!Updates** evaluates to **{ Quanitty: 90 }**, since only the **Quantity** has been modified.
 
-Unfortunately, just before the **Patch** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
+Unfortunately, just before the **[Patch](function-patch.md)** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
 
 - **IsEmpty( Errors( IceCream, EditRecord ) )**
 

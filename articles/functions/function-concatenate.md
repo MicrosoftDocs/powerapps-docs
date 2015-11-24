@@ -24,7 +24,7 @@ Concatenates individual strings and strings in tables.
 
 ## Description ##
 
-The **Concat** function concatenates the result of a formula applied across all the records of a table, resulting in a single string.  You can use this function to summarize the strings of a table, just as **Sum** does for numbers.
+The **Concat** function concatenates the result of a formula applied across all the records of a table, resulting in a single string.  You can use this function to summarize the strings of a table, just as **[Sum](function-aggregates.md)** does for numbers.
 
 The **Concatenate** function concatenates a mix of individual strings and single-column table of strings.  Used with individual strings, this function is equivalent to using the **&** operator.  The single-column table may be created by a formula.
 

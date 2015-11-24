@@ -34,7 +34,7 @@ The **Date** function converts individual Year, Month, and Day values to a Date/
 
 The **Time** function converts individual Hour, Minute, and Second values to a Date/Time value.  The result has no date associated with it.
 
-See the **DateValue**, **TimeValue**, and **DateTimeValue** functions for converting form a string.  
+See the **DateValue**, **TimeValue**, and **[DateTimeValue](function-datevalue-timevalue.md)** functions for converting form a string.  
 
 Also see [working with dates and times](../show-text-date-times.md) for more information. 
 

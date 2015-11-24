@@ -46,7 +46,7 @@ The [return value](file-name.md) of **Patch** is the record that you modified or
 
 When you update a data source, a number of issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine as issues, as described in [Working with Data Sources](working-with-data-sources.md#errors).
 
-Related functions include the **[Update](function-update-updateif.md)** function for replacing an entire record and the **[Collect](function-collect.md)** function for creating records.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
+Related functions include the **[Update](function-update-updateif.md)** function for replacing an entire record and the **Collect** function for creating records.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
 
 ### Merge records outside of a data source ###
 
@@ -63,7 +63,7 @@ Specify two or more records that you want to merge. Records are processed in ord
 
 - *DataSource* – Required. The data source that contains the record that you want to modify or create.
 
-- *BaseRecord* – Required. The record to modify or create.  If the record came from a data source, the record is found and modified. If the result of **Defaults** is used, a new record is created.
+- *BaseRecord* – Required. The record to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](function-defaults.md)** is used, a new record is created.
 
 - *ChangeRecord(s)* – Required.  One or more records that contain properties to modify in the *BaseRecord*.  Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
@@ -84,7 +84,7 @@ In these examples, you'll modify or create a record in a data source that's name
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **Patch(&nbsp;IceCream,<br>First( Filter( IceCream, Flavor = "Chocolate" ) ), {&nbsp;Quantity:&nbsp;400&nbsp;} )** | Modifies a record in the **IceCream** data source:<ul><li> The **ID** column of the record to modify contains the value of **1**. (The Chocolate record has that ID.)</li><li>The value in the **Quantity** column changes to **400**. | {&nbsp;ID:&nbsp;1, Flavor:&nbsp;"Chocolate", Quantity:&nbsp;400 }<br><br>The Chocolate entry in the **IceCream** data source has been modified. |
-| **Patch( IceCream, Defaults(&nbsp;IceCream ), {&nbsp;Flavor:&nbsp;“Strawberry”&nbsp;}&nbsp;)** | Creates a record in the **IceCream** data source:<ul><li>The ID column contains a value that the data source generates automatically (3).</li><li>The Quantity column contains the default value (0) for that column in the **IceCream** data source, as the **Defaults** function specifies.<li>The **Flavor** column contains the value of **Strawberry**.</li> | { ID:&nbsp;3, Flavor:&nbsp;“Strawberry”, Quantity:&nbsp;0&nbsp;}<br><br>The Strawberry entry in the **IceCream** data source has been created. |
+| **Patch( IceCream, Defaults(&nbsp;IceCream ), {&nbsp;Flavor:&nbsp;“Strawberry”&nbsp;}&nbsp;)** | Creates a record in the **IceCream** data source:<ul><li>The ID column contains a value that the data source generates automatically (3).</li><li>The Quantity column contains the default value (0) for that column in the **IceCream** data source, as the **[Defaults](function-defaults.md)** function specifies.<li>The **Flavor** column contains the value of **Strawberry**.</li> | { ID:&nbsp;3, Flavor:&nbsp;“Strawberry”, Quantity:&nbsp;0&nbsp;}<br><br>The Strawberry entry in the **IceCream** data source has been created. |
 
 After the above formulas have been evaluated, the data source ends with these values:
 

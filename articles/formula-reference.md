@@ -168,7 +168,7 @@ Reference information is also available for:
 
 [Location](functions/signals.md) Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
 
-[LookUp](functions/functions-filter-lookup) Looks up a single record in a table based on one or more criteria.
+[LookUp](functions/function-filter-lookup.md) Looks up a single record in a table based on one or more criteria.
 
 [Lower](functions/function-lower-upper-proper.md) Converts letters in a string of text to all lowercase.
 
@@ -272,7 +272,7 @@ Reference information is also available for:
 
 [Ungroup](functions/function-group-ungroup.md) Removes a grouping. *Coming Soon.*
 
-[Update](functions/function-update.md) Replaces a record in a data source.
+[Update](functions/function-update-updateif.md) Replaces a record in a data source.
 
 [UpdateContext](functions/function-updatecontext.md) Creates or updates one or more context variables of the current screen.
 

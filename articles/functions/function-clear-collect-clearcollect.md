@@ -38,7 +38,7 @@ When used with a [collection](working-with-data-sources.md#collections), additio
 
 If the data source does not already exist, a new [collection](working-with-data-sources.md#collections) is created.
 
-Collections are sometimes used to hold global variables or make a temporary copy of a data source.  PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Collections do not enjoy this benefit and their use can make your app harder to create and understand.  Before using a collection in this manner, review [working with variables](file-name.md).
+Collections are sometimes used to hold global variables or make a temporary copy of a data source.  PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Collections do not enjoy this benefit and their use can make your app harder to create and understand.  Before using a collection in this manner, review [working with variables](working-with-variables.md).
 
 You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
@@ -50,7 +50,7 @@ The **Clear** function deletes all the records of a collection.  The columns of 
 
 Note that **Clear** only operates on collections and not other data sources.  You can use **[RemoveIf](function-remove-removeif.md)( *DataSource*, true )** for this purpose.  Use caution as this will remove all records from the data source's storage and can affect other users. 
 
-You can use the **[Remove](function-remove.md)** function to selectively remove records.
+You can use the **[Remove](function-remove-removeif.md)** function to selectively remove records.
 
 **Clear** has no return value.  It can only be used in a [behavior](file-name.md) formula.
 

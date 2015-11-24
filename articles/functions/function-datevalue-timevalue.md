@@ -41,7 +41,7 @@ Dates must be in one of the following formats:
 - DD Mon YYYY
 - Month DD, YYYY
 
-See the **Date** and **Time** functions to convert from numbers.
+See the **[Date](function-date-time.md)** and **[Time](function-date-time.md)** functions to convert from numbers.
 
 Also see [working with dates and times](../show-text-date-times.md) for more information. 
 

@@ -28,7 +28,7 @@ Most apps contain multiple screens.  Use the **Back** and **Navigate** function 
 
 **Back** and **Navigate** change only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on another screen. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and see how it affects what happens in the new screen.  The user can then navigate back to the original screen and see that the slider has retained its value.
 
-[Context variables](file-name.md) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to [pass parameters](file-name.md) to a screen. If you've used another programming tool, this approach is similar to passing parameters to [procedures](file-name.md).
+[Context variables](working-with-variables.md) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to [pass parameters](file-name.md) to a screen. If you've used another programming tool, this approach is similar to passing parameters to procedures.
 
 ## Description ##
 
@@ -51,7 +51,7 @@ In the first argument, specify the name of the screen to display.
 
 You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](file-name.md) that contains the context variable name as column name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function. 
 
-Set the **[OnHidden](file-name.md)** property of the old screen, the **[OnVisible](file-name.md)** property of the new screen, or both to make additional changes during the transition. The **[App!ActiveScreen](file-name.md)** property will be updated to reflect the change.
+Set the **OnHidden** property of the old screen, the **OnVisible** property of the new screen, or both to make additional changes during the transition. The **[App!ActiveScreen](file-name.md)** property will be updated to reflect the change.
 
 **Back** and **Navigate** have no return values, and you can use them only within a [behavior formula](file-name.md).
 
@@ -65,7 +65,7 @@ Set the **[OnHidden](file-name.md)** property of the old screen, the **[OnVisibl
 
 - *Transition* - Required.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this topic.
 
-- *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the context variables of the new screen as if passed to the **[UpdateContext](function-update.md)** function.
+- *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the context variables of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
 
 ## Examples ##
 

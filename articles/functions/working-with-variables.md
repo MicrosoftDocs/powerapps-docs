@@ -98,7 +98,7 @@ How context variables work:
 
 - You create and set context variables by using the **[UpdateContext](function-updatecontext.md)** function.  If a context variable doesn't already exist when first updated, it will be created with a default value of *blank*.
 - You create and update context variables with [records](working-with-tables.md).  In other programming tools, you  commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead.  When you use a context variable, use its name directly.  
-- You can also set a context variable when a screen is displayed, by using the **[Navigate](function-nagivate.md)** function.  If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
+- You can also set a context variable when a screen is displayed, by using the **[Navigate](function-navigate.md)** function.  If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
 - Except for **Navigate**, context variables are limited to the context of a single screen (which is where they get their name).  You can't use or set them outside of this context.
 - Context variables can hold any value, including strings, numbers, records, and tables.
 - When an app ends, all of its context variables are lost.   
@@ -109,11 +109,11 @@ Let's build our adding machine by using context variables:
 
 	When a user selects **Button1**, its **OnSelect** property will add to the running total based on this formula:<br> **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**.
 
-	The first time a user selects **Button1** and **UpdateContext** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
+	The first time a user selects **Button1** and **[UpdateContext](function-updatecontext.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
 
 	![](media/working-with-variables/context-variable-1.png)
 
-2. **Button2** will clear the running total by setting it to 0.  Again, **UpdateContext** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
+2. **Button2** will clear the running total by setting it to 0.  Again, **[UpdateContext](function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
 
 	![](media/working-with-variables/context-variable-2.png)
 
@@ -129,7 +129,7 @@ Being limited to the context of a screen is sometime inadequate.  You may need a
 
 How collections work:
 
-- You create and set collections by using the **ClearCollect** function.  You can use the **Collect** function instead, but it will effectively require another variable instead of replacing the old one.  
+- You create and set collections by using the **[ClearCollect](function-clear-collect-clearcollect.md)** function.  You can use the **Collect** function instead, but it will effectively require another variable instead of replacing the old one.  
 - A collection is a data source and, therefore, a table.  To access a single value stored in a collection, use the **First** function, and extract one property from the resulting record.  If you used a single value with **ClearCollect**, this will be the **Value** property, as in this example:<br>**First( VariableName )!Value**
 - Collections can be accessed from any formula in the PowerApp, on any screen.
 - When a PowerApp ends, all of its collections are emptied.
@@ -140,13 +140,13 @@ Let's recreate our adding machine using a collection:
 
 	When the user selects **Button1**, its **OnSelect** property will update the running total by using this formula:<br> **ClearCollect( RunningTotal, First( RunningTotal )!Value + Text1 )**
 
-	By using **ClearCollect** with a single value, a record will be created in the collection with a single **Value** property.
+	By using **[ClearCollect](function-clear-collect-clearcollect.md)** with a single value, a record will be created in the collection with a single **Value** property.
 
-	The first time that the user selects **Button1** and **ClearCollect** is called, **RunningTotal** will be empty.  In the addition, **First** will return *blank* and will be treated as a zero.
+	The first time that the user selects **Button1** and **[ClearCollect](function-clear-collect-clearcollect.md)** is called, **RunningTotal** will be empty.  In the addition, **First** will return *blank* and will be treated as a zero.
 
 	![](media/working-with-variables/collection-1.png)
 
-2. **Button2** will clear the running total by setting it to 0.  Again, **ClearCollect** is used with the formula **ClearCollect( RunningTotal, 0 )**.
+2. **Button2** will clear the running total by setting it to 0.  Again, **[ClearCollect](function-clear-collect-clearcollect.md)** is used with the formula **ClearCollect( RunningTotal, 0 )**.
 
 	![](media/working-with-variables/collection-2.png)
 

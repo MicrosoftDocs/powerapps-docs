@@ -33,7 +33,7 @@ Data sources can provide information on what constitutes valid values within a r
 - the minimum and maximum values of a date
 - and many other constraints  
  
-The Validate function uses this information to determine whether a value is valid and to return an appropriate error message if not. You can use the **[DataSourceInfo](file-name.md)** function to view the same information that **Validate** uses. 
+The Validate function uses this information to determine whether a value is valid and to return an appropriate error message if not. You can use the **[DataSourceInfo](function-datasourceinfo.md)** function to view the same information that **Validate** uses. 
 
 Data sources vary in how much validation information they provide, including not providing any at all.  **Validate** can only verify values based on this information.  Even if  **Validate** does not find a problem, applying the data change may still fail. You can use the **[Errors](function-errors.md)** function to obtain information about the failure.
 

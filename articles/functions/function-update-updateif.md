@@ -38,7 +38,7 @@ Use the **UpdateIf** function to modify records based on a condition.  The condi
 
 Modifications are specified using a change record containing new property values.  When this change record is provided inline with curly braces, property formulas can reference properties of the record being modified.  You can use this behavior to make modifications to records based on a formula.
 
-Similar to **UpdateIf**, you can also use the **[Patch](function-clear.md)** function to change specific columns of a record without affecting other columns.
+Similar to **UpdateIf**, you can also use the **[Patch](function-patch.md)** function to change specific columns of a record without affecting other columns.
 
 Both **Update** and **UpdateIf** return the modified data source as a table.  Both functions can only be used in [behavior](file-name.md) formulas. 
 

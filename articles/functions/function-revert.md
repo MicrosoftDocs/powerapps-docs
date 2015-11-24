@@ -28,7 +28,7 @@ The **Revert** function retrieves a fresh copy of the entire data source or a si
 
 For the records reverted, **Revert** also clears any errors from the table returned by the **[Errors](function-errors.md)** function.
 
-If a conflict is reported by the **Errors** function after a **[Patch](function-patch.md)** or other data operation, **Revert** the record to start with the conflicting version and reapply the change.
+If a conflict is reported by the **[Errors](function-errors.md)** function after a **[Patch](function-patch.md)** or other data operation, **Revert** the record to start with the conflicting version and reapply the change.
 
 **Revert** has no return value.  It can only be used in [behavior](file-name.md) formulas. 
 
@@ -50,11 +50,11 @@ In this example, you'll revert the data source named **IceCream**. The data sour
 
 A user on another device makes a modification to the Strawberry record, changing the **Quantity** to 400.  At about the same time, you change the same record's **Quantity** to 500, not knowing about the other change.
 
-You **Patch** your change:
+You **[Patch](function-patch.md)** your change:
 
 - **Patch( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ), { Quantity: 500 } )**
 
-You check the **Errors** table and find there is an error:
+You check the **[Errors](function-errors.md)** table and find there is an error:
 
 | Record | Column | Message | Error |
 |--------|--------|---------|-------|
@@ -64,7 +64,7 @@ Based on the **Error** column, you have a "Reload" button with an OnSubmit formu
 
 - **Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**
 
-The **Errors** table is now empty, and the new value for Strawberry has been loaded:
+The **[Errors](function-errors.md)** table is now empty, and the new value for Strawberry has been loaded:
 
 ![](media/function-revert/icecream-after.png)
 
