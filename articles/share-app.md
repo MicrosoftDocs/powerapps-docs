@@ -31,7 +31,7 @@ Share an app with multiple co-workers at the same time or with a group in Active
 
 ## Video demonstration ##
 
-[AZURE.VIDEO nb:cid:uuid:4a51313a-0d00-80c4-1ead-f1e5920c334e]
+[AZURE.VIDEO nb:cid:UUID:4a51313a-0d00-80c4-1ead-f1e5920c334e]
 
 ## Share an app ##
 1. Do either of the following:

@@ -23,7 +23,7 @@ Create a logic flow to perform a task automatically when an event triggers an ac
 
 ## Video example ##
 
-[AZURE.VIDEO nb:cid:uuid:b95d313a-0d00-80c4-bb62-f1e5920004d6]
+[AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-bb62-f1e5920004d6]
 
 **Prerequisites**
 

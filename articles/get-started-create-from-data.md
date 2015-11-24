@@ -35,7 +35,7 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 
 ## Video demonstration
 
-[AZURE.VIDEO nb:cid:uuid:dd5b313a-0d00-80c4-ef13-f1e592bab129]
+[AZURE.VIDEO nb:cid:UUID:dd5b313a-0d00-80c4-ef13-f1e592bab129]
 
 ## Build a PowerApp ##
 
