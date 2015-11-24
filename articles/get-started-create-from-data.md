@@ -21,8 +21,6 @@
 # Create a PowerApp from a set of data
 Create a PowerApp automatically based on data that you specify, explore how the PowerApp works by default, and then customize it to better fit how you work.
 
-You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/AppFromData.mp4) that shows how to create a PowerApp from your data.
-
 [What are PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
@@ -34,6 +32,10 @@ You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples
 For this tutorial, the data source is a list named **Top Charts** in a SharePoint Online site.
 
 ![Source data in SharePoint](./media/get-started-create-from-data/sharepoint-source.png)
+
+## Video demonstration
+
+[AZURE.VIDEO nb:cid:uuid:dd5b313a-0d00-80c4-ef13-f1e592bab129]
 
 ## Build a PowerApp ##
 
