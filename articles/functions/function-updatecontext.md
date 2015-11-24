@@ -26,7 +26,7 @@ Creates or updates [context variables](file-name.md) of the current [screen](fil
 
 Use the **UpdateContext** function to create a context variable, which temporarily holds a piece of information such as the number of times the user has clicked a button or the result of a data operation.
 
-Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable. If you want the equivalent of a global variable, create a [collection](file-name.md) by using the **[Collect](function-collect.md)** or **[ClearCollect](function-clearcollect.md)** function.
+Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable. If you want the equivalent of a global variable, create a [collection](file-name.md) by using the **Collect** or **[ClearCollect](function-clear-collect-clearcollect.md)** function.
 
 A PowerApp is based on formulas that automatically recalculate as the user interacts with the app.  Context variables do not enjoy this benefit and can make your app harder to create and understand.  Before using context variables, review [working with variables](file-name.md).
 

@@ -36,7 +36,7 @@ Use the **RemoveIf** function to remove records based on a set of conditions.  T
 
 **Remove** and **RemoveIf** return the modified data source as a table.  Both functions can only be used in [behavior](file-name.md) formulas. 
 
-You can also use the **[Clear](function-clear.md)** function to remove all of the records in a data source.
+You can also use the **Clear** function to remove all of the records in a data source.
 
 ## Syntax ##
 

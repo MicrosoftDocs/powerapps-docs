@@ -46,7 +46,7 @@ The **App** signal returns information about the running app.
 
 | Signal Property | Description |
 |--------------------|-------------|
-| **App!ActiveScreen** | Screen that is currently displayed.  Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determeine which screen is currently displayed.  You change the currently displayed screen with the **Back** and **Navigate** functions.  |
+| **App!ActiveScreen** | Screen that is currently displayed.  Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determeine which screen is currently displayed.  You change the currently displayed screen with the **[Back](function-navigate.md)** and **[Navigate](function-navigate.md)** functions.  |
 
 ### Compass ###
 
