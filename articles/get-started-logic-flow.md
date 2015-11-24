@@ -19,7 +19,7 @@
     ms.author="stepsic"/>
 
 # Create Logic Flows in PowerApps#
-Create a logic flow to perform a task automatically when a condition triggers an action. For example, create a logic flow that notifies you by mail as soon as someone adds a row to a SharePoint list. In this scenario, adding a row is the trigger, and sending mail is the action.
+Create a logic flow to perform a task automatically when an event triggers an action. For example, create a logic flow that notifies you by mail as soon as someone tweets about a keyword. In this scenario, a tweet is the trigger, and sending mail is the action.
 
 ## Video example ##
 
@@ -27,9 +27,9 @@ Create a logic flow to perform a task automatically when a condition triggers an
 
 **Prerequisites**
 
-- An account, such as Dropbox, OneDrive, or SharePoint, for storing files in the cloud
+- An Twitter account
 - An Office 365 account (from which you can send email)
-- Chrome browser
+- Web browser
 
 ## Create a trigger
 
@@ -41,23 +41,19 @@ Create a logic flow to perform a task automatically when a condition triggers an
 
     ![Create Logic from blank](./media/get-started-logic-flow/from-blank.png)
 
-4. In the box that says **How would you like to start?**, type or paste **SharePoint**.
+4. In the box that says **How would you like to start?**, type or paste **Twitter**.
 
-1. In the list of actions, select **SharePoint Online - When a new item is created**.
+1. In the list of actions, select **Twitter - When a new tweet appears**.
 
-    ![Sharepoint triggers](./media/get-started-logic-flow/add-sp-data.png)
+    ![Twitter triggers](./media/get-started-logic-flow/twitter-search.png)
 
-5. If you haven't already connected your SharePoint Online account to PowerApps, select **Sign in to SharePoint Online**, and then provide your credentials.
+5. If you haven't already connected your Twitter account to PowerApps, select **Sign in to Twitter**, and then provide your credentials.
 
-6. In the **SITE URL** box see if the site you want to use is present. If it is click that site. Otherwise, click **Enter custom value** and type or paste the URL of the SharePoint site that contains the list you want to use.
+    ![Twitter sign in](./media/get-started-logic-flow/twitter-signin.png)
 
-  ![Enter site](./media/get-started-logic-flow/enter-site.png)
+6. In the **QUERY TEXT** box type the keyword you are interested in searching.
 
-7. Under **LIST NAME**, select the down arrow to show the names of all lists in the site you specified.
-
-	**Note:** If **Could not retrieve values** appears, correct your site URL.
-
-8.  Select the name of a list.
+    ![Twitter keyword](./media/get-started-logic-flow/twitter-keyword.png)
 
 ## Create an action ##
 In this procedure, you'll add the action to send email and then you'll test that action. By following these steps, you'll learn the basics of actions and how to configure your logic flow to make it work the way you want.
@@ -82,11 +78,10 @@ In this procedure, you'll add the action to send email and then you'll test that
 
 	![Blank email message](./media/get-started-logic-flow/blank-email.png)
 
-6. In the **Body** box, type or paste **Item added to a list:**, and then select a parameter (such as **Title**) to add a placeholder for it to your message.
+6. In the **Body** box, type or paste **New tweet:**, and then select a parameter (such as **Tweet text**) to add a placeholder for it to your message.
 
-  **Note:** The available parameters reflect the column headings of whatever list you specify.
 
-	![Token added to the field](./media/get-started-logic-flow/message-token2.png)
+	![Token added to the field](./media/get-started-logic-flow/message-token.png)
 
 7. Type the end of your message, including any other parameters you want to include.
 
@@ -101,13 +96,9 @@ In this procedure, you'll add the action to send email and then you'll test that
 
 ## Test your logic flow ##
 
-1. On the main page for the list that you specified, select **new item**.
+1. Go to twitter and tweet with the keyword you indicated.
 
-	![Adding a row](./media/get-started-logic-flow/add-row.png)
-
-2. Specify data in each field, and then select **Save**.
-
-    Within a minute, an email message notifies you of the new item.
+    Within a minute, an email message notifies you of the new tweet.
 
 ## Turn on or off your Logic Flow ##
 
