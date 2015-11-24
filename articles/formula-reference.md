@@ -36,7 +36,6 @@ Reference information is also available for:
 
 [Abs](functions/function-numericals.md) Absolute value of a number.  
 
-
 [Acceleration](functions/signals.md) Reads the acceleration sensor in your device.
 
 [AddColumns](functions/function-table-shaping.md) Returns a table with columns added.
@@ -53,7 +52,7 @@ Reference information is also available for:
 
 ## C ##
 
-[Char](functions/function-char.md) Translates a character code into a string.  *Coming Soon.*
+[Char](functions/function-char.md) Translates a character code into a string.
 
 [Clear](functions/function-clear-collect-clearcollect.md) Deletes all data from a collection.
 
@@ -61,17 +60,19 @@ Reference information is also available for:
 
 [Collect](functions/function-clear-collect-clearcollect.md) Creates collections and adds data to a data source.
 
-[ColorFade](functions/function-colors.md) Fades a color value.  *Coming Soon.*
+[Color](functions/function-colors.md) Built in color values.
 
-[ColorValue](functions/function-colors.md) Translates a CSS color name to a color value.  *Coming Soon.*
+[ColorFade](functions/function-colors.md) Fades a color value.
+
+[ColorValue](functions/function-colors.md) Translates a CSS color name or hex code to a color value.  
 
 [Compass](functions/signals.md) Returns your compass heading.
 
-[Concat](functions/function-concatenate.md) Concatenates strings in a data source.  *Coming Soon.*
+[Concat](functions/function-concatenate.md) Concatenates strings in a data source.  
 
 <!-- TODO: Rename concat -->
 
-[Concatenate](functions/function-concatenate.md) Concatenates strings.  *Coming Soon.*
+[Concatenate](functions/function-concatenate.md) Concatenates strings.
 
 
 [Connection](functions/signals.md) Returns information about your network connection.
@@ -86,19 +87,19 @@ Reference information is also available for:
 
 ## D ##
 
-[Date](functions/function-date.md) Returns a date/time value, based on Year, Month, and Day values.  *Coming Soon.*
+[Date](functions/function-date-time.md) Returns a date/time value, based on Year, Month, and Day values.  
 
-[DateAdd](functions/function-dateadd-datediff.md) Add days, months, quarters, or years to a date/time value. *Coming Soon.*
+[DateAdd](functions/function-dateadd-datediff.md) Add days, months, quarters, or years to a date/time value. 
 
-[DateDiff](functions/function-dateadd-datediff.md) Subtracts two date values, and shows the result in days, months, quarters, or years. *Coming Soon.*
+[DateDiff](functions/function-dateadd-datediff.md) Subtracts two date values, and shows the result in days, months, quarters, or years. 
 
-[DateTimeValue](functions/function-date.md) Converts a date and time string to a date/time value. *Coming Soon.*
+[DateTimeValue](functions/function-datevalue-timevalue.md) Converts a date and time string to a date/time value. 
 
-[DateValue](functions/function-date.md) Converts a date-only string to a date/time value. *Coming Soon.*
+[DateValue](functions/function-datevalue-timevalue.md) Converts a date-only string to a date/time value. 
 
 [DataSourceInfo](functions/function-datasourceinfo.md) Provides information about a data source.
 
-[Day](functions/function-datetime-parts.md) Retrieves the day portion of a date/time value.  *Coming Soon.*
+[Day](functions/function-datetime-parts.md) Retrieves the day portion of a date/time value.  
 
 [Disable](functions/function-enable-disable.md) Disables a signal, such as **Location** (GPS). *Coming Soon.*
 
@@ -134,7 +135,7 @@ Reference information is also available for:
 
 [HashTags](functions/function-hashtags.md) Retrieves the set of hashtags (#strings) that appear in a string. *Coming Soon.*
 
-[Hour](functions/function-datetime-parts.md) Retrieves the hour portion of a date/time value.  *Coming Soon.*
+[Hour](functions/function-datetime-parts.md) Retrieves the hour portion of a date/time value.
 
 ## I ##
 
@@ -179,11 +180,11 @@ Reference information is also available for:
 
 [Min](functions/function-aggregates.md) Minimum value of a table expression or a set of arguments.
 
-[Minute](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  *Coming Soon.*
+[Minute](functions/function-datetime-parts.md) Retrieves the minute portion of a date/time value.  
 
 [Mod](functions/function-mod.md) Returns the remainder after a number is divided by a divisor. *Coming Soon.*
 
-[Month](functions/function-datetime-parts.md) Retrieves the month portion of a date/time value.  *Coming Soon.*
+[Month](functions/function-datetime-parts.md) Retrieves the month portion of a date/time value. 
 
 ## N ##
 
@@ -223,7 +224,7 @@ Reference information is also available for:
 
 [Revert](functions/function-revert.md) Reloads and clears errors for the records of a data source.
 
-[RGBA](functions/function-colors.md) Returns a color value for a set of red, green, blue, and alpha components. *Coming Soon.*
+[RGBA](functions/function-colors.md) Returns a color value for a set of red, green, blue, and alpha components.
 
 [Right](functions/function-left-mid-right.md) Returns the right portion of a string. *Coming Soon.*
 
@@ -237,7 +238,7 @@ Reference information is also available for:
 
 [SaveData](functions/functions-loaddata-savedata.md) Saves a collection to PowerApp private storage. *Coming Soon.*
 
-[Second](functions/function-datetime-parts.md) Retrieves the second portion of a date/time value.  *Coming Soon.*
+[Second](functions/function-datetime-parts.md) Retrieves the second portion of a date/time value.  
 
 [ShowColumns](functions/function-table-shaping.md) Returns a table with only selected columns.
 
@@ -259,9 +260,9 @@ Reference information is also available for:
 
 [Text](functions/function-text.md) Formats a number as a string. *Coming Soon.*
 
-[Time](functions/function-date.md) Returns a date/time value, based on Hour, Minute, and Second values.  *Coming Soon.*
+[Time](functions/function-date.md) Returns a date/time value, based on Hour, Minute, and Second values.  
 
-[TimeValue](functions/function-date.md) Converts a time-only string to a date/time value. *Coming Soon.*
+[TimeValue](functions/function-date.md) Converts a time-only string to a date/time value. 
 
 [Today](functions/function-now-today.md) Returns the current date/time value. *Coming Soon.*
 
@@ -291,4 +292,4 @@ Reference information is also available for:
 
 ## Y ##
 
-[Year](functions/function-datetime-parts.md) Retrieves the year portion of a date/time value.  *Coming Soon.*
+[Year](functions/function-datetime-parts.md) Retrieves the year portion of a date/time value.  
