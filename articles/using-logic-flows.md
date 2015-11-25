@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Start a logic flow in an app  | Microsoft PowerApps"
-	description="Create a logic flow that performs one or more tasks after a trigger, such as a user selecting a button, occurs in an app."
+	description="Create a logic flow that performs one or more tasks after an event, such as a user selecting a button, occurs in an app."
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -19,7 +19,7 @@
 
 # Start a logic flow in an app #
 
-Create a logic flow that performs one or more tasks when a trigger occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a record is updated in the cloud, or all of these. You can configure any control in the app to start the flow, which runs even if you close PowerApps.
+Create a logic flow that performs one or more tasks when an event occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which runs even if you close PowerApps.
 
 [What is PowerApps?](http://aka.ms/pamktg)
 
@@ -69,7 +69,9 @@ Create a logic flow that performs one or more tasks when a trigger occurs in an 
 
 ## Add a logic flow to an app ##
 
-1. Open PowerApps, and then select **Get started** under **Start from scratch**.
+1. Open PowerApps, and then select **New** in the **File** menu (near the left edge of the screen).
+
+1. Under **Start from scratch**, select **Get started**.
 
 	![Get started button](./media/use-logic-flows/get-started.png)
 
@@ -82,8 +84,6 @@ Create a logic flow that performs one or more tasks when a trigger occurs in an 
 	![Rename input-text control](./media/use-logic-flows/rename-text.png)
 
 1. On the **Insert** tab, add a button, and move it under the text box.
-
-	![Rename input-text control](./media/use-logic-flows/rename-text.png)
 
 1. With the button selected, select **Logic Flows** on the **Action** tab.
 
