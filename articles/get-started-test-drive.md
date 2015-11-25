@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create a PowerApp from a template | Microsoft PowerApps"
-	description="Step-by-step instructions for creating a PowerApp automatically based on a template, customizing the PowerApp, and then publishing it."
+	pageTitle="Create an app from a template | Microsoft PowerApps"
+	description="Step-by-step instructions for creating an app automatically based on a template, customizing the app, and then publishing it."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,8 +18,8 @@
    ms.date="11/22/2015"
    ms.author="anneta"/>
 
-# Create a PowerApp from a template #
-Create a PowerApp automatically based on one of several templates for a variety of scenarios. Explore how the PowerApp works by default, customize it to better fit the way you work, and then publish it.
+# Create an app from a template #
+Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, customize it to better fit the way you work, and then publish it.
 
 [What are PowerApps?](http://www.kratosapps.com/tutorials)
 
@@ -32,7 +32,7 @@ Create a PowerApp automatically based on one of several templates for a variety 
 
 [AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-8bbc-f1e59201f745]
 
-## Open a PowerApp template ##
+## Open a template ##
 1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
 
 	![The Connections option on the File menu](./media/get-started-test-drive/file-connections.jpg)
@@ -49,11 +49,11 @@ Create a PowerApp automatically based on one of several templates for a variety 
 
 	![The New option on the File menu](./media/get-started-test-drive/file-new.jpg)
 
-1. Leave the default option to create a PowerApp for a phone.
+1. Leave the default option to create an app for a phone.
 
-	![The option to create a PowerApp for a tablet or a phone](./media/get-started-test-drive/phone-app.jpg)
+	![The option to create an app for a tablet or a phone](./media/get-started-test-drive/phone-app.jpg)
 
-	**Note:** You can create a PowerApp for a tablet, but this tutorial focuses on the phone option.
+	**Note:** You can create an app for a tablet, but this tutorial focuses on the phone option.
 
 1. Under **Start from a template**, select **Get started**.
 
@@ -63,14 +63,14 @@ Create a PowerApp automatically based on one of several templates for a variety 
 
 	![Open the Event Signup template template](./media/get-started-test-drive/choose-template.jpg)
 
-	The **VolunteerDetailsScreen_1** of your PowerApp appears.
+	The **VolunteerDetailsScreen_1** of your app appears.
 
 	![VolunteerDetailsScreen_1 with default information](./media/get-started-test-drive/volunteer-default.jpg)
 
-## Explore the PowerApp's default appearance and behavior ##
-PowerApps from templates open in the default workspace, where you'll spend most of your time customizing a PowerApp from a template or creating a PowerApp from scratch. Before you make changes, you'll explore how the PowerApp works in **Preview**.
+## Explore the app's default appearance and behavior ##
+Apps from templates open in the default workspace, where you'll spend most of your time customizing an app from a template or creating an app from scratch. Before you make changes, you'll explore how the app works in **Preview**.
 
-**Tip:** Design and develop PowerApps in the default workspace, but test them in **Preview** before you share them with others.
+**Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
 
 1. In the left navigation bar, select the thumbnail for the **VolunteerDetailsScreen**.
 
@@ -103,7 +103,7 @@ PowerApps from templates open in the default workspace, where you'll spend most 
 1. (optional) Verify that the data in your cloud account reflects your changes.
 
 ## Configure a control ##
-As you customize the interface of a PowerApp or develop one from scratch, you'll add and configure elements that show text, images, and other information. To configure how an element appears or what it does, you select it, which adds a thick, gray box around it.
+As you customize the interface of an app or develop one from scratch, you'll add and configure elements that show text, images, and other information. To configure how an element appears or what it does, you select it, which adds a thick, gray box around it.
 
 **Important:** If you select another element or a blank area of the screen, you can no longer configure the first element.
 
@@ -131,7 +131,7 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 	![Renaming a control](./media/get-started-test-drive/rename-label.jpg)
 
-	**Note:** As you develop or customize a PowerApp, you'll configure some controls to reference other controls. For example, you'll probably configure a button or other control to open one screen from another. That configuration will be much easier if the screens have names that are easier to remember than **Screen1**, **Screen2**, and so on.
+	**Note:** As you develop or customize an app, you'll configure some controls to reference other controls. For example, you'll probably configure a button or other control to open one screen from another. That configuration will be much easier if the screens have names that are easier to remember than **Screen1**, **Screen2**, and so on.
 
 1. With the label still selected, select **Text** in the properties list, and then type **Today()** in the formula bar.
 
@@ -139,8 +139,8 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 1. Triple-click the text in the label, and then type anything you want.
 
-## Save and share your PowerApp ##
-After you finish developing and testing your PowerApp, share it with other people by saving it to powerapps.com and sending mail that your app is available. Specify which people can run your app or even customize it to create their own versions.
+## Save and share your app ##
+After you finish developing and testing your app, share it with other people by saving it to powerapps.com and sending mail that your app is available. Specify which people can run your app or even customize it to create their own versions.
 
 1. On the **File** menu, select **App Settings**.
 
@@ -148,19 +148,19 @@ After you finish developing and testing your PowerApp, share it with other peopl
 
 2. Update any of these settings.
 
-	- the name of your PowerApp
+	- the name of your app
 
-		![Option to rename your PowerApp](./media/get-started-test-drive/rename-app.jpg)
+		![Option to rename your app](./media/get-started-test-drive/rename-app.jpg)
 
-	- the color of your PowerApp's tile
+	- the color of your app's tile
 
-		![Color options for your PowerApp's tile](./media/get-started-test-drive/tile-color.jpg)
+		![Color options for your app's tile](./media/get-started-test-drive/tile-color.jpg)
 
-	- the image on your PowerApp's tile
+	- the image on your app's tile
 
-		![Import an image to appear on your PowerApp's tile](./media/get-started-test-drive/tile-image.jpg)
+		![Import an image to appear on your app's tile](./media/get-started-test-drive/tile-image.jpg)
 
-	- the screen size and orientation of your PowerApp
+	- the screen size and orientation of your app
 
 		![Aspect-ratio options, such as 3:2 and 4:3](./media/get-started-test-drive/aspect-ratio.jpg)
 
@@ -174,20 +174,20 @@ After you finish developing and testing your PowerApp, share it with other peopl
 
 3. Under **Save As**, leave the default value of **PowerApps cloud**, and then select **Save**.
 
-	![Save a PowerApp](./media/get-started-test-drive/save-powerapps.jpg)
+	![Save an app](./media/get-started-test-drive/save-powerapps.jpg)
 
 6. On the **File** menu, select **Share**.
 
 	An email template appears.
 
-1. In the **To** text box, type the email addresses of the people with whom you want to share your PowerApp.
+1. In the **To** text box, type the email addresses of the people with whom you want to share your app.
 
 	![Text box for specifying email addresses](./media/get-started-test-drive/share-to.jpg)
 
-1. In the list of permissions, select **Can view** to allow users to run your PowerApp, or select **Can edit** to allow users to run your PowerApp and create their own versions of it.
+1. In the list of permissions, select **Can view** to allow users to run your app, or select **Can edit** to allow users to run your app and create their own versions of it.
 
-	![Drop-down list for specifying permissions on a PowerApp that you share](./media/get-started-test-drive/share-level.jpg)
+	![Drop-down list for specifying permissions on an app that you share](./media/get-started-test-drive/share-level.jpg)
 
 1. Edit the text in the **Subject** and **Message** boxes, and then select **Share**.
 
-	The people with whom you shared your PowerApp will receive an email message that contains a link they can select to install PowerApps and run your PowerApp.
+	The people with whom you shared your app will receive an email message that contains a link they can select to install PowerApps and run your app.

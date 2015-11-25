@@ -20,7 +20,7 @@
 # Create a card gallery in PowerApps#
 Show a set of data for which each [record](working-with-tables.md) contains more information than can appear at one time on the screen. For example, a product catalog might contain an image of each product, a description, quantity in stock, technical specifications, and enough other information that it can't all fit on a screen without scrolling. In a card gallery, you add sections that hold one or more types of information, and users can scroll through the sections to display it all.
 
-[What are PowerApps?](http://aka.ms/pamktg)
+[What is PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
 - [Install PowerApps](http://aka.ms/installpowerapps)
@@ -29,11 +29,11 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 ## Create a card gallery ##
 1. Open PowerApps, and then do one of the following:
 
-	- [Add a screen](add-screen-context-variables.md) to a PowerApp.
+	- [Add a screen](add-screen-context-variables.md) to an app.
 
-	![Option to add a screen to a PowerApp](./media/create-card-gallery/add-screen.png)
+	![Option to add a screen to an app](./media/create-card-gallery/add-screen.png)
 
-	- Create a PowerApp from scratch. (Select **New** in the **File** menu, and then select **Get started** under **Start from scratch**.)
+	- Create an app from scratch. (Select **New** in the **File** menu, and then select **Get started** under **Start from scratch**.)
 
 	![Option to create an app from scratch](./media/create-card-gallery/blank-app.png)
 
@@ -87,7 +87,7 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 1. In the list of data sources, select the data source that you want to use, and then follow the prompts to specify the exact table that you want to use.
 
-	For example, the data source for [creating a PowerApp from scratch](get-started-create-from-blank.md) is an Excel file in Dropbox. To connect to that data source, select **Dropbox**, select the file name (**eventsignup.xls**), select the table name (**Schedule**), and then select **Insert.**
+	For example, the data source for [creating an app from scratch](get-started-create-from-blank.md) is an Excel file in Dropbox. To connect to that data source, select **Dropbox**, select the file name (**eventsignup.xls**), select the table name (**Schedule**), and then select **Insert.**
 
 1. If you add another data source (for example, named **Cast**), switch between them by selecting the icon next to the name of the data source you're using and then selecting the data source you want to use.
 

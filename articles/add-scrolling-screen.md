@@ -20,7 +20,7 @@
 # Add a scrolling screen in PowerApps #
 Create a screen that users can scroll to show more types of content than the screen can show at a time. For example, you might want to juxtapose multiple charts, videos, or other kinds of data from different sources on the same screen while keeping each element big enough to see clearly. If you add controls to multiple sections, the relative position of each element is maintained, even if the screen orientation changes between portrait and landscape.  
 
-[What are PowerApps?](http://www.powerapps.com)
+[What is PowerApps?](http://www.powerapps.com)
 
 **Prerequisites**
 - [Install PowerApps](http://aka.ms/installpowerapps)
@@ -29,11 +29,11 @@ Create a screen that users can scroll to show more types of content than the scr
 ## Create a scrolling screen, and add an element
 1. Open PowerApps, and then do one of the following:
 
-	- [Add a screen](add-screen-context-variables.md) to a PowerApp.
+	- [Add a screen](add-screen-context-variables.md) to an app.
 
-	![Option to add a screen to a PowerApp](./media/add-scrolling-screen/add-screen.png)
+	![Option to add a screen to an app](./media/add-scrolling-screen/add-screen.png)
 
-	- Create a PowerApp from scratch. (Select **New** in the **File** menu, and then select **Get started** under **Start from scratch**.)
+	- Create an app from scratch. (Select **New** in the **File** menu, and then select **Get started** under **Start from scratch**.)
 
 	![Option to create an app from scratch](./media/add-scrolling-screen/blank-app.png)
 

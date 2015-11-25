@@ -1,5 +1,5 @@
-<properties	pageTitle="Create a PowerApp from scratch | Microsoft PowerApps"
-	description="Create a PowerApp from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business."
+<properties	pageTitle="Create an app from scratch | Microsoft PowerApps"
+	description="Create an app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -17,12 +17,12 @@
    ms.date="11/22/2015"
    ms.author="anneta"/>
 
-# Create a PowerApp from scratch #
-Create your own PowerApp from scratch using any of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
+# Create an app from scratch #
+Create your own app from scratch using any of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
 
-[What are PowerApps?](https://aka.ms/pamktg)
+[What is PowerApps?](https://aka.ms/pamktg)
 
-By following this tutorial, you'll create a PowerApp that shows users a set of data on the first screen:
+By following this tutorial, you'll create an app that shows users a set of data on the first screen:
 
 ![Screen in which users can scroll through a set of data](./media/get-started-create-from-blank/view-screen-button.jpg)
 
@@ -65,7 +65,7 @@ To follow this tutorial exactly:
 
 1. Leave the default option to create a phone app.
 
-	![The option buttons for creating a PowerApp for tablets or phones](./media/get-started-create-from-blank/phone-app.jpg)
+	![The option buttons for creating an app for tablets or phones](./media/get-started-create-from-blank/phone-app.jpg)
 
 1. Under **Start from scratch**, select **Get Started**.
 
