@@ -19,18 +19,17 @@
    ms.author="anneta"/>
 
 # Create an app from a template #
+
+[AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-8bbc-f1e59201f745]
+
 Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, customize it to better fit the way you work, and then publish it.
 
-[What are PowerApps?](http://www.kratosapps.com/tutorials)
+[What is PowerApps?](https://aka.ms/pamktg)
 
 **Prerequisites**
-
 - [Install PowerApps](http://aka.ms/powerappsinstall)
 - An account on DropBox, OneDrive, or GoogleDrive for storing sample data in the cloud
 
-## Video demonstration ##
-
-[AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-8bbc-f1e59201f745]
 
 ## Open a template ##
 1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
@@ -59,7 +58,7 @@ Create an app automatically based on one of several templates for a variety of s
 
 	![Open a PowerApps template](./media/get-started-test-drive/open-template.jpg)
 
-2. Select **Event SignUp**, and then select **Choose**.
+2. Select **Event SignUp**, and then select **Use**.
 
 	![Open the Event Signup template template](./media/get-started-test-drive/choose-template.jpg)
 
@@ -68,15 +67,13 @@ Create an app automatically based on one of several templates for a variety of s
 	![VolunteerDetailsScreen_1 with default information](./media/get-started-test-drive/volunteer-default.jpg)
 
 ## Explore the app's default appearance and behavior ##
-Apps from templates open in the default workspace, where you'll spend most of your time customizing an app from a template or creating an app from scratch. Before you make changes, you'll explore how the app works in **Preview**.
+Apps from templates open in the default workspace, where you'll spend most of your time customizing an app or creating one from scratch. Before you make changes, you'll explore how the app works in **Preview**.
 
 **Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
 
-1. In the left navigation bar, select the thumbnail for the **VolunteerDetailsScreen**.
+1. In the left navigation bar, select the thumbnail for the **VolunteerDetailsScreen_1**.
 
 	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.jpg)
-
-	By default, your information appears in the text boxes for name and address. You can change that information if you want.
 
 1. Press F5 (or select the right arrow in the upper-right corner) to open **Preview**.
 
@@ -86,21 +83,21 @@ Apps from templates open in the default workspace, where you'll spend most of yo
 
 	![Options for specifying a t-shirt size and a Next button](./media/get-started-test-drive/tshirt-size.jpg)
 
-	The **Schedule** screen appears with columns for days, timeslots, and names of volunteers.
+	**ScheduleScreen** appears with columns for days, timeslots, and names of volunteers.
 
-1. Select a **Sign up** button to schedule yourself (or a fictional volunteer) for a timeslot.
+1. Select a **Sign up** button to schedule yourself for a timeslot.
 
-	![Button for signing up a volunteer for a particular timeslot](./media/get-started-test-drive/signup-button.jpg)
+	![Button for signing up for a particular timeslot](./media/get-started-test-drive/signup-button.jpg)
 
 	**Note:** If you select a **Sign up** button for a timeslot for which nobody else has signed up, the other **Sign up** button for the same timeslot stops being available.
 
-1. (optional) Remove yourself or the volunteer from a timeslot by selecting the "X" icon next to the name of the person whom you want to remove.
+1. (optional) Verify that the data in your cloud account reflects your changes.
+
+1. (optional) Remove yourself from a timeslot by selecting the "X" icon next to your name.
 
 1. Return to the default workspace by selecting the "X" icon in the upper-right corner (under the PowerApps title bar).
 
 	![Button to close Preview](./media/get-started-test-drive/close-preview.png)
-
-1. (optional) Verify that the data in your cloud account reflects your changes.
 
 ## Configure a control ##
 As you customize the interface of an app or develop one from scratch, you'll add and configure elements that show text, images, and other information. To configure how an element appears or what it does, you select it, which adds a thick, gray box around it.
@@ -115,7 +112,7 @@ When an element is selected, you can configure it in these ways:
 
 	![Properties list and formula bar](./media/get-started-test-drive/properties-list.jpg)
 
-If you can't find a property on the ribbon, find it in the properties list, which shows all properties alphabetically.
+If you can't find a property on the ribbon, find it in the properties list, which shows properties alphabetically.
 
 1. Near the top of the screen, select **PowerApps at OneWeek**.
 
@@ -125,13 +122,13 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 	![Resizing a control](./media/get-started-test-drive/resize-label.jpg)
 
-1. Move the label to the right side of the screen by dragging the selection box itself (not a triangle or square in the selection box).
+1. Move the label to the upper-right corner of the screen by dragging the selection box itself (not a triangle or square in the selection box).
 
-1. With the label still selected, rename it by selecting **Label11_1** on the **Home** tab and then typing **Banner**.
+1. With the label still selected, rename it by selecting **Label11_2** on the **Home** tab and then typing **Banner**.
 
 	![Renaming a control](./media/get-started-test-drive/rename-label.jpg)
 
-	**Note:** As you develop or customize an app, you'll configure some controls to reference other controls. For example, you'll probably configure a button or other control to open one screen from another. That configuration will be much easier if the screens have names that are easier to remember than **Screen1**, **Screen2**, and so on.
+	**Note:** As you develop or customize an app, you'll configure some controls to reference other controls. For example, you'll probably configure a button or other control to open one screen from another. That type of configuration will be much easier if the screens have names that are easier to remember than **Screen1**, **Screen2**, and so on.
 
 1. With the label still selected, select **Text** in the properties list, and then type **Today()** in the formula bar.
 
