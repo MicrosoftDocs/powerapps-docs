@@ -21,8 +21,6 @@
 
 When you create an app, you can use the Landscape or Portrait view. You can also lock the aspect ratio. This topic provides more information on these options.
 
-> [AZURE.IMPORTANT] Currently, there is no auto-scaling between portrait and landscape. The screen orientation you choose (landscape or portrait) is locked and remains the layout used by your PowerApp.
-
 ### Prerequisites
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
 - Create a new PowerApp or open an existing PowerApp.
