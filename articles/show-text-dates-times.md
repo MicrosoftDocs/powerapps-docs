@@ -1,6 +1,6 @@
 <properties
-	pageTitle=" Show text and format a date or time in PowerApps | Microsoft Azure"
-	description="Add and format dates and times using Microsoft PowerApps"
+	pageTitle=" Show text and format a date or time in PowerApps | Microsoft PowerApps"
+	description="Add and format dates and times using PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,11 +14,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/05/2015"
+   ms.date="11/24/2015"
    ms.author="mandia"/>
 
 
-# Show text and format dates and times in your app
+# Show text and format dates and times in your PowerApp
 
 Add dates and times, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
 
@@ -26,7 +26,8 @@ For example, add data from users about stock trades or client meetings, data fro
 
 ### Prerequisites
 
-- Install [PowerApps](http://aka.ms/powerappsinstall) from the Windows Store. Create a new app or open an existing app in PowerApps.
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new PowerApp or open an existing PowerApp.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 ## Show text in a label
@@ -54,7 +55,7 @@ DateValue | Converts a literal string, as shown between quotation marks, to a va
 ![][5]  
 ![][6]  
 
-4. Move the Birthdate text so it all controls are shown.
+4. Move the Birthdate text so all controls are shown.
 5. In the **ShowText** label (created in step 1), set its **Text** property to the following expression:    
 ```DateDiff(Today(), DateValue(Birthdate!Text))```  
 
@@ -75,7 +76,7 @@ In this section, we're going demonstrate different date and time functions, incl
 Let's get started.
 
 ### Format date and time values
-There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your PowerApps app. We suggest creating a blank screen and stepping through the different scenarios.
+There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your PowerApps. We suggest creating a blank screen and stepping through the different scenarios.
 
 #### Format date time using the DateTimeValue, DateTimeFormat, and DateValue functions
 
@@ -97,7 +98,7 @@ There are many functions you can use to format dates and times. You can even use
 4. Change the **Text** property of the label to the following expression:  
 ```DateTimeValue(ArrivalDateTime!Text, "fr")```
 
-	The label shows the day before the month, as expected for a French user:  
+	The label shows the day and then the month, as expected for a French user:  
 	![][12]  
 	> [AZURE.TIP] To use intellisense to see the other locales, in the expression in the function bar, remove the *closing quotation mark* and *fr*; but leave the *open quotation mark*:  
 	>![][13]  

@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Upload images, take a picture, play an audio and video file in PowerApps Studio | Microsoft Azure"
-	description="Use PowerApps Studio to add images, audio, video, microphone, and pen features to your app"
+	pageTitle="Upload images, take a picture, play an audio and video file in PowerApps | Microsoft PowerApps"
+	description="Add and configure images, audio, video, microphone, and pen features to your PowerApp"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,12 +14,12 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/27/2015"
+   ms.date="11/24/2015"
    ms.author="mandia"/>
 
 # Using the image, picture, audio, and video multimedia options
 
-In PowerApps Studio, there are several multimedia options available. You can use these options to do various things, including:
+In PowerApps, there are several multimedia options available. You can use these options to do various things, including:
 
 - Upload images to your app
 - Take pictures using the camera on your mobile device
@@ -28,35 +28,46 @@ In PowerApps Studio, there are several multimedia options available. You can use
 - Use the microphone on your mobile device to make a recording
 - Use a pen on a tablet to create a sketch or a drawing
 
-This topic shows you how to do add these multimedia options to your app in PowerApps Studio.
+The following multimedia options are available within your app:  
+![][19]
 
-> [AZURE.TIP] New to PowerApps? Curious about what we're talking about? Go to [PowerApps](http://www.kratosapps.com).
+This topic shows you how to do add these multimedia options to your PowerApps.
+
 
 ### Prerequisites
 
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps. The following multimedia options are available within your app:  
-![][19]
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new PowerApp or open an existing PowerApp. 
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+
+> [AZURE.TIP] In your PowerApps, the **File** menu includes a **Media** option. In **Media**, you can upload images, audio files, and video files:  
+> ![][24]  
+> 
+> It's easier to upload these files before you start adding the controls to your app. Then, add your control and select the file from a list.  
 
 
 ## Upload an image or add a picture
-In your PowerApps app, you can add an image and add a picture. Use the **Image** option to add a stationary picture when creating your app, like a company logo. If you're creating a travel app, you can add pictures of exotic travel destinations, city skylines, and common attractions. If you're creating a pet adoption app, you can add pictures of the animals available for adoption.
+In your PowerApps, you can add an image and add a picture. Use the **Image** option to add a stationary picture when creating your app, like a company logo. For example, you can create a travel app that shows pictures of exotic travel destinations, city skylines, and common attractions. If you're creating a pet adoption app, you can add pictures of the animals available for adoption.
 
-Use the **Picture** option to give your app users the ability to upload pictures. If you have an insurance app, users can upload pictures of the items they want to insure, like a car or a motorcycle. If you have a dating app, users can upload pictures of themselves.
+Use the **Picture** option to give your app users the ability to upload pictures. For example, you can create an insurance app that lets users upload pictures of the items they want to insure, like a car or a motorcycle. If you have a dating app, users can upload pictures of themselves.
 
-This section lists the steps to add an Image and Picture controls to your app.
+This section lists the steps to add the Image and Picture controls to your PowerApp.
 
 #### Add an image
-1. On the **Insert** tab, select **Image**:  
+
+1. On the **File** tab, select **Media**, and then select **Images**.
+2. Select the **Upload** folder, browse to any the .jpeg file that you want to use, and then select **Open**. Your Media should look similar to the following:  
+![][22]  
+3. Go back to the app designer. 
+4. On the **Insert** tab, select **Image**:  
 ![][2]  
-2. On the **Content** tab, select **Image**, and then select **Add an image file**.
-3. Browse and select the file that you want to use, and then select **Open**. The image you selected appears in the control you added:  
+5. On the **Content** tab, and select **Image**. In the scroll list, select the image you added. The image displays in the control:  
 ![][3]  
 
 ####  Add a picture
 1. On the **Insert** tab, select **Media**, and then select **Add Picture**:  
 ![][20]  
-2. Preview your app: ![][1]. The picture control automatically adds an **Add Picture** button. When you select it, an explorer window opens. Select your picture and select **Open**.  
+2. Preview your app: ![][1]. The picture control automatically adds an **Add Picture...** button. When you select it, an explorer window opens. Select your picture and select **Open**.  
 	The picture is displayed in the control you added.
 
 
@@ -83,15 +94,19 @@ You can easily resize the image gallery by clicking-and-dragging the corner. Thi
 ![][8]  
 	Set its **Items** property to MyImages:  
 	![][9]  
-6. Preview your app: ![][1]. To take pictures, select **MyCamera** multiple times. Each picture that you take is shown in the gallery. Press the **Esc** key to go back to the app designer.
-7. Select the first image in the gallery. Set its **OnSelect** property to the following function:  
-```Remove(MyImages, ThisItem)```
+6. Preview your app: ![][1]. To take pictures, select **MyCamera** multiple times. Each picture that you take is shown in the gallery. Press the **ESC** key or select the **X** to go back to the app designer.
 
-8. Preview your app: ![][1]. Select any image in the gallery. The image you select is now removed. Press the **Esc** key to go back to the app designer.
+
+Now, let's remove an image from the gallery when you select it:
+
+1. Select the first image in the gallery. 
+2. Set its **OnSelect** property to the following function:  
+```Remove(MyImages, ThisItem)```  
+3. Preview your app: ![][1]. Select any image in the gallery. The image you select is now removed. Press the **ESC** key or the **X** to go back to the app designer.
 
 > [AZURE.NOTE]
 > - When you create a collection, you can see what's in your collection by going to the **File** tab, and then select **Collections**.  
-> - When you select the first item in the gallery, any changes you make apply to everything in the gallery. In this example, we selected the first image in the gallery and updated it's **OnSelect** property. This means that the changes you make apply to all images in the gallery.  
+> - When you select the second item in the gallery, any changes you make apply to the gallery. In this example, we selected the second image in the gallery and updated it's **OnSelect** property. This means that the changes you make apply to all images in the gallery.  
 > - If you close the app, you'll lose the images that you've collected. If you want to keep them, go to the **File** tab, select **Save**.
 
 
@@ -101,20 +116,24 @@ Configure an audio control to play a file in any format that Internet Explorer s
 1. On the **Home** tab, select **New Screen**.
 2. On the **Insert** tab, select **Media**, and then select **Audio**:  
 ![][10]  
-3. On the **Content** tab, select **Media**, and then select **Add an audio**.
-4. Browse for the audio file that you want to play. Select **Open**. The **Media** property of the audio control is set to the name of the file that you added. Select the play button near the left side of the audio control:  
+3. On the **Content** tab, select **Media**, and then select **Add an audio file**.
+4. Select **Media**, select **Audio**, and then select the **Upload** button to browse for the audio file that you want to play. Select **Open**. The file is now added to Media and can be used with your app:  
+![][23]  
+5. Go back to the app designer.  
+5. Select the Audio control and set the **Media** property to the name of the file that you added. Select the play button to hear the recording:  
 ![][11]  
 
 	The file plays. You can also use the audio control to play sounds that you record using the **Microphone** control (also on the **Insert** tab > **Media**).
 
 ## Add video and play it in your app
-Configure a video control to play a file in any format that Internet Explorer supports. For example, you can use a .wmv file. If you don't have a video, you can create your own using the video recording feature of your webcam.
+Configure a video control to play a file in any format that Internet Explorer supports. For example, you can use a .wmv file. If you don't have a video, you can create your own using the video recording feature of your webcam. 
+
+The following steps assume you already uploaded the video to your PowerApp. 
 
 1. On the **Home** tab, select **New Screen**.
 1. On the **Insert** tab, select **Media**, and then select **Video**:  
 ![][12]  
-2. On the **Content** tab, select **Media**, and then select **Add a video**.
-3. Browse for the file that you want to play. Select **Open**. The **Media** property is set to the name of the file that you added. Select the play button in the center of the control to watch your video:  
+2. On the **Content** tab, select **Media**, and then select your video file from the list. The **Media** property is set to the name of the file that you added. Select the play button to watch your video:  
 ![][13]  
 
 
@@ -122,16 +141,15 @@ Configure a video control to play a file in any format that Internet Explorer su
 You can also play videos from external sources, including YouTube.
 
 Select the video control. Set its **Media** property to the URL of the video you want to show. For example, set it to the following video on the Microsoft YouTube channel:  
-[https://www.youtube.com/watch?v=tGGCHmb9bro](https://www.youtube.com/watch?v=tGGCHmb9bro)  
+Add audio and play it in your app
 ![][14]
-
 
 **Note** Use double quotation marks around the URL.
 
 Preview your app: ![][1]. Select the play button and watch the video:  
 ![][15]  
 
-To return to the app designer, press the **Esc** key.
+To return to the app designer, press the **ESC** key.
 
 
 ## Use the microphone to make recordings and play them in your app
@@ -159,7 +177,7 @@ Using the microphone to create recordings, and show these recordings in a galler
 
 	Type something else in the **Description** box, and make another recording. Repeat as many times as you want. Each description and recording appears in the gallery.
 
-Press the **Esc** key to return to the app designer.
+Press the **ESC** key to return to the app designer.
 
 ## Use the pen to write or draw directly within the app
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
@@ -180,7 +198,7 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 	Select the clear button (with the "x") in Sketches, write or draw something else in it, and then select the **Add** button again. The contents of the pen control appear in the second item in the gallery.
 
-Repeat these steps as many times as you like. Press the **Esc** key to return to the designer.
+Repeat these steps as many times as you like. Press the **ESC** key to return to the designer.
 
 You can also convert written text to typed text:
 
@@ -226,3 +244,6 @@ In this topic, you:
 [19]: ./media/add-images-pictures-audio-video/allmedia.png
 [20]: ./media/add-images-pictures-audio-video/addpicture.png
 [21]: ./media/add-images-pictures-audio-video/renameinputtext.png
+[22]: ./media/add-images-pictures-audio-video/media.png
+[23]: ./media/add-images-pictures-audio-video/mediaaudio.png
+[24]: ./media/add-images-pictures-audio-video/mediaoptions.png
