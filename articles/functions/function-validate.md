@@ -20,7 +20,7 @@
 
 # Validate function in PowerApps #
 
-The **Validate** function checks whether the value of a single [column](working-with-tables.md) or a complete [record](working-with-tables.md) is valid for a [data source](working-with-data-sources.md).  
+The **Validate** function checks whether the value of a single [column](working-with-tables.md#columns) or a complete [record](working-with-tables.md#records) is valid for a [data source](working-with-data-sources.md).  
 
 ## Description ##
 
@@ -37,7 +37,7 @@ The Validate function uses this information to determine whether a value is vali
 
 Data sources vary in how much validation information they provide, including not providing any at all.  **Validate** can only verify values based on this information.  Even if  **Validate** does not find a problem, applying the data change may still fail. You can use the **[Errors](function-errors.md)** function to obtain information about the failure.
 
-If the Validate function finds a problem, the function returns an error message that you can show to the user of the app.  If all values are valid, **Validate** returns [blank](file-name.md).  When working with a [collection](working-with-data-sources.md) that has no validation information, values are always valid.
+If the Validate function finds a problem, the function returns an error message that you can show to the user of the app.  If all values are valid, **Validate** returns [blank](function-isblank-isempty.md).  When working with a [collection](working-with-data-sources.md#collections) that has no validation information, values are always valid.
 
 ## Syntax ##
 

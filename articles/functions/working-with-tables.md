@@ -26,7 +26,7 @@ Tables and records help organize related information:
 
 In PowerApps, tables and records can be calculated just as numbers are.  Functions can take tables and records as arguments and also return them.  
 
-Tables of information appear in a wide variety of systems, including Excel, SharePoint lists, and SQL Server, to name but a few.  PowerApps use a [data source](working-with-data-sources.md), which is an extended table, to read and write information to an external source.  You can also create a [collection](working-with-data-sources.md) within a PowerApp to hold a temporary table.
+Tables of information appear in a wide variety of systems, including Excel, SharePoint lists, and SQL Server, to name but a few.  PowerApps use a [data source](working-with-data-sources.md), which is an extended table, to read and write information to an external source.  You can also create a [collection](working-with-data-sources.md#collections) within a PowerApp to hold a temporary table.
 
 ## Elements of a table ##
 
@@ -44,7 +44,7 @@ You may have referred to records as "rows" or "items" in other tools.
 
 A property is an individual piece of information for a record.
 
-Just as with controls, you access a property of a recordby using the **!** operator on the record.  For example, **First(Products)!Name** would return the **Name** property for the first record of the "Chocolate" table.
+Just as with controls, you access a property of a recordby using the **!** [operator](operators.md) on the record.  For example, **First(Products)!Name** would return the **Name** property for the first record of the "Chocolate" table.
 
 A property can contain another record or table.  You can nest as many levels of records and tables as you want.
 
@@ -86,7 +86,7 @@ Let's walk through some simple examples.
 
 	![](media/working-with-tables/gallery-items-sort.png)
 
-3. Going one step further, show only the first two records in the gallery by using the **FirstN** function.  This function also takes a table as its first argument and returns a table.  In our example, the base data source is passed through **Sort**, passed through **FirstN**, and then displayed in the gallery.  Note that we're seeing the first two records of the sorted table.
+3. Going one step further, show only the first two records in the gallery by using the **[FirstN](function-first-last.md)** function.  This function also takes a table as its first argument and returns a table.  In our example, the base data source is passed through **[Sort](function-sort.md)**, passed through **[FirstN](function-first-last.md)**, and then displayed in the gallery.  Note that we're seeing the first two records of the sorted table.
 
 	![](media/working-with-tables/gallery-items-sort-firstn.png)
 
@@ -94,25 +94,25 @@ Let's walk through some simple examples.
 
 If a table is provided as an argument, many functions in PowerApps return a table.  Note that these functions transform the original table to create a second table as a result. They don't modify the original table even if it's a data source.
 
-- **Sort**, **[Filter](function-filter-lookup.md)** - Sorts and filters records.
-- **FirstN**, **[LastN](function-first-last.md)** - Returns the first N or last N records of the table.
-- **Abs**, **Sqrt**, **Round**, **RoundUp**, **RoundDown** - Arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
-- **Left**, **Mid**, **Right**, **Replace**, **Substitute**, **Replace**, **Trim**, **Lower**, **Upper**, **[Proper](function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
+- **[Sort](function-sort.md)**, **[Filter](function-filter-lookup.md)** - Sorts and filters records.
+- **[FirstN](function-first-last.md)**, **[LastN](function-first-last.md)** - Returns the first N or last N records of the table.
+- **[Abs](function-numericals.md)**, **[Sqrt](function-numericals.md)**, **Round**, **RoundUp**, **RoundDown** - Arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
+- **Left**, **Mid**, **Right**, **Replace**, **Substitute**, **Replace**, **Trim**, **[Lower](function-lower-upper-proper.md)**, **[Upper](function-lower-upper-proper.md)**, **[Proper](function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
 - **Len** - For a column of strings, returns a single-column table that contains the length of each string.
 - **[Concatenate](function-concatenate.md)** - Concatenates multiple columns of strings, resulting in a single-column table of strings.
-- **AddColumns**, **DropColumns**, **RenameColumns**, **[ShowColumns](function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
+- **[AddColumns](function-table-shaping.md)**, **[DropColumns](function-table-shaping.md)**, **[RenameColumns](function-table-shaping.md)**, **[ShowColumns](function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
 - **Distinct** - Removes duplicates records.
 - **Shuffle** - Randomly shuffles records.
 - **HashTags** - Searches for hash tags in a string.
 - **[Errors](function-errors.md)** - Provides error information when you work with a data source.
 
-For tables that use a single column as an argument, you can extract a column from a larger table by using the **[ShowColumns](function-table-shaping.md)** function.  For example, you can calculate a lowercase list of products by using this function:<br>**Lower( ShowColumns( Products, "Name" ) )**<br>If you combine a table with **AddColumns**, **RenameColumns**, and **DropColumns**, you can completely reshape the table as needed.
+For tables that use a single column as an argument, you can extract a column from a larger table by using the **[ShowColumns](function-table-shaping.md)** function.  For example, you can calculate a lowercase list of products by using this function:<br>**Lower( ShowColumns( Products, "Name" ) )**<br>If you combine a table with **[AddColumns](function-table-shaping.md)**, **[RenameColumns](function-table-shaping.md)**, and **[DropColumns](function-table-shaping.md)**, you can completely reshape the table as needed.
 
 The data-source functions do modify one of their arguments: the records of the data source. In general, these functions also return the data source's new value as a table.
 
-- **Collect**, **Clear**, **[ClearCollect](function-clear-collect-clearcollect.md)** - Clear, create, and add to a collection.
-- **Update**, **[UpdateIf](function-update-updateif.md)** - Updates records.
-- **Remove**, **[RemoveIf](function-remove-removeif.md)** - Deletes records.
+- **[Collect](function-clear-collect-clearcollect.md)**, **[Clear](function-clear-collect-clearcollect.md)**, **[ClearCollect](function-clear-collect-clearcollect.md)** - Clear, create, and add to a collection.
+- **[Update](function-update-updateif.md)**, **[UpdateIf](function-update-updateif.md)** - Updates records.
+- **[Remove](function-remove-removeif.md)**, **[RemoveIf](function-remove-removeif.md)** - Deletes records.
 
 The following controls have table-valued properties:
 
@@ -129,7 +129,7 @@ To accomplish this, use the **Gallery1!Selected** property.  This property retur
 
 ![](media/working-with-tables/selected-collection.png)
 
-You can visualize a record or a table by using the **Collect** function to create a collection and then viewing the collection in PowerApps.  In this case, **Collect( SelectedRecord, Gallery1!Selected )** was performed through a temporary button's **OnSelect** formula.
+You can visualize a record or a table by using the **[Collect](function-clear-collect-clearcollect.md)** function to create a collection and then viewing the collection in PowerApps.  In this case, **Collect( SelectedRecord, Gallery1!Selected )** was performed through a temporary button's **OnSelect** formula.
 
 **Body1** and **Subtitle1** are controls in the gallery and included in **Selected** as nested records, which you can drill into by clicking the table icons. **Body** and **Subtitle** are the values taken directly from the incoming **Items** table.
 
@@ -139,14 +139,14 @@ Now that we have the selected record, we can extract individual properties from 
 
 This new control uses the formula **Gallery!Selected!Heading**.  We've taken the **Selected** property, which is a record, and extracted the **Heading** property from it.  
 
-Records are also useful as a general-purpose container for related named values.  The **[UpdateContext](function-updatecontext.md)** and **[Navigate](function-navigate.md)** functions use a record to gather the context variables that are to be updated. The **Updates** property on a gallery gathers the changes to be made to a data source. The **[Patch](function-patch.md)** function is used to update data sources, but can also be used to merge records together.  In these cases, the record was never a part of a table.
+Records are also useful as a general-purpose container for related named values.  The **[UpdateContext](function-updatecontext.md)** and **[Navigate](function-navigate.md)** functions use a record to gather the [context variables](working-with-variables.md#context-variables) that are to be updated. The **Updates** property on a gallery gathers the changes to be made to a data source. The **[Patch](function-patch.md)** function is used to update data sources, but can also be used to merge records together.  In these cases, the record was never a part of a table.
 
 ### Record functions and control properties ###
 
 Functions that return records:
 
-- **FirstN**, **[LastN](function-first-last.md)** - Returns the first or last record or records of the table.
-- **Lookup** - Returns the first record from a table that matches one or more criteria.
+- **[FirstN](function-first-last.md)**, **[LastN](function-first-last.md)** - Returns the first or last record or records of the table.
+- **[Lookup](function-filter-lookup.md)** - Returns the first record from a table that matches one or more criteria.
 - **[Patch](function-patch.md)** - Updates a data source or merges records.
 - **[Defaults](function-defaults.md)** - Returns the default values for a data source.
 

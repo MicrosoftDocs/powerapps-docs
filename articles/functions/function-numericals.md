@@ -28,7 +28,7 @@ The **Abs** function returns the non-negative value of its argument.  If a numbe
 
 The **Sqrt** function returns the number, that when multiplied by itself, equals its argument.
 
-If you [pass](file-name.md) a single number, the [return value](file-name.md) is the converted version of that string.  If you pass a single-column table that contains numbers, the return value is a single-column table of answers. If you have a multi-column [table](file-name.md), you can shape it into a single-column table, as [working with tables](file-name.md) describes.  
+If you pass a single number, the return value is the converted version of that string.  If you pass a single-column [table](working-with-tables.md) that contains numbers, the return value is a single-column table of answers. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](working-with-tables.md) describes.  
 
 ## Syntax ##
 
@@ -45,7 +45,7 @@ If you [pass](file-name.md) a single number, the [return value](file-name.md) is
 ## Examples ##
 
 ### Single number ###
-The examples in this section use an input-text control, named **Author**, as their data source. The control contains the string **E. E. CummINGS**.
+The examples in this section use an input-text control, named **Author**, as their [data source](working-with-data-sources.md). The control contains the string **E. E. CummINGS**.
 
 | Formula | Description | Result |
 |---------|-------------|--------|

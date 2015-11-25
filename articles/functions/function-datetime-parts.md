@@ -38,7 +38,7 @@ The **Second** function returns the second component of a Date/Time value, rangi
 
 All functions return a number.
 
-See [working with dates and times](../show-text-date-times.md) for more information. 
+See [working with dates and times](../show-text-dates-times.md) for more information. 
 
 <!-- TOOD: should we have a millisecond? -->
 

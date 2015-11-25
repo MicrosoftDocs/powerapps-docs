@@ -20,7 +20,7 @@
 
 # Filter and LookUp functions in PowerApps #
 
-Finds one or more records in a table.
+Finds one or more [records](working-with-tables.md#records) in a [table](working-with-tables.md).
 
 ## Description ##
 
@@ -28,7 +28,7 @@ The **Filter** function finds records in a table based on a formula.
 
 The **LookUp** function finds the first record in a table that satisfies a formula.
 
-The formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  Columns of the table can be used in the formula.  
+The formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  [Columns](working-with-tables.md#columns) of the table can be used in the formula.  
 
 **Filter** returns all records found, as a table.  **LookUp** returns only the first record found.  Optionally, **LookUp** can evaluate an additional formula to further reduce the record to a single value.  
 
@@ -39,7 +39,7 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 **Filter**( *Table*, *Formula1* [, *Formula2*, ... ] )
 
 - *Table* - Required. Table to search.
-- *Formula(s)* - Required. This formula is evaluated for each record of the table, and those that result in **true** are included in the result of **Filter**.  You can reference columns within the table.  If more than one formula is supplied, the results of all formulas are combined with the **And** function.
+- *Formula(s)* - Required. This formula is evaluated for each record of the table, and those that result in **true** are included in the result of **Filter**.  You can reference columns within the table.  If more than one formula is supplied, the results of all formulas are combined with the **[And](function-logicals.md)** function.
 
 **LookUp**( *Table*, *Formula* [, *ReductionFormula* ] )
 

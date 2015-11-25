@@ -20,13 +20,13 @@
 
 # Refresh function in PowerApps #
 
-Refreshes the [records](working-with-tables.md) of a [data source](working-with-data-sources.md).
+Refreshes the [records](working-with-tables.md#records) of a [data source](working-with-data-sources.md).
 
 ## Description ##
 
 The **Refresh** function retrieves a fresh copy of a data source.  You will see changes made by other users. 
 
-**Refresh** has no return value.  It can only be used in [behavior](file-name.md) formulas. 
+**Refresh** has no return value.  It can only be used in behavior formulas. 
 
 ## Syntax ##
 

@@ -32,7 +32,7 @@ The **Lower**, **Upper**, and **Proper** functions convert the case of letters i
 
 All three functions ignore characters that aren't letters.
 
-If you [pass](file-name.md) a single string, the [return value](file-name.md) is the converted version of that string.  If you pass a single-column table that contains strings, the return value is a single-column table of converted strings. If you have a multi-column [table](file-name.md), you can shape it into a single-column table, as [working with tables](file-name.md) describes.
+If you pass a single string, the return value is the converted version of that string.  If you pass a single-column [table](working-with-tables.md) that contains strings, the return value is a single-column table of converted strings. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](working-with-tables.md) describes.
 
 ## Syntax ##
 
@@ -47,7 +47,7 @@ If you [pass](file-name.md) a single string, the [return value](file-name.md) is
 ## Examples ##
 
 ### Single string ###
-The examples in this section use an input-text control, named **Author**, as their data source. The control contains the string **E. E. CummINGS**.
+The examples in this section use an input-text control, named **Author**, as their [data source](working-with-data-sources.md). The control contains the string **E. E. CummINGS**.
 
 | Formula | Description | Result |
 |---------|-------------|--------|
@@ -62,7 +62,7 @@ The examples in this section use this data source, named **People**:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-lower.png) |
+| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-lower.png) |
 | **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-upper.png) |
 | **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any first letter of a word that's lowercase to uppercase.</li><li>Converts any other letter that's uppercase to lowercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-proper.png) |
 

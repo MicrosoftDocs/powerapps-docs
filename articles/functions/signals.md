@@ -26,7 +26,7 @@ Access to the app's environment, such as where the user is located in the world 
 
 ## Description and syntax ##
 
-All signals return a record of information. You can use and store this information as a record, or extract individual properties with the **!** operator.
+All signals return a [record](working-with-tables.md#records) of information. You can use and store this information as a record, or extract individual properties with the **!** [operator](operators.md).
 
 ### Acceleration ###
 

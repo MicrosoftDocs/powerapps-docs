@@ -20,19 +20,19 @@
 
 # UpdateContext function in PowerApps #
 
-Creates or updates [context variables](file-name.md) of the current [screen](file-name.md).
+Creates or updates [context variables](working-with-variables.md#context-variables) of the current screen.
 
 ## Overview ##
 
 Use the **UpdateContext** function to create a context variable, which temporarily holds a piece of information such as the number of times the user has clicked a button or the result of a data operation.
 
-Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable. If you want the equivalent of a global variable, create a [collection](file-name.md) by using the **Collect** or **[ClearCollect](function-clear-collect-clearcollect.md)** function.
+Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable. If you want the equivalent of a global variable, create a [collection](working-with-data-sources.md#collections) by using the **[Collect](function-clear-collect-clearcollect.md)** or **[ClearCollect](function-clear-collect-clearcollect.md)** function.
 
-A PowerApp is based on formulas that automatically recalculate as the user interacts with the app.  Context variables do not enjoy this benefit and can make your app harder to create and understand.  Before using context variables, review [working with variables](file-name.md).
+A PowerApp is based on formulas that automatically recalculate as the user interacts with the app.  Context variables do not enjoy this benefit and can make your app harder to create and understand.  Before using context variables, review [working with variables](working-with-variables.md).
 
 ## Description ##
 
- To create or update a context variable, pass a single [record](file-name.md) to the **UpdateContext** function. In each record, specify the name of a column, which defines or matches the name of the variable, and the value to which you want to set that variable.
+ To create or update a context variable, pass a single [record](working-with-tables.md#records) to the **UpdateContext** function. In each record, specify the name of a [column](working-with-tables.md#columns), which defines or matches the name of the variable, and the value to which you want to set that variable.
 
 - If you specify the name of a variable that you've previously defined, **UpdateContext** sets the value of the variable to the value that you specify.
 - If you specify the name of a variable that doesn't yet exist, **UpdateContext** creates a variable with that name and sets the value of that variable to the value that you specify.
@@ -54,7 +54,7 @@ A context variable holds its value until the user closes the app.  If you define
 
 Every context variable is scoped to a screen. If you want to define a context variable on one screen and modify that variable from another screen, you must build a formula that's based on the **[Navigate](function-navigate.md)** function.
 
-**UpdateContext** has no return value, and you can use it only within a [behavior formula](file-name.md).
+**UpdateContext** has no return value, and you can use it only within a behavior formula.
 
 ## Syntax ##
 
@@ -102,4 +102,4 @@ Every context variable is scoped to a screen. If you want to define a context va
 
 1. Press Esc to return to the default workspace.
 
-[Another example](add-screen-context-variable.md)
+[Another example](../add-screen-context-variables.md)
