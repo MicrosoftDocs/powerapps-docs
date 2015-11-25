@@ -22,7 +22,7 @@
 
 Create an app with multiple screens, add ways for users to navigate between them, and manage data in your app by creating and updating one or more context variables. Store data in a context variable if a piece of information helps determine how the app appears or what it does but you don't need to retain the information after the app is closed.
 
-[What are PowerApps?](https://aka.ms/pamktg)
+[What is PowerApps?](https://aka.ms/pamktg)
 
 **Prerequisites**
 

@@ -88,13 +88,13 @@ Reference information is also available for:
 
 **[Date](functions/function-date-time.md)** Returns a date/time value, based on Year, Month, and Day values.  
 
-**[DateAdd](functions/function-dateadd-datediff.md)** Add days, months, quarters, or years to a date/time value. 
+**[DateAdd](functions/function-dateadd-datediff.md)** Add days, months, quarters, or years to a date/time value.
 
-**[DateDiff](functions/function-dateadd-datediff.md)** Subtracts two date values, and shows the result in days, months, quarters, or years. 
+**[DateDiff](functions/function-dateadd-datediff.md)** Subtracts two date values, and shows the result in days, months, quarters, or years.
 
-**[DateTimeValue](functions/function-datevalue-timevalue.md)** Converts a date and time string to a date/time value. 
+**[DateTimeValue](functions/function-datevalue-timevalue.md)** Converts a date and time string to a date/time value.
 
-**[DateValue](functions/function-datevalue-timevalue.md)** Converts a date-only string to a date/time value. 
+**[DateValue](functions/function-datevalue-timevalue.md)** Converts a date-only string to a date/time value.
 
 **[DataSourceInfo](functions/function-datasourceinfo.md)** Provides information about a data source.
 
@@ -162,7 +162,7 @@ Reference information is also available for:
 
 **Len** Returns the length of a string. *Coming Soon.*
 
-**LoadData** Loads a collection from PowerApp private storage. *Coming Soon.*
+**LoadData** Loads a collection from PowerApps private storage. *Coming Soon.*
 
 **[Location](functions/signals.md)** Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
 
@@ -182,7 +182,7 @@ Reference information is also available for:
 
 **Mod** Returns the remainder after a number is divided by a divisor. *Coming Soon.*
 
-**[Month](functions/function-datetime-parts.md)** Retrieves the month portion of a date/time value. 
+**[Month](functions/function-datetime-parts.md)** Retrieves the month portion of a date/time value.
 
 ## N ##
 
@@ -234,7 +234,7 @@ Reference information is also available for:
 
 ## S ##
 
-**SaveData** Saves a collection to PowerApp private storage. *Coming Soon.*
+**SaveData** Saves a collection to PowerApps private storage. *Coming Soon.*
 
 **[Second](functions/function-datetime-parts.md)** Retrieves the second portion of a date/time value.  
 
@@ -260,7 +260,7 @@ Reference information is also available for:
 
 **[Time](functions/function-date-time.md)** Returns a date/time value, based on Hour, Minute, and Second values.  
 
-**[TimeValue](functions/function-datevalue-timevalue.md)** Converts a time-only string to a date/time value. 
+**[TimeValue](functions/function-datevalue-timevalue.md)** Converts a time-only string to a date/time value.
 
 **Today** Returns the current date/time value. *Coming Soon.*
 

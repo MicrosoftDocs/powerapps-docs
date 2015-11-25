@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Start a logic flow in a PowerApp  | Microsoft PowerApps"
-	description="Create a logic flow that performs one or more tasks after a trigger, such as a user selecting a button, occurs in a PowerApp."
+	pageTitle="Start a logic flow in an app  | Microsoft PowerApps"
+	description="Create a logic flow that performs one or more tasks after a trigger, such as a user selecting a button, occurs in an app."
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -17,11 +17,11 @@
    ms.date="11/05/2015"
    ms.author="prkumarms"/>
 
-# Start a logic flow in a PowerApp #
+# Start a logic flow in an app #
 
-Create a logic flow that performs one or more tasks when a trigger occurs in a PowerApp. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a record is updated in the cloud, or all of these. You can configure any control in a PowerApp to start the flow, which runs even if you close PowerApps.
+Create a logic flow that performs one or more tasks when a trigger occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a record is updated in the cloud, or all of these. You can configure any control in the app to start the flow, which runs even if you close PowerApps.
 
-[What are PowerApps?](http://aka.ms/pamktg)
+[What is PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
 - [Install PowerApps](http://aka.ms/installpowerapps)
@@ -67,7 +67,7 @@ Create a logic flow that performs one or more tasks when a trigger occurs in a P
 
 	![Name and save your flow](./media/use-logic-flows/name-flow.png)
 
-## Add a logic flow to a PowerApp ##
+## Add a logic flow to an app ##
 
 1. Open PowerApps, and then select **Get started** under **Start from scratch**.
 

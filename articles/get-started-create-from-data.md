@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create a PowerApp from a set of data | Microsoft PowerApps"
-	description="Create a PowerApp automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
+	pageTitle="Create an app from a set of data | Microsoft PowerApps"
+	description="Create an app automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,10 +18,10 @@
    ms.date="11/22/2015"
    ms.author="anneta"/>
 
-# Create a PowerApp from a set of data
-Create a PowerApp automatically based on data that you specify, explore how the PowerApp works by default, and then customize it to better fit how you work.
+# Create an app from a set of data
+Create an app automatically based on data that you specify, explore how the app works by default, and then customize it to better fit how you work.
 
-[What are PowerApps?](http://aka.ms/pamktg)
+[What is PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
 
@@ -37,7 +37,7 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 
 [AZURE.VIDEO nb:cid:UUID:dd5b313a-0d00-80c4-ef13-f1e592bab129]
 
-## Build a PowerApp ##
+## Build an app ##
 
 1. In PowerApps, select **Connections** on the **File** menu (near the left edge of the screen).
 
@@ -57,7 +57,7 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 
 1. Under **Start from your data**, select **Get started**.
 
-	![Option to create a PowerApp from data](./media/get-started-create-from-data/create-from-data.jpg)
+	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.jpg)
 
 1. Specify the data source that you want to use, as in this example:
 
@@ -75,10 +75,10 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 
 		![Select a list in a SharePoint site](./media/get-started-create-from-data/choose-list.png)
 
-Your PowerApp is built.
+Your app is built.
 
-## Customize a PowerApp ##
-When a PowerApp is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the PowerApp for your needs.
+## Customize the app ##
+When an app is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
 
 1. If **BrowseScreen1** isn't already showing, show it by selecting its thumbnail in the left navigation pane.
 
@@ -116,7 +116,7 @@ When a PowerApp is built automatically, heuristics are used to suggest the best 
 
 	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final.png)
 
-## Run the PowerApp ##
+## Run the app ##
 1. With **BrowseScreen1** showing, open Preview by pressing F5 or by selecting the Preview icon near the upper-right corner.
 
 	![Preview icon](./media/get-started-create-from-data/open-preview.png)

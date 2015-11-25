@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Connect to data in your organization | Microsoft PowerApps"
-	description="Build a PowerApp based on data from on-premise SQL Server or Salesforce."
+	description="Build an app based on data from on-premise SQL Server or Salesforce."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,7 +20,7 @@
 
 # Connect to data in your organization #
 
-Create a PowerApp to manage your organization's data, from sources such as SalesForce and an on-premise server that's running SQL Server. By setting your organization up with Microsoft PowerApps Enterprise, an IT administrator can make this data available to you and other business users, in addition to performing these tasks:
+Create an app to manage your organization's data, from sources such as SalesForce and an on-premise server that's running SQL Server. By setting your organization up with Microsoft PowerApps Enterprise, an IT administrator can make this data available to you and other business users, in addition to performing these tasks:
 - Manage PowerApps within your organization, including managing user access.
 - Create APIs that connect to specific sources of organizational data.
 - Manage permissions for the APIs and connections.
