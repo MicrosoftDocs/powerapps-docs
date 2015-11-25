@@ -53,12 +53,12 @@ In these steps, we download a sample file. Using a collection, we import this sa
 
 3. Go back to your designer.
 4. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button.
-4. In the pie chart control, select the middle of the pie chart:   
+5. In the pie chart control, select the middle of the pie chart:   
 ![][10]  
-5. Set the **Items** property of the pie chart to the **ProductRevenue** collection you created:  
+6. Set the **Items** property of the pie chart to the **ProductRevenue!Revenue2014** collection you created:  
 ![][2]  
 
-	When you do this, the pie chart shows the revenue of the products:  
+	When you do this, the pie chart shows the 2014 revenue of the products:  
 ![][3]  
 
 ## Add a bar chart to display your data
