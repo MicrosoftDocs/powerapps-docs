@@ -1,5 +1,5 @@
 <properties
-    pageTitle="PowerApps tutorial: Create Logic Flows from a template"
+    pageTitle="Create Logic Flows from a template | Microsoft PowerApps"
     description="Create Logic Flows from any of several built-in templates."
     services=""
     suite="powerapps"
@@ -38,13 +38,7 @@ Create Logic Flows from any of several built-in templates that can, for example,
 
 	A list of categories appears on the left, and all of the templates appear on the right.
 
-    ![List of templates for Logic Flows](./media/get-started-logic-template/alltemplates.png)
-
-1. Narrow your list by selecting a category, such as **Social**.
-
-	![Social category](./media/get-started-logic-template/logiccategories.png)
-
-1. Select **Send email on new tweets**, and then provide your credentials for Twitter and Office 365.
+1. In **Get Email Notification for Tweets**, select **Use this template**, and then provide your credentials for Twitter and Office 365.
 
 	Your logic flow appears, showing all trigger conditions and actions.
 
