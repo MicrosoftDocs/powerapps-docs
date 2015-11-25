@@ -20,7 +20,7 @@
 
 # Working with data sources in PowerApps #
 
-Data sources are extensions of [tables](working-with-tables.md) that use [connections](file-name.md) to retrieve and store information in a service.  You can use data sources to read and write data in Excel workbooks, SharePoint lists, SQL Server tables, and many other services.
+Data sources are extensions of [tables](working-with-tables.md) that use connections to retrieve and store information in a service.  You can use data sources to read and write data in Excel workbooks, SharePoint lists, SQL Server tables, and many other services.
 
 ## Data sources ##
 
@@ -28,18 +28,18 @@ As we learned in [Working with tables](working-with-tables.md), tables in PowerA
 
 Some of the most interesting tables are stored for later retrieval and sharing.  PowerApps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your PowerApp, and each will become a separate *data source*.  
 
-A data source is an extension of a table, and you can use it in any context that you use a table.  Just like a table, each data source has records, columns, and properties that you can use in formulas.  In addition:
+A data source is an extension of a table, and you can use it in any context that you use a table.  Just like a table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas.  In addition:
 
 - The data source has the same column names and data types as the underlying table in the connection.
 - The data source is loaded from the service automatically when the PowerApp is loaded.  You can force the data to refresh by using the **[Refresh](function-refresh.md)** function.
 - As users run a PowerApp, they can create, modify, and delete records and push those changes back to the underlying table in the service.
-	- Records can be created with the **[Patch](function-patch.md)** and **Collect** functions.  
+	- Records can be created with the **[Patch](function-patch.md)** and **[Collect](function-clear-collect-clearcollect.md)** functions.  
 	- Records can be modified with the **[Patch](function-patch.md)** **[Update](function-update-updateif.md)** and **[UpdateIf](function-update-updateif.md)** functions.
 	- Records can be removed with the **[Remove](function-remove-removeif.md)** and **[RemoveIf](function-remove-removeif.md)** functions.
 	- Errors when working with a data source are available through the **[Errors](function-errors.md)** function.
 - The **[DataSourceInfo](function-datasourceinfo.md)** **[Defaults](function-defaults.md)** and **[Validate](function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
 
-PowerApps can't be used to create or modify a data source; the table must already exist in a service elsewhere.  To create a table (for example, in an Excel workbook stored on OneDrive), you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from PowerApps.  [Collections](#Collections) can be created and modified in PowerApps but are only temporary.
+PowerApps can't be used to create or modify a data source; the table must already exist in a service elsewhere.  To create a table (for example, in an Excel workbook stored on OneDrive), you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from PowerApps.  Collections can be created and modified in PowerApps but are only temporary.
 
 ## Displaying records from a data source ##
 ![](media/working-with-data-sources/reading-from-a-datasource.png)
@@ -49,7 +49,7 @@ The diagram above shows the flow of information when a PowerApp reads the inform
 - A connection makes this information available to PowerApps.  The connection takes care of authentication of the PowerApps user to access the information.
 - When the PowerApp is started or the **[Refresh](function-refresh.md)** function invokes, information is drawn from the connection into a data source in the PowerApp for local use.
 - Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **Items** property to the data source: **Gallery!Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **Default** property.  
-- The data source is also a table.  So you can use **Filter**, **Sort**, **AddColumns**, and other functions to refine and augment the data source before using it as a whole.  You can also use the **Lookup**, **First**, **Last**, and other functions to work with individual records.
+- The data source is also a table.  So you can use **[Filter](function-filter-lookup.md)**, **[Sort](function-sort.md)**, **[AddColumns](function-table-shaping.md)**, and other functions to refine and augment the data source before using it as a whole.  You can also use the **[Lookup](function-filter-lookup.md)**, **[First](function-first-last.md)**, **[Last](function-first-last.md)**, and other functions to work with individual records.
 
 For example, let's walk through the steps to display our SharePoint list:
 
@@ -68,7 +68,7 @@ Other users can modify the SharePoint list outside of the PowerApp.  When it loa
 
 In the last section, we showed you how to read a data source.  Note that the arrows in the diagram above are one way.  Changes to a data source aren't pushed back through the same formulas in which the data was retrieved.  Instead, new formulas are used.  Often a different screen is used for editing a record than for browsing records, especially on a mobile device.
 
-Note that, to modify an existing record of a data source, the record must have originally come from the data source.  The record may have traveled through a gallery, a context variable, and any number of formulas, but its origin should be traceable back to the data source.  This is important because additional information travels with the record that uniquely identifies it, ensuring that you modify the correct record.    
+Note that, to modify an existing record of a data source, the record must have originally come from the data source.  The record may have traveled through a gallery, a [context variable](working-with-variables.md#context-variables), and any number of formulas, but its origin should be traceable back to the data source.  This is important because additional information travels with the record that uniquely identifies it, ensuring that you modify the correct record.    
 
 ![](media/working-with-data-sources/writing-to-a-datasource.png)
 The diagram above shows the flow of information to update a data source:
@@ -107,7 +107,7 @@ PowerApps offers three tools for validation:
 
 - The data source can provide information about what is and isn't valid.  For example, numbers can have minimum and maximum values, and one or more entries can be required.  You can access this information with the **[DataSourceInfo](function-datasourceinfo.md)** function.  
 - The **[Validate](function-validate.md)** function uses this same information to check the value of a single column or of an entire record.
-- You can add validation that's specific to your PowerApp with the **Valid** property of input controls.  The formula for this property should evaluate to *true* if the validation passes.  The **Valid** property of a gallery is a logical **And** of the **Valid** properties of all the input controls within it.
+- You can add validation that's specific to your PowerApp with the **Valid** property of input controls.  The formula for this property should evaluate to *true* if the validation passes.  The **Valid** property of a gallery is a logical **[And](function-logicals.md)** of the **Valid** properties of all the input controls within it.
 
 Let's continue our walkthrough and add validation to our screen:
 
@@ -116,7 +116,7 @@ Let's continue our walkthrough and add validation to our screen:
 	-  Place a single asterisk ("*") in this label.
 	-  Set the **[Color](function-colors.md)** to **Color!Red**.
 	-  Set the **Visible** property of this label to **DataSourceInfo( Customers, DataSrouceInfo!Required, "Name" )**.  When true, this will show the red asterisk to indicate that the control requires a value.
-2.  Let's check that the Name control is filled in before we **Patch**:
+2.  Let's check that the Name control is filled in before we **[Patch](function-patch.md)**:
 	-  Modify the **OnSubmit** property of the **Save** button to check if the **EditGallery** believes the record is valid.  The **[Validate](function-validate.md)** function checks for required fields using the same information that helped **[DataSourceInfo](function-datasourceinfo.md)** show the red asterisk:
 		- **if( IsEmpty( Validate( Customers, EditRecord, EditGallery!Updates) ), Patch( Customers, EditRecord, EditGallery!Updates ); Back() )**.  
 4.  Let's add a check that the "T-Shirt Size" has one of three possible values:
@@ -126,13 +126,13 @@ Let's continue our walkthrough and add validation to our screen:
 
 ## Error handling ##
 
-Great, you've validated your record.  Time to update that record with **Patch**!
+Great, you've validated your record.  Time to update that record with **[Patch](function-patch.md)**!
 
 But, alas, there may still be a problem.  The network is down, validation at the service failed, or the user doesn't have the right permissions, just to name a few of the possible errors your PowerApp may encounter.  It needs to respond appropriately to error situations, providing feedback to the user and a means for them to make it right.  
 
 When errors occur with a data source, PowerApps record the error information and make it available through the **[Errors](function-errors.md)** function.  Errors are associated with the records that had the problems.  If the problem is something the user can fix, such as a validation problem, they can resubmit the record, and the errors will be cleared.
 
-If an error occurs when a record is created with **[Patch](function-patch.md)** or **Collect**, there is no record to associate any errors with.  In this case, *blank* will be returned by **[Patch](function-patch.md)** and can be used as the record argument to **Errors**.  Creation errors are cleared with the next operation.
+If an error occurs when a record is created with **[Patch](function-patch.md)** or **[Collect](function-clear-collect-clearcollect.md)**, there is no record to associate any errors with.  In this case, *blank* will be returned by **[Patch](function-patch.md)** and can be used as the record argument to **[Errors](function-errors.md)**.  Creation errors are cleared with the next operation.
 
 The **[Errors](function-errors.md)** function returns a table of error information.  This information can include the column information, if the error can be attributed to a particular column.  Use column-level error messages in label controls that are close to where the column is located on the edit screen.  Use record-level error messages where the **Column** in the error table is *blank*, in a location close to the **Save** button for the entire record.  
 
@@ -148,7 +148,7 @@ Continuing our example:
 	That's a mouthful, so let's break it down:
 	- As before, the validation logic prevents us from doing the **[Patch](function-patch.md)** until we're ready.
 	- We're doing the same core **[Patch](function-patch.md)** we were doing previously.  But in addition, we are capturing the result from **[Patch](function-patch.md)** in a new context variable. If there's a problem, this will be *blank*.
-	-  We're passing this return value to **Errors**.  If there are no errors, **[Errors](function-errors.md)** will return *blank*, **IsEmpty** will be true, and we'll navigate **[Back](function-navigate.md)** to where we came from.  The change was successful.
+	-  We're passing this return value to **[Errors](function-errors.md)**.  If there are no errors, **[Errors](function-errors.md)** will return *blank*, **[IsEmpty](function-isblank-isempty.md)** will be true, and we'll navigate **[Back](function-navigate.md)** to where we came from.  The change was successful.
 	- If there was a problem, we'll stay on this screen.
 
 If there's a problem, the user will remain on the screen, and the label we inserted in step 1 will display a message to the user.  They can take corrective actions and select **Save** again.
@@ -179,7 +179,7 @@ The diagram below shows these three screens and how they're wired together to cr
 - There are two more important paths.  First, the **New** button on the browse screen goes directly to the edit screen, using the result of the **[Defaults](function-defaults.md)** function as the record to edit.  When later used with the **[Patch](function-patch.md)** function, a record will be created.
 - Second, the details screen offers a **Delete** button that invokes the **[Remove](function-remove-removeif.md)** function to delete a record.  After deletion, you can **[Navigate](function-navigate.md)** the user back to the browse screen.
 
-Note that the records passed between screens don't have a connection back to the data source.  They are stand-alone records.  You can, therefore, manipulate them as records. For example, you can place them in context variables, use **Collect** to put them into a collection, or use **[Patch](function-patch.md)** to merge records.  Each data function such as **[Patch](function-patch.md)** and **[Remove](function-remove-removeif.md)** requires an argument that is the data source to operate on, and this establishes the connection back to the data source.
+Note that the records passed between screens don't have a connection back to the data source.  They are stand-alone records.  You can, therefore, manipulate them as records. For example, you can place them in context variables, use **[Collect](function-clear-collect-clearcollect.md)** to put them into a collection, or use **[Patch](function-patch.md)** to merge records.  Each data function such as **[Patch](function-patch.md)** and **[Remove](function-remove-removeif.md)** requires an argument that is the data source to operate on, and this establishes the connection back to the data source.
 
 Continuing our example, let's add a details screen and wire all three screens together.
 
@@ -191,25 +191,25 @@ Continuing our example, let's add a details screen and wire all three screens to
 6. Insert an appropriate control for viewing data, such as a label control.  
 	- Set its **Default** property to a column name of the data source (SharePoint list).
 7. Insert a button outside the card gallery.  Name the button **Edit**, and set its **OnSelect** property to **Navigate( EditScreen, ScreenTransition!None, { EditRecord: DetailRecord } )**
-8. Insert another button outside the card gallery.  Name the button **Back**, and set its **OnSelect** property to **Back()**.  This will return the user to the browse screen when they're done viewing the details.
+8. Insert another button outside the card gallery.  Name the button **[Back](function-navigate.md)**, and set its **OnSelect** property to **Back()**.  This will return the user to the browse screen when they're done viewing the details.
 8. Return to the browse screen, change the **Edit** button into a **Detail** button, and change its **OnSelect** property to **Navigate( DetailScreen, ScreenTransition!None, { DetailRecord: ThisItem } )**.
 8. Preview the app, and browse, view details, and edit records of the SharePoint list.  Verify your changes on the SharePoint List too.
 
 Two pieces of extra credit:
 
-1. Add another button on the **BrowseScreen**, and label the button **New**.  Set its **OnSelect** property to **Navigate( EditScreen, ScreenTransition!None, { EditRecord: Defaults( Customers ) }**.  This will pass a record to the **EditScreen** that, when used with **Patch**, will create a record.
+1. Add another button on the **BrowseScreen**, and label the button **New**.  Set its **OnSelect** property to **Navigate( EditScreen, ScreenTransition!None, { EditRecord: Defaults( Customers ) }**.  This will pass a record to the **EditScreen** that, when used with **[Patch](function-patch.md)**, will create a record.
 2. Add another button on the **DetailScreen**, label it **Delete**, and set its **OnSelect** property to **Remove( Customers, DetailRecord ); Back()**.  This will delete the current record and return the user to the browse screen.
 
 ## Collections ##
 
 Collections are a special kind of data source.  They're local to the app and not backed by a connection to a service.  They operate like any other data source, with a few exceptions:
 
-- Collections can be created dynamically with the **Collect** function.  They don't need to be established ahead of time, as connection-based data sources do.
-- The columns of a collection can be modified at any time using the **Collect** function.
+- Collections can be created dynamically with the **[Collect](function-clear-collect-clearcollect.md)** function.  They don't need to be established ahead of time, as connection-based data sources do.
+- The columns of a collection can be modified at any time using the **[Collect](function-clear-collect-clearcollect.md)** function.
 - Collections allow duplicate records.  More than one copy of the same record can exist in a collection.  Functions such as **[Remove](function-remove-removeif.md)** will operate on the first match they find, unless the **All** argument is supplied.
 - You can use the **SaveData** and **LoadData** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
 
-Collections are commonly used to hold global state for the app.  See [working with state](working-with-state.md) for options for managing state.
+Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
 
 <!-- TODO: lifetime of a collection -->
 

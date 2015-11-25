@@ -26,11 +26,11 @@ The **Defaults** function returns the default values for a [Data Source](working
 
 Use the **Defaults** function to pre-populate a data entry form, making it easier to fill. 
 
-This function returns a [record](file-name.md) that contains the default values for the data source.  If a [Column](file-name.md) within the data source doesn't have a default value, that property won't be present.
+This function returns a [record](working-with-tables.md#records) that contains the default values for the data source.  If a [column](working-with-tables.md#columns) within the data source doesn't have a default value, that property won't be present.
 
-Data sources vary in how much default information they provide, including not providing any at all.  When you work with a [Collection](file-name.md) or another data source that does not support default values, the **Defaults** function will return an [empty](file-name.md) record.
+Data sources vary in how much default information they provide, including not providing any at all.  When you work with a [Collection](working-with-data-sources.md#collections) or another data source that does not support default values, the **Defaults** function will return an [empty](function-isblank-isempty.md) record.
 
-The **Defaults** function will not return any values for columns that are part of a [Primary Key](file-name.md).  You can combine this behavior with the **[Patch](function-patch.md)** function to [create a record](working-with-data-sources.md).
+The **Defaults** function can be used with the **[Patch](function-patch.md)** function to [create a record](working-with-data-sources.md).
 
 ## Syntax ##
 

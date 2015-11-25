@@ -20,17 +20,17 @@
 
 # Revert function in PowerApps #
 
-Reloads and clears errors for the [records](working-with-tables.md) of a [data source](working-with-data-sources.md). 
+Reloads and clears errors for the [records](working-with-tables.md#records) of a [data source](working-with-data-sources.md). 
 
 ## Description ##
 
 The **Revert** function retrieves a fresh copy of the entire data source or a single record.  You will see changes made by other users. 
 
-For the records reverted, **Revert** also clears any errors from the table returned by the **[Errors](function-errors.md)** function.
+For the records reverted, **Revert** also clears any errors from the [table](working-with-tables.md) returned by the **[Errors](function-errors.md)** function.
 
 If a conflict is reported by the **[Errors](function-errors.md)** function after a **[Patch](function-patch.md)** or other data operation, **Revert** the record to start with the conflicting version and reapply the change.
 
-**Revert** has no return value.  It can only be used in [behavior](file-name.md) formulas. 
+**Revert** has no return value.  It can only be used in behavior formulas. 
 
 ## Syntax ##
 
@@ -56,7 +56,7 @@ You **[Patch](function-patch.md)** your change:
 
 You check the **[Errors](function-errors.md)** table and find there is an error:
 
-| Record | Column | Message | Error |
+| Record | [Column](working-with-tables.md#columns) | Message | Error |
 |--------|--------|---------|-------|
 | **{ ID: 1, Flavor: "Strawberry", Quantity: 300 }** | *blank* | **"The record you are trying to modify has been modified by another user.  Please revert the record and try again."** | **ErrorKind!Conflict** |
 
@@ -64,7 +64,7 @@ Based on the **Error** column, you have a "Reload" button with an OnSubmit formu
 
 - **Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**
 
-The **[Errors](function-errors.md)** table is now empty, and the new value for Strawberry has been loaded:
+The **[Errors](function-errors.md)** table is now [empty](function-isblank-isempty.md), and the new value for Strawberry has been loaded:
 
 ![](media/function-revert/icecream-after.png)
 

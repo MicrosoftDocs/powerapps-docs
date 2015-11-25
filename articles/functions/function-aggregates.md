@@ -35,7 +35,7 @@ The **Sum** function adds all values together and returns the sum.
 These functions can be used in two different ways:
 
 - You can supply the values as separate arguments.  For example, **Sum( 1, 2, 3 )** returns 6. 
-- You can supply a table and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each record.  The formula can reference columns in the table.  
+- You can supply a [table](working-with-tables.md) and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each [record](working-with-tables.md#records).  The formula can reference [columns](working-with-tables.md#columns) in the table.  
 
 These functions only operate on numeric values.  Other types of values, such as strings or records, are ignored.  Use the **Value** function to convert a string into a number.   
  
@@ -62,7 +62,7 @@ These functions only operate on numeric values.  Other types of values, such as 
 
 ### Step by step ###
 
-If you had a data source named **Sales** that contained a **CostPerUnit** column and a **UnitsSold** column, this function would calculate total sales by adding together the result of multiplying these two values:
+If you had a [data source](working-with-data-sources.md) named **Sales** that contained a **CostPerUnit** column and a **UnitsSold** column, this function would calculate total sales by adding together the result of multiplying these two values:
 
 **Sum(Sales, CostPerUnit * UnitsSold)**
 

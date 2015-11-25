@@ -20,7 +20,7 @@
 
 # Collect, Clear, and ClearCollect functions in PowerApps #
 
-Creates and clears [collections](working-with-data-sources.md) and adds records to any [data source](working-with-data-sources.md).
+Creates and clears [collections](working-with-data-sources.md#collections) and adds [records](working-with-tables.md#records) to any [data source](working-with-data-sources.md).
 
 ## Description ##
 
@@ -28,15 +28,15 @@ Creates and clears [collections](working-with-data-sources.md) and adds records 
 
 The **Collect** function adds records to a data source.  The items to be added can be:
 
-- A single value: The value is placed in the **Value** property of a new record.  All other properties are left blank.
+- A single value: The value is placed in the **Value** property of a new record.  All other properties are left [blank](function-isblank-isempty.md).
 
-- A [record](working-with-tables.md): Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
+- A record: Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
   
 - A [table](working-with-tables.md): Each record of the table is added as a separate record of the data source as described above.  The table is not added as a nested table to a record.  To accomplish this, wrap the table in a record first. 
 
-When used with a [collection](working-with-data-sources.md#collections), additional columns will be created as needed.  The columns for other data sources are fixed by the data source and new columns cannot be added.  
+When used with a collection, additional [columns](working-with-tables.md#columns) will be created as needed.  The columns for other data sources are fixed by the data source and new columns cannot be added.  
 
-If the data source does not already exist, a new [collection](working-with-data-sources.md#collections) is created.
+If the data source does not already exist, a new collection is created.
 
 Collections are sometimes used to hold global variables or make a temporary copy of a data source.  PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Collections do not enjoy this benefit and their use can make your app harder to create and understand.  Before using a collection in this manner, review [working with variables](working-with-variables.md).
 
@@ -52,7 +52,7 @@ Note that **Clear** only operates on collections and not other data sources.  Yo
 
 You can use the **[Remove](function-remove-removeif.md)** function to selectively remove records.
 
-**Clear** has no return value.  It can only be used in a [behavior](file-name.md) formula.
+**Clear** has no return value.  It can only be used in a behavior formula.
 
 ### ClearCollect ###
 

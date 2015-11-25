@@ -20,19 +20,19 @@
 
 # AddColumns, DropColumns, RenameColumns, and ShowColumns functions in PowerApps #
 
-Shapes a table by adding, dropping, renaming, and selecting columns of a table.
+Shapes a [table](working-with-tables.md) by adding, dropping, renaming, and selecting [columns](working-with-tables.md#columns) of a table.
 
 ## Overview ##
 
-These functions shape a table by making adjustments to the columns.  You might use this to reduce a table down to one column, for passing to single-column functions such as **Lower** or **Abs**.  Or you might use this to add a calculated column to a table.
+These functions shape a table by making adjustments to the columns.  You might use this to reduce a table down to one column, for passing to single-column functions such as **[Lower](function-lower-upper-proper.md)** or **[Abs](function-numericals.md)**.  Or you might use this to add a calculated column to a table.
 
 Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  The functions described here do not modify a table, instead they take a table as an argument and return a new table with a transform applied.  See [working with tables](working-with-tables.md) for more details.  
 
-The columns of a data source cannot be modified with these functions.  The columns of a collection can be modified with the **Collect** function.  The columns of other data sources must be modified at their source. See [working with data sources](working-with-data-sources.md) for more details.  
+The columns of a [data source](working-with-data-sources.md) cannot be modified with these functions.  The columns of a [collection](working-with-data-sources.md#collections) can be modified with the **[Collect](function-clear-collect-clearcollect.md)** function.  The columns of other data sources must be modified at their source. See [working with data sources](working-with-data-sources.md) for more details.  
 
 ## Description ##
 
-The **AddColumns** functions adds a column to a table, with values given by a formula.  Existing columns remain unmodified.  The formula is evaluated for each record of the table and can reference other columns in the table.
+The **AddColumns** functions adds a column to a table, with values given by a formula.  Existing columns remain unmodified.  The formula is evaluated for each [record](working-with-tables.md#records) of the table and can reference other columns in the table.
 
 The **DropColumns** function removes columns from a table.  All other columns remain unmodified.
 

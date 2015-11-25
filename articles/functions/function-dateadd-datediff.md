@@ -30,7 +30,7 @@ The **DateDiff** function returns the difference between two date/time values, i
  
 By default, both functions use **Days** as units.
 
-Also see [working with dates and times](../show-text-date-times.md) for more information. 
+Also see [working with dates and times](../show-text-dates-times.md) for more information. 
 
 ## Syntax ##
 

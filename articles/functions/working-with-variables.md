@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Working with state | Microsoft PowerApps"
+	pageTitle="Working with variables | Microsoft PowerApps"
 	description="Reference information for working with state, context variables, and collections"
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="11/10/2015"
    ms.author="gregli"/>
 
-# Working with state in PowerApps #
+# Working with variables in PowerApps #
 
 You may be asking: **Where are the variables?**
 
@@ -61,7 +61,7 @@ PowerApps can use formulas for more than the primary value of a control.  For ex
 Formulas can be used for a wide variety of scenarios:
 
 - By using your device's GPS, a map control can display your current location with a formula that uses **Location!Lattitude** and **Location!Longtitude**.  As you move, the map will automatically track your location.
-- Other users can update [data sources](working-with-data-sources).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated and displayed on the updated data.  Furthering the example, you might set a gallery's **Items** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of records.
+- Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated and displayed on the updated data.  Furthering the example, you might set a gallery's **Items** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
 
 ### Benefits ###
 
@@ -76,7 +76,7 @@ In general, if your desired behavior can be accomplished through a formula, you'
 
 ## The need for variables ##
 
-Let's change our simpler adder to act like an old-fashioned adding machine, with a running total. If you select an **Add** button, you'll add a number to the running total. If you select a **Clear** button, you'll reset the running total to zero.
+Let's change our simpler adder to act like an old-fashioned adding machine, with a running total. If you select an **Add** button, you'll add a number to the running total. If you select a **[Clear](function-clear-collect-clearcollect.md)** button, you'll reset the running total to zero.
 
 ![](media/working-with-variables/button-changes-state.png)
 
@@ -86,7 +86,7 @@ You'll sometimes need a variable for your PowerApp to behave the way you want.  
 
 - You must manually update the running total. Automatic recalculation won't do it for you.   
 - The running total can no longer be calculated based on the values of other controls. It depends on how many times the user selected the button and what value was in the text box each time.  Did the user enter 77 and select **Add** twice, or did they specify 24 and 130 for each of the additions?  You can't tell the difference after the total has reached 154.
-- Changes to the total can come from different paths.  In this example, both the **Add** and **Clear** buttons can update the total.  Which one is causing an undesired behavior?
+- Changes to the total can come from different paths.  In this example, both the **Add** and **[Clear](function-clear-collect-clearcollect.md)** buttons can update the total.  Which one is causing an undesired behavior?
 
 In general, avoid using variables.  But sometimes only a variable can enable the experience you want.
 
@@ -97,10 +97,10 @@ To create our adding machine, we require a variable to hold the running total.  
 How context variables work:
 
 - You create and set context variables by using the **[UpdateContext](function-updatecontext.md)** function.  If a context variable doesn't already exist when first updated, it will be created with a default value of *blank*.
-- You create and update context variables with [records](working-with-tables.md).  In other programming tools, you  commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead.  When you use a context variable, use its name directly.  
+- You create and update context variables with records.  In other programming tools, you  commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead.  When you use a context variable, use its name directly.  
 - You can also set a context variable when a screen is displayed, by using the **[Navigate](function-navigate.md)** function.  If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
-- Except for **Navigate**, context variables are limited to the context of a single screen (which is where they get their name).  You can't use or set them outside of this context.
-- Context variables can hold any value, including strings, numbers, records, and tables.
+- Except for **[Navigate](function-navigate.md)**, context variables are limited to the context of a single screen (which is where they get their name).  You can't use or set them outside of this context.
+- Context variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
 - When an app ends, all of its context variables are lost.   
 
 Let's build our adding machine by using context variables:
@@ -125,12 +125,12 @@ Let's build our adding machine by using context variables:
 
 ## Collections ##
 
-Being limited to the context of a screen is sometime inadequate.  You may need a variable that can be used and set from any screen.  In these cases, use a [collection](working-with-data-sources#collections) to hold a global variable.
+Being limited to the context of a screen is sometime inadequate.  You may need a variable that can be used and set from any screen.  In these cases, use a [collection](working-with-data-sources.md#collections) to hold a global variable.
 
 How collections work:
 
-- You create and set collections by using the **[ClearCollect](function-clear-collect-clearcollect.md)** function.  You can use the **Collect** function instead, but it will effectively require another variable instead of replacing the old one.  
-- A collection is a data source and, therefore, a table.  To access a single value stored in a collection, use the **First** function, and extract one property from the resulting record.  If you used a single value with **ClearCollect**, this will be the **Value** property, as in this example:<br>**First( VariableName )!Value**
+- You create and set collections by using the **[ClearCollect](function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
+- A collection is a data source and, therefore, a table.  To access a single value stored in a collection, use the **[First](function-first-last.md)** function, and extract one property from the resulting record.  If you used a single value with **[ClearCollect](function-clear-collect-clearcollect.md)**, this will be the **Value** property, as in this example:<br>**First( VariableName )!Value**
 - Collections can be accessed from any formula in the PowerApp, on any screen.
 - When a PowerApp ends, all of its collections are emptied.
 
@@ -142,7 +142,7 @@ Let's recreate our adding machine using a collection:
 
 	By using **[ClearCollect](function-clear-collect-clearcollect.md)** with a single value, a record will be created in the collection with a single **Value** property.
 
-	The first time that the user selects **Button1** and **[ClearCollect](function-clear-collect-clearcollect.md)** is called, **RunningTotal** will be empty.  In the addition, **First** will return *blank* and will be treated as a zero.
+	The first time that the user selects **Button1** and **[ClearCollect](function-clear-collect-clearcollect.md)** is called, **RunningTotal** will be [empty](function-isblank-isempty.md).  In the addition, **[First](function-first-last.md)** will return *blank* and will be treated as a zero.
 
 	![](media/working-with-variables/collection-1.png)
 

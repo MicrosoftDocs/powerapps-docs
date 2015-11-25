@@ -24,7 +24,7 @@ Boolean logic functions, commonly used to manipulate the results of comparisons 
 
 ## Description ##
 
-The **And** functions returns **true** if all of its arguments are **true**.  The **&&** operator is equivalent to using **And**.
+The **And** functions returns **true** if all of its arguments are **true**.  The **&&** [operator](operators.md) is equivalent to using **And**.
 
 The **Or** function returns true if any of its arguments are **true**.  The **||** operator is equivalent to **Or**.
 
@@ -50,7 +50,7 @@ You can use this function to determine whether a slider's value falls outside th
 
 **Or(Slider1!Value < 50, Slider1!Value> 100)**
 
-If a table contained a Dept column and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR or the value in the Salary column was larger than 200000:
+If a [table](working-with-tables.md) contained a Dept [column](working-with-tables.md#columns) and a Salary column, you could use this function in a Result column to show true in all rows in which the value in the Dept column was HR or the value in the Salary column was larger than 200000:
 
 **Or(Dept = HR, Salary >= 200000)**
 

@@ -20,13 +20,13 @@
 
 # Sort function in PowerApps #
 
-Sorts a table.
+Sorts a [table](working-with-tables.md).
 
 ## Description ##
 
 The **Sort** function sorts a table based on a formula.  
 
-The formula is evaluated for each record of the table, and the results are used to sort the table.  Columns of the table can be used in the formula.  The formula must result in a number, string, or boolean value; it cannot result in a table or record.
+The formula is evaluated for each [record](working-with-tables.md#records) of the table, and the results are used to sort the table.  [Columns](working-with-tables.md#columns) of the table can be used in the formula.  The formula must result in a number, string, or boolean value; it cannot result in a table or record.
 
 Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** does not modify a table, instead it takes a table as an argument and return a new table that has been sorted.  See [working with tables](working-with-tables.md) for more details.
 

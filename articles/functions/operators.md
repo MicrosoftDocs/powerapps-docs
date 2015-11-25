@@ -39,7 +39,7 @@
 |&amp;&amp;|Logical operators|Price &lt; 100 &amp;&amp; slider!value = 20|Logical conjunction|
 |&#124;&#124;||Price &lt; 100 &#124;&#124; slider!value = 20|Logical disjunction|
 |!||!(Price &lt; 100)|Logical negation|
-|exactin|Membership operators|gallery!Selected exactin SavedItems|Belonging to a collection or table|
+|exactin|Membership operators|gallery!Selected exactin SavedItems|Belonging to a [collection](working-with-data-sources.md#collections) or [table](working-with-tables.md)|
 |exactin||&quot;Windows&quot; exactin “To display windows in the Windows operating system...”|Substring test (case-sensitive)|
 |in||gallery!Selected in SavedItems|Belonging to a collection or table<br><br>|
 |in||&quot;The&quot; in &quot;The keyboard and the monitor...&quot;|Substring test (case-insensitive)|
@@ -49,7 +49,7 @@
 
 ## in and exactin operators ##
 
-You can use the **in** and **exactin** operators to find a string in a data source, such as a collection or an imported table. The **in** operator identifies matches regardless of case, and the **exactin** operator identifies matches only if they're capitalized the same way. Here's an example:
+You can use the **in** and **exactin** operators to find a string in a [data source](working-with-data-sources.md), such as a collection or an imported table. The **in** operator identifies matches regardless of case, and the **exactin** operator identifies matches only if they're capitalized the same way. Here's an example:
 
 1. Create or import a collection named **Inventory**, and show it in a gallery, as Create your first app describes.
 
@@ -67,7 +67,7 @@ You can use the **in** and **exactin** operators to find a string in a data sour
 
 ## ThisItem operator for galleries ##
 
-You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the ThisItem operator to specify the column of data that each control shows. For example, that operator in the product gallery for Create your first app specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the ThisItem operator to specify the [column](working-with-tables.md#columns) of data that each control shows. For example, that operator in the product gallery for Create your first app specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
 
 For nested galleries, ThisItem refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly—this approach enables rules in an inner gallery to refer to an outer gallery's items.
 

@@ -20,15 +20,15 @@
 
 # Count, CountA, CountIf, and CountRows functions in PowerApps #
 
-Counts the number of records in a table that satisfy a condition, or all records. 
+Counts the number of [records](working-with-tables.md#records) in a [table](working-with-tables.md) that satisfy a condition, or all records. 
 
 ## Description ##
 
 The **Count** function counts the number of records in a single-column table that contain a number.
 
-The **CountA** function counts the number of records in a single-column table that are not *blank*.  This function includes empty text ("") in the count.
+The **CountA** function counts the number of records in a single-column table that are not *blank*.  This function includes [empty](function-isblank-isempty.md) text ("") in the count.
 
-The **CountIf** functions counts the number of records in a table that are **true** for a logical formula.  The formula can reference columns of the table.
+The **CountIf** functions counts the number of records in a table that are **true** for a logical formula.  The formula can reference [columns](working-with-tables.md#columns) of the table.
 
 The **CountRows** function counts the number records in a table.
 
@@ -58,7 +58,7 @@ All of these functions return a number.
 
 ### Step by step ###
 
-1. Import or create a collection named Inventory, as Create your first app describes.
+1. Import or create a [collection](working-with-data-sources.md#collections) named Inventory, as Create your first app describes.
 
 2. Add a label, and set its Text property to this function:
 

@@ -43,7 +43,7 @@ Dates must be in one of the following formats:
 
 See the **[Date](function-date-time.md)** and **[Time](function-date-time.md)** functions to convert from numbers.
 
-Also see [working with dates and times](../show-text-date-times.md) for more information. 
+Also see [working with dates and times](../show-text-dates-times.md) for more information. 
 
 ## Syntax ##
 
