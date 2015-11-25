@@ -55,7 +55,7 @@ DateValue | Converts a literal string, as shown between quotation marks, to a va
 ![][5]  
 ![][6]  
 
-4. Move the Birthdate text so it all controls are shown.
+4. Move the Birthdate text so all controls are shown.
 5. In the **ShowText** label (created in step 1), set its **Text** property to the following expression:    
 ```DateDiff(Today(), DateValue(Birthdate!Text))```  
 
