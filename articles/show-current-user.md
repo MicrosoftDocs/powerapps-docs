@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/24/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 # Get the signed-in user details
@@ -32,7 +32,7 @@ Basically, you can use this anywhere users would benefit from an automatically-p
 ### Prerequisites
 
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new PowerApp or open an existing PowerApp.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 

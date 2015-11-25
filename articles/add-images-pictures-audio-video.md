@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Upload images, take a picture, play an audio and video file in PowerApps | Microsoft PowerApps"
-	description="Add and configure images, audio, video, microphone, and pen features to your PowerApp"
+	description="Add and configure images, audio, video, microphone, and pen features to your PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/24/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 # Using the image, picture, audio, and video multimedia options
@@ -37,7 +37,7 @@ This topic shows you how to do add these multimedia options to your PowerApps.
 ### Prerequisites
 
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new PowerApp or open an existing PowerApp. 
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 > [AZURE.TIP] In your PowerApps, the **File** menu includes a **Media** option. In **Media**, you can upload images, audio files, and video files:  
@@ -51,7 +51,7 @@ In your PowerApps, you can add an image and add a picture. Use the **Image** opt
 
 Use the **Picture** option to give your app users the ability to upload pictures. For example, you can create an insurance app that lets users upload pictures of the items they want to insure, like a car or a motorcycle. If you have a dating app, users can upload pictures of themselves.
 
-This section lists the steps to add the Image and Picture controls to your PowerApp.
+This section lists the steps to add the Image and Picture controls to your app.
 
 #### Add an image
 
@@ -128,7 +128,7 @@ Configure an audio control to play a file in any format that Internet Explorer s
 ## Add video and play it in your app
 Configure a video control to play a file in any format that Internet Explorer supports. For example, you can use a .wmv file. If you don't have a video, you can create your own using the video recording feature of your webcam. 
 
-The following steps assume you already uploaded the video to your PowerApp. 
+The following steps assume you already uploaded the video to your app. 
 
 1. On the **Home** tab, select **New Screen**.
 1. On the **Insert** tab, select **Media**, and then select **Video**:  

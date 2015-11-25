@@ -14,11 +14,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/24/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 
-# Show text and format dates and times in your PowerApp
+# Show text and format dates and times in your app
 
 Add dates and times, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
 
@@ -27,7 +27,7 @@ For example, add data from users about stock trades or client meetings, data fro
 ### Prerequisites
 
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new PowerApp or open an existing PowerApp.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 ## Show text in a label
@@ -71,12 +71,12 @@ In these steps, you:
 - Used a "ShowText" label that is updated to show the output or calculated values from another input text control.
 
 ## Working with dates and times
-In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within PowerApps.
+In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within your app.
 
 Let's get started.
 
 ### Format date and time values
-There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your PowerApps. We suggest creating a blank screen and stepping through the different scenarios.
+There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your apps. We suggest creating a blank screen and stepping through the different scenarios.
 
 #### Format date time using the DateTimeValue, DateTimeFormat, and DateValue functions
 

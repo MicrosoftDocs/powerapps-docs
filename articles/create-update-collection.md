@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create and update a collection in PowerApps Studio | Microsoft Azure"
-	description="Create collections and add columns to existing collections in PowerApps Studio"
+	pageTitle="Create and update a collection in PowerApps | Microsoft PowerApps "
+	description="Create collections and add columns to existing collections in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/04/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 
@@ -24,14 +24,15 @@ Use a collection to store data that can be used in your app. A collection is a g
 You can create and use collections within PowerApps. Let's get started.
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps Studio.
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
 ## Create a collection that has one column
 The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.
 
-1. Open your app in PowerApps Studio.
+1. Open your app.
 2. On the **Insert** tab, select **Text**, and then select **Input Text**:  
 ![][1]  
 3. In the top left corner, select **Text1**, and rename the control to **Destination**:  
@@ -41,13 +42,13 @@ The following steps show you how to create a collection within your app using th
 It should look like the following:  
 ![][3]  
 
-5. Click the button text, and enter **Add**:  
+5. Select the button text, and enter **Add**:  
 ![][5]  
 6. Select the **Add** button, and move it under your text control. You can move it anywhere:  
 ![][6]  
 
 
-In these steps, you used the Collect function to create a collection named **Destinations**. You also added a button control and when clicked, adds new items to your collection. Now, see what you created:
+In these steps, you used the Collect function to create a collection named **Destinations**. You also added a button control and when selected, adds new items to your collection. Now, see what you created:
 
 1. Select Preview:  
 ![][7]    
@@ -149,7 +150,9 @@ Label3 | ``ThisItem!Maker``
 ![][20]
 3. Set the **OnSelect** property of the **Add** button to the following expression:  
 ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
-**Note** When you click this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
+
+	**Note** When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
+
 4. Select the **Screen** tab and set the **OnVisible** property to the following expression:  
 ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```
 
@@ -157,8 +160,8 @@ Now, see what you created:
 
 1. Open **Preview**.
 2. Select a product in the gallery, move the slider to your desired quantity, and then select the **Add** button.  
-> [AZURE.IMPORTANT] When you select a product, that product is not highlighted to indicate you selected it. When we created the gallery, we didn't add this functionality. Know that clicking the product does select it.  
-3. Repeat these steps to add a couple more products. Press **Esc** to close the Preview window.
+	> [AZURE.IMPORTANT] When you select a product, that product is not highlighted to indicate you selected it. When we created the gallery, we didn't add this functionality. Know that clicking the product does select it.  
+3. Repeat these steps to add a couple more products. Press **ESC** to close the Preview window.
 4. On the **File** tab, select **Collections** to display a preview of the **OrderList** collection you created:  
 ![][21]
 
@@ -168,6 +171,17 @@ Now, see what you created:
 To remove one item at a time, show the **OrderList** collection in a gallery, and then set the **OnSelect** property of a label in that gallery to the following expression:  
 ```Remove(OrderList, ThisItem);SaveData(OrderList, "orderfile")```
 
+## Tips and Tricks
+- At anytime, you can select the Preview button (![][7]) to view your charts, and to see how they look with data.
+- When designing your app, you can re-size the controls and move them around using click-and-drag.
+
+## What you learned
+In this topic, you:
+
+- Used the Collection() function to create a collection within your app. 
+- You added a button control and when selected, the button adds new items to your collection.
+- Used a listbox to add items to your collection. 
+- Added a slider control to update items within the collection.
 
 
 [1]: ./media/create-update-collection/insertmenu-inputtext.png

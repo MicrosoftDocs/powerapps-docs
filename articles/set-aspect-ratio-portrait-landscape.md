@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Set the landscape or portrait aspect ratio within PowerApps | Microsoft PowerApps"
-	description="Configure the aspect ratio for landscape and portrait orientation in PowerApps"
+	description="Add and configure the aspect ratio for landscape and portrait orientation in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/24/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 # Use the landscape or portrait view
@@ -23,7 +23,7 @@ When you create an app, you can use the Landscape or Portrait view. You can also
 
 ### Prerequisites
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new PowerApp or open an existing PowerApp.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 ## Set landscape or portrait for a phone app
@@ -54,12 +54,17 @@ The same applies for phone apps. When this setting is enabled, the app *always* 
 To summarize, if you don't enable the **Lock aspect ratio** setting, PowerApps automatically scales to the mobile device using the app.
 
 ## What is Lock orientation
-When enabled, the PowerApp stays in Landscape or Portrait, even when the mobile device is rotated. When not enabled, PowerApps automatically adjusts the orientation when the mobile device is rotated. 
+When enabled, the app stays in Landscape or Portrait, even when the mobile device is rotated. When not enabled, PowerApps automatically adjusts the orientation when the mobile device is rotated. 
 
 ## Tips and Tricks
 - At anytime, you can select the Preview button (![][3]) to see how your app looks with the options you choose.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 
+## What you learned
+In this topic, you:
+
+- Set a phone app or a tablet app to display in portrait view or landscape view.
+- Read about aspect ratio and depending on the audience of your app, it may be best to leave it disabled. 
 
 [1]: ./media/set-aspect-ratio-portrait-landscape/phoneratio.png
 [2]: ./media/set-aspect-ratio-portrait-landscape/tabletratio.png
