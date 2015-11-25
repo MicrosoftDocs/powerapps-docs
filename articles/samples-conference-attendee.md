@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Conference Attendee Sample App"
-    description="Sample PowerApp with SQL Server as a data source"
+    pageTitle="Conference Attendee Sample App | Microsoft PowerApps"
+    description="Sample app with SQL Server as a data source"
     services=""
     suite="powerapps"
     documentationCenter="na"

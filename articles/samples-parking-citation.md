@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Parking Citation Sample App | Microsoft Azure"
-    description="Sample PowerApp with SharePoint Online as a data source"
+    pageTitle="Parking Citation Sample App | Microsoft PowerApps"
+    description="Sample app with SharePoint Online as a data source"
     services=""
     suite="powerapps"
     documentationCenter="na"

@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Estimate Generator Sample App"
-    description="Sample PowerApp with Dynamics CRM Online as a data source"
+    pageTitle="Estimate Generator Sample App | Microsoft PowerApps"
+    description="Sample app with Dynamics CRM Online as a data source"
     services=""
     suite="powerapps"
     documentationCenter="na"

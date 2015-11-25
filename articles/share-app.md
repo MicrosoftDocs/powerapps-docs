@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Share a PowerApp | Microsoft PowerApps"
+    pageTitle="Share an app | Microsoft PowerApps"
     description=""
     services=""
     suite="powerapps"
