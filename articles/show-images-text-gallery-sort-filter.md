@@ -80,9 +80,9 @@ Using these steps, you imported data that includes .jpg images into a collection
 6. On the **Shape** tab, select **Visible**, and then enter the following expression in the Function Bar:  
 ```If(ThisItem!IsSelected, true)```
 
-	A blue rectangle surrounds the current selection in a gallery. Click a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![][2] to see and test what you're creating.
+	A blue rectangle surrounds the current selection in a gallery. Select a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![][2] to see and test what you're creating.
 
-> [AZURE.TIP] Click the rectangle, click **Reorder** on the **Home** tab, and then click **Send to Back**. Using this feature, you can select a gallery item without the border blocking anything.
+> [AZURE.TIP] Select the rectangle, select **Reorder** on the **Home** tab, and then select **Send to Back**. Using this feature, you can select a gallery item without the border blocking anything.
 
 Using these steps, you added a border around the current selection in the gallery.
 
@@ -109,7 +109,7 @@ In these steps, we are going to sort the gallery items in ascending and descendi
 
 	a) On the **Content** tab, select **Min**, and then enter the following expression:  
 	```Min(Inventory, UnitsInStock)```  
-	b) On the **Content** tab, click **Max**, and then enter the following expression:  
+	b) On the **Content** tab, select **Max**, and then enter the following expression:  
 	```Max(Inventory, UnitsInStock)```
 
 3. Select any item in the gallery *except* the first one. Set the **Items** property of the gallery to the following expression:  
