@@ -1,6 +1,6 @@
 <properties
     pageTitle="Wait for approval in Logic Flows | Microsoft PowerApps"
-    description="Logic flows can wait for external events, such as users indicating approval in email or SharePoint."
+    description="Logic Flows can wait for external events, such as users indicating approval in email or SharePoint."
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/14/2015"
+   ms.date="11/24/2015"
    ms.author="stepsic"/>
 
 # Wait for approval in Logic Flows #
@@ -27,7 +27,7 @@ Create a logic flow that performs one or more tasks only after a user indicates 
 
 ## Request approval in email ##
 
-1. In Chrome, open  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Flows** in the left navigation bar.
+1. In  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Flows** in the left navigation bar.
 
 	![Flows option in left navigation bar](./media/wait-for-approvals/nav-flows.png)
 
@@ -49,11 +49,11 @@ Create a logic flow that performs one or more tasks only after a user indicates 
 
 1. In the **TO** box, type or paste the email address of the approver.
 
-1. Drag the approval action so it appears just below the trigger, and then save your logic flow.
+1. Drag the approval action so it appears between the Twitter event and the other email action, and then save your logic flow.
 
 	![Move the approval action between the trigger and the other action](./media/wait-for-approvals/flow-sequence.png)
 
-If you add an item to the SharePoint list, an email message should be sent to the approver, as you specified in the first action. If the approver selects **Yes** in that message, a second message should be sent, as you specified in the second action.
+If you send a tweet with the keyword, an email message is sent to the approver you specified in the first action. If the approver selects **Yes** in that message, a second message is sent to the person you specified in the second action.
 
 ## Request approval in SharePoint
 1. Create a SharePoint list with a column called **Status**.
