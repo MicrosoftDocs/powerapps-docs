@@ -78,7 +78,7 @@ For this example, we'll be working with the **IceCream** data source:
 
 ![](media/function-errors/icecream.png)
 
-Through PowerApps, a user loads the Chocolate record into a data entry form and changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](working-with-variables.md#context-variables) **EditRecord**:
+Through the app, a user loads the Chocolate record into a data entry form and changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](working-with-variables.md#context-variables) **EditRecord**:
 
 - **UpdateContext( { EditRecord: First( Filter( IceCream, Flavor = "Chocoalte" ) ) } )**
 

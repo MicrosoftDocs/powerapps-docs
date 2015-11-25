@@ -18,7 +18,7 @@
    ms.date="11/07/2015"
    ms.author="gregli"/>
 
-# DateValue, TimeValue, and DateTimeValue functions #
+# DateValue, TimeValue, and DateTimeValue functions in PowerApps #
 
 Converts date and times in a string to a date/time value.
 

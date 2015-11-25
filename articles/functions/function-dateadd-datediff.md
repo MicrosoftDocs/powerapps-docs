@@ -18,7 +18,7 @@
    ms.date="11/07/2015"
    ms.author="gregli"/>
 
-# DateAdd and DateDiff functions #
+# DateAdd and DateDiff functions in PowerApps #
 
 Adds to or finds the difference in date/time values.
 

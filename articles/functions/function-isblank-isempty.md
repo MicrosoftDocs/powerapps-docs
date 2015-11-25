@@ -24,9 +24,7 @@ Tests if a value is blank or a [table](working-with-tables.md) contains no [reco
 
 ## Overview ##
 
-*Blank* is not the same thing as *empty*.  
-
-Blank indicates "no value" or "unknown value."  For example, a Boolean can normally have one of two values: **true** or **false**.  But in addition, it can also be *blank*, and be neither **true** nor **false**.  This is similar to Excel, where a workbook cell starts out as blank but can hold **TRUE** or **FALSE**.
+Blank indicates "no value" or "unknown value."  For example, a Boolean can normally have one of two values: **true** or **false**.  But in addition, it can also be *blank*, and be neither **true** nor **false**.  This is similar to Microsoft Excel, where a workbook cell starts out as blank but can hold **TRUE** or **FALSE**.
 
 Empty indicates a table that has no records.  The table structure may be there, complete with [column](working-with-tables.md#columns) names.  But there is no data in the table.
 
@@ -36,13 +34,13 @@ Empty indicates a table that has no records.  The table structure may be there, 
 
 - A control property has no value or formula set for it.
 - The user of an app has not entered a value into an Input Text control or made a selection in a Listbox control.  You can use **IsBlank** to provide required field feedback. 
-- An empty string with **Len** of 0.
+- An empty string with **[Len](function-len.md)** of 0.
 - An error occurred in a function.  Often the arguments to the function were invalid.
 - Connected [data sources](working-with-data-sources.md) such as SQL Server may use "null" values.  These values appear as *blank* in PowerApps.
 - The *else* portion of an **If** function was not specified, and the condition was **false**.
 - A column was not included when using the **[Update](function-update-updateif.md)** function, and no value was placed in that column as a result.
 
-Most functions in PowerApps propagate *blank* values for the handling of errors.  Unless checked, error values flow through a formula, resulting in a *blank* value displayed to the user of the app.  
+Most functions in PowerApps propagate *blank* values for the handling of errors.  Unless checked, *blank* values flow through a formula, resulting in a *blank* value displayed to the user of the app.  For example, **Mid( "asdf", 10, 1 )** has a starting character number beyond the end of the string, which will return *blank*.  **Right( Mid( "asdf", 10, 1 ), 3 )** will also return *blank*, passing through the *blank* value from **[Mid](function-left-mid-right.md)**. 
 
 <!-- TODO: example of a function that propagates blank -->
 

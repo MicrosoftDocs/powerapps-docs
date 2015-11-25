@@ -32,7 +32,7 @@ For [collections](working-with-data-sources.md#collections), the entire record m
 
 ### RemoveIf function ###
 
-Use the **RemoveIf** function to remove records based on a set of conditions.  The conditions can be any PowerApps formula that results in a **true** or **false** and can reference [columns](working-with-tables.md#columns) of the data source by name.  Conditions are evaluated individually for each record, and if all result in **true**, the record is removed.
+Use the **RemoveIf** function to remove records based on a set of conditions.  The conditions can be any formula that results in a **true** or **false** and can reference [columns](working-with-tables.md#columns) of the data source by name.  Conditions are evaluated individually for each record, and if all result in **true**, the record is removed.
 
 **Remove** and **RemoveIf** return the modified data source as a [table](working-with-tables.md).  Both functions can only be used in behavior formulas. 
 

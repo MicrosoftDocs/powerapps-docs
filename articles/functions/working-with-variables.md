@@ -26,7 +26,7 @@ If you're asking this question, you've probably used another programming tool in
 
 When reaching for a variable, instead ask yourself: **What would I do in Excel?**  
 
-PowerApps is modeled after Excel and what works there often works in PowerApps too.  The equivalent of Excel's cells are PowerApps controls.  In other tools, you may have explicitly performed a calculation and placed the result in a variable.  In PowerApps, you create a formula that connects controls together and is automatically recalculated, just like Excel.  With this approach, your app will be easier to create, understand, and maintain.
+PowerApps is modeled after Microsoft Excel and what works there often works in PowerApps too.  The equivalent of Excel's cells are PowerApps controls.  In other tools, you may have explicitly performed a calculation and placed the result in a variable.  In PowerApps, you create a formula that connects controls together and is automatically recalculated, just like Excel.  With this approach, your app will be easier to create, understand, and maintain.
 
 There is a place for variables in PowerApps, which extends Excel's model with [behavior formulas]() that execute when, for example, a user clicks a button.  Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
@@ -80,9 +80,9 @@ Let's change our simpler adder to act like an old-fashioned adding machine, with
 
 ![](media/working-with-variables/button-changes-state.png)
 
-Our adding machine uses something that doesn't exist in Excel: a button.  In this PowerApp, the running total can't be calculated because its value depends on a series of actions that the user takes.  Instead, our running total must be recorded and updated manually.  It's what most programming tools call a *variable*.    
+Our adding machine uses something that doesn't exist in Excel: a button.  In this app, the running total can't be calculated because its value depends on a series of actions that the user takes.  Instead, our running total must be recorded and updated manually.  It's what most programming tools call a *variable*.    
 
-You'll sometimes need a variable for your PowerApp to behave the way you want.  But it comes with some caveats:
+You'll sometimes need a variable for your app to behave the way you want.  But it comes with some caveats:
 
 - You must manually update the running total. Automatic recalculation won't do it for you.   
 - The running total can no longer be calculated based on the values of other controls. It depends on how many times the user selected the button and what value was in the text box each time.  Did the user enter 77 and select **Add** twice, or did they specify 24 and 130 for each of the additions?  You can't tell the difference after the total has reached 154.
@@ -131,8 +131,8 @@ How collections work:
 
 - You create and set collections by using the **[ClearCollect](function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
 - A collection is a data source and, therefore, a table.  To access a single value stored in a collection, use the **[First](function-first-last.md)** function, and extract one property from the resulting record.  If you used a single value with **[ClearCollect](function-clear-collect-clearcollect.md)**, this will be the **Value** property, as in this example:<br>**First( VariableName )!Value**
-- Collections can be accessed from any formula in the PowerApp, on any screen.
-- When a PowerApp ends, all of its collections are emptied.
+- Collections can be accessed from any formula in the app, on any screen.
+- When an app ends, all of its collections are emptied.
 
 Let's recreate our adding machine using a collection:
 
