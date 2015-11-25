@@ -19,6 +19,9 @@
    ms.author="anneta"/>
 
 # Create an app from a set of data
+
+[AZURE.VIDEO nb:cid:UUID:dd5b313a-0d00-80c4-ef13-f1e592bab129]
+
 Create an app automatically based on data that you specify, explore how the app works by default, and then customize it to better fit how you work.
 
 [What is PowerApps?](http://aka.ms/pamktg)
@@ -33,11 +36,7 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 
 ![Source data in SharePoint](./media/get-started-create-from-data/sharepoint-source.png)
 
-## Video demonstration
-
-[AZURE.VIDEO nb:cid:UUID:dd5b313a-0d00-80c4-ef13-f1e592bab129]
-
-## Build an app ##
+## Specify your data ##
 
 1. In PowerApps, select **Connections** on the **File** menu (near the left edge of the screen).
 
