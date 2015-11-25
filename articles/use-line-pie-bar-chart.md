@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Create and add line charts, pie charts, and bar charts in PowerApps | Microsoft PowerApps"
-	description="Add and configure collections, add columns to existing collections in your PowerApp"
+	description="Add and configure collections, add columns to existing collections in your PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/24/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
@@ -31,7 +31,7 @@ You can create and use these charts within PowerApps. Let's get started.
 
 ### Prerequisites
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new PowerApp or open an existing PowerApp.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - These steps use the [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own. 
 
@@ -83,6 +83,14 @@ Now, let's use this ProductRevenue collection in a bar chart:
 - At anytime, you can select the Preview button (![][8]) to view your charts, and to see how they look with data.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Select the middle of the column chart. In the property list, you can set the **GridStyle** to All, XOnly, YOnly, and even None.
+
+## What you learned
+In this topic, you:
+
+- Used the import control to import sample data in your app.
+- Added a pie chart and bar chart to display the data that you imported. 
+- In the column chart, you used the **Number of Series** property to show data for three years; with each year having its own column.
+
 
 
 [1]: ./media/use-line-pie-bar-chart/productrevenuecollection.png

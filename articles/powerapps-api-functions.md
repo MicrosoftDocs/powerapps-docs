@@ -1,6 +1,6 @@
 <properties
    pageTitle="Read about the API functions in PowerApps | Microsoft PowerApps"
-   description="How to use the API functions available in PowerApps"
+   description="Learn how to use the API functions available in PowerApps"
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -8,13 +8,14 @@
    manager="dwrede"
    editor=""
    tags=""/>
+
 <tags
    ms.service="powerapps"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/19/2015"
+   ms.date="11/25/2015"
    ms.author="rajram"/>
 
 # Learn more about the API functions in PowerApps
@@ -23,7 +24,7 @@ PowerApps supports native functions, including math, date time operations, and m
 
 PowerApps enables connectivity to different services out-of-the-box. These are managed by Microsoft and are available as soon you sign into PowerApps.
 
-This article describes the functions and actions available with the Microsoft Translator, Office 365 Outlook,  Office 365 Users, and the Twitter APIs. There are also examples of how to use these functions with your PowerApps.
+This article describes the functions and actions available with the Microsoft Translator, Office 365 Outlook,  Office 365 Users, and the Twitter APIs. There are also examples of how to use these functions with your apps.
 
 ## Types of API functions
 PowerApps uses the following types of API functions:
@@ -51,7 +52,7 @@ PowerApps provides the following functions for tabular data:
 - Update an item: Uses the _UpdateContext_ function
 - Delete an item: Uses the _Remove_ function
 
-All these functions are listed at [Build a formula][1]. To create PowerApps from existing data, go [here][13].
+All these functions are listed at [Build a formula][1]. To create an app from existing data, go [here][13].
 
 #### Actions
 
@@ -69,11 +70,11 @@ Microsoft Translator is a cloud-based automatic translation service. You can con
 In this section:
 
 - Create a new connection to the Microsoft Translator API.
-- Add the Microsoft Translator as a data source to your PowerApps.
-- See the API functions and how to use them in your PowerApps.
+- Add the Microsoft Translator as a data source to your app.
+- See the API functions and how to use them in your app.
 
 ### Create a new connection for Microsoft Translator
-1.  Open an existing PowerApp or [create a new app][2].
+1.  Open an existing app or [create a new app][2] in PowerApps.
 2.  On the **File** tab, select **Connections**.
 3.  If you don't have an existing _Microsoft Translator_ connection under **My Connections**, select **Available Connections**:  
 ![powerapps connections][3]
@@ -183,11 +184,11 @@ Office 365 is a service that uses Office applications and other productivity ser
 In this section:
 
 - Create a new connection to the Office 365 Outlook API.
-- Add Office 365 Outlook as a data source to your PowerApps.
-- See the API functions and how to use them in your PowerApps.
+- Add Office 365 Outlook as a data source to your app.
+- See the API functions and how to use them in your app.
 
 #### Create a new connection for Office 365 Outlook
-1.  Open an existing PowerApps application or [create a new app][2].
+1.  Open an existing app or [create a new app][2] in PowerApps.
 2.  On the **File** tab, select **Connections**.
 3.  If you don't have an existing connection to _Office 365 Outlook_ under **My Connections**, select **Available Connections**:  
 ![powerapps connections][3]
@@ -241,11 +242,11 @@ Office 365 is a service that uses Office applications and other productivity ser
 In this section:
 
 - Create a new connection to the Office 365 Users API.
-- Add Office 365 Users as a data source to your PowerApps.
-- See the API functions and how to use them in your PowerApps.
+- Add Office 365 Users as a data source to your app.
+- See the API functions and how to use them in your app.
 
 #### Create a new connection for Office 365 Users
-1.  Open an existing PowerApps application or [create a new app][2].
+1.  Open an existing app or [create a new app][2] in PowerApps.
 2.  On the **File** tab, select **Connections**.
 3.  If you don't have an existing connection to _Office 365 Outlook_ under **My Connections**, select **Available Connections**:  
 ![powerapps connections][3]
@@ -359,11 +360,11 @@ Twitter is an online social networking service that enables users to send and re
 In this section:
 
 - Create a new connection to the Twitter API.
-- Add Twitter as a data source to your PowerApps.
-- See the API functions and how to use them in your PowerApps.
+- Add Twitter as a data source to your app.
+- See the API functions and how to use them in your app.
 
 #### Create a new connection for Twitter
-1.  Open an existing PowerApps application or [create a new app][2].
+1.  Open an existing app or [create a new app][2] in PowerApps.
 2.  On the **File** tab, select **Connections**.
 3.  If you don't have an existing connection for _Twitter_ under **My Connections**, select **Available Connections**:  
 ![powerapps connections][3]

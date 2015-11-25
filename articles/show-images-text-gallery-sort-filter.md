@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/24/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 
@@ -27,13 +27,14 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 
 ### Prerequisites
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new tablet PowerApp or open an existing tablet PowerApp.
+- Create a new tablet app or open an existing tablet app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 - These steps use the [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpg images. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own. 
 
 ## Add a gallery to show images and text
 
 1. Create a collection named **Inventory** using the sample data. Steps include:  
+
 	a) On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
 	b) Set the **OnSelect** property of the import control to the following expression:  
@@ -56,6 +57,7 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 ![][6]  
 6. In the first item of the gallery, select the bottom label:  
 ![][7]  
+
 	> [AZURE.NOTE] When you change the first item in any gallery, you automatically change all other items in the gallery.  
 
 7. Set the **Text** property of the label to the following expression:  
