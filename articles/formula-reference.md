@@ -146,7 +146,7 @@ Reference information is also available for:
 
 **IsNumeric** Checks for a numeric value. *Coming Soon.*
 
-**IsToday** Checks if a date/time value is sometime today. *Coming Soon.*
+**[IsToday](functions/function-now-today-istoday.md)** Checks if a date/time value is sometime today. 
 
 ## L ##
 
@@ -158,9 +158,9 @@ Reference information is also available for:
 
 **Launch** Launches a URL, often used to open a webpage. *Coming Soon.*
 
-**Left** Returns the left portion of a string. *Coming Soon.*
+**[Left](functions/function-left-mid-right.md)** Returns the left portion of a string. 
 
-**Len** Returns the length of a string. *Coming Soon.*
+**[Len](functions/function-len.md)** Returns the length of a string. 
 
 **LoadData** Loads a collection from PowerApps private storage. *Coming Soon.*
 
@@ -174,7 +174,7 @@ Reference information is also available for:
 
 **[Max](functions/function-aggregates.md)** Maximum value of a table expression or a set of arguments.
 
-**Mid** Returns the middle portion of a string. *Coming Soon.*
+**[Mid](functions/function-left-mid-right.md)** Returns the middle portion of a string. 
 
 **[Min](functions/function-aggregates.md)** Minimum value of a table expression or a set of arguments.
 
@@ -190,7 +190,7 @@ Reference information is also available for:
 
 **[Not](functions/function-logicals.md)** Boolean logic NOT.  Returns **true** if its argument is **false**, and **false** if its argument is **true**.  You can also use the **!** operator.
 
-**Now** Returns the current date/time value.
+**[Now](functions/function-now-today-istoday.md)** Returns the current date/time value.
 
 ## O ##
 
@@ -224,7 +224,7 @@ Reference information is also available for:
 
 **[RGBA](functions/function-colors.md)** Returns a color value for a set of red, green, blue, and alpha components.
 
-**Right** Returns the right portion of a string. *Coming Soon.*
+**[Right](functions/function-left-mid-right.md)** Returns the right portion of a string. 
 
 **Round** Rounds to the closest number. *Coming Soon.*
 
@@ -256,13 +256,13 @@ Reference information is also available for:
 
 **Table** Creates a temporary table.  *Coming Soon.*
 
-**Text** Formats a number as a string. *Coming Soon.*
+**[Text](functions/function-text.md)** Formats a number as a string for display. 
 
 **[Time](functions/function-date-time.md)** Returns a date/time value, based on Hour, Minute, and Second values.  
 
 **[TimeValue](functions/function-datevalue-timevalue.md)** Converts a time-only string to a date/time value.
 
-**Today** Returns the current date/time value. *Coming Soon.*
+**[Today](functions/function-now-today-istoday.md)** Returns the current date/time value. 
 
 **Trim** Strips spaces from both ends of a string.  *Coming Soon.*
 

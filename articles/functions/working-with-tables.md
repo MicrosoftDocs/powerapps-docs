@@ -26,7 +26,7 @@ Tables and records help organize related information:
 
 In PowerApps, tables and records can be calculated just as numbers are.  Functions can take tables and records as arguments and also return them.  
 
-Tables of information appear in a wide variety of systems, including Excel, SharePoint lists, and SQL Server, to name but a few.  PowerApps use a [data source](working-with-data-sources.md), which is an extended table, to read and write information to an external source.  You can also create a [collection](working-with-data-sources.md#collections) within a PowerApp to hold a temporary table.
+Tables of information appear in a wide variety of systems, including Microsoft Excel, SharePoint lists, and SQL Server, to name but a few.  PowerApps use a [data source](working-with-data-sources.md), which is an extended table, to read and write information to an external source.  You can also create a [collection](working-with-data-sources.md#collections) within a PowerApp to hold a temporary table.
 
 ## Elements of a table ##
 
@@ -97,8 +97,8 @@ If a table is provided as an argument, many functions in PowerApps return a tabl
 - **[Sort](function-sort.md)**, **[Filter](function-filter-lookup.md)** - Sorts and filters records.
 - **[FirstN](function-first-last.md)**, **[LastN](function-first-last.md)** - Returns the first N or last N records of the table.
 - **[Abs](function-numericals.md)**, **[Sqrt](function-numericals.md)**, **Round**, **RoundUp**, **RoundDown** - Arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
-- **Left**, **Mid**, **Right**, **Replace**, **Substitute**, **Replace**, **Trim**, **[Lower](function-lower-upper-proper.md)**, **[Upper](function-lower-upper-proper.md)**, **[Proper](function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
-- **Len** - For a column of strings, returns a single-column table that contains the length of each string.
+- **[Left](function-left-mid-right.md)**, **[Mid](function-left-mid-right.md)**, **[Right](function-left-mid-right.md)**, **Replace**, **Substitute**, **Replace**, **Trim**, **[Lower](function-lower-upper-proper.md)**, **[Upper](function-lower-upper-proper.md)**, **[Proper](function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
+- **[Len](function-len.md)** - For a column of strings, returns a single-column table that contains the length of each string.
 - **[Concatenate](function-concatenate.md)** - Concatenates multiple columns of strings, resulting in a single-column table of strings.
 - **[AddColumns](function-table-shaping.md)**, **[DropColumns](function-table-shaping.md)**, **[RenameColumns](function-table-shaping.md)**, **[ShowColumns](function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
 - **Distinct** - Removes duplicates records.

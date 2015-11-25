@@ -20,34 +20,34 @@
 
 # Working with data sources in PowerApps #
 
-Data sources are extensions of [tables](working-with-tables.md) that use connections to retrieve and store information in a service.  You can use data sources to read and write data in Excel workbooks, SharePoint lists, SQL Server tables, and many other services.
+Data sources are extensions of [tables](working-with-tables.md) that use connections to retrieve and store information in a service.  You can use data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.
 
 ## Data sources ##
 
 As we learned in [Working with tables](working-with-tables.md), tables in PowerApps are values, just as a number or a string is a value. Tables aren't stored anywhere. You can't directly modify the structure and data of a table, only derivative tables that you create through a formula.
 
-Some of the most interesting tables are stored for later retrieval and sharing.  PowerApps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your PowerApp, and each will become a separate *data source*.  
+Some of the most interesting tables are stored for later retrieval and sharing.  PowerApps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your app, and each will become a separate *data source*.  
 
 A data source is an extension of a table, and you can use it in any context that you use a table.  Just like a table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas.  In addition:
 
 - The data source has the same column names and data types as the underlying table in the connection.
-- The data source is loaded from the service automatically when the PowerApp is loaded.  You can force the data to refresh by using the **[Refresh](function-refresh.md)** function.
-- As users run a PowerApp, they can create, modify, and delete records and push those changes back to the underlying table in the service.
+- The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](function-refresh.md)** function.
+- As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
 	- Records can be created with the **[Patch](function-patch.md)** and **[Collect](function-clear-collect-clearcollect.md)** functions.  
 	- Records can be modified with the **[Patch](function-patch.md)** **[Update](function-update-updateif.md)** and **[UpdateIf](function-update-updateif.md)** functions.
 	- Records can be removed with the **[Remove](function-remove-removeif.md)** and **[RemoveIf](function-remove-removeif.md)** functions.
 	- Errors when working with a data source are available through the **[Errors](function-errors.md)** function.
 - The **[DataSourceInfo](function-datasourceinfo.md)** **[Defaults](function-defaults.md)** and **[Validate](function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
 
-PowerApps can't be used to create or modify a data source; the table must already exist in a service elsewhere.  To create a table (for example, in an Excel workbook stored on OneDrive), you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from PowerApps.  Collections can be created and modified in PowerApps but are only temporary.
+PowerApps can't be used to create or modify a data source; the table must already exist in a service elsewhere.  To create a table (for example, in an Excel workbook stored on OneDrive), you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  Collections can be created and modified in an app but are only temporary.
 
 ## Displaying records from a data source ##
 ![](media/working-with-data-sources/reading-from-a-datasource.png)
-The diagram above shows the flow of information when a PowerApp reads the information in a data source:
+The diagram above shows the flow of information when an app reads the information in a data source:
 
 - The information is stored and shared through a storage service (in this case, a SharePoint list of an Office 365 site).
-- A connection makes this information available to PowerApps.  The connection takes care of authentication of the PowerApps user to access the information.
-- When the PowerApp is started or the **[Refresh](function-refresh.md)** function invokes, information is drawn from the connection into a data source in the PowerApp for local use.
+- A connection makes this information available to the app.  The connection takes care of authentication of the user to access the information.
+- When the app is started or the **[Refresh](function-refresh.md)** function invokes, information is drawn from the connection into a data source in the app for local use.
 - Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **Items** property to the data source: **Gallery!Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **Default** property.  
 - The data source is also a table.  So you can use **[Filter](function-filter-lookup.md)**, **[Sort](function-sort.md)**, **[AddColumns](function-table-shaping.md)**, and other functions to refine and augment the data source before using it as a whole.  You can also use the **[Lookup](function-filter-lookup.md)**, **[First](function-first-last.md)**, **[Last](function-first-last.md)**, and other functions to work with individual records.
 
@@ -62,7 +62,7 @@ For example, let's walk through the steps to display our SharePoint list:
 7. You can change which columns are shown by changing the **Text** properties of the labels in the gallery.  You can also add and rearrange labels.
 8. Preview the app, and browse and edit records of the SharePoint list.  
 
-Other users can modify the SharePoint list outside of the PowerApp.  When it loads, the PowerApp will read the SharePoint list, and the data can be refreshed later with the **[Refresh](function-refresh.md)** function.
+Other users can modify the SharePoint list outside of the app.  When it loads, the app will read the SharePoint list, and the data can be refreshed later with the **[Refresh](function-refresh.md)** function.
 
 ## Modifying a record in a data source ##
 
@@ -77,7 +77,7 @@ The diagram above shows the flow of information to update a data source:
 - Each input control exposes an **[Update](function-update-updateif.md)** property.  This property maps the user's input to a specific property of the record.
 - The gallery aggregates the **[Update](function-update-updateif.md)** property of each of the controls within it and exposes this as an **Updates** property.
 - A button or an image control on the screen is used to submit changes to the data source's service.  You use a formula based on the **[Patch](function-patch.md)** function from the **OnSelect** formula of the control.
-- Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the PowerApp didn't know about.  The **[Errors](function-errors.md)** function is used to check if there was an issue and retrieve information about the issue.  In some cases, such as conflicting edits by another user, the **[Revert](function-revert.md)** function may be needed to reload the record and clear the error.
+- Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the app didn't know about.  The **[Errors](function-errors.md)** function is used to check if there was an issue and retrieve information about the issue.  In some cases, such as conflicting edits by another user, the **[Revert](function-revert.md)** function may be needed to reload the record and clear the error.
 
 Let's continue our walkthrough and add a screen for editing records:
 
@@ -98,16 +98,16 @@ Let's continue our walkthrough and add a screen for editing records:
 
 ## Validation ##
 
-Before making a change to a record, the PowerApp should do what it can to make sure the change will be acceptable.  There are two reasons for this:
+Before making a change to a record, the app should do what it can to make sure the change will be acceptable.  There are two reasons for this:
 
 - *Immediate feedback to the user*.  The best time to fix a problem is right when it happens, when it is fresh in the user's mind.  Literally with each touch or keystroke, red text can appear that identifies an issue with their entry.
-- *Less network traffic and less user latency*.  More issues detected in the PowerApp means fewer conversations over the network to detect and resolve issues.  Each conversation takes time during which the user must wait before they can move on.
+- *Less network traffic and less user latency*.  More issues detected in the app means fewer conversations over the network to detect and resolve issues.  Each conversation takes time during which the user must wait before they can move on.
 
 PowerApps offers three tools for validation:
 
 - The data source can provide information about what is and isn't valid.  For example, numbers can have minimum and maximum values, and one or more entries can be required.  You can access this information with the **[DataSourceInfo](function-datasourceinfo.md)** function.  
 - The **[Validate](function-validate.md)** function uses this same information to check the value of a single column or of an entire record.
-- You can add validation that's specific to your PowerApp with the **Valid** property of input controls.  The formula for this property should evaluate to *true* if the validation passes.  The **Valid** property of a gallery is a logical **[And](function-logicals.md)** of the **Valid** properties of all the input controls within it.
+- You can add validation that's specific to your app with the **Valid** property of input controls.  The formula for this property should evaluate to *true* if the validation passes.  The **Valid** property of a gallery is a logical **[And](function-logicals.md)** of the **Valid** properties of all the input controls within it.
 
 Let's continue our walkthrough and add validation to our screen:
 
@@ -128,9 +128,9 @@ Let's continue our walkthrough and add validation to our screen:
 
 Great, you've validated your record.  Time to update that record with **[Patch](function-patch.md)**!
 
-But, alas, there may still be a problem.  The network is down, validation at the service failed, or the user doesn't have the right permissions, just to name a few of the possible errors your PowerApp may encounter.  It needs to respond appropriately to error situations, providing feedback to the user and a means for them to make it right.  
+But, alas, there may still be a problem.  The network is down, validation at the service failed, or the user doesn't have the right permissions, just to name a few of the possible errors your app may encounter.  It needs to respond appropriately to error situations, providing feedback to the user and a means for them to make it right.  
 
-When errors occur with a data source, PowerApps record the error information and make it available through the **[Errors](function-errors.md)** function.  Errors are associated with the records that had the problems.  If the problem is something the user can fix, such as a validation problem, they can resubmit the record, and the errors will be cleared.
+When errors occur with a data source, your app automatically records the error information and makes it available through the **[Errors](function-errors.md)** function.  Errors are associated with the records that had the problems.  If the problem is something the user can fix, such as a validation problem, they can resubmit the record, and the errors will be cleared.
 
 If an error occurs when a record is created with **[Patch](function-patch.md)** or **[Collect](function-clear-collect-clearcollect.md)**, there is no record to associate any errors with.  In this case, *blank* will be returned by **[Patch](function-patch.md)** and can be used as the record argument to **[Errors](function-errors.md)**.  Creation errors are cleared with the next operation.
 
@@ -163,9 +163,9 @@ Now that we have our main building-block screens, let's bring it all together.  
 - **Details Screen**.  To make the browse screen efficient and show lots of records at a time, only a few properties from each record can be displayed.  To drill into a record, the details screen offers more or all of the properties of the record in a format that is designed for viewing one record at a time.  
 - **Edit Screen**.  Often the most efficient way to view a record is not the same as the most efficient way to edit a record.  Labels should be replaced with input-text boxes that are larger and designed for editing, numeric properties can be edited with a slider control, etc.  The edit screen provides a user experience optimized for editing.  The edit screen is also used to create records.
 
-This pattern is used when you create a PowerApp from data. We recommend that you create one of these apps and examine the formulas for more details.  This is also a great starting point for customizing an app for your needs.
+This pattern is used when you create an app from data. We recommend that you create one of these apps and examine the formulas for more details.  This is also a great starting point for customizing an app for your needs.
 
-This pattern is but one of many possibilities.  PowerApps is designed to help you create a unique experience that fits your situation very well.  The functionality on these screens can be broken apart, rearranged, and combined in different ways.  For example, you may want to break the edit screen for large records into separate screens that are more bite-size, or you may want to make changes to a record directly from the browse screen.  Examine the PowerApps that are created from templates too. Each is unique in how it structures its screens.
+This pattern is but one of many possibilities.  PowerApps is designed to help you create a unique experience that fits your situation very well.  The functionality on these screens can be broken apart, rearranged, and combined in different ways.  For example, you may want to break the edit screen for large records into separate screens that are more bite-size, or you may want to make changes to a record directly from the browse screen.  Examine the apps that are created from templates too. Each is unique in how it structures its screens.
 
 The diagram below shows these three screens and how they're wired together to create the app's overall experience:
 

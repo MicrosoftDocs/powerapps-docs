@@ -18,7 +18,7 @@
    ms.date="11/07/2015"
    ms.author="gregli"/>
 
-# Day, Month, Year, Hour, Minute, and Second functions #
+# Day, Month, Year, Hour, Minute, and Second functions in PowerApps #
 
 Returns individual components of a Date/Time value.
 

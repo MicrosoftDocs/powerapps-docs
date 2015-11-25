@@ -22,30 +22,30 @@
 
 |Symbol|Operator type|Syntax|Description|
 |---|---|---|---|
-|( )|Parentheses|Filter(T, A &lt; 10)<br><br>(1 + 2) * 3|Precedence-order enforcement, and grouping of sub-expressions in a larger expression|
-|+|Arithmetic operators|1 + 2|Addition|
-|-||2 - 1|Subtraction and sign|
-|\*||2 * 3|Multiplication|
-|/||2 / 3|Division|
-|^||2 ^ 3|Exponentiation|
-|%||20%|Percentage (equivalent to &quot;* 1/100&quot;)|
-|=|Comparison operators|Price = 100|Equal to|
-|&gt; ||Price &gt; 100|Greater than|
-|&gt;=||Price &gt;= 100|Greater than or equal to|
-|&lt; ||Price &lt; 100|Less than|
-|&lt;=||Price &lt;= 100|Less than or equal to|
-|&lt;&gt; ||Price &lt;&gt; 100|Not equal to|
-|&amp;|String concatenation operator|&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;|Makes multiple strings appear continuous|
-|&amp;&amp;|Logical operators|Price &lt; 100 &amp;&amp; slider!value = 20|Logical conjunction|
-|&#124;&#124;||Price &lt; 100 &#124;&#124; slider!value = 20|Logical disjunction|
-|!||!(Price &lt; 100)|Logical negation|
-|exactin|Membership operators|gallery!Selected exactin SavedItems|Belonging to a [collection](working-with-data-sources.md#collections) or [table](working-with-tables.md)|
-|exactin||&quot;Windows&quot; exactin “To display windows in the Windows operating system...”|Substring test (case-sensitive)|
-|in||gallery!Selected in SavedItems|Belonging to a collection or table<br><br>|
-|in||&quot;The&quot; in &quot;The keyboard and the monitor...&quot;|Substring test (case-insensitive)|
-|@|Disambiguation operator|MyTable[@fieldname]|Field disambiguation|
-|||[@MyTable]|Global disambiguation|
-|;|Formula chaining|Collect(T, A); Navigate(S1, &quot;&quot;)|Separate invocations of functions in behavior properties|
+|**( )**|Parentheses|Filter(T, A &lt; 10)<br><br>(1 + 2) * 3|Precedence-order enforcement, and grouping of sub-expressions in a larger expression|
+|**+**|Arithmetic operators|1 + 2|Addition|
+|**-**|&nbsp;|2 - 1|Subtraction and sign|
+|**\***|&nbsp;|2 * 3|Multiplication|
+|**/**|&nbsp;|2 / 3|Division|
+|**^**|&nbsp;|2 ^ 3|Exponentiation|
+|**%**|&nbsp;|20%|Percentage (equivalent to &quot;* 1/100&quot;)|
+|**=**|Comparison operators|Price = 100|Equal to|
+|**&gt;** |&nbsp;|Price &gt; 100|Greater than|
+|**&gt;=**|&nbsp;|Price &gt;= 100|Greater than or equal to|
+|**&lt;** |&nbsp;|Price &lt; 100|Less than|
+|**&lt;=**|&nbsp;|Price &lt;= 100|Less than or equal to|
+|**&lt;&gt;** |&nbsp;|Price &lt;&gt; 100|Not equal to|
+|**&amp;**|String concatenation operator|&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;|Makes multiple strings appear continuous|
+|**&amp;&amp;**|Logical operators|Price &lt; 100 &amp;&amp; slider!value = 20|Logical conjunction or **[And](function-logicals.md)**|
+|**&#124;&#124;**|&nbsp;|Price &lt; 100 &#124;&#124; slider!value = 20|Logical disjunction or **[Or](function-logicals.md)**|
+|**!**|&nbsp;|!(Price &lt; 100)|Logical negation or **[Not](function-logicals.md)**|
+|**exactin**|Membership operators|gallery!Selected exactin SavedItems|Belonging to a [collection](working-with-data-sources.md#collections) or [table](working-with-tables.md)|
+|**exactin**|&nbsp;|&quot;Windows&quot; exactin “To display windows in the Windows operating system...”|Substring test (case-sensitive)|
+|**in**|&nbsp;|gallery!Selected in SavedItems|Belonging to a collection or table|
+|**in**|&nbsp;|&quot;The&quot; in &quot;The keyboard and the monitor...&quot;|Substring test (case-insensitive)|
+|**@**|Disambiguation operator|MyTable[@fieldname]|Field disambiguation|
+|&nbsp;|&nbsp;|[@MyTable]|Global disambiguation|
+|**;**|Formula chaining|Collect(T, A); Navigate(S1, &quot;&quot;)|Separate invocations of functions in behavior properties|
 
 ## in and exactin operators ##
 

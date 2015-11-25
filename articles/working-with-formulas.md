@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Working with formulas | Microsoft PowerApps"
-	description="User formulas to customize a PowerApp."
+	description="Use formulas to customize an app."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,7 +20,7 @@
 
 # Working with formulas #
 
-Customize how your PowerApp behaves as users enter information and click buttons.  Formulas drive the appearance and behavior of each UI element so that you can optimize the experience for your exact goals and workflow.
+Customize how your app behaves as users enter information and click buttons.  Formulas drive the appearance and behavior of each UI element so that you can optimize the experience for your exact goals and workflow.  Formulas operate much like they do in Microsoft Excel.
 
 This article provides only an overview of working with formulas.  Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks available to you.
 
@@ -39,7 +39,7 @@ This article provides only an overview of working with formulas.  Browse the [fo
 
 1. Leave the default option to create a phone app.
 
-	![The option buttons for creating a PowerApp for tablets or phones](./media/working-with-formulas/phone-app.jpg)
+	![The option buttons for creating an app for tablets or phones](./media/working-with-formulas/phone-app.jpg)
 
 1. Under **Blank App**, select **Get Started**.
 
@@ -95,14 +95,14 @@ Let's review how Excel works.  A cell can contain a value, such as a number or a
 
 ![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.png)
 
-PowerApps behave very much like Excel.  Instead of cells, you add, name, and place controls wherever you want on screens.  The Excel example looks like this in a PowerApp:
+PowerApps behave very much like Excel.  Instead of cells, you add, name, and place controls wherever you want on screens.  The Excel example looks like this in an app:
 
 - An input-text control, named **Text1**, which takes the place of cell **A1**. In this control, the user types in the first value to add.
 - Another input-text control, named **Text2**, which takes the place of cell **A2**. In this control, the user types in the second value to add.
 - A label, named **Label1**, which takes the place of cell **A3**.  This control shows the result of the addition.
 - Formula for the **Text** property of **Label1**, which performs the addition:<br>**Label1!Text = Text1 + Text2**<br>You access control properties by using the **!** operator.  **Label1!Text** refers to the label's **Text** property, and **Label1!Fill**,  for example, refers to its background-color property.
 
-This PowerApp has the same recalculation behavior as Excel. If you change the value of either of the text boxes, the label's formula is recalculated automatically, and the new result is displayed.
+This app has the same recalculation behavior as Excel. If you change the value of either of the text boxes, the label's formula is recalculated automatically, and the new result is displayed.
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc.png)
 
@@ -142,7 +142,7 @@ In this example, you'll use three sliders to govern the background color of a sc
 
 	![Change the formula for the background fill color of the screen, but not yet complete](./media/working-with-formulas/three-sliders-partial-rgba.png)
 
-	As you type the closing parenthesis, the screen's background will change to dark gray.  At the moment when you finish typing the formula, it's calculated and used as the value of the background fill color.  PowerApps are live as you edit them, and you can interact with them to a large degree in the default workspace (without opening Preview):
+	As you type the closing parenthesis, the screen's background will change to dark gray.  At the moment when you finish typing the formula, it's calculated and used as the value of the background fill color.  You can interact with your app while in the workspace without needing to Preview:
 
 	![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-complete-rgba.png)
 

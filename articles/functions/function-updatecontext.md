@@ -28,7 +28,7 @@ Use the **UpdateContext** function to create a context variable, which temporari
 
 Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable. If you want the equivalent of a global variable, create a [collection](working-with-data-sources.md#collections) by using the **[Collect](function-clear-collect-clearcollect.md)** or **[ClearCollect](function-clear-collect-clearcollect.md)** function.
 
-A PowerApp is based on formulas that automatically recalculate as the user interacts with the app.  Context variables do not enjoy this benefit and can make your app harder to create and understand.  Before using context variables, review [working with variables](working-with-variables.md).
+PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Context variables do not enjoy this benefit and can make your app harder to create and understand.  Before using context variables, review [working with variables](working-with-variables.md).
 
 ## Description ##
 
