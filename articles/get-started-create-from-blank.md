@@ -123,17 +123,17 @@ To follow this tutorial exactly:
 	![View screen with gallery and label](./media/get-started-create-from-blank/view-screen-label.jpg)
 
 ## Add a label to the gallery ##
-1. In the first item of the gallery, select the **Subtitle1** label, and reduce its height by about half.
+1. In the first item of the gallery, select the **Body1** label, and reduce its height by about half.
 
 	![View screen with gallery and label](./media/get-started-create-from-blank/resize-subtitle1.jpg)
 
 	**Note:** When you change the first item in a gallery, which is the gallery template, you automatically change all other items in the gallery.
 
-1. With the **Subtitle1** label still selected, select the **Insert** tab on the ribbon, and then select **Label**.
+1. With the **Body1** label still selected, select the **Insert** tab on the ribbon, and then select **Label**.
 
 	![The Label option on the Insert tab of the ribbon](./media/get-started-create-from-blank/insert-label.jpg)
 
-1. On the **Content** tab of the **Quick tools** pane, select **Staff2** in the **Label2** list.
+1. On the **Content** tab of the **Quick tools** pane, select **Staff2** in the **Label1** list.
 
 1. On the **Home** tab of the ribbon, set the **Size** of the label's font to **11**.
 
@@ -255,3 +255,7 @@ To follow this tutorial exactly:
 	**Lookup(Errors(Schedule,Record),IsBlank(Column),Message)**
 
 	In this formula, the [**Lookup**](function-first.md) function shows the message from any errors that occurred when the data source was being updated.
+
+## Next steps ##
+- Test the app in Preview by adding, editing, and removing records.
+- [Publish the app, and share it with others](get-started-test-drive.md).
