@@ -27,7 +27,7 @@ Create a logic flow that performs one or more tasks only after a user indicates 
 
 ## Request approval in email ##
 
-1. In  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Flows** in the left navigation bar.
+1. In  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar.
 
 	![Flows option in left navigation bar](./media/wait-for-approvals/nav-flows.png)
 
@@ -53,13 +53,4 @@ Create a logic flow that performs one or more tasks only after a user indicates 
 
 	![Move the approval action between the trigger and the other action](./media/wait-for-approvals/flow-sequence.png)
 
-If you send a tweet with the keyword, an email message is sent to the approver you specified in the first action. If the approver selects **Yes** in that message, a second message is sent to the person you specified in the second action.
-
-## Request approval in SharePoint
-1. Create a SharePoint list with a column called **Status**.
-
-2. Instead of adding the approval action, add **Create an item** and create an item in the list with the **Status** equal to pending.
-
-3. Add a step **When an item is updated in a list**. Flow the ID into the step.
-
-Now, the approver can updated the status in the list, and the item will be approved (or rejected).
+If you send a tweet with the keyword, an email message is sent to the approver you specified in the first action. If the approver selects **Approve** in that message, a message is sent to the person you specified in the second action.
