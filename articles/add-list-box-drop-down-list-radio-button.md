@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Add a listbox, drop-down list, and radio button controls in PowerApps Studio | Microsoft Azure"
-	description=""
+	pageTitle="Add a listbox, drop-down list, and radio button controls in PowerApps | Microsoft PowerApps"
+	description="Create or configure mutliselect options in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,17 +14,18 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/28/2015"
+   ms.date="11/24/2015"
    ms.author="mandia"/>
 
 
 # Add a list box, drop-down list, or radio button control
 
-PowerApps Studio includes multi-select and single-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
+PowerApps includes multi-select and single-select options, including a listbox, drop-down list, and radio button controls. In this topic, we add these controls and use a Table to build the lists. When an item is selected in the list, it updates other controls.
 
 ### Prerequisites
 
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps.
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new PowerApp or open an existing PowerApp.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 
@@ -53,7 +54,7 @@ circle | ```If("circle" in MyListbox!SelectedItems!Value, true)``` | ![][7]
 triangle | ```If("triangle" in MyListbox!SelectedItems!Value, true)``` | ![][8]
 rectangle | ```If("rectangle" in MyListbox!SelectedItems!Value, true)``` | ![][9]
 
-7. Preview what you've created ![][1]. Select the different shapes in the listbox. Only the shape or shapes you select appear. Press ESC to go back to your screen.
+7. Preview what you've created ![][1]. Select the different shapes in the listbox. Only the shape or shapes you select appear. Press **ESC** or select the **X** to go back to your screen.
 
 In these steps, you used an expression to create a list of items in a listbox. Depending on what you choose in the list box, different shapes are displayed. You can apply this to other elements within your business. For example, you can use a listbox to display product images, product descriptions, and so on.
 
@@ -84,7 +85,7 @@ In these steps, you used an expression to create a list of items in a listbox. D
 
 5. Move the circle under the radio control. You setup should look similar to the following:  
 ![][14]  
-6. Preview what you've created: ![][1]. Select the different radio buttons to change the color of the circle. Press ESC to go back to your screen.
+6. Preview what you've created: ![][1]. Select the different radio buttons to change the color of the circle. Press **ESC** or select the **X** to go back to your screen.
 
 Now, try the same steps using the drop-down control:  
 	![][15]  
