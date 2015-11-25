@@ -84,6 +84,7 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 1. In the **BODY** box, select the **Tweet text** parameter to add a placeholder for it, and then type the end of your message, including any other parameters you want to include.
 
 8. Name your logic flow in the box near the bottom of the screen, and then select **Done**.
+
 	![Select the done button](./media/get-started-logic-flow/done-button.png)
 
 	The list of your logic flow reflects your changes.
@@ -93,7 +94,7 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 	Within a minute, an email message notifies you of the new tweet.
 
 ## Change, pause, resume, or delete a logic flow ##
-1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Flows** in the left navigation bar.
+1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar.
 
 2. In the list of logic flows, do any of the following:
 
