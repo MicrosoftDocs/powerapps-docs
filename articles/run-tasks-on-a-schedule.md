@@ -23,11 +23,10 @@ Create a logic flow that performs the same task or tasks, such as sending report
 
 ## Prerequisites ##
 - An account on [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209)
-- Chrome browser
 
 ## Run a logic flow every day, hour, or minute
 
-1. In Chrome, open  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
+1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Get started** under **Make a logic flow**.
 
 	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-flow.png)
 
@@ -43,14 +42,15 @@ Create a logic flow that performs the same task or tasks, such as sending report
 
 ## Run a logic flow after a certain number of minutes or on a particular date ##
 
-1. In Chrome, open  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
+1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Get started** under **Make a logic flow**.
 
 	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-flow.png)
 
 1. Select **Create from blank**.
 
 	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-from-blank.png)
-1. Specify a trigger as [Create a logic flow from scratch](get-started-logic-flow) describes.
+
+1. Specify an event as [Create a logic flow from scratch](get-started-logic-flow) describes.
 
 1. Select the plus icon, and then select **Add action**.
 
