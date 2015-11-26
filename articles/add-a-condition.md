@@ -28,15 +28,13 @@ Specify that a logic flow performs one or more tasks only if a particular condit
 
 ## Add a condition ##
 
-1. In Chrome, open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then click **Flows** in the left navigation bar.
+1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar.
 
-1. In the list of logic flows, click the edit icon next to the logic flow that you created from a template.
+1. In the list of logic flows, select the edit icon next to the logic flow that you created from a template.
 
     ![Icon to edit the azuretweets flow](./media/add-a-condition/edit-flow.png)
 
 1. In the title bar of the action, select the ellipsis icon (...), and then select **Delete**.
-
-    ![Icon to delete an action](./media/add-a-condition/delete-action.png)
 
 1. Under the trigger, select the plus button.
 
