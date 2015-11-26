@@ -52,11 +52,7 @@ Also see [working with dates and times](../show-text-dates-times.md) for more in
 **TimeValue**( *String* [, *Language* )
 
 - *String* - Required.  A text string containing a date, time, or combination date and time value.
-- *Language* - Optional.  A language string, such as would be returned by the first two characters from the **Language** function.  If not provided, the language of the current user's client is used.  
-
-<!-- TODO: language should support everything that comes out of Language -->
-
-<!-- TODO: Check rendering of :asdf: below -->
+- *Language* - Optional.  A language string, such as would be returned by the first two characters from the **[Language](function-language.md)** function.  If not provided, the language of the current user's client is used.  
 
 ## Examples ##
 

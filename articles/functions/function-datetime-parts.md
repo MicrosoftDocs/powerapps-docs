@@ -40,13 +40,10 @@ All functions return a number.
 
 See [working with dates and times](../show-text-dates-times.md) for more information. 
 
-<!-- TOOD: should we have a millisecond? -->
-
 ## Syntax ##
 
 **Day**( *DateTime* )<br>**Month**( *DateTime* )<br>**Year**( *DateTime* )<br>**Hour**( *DateTime* )<br>**Minute**( *DateTime* )<br>**Second**( *DateTime* )
 
 - *DateTime* - Required.  Date/Time value to operate on.  
 
-<!-- TODO: examples -->
 

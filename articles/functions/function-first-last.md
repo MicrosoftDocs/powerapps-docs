@@ -49,8 +49,6 @@ The **LastN** function returns the last set of records of a table, the second ar
 
 ## Examples ##
 
-<!-- TODO: Examples. -->
-
 ### Step by step ###
 
 If you had an Employees table, this function would return the first record from that table:

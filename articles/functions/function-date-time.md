@@ -66,4 +66,3 @@ If a user typed 14 in an input-text control named BirthHour, 50 in an input-text
 
 **Text(Time(Value(BirthHour!Text), Value(BirthMinute!Text), Value(BirthSecond!Text)), "hh:mm:ss a/p")**
 
-<!-- TODO: check the :asdf: in the build -->

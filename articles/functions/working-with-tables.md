@@ -26,7 +26,7 @@ Tables and records help organize related information:
 
 In PowerApps, tables and records can be calculated just as numbers are.  Functions can take tables and records as arguments and also return them.  
 
-Tables of information appear in a wide variety of systems, including Microsoft Excel, SharePoint lists, and SQL Server, to name but a few.  PowerApps use a [data source](working-with-data-sources.md), which is an extended table, to read and write information to an external source.  You can also create a [collection](working-with-data-sources.md#collections) within a PowerApp to hold a temporary table.
+Tables of information appear in a wide variety of systems, including Microsoft Excel, SharePoint lists, and SQL Server, to name but a few.  PowerApps use a [data source](working-with-data-sources.md), which is an extended table, to read and write information to an external source.  You can also create a [collection](working-with-data-sources.md#collections) within an app to hold a temporary table.
 
 ## Elements of a table ##
 
@@ -36,7 +36,7 @@ Tables of information appear in a wide variety of systems, including Microsoft E
 
 Each record contains detailed information for a person, place, or thing.  In the above example, three records are displayed horizontally, one each for the products Chocolate, Bread, and Water.  For each product, price and quantity properties are available.
 
-Records can be used by themselves in formulas, outside of a table's context.  For example, **First(Proudcts)** returns the first record of the above table.  You can express a record in a formula by using curly braces (for example, **{ Name: "Chcocolate" }**) or by using a formula for the value **{ Price: Cost * 2 }**.
+Records can be used by themselves in formulas, outside of a table's context.  You can write a record in a formula by using curly braces.  For example, **{ Name: "Strawberries", Price: 7.99 }** is a record that and has no association with a table. 
 
 You may have referred to records as "rows" or "items" in other tools.
 
@@ -44,7 +44,7 @@ You may have referred to records as "rows" or "items" in other tools.
 
 A property is an individual piece of information for a record.
 
-Just as with controls, you access a property of a recordby using the **!** [operator](operators.md) on the record.  For example, **First(Products)!Name** would return the **Name** property for the first record of the "Chocolate" table.
+Just as with controls, you access a property of a record by using the **!** [operator](operators.md) on the record.  For example, **First(Products)!Name** would return the **Name** property for the first record of the "Chocolate" table.
 
 A property can contain another record or table.  You can nest as many levels of records and tables as you want.
 
@@ -53,7 +53,7 @@ A property can contain another record or table.  You can nest as many levels of 
 Columns refer to the same properties for each record of a table.  In the above example, each product has a price property, and that price is in the same column for all products.  The above table has four columns, shown vertically:
 - **Product**
 - **Price**
-- **Quanity on Hand**
+- **Quantity on Hand**
 - **Quantity on Order**.
 
 The column's name is the same as the properties in that column.
@@ -68,7 +68,13 @@ A table comprises multiple records, each with multiple properties that have cons
 
 Any table that's stored in a service or a collection has a name, which you use to refer to the table and pass it to functions that take tables as arguments.  Tables can also be the result of a function or a formula.
 
-As in the following example, you can express a table in a formula by using the **Table** function with a set of records, which you express in curly braces:<br>**Table( { Name: "Strawberry" }, { Name: "Vanilla" } )**
+As in the following example, you can express a table in a formula by using the **[Table](function-table.md)** function with a set of records, which you express in curly braces:
+
+**Table( { Value: "Strawberry" }, { Value: "Vanilla" } )**
+
+You can also define a single-column table with square brackets.  An equivalent way to write the above:
+
+**[ "Strawberry", "Vanilla" ]** 
 
 ## Table formulas ##
 
@@ -114,7 +120,7 @@ The data-source functions do modify one of their arguments: the records of the d
 - **[Update](function-update-updateif.md)**, **[UpdateIf](function-update-updateif.md)** - Updates records.
 - **[Remove](function-remove-removeif.md)**, **[RemoveIf](function-remove-removeif.md)** - Deletes records.
 
-The following controls have table-valued properties:
+The following controls have properties that are tables:
 
 - **Items** - Applies to galleries and listboxes.  Table to display in the gallery.
 - **SelectedItems** - Applies to listboxes.  Table of the items the user has selected.
@@ -172,18 +178,18 @@ You can nest records by nesting curly braces, as in this example:
 
 **{ 'Quantity': { 'OnHand': ThisItem!QuantOnHand, 'OnOrder': ThisItem!QuantOnOrder } }**
 
-Enclose each column name that contains a special character, such as a space or a colon, in single quotes.  
-
-<!-- TODO: Escaping single quote. -->
+Enclose each column name that contains a special character, such as a space or a colon, in single quotes.  To use a single quote within a column name, double it.
 
 Note that the value in the Price column doesn't include a currency symbol, such as a dollar sign. That formatting will be applied when the value is displayed.  
 
 ### Tables ###
 
-You can create a table by using the **Table** function and a set of records. You can express the previous table by using this formula:
+You can create a table by using the **[Table](function-table.md)** function and a set of records. You can express the previous table by using this formula:
 
 **Table( { Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Name: "Water", Price: 4.95, 'Quantity on Hand': 10, 'Quantity on Order': 0 } )**
 
 You can also nest tables:
 
 **Table( { Name: "Chocolate",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) } )**
+
+Single-column tables can be created with square brackets containing values.  The resulting table has a single column, named "Value".  **[ 1, 2, 3, 4 ]** is equivalent to **Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )**.

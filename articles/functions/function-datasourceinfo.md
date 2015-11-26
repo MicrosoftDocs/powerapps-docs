@@ -30,7 +30,7 @@ You can use [column](working-with-tables.md#columns) level information to valida
 
 You can use data source level information to, for example, disable or hide "Edit" and "New" buttons for users that do not have permissions to edit and create [records](working-with-tables.md#records).
 
-Data sources vary in how much information they provide, including not providing any at all.  **[Collections](working-with-data-sources.md#collections) provide no information.  If a piece of information is not provided, a default is used or *blank* is returned. 
+Data sources vary in how much information they provide, including not providing any at all.  [Collections](working-with-data-sources.md#collections) provide no information.  If a piece of information is not provided, a default is used or *blank* is returned. 
 
 ## Description ##
 

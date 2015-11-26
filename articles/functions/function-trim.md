@@ -48,4 +48,3 @@ Trimming spaces between words is consistent with the Microsoft Excel's Trim func
 |---------|-------------|--------|
 | **Trim( "&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;" )** | Removes extra spaces from the beginning, middle, and end of the string | "Hello World" |
 
-<!-- need more examples, including tables -->

@@ -126,7 +126,7 @@ Reference information is also available for:
 
 ## G ##
 
-**GroupBy** Returns a table with records grouped together.  *Coming Soon.*
+**[GroupBy](functions/function-groupby.md)** Returns a table with records grouped together.
 
 ## H ##
 
@@ -142,13 +142,13 @@ Reference information is also available for:
 
 **[IsEmpty](functions/function-isblank-isempty.md)** Checks for an empty table.
 
-**IsNumeric** Checks for a numeric value. *Coming Soon.*
+**[IsNumeric](functions/function-isnumeric.md)** Checks for a numeric value. 
 
 **[IsToday](functions/function-now-today-istoday.md)** Checks if a date/time value is sometime today. 
 
 ## L ##
 
-**Language** Language.  *Coming Soon.*
+**[Language](functions/function-language.md)** Access to the language used by the app.
 
 **[Last](functions/function-first-last.md)** Returns the last record of a table.
 
@@ -178,7 +178,7 @@ Reference information is also available for:
 
 **[Minute](functions/function-datetime-parts.md)** Retrieves the minute portion of a date/time value.  
 
-**Mod** Returns the remainder after a number is divided by a divisor. *Coming Soon.*
+**[Mod](functions/function-mod.md)** Returns the remainder after a number is divided by a divisor.
 
 **[Month](functions/function-datetime-parts.md)** Retrieves the month portion of a date/time value.
 
@@ -252,7 +252,7 @@ Reference information is also available for:
 
 ## T ##
 
-**Table** Creates a temporary table.  
+**[Table](functions/function-table.md)** Creates a temporary table.  
 
 **[Text](functions/function-text.md)** Formats a number as a string for display. 
 
@@ -266,7 +266,7 @@ Reference information is also available for:
 
 ## U ##
 
-**Ungroup** Removes a grouping. *Coming Soon.*
+**[Ungroup](functions/function-groupby.md)** Removes a grouping.
 
 **[Update](functions/function-update-updateif.md)** Replaces a record in a data source.
 
@@ -276,7 +276,7 @@ Reference information is also available for:
 
 **[Upper](functions/function-lower-upper-proper.md)** Converts letters in a string of text to all uppercase.
 
-**[User](functions/function-user.md)** Returns information about the current user. *Coming Soon.*
+**[User](functions/function-user.md)** Returns information about the current user.
 
 ## V ##
 

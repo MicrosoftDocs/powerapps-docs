@@ -40,5 +40,5 @@ The **Char** function returns a string containing the appropriate ASCII characte
 | **Char( 105 )** | Returns the character corresponding to ASCII code 105. | "i" |
 | **Char( 35 )** | Returns the character corresponding to ASCII code 35. | "#" |
 
-<!-- TODO: What does this do on other platforms, locales?  Unicide? -->
+
 

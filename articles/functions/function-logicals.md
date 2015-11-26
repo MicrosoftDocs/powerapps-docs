@@ -42,8 +42,6 @@ These functions work with logical values.  They cannot be passed a number or str
 
 ## Examples ##
 
-<!-- TODO: Examples. -->
-
 ### Step by step ###
 
 You can use this function to determine whether a slider's value falls outside the 50 to 100 range:

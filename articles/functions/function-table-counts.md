@@ -52,10 +52,6 @@ All of these functions return a number.
 
 ## Examples ##
 
-<!-- TODO: Examples. -->
-
-<!-- TODO: Single column notation. -->
-
 ### Step by step ###
 
 1. Import or create a [collection](working-with-data-sources.md#collections) named Inventory, as Create your first app describes.
