@@ -37,7 +37,7 @@ Empty indicates a table that has no records.  The table structure may be there, 
 - An empty string with **[Len](function-len.md)** of 0.
 - An error occurred in a function.  Often the arguments to the function were invalid.
 - Connected [data sources](working-with-data-sources.md) such as SQL Server may use "null" values.  These values appear as *blank* in PowerApps.
-- The *else* portion of an **If** function was not specified, and the condition was **false**.
+- The *else* portion of an **[If](function-if.md)** function was not specified, and the condition was **false**.
 - A column was not included when using the **[Update](function-update-updateif.md)** function, and no value was placed in that column as a result.
 
 Most functions in PowerApps propagate *blank* values for the handling of errors.  Unless checked, *blank* values flow through a formula, resulting in a *blank* value displayed to the user of the app.  For example, **Mid( "asdf", 10, 1 )** has a starting character number beyond the end of the string, which will return *blank*.  **Right( Mid( "asdf", 10, 1 ), 3 )** will also return *blank*, passing through the *blank* value from **[Mid](function-left-mid-right.md)**. 

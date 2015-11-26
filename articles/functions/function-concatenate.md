@@ -24,7 +24,7 @@ Concatenates individual strings and strings in [tables](working-with-tables.md).
 
 ## Description ##
 
-The **Concat** function concatenates the result of a formula applied across all the [records](working-with-tables.md#records) of a table, resulting in a single string.  You can use this function to summarize the strings of a table, just as **[Sum](function-aggregates.md)** does for numbers.
+The **Concat** function concatenates the result of a formula applied across all the [records](working-with-tables.md#records) of a table, resulting in a single string.  [Columns](working-with-tables.md#columns) of the table can be used in the formula.  You can use this function to summarize the strings of a table, just as **[Sum](function-aggregates.md)** does for numbers.
 
 The **Concatenate** function concatenates a mix of individual strings and single-column table of strings.  Used with individual strings, this function is equivalent to using the **&** [operator](operators.md).  The single-column table may be created by a formula.
 
@@ -63,7 +63,7 @@ If you created an input-text control named AuthorName, the following function wo
 
 **Concatenate("By ", AuthorName!Text)**
 
-If you had an Employees table that contained a FirstName [column](working-with-tables.md#columns) and a LastName column, the following function would concatenate the data in each row of those columns.
+If you had an Employees table that contained a FirstName column and a LastName column, the following function would concatenate the data in each row of those columns.
 
 **Concatenate(Employees!FirstName, " ", Employees!LastName)**
 

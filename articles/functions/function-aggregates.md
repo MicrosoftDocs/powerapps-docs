@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Average, Max, Min, and Sum functions"
-	description="Reference information for the Average, Max, Min, and Sum functions in PowerApps, including syntax and examples"
+	pageTitle="PowerApps: Average, Max, Min, Sum, StdevP, and VarP functions"
+	description="Reference information for the Average, Max, Min, Sum, StdevP, and VarP functions in PowerApps, including syntax and examples"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,7 +18,7 @@
    ms.date="11/07/2015"
    ms.author="gregli"/>
 
-# Average, Max, Min, and Sum functions in PowerApps #
+# Average, Max, Min, Sum, StdevP, and VarP functions in PowerApps #
 
 Aggregate functions that summarize a set of numbers. 
 
@@ -32,33 +32,29 @@ The **Min** function finds the minimum value.
 
 The **Sum** function adds all values together and returns the sum.
 
+The **StdevP** function calculates the standard deviation of its arguments.
+
+The **VarP** function calculates the variance of its arguments.
+
 These functions can be used in two different ways:
 
 - You can supply the values as separate arguments.  For example, **Sum( 1, 2, 3 )** returns 6. 
 - You can supply a [table](working-with-tables.md) and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each [record](working-with-tables.md#records).  The formula can reference [columns](working-with-tables.md#columns) in the table.  
 
-These functions only operate on numeric values.  Other types of values, such as strings or records, are ignored.  Use the **Value** function to convert a string into a number.   
+These functions only operate on numeric values.  Other types of values, such as strings or records, are ignored.  Use the **[Value](function-value.md)** function to convert a string into a number.   
  
 ## Syntax ##
 
-**Average**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>
-**Max**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>
-**Min**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>
-**Sum**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
+**Average**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Max**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Min**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Sum**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**StdevP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**VarP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
 
 - *NumericalFormula(s)* - Required.  Numeric values to operate on.
 
-**Average**( *Table*, *NumericalFormula* )<br>
-**Max**( *Table*, *NumericalFormula* )<br>
-**Min**( *Table*, *NumericalFormula* )<br>
-**Sum**( *Table*, *NumericalFormula* )
+**Average**( *Table*, *NumericalFormula* )<br>**Max**( *Table*, *NumericalFormula* )<br>**Min**( *Table*, *NumericalFormula* )<br>**Sum**( *Table*, *NumericalFormula* )<br>**StdevP**( *Table*, *NumericalFormula* )<br>**VarP**( *Table*, *NumericalFormula* ) 
 
 - *Table* - Required.  Table to operate on.
 - *NumericalFormula* - Required. Formula to evaluate for each record. The result of this formula is used for the aggregation. Columns of the table may be used in the formula.  
 
 ## Examples ##
-
-<!-- TODO: Examples. -->
 
 ### Step by step ###
 

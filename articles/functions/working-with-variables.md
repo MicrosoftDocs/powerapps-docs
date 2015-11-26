@@ -54,7 +54,7 @@ This app has the same recalculation behavior as Excel. If you change the value o
 
 ![](media/working-with-variables/recalc.png)
 
-PowerApps can use formulas for more than the primary value of a control.  For example, you can use formulas to control formatting.  In this next example, a formula for the Color property of the label will automatically show negative values in red.  The **If** function should look very familiar from Excel.
+PowerApps can use formulas for more than the primary value of a control.  For example, you can use formulas to control formatting.  In this next example, a formula for the Color property of the label will automatically show negative values in red.  The **[If](function-if.md)** function should look very familiar from Excel.
 
 ![](media/working-with-variables/recalc-color.png)
 

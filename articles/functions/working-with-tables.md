@@ -96,14 +96,14 @@ If a table is provided as an argument, many functions in PowerApps return a tabl
 
 - **[Sort](function-sort.md)**, **[Filter](function-filter-lookup.md)** - Sorts and filters records.
 - **[FirstN](function-first-last.md)**, **[LastN](function-first-last.md)** - Returns the first N or last N records of the table.
-- **[Abs](function-numericals.md)**, **[Sqrt](function-numericals.md)**, **Round**, **RoundUp**, **RoundDown** - Arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
-- **[Left](function-left-mid-right.md)**, **[Mid](function-left-mid-right.md)**, **[Right](function-left-mid-right.md)**, **Replace**, **Substitute**, **Replace**, **Trim**, **[Lower](function-lower-upper-proper.md)**, **[Upper](function-lower-upper-proper.md)**, **[Proper](function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
+- **[Abs](function-numericals.md)**, **[Sqrt](function-numericals.md)**, **[Round](function-round.md)**, **[RoundUp](function-round.md)**, **[RoundDown](function-round.md)** - Arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
+- **[Left](function-left-mid-right.md)**, **[Mid](function-left-mid-right.md)**, **[Right](function-left-mid-right.md)**, **[Replace](function-replace-substitute.md)**, **[Substitute](function-replace-substitute.md)**, **[Replace](function-replace-substitute.md)**, **[Trim](function-trim.md)**, **[Lower](function-lower-upper-proper.md)**, **[Upper](function-lower-upper-proper.md)**, **[Proper](function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
 - **[Len](function-len.md)** - For a column of strings, returns a single-column table that contains the length of each string.
 - **[Concatenate](function-concatenate.md)** - Concatenates multiple columns of strings, resulting in a single-column table of strings.
 - **[AddColumns](function-table-shaping.md)**, **[DropColumns](function-table-shaping.md)**, **[RenameColumns](function-table-shaping.md)**, **[ShowColumns](function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
-- **Distinct** - Removes duplicates records.
-- **Shuffle** - Randomly shuffles records.
-- **HashTags** - Searches for hash tags in a string.
+- **[Distinct](function-distinct.md)** - Removes duplicates records.
+- **[Shuffle](function-shuffle.md)** - Randomly shuffles records.
+- **[HashTags](function-hashtags.md)** - Searches for hash tags in a string.
 - **[Errors](function-errors.md)** - Provides error information when you work with a data source.
 
 For tables that use a single column as an argument, you can extract a column from a larger table by using the **[ShowColumns](function-table-shaping.md)** function.  For example, you can calculate a lowercase list of products by using this function:<br>**Lower( ShowColumns( Products, "Name" ) )**<br>If you combine a table with **[AddColumns](function-table-shaping.md)**, **[RenameColumns](function-table-shaping.md)**, and **[DropColumns](function-table-shaping.md)**, you can completely reshape the table as needed.

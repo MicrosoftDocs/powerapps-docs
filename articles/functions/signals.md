@@ -75,7 +75,7 @@ The **Location** signal returns the location of the device, based on the Global 
 
 When accessing the location information for the first time, the device may prompt the user to allow access to this information.
 
-As the location changes, dependencies on the location will continuously recalculate, which will consume power from the device's battery.  To conserve battery life, you can use the **Enable** and **Disable** functions to turn location updates on and off.  Location is automatically turned off if the currently displayed screen does not depend on location information.
+As the location changes, dependencies on the location will continuously recalculate, which will consume power from the device's battery.  To conserve battery life, you can use the **[Enable](function-enable-disable.md)** and **[Disable](function-enable-disable.md)** functions to turn location updates on and off.  Location is automatically turned off if the currently displayed screen does not depend on location information.
 
 | Signal Property | Description |
 |--------------------|-------------|
