@@ -65,8 +65,7 @@ The **ClearCollect** function deletes all the records from a collection and then
 **Collect**( *DataSource*, *Item*, ... )
 
 - *DataSource* – Required. The data source that you want to add data to.  If it does not already exist, a new collection is created.
-
-- *Item(s)* - Required.  One or more items to add to the data source. 
+- *Item(s)* - Required.  One or more records or tables to add to the data source.  
  
 **Clear**( *Collection* )
 
@@ -75,8 +74,7 @@ The **ClearCollect** function deletes all the records from a collection and then
 **ClearCollect**( *Collection*, *Item*, ... )
 
 - *Collection* – Required. The collection that you want to clear and then add data to.
-
-- *Item(s)* - Required.  One or more items to add to the data source.  
+- *Item(s)* - Required.  One or more records or tables to add to the data source.  
 
 ## Examples ##
 

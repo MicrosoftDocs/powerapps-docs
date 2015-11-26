@@ -81,8 +81,6 @@ If a number has more digits to the right of the decimal point than there are pla
 | **f** | Displays the fractions of seconds. |
 | **AM/PM**, **am/pm**, **A/P**, **a/p** | Displays the hour based on a 12-hour clock. **Text** returns "AM", "am", "A", or "a" for times from midnight until noon and "PM", "pm", "P", or "p" for times from noon until midnight |
 
-<!-- TOOD: Check on f behavior. -->
-
 ### Literal placeholders ###
 
 You can include any of these characters in your format string.  They will appear in the result of **Text** as is.  Additional characters are reserved for future placeholders and should not be used.
@@ -146,6 +144,5 @@ You can include any of these characters in your format string.  They will appear
 | **Text( Now(), DateTimeFormat!ShortDate )** | Formats as a short date string, in the language and locale of the current user. | "11/23/2015" |
 | **Text( Now(), "d-mmm-yy" )** | Formats using placeholder characters: <ul><li>"d" for a single or double digit day of the month<li>"-" as a literal character copied to the result<li>"mmm" for a three letter month abbreviation<li>-" as another literal character copied to the result<li>"yy" for a two digit year abbreviation</ul> | "23-Nov-15" |
 
-<!-- TODO: More date/time examples. -->
 
 

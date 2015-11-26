@@ -30,7 +30,7 @@ Empty indicates a table that has no records.  The table structure may be there, 
 
 ## Description ##
 
-**IsBlank** tests for a *blank* value.  Blank values are found in these situations:
+The **IsBlank** function tests for a *blank* value.  Blank values are found in these situations:
 
 - A control property has no value or formula set for it.
 - The user of an app has not entered a value into an Input Text control or made a selection in a Listbox control.  You can use **IsBlank** to provide required field feedback. 
@@ -42,9 +42,7 @@ Empty indicates a table that has no records.  The table structure may be there, 
 
 Most functions in PowerApps propagate *blank* values for the handling of errors.  Unless checked, *blank* values flow through a formula, resulting in a *blank* value displayed to the user of the app.  For example, **Mid( "asdf", 10, 1 )** has a starting character number beyond the end of the string, which will return *blank*.  **Right( Mid( "asdf", 10, 1 ), 3 )** will also return *blank*, passing through the *blank* value from **[Mid](function-left-mid-right.md)**. 
 
-<!-- TODO: example of a function that propagates blank -->
-
-**IsEmpty** tests if a table has any records in it.
+The **IsEmpty** function tests if a table has any records in it.
 
 The return value for both functions is a Boolean **true** or **false**.
 
@@ -57,6 +55,4 @@ The return value for both functions is a Boolean **true** or **false**.
 **IsEmpty**( *Table* )
 
 - *Table* - Required. Table to test for records.
-
-<!-- TODO: Examples -->
 

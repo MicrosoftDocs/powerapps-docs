@@ -26,7 +26,7 @@
 |**+**|Arithmetic operators|1 + 2|Addition|
 |**-**|&nbsp;|2 - 1|Subtraction and sign|
 |**\***|&nbsp;|2 * 3|Multiplication|
-|**/**|&nbsp;|2 / 3|Division|
+|**/**|&nbsp;|2 / 3|Division (also see the **[Mod](function-mod.md)** function) |
 |**^**|&nbsp;|2 ^ 3|Exponentiation|
 |**%**|&nbsp;|20%|Percentage (equivalent to &quot;* 1/100&quot;)|
 |**=**|Comparison operators|Price = 100|Equal to|

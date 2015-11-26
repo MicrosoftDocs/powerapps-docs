@@ -20,7 +20,7 @@
 
 # Working with data sources in PowerApps #
 
-Data sources are extensions of [tables](working-with-tables.md) that use connections to retrieve and store information in a service.  You can use data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.
+Data sources are extensions of [tables](working-with-tables.md) that can retrieve and store information.  Connected data sources read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.  Static data sources and collections are alternative data sources that can be loaded and saved locally.
 
 ## Data sources ##
 
@@ -115,7 +115,7 @@ Let's continue our walkthrough and add validation to our screen:
 	-  Insert a label control on our edit screen, just above the **NameControl**.
 	-  Place a single asterisk ("*") in this label.
 	-  Set the **[Color](function-colors.md)** to **Color!Red**.
-	-  Set the **Visible** property of this label to **DataSourceInfo( Customers, DataSrouceInfo!Required, "Name" )**.  When true, this will show the red asterisk to indicate that the control requires a value.
+	-  Set the **Visible** property of this label to **DataSourceInfo( Customers, DataSourceInfo!Required, "Name" )**.  When true, this will show the red asterisk to indicate that the control requires a value.
 2.  Let's check that the Name control is filled in before we **[Patch](function-patch.md)**:
 	-  Modify the **OnSubmit** property of the **Save** button to check if the **EditGallery** believes the record is valid.  The **[Validate](function-validate.md)** function checks for required fields using the same information that helped **[DataSourceInfo](function-datasourceinfo.md)** show the red asterisk:
 		- **if( IsEmpty( Validate( Customers, EditRecord, EditGallery!Updates) ), Patch( Customers, EditRecord, EditGallery!Updates ); Back() )**.  
@@ -142,8 +142,8 @@ Continuing our example:
 
 2. Change the **OnSelect** for the **Save** button to:
 
-	**if( EditGallery!Valid && IsEmpty( Validate( Customers, EditRecord, EditGallery!Updates) ),
-	UpdateContext( { EditReturn: Patch( Customers, EditRecord, EditGallery!Updates ) } );<br> if( IsEmpty( Errors( Customers, EditReturn ) ), Back() )**.  
+	**If( EditGallery!Valid && IsEmpty( Validate( Customers, EditRecord, EditGallery!Updates) ),
+	UpdateContext( { EditReturn: Patch( Customers, EditRecord, EditGallery!Updates ) } );<br> If( IsEmpty( Errors( Customers, EditReturn ) ), Back() )**.  
 
 	That's a mouthful, so let's break it down:
 	- As before, the validation logic prevents us from doing the **[Patch](function-patch.md)** until we're ready.
@@ -211,7 +211,3 @@ Collections are a special kind of data source.  They're local to the app and not
 
 Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
 
-<!-- TODO: lifetime of a collection -->
-
-<!-- TODO: Static data sources -->
-<!-- TODO: Refresh from local Excel file, Read only -->

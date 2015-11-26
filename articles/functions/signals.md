@@ -22,8 +22,6 @@
 
 Access to the app's environment, such as where the user is located in the world and which screen is currently displayed.  
 
-<!-- TODO: If a device doesn't have a signal?  Return null? -->
-
 ## Description and syntax ##
 
 All signals return a [record](working-with-tables.md#records) of information. You can use and store this information as a record, or extract individual properties with the **!** [operator](operators.md).
@@ -83,11 +81,9 @@ As the location changes, dependencies on the location will continuously recalcul
 | **Location!Latitude** | The latitude, measured in degrees from the equator.  Returns a number from -90 to 90, north is positive.  |
 | **Location!Longitude** | The longitude, measured in degrees west from Greenwich, England.  Returns a number from 0 to 180.  |
 
-<!-- TODO: Confirm directions and units. -->
-
 ## Examples ##
 
-From the baseball diamond at [Safeco Field](https://en.wikipedia.org/wiki/Safeco_Field), a baseball pitcher throws a phone to a waiting catcher.  The phone is laying flat with respect to the ground and the top of the screen is pointed at the catcher, and the pitcher adds no spin.  At this location, the phone has cellular network service that is metered, but has no WiFi.  The currently displayed screen is **PlayBall**.   
+From the pitcher's mound at Safeco Field in Seattle, a baseball pitcher throws a phone to a waiting catcher.  The phone is laying flat with respect to the ground and the top of the screen is pointed at the catcher, and the pitcher adds no spin.  At this location, the phone has cellular network service that is metered, but has no WiFi.  The currently displayed screen is **PlayBall**.   
 
 | Formula | Description | Result |
 |---------|-------------|--------|

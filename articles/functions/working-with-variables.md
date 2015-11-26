@@ -60,7 +60,7 @@ PowerApps can use formulas for more than the primary value of a control.  For ex
 
 Formulas can be used for a wide variety of scenarios:
 
-- By using your device's GPS, a map control can display your current location with a formula that uses **Location!Lattitude** and **Location!Longtitude**.  As you move, the map will automatically track your location.
+- By using your device's GPS, a map control can display your current location with a formula that uses **Location!Lattitude** and **Location!Longitude**.  As you move, the map will automatically track your location.
 - Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated and displayed on the updated data.  Furthering the example, you might set a gallery's **Items** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
 
 ### Benefits ###

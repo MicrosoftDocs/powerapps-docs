@@ -52,11 +52,7 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 - *Color* - Required.  A color value such as **Color!Red** or the output from **ColorValue** or **RGBA**.
 - *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white.  
 
-<!-- TODO: Examples -->
-
 ## Built in colors ##
-
-<!-- TODO: Check Grey and gray in product -->
 
 | Color enumeration | ColorValue with Hex Code | RGBA | Color Swatch |
 |-------------------|--------------------------|------|--------------|

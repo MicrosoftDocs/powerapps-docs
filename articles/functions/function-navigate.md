@@ -62,9 +62,7 @@ Set the **OnHidden** property of the old screen, the **OnVisible** property of t
 **Navigate**( *Screen*, *Transition* [, *UpdateContextRecord* ] )
 
 - *Screen* - Required. The screen to display.
-
 - *Transition* - Required.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this topic.
-
 - *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the context variables of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
 
 ## Examples ##
@@ -75,8 +73,6 @@ Set the **OnHidden** property of the old screen, the **OnVisible** property of t
 | **Navigate( Details, ScreenTransition!Fade )** | Displays the **Details** screen with a **Fade** transition.  No value of a context variable is changed. | The current screen fades away to show the **Details** screen. |
 | **Navigate( Details, ScreenTransition!Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** | Displays the **Details** screen with a **Fade** transition, and updates the value of the **ID** context variable to **12**.   | The current screen fades away to show the **Details** screen, and the context variable **ID** on that screen is set to **12**. |
 | **Navigate( Details, ScreenTransition!Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color!Red&nbsp;} )** | Displays the **Details** screen with a **Fade** transition. Updates the value of the **ID** context variable to **12**, and updates the value of the **Shade** context variable to **Color!Red**. | The current screen fades away to show the **Details** screen. The context variable **ID** on the **Details** screen is set to 12, and the context variable **Shade** is set to **Color!Red**. If you set the **Fill** property of a control on the **Details** screen to **Shade**, that control would display as red.  |
-
-<!-- TODO: Back example. -->
 
 ### Step-by-step ###
 

@@ -58,6 +58,5 @@ For the following example, the current time is 3:59 AM on February 12, 2015.
 | **Text( DateAdd( Today(), 12 ), "mm/dd/yyyy hh:mm:ss" )** | Retrieves the current date and time, adds 12 days to the result, and displays it as a string.  | "02/24/2015 00:00:00" |
 | **IsToday( DateAdd( Now(), 12 ) )** | Tests if the current date and time, plus 12 days, is between midnight today and midnight tomorrow. | **False** | 
 | **IsToday( DateAdd( Today(), 12 ) )** | Tests if the current date, plus 12 days, is between midnight today and midnight tomorrow. | **False** |
- 
-<!-- TODO: add times with decimal? -->
+
  

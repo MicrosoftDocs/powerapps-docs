@@ -26,7 +26,7 @@ Replace a portion of one string with another string.
 
 The **Replace** function identifies the text to replace by starting position and length.  
 
-The **Substitute** function identifies the text to replace by matching a string.
+The **Substitute** function identifies the text to replace by matching a string.  If more than one match is found, you can control which one is replaced.
 
 If you pass a single string, the return value is the modified string.  If you pass a single-column [table](working-with-tables.md) that contains strings, the return value is a single-column table of modified strings. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](working-with-tables.md) describes.
 
@@ -39,12 +39,12 @@ If you pass a single string, the return value is the modified string.  If you pa
 - *NumberOfCharacters* - Required.  The number of characters to replace.
 - *NewString* - Required.  The replacement string.  The replacement string does not need to be the same length as what it is replacing.
 
-**Substitute**( *String*, *OldString*, *NewString* [, *InstanceNumber" ] )
+**Substitute**( *String*, *OldString*, *NewString* [, *InstanceNumber* ] )
 
 - *String* - Required. The string to operate on.
 - *OldString* - Required.  The string to be replaced.
 - *NewString* - Required.  The replacement string.  The length of this string does not need to be the same as what it is replacing.
-- *InstanceNumber* - Optional. By default, the first time a match is found for *OldString* it is replaced. you can specify which instance is to be replaced if there are more than one instance of *OldString* within *String*.
+- *InstanceNumber* - Optional. By default, the first time a match is found for *OldString* it is replaced. You can specify which instance is to be replaced if there are more than one instance of *OldString* within *String*.
 
 **Replace**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters*, *NewString* )
 
@@ -58,6 +58,6 @@ If you pass a single string, the return value is the modified string.  If you pa
 - *SingleColumnTable* - Required. A single-column table of strings to operate on.
 - *OldString* - Required.  The string to be replaced.
 - *NewString* - Required.  The replacement string.  The length of this string does not need to be the same as what it is replacing.
-- *InstanceNumber* - Optional. By default, the first time a match is found for *OldString* it is replaced. you can specify which instance is to be replaced if there are more than one instance of *OldString* within *String*.
+- *InstanceNumber* - Optional. By default, the first time a match is found for *OldString* it is replaced. You can specify which instance is to be replaced if there are more than one instance of *OldString* within *String*.
 
-<!-- need more examples, including tables -->
+

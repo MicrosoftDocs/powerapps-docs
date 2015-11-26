@@ -40,8 +40,6 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 
 ## Examples ##
 
-<!-- TODO: Examples. -->
-
 ### Step by step ###
 
 If you had an Employees table that contained a Salary column, this function would list the employees with higher salaries above those with lower ones:

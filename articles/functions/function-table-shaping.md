@@ -64,8 +64,6 @@ The result is a new table with the transform applied.
 
 ## Examples ##
 
-<!-- TODO: Examples -->
-
 ### Step by step ###
 
 1. Import or create a collection named Inventory as Create your first app describes.
