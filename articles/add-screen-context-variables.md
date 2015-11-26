@@ -122,10 +122,10 @@ You can use a [context variable](working-with-variables.md) in many ways, but yo
 
 	**If(Mode="Add", "", "Dubois")**
 
-1. From the **Source** screen, press F5, and then click the **Add** button.
+1. From the **Source** screen, press F5, and then select the **Add** button.
 
 	The **Target** screen appears with the input-text controls blank so that you can easily add a record.
 
-1. Click the Back arrow to return to the **Source** screen, and then click the **Edit** button.
+1. Select the Back arrow to return to the **Source** screen, and then select the **Edit** button.
 
 	The **Target** screen appears with information in each input-text control so that you easily edit the record.
