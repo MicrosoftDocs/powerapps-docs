@@ -74,8 +74,8 @@ Note that, to modify an existing record of a data source, the record must have o
 The diagram above shows the flow of information to update a data source:
 
 - A gallery can also provide a container for input controls, such as an input-text box or a slider.  As with the browse screen, the **Items** property is used but, for a single record, often takes the form of  **Gallery!Items = Table( EditRecord )**.
-- Each input control exposes an **[Update](function-update-updateif.md)** property.  This property maps the user's input to a specific property of the record.
-- The gallery aggregates the **[Update](function-update-updateif.md)** property of each of the controls within it and exposes this as an **Updates** property.
+- Each input control exposes an **Update** property.  This property maps the user's input to a specific property of the record.
+- The gallery aggregates the **Update** property of each of the controls within it and exposes this as an **Updates** property.
 - A button or an image control on the screen is used to submit changes to the data source's service.  You use a formula based on the **[Patch](function-patch.md)** function from the **OnSelect** formula of the control.
 - Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the app didn't know about.  The **[Errors](function-errors.md)** function is used to check if there was an issue and retrieve information about the issue.  In some cases, such as conflicting edits by another user, the **[Revert](function-revert.md)** function may be needed to reload the record and clear the error.
 
@@ -88,11 +88,11 @@ Let's continue our walkthrough and add a screen for editing records:
 6. Insert an input-text box:  
 	- Name it **NameControl**.
 	- Set its **Default** property to **Name**.  This is the name of the column in the SharePoint list.  We are mapping the column into the control.
-	- Set its **[Update](function-update-updateif.md)** property to a record **{ *Name*: *NameControl!Text* }**.  This is aggregated with other control **[Update](function-update-updateif.md)** properties in the gallery to form the **EditGallery!Updates** property.  We are mapping the control back to the column.
+	- Set its **Update** property to a record **{ *Name*: *NameControl!Text* }**.  This is aggregated with other control **[Update](function-update-updateif.md)** properties in the gallery to form the **EditGallery!Updates** property.  We are mapping the control back to the column.
 7. Insert a second input-text box:  
 	- Name it **SizeControl**.
 	- Set its **Default** property to **T-Shirt Size**.  This is the name of the column in the SharePoint list.  We are mapping the column into the control.
-	- Set its **[Update](function-update-updateif.md)** property to a record **{ *T-Shirt Size*: *SizeControl!Text* }**.  This is aggregated with other control **[Update](function-update-updateif.md)** properties in the gallery to form the **EditGallery!Updates** property.  We are mapping the control back to the column.
+	- Set its **Update** property to a record **{ *T-Shirt Size*: *SizeControl!Text* }**.  This is aggregated with other control **[Update](function-update-updateif.md)** properties in the gallery to form the **EditGallery!Updates** property.  We are mapping the control back to the column.
 7. Insert a button outside the card gallery.  Label it **Save**, and set its **OnSelect** property to **Patch( Customers, EditRecord, EditGallery!Updates ); Back()**
 8. Preview the app, browse and edit records of the SharePoint list, and verify changes on the SharePoint site.
 
@@ -207,7 +207,7 @@ Collections are a special kind of data source.  They're local to the app and not
 - Collections can be created dynamically with the **[Collect](function-clear-collect-clearcollect.md)** function.  They don't need to be established ahead of time, as connection-based data sources do.
 - The columns of a collection can be modified at any time using the **[Collect](function-clear-collect-clearcollect.md)** function.
 - Collections allow duplicate records.  More than one copy of the same record can exist in a collection.  Functions such as **[Remove](function-remove-removeif.md)** will operate on the first match they find, unless the **All** argument is supplied.
-- You can use the **SaveData** and **LoadData** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
+- You can use the **[SaveData](function-savedata-loaddata.md)** and **[LoadData](function-savedata-loaddata.md)** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
 
 Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
 

@@ -20,7 +20,7 @@
 
 # Formula reference #
 
-Functions and [signals](functions/signals.md), listed below, are the building blocks of formulas.  
+Functions, [signals](functions/signals.md), and high level enumerations are listed below.  
 
 Reference information is also available for:
 
@@ -70,8 +70,6 @@ Reference information is also available for:
 
 **[Concat](functions/function-concatenate.md)** Concatenates strings in a data source.  
 
-<!-- TODO: Rename concat -->
-
 **[Concatenate](functions/function-concatenate.md)** Concatenates strings.
 
 **[Connection](functions/signals.md)** Returns information about your network connection.
@@ -100,9 +98,9 @@ Reference information is also available for:
 
 **[Day](functions/function-datetime-parts.md)** Retrieves the day portion of a date/time value.  
 
-**Disable** Disables a signal, such as **[Location](functions/signals.md)** (GPS). *Coming Soon.*
+**[Disable](functions/function-enable-disable.md)** Disables a signal, such as **[Location](functions/signals.md)** for reading the GPS. 
 
-**Distinct** Returns the non-duplicate values of an expression evaluated across a table.  *Coming Soon.*
+**[Distinct](functions/function-distinct.md)** Summarizes records of a table, removing duplicates.  
 
 **[DropColumns](functions/function-table-shaping.md)** Returns a table with columns removed.
 
@@ -110,17 +108,17 @@ Reference information is also available for:
 
 ## E ##
 
-**Enable** Enables a signal, such as **[Location](functions/signals.md)** (GPS). *Coming Soon.*
+**[Enable](functions/function-enable-disable.md)** Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS. 
 
 **[Errors](functions/function-errors.md)** Provides error information for previous changes to a data source.
 
-**EncodeUrl** Encodes special characters using URL encoding. *Coming Soon.*
+**[EncodeUrl](functions/function-encode-decode.md)** Encodes special characters using URL encoding. 
 
 ## F ##
 
 **[Filter](functions/function-filter-lookup.md)** Returns a filtered table based on one or more criteria.
 
-**Find** Checks if one string appears within another and returns the location. *Coming Soon.*
+**[Find](functions/function-find.md)** Checks if one string appears within another and returns the location. 
 
 **[First](functions/function-first-last.md)** Returns the first record of a table.
 
@@ -132,13 +130,13 @@ Reference information is also available for:
 
 ## H ##
 
-**HashTags** Retrieves the set of hashtags (#strings) that appear in a string. *Coming Soon.*
+**[HashTags](functions/function-hashtags.md)** Extracts the hashtags (#strings) from a string. 
 
 **[Hour](functions/function-datetime-parts.md)** Retrieves the hour portion of a date/time value.
 
 ## I ##
 
-**If** Conditional logic: returns one value if a condition is true and another value if it's false. *Coming Soon.*
+**[If](functions/function-if.md)** Returns one value if a condition is true, and another value if not.  
 
 **[IsBlank](functions/function-isblank-isempty.md)** Checks for a [blank](functions/function-isblank-isempty.md) value.
 
@@ -156,13 +154,13 @@ Reference information is also available for:
 
 **[LastN](functions/function-first-last.md)** Returns the last set of records (N records) of a table.
 
-**Launch** Launches a URL, often used to open a webpage. *Coming Soon.*
+**[Launch](functions/function-param.md)** Launches a web address or app.
 
 **[Left](functions/function-left-mid-right.md)** Returns the left portion of a string. 
 
 **[Len](functions/function-len.md)** Returns the length of a string. 
 
-**LoadData** Loads a collection from PowerApps private storage. *Coming Soon.*
+**[LoadData](functions/function-savedata-loaddata.md)** Loads a collection from PowerApps private storage. 
 
 **[Location](functions/signals.md)** Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
 
@@ -198,17 +196,17 @@ Reference information is also available for:
 
 ## P ##
 
-**Param** Param. *Coming Soon.*
+**[Param](functions/function-param.md)** Access to parameters passed to the app when it was launched.
 
 **[Patch](functions/function-patch.md)** Modifies or creates a record in a data source, or merges records outside of a data source.
 
-**PlainText** Removes HTML and XML tags from a string. *Coming Soon.*
+**[PlainText](functions/function-encode-decode.md)** Removes HTML and XML tags from a string. 
 
 **[Proper](functions/function-lower-upper-proper.md)** Converts letters in a string of text to proper case. (The first letter of each word is uppercase, and the rest are lowercase.)
 
 ## R ##
 
-**Rand** Returns a random number. *Coming Soon.*
+**[Rand](functions/function-rand.md)** Returns a pseudo-random number.
 
 **[Refresh](functions/function-refresh.md)** Refreshes the records of a data source.
 
@@ -218,7 +216,7 @@ Reference information is also available for:
 
 **[RenameColumns](functions/function-table-shaping.md)** Renames columns of a table.
 
-**Replace** Replaces part of a string with another string. *Coming Soon.*
+**[Replace](functions/function-replace-substitute.md)** Replaces part of a string with another string, by position.
 
 **[Revert](functions/function-revert.md)** Reloads and clears errors for the records of a data source.
 
@@ -226,35 +224,35 @@ Reference information is also available for:
 
 **[Right](functions/function-left-mid-right.md)** Returns the right portion of a string. 
 
-**Round** Rounds to the closest number. *Coming Soon.*
+**[Round](functions/function-round.md)** Rounds to the closest number. 
 
-**RoundDown** Rounds down to the largest previous number. *Coming Soon.*
+**[RoundDown](functions/function-round.md)** Rounds down to the largest previous number. 
 
-**RoundUp** Rounds up to the smallest next number. *Coming Soon.*
+**[RoundUp](functions/function-round.md)** Rounds up to the smallest next number. 
 
 ## S ##
 
-**SaveData** Saves a collection to PowerApps private storage. *Coming Soon.*
+**[SaveData](functions/function-savedata-loaddata.md)** Saves a collection to PowerApps private storage.
 
 **[Second](functions/function-datetime-parts.md)** Retrieves the second portion of a date/time value.  
 
 **[ShowColumns](functions/function-table-shaping.md)** Returns a table with only selected columns.
 
-**Shuffle** Returns a randomly shuffled version of a table.  *Coming Soon.*
+**[Shuffle](functions/function-shuffle.md)** Randomly reorders the records of a table.
 
 **[Sort](functions/function-sort.md)** Returns a sorted table.
 
 **[Sqrt](functions/function-numericals.md)** Returns the square root of a number.  
 
-**StdevP** Returns the standard deviation of its arguments.  *Coming Soon.*
+**[StdevP](functions/function-aggregates.md)** Returns the standard deviation of its arguments.  
 
-**Substitute** Replaces part of a string with another string. *Coming Soon.*
+**[Substitute](functions/function-replace-substitute.md)** Replaces part of a string with another string, by matching. 
 
 **[Sum](functions/function-aggregates.md)** Calculates the sum of a table expression or a set of arguments.  
 
 ## T ##
 
-**Table** Creates a temporary table.  *Coming Soon.*
+**Table** Creates a temporary table.  
 
 **[Text](functions/function-text.md)** Formats a number as a string for display. 
 
@@ -264,7 +262,7 @@ Reference information is also available for:
 
 **[Today](functions/function-now-today-istoday.md)** Returns the current date/time value. 
 
-**Trim** Strips spaces from both ends of a string.  *Coming Soon.*
+**[Trim](functions/function-trim.md)** Strips spaces from both ends of a string.
 
 ## U ##
 
@@ -278,15 +276,15 @@ Reference information is also available for:
 
 **[Upper](functions/function-lower-upper-proper.md)** Converts letters in a string of text to all uppercase.
 
-**User** Returns information about the current user. *Coming Soon.*
+**[User](functions/function-user.md)** Returns information about the current user. *Coming Soon.*
 
 ## V ##
 
-**Value** Converts a string to a number. *Coming Soon.*
+**[Value](functions/function-value.md)** Converts a string to a number. 
 
 **[Validate](functions/function-validate.md)** Checks whether the value of a single column or a complete record is valid for a data source.
 
-**VarP** Returns the variance of its arguments.  *Coming Soon.*
+**[VarP](functions/function-aggregates.md)** Returns the variance of its arguments.  
 
 ## Y ##
 

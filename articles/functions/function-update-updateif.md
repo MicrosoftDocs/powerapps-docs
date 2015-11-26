@@ -83,7 +83,7 @@ In these examples, you'll replace or modify records in a data source that's name
 
 1. Name the gallery **ProductGallery**.
 
-1. Add a slider named **UnitsSold**, and set its **[Max](function-aggregates.md)** property to this expression:<br>**ProductGallery!Selected!UnitsInStock**
+1. Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery!Selected!UnitsInStock**
 
 1. Add a button, and set its **OnSelect** property to this expression:<br>**UpdateIf(Inventory, ProductName = ProductGallery!Selected!ProductName, {UnitsInStock:UnitsInStock-UnitsSold!Value})**
 

@@ -18,7 +18,7 @@
    ms.date="11/07/2015"
    ms.author="gregli"/>
 
-# Replace and Substitute function in PowerApps #
+# Replace and Substitute functions in PowerApps #
 
 Replace a portion of one string with another string.
 

@@ -24,7 +24,7 @@ Shapes a [table](working-with-tables.md) by adding, dropping, renaming, and sele
 
 ## Overview ##
 
-These functions shape a table by making adjustments to the columns.  You might use this to reduce a table down to one column, for passing to single-column functions such as **[Lower](function-lower-upper-proper.md)** or **[Abs](function-numericals.md)**.  Or you might use this to add a calculated column to a table.
+These functions shape a table by making adjustments to the columns.  You use this to reduce a table down to one column, for passing to single-column functions such as **[Lower](function-lower-upper-proper.md)** or **[Abs](function-numericals.md)**.  Or you might use this to add a calculated column to a table.
 
 Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  The functions described here do not modify a table, instead they take a table as an argument and return a new table with a transform applied.  See [working with tables](working-with-tables.md) for more details.  
 
