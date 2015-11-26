@@ -1,6 +1,6 @@
 <properties
     pageTitle="Share an app | Microsoft PowerApps"
-    description=""
+    description="Share your app by giving other users permission to run or modify it."
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -19,9 +19,13 @@
     ms.author="anneta"/>
 
 # Share an app #
+[AZURE.VIDEO nb:cid:UUID:4a51313a-0d00-80c4-1ead-f1e5920c334e]
+
 Share your app with co-workers or other users by giving them permission either to just run the app or to not only run it but also to customize it and then share their own versions.
 
 Share an app with multiple co-workers at the same time or with a group in Active Directory. If you share an app with a group, everyone in that group will have the permissions that you assign to it. If users are added to or deleted from the group, they will gain and lose permissions accordingly.
+
+[What is PowerApps?](https://aka.ms/pamktg)
 
 ## Prerequisites ##
 - An account with which you've signed in to [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) or PowerApps.
@@ -29,17 +33,13 @@ Share an app with multiple co-workers at the same time or with a group in Active
 	- An app that you built (from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)).
 	- An app that someone else built and given you permission to run, customize, and share.
 
-## Video demonstration ##
-
-[AZURE.VIDEO nb:cid:UUID:4a51313a-0d00-80c4-1ead-f1e5920c334e]
-
 ## Share an app ##
 1. Do either of the following:
-	- In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Apps** near the left edge of the screen.
+	- On [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Apps** in the left navigation bar.
 
 	![List apps on powerapps.com the web](./media/share-app/file-apps-portal.png)
 
-	- In PowerApps, select **Open** near the left edge of the screen.
+	- In PowerApps, select **Open** in the **File** menu (near the left edge of the screen).
 
 	![List apps on powerapps.com the web](./media/share-app/open-apps.png)
 
@@ -48,14 +48,6 @@ Share an app with multiple co-workers at the same time or with a group in Active
 	![Share icon](./media/share-app/share-icon.png)
 
 1. In the dialog box that appears, type the first few letters of your co-worker’s name or email address, and then select the person you want in the list that appears.
-
-	On **powerapps.com**
-
-	![Specify a user](./media/share-app/specify-user-portal.png)
-
-	In **PowerApps**
-
-	![Specify a user](./media/share-app/specify-user.png)
 
 1. In the list of permission types, select **Can view** to allow the user to just run the app, or select **Can edit** to allow the user to run your app, customize it, and share a new version of your app.
 
@@ -72,5 +64,5 @@ Share an app with multiple co-workers at the same time or with a group in Active
 	The message contains a link that a user can select to access the app. Any users who don't have PowerApps (or aren’t signed up to use it) are prompted to install it and sign up for it.
 
 ## Change or remove permission ##
-- Change a user's or a group’s permission for a shared app by selecting the other option in the list of permissions next to the appropriate name.
-- Remove a user's or a group's permission for a shared app by selecting the **X** next to the appropriate name.
+- On powerapps.com, select a different permission in the list that appears next to each user's name, or select the **x** icon to delete a user's permission.
+- In PowerApps, hover over a user's name under **Shared with** to show options for changing or removing permission.
