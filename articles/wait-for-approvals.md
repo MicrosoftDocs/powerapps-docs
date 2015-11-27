@@ -23,6 +23,7 @@
 Create a logic flow that performs one or more tasks only after a user indicates approval by either clicking a link in email or updating an item in a SharePoint list.
 
 **Prerequisites**
+
 - [Create a logic flow from scratch](get-started-logic-flow.md)
 
 ## Request approval in email ##

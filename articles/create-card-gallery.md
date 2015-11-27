@@ -23,7 +23,9 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 [What is PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
+
 - [Install PowerApps](http://aka.ms/installpowerapps)
+
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
 ## Create a card gallery ##
@@ -33,8 +35,7 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 	![Option to add a screen to an app](./media/create-card-gallery/add-screen.png)
 
-	- Create an app from scratch. (Select **New** in the **File** menu, and then select **Get started** under **Start from scratch**.)
-
+	- Create an app from scratch by selecting **New** in the **File** menu (near the left edge of the screen) and then selecting **Get started** under **Start from scratch**.
 	![Option to create an app from scratch](./media/create-card-gallery/blank-app.png)
 
 1. On the **Insert** tab, select **Gallery**, and then select the **Portrait** option under **Card Galleries**.
@@ -51,7 +52,7 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 	![Card gallery that contains three empty sections](./media/create-card-gallery/add-section.png)
 
-1. Select **Insert a visual** near the top of the screen, and then select **Quick tools** near the lower-left corner of the screen.
+1. Select **Insert a visual** near the top of the screen, and then select **Quick tools** near the lower-right corner of the screen.
 
 	![Option to open the Quick tools pane](./media/create-card-gallery/open-quick-tools.png)
 
@@ -81,11 +82,13 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 ## Add or change a data source ##
 
-1. Select the icon next to **CardStackGallerySample** or the name of the data source you're already using.
+1. Select the icon next to **CardStackGallerySample** or the name of the data source you're already using, and then select **Add data source**.
 
 	![Icon next to name of data source](./media/create-card-gallery/data-source-icon.png)
 
-1. In the list of data sources, select the data source that you want to use, and then follow the prompts to specify the exact table that you want to use.
+1. Select a data source in the list, or select **Insert your data** and then select the data source that you want to use.
+
+1. Follow the prompts to specify the exact table that you want to use.
 
 	For example, the data source for [creating an app from scratch](get-started-create-from-blank.md) is an Excel file in Dropbox. To connect to that data source, select **Dropbox**, select the file name (**eventsignup.xls**), select the table name (**Schedule**), and then select **Insert.**
 
