@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Add a scrolling screen | Microsoft PowerApps"
-	description=""
+	description="Create a screen that users can scroll to show more types of content than the screen can show at a time."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -35,7 +35,7 @@ Create a screen that users can scroll to show more types of content than the scr
 
 	![Option to add a screen to an app](./media/add-scrolling-screen/add-screen.png)
 
-	- Create an app from scratch. (Select **New** in the **File** menu, and then select **Get started** under **Start from scratch**.)
+	- Create an app from scratch by selecting **New** in the **File** menu (near the left edge of the screen) and then selecting **Get started** under **Start from scratch**.
 
 	![Option to create an app from scratch](./media/add-scrolling-screen/blank-app.png)
 
@@ -77,6 +77,6 @@ Create a screen that users can scroll to show more types of content than the scr
 
 	![A line chart added to the new card](./media/add-scrolling-screen/add-line-chart.png)
 
-1. Press F5 to display the app in Preview, and then scroll to display the new chart.
+1. Press F5 to display the app in Preview, and then scroll to display the line chart.
 
 	![Preview shows line chart](./media/add-scrolling-screen/line-chart-preview.png)
