@@ -23,7 +23,9 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 [What is PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
+
 - [Install PowerApps](http://aka.ms/installpowerapps)
+
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
 ## Create a card gallery ##

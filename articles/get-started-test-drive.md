@@ -27,9 +27,10 @@ Create an app automatically based on one of several templates for a variety of s
 [What is PowerApps?](https://aka.ms/pamktg)
 
 **Prerequisites**
-- [Install PowerApps](http://aka.ms/powerappsinstall)
-- An account on DropBox, OneDrive, or GoogleDrive for storing sample data in the cloud
 
+- [Install PowerApps](http://aka.ms/powerappsinstall)
+
+- An account on DropBox, OneDrive, or GoogleDrive for storing sample data in the cloud
 
 ## Open a template ##
 1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
