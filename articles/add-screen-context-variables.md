@@ -83,11 +83,11 @@ Create an app with multiple screens, add ways for users to navigate between them
 
 ## Add navigation with a context variable ##
 
-You can use a [context variable](working-with-variables.md) in many ways, but you'll perhaps most often use one to determine what a screen shows when you navigate to it. For example, users might click a button to add a record or update one. You can save time by configuring both buttons to open the same form but configure the form differently for either adding or updating a record.
+You can use a [context variable](working-with-variables.md) in many ways, but you'll perhaps most often use one to determine what a screen shows when you navigate to it. For example, users might click a button to add a record or update one. You can save time by configuring both buttons to open the same screen but configure the screen differently for either adding or updating a record.
 
 1. Follow the steps in the previous two procedures.
 
-1. (optional) On the **Source** screen, delete the **Next** button.
+1. (optional) On the **Source** screen, delete the Next button.
 
 1. On the **Source** screen, add a button, configure its **Text** property to show **Add**, and set its **OnSelect** property to this expression:
 
@@ -129,3 +129,5 @@ You can use a [context variable](working-with-variables.md) in many ways, but yo
 1. Select the Back arrow to return to the **Source** screen, and then select the **Edit** button.
 
 	The **Target** screen appears with information in each input-text control so that you easily edit the record.
+
+See [another simple example](function-updatecontext.md#step-by-step-example) or a [complex example](get-started-create-from-blank.md#add-buttons-for-saving-changes-and-removing-a-record).
