@@ -21,7 +21,9 @@
 # Working with tables and records in PowerApps #
 
 Tables and records help organize related information:
+
 -  Records hold information about a single person, place, or thing.  For example, a **Customer** record might have **Name**, **Email**, and **Phone** properties.  
+
 -  Tables hold multiple records, each with a consistent set of properties.  For example, a **Customers** table may hold 10 **Customer** records.  In a table, the consistent properties of the records are known as columns.
 
 In PowerApps, tables and records can be calculated just as numbers are.  Functions can take tables and records as arguments and also return them.  
@@ -36,7 +38,7 @@ Tables of information appear in a wide variety of systems, including Microsoft E
 
 Each record contains detailed information for a person, place, or thing.  In the above example, three records are displayed horizontally, one each for the products Chocolate, Bread, and Water.  For each product, price and quantity properties are available.
 
-Records can be used by themselves in formulas, outside of a table's context.  You can write a record in a formula by using curly braces.  For example, **{ Name: "Strawberries", Price: 7.99 }** is a record that and has no association with a table. 
+Records can be used by themselves in formulas, outside of a table's context.  You can write a record in a formula by using curly braces.  For example, **{ Name: "Strawberries", Price: 7.99 }** is a record that and has no association with a table.
 
 You may have referred to records as "rows" or "items" in other tools.
 
@@ -51,9 +53,13 @@ A property can contain another record or table.  You can nest as many levels of 
 ### Columns ###
 
 Columns refer to the same properties for each record of a table.  In the above example, each product has a price property, and that price is in the same column for all products.  The above table has four columns, shown vertically:
+
 - **Product**
+
 - **Price**
+
 - **Quantity on Hand**
+
 - **Quantity on Order**.
 
 The column's name is the same as the properties in that column.
@@ -74,7 +80,7 @@ As in the following example, you can express a table in a formula by using the *
 
 You can also define a single-column table with square brackets.  An equivalent way to write the above:
 
-**[ "Strawberry", "Vanilla" ]** 
+**[ "Strawberry", "Vanilla" ]**
 
 ## Table formulas ##
 

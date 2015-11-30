@@ -20,7 +20,7 @@
 
 # Count, CountA, CountIf, and CountRows functions in PowerApps #
 
-Counts the number of [records](working-with-tables.md#records) in a [table](working-with-tables.md) that satisfy a condition, or all records. 
+Counts the number of [records](working-with-tables.md#records) in a [table](working-with-tables.md) that satisfy a condition, or all records.
 
 ## Description ##
 
@@ -44,7 +44,7 @@ All of these functions return a number.
 **CountIf**( *Table*, *LogicalFormula* )
 
 - *Table* - Required.  Table of records to count.
-- *LogiaclFormula* - Required.  Formula to evaluate for each record of the table.  Records that reutrn **true** for this formula are counted.  The formula can reference columns of the table.
+- *LogicalFormula* - Required.  Formula to evaluate for each record of the table.  Records that return **true** for this formula are counted.  The formula can reference columns of the table.
 
 **CountRows**( *Table* )
 
@@ -73,7 +73,3 @@ All of these functions return a number.
 	**CountRows(Inventory)**
 
 	The label shows 5 because the collection contains five rows.
-
-
-
-

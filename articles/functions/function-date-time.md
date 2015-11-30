@@ -34,9 +34,9 @@ The **Date** function converts individual Year, Month, and Day values to a Date/
 
 The **Time** function converts individual Hour, Minute, and Second values to a Date/Time value.  The result has no date associated with it.
 
-See the **[DateValue](function-datevalue-timevalue.md)**, **[TimeValue](function-datevalue-timevalue.md)**, and **[DateTimeValue](function-datevalue-timevalue.md)** functions for converting form a string.  
+See the **[DateValue](function-datevalue-timevalue.md)**, **[TimeValue](function-datevalue-timevalue.md)**, and **[DateTimeValue](function-datevalue-timevalue.md)** functions for converting from a string.  
 
-Also see [working with dates and times](../show-text-dates-times.md) for more information. 
+Also see [working with dates and times](../show-text-dates-times.md) for more information.
 
 ## Syntax ##
 
@@ -65,4 +65,3 @@ If a user typed 1979 in an input-text control named HireYear, 3 in an input-text
 If a user typed 14 in an input-text control named BirthHour, 50 in an input-text control named BirthMinute, and 24 in an input-text control named BirthSecond, this function would return "02:50:24 p".
 
 **Text(Time(Value(BirthHour!Text), Value(BirthMinute!Text), Value(BirthSecond!Text)), "hh:mm:ss a/p")**
-

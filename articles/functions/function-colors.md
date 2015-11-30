@@ -1,5 +1,5 @@
 <properties
-	pageTitle="PowerApps: Color enumeration and ColorFade, ColorValue, and RGBA functions"
+	pageTitle="Color enumeration and ColorFade, ColorValue, and RGBA functions | Microsoft PowerApps"
 	description="Reference information for the Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps, including syntax and examples"
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="11/07/2015"
    ms.author="gregli"/>
 
-# Color enumeraiton and ColorFade, ColorValue, and RGBA functions in PowerApps #
+# Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps #
 
 Using built in color values, defining custom colors, and Alpha blending.
 
@@ -57,7 +57,7 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 | Color enumeration | ColorValue with Hex Code | RGBA | Color Swatch |
 |-------------------|--------------------------|------|--------------|
 | **Color!AliceBlue** | **ColorValue( "#f0f8ff" )** | **RGBA( 240, 248, 255, 1 )** | ![aliceblue](media/function-colors/color-aliceblue.png) |
-| **Color!AntiqueWhite** | **ColorValue( "#faebd7" )** | **RGBA( 7, "250, 235,215, 1 )** | ![antiquewhite](media/function-colors/color-antiquewhite.png) | 
+| **Color!AntiqueWhite** | **ColorValue( "#faebd7" )** | **RGBA( 7, "250, 235,215, 1 )** | ![antiquewhite](media/function-colors/color-antiquewhite.png) |
 | **Color!Aqua** | **ColorValue( "#00ffff" )** | **RGBA( 0, 255, 255, 1 )** | ![aqua](media/function-colors/color-aqua.png) |
 | **Color!Aquamarine** | **ColorValue( "#7fffd4" )** | **RGBA( 127, 255, 212, 1 )** | ![aquamarine](media/function-colors/color-aquamarine.png) |
 | **Color!Azure** | **ColorValue( "#f0ffff" )** | **RGBA( 240, 255, 255, 1 )** | ![azure](media/function-colors/color-azure.png) |
@@ -203,4 +203,3 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 | **Color!WhiteSmoke** | **ColorValue( "#f5f5f5" )** | **RGBA( 245, 245, 245, 1 )** | ![whitesmoke](media/function-colors/color-whitesmoke.png) |
 | **Color!Yellow** | **ColorValue( "#ffff00" )** | **RGBA( 255, 255, 0, 1 )** | ![yellow](media/function-colors/color-yellow.png) |
 | **Color!YellowGreen** | **ColorValue( "#9acd32" )** | **RGBA( 154, 205, 50, 1 )** | ![yellowgreen](media/function-colors/color-yellowgreen.png) |
-

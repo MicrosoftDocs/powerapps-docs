@@ -30,7 +30,7 @@ You can use [column](working-with-tables.md#columns) level information to valida
 
 You can use data source level information to, for example, disable or hide "Edit" and "New" buttons for users that do not have permissions to edit and create [records](working-with-tables.md#records).
 
-Data sources vary in how much information they provide, including not providing any at all.  [Collections](working-with-data-sources.md#collections) provide no information.  If a piece of information is not provided, a default is used or *blank* is returned. 
+Data sources vary in how much information they provide, including not providing any at all.  [Collections](working-with-data-sources.md#collections) provide no information.  If a piece of information is not provided, a default is used or *blank* is returned.
 
 ## Description ##
 
@@ -46,18 +46,18 @@ You can use **DataSourceInfo** to obtain information about a particular column o
 | **DataSourceInfo!MinValue** | Number | Minimum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a minimum is not set, returns *blank*.|
 | **DataSourceInfo!Required** | Boolean | Is a value required for this column?  If not set by the data source, returns **false**.  |
 
-The third argument is the name of a column as a string.  For example, column **Phone** in collection **People** would be passed as **"Phone"** including the double quotes. 
+The third argument is the name of a column as a string.  For example, column **Phone** in collection **People** would be passed as **"Phone"** including the double quotes.
 
 ### Data Source Information ###
 
-You can also use **DataSourceInfo** to obtain information about a data source as a whole:
+You can also use **DataSourceInfo** to obtain information about a data source as a whole:  
 
-| Information Argument | Result Type | Description | 
+| Information Argument | Result Type | Description |
 |-------------|-------------|-------------|
-| **DataSourceInfo!CreatePermission** | Boolean | Does the current user have permission to create records in this data source?  If not set by the data source, returns **true**. |  
-| **DataSourceInfo!DeletePermission** | Boolean | Does the current user have permission to delete records in this data source?  If not set by the data source, returns **true**.|   
-| **DataSourceInfo!EditPermission** | Boolean | Does the current user have permission to edit records in this data source?  If not set by the data source, returns **true**.|   
-| **DataSourceInfo!ReadPermission** | Boolean | Does the current user have permission to read records in this data source?  If not set by the data source, returns **true**.|   
+| **DataSourceInfo!CreatePermission** | Boolean | Does the current user have permission to create records in this data source?  If not set by the data source, returns **true**. |
+| **DataSourceInfo!DeletePermission** | Boolean | Does the current user have permission to delete records in this data source?  If not set by the data source, returns **true**.|
+| **DataSourceInfo!EditPermission** | Boolean | Does the current user have permission to edit records in this data source?  If not set by the data source, returns **true**.|
+| **DataSourceInfo!ReadPermission** | Boolean | Does the current user have permission to read records in this data source?  If not set by the data source, returns **true**.|
 
 ## Syntax ##
 
@@ -96,12 +96,3 @@ The data source has also provided this information:
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!EditPermission)** | Is the current user able to edit records in the **IceCream** data source? | **true** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!CreatePermission)** | Is the current user able to create records in the **IceCream** data source? | **false** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!DeletePermission)** | Is the current user able to delete records in the **IceCream** data source? | **false** |
-
-
-
-
-
-
-
-
-
