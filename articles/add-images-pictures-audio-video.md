@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/25/2015"
+   ms.date="11/30/2015"
    ms.author="mandia"/>
 
 # Using the image, picture, audio, and video multimedia options
@@ -82,6 +82,7 @@ Take multiple pictures with the camera on your computer or mobile device. Then, 
 If your camera is enabled, it shows a live image of wherever it's pointed, which may be you. Smile.
 
 4. Set the **OnSelect** property of **MyCamera** to the following function:  
+
 ```Collect(MyImages, {SinglePicture:MyCamera!Photo})```  
 
 	![][6]  
@@ -141,7 +142,7 @@ The following steps assume you already uploaded the video to your app.
 You can also play videos from external sources, including YouTube.
 
 Select the video control. Set its **Media** property to the URL of the video you want to show. For example, set it to the following video on the Microsoft YouTube channel:  
-Add audio and play it in your app
+
 ![][14]
 
 **Note** Use double quotation marks around the URL.
@@ -191,7 +192,9 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 ```Collect(Creativity, {Captures:Sketches!Image})```
 4. On the **Insert** tab, select **Gallery**, and select the vertical **Image Only** gallery. Shrink the width of the gallery to show three items.
 5. Set the gallery's **Items** property to ```Creativity```.  
-> [AZURE.NOTE] At anytime, you can resize and move the controls.
+
+	> [AZURE.NOTE] At anytime, you can resize and move the controls.
+
 6. Preview (![][1]) to see what you created.
 
 	Draw or write something in **Sketches**, and then select the **Add** button. The contents of the pen control appear in the first item of the gallery.
