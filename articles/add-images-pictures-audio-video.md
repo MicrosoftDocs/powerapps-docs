@@ -82,11 +82,12 @@ Take multiple pictures with the camera on your computer or mobile device. Then, 
 If your camera is enabled, it shows a live image of wherever it's pointed, which may be you. Smile.
 
 4. Set the **OnSelect** property of **MyCamera** to the following function:  
-
-```Collect(MyImages, {SinglePicture:MyCamera!Photo})```  
-
+	
+	```Collect(MyImages, {SinglePicture:MyCamera!Photo})```  
+	
 	![][6]  
-When you click the camera, a picture is taken, and saved to a collection named **MyImages**; which we'll show you shortly.
+	
+	When you click the camera, a picture is taken, and saved to a collection named **MyImages**; which we'll show you shortly.
 
 5. On the **Insert** tab, select **Gallery**, and then select the vertical **Image Only** gallery:  
 ![][7]  
@@ -97,7 +98,7 @@ You can easily resize the image gallery by clicking-and-dragging the corner. Thi
 	![][9]  
 6. Preview your app: ![][1]. To take pictures, select **MyCamera** multiple times. Each picture that you take is shown in the gallery. Press the **ESC** key or select the **X** to go back to the app designer.
 
-
+<br/>
 Now, let's remove an image from the gallery when you select it:
 
 1. Select the first image in the gallery. 
