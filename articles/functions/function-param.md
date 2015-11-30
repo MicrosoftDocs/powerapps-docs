@@ -30,15 +30,14 @@ The **Param** function retrieves a parameter passed to the app when it was launc
 
 ## Syntax ##
 
-**Launch**( *Address* [, *ParamterName1*, *ParameterValue1*, ... ] )
+**Launch**( *Address* [, *ParameterName1*, *ParameterValue1*, ... ] )
+
 - *Address* - Required.  A web address or App ID to launch.
+
 - *ParameterName(s)* - Optional.  Parameter name.
+
 - *ParameterValue(s)* - Optional.  Corresponding parameter values to pass to the app or web site.
 
 **Param**( *ParameterName* )
 
 - *ParameterName* - Required.  The name of the parameter passed to the app.
-
-
-
-

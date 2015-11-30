@@ -28,13 +28,13 @@ Removes [records](working-with-tables.md#records) from a [data source](working-w
 
 Use the **Remove** function to remove specific records from a data source.  
 
-For [collections](working-with-data-sources.md#collections), the entire record must match.  You can use the **All** argument to remove all copies of a record, otherwise only one copy of the record is removed. 
+For [collections](working-with-data-sources.md#collections), the entire record must match.  You can use the **All** argument to remove all copies of a record; otherwise, only one copy of the record is removed. 
 
 ### RemoveIf function ###
 
 Use the **RemoveIf** function to remove records based on a set of conditions.  The conditions can be any formula that results in a **true** or **false** and can reference [columns](working-with-tables.md#columns) of the data source by name.  Conditions are evaluated individually for each record, and if all result in **true**, the record is removed.
 
-**Remove** and **RemoveIf** return the modified data source as a [table](working-with-tables.md).  Both functions can only be used in behavior formulas. 
+**Remove** and **RemoveIf** return the modified data source as a [table](working-with-tables.md).  Both functions can only be used in behavior formulas.
 
 You can also use the **[Clear](function-clear-collect-clearcollect.md)** function to remove all of the records in a data source.
 
@@ -52,7 +52,7 @@ You can also use the **[Clear](function-clear-collect-clearcollect.md)** functio
 
 - *DataSource* – Required. The data source that contains the records that you want to remove.
 
-- *Table* – Required. A table of records to remove. 
+- *Table* – Required. A table of records to remove.
 
 - **All** – Optional. In a collection, the same record may appear more than once.  You can add the **All** argument to remove all copies of the record.
 

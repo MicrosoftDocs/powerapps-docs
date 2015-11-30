@@ -45,21 +45,31 @@ The result is a new table with the transform applied.
 ## Syntax ##
 
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
+
 - *Table* - Required.  Table to operate on.
+
 - *ColumnName(s)* - Required. Names of the column to add.  This name must be a string, for example **"Name"** with double quotes included.
+
 - *Formula(s)* - Required.  Formulas to evaluate for each record, the result is added as the value of the corresponding new column.  Other columns in the table can be referenced in this formula.
 
 **DropColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
+
 - *Table* - Required.  Table to operate on.
+
 - *ColumnName(s)* - Required. Names of the columns to drop. This name must be a string, for example **"Name"** with double quotes included.
 
 **RenameColumns**( *Table*, *OldColumneName*, *NewColumnName* )
+
 - *Table* - Required.  Table to operate on.
+
 - *OldColumnName* - Required. Names of the column to rename. This name must be a string, for example **"Name"** with double quotes included.
+
 - *NewColumnName* - Required. Replacement name. This name must be a string, for example **"Customer Name"** with double quotes included.
 
 **ShowColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
+
 - *Table* - Required.  Table to operate on.
+
 - *ColumnName(s)* - Required. Names of the columns to include. This name must be a string, for example **"Name"** with double quotes included.
 
 ## Examples ##
@@ -71,7 +81,7 @@ The result is a new table with the transform applied.
 2. Add an image gallery with text, name it TableHolder, and set its Items property to this function:
 
 	**RenameColumns(Inventory, "ProductName", "JacketID")**
-	
+
 3. Add a button, and set its OnSelect property to this function:
 
 	**Collect(Inventory2, TableHolder!AllItems)**
@@ -81,5 +91,3 @@ The result is a new table with the transform applied.
 5. Press Alt-D, and then click Collections in the left navigation bar.
 
 6. Confirm that you've duplicated the Inventory collection, except that the new collection, named Inventory2, contains the same information in a column named JacketID as the original collection did in a column named ProductName.
-
-
