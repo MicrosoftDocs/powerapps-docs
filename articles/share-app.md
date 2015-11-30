@@ -37,11 +37,11 @@ Share an app with multiple co-workers at the same time or with a group in Active
 1. Do either of the following:
 	- On [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Apps** in the left navigation bar.
 
-	![List apps on powerapps.com the web](./media/share-app/file-apps-portal.png)
+		![List apps on powerapps.com the web](./media/share-app/file-apps-portal.png)
 
 	- In PowerApps, select **Open** in the **File** menu (near the left edge of the screen).
 
-	![List apps on powerapps.com the web](./media/share-app/open-apps.png)
+		![List apps on powerapps.com the web](./media/share-app/open-apps.png)
 
 1. Select the share icon for the app that you want to share.
 
