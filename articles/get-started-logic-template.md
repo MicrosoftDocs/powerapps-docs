@@ -32,7 +32,7 @@ Create Logic Flows from any of several built-in templates that can, for example,
 
 ## Choose your template
 
-1. Open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Create a flow**.
+1. Open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), and then select **Get started** under **Make a logic flow**.
 
 	![Create a flow](./media/get-started-logic-template/landingpage.png)
 
@@ -43,6 +43,8 @@ Create Logic Flows from any of several built-in templates that can, for example,
 	Your logic flow appears, showing all trigger conditions and actions.
 
 	![Fill out fields](./media/get-started-logic-template/two-step-logic.png)
+
+## Finish your logic flow ##
 
 1. Specify data in any empty fields that are marked with a red asterisk (*), such as the address to which you want messages sent.
 

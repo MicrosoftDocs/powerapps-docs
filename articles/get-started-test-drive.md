@@ -67,7 +67,7 @@ Create an app automatically based on one of several templates for a variety of s
 
 	![VolunteerDetailsScreen_1 with default information](./media/get-started-test-drive/volunteer-default.jpg)
 
-## Explore the app's default appearance and behavior ##
+## Explore the app's default behavior ##
 Apps from templates open in the default workspace, where you'll spend most of your time customizing an app or creating one from scratch. Before you make changes, you'll explore how the app works in **Preview**.
 
 **Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.

@@ -58,21 +58,21 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 
 	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.jpg)
 
-1. Specify the data source that you want to use, as in this example:
+1. Specify the data source that you want to use, as in this example:  
 
-	1. Under **My Connections**, select **SharePoint Online**.
+	1. Under **My Connections**, select **SharePoint Online**.  
 
-	![SharePoint Online in My Connections](./media/get-started-create-from-data/my-connections.png)
+	![SharePoint Online in My Connections](./media/get-started-create-from-data/my-connections.png)  
 
-	1. Under **Select a site**, select **New site**, type or paste the URL of the site you want to use, and then select **Connect**.
+	1. Under **Select a site**, select **New site**, type or paste the URL of the site you want to use, and then select **Connect**.  
 
-	**Note:** Provide the URL of the site itself, without the specific list.
+	**Note:** Provide the URL of the site itself, without the specific list.  
 
-	![SharePoint Online in My Connections](./media/get-started-create-from-data/new-site.png)
+	![SharePoint Online in My Connections](./media/get-started-create-from-data/new-site.png)  
 
-	1. Under **Select a list**, select the list that you want to use, and then select **Connect**.
+	1. Under **Select a list**, select the list that you want to use, and then select **Connect**.  
 
-		![Select a list in a SharePoint site](./media/get-started-create-from-data/choose-list.png)
+	![Select a list in a SharePoint site](./media/get-started-create-from-data/choose-list.png)  
 
 Your app is built.
 
