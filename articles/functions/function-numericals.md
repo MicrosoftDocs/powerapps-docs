@@ -45,7 +45,6 @@ If you pass a single number, the return value is the converted version of that s
 ## Examples ##
 
 ### Single number ###
-The examples in this section use an input-text control, named **Author**, as their [data source](working-with-data-sources.md). The control contains the string **E. E. CummINGS**.
 
 | Formula | Description | Result |
 |---------|-------------|--------|
@@ -64,11 +63,10 @@ The examples in this section use this data source, named **ValueTable**:
 
 ### Step-by-step example ###
 
-1.Add an input-text control, and name it Source. 
+1.Add an input-text control, and name it Source.
 
 2.Add a label, and set its Text property to this function:
 
 - **Sqrt( Value( Source!Text ) )**
 
 3.Type a number into the input-text control, and confirm that the label shows the square root of the number that you typed.
-
