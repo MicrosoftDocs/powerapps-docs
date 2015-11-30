@@ -33,11 +33,11 @@ Create a screen that users can scroll to show more types of content than the scr
 
 	- [Add a screen](add-screen-context-variables.md) to an app.
 
-	![Option to add a screen to an app](./media/add-scrolling-screen/add-screen.png)
+		![Option to add a screen to an app](./media/add-scrolling-screen/add-screen.png)
 
 	- Create an app from scratch by selecting **New** in the **File** menu (near the left edge of the screen) and then selecting **Get started** under **Start from scratch**.
 
-	![Option to create an app from scratch](./media/add-scrolling-screen/blank-app.png)
+		![Option to create an app from scratch](./media/add-scrolling-screen/blank-app.png)
 
 1. On the **Home** tab, select **Layouts**, and then select the option to add an infinite scrolling canvas.
 

@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/05/2015"
-   ms.author="prkumarms"/>
+   ms.author="prkumar"/>
 
 # Start a logic flow in an app #
 
@@ -53,17 +53,17 @@ Create a logic flow that performs one or more tasks when an event occurs in an a
 	For example:
 	1. Type **SharePoint** in the box, and then select **SharePoint Online - Create item** in the list under that box.
 
-	![Option to create a SharePoint item](./media/use-logic-flows/create-sharepoint-item.png)
+		![Option to create a SharePoint item](./media/use-logic-flows/create-sharepoint-item.png)
 
 	1. In the **SITE URL** box, type or paste the URL of a SharePoint Online site that contains a list.
 
-	**Note:** Specify the URL for the site itself, not including the list.
+		**Note:** Specify the URL for the site itself, not including the list.
 
 	1. In the **LIST NAME** box, select the list that you want to use.
 
 	1. Select the **TITLE** box, and then select **Ask in PowerApps**.
 
-	![Add Ask in PowerApps parameter to TITLE field](./media/use-logic-flows/ask-in-powerapps.png)
+		![Add Ask in PowerApps parameter to TITLE field](./media/use-logic-flows/ask-in-powerapps.png)
 
 1. In the **Flow name** box, type or paste a name for your logic flow, and then select **Done**.
 

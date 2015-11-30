@@ -33,10 +33,11 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 	- [Add a screen](add-screen-context-variables.md) to an app.
 
-	![Option to add a screen to an app](./media/create-card-gallery/add-screen.png)
+		![Option to add a screen to an app](./media/create-card-gallery/add-screen.png)
 
 	- Create an app from scratch by selecting **New** in the **File** menu (near the left edge of the screen) and then selecting **Get started** under **Start from scratch**.
-	![Option to create an app from scratch](./media/create-card-gallery/blank-app.png)
+
+		![Option to create an app from scratch](./media/create-card-gallery/blank-app.png)
 
 1. On the **Insert** tab, select **Gallery**, and then select the **Portrait** option under **Card Galleries**.
 

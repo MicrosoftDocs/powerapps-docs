@@ -67,11 +67,11 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 
 3. In the box that shows **What would you like to do next?**, type or paste **send email**, and then click **Office365 Outlook - Send Email**.
 
-  ![List of actions](./media/get-started-logic-flow/send-email.png)
+	![List of actions](./media/get-started-logic-flow/send-email.png)
 
 4. If prompted, provide your Office 365 credentials.
 
-  ![Sign in to Office](./media/get-started-logic-flow/sign-in-office.png)
+	![Sign in to Office](./media/get-started-logic-flow/sign-in-office.png)
 
 5. In the form that appears, type or paste your email address in the **TO** box.
 
@@ -98,21 +98,21 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 
 2. In the list of logic flows, do any of the following:
 
-	- To change a logic flow, select the icon that looks like a pencil next to the logic flow that you want to change.
+	- To change a logic flow, select the icon that looks like a pencil next to the logic flow that you want to change.  
 
-	![Edit icon](./media/get-started-logic-flow/edit-icon.png)
+	![Edit icon](./media/get-started-logic-flow/edit-icon.png)  
 
-	- To pause your logic flow, select the icon that looks like a pause button next to the logic flow that you want to pause.
+	- To pause your logic flow, select the icon that looks like a pause button next to the logic flow that you want to pause.  
 
-	![Pause icon](./media/get-started-logic-flow/pause-icon.png)
+	![Pause icon](./media/get-started-logic-flow/pause-icon.png)  
 
-	- To resume a logic flow, select the icon that looks like a play button next to the logic flow that you want to resume.
+	- To resume a logic flow, select the icon that looks like a play button next to the logic flow that you want to resume.  
 
-	![Resume icon](./media/get-started-logic-flow/resume-icon.png)
+	![Resume icon](./media/get-started-logic-flow/resume-icon.png)  
 
-	- To delete a logic flow, select the icon that looks like a trash can next to the logic flow that you want to delete, type the full name of your logic flow into the confirmation dialog box, and then click **Delete**.
+	- To delete a logic flow, select the icon that looks like a trash can next to the logic flow that you want to delete, type the full name of your logic flow into the confirmation dialog box, and then click **Delete**.  
 
-	![Delete icon](./media/get-started-logic-flow/delete-icon.png)
+	![Delete icon](./media/get-started-logic-flow/delete-icon.png)  
 
 ## Next steps ##
 
