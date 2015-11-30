@@ -24,13 +24,15 @@ Create a logic flow that performs one or more tasks when an event occurs in an a
 [What is PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
+
 - [Install PowerApps](http://aka.ms/installpowerapps)
+
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
 ## Create a logic flow ##
 1. Open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) in your browser.
 
-1. Under **Make a workflow**, select **Create a flow**.
+1. Under **Make a logic flow**, select **Get started**.
 
 	![Option to create a flow](./media/use-logic-flows/create-flow.png)
 
