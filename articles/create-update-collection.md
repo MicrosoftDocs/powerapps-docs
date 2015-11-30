@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/25/2015"
+   ms.date="11/30/2015"
    ms.author="mandia"/>
 
 
@@ -109,7 +109,7 @@ In these steps, you added a **Cities** column and a **States** column to the **D
 There are a few sections in this walk-through. When complete, you'll know how to import data into your collection, create a gallery that shows data in a price list, and use a slider control that determines the quantity of a product.
 
 ### Import the price list and create the collection
-1. Download the [PriceList](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
+1. Download the [PriceList](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) zip file.
 2. On the **Home** tab, add a new screen.
 2. On the **Insert** tab, select **Controls**, and then select **Import**:  
 ![][14]  
