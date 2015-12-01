@@ -20,8 +20,6 @@
 
 # Create an app from a set of data
 
-[AZURE.VIDEO nb:cid:UUID:dd5b313a-0d00-80c4-ef13-f1e592bab129]
-
 Create an app automatically based on data that you specify, explore how the app works by default, and then customize it to better fit how you work.
 
 [What is PowerApps?](http://aka.ms/pamktg)
@@ -30,11 +28,11 @@ Create an app automatically based on data that you specify, explore how the app 
 
 - Install [PowerApps](http://aka.ms/powerappsinstall)
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
-- A set of data, such as a list in SharePoint
+- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx)
 
-For this tutorial, the data source is a list named **Top Charts** in a SharePoint Online site.
+For this tutorial, the data source is a table named **FlooringEstimates** in an Excel spreadsheet on a Dropbox account. You can just as easily create an app based on a SharePoint list, a Dynamics CRM table, or a SQL database. 
 
-![Source data in SharePoint](./media/get-started-create-from-data/sharepoint-source.png)
+![Source data in Excel](./media/get-started-create-from-data/excel-source.png)
 
 ## Specify your data ##
 
@@ -48,9 +46,13 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 
 1. Select the kind of data source you want to use, and then select **Connect**.
 
-	![Connect to SharePoint](./media/get-started-create-from-data/add-sharepoint.png)
+	![Add Dropbox](./media/get-started-create-from-data/add-dropbox.jpg)
 
-1. Provide your credentials, and then select **New** on the **File** menu.
+1. Provide your credentials and then select **Sign in**
+
+	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.jpg)
+
+1. Select **New** on the **File** menu.
 
 	![New option on the File menu](./media/get-started-create-from-data/file-new.jpg)
 
@@ -60,28 +62,26 @@ For this tutorial, the data source is a list named **Top Charts** in a SharePoin
 
 1. Specify the data source that you want to use, as in this example:  
 
-	1. Under **My Connections**, select **SharePoint Online**.  
+	a. Under **My Connections**, select **Dropbox**.  
 
-	![SharePoint Online in My Connections](./media/get-started-create-from-data/my-connections.png)  
+	![Dropbox in My Connections](./media/get-started-create-from-data/my-connections-dropbox.png)  
 
-	1. Under **Select a site**, select **New site**, type or paste the URL of the site you want to use, and then select **Connect**.  
+	b. Under **Select an Excel file**, select the flooringestimates.xlsx file, and then select **Connect**.  
 
-	**Note:** Provide the URL of the site itself, without the specific list.  
+	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
-	![SharePoint Online in My Connections](./media/get-started-create-from-data/new-site.png)  
+	c. Under **Select a table**, select the **FlooringEstimates** table and then select **Connect**.  
 
-	1. Under **Select a list**, select the list that you want to use, and then select **Connect**.  
+	![Select FlooringEstimates table](./media/get-started-create-from-data/choose-table.png)  
 
-	![Select a list in a SharePoint site](./media/get-started-create-from-data/choose-list.png)  
-
-Your app is built.
+Your app is built. Simple? You bet. 
 
 ## Customize the app ##
 When an app is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
 
 1. If **BrowseScreen1** isn't already showing, show it by selecting its thumbnail in the left navigation pane.
 
-	![Thumbnails of all three screens in the left navigation bar](./media/get-started-create-from-data/browse-thumbnail.png)
+	![Thumbnails of all three screens in the left navigation bar](./media/get-started-create-from-data/left-nav-browse-screen.png)
 
 1. If the **Quick tools** pane isn't already showing, show it by selecting **Quick tools** near the lower-left corner.
 
@@ -93,19 +93,19 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	The layout of **BrowseScreen1** changes to reflect your selection.
 
-	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
+	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout-flooring-estimates.png)
 
 	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can select different options, which reflect the data on that screen.
 
 1. In the **Quick tools** pane, select the **Content** tab.
 
-1. Select **Title** in the **Heading2** list, select **PicURL** in the **Image1** list, and select **Category** in the **Subtitle2** list.
+1. Select **Name** in the **Heading2** list, select **ImageURL** in the **Image1** list, and select **Category** in the **Subtitle2** list.
 
-	![Content tab with new options for BrowseScreen1](./media/get-started-create-from-data/choose-content.png)
+	![Content tab with new options for BrowseScreen1](./media/get-started-create-from-data/choose-content-flooring-estimates.png)
 
 	The content of **BrowseScreen1** changes to reflect your selections.
 
-	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
+	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content-flooring-estimates.png)
 
 1. In the **Quick tools** pane, select the **Theme** tab, and then select a different theme, such as **Lavender**.
 
@@ -113,7 +113,7 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	As the thumbnails in the left navigation bar show, each screen in the app changes to reflect your selection.
 
-	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final.png)
+	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final-flooring-estimates.png)
 
 ## Run the app ##
 1. With **BrowseScreen1** showing, open Preview by pressing F5 or by selecting the Preview icon near the upper-right corner.
@@ -122,15 +122,15 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 1. On **BrowseScreen1**, select the arrow for a record to show details about that record.
 
-	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record.png)
+	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record-flooring-estimates.png)
 
 1. On **DetailsScreen1**, select the edit icon (in the upper-right corner) to edit the record.
 
-	![Edit a record](./media/get-started-create-from-data/edit-record.png)
+	![Edit a record](./media/get-started-create-from-data/edit-record-flooring-estimates.png)
 
 1. On **EditScreen1**, change the information in one or more fields, and then select the checkmark in the upper-right corner to save your changes.
 
-	![Save changes on EditScreen1](./media/get-started-create-from-data/save-changes.png)
+	![Save changes on EditScreen1](./media/get-started-create-from-data/save-changes-flooring-estimates.png)
 
 ## Next step ##
 When you finish customizing your app, you can [save and share it with other people](get-started-test-drive.md#save-and-share-your-powerapp).
