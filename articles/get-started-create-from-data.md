@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/22/2015"
+   ms.date="12/01/2015"
    ms.author="anneta"/>
 
 # Create an app from a set of data
@@ -28,9 +28,9 @@ Create an app automatically based on data that you specify, explore how the app 
 
 - Install [PowerApps](http://aka.ms/powerappsinstall)
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
-- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) and save it in **your** Dropbox account. 
+- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) and save it in **your** Dropbox account.
 
-For this tutorial, the data source is a table named **FlooringEstimates** in an Excel spreadsheet on a Dropbox account. You can just as easily create an app based on a SharePoint list, a Dynamics CRM table, or a SQL database. 
+For this tutorial, the data source is a table named **FlooringEstimates** in an Excel spreadsheet on a Dropbox account. You can just as easily create an app based on a SharePoint list, a Dynamics CRM table, or a SQL database.
 
 ![Source data in Excel](./media/get-started-create-from-data/excel-source.png)
 
@@ -48,7 +48,7 @@ For this tutorial, the data source is a table named **FlooringEstimates** in an 
 
 	![Add Dropbox](./media/get-started-create-from-data/add-dropbox.jpg)
 
-1. Provide your credentials and then select **Sign in**
+1. Provide your credentials, and then select **Sign in**.
 
 	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.jpg)
 
@@ -66,15 +66,15 @@ For this tutorial, the data source is a table named **FlooringEstimates** in an 
 
 	![Dropbox in My Connections](./media/get-started-create-from-data/my-connections-dropbox.png)  
 
-	b. Under **Select an Excel file**, select the flooringestimates.xlsx file, and then select **Connect**.  
+	b. Under **Select an Excel file**, select the FlooringEstimates.xlsx file, and then select **Connect**.  
 
 	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
-	c. Under **Select a table**, select the **FlooringEstimates** table and then select **Connect**.  
+	c. Under **Select a table**, select the **FlooringEstimates** table, and then select **Connect**.  
 
 	![Select FlooringEstimates table](./media/get-started-create-from-data/choose-table.png)  
 
-Your app is built. Simple? You bet. 
+Your app is built. Simple? You bet.
 
 ## Customize the app ##
 When an app is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
@@ -83,7 +83,7 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	![Thumbnails of all three screens in the left navigation bar](./media/get-started-create-from-data/left-nav-browse-screen.png)
 
-1. If the **Quick tools** pane isn't already showing, show it by selecting **Quick tools** near the lower-left corner.
+1. If the **Quick tools** pane isn't already showing, show it by selecting **Quick tools** near the lower-right corner.
 
 	![Icon to open the Quick tools pane](./media/get-started-create-from-data/open-quick-tools.jpg)
 
