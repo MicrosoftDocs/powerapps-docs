@@ -28,7 +28,7 @@ Create an app automatically based on data that you specify, explore how the app 
 
 - Install [PowerApps](http://aka.ms/powerappsinstall)
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
-- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx)
+- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) and save it in **your** Dropbox account. 
 
 For this tutorial, the data source is a table named **FlooringEstimates** in an Excel spreadsheet on a Dropbox account. You can just as easily create an app based on a SharePoint list, a Dynamics CRM table, or a SQL database. 
 
