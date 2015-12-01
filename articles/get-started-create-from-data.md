@@ -38,7 +38,7 @@ For this tutorial, the data source is a table named **FlooringEstimates** in an 
 
 1. In PowerApps, select **Connections** on the **File** menu (near the left edge of the screen).
 
-	![Connections option on the File menu](./media/get-started-create-from-data/file-connections.jpg)
+	![Connections option on the File menu](./media/get-started-create-from-data/file-connections.png)
 
 1. Select **Add connection**.
 
@@ -46,19 +46,19 @@ For this tutorial, the data source is a table named **FlooringEstimates** in an 
 
 1. Select the kind of data source you want to use, and then select **Connect**.
 
-	![Add Dropbox](./media/get-started-create-from-data/add-dropbox.jpg)
+	![Add Dropbox](./media/get-started-create-from-data/add-dropbox.png)
 
 1. Provide your credentials, and then select **Sign in**.
 
-	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.jpg)
+	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.png)
 
 1. Select **New** on the **File** menu.
 
-	![New option on the File menu](./media/get-started-create-from-data/file-new.jpg)
+	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
 1. Under **Start from your data**, select **Get started**.
 
-	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.jpg)
+	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
 
 1. Specify the data source that you want to use, as in this example:  
 
@@ -85,7 +85,7 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 1. If the **Quick tools** pane isn't already showing, show it by selecting **Quick tools** near the lower-right corner.
 
-	![Icon to open the Quick tools pane](./media/get-started-create-from-data/open-quick-tools.jpg)
+	![Icon to open the Quick tools pane](./media/get-started-create-from-data/open-quick-tools.png)
 
 1. In the **Quick tools** pane, select the **Layout** tab, and then select the option that includes icons.
 
