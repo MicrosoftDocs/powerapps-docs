@@ -1,11 +1,11 @@
 <properties
     pageTitle="Share files used by an app | Microsoft PowerApps"
-    description=""
+    description="Before you share an app that relies on data in the cloud, share that data with the people you expect to run or even modify your app."
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="KarthikB"
-    manager="BillS"
+    authors="karthik-1"
+    manager="dwrede"
     editor=""
     tags=""
  />
@@ -19,55 +19,72 @@
     ms.author="karthikb"/>
 
 # Share data associated with an app #
-If an app connects to files (say Excel) and is shared, then the receiver of the shared app needs access to those files before launching the shared app. The sharer has to configure access to those files outside of PowerApps. This walk-through outlines those steps when files are stored on Dropbox, OneDrive or Google Drive .
+Before you share an app that relies on data in the cloud, share that data with the people you expect to run or even modify your app. For example, you can share an app that's based on an Excel file in Dropbox, but the app won't run properly for anyone who doesn't have access to that file. Share data in Dropbox, OneDrive or Google Drive by following the steps in the appropriate section of this topic.
 
-## Prerequisites ##
-- An account with which you've signed in to [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) or PowerApps.
-- Either of the following:
-	- An app that you built (from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)).
-	- An app that someone else built and given you permission to run, customize, and share.
+## Share data in OneDrive ##
 
-## Sharing files used by shared apps  ##
-You need to share files in OneDrive, Dropbox or Google Drive used by your app before sharing the app with others.
+1. Sign in to OneDrive by using the same credentials that you used to create the OneDrive connection in PowerApps.
 
-### Sharing files stored on OneDrive ###
+1. Navigate to the folder that contains the Excel file that you used in your app.
 
-1. Login to OneDrive website and navigate to folder that contains the Excel file used in your app. You need to use the same credentials configured for the OneDrive connection used in PowerApps. If the app being shared was created using a template, you will have the "PowerApps" folder in your OneDrive.
+	**Note**: If you want to share an app that you created by using a template, the "PowerApps" folder will be in your OneDrive account.
 
-1. Select the folder containing the file and click Share.
+1. Select the folder that contains the file, and then select **Share**.
 
 	![Share command](./media/share-app-data/OneDrive-folder.png)
 
-1. In the dialog box that appears, type your co-worker’s OneDrive email address with whom the app will be shared with. You need to grant edit permissions if the receiver of the app enters data into the file using your app.
+1. In the dialog box that appears, type the email address that your co-worker uses to sign in to OneDrive.
 
 	![Specify a user](./media/share-app-data/OneDrive-folder-share.png)
 
-For more details refer to [share files and folders on OneDrive](https://support.office.com/en-us/article/Share-files-and-folders-and-change-permissions-9fcc2f7d-de0c-4cec-93b0-a82024800c07).
+1. If your co-worker will add, modify, or delete data in your app, select **Can edit** in the list of permissions. Otherwise, select **Can view**.
 
-### Sharing files stored on Dropbox ###
+1. Select **Share**.
 
-1. Login to Dropbox website and navigate to the folder that contains the Excel file used in your app. You need to use the same credentials configured for the Dropbox connection used in PowerApps. If the app being shared was created using a template, you will have the "PowerApps" folder in your Dropbox.
+[More info](https://support.office.com/en-us/article/Share-files-and-folders-and-change-permissions-9fcc2f7d-de0c-4cec-93b0-a82024800c07)
 
-1. Select the folder containing the file and click on Share. Select **Invite people to collaborate**
+## Share data in Dropbox ##
+
+1. Sign in to Dropbox by using the same credentials that you used to create the Dropbox connection in PowerApps.
+
+1. Navigate to the folder that contains the Excel file that you used in your app.
+
+	**Note**: If you want to share an app that you created by using a template, the "PowerApps" folder will be in your Dropbox account.
+
+1. Select the folder that contains the file, and then select **Share**.
 
 	![Share command](./media/share-app-data/Dropbox-folder.png)
 
-1. In the dialog box that appears, type your co-worker’s Dropbox email address with whom the app will be shared with. You need to grant edit permission if the receiver of the app enters data into the file using your app.
+1. Select **Invite people to collaborate**.
+
+1. In the dialog box that appears, type the email address that your co-worker uses to sign in to OneDrive.
 
 	![Specify a user](./media/share-app-data/Dropbox-folder-share.png)
 
-For more details refer to [how do I share folders with other people using Dropbox](https://www.dropbox.com/en/help/19).
+1. If your co-worker will add, modify, or delete data in your app, select **can edit** in the list of permissions. Otherwise, select **can view**.
 
-### Sharing files stored on Google Drive ###
+1. Select **Share folder**.
 
-1. Login to Google Drive website and navigate to folder that contains the Excel file used in your app. You need to use the same credentials configured for the Google Drive connection used in PowerApps. If the app being shared was created using a template, you will have the "PowerApps" folder in your Google Drive.
+[More info](https://www.dropbox.com/en/help/19)
 
-1. Select the folder and click Share.
+## Share data in Google Drive ##
+
+1. Sign in to Google Drive by using the same credentials that you used to create the Google Drive connection in PowerApps.
+
+1. Navigate to the folder that contains the Excel file that you used in your app.
+
+	**Note**: If you want to share an app that you created by using a template, the "PowerApps" folder will be in your Google Drive account.
+
+1. Select the folder, and then select the icon to share it.
 
 	![Share command](./media/share-app-data/GoogleDrive-folder.png)
 
-1. In the dialog box that appears, type your co-worker’s Dropbox email address with whom the app will be shared with. You need to grant edit permission if the receiver of the app enters data into the file using your app.
+1. In the dialog box that appears, type the email address that your co-worker uses to sign in to Google Drive.
 
 	![Specify a user](./media/share-app-data/GoogleDrive-folder-share.png)
 
-For more details refer to [how to share folders using Google Drive](https://support.google.com/drive/answer/2494822?hl=en).
+1. If your co-worker will add, modify, or delete data in your app, select **Can edit** in the list of permissions. Otherwise, select **Can view**.
+
+1. Select **Done**.
+
+[More info](https://support.google.com/drive/answer/2494822?hl=en)
