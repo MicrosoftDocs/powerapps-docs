@@ -50,6 +50,8 @@ If the starting position is negative or beyond the end of the string, **Mid** wi
 
 ## Examples ##
 
+<style> img { max-width: none; } </style>
+
 ### Single string ###
 The examples in this section use an input-text control, named **Author**, as their [data source](working-with-data-sources.md). The control contains the string "E. E. Cummings".
 
@@ -64,9 +66,10 @@ The examples in this section use this data source, named **People**:
 
 ![](media/function-left-mid-right/people-table.png)
 
+
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Extracts the first 8 characters of each string.</li><li>Returns a single-column table that contains the extracted strings.</li> | ![](media/function-left-mid-right/people-table-left.png) |
+| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Extracts the first 8 characters of each string.</li><li>Returns a single-column table that contains the extracted strings.</li> | ![](media/function-left-mid-right/people-table-left.png)  |
 | **Mid( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 5, 7 )** | In the **Address** column of the **People** table:<br><ul><li>Extracts the middle 7 characters of each string, starting at position 5.</li><li>Returns a single-column table that contains the extracted strings.</li> | ![](media/function-left-mid-right/people-table-mid.png) |
 | **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** | In the **Address** column of the **People** table:<br><ul><li>Extracts the last 7 characters of each string.</li><li>Returns a single-column table that contains the extracted strings.</li> | ![](media/function-left-mid-right/people-table-right.png) |
 

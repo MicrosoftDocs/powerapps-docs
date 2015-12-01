@@ -64,6 +64,8 @@ Both **Update** and **UpdateIf** return the modified data source as a [table](wo
 
 ## Examples ##
 
+<style> img { max-width: none; } </style>
+
 ### Update records ###
 
 In these examples, you'll replace or modify records in a data source that's named **IceCream**. The data source begins with this data:
