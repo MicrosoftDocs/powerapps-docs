@@ -100,19 +100,19 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 
 	- To change a logic flow, select the icon that looks like a pencil next to the logic flow that you want to change.  
 
-	![Edit icon](./media/get-started-logic-flow/edit-icon.png)  
+		![Edit icon](./media/get-started-logic-flow/edit-icon.png)  
 
 	- To pause your logic flow, select the icon that looks like a pause button next to the logic flow that you want to pause.  
 
-	![Pause icon](./media/get-started-logic-flow/pause-icon.png)  
+		![Pause icon](./media/get-started-logic-flow/pause-icon.png)  
 
 	- To resume a logic flow, select the icon that looks like a play button next to the logic flow that you want to resume.  
 
-	![Resume icon](./media/get-started-logic-flow/resume-icon.png)  
+		![Resume icon](./media/get-started-logic-flow/resume-icon.png)  
 
 	- To delete a logic flow, select the icon that looks like a trash can next to the logic flow that you want to delete, type the full name of your logic flow into the confirmation dialog box, and then click **Delete**.  
 
-	![Delete icon](./media/get-started-logic-flow/delete-icon.png)  
+		![Delete icon](./media/get-started-logic-flow/delete-icon.png)  
 
 ## Next steps ##
 
