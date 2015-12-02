@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Update and UdpateIf functions"
-	description="Reference information for the Update and UpdateIf functions in PowerApps, including syntax and examples"
+	pageTitle="PowerApps: Test2 functions"
+	description="Reference information for the Test2 functions in PowerApps, including syntax and examples"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,7 +18,7 @@
    ms.date="10/21/2015"
    ms.author="gregli"/>
 
-# Update and UpdateIf functions in PowerApps #
+# Test2 functions in PowerApps #
 
 Updates [records](working-with-tables.md#records) in a [data source](working-with-data-sources.md).
 
