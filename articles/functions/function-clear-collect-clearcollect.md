@@ -42,7 +42,7 @@ Collections are sometimes used to hold global variables or make a temporary copy
 
 You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
-**Collect** returns the modified data source as a table.  **Collect** can only be used in a behavior formula.
+**Collect** returns the modified data source as a table.  **Collect** can only be used in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas).
 
 ### Clear ###
 

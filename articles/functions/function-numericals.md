@@ -52,7 +52,7 @@ If you pass a single number, the return value is the converted version of that s
 | **Sqrt( 9 )** | Returns the number, that when multiplied by itself, results in 9. | 3 |
 
 ### Single-column table
-The examples in this section use this data source, named **ValueTable**:
+The examples in this section use this [data source](working-with-data-sources.md), named **ValueTable**:
 
 ![](media/function-numericals/values.png)
 

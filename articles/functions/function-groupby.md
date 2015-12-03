@@ -28,7 +28,7 @@ The **GroupBy** function groups records together, based on the values in one or 
 
 The **Ungroup** function reverses the **GroupBy** process.  Records that were grouped together are broken out into separate records.  **Ungroup** also returns a table.
 
-You can modify the table returned by **GroupBy** before passing it back to **Ungroup**.  For example to remove a group of records, you can **GroupBy**, use **Filter** to remove the entire group of records, and then **Ungroup**.  
+You can modify the table returned by **GroupBy** before passing it back to **Ungroup**.  For example to remove a group of records, you can **GroupBy**, use **[Filter](function-filter-lookup.md)** to remove the entire group of records, and then **Ungroup**.  
 
 **Ungroup** does its best to preserve the original order of the records that were fed to **Group**.  This cannot always be accomplished, for example if *blank* records are in the original table. 
 
@@ -49,7 +49,7 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 
 ## Examples ##
 
-Let's begin with a **Cities** data source:
+Let's begin with a **Cities** [data source](working-with-data-sources.md):
 
 ![](media/function-groupby/cities.png)
 

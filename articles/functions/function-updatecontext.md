@@ -54,7 +54,7 @@ A context variable holds its value until the user closes the app.  If you define
 
 Every context variable is scoped to a screen. If you want to define a context variable on one screen and modify that variable from another screen, you must build a formula that's based on the **[Navigate](function-navigate.md)** function.
 
-**UpdateContext** has no return value, and you can use it only within a behavior formula.
+**UpdateContext** has no return value, and you can use it only within a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas).
 
 ## Syntax ##
 

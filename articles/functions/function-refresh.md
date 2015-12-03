@@ -26,7 +26,7 @@ Refreshes the [records](working-with-tables.md#records) of a [data source](worki
 
 The **Refresh** function retrieves a fresh copy of a data source.  You will see changes made by other users. 
 
-**Refresh** has no return value.  It can only be used in behavior formulas. 
+**Refresh** has no return value.  It can only be used in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas). 
 
 ## Syntax ##
 

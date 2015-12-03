@@ -53,7 +53,7 @@ You can use **Navigate** to create or update context variables of the new screen
 
 Set the **OnHidden** property of the old screen, the **OnVisible** property of the new screen, or both to make additional changes during the transition. The **App!ActiveScreen** property will be updated to reflect the change.
 
-**Back** and **Navigate** have no return values, and you can use them only within a behavior formula.
+**Back** and **Navigate** have no return values, and you can use them only within a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas).
 
 ## Syntax ##
 
