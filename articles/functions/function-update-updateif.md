@@ -40,7 +40,7 @@ Modifications are specified using a change record containing new property values
 
 Similar to **UpdateIf**, you can also use the **[Patch](function-patch.md)** function to change specific columns of a record without affecting other columns.
 
-Both **Update** and **UpdateIf** return the modified data source as a [table](working-with-tables.md).  Both functions can only be used in behavior formulas. 
+Both **Update** and **UpdateIf** return the modified data source as a [table](working-with-tables.md).  Both functions can only be used in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas). 
 
 ## Syntax ##
 
