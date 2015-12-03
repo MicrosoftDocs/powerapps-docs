@@ -58,7 +58,7 @@ The examples in this section use this data source, named **ValueTable**:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Abs( ValueTable )** | Returns the absolute values of each number in the table. | ![](media/function-numericals/values-abs.png) |
+| **Abs( ValueTable )** | Returns the absolute values of each number in the table. | <style> img { max-width:none; } </style> ![](media/function-numericals/values-abs.png) |
 | **Sqrt( ValueTable )** | Returns the square root of each number in the table | ![](media/function-numericals/values-sqrt.png) |
 
 ### Step-by-step example ###
