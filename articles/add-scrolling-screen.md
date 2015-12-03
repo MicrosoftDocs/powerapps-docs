@@ -18,9 +18,7 @@
 	ms.author="anneta"/>
 
 # Add a scrolling screen in PowerApps #
-Create a screen that users can scroll to show more types of content than the screen can show at a time. For example, you might want to juxtapose multiple charts, videos, or other kinds of data from different sources on the same screen while keeping each element big enough to see clearly. If you add controls to multiple sections, the relative position of each element is maintained, even if the screen orientation changes between portrait and landscape.  
-
-[What is PowerApps?](http://www.powerapps.com)
+Create a screen that users can scroll to show more types of content than the screen can show at a time. For example, you might want to juxtapose multiple charts, videos, or other kinds of data from different sources on the same screen while keeping each element big enough to see clearly. If you put multiple controls in a section, they’ll maintain their relative positions within that section, regardless of the screen size and orientation. However, the screen size and orientation might determine how the sections are arranged.  
 
 **Prerequisites**
 
