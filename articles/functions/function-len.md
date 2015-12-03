@@ -57,7 +57,7 @@ The examples in this section use this data source, named **People**:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> | ![](media/function-len/people-table-len.png) |
+| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> | <style> img { max-width:none; } </style> ![](media/function-len/people-table-len.png) |
 | **Len( [ "Hello", "to the", "World", "" ] )** |  In the **[Value](function-value.md)** column of the inline table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> | ![](media/function-len/people-table-len-inline.png) |
 
 
