@@ -240,13 +240,13 @@ To follow this tutorial exactly:
 
 1. Set the **OnSelect** property of the **Save** button to this formula:
 
-	**UpdateContext({Record:Patch(Schedule,Record, {StartDay:inputDay!Text,StartTime:inputTime!Text, Staff1:inputStaff1!Text,Staff2:inputStaff2!Text})}); If(IsEmpty(Errors(Schedule,Record)),Navigate(ViewScreen,ScreenTransition!Fade))**
+	**UpdateContext({Record:Patch(Schedule,Record,<br> {StartDay:inputDay!Text,StartTime:inputTime!Text,<br> Staff1:inputStaff1!Text,Staff2:inputStaff2!Text})});<br> If(IsEmpty(Errors(Schedule,Record)),<br>Navigate(ViewScreen,ScreenTransition!Fade))**
 
 	In this formula, the [**Patch**](function-patch.md) function creates or updates an entry in the **Schedule** data source, and the entry contains the information in each text-input control.  	In addition, the [**If**](function-if.md) function opens the **ViewScreen** only if no [**Errors**](function-errors.md) occurred when the data source was updated.
 
 1. Set the **OnSelect** property of the **Remove** button to this formula:
 
-	**UpdateContext({NewRecord:Remove(Schedule,Record)});If(IsEmpty(Errors(Schedule,Record)),Navigate(ViewScreen,ScreenTransition!Fade))**
+	**UpdateContext({NewRecord:Remove(Schedule,Record)});<br> If(IsEmpty(Errors(Schedule,Record)),<br>Navigate(ViewScreen,ScreenTransition!Fade))**
 
 	In this formula, the [**Remove**](function-remove-removeif.md) function removes a specified record from the **Schedule** data source. Again, the [**If**](function-if.md) function opens the **ViewScreen** only if no [**Errors**](function-errors.md) occurred when the data source was updated.  
 
