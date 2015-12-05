@@ -26,7 +26,7 @@ Returns one value if a condition is true, and another value if not.
 
 The **If** function tests conditions until a **true** result is found.  The corresponding value is then returned as the result.  You can use **If** to return different results based on comparisons and other tests.  
 
-You can use **If** in behavior formulas to branch between two actions.  At most one branch will be executed.  Conditions are evaluated in order, and once a **true** result is found, no further conditions are checked.
+You can use **If** in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas) to branch between two actions.  At most one branch will be executed.  Conditions are evaluated in order, and once a **true** result is found, no further conditions are checked.
 
 If no conditions are satisfied and an odd number of arguments are provided, the value of the last argument is returned.  This is the case with the common **If( *condition*, *value*, *else* )**.  For an even number of arguments, *Blank* is returned.
 
@@ -34,7 +34,7 @@ If no conditions are satisfied and an odd number of arguments are provided, the 
 
 **If**( *Condition*, *Result* [, *ElseResult* ] )<br>**If**( *Condition1*, *Result1* [, *Condition2*, *Result2*, ... [ , *ElseResult* ] ] )
 
-- *Condition(s)* - Required.  Formulas to test for **true**.  These formulas commonly contain comparison operators such as **<**, **>**, and **=**, and test functions such as **IsBlank** and **IsEmpty**.
+- *Condition(s)* - Required.  Formulas to test for **true**.  These formulas commonly contain comparison [operators](operators.md) such as **<**, **>**, and **=**, and test functions such as **[IsBlank](function-isblank-isempty.md)** and **[IsEmpty](function-isblank-isempty.md)**.
 - *Result(s)* - Required.  The corresponding value to return for a condition that evaluates to **true**.
 - *ElseResult* - Optional.  The value to return if no conditions are satisfied.  If not specified, *blank* is returned.
 
@@ -57,9 +57,9 @@ If no conditions are satisfied and an odd number of arguments are provided, the 
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **If( true, Navigate( Screen1, ScreenTranstion!None ) )** | The condition is **true** and the **Navigate** function is executed. **Navigate** returns **true**. | **true**<br><br>The display is changed to **Screen1**. |
+| **If( true, Navigate( Screen1, ScreenTranstion!None ) )** | The condition is **true** and the **[Navigate](function-navigate.md)** function is executed. **[Navigate](function-navigate.md)** returns **true**. | **true**<br><br>The display is changed to **Screen1**. |
 | **If( false, Navigate( Screen1 ) )** | The condition is **false** and no *ElseResult* was provided. | *blank*<br><br>No action is taken. |
-| **If( false, Navigate( Screen1, ScreenTransition!None ), Back() )** | The condition is **false** and **Back** has been provided for the *ElseResult* | **true**<br><br>The display is changed to the previous screen. |
+| **If( false, Navigate( Screen1, ScreenTransition!None ), Back() )** | The condition is **false** and **[Back](function-navigate.md)** has been provided for the *ElseResult* | **true**<br><br>The display is changed to the previous screen. |
 
 ### Step by step ###
 
