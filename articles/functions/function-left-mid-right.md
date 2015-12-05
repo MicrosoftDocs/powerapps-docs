@@ -66,7 +66,7 @@ The examples in this section use this data source, named **People**:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Extracts the first 8 characters of each string.</li><li>Returns a single-column table that contains the extracted strings.</li> | <style> img { max-width:none; } </style> ![](media/function-left-mid-right/people-table-left.png) |
+| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Extracts the first 8 characters of each string.</li><li>Returns a single-column table that contains the extracted strings.</li> | <style> img { max-width: none } </style> ![](media/function-left-mid-right/people-table-left.png) |
 | **Mid( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 5, 7 )** | In the **Address** column of the **People** table:<br><ul><li>Extracts the middle 7 characters of each string, starting at position 5.</li><li>Returns a single-column table that contains the extracted strings.</li> | ![](media/function-left-mid-right/people-table-mid.png) |
 | **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** | In the **Address** column of the **People** table:<br><ul><li>Extracts the last 7 characters of each string.</li><li>Returns a single-column table that contains the extracted strings.</li> | ![](media/function-left-mid-right/people-table-right.png) |
 

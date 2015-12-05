@@ -86,7 +86,7 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 
 | Formula | Description  | Result              |
 |---------|--------------|---------------------|
-| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )**| Clears all data from the **IceCream** collection and then adds a record that includes a quantity of strawberry ice cream. | <style> img { max-width:none; } </style> ![](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>The **IceCream** data source has also been modified. |
+| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )**| Clears all data from the **IceCream** collection and then adds a record that includes a quantity of strawberry ice cream. | <style> img { max-width: none } </style> ![](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>The **IceCream** data source has also been modified. |
 | **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** | Adds two records to the **IceCream** collection that includes a quantity of pistachio and Orange ice cream. | ![](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>The **IceCream** data source has also been modified. |
 | **Clear( IceCream )** | Removes all records from the **IceCream** collection. | ![](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** data source has also been modified. |
 

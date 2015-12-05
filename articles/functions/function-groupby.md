@@ -49,27 +49,35 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 
 ## Examples ##
 
-Let's begin with a **Cities** [data source](working-with-data-sources.md):
+1. Let's begin with a **CityPopulations** [data source](working-with-data-sources.md):
 
-![](media/function-groupby/cities.png)
+	![](media/function-groupby/cities.png)
 
-You can group this by **Country** with:
+1. You can group this by the value in the **Country** column with:
 
-- **GroupBy( Cities, "Country", "Cities" )**
+	- **GroupBy( CityPopulations, "Country", "Cities" )**
 
-![](media/function-groupby/cities-grouped.png)
+	![](media/function-groupby/cities-grouped.png)
 
-Let's say that we want to filter out countries without an "e" in their names:
+2. Let's capture the result of the GruopBy in a [collection](working-with-data-sources.md#collections) named **CitiesByCountry**:
 
-- **Filter( GroupBy( Cities, "Country" ), "e" in Country )**
+	- **ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )**
 
-![](media/function-groupby/cities-grouped-hase.png)
+3. Now, let's filter out countries that do not have an "e" in their names:
 
-And finally, let's ungroup the table:
+	- **Filter( CitiesByCountry, "e" in Country )**
 
-- **Ungroup( Filter( GroupBy( Cities, "Country" ), "e" in Country ), "Cities" )**
+	![](media/function-groupby/cities-grouped-hase.png)
 
-![](media/function-groupby/cities-hase.png)
+4. Let's capture this result in another collection, named **CitiesByCountryFiltered**:
+
+	- **ClearCollect( CitiesByCountryFiltered, Filter( CitiesByCountry, "e" in Country )**
+
+5. And finally, let's ungroup the table.  We need to supply the column that contains the unique information for each city:
+
+	- **Ungroup( CitiesByCountryFiltered, "Cities" )**
+
+	![](media/function-groupby/cities-hase.png)
 
 
 

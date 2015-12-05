@@ -32,13 +32,11 @@ If you pass a single number, the return value is the converted version of that s
 
 ## Syntax ##
 
-**Abs**( *Number* )<br>
-**Sqrt**( *Number* )
+**Abs**( *Number* )<br>**Sqrt**( *Number* )
 
 - *Number* - Required. Number to be operated on.
 
-**Abs**( *SingleColumnTable* )<br>
-**Sqrt**( *SingleColumnTable* )
+**Abs**( *SingleColumnTable* )<br>**Sqrt**( *SingleColumnTable* )
 
 - *Number* - Required. A single-column table of numbers to operate on.
 
@@ -58,7 +56,7 @@ The examples in this section use this [data source](working-with-data-sources.md
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Abs( ValueTable )** | Returns the absolute values of each number in the table. | <style> img { max-width:none; } </style> ![](media/function-numericals/values-abs.png) |
+| **Abs( ValueTable )** | Returns the absolute values of each number in the table. | <style> img { max-width: none } </style> ![](media/function-numericals/values-abs.png) |
 | **Sqrt( ValueTable )** | Returns the square root of each number in the table | ![](media/function-numericals/values-sqrt.png) |
 
 ### Step-by-step example ###
