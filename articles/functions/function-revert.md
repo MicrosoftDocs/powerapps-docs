@@ -30,7 +30,7 @@ For the records reverted, **Revert** also clears any errors from the [table](wor
 
 If a conflict is reported by the **[Errors](function-errors.md)** function after a **[Patch](function-patch.md)** or other data operation, **Revert** the record to start with the conflicting version and reapply the change.
 
-**Revert** has no return value.  It can only be used in behavior formulas. 
+**Revert** has no return value.  It can only be used in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas). 
 
 ## Syntax ##
 

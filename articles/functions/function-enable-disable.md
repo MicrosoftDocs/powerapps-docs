@@ -34,7 +34,7 @@ The **Enable** and **Disable** functions turn on and off a signal, respectively.
 
 These functions currently only work for the **[Location](signals.md)** signal.
 
-These functions have no return value.  They can only be used in behavior formulas.
+These functions have no return value.  They can only be used in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas).
 
 ## Syntax ##
 

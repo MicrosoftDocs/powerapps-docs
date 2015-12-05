@@ -40,7 +40,7 @@ Modifications are specified using a change record containing new property values
 
 Similar to **UpdateIf**, you can also use the **[Patch](function-patch.md)** function to change specific columns of a record without affecting other columns.
 
-Both **Update** and **UpdateIf** return the modified data source as a [table](working-with-tables.md).  Both functions can only be used in behavior formulas. 
+Both **Update** and **UpdateIf** return the modified data source as a [table](working-with-tables.md).  Both functions can only be used in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas). 
 
 ## Syntax ##
 
@@ -74,7 +74,7 @@ In these examples, you'll replace or modify records in a data source that's name
 |---------|-------------|--------|
 | **Update(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;), {&nbsp;ID:&nbsp;1,&nbsp;Flavor:&nbsp;"Mint&nbsp;Chocolate",&nbsp;Quantity:150&nbsp;} )** | Replaces a record from the data source.| <style> img { max-width: none } </style> ![](media/function-update-updateif/icecream-mint.png)<br><br>The **IceCream** data source has been modified. |
 | **UpdateIf(&nbsp;IceCream, Quantity > 175, {&nbsp;Quantity:&nbsp;Quantity&nbsp;+&nbsp;10&nbsp;} )** | Modifies records that have a **Quantity** that is greater than 150.  Only the **Quantity** field is modified, which is incremented by 10. |![](media/function-update-updateif/icecream-mint-plus10.png)<br><br>The **IceCream** data source has been modified. |
-| **Update(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Strawberry"&nbsp;)&nbsp;), {&nbsp;ID:&nbsp;3,&nbsp;Flavor:&nbsp;"Strawberry Swirl"} )** | Replaces a record from the data source.  As the **Quantity** property has not been supplied in the replacement record, it will be *blank* in the result.|![](media/function-update-updateif/icecream-mint-swirl.png)<br><br>The **IceCream** data source has been modified. |
+| **Update(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream, Flavor="Strawberry"&nbsp;)&nbsp;),<br>{&nbsp;ID:&nbsp;3, Flavor:&nbsp;"Strawberry Swirl"} )** | Replaces a record from the data source.  As the **Quantity** property has not been supplied in the replacement record, it will be *blank* in the result.|![](media/function-update-updateif/icecream-mint-swirl.png)<br><br>The **IceCream** data source has been modified. |
 | **UpdateIf(&nbsp;IceCream, true, {&nbsp;Quantity:&nbsp;0&nbsp;} )** | Modifies all records in the data source with a new **Quantity** of 0.|![](media/function-update-updateif/icecream-mint-zero.png)<br><br>The **IceCream** data source has been modified. |
 
 ### Step by step ###
