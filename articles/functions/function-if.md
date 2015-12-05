@@ -42,24 +42,26 @@ If no conditions are satisfied and an odd number of arguments are provided, the 
 
 ### Values in formulas ###
 
+In the following examples, a slider control named **Slider1** has a value of **25**.
+
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **If( true, "Result1" )** | The condition is **true** and the corresponding result is returned. | "Result1" |
-| **If( false, "Result1" )** | The condition is **false** and there is no *ElseResult* provided.  | *blank* |
-| **If( true, "Result1", "Result2" )** | The condition is **true** and the corresponding result is returned. | "Result1" |
-| **If( false, "Result1", "Result2" )** | The condition is **false** and the *ElseResult* has been provided and is returned.   | "Result2" |
-| **If( true, "Result1", true, "Result2" )** | The first condition is **true** and the corresponding result is returned. | "Result1" |
-| **If( false, "Result1", true, "Result2" )** | The first condition is **false**, but the second condition is **true** and the corresponding result is returned. | "Result2" |
-| **If( false, "Result1", false, "Result2" )** | Both the first and second conditions are **false** and there is no *ElseResult* provided.    | *blank* |
-| **If( false, "Result1", false, "Result2", "Result3")** | Both the first and second conditions are **false** and the *ElseResult* has been provided and is returned. | "Result3" |
+| **If( Slider1!Value&nbsp;=&nbsp;25, "Result1" )** | The condition is **true** and the corresponding result is returned. | "Result1" |
+| **If( Slider1!Value&nbsp;>&nbsp;1000, "Result1" )** | The condition is **false** and there is no *ElseResult* provided.  | *blank* |
+| **If( Slider1!Value&nbsp;=&nbsp;25, "Result1", "Result2" )** | The condition is **true** and the corresponding result is returned. | "Result1" |
+| **If( Slider1!Value&nbsp;>&nbsp;1000, "Result1", "Result2" )** | The condition is **false** and the *ElseResult* has been provided and is returned.   | "Result2" |
+| **If( Slider1!Value&nbsp;=&nbsp;25, "Result1", Slider1!Value&nbsp;>&nbsp;0, "Result2" )** | The first condition is **true** and the corresponding result is returned.  Even though the second condition is also **true**, its corresponding value is not returned since it is appears on the argument list after the first condition.  | "Result1" |
+| **If( IsBlank(&nbsp;Slider1!Value&nbsp;), "Result1", IsNumeric(&nbsp;Slider1!Value&nbsp;), "Result2" )** | The first condition is **false** since the slider has a value of 25 and is not *blank*.  The second condition is **true** since the slider's value is a number and the corresponding result is returned. | "Result2" |
+| **If( Slider1!Value&nbsp;>&nbsp;1000, "Result1", Slider1!Value&nbsp;>&nbsp;50, "Result2", "Result3")** | Both the first and second conditions are **false** and the *ElseResult* has been provided and is returned. | "Result3" |
 
 ### Branching in behavior formulas ###
 
+In the following examples, an input text box named **Name** has the value "John" typed into it.
+
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **If( true, Navigate( Screen1, ScreenTranstion!None ) )** | The condition is **true** and the **[Navigate](function-navigate.md)** function is executed. **[Navigate](function-navigate.md)** returns **true**. | **true**<br><br>The display is changed to **Screen1**. |
-| **If( false, Navigate( Screen1 ) )** | The condition is **false** and no *ElseResult* was provided. | *blank*<br><br>No action is taken. |
-| **If( false, Navigate( Screen1, ScreenTransition!None ), Back() )** | The condition is **false** and **[Back](function-navigate.md)** has been provided for the *ElseResult* | **true**<br><br>The display is changed to the previous screen. |
+| **If( ! IsBlank( Name!Text ), Navigate(&nbsp;Screen1, ScreenTranstion!None ) )** | The condition is **true** and the **[Navigate](function-navigate.md)** function is executed. You can use the **IsBlank** function to test if a required form field has been filled in.  If the text box was empty, this formula would have no effect.  | **true**<br><br>The display is changed to **Screen1**. |
+| **If( IsBlank( Name!Text ), Navigate(&nbsp;Screen1, ScreenTransition!None ), Back() )** | Without the **!** operator, the condition is **false** and **[Back](function-navigate.md)** has been provided for the *ElseResult*. | **true**<br><br>The display goes back to the scrren that was previously shown. |
 
 ### Step by step ###
 
