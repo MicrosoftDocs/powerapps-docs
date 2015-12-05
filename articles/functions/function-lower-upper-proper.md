@@ -62,7 +62,7 @@ The examples in this section use this data source, named **People**:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-lower.png) |
+| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | <style> img { max-width: none } </style> ![](media/function-lower-upper-proper/people-table-lower.png) |
 | **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-upper.png) |
 | **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any first letter of a word that's lowercase to uppercase.</li><li>Converts any other letter that's uppercase to lowercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-proper.png) |
 
