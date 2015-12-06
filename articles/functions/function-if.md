@@ -56,12 +56,12 @@ In the following examples, a slider control named **Slider1** has a value of **2
 
 ### Branching in behavior formulas ###
 
-In the following examples, an input text box named **Name** has the value "John" typed into it.
+In the following examples, an input text box named **FirstName** has the value "John" typed into it.
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **If( ! IsBlank( Name!Text ), Navigate(&nbsp;Screen1, ScreenTranstion!None ) )** | The condition is **true** and the **[Navigate](function-navigate.md)** function is executed. You can use the **IsBlank** function to test if a required form field has been filled in.  If the text box was empty, this formula would have no effect.  | **true**<br><br>The display is changed to **Screen1**. |
-| **If( IsBlank( Name!Text ), Navigate(&nbsp;Screen1, ScreenTransition!None ), Back() )** | Without the **!** operator, the condition is **false** and **[Back](function-navigate.md)** has been provided for the *ElseResult*. | **true**<br><br>The display goes back to the scrren that was previously shown. |
+| **If( ! IsBlank( FirstName!Text ), Navigate(&nbsp;Screen1, ScreenTranstion!None ) )** | The condition is **true** and the **[Navigate](function-navigate.md)** function is executed. You can use the **IsBlank** function to test if a required form field has been filled in.  If the text box was empty, this formula would have no effect.  | **true**<br><br>The display is changed to **Screen1**. |
+| **If( IsBlank( FirstName!Text ), Navigate(&nbsp;Screen1, ScreenTransition!None ), Back() )** | Without the **!** operator, the condition is **false** and the **Navigate** function will not be executed.  Since the *ElseResult* has been provided, **[Back](function-navigate.md)** will be executed. | **true**<br><br>The display goes back to the scrren that was previously shown. |
 
 ### Step by step ###
 

@@ -30,7 +30,7 @@ The **Ungroup** function reverses the **GroupBy** process.  Records that were gr
 
 You can modify the table returned by **GroupBy** before passing it back to **Ungroup**.  For example to remove a group of records, you can **GroupBy**, use **[Filter](function-filter-lookup.md)** to remove the entire group of records, and then **Ungroup**.  
 
-**Ungroup** does its best to preserve the original order of the records that were fed to **Group**.  This cannot always be accomplished, for example if *blank* records are in the original table. 
+**Ungroup** does its best to preserve the original order of the records that were fed to **GroupBy**.  This cannot always be accomplished, for example if *blank* records are in the original table. 
 
 Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **GroupBy** and **Ungroup** do not modify a table, instead they take a table as an argument and return a new table.  See [working with tables](working-with-tables.md) for more details.
 

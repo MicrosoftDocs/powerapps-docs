@@ -31,7 +31,7 @@ The **HashTags** function scans a string for hashtags.  Hashtags start with a po
 - underscores (_)
 - currency symbols (such as $)
 
-**HashTags** returns a one-column [table](working-with-tables.md) containing the hashtags found.  If no hashtags are found, the result will be a one-column table that is *empty*.
+**HashTags** returns a one-column [table](working-with-tables.md) containing the hashtags found.  If no hashtags are found, the result will be a one-column table that is empty.
 
 ## Syntax ##
 
