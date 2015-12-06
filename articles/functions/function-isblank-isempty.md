@@ -42,7 +42,7 @@ The **IsBlank** function tests for a *blank* value.  Among others, *blank* value
 - The *else* portion of an **[If](function-if.md)** function was not specified, and all  conditions were **false**.
 - A column was not included when using the **[Update](function-update-updateif.md)** function, and no value was placed in that column of the record as a result.
 
-The **IsEmpty** function tests if a table has any records in it.  It is equivalent to using the **CountRows** function and checking for zero.  You can use **IsEmpty** to check for data source errors with the **Errors** function.
+The **IsEmpty** function tests if a table has any records in it.  It is equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero.  You can use **IsEmpty** to check for data source errors with the **[Errors](function-errors.md)** function.
 
 The return value for both functions is a Boolean **true** or **false**.
 
@@ -72,7 +72,7 @@ The return value for both functions is a Boolean **true** or **false**.
 
 5. Remove all the characters from the input text control, including any spaces.  Since the control no longer contains any characters, its **Text** property will be *blank* and **IsBlank( FirstName!Text )** will be **true**.  The required field message is displayed.
 
-There are other tools for performing validation.  See the **Validate** function and working with data sources.  
+There are other tools for performing validation.  See the **[Validate](function-validate.md)** function and working with data sources.  
 
 Other examples:
 
@@ -80,9 +80,9 @@ Other examples:
 |---------|-------------|--------|
 | **IsBlank( "" )** | A string that contains no characters. | **true** |
 | **IsBlank( "Hello" )** | A string that contains one or more characters. | **false** |
-| **IsBlank( *AnyCollection* )** | Since the collection exists, it is not blank, even if it does not contain any records.  To check for an empty collection, use **IsEmpty** instead. | **false** |
-| **IsBlank( Mid( "Hello", 17, 2 ) )** | The starting character for **Mid** is beyond the end of the string.  The result is an empty string.  | **true** |
-| **IsBlank( If( false, false ) )** | An **If** function with no *ElseResult*.  Since the condition is always **false**, this **If** always returns *blank*.  | **true** |
+| **IsBlank( *AnyCollection* )** | Since the [collection](working-with-data-sources.md#collections) exists, it is not blank, even if it does not contain any records.  To check for an empty collection, use **IsEmpty** instead. | **false** |
+| **IsBlank( Mid( "Hello", 17, 2 ) )** | The starting character for **[Mid](function-left-mid-right.md)** is beyond the end of the string.  The result is an empty string.  | **true** |
+| **IsBlank( If( false, false ) )** | An **[If](function-if.md)** function with no *ElseResult*.  Since the condition is always **false**, this **[If](function-if.md)** always returns *blank*.  | **true** |
 
 ### IsEmpty ###
 
@@ -104,7 +104,7 @@ Other examples:
 
 	![](media/function-isblank-isempty/icecream-clear.png)
 
-	The **Clear** function removes all the records from a collection, resulting in an empty colleciton.  **IsEmpty( IceCream )** returns **true** and **CountRows( IceCream )** returns **0**.
+	The **[Clear](function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty colleciton.  **IsEmpty( IceCream )** returns **true** and **CountRows( IceCream )** returns **0**.
 
 Calculated tables can also be tested for empty.  Here are some examples:
 
