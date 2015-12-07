@@ -46,4 +46,15 @@ See [working with dates and times](../show-text-dates-times.md) for more informa
 
 - *DateTime* - Required.  Date/Time value to operate on.  
 
+## Examples ##
 
+For the following example, the current time is 3:59:37 PM on Thursday, April 9, 2015.
+
+| Formula | Description | Result |
+|---------|-------------|--------|
+| **Year( Now() )** | Returns the year component of the current time and date. | 2015 |
+| **Month( Now() )** | Returns the month component of the current time and date. | 4 |
+| **Day( Now() )** | Returns the day component of the current time and date. | 9 |
+| **Hour( Now() )** | Returns the hour component of the current time and date. | 15 |
+| **Minute( Now() )** | Returns the minute component of the current time and date. | 59 |
+| **Second( Now() )** | Returns the minute component of the current time and date. | 37 |
