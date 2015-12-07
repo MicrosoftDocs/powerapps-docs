@@ -30,7 +30,7 @@ The **LookUp** function finds the first record in a table that satisfies a formu
 
 For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  [Columns](working-with-tables.md#columns) of the table can be used in the formula, as well as control properties and other values from throughout your app.  
 
-**Filter** returns all records found as a table with the same columns as the original.  **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value.  If no records are found, **Filter** returns an empty table and **LookUp** returns *blank*.  
+**Filter** returns all records found as a table with the same columns as the original.  **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value.  If no records are found, **Filter** returns an [empty](function-isblank-isempty.md) table and **LookUp** returns *blank*.  
 
 Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Filter** and **LookUp** do not modify a table, instead they take a table as an argument and return a table, record, or single value from it.  See [working with tables](working-with-tables.md) for more details.
 
@@ -49,7 +49,7 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 
 ## Examples ##
 
-The following examples use the **IceCream** data source:
+The following examples use the **IceCream** [data source](working-with-data-sources.md):
 
 ![](media/function-filter-lookup/icecream.png)
 
