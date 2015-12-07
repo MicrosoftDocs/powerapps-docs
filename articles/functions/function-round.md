@@ -34,7 +34,7 @@ If you pass a single number, the return value is the rounded version of that num
 
 ## Syntax ##
 
-**Round**( *Number*, *DecimalPlaces* )<br>**[Upper](function-lower-upper-proper.md)**( *Number*, *DecimalPlaces* )<br>**[Proper](function-lower-upper-proper.md)**( *Number*, *DecimalPlaces* )
+**Round**( *Number*, *DecimalPlaces* )<br>**[RoundDown](function-lower-upper-proper.md)**( *Number*, *DecimalPlaces* )<br>**[RoundUp](function-lower-upper-proper.md)**( *Number*, *DecimalPlaces* )
 
 - *Number* - Required. The number to round.
 - *DecimalPlaces* - Required.  The number of places to the right of the decimal point to round to.  Use 0 to round to a whole number.  
