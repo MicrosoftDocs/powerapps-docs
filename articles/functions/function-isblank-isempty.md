@@ -72,7 +72,7 @@ The return value for both functions is a Boolean **true** or **false**.
 
 5. Remove all the characters from the input text control, including any spaces.  Since the control no longer contains any characters, its **Text** property will be *blank* and **IsBlank( FirstName!Text )** will be **true**.  The required field message is displayed.
 
-There are other tools for performing validation.  See the **[Validate](function-validate.md)** function and working with data sources.  
+There are other tools for performing validation.  See the **[Validate](function-validate.md)** function and [working with data sources](working-with-data-sources.md).  
 
 Other examples:
 
