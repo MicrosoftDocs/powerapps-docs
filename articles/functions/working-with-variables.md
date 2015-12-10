@@ -24,20 +24,13 @@ You may be asking: **Where are the variables?**
 
 If you're asking this question, you've probably used another programming tool in the past, such as Visual Basic or JavaScript.  PowerApps is a little different, requiring a different approach.
 
-When reaching for a variable, instead ask yourself: **What would I do in Excel?**  
+When reaching for a variable, instead ask yourself: **What would I do in Excel?** The equivalent of Excel's cells are PowerApps controls. In other tools, you may have explicitly performed a calculation and placed the result in a variable. In PowerApps, you create a formula that connects controls together and is automatically recalculated, just like Excel. With this approach, your app will be easier to create, understand, and maintain.
 
-PowerApps is modeled after Microsoft Excel, and what works there often works in PowerApps too.
-
-- In Excel, you perform calculations by specifying static data, a formula, or a formula that includes static data in one or more cells.
-- In PowerApps, you perform calculations by setting the one or more properties of controls to static data, a formula, or a formula that includes static data.
-
-If you change the static data in an Excel cell or the property of a PowerApps control, any formula that relies on that data is recalculated automatically. The result of the formula isn't stored in a variable, so you don't need to configure anything to update that value.
-
-In other tools, you may have explicitly performed a calculation and placed the result in a variable.  In PowerApps, you create a formula that connects controls together and is automatically recalculated, just like Excel.  With this approach, your app will be easier to create, understand, and maintain.
+There is a place for variables in PowerApps, which extends Excel's model with behavior formulas that execute when, for example, a user clicks a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
 There is a place for variables in PowerApps, which extends Excel's model with [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas) that execute when, for example, a user clicks a button.  Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
-## Use formulas without variables ##
+## Working without variables ##
 
 ### Excel ###
 
