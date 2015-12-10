@@ -26,11 +26,18 @@ If you're asking this question, you've probably used another programming tool in
 
 When reaching for a variable, instead ask yourself: **What would I do in Excel?**  
 
-PowerApps is modeled after Microsoft Excel and what works there often works in PowerApps too.  The equivalent of Excel's cells are PowerApps controls.  In other tools, you may have explicitly performed a calculation and placed the result in a variable.  In PowerApps, you create a formula that connects controls together and is automatically recalculated, just like Excel.  With this approach, your app will be easier to create, understand, and maintain.
+PowerApps is modeled after Microsoft Excel, and what works there often works in PowerApps too.
+
+- In Excel, you perform calculations by specifying static data, a formula, or a formula that includes static data in one or more cells.
+- In PowerApps, you perform calculations by setting the one or more properties of controls to static data, a formula, or a formula that includes static data.
+
+If you change the static data in an Excel cell or the property of a PowerApps control, any formula that relies on that data is recalculated automatically. The result of the formula isn't stored in a variable, so you don't need to configure anything to update that value.
+
+In other tools, you may have explicitly performed a calculation and placed the result in a variable.  In PowerApps, you create a formula that connects controls together and is automatically recalculated, just like Excel.  With this approach, your app will be easier to create, understand, and maintain.
 
 There is a place for variables in PowerApps, which extends Excel's model with [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas) that execute when, for example, a user clicks a button.  Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
-## Working without variables ##
+## Use formulas without variables ##
 
 ### Excel ###
 
@@ -42,8 +49,7 @@ Excel doesn't have variables.  A cell's value can float with a formula, but ther
 
 ### PowerApps ###
 
-
-PowerApps behave very much like Excel.  Instead of cells, you can name and place controls wherever you want on a screen.  The Excel example looks like the following in a PowerApp:
+PowerApps behaves very much like Excel. Instead of cells, you can name and place controls wherever you want on a screen.  The Excel example looks like the following in an app:
 
 - An input-text control, named **Text1**, which takes the place of cell **A1**.  In this control, the user types the first value to add.
 - Another input-text control, named **Text2**, which takes the place of cell **A2**.  In this control, the user types in the second value to add.
@@ -54,7 +60,7 @@ This app has the same recalculation behavior as Excel. If you change the value o
 
 ![](media/working-with-variables/recalc.png)
 
-PowerApps can use formulas for more than the primary value of a control.  For example, you can use formulas to control formatting.  In this next example, a formula for the Color property of the label will automatically show negative values in red.  The **[If](function-if.md)** function should look very familiar from Excel.
+In PowerApps, formulas can determine more than the primary value of a control.  For example, you can use formulas to control formatting.  In this next example, a formula for the Color property of the label will automatically show negative values in red.  The **[If](function-if.md)** function should look very familiar from Excel.
 
 ![](media/working-with-variables/recalc-color.png)
 
