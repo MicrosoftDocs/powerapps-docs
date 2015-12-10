@@ -163,7 +163,7 @@ You can use some functions, such as **Navigate** and **Collect**, only in behavi
 
 You can take than one action in a behavior formula if you separate functions with a semi-colon (;). For example, you might want to update a context variable, push data to a data source, and finally navigate to another screen.
 
-## Find a property by category ##
+## View a property by category ##
 
 The properties list shows properties alphabetically, but you can also view all the properties of a control, organized by category, if you select the **Advanced** option on the **View** tab:
 
