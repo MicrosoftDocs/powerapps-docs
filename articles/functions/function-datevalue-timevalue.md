@@ -32,7 +32,7 @@ The **DateTimeValue** functions converts to a date and time string to a date/tim
 
 If time information is included in the argument to **DateValue** or date information is include in the argument to **TimeValue**, it is ignored.
 
-By default the language used is that of the current user, but you can override this to ensure that strings are interpreted properly.  For example "10/1/1920" is interpreted as October 1<sup>st</sup> in "en" and as January 10<sup>th</sup> in "fr". 
+By default the language used is that of the current user, but you can override this to ensure that strings are interpreted properly.  For example "10/1/1920" is interpreted as October 1<sup>st</sup> in "en" and as January 10<sup>th</sup> in "fr".
 
 Dates must be in one of the following formats:
 
@@ -43,7 +43,7 @@ Dates must be in one of the following formats:
 
 See the **[Date](function-date-time.md)** and **[Time](function-date-time.md)** functions to convert from numbers.
 
-Also see [working with dates and times](../show-text-dates-times.md) for more information. 
+Also see [working with dates and times](../show-text-dates-times.md) for more information.
 
 ## Syntax ##
 
@@ -58,23 +58,23 @@ Also see [working with dates and times](../show-text-dates-times.md) for more in
 
 ### DateValue ###
 
-If you typed 10/11/2014 into an input-text control named Startdate and then set the Text property of a label to this function:
+If you typed **10/11/2014** into an input-text control named **Startdate** and then set the **Text** property of a label to this function:
 
-**Text(DateValue(Startdate!Text), DateTimeFormat!LongDate)**
+- **Text(DateValue(Startdate!Text), DateTimeFormat!LongDate)**
 
-The label would show Saturday, October 11, 2014, if your computer were set to the "en" locale. 
+	The label would show **Saturday, October 11, 2014**, if your computer were set to the **en** locale.
 
-You can use several options, other than LongDateTime, with the DateTimeFormat parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
+	**Note:** You can use several options, other than **LongDateTime**, with the **DateTimeFormat** parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
 
-**Text(DateValue(Startdate!Text, "fr"), DateTimeFormat!LongDate)**
+- **Text(DateValue(Startdate!Text, "fr"), DateTimeFormat!LongDate)**
 
-The label would show Monday, November 10, 2014.
+	The label would show **Monday, November 10, 2014**.
 
 If you did the same thing on October 20, 2014:
 
-**DateDiff(DateValue(Startdate!Text), Today())**
+- **DateDiff(DateValue(Startdate!Text), Today())**
 
-If your computer were set to the "en" language, the label would show 9, indicating the number of days between October 11 and October 20. DateDiff can also show the difference in months, quarters, or years.
+	If your computer were set to the **en** language, the label would show **9**, indicating the number of days between October 11 and October 20. **DateDiff** can also show the difference in months, quarters, or years.
 
 ### DateTimeValue ###
 
@@ -82,7 +82,7 @@ If you typed 10/11/2014 1:50:24.765 PM into an input-text control named Start an
 
 **Text(DateTimeValue(Start!Text), DateTimeFormat!LongDateTime)**
 
-The label would show Saturday, October 11, 2014 1:50:24 PM if your computer were set to the "en" locale. 
+The label would show Saturday, October 11, 2014 1:50:24 PM if your computer were set to the "en" locale.
 
 You can use several options, other than LongDateTime, with the DateTimeFormat parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
 
@@ -105,6 +105,3 @@ If(TimeValue(FinishedAt!Text)<TimeValue("5:00:00.000 PM"), "You made it!", "Too 
 - If you type 4:59:59.999 PM into the FinishedAt control, the label shows "You made it!"
 
 - If you type 5:00:00.000 PM into the FinishedAt control, the label shows "Too late!"
-
-
-
