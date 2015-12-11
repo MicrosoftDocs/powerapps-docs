@@ -36,7 +36,7 @@ This topic provides only an overview of working with formulas.  Browse the [form
 - Install [PowerApps](http://aka.ms/powerappsinstall)
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
-## Show a permanent value ##
+## Show a simple value ##
 In Excel, you can enter a specific piece of data, such as the number **42** or the phrase **Hello World**, by typing it into a cell. That cell will always show that data exactly as you typed it. In PowerApps, you can similarly specify a piece of data that doesn't change by setting the **Text** property of a label to the exact sequence of characters that you want, surrounded by double quotation marks.
 
 1. Open PowerApps, and then select **New** on the **File** menu (near the left edge of the screen).
@@ -140,7 +140,7 @@ You can configure your app with formulas so that users can change your app's app
 
 1. Select the screen by clicking away from any control, and then set the screen's **Fill** property to this formula:<br>**RGBA( Slider1!Value, Slider2!Value, Slider3!Value, 1 )**
 
-	As already specified, you access control properties by using the **!** operator.  **Slider1!Value** refers to the slider's **Value** property, which reflects where the user has placed the slider between the **Min** and **Max** values.  As you type this formula, each control that it contains is color coded between the screen and the formula bar:
+	As already described, you access control properties by using the **!** operator.  **Slider1!Value** refers to the slider's **Value** property, which reflects where the user has placed the slider between the **Min** and **Max** values.  As you type this formula, each control that it contains is color coded between the screen and the formula bar:
 
 	![Change the formula for the background fill color of the screen, but not yet complete](./media/working-with-formulas/three-sliders-partial-rgba.png)
 
