@@ -25,7 +25,7 @@ Configure your app with formulas that not only calculate values and perform othe
 - In Excel, you build formulas that, for example, populate cells and create tables and charts.
 - In PowerApps, you build similar formulas as you configure controls instead of cells. In addition, you build formulas that apply specifically to apps instead of spreadsheets.
 
-For example, you build a formula to determine how your app responds when users click a button, adjust a slider, or provide other input. These formulas might show a different screen, update an data source that's external to the app, or automatically show the name of the person who's using the app. Excel has no need or equivalent for any of these actions.
+For example, you build a formula to determine how your app responds when users click a button, adjust a slider, or provide other input. These formulas might show a different screen, update a data source that's external to the app, or create a table that contains a subset of the data in an existing table.
 
 You can use formulas for a wide variety of scenarios. For example, you can use your device's GPS, a map control, and a formula that uses **Location!Latitude** and **Location!Longitude** to display your current location. As you move, the map automatically tracks your location.
 
