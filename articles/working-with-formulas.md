@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Working with formulas | Microsoft PowerApps"
+	pageTitle="Work with formulas | Microsoft PowerApps"
 	description="Use formulas to customize an app."
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="11/23/2015"
    ms.author="gregli"/>
 
-# Working with formulas #
+# Work with formulas #
 
 Configure your app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
@@ -36,8 +36,8 @@ This topic provides only an overview of working with formulas.  Browse the [form
 - Install [PowerApps](http://aka.ms/powerappsinstall)
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
-## Show static data ##
-In Excel, you can enter a specific piece of data, such as the number **42** or the phrase **Hello World**, by typing it into a cell. That cell will always show that data exactly as you typed it. In PowerApps, you can similarly specify a piece of data that doesn't change by setting the **Text** property of a label to the exact value that you want, surrounded by double quotation marks.
+## Show a permanent value ##
+In Excel, you can enter a specific piece of data, such as the number **42** or the phrase **Hello World**, by typing it into a cell. That cell will always show that data exactly as you typed it. In PowerApps, you can similarly specify a piece of data that doesn't change by setting the **Text** property of a label to the exact sequence of characters that you want, surrounded by double quotation marks.
 
 1. Open PowerApps, and then select **New** on the **File** menu (near the left edge of the screen).
 
@@ -81,14 +81,11 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
 	The label reflects this new value as you type it.  The screen may show yellow exclamation-point icons while you type. These icons indicate errors, but they'll go away when you finish entering a valid value.  For example, a string without double quotes on both ends isn't valid.
 
-## Show a calculated value ##
-In Excel, you show a calculated value by typing a formula, such as **=SUM(1,2,3)**, into a cell. That cell will always show **6**. In contrast, you can type **=SUM(A1:A2)** into a cell to show the sum of whatever values cells A1 and A2 contain.
+	In Excel, you can show a number, such as **42**, by typing it into a cell or by typing a formula that resolves to that number, such as **=SUM(30,12)**. In PowerApps, you can achieve the same effect by setting the **Text** property of a control, such as a label, to **42** or **Sum(30,12)**. The cell and the label will always show that number regardless of what else changes in the worksheet or the app.
 
-In PowerApps, you can set the **Text** property of a label to **Sum(1,2,3)** if you want the label to always show **6**. You can also set the same property to **Text1 + Text2** to show the sum of whatever values a user might type into two text-input controls.
+	**Note:** In PowerApps, you don't precede a formula with an equals sign or a plus sign as you do in Excel. The formula bar treats anything you type there as a formula by default. You also don't surround a formula with double quotation marks ("), as you did earlier to specify a string of text.
 
-**Note:** In PowerApps, you don't precede a formula with an equals sign or a plus sign as you do in Excel. The formula bar in PowerApps treats anything you type there as a formula by default. You also don't surround a formula with double quotation marks ("), as you did earlier to specify a string of text.
-
-1. Follow the steps in the previous procedure, and then replace the **"Hello World"** string with the formula **Sum(1,2,3)**:
+1. In the **Text** property of the label, replace **"Hello World"** with **Sum(1,2,3)**.
 
 	![Typing the partial function Sum(1,2,3 without a closing parenthesis shows errors](./media/working-with-formulas/label-sum-partial.png)
 
@@ -96,17 +93,19 @@ In PowerApps, you can set the **Text** property of a label to **Sum(1,2,3)** if 
 
 	![Using the complete formula Sum(1,2,3)](./media/working-with-formulas/label-sum.png)
 
-1. Add two input-text controls, named **Text1** and **Text2**, and set the **Text** property of the label to **Text1 + Text2**
+## Change a value based on input ##
+In Excel, you type **=SUM(A1:A2)** into a cell to show the sum of whatever values cells A1 and A2 contain. If either or both of those values change, the cell that contains the formula automatically shows the updated result.
 
-	![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc.png)
+![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.png)
 
-1. Set the **Text** properties of **Text1** and **Text2** to any values you want.
+In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows **Label1** from the previous procedure and two input-text controls, named **Text1** and **Text2**. Regardless of what numbers you type in the input-text controls, **Label1** always shows the sum of those numbers because its **Text** property is set to this formula:
+<br>**Text1 + Text2**
 
-	The label shows the result of adding the two values that you specified.
+![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc.png)
 
-	In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the [**If**](function-if.md) function, which behaves similarly to how it behaves in Excel.
+In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the [**If**](function-if.md) function, which behaves similarly to how it behaves in Excel.
 
-1. If the label isn't already named **Label1**, give it that name, and set its **Color** property to this formula:<br>**If( Value(Label1!Text) <0, Red, Black )**
+1. Set the **Color** property of **Label1** to this formula:<br>**If( Value(Label1!Text) <0, Red, Black )**
 
 	**Note:** Specify the property of a control by providing the name of the control, followed by an exclamation point, followed by the name of the property. For example, specify the **Text** property of **Label1** by typing **Label1!Text**.
 
@@ -116,7 +115,7 @@ In PowerApps, you can set the **Text** property of a label to **Sum(1,2,3)** if 
 
 	The value in **Label1** appears in red.
 
-## Respond to user input ##
+## Change a color based on user input ##
 You can configure your app with formulas so that users can change your app's appearance or behavior. For example, you can create a filter to show only data that contains a string of text that the user specifies, or you can let users sort a set of data based on a certain column in the data set. In this procedure, you'll let users change the color of the screen by adjusting one or more sliders.
 
 1. Remove the controls from the previous procedures, or create a blank app as you did previously.
@@ -163,7 +162,7 @@ You can use some functions, such as **Navigate** and **Collect**, only in behavi
 
 You can take than one action in a behavior formula if you separate functions with a semi-colon (;). For example, you might want to update a context variable, push data to a data source, and finally navigate to another screen.
 
-## View a property by category ##
+## View a list of properties by category ##
 
 The properties list shows properties alphabetically, but you can also view all the properties of a control, organized by category, if you select the **Advanced** option on the **View** tab:
 
