@@ -78,23 +78,23 @@ If you did the same thing on October 20, 2014:
 
 ### DateTimeValue ###
 
-If you typed 10/11/2014 1:50:24.765 PM into an input-text control named Start and then set the Text property of a label to this function:
+If you typed **10/11/2014 1:50:24.765 PM** into an input-text control named **Start** and then set the **Text** property of a label to this function:
 
-**Text(DateTimeValue(Start!Text), DateTimeFormat!LongDateTime)**
+- **Text(DateTimeValue(Start!Text), DateTimeFormat!LongDateTime)**
 
-The label would show Saturday, October 11, 2014 1:50:24 PM if your computer were set to the "en" locale.
+	The label would show **Saturday, October 11, 2014 1:50:24 PM** if your computer were set to the "en" locale.
 
-You can use several options, other than LongDateTime, with the DateTimeFormat parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
+	**Note:** You can use several options, other than LongDateTime, with the DateTimeFormat parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
 
-**Text(DateTimeValue(Start!Text, "fr"), DateTimeFormat!LongDateTime)**
+- **Text(DateTimeValue(Start!Text, "fr"), DateTimeFormat!LongDateTime)**
 
-The label would show "Monday, November 10, 2014 1:50:24 PM".
+	The label would show **Monday, November 10, 2014 1:50:24 PM**.
 
-**Text(DateTimeValue(Start!Text), "dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM")**
+- **Text(DateTimeValue(Start!Text), "dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM")**
 
-The label would show "Saturday, October 11, 2014 01:50:24:765 PM" if your computer were set to the "en" locale.
+	The label would show **Saturday, October 11, 2014 01:50:24:765 PM** if your computer were set to the **en** locale.
 
-As an alternative, you can specify hh:mm:ss.f or hh:mm:ss.ff to round the time to the nearest tenth or hundredth of a second.
+	As an alternative, you can specify hh:mm:ss.f or hh:mm:ss.ff to round the time to the nearest tenth or hundredth of a second.
 
 ### TimeValue ###
 
