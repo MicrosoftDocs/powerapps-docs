@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Working with formulas in depth | Microsoft PowerApps"
+	pageTitle="Understanding formulas | Microsoft PowerApps"
 	description="Reference information for working with formulas"
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="11/10/2015"
    ms.author="gregli"/>
 
-# Working with formulas in PowerApps #
+# Understanding formulas in PowerApps #
 
 ## Behavior formulas ##
 
@@ -44,5 +44,4 @@ You use semicolons to create a list of actions to perform.  For example, you mig
 
 - **UpdateContext( { x: 1 } ); Back()**
 
-Actions are performed in the order they appear in the formula.  The next function will not execute until the current function has completed.  If there is an error, subsequent functions may not execute. 
-    
+Actions are performed in the order they appear in the formula.  The next function will not execute until the current function has completed.  If there is an error, subsequent functions may not execute.
