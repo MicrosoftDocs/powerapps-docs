@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Working with variables | Microsoft PowerApps"
+	pageTitle="Understanding variables | Microsoft PowerApps"
 	description="Reference information for working with state, context variables, and collections"
 	services=""
 	suite="powerapps"
@@ -18,15 +18,11 @@
    ms.date="11/10/2015"
    ms.author="gregli"/>
 
-# Working with variables in PowerApps #
+# Understanding variables in PowerApps #
 
-You may be asking: **Where are the variables?**
+If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** PowerApps is a little different, requiring a different approach. Instead of reaching for a variable, ask yourself: **What would I do in Excel?**
 
-If you're asking this question, you've probably used another programming tool in the past, such as Visual Basic or JavaScript.  PowerApps is a little different, requiring a different approach.
-
-When reaching for a variable, instead ask yourself: **What would I do in Excel?**
-
-PowerApps is modeled after Microsoft Excel and what works there often works in PowerApps too. The equivalent of Excel's cells are PowerApps controls. In other tools, you may have explicitly performed a calculation and placed the result in a variable. In PowerApps, you create a formula that connects controls together and is automatically recalculated, just like Excel. With this approach, your app will be easier to create, understand, and maintain.
+PowerApps is modeled after Microsoft Excel, and what works there often works in PowerApps too. The equivalent of Excel's cells are PowerApps controls. In other tools, you may have explicitly performed a calculation and placed the result in a variable. In PowerApps, you create a formula that connects controls together and is automatically recalculated, just like Excel. With this approach, your app will be easier to create, understand, and maintain.
 
 There is a place for variables in PowerApps, which extends Excel's model with [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas) that execute when, for example, a user clicks a button.  Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
