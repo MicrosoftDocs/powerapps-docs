@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Working with Data Sources | Microsoft PowerApps"
+	pageTitle="Understanding data sources | Microsoft PowerApps"
 	description="Reference information for working with connections and data sources in Microsoft PowerApps."
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="11/10/2015"
    ms.author="gregli"/>
 
-# Working with data sources in PowerApps #
+# Understanding data sources in PowerApps #
 
 Data sources are extensions of [tables](working-with-tables.md) that can retrieve and store information.  Connected data sources read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.  Static data sources and collections are alternative data sources that can be loaded and saved locally.
 
@@ -210,4 +210,3 @@ Collections are a special kind of data source.  They're local to the app and not
 - You can use the **[SaveData](function-savedata-loaddata.md)** and **[LoadData](function-savedata-loaddata.md)** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
 
 Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
-
