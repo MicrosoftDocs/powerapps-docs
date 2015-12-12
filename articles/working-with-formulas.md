@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Work with formulas | Microsoft PowerApps"
+	pageTitle="Getting started with formulas | Microsoft PowerApps"
 	description="Use formulas to customize an app."
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="11/23/2015"
    ms.author="gregli"/>
 
-# Work with formulas #
+# Getting started with formulas #
 
 Configure your app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
