@@ -1,5 +1,5 @@
 <properties
-	pageTitle="PowerApps: GroupBy and Ungroup functions"
+	pageTitle="GroupBy and Ungroup functions | Microsoft PowerApps"
 	description="Reference information for the GroupBy and Ungroup functions in PowerApps, including syntax and examples"
 	services=""
 	suite="powerapps"
@@ -30,7 +30,7 @@ The **Ungroup** function reverses the **GroupBy** process.  Records that were gr
 
 You can modify the table returned by **GroupBy** before passing it back to **Ungroup**.  For example to remove a group of records, you can **GroupBy**, use **[Filter](function-filter-lookup.md)** to remove the entire group of records, and then **Ungroup**.  
 
-**Ungroup** does its best to preserve the original order of the records that were fed to **GroupBy**.  This cannot always be accomplished, for example if *blank* records are in the original table. 
+**Ungroup** does its best to preserve the original order of the records that were fed to **GroupBy**.  This cannot always be accomplished, for example if *blank* records are in the original table.
 
 Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **GroupBy** and **Ungroup** do not modify a table, instead they take a table as an argument and return a new table.  See [working with tables](working-with-tables.md) for more details.
 
@@ -40,12 +40,12 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 
 - *Table* - Required. Table to be grouped.
 - *ColumnName(s)* - Required.  The column names in *table* to group on.  These columns become columns in the resulting table.
-- *GroupColumnName* - Required.  The column name for the storage of record data not in the *ColumnName(s)*. 
+- *GroupColumnName* - Required.  The column name for the storage of record data not in the *ColumnName(s)*.
 
 **Ungroup**( *Table*, *GroupColumnName* )
 
 - *Table* - Required. Table to be ungrouped.
-- *GroupColumnName* - Required.  The column containing the record data setup with the **GroupBy** function. 
+- *GroupColumnName* - Required.  The column containing the record data setup with the **GroupBy** function.
 
 ## Examples ##
 
@@ -78,7 +78,3 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 	- **Ungroup( CitiesByCountryFiltered, "Cities" )**
 
 	![](media/function-groupby/cities-hase.png)
-
-
-
-

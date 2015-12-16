@@ -24,7 +24,7 @@ Translates a character code into a string.
 
 ## Description ##
 
-The **Char** function returns a string containing the appropriate ASCII character for your platform.
+The **Char** function returns a string that contains the appropriate ASCII character for your platform.
 
 ## Syntax ##
 
@@ -36,9 +36,6 @@ The **Char** function returns a string containing the appropriate ASCII characte
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Char( 65 )** | Returns the character corresponding to ASCII code 65. | "A" |
-| **Char( 105 )** | Returns the character corresponding to ASCII code 105. | "i" |
-| **Char( 35 )** | Returns the character corresponding to ASCII code 35. | "#" |
-
-
-
+| **Char( 65 )** | Returns the character that corresponds to ASCII code 65. | A |
+| **Char( 105 )** | Returns the character that corresponds to ASCII code 105. | i |
+| **Char( 35 )** | Returns the character that corresponds to ASCII code 35. | # |
