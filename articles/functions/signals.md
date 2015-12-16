@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Acceleration, App, Compass, Connection, and Location signals"
-	description="Reference information for the Acceleration, App, Compass, Connection, and Location senors in PowerApps, including syntax and examples"
+	pageTitle="Acceleration, App, Compass, Connection, and Location signals | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Acceleration, App, Compass, Connection, and Location sensors in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -60,7 +60,7 @@ The heading is based on magnetic north.
 
 The **Connection** signal returns the information about the network connection.
 
-When on a metered connection, you may want to limit how much data you send or receive over the network. 
+When on a metered connection, you may want to limit how much data you send or receive over the network.
 
 | Signal Property | Description |
 |--------------------|-------------|
@@ -77,13 +77,13 @@ As the location changes, dependencies on the location will continuously recalcul
 
 | Signal Property | Description |
 |--------------------|-------------|
-| **Location!Attitude** | The altitude above sea level.  Returns a number, measured in feet.
+| **Location!Altitude** | The altitude above sea level.  Returns a number, measured in feet.
 | **Location!Latitude** | The latitude, measured in degrees from the equator.  Returns a number from -90 to 90, north is positive.  |
 | **Location!Longitude** | The longitude, measured in degrees west from Greenwich, England.  Returns a number from 0 to 180.  |
 
 ## Examples ##
 
-From the pitcher's mound at Safeco Field in Seattle, a baseball pitcher throws a phone to a waiting catcher.  The phone is laying flat with respect to the ground and the top of the screen is pointed at the catcher, and the pitcher adds no spin.  At this location, the phone has cellular network service that is metered, but has no WiFi.  The currently displayed screen is **PlayBall**.   
+From the pitcher's mound at Safeco Field in Seattle, a baseball pitcher throws a phone to a waiting catcher.  The phone is lying flat with respect to the ground, the top of the screen is pointed at the catcher, and the pitcher adds no spin.  At this location, the phone has cellular network service that is metered but no WiFi.  The currently displayed screen is **PlayBall**.   
 
 | Formula | Description | Result |
 |---------|-------------|--------|
@@ -98,6 +98,5 @@ From the pitcher's mound at Safeco Field in Seattle, a baseball pitcher throws a
 | **Connection!Connected** | Is the device currently connected to a network?  | **true** |
 | **Connection!Metered** | Is the device currently connected network metered? | **true** |
 | **App!ActiveScreen** | The screen object that is currently displayed. | **PlayBall** |
-| **App!ActiveScreen = PlayBall** | Tests if the currently displayed screen is **PlayBall**.  | **true** | 
-| **App!ActiveScreen!Fill** | Returns the background color for the currently displayed screen. | **Color!Green** | 
-
+| **App!ActiveScreen = PlayBall** | Tests if the currently displayed screen is **PlayBall**.  | **true** |
+| **App!ActiveScreen!Fill** | Returns the background color for the currently displayed screen. | **Color!Green** |

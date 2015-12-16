@@ -34,10 +34,10 @@ A data source is an extension of a table, and you can use it in any context that
 - The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](function-refresh.md)** function.
 - As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
 	- Records can be created with the **[Patch](function-patch.md)** and **[Collect](function-clear-collect-clearcollect.md)** functions.  
-	- Records can be modified with the **[Patch](function-patch.md)** **[Update](function-update-updateif.md)** and **[UpdateIf](function-update-updateif.md)** functions.
+	- Records can be modified with the **[Patch](function-patch.md)**, **[Update](function-update-updateif.md)**, and **[UpdateIf](function-update-updateif.md)** functions.
 	- Records can be removed with the **[Remove](function-remove-removeif.md)** and **[RemoveIf](function-remove-removeif.md)** functions.
 	- Errors when working with a data source are available through the **[Errors](function-errors.md)** function.
-- The **[DataSourceInfo](function-datasourceinfo.md)** **[Defaults](function-defaults.md)** and **[Validate](function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
+- The **[DataSourceInfo](function-datasourceinfo.md)**, **[Defaults](function-defaults.md)**, and **[Validate](function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
 
 PowerApps can't be used to create or modify a data source; the table must already exist in a service elsewhere.  To create a table (for example, in an Excel workbook stored on OneDrive), you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  Collections can be created and modified in an app but are only temporary.
 
