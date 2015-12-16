@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Collect, Clear, and ClearCollect functions"
-	description="Reference information for the Collect, Clear, and ClearCollect functions in PowerApps, including syntax and examples"
+	pageTitle="Collect, Clear, and ClearCollect functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Collect, Clear, and ClearCollect functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -26,19 +26,19 @@ Creates and clears [collections](working-with-data-sources.md#collections) and a
 
 ### Collect ###
 
-The **Collect** function adds records to a data source.  The items to be added can be:
+The **Collect** function adds records to a data source. The items to be added can be:
 
 - A single value: The value is placed in the **Value** property of a new record.  All other properties are left [blank](function-isblank-isempty.md).
 
 - A record: Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
-  
-- A [table](working-with-tables.md): Each record of the table is added as a separate record of the data source as described above.  The table is not added as a nested table to a record.  To accomplish this, wrap the table in a record first. 
 
-When used with a collection, additional [columns](working-with-tables.md#columns) will be created as needed.  The columns for other data sources are fixed by the data source and new columns cannot be added.  
+- A [table](working-with-tables.md): Each record of the table is added as a separate record of the data source as described above. The table is not added as a nested table to a record. To accomplish this, wrap the table in a record first.
 
-If the data source does not already exist, a new collection is created.
+When used with a collection, additional [columns](working-with-tables.md#columns) will be created as needed. The columns for other data sources are fixed by the data source and new columns cannot be added.  
 
-Collections are sometimes used to hold global variables or make a temporary copy of a data source.  PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Collections do not enjoy this benefit and their use can make your app harder to create and understand.  Before using a collection in this manner, review [working with variables](working-with-variables.md).
+If the data source doesn't already exist, a collection is created.
+
+Collections are sometimes used to hold global variables or make a temporary copy of a data source. PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](working-with-variables.md).
 
 You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
@@ -48,7 +48,7 @@ You can also use the **[Patch](function-patch.md)** function to create records i
 
 The **Clear** function deletes all the records of a collection.  The columns of the collection will remain.
 
-Note that **Clear** only operates on collections and not other data sources.  You can use **[RemoveIf](function-remove-removeif.md)( *DataSource*, true )** for this purpose.  Use caution as this will remove all records from the data source's storage and can affect other users. 
+Note that **Clear** only operates on collections and not other data sources.  You can use **[RemoveIf](function-remove-removeif.md)( *DataSource*, true )** for this purpose.  Use caution as this will remove all records from the data source's storage and can affect other users.
 
 You can use the **[Remove](function-remove-removeif.md)** function to selectively remove records.
 
@@ -66,7 +66,7 @@ The **ClearCollect** function deletes all the records from a collection and then
 
 - *DataSource* – Required. The data source that you want to add data to.  If it does not already exist, a new collection is created.
 - *Item(s)* - Required.  One or more records or tables to add to the data source.  
- 
+
 **Clear**( *Collection* )
 
 - *Collection* – Required. The collection that you want to clear.
