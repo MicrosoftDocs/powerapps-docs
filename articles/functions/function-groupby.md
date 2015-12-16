@@ -59,7 +59,7 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 
 	![](media/function-groupby/cities-grouped.png)
 
-2. Let's capture the result of the GruopBy in a [collection](working-with-data-sources.md#collections) named **CitiesByCountry**:
+2. Let's capture the result of the GroupBy in a [collection](working-with-data-sources.md#collections) named **CitiesByCountry**:
 
 	- **ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )**
 
