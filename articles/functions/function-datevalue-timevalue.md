@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: DateValue, TimeValue, and DateTimeValue functions"
-	description="Reference information for the DateValue, TimeValue, and DateTimeValue functions in PowerApps, including syntax and examples"
+	pageTitle="DateValue, TimeValue, and DateTimeValue functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the DateValue, TimeValue, and DateTimeValue functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,21 +20,21 @@
 
 # DateValue, TimeValue, and DateTimeValue functions in PowerApps #
 
-Converts date and times in a string to a date/time value.
+Converts a date, a time, or both in a string to a date/time value.
 
 ## Description ##
 
-The **DateValue** function converts a date string to a date/time value.  For example, "10/01/2014".
+The **DateValue** function converts a date string (for example, "10/01/2014") to a date/time value.
 
-The **TimeValue** function converts a time string to a date/time value.  For example, "12:15 PM".
+The **TimeValue** function converts a time string (for example, "12:15 PM") to a date/time value.
 
-The **DateTimeValue** functions converts to a date and time string to a date/time value.  For example, "January 10, 2013 12:13 AM".
+The **DateTimeValue** functions converts a date and time string (for example, "January 10, 2013 12:13 AM") to a date/time value.
 
-If time information is included in the argument to **DateValue** or date information is include in the argument to **TimeValue**, it is ignored.
+The **DateValue** function ignores any time information in the date string, and the **TimeValue** function ignores any date information in the time string.
 
-By default the language used is that of the current user, but you can override this to ensure that strings are interpreted properly.  For example "10/1/1920" is interpreted as October 1<sup>st</sup> in "en" and as January 10<sup>th</sup> in "fr".
+By default, the language used is that of the current user, but you can override this to ensure that strings are interpreted properly. For example, "10/1/1920" is interpreted as October 1<sup>st</sup> in "en" and as January 10<sup>th</sup> in "fr".
 
-Dates must be in one of the following formats:
+Dates must be in one of these formats:
 
 - MM/DD/YYYY
 - DD/MM/YYYY
@@ -47,11 +47,11 @@ Also see [working with dates and times](../show-text-dates-times.md) for more in
 
 ## Syntax ##
 
-**DateValue**( *String* [, *Language* )
-**DateTimeValue**( *String* [, *Language* )
-**TimeValue**( *String* [, *Language* )
+**DateValue**( *String* [, *Language* ])<br>
+**DateTimeValue**( *String* [, *Language* ])<br>
+**TimeValue**( *String* [, *Language* ])
 
-- *String* - Required.  A text string containing a date, time, or combination date and time value.
+- *String* - Required.  A text string that contains a date, time, or combination date and time value.
 - *Language* - Optional.  A language string, such as would be returned by the first two characters from the **[Language](function-language.md)** function.  If not provided, the language of the current user's client is used.  
 
 ## Examples ##
@@ -70,7 +70,7 @@ If you typed **10/11/2014** into an input-text control named **Startdate** and t
 
 	The label would show **Monday, November 10, 2014**.
 
-If you did the same thing on October 20, 2014:
+If you did the same thing on **October 20, 2014**:
 
 - **DateDiff(DateValue(Startdate!Text), Today())**
 
@@ -84,7 +84,7 @@ If you typed **10/11/2014 1:50:24.765 PM** into an input-text control named **St
 
 	The label would show **Saturday, October 11, 2014 1:50:24 PM** if your computer were set to the "en" locale.
 
-	**Note:** You can use several options, other than LongDateTime, with the DateTimeFormat parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
+	**Note:** You can use several options, other than **LongDateTime**, with the **DateTimeFormat** parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
 
 - **Text(DateTimeValue(Start!Text, "fr"), DateTimeFormat!LongDateTime)**
 
@@ -94,14 +94,14 @@ If you typed **10/11/2014 1:50:24.765 PM** into an input-text control named **St
 
 	The label would show **Saturday, October 11, 2014 01:50:24:765 PM** if your computer were set to the **en** locale.
 
-	As an alternative, you can specify hh:mm:ss.f or hh:mm:ss.ff to round the time to the nearest tenth or hundredth of a second.
+	As an alternative, you can specify **hh:mm:ss.f** or **hh:mm:ss.ff** to round the time to the nearest tenth or hundredth of a second.
 
 ### TimeValue ###
 
-Name an input-text control FinishedAt, and set the Text property of a label to this function:
+Name an input-text control **FinishedAt**, and set the **Text** property of a label to this function:
 
-If(TimeValue(FinishedAt!Text)<TimeValue("5:00:00.000 PM"), "You made it!", "Too late!")
+**If(TimeValue(FinishedAt!Text)<TimeValue("5:00:00.000 PM"), "You made it!", "Too late!")**
 
-- If you type 4:59:59.999 PM into the FinishedAt control, the label shows "You made it!"
+- If you type **4:59:59.999 PM** into the **FinishedAt** control, the label shows "You made it!"
 
-- If you type 5:00:00.000 PM into the FinishedAt control, the label shows "Too late!"
+- If you type **5:00:00.000 PM** into the **FinishedAt** control, the label shows "Too late!"
