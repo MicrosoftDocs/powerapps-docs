@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Day, Month, Year, Hour, Minute, and Second functions"
-	description="Reference information for the Day, Month, Year, Hour, Minute, and Second functions in PowerApps, including syntax and examples"
+	pageTitle="Day, Month, Year, Hour, Minute, and Second functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Day, Month, Year, Hour, Minute, and Second functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -38,7 +38,7 @@ The **Second** function returns the second component of a Date/Time value, rangi
 
 All functions return a number.
 
-See [working with dates and times](../show-text-dates-times.md) for more information. 
+See [working with dates and times](../show-text-dates-times.md) for more information.
 
 ## Syntax ##
 
@@ -48,7 +48,7 @@ See [working with dates and times](../show-text-dates-times.md) for more informa
 
 ## Examples ##
 
-For the following example, the current time is 3:59:37 PM on Thursday, April 9, 2015.
+For the following example, the current time is **3:59:37 PM** on **Thursday, April 9, 2015**.
 
 | Formula | Description | Result |
 |---------|-------------|--------|
