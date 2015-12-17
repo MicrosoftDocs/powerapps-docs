@@ -34,7 +34,7 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 
 ## Syntax ##
 
-**Color!*ColorName***
+**Color**!*ColorName*
 
 - *ColorName* - Required.  A Cascading Style Sheet (CSS) color name.  See list below of possible enumeration values.
 
@@ -96,8 +96,8 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 | **Color!DarkSlateGrey** | **ColorValue( "#2f4f4f" )** | **RGBA( 47, 79, 79, 1 )** | ![darkslategrey](media/function-colors/color-darkslategrey.png) |
 | **Color!DarkTurquoise** | **ColorValue( "#00ced1" )** | **RGBA( 0, 206, 209, 1 )** | ![darkturquoise](media/function-colors/color-darkturquoise.png) |
 | **Color!DarkViolet** | **ColorValue( "#9400d3" )** | **RGBA( 148, 0, 211, 1 )** | ![darkviolet](media/function-colors/color-darkviolet.png) |
-| **Color!Deeppink** | **ColorValue( "#ff1493" )** | **RGBA( 255, 20, 147, 1 )** | ![deeppink](media/function-colors/color-deeppink.png) |
-| **Color!DeepskyBlue** | **ColorValue( "#00bfff" )** | **RGBA( 0, 191, 255, 1 )** | ![deepskyblue](media/function-colors/color-deepskyblue.png) |
+| **Color!DeepPink** | **ColorValue( "#ff1493" )** | **RGBA( 255, 20, 147, 1 )** | ![deeppink](media/function-colors/color-deeppink.png) |
+| **Color!DeepSkyBlue** | **ColorValue( "#00bfff" )** | **RGBA( 0, 191, 255, 1 )** | ![deepskyblue](media/function-colors/color-deepskyblue.png) |
 | **Color!DimGray** | **ColorValue( "#696969" )** | **RGBA( 105, 105, 105, 1 )** | ![dimgray](media/function-colors/color-dimgray.png) |
 | **Color!DimGrey** | **ColorValue( "#696969" )** | **RGBA( 105, 105, 105, 1 )** | ![dimgrey](media/function-colors/color-dimgrey.png) |
 | **Color!DodgerBlue** | **ColorValue( "#1e90ff" )** | **RGBA( 30, 144, 255, 1 )** | ![dodgerblue](media/function-colors/color-dodgerblue.png) |
@@ -114,8 +114,8 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 | **Color!GreenYellow** | **ColorValue( "#adff2f" )** | **RGBA( 173, 255, 47, 1 )** | ![greenyellow](media/function-colors/color-greenyellow.png) |
 | **Color!Grey** | **ColorValue( "#808080" )** | **RGBA( 128, 128, 128, 1 )** | ![grey](media/function-colors/color-grey.png) |
 | **Color!Honeydew** | **ColorValue( "#f0fff0" )** | **RGBA( 240, 255, 240, 1 )** | ![honeydew](media/function-colors/color-honeydew.png) |
-| **Color!Hotpink** | **ColorValue( "#ff69b4" )** | **RGBA( 255, 105, 180, 1 )** | ![hotpink](media/function-colors/color-hotpink.png) |
-| **Color!Indianred** | **ColorValue( "#cd5c5c" )** | **RGBA( 205, 92, 92, 1 )** | ![indianred](media/function-colors/color-indianred.png) |
+| **Color!HotPink** | **ColorValue( "#ff69b4" )** | **RGBA( 255, 105, 180, 1 )** | ![hotpink](media/function-colors/color-hotpink.png) |
+| **Color!IndianRed** | **ColorValue( "#cd5c5c" )** | **RGBA( 205, 92, 92, 1 )** | ![indianred](media/function-colors/color-indianred.png) |
 | **Color!Indigo** | **ColorValue( "#4b0082" )** | **RGBA( 75, 0, 130, 1 )** | ![indigo](media/function-colors/color-indigo.png) |
 | **Color!Ivory** | **ColorValue( "#fffff0" )** | **RGBA( 255, 255, 240, 1 )** | ![ivory](media/function-colors/color-ivory.png) |
 | **Color!Khaki** | **ColorValue( "#f0e68c" )** | **RGBA( 240, 230, 140, 1 )** | ![khaki](media/function-colors/color-khaki.png) |
