@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Defaults function"
-	description="Reference information for the Defaults function in PowerApps, including syntax and examples"
+	pageTitle="Defaults function | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Defaults function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,27 +20,26 @@
 
 # Defaults function in PowerApps #
 
-The **Defaults** function returns the default values for a [Data Source](working-with-data-sources.md).  
+Returns the default values for a [data source](working-with-data-sources.md).  
 
 ## Description ##
 
-Use the **Defaults** function to pre-populate a data entry form, making it easier to fill. 
+Use the **Defaults** function to pre-populate a data entry form, making it easier to fill.
 
 This function returns a [record](working-with-tables.md#records) that contains the default values for the data source.  If a [column](working-with-tables.md#columns) within the data source doesn't have a default value, that property won't be present.
 
-Data sources vary in how much default information they provide, including not providing any at all.  When you work with a [Collection](working-with-data-sources.md#collections) or another data source that does not support default values, the **Defaults** function will return an [empty](function-isblank-isempty.md) record.
+Data sources vary in how much default information they provide, including not providing any at all.  When you work with a [collection](working-with-data-sources.md#collections) or another data source that doesn't support default values, the **Defaults** function will return an [empty](function-isblank-isempty.md) record.
 
-The **Defaults** function can be used with the **[Patch](function-patch.md)** function to [create a record](working-with-data-sources.md).
+You can combine the **Defaults** function with the **[Patch](function-patch.md)** function to [create a record](working-with-data-sources.md).
 
 ## Syntax ##
 
 **Defaults**( *DataSource* )
 
-- *DataSource* – Required. Defaults are returned for this data source.
+- *DataSource* – Required. The data source for which you want default values.
 
 ## Examples ##
 
 | Formula                                 | Description                                                                                                                                           | Result              |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | **Defaults( Scores )** | Returns the default values for the **Scores** data source. | **{ Score: 0 }** |
-

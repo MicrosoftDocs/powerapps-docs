@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Distinct function"
-	description="Reference information for the Distinct function in PowerApps, including syntax and examples"
+	pageTitle="Distinct function | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Distinct function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -24,7 +24,7 @@ Summarizes [records](working-with-tables.md#records) of a [table](working-with-t
 
 ## Description ##
 
-The **Distinct** function evaluates a formula across each record of a table. [Columns](working-with-tables.md#columns) of the table can be used in the formula.  **Distinct** returns a one-column table with the results, with duplicate values removed.  
+The **Distinct** function evaluates a formula across each record of a table. [Columns](working-with-tables.md#columns) of the table can be used in the formula.  **Distinct** returns a one-column table that contains the results, with duplicate values removed.  
 
 ## Syntax ##
 
@@ -33,9 +33,8 @@ The **Distinct** function evaluates a formula across each record of a table. [Co
 - *Table* - Required.  Table to evaluate across.
 - *Formula* - Required.  Formula to evaluate for each record.
 
-## Examples ##
+## Example ##
 
-If you had an Employees table that contained a Department column, this function would list each unique department name in that column, no matter how many times each name appeared in that column:
+If you had an **Employees** table that contained a **Department** column, this function would list each unique department name in that column, no matter how many times each name appeared in that column:
 
 **Distinct(Employees, Department)**
-

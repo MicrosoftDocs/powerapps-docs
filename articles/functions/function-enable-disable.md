@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Enable and Disable functions"
-	description="Reference information for the Enable and Disable functions in PowerApps, including syntax and examples"
+	pageTitle="Enable and Disable functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Enable and Disable functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -24,21 +24,20 @@ Turns a [signal](signals.md) on or off.
 
 ## Overview ##
 
-Some signals can change often, requiring the app to recalculate as they do.  Rapid changes over a long period of time can drain a device's battery.  These functions enable an author to manually turn on or off a signal.
+Some signals can change often, requiring the app to recalculate as they do.  Rapid changes over a long period of time can drain a device's battery. You can use these functions to manually turn a signal on or off.
 
-When a signal is not being used, it is automatically turned off.
+When a signal isn't being used, it's automatically turned off.
 
 ## Description ##
 
-The **Enable** and **Disable** functions turn on and off a signal, respectively.
+The **Enable** and **Disable** functions turn a signal on and off, respectively.
 
 These functions currently only work for the **[Location](signals.md)** signal.
 
-These functions have no return value.  They can only be used in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas).
+These functions have no return value. You can use them only in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas).
 
 ## Syntax ##
 
 **Enable**( *Signal* )<br>**Disable**( *Signal* )
 
 - *Signal* - Required.  The signal to turn on or off.
-
