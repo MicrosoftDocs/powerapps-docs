@@ -68,7 +68,7 @@
 |----------|-------------|
 | Align                 | Specify **Align!Left**, **Align!Center**, **Align!Right**, or **Align!Justified** to change the alignment of text on a button or in a label, an input-text control, or another type of control. |
 | Border Color          | Specify RGBA values or click an option to change the color of the border around a control. For example, you can specify **RGBA(192, 0, 0, 1)** to make a border red. |
-| Border Style          | Specify **BorderStyle!Solid**, **BorderStyle!Dashed**, or **BorderStyle!Dotted** to change the style of the border around a control, or specify **BorderStyle!None** to remove the border. By default, this property is set to **BorderStyle!Non**e. |
+| Border Style          | Specify **BorderStyle!Solid**, **BorderStyle!Dashed**, or **BorderStyle!Dotted** to change the style of the border around a control, or specify **BorderStyle!None** to remove the border. By default, this property is set to **BorderStyle!None**. |
 | Border Thickness      | Specify a number to change the thickness of a border around a control. For example, **10** gives you the thickest border, and **0** removes the border altogether. By default, this property is set to **0**. |
 | Camera                | Specify the numeric ID of the camera you want to use. For example, **0** might indicate a camera on the front of a device, and **1** might indicate the camera on the rear of a device. |
 | Checkbox Size         | Specify a number that represents how large you want a checkbox to be. For example, **8** is the smallest, and **96** is the largest. |
