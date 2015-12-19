@@ -54,7 +54,7 @@ A property can contain another record or table.  You can nest as many levels of 
 
 Columns refer to the same properties for each record of a table.  In the above example, each product has a price property, and that price is in the same column for all products.  The above table has four columns, shown vertically:
 
-- **Product**
+- **Name**
 
 - **Price**
 
@@ -109,7 +109,7 @@ If a table is provided as an argument, many functions in PowerApps return a tabl
 - **[Sort](function-sort.md)**, **[Filter](function-filter-lookup.md)** - Sorts and filters records.
 - **[FirstN](function-first-last.md)**, **[LastN](function-first-last.md)** - Returns the first N or last N records of the table.
 - **[Abs](function-numericals.md)**, **[Sqrt](function-numericals.md)**, **[Round](function-round.md)**, **[RoundUp](function-round.md)**, **[RoundDown](function-round.md)** - Arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
-- **[Left](function-left-mid-right.md)**, **[Mid](function-left-mid-right.md)**, **[Right](function-left-mid-right.md)**, **[Replace](function-replace-substitute.md)**, **[Substitute](function-replace-substitute.md)**, **[Replace](function-replace-substitute.md)**, **[Trim](function-trim.md)**, **[Lower](function-lower-upper-proper.md)**, **[Upper](function-lower-upper-proper.md)**, **[Proper](function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
+- **[Left](function-left-mid-right.md)**, **[Mid](function-left-mid-right.md)**, **[Right](function-left-mid-right.md)**, **[Replace](function-replace-substitute.md)**, **[Substitute](function-replace-substitute.md)**, **[Trim](function-trim.md)**, **[Lower](function-lower-upper-proper.md)**, **[Upper](function-lower-upper-proper.md)**, **[Proper](function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
 - **[Len](function-len.md)** - For a column of strings, returns a single-column table that contains the length of each string.
 - **[Concatenate](function-concatenate.md)** - Concatenates multiple columns of strings, resulting in a single-column table of strings.
 - **[AddColumns](function-table-shaping.md)**, **[DropColumns](function-table-shaping.md)**, **[RenameColumns](function-table-shaping.md)**, **[ShowColumns](function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
