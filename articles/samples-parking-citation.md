@@ -32,12 +32,9 @@ The app enables parking-enforcement officers to capture infraction details such 
 
 ![Parking Citation display image](./media/samples-parking-citation/parking-citation-display.png)
 
-
-
 **Prerequisites**
 - [Install PowerApps](http://aka.ms/powerappsinstall)
 - A Dropbox, OneDrive, or Google Drive account. (In this tutorial, you'll use Dropbox.)
-
 
 ## Get the sample data ##
 1. Download [this sample](http://aka.ms/parkingcitationsample), and decompress it on your computer.
@@ -62,6 +59,7 @@ The app enables parking-enforcement officers to capture infraction details such 
 
 ## Connect from PowerApps to cloud storage ##
 Skip this procedure if you've already created a connection from PowerApps to your cloud-storage account.
+
 1. Open PowerApps, and then select **Connections** on the **File** menu (near the left edge of the screen).
 
 	![Connections option on the File menu](./media/samples-parking-citation/file-connections.png)
@@ -74,7 +72,7 @@ Skip this procedure if you've already created a connection from PowerApps to you
 
 	![Provide credentials for cloud-storage account](./media/samples-parking-citation/provide-credentials.png)
 
-## Open and configure the app ##
+## Open the app ##
 
 1. On the **File** menu, select **Open**.
 
@@ -89,6 +87,8 @@ Skip this procedure if you've already created a connection from PowerApps to you
 1. When prompted, select **Launch**.
 
 	![Launch app with Dropbox connection](./media/samples-parking-citation/launch-connection.png)
+
+## Configure the app ##
 
 1. When the app opens, select **Options** near the lower-right corner, and then select **Insert your data**.
 
