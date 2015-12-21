@@ -102,12 +102,15 @@ Skip this procedure if you've already created a connection from PowerApps to you
 
 	![Select all tables](./media/samples-parking-citation/powerapps-select-tables.png)
 
-##Run the app
+## Run the app ##
 
-1. Review existing citations by selecting one of the sample citations in the list or create a new citation by selecting the + button. 
-![View existing or click new](./media/samples-parking-citation/parking-citation-run-1.png)
+1. Review a citation by selecting it in the list, or create a citation by selecting the + button.
 
-2. Step through each screen of the app and enter violation codes, add photos, and provide infractions details. Navigate to the next step in the app by selecting the Next button in each screen.</br>
-![Select the Next button to step thru app](./media/samples-parking-citation/parking-citation-run-2.png)
-3. Submit the new citation by entering your signature at the bottom of the summary screen and select the **Submit** button.  
+	![Review or create a citation](./media/samples-parking-citation/parking-citation-run-1.png)
+
+2. Step through each screen of the app, and add a violation code, one or more photos, and infraction details. Navigate to each screen by selecting the Next button.
+
+	![Select the Next button to step through app](./media/samples-parking-citation/parking-citation-run-2.png)
+
+3. Submit the new citation by entering your signature at the bottom of the summary screen and then selecting the **Submit** button.  
 ![Select the Submit button](./media/samples-parking-citation/parking-citation-run-3.png)
