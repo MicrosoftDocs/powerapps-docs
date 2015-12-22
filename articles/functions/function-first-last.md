@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: First, FirstN, Last, and LastN functions"
-	description="Reference information for the First, FirstN, Last, and LastN functions in PowerApps, including syntax and examples"
+	pageTitle="First, FirstN, Last, and LastN functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the First, FirstN, Last, and LastN functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,19 +20,19 @@
 
 # First, FirstN, Last, and LastN functions in PowerApps #
 
-Returns a table's first or last set of [records](working-with-tables.md#records). 
+Returns a table's first or last set of [records](working-with-tables.md#records).
 
 ## Description ##
 
 The **First** function returns the first record of a [table](working-with-tables.md).
 
-The **FirstN** function returns the first set of records of a table, the second argument specifies the number of records to return.
+The **FirstN** function returns the first set of records of a table; the second argument specifies the number of records to return.
 
 The **Last** function returns the last record of a table.
 
-The **LastN** function returns the last set of records of a table, the second argument specifies the number of records to return.
+The **LastN** function returns the last set of records of a table; the second argument specifies the number of records to return.
 
-**First** and **Last** return a single record.  **FirstN** and **LastN** return a table, even if only a single record is specified.
+**First** and **Last** return a single record.  **FirstN** and **LastN** return a table, even if you specify only a single record.
 
 ## Syntax ##
 
@@ -44,18 +44,13 @@ The **LastN** function returns the last set of records of a table, the second ar
 **FirstN**( *Table* [, *NumberOfRecords* ] )<br>
 **LastN**( *Table* [, *NumberOfRecords* ] )
 
-- *Table* - Rquired. Table to operate on.
-- *NumberOfRecords* - Optional.  Number of records to return. If not specified, the result table will contain one record.
+- *Table* - Required. Table to operate on.
+- *NumberOfRecords* - Optional.  Number of records to return. If you don't specify this argument, the function returns one record.
 
 ## Examples ##
 
-### Step by step ###
-
-If you had an Employees table, this function would return the first record from that table:
-
+This formula returns the first record from a table named **Employees**:<br>
 **First(Employees)**
 
-And this function would return the last 15 records from that table:
-
+This formula returns the last 15 records from a table named **Employees**:<br>
 **LastN(Employees, 15)**
-
