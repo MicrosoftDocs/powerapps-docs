@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Conference Attendee Sample App | Microsoft PowerApps"
-    description="Sample app with SQL Server as a data source"
+    pageTitle="Sample app: conference attendee | Microsoft PowerApps"
+    description="Sample app with Excel as a data source"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -23,11 +23,12 @@
 This sample app demonstrates key concepts such as:
 
 - Binding galleries to data in a master-details pattern
-- Navigational patterns such as tabs and back buttons
-- Viewing and categorizing information in different ways
-- Storing personalized data per user 
+- Creating navigational patterns such as tabs and back buttons
+- Showing and categorizing information in different ways
+- Storing personalized data per user
 
-The app enables conference attendees to view a list of sessions, details about a particular session, and information about the session's speaker. In addition, attendees can also add sessions to a list of favorites.  
+By using this app, a conference attendee can show a list of sessions, details about a particular session, and information about each speaker. An attendee can also add one or more sessions to a list of favorites.
+
 ![Conference Attendee Display Image 1](./media/samples-conference-attendee/conference-attendee-display-1.png)
 ![Conference Attendee Display Image 2](./media/samples-conference-attendee/conference-attendee-display-2.png)
 ![Conference Attendee Display Image 3](./media/samples-conference-attendee/conference-attendee-display-3.png)
@@ -44,7 +45,7 @@ The app enables conference attendees to view a list of sessions, details about a
 
 	- a PowerApps file, named **conference-attendee-excel.msapp**
 	- an Excel file, named **data.xlsx**
-	- a folder, named **data_images** 
+	- a folder, named **data_images**
 
 1. Create a folder named **ConferenceAttendee** in your cloud-storage account (for example, Dropbox).
 
@@ -105,19 +106,26 @@ Skip this procedure if you've already created a connection from PowerApps to you
 
 ## Run the app ##
 
-1. Change views by selecting the view toggle button. You can either view sessions by time or by track. 
-</br>**Note** - The first time you run this app, you may have to click the toggle button to fetch data. </br>
-![Select the toggle button](./media/samples-conference-attendee/conference-attendee-run-1.png)
-![Select the toggle button-2](./media/samples-conference-attendee/conference-attendee-run-1-2.png)
+1. Press F5, and then change views by selecting the view toggle button. You can view sessions by time or by track.
 
-2. Select a particular session from the list to view session details such as location and speaker information. 
-![Select a session](./media/samples-conference-attendee/conference-attendee-run-2.png)
+	**Note** - The first time you run this app, you may have to click the toggle button to fetch data.
 
-3. Select the speaker to view more information about the speaker. </br>
-![Select the speaker](./media/samples-conference-attendee/conference-attendee-run-3.png)
-4. In the speaker details screen, you can click on the LinkedIn and Twitter buttons to launch the respective websites or add other sessions by the speaker to your favorites.  
-![Select the favorites button](./media/samples-conference-attendee/conference-attendee-run-4-1.png)
-![Observe the favorites button](./media/samples-conference-attendee/conference-attendee-run-4-2.png)
-5. You can view your favorite sessions by navigating to the **My sessions** tab on the home screen. </br>
-![View favorited sessions](./media/samples-conference-attendee/conference-attendee-run-5.png)
- 
+	![Select the toggle button](./media/samples-conference-attendee/conference-attendee-run-1.png)
+	![Select the toggle button-2](./media/samples-conference-attendee/conference-attendee-run-1-2.png)
+
+2. Select a particular session from the list to display details such as location and speaker information.
+
+	![Select a session](./media/samples-conference-attendee/conference-attendee-run-2.png)
+
+3. Select a speaker to view more information about the speaker.
+
+	![Select the speaker](./media/samples-conference-attendee/conference-attendee-run-3.png)
+
+4. In the speaker-details screen, select the LinkedIn and Twitter buttons to launch the respective websites, or add other sessions by the speaker to your favorites.
+
+	![Select the favorites button](./media/samples-conference-attendee/conference-attendee-run-4-1.png)
+	![Observe the favorites button](./media/samples-conference-attendee/conference-attendee-run-4-2.png)
+
+5. Display your favorite sessions by navigating to the home screen and then selecting **My sessions** at the bottom.
+
+	![View favorited sessions](./media/samples-conference-attendee/conference-attendee-run-5.png)
