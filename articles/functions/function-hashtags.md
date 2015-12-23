@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: HashTags function"
-	description="Reference information for the HashTags function in PowerApps, including syntax and examples"
+	pageTitle="HashTags function | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the HashTags function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,18 +20,18 @@
 
 # HashTags function in PowerApps #
 
-Extracts the hashtags (#strings) from a string. 
+Extracts the hashtags (#strings) from a string of text.
 
 ## Description ##
 
-The **HashTags** function scans a string for hashtags.  Hashtags start with a pound character (#) and are followed by any combination of: 
+The **HashTags** function scans a string for hashtags. Hashtags start with a pound character (#), which is followed by any combination of:
 
-- upper and lowercase letters
+- uppercase and lowercase letters
 - numerals
 - underscores (_)
 - currency symbols (such as $)
 
-**HashTags** returns a one-column [table](working-with-tables.md) containing the hashtags found.  If no hashtags are found, the result will be a one-column table that is [empty](function-isblank-isempty.md).
+**HashTags** returns a one-column [table](working-with-tables.md) that contains the hashtags in the string.  If the string contains no hashtags, the function returns a one-column table that's [empty](function-isblank-isempty.md).
 
 ## Syntax ##
 
@@ -43,7 +43,7 @@ The **HashTags** function scans a string for hashtags.  Hashtags start with a po
 
 ### Step by step ###
 
-1. Add an input-text control, name it Tweet, and type this sentence into it:
+1. Add an input-text control, name it **Tweet**, and type this sentence into it:
 
 	**This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$*(#@")**
 
@@ -51,15 +51,12 @@ The **HashTags** function scans a string for hashtags.  Hashtags start with a po
 
 	**HashTags(Tweet!Text)**
 
-3. Add a label to the gallery template. 
+3. Add a label to the gallery template.
 
-4. The label shows these hashtags:
+	The gallery shows these hashtags:
 
-	- \#app
-	- \#AMAZING
-	- \#coUnt123
-	- \#123abc
-	- \#1
-
- 
-
+	- **\#app**
+	- **\#AMAZING**
+	- **\#coUnt123**
+	- **\#123abc**
+	- **\#1**
