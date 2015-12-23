@@ -30,9 +30,12 @@ This sample app demonstrates key concepts such as:
 
 The app enables parking-enforcement officers to capture infraction details such as vehicle make, vehicle color, and a series of images. Each image can include both notes and annotations.
 
-![Parking Citation display image](./media/samples-parking-citation/parking-citation-display.png)
+![Parking Citation display image 1](./media/samples-parking-citation/parking-citation-display-1.png)
+![Parking Citation display image 2](./media/samples-parking-citation/parking-citation-display-2.png)
+![Parking Citation display image 3](./media/samples-parking-citation/parking-citation-display-3.png)
 
 **Prerequisites**
+
 - [Install PowerApps](http://aka.ms/powerappsinstall)
 - A Dropbox, OneDrive, or Google Drive account. (In this tutorial, you'll use Dropbox.)
 
