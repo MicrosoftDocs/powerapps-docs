@@ -72,7 +72,7 @@ Each example in this section extracts strings from the **Address** [column](work
 
 ### Step-by-step example ###
 
-1. Import or create a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](https://powerapps.microsoft.com/en-us/tutorials/show-images-text-gallery-sort-filter/) describes.
+1. Import or create a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](show-images-text-gallery-sort-filter.md) describes.
 
 2. Set the **Text** property of the lower label in the gallery to this function:
 
