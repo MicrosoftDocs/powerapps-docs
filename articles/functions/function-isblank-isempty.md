@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: IsBlank and IsEmpty functions"
-	description="Reference information for the IsBlank and IsEmpty functions in PowerApps, including syntax and examples"
+	pageTitle="IsBlank and IsEmpty functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the IsBlank and IsEmpty functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,29 +20,29 @@
 
 # IsBlank and IsEmpty functions in PowerApps #
 
-Tests if a value is blank or a [table](working-with-tables.md) contains no [records](working-with-tables.md#records).
+Tests whether a value is blank or a [table](working-with-tables.md) contains no [records](working-with-tables.md#records).
 
 ## Overview ##
 
-*Blank* is a placeholder for "no value" or "unknown value."  An input text box that has had no characters typed into it is *blank* and when it contains characters it is no longer *blank*.  
+*Blank* is a placeholder for "no value" or "unknown value." An input-text box is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  
 
-All properties and calculated values can be *blank*.  For example, normally a Boolean value has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank*.  This is similar to Microsoft Excel, where a workbook cell starts out as blank but can hold the values **TRUE** or **FALSE**, among others. At any time, the contents of the workbook cell can be removed and it again returns to a *blank* state. 
+Any property or calculated value can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank*.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank but can hold the values **TRUE** or **FALSE**, among others. At any time, the contents of the cell can be removed, and it would return to a *blank* state.
 
-*Empty* is specific to tables that have no records.  The table structure may be intact, complete with [column](working-with-tables.md#columns) names, but there is no data in the table.  A table may start as empty, take on records and no longer be empty, and then have the records removed and again be empty.
+*Empty* is specific to tables that contain no records. The table structure may be intact, complete with [column](working-with-tables.md#columns) names, but no data is in the table.  A table may start as empty, take on records and no longer be empty, and then have the records removed and again be empty.
 
 ## Description ##
 
-The **IsBlank** function tests for a *blank* value.  Among others, *blank* values are found in these situations:
+The **IsBlank** function tests for a *blank* value. *Blank* values are found in situations such as these:
 
 - A control property has no formula set for it.
-- There is no value typed into an Input Text control or selection made in a Listbox control.  You can use **IsBlank** to provide feedback that a field is required. 
-- A string which contains no characters and has a **[Len](function-len.md)** of 0.
-- An error occurred in a function.  Often one of the arguments to the function was invalid.  For many functions, if *blank* is passed in then it is propagated through as the result of the function.
-- Connected [data sources](working-with-data-sources.md) such as SQL Server may use "null" values.  These values appear as *blank* in PowerApps.
-- The *else* portion of an **[If](function-if.md)** function was not specified, and all  conditions were **false**.
-- A column was not included when using the **[Update](function-update-updateif.md)** function, and no value was placed in that column of the record as a result.
+- No value is typed into an input-text control, or no selection is made in a listbox.  You can use **IsBlank** to provide feedback that a field is required.
+- A string that contains no characters has a **[Len](function-len.md)** of 0.
+- An error occurred in a function. Often, one of the arguments to the function wasn't valid. Many functions return *blank* if the value of an argument is *blank*.
+- Connected [data sources](working-with-data-sources.md), such as SQL Server, may use "null" values.  These values appear as *blank* in PowerApps.
+- The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
+- You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns you didn't specify.
 
-The **IsEmpty** function tests if a table has any records in it.  It is equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero.  You can use **IsEmpty** to check for data source errors with the **[Errors](function-errors.md)** function.
+The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can use **IsEmpty** to check for data-source errors by combining it with the **[Errors](function-errors.md)** function.
 
 The return value for both functions is a Boolean **true** or **false**.
 
@@ -60,19 +60,19 @@ The return value for both functions is a Boolean **true** or **false**.
 
 ### IsBlank ###
 
-1. Create a "Blank App."
+1. Create an app from scratch, add an input-text control, and name it **FirstName**.
 
-2. Insert an input text control.  Rename it **FirstName**.
+1. Add a label, and set its **Text** property to this formula:
 
-3. Insert a label control.  Set its **Text** property to:
+	**If( IsBlank( FirstName!Text ), "First Name is a required field." )**
 
-	- **If( IsBlank( FirstName!Text ), "First Name is a required field." )**
+	By default, the **Text** property of an input-text control is set to **"Input Text"**. Because the control contains a value, it isn't blank, and the label control doesn't display any message.
 
-4. The default value for an input text control is **"Input Text"**.  Since the control contains a value, it is not blank, and the label control does not display any message.
+1. Remove all the characters from the input-text control, including any spaces.
 
-5. Remove all the characters from the input text control, including any spaces.  Since the control no longer contains any characters, its **Text** property will be *blank* and **IsBlank( FirstName!Text )** will be **true**.  The required field message is displayed.
+	Because the control no longer contains any characters, its **Text** property will be *blank*, and **IsBlank( FirstName!Text )** will be **true**. The required field message is displayed.
 
-There are other tools for performing validation.  See the **[Validate](function-validate.md)** function and [working with data sources](working-with-data-sources.md).  
+You can perform validation by using other tools. See the **[Validate](function-validate.md)** function and [working with data sources](working-with-data-sources.md).  
 
 Other examples:
 
@@ -80,36 +80,36 @@ Other examples:
 |---------|-------------|--------|
 | **IsBlank( "" )** | A string that contains no characters. | **true** |
 | **IsBlank( "Hello" )** | A string that contains one or more characters. | **false** |
-| **IsBlank( *AnyCollection* )** | Since the [collection](working-with-data-sources.md#collections) exists, it is not blank, even if it does not contain any records.  To check for an empty collection, use **IsEmpty** instead. | **false** |
+| **IsBlank( *AnyCollection* )** | Because the [collection](working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. | **false** |
 | **IsBlank( Mid( "Hello", 17, 2 ) )** | The starting character for **[Mid](function-left-mid-right.md)** is beyond the end of the string.  The result is an empty string.  | **true** |
-| **IsBlank( If( false, false ) )** | An **[If](function-if.md)** function with no *ElseResult*.  Since the condition is always **false**, this **[If](function-if.md)** always returns *blank*.  | **true** |
+| **IsBlank( If( false, false ) )** | An **[If](function-if.md)** function with no *ElseResult*.  Because the condition is always **false**, this **[If](function-if.md)** always returns *blank*.  | **true** |
 
 ### IsEmpty ###
 
-1. Let's create a new collection named **IceCream**.  Place a button control on a screen, and set the **OnSelect** property to:
+1. Create a collection named **IceCream** by setting the **OnSelect** property of a button to this formula and then pressing the button:
 
-	- **Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
+	**Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
 
-	Press the button and the following collection is populated:
+	The collection contains this data:
 
 	![](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
 
-	This colleciton has two records and is not empty.  **IsEmpty( IceCream )** returns **false** and **CountRows( IceCream )** returns **2**.
+	This collection has two records and isn't empty. **IsEmpty( IceCream )** returns **false**, and **CountRows( IceCream )** returns **2**.
 
-2. Let's empty our collection.  Change the **OnSelect** property of our button to this formula:
+2. Empty the collection by changing the **OnSelect** property of the button to this formula and then pressing the button:
 
-	- **Clear( IceCream )** 
+	**Clear( IceCream )**
 
-	Press the button and the colleciton will be emptied:
+	The collection is now empty:
 
 	![](media/function-isblank-isempty/icecream-clear.png)
 
-	The **[Clear](function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty colleciton.  **IsEmpty( IceCream )** returns **true** and **CountRows( IceCream )** returns **0**.
+	The **[Clear](function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty collection. **IsEmpty( IceCream )** returns **true**, and **CountRows( IceCream )** returns **0**.
 
-Calculated tables can also be tested for empty.  Here are some examples:
+You can also use **IsEmpty** to test whether a calculated table is empty, as these examples show:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **IsEmpty( [&nbsp;1,&nbsp;2,&nbsp;3 ] )** | The single-column table contains three records, and is therefore not empty.  | **false** |
-| **IsEmpty( [&nbsp;] )** | The single-column table contains no records, and is empty. | **true** | 
-| **IsEmpty( Filter( [&nbsp;1,&nbsp;2,&nbsp;3&nbsp;], Value > 5 ) )** | The single-column table contains only values that are less than 5.  The result from filter will not contain any records and will be empty. | **true** | 
+| **IsEmpty( [&nbsp;1,&nbsp;2,&nbsp;3 ] )** | The single-column table contains three records and, therefore, isn't empty.  | **false** |
+| **IsEmpty( [&nbsp;] )** | The single-column table contains no records and is empty. | **true** |
+| **IsEmpty( Filter( [&nbsp;1,&nbsp;2,&nbsp;3&nbsp;], Value > 5 ) )** | The single-column table contains no values that are greater than 5.  The result from the filter doesn't contain any records and is empty. | **true** |
