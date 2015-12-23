@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Left, Mid, and Right functions"
-	description="Reference information for the Left, Mid, and Right functions in PowerApps, including syntax and examples"
+	pageTitle="Left, Mid, and Right functions| Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Left, Mid, and Right functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,7 +20,7 @@
 
 # Left, Mid, and Right functions in PowerApps #
 
-Extracts the left, middle, or right portion of a string.
+Extracts the left, middle, or right portion of a string of text.
 
 ## Description ##
 
@@ -30,54 +30,52 @@ The **Left**, **Mid**, and **Right** functions return a portion of a string.
 - **Mid** returns the middle characters of a string.
 - **Right** returns the ending characters of a string.
 
-If you pass a single string, the return value is the requested portion as a string.  If you pass a single-column [table](working-with-tables.md) that contains strings, the return value is a single-column table of the requested portions of those strings. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](working-with-tables.md) describes.
+If you specify a single string as an argument, the function returns the portion that you requested of the string. If you specify a single-column [table](working-with-tables.md) that contains strings, the function returns a single-column table of the portions that you requested of those strings. If you specify a multi-column table, you can shape it into a single-column table, as [working with tables](working-with-tables.md) describes.
 
-If the starting position is negative or beyond the end of the string, **Mid** will return *blank*.  You can check the length of a string with the **[Len](function-len.md)** function.  If the number of characters requested is more than the length of the string, as many characters as possible are returned.
+If the starting position is negative or beyond the end of the string, **Mid** returns *blank*.  You can check the length of a string by using the **[Len](function-len.md)** function. If you request more characters than the string contains, the function returns as many characters as possible.
 
 ## Syntax ##
 
 **Left**( *String*, *NumberOfCharacters* )<br>**Mid**( *String*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *String*, *NumberOfCharacters* )
 
-- *String* - Required. The string to extract from.
+- *String* - Required. The string to from which to extract the result.
 - *StartingPosition* - Required (**Mid** only).  The starting position.  The first character of the string is position 1.
 - *NumberOfCharacters* - Required.  The number of characters to return.
 
 **Left**( *SingleColumnTable*, *NumberOfCharacters* )<br>**Mid**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *SingleColumnTable*, *NumberOfCharacters* )
 
-- *SingleColumnTable* - Required. A single-column table of strings to extract from.
+- *SingleColumnTable* - Required. A single-column table of strings from which to extract the results.
 - *StartingPosition* - Required (**Mid** only).  The starting position.  The first character of the string is position 1.
 - *NumberOfCharacters* - Required.  The number of characters to return.
 
 ## Examples ##
 
 ### Single string ###
-The examples in this section use an input-text control, named **Author**, as their [data source](working-with-data-sources.md). The control contains the string "E. E. Cummings".
+The examples in this section use an input-text control as their [data source](working-with-data-sources.md). The control is named **Author** and contains the string "E. E. Cummings".
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Left( Author!Text, 5 )** | Extracts the beginning, or left, portion of the string up to 5 characters. | "E. E." |
-| **Mid( Author!Text, 7, 4 )** | Extracts the middle portion of the string, starting a position 7, up to 4 characters. | "Cumm" |
-| **Right( Author!Text, 5 )** | Extracts the ending, or right, portion of the string up to 5 characters. | "mings" |
+| **Left( Author!Text, 5 )** | Extracts up to five characters from the start of the string. | "E. E." |
+| **Mid( Author!Text, 7, 4 )** | Extracts up to four characters, starting with the seventh character, from the string. | "Cumm" |
+| **Right( Author!Text, 5 )** | Extracts up to five characters from the end of the string. | "mings" |
 
 ### Single-column table
-The examples in this section use this data source, named **People**:
+Each example in this section extracts strings from the **Address** [column](working-with-tables.md#columns) of this data source, named **People**, and returns a single-column table that contains the results:
 
 ![](media/function-left-mid-right/people-table.png)
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Extracts the first 8 characters of each string.</li><li>Returns a single-column table that contains the extracted strings.</li> | <style> img { max-width: none } </style> ![](media/function-left-mid-right/people-table-left.png) |
-| **Mid( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 5, 7 )** | In the **Address** column of the **People** table:<br><ul><li>Extracts the middle 7 characters of each string, starting at position 5.</li><li>Returns a single-column table that contains the extracted strings.</li> | ![](media/function-left-mid-right/people-table-mid.png) |
-| **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** | In the **Address** column of the **People** table:<br><ul><li>Extracts the last 7 characters of each string.</li><li>Returns a single-column table that contains the extracted strings.</li> | ![](media/function-left-mid-right/people-table-right.png) |
+| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** | Extracts the first eight characters of each string. | <style> img { max-width: none } </style> ![](media/function-left-mid-right/people-table-left.png) |
+| **Mid( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 5, 7 )** | Extracts the middle seven characters of each string, starting with the fifth character. | ![](media/function-left-mid-right/people-table-mid.png) |
+| **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** | Extracts the last seven characters of each string. | ![](media/function-left-mid-right/people-table-right.png) |
 
 ### Step-by-step example ###
 
-1. Import or create a [collection](working-with-data-sources.md#collections) named **Inventory**, and show it in a gallery.
+1. Import or create a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](https://powerapps.microsoft.com/en-us/tutorials/show-images-text-gallery-sort-filter/) describes.
 
-2. Set the Text property of the lower label in the gallery to this function:
+2. Set the **Text** property of the lower label in the gallery to this function:
 
 	**Right(ThisItem!ProductName, 3)**
 
-	The label shows the last three characters in each product name.
-
-
+	The label shows the last three characters of each product name.

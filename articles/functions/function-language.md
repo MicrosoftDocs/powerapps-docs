@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Language function"
-	description="Reference information for the Language function in PowerApps, including syntax and examples"
+	pageTitle="Language function | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Language function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,22 +20,17 @@
 
 # Language function in PowerApps #
 
-Access to the language used by the app.
+Returns the language of the app.
 
 ## Description ##
+For an app that has been saved to powerapps.com, this function returns the language with which the app was branded when it was saved.
 
-The **Language** function returns the language of the app.  
-
-For an app that has been saved to the PowerApps portal, this function returns the language with which the app was branded when it was saved.
-
-For an app that is new or has only been saved locally, this function returns the currently active language from the language preferences. If you change the language preference while the PowerApps client is open, you must restart for the function to reflect the change.
+For an app that's new or has only been saved locally, this function returns the currently active language from the language preferences. If you change the language preference while PowerApps is open, you must restart it for the function to reflect the change.
 
 ## Syntax ##
 
 **Language**()
 
-## Examples ##
+## Example ##
 
 **Language()** could return "en-US" based on your configuration.
-
-
