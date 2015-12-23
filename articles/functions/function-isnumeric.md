@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: IsNumeric function"
-	description="Reference information for the IsNumeric function in PowerApps, including syntax and examples"
+	pageTitle="IsNumeric function | Microsoft PowerApps"
+	description="Reference information, including syntax and examples for the IsNumeric function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,11 +20,11 @@
 
 # IsNumeric function in PowerApps #
 
-Tests if a value is a numeric value.
+Tests whether a value is numeric.
 
 ## Description ##
 
-The **IsNumeric** function tests if a value is numeric.  Other kinds of values include Boolean, string, [table](working-with-tables.md), and [record](working-with-tables.md#records).
+The **IsNumeric** function tests whether a value is numeric.  Other kinds of values include Boolean, string, [table](working-with-tables.md), and [record](working-with-tables.md#records).
 
 The return value is a Boolean **true** or **false**.
 
@@ -33,4 +33,3 @@ The return value is a Boolean **true** or **false**.
 **IsNumeric**( *Value* )
 
 - *Value* – Required. Value to test.
-
