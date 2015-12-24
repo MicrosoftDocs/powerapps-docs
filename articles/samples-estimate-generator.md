@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Estimate Generator Sample App | Microsoft PowerApps"
+    pageTitle="Sample app: estimate generator | Microsoft PowerApps"
     description="Sample app with Excel as a data source"
     services=""
     suite="powerapps"
@@ -23,13 +23,13 @@
 This sample app demonstrates key concepts such as:
 
 - Showing and categorizing information in different ways
-- Using a gallery of images as a single-select listbox 
+- Using a gallery of images as a single-select listbox
 - Using a card gallery to create a grid of images
 - Binding galleries to data in a master-details pattern
 - Creating navigational patterns such as tabs and forward/back buttons
 
 
-The app enables flooring estimators to capture estimate details such as square footage, flooring type, images, markups, and discounts. Users can also view closed jobs and create new ones.  
+By using this app, a flooring estimator can capture estimate details such as square footage, flooring type, images, markups, and discounts. Users can create jobs, close them, and view jobs that are open or closed.  
 
 ![Estimate Generator display image 1](./media/samples-estimate-generator/estimate-generator-display-1.png)
 ![Estimate Generator display image 2](./media/samples-estimate-generator/estimate-generator-display-2.png)
@@ -108,22 +108,31 @@ Skip this procedure if you've already created a connection from PowerApps to you
 	![Select all tables](./media/samples-estimate-generator/powerapps-select-tables.png)
 
 ## Run the app ##
-
-
-
-1. Press F5, and then generate an estimate for an open job, or add a new one by selecting the + button. 
+1. Press F5, and then select the + button to create an appointment.
 
 	![Review or create a citation](./media/samples-estimate-generator/estimate-generator-run-1.png)
-  
-1. Step through each screen of the app, and add room dimensions, a flooring type, and one or more photos. Navigate to each screen by using the navigational buttons at the bottom of the screen.  
+
+1. In the **New Job** screen, enter appointment details, and then select the checkmark (near the upper-right corner) to save your changes.
+
+	**Note:** Remember what date you specify.
+
+1. In the **Estimate Generator** screen, find the appointment you just created, select it, and then select **Begin estimate**.
+
+	Navigate between dates by selecting the left and right arrows near the middle of the left and right edges of the screen.
+
+1. Add room dimensions, a flooring type, and one or more photos. Navigate to each screen by using the navigational buttons at the bottom of the screen.
 
 	![Select room dimensions](./media/samples-estimate-generator/estimate-generator-run-2-1.png)
-	![Select flooring type](./media/samples-estimate-generator/estimate-generator-run-2-2.png) 
+	![Select flooring type](./media/samples-estimate-generator/estimate-generator-run-2-2.png)
 
-1. Add a markup and/or discount before selecting the **Finish and send estimate** button. 
-  
+1. Add a markup, discount, or both before selecting the **Finish and send estimate** button.
+
 	![Select the finish and send estimate button](./media/samples-estimate-generator/estimate-generator-run-3.png)
-   
+
 1. Submit the estimate by entering your signature and then selecting the **Done** button.
- 
+
 	![Select the Done button to submit the estimate](./media/samples-estimate-generator/estimate-generator-run-4.png)
+
+1. Select **OK**, select **Closed jobs** at the bottom of the **Estimate Generator** screen.
+
+1. Display the job you just completed by navigating to the date of the appointment.
