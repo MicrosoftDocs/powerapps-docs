@@ -27,7 +27,7 @@ This sample app demonstrates key concepts such as:
 - Showing and categorizing information in different ways
 - Storing personalized data per user
 
-By using this app, a conference attendee can show a list of sessions, details about a particular session, and information about each speaker. An attendee can also add one or more sessions to a list of favorites.
+By using this app, a conference attendee can view a list of sessions, details about a particular session, and information about each speaker. An attendee can also add one or more sessions to a list of favorites.
 
 ![Conference Attendee Display Image 1](./media/samples-conference-attendee/conference-attendee-display-1.png)
 ![Conference Attendee Display Image 2](./media/samples-conference-attendee/conference-attendee-display-2.png)
