@@ -81,7 +81,7 @@ Create an app with multiple screens, add ways for users to navigate between them
 
 1. Press Esc to return to the default workspace.
 
-## Add navigation with a context variable ##
+## Add a context variable ##
 
 You can use a [context variable](working-with-variables.md) in many ways, but you'll perhaps most often use one to determine what a screen shows when you navigate to it. For example, users might click a button to add a record or update one. You can save time by configuring both buttons to open the same screen but configure the screen differently for either adding or updating a record.
 
@@ -130,4 +130,4 @@ You can use a [context variable](working-with-variables.md) in many ways, but yo
 
 	The **Target** screen appears with information in each input-text control so that you easily edit the record.
 
-See [another simple example](function-updatecontext.md#step-by-step-example) or a [complex example](get-started-create-from-blank.md#add-buttons-for-saving-changes-and-removing-a-record).
+See [another simple example](function-updatecontext.md#step-by-step-example) or a [complex example](get-started-create-from-blank.md#save-changes-and-remove-a-record).

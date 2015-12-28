@@ -24,7 +24,7 @@ Create a logic flow that performs the same task or tasks, such as sending report
 ## Prerequisites ##
 - An account on [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209)
 
-## Run a logic flow every day, hour, or minute
+## Create a recurring logic flow
 
 1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Get started** under **Make a logic flow**.
 
@@ -40,7 +40,7 @@ Create a logic flow that performs the same task or tasks, such as sending report
 
 1. Add the action or actions that you want the logic flow to take, as [Create a logic flow from scratch](get-started-logic-flow.md) describes.
 
-## Run a logic flow after a certain number of minutes or on a particular date ##
+## Schedule a logic flow ##
 
 1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Get started** under **Make a logic flow**.
 

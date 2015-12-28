@@ -143,7 +143,7 @@ To follow this tutorial exactly:
 
 	![The BrowseGallery showing all fields](./media/get-started-create-from-blank/browse-gallery.png)
 
-## Add a screen and navigation ##
+## Create the ChangeScreen ##
 1. [Rename the default screen](add-screen-context-variables.md#add-a-screen-and-navigation) to **ViewScreen**, add another screen, and name it **ChangeScreen**.
 
 	![Thumbnails of ViewScreen and ChangeScreen](./media/get-started-create-from-blank/rename-screens.png)
@@ -180,7 +180,7 @@ To follow this tutorial exactly:
 
 	![ChangeScreen with label and arrow](./media/get-started-create-from-blank/change-screen-blank.png)
 
-## Add controls for adding or editing a record ##
+## Configure the ChangeScreen ##
 
 1. On the **ChangeScreen**, add a label, and configure it to show **Day** in bold letters.
 
@@ -223,7 +223,7 @@ To follow this tutorial exactly:
 	- **Record!Staff1**
 	- **Record!Staff2**
 
-## Test the controls for adding or editing a record ##
+## Test the ChangeScreen ##
 1. On the **ViewScreen**, press F5, and then select the arrow for any item in the gallery.
 
 	The **ChangeScreen** appears and shows the data for the item you specified. You can easily edit one or more fields in the record.
@@ -234,7 +234,7 @@ To follow this tutorial exactly:
 
 1. Press Esc to return to the default workspace.
 
-## Add buttons for saving changes and removing a record ##
+## Save changes, and remove a record ##
 
 1. On the **ChangeScreen**, add two buttons, move them to the bottom of the screen, and configure them to show **Save** and **Remove**.
 

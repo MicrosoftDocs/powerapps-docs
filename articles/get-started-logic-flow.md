@@ -93,7 +93,7 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 
 	Within a minute, an email message notifies you of the new tweet.
 
-## Change, pause, resume, or delete a logic flow ##
+## Manage a logic flow ##
 1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar.
 
 2. In the list of logic flows, do any of the following:

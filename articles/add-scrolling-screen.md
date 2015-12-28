@@ -26,7 +26,7 @@ Create a screen that users can scroll to show more types of content than the scr
 
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
-## Create a scrolling screen, and add an element
+## Create a scrolling screen ##
 1. Open PowerApps, and then do one of the following:
 
 	- [Add a screen](add-screen-context-variables.md) to an app.
@@ -44,6 +44,8 @@ Create a screen that users can scroll to show more types of content than the scr
 	The canvas is added to the screen.
 
 	![A screen with an infinite scrolling canvas, as it appears by default](./media/add-scrolling-screen/default-canvas.png)
+
+## Add elements ##
 
 1. Select **Insert a visual**, select **Charts** on the **Insert** tab, and then select **Column Chart**.
 
