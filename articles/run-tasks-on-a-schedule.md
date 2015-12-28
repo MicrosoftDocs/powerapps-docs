@@ -38,7 +38,7 @@ Create a logic flow that performs the same task or tasks, such as sending report
 
 	![Every day](./media/run-tasks-on-a-schedule/every-day.png)
 
-1. Add the action or actions that you want the logic flow to take, as [Create a logic flow from scratch](get-started-logic-flow) describes.
+1. Add the action or actions that you want the logic flow to take, as [Create a logic flow from scratch](get-started-logic-flow.md) describes.
 
 ## Run a logic flow after a certain number of minutes or on a particular date ##
 
@@ -50,7 +50,7 @@ Create a logic flow that performs the same task or tasks, such as sending report
 
 	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-from-blank.png)
 
-1. Specify an event as [Create a logic flow from scratch](get-started-logic-flow) describes.
+1. Specify an event as [Create a logic flow from scratch](get-started-logic-flow.md) describes.
 
 1. Select the plus icon, and then select **Add action**.
 
