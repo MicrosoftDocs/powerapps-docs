@@ -41,7 +41,7 @@ A data source is an extension of a table, and you can use it in any context that
 
 PowerApps can't be used to create or modify a data source; the table must already exist in a service elsewhere.  To create a table (for example, in an Excel workbook stored on OneDrive), you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  Collections can be created and modified in an app but are only temporary.
 
-## Displaying records from a data source ##
+## Display one or more records ##
 ![](media/working-with-data-sources/reading-from-a-datasource.png)
 The diagram above shows the flow of information when an app reads the information in a data source:
 
@@ -64,7 +64,7 @@ For example, let's walk through the steps to display our SharePoint list:
 
 Other users can modify the SharePoint list outside of the app.  When it loads, the app will read the SharePoint list, and the data can be refreshed later with the **[Refresh](function-refresh.md)** function.
 
-## Modifying a record in a data source ##
+## Modify a record ##
 
 In the last section, we showed you how to read a data source.  Note that the arrows in the diagram above are one way.  Changes to a data source aren't pushed back through the same formulas in which the data was retrieved.  Instead, new formulas are used.  Often a different screen is used for editing a record than for browsing records, especially on a mobile device.
 
