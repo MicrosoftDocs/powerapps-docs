@@ -42,7 +42,7 @@ This topic shows you how to do add these multimedia options to your PowerApps.
 
 > [AZURE.TIP] In your PowerApps, the **File** menu includes a **Media** option. In **Media**, you can upload images, audio files, and video files:  
 > ![][24]  
-> 
+>
 > It's easier to upload these files before you start adding the controls to your app. Then, add your control and select the file from a list.  
 
 
@@ -58,7 +58,7 @@ This section lists the steps to add the Image and Picture controls to your app.
 1. On the **File** tab, select **Media**, and then select **Images**.
 2. Select the **Upload** folder, browse to any the .jpeg file that you want to use, and then select **Open**. Your Media should look similar to the following:  
 ![][22]  
-3. Go back to the app designer. 
+3. Go back to the app designer.
 4. On the **Insert** tab, select **Image**:  
 ![][2]  
 5. On the **Content** tab, and select **Image**. In the scroll list, select the image you added. The image displays in the control:  
@@ -82,11 +82,11 @@ Take multiple pictures with the camera on your computer or mobile device. Then, 
 If your camera is enabled, it shows a live image of wherever it's pointed, which may be you. Smile.
 
 4. Set the **OnSelect** property of **MyCamera** to the following function:  
-	
+
 	```Collect(MyImages, {SinglePicture:MyCamera!Photo})```  
-	
+
 	![][6]  
-	
+
 	When you click the camera, a picture is taken, and saved to a collection named **MyImages**; which we'll show you shortly.
 
 5. On the **Insert** tab, select **Gallery**, and then select the vertical **Image Only** gallery:  
@@ -101,7 +101,7 @@ You can easily resize the image gallery by clicking-and-dragging the corner. Thi
 <br/>
 Now, let's remove an image from the gallery when you select it:
 
-1. Select the first image in the gallery. 
+1. Select the first image in the gallery.
 2. Set its **OnSelect** property to the following function:  
 ```Remove(MyImages, ThisItem)```  
 3. Preview your app: ![][1]. Select any image in the gallery. The image you select is now removed. Press the **ESC** key or the **X** to go back to the app designer.
@@ -128,9 +128,9 @@ Configure an audio control to play a file in any format that Internet Explorer s
 	The file plays. You can also use the audio control to play sounds that you record using the **Microphone** control (also on the **Insert** tab > **Media**).
 
 ## Add video and play it in your app
-Configure a video control to play a file in any format that Internet Explorer supports. For example, you can use a .wmv file. If you don't have a video, you can create your own using the video recording feature of your webcam. 
+Configure a video control to play a file in any format that Internet Explorer supports. For example, you can use a .wmv file. If you don't have a video, you can create your own using the video recording feature of your webcam.
 
-The following steps assume you already uploaded the video to your app. 
+The following steps assume you already uploaded the video to your app.
 
 1. On the **Home** tab, select **New Screen**.
 1. On the **Insert** tab, select **Media**, and then select **Video**:  
@@ -154,8 +154,8 @@ Preview your app: ![][1]. Select the play button and watch the video:
 To return to the app designer, press the **ESC** key.
 
 
-## Use the microphone to make recordings and play them in your app
-Using the microphone to create recordings, and show these recordings in a gallery.
+## Record and play sounds in the app
+Use the microphone to record sounds, and list them in a gallery.
 
 1. On the **Home** tab, select **New Screen**.
 1. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control **Description**:  
@@ -181,7 +181,7 @@ Using the microphone to create recordings, and show these recordings in a galler
 
 Press the **ESC** key to return to the app designer.
 
-## Use the pen to write or draw directly within the app
+## Write or draw in the app
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
 
 1. On the **Home** tab, select **New Screen**.

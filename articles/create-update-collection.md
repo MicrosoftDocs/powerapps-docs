@@ -27,9 +27,9 @@ You can create and use collections within PowerApps. Let's get started.
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
 - Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
-- These steps use the [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own. 
+- These steps use the [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
-## Create a collection that has one column
+## Create a single-column collection
 The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.
 
 1. Open your app.
@@ -42,7 +42,7 @@ The following steps show you how to create a collection within your app using th
 4. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **OnSelect** property is listed. Set it to the following function:  
 
 	```Collect(Destinations, Destination!Text)```
-  
+
 	It should look like the following:  
 	![][3]  
 
@@ -81,7 +81,7 @@ Now, let's bind the Destinations collection to a listbox:
 Preview your changes: ![][7]. In the listbox, you can see the different cities you entered. In the input text box, enter a new city, and select the **Add** button. The listbox is automatically updated to include the new city you entered.
 
 
-## Create a collection that has more than one column
+## Create a multi-column collection
 The following steps show you how to create a collection within your app using the Collect function, and how to add multiple rows to your collection.
 
 1. On the **Home** tab, open a new screen.
@@ -101,7 +101,7 @@ The following steps show you how to create a collection within your app using th
 	It should look like the following:  
 	![][11]  
 
-	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column: 
+	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column:
 
 	`Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
 
@@ -119,7 +119,7 @@ In these steps, you added a **Cities** column and a **States** column to the **D
 ![][13]
 
 
-## Add more columns to an existing collection
+## Add columns to a collection
 There are a few sections in this walk-through. When complete, you'll know how to import data into your collection, create a gallery that shows data in a price list, and use a slider control that determines the quantity of a product.
 
 ### Import the price list and create the collection
@@ -196,9 +196,9 @@ To remove one item at a time, show the **OrderList** collection in a gallery, an
 ## What you learned
 In this topic, you:
 
-- Used the Collect() function to create a collection within your app. 
+- Used the Collect() function to create a collection within your app.
 - You added a button control and when selected, the button adds new items to your collection.
-- Used a listbox to add items to your collection. 
+- Used a listbox to add items to your collection.
 - Added a slider control to update items within the collection.
 
 

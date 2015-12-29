@@ -244,14 +244,12 @@ You may need to convert data that you didn't expect. If you create **Input Text*
 	You can add entries to the lists so that users can choose a bigger range of hours and a more precise number of minutes. You can also add a third dropdown list so that users can choose seconds. If you add a third list, change the **Text** property of the label to the following expression:  
 	```Text(Time(Value(Hour!Selected!Value), Value(Minute!Selected!Value), Value(Second!Selected!Value)), DateTimeFormat!LongTime)```
 
-
-
-## More examples and fun stuff with dates and times
+## More examples and fun stuff
 
 Task | Steps | Output
 --- | --- | ---
-Use the Now function to display the current date and time | On the **Insert** tab, add a **Label**, and rename it to **MyLabel**. Set the **Text** property of the label to ```Now()```: <br/>![][8] | The date and time displayed depends on your computer's localization settings:  <ul><li>For the "en" locale, the date and time is ```5/10/2015 5:27 PM``` (month/day/year).</li><li>If using another locale, like "fr", it displays as ```10/5/2015 5:27 PM``` (day/month/year).</li></ul>
-Enter a date and a time, and have them displayed in another label  | <ol><li>On the **Insert** tab, select **Text**, add two **Input Text** boxes, and name them **ArrivalDate** and **ArrivalTime**.</li><li>In **ArrivalDate**, type in a date. For example, enter ```5/10/85```. </li><li>In **ArrivalTime**, type in a time. For example, enter ```6:15 AM```.</li><li>From the **Insert** tab, add a **Label**, and set its **Text** property to the following expression: ```"The product was launched on " & ArrivalDate!Text & " at " & ArrivalTime!Text & "."```</li></ol> | When done, your screen looks similar to the following: ![][9]  
+Use the **Now** function to display the current date and time | On the **Insert** tab, add a **Label**, and rename it to **MyLabel**. Set the **Text** property of the label to this function:<br>```Now()```<br><br>![][8] | The date and time displayed depends on your computer's localization settings:  <ul><li>For the "en" locale, the date and time is ```5/10/2015 5:27 PM``` (month/day/year).</li><li>If using another locale, like "fr", it displays as ```10/5/2015 5:27 PM``` (day/month/year).</li></ul>
+Enter a date and a time, and show them in another label  | <ol><li>On the **Insert** tab, select **Text**, add two **Input Text** boxes, and name them **ArrivalDate** and **ArrivalTime**.</li><li>In **ArrivalDate**, type in a date. For example, enter ```5/10/85```. </li><li>In **ArrivalTime**, type in a time. For example, enter ```6:15 AM```.</li><li>From the **Insert** tab, add a **Label**, and set its **Text** property to the following expression: ```"The product was launched on " & ArrivalDate!Text & " at " & ArrivalTime!Text & "."```</li></ol> | When done, your screen looks similar to this example: ![][9]  
 
 
 ## Tips and Tricks
@@ -274,8 +272,8 @@ In this topic, you:
 [5]: ./media/show-text-dates-times/inputtext.png
 [6]: ./media/show-text-dates-times/renamebirthdate.png
 [7]: ./media/show-text-dates-times/birthdateexpression.png
-[8]: ./media/show-text-dates-times/textnow.png
-[9]: ./media/show-text-dates-times/datetimeprompt.png
+[8]: ./media/show-text-dates-times/textnow2.png
+[9]: ./media/show-text-dates-times/datetimeprompt2.png
 [10]: ./media/show-text-dates-times/textdatetimevalue.png
 [11]: ./media/show-text-dates-times/datelabelinputtext.png
 [12]: ./media/show-text-dates-times/datelabelfr.png
