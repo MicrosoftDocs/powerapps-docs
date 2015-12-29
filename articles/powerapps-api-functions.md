@@ -562,7 +562,7 @@ Tweet([tweetText, body])| Tweets a post.
 
 
 <!--References-->
-[1]: reference-functions.md
+[1]: formula-reference.md
 [2]: get-started-create-from-blank.md
 [3]: ./media/powerapps-api-functions/powerapps-connections.PNG
 [4]: ./media/powerapps-api-functions/powerapps-connections-microsoft-translator.PNG
