@@ -23,30 +23,29 @@ Create a gallery to show images and text about several products, and sort and fi
 
 In PowerApps, you can use a gallery to show several related items, just as you see in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.
 
-> [AZURE.NOTE] This topic uses a tablet app. You can use a phone app but you will need to resize some of the controls. 
+> [AZURE.NOTE] This topic uses a tablet app. You can use a phone app but you will need to resize some of the controls.
 
 ### Prerequisites
 - Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
 - Create a new tablet app or open an existing tablet app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
-- These steps use the [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpg images. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own. 
+- These steps use the [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpg images. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
-## Add a gallery to show images and text
+## Show data in a gallery
 
 1. Create a collection named **Inventory** using the sample data. Steps include:  
-
 	a) On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
 	b) Set the **OnSelect** property of the import control to the following expression:  
 	```Collect(Inventory, Import1!Data)```  
-		![][12]  
+	![][12]  
 	c) Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  	
 	d) In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
 	![][3]  
 
 	You've just created the Inventory collection, which contains information about five products, including a design image, the name of the product, and the number of units in stock.
 
-	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app. 
+	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
 
 2. Select the back arrow to return to the designer.
 3. On the **Insert** tab, select **Gallery**. Under **Image Galleries**, select the horizontal **With Text** image gallery:  
@@ -133,7 +132,7 @@ Now, let's add to our filter:
 - At anytime, you can select the preview button (![][2]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Press **ESC** or select the **X** to close the preview window.
-- When using a gallery, select the first item in the gallery to change all items in the gallery. For example, select the first item to add a border to all items in the gallery. 
+- When using a gallery, select the first item in the gallery to change all items in the gallery. For example, select the first item to add a border to all items in the gallery.
 - To update the properties of the gallery, select any item in the gallery *except* the first one. For example, select the second item to update the *Items*, *ShowScrollbar*, and other properties that apply to the gallery (not the items in the gallery).  
 
 ## What you learned
