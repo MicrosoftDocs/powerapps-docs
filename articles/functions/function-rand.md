@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Rand function"
-	description="Reference information for the Rand function in PowerApps, including syntax and examples"
+	pageTitle="Rand function | Microsoft PowerApps"
+	description="Reference information, including syntax, for the Rand function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -29,4 +29,3 @@ The **Rand** function returns a pseudo-random number that's greater than or equa
 ## Syntax ##
 
 **Rand**()
-
