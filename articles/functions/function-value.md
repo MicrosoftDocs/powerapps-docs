@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Value function"
-	description="Reference information for the Value function in PowerApps, including syntax and examples"
+	pageTitle="Value function | Microsoft PowerApps"
+	description="Reference information, including syntax, for the Value function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,16 +20,14 @@
 
 # Value function in PowerApps #
 
-Converts strings to numbers.
+Converts a string of text to a number.
 
 ## Description ##
 
-The **Value** function converts a string that contains number characters, to a number value.  Use this to perform calculations on strings entered by the user that contain numbers.
+The **Value** function converts a string that contains number characters to a number value. Use this function to perform calculations on strings that the user enters and that contain numbers.
 
 ## Syntax ##
 
 **Value**( *String* )
 
 - *String* - Required. String to convert to a numeric value.
-
-
