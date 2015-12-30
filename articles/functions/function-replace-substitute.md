@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Replace and Substitute functions"
-	description="Reference information for the Replace and Substitute functions in PowerApps, including syntax and examples"
+	pageTitle="Replace and Substitute functions | Microsoft PowerApps"
+	description="Reference information, including syntax, for the Replace and Substitute functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,7 +20,7 @@
 
 # Replace and Substitute functions in PowerApps #
 
-Replace a portion of one string with another string.
+Replace a portion of a string of text with another string.
 
 ## Description ##
 
@@ -35,29 +35,27 @@ If you pass a single string, the return value is the modified string.  If you pa
 **Replace**( *String*, *StartingPosition*, *NumberOfCharacters*, *NewString* )
 
 - *String* - Required. The string to operate on.
-- *StartingPosition* - Required.  Character position to begin the replacement.  The first character of the string is at position 1.
-- *NumberOfCharacters* - Required.  The number of characters to replace.
-- *NewString* - Required.  The replacement string.  The replacement string does not need to be the same length as what it is replacing.
+- *StartingPosition* - Required.  Character position to start the replacement. The first character of *String* is at position 1.
+- *NumberOfCharacters* - Required.  The number of characters to replace in *String*.
+- *NewString* - Required.  The replacement string. The number of characters in this argument can differ from the *NumberOfCharacters* argument.
 
 **Substitute**( *String*, *OldString*, *NewString* [, *InstanceNumber* ] )
 
 - *String* - Required. The string to operate on.
-- *OldString* - Required.  The string to be replaced.
-- *NewString* - Required.  The replacement string.  The length of this string does not need to be the same as what it is replacing.
-- *InstanceNumber* - Optional. By default, the first time a match is found for *OldString* it is replaced. You can specify which instance is to be replaced if there are more than one instance of *OldString* within *String*.
+- *OldString* - Required.  The string to replace.
+- *NewString* - Required.  The replacement string. *OldString* and *NewString* can have different lengths.
+- *InstanceNumber* - Optional. By default, the first instance of *OldString* is replaced. If *String* contains more than one instance, you can specify which instance to replace.
 
 **Replace**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters*, *NewString* )
 
 - *SingleColumnTable* - Required. A single-column table of strings to operate on.
-- *StartingPosition* - Required.  Character position to begin the replacement.  The first character of the string is at position 1.
-- *NumberOfCharacters* - Required.  The number of characters to replace.
-- *NewString* - Required.  The replacement string.  The replacement string does not need to be the same length as what it is replacing.
+- *StartingPosition* - Required.  Character position to start the replacement.  The first character of each string in the table is at position 1.
+- *NumberOfCharacters* - Required.  The number of characters to replace in each string.
+- *NewString* - Required.  The replacement string. The number of characters in this argument can differ from the *NumberOfCharacters* argument.
 
 **Substitute**( *SingleColumnTable*, *OldString*, *NewString* [, *InstanceNumber* ] )
 
 - *SingleColumnTable* - Required. A single-column table of strings to operate on.
-- *OldString* - Required.  The string to be replaced.
-- *NewString* - Required.  The replacement string.  The length of this string does not need to be the same as what it is replacing.
-- *InstanceNumber* - Optional. By default, the first time a match is found for *OldString* it is replaced. You can specify which instance is to be replaced if there are more than one instance of *OldString* within *String*.
-
-
+- *OldString* - Required.  The string to replace.
+- *NewString* - Required.  The replacement string. *OldString* and *NewString* can have different lengths.
+- *InstanceNumber* - Optional. By default, the first instance of *OldString* is replaced. If the table contains more than one instance, you can specify which instance to replace.

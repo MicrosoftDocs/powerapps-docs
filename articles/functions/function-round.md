@@ -1,6 +1,6 @@
 <properties
 	pageTitle="PowerApps: Round, RoundDown, and RoundUp functions"
-	description="Reference information for the Round, RoundDown, and RoundUp functions in PowerApps, including syntax and examples"
+	description="Reference information, including syntax, for the Round, RoundDown, and RoundUp functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -26,7 +26,7 @@ Rounds a number.
 
 The **Round**, **RoundDown**, and **RoundUp** functions round a number to the specified number of decimal places:
 
-- **Round** rounds up if the next digit is a 5 is higher, and rounds down otherwise.
+- **Round** rounds up if the next digit is a 5 or higher. Otherwise, this function rounds down.
 - **RoundDown** always rounds down to the previous lower number.
 - **RoundUp** always rounds up to the next higher number.
 
@@ -38,4 +38,3 @@ If you pass a single number, the return value is the rounded version of that num
 
 - *Number* - Required. The number to round.
 - *DecimalPlaces* - Required.  The number of places to the right of the decimal point to round to.  Use 0 to round to a whole number.  
-
