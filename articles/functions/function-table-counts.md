@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Count, CountA, CountIf, and CountRows functions"
-	description="Reference information for the Count, CountA, CounfIf, and CountRows functions in PowerApps, including syntax and examples"
+	pageTitle="Count, CountA, CountIf, and CountRows functions | Microsoft PowerApps"
+	description="Reference information, including syntax and an example, for the Count, CountA, CounfIf, and CountRows functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,19 +20,19 @@
 
 # Count, CountA, CountIf, and CountRows functions in PowerApps #
 
-Counts the number of [records](working-with-tables.md#records) in a [table](working-with-tables.md) that satisfy a condition, or all records.
+Counts all [records](working-with-tables.md#records) in a [table](working-with-tables.md), or counts all records that satisfy a condition.
 
 ## Description ##
 
-The **Count** function counts the number of records in a single-column table that contain a number.
+The **Count** function counts the number of records that contain a number in a single-column table.
 
-The **CountA** function counts the number of records in a single-column table that are not *blank*.  This function includes [empty](function-isblank-isempty.md) text ("") in the count.
+The **CountA** function counts the number of records that aren't *blank* in a single-column table. This function includes [empty](function-isblank-isempty.md) text ("") in the count.
 
-The **CountIf** functions counts the number of records in a table that are **true** for a logical formula.  The formula can reference [columns](working-with-tables.md#columns) of the table.
+The **CountIf** function counts the number of records in a table that are **true** for a logical formula.  The formula can reference [columns](working-with-tables.md#columns) of the table.
 
 The **CountRows** function counts the number records in a table.
 
-All of these functions return a number.
+Each of these functions returns a number.
 
 ## Syntax ##
 
@@ -50,26 +50,24 @@ All of these functions return a number.
 
 - *Table* - Required.  Table of records to count.
 
-## Examples ##
+## Example ##
 
-### Step by step ###
+1. Import or create a [collection](working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](show-images-text-gallery-sort-filter.md) describes.
 
-1. Import or create a [collection](working-with-data-sources.md#collections) named Inventory, as Create your first app describes.
-
-2. Add a label, and set its Text property to this function:
+2. Add a label, and set its **Text** property to this formula:
 
 	**CountIf(Inventory, UnitsInStock < 30)**
 
-	The label shows 2 because two products (Ganymede and Callisto) have fewer than 30 units in stock.
+	The label shows **2** because two products (Ganymede and Callisto) have fewer than 30 units in stock.
 
-2. Add another label, and set its Text property to this function:
+2. Add another label, and set its **Text** property to this formula:
 
 	**CountA(Inventory!UnitsInStock)**
 
-	The label shows 5, the number of non-empty cells in the UnitsInStock column.
+	The label shows **5**, the number of non-empty cells in the **UnitsInStock** column.
 
-2. Add another label, and set its Text property to this function:
+2. Add another label, and set its **Text** property to this formula:
 
 	**CountRows(Inventory)**
 
-	The label shows 5 because the collection contains five rows.
+	The label shows **5** because the collection contains five rows.
