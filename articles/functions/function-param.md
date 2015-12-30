@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Launch and Param functions"
-	description="Reference information for the Param functions in PowerApps, including syntax and examples"
+	pageTitle="Launch and Param functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Launch and Param functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,23 +20,23 @@
 
 # Launch and Param functions in PowerApps #
 
-Launches a web address or app with parameters.  
+Launches a webpage or an app with parameters.  
 
 ## Description ##
 
-The **Launch** function launches a web address or app.  Optionally, it can pass parameters to the app.  
+The **Launch** function launches a webpage or an app.  Optionally, this function can pass parameters to the app.  
 
-The **Param** function retrieves a parameter passed to the app when it was launched.  If the named parameter was not passed, **Param** returns *blank*.
+The **Param** function retrieves a parameter passed to the app when it was launched.  If the named parameter wasn't passed, **Param** returns *blank*.
 
 ## Syntax ##
 
 **Launch**( *Address* [, *ParameterName1*, *ParameterValue1*, ... ] )
 
-- *Address* - Required.  A web address or App ID to launch.
+- *Address* - Required.  The address of a webpage or the ID of an app to launch.
 
 - *ParameterName(s)* - Optional.  Parameter name.
 
-- *ParameterValue(s)* - Optional.  Corresponding parameter values to pass to the app or web site.
+- *ParameterValue(s)* - Optional.  Corresponding parameter values to pass to the app or the webpage.
 
 **Param**( *ParameterName* )
 
