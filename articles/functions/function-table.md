@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Table function"
-	description="Reference information for the Table function in PowerApps, including syntax and examples"
+	pageTitle="Table function | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Table function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -26,9 +26,9 @@ Creates a temporary [table](working-with-tables.md).
 
 The **Table** function creates a table from an argument list of [records](working-with-tables.md#records).
 
-The table's [columns](working-with-tables.md#columns) will be the union of all the properties from all the argument records.  Each record need not include a value for every column, in which case a *blank* value will be used.
+The table's [columns](working-with-tables.md#columns) will be the union of all the properties from all the argument records. A *blank* value is added to any column for which a record doesn't include a value.
 
-Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Table** does not create a permanent table, instead it returns a temporary table made of its arguments.  This temporary table can be be passed to other functions, visualized in Gallery controls, or embedded in other tables.  See [working with tables](working-with-tables.md) for more details. 
+A table is a value in PowerApps, just like a string or a number. You can specify a table as an argument for a function, and functions can return a table as a result. **Table** doesn't create a permanent table. Instead it returns a temporary table made of its arguments.  You can specify this temporary table as an argument for another function, visualize it in a gallery, or embed it in another table.  See [working with tables](working-with-tables.md) for more details.
 
 You can also create a single-column table with the **[ value1, value2, ... ]** syntax.
 
@@ -40,15 +40,12 @@ You can also create a single-column table with the **[ value1, value2, ... ]** s
 
 ## Examples ##
 
-1. Add a list box control, and then set its **Items** property to this function:
+- Set the **Items** property of a listbox to this formula:
+<br>**Table({Color:"red"}, {Color:"green"}, {Color:"blue"})**
 
-	**Table({Color:"red"}, {Color:"green"}, {Color:"blue"})**
+	The listbox shows each color as an option.
 
-1. Add a text gallery, and set its **Items** property to this function:
+- Add a text gallery, and set its **Items** property to this function:<br>
+**Table({Item:"Violin123", Location:"France", Owner:"Fabrikam"}, {Item:"Violin456", Location:"Chile"})**
 
-	**Table({Item:"Violin123", Location:"France", Owner:"Fabrikam"}, {Item:"Violin456", Location:"Chile"})**
-
-1. (optional) Set the **Text** property of the **Heading1** label to **ThisItem!Item**, set the **Text** property of the **Subtitle1** label to **ThisItem!Owner**, and set the **Text** property of the **Body1** label to **ThisItem!Location**.
-
-
-
+	The gallery shows two records, both of which contain the name and location of an item. Only one record contains the name of the owner.

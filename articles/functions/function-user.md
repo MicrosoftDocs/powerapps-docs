@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: User function"
-	description="Reference information for the User function in PowerApps, including syntax and examples"
+	pageTitle="User function | Microsoft PowerApps"
+	description="Reference information, including syntax, for the User function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,7 +20,7 @@
 
 # User function in PowerApps #
 
-Access to information about the current user.
+Returns information about the current user.
 
 ## Description ##
 
@@ -35,7 +35,3 @@ The **User** function returns a [record](working-with-tables.md#records) of info
 ## Syntax ##
 
 **User**()
-
-
-
-

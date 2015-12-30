@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: SaveData and LoadData functions"
-	description="Reference information for the SaveData and LoadData functions in PowerApps, including syntax and examples"
+	pageTitle="SaveData and LoadData functions | Microsoft PowerApps"
+	description="Reference information, including syntax, for the SaveData and LoadData functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -26,18 +26,15 @@ Saves and re-loads a [collection](working-with-data-sources.md#collections).
 
 The **SaveData** function stores a collection for later use under a name.  
 
-The **LoadData** function re-loads a collection by name that was previously saved with **SaveData**.  This function cannot be used to load a collection from another source.  
+The **LoadData** function re-loads a collection by name that was previously saved with **SaveData**. You can't use this function to load a collection from another source.  
 
-**LoadData** does not create the collection, it only fills it.  You must first create the collection with the correct [columns](working-with-tables.md#columns) using **[Collect](function-clear-collect-clearcollect.md)**.
+**LoadData** doesn't create the collection; the function only fills an existing collection. You must first create the collection with the correct [columns](working-with-tables.md#columns) by using **[Collect](function-clear-collect-clearcollect.md)**.
 
-Storage is encrypted and in a private location on the device, isolated from other users and other apps.  
- 
+Storage is encrypted and in a private location on the local device, isolated from other users and other apps.  
+
 ## Syntax ##
 
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* )
 
 - *Collection* - Required.  Collection to be stored or loaded.
-- *Name* - Required.  Name of the storage.  This name must match between **SaveData** and **LoadData** calls.  The name space is not shared with other apps or users.
-
-
-
+- *Name* - Required.  Name of the storage. You must use the same name to save and load the same set of data. The name space isn't shared with other apps or users.
