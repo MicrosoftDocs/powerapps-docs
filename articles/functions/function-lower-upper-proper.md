@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Lower, Upper, and Proper functions"
-	description="Reference information for the Lower, Upper, and Proper functions in PowerApps, including syntax and examples"
+	pageTitle="Lower, Upper, and Proper functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Lower, Upper, and Proper functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -56,15 +56,17 @@ The examples in this section use an input-text control, named **Author**, as the
 | **Proper(&nbsp;Author!Text&nbsp;)** | Converts the first letter of each word to uppercase if it's lowercase, and converts any other uppercase letters to lowercase. | "E. E. Cummings" |
 
 ### Single-column table
-The examples in this section use this data source, named **People**:
+The examples in this section convert strings from the **Address** [column](working-with-tables.md#columns) of the **People** data source, which contains this data:
 
 ![](media/function-lower-upper-proper/people-table.png)
 
+Each formula returns a single-column table that contains the converted strings.
+
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  In the **Address** [column](working-with-tables.md#columns) of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | <style> img { max-width:none; } </style> ![](media/function-lower-upper-proper/people-table-lower.png) |
-| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any letter that's lowercase to uppercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-upper.png) |
-| **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | In the **Address** column of the **People** table:<br><ul><li>Converts any first letter of a word that's lowercase to uppercase.</li><li>Converts any other letter that's uppercase to lowercase.</li><li>Returns a single-column table that contains the converted strings.</li> | ![](media/function-lower-upper-proper/people-table-proper.png) |
+| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |  Converts any letter that's lowercase to uppercase. | <style> img { max-width:none; } </style> ![](media/function-lower-upper-proper/people-table-lower.png) |
+| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | Converts any letter that's lowercase to uppercase. | ![](media/function-lower-upper-proper/people-table-upper.png) |
+| **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** | Converts any first letter of a word that's lowercase to uppercase, and converts any other letter that's uppercase to lowercase. | ![](media/function-lower-upper-proper/people-table-proper.png) |
 
 ### Step-by-step example ###
 
