@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: UpdateContext function"
-	description="Reference information for the UpdateContext function in PowerApps, including syntax and examples"
+	pageTitle="UpdateContext function | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the UpdateContext function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -24,11 +24,11 @@ Creates or updates [context variables](working-with-variables.md#context-variabl
 
 ## Overview ##
 
-Use the **UpdateContext** function to create a context variable, which temporarily holds a piece of information such as the number of times the user has clicked a button or the result of a data operation.
+Use the **UpdateContext** function to create a context variable, which temporarily holds a piece of information, such as the number of times the user has selected a button or the result of a data operation.
 
 Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable. If you want the equivalent of a global variable, create a [collection](working-with-data-sources.md#collections) by using the **[Collect](function-clear-collect-clearcollect.md)** or **[ClearCollect](function-clear-collect-clearcollect.md)** function.
 
-PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Context variables do not enjoy this benefit and can make your app harder to create and understand.  Before using context variables, review [working with variables](working-with-variables.md).
+PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Context variables don't offer this benefit and can make your app harder to create and understand.  Before you use a context variable, review [working with variables](working-with-variables.md).
 
 ## Description ##
 
@@ -40,7 +40,7 @@ PowerApps are based on formulas that automatically recalculate as the user inter
 
 You can't remove a context variable after you define it.
 
-You reference a context variable in a formula by using the variable's column name. For example, **UpdateContext( { ShowLogo: true } )** creates a context variable, named **ShowLogo**, and sets its value to **true**. You can then use the value of this context variable by using the name **ShowLogo** in a formula.  You can write "**ShowLogo**" as the formula for the **Visible** property of an image control and show or hide that control based on the value of the context variable.
+You reference a context variable in a formula by using the variable's column name. For example, **UpdateContext( { ShowLogo: true } )** creates a context variable named **ShowLogo** and sets its value to **true**. You can then use the value of this context variable by using the name **ShowLogo** in a formula.  You can write **ShowLogo** as the formula for the **Visible** property of an image control and show or hide that control based on whether the value of the context variable is **true** or **false**.
 
 As the examples later in this topic show, context variables can hold several kinds of information, including these:
 
@@ -65,9 +65,7 @@ Every context variable is scoped to a screen. If you want to define a context va
 **UpdateContext**( { *ContextVariable1*: *Value1* [, *ContextVariable2*: *Value2* [, ... ] ] } )
 
 - *ContextVariable1* - Required.  The name of a context variable to create or update.
-
 - *Value1* - Required.  The value to assign to the context variable.
-
 - *ContextVariable2*: *Value2*, ... - Optional. Additional context variables to create or update and their values.
 
 ## Examples ##
@@ -92,13 +90,17 @@ Every context variable is scoped to a screen. If you want to define a context va
 
 1. On the **Target** screen, add a label, and set its **Text** property to this expression:<br>**If(Language="English", "Hello!", "Hola!")**
 
-1. On the **Target** screen, click **Shapes** on the **Insert** tab, and then click the Back arrow.
+1. On the **Target** screen, select **Shapes** on the **Insert** tab, and then select the Back arrow.
 
 1. Set the Back arrow's **OnSelect** property to this formula:<br>**Navigate(Source, ScreenTransition!Fade)**
 
-1. From the **Source** screen, press F5, and then click the button for either language.<br>On the **Target** screen, the label appears in the language that corresponds to the button that you clicked.
+1. From the **Source** screen, press F5, and then select the button for either language.
 
-1. Click the Back arrow to return to the **Source** screen, and then click the button for the other language.<br>On the **Target** screen, the label appears in the language that corresponds to the button that you clicked.
+	On the **Target** screen, the label appears in the language that corresponds to the button that you selected.
+
+1. Select the Back arrow to return to the **Source** screen, and then select the button for the other language.
+
+	On the **Target** screen, the label appears in the language that corresponds to the button that you selected.
 
 1. Press Esc to return to the default workspace.
 
