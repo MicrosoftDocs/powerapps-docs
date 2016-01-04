@@ -95,7 +95,8 @@ In these steps, you used an expression to create a list of items in a listbox. D
 	![][14]  
 6. Preview what you've created: ![][1]. Select the different radio buttons to change the color of the circle. Press Esc or select the **X** to go back to your screen.
 
-## Add a drop-down list ##  
+## Add a drop-down list ##
+
 1. Add a screen, and then add a drop-down control.
 
 	![][15]  
