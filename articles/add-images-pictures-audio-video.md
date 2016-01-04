@@ -70,8 +70,7 @@ This section lists the steps to add the Image and Picture controls to your app.
 2. Preview your app: ![][1]. The picture control automatically adds an **Add Picture...** button. When you select it, an explorer window opens. Select your picture and select **Open**.  
 	The picture is displayed in the control you added.
 
-
-## Take a picture using the camera control
+## Take a picture by using a camera
 Take multiple pictures with the camera on your computer or mobile device. Then, show the pictures in an image gallery. These steps use the camera on your computer. To follow these steps, start the camera on your computer or mobile device.
 
 1. On the **Home** tab, select **New Screen**.
