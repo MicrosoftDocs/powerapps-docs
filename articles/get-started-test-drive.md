@@ -24,8 +24,6 @@
 
 Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, customize it to better fit the way you work, and then publish it.
 
-[What is PowerApps?](https://aka.ms/pamktg)
-
 **Prerequisites**
 
 - [Install PowerApps](http://aka.ms/powerappsinstall)
@@ -33,11 +31,15 @@ Create an app automatically based on one of several templates for a variety of s
 - An account on DropBox, OneDrive, or GoogleDrive for storing sample data in the cloud
 
 ## Open a template ##
+1. Open PowerApps.
+
+1. If you haven't opened PowerApps before, select the right-pointing arrow near the lower-right corner to advance through the opening screens, and then sign in.
+
 1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
 
 	![The Connections option on the File menu](./media/get-started-test-drive/file-connections.png)
 
-1. Select **Available Connections**, select **Dropbox** (or another cloud-storage account), and then select **Connect**.
+1. Select **Available connections**, select **Dropbox** (or another cloud-storage account), and then select **Connect**.
 
 	![Option to add Dropbox as a data connection](./media/get-started-test-drive/add-dropbox.png)
 
@@ -59,20 +61,20 @@ Create an app automatically based on one of several templates for a variety of s
 
 	![Open a PowerApps template](./media/get-started-test-drive/open-template.png)
 
-2. Select **Event SignUp**, and then select **Use**.
+1. In the list of template categories, select **Events & Calendar**, select **Event SignUp**, and then select **Use** (near the lower-right corner).
 
 	![Open the Event Signup template template](./media/get-started-test-drive/choose-template.png)
 
-	The **VolunteerDetailsScreen_1** of your app appears.
+	When the app is created, the **VolunteerDetailsScreen** appears.
 
-	![VolunteerDetailsScreen_1 with default information](./media/get-started-test-drive/volunteer-default.png)
+	![VolunteerDetailsScreen with default information](./media/get-started-test-drive/volunteer-default.png)
 
 ## Explore the app's default behavior ##
 Apps from templates open in the default workspace, where you'll spend most of your time customizing an app or creating one from scratch. Before you make changes, you'll explore how the app works in **Preview**.
 
 **Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
 
-1. In the left navigation bar, select the thumbnail for the **VolunteerDetailsScreen_1**.
+1. In the left navigation bar, select the thumbnail for the **VolunteerDetailsScreen**.
 
 	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.png)
 
@@ -90,7 +92,7 @@ Apps from templates open in the default workspace, where you'll spend most of yo
 
 	![Button for signing up for a particular timeslot](./media/get-started-test-drive/signup-button.png)
 
-	**Note:** If you select a **Sign up** button for a timeslot for which nobody else has signed up, the other **Sign up** button for the same timeslot stops being available.
+	**Note:** When you sign up for a timeslot, any remaining **Sign up** buttons for the same timeslot become unavailable.
 
 1. (optional) Verify that the data in your cloud account reflects your changes.
 
@@ -115,15 +117,21 @@ When an element is selected, you can configure it in these ways:
 
 If you can't find a property on the ribbon, find it in the properties list, which shows properties alphabetically.
 
-1. Near the top of the screen, select **PowerApps at OneWeek**.
+1. Near the top of the screen, select **Event Signup**.
 
 	![A label surrounded by a selection box](./media/get-started-test-drive/selected-label.png)
 
-1. Resize the label by dragging the white triangle in the lower-right corner of the selection box.
+1. Move the label to the left edge of the screen by dragging the selection box around the label.
+
+1. Highlight the text inside the label (for example, by triple-clicking it), and then change the label's text by typing **Sign up for PowerApps Conference**.
+
+1. Resize the label by dragging the white square in the right edge of the selection box until the label shows all the text.
 
 	![Resizing a control](./media/get-started-test-drive/resize-label.png)
 
-1. Move the label to the upper-right corner of the screen by dragging the selection box itself (not a triangle or square in the selection box).
+1. With the label still selected, select **Text** in the properties list, and then type **Now()** in the formula bar.
+
+	The label shows the current date and time.
 
 1. With the label still selected, rename it by selecting **Label11_2** on the **Home** tab and then typing **Banner**.
 
@@ -131,14 +139,8 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 	**Note:** As you develop or customize an app, you'll configure some controls to reference other controls. For example, you'll probably configure a button or other control to open one screen from another. That type of configuration will be much easier if the screens have names that are easier to remember than **Screen1**, **Screen2**, and so on.
 
-1. With the label still selected, select **Text** in the properties list, and then type **Today()** in the formula bar.
-
-	The label shows the current date.
-
-1. Triple-click the text in the label, and then type anything you want.
-
 ## Save and share your app ##
-After you finish developing and testing your app, share it with other people by saving it to powerapps.com and sending mail that your app is available. Specify which people can run your app or even customize it to create their own versions.
+After you finish developing and testing your app, share it with other people by saving it to [powerapps.com](https://web.powerapps.com) and sending mail that your app is available. Specify which people can run your app or even customize it to create their own versions.
 
 1. On the **File** menu, select **App Settings**.
 
@@ -178,14 +180,13 @@ After you finish developing and testing your app, share it with other people by 
 
 	An email template appears.
 
-1. In the **To** text box, type the email addresses of the people with whom you want to share your app.
+1. Type the email addresses of the people with whom you want to share your app, and then select one of these options:
+
+	- **Can view** allows the users you specify to run your app
+	- **Can edit** allows the users you specify not only to run your app but also to create their own versions of it.
 
 	![Text box for specifying email addresses](./media/get-started-test-drive/share-to.png)
 
-1. In the list of permissions, select **Can view** to allow users to run your app, or select **Can edit** to allow users to run your app and create their own versions of it.
+1. Edit the text in the message box, and then select **Share**.
 
-	![Drop-down list for specifying permissions on an app that you share](./media/get-started-test-drive/share-level.png)
-
-1. Edit the text in the **Subject** and **Message** boxes, and then select **Share**.
-
-	The people with whom you shared your app will receive an email message that contains a link they can select to install PowerApps and run your app.
+	The people with whom you shared your app will receive an email message that contains a link that they can select to install PowerApps and run your app.
