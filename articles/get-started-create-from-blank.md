@@ -22,11 +22,11 @@ Create your own app from scratch using any of a variety of data sources. Specify
 
 By following this tutorial, you'll create an app that shows users a set of data on the first screen:
 
-![Screen in which users can scroll through a set of data](./media/get-started-create-from-blank/view-screen-button.png)
+![Screen in which a user can scroll through a set of data](./media/get-started-create-from-blank/browse-gallery.png)
 
 On another screen, users can create, update, or delete a record in that set of data:
 
-![Screen in which users can scroll through a set of data](./media/get-started-create-from-blank/change-screen.png)
+![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
 
 **Prerequisites**
 
@@ -93,84 +93,62 @@ To follow this tutorial exactly:
 	![Icon to close the Options pane](./media/get-started-create-from-blank/close-options.png)
 
 ## Show the data ##
-1. On the **Insert** tab of the ribbon, select **Gallery**, and then select the text gallery in **Portrait** orientation.
+1. On the **Home** tab of the ribbon, select **Layouts**, and then select the option that contains a heading, a subtitle, and a body element.
 
-	![Option to add a text gallery in portrait orientation](./media/get-started-create-from-blank/add-gallery.png)
+	![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
-1. Set the **Items** property of the gallery to **Schedule**.
+1. Set the **Items** property of the gallery to this formula:<br>
+**Sort(If(IsBlank(TextSearchBox1!Text), Schedule, Filter(Schedule, TextSearchBox1!Text in Text(Staff1))), Staff1, If(SortDescending1, SortOrder!Descending, SortOrder!Ascending))**
+
+	This formula shows the data from the **Schedule** table. If the user types in the search box, the gallery shows only those records in which the **Staff1** column contains the search text. If the user selects the sort button, the sort order toggles between ascending and descending, based on the **Staff1** column.
 
 	![The Schedule data in the gallery by default](./media/get-started-create-from-blank/gallery-data-default.png)
-
-1. Rename the gallery to **BrowseGallery**.
-
-	![Rename the gallery on the default page](./media/get-started-create-from-blank/rename-gallery.png)
 
 1. In the lower-right corner of the screen, select **Quick tools**.
 
 	![Option to open the Quick tools pane](./media/get-started-create-from-blank/open-quick-tools.png)
 
-1. In the **Quick tools** pane, select **Content**.
+1. In the **Quick tools** pane, select the **Content** tab.
 
 	![Content tab of Quick tools pane](./media/get-started-create-from-blank/qt-content.png)
 
 1. In the **Heading1** list, select **StartDay**.
+
 1. In the **Subtitle1** list, select **StartTime**.
 
-1. (optional) Move the gallery down a bit, resize it to show four items, and add a label that identifies the screen.
+1. Change the label at the top of the screen to show **View records**, and resize the gallery to show four items.
 
-	![View screen with gallery and label](./media/get-started-create-from-blank/view-screen-label.png)
+	![Screen in which users can scroll through a set of data](./media/get-started-create-from-blank/view-screen-button.png)
 
 ## Add a label to the gallery ##
-1. In the first item of the gallery, select the **Body1** label, and reduce its height by about half.
+1. In the first item of the gallery, select the **Body1** label.
 
-	![View screen with gallery and label](./media/get-started-create-from-blank/resize-subtitle1.png)
+	![View screen with gallery and label](./media/get-started-create-from-blank/select-body.png)
 
 	**Note:** The first item in a gallery is the gallery template. When you change it, you automatically change all other items in the gallery.
 
-1. With the **Body1** label still selected, select the **Insert** tab on the ribbon, and then select **Label**.
+1. Set the label's **PaddingTop** property to **0** and its **Height** property to **50**.
 
-	![The Label option on the Insert tab of the ribbon](./media/get-started-create-from-blank/insert-label.png)
+1. Copy the label, paste it, and then move the copy so that it appears just under the original label.
 
-1. On the **Content** tab of the **Quick tools** pane, select **Staff2** in the **Label1** list.
+1. Set the **Text** property of the copied label to **ThisItem.Staff2**.
 
-1. On the **Home** tab of the ribbon, set the **Size** of the label's font to **11**.
-
-	![The Size option on the Home tab of the ribbon](./media/get-started-create-from-blank/change-font-size.png)
-
-1. Resize and move the **Staff2** label so it appears under the **Staff1** label.
-
-	![The BrowseGallery showing all fields](./media/get-started-create-from-blank/browse-gallery.png)
+	![Screen in which users can scroll through a set of data](./media/get-started-create-from-blank/browse-gallery.png)
 
 ## Create the ChangeScreen ##
 1. [Rename the default screen](add-screen-context-variables.md#add-a-screen-and-navigation) to **ViewScreen**, add another screen, and name it **ChangeScreen**.
 
 	![Thumbnails of ViewScreen and ChangeScreen](./media/get-started-create-from-blank/rename-screens.png)
 
-1. On the **ViewScreen**, select any item in the gallery except the first one, and then select the pencil icon in the upper-left corner of the gallery.
-
-	![Pencil icon to edit gallery template](./media/get-started-create-from-blank/edit-gallery-template.png)
-
-1. On the **Insert** tab of the ribbon, click **Shapes**, and then click the Next arrow.
-
-	![Option to add a next arrow](./media/get-started-create-from-blank/add-next-arrow.png)
-
-1. Move the arrow to the right edge of the gallery, and then set its **OnSelect** property to this formula:<br>
+1. On the **ViewScreen**, set the **OnSelect** property of the arrow in the first item of the gallery to this formula:<br>
 **Navigate(ChangeScreen,ScreenTransition!Fade,{Record:ThisItem})**
 
 	This formula comprises the [**Navigate**](function-navigate.md) function and a [context variable](function-updatecontext.md).
 
-1. Select any item in the gallery except the first one, select the **Insert** tab on the ribbon, and then select **Button**.
-
-	![Button option on the Insert tab](./media/get-started-create-from-blank/insert-button.png)
-
-1. Move the button under the gallery, and configure the button so that it shows the word **New**.
-
-	![Button option on the Insert tab](./media/get-started-create-from-blank/view-screen-button.png)
-
-1. Set the **OnSelect** property of the button to this formula:<br>
+1. In the upper-right corner, set the **OnSelect** property of the plus button to this formula:<br>
 **Navigate(ChangeScreen,ScreenTransition!Fade,{Record:Defaults(Schedule)})**
 
-	This formula comprises the [**Navigate**](function-navigate.md) function and sets a [context variable](function-updatecontext.md) to the [default values](function-defaults.md) of the **Schedule** data source.
+	This formula also comprises the [**Navigate**](function-navigate.md) function and sets a [context variable](function-updatecontext.md) to the [default values](function-defaults.md) of the **Schedule** data source.
 
 1. On the **ChangeScreen**, add a label that identifies it, and [add a Back arrow](add-screen-context-variables.md) that returns to the **ViewScreen** when a user selects the arrow.
 
