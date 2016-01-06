@@ -15,7 +15,7 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/22/2015"
+   ms.date="01/04/2015"
    ms.author="anneta"/>
 
 # Create an app from a template #

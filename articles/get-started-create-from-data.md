@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/01/2015"
+   ms.date="01/06/2015"
    ms.author="anneta"/>
 
 # Create an app from a set of data
@@ -52,7 +52,7 @@ For this tutorial, the data source is a table named **FlooringEstimates** in an 
 
 	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.png)
 
-1. Select **New** on the **File** menu.
+1. On the **File** menu, select **New**.
 
 	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
