@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/01/2015"
+   ms.date="01/06/2015"
    ms.author="anneta"/>
 
 # Create an app from a set of data

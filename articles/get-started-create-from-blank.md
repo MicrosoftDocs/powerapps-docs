@@ -14,13 +14,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/22/2015"
+   ms.date="01/06/2015"
    ms.author="anneta"/>
 
 # Create an app from scratch #
 Create your own app from scratch using any of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
-
-[What is PowerApps?](https://aka.ms/pamktg)
 
 By following this tutorial, you'll create an app that shows users a set of data on the first screen:
 
@@ -44,7 +42,7 @@ To follow this tutorial exactly:
 
 	![Source data in Excel](./media/get-started-create-from-blank/excel-data.png)
 
-1. [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370), name the table **Schedule**, and save the file to a Dropbox account.
+1. [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370), named **Schedule**, and save the file to a Dropbox account.
 
 ## Connect to a data source ##
 1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
@@ -67,11 +65,11 @@ To follow this tutorial exactly:
 
 	![The option buttons for creating an app for tablets or phones](./media/get-started-create-from-blank/phone-app.png)
 
-1. Under **Start from scratch**, select **Get Started**.
+1. Under **Start from scratch**, select **Get started**.
 
 	![Option to create an app from scratch](./media/get-started-create-from-blank/blank-app.png)
 
-1. On the bottom edge of the screen, select **Options**.
+1. Near the lower-right corner, select **Options**.
 
 	![Connections option on the File menu](./media/get-started-create-from-blank/open-options.png)
 
@@ -118,7 +116,7 @@ To follow this tutorial exactly:
 1. In the **Heading1** list, select **StartDay**.
 1. In the **Subtitle1** list, select **StartTime**.
 
-1. (optional) Move the gallery down a bit, resize it to show more items, and add a label that identifies the screen.
+1. (optional) Move the gallery down a bit, resize it to show four items, and add a label that identifies the screen.
 
 	![View screen with gallery and label](./media/get-started-create-from-blank/view-screen-label.png)
 
@@ -127,7 +125,7 @@ To follow this tutorial exactly:
 
 	![View screen with gallery and label](./media/get-started-create-from-blank/resize-subtitle1.png)
 
-	**Note:** When you change the first item in a gallery, which is the gallery template, you automatically change all other items in the gallery.
+	**Note:** The first item in a gallery is the gallery template. When you change it, you automatically change all other items in the gallery.
 
 1. With the **Body1** label still selected, select the **Insert** tab on the ribbon, and then select **Label**.
 
@@ -156,9 +154,8 @@ To follow this tutorial exactly:
 
 	![Option to add a next arrow](./media/get-started-create-from-blank/add-next-arrow.png)
 
-1. Move the arrow to the right edge of the gallery, and then set its **OnSelect** property to this formula:
-
-	**Navigate(ChangeScreen,ScreenTransition!Fade,{Record:ThisItem})**
+1. Move the arrow to the right edge of the gallery, and then set its **OnSelect** property to this formula:<br>
+**Navigate(ChangeScreen,ScreenTransition!Fade,{Record:ThisItem})**
 
 	This formula comprises the [**Navigate**](function-navigate.md) function and a [context variable](function-updatecontext.md).
 
@@ -170,9 +167,8 @@ To follow this tutorial exactly:
 
 	![Button option on the Insert tab](./media/get-started-create-from-blank/view-screen-button.png)
 
-1. Set the **OnSelect** property of the button to this formula:
-
- 	**Navigate(ChangeScreen,ScreenTransition!Fade,{Record:Defaults(Schedule)})**
+1. Set the **OnSelect** property of the button to this formula:<br>
+**Navigate(ChangeScreen,ScreenTransition!Fade,{Record:Defaults(Schedule)})**
 
 	This formula comprises the [**Navigate**](function-navigate.md) function and sets a [context variable](function-updatecontext.md) to the [default values](function-defaults.md) of the **Schedule** data source.
 
@@ -199,7 +195,7 @@ To follow this tutorial exactly:
 
 	By setting the **Default** property as the previous step instructs, you configure the input-text control to show the **StartDay** value that's stored in the **Record** context variable.
 
-	- If the user navigates to this screen by selecting the Next arrow in a gallery item on the **ViewScreen**, this control shows the **StartDay** value for that item.
+	- If the user navigates to this screen by selecting an arrow in the **BrowseGallery**, this control shows the **StartDay** value for the item that the user selected.
 	- If the user navigates to this screen by selecting the **New** button on the **ViewScreen**, this control shows the data source's default value for the **Day** column. Because this data source has no defaults, the control will be blank.
 
 1. Copy the label and the input-text control, paste them three times, and arrange them in a column that alternates labels with input-text controls.
