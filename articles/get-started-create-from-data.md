@@ -22,19 +22,21 @@
 
 Create an app automatically based on data that you specify, explore how the app works by default, and then customize it to better fit how you work.
 
-[What is PowerApps?](http://aka.ms/pamktg)
-
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall)
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
-- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) and save it in **your** Dropbox account.
+- Install [PowerApps](http://aka.ms/powerappsinstall).
+- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps.
+- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in **your** Dropbox account.
 
-For this tutorial, the data source is a table named **FlooringEstimates** in an Excel spreadsheet on a Dropbox account. You can just as easily create an app based on a SharePoint list, a Dynamics CRM table, or a SQL database.
+For this tutorial, the data source is a table, named **FlooringEstimates**, in an Excel workbook uploaded to a Dropbox account. You can just as easily create an app based on a SharePoint list, a Dynamics CRM table, or a SQL database.
 
 ![Source data in Excel](./media/get-started-create-from-data/excel-source.png)
 
 ## Specify your data ##
+
+1. Open PowerApps.
+
+	If you haven't opened PowerApps before, select the right-pointing arrow near the lower-right corner to advance through the opening screens, and then sign in.
 
 1. In PowerApps, select **Connections** on the **File** menu (near the left edge of the screen).
 
@@ -52,7 +54,7 @@ For this tutorial, the data source is a table named **FlooringEstimates** in an 
 
 	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.png)
 
-1. Select **New** on the **File** menu.
+1. On the **File** menu, select **New**.
 
 	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
@@ -66,7 +68,7 @@ For this tutorial, the data source is a table named **FlooringEstimates** in an 
 
 	![Dropbox in My Connections](./media/get-started-create-from-data/my-connections-dropbox.png)  
 
-	b. Under **Select an Excel file**, select the FlooringEstimates.xlsx file, and then select **Connect**.  
+	b. Under **Select an Excel file**, select the flooringestimates.xlsx file, and then select **Connect**.  
 
 	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
@@ -74,7 +76,7 @@ For this tutorial, the data source is a table named **FlooringEstimates** in an 
 
 	![Select FlooringEstimates table](./media/get-started-create-from-data/choose-table.png)  
 
-Your app is built. Simple? You bet.
+Your app is built. Simple? Absolutely.
 
 ## Customize the app ##
 When an app is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
@@ -99,7 +101,7 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 1. In the **Quick tools** pane, select the **Content** tab.
 
-1. Select **Name** in the **Heading2** list, select **ImageURL** in the **Image1** list, and select **Category** in the **Subtitle2** list.
+1. Select **Name** in the **Heading1** list, select **ImageURL** in the **Image1** list, and select **Category** in the **Subtitle1** list.
 
 	![Content tab with new options for BrowseScreen1](./media/get-started-create-from-data/choose-content-flooring-estimates.png)
 
@@ -132,5 +134,7 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	![Save changes on EditScreen1](./media/get-started-create-from-data/save-changes-flooring-estimates.png)
 
-## Next step ##
-When you finish customizing your app, you can [save and share it with other people](get-started-test-drive.md#save-and-share-your-powerapp).
+## Next steps ##
+
+- You can further customize your app by performing similar tasks to those that [Create an app from scratch](get-started-) describes.
+- [Save and share your app](get-started-test-drive.md#save-and-share-your-powerapp) with other people.
