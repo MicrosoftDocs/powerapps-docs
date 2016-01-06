@@ -61,7 +61,7 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 
 	![Plus icon](./media/get-started-logic-flow/add-action-icon.png)
 
-2. Select **Add action**.
+2. Select **Add an action**.
 
 	![Add action bar](./media/get-started-logic-flow/add-action-bar.png)
 
@@ -77,13 +77,13 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 
 	![Blank email message](./media/get-started-logic-flow/blank-email.png)
 
-1. In the **SUBJECT** box, type or paste **New tweet from: **, and then select the **Tweeted by** parameter to add a placeholder for it.
+1. In the **SUBJECT** box, type or paste **New tweet from:**, type a space, and then select the **Tweeted by** parameter to add a placeholder for it.
 
 	![Subject line with placeholder](./media/get-started-logic-flow/message-token.png)
 
 1. In the **BODY** box, select the **Tweet text** parameter to add a placeholder for it, and then type the end of your message, including any other parameters you want to include.
 
-8. Name your logic flow in the box near the bottom of the screen, and then select **Done**.
+8.  Near the bottom of the screen, name your logic flow, and then select **Done**.
 
 	![Select the done button](./media/get-started-logic-flow/done-button.png)
 
