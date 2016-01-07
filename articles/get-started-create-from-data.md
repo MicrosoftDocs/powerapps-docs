@@ -20,6 +20,8 @@
 
 # Create an app from a set of data
 
+[AZURE.VIDEO nb:cid:UUID:d20c445d-1500-80c4-9ad5-f1e5b4e0b87b]
+
 Create an app automatically based on data that you specify, explore how the app works by default, and then customize it to better fit how you work.
 
 **Prerequisites**
