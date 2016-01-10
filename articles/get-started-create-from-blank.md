@@ -98,7 +98,7 @@ To follow this tutorial exactly:
 	![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
 1. Set the **Items** property of the gallery to this formula:<br>
-**Sort(If(IsBlank(TextSearchBox1!Text), Schedule, Filter(Schedule, TextSearchBox1!Text in Text(Staff1))), Staff1, If(SortDescending1, SortOrder!Descending, SortOrder!Ascending))**
+**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text(Staff1))), Staff1, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
 	This formula shows the data from the **Schedule** table. If the user types in the search box, the gallery shows only those records in which the **Staff1** column contains the search text. If the user selects the sort button, the sort order toggles between ascending and descending, based on the **Staff1** column.
 
@@ -141,12 +141,12 @@ To follow this tutorial exactly:
 	![Thumbnails of ViewScreen and ChangeScreen](./media/get-started-create-from-blank/rename-screens.png)
 
 1. On the **ViewScreen**, set the **OnSelect** property of the arrow in the first item of the gallery to this formula:<br>
-**Navigate(ChangeScreen,ScreenTransition!Fade,{Record:ThisItem})**
+**Navigate(ChangeScreen,ScreenTransition.Fade,{Record:ThisItem})**
 
 	This formula comprises the [**Navigate**](function-navigate.md) function and a [context variable](function-updatecontext.md).
 
 1. In the upper-right corner, set the **OnSelect** property of the plus button to this formula:<br>
-**Navigate(ChangeScreen,ScreenTransition!Fade,{Record:Defaults(Schedule)})**
+**Navigate(ChangeScreen,ScreenTransition.Fade,{Record:Defaults(Schedule)})**
 
 	This formula also comprises the [**Navigate**](function-navigate.md) function and sets a [context variable](function-updatecontext.md) to the [default values](function-defaults.md) of the **Schedule** data source.
 
@@ -167,7 +167,7 @@ To follow this tutorial exactly:
 1. Move the new input-text control just under the **Day** label.
 
 	![Move text-input control under Day label](./media/get-started-create-from-blank/move-input-text.png)
-1. Name the input-text control **inputDay**, and set its **Default** property to **Record!StartDay**.
+1. Name the input-text control **inputDay**, and set its **Default** property to **Record.StartDay**.
 
 	You'll refer to that control by its name later in this topic, when you configure the **Save** button.
 
@@ -193,9 +193,9 @@ To follow this tutorial exactly:
 	- **inputStaff2**
 
 1. Set the **Default** property of each input-text control based on the text of the label above it:
-	- **Record!StartTime**
-	- **Record!Staff1**
-	- **Record!Staff2**
+	- **Record.StartTime**
+	- **Record.Staff1**
+	- **Record.Staff2**
 
 ## Test the ChangeScreen ##
 1. On the **ViewScreen**, press F5, and then select the arrow for any item in the gallery.
@@ -214,13 +214,13 @@ To follow this tutorial exactly:
 
 1. Set the **OnSelect** property of the **Save** button to this formula:
 
-	**UpdateContext({Record:Patch(Schedule,Record,<br> {StartDay:inputDay!Text,StartTime:inputTime!Text,<br> Staff1:inputStaff1!Text,Staff2:inputStaff2!Text})});<br> If(IsEmpty(Errors(Schedule,Record)),<br>Navigate(ViewScreen,ScreenTransition!Fade))**
+	**UpdateContext({Record:Patch(Schedule,Record,<br> {StartDay:inputDay.Text,StartTime:inputTime.Text,<br> Staff1:inputStaff1.Text,Staff2:inputStaff2.Text})});<br> If(IsEmpty(Errors(Schedule,Record)),<br>Navigate(ViewScreen,ScreenTransition.Fade))**
 
 	In this formula, the [**Patch**](function-patch.md) function creates or updates an entry in the **Schedule** data source, and the entry contains the information in each text-input control.  	In addition, the [**If**](function-if.md) function opens the **ViewScreen** only if no [**Errors**](function-errors.md) occurred when the data source was updated.
 
 1. Set the **OnSelect** property of the **Remove** button to this formula:
 
-	**UpdateContext({NewRecord:Remove(Schedule,Record)});<br> If(IsEmpty(Errors(Schedule,Record)),<br>Navigate(ViewScreen,ScreenTransition!Fade))**
+	**UpdateContext({NewRecord:Remove(Schedule,Record)});<br> If(IsEmpty(Errors(Schedule,Record)),<br>Navigate(ViewScreen,ScreenTransition.Fade))**
 
 	In this formula, the [**Remove**](function-remove-removeif.md) function removes a specified record from the **Schedule** data source. Again, the [**If**](function-if.md) function opens the **ViewScreen** only if no [**Errors**](function-errors.md) occurred when the data source was updated.  
 

@@ -27,7 +27,7 @@ Configure your app with formulas that not only calculate values and perform othe
 
 For example, you build a formula to determine how your app responds when users click a button, adjust a slider, or provide other input. These formulas might show a different screen, update a data source that's external to the app, or create a table that contains a subset of the data in an existing table.
 
-You can use formulas for a wide variety of scenarios. For example, you can use your device's GPS, a map control, and a formula that uses **Location!Latitude** and **Location!Longitude** to display your current location. As you move, the map automatically tracks your location.
+You can use formulas for a wide variety of scenarios. For example, you can use your device's GPS, a map control, and a formula that uses **Location.Latitude** and **Location.Longitude** to display your current location. As you move, the map automatically tracks your location.
 
 This topic provides only an overview of working with formulas.  Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use.
 
@@ -105,9 +105,9 @@ In PowerApps, you can achieve a similar result by adding controls and setting th
 
 In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the [**If**](function-if.md) function, which behaves similarly to how it behaves in Excel.
 
-1. Set the **Color** property of **Label1** to this formula:<br>**If( Value(Label1!Text) <0, Red, Black )**
+1. Set the **Color** property of **Label1** to this formula:<br>**If( Value(Label1.Text) <0, Red, Black )**
 
-	**Note:** Specify the property of a control by providing the name of the control, followed by an exclamation point, followed by the name of the property. For example, specify the **Text** property of **Label1** by typing **Label1!Text**.
+	**Note:** Specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **Text** property of **Label1** by typing **Label1.Text**.
 
 	![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color.png)
 
@@ -138,9 +138,9 @@ You can configure your app with formulas so that users can change your app's app
 
 	![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-max.png)
 
-1. Select the screen by clicking away from any control, and then set the screen's **Fill** property to this formula:<br>**RGBA( Slider1!Value, Slider2!Value, Slider3!Value, 1 )**
+1. Select the screen by clicking away from any control, and then set the screen's **Fill** property to this formula:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
 
-	As already described, you access control properties by using the **!** operator.  **Slider1!Value** refers to the slider's **Value** property, which reflects where the user has placed the slider between the **Min** and **Max** values.  As you type this formula, each control that it contains is color coded between the screen and the formula bar:
+	As already described, you access control properties by using the **.** operator.  **Slider1.Value** refers to the slider's **Value** property, which reflects where the user has placed the slider between the **Min** and **Max** values.  As you type this formula, each control that it contains is color coded between the screen and the formula bar:
 
 	![Change the formula for the background fill color of the screen, but not yet complete](./media/working-with-formulas/three-sliders-partial-rgba.png)
 

@@ -95,7 +95,7 @@ Create a logic flow that performs one or more tasks when an event occurs in an a
 
 	![Add logic flow to button](./media/use-logic-flows/add-flow-from-pane.png)
 
-1. In the formula bar, type or paste **RecordTitle!Text)** at the end of the formula that's been automatically added.
+1. In the formula bar, type or paste **RecordTitle.Text)** at the end of the formula that's been automatically added.
 
 	![OnSelect property that includes the logic flow](./media/use-logic-flows/onselect-with-flow.png)
 

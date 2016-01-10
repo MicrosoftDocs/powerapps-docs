@@ -75,7 +75,7 @@ Create an app with multiple screens, add ways for users to navigate between them
 
 1. On the **Target** screen, add a Back arrow, and set its **OnSelect** property to this formula:
 
-	**Navigate(Source, ScreenTransition!Fade)**
+	**Navigate(Source, ScreenTransition.Fade)**
 
 1. Open **Preview** by pressing F5, and then switch between the screens by selecting the arrows that you added.
 
@@ -91,11 +91,11 @@ You can use a [context variable](working-with-variables.md) in many ways, but yo
 
 1. On the **Source** screen, add a button, configure its **Text** property to show **Add**, and set its **OnSelect** property to this expression:
 
-	**Navigate(Target, ScreenTransition!Fade, {Mode:"Add"})**
+	**Navigate(Target, ScreenTransition.Fade, {Mode:"Add"})**
 
 1. On the **Source** screen, add a button, configure its **Text** property to show **Edit**, and set its **OnSelect** property to this expression:
 
-	**Navigate(Target, ScreenTransition!Fade, {Mode:"Edit"})**
+	**Navigate(Target, ScreenTransition.Fade, {Mode:"Edit"})**
 
 1. On the **Target** screen, add four labels, and configure their **Text** properties to show these strings:
 
