@@ -119,21 +119,21 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 1. Near the top of the screen, select **Event Signup**.
 
-	![A label surrounded by a selection box](./media/get-started-test-drive/selected-label.png)
+	![A text box surrounded by a selection box](./media/get-started-test-drive/selected-label.png)
 
-1. Move the label to the left edge of the screen by dragging the selection box around the label.
+1. Move the text box to the left edge of the screen by dragging the selection box around the text box.
 
-1. Highlight the text inside the label (for example, by triple-clicking it), and then change the label's text by typing **Sign up for PowerApps Conference**.
+1. Highlight the text inside the text box (for example, by triple-clicking it), and then change the text by typing **Sign up for PowerApps Conference**.
 
-1. Resize the label by dragging the white square in the right edge of the selection box until the label shows all the text.
+1. Resize the text box by dragging a handle in the upper-right or lower-right corner of the selection box until all the text appears in the box.
 
 	![Resizing a control](./media/get-started-test-drive/resize-label.png)
 
-1. With the label still selected, select **Text** in the properties list, and then type **Now()** in the formula bar.
+1. With the text box still selected, select **Text** in the properties list, and then type **Now()** in the formula bar.
 
-	The label shows the current date and time.
+	The text box shows the current date and time.
 
-1. With the label still selected, rename it by selecting **Label11_2** on the **Home** tab and then typing **Banner**.
+1. With the text box still selected, rename it by selecting **Label11_2** on the **Home** tab and then typing **Banner**.
 
 	![Renaming a control](./media/get-started-test-drive/rename-label.png)
 
