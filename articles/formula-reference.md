@@ -270,7 +270,7 @@ Reference information is also available for:
 
 **[Update](functions/function-update-updateif.md)** Replaces a record in a data source.
 
-**[UpdateContext](functions/function-updatecontext.md)** Creates or updates one or more [context variables](functions/working-with-variables.md#context-variables) of the current screen.
+**[UpdateContext](functions/function-updatecontext.md)** Creates or updates one or more [context variables](functions/working-with-variables.md#create-a-context-variable) of the current screen.
 
 **[UpdateIf](functions/function-update-updateif.md)** Modifies a set of records in a data source based on a condition.
 

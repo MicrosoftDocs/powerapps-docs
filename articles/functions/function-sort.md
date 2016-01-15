@@ -43,7 +43,7 @@ A tables is a value in PowerApps, just as a string or a number is. You can speci
 
 ## Examples ##
 
-For the following examples, we'll use the **IceCream** data source, which contains the data in this table:
+For the following examples, we'll use the **IceCream** [data source](working-with-data-sources.md), which contains the data in this table:
 
 ![](media/function-sort/icecream.png)
 
@@ -55,7 +55,7 @@ For the following examples, we'll use the **IceCream** data source, which contai
 | **Sort( IceCream, Quantity + OnOrder )** | Sorts **IceCream** by the sum of its **Quantity** and **OnOrder** columns for each record individually. The sum is a number, so the table is sorted numerically.  By default, the sort order is ascending.  | ![](media/function-sort/icecream-total.png) |
 | **Sort( Sort( IceCream, OnOrder ), Quantity )** | Sorts **IceCream** first by its **OnOrder** column, and then by its **Quantity** column.  Note that "Pistachio" rose above "Vanilla" in the first sort based on **OnOrder**, and then together they moved to their appropriate place based on **Quantity**.  | ![](media/function-sort/icecream-onorder-quantity.png) |
 
-To run these examples yourself, create the **IceCream** data source as a collection:
+To run these examples yourself, create the **IceCream** data source as a [collection](working-with-data-sources.md#collections):
 
 1. Add a button, and set its **OnSelect** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
 

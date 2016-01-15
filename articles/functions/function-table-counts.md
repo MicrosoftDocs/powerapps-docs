@@ -52,7 +52,7 @@ Each of these functions returns a number.
 
 ## Example ##
 
-1. Import or create a [collection](working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](show-images-text-gallery-sort-filter.md) describes.
+1. Import or create a [collection](working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
 
 2. Add a label, and set its **Text** property to this formula:
 

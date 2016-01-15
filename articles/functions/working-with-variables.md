@@ -95,7 +95,7 @@ Let's rebuild our adding machine by using a context variable:
 
 1. Add an input-text control, named **Text1**, and two buttons, named **Button1** and **Button2**.
 
-1. Set the **Text** property of **Button1** so it says **Add**, and set the **Text** property of **Button2** so it says **Clear**.
+1. Set the **Text** property of **Button1** so it says **Add**, and set the **Text** property of **Button2** so it says **[Clear](function-clear-collect-clearcollect.md)**.
 
 1. To update the running total whenever a user selects the **Add** button, set its **OnSelect** property to this formula<br> **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**.
 
@@ -103,7 +103,7 @@ Let's rebuild our adding machine by using a context variable:
 
 	![](media/working-with-variables/context-variable-1.png)
 
-1. To set the running total to **0** whenever a user selects the **Clear** button, set its **OnSelect** property to this formula:<br>
+1. To set the running total to **0** whenever a user selects the **[Clear](function-clear-collect-clearcollect.md)** button, set its **OnSelect** property to this formula:<br>
 **UpdateContext( { RunningTotal: 0 } )**
 
 	Again, **[UpdateContext](function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
@@ -133,7 +133,7 @@ Let's recreate our adding machine by using a collection:
 
 1. Add an input-text control, named **Text1**, and two buttons, named **Button1** and **Button2**.
 
-1. Set the **Text** property of **Button1** so it says **Add**, and set the **Text** property of **Button2** so it says **Clear**.
+1. Set the **Text** property of **Button1** so it says **Add**, and set the **Text** property of **Button2** so it says **[Clear](function-clear-collect-clearcollect.md)**.
 
 1. To update the running total whenever a user selects the **Add** button, set its **OnSelect** property to this formula:<br> **ClearCollect( RunningTotal, First( RunningTotal )!Value + Text1 )**
 
@@ -141,7 +141,7 @@ Let's recreate our adding machine by using a collection:
 
 	![](media/working-with-variables/collection-1.png)
 
-1. To set the running total to **0** whenever a user selects the **Clear** button, set its **OnSelect** property to this formula:<br>
+1. To set the running total to **0** whenever a user selects the **[Clear](function-clear-collect-clearcollect.md)** button, set its **OnSelect** property to this formula:<br>
 **ClearCollect( RunningTotal, 0 )**
 
 	Again, **[ClearCollect](function-clear-collect-clearcollect.md)** is used with the formula **ClearCollect( RunningTotal, 0 )**.

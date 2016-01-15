@@ -49,7 +49,7 @@ For the examples in this section, the [data source](working-with-data-sources.md
 | **Len( "" )** | Measures the length of an empty string. | 0 |
 
 ### Single-column table
-For the first example in this section, the [data source](working-with-data-sources.md) is named **People** and contains this data:
+For the first example in this section, the data source is named **People** and contains this data:
 
 ![](media/function-len/people-table.png)
 
