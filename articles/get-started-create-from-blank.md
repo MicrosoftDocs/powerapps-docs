@@ -158,7 +158,7 @@ To follow this tutorial exactly:
 
 1. On the **ChangeScreen**, add a text box, and configure it to show **Day** in bold letters.
 
-	![Added label with bold text to ChangeScreen](./media/get-started-create-from-blank/day-label.png)
+	![Added text box with bold text to ChangeScreen](./media/get-started-create-from-blank/day-label.png)
 
 1. On the **Insert** tab, select **Text**, and then select **Input Text**.
 
@@ -166,7 +166,7 @@ To follow this tutorial exactly:
 
 1. Move the new input-text control just under the **Day** text box.
 
-	![Move text-input control under Day label](./media/get-started-create-from-blank/move-input-text.png)
+	![Move text-input control under Day box](./media/get-started-create-from-blank/move-input-text.png)
 1. Name the input-text control **inputDay**, and set its **Default** property to **Record.StartDay**.
 
 	You'll refer to that control by its name later in this topic, when you configure the **Save** button.

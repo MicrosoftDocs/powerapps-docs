@@ -43,7 +43,7 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 	![Option to add a card gallery](./media/create-card-gallery/add-gallery.png)
 
-1. Resize the gallery to cover almost the entire screen, but leave enough room at the top for a label to identify the screen.
+1. Resize the gallery to cover almost the entire screen, but leave enough room at the top for a text box to identify the screen.
 
 	![Resize a card gallery](./media/create-card-gallery/resize-gallery.png)
 
