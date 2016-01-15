@@ -54,7 +54,7 @@ You check the **[Errors](function-errors.md)** table and find an error:
 
 | Record | [Column](working-with-tables.md#columns) | Message | Error |
 |--------|--------|---------|-------|
-| **{ ID: 1, Flavor: "Strawberry", Quantity: 300 }** | *blank* | **"The record you are trying to modify has been modified by another user.  Please revert the record and try again."** | **ErrorKind!Conflict** |
+| **{ ID: 1, Flavor: "Strawberry", Quantity: 300 }** | *blank* | **"The record you are trying to modify has been modified by another user.  Please revert the record and try again."** | **ErrorKind.Conflict** |
 
 Based on the **Error** column, you have a **Reload** button for which the **OnSelect** property to set to this formula:<br>
 **Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**

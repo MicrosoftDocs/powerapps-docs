@@ -51,9 +51,9 @@ The examples in this section use an input-text control, named **Author**, as the
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Lower(&nbsp;Author!Text&nbsp;)** | Converts any uppercase letters in the string to lowercase. | "e. e. cummings" |
-| **Upper(&nbsp;Author!Text&nbsp;)** | Converts any lowercase letters in the string to uppercase. | "E. E. CUMMINGS" |
-| **Proper(&nbsp;Author!Text&nbsp;)** | Converts the first letter of each word to uppercase if it's lowercase, and converts any other uppercase letters to lowercase. | "E. E. Cummings" |
+| **Lower(&nbsp;Author.Text&nbsp;)** | Converts any uppercase letters in the string to lowercase. | "e. e. cummings" |
+| **Upper(&nbsp;Author.Text&nbsp;)** | Converts any lowercase letters in the string to uppercase. | "E. E. CUMMINGS" |
+| **Proper(&nbsp;Author.Text&nbsp;)** | Converts the first letter of each word to uppercase if it's lowercase, and converts any other uppercase letters to lowercase. | "E. E. Cummings" |
 
 ### Single-column table
 The examples in this section convert strings from the **Address** [column](working-with-tables.md#columns) of the **People** data source, which contains this data:
@@ -72,6 +72,6 @@ Each formula returns a single-column table that contains the converted strings.
 
 1. Add an input-text control, and name it **Source**.
 
-1. Add a label, and set its **Text** property to this function:<br>**Proper(Source!Text)**
+1. Add a label, and set its **Text** property to this function:<br>**Proper(Source.Text)**
 
 1. Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**

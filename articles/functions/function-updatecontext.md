@@ -75,7 +75,7 @@ Every context variable is scoped to a screen. If you want to define a context va
 | **UpdateContext( {&nbsp;Counter:&nbsp;1&nbsp;} )** | Creates or modifies the context variable **Counter**, setting its value to **1**.  | **Counter** has the value **1**. You can reference that variable by using the name **Counter** in a formula. |
 | **UpdateContext( {&nbsp;Counter:&nbsp;2&nbsp;} )** | Sets the value of the **Counter** context variable from the previous example to **2**. | **Counter** has the value **2**.  |
 | **UpdateContext( {&nbsp;Name:&nbsp;"Lily",&nbsp;Score:&nbsp;10&nbsp;} )** | Creates or modifies the context variables **Name** and **Score**, setting their values to **Lily** and **10** respectively.| **Name** has the value **Lily**, and **Score** has the value **10**. |
-| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** | Creates or modifies the context variable **Person**, setting its value to a record. The record contains two columns, named **Name** and **Address**. The value of the **Name** column is **Milton**, and the value of the **Address** column is **1 Main St**.|**Person** has the value of record **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}**.<br><br>Reference this record as a whole with the name **Person**, or reference an individual column of this record with **Person!Name** or **Person!Address**. |
+| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** | Creates or modifies the context variable **Person**, setting its value to a record. The record contains two columns, named **Name** and **Address**. The value of the **Name** column is **Milton**, and the value of the **Address** column is **1 Main St**.|**Person** has the value of record **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}**.<br><br>Reference this record as a whole with the name **Person**, or reference an individual column of this record with **Person.Name** or **Person.Address**. |
 | **UpdateContext( {&nbsp;Person: Patch(&nbsp;Person,&nbsp;{Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;) }&nbsp;)** | Works with the **[Patch](function-patch.md)** function to update the **Person** context variable by setting the value of the **Address** column to **2 Main St**.  | **Person** now has the value of record **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}**.  |
 
 ### Step-by-step example ###
@@ -84,15 +84,15 @@ Every context variable is scoped to a screen. If you want to define a context va
 
 1. On the **Source** screen, add two buttons, and set their **Text** properties so that one says **English** and the other says **Spanish**.
 
-1. Set the **OnSelect** property of the **English** button to this expression:<br>**Navigate(Target, ScreenTransition!Fade, {Language:"English"})**
+1. Set the **OnSelect** property of the **English** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"English"})**
 
-1. Set the **OnSelect** property of the **Spanish** button to this expression:<br>**Navigate(Target, ScreenTransition!Fade, {Language:"Spanish"})**
+1. Set the **OnSelect** property of the **Spanish** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Spanish"})**
 
 1. On the **Target** screen, add a label, and set its **Text** property to this expression:<br>**If(Language="English", "Hello!", "Hola!")**
 
 1. On the **Target** screen, select **Shapes** on the **Insert** tab, and then select the Back arrow.
 
-1. Set the Back arrow's **OnSelect** property to this formula:<br>**Navigate(Source, ScreenTransition!Fade)**
+1. Set the Back arrow's **OnSelect** property to this formula:<br>**Navigate(Source, ScreenTransition.Fade)**
 
 1. From the **Source** screen, press F5, and then select the button for either language.
 

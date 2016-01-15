@@ -55,9 +55,9 @@ The examples in this section use an input-text control as their [data source](wo
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Left( Author!Text, 5 )** | Extracts up to five characters from the start of the string. | "E. E." |
-| **Mid( Author!Text, 7, 4 )** | Extracts up to four characters, starting with the seventh character, from the string. | "Cumm" |
-| **Right( Author!Text, 5 )** | Extracts up to five characters from the end of the string. | "mings" |
+| **Left( Author.Text, 5 )** | Extracts up to five characters from the start of the string. | "E. E." |
+| **Mid( Author.Text, 7, 4 )** | Extracts up to four characters, starting with the seventh character, from the string. | "Cumm" |
+| **Right( Author.Text, 5 )** | Extracts up to five characters from the end of the string. | "mings" |
 
 ### Single-column table
 Each example in this section extracts strings from the **Address** [column](working-with-tables.md#columns) of this data source, named **People**, and returns a single-column table that contains the results:
@@ -76,6 +76,6 @@ Each example in this section extracts strings from the **Address** [column](work
 
 2. Set the **Text** property of the lower label in the gallery to this function:
 
-	**Right(ThisItem!ProductName, 3)**
+	**Right(ThisItem.ProductName, 3)**
 
 	The label shows the last three characters of each product name.

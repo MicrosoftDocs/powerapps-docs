@@ -45,7 +45,7 @@ For the examples in this section, the [data source](working-with-data-sources.md
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Len( Author!Text )** | Measures the length of the string in the **Author** control. | 14 |
+| **Len( Author.Text )** | Measures the length of the string in the **Author** control. | 14 |
 | **Len( "" )** | Measures the length of an empty string. | 0 |
 
 ### Single-column table

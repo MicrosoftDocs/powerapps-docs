@@ -48,7 +48,7 @@ The diagram above shows the flow of information when an app reads the informatio
 - The information is stored and shared through a storage service (in this case, a SharePoint list of an Office 365 site).
 - A connection makes this information available to the app.  The connection takes care of authentication of the user to access the information.
 - When the app is started or the **[Refresh](function-refresh.md)** function invokes, information is drawn from the connection into a data source in the app for local use.
-- Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **Items** property to the data source: **Gallery!Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **Default** property.  
+- Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **Items** property to the data source: **Gallery.Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **Default** property.  
 - The data source is also a table.  So you can use **[Filter](function-filter-lookup.md)**, **[Sort](function-sort.md)**, **[AddColumns](function-table-shaping.md)**, and other functions to refine and augment the data source before using it as a whole.  You can also use the **[Lookup](function-filter-lookup.md)**, **[First](function-first-last.md)**, **[Last](function-first-last.md)**, and other functions to work with individual records.
 
 For example, let's walk through the steps to display our SharePoint list:
@@ -73,7 +73,7 @@ Note that, to modify an existing record of a data source, the record must have o
 ![](media/working-with-data-sources/writing-to-a-datasource.png)
 The diagram above shows the flow of information to update a data source:
 
-- A gallery can also provide a container for input controls, such as an input-text box or a slider.  As with the browse screen, the **Items** property is used but, for a single record, often takes the form of  **Gallery!Items = Table( EditRecord )**.
+- A gallery can also provide a container for input controls, such as an input-text box or a slider.  As with the browse screen, the **Items** property is used but, for a single record, often takes the form of  **Gallery.Items = Table( EditRecord )**.
 - Each input control exposes an **Update** property.  This property maps the user's input to a specific property of the record.
 - The gallery aggregates the **Update** property of each of the controls within it and exposes this as an **Updates** property.
 - A button or an image control on the screen is used to submit changes to the data source's service.  You use a formula based on the **[Patch](function-patch.md)** function from the **OnSelect** formula of the control.
@@ -81,19 +81,19 @@ The diagram above shows the flow of information to update a data source:
 
 Let's continue our walkthrough and add a screen for editing records:
 
-3. On our browse screen, in the first item of the gallery, add a button, and label it "Edit".  Set the **OnSelect** property to the formula **Navigate( EditScreen, Transition!None, { EditRecord: ThisItem } )**.  You'll see an error because the EditScreen doesn't yet exist, but it will in the next step.
+3. On our browse screen, in the first item of the gallery, add a button, and label it "Edit".  Set the **OnSelect** property to the formula **Navigate( EditScreen, Transition.None, { EditRecord: ThisItem } )**.  You'll see an error because the EditScreen doesn't yet exist, but it will in the next step.
 4. Insert another screen, and name it **EditScreen**.  This will resolve the error on the BrowseScreen.
 4. Insert a card gallery, rename it **EditGallery**, and set its **Items** property to **Table( EditRecord )**  
 5. Add a section for each record property that the user will be able to change.
 6. Insert an input-text box:  
 	- Name it **NameControl**.
 	- Set its **Default** property to **Name**.  This is the name of the column in the SharePoint list.  We are mapping the column into the control.
-	- Set its **Update** property to a record **{ *Name*: *NameControl!Text* }**.  This is aggregated with other control **[Update](function-update-updateif.md)** properties in the gallery to form the **EditGallery!Updates** property.  We are mapping the control back to the column.
+	- Set its **Update** property to a record **{ *Name*: *NameControl.Text* }**.  This is aggregated with other control **[Update](function-update-updateif.md)** properties in the gallery to form the **EditGallery.Updates** property.  We are mapping the control back to the column.
 7. Insert a second input-text box:  
 	- Name it **SizeControl**.
 	- Set its **Default** property to **T-Shirt Size**.  This is the name of the column in the SharePoint list.  We are mapping the column into the control.
-	- Set its **Update** property to a record **{ *T-Shirt Size*: *SizeControl!Text* }**.  This is aggregated with other control **[Update](function-update-updateif.md)** properties in the gallery to form the **EditGallery!Updates** property.  We are mapping the control back to the column.
-7. Insert a button outside the card gallery.  Label it **Save**, and set its **OnSelect** property to **Patch( Customers, EditRecord, EditGallery!Updates ); Back()**
+	- Set its **Update** property to a record **{ *T-Shirt Size*: *SizeControl.Text* }**.  This is aggregated with other control **[Update](function-update-updateif.md)** properties in the gallery to form the **EditGallery.Updates** property.  We are mapping the control back to the column.
+7. Insert a button outside the card gallery.  Label it **Save**, and set its **OnSelect** property to **Patch( Customers, EditRecord, EditGallery.Updates ); Back()**
 8. Preview the app, browse and edit records of the SharePoint list, and verify changes on the SharePoint site.
 
 ## Validation ##
@@ -114,15 +114,15 @@ Let's continue our walkthrough and add validation to our screen:
 1.  Let's add a commonly used red asterisk to indicate that a field is required:
 	-  Insert a label control on our edit screen, just above the **NameControl**.
 	-  Place a single asterisk ("*") in this label.
-	-  Set the **[Color](function-colors.md)** to **Color!Red**.
-	-  Set the **Visible** property of this label to **DataSourceInfo( Customers, DataSourceInfo!Required, "Name" )**.  When true, this will show the red asterisk to indicate that the control requires a value.
+	-  Set the **[Color](function-colors.md)** to **Color.Red**.
+	-  Set the **Visible** property of this label to **DataSourceInfo( Customers, DataSourceInfo.Required, "Name" )**.  When true, this will show the red asterisk to indicate that the control requires a value.
 2.  Let's check that the Name control is filled in before we **[Patch](function-patch.md)**:
 	-  Modify the **OnSubmit** property of the **Save** button to check if the **EditGallery** believes the record is valid.  The **[Validate](function-validate.md)** function checks for required fields using the same information that helped **[DataSourceInfo](function-datasourceinfo.md)** show the red asterisk:
-		- **if( IsEmpty( Validate( Customers, EditRecord, EditGallery!Updates) ), Patch( Customers, EditRecord, EditGallery!Updates ); Back() )**.  
+		- **if( IsEmpty( Validate( Customers, EditRecord, EditGallery.Updates) ), Patch( Customers, EditRecord, EditGallery.Updates ); Back() )**.  
 4.  Let's add a check that the "T-Shirt Size" has one of three possible values:
-	-  Set the **Valid** property of the **Size** control to **Size!Text = "Small" || Size!Text = "Medium" || Size!Text = "Large"**.  This value will automatically be included in the **Valid** property for the gallery.
+	-  Set the **Valid** property of the **Size** control to **Size.Text = "Small" || Size.Text = "Medium" || Size.Text = "Large"**.  This value will automatically be included in the **Valid** property for the gallery.
 	-  Again, change our **[Patch](function-patch.md)** formula to now include a check for **Valid** properties in the **EditGallery**:
-		- **if( EditGallery!Valid && IsEmpty( Validate( Customers, EditRecord, EditGallery!Updates) ), Patch( Customers, EditRecord, EditGallery!Updates ); Back() )**.
+		- **if( EditGallery.Valid && IsEmpty( Validate( Customers, EditRecord, EditGallery.Updates) ), Patch( Customers, EditRecord, EditGallery.Updates ); Back() )**.
 
 ## Error handling ##
 
@@ -138,12 +138,12 @@ The **[Errors](function-errors.md)** function returns a table of error informati
 
 Continuing our example:
 
-1. Insert a label on the **EditScreen**.  Set its text property to **Lookup( Errors( Customers, EditRecord ), IsBlank( Column ) )!Message**.  This will show any errors for the **EditRecord**, recalculated as updates are attempted.  The **[Filter](function-filter-lookup.md)** call reduces what is shown here to record-level errors, as opposed to errors that can be attributed to a single column.  Before a change is made and if a change is successful, this formula will return *blank*.
+1. Insert a label on the **EditScreen**.  Set its text property to **Lookup( Errors( Customers, EditRecord ), IsBlank( Column ) ).Message**.  This will show any errors for the **EditRecord**, recalculated as updates are attempted.  The **[Filter](function-filter-lookup.md)** call reduces what is shown here to record-level errors, as opposed to errors that can be attributed to a single column.  Before a change is made and if a change is successful, this formula will return *blank*.
 
 2. Change the **OnSelect** for the **Save** button to:
 
-	**If( EditGallery!Valid && IsEmpty( Validate( Customers, EditRecord, EditGallery!Updates) ),
-	UpdateContext( { EditReturn: Patch( Customers, EditRecord, EditGallery!Updates ) } );<br> If( IsEmpty( Errors( Customers, EditReturn ) ), Back() )**.  
+	**If( EditGallery.Valid && IsEmpty( Validate( Customers, EditRecord, EditGallery.Updates) ),
+	UpdateContext( { EditReturn: Patch( Customers, EditRecord, EditGallery.Updates ) } );<br> If( IsEmpty( Errors( Customers, EditReturn ) ), Back() )**.  
 
 	That's a mouthful, so let's break it down:
 	- As before, the validation logic prevents us from doing the **[Patch](function-patch.md)** until we're ready.
@@ -190,14 +190,14 @@ Continuing our example, let's add a details screen and wire all three screens to
 5. Add a section for each record property that the user will be able to view.
 6. Insert an appropriate control for viewing data, such as a label control.  
 	- Set its **Default** property to a column name of the data source (SharePoint list).
-7. Insert a button outside the card gallery.  Name the button **Edit**, and set its **OnSelect** property to **Navigate( EditScreen, ScreenTransition!None, { EditRecord: DetailRecord } )**
+7. Insert a button outside the card gallery.  Name the button **Edit**, and set its **OnSelect** property to **Navigate( EditScreen, ScreenTransition.None, { EditRecord: DetailRecord } )**
 8. Insert another button outside the card gallery.  Name the button **[Back](function-navigate.md)**, and set its **OnSelect** property to **Back()**.  This will return the user to the browse screen when they're done viewing the details.
-8. Return to the browse screen, change the **Edit** button into a **Detail** button, and change its **OnSelect** property to **Navigate( DetailScreen, ScreenTransition!None, { DetailRecord: ThisItem } )**.
+8. Return to the browse screen, change the **Edit** button into a **Detail** button, and change its **OnSelect** property to **Navigate( DetailScreen, ScreenTransition.None, { DetailRecord: ThisItem } )**.
 8. Preview the app, and browse, view details, and edit records of the SharePoint list.  Verify your changes on the SharePoint List too.
 
 Two pieces of extra credit:
 
-1. Add another button on the **BrowseScreen**, and label the button **New**.  Set its **OnSelect** property to **Navigate( EditScreen, ScreenTransition!None, { EditRecord: Defaults( Customers ) }**.  This will pass a record to the **EditScreen** that, when used with **[Patch](function-patch.md)**, will create a record.
+1. Add another button on the **BrowseScreen**, and label the button **New**.  Set its **OnSelect** property to **Navigate( EditScreen, ScreenTransition.None, { EditRecord: Defaults( Customers ) }**.  This will pass a record to the **EditScreen** that, when used with **[Patch](function-patch.md)**, will create a record.
 2. Add another button on the **DetailScreen**, label it **Delete**, and set its **OnSelect** property to **Remove( Customers, DetailRecord ); Back()**.  This will delete the current record and return the user to the browse screen.
 
 ## Collections ##

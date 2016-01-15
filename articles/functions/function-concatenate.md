@@ -60,11 +60,11 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 1. Add an input-text control, and name it **AuthorName**.
 
 1. Add a label, and set its **Text** property to this formula:<br>
-**Concatenate("By ", AuthorName!Text)**
+**Concatenate("By ", AuthorName.Text)**
 
 1. Type your name in **AuthorName**.
 
 	The label shows **By** followed by your name.
 
 If you had an **Employees** table that contained a **FirstName** column and a **LastName** column, this formula would concatenate the data in each row of those columns.
-<br>**Concatenate(Employees!FirstName, " ", Employees!LastName)**
+<br>**Concatenate(Employees.FirstName, " ", Employees.LastName)**

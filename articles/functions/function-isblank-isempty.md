@@ -64,13 +64,13 @@ The return value for both functions is a Boolean **true** or **false**.
 
 1. Add a label, and set its **Text** property to this formula:
 
-	**If( IsBlank( FirstName!Text ), "First Name is a required field." )**
+	**If( IsBlank( FirstName.Text ), "First Name is a required field." )**
 
 	By default, the **Text** property of an input-text control is set to **"Input Text"**. Because the control contains a value, it isn't blank, and the label control doesn't display any message.
 
 1. Remove all the characters from the input-text control, including any spaces.
 
-	Because the control no longer contains any characters, its **Text** property will be *blank*, and **IsBlank( FirstName!Text )** will be **true**. The required field message is displayed.
+	Because the control no longer contains any characters, its **Text** property will be *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 
 You can perform validation by using other tools. See the **[Validate](function-validate.md)** function and [working with data sources](working-with-data-sources.md).  
 

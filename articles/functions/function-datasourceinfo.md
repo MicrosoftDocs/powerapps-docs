@@ -40,11 +40,11 @@ You can use **DataSourceInfo** to obtain information about a particular column o
 
 | Information Argument | Result Type | Description |
 |-------------|-------------|-------------|
-| **DataSourceInfo!DisplayName** | String | Display name for the column.  If no display name is defined, returns the column name. |
-| **DataSourceInfo!MaxLength** | Number | Maximum number of characters that the column can hold.  Applies only to columns that contain strings.  If a maximum isn't set, returns *blank*. |
-| **DataSourceInfo!MaxValue** | Number | Maximum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a maximum isn't set, returns *blank*.|
-| **DataSourceInfo!MinValue** | Number | Minimum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a minimum isn't set, returns *blank*.|
-| **DataSourceInfo!Required** | Boolean | Is a value required for this column?  If not set by the data source, returns **false**.  |
+| **DataSourceInfo.DisplayName** | String | Display name for the column.  If no display name is defined, returns the column name. |
+| **DataSourceInfo.MaxLength** | Number | Maximum number of characters that the column can hold.  Applies only to columns that contain strings.  If a maximum isn't set, returns *blank*. |
+| **DataSourceInfo.MaxValue** | Number | Maximum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a maximum isn't set, returns *blank*.|
+| **DataSourceInfo.MinValue** | Number | Minimum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a minimum isn't set, returns *blank*.|
+| **DataSourceInfo.Required** | Boolean | Is a value required for this column?  If not set by the data source, returns **false**.  |
 
 The third argument is the name of a column as a string.  For example, column **Phone** in collection **People** would be passed as **"Phone"** including the double quotes.
 
@@ -54,10 +54,10 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 
 | Information Argument | Result Type | Description |
 |-------------|-------------|-------------|
-| **DataSourceInfo!CreatePermission** | Boolean | Does the current user have permission to create records in this data source?  If not set by the data source, returns **true**. |
-| **DataSourceInfo!DeletePermission** | Boolean | Does the current user have permission to delete records in this data source?  If not set by the data source, returns **true**.|
-| **DataSourceInfo!EditPermission** | Boolean | Does the current user have permission to edit records in this data source?  If not set by the data source, returns **true**.|
-| **DataSourceInfo!ReadPermission** | Boolean | Does the current user have permission to read records in this data source?  If not set by the data source, returns **true**.|
+| **DataSourceInfo.CreatePermission** | Boolean | Does the current user have permission to create records in this data source?  If not set by the data source, returns **true**. |
+| **DataSourceInfo.DeletePermission** | Boolean | Does the current user have permission to delete records in this data source?  If not set by the data source, returns **true**.|
+| **DataSourceInfo.EditPermission** | Boolean | Does the current user have permission to edit records in this data source?  If not set by the data source, returns **true**.|
+| **DataSourceInfo.ReadPermission** | Boolean | Does the current user have permission to read records in this data source?  If not set by the data source, returns **true**.|
 
 ## Syntax ##
 
@@ -86,13 +86,13 @@ The data source has also provided this information:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!DisplayName,&nbsp;"Quantity"&nbsp;)** | Returns the display name for the **Quantity** column of the **IceCream** data source. | "Quantity on Hand" |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxLength,&nbsp;"Flavor"&nbsp;)** | Returns the maximum length of the string for the **Flavor** column of the **IceCream** data source. | 30 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!Required,&nbsp;"Flavor"&nbsp;)** | Is the **Flavor** column of the **IceCream** data source required? | **true** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!Required,&nbsp;"Quantity"&nbsp;)** | Is the **Quantity** column of the **IceCream** data source required? | **false** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MaxValue,&nbsp;"Quantity"&nbsp;)** | Returns the maximum numeric value for the **Quantity** column of the **IceCream** data source. | 100 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!MinValue,&nbsp;"Quantity"&nbsp;)** | Returns the minimum numeric value for the **Quantity** column of the **IceCream** data source. | 0 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!ReadPermission)** | Can the current user read records in the **IceCream** data source? | **true** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!EditPermission)** | Can the current user edit records in the **IceCream** data source? | **true** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!CreatePermission)** | Can the current user create records in the **IceCream** data source? | **false** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo!DeletePermission)** | Can the current user delete records in the **IceCream** data source? | **false** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DisplayName,&nbsp;"Quantity"&nbsp;)** | Returns the display name for the **Quantity** column of the **IceCream** data source. | "Quantity on Hand" |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MaxLength,&nbsp;"Flavor"&nbsp;)** | Returns the maximum length of the string for the **Flavor** column of the **IceCream** data source. | 30 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Flavor"&nbsp;)** | Is the **Flavor** column of the **IceCream** data source required? | **true** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Quantity"&nbsp;)** | Is the **Quantity** column of the **IceCream** data source required? | **false** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MaxValue,&nbsp;"Quantity"&nbsp;)** | Returns the maximum numeric value for the **Quantity** column of the **IceCream** data source. | 100 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MinValue,&nbsp;"Quantity"&nbsp;)** | Returns the minimum numeric value for the **Quantity** column of the **IceCream** data source. | 0 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.ReadPermission)** | Can the current user read records in the **IceCream** data source? | **true** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.EditPermission)** | Can the current user edit records in the **IceCream** data source? | **true** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.CreatePermission)** | Can the current user create records in the **IceCream** data source? | **false** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DeletePermission)** | Can the current user delete records in the **IceCream** data source? | **false** |

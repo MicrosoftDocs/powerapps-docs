@@ -28,9 +28,9 @@ The **User** function returns a [record](working-with-tables.md#records) of info
 
 | Property | Description |
 |----------|-------------|
-| **User()!Email** | Email address of the current user. |
-| **User()!FullName** | Full name of the current user, including first and last names. |
-| **User()!Image** | Image of the current user. |
+| **User().Email** | Email address of the current user. |
+| **User().FullName** | Full name of the current user, including first and last names. |
+| **User().Image** | Image of the current user. |
 
 ## Syntax ##
 

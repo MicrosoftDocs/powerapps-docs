@@ -62,7 +62,7 @@ Each of these functions returns a number.
 
 2. Add another label, and set its **Text** property to this formula:
 
-	**CountA(Inventory!UnitsInStock)**
+	**CountA(Inventory.UnitsInStock)**
 
 	The label shows **5**, the number of non-empty cells in the **UnitsInStock** column.
 
