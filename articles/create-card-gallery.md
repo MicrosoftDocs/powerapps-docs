@@ -75,9 +75,9 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 ## Add a custom card ##
 
-1. Select **Add section**, select **Text box** on the **Insert** tab, and then configure the new label to show **My custom rating card**.
+1. Select **Add section**, select **Text box** on the **Insert** tab, and then configure the new text box to show **My custom rating card**.
 
-1. On the **Insert** tab, select **Controls,** select **Rating**, and then move the rating control so it appears under the label.
+1. On the **Insert** tab, select **Controls,** select **Rating**, and then move the rating control so that it appears under the text box.
 
 	![Three built-in cards and one custom card](./media/create-card-gallery/add-rating.png)
 

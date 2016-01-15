@@ -116,22 +116,22 @@ To follow this tutorial exactly:
 
 1. In the **Subtitle1** list, select **StartTime**.
 
-1. Change the label at the top of the screen to show **View records**, and resize the gallery to show four items.
+1. Change the text box at the top of the screen to show **View records**, and resize the gallery to show four items.
 
 	![Screen in which users can scroll through a set of data](./media/get-started-create-from-blank/view-screen-button.png)
 
-## Add a label to the gallery ##
-1. In the first item of the gallery, select the **Body1** label.
+## Add a text box to the gallery ##
+1. In the first item of the gallery, select the **Body1** text box.
 
-	![View screen with gallery and label](./media/get-started-create-from-blank/select-body.png)
+	![View screen with gallery and text box](./media/get-started-create-from-blank/select-body.png)
 
 	**Note:** The first item in a gallery is the gallery template. When you change it, you automatically change all other items in the gallery.
 
-1. Set the label's **PaddingTop** property to **0** and its **Height** property to **50**.
+1. Set the text box's **PaddingTop** property to **0** and its **Height** property to **50**.
 
-1. Copy the label, paste it, and then move the copy so that it appears just under the original label.
+1. Copy the text box, paste it, and then move the copy so that it appears just under the original text box.
 
-1. Set the **Text** property of the copied label to **ThisItem.Staff2**.
+1. Set the **Text** property of the copied text box to **ThisItem.Staff2**.
 
 	![Screen in which users can scroll through a set of data](./media/get-started-create-from-blank/browse-gallery.png)
 
@@ -150,13 +150,13 @@ To follow this tutorial exactly:
 
 	This formula also comprises the [**Navigate**](function-navigate.md) function and sets a [context variable](function-updatecontext.md) to the [default values](function-defaults.md) of the **Schedule** data source.
 
-1. On the **ChangeScreen**, add a label that identifies it, and [add a Back arrow](add-screen-context-variables.md) that returns to the **ViewScreen** when a user selects the arrow.
+1. On the **ChangeScreen**, add a text box that identifies the screen, and [add a Back arrow](add-screen-context-variables.md) that returns to the **ViewScreen** when a user selects the arrow.
 
-	![ChangeScreen with label and arrow](./media/get-started-create-from-blank/change-screen-blank.png)
+	![ChangeScreen with text box and arrow](./media/get-started-create-from-blank/change-screen-blank.png)
 
 ## Configure the ChangeScreen ##
 
-1. On the **ChangeScreen**, add a label, and configure it to show **Day** in bold letters.
+1. On the **ChangeScreen**, add a text box, and configure it to show **Day** in bold letters.
 
 	![Added label with bold text to ChangeScreen](./media/get-started-create-from-blank/day-label.png)
 
@@ -164,7 +164,7 @@ To follow this tutorial exactly:
 
 	![Text-input control on the Text option of the Insert tab](./media/get-started-create-from-blank/add-text-input.png)
 
-1. Move the new input-text control just under the **Day** label.
+1. Move the new input-text control just under the **Day** text box.
 
 	![Move text-input control under Day label](./media/get-started-create-from-blank/move-input-text.png)
 1. Name the input-text control **inputDay**, and set its **Default** property to **Record.StartDay**.
@@ -176,23 +176,23 @@ To follow this tutorial exactly:
 	- If the user navigates to this screen by selecting an arrow in the **BrowseGallery**, this control shows the **StartDay** value for the item that the user selected.
 	- If the user navigates to this screen by selecting the **New** button on the **ViewScreen**, this control shows the data source's default value for the **Day** column. Because this data source has no defaults, the control will be blank.
 
-1. Copy the label and the input-text control, paste them three times, and arrange them in a column that alternates labels with input-text controls.
+1. Copy the text box and the input-text control, paste them three times, and arrange them in a column that alternates text boxes with input-text controls.
 
-	![Create three copies of the label and the text-input control](./media/get-started-create-from-blank/copy-labels-input-text.png)
+	![Create three copies of the text box and the text-input control](./media/get-started-create-from-blank/copy-labels-input-text.png)
 
-1. Configure the pasted labels to show these strings:
+1. Configure the pasted text boxes to show these strings:
 	- **Time**
 	- **Staff1**
 	- **Staff2**
 
-	![Update the three copies of the label](./media/get-started-create-from-blank/update-pasted-labels.png)
+	![Update the three copies of the text box](./media/get-started-create-from-blank/update-pasted-labels.png)
 
-1. Name each input-text control based on the text of the label above it:
+1. Name each input-text control based on the text above it:
 	- **inputTime**
 	- **inputStaff1**
 	- **inputStaff2**
 
-1. Set the **Default** property of each input-text control based on the text of the label above it:
+1. Set the **Default** property of each input-text control based on the text above it:
 	- **Record.StartTime**
 	- **Record.Staff1**
 	- **Record.Staff2**
@@ -224,7 +224,7 @@ To follow this tutorial exactly:
 
 	In this formula, the [**Remove**](function-remove-removeif.md) function removes a specified record from the **Schedule** data source. Again, the [**If**](function-if.md) function opens the **ViewScreen** only if no [**Errors**](function-errors.md) occurred when the data source was updated.  
 
-1. Add a label, move it below the last input-text control, and set the label's **Text** property to this formula:
+1. Add a text box, move it below the last input-text control, and set the text box's **Text** property to this formula:
 
 	**Lookup(Errors(Schedule,Record),IsBlank(Column),Message)**
 

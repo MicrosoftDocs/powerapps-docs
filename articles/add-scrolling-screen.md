@@ -79,4 +79,4 @@ Create a screen that users can scroll to show more types of content than the scr
 
 1. Press F5 to display the app in Preview, and then scroll to display the line chart.
 
-	![Preview shows line chart](./media/add-scrolling-screen/line-chart-preview.png)
+	![Preview shows the line chart](./media/add-scrolling-screen/line-chart-preview.png)
