@@ -39,11 +39,11 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 		![Option to create an app from scratch](./media/create-card-gallery/blank-app.png)
 
-1. On the **Insert** tab, select **Gallery**, and then select the **Portrait** option under **Card Galleries**.
+1. On the **Insert** tab, select **Gallery**, and then select the **Card Gallery** option under **Custom Galleries**.
 
-	![Option to add a card gallery in portrait orientation](./media/create-card-gallery/add-gallery.png)
+	![Option to add a card gallery](./media/create-card-gallery/add-gallery.png)
 
-1. Resize the gallery to cover almost the entire screen, but leave enough room at the top for a label to identify the screen.
+1. Resize the gallery to cover almost the entire screen, but leave enough room at the top for a text box to identify the screen.
 
 	![Resize a card gallery](./media/create-card-gallery/resize-gallery.png)
 
@@ -75,9 +75,9 @@ Show a set of data for which each [record](working-with-tables.md) contains more
 
 ## Add a custom card ##
 
-1. Select **Add section**, select **Label** on the **Insert** tab, and then configure the new label to show **My custom rating card**.
+1. Select **Add section**, select **Text box** on the **Insert** tab, and then configure the new text box to show **My custom rating card**.
 
-1. On the **Insert** tab, select **Controls,** select **Rating**, and then move the rating control so it appears under the label.
+1. On the **Insert** tab, select **Controls,** select **Rating**, and then move the rating control so that it appears under the text box.
 
 	![Three built-in cards and one custom card](./media/create-card-gallery/add-rating.png)
 
