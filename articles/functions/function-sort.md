@@ -39,7 +39,7 @@ A tables is a value in PowerApps, just as a string or a number is. You can speci
 
 - *Table* - Required. Table to sort.
 - *Formula* - Required. This formula is evaluated for each record of the table, and the results are used to sort the table.  You can reference columns within the table.
-- *SortOrder* - Optional. Specify **SortOrder!Descending** to sort the table in descending order. **SortOrder!Ascending** is the default value.
+- *SortOrder* - Optional. Specify **SortOrder.Descending** to sort the table in descending order. **SortOrder.Ascending** is the default value.
 
 ## Examples ##
 
@@ -51,7 +51,7 @@ For the following examples, we'll use the **IceCream** [data source](working-wit
 |---------|-------------|--------|
 | **Sort( IceCream, Flavor )** | Sorts **IceCream** by its **Flavor** column. The **Flavor** column contains strings, so the table is sorted alphabetically. By default, the sort order is ascending.  | <style> img { max-width: none; } </style> ![](media/function-sort/icecream-flavor.png) |
 | **Sort( IceCream, Quantity )** | Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the table is sorted numerically.  By default, the sort order is ascending.  | ![](media/function-sort/icecream-quantity-asc.png) |
-| **Sort( IceCream, Quantity, SortOrder!Descending )** | Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the sort is done numerically.  The sort order has been specified as descending.  | ![](media/function-sort/icecream-quantity-desc.png) |
+| **Sort( IceCream, Quantity, SortOrder.Descending )** | Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the sort is done numerically.  The sort order has been specified as descending.  | ![](media/function-sort/icecream-quantity-desc.png) |
 | **Sort( IceCream, Quantity + OnOrder )** | Sorts **IceCream** by the sum of its **Quantity** and **OnOrder** columns for each record individually. The sum is a number, so the table is sorted numerically.  By default, the sort order is ascending.  | ![](media/function-sort/icecream-total.png) |
 | **Sort( Sort( IceCream, OnOrder ), Quantity )** | Sorts **IceCream** first by its **OnOrder** column, and then by its **Quantity** column.  Note that "Pistachio" rose above "Vanilla" in the first sort based on **OnOrder**, and then together they moved to their appropriate place based on **Quantity**.  | ![](media/function-sort/icecream-onorder-quantity.png) |
 

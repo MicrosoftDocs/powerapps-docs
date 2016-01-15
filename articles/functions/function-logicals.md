@@ -46,7 +46,7 @@ These functions work with logical values. They can't be passed a number or a str
 
 Use this function to determine whether a slider's value falls outside the 50 to 100 range:
 
-**Or(Slider1!Value < 50, Slider1!Value> 100)**
+**Or(Slider1.Value < 50, Slider1.Value> 100)**
 
 If a [table](working-with-tables.md) contained a **Dept** [column](working-with-tables.md#columns) and a **Salary** column, you could use this function in a **Result** column to show **true** in all rows in which the value in the **Dept** column was **HR** or the value in the **Salary** column was larger than **200000**:
 
@@ -54,6 +54,6 @@ If a [table](working-with-tables.md) contained a **Dept** [column](working-with-
 
 As an alternative, use the || operator to get the same results as what the previous formulas return:
 
-**Slider1!Value < 50 || Slider1!Value> 100**
+**Slider1.Value < 50 || Slider1.Value> 100**
 
 **Dept = "HR" || Salary > 200000**

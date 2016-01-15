@@ -45,7 +45,7 @@ In a formula, you can refer to a record by itself, outside of a table's context,
 
 A property is an individual piece of information in a record. You can visualize this sort of property as a value in a column for a particular record.
 
-Just as with a control, you refer to a property of a record by using the **!** [operator](operators.md) on the record.  For example, **First(Products)!Name** returns the **Name** property for the first record in the **Products** table.
+Just as with a control, you refer to a property of a record by using the **.** [operator](operators.md) on the record.  For example, **First(Products).Name** returns the **Name** property for the first record in the **Products** table.
 
 A property can contain another record or table, as the example for the [**GroupBy**](function-groupby.md) function shows. You can nest as many levels of records and tables as you want.
 
@@ -83,7 +83,7 @@ You can also define a single-column table with square brackets.  An equivalent w
 In Excel and PowerApps, you use formulas to manipulate numbers and strings of text in similar ways:
 
 - In Excel, type a value, such as **42**, in cell **A1**, and then type a formula, such as **A1+2**, in another cell to show the value of **44**.
-- In PowerApps, set the **Default** property of **Slider1** to **42**, and set the **Text** property of a label to **Slider1!Value + 2** to show the value of **44**.
+- In PowerApps, set the **Default** property of **Slider1** to **42**, and set the **Text** property of a label to **Slider1.Value + 2** to show the value of **44**.
 
 In both cases, the calculated value changes automatically if you change the values of the arguments (for example, the number in cell **A1** or the value of **Slider1**).
 
@@ -150,10 +150,10 @@ The following controls have properties that are tables:
 
 ## Record formulas ##
 
-You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to our gallery example above, let's use the **Gallery1!Selected** property to display information from whatever record the user selects in that gallery.
+You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to our gallery example above, let's use the **Gallery1.Selected** property to display information from whatever record the user selects in that gallery.
 
 1. Add a button, and set its **OnSelect** property to this formula:<br>
-	**Collect( SelectedRecord, Gallery1!Selected )**
+	**Collect( SelectedRecord, Gallery1.Selected )**
 1. If the button isn't selected, click it to select it, and then click it again to run the formula.
 1. In the **File** menu, click **Collections.**
 
@@ -161,11 +161,11 @@ You can also build a formula that calculates data for an individual record, take
 
 This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body1** column, which represents the label that shows the data from that column. Click the table icon in the **Body1** column to drill into that data.
 
-Now that we have the selected record, we can extract individual properties from it with the **!** operator.
+Now that we have the selected record, we can extract individual properties from it with the **.** operator.
 
 1. Press Esc to return to the default workspace, and then add a label below the gallery.
 1. Set the **Text** property of the label to this formula:<br>
-	**Gallery!Selected!Heading**
+	**Gallery.Selected.Heading**
 
 ![](media/working-with-tables/gallery-selected.png)
 
@@ -204,11 +204,11 @@ You express records by using curly braces that contain named property values.  F
 
 You can also embed formulas within other formulas, as this example shows:
 
-**{ Name: First(Products)!Name, Price: First(Products)!Price * 1.095 }**
+**{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }**
 
 You can nest records by nesting curly braces, as this example shows:
 
-**{ 'Quantity': { 'OnHand': ThisItem!QuantOnHand, 'OnOrder': ThisItem!QuantOnOrder } }**
+**{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }**
 
 Enclose each column name that contains a special character, such as a space or a colon, in single quotes.  To use a single quote within a column name, double it.
 

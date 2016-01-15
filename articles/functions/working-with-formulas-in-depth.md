@@ -24,7 +24,7 @@
 
 Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might use this formula to color a label red if its value is less than zero:
 
-- **Label!Color = If( Value(Label!Text) >= 0, Color!Black, Color!Red )**
+- **Label.Color = If( Value(Label.Text) >= 0, Color.Black, Color.Red )**
 
 In this world, what does it mean to press a button?  No value has changed so there is nothing new to calculate.  Excel has no equivalent to a button.  
 

@@ -35,17 +35,17 @@ See [working with dates and times](../show-text-dates-times.md) for more informa
 
 | Predefined Format | Description |
 |-------------------|-------------|
-| **DateTimeFormat!LongDate** | Full year, month, day of the month, and day of the week. The names of the month and the day of the week aren't abbreviated.  |
-| **DateTimeFormat!LongDateTime** | Full year, month, day of the month, and day of the week, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. The names of the month and the day of the week aren't abbreviated.  |
-| **DateTimeFormat!LongDateTime24** | Full year, month, day of the month, and day of the week, plus hour (24-hour clock), minutes, and seconds. The names of the month and the day of the week aren't abbreviated.  |
-| **DateTimeFormat!LongTime** | Hour (12-hour clock), minutes, seconds, and AM/PM designation. Same as ShortTime. |
-| **DateTimeFormat!LongTime24** | Hour (24-hour clock), minutes, seconds. Same as ShortTime24. |
-| **DateTimeFormat!ShortDate** | Four-digit year with two-digit month and day of the month. |
-| **DateTimeFormat!ShortDateTime** | Four-digit year with two-digit month and day of the month, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. |
-| **DateTimeFormat!ShortDateTime24** | Four-digit year with two-digit month and day of the month, plus hour (24-hour clock), minutes, and seconds. |
-| **DateTimeFormat!ShortTime** | Hour (12-hour clock), minutes, seconds, and AM/PM designation.  Same as LongTime. |
-| **DateTimeFormat!ShortTime24** | Hour (24-hour clock), minutes, and seconds.  Same as LongTime24. |
-| **DateTimeFormat!UTC**| The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. |
+| **DateTimeFormat.LongDate** | Full year, month, day of the month, and day of the week. The names of the month and the day of the week aren't abbreviated.  |
+| **DateTimeFormat.LongDateTime** | Full year, month, day of the month, and day of the week, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. The names of the month and the day of the week aren't abbreviated.  |
+| **DateTimeFormat.LongDateTime24** | Full year, month, day of the month, and day of the week, plus hour (24-hour clock), minutes, and seconds. The names of the month and the day of the week aren't abbreviated.  |
+| **DateTimeFormat.LongTime** | Hour (12-hour clock), minutes, seconds, and AM/PM designation. Same as ShortTime. |
+| **DateTimeFormat.LongTime24** | Hour (24-hour clock), minutes, seconds. Same as ShortTime24. |
+| **DateTimeFormat.ShortDate** | Four-digit year with two-digit month and day of the month. |
+| **DateTimeFormat.ShortDateTime** | Four-digit year with two-digit month and day of the month, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. |
+| **DateTimeFormat.ShortDateTime24** | Four-digit year with two-digit month and day of the month, plus hour (24-hour clock), minutes, and seconds. |
+| **DateTimeFormat.ShortTime** | Hour (12-hour clock), minutes, seconds, and AM/PM designation.  Same as LongTime. |
+| **DateTimeFormat.ShortTime24** | Hour (24-hour clock), minutes, and seconds.  Same as LongTime24. |
+| **DateTimeFormat.UTC**| The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. |
 
 ### Number placeholders ###
 
@@ -137,8 +137,8 @@ You can include any of these characters in your format string.  They will appear
 
 | Formula |  Description | Result |
 |-------------|-------------|-------------|
-| **Text( Now(), DateTimeFormat!LongDate )** | Formats as a long date string, in the language and locale of the current user. | "Monday, November 23, 2015" |
-| **Text( Now(), DateTimeFormat!LongDateTime )** | Formats as a long date and time string, in the language and locale of the current user, using a 12-hour clock.  | "Monday, November 23, 2015 2:37:47 PM" |
-| **Text( Now(), DateTimeFormat!LongTime24 )** |  Formats as a long time string, using a 24-hour clock. | "14:37:47" |
-| **Text( Now(), DateTimeFormat!ShortDate )** | Formats as a short date string, in the language and locale of the current user. | "11/23/2015" |
+| **Text( Now(), DateTimeFormat.LongDate )** | Formats as a long date string, in the language and locale of the current user. | "Monday, November 23, 2015" |
+| **Text( Now(), DateTimeFormat.LongDateTime )** | Formats as a long date and time string, in the language and locale of the current user, using a 12-hour clock.  | "Monday, November 23, 2015 2:37:47 PM" |
+| **Text( Now(), DateTimeFormat.LongTime24 )** |  Formats as a long time string, using a 24-hour clock. | "14:37:47" |
+| **Text( Now(), DateTimeFormat.ShortDate )** | Formats as a short date string, in the language and locale of the current user. | "11/23/2015" |
 | **Text( Now(), "d-mmm-yy" )** | Formats using placeholder characters: <ul><li>**d** for a single-digit or double-digit day of the month<li>**-** as a literal character copied to the result<li>**mmm** for a three-letter abbreviation of the month<li>**-** as another literal character copied to the result<li>**yy** for a two-digit abbreviation of the year</ul> | "23-Nov-15" |

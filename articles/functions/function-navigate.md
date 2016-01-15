@@ -44,14 +44,14 @@ In the first argument, specify the name of the screen to display.
 
 | Transition Argument | Description |
 |------------|-------------|
-| **ScreenTransition!Cover** | The new screen slides into view, covering the current screen. |
-| **ScreenTransition!Fade** | The old screen fades away to reveal the new screen. |
-| **ScreenTransition!None** | The old screen is quickly replaced with the new screen. |
-| **ScreenTransition!UnCover** | The old screen slides out of view, uncovering the new screen.|
+| **ScreenTransition.Cover** | The new screen slides into view, covering the current screen. |
+| **ScreenTransition.Fade** | The old screen fades away to reveal the new screen. |
+| **ScreenTransition.None** | The old screen is quickly replaced with the new screen. |
+| **ScreenTransition.UnCover** | The old screen slides out of view, uncovering the new screen.|
 
 You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](working-with-tables.md#records) that contains the context-variable name as a [column](working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
 
-Set the **OnHidden** property of the old screen, the **OnVisible** property of the new screen, or both to make additional changes during the transition. The **App!ActiveScreen** property will be updated to reflect the change.
+Set the **OnHidden** property of the old screen, the **OnVisible** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 
 **Back** normally returns **true** but returns **false** if the user is on the first screen shown and there is no previous screen.  **Navigate** normally returns **true** but returns **false** if there is a problem with one of its arguments.
 
@@ -71,10 +71,10 @@ You can use these functions only within a [behavior formula](working-with-formul
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Navigate( Details, ScreenTransition!None )** | Displays the **Details** screen with no transition or change in value for a context variable. | The **Details** screen appears quickly. |
-| **Navigate( Details, ScreenTransition!Fade )** | Displays the **Details** screen with a **Fade** transition.  No value of a context variable is changed. | The current screen fades away to show the **Details** screen. |
-| **Navigate( Details, ScreenTransition!Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** | Displays the **Details** screen with a **Fade** transition, and updates the value of the **ID** context variable to **12**.   | The current screen fades away to show the **Details** screen, and the context variable **ID** on that screen is set to **12**. |
-| **Navigate( Details, ScreenTransition!Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color!Red&nbsp;} )** | Displays the **Details** screen with a **Fade** transition. Updates the value of the **ID** context variable to **12**, and updates the value of the **Shade** context variable to **Color!Red**. | The current screen fades away to show the **Details** screen. The context variable **ID** on the **Details** screen is set to **12**, and the context variable **Shade** is set to **Color!Red**. If you set the **Fill** property of a control on the **Details** screen to **Shade**, that control would display as red.  |
+| **Navigate( Details, ScreenTransition.None )** | Displays the **Details** screen with no transition or change in value for a context variable. | The **Details** screen appears quickly. |
+| **Navigate( Details, ScreenTransition.Fade )** | Displays the **Details** screen with a **Fade** transition.  No value of a context variable is changed. | The current screen fades away to show the **Details** screen. |
+| **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** | Displays the **Details** screen with a **Fade** transition, and updates the value of the **ID** context variable to **12**.   | The current screen fades away to show the **Details** screen, and the context variable **ID** on that screen is set to **12**. |
+| **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** | Displays the **Details** screen with a **Fade** transition. Updates the value of the **ID** context variable to **12**, and updates the value of the **Shade** context variable to **Color.Red**. | The current screen fades away to show the **Details** screen. The context variable **ID** on the **Details** screen is set to **12**, and the context variable **Shade** is set to **Color.Red**. If you set the **Fill** property of a control on the **Details** screen to **Shade**, that control would display as red.  |
 
 ### Step-by-step ###
 
@@ -84,7 +84,7 @@ You can use these functions only within a [behavior formula](working-with-formul
 
 1. Add a label to **AddlScreen**, and set the **Text** property of the label so that it shows **Addl**.
 
-1. Add a button to **AddlScreen**, and set its **OnSelect** property to this function:<br>**Navigate(DefaultScreen, ScreenTransition!Fade)**
+1. Add a button to **AddlScreen**, and set its **OnSelect** property to this function:<br>**Navigate(DefaultScreen, ScreenTransition.Fade)**
 
 1. From the **AddlScreen**, press F5, and then select the button.<br>**DefaultScreen** appears.
 

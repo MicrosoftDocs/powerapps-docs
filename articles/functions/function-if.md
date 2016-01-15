@@ -46,13 +46,13 @@ In the following examples, a slider control named **Slider1** has a value of **2
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **If( Slider1!Value&nbsp;=&nbsp;25, "Result1" )** | The condition is **true**, and the corresponding result is returned. | "Result1" |
-| **If( Slider1!Value&nbsp;>&nbsp;1000, "Result1" )** | The condition is **false**, and no *ElseResult* is provided.  | *blank* |
-| **If( Slider1!Value&nbsp;=&nbsp;25, "Result1", "Result2" )** | The condition is **true**, and the corresponding result is returned. | "Result1" |
-| **If( Slider1!Value&nbsp;>&nbsp;1000, "Result1", "Result2" )** | The condition is **false**, and the *ElseResult* has been provided and is returned.   | "Result2" |
-| **If( Slider1!Value&nbsp;=&nbsp;25, "Result1", Slider1!Value&nbsp;>&nbsp;0, "Result2" )** | The first condition is **true**, and the corresponding result is returned. The second condition is also **true**, but its corresponding value isn't returned because it appears on the argument list after the first condition.  | "Result1" |
-| **If( IsBlank(&nbsp;Slider1!Value&nbsp;), "Result1", IsNumeric(&nbsp;Slider1!Value&nbsp;), "Result2" )** | The first condition is **false** because the slider has a value of 25 and isn't *blank*. The second condition is **true** because the slider's value is a number, and the corresponding result is returned. | "Result2" |
-| **If( Slider1!Value&nbsp;>&nbsp;1000, "Result1", Slider1!Value&nbsp;>&nbsp;50, "Result2", "Result3")** | Both the first and second conditions are **false**, and the *ElseResult* has been provided and is returned. | "Result3" |
+| **If( Slider1.Value&nbsp;=&nbsp;25, "Result1" )** | The condition is **true**, and the corresponding result is returned. | "Result1" |
+| **If( Slider1.Value&nbsp;>&nbsp;1000, "Result1" )** | The condition is **false**, and no *ElseResult* is provided.  | *blank* |
+| **If( Slider1.Value&nbsp;=&nbsp;25, "Result1", "Result2" )** | The condition is **true**, and the corresponding result is returned. | "Result1" |
+| **If( Slider1.Value&nbsp;>&nbsp;1000, "Result1", "Result2" )** | The condition is **false**, and the *ElseResult* has been provided and is returned.   | "Result2" |
+| **If( Slider1.Value&nbsp;=&nbsp;25, "Result1", Slider1.Value&nbsp;>&nbsp;0, "Result2" )** | The first condition is **true**, and the corresponding result is returned. The second condition is also **true**, but its corresponding value isn't returned because it appears on the argument list after the first condition.  | "Result1" |
+| **If( IsBlank(&nbsp;Slider1.Value&nbsp;), "Result1", IsNumeric(&nbsp;Slider1.Value&nbsp;), "Result2" )** | The first condition is **false** because the slider has a value of 25 and isn't *blank*. The second condition is **true** because the slider's value is a number, and the corresponding result is returned. | "Result2" |
+| **If( Slider1.Value&nbsp;>&nbsp;1000, "Result1", Slider1.Value&nbsp;>&nbsp;50, "Result2", "Result3")** | Both the first and second conditions are **false**, and the *ElseResult* has been provided and is returned. | "Result3" |
 
 ### Branching in behavior formulas ###
 
@@ -60,8 +60,8 @@ In the following examples, an input-text box named **FirstName** has the value "
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **If( ! IsBlank( FirstName!Text ), Navigate(&nbsp;Screen1, ScreenTransition!None ) )** | The condition is **true**, and the **[Navigate](function-navigate.md)** function is executed. You can use the **[IsBlank](function-isblank-isempty.md)** function to test whether a required form field has been filled in.  If the text box was [empty](function-isblank-isempty.md), this formula would have no effect.  | **true**<br><br>The display is changed to **Screen1**. |
-| **If( IsBlank( FirstName!Text ), Navigate(&nbsp;Screen1, ScreenTransition!None ), Back() )** | Without the **!** operator, the condition is **false**, and the **[Navigate](function-navigate.md)** function isn't executed.  Because the *ElseResult* has been provided, **[Back](function-navigate.md)** is executed. | **true**<br><br>The display goes back to the screen that was previously shown. |
+| **If( ! IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ) )** | The condition is **true**, and the **[Navigate](function-navigate.md)** function is executed. You can use the **[IsBlank](function-isblank-isempty.md)** function to test whether a required form field has been filled in.  If the text box was [empty](function-isblank-isempty.md), this formula would have no effect.  | **true**<br><br>The display is changed to **Screen1**. |
+| **If( IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** | Without the **.** operator, the condition is **false**, and the **[Navigate](function-navigate.md)** function isn't executed.  Because the *ElseResult* has been provided, **[Back](function-navigate.md)** is executed. | **true**<br><br>The display goes back to the screen that was previously shown. |
 
 ### Step by step ###
 
@@ -73,6 +73,6 @@ In the following examples, an input-text box named **FirstName** has the value "
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Text1!Text** | With no condition, the return value is the value of the input-,text control. | "15" |
-| **If( Value(Text1!Text) < 40, "Order more!", Text1!Text )** | The condition is **true**, and the corresponding value is returned. | "Order more!" |
-| **If( Value(Text1!Text) < 20, "Order MANY more!", Value(Text1!Text) < 40, "Order more!", Text1!Text )** |  The first condition is **true**, and the corresponding value is returned. | "Order MANY more!" |
+| **Text1.Text** | With no condition, the return value is the value of the input-,text control. | "15" |
+| **If( Value(Text1.Text) < 40, "Order more!", Text1.Text )** | The condition is **true**, and the corresponding value is returned. | "Order more!" |
+| **If( Value(Text1.Text) < 20, "Order MANY more!", Value(Text1.Text) < 40, "Order more!", Text1.Text )** |  The first condition is **true**, and the corresponding value is returned. | "Order MANY more!" |

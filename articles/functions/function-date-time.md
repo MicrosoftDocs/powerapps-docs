@@ -58,10 +58,10 @@ Also see [working with dates and times](../show-text-dates-times.md) for more in
 
 If a user typed **1979** in an input-text control named **HireYear**, **3** in an input-text control named **HireMonth**, and **17** in an input-text control named **HireDay**, this function would return **3/17/1979**:
 
-**Date(Value(HireYear!Text), Value(HireMonth!Text), Value(HireDay!Text))**
+**Date(Value(HireYear.Text), Value(HireMonth.Text), Value(HireDay.Text))**
 
 ### Time ###
 
 If a user typed **14** in an input-text control named **BirthHour**, **50** in an input-text control named **BirthMinute**, and **24** in an input-text control named **BirthSecond**, this function would return **02:50:24 p**.
 
-**Text(Time(Value(BirthHour!Text), Value(BirthMinute!Text), Value(BirthSecond!Text)), "hh:mm:ss a/p")**
+**Text(Time(Value(BirthHour.Text), Value(BirthMinute.Text), Value(BirthSecond.Text)), "hh:mm:ss a/p")**

@@ -50,7 +50,7 @@ In PowerApps, you can use formulas to determine not only the the primary value o
 
 You can use formulas for a wide variety of scenarios:
 
-- By using your device's GPS, a map control can display your current location with a formula that uses **Location!Lattitude** and **Location!Longitude**.  As you move, the map will automatically track your location.
+- By using your device's GPS, a map control can display your current location with a formula that uses **Location.Lattitude** and **Location.Longitude**.  As you move, the map will automatically track your location.
 - Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated and to reflect the updated data. Furthering the example, you might set a gallery's **Items** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
 
 ### Benefits ###
@@ -125,7 +125,7 @@ To refer a variable from any screen (not only the one on which it was created), 
 How collections work:
 
 - Create and set collections by using the **[ClearCollect](function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
-- A collection is a data source and, therefore, a table. To access a single value in a collection, use the **[First](function-first-last.md)** function, and extract one property from the resulting record. If you used a single value with **[ClearCollect](function-clear-collect-clearcollect.md)**, this will be the **Value** property, as in this example:<br>**First( VariableName )!Value**
+- A collection is a data source and, therefore, a table. To access a single value in a collection, use the **[First](function-first-last.md)** function, and extract one property from the resulting record. If you used a single value with **[ClearCollect](function-clear-collect-clearcollect.md)**, this will be the **Value** property, as in this example:<br>**First( VariableName ).Value**
 - Any formula can access a collection from any screen in the app.
 - When a user closes an app, all of its collections are emptied.
 
@@ -135,7 +135,7 @@ Let's recreate our adding machine by using a collection:
 
 1. Set the **Text** property of **Button1** so it says **Add**, and set the **Text** property of **Button2** so it says **[Clear](function-clear-collect-clearcollect.md)**.
 
-1. To update the running total whenever a user selects the **Add** button, set its **OnSelect** property to this formula:<br> **ClearCollect( RunningTotal, First( RunningTotal )!Value + Text1 )**
+1. To update the running total whenever a user selects the **Add** button, set its **OnSelect** property to this formula:<br> **ClearCollect( RunningTotal, First( RunningTotal ).Value + Text1 )**
 
 	By using **[ClearCollect](function-clear-collect-clearcollect.md)** with a single value, a record will be created in the collection with a single **Value** property. The first time that the user selects the **Add** button and **[ClearCollect](function-clear-collect-clearcollect.md)** is called, **RunningTotal** will be [empty](function-isblank-isempty.md). In the addition, **[First](function-first-last.md)** will return *blank* and will be treated as a zero.
 
@@ -149,7 +149,7 @@ Let's recreate our adding machine by using a collection:
 	![](media/working-with-variables/collection-2.png)
 
 1. To display the running total, add a label, and set its **Text** property to this formula:<br>
-**First(RunningTotal)!Value**
+**First(RunningTotal).Value**
 
 	This formula extracts the **Value** property of the first record of the **RunningTotal** collection. The label will automatically show the value of **RunningTotal** as it changes based on the buttons that the user selects.
 

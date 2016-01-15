@@ -65,6 +65,6 @@ The examples in this section use a [data source](working-with-data-sources.md) t
 
 2. Add a label, and set its **Text** property to this formula:
 <br>
-**Sqrt( Value( Source!Text ) )**
+**Sqrt( Value( Source.Text ) )**
 
 3. Type a number into **Source**, and confirm that the label shows the square root of the number that you typed.

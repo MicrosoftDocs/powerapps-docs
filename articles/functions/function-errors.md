@@ -44,17 +44,17 @@ The **Errors** function returns a [table](working-with-tables.md) of errors that
 
 | ErrorKind | Description |
 |------------|-------------|
-| ErrorKind!Conflict | Another change was made to the same record, resulting in a change conflict.  Use **[Revert](function-revert.md)** to reload the record and try the change again. |
-| ErrorKind!ConstraintViolation | One or more constraints have been violated. |
-| ErrorKind!CreatePermission | An attempt was made to create a record, and the current user doesn't have permission to create records. |
-| ErrorKind!DeletePermission | An attempt was made to delete a record, and the current user doesn't have permission to delete records. |
-| ErrorKind!EditPermission | An attempt was made to edit a record, and the current user doesn't have permission to edit records. |
-| ErrorKind!GeneratedValue | An attempt was made to change a column that the data source generates automatically. |
-| ErrorKind!MissingRequired | The value for a required column is missing from the record. |
-| ErrorKind!None | The error is of an unknown kind. |
-| ErrorKind!NotFound | An attempt was made to edit or delete a record, but the record couldn't be found.  Another user may have changed the record. |
-| ErrorKind!ReadOnlyValue | An attempt was made to change a column that's read only. |
-| ErrorKind!Sync | There was an error while synchronizing the change with the data service. |
+| ErrorKind.Conflict | Another change was made to the same record, resulting in a change conflict.  Use **[Revert](function-revert.md)** to reload the record and try the change again. |
+| ErrorKind.ConstraintViolation | One or more constraints have been violated. |
+| ErrorKind.CreatePermission | An attempt was made to create a record, and the current user doesn't have permission to create records. |
+| ErrorKind.DeletePermission | An attempt was made to delete a record, and the current user doesn't have permission to delete records. |
+| ErrorKind.EditPermission | An attempt was made to edit a record, and the current user doesn't have permission to edit records. |
+| ErrorKind.GeneratedValue | An attempt was made to change a column that the data source generates automatically. |
+| ErrorKind.MissingRequired | The value for a required column is missing from the record. |
+| ErrorKind.None | The error is of an unknown kind. |
+| ErrorKind.NotFound | An attempt was made to edit or delete a record, but the record couldn't be found.  Another user may have changed the record. |
+| ErrorKind.ReadOnlyValue | An attempt was made to change a column that's read only. |
+| ErrorKind.Sync | There was an error while synchronizing the change with the data service. |
 
 Errors can be returned for the entire data source, or for only a selected row by providing the *Record* argument to the function.  
 
@@ -84,9 +84,9 @@ Through the app, a user loads the Chocolate record into a data-entry form and th
 
 To make this change in the data source, the **[Patch](function-patch.md)** function is used:
 
-- **Patch( IceCream, EditRecord, Gallery!Updates )**
+- **Patch( IceCream, EditRecord, Gallery.Updates )**
 
-where **Gallery!Updates** evaluates to **{ Quantity: 90 }**, since only the **Quantity** property has been modified.
+where **Gallery.Updates** evaluates to **{ Quantity: 90 }**, since only the **Quantity** property has been modified.
 
 Unfortunately, just before the **[Patch](function-patch.md)** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
 
@@ -96,17 +96,17 @@ which returns **false**, because the **Errors** function returned the following 
 
 | Record | Column | Message | Error |
 |--------|--------|---------|-------|
-| { Flavor: "Chocolate", Quantity: 100 } | *blank* | "Another user has modified the record that you're trying to modify. Please reload the record and try again." | ErrorKind!Conflict |
+| { Flavor: "Chocolate", Quantity: 100 } | *blank* | "Another user has modified the record that you're trying to modify. Please reload the record and try again." | ErrorKind.Conflict |
 
 You can place a label on the form to show this error to the user.
 
 - To show the error, set the label's **Text** property to this formula:<br>
-**Label!Text = Errors( IceCream, EditRecord )!Message**
+**Label.Text = Errors( IceCream, EditRecord ).Message**
 
 You can also add a **Reload** button on the form, so that the user can efficiently resolve the conflict.
 
 - To show the button only when a conflict has occurred, set the button's **Visible** property to this formula:<br>
-	**!IsEmpty( Lookup( Errors( IceCream, EditRecord ), Error = ErrorKind!Conflict ) )**
+	**!IsEmpty( Lookup( Errors( IceCream, EditRecord ), Error = ErrorKind.Conflict ) )**
 
 - To revert the change which the user selects the button, set its **OnSelect** property to this formula:<br>
-	**ReloadButton!OnSelect = Revert( IceCream, EditRecord )**
+	**ReloadButton.OnSelect = Revert( IceCream, EditRecord )**

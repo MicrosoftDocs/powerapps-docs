@@ -49,7 +49,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 
 2. Add a vertical custom gallery, and set its **Items** property to this function:
 
-	**HashTags(Tweet!Text)**
+	**HashTags(Tweet.Text)**
 
 3. Add a label to the gallery template.
 
