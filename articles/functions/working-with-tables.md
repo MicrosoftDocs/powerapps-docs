@@ -24,7 +24,7 @@ You can create an app that accesses information in Microsoft Excel, SharePoint, 
 - A record contains one or more categories of information about a person, a place, or a thing. For example, a record might contain the name, the email address, and the phone number of a single customer. Other tools refer to a record as a "row" or an "item."
 - A table holds one or more records that contain the same categories of information. For example, a table might contain the names, the email addresses, and the phone numbers of 50 customers.
 
-In your app, you'll use [formulas](working-with-formulas.md) to create, update, and manipulate records and tables. You'll probably read and write data to an external [data source](working-with-data-sources.md), which is an extended table. In addition, you might create one or more internal tables, which are called [collections](working-with-data-sources.md#collections).
+In your app, you'll use [formulas](../working-with-formulas.md) to create, update, and manipulate records and tables. You'll probably read and write data to an external [data source](working-with-data-sources.md), which is an extended table. In addition, you might create one or more internal tables, which are called [collections](working-with-data-sources.md#collections).
 
 You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in PowerApps return a table that reflects the other arguments that you specify. For example, you might create a formula:
 
@@ -89,7 +89,7 @@ In both cases, the calculated value changes automatically if you change the valu
 
 Similarly, you can use formulas to access and manipulate data in tables and records. You can use names of tables as arguments in some formulas, such as **Min(Catalog, Price)** to show the lowest value in the **Price** column of the **Catalog** table. Other formulas provide whole tables as return values, such as **RenameColumns(Catalog, "Price", "Cost")**, which returns all the records from the **Catalog** table but changes the name of the **Price** column to **Cost**.
 
-Just as with numbers, formulas that involve tables and records are automatically recalculated as the underlying table or record changes. If the cost of a product in the **Catalog** table is lowered below the previous minimum, the return value of the **Min** formula will automatically change to match it.
+Just as with numbers, formulas that involve tables and records are automatically recalculated as the underlying table or record changes. If the cost of a product in the **Catalog** table is lowered below the previous minimum, the return value of the **[Min](function-aggregates.md)** formula will automatically change to match it.
 
 Let's walk through some simple examples.
 
@@ -111,7 +111,7 @@ Let's walk through some simple examples.
 3. Set the **Items** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:<br>
 **FirstN(Sort(TextualGallerySample, Heading, Descending), 2**
 
-	In this formula, you use the **[FirstN](function-first-last.md)** function to show a particular number of records in a table. You use the **Sort** formula as the first argument of the **FirstN** function and a number (in this case, **2**) as the second argument, which specifies how many records to show.
+	In this formula, you use the **[FirstN](function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](function-sort.md)** formula as the first argument of the **[FirstN](function-first-last.md)** function and a number (in this case, **2**) as the second argument, which specifies how many records to show.
 
 	The entire formula returns a table that contains the first two records of the **TextualGallerySample** table, sorted by the **Heading** column in descending order.
 
@@ -173,7 +173,7 @@ We've taken the **Selected** property, which is a record, and extracted the **He
 
 You can also use a record as a general-purpose container for related named values.
 
-- If you build a formula around the **[UpdateContext](function-updatecontext.md)** and **[Navigate](function-navigate.md)** functions, use a record to gather the [context variables](working-with-variables.md#context-variables) that you want to update.
+- If you build a formula around the **[UpdateContext](function-updatecontext.md)** and **[Navigate](function-navigate.md)** functions, use a record to gather the [context variables](working-with-variables.md#create-a-context-variable) that you want to update.
 - Use the **Updates** property on a gallery to gather the changes that will be made to a data source.
 - Use the **[Patch](function-patch.md)** function to update a data source but also to merge records.
 

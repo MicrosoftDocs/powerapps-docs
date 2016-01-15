@@ -33,7 +33,7 @@ By pressing the button, the user is initiating a sequence of actions, or behavio
 - Change the screen which is displayed: **[Back](function-navigate.md)** and **[Navigate](function-navigate.md)** functions.
 - Control a [signal](signals.md): **[Enable](function-enable-disable.md)** and **[Disable](function-enable-disable.md)** functions.
 - Refresh, update, or remove items in a [data source](working-with-data-sources.md): **[Refresh](function-refresh.md)**, **[Update](function-update-updateif.md)**, **[UpdateIf](function-update-updateif.md)**, **[Patch](function-patch.md)**, **[Remove](function-remove-removeif.md)**, **[RemoveIf](function-remove-removeif.md)** functions.
-- Update a [context variable](working-with-variables.md#context-variables):  **[UpdateContext](function-updatecontext.md)** function.
+- Update a [context variable](working-with-variables.md#create-a-context-variable):  **[UpdateContext](function-updatecontext.md)** function.
 - Create, update, or remove items in a [collection](working-with-data-sources.md#collections):  **[Collect](function-clear-collect-clearcollect.md)**, **[Clear](function-clear-collect-clearcollect.md)**, **[ClearCollect](function-clear-collect-clearcollect.md)** functions.
 
 Since these functions change the state of the app, they cannot be automatically recalculated.  You can use these in the formulas for **OnSelect**, **OnVisible**, **OnHidden**, and other **On...** properties.  We call these *behavior formulas*.

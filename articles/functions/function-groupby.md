@@ -99,9 +99,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 ### Filter and ungroup records ###
 
-1. Add another button, and set its **Text** property so that the button shows **Filter**.
+1. Add another button, and set its **Text** property so that the button shows **[Filter](function-filter-lookup.md)**.
 
-1. Set the **OnSelect** property of the **Filter** button to this formula:
+1. Set the **OnSelect** property of the **[Filter](function-filter-lookup.md)** button to this formula:
 
 	**ClearCollect( CitiesByCountryFiltered, Filter( CitiesByCountry, "e" in Country ))**
 

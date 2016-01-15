@@ -20,7 +20,7 @@
 
 # UpdateContext function in PowerApps #
 
-Creates or updates [context variables](working-with-variables.md#context-variables) of the current screen.
+Creates or updates [context variables](working-with-variables.md#create-a-context-variable) of the current screen.
 
 ## Overview ##
 

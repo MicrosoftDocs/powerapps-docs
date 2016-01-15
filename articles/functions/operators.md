@@ -51,7 +51,7 @@
 
 You can use the **in** and **exactin** operators to find a string in a [data source](working-with-data-sources.md), such as a collection or an imported table. The **in** operator identifies matches regardless of case, and the **exactin** operator identifies matches only if they're capitalized the same way. Here's an example:
 
-1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](show-images-text-gallery-sort-filter.md) describes.
+1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
 
 2. Set the **Items** property of the gallery to this formula:
 <br>**Filter(Inventory, "E" in ProductName)**
@@ -64,6 +64,6 @@ You can use the **in** and **exactin** operators to find a string in a [data sou
 	The gallery shows only Europa because only its name contains the letter that you specified in the case that you specified.
 
 ## ThisItem operator for galleries ##
-You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the **ThisItem** operator to specify the [column](working-with-tables.md#columns) of data that each control shows. For example, that operator in the product gallery for [Show images and text in a gallery](show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the **ThisItem** operator to specify the [column](working-with-tables.md#columns) of data that each control shows. For example, that operator in the product gallery for [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
 
 For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.

@@ -65,7 +65,7 @@ In the following examples, an input-text box named **FirstName** has the value "
 
 ### Step by step ###
 
-1. On a blank screen, add an input-text box, and name it **Text1** if it doesn't have that name by default.
+1. On an empty screen, add an input-text box, and name it **Text1** if it doesn't have that name by default.
 
 2. In **Text1**, type **15**.
 

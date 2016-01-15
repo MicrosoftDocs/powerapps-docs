@@ -32,7 +32,7 @@ These functions shape a table by adjusting its columns:
 
 A table is a value in PowerApps, just like a string or a number.  You can specify a table as an argument in a formula, and functions can return a table as a result. The functions that this topic describes don't modify a table. Instead they take a table as an argument and return a new table with a transform applied.  See [working with tables](working-with-tables.md) for more details.  
 
-You can't modify the columns of a [data source](working-with-data-sources.md) by using these functions. You must modify the data at its source. You can add columns to a collection with the **[Collect](function-clear-collect-clearcollect.md)** function.  See [working with data sources](working-with-data-sources.md) for more details.  
+You can't modify the columns of a [data source](working-with-data-sources.md) by using these functions. You must modify the data at its source. You can add columns to a [collection](working-with-data-sources.md#collections) with the **[Collect](function-clear-collect-clearcollect.md)** function.  See [working with data sources](working-with-data-sources.md) for more details.  
 
 ## Description ##
 
@@ -88,7 +88,7 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 
 ### Step by step ###
 
-1. Import or create a collection named **Inventory** as the first subprocedure in [Show text and images in a gallery](show-images-text-gallery-sort-filter.md) describes.
+1. Import or create a collection named **Inventory** as the first subprocedure in [Show text and images in a gallery](../show-images-text-gallery-sort-filter.md) describes.
 
 1. Add a button, and set its **OnSelect** property to this formula:
 
