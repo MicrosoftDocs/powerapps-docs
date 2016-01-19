@@ -307,7 +307,7 @@ Connect to Twitter, and then perform these tasks:
 	**Tip:** Show only, for example, the first five results by specifying the maxResults argument, as this formula shows:<br>
 	**twitter.SearchTweet(SearchTerm.Text, {maxResults:5})**
 
-1. If the **Screen** tab isn't showing, select **Options** near the lower-right corner.
+1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
 
 1. In the **Screen** pane, select **TweetText** in the **Body1** list, **TweetedBy** in the **Heading1** list, and **CreatedAt** in the **Subtitle1** list.
 
