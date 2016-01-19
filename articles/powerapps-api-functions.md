@@ -75,11 +75,11 @@ Show data from Outlook 365 Users, Office 365 Outlook, Twitter, and Microsoft Tra
 	![Close the Screen pane](./media/powerapps-api-functions/close-options.png)
 
 ## Office 365 Users ##
-Connect to Twitter, and then perform these tasks:
+Connect to Office 365 Users, and then perform these tasks:
 
 - [Show information about the current user](powerapps-api-functions.md#show-information-about-the-current-user)
 - [Show information about another user](powerapps-api-functions.md#show-information-about-another-user)
-- [Show the direct reports of another user reports](powerapps-api-functions.md#show-the-direct-reports-of-another-user)
+- [Show the direct reports of another user](powerapps-api-functions.md#show-the-direct-reports-of-another-user)
 - [Search for users](powerapps-api-functions.md#search-for-users)
 
 ### Show information about the current user ###
@@ -230,7 +230,7 @@ Connect to Twitter, and then perform these tasks:
 	**twitter.HomeTimeline({maxResults:5})**<br>
 	**twitter.UserTimeline(Tweep.Text, {maxResults:5})**
 
-1. If the **Screen** tab isn't showing, select **Options** near the lower-right corner.
+1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
 
 1. In the **Screen** pane, select **TweetText** in the **Body1** list, **TweetedBy** in the **Heading1** list, and **CreatedAt** in the **Subtitle1** list.
 
@@ -252,7 +252,7 @@ Connect to Twitter, and then perform these tasks:
 	**twitter.MyFollowers({maxResults:5})**<br>
 	**twitter.Followers(Tweep.Text, {maxResults:5})**
 
-1. If the **Screen** tab isn't showing, select **Options** near the lower-right corner.
+1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
 
 1. In the **Screen** pane, select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
 
@@ -275,7 +275,7 @@ Connect to Twitter, and then perform these tasks:
 	**twitter.MyFollowing({maxResults:5})**<br>
 	**twitter.Following(Tweep.Text, {maxResults:5})**
 
-1. If the **Screen** tab isn't showing, select **Options** near the lower-right corner.
+1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
 
 1. In the **Screen** pane, select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
 
@@ -302,7 +302,7 @@ Connect to Twitter, and then perform these tasks:
 1. Set the **Items** property of the gallery to this formula:<br>
 **twitter.SearchTweet(** *SearchTerm* **)**
 
-	Specify a *SearchTerm* by enclosing a term in double quotation marks or by referring to an equivalent value. For example, specify **"PowerApps"** directly in the formula, or add an input-text control named **SearchTerm**, specify **SearchTerm.Text** in the formula, and then type a term in **SearchTerm**.
+	Specify a *SearchTerm* by enclosing a term in double quotation marks or by referring to an equivalent value. For example, specify **"PowerApps"** directly in the formula, or add an input-text control named **SearchTerm**, specify **SearchTerm.Text** in the formula, and then type **PowerApps** (no quotation marks) in **SearchTerm**.
 
 	**Tip:** Show only, for example, the first five results by specifying the maxResults argument, as this formula shows:<br>
 	**twitter.SearchTweet(SearchTerm.Text, {maxResults:5})**
