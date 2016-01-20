@@ -28,6 +28,7 @@ Show data from Outlook 365 Users, Office 365 Outlook, Twitter, and Microsoft Tra
 - translate text into written or spoken form
 
 **Prerequisites**
+
 - Install [PowerApps](http://aka.ms/powerappsinstall).
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps.
 
@@ -70,7 +71,7 @@ Show data from Outlook 365 Users, Office 365 Outlook, Twitter, and Microsoft Tra
 
 	Your selection appears under **Data Sources**.
 
-1. Close the **Screen** tab by selecting the **X** in its upper-right corner.
+1. Close the **Screen** pane by selecting the **X** in its upper-right corner.
 
 	![Close the Screen pane](./media/powerapps-api-functions/close-options.png)
 
@@ -106,7 +107,7 @@ The text box shows the information that you specified about the current user.
 
 1. On the **Insert** tab, select **Text**, and then select **Input text**.
 
-1. Rename the text-input control **InfoAbout**.
+1. Rename the text-input control **InfoAbout** and, in it, type the name of a user in your organization.
 
 1. On the **Insert** tab, select **Text box**, and then set the **Text** property of the text box to any of these formulas:
 
@@ -136,18 +137,14 @@ The text box shows the information that you specified about the current user.
 		- **office365users.Manager(InfoAbout.Text).UserPrincipalName**
 		- **office365users.Manager(InfoAbout.Text).AccountEnabled**
 
-1. Press F5, and then, in **InfoAbout**, type the email address of someone in your organization.
-
 	The text box shows the information that you specified about the user whom you specified or that user's manager.
-
-1. Press Esc to return to the default workspace.
 
 ### Show the direct reports of another user ###
 1. Follow the steps in the first two procedures in this topic, selecting **Office 365 Users** as the connection and the data source.
 
 1. On the **Insert** tab, select **Text**, and then select **Input text**.
 
-1. Rename the text-input control **InfoAbout**, and then type the email address of someone in your organization in that control.
+1. Rename the text-input control **InfoAbout** and then, in it, type the email address of someone in your organization.
 
 1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
 
@@ -185,7 +182,7 @@ For this function, you must specify the first three arguments, but all other arg
 
 1. Follow the steps in the first two procedures in this topic, selecting **Office 365 Outlook** as the connection and the data source.
 
-1. On the **Insert** tab, select **Text**, select **Input text**, and then repeat that process twice to add three input-text controls to the screen.
+1. On the **Insert** tab, select **Text**, select **Input text**, and then repeat that process twice so that the screen contains three input-text controls.
 
 1. Arrange the controls in a column, and give them these names:
 
@@ -193,7 +190,7 @@ For this function, you must specify the first three arguments, but all other arg
 	- **inputSubject**
 	- **inputBody**
 
-1. On the **Insert** tab, select **Button**, and set the button's **OnSelect** property to this formula:
+1. On the **Insert** tab, select **Button**, and set the button's **OnSelect** property to this formula:<br>
 **office365.SendEmail(inputSubject.text, inputBody.text, inputTo.text)**
 
 1. Move the button so that it appears under all the other controls, and set its **Text** property to show **Send email**.
