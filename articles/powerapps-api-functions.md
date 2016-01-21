@@ -1,6 +1,6 @@
 <properties
    pageTitle="Connect to Office 365, Twitter, and Microsoft Translator | Microsoft PowerApps"
-   description="Show data from Outlook 365 Users, Office 365 Outlook, Twitter, and Microsoft Translator in an app"
+   description="Show data from Office 365, Twitter, and Microsoft Translator in an app"
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -20,16 +20,16 @@
 
 # Connect to Office 365, Twitter, and Microsoft Translator #
 
-Show data from Outlook 365 Users, Office 365 Outlook, Twitter, and Microsoft Translator in an app. For any of these data sources, create a connection, add it to an app, and then configure controls in the app to perform functions such as:
+Show data from Office 365, Twitter, and Microsoft Translator in an app. For any of these data sources, create a connection, add it to an app, and then configure the interface to perform functions such as:
 
-- display information about a user
-- send an email message
-- show a Twitter timeline or a list of followers
-- translate text into written or spoken form
+- displaying information about a user
+- sending an email message
+- showing a Twitter timeline or a list of followers
+- translating text into written or spoken form
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall).
+- Install [PowerApps](http://aka.ms/powerappsinstall), and then open it. (Advance through the welcome screens by selecting the arrow near the lower-right corner, and then sign in by providing your credentials.)
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps.
 
 ## Create a connection ##
@@ -53,8 +53,6 @@ Show data from Outlook 365 Users, Office 365 Outlook, Twitter, and Microsoft Tra
 
 	![Connections option on the File menu](./media/powerapps-api-functions/my-connections.png)
 
-## Add a connection to an app ##
-
 1. On the **File** menu, select **New**.
 
 	![New option on the File menu](./media/powerapps-api-functions/file-new.png)
@@ -75,16 +73,17 @@ Show data from Outlook 365 Users, Office 365 Outlook, Twitter, and Microsoft Tra
 
 	![Close the Screen pane](./media/powerapps-api-functions/close-options.png)
 
-## Office 365 Users ##
-Connect to Office 365 Users, and then perform these tasks:
+## Office 365 ##
+Connect to Office 365 Users or Office 365 Outlook, and then perform these tasks:
 
-- [Show information about the current user](powerapps-api-functions.md#show-information-about-the-current-user)
-- [Show information about another user](powerapps-api-functions.md#show-information-about-another-user)
-- [Show the direct reports of another user](powerapps-api-functions.md#show-the-direct-reports-of-another-user)
-- [Search for users](powerapps-api-functions.md#search-for-users)
+- Show information about the current user
+- Show information about another user
+- Show the direct reports of another user
+- Search for users
+- Send mail
 
 ### Show information about the current user ###
-1. Follow the steps in the first two procedures in this topic, selecting **Office 365 Users** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
 
 1. On the **Insert** tab, select **Text box**, and then set the **Text** property of the text box to any of these formulas:
 
@@ -103,7 +102,7 @@ Connect to Office 365 Users, and then perform these tasks:
 The text box shows the information that you specified about the current user.
 
 ### Show information about another user ###
-1. Follow the steps in the first two procedures in this topic, selecting **Office 365 Users** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
 
 1. On the **Insert** tab, select **Text**, and then select **Input text**.
 
@@ -140,7 +139,7 @@ The text box shows the information that you specified about the current user.
 	The text box shows the information that you specified about the user whom you specified or that user's manager.
 
 ### Show the direct reports of another user ###
-1. Follow the steps in the first two procedures in this topic, selecting **Office 365 Users** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
 
 1. On the **Insert** tab, select **Text**, and then select **Input text**.
 
@@ -157,7 +156,7 @@ The text box shows the information that you specified about the current user.
 1. (optional) With the gallery still selected, select **Options** in the lower-right corner, and then select **Mail** in the **Body1** list, **DisplayName** in the **Heading1** list, and **JobTitle** in the **Subtitle1** list.
 
 ### Search for users ###
-1. Follow the steps in the first two procedures in this topic, selecting **Office 365 Users** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
 
 1. On the **Insert** tab, select **Text**, and then select **Input text**.
 
@@ -173,14 +172,11 @@ The text box shows the information that you specified about the current user.
 
 1. (optional) In the lower-right corner, select **Options**, and then select **Mail** in the **Body1** list, **DisplayName** in the **Heading1** list, and **JobTitle** in the **Subtitle1** list.
 
-## Office 365 Outlook ##
-
 ### Send email ###
 For this function, you must specify the first three arguments, but all other arguments are optional:
+<br>**office365.SendEmail(Subject, Body, To[, Attachments, From, CC, BCC, Importance, IsHtml])**
 
-**office365.SendEmail(Subject, Body, To[, Attachments, From, CC, BCC, Importance, IsHtml])**
-
-1. Follow the steps in the first two procedures in this topic, selecting **Office 365 Outlook** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Outlook**.
 
 1. On the **Insert** tab, select **Text**, select **Input text**, and then repeat that process twice so that the screen contains three input-text controls.
 
@@ -202,15 +198,15 @@ For this function, you must specify the first three arguments, but all other arg
 ## Twitter ##
 Connect to Twitter, and then perform these tasks:
 
-- Show a [timeline](powerapps-api-functions.md#show-a-timeline)
-- Show [followers](powerapps-api-functions.md#show-followers)
-- Show [followed users](powerapps-api-functions.md#show-followed-users)
-- Show [information](powerapps-api-functions.md#show-information-about-a-user) about a user, such as full name, bio, and location
-- [Search tweets](powerapps-api-functions.md#search-tweets)
-- [Send a tweet](powerapps-api-functions.md#send-a-tweet)
+- Show a timeline
+- Show followers
+- Show followed users
+- Show information about a user, such as full name, bio, and location
+- Search tweets
+- Send a tweet
 
 ### Show a timeline ###
-1. Follow the steps in the first two procedures in this topic, selecting **Twitter** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
 
 1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
 
@@ -232,7 +228,7 @@ Connect to Twitter, and then perform these tasks:
 1. In the **Screen** pane, select **TweetText** in the **Body1** list, **TweetedBy** in the **Heading1** list, and **CreatedAt** in the **Subtitle1** list.
 
 ### Show followers ###
-1. Follow the steps in the first two procedures in this topic, selecting **Twitter** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
 
 1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
 
@@ -255,7 +251,7 @@ Connect to Twitter, and then perform these tasks:
 
 ### Show followed users ###
 
-1. Follow the steps in the first two procedures in this topic, selecting **Twitter** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
 
 1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
 
@@ -277,7 +273,7 @@ Connect to Twitter, and then perform these tasks:
 1. In the **Screen** pane, select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
 
 ### Show information about a user ###
-1. Follow the steps in the first two procedures in this topic, selecting **Twitter** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
 
 1. On the **Insert** tab, select **Text box**, and then set its **Text** property to one of these formulas:
 	- **twitter.User(** *UserID* **)!Description**
@@ -292,7 +288,7 @@ Connect to Twitter, and then perform these tasks:
 	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
 
 ### Search tweets ###
-1. Follow the steps in the first two procedures in this topic, selecting **Twitter** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
 
 1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
 
@@ -309,7 +305,7 @@ Connect to Twitter, and then perform these tasks:
 1. In the **Screen** pane, select **TweetText** in the **Body1** list, **TweetedBy** in the **Heading1** list, and **CreatedAt** in the **Subtitle1** list.
 
 ### Send a tweet ###
-1. Follow the steps in the first two procedures in this topic, selecting **Twitter** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
 
 1. On the **Insert** tab, select **Text**, select **Input text**, and then rename the new control **MyTweet**.
 
@@ -320,18 +316,18 @@ Connect to Twitter, and then perform these tasks:
 
 1. Press Esc to return to the default workspace.
 
-## Show data from Microsoft Translator ##
+## Microsoft Translator ##
 
 ### Translate text ###
-1. Follow the steps in the first two procedures in this topic, selecting **Microsoft Translator** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Microsoft Translator**.
 
 1. On the **Insert** tab, select **Text**, and then select **Input text**.
 
-1. Name the input-text control **Source**.
+1. Rename the input-text control **Source**.
 
-1. On the **Insert** tab, select **Controls**, select **Drop-down**, and then move the drop-down list below the input-text control.
+1. On the **Insert** tab, select **Controls**, select **Drop-down**, and then move the drop-down list below the **Source** box.
 
-1. In the formula bar, set the **Items** property of the drop-down list to this formula:<br>
+1. Set the **Items** property of the drop-down list to this formula:<br>
 **microsofttranslator.Languages()**
 
 1. Rename the drop-down list **TargetLang**.
@@ -341,15 +337,15 @@ Connect to Twitter, and then perform these tasks:
 
 1. Type text into **Source**, and select a language in **TargetLang**.
 
-	The text box shows the text that you specified translated into the language that you specified.
+	The text box shows the text that you specified in the language that you specified.
 
 ### Speak translated text ###
-1. Follow the steps in the first two procedures in this topic, selecting **Microsoft Translator** as the connection and the data source, and then follow the steps in the previous procedure for translating text.
+1. If you haven't already, follow the steps in the previous procedure for translating text.
 
 1. Set the **Items** property of the **TargetLang** drop-down list to this formula:<br>
 **microsofttranslator.SpeechLanguages()**
 
-1. Rename the text box (not the input-text control) to **Target**.
+1. Rename the text box (not the **Source** box) to **Target**.
 
 1. On the **Insert** tab, select **Media**, and then select **Audio**.
 
@@ -363,7 +359,7 @@ Connect to Twitter, and then perform these tasks:
 1. Press Esc to return to the default workspace.
 
 ### Detect the source language ###
-1. Follow the steps in the first two procedures in this topic, selecting **Microsoft Translator** as the connection and the data source.
+1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Microsoft Translator**.
 
 1. On the **Insert** tab, select **Text**, select **Input Text**, and name the input-text control **Source**.
 
