@@ -104,7 +104,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	![Screen for adding a record](./media/app-from-sharepoint/add-record.png)
 
-	- To save your changes, select the checkmark in the upper-right corner.
+	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
 	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
 
 1. In the browse screen, select the arrow next to any account.
@@ -123,7 +123,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	![Edit record](./media/app-from-sharepoint/edit-record.png)
 
-	- To save your changes, select the checkmark in the upper-right corner.
+	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
 	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
 
 ## Next steps ##

@@ -96,7 +96,7 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 	![Screen for adding a record](./media/app-from-salesforce/add-record.png)
 
-	- To save your changes, select the checkmark in the upper-right corner.
+	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
 	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
 
 1. In the browse screen, select the arrow next to any account.
@@ -115,7 +115,7 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 	![Edit record](./media/app-from-salesforce/edit-record.png)
 
-	- To save your changes, select the checkmark in the upper-right corner.
+	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
 	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
 
 ## Next steps ##

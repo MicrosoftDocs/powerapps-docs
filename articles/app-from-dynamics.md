@@ -96,7 +96,7 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 	![Screen for adding a record](./media/app-from-dynamics/add-record.png)
 
-	- To save your changes, select the checkmark in the upper-right corner.
+	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
 	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
 
 1. In the browse screen, select the arrow next to any account.
@@ -111,9 +111,12 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 	![Pencil icon](./media/app-from-dynamics/pencil-icon.png)
 
-1. In the edit screen, modify the data in one or more fields, and then save your changes by selecting the checkmark in the upper-right corner.
+	A screen appears in which you can edit the information about that account.
 
 	![Edit record](./media/app-from-dynamics/edit-record.png)
+
+	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
+	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
 
 ## Next steps ##
 - Customize the default app by performing one or more of these tasks:
