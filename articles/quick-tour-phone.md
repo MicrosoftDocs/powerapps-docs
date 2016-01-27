@@ -22,26 +22,28 @@
 
 Run an app that someone else created, or create your own app with a default interface and sample data in less than a minute. To create your own app, just specify a cloud-storage account to which PowerApps can upload data, and then choose any of several types of apps that PowerApps can create for you. Try out your new app by adding, updating, and removing data, and share the app with others in your organization.
 
+**Prerequisites**
+
+1. Get a Dropbox, OneDrive, or GoogleDrive account if you don't already have one.
+
+1. Install [PowerApps](http://aka.ms/powerappsinstall), and then open it.
+
+	![Open PowerApps](./media/quick-tour-phone/install-powerapps.png)
+
+1. Sign in for the first time by swiping left to advance through the welcome screens and then providing your credentials.
+
+	![Sign in to PowerApps](./media/quick-tour-phone/powerapps-credentials.png)
+
 ## Run an app ##
 To run an app that another user has created and shared with you:
-1. [Install PowerApps](http://aka.ms/powerappsinstall), and then follow any of these steps:
-	- Select **Open in PowerApps** in the notification mail that you received.
-	- Open PowerApps directly, and then select the app in the list that appears on the default screen.
-	- In [powerapps.com](https://web.powerapps.com), select **Apps** near the left edge, select the app you want to run, and then select **Open**.
+
+1. Select **Open in PowerApps** in the notification mail that you received, or open PowerApps directly and then select the app in the list that appears on the default screen.
 
 1. If prompted, select **Add** next to one or more data sources, provide your credentials, and then select **Launch**.
 
 ## Create an app ##
 
-1. Get a Dropbox, OneDrive, or GoogleDrive account if you don't already have one, and [install PowerApps](http://aka.ms/powerappsinstall).
-
-	![Install PowerApps from the App Store](./media/quick-tour-phone/install-powerapps.png)
-
-1. Open PowerApps, swipe left to advance through the welcome screens, and then provide your credentials to sign in.
-
-	![Sign in to PowerApps](./media/quick-tour-phone/powerapps-credentials.png)
-
-1. Near the bottom of the screen, select **Connections**, and then select **Add a connection**.
+1. In PowerApps, select **Connections** near the bottom of the screen, and then select **Add a connection**.
 
 	![Add a connection](./media/quick-tour-phone/add-connection.png)
 
@@ -51,15 +53,15 @@ To run an app that another user has created and shared with you:
 
 	![Start from a template](./media/quick-tour-phone/start-from-template.png)
 
-1. Scroll through the list of templates, and then select a template (such as **Event Signup**).
+1. Scroll through the list of templates, select a template (such as **Event Signup**), and then select the arrow in the upper-right corner.
 
 	![Choose a template](./media/quick-tour-phone/choose-template.png)
 
-1. Select the arrow in the upper-right corner, type a name for your app, and then select **Create**.
+1. Type a name for your app, and then select **Create**.
 
 	![Create your app](./media/quick-tour-phone/create-app.png)
 
-	The sample data is uploaded to your cloud account, and the app is created and ready for use.
+	The sample data is uploaded to your cloud account, and the app is created and ready to use.
 
 1. Explore the default behavior and appearance of the app, and then swipe right to close it.
 
