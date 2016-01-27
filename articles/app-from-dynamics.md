@@ -20,350 +20,83 @@
 
 # Create an app to manage data from Dynamics CRM Online #
 
-Create an app for adding, updating, and deleting data about accounts and other information from Dynamics CRM Online. Connect to your account, add the connection to an app, and then configure the interface.
+Create an app for adding, updating, and deleting data about your customers and other information in Dynamics CRM Online. Connect to your account, add the connection to an app, and then specify which data you want to show.
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall), and then open it. (Advance through the welcome screens by selecting the arrow near the lower-right corner, and then sign in by providing your credentials.)
-- Get an account in Dynamics CRM Online if you don't already have one.
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps.
+Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a desktop computer that's running Windows, and then open PowerApps. If you haven't signed in before, advance through the welcome screens by selecting the arrow near the lower-right corner, and then provide your credentials.
 
-## Create a connection ##
-1.  Open PowerApps, and then select **Connections** on the **File** menu (near the left edge).
+## Create an app ##
+1. On the **File** menu, select **New**, and then select **Get started** under **Start from your data**.
 
-	![Connections option on the File menu](./media/app-from-dynamics/file-connections.png)
+1. If you haven't already connected from PowerApps to your Dynamics CRM Online account, perform the following steps:
 
-1.  Select **Add connection**.
+	1. Select **Available connections**, select **Dynamics CRM Online**.
+	1. Select **Connect**, and then provide your credentials.
 
-	![Connections option on the File menu](./media/powerapps-api-functions/add-connection.png)
-1.  In the list of connection types, select any of these options, and then select **Connect**:
+1. Under **Select a data set**, select the appropriate option for this app.
 
-	- **Office 365 Users**
-	- **Office 365 Outlook**
-	- **Twitter**
-	- **Microsoft Translator**
+1. Under **Select a table**, select the appropriate option for this app (such as **Accounts**), and then select **Connect**.
 
-1. Provide your credentials for the connection that you selected.
+	The app is created with a default interface, which includes a screen for browsing data (as this graphic shows), a screen for showing details, and a screen for creating and editing data.
 
-	The connection that you created appears under **My connections**.
+	![App with default interface](./media/app-from-dynamics/default-app.png)
 
-	![Connections option on the File menu](./media/powerapps-api-functions/my-connections.png)
+1. In the **Layout** tab of the **Quick tools** pane, select a layout (such as that highlights the data that you want to show.
 
-1. On the **File** menu, select **New**.
+	For example, select a layout that contains a heading, a subtitle, and a body element.
 
-	![New option on the File menu](./media/powerapps-api-functions/file-new.png)
+	![Choose a layout](./media/app-from-dynamics/choose-layout.png)
 
-1. Under **Start from scratch**, select **Get started.**
+1. In the **Content** tab of the **Quick tools** pane, select the data that you want to show in each element. For example:
 
-	![Open a blank app](./media/powerapps-api-functions/blank-app.png)
+	- In the **Body1** list, select **websiteurl**.
+	- In the **Heading1** list, select **accountnumber**.
+	- In the **Subtitle1** list, select **name**.
 
-1. In the lower-right corner, select **Options**.
+	The browse screen of the app reflects your changes.
 
-	![Open the Screen pane](./media/powerapps-api-functions/open-options.png)
+	![Specify data on the Content tab](./media/app-from-dynamics/specify-data.png)
 
-1. In the **Screen** pane, select **Insert your data**, select the connection you want, and then select **Add Data Source**.
+1. Select any item in the list except the first one, and then copy and paste this formula into the formula bar, which is to the right of the **fx** button:
 
-	Your selection appears under **Data Sources**.
+	**Sort(If(IsBlank(TextSearchBox1!Text), Accounts, Filter(Accounts, TextSearchBox1!Text in Text(name))), name, If(SortDescending1, Descending, Ascending))**
 
-1. Close the **Screen** pane by selecting the **X** in its upper-right corner.
+	The data is sorted in ascending order by the names of the accounts.
 
-	![Close the Screen pane](./media/powerapps-api-functions/close-options.png)
+	![Data sorted in ascending order by name](./media/app-from-dynamics/sort-ascending.png)
 
-## Office 365 ##
-Connect to Office 365 Users or Office 365 Outlook, and then perform these tasks:
+## Test the app ##
+1. Press F5, and then select the sort icon multiple times.
 
-- Show information about the current user
-- Show information about another user
-- Show the direct reports of another user
-- Search for users
-- Send mail
+	![Sort icon](./media/app-from-dynamics/sort-button.png)
 
-### Show information about the current user ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
+ 	The data is sorted in ascending or descending order by name, depending on how many times you select the sort button.
 
-1. On the **Insert** tab, select **Text box**, and then set the **Text** property of the text box to any of these formulas:
+1. Type part or all of the name of an account.
 
-	- **office365users.MyProfile().Department**
-	- **office365users.MyProfile().DisplayName**
-	- **office365users.MyProfile().GivenName**
-	- **office365users.MyProfile().Id**
-	- **office365users.MyProfile().JobTitle**
-	- **office365users.MyProfile().Mail**
-	- **office365users.MyProfile().MailNickname**
-	- **office365users.MyProfile().Surname**
-	- **office365users.MyProfile().TelephoneNumber**
-	- **office365users.MyProfile().UserPrincipalName**
-	- **office365users.MyProfile().AccountEnabled**
+	The screen shows only those accounts for which the name contains the text that you type, regardless of case.
 
-The text box shows the information that you specified about the current user.
+	![Filter example](./media/app-from-dynamics/filter-example.png)
 
-### Show information about another user ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
+1. In the upper-right corner, select the plus icon.
 
-1. On the **Insert** tab, select **Text**, and then select **Input text**.
+	A screen appears in which you can specify a new account.
 
-1. Rename the text-input control **InfoAbout** and, in it, type the name of a user in your organization.
+	- To save your changes, select the checkmark in the upper-right corner.
+	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
 
-1. On the **Insert** tab, select **Text box**, and then set the **Text** property of the text box to any of these formulas:
+1. In the browse screen, select the arrow next to any account.
 
-	- To show information about another user:<br>
-		- **office365users.UserProfile(InfoAbout.Text).Department**
-		- **office365users.UserProfile(InfoAbout.Text).DisplayName**
-		- **office365users.UserProfile(InfoAbout.Text).GivenName**
-		- **office365users.UserProfile(InfoAbout.Text).Id**
-		- **office365users.UserProfile(InfoAbout.Text).JobTitle**
-		- **office365users.UserProfile(InfoAbout.Text).Mail**
-		- **office365users.UserProfile(InfoAbout.Text).MailNickname**
-		- **office365users.UserProfile(InfoAbout.Text).Surname**
-		- **office365users.UserProfile(InfoAbout.Text).TelephoneNumber**
-		- **office365users.UserProfile(InfoAbout.Text).UserPrincipalName**
-		- **office365users.UserProfile(InfoAbout.Text).AccountEnabled**
+	The details screen shows more information about that account.
 
-	- To show information about another user's manager:<br>
-		- **office365users.Manager(InfoAbout.Text).Department**
-		- **office365users.Manager(InfoAbout.Text).DisplayName**
-		- **office365users.Manager(InfoAbout.Text).GivenName**
-		- **office365users.Manager(InfoAbout.Text).Id**
-		- **office365users.Manager(InfoAbout.Text).JobTitle**
-		- **office365users.Manager(InfoAbout.Text).Mail**
-		- **office365users.Manager(InfoAbout.Text).MailNickname**
-		- **office365users.Manager(InfoAbout.Text).Surname**
-		- **office365users.Manager(InfoAbout.Text).TelephoneNumber**
-		- **office365users.Manager(InfoAbout.Text).UserPrincipalName**
-		- **office365users.Manager(InfoAbout.Text).AccountEnabled**
+1. Select the pencil icon in the upper-right corner of the details screen.
 
-	The text box shows the information that you specified about the user whom you specified or that user's manager.
+1. In the edit screen, modify the data in one or more fields, and then save your changes by selecting the checkmark in the upper-right corner.
 
-### Show the direct reports of another user ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
-
-1. On the **Insert** tab, select **Text**, and then select **Input text**.
-
-1. Rename the text-input control **InfoAbout** and then, in it, type the email address of someone in your organization.
-
-1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
-
-1. Set the gallery's **Items** property to this formula:
-
-	**office365users.DirectReports(InfoAbout.Text)**
-
-	The gallery shows information about the direct reports of the user that you specified.
-
-1. (optional) With the gallery still selected, select **Options** in the lower-right corner, and then select **Mail** in the **Body1** list, **DisplayName** in the **Heading1** list, and **JobTitle** in the **Subtitle1** list.
-
-### Search for users ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
-
-1. On the **Insert** tab, select **Text**, and then select **Input text**.
-
-1. Rename the text-input control **SearchTerm**, and then type a search term in that control.
-
-1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
-
-1. Set the gallery's **Items** property to this formula:
-
-	**office365users.SearchUser({searchTerm: SearchTerm.Text})**
-
-	The gallery shows users whose information contains the term that you specified.
-
-1. (optional) In the lower-right corner, select **Options**, and then select **Mail** in the **Body1** list, **DisplayName** in the **Heading1** list, and **JobTitle** in the **Subtitle1** list.
-
-### Send email ###
-For this function, you must specify the first three arguments, but all other arguments are optional:
-<br>**office365.SendEmail(Subject, Body, To[, Attachments, From, CC, BCC, Importance, IsHtml])**
-
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Outlook**.
-
-1. On the **Insert** tab, select **Text**, select **Input text**, and then repeat that process twice so that the screen contains three input-text controls.
-
-1. Arrange the controls in a column, and give them these names:
-
-	- **inputTo**
-	- **inputSubject**
-	- **inputBody**
-
-1. On the **Insert** tab, select **Button**, and set the button's **OnSelect** property to this formula:<br>
-**office365.SendEmail(inputSubject.text, inputBody.text, inputTo.text)**
-
-1. Move the button so that it appears under all the other controls, and set its **Text** property to show **Send email**.
-
-1. Press F5, type a valid email address in **inputTo**, and type whatever you want in the other two input-text controls.
-
-1. Select **Send email** to send the message, and then press Esc to return to the default workspace.
-
-## Twitter ##
-Connect to Twitter, and then perform these tasks:
-
-- Show a timeline
-- Show followers
-- Show followed users
-- Show information about a user, such as full name, bio, and location
-- Search tweets
-- Send a tweet
-
-### Show a timeline ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
-
-1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
-
-1. Do one of the following:
-
-	- To show the current user's timeline, set the **Items** property of the gallery to this formula:<br>**twitter.HomeTimeline()**
-
-	- To show another user's timeline, set the **Items** property of the gallery to this formula:<br>
-	**twitter.UserTimeline(** *UserID* **)**
-
-	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
-
-	**Tip:** Show only the most recent tweets in a timeline (for example, the last five tweets) by specifying the maxResults argument, as these formulas show:<br>
-	**twitter.HomeTimeline({maxResults:5})**<br>
-	**twitter.UserTimeline(Tweep.Text, {maxResults:5})**
-
-1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
-
-1. In the **Screen** pane, select **TweetText** in the **Body1** list, **TweetedBy** in the **Heading1** list, and **CreatedAt** in the **Subtitle1** list.
-
-### Show followers ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
-
-1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
-
-1. Do one of the following:
-
-	- To show the current user's followers, set the **Items** property of the gallery to this formula:<br>**twitter.MyFollowers()**
-
-	- To show the another user's followers, set the **Items** property of the gallery to this formula:<br>
-	**twitter.Followers(** *UserID* **)**
-
-	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
-
-	**Tip:** Show only, for example, five followers by specifying the maxResults argument, as these formulas show:<br>
-	**twitter.MyFollowers({maxResults:5})**<br>
-	**twitter.Followers(Tweep.Text, {maxResults:5})**
-
-1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
-
-1. In the **Screen** pane, select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
-
-### Show followed users ###
-
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
-
-1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
-
-1. Do one of the following:
-
-	- To show which users the current user is following, set the **Items** property of the gallery to this formula:<br>**twitter.MyFollowing()**
-
-	- To show which users another user is following, set the **Items** property of the gallery to this formula:<br>
-	**twitter.Following(** *UserID* **)**
-
-	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
-
-	**Tip:** Show only, for example, five followed users by specifying the maxResults argument, as these formulas show:<br>
-	**twitter.MyFollowing({maxResults:5})**<br>
-	**twitter.Following(Tweep.Text, {maxResults:5})**
-
-1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
-
-1. In the **Screen** pane, select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
-
-### Show information about a user ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
-
-1. On the **Insert** tab, select **Text box**, and then set its **Text** property to one of these formulas:
-	- **twitter.User(** *UserID* **)!Description**
-	- **twitter.User(** *UserID* **)!FullName**
-	- **twitter.User(** *UserID* **)!Location**
-	- **twitter.User(** *UserID* **)!UserName**
-	- **twitter.User(** *UserID* **)!FollowersCount**
-	- **twitter.User(** *UserID* **)!FriendsCount**
-	- **twitter.User(** *UserID* **)!Id**
-	- **twitter.User(** *UserID* **)!StatusesCount**
-
-	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
-
-### Search tweets ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
-
-1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
-
-1. Set the **Items** property of the gallery to this formula:<br>
-**twitter.SearchTweet(** *SearchTerm* **)**
-
-	Specify a *SearchTerm* by enclosing a term in double quotation marks or by referring to an equivalent value. For example, specify **"PowerApps"** directly in the formula, or add an input-text control named **SearchTerm**, specify **SearchTerm.Text** in the formula, and then type **PowerApps** (no quotation marks) in **SearchTerm**.
-
-	**Tip:** Show only, for example, the first five results by specifying the maxResults argument, as this formula shows:<br>
-	**twitter.SearchTweet(SearchTerm.Text, {maxResults:5})**
-
-1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
-
-1. In the **Screen** pane, select **TweetText** in the **Body1** list, **TweetedBy** in the **Heading1** list, and **CreatedAt** in the **Subtitle1** list.
-
-### Send a tweet ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
-
-1. On the **Insert** tab, select **Text**, select **Input text**, and then rename the new control **MyTweet**.
-
-1. On the **Insert** tab, select **Button**, and then set the **OnSelect** property of the button to this formula:<br>
-**twitter.Tweet({tweetText: MyTweet.Text})**
-
-1. Press F5, type some text into **MyTweet**, and then select the button to tweet the text that you specified.
-
-1. Press Esc to return to the default workspace.
-
-## Microsoft Translator ##
-
-### Translate text ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Microsoft Translator**.
-
-1. On the **Insert** tab, select **Text**, and then select **Input text**.
-
-1. Rename the input-text control **Source**.
-
-1. On the **Insert** tab, select **Controls**, select **Drop-down**, and then move the drop-down list below the **Source** box.
-
-1. Set the **Items** property of the drop-down list to this formula:<br>
-**microsofttranslator.Languages()**
-
-1. Rename the drop-down list **TargetLang**.
-
-1. On the **Insert** tab, select **Text box**, move it below the drop-down list, and set its **Text** property to this formula:
-<br>**microsofttranslator.Translate(Source.Text, TargetLang.Selected.Value)**
-
-1. Type text into **Source**, and select a language in **TargetLang**.
-
-	The text box shows the text that you specified in the language that you specified.
-
-### Speak translated text ###
-1. If you haven't already, follow the steps in the previous procedure for translating text.
-
-1. Set the **Items** property of the **TargetLang** drop-down list to this formula:<br>
-**microsofttranslator.SpeechLanguages()**
-
-1. Rename the text box (not the **Source** box) to **Target**.
-
-1. On the **Insert** tab, select **Media**, and then select **Audio**.
-
-1. Set the **Media** property of the audio control to this formula:<br>
-**microsofttranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)**
-
-1. Press F5, type text into **Source**, select an option in **TargetLang**, and then select the play button in the audio control.
-
-	The app plays an audio version of the text that you specified in the language that you specified.
-
-1. Press Esc to return to the default workspace.
-
-### Detect the source language ###
-1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Microsoft Translator**.
-
-1. On the **Insert** tab, select **Text**, select **Input Text**, and name the input-text control **Source**.
-
-1. On the **Insert** tab, select **Text box**, and then move the text box under **Source**.
-
-1. Set the **Text** property of the text box to this formula:
-<br>**microsofttranslator.Detect(Source.Text)**
-
-1. Type text into **Source**.
-
-	The text box indicates the language of the text that you typed. For example, the text box shows **fr** (for French) if you type **bonjour** or **it** (for Italian) if you type **ciao**.
+## Next steps ##
+- Customize the default app by performing one or more of these tasks:
+	- [add and configure controls](get-started-test-drive.md#configure-a-control)
+	- [add a screen](add-screen-context-variables.md)
+	- [build a formula](formula-reference.md)
+- [Share the app](share-app.md) with others in your organization
