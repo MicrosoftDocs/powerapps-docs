@@ -20,7 +20,7 @@
 
 # Create an app to manage data from Dynamics CRM Online #
 
-Create an app for adding, updating, and deleting data about your customers and other information in Dynamics CRM Online. Connect to your account, add the connection to an app, and then specify which data you want to show.
+Create an app for adding, updating, and deleting data about your customers and other information in Dynamics CRM Online. Connect to your account, create the app automatically, and then specify which data you want to show. Test the app by displaying, sorting, filtering, and updating data.
 
 **Prerequisites**
 
@@ -29,22 +29,29 @@ Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a 
 ## Create an app ##
 1. On the **File** menu, select **New**, and then select **Get started** under **Start from your data**.
 
+	![Create an app from data](./media/app-from-dynamics/create-from-data.png)
+
 1. If you haven't already connected from PowerApps to your Dynamics CRM Online account, perform the following steps:
 
-	1. Select **Available connections**, select **Dynamics CRM Online**.
-	1. Select **Connect**, and then provide your credentials.
+	1. Select **Available connections**, select **Dynamics CRM Online**, and then select **Connect**.
+
+		![Select the Dynamics CRM Online connector](./media/app-from-dynamics/connect-dynamics.png)
+
+	1. Provide your credentials.
 
 1. Under **Select a data set**, select the appropriate option for this app.
 
 1. Under **Select a table**, select the appropriate option for this app (such as **Accounts**), and then select **Connect**.
 
-	The app is created with a default interface, which includes a screen for browsing data (as this graphic shows), a screen for showing details, and a screen for creating and editing data.
+	![Select a table](./media/app-from-dynamics/select-table.png)
+
+	The app is created with a default interface, which includes a screen for browsing data, a screen for showing details, and a screen for creating and editing data. As this graphic shows, the screen for browsing data needs some configuration to be useful.
 
 	![App with default interface](./media/app-from-dynamics/default-app.png)
 
-1. In the **Layout** tab of the **Quick tools** pane, select a layout (such as that highlights the data that you want to show.
+1. In the **Layout** tab of the **Quick tools** pane, select a layout that can highlight the types of data that you want to show.
 
-	For example, select a layout that contains a heading, a subtitle, and a body element.
+	For example, select a layout that can show three strings of text in different sizes.
 
 	![Choose a layout](./media/app-from-dynamics/choose-layout.png)
 
@@ -62,18 +69,18 @@ Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a 
 
 	**Sort(If(IsBlank(TextSearchBox1!Text), Accounts, Filter(Accounts, TextSearchBox1!Text in Text(name))), name, If(SortDescending1, Descending, Ascending))**
 
-	The data is sorted in ascending order by the names of the accounts.
+	The data is sorted by the names of the accounts.
 
-	![Data sorted in ascending order by name](./media/app-from-dynamics/sort-ascending.png)
+	![Data sorted by name](./media/app-from-dynamics/sort-ascending.png)
 
 ## Test the app ##
 1. Press F5, and then select the sort icon multiple times.
 
 	![Sort icon](./media/app-from-dynamics/sort-button.png)
 
- 	The data is sorted in ascending or descending order by name, depending on how many times you select the sort button.
+ 	The data is sorted in ascending or descending order by name, depending on how many times you selected the sort icon.
 
-1. Type part or all of the name of an account.
+1. In the search box, type at least part of an account name.
 
 	The screen shows only those accounts for which the name contains the text that you type, regardless of case.
 
@@ -81,18 +88,30 @@ Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a 
 
 1. In the upper-right corner, select the plus icon.
 
+	![Add icon](./media/app-from-dynamics/add-icon.png)
+
 	A screen appears in which you can specify a new account.
+
+	![Screen for adding a record](./media/app-from-dynamics/add-record.png)
 
 	- To save your changes, select the checkmark in the upper-right corner.
 	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
 
 1. In the browse screen, select the arrow next to any account.
 
+	![Icon to show details](./media/app-from-dynamics/right-arrow.png)
+
 	The details screen shows more information about that account.
+
+	![Details screen](./media/app-from-dynamics/details-screen.png)
 
 1. Select the pencil icon in the upper-right corner of the details screen.
 
+	![Pencil icon](./media/app-from-dynamics/pencil-icon.png)
+
 1. In the edit screen, modify the data in one or more fields, and then save your changes by selecting the checkmark in the upper-right corner.
+
+	![Edit record](./media/app-from-dynamics/edit-record.png)
 
 ## Next steps ##
 - Customize the default app by performing one or more of these tasks:
