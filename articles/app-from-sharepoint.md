@@ -67,6 +67,8 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	![Specify data on the Content tab](./media/app-from-sharepoint/specify-data.png)
 
+	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**.
+
 1. Select any item in the list except the first one to select the list, which is called a gallery.
 
 	A selection box appears around the gallery.

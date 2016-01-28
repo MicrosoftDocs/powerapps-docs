@@ -69,6 +69,8 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 	![Specify data on the Content tab](./media/app-from-salesforce/specify-data.png)
 
+	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**. 
+
 1. Select any item in the list except the first one, and then copy and paste this formula into the formula bar, which is to the right of the **fx** button:
 
 	**Sort(If(IsBlank(TextSearchBox1!Text), Accounts, Filter(Accounts, TextSearchBox1!Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
