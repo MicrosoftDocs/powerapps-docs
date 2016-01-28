@@ -111,6 +111,8 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content-flooring-estimates.png)
 
+	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**. 
+
 1. In the **Quick tools** pane, select the **Theme** tab, and then select a different theme, such as **Lavender**.
 
 	![Change the theme](./media/get-started-create-from-data/choose-theme.png)
