@@ -19,7 +19,7 @@
     ms.author="karthikb"/>
 
 # Share data associated with an app #
-Before you share an app that relies on data in the cloud, share that data with the people you expect to run or even modify your app. For example, you can share an app that's based on an Excel file in Dropbox, but the app won't run properly for anyone who doesn't have access to that file. Share data in Dropbox, OneDrive or Google Drive by following the steps in the appropriate section of this topic.
+Before you share an app that relies on data in the cloud, share that data with the people you expect to run or even modify your app. For example, you can share an app that's based on an Excel file in Dropbox, but the app won't run properly for anyone who doesn't have access to that file. Share data in Dropbox, OneDrive, or Google Drive by following the steps in the appropriate section of this topic.
 
 ## Share data in OneDrive ##
 
