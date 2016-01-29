@@ -26,20 +26,28 @@ Run an app that someone else created, or create your own app with a default inte
 
 1. Get a Dropbox, OneDrive, or GoogleDrive account if you don't already have one.
 
-1. Install [PowerApps](http://aka.ms/powerappsinstall), and then open it.
-
-	![Open PowerApps](./media/quick-tour-phone/install-powerapps.png)
+1. [Install PowerApps](http://aka.ms/powerappsinstall), and then open it.
 
 1. Sign in for the first time by swiping left to advance through the welcome screens and then providing your credentials.
 
-	![Sign in to PowerApps](./media/quick-tour-phone/powerapps-credentials.png)
-
 ## Run an app ##
-To run an app that another user has created and shared with you:
+1. Open PowerApps, and then select the app in the list that appears on the default screen.
 
-1. Select **Open in PowerApps** in the notification mail that you received, or open PowerApps directly and then select the app in the list that appears on the default screen.
+	If another user created an app and shared it with you, you can also open it by selecting **Open in PowerApps** in the notification mail that you received.
 
 1. If prompted, select **Add** next to one or more data sources, provide your credentials, and then select **Launch**.
+
+1. To close the app, swipe right.
+
+1. To pin the app to your home screen:
+
+	1. Select the details icon next to app that you want to pin.
+
+	![Details icon](./media/quick-tour-phone/details-icon.png)
+
+	1. Select the **Pin** icon, and then follow the prompts.
+
+	![Pin icon](./media/quick-tour-phone/pin-icon.png)
 
 ## Create an app ##
 
@@ -68,7 +76,7 @@ To run an app that another user has created and shared with you:
 ## Share an app ##
 **Note:** Before anyone else can run or customize your app, you must [share the sample data](share-app-data.md) with them.
 
-1. Follow the procedure to create an app, earlier in this topic.
+1. Create an app by following the steps in the previous procedure.
 
 1. Near the bottom of the screen, select **Open** to display a list of apps that you can share, and then select the details icon to the right of the app you want to share.
 
@@ -90,8 +98,7 @@ To run an app that another user has created and shared with you:
 	The people with whom you shared your app will receive an email message that contains a link to install PowerApps and run your app.
 
 ## Next steps #
-Customize the default interface by using a tablet, a laptop, or desktop computer that's running PowerApps:
+On a tablet, a laptop, or desktop computer that's running PowerApps:
 
-- Add a screen
-- Show a data set
-- Build a formula
+- Create an app automatically from data in sources such as [Excel](get-started-create-from-data.md), SharePoint, Dynamics CRM Online, and Salesforce.
+- Customize the app that you just created (or make your own from scratch) by adding and configuring controls, [adding one or more screens](add-screen-context-variables.md), and [building formulas](formula-reference.md).
