@@ -20,7 +20,7 @@
 
 # Take a quick tour of PowerApps #
 
-Run an app that someone else created, or create your own app with a default interface and sample data in less than a minute. To create your own app, specify a cloud-storage account to which PowerApps can upload data, and then choose any of several types of apps that PowerApps can create for you. Try out your new app by adding, updating, and removing data, and share the app with others in your organization.
+Run an app that you or someone else created, or create an app with a default interface and sample data in less than a minute. To create an app, specify a cloud-storage account to which PowerApps can upload data, and then choose any of several types of apps that PowerApps can create for you. Try out your new app by adding, updating, and removing data, and share the app with others in your organization.
 
 **Prerequisites**
 
@@ -85,8 +85,7 @@ Run an app that someone else created, or create your own app with a default inte
 
 1. Select **Close** to dismiss the success notification.
 
-	The people with whom you shared your app will receive an email messa- Create an app automatically from data in sources such as Excel, SharePoint, Dynamics CRM Online, and Salesforce.
-	- Customize the app that you just created (or make your own from scratch) by adding and configuring controls, adding one or more screens, and building formulas.ge that contains a link to install PowerApps and run your app.
+	The people with whom you shared your app will receive an email message that contains a link to install PowerApps and run your app.
 
 ## Next steps #
 - Create an app automatically from data in sources such as [Excel](get-started-create-from-data.md), SharePoint, Dynamics CRM Online, and Salesforce.
