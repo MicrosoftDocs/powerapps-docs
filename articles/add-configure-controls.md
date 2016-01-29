@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Add and configure a control | Microsoft PowerApps"
-	description="Step-by-step instructions for adding, moving, resizing, and renaming controls, such as buttons and text boxes."
+	description="Step-by-step instructions for adding and configuring controls directly, from the ribbon, or in the formula bar."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,17 +20,60 @@
 
 # Add and configure a control in PowerApps #
 
+Add a variety of controls to your app, and configure their properties directly, from the ribbon, or in the formula bar.
+
 **Prerequisites**
 1. Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a desktop computer that's running Windows.  
 1. Open PowerApps.  
 1. Sign in for the first time by selecting the arrow near the lower-right corner to advance through the welcome screens and then providing your credentials.
-1. Select **New** on the **File** menu (near the left edge), and then select **Get started** under **Create from scratch**.  
+1. Select **New** on the **File** menu (near the left edge), and then select **Get started** under **Create from scratch**.
+
+	![Create an app from scratch](./media/add-configure-controls/blank-app.png)
+
 
 ## Add a control ##
 On the **Insert** tab, follow either of these steps:
 
 - Select **Text box**, **Button**, or **Image**.
-- Select a category, such as **Text** or **Controls**, and then select the control that you want to add.
+- Select any of these categories, and then select the control that you want to add:
+
+	- **Text**
+
+		![Text box, Text input, HTML text, and Pen input](./media/add-configure-controls/text-category.png)
+
+		**Tip:** [Write or draw](add-images-pictures-audio-video.md#write-or-draw-in-the-app) by using the pen input.
+
+	- **Controls**
+
+		![Button, Drop down, Date Picker, List box, Check box, Radio, Toggle, Slider, Rating, Timer, Import, Export](./media/add-configure-controls/controls-category.png)
+
+		**Tip:** Offer choices in your app by adding [a list box, a drop-down list, or radio buttons](add-list-box-drop-down-list-radio-button).
+
+	- **Gallery**
+
+		![Vertical and horizontal galleries that show images only, text only, images with captions, images with text, in addition to custom/blank galleries and a card gallery](./media/add-configure-controls/gallery-category.png)
+
+		**Tip:** [Add a card gallery](create-card-gallery.md) if each record contains more data than one screen can show at a time.
+
+	- **Media**
+
+		![Image, Camera, Video, Audio, Microphone, Add Picture](./media/add-configure-controls/media-category.png)
+
+		**Tip:** Show data other than text by [adding multimedia](add-images-pictures-audio-video.md) to your app.
+
+	- **Charts**
+
+		![Column chart, Line chart, Pie chart](./media/add-configure-controls/chart-category.png)
+
+		**Tip:** [Configure a chart](add-images-pictures-audio-video.md) to showcase mission-critical data.
+
+	- **Shapes**
+
+		![Left arrow, right arrow, circle, quarter circle, half circle, three-quarter circle, isosceles triangle, right triangle, rectangle, pentagon, hexagon, octagon, and four types of stars ](./media/add-configure-controls/shapes-category.png)
+
+	- **Icons**
+
+		![Action icons and symbol icons](./media/add-configure-controls/icon-category.png)
 
 If you need more space for controls, [add a screen](add-screen-context-variables.md).
 
@@ -74,7 +117,7 @@ If you need more space for controls, [add a screen](add-screen-context-variables
 	![A text box with text aligned to the top of the box](./media/add-configure-controls/change-align.png)
 
 ## Configure a control in the formula bar ##
-Each change that you made earlier in this topic updated the value of a property for that control you configured.
+Each change that you made earlier in this topic updated the value of a [property](reference-properties.md) for the control that you configured.
 
 - When you resized the control, you changed its **Width** property.
 - When you moved the control, you changed its **X** and **Y** properties.
@@ -94,9 +137,7 @@ Instead of configuring a control directly or from the ribbon, you can also updat
 
 	**Tip:** You can [format dates and times](show-text-dates-times.md) in various ways, in addition to performing calculations on them.
 
-	By using the formula bar, you can set properties that aren't available directly or from the ribbon. For example, you can set a tooltip that appears when a user points to the control but doesn't select it.
-
-	You can also specify complicated formulas to increase the power of your app.
+	By using the formula bar, you can set properties that you can't set directly or from the ribbon. For example, you can set a tooltip that appears when a user points to the control but doesn't select it. You can also specify complicated formulas that increase the power of your app.
 
 1. Add a checkbox, and set its **Text** property to **Show text**.
 
@@ -104,15 +145,21 @@ Instead of configuring a control directly or from the ribbon, you can also updat
 
 	**If(Checkbox1!Value = true, true, false)**
 
-	**Note:** If you add a checkbox, remove it, and then add another checkbox, you might need to rename the checkbox you're using, as this topic describes later, to **Checkbox1** for the formula to work.
+	**Note:** If you add a checkbox, remove it, and then add another checkbox, you might need to rename the checkbox that you're using for the formula to work. If the check box isn't named **Checkbox1**, rename it as this topic describes later.
 
-1. Press F5, and then select and clear the checkbox multiple times to show or hide the text box.
+1. Select the checkbox to show the text box.
 
-	[Build a formula](formula-reference.md) to configure the behavior and appearance of your app.
+	![Text box appears when the check box is selected](./media/add-configure-controls/show-text.png)
+
+1. Clear the checkbox to hide the text box.
+
+	![Text box disappears when the check box is cleared](./media/add-configure-controls/hide-text.png)
+
+Configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md).
 
 ## Rename a control ##
-1. Select the control that you want to rename, such as checkbox that you added in the previous procedure.
+1. Select the control that you want to rename, such as the checkbox that you added in the previous procedure.
 
-1. On the **Home** tab, select the name of the control (to the right of **New screen**), and then type the name you want.
+1. On the **Home** tab, select the name of the control (to the right of **New screen**), and then type the name that you want.
 
 	![Rename a checkbox](./media/add-configure-controls/rename-control.png)
