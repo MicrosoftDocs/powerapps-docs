@@ -20,18 +20,13 @@
 
 # Show data from Office 365 in PowerApps #
 
-Connect to Office 365, and then configure your app to perform these tasks:
-
-- Show information about the current user
-- Show information about another user
-- Show the direct reports of another user
-- Search for users
-- Send mail
+Connect to Office 365 Users, and then configure your app to search for one or more users or to show information about a user, such as name, job, title, and direct reports. Connect to Office 365 Outlook, and then configure your app to send mail.
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall), and then open it. (Advance through the welcome screens by selecting the arrow near the lower-right corner, and then sign in by providing your credentials.)
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps.
+1. Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a desktop computer that's running Windows.  
+1. Open PowerApps.  
+1. Sign in for the first time by swiping left (or selecting the arrow near the lower-right corner) to advance through the welcome screens and then providing your credentials.  
 
 ## Connect to Office 365 ##
 1.  Open PowerApps, and then select **Connections** on the **File** menu (near the left edge), and then select **Add connection**.
@@ -44,7 +39,7 @@ Connect to Office 365, and then configure your app to perform these tasks:
 
 1. On the **File** menu, select **New**, and then select **Get started** under **Start from scratch**.
 
-	![Open a blank app](./media/powerapps-api-functions/blank-app.png)
+	![Open a blank app](./media/app-from-office/blank-app.png)
 
 1. In the lower-right corner, select **Options**, and then select **Insert your data** in the **Screen** pane.
 
@@ -54,12 +49,10 @@ Connect to Office 365, and then configure your app to perform these tasks:
 
 1. Close the **Screen** pane by selecting the **X** in its upper-right corner.
 
-	![Close the Screen pane](./media/powerapps-api-functions/close-options.png)
+	![Close the Screen pane](./media/app-from-office/close-options.png)
 
 ## Show information about the current user ##
-1. If you haven't already, create a connection to **Office 365 Users** as described earlier in this topic.
-
-1. On the **Insert** tab, select **Text box**, and then set the **Text** property of the text box to any of these formulas:
+1. Add a text box, and set its **Text** property to any of these formulas:
 
 	- **office365users.MyProfile().Department**
 	- **office365users.MyProfile().DisplayName**
@@ -73,12 +66,10 @@ Connect to Office 365, and then configure your app to perform these tasks:
 	- **office365users.MyProfile().UserPrincipalName**
 	- **office365users.MyProfile().AccountEnabled**
 
-The text box shows the information that you specified about the current user.
+	The text box shows the information that you specified about the current user.
 
 ## Show information about another user ##
-1. If you haven't already, create a connection to **Office 365 Users** as described earlier in this topic.
-
-1. On the **Insert** tab, select **Text**, and then select **Input text**.
+1. On the **Insert** tab, select **Text**, and then select **Text input**.
 
 1. Rename the text-input control **InfoAbout** and, in it, type the name of a user in your organization.
 
