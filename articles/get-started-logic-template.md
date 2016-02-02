@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="stepsic-microsoft-com"
+    authors="aftowen"
     manager="dwrede"
     editor=""
     tags=""
@@ -16,8 +16,8 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="11/14/2015"
-   ms.author="stepsic"/>
+    ms.date="02/01/2016"
+   ms.author="aftowen"/>
 
 # Create Logic Flows from a template #
 Create Logic Flows from any of several built-in templates that can, for example, send you an email message when anyone sends a tweet that includes a particular keyword.
@@ -27,8 +27,8 @@ Create Logic Flows from any of several built-in templates that can, for example,
 **Prerequisites**
 
 - An account on [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209)
-- An account on Twitter
-- An account on Office 365 (from which you can send email)
+- A Twitter account
+- Office 365 credentials
 
 ## Choose a template
 

@@ -28,13 +28,13 @@ Create a logic flow to perform a task automatically when you want an event to ki
 
 - An account on [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209)
 - An Twitter account
-- An Office 365 account (from which you can send email)
+- Office 365 credentials
 
 ## Specify an event
 
-1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Get started** under **Make a logic flow**.
+1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar, and then select **Create a logic flow**.
 
-	![Create a flow](./media/get-started-logic-flow/create-flow.png)
+	![Logic flows option in the left navigation bar](./media/get-started-logic-flow/create-logic-flow.png)
 
 1. Select **Create from blank**.
 
@@ -55,8 +55,6 @@ Create a logic flow to perform a task automatically when you want an event to ki
 	![Twitter keyword](./media/get-started-logic-flow/twitter-keyword.png)
 
 ## Specify an action ##
-In this procedure, you'll add the action to send email, and then you'll test that action. By following these steps, you'll learn the basics of actions and how to configure your logic flow to make it work the way you want.
-
 1. Under the event that you created in the previous procedure, select the "+" button.
 
 	![Plus icon](./media/get-started-logic-flow/add-action-icon.png)
@@ -69,7 +67,7 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 
 	![List of actions](./media/get-started-logic-flow/send-email.png)
 
-4. If prompted, provide your Office 365 credentials.
+4. If prompted, select the sign-in button, and then provide your Office 365 credentials.
 
 	![Sign in to Office](./media/get-started-logic-flow/sign-in-office.png)
 
@@ -87,7 +85,7 @@ In this procedure, you'll add the action to send email, and then you'll test tha
 
 	![Select the done button](./media/get-started-logic-flow/done-button.png)
 
-	The list of your logic flow reflects your changes.
+	The list of your logic flows reflects your changes.
 
 1. Test your logic flow by tweeting with the keyword you indicated.
 
