@@ -52,7 +52,7 @@ Create Logic Flows from any of several built-in templates that can, for example,
 
 ## Customize your logic flow ##
 
-1. Select the title bar for an event to expand it, and then customize it, for example, by specifying a keyword that interests you.
+1. Select the title bar for an event to expand it, and then customize it (for example, by specifying a keyword that interests you).
 
 	![Specify keyword for tweets](./media/get-started-logic-template/specify-keyword.png)
 
@@ -67,7 +67,7 @@ Create Logic Flows from any of several built-in templates that can, for example,
 
 	![Customize the subject line of the notification mail](./media/get-started-logic-template/customize-subject.png)
 
-	In the **To** field, leave your address as the default, or specify other addresses in addition to or instead of your own.
+	In the **To** field, leave your address as the default, or specify one or more other addresses in addition to or instead of your own.
 
 1. Near the bottom of the screen, specify a name for your logic flow, and then select **Done**.
 

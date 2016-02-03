@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="stepsic-microsoft-com"
+    authors="aftowen"
     manager="dwrede"
     editor=""
     tags=""
@@ -15,8 +15,8 @@
     ms.topic="get-started-article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="11/24/2015"
-    ms.author="stepsic"/>
+    ms.date="02/03/2016"
+    ms.author="anneta"/>
 
 # Create Logic Flows#
 
@@ -40,9 +40,7 @@ Create a logic flow to perform a task automatically when you want an event to ki
 
     ![Create from blank](./media/get-started-logic-flow/from-blank.png)
 
-1. In the box that says **How would you like to start?**, type or paste **Twitter**.
-
-1. In the list of events, select **Twitter - When a new tweet appears**.
+1. In the box that says **How would you like to start?**, type or paste **Twitter**, and then select **Twitter - When a new tweet appears**.
 
 	![Twitter event](./media/get-started-logic-flow/twitter-search.png)
 
@@ -63,11 +61,11 @@ Create a logic flow to perform a task automatically when you want an event to ki
 
 	![Add action bar](./media/get-started-logic-flow/add-action-bar.png)
 
-3. In the box that shows **What would you like to do next?**, type or paste **send email**, and then click **Office365 Outlook - Send Email**.
+3. In the box that shows **What would you like to do next?**, type or paste **send email**, and then select **Office 365 Outlook - Send Email**.
 
 	![List of actions](./media/get-started-logic-flow/send-email.png)
 
-4. If prompted, select the sign-in button, and then provide your Office 365 credentials.
+4. If prompted, select the sign-in button, and then provide your credentials.
 
 	![Sign in to Office](./media/get-started-logic-flow/sign-in-office.png)
 
@@ -81,13 +79,13 @@ Create a logic flow to perform a task automatically when you want an event to ki
 
 1. In the **BODY** box, select the **Tweet text** parameter to add a placeholder for it, and then type the end of your message, including any other parameters you want to include.
 
-8.  Near the bottom of the screen, name your logic flow, and then select **Done**.
+1.  Near the bottom of the screen, name your logic flow, and then select **Done**.
 
 	![Select the done button](./media/get-started-logic-flow/done-button.png)
 
 	The list of your logic flows reflects your changes.
 
-1. Test your logic flow by tweeting with the keyword you indicated.
+1. Test your logic flow by tweeting with the keyword that you indicated.
 
 	Within a minute, an email message notifies you of the new tweet.
 
