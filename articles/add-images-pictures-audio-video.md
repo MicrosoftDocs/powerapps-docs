@@ -55,7 +55,7 @@ When users run your app, they can add their own images from existing files. In a
 1. Tap or click the control, select the file that you want to add, and then select **Open**.
 1. Press Esc to return to the default workspace.
 
-## Take pictures by using a camera
+## Take a picture by using a camera
 Take multiple pictures with the camera on your computer or mobile device. Then, show the pictures in an image gallery. These steps use the camera on your computer. To follow these steps, start the camera on your computer or mobile device.
 
 1. Add a camera control, rename it **MyCamera**, and set its **OnSelect** property to this formula:
@@ -125,7 +125,7 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 	The contents of the pen control appear in the second item in the gallery.
 
-1. Repeat these steps as many times as you like, and then press Esc to return to the default workspace.
+1. Repeat these steps as many times as you want, and then press Esc to return to the default workspace.
 
 1. (optional) Convert written text to typed text:
 
