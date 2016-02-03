@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Upload images, take a picture, play an audio and video file in PowerApps | Microsoft PowerApps"
-	description="Add and configure images, audio, video, microphone, and pen features to your PowerApps"
+	pageTitle="Add an image, a video, or a sound | Microsoft PowerApps"
+	description="Add an image file, play a video file, draw a picture with a pen, take a picture with a camera, or record and play an audio file"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -17,101 +17,65 @@
    ms.date="11/30/2015"
    ms.author="mandia"/>
 
-# Using the image, picture, audio, and video multimedia options
+# Add an image, a video, or a sound in PowerApps
 
-In PowerApps, there are several multimedia options available. You can use these options to do various things, including:
+Make your app stand out by adding multimedia elements such as images, videos, and sounds. Upload one or more existing files, create content on the fly by using your device's camera or microphone, or draw with a pen on a virtual whiteboard.
 
-- Upload images to your app
-- Take pictures using the camera on your mobile device
-- Import audio and play it within your app
-- Add a video and play it within your app
-- Use the microphone on your mobile device to make a recording
-- Use a pen on a tablet to create a sketch or a drawing
+**Prerequisites**
 
-The following multimedia options are available within your app:  
-![][19]
+Learn how to [add and configure controls](add-configure-controls.md).
 
-This topic shows you how to do add these multimedia options to your PowerApps.
+## Add media from a file ##
 
+1. On the **Content** tab, select **Media**.
+1. Select **Images**, **Videos**, or **Audio**, and then select **Browse**.
 
-### Prerequisites
+	![Add an image, a video, or an audio file](./media/add-images-pictures-audio-video/add-image-video-audio-file.png)
 
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+1. Select the file you want to add, and then select **Open**.
+1. When you finish adding files, press Esc to return to the default workspace.
 
-> [AZURE.TIP] In your PowerApps, the **File** menu includes a **Media** option. In **Media**, you can upload images, audio files, and video files:  
-> ![][24]  
->
-> It's easier to upload these files before you start adding the controls to your app. Then, add your control and select the file from a list.  
+1. Add an image, video, or audio control, and then follow either of these steps:
+	- If you added an image control, set its **Image** property to the file that you added.
 
+	![Set Image property](./media/add-images-pictures-audio-video/add-tile-image.png)
 
-## Upload an image or add a picture
-In your PowerApps, you can add an image and add a picture. Use the **Image** option to add a stationary picture when creating your app, like a company logo. For example, you can create a travel app that shows pictures of exotic travel destinations, city skylines, and common attractions. If you're creating a pet adoption app, you can add pictures of the animals available for adoption.
+	- If you added a video or audio control, set its **Media** property to the file that you added.
 
-Use the **Picture** option to give your app users the ability to upload pictures. For example, you can create an insurance app that lets users upload pictures of the items they want to insure, like a car or a motorcycle. If you have a dating app, users can upload pictures of themselves.
+	![Set Media property](./media/add-images-pictures-audio-video/add-intro-sound.png)
 
-This section lists the steps to add the Image and Picture controls to your app.
+## Add a user picture ##
+When users run your app, they can add their own images from existing files. In a real-estate app, for example, users might upload pictures of houses they want to sell. In an insurance app, users might upload pictures of damage from car accidents so that estimators can respond.
 
-#### Add an image
+1. Add an **Add Picture** control, and then press F5.
 
-1. On the **File** tab, select **Media**, and then select **Images**.
-2. Select the **Upload** folder, browse to any the .jpeg file that you want to use, and then select **Open**. Your Media should look similar to the following:  
-![][22]  
-3. Go back to the app designer.
-4. On the **Insert** tab, select **Image**:  
-![][2]  
-5. On the **Content** tab, and select **Image**. In the scroll list, select the image you added. The image displays in the control:  
-![][3]  
+	![Set Media property](./media/add-images-pictures-audio-video/add-picture.png)
 
-####  Add a picture
-1. On the **Insert** tab, select **Media**, and then select **Add Picture**:  
-![][20]  
-2. Preview your app: ![][1]. The picture control automatically adds an **Add Picture...** button. When you select it, an explorer window opens. Select your picture and select **Open**.  
-	The picture is displayed in the control you added.
+1. Tap or click the control, select the file that you want to add, and then select **Open**.
+1. Press Esc to return to the default workspace.
 
-## Take a picture by using a camera
+## Take pictures by using a camera
 Take multiple pictures with the camera on your computer or mobile device. Then, show the pictures in an image gallery. These steps use the camera on your computer. To follow these steps, start the camera on your computer or mobile device.
 
-1. On the **Home** tab, select **New Screen**.
-2. On the **Insert** tab, select **Media**, and then select **Camera**:  
-![][4]  
-3. Select **Allow** if prompted. Rename the control to **MyCamera**:  
-![][5]  
-If your camera is enabled, it shows a live image of wherever it's pointed, which may be you. Smile.
+1. Add a camera control, rename it **MyCamera**, and set its **OnSelect** property to this formula:
 
-4. Set the **OnSelect** property of **MyCamera** to the following function:  
+	**Collect(MyImages, {SinglePicture:MyCamera!Photo})**
 
-	```Collect(MyImages, {SinglePicture:MyCamera!Photo})```  
+1. Add an image gallery, and set its **Items** property to **MyImages**.
 
-	![][6]  
+1. Select the image control for the first item in the gallery, and set its **OnSelect** property to this formula:
 
-	When you click the camera, a picture is taken, and saved to a collection named **MyImages**; which we'll show you shortly.
+	**Remove(MyImages, ThisItem)**
 
-5. On the **Insert** tab, select **Gallery**, and then select the vertical **Image Only** gallery:  
-![][7]  
-You can easily resize the image gallery by clicking-and-dragging the corner. This control also has a scroll bar.
-5. Resize the image gallery until you see three images in the gallery. Select the second image. This puts a grey border around the entire control:  
-![][8]  
-	Set its **Items** property to MyImages:  
-	![][9]  
-6. Preview your app: ![][1]. To take pictures, select **MyCamera** multiple times. Each picture that you take is shown in the gallery. Press the **ESC** key or select the **X** to go back to the app designer.
+1. Press F5, and select **MyCamera** one or more times.
 
-<br/>
-Now, let's remove an image from the gallery when you select it:
+	Each time you select **MyCamera**, an image is added to the gallery.
 
-1. Select the first image in the gallery.
-2. Set its **OnSelect** property to the following function:  
-```Remove(MyImages, ThisItem)```  
-3. Preview your app: ![][1]. Select any image in the gallery. The image you select is now removed. Press the **ESC** key or the **X** to go back to the app designer.
+1. Select an image in the gallery to remove that image.
 
-> [AZURE.NOTE]
-> - When you create a collection, you can see what's in your collection by going to the **File** tab, and then select **Collections**.  
-> - When you select the second item in the gallery, any changes you make apply to the gallery. In this example, we selected the second image in the gallery and updated it's **OnSelect** property. This means that the changes you make apply to all images in the gallery.  
-> - If you close the app, you'll lose the images that you've collected. If you want to keep them, go to the **File** tab, select **Save**.
+1. When you finish adding and removing images from the gallery, press Esc to return to the default workspace.
 
-
-## Add audio and play it in your app
+## Add an audio file
 Configure an audio control to play a file in any format that Internet Explorer supports, including the audio portion of a video file. For example, you can use a .wma file. If you don't have an audio recording, you can create your own using the **Sound Recorder** or **Voice Recorder** apps in Windows. Search for **Sound Recorder** or **Voice Recorder** to open it.
 
 1. On the **Home** tab, select **New Screen**.
@@ -126,7 +90,7 @@ Configure an audio control to play a file in any format that Internet Explorer s
 
 	The file plays. You can also use the audio control to play sounds that you record using the **Microphone** control (also on the **Insert** tab > **Media**).
 
-## Add video and play it in your app
+## Add a video
 Configure a video control to play a file in any format that Internet Explorer supports. For example, you can use a .wmv file. If you don't have a video, you can create your own using the video recording feature of your webcam.
 
 The following steps assume you already uploaded the video to your app.
@@ -153,7 +117,7 @@ Preview your app: ![][1]. Select the play button and watch the video:
 To return to the app designer, press the **ESC** key.
 
 
-## Record and play sounds in the app
+## Record and play a sound
 Use the microphone to record sounds, and list them in a gallery.
 
 1. On the **Home** tab, select **New Screen**.
@@ -180,7 +144,7 @@ Use the microphone to record sounds, and list them in a gallery.
 
 Press the **ESC** key to return to the app designer.
 
-## Write or draw in the app
+## Draw a picture ##
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
 
 1. On the **Home** tab, select **New Screen**.
@@ -208,13 +172,12 @@ You can also convert written text to typed text:
 1. Add a label, and set its **Text** property to ```Sketches!RecognizedText```.
 2. Preview your app: ![][1]. Write a word in the pen control. The label shows the word as typed text.
 
-## Tips and Tricks
+## Tips and tricks
 - In the **File** tab > **Media**, you can also upload images, videos, and audio files. When you add one of these controls to your app, set the **Media** property to the name of the file. For example, you uploaded an audio file named MySuperAudio.wmv. In your app, set the **Media** property of the Audio control to ```MySuperAudio```.
 - At anytime, you can select the preview button (![][1]) to see what you created and test it.
 - When designing your app, you can resize the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window.
 - **Save** your work using the **File** menu, or press **Ctrl** + **S**.
-
 
 ## What you learned
 
