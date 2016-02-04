@@ -50,13 +50,15 @@ When users run your app, they can add their own images from existing files. In a
 
 1. Add an **Add Picture** control, and then press F5.
 
-	![Set Media property](./media/add-images-pictures-audio-video/add-picture.png)
+	The control appears as if another user were running the app.
+
+	![Preview of an Add Picture control](./media/add-images-pictures-audio-video/add-picture.png)
 
 1. Tap or click the control, select the file that you want to add, and then select **Open**.
 1. Press Esc to return to the default workspace.
 
-## Take a picture by using a camera
-Take multiple pictures with the camera on your computer or mobile device. Then, show the pictures in an image gallery. These steps use the camera on your computer. To follow these steps, start the camera on your computer or mobile device.
+## Take a set of pictures
+Take multiple pictures with the camera on your computer or mobile device, and then show them in a gallery.
 
 1. Add a camera control, rename it **MyCamera**, and set its **OnSelect** property to this formula:
 
@@ -72,13 +74,15 @@ Take multiple pictures with the camera on your computer or mobile device. Then, 
 
 	Each time you select **MyCamera**, an image is added to the gallery.
 
+	![A camera that, when a user selects it, adds pictures to a gallery](./media/add-images-pictures-audio-video/camera-gallery.png)
+
 1. Select an image in the gallery to remove that image.
 
 1. When you finish adding and removing images from the gallery, press Esc to return to the default workspace.
 
 **Important:** To retain the images in the app after its closed, [save and load](function-savedata-loaddata.md) the **MyImages** collection.
 
-## Record and play a sound
+## Record a set of sounds
 1. Add a text-input control, and rename it **Description**.
 1. Add a microphone, rename it **MyMicrophone**, and set its **OnStop** property to this formula:
 
@@ -87,13 +91,11 @@ Take multiple pictures with the camera on your computer or mobile device. Then, 
 	By using this formula, you create a collection named **Interviews**, which contains a column named **Recordings** and a column named **Notes**. Each row contains a sound file that you create by using the microphone and any text in the **Description** box when you stop recording.
 
 1. Add a custom gallery, and set its **Items** property to **Interviews**.
+
 1. Select the first item in the gallery, add an audio control to it, and then set the **Media** property for the audio control to **ThisItem!Recordings**.  
 	**Note:** You can save visual space by shrinking the audio control so that only the play button appears.
+
 1. Select the first item in the gallery, add a text box to it, and set the **Text** property of the text box to **ThisItem!Notes**.
-
-	Each item in the gallery resembles this example:
-
-	![Gallery with text box and audio control](./media/add-images-pictures-audio-video/gallery.png)
 
 1. Press F5, type a phrase in the **Description** box, and then select **MyMicrophone** to start recording.
 
@@ -105,7 +107,11 @@ Take multiple pictures with the camera on your computer or mobile device. Then, 
 
 	Each description and recording appears in the gallery.
 
+	![A gallery that shows descriptions and audio controls](./media/add-images-pictures-audio-video/audio-gallery.png)
+
 1. Press Esc to return to the default workspace.
+
+**Important:** To retain the information in the app after its closed, [save and load](function-savedata-loaddata.md) the **Interviews** collection.
 
 ## Draw a picture ##
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
@@ -125,7 +131,11 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 	The contents of the pen control appear in the second item in the gallery.
 
+	![A gallery that shows pen  drawings](./media/add-images-pictures-audio-video/pen-gallery.png)
+
 1. Repeat these steps as many times as you want, and then press Esc to return to the default workspace.
+
+**Important:** To retain the images in the app after its closed, [save and load](function-savedata-loaddata.md) the **Creativity** collection.
 
 1. (optional) Convert written text to typed text:
 
