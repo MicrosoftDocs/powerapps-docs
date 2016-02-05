@@ -37,11 +37,11 @@ Learn how to [add and configure controls](add-configure-controls.md).
 1. Add an image, video, or audio control, and then follow either of these steps:
 	- If you added an image control, set its **Image** property to the file that you added.
 
-	![Set Image property](./media/add-images-pictures-audio-video/add-tile-image.png)
+		![Set Image property](./media/add-images-pictures-audio-video/add-tile-image.png)
 
 	- If you added a video or audio control, set its **Media** property to the file that you added.
 
-	![Set Media property](./media/add-images-pictures-audio-video/add-intro-sound.png)
+		![Set Media property](./media/add-images-pictures-audio-video/add-intro-sound.png)
 
 	**Note**: Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
@@ -125,6 +125,10 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 1. Add an image-only gallery, and set its **Items** property to **Creativity**.
 
+1. Select the first item in the gallery, and set its **OnSelect** property to this formula:
+
+	**Remove(Sketches, ThisItem)**
+
 1. Press F5, draw or write something in **Sketches**, and then select the **Add** button.
 
 	The contents of the pen control appear in the first item of the gallery.
@@ -135,9 +139,11 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 	![A gallery that shows pen  drawings](./media/add-images-pictures-audio-video/pen-gallery.png)
 
+	**Tip:** To remove a sketch, select it in the gallery.
+
 1. Repeat these steps as many times as you want, and then press Esc to return to the default workspace.
 
-**Important:** To retain the images after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
+	**Important:** To retain the images after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
 
 1. (optional) Convert written text to typed text:
 
