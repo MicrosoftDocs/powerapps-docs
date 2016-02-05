@@ -1,10 +1,10 @@
 <properties
 	pageTitle="Add an image, a video, or a sound | Microsoft PowerApps"
-	description="Add an image file, play a video file, draw a picture with a pen, take a picture with a camera, or record and play an audio file"
+	description="Show an image file, play a video file, take a picture with a camera, draw a picture with a pen, or record and play an audio file"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="MandiOhlinger"
+	authors="aftowen"
 	manager="dwrede"
 	editor=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/30/2015"
-   ms.author="mandia"/>
+   ms.date="02/03/2015"
+   ms.author="anneta"/>
 
 # Add an image, a video, or a sound in PowerApps
 
@@ -32,7 +32,7 @@ Learn how to [add and configure controls](add-configure-controls.md).
 
 	![Add an image, a video, or an audio file](./media/add-images-pictures-audio-video/add-image-video-audio-file.png)
 
-1. Select the file you want to add, and then select **Open**.
+1. Select the file that you want to add, and then select **Open**.
 1. When you finish adding files, press Esc to return to the default workspace.
 1. Add an image, video, or audio control, and then follow either of these steps:
 	- If you added an image control, set its **Image** property to the file that you added.
@@ -57,6 +57,8 @@ When users run your app, they can add their own images from existing files. In a
 1. Tap or click the control, select the file that you want to add, and then select **Open**.
 1. Press Esc to return to the default workspace.
 
+**Important:** To retain the image after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save it locally, or use the [Patch](function-patch.md) function to save it to a data source.
+
 ## Take a set of pictures
 Take multiple pictures with the camera on your computer or mobile device, and then show them in a gallery.
 
@@ -80,7 +82,7 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 1. When you finish adding and removing images from the gallery, press Esc to return to the default workspace.
 
-**Important:** To retain the images in the app after its closed, [save and load](function-savedata-loaddata.md) the **MyImages** collection.
+**Important:** To retain the images after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
 
 ## Record a set of sounds
 1. Add a text-input control, and rename it **Description**.
@@ -111,7 +113,7 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 1. Press Esc to return to the default workspace.
 
-**Important:** To retain the information in the app after its closed, [save and load](function-savedata-loaddata.md) the **Interviews** collection.
+**Important:** To retain the sounds after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
 
 ## Draw a picture ##
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
@@ -135,7 +137,7 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 1. Repeat these steps as many times as you want, and then press Esc to return to the default workspace.
 
-**Important:** To retain the images in the app after its closed, [save and load](function-savedata-loaddata.md) the **Creativity** collection.
+**Important:** To retain the images after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
 
 1. (optional) Convert written text to typed text:
 
