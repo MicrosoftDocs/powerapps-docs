@@ -101,7 +101,7 @@ which returns **false**, because the **Errors** function returned the following 
 You can place a label on the form to show this error to the user.
 
 - To show the error, set the label's **Text** property to this formula:<br>
-**Label.Text = Errors( IceCream, EditRecord ).Message**
+**Label.Text = First(Errors( IceCream, EditRecord )).Message**
 
 You can also add a **Reload** button on the form, so that the user can efficiently resolve the conflict.
 
