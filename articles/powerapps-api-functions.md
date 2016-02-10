@@ -106,7 +106,7 @@ The text box shows the information that you specified about the current user.
 
 1. On the **Insert** tab, select **Text**, and then select **Input text**.
 
-1. Rename the text-input control **InfoAbout** and, in it, type the name of a user in your organization.
+1. Rename the text-input control **InfoAbout** and, in it, type the email address of a user in your organization.
 
 1. On the **Insert** tab, select **Text box**, and then set the **Text** property of the text box to any of these formulas:
 
