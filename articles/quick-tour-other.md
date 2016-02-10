@@ -89,4 +89,10 @@ Run an app that you or someone else created, or create an app with a default int
 
 ## Next steps #
 - Create an app automatically from data in sources such as [Excel](get-started-create-from-data.md), SharePoint, Dynamics CRM Online, and Salesforce.
-- Customize the app that you just created (or make your own from scratch) by adding and configuring controls, [adding one or more screens](add-screen-context-variables.md), and [building formulas](formula-reference.md).
+- Customize the app that you just created (or make your own from scratch) by:
+
+	- adding and configuring controls
+	- adding data from Office 365, Twitter, or Microsoft Translator
+	- [adding one or more screens](add-screen-context-variables.md)
+	- [building formulas](formula-reference.md)
+	- [change the settings](change-app-settings.md) for your app

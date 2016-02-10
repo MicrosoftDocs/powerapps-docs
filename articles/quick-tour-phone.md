@@ -15,7 +15,7 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/21/2015"
+   ms.date="02/10/2016"
    ms.author="anneta"/>
 
 # Take a quick tour of PowerApps on a phone #
@@ -41,17 +41,17 @@ Run an app that you or someone else created, or create an app with a default int
 
 1. To pin the app to your home screen:
 
-	1. Select the details icon next to app that you want to pin.
+	1. Select the details icon next to the app that you want to pin.
 
-	![Details icon](./media/quick-tour-phone/details-icon.png)
+		![Details icon](./media/quick-tour-phone/details-icon.png)
 
 	1. Select the **Pin** icon, and then follow the prompts.
 
-	![Pin icon](./media/quick-tour-phone/pin-icon.png)
+		![Pin icon](./media/quick-tour-phone/pin-icon.png)
 
 ## Create an app ##
 
-1. In PowerApps, select **Connections** near the bottom of the screen, and then select **Add a connection**.
+1. In PowerApps, select **Connections** near the bottom of the screen, and then select **Add connection**.
 
 	![Add a connection](./media/quick-tour-phone/add-connection.png)
 
@@ -61,13 +61,9 @@ Run an app that you or someone else created, or create an app with a default int
 
 	![Start from a template](./media/quick-tour-phone/start-from-template.png)
 
-1. Scroll through the list of templates, select a template (such as **Event Signup**), and then select the arrow in the upper-right corner.
-
-	![Choose a template](./media/quick-tour-phone/choose-template.png)
+1. Scroll through the list of templates, select a template (such as **Event Signup**), and then select **Use** in the upper-right corner.
 
 1. Type a name for your app, and then select **Create**.
-
-	![Create your app](./media/quick-tour-phone/create-app.png)
 
 	The sample data is uploaded to your cloud account, and the app is created and ready to use.
 
@@ -101,4 +97,10 @@ Run an app that you or someone else created, or create an app with a default int
 On a tablet, a laptop, or desktop computer that's running PowerApps:
 
 - Create an app automatically from data in sources such as [Excel](get-started-create-from-data.md), SharePoint, Dynamics CRM Online, and Salesforce.
-- Customize the app that you just created (or make your own from scratch) by adding and configuring controls, [adding one or more screens](add-screen-context-variables.md), and [building formulas](formula-reference.md).
+- Customize the app that you just created (or make your own from scratch) by:
+
+	- adding and configuring controls
+	- adding data from Office 365, Twitter, or Microsoft Translator
+	- [adding one or more screens](add-screen-context-variables.md)
+	- [building formulas](formula-reference.md)
+	- [change the settings](change-app-settings.md) for your app

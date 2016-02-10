@@ -23,7 +23,7 @@ Customize an app by changing its name, its tile, its screen size, its screen ori
 
 **Prerequisites**
 
-1. [Create an app](quick-tour-other.md) in PowerApps, and then open it on a tablet, a laptop or a desktop computer that's running PowerApps.
+1. [Create an app](quick-tour-other.md) in PowerApps, and then open it for editing on a tablet, a laptop or a desktop computer that's running PowerApps.
 1. On the **File** menu, select **App settings**.
 
 ## Rename an app ##
@@ -49,30 +49,19 @@ Follow one or more of these steps:
 
 	![Option to change the screen size and orientation of an app](./media/change-app-settings/size-orientation.png)
 
-1. For a phone app, follow any of these steps:
-	- In the **Orientation** list, select either **Portrait** or **Landscape**.
+1. In the **Orientation** list, select either **Portrait** or **Landscape**.
 
-	![Change the orientation of a phone app](./media/change-app-settings/orientation-phone.png)
-
-	- Under **Lock aspect ratio**, specify either **On** or **Off**.
-
-		If you lock the aspect ratio, the app will retain the appropriate aspect ratio for an iPhone. If the app is running on another kind of device, the app will display incorrectly and may show undesirable results. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running.
-1. For a tablet app, follow any of these steps:
-	- In the **Orientation** list, select either **Portrait** or **Landscape**.
-
-	![Change the orientation of a tablet app](./media/change-app-settings/orientation-tablet.png)
-
-	- Under **Aspect ratio**, select the ratio that matches the target device for this app.
+1. (Tablet apps only) Under **Aspect ratio**, select the ratio that matches the target device for this app.
 
 	![Change the aspect ratio of a tablet app](./media/change-app-settings/aspect-tablet.png)
 
-	- Under **Lock aspect ratio**, specify either **On** or **Off**.
+1. Under **Lock aspect ratio**, specify either **On** or **Off**.
 
-		If you lock the app's aspect ratio, the app will retain the aspect ratio that you specify. If the app is running on a device that has a different aspect ratio, the app will display incorrectly and may show undesirable results. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running.
+	If you lock the aspect ratio, the app will retain the appropriate aspect ratio for an iPhone. If the app is running on another kind of device, the app will display incorrectly and may show undesirable results. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running.
 
-	- Under **Lock orientation**, specify either **On** or **Off**.
+1. Under **Lock orientation**, specify either **On** or **Off**.
 
-		If you lock the app's orientation, the app will retain the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app will display incorrectly and may show undesirable results. If you unlock the app's orientation, it will adjust to the screen orientation of the device on which it's running.
+	If you lock the app's orientation, the app will retain the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app will display incorrectly and may show undesirable results. If you unlock the app's orientation, it will adjust to the screen orientation of the device on which it's running.
 
 1. Select **Apply** to save your changes.
 
