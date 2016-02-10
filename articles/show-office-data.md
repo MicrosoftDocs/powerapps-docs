@@ -69,7 +69,7 @@ Learn how to [add and configure a control](add-configure-controls.md).
 ## Show information about another user ##
 1. Add a text-input control, and rename it **InfoAbout**.
 
-1. In **InfoAbout**, type or paste the name of a user in your organization.
+1. In **InfoAbout**, type or paste the email address of a user in your organization.
 
 1. Add a text box, and set its **Text** property to any of these formulas:
 
