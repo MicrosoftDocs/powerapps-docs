@@ -23,13 +23,13 @@
 Add a variety of controls to your app, and configure their properties directly, from the ribbon, or in the formula bar.
 
 **Prerequisites**
+
 1. Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a desktop computer that's running Windows.  
 1. Open PowerApps.  
-1. Sign in for the first time by selecting the arrow near the lower-right corner to advance through the welcome screens and then providing your credentials.
+1. Sign in for the first time by swiping left (or selecting the arrow near the lower-right corner) to advance through the welcome screens and then providing your credentials.
 1. Select **New** on the **File** menu (near the left edge), and then select **Get started** under **Create from scratch**.
 
 	![Create an app from scratch](./media/add-configure-controls/blank-app.png)
-
 
 ## Add a control ##
 On the **Insert** tab, follow either of these steps:
@@ -84,7 +84,7 @@ If you need more space for controls, [add a screen](add-screen-context-variables
 
 	![A selected text box](./media/add-configure-controls/selected-text-box.png)
 
-	**Important:** If a control is selected and you select another control or a blank area of the screen, the first element is no longer selected.
+	**Important:** If a control is selected when you select another control or a blank area of the screen, the first element is no longer selected.
 
 1. Resize the control by dragging any handle of the selection box (or by modifying the **Height**, **Width**, or both properties, as this topic describes later).
 
@@ -123,13 +123,13 @@ Each change that you made earlier in this topic updated the value of a [property
 - When you moved the control, you changed its **X** and **Y** properties.
 - When you changed the text that the control displays, you changed its **Text** property.
 
-Instead of configuring a control directly or from the ribbon, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can update any property of a control, and you can specify more types of values.
+Instead of configuring a control directly or from the ribbon, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
 
 1. With the text box selected, select **Text** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
 
 	![A text box with text aligned to the top of the box](./media/add-configure-controls/text-literal.png)
 
-	When you surround a string of text with quotation marks, you specify that it should be treated exactly as you typed it. In contrast, you can specify a formula that determines the value of a property without specifying it exactly.
+	When you surround a string of text with quotation marks, you specify that it should be treated exactly as you typed it. As an alternative, you can specify a formula that determines the value of a property.
 
 1. With the text box selected, select **Text** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
 
@@ -139,7 +139,7 @@ Instead of configuring a control directly or from the ribbon, you can also updat
 
 	By using the formula bar, you can set properties that you can't set directly or from the ribbon. For example, you can set a tooltip that appears when a user points to the control but doesn't select it. You can also specify complicated formulas that increase the power of your app.
 
-1. Add a checkbox, and set its **Text** property to **Show text**.
+1. Add a checkbox, and set its **Text** property so that **Show text** appears.
 
 1. Set the **Visible** property of the text box to this formula:
 
@@ -155,7 +155,7 @@ Instead of configuring a control directly or from the ribbon, you can also updat
 
 	![Text box disappears when the check box is cleared](./media/add-configure-controls/hide-text.png)
 
-Configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md).
+This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md) from simple to complex.
 
 ## Rename a control ##
 1. Select the control that you want to rename, such as the checkbox that you added in the previous procedure.
