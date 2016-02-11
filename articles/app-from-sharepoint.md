@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/27/2016"
+   ms.date="02/10/2016"
    ms.author="anneta"/>
 
 # Create an app to manage data from SharePoint Online #
@@ -59,9 +59,9 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 1. In the **Content** tab of the **Quick tools** pane, select the type of data that you want to show in each element. For example:
 
-	- In the **Body1** list, select **Website**.
-	- In the **Heading1** list, select **AcctNumber**.
-	- In the **Subtitle1** list, select **Name**.
+	- In the first list, select **Website**.
+	- In the second list, select **AcctNumber**.
+	- In the third list, select **Name**.
 
 	The browse screen of the app reflects your changes.
 
@@ -73,13 +73,15 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	A selection box appears around the gallery.
 
-1. In the formula bar (to the right of the **fx** button), replace *ColumnName* with the name of the column by which you want to sort, filter, or both.
+1. Copy this formula, and paste it into the formula bar (to the right of the **fx** button).
 
-	**Sort(If(IsBlank(TextSearchBox1!Text), Accounts, Filter(Accounts, TextSearchBox1!Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, Descending, Ascending))**
+	**Sort(If(IsBlank(TextSearchBox1!Text), *ListName*, Filter(*ListName*, TextSearchBox1!Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, Descending, Ascending))**
 
-	For example, copy and paste this formula into the formula bar if your SharePoint list contains a column named **Name** and you want to sort or filter by it:
+1. Replace *ListName* with the name of your list and *ColumnName* with the name of the column by which you want to sort, filter, or both.
 
-	**Sort(If(IsBlank(TextSearchBox1!Text), Accounts, Filter(Accounts, TextSearchBox1!Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
+	For example, use this formula if your list is named **Test List**, and you want to sort or filter by the **Name** column:
+
+	**Sort(If(IsBlank(TextSearchBox1!Text), 'Test List', Filter('Test List', TextSearchBox1!Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
 
 	The data is sorted by the names of the accounts.
 
@@ -127,6 +129,8 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
 	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
+
+1. Press Esc to return to the default workspace.
 
 ## Next steps ##
 - Customize the default app by performing one or more of these tasks:

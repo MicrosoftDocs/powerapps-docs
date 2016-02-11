@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/26/2016"
+   ms.date="02/10/2016"
    ms.author="anneta"/>
 
 # Create an app to manage data from Dynamics CRM Online #
@@ -26,7 +26,7 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 1. Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a desktop computer that's running Windows.
 1. Open PowerApps.
-1. Sign in for the first time by selecting the arrow near the lower-right corner to advance through the welcome screens and then providing your credentials.
+1. Sign in for the first time by swiping left (or selecting the arrow near the lower-right corner) to advance through the welcome screens and then providing your credentials.
 
 ## Create an app ##
 1. On the **File** menu, select **New**, and then select **Get started** under **Start from your data**.
@@ -41,7 +41,7 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 	1. Provide your credentials.
 
-1. Under **Select a data set**, select the appropriate option for this app.
+1. Under **Select a dataset**, select the appropriate option for this app, and then select **Connect**.
 
 1. Under **Select a table**, select the appropriate option for this app (such as **Accounts**), and then select **Connect**.
 
@@ -59,15 +59,15 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 1. In the **Content** tab of the **Quick tools** pane, select the data that you want to show in each element. For example:
 
-	- In the **Body1** list, select **websiteurl**.
-	- In the **Heading1** list, select **accountnumber**.
-	- In the **Subtitle1** list, select **name**.
+	- In the first list, select **websiteurl**.
+	- In the second list, select **accountnumber**.
+	- In the third list, select **name**.
 
 	The browse screen of the app reflects your changes.
 
 	![Specify data on the Content tab](./media/app-from-dynamics/specify-data.png)
 
-	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**. 
+	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**.
 
 1. Select any item in the list except the first one, and then copy and paste this formula into the formula bar, which is to the right of the **fx** button:
 
@@ -119,6 +119,8 @@ Create an app for adding, updating, and deleting data about your customers and o
 
 	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
 	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
+
+1. Press Esc to return to the default workspace.
 
 ## Next steps ##
 - Customize the default app by performing one or more of these tasks:
