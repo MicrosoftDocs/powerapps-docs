@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -96,11 +96,11 @@ Run an app that you or someone else created, or create an app with a default int
 ## Next steps #
 On a tablet, a laptop, or desktop computer that's running PowerApps:
 
-- Create an app automatically from data in sources such as [Excel](get-started-create-from-data.md), SharePoint, Dynamics CRM Online, and Salesforce.
+- Create an app automatically from data in sources such as [Excel](get-started-create-from-data.md), [SharePoint](app-from-sharepoint.md), [Dynamics CRM Online](app-from-dynamics.md), and [Salesforce](app-from-salesforce.md).
 - Customize the app that you just created (or make your own from scratch) by:
 
-	- adding and configuring controls
-	- adding data from Office 365, Twitter, or Microsoft Translator
+	- [adding and configuring controls](add-configure-controls.md)
+	- adding data from [Office 365](show-office-data.md), [Twitter](show-twitter-data.md), or [Microsoft Translator](show-translator-data.md)
 	- [adding one or more screens](add-screen-context-variables.md)
 	- [building formulas](formula-reference.md)
 	- [change the settings](change-app-settings.md) for your app
