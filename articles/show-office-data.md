@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/15/2016"
+   ms.date="02/10/2016"
    ms.author="anneta"/>
 
 # Show data from Office 365 in PowerApps #
@@ -43,7 +43,7 @@ Learn how to [add and configure a control](add-configure-controls.md).
 
 1. Select the connection you added earlier, and then select **Add Data Source**.
 
-	Your selection appears under **Data Sources**.
+	Your selection appears under **Data sources**.
 
 1. Close the **Screen** pane by selecting the **X** in its upper-right corner.
 
@@ -106,7 +106,7 @@ Learn how to [add and configure a control](add-configure-controls.md).
 
 1. In **InfoAbout**, type or paste the name of a user in your organization.
 
-1. Add a text gallery in **Portrait** orientation, and set its **Items** property to this formula:
+1. Add a text gallery, and set its **Items** property to this formula:
 
 	**office365users.DirectReports(InfoAbout.Text)**
 
@@ -123,7 +123,7 @@ Learn how to [add and configure a control](add-configure-controls.md).
 
 	The gallery shows users whose information contains the term that you specified.
 
-1. With the gallery still selected, select **Options** in the lower-right corner, and then select **Mail** in the **Body1** list, **DisplayName** in the **Heading1** list, and **JobTitle** in the **Subtitle1** list.
+1. With the gallery still selected, select **Options** in the lower-right corner, and then select **Mail** in the first list, **DisplayName** in the second list, and **JobTitle** in the third list.
 
 ## Send email ##
 For this function, you must specify the first three arguments, but all other arguments are optional:
