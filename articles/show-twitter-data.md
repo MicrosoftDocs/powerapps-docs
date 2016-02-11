@@ -5,7 +5,7 @@
    suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
-   manager="dwrede"
+   manager="erikre"
    editor=""
    tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/15/2016"
+   ms.date="02/11/2016"
    ms.author="anneta"/>
 
 # Show data from Twitter in PowerApps #
@@ -24,30 +24,28 @@ Connect to Twitter, and then configure your app to send a tweet, search for twee
 
 **Prerequisites**
 
-Learn how to [add and configure a control](add-configure-controls.md).
+Know how to [add and configure a control](add-configure-controls.md).
 
 ## Connect to Twitter ##
-1.  Open PowerApps, select **Connections** on the **File** menu (near the left edge), and then select **Add connection**.
-
-1.  In the list of connection types, select **Twitter**, select **Connect**, and then provide your credentials.
-
-	The connection that you created appears under **My connections**.
-
-	![Connection to Twitter](./media/show-twitter-data/twitter-connection.png)
-
-1. On the **File** menu, select **New**, and then select **Get started** under **Start from scratch**.
+1.  Open PowerApps, select **New** on the **File** menu (near the left edge), and then select **Get started** under **Start from scratch**.
 
 	![Open a blank app](./media/show-twitter-data/blank-app.png)
 
-1. In the lower-right corner, select **Options**, and then select **Insert your data** in the **Screen** pane.
+1. In the lower-right corner, select **Options**, and then select **Insert your data**.
 
-1. Select the connection you added earlier, and then select **Add Data Source**.
+	![Insert a data source](./media/show-twitter-data/insert-data.png)
 
-	Your selection appears under **Data Sources**.
+1. Select **Available connections**, and then select **Twitter**.
 
-1. Close the **Screen** pane by selecting the **X** in its upper-right corner.
+	![Connect to Twitter](./media/show-twitter-data/add-twitter.png)
 
-	![Close the Screen pane](./media/show-twitter-data/close-options.png)
+1. Select **Connect**, provide your credentials, and then select **Add Data Source**.
+
+	Your connection appears under **Data sources**.
+
+1. Close the **Options** pane by selecting the **X** in its upper-right corner.
+
+	![Close the Options pane](./media/show-twitter-data/close-options.png)
 
 ## Show a timeline ##
 1. Add a text gallery, and follow either of these steps:
@@ -57,17 +55,15 @@ Learn how to [add and configure a control](add-configure-controls.md).
 	- To show another user's timeline, set the **Items** property of the gallery to this formula:<br>
 	**twitter.UserTimeline(** *UserID* **)**
 
-	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add a text-input control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle such as **satyan** (without quotation marks) in **Tweep**.
+		Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add a text-input control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle such as **satyan** (without quotation marks) in **Tweep**.
 
 	**Tip:** Show only the most recent tweets in a timeline (for example, the last five tweets) by specifying the maxResults argument, as these formulas show:<br>
 	**twitter.HomeTimeline({maxResults:5})**<br>
 	**twitter.UserTimeline(Tweep.Text, {maxResults:5})**
 
-1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
+1. With the gallery selected, select **Options** near the lower-right corner, and then select **TweetText** in the first list, **TweetedBy** in the second list, and **CreatedAt** in the third list.
 
-1. In the **Screen** pane, select **TweetText** in the **Body1** list, **TweetedBy** in the **Heading1** list, and **CreatedAt** in the **Subtitle1** list.
-
-### Show followers ###
+## Show followers ##
 1. Add a text gallery, and then follow either of these steps:
 
 	- To show the current user's followers, set the **Items** property of the gallery to this formula:<br>**twitter.MyFollowers()**
@@ -81,11 +77,9 @@ Learn how to [add and configure a control](add-configure-controls.md).
 	**twitter.MyFollowers({maxResults:5})**<br>
 	**twitter.Followers(Tweep.Text, {maxResults:5})**
 
-1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
+1. With the gallery selected, select **Options** near the lower-right corner, and then select **Description** in the first list, **UserName** in the second list, and **FullName** in the third list.
 
-1. In the **Screen** pane, select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
-
-### Show followed users ###
+## Show followed users ##
 
 1. Add a text gallery, and then follow either of these steps:
 
@@ -100,11 +94,9 @@ Learn how to [add and configure a control](add-configure-controls.md).
 	**twitter.MyFollowing({maxResults:5})**<br>
 	**twitter.Following(Tweep.Text, {maxResults:5})**
 
-1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
+1. With the gallery selected, select **Options** near the lower-right corner, and then select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
 
-1. In the **Screen** pane, select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
-
-### Show information about a user ###
+## Show information about a user ##
 Add a text box, and then set its **Text** property to one of these formulas:
 - **twitter.User(** *UserID* **)!Description**
 - **twitter.User(** *UserID* **)!FullName**
@@ -117,7 +109,7 @@ Add a text box, and then set its **Text** property to one of these formulas:
 
 	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle such as **satyan** (without quotation marks) in **Tweep**.
 
-### Search tweets ###
+## Search tweets ##
 1. Add a text gallery, and set its **Items** property to this formula:<br>
 **twitter.SearchTweet(** *SearchTerm* **)**
 
@@ -126,11 +118,9 @@ Add a text box, and then set its **Text** property to one of these formulas:
 	**Tip:** Show only, for example, the first five results by specifying the maxResults argument, as this formula shows:<br>
 	**twitter.SearchTweet(SearchTerm.Text, {maxResults:5})**
 
-1. If the **Screen** pane isn't showing, select **Options** near the lower-right corner.
+1. With the gallery selected, select **Options** near the lower-right corner, and then select **TweetText** in the first list, **TweetedBy** in the second list, and **CreatedAt** in the third list.
 
-1. In the **Screen** pane, select **TweetText** in the **Body1** list, **TweetedBy** in the **Heading1** list, and **CreatedAt** in the **Subtitle1** list.
-
-### Send a tweet ###
+## Send a tweet ##
 1. Add a text-input control, and then rename it **MyTweet**.
 
 1. Add a button, and then set its **OnSelect** property to this formula:<br>

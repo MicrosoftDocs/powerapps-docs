@@ -5,7 +5,7 @@
    suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
-   manager="dwrede"
+   manager="erikre"
    editor=""
    tags=""/>
 
@@ -24,30 +24,28 @@ Connect to Office 365 Users, and then configure your app to search for one or mo
 
 **Prerequisites**
 
-Learn how to [add and configure a control](add-configure-controls.md).
+Know how to [add and configure a control](add-configure-controls.md).
 
 ## Connect to Office 365 ##
-1.  Open PowerApps, select **Connections** on the **File** menu (near the left edge), and then select **Add connection**.
-
-1.  In the list of connection types, select **Office 365 Users** or **Office 365 Outlook**, select **Connect**, and then provide your credentials.
-
-	The connection that you created appears under **My connections**.
-
-	![Connections to Office 365 Users and Office 365 Outlook](./media/show-office-data/office-connections.png)
-
-1. On the **File** menu, select **New**, and then select **Get started** under **Start from scratch**.
+1.  Open PowerApps, select **New** on the **File** menu (near the left edge), and then select **Get started** under **Start from scratch**.
 
 	![Open a blank app](./media/show-office-data/blank-app.png)
 
-1. In the lower-right corner, select **Options**, and then select **Insert your data** in the **Screen** pane.
+1. In the lower-right corner, select **Options**, and then select **Insert your data**.
 
-1. Select the connection you added earlier, and then select **Add Data Source**.
+	![Insert a data source](./media/show-office-data/insert-data.png)
 
-	Your selection appears under **Data sources**.
+1. Select **Available connections**, and then select **Office 365 Users** or **Office 365 Outlook**.
 
-1. Close the **Screen** pane by selecting the **X** in its upper-right corner.
+	![Connect to Office 365](./media/show-office-data/add-office.png)
 
-	![Close the Screen pane](./media/show-office-data/close-options.png)
+1. Select **Connect**, provide your credentials, and then select **Add Data Source**.
+
+	Your connection appears under **Data sources**.
+
+1. Close the **Options** pane by selecting the **X** in its upper-right corner.
+
+	![Close the Options pane](./media/show-office-data/close-options.png)
 
 ## Show information about the current user ##
 1. Add a text box, and set its **Text** property to any of these formulas:
@@ -112,16 +110,16 @@ Learn how to [add and configure a control](add-configure-controls.md).
 
 	The gallery shows information about the direct reports of the user that you specified.
 
-1. With the gallery still selected, select **Options** in the lower-right corner, and then select **Mail** in the **Body1** list, **DisplayName** in the **Heading1** list, and **JobTitle** in the **Subtitle1** list.
+1. With the gallery still selected, select **Options** in the lower-right corner, and then select **Mail** in the first list, **DisplayName** in the second list, and **JobTitle** in the third list.
 
 ## Search for users ##
 1. Add a text-input control, rename it **SearchTerm**, and then type a search term in it.
 
-1. Add a text gallery in **Portrait** orientation, and set its **Items** property to this formula:
+1. Add a text gallery, and set its **Items** property to this formula:
 
 	**office365users.SearchUser({searchTerm: SearchTerm.Text})**
 
-	The gallery shows users whose information contains the term that you specified.
+	The gallery shows users whose name contains the term that you specified.
 
 1. With the gallery still selected, select **Options** in the lower-right corner, and then select **Mail** in the first list, **DisplayName** in the second list, and **JobTitle** in the third list.
 
