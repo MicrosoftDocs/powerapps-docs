@@ -57,3 +57,5 @@ Specify that a logic flow performs one or more tasks only if a particular condit
     ![Add action inside](./media/add-a-condition/ifyes.png)
 
 1. Specify what the email should contain, just as you did when you created the flow, and then select **Done**.
+
+[AZURE.INCLUDE [sample-include](../includes/sample-include.md)]
