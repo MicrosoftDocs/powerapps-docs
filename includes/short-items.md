@@ -1,1 +1,1 @@
-[Items](filename.md) The source of data that appears in a control such as a gallery or a listbox.
+[Items](filename.md) The source of data that appears in a control such as a gallery, a list, or a chart.

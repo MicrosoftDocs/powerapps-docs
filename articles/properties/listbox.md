@@ -1,9 +1,8 @@
 # Listbox in PowerApps #
-A one-line summary of this control.
+A list in which a user can select one or multiple items.
 ## Description ##
-First para that describes this control.
+A listbox shows always shows all available choices (unlike a dropdown list), and you can configure it so that users can choose more than one item (unlike a set of radio buttons).
 
-Subsequent para that describes this control.
 ## Key properties ##
 ### Items ###
 A one-line summary of this property.
