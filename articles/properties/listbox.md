@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Listbox in PowerApps #
-A list in which a user can select one or multiple items.
+[AZURE.INCLUDE [control-listbox](../../includes/control-listbox.md)]
 
 ## Description ##
 A listbox shows always shows all available choices (unlike a dropdown list), and you can configure it so that users can choose more than one item at a time (unlike a set of radio buttons).
@@ -36,52 +36,42 @@ Third para
 [AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
 
 ## Other properties ##
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]<br>
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]<br>
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]<br>
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]<br>
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]<br>
+[AZURE.INCLUDE [short-core](../../includes/short-core.md)]
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]<br>
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]<br>
+[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
+[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]<br>
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]<br>
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]<br>
+[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]<br>
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]<br>
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]<br>
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]<br>
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]<br>
+[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[AZURE.INCLUDE [short-border](../../includes/short-border.md)]
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]<br>
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]<br>
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]<br>
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]<br>
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]<br>
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]<br>
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]<br>
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]<br>
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]<br>
+[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]<br>
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]<br>
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]<br>
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]<br>
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]<br>
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]<br>
-[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]<br>
+[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]<br>
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]<br>
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]<br>
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]<br>
-[AZURE.INCLUDE [short-itempaddingleft](../../includes/short-itempaddingleft.md)]<br>
+[AZURE.INCLUDE [short-padding](../../includes/short-padding.md)]
+[AZURE.INCLUDE [short-itempaddingleft](../../includes/short-itempaddingleft.md)]
 
-[AZURE.INCLUDE [short-selectmultiple](../../includes/short-selectmultiple.md)]<br>
-[AZURE.INCLUDE [short-selectionfill](../../includes/short-selectionfill.md)]<br>
-[AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]<br>
+[AZURE.INCLUDE [short-selectmultiple](../../includes/short-selectmultiple.md)]
+[AZURE.INCLUDE [short-selectionfill](../../includes/short-selectionfill.md)]
+[AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]
 
 ## Related Functions ##
 
