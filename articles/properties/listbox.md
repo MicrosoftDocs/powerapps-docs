@@ -73,7 +73,7 @@ Third para
 [AZURE.INCLUDE [short-selectionfill](../../includes/short-selectionfill.md)]
 [AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]
 
-## Related Functions ##
+## Related functions ##
 
 **SubmitForm( FormControl )**
 
