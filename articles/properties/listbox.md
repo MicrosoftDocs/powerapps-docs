@@ -36,17 +36,38 @@ Third para
 [AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
 
 ## Other properties ##
+[AZURE.INCLUDE [short-selectmultiple](../../includes/short-selectmultiple.md)]
+[AZURE.INCLUDE [short-selectionfill](../../includes/short-selectionfill.md)]
+[AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]
+
+---
+
 [AZURE.INCLUDE [short-core](../../includes/short-core.md)]
+
+---
 
 [AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
 [AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
 
+---
+
 [AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
 [AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
 
+---
+
+[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
 [AZURE.INCLUDE [short-color](../../includes/short-color.md)]
 [AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
 [AZURE.INCLUDE [short-border](../../includes/short-border.md)]
+
+---
 
 [AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
 [AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
@@ -58,20 +79,10 @@ Third para
 [AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
 [AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
-[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
+---
 
 [AZURE.INCLUDE [short-padding](../../includes/short-padding.md)]
 [AZURE.INCLUDE [short-itempaddingleft](../../includes/short-itempaddingleft.md)]
-
-[AZURE.INCLUDE [short-selectmultiple](../../includes/short-selectmultiple.md)]
-[AZURE.INCLUDE [short-selectionfill](../../includes/short-selectionfill.md)]
-[AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]
 
 ## Related functions ##
 
