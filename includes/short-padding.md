@@ -1,4 +1,4 @@
-[PaddingBottom](filename.md) The distance, in pixels, that text appears from the bottom edge of a control.<br>
-[PaddingLeft](filename.md) The distance, in pixels, that text appears from the left edge of a control.<br>
-[PaddingRight](filename.md) The distance, in pixels, that text appears from the right edge of a control.<br>
-[PaddingTop](filename.md) The distance, in pixels, that text appears from the top edge of a control.
+[PaddingBottom](filename.md) The distance, in pixels, between text in a control and its bottom edge.<br>
+[PaddingLeft](filename.md) The distance, in pixels, between text in a control and its left edge.<br>
+[PaddingRight](filename.md) The distance, in pixels, between text in a control and its right edge.<br>
+[PaddingTop](filename.md) The distance, in pixels, between text in a control and its top edge.

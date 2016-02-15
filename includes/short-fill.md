@@ -1,1 +1,1 @@
-[Fill](filename.md) The background color of a control, which you can specify by using RGBA values.
+[Fill](filename.md) The background color of a control, for which you can specify a string, such as **Color.DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)**.

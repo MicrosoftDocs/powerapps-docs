@@ -1,1 +1,1 @@
-[PressedBorderColor](filename.md) The background color of a control when the user keeps a finger on a control or holds down the primary mouse button while pointing to a control by using the mouse.
+[PressedBorderColor](filename.md) The background color of a control when a user keeps a finger on a control or keeps the mouse pointer on a control while holding down the primary mouse button.
