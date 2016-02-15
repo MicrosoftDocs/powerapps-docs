@@ -1,1 +1,1 @@
-[Color](filename.md) The color of text in a control, which you can specify by using RGBA values.
+[Color](filename.md) The color of text in a control, for which you can specify a string, such as **Color.DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)**.

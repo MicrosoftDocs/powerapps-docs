@@ -1,1 +1,1 @@
-[PressedColor](filename.md) The color of text in a control when the user keeps a finger on the control or holds down the primary mouse button while pointing to the control by using the mouse.
+[PressedColor](filename.md) The color of text in a control when a user keeps a finger on a control or keeps the mouse pointer on a control while holding down the primary mouse button.
