@@ -1,0 +1,1 @@
+[PaddingTop](filename.md) The distance, in pixels, between text in a control and its top edge.
