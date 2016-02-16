@@ -109,7 +109,7 @@ Let's walk through some simple examples.
 	![](media/working-with-tables/gallery-items-sort.png)
 
 3. Set the **Items** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:<br>
-**FirstN(Sort(TextualGallerySample, Heading, Descending), 2**
+**FirstN(Sort(TextualGallerySample, Heading, Descending), 2)**
 
 	In this formula, you use the **[FirstN](function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](function-sort.md)** formula as the first argument of the **[FirstN](function-first-last.md)** function and a number (in this case, **2**) as the second argument, which specifies how many records to show.
 
