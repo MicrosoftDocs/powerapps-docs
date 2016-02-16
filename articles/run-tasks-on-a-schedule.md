@@ -34,9 +34,15 @@ Create a logic flow that performs the same task or tasks, such as sending report
 
 	![Create a logic flow from blank](./media/run-tasks-on-a-schedule/create-from-blank.png)
 
-1. In the box that says **How would you like to start?** select **Every day**, **Every hour**, or **Every minute**.
+1. Select **Recurrence** in the box that says **How would you like to start?**
 
-	![Every day](./media/run-tasks-on-a-schedule/every-day.png)
+	![Every day](./media/run-tasks-on-a-schedule/add-recurrence.png)
+
+1. In the **Recurrence** dialog box, specify how often you want the flow to run.
+
+	For example, specify **Day** under **Frequency** and **2** under **Interval** if you want the flow to run every two days.
+
+	![Recurrence dialog box](./media/run-tasks-on-a-schedule/specify-recurrence.png)
 
 1. Add the action or actions that you want the logic flow to take, as [Create a logic flow from scratch](get-started-logic-flow.md) describes.
 
