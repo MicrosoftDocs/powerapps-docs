@@ -47,7 +47,7 @@ On the **Insert** tab, follow either of these steps:
 
 		![Button, Drop down, Date Picker, List box, Check box, Radio, Toggle, Slider, Rating, Timer, Import, Export](./media/add-configure-controls/controls-category.png)
 
-		**Tip:** Offer choices in your app by adding [a list box, a drop-down list, or radio buttons](add-list-box-drop-down-list-radio-button).
+		**Tip:** Offer choices in your app by adding [a list box, a drop-down list, or radio buttons](add-list-box-drop-down-list-radio-button.md).
 
 	- **Gallery**
 
