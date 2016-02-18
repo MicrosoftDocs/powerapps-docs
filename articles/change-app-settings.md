@@ -23,7 +23,7 @@ Customize an app by changing its name, its tile, its screen size, its screen ori
 
 **Prerequisites**
 
-1. [Create an app](quick-tour-other.md) in PowerApps, and then open it for editing on a tablet, a laptop or a desktop computer that's running PowerApps.
+1. [Create an app](quick-tour-other.md) in PowerApps, and then open it for editing.
 1. On the **File** menu, select **App settings**.
 
 ## Rename an app ##
