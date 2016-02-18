@@ -1,1 +1,1 @@
-[Font](filename.md) The name of the family of fonts in which text appears.
+The name of the family of fonts in which text appears.
