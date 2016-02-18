@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="gregli-msft"
+    authors="aftowen"
     manager="erikre"
     editor=""
     tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="02/12/2016"
-   ms.author="gregli"/>
+   ms.author="anneta"/>
 
 # Listbox in PowerApps #
 [AZURE.INCLUDE [control-listbox](../../includes/control-listbox.md)]
