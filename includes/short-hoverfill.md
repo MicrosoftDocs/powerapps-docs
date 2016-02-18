@@ -1,1 +1,1 @@
-[HoverColor](filename.md) The background color of a control when a user keeps the mouse pointer on it.
+The background color of a control when a user keeps the mouse pointer on it.
