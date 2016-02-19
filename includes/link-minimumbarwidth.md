@@ -1,0 +1,1 @@
+[MinimumBarWidth](filename.md)
