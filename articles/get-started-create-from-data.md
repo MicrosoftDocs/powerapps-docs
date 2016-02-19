@@ -91,9 +91,9 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	![Icon to open the Quick tools pane](./media/get-started-create-from-data/open-quick-tools.png)
 
-1. In the **Quick tools** pane, select the **Layout** tab, and then select the option that includes icons.
+1. In the **Quick tools** pane, select the **Layout** tab, and then select an option that includes icons.
 
-	![Layout option with icons](./media/get-started-create-from-data/choose-layout.png)
+	![Layout option with icons](./media/get-started-create-from-data/change-layout.png)
 
 	The layout of **BrowseScreen1** changes to reflect your selection.
 
@@ -111,7 +111,7 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content-flooring-estimates.png)
 
-	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**. 
+	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**.
 
 1. In the **Quick tools** pane, select the **Theme** tab, and then select a different theme, such as **Lavender**.
 
