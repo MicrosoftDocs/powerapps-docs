@@ -1,3 +1,3 @@
-- Type: String
-- Input/output: input/output
+- Type:
+- Input/output:
 - Description
