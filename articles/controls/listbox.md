@@ -44,8 +44,7 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 [AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
 
 ## Other properties ##
-[AZURE.INCLUDE [link-color](../../includes/link-color.md)]
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+[AZURE.INCLUDE [link-color](../../includes/link-color.md)]<br>[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
 
 [AZURE.INCLUDE [link-bordercolor](../../includes/link-bordercolor.md)]
 [AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
