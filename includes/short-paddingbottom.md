@@ -1,1 +1,1 @@
-The distance, in pixels, between text in a control and its bottom edge.
+A positive integer that determines the distance, in pixels, between text in a control and the bottom edge of that control.
