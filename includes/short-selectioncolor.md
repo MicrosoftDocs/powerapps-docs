@@ -1,1 +1,1 @@
-The text color of a selected item or items in a list or lines in a selected area of a pen control.
+The text color of a selected item or items in a list or the color of the selection tool in a pen control.
