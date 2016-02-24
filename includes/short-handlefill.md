@@ -1,1 +1,1 @@
-The color of the handle (the element that changes position) in a toggle or slider control.
+**HandleFill** The color of the handle (the element that changes position) in a toggle or slider control.

@@ -1,1 +1,1 @@
-The color behind the down arrow in a dropdown list.
+**ChevronBackground** The color behind the down arrow in a dropdown list.

@@ -1,1 +1,1 @@
-The latest year to which the value of a date-picker control can be set.
+**EndYear** The latest year to which the value of a date-picker control can be set.

@@ -1,1 +1,1 @@
-A Boolean (**true**/**false**) value that determines whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
+**AutoStart** A Boolean (**true**/**false**) value that determines whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
