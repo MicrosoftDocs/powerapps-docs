@@ -1,1 +1,0 @@
-[Duration](filename.md)

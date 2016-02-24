@@ -1,1 +1,0 @@
-[StreamRate](filename.md)

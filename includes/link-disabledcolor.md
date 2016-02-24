@@ -1,1 +1,0 @@
-[DisabledColor](filename.md)

@@ -1,1 +1,0 @@
-[VerticalAlign](filename.md)

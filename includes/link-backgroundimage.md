@@ -1,1 +1,0 @@
-[BackgroundImage](filename.md)

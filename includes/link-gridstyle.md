@@ -1,1 +1,0 @@
-[GridStyle](filename.md)

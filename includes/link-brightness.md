@@ -1,1 +1,0 @@
-[Brightness](filename.md)

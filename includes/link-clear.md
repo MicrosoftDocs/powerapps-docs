@@ -1,1 +1,0 @@
-[Clear](filename.md)

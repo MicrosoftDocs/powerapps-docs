@@ -1,1 +1,0 @@
-[SelectionThickness](filename.md)

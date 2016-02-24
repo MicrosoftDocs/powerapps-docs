@@ -1,1 +1,0 @@
-[YAxisMax](filename.md)
