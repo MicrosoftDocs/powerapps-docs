@@ -90,7 +90,6 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 
 [AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
 
-[AZURE.INCLUDE [link-paddingleft](../../includes/link-paddingleft.md)]
 [AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
 
 [AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
