@@ -1,1 +1,1 @@
-A positive integer that determines the distance between wedges in a pie chart.
+**Explode** A positive integer that determines the distance between wedges in a pie chart.

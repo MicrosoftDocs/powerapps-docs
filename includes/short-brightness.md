@@ -1,1 +1,1 @@
-A positive integer that determines how much light users perceive in an image.
+**Brightness** A positive integer that determines how much light users perceive in an image.
