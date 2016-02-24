@@ -87,8 +87,8 @@ Know how to [add and configure a control](add-configure-controls.md).
 1. Add a text box, and then move it under **Source**.
 
 1. Set the **Text** property of the text box to this formula:
-<br>**microsofttranslator.Detect(Source.Text)**
+<br>**microsofttranslator.Detect(Source.Text).Name**
 
 1. Type text into **Source**.
 
-	The text box indicates the language of the text that you typed. For example, the text box shows **fr** (for French) if you type **bonjour** or **it** (for Italian) if you type **ciao**.
+	The text box indicates the language of the text that you typed. For example, the text box shows **French** if you type **bonjour** into **Source** or **Italian** if you type **ciao**.
