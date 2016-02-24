@@ -1,1 +1,0 @@
-[Mode](filename.md)

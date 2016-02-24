@@ -1,1 +1,0 @@
-[Transparency](filename.md)

@@ -1,1 +1,0 @@
-[Camera](filename.md)

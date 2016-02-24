@@ -1,1 +1,0 @@
-[Strikethrough](filename.md)

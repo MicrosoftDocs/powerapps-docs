@@ -1,1 +1,0 @@
-[HintText](filename.md)

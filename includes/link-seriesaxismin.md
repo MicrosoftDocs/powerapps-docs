@@ -1,1 +1,0 @@
-[SeriesAxisMin](filename.md)
