@@ -20,22 +20,32 @@
 
 # Fill and border properties of controls in Microsoft PowerApps #
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+## BorderColor ##
+[AZURE.INCLUDE [long-bordercolor](../../includes/long-bordercolor.md)]
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+## BorderStyle ##
+[AZURE.INCLUDE [long-borderstyle](../../includes/long-borderstyle.md)]
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+## BorderThickness ##
+[AZURE.INCLUDE [long-borderthickness](../../includes/long-borderthickness.md)]
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+## DisabledBorderColor ##
+[AZURE.INCLUDE [long-disabledbordercolor](../../includes/long-disabledbordercolor.md)]
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+## DisabledFill ##
+[AZURE.INCLUDE [long-disabledfill](../../includes/long-disabledfill.md)]
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+## Fill ##
+[AZURE.INCLUDE [long-fill](../../includes/long-fill.md)]
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+## HoverBorderColor ##
+[AZURE.INCLUDE [long-hoverbordercolor](../../includes/long-hoverbordercolor.md)]
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+## HoverFill ##
+[AZURE.INCLUDE [long-hoverfill](../../includes/long-hoverfill.md)]
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+## PressedBorderColor ##
+[AZURE.INCLUDE [long-pressedbordercolor](../../includes/long-pressedbordercolor.md)]
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+## PressedFill ##
+[AZURE.INCLUDE [long-pressedfill](../../includes/long-pressedfill.md)]

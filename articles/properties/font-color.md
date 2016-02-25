@@ -19,22 +19,33 @@
    ms.author="anneta"/>
 
 # Font and Color properties of controls in Microsoft PowerApps #
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+## Color ##
+[AZURE.INCLUDE [long-color](../../includes/long-color.md)]
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+## DisabledColor ##
+[AZURE.INCLUDE [long-disabledcolor](../../includes/long-disabledcolor.md)]
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+## Font ##
+[AZURE.INCLUDE [long-font](../../includes/long-font.md)]
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+## FontWeight ##
+[AZURE.INCLUDE [long-fontweight](../../includes/long-fontweight.md)]
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+## HoverColor ##
+[AZURE.INCLUDE [long-hovercolor](../../includes/long-hovercolor.md)]
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+## Italic ##
+[AZURE.INCLUDE [long-italic](../../includes/long-italic.md)]
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+## PressedColor ##
+[AZURE.INCLUDE [long-pressedcolor](../../includes/long-pressedcolor.md)]
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+## Size ##
+[AZURE.INCLUDE [long-size](../../includes/long-size.md)]
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+## Strikethrough ##
+[AZURE.INCLUDE [long-strikethrough](../../includes/long-strikethrough.md)]
+
+## Underline ##
+[AZURE.INCLUDE [long-underline](../../includes/long-underline.md)]
