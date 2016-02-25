@@ -37,7 +37,7 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 
 [AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
 
-## Other properties ##
+## All properties ##
 [AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
 
 [AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
@@ -124,6 +124,6 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 
 ## Related functions ##
 
-**SubmitForm( FormControl )**
+**Distinct**( *DataSource*, *ColumnName* )**
 
 ## Examples ##
