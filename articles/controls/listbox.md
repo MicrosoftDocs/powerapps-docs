@@ -25,23 +25,11 @@
 A listbox shows always shows all available choices (unlike a dropdown list), and you can configure it so that users can choose more than one item at a time (unlike a set of radio buttons).
 
 ## Key properties ##
-**Items**
-
 [AZURE.INCLUDE [short-items](../../includes/short-items.md)]
-
-[AZURE.INCLUDE [long-items](../../includes/long-items.md)]
-
-**Default**
 
 [AZURE.INCLUDE [short-default](../../includes/short-default.md)]
 
-[AZURE.INCLUDE [long-default](../../includes/long-default.md)]
-
-**Reset**
-
 [AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
-
-[AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
 
 ## Other properties ##
 [AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
