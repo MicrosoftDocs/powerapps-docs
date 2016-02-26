@@ -1,1 +1,1 @@
-**NavigationStep**
+**NavigationStep** A positive integer that determines how far a gallery scrolls if its **ShowNavigation** property is set to true and a user selects a navigation arrow at either end of that gallery.  
