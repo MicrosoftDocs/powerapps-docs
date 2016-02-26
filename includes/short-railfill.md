@@ -1,1 +1,1 @@
-**RailFill** The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
+**RailFill** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.

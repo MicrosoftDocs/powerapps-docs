@@ -1,1 +1,1 @@
-**StartYear** The earliest year to which the value of a date-picker control can be set.
+**StartYear** The earliest year to which the user can set the value of a date-picker control.

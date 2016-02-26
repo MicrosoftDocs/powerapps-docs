@@ -1,1 +1,1 @@
-**PressedColor** The color of text in a control when a user keeps a finger on a control or keeps the mouse pointer on a control while holding down the primary mouse button.
+**PressedColor** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the color of text in a control when a user taps or clicks that control.

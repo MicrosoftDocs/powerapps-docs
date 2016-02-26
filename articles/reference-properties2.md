@@ -17,7 +17,9 @@
    ms.date="02/25/2016"
    ms.author="anneta"/>
 
-# Properties in PowerApps #
+# Properties (N-Z) in PowerApps #
+
+[A-M properties](reference-properties1.md)
 
 [AZURE.INCLUDE [short-navigationstep](../includes/short-navigationstep.md)]
 

@@ -1,1 +1,1 @@
-**BorderStyle** The style of a control's border, which you can specify as **Solid**, **Dashed**, **Dotted**, or **None**.
+**BorderStyle** A string of text (**Solid**, **Dashed**, **Dotted**, or **None**) that determines the style of a control's border.

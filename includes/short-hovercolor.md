@@ -1,1 +1,1 @@
-**HoverColor** The color of the text in a control when a user keeps the mouse pointer on it.
+**HoverColor** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the color of the text in a control when the user keeps the mouse pointer on it.

@@ -1,1 +1,1 @@
-**YAxisMax** A number that determines the maximum value of the Y axis for a line chart.
+**YAxisMax** A number that determines the maximum value of the y-axis for a line chart.
