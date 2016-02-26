@@ -1,1 +1,1 @@
-The color of a control's border if the control's **Disabled** property is set to **true**.
+A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the color of a control's border if the control's **Disabled** property is set to **true**.

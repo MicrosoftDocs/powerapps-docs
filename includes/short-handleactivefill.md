@@ -1,1 +1,1 @@
-**HandleActiveFill** The color of the handle (the element that changes position) in a slider control as you adjust its value.
+**HandleActiveFill** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the color of the handle (the element that changes position) as the user changes the value of a slider.

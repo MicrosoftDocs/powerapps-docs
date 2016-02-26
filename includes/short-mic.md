@@ -1,1 +1,1 @@
-**Mic** On devices that have more than one microphone, the numeric ID of the microphone that you want to use.
+**Mic** On a device that has more than one microphone, the numeric ID of the microphone that the app uses.

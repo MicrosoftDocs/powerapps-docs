@@ -1,1 +1,1 @@
-**LabelPosition** A string that determines whether labels for a pie chart appear inside or outside each wedge.
+**LabelPosition** A string of text (**Inside** or **Outside**) that determines the location of labels in a pie chart relative to the wedges of that chart.

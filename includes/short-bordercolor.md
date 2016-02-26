@@ -1,1 +1,1 @@
-**BorderColor** The color of a control's border, for which you can specify a string, such as **Color.DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)**.
+**BorderColor** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the color of a control's border.

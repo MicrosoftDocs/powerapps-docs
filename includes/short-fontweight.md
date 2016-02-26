@@ -1,1 +1,1 @@
-**FontWeight** The weight of the text in a control, such as **Bold**, **Semibold**, **Normal**, and **Lighter**.
+**FontWeight** A string of text (**Bold**, **Semibold**, **Normal**, and **Lighter**) that determines the weight of the text in a control.

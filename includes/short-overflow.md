@@ -1,1 +1,1 @@
-**Overflow** A string (either **Hidden** or **Scroll**) that determines whether a scroll bar appears in a text box if its **Text** property contains more characters than the control can show at once and the control's **Wrap** property is set to **true**.
+**Overflow** A string of text (**Hidden** or **Scroll**) that determines whether a scrollbar appears in a text box if its **Wrap** property is set to **true** and the value of the control's **Text** property contains more characters than the control can show at one time.

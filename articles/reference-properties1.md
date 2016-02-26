@@ -17,7 +17,9 @@
    ms.date="02/25/2016"
    ms.author="anneta"/>
 
-# Properties in PowerApps #
+# Properties (A-M) in PowerApps #
+
+[N-Z properties](reference-properties2.md)
 
 [AZURE.INCLUDE [short-align](../includes/short-align.md)]
 

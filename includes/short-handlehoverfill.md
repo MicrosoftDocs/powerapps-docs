@@ -1,1 +1,1 @@
-**HandleHoverFill** The color of the handle (the element that changes position) in a slider control when you keep the mouse pointer on it.
+**HandleHoverFill** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the color of the handle (the element that changes position) in a slider when the user keeps the mouse pointer on it.
