@@ -128,27 +128,28 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 
 	Don't know how to [Add and configure a control](add-configure-controls.md)?
 
+	![Flooring categories in listbox](./media/listbox/category-listbox.png)
+
 1. Add three dropdown lists, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 
-1. For **CarpetList**, set the values of these properties:
+1. Set the **Items** property of each dropdown list to these values:
+	- CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
+	- HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
+	- TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
 
-	- Items: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
-	- Visibility: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
+	![Flooring names in dropdown lists](./media/listbox/flooring-names.png)
+
+1. Set the **Visibility** property of each dropdown list to these values:
+	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
+	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
+	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
 
 	Want more information about the [If function](function-if.md)?
-
-1. For **HardwoodList**, set the values of these properties:
-
-	- Items: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
-	- Visibility: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
-
-1. For **TileList**, set the values of these properties:
-
-	- Items: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
-	- Visibility: **If("Tile" in CategoryList.SelectedItems.Value, true)**
 
 1. Press F5, and then select one or more items in **CategoryList**.
 
 	The appropriate list or lists appear based on your selection or selections.
 
-1. To return to the default workspace, press Esc.
+	![Flooring names in dropdown lists](./media/listbox/selected-lists.png)
+
+1. (optional) Press Esc to return to the default workspace.

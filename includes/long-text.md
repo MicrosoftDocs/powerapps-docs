@@ -1,4 +1,4 @@
-A literal string or a formula that evaluates to a string that appears on a control such as a text box or a button.
+**Text** A literal string or a formula that evaluates to a string that appears on a control such as a text box or a button.
 
 You can set the value of this property in multiple ways:
 
