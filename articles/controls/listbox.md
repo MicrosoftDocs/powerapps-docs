@@ -26,15 +26,9 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 
 ## Key properties ##
 
-**Items**
-
 [AZURE.INCLUDE [long-items](../../includes/long-items.md)]
 
-**Default**
-
 [AZURE.INCLUDE [long-default](../../includes/long-default.md)]
-
-**Reset**
 
 [AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
 
@@ -126,6 +120,35 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 
 ## Related functions ##
 
-**Distinct**( *DataSource*, *ColumnName* )**
+[**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
 
-## Examples ##
+## Example ##
+1. Add a listbox, name it **CategoryList**, and set its **Items** property to this formula:<br>
+**["Carpet","Hardwood","Tile"]**
+
+	Don't know how to [Add and configure a control](add-configure-controls.md)?
+
+1. Add three dropdown lists, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
+
+1. For **CarpetList**, set the values of these properties:
+
+	- Items: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
+	- Visibility: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
+
+	Want more information about the [If function](function-if.md)?
+
+1. For **HardwoodList**, set the values of these properties:
+
+	- Items: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
+	- Visibility: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
+
+1. For **TileList**, set the values of these properties:
+
+	- Items: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
+	- Visibility: **If("Tile" in CategoryList.SelectedItems.Value, true)**
+
+1. Press F5, and then select one or more items in **CategoryList**.
+
+	The appropriate list or lists appear based on your selection or selections.
+
+1. To return to the default workspace, press Esc.
