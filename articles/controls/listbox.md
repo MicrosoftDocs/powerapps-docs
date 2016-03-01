@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/12/2016"
+   ms.date="02/29/2016"
    ms.author="anneta"/>
 
 # Listbox in PowerApps #
@@ -126,25 +126,25 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 1. Add a listbox, name it **CategoryList**, and set its **Items** property to this formula:<br>
 **["Carpet","Hardwood","Tile"]**
 
-	Don't know how to [Add and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
 	![Flooring categories in listbox](./media/listbox/category-listbox.png)
 
 1. Add three dropdown lists, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 
-1. Set the **Items** property of each dropdown list to these values:
+1. Set the **Items** property of each dropdown list to one of these values:
 	- CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
 	- HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
 	- TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
 
 	![Flooring names in dropdown lists](./media/listbox/flooring-names.png)
 
-1. Set the **Visibility** property of each dropdown list to these values:
+1. Set the **Visibility** property of each dropdown list to one of these values:
 	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
 	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
 	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
 
-	Want more information about the [If function](function-if.md)?
+	Want more information about the [**If** function](function-if.md)?
 
 1. Press F5, and then select one or more items in **CategoryList**.
 
