@@ -144,7 +144,7 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
 	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
 
-	Want more information about the [**If** function](function-if.md)?
+	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
 
 1. Press F5, and then select one or more items in **CategoryList**.
 
