@@ -20,17 +20,15 @@
 
 # Create an app from a set of data
 
-[AZURE.VIDEO nb:cid:UUID:d20c445d-1500-80c4-9ad5-f1e5b4e0b87b]
-
 Create an app automatically based on data that you specify, explore how the app works by default, and then customize it to better fit how you work.
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall).
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps.
-- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in **your** Dropbox account.
+- Install [PowerApps](http://aka.ms/powerappsinstall), and learn how to [configure a control](add-configure-controls.md).
+- If you don't have a Dropbox account, create one.
+- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in your Dropbox account.
 
-For this tutorial, the data source is a table, named **FlooringEstimates**, in an Excel workbook uploaded to a Dropbox account. You can just as easily create an app based on a SharePoint list, a Dynamics CRM table, or a SQL database.
+For this tutorial, the data source is a table, named **FlooringEstimates**, in an Excel workbook uploaded to a Dropbox account. You can just as easily create an app based on a [SharePoint list](app-from-sharepoint.md), [a Dynamics CRM table](app-from-dynamics.md), or [Salesforce data](app-from-saleforce.md).
 
 ![Source data in Excel](./media/get-started-create-from-data/excel-source.png)
 
@@ -38,39 +36,33 @@ For this tutorial, the data source is a table, named **FlooringEstimates**, in a
 
 1. Open PowerApps.
 
-	If you haven't opened PowerApps before, select the right-pointing arrow near the lower-right corner to advance through the opening screens, and then sign in.
+	If you haven't opened PowerApps before, swipe left or click the right-pointing arrow near the lower-right corner to advance through the opening screens, and then sign in.
 
-1. In PowerApps, select **Connections** on the **File** menu (near the left edge of the screen).
+1. In PowerApps, click or tap **Connections** on the **File** menu (near the left edge of the screen).
 
 	![Connections option on the File menu](./media/get-started-create-from-data/file-connections.png)
 
-1. Select **Add connection**.
-
-	![Icon to add a connection](./media/get-started-create-from-data/add-connection.png)
-
-1. Select the kind of data source you want to use, and then select **Connect**.
+1. Click or tap **Available connections**, click or tap **Dropbox**, and then click or tap **Connect**.
 
 	![Add Dropbox](./media/get-started-create-from-data/add-dropbox.png)
 
-1. Provide your credentials, and then select **Sign in**.
+1. Provide your credentials, and then click or tap **Sign in**.
 
 	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.png)
 
-1. On the **File** menu, select **New**.
+1. On the **File** menu, click or tap **New**.
 
 	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
-1. Under **Start from your data**, select **Get started**.
+1. Under **Start from your data**, click or tap **Get started**.
 
 	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
 
-1. Specify the data source that you want to use, as in this example:  
+1. Under **My Connections**, click or tap **Dropbox**.  
 
-	a. Under **My Connections**, select **Dropbox**.  
+	![Dropbox in My Connections](./media/get-started-create-from-data/add-dropbox.png)  
 
-	![Dropbox in My Connections](./media/get-started-create-from-data/my-connections-dropbox.png)  
-
-	b. Under **Select an Excel file**, select the flooringestimates.xlsx file, and then select **Connect**.  
+1. Under **Select an Excel file**, select the flooringestimates.xlsx file, and then select **Connect**.  
 
 	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
@@ -83,60 +75,63 @@ Your app is built. Simple? Absolutely.
 ## Customize the app ##
 When an app is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
 
-1. If **BrowseScreen1** isn't already showing, show it by selecting its thumbnail in the left navigation pane.
+1. If **BrowseScreen1** isn't already showing, show it by clicking or tapping its thumbnail in the left navigation pane.
 
 	![Thumbnails of all three screens in the left navigation bar](./media/get-started-create-from-data/left-nav-browse-screen.png)
 
-1. If the **Quick tools** pane isn't already showing, show it by selecting **Quick tools** near the lower-right corner.
+1. If the **Quick tools** pane isn't already showing, show it by clicking or tapping **Quick tools** near the lower-right corner.
 
 	![Icon to open the Quick tools pane](./media/get-started-create-from-data/open-quick-tools.png)
 
-1. In the **Quick tools** pane, select the **Layout** tab, and then select an option that includes icons.
+1. In the **Quick tools** pane, click or tap the **Layout** tab, and then click or tap an option that includes icons.
 
 	![Layout option with icons](./media/get-started-create-from-data/change-layout.png)
 
 	The layout of **BrowseScreen1** changes to reflect your selection.
 
-	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout-flooring-estimates.png)
+	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
-	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can select different options, which reflect the data on that screen.
+	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
 
-1. In the **Quick tools** pane, select the **Content** tab.
+1. In the first item in the list on the **BrowseScreen**, set the **Image** property of the image control to **ThisItem.ImageURL**.
 
-1. Select **Name** in the **Heading1** list, select **ImageURL** in the **Image1** list, and select **Category** in the **Subtitle1** list.
+	![BrowseScreen1 with new layout](./media/get-started-create-from-data/set-image-url.png)
 
-	![Content tab with new options for BrowseScreen1](./media/get-started-create-from-data/choose-content-flooring-estimates.png)
+1. Set the **Text** property of **Heading1** to **ThisItem.Name**, and set the **Text** property of **Subtitle1** to **ThisItem.Category**.
 
 	The content of **BrowseScreen1** changes to reflect your selections.
 
-	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content-flooring-estimates.png)
+	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
 
 	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**.
 
-1. In the **Quick tools** pane, select the **Theme** tab, and then select a different theme, such as **Lavender**.
+1. In the **Quick tools** pane, click or tap the **Theme** tab, and then click or tap a different theme, such as **Lavender**.
 
 	![Change the theme](./media/get-started-create-from-data/choose-theme.png)
 
 	As the thumbnails in the left navigation bar show, each screen in the app changes to reflect your selection.
 
-	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final-flooring-estimates.png)
+	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final.png)
+
+1. (optional) To sort and filter the list by name instead of by category, set the **Items** property of the gallery to this formula:
+<br>**Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
 
 ## Run the app ##
-1. With **BrowseScreen1** showing, open Preview by pressing F5 or by selecting the Preview icon near the upper-right corner.
+1. With **BrowseScreen1** showing, open Preview by pressing F5 (or by clicking or tapping the Preview icon near the upper-right corner).
 
 	![Preview icon](./media/get-started-create-from-data/open-preview.png)
 
-1. On **BrowseScreen1**, select the arrow for a record to show details about that record.
+1. On **BrowseScreen1**, click or tap the arrow for a record to show details about that record.
 
-	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record-flooring-estimates.png)
+	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record.png)
 
-1. On **DetailsScreen1**, select the edit icon (in the upper-right corner) to edit the record.
+1. On **DetailsScreen1**, click or tap the edit icon (in the upper-right corner) to edit the record.
 
-	![Edit a record](./media/get-started-create-from-data/edit-record-flooring-estimates.png)
+	![Edit a record](./media/get-started-create-from-data/edit-record.png)
 
 1. On **EditScreen1**, change the information in one or more fields, and then select the checkmark in the upper-right corner to save your changes.
 
-	![Save changes on EditScreen1](./media/get-started-create-from-data/save-changes-flooring-estimates.png)
+	![Save changes on EditScreen1](./media/get-started-create-from-data/save-record.png)
 
 ## Next steps ##
 
