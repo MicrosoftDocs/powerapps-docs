@@ -137,6 +137,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 ### Collect data ###
 1. Add two text-input controls, and name them **inputFirst** and **inputLast**.
 
+	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+
 1. Add a button, set its **Text** property to **Add**, and set its **OnSelect** property to this formula:<br>
 **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
 
