@@ -86,7 +86,7 @@ An audio control plays a sound clip from a file or a microphone control or the a
 
 ## Related functions ##
 
-[**First**( *TableName*)](function-first-last.md)
+[**First**( *TableName* )](function-first-last.md)
 
 ## Examples ##
 ### Play an audio or video file ###
