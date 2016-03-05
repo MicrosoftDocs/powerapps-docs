@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Button: reference | Microsoft PowerApps"
+    pageTitle="Button control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the button control"
     services=""
     suite="powerapps"
@@ -18,11 +18,11 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Text box in PowerApps #
+# Button control in PowerApps #
 [AZURE.INCLUDE [control-summary-button](../../includes/control-summary-button.md)]
 
 ## Description ##
-Configure a button's **OnSelect** property to run one or more formulas when the user clicks or taps the button.
+Configure a button's **OnSelect** property to run one or more formulas when the user clicks or taps the control.
 
 ## Key properties ##
 

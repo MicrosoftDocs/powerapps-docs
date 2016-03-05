@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Listbox control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the listbox control"
+    pageTitle="List-box control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the list-box control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,11 +18,11 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Listbox in PowerApps #
+# List-box control in PowerApps #
 [AZURE.INCLUDE [control-summary-list-box](../../includes/control-summary-list-box.md)]
 
 ## Description ##
-A listbox shows always shows all available choices (unlike a dropdown list), and you can configure it so that users can choose more than one item at a time (unlike a set of radio buttons).
+A list-box control shows always shows all available choices (unlike a dropdown list), and you can configure it so that users can choose more than one item at a time (unlike a set of radio buttons).
 
 ## Key properties ##
 
