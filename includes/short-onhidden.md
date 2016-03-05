@@ -1,1 +1,1 @@
-**OnHidden** A formula or formulas that determine how an app responds when the user navigates away from a screen.
+[**OnHidden**](properties-actions.md) A formula or formulas that determine how an app responds when the user navigates away from a screen.

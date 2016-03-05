@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Listbox in PowerApps #
-[AZURE.INCLUDE [control-list-box](../../includes/control-list-box.md)]
+[AZURE.INCLUDE [control-summary-list-box](../../includes/control-summary-list-box.md)]
 
 ## Description ##
 A listbox shows always shows all available choices (unlike a dropdown list), and you can configure it so that users can choose more than one item at a time (unlike a set of radio buttons).
