@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Text box in PowerApps #
-[AZURE.INCLUDE [control-text-box](../../includes/control-text-box.md)]
+[AZURE.INCLUDE [control-summary-text-box](../../includes/control-text-box.md)]
 
 ## Description ##
 A text box shows data that you specify as a literal string of text, which appears exactly the way you type it, or as a formula that evaluates to a string of text. Text boxes often appear outside of any other control (such as a banner that identifies a screen), as a label that identifies another control (such as a rating or audio control), or in a gallery to show a specific type of information about an item.

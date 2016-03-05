@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Audio and video: reference | Microsoft PowerApps"
+    pageTitle="Audio and Video: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the audio and video controls"
     services=""
     suite="powerapps"
@@ -18,11 +18,11 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Audio and video controls in PowerApps #
-[AZURE.INCLUDE [control-text-box](../../includes/control-text-box.md)]
+# Audio and Video controls in PowerApps #
+[AZURE.INCLUDE [control-summary-audio-video](../../includes/control-summary-audio-video.md)]
 
 ## Description ##
-An audio control plays a sound clip from a file or a microphone control or the audio track from a video file. A video control plays a video clip from a file or from YouTube if you specify a URL.
+An **Audio** control plays a sound clip from a file or a **Microphone** control or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL.
 
 ## Key properties ##
 
@@ -54,7 +54,7 @@ An audio control plays a sound clip from a file or a microphone control or the a
 
 [AZURE.INCLUDE [short-imageposition](../../includes/short-imageposition.md)]
 
-**Note:** The **ImagePosition** property is available for the audio control but not the video control.
+- **Note:** The **ImagePosition** property is available for the **Audio** control but not the **Video** control.
 
 [AZURE.INCLUDE [short-loop](../../includes/short-loop.md)]
 
@@ -94,19 +94,19 @@ An audio control plays a sound clip from a file or a microphone control or the a
 
 1. Browse to the file you want to use, click or tap it, and then click or tap **Open**.
 
-1. Press Esc to return to the default workspace, add an audio or video control, and set its **Media** property to the file that you added.
+1. Press Esc to return to the default workspace, add an **Audio** or **Video** control, and set its **Media** property to the file that you added.
 
 	Don't know how to [add and configure a control](add-configure-controls.md)?
 
 1. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
 
-	**Tip:** The play button of the video control appears when you hover over the control.
+	**Tip:** The play button of the **Video** control appears when you hover over the control.
 
 1. Press Esc to return to the default workspace.
 
 ### Play a YouTube video ###
-1. Add a video control, and set its **Media** property to the URL, enclosed in double quotation marks, of a YouTube video.
+1. Add a **Video** control, and set its **Media** property to the URL, enclosed in double quotation marks, of a YouTube video.
 
-1. Press F5, and then play the video by clicking or tapping the play button of the video control.
+1. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
 
 1. Press Esc to return to the default workspace.

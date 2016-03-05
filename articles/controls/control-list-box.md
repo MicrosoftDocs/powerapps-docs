@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Listbox in PowerApps #
-[AZURE.INCLUDE [control-listbox](../../includes/control-listbox.md)]
+[AZURE.INCLUDE [control-list-box](../../includes/control-list-box.md)]
 
 ## Description ##
 A listbox shows always shows all available choices (unlike a dropdown list), and you can configure it so that users can choose more than one item at a time (unlike a set of radio buttons).
@@ -128,7 +128,7 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-	![Flooring categories in listbox](./media/listbox/category-listbox.png)
+	![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
 
 1. Add three dropdown lists, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 
@@ -137,7 +137,7 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 	- HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
 	- TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
 
-	![Flooring names in dropdown lists](./media/listbox/flooring-names.png)
+	![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
 
 1. Set the **Visibility** property of each dropdown list to one of these values:
 	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
@@ -150,6 +150,6 @@ A listbox shows always shows all available choices (unlike a dropdown list), and
 
 	The appropriate list or lists appear based on your selection or selections.
 
-	![Flooring names in dropdown lists](./media/listbox/selected-lists.png)
+	![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
 
 1. (optional) Press Esc to return to the default workspace.

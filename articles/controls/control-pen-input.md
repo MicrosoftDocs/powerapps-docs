@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Pen input in PowerApps #
-[AZURE.INCLUDE [control-pen-input](../../includes/control-pen-input.md)]
+[AZURE.INCLUDE [control-summary-pen-input](../../includes/control-summary-pen-input.md)]
 
 ## Description ##
 The user can use this control like a whiteboard, drawing diagrams and writing wordsx` that can be converted to typed text.
