@@ -1,5 +1,5 @@
 <properties
-    pageTitle="HTML text: reference | Microsoft PowerApps"
+    pageTitle="HTML text control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the HTML text control"
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# HTML text in PowerApps #
+# HTML text control in PowerApps #
 [AZURE.INCLUDE [control-summary-html-text](../../includes/control-summary-html-text.md)]
 
 ## Description ##

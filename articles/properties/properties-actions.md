@@ -18,7 +18,7 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Action properties in Microsoft PowerApps #
+# Action properties in PowerApps #
 
 ## Overview ##
 
