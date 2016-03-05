@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Screens in PowerApps #
-[AZURE.INCLUDE [control-screen](../../includes/control-screen.md)]
+[AZURE.INCLUDE [control-summary-screen](../../includes/control-summary-screen.md)]
 
 ## Description ##
 A screen contains controls such as text boxes and buttons so that the user can review and update data in an app. Most apps have multiple screens with buttons or other controls that support navigation and determine the data that appears on each screen.
