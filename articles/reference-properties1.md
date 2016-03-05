@@ -103,7 +103,7 @@
 
 [AZURE.INCLUDE [short-hoverfill](../includes/short-hoverfill.md)]
 
-[AZURE.INCLUDE [short-htmltext](../includes/short-htmltext.md)]
+[AZURE.INCLUDE [short-html-text](../includes/short-html-text.md)]
 
 [AZURE.INCLUDE [short-image](../includes/short-image.md)]
 
