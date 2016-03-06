@@ -22,7 +22,7 @@
 [AZURE.INCLUDE [control-summary-pen-input](../../includes/control-summary-pen-input.md)]
 
 ## Description ##
-The user can use this control like a whiteboard, drawing diagrams and writing wordsx` that can be converted to typed text.
+The user can use this control like a whiteboard, drawing diagrams and writing words that can be converted to typed text.
 
 ## Key properties ##
 
@@ -78,7 +78,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 [**Collect**( *CollectionName*, *DatatoCollect* )](function-clear-collect-clearcollect.md)
 
-## Examples ##
+## Example ##
 
 ### Create a set of images ###
 1. Add a pen-input control, name it **MyDoodles**, and set its **ShowControls** property to **true**.
