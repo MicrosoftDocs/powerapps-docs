@@ -24,28 +24,28 @@
 
 ## Properties ##
 
-[AZURE.INCLUDE [long-onchange](../../includes/long-onchange.md)]
+[AZURE.INCLUDE [category-onchange](../../includes/category-onchange.md)]
 
-[AZURE.INCLUDE [long-oncheck](../../includes/long-oncheck.md)]
+[AZURE.INCLUDE [category-oncheck](../../includes/category-oncheck.md)]
 
-[AZURE.INCLUDE [long-onend](../../includes/long-onend.md)]
+[AZURE.INCLUDE [category-onend](../../includes/category-onend.md)]
 
-[AZURE.INCLUDE [long-onhidden](../../includes/long-onhidden.md)]
+[AZURE.INCLUDE [category-onhidden](../../includes/category-onhidden.md)]
 
-[AZURE.INCLUDE [long-onpause](../../includes/long-onpause.md)]
+[AZURE.INCLUDE [category-onpause](../../includes/category-onpause.md)]
 
-[AZURE.INCLUDE [long-onselect](../../includes/long-onselect.md)]
+[AZURE.INCLUDE [category-onselect](../../includes/category-onselect.md)]
 
-[AZURE.INCLUDE [long-onstart](../../includes/long-onstart.md)]
+[AZURE.INCLUDE [category-onstart](../../includes/category-onstart.md)]
 
-[AZURE.INCLUDE [long-onstop](../../includes/long-onstop.md)]
+[AZURE.INCLUDE [category-onstop](../../includes/category-onstop.md)]
 
-[AZURE.INCLUDE [long-onstream](../../includes/long-onstream.md)]
+[AZURE.INCLUDE [category-onstream](../../includes/category-onstream.md)]
 
-[AZURE.INCLUDE [long-ontimerend](../../includes/long-ontimerend.md)]
+[AZURE.INCLUDE [category-ontimerend](../../includes/category-ontimerend.md)]
 
-[AZURE.INCLUDE [long-ontimerstart](../../includes/long-ontimerstart.md)]
+[AZURE.INCLUDE [category-ontimerstart](../../includes/category-ontimerstart.md)]
 
-[AZURE.INCLUDE [long-onuncheck](../../includes/long-onuncheck.md)]
+[AZURE.INCLUDE [category-onuncheck](../../includes/category-onuncheck.md)]
 
-[AZURE.INCLUDE [long-onvisible](../../includes/long-onvisible.md)]
+[AZURE.INCLUDE [category-onvisible](../../includes/category-onvisible.md)]

@@ -26,11 +26,11 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 ## Key properties ##
 
-[AZURE.INCLUDE [long-mode](../../includes/long-mode.md)]
+[AZURE.INCLUDE [short-mode](../../includes/short-mode.md)]
 
-[AZURE.INCLUDE [long-color](../../includes/long-color.md)]
+[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
 
-[AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
+[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
 
 ## All properties ##
 

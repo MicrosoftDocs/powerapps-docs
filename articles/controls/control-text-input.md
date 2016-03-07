@@ -26,11 +26,11 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 ## Key properties ##
 
-[AZURE.INCLUDE [long-text](../../includes/long-text.md)]
+[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
 
-[AZURE.INCLUDE [long-default](../../includes/long-default.md)]
+[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
 
-[AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
+[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
 
 ## All properties ##
 
