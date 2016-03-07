@@ -1,1 +1,1 @@
-A list in which a user can select one or multiple items.
+A list in which the user can select one or multiple items.

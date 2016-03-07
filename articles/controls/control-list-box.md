@@ -22,7 +22,7 @@
 [AZURE.INCLUDE [control-summary-list-box](../../includes/control-summary-list-box.md)]
 
 ## Description ##
-A list-box control shows always shows all available choices (unlike a dropdown list), and you can configure it so that users can choose more than one item at a time (unlike a set of radio buttons).
+A list-box control always shows all available choices (unlike a dropdown list) and in which the user can choose more than one item at a time (unlike a set of radio buttons).
 
 ## Key properties ##
 
