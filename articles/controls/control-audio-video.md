@@ -22,15 +22,15 @@
 [AZURE.INCLUDE [control-summary-audio-video](../../includes/control-summary-audio-video.md)]
 
 ## Description ##
-An **Audio** control plays a sound clip from a file or a **Microphone** control or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL.
+An **Audio** control plays a sound clip from a file, a recording from a **Microphone** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [long-media](../../includes/long-media.md)]
+[AZURE.INCLUDE [short-media](../../includes/short-media.md)]
 
-[AZURE.INCLUDE [long-showcontrols](../../includes/long-showcontrols.md)]
+[AZURE.INCLUDE [short-showcontrols](../../includes/short-showcontrols.md)]
 
-[AZURE.INCLUDE [long-loop](../../includes/long-loop.md)]
+[AZURE.INCLUDE [short-loop](../../includes/short-loop.md)]
 
 ## All properties ##
 

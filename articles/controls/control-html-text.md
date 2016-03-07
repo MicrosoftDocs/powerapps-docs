@@ -26,11 +26,11 @@ An HTML text control not only shows plain text and numbers but also converts HTM
 
 ## Key properties ##
 
-[AZURE.INCLUDE [long-html-text](../../includes/long-html-text.md)]
+[AZURE.INCLUDE [short-html-text](../../includes/short-html-text.md)]
 
-[AZURE.INCLUDE [long-font](../../includes/long-font.md)]
+[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
 
-[AZURE.INCLUDE [long-color](../../includes/long-color.md)]
+[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
 
 ## All properties ##
 [AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]

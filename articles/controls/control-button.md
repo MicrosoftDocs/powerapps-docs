@@ -22,13 +22,13 @@
 [AZURE.INCLUDE [control-summary-button](../../includes/control-summary-button.md)]
 
 ## Description ##
-Configure a button's **OnSelect** property to run one or more formulas when the user clicks or taps the control.
+Configure the **OnSelect** property of a **Button** control to run one or more formulas when the user clicks or taps the control.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [long-onselect](../../includes/long-onselect.md)]
+[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
 
-[AZURE.INCLUDE [long-text](../../includes/long-text.md)]
+[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
 
 ## All properties ##
 
@@ -115,23 +115,23 @@ Configure a button's **OnSelect** property to run one or more formulas when the 
 [**Navigate**( *ScreenName*, *ScreenTransitionValue* )](function-navigate.md)
 
 ## Example ##
-1. Add a text-input control, and name it **Source**.
+1. Add a **Text input** control, and name it **Source**.
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. Add a button, set its **Text** property to show **Add**, and set its **OnSelect** property to this formula:<br>
+1. Add a **Button**, set its **Text** property to show **Add**, and set its **OnSelect** property to this formula:<br>
 **UpdateContext({Total:Total + Value(Source.Text)})**
 
 	Want more information about the [**UpdateContext** function](function-updatecontext.md) or [other functions](formula-reference.md)?
 
-1. Add a text box, set its **Text** property to **Total** (no quotation marks), and then press F5.
+1. Add a **Text box** control, set its **Text** property to **Total** (no quotation marks), and then press F5.
 
 1. Type a number in **Source**, and then click or tap **Add**.
 
-	The text box shows the number that you typed.
+	The **Text box** shows the number that you typed.
 
 1. Repeat the previous step one or more times.
 
-	The text box shows the sum of the numbers that you typed.
+	The **Text box** shows the sum of the numbers that you typed.
 
 1. To return to the default workspace, press Esc.

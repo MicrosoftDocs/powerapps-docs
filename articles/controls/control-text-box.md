@@ -26,11 +26,11 @@ A text box shows data that you specify as a literal string of text, which appear
 
 ## Key properties ##
 
-[AZURE.INCLUDE [long-text](../../includes/long-text.md)]
+[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
 
-[AZURE.INCLUDE [long-font](../../includes/long-font.md)]
+[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
 
-[AZURE.INCLUDE [long-color](../../includes/long-color.md)]
+[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
 
 ## All properties ##
 

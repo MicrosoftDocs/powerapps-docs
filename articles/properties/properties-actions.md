@@ -24,28 +24,28 @@
 
 ## Properties ##
 
-[AZURE.INCLUDE [long-onchange](../../includes/long-onchange.md)]
+[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
 
-[AZURE.INCLUDE [long-oncheck](../../includes/long-oncheck.md)]
+[AZURE.INCLUDE [short-oncheck](../../includes/short-oncheck.md)]
 
-[AZURE.INCLUDE [long-onend](../../includes/long-onend.md)]
+[AZURE.INCLUDE [short-onend](../../includes/short-onend.md)]
 
-[AZURE.INCLUDE [long-onhidden](../../includes/long-onhidden.md)]
+[AZURE.INCLUDE [short-onhidden](../../includes/short-onhidden.md)]
 
-[AZURE.INCLUDE [long-onpause](../../includes/long-onpause.md)]
+[AZURE.INCLUDE [short-onpause](../../includes/short-onpause.md)]
 
-[AZURE.INCLUDE [long-onselect](../../includes/long-onselect.md)]
+[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
 
-[AZURE.INCLUDE [long-onstart](../../includes/long-onstart.md)]
+[AZURE.INCLUDE [short-onstart](../../includes/short-onstart.md)]
 
-[AZURE.INCLUDE [long-onstop](../../includes/long-onstop.md)]
+[AZURE.INCLUDE [short-onstop](../../includes/short-onstop.md)]
 
-[AZURE.INCLUDE [long-onstream](../../includes/long-onstream.md)]
+[AZURE.INCLUDE [short-onstream](../../includes/short-onstream.md)]
 
-[AZURE.INCLUDE [long-ontimerend](../../includes/long-ontimerend.md)]
+[AZURE.INCLUDE [short-ontimerend](../../includes/short-ontimerend.md)]
 
-[AZURE.INCLUDE [long-ontimerstart](../../includes/long-ontimerstart.md)]
+[AZURE.INCLUDE [short-ontimerstart](../../includes/short-ontimerstart.md)]
 
-[AZURE.INCLUDE [long-onuncheck](../../includes/long-onuncheck.md)]
+[AZURE.INCLUDE [short-onuncheck](../../includes/short-onuncheck.md)]
 
-[AZURE.INCLUDE [long-onvisible](../../includes/long-onvisible.md)]
+[AZURE.INCLUDE [short-onvisible](../../includes/short-onvisible.md)]
