@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/29/2016"
+   ms.date="3/07/2016"
    ms.author="anneta"/>
 
 # Action properties in PowerApps #

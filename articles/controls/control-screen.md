@@ -26,9 +26,9 @@ A screen contains controls such as text boxes and buttons so that the user can r
 
 ## Key properties ##
 
-[AZURE.INCLUDE [long-onvisible](../../includes/long-onvisible.md)]
+[AZURE.INCLUDE [short-onvisible](../../includes/short-onvisible.md)]
 
-[AZURE.INCLUDE [long-fill](../../includes/long-fill.md)]
+[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
 
 ## All properties ##
 
