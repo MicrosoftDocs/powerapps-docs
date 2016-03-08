@@ -21,31 +21,32 @@
 # Action properties in PowerApps #
 
 ## Overview ##
+Set these properties to a formula or formulas that determine how the app responds when the user performs an action or another event occurs.
 
 ## Properties ##
 
-[AZURE.INCLUDE [category-onchange](../../includes/category-onchange.md)]
+**OnChange** When the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [category-oncheck](../../includes/category-oncheck.md)]
+**OnCheck** When the user changes the value of a checkbox or a toggle to **true**.
 
-[AZURE.INCLUDE [category-onend](../../includes/category-onend.md)]
+**OnEnd** When an audio or video clip finishes playing.
 
-[AZURE.INCLUDE [category-onhidden](../../includes/category-onhidden.md)]
+**OnHidden** When the user navigates away from a screen.
 
-[AZURE.INCLUDE [category-onpause](../../includes/category-onpause.md)]
+**OnPause** When the user pauses the clip that an audio or video control is playing.
 
-[AZURE.INCLUDE [category-onselect](../../includes/category-onselect.md)]
+**OnSelect** When the user taps or clicks a control.
 
-[AZURE.INCLUDE [category-onstart](../../includes/category-onstart.md)]
+**OnStart** When the user starts to record sounds by using a microphone control.
 
-[AZURE.INCLUDE [category-onstop](../../includes/category-onstop.md)]
+**OnStop** When the user stops recording sounds by using a microphone control.
 
-[AZURE.INCLUDE [category-onstream](../../includes/category-onstream.md)]
+**OnStream**
 
-[AZURE.INCLUDE [category-ontimerend](../../includes/category-ontimerend.md)]
+**OnTimerEnd** When a timer finishes running.
 
-[AZURE.INCLUDE [category-ontimerstart](../../includes/category-ontimerstart.md)]
+**OnTimerStart** When a timer starts to run.
 
-[AZURE.INCLUDE [category-onuncheck](../../includes/category-onuncheck.md)]
+**OnUncheck** When the user changes the value of a checkbox or a toggle to **false**.
 
-[AZURE.INCLUDE [category-onvisible](../../includes/category-onvisible.md)]
+**OnVisible** When the user navigates to a screen.
