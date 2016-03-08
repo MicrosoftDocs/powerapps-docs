@@ -26,11 +26,11 @@ A list-box control always shows all available choices (unlike a dropdown list) a
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+[AZURE.INCLUDE [long-items](../../includes/long-items.md)]
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[AZURE.INCLUDE [long-default](../../includes/long-default.md)]
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+[AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
 
 ## All properties ##
 
