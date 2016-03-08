@@ -1,1 +1,1 @@
-**CheckboxBorderColor** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the border color of the box that surrounds the checkmark in a checkbox control.
+**CheckboxBorderColor** The color of the border that surrounds the checkmark in a checkbox control.

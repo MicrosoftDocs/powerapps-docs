@@ -1,1 +1,1 @@
-**SelectionColor** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the text color of a selected item or items in a list or the color of the selection tool in a pen control.
+**SelectionColor** The text color of a selected item or items in a list or the color of the selection tool in a pen control.

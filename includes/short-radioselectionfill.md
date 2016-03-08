@@ -1,1 +1,1 @@
-**RadioSelectionFill** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the color that appears inside the circle of the selected radio button.
+**RadioSelectionFill** The color that appears inside the circle of the selected option in a radio-button control.
