@@ -52,7 +52,7 @@ A screen contains controls such as text boxes and buttons so that the user can r
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. Name the default screen **Source**, add another screen, and name it **Target**,
+1. Name the default screen **Source**, add another screen, and name it **Target**.
 
 1. On **Source**, add a shape (such as an arrow), and set its **OnSelect** property to this formula:<br>
 **Navigate(Target, ScreenTransition.Fade)**
