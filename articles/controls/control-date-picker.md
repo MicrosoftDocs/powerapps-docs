@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/9/2016"
+   ms.date="03/09/2016"
    ms.author="anneta"/>
 
 # Date picker in PowerApps #
