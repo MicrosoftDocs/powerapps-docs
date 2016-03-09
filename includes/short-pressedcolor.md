@@ -1,1 +1,1 @@
-**PressedColor** A string of text, such as **DarkSalmon**, or a formula, such as **RGBA(233, 150, 122, 1)** that determines the color of text in a control when a user taps or clicks that control.
+**PressedColor** The color of text in a control when the user taps or clicks that control.
