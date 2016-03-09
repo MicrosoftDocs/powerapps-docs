@@ -54,7 +54,7 @@ An **Audio** control plays a sound clip from a file, a recording from a **Microp
 
 [AZURE.INCLUDE [short-imageposition](../../includes/short-imageposition.md)]
 
-- **Note:** The **ImagePosition** property is available for the **Audio** control but not the **Video** control.
+- The **ImagePosition** property is available for the **Audio** control but not the **Video** control.
 
 [AZURE.INCLUDE [short-loop](../../includes/short-loop.md)]
 
