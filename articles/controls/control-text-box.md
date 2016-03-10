@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Text box: reference | Microsoft PowerApps"
+    pageTitle="Text-box control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the text-box control"
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Text box in PowerApps #
+# Text-box control in PowerApps #
 [AZURE.INCLUDE [control-summary-text-box](../../includes/control-summary-text-box.md)]
 
 ## Description ##

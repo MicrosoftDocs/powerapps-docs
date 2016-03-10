@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Toggle: reference | Microsoft PowerApps"
+    pageTitle="Toggle control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the toggle control"
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Toggle in PowerApps #
+# Toggle control in PowerApps #
 [AZURE.INCLUDE [control-summary-toggle](../../includes/control-summary-toggle.md)]
 
 ## Description ##
