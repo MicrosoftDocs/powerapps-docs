@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Pen input: reference | Microsoft PowerApps"
+    pageTitle="Pen-input control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the pen-input control"
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Pen input in PowerApps #
+# Pen-input control in PowerApps #
 [AZURE.INCLUDE [control-summary-pen-input](../../includes/control-summary-pen-input.md)]
 
 ## Description ##

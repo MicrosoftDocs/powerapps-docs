@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Date Picker: reference | Microsoft PowerApps"
+    pageTitle="Date-picker control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the date-picker control"
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="03/09/2016"
    ms.author="anneta"/>
 
-# Date picker in PowerApps #
+# Date-picker control in PowerApps #
 [AZURE.INCLUDE [control-summary-date-picker](../../includes/control-summary-date-picker.md)]
 
 ## Description ##

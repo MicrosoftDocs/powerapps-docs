@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Rating: reference | Microsoft PowerApps"
+    pageTitle="Rating control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the rating control"
     services=""
     suite="powerapps"

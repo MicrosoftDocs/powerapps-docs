@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Check box: reference | Microsoft PowerApps"
+    pageTitle="Check-box control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the check-box control"
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="03/09/2016"
    ms.author="anneta"/>
 
-# Check box in PowerApps #
+# Check-box control in PowerApps #
 [AZURE.INCLUDE [control-summary-check-box](../../includes/control-summary-check-box.md)]
 
 ## Description ##

@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Timer: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about timers"
+    pageTitle="Timer control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the timer control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,7 +18,7 @@
    ms.date="03/09/2016"
    ms.author="anneta"/>
 
-# Timers in PowerApps #
+# Timer control in PowerApps #
 [AZURE.INCLUDE [control-summary-timer](../../includes/control-summary-timer.md)]
 
 ## Description ##

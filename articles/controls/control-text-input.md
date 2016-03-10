@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Text input: reference | Microsoft PowerApps"
+    pageTitle="Text-input control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the text-input control"
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Text input in PowerApps #
+# Text-input control in PowerApps #
 [AZURE.INCLUDE [control-summary-text-input](../../includes/control-summary-text-input.md)]
 
 ## Description ##

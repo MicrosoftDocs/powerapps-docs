@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Slider: reference | Microsoft PowerApps"
+    pageTitle="Slider control: reference | Microsoft PowerApps"
     description="Information, including properties and examples, about the slider control"
     services=""
     suite="powerapps"
