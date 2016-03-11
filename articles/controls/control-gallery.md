@@ -91,4 +91,6 @@ A gallery can show records from a data source, and each record can contain multi
 - [Filter data in a gallery by adjusting a slider](control-slider.md#example)
 - [Add text to a gallery](control-text-input.md#collect-data)
 - [Add images to a gallery](control-add-picture.md#add-images-to-a-gallery)
+- [Add photos to a gallery](control-camera.md#example)
+- [Add sounds to a gallery](control-microphone.md#example)
 - [Add drawings to a gallery](control-pen-input.md#create-a-set-of-images)
