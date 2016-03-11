@@ -85,12 +85,15 @@ A gallery can show records from a data source, and each record can contain multi
 [**Filter**( *DataSource*, *Formula* )](function-filter-lookup.md)
 
 ## Examples ##
+### Show and filter data ###
+- [Show text](control-text-box.md#show-data-in-a-gallery)
+- [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
+- [Filter data by selecting a list option](control-drop-down.md#example)
+- [Filter data by adjusting a slider](control-slider.md#example)
 
-- [Show data in a gallery](control-text-box.md#show-data-in-a-gallery)
-- [Filter data in a gallery by selecting a list option](control-drop-down.md#example)
-- [Filter data in a gallery by adjusting a slider](control-slider.md#example)
-- [Add text to a gallery](control-text-input.md#collect-data)
-- [Add images to a gallery](control-add-picture.md#add-images-to-a-gallery)
-- [Add photos to a gallery](control-camera.md#example)
-- [Add sounds to a gallery](control-microphone.md#example)
-- [Add drawings to a gallery](control-pen-input.md#create-a-set-of-images)
+### Get data from the user ###
+- [Get text](control-text-input.md#collect-data)
+- [Get images](control-add-picture.md#add-images-to-a-gallery)
+- [Get photos](control-camera.md#example)
+- [Get sounds](control-microphone.md#example)
+- [Get drawings](control-pen-input.md#create-a-set-of-images)
