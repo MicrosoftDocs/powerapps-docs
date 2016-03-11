@@ -90,4 +90,5 @@ A gallery can show records from a data source, and each record can contain multi
 - [Filter data in a gallery by selecting a list option](control-drop-down.md#example)
 - [Filter data in a gallery by adjusting a slider](control-slider.md#example)
 - [Add text to a gallery](control-text-input.md#collect-data)
-- [Add drawings to a gallery](control-pen-input.md)
+- [Add images to a gallery](control-add-picture.md#add-images-to-a-gallery)
+- [Add drawings to a gallery](control-pen-input.md#create-a-set-of-images)
