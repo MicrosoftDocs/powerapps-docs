@@ -98,19 +98,19 @@ By default, a column or line chart comprises multiple controls grouped together.
 
 [AZURE.INCLUDE [short-x](../../includes/short-x.md)]
 
-[AZURE.INCLUDE [short-x-label-angle](../../includes/short-x-label-angle.md)]
+[AZURE.INCLUDE [short-xlabelangle](../../includes/short-xlabelangle.md)]
 
 [AZURE.INCLUDE [short-y](../../includes/short-y.md)]
 
-[AZURE.INCLUDE [short-y-axis-max](../../includes/short-y-axis-max.md)]
+[AZURE.INCLUDE [short-yaxismax](../../includes/short-yaxismax.md)]
 
 - The **YAxisMax** property is available for line charts but not column charts.
 
-[AZURE.INCLUDE [short-y-axis-min](../../includes/short-y-axis-min.md)]
+[AZURE.INCLUDE [short-yaxismin](../../includes/short-yaxismin.md)]
 
 - The **YAxisMin** property is available for line charts but not column charts.
 
-[AZURE.INCLUDE [short-y-label-angle](../../includes/short-y-label-angle.md)]
+[AZURE.INCLUDE [short-ylabelangle](../../includes/short-ylabelangle.md)]
 
 ## Related functions ##
 
