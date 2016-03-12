@@ -77,7 +77,7 @@ If you add this control, the user can update a data source with one or more phot
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?.
+	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
 
 1. Add an image gallery, and then resize its image control, its template, and the gallery itself to fit in the screen.
 
