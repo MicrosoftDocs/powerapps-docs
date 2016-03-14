@@ -23,6 +23,7 @@
 Run an app that you or someone else created, or share an app with others in your organization.
 
 **Prerequisites**
+
 1. [Install PowerApps](http://aka.ms/powerappsinstall), and then open it.
 
 1. Sign in for the first time by swiping left to advance through the welcome screens and then providing your credentials.
