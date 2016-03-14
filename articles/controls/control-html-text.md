@@ -86,7 +86,7 @@ An HTML text control not only shows plain text and numbers but also converts HTM
 ## Example ##
 
 1. Add a text box, name it **Source**, and set its **Text** property to this string:
-		<code><p>We have done an unusually&nbsp;&quot;deep&quot; globalization and localization.<p><code>
+		\<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization. \<p>
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
