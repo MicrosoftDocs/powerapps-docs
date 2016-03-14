@@ -62,7 +62,7 @@ If you add this control, your app can upload image files from the user and updat
 
 [AZURE.INCLUDE [short-width](../../includes/short-width.md)]
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)].
+[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
 
 [AZURE.INCLUDE [short-y](../../includes/short-y.md)]
 
