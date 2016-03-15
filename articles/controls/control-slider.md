@@ -110,15 +110,12 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 1. Add a slider, move it below the button, and name the slider **MinPopulation**.
 
-1. Set the slider's **Max** property to **1000000** and its **Min** property to **5000000**.
+1. Set the slider's **Max** property to **5000000** and its **Min** property to **1000000**.
 
-1. Add a text gallery in vertical/portrait orientation, move it below the slider, and set the gallery's **Items** property to **Filter(CityPopulations, Population > MinPopulation)**.
+1. Add a text gallery in vertical/portrait orientation, move it below the slider, and set the gallery's **Items** property to this formula:<br>
+**Filter(CityPopulations, Population > MinPopulation)**
 
-1. In the first item of the gallery, set the **Text** property of the top text box to **ThisItem.City**, and set the **Text** property of the middle text box to **Text(ThisItem.Population, "##,###")**.
-
-	**Note:** To select the middle text box more easily, you might want to select **Zoom in** a few times on the **View** tab.
-
-1. (optional) In the first item of the gallery, delete the bottom text box, and set the **TemplateSize** property of the gallery to **80**.
+1. In the first item of the gallery, set the **Text** property of the top text box to **ThisItem.City**, and set the **Text** property of the bottom text box to this formula:<br> **Text(ThisItem.Population, "##,###")**
 
 1. Press F5, and then adjust **MinPopulation** to show only those cities that have a population that's greater than the value that you specify.
 
