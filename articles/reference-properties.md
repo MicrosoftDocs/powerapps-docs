@@ -22,123 +22,123 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Add picture**](control-add-picture.md)
 
-[AZURE.INCLUDE [control-summary-add-picture](../../includes/control-summary-add-picture.md)]
+[AZURE.INCLUDE [control-summary-add-picture](../includes/control-summary-add-picture.md)]
 
 [**Audio**](control-audio-video.md)
 
-[AZURE.INCLUDE [control-summary-audio-video](../../includes/control-summary-audio-video.md)]
+[AZURE.INCLUDE [control-summary-audio-video](../includes/control-summary-audio-video.md)]
 
 [**Button**](control-button.md)
 
-[AZURE.INCLUDE [control-summary-button](../../includes/control-summary-button.md)]
+[AZURE.INCLUDE [control-summary-button](../includes/control-summary-button.md)]
 
 [**Camera**](control-camera.md)
 
-[AZURE.INCLUDE [control-summary-camera](../../includes/control-summary-camera.md)]
+[AZURE.INCLUDE [control-summary-camera](../includes/control-summary-camera.md)]
 
 [**Check box**](control-check-box.md)
 
-[AZURE.INCLUDE [control-summary-check-box](../../includes/control-summary-check-box.md)]
+[AZURE.INCLUDE [control-summary-check-box](../includes/control-summary-check-box.md)]
 
 [**Column chart**](control-column-line-chart.md)
 
-[AZURE.INCLUDE [control-summary-column-line-charts](../../includes/control-summary-column-line-charts.md)]
+[AZURE.INCLUDE [control-summary-column-line-charts](../includes/control-summary-column-line-charts.md)]
 
 [**Date picker**](control-date-picker.md)
 
-[AZURE.INCLUDE [control-summary-date-picker](../../includes/control-summary-date-picker.md)]
+[AZURE.INCLUDE [control-summary-date-picker](../includes/control-summary-date-picker.md)]
 
 [**Drop down**](control-drop-down.md)
 
-[AZURE.INCLUDE [control-summary-drop-down](../../includes/control-summary-drop-down.md)]
+[AZURE.INCLUDE [control-summary-drop-down](../includes/control-summary-drop-down.md)]
 
 [**Export**](control-export-import.md)
 
-[AZURE.INCLUDE [control-summary-export-import](../../includes/control-summary-export-import.md)]
+[AZURE.INCLUDE [control-summary-export-import](../includes/control-summary-export-import.md)]
 
 [**Gallery**](control-gallery.md)
 
-[AZURE.INCLUDE [control-summary-gallery](../../includes/control-summary-gallery.md)]
+[AZURE.INCLUDE [control-summary-gallery](../includes/control-summary-gallery.md)]
 
 [**HTML text**](control-html-text.md)
 
-[AZURE.INCLUDE [control-summary-html-text](../../includes/control-summary-html-text.md)]
+[AZURE.INCLUDE [control-summary-html-text](../includes/control-summary-html-text.md)]
 
 [**Icons**](control-shapes-icons.md)
 
-[AZURE.INCLUDE [control-summary-shapes-icons](../../includes/control-summary-shapes-icons.md)]
+[AZURE.INCLUDE [control-summary-shapes-icons](../includes/control-summary-shapes-icons.md)]
 
 [**Image**](control-image.md)
 
-[AZURE.INCLUDE [control-summary-image](../../includes/control-summary-image.md)]
+[AZURE.INCLUDE [control-summary-image](../includes/control-summary-image.md)]
 
 [**Import**](control-export-import.md)
 
-[AZURE.INCLUDE [control-summary-export-import](../../includes/control-summary-export-import.md)]
+[AZURE.INCLUDE [control-summary-export-import](../includes/control-summary-export-import.md)]
 
 [**Line chart**](control-column-line-chart.md)
 
-[AZURE.INCLUDE [control-summary-column-line-charts](../../includes/control-summary-column-line-charts.md)]
+[AZURE.INCLUDE [control-summary-column-line-charts](../includes/control-summary-column-line-charts.md)]
 
 [**List box**](control-list-box.md)
 
-[AZURE.INCLUDE [control-summary-list-box](../../includes/control-summary-list-box.md)]
+[AZURE.INCLUDE [control-summary-list-box](../includes/control-summary-list-box.md)]
 
 [**Microphone**](control-microphone.md)
 
-[AZURE.INCLUDE [control-summary-microphone](../../includes/control-summary-microphone.md)]
+[AZURE.INCLUDE [control-summary-microphone](../includes/control-summary-microphone.md)]
 
 [**PDF viewer**](control-pdf-viewer.md)
 
-[AZURE.INCLUDE [control-summary-pdf-viewer](../../includes/control-summary-pdf-viewer.md)]
+[AZURE.INCLUDE [control-summary-pdf-viewer](../includes/control-summary-pdf-viewer.md)]
 
 [**Pen input**](control-pen-input.md)
 
-[AZURE.INCLUDE [control-summary-pen-input](../../includes/control-summary-pen-input.md)]
+[AZURE.INCLUDE [control-summary-pen-input](../includes/control-summary-pen-input.md)]
 
 [**Pie chart**](control-pie-chart.md)
 
-[AZURE.INCLUDE [control-summary-pie-chart](../../includes/control-summary-pie-chart.md)]
+[AZURE.INCLUDE [control-summary-pie-chart](../includes/control-summary-pie-chart.md)]
 
 [**Radio buttons**](control-radio.md)
 
-[AZURE.INCLUDE [control-summary-radio](../../includes/control-summary-radio.md)]
+[AZURE.INCLUDE [control-summary-radio](../includes/control-summary-radio.md)]
 
 [**Rating**](control-rating.md)
 
-[AZURE.INCLUDE [control-summary-rating](../../includes/control-summary-rating.md)]
+[AZURE.INCLUDE [control-summary-rating](../includes/control-summary-rating.md)]
 
 [**Screen**](control-screen.md)
 
-[AZURE.INCLUDE [control-summary-screen](../../includes/control-summary-screen.md)]
+[AZURE.INCLUDE [control-summary-screen](../includes/control-summary-screen.md)]
 
 [**Shapes**](control-shapes-icons.md)
 
-[AZURE.INCLUDE [control-summary-shapes-icons](../../includes/control-summary-shapes-icons.md)]
+[AZURE.INCLUDE [control-summary-shapes-icons](../includes/control-summary-shapes-icons.md)]
 
 [**Slider**](control-slider.md)
 
-[AZURE.INCLUDE [control-summary-slider](../../includes/control-summary-slider.md)]
+[AZURE.INCLUDE [control-summary-slider](../includes/control-summary-slider.md)]
 
 [**Text box**](control-text-box.md)
 
-[AZURE.INCLUDE [control-summary-text-box](../../includes/control-summary-text-box.md)]
+[AZURE.INCLUDE [control-summary-text-box](../includes/control-summary-text-box.md)]
 
 [**Text input**](control-text-input.md)
 
-[AZURE.INCLUDE [control-summary-text-input](../../includes/control-summary-text-input.md)]
+[AZURE.INCLUDE [control-summary-text-input](../includes/control-summary-text-input.md)]
 
 [**Timer**](control-timer.md)
 
-[AZURE.INCLUDE [control-summary-timer](../../includes/control-summary-timer.md)]
+[AZURE.INCLUDE [control-summary-timer](../includes/control-summary-timer.md)]
 
 [**Toggle**](control-toggle.md)
 
-[AZURE.INCLUDE [control-summary-toggle](../../includes/control-summary-toggle.md)]
+[AZURE.INCLUDE [control-summary-toggle](../includes/control-summary-toggle.md)]
 
 [**Video**](control-audio-video.md)
 
-[AZURE.INCLUDE [control-summary-audio-video](../../includes/control-summary-audio-video.md)]
+[AZURE.INCLUDE [control-summary-audio-video](../includes/control-summary-audio-video.md)]
 
 ## A-F ##
 |||||
