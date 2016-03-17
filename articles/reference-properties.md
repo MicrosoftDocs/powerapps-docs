@@ -19,48 +19,59 @@
 
 # Find a property in PowerApps #
 
-## Alphabetically ##
-| A-H |H-O|O-S|S-Z|
-|:---:|:-----:|:----:|:---:|
-|[Align](properties-reference1.md)                  | [Height](properties-reference1.md)              | [OnSelect](properties-reference2.md)            | [SeriesAxisMin](properties-reference2.md)   |
-| [AutoHeight](properties-reference1.md)             | [HintText](properties-reference1.md)            | [OnStart](properties-reference2.md)             | [ShowControls](properties-reference2.md)    |
-| [AutoPause](properties-reference1.md)              | [HoverBorderColor](properties-reference1.md)    | [OnStop](properties-reference2.md)              | [ShowLabels](properties-reference2.md)      |
-| [AutoStart](properties-reference1.md)              | [HoverColor](properties-reference1.md)          | [OnStream](properties-reference2.md)            | [ShowNavigation](properties-reference2.md)  |
-| [BackgroundImage](properties-reference1.md)        | [HoverFill](properties-reference1.md)           | [OnTimerEnd](properties-reference2.md)          | [ShowScrollbar](properties-reference2.md)   |
-| [BorderColor](properties-reference1.md)            | [HTMLText](properties-reference1.md)            | [OnTimerStart](properties-reference2.md)        | [ShowValue](properties-reference2.md)       |
-| [BorderStyle](properties-reference1.md)            | [Image](properties-reference1.md)               | [OnUncheck](properties-reference2.md)           | [Size](properties-reference2.md)            |
-| [BorderThickness](properties-reference1.md)        | [ImagePosition](properties-reference1.md)       | [OnVisible](properties-reference2.md)           | [Snap](properties-reference2.md)            |
-| [Brightness](properties-reference1.md)             | [Input](properties-reference1.md)               | [Overflow](properties-reference2.md)            | [Start](properties-reference2.md)           |
-| [Camera](properties-reference1.md)                 | [Italic](properties-reference1.md)              | [Padding](properties-reference2.md)             | [StartTime](properties-reference2.md)       |
-| [CheckboxBackgroundFill](properties-reference1.md) | [ItemBorderColor](properties-reference1.md)     | [PaddingBottom](properties-reference2.md)       | [StartYear](properties-reference2.md)       |
-| [CheckboxBorderColor](properties-reference1.md)    | [ItemBorderThickness](properties-reference1.md) | [PaddingLeft](properties-reference2.md)         | [StreamRate](properties-reference2.md)      |
-| [CheckboxSize](properties-reference1.md)           | [ItemColorSet](properties-reference1.md)        | [PaddingRight](properties-reference2.md)        | [Strikethrough](properties-reference2.md)   |
-| [CheckmarkFill](properties-reference1.md)          | [ItemPaddingLeft](properties-reference1.md)     | [PaddingTop](properties-reference2.md)          | [TemplateFill](properties-reference2.md)    |
-| [ChevronBackground](properties-reference1.md)      | [Items](properties-reference1.md)               | [PressedBorderColor](properties-reference2.md)  | [TemplatePadding](properties-reference2.md) |
-| [ChevronFill](properties-reference1.md)            | [ItemsGap](properties-reference1.md)            | [PressedColor](properties-reference2.md)        | [TemplateSize](properties-reference2.md)    |
-| [Clear](properties-reference1.md)                  | [LabelPosition](properties-reference1.md)       | [PressedFill](properties-reference2.md)         | [Text](properties-reference2.md)            |
-| [Color](properties-reference1.md)                  | [Layout](properties-reference1.md)              | [RadioBackgroundFill](properties-reference2.md) | [Tooltip](properties-reference2.md)         |
-| [Contrast](properties-reference1.md)               | [LineHeight](properties-reference1.md)          | [RadioBorderColor](properties-reference2.md)    | [Transition](properties-reference2.md)      |
-| [Data](properties-reference1.md)                   | [Loop](properties-reference1.md)                | [RadioSelectionFill](properties-reference2.md)  | [Transparency](properties-reference2.md)    |
-| [Default](properties-reference1.md)                | [Markers](properties-reference1.md)             | [RadioSize](properties-reference2.md)           | [Underline](properties-reference2.md)       |
-| [Direction](properties-reference1.md)              | [MarkerSuffix](properties-reference1.md)        | [RadiusBottomLeft](properties-reference2.md)    | [Valid](properties-reference2.md)           |
-| [Disabled](properties-reference1.md)               | [Max](properties-reference1.md)                 | [RadiusBottomRight](properties-reference2.md)   | [ValueFill](properties-reference2.md)       |
-| [DisabledBorderColor](properties-reference1.md)    | [MaxLength](properties-reference1.md)           | [RadiusTopLeft](properties-reference2.md)       | [ValueHoverFill](properties-reference2.md)  |
-| [DisabledColor](properties-reference1.md)          | [Media](properties-reference1.md)               | [RadiusTopRight](properties-reference2.md)      | [VerticalAlign](properties-reference2.md)   |
-| [DisabledFill](properties-reference1.md)           | [Mic](properties-reference1.md)                 | [RailFill](properties-reference2.md)            | [Visible](properties-reference2.md)         |
-| [Duration](properties-reference1.md)               | [Min](properties-reference1.md)                 | [RailHoverFill](properties-reference2.md)       | [Width](properties-reference2.md)           |
-| [EndYear](properties-reference1.md)                | [MinimumBarWidth](properties-reference1.md)     | [RatingFill](properties-reference2.md)          | [Wrap](properties-reference2.md)            |
-| [Explode](properties-reference1.md)                | [Mode](properties-reference1.md)                | [ReadOnly](properties-reference2.md)            | [WrapCount](properties-reference2.md)       |
-| [Fill](properties-reference1.md)                   | [NavigationStep](properties-reference2.md)      | [Repeat](properties-reference2.md)              | [X](properties-reference2.md)               |
-| [Font](properties-reference1.md)                   | [NumberOfSeries](properties-reference2.md)      | [Reset](properties-reference2.md)               | [XLabelAngle](properties-reference2.md)     |
-| [FontWeight](properties-reference1.md)             | [OnChange](properties-reference2.md)            | [SelectionColor](properties-reference2.md)      | [Y](properties-reference2.md)               |
-| [GridStyle](properties-reference1.md)              | [OnCheck](properties-reference2.md)             | [SelectionFill](properties-reference2.md)       | [YAxisMax](properties-reference2.md)        |
-| [HandleActiveFill](properties-reference1.md)       | [OnEnd](properties-reference2.md)               | [SelectionThickness](properties-reference2.md)  | [YAxisMin](properties-reference2.md)        |
-| [HandleFill](properties-reference1.md)             | [OnHidden](properties-reference2.md)            | [SelectMultiple](properties-reference2.md)      | [YLabelAngle](properties-reference2.md)     |
-| [HandleHoverFill](properties-reference1.md)        | [OnPause](properties-reference2.md)             | [SeriesAxisMax](properties-reference2.md)       | [Zoom](properties-reference2.md)            |
+## Align-HandleHoverFill ##
+|||||
+|:-:|:-:|:-:|:-:|
+| [Align](reference-properties1.md)           | [Camera](reference-properties1.md)                 | [Contrast](reference-properties1.md)            | [EndYear](reference-properties1.md)          |
+| [AutoHeight](reference-properties1.md)      | [CheckboxBackgroundFill](reference-properties1.md) | [Data](reference-properties1.md)                | [Explode](reference-properties1.md)          |
+| [AutoPause](reference-properties1.md)       | [CheckboxBorderColor](reference-properties1.md)    | [Default](reference-properties1.md)             | [Fill](reference-properties1.md)             |
+| [AutoStart](reference-properties1.md)       | [CheckboxSize](reference-properties1.md)           | [Direction](reference-properties1.md)           | [Font](reference-properties1.md)             |
+| [BackgroundImage](reference-properties1.md) | [CheckmarkFill](reference-properties1.md)          | [Disabled](reference-properties1.md)            | [FontWeight](reference-properties1.md)       |
+| [BorderColor](reference-properties1.md)     | [ChevronBackground](reference-properties1.md)      | [DisabledBorderColor](reference-properties1.md) | [GridStyle](reference-properties1.md)        |
+| [BorderStyle](reference-properties1.md)     | [ChevronFill](reference-properties1.md)            | [DisabledColor](reference-properties1.md)       | [HandleActiveFill](reference-properties1.md) |
+| [BorderThickness](reference-properties1.md) | [Clear](reference-properties1.md)                  | [DisabledFill](reference-properties1.md)        | [HandleFill](reference-properties1.md)       |
+| [Brightness](reference-properties1.md)      | [Color](reference-properties1.md)                  | [Duration](reference-properties1.md)            | [HandleHoverFill](reference-properties1.md)  |
+
+## Height-OnPause ##
+|||||
+|:-:|:-:|:-:|:-:|
+| [Height](reference-properties1.md)           | [Italic](reference-properties1.md)              | [LineHeight](reference-properties1.md)   | [MinimumBarWidth](reference-properties1.md) |
+| [HintText](reference-properties1.md)         | [ItemBorderColor](reference-properties1.md)     | [Loop](reference-properties1.md)         | [Mode](reference-properties1.md)            |
+| [HoverBorderColor](reference-properties1.md) | [ItemBorderThickness](reference-properties1.md) | [Markers](reference-properties1.md)      | [NavigationStep](reference-properties2.md)  |
+| [HoverColor](reference-properties1.md)       | [ItemColorSet](reference-properties1.md)        | [MarkerSuffix](reference-properties1.md) | [NumberOfSeries](reference-properties2.md)  |
+| [HoverFill](reference-properties1.md)        | [ItemPaddingLeft](reference-properties1.md)     | [Max](reference-properties1.md)          | [OnChange](reference-properties2.md)        |
+| [HTMLText](reference-properties1.md)         | [Items](reference-properties1.md)               | [MaxLength](reference-properties1.md)    | [OnCheck](reference-properties2.md)         |
+| [Image](reference-properties1.md)            | [ItemsGap](reference-properties1.md)            | [Media](reference-properties1.md)        | [OnEnd](reference-properties2.md)           |
+| [ImagePosition](reference-properties1.md)    | [LabelPosition](reference-properties1.md)       | [Mic](reference-properties1.md)          | [OnHidden](reference-properties2.md)        |
+| [Input](reference-properties1.md)            | [Layout](reference-properties1.md)              | [Min](reference-properties1.md)          | [OnPause](reference-properties2.md)         |
+
+## OnSelect-SeriesAxisMax
+| ||||
+|:-:|:-:|:-:|:-:|
+| [OnSelect](reference-properties2.md)     | [Padding](reference-properties2.md)             | [RadioBorderColor](reference-properties2.md)   | [RatingFill](reference-properties2.md)         |
+| [OnStart](reference-properties2.md)      | [PaddingBottom](reference-properties2.md)       | [RadioSelectionFill](reference-properties2.md) | [ReadOnly](reference-properties2.md)           |
+| [OnStop](reference-properties2.md)       | [PaddingLeft](reference-properties2.md)         | [RadioSize](reference-properties2.md)          | [Repeat](reference-properties2.md)             |
+| [OnStream](reference-properties2.md)     | [PaddingRight](reference-properties2.md)        | [RadiusBottomLeft](reference-properties2.md)   | [Reset](reference-properties2.md)              |
+| [OnTimerEnd](reference-properties2.md)   | [PaddingTop](reference-properties2.md)          | [RadiusBottomRight](reference-properties2.md)  | [SelectionColor](reference-properties2.md)     |
+| [OnTimerStart](reference-properties2.md) | [PressedBorderColor](reference-properties2.md)  | [RadiusTopLeft](reference-properties2.md)      | [SelectionFill](reference-properties2.md)      |
+| [OnUncheck](reference-properties2.md)    | [PressedColor](reference-properties2.md)        | [RadiusTopRight](reference-properties2.md)     | [SelectionThickness](reference-properties2.md) |
+| [OnVisible](reference-properties2.md)    | [PressedFill](reference-properties2.md)         | [RailFill](reference-properties2.md)           | [SelectMultiple](reference-properties2.md)     |
+| [Overflow](reference-properties2.md)     | [RadioBackgroundFill](reference-properties2.md) | [RailHoverFill](reference-properties2.md)      | [SeriesAxisMax](reference-properties2.md)      |
+
+## SeriesAxisMin-Zoom
+| ||||
+|:-:|:-:|:-:|:-:|
+| [SeriesAxisMin](reference-properties2.md)  | [StartTime](reference-properties2.md)       | [Transition](reference-properties2.md)     | [Wrap](reference-properties2.md)        |
+| [ShowControls](reference-properties2.md)   | [StartYear](reference-properties2.md)       | [Transparency](reference-properties2.md)   | [WrapCount](reference-properties2.md)   |
+| [ShowLabels](reference-properties2.md)     | [StreamRate](reference-properties2.md)      | [Underline](reference-properties2.md)      | [X](reference-properties2.md)           |
+| [ShowNavigation](reference-properties2.md) | [Strikethrough](reference-properties2.md)   | [Valid](reference-properties2.md)          | [XLabelAngle](reference-properties2.md) |
+| [ShowScrollbar](reference-properties2.md)  | [TemplateFill](reference-properties2.md)    | [ValueFill](reference-properties2.md)      | [Y](reference-properties2.md)           |
+| [ShowValue](reference-properties2.md)      | [TemplatePadding](reference-properties2.md) | [ValueHoverFill](reference-properties2.md) | [YAxisMax](reference-properties2.md)    |
+| [Size](reference-properties2.md)           | [TemplateSize](reference-properties2.md)    | [VerticalAlign](reference-properties2.md)  | [YAxisMin](reference-properties2.md)    |
+| [Snap](reference-properties2.md)           | [Text](reference-properties2.md)            | [Visible](reference-properties2.md)        | [YLabelAngle](reference-properties2.md) |
+| [Start](reference-properties2.md)          | [Tooltip](reference-properties2.md)         | [Width](reference-properties2.md)          | [Zoom](reference-properties2.md)        |
 
 ## By control ##
-
 | A-G | H-P | R-Z |
 |:---:|:---:|:---:|
 |[Add picture](control-add-picture.md)|[HTML text](control-html-text.md)|[Radio buttons](control-radio.md)
