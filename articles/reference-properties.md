@@ -98,7 +98,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Pie chart**](control-pie-chart.md)
 
-[AZURE.INCLUDE [control-summary-pie-chart](../includes/control-summary-pie-chart.md)]
+[AZURE.INCLUDE [control-summary-pie-charts](../includes/control-summary-pie-charts.md)]
 
 [**Radio buttons**](control-radio.md)
 
