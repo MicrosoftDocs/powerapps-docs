@@ -1,6 +1,6 @@
 <properties
     pageTitle="Audio and video properties | Microsoft PowerApps"
-    description="Reference material for properties such as Media, Loop, and StartTime"
+    description="Reference information about properties such as Media, Loop, and StartTime"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -21,7 +21,7 @@
 # Audio and video properties in PowerApps #
 
 ## Overview ##
-Set these properties to configure the audio player, the video player, the camera control, and the microphone control.
+Configure the audio player, the video player, the camera control, and the microphone control.
 
 ## Properties ##
 

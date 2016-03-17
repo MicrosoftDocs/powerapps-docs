@@ -1,6 +1,6 @@
 <properties
     pageTitle="Action properties | Microsoft PowerApps"
-    description="Reference material for properties such as OnSelect, OnChange, and OnVisible"
+    description="Reference information about properties such as OnSelect, OnChange, and OnVisible"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -21,7 +21,7 @@
 # Action properties in PowerApps #
 
 ## Overview ##
-Set these properties to a formula or formulas that determine how the app responds when the user performs an action or another event occurs.
+Specify how the app responds when the user performs an action or another event occurs.
 
 ## Properties ##
 

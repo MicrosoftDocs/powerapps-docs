@@ -20,125 +20,36 @@
 # Find a property in PowerApps #
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
-[**Add picture**](control-add-picture.md)
-
-[AZURE.INCLUDE [control-summary-add-picture](../includes/control-summary-add-picture.md)]
-
-[**Audio**](control-audio-video.md)
-
-[AZURE.INCLUDE [control-summary-audio-video](../includes/control-summary-audio-video.md)]
-
-[**Button**](control-button.md)
-
-[AZURE.INCLUDE [control-summary-button](../includes/control-summary-button.md)]
-
-[**Camera**](control-camera.md)
-
-[AZURE.INCLUDE [control-summary-camera](../includes/control-summary-camera.md)]
-
-[**Check box**](control-check-box.md)
-
-[AZURE.INCLUDE [control-summary-check-box](../includes/control-summary-check-box.md)]
-
-[**Column chart**](control-column-line-chart.md)
-
-[AZURE.INCLUDE [control-summary-column-line-charts](../includes/control-summary-column-line-charts.md)]
-
-[**Date picker**](control-date-picker.md)
-
-[AZURE.INCLUDE [control-summary-date-picker](../includes/control-summary-date-picker.md)]
-
-[**Drop down**](control-drop-down.md)
-
-[AZURE.INCLUDE [control-summary-drop-down](../includes/control-summary-drop-down.md)]
-
-[**Export**](control-export-import.md)
-
-[AZURE.INCLUDE [control-summary-export-import](../includes/control-summary-export-import.md)]
-
-[**Gallery**](control-gallery.md)
-
-[AZURE.INCLUDE [control-summary-gallery](../includes/control-summary-gallery.md)]
-
-[**HTML text**](control-html-text.md)
-
-[AZURE.INCLUDE [control-summary-html-text](../includes/control-summary-html-text.md)]
-
-[**Icons**](control-shapes-icons.md)
-
-[AZURE.INCLUDE [control-summary-shapes-icons](../includes/control-summary-shapes-icons.md)]
-
-[**Image**](control-image.md)
-
-[AZURE.INCLUDE [control-summary-image](../includes/control-summary-image.md)]
-
-[**Import**](control-export-import.md)
-
-[AZURE.INCLUDE [control-summary-export-import](../includes/control-summary-export-import.md)]
-
-[**Line chart**](control-column-line-chart.md)
-
-[AZURE.INCLUDE [control-summary-column-line-charts](../includes/control-summary-column-line-charts.md)]
-
-[**List box**](control-list-box.md)
-
-[AZURE.INCLUDE [control-summary-list-box](../includes/control-summary-list-box.md)]
-
-[**Microphone**](control-microphone.md)
-
-[AZURE.INCLUDE [control-summary-microphone](../includes/control-summary-microphone.md)]
-
-[**PDF viewer**](control-pdf-viewer.md)
-
-[AZURE.INCLUDE [control-summary-pdf-viewer](../includes/control-summary-pdf-viewer.md)]
-
-[**Pen input**](control-pen-input.md)
-
-[AZURE.INCLUDE [control-summary-pen-input](../includes/control-summary-pen-input.md)]
-
-[**Pie chart**](control-pie-chart.md)
-
-[AZURE.INCLUDE [control-summary-pie-charts](../includes/control-summary-pie-charts.md)]
-
-[**Radio buttons**](control-radio.md)
-
-[AZURE.INCLUDE [control-summary-radio](../includes/control-summary-radio.md)]
-
-[**Rating**](control-rating.md)
-
-[AZURE.INCLUDE [control-summary-rating](../includes/control-summary-rating.md)]
-
-[**Screen**](control-screen.md)
-
-[AZURE.INCLUDE [control-summary-screen](../includes/control-summary-screen.md)]
-
-[**Shapes**](control-shapes-icons.md)
-
-[AZURE.INCLUDE [control-summary-shapes-icons](../includes/control-summary-shapes-icons.md)]
-
-[**Slider**](control-slider.md)
-
-[AZURE.INCLUDE [control-summary-slider](../includes/control-summary-slider.md)]
-
-[**Text box**](control-text-box.md)
-
-[AZURE.INCLUDE [control-summary-text-box](../includes/control-summary-text-box.md)]
-
-[**Text input**](control-text-input.md)
-
-[AZURE.INCLUDE [control-summary-text-input](../includes/control-summary-text-input.md)]
-
-[**Timer**](control-timer.md)
-
-[AZURE.INCLUDE [control-summary-timer](../includes/control-summary-timer.md)]
-
-[**Toggle**](control-toggle.md)
-
-[AZURE.INCLUDE [control-summary-toggle](../includes/control-summary-toggle.md)]
-
-[**Video**](control-audio-video.md)
-
-[AZURE.INCLUDE [control-summary-audio-video](../includes/control-summary-audio-video.md)]
+[Add picture](control-add-picture.md) Add image files to a data source.
+<br>[Audio](control-audio-video.md) Play an audio clip or the audio portion of a video clip.
+<br>[Button](control-button.md) Interact with the app by clicking or tapping.
+<br>[Camera](control-camera.md) Take and save photos in the app or to a data source.
+<br>[Check box](control-check-box.md) Select or clear an option to specify **true** or **false**.
+<br>[Column chart](control-column-line-chart.md) Show values as vertical bars relative to two axes.
+<br>[Date picker](control-date-picker.md) Specify a date by clicking or tapping.
+<br>[Drop down](control-drop-down.md) Show the first item in a list until a chevron is selected.
+<br>[Export](control-export-import.md) Export data for use elsewhere in PowerApps.
+<br>[Gallery](control-gallery.md) Show a list of records that can contain multiple types of data.
+<br>[HTML text](control-html-text.md) Convert HTML tags automatically.
+<br>[Icons](control-shapes-icons.md) Add graphic appeal and visual interest.
+<br>[Image](control-image.md) Show an image from, for example, a local file or a data source.
+<br>[Import](control-export-import.md) Import data from elsewhere in PowerApps.
+<br>[Line chart](control-column-line-chart.md) Show values as data points relative to two axes.
+<br>[List box](control-list-box.md) Select one or more items in a list.
+<br>[Microphone](control-microphone.md) Record and save sounds in the app or to a data source.
+<br>[PDF viewer](control-pdf-viewer.md) Show the content of a PDF file on the Internet.
+<br>[Pen input](control-pen-input.md) Draw an image or text, and save it in the app or to a data source.
+<br>[Pie chart](control-pie-chart.md) Show how values relate to each other.
+<br>[Radio buttons](control-radio.md) Show options that are mutually exclusive.
+<br>[Rating](control-rating.md) Indicate a value between 1 and a specified number.
+<br>[Screen](control-screen.md) Show and update data about a specific task.
+<br>[Shapes](control-shapes-icons.md) Display arrows and geometric shapes, such as rectangles.
+<br>[Slider](control-slider.md) Specify a value by dragging a handle.
+<br>[Text box](control-text-box.md) Shows data such as text, numbers, dates, or currency,
+<br>[Text input](control-text-input.md) Type text, numbers, and other data.
+<br>[Timer](control-timer.md) Configure your app to respond after a certain amount of time passes.
+<br>[Toggle](control-toggle.md) Drag a handle to specify **true** or **false**.
+<br>[Video](control-audio-video.md) Play a video clip from a local file, a data source, or YouTube.
 
 ## A-F ##
 |||||
