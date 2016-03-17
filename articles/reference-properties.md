@@ -42,7 +42,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Column chart**](control-column-line-chart.md)
 
-[AZURE.INCLUDE [control-summary-column-line-chart](../../includes/control-summary-column-line-chart.md)]
+[AZURE.INCLUDE [control-summary-column-line-charts](../../includes/control-summary-column-line-charts.md)]
 
 [**Date picker**](control-date-picker.md)
 
@@ -78,7 +78,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Line chart**](control-column-line-chart.md)
 
-[AZURE.INCLUDE [control-summary-column-line-chart](../../includes/control-summary-column-line-chart.md)]
+[AZURE.INCLUDE [control-summary-column-line-charts](../../includes/control-summary-column-line-charts.md)]
 
 [**List box**](control-list-box.md)
 
