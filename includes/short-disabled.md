@@ -1,1 +1,1 @@
-**Disabled** A Boolean (**true**/**false**) value that determines whether the user can interact with the control.
+[**Disabled**](properties-core.md) Whether the user can interact with the control.

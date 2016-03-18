@@ -1,1 +1,1 @@
-**BorderStyle** A string of text (**Solid**, **Dashed**, **Dotted**, or **None**) that determines the style of a control's border.
+[**BorderStyle**](properties-color-border.md) Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.

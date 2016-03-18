@@ -25,16 +25,16 @@ Configure how big a control (or an element of a control) is and where it is in r
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-checkboxsize](../../includes/short-checkboxsize.md)]
+**CheckboxSize** The width and height of the box that surrounds the checkmark in a checkbox control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**Height** The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-radiosize](../../includes/short-radiosize.md)]
+**RadioSize** The diameter of the circles in a radio-button control.
 
-[AZURE.INCLUDE [short-templatesize](../../includes/short-templatesize.md)]
+**TemplateSize** The height of the template for a gallery in vertical/portrait orientation or the width of the template for a gallery in horizontal/landscape orientation.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+**Width** The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
+**X** The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**Y** The distance between the top edge of a control and the top edge of the screen.

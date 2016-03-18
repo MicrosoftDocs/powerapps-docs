@@ -1,1 +1,1 @@
-**Image** A string or a formula that determines which image appears in an image, audio, or microphone control.
+[**Image**](properties-visual.md) The name of the image that appears in an image, audio, or microphone control.

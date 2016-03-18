@@ -1,1 +1,1 @@
-**AutoHeight** A Boolean (**true**/**false**) value that determines whether a text box  automatically increases its **Height** property if the **Text** property contains more characters than the control can show at one time.
+[**AutoHeight**](properties-text.md) Whether a text box automatically increases its **Height** property if its **Text** property contains more characters than the control can show at one time.

@@ -1,1 +1,1 @@
-**Y** A positive integer that determines the distance, in pixels, between the top edge of a control and the top edge of the screen.
+[**Y**](properties-size-location.md) The distance between the top edge of a control and the top edge of the screen.

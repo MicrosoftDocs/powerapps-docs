@@ -1,1 +1,1 @@
-**Transparency** A decimal number between 0 and 1 that determines the degree to which controls behind an image remain visible.
+[**Transparency**](properties-visual.md) The degree to which controls behind an image remain visible.

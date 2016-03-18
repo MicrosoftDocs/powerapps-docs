@@ -25,32 +25,32 @@ Configure the style, thickness, and color of borders and the color of other elem
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**BorderColor** The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**BorderStyle** Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**BorderThickness** The thickness of a control's border.
 
-[AZURE.INCLUDE [short-checkboxbordercolor](../../includes/short-checkboxbordercolor.md)]
+**CheckboxBorderColor** The color of the border that surrounds the checkmark in a checkbox control.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**Color** The color of text in a control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**DisabledBorderColor** The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**DisabledColor** The color of text in a control if its **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**HoverBorderColor** The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+**HoverColor** The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-itembordercolor](../../includes/short-itembordercolor.md)]
+**ItemBorderColor** The color of the border around each wedge in a pie chart.
 
-[AZURE.INCLUDE [short-itemborderthickness](../../includes/short-itemborderthickness.md)]
+**ItemBorderThickness** The thickness of the border around each wedge in a pie chart.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**PressedBorderColor** The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+**PressedColor** The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-radiobordercolor](../../includes/short-radiobordercolor.md)]
+**RadioBorderColor** The color of the circle for each option in a radio-button control.
 
-[AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]
+**SelectionColor** The text color of a selected item or items in a list or the color of the selection tool in a pen control.

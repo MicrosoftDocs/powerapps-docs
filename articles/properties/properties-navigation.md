@@ -25,12 +25,12 @@ Configure how the user scrolls through a gallery.
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-navigationstep](../../includes/short-navigationstep.md)]
+**NavigationStep** How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
 
-[AZURE.INCLUDE [short-shownavigation](../../includes/short-shownavigation.md)]
+**ShowNavigation** Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.
 
-[AZURE.INCLUDE [short-showscrollbar](../../includes/short-showscrollbar.md)]
+**ShowScrollbar** Whether a scrollbar appears when the user hovers over a gallery.
 
-[AZURE.INCLUDE [short-snap](../../includes/short-snap.md)]
+**Snap** Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.
 
-[AZURE.INCLUDE [short-transition](../../includes/short-transition.md)]
+**Transition** The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.

@@ -1,1 +1,1 @@
-**RadioSize** A positive integer that determines the diameter, in pixels, of the circles in a radio-button control.
+[**RadioSize**](properties-size-location.md) The diameter of the circles in a radio-button control.

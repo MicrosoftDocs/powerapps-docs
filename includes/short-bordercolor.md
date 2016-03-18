@@ -1,1 +1,1 @@
-**BorderColor** The color of a control's border.
+[**BorderColor**](properties-color-border.md) The color of a control's border.
