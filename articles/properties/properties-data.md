@@ -25,28 +25,28 @@ Configure the data that appears in a gallery, the minimum and maximum values for
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-data](../../includes/short-data.md)]
+**Data** The name of a collection that you want to export to a local file.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+**Default** The value of a control unless the user specifies a different value.
 
-[AZURE.INCLUDE [short-duration](../../includes/short-duration.md)]
+**Duration** How long a timer runs.
 
-[AZURE.INCLUDE [short-endyear](../../includes/short-endyear.md)]
+**EndYear** The latest year to which the user can set value of a date-picker control.
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+**Items** The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[AZURE.INCLUDE [short-max](../../includes/short-max.md)]
+**Max** The maximum value to which the user can set a slider or a rating.
 
-[AZURE.INCLUDE [short-min](../../includes/short-min.md)]
+**Min** The minimum value to which the user can set a slider.
 
-[AZURE.INCLUDE [short-repeat](../../includes/short-repeat.md)]
+**Repeat** Whether a timer automatically restarts when it finishes running.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+**Reset** Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-selectmultiple](../../includes/short-selectmultiple.md)]
+**SelectMultiple** Whether a user can select more than one item in a listbox.
 
-[AZURE.INCLUDE [short-showvalue](../../includes/short-showvalue.md)]
+**ShowValue** Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-[AZURE.INCLUDE [short-startyear](../../includes/short-startyear.md)]
+**StartYear** The earliest year to which the user can set the value of a date-picker control.
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
+**Valid** Whether data from the user matches specified criteria.

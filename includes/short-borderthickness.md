@@ -1,1 +1,1 @@
-**BorderThickness** A positive integer that determines the thickness, in pixels, of a control's border.
+[**BorderThickness**](properties-color-border.md) The thickness of a control's border.

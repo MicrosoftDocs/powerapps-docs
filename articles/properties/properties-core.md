@@ -25,8 +25,8 @@ Configure whether the user can see and interact with a control.
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**Disabled** Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-readonly](../../includes/short-readonly.md)]
+**ReadOnly** Whether a user can change the value of a slider or rating control.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**Visible** Whether a control appears or is hidden.

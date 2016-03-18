@@ -1,1 +1,1 @@
-**Duration** A positive integer that determines for how long, in milliseconds, a timer runs.
+[**Duration**](properties-data.md) How long a timer runs.

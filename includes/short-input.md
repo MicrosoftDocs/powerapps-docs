@@ -1,1 +1,1 @@
-**Input**
+[**Input**](properties-visual.md)

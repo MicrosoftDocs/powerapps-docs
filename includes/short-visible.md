@@ -1,1 +1,1 @@
-**Visible** A Boolean (**true**/**false**) value that determines whether a control appears or is hidden.
+[**Visible**](properties-core.md) Whether a control appears or is hidden.

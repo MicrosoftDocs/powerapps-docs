@@ -25,24 +25,24 @@ Configure the text that appears on a control, in a tooltip, as a hint when the u
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-autoheight](../../includes/short-autoheight.md)]
+**AutoHeight** Whether a text box automatically increases its **Height** property if its **Text** property contains more characters than the control can show at one time.
 
-[AZURE.INCLUDE [short-clear](../../includes/short-clear.md)]
+**Clear** Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.
 
-[AZURE.INCLUDE [short-hinttext](../../includes/short-hinttext.md)]
+**HintText** Light-grey text that appears in an input-text control if it's empty.
 
-[AZURE.INCLUDE [short-html-text](../../includes/short-html-text.md)]
+**HTMLText** Text that appears in an HTML text control and that may contain HTML tags.
 
-[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
+**LineHeight** The distance between, for example, lines of text or items in a list.
 
-[AZURE.INCLUDE [short-maxlength](../../includes/short-maxlength.md)]
+**MaxLength** The number of characters that the user can type into a text-input control.
 
-[AZURE.INCLUDE [short-mode](../../includes/short-mode.md)]
+**Mode** Whether a text-input control is in **SingleLine**, **MultiLine**, or **Password** mode or a pen-input control is in **Draw**, **Erase**, or **Select** mode.
 
-[AZURE.INCLUDE [short-overflow](../../includes/short-overflow.md)]
+**Overflow** Whether a scrollbar appears in a text box if its **Wrap** property is set to **true** and the value of the control's **Text** property contains more characters than the control can show at one time.
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+**Text** Text that appears on a control or that the user types into a control.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**Tooltip** Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-wrap](../../includes/short-wrap.md)]
+**Wrap** Whether text that's too long to fit in a text box wraps to the next line.

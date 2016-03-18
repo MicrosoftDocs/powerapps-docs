@@ -25,26 +25,26 @@ Configure graphical elements in your app, including images, photos, and elements
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-backgroundimage](../../includes/short-backgroundimage.md)]
+**BackgroundImage** The name of an image file that appears in the background of a screen.
 
-[AZURE.INCLUDE [short-brightness](../../includes/short-brightness.md)]
+**Brightness** How much light the user is likely to perceive in an image.
 
-[AZURE.INCLUDE [short-contrast](../../includes/short-contrast.md)]
+**Contrast** How easily the user can distinguish between similar colors in an image.
 
-[AZURE.INCLUDE [short-direction](../../includes/short-direction.md)]
+**Direction** Whether the first item in a gallery in landscape orientation appears near the left or right edge.
 
-[AZURE.INCLUDE [short-image](../../includes/short-image.md)]
+**Image** The name of the image that appears in an image, audio, or microphone control.
 
-[AZURE.INCLUDE [short-imageposition](../../includes/short-imageposition.md)]
+**ImagePosition** The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-[AZURE.INCLUDE [short-input](../../includes/short-input.md)]
+**Input**
 
-[AZURE.INCLUDE [short-layout](../../includes/short-layout.md)]
+**Layout** Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
-[AZURE.INCLUDE [short-selectionthickness](../../includes/short-selectionthickness.md)]
+**SelectionThickness** The thickness of the selection tool for a pen-input control.
 
-[AZURE.INCLUDE [short-transparency](../../includes/short-transparency.md)]
+**Transparency** The degree to which controls behind an image remain visible.
 
-[AZURE.INCLUDE [short-wrapcount](../../includes/short-wrapcount.md)]
+**WrapCount** How many records appear in each item of a gallery.  
 
-[AZURE.INCLUDE [short-zoom](../../includes/short-zoom.md)]
+**Zoom** The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.

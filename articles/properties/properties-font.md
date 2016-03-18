@@ -25,14 +25,14 @@ Configure the typeface in which text appears, in addition to characteristics suc
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**Font** The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+**FontWeight** The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**Italic** Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**Size** The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+**Strikethrough** Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+**Underline** Whether a line appears under the text that appears on a control.

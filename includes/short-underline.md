@@ -1,1 +1,1 @@
-**Underline** A Boolean (**true**/**false**) value that determines whether a line appears under the text that appears on a control.
+[**Underline**](properties-font.md) Whether a line appears under the text that appears on a control.

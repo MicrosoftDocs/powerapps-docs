@@ -25,42 +25,42 @@ Configure the background color of controls (or elements within controls).
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-checkboxbackgroundfill](../../includes/short-checkboxbackgroundfill.md)]
+**CheckboxBackgroundFill** The background color of the box that surrounds the checkmark in a checkbox control.
 
-[AZURE.INCLUDE [short-checkmarkfill](../../includes/short-checkmarkfill.md)]
+**CheckmarkFill** The color of the checkmark in a checkbox control.
 
-[AZURE.INCLUDE [short-chevronbackground](../../includes/short-chevronbackground.md)]
+**ChevronBackground** The color behind the down arrow in a dropdown list.
 
-[AZURE.INCLUDE [short-chevronfill](../../includes/short-chevronfill.md)]
+**ChevronFill** The color of the down arrow in a dropdown list.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**DisabledFill** The background color of a control if its **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**Fill** The background color of a control.
 
-[AZURE.INCLUDE [short-handleactivefill](../../includes/short-handleactivefill.md)]
+**HandleActiveFill** The color of the handle for a slider as the user changes its value.
 
-[AZURE.INCLUDE [short-handlefill](../../includes/short-handlefill.md)]
+**HandleFill** The color of the handle (the element that changes position) in a toggle or slider control.
 
-[AZURE.INCLUDE [short-handlehoverfill](../../includes/short-handlehoverfill.md)]
+**HandleHoverFill** The color of the handle in a slider when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**HoverFill** The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**PressedFill** The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-radiobackgroundfill](../../includes/short-radiobackgroundfill.md)]
+**RadioBackgroundFill** The background color of the circles in a radio-button control.
 
-[AZURE.INCLUDE [short-radioselectionfill](../../includes/short-radioselectionfill.md)]
+**RadioSelectionFill** The color that appears inside the circle of the selected option in a radio-button control.
 
-[AZURE.INCLUDE [short-railfill](../../includes/short-railfill.md)]
+**RailFill** The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[AZURE.INCLUDE [short-railhoverfill](../../includes/short-railhoverfill.md)]
+**RailHoverFill** When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[AZURE.INCLUDE [short-ratingfill](../../includes/short-ratingfill.md)]
+**RatingFill** The color of the stars in a rating control.
 
-[AZURE.INCLUDE [short-selectionfill](../../includes/short-selectionfill.md)]
+**SelectionFill** The background color of a selected item or items in a list or a selected area of a pen control.
 
-[AZURE.INCLUDE [short-templatefill](../../includes/short-templatefill.md)]
+**TemplateFill** The background color of a gallery.
 
-[AZURE.INCLUDE [short-valuefill](../../includes/short-valuefill.md)]
+**ValueFill** The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[AZURE.INCLUDE [short-valuehoverfill](../../includes/short-valuehoverfill.md)]
+**ValueHoverFill** When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.

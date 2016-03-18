@@ -1,1 +1,1 @@
-**Size** A positive number that determines the font size of the text that appears on a control.
+[**Size**](properties-font.md) The font size of the text that appears on a control.
