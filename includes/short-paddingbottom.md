@@ -1,1 +1,1 @@
-**PaddingBottom** A positive integer that determines the distance, in pixels, between text in a control and the bottom edge of that control.
+[**PaddingBottom**](properties-alignment.md) The distance between text in a control and the bottom edge of that control.

@@ -25,28 +25,28 @@ Configure where text appears within a control, how the corners of a control are 
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-align](../../includes/short-align.md)]
+**Align** The location of text in relation to the horizontal center of its control.
 
-[AZURE.INCLUDE [short-itempaddingleft](../../includes/short-itempaddingleft.md)]
+**ItemPaddingLeft** The distance between text in a listbox and its left edge.
 
-[AZURE.INCLUDE [short-padding](../../includes/short-padding.md)]
+**Padding** The distance between the text on an import or export button and the edges of that button.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+**PaddingBottom** The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+**PaddingLeft** The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**PaddingRight** The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+**PaddingTop** The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-radiusbottomleft](../../includes/short-radiusbottomleft.md)]
+**RadiusBottomLeft** The degree to which the bottom-left corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiusbottomright](../../includes/short-radiusbottomright.md)]
+**RadiusBottomRight** The degree to which the bottom-right corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiustopleft](../../includes/short-radiustopleft.md)]
+**RadiusTopLeft** The degree to which the top-left corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiustopright](../../includes/short-radiustopright.md)]
+**RadiusTopRight** The degree to which the top-right corner of a control is rounded.
 
-[AZURE.INCLUDE [short-templatepadding](../../includes/short-templatepadding.md)]
+**TemplatePadding** The distance between items in a gallery.
 
-[AZURE.INCLUDE [short-verticalalign](../../includes/short-verticalalign.md)]
+**VerticalAlign** The location of text on a control in relation to the vertical center of that control.
