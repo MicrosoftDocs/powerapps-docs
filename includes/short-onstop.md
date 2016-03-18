@@ -1,1 +1,1 @@
-[**OnStop**](properties-actions.md) A formula or formulas that determine how the app responds when the user stops recording with a microphone control.
+[**OnStop**](properties-actions.md) How the app responds when the user stops recording with a microphone control.

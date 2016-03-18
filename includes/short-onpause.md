@@ -1,1 +1,1 @@
-**OnPause** A formula or formulas that determine how an app responds when the user pauses the clip that an audio or video control is playing.
+**OnPause** How an app responds when the user pauses the clip that an audio or video control is playing.
