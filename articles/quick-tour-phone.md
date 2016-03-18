@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Take a quick tour on a phone | Microsoft PowerApps"
-	description="Step-by-step instructions for running, creating, and sharing an app on a phone"
+	description="Step-by-step instructions for running and sharing an app on a phone"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,11 +20,9 @@
 
 # Take a quick tour of PowerApps on a phone #
 
-Run an app that you or someone else created, or create an app with a default interface and sample data in less than a minute. To create an app, specify a cloud-storage account to which PowerApps can upload data, and then choose any of several types of apps that PowerApps can create for you. Try out your new app by adding, updating, and removing data, and share the app with others in your organization.
+Run an app that you or someone else created, or share an app with others in your organization.
 
 **Prerequisites**
-
-1. Get a Dropbox, OneDrive, or GoogleDrive account if you don't already have one.
 
 1. [Install PowerApps](http://aka.ms/powerappsinstall), and then open it.
 
@@ -49,34 +47,12 @@ Run an app that you or someone else created, or create an app with a default int
 
 		![Pin icon](./media/quick-tour-phone/pin-icon.png)
 
-## Create an app ##
-
-1. In PowerApps, select **Connections** near the bottom of the screen, and then select **Add connection**.
-
-	![Add a connection](./media/quick-tour-phone/add-connection.png)
-
-1. In the list of connection types, select **Dropbox**, **Google Drive**, or **OneDrive**, select **Connect**, and then provide your credentials.
-
-1. Near the bottom of the screen, select **New**, and then select **Start from a template**.
-
-	![Start from a template](./media/quick-tour-phone/start-from-template.png)
-
-1. Scroll through the list of templates, select a template (such as **Event Signup**), and then select **Use** in the upper-right corner.
-
-1. Type a name for your app, and then select **Create**.
-
-	The sample data is uploaded to your cloud account, and the app is created and ready to use.
-
-1. Explore the default behavior and appearance of the app, and then swipe right to close it.
-
 ## Share an app ##
-**Note:** Before anyone else can run or customize your app, you must [share the sample data](share-app-data.md) with them.
-
-1. Create an app by following the steps in the previous procedure.
+**Note:** Before anyone can run an app, the sample data must be [shared](share-app-data.md) with them.
 
 1. Near the bottom of the screen, select **Open** to display a list of apps that you can share, and then select the details icon to the right of the app you want to share.
 
-	![Choose the app to share](./media/quick-tour-phone/choose-app.png)
+	![Details icon](./media/quick-tour-phone/details-icon.png)
 
 1. Select the **Share** icon, and then type the name or email address of one or more people with whom you want to share the app.
 
@@ -91,11 +67,9 @@ Run an app that you or someone else created, or create an app with a default int
 
 1. Select **Close** to dismiss the success notification.
 
-	The people with whom you shared your app will receive an email message that contains a link to install PowerApps and run your app.
+	The people with whom you shared the app will receive an email message that contains a link to install PowerApps and run your app.
 
 ## Next steps #
-On a tablet, a laptop, or desktop computer that's running PowerApps:
-
 - Create an app automatically from data in sources such as [Excel](get-started-create-from-data.md), [SharePoint](app-from-sharepoint.md), [Dynamics CRM Online](app-from-dynamics.md), and [Salesforce](app-from-salesforce.md).
 - Customize the app that you just created (or make your own from scratch) by:
 
@@ -103,4 +77,4 @@ On a tablet, a laptop, or desktop computer that's running PowerApps:
 	- adding data from [Office 365](show-office-data.md), [Twitter](show-twitter-data.md), or [Microsoft Translator](show-translator-data.md)
 	- [adding one or more screens](add-screen-context-variables.md)
 	- [building formulas](formula-reference.md)
-	- [change the settings](change-app-settings.md) for your app
+	- [change the settings](change-app-settings.md) for an app

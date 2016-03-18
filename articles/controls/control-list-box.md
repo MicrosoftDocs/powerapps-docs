@@ -139,7 +139,7 @@ A list-box control always shows all available choices (unlike a dropdown list) a
 
 	![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
 
-1. Set the **Visibility** property of each dropdown list to one of these values:
+1. Set the **Visible** property of each dropdown list to one of these values:
 	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
 	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
 	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
