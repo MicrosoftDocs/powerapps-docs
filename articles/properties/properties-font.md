@@ -21,7 +21,7 @@
 # Font properties in PowerApps #
 
 ## Overview ##
-Set these properties to configure the typeface in which text appears, in addition to characteristics such as strikethrough and underline.
+Configure the typeface in which text appears, in addition to characteristics such as strikethrough and underline.
 
 ## Properties ##
 

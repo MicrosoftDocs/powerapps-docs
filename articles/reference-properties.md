@@ -1,6 +1,6 @@
 <properties
    pageTitle="Find a property | Microsoft PowerApps"
-   description="Find a property alphabetically or by control."
+   description="Find a property by control, by category, or alphabetically."
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -20,6 +20,7 @@
 # Find a property in PowerApps #
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
+## By control ##
 [Add picture](control-add-picture.md) Add image files to a data source.
 <br>[Audio](control-audio-video.md) Play an audio clip or the audio portion of a video clip.
 <br>[Button](control-button.md) Interact with the app by clicking or tapping.
@@ -51,7 +52,24 @@ Configure the appearance and behavior of a control by setting one of its propert
 <br>[Toggle](control-toggle.md) Drag a handle to specify **true** or **false**.
 <br>[Video](control-audio-video.md) Play a video clip from a local file, a data source, or YouTube.
 
-## A-F ##
+## By category ##
+[Actions](properties-actions.md) Configure how the app responds when the user performs an action or another event occurs.<br>
+[Alignment](properties-alignment.md) Configure where text appears within a control, how the corners of a control are shaped, and how much distance appears between items in gallery.<br>
+[Audio/video](properties-audio-video.md) Configure the audio player, the video player, the camera control, and the microphone control.<br>
+[Chart](properties-chart.md) Configure how data appears in column, line, and pie charts.<br>
+[Color/border](properties-color-border.md) Configure the style, thickness, and color of borders and the color of other elements such as text and list selections.<br>
+[Core](properties-core.md) Configure whether the user can see and interact with a control.<br>
+[Data](properties-data.md) Configure the data that appears in a gallery, the minimum and maximum values for a control, the default option in a list, and similar characteristics.<br>
+[Fill](properties-fill.md) Configure the background color of controls (or elements within controls).<br>
+[Font](properties-font.md) Configure the typeface in which text appears, in addition to characteristics such as strikethrough and underline.<br>
+[Navigation](properties-navigation.md) Configure how the user scrolls through a gallery.<br>
+[Size/location](properties-size-location.md) Configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.<br>
+[Text](properties-text.md) Configure the text that appears on a control, in a tooltip, as a hint when the user types data, and specify other text-related characteristics.<br>
+[Visual](properties-visual.md) Configure graphical elements in your app, including images, photos, and elements of a pen control.<br>
+
+## Alphabetically ##
+
+### A-F ###
 |||||
 |:-:|:-:|:-:|:-:|
 | [Align](properties-reference1.md)           | [Brightness](properties-reference1.md)             | [Clear](properties-reference1.md)               | [DisabledColor](properties-reference1.md) |
@@ -62,7 +80,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 | [BorderColor](properties-reference1.md)     | [CheckmarkFill](properties-reference1.md)          | [Direction](properties-reference1.md)           | [Fill](properties-reference1.md)          |
 | [BorderStyle](properties-reference1.md)     | [ChevronBackground](properties-reference1.md)      | [Disabled](properties-reference1.md)            | [Font](properties-reference1.md)          |
 | [BorderThickness](properties-reference1.md) | [ChevronFill](properties-reference1.md)            | [DisabledBorderColor](properties-reference1.md) | [FontWeight](properties-reference1.md)    |
-## G-N ##
+### G-N ###
 |||||
 |:-:|:-:|:-:|:-:|
 | [GridStyle](properties-reference1.md)        | [HTMLText](properties-reference1.md)            | [Items](properties-reference1.md)         | [MaxLength](properties-reference1.md)       |
@@ -75,7 +93,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 | [HoverColor](properties-reference1.md)       | [ItemColorSet](properties-reference1.md)        | [MarkerSuffix](properties-reference1.md)  | [NumberOfSeries](properties-reference2.md)  |
 | [HoverFill](properties-reference1.md)        | [ItemPaddingLeft](properties-reference1.md)     | [Max](properties-reference1.md)           |                                             |
 
-## O-R ##
+### O-R ###
 | ||||
 |:-:|:-:|:-:|:-:|
 | [OnChange](properties-reference2.md) | [OnTimerEnd](properties-reference2.md)    | [PaddingTop](properties-reference2.md)          | [RadiusBottomRight](properties-reference2.md) |
@@ -88,7 +106,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 | [OnStop](properties-reference2.md)   | [PaddingLeft](properties-reference2.md)   | [RadioSize](properties-reference2.md)           | [Repeat](properties-reference2.md)            |
 | [OnStream](properties-reference2.md) | [PaddingRight](properties-reference2.md)  | [RadiusBottomLeft](properties-reference2.md)    | [Reset](properties-reference2.md)             |
 
-## S-Z ##
+### S-Z ###
 | ||||
 |:-:|:-:|:-:|:-:|
 | [SelectionColor](properties-reference2.md)     | [Size](properties-reference2.md)            | [Text](properties-reference2.md)           | [Width](properties-reference2.md)       |

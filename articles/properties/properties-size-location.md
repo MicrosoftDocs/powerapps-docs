@@ -21,7 +21,7 @@
 # Size and location properties in PowerApps #
 
 ## Overview ##
-Set these properties to configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.
+Configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.
 
 ## Properties ##
 
