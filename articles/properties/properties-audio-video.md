@@ -25,22 +25,22 @@ Configure the audio player, the video player, the camera control, and the microp
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-autopause](../../includes/short-autopause.md)]
+**AutoPause** Whether an audio or video clip automatically pauses if the user navigates to a different screen.
 
-[AZURE.INCLUDE [short-autostart](../../includes/short-autostart.md)]
+**AutoStart** Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
 
-[AZURE.INCLUDE [short-camera](../../includes/short-camera.md)]
+**Camera** On a device that has more than one camera, the numeric ID of the camera that the app uses.
 
-[AZURE.INCLUDE [short-loop](../../includes/short-loop.md)]
+**Loop** Whether an audio or video clip automatically starts over as soon as it finishes playing.
 
-[AZURE.INCLUDE [short-media](../../includes/short-media.md)]
+**Media** An identifier for the clip that an audio or video control plays.
 
-[AZURE.INCLUDE [short-mic](../../includes/short-mic.md)]
+**Mic** On a device that has more than one microphone, the numeric ID of the microphone that the app uses.
 
-[AZURE.INCLUDE [short-showcontrols](../../includes/short-showcontrols.md)]
+**ShowControls** Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
-[AZURE.INCLUDE [short-start](../../includes/short-start.md)]
+**Start** Whether an audio or video clip plays.
 
-[AZURE.INCLUDE [short-starttime](../../includes/short-starttime.md)]
+**StartTime** The time after the start of an audio or video clip when the clip starts to play.
 
-[AZURE.INCLUDE [short-streamrate](../../includes/short-streamrate.md)]
+**StreamRate**

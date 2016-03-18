@@ -25,34 +25,34 @@ Configure how data appears in column, line, and pie charts.
 
 ## Properties ##
 
-[AZURE.INCLUDE [short-explode](../../includes/short-explode.md)]
+**Explode** The distance between wedges in a pie chart
 
-[AZURE.INCLUDE [short-gridstyle](../../includes/short-gridstyle.md)]
+**GridStyle** Whether a column or line chart shows its x-axis, its y-axis, both, or neither.
 
-[AZURE.INCLUDE [short-itemcolorset](../../includes/short-itemcolorset.md)]
+**ItemColorSet** The color of each data point in a chart.
 
-[AZURE.INCLUDE [short-itemsgap](../../includes/short-itemsgap.md)]
+**ItemsGap** The distance between columns in a column chart.
 
-[AZURE.INCLUDE [short-labelposition](../../includes/short-labelposition.md)]
+**LabelPosition** The location of labels in a pie chart relative to its wedges.
 
-[AZURE.INCLUDE [short-markers](../../includes/short-markers.md)]
+**Markers** Whether a column or line chart shows the value of each data point.
 
-[AZURE.INCLUDE [short-markersuffix](../../includes/short-markersuffix.md)]
+**MarkerSuffix** Text that appears after each value in a column chart for which the **Markers** property is set to **true**.
 
-[AZURE.INCLUDE [short-minimumbarwidth](../../includes/short-minimumbarwidth.md)]
+**MinimumBarWidth** The narrowest possible width of columns in a column chart.
 
-[AZURE.INCLUDE [short-numberofseries](../../includes/short-numberofseries.md)]
+**NumberOfSeries** How many columns of data are reflected in a column or line chart.
 
-[AZURE.INCLUDE [short-seriesaxismax](../../includes/short-seriesaxismax.md)]
+**SeriesAxisMax** The maximum value of the y-axis for a column or line chart.
 
-[AZURE.INCLUDE [short-seriesaxismin](../../includes/short-seriesaxismin.md)]
+**SeriesAxisMin** The minimum value of the y-axis for a column or line chart.
 
-[AZURE.INCLUDE [short-showlabels](../../includes/short-showlabels.md)]
+**ShowLabels** Whether a pie chart shows the value that's associated with each of its wedges.
 
-[AZURE.INCLUDE [short-xlabelangle](../../includes/short-xlabelangle.md)]
+**XLabelAngle** The angle of the labels below the x-axis of a column or line chart.
 
-[AZURE.INCLUDE [short-yaxismax](../../includes/short-yaxismax.md)]
+**YAxisMax** The maximum value of the y-axis for a line chart.
 
-[AZURE.INCLUDE [short-yaxismin](../../includes/short-yaxismin.md)]
+**YAxisMin** The minimum value of the y-axis for a line chart.
 
-[AZURE.INCLUDE [short-ylabelangle](../../includes/short-ylabelangle.md)]
+**YLabelAngle** The angle of the labels next to the y-axis of a line or column chart.

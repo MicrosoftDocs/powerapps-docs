@@ -1,1 +1,1 @@
-**XLabelAngle** A positive integer that indicates, in degrees, the angle of the labels below the x-axis of a line or column chart.
+[**XLabelAngle**](properties-chart.md) The angle of the labels below the x-axis of a column or line chart.

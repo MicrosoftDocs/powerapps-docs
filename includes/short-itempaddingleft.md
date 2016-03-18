@@ -1,1 +1,1 @@
-**ItemPaddingLeft** A positive integer that determines the distance, in pixels, between text in a listbox and its left edge.
+[**ItemPaddingLeft**](properties-alignment.md) The distance between text in a listbox and its left edge.

@@ -1,1 +1,1 @@
-**Loop** A Boolean (**true**/**false**) value that determines whether an audio or video clip automatically starts over as soon as it finishes playing.
+[**Loop**](properties-audio-video.md) Whether an audio or video clip automatically starts over as soon as it finishes playing.

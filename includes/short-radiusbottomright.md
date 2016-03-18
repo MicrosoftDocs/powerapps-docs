@@ -1,1 +1,1 @@
-**RadiusBottomRight** A positive integer that determines the degree to which the bottom-right corner of a control, such as a button or a text-input control, is rounded.
+[**RadiusBottomRight**](properties-alignment.md) The degree to which the bottom-right corner of a control is rounded.

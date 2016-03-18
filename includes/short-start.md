@@ -1,1 +1,1 @@
-**Start** A Boolean (**true**/**false**) that determines whether an audio or video clip plays.
+[**Start**](properties-audio-video.md) Whether an audio or video clip plays.

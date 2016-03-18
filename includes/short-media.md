@@ -1,1 +1,1 @@
-**Media** A string (such as the URL, enclosed in a double quotation marks, of a YouTube video) that indicates the clip that an audio or video control plays.
+[**Media**](properties-audio-video.md) An identifier for the clip that an audio or video control plays.
