@@ -31,7 +31,7 @@ Configure the text that appears on a control, in a tooltip, as a hint when the u
 
 [AZURE.INCLUDE [short-hinttext](../../includes/short-hinttext.md)]
 
-[AZURE.INCLUDE [short-htmltext](../../includes/short-htmltext.md)]
+[AZURE.INCLUDE [short-html-text](../../includes/short-html-text.md)]
 
 [AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
 

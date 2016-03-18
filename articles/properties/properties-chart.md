@@ -49,10 +49,10 @@ Configure how data appears in column, line, and pie charts.
 
 [AZURE.INCLUDE [short-showlabels](../../includes/short-showlabels.md)]
 
-[AZURE.INCLUDE [short-xaxismax](../../includes/short-xaxismax.md)]
-
-[AZURE.INCLUDE [short-xaxismin](../../includes/short-xaxismin.md)]
-
 [AZURE.INCLUDE [short-xlabelangle](../../includes/short-xlabelangle.md)]
+
+[AZURE.INCLUDE [short-yaxismax](../../includes/short-yaxismax.md)]
+
+[AZURE.INCLUDE [short-yaxismin](../../includes/short-yaxismin.md)]
 
 [AZURE.INCLUDE [short-ylabelangle](../../includes/short-ylabelangle.md)]
