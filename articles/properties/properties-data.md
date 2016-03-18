@@ -21,7 +21,7 @@
 # Data properties in PowerApps #
 
 ## Overview ##
-Set these properties to configure the data that appears in a gallery, the minimum and maximum values for a control, the default option in a list, and similar characteristics.
+Configure the data that appears in a gallery, the minimum and maximum values for a control, the default option in a list, and similar characteristics.
 
 ## Properties ##
 

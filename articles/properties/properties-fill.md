@@ -21,7 +21,7 @@
 # Fill properties in PowerApps #
 
 ## Overview ##
-Set these properties to configure the background color of controls (or elements within controls).
+Configure the background color of controls (or elements within controls).
 
 ## Properties ##
 

@@ -21,7 +21,7 @@
 # Core properties in PowerApps #
 
 ## Overview ##
-Set these properties to configure whether the user can see and interact with a control.
+Configure whether the user can see and interact with a control.
 
 ## Properties ##
 
