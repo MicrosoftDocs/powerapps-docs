@@ -1,1 +1,1 @@
-**LabelPosition** A string of text (**Inside** or **Outside**) that determines the location of labels in a pie chart relative to the wedges of that chart.
+[**LabelPosition**](properties-chart.md) The location of labels in a pie chart relative to its wedges.

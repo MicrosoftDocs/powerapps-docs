@@ -1,1 +1,1 @@
-**StartTime** A positive integer that determines the time after the start of an audio or video clip when the clip starts to play.
+[**StartTime**](properties-audio-video.md) The time after the start of an audio or video clip when the clip starts to play.

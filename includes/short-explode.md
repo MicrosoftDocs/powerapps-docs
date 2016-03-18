@@ -1,1 +1,1 @@
-**Explode** A positive integer that determines the distance between wedges in a pie chart.
+[**Explode**](properties-chart.md) The distance between wedges in a pie chart.

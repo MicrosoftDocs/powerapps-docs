@@ -1,1 +1,1 @@
-**ItemsGap** A positive integer that determines the distance between columns in a column chart.
+[**ItemsGap**](properties-chart.md) The distance between columns in a column chart.
