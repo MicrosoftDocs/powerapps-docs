@@ -67,6 +67,18 @@ If you add one or more image controls to your app, you can show individual image
 
 [AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
 
+[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+
+[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+
+[AZURE.INCLUDE [short-radiusbottomleft](../../includes/short-radiusbottomleft.md)]
+
+[AZURE.INCLUDE [short-radiusbottomright](../../includes/short-radiusbottomright.md)]
+
+[AZURE.INCLUDE [short-radiustopleft](../../includes/short-radiustopleft.md)]
+
+[AZURE.INCLUDE [short-radiustopright](../../includes/short-radiustopright.md)]
+
 [AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
 
 [AZURE.INCLUDE [short-transparency](../../includes/short-transparency.md)]
