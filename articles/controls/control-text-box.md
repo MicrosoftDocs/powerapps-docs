@@ -100,8 +100,6 @@ A text box shows data that you specify as a literal string of text, which appear
 
 [AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
-
 [AZURE.INCLUDE [short-verticalalign](../../includes/short-verticalalign.md)]
 
 [AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
