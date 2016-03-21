@@ -92,6 +92,8 @@ By default, a column or line chart comprises multiple controls grouped together.
 
 - The **SeriesAxisMin** property is available for column charts but not line charts.
 
+[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+
 [AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
 
 [AZURE.INCLUDE [short-width](../../includes/short-width.md)]

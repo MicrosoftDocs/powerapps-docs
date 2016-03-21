@@ -94,6 +94,8 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 [AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
 
+[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+
 [AZURE.INCLUDE [short-size](../../includes/short-size.md)]
 
 [AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
