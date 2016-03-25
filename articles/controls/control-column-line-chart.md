@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Column and line charts: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about column and line charts"
+    pageTitle="Column chart control and Line chart control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about Column chart controls and Line chart controls"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -22,7 +22,7 @@
 [AZURE.INCLUDE [control-summary-column-line-charts](../../includes/control-summary-column-line-charts.md)]
 
 ## Description ##
-By default, a column or line chart comprises multiple controls grouped together. These controls show a title, data, and a legend.
+By default, a **Column chart** control or a **Line chart** control comprises multiple controls grouped together. These controls show a title, data, and a legend.
 
 ## Key properties ##
 
@@ -119,15 +119,15 @@ By default, a column or line chart comprises multiple controls grouped together.
 [**Max**( *DataSource*, *ColumnName* )](function-aggregates.md)
 
 ## Example ##
-1. Add a button, and set its **OnSelect** property to this formula:<br>
+1. Add a **Button** control, and set its **OnSelect** property to this formula:<br>
 **Collect(Revenue, {Year:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Year:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Year:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
 
 	Don't know how to [add and configure a control](add-configure-controls.md)?
 
 	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
 
-1. Press F5, select the button, and then press Esc to return to the default workspace.
+1. Press F5, click or tap the **Button** control, and then press Esc to return to the default workspace.
 
-1. Add a column or line chart, set its **Items** property to **Revenue**, and set its **NumberOfSeries** property to **3**.
+1. Add a **Column chart** control or a **Line chart** control, set its **Items** property to **Revenue**, and set its **NumberOfSeries** property to **3**.
 
-	The chart shows revenue data for each product over three years.
+	The control shows revenue data for each product over three years.

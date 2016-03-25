@@ -22,7 +22,7 @@
 [AZURE.INCLUDE [control-summary-html-text](../../includes/control-summary-html-text.md)]
 
 ## Description ##
-An HTML text control not only shows plain text and numbers but also converts HTML tags, such as non-breaking spaces.
+An **HTML text** control not only shows plain text and numbers but also converts HTML tags, such as non-breaking spaces.
 
 ## Key properties ##
 
@@ -85,13 +85,13 @@ An HTML text control not only shows plain text and numbers but also converts HTM
 
 ## Example ##
 
-1. Add a text box, name it **Source**, and set its **Text** property to this string:
+1. Add a **Text box** control, name it **Source**, and set its **Text** property to this string:
 
-\<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization. \<p> 
+\<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization. \<p>
 
 Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. Add an HTML text control, and set its **HTMLText** property to this value:<br>
+1. Add an **HTML text** control, and set its **HTMLText** property to this value:<br>
 **Source.Text**
 
- 	The HTML text control converts the tags to the appropriate characters.
+ 	The **HTML text** control shows the same text as the **Text box** control but converts the tags to the appropriate characters.

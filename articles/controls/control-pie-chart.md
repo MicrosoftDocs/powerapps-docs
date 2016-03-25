@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Pie charts: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about pie charts"
+    pageTitle="Pie chart control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the Pie chart control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,11 +18,11 @@
    ms.date="03/11/2016"
    ms.author="anneta"/>
 
-# Pie charts in PowerApps #
+# Pie chart control in PowerApps #
 [AZURE.INCLUDE [control-summary-pie-charts](../../includes/control-summary-pie-charts.md)]
 
 ## Description ##
-Add a pie chart if you want to show a data from a table that contains labels in the leftmost column and values in the second column from the left.
+Add a **Pie chart** control if you want to show relative data from a table that contains labels in the leftmost column and values in the second column from the left.
 
 ## Key properties ##
 
@@ -83,15 +83,15 @@ Add a pie chart if you want to show a data from a table that contains labels in 
 [**Max**( *DataSource*, *ColumnName* )](function-aggregates.md)
 
 ## Example ##
-1. Add a button, and set its **OnSelect** property to this formula:<br>
+1. Add a **Button** control, and set its **OnSelect** property to this formula:<br>
 **Collect(Revenue2015, {Product:"Europa", Revenue:27000}, {Product:"Ganymede", Revenue:26300}, {Product:"Callisto", Revenue:29200})**
 
 	Don't know how to [add and configure a control](add-configure-controls.md)?
 
 	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
 
-1. Press F5, select the button, and then press Esc to return to the default workspace.
+1. Press F5, click or tap the **Button** control, and then press Esc to return to the default workspace.
 
-1. Add a pie chart, and set its **Items** property to **Revenue2015**.
+1. Add a **Pie chart** control, and set its **Items** property to **Revenue2015**.
 
-	The chart shows revenue data for each product in relation to the other products.
+	The **Pie chart** control shows revenue data for each product in relation to the other products.

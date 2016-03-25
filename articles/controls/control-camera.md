@@ -1,6 +1,6 @@
 <properties
     pageTitle="Camera control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the camera control"
+    description="Information, including properties and examples, about the Camera control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -71,22 +71,22 @@ If you add this control, the user can update a data source with one or more phot
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](function-patch.md)
 
 ## Example ##
-### Add photos to a gallery ###
-1. Add a camera, name it **MyCamera**, and set its **OnSelect** property to this formula:<br>
+### Add photos to an Image gallery control ###
+1. Add a **Camera** control, name it **MyCamera**, and set its **OnSelect** property to this formula:<br>
 **Collect(MyPix, MyCamera.Photo)**
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
 	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
 
-1. Add an image gallery, and then resize its image control, its template, and the gallery itself to fit in the screen.
+1. Add an **Image gallery** control, and then resize its **Image** control, its template, and the **Image gallery** control itself to fit in the screen.
 
-1. Set the gallery's **Items** property to **MyPix**, press F5, and then take a photo by selecting **MyCamera**.
+1. Set the **Items** property of the **Image gallery** control to **MyPix**, press F5, and then take a photo by clicking or tapping **MyCamera**.
 
-	The image that you selected appears in the gallery.
+	The photo that you took appears in the **Image gallery** control.
 
-1. Add as many photos as you want, and then return to the default workspace by pressing Esc.
+1. Take as many photos as you want, and then return to the default workspace by pressing Esc.
 
-1. (optional) Set the **OnSelect** property of the gallery's image control to **Remove(MyPix, ThisItem)**, press F5, and then select an image to remove it.
+1. (optional) Set the **OnSelect** property of the **Image** control in the **Image gallery** control to **Remove(MyPix, ThisItem)**, press F5, and then click or tap a photo to remove it.
 
-Use the [**SaveData** function](function-savedata-loaddata.md) to save the data set locally or the [**Patch** function](function-patch.md) to update a data source.
+Use the [**SaveData** function](function-savedata-loaddata.md) to save the photos locally or the [**Patch** function](function-patch.md) to update a data source.

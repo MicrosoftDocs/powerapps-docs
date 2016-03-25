@@ -1,6 +1,6 @@
 <properties
     pageTitle="Microphone control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the microphone control"
+    description="Information, including properties and examples, about the Microphone control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -93,24 +93,24 @@ If you add this control, the user can update a data source with one or more soun
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](function-patch.md)
 
 ## Example ##
-### Add sounds to a gallery ###
-1. Add a microphone, name it **MyMic**, and set its **OnStop** property to this formula:<br>
+### Add sounds to a Custom gallery control ###
+1. Add a **Microphone**, name it **MyMic**, and set its **OnStop** property to this formula:<br>
 **Collect(MySounds, MyMic.Audio)**
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?.
+	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
 
-1. Add a custom gallery, move it below **MyMic**, and set the gallery's **Items** property to **MySounds**.
+1. Add a **Custom gallery** control, move it below **MyMic**, and set the **Items** property for the **Custom gallery** control to **MySounds**.
 
-1. In the gallery template, add an audio control, and set its **Media** property to **ThisItem.Url**.
+1. In the template for the **Custom gallery** control, add an **Audio** control, and set its **Media** property to **ThisItem.Url**.
 
-1. Press F5, select **MyMic** to start recording, and then select it again to stop recording.
+1. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
 
-1. In the gallery, select the play button in the audio control to play back your recording.
+1. In the **Custom gallery** control, click or tap the play button in the **Audio** control to play back your recording.
 
 1. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
 
-1. (optional) In the gallery template, add a button, set its **OnSelect** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by selecting its button.
+1. (optional) In the template for the **Custom gallery** control, add a **Button** control, set its **OnSelect** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 
-Use the [**SaveData** function](function-savedata-loaddata.md) to save the data set locally or the [**Patch** function](function-patch.md) to update a data source.
+Use the [**SaveData** function](function-savedata-loaddata.md) to save the recordings locally or the [**Patch** function](function-patch.md) to update a data source.
