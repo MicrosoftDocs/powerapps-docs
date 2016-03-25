@@ -28,7 +28,7 @@ New and updated functions and controls.
 
 **[Calendar](function-clock-caldendar.md)** Retrieves information about the calendar for the current locale.
 
-**[Launch](function-param.md)** (Modified) Added *LaunchAction* parameter to download files.
+**[Download](function-param.md)** Download a web resource to the local device.
 
 **[Logout](function-logout.md)** Logs the current user out of PowerApps.
 
