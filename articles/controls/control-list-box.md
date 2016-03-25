@@ -1,6 +1,6 @@
 <properties
-    pageTitle="List-box control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the list-box control"
+    pageTitle="List Box control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the List Box control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,11 +18,11 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# List-box control in PowerApps #
+# List Box control in PowerApps #
 [AZURE.INCLUDE [control-summary-list-box](../../includes/control-summary-list-box.md)]
 
 ## Description ##
-A list-box control always shows all available choices (unlike a dropdown list) and in which the user can choose more than one item at a time (unlike a set of radio buttons).
+A **List Box** control always shows all available choices (unlike a **Drop down** control) and in which the user can choose more than one item at a time (unlike a **Radio** control).
 
 ## Key properties ##
 
@@ -123,32 +123,32 @@ A list-box control always shows all available choices (unlike a dropdown list) a
 [**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
 
 ## Example ##
-1. Add a listbox, name it **CategoryList**, and set its **Items** property to this formula:<br>
+1. Add a **List box** control, name it **CategoryList**, and set its **Items** property to this formula:<br>
 **["Carpet","Hardwood","Tile"]**
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
 	![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
 
-1. Add three dropdown lists, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
+1. Add three **Drop down** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 
-1. Set the **Items** property of each dropdown list to one of these values:
+1. Set the **Items** property of each **Drop down** control to one of these values:
 	- CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
 	- HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
 	- TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
 
 	![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
 
-1. Set the **Visible** property of each dropdown list to one of these values:
+1. Set the **Visible** property of each **Drop down** control to one of these values:
 	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
 	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
 	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
 
 	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
 
-1. Press F5, and then select one or more items in **CategoryList**.
+1. Press F5, and then choose one or more items in **CategoryList**.
 
-	The appropriate list or lists appear based on your selection or selections.
+	The appropriate **Drop down** control or controls appear based on your choice or choices.
 
 	![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
 

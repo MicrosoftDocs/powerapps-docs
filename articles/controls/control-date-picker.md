@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Date-picker control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the date-picker control"
+    pageTitle="Date Picker control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the Date Picker control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,11 +18,11 @@
    ms.date="03/09/2016"
    ms.author="anneta"/>
 
-# Date-picker control in PowerApps #
+# Date Picker control in PowerApps #
 [AZURE.INCLUDE [control-summary-date-picker](../../includes/control-summary-date-picker.md)]
 
 ## Description ##
-If you add a date picker instead of a text-input control, you help ensure that the user specifies a date in the correct format.
+If you add a **Date Picker** control instead of a **Text input** control, you help ensure that the user specifies a date in the correct format.
 
 ## Key properties ##
 
@@ -87,17 +87,17 @@ If you add a date picker instead of a text-input control, you help ensure that t
 [**Year**( *DateTimeValue* )](function-datetime-parts.md)
 
 ## Example ##
-1. Add a date picker, and name it **Deadline**.
+1. Add a **Date Picker** control, and name it **Deadline**.
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. Add a text box, and set its **Items** property to this formula:
+1. Add a **Text Box** control, and set its **Items** property to this formula:
 <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
 
 	Want more information about the [**DateDiff** function](function-dateadd-datediff.md) or [other functions](formula-reference.md)?
 
-1. Press F5, select a date in **Deadline**, and then select **OK**.
+1. Press F5, choose a date in **Deadline**, and then click or tap **OK**.
 
-	The text box shows how many days between today and the date that you selected.
+	The **Text Box** control shows the number of days between today and the date that you chose.
 
 1. To return to the default workspace, press Esc.

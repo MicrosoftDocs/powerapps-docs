@@ -1,6 +1,6 @@
 <properties
     pageTitle="Gallery control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the gallery control"
+    description="Information, including properties and examples, about the Gallery control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -22,7 +22,7 @@
 [AZURE.INCLUDE [control-summary-gallery](../../includes/control-summary-gallery.md)]
 
 ## Description ##
-A gallery can show records from a data source, and each record can contain multiple types of data. For example, a gallery can show contact information that includes a name, an address, and a phone number for each contact. Each type of information appears in a separate control, and you configure those controls in the gallery template. The template appears on the left edge of a horizontal/landscape gallery and at the top of a vertical/portrait gallery. Any changes that you make in the template are reflected throughout the gallery.
+A **Gallery** control can show records from a data source, and each record can contain multiple types of data. For example, a **Gallery** control can show contact information that includes a name, an address, and a phone number for each contact. Each type of information appears in a separate control within the **Gallery** control, and you configure those controls in its template. The template appears on the left edge of a **Gallery** control in horizontal/landscape orientation and at the top of a **Gallery** control in vertical/portrait orientation. Any changes that you make in the template are reflected throughout the **Gallery** control.
 
 ## Key properties ##
 

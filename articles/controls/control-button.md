@@ -1,6 +1,6 @@
 <properties
     pageTitle="Button control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the button control"
+    description="Information, including properties and examples, about the Button control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -119,19 +119,19 @@ Configure the **OnSelect** property of a **Button** control to run one or more f
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. Add a **Button**, set its **Text** property to show **Add**, and set its **OnSelect** property to this formula:<br>
+1. Add a **Button** control, set its **Text** property to show **Add**, and set its **OnSelect** property to this formula:<br>
 **UpdateContext({Total:Total + Value(Source.Text)})**
 
 	Want more information about the [**UpdateContext** function](function-updatecontext.md) or [other functions](formula-reference.md)?
 
-1. Add a **Text box** control, set its **Text** property to **Total** (no quotation marks), and then press F5.
+1. Add a **Text box** control, set its **Text** property to show **Total**, and then press F5.
 
 1. Type a number in **Source**, and then click or tap **Add**.
 
-	The **Text box** shows the number that you typed.
+	The **Text box** control shows the number that you typed.
 
 1. Repeat the previous step one or more times.
 
-	The **Text box** shows the sum of the numbers that you typed.
+	The **Text box** control shows the sum of the numbers that you typed.
 
 1. To return to the default workspace, press Esc.

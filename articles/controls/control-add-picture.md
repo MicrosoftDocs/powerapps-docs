@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Add-picture control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the add-picture control"
+    pageTitle="Add picture control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the Add picture control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,7 +18,7 @@
    ms.date="03/10/2016"
    ms.author="anneta"/>
 
-# Add-picture control in PowerApps #
+# Add picture control in PowerApps #
 [AZURE.INCLUDE [control-summary-add-picture](../../includes/control-summary-add-picture.md)]
 
 ## Description ##
@@ -71,28 +71,28 @@ If you add this control, your app can upload image files from the user and updat
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](function-patch.md)
 
 ## Example ##
-### Add images to a gallery ###
-1. Add an add-picture control, and then triple-click it.
+### Add images to an Image gallery control ###
+1. Add an **Add picture** control, and then triple-click it.
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. In the **Open** dialog box, select an image file, and then select **Open**.
+1. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
 
-1. Add a button, move it under the add-picture control, and set the button's **OnSelect** property to this formula:<br>
+1. Add a **Button** control, move it under the **Add picture** control, and set the **OnSelect** property for the **Button** control to this formula:<br>
 **Collect(MyPix, AddMediaButton1.Media)**
 
 	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
 
-1. Add an image gallery, and set its **Items** property to **MyPix**.
+1. Add an **Image gallery** control, and set its **Items** property to **MyPix**.
 
-1. Press F5, and then select the button.
+1. Press F5, and then click or tap the **Button** control.
 
-	The image from the add-picture control appears in the gallery. If your image doesn't have the same aspect ratio as the image control, set its **ImagePosition** property to **Fit**.
+	The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **Image** control in the **Image gallery** control, set the **ImagePosition** property of the **Image** control to **Fit**.
 
-1. Select the add-picture control, select another image file, select **Open**, and then select the button that you added.
+1. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **Button** control that you added.
 
-	The second image appears in the gallery.
+	The second image appears in the **Image gallery** control.
 
 1. (optional) Repeat the previous step one or more times, and then return to the default workspace by pressing Esc.
 
-Use the [**SaveData** function](function-savedata-loaddata.md) to save the data set locally or the [**Patch** function](function-patch.md) to update a data source.
+Use the [**SaveData** function](function-savedata-loaddata.md) to save the images locally or the [**Patch** function](function-patch.md) to update a data source.

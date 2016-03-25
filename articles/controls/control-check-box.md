@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Check-box control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the check-box control"
+    pageTitle="Check Box control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the Check Box control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,7 +18,7 @@
    ms.date="03/09/2016"
    ms.author="anneta"/>
 
-# Check-box control in PowerApps #
+# Check Box control in PowerApps #
 [AZURE.INCLUDE [control-summary-check-box](../../includes/control-summary-check-box.md)]
 
 ## Description ##
@@ -94,6 +94,8 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 [AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
 
+[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+
 [AZURE.INCLUDE [short-size](../../includes/short-size.md)]
 
 [AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
@@ -121,17 +123,17 @@ The user can specify a Boolean value by using this familiar control, which has b
 [**If**( *Condition*, *Result* )](function-if.md)
 
 ## Example ##
-1. Add a check box, name it **chkReserve**, and set its **Text** property to show **Reserve now**.
+1. Add a **Check Box** control, name it **chkReserve**, and set its **Text** property to show **Reserve now**.
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. Add a date picker, and set its **Visible** property to this formula:
+1. Add a **Date Picker** control, and set its **Visible** property to this formula:
 <br>**If(chkReserve.Value = true, true)**
 
 	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
 
-1. Press F5, select **chkReserve**, and then clear it.
+1. Press F5, click or tap **chkReserve** to set its **Value** property to **true**, and then click or tap **chkReserve** again to set its **Value** property to **false**.
 
-	The date picker appears when **chkReserve** is selected but not when it's cleared.
+	The **Date Picker** control appears when the **Value** property of **chkReserve** is **true** but not when it's **false**.
 
 1. To return to the default workspace, press Esc.

@@ -1,6 +1,6 @@
 <properties
     pageTitle="Audio and Video controls: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the audio and video controls"
+    description="Information, including properties and examples, about the Audio and Video controls"
     services=""
     suite="powerapps"
     documentationCenter="na"

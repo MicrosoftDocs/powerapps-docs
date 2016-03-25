@@ -80,7 +80,7 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 [**Remove**( *DataSource*, ThisItem )](function-remove-removeif.md)
 
 ## Example ##
-- Add a PDF viewer control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>
+- Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>
 **"http://www.who.int/gho/publications/world_health_statistics/EN_WHS2015_TOC.pdf?ua=1"**
 
 	The control shows the PDF file.

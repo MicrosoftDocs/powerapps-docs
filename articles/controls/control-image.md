@@ -1,6 +1,6 @@
 <properties
     pageTitle="Image control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the image control"
+    description="Information, including properties and examples, about the Image control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -22,7 +22,7 @@
 [AZURE.INCLUDE [control-summary-image](../../includes/control-summary-image.md)]
 
 ## Description ##
-If you add one or more image controls to your app, you can show individual images that aren't part of a data set, or you can incorporate images from records in data sources.
+If you add one or more **Image** controls to your app, you can show individual images that aren't part of a data set, or you can incorporate images from records in data sources.
 
 ## Key properties ##
 
@@ -97,27 +97,27 @@ If you add one or more image controls to your app, you can show individual image
 
 ## Examples ##
 ### Show an image from a local file ###
-1. On the **Content** tab, select **Media**, and then select **Browse**.
+1. On the **Content** tab, click or tap **Media**, and then click or tap **Browse**.
 
-1. Select the image file that you want to add, select **Open**, and then press Esc to return to the default workspace.
+1. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
 
-1. Add an image control, and set its **Items** property to the name of the file that you added.
+1. Add an **Image** control, and set its **Items** property to the name of the file that you added.
 
 	Don't know how to [add and configure a control](add-configure-controls.md)?
 
-	The control shows the image that you specified.
+	The **Image** control shows the image that you specified.
 
 ### Show a set of images from a data source ###
 1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
 
-1. In PowerApps, select a screen in the left navigation bar, select **Options** near the lower-right corner, and then select **Insert your data**.
+1. In PowerApps, click or tap a screen in the left navigation bar, click or tap **Options** near the lower-right corner, and then click or tap **Insert your data**.
 
-1. Select **Import from Excel**, select the Excel file that you downloaded, and then select **Open**.
+1. Click or tap **Import from Excel**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
 
-1. In the right pane, select the **Flooring Estimates** check box, and then select **Insert**.
+1. In the right pane, click or tap the **Flooring Estimates** check box, and then click or tap **Insert**.
 
-1. Add an image gallery, and set its **Items** property to **FlooringEstimates**.
+1. Add an **Image gallery** control, and set its **Items** property to **FlooringEstimates**.
 
 	Don't know how to [add and configure a control](add-configure-controls.md)?
 
-	The gallery shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.
+	The **Image gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.

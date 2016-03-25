@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Radio-button control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the radio-button control"
+    pageTitle="Radio control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the Radio control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,11 +18,11 @@
    ms.date="03/09/2016"
    ms.author="anneta"/>
 
-# Radio-button control in PowerApps #
+# Radio control in PowerApps #
 [AZURE.INCLUDE [control-summary-radio](../../includes/control-summary-radio.md)]
 
 ## Description ##
-A radio-button control, with which users have decades of experience, is best used with only a few options that are mutually exclusive.
+A **Radio** control, with which users have decades of experience, is best used with only a few options that are mutually exclusive.
 
 ## Key properties ##
 
@@ -120,20 +120,20 @@ A radio-button control, with which users have decades of experience, is best use
 [**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
 
 ## Example ##
-1. Add a radio-button control, name it **Pricing**, and set its **Items** property to this formula:
+1. Add a **Radio** control, name it **Pricing**, and set its **Items** property to this formula:
 <br>**["Standard", "Premium"]**
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. Add a text box, move it below the **Pricing** list, and set its **Text** property to this formula:
+1. Add a **Text box** control, move it below the **Radio** control, and set the **Text** property of the **Text box** control to this formula:
 <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
 
 	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
 
-1. Press F5, and then select either option in the **Pricing** list.
+1. Press F5, and then choose either option in the **Radio** control.
 
-	The text box shows the appropriate text for your selection.
+	The **Text box** control shows the appropriate text for your choice.
 
-1. (optional) Select the other option to confirm that the text changes appropriately.
+1. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
 
 1. To return to the default workspace, press Esc.
