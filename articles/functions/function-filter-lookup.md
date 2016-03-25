@@ -41,11 +41,11 @@ Tables are a value in PowerApps, just like a string or number.  They can be pass
 - *Table* - Required. Table to search.
 - *Formula(s)* - Required. This formula is evaluated for each record of the table, and the result includes those records that result in **true**.  You can reference columns within the table.  If you supply more than one formula, the results of all formulas are combined with the **[And](function-logicals.md)** function.
 
-**LookUp**( *Table*, *Formula*, *ReductionFormula* )
+**LookUp**( *Table*, *Formula* [, *ReductionFormula* ] )
 
 - *Table* - Required. Table to search.
 - *Formula* - Required. This formula is evaluated for each record of the table, and the first record that results in **true** is returned.  You can reference columns within the table.  
-- *ReductionFormula* - Required. This formula is evaluated over the record that was found, reducing the record to a single value.  You can reference columns within the table.  
+- *ReductionFormula* - Optional. This formula is evaluated over the record that was found, reducing the record to a single value.  You can reference columns within the table.  If this parameter is not supplied, the function returns the full record from the table.  
 
 ## Examples ##
 
@@ -62,3 +62,5 @@ The following examples use the **IceCream** [data source](working-with-data-sour
 | **LookUp( IceCream, Flavor = "Chocolate", Quantity )** | Searches for a record with **Flavor** equal to "Chocolate", of which there is one.  For the first record that's found, returns the **Quantity** of that record. | 100 |
 | **LookUp( IceCream, Quantity > 150, Quantity + OnOrder )** | Searches for a record with **Quantity** greater than 100, of which there are multiple.  For the first record that's found, which is "Vanilla" **Flavor**, returns the sum of **Quantity** and **OnOrder** columns. | 250 |
 | **LookUp( IceCream, Flavor = "Pistachio", OnOrder )** | Searches for a record with **Flavor** equal to "Pistachio", of which there are none.  Because none were found, **Lookup** returns *blank*. | *blank* |
+| **LookUp( IceCream, Flavor = "Vanilla" )** | Searches for a record with **Flavor** equal to "Vanilla", of which there is one.  Since no reduction formula was supplied, the entire record is returned. | { Flavor: "Vanilla", Quantity: 200, OnOrder: 75 } |
+
