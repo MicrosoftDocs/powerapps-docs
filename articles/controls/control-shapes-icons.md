@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Shape and icon controls: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about shape and icon controls"
+    pageTitle="Shape controls and icon controls: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about shape controls and icon controls"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,7 +18,7 @@
    ms.date="03/11/2016"
    ms.author="anneta"/>
 
-# Shape and icon controls in PowerApps #
+# Shape controls and icon controls in PowerApps #
 [AZURE.INCLUDE [control-summary-shapes-icons](../../includes/control-summary-shapes-icons.md)]
 
 ## Description ##
@@ -59,18 +59,18 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 [**Navigate**( *ScreenName*, *ScreenTransition* )](function-navigate.md)
 
 ## Example ##
-1. Name the default screen **Target**, add a text box, and set its **Text** property to show **Target**.
+1. Name the default **Screen** control **Target**, add a **Text box** control, and set its **Text** property to show **Target**.
 
 	Don't know how to [add and configure a control](add-configure-controls.md)?
 
-1. Add a screen, and name it **Source**.
+1. Add a **Screen** control, and name it **Source**.
 
-1. In **Source**, add a left-pointing arrow, and set its **OnSelect** property to this formula:
+1. In **Source**, add a **Shape** control, and set its **OnSelect** property to this formula:
 <br>**Navigate(Target, ScreenTransition.Fade)**
 
-1. Press F5, and then select the arrow.
+1. Press F5, and then click or tap the **Shape** control.
 
 	The **Target** screen appears.
 
-1. (optional) Press Esc to return to the default workspace, add a right-pointing arrow to **Target**, and set the arrow's **OnSelect** property to this formula:
+1. (optional) Press Esc to return to the default workspace, add a **Shape** control to **Target**, and set the **OnSelect** property of the **Shape** control to this formula:
 <br>**Navigate(Source, ScreenTransition.Fade)**

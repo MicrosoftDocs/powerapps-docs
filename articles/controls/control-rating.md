@@ -1,6 +1,6 @@
 <properties
     pageTitle="Rating control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the rating control"
+    description="Information, including properties and examples, about the Rating control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -79,23 +79,23 @@ In this control, the user can indicate, for example, how much they liked somethi
 [**Average**( *Value1*, *Value2,* ... )](function-aggregates.md)
 
 ## Example ##
-1. Add a rating, and name it **Quantitative**.
+1. Add a **Rating** control, and name it **Quantitative**.
 
 	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
 
-1. Add a text-input control, name it **Qualitative**, and move it below **Quantitative**
+1. Add a **Text input** control, name it **Qualitative**, and move it below the **Rating** control.
 
-1. Set the **Default** property of **Qualitative** to **""**, and set its **HintText** to this formula:
+1. Set the **Default** property of the **Text input** control to **""**, and set its **HintText** to this formula:
 <br>**If(Quantitative.Value > 3, "What did you especially like?", "How might we do better?")**
 
 	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
 
-1. Press F5, and then select either four or five stars in **Quantitative**.
+1. Press F5, and then click or tap either four or five stars in the **Rating** control.
 
-	The hint text in **Qualitative** changes to reflect the high rating.
+	The hint text in the **Text input** control changes to reflect the high rating.
 
-1. Select fewer than four stars in **Quantitative**.
+1. Click or tap fewer than four stars in **Quantitative**.
 
-	The hint text in **Qualitative** changes to reflect the low rating.
+	The hint text in the **Text input** control changes to reflect the low rating.
 
 1. To return to the default workspace, press Esc.
