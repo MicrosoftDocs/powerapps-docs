@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter=""
 	authors="aftowen"
-	manager="dwrede"
+	manager="erikre"
 	editor=""/>
 
 <tags
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/03/2015"
+   ms.date="03/28/2016"
    ms.author="anneta"/>
 
 # Add an image, a video, or a sound in PowerApps
@@ -27,12 +27,12 @@ Learn how to [add and configure controls](add-configure-controls.md).
 
 ## Add media from a file ##
 
-1. On the **Content** tab, select **Media**.
-1. Select **Images**, **Videos**, or **Audio**, and then select **Browse**.
+1. On the **Content** tab, click or tap **Media**.
+1. Under **Media**, click or tap **Images**, **Videos**, or **Audio**, and then click or tap **Browse**.
 
 	![Add an image, a video, or an audio file](./media/add-images-pictures-audio-video/add-image-video-audio-file.png)
 
-1. Select the file that you want to add, and then select **Open**.
+1. Click or tap the file that you want to add, and then click or tap **Open**.
 1. When you finish adding files, press Esc to return to the default workspace.
 1. Add an image, video, or audio control, and then follow either of these steps:
 	- If you added an image control, set its **Image** property to the file that you added.
@@ -54,7 +54,7 @@ When users run your app, they can add their own images from existing files. In a
 
 	![Preview of an Add Picture control](./media/add-images-pictures-audio-video/add-picture.png)
 
-1. Tap or click the control, select the file that you want to add, and then select **Open**.
+1. Click or tap the control, click or tap the file that you want to add, and then click or tap **Open**.
 1. Press Esc to return to the default workspace.
 
 **Important:** To retain the image after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save it locally, or use the [Patch](function-patch.md) function to save it to a data source.
@@ -64,7 +64,7 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 1. Add a camera control, rename it **MyCamera**, and set its **OnSelect** property to this formula:
 
-	**Collect(MyImages, {SinglePicture:MyCamera!Photo})**
+	**Collect(MyImages, {SinglePicture:MyCamera.Photo})**
 
 1. Add an image gallery, and set its **Items** property to **MyImages**.
 
@@ -88,20 +88,21 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 1. Add a text-input control, and rename it **Description**.
 1. Add a microphone, rename it **MyMicrophone**, and set its **OnStop** property to this formula:
 
-	**Collect(Interviews, {Recordings:MyMicrophone!Audio, Notes:Description!Text})**  
+	**Collect(Interviews, {Recordings:MyMicrophone.Audio, Notes:Description.Text})**  
 
 	By using this formula, you create a collection named **Interviews**, which contains a column named **Recordings** and a column named **Notes**. Each row contains a sound file that you create by using the microphone and any text in the **Description** box when you stop recording.
 
 1. Add a custom gallery, and set its **Items** property to **Interviews**.
 
-1. Select the first item in the gallery, add an audio control to it, and then set the **Media** property for the audio control to **ThisItem!Recordings**.  
+1. Select the first item in the gallery, add an audio control to it, and then set the **Media** property for the audio control to **ThisItem.Recordings**.
+
 	**Note:** You can save visual space by shrinking the audio control so that only the play button appears.
 
-1. Select the first item in the gallery, add a text box to it, and set the **Text** property of the text box to **ThisItem!Notes**.
+1. Select the first item in the gallery, add a text box to it, and set the **Text** property of the text box to **ThisItem.Notes**.
 
-1. Press F5, type a phrase in the **Description** box, and then select **MyMicrophone** to start recording.
+1. Press F5, type a phrase in the **Description** box, and then click or tap **MyMicrophone** to start recording.
 
-1. When you finish recording, select **MyMicrophone** again to stop recording.
+1. When you finish recording, click or tap **MyMicrophone** again to stop recording.
 
 	Your description appears in the first item of the gallery, and your recording plays if you click the play button in the audio control.
 
@@ -113,6 +114,8 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 1. Press Esc to return to the default workspace.
 
+1. (optional) In the gallery, set the **OnSelect** property of the text box to **Remove(Interviews, ThisItem)**, press F5, and then click or tap a description to remove it and its recording.
+
 **Important:** To retain the sounds after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
 
 ## Draw a picture ##
@@ -121,25 +124,25 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 1. Add a pen-input control, rename it **Sketches**, and set its **ShowControls** property to **true**.
 1. Add a button, set its **Text** property to **Add**, and set its **OnSelect** property to this formula:
 
-	**Collect(Creativity, {Captures:Sketches!Image})**
+	**Collect(Creativity, {Captures:Sketches.Image})**
 
 1. Add an image-only gallery, and set its **Items** property to **Creativity**.
 
 1. Select the first item in the gallery, and set its **OnSelect** property to this formula:
 
-	**Remove(Sketches, ThisItem)**
+	**Remove(Creativity, ThisItem)**
 
-1. Press F5, draw or write something in **Sketches**, and then select the **Add** button.
+1. Press F5, draw or write something in **Sketches**, and then click or tap the **Add** button.
 
 	The contents of the pen control appear in the first item of the gallery.
 
-1. Select the clear button (with the "x") in **Sketches**, write or draw something else in it, and then select the **Add** button again.
+1. Click or tap the clear button (with the "x") in **Sketches**, write or draw something else in it, and then click or tap the **Add** button again.
 
 	The contents of the pen control appear in the second item in the gallery.
 
-	![A gallery that shows pen  drawings](./media/add-images-pictures-audio-video/pen-gallery.png)
+	![A gallery that shows pen drawings](./media/add-images-pictures-audio-video/pen-gallery.png)
 
-	**Tip:** To remove a sketch, select it in the gallery.
+	**Tip:** To remove a sketch, click or tap it in the gallery.
 
 1. Repeat these steps as many times as you want, and then press Esc to return to the default workspace.
 
@@ -147,7 +150,7 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 1. (optional) Convert written text to typed text:
 
-	1. Add a text box, and set its **Text** property to **Sketches!RecognizedText**.
+	1. Add a text box, and set its **Text** property to **Sketches.RecognizedText**.
 	1. Press F5, and then write a word in the pen control.
 
 	The label shows the word as typed text.
