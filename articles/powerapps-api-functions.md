@@ -187,7 +187,7 @@ For this function, you must specify the first three arguments, but all other arg
 	- **inputBody**
 
 1. On the **Insert** tab, select **Button**, and set the button's **OnSelect** property to this formula:<br>
-**office365.SendEmail(inputSubject.text, inputBody.text, inputTo.text)**
+**office365.SendEmail(inputSubject.Text, inputBody.Text, inputTo.Text)**
 
 1. Move the button so that it appears under all the other controls, and set its **Text** property to show **Send email**.
 
