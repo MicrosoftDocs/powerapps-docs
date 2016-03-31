@@ -75,7 +75,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 1. Copy this formula, and paste it into the formula bar (to the right of the **fx** button).
 
-	**Sort(If(IsBlank(TextSearchBox1!Text), *ListName*, Filter(*ListName*, TextSearchBox1!Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, Descending, Ascending))**
+	**Sort(If(IsBlank(TextSearchBox1!Text),** *ListName*, **Filter(** *ListName*, **TextSearchBox1!Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, Descending, Ascending))**
 
 1. Replace *ListName* with the name of your list and *ColumnName* with the name of the column by which you want to sort, filter, or both.
 
