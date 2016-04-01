@@ -20,7 +20,7 @@
 
 # Take a quick tour of PowerApps #
 
-Run an app that you or someone else created, or create an app with a default interface and sample data in under a minute. To create an app, specify a cloud-storage account to which PowerApps can upload data, and then choose any of several types of apps that PowerApps can create for you. Try out your new app by adding, updating, and removing data, and share the app with others in your organization.
+Run an app that you or someone else created, or create an app with a default interface and sample data in less than a minute. To create an app, specify a cloud-storage account to which PowerApps can upload data, and then choose any of several types of apps that PowerApps can create for you. Try out your new app by adding, updating, and removing data, and share the app with other users in your organization.
 
 **Prerequisites**
 
