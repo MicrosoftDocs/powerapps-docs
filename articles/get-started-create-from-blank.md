@@ -18,7 +18,7 @@
    ms.author="anneta"/>
 
 # Create an app from scratch #
-Create your own app from scratch using any of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
+Create your own app from scratch using any one of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
 
 By following this tutorial, you'll create an app that shows users a set of data on the first screen:
 
