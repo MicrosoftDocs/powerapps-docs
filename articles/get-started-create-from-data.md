@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -24,33 +24,14 @@ Create an app automatically based on data that you specify, explore how the app 
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall), and learn how to [configure a control](add-configure-controls.md).
-- If you don't have a Dropbox account, create one.
-- Download this [spreadsheet](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in your Dropbox account.
+- Learn how to [configure a control](add-configure-controls.md).
+- Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in your OneDrive account.
 
-For this tutorial, the data source is a table, named **FlooringEstimates**, in an Excel workbook uploaded to a Dropbox account. You can just as easily create an app based on a [SharePoint list](app-from-sharepoint.md), [a Dynamics CRM table](app-from-dynamics.md), or [Salesforce data](app-from-saleforce.md).
+**Note:** You can create an app based on a [SharePoint list](app-from-sharepoint.md), [Salesforce data](app-from-saleforce.md), or [a table in Dynamics CRM](app-from-dynamics.md) just as easily.
 
-![Source data in Excel](./media/get-started-create-from-data/excel-source.png)
+## Create the app ##
 
-## Specify your data ##
-
-1. Open PowerApps.
-
-	If you haven't opened PowerApps before, swipe left or click the right-pointing arrow near the lower-right corner to advance through the opening screens, and then sign in.
-
-1. In PowerApps, click or tap **Connections** on the **File** menu (near the left edge of the screen).
-
-	![Connections option on the File menu](./media/get-started-create-from-data/file-connections.png)
-
-1. Click or tap **Available connections**, click or tap **Dropbox**, and then click or tap **Connect**.
-
-	![Add Dropbox](./media/get-started-create-from-data/add-dropbox.png)
-
-1. Provide your credentials, and then click or tap **Sign in**.
-
-	![Prompt to provide credentials for Dropbox](./media/get-started-create-from-data/dropbox-credentials.png)
-
-1. On the **File** menu, click or tap **New**.
+1. In PowerApps, click or tap **New** on the **File** menu (near the left edge of the screen).
 
 	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
@@ -58,32 +39,31 @@ For this tutorial, the data source is a table, named **FlooringEstimates**, in a
 
 	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
 
-1. Under **My Connections**, click or tap **Dropbox**.  
+1. Click or tap **Add a new connection**, click or tap **OneDrive**, and then click or tap **Connect**.
 
-	![Dropbox in My Connections](./media/get-started-create-from-data/add-dropbox.png)  
+	![Connect to OneDrive](./media/get-started-create-from-data/connect-onedrive.png)  
 
-1. Under **Select an Excel file**, select the flooringestimates.xlsx file, and then select **Connect**.  
+1. When prompted, provide your credentials.
+
+1. Under **Select an Excel file**, click or tap **flooringestimates.xlsx**, and then click or tap **Connect**.
 
 	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
-	c. Under **Select a table**, select the **FlooringEstimates** table, and then select **Connect**.  
+1. Under **Select a table**, click or tap the **FlooringEstimates** table, and then click or tap **Connect**.  
 
 	![Select FlooringEstimates table](./media/get-started-create-from-data/choose-table.png)  
 
-Your app is built. Simple? Absolutely.
+PowerApps builds an app that contains three screens:
+
+- **BrowseScreen1** shows some information about each item so that users can easily browse for the item they want.
+- **DetailScreen1** shows all information about a single item.
+- **EditScreen1** shows controls with which users can add an item or update information about an item.
+
+When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
 
 ## Customize the app ##
-When an app is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
 
-1. If **BrowseScreen1** isn't already showing, show it by clicking or tapping its thumbnail in the left navigation pane.
-
-	![Thumbnails of all three screens in the left navigation bar](./media/get-started-create-from-data/left-nav-browse-screen.png)
-
-1. If the **Quick tools** pane isn't already showing, show it by clicking or tapping **Quick tools** near the lower-right corner.
-
-	![Icon to open the Quick tools pane](./media/get-started-create-from-data/open-quick-tools.png)
-
-1. In the **Quick tools** pane, click or tap the **Layout** tab, and then click or tap an option that includes icons.
+1. In the **Layout** tab of the **Quick tools** pane, click or tap an option that includes icons.
 
 	![Layout option with icons](./media/get-started-create-from-data/change-layout.png)
 
@@ -93,11 +73,11 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
 
-1. In the first item in the list on the **BrowseScreen**, set the **Image** property of the image control to **ThisItem.ImageURL**.
+1. Click or tap the first image in the list, and then set its **Image** property to **ThisItem.ImageURL**.
 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/set-image-url.png)
 
-1. Set the **Text** property of **Heading1** to **ThisItem.Name**, and set the **Text** property of **Subtitle1** to **ThisItem.Category**.
+1. Set the **Text** property of upper text box to **ThisItem.Name**, and set the **Text** property of lower text box to **ThisItem.Category**.
 
 	The content of **BrowseScreen1** changes to reflect your selections.
 
@@ -113,7 +93,7 @@ When an app is built automatically, heuristics are used to suggest the best layo
 
 	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final.png)
 
-1. (optional) To sort and filter the list by name instead of by category, set the **Items** property of the gallery to this formula:
+1. To sort and filter the list by name instead of by category, set the **Items** property of the list to this formula:
 <br>**Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
 
 ## Run the app ##
