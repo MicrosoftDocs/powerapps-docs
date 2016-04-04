@@ -20,7 +20,7 @@
 
 # Take a quick tour of PowerApps on a phone #
 
-Run an app that you or someone else created, or share an app with others in your organization.
+Run an app that you or someone else created, or share an app with other users in your organization.
 
 **Prerequisites**
 
