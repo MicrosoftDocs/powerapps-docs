@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
-    manager="dwrede"
+    manager="erikre"
     editor=""
     tags=""/>
 

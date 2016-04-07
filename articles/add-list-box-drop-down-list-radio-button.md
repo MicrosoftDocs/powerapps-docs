@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
-	manager="dwrede"
+	manager="erikre"
 	editor=""/>
 
 <tags
