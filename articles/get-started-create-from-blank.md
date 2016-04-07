@@ -232,4 +232,4 @@ To follow this tutorial exactly:
 
 ## Next steps ##
 - Test the app in Preview by adding, editing, and removing records.
-- [Publish the app, and share it with others](get-started-test-drive.md).
+- [Publish the app, and share it with others](get-started-test-drive.md#save-and-share-your-app).

@@ -180,6 +180,8 @@ After you finish developing and testing your app, share it with other people by 
 
 	An email template appears.
 
+**Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+
 1. Type the email addresses of the people with whom you want to share your app, and then select one of these options:
 
 	- **Can view** allows the users you specify to run your app
