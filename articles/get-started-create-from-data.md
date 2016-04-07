@@ -115,5 +115,5 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 ## Next steps ##
 
-- You can further customize your app by performing similar tasks to those that [Create an app from scratch](get-started-) describes.
-- [Save and share your app](get-started-test-drive.md#save-and-share-your-powerapp) with other people.
+- You can further customize your app by performing similar tasks to those that [Create an app from scratch](get-started-create-from-blank.md) describes.
+- [Save and share your app](get-started-test-drive.md#save-and-share-your-app) with other people.
