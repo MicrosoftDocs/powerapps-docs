@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="AFTOwen"
-    manager="dwrede"
+    manager="erikre"
     editor=""
     tags=""
  />
@@ -25,7 +25,7 @@ Share your app with co-workers or other users by giving them permission either t
 
 Share an app with multiple co-workers at the same time or with a group in Active Directory. If you share an app with a group, everyone in that group will have the permissions that you assign to it. If users are added to or deleted from the group, they will gain and lose permissions accordingly.
 
-[What is PowerApps?](https://aka.ms/pamktg)
+**Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
 
 ## Prerequisites ##
 - An account with which you've signed in to [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) or PowerApps.
