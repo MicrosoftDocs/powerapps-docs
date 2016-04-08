@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="ankitsar"
+	authors="sarafankit"
 	manager="darshand"
 	editor=""
 	tags=""/>
@@ -24,7 +24,7 @@ Create an app automatically based on data that you specify, explore how the app 
 
 **Prerequisites**
 
-- Install [PowerApps for Windows](http://aka.ms/powerappsinstall) 
+- Install [PowerApps for Windows](http://aka.ms/powerappsinstall)
 - Learn how to [configure a control](add-configure-controls.md).
 - Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in your OneDrive account.
 
@@ -92,7 +92,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 1. Drag & Drop the Name field to the top position
 
-1. Hide the Category field 
+1. Hide the Category field
 
 1. Set the Image control type to View Image
 
