@@ -52,7 +52,7 @@ Reference information is also available for:
 
 ## C ##
 
-**[Calendar](functions/function-clock-caldendar.md)** Retrieves information about the calendar for the current locale.
+**[Calendar](functions/function-clock-calendar.md)** Retrieves information about the calendar for the current locale.
 
 **[Char](functions/function-char.md)** Translates a character code into a string.
 
