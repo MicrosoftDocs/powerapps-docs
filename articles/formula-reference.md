@@ -52,11 +52,15 @@ Reference information is also available for:
 
 ## C ##
 
+**[Calendar](functions/function-clock-caldendar.md)** Retrieves information about the calendar for the current locale.
+
 **[Char](functions/function-char.md)** Translates a character code into a string.
 
 **[Clear](functions/function-clear-collect-clearcollect.md)** Deletes all data from a [collection](functions/working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** Deletes all data from a collection and then adds a set of [records](functions/working-with-tables.md#records).
+
+**[Clock](functions/function-clock-calendar.md)** Retrieves information about the clock for the current locale.
 
 **[Collect](functions/function-clear-collect-clearcollect.md)** Creates collections and adds data to a data source.
 
@@ -164,6 +168,8 @@ Reference information is also available for:
 
 **[Location](functions/signals.md)** Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
 
+**[Logout](function-logout.md)** Logs the current user out of PowerApps.
+
 **[LookUp](functions/function-filter-lookup.md)** Looks up a single record in a table based on one or more criteria.
 
 **[Lower](functions/function-lower-upper-proper.md)** Converts letters in a string of text to all lowercase.
@@ -185,6 +191,8 @@ Reference information is also available for:
 ## N ##
 
 **[Navigate](functions/function-navigate.md)** Changes which screen is displayed.
+
+**[NewForm](function-form.md)** Resets a form control for creation of a new item.
 
 **[Not](functions/function-logicals.md)** Boolean logic NOT.  Returns **true** if its argument is **false**, and **false** if its argument is **true**.  You can also use the **!** operator.
 
@@ -218,6 +226,8 @@ Reference information is also available for:
 
 **[Replace](functions/function-replace-substitute.md)** Replaces part of a string with another string, by position.
 
+**[ResetForm](functions/function-form.md)** Resets a form control for editing of an existing item.
+
 **[Revert](functions/function-revert.md)** Reloads and clears errors for the records of a data source.
 
 **[RGBA](functions/function-colors.md)** Returns a color value for a set of red, green, blue, and alpha components.
@@ -245,6 +255,8 @@ Reference information is also available for:
 **[Sqrt](functions/function-numericals.md)** Returns the square root of a number.  
 
 **[StdevP](functions/function-aggregates.md)** Returns the standard deviation of its arguments.  
+
+**[SubmitForm](functions/function-form.md)** Saves the item in a form control to the data source.
 
 **[Substitute](functions/function-replace-substitute.md)** Replaces part of a string with another string, by matching. 
 
