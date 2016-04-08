@@ -1,8 +1,8 @@
 <properties
-    pageTitle="Automate tasks by creating Logic Flows | Microsoft PowerApps"
-    description="Create Logic Flows to automatically perform actions, such as sending mail, when events occur, such as someone adding a row to a SharePoint list."
+    pageTitle="Automate tasks by creating a flows | Microsoft Flow"
+    description="Create a flow to automatically perform actions, such as sending mail, when events occur, such as someone adding a row to a SharePoint list."
     services=""
-    suite="powerapps"
+    suite="flow"
     documentationCenter="na"
     authors="aftowen"
     manager="dwrede"
@@ -10,41 +10,37 @@
     tags=""
  />
 <tags
-    ms.service="powerapps"
+    ms.service="flow"
     ms.devlang="na"
     ms.topic="get-started-article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="02/03/2016"
+   ms.date="04/07/2016"
     ms.author="anneta"/>
 
-# Create Logic Flows#
+# Create a flows#
 
 [AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-bb62-f1e5920004d6]
 
-Create a logic flow to perform a task automatically when you want an event to kick off an action. For example, create a logic flow that notifies you by mail as soon as someone sends a tweet that contains a keyword you specify. In this example, sending a tweet is the event, and sending mail is the action.
+Create a flow to perform a task automatically when you want an event to kick off an action. For example, create a flow that notifies you by mail as soon as someone sends a tweet that contains a keyword you specify. In this example, sending a tweet is the event, and sending mail is the action.
 
 **Prerequisites**
 
-- An account on [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209)
+- An account on [flow.microsoft.com](https://flow.microsoft.com)
 - An Twitter account
 - Office 365 credentials
 
 ## Specify an event
 
-1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar, and then select **Create a logic flow**.
+1. In [flow.microsoft.com](https://flow.microsoft.com), select **My Flows** in the top navigation bar, and then select **Create a flow**.
 
-	![Logic flows option in the left navigation bar](./media/get-started-logic-flow/create-logic-flow.png)
-
-1. Select **Create from blank**.
-
-    ![Create from blank](./media/get-started-logic-flow/from-blank.png)
+	![Flows option in the left navigation bar](./media/get-started-logic-flow/create-logic-flow.png)
 
 1. In the box that says **How would you like to start?**, type or paste **Twitter**, and then select **Twitter - When a new tweet appears**.
 
 	![Twitter event](./media/get-started-logic-flow/twitter-search.png)
 
-5. If you haven't already connected your Twitter account to PowerApps, select **Sign in to Twitter**, and then provide your credentials.
+5. If you haven't already connected your Twitter account to Microsoft Flow, select **Sign in to Twitter**, and then provide your credentials.
 
     ![Twitter sign in](./media/get-started-logic-flow/twitter-signin.png)
 
@@ -79,41 +75,41 @@ Create a logic flow to perform a task automatically when you want an event to ki
 
 1. In the **BODY** box, select the **Tweet text** parameter to add a placeholder for it, and then type the end of your message, including any other parameters you want to include.
 
-1.  Near the bottom of the screen, name your logic flow, and then select **Done**.
+1.  Near the bottom of the screen, name your flow, and then select **Done**.
 
 	![Select the done button](./media/get-started-logic-flow/done-button.png)
 
-	The list of your logic flows reflects your changes.
+	The list of your flows reflects your changes.
 
-1. Test your logic flow by tweeting with the keyword that you indicated.
+1. Test your flow by tweeting with the keyword that you indicated.
 
 	Within a minute, an email message notifies you of the new tweet.
 
-## Manage a logic flow ##
-1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar.
+## Manage a flow ##
+1. In [flow.microsoft.com](https://flow.microsoft.com), select **My Flows** in the top navigation bar.
 
-2. In the list of logic flows, do any of the following:
+2. In the list of flows, do any of the following:
 
-	- To change a logic flow, select the icon that looks like a pencil next to the logic flow that you want to change.  
+	- To change a flow, select the icon that looks like a pencil next to the flow that you want to change.  
 
 		![Edit icon](./media/get-started-logic-flow/edit-icon.png)  
 
-	- To pause your logic flow, select the icon that looks like a pause button next to the logic flow that you want to pause.  
+	- To pause your flow, select the icon that looks like a pause button next to the logic flow that you want to pause.  
 
 		![Pause icon](./media/get-started-logic-flow/pause-icon.png)  
 
-	- To resume a logic flow, select the icon that looks like a play button next to the logic flow that you want to resume.  
+	- To resume a flow, select the icon that looks like a play button next to the flow that you want to resume.  
 
 		![Resume icon](./media/get-started-logic-flow/resume-icon.png)  
 
-	- To delete a logic flow, select the icon that looks like a trash can next to the logic flow that you want to delete, type the full name of your logic flow into the confirmation dialog box, and then click **Delete**.  
+	- To delete a flow, select the icon that looks like a trash can next to the flow that you want to delete, type the full name of your flow into the confirmation dialog box, and then click **Delete**.  
 
 		![Delete icon](./media/get-started-logic-flow/delete-icon.png)  
 
 ## Next steps ##
 
-- [Add steps](multi-step-logic-flow.md), such as different ways to be notified, to your logic flow.
+- [Add steps](multi-step-logic-flow.md), such as different ways to be notified, to your flow.
 
 - [Run tasks on a schedule](run-tasks-on-a-schedule.md), when you want an action to occur every day, on a certain date, or after a certain number of minutes.
 
-- [Add a logic flow to an app](using-logic-flows.md) to allow your app to kick off logic in the cloud.
+- [Add a flow to an app](using-logic-flows.md) to allow your app to kick off logic in the cloud.

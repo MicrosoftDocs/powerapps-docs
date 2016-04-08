@@ -1,8 +1,8 @@
 <properties
-    pageTitle="Wait for approval in Logic Flows | Microsoft PowerApps"
-    description="Logic Flows can wait for external events, such as users indicating approval in email or SharePoint."
+    pageTitle="Wait for approval in a flow | Microsoft Flow"
+    description="Flows can wait for external events, such as users indicating approval in email or SharePoint."
     services=""
-    suite="powerapps"
+    suite="flow"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="dwrede"
@@ -10,31 +10,31 @@
     tags=""/>
 
 <tags
-   ms.service="powerapps"
+   ms.service="flow"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/24/2015"
+   ms.date="04/07/2016"
    ms.author="stepsic"/>
 
-# Wait for approval in Logic Flows #
+# Wait for approval in a flow #
 
-Create a logic flow that performs one or more tasks only after a user indicates approval by either clicking a link in email or updating an item in a SharePoint list.
+Create a flow that performs one or more tasks only after a user indicates approval by either clicking a link in email or updating an item in a SharePoint list.
 
 **Prerequisites**
 
-- [Create a logic flow from scratch](get-started-logic-flow.md)
+- [Create a flow from scratch](get-started-logic-flow.md)
 
 ## Request approval in email ##
 
-1. In  [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar.
+1. In [flow.microsoft.com](https://flow.microsoft.com), select **My flows** in the top navigation bar.
 
-	![Flows option in left navigation bar](./media/wait-for-approvals/nav-flows.png)
+	![Flows option in top navigation bar](./media/wait-for-approvals/nav-flows.png)
 
-1. In the list of logic flows, select the edit icon for the logic flow that you created from scratch.
+1. In the list of flows, select the edit icon for the flow that you created from scratch.
 
-	![Icon to edit a logic flow](./media/wait-for-approvals/edit-flow.png)
+	![Icon to edit a flow](./media/wait-for-approvals/edit-flow.png)
 
 1. Select the plus icon after the action, and then select **Add action**.
 
@@ -50,7 +50,7 @@ Create a logic flow that performs one or more tasks only after a user indicates 
 
 1. In the **TO** box, type or paste the email address of the approver.
 
-1. Drag the approval action so it appears between the Twitter event and the other email action, and then save your logic flow.
+1. Drag the approval action so it appears between the Twitter event and the other email action, and then save your flow.
 
 	![Move the approval action between the trigger and the other action](./media/wait-for-approvals/flow-sequence.png)
 
