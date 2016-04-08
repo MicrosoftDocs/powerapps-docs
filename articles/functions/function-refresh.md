@@ -1,6 +1,6 @@
 <properties
-	pageTitle="PowerApps: Refresh function"
-	description="Reference information for the Refresh function in PowerApps, including syntax and examples"
+	pageTitle="Refresh function | Microsoft PowerApps"
+	description="Reference information, including syntax and an example, for the Refresh function in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -20,30 +20,30 @@
 
 # Refresh function in PowerApps #
 
-Refreshes the [records](working-with-tables.md) of a [data source](working-with-data-sources.md).
+Refreshes the [records](working-with-tables.md#records) of a [data source](working-with-data-sources.md).
 
 ## Description ##
 
-The **Refresh** function retrieves a fresh copy of a data source.  You will see changes made by other users. 
+The **Refresh** function retrieves a fresh copy of a data source.  You'll see changes that other users made.
 
-**Refresh** has no return value.  It can only be used in [behavior](file-name.md) formulas. 
+**Refresh** has no return value, and you can use it only in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas).
 
 ## Syntax ##
 
 **Refresh**( *DataSource* )
 
-- *DataSource* – Required. The data source that you wish to refresh.
+- *DataSource* – Required. The data source that you want to refresh.
 
-## Examples ##
+## Example##
 
-In these examples, you'll refresh the data source named **IceCream**. The data source begins with this data:
+In this example, you'll refresh the data source named **IceCream**, which starts with this data:
 
 ![](media/function-refresh/icecream.png)
 
-A user on another device makes a modification to the Strawberry record, changing the **Quantity** to 400.  You will not see this change until a **Refresh** is performed:
+A user on another device changes the **Quantity** in the **Strawberry** record to **400**.  You won't see this change until this formula executes:
 
-- **Refresh( IceCream )** 
+**Refresh( IceCream )**
 
-After this has been done, galleries that are bound to the **IceCream** data source will show the new value for Strawberry:
+After that formula executes, galleries that are bound to the **IceCream** data source will show the updated value for **Strawberry**:
 
 ![](media/function-refresh/icecream-after.png)

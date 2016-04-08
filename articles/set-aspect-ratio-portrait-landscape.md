@@ -1,12 +1,13 @@
 <properties
-	pageTitle="Set the landscape or portrait aspect ratio within PowerApps Studio | Microsoft Azure"
-	description="Set the aspect ratio for landscape and portrait orientation in PowerApps studio"
+	pageTitle="Change app settings | Microsoft PowerApps"
+	description="Step-by-step instructions for changing settings such as the screen size and orientation, the app name, and the app icon"
 	services=""
 	suite="powerapps"
-	documentationCenter=""
-	authors="MandiOhlinger"
-	manager="dwrede"
-	editor=""/>
+	documentationCenter="na"
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
+	tags=""/>
 
 <tags
    ms.service="powerapps"
@@ -14,54 +15,55 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/04/2015"
-   ms.author="mandia"/>
+   ms.date="01/21/2015"
+   ms.author="anneta"/>
 
-# Use the landscape or portrait view
+# Change app settings in PowerApps #
+Customize an app by changing its name, its tile, its screen size, its screen orientation, or any combination of these settings.
 
-When you create an app, you can use the Landscape or Portrait view. You can also lock the aspect ratio. This topic provides more information on these options.
+**Prerequisites**
 
-> [AZURE.IMPORTANT] Currently, there is no auto-scaling between portrait and landscape. The screen orientation you choose (landscape or portrait) is locked and remains the layout used by your app.
+1. [Create an app](quick-tour-other.md) in PowerApps, and then open it for editing.
+1. On the **File** menu, select **App settings**.
 
-### Prerequisites
-- Install [PowerApps](http://aka.ms/powerappsinstall) from the Windows Store. Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+## Rename an app ##
+- Under **App name**, select **Rename this app**, and then type a different name.
 
-## Set landscape or portrait for a phone app
-1. On the **File** tab, select **App Settings**.
-2. Select **Screen size + orientation**.
-3. Select **Landscape** or **Portrait**:  
-![][5]  
+	![Close an app](./media/set-aspect-ratio-portrait-landscape/rename-app.png)
 
-You can also enable **Lock aspect ratio**:  
-![][1]  
+## Change an app tile ##
+Follow one or more of these steps:
 
-## Set landscape or portrait for a tablet
-1. On the **File** tab, select **App Settings**.
-2. Select **Screen size + orientation**.
-3. In the drop-down list, select **Landscape** or **Portrait**:  
-![][4]  
+- Select a different background color from the list of options.
 
-You can also enable **Lock aspect ratio**:  
-![][2]  
+	![Select a tile color](./media/set-aspect-ratio-portrait-landscape/tile-colors.png)
 
-## What is Lock aspect ratio
-Put simply, not enabling this feature allows your app to run everywhere. When you enable this setting, you lock your app to the aspect ratio you choose. For example:
+- Select an icon from the list of default icons.
 
-You create a tablet app and set the aspect ratio to 4:3 (iPad). You enable the **Lock aspect ratio** setting. When you do this, it locks in this ratio and the app *always* renders to the 4:3 aspect ratio. When your apps runs on Surface Pro or other mobile devices with different aspect ratios, the app displays incorrectly and may even show some undesirable results.
+	![Select a tile icon](./media/set-aspect-ratio-portrait-landscape/tile-icons.png)
 
+- Select **Browse file**, select the image that you want to use, and then select **Open**.
 
-The same applies for phone apps. When this setting is enabled, the app *always* renders to the default iPhone aspect ratio. When your app runs on other mobile phone with different aspect ratios, the app displays incorrectly and may even show some undesirable results. When **Lock aspect ratio** is not checked, the same app automatically scales to Windows Phone, Androids, and so on, with no additional settings.
+## Change screen size and orientation ##
+1. Under **App settings**, select **Screen size + orientation**.
 
-To summarize, if you don't enable the **Lock aspect ratio** setting, PowerApps automatically scales to the mobile device using the app.
+	![Option to change the screen size and orientation of an app](./media/set-aspect-ratio-portrait-landscape/size-orientation.png)
 
-## Tips and Tricks
-- At anytime, you can select the Preview button (![][3]) to see how your app looks  with the options you choose.
-- When designing your app, you can resize the controls and move them around using click-and-drag.
+1. In the **Orientation** list, select either **Portrait** or **Landscape**.
 
+1. (Tablet apps only) Under **Aspect ratio**, select the ratio that matches the target device for this app.
 
-[1]: ./media/set-aspect-ratio-portrait-landscape/phoneratio.png
-[2]: ./media/set-aspect-ratio-portrait-landscape/tabletratio.png
-[3]: ./media/set-aspect-ratio-portrait-landscape/preview.png
-[4]: ./media/set-aspect-ratio-portrait-landscape/tabletorientation.png
-[5]: ./media/set-aspect-ratio-portrait-landscape/phoneorientation.png
+	![Change the aspect ratio of a tablet app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
+
+1. Under **Lock aspect ratio**, specify either **On** or **Off**.
+
+	If you lock the aspect ratio, the app will retain the appropriate aspect ratio for an iPhone. If the app is running on another kind of device, the app will display incorrectly and may show undesirable results. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running.
+
+1. Under **Lock orientation**, specify either **On** or **Off**.
+
+	If you lock the app's orientation, the app will retain the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app will display incorrectly and may show undesirable results. If you unlock the app's orientation, it will adjust to the screen orientation of the device on which it's running.
+
+1. Select **Apply** to save your changes.
+
+## Next step #
+On the **File** menu, select **Save** to republish your app with the new settings.

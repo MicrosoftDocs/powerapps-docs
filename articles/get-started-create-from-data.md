@@ -1,11 +1,11 @@
 <properties
-	pageTitle="Create a PowerApp from a set of data | Microsoft PowerApps"
-	description="Create a PowerApp automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
+	pageTitle="Create an app from a set of data | Microsoft PowerApps"
+	description="Create an app automatically based on an existing set of data that you specify and then customize the UI to better suit your needs."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -15,98 +15,77 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/22/2015"
+   ms.date="01/06/2015"
    ms.author="anneta"/>
 
-# Create a PowerApp from a set of data
-Create a PowerApp automatically based on data that you specify, explore how the PowerApp works by default, and then customize it to better fit how you work.
+# Create an app from a set of data
 
-You can also watch a [video](http://pwrappssamples.blob.core.windows.net/samples/AppFromData.mp4) that shows how to create a PowerApp from your data.
-
-[What are PowerApps?](http://aka.ms/pamktg)
+Create an app automatically based on data that you specify, explore how the app works by default, and then customize it to better fit how you work.
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall)
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
-- A set of data, such as a list in SharePoint
+- Learn how to [configure a control](add-configure-controls.md).
+- Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in your OneDrive account.
 
-For this tutorial, the data source is a list named **Top Charts** in a SharePoint Online site.
+**Note:** You can create an app based on a [SharePoint list](app-from-sharepoint.md), [Salesforce data](app-from-saleforce.md), or [a table in Dynamics CRM](app-from-dynamics.md) just as easily.
 
-![Source data in SharePoint](./media/get-started-create-from-data/sharepoint-source.png)
+## Create the app ##
 
-## Build a PowerApp ##
+1. In PowerApps, click or tap **New** on the **File** menu (near the left edge of the screen).
 
-1. In PowerApps, select **Connections** on the **File** menu (near the left edge of the screen).
+	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
-	![Connections option on the File menu](./media/get-started-create-from-data/file-connections.jpg)
+1. Under **Start from your data**, click or tap **Get started**.
 
-1. Select **Add connection**.
+	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
 
-	![Icon to add a connection](./media/get-started-create-from-data/add-connection.png)
+1. Click or tap **Add a new connection**, click or tap **OneDrive**, and then click or tap **Connect**.
 
-1. Select the kind of data source you want to use, and then select **Connect**.
+	![Connect to OneDrive](./media/get-started-create-from-data/connect-onedrive.png)  
 
-	![Connect to SharePoint](./media/get-started-create-from-data/add-sharepoint.png)
+1. When prompted, provide your credentials.
 
-1. Provide your credentials, and then select **New** on the **File** menu.
+1. Under **Select an Excel file**, click or tap **flooringestimates.xlsx**, and then click or tap **Connect**.
 
-	![New option on the File menu](./media/get-started-create-from-data/file-new.jpg)
+	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
-1. Under **Start from your data**, select **Get started**.
+1. Under **Select a table**, click or tap the **FlooringEstimates** table, and then click or tap **Connect**.  
 
-	![Option to create a PowerApp from data](./media/get-started-create-from-data/create-from-data.jpg)
+	![Select FlooringEstimates table](./media/get-started-create-from-data/choose-table.png)  
 
-1. Specify the data source that you want to use, as in this example:
+PowerApps builds an app that contains three screens:
 
-	1. Under **My Connections**, select **SharePoint Online**.
+- **BrowseScreen1** shows some information about each item so that users can easily browse for the item they want.
+- **DetailScreen1** shows all information about a single item.
+- **EditScreen1** shows controls with which users can add an item or update information about an item.
 
-	![SharePoint Online in My Connections](./media/get-started-create-from-data/my-connections.png)
+When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
 
-	1. Under **Select a site**, select **New site**, type or paste the URL of the site you want to use, and then select **Connect**.
+## Customize the app ##
 
-	**Note:** Provide the URL of the site itself, without the specific list.
+1. In the **Layout** tab of the **Quick tools** pane, click or tap an option that includes icons.
 
-	![SharePoint Online in My Connections](./media/get-started-create-from-data/new-site.png)
-
-	1. Under **Select a list**, select the list that you want to use, and then select **Connect**.
-
-		![Select a list in a SharePoint site](./media/get-started-create-from-data/choose-list.png)
-
-Your PowerApp is built.
-
-## Customize a PowerApp ##
-When a PowerApp is built automatically, heuristics are used to suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the PowerApp for your needs.
-
-1. If **BrowseScreen1** isn't already showing, show it by selecting its thumbnail in the left navigation pane.
-
-	![Thumbnails of all three screens in the left navigation bar](./media/get-started-create-from-data/browse-thumbnail.png)
-
-1. If the **Quick tools** pane isn't already showing, show it by selecting **Quick tools** near the lower-left corner.
-
-	![Icon to open the Quick tools pane](./media/get-started-create-from-data/open-quick-tools.jpg)
-
-1. In the **Quick tools** pane, select the **Layout** tab, and then select the option that includes icons.
-
-	![Layout option with icons](./media/get-started-create-from-data/choose-layout.png)
+	![Layout option with icons](./media/get-started-create-from-data/change-layout.png)
 
 	The layout of **BrowseScreen1** changes to reflect your selection.
 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
-	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can select different options, which reflect the data on that screen.
+	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
 
-1. In the **Quick tools** pane, select the **Content** tab.
+1. Click or tap the first image in the list, and then set its **Image** property to **ThisItem.ImageURL**.
 
-1. Select **Title** in the **Heading2** list, select **PicURL** in the **Image1** list, and select **Category** in the **Subtitle2** list.
+	![BrowseScreen1 with new layout](./media/get-started-create-from-data/set-image-url.png)
 
-	![Content tab with new options for BrowseScreen1](./media/get-started-create-from-data/choose-content.png)
+1. Set the **Text** property of upper text box to **ThisItem.Name**, and set the **Text** property of lower text box to **ThisItem.Category**.
 
 	The content of **BrowseScreen1** changes to reflect your selections.
 
 	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
 
-1. In the **Quick tools** pane, select the **Theme** tab, and then select a different theme, such as **Lavender**.
+	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**.
+
+1. In the **Quick tools** pane, click or tap the **Theme** tab, and then click or tap a different theme, such as **Lavender**.
 
 	![Change the theme](./media/get-started-create-from-data/choose-theme.png)
 
@@ -114,22 +93,27 @@ When a PowerApp is built automatically, heuristics are used to suggest the best 
 
 	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final.png)
 
-## Run the PowerApp ##
-1. With **BrowseScreen1** showing, open Preview by pressing F5 or by selecting the Preview icon near the upper-right corner.
+1. To sort and filter the list by name instead of by category, set the **Items** property of the list to this formula:
+<br>**Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
+
+## Run the app ##
+1. With **BrowseScreen1** showing, open Preview by pressing F5 (or by clicking or tapping the Preview icon near the upper-right corner).
 
 	![Preview icon](./media/get-started-create-from-data/open-preview.png)
 
-1. On **BrowseScreen1**, select the arrow for a record to show details about that record.
+1. On **BrowseScreen1**, click or tap the arrow for a record to show details about that record.
 
 	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record.png)
 
-1. On **DetailsScreen1**, select the edit icon (in the upper-right corner) to edit the record.
+1. On **DetailsScreen1**, click or tap the edit icon (in the upper-right corner) to edit the record.
 
 	![Edit a record](./media/get-started-create-from-data/edit-record.png)
 
 1. On **EditScreen1**, change the information in one or more fields, and then select the checkmark in the upper-right corner to save your changes.
 
-	![Save changes on EditScreen1](./media/get-started-create-from-data/save-changes.png)
+	![Save changes on EditScreen1](./media/get-started-create-from-data/save-record.png)
 
-## Next step ##
-When you finish customizing your app, you can [save and share it with other people](get-started-test-drive.md#save-and-share-your-powerapp).
+## Next steps ##
+
+- You can further customize your app by performing similar tasks to those that [Create an app from scratch](get-started-create-from-blank.md) describes.
+- [Save and share your app](get-started-test-drive.md#save-and-share-your-app) with other people.

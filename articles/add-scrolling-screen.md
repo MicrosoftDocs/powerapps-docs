@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Add a scrolling screen | Microsoft PowerApps"
-	description=""
+	description="Create a screen that users can scroll to show more types of content than the screen can show at a time."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,24 +18,24 @@
 	ms.author="anneta"/>
 
 # Add a scrolling screen in PowerApps #
-Create a screen that users can scroll to show more types of content than the screen can show at a time. For example, you might want to juxtapose multiple charts, videos, or other kinds of data from different sources on the same screen while keeping each element big enough to see clearly. If you add controls to multiple sections, the relative position of each element is maintained, even if the screen orientation changes between portrait and landscape.  
-
-[What are PowerApps?](http://www.powerapps.com)
+Create a screen that users can scroll to show more types of content than the screen can show at a time. For example, you might want to juxtapose multiple charts, videos, or other kinds of data from different sources on the same screen while keeping each element big enough to see clearly. If you put multiple controls in a section, they’ll maintain their relative positions within that section, regardless of the screen size and orientation. However, the screen size and orientation might determine how the sections are arranged.  
 
 **Prerequisites**
+
 - [Install PowerApps](http://aka.ms/installpowerapps)
+
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
-## Create a scrolling screen, and add an element
+## Create a scrolling screen ##
 1. Open PowerApps, and then do one of the following:
 
-	- [Add a screen](add-screen-context-variables.md) to a PowerApp.
+	- [Add a screen](add-screen-context-variables.md) to an app.
 
-	![Option to add a screen to a PowerApp](./media/add-scrolling-screen/add-screen.png)
+		![Option to add a screen to an app](./media/add-scrolling-screen/add-screen.png)
 
-	- Create a PowerApp from scratch. (Select **New** in the **File** menu, and then select **Get started** under **Start from scratch**.)
+	- Create an app from scratch by selecting **New** in the **File** menu (near the left edge of the screen) and then selecting **Get started** under **Start from scratch**.
 
-	![Option to create an app from scratch](./media/add-scrolling-screen/blank-app.png)
+		![Option to create an app from scratch](./media/add-scrolling-screen/blank-app.png)
 
 1. On the **Home** tab, select **Layouts**, and then select the option to add an infinite scrolling canvas.
 
@@ -44,6 +44,8 @@ Create a screen that users can scroll to show more types of content than the scr
 	The canvas is added to the screen.
 
 	![A screen with an infinite scrolling canvas, as it appears by default](./media/add-scrolling-screen/default-canvas.png)
+
+## Add elements ##
 
 1. Select **Insert a visual**, select **Charts** on the **Insert** tab, and then select **Column Chart**.
 
@@ -73,8 +75,8 @@ Create a screen that users can scroll to show more types of content than the scr
 
 1. With the card still selected, add a line chart, which is too big to appear on the screen with the other controls.
 
-	![A line chart added to the new card](./media/add-scrolling-screen/add-line-chart.png)
+	![A line chart added to the bottom of the new card](./media/add-scrolling-screen/add-line-chart.png)
 
-1. Press F5 to display the app in Preview, and then scroll to display the new chart.
+1. Press F5 to display the app in Preview, and then scroll to display the line chart.
 
-	![Preview shows line chart](./media/add-scrolling-screen/line-chart-preview.png)
+	![Preview shows the line chart](./media/add-scrolling-screen/line-chart-preview.png)

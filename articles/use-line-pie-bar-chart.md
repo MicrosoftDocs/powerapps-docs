@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create and add line charts, pie charts, and bar charts in PowerApps | Microsoft Azure"
-	description="Create collections and add columns to existing collections"
+	pageTitle="Create and add line charts, pie charts, and bar charts in PowerApps | Microsoft PowerApps"
+	description="Add and configure collections, add columns to existing collections in your PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/02/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
@@ -30,15 +30,17 @@ For example, your data should look similar to the following:
 You can create and use these charts within PowerApps. Let's get started.
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps.
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
-- These steps use the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) as sample input data. You can use this sample data, or import your own.
+- These steps use the [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own. 
 
 ## Add a pie chart to display your data
 In these steps, we download a sample file. Using a collection, we import this sample data and display it in a pie chart and a column chart.
 
-1. Download the [ChartData](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
+1. Download the [ChartData](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) zip file.
 2. Create a collection named **ProductRevenue**. Steps include:  
+
 	a) On the **Insert** tab, select **Controls**, and then select **Import**.  
 	b) Set the **OnSelect** property to the following function:  
 ```Collect(ProductRevenue, Import1!Data)```  
@@ -47,17 +49,20 @@ In these steps, we download a sample file. Using a collection, we import this sa
 	In the **File** menu, select **Collections**. The ProductRevenue collection is listed with the chart data you imported:    
 ![][1]  
 
+	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app. 
+
 3. Go back to your designer.
 4. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button.
-4. In the pie chart control, select the middle so the pie chart circle is selected:   
+5. In the pie chart control, select the middle of the pie chart:   
 ![][10]  
-5. Set the **Items** property of the pie chart to **ProductRevenue**:  
+6. Set the **Items** property of the pie chart to the **ProductRevenue!Revenue2014** collection you created:  
 ![][2]  
 
-	When you do this, the pie chart shows the revenue of the products:  
+	When you do this, the pie chart shows the 2014 revenue of the products:  
 ![][3]  
 
-Now, let's use thie ProductRevenue collection in a bar chart:
+## Add a bar chart to display your data
+Now, let's use this ProductRevenue collection in a bar chart:
 
 1. On the **Home** tab, create a new screen.
 2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
@@ -78,6 +83,14 @@ Now, let's use thie ProductRevenue collection in a bar chart:
 - At anytime, you can select the Preview button (![][8]) to view your charts, and to see how they look with data.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Select the middle of the column chart. In the property list, you can set the **GridStyle** to All, XOnly, YOnly, and even None.
+
+## What you learned
+In this topic, you:
+
+- Used the import control to import sample data in your app.
+- Added a pie chart and bar chart to display the data that you imported. 
+- In the column chart, you used the **Number of Series** property to show data for three years; with each year having its own column.
+
 
 
 [1]: ./media/use-line-pie-bar-chart/productrevenuecollection.png

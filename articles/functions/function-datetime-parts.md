@@ -1,0 +1,60 @@
+<properties
+	pageTitle="Day, Month, Year, Hour, Minute, and Second functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Day, Month, Year, Hour, Minute, and Second functions in PowerApps"
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="gregli-msft"
+	manager="dwrede"
+	editor=""
+	tags=""/>
+
+<tags
+   ms.service="powerapps"
+   ms.devlang="na"
+   ms.topic="article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="11/07/2015"
+   ms.author="gregli"/>
+
+# Day, Month, Year, Hour, Minute, and Second functions in PowerApps #
+
+Returns individual components of a Date/Time value.
+
+## Description ##
+
+The **Day** function returns the day component of a Date/Time value, ranging from 1 to 31.
+
+The **Month** function returns the month component of a Date/Time value, ranging from 1 to 12.
+
+The **Year** function returns the year component of a Date/Time value, starting with 1900.
+
+The **Hour** function returns the hour component of a Date/Time value, ranging from 0 (12:00 AM) to 23 (11:00 PM).
+
+The **Minute** function returns the minute component of a Date/Time value, ranging from 0 to 59.
+
+The **Second** function returns the second component of a Date/Time value, ranging from 0 to 59.
+
+All functions return a number.
+
+See [working with dates and times](../show-text-dates-times.md) for more information.
+
+## Syntax ##
+
+**Day**( *DateTime* )<br>**Month**( *DateTime* )<br>**Year**( *DateTime* )<br>**Hour**( *DateTime* )<br>**Minute**( *DateTime* )<br>**Second**( *DateTime* )
+
+- *DateTime* - Required.  Date/Time value to operate on.  
+
+## Examples ##
+
+For the following example, the current time is **3:59:37 PM** on **Thursday, April 9, 2015**.
+
+| Formula | Description | Result |
+|---------|-------------|--------|
+| **Year( Now() )** | Returns the year component of the current time and date. | 2015 |
+| **Month( Now() )** | Returns the month component of the current time and date. | 4 |
+| **Day( Now() )** | Returns the day component of the current time and date. | 9 |
+| **Hour( Now() )** | Returns the hour component of the current time and date. | 15 |
+| **Minute( Now() )** | Returns the minute component of the current time and date. | 59 |
+| **Second( Now() )** | Returns the minute component of the current time and date. | 37 |

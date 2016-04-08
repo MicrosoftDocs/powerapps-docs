@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Show images and text in a gallery; Sort and filter the gallery in PowerApps Studio | Microsoft Azure"
+	pageTitle="Show images and text in a gallery; Sort and filter the gallery in PowerApps | Microsoft PowerApps"
 	description="Use a gallery to display images and text. Sort and filter the images in PowerApps."
 	services=""
 	suite="powerapps"
@@ -14,34 +14,38 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/29/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 
 # Show images and text in a gallery, including gallery selection, sort, and filter
 Create a gallery to show images and text about several products, and sort and filter that information.
 
-In PowerApps, use a gallery to show several related items, as in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.
+In PowerApps, you can use a gallery to show several related items, just as you see in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.
 
+> [AZURE.NOTE] This topic uses a tablet app. You can use a phone app but you will need to resize some of the controls.
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps.
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new tablet app or open an existing tablet app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
-- Download this [sample data](https://gallery.technet.microsoft.com/Sample-data-for-Create-c77790e7), or import your own data. The download includes .jpg images in a zip file.
+- These steps use the [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpg images. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
-## Add a gallery to show images and text
+## Show data in a gallery
 
-1. Create a collection named **Inventory** based on the sample data. Steps include:  
+1. Create a collection named **Inventory** using the sample data. Steps include:  
 	a) On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
 	b) Set the **OnSelect** property of the import control to the following expression:  
 	```Collect(Inventory, Import1!Data)```  
-		![][12]  
-	c) Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  
+	![][12]  
+	c) Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  	
 	d) In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
 	![][3]  
 
 	You've just created the Inventory collection, which contains information about five products, including a design image, the name of the product, and the number of units in stock.
+
+	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
 
 2. Select the back arrow to return to the designer.
 3. On the **Insert** tab, select **Gallery**. Under **Image Galleries**, select the horizontal **With Text** image gallery:  
@@ -52,6 +56,7 @@ In PowerApps, use a gallery to show several related items, as in a catalog. Gall
 ![][6]  
 6. In the first item of the gallery, select the bottom label:  
 ![][7]  
+
 	> [AZURE.NOTE] When you change the first item in any gallery, you automatically change all other items in the gallery.  
 
 7. Set the **Text** property of the label to the following expression:  
@@ -76,9 +81,9 @@ Using these steps, you imported data that includes .jpg images into a collection
 6. On the **Shape** tab, select **Visible**, and then enter the following expression in the Function Bar:  
 ```If(ThisItem!IsSelected, true)```
 
-	A blue rectangle surrounds the current selection in a gallery. Click a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![][2] to see and test what you're creating.
+	A blue rectangle surrounds the current selection in a gallery. Select a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![][2] to see and test what you're creating.
 
-> [AZURE.TIP] Click the rectangle, click **Reorder** on the **Home** tab, and then click **Send to Back**. Using this feature, you can select a gallery item without the border blocking anything.
+> [AZURE.TIP] Select the rectangle, select **Reorder** on the **Home** tab, and then select **Send to Back**. Using this feature, you can select a gallery item without the border blocking anything.
 
 Using these steps, you added a border around the current selection in the gallery.
 
@@ -100,14 +105,17 @@ In these steps, we are going to sort the gallery items in ascending and descendi
 
 #### Add a slider control and filter items in the gallery
 
-1. Add a Slider control (Insert tab > Controls), rename it to **StockFilter**, and move it under the gallery.
+1. Add a Slider control (**Insert** tab > **Controls**), rename it to **StockFilter**, and move it under the gallery.
 2. Configure the slider so that users can't set it to a value outside the range of units in stock:  
+
 	a) On the **Content** tab, select **Min**, and then enter the following expression:  
 	```Min(Inventory, UnitsInStock)```  
-	b) On the **Content** tab, click **Max**, and then enter the following expression:  
+	b) On the **Content** tab, select **Max**, and then enter the following expression:  
 	```Max(Inventory, UnitsInStock)```
-3. Set the **Items** property of the gallery to the following expression:  
+
+3. Select any item in the gallery *except* the first one. Set the **Items** property of the gallery to the following expression:  
 ```Filter(Inventory, UnitsInStock<=StockFilter!Value)```
+
 4. In **Preview**, adjust the slider to a value that's between the highest and the lowest quantity in the gallery. As you adjust the slider, the gallery shows only those products that are less than the value you choose:  
 ![][13]  
 
@@ -120,6 +128,12 @@ Now, let's add to our filter:
 4. In **Preview**, set the slider to *30*, and type the letter *g* in the input text box. The gallery shows the only product with less than 30 units in stock *and* has a name with the letter "g":  
 ![][14]  
 
+## Tips and Tricks
+- At anytime, you can select the preview button (![][2]) to see what you created and test it.
+- When designing your app, you can re-size the controls and move them around using click-and-drag.
+- Press **ESC** or select the **X** to close the preview window.
+- When using a gallery, select the first item in the gallery to change all items in the gallery. For example, select the first item to add a border to all items in the gallery.
+- To update the properties of the gallery, select any item in the gallery *except* the first one. For example, select the second item to update the *Items*, *ShowScrollbar*, and other properties that apply to the gallery (not the items in the gallery).  
 
 ## What you learned
 In this topic, you:
@@ -129,6 +143,8 @@ In this topic, you:
 - Added a border around the item that you select.
 - Sorted the items by product name in ascending and descending order.
 - Added a slider and an input text control to filter the products by units in stock and product name.
+
+
 
 
 [1]: ./media/show-images-text-gallery-sort-filter/import.png

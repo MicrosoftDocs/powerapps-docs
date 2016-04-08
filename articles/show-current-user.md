@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Show the current user information in PowerApps | Microsoft Azure"
-	description="Insert the User function to display the name and email address of the signed-in user in PowerApps Studio"
+	pageTitle="Show the current user details or information in PowerApps | Microsoft PowerApps"
+	description="Insert the User function to display the name and email address of the signed-in user in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/22/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 # Get the signed-in user details
@@ -31,7 +31,8 @@ Basically, you can use this anywhere users would benefit from an automatically-p
 
 ### Prerequisites
 
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps.
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 

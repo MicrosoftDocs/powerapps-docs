@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Start a logic flow in a PowerApp  | Microsoft PowerApps"
-	description="Create a logic flow that performs one or more tasks after a trigger, such as a user selecting a button, occurs in a PowerApp."
+	pageTitle="Start a logic flow in an app  | Microsoft PowerApps"
+	description="Create a logic flow that performs one or more tasks after an event, such as a user selecting a button, occurs in an app."
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -15,22 +15,24 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/05/2015"
-   ms.author="prkumarms"/>
+   ms.author="prkumar"/>
 
-# Start a logic flow in a PowerApp #
+# Start a logic flow in an app #
 
-Create a logic flow that performs one or more tasks when a trigger occurs in a PowerApp. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a record is updated in the cloud, or all of these. You can configure any control in a PowerApp to start the flow, which runs even if you close PowerApps.
+Create a logic flow that performs one or more tasks when an event occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which runs even if you close PowerApps.
 
-[What are PowerApps?](http://aka.ms/pamktg)
+[What is PowerApps?](http://aka.ms/pamktg)
 
 **Prerequisites**
+
 - [Install PowerApps](http://aka.ms/installpowerapps)
+
 - Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
 
 ## Create a logic flow ##
 1. Open [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) in your browser.
 
-1. Under **Make a workflow**, select **Create a flow**.
+1. Under **Make a logic flow**, select **Get started**.
 
 	![Option to create a flow](./media/use-logic-flows/create-flow.png)
 
@@ -51,25 +53,27 @@ Create a logic flow that performs one or more tasks when a trigger occurs in a P
 	For example:
 	1. Type **SharePoint** in the box, and then select **SharePoint Online - Create item** in the list under that box.
 
-	![Option to create a SharePoint item](./media/use-logic-flows/create-sharepoint-item.png)
+		![Option to create a SharePoint item](./media/use-logic-flows/create-sharepoint-item.png)
 
 	1. In the **SITE URL** box, type or paste the URL of a SharePoint Online site that contains a list.
 
-	**Note:** Specify the URL for the site itself, not including the list.
+		**Note:** Specify the URL for the site itself, not including the list.
 
 	1. In the **LIST NAME** box, select the list that you want to use.
 
 	1. Select the **TITLE** box, and then select **Ask in PowerApps**.
 
-	![Add Ask in PowerApps parameter to TITLE field](./media/use-logic-flows/ask-in-powerapps.png)
+		![Add Ask in PowerApps parameter to TITLE field](./media/use-logic-flows/ask-in-powerapps.png)
 
 1. In the **Flow name** box, type or paste a name for your logic flow, and then select **Done**.
 
 	![Name and save your flow](./media/use-logic-flows/name-flow.png)
 
-## Add a logic flow to a PowerApp ##
+## Add a logic flow to an app ##
 
-1. Open PowerApps, and then select **Get started** under **Start from scratch**.
+1. Open PowerApps, and then select **New** in the **File** menu (near the left edge of the screen).
+
+1. Under **Start from scratch**, select **Get started**.
 
 	![Get started button](./media/use-logic-flows/get-started.png)
 
@@ -83,8 +87,6 @@ Create a logic flow that performs one or more tasks when a trigger occurs in a P
 
 1. On the **Insert** tab, add a button, and move it under the text box.
 
-	![Rename input-text control](./media/use-logic-flows/rename-text.png)
-
 1. With the button selected, select **Logic Flows** on the **Action** tab.
 
 	![Logic Flows option on the Action tab](./media/use-logic-flows/action-tab.png)
@@ -93,7 +95,7 @@ Create a logic flow that performs one or more tasks when a trigger occurs in a P
 
 	![Add logic flow to button](./media/use-logic-flows/add-flow-from-pane.png)
 
-1. In the formula bar, type or paste **RecordTitle!Text)** at the end of the formula that's been automatically added.
+1. In the formula bar, type or paste **RecordTitle.Text)** at the end of the formula that's been automatically added.
 
 	![OnSelect property that includes the logic flow](./media/use-logic-flows/onselect-with-flow.png)
 

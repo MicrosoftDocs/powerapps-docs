@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create and update a collection in PowerApps Studio | Microsoft Azure"
-	description="Create collections and add columns to existing collections in PowerApps Studio"
+	pageTitle="Create and update a collection in PowerApps | Microsoft PowerApps "
+	description="Create collections and add columns to existing collections in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/04/2015"
+   ms.date="11/30/2015"
    ms.author="mandia"/>
 
 
@@ -24,33 +24,40 @@ Use a collection to store data that can be used in your app. A collection is a g
 You can create and use collections within PowerApps. Let's get started.
 
 ### Prerequisites
-- Install [PowerApps Studio](http://aka.ms/powerappsinstall). Create a new app or open an existing app in PowerApps Studio.
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- These steps use the [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
-
-## Create a collection that has one column
+## Create a single-column collection
 The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.
 
-1. Open your app in PowerApps Studio.
+1. Open your app.
 2. On the **Insert** tab, select **Text**, and then select **Input Text**:  
 ![][1]  
+
 3. In the top left corner, select **Text1**, and rename the control to **Destination**:  
 ![][2]  
-4. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **OnSelect** property is listed. Set it to the following function:  
-```Collect(Destinations, Destination!Text)```  
-It should look like the following:  
-![][3]  
 
-5. Click the button text, and enter **Add**:  
+4. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **OnSelect** property is listed. Set it to the following function:  
+
+	```Collect(Destinations, Destination!Text)```
+
+	It should look like the following:  
+	![][3]  
+
+5. Select the button text, and enter **Add**:  
 ![][5]  
+
 6. Select the **Add** button, and move it under your text control. You can move it anywhere:  
 ![][6]  
 
 
-In these steps, you used the Collect function to create a collection named **Destinations**. You also added a button control and when clicked, adds new items to your collection. Now, see what you created:
+In these steps, you used the Collect function to create a collection named **Destinations**. You also added a button control and when selected, adds new items to your collection. Now, see what you created:
 
 1. Select Preview:  
-![][7]    
+![][7]  
+
 2. Type a city name into the box, and then select the **Add** button.
 3. Enter some additional city names and select the **Add** button each time.
 4. Press the **Esc** key to close the Preview window.
@@ -64,6 +71,7 @@ Now, let's bind the Destinations collection to a listbox:
 1. Go back to your designer.
 2. On the **Insert** tab, select **Controls**, and then select **ListBox**:  
 ![][22]  
+
 2. Move the listbox so you can easily see it. Set its **Items** property to the following expression:  
 ```Destinations!Value```  <br/>
 
@@ -73,22 +81,29 @@ Now, let's bind the Destinations collection to a listbox:
 Preview your changes: ![][7]. In the listbox, you can see the different cities you entered. In the input text box, enter a new city, and select the **Add** button. The listbox is automatically updated to include the new city you entered.
 
 
-## Create a collection that has more than one column
+## Create a multi-column collection
 The following steps show you how to create a collection within your app using the Collect function, and how to add multiple rows to your collection.
 
 1. On the **Home** tab, open a new screen.
 2. On the **Insert** tab, select **Text**, and then select **Input Text**.
 3. Rename the text control to **City**:  
 ![][9]  
+
 4. Insert another input text control, and rename it to **States**.
 5. Move the City and States text controls so you can see them both:  
 ![][10]  
-	**Note**: You can replace 'Input Text' with something like 'City' or 'State', which was done in the image.
+
+	**Note**: You can replace 'Input Text' with something like 'City' or 'State', which was done in the image.  
+
 6. On the **Insert** tab, select **Button**. Set its **OnSelect** property to the following function:  
 ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
-It should look like the following:  
-![][11]  
-	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column: `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
+
+	It should look like the following:  
+	![][11]  
+
+	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column:
+
+	`Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
 
 7. Rename the button control **AddCityStateButton**, and set its **Text** property to **Add City and State**:  
 ![][12]  
@@ -104,16 +119,17 @@ In these steps, you added a **Cities** column and a **States** column to the **D
 ![][13]
 
 
-## Add more columns to an existing collection
+## Add columns to a collection
 There are a few sections in this walk-through. When complete, you'll know how to import data into your collection, create a gallery that shows data in a price list, and use a slider control that determines the quantity of a product.
 
 ### Import the price list and create the collection
-1. Download the [PriceList](https://gallery.technet.microsoft.com/Sample-data-for-Show-a-set-5933d4c7) zip file.
+1. Download the [PriceList](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) zip file.
 2. On the **Home** tab, add a new screen.
 2. On the **Insert** tab, select **Controls**, and then select **Import**:  
 ![][14]  
 3. On the **Action** tab, select **OnSelect**. Enter the following function:  
-```Collect(PriceList, Import1!Data)```  
+
+	```Collect(PriceList, Import1!Data)```  
 4. Preview your app. Select the **Import Data** button, select the PriceList.zip file, and select **Open**.
 5. Close the Preview window.
 6. Select the **File** tab, and select **Collections**. The PriceList items you imported are listed:  
@@ -148,26 +164,42 @@ Label3 | ``ThisItem!Maker``
 2. Add a button, set its **Text** property to **Add**, and move it under the **OrderQty** slider. Your app looks similar to the following:  
 ![][20]
 3. Set the **OnSelect** property of the **Add** button to the following expression:  
-```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
-**Note** When you click this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
+
+	```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
+
+	**Note** When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
+
 4. Select the **Screen** tab and set the **OnVisible** property to the following expression:  
-```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```
+
+	```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```
 
 Now, see what you created:
 
 1. Open **Preview**.
 2. Select a product in the gallery, move the slider to your desired quantity, and then select the **Add** button.  
-> [AZURE.IMPORTANT] When you select a product, that product is not highlighted to indicate you selected it. When we created the gallery, we didn't add this functionality. Know that clicking the product does select it.  
-3. Repeat these steps to add a couple more products. Press **Esc** to close the Preview window.
+
+	> [AZURE.IMPORTANT] When you select a product, that product is not highlighted to indicate you selected it. When we created the gallery, we didn't add this functionality. Know that clicking the product does select it.  
+
+3. Repeat these steps to add a couple more products. Press **ESC** to close the Preview window.
 4. On the **File** tab, select **Collections** to display a preview of the **OrderList** collection you created:  
 ![][21]
-
 
 > [AZURE.TIP] To remove all items from the order list, add a button, set its **Text** property to **Clear**, and set its **OnSelect** property to the following expression:  
 ```Clear(OrderList);SaveData(OrderList, "orderfile")```  
 To remove one item at a time, show the **OrderList** collection in a gallery, and then set the **OnSelect** property of a label in that gallery to the following expression:  
 ```Remove(OrderList, ThisItem);SaveData(OrderList, "orderfile")```
 
+## Tips and Tricks
+- At anytime, you can select the Preview button (![][7]) to view your charts, and to see how they look with data.
+- When designing your app, you can re-size the controls and move them around using click-and-drag.
+
+## What you learned
+In this topic, you:
+
+- Used the Collect() function to create a collection within your app.
+- You added a button control and when selected, the button adds new items to your collection.
+- Used a listbox to add items to your collection.
+- Added a slider control to update items within the collection.
 
 
 [1]: ./media/create-update-collection/insertmenu-inputtext.png

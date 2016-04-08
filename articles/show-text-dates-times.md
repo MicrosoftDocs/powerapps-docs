@@ -1,6 +1,6 @@
 <properties
-	pageTitle=" Show text and format a date or time in PowerApps | Microsoft Azure"
-	description="Add and format dates and times using Microsoft PowerApps"
+	pageTitle=" Show text and format a date or time in PowerApps | Microsoft PowerApps"
+	description="Add and format dates and times using PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/05/2015"
+   ms.date="11/25/2015"
    ms.author="mandia"/>
 
 
@@ -26,7 +26,8 @@ For example, add data from users about stock trades or client meetings, data fro
 
 ### Prerequisites
 
-- Install [PowerApps](http://aka.ms/powerappsinstall) from the Windows Store. Create a new app or open an existing app in PowerApps.
+- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- Create a new app or open an existing app in PowerApps.
 - To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
 
 ## Show text in a label
@@ -54,7 +55,7 @@ DateValue | Converts a literal string, as shown between quotation marks, to a va
 ![][5]  
 ![][6]  
 
-4. Move the Birthdate text so it all controls are shown.
+4. Move the Birthdate text so all controls are shown.
 5. In the **ShowText** label (created in step 1), set its **Text** property to the following expression:    
 ```DateDiff(Today(), DateValue(Birthdate!Text))```  
 
@@ -70,12 +71,12 @@ In these steps, you:
 - Used a "ShowText" label that is updated to show the output or calculated values from another input text control.
 
 ## Working with dates and times
-In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within PowerApps.
+In this section, we're going demonstrate different date and time functions, including DateTimeValue, DateTimeFormat, and more. The best way to see and use these functions is to create a blank screen within your app.
 
 Let's get started.
 
 ### Format date and time values
-There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your PowerApps app. We suggest creating a blank screen and stepping through the different scenarios.
+There are many functions you can use to format dates and times. You can even use custom formats. This section provides some examples of using dates and times with your apps. We suggest creating a blank screen and stepping through the different scenarios.
 
 #### Format date time using the DateTimeValue, DateTimeFormat, and DateValue functions
 
@@ -97,7 +98,7 @@ There are many functions you can use to format dates and times. You can even use
 4. Change the **Text** property of the label to the following expression:  
 ```DateTimeValue(ArrivalDateTime!Text, "fr")```
 
-	The label shows the day before the month, as expected for a French user:  
+	The label shows the day and then the month, as expected for a French user:  
 	![][12]  
 	> [AZURE.TIP] To use intellisense to see the other locales, in the expression in the function bar, remove the *closing quotation mark* and *fr*; but leave the *open quotation mark*:  
 	>![][13]  
@@ -243,14 +244,12 @@ You may need to convert data that you didn't expect. If you create **Input Text*
 	You can add entries to the lists so that users can choose a bigger range of hours and a more precise number of minutes. You can also add a third dropdown list so that users can choose seconds. If you add a third list, change the **Text** property of the label to the following expression:  
 	```Text(Time(Value(Hour!Selected!Value), Value(Minute!Selected!Value), Value(Second!Selected!Value)), DateTimeFormat!LongTime)```
 
-
-
-## More examples and fun stuff with dates and times
+## More examples and fun stuff
 
 Task | Steps | Output
 --- | --- | ---
-Use the Now function to display the current date and time | On the **Insert** tab, add a **Label**, and rename it to **MyLabel**. Set the **Text** property of the label to ```Now()```: <br/>![][8] | The date and time displayed depends on your computer's localization settings:  <ul><li>For the "en" locale, the date and time is ```5/10/2015 5:27 PM``` (month/day/year).</li><li>If using another locale, like "fr", it displays as ```10/5/2015 5:27 PM``` (day/month/year).</li></ul>
-Enter a date and a time, and have them displayed in another label  | <ol><li>On the **Insert** tab, select **Text**, add two **Input Text** boxes, and name them **ArrivalDate** and **ArrivalTime**.</li><li>In **ArrivalDate**, type in a date. For example, enter ```5/10/85```. </li><li>In **ArrivalTime**, type in a time. For example, enter ```6:15 AM```.</li><li>From the **Insert** tab, add a **Label**, and set its **Text** property to the following expression: ```"The product was launched on " & ArrivalDate!Text & " at " & ArrivalTime!Text & "."```</li></ol> | When done, your screen looks similar to the following: ![][9]  
+Use the **Now** function to display the current date and time | On the **Insert** tab, add a **Label**, and rename it to **MyLabel**. Set the **Text** property of the label to this function:<br>```Now()```<br><br>![][8] | The date and time displayed depends on your computer's localization settings:  <ul><li>For the "en" locale, the date and time is ```5/10/2015 5:27 PM``` (month/day/year).</li><li>If using another locale, like "fr", it displays as ```10/5/2015 5:27 PM``` (day/month/year).</li></ul>
+Enter a date and a time, and show them in another label  | <ol><li>On the **Insert** tab, select **Text**, add two **Input Text** boxes, and name them **ArrivalDate** and **ArrivalTime**.</li><li>In **ArrivalDate**, type in a date. For example, enter ```5/10/85```. </li><li>In **ArrivalTime**, type in a time. For example, enter ```6:15 AM```.</li><li>From the **Insert** tab, add a **Label**, and set its **Text** property to the following expression: ```"The product was launched on " & ArrivalDate!Text & " at " & ArrivalTime!Text & "."```</li></ol> | When done, your screen looks similar to this example: ![][9]  
 
 
 ## Tips and Tricks
@@ -273,8 +272,8 @@ In this topic, you:
 [5]: ./media/show-text-dates-times/inputtext.png
 [6]: ./media/show-text-dates-times/renamebirthdate.png
 [7]: ./media/show-text-dates-times/birthdateexpression.png
-[8]: ./media/show-text-dates-times/textnow.png
-[9]: ./media/show-text-dates-times/datetimeprompt.png
+[8]: ./media/show-text-dates-times/textnow2.png
+[9]: ./media/show-text-dates-times/datetimeprompt2.png
 [10]: ./media/show-text-dates-times/textdatetimevalue.png
 [11]: ./media/show-text-dates-times/datelabelinputtext.png
 [12]: ./media/show-text-dates-times/datelabelfr.png

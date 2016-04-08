@@ -1,0 +1,1 @@
+[**TemplateSize**](properties-size-location.md) The height of the template for a gallery in vertical/portrait orientation or the width of the template for a gallery in horizontal/landscape orientation.
