@@ -1,8 +1,8 @@
 <properties
-    pageTitle="Add a condition to a logic flow | Microsoft PowerApps"
-    description="Specify that a logic flow performs one or more tasks only if a particular condition is true."
+    pageTitle="Add a condition to a flow | Microsoft Flow"
+    description="Specify that a flow performs one or more tasks only if a particular condition is true."
     services=""
-    suite="powerapps"
+    suite="flow"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="dwrede"
@@ -10,27 +10,27 @@
     tags=""/>
 
 <tags
-   ms.service="powerapps"
+   ms.service="flow"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/20/2015"
+   ms.date="04/08/2016"
    ms.author="stepsic"/>
 
-# Add a condition to a logic flow #
+# Add a condition to a flow #
 
-Specify that a logic flow performs one or more tasks only if a particular condition is true. For example, specify that you'll get an email only if a tweet that contains a keyword is retweeted at least 10 times.
+Specify that a flow performs one or more tasks only if a particular condition is true. For example, specify that you'll get an email only if a tweet that contains a keyword is retweeted at least 10 times.
 
 **Prerequisites**
 
-- [Create a logic flow](get-started-logic-template.md) from a template
+- [Create a flow](get-started-logic-template.md) from a template
 
 ## Add a condition ##
 
-1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar.
+1. In [flow.microsoft.com](https://flow.microsoft.com), select **My Flows** in the top navigation bar.
 
-1. In the list of logic flows, select the edit icon next to the logic flow that you created from a template.
+1. In the list of flows, select the edit icon next to the flow that you created from a template.
 
     ![Icon to edit the azuretweets flow](./media/add-a-condition/edit-flow.png)
 
