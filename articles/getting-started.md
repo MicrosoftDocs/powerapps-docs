@@ -1,9 +1,10 @@
 <properties
 	pageTitle="Get Started | Microsoft PowerApps"
 	description="Quick ways to get started creating and using custom business apps with Microsoft PowerApps"
+	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="TourDeRyan"
+	authors="aftowen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -14,8 +15,8 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/29/2016"
-   ms.author="rycu"/>
+   ms.date="04/08/2016"
+   ms.author="anneta"/>
 
 # Get started with PowerApps #
 Welcome to Microsoft PowerApps! Here are a few quick ways to start creating and using custom business apps.
