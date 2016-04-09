@@ -15,7 +15,7 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/9/2016"
+   ms.date="04/09/2016"
    ms.author="anneta"/>
 
 # Get started with PowerApps #
