@@ -1,10 +1,10 @@
 <properties
-	pageTitle="Create a table"
-	description="Create a new table from scratch or based on some existing table."
+	pageTitle="Create a table | Microsoft PowerApps"
+	description="Create a table based on another table or from scratch."
 	services="powerapps"
 	documentationCenter="na"
 	authors="guangyang"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -17,71 +17,40 @@
    ms.date="04/07/2016"
    ms.author="guayan"/>
 
-# Create a Table
+# Create a table in PowerApps
+Store data that's specific to your organization in a custom table, and show that data by referring to the table when you develop an app. Create a table:
 
-PowerApps comes with a set of standard tables covering many common scenarios for every organization. It also allows you to create custom tables to store any type of data fitting your organization's needs. Each table will have a set of fields which you can create by yourself. You can also build relationships between two tables. After you create a custom table, you can use it in your apps the same way as standard tables. PowerApps will take care of the data storage and security automatically.
+- based on another table by copying its fields and settings but not its data
+- from scratch so that, by default, it contains only [four system fields and a record-title field](data-platform-create-table.md#system-and-record-title-fields)
 
-There are two ways to create a table:
+Either way, PowerApps stores and secures the data automatically. After you create a table, you can create or modify one or more of its fields and build relationships between tables.
 
-- From scratch
-- Based on an existing table
+**Note**: Before you create a table, [review the tables that PowerApps offers by default](). These tables cover common scenarios, such as a list of countries around the world. Save yourself some time by starting with one of these tables if any of them meets your needs out of the box or with only minor changes.
 
-Either way, PowerApps will always add the following system fields to the table automatically. They are read-only fields managed by PowerApps itself so you don't need to worry about how to assign values to them in your apps. You cannot change or delete these system fields.
+## Create a table ##
+1. In [powerapps.com](), select **Manage** > **Tables** in the left navigation pane.
+1. Near the upper-right corner, select **New Table**, and then specify a name, a display name, and (optionally) a description for your table.
 
-| Field name | Display name | Data type | Description |
+	**Important**: Make sure to specify a clear and meaningful name for your table because you can't change it later. You'll reference this name in formulas when you develop an app. The display name and the description should also be meaningful, but you can change them later.
+
+1. In the list, perform either of these steps:
+	- Select the name of a table to create a table based on that table.
+	- Select **blank** to create a table from scratch.
+1. Select **Save** to create the table.
+
+## System and record-title fields ##
+All tables, including any that you create from scratch, contain four system fields. These fields are read-only, so you can't change or delete them, and you don't assign values to them.
+
+| System-field name | Display name | Data type | Description |
 |------------|--------------|-----------|-------------|
 | CreatedOnDateTime | Created on | DateTime | The date and time when a record was created. |
 | CreatedByUser | Created by | User | The user who created a record. |
-| LastModifiedDateTime | Last modified on | DateTime | The most recent date and time when a record was modified. |
-| LastModifiedByUser | Last modified by | User | The most recent user who modified the record. |
+| LastModifiedDateTime | Last modified on | DateTime | The date and time when a record was modified most recently. |
+| LastModifiedByUser | Last modified by | User | The user who modified the record most recently. |
 
-## Create a table from scratch
-
-This will create a table with the system fields and one additional custom field. Following are the steps:
-
-1. Login to [PowerApps portal]() with your organization's account.
-2. Click the **Manage** tab on the left hand navigation pane. Then Click **Tables** to navigate to the table management page.
-3. Click the **New Table** button on the top right corner of the page.
-4. Enter the following information for the new table:
-	a. Table name, required.
-	b. Display name, required.
-    c. Description, optional.
-5. Choose **blank** as the table to base on. You can see the fields the new table will include by default.
-6. Click the **Save** button to finish the table creation.
-7. After the operation finishes, you'll be able to see the fields of the new table and make further changes right away.
-
-The one additional custom field gets added automatically is named **Title** and is set as the table's record title field. This field will be used as the user friendly identifier of a record whenever a record is used in any app UI. Every table needs to have a record title field. You can choose to use another field later. For more information, please go [here]().
-
-## Create a table based on an existing table
-
-This will create a table with all the fields and settings copied from an existing table of your choice. It's very convenient if you need to create a new table which is similar to some existing table. It will only copy the table metadata rather than the data. Following are the steps:
-
-1. Login to [PowerApps portal]() with your organization's account.
-2. Click the **Manage** tab on the left hand navigation pane. Then Click **Tables** to navigate to the table management page.
-3. Click the **New Table** button on the top right corner of the page.
-4. Enter the following information for the new table:
-	a. Table name, required.
-	b. Display name, required.
-    c. Description, optional.
-5. Choose a table to base on in the combobox. You can see the fields the new table will include once you've chosen a base table.
-6. Click the **Save** button to finish the table creation.
-7. After the operation finishes, you'll be able to see the fields of the new table and make further changes right away.
-
-## Restrictions and best practices
-
-It's important to choose a meaningful table name at the very beginning. This is because this table name is the unique identifier of the table itself so that you can reference it in PowerApps formulas. You won't be able to change the table name after the table is created.
-
-It's recommended to choose a meaningful display name, as well as provide useful description for a table. This information will be used in the UI where this table is displayed. You can change them later.
-
-Before creating any new tables, it's recommended to go through the standard tables for two reasons:
-
-1. Check if some standard tables fit your needs already. If so, use them instead of creating a new table.
-2. If no standard table fits your needs exactly, see whether some table is similar enough that you can have the new table based on it. This will not only make it easier to create a new table but also help you design the new table by providing some common fields already. You can choose to add, change or delete some fields as needed.
+If you create a table from scratch, it also contains a custom field that's named **Title** and set as the [record-title field](). A record-title field is the user-friendly identifier of a record whenever a record is used in any app UI. You can change which field is used, but every table must have a record title field.
 
 ## Next steps
-
-Now you've learned how to create a table, following are some other articles as next steps:
-
 - [Manage fields in a table]()
 - [Define relationships between tables]()
 - [Create an app using tables]()
