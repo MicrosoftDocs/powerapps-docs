@@ -1,6 +1,6 @@
 <properties
     pageTitle="Add an advanced parameter and multiple actions | Microsoft Flow"
-    description="Expand Microsoft Flow to include an advanced parameter, such as setting email to high priority, and add another action for the same event."
+    description="Expand a flow to include an advanced parameter, such as setting email to high priority, and add another action for the same event."
     services=""
     suite="flow"
     documentationCenter="na"
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/07/2016"
+   ms.date="04/08/2016"
    ms.author="stepsic"/>
 
 # Add multiple actions and advanced parameters to a flow #

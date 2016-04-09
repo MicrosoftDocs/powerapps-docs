@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Automate tasks by creating a flows | Microsoft Flow"
+    pageTitle="Automate tasks by creating a flow | Microsoft Flow"
     description="Create a flow to automatically perform actions, such as sending mail, when events occur, such as someone adding a row to a SharePoint list."
     services=""
     suite="flow"
@@ -15,10 +15,10 @@
     ms.topic="get-started-article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-   ms.date="04/07/2016"
+   ms.date="04/08/2016"
     ms.author="anneta"/>
 
-# Create a flows#
+# Create a flow#
 
 [AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-bb62-f1e5920004d6]
 
@@ -102,7 +102,7 @@ Create a flow to perform a task automatically when you want an event to kick off
 
 		![Resume icon](./media/get-started-logic-flow/resume-icon.png)  
 
-	- To delete a flow, select the icon that looks like a trash can next to the flow that you want to delete, type the full name of your flow into the confirmation dialog box, and then click **Delete**.  
+	- To delete a flow, select the icon that looks like a trash can next to the flow that you want to delete, type the full name of your flow into the confirmation dialog box, and then select **Delete**.  
 
 		![Delete icon](./media/get-started-logic-flow/delete-icon.png)  
 

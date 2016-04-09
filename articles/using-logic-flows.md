@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Start a flow in an app  | Microsoft PowerApps"
+	pageTitle="Start a flow in an app | Microsoft PowerApps"
 	description="Create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in an app."
 	services=""
 	suite="powerapps"
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/05/2015"
+   ms.date="04/08/2016"
    ms.author="prkumar"/>
 
 # Start a flow in an app #
@@ -42,7 +42,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 1. Under **How would you like to start?**, select **PowerApps - When a control is selected**.
 
-	![Specify the trigger that initiates the  flow](./media/use-logic-flows/set-trigger.png)
+	![Specify the trigger that initiates the flow](./media/use-logic-flows/set-trigger.png)
 
 1. Select the plus icon, and then select **Add action**.
 
