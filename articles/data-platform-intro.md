@@ -1,10 +1,10 @@
 <properties
-	pageTitle="Understanding tables"
-	description="Introduction to tables, fields, relationships and workspaces."
+	pageTitle="Understand tables | Microsoft PowerApps"
+	description="Introduction to tables, fields, relationships, and workspaces."
 	services="powerapps"
 	documentationCenter="na"
 	authors="guangyang"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -17,82 +17,63 @@
    ms.date="04/07/2016"
    ms.author="guayan"/>
 
-# Understanding Tables
+# Understand tables in Microsoft PowerApps #
+You can store organizational data in one or more custom tables, which offer several benefits over external data sources such as Excel and Salesforce. If you already have a set of data in another format, you can import it into a custom table, or you can use a custom table to compile a set of data from scratch. You can easily incorporate custom tables into an app that you're developing, just as you do with data in other sources. You can also leverage generic data, such as a list of countries from around the world, from standard tables that are built in to PowerApps.
 
-PowerApps provides a powerful data platform with many capabilities that make it easier to create applications. In this platform, data is stored in tables. Each table has a set of fields of a particular data type. Information is stored as records of the table. Tables can be related to other tables via lookup. Applications can create, read, update and delete records in a table.
+Each table comprises a set of records that users can create, read, update, and delete. Each record has information in various fields, and each field contains data of a specific type. You can also create relationships between tables so you can look up information in one table based on a record in another table.
 
-## Why Tables?
+For example, you could create a product table that contains a record for each product and fields that contain the name, the price, and an image of each product. You would set the price field to the currency data type, and you could create a lookup relationship between that table and a customer table to identify which products each customer bought.
 
-PowerApps support both storing data in the platform as well connecting to your organization's existing data both in the cloud and on-premises. Having said that, tables offering the following benefits:
+## Why tables? ##
+If you're not sure whether tables are your best option, consider these benefits:
 
-- Rich metadata: It provides rich metadata describing the schema of your data, which will be used in the applications you build. You can easily define tables and fields work nice with PowerApps.
-- Easy to manage: Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they are stored.
-- Easy to share: It's easy to share data with your colleagues. PowerApps will figure out the permission.
-- Secure: Data is stored securely that only people who you granted access can see them.
+- Rich metadata: Tables provide rich metadata that describe the schema of your data and that are used in the apps that you build. You can easily define tables, and fields work nicely with PowerApps.
+- Easy to manage: Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they're stored.
+- Easy to share: You can easily share data with your colleagues because PowerApps manages the permissions.
+- Secure: Data is stored securely so that users can see it only if you grant them access.
 
-If you are building applications storing some new data, tables is a great option for you. Or if you have some existing data in some ad-hoc data source (like Excel files), importing them into tables is also recommended.
+## Standard and custom tables ##
+When you develop an app, you can use standard tables, custom tables, or both:
 
-## Standard and Custom Tables
+- PowerApps provides standard tables by default, and they're designed, in accordance with best practices, to capture the most common concepts for an organization. You can add information such as [contacts](), [accounts](), and [products]() in standard tables, but you can also review  [the full list of standard tables]().
+- You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. For more information, see [the steps for how to create a custom table](data-platform-create-table.md).
 
-There are two types of tables:
+If a standard table can serve a particular purpose in your app, you should use it rather than developing a custom table that does the same thing. If a standard table would serve a purpose with a few changes, you can add fields to suit your needs. However, you can't make changes that break the table (such as deleting a standard field) or that restrict its information (such as adding a required field). These requirements ensure that standard tables remain consistent across all organizations.
 
-- **Standard tables**: These are tables provided by PowerApps out-of-box, like [Contact](), [Account]() and [Product](), etc. They are designed to capture the most common concepts for an organization with best practices. For a full list of standard tables, please go [here]().
-- **Custom tables**: These are new tables you create to store information unique to your organization. They are designed to extend the functionality that standard tables provide.
+## Fields ##
+Each field has a name, a display name, a data type (such as text or number), and some simple validation (such as required or uniqueness). Every field falls into one of three categories: system field, standard field, or custom field.
 
-It is always a good idea to leverage standard tables whenever they fit your organization's needs. You can add new fields to a standard table to customize it without creating a whole new custom table. When you do such kind of customization on standard tables, keep in mind that you cannot make any breaking changes (like deleting a standard field) or any changes that restrict the information stored in the standard tables (like adding a new required field). This guarantees the same baseline of standard tables for all organizations.
+### System fields ###
+All tables, whether standard or custom, are created with a set of read-only fields, which you can't change, delete, or set to a value. For more information, see [the full list of system fields](), but these are the most important:
 
-To learn how to create a table, please go [here]().
+- **CreatedDateTime**: the date and time when a record was created.
+- **ModifiedDateTime**: the date and time when a record was modified most recently.
 
-## Fields
+### Standard fields ###
+Each standard table contains a set of default fields, which you can't change or delete. For more information, see [the full list of standard tables and their default fields]().
 
-Each table contains a set of fields. Each field has both name and display name, data type, like text or number, and some simple validation like required or uniqueness. There are three types of fields.
+### Custom fields ###
+You can create one or more custom fields in either a standard table or a custom table. For each field, you specify its name, its display name, and its data type. These data types are the most important that PowerApps supports (as of this writing):
 
-### System Fields
-
-All tables, standard and custom have a set of read-only fields provided by the system. These fields cannot be changed or deleted. The value will also be assigned by the system automatically. Following is a list of the most important system fields:
-
-- CreatedDateTime: the date and time when a record was created.
-- ModifiedDateTime: the date and time when a record was last modified.
-
-For a full list of system fields, please go [here]().
-
-### Standard Fields
-
-These are fields in the standard tables provided by the system. These fields cannot be changed or deleted. For a full list of standard tables and corresponding standard fields, please go [here]().
-
-### Custom Fields
-
-These are fields created by you. You can create custom fields in both standard and custom tables. In addition to the name and display name, all fields must be defined as a particular data type. Following is a list of the most important data types PowerApps supports today.
-
-- Number Sequence: a system generated read-only sequence number. Usually used as the record unique ID.
+- Number Sequence: a sequence number that's read-only and generated automatically. Usually used as the record's unique ID.
 - Text: text of various lengths.
 - Number: number.
 - Boolean: true or false.
 - DateTime: date and time.
 - Enumeration: one value from a list of values.
-- Currency: numeric value representing money.
-- Email: text value representing email.
-- Phone: text value representing phone number.
-- URL: text value representing URL.
-- Location: location by latitude and longitude.
+- Currency: numeric value that represents money.
+- Email: text value that represents an email address.
+- Phone: text value that represents a phone number.
+- URL: text value that represents a URL.
+- Location: location as defined by latitude and longitude.
 
-For a full list of supported data types, please go [here](). To learn how to manage fields in a table, please go [here]().
+For more information, see the [steps for creating a field](filename.md) and [the full list of supported data types](filename.md).
 
-## Relationships
+## Lookup relationships ##
+You can navigate between records in tables if they have a relationship that's  defined as a field of the lookup data type. To create a lookup relationship, add a field of data type lookup in one table, and point to the table in which you want to look up information. For more information, see [the steps to create a lookup relationship](filename.md).
 
-Tables can have relationships between each other. Such relationships are defined as fields of data type lookup, which allow you to navigate from records of one table to the corresponding records in another table. Creating a relationship is as simple as adding a field of data type lookup and pointing to the table you want to look up to.
+## Workspaces ##
+You create a table in your own workspace so that other users can't see it unless you share it with them. In addition, other users can create tables that have the same name without conflicting with your table. Every workspace contains a copy of the standard tables.
 
-To learn how to create relationships in details, please go [here]().
-
-## Workspace
-
-A workspace is a set of tables sharing the same scope and security boundary. By default, every user who has permission to manage tables has his/her own workspace and they'll have their own copy of the standard tables in their own workspaces.
-
-Workspace provides a separation of tables so that within an organization, different individuals or groups can create tables with the same name. You can also share your workspace with others so that multiple people within an organization can collaborate on the same set of tables.
-
-## Get Started
-
-Want to try it out? Please go through the following articles:
-
-1. [Create a table]().
-2. [Create a PowerApps using tables]().
+## Get started ##
+Try it out by [creating a table](data-platform-create-table.md) and then [creating an app that uses a table](filename.md).
