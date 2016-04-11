@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -15,8 +15,8 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/11/2016"
-   ms.author="litran"/>
+   ms.date="01/04/2016"
+   ms.author="anneta"/>
 
 # Create an app from a template #
 
