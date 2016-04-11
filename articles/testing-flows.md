@@ -1,11 +1,11 @@
 <properties
-    pageTitle="Testing flows flows | Microsoft Flow"
-    description="Test your flows before you finish them to verify they behave as you need."
+    pageTitle="Test a flow | Microsoft Flow"
+    description="Test each flow before you finish it to verify that it behaves as you expect."
     services=""
     suite="flow"
     documentationCenter="na"
     authors="merwanhade"
-    manager="dwrede"
+    manager="erikre"
     editor=""
     tags=""/>
 
@@ -18,26 +18,29 @@
    ms.date="04/08/2016"
    ms.author="mhade"/>
 
-# Testing your flows #
+# Test a flow with Microsoft Flow #
+Before you finish creating a flow, test it to verify whether it runs as you expect.
 
-Test in Microsoft Flow to make sure your flows will run as expected.
+1. Create or modify a flow, and then select **Test flow**.
 
-**Prerequisites**
-- [Create a flow](get-started-logic-template.md)
+ 	For example, [create a flow](get-started-logic-template.md) that sends email to an address that you specify whenever anyone tweets using a particular keyword or hashtag, such as **#azure**. The email contains details about the tweet.
 
-1.Create a new flow. You can create one from a template or start from scratch. This tutorial uses a flow where whenever a new tweet appears, an email is sent with details about the tweet.
+	[Show an authored flow with emphasis on the **Test flow** button]
 
-2.After you've authored your flow, click the **Test flow** button.
-[Insert image showing an authored flow with emphasis on the Test flow button]
+1. Perform the trigger action.
 
-3.To complete the test, perform the trigger action. e.g. Post a new tweet with a hashtag "azure" (i.e. #azure)
-[Insert image showing the prompt of "This flow can't be tested until the trigger action is performed"]
+ 	For example, send a tweet that contains the #azure hashtag.
 
-4.Once the trigger condition is met, the rest of your flow will be executed. You can view the results of the execution in the designer.
-[Insert image showing success.]
+	[Show the prompt of "This flow can't be tested until the trigger action is performed"]
 
-5.Click on an individual trigger or action to see the inputs and outputs of the execution.
-[Insert image where the trigger is expanded to show inputs and outputs]
+	Your flow runs, and the results appear in the designer.
 
-6.You can now finish creating the flow by choosing the **Create** button or go back to editing the flow by choosing the **Edit** button.
-[Insert image with emphasis on the Edit flow and Create buttons]
+	[Show successful result.]
+
+1. (optional) Select an individual trigger or action to show the inputs and outputs of the execution.
+
+	[Show a trigger that's expanded to show inputs and outputs]
+
+1. Select **Create** to finish creating the flow, or select **Edit** to make more changes.
+
+	[Show flow with emphasis on the **Edit flow** and **Create** buttons]
