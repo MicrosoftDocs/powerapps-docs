@@ -1,11 +1,11 @@
 <properties
     pageTitle="Publish a template | Microsoft Flow"
-    description="Publish a Microsoft Flow template so others can use the flow you created."
+    description="Publish a Microsoft Flow template so that others can use the flow you created."
     services=""
     suite="flow"
     documentationCenter="na"
     authors="sunaysv"
-    manager="dwrede"
+    manager="erikre"
     editor=""
     tags=""/>
 
@@ -18,16 +18,17 @@
    ms.date="04/08/2016"
    ms.author="sunayv"/>
 
-# Publishing a template #
+# Publish a template for Microsoft Flow #
+Create a template by creating or modifying a flow and then publishing it in the gallery so that others can create their own flows based on your template.
 
-Creating and sharing a template is easy with Microsoft Flow. Once you have created a flow from scratch or modified and existing template, you can choose to share it with all the users of Microsoft Flow. 
+1. Create or modify a flow, and then select **Publish** on the confirmation page.
 
-The Publish button can be found on the confirmation page after you have successfully created a flow. 
-![Confirmation page](image of the confirmation)
+	![Confirmation page](image of the confirmation)
 
-Click on the Publish button and make sure you enter a suitable title for your template along with a description that explaining what it does. 
+1. Give your template a meaningful title and a clear description of what your template does.
 
-A clear and concise description, makes it very easy for other users to use your template. 
-![Submit your template](image of the submission)
+	![Submit your template](image of the submission)
 
->[Note]: If approved, it may take a few hours for your template to show up in the gallery. Microsoft may modify your template before publishing it to the gallery. 
+	If your template is approved, it will appear in the gallery within the next few hours.
+
+**Note**: Microsoft may modify your template before publishing it to the gallery.
