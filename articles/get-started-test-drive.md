@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="linhtranms"
-	manager="darshand"
+	authors="AFTOwen"
+	manager="dwrede"
 	editor=""
 	tags=""/>
 
