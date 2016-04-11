@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
-	manager="dwrede"
+	authors="linhtranms"
+	manager="darshand"
 	editor=""
 	tags=""/>
 
@@ -15,8 +15,8 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/04/2015"
-   ms.author="anneta"/>
+   ms.date="04/11/2016"
+   ms.author="litran"/>
 
 # Create an app from a template #
 
@@ -30,75 +30,95 @@ Create an app automatically based on one of several templates for a variety of s
 
 - An account on DropBox, OneDrive, or GoogleDrive for storing sample data in the cloud
 
+## What will you learn in this article? ##
+
+- Create an app from a template
+- Save and share the app you just created
+
 ## Open a template ##
 1. Open PowerApps.
 
+**Note: ** If you haven't installed PowerApps before, please click the link above in Prerequisite to install PowerApps. You can also download PowerApps by clicking the pointing down arrow on PowerApps web portal to download. 
 1. If you haven't opened PowerApps before, select the right-pointing arrow near the lower-right corner to advance through the opening screens, and then sign in.
 
-1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
+2. If you haven't opened PowerApps before, you will be prompted to sign in. Please enter the account you used to sign up for PowerApps. It should be your school or organization account. 
+
+4. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
 
 	![The Connections option on the File menu](./media/get-started-test-drive/file-connections.png)
 
-1. Select **Available connections**, select **Dropbox** (or another cloud-storage account), and then select **Connect**.
+5. This will open PowerApps web portal. Select ** Connection ** tab and select ** Addd a connection **
+	
+	![The Connections option on the web portal](./media/get-started-test-drive/portal-add-a-connection.png)
+
+6. In the list of available connections, select ** Dropbox ** (or another cloud-storage account), and then select ** Add connection **.
 
 	![Option to add Dropbox as a data connection](./media/get-started-test-drive/add-dropbox.png)
 
-1. Provide your credentials, and then select **Sign in**.
+7. Provide your credentials, and then select **Sign in**. Please ** Allow ** Dropbox to access files in your system if prompted. 
 
 	![Prompt to provide credentials for Dropbox](./media/get-started-test-drive/dropbox-credentials.png)
 
-1. Select **New** on the **File** menu (near the left edge of the screen).
+8. Your Dropbox connection should be successfully created and listed in the PowerApps web portal.
+
+	![Dropbox connection successfully created](./media/get-started-test-drive/portal-add-dropbox-success.png)
+
+9. Go back to PowerApps on your Desktop
+
+10. Select **New** on the **File** menu (near the left edge of the screen).
 
 	![The New option on the File menu](./media/get-started-test-drive/file-new.png)
 
-1. Leave the default option to create an app for a phone.
+11. Select ** Create an app ** and ** Start from a template **. Then select a form factor for the app you want to create, phone or tablet. In this example, I'll select ** Phone **.
 
 	![The option to create an app for a tablet or a phone](./media/get-started-test-drive/phone-app.png)
 
 	**Note:** You can create an app for a tablet, but this tutorial focuses on the phone option.
 
-1. Under **Start from a template**, select **Get started**.
+12. You will be shown a list of templates to choose from. 
+
+	**Note:** If you configure the connection like in step 4-6 above, you won't need to set up the connection again. However, if you haven't set up your connection, you'll need to do so before you can use a template to create an app by clicking the ** Add a connection ** at the bottom of the page where all the templates are listed. Follow similar steps 5-6 to set up the connection. 
+
+	![The option to create connection within template view](./media/get-started-test-drive/Add-a-connection-template.png)
+
+13. In the list of templates, select ** Cost Estimator **, and then select ** Use ** (near the lower-right corner).
 
 	![Open a PowerApps template](./media/get-started-test-drive/open-template.png)
 
-1. In the list of template categories, select **Events & Calendar**, select **Event SignUp**, and then select **Use** (near the lower-right corner).
+14. Once you select ** Use ** , the app is created and sample data is being copied over to your Dropbox (or chosen storage account). 
 
-	![Open the Event Signup template template](./media/get-started-test-drive/choose-template.png)
+15. Once the app is created, the ** Cost Estimator ** home page will appear.
 
-	When the app is created, the **VolunteerDetailsScreen** appears.
-
-	![VolunteerDetailsScreen with default information](./media/get-started-test-drive/volunteer-default.png)
+	![Cost Estimator Home Screen](./media/get-started-test-drive/CostEstimator_Home_SelectJob.png)
 
 ## Explore the app's default behavior ##
 Apps from templates open in the default workspace, where you'll spend most of your time customizing an app or creating one from scratch. Before you make changes, you'll explore how the app works in **Preview**.
 
 **Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
 
-1. In the left navigation bar, select the thumbnail for the **VolunteerDetailsScreen**.
+1. In the left navigation bar, select the thumbnail for the **OpenJobsPage**.
 
 	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.png)
 
-1. Press F5 (or select the right arrow in the upper-right corner) to open **Preview**.
+2. Press F5 (or select the right arrow in the upper-right corner) to open **Preview**.
 
 	![Button to open Preview](./media/get-started-test-drive/preview-button.png)
 
-1. Select a t-shirt size, and then select **Next**.
+3. **Cost Estimate** is pre-populated with sample data to demonstrate the functionality of the app. This is an app that allows user create job entry with client on site and create an estimate for how much it costs to replace flooring for a room with chosen material. 
 
-	![Options for specifying a t-shirt size and a Next button](./media/get-started-test-drive/tshirt-size.png)
+4. Select a job entry **Olivia Gill** on the home screen to view details.
 
-	**ScheduleScreen** appears with columns for days, timeslots, and names of volunteers.
+	![Cost Estimator Home Screen](./media/get-started-test-drive/CostEstimator_Home_SelectJob.png)
 
-1. Select a **Sign up** button to schedule yourself for a timeslot.
+5. Select a **Begin Estimate** button to start an estimate.
 
-	![Button for signing up for a particular timeslot](./media/get-started-test-drive/signup-button.png)
+	![Begin Estimate](./media/get-started-test-drive/BeginEstimate.png)
 
-	**Note:** When you sign up for a timeslot, any remaining **Sign up** buttons for the same timeslot become unavailable.
+6. (optional) Verify that the data in your cloud account reflects your changes after you finish an estimate.
 
-1. (optional) Verify that the data in your cloud account reflects your changes.
+7. (optional) Add a new job entry by clicking the **'+'** on the home page.
 
-1. (optional) Remove yourself from a timeslot by selecting the "X" icon next to your name.
-
-1. Return to the default workspace by selecting the "X" icon in the upper-right corner (under the PowerApps title bar).
+8. Return to the default workspace by selecting the **'X'** icon in the upper-right corner (under the PowerApps title bar).
 
 	![Button to close Preview](./media/get-started-test-drive/close-preview.png)
 
@@ -111,19 +131,19 @@ When an element is selected, you can configure it in these ways:
 
 - Change it directly (for example, by moving it).
 - Select a tab on the ribbon near the top of the screen, and then select an option on that tab.
-- Select an option in the properties list, and then type a value in the formula bar. These elements appear near the top of the screen and are separated by an equals sign and the function button. In this example, the **Items** property appears in the properties list, and the value of that property (**Schedule**) appears in the formula bar.
+- Select an option in the properties list, and then type a value in the formula bar. These elements appear near the top of the screen and are separated by an equals sign and the function button. In this example, the **Items** property appears in the properties list, and the value of that property (**Job**) appears in the formula bar.
 
 	![Properties list and formula bar](./media/get-started-test-drive/properties-list.png)
 
 If you can't find a property on the ribbon, find it in the properties list, which shows properties alphabetically.
 
-1. Near the top of the screen, select **Event Signup**.
+1. Near the top of the screen, select **Cost Estimator**.
 
 	![A text box surrounded by a selection box](./media/get-started-test-drive/selected-label.png)
 
 1. Move the text box to the left edge of the screen by dragging the selection box around the text box.
 
-1. Highlight the text inside the text box (for example, by triple-clicking it), and then change the text by typing **Sign up for PowerApps Conference**.
+1. Highlight the text inside the text box (for example, by triple-clicking it), and then change the text by typing **Cost Estimator for Flooring**.
 
 1. Resize the text box by dragging a handle in the upper-right or lower-right corner of the selection box until all the text appears in the box.
 
@@ -133,7 +153,7 @@ If you can't find a property on the ribbon, find it in the properties list, whic
 
 	The text box shows the current date and time.
 
-1. With the text box still selected, rename it by selecting **Label11_2** on the **Home** tab and then typing **Banner**.
+1. With the text box still selected, rename it by selecting **TextBox1** on the **Home** tab and then typing **Banner**.
 
 	![Renaming a control](./media/get-started-test-drive/rename-label.png)
 
