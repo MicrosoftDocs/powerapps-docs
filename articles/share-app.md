@@ -4,16 +4,10 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-<<<<<<< HEAD
     authors="jamesol-msft"
-    manager="dwrede"
-=======
-    authors="AFTOwen"
     manager="erikre"
->>>>>>> 14faefd57481faea0496e429441498246b15d099
     editor=""
-    tags=""
- />
+    tags=""/>
 <tags
     ms.service="powerapps"
     ms.devlang="na"
