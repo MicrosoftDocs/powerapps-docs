@@ -29,31 +29,31 @@ Customize an app by changing its name, its tile, its screen size, its screen ori
 ## Rename an app ##
 - Under **App name**, select **Rename this app**, and then type a different name.
 
-	![Close an app](./media/change-app-settings/rename-app.png)
+	![Close an app](./media/set-aspect-ratio-portrait-landscape/rename-app.png)
 
 ## Change an app tile ##
 Follow one or more of these steps:
 
 - Select a different background color from the list of options.
 
-	![Select a tile color](./media/change-app-settings/tile-colors.png)
+	![Select a tile color](./media/set-aspect-ratio-portrait-landscape/tile-colors.png)
 
 - Select an icon from the list of default icons.
 
-	![Select a tile icon](./media/change-app-settings/tile-icons.png)
+	![Select a tile icon](./media/set-aspect-ratio-portrait-landscape/tile-icons.png)
 
 - Select **Browse file**, select the image that you want to use, and then select **Open**.
 
 ## Change screen size and orientation ##
 1. Under **App settings**, select **Screen size + orientation**.
 
-	![Option to change the screen size and orientation of an app](./media/change-app-settings/size-orientation.png)
+	![Option to change the screen size and orientation of an app](./media/set-aspect-ratio-portrait-landscape/size-orientation.png)
 
 1. In the **Orientation** list, select either **Portrait** or **Landscape**.
 
 1. (Tablet apps only) Under **Aspect ratio**, select the ratio that matches the target device for this app.
 
-	![Change the aspect ratio of a tablet app](./media/change-app-settings/aspect-tablet.png)
+	![Change the aspect ratio of a tablet app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
 
 1. Under **Lock aspect ratio**, specify either **On** or **Off**.
 

@@ -4,8 +4,13 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
+<<<<<<< HEAD
     authors="jamesol-msft"
     manager="dwrede"
+=======
+    authors="AFTOwen"
+    manager="erikre"
+>>>>>>> 14faefd57481faea0496e429441498246b15d099
     editor=""
     tags=""
  />
@@ -32,7 +37,7 @@ If you share an app with a group, everyone in that group will have the permissio
 
 If you share an app with your organization, everyone in that group will have permission only to run the app by default.
 
-[What is PowerApps?](https://aka.ms/pamktg)
+**Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
 
 ## Prerequisites ##
 - An account with which you've signed in to [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) or PowerApps.

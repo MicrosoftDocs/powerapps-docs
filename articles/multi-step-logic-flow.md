@@ -1,8 +1,8 @@
 <properties
-    pageTitle="Add an advanced parameter and multiple actions | Microsoft PowerApps"
-    description="Expand Logic Flows to include an advanced parameter, such as setting email to high priority, and add another action for the same event."
+    pageTitle="Add an advanced parameter and multiple actions | Microsoft Flow"
+    description="Expand a flow to include an advanced parameter, such as setting email to high priority, and add another action for the same event."
     services=""
-    suite="powerapps"
+    suite="flow"
     documentationCenter="na"
     authors="stepsic-microsoft-com"
     manager="erikre"
@@ -10,30 +10,30 @@
     tags=""/>
 
 <tags
-   ms.service="powerapps"
+   ms.service="flow"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/14/2015"
+   ms.date="04/08/2016"
    ms.author="stepsic"/>
 
-# Add multiple actions and advanced parameters to Logic Flows #
-Customize a Logic Flow by adding one or more advanced parameters and multiple actions for the same trigger. For example, add an advanced parameter that sends an email message as high priority. In addition to sending mail when an item is added to a SharePoint list, create a file in Dropbox that contains the same information.
+# Add multiple actions and advanced parameters to a flow #
+Customize a flow by adding one or more advanced parameters and multiple actions for the same trigger. For example, add an advanced parameter that sends an email message as high priority. In addition to sending mail when an item is added to a SharePoint list, create a file in Dropbox that contains the same information.
 
 **Prerequisites**
 
-- [Create a logic flow](get-started-logic-flow.md).
+- [Create a flow](get-started-logic-flow.md).
 
 ## Add another action ##
 
 In this procedure, you'll add an action in the middle of the flow. This action will save a file in your Dropbox, archiving the item in the list.
 
-1. In [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209), select **Logic flows** in the left navigation bar.
+1. In [flow.microsoft.com](https://flow.microsoft.com), select **My Flow** in the top navigation bar.
 
-2. In the list of logic flows, select the edit icon, which looks like a pencil, next to the logic flow that you want to edit.
+2. In the list of flows, select the edit icon, which looks like a pencil, next to the flow that you want to edit.
 
-1. In your logic flow, collapse the event and the action by selecting the title bar of each.
+1. In your flow, collapse the event and the action by selecting the title bar of each.
 
     ![Collapsed add](./media/multi-step-logic-flow/collapsed.png)
 
@@ -69,11 +69,11 @@ In this procedure, you'll add an action in the middle of the flow. This action w
 
     ![Delete the menu](./media/multi-step-logic-flow/deletemenu.png)
 
-	**Note:** You can't delete an action if you are using any outputs from it anywhere in the logic flow. First, remove those outputs from the fields, and then you can delete the action.
+	**Note:** You can't delete an action if you are using any outputs from it anywhere in the flow. First, remove those outputs from the fields, and then you can delete the action.
 
 ## Add advanced parameters
 
-Start with a logic flow that has a step for **Send email**.
+Start with a flow that has a step for **Send email**.
 
 1. Near the bottom of the **Send email** form, select the **...** icon to show advanced parameters.
 

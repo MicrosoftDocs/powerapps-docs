@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
-	manager="erikre"
+	authors="sarafankit"
+	manager="darshand"
 	editor=""
 	tags=""/>
 
@@ -24,6 +24,7 @@ Create an app automatically based on data that you specify, explore how the app 
 
 **Prerequisites**
 
+- Install [PowerApps for Windows](http://aka.ms/powerappsinstall)
 - Learn how to [configure a control](add-configure-controls.md).
 - Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in your OneDrive account.
 
@@ -31,21 +32,21 @@ Create an app automatically based on data that you specify, explore how the app 
 
 ## Create the app ##
 
+1. Open PowerApps, you may have to sign in if you are opening PowerApps for the first time.
+
 1. In PowerApps, click or tap **New** on the **File** menu (near the left edge of the screen).
 
 	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
-1. Under **Start from your data**, click or tap **Get started**.
+1. Under **Create an app from your data**, click or tap **Phone layout** on **OneDrive** tile. (Note: You can use OneDrive for Business, DropBox or Google Drive as well, the steps are similar to OneDrive.)
 
 	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
 
-1. Click or tap **Add a new connection**, click or tap **OneDrive**, and then click or tap **Connect**.
+1. If you have not connected to OneDrive before, you will be prompeted to create a new Connection. Click or tap **Connect**, and when prompted, provide your credentials.
 
 	![Connect to OneDrive](./media/get-started-create-from-data/connect-onedrive.png)  
 
-1. When prompted, provide your credentials.
-
-1. Under **Select an Excel file**, click or tap **flooringestimates.xlsx**, and then click or tap **Connect**.
+1. Under **Select an Excel file**, browse to excel file and then click or tap **flooringestimates.xlsx**.
 
 	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
@@ -55,9 +56,9 @@ Create an app automatically based on data that you specify, explore how the app 
 
 PowerApps builds an app that contains three screens:
 
-- **BrowseScreen1** shows some information about each item so that users can easily browse for the item they want.
+- **BrowseScreen1** shows a list of all items and some information about them  so that users can easily browse for the item they want.
 - **DetailScreen1** shows all information about a single item.
-- **EditScreen1** shows controls with which users can add an item or update information about an item.
+- **EditScreen1** enables users to add an item or update information about an item.
 
 When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to adjust the default settings to optimize the app for your needs.
 
@@ -73,11 +74,11 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
 
-1. Click or tap the first image in the list, and then set its **Image** property to **ThisItem.ImageURL**.
+1. Click or tap the first image in the list, and then from the **Options** pane set its value to **ImageURL**
 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/set-image-url.png)
 
-1. Set the **Text** property of upper text box to **ThisItem.Name**, and set the **Text** property of lower text box to **ThisItem.Category**.
+1. Set the upper text box to **Name**, and set the lower text box to **Category**.
 
 	The content of **BrowseScreen1** changes to reflect your selections.
 
@@ -85,16 +86,17 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**.
 
-1. In the **Quick tools** pane, click or tap the **Theme** tab, and then click or tap a different theme, such as **Lavender**.
+1. Click or tap the **DetailScreen1** from the screen thumbnails on the left side.
 
-	![Change the theme](./media/get-started-create-from-data/choose-theme.png)
+1. Click or tap on the ![View Form] on the screen canvas, to bring up the Options pane for the Form on the right.
 
-	As the thumbnails in the left navigation bar show, each screen in the app changes to reflect your selection.
+1. Drag & Drop the Name field to the top position
 
-	![New theme in left navigation bar](./media/get-started-create-from-data/left-nav-final.png)
+1. Hide the Category field
 
-1. To sort and filter the list by name instead of by category, set the **Items** property of the list to this formula:
-<br>**Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
+1. Set the Image control type to View Image
+
+**Note**: You can customize the **EditScreen1** in similar fashion as the **DetailScreen1** to show the controls which you want the user to be able to use.
 
 ## Run the app ##
 1. With **BrowseScreen1** showing, open Preview by pressing F5 (or by clicking or tapping the Preview icon near the upper-right corner).
@@ -115,5 +117,5 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 ## Next steps ##
 
-- You can further customize your app by performing similar tasks to those that [Create an app from scratch](get-started-) describes.
-- [Save and share your app](get-started-test-drive.md#save-and-share-your-powerapp) with other people.
+- You can further customize your app by performing similar tasks to those that [Create an app from scratch](get-started-create-from-blank.md) describes.
+- [Save and share your app](get-started-test-drive.md#save-and-share-your-app) with other people.
