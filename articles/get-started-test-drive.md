@@ -15,79 +15,66 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/04/2016"
+   ms.date="04/12/2016"
    ms.author="anneta"/>
 
 # Create an app from a template #
-
-[AZURE.VIDEO nb:cid:UUID:b95d313a-0d00-80c4-8bbc-f1e59201f745]
-
 Create an app automatically based on one of several templates for a variety of scenarios. Explore how the app works by default, customize it to better fit the way you work, and then publish it.
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall)
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) PowerApps, and then open PowerApps.
+
+	If you haven't opened PowerApps before, swipe left (or select the right-pointing arrow near the lower-right corner) three times to advance through the opening screens, and then sign in by providing the same credentials that you used to sign up.
 
 - An account on DropBox, OneDrive, or GoogleDrive for storing sample data in the cloud
 
-## What will you learn in this article? ##
-
-- Create an app from a template
-- Save and share the app you just created
-
 ## Open a template ##
-1. Open PowerApps.
-
-**Note: ** If you haven't installed PowerApps before, please click the link above in Prerequisite to install PowerApps. You can also download PowerApps by clicking the pointing down arrow on PowerApps web portal to download. 
-1. If you haven't opened PowerApps before, select the right-pointing arrow near the lower-right corner to advance through the opening screens, and then sign in.
-
-2. If you haven't opened PowerApps before, you will be prompted to sign in. Please enter the account you used to sign up for PowerApps. It should be your school or organization account. 
-
-4. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
+1. In PowerApps, select **Connections** in the **File** menu (near the left edge of the screen).
 
 	![The Connections option on the File menu](./media/get-started-test-drive/file-connections.png)
 
-5. This will open PowerApps web portal. Select ** Connection ** tab and select ** Addd a connection **
-	
-	![The Connections option on the web portal](./media/get-started-test-drive/portal-add-a-connection.png)
+1. In the left navigation bar of powerapps.com, select **Connections**, and then select **Add a connection**
 
-6. In the list of available connections, select ** Dropbox ** (or another cloud-storage account), and then select ** Add connection **.
+	![The Connections option on the website](./media/get-started-test-drive/portal-add-a-connection.png)
+
+1. In the list of available connections, select **Dropbox** (or another cloud-storage account), and then select **Add connection**.
 
 	![Option to add Dropbox as a data connection](./media/get-started-test-drive/add-dropbox.png)
 
-7. Provide your credentials, and then select **Sign in**. Please ** Allow ** Dropbox to access files in your system if prompted. 
+1. Provide your credentials, and then select **Sign in**. Please ** Allow ** Dropbox to access files in your system if prompted.
 
 	![Prompt to provide credentials for Dropbox](./media/get-started-test-drive/dropbox-credentials.png)
 
-8. Your Dropbox connection should be successfully created and listed in the PowerApps web portal.
+1. Your Dropbox connection should be successfully created and listed in the PowerApps web portal.
 
 	![Dropbox connection successfully created](./media/get-started-test-drive/portal-add-dropbox-success.png)
 
-9. Go back to PowerApps on your Desktop
+1. Go back to PowerApps on your Desktop
 
-10. Select **New** on the **File** menu (near the left edge of the screen).
+1. Select **New** on the **File** menu (near the left edge of the screen).
 
 	![The New option on the File menu](./media/get-started-test-drive/file-new.png)
 
-11. Select ** Create an app ** and ** Start from a template **. Then select a form factor for the app you want to create, phone or tablet. In this example, I'll select ** Phone **.
+1. Select ** Create an app ** and ** Start from a template **. Then select a form factor for the app you want to create, phone or tablet. In this example, I'll select ** Phone **.
 
 	![The option to create an app for a tablet or a phone](./media/get-started-test-drive/phone-app.png)
 
 	**Note:** You can create an app for a tablet, but this tutorial focuses on the phone option.
 
-12. You will be shown a list of templates to choose from. 
+1. You will be shown a list of templates to choose from.
 
-	**Note:** If you configure the connection like in step 4-6 above, you won't need to set up the connection again. However, if you haven't set up your connection, you'll need to do so before you can use a template to create an app by clicking the ** Add a connection ** at the bottom of the page where all the templates are listed. Follow similar steps 5-6 to set up the connection. 
+	**Note:** If you configure the connection like in step 4-6 above, you won't need to set up the connection again. However, if you haven't set up your connection, you'll need to do so before you can use a template to create an app by clicking the ** Add a connection ** at the bottom of the page where all the templates are listed. Follow similar steps 5-6 to set up the connection.
 
 	![The option to create connection within template view](./media/get-started-test-drive/Add-a-connection-template.png)
 
-13. In the list of templates, select ** Cost Estimator **, and then select ** Use ** (near the lower-right corner).
+1. In the list of templates, select **Cost Estimator**, and then select **Use** (near the lower-right corner).
 
 	![Open a PowerApps template](./media/get-started-test-drive/open-template.png)
 
-14. Once you select ** Use ** , the app is created and sample data is being copied over to your Dropbox (or chosen storage account). 
+1. Once you select ** Use ** , the app is created and sample data is being copied over to your Dropbox (or chosen storage account).
 
-15. Once the app is created, the ** Cost Estimator ** home page will appear.
+1. Once the app is created, the ** Cost Estimator ** home page will appear.
 
 	![Cost Estimator Home Screen](./media/get-started-test-drive/CostEstimator_Home_SelectJob.png)
 
@@ -100,25 +87,25 @@ Apps from templates open in the default workspace, where you'll spend most of yo
 
 	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.png)
 
-2. Press F5 (or select the right arrow in the upper-right corner) to open **Preview**.
+1. Press F5 (or select the right arrow in the upper-right corner) to open **Preview**.
 
 	![Button to open Preview](./media/get-started-test-drive/preview-button.png)
 
-3. **Cost Estimate** is pre-populated with sample data to demonstrate the functionality of the app. This is an app that allows user create job entry with client on site and create an estimate for how much it costs to replace flooring for a room with chosen material. 
+1. **Cost Estimate** is pre-populated with sample data to demonstrate the functionality of the app. This is an app that allows user create job entry with client on site and create an estimate for how much it costs to replace flooring for a room with chosen material.
 
-4. Select a job entry **Olivia Gill** on the home screen to view details.
+1. Select a job entry **Olivia Gill** on the home screen to view details.
 
 	![Cost Estimator Home Screen](./media/get-started-test-drive/CostEstimator_Home_SelectJob.png)
 
-5. Select a **Begin Estimate** button to start an estimate.
+1. Select a **Begin Estimate** button to start an estimate.
 
 	![Begin Estimate](./media/get-started-test-drive/BeginEstimate.png)
 
-6. (optional) Verify that the data in your cloud account reflects your changes after you finish an estimate.
+1. (optional) Verify that the data in your cloud account reflects your changes after you finish an estimate.
 
-7. (optional) Add a new job entry by clicking the **'+'** on the home page.
+1. (optional) Add a new job entry by clicking the **'+'** on the home page.
 
-8. Return to the default workspace by selecting the **'X'** icon in the upper-right corner (under the PowerApps title bar).
+1. Return to the default workspace by selecting the **'X'** icon in the upper-right corner (under the PowerApps title bar).
 
 	![Button to close Preview](./media/get-started-test-drive/close-preview.png)
 
@@ -166,7 +153,7 @@ After you finish developing and testing your app, share it with other people by 
 
 	![The App Settings option on the File menu](./media/get-started-test-drive/file-settings.png)
 
-2. Update any of these settings.
+1. Update any of these settings.
 
 	- the name of your app
 
@@ -188,15 +175,15 @@ After you finish developing and testing your app, share it with other people by 
 
 		![Apply button](./media/get-started-test-drive/apply-button.png)
 
-2. On the **File** menu, select **Save As**.
+1. On the **File** menu, select **Save As**.
 
 	![Save As option on the File menu](./media/get-started-test-drive/file-save.png)
 
-3. Under **Save As**, leave the default value of **PowerApps cloud**, and then select **Save**.
+1. Under **Save As**, leave the default value of **PowerApps cloud**, and then select **Save**.
 
 	![Save an app](./media/get-started-test-drive/save-powerapps.png)
 
-6. On the **File** menu, select **Share**.
+1. On the **File** menu, select **Share**.
 
 	An email template appears.
 
