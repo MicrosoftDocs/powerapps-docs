@@ -37,7 +37,9 @@ To sign up for PowerApps, you can do the following.
 
 1. Select **Sign up free**
 
-1. Enter the email address you ar signing up with, and then select the **arrow button (do we need an image?)**
+1. Enter the email address you ar signing up with, and then select the **arrow**
+
+  [[Need image of the arrow button]]
 
 1. If your account does not exist within an organization, you will get a message indicating to check your email
 
@@ -55,7 +57,7 @@ To sign up for PowerApps, you can do the following.
 
 1. You will then be taken to http://web.powerapps.com and you can begin using PowerApps.
 
-## Troubleshoot ##
+## Troubleshoot (still need to finalize this list)##
 In many cases, registering for PowerApps can be achieved by following the sign up process listed above. However, there are several reasons why you may not be able to complete sign up.  The table below summarizes some of the most common reasons you may not be able to complete sign up and ways you can workaround these issues.
 
 | Symptom / Error Message                                                                                                                                                                                                                                                                                                                                                                                            | Cause and Workaround                                                                                                                                                                                                                                                                                                                                                                                                              |
