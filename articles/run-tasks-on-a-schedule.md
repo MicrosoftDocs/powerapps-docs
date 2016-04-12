@@ -4,7 +4,7 @@
     services=""
     suite="flow"
     documentationCenter="na"
-    authors="stepsic-microsoft-com"
+    authors="aftowen"
     manager="dwrede"
     editor=""
     tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/08/2016"
-   ms.author="stepsic"/>
+   ms.author="anneta"/>
 
 # Run flows on a schedule #
 Create a flow that performs the same task or tasks, such as sending reports in email, every day, hour, or minute. As an alternative, create a flow that waits a certain number of minutes or until a certain date before performing a task or tasks.
