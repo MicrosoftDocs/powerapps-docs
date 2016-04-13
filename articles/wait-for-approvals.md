@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="stepsic-microsoft-com"
-    manager="dwrede"
+    authors="aftowen"
+    manager="erikre"
     editor=""
     tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/24/2015"
-   ms.author="stepsic"/>
+   ms.author="anneta"/>
 
 # Wait for approval in Logic Flows #
 
