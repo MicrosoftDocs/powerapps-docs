@@ -15,8 +15,8 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/06/2015"
-   ms.author="anneta"/>
+   ms.date="04/12/2016"
+   ms.author="ankitsar"/>
 
 # Create an app from a set of data
 
@@ -25,10 +25,10 @@ Create an app automatically based on data that you specify, customize it to bett
 **Prerequisites**
 
 - Install [PowerApps for Windows](http://aka.ms/powerappsinstall).
-- Download this [Excel file]((./media/get-started-create-from-data/FlooringEstimates.xlsx), and save it in your OneDrive account.
+- Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it in your OneDrive account.
 
 
-**Note:** You can create an app based on a [SharePoint list](app-from-sharepoint.md), [Salesforce data](app-from-saleforce.md), [a table in Dynamics CRM](app-from-dynamics.md), or other [data sources](add-and-manage-connections.md)  just as easily.
+**Note:** You can create an app based on a [SharePoint list](app-from-sharepoint.md), [Salesforce data](app-from-saleforce.md), [a table in Dynamics CRM](app-from-dynamics.md), or other [data sources](add-and-manage-connections.md) just as easily.
 
 ## Create the app ##
 
@@ -76,9 +76,9 @@ When an app is built automatically, heuristics suggest the best layout and conte
 1. Select the first text box in the list, and then from the **Options** pane set its value to **Name**
 
 	![Select first text box](./media/get-started-create-from-data/select-gallery-textbox.png)
-    
+
     On the Options pane:
-    
+
     ![Set first text box](./media/get-started-create-from-data/set-gallery-textbox.png)
 
 1. Set the lower text box to **Category**.
@@ -91,14 +91,14 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 1. Select the **DetailScreen1** from the screen thumbnails on the left side.
 
-    ![DetailScreen 1 Thumbnail](./media/get-started-create-from-data/detail-screen-thumbnail.png) 
+    ![DetailScreen 1 Thumbnail](./media/get-started-create-from-data/detail-screen-thumbnail.png)
 
 1. Select the **Name** field on the screen, and then using the field title bar **Drag & Drop** it to the top position on the form.
-    
+
     ![Select a card](./media/get-started-create-from-data/select-card.png)
-    
+
     ![Drop a card](./media/get-started-create-from-data/card-on-top.png)
-     
+
 1. Select the **EditScreen1** from the screen thumbnails on the left side.
 
     ![EditScreen 1 Thumbnail](./media/get-started-create-from-data/edit-screen-thumbnail.png)
@@ -108,11 +108,11 @@ When an app is built automatically, heuristics suggest the best layout and conte
     ![Expand Card Selector](./media/get-started-create-from-data/card-selector.png)
 
 1. Select the **Multi-line edit text card** to change the **Overview** field to a multi-line edit text box.
-    
+
     ![Multi-line Card](./media/get-started-create-from-data/select-multiline-card.png)
 
 ## Run the app ##
-As you are changing the app for your needs, you can try the app by running it in **Preview** mode 
+As you are changing the app for your needs, you can try the app by running it in **Preview** mode
 
 1. Select **BrowseScreen1** from the screen thumbnails, and open Preview by pressing **F5** (or by selecting the Preview icon near the upper-right corner).
 
