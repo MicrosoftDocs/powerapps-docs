@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="stepsic-microsoft-com"
-    manager="dwrede"
+    authors="aftowen"
+    manager="erikre"
     editor=""
     tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/14/2015"
-   ms.author="stepsic"/>
+   ms.author="anneta"/>
 
 # Add multiple actions and advanced parameters to Logic Flows #
 Customize a Logic Flow by adding one or more advanced parameters and multiple actions for the same trigger. For example, add an advanced parameter that sends an email message as high priority. In addition to sending mail when an item is added to a SharePoint list, create a file in Dropbox that contains the same information.

@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="stepsic-microsoft-com"
-    manager="dwrede"
+    authors="aftowen"
+    manager="erikre"
     editor=""
     tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/14/2015"
-   ms.author="stepsic"/>
+   ms.author="anneta"/>
 
 # Run Logic Flows on a schedule #
 Create a logic flow that performs the same task or tasks, such as sending reports in email, every day, hour, or minute. As an alternative, create a logic flow that waits a certain number of minutes or until a certain date before performing a task or tasks.
