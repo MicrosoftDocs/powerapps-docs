@@ -4,8 +4,8 @@
     services=""
     suite="flow"
     documentationCenter="na"
-    authors="stepsic-microsoft-com"
-    manager="aftowen"
+    authors="aftowen"
+    manager="erikre"
     editor=""
     tags=""/>
 
