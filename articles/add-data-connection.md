@@ -29,7 +29,7 @@ In this tutorial, you will learn how to add a new data connection to an existing
 ## Add datasource  ##
 1. In PowerApps, select the **Content** tab in the ribbon.
 
-	![Content tab in the ribbon](.\media\add-data-connection\content-tab.png)
+	![Content tab in the ribbon](./media/add-data-connection/content-tab.png)
 
 1. Select **Data sources**.
 
