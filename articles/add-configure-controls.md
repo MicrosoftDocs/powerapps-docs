@@ -20,7 +20,7 @@
 
 # Add and configure a control in PowerApps #
 
-Add a variety of controls to your app, and configure their properties directly, from the ribbon, or in the formula bar.
+Add a variety of controls to your app, and configure their properties directly, from the ribbon, or in the Formula Bar.
 
 **Prerequisites**
 
