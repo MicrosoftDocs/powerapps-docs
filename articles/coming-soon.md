@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Coming soon in PowerApps | Microsoft PowerApps"
-    description="Article is coming soon"
+    pageTitle="Coming Soon in PowerApps | Microsoft PowerApps"
+    description="Article is Coming Soon"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -17,6 +17,6 @@
     ms.date="04/13/2016"
     ms.author="gregli"/>
 
-# Coming soon #
+# Coming Soon #
 
-THis article is coming soon.
+This article is coming soon.
