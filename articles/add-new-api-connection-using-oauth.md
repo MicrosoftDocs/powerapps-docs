@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="MandiOhlinger"
-    manager="dwrede"
+    authors="archnair"
+    manager="darshand"
     editor=""
     tags=""/>
 
@@ -16,13 +16,13 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/25/2015"
-   ms.author="mandia"/>
+   ms.author="archanan"/>
 
 # Create a connection in PowerApps
 
 [AZURE.VIDEO nb:cid:UUID:0156313a-0d00-80c4-fa80-f1e592051e49]
 
-Connections in PowerApps allow you to easily access your data while building apps or logic flows. PowerApps includes commonly-used connections, including: Office 365, Salesforce, Excel, Dropbox, SharePoint, SQL, Twitter, and more. 
+Connections in PowerApps allow you to easily access your data while building apps or logic flows. PowerApps includes commonly-used connections, including: Office 365, Salesforce, Excel, Dropbox, SharePoint, SQL, Twitter, and more.
 
 For example, you can use connections to:
 
