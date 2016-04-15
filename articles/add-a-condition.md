@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/20/2015"
-   ms.author=anneta"/>
+   ms.author="anneta"/>
 
 # Add a condition to a logic flow #
 
