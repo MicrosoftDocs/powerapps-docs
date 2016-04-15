@@ -54,7 +54,7 @@ This tutorial will cover how to manage connections in [powerapps.com](https://we
 
 1. Select **Add a connection** on the top right
 
-  ![Add a connection](./media/add-manage-connections/add-new-connection.png)
+  ![Add a connection](./media/add-manage-connections/add-new-connections.png)
 
 1. From the list of **Available connections**, select the connection you want to setup, such as SharePoint Online and provide your credentials to setup the connection
 
