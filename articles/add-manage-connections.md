@@ -50,35 +50,35 @@ This tutorial will cover how to manage connections in [powerapps.com](https://we
 
 1. Select **Connections** in the left pane
 
-  ![Connections Manage](.\media\add-manage-connections\manage-connections.png)
+  ![Connections Manage](./media/add-manage-connections/manage-connections.png)
 
 1. Select **Add a connection** on the top right
 
-  ![Add a connection](.\media\add-manage-connections\add-new-connection.png)
+  ![Add a connection](./media/add-manage-connections/add-new-connection.png)
 
 1. From the list of **Available connections**, select the connection you want to setup, such as SharePoint Online and provide your credentials to setup the connection
 
-  ![SharePoint Connector](.\media\add-manage-connections\sharepoint-api.png)
+  ![SharePoint Connector](./media/add-manage-connections/sharepoint-api.png)
 
 1. Once the connection is setup, it will appear in the **Connections**
 
- ![SharePoint Connection](.\media\add-manage-connections\sharepoint-connection.png)
+ ![SharePoint Connection](./media/add-manage-connections/sharepoint-connection.png)
 
 ## Delete a connection
 
 1. To delete a connection, go to the **Connections** page and select a connection
 
-  ![Connections Manage](.\media\add-manage-connections\connections-list.png)
+  ![Connections Manage](./media/add-manage-connections/connections-list.png)
 
 1. In the details view of the connection, select **Delete** icon on the top right
 
-  ![Connections Manage](.\media\add-manage-connections\delete-icon.png)
+  ![Connections Manage](./media/add-manage-connections/delete-icon.png)
 
 ## Update a connection
 
 1. To update an existing connection, to go the **Connections** page and  select the edit icon. This will prompt you to update your connection with new credentials.
 
-  ![Connections Manage](.\media\add-manage-connections\edit-icon.png)
+  ![Connections Manage](./media/add-manage-connections/edit-icon.png)
 
 
 ## Summary and next steps
