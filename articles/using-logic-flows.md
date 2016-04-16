@@ -27,7 +27,9 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 - Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow ##
-1. In [flow.microsoft.com](http://flow.microsoft.com), select **My Flows** in the top navigation bar, and then select **Create new flow**.
+1. Sign in to [powerapps.com](http://web.powerapps.com), select **Flows** in the left-hand navigation bar, and then select **Create a flow**.
+
+1. Select **Create from blank**.
 
 	![Option to create a flow without using a template](./media/use-logic-flows/create-from-blank.png)
 
@@ -48,17 +50,17 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 	1. If prompted, provide credentials to connect to SharePoint.
 
-	1. In the **Site url** box, type or paste the URL of a SharePoint Online site that contains a list.
+	1. In the **SITE URL** box, type or paste the URL of a SharePoint Online site that contains a list.
 
 		**Note:** Specify the URL for the site itself, not including the list.
 
-	1. In the **List name** box, select the list that you want to use.
+	1. In the **LIST NAME** box, select the list that you want to use.
 
-	1. Select the **Title** box, and then select **Ask in PowerApps**.
+	1. Select the **TITLE** box, and then select **Ask in PowerApps**.
 
 		![Add Ask in PowerApps parameter to Title field](./media/use-logic-flows/ask-in-powerapps.png)
 
-1. In the **Flow name** box, type or paste a name for your flow, and then select **Create**.
+1. In the **Flow name** box, type or paste a name for your flow, and then select **Done**.
 
 	![Name and save your flow](./media/use-logic-flows/name-flow.png)
 
@@ -85,10 +87,10 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 	![OnSelect property that includes the flow](./media/use-logic-flows/onselect-with-flow.png)
 
 ## Test the flow ##
-1. Open Preview by pressing F5 or selecting the arrow near the upper-right corner.
+1. Open Preview by pressing F5 (or by selecting the arrow near the upper-right corner).
 
 	![OnSelect property that includes the flow](./media/use-logic-flows/open-preview.png)
 
-1. Type or paste text in the text box, and then click the button.
+1. Type or paste text in **RecordTitle**, and then click the **Button** control.
 
 	A SharePoint item is created with the text you specified as the title.
