@@ -18,7 +18,7 @@
    ms.date="11/20/2015"
    ms.author="gregli"/>
 
-# Operators in PowerApps #
+# Operators and data types in PowerApps #
 
 |Symbol|Type|Syntax|Description|
 |---|---|---|---|
