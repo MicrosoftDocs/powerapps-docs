@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="archnair"
-    manager="darshand"
+    authors="aftowen"
+    manager="erikre"
     editor=""
     tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/25/2015"
-   ms.author="archanan"/>
+   ms.author="anneta"/>
 
 # Create a connection in PowerApps
 
