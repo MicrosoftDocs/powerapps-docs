@@ -15,26 +15,25 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/09/2016"
+   ms.date="04/16/2016"
    ms.author="anneta"/>
 
 # Get started with PowerApps #
 Welcome to Microsoft PowerApps! After you [sign up](filename.md), you can quickly start to create and use custom business apps.
 
 ## Discover possibilities ##
-If you [sign in to the home page](filename.md) for PowerApps, you can [explore sample apps](sample-app topic.md) and [play with featured apps](featured-app topic.md). Without installing anything, you can get a quick sense of what's possible and how PowerApps could help your business.
+If you [sign in to the home page](filename.md) for PowerApps, you can [explore one or more sample apps](sample-app topic.md) to get a quick sense of what's possible and how PowerApps could help your business.
 
 [PowerApps home screenshot]
 
-Each sample app is designed for a specific purpose such as managing a budget, showcasing a set of products, or tracking sales opportunities. These apps show data that's fictitious but realistic enough to inspire your thinking. In a featured app, you connect to a live data source such as Salesforce or Dynamics, and you can show, add, and update real records in real time.
+Each sample app is designed for a specific purpose such as managing a budget, showcasing a set of products, or tracking sales opportunities. Some sample apps contain hardcoded data that's fictitious but realistic enough to inspire your thinking. Other sample apps connect to a live data source such as Salesforce or Dynamics, so that you can show, add, and update real records in real time.
 
 ## Give yourself a head start ##
+To see how any sample app is built, [install PowerApps](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer that's running Windows. Explore specific screens and controls to understand how they're configured, and experiment with customization to boost your knowledge before you embark on your own apps.  
 
-When you're ready for more, [install PowerApps](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer that's running Windows. Now you can [use a template](get-started-test-drive) to generate an app that looks like a sample app, but you can customize the UI and replace the fictitious data with real data.
+You can also [use a template](get-started-test-drive) to generate an app that's based on data in a cloud account, such as Dropbox, OneDrive or Google Drive.
 
 [AFT image tbd]
-
-If you take this approach, PowerApps uploads sample data to your Dropbox, OneDrive, or Google Drive account and then generates the type of app you choose. Click around the generated app to see how it's configured, clear out the sample data to make the app your own, or use it as a sandbox for developing your PowerApps skills.
 
 ## Hit the ground running ##
 Now that you have some idea of what PowerApps can do and a bit of experience, you can [automatically generate an app that's designed specifically for your data](get-started-create-from-data.md), whether it's in:
