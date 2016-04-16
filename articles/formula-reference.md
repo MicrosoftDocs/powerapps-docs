@@ -1,6 +1,6 @@
 <properties
-   pageTitle="Build a formula | Microsoft PowerApps"
-   description="In PowerApps, you can use the operators and functions that this topic describes."
+   pageTitle="Functions, signals, and enumerations | Microsoft PowerApps"
+   description="Reference information for functions, signals, and enumerations in PowerApps."
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -18,19 +18,7 @@
    ms.date="10/23/2015"
    ms.author="gregli"/>
 
-# Formula reference #
-
-Functions, [signals](functions/signals.md), and high level enumerations are listed below.  
-
-Reference information is also available for:
-
-- [Operators](functions/operators.md)
-- [Control properties](reference-properties.md)
-- "Working with ..." guides:
-	- [Formulas](working-with-formulas.md)
-	- [Tables](functions/working-with-tables.md)
-	- [Data sources](functions/working-with-data-sources.md)
-	- [Variables](functions/working-with-variables.md)
+# Functions, signals, and enumerations in PowerApps #
 
 ## A ##
 
@@ -115,6 +103,8 @@ Reference information is also available for:
 **[Enable](functions/function-enable-disable.md)** Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS. 
 
 **[Errors](functions/function-errors.md)** Provides error information for previous changes to a data source.
+
+**[ErrorKind](functions/function-errors.md)** Provides the kind of error returned by the **Errors** function and **Form** control.
 
 **[EncodeUrl](functions/function-encode-decode.md)** Encodes special characters using URL encoding. 
 
