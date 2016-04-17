@@ -26,7 +26,7 @@ Interacting with data involves three core activities, corresponding to three dif
 |---------|------------|---------|
 | **Browsing for records** | **[Gallery](controls/control-gallery.md)** control | Filtering, sorting, searching, and scrolling through the records of a data source to find the records desired.  To show many records on the screen at a time, only a few fields are shown. |
 | **Viewing a record** | **[View form](controls/control-form-detail.md)** control | Once a record has been identified, drilling in to see all the details or fields of the record. |
-| **Editing a record** | **[Form](controls/control-form-detail.md)** control | Updating the fields of a record and saving those changes back to the underlying data source.  Facilities for editing are often used to create new records too. | 
+| **Editing a record** | **[Form](controls/control-form-detail.md)** control | Updating the fields of a record and saving those changes back to the underlying data source.  Facilities for editing are often used to create new records too. |
 
 This topic provides an overview of working with these controls.  
 
@@ -34,8 +34,8 @@ PowerApps can also generate an app from data for you, which uses these same buil
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall)
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Example Data Source ##
 
@@ -54,7 +54,7 @@ The first step in editing a record, is finding the record to edit.  The **Galler
 1. Using the "Insert" ribbon, insert a **Gallery** control, of type "Text gallery" and "Vertical".
 
 2. Set **Gallery1.Items = "Ice Cream"**
-    
+
 ![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream-75.png)
 
 The gallery is showing the first three fields for this data source, which is not what we want.  Let's clean this up:
@@ -82,7 +82,7 @@ With the gallery, we can identify a record of interest, that we want to drill in
 The **View form** control uses two properties to display the record:
 
 * **DataSource** property.  The name of the data source that holds the record.  This property is used to populate the options panel with fields and is used to determine the display name and data type (string, number, date, etc) for each field.  
-  
+
 * **Item** property.  The record to display.  This is often connected to the **SelectedItem** property of the **Gallery** control, allowing us to drill into the record that was selected in the **Gallery** control.
 
 Once the **DataSource** property is set, you can add and remove fields through the options panel, and change how those fields are displayed.
@@ -156,7 +156,7 @@ For example, you may want to offer a "Create new record" button.  This button's 
 Your users may want to delete records too.  To offer this, insert a button or image control and set the **OnSelect** property to:
 
 * **DeleteButton.OnSelect = Remove( DataSource, Gallery.Selected )**
- 
+
 ## Handling errors ##
 
 Errors happen.  The value of a field may be invalid, a blank field may be required, you may be disconnected from the network, or any number of other problems may pop up.  
@@ -187,8 +187,3 @@ On a tablet, with more screen real estate, you can place the **Gallery** control
 When working on the same screen, you need to be careful that the user can't change the selection in the **Gallery** and potentially lose edits in the **Form** control.  To keep selection from moving, set this property:
 
 * **Gallery.Disabled = EditForm.Unsaved**
-
-
-
-
- 

@@ -24,10 +24,8 @@ PowerApps includes multi-select and single-select options, including a listbox, 
 
 ### Prerequisites
 
-- Install [PowerApps](http://aka.ms/powerappsinstall), and sign in with your work or organization account.
-- Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
-
+- Create an app or open an existing app in PowerApps.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Add a listbox
 

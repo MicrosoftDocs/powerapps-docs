@@ -24,9 +24,7 @@ Run an app that you or someone else created, or share an app with other users in
 
 **Prerequisites**
 
-1. [Install PowerApps](http://aka.ms/powerappsinstall), and then open it.
-
-1. Sign in for the first time by swiping left to advance through the welcome screens and then providing your credentials.
+- [Sign up](signup-for-powerapps.md) for PowerApps, install it, open it, and then sign in by providing the same credentials that you used to sign up.
 
 ## Run an app ##
 1. Open PowerApps, and then select the app in the list that appears on the default screen.
