@@ -1,11 +1,11 @@
 <properties
-	pageTitle="Opportunity Tracking with Salesforce | Microsoft PowerApps"
-	description="Step-by-step instructions for open and run Opportunity Tracking that connects to user's Salesforce account."
+	pageTitle="Track Salesforce opportunities | Microsoft PowerApps"
+	description="Step-by-step instructions for opening and running a sample app that connects to the user's Salesforce account."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="linhtranms"
-	manager="darshand"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -18,91 +18,89 @@
    ms.date="04/11/2016"
    ms.author="litran"/>
 
-# Open and run Opportunity Tracking with Salesforce #
+# Track Salesforce opportunities in Microsoft PowerApps #
+The **Opportunity Tracking** app shows the status and details of all your opportunities in Salesforce, and you can add opportunities to your account from within the app. For each opportunity, you can send an email with details, log a call, add a note, or schedule a task.  
 
-**Opportunity Tracking** is an app that shows the status and detail of all your opportunities in Salesforce as well as lets you add new opportunities to your account. For each opportunity, you can send an email with the opportunity details, log a call, add a note or schedule a task.  
+## Open the app ##
+1. In [powerapps.com](https://web.powerapps.com), select the tile to open **Opportunity Tracking** for Salesforce.
 
+	![Portal Homepage](./media/opportunity-tracker-salesforce/portal-homepage.png)
 
-1. From PowerApps web portal, browse for Sample PowerApps section. 
+1. Select the **Phone** option to show the app as if it were running on a phone.
 
-	![Portal Homepage](./media/opportunity-tracker-salesforce/portal-homepage.png) 
+1. Provide the credentials for your Salesforce account, if you have one, or [create an account](http://www.salesforce.com) and provide credentials for it.
 
-2. Click on **Opportunity Tracking** app that *Connect to Salesforce*. This opens up a model that gives you a brief description about the app and allow you to select the form factor you want to open the app as, phone or tablet. 
+	The **Opportunity Tracking** app shows how many opportunities in each status (Open/Prospective, Closed/Won, Closed/Lost) are in your account. If your account is brand new, sample data will appear.
 
-3. In this example, let's select **Phone**. 
-
-4. This will prompt you to enter your credentials to your **Salesforce** account. If you have a Salesforce account, please enter your credentials here. If you don't have a Salesforce account, you can easily create one at [Salesforce.com](http://www.salesforce.com). 
-
-5. Once you enter your credentials, this will open the **Opportunity Tracking** app in the web portal with the data in your Salesforce account. If you select a phone form factor earlier, the app will open as how it would look on a phone. 
-
-6. On the home screen of the app, you will see the count of your opportunities currently in your account along with their status. This includes Open/Prospective, Closed/Won, Closed/Lost ones. You can also click on one among 9 tiles on the home screen that will bring you directly to the list of opportunity with the status listed on the tile. Note, if you just create your account, these will be sample data that Salesforce pre-populated for you. 
-	
 	![Portal Homepage](./media/opportunity-tracker-salesforce/home.png)
- 
-7. Select **Opportunities** to see list of all your opportunities.
- 
+
+## Show opportunities and accounts ##
+
+1. Select a tile to display a list of opportunities in a particular category, or select **Opportunities** at the bottom of the screen to show a list of all your opportunities.
+
 	![Portal Homepage](./media/opportunity-tracker-salesforce/opportunities.png)
 
-8. Select **Add Filter** and select **Opportunity** filter
+	**Note**: To add an opportunity, select **+** in the upper-right corner on the home screen, and then provide details.
 
-	![Portal Homepage](./media/opportunity-tracker-salesforce/filters.png)
-
-9. Select **Closed/Won**
-
-	![Portal Homepage](./media/opportunity-tracker-salesforce/filter_status.png)
-
-10. This will display a screen with opportunities in a **Closed/Won** status
+1. Select **Add Filter** > **Opportunity** > **Closed/Won** to show only those opportunities.
 
 	![Portal Homepage](./media/opportunity-tracker-salesforce/filter_status_result.png)
 
-11. Select **Filter** and select **Account**. Then enter an account name that exists in your data. In this example, I enter **Burlington Textiles Corp of America**.
+1. Select **Filter** > **Account**, and then enter an account name that exists in your data.
+
+	This example shows the result of filtering the sample data for **Burlington Textiles Corp of America**.
 
 	![Portal Homepage](./media/opportunity-tracker-salesforce/filter_account_result.png)
 
-12. Select an account to view details. In this example, I select **Burlington Textiles Corp of America**.
+1. Select an account to view its details.
+
+	This example shows the details for **Burlington Textiles Corp of America**.
 
 	![Portal Homepage](./media/opportunity-tracker-salesforce/account_details.png)
 
-13. Select an opportunity to view details. In this example, I select **Burlington Textile Weaving Plant Generator**.
+1. Select an opportunity to view its details.
 
-	![Portal Homepage](./media/opportunity-tracker-salesforce/opportunity_select.png)
-
-14. This shows you details of an opportunity. You can view notes added for the opportunity, activity history, and all other details.
+	This example shows details for **Burlington Textile Weaving Plant Generator**.
 
 	![Portal Homepage](./media/opportunity-tracker-salesforce/opportunity_details.png)
 
-15. To edit an existing opportunity, click on the pencil icon in the opportunity detailed view.
-	
+1. In the details view of an opportunity, select the pencil icon to edit those details, make your change or changes, and then save them.
+
 	![Portal Homepage](./media/opportunity-tracker-salesforce/opportunity_edit.png)
 
-16. Make the changes you desire and save changes. 
-	
-17. Select **Send an Email**, select a contact from your list of contact in Salesforce, enter the **Title** and **Body** of the email, take/attach any photo. When you are ready, press the **Send email** button. 
-	
+1. Make the changes you desire and save changes.
+
+## Send an email message ##
+1. In the details view of an opportunity, select **Send an Email**.
+
 	![Portal Homepage](./media/opportunity-tracker-salesforce/send_email.png)
 
-18. To add notes to an opportunity is very simple as well, simply select **Add notes** from the opportunity details. Then click the **+** to enter a new note. Enter the **Title** and **Note** and click **Save note**.
-	
+1. Select someone in your list of Salesforce contacts, and specify a **Title** and **Body** for the message.
+
+1.  (optional) Add a photo if you already have a file, or take a photo if your device has a camera.
+
+1. When you're ready, select **Send email**.
+
+## Add a note ##
+1. In the details view of an opportunity, select **Add a note** to show existing notes, and then select **+** in the upper-right corner.
+
 	![Portal Homepage](./media/opportunity-tracker-salesforce/add_note.png)
+
+1. Specify a title for the note and the note itself, and then select **Save note**.
+
 	![Portal Homepage](./media/opportunity-tracker-salesforce/save_note.png)
 
-19. To log a call, select **Log a call**. Then select the person from you want to **Assign To** and the **Contact** you wish to call. Enter other details such as **Subject**, **Date**, **Status**, what opportunity this **Related To** and any other **Comments** and click **Save**.
+## Log a call ##
+1. In the details view of an opportunity, select **Log a call**.
 
 	![Portal Homepage](./media/opportunity-tracker-salesforce/log_call.png)
 
-20. To view activity history, simply select **Activity History** the opportunity details. Here you can see all the history related to the opportunity including emails and calls.
-	
+1. Select a contact and the person to whom you want to assign the call, specify other details, and then select **Save**.
+
+## Show activity history ##
+1. In the details view of an opportunity, select **Activity History** to show the opportunity details, including emails and calls.
+
 	![Portal Homepage](./media/opportunity-tracker-salesforce/activity_history.png)
 
-21. To add a new opportunity, click **+** on the home screen. 
-	
-	![Portal Homepage](./media/opportunity-tracker-salesforce/add_opportunity.png)
-
-22. Now you have learned about Opportunity Tracking app that connects to your Salesforce account, click on a few other apps that can connect to your data to learn more. 
- 
-
-
-### Other sample apps with sample data ###
-
-[Case Management with Salesforce](case-management-salesforce.md)
-
+### Next steps ###
+Learn more by opening a few other sample apps, such as [Case Management with Salesforce](case-management-salesforce.md), that can connect to your data.
