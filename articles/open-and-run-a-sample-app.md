@@ -1,11 +1,11 @@
 <properties
 	pageTitle="Open and run a sample app | Microsoft PowerApps"
-	description="Step-by-step instructions for open and run a sample app from PowerApps web portal."
+	description="Step-by-step instructions for opening and running a sample app in powerapps.com."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="linhtranms"
-	manager="darshand"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -15,31 +15,30 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/11/2016"
+   ms.date="04/16/2016"
    ms.author="litran"/>
 
-# Open and run a Sample App #
+# Open and run a sample app #
+In [powerapps.com](http://web.powerapps.com), you can access two types of sample apps:
 
-From [PowerApps web portal](http://web.powerapps.com), you can access many sample apps. There are two types of sample apps that you will see:
-
-- Sample apps which are are authored in PowerApps and pre-populated with sample data like **Cost Estimator**. 
+- Apps such as **Cost Estimator** contain sample data.
 
 	![Sample app with sample data](./media/open-and-run-a-sample-app/sample-app-with-sample-data.png)
 
-- Sample apps which are authored in PowerApps and connects to your data like **Opportunity Tracker** connecting to your Salesforce
+- Apps such as **Opportunity Tracker** connect to your live data in a Salesforce or other account.
 
-	![Sample app with sample data](./media/open-and-run-a-sample-app/sample-app-with-your-data.png) 
+	![Sample app with sample data](./media/open-and-run-a-sample-app/sample-app-with-your-data.png)
 
-They are both great resources to show you what you can  build using PowerApps. Let's explore how they work by looking at each of them below. 
+Both types of apps are built in PowerApps so that you can explore how they work and discover concepts that you can apply to your own apps.
 
-## Sample apps with sample data ##
+## Apps that have sample data ##
 
 - [Cost Estimator](cost-estimator.md)
 - [Site Inspection](site-inspection.md)
 - [Budget Tracker](budget-tracker.md)
 - [Service Desk](service-desk.md)
-  
-## Sample apps with your data ##
+
+## Apps that connect to your live data ##
 
 - [Opportunity Tracking with Salesforce](opportunity-tracking-salesforce.md)
 - [Case Management with Salesforce](case-management-salesforce.md)
