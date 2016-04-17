@@ -4,7 +4,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="archnair"
-	manager="darshand"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -22,8 +22,7 @@ In this tutorial, you will learn how to add a new data connection to an existing
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall)
-- Learn how to build a new [app from blank](get-started-create-from-blank.md) in PowerApps
+- Learn how to build an [app from blank](get-started-create-from-blank.md) in PowerApps
 - Account information for the service you want to connect to
 
 ## Add datasource  ##

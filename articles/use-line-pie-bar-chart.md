@@ -30,9 +30,9 @@ For example, your data should look similar to the following:
 You can create and use these charts within PowerApps. Let's get started.
 
 ### Prerequisites
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Create an app or open an existing app in PowerApps.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 - These steps use the [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own. 
 
 ## Add a pie chart to display your data
@@ -49,7 +49,7 @@ In these steps, we download a sample file. Using a collection, we import this sa
 	In the **File** menu, select **Collections**. The ProductRevenue collection is listed with the chart data you imported:    
 ![][1]  
 
-	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app. 
+	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
 
 3. Go back to your designer.
 4. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button.
@@ -88,7 +88,7 @@ Now, let's use this ProductRevenue collection in a bar chart:
 In this topic, you:
 
 - Used the import control to import sample data in your app.
-- Added a pie chart and bar chart to display the data that you imported. 
+- Added a pie chart and bar chart to display the data that you imported.
 - In the column chart, you used the **Number of Series** property to show data for three years; with each year having its own column.
 
 
