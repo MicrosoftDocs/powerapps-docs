@@ -117,6 +117,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Visual](properties-visual.md)** Configure graphical elements in your app, including images, photos, and elements of a pen control.
 
+<!-- ##################################################################################################### -->
+<!-- DO NOT EDIT below this heading, the remainder of this file is machine generated from includes/short-* -->
+<!-- ##################################################################################################### -->
 ## All properties ##
 
 ### A ###
@@ -169,7 +172,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Default**](properties-data.md) The value of a control unless the user specifies a different value.
 
-[**Direction**](properties-visual.md) Whether the first item in a gallery in landscape orientation appears near the left or right edge.
+[**Direction**](properties-visual.md) Whether the first item in a gallery in landscape orientation appears near the left or right edge. 
 
 [**Disabled**](properties-core.md) Whether the user can interact with the control.
 
@@ -275,7 +278,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### N ###
 
-[**NavigationStep**](properties.navigation.md) How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
+[**NavigationStep**](properties-navigation.md) How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
 
 [**NumberOfSeries**](properties-chart.md) How many columns of data are reflected in a column or line chart.
 
@@ -377,15 +380,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**ShowLabels**](properties-chart.md) Whether a pie chart shows the value that's associated with each of its wedges.
 
-[**ShowNavigation**](properties.navigation.md) Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.
+[**ShowNavigation**](properties-navigation.md) Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.
 
-[**ShowScrollbar**](properties.navigation.md) Whether a scrollbar appears when the user hovers over a gallery.
+[**ShowScrollbar**](properties-navigation.md) Whether a scrollbar appears when the user hovers over a gallery.
 
 [**ShowValue**](properties-data.md) Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
 [**Size**](properties-font.md) The font size of the text that appears on a control.
 
-[**Snap**](properties.navigation.md) Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.
+[**Snap**](properties-.navigation.md) Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.
 
 [**Start**](properties-audio-video.md) Whether an audio or video clip plays.
 
@@ -409,7 +412,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Tooltip**](properties-text.md) Explanatory text that appears when the user hovers over a control.
 
-[**Transition**](properties.navigation.md) The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.
+[**Transition**](properties-navigation.md) The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.
 
 [**Transparency**](properties-visual.md) The degree to which controls behind an image remain visible.
 
@@ -456,3 +459,4 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### Z ###
 
 [**Zoom**](properties-visual.md) The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
+
