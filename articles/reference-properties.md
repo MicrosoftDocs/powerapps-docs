@@ -145,17 +145,17 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Camera**](properties-audio-video.md) On a device that has more than one camera, the numeric ID of the camera that the app uses.
 
-[**CheckboxBackgroundFill**](properties.fill.md) The background color of the box that surrounds the checkmark in a checkbox control.
+[**CheckboxBackgroundFill**](properties-fill.md) The background color of the box that surrounds the checkmark in a checkbox control.
 
 [**CheckboxBorderColor**](properties-color-border.md) The color of the border that surrounds the checkmark in a checkbox control.
 
 [**CheckboxSize**](properties-size-location.md) The width and height of the box that surrounds the checkmark in a checkbox control.
 
-[**CheckmarkFill**](properties.fill.md) The color of the checkmark in a checkbox control.
+[**CheckmarkFill**](properties-fill.md) The color of the checkmark in a checkbox control.
 
-[**ChevronBackground**](properties.fill.md) The color behind the down arrow in a dropdown list.
+[**ChevronBackground**](properties-fill.md) The color behind the down arrow in a dropdown list.
 
-[**ChevronFill**](properties.fill.md) The color of the down arrow in a dropdown list.
+[**ChevronFill**](properties-fill.md) The color of the down arrow in a dropdown list.
 
 [**Clear**](properties-text.md) Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.
 
@@ -169,7 +169,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Default**](properties-data.md) The value of a control unless the user specifies a different value.
 
-[**Direction**](properties-visual.md) Whether the first item in a gallery in landscape orientation appears near the left or right edge. 
+[**Direction**](properties-visual.md) Whether the first item in a gallery in landscape orientation appears near the left or right edge.
 
 [**Disabled**](properties-core.md) Whether the user can interact with the control.
 
@@ -177,7 +177,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**DisabledColor**](properties-color-border.md) The color of text in a control if its **Disabled** property is set to **true**.
 
-[**DisabledFill**](properties.fill.md) The background color of a control if its **Disabled** property is set to **true**.
+[**DisabledFill**](properties-fill.md) The background color of a control if its **Disabled** property is set to **true**.
 
 **Document** The URL, enclosed in double-quotation marks, of a PDF file.
 
@@ -191,7 +191,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### F ###
 
-[**Fill**](properties.fill.md) The background color of a control.
+[**Fill**](properties-fill.md) The background color of a control.
 
 [**Font**](properties-font.md) The name of the family of fonts in which text appears.
 
@@ -203,11 +203,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### H ###
 
-[**HandleActiveFill**](properties.fill.md) The color of the handle for a slider as the user changes its value.
+[**HandleActiveFill**](properties-fill.md) The color of the handle for a slider as the user changes its value.
 
-[**HandleFill**](properties.fill.md) The color of the handle (the element that changes position) in a toggle or slider control.
+[**HandleFill**](properties-fill.md) The color of the handle (the element that changes position) in a toggle or slider control.
 
-[**HandleHoverFill**](properties.fill.md) The color of the handle in a slider when the user keeps the mouse pointer on it.
+[**HandleHoverFill**](properties-fill.md) The color of the handle in a slider when the user keeps the mouse pointer on it.
 
 [**Height**](properties-size-location.md) The distance between a control's top and bottom edges.
 
@@ -217,7 +217,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**HoverColor**](properties-color-border.md) The color of the text in a control when the user keeps the mouse pointer on it.
 
-[**HoverFill**](properties.fill.md) The background color of a control when the user keeps the mouse pointer on it.
+[**HoverFill**](properties-fill.md) The background color of a control when the user keeps the mouse pointer on it.
 
 [**HTMLText**](properties-text.md) Text that appears in an HTML text control and that may contain HTML tags.
 
@@ -327,15 +327,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**PressedColor**](properties-color-border.md) The color of text in a control when the user taps or clicks that control.
 
-[**PressedFill**](properties.fill.md) The background color of a control when the user taps or clicks that control.
+[**PressedFill**](properties-fill.md) The background color of a control when the user taps or clicks that control.
 
 ### R ###
 
-[**RadioBackgroundFill**](properties.fill.md) The background color of the circles in a radio-button control.
+[**RadioBackgroundFill**](properties-fill.md) The background color of the circles in a radio-button control.
 
 [**RadioBorderColor**](properties-color-border.md) The color of the circle for each option in a radio-button control.
 
-[**RadioSelectionFill**](properties.fill.md) The color that appears inside the circle of the selected option in a radio-button control.
+[**RadioSelectionFill**](properties-fill.md) The color that appears inside the circle of the selected option in a radio-button control.
 
 [**RadioSize**](properties-size-location.md) The diameter of the circles in a radio-button control.
 
@@ -347,11 +347,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**RadiusTopRight**](properties-alignment.md) The degree to which the top-right corner of a control is rounded.
 
-[**RailFill**](properties.fill.md) The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
+[**RailFill**](properties-fill.md) The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[**RailHoverFill**](properties.fill.md) When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
+[**RailHoverFill**](properties-fill.md) When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[**RatingFill**](properties.fill.md) The color of the stars in a rating control.
+[**RatingFill**](properties-fill.md) The color of the stars in a rating control.
 
 [**ReadOnly**](properties-core.md) Whether a user can change the value of a slider or rating control.
 
@@ -363,7 +363,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**SelectionColor**](properties-color-border.md) The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
-[**SelectionFill**](properties.fill.md) The background color of a selected item or items in a list or a selected area of a pen control.
+[**SelectionFill**](properties-fill.md) The background color of a selected item or items in a list or a selected area of a pen control.
 
 [**SelectionThickness**](properties-visual.md) The thickness of the selection tool for a pen-input control.
 
@@ -399,7 +399,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### T ###
 
-[**TemplateFill**](properties.fill.md) The background color of a gallery.
+[**TemplateFill**](properties-fill.md) The background color of a gallery.
 
 [**TemplatePadding**](properties-alignment.md) The distance between items in a gallery.
 
@@ -421,9 +421,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Valid**](properties-data.md) Whether data from the user matches specified criteria.
 
-[**ValueFill**](properties.fill.md) The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
+[**ValueFill**](properties-fill.md) The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[**ValueHoverFill**](properties.fill.md) When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
+[**ValueHoverFill**](properties-fill.md) When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
 [**VerticalAlign**](properties-alignment.md) The location of text on a control in relation to the vertical center of that control.
 
@@ -456,4 +456,3 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### Z ###
 
 [**Zoom**](properties-visual.md) The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
-
