@@ -22,12 +22,10 @@
 
 Create an app with multiple screens, add ways for users to navigate between them, and manage data in your app by creating and updating one or more context variables. Store data in a context variable if a piece of information helps determine how the app appears or what it does but you don't need to retain the information after the app is closed.
 
-[What is PowerApps?](https://aka.ms/pamktg)
-
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall)
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Add and rename a screen ##
 1. In PowerApps, select **New** in the **File** menu (near the left edge of the screen).

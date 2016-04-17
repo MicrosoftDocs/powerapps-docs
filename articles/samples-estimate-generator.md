@@ -38,7 +38,7 @@ By using this app, a flooring estimator can capture estimate details such as squ
 
 **Prerequisites**
 
-- [Install PowerApps](http://aka.ms/powerappsinstall)
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 - A Dropbox, OneDrive, or Google Drive account. (In this tutorial, you'll use Dropbox.)
 
 ## Get the sample data ##

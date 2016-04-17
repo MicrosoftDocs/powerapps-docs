@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -20,13 +20,11 @@
 
 # Add and configure a control in PowerApps #
 
-Add a variety of controls to your app, and configure their properties directly, from the ribbon, or in the formula bar.
+Add a variety of controls to your app, and configure their properties directly, from the ribbon, or in the Formula Bar.
 
 **Prerequisites**
 
-1. Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a desktop computer that's running Windows.  
-1. Open PowerApps.  
-1. Sign in for the first time by swiping left (or selecting the arrow near the lower-right corner) to advance through the welcome screens and then providing your credentials.
+1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 1. Select **New** on the **File** menu (near the left edge), and then select **Get started** under **Create from scratch**.
 
 	![Create an app from scratch](./media/add-configure-controls/blank-app.png)

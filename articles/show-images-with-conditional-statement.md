@@ -26,9 +26,9 @@ You can use this feature in your apps for different scenarios. For example, ther
 
 
 ### Prerequisites
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Create an app or open an existing app in PowerApps.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 - These steps use the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpeg images. The zip file also includes an XML file that can be converted to Excel. You can download and use this sample data, or import your own. 
 
 ## Add an image
@@ -37,7 +37,7 @@ You can use this feature in your apps for different scenarios. For example, ther
 
 	Your Media should look similar to the following:  
 	![][8]  
-3. Go back to the app designer. 
+3. Go back to the app designer.
 4. On the **Insert** tab, select **Image**. An image control is automatically added to the screen:  
 ![][1]  
 5. On the **Content** tab, and select **Image**. In the scroll list, select *Jacket_8_PaleMarigold*. The image displays in the control:  
@@ -77,7 +77,7 @@ Now, let's get creative with the image control. When **MyCheckbox** is enabled, 
 
 In this topic, you:
 
-- Upload images to Media in your app. 
+- Upload images to Media in your app.
 - Add an image, added a checkbox, and added a label.
 - Using the label, you use an Excel-like function to display different text depending if the checkbox was enabled or cleared. This is known as a conditional statement.
 - Use the **Visible** property of the image control to hide and show the picture, depending if the checkbox is checked or unchecked, another conditional statement.

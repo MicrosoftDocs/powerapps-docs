@@ -26,9 +26,9 @@ For example, add data from users about stock trades or client meetings, data fro
 
 ### Prerequisites
 
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Create an app or open an existing app in PowerApps.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Show text in a label
 Show text in a label by setting the value of its **Text** property. You can set this property by typing directly into the label or by entering an expression in the Function Bar. If you type directly into the label, it shows exactly what you type. If you enter an expression, the label shows the result of the expression.

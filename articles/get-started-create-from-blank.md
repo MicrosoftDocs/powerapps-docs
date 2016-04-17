@@ -18,7 +18,7 @@
    ms.author="anneta"/>
 
 # Create an app from scratch #
-Create your own app from scratch using any of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
+Create your own app from scratch using any one of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
 
 By following this tutorial, you'll create an app that shows users a set of data on the first screen:
 
@@ -30,8 +30,8 @@ On another screen, users can create, update, or delete a record in that set of d
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall)
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 - A cloud-storage account, such as DropBox, OneDrive, or Google Drive
 
 To follow this tutorial exactly:

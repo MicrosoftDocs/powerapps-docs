@@ -1,1 +1,1 @@
-[**PressedFill**](properties.fill.md) The background color of a control when the user taps or clicks that control.
+[**PressedFill**](properties-fill.md) The background color of a control when the user taps or clicks that control.

@@ -29,8 +29,8 @@ Show data from Office 365, Twitter, and Microsoft Translator in an app. For any 
 
 **Prerequisites**
 
-- Install [PowerApps](http://aka.ms/powerappsinstall), and then open it. (Advance through the welcome screens by selecting the arrow near the lower-right corner, and then sign in by providing your credentials.)
-- Learn how to [configure a control](get-started-test-drive.md#configure-a-control) in PowerApps.
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Create a connection ##
 1.  Open PowerApps, and then select **Connections** on the **File** menu (near the left edge).

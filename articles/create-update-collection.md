@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Create and update a collection in PowerApps | Microsoft PowerApps "
+	pageTitle="Create and update a collection | Microsoft PowerApps "
 	description="Create collections and add columns to existing collections in PowerApps"
 	services=""
 	suite="powerapps"
@@ -17,16 +17,15 @@
    ms.date="11/30/2015"
    ms.author="mandia"/>
 
-
 # Create and update a collection in your app
 Use a collection to store data that can be used in your app. A collection is a group of items that are similar. For example, you create a MyImages collection that stores all the product images your company sells. Within PowerApps, you can add your MyImages collection and create an app that displays all the pictures of these products. In another example, you can create a PriceList collection that lists the products and the price of each product.
 
 You can create and use collections within PowerApps. Let's get started.
 
 ### Prerequisites
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Create an app or open an existing app in PowerApps.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 - These steps use the [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
 ## Create a single-column collection
