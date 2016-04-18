@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
+	authors="sarafankit"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/28/2015"
-   ms.author="anneta"/>
+   ms.date="04/17/2016"
+   ms.author="ankitsar"/>
 
 # Add and configure a control in PowerApps #
 
@@ -51,8 +51,14 @@ On the **Insert** tab, follow either of these steps:
 
 		![Vertical and horizontal galleries that show images only, text only, images with captions, images with text, in addition to custom/blank galleries and a card gallery](./media/add-configure-controls/gallery-category.png)
 
-		**Tip:** [Add a card gallery](create-card-gallery.md) if each record contains more data than one screen can show at a time.
+		**Tip:** Show a list of records from a table using a [gallery](./add-a-gallery.md).
+	
+	- **Forms**
 
+		![Forms](./media/add-configure-controls/forms-category.png)
+
+		**Tip:** Show or edit a record by using a [form](./add-a-form.md).
+	
 	- **Media**
 
 		![Image, Camera, Video, Audio, Microphone, Add Picture](./media/add-configure-controls/media-category.png)
