@@ -1,11 +1,11 @@
 <properties
-   pageTitle="Build a formula | Microsoft PowerApps"
-   description="In PowerApps, you can use the operators and functions that this topic describes."
+   pageTitle="Functions, signals, and enumerations | Microsoft PowerApps"
+   description="Reference information for functions, signals, and enumerations in PowerApps."
    services=""
    suite="powerapps"
    documentationCenter="na"
    authors="gregli-msft"
-   manager="dwrede"
+   manager="erikre"
    editor=""
    tags=""/>
 
@@ -18,19 +18,15 @@
    ms.date="10/23/2015"
    ms.author="gregli"/>
 
-# Formula reference #
+# Functions, signals, and enumerations in PowerApps #
 
-Functions, [signals](functions/signals.md), and high level enumerations are listed below.  
+**Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.
 
-Reference information is also available for:
+When called, some functions have side effects. For example, the **SubmitForm** function saves a record to a data source. These functions are appropriate only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSubmit**.
 
-- [Operators](functions/operators.md)
-- [Control properties](reference-properties.md)
-- "Working with ..." guides:
-	- [Formulas](working-with-formulas.md)
-	- [Tables](functions/working-with-tables.md)
-	- [Data sources](functions/working-with-data-sources.md)
-	- [Variables](functions/working-with-variables.md)
+**Signals** return information about the environment. For example, **Location** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
+
+**Enumerations** return a pre-defined constant value. For example, **Color** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.
 
 ## A ##
 
@@ -62,9 +58,9 @@ Reference information is also available for:
 
 **[Clock](functions/function-clock-calendar.md)** Retrieves information about the clock for the current locale.
 
-**[Collect](functions/function-clear-collect-clearcollect.md)** Creates collections and adds data to a data source.
+**[Collect](functions/function-clear-collect-clearcollect.md)** Creates a collection or adds data to a data source.
 
-**[Color](functions/function-colors.md)** Built in color values.
+**[Color](functions/function-colors.md)** Sets a property to a built-in color value.
 
 **[ColorFade](functions/function-colors.md)** Fades a color value.
 
@@ -88,7 +84,7 @@ Reference information is also available for:
 
 ## D ##
 
-**[Date](functions/function-date-time.md)** Returns a date/time value, based on Year, Month, and Day values.  
+**[Date](functions/function-date-time.md)** Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
 
 **[DateAdd](functions/function-dateadd-datediff.md)** Add days, months, quarters, or years to a date/time value.
 
@@ -102,27 +98,29 @@ Reference information is also available for:
 
 **[Day](functions/function-datetime-parts.md)** Retrieves the day portion of a date/time value.  
 
-**[Disable](functions/function-enable-disable.md)** Disables a signal, such as **[Location](functions/signals.md)** for reading the GPS. 
+**[Disable](functions/function-enable-disable.md)** Disables a signal, such as **[Location](functions/signals.md)**, for reading the GPS.
 
 **[Distinct](functions/function-distinct.md)** Summarizes records of a table, removing duplicates.  
 
-**[DropColumns](functions/function-table-shaping.md)** Returns a table with columns removed.
+**[DropColumns](functions/function-table-shaping.md)** Returns a table with one or more columns removed.
 
 **[Defaults](functions/function-defaults.md)** Returns the default values for a data source.
 
 ## E ##
 
-**[Enable](functions/function-enable-disable.md)** Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS. 
+**[Enable](functions/function-enable-disable.md)** Enables a signal, such as **[Location](functions/signals.md)**, for reading the GPS.
 
 **[Errors](functions/function-errors.md)** Provides error information for previous changes to a data source.
 
-**[EncodeUrl](functions/function-encode-decode.md)** Encodes special characters using URL encoding. 
+**[ErrorKind](functions/function-errors.md)** Provides the kind of error returned by the **Errors** function and **Form** control.
+
+**[EncodeUrl](functions/function-encode-decode.md)** Encodes special characters using URL encoding.
 
 ## F ##
 
 **[Filter](functions/function-filter-lookup.md)** Returns a filtered table based on one or more criteria.
 
-**[Find](functions/function-find.md)** Checks if one string appears within another and returns the location. 
+**[Find](functions/function-find.md)** Checks whether one string appears within another and returns the location.
 
 **[First](functions/function-first-last.md)** Returns the first record of a table.
 
@@ -134,39 +132,39 @@ Reference information is also available for:
 
 ## H ##
 
-**[HashTags](functions/function-hashtags.md)** Extracts the hashtags (#strings) from a string. 
+**[HashTags](functions/function-hashtags.md)** Extracts the hashtags (#strings) from a string.
 
-**[Hour](functions/function-datetime-parts.md)** Retrieves the hour portion of a date/time value.
+**[Hour](functions/function-datetime-parts.md)** Returns the hour portion of a date/time value.
 
 ## I ##
 
-**[If](functions/function-if.md)** Returns one value if a condition is true, and another value if not.  
+**[If](functions/function-if.md)** Returns one value if a condition is true and another value if not.  
 
 **[IsBlank](functions/function-isblank-isempty.md)** Checks for a [blank](functions/function-isblank-isempty.md) value.
 
 **[IsEmpty](functions/function-isblank-isempty.md)** Checks for an empty table.
 
-**[IsNumeric](functions/function-isnumeric.md)** Checks for a numeric value. 
+**[IsNumeric](functions/function-isnumeric.md)** Checks for a numeric value.
 
-**[IsToday](functions/function-now-today-istoday.md)** Checks if a date/time value is sometime today. 
+**[IsToday](functions/function-now-today-istoday.md)** Checks whether a date/time value is sometime today.
 
 ## L ##
 
-**[Language](functions/function-language.md)** Access to the language used by the app.
+**[Language](functions/function-language.md)** Access to the language that the app uses.
 
 **[Last](functions/function-first-last.md)** Returns the last record of a table.
 
 **[LastN](functions/function-first-last.md)** Returns the last set of records (N records) of a table.
 
-**[Launch](functions/function-param.md)** Launches a web address or app.
+**[Launch](functions/function-param.md)** Launches a web address or an app.
 
-**[Left](functions/function-left-mid-right.md)** Returns the left portion of a string. 
+**[Left](functions/function-left-mid-right.md)** Returns the left-most portion of a string.
 
-**[Len](functions/function-len.md)** Returns the length of a string. 
+**[Len](functions/function-len.md)** Returns the length of a string.
 
-**[LoadData](functions/function-savedata-loaddata.md)** Loads a collection from PowerApps private storage. 
+**[LoadData](functions/function-savedata-loaddata.md)** Loads a collection from PowerApps private storage.
 
-**[Location](functions/signals.md)** Returns your location as a map coordinate, using the Global Positioning System (GPS) and other information.
+**[Location](functions/signals.md)** Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
 **[Logout](function-logout.md)** Logs the current user out of PowerApps.
 
@@ -178,7 +176,7 @@ Reference information is also available for:
 
 **[Max](functions/function-aggregates.md)** Maximum value of a table expression or a set of arguments.
 
-**[Mid](functions/function-left-mid-right.md)** Returns the middle portion of a string. 
+**[Mid](functions/function-left-mid-right.md)** Returns the middle portion of a string.
 
 **[Min](functions/function-aggregates.md)** Minimum value of a table expression or a set of arguments.
 
@@ -192,9 +190,9 @@ Reference information is also available for:
 
 **[Navigate](functions/function-navigate.md)** Changes which screen is displayed.
 
-**[NewForm](function-form.md)** Resets a form control for creation of a new item.
+**[NewForm](function-form.md)** Resets a form control for creation of an item.
 
-**[Not](functions/function-logicals.md)** Boolean logic NOT.  Returns **true** if its argument is **false**, and **false** if its argument is **true**.  You can also use the **!** operator.
+**[Not](functions/function-logicals.md)** Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the **!** operator.
 
 **[Now](functions/function-now-today-istoday.md)** Returns the current date/time value.
 
@@ -204,13 +202,13 @@ Reference information is also available for:
 
 ## P ##
 
-**[Param](functions/function-param.md)** Access to parameters passed to the app when it was launched.
+**[Param](functions/function-param.md)** Access to parameters passed to the app when the user opened it.
 
 **[Patch](functions/function-patch.md)** Modifies or creates a record in a data source, or merges records outside of a data source.
 
-**[PlainText](functions/function-encode-decode.md)** Removes HTML and XML tags from a string. 
+**[PlainText](functions/function-encode-decode.md)** Removes HTML and XML tags from a string.
 
-**[Proper](functions/function-lower-upper-proper.md)** Converts letters in a string of text to proper case. (The first letter of each word is uppercase, and the rest are lowercase.)
+**[Proper](functions/function-lower-upper-proper.md)** Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 
 ## R ##
 
@@ -218,13 +216,13 @@ Reference information is also available for:
 
 **[Refresh](functions/function-refresh.md)** Refreshes the records of a data source.
 
-**[Remove](functions/function-remove-removeif.md)** Removes specific records from a data source.
+**[Remove](functions/function-remove-removeif.md)** Removes one or more specific records from a data source.
 
 **[RemoveIf](functions/function-remove-removeif.md)** Removes records from a data source based on a condition.
 
 **[RenameColumns](functions/function-table-shaping.md)** Renames columns of a table.
 
-**[Replace](functions/function-replace-substitute.md)** Replaces part of a string with another string, by position.
+**[Replace](functions/function-replace-substitute.md)** Replaces part of a string with another string, by starting position of the string.
 
 **[ResetForm](functions/function-form.md)** Resets a form control for editing of an existing item.
 
@@ -232,13 +230,13 @@ Reference information is also available for:
 
 **[RGBA](functions/function-colors.md)** Returns a color value for a set of red, green, blue, and alpha components.
 
-**[Right](functions/function-left-mid-right.md)** Returns the right portion of a string. 
+**[Right](functions/function-left-mid-right.md)** Returns the right-most portion of a string.
 
-**[Round](functions/function-round.md)** Rounds to the closest number. 
+**[Round](functions/function-round.md)** Rounds to the closest number.
 
-**[RoundDown](functions/function-round.md)** Rounds down to the largest previous number. 
+**[RoundDown](functions/function-round.md)** Rounds down to the largest previous number.
 
-**[RoundUp](functions/function-round.md)** Rounds up to the smallest next number. 
+**[RoundUp](functions/function-round.md)** Rounds up to the smallest next number.
 
 ## S ##
 
@@ -258,7 +256,7 @@ Reference information is also available for:
 
 **[SubmitForm](functions/function-form.md)** Saves the item in a form control to the data source.
 
-**[Substitute](functions/function-replace-substitute.md)** Replaces part of a string with another string, by matching. 
+**[Substitute](functions/function-replace-substitute.md)** Replaces part of a string with another string, by matching strings.
 
 **[Sum](functions/function-aggregates.md)** Calculates the sum of a table expression or a set of arguments.  
 
@@ -266,13 +264,13 @@ Reference information is also available for:
 
 **[Table](functions/function-table.md)** Creates a temporary table.  
 
-**[Text](functions/function-text.md)** Formats a number as a string for display. 
+**[Text](functions/function-text.md)** Formats a number as a string for display.
 
-**[Time](functions/function-date-time.md)** Returns a date/time value, based on Hour, Minute, and Second values.  
+**[Time](functions/function-date-time.md)** Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
 
 **[TimeValue](functions/function-datevalue-timevalue.md)** Converts a time-only string to a date/time value.
 
-**[Today](functions/function-now-today-istoday.md)** Returns the current date/time value. 
+**[Today](functions/function-now-today-istoday.md)** Returns the current date/time value.
 
 **[Trim](functions/function-trim.md)** Strips spaces from both ends of a string.
 
@@ -292,7 +290,7 @@ Reference information is also available for:
 
 ## V ##
 
-**[Value](functions/function-value.md)** Converts a string to a number. 
+**[Value](functions/function-value.md)** Converts a string to a number.
 
 **[Validate](functions/function-validate.md)** Checks whether the value of a single column or a complete record is valid for a data source.
 

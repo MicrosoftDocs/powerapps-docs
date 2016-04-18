@@ -24,9 +24,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 **Prerequisites**
 
-1. Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a desktop computer that's running Windows.
-1. Open PowerApps.
-1. Sign in for the first time by selecting the arrow near the lower-right corner to advance through the welcome screens and then providing your credentials.
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
 ## Create an app ##
 1. On the **File** menu, select **New**, and then select **Get started** under **Start from your data**.

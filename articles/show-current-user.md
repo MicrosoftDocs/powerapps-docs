@@ -31,10 +31,9 @@ Basically, you can use this anywhere users would benefit from an automatically-p
 
 ### Prerequisites
 
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
-
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Create an app or open an existing app in PowerApps.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Add User
 In these steps, we're going to display the image, full name, and email address of the current signed-in user.

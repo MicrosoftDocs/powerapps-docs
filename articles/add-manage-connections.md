@@ -46,8 +46,7 @@ However, to manage connections such as deleting connections or updating connecti
 This tutorial will cover how to manage connections in [powerapps.com](https://web.powerapps.com).
 
 ### Prerequisites
-- Sign up for PowerApps at [powerapps.com](https://web.powerapps.com) using your work or organization account.
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
 ## Add a new connection to PowerApps
 

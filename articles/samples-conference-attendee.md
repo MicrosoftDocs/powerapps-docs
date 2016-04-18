@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="merwanhade"
+    authors="aftowen"
     manager="dwrede"
     editor=""
     tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="12/22/2015"
-   ms.author="mhade"/>
+   ms.author="anneta"/>
 
 # Sample app: conference attendee #
 
@@ -35,7 +35,7 @@ By using this app, a conference attendee can view a list of sessions, details ab
 
 **Prerequisites**
 
-- [Install PowerApps](http://aka.ms/powerappsinstall)
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 - A Dropbox, OneDrive, or Google Drive account. (In this tutorial, you'll use Dropbox.)
 
 ## Get the sample data ##

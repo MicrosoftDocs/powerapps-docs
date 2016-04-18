@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Form and Detail controls: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Form and Detail controls"
+    pageTitle="Form and View form controls: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the Form and View form controls"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,9 +18,9 @@
    ms.date="02/29/2016"
    ms.author="gregli"/>
 
-# Form and Detail controls in PowerApps #
+# Form and View form controls in PowerApps #
 
-Displays and edits a record of a data source.
+Displays, edits, and creates records in a data source.
 
 ## Description ##
 
@@ -36,7 +36,7 @@ The **Form** control is a container control for cards, and only cards.  Each car
 
 Cards can also be unbound within the **Form** control (**DataField** property is blank).  **Valid** and **Update** values are ignored for unbound cards.
 
-The **Detail** control is the same as the **Form** control, but only has **DataSource** and **Item** properties in addition to the standard positioning, sizing, and formatting properties.  **SubmitForm** and **ResetForm** functions do not work with the **Detail** forms.
+The **View form** control is the same as the **Form** control, but only has **DataSource** and **Item** properties in addition to the standard positioning, sizing, and formatting properties.  **SubmitForm** and **ResetForm** functions do not work with the **View form** forms.
 
 Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
 
@@ -49,7 +49,7 @@ Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
 	* Type: Data Source
 	* Changeable: Yes
 	* Readable: No
-	* Detail Control: Yes
+	* View form Control: Yes
 
 	The data source to work with.  
 
@@ -60,7 +60,7 @@ Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
 	* Type: Boolean
 	* Changeable: No
 	* Readable: Yes
-	* Detail Control: No
+	* View form Control: No
 
 	True if the form contains user changes from the original **Item** that have not been saved to the underlying data source.  Use this property to warn the user before losing unsaved changes or to block a bound gallery from changing selection (Gallery.Enabled = !Form.Unsaved) or disable refresh operations.
 
@@ -69,7 +69,7 @@ Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
 	* Type: String
 	* Changeable: No
 	* Readable: Yes
-	* Detail Control: No
+	* View form Control: No
 
 	Provides an error message for the user.  Usually this error message comes from the data source when the **SubmitForm** function is called.
 
@@ -86,7 +86,7 @@ Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
 	* Type: ErrorKind Enum
 	* Changeable: No
 	* Readable: Yes
-	* Detail Control: No
+	* View form Control: No
 
 	Provides the type of error.
 
@@ -108,7 +108,7 @@ Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
 	* Type: Record
 	* Changeable: Yes
 	* Readable: Yes
-	* Detail Control: Yes
+	* View form Control: Yes
 
 	The item to display and/or edit.  **Item** typically comes from the gllery **Selected** property, where the gallery is used to select the record to edit.
 
@@ -119,7 +119,7 @@ Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
 	* Type: Enum FormMode
 	* Changeable: No
 	* Readable: Yes
-	* Detail Control: No
+	* View form Control: No
 
 	Provides the mode of the Form control.
 
@@ -142,7 +142,7 @@ Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
 	* Type: Boolean
 	* Changeable: No
 	* Readable: Yes
-	* Detail Control: No
+	* View form Control: No
 
 	Indicates if it is OK to submit a form.  It is a logical AND of all the Valid properties of cards within the Form control.  
 
