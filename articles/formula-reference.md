@@ -18,15 +18,23 @@
    ms.date="10/23/2015"
    ms.author="gregli"/>
 
-# Functions, signals, and enumerations in PowerApps #
+# Formula reference #
 
-**Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.
+Formulas combine many elements.  Listed below are:
 
-When called, some functions have side effects. For example, the **SubmitForm** function saves a record to a data source. These functions are appropriate only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSubmit**.
+- **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.
 
-**Signals** return information about the environment. For example, **Location** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
+	When called, some functions have side effects. For example, the **SubmitForm** function saves a record to a data source. These functions are appropriate only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSubmit**.
 
-**Enumerations** return a pre-defined constant value. For example, **Color** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.
+- **Signals** return information about the environment. For example, **Location** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
+
+- **Enumerations** return a pre-defined constant value. For example, **Color** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.
+
+Other elements include:
+
+- [Operators](operators.md)
+
+- [Controls and their properties](reference-properties.md)
 
 ## A ##
 
