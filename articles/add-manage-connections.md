@@ -89,6 +89,5 @@ This tutorial will cover how to manage connections in [powerapps.com](https://we
 In this topic, you learnt how to create, update and delete connections and authorized PowerApps to use this connection within any apps you create. As next steps, you can try to create apps using the connections you have just created.
 
 - [Create an app from a set of data](get-started-create-from-data.md)
-- [Use line and pie charts](use-line-pie-bar-chart.md)
-- [Add a collection to show your data](create-update-collection.md)
-- [Use a logic flow to complete several tasks](using-logic-flows.md)
+- [Create an app from a template](get-started-test-drive.md)
+- [Add a new data source to an existing app](add-data-connection.md)

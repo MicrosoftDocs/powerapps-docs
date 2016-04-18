@@ -25,7 +25,7 @@ In this tutorial, you will learn how to add a new data connection to an existing
 - Learn how to build an [app from blank](get-started-create-from-blank.md) in PowerApps
 - Account information for the service you want to connect to
 
-## Add datasource  ##
+## Add datasource to your app  ##
 1. In PowerApps, select the **Content** tab in the ribbon.
 
 	![Content tab in the ribbon](./media/add-data-connection/content-tab.png)
@@ -65,3 +65,15 @@ In this tutorial, you will learn how to add a new data connection to an existing
 1. The data sources are now added to your app and ready to be consumed.
 
 	![List of datasources addded to the app](./media/add-data-connection)
+
+## Consume the datasource in your app ##
+
+1. For tabular datasources such as SharePoint, SQL, Dynamics CRM or Excel, you will be able to consume the data in the app by binding the imported table to the controls in the app. See [app from blank](get-started-create-from-blank.md) for more details.
+
+1. For non-tabular datasources such as Twitter, Microsoft Translator, you can consume it in your app by calling functions supported by that service.
+
+	 For example, once you import Microsoft Translator as a datasource in your app (by following steps called out in the previous section), you can bind the "Text" property of the Text box to MicrosoftTranslator.Translate("Hello","fr"). This function will translate the text "Hello" to French and you will see it in the text box.
+
+  ![Function bar for Translator](./media/add-data-connection)
+
+	![Text box for Translator](./media/add-data-connection)
