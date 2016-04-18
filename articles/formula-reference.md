@@ -20,13 +20,13 @@
 
 # Functions, signals, and enumerations in PowerApps #
 
-**Functions** take parameters, perform an operation, and return a value.  For example, **Sqrt(25)** returns **5**.  Functions are modeled after Microsoft Excel functions.
+**Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.
 
-When called, some functions have side effects, for example the **SubmitForm** function which saves a record to a data source.  These functions are only appropriate in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSubmit**.
+When called, some functions have side effects. For example, the **SubmitForm** function saves a record to a data source. These functions are appropriate only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSubmit**.
 
-**Signals** return information about the environment.  For example, **Location** returns the device's current GPS coordinate.  Signals do not take parameters and do not have side effects.
+**Signals** return information about the environment. For example, **Location** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 
-**Enumerations** return a pre-defined constant value.  For example, **Color** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, etc.
+**Enumerations** return a pre-defined constant value. For example, **Color** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.
 
 ## A ##
 
