@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="KarthikB"
+    authors="karthik-1"
     manager=""
     editor="AFTOwen"
     tags=""
@@ -58,7 +58,7 @@ If the app is launched from the web portal, chances are you already logged-in to
 ## Connection ##
 For the first time, if the app requires connections to data sources or consent to use device capabilities, you will be prompted for configuration before running the app.
 
-![Login user](./media/run-app-browser/app-connection.png)
+![Connection](./media/run-app-browser/app-connection.png)
 
 ## Exiting App ##
 You can exit the app in one of the several ways:

@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="KarthikB"
+    authors="karthik-1"
     manager=""
     editor="AFTOwen"
     tags=""
