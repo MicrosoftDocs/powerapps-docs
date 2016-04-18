@@ -45,7 +45,7 @@ Create an app automatically based on an Excel file in the cloud, customize the a
 
 	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
-1. Under **Select a table**, select **FlooringEstimates** , and then select **Connect**.  
+1. Under **Select a table**, select **FlooringEstimates**, and then select **Connect**.  
 
 	![Select FlooringEstimates table](./media/get-started-create-from-data/choose-table.png)
 
@@ -53,7 +53,7 @@ PowerApps builds an app that has three screens:
 
 - **BrowseScreen1** shows a list of all items and some information about them so that users can easily browse for the item they want.
 - **DetailScreen1** shows all information about a single item.
-- **EditScreen1** provides controls for adding an item or updating information about an item.
+- **EditScreen1** provides a [**Form**](./add-a-form.md) control for adding an item or updating information about an item.
 
 ## Customize the app ##
 When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
@@ -106,14 +106,14 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
     ![Expand Card Selector](./media/get-started-create-from-data/card-selector.png)
 
-1. Select the **Edit text card** option with multiple lines.
+1. Select the **Edit multi-line text card** option.
 
     ![Multi-line Card](./media/get-started-create-from-data/select-multiline-card.png)
 
 ## Run the app ##
 As you customize the app, you can test your changes by running the app in **Preview** mode.
 
-1. In the list of thumbnails, select **BrowseScreen1**, and then open Preview by pressing **F5** (or by selecting the Preview icon near the upper-right corner).
+1. In the list of thumbnails, select **BrowseScreen1**, and then open preview by selecting the **Preview** icon near the upper-right corner (or by pressing **F5**).
 
 	![Preview icon](./media/get-started-create-from-data/open-preview.png)
 
