@@ -53,7 +53,7 @@ PowerApps builds an app that has three screens:
 
 - **BrowseScreen1** shows a list of all items and some information about them so that users can easily browse for the item they want.
 - **DetailScreen1** shows all information about a single item.
-- **EditScreen1** provides a [**Form**](./add-a-form.md) control for adding an item or updating information about an item.
+- **EditScreen1** provides a [**Form**](./add-form.md) control for adding an item or updating information about an item.
 
 ## Customize the app ##
 When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
