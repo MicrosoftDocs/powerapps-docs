@@ -16,7 +16,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="04/18/2016"
-    ms.author="jamesol"/>
+    ms.author="mandia"/>
 
 # Share Excel data used by your app #
 
