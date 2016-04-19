@@ -17,6 +17,7 @@
    ms.date="04/19/2016"
    ms.author="archanan"/>
 
+
 # Add a new data connection #
 
 You can add a connection to a data source, including SharePoint Online, Salesforce, Dropbox, Twitter, and more. In your app, you "connect" to the data source, and then display the data within your app. For example, you can connect to OneDrive to display Excel data in your app, you can connect to Twilio to send an SMS message from your app, you can connect to SQL Azure and update a table from your app, and so on.

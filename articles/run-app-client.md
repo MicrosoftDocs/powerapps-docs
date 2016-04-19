@@ -16,7 +16,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="04/18/2016"
-    ms.author="karthikb"/>
+    ms.author="mandia"/>
 
 # Using apps in client #
 PowerApps can run on Windows, iOS, Android, and in a web browser. Apps running in a client can take advantage of the device capabilities, like location and a camera. Apps for Android, iOS, and Windows can be downloaded from their app stores. 
