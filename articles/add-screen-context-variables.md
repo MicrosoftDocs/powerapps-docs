@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Add a screen, navigation, and a context variable | Microsoft PowerApps"
-	description="In PowerApps, add a screen to an app, arrows to open one screen from another, and a context variable to track information between screens."
+	pageTitle="Add a screen and navigate between screens | Microsoft PowerApps"
+	description="In PowerApps, add a screen to an app and arrows to open one screen from another screen."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,7 +18,7 @@
    ms.date="10/21/2015"
    ms.author="anneta"/>
 
-# Add a screen, navigation, and context variables #
+# Add a screen and navigate between screens #
 
 Create an app with multiple screens, add ways for users to navigate between them, and manage data in your app by creating and updating one or more context variables. Store data in a context variable if a piece of information helps determine how the app appears or what it does but you don't need to retain the information after the app is closed.
 
@@ -79,53 +79,4 @@ Create an app with multiple screens, add ways for users to navigate between them
 
 1. Press Esc to return to the default workspace.
 
-## Add a context variable ##
 
-You can use a [context variable](working-with-variables.md) in many ways, but you'll perhaps most often use one to determine what a screen shows when you navigate to it. For example, users might click a button to add a record or update one. You can save time by configuring both buttons to open the same screen but configure the screen differently for either adding or updating a record.
-
-1. Follow the steps in the previous two procedures.
-
-1. (optional) On the **Source** screen, delete the Next button.
-
-1. On the **Source** screen, add a button, configure its **Text** property to show **Add**, and set its **OnSelect** property to this expression:
-
-	**Navigate(Target, ScreenTransition.Fade, {Mode:"Add"})**
-
-1. On the **Source** screen, add a button, configure its **Text** property to show **Edit**, and set its **OnSelect** property to this expression:
-
-	**Navigate(Target, ScreenTransition.Fade, {Mode:"Edit"})**
-
-1. On the **Target** screen, add four text boxes, and configure their **Text** properties to show these strings:
-
-	- **StartDay**
-	- **StartTime**
-	- **Staff1**
-	- **Staff2**
-
-1. Add four input-text controls, and arrange the elements so that each text box appears over one input-text control.
-
-1. Under **StartDay**, set the **Default** property of the input-text control to this formula:
-
-	**If(Mode="Add", "", "Sunday")**
-
-1. Under **StartTime**, set the **Default** property of the input-text control to this formula:
-
-	**If(Mode="Add", "", "10a-noon")**
-
-1. Under **Staff1**, set the **Default** property of the input-text control to this formula:
-
-	**If(Mode="Add", "", "Kawasaki")**
-
-1. Under **Staff2**, set the **Default** property of the input-text control to this formula:
-
-	**If(Mode="Add", "", "Dubois")**
-
-1. From the **Source** screen, press F5, and then select the **Add** button.
-
-	The **Target** screen appears with the input-text controls blank so that you can easily add a record.
-
-1. Select the Back arrow to return to the **Source** screen, and then select the **Edit** button.
-
-	The **Target** screen appears with information in each input-text control so that you easily edit the record.
-
-See [another simple example](function-updatecontext.md#step-by-step-example) or a [complex example](get-started-create-from-blank.md#save-changes-and-remove-a-record).
