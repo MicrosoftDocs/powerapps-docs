@@ -30,7 +30,7 @@ You created an app, and now you're ready to share it with your coworkers. You ca
 
 If you share an app with a group, *everyone* in that group has the permissions that you assign to the group. If users are added or deleted from the group, then these users gain and lose permissions accordingly.
 
-If you share an app with your organization, *everyone* in that group has the permission to run the app (default behavior). They cannot change or update the app.
+If you share an app with your organization, *everyone* in your organization has the permission to run the app (default behavior). They cannot change or update the app.
 
 **Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
 
@@ -41,8 +41,11 @@ If you share an app with your organization, *everyone* in that group has the per
 	- An app that you built (from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)).
 	- An app that someone else built and given you permission to run, customize, and share.
 
-## Share an app from the PowerApps web portal ##
-1. On [PowerApps web portal][1], select **Apps** in the left navigation bar:  
+## Share an app##
+
+#### Powerapps.com
+
+1. On [powerapps.com][1], select **Apps** in the left navigation bar:  
 
 	![](./media/share-app/new-file-apps-portal.png)
 
@@ -67,7 +70,7 @@ If you share an app with your organization, *everyone* in that group has the per
 
 	The message contains a link for the user to access the app. Any users who don't have PowerApps (or aren’t signed up to use it) are prompted to install it, and then sign up for it.
 
-## Share an app from PowerApps ##
+#### PowerApps
 1. In PowerApps, go to the **File** menu (near the left edge of the screen), then select **Open**:  
 
  ![](./media/share-app/new-open-apps.png)
@@ -93,9 +96,9 @@ If you share an app with your organization, *everyone* in that group has the per
 
 ## Change or remove permission ##
 
-#### PowerApps web portal
+#### Powerapps.com
 
-1. On [PowerApps web portal][1], select **Apps** in the left navigation bar.
+1. On [powerapps.com][1], select **Apps** in the left navigation bar.
 
   ![](./media/share-app/new-file-apps-portal.png)
 
@@ -117,6 +120,5 @@ If you share an app with your organization, *everyone* in that group has the per
 2. Under **Shared with**, select a user's name to see the options for changing or removing permissions. You can also select **My org** under **Shared with**, and then select **Delete** to stop sharing this app with all users in your organization.
 
 <!--Reference links in article-->
-[1]: https://web.powerapps.com
+[1]: http://go.microsoft.com/fwlink/?LinkId=715583
 [2]: http://go.microsoft.com/fwlink/?LinkId=708209
-[3]: ./media/share-app/open-apps.png
