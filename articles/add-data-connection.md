@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/18/2016"
-   ms.author="archanan"/>
+   ms.author="mandia"/>
 
 # Add a new data connection #
 
