@@ -30,13 +30,13 @@ You created an app, and now you're ready to share it with your coworkers. You ca
 
 If you share an app with a group, *everyone* in that group has the permissions that you assign to the group. If users are added or deleted from the group, then these users gain and lose permissions accordingly.
 
-If you share an app with your organization, *everyone* in that group has the permission to run the app (default behavior). They cannot change or update the app. 
+If you share an app with your organization, *everyone* in that group has the permission to run the app (default behavior). They cannot change or update the app.
 
 **Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
 
 ## What you need to get started
 
-- An account with which you've signed in to [powerapps.com](http://go.microsoft.com/fwlink/?LinkId=708209) or PowerApps.
+- An account with which you've signed in to [powerapps.com](2) or PowerApps.
 - Either of the following:
 	- An app that you built (from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)).
 	- An app that someone else built and given you permission to run, customize, and share.
@@ -44,22 +44,22 @@ If you share an app with your organization, *everyone* in that group has the per
 ## Share an app from the PowerApps web portal ##
 1. On [PowerApps web portal][1], select **My Apps** in the left navigation bar:  
 
-	[[New image of the web portal nav bar]]
+	![](./media/share-app/new-file-apps-portal.png)
 
 1. Select the tile of the app that you want to share.
 
-1. Select the **Permissions** tab:  
+1. Select the **Share** tab:  
 
-	[[Image of the Permissions tab in the App details page]]
+	![](./media/share-app/new-sharetab-portal.png)
 
-1. Type in your co-worker or group's work name or email address, and then select the person you want from the list. Remember, you can share this app with a co-worker or work group. 
+1. Type in your co-worker or group's work name or email address, and then select the person you want from the list. Remember, you can share this app with a co-worker or work group.
 
   In the list of permission types, choose from the following:  
   - **Can use**: Allow the user or group members to run the app. User are not able to share your app with other users or groups.
   - **Can use and share**: Allow the user or group members to run your app and share your app.
   - **Can edit**: Allow the user or group members to run your app, customize it, and share a new version of your app.
 
-	[[New portal image of 3 permission types]]
+  ![](./media/share-app/new-share-permissiontypes-portal.png)
 
 1. To share this app with all users within your organization, select **Allow access to others users in my organization**.
 
@@ -70,13 +70,13 @@ If you share an app with your organization, *everyone* in that group has the per
 ## Share an app from PowerApps ##
 1. In PowerApps, go to the **File** menu (near the left edge of the screen), then select **Open**:  
 
- ![List apps on powerapps.com the web](./media/share-app/open-apps.png)
+ ![](./media/share-app/open-apps.png)
 
 1. Select the share icon for the app that you want to share:  
 
   [[Client share icon]]
 
-1. Type in your co-worker or groups work name or email address, and then select the person you want from the list. Remember, you can share this app with a co-worker or work group. 
+1. Type in your co-worker or groups work name or email address, and then select the person you want from the list. Remember, you can share this app with a co-worker or work group.
 
   In the list of permission types:
   - **Can use**: Allow the user or group members to run the app. User are not able to share your app with other users or groups.
@@ -95,8 +95,14 @@ If you share an app with your organization, *everyone* in that group has the per
 
 #### PowerApps web portal
 
-1. On [PowerApps web portal][1], select **My Apps** in the left navigation bar.
+1. On [PowerApps web portal][1], select **Apps** in the left navigation bar.
+
+  ![](./media/share-app/new-file-apps-portal.png)
+
 1. Select the tile of the app.
+
+  [[app tile icon]]
+
 1. Select the **Permissions** tab.
 1. Select a different permission from the drop-down list. Or select the **x** icon to delete a user, group, or your organization's permission.
 
@@ -108,3 +114,5 @@ If you share an app with your organization, *everyone* in that group has the per
 
 <!--Reference links in article-->
 [1]: https://web.powerapps.com
+[2]: http://go.microsoft.com/fwlink/?LinkId=708209
+[3]: ./media/share-app/open-apps.png
