@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Show, edit or add a record from a table | Microsoft PowerApps"
-    description="Use Forms to show, edit, or add a record from a table from your data source."
+    pageTitle="Show, edit, or add a record from a table | Microsoft PowerApps"
+    description="Use a form to show, edit, or add a record from a table in your data source."
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -17,62 +17,43 @@
     ms.date="04/13/2016"
     ms.author="ankitsar"/>
 
-# Show, edit or add a record from a table#
+# Show, edit, or add a record from a table #
+To show all fields in a record, add and configure a [**DisplayForm**](./controls/control-form-detail.md) control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an [**Edit Form**](./controls/control-form-detail.md) control.
 
-Use [Forms](./controls/control-form-detail.md) to show, edit, or add a record from a table from your data source.
+**Prerequisites**
 
-There are two types of **Forms** available in **PowerApps**:
-
-![Types of form](./media/add-form/form-types.png)
-
-| Activity | Control | Description |
-|---------|------------|---------|
-| **Viewing a record** | **[Display form](controls/control-form-detail.md)** control | See all the details or fields of a record.|
-| **Editing a record** | **[Edit form](controls/control-form-detail.md)** control | Updating the fields of a record and saving those changes back to the underlying data source.  Facilities for editing are often used to create new records too. |
-
-### Prerequisites
-
-- Create an app or open an existing app in PowerApps.
+- Create an app, or add a screen to an app.
 - Learn how to [configure a control](./add-configure-controls.md) in PowerApps.
-- A [connection](./add-data-connection.md) to **FlooringEstimates** table from [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial. 
+- A [connection](./add-data-connection.md) to **FlooringEstimates** table from [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 
-## Add a Form and bind to data##
+## Add a form, and show data ##
+1. Add a [**Drop down**](./controls/control-drop-down.md) control, name it **ChooseProduct**, and set its **Items** property to this value:
 
-1. On the **Insert Tab**, select **Controls**, and then add a **Drop down** to the form.
+	**FlooringEstimates.Name**
 
-1. On the **Formula Bar**, set the **DataSource** property of the dorp down to:
+	The list shows names of flooring products from the data source.
 
-	```
-	FlooringEstimates.Name
-	``` 
-
-1. On the **Insert Tab**. select **Forms**, add a **Display form** or **Edit form**, and adjust it on the screen to cover most of the screen
+1. Add a **Display form** or an **Edit form**, move it below **ChooseProduct**, and resize the form to cover most of the screen.
 
     ![Add a form](./media/add-form/add-a-form.png)
 
-1.  On the **Formula Bar**, set the **DataSource** property of the form to:
+1.  Set the **DataSource** property of the form to **FlooringEstimates** and the **Item** property of the form to this formula:
 
-	```
-	FlooringEstimates
-	```
-1. Set the **Item** property of the form to:
-	```
-	First(Filter(FlooringEstimates,Name=Dropdown1.Selected.Value))
-	```
-    This formula shows the details for the selected item in the drop down from the **FlooringEstimates** table.
+	**First(Filter(FlooringEstimates,Name=ChooseProduct.Selected.Value))**
 
-##Show or hide fields on Form##
+    This formula specifies that the form will show the record that the user selects in **ChooseProduct**.
 
-1. On the design workspace, select the **Form**, and then select **Options** (near the lower-right corner).
+## Show or hide fields on the form ##
+1. If the **Options** pane isn't open, make sure that the form is still selected, and select **Options** near the lower-right corner.
 
 	![Open Options pane](./media/add-form/open-options.png)
 
-	The **Form** tab of the **Options** pane appears.
-    
+	The **Form** customization tab of the **Options** pane appears.
+
     ![Form options](./media/add-form/form-options.png)
-    
-1. In the **Options** pane, select show field option for all the fields 
-	
+
+1. In the **Options** pane, select show field option for all the fields
+
 	![Show fields on form](./media/add-form/show-fields.png)
 
 ## Set the card type for a field##
@@ -100,8 +81,8 @@ There are two types of **Forms** available in **PowerApps**:
 
 	```
 	SubmitForm(Form1);
-	``` 
-    
+	```
+
 ## Next steps ##
 - Learn more about [working with Forms](./working-with-forms.md)
 - Learn more about [formulas](./working-with-formulas.md) in PowerApps
