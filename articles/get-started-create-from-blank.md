@@ -96,6 +96,7 @@ To follow this tutorial exactly, we will create an Excel file which shows who ha
 	```
 	Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))
 	```
+	
 	This formula shows the data from the **Schedule** table. If the user types in the search box, the gallery shows only those records in which the **Volunteer 1** column contains the search text. If the user selects the sort button, the sort order toggles between ascending and descending, based on the **Volunteer 1** column.
 
 	![The Schedule data in the gallery by default](./media/get-started-create-from-blank/gallery-data-default.png)
@@ -106,6 +107,7 @@ To follow this tutorial exactly, we will create an Excel file which shows who ha
 
 ## Create the ChangeScreen ##
 1. [Rename the default screen](add-screen-context-variables.md#add-a-screen-and-navigation) to **ViewScreen**, add another screen, and name it **ChangeScreen**.
+	
 	![Rename Screen](./media/get-started-create-from-blank/rename-screen.png)
 	
 	![add Screen](./media/get-started-create-from-blank/add-screen.png)
@@ -114,7 +116,7 @@ To follow this tutorial exactly, we will create an Excel file which shows who ha
 
 	![ChangeScreen with text box and arrow](./media/get-started-create-from-blank/change-screen-blank.png)
 
-1. On the **Insert Tab**. select **Forms**, [add an **Edit Form**](./add-a-form.md), and adjust it on the screen to cover most of the screen
+1. On the **Insert Tab**. select **Forms**, [add an **Edit Form**](./add-form.md), and adjust it on the screen to cover most of the screen
 
 	![Add a Form](./media/get-started-create-from-blank/add-form.png)
 
@@ -123,10 +125,13 @@ To follow this tutorial exactly, we will create an Excel file which shows who ha
 	```
 	Schedule
 	```
+	
 1. Set the **Item** property of the form to:
+	
 	```
 	BrowseGallery1.Selected
 	```
+	
 1. On the **Options** pane, select show field option for all the fields 
 	
 	![Show fields on form](./media/get-started-create-from-blank/show-fields.png)
@@ -138,15 +143,19 @@ To follow this tutorial exactly, we will create an Excel file which shows who ha
 	![Insert a text box](./media/get-started-create-from-blank/custom-card-textbox.png)
 
 1. On the **Formula Bar**, set the **Text** property of the **Text box** to show the errors from the Form:
+	
 	```
 	Form1.Error
 	``` 
+	
 1. Set the **AutoHeight** property of the **Text box** to *true*.
 
 1. Add a **Back arrow** shape (Insert>Shapes) to the screen, and set its **OnSelect** property to [navigate](./functions/function-navigate.md") to the first screen:
+	
 	```
 	Navigate(ViewScreen,ScreenTransition.None)
 	``` 
+	
 	![Add back shape](./media/get-started-create-from-blank/add-back-button.png)
 	
 1. Add a button to the bottom of the form, and set its **Text** property to **Save**
@@ -172,15 +181,19 @@ To follow this tutorial exactly, we will create an Excel file which shows who ha
 ## Set navigation from ViewScreen ##
 
 1. On the **ViewScreen**, set the **OnSelect** property of the **Next arrow** of the first record in gallery to navigate to **ChangeScreen**
+	
 	```
 	Navigate(ChangeScreen,ScreenTransition.None)
 	```
+	
 	![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
 
 1. On the **ViewScreen**, set the **OnSelect** property of the **Add** to create a record and navigate to **ChangeScreen** 
+	
 	```
 	NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)
 	```
+	
 	![Add recors](./media/get-started-create-from-blank/add-record.png)
 
 ## Run the app ##
