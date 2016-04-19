@@ -16,7 +16,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="04/18/2016"
-    ms.author="karthikb"/>
+    ms.author="mandia"/>
 
 # Using apps in a web browser #
 PowerApps can run on Windows, iOS, Android, and a web browser. Apps running in a browser match the experience as apps running in the client. Running apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies. 
