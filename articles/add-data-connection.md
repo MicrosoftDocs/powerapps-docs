@@ -14,7 +14,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/18/2016"
+   ms.date="04/19/2016"
    ms.author="archanan"/>
 
 # Add a new data connection #
@@ -28,7 +28,8 @@ This topic shows you how to create a data connection within PowerApps. [Connecti
 - [Build an app](get-started-create-from-blank.md)
 - Account and sign-in details for the service you are connecting to
 
-## Add datasource  ##
+
+## Add a data source to your app  ##
 1. In PowerApps, select the **Content** tab:  
 
 	![Content tab in the ribbon](./media/add-data-connection/content-tab.png)
@@ -68,6 +69,19 @@ This topic shows you how to create a data connection within PowerApps. [Connecti
 1. The data sources are now added to your app and ready to be consumed:  
 
 	![List of datasources addded to the app](./media/add-data-connection)
+
+## Consume the data source in your app ##
+
+1. For tabular data sources such as SharePoint, SQL, Dynamics CRM or Excel, you can consume the data in the app by binding the imported table to the controls in the app. See [create an app from blank](get-started-create-from-blank.md) for more details.
+
+1. For non-tabular data sources such as Twitter or Microsoft Translator, you can consume the data source in your app by calling functions supported by that service.
+
+	 For example, once you import Microsoft Translator as a datasource in your app (by following steps called out in the previous section), you can bind the "Text" property of the Text box to `MicrosoftTranslator.Translate("Hello","fr")`. This function translates the text "Hello" to French, and you see the translation in the text box.
+
+  ![Function bar for Translator](./media/add-data-connection)
+
+	![Text box for Translator](./media/add-data-connection)
+
 
 ## More good stuff
 For some examples of adding connections, take a look at these:  
