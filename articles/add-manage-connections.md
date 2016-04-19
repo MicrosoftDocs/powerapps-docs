@@ -32,9 +32,14 @@ For example, you can use connections to:
 - Create a Twitter connection to send a tweet.
 
 You can create new connections in PowerApps in multiple scenarios, such as:
-1. Create a new [app from data](get-started-create-from-data.md)
-1. Create a new [app from blank](get-started-create-from-blank.md) or edit an existing app by [adding a new data source](add-data-connection.md)
-1. Open an app that was shared with you and create connections required by the app
+
+1. While creating a new [app from data](get-started-create-from-data.md)
+
+1. While create a new [app from blank](get-started-create-from-blank.md) or editing an existing app by [adding a new data source](add-data-connection.md)
+
+1. While opening an app that was shared with you and creating connections required by the app
+
+1. Creating new connections in [powerapps.com](https://web.powerapps.com).
 
 However, to manage connections such as deleting connections or updating connections, you can only do it in [powerapps.com](https://web.powerapps.com).
 
@@ -84,6 +89,5 @@ This tutorial will cover how to manage connections in [powerapps.com](https://we
 In this topic, you learnt how to create, update and delete connections and authorized PowerApps to use this connection within any apps you create. As next steps, you can try to create apps using the connections you have just created.
 
 - [Create an app from a set of data](get-started-create-from-data.md)
-- [Use line and pie charts](use-line-pie-bar-chart.md)
-- [Add a collection to show your data](create-update-collection.md)
-- [Use a logic flow to complete several tasks](using-logic-flows.md)
+- [Create an app from a template](get-started-test-drive.md)
+- [Add a new data source to an existing app](add-data-connection.md)
