@@ -22,7 +22,7 @@
 
 You can add a connection to a data source, including SharePoint Online, Salesforce, Dropbox, Twitter, and more. In your app, you "connect" to the data source, and then display the data within your app. For example, you can connect to OneDrive to display Excel data in your app, you can connect to Twilio to send an SMS message from your app, you can connect to SQL Azure and update a table from your app, and so on.
 
-This topic shows you how to create a data connection within PowerApps. [Connections list](connections-list.md) lists all the available connections you can add. 
+This topic shows you how to create a data connection within PowerApps. [Connections list](connections-list.md) lists all the available connections you can add.
 
 ## What you need to get started ##
 
@@ -39,50 +39,49 @@ This topic shows you how to create a data connection within PowerApps. [Connecti
 
 	![Data sources](./media/add-data-connection/data-sources.png)
 
-1. The Data sources pane slides out on the right. Select **Insert your data**:  
+1. The Data sources pane slides out on the right. Select **Add data source**:
 
-	![Data sources pane](./media/add-data-connection/data-source-pane.png)
+	![Data sources pane](./media/add-data-connection/add-data-source.png)
 
-1. Select an existing connection OR choose to add a new connection:  
+1. Select an existing connection OR choose to add a new connection:
 
-	![List of connections](./media/add-data-connection)
+	![List of connections](./media/add-data-connection/list-of-connections.png)
 
-1. To add a new connection, select **Add**:  
+1. From the list of available connections, choose the data source you want to connect to, such as **SharePoint Online** and select it.
 
-	![Add button](./media/add-data-connection)
+	![List of APIs](./media/add-data-connection/list-of-api.png)
 
-1. From the list of available connections:  
+1. Click **Connect** and provide your credentials for SharePoint Online.
 
-	![List of available connections](./media/add-data-connection)
+   ![SharePoint Online connect screen](./media/add-data-connection/sharepoint-connect.png)
 
-1.  Choose the data source you want to connect to, such as **SharePoint Online**, and select **Connect**:  
+1. Once the connection is established, select a site from the list of **Recent Sites** OR enter a **New Site**.
 
-	![SharePoint Online connect screen](./media/add-data-connection)
-
-1. Select site from the list of **Recent Sites** OR enter a **New Site**:  
-
-	![Select a SharePoint site](./media/add-data-connection)
+	![Select a SharePoint site](./media/add-data-connection/select-sp-site.png)
 
 1. Select the table you want to use in your app using the checkbox. You can also select multiple tables. Select **Connect**:  
 
-	![Select the tables in SharePoint that you want to use](./media/add-data-connection)
+	![Select the tables in SharePoint](./media/add-data-connection/select-sp-tables.png)
 
 1. The data sources are now added to your app and ready to be consumed:  
 
-	![List of datasources addded to the app](./media/add-data-connection)
+	![List of datasources addded to the app](./media/add-data-connection/data-sources-list.png)
 
 ## Consume the data source in your app ##
 
-1. For tabular data sources such as SharePoint, SQL, Dynamics CRM or Excel, you can consume the data in the app by binding the imported table to the controls in the app. See [create an app from blank](get-started-create-from-blank.md) for more details.
+1. For tabular datasources such as SharePoint, SQL, Dynamics CRM or Excel, you will be able to consume the data in the app by binding the imported table to the controls in the app. See how to [show list of items in your app](add-gallery.md) or how to [show, add or edit a record from a table](add-form.md) for more details.
 
 1. For non-tabular data sources such as Twitter or Microsoft Translator, you can consume the data source in your app by calling functions supported by that service.
 
-	 For example, once you import Microsoft Translator as a datasource in your app (by following steps called out in the previous section), you can bind the "Text" property of the Text box to `MicrosoftTranslator.Translate("Hello","fr")`. This function translates the text "Hello" to French, and you see the translation in the text box.
+	 For example, once you import Microsoft Translator as a datasource in your app (by following steps called out in the previous section), it will show up in the data source pane.
 
-  ![Function bar for Translator](./media/add-data-connection)
+	 ![Twitter datasource](./media/add-data-connection/translator.png)
 
-	![Text box for Translator](./media/add-data-connection)
+	 You can add a Text box to your app and bind the "Text" property of the Text box to MicrosoftTranslator.Translate("Hello","fr"). This function will translate the text "Hello" to French and you will see it in the text box.
 
+  ![Function bar for Translator](./media/add-data-connection/translator-func.png)
+
+	![Text box for Translator](./media/add-data-connection/translation-textbox.png)
 
 ## More good stuff
 For some examples of adding connections, take a look at these:  
