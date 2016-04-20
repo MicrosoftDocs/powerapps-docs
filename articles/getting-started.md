@@ -19,23 +19,25 @@
    ms.author="anneta"/>
 
 # Get started with PowerApps #
-Welcome to Microsoft PowerApps! After you [sign up](filename.md), you can quickly start to create and use custom business apps.
+Welcome to Microsoft PowerApps! [Sign up](filename.md) to start creating and using custom business apps.
 
-## Discover possibilities ##
-If you [sign in to the home page](filename.md) for PowerApps, you can [explore one or more sample apps](sample-app topic.md) to get a quick sense of what's possible and how PowerApps could help your business.
+## Check out some apps ##
+[Sign in to PowerApps.com](filename.md) and explore one or more sample apps to get a quick sense of what's possible and how PowerApps could help your business.
 
 [PowerApps home screenshot]
 
-Each sample app is designed for a specific purpose such as managing a budget, showcasing a set of products, or tracking sales opportunities. Some sample apps contain hardcoded data that's fictitious but realistic enough to inspire your thinking. Other sample apps connect to a live data source such as Salesforce or Dynamics, so that you can show, add, and update real records in real time.
+Each sample app is designed for a specific purpose such as managing a budget, showcasing a set of products, or tracking sales opportunities. Some sample apps contain fictitious data to inspire your thinking. Other sample apps connect to a live data source such as Salesforce so that you can show, add, and update your own  records in real time. [Learn more about Sample Apps](sample-app topic.md).
 
-## Give yourself a head start ##
-To see how any sample app is built, [install PowerApps](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer that's running Windows. Explore specific screens and controls to understand how they're configured, and experiment with customization to boost your knowledge before you embark on your own apps.  
+Your home page on PowerApps.com is also where you'll find apps that your co-workers have created and shared with you, as well as a quick way to get back to your own apps. 
 
-You can also [use a template](get-started-test-drive) to generate an app that's based on data in a cloud account, such as Dropbox, OneDrive or Google Drive.
+## Try out a template ##
+To create your own apps, [install PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer. 
+
+A quick way to get started is to [build an app from a template](get-started-test-drive). Like the sample apps on PowerApps.com, these templates are based on sample data in a cloud account, such as Dropbox, OneDrive or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to boost your knowledge before you embark on your own apps.  
 
 [AFT image tbd]
 
-## Hit the ground running ##
+## Generate an app from your data ##
 Now that you have some idea of what PowerApps can do and a bit of experience, you can [automatically generate an app that's designed specifically for your data](get-started-create-from-data.md), whether it's in:
 
 - an Excel file (stored locally or in a cloud-storage account such as Dropbox, OneDrive, or Google Drive)
@@ -45,20 +47,12 @@ Now that you have some idea of what PowerApps can do and a bit of experience, yo
 
 [AFD image tbd]
 
-PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. At this point, add your own touches by [customizing the kinds of data](filename.md) that the app shows and [specifying how users add and update records](filename.md).
+PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. Add your own touches by [choosing the kinds of data](filename.md) that the app shows, customizing  the visual design and layout, or [specifying how users add and update records](filename.md).
 
-To make the app truly your own:
+Once you have your app looking and behaving like you want it to, [share it](filename.md) with others on your team so that they can use it too. Remember: they'll need access to the data source you used to build the app.
 
-- [add another data source](filename.md)
-- [add one or more screens](add-screen-context-variables.md)
-- [add and configure more controls](add-configure-controls.md)
-- [change how the app behaves](formula-reference.md)
-- any combination of these
-
-When the app does everything you need and more, [share it](filename.md) with others so that the entire organization can benefit from your creativity.
-
-## Take it up to full speed ##
-Create exactly the app you want with no distractions by [building an app from scratch](get-started-create-from-blank,md). This way, the entire app comes straight from your brain to the screen. With the training wheels off, you'll want to understand one or more of these concepts at a much deeper level:
+## Get creative ##
+Create exactly the app you want with no distractions by [building an app from scratch](get-started-create-from-blank,md). This way, the entire app comes straight from your brain to the screen. As you roll up your sleeves, you'll want to understand one or more of these concepts at a much deeper level:
 
 - [formulas](filename.md)
 - [galleries and forms](filename.md)
