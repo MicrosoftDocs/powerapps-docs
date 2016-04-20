@@ -20,12 +20,12 @@
 # Share an app #
 [AZURE.VIDEO nb:cid:UUID:4a51313a-0d00-80c4-1ead-f1e5920c334e]
 
-[[[We need to either remove or update this video]]]
+[[[Replace with Linh's video when ready]]]
 
 You created an app, and now you're ready to share it with your coworkers. You can give other users permission to run the app, customize the app, and then they can share their own version of the app. You can share an app with:
 
-- Multiple co-workers at the same time
-- A group in Azure Active Directory (AAD)
+- Individual co-workers or multiple co-workers within your organization
+- A group or multiple groups within your organization
 - All users within your organization
 
 If you share an app with a group, *everyone* in that group has the permissions that you assign to the group. If users are added or deleted from the group, then these users gain and lose permissions accordingly.
@@ -36,10 +36,10 @@ If you share an app with your organization, *everyone* in your organization has 
 
 ## What you need to get started
 
-- An account with which you've signed in to the [PowerApps portal](2) or PowerApps.
-- Either of the following:
+- The account you used to sign-in to the [PowerApps portal][1] or PowerApps.
+- An app, either of the following:
 	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-	- An app that someone else built and gave you permission to run, customize, and share.
+	- An app that someone else create and gave you permission to run, customize, and share.
 
 ## Share an app##
 
@@ -123,4 +123,3 @@ If you share an app with your organization, *everyone* in your organization has 
 
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
-[2]: http://go.microsoft.com/fwlink/p/?LinkId=708209
