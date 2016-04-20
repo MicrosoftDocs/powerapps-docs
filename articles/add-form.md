@@ -18,7 +18,7 @@
     ms.author="ankitsar"/>
 
 # Show, edit, or add a record from a table #
-To show all fields in a record, add and configure a [**DisplayForm**](./controls/control-form-detail.md) control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an [**Edit Form**](./controls/control-form-detail.md) control.
+To show all fields in a record, add and configure a [**Display form**](./controls/control-form-detail.md) control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an [**Edit form**](./controls/control-form-detail.md) control.
 
 **Prerequisites**
 
@@ -33,7 +33,7 @@ To show all fields in a record, add and configure a [**DisplayForm**](./controls
 
 	The list shows names of flooring products from the data source.
 
-1. Add a **Display form** or an **Edit form**, move it below **ChooseProduct**, and resize the form to cover most of the screen.
+1. Add a form, move it below **ChooseProduct**, and resize the form to cover most of the screen.
 
     ![Add a form](./media/add-form/add-a-form.png)
 
@@ -41,7 +41,7 @@ To show all fields in a record, add and configure a [**DisplayForm**](./controls
 
 	**First(Filter(FlooringEstimates,Name=ChooseProduct.Selected.Value))**
 
-    This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**
+    This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**.
 
 1. If the **Options** pane isn't open, make sure that the form is still selected, and then select **Options** near the lower-right corner.
 
@@ -52,15 +52,15 @@ To show all fields in a record, add and configure a [**DisplayForm**](./controls
 	![Show fields on form](./media/add-form/show-fields.png)
 
 ## Set the card type for a field ##
-1. In the **Options** pane, select the card selector for **Price**.
+1. In the **Options** pane, select the card selector for **Price**, and the select the **View text** option.
 
-    ![Expand Card Selector](./media/add-form/card-selector.png)
-
-1. Select the **View text** option.
+	If you added a **Display form** control, you have these options, and this step changes the display from a percentage to a decimal number.
 
     ![View text Card](./media/add-form/select-text-card.png)
 
-	If you added a **Display form**, the value changed from a percentage to a string of text. If you added an **Edit form**, you made the field read-only.
+	If you added an **Edit form** control, you have these options, and this step makes the field read-only.
+
+    ![View text Card](./media/add-form/select-text-card-edit.png)
 
 ## Arrange cards on the form ##
 1. Select **Name**, and then drag the field's title bar above **Category**.
@@ -68,13 +68,19 @@ To show all fields in a record, add and configure a [**DisplayForm**](./controls
     ![Drop a card](./media/add-form/card-on-top.png)
 
 ## (Edit form only) Save changes ##
-1. Name the form **EditForm**, add a [**Button**](./controls/control-button.md) control, and set its **Text** property to **Save**.
+1. Name the form **EditForm**.
+
+	**Tip:** Select the form, not any of the cards, by clicking or tapping its scrollbar.
+
+1. Add a [**Button**](./controls/control-button.md) control, and set its **Text** property to **Save**.
 
 	![Add a save button](./media/add-form/add-a-save-button.png)  
 
 1.  Set the **OnSelect** property of the **Save** button to this formula:
 
 	**SubmitForm(EditForm)**
+
+1. Open Preview by selecting the play button near the upper-right corner (or by pressing F5), change the name of a product, and then select **Save**.
 
 	The [**SubmitForm**](./functions/function-form.md) function saves your changes to the data source with which you configured the form.
 
