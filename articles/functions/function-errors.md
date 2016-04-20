@@ -51,10 +51,12 @@ The **Errors** function returns a [table](working-with-tables.md) of errors that
 | ErrorKind.EditPermission | An attempt was made to edit a record, and the current user doesn't have permission to edit records. |
 | ErrorKind.GeneratedValue | An attempt was made to change a column that the data source generates automatically. |
 | ErrorKind.MissingRequired | The value for a required column is missing from the record. |
-| ErrorKind.None | The error is of an unknown kind. |
+| ErrorKind.None | There is no error. |
 | ErrorKind.NotFound | An attempt was made to edit or delete a record, but the record couldn't be found.  Another user may have changed the record. |
 | ErrorKind.ReadOnlyValue | An attempt was made to change a column that's read only. |
-| ErrorKind.Sync | There was an error while synchronizing the change with the data service. |
+| ErrorKind.Sync | An error was reported by the data source.  Check the Message column for more information. |
+| ErrorKind.Unknown | There was an error, but of an unknown kind. |
+| ErrorKind.Validation | There was a general validation issue detected, that did not fit one of the other kinds. |
 
 Errors can be returned for the entire data source, or for only a selected row by providing the *Record* argument to the function.  
 
