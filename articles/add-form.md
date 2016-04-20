@@ -41,22 +41,17 @@ To show all fields in a record, add and configure a [**DisplayForm**](./controls
 
 	**First(Filter(FlooringEstimates,Name=ChooseProduct.Selected.Value))**
 
-    This formula specifies that the form will show the record that the user selects in **ChooseProduct**.
+    This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**
 
-## Show or hide fields on the form ##
-1. If the **Options** pane isn't open, make sure that the form is still selected, and select **Options** near the lower-right corner.
+1. If the **Options** pane isn't open, make sure that the form is still selected, and then select **Options** near the lower-right corner.
 
 	![Open Options pane](./media/add-form/open-options.png)
 
-	The **Form** customization tab of the **Options** pane appears.
-
-    ![Form options](./media/add-form/form-options.png)
-
-1. In the **Options** pane, select show field option for all the fields
+1. For each field in the **Options** pane, select the option to show that field.
 
 	![Show fields on form](./media/add-form/show-fields.png)
 
-## Set the card type for a field##
+## Set the card type for a field ##
 1. In the **Options** pane, select the card selector for **Price**.
 
     ![Expand Card Selector](./media/add-form/card-selector.png)
@@ -65,24 +60,23 @@ To show all fields in a record, add and configure a [**DisplayForm**](./controls
 
     ![View text Card](./media/add-form/select-text-card.png)
 
-## Arrange cards on the form##
-1. Select **Category**, and then drag the field's title bar above **Image**.
+	If you added a **Display form**, the value changed from a percentage to a string of text. If you added an **Edit form**, you made the field read-only.
 
-    ![Select a card](./media/add-form/select-card.png)
+## Arrange cards on the form ##
+1. Select **Name**, and then drag the field's title bar above **Category**.
 
     ![Drop a card](./media/add-form/card-on-top.png)
 
-## Submit changes for an Edit form##
-1. Add a button to the bottom of the form, and set its **Text** property to **Save**
+## (Edit form only) Save changes ##
+1. Name the form **EditForm**, add a [**Button**](./controls/control-button.md) control, and set its **Text** property to **Save**.
 
 	![Add a save button](./media/add-form/add-a-save-button.png)  
 
-1.  On the **Formula Bar**, set the **OnSelect** property of the **Save** button to [submit the form](./functions/function-form.md") to save the changes to the record:
+1.  Set the **OnSelect** property of the **Save** button to this formula:
 
-	```
-	SubmitForm(Form1);
-	```
+	**SubmitForm(EditForm)**
+
+	The [**SubmitForm**](./functions/function-form.md) function saves your changes to the data source with which you configured the form.
 
 ## Next steps ##
-- Learn more about [working with Forms](./working-with-forms.md)
-- Learn more about [formulas](./working-with-formulas.md) in PowerApps
+- Learn more about working with [forms](./working-with-forms.md) and [formulas](./working-with-formulas.md).
