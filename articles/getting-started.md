@@ -19,10 +19,10 @@
    ms.author="anneta"/>
 
 # Get started with PowerApps #
-Welcome to Microsoft PowerApps! [Sign up](signup-for-powerapps.md) to start creating and using custom business apps.
+Welcome! [Sign up](signup-for-powerapps.md) to start creating and using custom business apps.
 
 ## Check out some apps ##
-Sign in to [the home page for PowerApps](https://web.powerapps.com), and then explore one or more [sample apps](open-and-run-a-sample-app.md) to get a quick sense of what's possible and how PowerApps could help your business.
+[Sign in](https://web.powerapps.com), and then explore a [sample app](open-and-run-a-sample-app.md) to get a quick sense of what's possible and how PowerApps could help your business.
 
 [PowerApps home screenshot]
 
