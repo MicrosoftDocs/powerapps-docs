@@ -51,13 +51,13 @@ On the **Insert** tab, follow either of these steps:
 
 		![Vertical and horizontal galleries that show images only, text only, images with captions, images with text, in addition to custom/blank galleries and a card gallery](./media/add-configure-controls/gallery-category.png)
 
-		**Tip:** Show a list of records from a table using a [gallery](./add-a-gallery.md).
+		**Tip:** Show a list of records from a table using a [gallery](./add-gallery.md).
 	
 	- **Forms**
 
 		![Forms](./media/add-configure-controls/forms-category.png)
 
-		**Tip:** Show or edit a record by using a [form](./add-a-form.md).
+		**Tip:** Show or edit a record by using a [form](./add-form.md).
 	
 	- **Media**
 
