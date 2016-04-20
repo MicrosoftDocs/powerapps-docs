@@ -17,7 +17,7 @@
     ms.date="04/13/2016"
     ms.author="ankitsar"/>
 
-# Show, edit, or add a record from a table #
+# Show, edit, or add a record from a table in Microsoft PowerApps #
 To show all fields in a record, add and configure a [**Display form**](./controls/control-form-detail.md) control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an [**Edit form**](./controls/control-form-detail.md) control.
 
 **Prerequisites**
@@ -83,6 +83,10 @@ To show all fields in a record, add and configure a [**Display form**](./control
 1. Open Preview by selecting the play button near the upper-right corner (or by pressing F5), change the name of a product, and then select **Save**.
 
 	The [**SubmitForm**](./functions/function-form.md) function saves your changes to the data source with which you configured the form.
+
+1. (optional) Select the icon to close Preview (or press Esc).
+
+	![Close Preview](./media/add-form/close-preview.png)
 
 ## Next steps ##
 - Learn more about working with [forms](./working-with-forms.md) and [formulas](./working-with-formulas.md).
