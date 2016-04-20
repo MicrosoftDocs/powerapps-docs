@@ -26,7 +26,7 @@ Create an app automatically based on an Excel file in the cloud, customize the a
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 - A Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business account into which you've saved [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial. The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
 
-**Note:** You can just as easily create an app based on a [SharePoint](app-from-sharepoint.md) list, [Salesforce](app-from-salesforce.md) data, a table in [Dynamics CRM](app-from-dynamics.md), or another [data source](add-and-manage-connections.md).
+**Note:** You can just as easily create an app based on a [SharePoint](app-from-sharepoint.md) list, Salesforce data, a table in Dynamics CRM, or another [data source](add-manage-connections.md).
 
 ## Create the app ##
 1. In PowerApps, select **New** (near the left edge of the screen).
@@ -41,11 +41,11 @@ Create an app automatically based on an Excel file in the cloud, customize the a
 
 	![Connect to OneDrive](./media/get-started-create-from-data/connect-onedrive.png)  
 
-1. Under **Select an Excel file**, browse to **FlooringEstimates.xlsx**, and then select it.
+1. Under **Choose an Excel file**, browse to **FlooringEstimates.xlsx**, and then select it.
 
 	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
-1. Under **Select a table**, select **FlooringEstimates**, and then select **Connect**.  
+1. Under **Choose a table**, select **FlooringEstimates**, and then select **Connect**.  
 
 	![Select FlooringEstimates table](./media/get-started-create-from-data/choose-table.png)
 
@@ -60,7 +60,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 1. If you haven't used PowerApps before, take the intro tour by reading each description before selecting **Next** (and then selecting **Done**), or select **Skip**.
 
-1. On the **Options** pane, select the **Layout** tab, and then select an option that includes images.
+1. On the **Home** tab of the ribbon, select **Layouts**, and then select then select an option that includes images.
 
 	![Layout option with icons](./media/get-started-create-from-data/change-layout.png)
 
@@ -106,7 +106,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
     ![Expand Card Selector](./media/get-started-create-from-data/card-selector.png)
 
-1. Select the **Edit multi-line text card** option.
+1. Select the **Edit multi-line text** card option.
 
     ![Multi-line Card](./media/get-started-create-from-data/select-multiline-card.png)
 
