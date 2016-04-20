@@ -18,20 +18,20 @@
     ms.author="ankitsar"/>
 
 # Show a list of items in Microsoft PowerApps  #
-Show a list of items from Excel, as this topic describes, or any other type of data source by adding a [**Gallery**](./controls/control-gallery.md) control to your app. Filter the list by configuring the gallery to show only those items that match the filter criterion in a [**Text input**](./controls/control-text-input.md) control.
+Show a list of items from Excel, as this topic describes, or from any other type of data source by adding a [**Gallery**](./controls/control-gallery.md) control to your app. Filter the list by configuring the gallery to show only those items that match the filter criterion in a [**Text input**](./controls/control-text-input.md) control.
 
 **Prerequisites**
 
-- Create an app or open an existing app in PowerApps.
+- Create an app in PowerApps, or add a screen to an app.
 - Learn how to [configure a control](./add-configure-controls.md) in PowerApps.
 - Create a [connection](./add-data-connection.md) to the **FlooringEstimates** table from [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 
 ## Add a gallery ##
-1. On the **Home** tab, select **Layouts**, and then select the option that contains a thumbnail image,  a header, and a description.
+1. On the **Home** tab, select **Layouts**, and then select the option that contains a thumbnail image, a header, and a description.
 
 	![Add a layout with a heading, a subtitle, and a body element](./media/add-gallery/add-gallery.png)
 
-1. With the gallery selected, select **Options** (near the lower-right corner).
+1. Select the gallery, and then select **Options** (near the lower-right corner).
 
 	![Open Options pane](./media/add-gallery/open-options.png)
 
@@ -39,7 +39,7 @@ Show a list of items from Excel, as this topic describes, or any other type of d
 
     ![Connections option on the File menu](./media/add-gallery/gallery-options.png)
 
-1. In the **Options** pane, select the data-source icon, and then select the **FlooringEstimates** data source.
+1. Select the data-source icon, and then select the **FlooringEstimates** data source.
 
     ![Select datasource](./media/add-gallery/select-data-source.png)
 
@@ -50,7 +50,7 @@ Show a list of items from Excel, as this topic describes, or any other type of d
 
     ![Edit Gallery Item](./media/add-gallery/edit-item.png)
 
-1. Add a [**Text box**](./controls/control-text-box.md) control to the gallery template, move it, and resize it to :
+1. Add a [**Text box**](./controls/control-text-box.md) control to the gallery template, and then move and resize the new control so that it doesn't overlap with other controls in the template.
 
     ![Add Text Box](./media/add-gallery/add-text-box.png)
 
@@ -75,5 +75,5 @@ The **Items** property of a gallery determines which items it shows. You'll conf
 
 	The gallery shows only those items that meet the filter criterion.
 
-## Next step ##
+## Next steps ##
 - Learn more about working with a [gallery](./working-with-forms.md) and [formulas](./working-with-formulas.md).
