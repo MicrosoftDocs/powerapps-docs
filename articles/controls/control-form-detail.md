@@ -20,175 +20,133 @@
 
 # Form and View form controls in PowerApps #
 
-Displays, edits, and creates records in a data source.
+Displays, edits, and creates a record in a data source.
 
 ## Description ##
 
-The **Form** control is bound to a record of a data source through its **DataSource** and **Item** properties.    
+The **Form** control is used to edit the fields of a record and save changes to a data source.  It is also used to create new records.  The **View form** control is similar but read-only, used to display the details of a record but not change them.
 
-The **Form** control is a container control for cards, and only cards.  Each card inside the form can be bound to a field of the record through its **DataField** property.  When bound:
+### Record selection ###
 
-* The value of the card's **Update** property for the card will be used to make changes to the data source when the **SubmitForm** is called.
-* The value of the card's **Valid** property is aggregated with the other cards to determine the value of the form's **Valid** property.  
+Both controls are bound to a record of a data source through their **DataSource** and **Item** properties.  
 
-* If invalid, the **ValidError** property provided by the card is the string provided in the **Error** and **FieldErrors** propertie, and the **ErrorType** property indicates a validation issue.
-* Controls within the card are reset and user input lost when the form's **Item** property changes or the **ResetForm** function is called.
+Often the **Item** property is set to the **SelectedItem** property of a **Gallery** control where the user can select which record to display and/or edit.  As the **Item** property changes, as the user changes the record that is selected, the form controls respond accordingly.
 
-Cards can also be unbound within the **Form** control (**DataField** property is blank).  **Valid** and **Update** values are ignored for unbound cards.
+These controls are a container for **Card** controls.  Each card inside the form can be bound to a field of the record through its **DataField** property.  
 
-The **View form** control is the same as the **Form** control, but only has **DataSource** and **Item** properties in addition to the standard positioning, sizing, and formatting properties.  **SubmitForm** and **ResetForm** functions do not work with the **View form** forms.
+### Creating new records ###
 
-Related functions: **NewForm**, **SubmitForm**, **ResetForm**, **Refresh**.
+Normally, the **Form** control is in **Edit** mode, displaying and enabling the edit of an existing record provided by the **Item** property.  If inspected, the **Mode** property returns **Edit**.
 
-## Standard Properties ##
+The **Form** control can also be used to create new records.  Call the **NewForm** function to place the control into **New** mode, where the record displayed and edited contains the default values for the data source instead of an existing record.  In this case the **Item** property is ignored.  Calling **ResetForm** or successfully calling **SubmitForm** will cause the form to return to **Edit** mode. 
 
-**Data**
+### Saving changes ###
 
-* **DataSource**
+After the user has made changes to a record, use the **SubmitForm** function to save those changes to the data source.  The **Error**, **ErrorKind**, **OnSuccess**, and **OnFailure** properties provide feedback on the outcome.
 
-	* Type: Data Source
-	* Changeable: Yes
-	* Readable: No
-	* View form Control: Yes
+When invoked, the **SubmitForm** function first performs validation checks on the user's changes.  If there is an issue, the **Error** and **ErrorKind** properties will be set, and the **OnFailure** formula will be executed.  You can pre-check for validation issues with the **Valid** property and may not want to enable a "Save" or "Submit" button for the user until it is valid.  Note that **Error** and **ErrorKind** are set until the next call to **SubmitForm** or **ResetForm**, even if the user clears the validation issue.
 
-	The data source to work with.  
+Next, **SubmitForm** sends the changes to the data source.  This can take some time depending on network latency.  If the submission is successful, the **Error** property will be cleared, the **ErrroKind** property will be set to **ErrorKind.None**, and the **OnSuccess** formula will be executed.  If the form was previously in **New** mode, it will be reset to **Edit** mode, now ready to edit the newly created record.
 
-	If left blank, the record cannot be edited and there is no additional metadata or validation provided.
+If the submission is unsuccessful, the **Error** property will contain a user friendly error message that is provided by the data source, explaining to the user what is wrong.  The **ErrorKind** property will be set appropriately, depending on the issue, and the **OnFailure** formula will be executed.
 
-* **Unsaved**
+Some data sources can detect conflicting edits - when two people edit the same record at the same time.  In this case, **ErrorKind** will be set to **ErrorKind.Conflict**.  The remedy is to refresh the the data source with the other user's changes and reapply the change made by this user.
 
-	* Type: Boolean
-	* Changeable: No
-	* Readable: Yes
-	* View form Control: No
+If you offer "Cancel" button on your form, to abandon the user's changes, have the **OnSubmit** formula for the button call the **ResetForm** function even if you are changing screens.  Without a reset, the form will retain the user's changes.
 
-	True if the form contains user changes from the original **Item** that have not been saved to the underlying data source.  Use this property to warn the user before losing unsaved changes or to block a bound gallery from changing selection (Gallery.Enabled = !Form.Unsaved) or disable refresh operations.
+## Key properties ##
 
-* **Error**
+**DataSource** The data source where the record to be view, edited, or created is stored.
 
-	* Type: String
-	* Changeable: No
-	* Readable: Yes
-	* View form Control: No
+- If left blank, the record cannot be edited and there is no additional metadata or validation provided.
 
-	Provides an error message for the user.  Usually this error message comes from the data source when the **SubmitForm** function is called.
+**Item** The record in the **DataSource** that is to be viewed or edited.
 
-	This property changes only as a result of calling the **SubmitForm**, **EditForm**, or **ResetForm** functions. 
+- For the **Form** control, if this property is blank, the form will automatically be in **New** mode.  If bound to a **Gallery** control's **SelectedItem** property, blank is returned if their is no selection or the the gallery is empty (no records). 
 
-	If there is a validation problem (**Form.Valid** is **False**) then this property will display a message that there is a validation problem.  As with other changes to this property, this will only be displayed or cleared when one of the Form functions is called.
+**Error** A user friendly error message to display for this form when the **SubmitForm** function fails.
 
-	Error will be in the language of the user whenever possible.  If the error comes from the data source, it may not be in this language.
+- Only applies to the **Form** control.
+- This property changes only as a result of calling the **SubmitForm**, **EditForm**, or **ResetForm** functions. 
+- This property will be *blank* if there is no error.  **ErrorKind** will also be set to **ErrorKind.None**.
+- The error message returned will be in the user's language when possible.  Some error messages come from the data source directly and may not be in the user's language. 
 
-	This property will be blank if **ErrorKind = ErrorKind.None**.
+**ErrorKind** The kind of error encountered when **SubmitForm** fails.
 
-* **ErrorKind**
+- Only applies to the **Form** control.
+- The **ErrorKind** enum is shared with the **Errors** function.  The following values can be returned by the **Form** control:
 
-	* Type: ErrorKind Enum
-	* Changeable: No
-	* Readable: Yes
-	* View form Control: No
+| ErrorKind | Description |
+|------------|-------------|
+| ErrorKind.Conflict | Another change was made to the same record, resulting in a change conflict.  Use **[Refresh](function-refresh.md)** to reload the record and try the change again. |
+| ErrorKind.None | The error is of an unknown kind. |
+| ErrorKind.Sync | An error was reported by the data source.  Check the **Error** property for more information. |
+| ErrorKind.Validation | There was a general validation issue detected. |
 
-	Provides the type of error.
+## All properties ##
 
-	As with the **Error** property, the **ErrorKind** property changes only as a result of calling the **SubmitForm**, **EditForm**, or **ResetForm** functions. 
+**BorderColr**
 
-	The **ErrorKind** enum is the same enumeration used by the **Errors** function.  The values of **ErrorKind** that may be returned in this context are:
+**BorderStyle**
 
-	| ErrorKind Enum | Description |
-	|----------|-------------|
-	| ErrorKind.None | There is no error. |
-	| ErrorKind.Record | There is a general problem with the record.  Check the **Error** string for more information. |
-	| ErrorKind.ConstraintValidation | There is a validation problem with one or more of the fields.  This includes a required field not being present. |
-	| ErrorKind.Conflict | There are conflicting changes to the record.  The user must reload the record and reapply their change. You can use this value to offer the user a "Reload" button to help them resolve the conflict. |
+**BorderThickness**
 
-	Specifics of the problem are included in the **Error** property.  
+**DataSource**
 
-* **Item**
+**Item**
 
-	* Type: Record
-	* Changeable: Yes
-	* Readable: Yes
-	* View form Control: Yes
+**Error**
 
-	The item to display and/or edit.  **Item** typically comes from the gllery **Selected** property, where the gallery is used to select the record to edit.
+**ErrorKind**
 
-	After an item has been successfully submitted, if the data source provides any information automatically such as an automatically generated primary key, that information will be available in the **Item**.
+**Fill**
 
-* **Mode**
+**Height**
 
-	* Type: Enum FormMode
-	* Changeable: No
-	* Readable: Yes
-	* View form Control: No
+**LastSubmit** 
 
-	Provides the mode of the Form control.
+**Mode** The control is in either **Edit** or **New** mode.
 
-	| FormMode Enum | Description |
-	|----------|-------------|
-	| Edit | Form is editng an existing record.  The values in the form's controls were pre-populated with the existing record, for the user to change.  Calling SubmitForm() will cause an existing record to be modified. |
-	| New | Form is editing a new record.  The values in the form's controls were pre-popoulated with the defaults for a record of the DataSource.  Calling SubmitForm() will cause a new record to be created. | 
+| Mode | Description |
+|----------|-------------|
+| **FormMode.Edit** | Form is editng an existing record.  The values in the form's cards are pre-populated with the existing record, for the user to change.  Calling the **SubmitForm** function will cause an existing record to be modified. |
+| **FormMode.New** | Form is editing a new record.  The values in the form's controls were pre-popoulated with the defaults for a record of the DataSource.  Calling **SubmitForm** function will cause a new record to be created. | 
 
-	By default, the form control is in **Edit** mode.  To place it in **New** mode, call the **NewForm** function.  The form is automatically in **New** mode if the **Item** is blank (there is no item to edit).
+- By default, the form control is in **Edit** mode.  To place it in **New** mode, call the **NewForm** function.  The form is automatically in **New** mode if the **Item** is blank (there is no item to edit).
 
-	The form exits **New** mode when one of the following occurs: 
+The form exits **New** mode when one of the following occurs: 
+* The form is successfully submitted and the new record has been created.  If the gallery is set to automatically move selection to this new record, then the form will be in edit mode for the created record for any subsequent changes.
+* The **Item** record changes.  Indicating that the user would like to edit a different record instead of creating a new one.
+* The **ResetForm** function is called.
 
-	* The form is successfully submitted and the new record has been created.  If the gallery is set to automatically move selection to this new record, then the form will be in edit mode for the created record for any subsequent changes.
-	* The **Item** record changes.  Indicating that the user would like to edit a different record instead of creating a new one.
-	* The **ResetForm** function is called.
-<p>
+**OnFailure**
 
-* **Valid**
+**OnSucess**
 
-	* Type: Boolean
-	* Changeable: No
-	* Readable: Yes
-	* View form Control: No
+**OnReset**
 
-	Indicates if it is OK to submit a form.  It is a logical AND of all the Valid properties of cards within the Form control.  
+**Valid**
 
-	To provide a submit button that is only enabled when the form has not been submitted yet or is valid, use **SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**.
+- The **Form** control's valid property is the aggregation of all the **Card** controls that it contains.  If all cards are reporting *true* through their **Valid** properties, then the form's **Valid** property is *true*; if any one card is reporting *false*, then this the form's **Valid** property is *false*.
+- To provide a submit button that is only enabled when the form has not been submitted yet or is valid, use **SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**.
+
+**Unsaved**  
+
+- Use this property to warn the user before they lose any unsaved changes.  You can also block a selection from changing in a **Gallery** control by setting **Gallery.Disabled = Form.Unsaved** and likewise disable refresh operations.
+
+**Width**
+
+**Visible**
+
+**X**
+
+**Y**
+
+
+
+
 	
-**Options**
 
-* **Visible** - Determines if the form can be seen
-
-**Formatting**
-
-* **Fill** - Background color
-
-* **BorderColor** - Border color
-
-* **BorderStyle** - Border style
-
-* **BorderThickness** - Border thickness
-
-**Size & Position**
-
-* **Height** - Height of the card
-
-* **Width** - Width of the card
-
-* **X** - Position relative to upper left of the fluid grid
-
-* **Y** - Position relative to upper left of the fluid grid
-
-## Behavior Properties ##
-
-* **OnFailure**
-
-	Executed after the **SubmitForm** function is called, and the server has determined there is a problem.  The **ErrorType**, **Error**, and possibly **FieldErrors** properties will contain the error information.
-
-* **OnReset**
-
-	Executed when the **Item** changes or the **ResetForm** or **NewForm** function is called.
-
-* **OnSuccess**
-
-	Executed after the **SubmitForm** function is called and no errors were found.
-
-	If the data source provides any information automatically such as an automatically generated primary key, that information will be available in the **Item** and can be read in the **OnSuccess** behavior.
-
-	If the form was in New mode, the created record will be available in the OnSuccess behavior.
 
 
 

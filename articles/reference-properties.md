@@ -117,9 +117,6 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Visual](properties-visual.md)** Configure graphical elements in your app, including images, photos, and elements of a pen control.
 
-<!-- ##################################################################################################### -->
-<!-- DO NOT EDIT below this heading, the remainder of this file is machine generated from includes/short-* -->
-<!-- ##################################################################################################### -->
 ## All properties ##
 
 ### A ###
@@ -170,7 +167,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Data**](properties-data.md) The name of a collection that you want to export to a local file.
 
-[**Default**](properties-data.md) The value of a control unless the user specifies a different value.
+[**Default**](properties-data.md) The initial value of a control before it is changed by the user.
 
 [**Direction**](properties-visual.md) Whether the first item in a gallery in landscape orientation appears near the left or right edge. 
 
@@ -189,6 +186,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### E ###
 
 [**EndYear**](properties-data.md) The latest year to which the user can set value of a date-picker control.
+
+**Error**  The meaning of this property is dependent on the control: 
+- [**Card** control](control-card.md) The user friendly error message to display for this field when validation fails.
+- [**Form** control](control-form-detail.md) A user friendly error message to display for this form when the **SubmitForm** function fails.
 
 [**Explode**](properties-chart.md) The distance between wedges in a pie chart.
 
@@ -250,6 +251,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**LabelPosition**](properties-chart.md) The location of labels in a pie chart relative to its wedges.
 
+[**LastSubmit**](control-form-detail.md) The last successfully submitted record, including any server generated fields.
+
 [**Layout**](properties-visual.md) Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
 [**LineHeight**](properties-text.md) The distance between, for example, lines of text or items in a list.
@@ -274,7 +277,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**MinimumBarWidth**](properties-chart.md) The narrowest possible width of columns in a column chart.
 
-[**Mode**](properties-text.md) Whether a text-input control is in **SingleLine**, **MultiLine**, or **Password** mode or a pen-input control is in **Draw**, **Erase**, or **Select** mode.
+**Mode** The meaning of this property is dependent on the control: 
+- [**Form** control](control-form-detail.md) The control is in **Edit** or **New** mode.
+- [**Pen input** control](control-pen-input.md) The control is in **Draw**, **Erase**, or **Select** mode.
+- [**Text input** control](control-text-input.md) The control is in **SingleLine**, **MultiLine**, or **Password** mode.
 
 ### N ###
 
@@ -290,6 +296,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**OnEnd**](properties-actions.md) How an app responds when an audio or video clip finishes playing.
 
+[**OnFailure**](properties-actions.md) How an app responds when a data operation has been unsuccessful.
+
 [**OnHidden**](properties-actions.md) How an app responds when the user navigates away from a screen.
 
 [**OnPause**](properties-audio-video.md) How an app responds when the user pauses the clip that an audio or video control is playing.
@@ -301,6 +309,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 [**OnStop**](properties-actions.md) How the app responds when the user stops recording with a microphone control.
 
 [**OnStream**](properties-actions.md)
+
+[**OnSuccess**](properties-actions.md) How an app responds when a data operation has been successful.
 
 [**OnTimerEnd**](properties-actions.md) How an app responds when a timer finishes running.
 
@@ -420,9 +430,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Underline**](properties-font.md) Whether a line appears under the text that appears on a control.
 
+[**Unsaved**](control-form-detail.md) True if the **Form** control contains user changes that have not been saved.
+
 ### V ###
 
-[**Valid**](properties-data.md) Whether data from the user matches specified criteria.
+[**Valid**](properties-data.md) Whether a **Card** or **Form** control contains valid entries, ready to be submitted to the data source.
 
 [**ValueFill**](properties-fill.md) The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
