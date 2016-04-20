@@ -27,7 +27,6 @@ Show a list of items from Excel, as this topic describes, or any other type of d
 - Create a [connection](./add-data-connection.md) to the **FlooringEstimates** table from [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 
 ## Add a gallery ##
-
 1. On the **Home** tab, select **Layouts**, and then select the option that contains a thumbnail image,  a header, and a description.
 
 	![Add a layout with a heading, a subtitle, and a body element](./media/add-gallery/add-gallery.png)
