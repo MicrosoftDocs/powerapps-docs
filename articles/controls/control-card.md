@@ -1,7 +1,7 @@
 
 <properties
-    pageTitle="Card controls: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Card controls"
+    pageTitle="Card control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the Card control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -19,62 +19,77 @@
    ms.date="02/29/2016"
    ms.author="gregli"/>
 
-# Card controls in PowerApps #
+# Card control in PowerApps #
 
-## Standard Properties ##
+Provides the display and editing experience for a single field of a **Form** or **View form** control.
 
-* **Default**
+## Description ##
 
-* **Update**
+**Form** and **View form** controls provide a container for displaying and viewing an entire record.  Each of these container controls can hold a set of **Card** controls that display and edit individual fields.  Each card has a **DataField** property that specifies which field of the record it works on.  
 
-* **DataField**
+Predefined cards are defined for different data types and user experiences.  For example, there may be a card to edit a number field with a **Text input** control, great for use with the keyboard.  And there may be another card for editing a number, that uses a **Slider** control instead.  You can also define your own custom cards.  
 
-	* Data Type: String
-	* Changeable: Yes
-	* Readable: No
-	* Locked: No
+Cards are themselves a container for controls.  The controls of a card make up the experience for displaying and editing a single field.  For example, a number card may consist of a **Text** control to provide the display name of the field and a **Text input** control to provide an editor for the value of the field.  It may also have another **Text** control to hold any validation errors, shown only if there is an issue, and another **Text** control for the common asterisk to indicate that a field is required.
 
-	When inside a Form, name of the field that this card is bound to.  The name must be in a single static string enclosed in double quotes and not a formula.
+Predefined cards are *locked* by default.  Only certain properties of the card can be modified, and only certain properties on the controls within the card can be modified.  The card lock can be viewed and unlocked in Advanced view.  Properties that are locked and that cannot be modified are shown with a lock icon next to their name.  Unlocking a card is an advanced activity and should be only done with care, as automatic formula generation will no longer occur for the card and the card cannot be re-locked.  See [**understand data cards**](working-with-data-cards.md) topic for more details.
 
-	The card will display and make editable the value of this field.  You can optionally transform the field before it is displayed with the **DataIn** property.
+## Key properties ##
 
-	When the **SubmitForm** function is executed, the value in this card will be written back to this data field.
+**DataField** The name of the field within a record that this card displays and edits.
 
-* **DisplayName**
+- The name must be in a single static string enclosed in double quotes and not a formula.  For example, to work with the "Name" field: **Card.DataField = "Name"**.
+- Cards can also be unbound within the **Form** control (**DataField** property is blank).  The **Valid** and **Update** properties are ignored for unbound cards.
+
+## Locked properties ##
+
+The following properties are locked by default on predefined cards. To modify the formulas for these properties, you must first unlock the card.  See [**understand data cards**](working-with-data-cards.md) topic for more details. 
+
+**Default** 
+
+- Controls within the card should use **Parent.Default** to refer to the value of the field coming into the card.  For example, if a **Slider** control was going to be used to edit a field, use **Slider.Default = Parent.Default**
+
+**Update** The value to write back to the data source for a field.
+
+- Use this property's formula to pull the values from the edit controls of the card in order to write back to the data source.  For example, **Card.Update = Slider.Value** would use the slider's value for this card's field.
+
+**DisplayName** The user friendly name for a field in a data source.
  
-	* Type: String
-	* Changeable: Yes
-	* Readable: Yes
-	* Locked: No
+**Required**  Determines if the field of a record must contain a value or can be left blank.
 
-	You can specify the names to show the user when referring to a field.  By default, display names are taken from the data source which may supply a display name or may use the actual field name.  
+## All properties ##
 
-	For example, a field may be named "FIRST_NAME" in a data source, that you may want to show as the more friendly "First Name".  To accomplish this **Card.DisplayName = "First Name"**
+**DataField**
 
-* **Required**
+**Default** 
 
-	* Type: Boolean
-	* Changeable: Yes
-	* Readable: Yes
-	* Locked: Yes
+**Update**
 
-	You can specify if a field needs to contain a value before it can be submitted.  By default, **Required** is filled with information taken from the data source.  
+**DisplayName**
 
-	For example, to force "LAST_NAME" to be a required field, specify **Card.Required = True**.  
+**Required** 
 
-* **Error**
+**Fill**
 
-	* Type: String
-	* Changeable: No
-	* Readable: Yes
-	* Locked: N/A
+**BorderColor**
 
-	If there is a validation problem with this field, this property contains a user friendly error message to display.  
+**BorderStyle**
 
-	**Error** is only populated if the form's **Error** property is also set to a value.  Validation errors will not be displayed until the user calls the **SubmitForm** function.  After this point, validation errors will be displayed and disappear as the user creates and fixes validation issues.
+**BorderThickness**
 
-	For conditional formatting, such as making the border of a text box red if there is a problem, use **IsBlank( Card.Error )** to determine if an error is currently being shown for this field.  
+**Error** The user friendly error message to display for this field when validation fails.
 
-* **Valid**
+**Visible**
 
+**Height**
 
+**Width**
+
+**X**
+
+**Y**
+
+**DataField**
+
+**Required**
+
+**Valid** 
