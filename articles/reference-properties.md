@@ -39,11 +39,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Date picker](control-date-picker.md)** Specify a date by clicking or tapping.
 
+**[Display form](control-form-detail.md)** Display records in a data source using a form.
+
 **[Drop down](control-drop-down.md)** Show the first item in a list until a chevron is selected.
 
-**[Export](control-export-import.md)** Export data for use elsewhere in PowerApps.
+**[Edit form](control-form-detail.md)** Eedit and create records in a data source using a form.
 
-**[Form](control-form-detail.md)** Eedit and create records in a data source using a form.
+**[Export](control-export-import.md)** Export data for use elsewhere in PowerApps.
 
 **[Gallery](control-gallery.md)** Show a list of records that can contain multiple types of data.
 
@@ -86,8 +88,6 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Toggle](control-toggle.md)** Drag a handle to specify **true** or **false**.
 
 **[Video](control-audio-video.md)** Play a video clip from a local file, a data source, or YouTube.
-
-**[View form](control-form-detail.md)** Display records in a data source using a form.
 
 ## Properties by category ##
 
@@ -302,6 +302,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**OnPause**](properties-audio-video.md) How an app responds when the user pauses the clip that an audio or video control is playing.
 
+[**OnReset**](properties-actions.md) How an app responds when an **Edit form** control is reset.
+
 [**OnSelect**](properties-actions.md) How the app responds when the user taps or clicks a control.
 
 [**OnStart**](properties-actions.md) How the app responds when the user starts to record with a microphone control.
@@ -430,7 +432,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Underline**](properties-font.md) Whether a line appears under the text that appears on a control.
 
-[**Unsaved**](control-form-detail.md) True if the **Form** control contains user changes that have not been saved.
+[**Unsaved**](control-form-detail.md) True if the **Edit form** control contains user changes that have not been saved.
 
 ### V ###
 
