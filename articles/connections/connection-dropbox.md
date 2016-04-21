@@ -30,7 +30,7 @@ This topic shows the available functions.
 
 ##  What you need to get started
 
-- Access to the [PowerApps web portal][1] or install [PowerApps][2]
+- Access to the [PowerApps portal][1] or install [PowerApps][2]
 - Add the [connection](../add-manage-connections.md)
 - Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
 
