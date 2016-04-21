@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="archnair"
-    manager="darshand"
+    manager="erikre"
     editor=""
     tags=""/>
 
@@ -15,14 +15,14 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/13/2016"
+   ms.date="04/20/2016"
    ms.author="archanan"/>
 
 # Manage connections in PowerApps
 
 [AZURE.VIDEO nb:cid:UUID:0156313a-0d00-80c4-fa80-f1e592051e49]
 
-Connections in PowerApps allow you to easily access your data while building apps. PowerApps includes commonly-used connections, including: SharePoint, SQL, Office 365, OneDrive for Business, Salesforce, Excel, Dropbox, Twitter and more.
+Connections in PowerApps allow you to easily access your data while building apps. PowerApps includes commonly-used connections, including SharePoint, SQL, Office 365, OneDrive for Business, Salesforce, Excel, Dropbox, Twitter, and more.
 
 For example, you can use connections to:
 
@@ -33,61 +33,69 @@ For example, you can use connections to:
 
 You can create new connections in PowerApps in multiple scenarios, such as:
 
-1. While creating a new [app from data](get-started-create-from-data.md)
+- Creating a new [app from data](get-started-create-from-data.md)
 
-1. While create a new [app from blank](get-started-create-from-blank.md) or editing an existing app by [adding a new data source](add-data-connection.md)
+- Creating a new [app from blank](get-started-create-from-blank.md) or updating an existing app by [adding a new data source](add-data-connection.md)
 
-1. While opening an app that was shared with you and creating connections required by the app
+- Opening an existing app that is shared with you, and creating connections required by the app
 
-1. Creating new connections in [powerapps.com](https://web.powerapps.com).
+- Creating new connections in the [PowerApps portal][1]
 
-However, to manage connections such as deleting connections or updating connections, you can only do it in [powerapps.com](https://web.powerapps.com).
+> [AZURE.NOTE] To manage connections, such as deleting connections or updating connections, use the [PowerApps portal][1].
 
-This tutorial will cover how to manage connections in [powerapps.com](https://web.powerapps.com).
+This topic shows you how to manage connections in the [PowerApps portal][1].
 
-### Prerequisites
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+### What you need to get started
+
+- Sign-in to PowerApps or the [PowerApps portal][1].
+- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 
 ## Add a new connection to PowerApps
 
-1. Go to [powerapps.com](https://web.powerapps.com) and sign in with your work on organization account.
+1. In PowerApps or the [PowerApps portal][1], sign-in with your work on organization account.
 
-1. Select **Connections** in the left pane
+1. Select **Connections**:  
 
   ![Connections Manage](./media/add-manage-connections/manage-connections.png)
 
-1. Select **Add a connection** on the top right
+	> [AZURE.NOTE] When you select **Connections** in PowerApps, the [PowerApps portal][1] automatically opens.
+
+1. Select **Add a connection**:  
 
   ![Add a connection](./media/add-manage-connections/add-new-connections.png)
 
-1. From the list of **Available connections**, select the connection you want to setup, such as SharePoint Online and provide your credentials to setup the connection
+1. From the list of **Available connections**, select the connection you want to setup, such as SharePoint Online. Then, enter your credentials to setup the connection:  
 
   ![SharePoint Connector](./media/add-manage-connections/sharepointapi.png)
 
-1. Once the connection is setup, it will appear in the **Connections**
+1. Once the connection is setup, it's listed in **Connections**:  
 
  ![SharePoint Connection](./media/add-manage-connections/sharepointconnection.png)
 
 ## Delete a connection
 
-1. To delete a connection, go to the **Connections** page and select a connection
+1. Go to the **Connections** page, and select the connection you want to delete:  
 
   ![Connections Manage](./media/add-manage-connections/connection-list.png)
 
-1. In the details view of the connection, select **Delete** icon on the top right
+1. In the details view of the connection, select **Delete**:  
 
   ![Connections Manage](./media/add-manage-connections/deleteicon.png)
 
 ## Update a connection
 
-1. To update an existing connection, to go the **Connections** page and  select the edit icon. This will prompt you to update your connection with new credentials.
+1. Go to the **Connections** page, and select the edit icon:  
 
   ![Connections Manage](./media/add-manage-connections/editicon.png)
 
+2. When prompted, update your connection with new credentials.
 
 ## Summary and next steps
-In this topic, you learnt how to create, update and delete connections and authorized PowerApps to use this connection within any apps you create. As next steps, you can try to create apps using the connections you have just created.
+In this topic, you learned how to create, update, and delete connections, and authorized PowerApps to use this connection within any apps you create. Next, you can create apps using the connections you have just created.
 
 - [Create an app from a set of data](get-started-create-from-data.md)
 - [Create an app from a template](get-started-test-drive.md)
 - [Add a new data source to an existing app](add-data-connection.md)
+
+<!--Reference links in article-->
+[1]: https://web.powerapps.com
