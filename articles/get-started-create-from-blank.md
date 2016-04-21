@@ -22,7 +22,7 @@ Create your own app from scratch using any one of a variety of data sources. Spe
 
 By following this tutorial, you'll create an app that shows users a set of data on the first screen:
 
-![Screen in which a user can scroll through a set of data](./media/get-started-create-from-blank/first-screen.png)
+![Screen in which a user can scroll through a set of data](./media/get-started-create-from-blank/first-screen-final.png)
 
 On another screen, users can create, update, or delete a record in that set of data:
 
@@ -73,7 +73,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Specify the table in Excel that you want to use](./media/get-started-create-from-blank/select-table.png)
 
-	The **Screen** tab shows which data sources you've added to your app. This tutorial requires only one source, but you can add sources later.
+	The **Screen** tab shows which data sources you've added to your app. This tutorial requires only one source, but you can add more sources later.
 
 	![Show connected data sources](./media/get-started-create-from-blank/connected-data-sources.png)
 
