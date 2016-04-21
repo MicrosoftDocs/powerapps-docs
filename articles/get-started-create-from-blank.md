@@ -84,7 +84,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
-	Several controls are added to the screen, including a **Search items** box and a [**Gallery**](control-gallery.md) control just under it.
+	Several controls are added to the screen, including a search box and a [**Gallery**](control-gallery.md) control. The gallery covers all of the screen under the search box.
 
 1. Set the **Items** property of the gallery to this formula:
 
@@ -92,7 +92,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	This gallery shows the data from the **Schedule** table.
 
-	- If the user types text in the search box, the gallery shows only those records in which that text appears in the **Volunteer 1** field.
+	- If the user types text in the search box, the gallery shows only those records for which that text appears in the **Volunteer 1** field.
 	- If the user selects the sort button, the records are sorted based on the **Volunteer 1** column. If the user selects the sort button again, the sort order is reversed.
 
 	![The Schedule data in the gallery by default](./media/get-started-create-from-blank/gallery-data-default.png)
@@ -102,108 +102,93 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 	![First screen](./media/get-started-create-from-blank/first-screen.png)
 
 ## Create the ChangeScreen ##
-1. [Rename the default screen](add-screen-context-variables.md#add-a-screen-and-navigation) to **ViewScreen**, add another screen, and name it **ChangeScreen**.
+1. [Rename the default screen](add-screen-context-variables.md) to **ViewScreen**, add another screen, and name it **ChangeScreen**.
 
-	![Rename Screen](./media/get-started-create-from-blank/rename-screen.png)
+	![Rename screen](./media/get-started-create-from-blank/rename-screen.png)
 
-	![add Screen](./media/get-started-create-from-blank/add-screen.png)
+	![Add screen](./media/get-started-create-from-blank/add-screen.png)
 
-1. On the **ChangeScreen**, add a text box that identifies the screen
+1. On the **ChangeScreen**, add a **Text box** control that identifies the screen.
 
-	![ChangeScreen with text box and arrow](./media/get-started-create-from-blank/change-screen-blank.png)
+	![ChangeScreen with banner](./media/get-started-create-from-blank/change-screen-blank.png)
 
-1. On the **Insert Tab**. select **Forms**, [add an **Edit Form**](./add-form.md), and adjust it on the screen to cover most of the screen
+1. Add an [**Edit form**](./add-form.md) control, and move and resize it to cover most of the screen.
 
-	![Add a Form](./media/get-started-create-from-blank/add-form.png)
+	![Add a form](./media/get-started-create-from-blank/add-form.png)
 
-1.  On the **Formula Bar**, set the **DataSource** property of the form to:
+1.  Set the **DataSource** property of the form to **Schedule** and its **Item** property to this formula:
 
-	```
-	Schedule
-	```
+	**BrowseGallery1.Selected**
 
-1. Set the **Item** property of the form to:
-
-	```
-	BrowseGallery1.Selected
-	```
-
-1. On the **Options** pane, select show field option for all the fields
+1. For each field in the **Options** pane, select the option to show that field.
 
 	![Show fields on form](./media/get-started-create-from-blank/show-fields.png)
 
-1. On the **Screen**, select **Add a custom card**, and then **Insert** a **Text box** in it.
+1. Near the bottom of the form, select **Add a custom card**, and then add a text box to it.
 
 	![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
-	![Insert a text box](./media/get-started-create-from-blank/custom-card-textbox.png)
+1. Set the **AutoHeight** property of the text box to **true** and its **Text** property to this formula:
 
-1. On the **Formula Bar**, set the **Text** property of the **Text box** to show the errors from the Form:
+	**Form1.Error**
 
-	```
-	Form1.Error
-	```
+	The text box will show any errors from the form.
 
-1. Set the **AutoHeight** property of the **Text box** to *true*.
+1. Add a **Back arrow**, and set its **OnSelect** property to this formula:
 
-1. Add a **Back arrow** shape (Insert>Shapes) to the screen, and set its **OnSelect** property to [navigate](./functions/function-navigate.md") to the first screen:
+	**Navigate(ViewScreen,ScreenTransition.None)**
 
-	```
-	Navigate(ViewScreen,ScreenTransition.None)
-	```
+ 	When the user selects the arrow, the [**Navigate**](./functions/function-navigate.md") function shows the **ViewScreen**.
 
-	![Add back shape](./media/get-started-create-from-blank/add-back-button.png)
-
-1. Add a button to the bottom of the form, and set its **Text** property to **Save**
+1. Add a **Button** control under the form, and set the button's **Text** property to **Save**.
 
 	![Add a save button](./media/get-started-create-from-blank/add-save-button.png)  
 
-1.  On the **Formula Bar**, set the **OnSelect** property of the **Save** button to [submit the form](./functions/function-form.md") to save the changes to the record and navigate back to **ViewScreen**:
+1.  Set the **OnSelect** property of the button to this formula::
 
-	```
-	SubmitForm(Form1);If(Form1.ErrorType=ErrorKind.None,Navigate(ViewScreen,ScreenTransition.None))
-	```
+	**SubmitForm(Form1);If(Form1.ErrorType=ErrorKind.None,Navigate(ViewScreen,ScreenTransition.None))**
 
-1. Add a **Remove** button to bottom of the screen, and set its **OnSelect** property to [remove](./functions/function-remove-removeif.md) the record and navigate back to **ViewScreen**:
+	When the user selects the button, the [**SubmitForm**](./functions/function-form.md") function saves any changes to the data source, and the **ViewScreen** reappears.  
 
-	```
-	Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))
-	```
+1.  At the bottom of the screen, add a **Remove** button, and set its **OnSelect** property to this formula:
 
-	Your final **ChangeScreen** should look like:
+	**Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
+
+	When the user selects this button, the record is [removed](./functions/function-remove-removeif.md), and the **ViewScreen** reappears.
+
+	The **ChangeScreen** matches this example:
 
 	![Final Change Screen](./media/get-started-create-from-blank/changescreen-final.png)
 
 ## Set navigation from ViewScreen ##
-
-1. On the **ViewScreen**, set the **OnSelect** property of the **Next arrow** of the first record in gallery to navigate to **ChangeScreen**
-
-	```
-	Navigate(ChangeScreen,ScreenTransition.None)
-	```
+1. In the gallery on the **ViewScreen**, select the **Next arrow** for the first record.
 
 	![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
 
-1. On the **ViewScreen**, set the **OnSelect** property of the **Add** to create a record and navigate to **ChangeScreen**
+1. Set the **OnSelect** property of that arrow to this formula:
 
-	```
-	NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)
-	```
+	**Navigate(ChangeScreen,ScreenTransition.None)**
 
-	![Add recors](./media/get-started-create-from-blank/add-record.png)
+1. In the upper-right corner, select the icon to add a record.
+
+	![Add record](./media/get-started-create-from-blank/add-record.png)
+
+1. Set the **OnSelect** property of the selected icon to this formula:
+
+	**NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**
+
+ 	When the user selects this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
 
 ## Run the app ##
-As you customize the app, you can test your changes by running the app in **Preview** mode.
+As you customize the app, test your changes by running it in **Preview**. To open Preview, select the **Preview** icon near the upper-right corner (or press F5).
 
-1. In the list of thumbnails, select **BrowseScreen1**, and then open preview by selecting the **Preview** icon near the upper-right corner (or by pressing **F5**).
+1. In the list of thumbnails, select **ViewScreen**, and then open Preview.
 
-	![Preview icon](./media/get-started-create-from-blank/open-preview.png)
+1. Select the Next arrow for a record to show details about that record.
 
-1. On **ViewScreen1**, select the Nexy arrow for a record to show details about that record.
-
-1. On **ChangeScreen**, change the information in one or more fields, and then save your changes using the Save button, or remove the record using the Remove button.
+1. On **ChangeScreen**, change the information in one or more fields and then save your changes by selecting **Save**, or remove the record by selecting **Remove**.
 
 ## Next steps ##
-- Press Ctrl-S to save your app so that you can run it from other devices.
+- Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
 - [Share the app](share-app.md) so that other people can run it.
-- Learn more about [formulas](./working-with-formulas.md) in PowerApps
+- Learn more about [galleries](add-gallery.md), [forms](add-form.md), and [formulas](./working-with-formulas.md) in PowerApps.
