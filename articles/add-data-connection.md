@@ -85,7 +85,7 @@ For some examples of adding connections, take a look at these:
 
 [Create an app using Excel data](get-started-create-from-data.md)  
 [Show a list of items using a gallery](add-gallery.md)  
-[show, add or edit a record from a table](add-form.md)
+[Show, add or edit a record from a table](add-form.md)
 
 
 <!--Reference links in article-->
