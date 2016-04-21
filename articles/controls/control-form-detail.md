@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Form and View form controls: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Form and View form controls"
+    pageTitle="Edit form and Display form controls: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the Edit form and Display form controls"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,21 +18,25 @@
    ms.date="02/29/2016"
    ms.author="gregli"/>
 
-# Form and View form controls in PowerApps #
+# Edit form and Display form controls in PowerApps #
 
 Displays, edits, and creates a record in a data source.
 
 ## Description ##
 
-The **Form** control is used to edit the fields of a record and save changes to a data source.  It is also used to create new records.  The **View form** control is similar but read-only, used to display the details of a record but not change them.
+The **Edit form** control is used to edit the fields of a record and save changes to a data source.  It is also used to create new records.  The **Display form** control is similar but read-only, used to display the details of a record but not change them.
+
+![Example form and form view controls](media/control-form-detail/form-detail-intro.png)
+
+These controls are often used with a **Gallery** control to select the record to be displayed or edited and with **Button** controls to save edits, cancel edits, and create new records.  See [Understand data forms](working-with-forms.md) for more details on how to use controls together to create a complete solution.
 
 ### Record selection ###
 
-Both controls are bound to a record of a data source through their **DataSource** and **Item** properties.  
+Both form controls are bound to a record of a data source through their **DataSource** and **Item** properties.  
 
-Often the **Item** property is set to the **SelectedItem** property of a **Gallery** control where the user can select which record to display and/or edit.  As the **Item** property changes, as the user changes the record that is selected, the form controls respond accordingly.
+Often the **Item** property is set to the **SelectedItem** property of a **Gallery** control where the user can select which record to display and/or edit.  As the user changes the selected record in the gallery, the **Selected** property of the gallery will change, which in turn changes the **Item** property of the form, and the form control responds accordingly to show/edit the selected item.
 
-These controls are a container for **Card** controls.  Each card inside the form can be bound to a field of the record through its **DataField** property.  
+The form controls are a container for [**Card**](control-card.md) controls.  Each card inside the form can be bound to a field of the record through its **DataField** property.  For information on configuring the cards of a form, see [add a form](add-form.md).
 
 ### Creating new records ###
 
@@ -58,23 +62,33 @@ If you offer "Cancel" button on your form, to abandon the user's changes, have t
 
 **DataSource** The data source where the record to be view, edited, or created is stored.
 
-- If left blank, the record cannot be edited and there is no additional metadata or validation provided.
+- If left blank, the record cannot be edited and there is no additional meta-data or validation provided.
 
 **Item** The record in the **DataSource** that is to be viewed or edited.
 
 - For the **Form** control, if this property is blank, the form will automatically be in **New** mode.  If bound to a **Gallery** control's **SelectedItem** property, blank is returned if their is no selection or the the gallery is empty (no records). 
 
-**Error** A user friendly error message to display for this form when the **SubmitForm** function fails.
+**Error** A user friendly error message to display if there is an issue when **SubmitForm** is invoked.
 
 - Only applies to the **Form** control.
 - This property changes only as a result of calling the **SubmitForm**, **EditForm**, or **ResetForm** functions. 
 - This property will be *blank* if there is no error.  **ErrorKind** will also be set to **ErrorKind.None**.
 - The error message returned will be in the user's language when possible.  Some error messages come from the data source directly and may not be in the user's language. 
 
-**ErrorKind** The kind of error encountered when **SubmitForm** fails.
+## All properties ##
 
-- Only applies to the **Form** control.
-- The **ErrorKind** enum is shared with the **Errors** function.  The following values can be returned by the **Form** control:
+**BorderColr** The color of a control's border.
+
+**BorderStyle** Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+
+**BorderThickness** The thickness of a control's border.
+
+**DataSource** The data source where the record to be view, edited, or created is stored.  See details under [key properties](#key-properties).
+
+**ErrorKind** The kind of error encountered if there is an issue when **SubmitForm** is invoked.  
+
+- Only applies to the **Edit form** control.
+- The **ErrorKind** enum is shared with the **Errors** function.  The following values can be returned by the **Edit form** control:
 
 | ErrorKind | Description |
 |------------|-------------|
@@ -83,27 +97,18 @@ If you offer "Cancel" button on your form, to abandon the user's changes, have t
 | ErrorKind.Sync | An error was reported by the data source.  Check the **Error** property for more information. |
 | ErrorKind.Validation | There was a general validation issue detected. |
 
-## All properties ##
+**Item** The record in the **DataSource** that is to be viewed or edited.  See details under [key properties](#key-properties).
 
-**BorderColr**
+**Error** A user friendly error message to display if there is an issue when **SubmitForm** is invoked.  See details under [key properties](#key-properties).
 
-**BorderStyle**
+**Fill** The background color of a control.
 
-**BorderThickness**
+**Height** The distance between a control's top and bottom edges.
 
-**DataSource**
+**LastSubmit** The last successfully submitted record, including any server generated fields.
 
-**Item**
-
-**Error**
-
-**ErrorKind**
-
-**Fill**
-
-**Height**
-
-**LastSubmit** 
+- If the data source automatically generates or calculates any fields, such an "ID" field with a unique number, the **LastSubmit** property will have this new value after **SubmitForm** has been successfully executed.
+- The value of this property is available in the **OnSUccess** formula.
 
 **Mode** The control is in either **Edit** or **New** mode.
 
@@ -119,35 +124,26 @@ The form exits **New** mode when one of the following occurs:
 * The **Item** record changes.  Indicating that the user would like to edit a different record instead of creating a new one.
 * The **ResetForm** function is called.
 
-**OnFailure**
+**OnFailure** How an app responds when a data operation has been unsuccessful.
 
-**OnSucess**
+**OnSucess** How an app responds when a data operation has been successful.
 
-**OnReset**
+**OnReset** How an app responds when an **Edit form** control is reset.
 
-**Valid**
+**Valid** Whether a **Card** or **Form** control contains valid entries, ready to be submitted to the data source.
 
 - The **Form** control's valid property is the aggregation of all the **Card** controls that it contains.  If all cards are reporting *true* through their **Valid** properties, then the form's **Valid** property is *true*; if any one card is reporting *false*, then this the form's **Valid** property is *false*.
 - To provide a submit button that is only enabled when the form has not been submitted yet or is valid, use **SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**.
 
-**Unsaved**  
+**Unsaved**  True if the **Edit form** control contains user changes that have not been saved.
 
 - Use this property to warn the user before they lose any unsaved changes.  You can also block a selection from changing in a **Gallery** control by setting **Gallery.Disabled = Form.Unsaved** and likewise disable refresh operations.
 
-**Width**
+**Width** The distance between a control's left and right edges.
 
-**Visible**
+**Visible** Whether a control appears or is hidden.
 
-**X**
+**X** The distance between the left edge of a control and the left edge of the screen.
 
-**Y**
-
-
-
-
-	
-
-
-
-
+**Y** The distance between the top edge of a control and the top edge of the screen.
 
