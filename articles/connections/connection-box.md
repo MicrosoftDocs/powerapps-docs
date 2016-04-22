@@ -56,11 +56,11 @@ This connection includes the following functions:
 ## GetFileMetadata
 Get file metadata using id: Retrieves file metadata from Box using file id 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Unique identifier of the file in Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Unique identifier of the file in Box|
 
 #### Output properties
 
@@ -81,12 +81,12 @@ Get file metadata using id: Retrieves file metadata from Box using file id
 ## UpdateFile
 Update file: Updates a file in Box 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Unique identifier of the file to update in Box|
-|body| string|Content of the file to update in Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Unique identifier of the file to update in Box|
+|body| string|yes|Content of the file to update in Box|
 
 #### Output properties
 
@@ -107,11 +107,11 @@ Update file: Updates a file in Box
 ## DeleteFile
 Delete file: Deletes a file from Box 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Unique identifier of the file to delete from Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Unique identifier of the file to delete from Box|
 
 #### Output properties
 None.
@@ -120,11 +120,11 @@ None.
 ## GetFileMetadataByPath
 Get file metadata using path: Retrieves file metadata from Box using path 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|path|string|Unique path to the file in Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|path|string|yes|Unique path to the file in Box|
 
 #### Output properties
 
@@ -145,11 +145,11 @@ Get file metadata using path: Retrieves file metadata from Box using path
 ## GetFileContentByPath
 Get file content using path: Retrieves file contents from Box using path 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|path|string|Unique path to the file in Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|path|string|yes|Unique path to the file in Box|
 
 #### Output properties
 None.
@@ -158,11 +158,11 @@ None.
 ## GetFileContent
 Get file content using id: Retrieves file contents from Box using id 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Unique identifier of the file in Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Unique identifier of the file in Box|
 
 #### Output properties
 None.
@@ -171,13 +171,13 @@ None.
 ## CreateFile
 Create file: Uploads a file to Box 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|folderPath|string|Folder path to upload the file to Box|
-|name|string|Name of the file to create in Box|
-|body| string|Content of the file to upload to Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|folderPath|string|yes|Folder path to upload the file to Box|
+|name|string|yes|Name of the file to create in Box|
+|body| string|yes|Content of the file to upload to Box|
 
 #### Output properties
 
@@ -199,13 +199,13 @@ Create file: Uploads a file to Box
 ## CopyFile
 Copy file: Copies a file to Box 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|source|string|Url to source file|
-|destination|string|Destination file path in Box, including target filename|
-|overwrite|boolean|Optional. Overwrites the destination file if set to 'true'|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|source|string|yes|Url to source file|
+|destination|string|yes|Destination file path in Box, including target filename|
+|overwrite|boolean|no| Overwrites the destination file if set to 'true'|
 
 #### Output properties
 
@@ -226,11 +226,11 @@ Copy file: Copies a file to Box
 ## OnNewFile
 When a file is created: Triggers a flow when a new file is created in a Box folder 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|folderId|string|Unique identifier of the folder in Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|folderId|string|yes|Unique identifier of the folder in Box|
 
 #### Output properties
 None.
@@ -239,11 +239,11 @@ None.
 ## OnUpdatedFile
 When a file is modified: Triggers a flow when a file is modified in a Box folder 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|folderId|string|Unique identifier of the folder in Box|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|folderId|string|yes|Unique identifier of the folder in Box|
 
 #### Output properties
 None.
@@ -252,13 +252,13 @@ None.
 ## ExtractFolderV2
 Extract archive to folder: Extracts an archive file into a folder in Box (example: .zip) 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|source|string|Path to the archive file|
-|destination|string|Path in Box to extract the archive contents|
-|overwrite|boolean|Optional. Overwrites the destination files if set to 'true'|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|source|string|yes|Path to the archive file|
+|destination|string|yes|Path in Box to extract the archive contents|
+|overwrite|boolean|no| Overwrites the destination files if set to 'true'|
 
 #### Output properties
 None.

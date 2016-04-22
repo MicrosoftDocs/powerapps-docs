@@ -54,11 +54,11 @@ This connection includes the following functions:
 ## GetFileMetadata
 Get File Metadata: Retrieves file metadata from Azure Blob Storage using file id 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the file|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|id|string|yes|Specify the file|
 
 #### Output properties
 
@@ -79,12 +79,12 @@ Get File Metadata: Retrieves file metadata from Azure Blob Storage using file id
 ## UpdateFile
 Update file: Updates a file in Azure Blob Storage 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the file to update|
-|body|string |Content of the file to update in Azure Blob Storage|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|id|string|yes|Specify the file to update|
+|body|string |yes|Content of the file to update in Azure Blob Storage|
 
 
 #### Output properties
@@ -107,11 +107,11 @@ Update file: Updates a file in Azure Blob Storage
 ## DeleteFile
 Delete file: Deletes a file from Azure Blob Storage 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the file to delete|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|id|string|yes|Specify the file to delete|
 
 #### Output properties
 None. 
@@ -121,11 +121,11 @@ None.
 ## GetFileMetadataByPath
 Get File Metadata using path: Retrieves file metadata from Azure Blob Storage using path 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|path|string|Unique path to the file in Azure Blob Storage|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|path|string|yes|Unique path to the file in Azure Blob Storage|
 
 #### Output properties
 
@@ -146,11 +146,11 @@ Get File Metadata using path: Retrieves file metadata from Azure Blob Storage us
 ## GetFileContentByPath
 Get file content using path: Retrieves file contents from Azure Blob Storage using path 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|path|string|Unique path to the file in Azure Blob Storage|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|path|string|yes|Unique path to the file in Azure Blob Storage|
 
 #### Output properties
 None.
@@ -159,11 +159,11 @@ None.
 ## GetFileContent
 Get file content: Retrieves file contents from Azure Blob Storage using id 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the file|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|id|string|yes|Specify the file|
 
 #### Output properties
 None.
@@ -172,13 +172,13 @@ None.
 ## CreateFile
 Create file: Uploads a file to Azure Blob Storage 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|folderPath|string|Folder path to upload the file to Azure Blob Storage|
-|name|string|Name of the file to create in Azure Blob Storage|
-|body|string |Content of the file to upload to Azure Blob Storage|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|folderPath|string|yes|Folder path to upload the file to Azure Blob Storage|
+|name|string|yes|Name of the file to create in Azure Blob Storage|
+|body|string |yes|Content of the file to upload to Azure Blob Storage|
 
 #### Output properties
 
@@ -199,13 +199,13 @@ Create file: Uploads a file to Azure Blob Storage
 ## CopyFile
 Copy file: Copies a file to Azure Blob Storage 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|source|string|Url to source file|
-|destination|string|Destination file path in Azure Blob Storage, including target filename|
-|overwrite|boolean| Optional. Overwrites the destination file if set to 'true'|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|source|string|yes|Url to source file|
+|destination|string|yes|Destination file path in Azure Blob Storage, including target filename|
+|overwrite|boolean| no| Overwrites the destination file if set to 'true'|
 
 #### Output properties
 
@@ -226,13 +226,13 @@ Copy file: Copies a file to Azure Blob Storage
 ## ExtractFolderV2
 Extract archive to folder: Extracts an archive file into a folder in Azure Blob Storage (example: .zip) 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|source|string|Path to the archive file|
-|destination|string|Path in Azure Blob Storage to extract the archive contents|
-|overwrite|boolean|Optional. Overwrites the destination files if set to 'true'|
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|source|string|yes|Path to the archive file|
+|destination|string|yes|Path in Azure Blob Storage to extract the archive contents|
+|overwrite|boolean|no| Overwrites the destination files if set to 'true'|
 
 #### Output properties
 
