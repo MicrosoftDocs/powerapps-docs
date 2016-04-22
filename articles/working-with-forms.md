@@ -145,7 +145,7 @@ Now that we have seen how PowerApps created a data app, let's build one of our o
 
 Let's start at the very beginning.  To get the most from this article, it is helpful to have a data source with which you can experiment.  Something that you can read, and write, and it won't be a problem if it is written with test data.  The remainder of this article will assume a SharePoint list named "Ice Cream" with the following contents:
 
-![Ice cream SharePoint list](./media/working-with-forms/sharepointlist-icecream-75.png)
+![Ice cream SharePoint list](./media/working-with-forms/sharepointlist-icecream.png)
 
 1. Create a new PowerApp from blank, for phones.  Tablet apps are very similar but you may want a different [screen layout](#screen-layouts) to make the most of the extra screen space.
 
@@ -159,7 +159,7 @@ The first step in editing a record, is finding the record to edit.  The **Galler
 
 2. Set the **Items** property of the **Gallery** control to: **'Ice Cream'**
 
-![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream-75.png)
+![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream.png)
 
 The gallery is showing the first three fields for this data source, which is not what we want.  Let's clean this up:
 
@@ -175,7 +175,7 @@ The gallery is showing the first three fields for this data source, which is not
 
 When you are done, your screen should look more like this (it need not be exactly the same):
 
-![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream-cleaned-75.png)
+![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream-cleaned.png)
 
 Great, we are now showing all the rows from the SharePoint list.
 
