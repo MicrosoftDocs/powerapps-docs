@@ -27,14 +27,17 @@ These functions are often invoked from the **OnSelect** formula of a [**Button**
 These functions return no values.
 
 ### SubmitForm ###
-Use the **SubmitForm** function in the **OnSelect** property of a Button control to save any changes in a Form control to the data source. This function checks for validation issues before submitting the changes. Each fields that's marked as required or that has one or more constraints on its value is checked, just as it is with the **Validate** function.
+Use the **SubmitForm** function in the **OnSelect** property of a Button control to save any changes in a Form control to the data source. Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **Validate** function.
 
 **SubmitForm** also checks the **Valid** property of the Form, which is an aggregation of all the **Valid** properties of the  [**Card**](control-card.md) controls that the Form control contains. If a problem occurs, the data isn't submitted, and the **Error** and **ErrorKind** properties of the Form control are set accordingly.
 
-If validation passes, **SubmitForm** submits the change to the data source. If successful, the Form's **OnSuccess** behavior runs, and the **Error** and **ErrorKind** properties are cleared. If unsuccessful, the Form's **OnFailure** behavior runs, and the **Error** and **ErrorKind** properties are set accordingly.  
+If validation passes, **SubmitForm** submits the change to the data source.
+
+- If successful, the Form's **OnSuccess** behavior runs, and the **Error** and **ErrorKind** properties are cleared.
+- If unsuccessful, the Form's **OnFailure** behavior runs, and the **Error** and **ErrorKind** properties are set accordingly.  
 
 ### NewForm ###
-The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **Item** property are ignored, and the default values of the Form's **DataSource** property populate the form. When **SubmitForm** is called, an item is created instead of changed.
+The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **Item** property are ignored, and the default values of the Form's **DataSource** property populate the form. If the **SubmitForm** function runs when the form is in this mode, an record is created, not changed.
 
 ### ResetForm ###
 The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode (unless nothing is present on the **Item** property). The **OnReset** behavior of the form control also runs.
@@ -51,7 +54,7 @@ The **ResetForm** function resets the contents of a form to their initial values
 
 **ResetForm**( *FormName* )
 
-- *FormName* - Required. Form control to reset to initial values. Also takes the form out of **FormMode.New** mode.
+- *FormName* - Required. Form control to reset to initial values. Also switches the form from **FormMode.New** mode to **FormMode.Edit** mode.
 
 ## Examples ##
 See [Understand data forms](working-with-forms.md) for complete examples.
@@ -61,7 +64,8 @@ See [Understand data forms](working-with-forms.md) for complete examples.
 	**SubmitForm( EditForm )**
 
 1. Set the **OnFailure** property of a Form control to blank and its **OnSuccess** property to this formula:
- 	**Back()**
+
+	**Back()**
 
 1. Name a [**Text box**](control-text-box.md) control **ErrorText**, and set its **Text** property to this formula:
 
