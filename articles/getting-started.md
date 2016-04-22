@@ -28,7 +28,7 @@ Welcome! [Sign up](signup-for-powerapps.md) to start creating and using custom b
 
 Each sample app is designed for a specific purpose, such as managing a budget, showcasing a set of products, or tracking sales opportunities. Some sample apps contain fictitious data to inspire your thinking. Other sample apps connect to a live data source, such as Salesforce, so that you can show, add, and update your own records in real time.
 
-If you create an app or a co-worker shares an app with you, you'll also find those apps on the home page for PowerApps.
+If you create an app or a co-worker shares an app with you, you'll also find those apps on the default page of [powerapps.com](https://web.powerapps.com).
 
 ## Try out a template ##
 To create your own apps, [install PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer.
@@ -40,7 +40,7 @@ You can get started quickly if you [build an app from a template](get-started-te
 ## Generate an app from your data ##
 Now that you have some idea of what PowerApps can do and a bit of experience, you can [automatically generate an app](get-started-create-from-data.md) that's designed specifically for your data, whether it's in:
 
-- an Excel file (stored locally or in a cloud-storage account such as Dropbox, OneDrive, or Google Drive)
+- an Excel file in a cloud-storage account such as Dropbox, OneDrive, or Google Drive
 - a SharePoint list
 - Salesforce or Microsoft Dynamics CRM Online
 - a SQL Azure table
