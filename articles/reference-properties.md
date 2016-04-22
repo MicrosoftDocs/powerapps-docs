@@ -374,6 +374,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Repeat**](properties-data.md) Whether a timer automatically restarts when it finishes running.
 
+[**Required**](propeties-data.md) Whether a card, editing the field of a data source, must contain a value.
+
 [**Reset**](properties-data.md) Whether a control reverts to its default value.
 
 ### S ###
@@ -438,7 +440,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### V ###
 
-[**Valid**](properties-data.md) Whether a **Card** or **Form** control contains valid entries, ready to be submitted to the data source.
+[**Valid**](properties-data.md) Whether a **Card** or **Edit form** control contains valid entries, ready to be submitted to the data source.
 
 [**ValueFill**](properties-fill.md) The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
