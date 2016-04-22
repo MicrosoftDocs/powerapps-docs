@@ -57,13 +57,13 @@ This connection includes the following functions:
 ## GetFileMetadata
 Get file metadata using id: Retrieves file metadata from Dropbox using file id 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the file|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Specify the file|
 
-#### Output properties - BlobMetadata
+#### Output properties
 
 | Property Name | Data Type | Description |
 |---|---|---|
@@ -82,14 +82,14 @@ Get file metadata using id: Retrieves file metadata from Dropbox using file id
 ## UpdateFile
 Update file: Updates a file in Dropbox 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the file to update|
-|body|string |Content of the file to update in Dropbox|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Specify the file to update|
+|body|string |yes|Content of the file to update in Dropbox|
 
-#### Output properties - BlobMetadata
+#### Output properties
 
 | Property Name | Data Type | Description |
 |---|---|---|
@@ -108,11 +108,11 @@ Update file: Updates a file in Dropbox
 ## DeleteFile
 Delete file: Deletes a file from Dropbox 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the file to delete|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Specify the file to delete|
 
 #### Output properties
 None.
@@ -121,13 +121,13 @@ None.
 ## GetFileMetadataByPath
 Get file metadata using path: Retrieves file metadata from Dropbox using path 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Required|Description|
+| Name| Data Type| Required | Description|
 | ---|---|---|---|
 |path|string|yes|Unique path to the file in Dropbox|
 
-#### Output properties - BlobMetadata
+#### Output properties
 
 | Property Name | Data Type | Description |
 |---|---|---|
@@ -146,11 +146,11 @@ Get file metadata using path: Retrieves file metadata from Dropbox using path
 ## GetFileContentByPath
 Get file content using path: Retrieves file contents from Dropbox using path 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|path|string|Unique path to the file in Dropbox|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|path|string|yes|Unique path to the file in Dropbox|
 
 #### Output properties
 None.
@@ -159,11 +159,11 @@ None.
 ## GetFileContent
 Get file content using id: Retrieves file contents from Dropbox using id 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the file|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Specify the file|
 
 #### Output properties
 None.
@@ -172,15 +172,15 @@ None.
 ## CreateFile
 Create file: Uploads a file to Dropbox 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|folderPath|string|Folder path to upload the file to Dropbox|
-|name|string|Name of the file to create in Dropbox|
-|body|string |Content of the file to upload to Dropbox|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|folderPath|string|yes|Folder path to upload the file to Dropbox|
+|name|string|yes|Name of the file to create in Dropbox|
+|body|string |yes|Content of the file to upload to Dropbox|
 
-#### Output properties - BlobMetadata
+#### Output properties
 
 | Property Name | Data Type | Description |
 |---|---|---|
@@ -199,15 +199,15 @@ Create file: Uploads a file to Dropbox
 ## CopyFile
 Copy file: Copies a file to Dropbox 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|source|string|Url to source file|
-|destination|string|Destination file path in Dropbox, including target filename|
-|overwrite|boolean|Optional. Overwrites the destination file if set to 'true'|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|source|string|yes|Url to source file|
+|destination|string|yes|Destination file path in Dropbox, including target filename|
+|overwrite|boolean|no| Overwrites the destination file if set to 'true'|
 
-#### Output properties - BlobMetadata
+#### Output properties
 
 | Property Name | Data Type | Description |
 |---|---|---|
@@ -226,11 +226,11 @@ Copy file: Copies a file to Dropbox
 ## OnNewFile
 When a file is created: Triggers a flow when a new file is created in a Dropbox folder 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|folderId|string|Specify a folder|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|folderId|string|yes|Specify a folder|
 
 #### Output properties
 None.
@@ -239,11 +239,11 @@ None.
 ## OnUpdatedFile
 When a file is modified: Triggers a flow when a file is modified in a Dropbox folder 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|folderId|string|Specify a folder|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|folderId|string|yes|Specify a folder|
 
 #### Output properties
 None.
@@ -252,13 +252,13 @@ None.
 ## ListFolder
 List files and folders in folder: Lists files and folders in a Dropbox folder 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|id|string|Specify the folder|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|id|string|yes|Specify the folder|
 
-#### Output properties - BlobMetadata
+#### Output properties
 
 | Property Name | Data Type | Description |
 |---|---|---|
@@ -277,10 +277,10 @@ List files and folders in folder: Lists files and folders in a Dropbox folder
 ## ListRootFolder
 List files and folders in root folder: Lists files and folders in the Dropbox root folder 
 
-#### Required input
+#### Input properties
 None.
 
-#### Output properties - BlobMetadata
+#### Output properties
 
 | Property Name | Data Type | Description |
 |---|---|---|
@@ -299,15 +299,15 @@ None.
 ## ExtractFolderV2
 Extract archive to folder: Extracts an archive file into a folder in Dropbox (example: .zip) 
 
-#### Required input
+#### Input properties
 
-| Name| Data Type|Description|
-| ---|---|---|
-|source|string|Path to the archive file|
-|destination|string|Path in Dropbox to extract the archive contents|
-|overwrite|boolean|Optional. Overwrites the destination files if set to 'true'|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|source|string|yes|Path to the archive file|
+|destination|string|yes|Path in Dropbox to extract the archive contents|
+|overwrite|boolean|no| Overwrites the destination files if set to 'true'|
 
-#### Output properties - BlobMetadata
+#### Output properties
 
 | Property Name | Data Type | Description |
 |---|---|---|

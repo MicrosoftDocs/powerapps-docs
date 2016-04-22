@@ -50,7 +50,7 @@ This connection includes the following functions:
 ## MyProfile
 Get my profile: Retrieves the profile for the current user.
 
-#### Required input
+#### Input properties
 None.
 
 #### Output properties
@@ -81,11 +81,11 @@ None.
 ## UserProfile
 Get user profile: Retrieves a specific user profile. 
 
-#### Required input
+#### Input properties
 
-| Name | Data Type | Description |
-|---|---|---|
-|Id|string| User principal name or email id |
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|Id|string| yes|User principal name or email id |
 
 #### Output properties
 
@@ -116,11 +116,11 @@ Get user profile: Retrieves a specific user profile.
 ## Manager
 Get manager: Retrieves user profile for the manager of the specified user
 
-#### Required input
+#### Input properties
 
-| Name | Data Type | Description |
-|---|---|---|
-|Id|string| User principal name or email id |
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|Id|string| yes|User principal name or email id |
 
 #### Output properties
 
@@ -150,11 +150,11 @@ Get manager: Retrieves user profile for the manager of the specified user
 ## DirectReports 
 Get direct reports: Get direct reports
 
-#### Required input
+#### Input properties
 
-| Name | Data Type | Description |
-|---|---|---|
-|Id|string| User principal name or email id |
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|Id|string| yes|User principal name or email id |
 
 #### Output properties
 
@@ -194,15 +194,11 @@ You can also use an **Input Text** control to enter a manager's email address, a
 ## SearchUser
 Search for users: Retrieves search results of user profiles
 
-#### Required input
-None.
+#### Input properties
 
-
-#### Optional input
-
-| Name | Data Type | Description |
-|---|---|---|
-|searchTerm|string| Search string. Applies to: display name, given name, surname, mail, mail nickname, and user principal name|
+| Name| Data Type| Required | Description|
+| ---|---|---|---|
+|searchTerm|string| no | Search string. Applies to: display name, given name, surname, mail, mail nickname, and user principal name|
 
 #### Output properties
 
