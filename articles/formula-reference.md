@@ -22,13 +22,13 @@
 
 Formulas combine many elements.  Listed below are:
 
-- **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.
-
-	When called, some functions have side effects. For example, the **SubmitForm** function saves a record to a data source. These functions are appropriate only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSubmit**.
+- **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSelect**.
 
 - **Signals** return information about the environment. For example, **Location** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 
-- **Enumerations** return a pre-defined constant value. For example, **Color** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.
+- **Enumerations** return a pre-defined constant value. For example, **Color** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here, function specific enumerations are described with the function.
+
+- **Container operators** provide access to information from within a container such as **ThisItem** and **Parent**.
 
 Other elements include:
 
@@ -212,6 +212,8 @@ Other elements include:
 
 **[Param](functions/function-param.md)** – Access to parameters passed to the app when the user opened it.
 
+**[Parent](functions/operators.md#parent-operator)** – Provides access to a container control's properties.
+
 **[Patch](functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
 
 **[PlainText](functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
@@ -275,6 +277,8 @@ Other elements include:
 **[Table](functions/function-table.md)** – Creates a temporary table.  
 
 **[Text](functions/function-text.md)** – Formats a number as a string for display.
+
+**[ThisItem](functions/operators.md#thisitem-operator)** – When in a gallery or form, returns the data for the current item from the container.
 
 **[Time](functions/function-date-time.md)** – Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
 
