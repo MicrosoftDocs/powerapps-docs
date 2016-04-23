@@ -64,7 +64,19 @@ You can use the **in** and **exactin** operators to find a string in a [data sou
 
 	The gallery shows only Europa because only its name contains the letter that you specified in the case that you specified.
 
-## ThisItem operator for galleries ##
-You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the **ThisItem** operator to specify the [column](working-with-tables.md#columns) of data that each control shows. For example, that operator in the product gallery for [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+## ThisItem operator ##
+
+You can show data in **Gallery**, **Edit form**, or **Display form** controls by binding it to a table or a collection.  These controls are a container for other cards and controls.  Each card or control within the container can access the bound data through the **ThisItem** operator.   
+
+You use the **ThisItem** operator to specify the [column](working-with-tables.md#columns) of data that each card or control within the outer control. For example, that operator in the product gallery for [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
 
 For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
+
+## Parent operator ##
+
+Some controls host other controls.  For example, **Screen**, **Gallery**, **Card**, **Edit form**, and **Display form** controls are all containers for controls.  We can the hosting control the "parent" of the controls within.  
+
+As with all controls in PowerApps, any control can be referenced by name from anywhere within the app.  **Screen1** may be the name of a screen in your app.  To retrieve the background color of this screen, you can use **Screen1.Fill**.
+
+Controls on this screen have another option.  They can user a relative reference: **Parent.Fill**.  The **Parent** operator refers to the control which hosts this control, making available all of its properties.  Using **Parent** is helpful as it is not dependent on the name of the control.  Container controls can be copied and pasted without needing to adjust any references within the container.  It also makes the relationship between child and parent controls clearer when reading formulas.
+

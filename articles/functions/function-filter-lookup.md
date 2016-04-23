@@ -28,7 +28,7 @@ The **Filter** function finds records in a table that satisfy a formula.  Use **
 
 The **LookUp** function finds the first record in a table that satisfies a formula.  Use **LookUp** to find a single record that matches one or more criteria.
 
-For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  [Columns](working-with-tables.md#columns) of the table can be used in the formula, as well as control properties and other values from throughout your app.  
+For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  [Columns](working-with-tables.md#columns) of the table can be used in the formula, as well as control properties and other values from throughout your app.  Besides the normal formula [operators](operators.md), you can use the [**in**](operators.md#in-and-exactin-operators) and [**exactin**](operators.md#in-and-exactin-operators) operators for substring matches. 
 
 **Filter** returns a table that contains the same columns as the original table and the records that match the criteria.  **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value.  If no records are found, **Filter** returns an [empty](function-isblank-isempty.md) table, and **LookUp** returns *blank*.  
 
