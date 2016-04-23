@@ -26,9 +26,9 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 > [AZURE.NOTE] This topic uses a tablet app. You can use a phone app but you will need to resize some of the controls.
 
 ### Prerequisites
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new tablet app or open an existing tablet app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Create a tablet app or open an existing tablet app in PowerApps.
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 - These steps use the [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpg images. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
 ## Show data in a gallery

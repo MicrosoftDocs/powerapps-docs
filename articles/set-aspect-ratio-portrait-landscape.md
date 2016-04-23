@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Change app settings | Microsoft PowerApps"
-	description="Step-by-step instructions for changing settings such as the screen size and orientation, the app name, and the app icon"
+	pageTitle="Change screen size and orientation | Microsoft PowerApps"
+	description="Step-by-step instructions for changing settings such as the screen size and orientation"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,31 +18,14 @@
    ms.date="01/21/2015"
    ms.author="anneta"/>
 
-# Change app settings in PowerApps #
-Customize an app by changing its name, its tile, its screen size, its screen orientation, or any combination of these settings.
+# Change screen size and orientation in PowerApps #
+
+Customize an app by changing its screen size and orientation.
 
 **Prerequisites**
 
 1. [Create an app](quick-tour-other.md) in PowerApps, and then open it for editing.
 1. On the **File** menu, select **App settings**.
-
-## Rename an app ##
-- Under **App name**, select **Rename this app**, and then type a different name.
-
-	![Close an app](./media/set-aspect-ratio-portrait-landscape/rename-app.png)
-
-## Change an app tile ##
-Follow one or more of these steps:
-
-- Select a different background color from the list of options.
-
-	![Select a tile color](./media/set-aspect-ratio-portrait-landscape/tile-colors.png)
-
-- Select an icon from the list of default icons.
-
-	![Select a tile icon](./media/set-aspect-ratio-portrait-landscape/tile-icons.png)
-
-- Select **Browse file**, select the image that you want to use, and then select **Open**.
 
 ## Change screen size and orientation ##
 1. Under **App settings**, select **Screen size + orientation**.
