@@ -38,272 +38,280 @@ Other elements include:
 
 ## A ##
 
-**[Abs](functions/function-numericals.md)** Absolute value of a number.  
+**[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
-**[Acceleration](functions/signals.md)** Reads the acceleration sensor in your device.
+**[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
 
-**[AddColumns](functions/function-table-shaping.md)** Returns a table with [columns](functions/working-with-tables.md#columns) added.
+**[AddColumns](functions/function-table-shaping.md)** – Returns a table with [columns](functions/working-with-tables.md#columns) added.
 
-**[And](functions/function-logicals.md)** Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the **&&** operator.
+**[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the **&&** operator.
 
-**[App](functions/signals.md)** Returns information about the currently running app, such as which screen is currently displayed.
+**[App](functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
 
-**[Average](functions/function-aggregates.md)** Calculates the average of a table expression or set of arguments.
+**[Average](functions/function-aggregates.md)** – Calculates the average of a table expression or set of arguments.
 
 ## B ##
 
-**[Back](functions/function-navigate.md)** Displays the previous screen.  
+**[Back](functions/function-navigate.md)** – Displays the previous screen.  
 
 ## C ##
 
-**[Calendar](functions/function-clock-calendar.md)** Retrieves information about the calendar for the current locale.
+**[Calendar](functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.
 
-**[Char](functions/function-char.md)** Translates a character code into a string.
+**[Char](functions/function-char.md)** – Translates a character code into a string.
 
-**[Clear](functions/function-clear-collect-clearcollect.md)** Deletes all data from a [collection](functions/working-with-data-sources.md#collections).
+**[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](functions/working-with-data-sources.md#collections).
 
-**[ClearCollect](functions/function-clear-collect-clearcollect.md)** Deletes all data from a collection and then adds a set of [records](functions/working-with-tables.md#records).
+**[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](functions/working-with-tables.md#records).
 
-**[Clock](functions/function-clock-calendar.md)** Retrieves information about the clock for the current locale.
+**[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
-**[Collect](functions/function-clear-collect-clearcollect.md)** Creates a collection or adds data to a data source.
+**[Collect](functions/function-clear-collect-clearcollect.md)** – Creates a collection or adds data to a data source.
 
-**[Color](functions/function-colors.md)** Sets a property to a built-in color value.
+**[Color](functions/function-colors.md)** – Sets a property to a built-in color value.
 
-**[ColorFade](functions/function-colors.md)** Fades a color value.
+**[ColorFade](functions/function-colors.md)** – Fades a color value.
 
-**[ColorValue](functions/function-colors.md)** Translates a CSS color name or hex code to a color value.  
+**[ColorValue](functions/function-colors.md)** – Translates a CSS color name or hex code to a color value.  
 
-**[Compass](functions/signals.md)** Returns your compass heading.
+**[Compass](functions/signals.md)** – Returns your compass heading.
 
-**[Concat](functions/function-concatenate.md)** Concatenates strings in a data source.  
+**[Concat](functions/function-concatenate.md)** – Concatenates strings in a data source.  
 
-**[Concatenate](functions/function-concatenate.md)** Concatenates strings.
+**[Concatenate](functions/function-concatenate.md)** – Concatenates strings.
 
-**[Connection](functions/signals.md)** Returns information about your network connection.
+**[Connection](functions/signals.md)** – Returns information about your network connection.
 
-**[Count](functions/function-table-counts.md)** Counts table records that contain numbers.
+**[Count](functions/function-table-counts.md)** – Counts table records that contain numbers.
 
-**[CountA](functions/function-table-counts.md)** Counts table records that aren't [empty](functions/function-isblank-isempty.md).
+**[CountA](functions/function-table-counts.md)** – Counts table records that aren't [empty](functions/function-isblank-isempty.md).
 
-**[CountIf](functions/function-table-counts.md)** Counts table records that satisfy a condition.  
+**[CountIf](functions/function-table-counts.md)** – Counts table records that satisfy a condition.  
 
-**[CountRows](functions/function-table-counts.md)** Counts table records.   
+**[CountRows](functions/function-table-counts.md)** – Counts table records.   
 
 ## D ##
 
-**[Date](functions/function-date-time.md)** Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
+**[DataSourceInfo](functions/function-datasourceinfo.md)** – Provides information about a data source.
 
-**[DateAdd](functions/function-dateadd-datediff.md)** Add days, months, quarters, or years to a date/time value.
+**[Date](functions/function-date-time.md)** – Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
 
-**[DateDiff](functions/function-dateadd-datediff.md)** Subtracts two date values, and shows the result in days, months, quarters, or years.
+**[DateAdd](functions/function-dateadd-datediff.md)** – Add days, months, quarters, or years to a date/time value.
 
-**[DateTimeValue](functions/function-datevalue-timevalue.md)** Converts a date and time string to a date/time value.
+**[DateDiff](functions/function-dateadd-datediff.md)** – Subtracts two date values, and shows the result in days, months, quarters, or years.
 
-**[DateValue](functions/function-datevalue-timevalue.md)** Converts a date-only string to a date/time value.
+**[DateTimeValue](functions/function-datevalue-timevalue.md)** – Converts a date and time string to a date/time value.
 
-**[DataSourceInfo](functions/function-datasourceinfo.md)** Provides information about a data source.
+**[DateValue](functions/function-datevalue-timevalue.md)** – Converts a date-only string to a date/time value.
 
-**[Day](functions/function-datetime-parts.md)** Retrieves the day portion of a date/time value.  
+**[Day](functions/function-datetime-parts.md)** – Retrieves the day portion of a date/time value.  
 
-**[Disable](functions/function-enable-disable.md)** Disables a signal, such as **[Location](functions/signals.md)**, for reading the GPS.
+**[Defaults](functions/function-defaults.md)** – Returns the default values for a data source.
 
-**[Distinct](functions/function-distinct.md)** Summarizes records of a table, removing duplicates.  
+**[Disable](functions/function-enable-disable.md)** – Disables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
-**[DropColumns](functions/function-table-shaping.md)** Returns a table with one or more columns removed.
+**[Distinct](functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
 
-**[Defaults](functions/function-defaults.md)** Returns the default values for a data source.
+**[Download](functions/function-param.md)** – Downloads a file from the web to the local device.
+
+**[DropColumns](functions/function-table-shaping.md)** – Returns a table with one or more columns removed.
 
 ## E ##
 
-**[Enable](functions/function-enable-disable.md)** Enables a signal, such as **[Location](functions/signals.md)**, for reading the GPS.
+**[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)**, for reading the GPS.
 
-**[Errors](functions/function-errors.md)** Provides error information for previous changes to a data source.
+**[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
-**[ErrorKind](functions/function-errors.md)** Provides the kind of error returned by the **Errors** function and **Form** control.
+**[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 
-**[EncodeUrl](functions/function-encode-decode.md)** Encodes special characters using URL encoding.
+**[Exit](functions/function-exit.md)** – Exits the currently running app.
 
 ## F ##
 
-**[Filter](functions/function-filter-lookup.md)** Returns a filtered table based on one or more criteria.
+**[Filter](functions/function-filter-lookup.md)** – Returns a filtered table based on one or more criteria.
 
-**[Find](functions/function-find.md)** Checks whether one string appears within another and returns the location.
+**[Find](functions/function-find.md)** – Checks whether one string appears within another and returns the location.
 
-**[First](functions/function-first-last.md)** Returns the first record of a table.
+**[First](functions/function-first-last.md)** – Returns the first record of a table.
 
-**[FirstN](functions/function-first-last.md)** Returns the first N records of a table.
+**[FirstN](functions/function-first-last.md)** – Returns the first N records of a table.
 
 ## G ##
 
-**[GroupBy](functions/function-groupby.md)** Returns a table with records grouped together.
+**[GroupBy](functions/function-groupby.md)** – Returns a table with records grouped together.
 
 ## H ##
 
-**[HashTags](functions/function-hashtags.md)** Extracts the hashtags (#strings) from a string.
+**[HashTags](functions/function-hashtags.md)** – Extracts the hashtags (#strings) from a string.
 
-**[Hour](functions/function-datetime-parts.md)** Returns the hour portion of a date/time value.
+**[Hour](functions/function-datetime-parts.md)** – Returns the hour portion of a date/time value.
 
 ## I ##
 
-**[If](functions/function-if.md)** Returns one value if a condition is true and another value if not.  
+**[If](functions/function-if.md)** – Returns one value if a condition is true and another value if not.  
 
-**[IsBlank](functions/function-isblank-isempty.md)** Checks for a [blank](functions/function-isblank-isempty.md) value.
+**[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
-**[IsEmpty](functions/function-isblank-isempty.md)** Checks for an empty table.
+**[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
-**[IsNumeric](functions/function-isnumeric.md)** Checks for a numeric value.
+**[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
-**[IsToday](functions/function-now-today-istoday.md)** Checks whether a date/time value is sometime today.
+**[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
 ## L ##
 
-**[Language](functions/function-language.md)** Access to the language that the app uses.
+**[Language](functions/function-language.md)** – Access to the language that the app uses.
 
-**[Last](functions/function-first-last.md)** Returns the last record of a table.
+**[Last](functions/function-first-last.md)** – Returns the last record of a table.
 
-**[LastN](functions/function-first-last.md)** Returns the last set of records (N records) of a table.
+**[LastN](functions/function-first-last.md)** – Returns the last set of records (N records) of a table.
 
-**[Launch](functions/function-param.md)** Launches a web address or an app.
+**[Launch](functions/function-param.md)** – Launches a web address or an app.
 
-**[Left](functions/function-left-mid-right.md)** Returns the left-most portion of a string.
+**[Left](functions/function-left-mid-right.md)** – Returns the left-most portion of a string.
 
-**[Len](functions/function-len.md)** Returns the length of a string.
+**[Len](functions/function-len.md)** – Returns the length of a string.
 
-**[LoadData](functions/function-savedata-loaddata.md)** Loads a collection from PowerApps private storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from PowerApps private storage.
 
-**[Location](functions/signals.md)** Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
+**[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
-**[Logout](function-logout.md)** Logs the current user out of PowerApps.
+**[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
 
-**[LookUp](functions/function-filter-lookup.md)** Looks up a single record in a table based on one or more criteria.
-
-**[Lower](functions/function-lower-upper-proper.md)** Converts letters in a string of text to all lowercase.
+**[Lower](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all lowercase.
 
 ## M ##
 
-**[Max](functions/function-aggregates.md)** Maximum value of a table expression or a set of arguments.
+**[Max](functions/function-aggregates.md)** – Maximum value of a table expression or a set of arguments.
 
-**[Mid](functions/function-left-mid-right.md)** Returns the middle portion of a string.
+**[Mid](functions/function-left-mid-right.md)** – Returns the middle portion of a string.
 
-**[Min](functions/function-aggregates.md)** Minimum value of a table expression or a set of arguments.
+**[Min](functions/function-aggregates.md)** – Minimum value of a table expression or a set of arguments.
 
-**[Minute](functions/function-datetime-parts.md)** Retrieves the minute portion of a date/time value.  
+**[Minute](functions/function-datetime-parts.md)** – Retrieves the minute portion of a date/time value.  
 
-**[Mod](functions/function-mod.md)** Returns the remainder after a number is divided by a divisor.
+**[Mod](functions/function-mod.md)** – Returns the remainder after a number is divided by a divisor.
 
-**[Month](functions/function-datetime-parts.md)** Retrieves the month portion of a date/time value.
+**[Month](functions/function-datetime-parts.md)** – Retrieves the month portion of a date/time value.
 
 ## N ##
 
-**[Navigate](functions/function-navigate.md)** Changes which screen is displayed.
+**[Navigate](functions/function-navigate.md)** – Changes which screen is displayed.
 
-**[NewForm](function-form.md)** Resets a form control for creation of an item.
+**[NewForm](function-form.md)** – Resets a form control for creation of an item.
 
-**[Not](functions/function-logicals.md)** Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the **!** operator.
+**[Not](functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the **!** operator.
 
-**[Now](functions/function-now-today-istoday.md)** Returns the current date/time value.
+**[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
 ## O ##
 
-**[Or](functions/function-logicals.md)** Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the **||** operator.
+**[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the **||** operator.
 
 ## P ##
 
-**[Param](functions/function-param.md)** Access to parameters passed to the app when the user opened it.
+**[Param](functions/function-param.md)** – Access to parameters passed to the app when the user opened it.
 
-**[Patch](functions/function-patch.md)** Modifies or creates a record in a data source, or merges records outside of a data source.
+**[Patch](functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
 
-**[PlainText](functions/function-encode-decode.md)** Removes HTML and XML tags from a string.
+**[PlainText](functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
 
-**[Proper](functions/function-lower-upper-proper.md)** Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
+**[Proper](functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 
 ## R ##
 
-**[Rand](functions/function-rand.md)** Returns a pseudo-random number.
+**[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
-**[Refresh](functions/function-refresh.md)** Refreshes the records of a data source.
+**[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
-**[Remove](functions/function-remove-removeif.md)** Removes one or more specific records from a data source.
+**[Remove](functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
 
-**[RemoveIf](functions/function-remove-removeif.md)** Removes records from a data source based on a condition.
+**[RemoveIf](functions/function-remove-removeif.md)** – Removes records from a data source based on a condition.
 
-**[RenameColumns](functions/function-table-shaping.md)** Renames columns of a table.
+**[RenameColumns](functions/function-table-shaping.md)** – Renames columns of a table.
 
-**[Replace](functions/function-replace-substitute.md)** Replaces part of a string with another string, by starting position of the string.
+**[Replace](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
 
-**[ResetForm](functions/function-form.md)** Resets a form control for editing of an existing item.
+**[ResetForm](functions/function-form.md)** – Resets a form control for editing of an existing item.
 
-**[Revert](functions/function-revert.md)** Reloads and clears errors for the records of a data source.
+**[Revert](functions/function-revert.md)** – Reloads and clears errors for the records of a data source.
 
-**[RGBA](functions/function-colors.md)** Returns a color value for a set of red, green, blue, and alpha components.
+**[RGBA](functions/function-colors.md)** – Returns a color value for a set of red, green, blue, and alpha components.
 
-**[Right](functions/function-left-mid-right.md)** Returns the right-most portion of a string.
+**[Right](functions/function-left-mid-right.md)** – Returns the right-most portion of a string.
 
-**[Round](functions/function-round.md)** Rounds to the closest number.
+**[Round](functions/function-round.md)** – Rounds to the closest number.
 
-**[RoundDown](functions/function-round.md)** Rounds down to the largest previous number.
+**[RoundDown](functions/function-round.md)** – Rounds down to the largest previous number.
 
-**[RoundUp](functions/function-round.md)** Rounds up to the smallest next number.
+**[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S ##
 
-**[SaveData](functions/function-savedata-loaddata.md)** Saves a collection to PowerApps private storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to PowerApps private storage.
 
-**[Second](functions/function-datetime-parts.md)** Retrieves the second portion of a date/time value.  
+**[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.  
 
-**[ShowColumns](functions/function-table-shaping.md)** Returns a table with only selected columns.
+**[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
-**[Shuffle](functions/function-shuffle.md)** Randomly reorders the records of a table.
+**[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
 
-**[Sort](functions/function-sort.md)** Returns a sorted table.
+**[Sort](functions/function-sort.md)** – Returns a sorted table based on a formula.
 
-**[Sqrt](functions/function-numericals.md)** Returns the square root of a number.  
+**[SortByColumns](funcitons/function-sort.md)** – Returns a sorted table based on one or more columns.
 
-**[StdevP](functions/function-aggregates.md)** Returns the standard deviation of its arguments.  
+**[Sqrt](functions/function-numericals.md)** – Returns the square root of a number.  
 
-**[SubmitForm](functions/function-form.md)** Saves the item in a form control to the data source.
+**[StdevP](functions/function-aggregates.md)** – Returns the standard deviation of its arguments.  
 
-**[Substitute](functions/function-replace-substitute.md)** Replaces part of a string with another string, by matching strings.
+**[Substitute](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by matching strings.
 
-**[Sum](functions/function-aggregates.md)** Calculates the sum of a table expression or a set of arguments.  
+**[SubmitForm](functions/function-form.md)** – Saves the item in a form control to the data source.
+
+**[Sum](functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
 
 ## T ##
 
-**[Table](functions/function-table.md)** Creates a temporary table.  
+**[Table](functions/function-table.md)** – Creates a temporary table.  
 
-**[Text](functions/function-text.md)** Formats a number as a string for display.
+**[Text](functions/function-text.md)** – Formats a number as a string for display.
 
-**[Time](functions/function-date-time.md)** Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
+**[Time](functions/function-date-time.md)** – Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
 
-**[TimeValue](functions/function-datevalue-timevalue.md)** Converts a time-only string to a date/time value.
+**[TimeValue](functions/function-datevalue-timevalue.md)** – Converts a time-only string to a date/time value.
 
-**[Today](functions/function-now-today-istoday.md)** Returns the current date/time value.
+**[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
-**[Trim](functions/function-trim.md)** Strips spaces from both ends of a string.
+**[Trim](functions/function-trim.md)** – Strips spaces from both ends of a string.
 
 ## U ##
 
-**[Ungroup](functions/function-groupby.md)** Removes a grouping.
+**[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
-**[Update](functions/function-update-updateif.md)** Replaces a record in a data source.
+**[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
-**[UpdateContext](functions/function-updatecontext.md)** Creates or updates one or more [context variables](functions/working-with-variables.md#create-a-context-variable) of the current screen.
+**[UpdateContext](functions/function-updatecontext.md)** – Creates or updates one or more [context variables](functions/working-with-variables.md#create-a-context-variable) of the current screen.
 
-**[UpdateIf](functions/function-update-updateif.md)** Modifies a set of records in a data source based on a condition.
+**[UpdateIf](functions/function-update-updateif.md)** – Modifies a set of records in a data source based on a condition.
 
-**[Upper](functions/function-lower-upper-proper.md)** Converts letters in a string of text to all uppercase.
+**[Upper](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all uppercase.
 
-**[User](functions/function-user.md)** Returns information about the current user.
+**[User](functions/function-user.md)** – Returns information about the current user.
 
 ## V ##
 
-**[Value](functions/function-value.md)** Converts a string to a number.
+**[Validate](functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.
 
-**[Validate](functions/function-validate.md)** Checks whether the value of a single column or a complete record is valid for a data source.
+**[Value](functions/function-value.md)** – Converts a string to a number.
 
-**[VarP](functions/function-aggregates.md)** Returns the variance of its arguments.  
+**[VarP](functions/function-aggregates.md)** – Returns the variance of its arguments.  
+
+## W ##
+
+**[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
 
 ## Y ##
 
-**[Year](functions/function-datetime-parts.md)** Retrieves the year portion of a date/time value.  
+**[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
+
+

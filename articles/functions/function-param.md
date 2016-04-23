@@ -24,11 +24,9 @@ Downloads or launches a webpage or an app with parameters.
 
 ## Description ##
 
-The **Download** function downloads a file from the web to the local device.  The user is prompted for a location to save the file.
+The **Download** function downloads a file from the web to the local device.  The user is prompted for a location to save the file.  **Download** returns the location where the file was stored locally as a string.  
 
 The **Launch** function launches a webpage or an app.  Optionally, this function can pass parameters to the app.  
-
-**Download** returns the location where the file was stored locally.  This string  can be passed to **Launch** in order to open the local file.
 
 The **Param** function retrieves a parameter passed to the app when it was launched.  If the named parameter wasn't passed, **Param** returns *blank*.
 
