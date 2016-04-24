@@ -25,7 +25,8 @@ Add a variety of controls to your app, and configure their properties directly, 
 **Prerequisites**
 
 1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-1. Select **New** on the **File** menu (near the left edge), and then select **Get started** under **Create from scratch**.
+1. Select **New** on the **File** menu (near the left edge).
+1. Under **Create an app**, select **Phone layout** on the **Blank app** tile.
 
 	![Create an app from scratch](./media/add-configure-controls/blank-app.png)
 
@@ -52,13 +53,13 @@ On the **Insert** tab, follow either of these steps:
 		![Vertical and horizontal galleries that show images only, text only, images with captions, images with text, in addition to custom/blank galleries and a card gallery](./media/add-configure-controls/gallery-category.png)
 
 		**Tip:** Show a list of records from a table using a [gallery](./add-gallery.md).
-	
+
 	- **Forms**
 
 		![Forms](./media/add-configure-controls/forms-category.png)
 
 		**Tip:** Show or edit a record by using a [form](./add-form.md).
-	
+
 	- **Media**
 
 		![Image, Camera, Video, Audio, Microphone, Add Picture](./media/add-configure-controls/media-category.png)
@@ -92,7 +93,7 @@ If you need more space for controls, [add a screen](add-screen-context-variables
 
 1. Resize the control by dragging any handle of the selection box (or by modifying the **Height**, **Width**, or both properties, as this topic describes later).
 
-	For example, make the text box shorter by dragging the middle handle on the right edge of the selection box.
+	For example, make the text box shorter by dragging a handle on the right edge of the selection box to the left. (The middle handle appears only if you zoom in.)
 
 	![A resized text box](./media/add-configure-controls/shorter-text-box.png)
 
@@ -143,26 +144,26 @@ Instead of configuring a control directly or from the ribbon, you can also updat
 
 	By using the formula bar, you can set properties that you can't set directly or from the ribbon. For example, you can set a tooltip that appears when a user points to the control but doesn't select it. You can also specify complicated formulas that increase the power of your app.
 
-1. Add a checkbox, and set its **Text** property so that **Show text** appears.
+1. Add a check box, and set its **Text** property so that **Show text** appears.
 
 1. Set the **Visible** property of the text box to this formula:
 
 	**If(Checkbox1!Value = true, true, false)**
 
-	**Note:** If you add a checkbox, remove it, and then add another checkbox, you might need to rename the checkbox that you're using for the formula to work. If the check box isn't named **Checkbox1**, rename it as this topic describes later.
+	**Note:** If you add a check box, remove it, and then add another check box, you might need to rename the check box that you're using for the formula to work. If the check box isn't named **Checkbox1**, rename it as this topic describes later.
 
-1. Select the checkbox to show the text box.
+1. Select the check box to show the text box.
 
 	![Text box appears when the check box is selected](./media/add-configure-controls/show-text.png)
 
-1. Clear the checkbox to hide the text box.
+1. Clear the check box to hide the text box.
 
 	![Text box disappears when the check box is cleared](./media/add-configure-controls/hide-text.png)
 
 This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md) from simple to complex.
 
 ## Rename a control ##
-1. Select the control that you want to rename, such as the checkbox that you added in the previous procedure.
+1. Select the control that you want to rename, such as the check box that you added in the previous procedure.
 
 1. On the **Home** tab, select the name of the control (to the right of **New screen**), and then type the name that you want.
 

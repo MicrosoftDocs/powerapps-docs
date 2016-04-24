@@ -173,12 +173,12 @@ Get a quick piece of information from a record by finding it in a gallery on a b
 
 	![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream-cleaned.png)
 
-## Viewing details ##
-With the gallery, we can identify a record of interest, that we want to drill into to see the price and quantity on hand.  We use the **Display form** control to view details of the record.  
+## View details ##
+If the gallery doesn't show the information that you want, select the arrow for a record to open the details screen. A **Display form** control on that screen shows more, even all, fields for the record that you selected.  
 
 The **Display form** control uses two properties to display the record:
 
-* **DataSource** property.  The name of the data source that holds the record.  This property is used to populate the options panel with fields and is used to determine the display name and data type (string, number, date, etc) for each field.  
+* **DataSource** property.  The name of the data source that holds the record. This property is used to populate the **Options** panel with fields and is used to determine the display name and data type (string, number, date, etc) for each field.  
 
 * **Item** property.  The record to display.  This is often connected to the **Selected** property of the **Gallery** control, allowing us to drill into the record that was selected in the **Gallery** control.
 
