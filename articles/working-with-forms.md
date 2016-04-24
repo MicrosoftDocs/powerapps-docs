@@ -121,73 +121,64 @@ This screen features these key formulas:
 | **EditForm1** | If changes aren't accepted, remain on the current screen so that the user can fix any issues and try to submit again. | Leave the **OnFailure** property blank. |
 | **LblFormError1** | If changes aren't accepted, shows an error message.  | Set the **Text** property to this value:<br>**EditForm1.Error** |
 
-As in the **Details** screen, a form control, named **EditForm1**, dominates the **Edit and Create** screen.  This control displays and allows the user to edit the selected record in the gallery, through the formula **EditlForm1.Item = BrowseGallery1.Selected**.  It also uses its **DataSource** property in order to obtain meta-data about this data source, such as the user friendly display name for each field, and to know where to push back changes.
+As in the **Details** screen, a form control, named **EditForm1**, dominates the **Edit and Create** screen. In addition, the **Item** property of **EditForm1** is set to **BrowseGallery1.Selected**, so the form displays the record that the user selected in **BrowseScreen1**. While the **Details** screen shows each field as read-only, the user can update the value of one or more fields by using the controls in **EditForm1**. It also uses the **DataSource** property to access metadata about this data source, such as the user-friendly display name for each field and the location where changes should be saved.
 
-Looking to the top of the screen, the "X" or cancel button performs two tasks.  First it resets the form to the state it was in before the user made any changes.  This is important for the scenario in which the user returns to this screen, where they should see the current record's value from the data source and not any abandoned edits.  Second, we return to the previous screen with the **Back** function, which in our case, will be the detail screen.
+If the user selects the "X" icon to cancel an update, the **ResetForm** function discards any unsaved changes, and the **Back** function opens the **Details** screen. Both the **Details** screen and the **Edit and Create** screen show the same record until the user selects a different one on **BrowseScreen1**. The fields in that record remain set to the values that were most recently saved, not any changes that the user made and then abandoned.
 
-The "checkmark" or submit button performs just one task: it sends the user's changes to the data source by invoking the **SubmitForm** function.  But a few things are going to go on behind the scenes.  If the data source accepts the change, the form's **OnSuccess** formula will be evaluated, which in our case is set to **OnSuccess = Back()**, taking us back to the detail screen to see the result of the change.
+If the user changes one or more values in the form and then selects the "checkmark" icon, the **SubmitForm** function sends the user's changes to the data source.
 
-Even more interesting is what happens if the data source does not accept the change.  In this case, the form's **OnFailure** formula will be evaluated, which for app is *blank* so nothing happens.  The form's **Error** property will be set to a user friendly error message, and this is displayed with the **LblFormError1** control on our screen.  Normally, this property is blank and nothing is shown.  In the error case, we do not use **Back** or **Navigate** to change screens; instead we stay where we are and allow the user to fix the issue that is preventing the data source from accepting the change, or abandon the change (by pressing the "X" Cancel icon).
+- If the changes are successfully saved, the form's **OnSuccess** formula runs, and the **Back()** function opens the detail screen to show the updated record.
+- If the changes aren't successfully saved, the form's **OnFailure** formula runs, but it doesn't change anything because it's *blank*. The **Edit and Create** screen remains open so that the user can either cancel the changes or fix the error. **LblFormError1** shows a user-friendly error message, to which the form's **Error** property is set.
 
-As with the **Display form** control, the **Edit form** control is a container for **Card** controls:
+As with a **Display form** control, an **Edit form** control contains **Card** controls, which contain other controls that show different fields in a record:
 
 ![Edit card and card controls selected in the authoring experience](media/working-with-forms/afd-edit-card-controls.png)
 
-In this case, the card selected for the AssetID field contains an **Text input** control instead of a **Text** control that was used on the detail screen, since we are allowing the user to edit the field and not just see it.  The **Default** property of the **Text input** control is set to **Parent.Default** this time, and **Default** is appropriate since the user can change from this initial value.
+In the previous image, the selected card shows the **AssetID** field and  contains a **Text input** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **Text box** control, which is read-only.) The **Text input** control has a **Default** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
 
-Fields can be displayed or not, rearranged, and cards changed just as we did for the **Display form** control.
+In the **Options** pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
 
 ![Edit screen with options pane open](media/working-with-forms/afd-edit-card-options.png)
 
-## Building a data app from scratch ##
+## Build an app from scratch ##
+By understanding how PowerApps generates an app, you can build one yourself that uses the same building blocks and formulas discussed earlier in this topic.
 
-Now that we have seen how PowerApps created a data app, let's build one of our own from scratch.  We'll use the same building blocks and formulas that we dissected above.
-
-## Example data source ##
-
-Let's start at the very beginning.  To get the most from this article, it is helpful to have a data source with which you can experiment.  Something that you can read, and write, and it won't be a problem if it is written with test data.  The remainder of this article will assume a SharePoint list named "Ice Cream" with the following contents:
+## Identify test data ##
+To get the most from this topic, start with a data source with which you can experiment. It should contain test data that you can read and update without concern. To follow the rest of this topic exactly, create a SharePoint list named "Ice Cream" that contains this data:
 
 ![Ice cream SharePoint list](./media/working-with-forms/sharepointlist-icecream.png)
 
-1. Create a new PowerApp from blank, for phones.  Tablet apps are very similar but you may want a different [screen layout](#screen-layouts) to make the most of the extra screen space.
+- Create an app from blank, for phones, and connect it to your data source.
 
-1. Create a connection to this data source in PowerApps.  For the remainder of this article, we will assume a data source with the name "Ice Cream".
+	**Note:** Tablet apps are very similar, but you may want a different [screen layout](#screen-layouts) to make the most of the extra screen space.
 
-## Browsing records ##
+	The examples in the rest of the topic are based on a data source named **Ice Cream**.
 
-The first step in editing a record, is finding the record to edit.  The **Gallery** control  is designed to show a gallery of records, that the user can scroll through and select from.
+## Browse records ##
+Get a quick piece of information from a record by finding it in a gallery on a browse screen.
 
-1. Using the "Insert" ribbon, insert a **Gallery** control, of type "Text gallery" and "Vertical".
+1. Add a **Text gallery** control in the **Vertical** orientation, and set its **Items** property to **Ice Cream**.
 
-2. Set the **Items** property of the **Gallery** control to: **'Ice Cream'**
+	![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream.png)
 
-![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream.png)
+	By default, the gallery shows the first three fields for this data source, which aren't the most useful. Next, you'll configure the gallery to show exactly the data you want.
 
-The gallery is showing the first three fields for this data source, which is not what we want.  Let's clean this up:
+1. Set the **Text** property of the first text control in the gallery to **ThisItem.Title**.
 
-1. Select the first text control in the gallery by selecting the text which is currently showing the created date and time.
+	Instead of showing the date/time when each record was created, the text box shows the value in the **Title** field for each record.
 
-2. Change its **Text** property to **ThisItem.Title**.  The text box will now reflect the Title of this item.
+1. Remove the other two text boxes from the gallery, resize it to fill the screen, and set its **TemplateSize** property to **40**.
 
-3. Remove the other two text boxes in the gallery.
+	The screen resembles this example, which shows all records in the data source:
 
-4. Resize the **Gallery** control to fill the screen.
+	![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream-cleaned.png)
 
-5. Resize the repeating section of the gallery to take up less space.
-
-When you are done, your screen should look more like this (it need not be exactly the same):
-
-![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream-cleaned.png)
-
-Great, we are now showing all the rows from the SharePoint list.
-
-## Viewing details ##
-
-With the gallery, we can identify a record of interest, that we want to drill into to see the price and quantity on hand.  We use the **Display form** control to view details of the record.  
+## View details ##
+If the gallery doesn't show the information that you want, select the arrow for a record to open the details screen. A **Display form** control on that screen shows more, even all, fields for the record that you selected.  
 
 The **Display form** control uses two properties to display the record:
 
-* **DataSource** property.  The name of the data source that holds the record.  This property is used to populate the options panel with fields and is used to determine the display name and data type (string, number, date, etc) for each field.  
+* **DataSource** property.  The name of the data source that holds the record. This property is used to populate the **Options** panel with fields and is used to determine the display name and data type (string, number, date, etc) for each field.  
 
 * **Item** property.  The record to display.  This is often connected to the **Selected** property of the **Gallery** control, allowing us to drill into the record that was selected in the **Gallery** control.
 
