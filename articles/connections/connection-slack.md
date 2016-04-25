@@ -40,7 +40,7 @@ This connection includes the following functions:
 
 | Function Name |  Description |
 | --- | --- |
-|[PostMessage](connection-twitter.md#postmessage) | Post a Message to a specified channel |
+|[PostMessage](connection-slack.md#postmessage) | Post a Message to a specified channel |
 
 ## PostMessage
 Post Message: Post a Message to a specified channel. 
