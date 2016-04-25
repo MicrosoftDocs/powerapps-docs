@@ -31,8 +31,8 @@ This topic shows the available functions.
 ##  What you need to get started
 
 - Access to the [PowerApps portal][1] or install [PowerApps][2]
-- Add the [connection](add-manage-connections.md)
-- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)
+- Add the [connection](../add-manage-connections.md)
+- Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
 
 
 ## View the available functions
@@ -41,7 +41,7 @@ This connection includes the following functions:
 
 | Function Name |  Description |
 | --- | --- |
-|[Languages](connection-microsoft-translator-.md#languages) | Retrieves all languages that Microsoft Translator supports  |
+|[Languages](connection-microsoft-translator.md#languages) | Retrieves all languages that Microsoft Translator supports  |
 |[Translate](connection-microsoft-translator.md#translate) | Translates text to a specified language using Microsoft Translator  |
 |[Detect](connection-microsoft-translator.md#detect) | Detects source language of given text  |
 |[SpeechLanguages](connection-microsoft-translator.md#speechlanguages) | Retrieves the languages available for speech synthesis  |
