@@ -42,7 +42,7 @@ If you try to sign up with a personal email address, you will get a message indi
 1. Select **Get started**.
 
 1. In the dialog, enter the work or school email address you are signing up with, and then select the **arrow**. Be sure your email address is allowed for sign up.
-![Need image of the arrow button from james conard](./media/signup-for-powerapps/filename.png)
+![](./media/signup-for-powerapps/PowerApps_Dialog.png)
 
 1. Make sure you have entered the correct email address and click **Sign up**
 ![](./media/signup-for-powerapps/BoxPortal_GettingStarted.png)

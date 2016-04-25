@@ -18,6 +18,8 @@
     ms.date="04/24/2016"
     ms.author="jamesol"/>
 
-# Coming Soon #
+# Restore an app to a previous version #
 
-This article is coming soon.
+This article introduces you on how to restore an app to a previous version that was saved to the cloud from your PowerApps account.
+
+## Restore an app from your account ##
