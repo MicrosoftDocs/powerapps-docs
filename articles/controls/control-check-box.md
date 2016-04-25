@@ -34,9 +34,9 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
 **CheckboxBackgroundFill** – The background color of the box that surrounds the checkmark in a checkbox control.
 

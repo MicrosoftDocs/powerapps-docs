@@ -37,9 +37,9 @@ If you want to create more than one app that uses the same data but not share th
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
 [**Color**](properties\properties-color-border.md) – The color of text in a control.
 

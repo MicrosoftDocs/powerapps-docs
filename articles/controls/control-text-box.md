@@ -40,9 +40,9 @@ A text box shows data that you specify as a literal string of text, which appear
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
 [**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 

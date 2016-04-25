@@ -32,9 +32,9 @@ If you add this control, the user can update a data source with one or more phot
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
 **Brightness** – How much light the user is likely to perceive in an image.
 

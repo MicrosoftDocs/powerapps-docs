@@ -35,9 +35,9 @@ An **HTML text** control not only shows plain text and numbers but also converts
 ## Additional properties ##
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
 [**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
