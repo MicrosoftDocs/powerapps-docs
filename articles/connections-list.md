@@ -6,7 +6,7 @@
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="erikre"
-	editor=""
+	editor=""t
     tags=""/>
 
 <tags
@@ -15,7 +15,7 @@
 	ms.tgt_pltfrm="na"
 	ms.devlang="na"
 	ms.topic="get-started-article"
-	ms.date="04/21/2016"
+	ms.date="04/25/2016"
 	ms.author="mandia"/>
 
 # List of available connections
@@ -57,11 +57,11 @@ Link to custom APIs.
 [ftpdoc]: ./connectors-create-api-ftp.md "Connects to an FTP / FTPS server and do different FTP tasks, including uploading, getting, deleting files, and more."
 [googledrivedoc]: ./connections/connection-googledrive.md "Connect to GoogleDrive and interact with your data."
 [mailchimpdoc]: ./connections/connection-mailchimp.md "Connect to MailChimp to create new campaigns, manage your lists, and more"
-[microsofttranslatordoc]: ./connectors-create-api-microsofttranslator.md
-[office365outlookdoc]: ./connectors-create-api-office365-outlook.md "The Office 365 Connector can send and receive emails, manage your calendar, and manage your contacts using your Office 365 account."
+[microsofttranslatordoc]: ./connections/connection-microsoft-translator.md
+[office365outlookdoc]: ./connections/connection-office365-outlook.md "The Office 365 Connector can send and receive emails, manage your calendar, and manage your contacts using your Office 365 account."
 [office365usersdoc]: ./connections/connection-office365-users.md
-[office365videodoc]: ./connectors-create-api-office365-video.md
-[onedrivedoc]: ./connectors-create-api-onedrive.md "Connects to your personal Microsoft OneDrive and upload, delete, list files, and more."
+[office365videodoc]: ./connections/connection-office365-video.md
+[onedrivedoc]: ./connections/connection-onedrive.md "Connects to your personal Microsoft OneDrive and upload, delete, list files, and more."
 [salesforcedoc]: ./connectors-create-api-salesforce.md "Connect to your Salesforce account and manage  accounts, leads, opportunities, and more."
 [servicebusdoc]: ./connectors-create-api-servicebus.md "Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions."
 [sendgriddoc]: ./connections/connection-sendgrid.md "Connect to SendGrid to send email and manage recipient lists"
