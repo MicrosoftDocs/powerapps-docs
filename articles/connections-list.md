@@ -6,7 +6,7 @@
 	documentationCenter=""
 	authors="MandiOhlinger"
 	manager="erikre"
-	editor=""
+	editor=""t
     tags=""/>
 
 <tags
@@ -57,7 +57,7 @@ Link to custom APIs.
 [ftpdoc]: ./connectors-create-api-ftp.md "Connects to an FTP / FTPS server and do different FTP tasks, including uploading, getting, deleting files, and more."
 [googledrivedoc]: ./connections/connection-googledrive.md "Connect to GoogleDrive and interact with your data."
 [mailchimpdoc]: ./connections/connection-mailchimp.md "Connect to MailChimp to create new campaigns, manage your lists, and more"
-[microsofttranslatordoc]: ./connections/connection-microsofttranslator.md
+[microsofttranslatordoc]: ./connections/connection-microsoft-translator.md
 [office365outlookdoc]: ./connections/connection-office365-outlook.md "The Office 365 Connector can send and receive emails, manage your calendar, and manage your contacts using your Office 365 account."
 [office365usersdoc]: ./connections/connection-office365-users.md
 [office365videodoc]: ./connections/connection-office365-video.md
