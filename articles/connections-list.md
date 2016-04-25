@@ -62,16 +62,16 @@ Link to custom APIs.
 [office365usersdoc]: ./connections/connection-office365-users.md
 [office365videodoc]: ./connections/connection-office365-video.md
 [onedrivedoc]: ./connections/connection-onedrive.md "Connects to your personal Microsoft OneDrive and upload, delete, list files, and more."
-[salesforcedoc]: ./connectors-create-api-salesforce.md "Connect to your Salesforce account and manage  accounts, leads, opportunities, and more."
+[salesforcedoc]: ./connections/connection-salesforce.md "Connect to your Salesforce account and manage  accounts, leads, opportunities, and more."
 [servicebusdoc]: ./connectors-create-api-servicebus.md "Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions."
 [sendgriddoc]: ./connections/connection-sendgrid.md "Connect to SendGrid to send email and manage recipient lists"
 [sharepointdoc]: ./connectors-create-api-sharepointonline.md "Connects to SharePoint Online to manage documents and list items."
-[slackdoc]: ./connectors-create-api-slack.md "Connect to Slack and post messages to Slack channels."
+[slackdoc]: ./connections/connection-slack.md "Connect to Slack and post messages to Slack channels."
 [sftpdoc]: ./connectors-create-api-sftp.md "Connects to SFTP and can upload, get, delete files, and more."
 [smtpdoc]: ./connectors-create-api-smtp.md "Connects to a SMTP server and can send email with attachments."
 [sqldoc]: ./connectors-create-api-sqlazure.md "Connects to SQL Azure Database. You can create, update, get, and delete entries on a SQL database table."
-[twiliodoc]: ./connectors-create-api-twilio.md "Connects to Twilio and can send and get messages, get available numbers, managing incoming phone numbers, and more."
-[twitterdoc]: ./connectors-create-api-twitter.md "Connects to Twitter and get timelines, post tweets, and more."
+[twiliodoc]: ./connections/connection-twilio.md "Connects to Twilio and can send and get messages, get available numbers, managing incoming phone numbers, and more."
+[twitterdoc]: ./connections/connection-twitter.md "Connects to Twitter and get timelines, post tweets, and more."
 [yammerdoc]: ./connectors-create-api-yammer.md "Connects to Yammer to post messages and get new messages."
 
 <!--Icon references-->
