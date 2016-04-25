@@ -43,67 +43,55 @@ See the [**understanding data cards**](working-with-data-cards.md) topic for exa
 
 ## Key properties ##
 
-**DataField** The name of the field within a record that this card displays and edits.
+**DataField** – The name of the field within a record that this card displays and edits.
 
 - The name must be in a single static string enclosed in double quotes and not a formula.  For example, to work with the "Name" field: **Card.DataField = "Name"**.
 - Cards can be unbound with their **DataField** property set to *blank*.  The **Valid** and **Update** properties are ignored for unbound cards.
 
-**Default** The initial value of a control before it is changed by the user.
+[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
 
 - Controls within the card should use **Parent.Default** to refer to the value of the field coming into the card.  For example, if a **Slider** control was going to be used to edit a field, use **Slider.Default = Parent.Default**
 
-**Update** The value to write back to the data source for a field.
-
-- Use this property's formula to pull the values from the edit controls of the card in order to write back to the data source.  For example, **Card.Update = Slider.Value** would use the slider's value for this card's field.
-
-**DisplayName** The user friendly name for a field in a data source.
+**DisplayName** – The user friendly name for a field in a data source.
 
 - The **DataSourceInfo** function provides the display name meta-data from the data source.
 - Controls within the card should use **Parent.DisplayName** to refer to the value of the field coming into the card. 
- 
-**Required**  Whether a card, editing the field of a data source, must contain a value.
 
-- The **DataSourceInfo** function provides the required meta-data from the data source.
-- Controls within the card should use **Parent.Required** to refer to the value of the field coming into the card. 
-
-**Error**  The user friendly error message to display for this field when validation fails.
+**Error** – The user friendly error message to display for this field when validation fails.
 
 - This property is set when **SubmitForm** is called.  
 - The message includes validation problems based on the data source's meta-data and checking the card's **Required** property.
 
-## All properties ##
+**Required** – Whether a card, editing the field of a data source, must contain a value.
 
-**DataField** – The name of the field within a record that this card displays and edits.
-
-**Default** – The initial value of a control before it is changed by the user.
+- The **DataSourceInfo** function provides the required meta-data from the data source.
+- Controls within the card should use **Parent.Required** to refer to the value of the field coming into the card. 
 
 **Update** – The value to write back to the data source for a field.
 
-**DisplayName** – The user friendly name for a field in a data source.
+- Use this property's formula to pull the values from the edit controls of the card in order to write back to the data source.  For example, **Card.Update = Slider.Value** would use the slider's value for this card's field.
 
-**Required** – Whether a card, editing the field of a data source, must contain a value.
+## Additional properties ##
 
-**Fill** – The background color of a control.
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-**BorderColor** – The color of a control's border.
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**BorderStyle** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
-**BorderThickness** The thickness of a control's border.
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-**Error** The user friendly error message to display for this field when validation fails.
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-**Visible** Whether a control appears or is hidden.
+**Valid** – Whether a **Card** or **Edit form** control contains valid entries, ready to be submitted to the data source.
 
-**Height** The distance between a control's top and bottom edges.
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-**Width** The distance between a control's left and right edges.
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-**X** The distance between the left edge of a control and the left edge of the screen.
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-**Y** The distance between the top edge of a control and the top edge of the screen.
-
-**Valid** Whether a **Card** or **Edit form** control contains valid entries, ready to be submitted to the data source. 
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Examples ##
 
