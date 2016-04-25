@@ -18,11 +18,9 @@
     ms.date="04/13/2016"
     ms.author="jamesol"/>
 
-# Sign up for the PowerApps
+# Sign up for PowerApps
 
 This article introduces you on how to sign up for a PowerApps account.
-
-[What is PowerApps?](https://aka.ms/pamktg)
 
 ## What email address can be used with PowerApps ##
 To sign up for PowerApps, enter your work or school email address.
