@@ -137,9 +137,9 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
 [**Fill**](properties\properties-color-border.md) – The background color of a control.
 
@@ -152,3 +152,4 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 [**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
 [**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+

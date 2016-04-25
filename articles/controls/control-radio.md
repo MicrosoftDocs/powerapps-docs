@@ -29,6 +29,7 @@ A **Radio** control, with which users have decades of experience, is best used w
 [**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
 
 [**Items**](properties\properties-core.md) – The source of data that appears in a control such as a gallery, a list, or a chart.
+
 [AZURE.INCLUDE [long-items](../../includes/long-items.md)]
 
 [**Value**](properties\properties-core.md) – The value of an input control.
@@ -38,9 +39,9 @@ A **Radio** control, with which users have decades of experience, is best used w
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
 [**Color**](properties\properties-color-border.md) – The color of text in a control.
 

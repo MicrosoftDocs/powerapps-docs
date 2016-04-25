@@ -35,7 +35,3 @@ Configure graphical elements in your app, including images, photos, and elements
 
 - Applies to [**Audio**](controls\control-audio-video.md), [**Video**](controls\control-audio-video.md), [**Image**](controls\control-image.md), [**Microphone**](controls\control-microphone.md), and [**Screen**](controls\control-screen.md) controls.
 
-
-
-
-

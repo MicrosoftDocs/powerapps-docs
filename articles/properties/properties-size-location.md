@@ -83,4 +83,3 @@ Configure how big a control (or an element of a control) is and where it is in r
 
 - Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**Image**](controls\control-image.md), and [**Text input**](controls\control-text-input.md) controls.
 
-

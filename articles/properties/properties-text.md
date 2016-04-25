@@ -63,8 +63,3 @@ Configure the text that appears on a control, in a tooltip, as a hint when the u
 
 - Applies to [**Button**](controls\control-button.md), [**Check Box**](controls\control-check-box.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), and [**Text box**](controls\control-text-box.md) controls.
 
-
-
-
-
-
