@@ -91,7 +91,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ## Common properties by category ##
 
-**[Color and corder](properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
+**[Color and border](properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
 
 **[Core](properties-core.md)** – Configure whether the user can see and interact with a control.
 
