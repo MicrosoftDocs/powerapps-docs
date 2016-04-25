@@ -31,8 +31,8 @@ This topic shows the available functions.
 ##  What you need to get started
 
 - Access to the [PowerApps portal][1] or install [PowerApps][2]
-- Add the [connection](add-manage-connections.md)
-- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)
+- Add the [connection](../add-manage-connections.md)
+- Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
 
 ## View the available functions
 
@@ -44,7 +44,7 @@ This connection includes the following functions:
 |[UpdateFile](connection-onedrive.md#updatefile) | Updates a file in OneDrive  |
 |[DeleteFile](connection-onedrive.md#deletefile) | Deletes a file from OneDrive  |
 |[GetFileMetadataByPath](connection-onedrive.md#getfilemetadatabypath) | Retrieves metadata of a file in OneDrive using path  |
-|[GetFileContentByPath](connection-onedrive.md#fetfilecontentbypath) | Retrieves contents of a file in OneDrive using path  |
+|[GetFileContentByPath](connection-onedrive.md#getfilecontentbypath) | Retrieves contents of a file in OneDrive using path  |
 |[GetFileContent](connection-onedrive.md#getfilecontent) |  Retrieves contents of a file in OneDrive using id  |
 |[CreateFile](connection-onedrive.md#createfile) | Uploads a file to OneDrive   |
 |[CopyFile](connection-onedrive.md#copyfile) | Copies a file to OneDrive   |
