@@ -26,9 +26,10 @@ Encodes and decodes strings.
 
 The **EncodeUrl** function encodes a URL string, replacing non-alphanumeric characters with % and a hexadecimal number.  
 
-The **PlainText** function removes HTML and XML tags, converting tags such as these to an appropriate symbol:<br>
-**&amp;nbsp;**<br>
-**&amp;quot;**
+The **PlainText** function removes HTML and XML tags, converting tags such as these to an appropriate symbol:
+
+- **&amp;nbsp;**
+- **&amp;quot;**
 
 The return value from these functions is the encoded or decoded string.   
 
@@ -51,3 +52,8 @@ If you show an RSS feed in a text gallery and then set the **Text** property of 
 If you set the **Text** property of the label to **PlainText(ThisItem.description)**, the text appears as in this example:
 
 	We have done an unusually "deep" globalization and localization.
+
+
+
+
+

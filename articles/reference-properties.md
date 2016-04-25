@@ -188,6 +188,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 [**EndYear**](properties-data.md) The latest year to which the user can set value of a date-picker control.
 
 **Error**  The meaning of this property is dependent on the control: 
+
 - [**Card** control](control-card.md) The user friendly error message to display for this field when validation fails.
 - [**Form** control](control-form-detail.md) A user friendly error message to display for this form when the **SubmitForm** function fails.
 
@@ -278,6 +279,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 [**MinimumBarWidth**](properties-chart.md) The narrowest possible width of columns in a column chart.
 
 **Mode** The meaning of this property is dependent on the control: 
+
 - [**Form** control](control-form-detail.md) The control is in **Edit** or **New** mode.
 - [**Pen input** control](control-pen-input.md) The control is in **Draw**, **Erase**, or **Select** mode.
 - [**Text input** control](control-text-input.md) The control is in **SingleLine**, **MultiLine**, or **Password** mode.
@@ -372,6 +374,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Repeat**](properties-data.md) Whether a timer automatically restarts when it finishes running.
 
+[**Required**](propeties-data.md) Whether a card, editing the field of a data source, must contain a value.
+
 [**Reset**](properties-data.md) Whether a control reverts to its default value.
 
 ### S ###
@@ -436,7 +440,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### V ###
 
-[**Valid**](properties-data.md) Whether a **Card** or **Form** control contains valid entries, ready to be submitted to the data source.
+[**Valid**](properties-data.md) Whether a **Card** or **Edit form** control contains valid entries, ready to be submitted to the data source.
 
 [**ValueFill**](properties-fill.md) The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 

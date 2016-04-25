@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/21/2015"
+   ms.date="04/24/2016"
    ms.author="anneta"/>
 
 # Change app name and icon in PowerApps #
@@ -24,17 +24,15 @@ Customize an app by changing its name and tile.
 
 **Prerequisites**
 
-1. [Create an app](quick-tour-other.md) in PowerApps, and then open it for editing.
+1. Create an app, or open one for editing.
 1. On the **File** menu, select **App settings**.
 
 ## Rename an app ##
-
 - Under **App name**, select **Rename this app**, and then type a different name.
 
 	![Close an app](./media/set-aspect-ratio-portrait-landscape/rename-app.png)
 
 ## Change an app tile ##
-
 Follow one or more of these steps:
 
 - Select a different background color from the list of options.
