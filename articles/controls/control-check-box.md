@@ -18,7 +18,7 @@
    ms.date="03/09/2016"
    ms.author="anneta"/>
 
-# Check Box control in PowerApps #
+# Check box control in PowerApps #
 [AZURE.INCLUDE [control-summary-check-box](../../includes/control-summary-check-box.md)]
 
 ## Description ##

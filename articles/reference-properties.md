@@ -111,9 +111,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**AutoHeight**](controls\control-text-box.md) – Whether a text box automatically increases its **Height** property if its **Text** property contains more characters than the control can show at one time.  Applies to the [**Text box**](controls\control-text-box.md) control.
 
-**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to [**Audio**](controls\control-audio-video.md), [**Video**](controls\control-audio-video.md), and [**Timer**](controls\control-timer.md) controls.
+**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to [**Audio**](controls\control-audio-video.md), [**Timer**](controls\control-timer.md), and [**Video**](controls\control-audio-video.md) controls.
 
-**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.  Applies to [**Audio**](controls\control-audio-video.md), [**Video**](controls\control-audio-video.md), and [**Timer**](controls\control-timer.md) controls.
+**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.  Applies to [**Audio**](controls\control-audio-video.md), [**Timer**](controls\control-timer.md), and [**Video**](controls\control-audio-video.md) controls.
 
 ### B ###
 
@@ -131,13 +131,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Camera**](controls\control-camera.md) – On a device that has more than one camera, the numeric ID of the camera that the app uses.  Applies to the [**Camera**](controls\control-camera.md) control.
 
-[**CheckboxBackgroundFill**](controls\control-check-box.md) – The background color of the box that surrounds the checkmark in a checkbox control.  Applies to the [**Check Box**](controls\control-check-box.md) control.
+[**CheckboxBackgroundFill**](controls\control-check-box.md) – The background color of the box that surrounds the checkmark in a checkbox control.  Applies to the [**Check box**](controls\control-check-box.md) control.
 
-[**CheckboxBorderColor**](controls\control-check-box.md) – The color of the border that surrounds the checkmark in a checkbox control.  Applies to the [**Check Box**](controls\control-check-box.md) control.
+[**CheckboxBorderColor**](controls\control-check-box.md) – The color of the border that surrounds the checkmark in a checkbox control.  Applies to the [**Check box**](controls\control-check-box.md) control.
 
-[**CheckboxSize**](controls\control-check-box.md) – The width and height of the box that surrounds the checkmark in a checkbox control.  Applies to the [**Check Box**](controls\control-check-box.md) control.
+[**CheckboxSize**](controls\control-check-box.md) – The width and height of the box that surrounds the checkmark in a checkbox control.  Applies to the [**Check box**](controls\control-check-box.md) control.
 
-[**CheckmarkFill**](controls\control-check-box.md) – The color of the checkmark in a checkbox control.  Applies to the [**Check Box**](controls\control-check-box.md) control.
+[**CheckmarkFill**](controls\control-check-box.md) – The color of the checkmark in a checkbox control.  Applies to the [**Check box**](controls\control-check-box.md) control.
 
 [**ChevronBackground**](controls\control-drop-down.md) – The color behind the down arrow in a dropdown list.  Applies to the [**Drop down**](controls\control-drop-down.md) control.
 
@@ -155,7 +155,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**DataField**](controls\control-card.md) – The name of the field within a record that this card displays and edits.  Applies to the [**Card**](controls\control-card.md) control.
 
-[**DataSource**](controls\control-form-detail.md) – The data source that contains the record that the user will show, edit, or create.  Applies to [**Edit form**](controls\control-form-detail.md) and [**Display form**](controls\control-form-detail.md) controls.
+[**DataSource**](controls\control-form-detail.md) – The data source that contains the record that the user will show, edit, or create.  Applies to [**Display form**](controls\control-form-detail.md) and [**Edit form**](controls\control-form-detail.md) controls.
 
 [**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.  Applies to many controls.
 
@@ -184,7 +184,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 - [**Card**](controls\control-card.md) control – The user friendly error message to display for this field when validation fails.
 - [**Edit form**](controls\control-form-detail.md) control – A user friendly error message to display for this form when the **SubmitForm** function fails.
 
-[**ErrorKind**](controls\control-form-detail.md) – If an error occurs when **SubmitForm** runs, the kind of error that occurred.  Applies to [**Edit form**](controls\control-form-detail.md) and [**Display form**](controls\control-form-detail.md) controls.
+[**ErrorKind**](controls\control-form-detail.md) – If an error occurs when **SubmitForm** runs, the kind of error that occurred.  Applies to [**Display form**](controls\control-form-detail.md) and [**Edit form**](controls\control-form-detail.md) controls.
 
 [**Explode**](controls\control-pie-chart.md) – The distance between wedges in a pie chart.  Applies to the [**Pie chart**](controls\control-pie-chart.md) control.
 
@@ -222,15 +222,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### I ###
 
-[**Image**](properties\properties-visual.md) – The name of the image that appears in an image, audio, or microphone control.  Applies to [**Audio**](controls\control-audio-video.md), [**Video**](controls\control-audio-video.md), [**Image**](controls\control-image.md), and [**Microphone**](controls\control-microphone.md) controls.
+[**Image**](properties\properties-visual.md) – The name of the image that appears in an image, audio, or microphone control.  Applies to [**Audio**](controls\control-audio-video.md), [**Image**](controls\control-image.md), [**Microphone**](controls\control-microphone.md), and [**Video**](controls\control-audio-video.md) controls.
 
-[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
+[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to [**Audio**](controls\control-audio-video.md), [**Image**](controls\control-image.md), [**Microphone**](controls\control-microphone.md), [**Screen**](controls\control-screen.md), and [**Video**](controls\control-audio-video.md) controls.
 
 [**Input**](controls\control-pen-input.md) – Input.  Applies to the [**Pen input**](controls\control-pen-input.md) control.
 
 [**Italic**](properties\properties-text.md) – Whether the text in a control is italic.  Applies to many controls.
 
-[**Item**](controls\control-form-detail.md) – The record in the **DataSource** that the user will show or edit.  Applies to [**Edit form**](controls\control-form-detail.md) and [**Display form**](controls\control-form-detail.md) controls.
+[**Item**](controls\control-form-detail.md) – The record in the **DataSource** that the user will show or edit.  Applies to [**Display form**](controls\control-form-detail.md) and [**Edit form**](controls\control-form-detail.md) controls.
 
 [**ItemBorderColor**](controls\control-pie-chart.md) – The color of the border around each wedge in a pie chart.  Applies to the [**Pie chart**](controls\control-pie-chart.md) control.
 
@@ -290,7 +290,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**OnChange**](properties\properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).  Applies to many controls.
 
-**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.  Applies to [**Check Box**](controls\control-check-box.md) and [**Toggle**](controls\control-toggle.md) controls.
+**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.  Applies to [**Check box**](controls\control-check-box.md) and [**Toggle**](controls\control-toggle.md) controls.
 
 [**OnEnd**](controls\control-audio-video.md) – How an app responds when an audio or video clip finishes playing.  Applies to [**Audio**](controls\control-audio-video.md) and [**Video**](controls\control-audio-video.md) controls.
 
@@ -304,7 +304,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.  Applies to many controls.
 
-**OnStart** – How the app responds when the user starts to record with a microphone control.  Applies to [**Audio**](controls\control-audio-video.md), [**Video**](controls\control-audio-video.md), and [**Microphone**](controls\control-microphone.md) controls.
+**OnStart** – How the app responds when the user starts to record with a microphone control.  Applies to [**Audio**](controls\control-audio-video.md), [**Microphone**](controls\control-microphone.md), and [**Video**](controls\control-audio-video.md) controls.
 
 [**OnStop**](controls\control-microphone.md) – How the app responds when the user stops recording with a microphone control.  Applies to the [**Microphone**](controls\control-microphone.md) control.
 
@@ -316,7 +316,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**OnTimerStart**](controls\control-timer.md) – How an app responds when a timer starts to run.  Applies to the [**Timer**](controls\control-timer.md) control.
 
-**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.  Applies to [**Check Box**](controls\control-check-box.md) and [**Toggle**](controls\control-toggle.md) controls.
+**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.  Applies to [**Check box**](controls\control-check-box.md) and [**Toggle**](controls\control-toggle.md) controls.
 
 [**OnVisible**](controls\control-screen.md) – How an app responds when the user navigates to a screen.  Applies to the [**Screen**](controls\control-screen.md) control.
 
@@ -352,13 +352,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**RadioSize**](controls\control-radio.md) – The diameter of the circles in a radio-button control.  Applies to the [**Radio**](controls\control-radio.md) control.
 
-[**RadiusBottomLeft**](properties\properties-size-location.md) – The degree to which the bottom-left corner of a control is rounded.  Applies to many controls.
+[**RadiusBottomLeft**](properties\properties-size-location.md) – The degree to which the bottom-left corner of a control is rounded.  Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), and [**Text input**](controls\control-text-input.md) controls.
 
-[**RadiusBottomRight**](properties\properties-size-location.md) – The degree to which the bottom-right corner of a control is rounded.  Applies to many controls.
+[**RadiusBottomRight**](properties\properties-size-location.md) – The degree to which the bottom-right corner of a control is rounded.  Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), and [**Text input**](controls\control-text-input.md) controls.
 
-[**RadiusTopLeft**](properties\properties-size-location.md) – The degree to which the top-left corner of a control is rounded.  Applies to many controls.
+[**RadiusTopLeft**](properties\properties-size-location.md) – The degree to which the top-left corner of a control is rounded.  Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), and [**Text input**](controls\control-text-input.md) controls.
 
-[**RadiusTopRight**](properties\properties-size-location.md) – The degree to which the top-right corner of a control is rounded.  Applies to many controls.
+[**RadiusTopRight**](properties\properties-size-location.md) – The degree to which the top-right corner of a control is rounded.  Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), and [**Text input**](controls\control-text-input.md) controls.
 
 **RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to [**Slider**](controls\control-slider.md) and [**Toggle**](controls\control-toggle.md) controls.
 
@@ -388,7 +388,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**SeriesAxisMin**](controls\control-column-line-chart.md) – A number that determines the minimum value of the y-axis for a column chart.  Applies to the [**Column chart**](controls\control-column-line-chart.md) control.
 
-**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to [**Audio**](controls\control-audio-video.md), [**Video**](controls\control-audio-video.md), and [**Pen input**](controls\control-pen-input.md) controls.
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to [**Audio**](controls\control-audio-video.md), [**Pen input**](controls\control-pen-input.md), and [**Video**](controls\control-audio-video.md) controls.
 
 [**ShowLabels**](controls\control-pie-chart.md) – Whether a pie chart shows the value that's associated with each of its wedges.  Applies to the [**Pie chart**](controls\control-pie-chart.md) control.
 
@@ -402,7 +402,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Snap**](controls\control-gallery.md) – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.  Applies to the [**Gallery**](controls\control-gallery.md) control.
 
-**Start** – Whether an audio or video clip plays.  Applies to [**Audio**](controls\control-audio-video.md), [**Video**](controls\control-audio-video.md), and [**Timer**](controls\control-timer.md) controls.
+**Start** – Whether an audio or video clip plays.  Applies to [**Audio**](controls\control-audio-video.md), [**Timer**](controls\control-timer.md), and [**Video**](controls\control-audio-video.md) controls.
 
 [**StartTime**](controls\control-audio-video.md) – The time after the start of an audio or video clip when the clip starts to play.  Applies to [**Audio**](controls\control-audio-video.md) and [**Video**](controls\control-audio-video.md) controls.
 
@@ -446,7 +446,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to [**Slider**](controls\control-slider.md) and [**Toggle**](controls\control-toggle.md) controls.
 
-[**VerticalAlign**](properties\properties-text.md) – The location of text on a control in relation to the vertical center of that control.  Applies to many controls.
+[**VerticalAlign**](properties\properties-text.md) – The location of text on a control in relation to the vertical center of that control.  Applies to [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), and [**Text box**](controls\control-text-box.md) controls.
 
 [**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.  Applies to many controls.
 

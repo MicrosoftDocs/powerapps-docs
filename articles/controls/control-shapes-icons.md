@@ -18,7 +18,7 @@
    ms.date="03/11/2016"
    ms.author="anneta"/>
 
-# Shape controls and icon controls in PowerApps #
+# Shape controls and Icon controls in PowerApps #
 [AZURE.INCLUDE [control-summary-shapes-icons](../../includes/control-summary-shapes-icons.md)]
 
 ## Description ##
