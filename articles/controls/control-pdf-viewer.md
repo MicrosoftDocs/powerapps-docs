@@ -26,54 +26,50 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-document](../../includes/short-document.md)]
+**Document** – The URL, enclosed in double-quotation marks, of a PDF file.
 
-[AZURE.INCLUDE [short-page](../../includes/short-page.md)]
+## Additional properties ##
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-## All properties ##
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-document](../../includes/short-document.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+[**PaddingBottom**](properties\properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+[**PaddingLeft**](properties\properties-size-location.md) – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+[**PaddingRight**](properties\properties-size-location.md) – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+[**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**Page** – The number of the page in a PDF file that you want to show.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-page](../../includes/short-page.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
-
-[AZURE.INCLUDE [short-zoom](../../includes/short-zoom.md)]
+**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
 
 ## Related functions ##
 

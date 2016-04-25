@@ -26,62 +26,56 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
 
-[AZURE.INCLUDE [short-oncheck](../../includes/short-oncheck.md)]
+[**Value**](properties\properties-core.md) – The value of an input control.
 
-[AZURE.INCLUDE [short-onuncheck](../../includes/short-onuncheck.md)]
+## Additional properties ##
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-## All properties ##
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-handlefill.md)]
+[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**OnChange**](properties\properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
 
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-oncheck](../../includes/short-oncheck.md)]
+**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-onuncheck](../../includes/short-onuncheck.md)]
+**RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[AZURE.INCLUDE [short-railfill](../../includes/short-railfill.md)]
+[**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-railhoverfill](../../includes/short-railhoverfill.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+**ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-valuefill](../../includes/short-valuefill.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-valuehoverfill](../../includes/short-valuehoverfill.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

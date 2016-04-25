@@ -26,53 +26,45 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-mode](../../includes/short-mode.md)]
+[**Color**](properties\properties-color-border.md) – The color of text in a control.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**Mode** – The control is in **Draw**, **Erase**, or **Select** mode.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+## Additional properties ##
 
-## All properties ##
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**Input** – Input.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-input](../../includes/short-input.md)]
+[**SelectionColor**](properties\properties-color-border.md) – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
-[AZURE.INCLUDE [short-mode](../../includes/short-mode.md)]
+**SelectionThickness** – The thickness of the selection tool for a pen-input control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+[**Size**](properties\properties-text.md) – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-selectionthickness](../../includes/short-selectionthickness.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-showcontrols](../../includes/short-showcontrols.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
-
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

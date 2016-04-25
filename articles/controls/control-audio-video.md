@@ -26,63 +26,55 @@ An **Audio** control plays a sound clip from a file, a recording from a **Microp
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-media](../../includes/short-media.md)]
+**Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.
 
-[AZURE.INCLUDE [short-showcontrols](../../includes/short-showcontrols.md)]
+**Media** – An identifier for the clip that an audio or video control plays.
 
-[AZURE.INCLUDE [short-loop](../../includes/short-loop.md)]
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-autopause](../../includes/short-autopause.md)]
+**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.
 
-[AZURE.INCLUDE [short-autostart](../../includes/short-autostart.md)]
+**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-image](../../includes/short-image.md)]
+[**Image**](properties\properties-visual.md) – The name of the image that appears in an image, audio, or microphone control.
 
-[AZURE.INCLUDE [short-imageposition](../../includes/short-imageposition.md)]
+[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-- The **ImagePosition** property is available for the **Audio** control but not the **Video** control.
+**OnEnd** – How an app responds when an audio or video clip finishes playing.
 
-[AZURE.INCLUDE [short-loop](../../includes/short-loop.md)]
+**OnPause** – How an app responds when the user pauses the clip that an audio or video control is playing.
 
-[AZURE.INCLUDE [short-media](../../includes/short-media.md)]
+**OnStart** – How the app responds when the user starts to record with a microphone control.
 
-[AZURE.INCLUDE [short-onend](../../includes/short-onend.md)]
+[**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-onpause](../../includes/short-onpause.md)]
+**Start** – Whether an audio or video clip plays.
 
-[AZURE.INCLUDE [short-onstart](../../includes/short-onstart.md)]
+**StartTime** – The time after the start of an audio or video clip when the clip starts to play.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-showcontrols](../../includes/short-showcontrols.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-start](../../includes/short-start.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-starttime](../../includes/short-starttime.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
-
-[[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

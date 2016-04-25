@@ -26,95 +26,88 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 ## Key properties ##
 
+[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
+
+[**Items**](properties\properties-core.md) – The source of data that appears in a control such as a gallery, a list, or a chart.
 [AZURE.INCLUDE [long-items](../../includes/long-items.md)]
 
-[AZURE.INCLUDE [long-default](../../includes/long-default.md)]
+## Additional properties ##
 
-[AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-## All properties ##
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**ChevronBackground** – The color behind the down arrow in a dropdown list.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**ChevronFill** – The color of the down arrow in a dropdown list.
 
-[AZURE.INCLUDE [short-chevronbackground](../../includes/short-chevronbackground.md)]
+[**Color**](properties\properties-color-border.md) – The color of text in a control.
 
-[AZURE.INCLUDE [short-chevronfill](../../includes/short-chevronfill.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**DisabledColor**](properties\properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**DisabledFill**](properties\properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+[**Font**](properties\properties-text.md) – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+[**FontWeight**](properties\properties-text.md) – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+[**HoverColor**](properties\properties-color-border.md) – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**HoverFill**](properties\properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+[**Italic**](properties\properties-text.md) – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+[**OnChange**](properties\properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+[**PaddingBottom**](properties\properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+[**PaddingLeft**](properties\properties-size-location.md) – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
+[**PaddingRight**](properties\properties-size-location.md) – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+[**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+[**PressedColor**](properties\properties-color-border.md) – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+[**PressedFill**](properties\properties-color-border.md) – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+[**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+[**SelectionColor**](properties\properties-color-border.md) – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+[**SelectionFill**](properties\properties-color-border.md) – The background color of a selected item or items in a list or a selected area of a pen control.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+[**Size**](properties\properties-text.md) – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+[**Strikethrough**](properties\properties-text.md) – Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-selectionfill](../../includes/short-selectionfill.md)]
+[**Underline**](properties\properties-text.md) – Whether a line appears under the text that appears on a control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
-
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
-
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

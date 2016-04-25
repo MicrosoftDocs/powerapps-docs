@@ -26,33 +26,27 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabledfill.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**HoverFill**](properties\properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedfill.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

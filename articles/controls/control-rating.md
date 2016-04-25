@@ -26,53 +26,45 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
 
-[AZURE.INCLUDE [short-max](../../includes/short-max.md)]
+**Max** – The maximum value to which the user can set a slider or a rating.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+## Additional properties ##
 
-## All properties ##
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**OnChange**](properties\properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-max](../../includes/short-max.md)]
+**RatingFill** – The color of the stars in a rating control.
 
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
+**ReadOnly** – Whether a user can change the value of a slider or rating control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+[**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-ratingfill](../../includes/short-ratingfill.md)]
+**ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-[AZURE.INCLUDE [short-readonly](../../includes/short-readonly.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-showvalue](../../includes/short-showvalue.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
-
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

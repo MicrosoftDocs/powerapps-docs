@@ -61,32 +61,18 @@ Some data sources can detect when two people try to update the same record at th
 
 ## Key properties ##
 
-**DataSource** The data source that contains the record that the user will show, edit, or create.
+**DataSource** – The data source that contains the record that the user will show, edit, or create.
 
 - If you don't set this property, the user can't show, edit, or create a record, and no additional metadata or validation is provided.
 
-**Item** The record in the **DataSource** that the user will show or edit.
+**Error** – A user friendly error message to display for this form when the **SubmitForm** function fails.
 
-- If a **Form** control's **Item** property is blank, the form will automatically be in **New** mode. If this property is set to the **SelectedItem** property of a **Gallery** control, blank is returned if the user hasn't selected a record in that gallery or it contains no records.
-
-**Error** A user-friendly error message to display if an issue occurs when **SubmitForm** runs.
-
-- This property applies only to a **Form** control.
+- This property applies only to the **Edit form** control.
 - This property changes only when the **SubmitForm**, **EditForm**, or **ResetForm** function runs.
 - If no error occurs, this property is *blank*, and **ErrorKind** is set to **ErrorKind.None**.
 - When possible, the error message returned will be in the user's language. Some error messages come from the data source directly and may not be in the user's language.
 
-## All properties ##
-
-**BorderColor** The color of a control's border.
-
-**BorderStyle** Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
-
-**BorderThickness** The thickness of a control's border.
-
-**DataSource** The data source that contains the record that the user will show, edit, or create. See details under [key properties](#key-properties).
-
-**ErrorKind** If an error occurs when **SubmitForm** runs, the kind of error that occurred.  
+**ErrorKind** – If an error occurs when **SubmitForm** runs, the kind of error that occurred.
 
 - Applies only to an **Edit form** control.
 - This property has the same enumeration as the **Errors** function. An **Edit form** control can return these values:
@@ -98,20 +84,17 @@ Some data sources can detect when two people try to update the same record at th
 | ErrorKind.Sync | The data source reported an error. Check the **Error** property for more information. |
 | ErrorKind.Validation | A general validation issue was detected. |
 
-**Item** The record in the **DataSource** that the user will show or edit.  See details under [key properties](#key-properties).
+**Item** – The record in the **DataSource** that the user will show or edit.
 
-**Error** A user-friendly error message to display if an error occurs when **SubmitForm** runs. See details under [key properties](#key-properties).
+- If an **Edit form** control's **Item** property is blank, the form will automatically be in **New** mode. If this property is set to the **SelectedItem** property of a **Gallery** control, blank is returned if the user hasn't selected a record in that gallery or it contains no records.
 
-**Fill** The background color of a control.
+**LastSubmit** – The last successfully submitted record, including any server generated fields.
 
-**Height** The distance between a control's top and bottom edges.
-
-**LastSubmit** The record that was successfully submitted most recently, including any fields that the server generated.
-
+- This property applies only to the **Edit form** control.
 - If the data source automatically generates or calculates any fields, such as an **ID** field with a unique number, the **LastSubmit** property will have this new value after **SubmitForm** successfully runs.
 - The value of this property is available in the **OnSuccess** formula.
 
-**Mode** A form is in either **Edit** or **New** mode.
+**Mode** – The control is in **Edit** or **New** mode.
 
 | Mode | Description |
 |----------|-------------|
@@ -125,26 +108,47 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 - The value of the **Item** property changes. This change indicates that user has decided to edit a record instead of creating one.
 - The **ResetForm** function runs. For example, the user might select a **Cancel** button that's been configured with this function.
 
-**OnFailure** How an app responds when a data operation doesn't succeed.
+**OnFailure** – How an app responds when a data operation has been unsuccessful.
 
-**OnSucess** How an app responds when a data operation succeeds.
+- This property applies only to the **Edit form** control.
 
-**OnReset** How an app responds when an **Edit form** control is reset.
+**OnReset** – How an app responds when an **Edit form** control is reset.
 
-**Valid** Whether a **Card** or **Form** control contains valid entries, ready to be submitted to the data source.
+- This property applies only to the **Edit form** control.
 
-- A **Form** control's **Valid** property aggregates the **Valid** properties of all the **Card** controls in the form. A form's **Valid** property is **true** only if the data in all cards in that form is valid; otherwise, the form's **Valid** property is **false**.
-- To enable a button to save changes only when the data in a form is valid but hasn't yet been submitted, set the button's **Enabled** to this formula:<br>
-**SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**
+**OnSuccess** – How an app responds when a data operation has been successful.
 
-**Unsaved**  True if the **Edit form** control contains user changes that haven't been saved.
+- This property applies only to the **Edit form** control.
 
+**Unsaved** – True if the **Edit form** control contains user changes that have not been saved.
+
+- This property applies only to the **Edit form** control.
 - Use this property to warn the user before they lose any unsaved changes.  To prevent the user from selecting a different record in a **Gallery** control before saving changes to the current record, set the gallery's **Disabled** property to **Form.Unsaved** and, likewise, disable refresh operations.
 
-**Width** The distance between a control's left and right edges.
+**Valid** – Whether a **Card** or **Edit form** control contains valid entries, ready to be submitted to the data source.
 
-**Visible** Whether a control appears or is hidden.
+- This property applies only to the **Edit form** control.
+- A **Form** control's **Valid** property aggregates the **Valid** properties of all the **Card** controls in the form. A form's **Valid** property is **true** only if the data in all cards in that form is valid; otherwise, the form's **Valid** property is **false**.
+- To enable a button to save changes only when the data in a form is valid but hasn't yet been submitted, set the button's **Enabled** to this formula:
 
-**X** The distance between the left edge of a control and the left edge of the screen.
+	**SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**
 
-**Y** The distance between the top edge of a control and the top edge of the screen.
+## Additional properties ##
+
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
+
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
+
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
+
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
+
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
+
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
+
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.

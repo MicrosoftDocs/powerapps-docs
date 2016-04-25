@@ -26,45 +26,41 @@ If you add this control, the user can update a data source with one or more phot
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-camera](../../includes/short-camera.md)]
+**Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+## Additional properties ##
 
-## All properties ##
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**Brightness** – How much light the user is likely to perceive in an image.
 
-[AZURE.INCLUDE [short-brightness](../../includes/short-brightness.md)]
+**Contrast** – How easily the user can distinguish between similar colors in an image.
 
-[AZURE.INCLUDE [short-camera](../../includes/short-camera.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-contrast](../../includes/short-contrast.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**OnStream** – OnStream.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**StreamRate** –
 
-[AZURE.INCLUDE [short-onstream](../../includes/short-onstream.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-streamrate](../../includes/short-streamrate.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
-
-[AZURE.INCLUDE [short-zoom](../../includes/short-zoom.md)]
+**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
 
 ## Related functions ##
 
