@@ -36,7 +36,16 @@ Show text in a **Text box** control by setting the value of its **Text** propert
 
 Here are some examples.
 
-1. Add a **Text box** control named **ShowText**, and set its **Text** property to the following formula:
+1. Add a **Text box** control named **ShowText**, and set its **Text** property to this formula:
+<br>**Now()**
+
+	If your computer is set to the "en-us" locale, the current date and time appears in this format:
+	<br>*mm/dd/yyyy hh:mm AM/PM*
+
+	If your computer is set to a locale such as "fr-fr", the current date and time appears in this format:
+	<br>*dd/mm/yyyy hh:mm AM/PM*
+
+1. Set the **Text** property of **ShowText** to this formula:
 <br>**DateDiff(Today(), DateValue("01/01/2020"))**
 
 	![Number of days between today and Jan. 1, 2020](./media/show-text-dates-times/date-diff-text.png)
@@ -187,28 +196,24 @@ Convert dates and times from strings of text to values, which you can format in 
 
 	The label shows **8/10/1985**, which is three months after the date in **Start**. Replace **Months** with **Quarters** or **Years** to identify a date that's the specified number of quarters or years before or after the date in **Start**.
 
-### Calculate dates and times using the Date and Time functions
-Use a Table within drop-down lists to select a different day, month, and year. You can then use the Text and Date functions to display the output based on the choices in the drop-down lists. You can also calculate dates based on separate values for years, months, and days, even from an external source. For example, you can use "sale" dates, month-end dates, or inventory restocking dates.
-
-#### Calculate dates based on years, months, and days
+## Calculate dates based on years, months, and days ##
 1. Add three **Drop down** controls named **Year**, **Month**, and **Day**.
 
-1. Set the **Items** property of **Year** to this formula:  
-```Table({Year:"2014"}, {Year:"2015"}, {Year:"2016"})```  
+1. Set the **Items** property of **Year** to this formula:
+<br>**Table({Year:"2014"}, {Year:"2015"}, {Year:"2016"})**
 
-3. Set the **Items** property of the **Month** list to the following expression:  
-```Table({Month:"1"}, {Month:"2"}, {Month:"3"}, {Month:"4"}, {Month:"5"}, {Month:"6"}, {Month:"7"}, {Month:"8"}, {Month:"9"}, {Month:"10"}, {Month:"11"}, {Month:"12"})```  
+1. Set the **Items** property of **Month** list to this formula:
+<br>**Table({Month:"1"}, {Month:"2"}, {Month:"3"}, {Month:"4"}, {Month:"5"}, {Month:"6"}, {Month:"7"}, {Month:"8"}, {Month:"9"}, {Month:"10"}, {Month:"11"}, {Month:"12"})**
 
-4. Set the **Items** property of the **Day** list to the following expression:  
-```Table({Day:"1"}, {Day:"2"}, {Day:"3"}, {Day:"4"}, {Day:"5"}, {Day:"6"}, {Day:"7"}, {Day:"8"}, {Day:"9"}, {Day:"10"}, {Day:"11"}, {Day:"12"}, {Day:"13"}, {Day:"14"}, {Day:"15"}, {Day:"16"}, {Day:"17"}, {Day:"18"}, {Day:"19"}, {Day:"20"}, {Day:"21"}, {Day:"22"}, {Day:"23"}, {Day:"24"}, {Day:"25"}, {Day:"26"}, {Day:"27"}, {Day:"28"}, {Day:"29"}, {Day:"30"}, {Day:"31"})```  
+1. Set the **Items** property of **Day** to this formula:
+<br>**Table({Day:"1"}, {Day:"2"}, {Day:"3"}, {Day:"4"}, {Day:"5"}, {Day:"6"}, {Day:"7"}, {Day:"8"}, {Day:"9"}, {Day:"10"}, {Day:"11"}, {Day:"12"}, {Day:"13"}, {Day:"14"}, {Day:"15"}, {Day:"16"}, {Day:"17"}, {Day:"18"}, {Day:"19"}, {Day:"20"}, {Day:"21"}, {Day:"22"}, {Day:"23"}, {Day:"24"}, {Day:"25"}, {Day:"26"}, {Day:"27"}, {Day:"28"}, {Day:"29"}, {Day:"30"}, {Day:"31"})**
 
-5. Add a label, and set its **Text** property to the following function:  
-```Text(Date(Value(Year.Selected.Value), Value(Month.Selected.Value), Value(Day.Selected.Value)), DateTimeFormat.LongDate)```
+5. Add a **Text box** control, and set its **Text** property to this formula:
+<br>**Text(Date(Value(Year.Selected.Value), Value(Month.Selected.Value), Value(Day.Selected.Value)), DateTimeFormat.LongDate)**
 
-	**Wednesday, January 1, 2014** is listed by default. Choose different options in the dropdown lists to update the label:  
-	![][19]
+	**Wednesday, January 1, 2014** is listed by default. Select different values in the **Drop down** controls to change the date in the **Text box** control.
 
-You may need to convert data that you didn't expect. If you create **Input Text** boxes instead of Drop-down lists, a user may enter an incorrect date, such as May 45. The **Date** function handles atypical data in the following ways:
+You may need to convert data that you didn't expect. If you add **Text input** controls instead of **Drop down** controls, a user may enter an incorrect date, such as May 45. The **Date** function handles atypical data in the following ways:
 
 - If a year value is between 0 and 1899 (inclusive), the function adds that value to 1900 to calculate the year.
 - If a year value is between 1900 and 9999 (inclusive), the function uses that value as the year.
@@ -218,40 +223,21 @@ You may need to convert data that you didn't expect. If you create **Input Text*
 - If a day value is greater than the number of days in the specified month, the function adds that many days to the first day of the month and returns the corresponding date from a subsequent month.
 - If a day value is less than 1, the function subtracts that many days, plus 1, from the first day of the specified month.
 
+## Calculate times based on hours, minutes, and seconds ##
 
-#### Calculate times based on hours, minutes, and seconds using the Time function
+1. Add two **Drop-down** lists named **Hour** and **Minute**.
 
-1. From the **Insert** menu, **Controls**, add two **Drop-down** lists. Name them **Hour** and **Minute**.
-2. Set the **Items** property of the **Hour** list to the following expression:  
-```Table({Hour:"9"}, {Hour:"10"}, {Hour:"11"}, {Hour:"12"}, {Hour:"13"}, {Hour:"14"}, {Hour:"15"}, {Hour:"16"}, {Hour:"17"})```
+1. Set the **Items** property of **Hour** to this formula:
+<br>**Table({Hour:"9"}, {Hour:"10"}, {Hour:"11"}, {Hour:"12"}, {Hour:"13"}, {Hour:"14"}, {Hour:"15"}, {Hour:"16"}, {Hour:"17"})**
 
-3. Set the **Items** property of the **Minute** list to the following expression:  
-```Table({Minute:"0"}, {Minute:"15"}, {Minute:"30"}, {Minute:"45"})```
+1. Set the **Items** property of **Minute** to this formula:
+<br>**Table({Minute:"0"}, {Minute:"15"}, {Minute:"30"}, {Minute:"45"})**
 
-4. Add a label, and set its **Text** property to the following expression:  
-```Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), 0), DateTimeFormat.ShortTime)```
+1. Add a **Text box** control, and set its **Text** property to this formula:  
+<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), 0), DateTimeFormat.ShortTime)**
 
-5. Choose 15 in the Hour list and 45 in the Minute list. The label shows **3:45 PM**:  
-![][20]
+5. Select **15** in **Hour** and **45** in **Minute**.
 
-	You can add entries to the lists so that users can choose a bigger range of hours and a more precise number of minutes. You can also add a third dropdown list so that users can choose seconds. If you add a third list, change the **Text** property of the label to the following expression:  
-	```Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)```
+	The **Text box** control shows **3:45 PM**.
 
-## More examples and fun stuff
-
-Task | Steps | Output
---- | --- | ---
-Use the **Now** function to display the current date and time | On the **Insert** tab, add a **Label**, and rename it to **MyLabel**. Set the **Text** property of the label to this function:<br>```Now()```<br><br>![][8] | The date and time displayed depends on your computer's localization settings:  <ul><li>For the "en" locale, the date and time is ```5/10/2015 5:27 PM``` (month/day/year).</li><li>If using another locale, like "fr", it displays as ```10/5/2015 5:27 PM``` (day/month/year).</li></ul>
-Enter a date and a time, and show them in another label  | <ol><li>On the **Insert** tab, select **Text**, add two **Input Text** boxes, and name them **ArrivalDate** and **ArrivalTime**.</li><li>In **ArrivalDate**, type in a date. For example, enter ```5/10/85```. </li><li>In **ArrivalTime**, type in a time. For example, enter ```6:15 AM```.</li><li>From the **Insert** tab, add a **Label**, and set its **Text** property to the following expression: ```"The product was launched on " & ArrivalDate.Text & " at " & ArrivalTime.Text & "."```</li></ol> | When done, your screen looks similar to this example: ![][9]  
-
-## Tips and tricks
-- At anytime, you can select the Preview button to see what you've created. You can also test your controls.
-- When designing your app, you can re-size the controls and move them around using click-and-drag.
-- When working with dates and times, there are many built-in functions that let you get creative with your output. For example, you can use LongDateTime, LongTime, and even create your own custom format.
-
-## What you learned
-In this topic, you:
-
-- Displayed text in a label by typing it directly in the label, and by using the label to show output from another control. In this example, we used an Input Text box with an Excel-like expression and displayed the output in the label.
-- Formatted different date and time values to include different languages, show milliseconds, calculate days and months between dates, calculate time in hours and minutes, and more.
-- Used different date and time functions, including DateDiff, DateValue, Today,   DateTimeValue, DateValue, DateAdd, Date, and Time.
+	You can add entries to **Hour** and **Minute** so that users can select from a bigger range of hours and a more precise number of minutes. You can also add a third **Drop down** control so that users can specify seconds. If you add a third list, set the **Text** property of the **Text box** control to the following expression:<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)**
