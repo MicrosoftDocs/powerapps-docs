@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Get Started | Microsoft PowerApps"
+	pageTitle="Get started | Microsoft PowerApps"
 	description="Quick ways to get started creating and using custom business apps with Microsoft PowerApps"
 	services=""
 	suite="powerapps"
@@ -24,12 +24,11 @@ Welcome! [Sign up](signup-for-powerapps.md) to start creating and using custom b
 ## Check out some apps ##
 [Sign in](https://web.powerapps.com), and then explore a [sample app](open-and-run-a-sample-app.md) to get a quick sense of what's possible and how PowerApps could help your business.
 
-[PowerApps home screenshot]
+![PowerApps home page](./media/getting-started/portal-home.png)
 
 Each sample app is designed for a specific purpose, such as managing a budget, inspecting a site, or tracking service tickets. Sample apps contain fictitious data to inspire your thinking.
 
-If you create an app or a co-worker shares an app with you, you'll also find those apps on the Home tab of [powerapps.com](https://web.powerapps.com).
-
+If you create an app or a co-worker shares an app with you, you'll also find those apps on the **Home** tab of [powerapps.com](https://web.powerapps.com).
 
 ## Generate an app from your data ##
 To create your own apps, [install PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer.
@@ -41,16 +40,14 @@ You can [automatically generate an app](get-started-create-from-data.md) that's 
 - Salesforce or Microsoft Dynamics CRM Online
 - a SQL Azure table
 
-[AFD image tbd]
+![PowerApps home page](./media/getting-started/afd.png)
 
 PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. Add your own touches by [customizing the app](get-started-create-from-data.md#customize-the-app).
 
 When your app looks and behaves the way you want, [share it](share-app.md) with others on your team so that they can use it too. Remember: they'll need access to the data source that you used to build the app.
 
-
 ## Try out a template ##
-You can also [build an app from a template](get-started-test-drive). These templates are based on fictitious data in a cloud account, such as Dropbox, OneDrive, or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to boost your knowledge before you embark on your own apps.  
-
+You can also [build an app from a template](get-started-test-drive). These templates are based on fictitious data in a cloud account, such as Dropbox, OneDrive, or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to build expertise that you can apply to your own apps.  
 
 ## Get creative ##
 You can create exactly the app you want with no distractions if you [build an app from scratch](get-started-create-from-blank.md). This way, the entire app comes straight from your brain to the screen. As you roll up your sleeves, you'll want to understand one or more of these concepts at a much deeper level:
