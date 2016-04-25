@@ -23,26 +23,48 @@
 ## Overview ##
 Configure the text that appears on a control, in a tooltip, as a hint when the user types data, and specify other text-related characteristics.
 
-## Properties ##
+## Text appearance ##
 
-**AutoHeight** Whether a text box automatically increases its **Height** property if its **Text** property contains more characters than the control can show at one time.
+**Font** – The name of the family of fonts in which text appears.
 
-**Clear** Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.
+- Applies to [**Button**](controls\control-button.md), [**Check Box**](controls\control-check-box.md), [**Column chart**](controls\control-column-line-chart.md), [**Line chart**](controls\control-column-line-chart.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**HTML text**](controls\control-html-text.md), [**List Box**](controls\control-list-box.md), [**Pie chart**](controls\control-pie-chart.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
-**HintText** Light-grey text that appears in an input-text control if it's empty.
+**FontWeight** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-**HTMLText** Text that appears in an HTML text control and that may contain HTML tags.
+- Applies to [**Button**](controls\control-button.md), [**Check Box**](controls\control-check-box.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
-**LineHeight** The distance between, for example, lines of text or items in a list.
+**Italic** – Whether the text in a control is italic.
 
-**MaxLength** The number of characters that the user can type into a text-input control.
+- Applies to [**Button**](controls\control-button.md), [**Check Box**](controls\control-check-box.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
-**Mode** Whether a text-input control is in **SingleLine**, **MultiLine**, or **Password** mode or a pen-input control is in **Draw**, **Erase**, or **Select** mode.
+**Size** – The font size of the text that appears on a control.
 
-**Overflow** Whether a scrollbar appears in a text box if its **Wrap** property is set to **true** and the value of the control's **Text** property contains more characters than the control can show at one time.
+- Applies to [**Button**](controls\control-button.md), [**Check Box**](controls\control-check-box.md), [**Column chart**](controls\control-column-line-chart.md), [**Line chart**](controls\control-column-line-chart.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**HTML text**](controls\control-html-text.md), [**List Box**](controls\control-list-box.md), [**Pen input**](controls\control-pen-input.md), [**Pie chart**](controls\control-pie-chart.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
-**Text** Text that appears on a control or that the user types into a control.
+**Strikethrough** – Whether a line appears through the text that appears on a control.
 
-**Tooltip** Explanatory text that appears when the user hovers over a control.
+- Applies to [**Button**](controls\control-button.md), [**Check Box**](controls\control-check-box.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
-**Wrap** Whether text that's too long to fit in a text box wraps to the next line.
+**Underline** – Whether a line appears under the text that appears on a control.
+
+- Applies to [**Button**](controls\control-button.md), [**Check Box**](controls\control-check-box.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
+
+## Text placement ##
+
+**Align** – The location of text in relation to the horizontal center of its control.
+
+- Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
+
+**LineHeight** – The distance between, for example, lines of text or items in a list.
+
+- Applies to [**List Box**](controls\control-list-box.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), and [**Text input**](controls\control-text-input.md) controls.
+
+**VerticalAlign** – The location of text on a control in relation to the vertical center of that control.
+
+- Applies to [**Button**](controls\control-button.md), [**Check Box**](controls\control-check-box.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), and [**Text box**](controls\control-text-box.md) controls.
+
+
+
+
+
+

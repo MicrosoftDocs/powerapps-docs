@@ -25,14 +25,4 @@ Configure the typeface in which text appears, in addition to characteristics suc
 
 ## Properties ##
 
-**Font** The name of the family of fonts in which text appears.
 
-**FontWeight** The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
-
-**Italic** Whether the text in a control is italic.
-
-**Size** The font size of the text that appears on a control.
-
-**Strikethrough** Whether a line appears through the text that appears on a control.
-
-**Underline** Whether a line appears under the text that appears on a control.

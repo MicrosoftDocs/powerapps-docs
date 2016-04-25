@@ -26,59 +26,53 @@ A **Gallery** control can show records from a data source, and each record can c
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**Items**](properties\properties-core.md) – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[AZURE.INCLUDE [short-showscrollbar](../../includes/short-showscrollbar.md)]
+**ShowScrollbar** – Whether a scrollbar appears when the user hovers over a gallery.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderStyle**](properties\properties-size-location.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**BorderThickness**](properties\properties-size-location.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+**Direction** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.
 
-[AZURE.INCLUDE [short-direction](../../includes/short-direction.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+**NavigationStep** – How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
 
-[AZURE.INCLUDE [short-layout](../../includes/short-layout.md)]
+**ShowNavigation** – Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.
 
-[AZURE.INCLUDE [short-navigationstep](../../includes/short-navigationstep.md)]
+**Snap** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.
 
-[AZURE.INCLUDE [short-shownavigation](../../includes/short-shownavigation.md)]
+**TemplateFill** – The background color of a gallery.
 
-[AZURE.INCLUDE [short-showscrollbar](../../includes/short-showscrollbar.md)]
+**TemplatePadding** – The distance between items in a gallery.
 
-[AZURE.INCLUDE [short-snap](../../includes/short-snap.md)]
+**TemplateSize** – The height of the template for a gallery in vertical/portrait orientation or the width of the template for a gallery in horizontal/landscape orientation.
 
-[AZURE.INCLUDE [short-templatefill](../../includes/short-templatefill.md)]
+**Transition** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.
 
-[AZURE.INCLUDE [short-templatepadding](../../includes/short-templatepadding.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-templatesize](../../includes/short-templatesize.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-transition](../../includes/short-transition.md)]
+**WrapCount** – How many records appear in each item of a gallery.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-wrapcount](../../includes/short-wrapcount.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

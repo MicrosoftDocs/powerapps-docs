@@ -26,21 +26,17 @@ Most apps have multiple **Screen** controls that contain **Text Box** controls, 
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-onvisible](../../includes/short-onvisible.md)]
+[**BackgroundImage**](properties\properties-visual.md) – The name of an image file that appears in the background of a screen.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-backgroundimage](../../includes/short-backgroundimage.md)]
+[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**OnHidden** – How an app responds when the user navigates away from a screen.
 
-[AZURE.INCLUDE [short-imageposition](../../includes/short-imageposition.md)]
-
-[AZURE.INCLUDE [short-onhidden](../../includes/short-onhidden.md)]
-
-[AZURE.INCLUDE [short-onvisible](../../includes/short-onvisible.md)]
+**OnVisible** – How an app responds when the user navigates to a screen.
 
 ## Related functions ##
 
