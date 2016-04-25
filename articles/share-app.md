@@ -114,3 +114,17 @@ If you share an app with your organization, *everyone* in your organization has 
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/?LinkId=715583
 [2]: http://go.microsoft.com/fwlink/?LinkId=708209
+
+## Resources
+
+Here are some other good resources for managing your apps:
+
+[Change app name and tile](./set-name-tile.md)
+
+[Delete an app](./delete-app.md)
+
+[Restore an app to a previous version](./restore-an-app.md)
+
+<!--Reference links in article-->
+[1]: http://go.microsoft.com/fwlink/?LinkId=715583
+[2]: http://go.microsoft.com/fwlink/?LinkId=708209
