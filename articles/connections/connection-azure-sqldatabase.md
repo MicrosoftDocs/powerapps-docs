@@ -28,7 +28,9 @@ You can connect to an Azure SQL Database and display this information in your ap
 
 This topic shows the available functions.
 
-[AZURE.INCLUDE [connection-requirements](../includes/connection-requirements.md)]
+&nbsp;
+
+[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## View the available functions
 
