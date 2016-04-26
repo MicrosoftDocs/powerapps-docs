@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 MailChimp is a SaaS service that allows businesses to manage and automate email marketing activities, including sending marketing emails, automated messages and targeted campaigns.
 
-You can display this information in a text box on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
+You can manage campaigns, lists, and more using controls within your app. For example, you can add input text boxes that asks users for campaign details. Then, you can add a button that creates a new campaign based on the text the users entered.
 
 This topic shows the available functions.
 
@@ -63,7 +63,7 @@ New Campaign: Create a new campaign based on a Campaign Type, Recipients list an
 | Property Name | Data Type | Required |Description |
 |---|---|---|---|
 |id|string|No |A string that uniquely identifies this campaign |
-|type|string|No | There are four types of campaigns you can create in MailChimp: <ul><li>"regular"</li><li>"plaintext"</li><li>"absplit"</li><li>"rss"</li><li>"variate"</li></ul><br/>A/B Split campaigns have been deprecated and variate campaigns should be used instead. |
+|type|string|No | There are four types of campaigns you can create in MailChimp: <ul><li>"regular"</li><li>"plaintext"</li><li>"absplit"</li><li>"rss"</li><li>"variate"</li></ul><br/>**Note** *A/B Split* campaigns have been deprecated and *variate* campaigns should be used instead. |
 |create_time|string|No | The date and time the campaign was created|
 |archive_url|string|No | The link to the campaign’s archive version|
 |status|string|No | The link to the campaign’s archive version|
