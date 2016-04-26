@@ -28,7 +28,9 @@ You can display this information using different controls in your app. For examp
 
 This topic shows the available functions.
 
-[AZURE.INCLUDE [connection-requirements](../includes/connection-requirements.md)]
+&nbsp;
+
+[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## View the available functions
 
