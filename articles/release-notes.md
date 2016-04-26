@@ -23,7 +23,7 @@
 
 1.  **For apps created from data, the field used for sorting and searching is not automatically configured.** 
 
-	To configure, you will need to manually edit the **Items** formula for the gallery.  See steps 9 and 10 under under [Create an app from SharePoint](app-from-sharepoint.md#create-an-app).
+	To configure, you will need to manually edit the **Items** formula for the gallery.  See steps 9 and 10 under [Create an app from SharePoint](app-from-sharepoint.md#create-an-app).
 
 2. **Co-authoring is not supported.  One author at a time please.**
 
