@@ -15,12 +15,12 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/21/2016"
+ms.date="04/25/2016"
 ms.author="mandia"/>
 
 #  Azure blob storage
 
-![Azure Blob](./media/connection-azureblob/blobicon.png)
+![Azure Blob](./media/connection-azure-blob/blobicon.png)
 
 Azure Blob storage is a service for storing large amounts of unstructured data. You can perform various actions such as upload, update, get, and delete blobs in Azure blob storage.
 
@@ -28,11 +28,9 @@ For example, you are working with several developers that create sample projects
 
 This topic shows the available functions.
 
-##  What you need to get started
+&nbsp;
 
-- Access to the [PowerApps portal][1] or install [PowerApps][2]
-- Add the [connection](../add-manage-connections.md)
-- Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
+[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## View the available functions
 
@@ -40,15 +38,15 @@ This connection includes the following functions:
 
 | Function Name |  Description |
 | --- | --- |
-|[GetFileMetadata](connection-azureblob.md#getfilemetadata) | Retrieves file metadata from Azure Blob Storage using file id |
-|[UpdateFile](connection-azureblob.md#updatefile) | Updates a file in Azure Blob Storage |
-|[DeleteFile](connection-azureblob.md#deletefile) | Deletes a file from Azure Blob Storage  |
-|[GetFileMetadataByPath](connection-azureblob.md#getfilemetadatabypath) | Retrieves file metadata from Azure Blob Storage using path  |
-|[GetFileContentByPath](connection-azureblob.md#getfilecontentbypath) | Retrieves file contents from Azure Blob Storage using path |
-|[GetFileContent](connection-azureblob.md#getfilecontent) | Retrieves file contents from Azure Blob Storage using id |
-|[CreateFile](connection-azureblob.md#createfile) | Uploads a file to Azure Blob Storage |
-|[CopyFile](connection-azureblob.md#copyfile) | Copies a file to Azure Blob Storage |
-|[ExtractFolderV2](connection-azureblob.md#extractfolderv2) | Extracts an archive file into a folder in Azure Blob Storage (example: .zip) |
+|[GetFileMetadata](connection-azure-blob.md#getfilemetadata) | Retrieves file metadata from Azure Blob Storage using file id |
+|[UpdateFile](connection-azure-blob.md#updatefile) | Updates a file in Azure Blob Storage |
+|[DeleteFile](connection-azure-blob.md#deletefile) | Deletes a file from Azure Blob Storage  |
+|[GetFileMetadataByPath](connection-azure-blob.md#getfilemetadatabypath) | Retrieves file metadata from Azure Blob Storage using path  |
+|[GetFileContentByPath](connection-azure-blob.md#getfilecontentbypath) | Retrieves file contents from Azure Blob Storage using path |
+|[GetFileContent](connection-azure-blob.md#getfilecontent) | Retrieves file contents from Azure Blob Storage using id |
+|[CreateFile](connection-azure-blob.md#createfile) | Uploads a file to Azure Blob Storage |
+|[CopyFile](connection-azure-blob.md#copyfile) | Copies a file to Azure Blob Storage |
+|[ExtractFolderV2](connection-azure-blob.md#extractfolderv2) | Extracts an archive file into a folder in Azure Blob Storage (example: .zip) |
 
 
 ## GetFileMetadata
