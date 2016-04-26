@@ -32,9 +32,10 @@ Select an icon to learn how to quickly leverage these APIs to build  apps that c
 | [![API Icon][crmonlineicon]][crmonlinedoc] | [**Dynamics CRM Online**][crmonlinedoc] <br/>Connect to Dynamics CRM Online and do more with your CRM Online data || [![API Icon][dropboxicon]][dropboxdoc] | [**Dropbox**][dropboxdoc] <br/> Connect to Dropbox and can get, delete, list, and more file tasks|
 | [![API Icon][excelicon]][exceldoc] | [**Excel**][exceldoc] <br/> Connect to an Excel file and display the data, update the file, and more || [![API Icon][facebookicon]][facebookdoc] | [**Facebook**][facebookdoc] <br/> Connect to Facebook to post to a timeline, get a page feed, and more|
 | [![API Icon][ftpicon]][ftpdoc] | [**FTP**][ftpdoc] <br/> Connect to an FTP / FTPS server and upload, get, and more on an FTP/FTPS server || [![API Icon][googledriveicon]][googledrivedoc] | [**Google Drive**][googledrivedoc] <br/> Connect to GoogleDrive and interact with your data |
-| [[![API Icon][mailchimpicon]][mailchimpdoc] | [**MailChimp**][mailchimpdoc]  <br/> Connect to MailChimp to create new campaigns, manage your lists, and more || [![API Icon][microsofttranslatoricon]][microsofttranslatordoc] | [**Microsoft Translator**][microsofttranslatordoc] <br/> Connect to Microsoft Translator to translate text into different languages, and more | 
+| [![API Icon][githubicon]][githubpdoc] | [**GitHub**][githubdoc] <br/> Connect to GitHub to manage your issues ||  ADD A CONNECTION |
+| [![API Icon][mailchimpicon]][mailchimpdoc] | [**MailChimp**][mailchimpdoc]  <br/> Connect to MailChimp to create new campaigns, manage your lists, and more || [![API Icon][microsofttranslatoricon]][microsofttranslatordoc] | [**Microsoft Translator**][microsofttranslatordoc] <br/> Connect to Microsoft Translator to translate text into different languages, and more | 
 | [![API Icon][office365icon]][office365outlookdoc] | [**Office 365 Outlook**][office365outlookdoc] <br/> Connect to Office 365 Outlook to send and receive emails, manage your calendar, and manage your contacts || [![API Icon][office365icon]][office365usersdoc] | [**Office 365Users**][office365usersdoc] <br/> Connect to Office 365 Users to view profile information, get direct reports, and more |
-| [[![API Icon][office365icon]][office365videodoc] | [**Office 365 Video**][office365videodoc] <br/> Connect to Office 365 to check the status of a video, return channels, and more || [![API Icon][onedriveicon]][onedrivedoc] | [**OneDrive**][onedrivedoc] <br/> Connect to your personal OneDrive to upload and manage files |
+| [![API Icon][office365icon]][office365videodoc] | [**Office 365 Video**][office365videodoc] <br/> Connect to Office 365 to check the status of a video, return channels, and more || [![API Icon][onedriveicon]][onedrivedoc] | [**OneDrive**][onedrivedoc] <br/> Connect to your personal OneDrive to upload and manage files |
 | [![API Icon][salesforceicon]][salesforcedoc] | [**Salesforce**][salesforcedoc] <br/> Connect to your Salesforce account to manage accounts, leads, opportunities, and more || [![API Icon][servicebusicon]][servicebusdoc] | [**Service Bus**][servicebusdoc] <br/> Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions |
 | [![API Icon][sendgridicon]][sendgriddoc] | [**SendGrid**][sendgriddoc] <br/> Connect to SendGrid to send email and manage recipient lists || [![API Icon][sftpicon]][sftpdoc] | [**SFTP**][sftpdoc]  <br/> Connects to SFTP and can upload, get, delete files, and more |
 | [![API Icon][sharepointicon]][sharepointdoc] | [**SharePoint Online**][sharepointdoc]  <br/> Connects to SharePoint Online to manage documents and list items || [![API Icon][slackicon]][slackdoc] | [**Slack**][slackdoc]  <br/> Connect to Slack and post messages to Slack channels |
@@ -56,6 +57,7 @@ Link to custom APIs.
 [facebookdoc]: ./connectors-create-api-facebook.md "Connect to Facebook to post to a timeline, get a page feed, and more."
 [ftpdoc]: ./connectors-create-api-ftp.md "Connects to an FTP / FTPS server and do different FTP tasks, including uploading, getting, deleting files, and more."
 [googledrivedoc]: ./connections/connection-googledrive.md "Connect to GoogleDrive and interact with your data."
+[githubdoc]: ./connections/connection-github.md "Connect to GitHub to manage your issues."
 [mailchimpdoc]: ./connections/connection-mailchimp.md "Connect to MailChimp to create new campaigns, manage your lists, and more"
 [microsofttranslatordoc]: ./connections/connection-microsoft-translator.md
 [office365outlookdoc]: ./connections/connection-office365-outlook.md "The Office 365 Connector can send and receive emails, manage your calendar, and manage your contacts using your Office 365 account."
@@ -63,12 +65,12 @@ Link to custom APIs.
 [office365videodoc]: ./connections/connection-office365-video.md
 [onedrivedoc]: ./connections/connection-onedrive.md "Connects to your personal Microsoft OneDrive and upload, delete, list files, and more."
 [salesforcedoc]: ./connections/connection-salesforce.md "Connect to your Salesforce account and manage  accounts, leads, opportunities, and more."
-[servicebusdoc]: ./connectors-create-api-servicebus.md "Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions."
+[servicebusdoc]: ./connections/connection-azure-servicebus.md "Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions."
 [sendgriddoc]: ./connections/connection-sendgrid.md "Connect to SendGrid to send email and manage recipient lists"
 [sharepointdoc]: ./connectors-create-api-sharepointonline.md "Connects to SharePoint Online to manage documents and list items."
 [slackdoc]: ./connections/connection-slack.md "Connect to Slack and post messages to Slack channels."
-[sftpdoc]: ./connectors-create-api-sftp.md "Connects to SFTP and can upload, get, delete files, and more."
-[smtpdoc]: ./connectors-create-api-smtp.md "Connects to a SMTP server and can send email with attachments."
+[sftpdoc]: ./connections/connection-sftp.md "Connects to SFTP and can upload, get, delete files, and more."
+[smtpdoc]: ./connections/connection-smtp.md "Connects to a SMTP server and can send email with attachments."
 [sqldoc]: ./connectors-create-api-sqlazure.md "Connects to SQL Azure Database. You can create, update, get, and delete entries on a SQL database table."
 [twiliodoc]: ./connections/connection-twilio.md "Connects to Twilio and can send and get messages, get available numbers, managing incoming phone numbers, and more."
 [twitterdoc]: ./connections/connection-twitter.md "Connects to Twitter and get timelines, post tweets, and more."
@@ -84,11 +86,14 @@ Link to custom APIs.
 [excelicon]: ./media/connections-list/excelicon.png
 [facebookicon]: ./media/connections-list/facebookicon.png
 [googledriveicon]: ./media/connections-list/googledriveicon.png
+[githubicon]: ./media/connections-list/githubicon.png
+[mailchimpicon]: ./media/connections-list/mailchimpicon.png
 [microsofttranslatoricon]: ./media/connections-list/translatoricon.png
 [office365icon]: ./media/connections-list/office365icon.png
 [onedriveicon]: ./media/connections-list/onedriveicon.png
 [salesforceicon]: ./media/connections-list/salesforceicon.png
 [servicebusicon]: ./media/connections-list/servicebusicon.png
+[sendgridicon]: ./media/connections-list/sendgridicon.png
 [sftpicon]: ./media/connections-list/sftpicon.png
 [sharepointicon]: ./media/connections-list/sharepointicon.png
 [slackicon]: ./media/connections-list/slackicon.png
