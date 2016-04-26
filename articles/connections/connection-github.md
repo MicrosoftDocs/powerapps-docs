@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 GitHub is a web-based Git repository hosting service. It offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.
 
-You can display this information in a text box on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
+You can display this information in a text box on your app. For example, you can manage issues within a GitHub repository using controls within your app. 
 
 This topic shows the available functions.
 
@@ -41,8 +41,8 @@ This connection includes the following functions:
 | Function Name |  Description |
 | --- | --- |
 |[CreateIssue](connection-github.md#createissue) | Creates an issue |
-|[IssueOpened](connection-github.md#issueopened) | Retrieves the most recent tweets and re-tweets posted me and my followers  |
-|[IssueClosed](connection-github.md#issueclosed) | Retrieves a collection of relevant tweets matching a specified query  |
+|[IssueOpened](connection-github.md#issueopened) | An issue is opened |
+|[IssueClosed](connection-github.md#issueclosed) | An issue is closed |
 |[IssueAssigned](connection-github.md#issueassigned) | An issue is assigned  |
 
 
