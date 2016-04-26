@@ -20,56 +20,53 @@
    ms.author="gregli"/>
 
 # Card control in PowerApps #
-
-Provides the display and editing experience for a single field of a **Form** or **View form** control.
+Provides the display and editing experience for a single field of a **Display form** or **Edit form** control.
 
 ## Description ##
+**Display form** and **Edit form** controls act as containers for displaying and viewing entire records. Each container can hold a set of **Card** controls that display individual fields or provide a way to update those fields. Each card has a **DataField** property that specifies which field of the record it works on.  
 
-**Form** and **View form** controls provide a container for displaying and viewing an entire record.  Each of these containers can hold a set of **Card** controls that display and edit individual fields.  Each card has a **DataField** property that specifies which field of the record it works on.  
+Predefined cards are defined for different data types and user experiences.  For example, there may be a card to edit a number field with a **Text input** control, which is great for use with the keyboard. Another card might support editing a number by using a **Slider** control instead. With the form control selected and the **Options** pane open, you can easily select a card based on a field.
 
-Predefined cards are defined for different data types and user experiences.  For example, there may be a card to edit a number field with a **Text input** control, great for use with the keyboard.  And there may be another card for editing a number, that uses a **Slider** control instead.  With the form control selected, the "Options" pane allows for the easy selection of cards based on the field.    
+Cards themselves contain controls. The controls of a card make up the experience for displaying and editing a single field. For example, a number card may consist of a **Text box** control to provide the display name of the field and a **Text input** control to provide an editor for the value of the field. The card may also have a **Text box** control that shows any validation errors that occur and a **Text box** control for the common asterisk to indicate that a field is required.
 
-Cards are themselves a container for controls.  The controls of a card make up the experience for displaying and editing a single field.  For example, a number card may consist of a **Text** control to provide the display name of the field and a **Text input** control to provide an editor for the value of the field.  It may also have another **Text** control to hold any validation errors, shown only if there is an issue, and another **Text** control for the common asterisk to indicate that a field is required.
+You can customize the controls of a predefined card by resizing it, moving it, hiding it, adding controls to it, and making other changes. You can also start with an entirely blank card, a "custom card", to which you add controls from scratch.
 
-The controls of a predefined card can be customized.  Controls can be resized, moved, made invisible, and other aspects modified.  Additional controls can be added to the card.  And you can start with an entirely blank card, a "custom card", in which to add controls. 
+Predefined cards are *locked* by default. In a locked card, you can modify only certain properties of the card or the controls within the card, and you can't delete a locked card. You can show the card lock and unlock it on the **View** tab of the **Advanced** view. If a property is locked and can't be modified, it appears with a lock icon next to its name. Unlocking a card is an advanced activity and should be done with care, because automatic formula generation will no longer occur for the card, and you can't relock a card.
 
-Predefined cards are *locked* by default.  Only certain properties of the card can be modified, and only certain properties on the controls within the card can be modified.  Controls cannot be removed.  The card lock can be viewed and unlocked in "Advanced" view, available on the "View" tab.  Properties that are locked and that cannot be modified are shown with a lock icon next to their name.  Unlocking a card is an advanced activity and should be done with care, as automatic formula generation will no longer occur for the card and the card cannot be re-locked.
+Within the form's container, the **ThisItem** record is available and contains all the fields of the record.  For example, the card's **Default** property is often set to **ThisItem**.*FieldName*.
 
-Within the form's container, the **ThisItem** record is available containing all the fields of the record.  For example, the card's **Default** property is often set to **ThisItem.*FieldName***.    
+You can use the **Parent** reference to configure a control to reference the properties of a card.  For example, a control should use **Parent.Default** to read the initial state of the field from the data source. By using **Parent** instead of directly accessing the information that you want, the card is better encapsulated, and you can change it to a different field without breaking internal formulas.
 
-Controls can reference the card's properties by using the **Parent** reference.  For example, a control should use **Parent.Default** to read the initial state of the field from the data source.  By using **Parent** instead of directly accessing the desired information, the card is better encapsulated and can be changed to a different field without requiring internal formulas to be modified.
-
-See the [**understanding data cards**](working-with-data-cards.md) topic for examples of customizing, unlocking, and creating cards.
+See [Understand data cards](working-with-data-cards.md) for examples of how to customize, unlock, and create cards.
 
 ## Key properties ##
-
 **DataField** – The name of the field within a record that this card displays and edits.
 
-- The name must be in a single static string enclosed in double quotes and not a formula.  For example, to work with the "Name" field: **Card.DataField = "Name"**.
-- Cards can be unbound with their **DataField** property set to *blank*.  The **Valid** and **Update** properties are ignored for unbound cards.
+- Specify the name as a single static string that's enclosed in double quotation marks (for example, **"Name"**), not a formula.
+- Unbind a card by setting its **DataField** property *blank*. The **Valid** and **Update** properties are ignored for unbound cards.
 
-[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
+[**Default**](properties\properties-core.md) – The initial value of a control before the user changes it.
 
-- Controls within the card should use **Parent.Default** to refer to the value of the field coming into the card.  For example, if a **Slider** control was going to be used to edit a field, use **Slider.Default = Parent.Default**
+- For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **Default** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
 
-**DisplayName** – The user friendly name for a field in a data source.
+**DisplayName** – The user-friendly name for a field in a data source.
 
-- The **DataSourceInfo** function provides the display name meta-data from the data source.
-- Controls within the card should use **Parent.DisplayName** to refer to the value of the field coming into the card. 
+- The **DataSourceInfo** function provides this metadata from the data source.
+- Controls within the card should use **Parent.DisplayName** to refer to the name of the field.
 
-**Error** – The user friendly error message to display for this field when validation fails.
+**Error** – The user-friendly error message to display for this field if validation fails.
 
 - This property is set when **SubmitForm** is called.  
-- The message includes validation problems based on the data source's meta-data and checking the card's **Required** property.
+- The message describes validation problems based on the data source's metadata and checking the card's **Required** property.
 
-**Required** – Whether a card, editing the field of a data source, must contain a value.
+**Required** – Whether the user must specify a value for this field when editing or creating a record.
 
-- The **DataSourceInfo** function provides the required meta-data from the data source.
-- Controls within the card should use **Parent.Required** to refer to the value of the field coming into the card. 
+- The **DataSourceInfo** function provides the required metadata from the data source.
+- Controls within the card should use **Parent.Required** to determine whether that card's field is required.
 
 **Update** – The value to write back to the data source for a field.
 
-- Use this property's formula to pull the values from the edit controls of the card in order to write back to the data source.  For example, **Card.Update = Slider.Value** would use the slider's value for this card's field.
+- Use this property's formula to pull the values from the edit controls of the card in order to write back to the data source. For example, set a card's **Update** property to **Slider.Value** to update the data source with a value from the slider in that card.
 
 ## Additional properties ##
 
@@ -95,5 +92,4 @@ See the [**understanding data cards**](working-with-data-cards.md) topic for exa
 
 ## Examples ##
 
-See the [**understanding data cards**](working-with-data-cards.md) topic for examples.
-
+See [**Understanding data cards**](working-with-data-cards.md) for examples.
