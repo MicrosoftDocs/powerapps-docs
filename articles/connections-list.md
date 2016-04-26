@@ -69,7 +69,7 @@ Link to custom APIs.
 [sendgriddoc]: ./connections/connection-sendgrid.md "Connect to SendGrid to send email and manage recipient lists"
 [sharepointdoc]: ./connectors-create-api-sharepointonline.md "Connects to SharePoint Online to manage documents and list items."
 [slackdoc]: ./connections/connection-slack.md "Connect to Slack and post messages to Slack channels."
-[sftpdoc]: ./connectors-create-api-sftp.md "Connects to SFTP and can upload, get, delete files, and more."
+[sftpdoc]: ./connections/connection-sftp.md "Connects to SFTP and can upload, get, delete files, and more."
 [smtpdoc]: ./connections/connection-smtp.md "Connects to a SMTP server and can send email with attachments."
 [sqldoc]: ./connectors-create-api-sqlazure.md "Connects to SQL Azure Database. You can create, update, get, and delete entries on a SQL database table."
 [twiliodoc]: ./connections/connection-twilio.md "Connects to Twilio and can send and get messages, get available numbers, managing incoming phone numbers, and more."
