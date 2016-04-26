@@ -1,0 +1,136 @@
+<properties
+	pageTitle="Overview of the GitHub connection | Microsoft PowerApps"
+	description="See the available GitHub functions, responses, and examples"
+	services=""	
+	suite="powerapps"
+	documentationCenter="" 	
+	authors="MandiOhlinger"	
+	manager="erikre"	
+	editor="" 
+	tags="" />
+
+<tags
+ms.service="powerapps"
+ms.devlang="na"
+ms.topic="article"
+ms.tgt_pltfrm="na"
+ms.workload="na"
+ms.date="04/25/2016"
+ms.author="mandia"/>
+
+#  GitHub
+
+![GitHub](./media/connection-github/githubicon.png)
+
+GitHub is a web-based Git repository hosting service. It offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.
+
+You can display this information in a text box on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
+
+This topic shows the available functions.
+
+##  What you need to get started
+
+- Access to the [PowerApps portal][1] or install [PowerApps][2]
+- Add the [connection](../add-manage-connections.md)
+- Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
+
+## View the available functions
+
+This connection includes the following functions:
+
+| Function Name |  Description |
+| --- | --- |
+|[CreateIssue](connection-github.md#createissue) | Creates an issue |
+|[IssueOpened](connection-github.md#issueopened) | Retrieves the most recent tweets and re-tweets posted me and my followers  |
+|[IssueClosed](connection-github.md#issueclosed) | Retrieves a collection of relevant tweets matching a specified query  |
+|[IssueAssigned](connection-github.md#issueassigned) | An issue is assigned  |
+
+
+## CreateIssue
+Create an issue: Creates an issue 
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|repositoryOwner|string|yes|Repository owner|
+|repositoryName|string|yes|Repository name|
+|issueBasicDetails| |yes|Issue details|
+
+#### Output properties
+
+| Property Name | Data Type | Required |Description |
+|---|---|---|---|
+|title|string|Yes | Issue title |
+|body|string|Yes |Issue body |
+|assignee|string|Yes | Issue assignee|
+|number|string|No |Issue id |
+|state|string|No | Issue state|
+|created_at|string|No | Issue created time|
+|repository_url|string|No | Repository url|
+
+
+## IssueOpened
+When an issue is opened: An issue is opened 
+
+#### Input properties
+None.
+
+#### Output properties
+
+| Property Name | Data Type | Required |Description |
+|---|---|---|---|
+|title|string|Yes | Issue title |
+|body|string|Yes |Issue body |
+|assignee|string|Yes | Issue assignee|
+|number|string|No |Issue id |
+|state|string|No | Issue state|
+|created_at|string|No | Issue created time|
+|repository_url|string|No | Repository url|
+
+
+## IssueClosed
+When an issue is closed: An issue is closed 
+
+#### Input properties
+None.
+
+#### Output properties
+
+| Property Name | Data Type | Required |Description |
+|---|---|---|---|
+|title|string|Yes | Issue title |
+|body|string|Yes |Issue body |
+|assignee|string|Yes | Issue assignee|
+|number|string|No |Issue id |
+|state|string|No | Issue state|
+|created_at|string|No | Issue created time|
+|repository_url|string|No | Repository url|
+
+
+## IssueAssigned
+When an issue is assigned: An issue is assigned 
+
+#### Input properties
+None.
+
+#### Output properties
+
+| Property Name | Data Type | Required |Description |
+|---|---|---|---|
+|title|string|Yes | Issue title |
+|body|string|Yes |Issue body |
+|assignee|string|Yes | Issue assignee|
+|number|string|No |Issue id |
+|state|string|No | Issue state|
+|created_at|string|No | Issue created time|
+|repository_url|string|No | Repository url|
+
+
+## Helpful links
+
+See all the [available connections](../connections-list.md).  
+Learn how to [add connections](../add-manage-connections.md) to your apps.
+
+[1]: https://web.powerapps.com
+[2]: http://aka.ms/powerappsinstall
