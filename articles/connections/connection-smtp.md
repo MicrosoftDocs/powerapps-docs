@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 Connect to SMTP to send email.
 
-You can display this information in a text box on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
+You can use an app to send email from SMTP. For example, you can add input text boxes that ask the user for the To and Bcc addresses. Then use this information to send an email using your app.
 
 This topic shows the available functions.
 
@@ -51,7 +51,7 @@ Send Email: Sends an email to one or more recipients.
 
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
-|emailMessage| |yes|Email message with the following options: <ul><li>To: Email address of recipient(s). Separate multiple email addresses using semicolon (;). <br/><br/>Example: recipient1@domain.com;recipient2@domain.com<br/></li><li>Cc: Email address of recipient(s) for carbon copy. Separate multiple email addresses using semicolon (;). <br/><br/>Example:  recipient1@domain.com;recipient2@domain.com<br/></li><li>Subject: Email subject</li><li>Body: Email body</li><li>From: Email address of sender. Example: sender@domain.com</li><li>IsHtml: When this property is set to true, the content of the body will be sent as HTML content.</li><li>Bcc: Email address of recipient(s) for blind carbon copy. Separate multiple email addresses using semicolon(;). <br/><br/>Example: recipient1@domain.com;recipient2@domain.com<br/></li><li>Importance: Importance of the email: High, Normal, or Low</li><li>Attachments: Attachments to be sent along with the email</li></ul>
+|emailMessage| |yes|Email message with the following options: <ul><li>To: Email address of recipient(s). Separate multiple email addresses using semicolon (;). <br/>Example: recipient1@domain.com;recipient2@domain.com<br/></li><li>Cc: Email address of recipient(s) for carbon copy. Separate multiple email addresses using semicolon (;). <br/>Example:  recipient1@domain.com;recipient2@domain.com<br/></li><li>Subject: Email subject</li><li>Body: Email body</li><li>From: Email address of sender. Example: sender@domain.com</li><li>IsHtml: When this property is set to true, the content of the body will be sent as HTML content.</li><li>Bcc: Email address of recipient(s) for blind carbon copy. Separate multiple email addresses using semicolon(;). <br/><br/>Example: recipient1@domain.com;recipient2@domain.com<br/></li><li>Importance: Importance of the email: High, Normal, or Low</li><li>Attachments: Attachments to be sent along with the email</li></ul>
 
 #### Output properties
 None. 
