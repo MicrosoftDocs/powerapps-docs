@@ -28,7 +28,9 @@ You can display information from items within Dynamics in your app. For example,
 
 This topic shows the available functions.
 
-[AZURE.INCLUDE [connection-requirements](../includes/connection-requirements.md)]
+&nbsp;
+
+[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## View the available functions
 
