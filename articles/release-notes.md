@@ -38,7 +38,9 @@
 
 4. **For apps created from data, only the first 500 records of a data source can be worked with.**
 
-	In general, PowerApps works with any size data source.  However in this release, **Filter** and **Sort** functions cannot be composed together,
+	In general, PowerApps works with any size data source by delegating operations to the data source.  For operations that cannot be delegated, PowerApps will give a warning at authoring time and operate only on the first 500 records of the data source.  See the [Filter function](function-filter.md) article for more details on delegation.  
+
+	In this release, delegation does not support **Filter** and **Sort** functions used together nor does it support the **In** operator.  These are features that are used by apps created from data, and so, these apps are limited to the first 500 records.  To partially workaround this issue, you can remove one or both of the Filter and Sort functions from the gallery **Items** property.
 
 5. **Card gallery is deprecated.**
 
