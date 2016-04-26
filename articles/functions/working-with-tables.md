@@ -41,32 +41,32 @@ Each record contains at least one category of information for a person, a place,
 
 In a formula, you can refer to a record by itself, outside of a table's context, by using curly braces. For example, this record **{ Name: "Strawberries", Price: 7.99 }** isn't associated with a table.
 
-### Properties ###
+### Fields ###
 
-A property is an individual piece of information in a record. You can visualize this sort of property as a value in a column for a particular record.
+A field is an individual piece of information in a record. You can visualize this sort of field as a value in a column for a particular record.
 
-Just as with a control, you refer to a property of a record by using the **.** [operator](operators.md) on the record.  For example, **First(Products).Name** returns the **Name** property for the first record in the **Products** table.
+Just as with a control, you refer to a field of a record by using the **.** [operator](operators.md) on the record.  For example, **First(Products).Name** returns the **Name** field for the first record in the **Products** table.
 
-A property can contain another record or table, as the example for the [**GroupBy**](function-groupby.md) function shows. You can nest as many levels of records and tables as you want.
+A field can contain another record or table, as the example for the [**GroupBy**](function-groupby.md) function shows. You can nest as many levels of records and tables as you want.
 
 ### Columns ###
 
-A column refers to the same property for one or more records in a table. In the above example, each product has a price property, and that price is in the same column for all products.  The above table has four columns, shown vertically:
+A column refers to the same field for one or more records in a table. In the above example, each product has a price field, and that price is in the same column for all products.  The above table has four columns, shown vertically:
 
 - **Name**
 - **Price**
 - **Quantity on Hand**
 - **Quantity on Order**
 
-The column's name reflects the properties in that column.
+The column's name reflects the fields in that column.
 
-All values within a column are of the same data type. In the above example, the "Quantity on Hand" column always contains a number and can't contain a string, such as "12 units," for one record.  The value of any property may also be *blank*.  
+All values within a column are of the same data type. In the above example, the "Quantity on Hand" column always contains a number and can't contain a string, such as "12 units," for one record.  The value of any field may also be *blank*.  
 
 You may have referred to columns as "fields" in other tools.
 
 ### Table ###
 
-A table comprises one or more records, each with multiple properties that have consistent names across the records.
+A table comprises one or more records, each with multiple fields that have consistent names across the records.
 
 Any table that's stored in a data source or a collection has a name, which you use to refer to the table and pass it to functions that take tables as arguments.  Tables can also be the result of a function or a formula.
 
@@ -160,14 +160,12 @@ You can also build a formula that calculates data for an individual record, take
 
 This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body1** column, which represents the text box that shows the data from that column. Select the table icon in the **Body1** column to drill into that data.
 
-Now that you have the selected record, you can extract individual properties from it with the **.** operator.
+Now that you have the selected record, you can extract individual fields from it with the **.** operator.
 
 1. Press Esc to return to the default workspace, and then add a text box below the gallery.
 
 1. Set the **Text** property of the text box to this formula:<br>
 	**Gallery.Selected.Heading**
-
-	**Note**: The graphic shows a text box as a label.
 
 	![](media/working-with-tables/gallery-selected.png)
 
@@ -200,7 +198,7 @@ Properties that return records:
 
 ### Records ###
 
-You express records by using curly braces that contain named property values.  For example, you can express the first record in the table at the start of this topic by using this formula:
+You express records by using curly braces that contain named field values.  For example, you can express the first record in the table at the start of this topic by using this formula:
 
 **{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }**
 
@@ -230,9 +228,5 @@ You can create single-column tables by specifying values in square brackets. The
 
 For example, **[ 1, 2, 3, 4 ]** is equivalent to **Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )** and returns this table:
 
-| Value |
-|:-----:|
-|   1   |
-|   2   |
-|   3   |
-|   4   |
+![](media/working-with-tables/inline-table.png)
+

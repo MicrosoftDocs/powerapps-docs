@@ -29,7 +29,7 @@ In general, avoid using variables. But sometimes only a variable can enable the 
 
 ## Translate Excel into PowerApps ##
 
-## Excel ##
+### Excel ###
 
 Let's review how Excel works. A cell can contain a value, such as a number or a string, or a formula that's based on the values of other cells. After the user enters a different value into a cell, Excel automatically recalculates any formulas that depend on the new value. You don't have to do any programming to enable this behavior.
 
@@ -38,16 +38,26 @@ Let's review how Excel works. A cell can contain a value, such as a number or a 
 Excel doesn't have variables. The value of a cell that contains a formula changes based on its input, but there's no way to remember the result of a formula and store it in a cell or anywhere else. If you change a cell's value, the entire spreadsheet may change, and any previously calculated values are lost.  An Excel user can copy and paste cells, but that's under the user's manual control and isn't possible with formulas.
 
 ### PowerApps ###
-Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas. For example, you can replicate the Excel behavior in an app by adding a **Text box** control, named **TextBox1**, and two **Text input** controls, named **TextInput1** and **TextInput2**. If you then set the **Text** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
+Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas. 
 
-**Note**: This topic uses the terms "label" and "text box" interchangeably.
+For example, you can replicate the Excel behavior in an app by adding a **Text box** control, named **TextBox1**, and two **Text input** controls, named **TextInput1** and **TextInput2**. If you then set the **Text** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
-![](media/working-with-variables/recalc.png)
+![](media/working-with-variables/recalc1.png)
+
+Notice that the **TextBox1** control is selected, showing its **Text** formula in the formula bar at the top of the screen.  Here we find the formula **TextInput1 + TextInput2**.  This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of the **TextInput1**:
+
+![](media/working-with-variables/recalc2.png)
+
+The formula for **TextBox1** has been automatically recalculated, showing the new value.
 
 In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **Color** property of the text box will automatically show negative values in red. The **[If](function-if.md)** function should look very familiar from Excel:
 <br>**If( Value(TextBox1.Text) < 0, Red, Black )**
 
-![](media/working-with-variables/recalc-color.png)
+![](media/working-with-variables/recalc-color1.png)
+
+Now, if the result of our calculation in **TextBox1.Text** is negative, the number will be shown in red:
+
+![](media/working-with-variables/recalc-color2.png)
 
 You can use formulas for a wide variety of scenarios:
 
