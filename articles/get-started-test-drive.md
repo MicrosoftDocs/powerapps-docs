@@ -82,13 +82,26 @@ An app from a template opens in the default workspace, where you'll spend most o
 
 	![Button to close Preview](./media/get-started-test-drive/close-preview.png)
 
+## Customize the app ##
+You can customize this or any app in these ways, among others:
+
+- [change the screen size, orientation, or both](set-aspect-ratio-portrait-landscape.md)
+- [add another data source](add-data-connection.md)
+- [add one or more screens](add-screen-context-variables.md)
+- [add and configure more controls](add-configure-controls.md)
+- [change how the app behaves](working-with-formulas.md)
+
+You can also, for example, change the colors in an app easily by selecting a different theme.
+
+1. If the **Quick Tools** pane isn't open, select **Quick Tools** near the lower-right corner.
+
+1. Select the **Theme** tab, and then select the theme that you want.
+
+	![Theme options](./media/get-started-test-drive/select-theme.png)
+
+Even if you select a theme, you can still change the color of one or more specific elements by setting a [Color property](properties-color-border.md) or a [Text property](properties-text.md). You can then select a different theme without losing your individual customizations. 
+
 ## Next steps ##
-1. Customize the app in one or more of these ways:
-	- [change the app settings](set-aspect-ratio-portrait-landscape.md)
-	- [add another data source](filename.md)
-	- [add one or more screens](add-screen-context-variables.md)
-	- [add and configure more controls](add-configure-controls.md)
-	- [change how the app behaves](working-with-formulas.md)
 1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.
 1. [Share your app](share-app.md) with other people in your organization.
 
