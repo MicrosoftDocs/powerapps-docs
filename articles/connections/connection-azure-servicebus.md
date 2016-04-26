@@ -53,7 +53,7 @@ Send message.: Sends message to Azure Service Bus queue or topic.
 
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
-|message| |yes|Service Bus message, including the following properties: <ul><li>ContentData (required): Content of the message</li><li>ContentType (optional): Content type of the message content</li><li>ContentTransferEncoding (optional): Content Transfer Encoding of the Message. Options include: <br/><br/><ul><li>\"none\"</li><li>\"base64\"<br/><br/></li></ul></li><li>Properties (optional): Key-value pair of all brokered message properties and user properties</li></ul>|
+|message| |yes|Service Bus message, including the following properties: <ul><li>ContentData (required): Content of the message</li><li>ContentType (optional): Content type of the message content</li><li>ContentTransferEncoding (optional): Content Transfer Encoding of the Message. Options include: <ul><li>\"none\"</li><li>\"base64\"</li></ul></li><li>Properties (optional): Key-value pair of all brokered message properties and user properties</li></ul>|
 |entityName|string|yes|Name of the queue or topic|
 
 #### Output properties
