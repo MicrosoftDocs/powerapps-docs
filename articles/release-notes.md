@@ -42,11 +42,15 @@
 
 1. 	**PowerApps Android is now available!**
 
-	Look for PowerApps in the [Andriod store](http://aka.ms/powerappsandroid).
+	Look for PowerApps in the [Android store](http://aka.ms/powerappsandroid).
 
 2. 	**PowerApps for iOS has a new look for finding and opening apps.**
 	
 	Update your app or install anew from the [Apple store](http://aka.ms/powerappsios).
+
+3. **Single sign on for services on Microsoft services on Azure Active Directory.**
+
+	Sign in to PowerApps and you have access to your information on Office 365 without further authentication.
 
 3. **Simplified first run experience and sign-in on mobile.**
 
