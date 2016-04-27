@@ -71,27 +71,24 @@ The **Items** property of a gallery determines which items it shows. You'll conf
 
 	**If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
-1. Type part of all of the name of a product in the list.
+1. Type part of or all of the name of a product in the text box.
 
 	The gallery shows only those items that meet the filter criterion.
 
 ## Sort the gallery ##
+The **Items** property of a gallery determines the order of items it shows. You'll configure that property so that the gallery shows the order of items as set by **ImageSortUpDown1**.
 
-1. Select any item in the list except the first one to select the list, which is called a gallery.
+![Image for sorting](./media/add-gallery/image-sorting.png)
 
-	A selection box appears around the gallery.
+1. Set the **Items** property of the gallery to this formula:
 
-1. Copy this formula, and paste it into the formula bar (to the right of the **fx** button).
+    **Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-	**Sort(If(IsBlank(TextSearchBox1!Text),** *ListName*, **Filter(** *ListName*, **TextSearchBox1!Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+1. Select the sort icon to change the sorting order of the gallery by the names of the products. 
 
-1. Replace *ListName* with the name of your list and *ColumnName* with the name of the column by which you want to sort, filter, or both.
+To use the formula to sort and filter with your gallery, replace the *DataSource* in this formula with name of your data source, and *ColumnName* with the name of the column by which you want to sort, filter or both.
 
-	For example, use this formula if your list is named **FlooringEstimates**, and you want to sort or filter by the **Name** column:
-
-	**Sort(If(IsBlank(TextSearchBox1!Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1!Text in Text(Name))), Name, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
-
-	The items are sorted by the names of the products.
+**Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
 ## Next steps ##
 - Learn more about working with a [gallery](./working-with-forms.md) and [formulas](./working-with-formulas.md).
