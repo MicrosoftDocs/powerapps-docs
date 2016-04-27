@@ -52,5 +52,5 @@ Here are some other good resources for managing your apps:
 
 [Restore an app to a previous version](./restore-an-app.md)
 
-  <!--Reference links in article-->
-  [1]: http://go.microsoft.com/fwlink/?LinkId=715583
+<!--Reference links in article-->
+[1]: http://go.microsoft.com/fwlink/?LinkId=715583
