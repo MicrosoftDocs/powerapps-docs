@@ -91,7 +91,7 @@ If you share an app with your organization, *everyone* in your organization has 
 
 ## Change or remove permission ##
 
-#### Powerapps.com
+#### powerapps.com
 
 1. On [powerapps.com][1], select **My apps** in the left navigation bar.  
 ![](./media/share-app/new-file-apps-portal.png)
