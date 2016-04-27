@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Run apps in PowerApps client | Microsoft PowerApps"
-    description="Walkthrough of how to run apps in the PowerApps client"
+    pageTitle="Using PowerApps on tablets and phones | Microsoft PowerApps"
+    description="Walkthrough of using PowerApps on tablets and phones"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,8 +18,8 @@
     ms.date="04/19/2016"
     ms.author="karthikb"/>
 
-# Using apps in client #
-PowerApps can run on Windows, iOS, Android, and in a web browser. Apps running in a client can take advantage of the device capabilities, like location and a camera. Apps for Android, iOS, and Windows can be downloaded from their app stores. 
+# Using PowerApps on phones and tablets #
+PowerApps can run on Windows, iOS, Android, and in a web browser. Apps running on mobile can take advantage of the device capabilities, like location and a camera. You can download PowerApps for Android, and iOS from their respective app stores. 
 
 ## What you need to get started ##
 - Either of the following:
@@ -38,8 +38,8 @@ The first time you sign-in, you are prompted to sign-in to PowerApps using your 
 ![Login user](./media/run-app-client/run-client-login.png)
 
 
-## Launching an app ##
-To run PowerApps in a client:
+## Launch an app ##
+To run apps on tablets and phones:
 
 1. Launch the app by tapping on the app icon.
 2. For apps that are shared with you, you get a notification. Select the notification to open the app.
@@ -52,7 +52,7 @@ If the app requires a connection to a data sources, or required consent to use t
 
 Typically, you are only prompted the first time.
 
-## Exiting the app ##
+## Exit the app ##
 From within the app, swipe the screen to the right to partially reveal the list of apps. Slide the screen to the right completely to exit the app:  
 
 ![exit app](./media/run-app-client/run-client-exit.png)
