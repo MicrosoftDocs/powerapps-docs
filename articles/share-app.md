@@ -14,13 +14,11 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/13/2016"
+    ms.date="04/27/2016"
     ms.author="jamesol"/>
 
 # Share an app #
 [AZURE.VIDEO nb:cid:UUID:4a51313a-0d00-80c4-1ead-f1e5920c334e]
-
-[[[We need to either remove or update this video]]]
 
 You created an app, and now you're ready to share it with your coworkers. You can give other users permission to run the app, customize the app, and then they can share their own version of the app. You can share an app with:
 
@@ -36,14 +34,14 @@ If you share an app with your organization, *everyone* in your organization has 
 
 ## What you need to get started
 
-- An account with which you've signed in to [powerapps.com](2) or PowerApps.
+- An account that you've signed in to [powerapps.com][2] or PowerApps.
 - Either of the following:
-	- An app that you built (from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md)).
-	- An app that someone else built and given you permission to run, customize, and share.
+	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
+	- An app that someone else built and has given you permission to run, customize, and share.
 
 ## Share an app##
 
-#### Powerapps.com
+#### powerapps.com
 
 1. On [powerapps.com][1], select **My apps** in the left navigation bar:  
 ![](./media/share-app/new-file-apps-portal.png)
@@ -57,7 +55,8 @@ If you share an app with your organization, *everyone* in your organization has 
   - **Can use**: Allow the user or group members to run the app. User are not able to share your app with other users or groups.
   - **Can use and share**: Allow the user or group members to run your app and share your app.
   - **Can edit**: Allow the user or group members to run your app, customize it, and share a new version of your app.  
-  ![](./media/share-app/new-permission-list-portal.png)
+  
+  	![](./media/share-app/new-permission-list-portal.png)
 
 1. To share this app with all users within your organization, select **Allow access to others users in my organization**.
 ![](./media/share-app/new-orgwidesharing-portal.png)
@@ -92,7 +91,7 @@ If you share an app with your organization, *everyone* in your organization has 
 
 ## Change or remove permission ##
 
-#### Powerapps.com
+#### powerapps.com
 
 1. On [powerapps.com][1], select **My apps** in the left navigation bar.  
 ![](./media/share-app/new-file-apps-portal.png)
@@ -112,9 +111,6 @@ If you share an app with your organization, *everyone* in your organization has 
 1. Select the share icon for the app.
 2. Under **Shared with**, select a user's name to see the options for changing or removing permissions. You can also select **My org** under **Shared with**, and then select **Delete** to stop sharing this app with all users in your organization.
 
-<!--Reference links in article-->
-[1]: http://go.microsoft.com/fwlink/?LinkId=715583
-[2]: http://go.microsoft.com/fwlink/?LinkId=708209
 
 ## Resources
 
