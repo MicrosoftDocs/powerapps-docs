@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="linhtranms"
+	authors="AFTOwen"
 	manager="dwrede"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/19/2015"
-   ms.author="litran"/>
+   ms.author="anneta"/>
 
 # Connect to data in your organization #
 

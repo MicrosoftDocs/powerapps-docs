@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="merwanhade"
+    authors="AFTOwen"
     manager="dwrede"
     editor=""
     tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="12/23/2015"
-   ms.author="mhade"/>
+   ms.author="anneta"/>
 
 # Sample app: estimate generator #
 
