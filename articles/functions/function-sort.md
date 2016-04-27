@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/21/2015"
+   ms.date="04/26/2016"
    ms.author="gregli"/>
 
 # Sort and SortByColumns functions in PowerApps #

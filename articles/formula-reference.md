@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/23/2015"
+   ms.date="04/26/2016"
    ms.author="gregli"/>
 
 # Formula reference #
@@ -28,11 +28,11 @@ Formulas combine many elements.  Listed below are:
 
 - **Enumerations** return a pre-defined constant value. For example, **Color** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here, function specific enumerations are described with the function.
 
-- **Container operators** provide access to information from within a container such as **ThisItem** and **Parent**.
+- **Named operators** provide access to information from within a container such as **ThisItem** and **Parent**.
 
 Other elements include:
 
-- [Operators](operators.md)
+- [All operators](operators.md)
 
 - [Controls and their properties](reference-properties.md)
 
@@ -286,7 +286,7 @@ Other elements include:
 
 **[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
-**[Trim](functions/function-trim.md)** – Strips spaces from both ends of a string.
+**[Trim](functions/function-trim.md)** – Removes extra spaces from a string of text.
 
 ## U ##
 
