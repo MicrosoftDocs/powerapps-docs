@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/25/2016"
+ms.date="04/26/2016"
 ms.author="mandia"/>
 
 #  Azure blob storage
@@ -254,5 +254,3 @@ Extract archive to folder: Extracts an archive file into a folder in Azure Blob 
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
 
-[1]: https://web.powerapps.com
-[2]: http://aka.ms/powerappsinstall

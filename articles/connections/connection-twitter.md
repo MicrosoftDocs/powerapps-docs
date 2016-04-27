@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/25/2016"
+ms.date="04/26/2016"
 ms.author="mandia"/>
 
 
@@ -29,11 +29,9 @@ You can display this information in a text box on your app. For example, you can
 
 This topic shows the available functions.
 
-##  What you need to get started
+&nbsp;
 
-- Access to the [PowerApps portal][1] or install [PowerApps][2]
-- Add the [connection](../add-manage-connections.md)
-- Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
+[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## View the available functions
 
@@ -271,6 +269,3 @@ When a new tweet appears: Triggers a workflow when a new tweet is posted which m
 
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
-
-[1]: https://web.powerapps.com
-[2]: http://aka.ms/powerappsinstall
