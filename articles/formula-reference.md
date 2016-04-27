@@ -260,7 +260,7 @@ Other elements include:
 
 **[Sort](functions/function-sort.md)** – Returns a sorted table based on a formula.
 
-**[SortByColumns](funcitons/function-sort.md)** – Returns a sorted table based on one or more columns.
+**[SortByColumns](functions/function-sort.md)** – Returns a sorted table based on one or more columns.
 
 **[Sqrt](functions/function-numericals.md)** – Returns the square root of a number.  
 

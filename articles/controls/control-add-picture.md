@@ -60,13 +60,13 @@ If you add this control, your app can upload image files from the user and updat
 
 ## Related functions ##
 
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](..\functions\function-patch.md)
 
 ## Example ##
 ### Add images to an Image gallery control ###
 1. Add an **Add picture** control, and then triple-click it.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](..\add-configure-controls.md)?
 
 1. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
 

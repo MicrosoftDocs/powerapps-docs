@@ -22,7 +22,7 @@
 Create an item, save the contents, and reset the controls in an [**Edit Form**](control-form-detail.md) control.
 
 ## Description ##
-These functions are often invoked from the **OnSelect** formula of a [**Button**](control-button.md) or [**Image**](control-image.md) control so that the user can save edits, abandon edits, or create a record. You can also [use controls together](working-with-forms.md) to create a complete solution.
+These functions are often invoked from the **OnSelect** formula of a [**Button**](control-button.md) or [**Image**](control-image.md) control so that the user can save edits, abandon edits, or create a record. You can also [use controls together](..\working-with-forms.md) to create a complete solution.
 
 These functions return no values.
 
@@ -57,7 +57,7 @@ The **ResetForm** function resets the contents of a form to their initial values
 - *FormName* - Required. Form control to reset to initial values. Also switches the form from **FormMode.New** mode to **FormMode.Edit** mode.
 
 ## Examples ##
-See [Understand data forms](working-with-forms.md) for complete examples.
+See [Understand data forms](..\working-with-forms.md) for complete examples.
 
 1. Add a Button control, set its **Text** property to show **Save**, and set its **OnSelect** property to this formula:
 

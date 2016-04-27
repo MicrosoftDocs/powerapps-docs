@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Understanding formulas | Microsoft PowerApps"
-	description="Reference information for working with formulas"
+	pageTitle="Understanding behavior formulas | Microsoft PowerApps"
+	description="Reference information for working with behavior formulas"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,7 +18,7 @@
    ms.date="11/10/2015"
    ms.author="gregli"/>
 
-# Understanding formulas in PowerApps #
+# Understanding behavior formulas in PowerApps #
 
 ## Behavior formulas ##
 
