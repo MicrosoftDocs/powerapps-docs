@@ -48,6 +48,10 @@
 	
 	Update your app or install anew from the [Apple store](http://aka.ms/powerappsios).
 
+3. **Single sign on for services on Microsoft services on Azure Active Directory.**
+
+	Sign in to PowerApps and you have access to your information on Office 365 without further authentication.
+
 3. **Simplified first run experience and sign-in on mobile.**
 
 4. **Usability improvements to mobile clients.**
