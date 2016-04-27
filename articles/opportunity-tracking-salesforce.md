@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="linhtranms"
+	authors="aftowen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/11/2016"
-   ms.author="litran"/>
+   ms.author="anneta"/>
 
 # Track Salesforce opportunities in Microsoft PowerApps #
 The **Opportunity Tracking** app shows the status and details of all your opportunities in Salesforce, and you can add opportunities to your account from within the app. For each opportunity, you can send an email with details, log a call, add a note, or schedule a task.  
