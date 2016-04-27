@@ -51,7 +51,7 @@ A field can contain another record or table, as the example for the [**GroupBy**
 
 ### Columns ###
 
-A column refers to the same field for one or more records in a table. In the above example, each product has a price field, and that price is in the same column for all products.  The above table has four columns, shown vertically:
+A column refers to the same field for one or more records in a table. In the above example, each product has a price field, and that price is in the same column for all products.  The above table has four columns, shown horizontally across the top:
 
 - **Name**
 - **Price**
