@@ -15,7 +15,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/19/2016"
+    ms.date="04/27/2016"
     ms.author="karthikb"/>
 
 # Using PowerApps on phones and tablets #

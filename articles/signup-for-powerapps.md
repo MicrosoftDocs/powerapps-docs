@@ -15,7 +15,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/13/2016"
+    ms.date="04/27/2016"
     ms.author="jamesol"/>
 
 # Sign up for PowerApps
@@ -30,12 +30,12 @@ To sign up for PowerApps, enter your work or school email address.
 > - .gov and .mil
 
 
-If you try to sign up with a personal email address, you will get a message indicating to use a work or school email address.
+If you try to sign up with a personal email address, you get a message indicating to use a work or school email address.
 
 
 ## Sign-up for PowerApps
 
-1. Go to [powerapps.com](1).
+1. Go to [powerapps.com][1].
 
 1. Select **Get started**.
 
@@ -57,7 +57,7 @@ If you try to sign up with a personal email address, you will get a message indi
 1. If you have an existing organizational account, you see a message asking you to select **Start**:  
 ![](./media/signup-for-powerapps/BoxPortal_AlmostThere.png)
 
-1. You will then be taken to [powerapps.com](2), and you can begin using PowerApps.
+1. You are then taken to [powerapps.com][2], and you can begin using PowerApps.
 
 ## Troubleshoot##
 In many cases, registering for PowerApps is achieved by following the signing up for PowerApps (steps in this topic). However, there are several reasons sign-up may fail.  The following table summarizes some of the most common reasons, and ways you can workaround these issues.
