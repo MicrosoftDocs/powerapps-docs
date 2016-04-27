@@ -28,7 +28,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 - PowerApps only supports creating apps for Sharepoint Online custom lists. Document libraries are not supported, but will be coming soon.
 - Check to make sure that your list only contains columns supported by PowerApps. Here are the  list column types that are supported by PowerApps:
 
-| SharePoint online list column type | Supported by PowerApps |
+	| SharePoint online list column type | Supported by PowerApps |
 |------------------------------------|------------------------|
 | Yes/No                             | Yes                    |
 | Single line of text                | Yes                    |
@@ -102,7 +102,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 ![](./media/app-from-sharepoint/CardSelector.png)  
 Here are the supported cards for each SharePoint Online list column type:  
 
-| SharePoint online list column type | Supported Cards                               |
+	| SharePoint online list column type | Supported Cards                               |
 |------------------------------------|-----------------------------------------------|
 | Yes/No                             | View text <br>View toggle                     |
 | Number                             | View percentage <br>View rating <br>View text |
