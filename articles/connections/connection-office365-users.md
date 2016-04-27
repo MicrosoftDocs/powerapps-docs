@@ -15,24 +15,22 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/21/2016"
+   ms.date="04/26/2016"
    ms.author="mandia"/>
 
-# Office 365 Users connection
+# Office 365 Users
 
 ![Office 365 Users](./media/connection-office365-users/office365icon.png)
 
-Office 365 Users connection provider lets you access user profiles in your organization using your Office 365 account. You can perform various actions such as get your profile, a user's profile, a user's manager or direct reports and also update a user profile.
+Office 365 Users lets you access user profiles in your organization using your Office 365 account. You can perform various actions such as get your profile, a user's profile, a user's manager or direct reports and also update a user profile.
 
 You can display this information in a text box on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
 
 This topic shows the available functions.
 
-## What you need to get started
+&nbsp;
 
-- Access to the [PowerApps portal][1] or install [PowerApps][2]
-- Add the [connection](../add-manage-connections.md)
-- Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
+[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## View the available functions
  
@@ -234,6 +232,3 @@ The gallery shows the search results you entered.
 
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
-
-[1]: https://web.powerapps.com
-[2]: http://aka.ms/powerappsinstall
