@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Run apps in a web browser | Microsoft PowerApps"
+    pageTitle="Use apps in a web browser | Microsoft PowerApps"
     description="Walkthrough of how to run PowerApps in the web browser"
     services=""
     suite="powerapps"
@@ -19,17 +19,20 @@
     ms.author="karthikb"/>
 
 # Using apps in a web browser #
-PowerApps can run on Windows, iOS, Android, and a web browser. Apps running in a browser match the experience as apps running in the client. Running apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies. 
+PowerApps can run on iOS, Android, and a web browser. Apps running in a browser match the experience as apps running on phones and tablets. Running apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies. 
 
 
 
 ## What you need to get started ##
-- Either of the following:
-	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-	- An app that someone else built and shared with view permissions.
-- Supported browsers: Internet Explorer 11 and above, Chrome v47 and above, Safari on iOS 9 and above
+- An app that:
+	- You built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).  
+		OR
+	- Someone else built and shared with view permissions.
+- A supported browser: 
+	- Internet Explorer 11 and above
+	- Chrome v47 and above
+	- Safari on iOS 9 and above
 
-> [AZURE.TIP] [Get started with PowerApps](getting-started.md) may be a good resource.
 
 ## Launching an app ##
 To run PowerApps inside a browser, do either of the following:
@@ -61,18 +64,15 @@ If the app requires a connection to a data sources, or required consent to use t
 Typically, you are only prompted the first time.
 
 
-## Exiting the app ##
+## Exit the app ##
 There are several ways you can exit or close the app:
-
-> [AZURE.IMPORTANT] Save or submit any data that was loaded in the app before exiting the app.
 
 - Close the browser tab or navigating to a different website URL
 - Or, select the Home icon from the navigation bar
-- Or, select Sign out from the navigation bar
 
 	![Navbar](./media/run-app-browser/web-player-navbar.png)
 
 ## Error and Warnings ##
-If the app contains controls that aren't supported in the browser, then a warning header on the top of the app window is displayed and includes a link to download the client app.
+If the app contains controls that aren't supported in the browser, then a warning header on the top of the app window displays a link to download the mobile app.
 
 If the app cannot be launched due to invalid links or permission issues, then the error message telling you why is displayed. 
