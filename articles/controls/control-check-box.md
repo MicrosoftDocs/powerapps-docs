@@ -18,7 +18,7 @@
    ms.date="03/09/2016"
    ms.author="anneta"/>
 
-# Check Box control in PowerApps #
+# Check box control in PowerApps #
 [AZURE.INCLUDE [control-summary-check-box](../../includes/control-summary-check-box.md)]
 
 ## Description ##
@@ -26,97 +26,91 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**Text**](properties\properties-core.md) – Text that appears on a control or that the user types into a control.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-checkboxbackgroundfill](../../includes/short-checkboxbackgroundfill.md)]
+**CheckboxBackgroundFill** – The background color of the box that surrounds the checkmark in a checkbox control.
 
-[AZURE.INCLUDE [short-checkboxbordercolor](../../includes/short-checkboxbordercolor.md)]
+**CheckboxBorderColor** – The color of the border that surrounds the checkmark in a checkbox control.
 
-[AZURE.INCLUDE [short-checkboxsize](../../includes/short-checkboxsize.md)]
+**CheckboxSize** – The width and height of the box that surrounds the checkmark in a checkbox control.
 
-[AZURE.INCLUDE [short-checkmarkfill](../../includes/short-checkmarkfill.md)]
+**CheckmarkFill** – The color of the checkmark in a checkbox control.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+[**Color**](properties\properties-color-border.md) – The color of text in a control.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+[**DisabledColor**](properties\properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+[**DisabledFill**](properties\properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**Font**](properties\properties-text.md) – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+[**FontWeight**](properties\properties-text.md) – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+[**HoverColor**](properties\properties-color-border.md) – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+[**HoverFill**](properties\properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+[**Italic**](properties\properties-text.md) – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
 
-[AZURE.INCLUDE [short-oncheck](../../includes/short-oncheck.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
 
-[AZURE.INCLUDE [short-onuncheck](../../includes/short-onuncheck.md)]
+[**PaddingBottom**](properties\properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+[**PaddingLeft**](properties\properties-size-location.md) – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+[**PaddingRight**](properties\properties-size-location.md) – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+[**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+[**PressedColor**](properties\properties-color-border.md) – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+[**PressedFill**](properties\properties-color-border.md) – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+[**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+[**Size**](properties\properties-text.md) – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+[**Strikethrough**](properties\properties-text.md) – Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+[**Underline**](properties\properties-text.md) – Whether a line appears under the text that appears on a control.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+[**VerticalAlign**](properties\properties-text.md) – The location of text on a control in relation to the vertical center of that control.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-verticalalign](../../includes/short-verticalalign.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

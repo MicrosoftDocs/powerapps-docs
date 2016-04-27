@@ -23,28 +23,15 @@
 ## Overview ##
 Configure graphical elements in your app, including images, photos, and elements of a pen control.
 
-## Properties ##
+**BackgroundImage** – The name of an image file that appears in the background of a screen.
 
-**BackgroundImage** The name of an image file that appears in the background of a screen.
+- Applies to the [**Screen**](controls\control-screen.md) control.
 
-**Brightness** How much light the user is likely to perceive in an image.
+**Image** – The name of the image that appears in an image, audio, or microphone control.
 
-**Contrast** How easily the user can distinguish between similar colors in an image.
+- Applies to [**Audio**](controls\control-audio-video.md), [**Image**](controls\control-image.md), [**Microphone**](controls\control-microphone.md), and [**Video**](controls\control-audio-video.md) controls.
 
-**Direction** Whether the first item in a gallery in landscape orientation appears near the left or right edge.
+**ImagePosition** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-**Image** The name of the image that appears in an image, audio, or microphone control.
+- Applies to [**Audio**](controls\control-audio-video.md), [**Image**](controls\control-image.md), [**Microphone**](controls\control-microphone.md), [**Screen**](controls\control-screen.md), and [**Video**](controls\control-audio-video.md) controls.
 
-**ImagePosition** The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
-
-**Input**
-
-**Layout** Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
-
-**SelectionThickness** The thickness of the selection tool for a pen-input control.
-
-**Transparency** The degree to which controls behind an image remain visible.
-
-**WrapCount** How many records appear in each item of a gallery.  
-
-**Zoom** The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.

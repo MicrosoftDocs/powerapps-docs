@@ -26,70 +26,67 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+[**Image**](properties\properties-visual.md) – The name of the image that appears in an image, audio, or microphone control.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+## Additional properties ##
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.
 
-## All properties ##
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+[**DisabledFill**](properties\properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+[**Fill**](properties\properties-color-border.md) – The background color of a control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+[**HoverFill**](properties\properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-image](../../includes/short-image.md)]
+[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-[AZURE.INCLUDE [short-imageposition](../../includes/short-imageposition.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+[**PaddingBottom**](properties\properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+[**PaddingLeft**](properties\properties-size-location.md) – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+[**PaddingRight**](properties\properties-size-location.md) – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+[**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+[**PressedFill**](properties\properties-color-border.md) – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+[**RadiusBottomLeft**](properties\properties-size-location.md) – The degree to which the bottom-left corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiusbottomleft](../../includes/short-radiusbottomleft.md)]
+[**RadiusBottomRight**](properties\properties-size-location.md) – The degree to which the bottom-right corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiusbottomright](../../includes/short-radiusbottomright.md)]
+[**RadiusTopLeft**](properties\properties-size-location.md) – The degree to which the top-left corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiustopleft](../../includes/short-radiustopleft.md)]
+[**RadiusTopRight**](properties\properties-size-location.md) – The degree to which the top-right corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiustopright](../../includes/short-radiustopright.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**Transparency** – The degree to which controls behind an image remain visible.
 
-[AZURE.INCLUDE [short-transparency](../../includes/short-transparency.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

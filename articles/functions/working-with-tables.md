@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -15,10 +15,10 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/10/2015"
+   ms.date="04/26/2016"
    ms.author="gregli"/>
 
-# Understanding tables and records in PowerApps #
+# Understand tables and records in PowerApps #
 You can create an app that accesses information in Microsoft Excel, SharePoint, SQL Server, and several other sources that store data in records and tables. To work most effectively with this kind of data, review the concepts that underlie these structures.
 
 - A record contains one or more categories of information about a person, a place, or a thing. For example, a record might contain the name, the email address, and the phone number of a single customer. Other tools refer to a record as a "row" or an "item."
@@ -41,32 +41,32 @@ Each record contains at least one category of information for a person, a place,
 
 In a formula, you can refer to a record by itself, outside of a table's context, by using curly braces. For example, this record **{ Name: "Strawberries", Price: 7.99 }** isn't associated with a table.
 
-### Properties ###
+### Fields ###
 
-A property is an individual piece of information in a record. You can visualize this sort of property as a value in a column for a particular record.
+A field is an individual piece of information in a record. You can visualize this sort of field as a value in a column for a particular record.
 
-Just as with a control, you refer to a property of a record by using the **.** [operator](operators.md) on the record.  For example, **First(Products).Name** returns the **Name** property for the first record in the **Products** table.
+Just as with a control, you refer to a field of a record by using the **.** [operator](operators.md) on the record.  For example, **First(Products).Name** returns the **Name** field for the first record in the **Products** table.
 
-A property can contain another record or table, as the example for the [**GroupBy**](function-groupby.md) function shows. You can nest as many levels of records and tables as you want.
+A field can contain another record or table, as the example for the [**GroupBy**](function-groupby.md) function shows. You can nest as many levels of records and tables as you want.
 
 ### Columns ###
 
-A column refers to the same property for one or more records in a table. In the above example, each product has a price property, and that price is in the same column for all products.  The above table has four columns, shown vertically:
+A column refers to the same field for one or more records in a table. In the above example, each product has a price field, and that price is in the same column for all products.  The above table has four columns, shown horizontally across the top:
 
 - **Name**
 - **Price**
 - **Quantity on Hand**
 - **Quantity on Order**
 
-The column's name reflects the properties in that column.
+The column's name reflects the fields in that column.
 
-All values within a column are of the same data type. In the above example, the "Quantity on Hand" column always contains a number and can't contain a string, such as "12 units," for one record.  The value of any property may also be *blank*.  
+All values within a column are of the same data type. In the above example, the "Quantity on Hand" column always contains a number and can't contain a string, such as "12 units," for one record.  The value of any field may also be *blank*.  
 
 You may have referred to columns as "fields" in other tools.
 
 ### Table ###
 
-A table comprises one or more records, each with multiple properties that have consistent names across the records.
+A table comprises one or more records, each with multiple fields that have consistent names across the records.
 
 Any table that's stored in a data source or a collection has a name, which you use to refer to the table and pass it to functions that take tables as arguments.  Tables can also be the result of a function or a formula.
 
@@ -83,7 +83,7 @@ You can also define a single-column table with square brackets.  An equivalent w
 In Excel and PowerApps, you use formulas to manipulate numbers and strings of text in similar ways:
 
 - In Excel, type a value, such as **42**, in cell **A1**, and then type a formula, such as **A1+2**, in another cell to show the value of **44**.
-- In PowerApps, set the **Default** property of **Slider1** to **42**, and set the **Text** property of a label to **Slider1.Value + 2** to show the value of **44**.
+- In PowerApps, set the **Default** property of **Slider1** to **42**, and set the **Text** property of a text box to **Slider1.Value + 2** to show the value of **44**.
 
 In both cases, the calculated value changes automatically if you change the values of the arguments (for example, the number in cell **A1** or the value of **Slider1**).
 
@@ -93,7 +93,7 @@ Just as with numbers, formulas that involve tables and records are automatically
 
 Let's walk through some simple examples.
 
-1. Insert a textual gallery on a screen, with its **Items** property set to the name of a table.
+1. Add a **Text gallery** control, and set its **Items** property to the name of a table.
 
 	By default, the gallery shows placeholder text from a table named **TextualGallerySample**. The **Items** property of the gallery is automatically set to that table.
 
@@ -139,37 +139,37 @@ This formula creates a single-column table that contains all the data from the *
 
 If you specify a data source as an argument for one of these functions, it will modify the records of that data source and, in general, return the data source's new value as a table.
 
-- **[Collect](function-clear-collect-clearcollect.md)**, **[Clear](function-clear-collect-clearcollect.md)**, **[ClearCollect](function-clear-collect-clearcollect.md)** - Create, clear, and add to a collection.
+- **[Collect](function-clear-collect-clearcollect.md)**, **[Clear](function-clear-collect-clearcollect.md)**, **[ClearCollect](function-clear-collect-clearcollect.md)** - Creates, clears, and adds to a collection.
 - **[Update](function-update-updateif.md)**, **[UpdateIf](function-update-updateif.md)** - Updates records that match one or more criteria that you specify.
 - **[Remove](function-remove-removeif.md)**, **[RemoveIf](function-remove-removeif.md)** - Deletes records that match one or more criteria that you specify.
 
 The following controls have properties that are tables:
 
-- **Items** - Applies to galleries and listboxes.  Table to display in the gallery.
-- **SelectedItems** - Applies to listboxes.  Table of the items the user has selected.
+- **Items** - Applies to galleries and list boxes. Table to display in the gallery.
+- **SelectedItems** - Applies to list boxes. Table of items that the user has selected.
 
 ## Record formulas ##
-
 You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to our gallery example above, let's use the **Gallery1.Selected** property to display information from whatever record the user selects in that gallery.
 
 1. Add a button, and set its **OnSelect** property to this formula:<br>
 	**Collect( SelectedRecord, Gallery1.Selected )**
 1. If the button isn't selected, click it to select it, and then click it again to run the formula.
-1. In the **File** menu, click **Collections.**
+1. In the **File** menu, select **Collections.**
 
 ![](media/working-with-tables/selected-collection.png)
 
-This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body1** column, which represents the label that shows the data from that column. Click the table icon in the **Body1** column to drill into that data.
+This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body1** column, which represents the text box that shows the data from that column. Select the table icon in the **Body1** column to drill into that data.
 
-Now that we have the selected record, we can extract individual properties from it with the **.** operator.
+Now that you have the selected record, you can extract individual fields from it with the **.** operator.
 
-1. Press Esc to return to the default workspace, and then add a label below the gallery.
-1. Set the **Text** property of the label to this formula:<br>
+1. Press Esc to return to the default workspace, and then add a text box below the gallery.
+
+1. Set the **Text** property of the text box to this formula:<br>
 	**Gallery.Selected.Heading**
 
-![](media/working-with-tables/gallery-selected.png)
+	![](media/working-with-tables/gallery-selected.png)
 
-We've taken the **Selected** property, which is a record, and extracted the **Heading** property from it.  
+You've taken the **Selected** property, which is a record, and extracted the **Heading** property from it.  
 
 You can also use a record as a general-purpose container for related named values.
 
@@ -190,15 +190,15 @@ Functions that return records:
 
 Properties that return records:
 
-- **Selected** - Applies to galleries and listboxes. Returns the currently selected record.
+- **Selected** - Applies to galleries and list boxes. Returns the currently selected record.
 - **Updates** - Applies to galleries.  Pulls together all the changes that a user makes in a data-entry form.
-- **[Update](function-update-updateif.md)** Applies to input controls such as input-text controls and sliders. Sets up individual properties for the gallery to pull together.
+- **[Update](function-update-updateif.md)** Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
 
 ## Inline syntax ##
 
 ### Records ###
 
-You express records by using curly braces that contain named property values.  For example, you can express the first record in the table at the start of this topic by using this formula:
+You express records by using curly braces that contain named field values.  For example, you can express the first record in the table at the start of this topic by using this formula:
 
 **{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }**
 
@@ -224,13 +224,9 @@ You can also nest tables:
 
 **Table( { Name: "Chocolate",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) } )**
 
-You can create single-column tables by specifying values in square brackets. The resulting table has a single column, named "Value".
+You can create single-column tables by specifying values in square brackets. The resulting table has a single column, named **Value**.
 
 For example, **[ 1, 2, 3, 4 ]** is equivalent to **Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )** and returns this table:
 
-| Value |
-|:-----:|
-|   1   |
-|   2   |
-|   3   |
-|   4   |
+![](media/working-with-tables/inline-table.png)
+

@@ -26,73 +26,67 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
 
-[AZURE.INCLUDE [short-max](../../includes/short-max.md)]
+**Max** – The maximum value to which the user can set a slider or a rating.
 
-[AZURE.INCLUDE [short-min](../../includes/short-min.md)]
+**Min** – The minimum value to which the user can set a slider.
 
-## All properties ##
+[**Value**](properties\properties-core.md) – The value of an input control.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+## Additional properties ##
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[AZURE.INCLUDE [short-handleactivefill](../../includes/short-handleactivefill.md)]
+**HandleActiveFill** – The color of the handle for a slider as the user changes its value.
 
-[AZURE.INCLUDE [short-handlefill](../../includes/short-handlefill.md)]
+**HandleFill** – The color of the handle (the element that changes position) in a toggle or slider control.
 
-[AZURE.INCLUDE [short-handlehoverfill](../../includes/short-handlehoverfill.md)]
+**HandleHoverFill** – The color of the handle in a slider when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-layout](../../includes/short-layout.md)]
+**Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
-[AZURE.INCLUDE [short-max](../../includes/short-max.md)]
+[**OnChange**](properties\properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [short-min](../../includes/short-min.md)]
+[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
+[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[AZURE.INCLUDE [short-railfill](../../includes/short-railfill.md)]
+**ReadOnly** – Whether a user can change the value of a slider or rating control.
 
-[AZURE.INCLUDE [short-railhoverfill](../../includes/short-railhoverfill.md)]
+[**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-readonly](../../includes/short-readonly.md)]
+**ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-showvalue](../../includes/short-showvalue.md)]
+**ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
+[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-valuefill](../../includes/short-valuefill.md)]
+[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-valuehoverfill](../../includes/short-valuehoverfill.md)]
+[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

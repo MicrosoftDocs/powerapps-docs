@@ -25,8 +25,7 @@ Run an app that you or someone else created, or create an app with a default int
 **Prerequisites**
 
 1. Get an account in Dropbox, OneDrive, or GoogleDrive if you don't already have one.
-1. [Install PowerApps](http://aka.ms/powerappsinstall), and then open it.
-1. Sign in for the first time by swiping left (or selecting the arrow in the lower-right corner) to advance through the welcome screens and then providing your credentials.
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
 ## Run an app ##
 1. Open PowerApps, and then select the app in the list that appears on the default screen.
