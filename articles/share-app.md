@@ -48,7 +48,7 @@ If you share an app with your organization, *everyone* in your organization has 
 1. On [powerapps.com][1], select **My apps** in the left navigation bar:  
 ![](./media/share-app/new-file-apps-portal.png)
 
-1. Select the ellipsis on tile of the app that you want to share, and click **Share**
+1. Select the ellipsis on tile of the app that you want to share, and click **Share**  
 ![](./media/share-app/new_app_tile.png)
 
 1. Type in your co-worker or group's work name or email address, and then select the person you want from the list. Remember, you can share this app with a co-worker or work group.
@@ -94,13 +94,14 @@ If you share an app with your organization, *everyone* in your organization has 
 
 #### Powerapps.com
 
-1. On [powerapps.com][1], select **My apps** in the left navigation bar.
+1. On [powerapps.com][1], select **My apps** in the left navigation bar.  
 ![](./media/share-app/new-file-apps-portal.png)
 
 
-1. Select the ellipsis on tile of the app that you want to modify, and click **Share**  ![](./media/share-app/new_app_tile.png)
+1. Select the ellipsis on tile of the app that you want to modify, and click **Share**  
+![](./media/share-app/new_app_tile.png)
 
-1. Select a different permission from the drop-down list. Or select the **x** icon to delete a user, group, or your organization's permission.
+1. Select a different permission from the drop-down list. Or select the **x** icon to delete a user, group, or your organization's permission.  
 ![](./media/share-app/new-share-permissiontypes-portal.png)
 
 1. Select **Save**.
