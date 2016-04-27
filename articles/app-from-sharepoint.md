@@ -25,10 +25,8 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 **Prerequisites**
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-
-## What SharePoint Online lists can be used with PowerApps ##
-- PowerApps currently supports Sharepoint online custom lists. Document libraries are not supported, but will be coming soon.
-- Here are the supported list columns types that are supported by PowerApps:
+- PowerApps only supports creating apps for Sharepoint Online custom lists. Document libraries are not supported, but will be coming soon.
+- Check to make sure that your list only contains columns supported by PowerApps. Here are the  list column types that are supported by PowerApps:
 
 | SharePoint online list column type | Supported by PowerApps |
 |------------------------------------|------------------------|
@@ -47,10 +45,10 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 | Outcome choice                     | No                     |
 | External data                      | No                     |
 
-> [AZURE.NOTE] Full support will be coming soon for all those column types marked as 'Yes (read-only)'
+> [AZURE.NOTE] Full support will be coming soon for all those column types marked as *Yes (read-only)*
 
 ## Create an app ##
-1. In PowerApps, select *New* (near the left edge of the screen).
+1. In PowerApps, select **New** (near the left edge of the screen).
 
 	![](./media/app-from-sharepoint/Menu.png)
 
@@ -70,7 +68,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	![Select a list](./media/app-from-sharepoint/SelectList.png)
 
-  Here are the columns of the custom list that is used in this article:  
+  Here are the columns of the SharePoint Online custom list that is used for the examples in this article:  
   ![](./media/app-from-sharepoint/ListColumns.png)
 
   PowerApps builds an app that has three screens:
@@ -97,10 +95,10 @@ When an app is built automatically, heuristics suggest the best layout and conte
 1. In the list thumbnails, select **DetailScreen1**.  
 ![](./media/app-from-sharepoint/left-pane.png)
 
-1. Select field on the screen that you want to customize.  
+1. Select a field on the screen that you want to customize.  
 ![](./media/app-from-sharepoint/SelectField.png)
 
-1. In the **Options** pane, you can use the card selector to change the control that is used to display this field in **DetailsScreen1**.  
+1. In the **Options** pane, you can use the card selector to change the control that is used to display this field in the **DetailsScreen1**.  
 ![](./media/app-from-sharepoint/CardSelector.png)  
 Here are the supported cards for each SharePoint Online list column type:  
 
