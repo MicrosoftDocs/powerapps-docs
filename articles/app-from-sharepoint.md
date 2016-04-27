@@ -5,7 +5,7 @@
    suite="powerapps"
    documentationCenter="na"
    authors="jamesol-msft"
-   manager="dwrede"
+   manager="darshand"
    editor=""
    tags=""/>
 
@@ -130,19 +130,23 @@ As you customize the app, you can test your changes by running the app in **Prev
 
 1. In the list of thumbnails, select **BrowseScreen1**, and then open preview by selecting the **Preview** icon near the upper-right corner (or by pressing **F5**).
 
-	![Preview icon](./media/get-started-create-from-data/open-preview.png)
+	![Preview icon](./media/app-from-sharepoint/open-preview.png)
 
 1. On **BrowseScreen1**, select the arrow for a record to show details about that record.
 
-	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record.png)
+	![Select an arrow on BrowseScreen1](./media/app-from-sharepoint/preview-item.png)
 
 1. On **DetailsScreen1**, select the edit icon (in the upper-right corner) to edit the record.
 
-	![Edit a record](./media/get-started-create-from-data/edit-record.png)
+	![Edit a record](./media/app-from-sharepoint/select-edit.png)
 
 1. On **EditScreen1**, change the information in one or more fields, and then select the check mark in the upper-right corner to save your changes.
 
-	![Save changes on EditScreen1](./media/get-started-create-from-data/save-record.png)
+	![Save changes on EditScreen1](./media/app-from-sharepoint/edit-item.png)
+
+1. Editing the item in the app will update the record in the SharePoint Online list.
+
+	![Updated List](./media/app-from-sharepoint/UpdatedList.png)
 
 ## Next steps ##
 - Press Ctrl-S to save your app so that you can run it from other devices.
