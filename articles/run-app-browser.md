@@ -19,15 +19,19 @@
     ms.author="karthikb"/>
 
 # Using apps in a web browser #
-PowerApps can be run on iOS, Android, and a web browser. Apps running in a browser match the experience as apps running on phones and tablets. Running apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies. 
+PowerApps can run on iOS, Android, and a web browser. Apps running in a browser match the experience as apps running on phones and tablets. Running apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies. 
 
 
 
 ## What you need to get started ##
-- Either of the following:
-	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-	- An app that someone else built and shared with view permissions.
-- Supported browsers: Internet Explorer 11 and above, Chrome v47 and above, Safari on iOS 9 and above
+- An app that:
+	- You built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).  
+		OR
+	- Someone else built and shared with view permissions.
+- A supported browser: 
+	- Internet Explorer 11 and above
+	- Chrome v47 and above
+	- Safari on iOS 9 and above
 
 
 ## Launching an app ##
