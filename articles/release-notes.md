@@ -62,15 +62,15 @@
 
 	Check out [Understand data forms](working-with-data-forms.md) for more details.
 
-1. **Data source delegation of [Filter](function-filter.md) and [Sort](function-sort.md) improve performance and support large numbers of records.**
+1. **Data source delegation of [Filter](function-filter-lookup.md) and [Sort](function-sort.md) improve performance and support large numbers of records.**
 
-	Up until now, all Filter and Sort operations were handled on the device, requiring the time consuming and bandwidth choking fetch of all the data.  With this release, in certain situations, these operations can be delegated to the data source making your apps more responsive and able to handle a large number of records.  You can read more about it on the [Filter](function-filter.md) and [Sort](function-sort.md) pages.
+	Up until now, all Filter and Sort operations were handled on the device, requiring the time consuming and bandwidth choking fetch of all the data.  With this release, in certain situations, these operations can be delegated to the data source making your apps more responsive and able to handle a large number of records.  You can read more about it on the [Filter](function-filter-lookup.md) and [Sort](function-sort.md) pages.
 
 	Delegation is limited to certain situations.  Apps created from data do not qualify.  See Known limitations later in this article for more details.  We will be expanding the scenarios in which delegation can be used.
 
 	To take advantage of this new capability, the [**Gallery**](control-gallery.md) control now supports paging.  As the user reaches the end of a list of data, the control knows to fetch more from the service, seamlessly.
 
-1. **Improvements to the [PDF viewer](control-pdf.md) control: searching and scrolling.**
+1. **Improvements to the [PDF viewer](control-pdf-viewer.md) control: searching and scrolling.**
 
 	The PDF viewer control now supports full text search across the document.  
 
@@ -119,7 +119,7 @@
 
 4. **For apps created from data, only the first 500 records of a data source can be worked with.**
 
-	In general, PowerApps works with any size data source by delegating operations to the data source.  For operations that cannot be delegated, PowerApps will give a warning at authoring time and operate only on the first 500 records of the data source.  See the [Filter function](function-filter.md) article for more details on delegation.  
+	In general, PowerApps works with any size data source by delegating operations to the data source.  For operations that cannot be delegated, PowerApps will give a warning at authoring time and operate only on the first 500 records of the data source.  See the [Filter function](function-filter-lookup.md) article for more details on delegation.  
 
 	In this release, delegation does not support **Filter** and **Sort** functions used together nor does it support the **In** operator.  These are features that are used by apps created from data, and so, these apps are limited to the first 500 records.  To partially workaround this issue, you can remove one or both of the Filter and Sort functions from the gallery **Items** property.
 
