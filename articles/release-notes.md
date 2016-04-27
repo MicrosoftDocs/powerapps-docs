@@ -42,19 +42,35 @@
 
 1. 	**PowerApps Android is now available!**
 
-	Look for PowerApps in the Android store.
+	Look for PowerApps in the [Andriod store](http://aka.ms/powerappsandroid).
 
 2. 	**PowerApps for iOS has a new look for finding and opening apps.**
+	
+	Update your app or install anew from the [Apple store](http://aka.ms/powerappsios).
 
 3. **Simplified first run experience and sign-in on mobile.**
 
-4. **Usability improvements to Mobile client.**
+4. **Usability improvements to mobile clients.**
 
 	We've added hamburger navigation and an app context menu.
 
 ## PowerApps Studio for Windows ##
 
-1. **New [Edit form](control-form-detail.md) and [Display form](control-form-detail.md) controls. As a result, an improved app from data.** 
+1. **Streamlined "New" page.**
+
+	- An updated “new” screen with more useful options for quickly getting to what you need.
+	- An improved create from data flow that includes better breadcrumbs and navigation
+	- Now you can see your most recently used SharePoint sites when creating an app from SharePoint Online, for those users who don’t have their SharePoint URLs memorized by heart
+
+3. **New guided product tour.**
+
+	A product tour to help new users get acquainted with the most important parts of the authoring experience.
+
+1. **Contextual help links.**
+
+	We've made it much easier for you to find help in the product and connect with others through our communnity.
+
+3. **New [Edit form](control-form-detail.md) and [Display form](control-form-detail.md) controls. As a result, an improved app from data.** 
 
 	Creating an app over data just became a whole lot easier.  With these new controls, and their associated cards and functions, you can create a basic data view and edit app without needing to manually call [**Patch**](function-patch.md), [**Validate**](function-validate.md), and other low level functions.
 
@@ -79,24 +95,10 @@
 1. **Meta data refresh.**
 
 	No longer do you need to delete and re-add a connection in order to update your meta data.  One click and you are done.
- 
-1. **Streamlined "New" page.**
-
-	- An updated “new” screen with more useful options for quickly getting to what you need.
-	- An improved create from data flow that includes better breadcrumbs and navigation
-	- Now you can see your most recently used SharePoint sites when creating an app from SharePoint Online, for those users who don’t have their SharePoint URLs memorized by heart
-
-3. **New product tour.**
-
-	A product tour to help new users get acquainted, and contextual help throughout the studio for those times when you get stuck
 
 1. **New SharePoint site most recently used list.**
 
 	Building a bunch of apps for the same SharePoint site?  Making that easier, we now keep track of SharePoint sites you have recently used and make those easy for you to select again.   
-
-1. **Contextual help links.**
-
-	We've made it much easier for you to find help in the product and connect with others through our communnity.
 
 1. **Performance and data-handling improvements, along with many other usability and bug fixes, throughout!**
 
