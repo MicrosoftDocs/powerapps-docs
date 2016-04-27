@@ -22,7 +22,7 @@
 
 This article introduces you on how to sign up for a PowerApps account.
 
-## What email address can be used with PowerApps ##
+## What email addresses can be used with PowerApps ##
 To sign up for PowerApps, enter your work or school email address.
 
 > [AZURE.NOTE] Currently, consumer email services, telecommunication providers, government, and military addresses are not supported. This includes:
@@ -40,10 +40,11 @@ If you try to sign up with a personal email address, you will get a message indi
 1. Select **Get started**.
 
 1. In the dialog, enter the work or school email address you are signing up with, and then select the **arrow**. Be sure your email address is allowed for sign up.
-![](./media/signup-for-powerapps/PowerApps_Dialog.png)
 
-1. Make sure you have entered the correct email address and click **Sign up**
-![](./media/signup-for-powerapps/BoxPortal_GettingStarted.png)
+  ![](./media/signup-for-powerapps/PowerApps_Dialog.png)
+
+1. Make sure you have entered the correct email address and click **Sign up**    
+  ![](./media/signup-for-powerapps/BoxPortal_GettingStarted.png)
 
 1. If your account does not exist within an organization, you get a message to check your email:  
 ![](./media/signup-for-powerapps/BoxPortal_CheckYourEmail.png)

@@ -4,7 +4,7 @@
    services=""
    suite="powerapps"
    documentationCenter="na"
-   authors="aftowen"
+   authors="jamesol-msft"
    manager="dwrede"
    editor=""
    tags=""/>
@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/10/2016"
-   ms.author="anneta"/>
+   ms.date="04/27/2016"
+   ms.author="jamesol"/>
 
 # Create an app to manage data from SharePoint Online #
 
@@ -26,14 +26,37 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
+## What SharePoint Online lists can be used with PowerApps ##
+- PowerApps currently supports Sharepoint online custom lists. Document libraries are not supported, but will be coming soon.
+- Here are the supported list columns types that are supported by PowerApps:
+
+| SharePoint online list column type | Supported by PowerApps |
+|------------------------------------|------------------------|
+| Yes/No                             | Yes                    |
+| Single line of text                | Yes                    |
+| Number                             | Yes                    |
+| Hyperlink                          | Yes                    |
+| Multiple lines of text             | Yes                    |
+| Date and Time                      | Yes                    |
+| Currency                           | Yes                    |
+| Picture                            | Yes (read-only)        |
+| Lookup                             | Yes (read-only)        |
+| Person or Group                    | Yes (read-only)        |
+| Managed Metadata                   | Yes (read-only)        |
+| Choice                             | Yes (read-only)        |
+| Outcome choice                     | No                     |
+| External data                      | No                     |
+
+> [AZURE.NOTE] Full support will be coming soon for all those column types marked as 'Yes (read-only)'
+
 ## Create an app ##
-1. On the **File** menu, select **New**, and then select **Get started** under **Start from your data**.
+1. In PowerApps, select *New* (near the left edge of the screen).
 
-	![Create an app from data](./media/app-from-sharepoint/create-from-data.png)
+	![](./media/app-from-sharepoint/Menu.png)
 
-1. Select **Available connections**, select **SharePoint Online**, and then select **Connect**.
+1. Under **Create an app from your data**, select Phone layout on the **SharePoint Online** tile.
 
-	![Select the SharePoint connector](./media/app-from-sharepoint/connect-sharepoint.png)
+	![](./media/app-from-sharepoint/AFD.png)
 
 1. Provide your credentials.
 
