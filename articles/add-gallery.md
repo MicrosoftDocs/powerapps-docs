@@ -75,5 +75,23 @@ The **Items** property of a gallery determines which items it shows. You'll conf
 
 	The gallery shows only those items that meet the filter criterion.
 
+## Sort the gallery ##
+
+1. Select any item in the list except the first one to select the list, which is called a gallery.
+
+	A selection box appears around the gallery.
+
+1. Copy this formula, and paste it into the formula bar (to the right of the **fx** button).
+
+	**Sort(If(IsBlank(TextSearchBox1!Text),** *ListName*, **Filter(** *ListName*, **TextSearchBox1!Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+
+1. Replace *ListName* with the name of your list and *ColumnName* with the name of the column by which you want to sort, filter, or both.
+
+	For example, use this formula if your list is named **Test List**, and you want to sort or filter by the **Name** column:
+
+	**Sort(If(IsBlank(TextSearchBox1!Text), 'Test List', Filter('Test List', TextSearchBox1!Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
+
+	The data is sorted by the names of the accounts.
+
 ## Next steps ##
 - Learn more about working with a [gallery](./working-with-forms.md) and [formulas](./working-with-formulas.md).
