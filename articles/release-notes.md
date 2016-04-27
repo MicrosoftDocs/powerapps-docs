@@ -19,7 +19,7 @@
 
 # Release notes for PowerApps release 2.0.410#
 
-## Powerapps.com ##
+## PowerApps.com ##
 
 1. 	**Use apps directly on the web!**
 
