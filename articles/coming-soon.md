@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="jamesol-msft"
+    authors="aftowen"
     manager="erikre"
     editor=""
     tags=""/>
@@ -15,7 +15,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="04/13/2016"
-    ms.author="gregli"/>
+    ms.author="anneta"/>
 
 # Coming Soon #
 
