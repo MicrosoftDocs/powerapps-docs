@@ -19,6 +19,9 @@
    ms.author="ankitsar"/>
 
 # Create an app from Excel data #
+
+[AZURE.VIDEO nb:cid:UUID:9380084d-bc9a-484f-960e-4554c6bf67b2]
+
 Create an app automatically based on an Excel file in the cloud, customize the app, and then explore how it works.
 
 **Prerequisites**
