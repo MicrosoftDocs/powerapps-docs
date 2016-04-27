@@ -15,7 +15,7 @@
 	ms.tgt_pltfrm="na"
 	ms.devlang="na"
 	ms.topic="get-started-article"
-	ms.date="04/26/2016"
+	ms.date="04/27/2016"
 	ms.author="mandia"/>
 
 # List of available connections
@@ -28,7 +28,7 @@ Just getting started with PowerApps? Learn [how to add connections](add-manage-c
 
 ## Available connections
 
-||||||
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |---|---|---|---|---|
 [![API Icon][servicebusicon]][servicebusdoc] | [**Azure Service Bus**][servicebusdoc] <br/> Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions || [![API Icon][sqlicon]][sqldoc] | [**Azure SQL database**][sqldoc]  <br/> Connects to SQL Azure Database to create, update, and more on a SQL database table |
 | [![API Icon][blobicon]][azureblobdoc] | [**Azure Storage Blob**][azureblobdoc] <br/>Connect to Azure blob to manage files in your blob container || [![API Icon][boxicon]][boxDoc] | [**Box**][boxDoc] <br/>Connect to Box to upload, get, delete, list, and more file tasks| 
