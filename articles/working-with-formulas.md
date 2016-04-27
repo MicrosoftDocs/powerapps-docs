@@ -60,9 +60,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
 1. Add a **Text box** control to the screen.
 
-	**Note**: In the topic, **Text box** refers to labels shown in graphics.
-
-	![Added a label control](./media/working-with-formulas/add-a-label.png)
+	![Added a TextBox control](./media/working-with-formulas/add-a-label.png)
 
 	When you add a text box, the property list automatically shows the **Text** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
 
@@ -89,20 +87,26 @@ In Excel, you type **=SUM(A1:A2)** into a cell to show the sum of whatever value
 
 ![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.png)
 
-In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the text box from the previous procedure and two **Text input** controls, named **Text1** and **Text2**. Regardless of what numbers you type in the input-text controls, the text box always shows the sum of those numbers because its **Text** property is set to this formula:
-<br>**Text1 + Text2**
+In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the text box from the previous procedure and two **Text input** controls, named **TextInput1** and **TextInput2**. 
 
-![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc.png)
+![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc1.png)
+
+Regardless of what numbers you type in the input-text controls, the text box always shows the sum of those numbers because its **Text** property is set to this formula:
+<br>**TextInput1 + TextInput2**
+
+![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc2.png)
 
 In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the [**If**](function-if.md) function, which behaves similarly to how it behaves in Excel.
 
-1. Set the **Color** property of the text box to this formula:<br>**If( Value(TextBox1.Text) <0, Red, Black )**
+1. Set the **Color** property of the text box to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
 
 	**Note:** In a formula, specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **Text** property of **TextBox1** by typing **TextBox1.Text**.
 
-	![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color.png)
+	![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color1.png)
 
 1. In **TextInput1** and **TextInput2**, specify two numbers that, when added together, result in a negative number.
+
+	![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color2.png)
 
 	The value in the text box appears in red.
 
@@ -116,10 +120,6 @@ You can configure your app with formulas so that users can change your app's app
 1. Arrange the sliders so they don't overlap, add three text boxes, and configure them to show **Red**, **Green**, and **Blue**:
 
 	![Arrange sliders and add labels for each color component](./media/working-with-formulas/three-sliders.png)
-
-	**Note:** At any time, you can reveal the names of the controls and their boundaries on the screen by holding down the **Alt** key:
-
-	![Identify controls with the Alt key](./media/working-with-formulas/three-sliders-identified.png)
 
 1. Set the **Max** property of each slider to 255, which is the maximum value of a color component for the **RGBA** function.
 
@@ -153,12 +153,8 @@ You can take more than one action in a behavior formula if you separate function
 ## View a list of properties by category ##
 The properties list shows properties alphabetically, but you can also view all the properties of a control, organized by category, if you select the **Advanced** option on the **View** tab:
 
-![Advanced view](./media/working-with-formulas/advanced-closed.png)
+![Advanced view](./media/working-with-formulas/advanced-open.png)
 
-You can edit formulas directly within this view.
+You can edit formulas directly within this view.  With the control selector at the top of the pane, you can quickly find a control to work with.  And with the property search, you can quickly find a property of that control.
 
-Initially, this view shows the most important properties.  To reveal all the properties, click the down arrow at the bottom of the pane:
-
-![Advanced view expanded to show all properties](./media/working-with-formulas/advanced-open.png)
-
-Each control has a long list of properties that govern all aspects of the control's behavior and appearance. You can scroll through the list or search for a property by typing in the box at the top of the pane.
+Initially, this view shows the most important properties.  To reveal all the properties, click the down arrow at the bottom of the pane.  Each control has a long list of properties that govern all aspects of the control's behavior and appearance. You can scroll through the list or search for a property by typing in the box at the top of the pane.
