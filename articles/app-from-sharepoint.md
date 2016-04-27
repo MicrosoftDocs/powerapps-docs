@@ -58,104 +58,93 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	![](./media/app-from-sharepoint/AFD.png)
 
-1. Provide your credentials.
+1. If you haven't connected to SharePoint Online before, select **Connect** when prompted, and then provide your credentials.
 
-1. Under **Select a site**, select **New site**, type or paste the URL of the SharePoint site that you want to use, and then select **Connect**.
+  ![](./media/app-from-sharepoint/Connect.png)
 
-	![Specify the SharePoint site](./media/app-from-sharepoint/select-site.png)
+1. Under **Connect to a SharePoint site**, type or paste the URL of the SharePoint site that you want to use, and then select **Go**.
 
-1. Under **Select a list**, select the list that you want to use (such as **Test List**), and then select **Connect**.
+	![Specify the SharePoint site](./media/app-from-sharepoint/EnterSite.png)
 
-	![Select a list](./media/app-from-sharepoint/select-list.png)
+1. Under **Choose a list**, select the list that you want to use and then select **Connect**.
 
-	The app is created with a default interface, which includes a screen for browsing data, a screen for showing details, and a screen for creating and editing data. As this graphic shows, the screen for browsing data might need some configuration to be useful.
+	![Select a list](./media/app-from-sharepoint/SelectList.png)
 
-	![App with default interface](./media/app-from-sharepoint/default-browse.png)
+  Here are the columns of the custom list that is used in this article:  
+  ![](./media/app-from-sharepoint/ListColumns.png)
 
-1. In the **Layout** tab of the **Quick tools** pane, select a layout that can highlight the types of data that you want to show.
+  PowerApps builds an app that has three screens:
 
-	For example, select a layout that can show three strings of text in different sizes.
+  - **BrowseScreen1** shows a list of all items and some information about them so that users can easily browse for the item they want.
+  - **DetailScreen1** shows all information about a single item.
+  - **EditScreen1** provides a [**Form**](./add-form.md) control for adding an item or updating information about an item.
 
-	![Choose a layout](./media/app-from-sharepoint/choose-layout.png)
+## Customize the app ##
+When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
 
-1. In the **Content** tab of the **Quick tools** pane, select the type of data that you want to show in each element. For example:
+1. If you haven't used PowerApps before, take the intro tour by reading each description before selecting **Next** (and then selecting **Done**), or select **Skip**.
 
-	- In the first list, select **Website**.
-	- In the second list, select **AcctNumber**.
-	- In the third list, select **Name**.
+1. On the **Home** tab of the ribbon, select **Layouts**, and then select then select an option that includes images.
 
-	The browse screen of the app reflects your changes.
+	![Layout option with icons](./media/app-from-sharepoint/change-layout.png)
 
-	![Specify data on the Content tab](./media/app-from-sharepoint/specify-data.png)
+	The layout of **BrowseScreen1** changes to reflect your selection.
 
-	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](get-started-test-drive.md#configure-a-control) to **true**.
+	![BrowseScreen1 with new layout](./media/app-from-sharepoint/browse.png)
 
-1. Select any item in the list except the first one to select the list, which is called a gallery.
+	**Note:** If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
 
-	A selection box appears around the gallery.
+1. In the list thumbnails, select **DetailScreen1**.  
+![](./media/app-from-sharepoint/left-pane.png)
 
-1. Copy this formula, and paste it into the formula bar (to the right of the **fx** button).
+1. Select field on the screen that you want to customize.  
+![](./media/app-from-sharepoint/SelectField.png)
 
-	**Sort(If(IsBlank(TextSearchBox1!Text),** *ListName*, **Filter(** *ListName*, **TextSearchBox1!Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, Descending, Ascending))**
+1. In the **Options** pane, you can use the card selector to change the control that is used to display this field in **DetailsScreen1**.  
+![](./media/app-from-sharepoint/CardSelector.png)  
+Here are the supported cards for each SharePoint Online list column type:  
 
-1. Replace *ListName* with the name of your list and *ColumnName* with the name of the column by which you want to sort, filter, or both.
+| SharePoint online list column type | Supported Cards                               |
+|------------------------------------|-----------------------------------------------|
+| Yes/No                             | View text <br>View toggle                     |
+| Number                             | View percentage <br>View rating <br>View text |
+| Hyperlink                          | View URL <br>View text                        |
+| Single line of text                | View text                                     |
+| Multiple lines of text             | View text                                     |
+| Date and Time                      | View text                                     |
+| Currency                           | View percentage <br>View rating <br>View text |
+| Picture                            | View image <br>View text                      |
+| Lookup                             | View lookup                                   |
+| Person or Group                    | View lookup                                   |
+| Managed Metadata                   | View lookup                                   |
+| Choice                             | View lookup                                   |
 
-	For example, use this formula if your list is named **Test List**, and you want to sort or filter by the **Name** column:
+1. If you select the **View lookup** card for a field, then you have the option to choose which property of the field is displayed in the card.  To do so, select the **Ellipsis** next to the field in the **Options** pane and select **Advanced Options**.  
+![](./media/app-from-sharepoint/Elipsis.png)
 
-	**Sort(If(IsBlank(TextSearchBox1!Text), 'Test List', Filter('Test List', TextSearchBox1!Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
+1. In the **Data** section, select the property of the field you want to be displayed using the **Value** dropdown.  
+![](./media/app-from-sharepoint/AdvancedOptions.png)
 
-	The data is sorted by the names of the accounts.
+## Run the app ##
+As you customize the app, you can test your changes by running the app in **Preview** mode.
 
-## Test the app ##
-1. Press F5, and then select the sort icon multiple times.
+1. In the list of thumbnails, select **BrowseScreen1**, and then open preview by selecting the **Preview** icon near the upper-right corner (or by pressing **F5**).
 
-	![Sort icon](./media/app-from-sharepoint/sort-button.png)
+	![Preview icon](./media/get-started-create-from-data/open-preview.png)
 
- 	The data is sorted in ascending or descending order, depending on how many times you selected the sort icon.
+1. On **BrowseScreen1**, select the arrow for a record to show details about that record.
 
-1. In the search box, type at least part of an entry in the column that you specified for sorting and filtering.
+	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record.png)
 
-	For example, type part of an account name if you specified **Name** in the last step of the previous procedure.
+1. On **DetailsScreen1**, select the edit icon (in the upper-right corner) to edit the record.
 
-	The screen shows only those accounts for which the name contains the text that you type, regardless of case.
+	![Edit a record](./media/get-started-create-from-data/edit-record.png)
 
-	![Filter example](./media/app-from-sharepoint/filter-example.png)
+1. On **EditScreen1**, change the information in one or more fields, and then select the check mark in the upper-right corner to save your changes.
 
-1. In the upper-right corner, select the plus icon.
-
-	![Add icon](./media/app-from-sharepoint/add-icon.png)
-
-	A screen appears in which you can specify a new account.
-
-	![Screen for adding a record](./media/app-from-sharepoint/add-record.png)
-
-	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
-	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
-
-1. In the browse screen, select the arrow next to any account.
-
-	![Icon to show details](./media/app-from-sharepoint/right-arrow.png)
-
-	The details screen shows more information about that account.
-
-	![Details screen](./media/app-from-sharepoint/details-screen.png)
-
-1. Select the pencil icon in the upper-right corner of the details screen.
-
-	![Pencil icon](./media/app-from-sharepoint/pencil-icon.png)
-
-	A screen appears in which you can edit the information about that account.
-
-	![Edit record](./media/app-from-sharepoint/edit-record.png)
-
-	- To save your changes and return to the browse screen, select the checkmark in the upper-right corner, and then select the back arrow in the upper-left corner.
-	- To cancel your changes and return to the browse screen, select the close icon in the upper-left corner.
-
-1. Press Esc to return to the default workspace.
+	![Save changes on EditScreen1](./media/get-started-create-from-data/save-record.png)
 
 ## Next steps ##
-- Customize the default app by performing one or more of these tasks:
-	- [add and configure controls](get-started-test-drive.md#configure-a-control)
-	- [add a screen](add-screen-context-variables.md)
-	- [build a formula](formula-reference.md)
-- [Share the app](share-app.md) with others in your organization
+- Press Ctrl-S to save your app so that you can run it from other devices.
+- Customize your app further, as [Create an app from scratch](get-started-create-from-blank.md) describes.
+- [Share the app](share-app.md) so that other people can run it.
