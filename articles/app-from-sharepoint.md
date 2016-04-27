@@ -28,9 +28,9 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 - PowerApps only supports creating apps for Sharepoint Online custom lists. Document libraries are not supported, but will be coming soon.
 - Check to make sure that your list only contains columns supported by PowerApps. Here are the  list column types that are supported by PowerApps:
 
-	| SharePoint online list column type | Supported by PowerApps |
+| SharePoint online list column type | Supported by PowerApps |
 |------------------------------------|------------------------|
-| Yes/No                             | Yes                    |
+| Boolean (Yes/No)                   | Yes                    |
 | Single line of text                | Yes                    |
 | Number                             | Yes                    |
 | Hyperlink                          | Yes                    |
@@ -42,7 +42,8 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 | Person or Group                    | Yes (read-only)        |
 | Managed Metadata                   | Yes (read-only)        |
 | Choice                             | Yes (read-only)        |
-| Outcome choice                     | No                     |
+| Calculated                         | Yes (read-only)        |
+| Task Outcome                       | No                     |
 | External data                      | No                     |
 
 > [AZURE.NOTE] Full support will be coming soon for all those column types marked as *Yes (read-only)*
