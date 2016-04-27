@@ -87,11 +87,11 @@ The **Items** property of a gallery determines which items it shows. You'll conf
 
 1. Replace *ListName* with the name of your list and *ColumnName* with the name of the column by which you want to sort, filter, or both.
 
-	For example, use this formula if your list is named **Test List**, and you want to sort or filter by the **Name** column:
+	For example, use this formula if your list is named **FlooringEstimates**, and you want to sort or filter by the **Name** column:
 
-	**Sort(If(IsBlank(TextSearchBox1!Text), 'Test List', Filter('Test List', TextSearchBox1!Text in Text(Name))), Name, If(SortDescending1, Descending, Ascending))**
+	**Sort(If(IsBlank(TextSearchBox1!Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1!Text in Text(Name))), Name, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-	The data is sorted by the names of the accounts.
+	The items are sorted by the names of the products.
 
 ## Next steps ##
 - Learn more about working with a [gallery](./working-with-forms.md) and [formulas](./working-with-formulas.md).
