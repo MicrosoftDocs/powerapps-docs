@@ -76,7 +76,7 @@ The **Items** property of a gallery determines which items it shows. You'll conf
 	The gallery shows only those items that meet the filter criterion.
 
 ## Sort the gallery ##
-The **Items** property of a gallery determines the order of items it shows. You'll configure that property so that the gallery shows the order of items as set by **ImageSortUpDown1**.
+The **Items** property of a gallery determines the order of items that it shows. You'll configure that property so that the gallery shows the order of items as set by **ImageSortUpDown1**.
 
 ![Image for sorting](./media/add-gallery/image-sorting.png)
 
@@ -84,9 +84,9 @@ The **Items** property of a gallery determines the order of items it shows. You'
 
     **Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-1. Select the sort icon to change the sorting order of the gallery by the names of the products. 
+1. Select the sort icon to change the sorting order of the gallery by the names of the products.
 
-To use the formula to sort and filter with your gallery, replace the *DataSource* in this formula with name of your data source, and *ColumnName* with the name of the column by which you want to sort, filter or both.
+To sort and filter your gallery, replace the *DataSource* in this formula with name of your data source, and replace *ColumnName* with the name of the column by which you want to sort, filter, or both.
 
 **Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
