@@ -96,6 +96,10 @@
 
 	We have also added smooth scrolling between pages.  No longer do you need to move page by page.
 
+1. **More connectors.**
+
+	We continue to add more connectors.  [Check out the list](http://gregli5/drafts/articles/connections-list.md) for the latest.
+
 1. **Meta data refresh.**
 
 	No longer do you need to delete and re-add a connection in order to update your meta data.  One click and you are done.
