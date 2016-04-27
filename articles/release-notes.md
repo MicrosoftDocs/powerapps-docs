@@ -42,7 +42,7 @@
 
 1. 	**PowerApps Android is now available!**
 
-	Look for PowerApps in the [Andriod store](http://aka.ms/powerappsandroid).
+	Look for PowerApps in the [Android store](http://aka.ms/powerappsandroid).
 
 2. 	**PowerApps for iOS has a new look for finding and opening apps.**
 	
