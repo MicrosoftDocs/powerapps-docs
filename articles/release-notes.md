@@ -48,7 +48,7 @@
 	
 	Update your app or install anew from the [Apple store](http://aka.ms/powerappsios).
 
-3. **Single sign on for services on Microsoft services on Azure Active Directory.**
+3. **Single sign on for Microsoft services that use Azure Active Directory.**
 
 	Sign in to PowerApps and you have access to your information on Office 365 without further authentication.
 
@@ -95,6 +95,10 @@
 	The PDF viewer control now supports full text search across the document.  
 
 	We have also added smooth scrolling between pages.  No longer do you need to move page by page.
+
+1. **More connectors.**
+
+	We continue to add more connectors.  [Check out the list](http://gregli5/drafts/articles/connections-list.md) for the latest.
 
 1. **Meta data refresh.**
 
