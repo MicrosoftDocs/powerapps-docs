@@ -106,6 +106,23 @@
 
 1. **Performance and data-handling improvements, along with many other usability and bug fixes throughout!**
 
+## Connections ##
+
+With this release, we [support a wide assortment of connections](connections-list.md) including:
+
+- SharePoint
+- Office 365
+- Dynamics CRM
+- SQL
+- OneDrive for Business
+- Dropbox
+- Google Drive
+- Slack
+- Twilio
+- Yammer
+- Twitter
+- and many more
+
 ## Known limitations ##
 1.  **For apps created from data, the field used for sorting and searching isn't automatically configured.**
 
