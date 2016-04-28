@@ -4,78 +4,107 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="aftowen"
+	authors="MandiOhlinger"
 	manager="erikre"
 	editor=""
 	tags=""/>
+
 <tags
 	ms.service="powerapps"
 	ms.devlang="na"
 	ms.topic="article"
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
-	ms.date="11/18/2015"
-	ms.author="anneta"/>
+	ms.date="04/28/2016"
+	ms.author="mandia"/>
 
-# Add a scrolling screen in PowerApps #
-Create a screen that users can scroll to show more types of content than the screen can show at a time. For example, you might want to juxtapose multiple charts, videos, or other kinds of data from different sources on the same screen while keeping each element big enough to see clearly. If you put multiple controls in a section, they’ll maintain their relative positions within that section, regardless of the screen size and orientation. However, the screen size and orientation might determine how the sections are arranged.  
+# Add a scrolling screens #
+Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. The scrolling screen gives you the ability to add multiple controls, and allow users to see them all clearly by scrolling. 
 
-**Prerequisites**
+When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
 
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+&nbsp;
+
+[AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Create a scrolling screen ##
-1. Open PowerApps, and then do one of the following:
+1. On the **Home** tab, select **New screen**:  
+	![Option to add a screen to an app][1]
 
-	- [Add a screen](add-screen-context-variables.md) to an app.
+2. On the **Home** tab, select **Layouts**, and then select the option to add an infinite scrolling canvas:  
 
-		![Option to add a screen to an app](./media/add-scrolling-screen/add-screen.png)
+	![Option to add an infinite scrolling canvas][2]
 
-	- Create an app from scratch by selecting **New** in the **File** menu (near the left edge of the screen) and then selecting **Get started** under **Start from scratch**.
+	The canvas is added:  
 
-		![Option to create an app from scratch](./media/add-scrolling-screen/blank-app.png)
+	![A screen with an infinite scrolling canvas, as it appears by default][3]
 
-1. On the **Home** tab, select **Layouts**, and then select the option to add an infinite scrolling canvas.
-
-	![Option to add an infinite scrolling canvas](./media/add-scrolling-screen/add-canvas.png)
-
-	The canvas is added to the screen.
-
-	![A screen with an infinite scrolling canvas, as it appears by default](./media/add-scrolling-screen/default-canvas.png)
 
 ## Add elements ##
 
-1. Select **Insert a visual**, select **Charts** on the **Insert** tab, and then select **Column Chart**.
+Now, let's add some controls to the canvas to see scrolling screen can look. 
 
-	![The option to add a column chart](./media/add-scrolling-screen/add-chart.png)
+1. In the canvas you added, select **Insert a visual**:  
 
-	A column chart appears in the first card on the screen.
+	![][4]
 
-	![Default column chart](./media/add-scrolling-screen/default-chart.png)
+2. On the **Insert** tab, select **Charts**, and then select **Column Chart**:  
 
-1. On the **Insert** tab, select **Text** and then select **Pen**.
+	![The option to add a column chart][5]
 
-	![Option to add a pen control](./media/add-scrolling-screen/add-pen.png)
+	A column chart appears in the first card on the screen:  
 
-1. Move the pen control below the chart, and resize the pen control to cover the bottom of the card.
+	![Default column chart][7]
 
-	![Move and resize the pen control](./media/add-scrolling-screen/move-resize-pen.png)
+3. On the **Insert** tab, select **Text** and then select **Pen input**:  
+
+	![Option to add a pen control][8]
+
+4. Move the pen control below the chart, and resize the pen control to cover the bottom of the card:  
+
+	![Move and resize the pen control][9]
+
+5. Preview what you've created: ![][6]. You can scroll up and down to see the controls you added. 
+
 
 ## Add a section ##
 
-1. Near the bottom of the screen, select **Add section**.
+Now, let's add another card with another control. 
 
-	![Option to add a section](./media/add-scrolling-screen/add-section.png)
+1. Near the bottom of the screen, select **Add section**:  
 
-	A card is added to the screen
+	![Option to add a section][10]
 
-	![A new card below the default section](./media/add-scrolling-screen/new-card.png)
+	A new card is added to the screen:  
 
-1. With the card still selected, add a line chart, which is too big to appear on the screen with the other controls.
+	![A new card below the default section][11]
 
-	![A line chart added to the bottom of the new card](./media/add-scrolling-screen/add-line-chart.png)
+2. With the card still selected, go to the **Insert** tab, select **Charts**, and select **Line chart**. You'll notice the Line chart is too big to appear on the screen with the other controls:  
 
-1. Press F5 to display the app in Preview, and then scroll to display the line chart.
+	![A line chart added to the bottom of the new card][12]
 
-	![Preview shows the line chart](./media/add-scrolling-screen/line-chart-preview.png)
+3. Preview what you've created: ![][6]. Scroll down to display the new line chart:  
+
+	![Preview shows the line chart][13]
+
+## What you learned
+
+In this topic, you:
+
+- Added a scrolling screen to the app.
+- Added controls in different cards and when you preview your app, you see how scrolling up and down displays all the controls. 
+ 
+
+[1]: ./media/add-scrolling-screen/add-screen.png
+[2]: ./media/add-scrolling-screen/add-canvas.png
+[3]: ./media/add-scrolling-screen/default-canvas.png
+[4]: ./media/add-scrolling-screen/insert-visual.png
+[5]: ./media/add-scrolling-screen/add-chart.png
+[6]: ./media/add-scrolling-screen/preview.png
+[7]: ./media/add-scrolling-screen/default-chart.png
+[8]: ./media/add-scrolling-screen/add-pen.png
+[9]: ./media/add-scrolling-screen/move-resize-pen.png
+[10]: ./media/add-scrolling-screen/add-section.png
+[11]: ./media/add-scrolling-screen/new-card.png
+[12]: ./media/add-scrolling-screen/add-line-chart.png
+[13]: ./media/add-scrolling-screen/line-chart-preview.png

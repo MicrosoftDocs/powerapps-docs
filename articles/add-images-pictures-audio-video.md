@@ -14,18 +14,16 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/27/2016"
+   ms.date="04/28/2016"
    ms.author="anneta"/>
 
 # Add an image, a video, or a sound
 
 Make your app stand out by adding multimedia such as images, videos, and sounds. Upload one or more existing files, create content on the fly by using your device's camera or microphone, or draw with a pen on a virtual whiteboard.
 
-## Prerequisites
+&nbsp;
 
-- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
-- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-- Learn how to [add and configure controls](add-configure-controls.md).
+[AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Add media from a file ##
 You can choose which media option to add. For example, if you have some pictures or a video available, consider adding one of these. 
@@ -157,7 +155,7 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 	1. Add a text box, and set its **Text** property to **Sketches.RecognizedText**.
 	1. Press F5, and then write a word in the pen control.
 
-	The label shows the word as typed text.
+	The text shows the word as typed text.
 
 
 
