@@ -19,14 +19,16 @@
 	ms.author="mandia"/>
 
 # Add a scrolling screens #
-Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. The scrolling screen gives you the ability to add multiple controls, and allow users to see them all clearly by scrolling. When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
+Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. The scrolling screen gives you the ability to add multiple controls, and allow users to see them all clearly by scrolling. 
+
+When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
 
 &nbsp;
 
 [AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Create a scrolling screen ##
-1. On the **Home** tab, select **New screen**:
+1. On the **Home** tab, select **New screen**:  
 	![Option to add a screen to an app][1]
 
 2. On the **Home** tab, select **Layouts**, and then select the option to add an infinite scrolling canvas:  
