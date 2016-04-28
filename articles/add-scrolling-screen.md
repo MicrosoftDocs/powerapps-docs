@@ -18,7 +18,7 @@
 	ms.date="04/28/2016"
 	ms.author="mandia"/>
 
-# Add a scrolling screens #
+# Add a scrolling screen #
 Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. The scrolling screen gives you the ability to add multiple controls, and allow users to see them all clearly by scrolling. 
 
 When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
@@ -42,7 +42,7 @@ When you add multiple controls in a section, the controls maintain their relativ
 
 ## Add elements ##
 
-Now, let's add some controls to the canvas to see scrolling screen can look. 
+Now, let's add some controls to the canvas to see how the scrolling screen works. 
 
 1. In the canvas you added, select **Insert a visual**:  
 
