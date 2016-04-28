@@ -155,7 +155,7 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 	1. Add a text box, and set its **Text** property to **Sketches.RecognizedText**.
 	1. Press F5, and then write a word in the pen control.
 
-	The label shows the word as typed text.
+	The text shows the word as typed text.
 
 
 
