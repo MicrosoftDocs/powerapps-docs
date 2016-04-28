@@ -1,6 +1,6 @@
 <properties
     pageTitle="Release notes for PowerApps | Microsoft PowerApps"
-    description="Release nots"
+    description="Release notes"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -14,156 +14,136 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/13/2016"
+    ms.date="04/27/2016"
     ms.author="gregli"/>
 
 # Release notes for PowerApps release 2.0.410#
 
 ## PowerApps.com ##
-
 1. 	**Use apps directly on the web!**
 
-	Now you can find and use PowerApps on any device with a web browser.
+	You can find and use PowerApps on any device that has a web browser.
 
 2.  **A new home screen at PowerApps.com.**
 
 	Features include:
 	- Quick access to your apps
-	- Sample apps you can check out to get started
+	- Sample apps that you can check out to get started
 	- Documentation to learn more
-	
+
 3.	**A fresh new look for finding and managing your apps, connections, and notifications.**
 
-4.	**Improvements to sharing experience.**
+4.	**Improvements to the sharing experience.**
 
 	Users can now reshare apps and share apps with their organization.
 
 ## PowerApps Mobile ##
-
-1. 	**PowerApps Android is now available!**
+1. 	**PowerApps is now available for Android!**
 
 	Look for PowerApps in the [Android store](http://aka.ms/powerappsandroid).
 
-2. 	**PowerApps for iOS has a new look for finding and opening apps.**
-	
+2. 	**PowerApps has a new look for finding and opening apps on devices that run iOS.**
+
 	Update your app or install anew from the [Apple store](http://aka.ms/powerappsios).
 
-3. **Single sign on for Microsoft services that use Azure Active Directory.**
+3. **Single sign-on for Microsoft services that use Azure Active Directory.**
 
-	Sign in to PowerApps and you have access to your information on Office 365 without further authentication.
+	Sign in to PowerApps, and you have access to your information on Office 365 without further authentication.
 
-3. **Simplified first run experience and sign-in on mobile.**
+3. **Simplified sign-in and first-run experiences.**
 
-4. **Usability improvements to mobile clients.**
+4. **Usability improvements.**
 
 	We've added hamburger navigation and an app context menu.
 
-## PowerApps Studio for Windows ##
+## PowerApps Studio ##
 
-1. **Streamlined "New" page.**
+1. **Streamlined page for starting to create an app.**
 
-	- An updated “new” screen with more useful options for quickly getting to what you need.
-	- An improved create from data flow that includes better breadcrumbs and navigation
-	- Now you can see your most recently used SharePoint sites when creating an app from SharePoint Online, for those users who don’t have their SharePoint URLs memorized by heart
+	- More useful options for quickly getting to what you need.
+	- An improved flow, including better breadcrumbs and navigation, when you create an app from data.
+	- Now you can see your most recently used SharePoint sites when you create an app from SharePoint Online, for those users who don’t memorize their SharePoint URLs.
 
 3. **New guided product tour.**
 
-	A product tour to help new users get acquainted with the most important parts of the authoring experience.
+	A quick tour of the most important parts of the authoring experience to help new users get acquainted.
 
 1. **Contextual help links.**
 
-	We've made it much easier for you to find help in the product and connect with others through our communnity.
+	We've made it much easier for you to find help in the product and connect with others through our community.
 
-3. **New [Edit form](control-form-detail.md) and [Display form](control-form-detail.md) controls. As a result, an improved app from data.** 
+3. **New [Edit form](control-form-detail.md) and [Display form](control-form-detail.md) controls. As a result, better apps generated from data.**
 
-	Creating an app over data just became a whole lot easier.  With these new controls, and their associated cards and functions, you can create a basic data view and edit app without needing to manually call [**Patch**](function-patch.md), [**Validate**](function-validate.md), and other low level functions.
+	Creating an app over data just got a whole lot easier.  With these controls and their associated cards and functions, you can create a basic app to view and edit data without needing to manually call [**Patch**](function-patch.md), [**Validate**](function-validate.md), and other low-level functions.
 
-	These controls also offer a new configuration pane, where you can turn on and off fields and pick your desired card for each field.
+	These controls also offer a new configuration pane, where you can turn on and off fields and change the card for each field.
 
 	Check out [Understand data forms](working-with-data-forms.md) for more details.
 
-1. **Data source delegation of [Filter](function-filter-lookup.md) and [Sort](function-sort.md) improve performance and support large numbers of records.**
+1. **Data-source delegation of [Filter](function-filter-lookup.md) and [Sort](function-sort.md) improves performance and supports large numbers of records.**
 
-	Up until now, all Filter and Sort operations were handled on the device, requiring the time consuming and bandwidth choking fetch of all the data.  With this release, in certain situations, these operations can be delegated to the data source making your apps more responsive and able to handle a large number of records.  You can read more about it on the [Filter](function-filter-lookup.md) and [Sort](function-sort.md) pages.
+	Until now, all Filter and Sort operations were handled on the device, which required the time-consuming and bandwidth-choking fetch of all the data.  With this release, in certain situations, these operations can be delegated to the data source, which makes your apps more responsive and able to handle a large number of records.  You can read more about it on the [Filter](function-filter-lookup.md) and [Sort](function-sort.md) pages.
 
-	Delegation is limited to certain situations.  Apps created from data do not qualify.  See Known limitations later in this article for more details.  We will be expanding the scenarios in which delegation can be used.
+	Delegation is limited to certain situations. Apps created from data don't qualify.  See [Known limitations](#known-limitations) later in this article for more details.  We will expand the scenarios in which delegation can be used.
 
-	To take advantage of this new capability, the [**Gallery**](control-gallery.md) control now supports paging.  As the user reaches the end of a list of data, the control knows to fetch more from the service, seamlessly.
+	To take advantage of this new capability, the [**Gallery**](control-gallery.md) control now supports paging.  As the user reaches the end of a list of data, the control fetches more from the data source, seamlessly.
 
-1. **Improvements to the [PDF viewer](control-pdf-viewer.md) control: searching and scrolling.**
+1. **Search and scroll in the [PDF viewer](control-pdf-viewer.md) control.**
 
-	The PDF viewer control now supports full text search across the document.  
-
-	We have also added smooth scrolling between pages.  No longer do you need to move page by page.
+	The PDF viewer control now supports full-text search across the document, and we've added smooth scrolling between pages. No longer do you need to move page by page.
 
 1. **More connectors.**
 
-	We continue to add more connectors.  [Check out the list](http://gregli5/drafts/articles/connections-list.md) for the latest.
+	We continue to add connectors. [Check out the list](connections-list.md) for the latest.
 
-1. **Meta data refresh.**
+1. **Metadata refresh.**
 
-	No longer do you need to delete and re-add a connection in order to update your meta data.  One click and you are done.
+	Update your metadata with a single click or tap (instead of deleting a connection and adding it again).
 
-1. **New SharePoint site most recently used list.**
+1. **A list of your most recently used SharePoint sites.**
 
-	Building a bunch of apps for the same SharePoint site?  Making that easier, we now keep track of SharePoint sites you have recently used and make those easy for you to select again.   
+	Building a bunch of apps for the same SharePoint site? To make that easier, we track SharePoint sites that you've recently used so that you can easily select them again.   
 
-1. **Performance and data-handling improvements, along with many other usability and bug fixes, throughout!**
+1. **Performance and data-handling improvements, along with many other usability and bug fixes throughout!**
 
 ## Known limitations ##
+1.  **For apps created from data, the field used for sorting and searching isn't automatically configured.**
 
-1.  **For apps created from data, the field used for sorting and searching is not automatically configured.** 
+	To configure this field, edit the **Items** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
 
-	To configure, you will need to manually edit the **Items** formula for the gallery.  See steps 9 and 10 under [Create an app from SharePoint](app-from-sharepoint.md#create-an-app).
+2. **Co-authoring isn't supported. One author at a time, please.**
 
-2. **Co-authoring is not supported.  One author at a time please.**
+	You can corrupt an app or over-write others’ changes if more than one person modifies the same app at the same time. Close the app before someone else edits it.
 
-	It’s possible to corrupt your app or over-write others’ changes if two or more people are working on the same app at the same time.  Close the app before having someone else edit it.
+3. **In the [Form control](control-form-detail.md), you can't change data by using a custom card.**
 
-3. **In the [Form control](control-form-detail.md), custom cards cannot be used to change data.**
-
-	The stock custom card is missing the **Update** property, required for writing back changes.  To workaround this, 
-	- With the form control selected, insert a card through the right hand pane based on an the field you want to work with.  
+	The stock custom card is missing the **Update** property, which is required to write back changes. To work around this:
+	- Select the form control, and insert a card by using the right-hand pane based on the field that you want the card to show.  
 	- Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card.md).
 	- Remove or rearrange controls within the card as you see fit, just as you would with the custom card.   
 
-4. **For apps created from data, only the first 500 records of a data source can be worked with.**
+4. **For apps that are created from data, only the first 500 records of a data source can be accessed.**
 
-	In general, PowerApps works with any size data source by delegating operations to the data source.  For operations that cannot be delegated, PowerApps will give a warning at authoring time and operate only on the first 500 records of the data source.  See the [Filter function](function-filter-lookup.md) article for more details on delegation.  
+	In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](function-filter-lookup.md) article for more details about delegation.  
 
-	In this release, delegation does not support **Filter** and **Sort** functions used together nor does it support the **In** operator.  These are features that are used by apps created from data, and so, these apps are limited to the first 500 records.  To partially workaround this issue, you can remove one or both of the Filter and Sort functions from the gallery **Items** property.
+	In this release, delegation doesn't support **Filter** and **Sort** functions used together, nor does it support the **In** operator.  These features are used by apps that are created from data, so these apps are limited to the first 500 records. To partially work around this issue, you can remove one or both of the Filter and Sort functions from the gallery's **Items** property.
 
 5. **Card gallery is deprecated.**
 
-	Existing app that use this feature will continue to run for the time being.  However, you cannot insert a new one.  Please move to the new [**Form** control](control-form-detail.md).
+	Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new [**Form**](control-form-detail.md) control.
 
-5. **Apps running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash.**
+5. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash.**
 
-	Users can fix this problem by updating to a lower version of webview (3x) or update to Android 6.0.
+	Users can fix this problem by updating to a lower version of Webview (3x) or update to Android 6.0.
 
-6. **Camera usage on a device may be temporarily disabled if memory is low.**
+6. **Camera usage may be temporarily disabled if memory is low.**
 
-	If your mobile is low on memory, rather than crashing, we will temporarily disable the camera. 
+	If your mobile device is low on memory, the camera is temporarily disabled to avoid crashing the device.
 
 8. **It can sometimes take a moment before a newly shared app can be used.**
 
-	In some cases, a newly shared app will not be immeidately available.  Wait a few moments and it should become available.
+	In some cases, a newly shared app won't be immediately available.  Wait a few moments, and it should become available.
 
-9. **Sharing an app for editing does not also share the Flows.**
+9. **Sharing an app for editing doesn't also share the flows.**
 
-	The Flows must be shared seperately.  They can still be run, just not edited.
-
-   
-
-
-  
-	
-
-	
-
-
-
-
-
-
-
+	You must share the flows separately so that others can edit them, not just run them.
