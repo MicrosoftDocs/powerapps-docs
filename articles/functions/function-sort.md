@@ -38,6 +38,20 @@ You can combine **SortByColumns** with a **Drop down** or **List box** control t
 
 Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** doe not modify a table, instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](working-with-tables.md) for more details.
 
+## Delegation ##
+
+When possible, PowerApps will delegate filter and sort operations to the data source and page through the results on demand.  For example, when starting an app that shows a **Gallery** control filled with data, only the first set of records will be initially brought to the device.  As the user scrolls, additional data will be brought down from the data source.  The result is a faster start time for the app and access to very large data sets.
+
+However, delegation may not always be possible.  Data sources vary on what functions and operators they support while the PowerApps formula language is relatively rich.  If complete delegation of a formula is not possible, the authoring environment will flag the **Filter** or **Sort** formula as a warning.  When possible, consider changing the formula to avoid functions and operators that cannot be delegated.   
+
+PowerApps will delegate what it can, but will only pull down a small set of records to complete the work locally, at most 500 records.  **Filter** and **Sort** will continue to operate, but with a reduced set of records.  What is available in the **Gallery** may not be the complete story which could be confusing to users.  Aggregate operations, such as **Sum** and **Average**, will operate on only a portion of the data source and therefore may not give the result that is expected.
+
+Additional limitations on delegation (Which we are working to remove):
+- At this time, only **Filter** and **Sort** support delegation.  **LookUp** and **SortByColumns** support will be coming soon.
+- The data source must be provided directly as the first argument.  **Filter** and **Sort** functions cannot be nested.
+- For **Sort**, the formula can only be the name of a single column and cannot include other operators or functions.
+- For **Fitler**, the formula can include =, <>, <, >, >=, <=, &&, and || operators.  Only names of columns and values that do not depend on the data source can be used.  
+
 ## Syntax ##
 
 **Sort**( *Table*, *Formula* [, *SortOrder* ] )
