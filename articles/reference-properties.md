@@ -23,7 +23,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ## Controls ##
 
-**[Add picture](control-add-picture.md)** – Add image files to a data source.
+**[Add picture](control-add-picture.md)** – Load images from the local device, for upload to a data source.
 
 **[Audio](control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
@@ -133,7 +133,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### C ###
 
-[**CalculateOriginalDimensions**](controls\control-image.md) – Determine the original dimensions of the object, available on the **OriginalHeight** and **OriginalWidth** properties.  Applies to the [**Image**](controls\control-image.md) control.
+[**CalculateOriginalDimensions**](controls\control-image.md) – Enables the **OriginalHeight** and **OriginalWidth** properties.  Applies to the [**Image**](controls\control-image.md) control.
 
 [**Camera**](controls\control-camera.md) – On a device that has more than one camera, the numeric ID of the camera that the app uses.  Applies to the [**Camera**](controls\control-camera.md) control.
 
@@ -329,7 +329,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**OnStop**](controls\control-microphone.md) – How the app responds when the user stops recording with a microphone control.  Applies to the [**Microphone**](controls\control-microphone.md) control.
 
-[**OnStream**](controls\control-camera.md) – OnStream.  Applies to the [**Camera**](controls\control-camera.md) control.
+[**OnStream**](controls\control-camera.md) – How the app responds when the **Stream** property is updated.  Applies to the [**Camera**](controls\control-camera.md) control.
 
 [**OnSuccess**](controls\control-form-detail.md) – How an app responds when a data operation has been successful.  Applies to the [**Edit form**](controls\control-form-detail.md) control.
 
@@ -341,15 +341,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**OnVisible**](controls\control-screen.md) – How an app responds when the user navigates to a screen.  Applies to the [**Screen**](controls\control-screen.md) control.
 
-[**OriginalHeight**](controls\control-image.md) – Original height of the object.  Applies to the [**Image**](controls\control-image.md) control.
+[**OriginalHeight**](controls\control-image.md) – Original height of an image, enabled with the **CalculateOriginalDimensions** property.  Applies to the [**Image**](controls\control-image.md) control.
 
-[**OriginalWidth**](controls\control-image.md) – Original width of the object.  Applies to the [**Image**](controls\control-image.md) control.
+[**OriginalWidth**](controls\control-image.md) – Original width of an image, enabled with the **CalculateOriginalDimensions** property.  Applies to the [**Image**](controls\control-image.md) control.
 
 [**Overflow**](controls\control-text-box.md) – Whether a scrollbar appears in a text box if its **Wrap** property is set to **true** and the value of the control's **Text** property contains more characters than the control can show at one time.  Applies to the [**Text box**](controls\control-text-box.md) control.
 
 ### P ###
 
-[**Padding**](properties\properties-size-location.md) – The distance between the text on an import or export button and the edges of that button.  Applies to [**Export**](controls\control-export-import.md) and [**Import**](controls\control-export-import.md) controls.
+[**Padding**](properties\properties-size-location.md) – The distance between the text on an import or export button and the edges of that button.  Applies to [**Add picture**](controls\control-add-picture.md), [**Export**](controls\control-export-import.md), and [**Import**](controls\control-export-import.md) controls.
 
 [**PaddingBottom**](properties\properties-size-location.md) – The distance between text in a control and the bottom edge of that control.  Applies to many controls.
 
@@ -365,7 +365,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Paused**](controls\control-audio-video.md) – *True* if a media playback control is currently paused, *false* otherwise.  Applies to [**Audio**](controls\control-audio-video.md) and [**Video**](controls\control-audio-video.md) controls.
 
-[**Photo**](controls\control-camera.md) –  Applies to the [**Camera**](controls\control-camera.md) control.
+[**Photo**](controls\control-camera.md) – The image captured  when the user takes a picture.  Applies to the [**Camera**](controls\control-camera.md) control.
 
 [**Pressed**](controls\control-button.md) – *True* while a control is being pressed, *false* otherwise.  Applies to the [**Button**](controls\control-button.md) control.
 
@@ -445,9 +445,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**StartYear**](controls\control-date-picker.md) – The earliest year to which the user can set the value of a date-picker control.  Applies to the [**Date Picker**](controls\control-date-picker.md) control.
 
-[**Stream**](controls\control-camera.md) –  Applies to the [**Camera**](controls\control-camera.md) control.
+[**Stream**](controls\control-camera.md) – Automatically updated image based on the **StreamRate** property.  Applies to the [**Camera**](controls\control-camera.md) control.
 
-[**StreamRate**](controls\control-camera.md) –  Applies to the [**Camera**](controls\control-camera.md) control.
+[**StreamRate**](controls\control-camera.md) – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).  Applies to the [**Camera**](controls\control-camera.md) control.
 
 [**Strikethrough**](properties\properties-text.md) – Whether a line appears through the text that appears on a control.  Applies to many controls.
 

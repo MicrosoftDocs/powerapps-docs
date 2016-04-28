@@ -47,7 +47,7 @@ Configure how big a control (or an element of a control) is and where it is in r
 
 **Padding** – The distance between the text on an import or export button and the edges of that button.
 
-- Applies to [**Export**](controls\control-export-import.md) and [**Import**](controls\control-export-import.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Export**](controls\control-export-import.md), and [**Import**](controls\control-export-import.md) controls.
 
 **PaddingBottom** – The distance between text in a control and the bottom edge of that control.
 

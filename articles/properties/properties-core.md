@@ -31,7 +31,7 @@ Configure whether the user can see and interact with a control.
 
 **Disabled** – Whether the user can interact with the control.
 
-- Applies to [**Audio**](controls\control-audio-video.md), [**Button**](controls\control-button.md), [**Camera**](controls\control-camera.md), [**Check box**](controls\control-check-box.md), [**Column chart**](controls\control-column-line-chart.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Gallery**](controls\control-gallery.md), [**HTML text**](controls\control-html-text.md), [**Icon**](controls\control-shapes-icons.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), [**Line chart**](controls\control-column-line-chart.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**PDF viewer**](controls\control-pdf-viewer.md), [**Pen input**](controls\control-pen-input.md), [**Pie chart**](controls\control-pie-chart.md), [**Radio**](controls\control-radio.md), [**Rating**](controls\control-rating.md), [**Shape**](controls\control-shapes-icons.md), [**Slider**](controls\control-slider.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), [**Timer**](controls\control-timer.md), [**Toggle**](controls\control-toggle.md), and [**Video**](controls\control-audio-video.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Audio**](controls\control-audio-video.md), [**Button**](controls\control-button.md), [**Camera**](controls\control-camera.md), [**Check box**](controls\control-check-box.md), [**Column chart**](controls\control-column-line-chart.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Gallery**](controls\control-gallery.md), [**HTML text**](controls\control-html-text.md), [**Icon**](controls\control-shapes-icons.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), [**Line chart**](controls\control-column-line-chart.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**PDF viewer**](controls\control-pdf-viewer.md), [**Pen input**](controls\control-pen-input.md), [**Pie chart**](controls\control-pie-chart.md), [**Radio**](controls\control-radio.md), [**Rating**](controls\control-rating.md), [**Shape**](controls\control-shapes-icons.md), [**Slider**](controls\control-slider.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), [**Timer**](controls\control-timer.md), [**Toggle**](controls\control-toggle.md), and [**Video**](controls\control-audio-video.md) controls.
 
 **Items** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
@@ -39,7 +39,7 @@ Configure whether the user can see and interact with a control.
 
 **OnChange** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-- Applies to [**Drop down**](controls\control-drop-down.md), [**List Box**](controls\control-list-box.md), [**Radio**](controls\control-radio.md), [**Rating**](controls\control-rating.md), [**Slider**](controls\control-slider.md), [**Text input**](controls\control-text-input.md), and [**Toggle**](controls\control-toggle.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Drop down**](controls\control-drop-down.md), [**List Box**](controls\control-list-box.md), [**Radio**](controls\control-radio.md), [**Rating**](controls\control-rating.md), [**Slider**](controls\control-slider.md), [**Text input**](controls\control-text-input.md), and [**Toggle**](controls\control-toggle.md) controls.
 
 **OnSelect** – How the app responds when the user taps or clicks a control.
 
@@ -51,7 +51,7 @@ Configure whether the user can see and interact with a control.
 
 **Text** – Text that appears on a control or that the user types into a control.
 
-- Applies to [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
 **Tooltip** – Explanatory text that appears when the user hovers over a control.
 

@@ -46,13 +46,13 @@ If you add this control, the user can update a data source with one or more phot
 
 [**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
-**OnStream** – OnStream.
+**OnStream** – How the app responds when the **Stream** property is updated.
 
-**Photo** –
+**Photo** – The image captured  when the user takes a picture.
 
-**Stream** –
+**Stream** – Automatically updated image based on the **StreamRate** property.
 
-**StreamRate** –
+**StreamRate** – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).
 
 [**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
