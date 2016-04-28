@@ -28,7 +28,7 @@ The **Filter** function finds records in a table that satisfy a formula.  Use **
 
 The **LookUp** function finds the first record in a table that satisfies a formula.  Use **LookUp** to find a single record that matches one or more criteria.
 
-For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  [Columns](working-with-tables.md#columns) of the table can be used in the formula, as well as control properties and other values from throughout your app.  Besides the normal formula [operators](operators.md), you can use the [**in**](operators.md#in-and-exactin-operators) and [**exactin**](operators.md#in-and-exactin-operators) operators for substring matches. 
+For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  [Columns](working-with-tables.md#columns) of the table can be used in the formula, as well as control properties and other values from throughout your app.  Besides the normal formula [operators](operators.md), you can use the [**in**](operators.md#in-and-exactin-operators) and [**exactin**](operators.md#in-and-exactin-operators) operators for substring matches.
 
 **Filter** returns a table that contains the same columns as the original table and the records that match the criteria.  **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value.  If no records are found, **Filter** returns an [empty](function-isblank-isempty.md) table, and **LookUp** returns *blank*.  
 
@@ -43,11 +43,11 @@ However, delegation may not always be possible.  Data sources vary on what funct
 
 PowerApps will delegate what it can, but will only pull down a small set of records to complete the work locally, at most 500 records.  **Filter** and **Sort** will continue to operate, but with a reduced set of records.  What is available in the **Gallery** may not be the complete story which could be confusing to users.  Aggregate operations, such as **Sum** and **Average**, will operate on only a portion of the data source and therefore may not give the result that is expected.
 
-Additional limitations on delegation (Which we are working to remove):
+Additional limitations on delegation (which we are working to remove):
 - At this time, only **Filter** and **Sort** support delegation.  **LookUp** and **SortByColumns** support will be coming soon.
 - The data source must be provided directly as the first argument.  **Filter** and **Sort** functions cannot be nested.
 - For **Sort**, the formula can only be the name of a single column and cannot include other operators or functions.
-- For **Fitler**, the formula can include =, <>, <, >, >=, <=, &&, and || operators.  Only names of columns and values that do not depend on the data source can be used.  
+- For **Filter**, the formula can include =, <>, <, >, >=, <=, &&, and || operators.  Only names of columns and values that do not depend on the data source can be used.  
 
 ## Syntax ##
 
@@ -78,4 +78,3 @@ The following examples use the **IceCream** [data source](working-with-data-sour
 | **LookUp( IceCream, Quantity > 150, Quantity + OnOrder )** | Searches for a record with **Quantity** greater than 100, of which there are multiple.  For the first record that's found, which is "Vanilla" **Flavor**, returns the sum of **Quantity** and **OnOrder** columns. | 250 |
 | **LookUp( IceCream, Flavor = "Pistachio", OnOrder )** | Searches for a record with **Flavor** equal to "Pistachio", of which there are none.  Because none were found, **Lookup** returns *blank*. | *blank* |
 | **LookUp( IceCream, Flavor = "Vanilla" )** | Searches for a record with **Flavor** equal to "Vanilla", of which there is one.  Since no reduction formula was supplied, the entire record is returned. | { Flavor: "Vanilla", Quantity: 200, OnOrder: 75 } |
-
