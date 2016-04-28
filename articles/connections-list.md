@@ -15,7 +15,7 @@
 	ms.tgt_pltfrm="na"
 	ms.devlang="na"
 	ms.topic="get-started-article"
-	ms.date="04/27/2016"
+	ms.date="04/28/2016"
 	ms.author="mandia"/>
 
 # List of available connections
@@ -38,10 +38,11 @@ Just getting started with PowerApps? Learn [how to add connections](add-manage-c
 | [![API Icon][mailchimpicon]][mailchimpdoc] | [**MailChimp**][mailchimpdoc]  <br/> Connect to MailChimp to create new campaigns, manage your lists, and more || [![API Icon][microsofttranslatoricon]][microsofttranslatordoc] | [**Microsoft Translator**][microsofttranslatordoc] <br/> Connect to Microsoft Translator to translate text into different languages, and more | 
 | [![API Icon][office365icon]][office365outlookdoc] | [**Office 365 Outlook**][office365outlookdoc] <br/> Connect to Office 365 Outlook to send and receive emails, manage your calendar, and manage your contacts || [![API Icon][office365icon]][office365usersdoc] | [**Office 365 Users**][office365usersdoc] <br/> Connect to Office 365 Users to view profile information, get direct reports, and more |
 | [![API Icon][office365icon]][office365videodoc] | [**Office 365 Video**][office365videodoc] <br/> Connect to Office 365 to check the status of a video, return channels, and more || [![API Icon][onedriveicon]][onedrivedoc] | [**OneDrive**][onedrivedoc] <br/> Connect to your personal OneDrive to upload and manage files |
-| [![API Icon][salesforceicon]][salesforcedoc] | [**Salesforce**][salesforcedoc] <br/> Connect to your Salesforce account to manage accounts, leads, opportunities, and more ||  [![API Icon][sendgridicon]][sendgriddoc] | [**SendGrid**][sendgriddoc] <br/> Connect to SendGrid to send email and manage recipient lists |
-| [![API Icon][sftpicon]][sftpdoc] | [**SFTP**][sftpdoc]  <br/> Connects to SFTP and can upload, get, delete files, and more || [![API Icon][sharepointicon]][sharepointdoc] | [**SharePoint Online**][sharepointdoc]  <br/> Connects to SharePoint Online to manage documents and list items |
-| [![API Icon][slackicon]][slackdoc] | [**Slack**][slackdoc]  <br/> Connect to Slack and post messages to Slack channels || [![API Icon][smtpicon]][smtpdoc] | [**SMTP**][smtpdoc]  <br/> Connects to a SMTP server and can send email with attachments|
-| [![API Icon][twilioicon]][twiliodoc] | [**Twilio**][twiliodoc]  <br/> Connects to Twilio to send and get messages, get available numbers, and more || [![API Icon][twittericon]][twitterdoc] | [**Twitter**][twitterdoc]  <br/> Connects to Twitter and get timelines, post tweets, and more |
+| [![API Icon][onedriveforbusinessicon]][onedriveforbusinessdoc] | [**OneDrive for Business**][onedriveforbusinessdoc] <br/> Connect to your OneDrive for Business account to upload and manage files || [![API Icon][salesforceicon]][salesforcedoc] | [**Salesforce**][salesforcedoc] <br/> Connect to your Salesforce account to manage accounts, leads, opportunities, and more |
+|  [![API Icon][sendgridicon]][sendgriddoc] | [**SendGrid**][sendgriddoc] <br/> Connect to SendGrid to send email and manage recipient lists || [![API Icon][sftpicon]][sftpdoc] | [**SFTP**][sftpdoc]  <br/> Connects to SFTP and can upload, get, delete files, and more |
+| [![API Icon][sharepointicon]][sharepointdoc] | [**SharePoint Online**][sharepointdoc]  <br/> Connects to SharePoint Online to manage documents and list items || [![API Icon][slackicon]][slackdoc] | [**Slack**][slackdoc]  <br/> Connect to Slack and post messages to Slack channels |
+| [![API Icon][smtpicon]][smtpdoc] | [**SMTP**][smtpdoc]  <br/> Connects to a SMTP server and can send email with attachments|| [![API Icon][twilioicon]][twiliodoc] | [**Twilio**][twiliodoc]  <br/> Connects to Twilio to send and get messages, get available numbers, and more |
+| [![API Icon][twittericon]][twitterdoc] | [**Twitter**][twitterdoc]  <br/> Connects to Twitter and get timelines, post tweets, and more ||||
 
 
 ## Custom APIs
@@ -64,6 +65,7 @@ You can also create your own custom APIs, and then add these connections within 
 [office365usersdoc]: ./connections/connection-office365-users.md "Connect to Office 365 Users to look up manager information, view profiles, and more"
 [office365videodoc]: ./connections/connection-office365-video.md "Connect to Office 365 to check the status of a video, return channels, and more"
 [onedrivedoc]: ./connections/connection-onedrive.md "Connects to your personal Microsoft OneDrive and upload, list files, and more."
+[onedriveforbusinessdoc]: ./connections/connection-onedrive-for-business.md "Connects to your Microsoft OneDrive for Business account to upload, list files, and more."
 [salesforcedoc]: ./connections/connection-salesforce.md "Connect to your Salesforce account and manage  accounts, opportunities, and more."
 [servicebusdoc]: ./connections/connection-azure-servicebus.md "Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions."
 [sendgriddoc]: ./connections/connection-sendgrid.md "Connect to SendGrid to send email and manage recipient lists"
@@ -91,6 +93,7 @@ You can also create your own custom APIs, and then add these connections within 
 [microsofttranslatoricon]: ./media/connections-list/translatoricon.png
 [office365icon]: ./media/connections-list/office365icon.png
 [onedriveicon]: ./media/connections-list/onedriveicon.png
+[onedriveforbusinessicon]: ./media/connections-list/onedriveforbusinessicon.png
 [salesforceicon]: ./media/connections-list/salesforceicon.png
 [servicebusicon]: ./media/connections-list/servicebusicon.png
 [sendgridicon]: ./media/connections-list/sendgridicon.png
