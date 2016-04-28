@@ -20,11 +20,11 @@
 
 # Add a screen and navigate between screens #
 
-Create an app with multiple screens, add ways for users to navigate between them, and manage data in your app by creating and updating one or more context variables. 
+Create an app with multiple screens, and add ways for users to navigate between them.
 
 ## What you need to get started ##
 
-- Sign-in to PowerApps or the [PowerApps portal][1].
+- Sign in to PowerApps or the [PowerApps portal][1].
 - Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 - Learn how to [configure a control](add-configure-controls.md).
 
