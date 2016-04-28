@@ -115,8 +115,8 @@ With this release, we [support a wide assortment of connections](connections-lis
 - Dynamics CRM
 - SQL
 - OneDrive for Business
-- DropBox
-- GoogleDrive
+- Dropbox
+- Google Drive
 - Slack
 - Twilio
 - Yammer
