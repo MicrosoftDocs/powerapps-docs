@@ -30,9 +30,11 @@ A **Gallery** control can show records from a data source, and each record can c
 
 [**Items**](properties\properties-core.md) – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-**ShowScrollbar** – Whether a scrollbar appears when the user hovers over a gallery.
+**Selected** – The selected item.
 
 ## Additional properties ##
+
+**AllItems** – All items in a gallery, including additional control values that are a part of the gallery's template.
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
@@ -53,6 +55,8 @@ A **Gallery** control can show records from a data source, and each record can c
 **NavigationStep** – How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
 
 **ShowNavigation** – Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.
+
+**ShowScrollbar** – Whether a scrollbar appears when the user hovers over a gallery.
 
 **Snap** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.
 

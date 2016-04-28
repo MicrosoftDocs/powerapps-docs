@@ -96,11 +96,16 @@ The **[Errors](function-errors.md)** function returns a table of error informati
 
 ## Collections ##
 
-Collections are a special kind of data source.  They're local to the app and not backed by a connection to a service.  They operate like any other data source, with a few exceptions:
+Collections are a special kind of data source.  They're local to the app and not backed by a connection to a service in the cloud, so the information can not be shared across devices for the same user or between users.  They operate like any other data source, with a few exceptions:
 
 - Collections can be created dynamically with the **[Collect](function-clear-collect-clearcollect.md)** function.  They don't need to be established ahead of time, as connection-based data sources do.
 - The columns of a collection can be modified at any time using the **[Collect](function-clear-collect-clearcollect.md)** function.
 - Collections allow duplicate records.  More than one copy of the same record can exist in a collection.  Functions such as **[Remove](function-remove-removeif.md)** will operate on the first match they find, unless the **All** argument is supplied.
 - You can use the **[SaveData](function-savedata-loaddata.md)** and **[LoadData](function-savedata-loaddata.md)** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
+- You can use the **[Export](control-export-import.md)** and **[Import](control-export-import.md)** controls to save and reload a copy of the collection to a file that the user can interact with.  
+
+For more information on working with a collection as a data source, see [create and update a collection](create-update-collection.md).
 
 Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
+
+

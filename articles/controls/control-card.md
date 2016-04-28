@@ -45,21 +45,21 @@ See [Understand data cards](working-with-data-cards.md) for examples of how to c
 - Specify the name as a single static string that's enclosed in double quotation marks (for example, **"Name"**), not a formula.
 - Unbind a card by setting its **DataField** property *blank*. The **Valid** and **Update** properties are ignored for unbound cards.
 
-[**Default**](properties\properties-core.md) – The initial value of a control before the user changes it.
+[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
 
 - For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **Default** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
 
-**DisplayName** – The user-friendly name for a field in a data source.
+**DisplayName** – The user friendly name for a field in a data source.
 
 - The **DataSourceInfo** function provides this metadata from the data source.
 - Controls within the card should use **Parent.DisplayName** to refer to the name of the field.
 
-**Error** – The user-friendly error message to display for this field if validation fails.
+**Error** – The user friendly error message to display for this field when validation fails.
 
 - This property is set when **SubmitForm** is called.  
 - The message describes validation problems based on the data source's metadata and checking the card's **Required** property.
 
-**Required** – Whether the user must specify a value for this field when editing or creating a record.
+**Required** – Whether a card, editing the field of a data source, must contain a value.
 
 - The **DataSourceInfo** function provides the required metadata from the data source.
 - Controls within the card should use **Parent.Required** to determine whether that card's field is required.

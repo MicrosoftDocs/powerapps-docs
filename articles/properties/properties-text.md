@@ -53,7 +53,7 @@ Configure the text that appears on a control, in a tooltip, as a hint when the u
 
 **Align** – The location of text in relation to the horizontal center of its control.
 
-- Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
 **LineHeight** – The distance between, for example, lines of text or items in a list.
 

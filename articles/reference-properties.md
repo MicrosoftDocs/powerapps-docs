@@ -105,7 +105,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### A ###
 
+[**ActualZoom**](controls\control-pdf-viewer.md) – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+
 [**Align**](properties\properties-text.md) – The location of text in relation to the horizontal center of its control.  Applies to many controls.
+
+[**AllItems**](controls\control-gallery.md) – All items in a gallery, including additional control values that are a part of the gallery's template.  Applies to the [**Gallery**](controls\control-gallery.md) control.
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to [**Button**](controls\control-button.md) and [**Image**](controls\control-image.md) controls.
 
@@ -129,6 +133,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### C ###
 
+[**CalculateOriginalDimensions**](controls\control-image.md) – Determine the original dimensions of the object, available on the **OriginalHeight** and **OriginalWidth** properties.  Applies to the [**Image**](controls\control-image.md) control.
+
 [**Camera**](controls\control-camera.md) – On a device that has more than one camera, the numeric ID of the camera that the app uses.  Applies to the [**Camera**](controls\control-camera.md) control.
 
 [**CheckboxBackgroundFill**](controls\control-check-box.md) – The background color of the box that surrounds the checkmark in a checkbox control.  Applies to the [**Check box**](controls\control-check-box.md) control.
@@ -149,6 +155,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Contrast**](controls\control-camera.md) – How easily the user can distinguish between similar colors in an image.  Applies to the [**Camera**](controls\control-camera.md) control.
 
+[**CurrentFindText**](controls\control-pdf-viewer.md) – The current search term that is in use.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+
+[**CurrentPage**](controls\control-pdf-viewer.md) – The number of the page in a PDF file that is actually being shown.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+
 ### D ###
 
 [**Data**](controls\control-export-import.md) – The name of a collection that you want to export to a local file.  Applies to the [**Export**](controls\control-export-import.md) control.
@@ -158,6 +168,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 [**DataSource**](controls\control-form-detail.md) – The data source that contains the record that the user will show, edit, or create.  Applies to [**Display form**](controls\control-form-detail.md) and [**Edit form**](controls\control-form-detail.md) controls.
 
 [**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.  Applies to many controls.
+
+[**DefaultDate**](controls\control-date-picker.md) – The initial value of a date control before it is changed by the user.  Applies to the [**Date Picker**](controls\control-date-picker.md) control.
 
 [**Direction**](controls\control-gallery.md) – Whether the first item in a gallery in landscape orientation appears near the left or right edge.  Applies to the [**Gallery**](controls\control-gallery.md) control.
 
@@ -181,6 +193,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Error** – The meaning of this property is dependent on the control: 
 
+- [**Add picture**](controls\control-add-picture.md) control - If there is a problem uploading an image, this property will contain an appropriate error string.
 - [**Card**](controls\control-card.md) control – The user friendly error message to display for this field when validation fails.
 - [**Edit form**](controls\control-form-detail.md) control – A user friendly error message to display for this form when the **SubmitForm** function fails.
 
@@ -191,6 +204,12 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### F ###
 
 [**Fill**](properties\properties-color-border.md) – The background color of a control.  Applies to many controls.
+
+[**FindNext**](controls\control-pdf-viewer.md) – Finds the next instance of **FindText** in the document.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+
+[**FindPrevious**](controls\control-pdf-viewer.md) – Finds the previous instance of **FindText** in the document.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+
+[**FindText**](controls\control-pdf-viewer.md) – The search term to look for in the document.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
 
 [**Font**](properties\properties-text.md) – The name of the family of fonts in which text appears.  Applies to many controls.
 
@@ -224,7 +243,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**Image**](properties\properties-visual.md) – The name of the image that appears in an image, audio, or microphone control.  Applies to [**Audio**](controls\control-audio-video.md), [**Image**](controls\control-image.md), [**Microphone**](controls\control-microphone.md), and [**Video**](controls\control-audio-video.md) controls.
 
-[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to [**Audio**](controls\control-audio-video.md), [**Image**](controls\control-image.md), [**Microphone**](controls\control-microphone.md), [**Screen**](controls\control-screen.md), and [**Video**](controls\control-audio-video.md) controls.
+[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
 
 [**Input**](controls\control-pen-input.md) – Input.  Applies to the [**Pen input**](controls\control-pen-input.md) control.
 
@@ -266,7 +285,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**MaxLength**](controls\control-text-input.md) – The number of characters that the user can type into a text-input control.  Applies to the [**Text input**](controls\control-text-input.md) control.
 
-[**Media**](controls\control-audio-video.md) – An identifier for the clip that an audio or video control plays.  Applies to [**Audio**](controls\control-audio-video.md) and [**Video**](controls\control-audio-video.md) controls.
+**Media** – An identifier for the clip that an audio or video control plays.  Applies to [**Add picture**](controls\control-add-picture.md), [**Audio**](controls\control-audio-video.md), and [**Video**](controls\control-audio-video.md) controls.
 
 [**Mic**](controls\control-microphone.md) – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.  Applies to the [**Microphone**](controls\control-microphone.md) control.
 
@@ -306,6 +325,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **OnStart** – How the app responds when the user starts to record with a microphone control.  Applies to [**Audio**](controls\control-audio-video.md), [**Microphone**](controls\control-microphone.md), and [**Video**](controls\control-audio-video.md) controls.
 
+[**OnStateChange**](controls\control-pdf-viewer.md) – How an app responds when the state of the control changes.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+
 [**OnStop**](controls\control-microphone.md) – How the app responds when the user stops recording with a microphone control.  Applies to the [**Microphone**](controls\control-microphone.md) control.
 
 [**OnStream**](controls\control-camera.md) – OnStream.  Applies to the [**Camera**](controls\control-camera.md) control.
@@ -319,6 +340,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 **OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.  Applies to [**Check box**](controls\control-check-box.md) and [**Toggle**](controls\control-toggle.md) controls.
 
 [**OnVisible**](controls\control-screen.md) – How an app responds when the user navigates to a screen.  Applies to the [**Screen**](controls\control-screen.md) control.
+
+[**OriginalHeight**](controls\control-image.md) – Original height of the object.  Applies to the [**Image**](controls\control-image.md) control.
+
+[**OriginalWidth**](controls\control-image.md) – Original width of the object.  Applies to the [**Image**](controls\control-image.md) control.
 
 [**Overflow**](controls\control-text-box.md) – Whether a scrollbar appears in a text box if its **Wrap** property is set to **true** and the value of the control's **Text** property contains more characters than the control can show at one time.  Applies to the [**Text box**](controls\control-text-box.md) control.
 
@@ -334,7 +359,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.  Applies to many controls.
 
-[**Page**](controls\control-pdf-viewer.md) – The number of the page in a PDF file that you want to show.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+[**Page**](controls\control-pdf-viewer.md) – The number of the page that you want to show.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+
+[**PageCount**](controls\control-pdf-viewer.md) – The number of pages in a document.  Applies to the [**PDF viewer**](controls\control-pdf-viewer.md) control.
+
+[**Paused**](controls\control-audio-video.md) – *True* if a media playback control is currently paused, *false* otherwise.  Applies to [**Audio**](controls\control-audio-video.md) and [**Video**](controls\control-audio-video.md) controls.
+
+[**Photo**](controls\control-camera.md) –  Applies to the [**Camera**](controls\control-camera.md) control.
+
+[**Pressed**](controls\control-button.md) – *True* while a control is being pressed, *false* otherwise.  Applies to the [**Button**](controls\control-button.md) control.
 
 [**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.  Applies to many controls.
 
@@ -352,13 +385,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**RadioSize**](controls\control-radio.md) – The diameter of the circles in a radio-button control.  Applies to the [**Radio**](controls\control-radio.md) control.
 
-[**RadiusBottomLeft**](properties\properties-size-location.md) – The degree to which the bottom-left corner of a control is rounded.  Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), and [**Text input**](controls\control-text-input.md) controls.
+[**RadiusBottomLeft**](properties\properties-size-location.md) – The degree to which the bottom-left corner of a control is rounded.  Applies to many controls.
 
-[**RadiusBottomRight**](properties\properties-size-location.md) – The degree to which the bottom-right corner of a control is rounded.  Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), and [**Text input**](controls\control-text-input.md) controls.
+[**RadiusBottomRight**](properties\properties-size-location.md) – The degree to which the bottom-right corner of a control is rounded.  Applies to many controls.
 
-[**RadiusTopLeft**](properties\properties-size-location.md) – The degree to which the top-left corner of a control is rounded.  Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), and [**Text input**](controls\control-text-input.md) controls.
+[**RadiusTopLeft**](properties\properties-size-location.md) – The degree to which the top-left corner of a control is rounded.  Applies to many controls.
 
-[**RadiusTopRight**](properties\properties-size-location.md) – The degree to which the top-right corner of a control is rounded.  Applies to [**Button**](controls\control-button.md), [**Export**](controls\control-export-import.md), [**Image**](controls\control-image.md), [**Import**](controls\control-export-import.md), and [**Text input**](controls\control-text-input.md) controls.
+[**RadiusTopRight**](properties\properties-size-location.md) – The degree to which the top-right corner of a control is rounded.  Applies to many controls.
 
 **RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to [**Slider**](controls\control-slider.md) and [**Toggle**](controls\control-toggle.md) controls.
 
@@ -376,6 +409,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### S ###
 
+**Selected** – The selected item.  Applies to [**Drop down**](controls\control-drop-down.md) and [**Gallery**](controls\control-gallery.md) controls.
+
+[**SelectedDate**](controls\control-date-picker.md) – The date currently selected in a date control.  Applies to the [**Date Picker**](controls\control-date-picker.md) control.
+
 [**SelectionColor**](properties\properties-color-border.md) – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to [**Drop down**](controls\control-drop-down.md), [**List Box**](controls\control-list-box.md), and [**Pen input**](controls\control-pen-input.md) controls.
 
 [**SelectionFill**](properties\properties-color-border.md) – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to [**Drop down**](controls\control-drop-down.md) and [**List Box**](controls\control-list-box.md) controls.
@@ -388,7 +425,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**SeriesAxisMin**](controls\control-column-line-chart.md) – A number that determines the minimum value of the y-axis for a column chart.  Applies to the [**Column chart**](controls\control-column-line-chart.md) control.
 
-**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to [**Audio**](controls\control-audio-video.md), [**Pen input**](controls\control-pen-input.md), and [**Video**](controls\control-audio-video.md) controls.
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to [**Audio**](controls\control-audio-video.md), [**PDF viewer**](controls\control-pdf-viewer.md), [**Pen input**](controls\control-pen-input.md), and [**Video**](controls\control-audio-video.md) controls.
 
 [**ShowLabels**](controls\control-pie-chart.md) – Whether a pie chart shows the value that's associated with each of its wedges.  Applies to the [**Pie chart**](controls\control-pie-chart.md) control.
 
@@ -408,6 +445,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 [**StartYear**](controls\control-date-picker.md) – The earliest year to which the user can set the value of a date-picker control.  Applies to the [**Date Picker**](controls\control-date-picker.md) control.
 
+[**Stream**](controls\control-camera.md) –  Applies to the [**Camera**](controls\control-camera.md) control.
+
 [**StreamRate**](controls\control-camera.md) –  Applies to the [**Camera**](controls\control-camera.md) control.
 
 [**Strikethrough**](properties\properties-text.md) – Whether a line appears through the text that appears on a control.  Applies to many controls.
@@ -421,6 +460,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 [**TemplateSize**](controls\control-gallery.md) – The height of the template for a gallery in vertical/portrait orientation or the width of the template for a gallery in horizontal/landscape orientation.  Applies to the [**Gallery**](controls\control-gallery.md) control.
 
 [**Text**](properties\properties-core.md) – Text that appears on a control or that the user types into a control.  Applies to many controls.
+
+[**Time**](controls\control-audio-video.md) – A media control's current position.  Applies to [**Audio**](controls\control-audio-video.md) and [**Video**](controls\control-audio-video.md) controls.
 
 [**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.  Applies to many controls.
 
@@ -440,13 +481,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Valid** – Whether a **Card** or **Edit form** control contains valid entries, ready to be submitted to the data source.  Applies to [**Card**](controls\control-card.md) and [**Edit form**](controls\control-form-detail.md) controls.
 
-[**Value**](properties\properties-core.md) – The value of an input control.  Applies to [**Radio**](controls\control-radio.md), [**Slider**](controls\control-slider.md), and [**Toggle**](controls\control-toggle.md) controls.
+[**Value**](properties\properties-core.md) – The value of an input control.  Applies to [**Check box**](controls\control-check-box.md), [**Radio**](controls\control-radio.md), [**Slider**](controls\control-slider.md), and [**Toggle**](controls\control-toggle.md) controls.
 
 **ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to [**Slider**](controls\control-slider.md) and [**Toggle**](controls\control-toggle.md) controls.
 
 **ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to [**Slider**](controls\control-slider.md) and [**Toggle**](controls\control-toggle.md) controls.
 
-[**VerticalAlign**](properties\properties-text.md) – The location of text on a control in relation to the vertical center of that control.  Applies to [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), and [**Text box**](controls\control-text-box.md) controls.
+[**VerticalAlign**](properties\properties-text.md) – The location of text on a control in relation to the vertical center of that control.  Applies to many controls.
 
 [**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.  Applies to many controls.
 

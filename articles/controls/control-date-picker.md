@@ -26,9 +26,9 @@ If you add a **Date Picker** control instead of a **Text input** control, you he
 
 ## Key properties ##
 
-**EndYear** – The latest year to which the user can set value of a date-picker control.
+**DefaultDate** – The initial value of a date control before it is changed by the user.
 
-**StartYear** – The earliest year to which the user can set the value of a date-picker control.
+**SelectedDate** – The date currently selected in a date control.
 
 ## Additional properties ##
 
@@ -47,6 +47,8 @@ If you add a **Date Picker** control instead of a **Text input** control, you he
 [**DisabledColor**](properties\properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
 
 [**DisabledFill**](properties\properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
+
+**EndYear** – The latest year to which the user can set value of a date-picker control.
 
 [**Fill**](properties\properties-color-border.md) – The background color of a control.
 
@@ -69,6 +71,8 @@ If you add a **Date Picker** control instead of a **Text input** control, you he
 [**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.
 
 [**Size**](properties\properties-text.md) – The font size of the text that appears on a control.
+
+**StartYear** – The earliest year to which the user can set the value of a date-picker control.
 
 [**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
 

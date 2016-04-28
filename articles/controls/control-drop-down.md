@@ -32,6 +32,8 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 [AZURE.INCLUDE [long-items](../../includes/long-items.md)]
 
+**Selected** – The selected item.
+
 ## Additional properties ##
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
@@ -109,10 +111,6 @@ A **Drop down** control conserves screen real estate, especially when the list c
 [**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
 [**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
-
-## Related functions ##
-
-[**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
 
 ## Example ##
 1. Add a **Button** control, and set its **Text** property to show **Collect**.

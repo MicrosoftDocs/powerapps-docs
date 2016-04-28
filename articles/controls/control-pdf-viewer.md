@@ -29,11 +29,18 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 **Document** – The URL, enclosed in double-quotation marks, of a PDF file.
 
 ## Additional properties ##
+
+**ActualZoom** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.
+
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
 [**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 [**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
+
+**CurrentFindText** – The current search term that is in use.
+
+**CurrentPage** – The number of the page in a PDF file that is actually being shown.
 
 [**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
@@ -41,11 +48,19 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 [**Fill**](properties\properties-color-border.md) – The background color of a control.
 
+**FindNext** – Finds the next instance of **FindText** in the document.
+
+**FindPrevious** – Finds the previous instance of **FindText** in the document.
+
+**FindText** – The search term to look for in the document.
+
 [**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
 
 [**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
 [**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
+
+**OnStateChange** – How an app responds when the state of the control changes.
 
 [**PaddingBottom**](properties\properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
 
@@ -55,9 +70,13 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 [**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.
 
-**Page** – The number of the page in a PDF file that you want to show.
+**Page** – The number of the page that you want to show.
+
+**PageCount** – The number of pages in a document.
 
 [**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
+
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
 [**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
@@ -70,10 +89,6 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 [**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
-
-## Related functions ##
-
-[**Remove**( *DataSource*, ThisItem )](function-remove-removeif.md)
 
 ## Example ##
 - Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>

@@ -30,6 +30,8 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 [**Text**](properties\properties-core.md) – Text that appears on a control or that the user types into a control.
 
+[**Value**](properties\properties-core.md) – The value of an input control.
+
 ## Additional properties ##
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
