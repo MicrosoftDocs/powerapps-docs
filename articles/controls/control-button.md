@@ -76,6 +76,8 @@ Configure the **OnSelect** property of a **Button** control to run one or more f
 
 [**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.
 
+**Pressed** – *True* while a control is being pressed, *false* otherwise.
+
 [**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
 [**PressedColor**](properties\properties-color-border.md) – The color of text in a control when the user taps or clicks that control.

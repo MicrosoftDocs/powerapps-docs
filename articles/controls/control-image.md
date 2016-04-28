@@ -38,6 +38,8 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 [**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
 
+**CalculateOriginalDimensions** – Determine the original dimensions of the object, available on the **OriginalHeight** and **OriginalWidth** properties.
+
 [**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
 [**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
@@ -55,6 +57,10 @@ If you add one or more **Image** controls to your app, you can show individual i
 [**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
 [**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
+
+**OriginalHeight** – Original height of the object.
+
+**OriginalWidth** – Original width of the object.
 
 [**PaddingBottom**](properties\properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
 

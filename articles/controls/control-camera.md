@@ -48,6 +48,10 @@ If you add this control, the user can update a data source with one or more phot
 
 **OnStream** – OnStream.
 
+**Photo** –
+
+**Stream** –
+
 **StreamRate** –
 
 [**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.

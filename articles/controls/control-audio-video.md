@@ -60,11 +60,15 @@ An **Audio** control plays a sound clip from a file, a recording from a **Microp
 
 **OnStart** – How the app responds when the user starts to record with a microphone control.
 
+**Paused** – *True* if a media playback control is currently paused, *false* otherwise.
+
 [**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
 
 **Start** – Whether an audio or video clip plays.
 
 **StartTime** – The time after the start of an audio or video clip when the clip starts to play.
+
+**Time** – A media control's current position.
 
 [**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
 

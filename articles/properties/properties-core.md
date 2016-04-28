@@ -59,7 +59,7 @@ Configure whether the user can see and interact with a control.
 
 **Value** – The value of an input control.
 
-- Applies to [**Radio**](controls\control-radio.md), [**Slider**](controls\control-slider.md), and [**Toggle**](controls\control-toggle.md) controls.
+- Applies to [**Check box**](controls\control-check-box.md), [**Radio**](controls\control-radio.md), [**Slider**](controls\control-slider.md), and [**Toggle**](controls\control-toggle.md) controls.
 
 **Visible** – Whether a control appears or is hidden.
 

@@ -24,7 +24,9 @@
 ## Description ##
 If you add this control, your app can upload image files from the user and update your data source with fresh content.
 
-## Additional properties ##
+## Properties ##
+
+[**Align**](properties\properties-text.md) – The location of text in relation to the horizontal center of its control.
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
@@ -36,6 +38,8 @@ If you add this control, your app can upload image files from the user and updat
 
 [**DisabledFill**](properties\properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
 
+**Error** - If there is a problem uploading an image, this property will contain an appropriate error string.
+
 [**Fill**](properties\properties-color-border.md) – The background color of a control.
 
 [**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
@@ -43,6 +47,8 @@ If you add this control, your app can upload image files from the user and updat
 [**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
 [**HoverFill**](properties\properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
+
+**Media** – An identifier for the clip that an audio or video control plays.
 
 [**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
 
