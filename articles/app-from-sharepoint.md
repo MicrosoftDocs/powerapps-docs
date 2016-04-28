@@ -54,37 +54,37 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	![](./media/app-from-sharepoint/Menu.png)
 
-1. Under **Create an app from your data**, select Phone layout on the **SharePoint Online** tile.  
+2. Under **Create an app from your data**, select Phone layout on the **SharePoint Online** tile.  
 
 	![](./media/app-from-sharepoint/AFD.png)
 
-1. If you haven't connected to SharePoint Online before, select **Connect** when prompted, and then provide your credentials.  
+3. If you haven't connected to SharePoint Online before, select **Connect** when prompted, and then provide your credentials.  
 
-  ![](./media/app-from-sharepoint/Connect.png)
+	![](./media/app-from-sharepoint/Connect.png)
 
-1. Under **Connect to a SharePoint site**, type or paste the URL of the SharePoint site that you want to use, and then select **Go**.  
+4. Under **Connect to a SharePoint site**, type or paste the URL of the SharePoint site that you want to use, and then select **Go**.  
 
 	![Specify the SharePoint site](./media/app-from-sharepoint/EnterSite.png)
 
-1. Under **Choose a list**, select the list that you want to use and then select **Connect**.  
+5. Under **Choose a list**, select the list that you want to use and then select **Connect**.  
 
 	![Select a list](./media/app-from-sharepoint/SelectList.png)
 
-  Here are the columns of the SharePoint Online custom list that is used for the examples in this article:  
-  ![](./media/app-from-sharepoint/ListColumns.png)
+	Here are the columns of the SharePoint Online custom list that is used for the examples in this article:  
+	![](./media/app-from-sharepoint/ListColumns.png)
 
-  PowerApps builds an app that has three screens:
+	PowerApps builds an app that has three screens:  
 
-  - **BrowseScreen1** shows a list of all items and some information about the items, so that users can easily browse for the item they want.
-  - **DetailScreen1** shows all information about a single item.
-  - **EditScreen1** provides a [**Form**](./add-form.md) control for adding an item or updating information about an item.
+	- **BrowseScreen1** shows a list of all items and some information about the items, so that users can easily browse for the item they want.  
+	- **DetailScreen1** shows all information about a single item.  
+	- **EditScreen1** provides a [**Form**](./add-form.md) control for adding an item or updating information about an item.  
 
 ## Customize the app ##
 When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
 
 1. If you haven't used PowerApps before, take the intro tour by reading each description before selecting **Next** (and then selecting **Done**), or select **Skip**.
 
-1. On the **Home** tab of the ribbon, select **Layouts**, and then select then select an option that includes images.  
+2. On the **Home** tab of the ribbon, select **Layouts**, and then select then select an option that includes images.  
 
 	![Layout option with icons](./media/app-from-sharepoint/change-layout.png)
 
@@ -94,13 +94,13 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	**Note**: If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
 
-1. In the list thumbnails, select **DetailScreen1**.  
+3. In the list thumbnails, select **DetailScreen1**.  
 ![](./media/app-from-sharepoint/left-pane.png)
 
-1. Select a field on the screen that you want to customize.  
+4. Select a field on the screen that you want to customize.  
 ![](./media/app-from-sharepoint/SelectField.png)
 
-1. In the **Options** pane, you can use the card selector to change the control that is used to display this field in the **DetailsScreen1**.  
+5. In the **Options** pane, you can use the card selector to change the control that is used to display this field in the **DetailsScreen1**.  
 ![](./media/app-from-sharepoint/CardSelector.png)  
 
 	The following tables lists the supported cards for each SharePoint Online list column type:  
@@ -121,10 +121,10 @@ When an app is built automatically, heuristics suggest the best layout and conte
 | Choice | View lookup |
 
 
-1. If you select the **View lookup** card for a field, then you have the option to choose which property of the field is displayed in the card.  To do so, select the **Ellipsis** next to the field in the **Options** pane and select **Advanced Options**.  
+6. If you select the **View lookup** card for a field, then you have the option to choose which property of the field is displayed in the card.  To do so, select the **Ellipsis** next to the field in the **Options** pane and select **Advanced Options**.  
 ![](./media/app-from-sharepoint/Elipsis.png)
 
-1. In the **Data** section, select the property of the field you want to be displayed using the **Value** dropdown.  
+7. In the **Data** section, select the property of the field you want to be displayed using the **Value** dropdown.  
 ![](./media/app-from-sharepoint/AdvancedOptions.png)
 
 ## Run the app ##
@@ -134,19 +134,19 @@ As you customize the app, you can test your changes by running the app in **Prev
 
 	![Preview icon](./media/app-from-sharepoint/open-preview.png)
 
-1. On **BrowseScreen1**, select the arrow for a record to show details about that record.  
+2. On **BrowseScreen1**, select the arrow for a record to show details about that record.  
 
 	![Select an arrow on BrowseScreen1](./media/app-from-sharepoint/preview-item.png)
 
-1. On **DetailsScreen1**, select the edit icon (in the upper-right corner) to edit the record.  
+3. On **DetailsScreen1**, select the edit icon (in the upper-right corner) to edit the record.  
 
 	![Edit a record](./media/app-from-sharepoint/select-edit.png)
 
-1. On **EditScreen1**, change the information in one or more fields, and then select the check mark in the upper-right corner to save your changes.  
+4. On **EditScreen1**, change the information in one or more fields, and then select the check mark in the upper-right corner to save your changes.  
 
 	![Save changes on EditScreen1](./media/app-from-sharepoint/edit-item.png)
 
-1. Editing the item in the app will update the record in the SharePoint Online list.  
+5. Editing the item in the app will update the record in the SharePoint Online list.  
 
 	![Updated List](./media/app-from-sharepoint/UpdatedList.png)
 
