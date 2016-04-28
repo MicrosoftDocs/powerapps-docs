@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="jamesol-msft"
-    manager="darshand"
+    manager="erikre"
     editor=""
     tags=""
 />
@@ -15,19 +15,19 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/24/2016"
+    ms.date="04/28/2016"
     ms.author="jamesol"/>
 
 # Restore an app to a previous version #
 
-This article introduces you on how to restore an app to a previous version that was saved to the cloud from your PowerApps account.
+This article shows you how to restore an app to a previous version that was saved to the cloud from your PowerApps account.
 
 ## Restore an app from your account ##
 
-1. On [powerapps.com](1), select **My Apps** in the left navigation bar.  
+1. On [powerapps.com][1], select **My Apps** in the left navigation bar.  
 ![](./media/restore-an-app/new-file-apps-portal.png)
 
-1. Select the ellipsis on tile of the app that you want to restore, and click **Details**.  
+1. Select the ellipsis on tile of the app that you want to restore, and select **Details**.  
 ![](./media/restore-an-app/new_tile_details.png)
 
 1. Select the **Versions** tab.  
@@ -39,15 +39,16 @@ This article introduces you on how to restore an app to a previous version that 
 1. Confirm that you want to restore to this version and select **Restore**.  
 ![](./media/restore-an-app/new_portal_version_list_restore_button.png)
 
-1. If successful, you will see a new version added to your version list.  
+1. When successful, you see a new version added to your version list.  
 ![](./media/restore-an-app/new_portal_version_list_new_version_added.png)
 
 ## Resources
 
 Here are some other good resources for managing your apps:
 
-[Share an app](./share-app.md)
-
-[Change app name and tile](./set-name-tile.md)
-
+[Share an app](./share-app.md)  
+[Change app name and tile](./set-name-tile.md)  
 [Delete an app](./delete-app.md)
+
+
+[1]: https://web.powerapps.com
