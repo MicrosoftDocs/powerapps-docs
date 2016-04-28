@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/27/2016"
+   ms.date="04/28/2016"
    ms.author="mandia"/>
 
 
@@ -22,11 +22,9 @@
 
 PowerApps includes multi-select and single-select options, including a listbox, a drop-down list, and radio buttons. In this topic, we add these controls and use a **Table** formula to build the lists. When an item is selected in the list, it updates other controls.
 
-## Prerequisites
+&nbsp;
 
-- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
-- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+[AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Add a listbox
 

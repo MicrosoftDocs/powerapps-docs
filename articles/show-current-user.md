@@ -28,12 +28,9 @@ For example, you can use this feature to:
 
 Basically, you can use this anywhere users would benefit from an automatically-populated form or automatically-populated labels.
 
+&nbsp;
 
-## Prerequisites
-
-- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
-- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+[AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Add User
 In these steps, we're going to display the image, full name, and email address of the current signed-in user.
