@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/25/2015"
+   ms.date="04/27/2016"
    ms.author="mandia"/>
 
 
@@ -22,9 +22,10 @@
 
 PowerApps includes multi-select and single-select options, including a listbox, a drop-down list, and radio buttons. In this topic, we add these controls and use a **Table** formula to build the lists. When an item is selected in the list, it updates other controls.
 
-### Prerequisites
+## Prerequisites
 
-- Create an app or open an existing app in PowerApps.
+- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
+- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 - Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Add a listbox
@@ -51,11 +52,11 @@ PowerApps includes multi-select and single-select options, including a listbox, 
 
 6. Set the **Visible** property of the following shapes to the following functions:  
 
-	Shape | Set function to | Example
---- | --- | ---
-circle | ```If("circle" in MyListbox!SelectedItems!Value, true)``` | ![][7]
-triangle | ```If("triangle" in MyListbox!SelectedItems!Value, true)``` | ![][8]
-rectangle | ```If("rectangle" in MyListbox!SelectedItems!Value, true)``` | ![][9]
+	|Shape | Set Visible function to |
+	|--- | --- | 
+	|circle | ```If("circle" in MyListBox.SelectedItems.Value, true)``` | 
+	|triangle | ```If("triangle" in MyListbox.SelectedItems.Value, true)``` | 
+	|rectangle | ```If("rectangle" in MyListbox.SelectedItems.Value, true)``` | 
 
 7. Preview what you've created ![][1]. Select the different shapes in the listbox. Only the shape or shapes you select appear. Press **ESC** or select the **X** to go back to your screen.
 
@@ -82,9 +83,7 @@ In these steps, you used an expression to create a list of items in a listbox. D
 4. On the **Insert** tab, select **Shapes**, and then select the circle.
 
 1. Set the **Fill** property of the circle to the following function:  
-```If(Choices!Selected!Value = "red", RGBA(192, 0, 0, 1), Choices!Selected!Value = "green", RGBA(0, 176, 80, 1), Choices!Selected!Value = "blue", RGBA(0, 32, 96, 1))```  
-
-	![][13]  
+```If(Choices.Selected.Value = "red", RGBA(192, 0, 0, 1), Choices.Selected.Value = "green", RGBA(0, 176, 80, 1), Choices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```  
 
 	In this formula, the circle changes its color depending on which radio button you choose.
 
@@ -95,14 +94,14 @@ In these steps, you used an expression to create a list of items in a listbox. D
 
 ## Add a drop-down list ##
 
-1. Add a screen, and then add a drop-down control.
+1. Add a new screen, and then add a drop-down control.
 
 	![][15]  
 1. Rename the control to **DDChoices**, and set its **Items** property to this formula:<br>
 **["red","green","blue"]**
 
-1. Add a circle, and set its **Fill** property to this formula:  
-```If(DDChoices!Selected!Value = "red", RGBA(192, 0, 0, 1), DDChoices!Selected!Value = "green", RGBA(0, 176, 80, 1), DDChoices!Selected!Value = "blue", RGBA(0, 32, 96, 1))```
+1. Add a circle, move it below the drop-down control, and set the circle's **Fill** property to this formula:  
+```If(DDChoices.Selected.Value = "red", RGBA(192, 0, 0, 1), DDChoices.Selected.Value = "green", RGBA(0, 176, 80, 1), DDChoices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```
 
 2. Preview what you've created: ![][1]. Select the different options to change the color of the circle.
 
@@ -132,12 +131,8 @@ In this topic, you:
 [4]: ./media/add-list-box-drop-down-list-radio-button/itemslistbox.png
 [5]: ./media/add-list-box-drop-down-list-radio-button/circle.png
 [6]: ./media/add-list-box-drop-down-list-radio-button/allshapes.png
-[7]: ./media/add-list-box-drop-down-list-radio-button/visiblecircle.png
-[8]: ./media/add-list-box-drop-down-list-radio-button/visibletriangle.png
-[9]: ./media/add-list-box-drop-down-list-radio-button/visiblerectangle.png
 [10]: ./media/add-list-box-drop-down-list-radio-button/radiobutton.png
 [11]: ./media/add-list-box-drop-down-list-radio-button/renameradio.png
 [12]: ./media/add-list-box-drop-down-list-radio-button/itemsradio.png
-[13]: ./media/add-list-box-drop-down-list-radio-button/fillradio.png
 [14]: ./media/add-list-box-drop-down-list-radio-button/radiocircle.png
 [15]: ./media/add-list-box-drop-down-list-radio-button/dropdown.png
