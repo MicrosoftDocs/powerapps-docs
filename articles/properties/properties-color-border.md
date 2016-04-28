@@ -41,7 +41,7 @@ These proeprties are in effect normally, when the user is not interacting with t
 
 **Color** – The color of text in a control.
 
-- Applies to [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Column chart**](controls\control-column-line-chart.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**HTML text**](controls\control-html-text.md), [**Import**](controls\control-export-import.md), [**Line chart**](controls\control-column-line-chart.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**Pen input**](controls\control-pen-input.md), [**Pie chart**](controls\control-pie-chart.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Column chart**](controls\control-column-line-chart.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**HTML text**](controls\control-html-text.md), [**Import**](controls\control-export-import.md), [**Line chart**](controls\control-column-line-chart.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**Pen input**](controls\control-pen-input.md), [**Pie chart**](controls\control-pie-chart.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
 **Fill** – The background color of a control.
 
@@ -57,7 +57,7 @@ These properties are in effect when the controls is disabled.  A control can be 
 
 **DisabledColor** – The color of text in a control if its **Disabled** property is set to **true**.
 
-- Applies to [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Date Picker**](controls\control-date-picker.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
 **DisabledFill** – The background color of a control if its **Disabled** property is set to **true**.
 
@@ -73,7 +73,7 @@ These properties are in effect when the user hovers over the control with a mous
 
 **HoverColor** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-- Applies to [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
 **HoverFill** – The background color of a control when the user keeps the mouse pointer on it.
 
@@ -89,7 +89,7 @@ These properties are in effect when a button or image control is pressed.
 
 **PressedColor** – The color of text in a control when the user taps or clicks that control.
 
-- Applies to [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
+- Applies to [**Add picture**](controls\control-add-picture.md), [**Button**](controls\control-button.md), [**Check box**](controls\control-check-box.md), [**Drop down**](controls\control-drop-down.md), [**Export**](controls\control-export-import.md), [**Import**](controls\control-export-import.md), [**List Box**](controls\control-list-box.md), [**Microphone**](controls\control-microphone.md), [**Radio**](controls\control-radio.md), [**Text box**](controls\control-text-box.md), [**Text input**](controls\control-text-input.md), and [**Timer**](controls\control-timer.md) controls.
 
 **PressedFill** – The background color of a control when the user taps or clicks that control.
 

@@ -19,20 +19,24 @@
    ms.author="anneta"/>
 
 # Add picture control in PowerApps #
-[AZURE.INCLUDE [control-summary-add-picture](../../includes/control-summary-add-picture.md)]
+Load images from the local device, for upload to a data source.
 
 ## Description ##
 If you add this control, your app can upload image files from the user and update your data source with fresh content.
 
-## Properties ##
+This control is a composite control, made up of two controls.  Press or tap once to select the outer control that shows the image that has been loaded.  Press or tap again to select the inner text box control.
 
-[**Align**](properties\properties-text.md) – The location of text in relation to the horizontal center of its control.
+## Outer control properties ##
+
+These properties apply to the outer control. 
 
 [**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
 
 [**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 [**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
+
+[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
 
 [**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
@@ -63,6 +67,40 @@ If you add this control, your app can upload image files from the user and updat
 [**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
 [**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+
+## Inner text properties ##
+
+These properties apply to the inner text box control that by default says "Tap or click to add a picture".  To select this inner control, press or tap the **Add picture** control once, and then again.
+
+[**Align**](properties\properties-text.md) – The location of text in relation to the horizontal center of its control.
+
+[**Color**](properties\properties-color-border.md) – The color of text in a control.
+
+[**DisabledColor**](properties\properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
+
+[**Font**](properties\properties-text.md) – The name of the family of fonts in which text appears.
+
+[**FontWeight**](properties\properties-text.md) – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+
+[**HoverColor**](properties\properties-color-border.md) – The color of the text in a control when the user keeps the mouse pointer on it.
+
+[**Italic**](properties\properties-text.md) – Whether the text in a control is italic.
+
+[**OnChange**](properties\properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+
+[**Padding**](properties\properties-size-location.md) – The distance between the text on an import or export button and the edges of that button.
+
+[**PressedColor**](properties\properties-color-border.md) – The color of text in a control when the user taps or clicks that control.
+
+[**Size**](properties\properties-text.md) – The font size of the text that appears on a control.
+
+[**Strikethrough**](properties\properties-text.md) – Whether a line appears through the text that appears on a control.
+
+[**Text**](properties\properties-core.md) – Text that appears on a control or that the user types into a control.
+
+[**Underline**](properties\properties-text.md) – Whether a line appears under the text that appears on a control.
+
+[**VerticalAlign**](properties\properties-text.md) – The location of text on a control in relation to the vertical center of that control.
 
 ## Related functions ##
 
