@@ -59,7 +59,7 @@ When users run your app, they can add their own images from existing files. In a
 
 The picture is displayed.
 
-**Important** To retain the image after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save it locally, or use the [Patch](function-patch.md) function to save it to a data source.
+**Important** To retain the image after the app is closed, use the [SaveData](./functions/function-savedata-loaddata.md) function to save it locally, or use the [Patch](./functions/function-patch.md) function to save it to a data source.
 
 ## Take a set of pictures
 Take multiple pictures with the camera on your computer or mobile device, and then show them in a gallery.
@@ -86,7 +86,7 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 7. When you finish adding and removing images from the gallery, press Esc to return to the default workspace.
 
-**Important** To retain the images after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
+**Important** To retain the images after the app is closed, use the [SaveData](./functions/function-savedata-loaddata.md) function to save them locally, or use the [Patch](./functions/function-patch.md) function to save them to a data source.
 
 ## Record a set of sounds
 1. On the **Insert** tab, select **Text**, and then select **Text input**. Rename it **Description**.
@@ -120,7 +120,7 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 1. (optional) In the gallery, set the **OnSelect** property of the text box to **Remove(Interviews, ThisItem)**, press F5, and then select a description to remove it and its recording.
 
-**Important** To retain the sounds after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
+**Important** To retain the sounds after the app is closed, use the [SaveData](./functions/function-savedata-loaddata.md) function to save them locally, or use the [Patch](./functions/function-patch.md) function to save them to a data source.
 
 ## Draw a picture ##
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
@@ -150,7 +150,7 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 1. Repeat these steps as many times as you want, and then press Esc to return to the default workspace.
 
-	**Important** To retain the images after the app is closed, use the [SaveData](function-savedata-loaddata.md) function to save them locally, or use the [Patch](function-patch.md) function to save them to a data source.
+	**Important** To retain the images after the app is closed, use the [SaveData](./functions/function-savedata-loaddata.md) function to save them locally, or use the [Patch](./functions/function-patch.md) function to save them to a data source.
 
 1. (optional) Convert written text to typed text:
 
