@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Understanding forms | Microsoft PowerApps"
+	pageTitle="Understand forms | Microsoft PowerApps"
 	description="Use forms to collect and display information from a data source."
 	services=""
 	suite="powerapps"
@@ -15,10 +15,10 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/08/2015"
+   ms.date="04/27/2016"
    ms.author="gregli"/>
 
-# Understanding data forms #
+# Understand data forms #
 Add three types of controls so that the user can browse for a record, display details about that record, and edit or create a record:
 
 | Activity | Control | Description |
@@ -269,105 +269,83 @@ To add navigation to and from this screen:
 
 	When updates are successfully saved, the previous screen (in this case, the details screen) opens automatically.
 
-	![Edit form form with added "OnSuccess" rule](./media/working-with-forms/edit-icecream-onsuccess.png)
+	![Edit form with added "OnSuccess" rule](./media/working-with-forms/edit-icecream-onsuccess.png)
 
-7. Return to the second screen, hosting our **Display form** control.
-
-8. Insert another button from the "Insert" tab.
-
-9. Change the caption of this button to **"Edit"**.
-
-10. Change the **OnSelect** property of this control to: **Navigate( Screen3, None )**.
+7. On the **Display** screen, add a button, set its **Text** property to show **Edit**, and set its **OnSelect** property to this formula:<br> **Navigate( Screen3, None )**
 
 	![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-edit.png)
 
-We have now completed our basic three screen data viewing and entry app.  Let's try it out: press the forward arrow "Preview" button at the top of the screen (or press F5).  The pink dot indicates where the user is tapping on the screen at each step.
+You've built a basic app with three screens for viewing and entering data.  To try it out, select the forward arrow "Preview" button near the upper-left corner of the screen (or press F5). The pink dot indicates where the user clicks or taps the screen at each step.
 
 ![Try out the ice cream app](./media/working-with-forms/try-icecream.png)
 
-## Creating new records ##
+## Create a record ##
+The user interacts with the same **Edit** form to both update and create records. When the user wants to create a record, the **NewForm** function switches the form to **New** mode.
 
-The **Edit form** control is also used to create new records.  To shift from editing record to creating records, you call the **NewForm** function to place the form in to **New** mode.
+When the form is in **New** mode, the value of each field is set to the defaults of the data source. The record that's provided to the form's **Item** property is ignored.  
 
-When in **New** mode, the value of each field is taken from the defaults of the data source. The record provided to the form's **Item** property is ignored.  
+When the user is ready to save the new record, **SubmitForm** runs. After the form is successfully submitted, the form is switched back to **EditMode**.  
 
-When **SubmitForm** is called, a new record will be created instead of editing an existing record. Once the form has been successfully submitted the form is again returned to **EditMode**.  
+On the first screen, you'll add a **New** button:
 
-Let's return to our first screen to add a "New" button:
+1. On the screen with the gallery, add a **Button** control.
 
-1. Select the first screen, hosting our **Gallery** control.
+1. Set the button's **Text** property to **New** and its **OnSelect** property to this formula:<br>
+**NewForm( Form1 ); Navigate( Screen3, None )**
 
-2. Using the "Insert" tab, add a new **Button** control.
-
-3. Change the caption to "New".
-
-4. Set the **OnSelect** property for the button: **NewForm( Form1 ); Navigate( Screen3, None )**.  This will place the **Edit form** control on **Screen3** into "New" mode and take us to the third screen to fill it in.
+	This formula switches the **Edit form** control on **Screen3** to **New** mode and opens that screen so that the user can fill it in.
 
 ![Display form with added "Edit" button](./media/working-with-forms/gallery-icecream-new.png)
 
-When we travel to the third screen now, the form will be empty, ready for us to add a new item.  Pressing "Save" now will create a record instead of editing an existing record (thanks to the **SubmitForm** function).  Without changing the formula, pressing "Cancel" will reset the form and exit "New" mode for the form (thanks to the **ResetForm** function), and return us to the gallery (thanks to the **Back** function).
+When the Edit and Create screen opens, the form is empty, ready for the user to add an item. When the user selects the **Save** button, the **SubmitForm** function ensures that a record is created instead of being updated. If the user selects the **Cancel** button, the **ResetForm** function switches the form back to **Edit** mode, and the **Back** function opens the screen for browsing the gallery.
 
-## Deleting records ##
+## Delete a record ##
+1. On the **Display** screen, add a button, and set its **Text** property to show **Delete**..
 
-Your users may want to delete records too.  
+1. Set the button's **OnSelect** property to this formula:
+<br>**Remove( 'Ice Cream', Gallery1.Selected ); Back()**
 
-2. Select the second screen, hosting our **Display form** control.
-
-2. Using the "Insert" tab, add a new **Button** control.
-
-3. Change the caption to "Delete".
-
-4. Set the **OnSelect** property to: **Remove( 'Ice Cream', Gallery1.Selected ); Back()**
-
-![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-remove.png)
+	![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-remove.png)
 
 ## Handling errors ##
+In this app, an error occurs when the value of a field is not valid, a required field is blank, you're disconnected from the network, or any number of other problems pop up.  
 
-Errors happen.  The value of a field may be invalid, a blank field may be required, you may be disconnected from the network, or any number of other problems may pop up.  
+If **SubmitForm** fails for any reason, the **Error** property of the **Edit form** control contains an error message to show the user. With this information, the user should be able to correct the issue and resubmit the change, or they can cancel the update.
 
-If **SubmitForm** fails for any reason, the **Error** property of the **Edit form** control will contain an error message to show the user.  With this information, the user should be able to correct the issue and resubmit, or they can choose to cancel the edit.
+1. On the Edit and Create screen, add a **Text box** control, and move it just below the **Save** button.
 
-1. Select the third screen, hosting our **Edit form** control.
+	Any error will be easy to see after the user selects this control to save changes.
 
-2. Insert a **Text** control.  Place it just below the "Save" button, so that the error is easy to see after the user has pressed this control to save their changes.
-
-3. Set the **Text** property of this control to: **Form1.Error**.
+3. Set the **Text** property of the **Text box** control to show **Form1.Error**.
 
 ![Display form with added "Edit" button](./media/working-with-forms/edit-icecream-error.png)
 
-The app from data that is created by PowerApps sets the **AutoHeight** property on this control to *true* so that there is no space consumed if there is no error.  The **Height** and **Y** properties of the **Edit form** control are also adjusted dynamically to account for this control growing when there is an error.  For more details, create an app from data and inspect these properties.  As the error text control is very short when there is no error, you may need to use the "Advanced" view (available on the "View" tab) to select this control.
+In an app that PowerApps generates from data, the **AutoHeight** property on this control is set to *true* so that no space is consumed if no error occurs. The **Height** and **Y** properties of the **Edit form** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to use the **Advanced** view (available on the **View** tab) to select this control.
 
 ![App from data edit form with error text control selected](./media/working-with-forms/edit-assets-error1.png)
 
 ![App from data edit form with form control selected](./media/working-with-forms/edit-assets-error2.png)
 
-## Refreshing data ##
+## Refresh data ##
+The data source is refreshed whenever the user opens the app, but the user might want to refresh the records in the gallery without closing the app. Add a **Refresh** button so that the user can select it to manually refresh the data:
 
-When the app is opened, the data source is refreshed.  To manually refresh the records in the gallery, you can add a "Refresh" button:
+1. On the screen with the **Gallery** control, add a **Button** control and set its **Text** property to **Refresh**.
 
-1. Select the first screen, hosting our **Gallery** control.
-
-2. Add a **Button** control from the "Insert" tab.
-
-3. Change the caption on this control to "Refresh".
-
-4. Set the **OnSelect** property of this control to: **Refresh( 'Ice Cream' )**
+4. Set the **OnSelect** property of this control to this formula:<br> **Refresh( 'Ice Cream' )**
 
 ![Refresh the data source](./media/working-with-forms/browse-icecream-refresh.png)
 
-## Searching and sorting the gallery ##
-
-Let's return to that app from data we had previously.  There were some controls that we neglected to discuss previously.  These extra two controls enable the user to search for a set of records or a particular record, and to sort the result up or down.  
+## Search and sort the gallery ##
+In the app that PowerApps generated from data, we neglected to discuss two controls at the top of the Browse screen. By using these controls, the user can search for one or more records, sort the list of records in ascending or descending order, or both.
 
 ![Sorting and searching controls on browse screen](./media/working-with-forms/afd-browse-search-sort.png)
 
-Let's look at the sort button at the top first.  This button, when pressed, will cause the sort order of the gallery to reverse.  To accomplish this, we use a *context variable* to hold which direction we are currently sorting.  When the button is pressed, we reverse the direction.
+When the user selects the sort button, the sort order of the gallery reverses. To create this behavior, we use a *context variable* to track the direction in which the gallery is sorted. When the user selects the button, the variable is updated, and the direction reverses. The **OnSelect** property of the sort button is set to this formula:
+**UpdateContext( {SortDescending1: !SortDescending1} )**
 
-- **ImageSortUpDown1.OnSelect = UpdateContext( {SortDescending1: !SortDescending1} )**
+The **UpdateContext** function creates the **SortDescending1** context variable if it doesn't already exist. The function will read the value of the variable and set it to the logical opposite by using the **!** operator. If the value is *true*, it becomes *false*. If the value is *false*, it becomes *true*.
 
-The **UpdateContext** function will create the **SortDescending1** context variable if it does not already exist.  It will read it's value, and using the **!** operator, set it to its logical opposite: if it is *true* it will become *false* and if it is *false* it will become *true*.
-
-We then craft a formula for the **Items** property of the **Gallery** control to use this context variable, along with the text in the **TextSearchBox1** control:
+The formula for the **Items** property of the **Gallery** control uses this context variable, along with the text in the **TextSearchBox1** control:
 
 	Gallery1.Items = Sort( If( IsBlank(TextSearchBox1.Text),
                                Assets,
@@ -378,25 +356,23 @@ We then craft a formula for the **Items** property of the **Gallery** control to
 
 Let's break this down:
 
-- On the outside, we have the **Sort** function.  This takes a table as an argument, a field to sort on, and the direction to sort.  
-	- The sort direction is taken from the context variable that the **ImageSortUpDown1** control toggles, translating the *true*/*false* value to the constants **Descending** and **Ascending**.
-	- The field to sort on is fixed to **ApproverEmail**.  If the fields shown in the gallery are changed, this argument will also need to be changed.
+- On the outside, we have the **Sort** function, which takes three arguments: a table, a field on which to sort, and the direction in which to sort.  
+	- The sort direction is taken from the context variable that toggles when the user selects the **ImageSortUpDown1** control. The *true*/*false* value is translated to the constants **Descending** and **Ascending**.
+	- The field to sort on is fixed to **ApproverEmail**. If you change the fields that appear in the gallery, you'll need to change this argument too.
 
-- On the inside, we have the **Filter** function.  This takes a table as an argument, and a filter expression to evaluate for each record.
-	- The filter table is the raw **Assets** data source.  This is our starting point before filtering or sorting.
-	- The filter expression searches for an instance of the string in **TextSearchBox1** within the **AproverEmail** field.  Again, if we change the fields shown in the gallery, this argument will also need to be updated.
-	- There is check to ensure that **TextSearchBox1** is not empty.  If it is, the user is asking for all records, and the **Filter** function is bypassed.
+- On the inside, we have the **Filter** function, which takes a table as an argument and an expression to evaluate for each record.
+	- The table is the raw **Assets** data source, which is the starting point before filtering or sorting.
+	- The expression searches for an instance of the string in **TextSearchBox1** within the **ApproverEmail** field.  Again, if you change the fields that appear in the gallery, you'll also need to update this argument.
+	- If **TextSearchBox1** is empty, the user wants to show all records, and the **Filter** function is bypassed.
 
-This is but one example, you can craft your own formula for the **Items** property depending on the needs of your app, composing **Filter**, **Sort**, and other functions and operators together.    
+This is but one example; you can craft your own formula for the **Items** property, depending on the needs of your app, by composing **Filter**, **Sort**, and other functions and operators together.    
 
-## Screen layouts ##
+## Screen design ##
+So far, we haven't discussed other ways to distribute controls across screens. That's because you have many options, and the best selection depends on your specific app's needs.
 
-So far, we haven't discussed how controls are to be distributed across screens.  And that is for a good reason - there are many possibilities and your selection will depend on your specific app's needs.
+Because real estate on phone screens is so limited, you probably want to browse, display, and edit/create on different screens. In this topic, the **Navigate** and **Back** functions open each screen.  
 
-On a phone, with limited screen real estate, you will likely want different screens for browsing, viewing, and editing.  In the examples above, we used the **Navigate** and **Back** functions to move between these screens.  
+On a tablet, you can browse, display, and edit/create on two or even one screen. For the latter, no **Navigate** or **Back** function would be required.
 
-On a tablet, with more screen real estate, you can place the **Gallery** control and the form controls on the same screen.  No **Navigate** or **Back** is required.
-
-When working on the same screen, you need to be careful that the user can't change the selection in the **Gallery** and potentially lose edits in the **Edit form** control.  To keep selection from moving if there are unsaved changes, set this property:
-
-- **Gallery.Disabled = EditForm.Unsaved**
+If the user is working on the same screen, you need to be careful that the user can't change the selection in the **Gallery** and potentially lose edits in the **Edit form** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set this property the **Disabled** property of the gallery to this formula:<br>
+**EditForm.Unsaved**
