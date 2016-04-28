@@ -137,7 +137,7 @@ Now that the Swagger file (.json file) is generated for the custom API, add the 
 Now, you're ready to use the custom API with your PowerApp or Logic Flow. In this section, we use a custom Weather API.
 
 #### Add the custom API to your logic flow
-In this step, we create a very simple logic flow that shows you how to add your custom API. For a more in-depth experience, see [Get started with logic flows](get-started-logic-flow.md).
+In this step, we create a very simple logic flow that shows you how to add your custom API. For a more in-depth experience, see [Get started with logic flows](https://flow.microsoft.com/en-us/documentation/get-started-logic-flow/) at flow.microsoft.com.
 
 1. At [powerapps.com][9], select the **Home** tab.
 2. Under **Make a logic flow**, select **Get started**. 
