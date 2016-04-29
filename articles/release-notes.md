@@ -124,6 +124,10 @@ With this release, we [support a wide assortment of connections](connections-lis
 - and many more
 
 ## Known limitations ##
+1. **On Apple iPhone 6 Plus devices, an incorrect icon appears for PowerApps.**
+
+	An update has been submitted and should appear soon.
+
 1.  **For apps created from data, the field used for sorting and searching isn't automatically configured.**
 
 	To configure this field, edit the **Items** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
