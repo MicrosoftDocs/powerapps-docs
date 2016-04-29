@@ -26,13 +26,13 @@ Most apps have multiple **Screen** controls that contain **Text Box** controls, 
 
 ## Key properties ##
 
-[**BackgroundImage**](properties\properties-visual.md) – The name of an image file that appears in the background of a screen.
+[**BackgroundImage**](../properties/properties-visual.md) – The name of an image file that appears in the background of a screen.
 
-[**Fill**](properties\properties-color-border.md) – The background color of a control.
+[**Fill**](../properties/properties-color-border.md) – The background color of a control.
 
 ## Additional properties ##
 
-[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+[**ImagePosition**](../properties/properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
 **OnHidden** – How an app responds when the user navigates away from a screen.
 

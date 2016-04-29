@@ -22,7 +22,7 @@
 
 Data sources are extensions of [tables](working-with-tables.md) that can retrieve and store information.  Connected data sources read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.  Static data sources and collections are alternative data sources that can be loaded and saved locally.
 
-Using the **Gallery**, **Display form**, and **Edit form** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](..\working-with-forms.md).  When you ask PowerApps to create an app from data, these controls are used.
+Using the **Gallery**, **Display form**, and **Edit form** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](../working-with-forms.md).  When you ask PowerApps to create an app from data, these controls are used.
 
 Sometimes you will want more control over how data flows in and out of your app.  This article describes how the **Patch**, **DataSourceInfo**, **Validate**, and **Errors** functions provide more control.
 

@@ -26,27 +26,27 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 
 ## Key properties ##
 
-[**Fill**](properties\properties-color-border.md) – The background color of a control.
+[**Fill**](../properties/properties-color-border.md) – The background color of a control.
 
-[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
+[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
 
 ## Additional properties ##
 
-[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
+[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
 
-[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
+[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[**HoverFill**](properties\properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
+[**HoverFill**](../properties/properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
 
-[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
+[**PressedBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
+[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
 
-[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
+[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
 
-[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

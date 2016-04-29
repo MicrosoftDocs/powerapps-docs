@@ -26,31 +26,31 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 ## Key properties ##
 
-[**Items**](properties\properties-core.md) – The source of data that appears in a control such as a gallery, a list, or a chart.
+[**Items**](../properties/properties-core.md) – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **NumberOfSeries** – How many columns of data are reflected in a column or line chart.
 
 ## All properties ##
 
-[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
+[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
+[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
 
-[**Color**](properties\properties-color-border.md) – The color of text in a control.
+[**Color**](../properties/properties-color-border.md) – The color of text in a control.
 
-[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
+[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
 
-[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
+[**DisabledBorderColor**](../properties/properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[**Font**](properties\properties-text.md) – The name of the family of fonts in which text appears.
+[**Font**](../properties/properties-text.md) – The name of the family of fonts in which text appears.
 
 **GridStyle** – Whether a column or line chart shows its x-axis, its y-axis, both, or neither.
 
-[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
+[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
+[**HoverBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
 **ItemColorSet** – The color of each data point in a chart.
 
@@ -68,17 +68,17 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 - The **MinimumBarWidth** property is available for the **Column chart** control but not the **Line chart** control.
 
-[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
+[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[**PaddingBottom**](properties\properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
+[**PaddingBottom**](../properties/properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
 
-[**PaddingLeft**](properties\properties-size-location.md) – The distance between text in a control and the left edge of that control.
+[**PaddingLeft**](../properties/properties-size-location.md) – The distance between text in a control and the left edge of that control.
 
-[**PaddingRight**](properties\properties-size-location.md) – The distance between text in a control and the right edge of that control.
+[**PaddingRight**](../properties/properties-size-location.md) – The distance between text in a control and the right edge of that control.
 
-[**PaddingTop**](properties\properties-size-location.md) – The distance between text in a control and the top edge of that control.
+[**PaddingTop**](../properties/properties-size-location.md) – The distance between text in a control and the top edge of that control.
 
-[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
+[**PressedBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
 **SeriesAxisMax** – The maximum value of the y-axis for a column or line chart.
 
@@ -88,17 +88,17 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 - The **SeriesAxisMin** property is available for the **Column chart** control but not the **Line chart** control.
 
-[**Size**](properties\properties-text.md) – The font size of the text that appears on a control.
+[**Size**](../properties/properties-text.md) – The font size of the text that appears on a control.
 
-[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
+[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
 
-[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
+[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
 
-[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
 **XLabelAngle** – The angle of the labels below the x-axis of a column or line chart.
 
-[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 **YAxisMax** – The maximum value of the y-axis for a line chart.
 
