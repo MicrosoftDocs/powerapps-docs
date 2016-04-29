@@ -55,7 +55,7 @@ You can create exactly the app you want with no distractions if you [build an ap
 - [formulas](formula-reference.md)
 - [galleries and forms](working-with-forms.md)
 - [tables and records](functions/working-with-tables.md)
-- [controls and their properties](properties-reference.md)
+- [controls and their properties](reference-properties.md)
 
 ## Questions? Ideas? We're here to help ##
 We're excited to see what you can do with PowerApps, and we want to make sure that you have a great experience. Check out the detailed tutorials here for more help, and [join our community](https://aka.ms/powerapps-community) to ask questions and share your ideas. [Contact support](https://aka.ms/pasupport) if you run into any issues.
