@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="04/28/2016"
+   ms.date="04/29/2016"
    ms.author="mandia"/>
 
 # What are Custom APIs
@@ -100,7 +100,7 @@ Now that the Swagger file (.json file) is generated for the custom API, add the 
 
 	> [AZURE.NOTE] Currently, custom APIs can only be used at powerapps.com. They cannot be used in PowerApps.  
 
-2. Select **Connections**, and then select **New connection**:  
+2. Under **Manage**, select **Connections**, and then select **New connection**:  
 	![](./media/register-custom-api/createnewconnection.png "Create Custom API")  
 
 3. Select **Custom**, and select **New custom API**:  
@@ -169,19 +169,21 @@ In this step, we create a very simple app that shows you how to add your custom 
 ![](./media/register-custom-api/blankpowerapp.png "Select connect to data")  
 3. In the **Content** tab, select **Data sources**:  
 ![](./media/register-custom-api/datasources.png "Select connect to data")  
-4. In the new screen, under **My connections**, select your custom API:  
+4. In the new screen, your existing connections are listed, including the custom API you added. Select your custom API:  
 ![](./media/register-custom-api/screencustomapi.png "Select your custom API")  
 5. Select **Add data source**.
 
 Once added, you can use your custom API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Show data from Office 365](show-office-data.md) is an example of using the Office 365 API.
 
-
+<!--This appears to be removed from the portal. Commenting out this section until we can confirm.
 ## Sharing a Custom API
 Users can also share custom APIs with each other. Once you've added a custom API, select the **Connections** tab, select **Custom APIs**, and then select the share icon:  
 
 ![](./media/register-custom-api/sharecustomapi.png "Share Custom API")
 
 > [AZURE.NOTE] You can share custom APIs with other users in only your organization.
+
+-->
 
 ## Quota and throttling
 
