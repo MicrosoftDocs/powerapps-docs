@@ -47,7 +47,7 @@ PowerApps creates a mobile app that has three screens: one each for browsing a l
 When your app looks and behaves the way you want, [share it](share-app.md) with others on your team so that they can use it too. Remember: they'll need access to the data source that you used to build the app.
 
 ## Try out a template ##
-You can also [build an app from a template](get-started-test-drive). These templates are based on fictitious data in a cloud account, such as Dropbox, OneDrive, or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to build expertise that you can apply to your own apps.  
+You can also [build an app from a template](get-started-test-drive.md). These templates are based on fictitious data in a cloud account, such as Dropbox, OneDrive, or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to build expertise that you can apply to your own apps.  
 
 ## Get creative ##
 You can create exactly the app you want with no distractions if you [build an app from scratch](get-started-create-from-blank.md). This way, the entire app comes straight from your brain to the screen. As you roll up your sleeves, you'll want to understand one or more of these concepts at a much deeper level:

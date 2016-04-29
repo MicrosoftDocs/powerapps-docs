@@ -72,7 +72,7 @@ Using formulas to build apps has many advantages:
 - To understand where **TextBox1**'s text is coming from, you know exactly where to look: the formula in the **Text** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
 - If the user changes a slider control and then changes their mind, they can change the slider back to its original value.  And it's as if nothing had ever changed: the app shows the same control values as it did before.  There are no ramifications for experimenting and asking "what if," just as there are none in Excel.  
 
-In general, if you can acheive an effect by using a formula, you'll be better off. Let the formula engine in PowerApps work for you.  
+In general, if you can achieve an effect by using a formula, you'll be better off. Let the formula engine in PowerApps work for you.  
 
 ## Know when to use variables ##
 
