@@ -98,12 +98,12 @@ Now that the Swagger file (.json file) is generated for the custom API, add the 
 
 1. Go to [powerapps.com][9], and sign in with your work account.  
 
-	> [AZURE.NOTE] Currently, custom APIs can only be used at powerapps.com. They cannot be used in the PowerApps.  
+	> [AZURE.NOTE] Currently, custom APIs can only be used at powerapps.com. They cannot be used in PowerApps.  
 
-2. Select **Connections**, and then select **Add a connection**:  
+2. Select **Connections**, and then select **New connection**:  
 	![](./media/register-custom-api/createnewconnection.png "Create Custom API")  
 
-3. Select **Add a custom API**:  
+3. Select **Custom**, and select **New custom API**:  
 	![](./media/register-custom-api/connecttocustomapi.png "Create Custom API")  
 	Add the properties of your API, including the .json and icon files. Then, select **Next**:  
 
@@ -114,6 +114,7 @@ Now that the Swagger file (.json file) is generated for the custom API, add the 
 |Upload API icon|Browse to the icon file.|
 |Description|Enter a description of your custom API. If this is the sample web API, you can enter **Sample Web API Tutorial**.|
 
+	Select **Next**.  
 4. Enter any authentication properties. If the .json file uses OAuth2 authentication in the ```securityDefintions``` object, you are prompted for the following values:  
 
 	|Property|Description|
@@ -125,7 +126,7 @@ Now that the Swagger file (.json file) is generated for the custom API, add the 
 
 	If the .json file does not use the ```securityDefintions``` object, then no additional values may be needed.
 
-5. Select **Create**. Your custom API is now displayed in **Available Connections**:  
+5. Select **Create**. Your custom API is now displayed in **Custom**:  
 
 	![](./media/register-custom-api/mycustomapi.png "Available connections")  
 
@@ -134,14 +135,13 @@ Now that the Swagger file (.json file) is generated for the custom API, add the 
 
 
 ### Step 3: Add the custom API to a Logic Flow and PowerApp
-Now, you're ready to use the custom API with your PowerApp or Logic Flow. In this section, we use a custom Weather API.
+Now, you're ready to use the custom API with your app or Logic Flow. In this section, we use a custom Weather API.
 
 #### Add the custom API to your logic flow
 In this step, we create a very simple logic flow that shows you how to add your custom API. For a more in-depth experience, see [Get started with logic flows](https://flow.microsoft.com/en-us/documentation/get-started-logic-flow/) at flow.microsoft.com.
 
-1. At [powerapps.com][9], select the **Home** tab.
-2. Under **Make a logic flow**, select **Get started**. 
-3. In this window, there are several logic flow templates already created that use some common scenarios. You can use any of these, and add your custom API to it. Or, you can choose **Create from blank** to create a logic flow from scratch.  
+1. At [powerapps.com][9], select the **Flows** tab, and select **Create a flow**.
+2. In this window, there are several logic flow templates already created that use some common scenarios. You can use any of these, and add your custom API to it. Or, you can choose **Create from blank** to create a logic flow from scratch.  
 
 	The quickest way to add your custom API is to select **Create from blank**. This opens the following logic flow:  
 	![](./media/register-custom-api/createfromblank.png "Start of Logic Flow")   
@@ -152,14 +152,14 @@ In this step, we create a very simple logic flow that shows you how to add your 
 5. Select the plus sign (![](./media/register-custom-api/flowplussign.png) ), and select **Add an action**. In the list, your custom API is listed:  
 ![](./media/register-custom-api/logicflow.png "Your custom API") 
 
-The next steps are determined by what your API can do. In a weather example, maybe your API gets the current temperature, and then sends an email using Office 365:  
-
+6. The next steps are determined by what your API can do. In a weather example, maybe your API gets the current temperature, and then sends an email using Office 365:  
 ![](./media/register-custom-api/logicflowexample.png "Weather example") 
 
+7. Name your flow and select **Done**. 
 
 
 #### Add the custom API to your PowerApp
-In this step, we create a very simple PowerApp that shows you how to add your custom API. For a more in-depth experience, see [Create an app from data](get-started-create-from-data.md).
+In this step, we create a very simple app that shows you how to add your custom API. For a more in-depth experience, see [Create an app from data](get-started-create-from-data.md).
 
 > [AZURE.NOTE] Currently, custom APIs can only be used at powerapps.com. They cannot be used in the PowerApps client.
 
