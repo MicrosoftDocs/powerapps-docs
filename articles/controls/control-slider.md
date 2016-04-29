@@ -26,25 +26,25 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 ## Key properties ##
 
-[**Default**](properties\properties-core.md) – The initial value of a control before it is changed by the user.
+[**Default**](../properties/properties-core.md) – The initial value of a control before it is changed by the user.
 
 **Max** – The maximum value to which the user can set a slider or a rating.
 
 **Min** – The minimum value to which the user can set a slider.
 
-[**Value**](properties\properties-core.md) – The value of an input control.
+[**Value**](../properties/properties-core.md) – The value of an input control.
 
 ## Additional properties ##
 
-[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
+[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
+[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
 
-[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
+[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
 
-[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
+[**DisabledBorderColor**](../properties/properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
 **HandleActiveFill** – The color of the handle for a slider as the user changes its value.
 
@@ -52,17 +52,17 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **HandleHoverFill** – The color of the handle in a slider when the user keeps the mouse pointer on it.
 
-[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
+[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
+[**HoverBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
-[**OnChange**](properties\properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+[**OnChange**](../properties/properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
+[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
+[**PressedBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
 **RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
@@ -70,23 +70,23 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **ReadOnly** – Whether a user can change the value of a slider or rating control.
 
-[**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
+[**Reset**](../properties/properties-core.md) – Whether a control reverts to its default value.
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
+[**Tooltip**](../properties/properties-core.md) – Explanatory text that appears when the user hovers over a control.
 
 **ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
 **ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
+[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
 
-[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
+[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
 
-[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

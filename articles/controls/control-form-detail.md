@@ -135,21 +135,21 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 
 ## Additional properties ##
 
-[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
+[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
+[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
 
-[**Fill**](properties\properties-color-border.md) – The background color of a control.
+[**Fill**](../properties/properties-color-border.md) – The background color of a control.
 
-[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
+[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
+[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
 
-[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
+[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
 
-[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 

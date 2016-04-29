@@ -30,87 +30,87 @@ This control is a composite control, made up of two controls.  Press or tap once
 
 These properties apply to the outer control. 
 
-[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
+[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
 
-[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
+[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
 
-[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
+[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
 
-[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
+[**DisabledBorderColor**](../properties/properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[**DisabledFill**](properties\properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
+[**DisabledFill**](../properties/properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
 
 **Error** - If there is a problem uploading an image, this property will contain an appropriate error string.
 
-[**Fill**](properties\properties-color-border.md) – The background color of a control.
+[**Fill**](../properties/properties-color-border.md) – The background color of a control.
 
-[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
+[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
 
-[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
+[**HoverBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[**HoverFill**](properties\properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
+[**HoverFill**](../properties/properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
 
 **Media** – An identifier for the clip that an audio or video control plays.
 
-[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
+[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
 
-[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
+[**PressedBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
 
-[**PressedFill**](properties\properties-color-border.md) – The background color of a control when the user taps or clicks that control.
+[**PressedFill**](../properties/properties-color-border.md) – The background color of a control when the user taps or clicks that control.
 
-[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
+[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
 
-[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
+[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
 
-[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
 
 ## Inner text properties ##
 
 These properties apply to the inner text box control that by default says "Tap or click to add a picture".  To select this inner control, press or tap the **Add picture** control once, and then again.
 
-[**Align**](properties\properties-text.md) – The location of text in relation to the horizontal center of its control.
+[**Align**](../properties/properties-text.md) – The location of text in relation to the horizontal center of its control.
 
-[**Color**](properties\properties-color-border.md) – The color of text in a control.
+[**Color**](../properties/properties-color-border.md) – The color of text in a control.
 
-[**DisabledColor**](properties\properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
+[**DisabledColor**](../properties/properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
 
-[**Font**](properties\properties-text.md) – The name of the family of fonts in which text appears.
+[**Font**](../properties/properties-text.md) – The name of the family of fonts in which text appears.
 
-[**FontWeight**](properties\properties-text.md) – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+[**FontWeight**](../properties/properties-text.md) – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[**HoverColor**](properties\properties-color-border.md) – The color of the text in a control when the user keeps the mouse pointer on it.
+[**HoverColor**](../properties/properties-color-border.md) – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[**Italic**](properties\properties-text.md) – Whether the text in a control is italic.
+[**Italic**](../properties/properties-text.md) – Whether the text in a control is italic.
 
-[**OnChange**](properties\properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+[**OnChange**](../properties/properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[**Padding**](properties\properties-size-location.md) – The distance between the text on an import or export button and the edges of that button.
+[**Padding**](../properties/properties-size-location.md) – The distance between the text on an import or export button and the edges of that button.
 
-[**PressedColor**](properties\properties-color-border.md) – The color of text in a control when the user taps or clicks that control.
+[**PressedColor**](../properties/properties-color-border.md) – The color of text in a control when the user taps or clicks that control.
 
-[**Size**](properties\properties-text.md) – The font size of the text that appears on a control.
+[**Size**](../properties/properties-text.md) – The font size of the text that appears on a control.
 
-[**Strikethrough**](properties\properties-text.md) – Whether a line appears through the text that appears on a control.
+[**Strikethrough**](../properties/properties-text.md) – Whether a line appears through the text that appears on a control.
 
-[**Text**](properties\properties-core.md) – Text that appears on a control or that the user types into a control.
+[**Text**](../properties/properties-core.md) – Text that appears on a control or that the user types into a control.
 
-[**Underline**](properties\properties-text.md) – Whether a line appears under the text that appears on a control.
+[**Underline**](../properties/properties-text.md) – Whether a line appears under the text that appears on a control.
 
-[**VerticalAlign**](properties\properties-text.md) – The location of text on a control in relation to the vertical center of that control.
+[**VerticalAlign**](../properties/properties-text.md) – The location of text on a control in relation to the vertical center of that control.
 
 ## Related functions ##
 
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](..\functions\function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## Example ##
 ### Add images to an Image gallery control ###
 1. Add an **Add picture** control, and then triple-click it.
 
-	Don't know how to [add, name, and configure a control](..\add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
 
