@@ -74,7 +74,7 @@
 
 	These controls also offer a new configuration pane, where you can turn on and off fields and change the card for each field.
 
-	Check out [Understand data forms](working-with-data-forms.md) for more details.
+	Check out [Understand data forms](working-with-forms.md) for more details.
 
 1. **Data-source delegation of [Filter](function-filter-lookup.md) and [Sort](function-sort.md) improves performance and supports large numbers of records.**
 
