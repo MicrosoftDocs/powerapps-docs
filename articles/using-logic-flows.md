@@ -80,6 +80,8 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 1. In the pane that appears, select the flow that you created in the previous procedure.
 
+	![Add a flow from the customization pane](./media/use-logic-flows/add-flow-from-pane.png)
+
 1. In the formula bar, type or paste **RecordTitle.Text)** at the end of the formula that's been automatically added.
 
 	![OnSelect property that includes the flow](./media/use-logic-flows/onselect-with-flow.png)
