@@ -26,9 +26,9 @@ A **Gallery** control can show records from a data source, and each record can c
 
 ## Key properties ##
 
-[**Default**](../properties/properties-core.md) – The initial value of a control before it is changed by the user.
+**[Default](../properties/properties-core.md)** – The initial value of a control before it is changed by the user.
 
-[**Items**](../properties/properties-core.md) – The source of data that appears in a control such as a gallery, a list, or a chart.
+**[Items](../properties/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **Selected** – The selected item.
 
@@ -36,19 +36,19 @@ A **Gallery** control can show records from a data source, and each record can c
 
 **AllItems** – All items in a gallery, including additional control values that are a part of the gallery's template.
 
-[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
+**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
 
 **Direction** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.
 
-[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
+**[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-[**Fill**](../properties/properties-color-border.md) – The background color of a control.
+**[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
-[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
@@ -68,15 +68,15 @@ A **Gallery** control can show records from a data source, and each record can c
 
 **Transition** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.
 
-[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
+**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
 
 **WrapCount** – How many records appear in each item of a gallery.
 
-[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

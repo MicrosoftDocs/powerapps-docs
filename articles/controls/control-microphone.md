@@ -32,57 +32,57 @@ If you add this control, the user can update a data source with one or more soun
 
 ## Additional properties ##
 
-[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
+**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
 
-[**Color**](../properties/properties-color-border.md) – The color of text in a control.
+**[Color](../properties/properties-color-border.md)** – The color of text in a control.
 
-[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
+**[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-[**DisabledBorderColor**](../properties/properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[**DisabledColor**](../properties/properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
 
-[**DisabledFill**](../properties/properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
 
-[**Fill**](../properties/properties-color-border.md) – The background color of a control.
+**[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
-[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[**HoverBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](../properties/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[**HoverColor**](../properties/properties-color-border.md) – The color of the text in a control when the user keeps the mouse pointer on it.
+**[HoverColor](../properties/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[**HoverFill**](../properties/properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](../properties/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[**Image**](../properties/properties-visual.md) – The name of the image that appears in an image, audio, or microphone control.
+**[Image](../properties/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
-[**ImagePosition**](../properties/properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+**[ImagePosition](../properties/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
+**[OnSelect](../properties/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OnStart** – How the app responds when the user starts to record with a microphone control.
 
-[**PressedBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](../properties/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[**PressedColor**](../properties/properties-color-border.md) – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](../properties/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[**PressedFill**](../properties/properties-color-border.md) – The background color of a control when the user taps or clicks that control.
+**[PressedFill](../properties/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[**Reset**](../properties/properties-core.md) – Whether a control reverts to its default value.
+**[Reset](../properties/properties-core.md)** – Whether a control reverts to its default value.
 
-[**Tooltip**](../properties/properties-core.md) – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](../properties/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
+**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

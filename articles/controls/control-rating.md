@@ -26,45 +26,45 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 ## Key properties ##
 
-[**Default**](../properties/properties-core.md) – The initial value of a control before it is changed by the user.
+**[Default](../properties/properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **Max** – The maximum value to which the user can set a slider or a rating.
 
 ## Additional properties ##
 
-[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
+**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
 
-[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
+**[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-[**Fill**](../properties/properties-color-border.md) – The background color of a control.
+**[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
-[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[**OnChange**](../properties/properties-core.md) – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](../properties/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
+**[OnSelect](../properties/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **RatingFill** – The color of the stars in a rating control.
 
 **ReadOnly** – Whether a user can change the value of a slider or rating control.
 
-[**Reset**](../properties/properties-core.md) – Whether a control reverts to its default value.
+**[Reset](../properties/properties-core.md)** – Whether a control reverts to its default value.
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-[**Tooltip**](../properties/properties-core.md) – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](../properties/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
+**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

@@ -45,7 +45,7 @@ See [Understand data cards](working-with-data-cards.md) for examples of how to c
 - Specify the name as a single static string that's enclosed in double quotation marks (for example, **"Name"**), not a formula.
 - Unbind a card by setting its **DataField** property *blank*. The **Valid** and **Update** properties are ignored for unbound cards.
 
-[**Default**](../properties/properties-core.md) – The initial value of a control before it is changed by the user.
+**[Default](../properties/properties-core.md)** – The initial value of a control before it is changed by the user.
 
 - For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **Default** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
 
@@ -70,26 +70,26 @@ See [Understand data cards](working-with-data-cards.md) for examples of how to c
 
 ## Additional properties ##
 
-[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
+**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
 
-[**Fill**](../properties/properties-color-border.md) – The background color of a control.
+**[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
-[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **Valid** – Whether a **Card** or **Edit form** control contains valid entries, ready to be submitted to the data source.
 
-[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
+**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Examples ##
 
-See [**Understanding data cards**](working-with-data-cards.md) for examples.
+See **[Understanding data cards](working-with-data-cards.md)** for examples.
