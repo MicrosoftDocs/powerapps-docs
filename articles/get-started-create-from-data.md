@@ -37,7 +37,7 @@ Create an app automatically based on an Excel file in the cloud, customize the a
 If using your own Excel data, use the following steps to format your data as a table: 
 
 1. In Excel, open your Excel file.
-2. Select any piece of data in any row or any column.
+2. Select any piece of data in any row and any column.
 3. On the **Insert** ribbon, select **Table**. 
 4. In the dialog window, select **My table has headers**, and select **OK**.
 5. Save your changes.
