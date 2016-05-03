@@ -18,7 +18,7 @@
    ms.author="ankitsar"/>
 
 # Create an app from scratch #
-Create your own app from scratch using any one of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
+Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
 
 By following this tutorial, you'll create an app that shows users a set of data on the first screen:
 
@@ -31,7 +31,7 @@ On another screen, users can create, update, or delete a record in that set of d
 **Prerequisites**
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+- Learn how to [add a control](add-configure-controls.md) and set the properties that determine its appearance, behavior, and other characteristics.
 - A cloud-storage account, such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
 
 To follow this tutorial exactly, add this data to an Excel file named **eventsignup.xlsx**, [format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) named **Schedule**, and then save the file to your cloud-storage account.
@@ -73,7 +73,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Specify the table in Excel that you want to use](./media/get-started-create-from-blank/select-table.png)
 
-	The **Screen** tab shows which data sources you've added to your app. This tutorial requires only one source, but you can add more sources later.
+	The **Screen** tab shows which data sources you've added to your app. This tutorial requires only one data source, but you can add more data sources later.
 
 	![Show connected data sources](./media/get-started-create-from-blank/connected-data-sources.png)
 
@@ -84,7 +84,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
-	Several controls are added to the screen, including a search box and a [**Gallery**](control-gallery.md) control. The gallery covers all of the screen under the search box.
+	Several controls are added to the screen, including a search box and a [**Gallery**](control-gallery.md) control. The gallery covers the entire screen under the search box.
 
 1. Set the **Items** property of the gallery to this formula:
 
@@ -96,6 +96,8 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 	- If the user selects the sort button, the records are sorted based on the **Volunteer 1** column. If the user selects the sort button again, the sort order is reversed.
 
 	![The Schedule data in the gallery by default](./media/get-started-create-from-blank/gallery-data-default.png)
+
+	[More information](formula-reference.md) about the **Sort**, **Filter**, and other functions
 
 1. Set the **Text** property of the [**Text box**](control-text-box.md) control at the top of the screen to show **View records**.
 
@@ -115,6 +117,8 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 1. Add an [**Edit form**](./add-form.md) control, and move and resize it to cover most of the screen.
 
 	![Add a form](./media/get-started-create-from-blank/add-form.png)
+
+	The form is named **Form1** by default unless you already added and removed a form.
 
 1.  Set the **DataSource** property of the form to **Schedule** and its **Item** property to this formula:
 

@@ -61,7 +61,9 @@ PowerApps builds an app that has three screens:
 ## Customize the app ##
 When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
 
-1. If you haven't used PowerApps before, take the intro tour by reading each description before selecting **Next** (and then selecting **Done**), or select **Skip**.
+1. If you haven't used PowerApps before, take the intro tour by reading each description before selecting **Next** (and selecting **Done** at the end), or select **Skip**.
+
+    ![Opening screen of the quick tour](./media/get-started-create-from-data/quick-tour.png)
 
 1. On the **Home** tab of the ribbon, select **Layouts**, and then select then select an option that includes images.
 
@@ -95,7 +97,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
     ![DetailScreen 1 Thumbnail](./media/get-started-create-from-data/detail-screen-thumbnail.png)
 
-1. Select **Name**, and then drag the field's title bar above **Category**.
+1. Select **Name** so that field's title bar appears, and then drag the title bar so that the field appears above **Category**.
 
     ![Select a card](./media/get-started-create-from-data/select-card.png)
 
