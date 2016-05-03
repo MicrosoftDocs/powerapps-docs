@@ -146,7 +146,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 1.  Set the **OnSelect** property of the button to this formula::
 
-	**SubmitForm(Form1);If(Form1.ErrorType=ErrorKind.None,Navigate(ViewScreen,ScreenTransition.None))**
+	**SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
 
 	When the user selects the button, the [**SubmitForm**](./functions/function-form.md") function saves any changes to the data source, and the **ViewScreen** reappears.  
 
