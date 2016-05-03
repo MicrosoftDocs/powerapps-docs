@@ -31,7 +31,7 @@ If you add a **Gallery** control, you can configure it to show a table in a data
 ### Record selection ###
 For either type of form, you set its **DataSource** property to a table of records, and you set the form's **Item** property to show a specific record in that table. For example, you can set the **Item** property of a form to the **SelectedItem** property of a **Gallery** control. When the user selects a record in the gallery, the same record appears in the form, except that the form can show more fields. If the user returns to the gallery and selects a different record, the **SelectedItem** property of the gallery changes. This change updates the **Item** property of the form, which then shows the newly selected record.
 
-Each form control contains one or more [**Card**](control-card.md) controls. By setting the **DataField** property of a card, you [specify which field that card shows and other details](add-form.md).
+Each form control contains one or more **[Card](control-card.md)** controls. By setting the **DataField** property of a card, you [specify which field that card shows and other details](add-form.md).
 
 ### Create a record ###
 When an **Edit Form** control is in **Edit** mode, the user can update the record that's specified in the form's **Item** property. If inspected, the **Mode** property returns **Edit**.
@@ -79,7 +79,7 @@ Some data sources can detect when two people try to update the same record at th
 
 | ErrorKind | Description |
 |------------|-------------|
-| ErrorKind.Conflict | Another user changed the same record, resulting in a change conflict. Run [**Refresh**](function-refresh.md) to reload the record, and try the change again. |
+| ErrorKind.Conflict | Another user changed the same record, resulting in a change conflict. Run **[Refresh](function-refresh.md)** to reload the record, and try the change again. |
 | ErrorKind.None | The error is of an unknown kind. |
 | ErrorKind.Sync | The data source reported an error. Check the **Error** property for more information. |
 | ErrorKind.Validation | A general validation issue was detected. |
@@ -135,21 +135,21 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 
 ## Additional properties ##
 
-[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
+**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
 
-[**Fill**](../properties/properties-color-border.md) – The background color of a control.
+**[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
-[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
+**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 

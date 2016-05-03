@@ -30,21 +30,21 @@ If you add this control, the user can update a data source with one or more phot
 
 ## Additional properties ##
 
-[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
+**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
 
 **Brightness** – How much light the user is likely to perceive in an image.
 
 **Contrast** – How easily the user can distinguish between similar colors in an image.
 
-[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
+**[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
+**[OnSelect](../properties/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OnStream** – How the app responds when the **Stream** property is updated.
 
@@ -54,15 +54,15 @@ If you add this control, the user can update a data source with one or more phot
 
 **StreamRate** – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).
 
-[**Tooltip**](../properties/properties-core.md) – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](../properties/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
+**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
 

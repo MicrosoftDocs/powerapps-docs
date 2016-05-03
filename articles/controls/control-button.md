@@ -26,89 +26,89 @@ Configure the **OnSelect** property of a **Button** control to run one or more f
 
 ## Key properties ##
 
-[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
+**[OnSelect](../properties/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[**Text**](../properties/properties-core.md) – Text that appears on a control or that the user types into a control.
+**[Text](../properties/properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 ## Additional properties ##
 
-[**Align**](../properties/properties-text.md) – The location of text in relation to the horizontal center of its control.
+**[Align](../properties/properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.
 
-[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
+**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
 
-[**Color**](../properties/properties-color-border.md) – The color of text in a control.
+**[Color](../properties/properties-color-border.md)** – The color of text in a control.
 
-[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
+**[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-[**DisabledBorderColor**](../properties/properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
 
-[**DisabledColor**](../properties/properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
 
-[**DisabledFill**](../properties/properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
 
-[**Fill**](../properties/properties-color-border.md) – The background color of a control.
+**[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
-[**Font**](../properties/properties-text.md) – The name of the family of fonts in which text appears.
+**[Font](../properties/properties-text.md)** – The name of the family of fonts in which text appears.
 
-[**FontWeight**](../properties/properties-text.md) – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](../properties/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[**HoverBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](../properties/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[**HoverColor**](../properties/properties-color-border.md) – The color of the text in a control when the user keeps the mouse pointer on it.
+**[HoverColor](../properties/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[**HoverFill**](../properties/properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](../properties/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[**Italic**](../properties/properties-text.md) – Whether the text in a control is italic.
+**[Italic](../properties/properties-text.md)** – Whether the text in a control is italic.
 
-[**PaddingBottom**](../properties/properties-size-location.md) – The distance between text in a control and the bottom edge of that control.
+**[PaddingBottom](../properties/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-[**PaddingLeft**](../properties/properties-size-location.md) – The distance between text in a control and the left edge of that control.
+**[PaddingLeft](../properties/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-[**PaddingRight**](../properties/properties-size-location.md) – The distance between text in a control and the right edge of that control.
+**[PaddingRight](../properties/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-[**PaddingTop**](../properties/properties-size-location.md) – The distance between text in a control and the top edge of that control.
+**[PaddingTop](../properties/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
 **Pressed** – *True* while a control is being pressed, *false* otherwise.
 
-[**PressedBorderColor**](../properties/properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](../properties/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[**PressedColor**](../properties/properties-color-border.md) – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](../properties/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[**PressedFill**](../properties/properties-color-border.md) – The background color of a control when the user taps or clicks that control.
+**[PressedFill](../properties/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[**RadiusBottomLeft**](../properties/properties-size-location.md) – The degree to which the bottom-left corner of a control is rounded.
+**[RadiusBottomLeft](../properties/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
 
-[**RadiusBottomRight**](../properties/properties-size-location.md) – The degree to which the bottom-right corner of a control is rounded.
+**[RadiusBottomRight](../properties/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
 
-[**RadiusTopLeft**](../properties/properties-size-location.md) – The degree to which the top-left corner of a control is rounded.
+**[RadiusTopLeft](../properties/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
 
-[**RadiusTopRight**](../properties/properties-size-location.md) – The degree to which the top-right corner of a control is rounded.
+**[RadiusTopRight](../properties/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-[**Size**](../properties/properties-text.md) – The font size of the text that appears on a control.
+**[Size](../properties/properties-text.md)** – The font size of the text that appears on a control.
 
-[**Strikethrough**](../properties/properties-text.md) – Whether a line appears through the text that appears on a control.
+**[Strikethrough](../properties/properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-[**Tooltip**](../properties/properties-core.md) – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](../properties/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[**Underline**](../properties/properties-text.md) – Whether a line appears under the text that appears on a control.
+**[Underline](../properties/properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-[**VerticalAlign**](../properties/properties-text.md) – The location of text on a control in relation to the vertical center of that control.
+**[VerticalAlign](../properties/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
-[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
+**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 

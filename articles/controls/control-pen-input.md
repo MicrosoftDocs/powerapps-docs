@@ -26,45 +26,45 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 ## Key properties ##
 
-[**Color**](../properties/properties-color-border.md) – The color of text in a control.
+**[Color](../properties/properties-color-border.md)** – The color of text in a control.
 
 **Mode** – The control is in **Draw**, **Erase**, or **Select** mode.
 
 ## Additional properties ##
 
-[**BorderColor**](../properties/properties-color-border.md) – The color of a control's border.
+**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](../properties/properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](../properties/properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
 
-[**Disabled**](../properties/properties-core.md) – Whether the user can interact with the control.
+**[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-[**Fill**](../properties/properties-color-border.md) – The background color of a control.
+**[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
-[**Height**](../properties/properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **Input** – Input.
 
-[**OnSelect**](../properties/properties-core.md) – How the app responds when the user taps or clicks a control.
+**[OnSelect](../properties/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[**SelectionColor**](../properties/properties-color-border.md) – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
+**[SelectionColor](../properties/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
 **SelectionThickness** – The thickness of the selection tool for a pen-input control.
 
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
-[**Size**](../properties/properties-text.md) – The font size of the text that appears on a control.
+**[Size](../properties/properties-text.md)** – The font size of the text that appears on a control.
 
-[**Tooltip**](../properties/properties-core.md) – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](../properties/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[**Visible**](../properties/properties-core.md) – Whether a control appears or is hidden.
+**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](../properties/properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**X**](../properties/properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](../properties/properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
