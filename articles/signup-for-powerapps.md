@@ -20,7 +20,7 @@
 
 # Sign up for PowerApps
 
-This article introduces you on how to sign up for a PowerApps account.
+This article shows you how to sign up for a PowerApps account.
 
 ## What email addresses can be used with PowerApps ##
 To sign up for PowerApps, enter your work or school email address.
@@ -61,7 +61,7 @@ If you try to sign up with a personal email address, you get a message indicatin
 8. You are then taken to [powerapps.com][2], and you can begin using PowerApps.
 
 ## Troubleshoot##
-In many cases, registering for PowerApps is achieved by following the signing up for PowerApps (steps in this topic). However, there are several reasons sign up may fail.  The following table summarizes some of the most common reasons, and ways you can workaround these issues.
+In many cases, registering for PowerApps is achieved by following the sign up steps in this topic. However, there are several reasons sign up may fail.  The following table summarizes some of the most common reasons, and ways you can workaround these issues.
 
 | Symptom / Error Message |Cause and Workaround|
 |---|---|

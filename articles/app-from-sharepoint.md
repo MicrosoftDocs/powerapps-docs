@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/27/2016"
+   ms.date="05/03/2016"
    ms.author="jamesol"/>
 
 # Create an app to manage data from SharePoint Online #
@@ -24,9 +24,9 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 ## Prerequisites
 
-- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
-- PowerApps only supports creating apps for Sharepoint Online custom lists. Document libraries are currently not supported, but will be soon.
-- Check to make sure that your list only contains columns supported by PowerApps. The following tables lists the column types that are supported by PowerApps:  
+- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
+- PowerApps only supports creating apps for SharePoint Online custom lists. Document libraries are currently not supported, but will be soon.
+- Check to make sure that your list only contains columns supported by PowerApps. The following table lists the column types that are supported by PowerApps:  
 
 	| SharePoint online list column type | Supported by PowerApps |
 |---|---|
@@ -84,7 +84,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 1. If you haven't used PowerApps before, take the intro tour by reading each description before selecting **Next** (and then selecting **Done**), or select **Skip**.
 
-2. On the **Home** tab of the ribbon, select **Layouts**, and then select then select an option that includes images.  
+2. On the **Home** tab of the ribbon, select **Layouts**, and then select an option that includes images.  
 
 	![Layout option with icons](./media/app-from-sharepoint/change-layout.png)
 
@@ -94,7 +94,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	**Note**: If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
 
-3. In the list thumbnails, select **DetailScreen1**.  
+3. In the list of thumbnails, select **DetailScreen1**.  
 ![](./media/app-from-sharepoint/left-pane.png)
 
 4. Select a field on the screen that you want to customize.  

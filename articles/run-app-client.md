@@ -15,7 +15,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/27/2016"
+    ms.date="05/03/2016"
     ms.author="karthikb"/>
 
 # Using PowerApps on phones and tablets #
@@ -32,21 +32,21 @@ PowerApps can run on Windows, iOS, Android, and in a web browser. Apps running o
 
 [Get started with PowerApps](getting-started.md) may be a good resource.
 
-## Sign-in to PowerApps ##
-The first time you sign-in, you are prompted to sign-in to PowerApps using your Azure Active Directory credentials:  
+## Sign in to PowerApps ##
+The first time you sign in, you are prompted to sign in to PowerApps using your Azure Active Directory credentials:  
 
 ![Login user](./media/run-app-client/run-client-login.png)
 
 
 ## Launch an app ##
-To run apps on tablets and phones:
+To use apps on tablets and phones:
 
 1. Launch the app by tapping on the app icon.
 2. For apps that are shared with you, you get a notification. Select the notification to open the app.
 
 
 ## Give consent ##
-If the app requires a connection to a data sources, or required consent to use the device, you are prompted for the configuration before running the app:  
+If the app requires a connection to a data sources, or requires consent to use the device, you are prompted for the configuration before you use the app:  
 
 ![Connection](./media/run-app-client/app-connection.png)
 
@@ -69,6 +69,6 @@ App authors can also share apps with the entire organization with a simple check
 
 
 ## Pin the app to the home screen ##
-Apps that have be downloaded and run at least once can be pinned to the device home screen for quick access. Tap on the **...** option for each app to access the **Pin** option. Follow the device-specific instructions to pin the app tile on your home screen:  
+Apps that have been downloaded and used at least once can be pinned to the device home screen for quick access. Tap on the **...** option for each app to access the **Pin** option. Follow the device-specific instructions to pin the app tile on your home screen:  
 
 ![pin app](./media/run-app-client/run-client-pin.png)
