@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/27/2016"
+   ms.date="05/03/2016"
    ms.author="mandia"/>
 
 # Get the signed-in user details
@@ -53,7 +53,6 @@ When you do this, the label is automatically populated with your email address. 
 Now, let's see what you've created. Select the Preview button ![][9]. When you view the screen, you get an idea of what your app looks like; and it shows the picture, full name, and email address of the signed-in user.
 
 ## Tips and Tricks
-- The [Create an app from a template](get-started-test-drive.md) scenario provides another example that uses the signed-in user information.
 - At anytime, you can select the preview button (![][9]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window.
