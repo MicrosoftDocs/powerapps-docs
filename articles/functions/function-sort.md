@@ -36,6 +36,8 @@ The parameter list for **SortByColumns** provides the names of the columns to so
 
 You can combine **SortByColumns** with a **Drop down** or **List box** control to enable users to select which column to sort by.
 
+In addition to sorting ascending or descending, **SortByColumns** can sort based on a single column table of values.  For example, you can sort record based on the name of a day of the week by supplying **[ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]** as the sort order.  All records which have **Monday"** will come first, followed by **Tuesday**, and so on.  Records found that do not appear in the sort table are put at the end of the list.
+
 Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** doe not modify a table, instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](working-with-tables.md) for more details.
 
 ## Delegation ##
@@ -64,7 +66,13 @@ Additional limitations on delegation (which we are working to remove):
 
 - *Table* - Required. Table to sort.
 - *ColumnName(s)* - Required. The column names to sort on, as strings.
-- *SortOrder(s)* - Optional.  **SortOrder!Ascending** or **SortOrder!Descending**.  **SortOrder!Ascending** is the default.  If multiple *ColumnNames* are supplied, all but the last column must include a *SortOrder*. *SortOrder* can also be a single-column table of values.
+- *SortOrder(s)* - Optional.  **SortOrder!Ascending** or **SortOrder!Descending**.  **SortOrder!Ascending** is the default.  If multiple *ColumnNames* are supplied, all but the last column must include a *SortOrder*. 
+
+**SortByColumns**( *Table*, *ColumnName*, *SortOrderTable* )
+
+- *Table* - Required. Table to sort.
+- *ColumnName* - Required. The column name to sort on, as strings.
+- *SortOrderTable* - Required.  Single column table of values to sort by.
 
 ## Examples ##
 
@@ -79,6 +87,7 @@ For the following examples, we'll use the **IceCream** [data source](working-wit
 | **Sort( IceCream, Quantity, SortOrder.Descending )**<br><br>**SortByColumns( IceCream, "Quantity", SortOrder.Descending )** | Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the sort is done numerically.  The sort order has been specified as descending.  | ![](media/function-sort/icecream-quantity-desc.png) |
 | **Sort( IceCream, Quantity + OnOrder )** | Sorts **IceCream** by the sum of its **Quantity** and **OnOrder** columns for each record individually. The sum is a number, so the table is sorted numerically.  By default, the sort order is ascending.  Since we are sorting by a formula and not by raw column values, there is no equivalent using **SortByColumns**.  | ![](media/function-sort/icecream-total.png) |
 | **Sort( Sort( IceCream, OnOrder ), Quantity )**<br><br>**SortByColumns( IceCream, "OnOrder", Ascending, "Quantity", Ascending )** | Sorts **IceCream** first by its **OnOrder** column, and then by its **Quantity** column.  Note that "Pistachio" rose above "Vanilla" in the first sort based on **OnOrder**, and then together they moved to their appropriate place based on **Quantity**.  | ![](media/function-sort/icecream-onorder-quantity.png) |
+| **SortByColumns( IceCream, "Flavor", [&nbsp;"Pistachio",&nbsp;"Strawberry"&nbsp;] )** | Sorts **IceCream** by it's **Flavor** column based on the single column table containing "Pistachio" and "Strawberry".  Records which have a **Flavor** of "Pistachio" will appear first in the result, followed by records that contain "Strawberry".  For values in the **Flavor** column that are not matched, such as "Vanilla", they will appear after the items that were matched.  | ![](media/function-sort/icecream-onflavor-sorttable.png) |
 
 ### Step by step ###
 
