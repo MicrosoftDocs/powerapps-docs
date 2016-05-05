@@ -25,7 +25,7 @@ PowerApps also provides out of the box enumeration types which can used in enume
 
 ## Standard Tables ##
 
-Following is the list of standard tables offered with PowerApps
+The list of standard tables offered with PowerApps is: 
 
 | Table name | Description |
 |------------|-------------|
