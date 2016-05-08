@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Audio and Video controls in PowerApps #
-[AZURE.INCLUDE [control-summary-audio-video](../../includes/control-summary-audio-video.md)]
+A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description ##
 An **Audio** control plays a sound clip from a file, a recording from a **Microphone** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL.

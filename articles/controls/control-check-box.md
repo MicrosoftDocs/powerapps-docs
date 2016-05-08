@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Check box control in PowerApps #
-[AZURE.INCLUDE [control-summary-check-box](../../includes/control-summary-check-box.md)]
+A control that the user can select or clear to set its value to **true** or **false**.
 
 ## Description ##
 The user can specify a Boolean value by using this familiar control, which has been used in GUIs for decades.

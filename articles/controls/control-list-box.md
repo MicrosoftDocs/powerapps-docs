@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # List Box control in PowerApps #
-[AZURE.INCLUDE [control-summary-list-box](../../includes/control-summary-list-box.md)]
+A list in which the user can select one or multiple items.
 
 ## Description ##
 A **List Box** control always shows all available choices (unlike a **Drop down** control) and in which the user can choose more than one item at a time (unlike a **Radio** control).

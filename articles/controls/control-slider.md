@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Slider control in PowerApps #
-[AZURE.INCLUDE [control-summary-slider](../../includes/control-summary-slider.md)]
+A control with which the user can specify a value by dragging a handle.
 
 ## Description ##
 The user can indicate a value, between a minimum and a maximum value that you specify, by dragging the handle of a slider left-right or up-down, depending on the direction that you choose.

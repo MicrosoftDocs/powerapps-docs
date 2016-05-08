@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # HTML text control in PowerApps #
-[AZURE.INCLUDE [control-summary-html-text](../../includes/control-summary-html-text.md)]
+A box that shows text and converts HTML tags to formatting.
 
 ## Description ##
 An **HTML text** control not only shows plain text and numbers but also converts HTML tags, such as non-breaking spaces.

@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Shape controls and Icon controls in PowerApps #
-[AZURE.INCLUDE [control-summary-shapes-icons](../../includes/control-summary-shapes-icons.md)]
+Graphics for which you can configure appearance and behavior properties.
 
 ## Description ##
 These controls include arrows, geometric shapes, action icons, and symbols for which you can configure properties such as fill, size, and location. You can also configure their **OnSelect** property so that the app responds if the user clicks or taps the control.

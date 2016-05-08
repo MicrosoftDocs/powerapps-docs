@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Drop down control in PowerApps #
-[AZURE.INCLUDE [control-summary-list-box](../../includes/control-summary-drop-down.md)]
+A list that shows only the first item unless the user opens it.
 
 ## Description ##
 A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices.

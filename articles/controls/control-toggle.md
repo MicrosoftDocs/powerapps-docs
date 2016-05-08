@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Toggle control in PowerApps #
-[AZURE.INCLUDE [control-summary-toggle](../../includes/control-summary-toggle.md)]
+A control that the user can turn on or off by moving its handle.
 
 ## Description ##
 A toggle is designed for recent GUIs but behaves the same way as a check box.

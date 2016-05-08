@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # PDF viewer control in PowerApps #
-[AZURE.INCLUDE [control-summary-pdf-viewer](../../includes/control-summary-pdf-viewer.md)]
+A control that shows the content of a PDF file.
 
 ## Description ##
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.

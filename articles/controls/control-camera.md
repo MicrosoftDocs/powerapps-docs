@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Camera control in PowerApps #
-[AZURE.INCLUDE [control-summary-camera](../../includes/control-summary-camera.md)]
+A control with which the user can take photos by using the camera on the device.
 
 ## Description ##
 If you add this control, the user can update a data source with one or more photos from wherever the app is running.

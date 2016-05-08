@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Image control in PowerApps #
-[AZURE.INCLUDE [control-summary-image](../../includes/control-summary-image.md)]
+A control that shows an image from, for example, a local file or a data source.
 
 ## Description ##
 If you add one or more **Image** controls to your app, you can show individual images that aren't part of a data set, or you can incorporate images from records in data sources.

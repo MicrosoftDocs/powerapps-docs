@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Text input control in PowerApps #
-[AZURE.INCLUDE [control-summary-text-input](../../includes/control-summary-text-input.md)]
+A box in which the user can type text, numbers, and other data.
 
 ## Description ##
 The user can specify data by typing into a text-input control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way.

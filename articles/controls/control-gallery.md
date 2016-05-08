@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Gallery control in PowerApps #
-[AZURE.INCLUDE [control-summary-gallery](../../includes/control-summary-gallery.md)]
+A control that contains other controls and shows a set of data.
 
 ## Description ##
 A **Gallery** control can show records from a data source, and each record can contain multiple types of data. For example, a **Gallery** control can show contact information that includes a name, an address, and a phone number for each contact. Each type of information appears in a separate control within the **Gallery** control, and you configure those controls in its template. The template appears on the left edge of a **Gallery** control in horizontal/landscape orientation and at the top of a **Gallery** control in vertical/portrait orientation. Any changes that you make in the template are reflected throughout the **Gallery** control.

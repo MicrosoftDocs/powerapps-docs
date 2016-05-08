@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Rating control in PowerApps #
-[AZURE.INCLUDE [control-summary-rating](../../includes/control-summary-rating.md)]
+A control with which users can indicate a value between 1 and a maximum number that you specify.
 
 ## Description ##
 In this control, the user can indicate, for example, how much they liked something by selecting a certain number of stars.

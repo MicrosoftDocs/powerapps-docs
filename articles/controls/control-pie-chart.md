@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Pie chart control in PowerApps #
-[AZURE.INCLUDE [control-summary-pie-charts](../../includes/control-summary-pie-charts.md)]
+A control that shows relative values in comparison to each other.
 
 ## Description ##
 Add a **Pie chart** control if you want to show relative data from a table that contains labels in the leftmost column and values in the second column from the left.
