@@ -1,1 +1,0 @@
-[**ShowControls**](properties-audio-video.md) Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
