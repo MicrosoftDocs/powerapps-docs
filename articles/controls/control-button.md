@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Button control in PowerApps #
-[AZURE.INCLUDE [control-summary-button](../../includes/control-summary-button.md)]
+A control that the user can click or tap to interact with the app.
 
 ## Description ##
 Configure the **OnSelect** property of a **Button** control to run one or more formulas when the user clicks or taps the control.

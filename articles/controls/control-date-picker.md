@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Date Picker control in PowerApps #
-[AZURE.INCLUDE [control-summary-date-picker](../../includes/control-summary-date-picker.md)]
+A control that the user can click or tap to specify a date.
 
 ## Description ##
 If you add a **Date Picker** control instead of a **Text input** control, you help ensure that the user specifies a date in the correct format.

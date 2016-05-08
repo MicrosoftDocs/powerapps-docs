@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Column chart and Line chart controls in PowerApps #
-[AZURE.INCLUDE [control-summary-column-line-charts](../../includes/control-summary-column-line-charts.md)]
+Controls that show data as graphs with x- and y-axes.
 
 ## Description ##
 By default, a **Column chart** control or a **Line chart** control comprises multiple controls grouped together. These controls show a title, data, and a legend.

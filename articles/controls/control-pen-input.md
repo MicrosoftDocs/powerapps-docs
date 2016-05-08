@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Pen input control in PowerApps #
-[AZURE.INCLUDE [control-summary-pen-input](../../includes/control-summary-pen-input.md)]
+A control in which the user can draw, erase, and highlight areas of an image.
 
 ## Description ##
 The user can use this control like a whiteboard, drawing diagrams and writing words that can be converted to typed text.

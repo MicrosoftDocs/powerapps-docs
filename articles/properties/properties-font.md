@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="aftowen"
+    authors="gregli-msft"
     manager="erikre"
     editor=""
     tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="03/17/2016"
-   ms.author="anneta"/>
+   ms.author="gregli"/>
 
 # Font properties in PowerApps #
 

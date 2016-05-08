@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Microphone control in PowerApps #
-[AZURE.INCLUDE [control-summary-microphone](../../includes/control-summary-microphone.md)]
+A control with which the user can record sounds.
 
 ## Description ##
 If you add this control, the user can update a data source with one or more sounds from wherever the app is running.

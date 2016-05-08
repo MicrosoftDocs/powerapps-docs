@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Timer control in PowerApps #
-[AZURE.INCLUDE [control-summary-timer](../../includes/control-summary-timer.md)]
+A control that can determine how your app responds after a certain amount of time passes.
 
 ## Description ##
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.

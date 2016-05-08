@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Export control and Import control in PowerApps #
-[AZURE.INCLUDE [control-summary-export-import](../../includes/control-summary-export-import.md)]
+Controls for exporting data to a local file and then importing that data into another app in PowerApps.
 
 ## Description ##
 If you want to create more than one app that uses the same data but not share that data outside those apps, you can export it and import it by using an **Export** control and an **Import** control. When you export data, you create a compressed file that you can copy to another machine, but you can't read it in any program other than PowerApps.

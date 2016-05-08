@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Radio control in PowerApps #
-[AZURE.INCLUDE [control-summary-radio](../../includes/control-summary-radio.md)]
+A list that shows all options but the user can select only one at a time.
 
 ## Description ##
 A **Radio** control, with which users have decades of experience, is best used with only a few options that are mutually exclusive.

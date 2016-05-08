@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Screen control in PowerApps #
-[AZURE.INCLUDE [control-summary-screen](../../includes/control-summary-screen.md)]
+A UI element that contains one or more other controls in an app.
 
 ## Description ##
 Most apps have multiple **Screen** controls that contain **Text Box** controls, **Button** controls, and other controls that show data and support navigation.
