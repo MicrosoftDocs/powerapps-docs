@@ -30,15 +30,15 @@ The **Ungroup** function reverses the **GroupBy** process. This function returns
 
 You can group records by using **GroupBy**, modify the table that it returns, and then ungroup records in the modified table by using **Ungroup**. For example, you can remove a group of records by following this approach:
 
-- Use **GroupBy**.
-- Use **[Filter](function-filter-lookup.md)** to remove the entire group of records.
-- Use **Ungroup**.  
+- Use the **GroupBy** function.
+- Use the **[Filter](function-filter-lookup.md)** function to remove the entire group of records.
+- Use the **Ungroup** function.  
 
 You can also aggregate results based on a grouping: 
 
-- Use **GroupBy**.
-- Use **AddColumns** with **Sum**, **Average**, and other aggregate functions to add a new column which is an aggregate of the group tables.
-- Use **DropColumns** to drop the group table.
+- Use the **GroupBy** function.
+- Use the **AddColumns** function with **Sum**, **Average**, and other aggregate functions to add a new column which is an aggregate of the group tables.
+- Use the **DropColumns** function to drop the group table.
 
 **Ungroup** tries to preserve the original order of the records that were fed to **GroupBy**.  This isn't always possible (for example, if the original table contains *blank* records).
 
@@ -79,9 +79,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 ### Group records ###
 
-1. Add another button, and set its **Text** property so that the button shows **Group**.
+1. Add another button, and set its **Text** property to **"Group"**.
 
-1. Set **OnSelect** property of the **Group** button to this formula:
+1. Set the **OnSelect** property of this button to this formula:
 
 	**ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )**
 
@@ -101,9 +101,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 ### Filter and ungroup records ###
 
-1. Add another button, and set its **Text** property so that the button shows **Filter**.
+1. Add another button, and set its **Text** property so that the button shows **"Filter"**.
 
-1. Set the **OnSelect** property of the **[Filter](function-filter-lookup.md)** button to this formula:
+1. Set the **OnSelect** property of this button to this formula:
 
 	**ClearCollect( CitiesByCountryFiltered, Filter( CitiesByCountry, "e" in Country ) )**
 
@@ -113,9 +113,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 	![](media/function-groupby/cities-grouped-hase.png)
 
-1. Add one more button, and set its **Text** property so that the button shows **Ungroup**.
+1. Add one more button, and set its **Text** property so that the button shows **"Ungroup"**.
 
-1. Set the **OnSelect** property of the **Ungroup** button to this formula:
+1. Set the **OnSelect** property of this button to this formula:
 
 	**ClearCollect( CityPopulationsUngrouped, Ungroup( CitiesByCountryFiltered, "Cities" ) )**
 
@@ -127,9 +127,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 Something else we can do with a grouped table is to aggregate the results.  In this example, we will sum the population of the major cities in each country.
 
-1. Add another button, and set its **Text** property so that the button shows **Sum**.
+1. Add another button, and set its **Text** property so that the button shows **"Sum"**.
 
-2. Set the **OnSelect** property of the **Sum** button to this formula:
+2. Set the **OnSelect** property of the **"Sum"** button to this formula:
 
 	**ClearCollect( CityPopulationsSum, AddColumns( CitiesByCountry, "Sum of City Populations", Sum( Cities, Population ) ) )**
 
@@ -139,7 +139,7 @@ Something else we can do with a grouped table is to aggregate the results.  In t
 
 	**AddColumns** starts with the base **CitiesByCountry** collection and adds a new column **Sum of City Populations**.  This column's values are calculated row-by-row, based on the formula **Sum( Cities, Population )**.  **AddColumns** provides the value of the **Cities** column (a table) for each row, and **Sum** adds up the **Population** for each row of this sub table. 
 
-3. Now that we have the sum that we want, we can use **DropColumns** to remove the sub tables.  Modify the **Sum** button to use this formula:
+3. Now that we have the sum that we want, we can use **DropColumns** to remove the sub tables.  Modify the **OnSelect** property to use this formula:
 
 	**ClearCollect( CityPopulationsSumOnly, DropColumns( CityPopulationsSum, "Cities" ) )**
 

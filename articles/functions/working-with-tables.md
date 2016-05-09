@@ -29,7 +29,7 @@ In your app, you'll use [formulas](../working-with-formulas.md) to create, updat
 You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in PowerApps return a table that reflects the other arguments that you specify. For example, you might create a formula:
 
 - to update a record in a table by specifying that table as one of multiple arguments for the [**Patch**](function-patch.md) function
-- to add, remove, and rename columns in a table by specifying that table as an argument for the [**AddColumns, DropColumns, or RenameColumns**](function-table-shaping.md) function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
+- to add, remove, and rename columns in a table by specifying that table as an argument for the **AddColumns**, **DropColumns**, or **RenameColumns** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
 
 ## Elements of a table ##
 
