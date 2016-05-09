@@ -29,12 +29,12 @@ These functions return no values.
 ### SubmitForm ###
 Use the **SubmitForm** function in the **OnSelect** property of a Button control to save any changes in a Form control to the data source. Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **Validate** function.
 
-**SubmitForm** also checks the **Valid** property of the Form, which is an aggregation of all the **Valid** properties of the  [**Card**](control-card.md) controls that the Form control contains. If a problem occurs, the data isn't submitted, and the **Error** and **ErrorKind** properties of the Form control are set accordingly.
+**SubmitForm** also checks the [**Valid**](control-form-detail.md) property of the Form, which is an aggregation of all the [**Valid**](control-card.md) properties of the [**Card**](control-card.md) controls that the Form control contains. If a problem occurs, the data isn't submitted, and the [**Error**](control-form-detail.md) and **ErrorKind** properties of the Form control are set accordingly.
 
 If validation passes, **SubmitForm** submits the change to the data source.
 
-- If successful, the Form's **OnSuccess** behavior runs, and the **Error** and **ErrorKind** properties are cleared.
-- If unsuccessful, the Form's **OnFailure** behavior runs, and the **Error** and **ErrorKind** properties are set accordingly.  
+- If successful, the Form's **OnSuccess** behavior runs, and the [**Error**](control-form-detail.md) and **ErrorKind** properties are cleared.
+- If unsuccessful, the Form's **OnFailure** behavior runs, and the [**Error**](control-form-detail.md) and **ErrorKind** properties are set accordingly.  
 
 ### NewForm ###
 The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **Item** property are ignored, and the default values of the Form's **DataSource** property populate the form. If the **SubmitForm** function runs when the form is in this mode, an record is created, not changed.
