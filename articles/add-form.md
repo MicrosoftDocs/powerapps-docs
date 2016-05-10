@@ -39,7 +39,7 @@ To show all fields in a record, add and configure a [**Display form**](./control
 
 1.  Set the **DataSource** property of the form to **FlooringEstimates** and the **Item** property of the form to this formula:
 
-	**First(Filter(FlooringEstimates.Name=ChooseProduct.Selected.Value))**
+	**First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))**
 
     This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**.
 
