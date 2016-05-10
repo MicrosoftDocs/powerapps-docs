@@ -61,7 +61,7 @@ In the following examples, an input-text box named **FirstName** has the value "
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **If( ! IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ) )** | The condition is **true**, and the **[Navigate](function-navigate.md)** function is executed. You can use the **[IsBlank](function-isblank-isempty.md)** function to test whether a required form field has been filled in.  If the text box was [empty](function-isblank-isempty.md), this formula would have no effect.  | **true**<br><br>The display is changed to **Screen1**. |
-| **If( IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** | Without the **.** operator, the condition is **false**, and the **[Navigate](function-navigate.md)** function isn't executed.  Because the *ElseResult* has been provided, **[Back](function-navigate.md)** is executed. | **true**<br><br>The display goes back to the screen that was previously shown. |
+| **If( IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** | Without the **.** operator, the condition is **false**, and the **[Navigate](function-navigate.md)** function isn't executed.  Because the *ElseResult* has been provided, the **[Back](function-navigate.md)** function is executed. | **true**<br><br>The display goes back to the screen that was previously shown. |
 
 ### Step by step ###
 

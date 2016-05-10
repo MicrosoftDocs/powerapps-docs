@@ -26,7 +26,7 @@ Provides error information for previous changes to a [data source](working-with-
 
 Errors can happen when a [record](working-with-tables.md#records) of a data source is changed.  Many causes are possible, including network outages, inadequate permissions, and edit conflicts.  
 
-**[Patch](function-patch.md)** and other data functions don't directly return errors. Instead they return the result of their operation. After a data function executes, you can use the **Errors** function to obtain the details of any errors.  You can check for the existence of errors with the **[IsEmpty]** function in the formula **IsEmpty( Errors ( ... ) )**.
+The **[Patch](function-patch.md)** function and other data functions don't directly return errors. Instead they return the result of their operation. After a data function executes, you can use the **Errors** function to obtain the details of any errors.  You can check for the existence of errors with the **[IsEmpty]** function in the formula **IsEmpty( Errors ( ... ) )**.
 
 You can avoid some errors before they happen by using the **[Validate](function-validate.md)** and **[DataSourceInfo](function-datasourceinfo.md)** functions.  See [working with data sources](working-with-data-sources.md) for more suggestions on how to work with and avoid errors.
 
@@ -44,7 +44,7 @@ The **Errors** function returns a [table](working-with-tables.md) of errors that
 
 | ErrorKind | Description |
 |------------|-------------|
-| ErrorKind.Conflict | Another change was made to the same record, resulting in a change conflict.  Use **[Revert](function-revert.md)** to reload the record and try the change again. |
+| ErrorKind.Conflict | Another change was made to the same record, resulting in a change conflict.  Use the **[Refresh](function-refresh.md)** function to reload the record and try the change again. |
 | ErrorKind.ConstraintViolation | One or more constraints have been violated. |
 | ErrorKind.CreatePermission | An attempt was made to create a record, and the current user doesn't have permission to create records. |
 | ErrorKind.DeletePermission | An attempt was made to delete a record, and the current user doesn't have permission to delete records. |

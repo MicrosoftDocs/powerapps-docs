@@ -47,7 +47,7 @@ In this example, you'll revert the data source named **IceCream**, which starts 
 
 A user on another device changes the **Quantity** property of the **Strawberry** record to **400**.  At about the same time, you change the same property of the same record to **500**, not knowing about the other change.
 
-You use **[Patch](function-patch.md)** to update the record:<br>
+You use the **[Patch](function-patch.md)** function to update the record:<br>
 **Patch( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ), { Quantity: 500 } )**
 
 You check the **[Errors](function-errors.md)** table and find an error:

@@ -79,7 +79,7 @@ Some data sources can detect when two people try to update the same record at th
 
 | ErrorKind | Description |
 |------------|-------------|
-| ErrorKind.Conflict | Another user changed the same record, resulting in a change conflict. Run **[Refresh](function-refresh.md)** to reload the record, and try the change again. |
+| ErrorKind.Conflict | Another user changed the same record, resulting in a change conflict. Execute the **[Refresh](function-refresh.md)** function to reload the record, and try the change again. |
 | ErrorKind.None | The error is of an unknown kind. |
 | ErrorKind.Sync | The data source reported an error. Check the **Error** property for more information. |
 | ErrorKind.Validation | A general validation issue was detected. |

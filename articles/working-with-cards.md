@@ -25,7 +25,7 @@ The easiest way to interact with cards is through the **Options** pane when a fo
 
 ![](./media/working-with-cards/afd-edit-card-options.png)
 
-To get started with cards, see [add a form](add-a-form.md) and [understand data forms](working-with-forms.md). The remainder of this topic goes into more detail about how cards work and how you can customize or even create your own.
+To get started with cards, see [add a form](add-form.md) and [understand data forms](working-with-forms.md). The remainder of this topic goes into more detail about how cards work and how you can customize or even create your own.
 
 ## Predefined cards ##
 PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the **Options** pane, you can see the variations available and change the card used for a field:

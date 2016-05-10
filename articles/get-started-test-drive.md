@@ -76,7 +76,7 @@ An app from a template opens in the default workspace, where you'll spend most o
 
 1. Explore the app's default behavior, and verify that the data in your cloud account reflects your changes.
 
-	For example, make an appointment, and create a cost estimate in the [Cost Estimator](cost-estimator.md#make-and-view-an-appointment) app.
+	For example, make an appointment, and create a cost estimate in the Cost Estimator app.
 
 1. Return to the default workspace by selecting the **'X'** icon in the upper-right corner (under the PowerApps title bar).
 
