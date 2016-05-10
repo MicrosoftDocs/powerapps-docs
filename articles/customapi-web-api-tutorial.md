@@ -126,7 +126,7 @@ For a more detailed experience on creating PowerApps and Logic Flows, see the fo
 - [Connect to Office 365, Twitter, and Microsoft Translator](powerapps-api-functions.md)
 - [Show data from Office 365](show-office-data.md)
 - [Create an app from data](get-started-create-from-data.md)
-- [Get started with logic flows](get-started-logic-flow.md)
+- [Get started with logic flows](using-logic-flows.md)
 
 ## Questions and more 
 For questions or comments, email [customapishelp@microsoft.com](mailto:customapishelp@microsoft.com).

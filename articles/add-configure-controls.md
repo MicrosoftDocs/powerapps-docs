@@ -40,7 +40,7 @@ On the **Insert** tab, follow either of these steps:
 
 		![Text box, Text input, HTML text, and Pen input](./media/add-configure-controls/text-category.png)
 
-		**Tip:** [Write or draw](add-images-pictures-audio-video.md#write-or-draw-in-the-app) by using the pen input.
+		**Tip:** [Write or draw](add-images-pictures-audio-video.md#draw-a-picture) by using the pen input.
 
 	- **Controls**
 

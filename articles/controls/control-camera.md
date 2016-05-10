@@ -68,16 +68,16 @@ If you add this control, the user can update a data source with one or more phot
 
 ## Related functions ##
 
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## Example ##
 ### Add photos to an Image gallery control ###
 1. Add a **Camera** control, name it **MyCamera**, and set its **OnSelect** property to this formula:<br>
 **Collect(MyPix, MyCamera.Photo)**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](../formula-reference.md)?
 
 1. Add an **Image gallery** control, and then resize its **Image** control, its template, and the **Image gallery** control itself to fit in the screen.
 

@@ -116,7 +116,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 ## Related functions ##
 
-[**If**( *Condition*, *Result* )](function-if.md)
+[**If**( *Condition*, *Result* )](../function/function-if.md)
 
 ## Example ##
 1. Add a **Check box** control, name it **chkReserve**, and set its **Text** property to show **Reserve now**.

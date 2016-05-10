@@ -77,7 +77,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	- **BrowseScreen1** shows a list of all items and some information about the items, so that users can easily browse for the item they want.  
 	- **DetailScreen1** shows all information about a single item.  
-	- **EditScreen1** provides a [**Form**](./add-form.md) control for adding an item or updating information about an item.  
+	- **EditScreen1** provides an [**Edit form**](./add-form.md) control for adding an item or updating information about an item.  
 
 ## Customize the app ##
 When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.

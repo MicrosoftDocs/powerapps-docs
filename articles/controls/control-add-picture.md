@@ -117,7 +117,7 @@ These properties apply to the inner text box control that by default says "Tap o
 1. Add a **Button** control, move it under the **Add picture** control, and set the **OnSelect** property for the **Button** control to this formula:<br>
 **Collect(MyPix, AddMediaButton1.Media)**
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](../formula-reference.md)?
 
 1. Add an **Image gallery** control, and set its **Items** property to **MyPix**.
 

@@ -136,7 +136,7 @@ With this release, we [support a wide assortment of connections](connections-lis
 
 	The stock custom card is missing the **Update** property, which is required to write back changes. To work around this:
 	- Select the form control, and insert a card by using the right-hand pane based on the field that you want the card to show.  
-	- Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card.md).
+	- Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card).
 	- Remove or rearrange controls within the card as you see fit, just as you would with the custom card.   
 
 4. **For apps that are created from data, only the first 500 records of a data source can be accessed.**
@@ -147,7 +147,7 @@ With this release, we [support a wide assortment of connections](connections-lis
 
 5. **Card gallery is deprecated.**
 
-	Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new [**Form**](control-form-detail.md) control.
+	Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](control-form-detail.md)** and **Display form** controls.
 
 5. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash.**
 

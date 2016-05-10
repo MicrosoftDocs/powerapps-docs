@@ -76,7 +76,7 @@ In general, if you can achieve an effect by using a formula, you'll be better of
 
 ## Know when to use variables ##
 
-Let's change our simple adder to act like an old-fashioned adding machine, with a running total. If you select an **Add** button, you'll add a number to the running total. If you select a **[Clear](function-clear-collect-clearcollect.md)** button, you'll reset the running total to zero.
+Let's change our simple adder to act like an old-fashioned adding machine, with a running total. If you select an **Add** button, you'll add a number to the running total. If you select a **Clear** button, you'll reset the running total to zero.
 
 ![](media/working-with-variables/button-changes-state.png)
 
@@ -86,7 +86,7 @@ You'll sometimes need a variable for your app to behave the way you want.  But t
 
 - You must manually update the running total. Automatic recalculation won't do it for you.
 - The running total can no longer be calculated based on the values of other controls. It depends on how many times the user selected the **Add** button and what value was in the text-input control each time. Did the user enter 77 and select **Add** twice, or did they specify 24 and 130 for each of the additions? You can't tell the difference after the total has reached 154.
-- Changes to the total can come from different paths. In this example, both the **Add** and **[Clear](function-clear-collect-clearcollect.md)** buttons can update the total. If the app doesn't behave the way you expect, which button is causing the problem?
+- Changes to the total can come from different paths. In this example, both the **Add** and **Clear** buttons can update the total. If the app doesn't behave the way you expect, which button is causing the problem?
 
 ## Create a context variable ##
 To create our adding machine, we require a variable to hold the running total. The simplest variables in PowerApps are *context variables*.  
@@ -104,7 +104,7 @@ Let's rebuild our adding machine by using a context variable:
 
 1. Add a text-input control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
 
-1. Set the **Text** property of **Button1** so it says **Add**, and set the **Text** property of **Button2** so it says **[Clear](function-clear-collect-clearcollect.md)**.
+1. Set the **Text** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
 
 1. To update the running total whenever a user selects the **Add** button, set its **OnSelect** property to this formula:<br> **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**.
 
@@ -112,7 +112,7 @@ Let's rebuild our adding machine by using a context variable:
 
 	![](media/working-with-variables/context-variable-1.png)
 
-1. To set the running total to **0** whenever the user selects the **[Clear](function-clear-collect-clearcollect.md)** button, set its **OnSelect** property to this formula:<br>
+1. To set the running total to **0** whenever the user selects the **Clear** button, set its **OnSelect** property to this formula:<br>
 **UpdateContext( { RunningTotal: 0 } )**
 
 	Again, **[UpdateContext](function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
@@ -141,7 +141,7 @@ Let's recreate our adding machine by using a collection:
 
 1. Add a **Text input** control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
 
-1. Set the **Text** property of **Button1** so it says **Add**, and set the **Text** property of **Button2** so it says **[Clear](function-clear-collect-clearcollect.md)**.
+1. Set the **Text** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to **"Clear"**.
 
 1. To update the running total whenever a user selects the **Add** button, set its **OnSelect** property to this formula:<br> **ClearCollect( RunningTotal, First( RunningTotal ).Value + TextInput1 )**
 
@@ -149,7 +149,7 @@ Let's recreate our adding machine by using a collection:
 
 	![](media/working-with-variables/collection-1.png)
 
-1. To set the running total to **0** whenever a user selects the **[Clear](function-clear-collect-clearcollect.md)** button, set its **OnSelect** property to this formula:<br>
+1. To set the running total to **0** whenever a user selects the **Clear** button, set its **OnSelect** property to this formula:<br>
 **ClearCollect( RunningTotal, 0 )**
 
 	Again, **[ClearCollect](function-clear-collect-clearcollect.md)** is used with the formula **ClearCollect( RunningTotal, 0 )**.

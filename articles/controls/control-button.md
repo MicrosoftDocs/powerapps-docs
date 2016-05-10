@@ -117,12 +117,12 @@ Configure the **OnSelect** property of a **Button** control to run one or more f
 ## Example ##
 1. Add a **Text input** control, and name it **Source**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Add a **Button** control, set its **Text** property to show **Add**, and set its **OnSelect** property to this formula:<br>
 **UpdateContext({Total:Total + Value(Source.Text)})**
 
-	Want more information about the [**UpdateContext** function](function-updatecontext.md) or [other functions](formula-reference.md)?
+	Want more information about the [**UpdateContext** function](function-updatecontext.md) or [other functions](../formula-reference.md)?
 
 1. Add a **Text box** control, set its **Text** property to show **Total**, and then press F5.
 
