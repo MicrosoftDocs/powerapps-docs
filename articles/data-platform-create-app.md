@@ -26,7 +26,7 @@ There are two ways to create an app using tables:
 1. Create from data
 2. Create from scratch
 
-PowerApps data platform are enabled automatically as a data connection so taht tables then can be added as data sources to PowerApps. This is the same experience as external connections like SharePoint Online, Dynamics CRM or Salesforce.
+PowerApps data platform are enabled automatically as a data connection so that tables then can be added as data sources to PowerApps. This is the same experience as external connections like SharePoint Online, Dynamics CRM or Salesforce.
 
 ## Create from data
 
