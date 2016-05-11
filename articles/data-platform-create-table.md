@@ -18,16 +18,16 @@
    ms.author="guayan"/>
 
 # Create a table in PowerApps
-Store data that's specific to your organization in a custom table, and show that data by referring to the table when you develop an app. Create a table:
+You can store data that's specific to your organization in a custom table, and show that data by referring to the table when you develop an app. You can create a table:
 
 - based on another table by copying its fields and settings but not its data
 - from scratch so that, by default, it contains only [four system fields and a record-title field](data-platform-create-table.md#system-and-record-title-fields)
 
 Either way, PowerApps stores and secures the data automatically. After you create a table, you can create or modify one or more of its fields and build relationships between tables.
 
-**Note**: Before you create a table, [review the tables that PowerApps offers by default](data-platform-standard-tables.md). These tables cover common scenarios, such as a list of countries around the world. Save yourself some time by starting with one of these tables if any of them meets your needs out of the box or with only minor changes.
+**Note**: Before you create a table, [review the tables that are included with PowerApps](data-platform-standard-tables.md). These tables cover common scenarios, such as accounts and contacts. Save yourself some time by starting with one of these tables if any of them meets your needs out of the box or with only minor changes.
 
-## Create a table ##
+## Create a table
 1. In [powerapps.com](http://powerapps.com), select **Manage** > **Tables** in the left navigation pane.
 1. Near the upper-right corner, select **New Table**, and then specify a name, a display name, and (optionally) a description for your table.
 
