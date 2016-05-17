@@ -26,7 +26,7 @@ Returns one value if a condition is true, and returns another value if the same 
 
 The **If** function tests conditions until a **true** result is found.  The corresponding value is then returned as the result.  You can use **If** to return different results based on comparisons and other tests.  
 
-You can use **If** in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas) to branch between two actions.  At most, one branch will be executed.  Conditions are evaluated in order, and after a **true** result is found, no further conditions are checked.
+You can use **If** in [behavior formulas](../working-with-formulas-in-depth.md#behavior-formulas) to branch between two actions.  At most, one branch will be executed.  Conditions are evaluated in order, and after a **true** result is found, no further conditions are checked.
 
 If no conditions are satisfied and an odd number of arguments are provided, the value of the last argument is returned.  This is the case with the common **If( *Condition*, *Value*, *Else* )**.  If an even number of arguments are provided, *Blank* is returned.
 
@@ -69,7 +69,7 @@ In the following examples, an input-text box named **FirstName** has the value "
 
 2. In **Text1**, type **15**.
 
-3. Add a label, and set its **[Text](../properties/properties-core.md)** property to the following formulas:
+3. Add a label, and set its **[Text](../controls/properties-core.md)** property to the following formulas:
 
 | Formula | Description | Result |
 |---------|-------------|--------|

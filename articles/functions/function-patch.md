@@ -20,13 +20,13 @@
 
 # Patch function in PowerApps #
 
-Modifies or creates a [record](working-with-tables.md#records) in a [data source](working-with-data-sources.md), or merges records outside of a data source.
+Modifies or creates a [record](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md), or merges records outside of a data source.
 
 ## Overview ##
 
-Use the **Patch** function to modify a record of a data source.  The values of specific [properties](working-with-tables.md#elements-of-a-table) are modified without affecting other properties.
+Use the **Patch** function to modify a record of a data source.  The values of specific [properties](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties.
 
-Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. You can use this behavior to build a [single screen](working-with-data-sources.md) for both creating and editing records.  
+Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. You can use this behavior to build a [single screen](../working-with-data-sources.md) for both creating and editing records.  
 
 Even if you're not working with a data source, you can use **Patch** to merge two or more records.
 
@@ -36,7 +36,7 @@ Even if you're not working with a data source, you can use **Patch** to merge tw
 
 To use this function with a data source, specify the data source, and then specify a base record:
 
-- To modify a record, the base record needs to have come from a data source.  The base record may have come through a gallery's **[Items](../properties/properties-core.md)** property, been placed in a [context variable](working-with-variables.md#create-a-context-variable), or come through some other path. But you should be able to trace the base record back to the data source.  This is important as the record will include additional information to help find the record again for modification.  
+- To modify a record, the base record needs to have come from a data source.  The base record may have come through a gallery's **[Items](../controls/properties-core.md)** property, been placed in a [context variable](../working-with-variables.md#create-a-context-variable), or come through some other path. But you should be able to trace the base record back to the data source.  This is important as the record will include additional information to help find the record again for modification.  
 
 - To create a record, use the **[Defaults](function-defaults.md)** function to create a base record with default values.  
 
@@ -44,7 +44,7 @@ Then specify one or more change records, each of which contains new property val
 
 The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically.
 
-When you update a data source, one or more issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine issues, as [Working with Data Sources](working-with-data-sources.md) describes.
+When you update a data source, one or more issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine issues, as [Working with Data Sources](../working-with-data-sources.md) describes.
 
 Related functions include the **[Update](function-update-updateif.md)** function, which you can use to replace an entire record, and the **[Collect](function-clear-collect-clearcollect.md)** function, which you can use to create a record.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
 
@@ -76,7 +76,7 @@ Specify two or more records that you want to merge. Records are processed in ord
 
 #### Modify or create a record (in a data source) ###
 
-In these examples, you'll modify or create a record in a data source, named **IceCream**, that contains the data in this [table](working-with-tables.md) and automatically generates the values in the **ID** [column](working-with-tables.md#columns):
+In these examples, you'll modify or create a record in a data source, named **IceCream**, that contains the data in this [table](../working-with-tables.md) and automatically generates the values in the **ID** [column](../working-with-tables.md#columns):
 
 ![](media/function-patch/icecream.png)
 

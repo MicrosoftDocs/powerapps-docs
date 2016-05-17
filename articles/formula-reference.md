@@ -22,7 +22,7 @@
 
 Formulas combine many elements.  Listed below are:
 
-- **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in [behavior formula](functions/working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSelect**.
+- **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSelect**.
 
 - **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 
@@ -42,7 +42,7 @@ Other elements include:
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
 
-**[AddColumns](functions/function-table-shaping.md)** – Returns a table with [columns](functions/working-with-tables.md#columns) added.
+**[AddColumns](functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
 
 **[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the **&&** operator.
 
@@ -60,9 +60,9 @@ Other elements include:
 
 **[Char](functions/function-char.md)** – Translates a character code into a string.
 
-**[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](functions/working-with-data-sources.md#collections).
+**[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
-**[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](functions/working-with-tables.md#records).
+**[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
 
 **[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
@@ -294,7 +294,7 @@ Other elements include:
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
-**[UpdateContext](functions/function-updatecontext.md)** – Creates or updates one or more [context variables](functions/working-with-variables.md#create-a-context-variable) of the current screen.
+**[UpdateContext](functions/function-updatecontext.md)** – Creates or updates one or more [context variables](working-with-variables.md#create-a-context-variable) of the current screen.
 
 **[UpdateIf](functions/function-update-updateif.md)** – Modifies a set of records in a data source based on a condition.
 

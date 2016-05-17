@@ -26,98 +26,98 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 ## Key properties ##
 
-**[Default](../properties/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-**[Items](../properties/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
+**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 [AZURE.INCLUDE [long-items](../../includes/long-items.md)]
 
 ## Additional properties ##
 
-**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[Color](../properties/properties-color-border.md)** – The color of text in a control.
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-**[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-**[Fill](../properties/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Font](../properties/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontWeight](../properties/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverBorderColor](../properties/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[HoverColor](../properties/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-**[HoverFill](../properties/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[Italic](../properties/properties-text.md)** – Whether the text in a control is italic.
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **ItemPaddingLeft** – The distance between text in a listbox and its left edge.
 
-**[LineHeight](../properties/properties-text.md)** – The distance between, for example, lines of text or items in a list.
+**[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-**[OnChange](../properties/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](../properties/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-**[PaddingBottom](../properties/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-**[PaddingLeft](../properties/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-**[PaddingRight](../properties/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-**[PaddingTop](../properties/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[PressedBorderColor](../properties/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-**[PressedColor](../properties/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-**[PressedFill](../properties/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[Reset](../properties/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**[SelectionColor](../properties/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
+**[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
-**[SelectionFill](../properties/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.
+**[SelectionFill](properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.
 
 **SelectMultiple** – Whether a user can select more than one item in a listbox.
 
-**[Size](../properties/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-**[Strikethrough](../properties/properties-text.md)** – Whether a line appears through the text that appears on a control.
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[Tooltip](../properties/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Underline](../properties/properties-text.md)** – Whether a line appears under the text that appears on a control.
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example ##
-1. Add a **List box** control, name it **CategoryList**, and set its **[Items](../properties/properties-core.md)** property to this formula:<br>
+1. Add a **List box** control, name it **CategoryList**, and set its **[Items](properties-core.md)** property to this formula:<br>
 **["Carpet","Hardwood","Tile"]**
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
@@ -126,14 +126,14 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 1. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 
-1. Set the **[Items](../properties/properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+1. Set the **[Items](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
 	- CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
 	- HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
 	- TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
 
 	![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
 
-1. Set the **[Visible](../properties/properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+1. Set the **[Visible](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
 	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
 	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
 	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**

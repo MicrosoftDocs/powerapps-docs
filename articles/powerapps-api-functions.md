@@ -85,7 +85,7 @@ Connect to Office 365 Users or Office 365 Outlook, and then perform these tasks:
 ### Show information about the current user ###
 1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Office 365 Users**.
 
-1. On the **Insert** tab, select **Text box**, and then set the **[Text](properties/properties-core.md)** property of the text box to any of these formulas:
+1. On the **Insert** tab, select **Text box**, and then set the **[Text](controls/properties-core.md)** property of the text box to any of these formulas:
 
 	- **office365users.MyProfile().Department**
 	- **office365users.MyProfile().DisplayName**
@@ -108,7 +108,7 @@ The text box shows the information that you specified about the current user.
 
 1. Rename the text-input control **InfoAbout** and, in it, type the email address of a user in your organization.
 
-1. On the **Insert** tab, select **Text box**, and then set the **[Text](properties/properties-core.md)** property of the text box to any of these formulas:
+1. On the **Insert** tab, select **Text box**, and then set the **[Text](controls/properties-core.md)** property of the text box to any of these formulas:
 
 	- To show information about another user:<br>
 		- **office365users.UserProfile(InfoAbout.Text).Department**
@@ -147,7 +147,7 @@ The text box shows the information that you specified about the current user.
 
 1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
 
-1. Set the gallery's **[Items](properties/properties-core.md)** property to this formula:
+1. Set the gallery's **[Items](controls/properties-core.md)** property to this formula:
 
 	**office365users.DirectReports(InfoAbout.Text)**
 
@@ -164,7 +164,7 @@ The text box shows the information that you specified about the current user.
 
 1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
 
-1. Set the gallery's **[Items](properties/properties-core.md)** property to this formula:
+1. Set the gallery's **[Items](controls/properties-core.md)** property to this formula:
 
 	**office365users.SearchUser({searchTerm: SearchTerm.Text})**
 
@@ -186,10 +186,10 @@ For this function, you must specify the first three arguments, but all other arg
 	- **inputSubject**
 	- **inputBody**
 
-1. On the **Insert** tab, select **Button**, and set the button's **[OnSelect](properties/properties-core.md)** property to this formula:<br>
+1. On the **Insert** tab, select **Button**, and set the button's **[OnSelect](controls/properties-core.md)** property to this formula:<br>
 **office365.SendEmail(inputSubject.Text, inputBody.Text, inputTo.Text)**
 
-1. Move the button so that it appears under all the other controls, and set its **[Text](properties/properties-core.md)** property to show **Send email**.
+1. Move the button so that it appears under all the other controls, and set its **[Text](controls/properties-core.md)** property to show **Send email**.
 
 1. Press F5, type a valid email address in **inputTo**, and type whatever you want in the other two input-text controls.
 
@@ -212,9 +212,9 @@ Connect to Twitter, and then perform these tasks:
 
 1. Do one of the following:
 
-	- To show the current user's timeline, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>**twitter.HomeTimeline()**
+	- To show the current user's timeline, set the **[Items](controls/properties-core.md)** property of the gallery to this formula:<br>**twitter.HomeTimeline()**
 
-	- To show another user's timeline, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>
+	- To show another user's timeline, set the **[Items](controls/properties-core.md)** property of the gallery to this formula:<br>
 	**twitter.UserTimeline(** *UserID* **)**
 
 	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
@@ -234,9 +234,9 @@ Connect to Twitter, and then perform these tasks:
 
 1. Do one of the following:
 
-	- To show the current user's followers, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>**twitter.MyFollowers()**
+	- To show the current user's followers, set the **[Items](controls/properties-core.md)** property of the gallery to this formula:<br>**twitter.MyFollowers()**
 
-	- To show the another user's followers, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>
+	- To show the another user's followers, set the **[Items](controls/properties-core.md)** property of the gallery to this formula:<br>
 	**twitter.Followers(** *UserID* **)**
 
 	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
@@ -257,9 +257,9 @@ Connect to Twitter, and then perform these tasks:
 
 1. Do one of the following:
 
-	- To show which users the current user is following, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>**twitter.MyFollowing()**
+	- To show which users the current user is following, set the **[Items](controls/properties-core.md)** property of the gallery to this formula:<br>**twitter.MyFollowing()**
 
-	- To show which users another user is following, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>
+	- To show which users another user is following, set the **[Items](controls/properties-core.md)** property of the gallery to this formula:<br>
 	**twitter.Following(** *UserID* **)**
 
 	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
@@ -275,7 +275,7 @@ Connect to Twitter, and then perform these tasks:
 ### Show information about a user ###
 1. If you haven't already, [create a connection](powerapps-api-functions.md#create-a-connection) to **Twitter**.
 
-1. On the **Insert** tab, select **Text box**, and then set its **[Text](properties/properties-core.md)** property to one of these formulas:
+1. On the **Insert** tab, select **Text box**, and then set its **[Text](controls/properties-core.md)** property to one of these formulas:
 	- **twitter.User(** *UserID* **)!Description**
 	- **twitter.User(** *UserID* **)!FullName**
 	- **twitter.User(** *UserID* **)!Location**
@@ -292,7 +292,7 @@ Connect to Twitter, and then perform these tasks:
 
 1. On the **Insert** tab, select **Gallery**, and then select the text gallery in **Portrait** orientation.
 
-1. Set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>
+1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:<br>
 **twitter.SearchTweet(** *SearchTerm* **)**
 
 	Specify a *SearchTerm* by enclosing a term in double quotation marks or by referring to an equivalent value. For example, specify **"PowerApps"** directly in the formula, or add an input-text control named **SearchTerm**, specify **SearchTerm.Text** in the formula, and then type **PowerApps** (no quotation marks) in **SearchTerm**.
@@ -309,7 +309,7 @@ Connect to Twitter, and then perform these tasks:
 
 1. On the **Insert** tab, select **Text**, select **Input text**, and then rename the new control **MyTweet**.
 
-1. On the **Insert** tab, select **Button**, and then set the **[OnSelect](properties/properties-core.md)** property of the button to this formula:<br>
+1. On the **Insert** tab, select **Button**, and then set the **[OnSelect](controls/properties-core.md)** property of the button to this formula:<br>
 **twitter.Tweet({tweetText: MyTweet.Text})**
 
 1. Press F5, type some text into **MyTweet**, and then select the button to tweet the text that you specified.
@@ -327,12 +327,12 @@ Connect to Twitter, and then perform these tasks:
 
 1. On the **Insert** tab, select **Controls**, select **Drop-down**, and then move the drop-down list below the **Source** box.
 
-1. Set the **[Items](properties/properties-core.md)** property of the drop-down list to this formula:<br>
+1. Set the **[Items](controls/properties-core.md)** property of the drop-down list to this formula:<br>
 **microsofttranslator.Languages()**
 
 1. Rename the drop-down list **TargetLang**.
 
-1. On the **Insert** tab, select **Text box**, move it below the drop-down list, and set its **[Text](properties/properties-core.md)** property to this formula:
+1. On the **Insert** tab, select **Text box**, move it below the drop-down list, and set its **[Text](controls/properties-core.md)** property to this formula:
 <br>**microsofttranslator.Translate(Source.Text, TargetLang.Selected.Value)**
 
 1. Type text into **Source**, and select a language in **TargetLang**.
@@ -342,7 +342,7 @@ Connect to Twitter, and then perform these tasks:
 ### Speak translated text ###
 1. If you haven't already, follow the steps in the previous procedure for translating text.
 
-1. Set the **[Items](properties/properties-core.md)** property of the **TargetLang** drop-down list to this formula:<br>
+1. Set the **[Items](controls/properties-core.md)** property of the **TargetLang** drop-down list to this formula:<br>
 **microsofttranslator.SpeechLanguages()**
 
 1. Rename the text box (not the **Source** box) to **Target**.
@@ -365,7 +365,7 @@ Connect to Twitter, and then perform these tasks:
 
 1. On the **Insert** tab, select **Text box**, and then move the text box under **Source**.
 
-1. Set the **[Text](properties/properties-core.md)** property of the text box to this formula:
+1. Set the **[Text](controls/properties-core.md)** property of the text box to this formula:
 <br>**microsofttranslator.Detect(Source.Text).Name**
 
 1. Type text into **Source**.

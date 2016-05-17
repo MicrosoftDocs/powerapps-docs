@@ -18,7 +18,7 @@
    ms.author="anneta"/>
 
 # Create a card gallery in PowerApps#
-Show a set of data for which each [record](functions/working-with-tables.md) contains more information than can appear at one time on the screen. For example, a product catalog might contain an image of each product, a description, quantity in stock, technical specifications, and enough other information that it can't all fit on a screen without scrolling. In a card gallery, you add sections that hold one or more types of information, and users can scroll through the sections to display it all.
+Show a set of data for which each [record](working-with-tables.md) contains more information than can appear at one time on the screen. For example, a product catalog might contain an image of each product, a description, quantity in stock, technical specifications, and enough other information that it can't all fit on a screen without scrolling. In a card gallery, you add sections that hold one or more types of information, and users can scroll through the sections to display it all.
 
 **Prerequisites**
 

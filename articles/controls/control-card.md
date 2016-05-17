@@ -33,7 +33,7 @@ You can customize the controls of a predefined card by resizing it, moving it, h
 
 Predefined cards are *locked* by default. In a locked card, you can modify only certain properties of the card or the controls within the card, and you can't delete a locked card. You can show the card lock and unlock it on the **View** tab of the **Advanced** view. If a property is locked and can't be modified, it appears with a lock icon next to its name. Unlocking a card is an advanced activity and should be done with care, because automatic formula generation will no longer occur for the card, and you can't relock a card.
 
-Within the form's container, the **ThisItem** record is available and contains all the fields of the record.  For example, the card's **[Default](../properties/properties-core.md)** property is often set to **ThisItem**.*FieldName*.
+Within the form's container, the **ThisItem** record is available and contains all the fields of the record.  For example, the card's **[Default](properties-core.md)** property is often set to **ThisItem**.*FieldName*.
 
 You can use the **Parent** reference to configure a control to reference the properties of a card.  For example, a control should use **Parent.Default** to read the initial state of the field from the data source. By using **Parent** instead of directly accessing the information that you want, the card is better encapsulated, and you can change it to a different field without breaking internal formulas.
 
@@ -45,9 +45,9 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 - Specify the name as a single static string that's enclosed in double quotation marks (for example, **"Name"**), not a formula.
 - Unbind a card by setting its **DataField** property *blank*. The **Valid** and **Update** properties are ignored for unbound cards.
 
-**[Default](../properties/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-- For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **[Default](../properties/properties-core.md)** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
+- For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **[Default](properties-core.md)** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
 
 **DisplayName** – The user friendly name for a field in a data source.
 
@@ -70,25 +70,25 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 ## Additional properties ##
 
-**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[Fill](../properties/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **Valid** – Whether a **Card** or **[Edit form](control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.
 
-**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Examples ##
 

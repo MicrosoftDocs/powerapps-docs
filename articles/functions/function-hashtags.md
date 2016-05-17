@@ -31,7 +31,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 - underscores (_)
 - currency symbols (such as $)
 
-**HashTags** returns a one-column [table](working-with-tables.md) that contains the hashtags in the string.  If the string contains no hashtags, the function returns a one-column table that's [empty](function-isblank-isempty.md).
+**HashTags** returns a one-column [table](../working-with-tables.md) that contains the hashtags in the string.  If the string contains no hashtags, the function returns a one-column table that's [empty](function-isblank-isempty.md).
 
 ## Syntax ##
 
@@ -47,7 +47,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 
 	**This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$*(#@")**
 
-2. Add a vertical custom gallery, and set its **[Items](../properties/properties-core.md)** property to this function:
+2. Add a vertical custom gallery, and set its **[Items](../controls/properties-core.md)** property to this function:
 
 	**HashTags(Tweet.Text)**
 

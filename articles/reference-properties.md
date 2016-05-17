@@ -91,15 +91,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ## Common properties by category ##
 
-**[Color and border](properties/properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
+**[Color and border](controls/properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
 
-**[Core](properties/properties-core.md)** – Configure whether the user can see and interact with a control.
+**[Core](controls/properties-core.md)** – Configure whether the user can see and interact with a control.
 
-**[Image](properties/properties-visual.md)** – Configure what image is shown and how it fills the control.
+**[Image](controls/properties-visual.md)** – Configure what image is shown and how it fills the control.
 
-**[Size and location](properties/properties-size-location.md)** – Configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.
+**[Size and location](controls/properties-size-location.md)** – Configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.
 
-**[Text](properties/properties-text.md)** – Configure how text appears in controls, such as font characteristics, alignment, line height.  
+**[Text](controls/properties-text.md)** – Configure how text appears in controls, such as font characteristics, alignment, line height.  
 
 ## All properties ##
 
@@ -107,13 +107,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ActualZoom](controls/control-pdf-viewer.md)** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
-**[Align](properties/properties-text.md)** – The location of text in relation to the horizontal center of its control.  Applies to many controls.
+**[Align](controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.  Applies to many controls.
 
 **[AllItems](controls/control-gallery.md)** – All items in a gallery, including additional control values that are a part of the gallery's template.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](controls/control-image.md)** controls.
 
-**[AutoHeight](controls/control-text-box.md)** – Whether a text box automatically increases its **[Height](properties/properties-size-location.md)** property if its **[Text](properties/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
+**[AutoHeight](controls/control-text-box.md)** – Whether a text box automatically increases its **[Height](controls/properties-size-location.md)** property if its **[Text](controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
 
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -121,13 +121,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### B ###
 
-**[BackgroundImage](properties/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
+**[BackgroundImage](controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
-**[BorderColor](properties/properties-color-border.md)** – The color of a control's border.  Applies to many controls.
+**[BorderColor](controls/properties-color-border.md)** – The color of a control's border.  Applies to many controls.
 
-**[BorderStyle](properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.  Applies to many controls.
+**[BorderStyle](controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.  Applies to many controls.
 
-**[BorderThickness](properties/properties-color-border.md)** – The thickness of a control's border.  Applies to many controls.
+**[BorderThickness](controls/properties-color-border.md)** – The thickness of a control's border.  Applies to many controls.
 
 **[Brightness](controls/control-camera.md)** – How much light the user is likely to perceive in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
@@ -151,7 +151,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Clear](controls/control-text-input.md)** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
-**[Color](properties/properties-color-border.md)** – The color of text in a control.  Applies to many controls.
+**[Color](controls/properties-color-border.md)** – The color of text in a control.  Applies to many controls.
 
 **[Contrast](controls/control-camera.md)** – How easily the user can distinguish between similar colors in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
@@ -167,19 +167,19 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[DataSource](controls/control-form-detail.md)** – The data source that contains the record that the user will show, edit, or create.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
-**[Default](properties/properties-core.md)** – The initial value of a control before it is changed by the user.  Applies to many controls.
+**[Default](controls/properties-core.md)** – The initial value of a control before it is changed by the user.  Applies to many controls.
 
 **[DefaultDate](controls/control-date-picker.md)** – The initial value of a date control before it is changed by the user.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
 **[Direction](controls/control-gallery.md)** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**[Disabled](properties/properties-core.md)** – Whether the user can interact with the control.  Applies to many controls.
+**[Disabled](controls/properties-core.md)** – Whether the user can interact with the control.  Applies to many controls.
 
-**[DisabledBorderColor](properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties/properties-core.md)** property is set to **true**.  Applies to many controls.
+**[DisabledBorderColor](controls/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](controls/properties-core.md)** property is set to **true**.  Applies to many controls.
 
-**[DisabledColor](properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](properties/properties-core.md)** property is set to **true**.  Applies to many controls.
+**[DisabledColor](controls/properties-color-border.md)** – The color of text in a control if its **[Disabled](controls/properties-core.md)** property is set to **true**.  Applies to many controls.
 
-**[DisabledFill](properties/properties-color-border.md)** – The background color of a control if its **[Disabled](properties/properties-core.md)** property is set to **true**.  Applies to many controls.
+**[DisabledFill](controls/properties-color-border.md)** – The background color of a control if its **[Disabled](controls/properties-core.md)** property is set to **true**.  Applies to many controls.
 
 **[DisplayName](controls/control-card.md)** – The user friendly name for a field in a data source.  Applies to the **[Card](controls/control-card.md)** control.
 
@@ -203,7 +203,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### F ###
 
-**[Fill](properties/properties-color-border.md)** – The background color of a control.  Applies to many controls.
+**[Fill](controls/properties-color-border.md)** – The background color of a control.  Applies to many controls.
 
 **[FindNext](controls/control-pdf-viewer.md)** – Finds the next instance of **FindText** in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -211,9 +211,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[FindText](controls/control-pdf-viewer.md)** – The search term to look for in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
-**[Font](properties/properties-text.md)** – The name of the family of fonts in which text appears.  Applies to many controls.
+**[Font](controls/properties-text.md)** – The name of the family of fonts in which text appears.  Applies to many controls.
 
-**[FontWeight](properties/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.  Applies to many controls.
+**[FontWeight](controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.  Applies to many controls.
 
 ### G ###
 
@@ -227,27 +227,27 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[HandleHoverFill](controls/control-slider.md)** – The color of the handle in a slider when the user keeps the mouse pointer on it.  Applies to the **[Slider](controls/control-slider.md)** control.
 
-**[Height](properties/properties-size-location.md)** – The distance between a control's top and bottom edges.  Applies to many controls.
+**[Height](controls/properties-size-location.md)** – The distance between a control's top and bottom edges.  Applies to many controls.
 
 **[HintText](controls/control-text-input.md)** – Light-grey text that appears in an input-text control if it's empty.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
-**[HoverBorderColor](properties/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.  Applies to many controls.
+**[HoverBorderColor](controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.  Applies to many controls.
 
-**[HoverColor](properties/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.  Applies to many controls.
+**[HoverColor](controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.  Applies to many controls.
 
-**[HoverFill](properties/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.  Applies to many controls.
+**[HoverFill](controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.  Applies to many controls.
 
 **[HTMLText](controls/control-html-text.md)** – Text that appears in an HTML text control and that may contain HTML tags.  Applies to the **[HTML text](controls/control-html-text.md)** control.
 
 ### I ###
 
-**[Image](properties/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](controls/control-image.md)**, **[Microphone](controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**[Image](controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](controls/control-image.md)**, **[Microphone](controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**[ImagePosition](properties/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
+**[ImagePosition](controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
 
 **[Input](controls/control-pen-input.md)** – Input.  Applies to the **[Pen input](controls/control-pen-input.md)** control.
 
-**[Italic](properties/properties-text.md)** – Whether the text in a control is italic.  Applies to many controls.
+**[Italic](controls/properties-text.md)** – Whether the text in a control is italic.  Applies to many controls.
 
 **[Item](controls/control-form-detail.md)** – The record in the **DataSource** that the user will show or edit.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
@@ -259,7 +259,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ItemPaddingLeft](controls/control-list-box.md)** – The distance between text in a listbox and its left edge.  Applies to the **[List Box](controls/control-list-box.md)** control.
 
-**[Items](properties/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.  Applies to many controls.
+**[Items](controls/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.  Applies to many controls.
 
 **[ItemsGap](controls/control-column-line-chart.md)** – The distance between columns in a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
@@ -271,7 +271,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](controls/control-gallery.md)** and **[Slider](controls/control-slider.md)** controls.
 
-**[LineHeight](properties/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](controls/control-radio.md)**, **[Text box](controls/control-text-box.md)**, and **[Text input](controls/control-text-input.md)** controls.
+**[LineHeight](controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](controls/control-radio.md)**, **[Text box](controls/control-text-box.md)**, and **[Text input](controls/control-text-input.md)** controls.
 
 **[Loop](controls/control-audio-video.md)** – Whether an audio or video clip automatically starts over as soon as it finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -307,7 +307,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### O ###
 
-**[OnChange](properties/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).  Applies to many controls.
+**[OnChange](controls/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).  Applies to many controls.
 
 **OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
@@ -321,7 +321,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnReset](controls/control-form-detail.md)** – How an app responds when an **[Edit form](controls/control-form-detail.md)** control is reset.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**[OnSelect](properties/properties-core.md)** – How the app responds when the user taps or clicks a control.  Applies to many controls.
+**[OnSelect](controls/properties-core.md)** – How the app responds when the user taps or clicks a control.  Applies to many controls.
 
 **OnStart** – How the app responds when the user starts to record with a microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -345,19 +345,19 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OriginalWidth](controls/control-image.md)** – Original width of an image, enabled with the **[CalculateOriginalDimensions](controls/control-image.md)** property.  Applies to the **[Image](controls/control-image.md)** control.
 
-**[Overflow](controls/control-text-box.md)** – Whether a scrollbar appears in a text box if its **[Wrap](controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](properties/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
+**[Overflow](controls/control-text-box.md)** – Whether a scrollbar appears in a text box if its **[Wrap](controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
 
 ### P ###
 
-**[Padding](properties/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Export](controls/control-export-import.md)**, and **[Import](controls/control-export-import.md)** controls.
+**[Padding](controls/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Export](controls/control-export-import.md)**, and **[Import](controls/control-export-import.md)** controls.
 
-**[PaddingBottom](properties/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.  Applies to many controls.
+**[PaddingBottom](controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.  Applies to many controls.
 
-**[PaddingLeft](properties/properties-size-location.md)** – The distance between text in a control and the left edge of that control.  Applies to many controls.
+**[PaddingLeft](controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.  Applies to many controls.
 
-**[PaddingRight](properties/properties-size-location.md)** – The distance between text in a control and the right edge of that control.  Applies to many controls.
+**[PaddingRight](controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.  Applies to many controls.
 
-**[PaddingTop](properties/properties-size-location.md)** – The distance between text in a control and the top edge of that control.  Applies to many controls.
+**[PaddingTop](controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.  Applies to many controls.
 
 **[Page](controls/control-pdf-viewer.md)** – The number of the page that you want to show.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -369,11 +369,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Pressed](controls/control-button.md)** – *True* while a control is being pressed, *false* otherwise.  Applies to the **[Button](controls/control-button.md)** control.
 
-**[PressedBorderColor](properties/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.  Applies to many controls.
+**[PressedBorderColor](controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.  Applies to many controls.
 
-**[PressedColor](properties/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.  Applies to many controls.
+**[PressedColor](controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.  Applies to many controls.
 
-**[PressedFill](properties/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.  Applies to many controls.
+**[PressedFill](controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.  Applies to many controls.
 
 ### R ###
 
@@ -385,13 +385,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[RadioSize](controls/control-radio.md)** – The diameter of the circles in a radio-button control.  Applies to the **[Radio](controls/control-radio.md)** control.
 
-**[RadiusBottomLeft](properties/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.  Applies to many controls.
+**[RadiusBottomLeft](controls/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.  Applies to many controls.
 
-**[RadiusBottomRight](properties/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.  Applies to many controls.
+**[RadiusBottomRight](controls/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.  Applies to many controls.
 
-**[RadiusTopLeft](properties/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.  Applies to many controls.
+**[RadiusTopLeft](controls/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.  Applies to many controls.
 
-**[RadiusTopRight](properties/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.  Applies to many controls.
+**[RadiusTopRight](controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.  Applies to many controls.
 
 **RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
@@ -405,7 +405,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Required](controls/control-card.md)** – Whether a card, editing the field of a data source, must contain a value.  Applies to the **[Card](controls/control-card.md)** control.
 
-**[Reset](properties/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.
+**[Reset](controls/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.
 
 ### S ###
 
@@ -413,9 +413,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[SelectedDate](controls/control-date-picker.md)** – The date currently selected in a date control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
-**[SelectionColor](properties/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](controls/control-list-box.md)**, and **[Pen input](controls/control-pen-input.md)** controls.
+**[SelectionColor](controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](controls/control-list-box.md)**, and **[Pen input](controls/control-pen-input.md)** controls.
 
-**[SelectionFill](properties/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](controls/control-drop-down.md)** and **[List Box](controls/control-list-box.md)** controls.
+**[SelectionFill](controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](controls/control-drop-down.md)** and **[List Box](controls/control-list-box.md)** controls.
 
 **[SelectionThickness](controls/control-pen-input.md)** – The thickness of the selection tool for a pen-input control.  Applies to the **[Pen input](controls/control-pen-input.md)** control.
 
@@ -435,7 +435,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](controls/control-slider.md)** controls.
 
-**[Size](properties/properties-text.md)** – The font size of the text that appears on a control.  Applies to many controls.
+**[Size](controls/properties-text.md)** – The font size of the text that appears on a control.  Applies to many controls.
 
 **[Snap](controls/control-gallery.md)** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
@@ -449,7 +449,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[StreamRate](controls/control-camera.md)** – How often to update the image on the **[Stream](controls/control-camera.md)** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).  Applies to the **[Camera](controls/control-camera.md)** control.
 
-**[Strikethrough](properties/properties-text.md)** – Whether a line appears through the text that appears on a control.  Applies to many controls.
+**[Strikethrough](controls/properties-text.md)** – Whether a line appears through the text that appears on a control.  Applies to many controls.
 
 ### T ###
 
@@ -459,11 +459,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[TemplateSize](controls/control-gallery.md)** – The height of the template for a gallery in vertical/portrait orientation or the width of the template for a gallery in horizontal/landscape orientation.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**[Text](properties/properties-core.md)** – Text that appears on a control or that the user types into a control.  Applies to many controls.
+**[Text](controls/properties-core.md)** – Text that appears on a control or that the user types into a control.  Applies to many controls.
 
 **[Time](controls/control-audio-video.md)** – A media control's current position.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
-**[Tooltip](properties/properties-core.md)** – Explanatory text that appears when the user hovers over a control.  Applies to many controls.
+**[Tooltip](controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.  Applies to many controls.
 
 **[Transition](controls/control-gallery.md)** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
@@ -471,7 +471,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### U ###
 
-**[Underline](properties/properties-text.md)** – Whether a line appears under the text that appears on a control.  Applies to many controls.
+**[Underline](controls/properties-text.md)** – Whether a line appears under the text that appears on a control.  Applies to many controls.
 
 **[Unsaved](controls/control-form-detail.md)** – True if the **[Edit form](controls/control-form-detail.md)** control contains user changes that have not been saved.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
@@ -481,19 +481,19 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
-**[Value](properties/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](controls/control-radio.md)**, **[Slider](controls/control-slider.md)**, and **[Toggle](controls/control-toggle.md)** controls.
+**[Value](controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](controls/control-radio.md)**, **[Slider](controls/control-slider.md)**, and **[Toggle](controls/control-toggle.md)** controls.
 
 **ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
 **ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
-**[VerticalAlign](properties/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.  Applies to many controls.
+**[VerticalAlign](controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.  Applies to many controls.
 
-**[Visible](properties/properties-core.md)** – Whether a control appears or is hidden.  Applies to many controls.
+**[Visible](controls/properties-core.md)** – Whether a control appears or is hidden.  Applies to many controls.
 
 ### W ###
 
-**[Width](properties/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
+**[Width](controls/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
 
 **[Wrap](controls/control-text-box.md)** – Whether text that's too long to fit in a text box wraps to the next line.  Applies to the **[Text box](controls/control-text-box.md)** control.
 
@@ -501,13 +501,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### X ###
 
-**[X](properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.  Applies to many controls.
+**[X](controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.  Applies to many controls.
 
 **[XLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels below the x-axis of a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### Y ###
 
-**[Y](properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.  Applies to many controls.
+**[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.  Applies to many controls.
 
 **[YAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 

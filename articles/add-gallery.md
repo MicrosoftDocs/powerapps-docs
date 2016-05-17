@@ -63,11 +63,11 @@ Show a list of items from Excel, as this topic describes, or from any other type
     ![Final Gallery](./media/add-gallery/final-gallery.png)
 
 ## Filter the gallery ##
-The **[Items](properties/properties-core.md)** property of a gallery determines which items it shows. You'll configure that property so that the gallery shows only those items for which the product name contains the text in **TextSearchBox1**.
+The **[Items](controls/properties-core.md)** property of a gallery determines which items it shows. You'll configure that property so that the gallery shows only those items for which the product name contains the text in **TextSearchBox1**.
 
 ![Text search box](./media/add-gallery/text-search-box.png)
 
-1. Set the **[Items](properties/properties-core.md)** property of the gallery to this formula:
+1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
 
 	**If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
@@ -76,11 +76,11 @@ The **[Items](properties/properties-core.md)** property of a gallery determines 
 	The gallery shows only those items that meet the filter criterion.
 
 ## Sort the gallery ##
-The **[Items](properties/properties-core.md)** property of a gallery determines the order of items that it shows. You'll configure that property so that the gallery shows the order of items as set by **ImageSortUpDown1**.
+The **[Items](controls/properties-core.md)** property of a gallery determines the order of items that it shows. You'll configure that property so that the gallery shows the order of items as set by **ImageSortUpDown1**.
 
 ![Image for sorting](./media/add-gallery/image-sorting.png)
 
-1. Set the **[Items](properties/properties-core.md)** property of the gallery to this formula:
+1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
 
     **Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 

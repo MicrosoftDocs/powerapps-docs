@@ -26,73 +26,73 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 ## Key properties ##
 
-**[Image](../properties/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
+**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
 ## Additional properties ##
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.
 
-**[BorderColor](../properties/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../properties/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../properties/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
 **CalculateOriginalDimensions** – Enables the **OriginalHeight** and **OriginalWidth** properties.
 
-**[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-**[Fill](../properties/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Height](../properties/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverBorderColor](../properties/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[HoverFill](../properties/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[ImagePosition](../properties/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+**[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-**[OnSelect](../properties/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OriginalHeight** – Original height of an image, enabled with the **CalculateOriginalDimensions** property.
 
 **OriginalWidth** – Original width of an image, enabled with the **CalculateOriginalDimensions** property.
 
-**[PaddingBottom](../properties/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-**[PaddingLeft](../properties/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-**[PaddingRight](../properties/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-**[PaddingTop](../properties/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[PressedBorderColor](../properties/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-**[PressedFill](../properties/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[RadiusBottomLeft](../properties/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
+**[RadiusBottomLeft](properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
 
-**[RadiusBottomRight](../properties/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
+**[RadiusBottomRight](properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
 
-**[RadiusTopLeft](../properties/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
+**[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
 
-**[RadiusTopRight](../properties/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
+**[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-**[Tooltip](../properties/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **Transparency** – The degree to which controls behind an image remain visible.
 
-**[Visible](../properties/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../properties/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../properties/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-**[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
@@ -104,7 +104,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 1. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
 
-1. Add an **Image** control, and set its **[Items](../properties/properties-core.md)** property to the name of the file that you added.
+1. Add an **Image** control, and set its **[Items](properties-core.md)** property to the name of the file that you added.
 
 	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
@@ -119,7 +119,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 1. In the right pane, click or tap the **Flooring Estimates** check box, and then click or tap **Insert**.
 
-1. Add an **Image gallery** control, and set its **[Items](../properties/properties-core.md)** property to **FlooringEstimates**.
+1. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
 
 	Don't know how to [add and configure a control](../add-configure-controls.md)?
 

@@ -20,11 +20,11 @@
 
 # GroupBy and Ungroup functions in PowerApps #
 
-Groups and ungroups [records](working-with-tables.md#records) of a [table](working-with-tables.md).
+Groups and ungroups [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description ##
 
-The **GroupBy** function returns a table with records grouped together based on the values in one or more [columns](working-with-tables.md#columns). Records in the same group are placed into a single record, with a column added that holds a nested table of the remaining columns.   
+The **GroupBy** function returns a table with records grouped together based on the values in one or more [columns](../working-with-tables.md#columns). Records in the same group are placed into a single record, with a column added that holds a nested table of the remaining columns.   
 
 The **Ungroup** function reverses the **GroupBy** process. This function returns a table, breaking into separate records any records that were grouped together.
 
@@ -42,7 +42,7 @@ You can also aggregate results based on a grouping:
 
 **Ungroup** tries to preserve the original order of the records that were fed to **GroupBy**.  This isn't always possible (for example, if the original table contains *blank* records).
 
-A table is a value in PowerApps, just like a string or a number. You can specify a table as an argument for a function, and a function can return a table. **GroupBy** and **Ungroup** don't modify a table; instead they take a table as an argument and return a different table. See [working with tables](working-with-tables.md) for more details.
+A table is a value in PowerApps, just like a string or a number. You can specify a table as an argument for a function, and a function can return a table. **GroupBy** and **Ungroup** don't modify a table; instead they take a table as an argument and return a different table. See [working with tables](../working-with-tables.md) for more details.
 
 ## Syntax ##
 
@@ -61,15 +61,15 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 ### Create a collection ###
 
-1. Add a button, and set its **[Text](../properties/properties-core.md)** property so that the button shows **Original**.
+1. Add a button, and set its **[Text](../controls/properties-core.md)** property so that the button shows **Original**.
 
-1. Set the **[OnSelect](../properties/properties-core.md)** property of the **Original** button to this formula:
+1. Set the **[OnSelect](../controls/properties-core.md)** property of the **Original** button to this formula:
 
 	**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
 
 1. Press F5, select the **Original** button, and then press Esc.
 
-	You just created a [collection](working-with-data-sources.md#collections), named **CityPopulations**, that contains this data:
+	You just created a [collection](../working-with-data-sources.md#collections), named **CityPopulations**, that contains this data:
 
 	![](media/function-groupby/cities.png)
 
@@ -79,9 +79,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 ### Group records ###
 
-1. Add another button, and set its **[Text](../properties/properties-core.md)** property to **"Group"**.
+1. Add another button, and set its **[Text](../controls/properties-core.md)** property to **"Group"**.
 
-1. Set the **[OnSelect](../properties/properties-core.md)** property of this button to this formula:
+1. Set the **[OnSelect](../controls/properties-core.md)** property of this button to this formula:
 
 	**ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )**
 
@@ -101,9 +101,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 ### Filter and ungroup records ###
 
-1. Add another button, and set its **[Text](../properties/properties-core.md)** property so that the button shows **"Filter"**.
+1. Add another button, and set its **[Text](../controls/properties-core.md)** property so that the button shows **"Filter"**.
 
-1. Set the **[OnSelect](../properties/properties-core.md)** property of this button to this formula:
+1. Set the **[OnSelect](../controls/properties-core.md)** property of this button to this formula:
 
 	**ClearCollect( CitiesByCountryFiltered, Filter( CitiesByCountry, "e" in Country ) )**
 
@@ -113,9 +113,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 	![](media/function-groupby/cities-grouped-hase.png)
 
-1. Add one more button, and set its **[Text](../properties/properties-core.md)** property so that the button shows **"Ungroup"**.
+1. Add one more button, and set its **[Text](../controls/properties-core.md)** property so that the button shows **"Ungroup"**.
 
-1. Set the **[OnSelect](../properties/properties-core.md)** property of this button to this formula:
+1. Set the **[OnSelect](../controls/properties-core.md)** property of this button to this formula:
 
 	**ClearCollect( CityPopulationsUngrouped, Ungroup( CitiesByCountryFiltered, "Cities" ) )**
 
@@ -127,9 +127,9 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 Something else we can do with a grouped table is to aggregate the results.  In this example, we will sum the population of the major cities in each country.
 
-1. Add another button, and set its **[Text](../properties/properties-core.md)** property so that the button shows **"Sum"**.
+1. Add another button, and set its **[Text](../controls/properties-core.md)** property so that the button shows **"Sum"**.
 
-2. Set the **[OnSelect](../properties/properties-core.md)** property of the **"Sum"** button to this formula:
+2. Set the **[OnSelect](../controls/properties-core.md)** property of the **"Sum"** button to this formula:
 
 	**ClearCollect( CityPopulationsSum, AddColumns( CitiesByCountry, "Sum of City Populations", Sum( Cities, Population ) ) )**
 
@@ -139,7 +139,7 @@ Something else we can do with a grouped table is to aggregate the results.  In t
 
 	**[AddColumns](function-table-shaping.md)** starts with the base **CitiesByCountry** collection and adds a new column **Sum of City Populations**.  This column's values are calculated row-by-row, based on the formula **Sum( Cities, Population )**.  **AddColumns** provides the value of the **Cities** column (a table) for each row, and **[Sum](function-aggregates.md)** adds up the **Population** for each row of this sub table. 
 
-3. Now that we have the sum that we want, we can use **[DropColumns](function-table-shaping.md)** to remove the sub tables.  Modify the **[OnSelect](../properties/properties-core.md)** property to use this formula:
+3. Now that we have the sum that we want, we can use **[DropColumns](function-table-shaping.md)** to remove the sub tables.  Modify the **[OnSelect](../controls/properties-core.md)** property to use this formula:
 
 	**ClearCollect( CityPopulationsSumOnly, DropColumns( CityPopulationsSum, "Cities" ) )**
 

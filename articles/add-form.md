@@ -27,7 +27,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 - A [connection](add-data-connection.md) to **FlooringEstimates** table from [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 
 ## Add a form, and show data ##
-1. Add a **[Drop down](controls/control-drop-down.md)** control, name it **ChooseProduct**, and set its **[Items](properties/properties-core.md)** property to this value:
+1. Add a **[Drop down](controls/control-drop-down.md)** control, name it **ChooseProduct**, and set its **[Items](controls/properties-core.md)** property to this value:
 
 	**FlooringEstimates.Name**
 
@@ -72,11 +72,11 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
 	**Tip:** Select the form, not any of the cards, by clicking or tapping its scrollbar.
 
-1. Add a **[Button](controls/control-button.md)** control, and set its **[Text](properties/properties-core.md)** property to **Save**.
+1. Add a **[Button](controls/control-button.md)** control, and set its **[Text](controls/properties-core.md)** property to **Save**.
 
 	![Add a save button](./media/add-form/add-a-save-button.png)  
 
-1.  Set the **[OnSelect](properties/properties-core.md)** property of the **Save** button to this formula:
+1.  Set the **[OnSelect](controls/properties-core.md)** property of the **Save** button to this formula:
 
 	**SubmitForm(EditForm)**
 

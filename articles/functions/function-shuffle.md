@@ -20,13 +20,13 @@
 
 # Shuffle function in PowerApps #
 
-Randomly reorders the [records](working-with-tables.md#records) of a [table](working-with-tables.md).
+Randomly reorders the [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description ##
 
 The **Shuffle** function reorders the records of a table.
 
-**Shuffle** returns a table that has the same [columns](working-with-tables.md#columns) and number of rows as the argument.
+**Shuffle** returns a table that has the same [columns](../working-with-tables.md#columns) and number of rows as the argument.
 
 ## Syntax ##
 
@@ -36,6 +36,6 @@ The **Shuffle** function reorders the records of a table.
 
 ## Example ##
 
-If you stored details about playing cards in a [collection](working-with-data-sources.md#collections) named **Deck**, this formula would return a copy of that collection that has been randomly shuffled.
+If you stored details about playing cards in a [collection](../working-with-data-sources.md#collections) named **Deck**, this formula would return a copy of that collection that has been randomly shuffled.
 
 **Shuffle(Deck)**

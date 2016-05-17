@@ -54,7 +54,7 @@ You can create exactly the app you want with no distractions if you [build an ap
 
 - [formulas](formula-reference.md)
 - [galleries and forms](working-with-forms.md)
-- [tables and records](functions/working-with-tables.md)
+- [tables and records](working-with-tables.md)
 - [controls and their properties](reference-properties.md)
 
 ## Questions? Ideas? We're here to help ##

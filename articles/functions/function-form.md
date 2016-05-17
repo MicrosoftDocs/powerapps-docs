@@ -22,12 +22,12 @@
 Create an item, save the contents, and reset the controls in an **[Edit Form](../controls/control-form-detail.md)** control.
 
 ## Description ##
-These functions are often invoked from the **[OnSelect](../properties/properties-core.md)** formula of a **[Button](../controls/control-button.md)** or **[Image](../controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can also [use controls together](../working-with-forms.md) to create a complete solution.
+These functions are often invoked from the **[OnSelect](../controls/properties-core.md)** formula of a **[Button](../controls/control-button.md)** or **[Image](../controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can also [use controls together](../working-with-forms.md) to create a complete solution.
 
 These functions return no values.
 
 ### SubmitForm ###
-Use the **SubmitForm** function in the **[OnSelect](../properties/properties-core.md)** property of a Button control to save any changes in a Form control to the data source. Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **[Validate](function-validate.md)** function.
+Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.md)** property of a Button control to save any changes in a Form control to the data source. Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **[Validate](function-validate.md)** function.
 
 **SubmitForm** also checks the **[Valid](../controls/control-form-detail.md)** property of the Form, which is an aggregation of all the **[Valid](../controls/control-card.md)** properties of the **[Card](../controls/control-card.md)** controls that the Form control contains. If a problem occurs, the data isn't submitted, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties of the Form control are set accordingly.
 
@@ -59,7 +59,7 @@ The **ResetForm** function resets the contents of a form to their initial values
 ## Examples ##
 See [Understand data forms](../working-with-forms.md) for complete examples.
 
-1. Add a Button control, set its **[Text](../properties/properties-core.md)** property to show **Save**, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:
+1. Add a Button control, set its **[Text](../controls/properties-core.md)** property to show **Save**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
 
 	**SubmitForm( EditForm )**
 
@@ -67,7 +67,7 @@ See [Understand data forms](../working-with-forms.md) for complete examples.
 
 	**Back()**
 
-1. Name a **[Text box](../controls/control-text-box.md)** control **ErrorText**, and set its **[Text](../properties/properties-core.md)** property to this formula:
+1. Name a **[Text box](../controls/control-text-box.md)** control **ErrorText**, and set its **[Text](../controls/properties-core.md)** property to this formula:
 
 	**EditForm.Error**
 
@@ -75,13 +75,13 @@ See [Understand data forms](../working-with-forms.md) for complete examples.
 	- If the submission succeeds, any changes are saved or, if the Form control is in **New** mode, a record is created. **ErrorText** is *blank* and the previous screen reappears.
 	- If the submission fails, **ErrorText** shows a user-friendly error message, and the current screen remains visible so that the user can correct the problem and try again.
 
-1. Add a Button control, set its **[Text](../properties/properties-core.md)** property to show **Cancel**, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:
+1. Add a Button control, set its **[Text](../controls/properties-core.md)** property to show **Cancel**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
 
 	**ResetForm( EditForm ); Back()**
 
 	When the user selects the **Cancel** button, the values in the Form control are reset to what they were before the user started to edit it, the previous screen reappears, and the Form control is returned to **Edit** mode if it was in **New** mode.
 
-1. Add a Button control, set its **[Text](../properties/properties-core.md)** property to show **New**, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:
+1. Add a Button control, set its **[Text](../controls/properties-core.md)** property to show **New**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
 
 	**NewForm( EditForm ); Navigate( EditScreen, None )**
 

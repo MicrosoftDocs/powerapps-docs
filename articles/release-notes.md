@@ -126,7 +126,7 @@ With this release, we [support a wide assortment of connections](connections-lis
 
 1.  **For apps created from data, the field used for sorting and searching isn't automatically configured.**
 
-	To configure this field, edit the **[Items](properties/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
+	To configure this field, edit the **[Items](controls/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
 
 2. **Co-authoring isn't supported. One author at a time, please.**
 
@@ -143,7 +143,7 @@ With this release, we [support a wide assortment of connections](connections-lis
 
 	In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](functions/function-filter-lookup.md) article for more details about delegation.  
 
-	In this release, delegation doesn't support **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** functions used together, nor does it support the **[In](functions/operators.md#in-and-exactin-operators)** operator.  These features are used by apps that are created from data, so these apps are limited to the first 500 records. To partially work around this issue, you can remove one or both of the Filter and Sort functions from the gallery's **[Items](properties/properties-core.md)** property.
+	In this release, delegation doesn't support **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** functions used together, nor does it support the **[In](functions/operators.md#in-and-exactin-operators)** operator.  These features are used by apps that are created from data, so these apps are limited to the first 500 records. To partially work around this issue, you can remove one or both of the Filter and Sort functions from the gallery's **[Items](controls/properties-core.md)** property.
 
 5. **Card gallery is deprecated.**
 
