@@ -22,9 +22,9 @@
 
 Data sources are extensions of [tables](working-with-tables.md) that can retrieve and store information.  Connected data sources read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.  Static data sources and collections are alternative data sources that can be loaded and saved locally.
 
-Using the **Gallery**, **Display form**, and **Edit form** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](../working-with-forms.md).  When you ask PowerApps to create an app from data, these controls are used.
+Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../controls/control-form-detail.md)**, and **[Edit form](../controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](../working-with-forms.md).  When you ask PowerApps to create an app from data, these controls are used.
 
-Sometimes you will want more control over how data flows in and out of your app.  This article describes how the **Patch**, **DataSourceInfo**, **Validate**, and **Errors** functions provide more control.
+Sometimes you will want more control over how data flows in and out of your app.  This article describes how the **[Patch](function-patch.md)**, **[DataSourceInfo](function-datasourceinfo.md)**, **[Validate](function-validate.md)**, and **[Errors](function-errors.md)** functions provide more control.
 
 ## Data sources ##
 
@@ -52,7 +52,7 @@ The diagram above shows the flow of information when an app reads the informatio
 - The information is stored and shared through a storage service (in this case, a SharePoint list of an Office 365 site).
 - A connection makes this information available to the app.  The connection takes care of authentication of the user to access the information.
 - When the app is started or the **[Refresh](function-refresh.md)** function invokes, information is drawn from the connection into a data source in the app for local use.
-- Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **Items** property to the data source: **Gallery.Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **Default** property.  
+- Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **[Items](../properties/properties-core.md)** property to the data source: **Gallery.Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **[Default](../properties/properties-core.md)** property.  
 - The data source is also a table.  So you can use **[Filter](function-filter-lookup.md)**, **[Sort](function-sort.md)**, **[AddColumns](function-table-shaping.md)**, and other functions to refine and augment the data source before using it as a whole.  You can also use the **[Lookup](function-filter-lookup.md)**, **[First](function-first-last.md)**, **[Last](function-first-last.md)**, and other functions to work with individual records.
 
 ## Modify a record ##
@@ -64,10 +64,10 @@ Note that, to modify an existing record of a data source, the record must have o
 ![](media/working-with-data-sources/writing-to-a-datasource.png)
 The diagram above shows the flow of information to update a data source:
 
-- A gallery can also provide a container for input controls, such as an input-text box or a slider.  As with the browse screen, the **Items** property is used but, for a single record, often takes the form of  **Gallery.Items = Table( EditRecord )**.
-- Each input control exposes an **Update** property.  This property maps the user's input to a specific property of the record.
-- The gallery aggregates the **Update** property of each of the controls within it and exposes this as an **Updates** property.
-- A button or an image control on the screen is used to submit changes to the data source's service.  You use a formula based on the **[Patch](function-patch.md)** function from the **OnSelect** formula of the control.
+- A gallery can also provide a container for input controls, such as an input-text box or a slider.  As with the browse screen, the **[Items](../properties/properties-core.md)** property is used but, for a single record, often takes the form of  **Gallery.Items = Table( EditRecord )**.
+- Each input control exposes an **[Update](../controls/control-card.md)** property.  This property maps the user's input to a specific property of the record.
+- The gallery aggregates the **[Update](../controls/control-card.md)** property of each of the controls within it and exposes this as an **Updates** property.
+- A button or an image control on the screen is used to submit changes to the data source's service.  You use a formula based on the **[Patch](function-patch.md)** function from the **[OnSelect](../properties/properties-core.md)** formula of the control.
 - Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the app didn't know about.  The **[Errors](function-errors.md)** function is used to check if there was an issue and retrieve information about the issue.  In some cases, such as conflicting edits by another user, the **[Revert](function-revert.md)** function may be needed to reload the record and clear the error.
 
 ## Validation ##
@@ -102,9 +102,9 @@ Collections are a special kind of data source.  They're local to the app and not
 - The columns of a collection can be modified at any time using the **[Collect](function-clear-collect-clearcollect.md)** function.
 - Collections allow duplicate records.  More than one copy of the same record can exist in a collection.  Functions such as **[Remove](function-remove-removeif.md)** will operate on the first match they find, unless the **All** argument is supplied.
 - You can use the **[SaveData](function-savedata-loaddata.md)** and **[LoadData](function-savedata-loaddata.md)** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
-- You can use the **[Export](control-export-import.md)** and **[Import](control-export-import.md)** controls to save and reload a copy of the collection to a file that the user can interact with.  
+- You can use the **[Export](../controls/control-export-import.md)** and **[Import](../controls/control-export-import.md)** controls to save and reload a copy of the collection to a file that the user can interact with.  
 
-For more information on working with a collection as a data source, see [create and update a collection](create-update-collection.md).
+For more information on working with a collection as a data source, see [create and update a collection](../create-update-collection.md).
 
 Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
 

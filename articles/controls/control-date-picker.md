@@ -22,7 +22,7 @@
 A control that the user can click or tap to specify a date.
 
 ## Description ##
-If you add a **Date Picker** control instead of a **Text input** control, you help ensure that the user specifies a date in the correct format.
+If you add a **Date Picker** control instead of a **[Text input](control-text-input.md)** control, you help ensure that the user specifies a date in the correct format.
 
 ## Key properties ##
 
@@ -42,11 +42,11 @@ If you add a **Date Picker** control instead of a **Text input** control, you he
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **EndYear** – The latest year to which the user can set value of a date-picker control.
 
@@ -84,20 +84,20 @@ If you add a **Date Picker** control instead of a **Text input** control, you he
 
 ## Related functions ##
 
-[**Year**( *DateTimeValue* )](function-datetime-parts.md)
+[**Year**( *DateTimeValue* )](../functions/function-datetime-parts.md)
 
 ## Example ##
 1. Add a **Date Picker** control, and name it **Deadline**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a **Text Box** control, and set its **Items** property to this formula:
+1. Add a **[Text Box](control-text-box.md)** control, and set its **[Items](../properties/properties-core.md)** property to this formula:
 <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
 
-	Want more information about the [**DateDiff** function](function-dateadd-datediff.md) or [other functions](formula-reference.md)?
+	Want more information about the **[DateDiff](../functions/function-dateadd-datediff.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, choose a date in **Deadline**, and then click or tap **OK**.
 
-	The **Text Box** control shows the number of days between today and the date that you chose.
+	The **[Text Box](control-text-box.md)** control shows the number of days between today and the date that you chose.
 
 1. To return to the default workspace, press Esc.

@@ -62,15 +62,15 @@ The return value for both functions is a Boolean **true** or **false**.
 
 1. Create an app from scratch, add an input-text control, and name it **FirstName**.
 
-1. Add a label, and set its **Text** property to this formula:
+1. Add a label, and set its **[Text](../properties/properties-core.md)** property to this formula:
 
 	**If( IsBlank( FirstName.Text ), "First Name is a required field." )**
 
-	By default, the **Text** property of an input-text control is set to **"Input Text"**. Because the control contains a value, it isn't blank, and the label control doesn't display any message.
+	By default, the **[Text](../properties/properties-core.md)** property of an input-text control is set to **"Input Text"**. Because the control contains a value, it isn't blank, and the label control doesn't display any message.
 
 1. Remove all the characters from the input-text control, including any spaces.
 
-	Because the control no longer contains any characters, its **Text** property will be *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
+	Because the control no longer contains any characters, its **[Text](../properties/properties-core.md)** property will be *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 
 You can perform validation by using other tools. See the **[Validate](function-validate.md)** function and [working with data sources](working-with-data-sources.md).  
 
@@ -86,7 +86,7 @@ Other examples:
 
 ### IsEmpty ###
 
-1. Create a collection named **IceCream** by setting the **OnSelect** property of a button to this formula and then pressing the button:
+1. Create a collection named **IceCream** by setting the **[OnSelect](../properties/properties-core.md)** property of a button to this formula and then pressing the button:
 
 	**Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
 
@@ -96,7 +96,7 @@ Other examples:
 
 	This collection has two records and isn't empty. **IsEmpty( IceCream )** returns **false**, and **CountRows( IceCream )** returns **2**.
 
-2. Empty the collection by changing the **OnSelect** property of the button to this formula and then pressing the button:
+2. Empty the collection by changing the **[OnSelect](../properties/properties-core.md)** property of the button to this formula and then pressing the button:
 
 	**Clear( IceCream )**
 

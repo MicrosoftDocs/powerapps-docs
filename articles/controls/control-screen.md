@@ -22,7 +22,7 @@
 A UI element that contains one or more other controls in an app.
 
 ## Description ##
-Most apps have multiple **Screen** controls that contain **Text Box** controls, **Button** controls, and other controls that show data and support navigation.
+Most apps have multiple **Screen** controls that contain **[Text Box](control-text-box.md)** controls, **[Button](control-button.md)** controls, and other controls that show data and support navigation.
 
 ## Key properties ##
 
@@ -40,33 +40,33 @@ Most apps have multiple **Screen** controls that contain **Text Box** controls, 
 
 ## Related functions ##
 
-[**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example ##
-1. Add a **Radio** control, name it **ScreenFills**, and set its **Items** property to this value:<br>
+1. Add a **[Radio](control-radio.md)** control, name it **ScreenFills**, and set its **[Items](../properties/properties-core.md)** property to this value:<br>
 **["Red", "Green"]**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Name the default **Screen** control **Source**, add another **Screen** control, and name it **Target**.
 
-1. On **Source**, add a **Shape** control (such as an arrow), and set its **OnSelect** property to this formula:<br>
+1. On **Source**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 **Navigate(Target, ScreenTransition.Fade)**
 
-	Want more information about the [**Navigate** function](function-navigate.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Navigate](../functions/function-navigate.md)** function or [other functions](../formula-reference.md)?
 
-1. In **Target**, add a **Shape** control (such as an arrow), and set its **OnSelect** property to this formula:<br>
+1. In **Target**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 **Navigate(Source, ScreenTransition.Fade)**
 
-1. Set the **Fill** property of **Target** to this formula:<br>
+1. Set the **[Fill](../properties/properties-color-border.md)** property of **Target** to this formula:<br>
 **If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))**
 
-1. From **Source**, press F5, click or tap either option in the **Radio** control, and then click or tap the **Shape** control.
+1. From **Source**, press F5, click or tap either option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control.
 
 	**Target** appears in the color that you chose.
 
-1. On **Target**, click or tap the **Shape** control to return to **Source**.
+1. On **Target**, click or tap the **[Shape](control-shapes-icons.md)** control to return to **Source**.
 
-1. (optional) Click or tap the other option in the **Radio** control, and then click or tap the **Shape** control to confirm that **Target** appears in the other color.
+1. (optional) Click or tap the other option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control to confirm that **Target** appears in the other color.
 
 1. To return to the default workspace, press Esc.

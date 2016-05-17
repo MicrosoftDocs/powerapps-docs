@@ -51,13 +51,13 @@ Create an app with multiple screens, and add ways for users to navigate between 
 
 1. (optional) Move the arrow so it appears in the lower-left corner of the screen.
 
-1. With the arrow still selected, go to the **Action** tab, and select **Navigate**. When you do this, the **OnSelect** property for the arrow is automatically set to the following:  
+1. With the arrow still selected, go to the **Action** tab, and select **Navigate**. When you do this, the **[OnSelect](properties/properties-core.md)** property for the arrow is automatically set to the following:  
 
 	![OnSelect property set to Navigate function](./media/add-screen-context-variables/onselect-default.png)
 
 	So when a user selects the Next arrow, the **Target** screen fades in.
 
-1. On the **Target** screen, add a **Back** arrow, and set its **OnSelect** property to the following formula:  
+1. On the **Target** screen, add a **Back** arrow, and set its **[OnSelect](properties/properties-core.md)** property to the following formula:  
 
 	`Navigate(Source, ScreenTransition.Fade)`
 

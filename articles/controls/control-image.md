@@ -42,9 +42,9 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -96,7 +96,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 ## Related functions ##
 
-[**Remove**( *DataSource*, ThisItem )](function-remove-removeif.md)
+[**Remove**( *DataSource*, ThisItem )](../functions/function-remove-removeif.md)
 
 ## Examples ##
 ### Show an image from a local file ###
@@ -104,9 +104,9 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 1. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
 
-1. Add an **Image** control, and set its **Items** property to the name of the file that you added.
+1. Add an **Image** control, and set its **[Items](../properties/properties-core.md)** property to the name of the file that you added.
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 	The **Image** control shows the image that you specified.
 
@@ -119,8 +119,8 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 1. In the right pane, click or tap the **Flooring Estimates** check box, and then click or tap **Insert**.
 
-1. Add an **Image gallery** control, and set its **Items** property to **FlooringEstimates**.
+1. Add an **Image gallery** control, and set its **[Items](../properties/properties-core.md)** property to **FlooringEstimates**.
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 	The **Image gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.

@@ -22,7 +22,7 @@
 A control that the user can click or tap to interact with the app.
 
 ## Description ##
-Configure the **OnSelect** property of a **Button** control to run one or more formulas when the user clicks or taps the control.
+Configure the **[OnSelect](../properties/properties-core.md)** property of a **Button** control to run one or more formulas when the user clicks or taps the control.
 
 ## Key properties ##
 
@@ -46,11 +46,11 @@ Configure the **OnSelect** property of a **Button** control to run one or more f
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -112,26 +112,26 @@ Configure the **OnSelect** property of a **Button** control to run one or more f
 
 ## Related functions ##
 
-[**Navigate**( *ScreenName*, *ScreenTransitionValue* )](function-navigate.md)
+[**Navigate**( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)
 
 ## Example ##
-1. Add a **Text input** control, and name it **Source**.
+1. Add a **[Text input](control-text-input.md)** control, and name it **Source**.
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a **Button** control, set its **Text** property to show **Add**, and set its **OnSelect** property to this formula:<br>
+1. Add a **Button** control, set its **[Text](../properties/properties-core.md)** property to show **Add**, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 **UpdateContext({Total:Total + Value(Source.Text)})**
 
-	Want more information about the [**UpdateContext** function](function-updatecontext.md) or [other functions](../formula-reference.md)?
+	Want more information about the **[UpdateContext](../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
 
-1. Add a **Text box** control, set its **Text** property to show **Total**, and then press F5.
+1. Add a **[Text box](control-text-box.md)** control, set its **[Text](../properties/properties-core.md)** property to show **Total**, and then press F5.
 
 1. Type a number in **Source**, and then click or tap **Add**.
 
-	The **Text box** control shows the number that you typed.
+	The **[Text box](control-text-box.md)** control shows the number that you typed.
 
 1. Repeat the previous step one or more times.
 
-	The **Text box** control shows the sum of the numbers that you typed.
+	The **[Text box](control-text-box.md)** control shows the sum of the numbers that you typed.
 
 1. To return to the default workspace, press Esc.

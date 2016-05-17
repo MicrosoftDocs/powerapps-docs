@@ -56,7 +56,7 @@ You check the **[Errors](function-errors.md)** table and find an error:
 |--------|--------|---------|-------|
 | **{ ID: 1, Flavor: "Strawberry", Quantity: 300 }** | *blank* | **"The record you are trying to modify has been modified by another user.  Please revert the record and try again."** | **ErrorKind.Conflict** |
 
-Based on the **Error** column, you have a **Reload** button for which the **OnSelect** property to set to this formula:<br>
+Based on the **Error** column, you have a **Reload** button for which the **[OnSelect](../properties/properties-core.md)** property to set to this formula:<br>
 **Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**
 
 After you select the **Reload** button, the **[Errors](function-errors.md)** table is [empty](function-isblank-isempty.md), and the new value for **Strawberry** has been loaded:

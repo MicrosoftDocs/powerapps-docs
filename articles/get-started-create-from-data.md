@@ -69,7 +69,7 @@ PowerApps builds an app that has three screens:
 
 - **BrowseScreen1** shows a list of all items and some information about them so that users can easily browse for the item they want.
 - **DetailScreen1** shows all information about a single item.
-- **EditScreen1** provides an [**Edit form**](./add-form.md) control for adding an item or updating information about an item.
+- **EditScreen1** provides an **[Edit form](add-form.md)** control for adding an item or updating information about an item.
 
 ## Customize the app ##
 When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
@@ -104,7 +104,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
 
-	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **ShowScrollbar** property](add-configure-controls.md) to **true**.
+	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **[ShowScrollbar](controls/control-gallery.md)** property](add-configure-controls.md) to **true**.
 
 1. In the list of thumbnails, select **DetailScreen1**.
 

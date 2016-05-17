@@ -22,7 +22,7 @@
 A list in which the user can select one or multiple items.
 
 ## Description ##
-A **List Box** control always shows all available choices (unlike a **Drop down** control) and in which the user can choose more than one item at a time (unlike a **Radio** control).
+A **List Box** control always shows all available choices (unlike a **[Drop down](control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
 
 ## Key properties ##
 
@@ -44,11 +44,11 @@ A **List Box** control always shows all available choices (unlike a **Drop down*
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -114,35 +114,35 @@ A **List Box** control always shows all available choices (unlike a **Drop down*
 
 ## Related functions ##
 
-[**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example ##
-1. Add a **List box** control, name it **CategoryList**, and set its **Items** property to this formula:<br>
+1. Add a **List box** control, name it **CategoryList**, and set its **[Items](../properties/properties-core.md)** property to this formula:<br>
 **["Carpet","Hardwood","Tile"]**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 	![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
 
-1. Add three **Drop down** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
+1. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 
-1. Set the **Items** property of each **Drop down** control to one of these values:
+1. Set the **[Items](../properties/properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
 	- CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
 	- HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
 	- TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
 
 	![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
 
-1. Set the **Visible** property of each **Drop down** control to one of these values:
+1. Set the **[Visible](../properties/properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
 	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
 	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
 	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
 
-	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
+	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and then choose one or more items in **CategoryList**.
 
-	The appropriate **Drop down** control or controls appear based on your choice or choices.
+	The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
 
 	![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
 

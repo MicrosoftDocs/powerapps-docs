@@ -50,9 +50,9 @@ Know how to [add and configure a control](add-configure-controls.md).
 ## Show a timeline ##
 1. Add a text gallery, and follow either of these steps:
 
-	- To show the current user's timeline, set the **Items** property of the gallery to this formula:<br>**twitter.HomeTimeline()**
+	- To show the current user's timeline, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>**twitter.HomeTimeline()**
 
-	- To show another user's timeline, set the **Items** property of the gallery to this formula:<br>
+	- To show another user's timeline, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>
 	**twitter.UserTimeline(** *UserID* **)**
 
 		Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add a text-input control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle such as **satyan** (without quotation marks) in **Tweep**.
@@ -66,9 +66,9 @@ Know how to [add and configure a control](add-configure-controls.md).
 ## Show followers ##
 1. Add a text gallery, and then follow either of these steps:
 
-	- To show the current user's followers, set the **Items** property of the gallery to this formula:<br>**twitter.MyFollowers()**
+	- To show the current user's followers, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>**twitter.MyFollowers()**
 
-	- To show the another user's followers, set the **Items** property of the gallery to this formula:<br>
+	- To show the another user's followers, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>
 	**twitter.Followers(** *UserID* **)**
 
 	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle such as **satyan** (without quotation marks) in **Tweep**.
@@ -83,9 +83,9 @@ Know how to [add and configure a control](add-configure-controls.md).
 
 1. Add a text gallery, and then follow either of these steps:
 
-	- To show which users the current user is following, set the **Items** property of the gallery to this formula:<br>**twitter.MyFollowing()**
+	- To show which users the current user is following, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>**twitter.MyFollowing()**
 
-	- To show which users another user is following, set the **Items** property of the gallery to this formula:<br>
+	- To show which users another user is following, set the **[Items](properties/properties-core.md)** property of the gallery to this formula:<br>
 	**twitter.Following(** *UserID* **)**
 
 	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle, such as **satyan** (without quotation marks), in **Tweep**.
@@ -97,7 +97,7 @@ Know how to [add and configure a control](add-configure-controls.md).
 1. With the gallery selected, select **Options** near the lower-right corner, and then select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
 
 ## Show information about a user ##
-Add a text box, and then set its **Text** property to one of these formulas:
+Add a text box, and then set its **[Text](properties/properties-core.md)** property to one of these formulas:
 - **twitter.User(** *UserID* **)!Description**
 - **twitter.User(** *UserID* **)!FullName**
 - **twitter.User(** *UserID* **)!Location**
@@ -110,7 +110,7 @@ Add a text box, and then set its **Text** property to one of these formulas:
 	Specify a *UserID* by including a Twitter handle enclosed in double quotation marks or an equivalent value. For example, specify **"satyan"** directly in the formula, or add an input-text control named **Tweep**, specify **Tweep.Text** in the formula, and then type a Twitter handle such as **satyan** (without quotation marks) in **Tweep**.
 
 ## Search tweets ##
-1. Add a text gallery, and set its **Items** property to this formula:<br>
+1. Add a text gallery, and set its **[Items](properties/properties-core.md)** property to this formula:<br>
 **twitter.SearchTweet(** *SearchTerm* **)**
 
 	Specify a *SearchTerm* by enclosing a term in double quotation marks or by referring to an equivalent value. For example, specify **"PowerApps"** directly in the formula, or add an input-text control named **SearchTerm**, specify **SearchTerm.Text** in the formula, and then type **PowerApps** (no quotation marks) in **SearchTerm**.
@@ -123,7 +123,7 @@ Add a text box, and then set its **Text** property to one of these formulas:
 ## Send a tweet ##
 1. Add a text-input control, and then rename it **MyTweet**.
 
-1. Add a button, and then set its **OnSelect** property to this formula:<br>
+1. Add a button, and then set its **[OnSelect](properties/properties-core.md)** property to this formula:<br>
 **twitter.Tweet({tweetText: MyTweet.Text})**
 
 1. Press F5, type some text into **MyTweet**, and then select the button to tweet the text that you specified.

@@ -74,10 +74,10 @@ In many cases, registering for PowerApps is achieved by following the sign up st
 
 After you successfully sign up for PowerApps, you can start creating some apps. Here are some good resources:
 
-[Get started](./getting-started.md)  
-[Run a sample app](./open-and-run-a-sample-app.md)  
-[Run an app in a browser](./run-app-browser.md)  
-[Run an app on a phone](./run-app-client.md)  
+[Get started](getting-started.md)  
+[Run a sample app](open-and-run-a-sample-app.md)  
+[Run an app in a browser](run-app-browser.md)  
+[Run an app on a phone](run-app-client.md)  
 
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/?LinkId=715583

@@ -42,11 +42,11 @@ If you add this control, the user can update a data source with one or more soun
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -86,27 +86,27 @@ If you add this control, the user can update a data source with one or more soun
 
 ## Related functions ##
 
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## Example ##
 ### Add sounds to a Custom gallery control ###
 1. Add a **Microphone**, name it **MyMic**, and set its **OnStop** property to this formula:<br>
 **Collect(MySounds, MyMic.Audio)**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Add a **Custom gallery** control, move it below **MyMic**, and set the **Items** property for the **Custom gallery** control to **MySounds**.
+1. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](../properties/properties-core.md)** property for the **Custom gallery** control to **MySounds**.
 
-1. In the template for the **Custom gallery** control, add an **Audio** control, and set its **Media** property to **ThisItem.Url**.
+1. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
 
 1. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
 
-1. In the **Custom gallery** control, click or tap the play button in the **Audio** control to play back your recording.
+1. In the **Custom gallery** control, click or tap the play button in the **[Audio](control-audio-video.md)** control to play back your recording.
 
 1. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
 
-1. (optional) In the template for the **Custom gallery** control, add a **Button** control, set its **OnSelect** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
+1. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](../properties/properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 
-Use the [**SaveData** function](function-savedata-loaddata.md) to save the recordings locally or the [**Patch** function](function-patch.md) to update a data source.
+Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../functions/function-patch.md)** function to update a data source.

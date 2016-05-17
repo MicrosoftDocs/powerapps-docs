@@ -72,6 +72,6 @@ Each formula returns a single-column table that contains the converted strings.
 
 1. Add an input-text control, and name it **Source**.
 
-1. Add a label, and set its **Text** property to this function:<br>**Proper(Source.Text)**
+1. Add a label, and set its **[Text](../properties/properties-core.md)** property to this function:<br>**Proper(Source.Text)**
 
 1. Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**

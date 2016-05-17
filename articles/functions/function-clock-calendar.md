@@ -26,7 +26,7 @@ Retrieves calendar and clock information about the current locale.
 
 The **Calendar** and **Clock** functions are a set of functions that retrieve information about the current locale.
 
-You can use these functions to display dates and times in the language of the current user.  The single-column tables returned by **Calendar** and **Clock** functions can be used directly with the **Items** property of Dropdown and Listbox controls.
+You can use these functions to display dates and times in the language of the current user.  The single-column tables returned by **Calendar** and **Clock** functions can be used directly with the **[Items](../properties/properties-core.md)** property of Dropdown and Listbox controls.
 
 | Function | Description |
 |----------|-------------|
@@ -38,7 +38,7 @@ You can use these functions to display dates and times in the language of the cu
 | **Clock.AmPmShort()** | Single-column table containing the short uppercase "am" and "pm" designations.  If the language uses a 24-hour clock, the table will be empty. |
 | **Clock.IsClock24()** | Boolean indicating if a 24-hour clock is used in this locale. |
 
-Use the **Text** function to format date and time values using this same information.  The **Language** function returns the current language and region code.
+Use the **[Text](function-text.md)** function to format date and time values using this same information.  The **[Language](function-language.md)** function returns the current language and region code.
 
 ## Syntax ##
 
@@ -60,13 +60,13 @@ Use the **Text** function to format date and time values using this same informa
 
 1. Insert a Dropdown control.
 
-2. Set the formula for the **Items** property to:
+2. Set the formula for the **[Items](../properties/properties-core.md)** property to:
 
 	- **Calendar.MonthsLong()**
 
 3. Users of your app can now select a month in their own language.  **MonthsLong** can be replaced with any of the single-column tables that are returned by **Calendar** to create weekday and time selectors.
 
-In the United States, with **Language** returning "en-US", the following is returned by the **Calendar** functions:
+In the United States, with **[Language](function-language.md)** returning "en-US", the following is returned by the **Calendar** functions:
 
 | Formula | Description | Result |
 |---------|-------------|--------|

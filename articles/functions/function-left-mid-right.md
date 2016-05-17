@@ -74,7 +74,7 @@ Each example in this section extracts strings from the **Address** [column](work
 
 1. Import or create a [collection](working-with-data-sources.md#collections) named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
 
-2. Set the **Text** property of the lower label in the gallery to this function:
+2. Set the **[Text](../properties/properties-core.md)** property of the lower label in the gallery to this function:
 
 	**Right(ThisItem.ProductName, 3)**
 

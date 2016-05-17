@@ -49,17 +49,17 @@ These proeprties are in effect normally, when the user is not interacting with t
 
 ## Disabled ##
 
-These properties are in effect when the controls is disabled.  A control can be disabled if the **Disabled** property is set to *true*.
+These properties are in effect when the controls is disabled.  A control can be disabled if the **[Disabled](properties-core.md)** property is set to *true*.
 
-**DisabledBorderColor** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**DisabledBorderColor** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
 - Applies to **[Add picture](../controls/control-add-picture.md)**, **[Button](../controls/control-button.md)**, **[Check box](../controls/control-check-box.md)**, **[Column chart](../controls/control-column-line-chart.md)**, **[Date Picker](../controls/control-date-picker.md)**, **[Drop down](../controls/control-drop-down.md)**, **[Export](../controls/control-export-import.md)**, **[HTML text](../controls/control-html-text.md)**, **[Image](../controls/control-image.md)**, **[Import](../controls/control-export-import.md)**, **[Line chart](../controls/control-column-line-chart.md)**, **[List Box](../controls/control-list-box.md)**, **[Microphone](../controls/control-microphone.md)**, **[PDF viewer](../controls/control-pdf-viewer.md)**, **[Pie chart](../controls/control-pie-chart.md)**, **[Radio](../controls/control-radio.md)**, **[Slider](../controls/control-slider.md)**, **[Text box](../controls/control-text-box.md)**, **[Text input](../controls/control-text-input.md)**, **[Timer](../controls/control-timer.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
 
-**DisabledColor** – The color of text in a control if its **Disabled** property is set to **true**.
+**DisabledColor** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
 - Applies to **[Add picture](../controls/control-add-picture.md)**, **[Button](../controls/control-button.md)**, **[Check box](../controls/control-check-box.md)**, **[Date Picker](../controls/control-date-picker.md)**, **[Drop down](../controls/control-drop-down.md)**, **[Export](../controls/control-export-import.md)**, **[Import](../controls/control-export-import.md)**, **[List Box](../controls/control-list-box.md)**, **[Microphone](../controls/control-microphone.md)**, **[Radio](../controls/control-radio.md)**, **[Text box](../controls/control-text-box.md)**, **[Text input](../controls/control-text-input.md)**, and **[Timer](../controls/control-timer.md)** controls.
 
-**DisabledFill** – The background color of a control if its **Disabled** property is set to **true**.
+**DisabledFill** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
 - Applies to **[Add picture](../controls/control-add-picture.md)**, **[Button](../controls/control-button.md)**, **[Check box](../controls/control-check-box.md)**, **[Date Picker](../controls/control-date-picker.md)**, **[Drop down](../controls/control-drop-down.md)**, **[Export](../controls/control-export-import.md)**, **[HTML text](../controls/control-html-text.md)**, **[Image](../controls/control-image.md)**, **[Import](../controls/control-export-import.md)**, **[List Box](../controls/control-list-box.md)**, **[Microphone](../controls/control-microphone.md)**, **[Radio](../controls/control-radio.md)**, **[Text box](../controls/control-text-box.md)**, **[Text input](../controls/control-text-input.md)**, and **[Timer](../controls/control-timer.md)** controls.
 

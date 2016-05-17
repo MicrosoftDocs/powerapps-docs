@@ -46,11 +46,11 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -122,23 +122,23 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 ## Related functions ##
 
-[**DateTimeValue**( *String* )](function-datevalue-timevalue.md)
+[**DateTimeValue**( *String* )](../functions/function-datevalue-timevalue.md)
 
 ## Examples ##
 
 ### Collect data ###
 1. Add two text-input controls, and name them **inputFirst** and **inputLast**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a button, set its **Text** property to **Add**, and set its **OnSelect** property to this formula:<br>
+1. Add a button, set its **[Text](../properties/properties-core.md)** property to **Add**, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Add a text gallery in portrait/vertical orientation, set its **Items** property to **Names**, and set the **Text** property of **Subtitle1** to **ThisItem.FirstName**.
+1. Add a text gallery in portrait/vertical orientation, set its **[Items](../properties/properties-core.md)** property to **Names**, and set the **[Text](../properties/properties-core.md)** property of **Subtitle1** to **ThisItem.FirstName**.
 
-1. (optional) In the template gallery, delete the bottom text box, named **Body1**, and set the **TemplateSize** property of the gallery to **80**.
+1. (optional) In the template gallery, delete the bottom text box, named **Body1**, and set the **[TemplateSize](control-gallery.md)** property of the gallery to **80**.
 
 1. Press F5, type a string of text into **inputFirst** and **inputLast**, and then click or tap the **Add** button.
 
@@ -147,10 +147,10 @@ The user can specify data by typing into a text-input control. Depending on how 
 ### Prompt for a password ###
 1. Add a text-input control, name it **inputPassword**, and set its **Mode** property to **Password**.
 
-1. Add a text box, and set its **Text** property to this formula:<br>
+1. Add a text box, and set its **[Text](../properties/properties-core.md)** property to this formula:<br>
 **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
-	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
+	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and then type **P@ssw0rd** in **inputPassword**.
 
@@ -160,4 +160,4 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 1. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
 
-1. (optional) Add a button, configure its **Text** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
+1. (optional) Add a button, configure its **[Text](../properties/properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.

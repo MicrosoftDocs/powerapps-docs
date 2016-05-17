@@ -48,7 +48,7 @@ Know how to [add and configure a control](add-configure-controls.md).
 	![Close the Options pane](./media/show-office-data/close-options.png)
 
 ## Show information about the current user ##
-1. Add a text box, and set its **Text** property to any of these formulas:
+1. Add a text box, and set its **[Text](properties/properties-core.md)** property to any of these formulas:
 
 	- **office365users.MyProfile().Department**
 	- **office365users.MyProfile().DisplayName**
@@ -69,7 +69,7 @@ Know how to [add and configure a control](add-configure-controls.md).
 
 1. In **InfoAbout**, type or paste the email address of a user in your organization.
 
-1. Add a text box, and set its **Text** property to any of these formulas:
+1. Add a text box, and set its **[Text](properties/properties-core.md)** property to any of these formulas:
 
 	- To show information about another user:<br>
 		- **office365users.UserProfile(InfoAbout.Text).Department**
@@ -104,7 +104,7 @@ Know how to [add and configure a control](add-configure-controls.md).
 
 1. In **InfoAbout**, type or paste the name of a user in your organization.
 
-1. Add a text gallery, and set its **Items** property to this formula:
+1. Add a text gallery, and set its **[Items](properties/properties-core.md)** property to this formula:
 
 	**office365users.DirectReports(InfoAbout.Text)**
 
@@ -115,7 +115,7 @@ Know how to [add and configure a control](add-configure-controls.md).
 ## Search for users ##
 1. Add a text-input control, rename it **SearchTerm**, and then type a search term in it.
 
-1. Add a text gallery, and set its **Items** property to this formula:
+1. Add a text gallery, and set its **[Items](properties/properties-core.md)** property to this formula:
 
 	**office365users.SearchUser({searchTerm: SearchTerm.Text})**
 
@@ -133,10 +133,10 @@ For this function, you must specify the first three arguments, but all other arg
 	- **inputSubject**
 	- **inputBody**
 
-1. Add a button, and set its **OnSelect** property to this formula:<br>
+1. Add a button, and set its **[OnSelect](properties/properties-core.md)** property to this formula:<br>
 **office365.SendEmail(inputSubject.Text, inputBody.Text, inputTo.Text)**
 
-1. Move the button so that it appears under all the other controls, and set its **Text** property to show **Send email**.
+1. Move the button so that it appears under all the other controls, and set its **[Text](properties/properties-core.md)** property to show **Send email**.
 
 1. Press F5, type a valid email address in **inputTo**, and type whatever you want in the other two text-input controls.
 

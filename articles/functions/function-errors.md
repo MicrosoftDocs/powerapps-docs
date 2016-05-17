@@ -102,13 +102,13 @@ which returns **false**, because the **Errors** function returned the following 
 
 You can place a label on the form to show this error to the user.
 
-- To show the error, set the label's **Text** property to this formula:<br>
+- To show the error, set the label's **[Text](../properties/properties-core.md)** property to this formula:<br>
 **Label.Text = First(Errors( IceCream, EditRecord )).Message**
 
 You can also add a **Reload** button on the form, so that the user can efficiently resolve the conflict.
 
-- To show the button only when a conflict has occurred, set the button's **Visible** property to this formula:<br>
+- To show the button only when a conflict has occurred, set the button's **[Visible](../properties/properties-core.md)** property to this formula:<br>
 	**!IsEmpty( Lookup( Errors( IceCream, EditRecord ), Error = ErrorKind.Conflict ) )**
 
-- To revert the change which the user selects the button, set its **OnSelect** property to this formula:<br>
+- To revert the change which the user selects the button, set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 	**ReloadButton.OnSelect = Revert( IceCream, EditRecord )**

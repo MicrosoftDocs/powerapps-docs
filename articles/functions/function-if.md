@@ -69,7 +69,7 @@ In the following examples, an input-text box named **FirstName** has the value "
 
 2. In **Text1**, type **15**.
 
-3. Add a label, and set its **Text** property to the following formulas:
+3. Add a label, and set its **[Text](../properties/properties-core.md)** property to the following formulas:
 
 | Formula | Description | Result |
 |---------|-------------|--------|

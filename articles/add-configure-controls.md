@@ -52,13 +52,13 @@ On the **Insert** tab, follow either of these steps:
 
 		![Vertical and horizontal galleries that show images only, text only, images with captions, images with text, in addition to custom/blank galleries and a card gallery](./media/add-configure-controls/gallery-category.png)
 
-		**Tip:** Show a list of records from a table using a [gallery](./add-gallery.md).
+		**Tip:** Show a list of records from a table using a [gallery](add-gallery.md).
 
 	- **Forms**
 
 		![Forms](./media/add-configure-controls/forms-category.png)
 
-		**Tip:** Show or edit a record by using a [form](./add-form.md).
+		**Tip:** Show or edit a record by using a [form](add-form.md).
 
 	- **Media**
 
@@ -91,15 +91,15 @@ If you need more space for controls, [add a screen](add-screen-context-variables
 
 	**Important:** If a control is selected when you select another control or a blank area of the screen, the first element is no longer selected.
 
-1. Resize the control by dragging any handle of the selection box (or by modifying the **Height**, **Width**, or both properties, as this topic describes later).
+1. Resize the control by dragging any handle of the selection box (or by modifying the **[Height](properties/properties-size-location.md)**, **[Width](properties/properties-size-location.md)**, or both properties, as this topic describes later).
 
 	For example, make the text box shorter by dragging a handle on the right edge of the selection box to the left. (The middle handle appears only if you zoom in.)
 
 	![A resized text box](./media/add-configure-controls/shorter-text-box.png)
 
-1. Move the control by dragging the selection box itself (or by modifying the **X**, **Y**, or both properties, as this topic describes later).
+1. Move the control by dragging the selection box itself (or by modifying the **[X](properties/properties-size-location.md)**, **[Y](properties/properties-size-location.md)**, or both properties, as this topic describes later).
 
-1. If a control such as a text box or a button shows text, modify that text by triple-clicking it and then typing the text that you want (or by setting the **Text** property, as this topic describes later).
+1. If a control such as a text box or a button shows text, modify that text by triple-clicking it and then typing the text that you want (or by setting the **[Text](properties/properties-core.md)** property, as this topic describes later).
 
 	![A text box with custom text](./media/add-configure-controls/change-text-directly.png)
 
@@ -124,19 +124,19 @@ If you need more space for controls, [add a screen](add-screen-context-variables
 ## Configure a control in the formula bar ##
 Each change that you made earlier in this topic updated the value of a [property](reference-properties.md) for the control that you configured.
 
-- When you resized the control, you changed its **Width** property.
-- When you moved the control, you changed its **X** and **Y** properties.
-- When you changed the text that the control displays, you changed its **Text** property.
+- When you resized the control, you changed its **[Width](properties/properties-size-location.md)** property.
+- When you moved the control, you changed its **[X](properties/properties-size-location.md)** and **[Y](properties/properties-size-location.md)** properties.
+- When you changed the text that the control displays, you changed its **[Text](properties/properties-core.md)** property.
 
 Instead of configuring a control directly or from the ribbon, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
 
-1. With the text box selected, select **Text** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
+1. With the text box selected, select **[Text](properties/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
 
 	![A text box with text aligned to the top of the box](./media/add-configure-controls/text-literal.png)
 
 	When you surround a string of text with quotation marks, you specify that it should be treated exactly as you typed it. As an alternative, you can specify a formula that determines the value of a property.
 
-1. With the text box selected, select **Text** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
+1. With the text box selected, select **[Text](properties/properties-core.md)** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
 
 	The control shows the current date.
 
@@ -144,9 +144,9 @@ Instead of configuring a control directly or from the ribbon, you can also updat
 
 	By using the formula bar, you can set properties that you can't set directly or from the ribbon. For example, you can set a tooltip that appears when a user points to the control but doesn't select it. You can also specify complicated formulas that increase the power of your app.
 
-1. Add a check box, and set its **Text** property so that **Show text** appears.
+1. Add a check box, and set its **[Text](properties/properties-core.md)** property so that **Show text** appears.
 
-1. Set the **Visible** property of the text box to this formula:
+1. Set the **[Visible](properties/properties-core.md)** property of the text box to this formula:
 
 	**If(Checkbox1!Value = true, true, false)**
 

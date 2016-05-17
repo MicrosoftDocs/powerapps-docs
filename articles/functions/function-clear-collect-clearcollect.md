@@ -28,7 +28,7 @@ Creates and clears [collections](working-with-data-sources.md#collections) and a
 
 The **Collect** function adds records to a data source. The items to be added can be:
 
-- A single value: The value is placed in the **Value** field of a new record.  All other properties are left [blank](function-isblank-isempty.md).
+- A single value: The value is placed in the **[Value](function-value.md)** field of a new record.  All other properties are left [blank](function-isblank-isempty.md).
 
 - A record: Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
 
@@ -93,7 +93,7 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 
 ### Step by step ###
 
-1. Add a button, and set its **OnSelect** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
+1. Add a button, and set its **[OnSelect](../properties/properties-core.md)** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
 
 	This function creates a collection that's named **Products** that contains a row for each of three product names.
 

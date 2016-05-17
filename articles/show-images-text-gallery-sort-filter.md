@@ -36,7 +36,7 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 1. Create a collection named **Inventory** using the sample data. Steps include:  
 	a) On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
-	b) Set the **OnSelect** property of the import control to the following expression:  
+	b) Set the **[OnSelect](properties/properties-core.md)** property of the import control to the following expression:  
 	```Collect(Inventory, Import1!Data)```  
 	![][12]  
 	c) Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  	
@@ -50,7 +50,7 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 2. Select the back arrow to return to the designer.
 3. On the **Insert** tab, select **Gallery**. Under **Image Galleries**, select the horizontal **With Text** image gallery:  
 ![][4]  
-4. Set the **Items** property of the gallery to **Inventory**:  
+4. Set the **[Items](properties/properties-core.md)** property of the gallery to **Inventory**:  
 ![][5]  
 5. Rename the gallery to **ProductGallery**, and move the gallery so it doesn't block the other controls. Resize the gallery so it shows three products:  
 ![][6]  
@@ -59,13 +59,13 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 
 	> [AZURE.NOTE] When you change the first item in any gallery, you automatically change all other items in the gallery.  
 
-7. Set the **Text** property of the label to the following expression:  
+7. Set the **[Text](properties/properties-core.md)** property of the label to the following expression:  
 ```ThisItem!UnitsInStock``` <br/>
 
 	When you do this, the label shows the units in stock for each product:  
 ![][8]  
 
-> [AZURE.NOTE] By default, the **Text** property of the top label is set to ```ThisItem!ProductName```. You can change it to any other item in your collection. For example, if your collection has *ProductDescription* or *Price* fields, you can set the label to ```ThisItem!ProductDescription``` or ```ThisItem!Price```.
+> [AZURE.NOTE] By default, the **[Text](properties/properties-core.md)** property of the top label is set to ```ThisItem!ProductName```. You can change it to any other item in your collection. For example, if your collection has *ProductDescription* or *Price* fields, you can set the label to ```ThisItem!ProductDescription``` or ```ThisItem!Price```.
 
 Using these steps, you imported data that includes .jpg images into a collection. You then added a gallery that displays the data and configured a label to show the units in stock for each product.
 
@@ -94,13 +94,13 @@ In these steps, we are going to sort the gallery items in ascending and descendi
 #### Sort in ascending or descending order
 
 1. Select any item in the gallery *except* the first one.
-2. The **Items** property is currently set to Inventory (the name of your collection). Change it to the following:  
+2. The **[Items](properties/properties-core.md)** property is currently set to Inventory (the name of your collection). Change it to the following:  
 ```Sort(Inventory, ProductName)```
 
 	When you do this, the items in the gallery are sorted by the product name in ascending order:
 	![][11]  
 
-	Try descending order. Set the **Items** property of the gallery to the following expression:  
+	Try descending order. Set the **[Items](properties/properties-core.md)** property of the gallery to the following expression:  
 ```Sort(Inventory, ProductName, Descending)```  
 
 #### Add a slider control and filter items in the gallery
@@ -113,7 +113,7 @@ In these steps, we are going to sort the gallery items in ascending and descendi
 	b) On the **Content** tab, select **Max**, and then enter the following expression:  
 	```Max(Inventory, UnitsInStock)```
 
-3. Select any item in the gallery *except* the first one. Set the **Items** property of the gallery to the following expression:  
+3. Select any item in the gallery *except* the first one. Set the **[Items](properties/properties-core.md)** property of the gallery to the following expression:  
 ```Filter(Inventory, UnitsInStock<=StockFilter!Value)```
 
 4. In **Preview**, adjust the slider to a value that's between the highest and the lowest quantity in the gallery. As you adjust the slider, the gallery shows only those products that are less than the value you choose:  
@@ -123,7 +123,7 @@ Now, let's add to our filter:
 
 1. Go back to the designer.
 2. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control to **NameFilter**. Move the text control below the slider.
-3. Set the **Items** property of the gallery to the following expression:  
+3. Set the **[Items](properties/properties-core.md)** property of the gallery to the following expression:  
 ```Filter(Inventory, UnitsInStock<=StockFilter!Value && NameFilter!Text in ProductName)```
 4. In **Preview**, set the slider to *30*, and type the letter *g* in the input text box. The gallery shows the only product with less than 30 units in stock *and* has a name with the letter "g":  
 ![][14]  

@@ -50,11 +50,11 @@ Timers can, for example, determine how long a control appears or change other pr
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -106,41 +106,41 @@ Timers can, for example, determine how long a control appears or change other pr
 
 ## Related functions ##
 
-[**Refresh**( *DataSource* )](function-refresh.md)
+[**Refresh**( *DataSource* )](../functions/function-refresh.md)
 
 ## Examples ##
 ### Show a countdown ###
 1. Add a timer, and name it **Countdown**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Set the timer's **Duration** property to **10000** and its **Repeat** and **Autostart** properties to **true**.
 
-1. (optional) Make the timer easier to read by setting its **Height** property to **160**, its **Width** property to **600**, and its **Size** property to **60**.
+1. (optional) Make the timer easier to read by setting its **[Height](../properties/properties-size-location.md)** property to **160**, its **[Width](../properties/properties-size-location.md)** property to **600**, and its **[Size](../properties/properties-text.md)** property to **60**.
 
-1. Add a text box, and set its **Text** property to this formula:
+1. Add a text box, and set its **[Text](../properties/properties-core.md)** property to this formula:
 <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
 
-	Want more information about the [**RoundUp** function](function-round.md) or [other functions](formula-reference.md)?
+	Want more information about the **[RoundUp](../functions/function-round.md)** function or [other functions](../formula-reference.md)?
 
 	The text box shows how many seconds remain before the timer restarts.
 
-1. (optional) Set the timer's **Visible** property to **false**.
+1. (optional) Set the timer's **[Visible](../properties/properties-core.md)** property to **false**.
 
 ### Animate a control ###
 1. Add a timer, and name it **FadeIn**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Set the timer's **Duration** property to **5000** and its **Repeat** and **Autostart** properties to **true**.
 
-1. (optional) Make the timer easier to read by setting its **Height** property to **160**, its **Width** property to **600**, and its **Size** property to **60**.
+1. (optional) Make the timer easier to read by setting its **[Height](../properties/properties-size-location.md)** property to **160**, its **[Width](../properties/properties-size-location.md)** property to **600**, and its **[Size](../properties/properties-text.md)** property to **60**.
 
-1. Add a text box, set its **Text** property to show **Welcome!** and set its **Color** property to this formula:
+1. Add a text box, set its **[Text](../properties/properties-core.md)** property to show **Welcome!** and set its **[Color](../properties/properties-color-border.md)** property to this formula:
 <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
-	Want more information about the [**ColorFade** function](function-colors.md) or [other functions](formula-reference.md)?
+	Want more information about the **[ColorFade](../functions/function-colors.md)** function or [other functions](../formula-reference.md)?
 
 	The text in the text box fades to white, returns to full intensity, and repeats the process.
 
-1. (optional) Set the timer's **Visible** property to **false**.
+1. (optional) Set the timer's **[Visible](../properties/properties-core.md)** property to **false**.
