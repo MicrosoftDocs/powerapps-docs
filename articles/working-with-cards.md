@@ -73,15 +73,15 @@ As another example, show an image in an **[Image](controls/control-image.md)** c
 
 	![](./media/working-with-cards/customize-image2.png)
 
-3. In the formula bar, set the **[Image](properties/properties-visual.md)** property of this control to **TextBox.Text**, where **TextBox** is the name of the **Input text** control that holds the URL:
+3. In the formula bar, set the **[Image](controls/properties-visual.md)** property of this control to **TextBox.Text**, where **TextBox** is the name of the **Input text** control that holds the URL:
 
 	**Tip**: Press the Alt key to show the name of each control.
 
 	![](./media/working-with-cards/customize-image3.png)
 
-	And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **[Image](properties/properties-visual.md)** property, but it wouldn't have updated as the user entered a new URL.
+	And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **[Image](controls/properties-visual.md)** property, but it wouldn't have updated as the user entered a new URL.
 
-4. We can do the same thing on the second screen of this app, where we use a **[Display form](controls/control-form-detail.md)** control to display the details of a record.  Here we may want to hide the text box (set the **[Visible](properties/properties-core.md)** property of the text-box control, not the card, to *false*) because the user won't edit the URL on that screen:
+4. We can do the same thing on the second screen of this app, where we use a **[Display form](controls/control-form-detail.md)** control to display the details of a record.  Here we may want to hide the text box (set the **[Visible](controls/properties-core.md)** property of the text-box control, not the card, to *false*) because the user won't edit the URL on that screen:
 
 	![](./media/working-with-cards/customize-image4.png)
 
@@ -92,7 +92,7 @@ In addition to containing controls, cards themselves are controls that have prop
 
 We immediately see one of the most important properties of the card: the **[DataField](controls/control-card.md)** property. This property indicates which field of the data source the user sees and can edit in this card.  
 
-In the **Advanced** view, the large banner at the top indicates that the properties of this card are locked. A lock icon also appears next to the **[DataField](controls/control-card.md)**, **[Default](properties/properties-core.md)**, and **[DisplayName](controls/control-card.md)** properties. The **Options** pane created these formulas, and the lock prevents accidental changes to these properties.  
+In the **Advanced** view, the large banner at the top indicates that the properties of this card are locked. A lock icon also appears next to the **[DataField](controls/control-card.md)**, **[Default](controls/properties-core.md)**, and **[DisplayName](controls/control-card.md)** properties. The **Options** pane created these formulas, and the lock prevents accidental changes to these properties.  
 
 Click or tap the banner at the top to unlock the card so that you can modify these properties:
 
@@ -118,16 +118,16 @@ The most important property on the card is the **[DataField](controls/control-ca
 ### Information flowing in ###
 As a container, the form makes **ThisItem** available to all cards within it. This record contains all of the fields for the current record of interest.  
 
-The **[Default](properties/properties-core.md)** property of every card should be set to **ThisItem**.*FieldName*.  Under certain circumstances, you might want to transform this value on the way in. For example, you might want to format a string or translate the value from one language to another.
+The **[Default](controls/properties-core.md)** property of every card should be set to **ThisItem**.*FieldName*.  Under certain circumstances, you might want to transform this value on the way in. For example, you might want to format a string or translate the value from one language to another.
 
-Each control within the card should reference **Parent.Default** to get at the field's value. This strategy provides a level of encapsulation for the card so that the card's **[Default](properties/properties-core.md)** property can change without changing the internal formulas of the card.
+Each control within the card should reference **Parent.Default** to get at the field's value. This strategy provides a level of encapsulation for the card so that the card's **[Default](controls/properties-core.md)** property can change without changing the internal formulas of the card.
 
 By default, **DefaultValue** and **[Required](controls/control-card.md)** properties are taken from the data source's metadata based on the **[DataField](controls/control-card.md)** property. You can override these formulas with your own logic, integrating the data source's metadata by using the **[DataSourceInfo](functions/function-datasourceinfo.md)** function.
 
 ### Information flowing out ###
 After the user modifies a record by using controls in the cards, the **[SubmitForm](functions/function-form.md)** function saves those changes to the data source. When that function runs, the form control reads the values of each card's **[DataField](controls/control-card.md)** property to know what field to change.  
 
-The form control also reads the value of each card's **[Update](controls/control-card.md)** property. This value will be stored in the data source for this field. This is the place to apply another transform, perhaps to reverse the transform that was applied in the card's **[Default](properties/properties-core.md)** formula.
+The form control also reads the value of each card's **[Update](controls/control-card.md)** property. This value will be stored in the data source for this field. This is the place to apply another transform, perhaps to reverse the transform that was applied in the card's **[Default](controls/properties-core.md)** formula.
 
 The **Valid** property is driven from the metadata of the data source, based on the **[DataField](controls/control-card.md)** property. It's also based on the **[Required](controls/control-card.md)** property and whether the **[Update](controls/control-card.md)** property contains a value. If the value on the **[Update](controls/control-card.md)** property isn't valid, the **Error** property provides a user-friendly error message.
 

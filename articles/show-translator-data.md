@@ -52,10 +52,10 @@ Know how to [add and configure a control](add-configure-controls.md).
 
 1. Add a drop-down list, rename it **TargetLang**, and move it below the **Source** box.
 
-1. Set the **[Items](properties/properties-core.md)** property of **TargetLang** to this formula:<br>
+1. Set the **[Items](controls/properties-core.md)** property of **TargetLang** to this formula:<br>
 **microsofttranslator.Languages()**
 
-1. Add a text box, move it below **TargetLang**, and set the text box's **[Text](properties/properties-core.md)** property to this formula:
+1. Add a text box, move it below **TargetLang**, and set the text box's **[Text](controls/properties-core.md)** property to this formula:
 <br>**microsofttranslator.Translate(Source.Text, TargetLang.Selected.Value)**
 
 1. Type text into **Source**, and select a language in **TargetLang**.
@@ -67,7 +67,7 @@ Know how to [add and configure a control](add-configure-controls.md).
 ## Speak translated text ##
 1. If you haven't already, follow the steps in the previous procedure for translating text.
 
-1. Set the **[Items](properties/properties-core.md)** property of the **TargetLang** drop-down list to this formula:<br>
+1. Set the **[Items](controls/properties-core.md)** property of the **TargetLang** drop-down list to this formula:<br>
 **microsofttranslator.SpeechLanguages()**
 
 1. Rename the text box (not the **Source** box) to **Target**.
@@ -86,7 +86,7 @@ Know how to [add and configure a control](add-configure-controls.md).
 
 1. Add a text box, and then move it under **Source**.
 
-1. Set the **[Text](properties/properties-core.md)** property of the text box to this formula:
+1. Set the **[Text](controls/properties-core.md)** property of the text box to this formula:
 <br>**microsofttranslator.Detect(Source.Text).Name**
 
 1. Type text into **Source**.

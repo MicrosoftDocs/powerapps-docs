@@ -20,13 +20,13 @@
 
 # Sort and SortByColumns functions in PowerApps #
 
-Sorts a [table](working-with-tables.md).
+Sorts a [table](../working-with-tables.md).
 
 ## Description ##
 
 The **Sort** function sorts a table based on a formula.  
 
-The formula is evaluated for each [record](working-with-tables.md#records) of the table, and the results are used to sort the table.  You can use [columns](working-with-tables.md#columns) of the table in the formula. The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
+The formula is evaluated for each [record](../working-with-tables.md#records) of the table, and the results are used to sort the table.  You can use [columns](../working-with-tables.md#columns) of the table in the formula. The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
 
 To sort first by one column and then by another, you embed a **Sort** formula within another. For example, you can use this formula to sort a **Contacts** table first by a **LastName** column and then by a **FirstName** column:  **Sort( Sort( Contacts, LastName ), FirstName )**
 
@@ -38,7 +38,7 @@ You can combine **SortByColumns** with a **[Drop down](../controls/control-drop-
 
 In addition to sorting ascending or descending, **SortByColumns** can sort based on a single column table of values.  For example, you can sort record based on the name of a day of the week by supplying **[ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]** as the sort order.  All records which have **Monday"** will come first, followed by **Tuesday**, and so on.  Records found that do not appear in the sort table are put at the end of the list.
 
-[Tables](working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** doe not modify a table, instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](working-with-tables.md) for more details.
+[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** doe not modify a table, instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../working-with-tables.md) for more details.
 
 ## Delegation ##
 
@@ -76,7 +76,7 @@ Additional limitations on delegation (which we are working to remove):
 
 ## Examples ##
 
-For the following examples, we'll use the **IceCream** [data source](working-with-data-sources.md), which contains the data in this table:
+For the following examples, we'll use the **IceCream** [data source](../working-with-data-sources.md), which contains the data in this table:
 
 ![](media/function-sort/icecream.png)
 
@@ -91,9 +91,9 @@ For the following examples, we'll use the **IceCream** [data source](working-wit
 
 ### Step by step ###
 
-To run these examples yourself, create the **IceCream** data source as a [collection](working-with-data-sources.md#collections):
+To run these examples yourself, create the **IceCream** data source as a [collection](../working-with-data-sources.md#collections):
 
-1. Add a button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
+1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
 
 1. Preview the app, select the button, and then press Esc to return to the default workspace.
 
@@ -101,7 +101,7 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 
 #### Sort ####
 
-1. Add another button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
+1. Add another button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
 **ClearCollect( SortByFlavor, Sort( IceCream, Flavor ) )**
 
  	The previous formula creates a second collection, named **SortByFlavor**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted alphabetically by the **Flavor** column in ascending order.
@@ -114,7 +114,7 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 
 #### SortByColumns ####
 
-1. Add another button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
+1. Add another button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
 **ClearCollect( SortByQuantity, SortByColumns( IceCream, "Quantity", Ascending, "Flavor", Descending ) )**
 
  	The previous formula creates a third collection, named **SortByQuantity**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted numerically by the **Quanity** column in ascending order, and then by the **Flavor** column in descending order.

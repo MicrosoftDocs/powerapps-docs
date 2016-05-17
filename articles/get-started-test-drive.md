@@ -99,7 +99,7 @@ You can also, for example, change the colors in an app easily by selecting a dif
 
 	![Theme options](./media/get-started-test-drive/select-theme.png)
 
-Even if you select a theme, you can still change the color of one or more specific elements by setting a [Color property](properties/properties-color-border.md) or a [Text property](properties/properties-text.md). You can then select a different theme without losing your individual customizations.
+Even if you select a theme, you can still change the color of one or more specific elements by setting a [Color property](controls/properties-color-border.md) or a [Text property](controls/properties-text.md). You can then select a different theme without losing your individual customizations.
 
 ## Next steps ##
 1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.

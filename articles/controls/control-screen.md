@@ -26,13 +26,13 @@ Most apps have multiple **Screen** controls that contain **[Text Box](control-te
 
 ## Key properties ##
 
-**[BackgroundImage](../properties/properties-visual.md)** – The name of an image file that appears in the background of a screen.
+**[BackgroundImage](properties-visual.md)** – The name of an image file that appears in the background of a screen.
 
-**[Fill](../properties/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 ## Additional properties ##
 
-**[ImagePosition](../properties/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+**[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
 **OnHidden** – How an app responds when the user navigates away from a screen.
 
@@ -43,22 +43,22 @@ Most apps have multiple **Screen** controls that contain **[Text Box](control-te
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example ##
-1. Add a **[Radio](control-radio.md)** control, name it **ScreenFills**, and set its **[Items](../properties/properties-core.md)** property to this value:<br>
+1. Add a **[Radio](control-radio.md)** control, name it **ScreenFills**, and set its **[Items](properties-core.md)** property to this value:<br>
 **["Red", "Green"]**
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Name the default **Screen** control **Source**, add another **Screen** control, and name it **Target**.
 
-1. On **Source**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
+1. On **Source**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **Navigate(Target, ScreenTransition.Fade)**
 
 	Want more information about the **[Navigate](../functions/function-navigate.md)** function or [other functions](../formula-reference.md)?
 
-1. In **Target**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
+1. In **Target**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **Navigate(Source, ScreenTransition.Fade)**
 
-1. Set the **[Fill](../properties/properties-color-border.md)** property of **Target** to this formula:<br>
+1. Set the **[Fill](properties-color-border.md)** property of **Target** to this formula:<br>
 **If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))**
 
 1. From **Source**, press F5, click or tap either option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control.

@@ -20,7 +20,7 @@
 
 # Update and UpdateIf functions in PowerApps #
 
-Updates [records](working-with-tables.md#records) in a [data source](working-with-data-sources.md).
+Updates [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md).
 
 ## Description ##
 
@@ -28,9 +28,9 @@ Updates [records](working-with-tables.md#records) in a [data source](working-wit
 
 Use the **Update** function to replace an entire record in a data source. In contrast, the **UpdateIf** and the **[Patch](function-patch.md)** functions modify one or more values in a record, leaving the other values alone.
 
-For a [collection](working-with-data-sources.md#collections), the entire record must match. Collections allow duplicate records, so multiple records might match. You can use the **All** argument to update all copies of a record; otherwise, only one copy of the record is updated.
+For a [collection](../working-with-data-sources.md#collections), the entire record must match. Collections allow duplicate records, so multiple records might match. You can use the **All** argument to update all copies of a record; otherwise, only one copy of the record is updated.
 
-If the data source generates a column's value automatically, the value of that [column](working-with-tables.md#columns) must be reaffirmed.
+If the data source generates a column's value automatically, the value of that [column](../working-with-tables.md#columns) must be reaffirmed.
 
 ### UpdateIf function ###
 
@@ -40,7 +40,7 @@ To specify a modification, use a change record that contains new property values
 
 Similar to **UpdateIf**, you can also use the **[Patch](function-patch.md)** function to change specific columns of a record without affecting other columns.
 
-Both **Update** and **UpdateIf** return the modified data source as a [table](working-with-tables.md). You must use either function in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas).
+Both **Update** and **UpdateIf** return the modified data source as a [table](../working-with-tables.md). You must use either function in a [behavior formula](../working-with-formulas-in-depth.md#behavior-formulas).
 
 ## Syntax ##
 
@@ -83,7 +83,7 @@ In these examples, you'll replace or modify records in a data source that's name
 
 1. Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery.Selected.UnitsInStock**
 
-1. Add a button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>**UpdateIf(Inventory, ProductName = ProductGallery.Selected.ProductName, {UnitsInStock:UnitsInStock-UnitsSold.Value})**
+1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**UpdateIf(Inventory, ProductName = ProductGallery.Selected.ProductName, {UnitsInStock:UnitsInStock-UnitsSold.Value})**
 
 1. Press F5, select a product in the gallery, specify a value with the slider, and then select the button.
 

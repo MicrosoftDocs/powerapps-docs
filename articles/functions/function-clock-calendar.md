@@ -26,7 +26,7 @@ Retrieves calendar and clock information about the current locale.
 
 The **Calendar** and **Clock** functions are a set of functions that retrieve information about the current locale.
 
-You can use these functions to display dates and times in the language of the current user.  The single-column tables returned by **Calendar** and **Clock** functions can be used directly with the **[Items](../properties/properties-core.md)** property of Dropdown and Listbox controls.
+You can use these functions to display dates and times in the language of the current user.  The single-column tables returned by **Calendar** and **Clock** functions can be used directly with the **[Items](../controls/properties-core.md)** property of Dropdown and Listbox controls.
 
 | Function | Description |
 |----------|-------------|
@@ -60,7 +60,7 @@ Use the **[Text](function-text.md)** function to format date and time values usi
 
 1. Insert a Dropdown control.
 
-2. Set the formula for the **[Items](../properties/properties-core.md)** property to:
+2. Set the formula for the **[Items](../controls/properties-core.md)** property to:
 
 	- **Calendar.MonthsLong()**
 

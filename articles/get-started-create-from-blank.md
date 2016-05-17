@@ -86,7 +86,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	Several controls are added to the screen, including a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
 
-1. Set the **[Items](properties/properties-core.md)** property of the gallery to this formula:
+1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
 
 	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
@@ -99,7 +99,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	[More information](formula-reference.md) about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and other functions
 
-1. Set the **[Text](properties/properties-core.md)** property of the **[Text box](controls/control-text-box.md)** control at the top of the screen to show **View records**.
+1. Set the **[Text](controls/properties-core.md)** property of the **[Text box](controls/control-text-box.md)** control at the top of the screen to show **View records**.
 
 	![First screen](./media/get-started-create-from-blank/first-screen.png)
 
@@ -132,29 +132,29 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
-1. Set the **[AutoHeight](controls/control-text-box.md)** property of the text box to **true** and its **[Text](properties/properties-core.md)** property to this formula:
+1. Set the **[AutoHeight](controls/control-text-box.md)** property of the text box to **true** and its **[Text](controls/properties-core.md)** property to this formula:
 
 	**Form1.Error**
 
 	The text box will show any errors from the form.
 
-1. Add a **Back arrow**, and set its **[OnSelect](properties/properties-core.md)** property to this formula:
+1. Add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	**Navigate(ViewScreen,ScreenTransition.None)**
 
  	When the user selects the arrow, the **[Navigate](functions/function-navigate.md)** function shows the **ViewScreen**.
 
-1. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](properties/properties-core.md)** property to **Save**.
+1. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](controls/properties-core.md)** property to **Save**.
 
 	![Add a save button](./media/get-started-create-from-blank/add-save-button.png)  
 
-1.  Set the **[OnSelect](properties/properties-core.md)** property of the button to this formula::
+1.  Set the **[OnSelect](controls/properties-core.md)** property of the button to this formula::
 
 	**SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
 
 	When the user selects the button, the **[SubmitForm](functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.  
 
-1.  At the bottom of the screen, add a **Remove** button, and set its **[OnSelect](properties/properties-core.md)** property to this formula:
+1.  At the bottom of the screen, add a **Remove** button, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	**Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
 
@@ -169,7 +169,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
 
-1. Set the **[OnSelect](properties/properties-core.md)** property of that arrow to this formula:
+1. Set the **[OnSelect](controls/properties-core.md)** property of that arrow to this formula:
 
 	**Navigate(ChangeScreen,ScreenTransition.None)**
 
@@ -177,7 +177,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Add record](./media/get-started-create-from-blank/add-record.png)
 
-1. Set the **[OnSelect](properties/properties-core.md)** property of the selected icon to this formula:
+1. Set the **[OnSelect](controls/properties-core.md)** property of the selected icon to this formula:
 
 	**NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**
 

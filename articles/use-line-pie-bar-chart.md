@@ -43,7 +43,7 @@ In these steps, we download a sample file. Using a collection, we import this sa
 
 	1. On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][11]  
-	2. Set the **[OnSelect](properties/properties-core.md)** property to the following function:  
+	2. Set the **[OnSelect](controls/properties-core.md)** property to the following function:  
 ```Collect(ProductRevenue, Import1.Data)```  
 	3. Double-click the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  
 	In the **File** menu, select **Collections**. The ProductRevenue collection is listed with the chart data you imported:  
@@ -55,7 +55,7 @@ In these steps, we download a sample file. Using a collection, we import this sa
 4. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button.
 5. In the pie chart control, select the middle of the pie chart:   
 ![][10]  
-6. Set the **[Items](properties/properties-core.md)** property of the pie chart to the ```ProductRevenue.Revenue2014``` collection you created:  
+6. Set the **[Items](controls/properties-core.md)** property of the pie chart to the ```ProductRevenue.Revenue2014``` collection you created:  
 ![][2]  
 
 	When you do this, the pie chart shows the 2014 revenue of the products:  
@@ -66,7 +66,7 @@ Now, let's use this ProductRevenue collection in a bar chart:
 
 1. On the **Home** tab, create a new screen.
 2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
-3. Select the middle of the column chart. Set the **[Items](properties/properties-core.md)** property of the column chart to ```ProductRevenue```:  
+3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:  
 ![][12]  
 
 	When you do this, the column chart shows the 2012 revenue for the products:  

@@ -20,11 +20,11 @@
 
 # Distinct function in PowerApps #
 
-Summarizes [records](working-with-tables.md#records) of a [table](working-with-tables.md), removing duplicates.
+Summarizes [records](../working-with-tables.md#records) of a [table](../working-with-tables.md), removing duplicates.
 
 ## Description ##
 
-The **Distinct** function evaluates a formula across each record of a table. [Columns](working-with-tables.md#columns) of the table can be used in the formula.  **Distinct** returns a one-column table that contains the results, with duplicate values removed.  
+The **Distinct** function evaluates a formula across each record of a table. [Columns](../working-with-tables.md#columns) of the table can be used in the formula.  **Distinct** returns a one-column table that contains the results, with duplicate values removed.  
 
 ## Syntax ##
 

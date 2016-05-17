@@ -36,7 +36,7 @@ You can choose which media option to add. For example, if you have some pictures
 5. On the **Insert** tab, select **Media**, and then choose image, video, or audio:  
 	![][8]
 
-	- If you added an image control, set its **[Image](properties/properties-visual.md)** property to the file that you added:  
+	- If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
 
 		![Set Image property][9]
 
@@ -64,13 +64,13 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 1. On the **Insert** tab, select **Media**, and then select **Camera**. Rename it **MyCamera**:  
 	![][11]
-2. Set its **[OnSelect](properties/properties-core.md)** property to this formula:
+2. Set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	```Collect(MyImages, {SinglePicture:MyCamera.Photo})```
 
-3. On the **Insert** tab, select **Gallery**, and then select one of the **Image only** options. Set the image gallery's  **[Items](properties/properties-core.md)** property to **MyImages**.
+3. On the **Insert** tab, select **Gallery**, and then select one of the **Image only** options. Set the image gallery's  **[Items](controls/properties-core.md)** property to **MyImages**.
 
-4. Select the image control for the first item in the gallery, and set its **[OnSelect](properties/properties-core.md)** property to this formula:
+4. Select the image control for the first item in the gallery, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	```Remove(MyImages, ThisItem)```
 
@@ -94,13 +94,13 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 	By using this formula, you create a collection named **Interviews**, which contains a column named **Recordings** and a column named **Notes**. Each row contains a sound file that you create by using the microphone and any text in the **Description** box when you stop recording.
 
-3. Add a custom gallery, and set its **[Items](properties/properties-core.md)** property to **Interviews**.
+3. Add a custom gallery, and set its **[Items](controls/properties-core.md)** property to **Interviews**.
 
 4. Select the first item in the gallery, add an audio control to it, and then set the **Media** property for the audio control to **ThisItem.Recordings**.
 
 	**Note** You can save visual space by shrinking the audio control so that only the play button appears.
 
-5. Select the first item in the gallery, add a text box to it, and set the **[Text](properties/properties-core.md)** property of the text box to **ThisItem.Notes**.
+5. Select the first item in the gallery, add a text box to it, and set the **[Text](controls/properties-core.md)** property of the text box to **ThisItem.Notes**.
 
 6. Press F5, type a phrase in the **Description** box, and then select **MyMicrophone** to start recording.
 
@@ -116,7 +116,7 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 
 1. Press Esc to return to the default workspace.
 
-1. (optional) In the gallery, set the **[OnSelect](properties/properties-core.md)** property of the text box to **Remove(Interviews, ThisItem)**, press F5, and then select a description to remove it and its recording.
+1. (optional) In the gallery, set the **[OnSelect](controls/properties-core.md)** property of the text box to **Remove(Interviews, ThisItem)**, press F5, and then select a description to remove it and its recording.
 
 **Important** To retain the sounds after the app is closed, use the [SaveData](functions/function-savedata-loaddata.md) function to save them locally, or use the [Patch](functions/function-patch.md) function to save them to a data source.
 
@@ -124,13 +124,13 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
 
 1. Add a pen-input control, rename it **Sketches**, and set its **ShowControls** property to **true**.
-1. Add a button, set its **[Text](properties/properties-core.md)** property to **Add**, and set its **[OnSelect](properties/properties-core.md)** property to this formula:
+1. Add a button, set its **[Text](controls/properties-core.md)** property to **Add**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	```Collect(Creativity, {Captures:Sketches.Image})```
 
-1. Add an image-only gallery, and set its **[Items](properties/properties-core.md)** property to **Creativity**.
+1. Add an image-only gallery, and set its **[Items](controls/properties-core.md)** property to **Creativity**.
 
-1. Select the first item in the gallery, and set its **[OnSelect](properties/properties-core.md)** property to this formula:
+1. Select the first item in the gallery, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	```Remove(Creativity, ThisItem)```
 
@@ -152,7 +152,7 @@ Create multiple drawings (or simulate a whiteboard), and show the results in a g
 
 1. (optional) Convert written text to typed text:
 
-	1. Add a text box, and set its **[Text](properties/properties-core.md)** property to **Sketches.RecognizedText**.
+	1. Add a text box, and set its **[Text](controls/properties-core.md)** property to **Sketches.RecognizedText**.
 	1. Press F5, and then write a word in the pen control.
 
 	The text shows the word as typed text.

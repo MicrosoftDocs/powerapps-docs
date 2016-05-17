@@ -40,17 +40,17 @@ Excel doesn't have variables. The value of a cell that contains a formula change
 ### PowerApps ###
 Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas. 
 
-For example, you can replicate the Excel behavior in an app by adding a **[Text box](../controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](../controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](../properties/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
+For example, you can replicate the Excel behavior in an app by adding a **[Text box](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
 ![](media/working-with-variables/recalc1.png)
 
-Notice that the **TextBox1** control is selected, showing its **[Text](../properties/properties-core.md)** formula in the formula bar at the top of the screen.  Here we find the formula **TextInput1 + TextInput2**.  This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of the **TextInput1**:
+Notice that the **TextBox1** control is selected, showing its **[Text](controls/properties-core.md)** formula in the formula bar at the top of the screen.  Here we find the formula **TextInput1 + TextInput2**.  This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of the **TextInput1**:
 
 ![](media/working-with-variables/recalc2.png)
 
 The formula for **TextBox1** has been automatically recalculated, showing the new value.
 
-In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](../properties/properties-color-border.md)** property of the text box will automatically show negative values in red. The **[If](function-if.md)** function should look very familiar from Excel:
+In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the text box will automatically show negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
 <br>**If( Value(TextBox1.Text) < 0, Red, Black )**
 
 ![](media/working-with-variables/recalc-color1.png)
@@ -62,14 +62,14 @@ Now, if the result of our calculation in **TextBox1.Text** is negative, the numb
 You can use formulas for a wide variety of scenarios:
 
 - By using your device's GPS, a map control can display your current location with a formula that uses **Location.Latitude** and **Location.Longitude**.  As you move, the map will automatically track your location.
-- Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated to reflect the updated data. Furthering the example, you might set a gallery's **[Items](../properties/properties-core.md)** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
+- Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated to reflect the updated data. Furthering the example, you might set a gallery's **[Items](controls/properties-core.md)** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
 
 ### Benefits ###
 Using formulas to build apps has many advantages:
 
 - If you know Excel, you know PowerApps. The model and formula language are the same.
 - If you've used other programming tools, think about how much code would be required to accomplish these examples.  In Visual Basic, you'd need to write an event handler for the change event on each text box.  The code to perform the calculation in each of these is redundant and could get out of sync, or you'd need to write a common subroutine.  In PowerApps, you accomplished all of that with a single, one-line formula.
-- To understand where **TextBox1**'s text is coming from, you know exactly where to look: the formula in the **[Text](../properties/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
+- To understand where **TextBox1**'s text is coming from, you know exactly where to look: the formula in the **[Text](controls/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
 - If the user changes a slider control and then changes their mind, they can change the slider back to its original value.  And it's as if nothing had ever changed: the app shows the same control values as it did before.  There are no ramifications for experimenting and asking "what if," just as there are none in Excel.  
 
 In general, if you can achieve an effect by using a formula, you'll be better off. Let the formula engine in PowerApps work for you.  
@@ -93,10 +93,10 @@ To create our adding machine, we require a variable to hold the running total. T
 
 How context variables work:
 
-- You create and set context variables by using the **[UpdateContext](function-updatecontext.md)** function.  If a context variable doesn't already exist when first updated, it will be created with a default value of *blank*.
+- You create and set context variables by using the **[UpdateContext](functions/function-updatecontext.md)** function.  If a context variable doesn't already exist when first updated, it will be created with a default value of *blank*.
 - You create and update context variables with records. In other programming tools, you commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead. When you use a context variable, use its name directly.  
-- You can also set a context variable when a screen is displayed, by using the **[Navigate](function-navigate.md)** function. If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
-- Except for **[Navigate](function-navigate.md)**, context variables are limited to the context of a single screen, which is where they get their name.  You can't use or set them outside of this context.
+- You can also set a context variable when a screen is displayed, by using the **[Navigate](functions/function-navigate.md)** function. If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
+- Except for **[Navigate](functions/function-navigate.md)**, context variables are limited to the context of a single screen, which is where they get their name.  You can't use or set them outside of this context.
 - Context variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
 - When the user closes an app, all of its context variables are lost.
 
@@ -104,22 +104,22 @@ Let's rebuild our adding machine by using a context variable:
 
 1. Add a text-input control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
 
-1. Set the **[Text](../properties/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
+1. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
 
-1. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br> **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**.
+1. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:<br> **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**.
 
-	The first time a user selects the **Add** button and **[UpdateContext](function-updatecontext.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
+	The first time a user selects the **Add** button and **[UpdateContext](functions/function-updatecontext.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
 
 	![](media/working-with-variables/context-variable-1.png)
 
-1. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
+1. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
 **UpdateContext( { RunningTotal: 0 } )**
 
-	Again, **[UpdateContext](function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
+	Again, **[UpdateContext](functions/function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
 
 	![](media/working-with-variables/context-variable-2.png)
 
-3. Add a **[Text box](../controls/control-text-box.md)** control, and set its **[Text](../properties/properties-core.md)** property to **RunningTotal**.
+3. Add a **[Text box](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
 
 	This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
 
@@ -132,31 +132,31 @@ To refer a variable from any screen (not only the one on which it was created), 
 
 How collections work:
 
-- Create and set collections by using the **[ClearCollect](function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
-- A collection is a data source and, therefore, a table. To access a single value in a collection, use the **[First](function-first-last.md)** function, and extract one field from the resulting record. If you used a single value with **[ClearCollect](function-clear-collect-clearcollect.md)**, this will be the **Value** field, as in this example:<br>**First(** *VariableName* **).Value**
+- Create and set collections by using the **[ClearCollect](functions/function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](functions/function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
+- A collection is a data source and, therefore, a table. To access a single value in a collection, use the **[First](functions/function-first-last.md)** function, and extract one field from the resulting record. If you used a single value with **[ClearCollect](functions/function-clear-collect-clearcollect.md)**, this will be the **Value** field, as in this example:<br>**First(** *VariableName* **).Value**
 - Any formula can access a collection from any screen in the app.
 - When a user closes an app, all of its collections are emptied.
 
 Let's recreate our adding machine by using a collection:
 
-1. Add a **[Text input](../controls/control-text-input.md)** control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
+1. Add a **[Text input](controls/control-text-input.md)** control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
 
-1. Set the **[Text](../properties/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to **"Clear"**.
+1. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to **"Clear"**.
 
-1. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br> **ClearCollect( RunningTotal, First( RunningTotal ).Value + TextInput1 )**
+1. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:<br> **ClearCollect( RunningTotal, First( RunningTotal ).Value + TextInput1 )**
 
-	By using **[ClearCollect](function-clear-collect-clearcollect.md)** with a single value, a record will be created in the collection with a single **Value** field. The first time that the user selects the **Add** button and **[ClearCollect](function-clear-collect-clearcollect.md)** is called, **RunningTotal** will be [empty](function-isblank-isempty.md). In the addition, **[First](function-first-last.md)** will return *blank* and will be treated as a zero.
+	By using **[ClearCollect](functions/function-clear-collect-clearcollect.md)** with a single value, a record will be created in the collection with a single **Value** field. The first time that the user selects the **Add** button and **[ClearCollect](functions/function-clear-collect-clearcollect.md)** is called, **RunningTotal** will be [empty](functions/function-isblank-isempty.md). In the addition, **[First](functions/function-first-last.md)** will return *blank* and will be treated as a zero.
 
 	![](media/working-with-variables/collection-1.png)
 
-1. To set the running total to **0** whenever a user selects the **Clear** button, set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
+1. To set the running total to **0** whenever a user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
 **ClearCollect( RunningTotal, 0 )**
 
-	Again, **[ClearCollect](function-clear-collect-clearcollect.md)** is used with the formula **ClearCollect( RunningTotal, 0 )**.
+	Again, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** is used with the formula **ClearCollect( RunningTotal, 0 )**.
 
 	![](media/working-with-variables/collection-2.png)
 
-1. To display the running total, add a text-box control, and set its **[Text](../properties/properties-core.md)** property to this formula:<br>
+1. To display the running total, add a text-box control, and set its **[Text](controls/properties-core.md)** property to this formula:<br>
 **First(RunningTotal).Value**
 
 	This formula extracts the **Value** field of the first record of the **RunningTotal** collection. The text box will automatically show the value of **RunningTotal** as it changes based on the buttons that the user selects.

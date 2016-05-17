@@ -24,7 +24,7 @@ Returns information about the current user.
 
 ## Description ##
 
-The **User** function returns a [record](working-with-tables.md#records) of information about the current user:
+The **User** function returns a [record](../working-with-tables.md#records) of information about the current user:
 
 | Property | Description |
 |----------|-------------|

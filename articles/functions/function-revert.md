@@ -20,17 +20,17 @@
 
 # Revert function in PowerApps #
 
-Refreshes and clears errors for the [records](working-with-tables.md#records) of a [data source](working-with-data-sources.md).
+Refreshes and clears errors for the [records](../working-with-tables.md#records) of a [data source](../working-with-data-sources.md).
 
 ## Description ##
 
 The **Revert** function refreshes an entire data source or a single record in that data source. You'll see changes that other users made.
 
-For the records reverted, **Revert** also clears any errors from the [table](working-with-tables.md) that the **[Errors](function-errors.md)** function returned.
+For the records reverted, **Revert** also clears any errors from the [table](../working-with-tables.md) that the **[Errors](function-errors.md)** function returned.
 
 If the **[Errors](function-errors.md)** function reports a conflict after a **[Patch](function-patch.md)** or other data operation, **Revert** the record to start with the conflicting version and reapply the change.
 
-**Revert** has no return value. You can use it only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas).
+**Revert** has no return value. You can use it only in a [behavior formula](../working-with-formulas-in-depth.md#behavior-formulas).
 
 ## Syntax ##
 
@@ -52,11 +52,11 @@ You use the **[Patch](function-patch.md)** function to update the record:<br>
 
 You check the **[Errors](function-errors.md)** table and find an error:
 
-| Record | [Column](working-with-tables.md#columns) | Message | Error |
+| Record | [Column](../working-with-tables.md#columns) | Message | Error |
 |--------|--------|---------|-------|
 | **{ ID: 1, Flavor: "Strawberry", Quantity: 300 }** | *blank* | **"The record you are trying to modify has been modified by another user.  Please revert the record and try again."** | **ErrorKind.Conflict** |
 
-Based on the **Error** column, you have a **Reload** button for which the **[OnSelect](../properties/properties-core.md)** property to set to this formula:<br>
+Based on the **Error** column, you have a **Reload** button for which the **[OnSelect](../controls/properties-core.md)** property to set to this formula:<br>
 **Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**
 
 After you select the **Reload** button, the **[Errors](function-errors.md)** table is [empty](function-isblank-isempty.md), and the new value for **Strawberry** has been loaded:
