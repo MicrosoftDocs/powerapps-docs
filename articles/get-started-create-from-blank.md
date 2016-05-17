@@ -18,7 +18,7 @@
    ms.author="ankitsar"/>
 
 # Create an app from scratch #
-Create your own app from scratch using any one of a variety of data sources. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
+Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
 
 By following this tutorial, you'll create an app that shows users a set of data on the first screen:
 
@@ -31,7 +31,7 @@ On another screen, users can create, update, or delete a record in that set of d
 **Prerequisites**
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+- Learn how to [add a control](add-configure-controls.md) and set the properties that determine its appearance, behavior, and other characteristics.
 - A cloud-storage account, such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
 
 To follow this tutorial exactly, add this data to an Excel file named **eventsignup.xlsx**, [format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) named **Schedule**, and then save the file to your cloud-storage account.
@@ -73,7 +73,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Specify the table in Excel that you want to use](./media/get-started-create-from-blank/select-table.png)
 
-	The **Screen** tab shows which data sources you've added to your app. This tutorial requires only one source, but you can add more sources later.
+	The **Screen** tab shows which data sources you've added to your app. This tutorial requires only one data source, but you can add more data sources later.
 
 	![Show connected data sources](./media/get-started-create-from-blank/connected-data-sources.png)
 
@@ -84,9 +84,9 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
-	Several controls are added to the screen, including a search box and a [**Gallery**](control-gallery.md) control. The gallery covers all of the screen under the search box.
+	Several controls are added to the screen, including a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
 
-1. Set the **Items** property of the gallery to this formula:
+1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
 
 	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
@@ -97,7 +97,9 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![The Schedule data in the gallery by default](./media/get-started-create-from-blank/gallery-data-default.png)
 
-1. Set the **Text** property of the [**Text box**](control-text-box.md) control at the top of the screen to show **View records**.
+	[More information](formula-reference.md) about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and other functions
+
+1. Set the **[Text](controls/properties-core.md)** property of the **[Text box](controls/control-text-box.md)** control at the top of the screen to show **View records**.
 
 	![First screen](./media/get-started-create-from-blank/first-screen.png)
 
@@ -108,15 +110,17 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Add screen](./media/get-started-create-from-blank/add-screen.png)
 
-1. On the **ChangeScreen**, add a **Text box** control that identifies the screen.
+1. On the **ChangeScreen**, add a **[Text box](controls/control-text-box.md)** control that identifies the screen.
 
 	![ChangeScreen with banner](./media/get-started-create-from-blank/change-screen-blank.png)
 
-1. Add an [**Edit form**](./add-form.md) control, and move and resize it to cover most of the screen.
+1. Add an **[Edit form](add-form.md)** control, and move and resize it to cover most of the screen.
 
 	![Add a form](./media/get-started-create-from-blank/add-form.png)
 
-1.  Set the **DataSource** property of the form to **Schedule** and its **Item** property to this formula:
+	The form is named **Form1** by default unless you already added and removed a form.
+
+1.  Set the **[DataSource](controls/control-form-detail.md)** property of the form to **Schedule** and its **[Item](controls/control-form-detail.md)** property to this formula:
 
 	**BrowseGallery1.Selected**
 
@@ -128,33 +132,33 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
-1. Set the **AutoHeight** property of the text box to **true** and its **Text** property to this formula:
+1. Set the **[AutoHeight](controls/control-text-box.md)** property of the text box to **true** and its **[Text](controls/properties-core.md)** property to this formula:
 
 	**Form1.Error**
 
 	The text box will show any errors from the form.
 
-1. Add a **Back arrow**, and set its **OnSelect** property to this formula:
+1. Add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	**Navigate(ViewScreen,ScreenTransition.None)**
 
- 	When the user selects the arrow, the [**Navigate**](./functions/function-navigate.md") function shows the **ViewScreen**.
+ 	When the user selects the arrow, the **[Navigate](functions/function-navigate.md)** function shows the **ViewScreen**.
 
-1. Add a **Button** control under the form, and set the button's **Text** property to **Save**.
+1. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](controls/properties-core.md)** property to **Save**.
 
 	![Add a save button](./media/get-started-create-from-blank/add-save-button.png)  
 
-1.  Set the **OnSelect** property of the button to this formula::
+1.  Set the **[OnSelect](controls/properties-core.md)** property of the button to this formula::
 
-	**SubmitForm(Form1);If(Form1.ErrorType=ErrorKind.None,Navigate(ViewScreen,ScreenTransition.None))**
+	**SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
 
-	When the user selects the button, the [**SubmitForm**](./functions/function-form.md") function saves any changes to the data source, and the **ViewScreen** reappears.  
+	When the user selects the button, the **[SubmitForm](functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.  
 
-1.  At the bottom of the screen, add a **Remove** button, and set its **OnSelect** property to this formula:
+1.  At the bottom of the screen, add a **Remove** button, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	**Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
 
-	When the user selects this button, the record is [removed](./functions/function-remove-removeif.md), and the **ViewScreen** reappears.
+	When the user selects this button, the record is [removed](functions/function-remove-removeif.md), and the **ViewScreen** reappears.
 
 	The **ChangeScreen** matches this example:
 
@@ -165,7 +169,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
 
-1. Set the **OnSelect** property of that arrow to this formula:
+1. Set the **[OnSelect](controls/properties-core.md)** property of that arrow to this formula:
 
 	**Navigate(ChangeScreen,ScreenTransition.None)**
 
@@ -173,7 +177,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Add record](./media/get-started-create-from-blank/add-record.png)
 
-1. Set the **OnSelect** property of the selected icon to this formula:
+1. Set the **[OnSelect](controls/properties-core.md)** property of the selected icon to this formula:
 
 	**NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**
 
@@ -191,4 +195,4 @@ As you customize the app, test your changes by running it in **Preview**. To ope
 ## Next steps ##
 - Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
 - [Share the app](share-app.md) so that other people can run it.
-- Learn more about [galleries](add-gallery.md), [forms](add-form.md), and [formulas](./working-with-formulas.md) in PowerApps.
+- Learn more about [galleries](add-gallery.md), [forms](add-form.md), and [formulas](working-with-formulas.md) in PowerApps.

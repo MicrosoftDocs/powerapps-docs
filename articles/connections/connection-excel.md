@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/26/2016"
+   ms.date="05/03/2016"
    ms.author="mandia"/>
 
 #  Excel
@@ -31,6 +31,7 @@ This topic shows the available functions.
 &nbsp;
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+- Format your Excel data as a table (steps at [Create an app from Excel data](../get-started-create-from-data.md))
 
 ## View the available functions
 

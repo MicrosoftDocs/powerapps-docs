@@ -20,7 +20,7 @@
 
 # Collect, Clear, and ClearCollect functions in PowerApps #
 
-Creates and clears [collections](working-with-data-sources.md#collections) and adds [records](working-with-tables.md#records) to any [data source](working-with-data-sources.md).
+Creates and clears [collections](../working-with-data-sources.md#collections) and adds [records](../working-with-tables.md#records) to any [data source](../working-with-data-sources.md).
 
 ## Description ##
 
@@ -28,21 +28,21 @@ Creates and clears [collections](working-with-data-sources.md#collections) and a
 
 The **Collect** function adds records to a data source. The items to be added can be:
 
-- A single value: The value is placed in the **Value** field of a new record.  All other properties are left [blank](function-isblank-isempty.md).
+- A single value: The value is placed in the **[Value](function-value.md)** field of a new record.  All other properties are left [blank](function-isblank-isempty.md).
 
 - A record: Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
 
-- A [table](working-with-tables.md): Each record of the table is added as a separate record of the data source as described above. The table is not added as a nested table to a record. To accomplish this, wrap the table in a record first.
+- A [table](../working-with-tables.md): Each record of the table is added as a separate record of the data source as described above. The table is not added as a nested table to a record. To accomplish this, wrap the table in a record first.
 
-When used with a collection, additional [columns](working-with-tables.md#columns) will be created as needed. The columns for other data sources are fixed by the data source and new columns cannot be added.  
+When used with a collection, additional [columns](../working-with-tables.md#columns) will be created as needed. The columns for other data sources are fixed by the data source and new columns cannot be added.  
 
 If the data source doesn't already exist, a collection is created.
 
-Collections are sometimes used to hold global variables or make a temporary copy of a data source. PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](working-with-variables.md).
+Collections are sometimes used to hold global variables or make a temporary copy of a data source. PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
 
 You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
-**Collect** returns the modified data source as a table.  **Collect** can only be used in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas).
+**Collect** returns the modified data source as a table.  **Collect** can only be used in a [behavior formula](../working-with-formulas-in-depth.md#behavior-formulas).
 
 ### Clear ###
 
@@ -93,7 +93,7 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 
 ### Step by step ###
 
-1. Add a button, and set its **OnSelect** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
+1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
 
 	This function creates a collection that's named **Products** that contains a row for each of three product names.
 

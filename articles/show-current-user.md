@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter=""
 	authors="MandiOhlinger"
-	manager="dwrede"
+	manager="erikre"
 	editor=""/>
 
 <tags
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/25/2015"
+   ms.date="05/03/2016"
    ms.author="mandia"/>
 
 # Get the signed-in user details
@@ -28,27 +28,24 @@ For example, you can use this feature to:
 
 Basically, you can use this anywhere users would benefit from an automatically-populated form or automatically-populated labels.
 
+&nbsp;
 
-### Prerequisites
-
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- Create an app or open an existing app in PowerApps.
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+[AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Add User
 In these steps, we're going to display the image, full name, and email address of the current signed-in user.
 
 1.	On the **Insert** tab, select **Image**:  
 ![][2]
-2. Set the **Image** property to ```User()!Image```:  
+2. Set the **[Image](controls/properties-visual.md)** property to ```User().Image```:  
 ![][3]
-3. On the **Insert** tab, select **Label**:  
+3. On the **Insert** tab, select **Text**, and select **Text box**:  
 ![][4]
-4.	Set the **Text** property to ```User()!FullName```:  
+4.	Set the **[Text](controls/properties-core.md)** property to ```User().FullName```:  
 ![][6]  
 When you do this, the label is automatically populated with your full name. Move the label so it's below the image control, similar to the following:  
 ![][5]
-5. Add another label, and set its **Text** property to ```User()!Email```:  
+5. Add another text box, and set its **[Text](controls/properties-core.md)** property to ```User().Email```:  
 ![][8]  
 When you do this, the label is automatically populated with your email address. Move the label so it's below the first label, similar to the following:  
 ![][7]
@@ -56,7 +53,6 @@ When you do this, the label is automatically populated with your email address. 
 Now, let's see what you've created. Select the Preview button ![][9]. When you view the screen, you get an idea of what your app looks like; and it shows the picture, full name, and email address of the signed-in user.
 
 ## Tips and Tricks
-- The [Create an app from a template](get-started-test-drive.md) scenario provides another example that uses the signed-in user information.
 - At anytime, you can select the preview button (![][9]) to see what you created and test it.
 - When designing your app, you can re-size the controls and move them around using click-and-drag.
 - Press **ESC** to close the preview window.
@@ -66,7 +62,7 @@ Now, let's see what you've created. Select the Preview button ![][9]. When you v
 
 In this topic, you:
 
-- Used the Insert menu to add an image and labels to your app.
+- Used the Insert menu to add an image and text boxes to your app.
 - You used Excel-like functions to display some user properties.
 - With the User() function, you accessed some information specific to the signed-in user, including the user's full name and the user's email address.
 - Saw that when you configure a property, like the Text property, the labels are automatically updated.

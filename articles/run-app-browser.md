@@ -1,6 +1,6 @@
 <properties
     pageTitle="Use apps in a web browser | Microsoft PowerApps"
-    description="Walkthrough of how to run PowerApps in the web browser"
+    description="Walkthrough of how to use PowerApps in the web browser"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -15,19 +15,18 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/19/2016"
+    ms.date="05/03/2016"
     ms.author="karthikb"/>
 
 # Using apps in a web browser #
-PowerApps can run on iOS, Android, and a web browser. Apps running in a browser match the experience as apps running on phones and tablets. Running apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies. 
+PowerApps can run on iOS, Android, and a web browser. Apps running in a browser match the experience as apps running on phones and tablets. Using apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies. 
 
 
 
 ## What you need to get started ##
-- An app that:
-	- You built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).  
-		OR
-	- Someone else built and shared with view permissions.
+- Either of the following: 
+	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).  
+	- An app that someone else created and shared with view permissions.
 - A supported browser: 
 	- Internet Explorer 11 and above
 	- Chrome v47 and above
@@ -35,12 +34,12 @@ PowerApps can run on iOS, Android, and a web browser. Apps running in a browser 
 
 
 ## Launching an app ##
-To run PowerApps inside a browser, do either of the following:
+To use PowerApps inside a browser, do either of the following:
 
-**Option 1: Launch apps from the web portal**
+**Option 1: Launch apps from powerapps.com**
 
-1. Sign-in to PowerApps web portal at [web.powerapps.com](http://web.powerapps.com). Select **Apps** from the left navigation of the screen:  
-	![Listing of apps in web.powerapps.com](./media/run-app-browser/portal-apps.png)  
+1. Sign in to [powerapps.com](http://web.powerapps.com). Select **Apps** from the left navigation of the screen:  
+	![Listing of apps in powerapps.com](./media/run-app-browser/portal-apps.png)  
 2. Select the app. The app details page opens.
 3. In the right top view, select the **Play** icon to run the app in the browser:  
 	![Play an app](./media/run-app-browser/portal-play.png)
@@ -51,13 +50,13 @@ To run PowerApps inside a browser, do either of the following:
 1. For Apps shared with you, you get an email with the link to the app
 2. Select the link to launch the app in the browser
 	 
-## Sign-in to PowerApps ##
-If the app is opened from the web portal, chances are you already signed-in to PowerApps. If you are launching the app from the web link, you are prompted to sign-in using your Azure Active Directory credentials:  
+## Sign in to PowerApps ##
+If the app is opened from powerapps.com, chances are you already signed in to PowerApps. If you are launching the app from the web link, you are prompted to sign in using your Azure Active Directory credentials:  
 
 ![Login user](./media/run-app-browser/web-login.png)
 
 ## Give consent ##
-If the app requires a connection to a data sources, or required consent to use the device, you are prompted for the configuration before running the app:  
+If the app requires a connection to a data sources, or required consent to use the device, you are prompted for the configuration before using the app:  
 
 ![Connection](./media/run-app-browser/app-connection.png)
 

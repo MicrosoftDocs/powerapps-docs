@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/16/2016"
+   ms.date="05/03/2016"
    ms.author="litran"/>
 
 # Use a sample app #
@@ -73,7 +73,7 @@ In **Cost Estimator**, for example, you can create an appointment for estimating
 
 	![](./media/open-and-run-a-sample-app/carpet.png)
 
-1. If you're running the app on a device that has a camera, select **Take photos**.
+1. If you're using the app on a device that has a camera, select **Take photos**.
 
 	![](./media/open-and-run-a-sample-app/add_photos.png)
 

@@ -70,7 +70,7 @@ None.
 #### Examples
 
 1. In your app, go to the **Insert** tab, and select **Text box**.
-2. In the function bar, set the **Text** property to any of the following formulas:  
+2. In the function bar, set the **[Text](../controls/properties-core.md)** property to any of the following formulas:  
 
 	`office365users.MyProfile().DisplayName`  
 	`Office365Users.MyProfile().Mail`
@@ -104,7 +104,7 @@ Get user profile: Retrieves a specific user profile.
 #### Examples
 
 1. In your app, go to the **Insert** tab, and select **Text box**.
-2. In the function bar, set the **Text** property to any of the following formulas:  
+2. In the function bar, set the **[Text](../controls/properties-core.md)** property to any of the following formulas:  
 
 	`Office365Users.UserProfile("useremail@microsoft.com").JobTitle`  
 `Office365Users.UserProfile(Office365Users.MyProfile().UserPrincipalName).Mail`  
@@ -139,7 +139,7 @@ Get manager: Retrieves user profile for the manager of the specified user
 #### Examples  
 
 1. In your app, go to the **Insert** tab, and select **Text box**.
-2. In the function bar, set the **Text** property to any of the following formulas:  
+2. In the function bar, set the **[Text](../controls/properties-core.md)** property to any of the following formulas:  
 
 	`Office365Users.Manager(Office365Users.MyProfile().Id).DisplayName`  
 `Office365Users.Manager(Office365Users.MyProfile().Id).TelephoneNumber` 
@@ -173,7 +173,7 @@ Get direct reports: Get direct reports
 #### Examples  
 
 1. In your app, go to the **Insert** tab, select **Gallery**, and under **text gallery**, select **Vertical**. 
-2. In the function bar, set the gallery's **Items** property to any of the following formulas:  
+2. In the function bar, set the gallery's **[Items](../controls/properties-core.md)** property to any of the following formulas:  
 
 	`Office365Users.DirectReports("useremail@microsoft.com").DisplayName`  
 `Office365Users.DirectReports(Office365Users.MyProfile().Id).Mail`
@@ -182,7 +182,7 @@ You can also use an **Input Text** control to enter a manager's email address, a
 
 1. On the **Insert** tab, select **Text**, and then select **Input text**.
 2. Rename the text-input control *infoAbout*, and then type in a manager's email address in that control.
-3. In the function bar, set the gallery's **Items** property to the following formula:  
+3. In the function bar, set the gallery's **[Items](../controls/properties-core.md)** property to the following formula:  
 
 	`Office365Users.DirectReports(infoAbout.Text).DisplayName`
 
@@ -219,7 +219,7 @@ Search for users: Retrieves search results of user profiles
 1. In your app, go to the **Insert** tab, select **Text**, and then select **Input text**.
 2. Rename the text-input control *SearchTerm*, and then type a name in that control.
 3. On the **Insert** tab, select **Gallery**, and under **text gallery**, select **horizontal**.
-4. In the function bar, set the gallery's **Items** property to the following formula:  
+4. In the function bar, set the gallery's **[Items](../controls/properties-core.md)** property to the following formula:  
 
 	`office365users.SearchUser({searchTerm: SearchTerm.Text})`
 

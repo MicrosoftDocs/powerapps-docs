@@ -19,10 +19,10 @@
    ms.author="anneta"/>
 
 # Audio and Video controls in PowerApps #
-[AZURE.INCLUDE [control-summary-audio-video](../../includes/control-summary-audio-video.md)]
+A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description ##
-An **Audio** control plays a sound clip from a file, a recording from a **Microphone** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL.
+An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL.
 
 ## Key properties ##
 
@@ -38,21 +38,21 @@ An **Audio** control plays a sound clip from a file, a recording from a **Microp
 
 **AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
 
-[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[**Fill**](properties\properties-color-border.md) – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[**Image**](properties\properties-visual.md) – The name of the image that appears in an image, audio, or microphone control.
+**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
-[**ImagePosition**](properties\properties-visual.md) – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+**[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
 **OnEnd** – How an app responds when an audio or video clip finishes playing.
 
@@ -60,25 +60,29 @@ An **Audio** control plays a sound clip from a file, a recording from a **Microp
 
 **OnStart** – How the app responds when the user starts to record with a microphone control.
 
-[**Reset**](properties\properties-core.md) – Whether a control reverts to its default value.
+**Paused** – *True* if a media playback control is currently paused, *false* otherwise.
+
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
 **Start** – Whether an audio or video clip plays.
 
 **StartTime** – The time after the start of an audio or video clip when the clip starts to play.
 
-[**Tooltip**](properties\properties-core.md) – Explanatory text that appears when the user hovers over a control.
+**Time** – A media control's current position.
 
-[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**First**( *TableName* )](function-first-last.md)
+[**First**( *TableName* )](../functions/function-first-last.md)
 
 ## Examples ##
 ### Play an audio or video file ###
@@ -88,7 +92,7 @@ An **Audio** control plays a sound clip from a file, a recording from a **Microp
 
 1. Press Esc to return to the default workspace, add an **Audio** or **Video** control, and set its **Media** property to the file that you added.
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 1. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
 

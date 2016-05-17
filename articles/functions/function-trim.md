@@ -26,7 +26,7 @@ Removes extra spaces from a string of text.
 
 The **Trim** function removes all spaces from a text string except for single spaces between words.  
 
-If you specify a single string, the return value is the string with extra spaces removed. If you specify a single-column [table](working-with-tables.md) that contains strings, the return value is a single-column table of trimmed strings. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](working-with-tables.md) describes.
+If you specify a single string, the return value is the string with extra spaces removed. If you specify a single-column [table](../working-with-tables.md) that contains strings, the return value is a single-column table of trimmed strings. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.
 
 By trimming spaces between words, **Trim** is consistent with the function of the same name in Microsoft Excel. However, other programming tools trim spaces only from the ends of strings.
 

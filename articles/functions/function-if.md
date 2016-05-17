@@ -26,7 +26,7 @@ Returns one value if a condition is true, and returns another value if the same 
 
 The **If** function tests conditions until a **true** result is found.  The corresponding value is then returned as the result.  You can use **If** to return different results based on comparisons and other tests.  
 
-You can use **If** in [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas) to branch between two actions.  At most, one branch will be executed.  Conditions are evaluated in order, and after a **true** result is found, no further conditions are checked.
+You can use **If** in [behavior formulas](../working-with-formulas-in-depth.md#behavior-formulas) to branch between two actions.  At most, one branch will be executed.  Conditions are evaluated in order, and after a **true** result is found, no further conditions are checked.
 
 If no conditions are satisfied and an odd number of arguments are provided, the value of the last argument is returned.  This is the case with the common **If( *Condition*, *Value*, *Else* )**.  If an even number of arguments are provided, *Blank* is returned.
 
@@ -61,7 +61,7 @@ In the following examples, an input-text box named **FirstName** has the value "
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **If( ! IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ) )** | The condition is **true**, and the **[Navigate](function-navigate.md)** function is executed. You can use the **[IsBlank](function-isblank-isempty.md)** function to test whether a required form field has been filled in.  If the text box was [empty](function-isblank-isempty.md), this formula would have no effect.  | **true**<br><br>The display is changed to **Screen1**. |
-| **If( IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** | Without the **.** operator, the condition is **false**, and the **[Navigate](function-navigate.md)** function isn't executed.  Because the *ElseResult* has been provided, **[Back](function-navigate.md)** is executed. | **true**<br><br>The display goes back to the screen that was previously shown. |
+| **If( IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** | Without the **.** operator, the condition is **false**, and the **[Navigate](function-navigate.md)** function isn't executed.  Because the *ElseResult* has been provided, the **[Back](function-navigate.md)** function is executed. | **true**<br><br>The display goes back to the screen that was previously shown. |
 
 ### Step by step ###
 
@@ -69,7 +69,7 @@ In the following examples, an input-text box named **FirstName** has the value "
 
 2. In **Text1**, type **15**.
 
-3. Add a label, and set its **Text** property to the following formulas:
+3. Add a label, and set its **[Text](../controls/properties-core.md)** property to the following formulas:
 
 | Formula | Description | Result |
 |---------|-------------|--------|

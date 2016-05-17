@@ -14,11 +14,13 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/20/2016"
+   ms.date="05/05/2016"
    ms.author="archanan"/>
 
 
 # Add a new data connection #
+
+[AZURE.VIDEO nb:cid:UUID:5bd6ea27-f8c0-41e0-a65b-34ca63a57d3e]
 
 You can add a connection to a data source, including SharePoint Online, Salesforce, Dropbox, Twitter, and more. You "connect" to the data source, and then display the data within your app. For example, you can connect to OneDrive to display Excel data in your app, you can connect to Twilio to send an SMS message from your app, you can connect to SQL Azure and update a table from your app, and so on.
 
@@ -50,7 +52,7 @@ This topic shows you how to create a data connection within PowerApps. [Connecti
 
 1. Select **Connect**, and enter any required credentials. In this example, enter the sign-in credentials for SharePoint Online:  
 
-   ![SharePoint Online connect screen](./media/add-data-connection/sharepoint-connect.png)
+	![SharePoint Online connect screen](./media/add-data-connection/sharepoint-connect.png)
 
 1. Once the connection is established, select a site from the list of **Recent Sites** OR enter a **New Site**:  
 
@@ -76,7 +78,7 @@ This topic shows you how to create a data connection within PowerApps. [Connecti
 
 	 You can add a Text box to your app and bind the "Text" property of the Text box to `MicrosoftTranslator.Translate("Hello","fr")`. This function translates the text "Hello" to French, and displays the results in the text box:  
 
-  ![Function bar for Translator](./media/add-data-connection/translator-func.png)
+	![Function bar for Translator](./media/add-data-connection/translator-func.png)
 
 	![Text box for Translator](./media/add-data-connection/translation-textbox.png)
 

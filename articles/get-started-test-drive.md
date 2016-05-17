@@ -60,9 +60,9 @@ Create an app automatically based on a template for specific scenario, and then 
 	The sample data is copied to your cloud-storage account, the app is created, and its home page appears.
 
 ## Run the app ##
-An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, let's explore how the app works in **Preview**.
+An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, let's explore how the app works in **Preview** mode.
 
-**Tip:** Design and develop apps in the default workspace, but test them in **Preview** before you share them with others.
+**Tip:** Design and develop apps in the default workspace, but test them in **Preview** mode before you share them with others.
 
 1. Select the thumbnail at the top of the left navigation bar.
 
@@ -70,17 +70,17 @@ An app from a template opens in the default workspace, where you'll spend most o
 
 1. Press F5 (or select the right arrow in the upper-right corner) to open the app in **Preview** mode.
 
-	![Button to open Preview](./media/get-started-test-drive/preview-button.png)
+	![Button to open Preview mode](./media/get-started-test-drive/preview-button.png)
 
 	The app is pre-populated with sample data to demonstrate the functionality of the app. For example, the Cost Estimator app contains data for creating appointments and estimating the cost of installing a specific flooring product in a room of a particular size.
 
 1. Explore the app's default behavior, and verify that the data in your cloud account reflects your changes.
 
-	For example, make an appointment, and create a cost estimate in the [Cost Estimator](cost-estimator.md#make-and-view-an-appointment) app.
+	For example, make an appointment, and create a cost estimate in the Cost Estimator app.
 
 1. Return to the default workspace by selecting the **'X'** icon in the upper-right corner (under the PowerApps title bar).
 
-	![Button to close Preview](./media/get-started-test-drive/close-preview.png)
+	![Button to close Preview mode](./media/get-started-test-drive/close-preview.png)
 
 ## Customize the app ##
 You can customize this or any app in these ways, among others:
@@ -99,7 +99,7 @@ You can also, for example, change the colors in an app easily by selecting a dif
 
 	![Theme options](./media/get-started-test-drive/select-theme.png)
 
-Even if you select a theme, you can still change the color of one or more specific elements by setting a [Color property](properties-color-border.md) or a [Text property](properties-text.md). You can then select a different theme without losing your individual customizations. 
+Even if you select a theme, you can still change the color of one or more specific elements by setting a [Color property](controls/properties-color-border.md) or a [Text property](controls/properties-text.md). You can then select a different theme without losing your individual customizations.
 
 ## Next steps ##
 1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.

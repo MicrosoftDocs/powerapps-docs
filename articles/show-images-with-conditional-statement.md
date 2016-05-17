@@ -46,11 +46,11 @@ You can use this feature in your apps for different scenarios. For example, ther
 
 ## Add a checkbox to change the label
 1. On the **Insert** tab, select **Controls**, and then select **Checkbox**.
-2. Rename the checkbox to **MyCheckbox**, and set its **Text** property to **More details**:  
+2. Rename the checkbox to **MyCheckbox**, and set its **[Text](controls/properties-core.md)** property to **More details**:  
 ![][6]  
 3. Move the checkbox below your image. Your screen looks similar to the following:  
 ![][2]  
-4. On the **Insert** tab, add a label, and set its **Text** property to the following function:  
+4. On the **Insert** tab, add a label, and set its **[Text](controls/properties-core.md)** property to the following function:  
 ```If(MyCheckbox!Value = true, "100% cotton. Additional sizes and colors available.", "Fall Jacket")```  
 
 	![][4]  
@@ -80,7 +80,7 @@ In this topic, you:
 - Upload images to Media in your app.
 - Add an image, added a checkbox, and added a label.
 - Using the label, you use an Excel-like function to display different text depending if the checkbox was enabled or cleared. This is known as a conditional statement.
-- Use the **Visible** property of the image control to hide and show the picture, depending if the checkbox is checked or unchecked, another conditional statement.
+- Use the **[Visible](controls/properties-core.md)** property of the image control to hide and show the picture, depending if the checkbox is checked or unchecked, another conditional statement.
 
 
 [1]: ./media/show-images-with-conditional-statement/image.png

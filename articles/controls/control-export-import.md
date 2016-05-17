@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Export control and Import control in PowerApps #
-[AZURE.INCLUDE [control-summary-export-import](../../includes/control-summary-export-import.md)]
+Controls for exporting data to a local file and then importing that data into another app in PowerApps.
 
 ## Description ##
 If you want to create more than one app that uses the same data but not share that data outside those apps, you can export it and import it by using an **Export** control and an **Import** control. When you export data, you create a compressed file that you can copy to another machine, but you can't read it in any program other than PowerApps.
@@ -29,87 +29,87 @@ If you want to create more than one app that uses the same data but not share th
 
 - The **Data** property is available for an **Export** control but not an **Import** control.
 
-[**OnSelect**](properties\properties-core.md) – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 ## Additional properties ##
 
-[**Align**](properties\properties-text.md) – The location of text in relation to the horizontal center of its control.
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-[**BorderColor**](properties\properties-color-border.md) – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[**BorderStyle**](properties\properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[**BorderThickness**](properties\properties-color-border.md) – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[**Color**](properties\properties-color-border.md) – The color of text in a control.
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[**Disabled**](properties\properties-core.md) – Whether the user can interact with the control.
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[**DisabledBorderColor**](properties\properties-color-border.md) – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[**DisabledColor**](properties\properties-color-border.md) – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[**DisabledFill**](properties\properties-color-border.md) – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[**Fill**](properties\properties-color-border.md) – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[**Font**](properties\properties-text.md) – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[**FontWeight**](properties\properties-text.md) – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[**Height**](properties\properties-size-location.md) – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[**HoverBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[**HoverColor**](properties\properties-color-border.md) – The color of the text in a control when the user keeps the mouse pointer on it.
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[**HoverFill**](properties\properties-color-border.md) – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[**Italic**](properties\properties-text.md) – Whether the text in a control is italic.
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-[**Padding**](properties\properties-size-location.md) – The distance between the text on an import or export button and the edges of that button.
+**[Padding](properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
 
-[**PressedBorderColor**](properties\properties-color-border.md) – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[**PressedColor**](properties\properties-color-border.md) – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[**PressedFill**](properties\properties-color-border.md) – The background color of a control when the user taps or clicks that control.
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[**RadiusBottomLeft**](properties\properties-size-location.md) – The degree to which the bottom-left corner of a control is rounded.
+**[RadiusBottomLeft](properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
 
-[**RadiusBottomRight**](properties\properties-size-location.md) – The degree to which the bottom-right corner of a control is rounded.
+**[RadiusBottomRight](properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
 
-[**RadiusTopLeft**](properties\properties-size-location.md) – The degree to which the top-left corner of a control is rounded.
+**[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
 
-[**RadiusTopRight**](properties\properties-size-location.md) – The degree to which the top-right corner of a control is rounded.
+**[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-[**Size**](properties\properties-text.md) – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[**Strikethrough**](properties\properties-text.md) – Whether a line appears through the text that appears on a control.
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-[**Text**](properties\properties-core.md) – Text that appears on a control or that the user types into a control.
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
-[**Underline**](properties\properties-text.md) – Whether a line appears under the text that appears on a control.
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-[**VerticalAlign**](properties\properties-text.md) – The location of text on a control in relation to the vertical center of that control.
+**[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
-[**Visible**](properties\properties-core.md) – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[**Width**](properties\properties-size-location.md) – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[**X**](properties\properties-size-location.md) – The distance between the left edge of a control and the left edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[**Y**](properties\properties-size-location.md) – The distance between the top edge of a control and the top edge of the screen.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Example ##
-1. Add a **Button** control, and set its **OnSelect** property to this formula:
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:
 <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**ClearCollect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, click or tap the **Button** control, and then press Esc.
+1. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
 
 1. Add an **Export** control, and set its **Data** property to **Products**.
 
@@ -117,7 +117,7 @@ If you want to create more than one app that uses the same data but not share th
 
 1. Click or tap **Save**, then press Esc to return to the default workspace.
 
-1. In a new or existing app, add an **Import** control, name it **MyData**, and set its **OnSelect** property to this formula:<br>
+1. In a new or existing app, add an **Import** control, name it **MyData**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **Collect(ImportedProducts, MyData.Data)**
 
 1. Press F5, click or tap **MyData**, click or tap the file that you exported, and then click or tap **Open**.

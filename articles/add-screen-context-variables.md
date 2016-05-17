@@ -20,11 +20,11 @@
 
 # Add a screen and navigate between screens #
 
-Create an app with multiple screens, add ways for users to navigate between them, and manage data in your app by creating and updating one or more context variables. 
+Create an app with multiple screens, and add ways for users to navigate between them.
 
 ## What you need to get started ##
 
-- Sign-in to PowerApps or the [PowerApps portal][1].
+- Sign in to PowerApps or the [PowerApps portal][1].
 - Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 - Learn how to [configure a control](add-configure-controls.md).
 
@@ -51,13 +51,13 @@ Create an app with multiple screens, add ways for users to navigate between them
 
 1. (optional) Move the arrow so it appears in the lower-left corner of the screen.
 
-1. With the arrow still selected, go to the **Action** tab, and select **Navigate**. When you do this, the **OnSelect** property for the arrow is automatically set to the following:  
+1. With the arrow still selected, go to the **Action** tab, and select **Navigate**. When you do this, the **[OnSelect](controls/properties-core.md)** property for the arrow is automatically set to the following:  
 
 	![OnSelect property set to Navigate function](./media/add-screen-context-variables/onselect-default.png)
 
 	So when a user selects the Next arrow, the **Target** screen fades in.
 
-1. On the **Target** screen, add a **Back** arrow, and set its **OnSelect** property to the following formula:  
+1. On the **Target** screen, add a **Back** arrow, and set its **[OnSelect](controls/properties-core.md)** property to the following formula:  
 
 	`Navigate(Source, ScreenTransition.Fade)`
 
