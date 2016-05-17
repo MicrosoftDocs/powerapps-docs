@@ -82,17 +82,17 @@ Every context variable is scoped to a screen. If you want to define a context va
 
 1. Name the default screen **Source**, add another screen, and name it **Target**.
 
-1. On the **Source** screen, add two buttons, and set their **Text** properties so that one says **English** and the other says **Spanish**.
+1. On the **Source** screen, add two buttons, and set their **[Text](../properties/properties-core.md)** properties so that one says **English** and the other says **Spanish**.
 
-1. Set the **OnSelect** property of the **English** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"English"})**
+1. Set the **[OnSelect](../properties/properties-core.md)** property of the **English** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"English"})**
 
-1. Set the **OnSelect** property of the **Spanish** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Spanish"})**
+1. Set the **[OnSelect](../properties/properties-core.md)** property of the **Spanish** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Spanish"})**
 
-1. On the **Target** screen, add a label, and set its **Text** property to this expression:<br>**If(Language="English", "Hello!", "Hola!")**
+1. On the **Target** screen, add a label, and set its **[Text](../properties/properties-core.md)** property to this expression:<br>**If(Language="English", "Hello!", "Hola!")**
 
 1. On the **Target** screen, select **Shapes** on the **Insert** tab, and then select the Back arrow.
 
-1. Set the Back arrow's **OnSelect** property to this formula:<br>**Navigate(Source, ScreenTransition.Fade)**
+1. Set the Back arrow's **[OnSelect](../properties/properties-core.md)** property to this formula:<br>**Navigate(Source, ScreenTransition.Fade)**
 
 1. From the **Source** screen, press F5, and then select the button for either language.
 

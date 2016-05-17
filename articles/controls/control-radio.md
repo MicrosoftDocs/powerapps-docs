@@ -47,11 +47,11 @@ A **Radio** control, with which users have decades of experience, is best used w
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -113,22 +113,22 @@ A **Radio** control, with which users have decades of experience, is best used w
 
 ## Related functions ##
 
-[**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example ##
-1. Add a **Radio** control, name it **Pricing**, and set its **Items** property to this formula:
+1. Add a **Radio** control, name it **Pricing**, and set its **[Items](../properties/properties-core.md)** property to this formula:
 <br>**["Standard", "Premium"]**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a **Text box** control, move it below the **Radio** control, and set the **Text** property of the **Text box** control to this formula:
+1. Add a **[Text box](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](../properties/properties-core.md)** property of the **[Text box](control-text-box.md)** control to this formula:
 <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
 
-	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
+	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and then choose either option in the **Radio** control.
 
-	The **Text box** control shows the appropriate text for your choice.
+	The **[Text box](control-text-box.md)** control shows the appropriate text for your choice.
 
 1. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
 

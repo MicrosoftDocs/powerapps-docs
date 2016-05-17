@@ -26,7 +26,7 @@ Concatenates individual strings of text and strings in [tables](working-with-tab
 
 The **Concat** function concatenates the result of a formula applied across all the [records](working-with-tables.md#records) of a table, resulting in a single string.  You can specify a [column](working-with-tables.md#columns) of the table in the formula and use this function to summarize the strings of a table, just as the **[Sum](function-aggregates.md)** function does for numbers.
 
-The **Concatenate** function concatenates a mix of individual strings and a single-column table of strings. Used with individual strings, this function is equivalent to using the **&** [operator](operators.md). You can use a formula that includes the [**ShowColumns**](function-table-shaping.md) function to create a single-column table from a table that has multiple columns.
+The **Concatenate** function concatenates a mix of individual strings and a single-column table of strings. Used with individual strings, this function is equivalent to using the **&** [operator](operators.md). You can use a formula that includes the **[ShowColumns](function-table-shaping.md)** function to create a single-column table from a table that has multiple columns.
 
 ## Syntax ##
 
@@ -43,13 +43,13 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 
 #### Concat ####
 
-1. Add a button, and set its **OnSelect** property to this formula:
+1. Add a button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:
 
 	**Collect(Products, {String:"Violin", Wind:"Trombone", Percussion:"Bongos"}, {String:"Cello", Wind:"Trumpet", Percussion:"Tambourine"})**
 
 2. Press F5, click the button, and then press Esc to return to the design workspace.
 
-3. Add a label, and set its **Text** property to this formula:
+3. Add a label, and set its **[Text](../properties/properties-core.md)** property to this formula:
 
 	**Concat(Products, String & " ")**
 
@@ -59,7 +59,7 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 
 1. Add an input-text control, and name it **AuthorName**.
 
-1. Add a label, and set its **Text** property to this formula:<br>
+1. Add a label, and set its **[Text](../properties/properties-core.md)** property to this formula:<br>
 **Concatenate("By ", AuthorName.Text)**
 
 1. Type your name in **AuthorName**.

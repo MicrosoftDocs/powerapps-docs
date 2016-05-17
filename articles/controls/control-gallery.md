@@ -80,7 +80,7 @@ A **Gallery** control can show records from a data source, and each record can c
 
 ## Related functions ##
 
-[**Filter**( *DataSource*, *Formula* )](function-filter-lookup.md)
+[**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
 
 ## Examples ##
 ### Show and filter data ###

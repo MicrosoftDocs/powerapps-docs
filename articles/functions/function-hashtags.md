@@ -47,7 +47,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 
 	**This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$*(#@")**
 
-2. Add a vertical custom gallery, and set its **Items** property to this function:
+2. Add a vertical custom gallery, and set its **[Items](../properties/properties-core.md)** property to this function:
 
 	**HashTags(Tweet.Text)**
 

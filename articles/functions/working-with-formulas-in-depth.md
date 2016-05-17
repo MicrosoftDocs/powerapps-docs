@@ -22,12 +22,12 @@
 
 ## Behavior formulas ##
 
-Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might want to show the value in a **Text box** control in red if the value is less than zero or in black otherwise. So you can set the **Color** property of that control to this formula:
+Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might want to show the value in a **[Text box](../controls/control-text-box.md)** control in red if the value is less than zero or in black otherwise. So you can set the **[Color](../properties/properties-color-border.md)** property of that control to this formula:
 <br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 
-In this context, what does it mean when the user selects a **Button** control?  No value has changed, so there is nothing new to calculate. Excel has no equivalent to a **Button** control.  
+In this context, what does it mean when the user selects a **[Button](../controls/control-button.md)** control?  No value has changed, so there is nothing new to calculate. Excel has no equivalent to a **[Button](../controls/control-button.md)** control.  
 
-By selecting a **Button** control, the user initiates a sequence of actions, or behaviors, that will change the state of the app:
+By selecting a **[Button](../controls/control-button.md)** control, the user initiates a sequence of actions, or behaviors, that will change the state of the app:
 
 - Change the screen that's displayed: **[Back](function-navigate.md)** and **[Navigate](function-navigate.md)** functions.
 - Control a [signal](signals.md): **[Enable](function-enable-disable.md)** and **[Disable](function-enable-disable.md)** functions.
@@ -35,7 +35,7 @@ By selecting a **Button** control, the user initiates a sequence of actions, or 
 - Update a [context variable](working-with-variables.md#create-a-context-variable):  **[UpdateContext](function-updatecontext.md)** function.
 - Create, update, or remove items in a [collection](working-with-data-sources.md#collections):  **[Collect](function-clear-collect-clearcollect.md)**, **[Clear](function-clear-collect-clearcollect.md)**, **[ClearCollect](function-clear-collect-clearcollect.md)** functions.
 
-Because these functions change the state of the app, they can't be automatically recalculated. You can use them in the formulas for the **OnSelect**, **OnVisible**, **OnHidden**, and other **On...** properties, which are called behavior formulas.
+Because these functions change the state of the app, they can't be automatically recalculated. You can use them in the formulas for the **[OnSelect](../properties/properties-core.md)**, **[OnVisible](../controls/control-screen.md)**, **[OnHidden](../controls/control-screen.md)**, and other **On...** properties, which are called behavior formulas.
 
 ### More than one action ###
 Use semicolons to create a list of actions to perform. For example, you might want to update a context variable and then return to the previous screen:

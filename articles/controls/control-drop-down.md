@@ -50,11 +50,11 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -113,26 +113,26 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Example ##
-1. Add a **Button** control, and set its **Text** property to show **Collect**.
+1. Add a **[Button](control-button.md)** control, and set its **[Text](../properties/properties-core.md)** property to show **Collect**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Set the **OnSelect** property of the **Button** control to this formula:
+1. Set the **[OnSelect](../properties/properties-core.md)** property of the **[Button](control-button.md)** control to this formula:
 <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
 
-	Want more information about the [**ClearCollect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, click or tap the **Button** control, and then press Esc.
+1. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
 
-1. Add a **Drop down** control, name it **Countries**, and set its **Items** property to this formula:
+1. Add a **Drop down** control, name it **Countries**, and set its **[Items](../properties/properties-core.md)** property to this formula:
 <br>**Distinct(CityPopulations, Country)**
 
-1. Add a **Text gallery** control in vertical/portrait orientation, and set its **Items** property to this formula:
+1. Add a **Text gallery** control in vertical/portrait orientation, and set its **[Items](../properties/properties-core.md)** property to this formula:
 <br>**Filter(CityPopulations, Countries.Selected.Value in Country)**
 
-1. In the first item of the **Text gallery** control, set the **Text** property of the upper **Text box** control to **ThisItem.City**, and delete the bottom **Text box** control.
+1. In the first item of the **Text gallery** control, set the **[Text](../properties/properties-core.md)** property of the upper **[Text box](control-text-box.md)** control to **ThisItem.City**, and delete the bottom **[Text box](control-text-box.md)** control.
 
-1. Set the **TemplateSize** property of the **Text gallery** control to **80**.
+1. Set the **[TemplateSize](control-gallery.md)** property of the **Text gallery** control to **80**.
 
 1. Press F5, click or tap the chevron in the **Countries** list, and then choose an option in that list.
 

@@ -34,23 +34,23 @@ The **SortByColumns** function can also be used to sort a table based on one ore
 
 The parameter list for **SortByColumns** provides the names of the columns to sort by and the sort direction per column.  Sorting is performed in the order of the parameters (sorted first by the first column, then the second, and so on).  Column names are specified as strings, requiring double quotes if directly include in the parameter list.  For example, **SortByColumns( CustomerTable, "LastName" )**.
 
-You can combine **SortByColumns** with a **Drop down** or **List box** control to enable users to select which column to sort by.
+You can combine **SortByColumns** with a **[Drop down](../controls/control-drop-down.md)** or **[List box](../controls/control-list-box.md)** control to enable users to select which column to sort by.
 
 In addition to sorting ascending or descending, **SortByColumns** can sort based on a single column table of values.  For example, you can sort record based on the name of a day of the week by supplying **[ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]** as the sort order.  All records which have **Monday"** will come first, followed by **Tuesday**, and so on.  Records found that do not appear in the sort table are put at the end of the list.
 
-Tables are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** doe not modify a table, instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](working-with-tables.md) for more details.
+[Tables](working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** doe not modify a table, instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](working-with-tables.md) for more details.
 
 ## Delegation ##
 
-When possible, PowerApps will delegate filter and sort operations to the data source and page through the results on demand.  For example, when starting an app that shows a **Gallery** control filled with data, only the first set of records will be initially brought to the device.  As the user scrolls, additional data will be brought down from the data source.  The result is a faster start time for the app and access to very large data sets.
+When possible, PowerApps will delegate filter and sort operations to the data source and page through the results on demand.  For example, when starting an app that shows a **[Gallery](../controls/control-gallery.md)** control filled with data, only the first set of records will be initially brought to the device.  As the user scrolls, additional data will be brought down from the data source.  The result is a faster start time for the app and access to very large data sets.
 
 However, delegation may not always be possible.  Data sources vary on what functions and operators they support while the PowerApps formula language is relatively rich.  If complete delegation of a formula is not possible, the authoring environment will flag the **Filter** or **Sort** formula as a warning.  When possible, consider changing the formula to avoid functions and operators that cannot be delegated.   
 
-PowerApps will delegate what it can, but will only pull down a small set of records to complete the work locally, at most 500 records.  **Filter** and **Sort** will continue to operate, but with a reduced set of records.  What is available in the **Gallery** may not be the complete story which could be confusing to users.  Aggregate operations, such as **Sum** and **Average**, will operate on only a portion of the data source and therefore may not give the result that is expected.
+PowerApps will delegate what it can, but will only pull down a small set of records to complete the work locally, at most 500 records.  **Filter** and **Sort** will continue to operate, but with a reduced set of records.  What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story which could be confusing to users.  Aggregate operations, such as **Sum** and **Average**, will operate on only a portion of the data source and therefore may not give the result that is expected.
 
 Additional limitations on delegation (which we are working to remove):
 - At this time, only **Filter** and **Sort** support delegation.  **LookUp** and **SortByColumns** support will be coming soon.
-- The data source must be provided directly as the first argument.  **Filter** and **Sort** functions cannot be nested.
+- The data source must be provided directly as the first argument.  **[Filter](function-filter-lookup.md)** and **Sort** functions cannot be nested.
 - For **Sort**, the formula can only be the name of a single column and cannot include other operators or functions.
 - For **Filter**, the formula can include =, <>, <, >, >=, <=, &&, and || operators.  Only names of columns and values that do not depend on the data source can be used.  
 
@@ -93,7 +93,7 @@ For the following examples, we'll use the **IceCream** [data source](working-wit
 
 To run these examples yourself, create the **IceCream** data source as a [collection](working-with-data-sources.md#collections):
 
-1. Add a button, and set its **OnSelect** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
+1. Add a button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
 
 1. Preview the app, select the button, and then press Esc to return to the default workspace.
 
@@ -101,7 +101,7 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 
 #### Sort ####
 
-1. Add another button, and set its **OnSelect** property to this formula:<br>
+1. Add another button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 **ClearCollect( SortByFlavor, Sort( IceCream, Flavor ) )**
 
  	The previous formula creates a second collection, named **SortByFlavor**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted alphabetically by the **Flavor** column in ascending order.
@@ -114,7 +114,7 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 
 #### SortByColumns ####
 
-1. Add another button, and set its **OnSelect** property to this formula:<br>
+1. Add another button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 **ClearCollect( SortByQuantity, SortByColumns( IceCream, "Quantity", Ascending, "Flavor", Descending ) )**
 
  	The previous formula creates a third collection, named **SortByQuantity**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted numerically by the **Quanity** column in ascending order, and then by the **Flavor** column in descending order.

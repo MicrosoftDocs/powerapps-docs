@@ -52,11 +52,11 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -116,20 +116,20 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 ## Related functions ##
 
-[**If**( *Condition*, *Result* )](../function/function-if.md)
+[**If**( *Condition*, *Result* )](../functions/function-if.md)
 
 ## Example ##
-1. Add a **Check box** control, name it **chkReserve**, and set its **Text** property to show **Reserve now**.
+1. Add a **Check box** control, name it **chkReserve**, and set its **[Text](../properties/properties-core.md)** property to show **Reserve now**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a **Date picker** control, and set its **Visible** property to this formula:
+1. Add a **[Date picker](control-date-picker.md)** control, and set its **[Visible](../properties/properties-core.md)** property to this formula:
 <br>**If(chkReserve.Value = true, true)**
 
-	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
+	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, click or tap **chkReserve** to set its **Value** property to **true**, and then click or tap **chkReserve** again to set its **Value** property to **false**.
+1. Press F5, click or tap **chkReserve** to set its **[Value](../properties/properties-core.md)** property to **true**, and then click or tap **chkReserve** again to set its **[Value](../properties/properties-core.md)** property to **false**.
 
-	The **Date Picker** control appears when the **Value** property of **chkReserve** is **true** but not when it's **false**.
+	The **[Date Picker](control-date-picker.md)** control appears when the **[Value](../properties/properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
 
 1. To return to the default workspace, press Esc.

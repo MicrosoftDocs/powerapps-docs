@@ -68,23 +68,23 @@
 
 	We've made it much easier for you to find help in the product and connect with others through our community.
 
-3. **New [Edit form](control-form-detail.md) and [Display form](control-form-detail.md) controls. As a result, better apps generated from data.**
+3. **New [Edit form](controls/control-form-detail.md) and [Display form](controls/control-form-detail.md) controls. As a result, better apps generated from data.**
 
-	Creating an app over data just got a whole lot easier.  With these controls and their associated cards and functions, you can create a basic app to view and edit data without needing to manually call [**Patch**](function-patch.md), [**Validate**](function-validate.md), and other low-level functions.
+	Creating an app over data just got a whole lot easier.  With these controls and their associated cards and functions, you can create a basic app to view and edit data without needing to manually call **[Patch](functions/function-patch.md)**, **[Validate](functions/function-validate.md)**, and other low-level functions.
 
 	These controls also offer a new configuration pane, where you can turn on and off fields and change the card for each field.
 
 	Check out [Understand data forms](working-with-forms.md) for more details.
 
-1. **Data-source delegation of [Filter](function-filter-lookup.md) and [Sort](function-sort.md) improves performance and supports large numbers of records.**
+1. **Data-source delegation of [Filter](functions/function-filter-lookup.md) and [Sort](functions/function-sort.md) improves performance and supports large numbers of records.**
 
-	Until now, all Filter and Sort operations were handled on the device, which required the time-consuming and bandwidth-choking fetch of all the data.  With this release, in certain situations, these operations can be delegated to the data source, which makes your apps more responsive and able to handle a large number of records.  You can read more about it on the [Filter](function-filter-lookup.md) and [Sort](function-sort.md) pages.
+	Until now, all Filter and Sort operations were handled on the device, which required the time-consuming and bandwidth-choking fetch of all the data.  With this release, in certain situations, these operations can be delegated to the data source, which makes your apps more responsive and able to handle a large number of records.  You can read more about it on the [Filter](functions/function-filter-lookup.md) and [Sort](functions/function-sort.md) pages.
 
 	Delegation is limited to certain situations. Apps created from data don't qualify.  See [Known limitations](#known-limitations) later in this article for more details.  We will expand the scenarios in which delegation can be used.
 
-	To take advantage of this new capability, the [**Gallery**](control-gallery.md) control now supports paging.  As the user reaches the end of a list of data, the control fetches more from the data source, seamlessly.
+	To take advantage of this new capability, the **[Gallery](controls/control-gallery.md)** control now supports paging.  As the user reaches the end of a list of data, the control fetches more from the data source, seamlessly.
 
-1. **Search and scroll in the [PDF viewer](control-pdf-viewer.md) control.**
+1. **Search and scroll in the [PDF viewer](controls/control-pdf-viewer.md) control.**
 
 	The PDF viewer control now supports full-text search across the document, and we've added smooth scrolling between pages. No longer do you need to move page by page.
 
@@ -126,28 +126,28 @@ With this release, we [support a wide assortment of connections](connections-lis
 
 1.  **For apps created from data, the field used for sorting and searching isn't automatically configured.**
 
-	To configure this field, edit the **Items** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
+	To configure this field, edit the **[Items](properties/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
 
 2. **Co-authoring isn't supported. One author at a time, please.**
 
 	You can corrupt an app or over-write others’ changes if more than one person modifies the same app at the same time. Close the app before someone else edits it.
 
-3. **In the [Form control](control-form-detail.md), you can't change data by using a custom card.**
+3. **In the [Form control](controls/control-form-detail.md), you can't change data by using a custom card.**
 
-	The stock custom card is missing the **Update** property, which is required to write back changes. To work around this:
+	The stock custom card is missing the **[Update](controls/control-card.md)** property, which is required to write back changes. To work around this:
 	- Select the form control, and insert a card by using the right-hand pane based on the field that you want the card to show.  
 	- Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card).
 	- Remove or rearrange controls within the card as you see fit, just as you would with the custom card.   
 
 4. **For apps that are created from data, only the first 500 records of a data source can be accessed.**
 
-	In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](function-filter-lookup.md) article for more details about delegation.  
+	In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](functions/function-filter-lookup.md) article for more details about delegation.  
 
-	In this release, delegation doesn't support **Filter** and **Sort** functions used together, nor does it support the **In** operator.  These features are used by apps that are created from data, so these apps are limited to the first 500 records. To partially work around this issue, you can remove one or both of the Filter and Sort functions from the gallery's **Items** property.
+	In this release, delegation doesn't support **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** functions used together, nor does it support the **[In](functions/operators.md#in-and-exactin-operators)** operator.  These features are used by apps that are created from data, so these apps are limited to the first 500 records. To partially work around this issue, you can remove one or both of the Filter and Sort functions from the gallery's **[Items](properties/properties-core.md)** property.
 
 5. **Card gallery is deprecated.**
 
-	Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](control-form-detail.md)** and **Display form** controls.
+	Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
 
 5. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash.**
 

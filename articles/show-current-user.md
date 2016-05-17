@@ -37,15 +37,15 @@ In these steps, we're going to display the image, full name, and email address o
 
 1.	On the **Insert** tab, select **Image**:  
 ![][2]
-2. Set the **Image** property to ```User().Image```:  
+2. Set the **[Image](properties/properties-visual.md)** property to ```User().Image```:  
 ![][3]
 3. On the **Insert** tab, select **Text**, and select **Text box**:  
 ![][4]
-4.	Set the **Text** property to ```User().FullName```:  
+4.	Set the **[Text](properties/properties-core.md)** property to ```User().FullName```:  
 ![][6]  
 When you do this, the label is automatically populated with your full name. Move the label so it's below the image control, similar to the following:  
 ![][5]
-5. Add another text box, and set its **Text** property to ```User().Email```:  
+5. Add another text box, and set its **[Text](properties/properties-core.md)** property to ```User().Email```:  
 ![][8]  
 When you do this, the label is automatically populated with your email address. Move the label so it's below the first label, similar to the following:  
 ![][7]

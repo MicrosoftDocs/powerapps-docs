@@ -28,8 +28,8 @@ In your app, you'll use [formulas](../working-with-formulas.md) to create, updat
 
 You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in PowerApps return a table that reflects the other arguments that you specify. For example, you might create a formula:
 
-- to update a record in a table by specifying that table as one of multiple arguments for the [**Patch**](function-patch.md) function
-- to add, remove, and rename columns in a table by specifying that table as an argument for the **AddColumns**, **DropColumns**, or **RenameColumns** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
+- to update a record in a table by specifying that table as one of multiple arguments for the **[Patch](function-patch.md)** function
+- to add, remove, and rename columns in a table by specifying that table as an argument for the **[AddColumns](function-table-shaping.md)**, **[DropColumns](function-table-shaping.md)**, or **[RenameColumns](function-table-shaping.md)** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
 
 ## Elements of a table ##
 
@@ -47,7 +47,7 @@ A field is an individual piece of information in a record. You can visualize thi
 
 Just as with a control, you refer to a field of a record by using the **.** [operator](operators.md) on the record.  For example, **First(Products).Name** returns the **Name** field for the first record in the **Products** table.
 
-A field can contain another record or table, as the example for the [**GroupBy**](function-groupby.md) function shows. You can nest as many levels of records and tables as you want.
+A field can contain another record or table, as the example for the **[GroupBy](function-groupby.md)** function shows. You can nest as many levels of records and tables as you want.
 
 ### Columns ###
 
@@ -83,7 +83,7 @@ You can also define a single-column table with square brackets.  An equivalent w
 In Excel and PowerApps, you use formulas to manipulate numbers and strings of text in similar ways:
 
 - In Excel, type a value, such as **42**, in cell **A1**, and then type a formula, such as **A1+2**, in another cell to show the value of **44**.
-- In PowerApps, set the **Default** property of **Slider1** to **42**, and set the **Text** property of a text box to **Slider1.Value + 2** to show the value of **44**.
+- In PowerApps, set the **[Default](../properties/properties-core.md)** property of **Slider1** to **42**, and set the **[Text](../properties/properties-core.md)** property of a text box to **Slider1.Value + 2** to show the value of **44**.
 
 In both cases, the calculated value changes automatically if you change the values of the arguments (for example, the number in cell **A1** or the value of **Slider1**).
 
@@ -93,22 +93,22 @@ Just as with numbers, formulas that involve tables and records are automatically
 
 Let's walk through some simple examples.
 
-1. Add a **Text gallery** control, and set its **Items** property to the name of a table.
+1. Add a **Text gallery** control, and set its **[Items](../properties/properties-core.md)** property to the name of a table.
 
-	By default, the gallery shows placeholder text from a table named **TextualGallerySample**. The **Items** property of the gallery is automatically set to that table.
+	By default, the gallery shows placeholder text from a table named **TextualGallerySample**. The **[Items](../properties/properties-core.md)** property of the gallery is automatically set to that table.
 
 	**Note:** Some controls have been rearranged and enlarged for illustration purposes.
 
 	![](media/working-with-tables/gallery-items.png)
 
-2. Instead of setting the **Items** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:<br>
+2. Instead of setting the **[Items](../properties/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:<br>
 **Sort(TextualGallerySample, Heading, Descending)**
 
-	This formula incorporates the [**Sort**](function-sort.md) function, which takes the name of a table as its first argument and the name of a column in that table as its second argument. The function also supports an optional third argument, which stipulates that you want to sort the data in descending order.
+	This formula incorporates the **[Sort](function-sort.md)** function, which takes the name of a table as its first argument and the name of a column in that table as its second argument. The function also supports an optional third argument, which stipulates that you want to sort the data in descending order.
 
 	![](media/working-with-tables/gallery-items-sort.png)
 
-3. Set the **Items** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:<br>
+3. Set the **[Items](../properties/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:<br>
 **FirstN(Sort(TextualGallerySample, Heading, Descending), 2)**
 
 	In this formula, you use the **[FirstN](function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](function-sort.md)** function as the first argument to **[FirstN](function-first-last.md)** and a number (in this case, **2**) as the second argument, which specifies how many records to show.
@@ -151,7 +151,7 @@ The following controls have properties that are tables:
 ## Record formulas ##
 You can also build a formula that calculates data for an individual record, takes an individual record as an argument, and provides an individual record as a return value. Returning to our gallery example above, let's use the **Gallery1.Selected** property to display information from whatever record the user selects in that gallery.
 
-1. Add a button, and set its **OnSelect** property to this formula:<br>
+1. Add a button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 	**Collect( SelectedRecord, Gallery1.Selected )**
 1. If the button isn't selected, click it to select it, and then click it again to run the formula.
 1. In the **File** menu, select **Collections.**
@@ -164,7 +164,7 @@ Now that you have the selected record, you can extract individual fields from it
 
 1. Press Esc to return to the default workspace, and then add a text box below the gallery.
 
-1. Set the **Text** property of the text box to this formula:<br>
+1. Set the **[Text](../properties/properties-core.md)** property of the text box to this formula:<br>
 	**Gallery.Selected.Heading**
 
 	![](media/working-with-tables/gallery-selected.png)

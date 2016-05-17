@@ -54,19 +54,19 @@ Each of these functions returns a number.
 
 1. Import or create a [collection](working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
 
-2. Add a label, and set its **Text** property to this formula:
+2. Add a label, and set its **[Text](../properties/properties-core.md)** property to this formula:
 
 	**CountIf(Inventory, UnitsInStock < 30)**
 
 	The label shows **2** because two products (Ganymede and Callisto) have fewer than 30 units in stock.
 
-2. Add another label, and set its **Text** property to this formula:
+2. Add another label, and set its **[Text](../properties/properties-core.md)** property to this formula:
 
 	**CountA(Inventory.UnitsInStock)**
 
 	The label shows **5**, the number of non-empty cells in the **UnitsInStock** column.
 
-2. Add another label, and set its **Text** property to this formula:
+2. Add another label, and set its **[Text](../properties/properties-core.md)** property to this formula:
 
 	**CountRows(Inventory)**
 

@@ -45,11 +45,11 @@ If you want to create more than one app that uses the same data but not share th
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -102,14 +102,14 @@ If you want to create more than one app that uses the same data but not share th
 **[Y](../properties/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Example ##
-1. Add a **Button** control, and set its **OnSelect** property to this formula:
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:
 <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**ClearCollect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, click or tap the **Button** control, and then press Esc.
+1. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
 
 1. Add an **Export** control, and set its **Data** property to **Products**.
 
@@ -117,7 +117,7 @@ If you want to create more than one app that uses the same data but not share th
 
 1. Click or tap **Save**, then press Esc to return to the default workspace.
 
-1. In a new or existing app, add an **Import** control, name it **MyData**, and set its **OnSelect** property to this formula:<br>
+1. In a new or existing app, add an **Import** control, name it **MyData**, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 **Collect(ImportedProducts, MyData.Data)**
 
 1. Press F5, click or tap **MyData**, click or tap the file that you exported, and then click or tap **Open**.

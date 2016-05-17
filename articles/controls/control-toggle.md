@@ -39,7 +39,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -79,17 +79,17 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 ## Related functions ##
 
-[**If**( *Condition*, *Result* )](function-if.md)
+[**If**( *Condition*, *Result* )](../functions/function-if.md)
 
 ## Example ##
 1. Add a toggle, and name it **MemberDiscount**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a text box, and set its **Text** property to this formula:
+1. Add a text box, and set its **[Text](../properties/properties-core.md)** property to this formula:
 <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
 
-	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
+	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and change the value of **MemberDiscount**.
 

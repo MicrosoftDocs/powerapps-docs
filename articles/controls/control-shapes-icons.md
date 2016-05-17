@@ -22,7 +22,7 @@
 Graphics for which you can configure appearance and behavior properties.
 
 ## Description ##
-These controls include arrows, geometric shapes, action icons, and symbols for which you can configure properties such as fill, size, and location. You can also configure their **OnSelect** property so that the app responds if the user clicks or taps the control.
+These controls include arrows, geometric shapes, action icons, and symbols for which you can configure properties such as fill, size, and location. You can also configure their **[OnSelect](../properties/properties-core.md)** property so that the app responds if the user clicks or taps the control.
 
 ## Key properties ##
 
@@ -50,21 +50,21 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 
 ## Related functions ##
 
-[**Navigate**( *ScreenName*, *ScreenTransition* )](function-navigate.md)
+[**Navigate**( *ScreenName*, *ScreenTransition* )](../functions/function-navigate.md)
 
 ## Example ##
-1. Name the default **Screen** control **Target**, add a **Text box** control, and set its **Text** property to show **Target**.
+1. Name the default **[Screen](control-screen.md)** control **Target**, add a **[Text box](control-text-box.md)** control, and set its **[Text](../properties/properties-core.md)** property to show **Target**.
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-1. Add a **Screen** control, and name it **Source**.
+1. Add a **[Screen](control-screen.md)** control, and name it **Source**.
 
-1. In **Source**, add a **Shape** control, and set its **OnSelect** property to this formula:
+1. In **Source**, add a **Shape** control, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:
 <br>**Navigate(Target, ScreenTransition.Fade)**
 
 1. Press F5, and then click or tap the **Shape** control.
 
 	The **Target** screen appears.
 
-1. (optional) Press Esc to return to the default workspace, add a **Shape** control to **Target**, and set the **OnSelect** property of the **Shape** control to this formula:
+1. (optional) Press Esc to return to the default workspace, add a **Shape** control to **Target**, and set the **[OnSelect](../properties/properties-core.md)** property of the **Shape** control to this formula:
 <br>**Navigate(Source, ScreenTransition.Fade)**

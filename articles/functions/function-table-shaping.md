@@ -90,7 +90,7 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 
 1. Import or create a collection named **Inventory** as the first subprocedure in [Show text and images in a gallery](../show-images-text-gallery-sort-filter.md) describes.
 
-1. Add a button, and set its **OnSelect** property to this formula:
+1. Add a button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:
 
 	**ClearCollect(Inventory2, RenameColumns(Inventory, "ProductName", "JacketID"))**
 

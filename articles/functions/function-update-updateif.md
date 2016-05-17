@@ -83,7 +83,7 @@ In these examples, you'll replace or modify records in a data source that's name
 
 1. Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery.Selected.UnitsInStock**
 
-1. Add a button, and set its **OnSelect** property to this formula:<br>**UpdateIf(Inventory, ProductName = ProductGallery.Selected.ProductName, {UnitsInStock:UnitsInStock-UnitsSold.Value})**
+1. Add a button, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>**UpdateIf(Inventory, ProductName = ProductGallery.Selected.ProductName, {UnitsInStock:UnitsInStock-UnitsSold.Value})**
 
 1. Press F5, select a product in the gallery, specify a value with the slider, and then select the button.
 

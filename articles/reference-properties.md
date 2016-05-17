@@ -91,7 +91,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ## Common properties by category ##
 
-**[Color and border](proeprties/properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
+**[Color and border](properties/properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
 
 **[Core](properties/properties-core.md)** – Configure whether the user can see and interact with a control.
 
@@ -113,7 +113,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](controls/control-image.md)** controls.
 
-**[AutoHeight](controls/control-text-box.md)** – Whether a text box automatically increases its **Height** property if its **Text** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
+**[AutoHeight](controls/control-text-box.md)** – Whether a text box automatically increases its **[Height](properties/properties-size-location.md)** property if its **[Text](properties/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
 
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -133,7 +133,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### C ###
 
-**[CalculateOriginalDimensions](controls/control-image.md)** – Enables the **OriginalHeight** and **OriginalWidth** properties.  Applies to the **[Image](controls/control-image.md)** control.
+**[CalculateOriginalDimensions](controls/control-image.md)** – Enables the **[OriginalHeight](controls/control-image.md)** and **[OriginalWidth](controls/control-image.md)** properties.  Applies to the **[Image](controls/control-image.md)** control.
 
 **[Camera](controls/control-camera.md)** – On a device that has more than one camera, the numeric ID of the camera that the app uses.  Applies to the **[Camera](controls/control-camera.md)** control.
 
@@ -175,11 +175,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Disabled](properties/properties-core.md)** – Whether the user can interact with the control.  Applies to many controls.
 
-**[DisabledBorderColor](properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.  Applies to many controls.
+**[DisabledBorderColor](properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties/properties-core.md)** property is set to **true**.  Applies to many controls.
 
-**[DisabledColor](properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.  Applies to many controls.
+**[DisabledColor](properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](properties/properties-core.md)** property is set to **true**.  Applies to many controls.
 
-**[DisabledFill](properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.  Applies to many controls.
+**[DisabledFill](properties/properties-color-border.md)** – The background color of a control if its **[Disabled](properties/properties-core.md)** property is set to **true**.  Applies to many controls.
 
 **[DisplayName](controls/control-card.md)** – The user friendly name for a field in a data source.  Applies to the **[Card](controls/control-card.md)** control.
 
@@ -195,7 +195,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 - **[Add picture](controls/control-add-picture.md)** control - If there is a problem uploading an image, this property will contain an appropriate error string.
 - **[Card](controls/control-card.md)** control – The user friendly error message to display for this field when validation fails.
-- **[Edit form](controls/control-form-detail.md)** control – A user friendly error message to display for this form when the **SubmitForm** function fails.
+- **[Edit form](controls/control-form-detail.md)** control – A user friendly error message to display for this form when the **[SubmitForm](functions/function-form.md)** function fails.
 
 **[ErrorKind](controls/control-form-detail.md)** – If an error occurs when **SubmitForm** runs, the kind of error that occurred.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
@@ -279,7 +279,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Markers](controls/control-column-line-chart.md)** – Whether a column or line chart shows the value of each data point.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
-**[MarkerSuffix](controls/control-column-line-chart.md)** – Text that appears after each value in a column chart for which the **Markers** property is set to **true**.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
+**[MarkerSuffix](controls/control-column-line-chart.md)** – Text that appears after each value in a column chart for which the **[Markers](controls/control-column-line-chart.md)** property is set to **true**.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
 **Max** – The maximum value to which the user can set a slider or a rating.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](controls/control-slider.md)** controls.
 
@@ -301,7 +301,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### N ###
 
-**[NavigationStep](controls/control-gallery.md)** – How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
+**[NavigationStep](controls/control-gallery.md)** – How far a gallery scrolls if its **[ShowNavigation](controls/control-gallery.md)** property is set to **true** and the user selects a navigation arrow at either end of that gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **[NumberOfSeries](controls/control-column-line-chart.md)** – How many columns of data are reflected in a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
@@ -319,7 +319,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnPause](controls/control-audio-video.md)** – How an app responds when the user pauses the clip that an audio or video control is playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
-**[OnReset](controls/control-form-detail.md)** – How an app responds when an **Edit form** control is reset.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
+**[OnReset](controls/control-form-detail.md)** – How an app responds when an **[Edit form](controls/control-form-detail.md)** control is reset.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 **[OnSelect](properties/properties-core.md)** – How the app responds when the user taps or clicks a control.  Applies to many controls.
 
@@ -329,7 +329,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnStop](controls/control-microphone.md)** – How the app responds when the user stops recording with a microphone control.  Applies to the **[Microphone](controls/control-microphone.md)** control.
 
-**[OnStream](controls/control-camera.md)** – How the app responds when the **Stream** property is updated.  Applies to the **[Camera](controls/control-camera.md)** control.
+**[OnStream](controls/control-camera.md)** – How the app responds when the **[Stream](controls/control-camera.md)** property is updated.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[OnSuccess](controls/control-form-detail.md)** – How an app responds when a data operation has been successful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
@@ -341,11 +341,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnVisible](controls/control-screen.md)** – How an app responds when the user navigates to a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
-**[OriginalHeight](controls/control-image.md)** – Original height of an image, enabled with the **CalculateOriginalDimensions** property.  Applies to the **[Image](controls/control-image.md)** control.
+**[OriginalHeight](controls/control-image.md)** – Original height of an image, enabled with the **[CalculateOriginalDimensions](controls/control-image.md)** property.  Applies to the **[Image](controls/control-image.md)** control.
 
-**[OriginalWidth](controls/control-image.md)** – Original width of an image, enabled with the **CalculateOriginalDimensions** property.  Applies to the **[Image](controls/control-image.md)** control.
+**[OriginalWidth](controls/control-image.md)** – Original width of an image, enabled with the **[CalculateOriginalDimensions](controls/control-image.md)** property.  Applies to the **[Image](controls/control-image.md)** control.
 
-**[Overflow](controls/control-text-box.md)** – Whether a scrollbar appears in a text box if its **Wrap** property is set to **true** and the value of the control's **Text** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
+**[Overflow](controls/control-text-box.md)** – Whether a scrollbar appears in a text box if its **[Wrap](controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](properties/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
 
 ### P ###
 
@@ -445,9 +445,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[StartYear](controls/control-date-picker.md)** – The earliest year to which the user can set the value of a date-picker control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
-**[Stream](controls/control-camera.md)** – Automatically updated image based on the **StreamRate** property.  Applies to the **[Camera](controls/control-camera.md)** control.
+**[Stream](controls/control-camera.md)** – Automatically updated image based on the **[StreamRate](controls/control-camera.md)** property.  Applies to the **[Camera](controls/control-camera.md)** control.
 
-**[StreamRate](controls/control-camera.md)** – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).  Applies to the **[Camera](controls/control-camera.md)** control.
+**[StreamRate](controls/control-camera.md)** – How often to update the image on the **[Stream](controls/control-camera.md)** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[Strikethrough](properties/properties-text.md)** – Whether a line appears through the text that appears on a control.  Applies to many controls.
 
@@ -473,13 +473,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Underline](properties/properties-text.md)** – Whether a line appears under the text that appears on a control.  Applies to many controls.
 
-**[Unsaved](controls/control-form-detail.md)** – True if the **Edit form** control contains user changes that have not been saved.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
+**[Unsaved](controls/control-form-detail.md)** – True if the **[Edit form](controls/control-form-detail.md)** control contains user changes that have not been saved.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 **[Update](controls/control-card.md)** – The value to write back to the data source for a field.  Applies to the **[Card](controls/control-card.md)** control.
 
 ### V ###
 
-**Valid** – Whether a **Card** or **Edit form** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](controls/control-form-detail.md)** controls.
+**Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
 **[Value](properties/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](controls/control-radio.md)**, **[Slider](controls/control-slider.md)**, and **[Toggle](controls/control-toggle.md)** controls.
 

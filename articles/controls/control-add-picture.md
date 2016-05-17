@@ -38,9 +38,9 @@ These properties apply to the outer control.
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **Error** - If there is a problem uploading an image, this property will contain an appropriate error string.
 
@@ -76,7 +76,7 @@ These properties apply to the inner text box control that by default says "Tap o
 
 **[Color](../properties/properties-color-border.md)** – The color of text in a control.
 
-**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **Disabled** property is set to **true**.
+**[DisabledColor](../properties/properties-color-border.md)** – The color of text in a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Font](../properties/properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -114,21 +114,21 @@ These properties apply to the inner text box control that by default says "Tap o
 
 1. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
 
-1. Add a **Button** control, move it under the **Add picture** control, and set the **OnSelect** property for the **Button** control to this formula:<br>
+1. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](../properties/properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
 **Collect(MyPix, AddMediaButton1.Media)**
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](../formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Add an **Image gallery** control, and set its **Items** property to **MyPix**.
+1. Add an **Image gallery** control, and set its **[Items](../properties/properties-core.md)** property to **MyPix**.
 
-1. Press F5, and then click or tap the **Button** control.
+1. Press F5, and then click or tap the **[Button](control-button.md)** control.
 
-	The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **Image** control in the **Image gallery** control, set the **ImagePosition** property of the **Image** control to **Fit**.
+	The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Image gallery** control, set the **[ImagePosition](../properties/properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
 
-1. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **Button** control that you added.
+1. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **[Button](control-button.md)** control that you added.
 
 	The second image appears in the **Image gallery** control.
 
 1. (optional) Repeat the previous step one or more times, and then return to the default workspace by pressing Esc.
 
-Use the [**SaveData** function](function-savedata-loaddata.md) to save the images locally or the [**Patch** function](function-patch.md) to update a data source.
+Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the images locally or the **[Patch](../functions/function-patch.md)** function to update a data source.

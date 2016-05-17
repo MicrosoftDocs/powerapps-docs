@@ -41,9 +41,9 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
-**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **Disabled** property is set to **true**.
+**[DisabledFill](../properties/properties-color-border.md)** – The background color of a control if its **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Fill](../properties/properties-color-border.md)** – The background color of a control.
 
@@ -75,17 +75,17 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 ## Related functions ##
 
-[**Find**( *FindString*, *WithinString* )](function-find.md)
+[**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
 
 ## Example ##
 
-1. Add a **Text box** control, name it **Source**, and set its **Text** property to this string:
+1. Add a **[Text box](control-text-box.md)** control, name it **Source**, and set its **[Text](../properties/properties-core.md)** property to this string:
 
 \<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization. \<p>
 
-Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Add an **HTML text** control, and set its **HTMLText** property to this value:<br>
 **Source.Text**
 
- 	The **HTML text** control shows the same text as the **Text box** control but converts the tags to the appropriate characters.
+ 	The **HTML text** control shows the same text as the **[Text box](control-text-box.md)** control but converts the tags to the appropriate characters.

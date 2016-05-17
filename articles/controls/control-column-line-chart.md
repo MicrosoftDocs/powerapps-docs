@@ -42,7 +42,7 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 **[Disabled](../properties/properties-core.md)** – Whether the user can interact with the control.
 
-**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **Disabled** property is set to **true**.
+**[DisabledBorderColor](../properties/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../properties/properties-core.md)** property is set to **true**.
 
 **[Font](../properties/properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -112,18 +112,18 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 ## Related functions ##
 
-[**Max**( *DataSource*, *ColumnName* )](function-aggregates.md)
+[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## Example ##
-1. Add a **Button** control, and set its **OnSelect** property to this formula:<br>
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](../properties/properties-core.md)** property to this formula:<br>
 **Collect(Revenue, {Year:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Year:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Year:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, click or tap the **Button** control, and then press Esc to return to the default workspace.
+1. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.
 
-1. Add a **Column chart** control or a **Line chart** control, set its **Items** property to **Revenue**, and set its **NumberOfSeries** property to **3**.
+1. Add a **Column chart** control or a **Line chart** control, set its **[Items](../properties/properties-core.md)** property to **Revenue**, and set its **NumberOfSeries** property to **3**.
 
 	The control shows revenue data for each product over three years.
