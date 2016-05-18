@@ -17,9 +17,27 @@
     ms.date="04/27/2016"
     ms.author="gregli"/>
 
-# Release notes for PowerApps release 2.0.410#
+# Release notes for PowerApps release 2.0.430 #
 
 ## PowerApps.com ##
+
+## PowerApps Mobile ##
+
+## PowerApps Studio ##
+
+1. **Enhanced delegation for getting beyond 500 records.**
+
+	- **SortByColumns** now supports delegation.
+	- **Sort**, **SortByColumns**, and **Filter** can now be composed together.
+	- More is on the way...
+
+## Connections ##
+
+## Known limitations ##
+
+## Release Notes for 2.0.410 ##
+
+### PowerApps.com ###
 1. 	**Use apps directly on the web!**
 
 	You can find and use PowerApps on any device that has a web browser.
@@ -37,7 +55,7 @@
 
 	Users can now reshare apps and share apps with their organization.
 
-## PowerApps Mobile ##
+### PowerApps Mobile ###
 1. 	**PowerApps is now available for Android!**
 
 	Look for PowerApps in the [Android store](http://aka.ms/powerappsandroid).
@@ -52,7 +70,7 @@
 
 	We've added hamburger navigation and an app context menu.
 
-## PowerApps Studio ##
+### PowerApps Studio ###
 
 1. **Streamlined page for starting to create an app.**
 
@@ -102,7 +120,7 @@
 
 1. **Performance and data-handling improvements, along with many other usability and bug fixes throughout!**
 
-## Connections ##
+### Connections ###
 
 With this release, we [support a wide assortment of connections](connections-list.md) including:
 
@@ -119,7 +137,7 @@ With this release, we [support a wide assortment of connections](connections-lis
 - Twitter
 - and many more
 
-## Known limitations ##
+### Known limitations ###
 1. **On Apple iPhone 6 Plus devices, an incorrect icon appears for PowerApps.**
 
 	An update has been submitted and should appear soon.
