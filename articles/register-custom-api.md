@@ -177,7 +177,7 @@ Once added, you can use your custom API within the function bar, a text box, and
 
 
 ## Sharing a Custom API
-Users can also share custom APIs with each other. Once you've added a custom API, 
+Users can also share custom APIs with each other. Once you've added a custom API, then: 
 
 1. Under **Manage**, select **Connections**, and then select **New connection**:  
 	![](./media/register-custom-api/createnewconnection.png "Create Custom API") 
