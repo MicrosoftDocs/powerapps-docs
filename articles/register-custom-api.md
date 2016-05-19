@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="04/29/2016"
+   ms.date="05/18/2016"
    ms.author="mandia"/>
 
 # What are Custom APIs
@@ -175,15 +175,20 @@ In this step, we create a very simple app that shows you how to add your custom 
 
 Once added, you can use your custom API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Show data from Office 365](show-office-data.md) is an example of using the Office 365 API.
 
-<!--This appears to be removed from the portal. Commenting out this section until we can confirm.
-## Sharing a Custom API
-Users can also share custom APIs with each other. Once you've added a custom API, select the **Connections** tab, select **Custom APIs**, and then select the share icon:  
 
+## Sharing a Custom API
+Users can also share custom APIs with each other. Once you've added a custom API, 
+
+1. Under **Manage**, select **Connections**, and then select **New connection**:  
+	![](./media/register-custom-api/createnewconnection.png "Create Custom API") 
+2. Select **Custom**, and then select your API.
+3. Select **Share**, and then enter the users or groups you want to share with:  
 ![](./media/register-custom-api/sharecustomapi.png "Share Custom API")
+4. **Save** your changes.
+
 
 > [AZURE.NOTE] You can share custom APIs with other users in only your organization.
 
--->
 
 ## Quota and throttling
 

@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/28/2016"
+    ms.date="05/18/2016"
     ms.author="jamesol"/>
 
 # Share an app #
@@ -31,7 +31,7 @@ If you share an app with a group, *everyone* in that group has the permissions t
 
 If you share an app with your organization, *everyone* in your organization has the permission to run the app (default behavior). They cannot change or update the app.
 
-**Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+**Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, if your app uses an Excel file, you must also [share the Excel or other file](share-app-data.md) in a cloud-storage account.
 
 ## What you need to get started
 
@@ -40,7 +40,7 @@ If you share an app with your organization, *everyone* in your organization has 
 	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 	- An app that someone else built and has given you permission to run, customize, and share.
 
-## Share an app##
+## Share an app
 
 #### powerapps.com
 
@@ -92,7 +92,9 @@ If you share an app with your organization, *everyone* in your organization has 
 
 	![](./media/share-app/permissions-org.png)
 
-## Change or remove permission ##
+[AZURE.NOTE] If a user is given multiple permission types, the permission with the highest access is used. For example, Nancy is a member of GroupA and GroupB. GroupA is given *Can use* permissions, and GroupB is given *Can edit* permissions. In this scenario, Nancy has *Can edit* permission because it has the highest access. 
+
+## Change or remove permission
 
 #### powerapps.com
 
@@ -123,5 +125,5 @@ Here are some other good resources for managing your apps:
 [Restore an app to a previous version](restore-an-app.md)
 
 <!--Reference links in article-->
-[1]: http://go.microsoft.com/fwlink/?LinkId=715583
-[2]: http://go.microsoft.com/fwlink/?LinkId=708209
+[1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
+[2]: http://go.microsoft.com/fwlink/p/?LinkId=708209
