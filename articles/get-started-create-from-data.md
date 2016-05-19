@@ -15,7 +15,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/03/2016"
+   ms.date="05/18/2016"
    ms.author="ankitsar"/>
 
 # Create an app from Excel data #
@@ -24,25 +24,14 @@
 
 Create an app automatically based on an Excel file in the cloud, customize the app, and then explore how it works.
 
-**Prerequisites**
+## Prerequisites
 
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
 - A Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business account into which you've saved [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial. The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
-- Format your Excel data as a table. The sample Excel file is already formatted as a table. You can also use your own Excel data.
+- Format your Excel data as a table. [Create an app from scratch](get-started-create-from-blank.md) lists the steps. The sample Excel file is already formatted as a table. You can also use your own Excel data. 
 
-**Note:** You can just as easily create an app based on a [SharePoint](app-from-sharepoint.md) list, Salesforce data, a table in Dynamics CRM, or another [data source](add-manage-connections.md).
+**Note** You can just as easily create an app based on a [SharePoint](app-from-sharepoint.md) list, Salesforce data, a table in Dynamics CRM, or another [data source](add-manage-connections.md).
 
-## Format Excel data as a table ##
-
-If using your own Excel data, use the following steps to format your data as a table: 
-
-1. In Excel, open your Excel file.
-2. Select any piece of data in any row and any column.
-3. On the **Insert** ribbon, select **Table**. 
-4. In the dialog window, select **My table has headers**, and select **OK**.
-5. Save your changes.
-
-Now, copy the Excel file to your OneDrive account.
 
 ## Create the app ##
 1. In PowerApps, select **New** (near the left edge of the screen).
@@ -104,7 +93,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
 
-	**Note:** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **[ShowScrollbar](controls/control-gallery.md)** property](add-configure-controls.md) to **true**.
+	**Note** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **[ShowScrollbar](controls/control-gallery.md)** property](add-configure-controls.md) to **true**.
 
 1. In the list of thumbnails, select **DetailScreen1**.
 
