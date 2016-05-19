@@ -89,9 +89,9 @@ If a tenant was created by Microsoft, you can claim and manage that tenant by fo
 
 If you do nothing, a tenant will be created for each user email domain and subdomain.
 
-If you want all users to be in the same tenant regardless of their email address extensions:
+If you want all users to be in the same tenant regardless of their email address extensions: 
 
-	- Create a target tenant ahead of time or use an existing tenant, and add all the existing domains and subdomains that you want consolidated within that tenant. Then all the users with email addresses ending in those domains and subdomains will automatically join the target tenant when they sign up.
+- Create a target tenant ahead of time or use an existing tenant, and add all the existing domains and subdomains that you want consolidated within that tenant. Then all the users with email addresses ending in those domains and subdomains will automatically join the target tenant when they sign up.
 
 
 **IMPORTANT**: There is no supported automated mechanism to move users across tenants once they have been created. To learn about adding domains to a single Office 365 tenant, see [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-ffdb2216-330d-4d73-832b-3e31bcb5b2a7).
