@@ -30,7 +30,7 @@ On another screen, users can create, update, or delete a record in that set of d
 
 ## Prerequisites
 
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up. 
 - Learn how to [add a control](add-configure-controls.md) and set the properties that determine its appearance, behavior, and other characteristics.
 - A cloud-storage account, such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
 - Format your Excel data as a table. 
@@ -104,7 +104,7 @@ To follow this tutorial exactly:
 
 1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
 
-	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+	`Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
 	This gallery shows the data from the **Schedule** table.
 
@@ -138,7 +138,7 @@ To follow this tutorial exactly:
 
 1.  Set the **[DataSource](controls/control-form-detail.md)** property of the form to **Schedule** and its **[Item](controls/control-form-detail.md)** property to this formula:
 
-	**BrowseGallery1.Selected**
+	`BrowseGallery1.Selected`
 
 1. For each field in the **Options** pane, select the option to show that field.
 
@@ -150,13 +150,13 @@ To follow this tutorial exactly:
 
 1. Set the **[AutoHeight](controls/control-text-box.md)** property of the text box to **true** and its **[Text](controls/properties-core.md)** property to this formula:
 
-	**Form1.Error**
+	`Form1.Error`
 
 	The text box will show any errors from the form.
 
 1. Add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
-	**Navigate(ViewScreen,ScreenTransition.None)**
+	`Navigate(ViewScreen,ScreenTransition.None)`
 
  	When the user selects the arrow, the **[Navigate](functions/function-navigate.md)** function shows the **ViewScreen**.
 
@@ -166,13 +166,13 @@ To follow this tutorial exactly:
 
 1.  Set the **[OnSelect](controls/properties-core.md)** property of the button to this formula::
 
-	**SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
+	`SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))`
 
 	When the user selects the button, the **[SubmitForm](functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.  
 
 1.  At the bottom of the screen, add a **Remove** button, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
-	**Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
+	`Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))`
 
 	When the user selects this button, the record is [removed](functions/function-remove-removeif.md), and the **ViewScreen** reappears.
 
@@ -187,7 +187,7 @@ To follow this tutorial exactly:
 
 1. Set the **[OnSelect](controls/properties-core.md)** property of that arrow to this formula:
 
-	**Navigate(ChangeScreen,ScreenTransition.None)**
+	`Navigate(ChangeScreen,ScreenTransition.None)`
 
 1. In the upper-right corner, select the icon to add a record.
 
@@ -195,7 +195,7 @@ To follow this tutorial exactly:
 
 1. Set the **[OnSelect](controls/properties-core.md)** property of the selected icon to this formula:
 
-	**NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**
+	`NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)`
 
  	When the user selects this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
 
