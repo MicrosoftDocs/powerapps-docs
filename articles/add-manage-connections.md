@@ -15,10 +15,10 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/20/2016"
+   ms.date="05/19/2016"
    ms.author="archanan"/>
 
-# Manage connections in PowerApps
+# Manage your connections
 
 [AZURE.VIDEO nb:cid:UUID:0156313a-0d00-80c4-fa80-f1e592051e49]
 
@@ -39,54 +39,53 @@ You can create new connections in PowerApps in multiple scenarios, such as:
 
 - Opening an existing app that is shared with you, and creating connections required by the app
 
-- Creating new connections in the [PowerApps portal][1]
+- Creating new connections at [powerapps.com][1]
 
-> [AZURE.NOTE] To manage connections, such as deleting connections or updating connections, use the [PowerApps portal][1].
+> [AZURE.NOTE] To manage connections, such as deleting connections or updating connections, use [powerapps.com][1].
 
-This topic shows you how to manage connections in the [PowerApps portal][1].
+This topic shows you how to manage connections at [powerapps.com][1].
 
 ### What you need to get started
 
-- Sign-in to PowerApps or the [PowerApps portal][1].
+- Sign in to PowerApps or [powerapps.com][1].
 - Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 
 ## Add a new connection to PowerApps
 
-1. In PowerApps or the [PowerApps portal][1], sign-in with your work on organization account.
+1. In PowerApps or [powerapps.com][1], sign in with your work on organization account.
 
 1. Select **Connections**:  
+	![Connections Manage](./media/add-manage-connections/manage-connections.png)
 
-  ![Connections Manage](./media/add-manage-connections/manage-connections.png)
-
-	> [AZURE.NOTE] When you select **Connections** in PowerApps, the [PowerApps portal][1] automatically opens.
+	> [AZURE.NOTE] When you select **Connections** in PowerApps, [PowerApps][1] automatically opens.
 
 1. Select **Add a connection**:  
 
-  ![Add a connection](./media/add-manage-connections/add-new-connections.png)
+	![Add a connection](./media/add-manage-connections/add-new-connections.png)
 
 1. From the list of **Available connections**, select the connection you want to setup, such as SharePoint Online. Then, enter your credentials to setup the connection:  
 
-  ![SharePoint Connector](./media/add-manage-connections/sharepointapi.png)
+	![SharePoint Connector](./media/add-manage-connections/sharepointapi.png)
 
 1. Once the connection is setup, it's listed in **Connections**:  
 
- ![SharePoint Connection](./media/add-manage-connections/sharepointconnection.png)
+	![SharePoint Connection](./media/add-manage-connections/sharepointconnection.png)
 
 ## Delete a connection
 
 1. Go to the **Connections** page, and select the connection you want to delete:  
 
-  ![Connections Manage](./media/add-manage-connections/connection-list.png)
+	![Connections Manage](./media/add-manage-connections/connection-list.png)
 
 1. In the details view of the connection, select **Delete**:  
 
-  ![Connections Manage](./media/add-manage-connections/deleteicon.png)
+	![Connections Manage](./media/add-manage-connections/deleteicon.png)
 
 ## Update a connection
 
 1. Go to the **Connections** page, and select the edit icon:  
 
-  ![Connections Manage](./media/add-manage-connections/editicon.png)
+	![Connections Manage](./media/add-manage-connections/editicon.png)
 
 2. When prompted, update your connection with new credentials.
 
