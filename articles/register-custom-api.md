@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na" 
-   ms.date="05/18/2016"
+   ms.date="05/23/2016"
    ms.author="mandia"/>
 
 # What are Custom APIs
@@ -160,8 +160,6 @@ In this step, we create a very simple logic flow that shows you how to add your 
 
 #### Add the custom API to your PowerApp
 In this step, we create a very simple app that shows you how to add your custom API. For a more in-depth experience, see [Create an app from data](get-started-create-from-data.md).
-
-> [AZURE.NOTE] Currently, custom APIs can only be used at powerapps.com. They cannot be used in the PowerApps client.
 
 1. At [powerapps.com][9], select **New App**:  
 	![](./media/register-custom-api/newpowerapp.png "Select New PowerApp")  
