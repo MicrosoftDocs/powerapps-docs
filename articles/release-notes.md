@@ -19,21 +19,33 @@
 
 # Release notes for PowerApps release 2.0.430 #
 
-## PowerApps.com ##
+1. **On powerapps.com, show only those apps you own or were shared with you.**
 
-## PowerApps Mobile ##
-
-## PowerApps Studio ##
-
-1. **Enhanced delegation for getting beyond 500 records.**
+1. **Enhanced delegation for large data sets.**
 
 	- **SortByColumns** now supports delegation.
 	- **Sort**, **SortByColumns**, and **Filter** can now be composed together.
-	- More is on the way...
+	- More support for delegation is on the way.
 
-## Connections ##
+2. **Updates property added to the Edit form control.**
 
-## Known limitations ##
+	The **Edit form** control now has an **Updates** property to access all the **Update** properties of the cards within the form.
+
+	You can use this property to pass form data to a REST API.
+
+3. **Bug fixes for Video control.**
+
+	Now works with YouTube.
+
+3. **Single Sign-On support for Microsoft services.**
+
+	Single sign-on feature will automatically sign PowerApps users into their first party services that use Azure Active Directory authentication, such as SharePoint, Office 365, and Dynamics CRM.
+
+4. **Edit lookup card.**
+
+	In form controls, a new **Edit lookup** card can show lookup fields to other tables.  However, none of the connectors can currently take advantage of this feature, but support will come soon.  For now, lookup fields can be displayed but not changed.
+
+3. **Bug fixes and performance improvements throughout the product.**
 
 ## Release Notes for 2.0.410 ##
 
