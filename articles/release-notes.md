@@ -19,8 +19,6 @@
 
 # Release notes for PowerApps release 2.0.430 #
 
-1. **On powerapps.com, show only those apps you own or were shared with you.**
-
 1. **Enhanced delegation for large data sets.**
 
 	- **SortByColumns** now supports delegation.
@@ -41,9 +39,11 @@
 
 	Single sign-on feature will automatically sign PowerApps users into their first party services that use Azure Active Directory authentication, such as SharePoint, Office 365, and Dynamics CRM.
 
-4. **Edit lookup card.**
+4. **Added Edit lookup card.**
 
 	In form controls, a new **Edit lookup** card can show lookup fields to other tables.  However, none of the connectors can currently take advantage of this feature, but support will come soon.  For now, lookup fields can be displayed but not changed.
+
+1. **On powerapps.com, show only those apps you own or were shared with you.**
 
 3. **Bug fixes and performance improvements throughout the product.**
 
