@@ -49,7 +49,7 @@
 
 1. **Default value for the DatePicker control.**
 
-	You can configure a DatePicker control with a default value that doesn’t specify a particular date.
+	You can configure a DatePicker control with a blank value as its default.
 
 1. **Improvements to Display Form and Edit Form controls.**
 
