@@ -83,7 +83,7 @@ To create a field:
 2. Click the **Add field** button. This will add a new row to the bottom of the fields grid where you can enter the field information.
 3. Provide the following information for the new field:
 	* Field name: This name serves as the identifier of the field in the platform. You will use it to reference the field in PowerApps formulas.
-	* Display name: The display name is used as the label of the filed in the app UI by default.
+	* Display name: The display name is used as the label of the field in the app UI by default.
 	* Type: The data type of the field. Depending on the type you choose, there may be additional information you need to provide.
 	* Unique value: Specify whether the value of this field needs to be unique for a record. The default value is No.
 	* Required: Specify whether the value of this field needs to be required for a record. The default value is No.
