@@ -33,7 +33,7 @@ Each field has the following properties that you can specify.
 | Required | Whether this field is required. |
 | Unique | Whether the value of this field needs to be unique across all records. |
 
-There are three kinds of fields: system, standard, an custom.
+There are three kinds of fields: system, standard, and custom.
 
 ### System fields
 
@@ -42,7 +42,7 @@ All tables have a set of read-only fields provided by the system. These fields c
 - CreatedDateTime: the date and time when a record was created.
 - ModifiedDateTime: the date and time when a record was last modified.
 
-For a full list of system fields, please go [Create a Table in PowerApps](data-platform-create-table).
+For a full list of system fields, see [Create a Table in PowerApps](data-platform-create-table).
 
 ### Standard fields
 
