@@ -20,13 +20,13 @@
 
 # Share Excel data used by your app #
 
-You can share Excel data with your app users using Dropbox, OneDrive, and Google Drive.
+You can share Excel data with your app users by using Dropbox, OneDrive, and Google Drive.
 
-For example, you have an Excel spreadsheet that lists the names and phone numbers of the technical support group at your company. You want to create an app that shows the information in this spreadsheet. To do this, you can put the Excel file in Dropbox, OneDrive, or Google Drive. Then, "share" the Excel spreadsheet so your app users can see the names and phone numbers.
+For example, you might create an app that shows the names and phone numbers of the technical-support group at your company. The information is stored in an Excel spreadsheet, which you put in a folder in Dropbox, OneDrive, or Google Drive. You then share the folder with your app users so that they can see the names and phone numbers.
 
-Sharing the file is required so users can run and even modify your app. Users who aren't given the sharing permissions won't see the data in the Excel file.
+You must share the data so that users can run and even modify your app. Users who aren't given the sharing permissions won't see the data in the Excel file.
 
-This topic shows you how to share an Excel spreadsheet using Dropbox, OneDrive, and Google Drive. To create an app that displays data from an Excel file, see [Create an app from a set of data](get-started-create-from-data.md).
+This topic shows you how to share data in an Excel spreadsheet using Dropbox, OneDrive, and Google Drive. To create an app that displays data from an Excel file, see [Create an app from a set of data](get-started-create-from-data.md).
 
 ## Share data in Dropbox ##
 
