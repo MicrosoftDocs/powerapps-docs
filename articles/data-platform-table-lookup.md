@@ -42,7 +42,7 @@ To create a lookup field:
 1. Sign in to [PowerApps portal]() with your organization's account.
 2. Click the **Manage** tab in the left navigation pane. Click **Tables** to navigate to the table management page.
 3. Find the table you need. You can search for it in the search bar at the top.
-4. Click the table to navigate to the fields page which will show all the fields of the table.
+4. Click the table to navigate to the fields page, which will show all the fields of the table.
 5. Click the **Add field** button. This will add a new row to the bottom of the fields grid where you can enter the field information.
 6. Specify the field name and display name.
 7. For the type, choose **Lookup**.
