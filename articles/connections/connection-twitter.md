@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="05/25/2016"
+ms.date="05/26/2016"
 ms.author="mandia"/>
 
 
@@ -27,7 +27,7 @@ Twitter lets you post tweets and get tweets, timeline, friends and followers fro
 
 You can display this information in a text box on your app. For example, you can add an input text box, ask the user to enter in some Tweet text, and then add a button that "posts" the tweet. You can use similar methods to get a tweet or search for a tweet, and then display the text in a text box or gallery control in your app.
 
-This topic shows the available functions. For a deep-dive on the Twitter connection, go to [Show data from Twitter](../show-twitter-data.md).
+This topic shows the available functions. For examples on using these functions in an app, go to [Show data from Twitter](../show-twitter-data.md).
 
 &nbsp;
 
@@ -240,7 +240,7 @@ Post a new tweet: Tweet
 
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
-|tweetText|string|no|Text to be posted|
+|tweetText|string|no|Text to be posted e.g. {tweetText:"hello"}|
 |body|string |no|Media to be posted|
 
 #### Output properties

@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/25/2016"
+   ms.date="05/26/2016"
    ms.author="anneta"/>
 
 # Show data from Twitter in PowerApps
@@ -56,7 +56,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
 	- To show the current user's timeline, set the **[Items](controls/properties-core.md)** property of the gallery to the following formulas:
 	
-		`Twitter.HomeTimeline().TweetText`
+		`Twitter.HomeTimeline().TweetText`  
 		`Twitter.HomeTimeline({maxResults:3}).TweetText`  
 
 	- To show another user's timeline, set the **[Items](controls/properties-core.md)** property of the gallery to the following formula:  
@@ -71,17 +71,16 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
 		`Twitter.UserTimeline(Tweep.Text, {maxResults:5}).TweetText`
 
-		The gallery control automatically shows the tweets of the twitter handler you type in.
+		The gallery control automatically shows the tweets of the Twitter handler you type in.
 
 	**TIP** Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline. 
 
-3. Set the gallery's Items property to `Twitter.HomeTimeline()`. With the gallery selected, select **Options** near the lower-right corner. For the first line, select **TweetText**. In the second line, select **TweetedBy**. In the third line, select **CreatedAt**.
+3. Set the gallery's Items property to `Twitter.HomeTimeline()`. With the gallery selected, select **Options** near the lower-right corner. Select **TweetText** in the first list, select **TweetedBy** in the second list, and select **CreatedAt** in the third list.
 
 	The gallery now shows the values of the properties you chose. 
 
 ## Show followers
-1. Add a **With text** gallery.
-2. Let's show some followers:  
+1. Using a **With text** gallery, let's show some followers:  
 
 	- To show the current user's followers, set the **[Items](controls/properties-core.md)** property of the gallery to the following formula:  
 	
@@ -104,12 +103,13 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
 	**TIP** Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline. 
 
-3. Set the gallery's Items property to `Twitter.MyFollowers()`. With the gallery selected, select **Options** near the lower-right corner. For the first line, select **Description**. In the second line, select **UserName**. In the third line, select **FullName**.
+2. Set the gallery's Items property to `Twitter.MyFollowers()`. With the gallery selected, select **Options** near the lower-right corner. Select **UserName** in the second list, and select **FullName** in the third list.
+
+	The gallery now shows the values of the properties you chose. 
 
 ## Show followed users
 
-1. Add a **With text** gallery.
-2. Let's show some followed users:  
+1. Using a **With text** gallery, let's show some followed users:  
 
 	- To show which users the current user is following, set the **[Items](controls/properties-core.md)** property of the gallery to the following formula:  
 	
@@ -118,7 +118,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
 	- To show which users another user is following, set the **[Items](controls/properties-core.md)** property of the gallery to to the following formula:
 
-		`Twitter.Following( *TwitterHandle* )
+		`Twitter.Following( *TwitterHandle* )`
 
 		Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression. 
 
@@ -130,10 +130,13 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
 		The gallery control automatically shows the other handles you are following.
 
-3. With the gallery selected, select **Options** near the lower-right corner, and then select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
+2. With the gallery selected, select **Options** near the lower-right corner. Select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
+
+	The gallery now shows the values of the properties you chose. 
 
 ## Show information about a user
 Add a text box, and then set its **[Text](controls/properties-core.md)** property to one of these formulas:  
+
 - `twitter.User( *TwitterHandle* ).Description`
 - `twitter.User( *TwitterHandle* ).FullName`
 - `twitter.User( *TwitterHandle* ).Location`
@@ -148,25 +151,29 @@ Enter a Twitter handle in double quotation marks or an equivalent value. For exa
 Or, you can use an input text control to type in a Twitter handle, just as we have throughout this topic.
 
 ## Search tweets
-1. Add a text gallery, and set its **[Items](controls/properties-core.md)** property to the following formula:  
-	`twitter.SearchTweet( *SearchTerm* )`
+1. Using a **With text** gallery, set its **[Items](controls/properties-core.md)** property to the following formula:  
 
-	Enter a *SearchTerm* in double quotation marks or by referring to an equivalent value. For example, enter **"PowerApps"** directly in the formula.
+	`Twitter.SearchTweet( *SearchTerm* ).TweetText`
+
+	Enter a *SearchTerm* in double quotation marks or by referring to an equivalent value. For example, enter `"PowerApps"` or `"microsoft"` directly in the formula.
 
 	Or, you can use an input text control to type in a Twitter handle, just as we have throughout this topic.
 
-	**TIP** Show only, for example, the first five results by specifying the maxResults argument, as this formula shows:  
-	`twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`
+	**TIP** Show the first five results by using maxResults:  
 
-2. With the gallery selected, select **Options** near the lower-right corner, and then select **TweetText** in the first list, **TweetedBy** in the second list, and **CreatedAt** in the third list.
+	`Twitter.SearchTweet(SearchTerm.Text, {maxResults:5}).TweetText`
+
+2. Set the gallery's Items property to `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`. With the gallery selected, select **Options** near the lower-right corner. Select **TweetText** in the first list, **TweetedBy** in the second list, and **CreatedAt** in the third list.
+
+	The gallery now shows the values of the properties you chose. 
 
 ## Send a tweet ##
-1. Add a text-input control, and then rename it **MyTweet**.
+1. Add a text input control, and then rename it **MyTweet**.
 
-1. Add a button, and then set its **[OnSelect](controls/properties-core.md)** property to the following formula:  
-	`twitter.Tweet({tweetText: MyTweet.Text})`
+2. Add a button, and then set its **[OnSelect](controls/properties-core.md)** property to the following formula:  
+	`Twitter.Tweet({tweetText: MyTweet.Text})`
 
-1. Press F5, type some text into **MyTweet**, and then select the button to tweet the text that you specified.
+3. Press F5, or select the Preview button (![](./media/show-twitter-data/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
 
-1. Press Esc to return to the default workspace.
+4. Press Esc to return to the default workspace.
 
