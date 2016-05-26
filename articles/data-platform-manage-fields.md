@@ -27,7 +27,7 @@ Each field has the following properties that you can specify.
 
 | Property | Description |
 |----------|-------------|
-| Field name | The name of the field. It's unique within a table. It serves as the identifier of the field, and you can use to reference the field in PowerApps formula. |
+| Field name | The name of the field. It's unique within a table. It serves as the identifier of the field, and you can use it to reference the field in PowerApps formula. |
 | Display name | The display name of field. It will be used when a field appears in any PowerApps UI. |
 | Data type | The type of data this field stores. For each data type, there might be additional properties to configure. For a full list of supported data types, see [Understand Tables in PowerApps](data-platform-intro.md). |
 | Required | Whether this field is required. |
