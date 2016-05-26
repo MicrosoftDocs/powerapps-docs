@@ -46,7 +46,7 @@ If a standard table can serve a particular purpose in your app, you should use i
 Each field has a name, a display name, a data type (such as **text** or **number**), and some simple validation (for example, to check whether the field is required or to verify uniqueness). Every field falls into one of three categories: system field, standard field, or custom field.
 
 ### System fields
-All tables, whether standard or custom, are created with a set of read-only fields, that you can't change, delete, or set to a value. For more information, see [System and record title fields](). These are the most important system fields:
+All tables, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. For more information, see [System and record title fields](). These are the most important system fields:
 
 - **CreatedDateTime**: The date and time when a record was created.
 - **ModifiedDateTime**: The date and time when a record was modified most recently.
