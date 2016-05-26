@@ -19,16 +19,16 @@
 
 # Delete table
 
-You can delete a custom table only but not any standard table. To delete a table, following are the steps:
+You can delete custom tables but not standard tables. To delete a table:
 
-1. Login to [PowerApps portal]() with your organization's account.
-2. Click the **Manage** tab on the left hand navigation pane. Then Click **Tables** to navigate to the table management page.
-3. Find the table you need. You can search for it in the search bar on the top.
-4. Click the table to navigate to the fields page where it will show all the fields of the table.
-5. Click the **Delete** button on the top.
+1. Sign in to [PowerApps portal]() with your organization's account.
+2. Click the **Manage** tab in the left navigation pane. Click **Tables** to navigate to the table management page.
+3. Find the table you need. You can search for it in the search bar at the top.
+4. Click the table to navigate to the fields page, which will show all the fields of the table.
+5. Click the **Delete** button at the top.
 
-Notice that
+**Notes**
 
-1. When deleting a table, both the table definition and the data stored in the table will be deleted.
-2. If there is any app using the table, they may break.
-3. If the table has some lookup fields (hence relationships to other tables), you may not be able to delete the table directly, you'll need to delete the other tables it relates to first.
+* When you delete a table, both the table definition and the data stored in the table will be deleted.
+* Deleting a table might break any apps using the table.
+* If the table has lookup fields (relationships to other tables), you might not be able to delete the table directly. You need to delete the other tables it relates to first.
