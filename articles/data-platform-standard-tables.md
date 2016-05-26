@@ -17,17 +17,17 @@
    ms.date="05/05/2016"
    ms.author="vijetaj"/>
 
-# Standard Tables and Enumeration Types in PowerApps
-PowerApps includes tables known as Standard Tables. These tables support common scenarios such as accounts, contacts, and opportunity management. Standard tables contain sample data that you can use for testing your app. PowerApps also includes enumeration types that you can use in enumeration fields on the tables you create.
+# Standard tables and enumeration types in PowerApps
+PowerApps includes tables known as standard tables. These tables support common scenarios such as accounts, contacts, and opportunity management. Standard tables contain sample data that you can use for testing your app. PowerApps also includes enumeration types that you can use in enumeration fields on the tables you create.
 
 ## Standard Tables
 
-The standard tables included with PowerApps are: 
+The following table describes the standard tables included with PowerApps:
 
 | Table name | Description |
 |------------|-------------|
-| Accounts | Stores individual accounts of a business such as customers, competitors, and partners.|
-| Budget | Stores total budget amount for various activities. |
+| Accounts | Stores individual accounts of a business, such as customers, competitors, and partners.|
+| Budget | Stores total budget amounts for various activities. |
 | Contacts | Stores information about individuals the company has a relationship with, such as a customer, a supplier, or a colleague. |
 | Currency | Contains the currencies that can be used for foreign exchange.|
 | Expense | Stores expense amounts for various activities.|
@@ -35,16 +35,16 @@ The standard tables included with PowerApps are:
 | Opportunity | Tracks information about potential sales to new or established customers.|
 | Order lines | Stores sales order lines for each sales order header.|
 | Orders | Stores sales order headers.|
-| Products | Stores product catalog with prices.|
+| Products | Stores product catalogs with prices.|
 | Unit Conversion | Contains a definition of the conversion between two units of measure.|
-| Units | Contains information about various units of measurement.|
+| Units | Contains information about various units of measure.|
 
 
 ## Enumeration Types
 
-Following is the list of enumeration types offered with PowerApps
+The following is the list of enumeration types offered with PowerApps.
 
-| Enumeration Type |
+| Enumeration type |
 |------------|
 | AccountStatus |
 | AccountType |
@@ -99,4 +99,4 @@ Following is the list of enumeration types offered with PowerApps
 | UpDown |
 
 ## Next steps
-- [Create an app using tables]()
+- [Create an app using tables](data-platform-create-table.md)
