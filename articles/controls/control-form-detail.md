@@ -128,8 +128,8 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 **Updates** – The values to write back to the data source for a record loaded in a form control.  
 
 - This property applies only to the **Edit form** control.
-- Use this property to extract the field values form the cards within the control.  You can then use these values to manually update the data source with a **Patch** function call or another method exposed by a connection.  You do not need to use this property if you are using the **SubmitForm** function. 
-- This property returns a record of values.  For example, if the form control contains card controls for **Name** and **Quantity** fields, and the values of the **Update** properties for those cards return "Widdget" and 10 respectively, then the **Updates** property for the form control would return **{ Name: "Widget", Quantity: 10 }**.
+- Use this property to extract the field values from the cards within the control.  You can then use these values to manually update the data source with a **Patch** function call or another method exposed by a connection.  You do not need to use this property if you are using the **SubmitForm** function. 
+- This property returns a record of values.  For example, if the form control contains card controls for **Name** and **Quantity** fields, and the values of the **Update** properties for those cards return "Widget" and 10 respectively, then the **Updates** property for the form control would return **{ Name: "Widget", Quantity: 10 }**.
 
 **Valid** – Whether a **[Card](control-card.md)** or **Edit form** control contains valid entries, ready to be submitted to the data source.
 
@@ -158,4 +158,3 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
-
