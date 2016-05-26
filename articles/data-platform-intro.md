@@ -43,7 +43,7 @@ When you develop an app, you can use standard tables, custom tables, or both:
 If a standard table can serve a particular purpose in your app, you should use it rather than developing a custom table that does the same thing. If a standard table would serve a purpose with a few changes, you can add fields to suit your needs. However, you can't make changes that break the table (such as deleting a standard field) or that restrict its information (such as adding a required field). These requirements ensure that standard tables remain consistent across all organizations.
 
 ## Fields
-Each field has a name, a display name, a data type (such as **text** or **number**), and some simple validation (for example, to check whether the field issuch as required or to verify uniqueness). Every field falls into one of three categories: system field, standard field, or custom field.
+Each field has a name, a display name, a data type (such as **text** or **number**), and some simple validation (for example, to check whether the field is required or to verify uniqueness). Every field falls into one of three categories: system field, standard field, or custom field.
 
 ### System fields
 All tables, whether standard or custom, are created with a set of read-only fields, that you can't change, delete, or set to a value. For more information, see [System and record title fields](). These are the most important system fields:
