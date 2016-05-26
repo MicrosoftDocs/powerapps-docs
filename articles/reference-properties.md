@@ -477,6 +477,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Update](controls/control-card.md)** – The value to write back to the data source for a field.  Applies to the **[Card](controls/control-card.md)** control.
 
+**[Updates](controls/control-form-detail.md)** – The values to write back to the data source for a record loaded in a form control.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
+
 ### V ###
 
 **Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](controls/control-form-detail.md)** controls.
