@@ -25,27 +25,39 @@
 	- **Sort**, **SortByColumns**, and **Filter** can now be composed together.
 	- More support for delegation is on the way.
 
-2. **Updates property added to the Edit form control.**
+1. **Updates property added to the Edit form control.**
 
 	The **Edit form** control now has an **Updates** property to access all the **Update** properties of the cards within the form.
 
 	You can use this property to pass form data to a REST API.
 
-3. **Bug fixes for Video control.**
+1. **Bug fixes for Video control.**
 
 	Now works with YouTube.
 
-3. **Single Sign-On support for Microsoft services.**
+1. **Single sign-on support for Microsoft services.**
 
 	Single sign-on feature will automatically sign PowerApps users into their first party services that use Azure Active Directory authentication, such as SharePoint, Office 365, and Dynamics CRM.
 
-4. **Added Edit lookup card.**
+1. **Added Edit lookup card.**
 
-	In form controls, a new **Edit lookup** card can show lookup fields to other tables.  However, none of the connectors can currently take advantage of this feature, but support will come soon.  For now, lookup fields can be displayed but not changed.
+	As soon as you install this PowerApps update, **Display form** and **Edit form** controls will show lookup fields to other tables, but this data will be read-only. As soon as other changes occur in the SharePoint connector, you’ll be able to update these fields for data in SharePoint lists. (You won’t need to update PowerApps again to take advantage of this capability).
+
+1. **Minimum/maximum values for numeric cards.**
+
+	Numeric cards, such as those for ratings and percentages, reflect minimum and maximum values that you set (or that are set in the metadata for the data source).
+
+1. **Default value for the DatePicker control.**
+
+	You can configure a DatePicker control with a default value that doesn’t specify a particular date.
+
+1. **Improvements to Display Form and Edit Form controls.**
+
+	Form controls now show both a display name and the name of the field if they differ, and you can change the display name of a lookup control.
 
 1. **On powerapps.com, show only those apps you own or were shared with you.**
 
-3. **Bug fixes and performance improvements throughout the product.**
+1. **Bug fixes and performance improvements throughout the product.**
 
 ## Release Notes for 2.0.410 ##
 
