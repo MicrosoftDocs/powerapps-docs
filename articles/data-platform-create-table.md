@@ -36,7 +36,7 @@ Either way, PowerApps stores and helps secure the data automatically. After you 
 1. In the list, perform either of these steps:
 	- Select the name of a table to create a table based on that table.
 	- Select **blank** to create a table from scratch.
-1. Clik **Save** to create the table.
+1. Click **Save** to create the table.
 
 ## System and record-title fields ##
 All tables, including any that you create from scratch, contain four system fields. These fields are read-only, so you can't change or delete them, and you don't assign values to them.
