@@ -46,7 +46,7 @@ All tables, including any that you create from scratch, contain four system fiel
 | CreatedOnDateTime | Created on | DateTime | The date and time when a record was created. |
 | CreatedByUser | Created by | User | The user who created a record. |
 | LastModifiedDateTime | Last modified on | DateTime | The date and time when a record was  most recently modified. |
-| LastModifiedByUser | Last modified by | User | The user who most recently modified the record . |
+| LastModifiedByUser | Last modified by | User | The user who most recently modified the record. |
 
 If you create a table from scratch, it also contains a custom field that's named **Title** and set as the [record-title field](). A record-title field is the user-friendly identifier of a record whenever a record is used in any app UI. You can change which field is used, but every table must have a record title field.
 
