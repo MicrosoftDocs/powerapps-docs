@@ -44,8 +44,7 @@ However, delegation may not always be possible.  Data sources vary on what funct
 PowerApps will delegate what it can, but will only pull down a small set of records to complete the work locally, at most 500 records.  **Filter** and **Sort** will continue to operate, but with a reduced set of records.  What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story which could be confusing to users.  Aggregate operations, such as **Sum** and **Average**, will operate on only a portion of the data source and therefore may not give the result that is expected.
 
 Additional limitations on delegation (which we are working to remove):
-- At this time, only **Filter** and **Sort** support delegation.  **LookUp** and **SortByColumns** support will be coming soon.
-- The data source must be provided directly as the first argument.  **Filter** and **[Sort](function-sort.md)** functions cannot be nested.
+- At this time, only **Filter**, **Sort**, and **SortByColumns** support delegation.  **LookUp** support will be coming soon.
 - For **Sort**, the formula can only be the name of a single column and cannot include other operators or functions.
 - For **Filter**, the formula can include =, <>, <, >, >=, <=, &&, and || operators.  Only names of columns and values that do not depend on the data source can be used.  
 
