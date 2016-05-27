@@ -31,7 +31,7 @@
 
 1. **Updates property added to the Edit form control.**
 
-	The **Edit form** control now has an **Updates** property to access all the **Update** properties of the cards within the form.
+	The **[Edit form](controls/control-form-detail.md)** control now has an **[Updates](controls/control-form-detail.md)** property to access all the **[Update](controls/control-card.md)** properties of the cards within the form.
 
 	You can use this property to pass form data to a REST API.
 
@@ -45,7 +45,7 @@
 
 1. **Added Edit lookup card.**
 
-	As soon as you install this PowerApps update, **Display form** and **Edit form** controls will show lookup fields to other tables, but this data will be read-only. As soon as other changes occur in the SharePoint connector, you’ll be able to update these fields for data in SharePoint lists. (You won’t need to update PowerApps again to take advantage of this capability).
+	As soon as you install this PowerApps update, **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls will show lookup fields to other tables, but this data will be read-only. As soon as other changes occur in the SharePoint connector, you’ll be able to update these fields for data in SharePoint lists. (You won’t need to update PowerApps again to take advantage of this capability).
 
 1. **Minimum/maximum values for numeric cards.**
 
