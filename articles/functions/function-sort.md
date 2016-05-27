@@ -30,7 +30,7 @@ The formula is evaluated for each [record](../working-with-tables.md#records) of
 
 To sort first by one column and then by another, you embed a **Sort** formula within another. For example, you can use this formula to sort a **Contacts** table first by a **LastName** column and then by a **FirstName** column:  **Sort( Sort( Contacts, LastName ), FirstName )**
 
-The **SortByColumns** function can also be used to sort a table based on one ore more columns.
+The **SortByColumns** function can also be used to sort a table based on one or more columns.
 
 The parameter list for **SortByColumns** provides the names of the columns to sort by and the sort direction per column.  Sorting is performed in the order of the parameters (sorted first by the first column, then the second, and so on).  Column names are specified as strings, requiring double quotes if directly include in the parameter list.  For example, **SortByColumns( CustomerTable, "LastName" )**.
 
@@ -66,7 +66,7 @@ Additional limitations on delegation (which we are working to remove):
 
 - *Table* - Required. Table to sort.
 - *ColumnName(s)* - Required. The column names to sort on, as strings.
-- *SortOrder(s)* - Optional.  **SortOrder!Ascending** or **SortOrder!Descending**.  **SortOrder!Ascending** is the default.  If multiple *ColumnNames* are supplied, all but the last column must include a *SortOrder*. 
+- *SortOrder(s)* - Optional.  **SortOrder!Ascending** or **SortOrder!Descending**.  **SortOrder!Ascending** is the default.  If multiple *ColumnNames* are supplied, all but the last column must include a *SortOrder*.
 
 **SortByColumns**( *Table*, *ColumnName*, *SortOrderTable* )
 
