@@ -15,14 +15,14 @@
 	ms.tgt_pltfrm="na"
 	ms.devlang="na"
 	ms.topic="get-started-article"
-	ms.date="05/05/2016"
+	ms.date="05/19/2016"
 	ms.author="mandia"/>
 
-# List of available connections
+# Connections list
 
 PowerApps includes many connections that provide easy connectivity to some of the most common SaaS and Enterprise services, including Office 365, Dropbox, Twitter, and more. More connections are continually being added. 
 
-This topic lists the currently available connections that can be used within your apps. To learn more about the different functions available with each connection, select an icon to learn more. 
+This topic lists the currently available connections that can be used within your apps. To learn more about the different functions available with each connection, select an icon. 
 
 Just getting started with PowerApps? Learn [how to add connections](add-manage-connections.md) in your apps.
 

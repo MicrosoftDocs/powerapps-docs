@@ -14,7 +14,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/17/2016"
+   ms.date="05/18/2016"
    ms.author="ankitsar"/>
 
 # Create an app from scratch #
@@ -28,15 +28,20 @@ On another screen, users can create, update, or delete a record in that set of d
 
 ![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
 
-**Prerequisites**
+## Prerequisites
 
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 - Learn how to [add a control](add-configure-controls.md) and set the properties that determine its appearance, behavior, and other characteristics.
 - A cloud-storage account, such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
+- Format your data as a table in Excel.
 
-To follow this tutorial exactly, add this data to an Excel file named **eventsignup.xlsx**, [format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) named **Schedule**, and then save the file to your cloud-storage account.
+## Format Excel data as a table
 
-|Start Day|Start Time|Volunteer 1|Volunteer 2|
+To follow this tutorial exactly:
+
+1. Create an Excel file named **eventsignup.xlsx**.
+1. Add the following data to the Excel file:  
+
+	|Start Day|Start Time|Volunteer 1|Volunteer 2|
 |---|---|---|---|
 |Saturday|10am-noon|Vasquez|Kumashiro|
 |Saturday|noon-2pm|Ice|Singhal|
@@ -45,7 +50,17 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 |Sunday|10am-noon|Singh|Morgan|
 |Sunday|10am-noon|Batye|Nguyen|
 
-## Create a blank app, and connect to data ##
+1. Select any cell, and then select **Format as Table** on the **Home** tab of the ribbon.
+
+1. In the **Format As Table** dialog box, select the **My table has headers** check box, and then select **OK**.
+
+1. Near the left edge of the ribbon, type **Schedule** under **Table Name**, and then save your changes.
+
+	For more information, see [Format Excel data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370).
+
+4. Copy the Excel file to your cloud-storage account.
+
+## Create a blank app, and connect to data
 1. In PowerApps, select **New** (near the left edge of the screen).
 
 	![New option on the File menu](./media/get-started-create-from-blank/file-new.png)
@@ -77,7 +92,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Show connected data sources](./media/get-started-create-from-blank/connected-data-sources.png)
 
-## Show the data ##
+## Show the data
 1. On the **Home** tab, select **Layouts**.
 
 1. Select the option that contains a heading, a subtitle, and a body element.
@@ -88,7 +103,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
 
-	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+	`Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
 	This gallery shows the data from the **Schedule** table.
 
@@ -103,7 +118,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![First screen](./media/get-started-create-from-blank/first-screen.png)
 
-## Create the ChangeScreen ##
+## Create the ChangeScreen
 1. [Rename the default screen](add-screen-context-variables.md) to **ViewScreen**, add another screen, and name it **ChangeScreen**.
 
 	![Rename screen](./media/get-started-create-from-blank/rename-screen.png)
@@ -122,7 +137,7 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 1.  Set the **[DataSource](controls/control-form-detail.md)** property of the form to **Schedule** and its **[Item](controls/control-form-detail.md)** property to this formula:
 
-	**BrowseGallery1.Selected**
+	`BrowseGallery1.Selected`
 
 1. For each field in the **Options** pane, select the option to show that field.
 
@@ -134,13 +149,13 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 1. Set the **[AutoHeight](controls/control-text-box.md)** property of the text box to **true** and its **[Text](controls/properties-core.md)** property to this formula:
 
-	**Form1.Error**
+	`Form1.Error`
 
 	The text box will show any errors from the form.
 
 1. Add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
-	**Navigate(ViewScreen,ScreenTransition.None)**
+	`Navigate(ViewScreen,ScreenTransition.None)`
 
  	When the user selects the arrow, the **[Navigate](functions/function-navigate.md)** function shows the **ViewScreen**.
 
@@ -150,13 +165,13 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 1.  Set the **[OnSelect](controls/properties-core.md)** property of the button to this formula::
 
-	**SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
+	`SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))`
 
 	When the user selects the button, the **[SubmitForm](functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.  
 
 1.  At the bottom of the screen, add a **Remove** button, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
-	**Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
+	`Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))`
 
 	When the user selects this button, the record is [removed](functions/function-remove-removeif.md), and the **ViewScreen** reappears.
 
@@ -164,14 +179,14 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 	![Final Change Screen](./media/get-started-create-from-blank/changescreen-final.png)
 
-## Set navigation from ViewScreen ##
+## Set navigation from ViewScreen
 1. In the gallery on the **ViewScreen**, select the **Next arrow** for the first record.
 
 	![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
 
 1. Set the **[OnSelect](controls/properties-core.md)** property of that arrow to this formula:
 
-	**Navigate(ChangeScreen,ScreenTransition.None)**
+	`Navigate(ChangeScreen,ScreenTransition.None)`
 
 1. In the upper-right corner, select the icon to add a record.
 
@@ -179,11 +194,11 @@ To follow this tutorial exactly, add this data to an Excel file named **eventsig
 
 1. Set the **[OnSelect](controls/properties-core.md)** property of the selected icon to this formula:
 
-	**NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**
+	`NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)`
 
  	When the user selects this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
 
-## Run the app ##
+## Run the app
 As you customize the app, test your changes by running it in **Preview**. To open Preview, select the **Preview** icon near the upper-right corner (or press F5).
 
 1. In the list of thumbnails, select **ViewScreen**, and then open Preview.
@@ -192,7 +207,7 @@ As you customize the app, test your changes by running it in **Preview**. To ope
 
 1. On **ChangeScreen**, change the information in one or more fields and then save your changes by selecting **Save**, or remove the record by selecting **Remove**.
 
-## Next steps ##
+## Next steps
 - Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
 - [Share the app](share-app.md) so that other people can run it.
 - Learn more about [galleries](add-gallery.md), [forms](add-form.md), and [formulas](working-with-formulas.md) in PowerApps.

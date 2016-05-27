@@ -64,11 +64,13 @@ Note that, to modify an existing record of a data source, the record must have o
 ![](media/working-with-data-sources/writing-to-a-datasource.png)
 The diagram above shows the flow of information to update a data source:
 
-- A gallery can also provide a container for input controls, such as an input-text box or a slider.  As with the browse screen, the **[Items](controls/properties-core.md)** property is used but, for a single record, often takes the form of  **Gallery.Items = Table( EditRecord )**.
-- Each input control exposes an **[Update](controls/control-card.md)** property.  This property maps the user's input to a specific property of the record.
-- The gallery aggregates the **[Update](controls/control-card.md)** property of each of the controls within it and exposes this as an **Updates** property.
-- A button or an image control on the screen is used to submit changes to the data source's service.  You use a formula based on the **[Patch](functions/function-patch.md)** function from the **[OnSelect](controls/properties-core.md)** formula of the control.
-- Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the app didn't know about.  The **[Errors](functions/function-errors.md)** function is used to check if there was an issue and retrieve information about the issue.  In some cases, such as conflicting edits by another user, the **[Revert](functions/function-revert.md)** function may be needed to reload the record and clear the error.
+- An **[Edit form](controls/control-form-detail.md)** control provides a container for input cards, which are made up of user input controls such as an input-text box or a slider.  The **[DataSource](controls/control-form-detail.md)** and **[Item](controls/control-form-detail.md)** properties are used to identify the record to edit.
+- Each input card has a **[Default](controls/properties-core.md)** property, which is usually set to the field of the form's **ThisItem** record.  The controls within the input card will then take their input values from **[Default](controls/properties-core.md)**.  Normally you do not need to modify this.
+- Each input card exposes an **[Update](controls/control-card.md)** property.  This property maps the user's input to a specific field of the record for writing back to the data source.  Normally you do not need to modify this.
+- A button or an image control on the screen enables the user to save changes to the record.  The **[OnSelect](controls/properties-core.md)** formula of the control calls the **[SubmitForm](functions/function-form.md)** function to do this work.  **[SubmitForm](functions/function-form.md)** reads all the **[Update](controls/control-card.md)** properties of the cards and uses this to write back to the data source.
+- Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the app didn't know about.  The **Error** and **[ErrorKind](controls/control-form-detail.md)** properties of the form control makes this information available, so you can display it to the user.  
+
+For more fine grained control over the process, you can also use the **[Patch](functions/function-patch.md)** and **[Errors](functions/function-errors.md)** function.  The **[Edit form](controls/control-form-detail.md)** control exposes an **[Updates](controls/control-form-detail.md)** property so that you can read the values of the fields within the form.  You can also use this property to call a custom API on a connection, completely bypassing the **Patch** and **SubmitForm** functions.
 
 ## Validation ##
 

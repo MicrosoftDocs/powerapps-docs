@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/26/2016"
+ms.date="05/26/2016"
 ms.author="mandia"/>
 
 
@@ -27,7 +27,7 @@ Twitter lets you post tweets and get tweets, timeline, friends and followers fro
 
 You can display this information in a text box on your app. For example, you can add an input text box, ask the user to enter in some Tweet text, and then add a button that "posts" the tweet. You can use similar methods to get a tweet or search for a tweet, and then display the text in a text box or gallery control in your app.
 
-This topic shows the available functions.
+This topic shows the available functions. For examples on using these functions in an app, go to [Show data from Twitter](../show-twitter-data.md).
 
 &nbsp;
 
@@ -59,7 +59,7 @@ Get user timeline: Retrieves a collection of the most recent tweets posted by th
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
 |userName|string|yes|Twitter handle|
-|maxResults|integer|no|Maximum number of tweets to retrieve|
+|maxResults|integer|no|Maximum number of tweets to retrieve, e.g. {maxResults:5}|
 
 #### Output properties
 
@@ -80,7 +80,7 @@ Get home timeline: Retrieves the most recent tweets and re-tweets posted me and 
 
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
-|maxResults|integer|no|Maximum number of tweets to retrieve|
+|maxResults|integer|no|Maximum number of tweets to retrieve, e.g. {maxResults:5}|
 
 #### Output properties
 
@@ -102,7 +102,7 @@ Search tweet: Retrieves a collection of relevant tweets matching a specified que
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
 |searchQuery|string|yes|Query text (you may use any Twitter supported query operators: http://www.twitter.com/search)|
-|maxResults|integer|no|Maximum number of tweets to retrieve|
+|maxResults|integer|no|Maximum number of tweets to retrieve, e.g. {maxResults:5}|
 
 #### Output properties
 
@@ -124,7 +124,7 @@ Get followers: Retrieves users following the specified user
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
 |userName|string|yes|Twitter handle of the user|
-|maxResults|integer|no|Maximum number of users to retrieve|
+|maxResults|integer|no|Maximum number of users to retrieve, e.g. {maxResults:5}|
 
 #### Output properties
 
@@ -147,7 +147,7 @@ Get my followers: Retrieves users who are following me
 
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
-|maxResults|integer|no|Maximum number of users to retrieve|
+|maxResults|integer|no|Maximum number of users to retrieve, e.g. {maxResults:5}|
 
 #### Output properties
 
@@ -171,7 +171,7 @@ Get following: Retrieves users who the specified user is following
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
 |userName|string|yes|Twitter handle of the user|
-|maxResults|integer|no|Maximum number of users to retrieve|
+|maxResults|integer|no|Maximum number of users to retrieve, e.g. {maxResults:5}|
 
 #### Output properties
 
@@ -194,7 +194,7 @@ Get my following: Retrieves users that I am following
 
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
-|maxResults|integer|no|Maximum number of users to retrieve|
+|maxResults|integer|no|Maximum number of users to retrieve, e.g. {maxResults:5}|
 
 #### Output properties
 
@@ -240,7 +240,7 @@ Post a new tweet: Tweet
 
 | Name| Data Type|Required|Description|
 | ---|---|---|---|
-|tweetText|string|no|Text to be posted|
+|tweetText|string|no|Text to be posted e.g. {tweetText:"hello"}|
 |body|string |no|Media to be posted|
 
 #### Output properties
