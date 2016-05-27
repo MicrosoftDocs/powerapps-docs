@@ -19,6 +19,10 @@
 
 # Release notes for PowerApps release 2.0.430 #
 
+1. **Update required for PowerApps Studio and PowerApps Mobile**.
+
+	Due to an internal change, you must install this update to continue to create and edit apps in PowerApps Studio and run apps in PowerApps Mobile.
+
 1. **Enhanced delegation for large data sets.**
 
 	- **SortByColumns** now supports delegation.
