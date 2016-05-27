@@ -30,19 +30,18 @@ On another screen, users can create, update, or delete a record in that set of d
 
 ## Prerequisites
 
-- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
 - Learn how to [add a control](add-configure-controls.md) and set the properties that determine its appearance, behavior, and other characteristics.
 - A cloud-storage account, such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
-- Format your Excel data as a table.
+- Format your data as a table in Excel.
 
 ## Format Excel data as a table
 
 To follow this tutorial exactly:
 
 1. Create an Excel file named **eventsignup.xlsx**.
-2. Add the following data to the Excel file:  
+1. Add the following data to the Excel file:  
 
-|Start Day|Start Time|Volunteer 1|Volunteer 2|
+	|Start Day|Start Time|Volunteer 1|Volunteer 2|
 |---|---|---|---|
 |Saturday|10am-noon|Vasquez|Kumashiro|
 |Saturday|noon-2pm|Ice|Singhal|
@@ -51,15 +50,15 @@ To follow this tutorial exactly:
 |Sunday|10am-noon|Singh|Morgan|
 |Sunday|10am-noon|Batye|Nguyen|
 
-3. Format the data as a table named **Schedule**:  
-	1. Select any piece of data in any row and any column. For example, select **Ice**.
-	2. On the **Insert** ribbon, select **Table**.
-	3. In the dialog window, select **My table has headers**, and select **OK**.
-	4. Save your changes.
+1. Select any cell, and then select **Format as Table** on the **Home** tab of the ribbon.
 
-	Additional details are available at [format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370).
+1. In the **Format As Table** dialog box, select the **My table has headers** check box, and then select **OK**.
 
-4. Copy the Excel file to your cloud storage account.
+1. Near the left edge of the ribbon, type **Schedule** under **Table Name**, and then save your changes.
+
+	For more information, see [Format Excel data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370).
+
+4. Copy the Excel file to your cloud-storage account.
 
 ## Create a blank app, and connect to data
 1. In PowerApps, select **New** (near the left edge of the screen).
