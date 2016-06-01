@@ -65,7 +65,7 @@ For example, if an employee named Nancy uses her work email address (for example
 
 There are no administrative actions your organization needs to take to use PowerApps.
 
-**IMPORTANT**: If your organization has multiple email domains, and you prefer all email address extensions to be in the same tenant, then before any users create your primary tenant, add all email address domains to that tenant before any users create your primary tenant. There is no automated mechanism to move users across tenants after they have been created. For more information on this process, see [If I have multiple domains](signup-question-and-answer.md#if-i-have-multiple-domains-,-can-i-control-the-office-365-tenant-that-users-are-added-to-?) (in this topic) and [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611) online.
+**IMPORTANT**: If your organization has multiple email domains, and you prefer all email address extensions to be in the same tenant, then before any users create your primary tenant, add all email address domains to that tenant before any users create your primary tenant. There is no automated mechanism to move users across tenants after they have been created. For more information on this process, see [If I have multiple domains](#if-i-have-multiple-domains,-can-i-control-the-office-365-tenant-that-users-are-added-to?) (in this topic) and [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611) online.
 
 
 ### How can I prevent users from joining my existing Office 365 tenant?
@@ -94,7 +94,7 @@ Use the following PowerShell script:
 
 ### How can I prevent my existing users from starting to use PowerApps?
 
-The [How do users sign up for PowerApps](signup-question-and-answer.md#how-do-users-sign-up-for-powerapps-?) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. Note that there is a separate step required to disable each sign up option.
+The [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps?) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. Note that there is a separate step required to disable each sign up option.
 
 To disable sign up flow Option 1 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and select **Sign up free**), run the following Windows PowerShell Script. Use this Windows PowerShell script to disable automatic license distributions for existing users. If you have already disabled automatic license distribution before (e.g. Office 365 for Education for Students, Faculty, and Staff), you do not need to repeat this process.  
 	
@@ -106,14 +106,14 @@ To disable sign up flow Option 1 (i.e. user goes to [powerapps.microsoft.com](ht
 	
   **NOTE**: The `AllowAdHocSubscription` flag controls several user capabilities in your organization, including the ability for users to sign up for the Azure Rights Management Service or Power BI. Changing this flag affects all of these capabilities.  
 	 
-  **NOTE**: This blocking prevents new users in your organization from signing up for PowerApps. Users that sign up for PowerApps prior to disabling new signups for your organization keep their licenses. See the [How do I remove PowerApps for users that already signed up?](signup-question-and-answer.md#how-do-i-remove-powerapps-for-users-that-already-signed-up-?) section (in this topic) for instructions on how you can remove access to PowerApps for users that previously signed up for the service.  
+  **NOTE**: This blocking prevents new users in your organization from signing up for PowerApps. Users that sign up for PowerApps prior to disabling new signups for your organization keep their licenses. See the [How do I remove PowerApps for users that already signed up?](#how-do-i-remove-powerapps-for-users-that-already-signed-up?) section (in this topic) for instructions on how you can remove access to PowerApps for users that previously signed up for the service.  
 
 To disable sign up flow Option 2 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and select **Sign In**), [file a support request](https://aka.ms/pasupport). 
 
 
 ### How can I allow my existing users to sign up for PowerApps?
 
-The [How do users sign up for PowerApps](signup-question-and-answer.md#how-do-users-sign-up-for-powerapps-?) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. Note that there is a separate step required to disable each flow.
+The [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps?) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. Note that there is a separate step required to disable each flow.
 
 To enable sign up flow Option 1 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and select **Sign up free**), run the opposite command as described in the previous question:  
 
@@ -163,7 +163,7 @@ If you want all users to be in the same tenant regardless of their email address
 
 ### How do I remove PowerApps for users that already signed up?
 
-The [How do users sign up for PowerApps](signup-question-and-answer.md#how-do-users-sign-up-for-powerapps-?) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. There is a separate step required to remove users that already signed up through each flow.
+The [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps?) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. There is a separate step required to remove users that already signed up through each flow.
 
 If a user signed up for PowerApps through sign up flow Option 1 (i.e. user goes to  [powerapps.microsoft.com](https://powerapps.microsoft.com), and select **Sign up free**), but you no longer want them to have access to PowerApps, you can remove the PowerApps license for that user:  
 
