@@ -98,17 +98,17 @@ The [How do users sign up for PowerApps](signup-question-and-answer.md#how-do-us
 
 To disable sign up flow Option 1 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and selects **Sign up free**), run the following Windows PowerShell Script:  
 
-	**Disable automatic license distribution** : Use this Windows PowerShell script to disable automatic license distributions for existing users. You do not need to repeat this process if you have already disabled automatic license distribution before (e.g. Office 365 for Education for Students, Faculty, and Staff).  
+  **Disable automatic license distribution** : Use this Windows PowerShell script to disable automatic license distributions for existing users. You do not need to repeat this process if you have already disabled automatic license distribution before (e.g. Office 365 for Education for Students, Faculty, and Staff).  
 	
-	To disable automatic license distribution for existing users:  
-	`Set-MsolCompanySettings -AllowAdHocSubscriptions $false`
+  To disable automatic license distribution for existing users:  
+  `Set-MsolCompanySettings -AllowAdHocSubscriptions $false`
 	
-	To enable automatic license distribution for existing users:  
-	`Set-MsolCompanySettings -AllowAdHocSubscriptions $true`
+  To enable automatic license distribution for existing users:  
+  `Set-MsolCompanySettings -AllowAdHocSubscriptions $true`
 	
-	**NOTE**: The `AllowAdHocSubscription` flag controls several user capabilities in your organization, including the ability for users to sign up for the Azure Rights Management Service or Power BI. Changing this flag affects all of these capabilities.  
+  **NOTE**: The `AllowAdHocSubscription` flag controls several user capabilities in your organization, including the ability for users to sign up for the Azure Rights Management Service or Power BI. Changing this flag affects all of these capabilities.  
 	 
-	**NOTE**: This blocking prevents new users in your organization from signing up for PowerApps. Users that sign up for PowerApps prior to disabling new signups for your organization keep their licenses. See the [How do I remove PowerApps for users that already signed up?](signup-question-and-answer.md#how-do-i-remove-powerapps-for-users-that-already-signed-up?) section (in this topic) for instructions on how you can remove access to PowerApps for users that previously signed up for the service.  
+  **NOTE**: This blocking prevents new users in your organization from signing up for PowerApps. Users that sign up for PowerApps prior to disabling new signups for your organization keep their licenses. See the [How do I remove PowerApps for users that already signed up?](signup-question-and-answer.md#how-do-i-remove-powerapps-for-users-that-already-signed-up?) section (in this topic) for instructions on how you can remove access to PowerApps for users that previously signed up for the service.  
 
 To disable sign up flow Option 2 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and selects **Sign In**), [file a support request](https://aka.ms/pasupport). 
 
