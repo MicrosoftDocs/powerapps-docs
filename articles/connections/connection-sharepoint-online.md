@@ -61,6 +61,7 @@ This connection includes the following functions:
 |[GetColumnValues](connection-sharepoint-online.md#getcolumnvalues) | Retrieves possible values for a SharePoint column |
 |[GetTables](connection-sharepoint-online.md#gettables) | Retrieves SharePoint lists from a site |
 
+<!--NotAvailableYet
 ## GetFileMetadata
 Get file metadata using id: Used for getting a file metadata on Document Library 
 
@@ -343,7 +344,7 @@ Extract folder: Used for extracting a folder on Document Library
 |IsFolder|boolean|No | |
 |ETag|string|No | |
 |FileLocator|string|No | |
-
+-->
 
 ## GetOnNewItems
 When a new item is created: When a new item is created in a SharePoint list 
