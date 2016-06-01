@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/26/2016"
+ms.date="06/01/2016"
 ms.author="mandia"/>
 
 #  Azure SQL Database
@@ -38,7 +38,6 @@ This connection includes the following functions:
 
 | Function Name |  Description |
 | --- | --- |
-|[ExecuteProcedure](connection-azure-sqldatabase.md#executeprocedure) | Executes a stored procedure in SQL |
 |[GetItems](connection-azure-sqldatabase.md#getitems) | Retrieves rows from a SQL table |
 |[PostItem](connection-azure-sqldatabase.md#postitem) | Inserts a new row into a SQL table |
 |[GetItem](connection-azure-sqldatabase.md#getitem) | Retrieves a single row from a SQL table |
@@ -46,7 +45,7 @@ This connection includes the following functions:
 |[PatchItem](connection-azure-sqldatabase.md#patchitem) | Updates an existing row in a SQL table |
 |[GetTables](connection-azure-sqldatabase.md#gettables) | Retrieves tables from a SQL database |
 
-
+<!--NotAvailableYet
 ## ExecuteProcedure
 Execute stored procedure: Executes a stored procedure in SQL 
 
@@ -65,7 +64,7 @@ Result of the stored procedure execution.
 |OutputParameters|object|No | Output parameter values |
 |ReturnCode|integer|No | Return code of a procedure |
 |ResultSets|object|No | Result sets|
-
+-->
 
 ## GetItems
 Get rows: Retrieves rows from a SQL table 
