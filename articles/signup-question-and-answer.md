@@ -96,15 +96,13 @@ Use the following PowerShell script:
 
 The [How do users sign up for PowerApps](signup-question-and-answer.md#how-do-users-sign-up-for-powerapps-?) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. Note that there is a separate step required to disable each sign up option.
 
-To disable sign up flow Option 1 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and select **Sign up free**), run the following Windows PowerShell Script:  
-
-  **Disable automatic license distribution** : Use this Windows PowerShell script to disable automatic license distributions for existing users. You do not need to repeat this process if you have already disabled automatic license distribution before (e.g. Office 365 for Education for Students, Faculty, and Staff).  
+To disable sign up flow Option 1 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and select **Sign up free**), run the following Windows PowerShell Script. Use this Windows PowerShell script to disable automatic license distributions for existing users. If you have already disabled automatic license distribution before (e.g. Office 365 for Education for Students, Faculty, and Staff), you do not need to repeat this process.  
 	
   To disable automatic license distribution for existing users:  
-  `Set-MsolCompanySettings -AllowAdHocSubscriptions $false`
+  `Set-MsolCompanySettings -AllowAdHocSubscriptions $false`  
 	
   To enable automatic license distribution for existing users:  
-  `Set-MsolCompanySettings -AllowAdHocSubscriptions $true`
+  `Set-MsolCompanySettings -AllowAdHocSubscriptions $true`  
 	
   **NOTE**: The `AllowAdHocSubscription` flag controls several user capabilities in your organization, including the ability for users to sign up for the Azure Rights Management Service or Power BI. Changing this flag affects all of these capabilities.  
 	 
@@ -119,7 +117,7 @@ The [How do users sign up for PowerApps](signup-question-and-answer.md#how-do-us
 
 To enable sign up flow Option 1 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and select **Sign up free**), run the opposite command as described in the previous question:  
 
-	`Set-MsolCompanySettings -AllowAdHocSubscriptions $true`
+`Set-MsolCompanySettings -AllowAdHocSubscriptions $true`
 
 To enable sign up flow Option 2 (i.e. user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com), and select **Sign In**), after you had previously requested this flow be disabled, [file a support request](https://aka.ms/pasupport). 
 
@@ -158,7 +156,7 @@ If you do nothing, a tenant is created for each user email domain and subdomain.
 
 If you want all users to be in the same tenant regardless of their email address extensions:  
 
-	Create a target tenant ahead of time or use an existing tenant. Add all the existing domains and subdomains that you want consolidated within that tenant. Then all the users with email addresses ending in those domains and subdomains automatically join the target tenant when they sign up.
+- Create a target tenant ahead of time or use an existing tenant. Add all the existing domains and subdomains that you want consolidated within that tenant. Then all the users with email addresses ending in those domains and subdomains automatically join the target tenant when they sign up.
 
 **IMPORTANT**: There is no supported automated mechanism to move users across tenants once they have been created. To learn about adding domains to a single Office 365 tenant, see [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-ffdb2216-330d-4d73-832b-3e31bcb5b2a7).
 
