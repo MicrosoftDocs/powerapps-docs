@@ -38,19 +38,6 @@ This connection includes the following functions:
 
 | Function Name |  Description |
 | --- | --- |
-|[GetFileMetadata](connection-sharepoint-online.md#getfilemetadata) | Used for getting a file metadata on Document Library |
-|[UpdateFile](connection-sharepoint-online.md#updatefile) | Used for updating a file on Document Library |
-|[DeleteFile](connection-sharepoint-online.md#deletefile) | Used for deleting a file on Document Library |
-|[GetFileMetadataByPath](connection-sharepoint-online.md#getfilemetadatabypath) | Used for getting a file metadata on Document Library |
-|[GetFileContentByPath](connection-sharepoint-online.md#getfilecontentbypath) | Used for getting a file on Document Library|
-|[GetFileContent](connection-sharepoint-online.md#getfilecontent) | Used for getting a file on Document Library |
-|[CreateFile](connection-sharepoint-online.md#createfile) | Used for uploading a file on Document Library |
-|[CopyFile](connection-sharepoint-online.md#copyfile) | Used for copying a file on Document Library |
-|[OnNewFile](connection-sharepoint-online.md#onnewfile) | Triggers a flow when a new file is created in a SharePoint folder |
-|[OnUpdatedFile](connection-sharepoint-online.md#onupdatedfile) | Triggers a flow when a file is modified in a SharePoint folder |
-|[ListFolder](connection-sharepoint-online.md#listfolder) | List the files on a folder |
-|[ListRootFolder](connection-sharepoint-online.md#listrootfolder) | List the files on Root folder |
-|[ExtractFolderV2](connection-sharepoint-online.md#extractfolderv2) | Used for extracting a folder on Document Library |
 |[GetOnNewItems](connection-sharepoint-online.md#getonnewitems) | When a new item is created in a SharePoint list |
 |[GetOnUpdatedItems](connection-sharepoint-online.md#getonupdateditems) | When an existing item is modified in a SharePoint list |
 |[GetItems](connection-sharepoint-online.md#getitems) | Retrieves items from a SharePoint list |
