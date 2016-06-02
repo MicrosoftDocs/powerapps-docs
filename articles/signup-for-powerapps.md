@@ -15,12 +15,12 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="05/18/2016"
+    ms.date="06/02/2016"
     ms.author="jamesol"/>
 
 # Sign up for PowerApps
 
-This article shows you how to sign up for a PowerApps account.
+This article shows you how to sign up for a PowerApps account. Also checkout out our [Q&A](signup-question-and-answer.md). 
 
 ## What email addresses can be used with PowerApps ##
 To sign up for PowerApps, enter your work or school email address.
@@ -79,7 +79,8 @@ After you successfully sign up for PowerApps, you can start creating some apps. 
 [Run a sample app](open-and-run-a-sample-app.md)  
 [Run an app in a browser](run-app-browser.md)  
 [Run an app on a phone](run-app-client.md)  
+[PowerApps in your organization Q&A](signup-question-and-answer.md)  
 
 <!--Reference links in article-->
-[1]: http://go.microsoft.com/fwlink/?LinkId=715583
-[2]: http://go.microsoft.com/fwlink/?LinkId=708209
+[1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
+[2]: http://go.microsoft.com/fwlink/p/?LinkId=708209
