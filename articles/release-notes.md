@@ -23,6 +23,13 @@
 
 	Due to an internal change, you must install this update to continue to create and edit apps in PowerApps Studio and run apps in PowerApps Mobile.
 
+	For Windows 8 and Windows 8.1:
+
+	1.	Open the app for the Windows Store.
+	1.	Open the settings for that app.<br>For example, press the Windows key and the “c” key simultaneously, and then select **Settings**.
+	1.	Select  **App updates**, and then select **Check for updates**.
+	1.	In the screen that appears, select **Install** for PowerApps.
+
 1. **Enhanced delegation for large data sets.**
 
 	- **SortByColumns** now supports delegation.
