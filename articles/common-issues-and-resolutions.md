@@ -30,7 +30,7 @@
 
 	In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](functions/function-filter-lookup.md) article for more details about delegation.  
 
-	In this release, delegation doesn't support **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** functions used together, nor does it support the **[In](functions/operators.md#in-and-exactin-operators)** operator.  These features are used by apps that are created from data, so these apps are limited to the first 500 records. To partially work around this issue, you can remove one or both of the Filter and Sort functions from the gallery's **[Items](controls/properties-core.md)** property.
+	As of this writing, delegation doesn't support **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** functions used together, nor does it support the **[In](functions/operators.md#in-and-exactin-operators)** operator. These features are used by apps that are created from data, so these apps are limited to the first 500 records. To partially work around this issue, you can remove one or both of the Filter and Sort functions from the gallery's **[Items](controls/properties-core.md)** property.
 
 ## Create an app automatically from Excel
 
@@ -70,6 +70,24 @@
 | External data | No |
 
 > [AZURE.NOTE] For the column types marked as *Yes (read-only)*, full support is coming soon.
+
+1. **PowerApps doesn't support columns that support multiple values or selections.**
+
+	- For Lookup columns, the **Allow multiple values** checkbox must be cleared.
+
+		![Display choices](./media/common-issues-and-resolutions/lookup.png)
+
+	- For Managed Metadata columns, the **Allow multiple values** checkbox must be cleared.
+
+		![Display choices](./media/common-issues-and-resolutions/metadata.png)
+
+	- For Person or Group columns, the **No** option under **Allow multiple selections** must be selected.
+
+		![Display choices](./media/common-issues-and-resolutions/person-group.png)
+
+	- For Choice columns, the **Drop-Down Menu** or **Radio Buttons** option under **Display choices using** must be selected.
+
+		![Display choices](./media/common-issues-and-resolutions/choice.png)
 
 1. **Not all types of columns support all types of cards.**  
 
