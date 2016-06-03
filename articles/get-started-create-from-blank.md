@@ -34,6 +34,8 @@ On another screen, users can create, update, or delete a record in that set of d
 - A cloud-storage account, such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
 - Format your data as a table in Excel.
 
+For more information, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
 ## Format Excel data as a table
 
 To follow this tutorial exactly:
