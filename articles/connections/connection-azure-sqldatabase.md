@@ -65,7 +65,7 @@ Keep this connection string nearby. You need it to create the connection in Powe
 	![Paste connection string](./media/connection-azure-sqldatabase/enterconnectionstring.png)
 
 	It's added to the connection list.  
-4. Open your app, and add SQL Azure as a data source. Select **default**, and then you should see your tables. The following example uses the Sample data:  
+4. Open your app, and add SQL Azure as a [data source](../add-data-connection.md). Select **default**, and then you should see your tables. The following example uses the Sample data:  
 
 	![Azure SQL Database](./media/connection-azure-sqldatabase/tables.png)
 5. Select some tables (e.g. Product, Customer), and then select **Connect**. The tables are now listed as a data source. 
@@ -75,7 +75,7 @@ Keep this connection string nearby. You need it to create the connection in Powe
 The SQL database connection is a "tabular" data source. As a result, use galleries to display the data from your tables. These steps use the Sample data in the SQL database, and uses the Product table.
 
 1. On the **Insert** menu, select **Gallery**, and add any of the **With text** galleries.
-2. Set the **[Items](controls/properties-core.md)** property of the gallery to one of your tables. If you're using the Sample data, then set it to the Product table:  
+2. Set the **[Items](../controls/properties-core.md)** property of the gallery to one of your tables. If you're using the Sample data, then set it to the Product table:  
 
 	![Items property](./media/connection-azure-sqldatabase/itemsproperty.png)
 
@@ -223,4 +223,5 @@ None.
 
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.  
-[Understand tables and records] (../working-with-tables.md) with tabular data sources.
+[Understand tables and records] (../working-with-tables.md) with tabular data sources.  
+Some additional gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).  
