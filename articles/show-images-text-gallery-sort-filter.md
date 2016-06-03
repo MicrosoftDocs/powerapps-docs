@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/25/2015"
+   ms.date="06/02/2015"
    ms.author="mandia"/>
 
 
@@ -26,21 +26,21 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 > [AZURE.NOTE] This topic uses a tablet app. You can use a phone app but you will need to resize some of the controls.
 
 ### Prerequisites
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- Create a tablet app or open an existing tablet app in PowerApps.
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
+- Create a tablet app from a [template](../articles/get-started-test-drive.md), from [data](../articles/get-started-create-from-data.md), or from [scratch](../articles/get-started-create-from-blank.md).
+- Learn how to [configure a control](add-configure-controls.md).
 - These steps use the [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpg images. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
 ## Show data in a gallery
 
 1. Create a collection named **Inventory** using the sample data. Steps include:  
-	a) On the **Insert** tab, select **Controls**, and then select **Import**:  
+	1. On the **Insert** tab, select **Controls**, and then select **Import**:  
 	![][1]  
-	b) Set the **[OnSelect](controls/properties-core.md)** property of the import control to the following expression:  
+	2. Set the **[OnSelect](controls/properties-core.md)** property of the import control to the following expression:  
 	```Collect(Inventory, Import1!Data)```  
 	![][12]  
-	c) Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  	
-	d) In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
+	3. Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  	
+	4. In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
 	![][3]  
 
 	You've just created the Inventory collection, which contains information about five products, including a design image, the name of the product, and the number of units in stock.
@@ -108,9 +108,9 @@ In these steps, we are going to sort the gallery items in ascending and descendi
 1. Add a Slider control (**Insert** tab > **Controls**), rename it to **StockFilter**, and move it under the gallery.
 2. Configure the slider so that users can't set it to a value outside the range of units in stock:  
 
-	a) On the **Content** tab, select **Min**, and then enter the following expression:  
+	1. On the **Content** tab, select **Min**, and then enter the following expression:  
 	```Min(Inventory, UnitsInStock)```  
-	b) On the **Content** tab, select **Max**, and then enter the following expression:  
+	2. On the **Content** tab, select **Max**, and then enter the following expression:  
 	```Max(Inventory, UnitsInStock)```
 
 3. Select any item in the gallery *except* the first one. Set the **[Items](controls/properties-core.md)** property of the gallery to the following expression:  
