@@ -69,7 +69,7 @@
 | Task Outcome | No |
 | External data | No |
 
-> [AZURE.NOTE] For the column types marked as *Yes (read-only)*, full support is coming soon.
+	**Note**: For the column types marked as *Yes (read-only)*, full support is expected soon.
 
 1. **PowerApps doesn't support columns that support multiple values or selections.**
 
