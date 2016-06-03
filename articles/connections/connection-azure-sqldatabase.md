@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Azure SQL Database connection | Microsoft PowerApps"
 	description="See the available Azure SQL Database functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="MandiOhlinger"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -24,23 +24,27 @@ ms.author="mandia"/>
 
 Azure SQL Database provides an API to work with SQL tables.
 
-You can connect to an Azure SQL Database and display this information in your app. For example, you can use the gallery controls to display all the rows in a SQL table, or display a single row from a single table. 
+You can connect to an Azure SQL database and display this information in your app. For example, you can use the gallery controls to display all the rows in a SQL table, or display a single row from a single table.
 
-This topic shows you how to add Azure SQL database as a connection, add SQL database as a data source to your app, and use table data in a gallery control.
+This topic shows you how to add Azure SQL Database as a connection, add a SQL database as a data source to your app, and use table data in a gallery control.
 
 &nbsp;
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-- An Azure SQL Database with its user name and password. You can use these steps at [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database. When you create the SQL database, we suggest you add the **Sample data**. 
+- An Azure SQL database with its user name and password. You can use these steps at [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database. When you create the SQL database, we suggest you add the **Sample data**.
 
 ## Get the connection string
 
 1. In the [Azure portal](https://portal.azure.com/), select **SQL databases**:  
+
 	![SQL Databases](./media/connection-azure-sqldatabase/sqldatabase.png)
 2. Select your SQL database from the list. If you don't have one, go to [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database.
+
 3. When you select it, the properties open. Select **Show database connection strings**:  
+
 	![SQL database properties](./media/connection-azure-sqldatabase/properties.png)
 4. Copy the **ADO.NET (SQL authentication)** connection string:  
+
 	![ADO.NET connection string](./media/connection-azure-sqldatabase/adonetconnectionstring.png)
 
 5. Paste the connection string in a text editor, and then look for the following properties:  
@@ -56,36 +60,40 @@ This topic shows you how to add Azure SQL database as a connection, add SQL data
 
 Keep this connection string nearby. You need it to create the connection in PowerApps.
 
-## Connect to SQL database and enter your connection string
+## Connect to a SQL database and enter your connection string
 
 1. At [powerapps.com](https://web.powerapps.com), expand **Manage**, and select **Connections**:  
+
 	![Azure SQL Database](./media/connection-azure-sqldatabase/connections.png)
 2. Select **New connection**, and select **SQL Azure**.
-3. You are prompted for the connection string. Paste in the connection string you updated in the previous section, and then select **Add connection**:  
+3. When prompted, paste in the connection string you updated in the previous section, and then select **Add connection**:  
+
 	![Paste connection string](./media/connection-azure-sqldatabase/enterconnectionstring.png)
 
-	It's added to the connection list.  
+	The connect is added to the list.  
 4. Open your app, and add SQL Azure as a [data source](../add-data-connection.md). Select **default**, and then you should see your tables. The following example uses the Sample data:  
 
 	![Azure SQL Database](./media/connection-azure-sqldatabase/tables.png)
-5. Select some tables (e.g. Product, Customer), and then select **Connect**. The tables are now listed as a data source. 
+5. Select some tables (e.g., Product, Customer), and then select **Connect**. The tables are now listed as a data source.
 
 ## Using the tables in your app
 
-The SQL database connection is a "tabular" data source. As a result, use galleries to display the data from your tables. These steps use the Sample data in the SQL database, and uses the Product table.
+A SQL database connection is a "tabular" data source. As a result, use galleries to display the data from your tables. These steps use the Sample data in the SQL database, and uses the Product table.
 
-1. On the **Insert** menu, select **Gallery**, and add any of the **With text** galleries.
+1. On the **Insert** tab, select **Gallery**, and then select a **Text gallery** control.
 2. Set the **[Items](../controls/properties-core.md)** property of the gallery to one of your tables. If you're using the Sample data, then set it to the Product table:  
 
 	![Items property](./media/connection-azure-sqldatabase/itemsproperty.png)
 
-3. A gallery has different parts. You can select these different parts, and set the part's Text property to `ThisItem.something`. For example, set the first part to `ThisItem.Name`, the second part to `ThisItem.ProductNumber`, and the third part to `ThisItem.ListPrice`:  
+3. In the gallery, select any **Text box** control, and set its **Text** property to `ThisItem.something`. For example, set the top text box to `ThisItem.Name`, the middle text box to `ThisItem.ProductNumber`, and the bottom text box to `ThisItem.ListPrice`:  
+
 	![Items property](./media/connection-azure-sqldatabase/galleryparts.png)
 
-	When you set the different parts, the Text Box properties displays the following:  
+	If you open the **Options** pane, the **Text** property of each text box appears:  
+
 	![Text box property](./media/connection-azure-sqldatabase/optionsproperties.png)
 
-The gallery is updated with the information in the Product table. 
+The gallery is updated with the information in the Product table.
 
 [Understand tables and records](../working-with-tables.md) provides more details and some examples.  
 
@@ -107,7 +115,7 @@ This connection includes the following functions:
 
 
 ### ExecuteProcedure
-Execute stored procedure: Executes a stored procedure in SQL 
+Execute stored procedure: Executes a stored procedure in SQL
 
 #### Input properties
 
@@ -127,7 +135,7 @@ Result of the stored procedure execution.
 
 
 ### GetItems
-Get rows: Retrieves rows from a SQL table 
+Get rows: Retrieves rows from a SQL table
 
 #### Input properties
 
@@ -140,7 +148,7 @@ Get rows: Retrieves rows from a SQL table
 |$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
 
 ### PostItem
-Insert row: Inserts a new row into a SQL table 
+Insert row: Inserts a new row into a SQL table
 
 #### Input properties
 
@@ -157,7 +165,7 @@ Insert row: Inserts a new row into a SQL table
 
 
 ### GetItem
-Get row: Retrieves a single row from a SQL table 
+Get row: Retrieves a single row from a SQL table
 
 #### Input properties
 
@@ -174,7 +182,7 @@ Get row: Retrieves a single row from a SQL table
 
 
 ### DeleteItem
-Delete row: Deletes a row from a SQL table 
+Delete row: Deletes a row from a SQL table
 
 #### Input properties
 
@@ -184,11 +192,11 @@ Delete row: Deletes a row from a SQL table
 |id|string|yes|Unique identifier of the row to delete|
 
 #### Output properties
-None. 
+None.
 
 
 ### PatchItem
-Update row: Updates an existing row in a SQL table 
+Update row: Updates an existing row in a SQL table
 
 #### Input properties
 
@@ -206,10 +214,10 @@ Update row: Updates an existing row in a SQL table
 
 
 ### GetTables
-Get tables: Retrieves tables from a SQL database 
+Get tables: Retrieves tables from a SQL database
 
 #### Input properties
-None. 
+None.
 
 #### Output properties
 
@@ -223,5 +231,5 @@ None.
 
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.  
-[Understand tables and records] (../working-with-tables.md) with tabular data sources.  
+[Understand tables and records](../working-with-tables.md) with tabular data sources.  
 Some additional gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).  
