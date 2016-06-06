@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="06/02/2016"
+ms.date="06/06/2016"
 ms.author="mandia"/>
 
 #  Azure SQL Database
@@ -31,7 +31,8 @@ This topic shows you how to add Azure SQL Database as a connection, add a SQL da
 &nbsp;
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-- An Azure SQL database with its user name and password. You can use these steps at [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database. When you create the SQL database, we suggest you add the **Sample data**.
+- An Azure SQL database with its user name and password. You can use these steps at [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database. When you create the SQL database, we suggest you add the **Sample data**. 
+- A table with a primary key stored in the SQL database.
 
 ## Get the connection string
 
@@ -70,7 +71,7 @@ Keep this connection string nearby. You need it to create the connection in Powe
 
 	![Paste connection string](./media/connection-azure-sqldatabase/enterconnectionstring.png)
 
-	The connect is added to the list.  
+	The connection is added to the list.  
 4. Open your app, and add SQL Azure as a [data source](../add-data-connection.md). Select **default**, and then you should see your tables. The following example uses the Sample data:  
 
 	![Azure SQL Database](./media/connection-azure-sqldatabase/tables.png)
