@@ -103,7 +103,7 @@ This should setup AAD authentication for you web app.
       "type": "oauth2",
       "flow": "implicit",
       "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
-      "scopes": []
+      "scopes": {}
     }
   },
 	```
