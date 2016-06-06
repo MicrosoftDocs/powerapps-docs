@@ -27,7 +27,7 @@ PowerApps offers several cloud storage connections. Using these connections, you
 
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-- An Excel file with the data [formatted as a table](common-issues-and-resolutions.md).
+- An Excel file with the data formatted as a table. [Create an app from scratch](../get-started-create-from-blank.md) lists the steps.
 
 
 ## Connect to the cloud storage connection
