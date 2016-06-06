@@ -22,32 +22,11 @@
 
 Create an app for adding, updating, and deleting data in a SharePoint list. Specify the list, create the app automatically, and then specify which data you want to show. Test the app by displaying, sorting, filtering, and updating data.
 
+For information about the types of SharePoint data from which you can create an app and other details/limitations, see [Common issues and resolutions](common-issues-and-resolutions.md#create-an-app-from-sharepoint).
+
 ## Prerequisites
 
 - [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
-- PowerApps only supports creating apps for SharePoint Online custom lists. Document libraries are currently not supported, but will be soon.
-- Check to make sure that your list only contains columns supported by PowerApps. The following table lists the column types that are supported by PowerApps:  
-
-	| SharePoint online list column type | Supported by PowerApps |
-|---|---|
-| Boolean (Yes/No) | Yes |
-| Single line of text | Yes |
-| Number | Yes |
-| Hyperlink | Yes |
-| Multiple lines of text | Yes |
-| Date and Time | Yes |
-| Currency | Yes |
-| Picture | Yes (read-only) |
-| Lookup | Yes (read-only) |
-| Person or Group | Yes (read-only) |
-| Managed Metadata | Yes (read-only) |
-| Choice | Yes (read-only) |
-| Calculated | Yes (read-only) |
-| Task Outcome | No |
-| External data | No |
-
-
-> [AZURE.NOTE] For the column types marked as *Yes (read-only)*, full support is coming soon. 
 
 ## Create an app ##
 1. In PowerApps, select **New** (near the left edge of the screen).  
@@ -75,7 +54,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	PowerApps builds an app that has three screens:  
 	<!-- **Edit form** control add-form.md -->
-	
+
 	- **BrowseScreen1** shows a list of all items and some information about the items, so that users can easily browse for the item they want.  
 	- **DetailScreen1** shows all information about a single item.  
 	- **EditScreen1** provides an **[Edit form](add-form.md)** control for adding an item or updating information about an item.  
@@ -104,23 +83,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 5. In the **Options** pane, you can use the card selector to change the control that is used to display this field in the **DetailsScreen1**.  
 ![](./media/app-from-sharepoint/CardSelector.png)  
 
-	The following tables lists the supported cards for each SharePoint Online list column type:  
-
-	| SharePoint online list column type | Supported Cards |
-|---|---|
-| Yes/No | View text <br/>View toggle |
-| Number | View percentage <br/>View rating <br/>View text |
-| Hyperlink | View URL <br/>View text |
-| Single line of text | View text |
-| Multiple lines of text | View text |
-| Date and Time | View text |
-| Currency | View percentage <br/>View rating <br/>View text |
-| Picture | View image <br/>View text |
-| Lookup | View lookup |
-| Person or Group | View lookup |
-| Managed Metadata | View lookup |
-| Choice | View lookup |
-
+	For information about which types of column support which types of cards, see [Common issues and resolutions](common-issues-and-resolutions.md#create-an-app-automatically-from-sharepoint).
 
 6. If you select the **View lookup** card for a field, then you have the option to choose which property of the field is displayed in the card.  To do so, select the **Ellipsis** next to the field in the **Options** pane and select **Advanced Options**.  
 ![](./media/app-from-sharepoint/Elipsis.png)

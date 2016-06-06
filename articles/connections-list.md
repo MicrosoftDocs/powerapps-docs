@@ -15,7 +15,7 @@
 	ms.tgt_pltfrm="na"
 	ms.devlang="na"
 	ms.topic="get-started-article"
-	ms.date="05/19/2016"
+	ms.date="06/06/2016"
 	ms.author="mandia"/>
 
 # Connections list
@@ -24,7 +24,7 @@ PowerApps includes many connections that provide easy connectivity to some of th
 
 This topic lists the currently available connections that can be used within your apps. To learn more about the different functions available with each connection, select an icon. 
 
-Just getting started with PowerApps? Learn [how to add connections](add-manage-connections.md) in your apps.
+Just getting started with adding connections in PowerApps? Learn how to [add connections](add-manage-connections.md) and [add data sources](add-data-connection.md) in your apps.
 
 ## Available connections
 
@@ -51,21 +51,26 @@ You can also create your own custom APIs, and then add these connections within 
 
 <!--API Documentation-->
 [azureblobdoc]: ./connections/connection-azure-blob.md "Connect to Azure blob to manage files in your blob container."
-[boxDoc]: ./connections/connection-box.md "Connects to Box and can upload, get, delete, list, and more file tasks."
+[boxDoc]: ./connections/cloud-storage-blob-connections.md "Connects to Box and display data from an Excel table."
+[boxDoc_original]: ./connections/connection-box.md "Connects to Box and can upload, get, delete, list, and more file tasks."
 [crmonlinedoc]: ./connections/connection-dynamics-crmonline.md "Connect to Dynamics CRM Online and do more with your CRM Online data."
-[dropboxdoc]: ./connections/connection-dropbox.md "Connect to Dropbox and can get, delete, list, and more file tasks."
+[dropboxdoc]: ./connections/cloud-storage-blob-connections.md "Connect to Dropbox and display data from an Excel table."
+[dropboxdoc_original]: ./connections/connection-dropbox.md "Connect to Dropbox and can get, delete, list, and more file tasks."
 [exceldoc]: ./connections/connection-excel.md "Connect to Excel."
 [facebookdoc]: ./connections/connection-facebook.md "Connect to Facebook to post to a timeline, get a page feed, and more."
 [ftpdoc]: ./connections/connection-ftp.md "Connects to an FTP / FTPS server and do different FTP tasks, including uploading, getting, deleting files, and more."
-[googledrivedoc]: ./connections/connection-googledrive.md "Connect to GoogleDrive and interact with your data."
+[googledrivedoc]: ./connections/cloud-storage-blob-connections.md "Connect to GoogleDrive and display data from an Excel table."
+[googledrivedoc_original]: ./connections/connection-googledrive.md "Connect to GoogleDrive and interact with your data."
 [githubdoc]: ./connections/connection-github.md "Connect to GitHub to manage your issues."
 [mailchimpdoc]: ./connections/connection-mailchimp.md "Connect to MailChimp to create new campaigns, manage your lists, and more"
 [microsofttranslatordoc]: ./connections/connection-microsoft-translator.md "Connect to Microsoft Translator and translate your text to different languages"
 [office365outlookdoc]: ./connections/connection-office365-outlook.md "The Office 365 Connector can send and receive emails, manage your calendar, and manage your contacts using your Office 365 account."
 [office365usersdoc]: ./connections/connection-office365-users.md "Connect to Office 365 Users to look up manager information, view profiles, and more"
 [office365videodoc]: ./connections/connection-office365-video.md "Connect to Office 365 to check the status of a video, return channels, and more"
-[onedrivedoc]: ./connections/connection-onedrive.md "Connects to your personal Microsoft OneDrive and upload, list files, and more."
-[onedriveforbusinessdoc]: ./connections/connection-onedrive-for-business.md "Connects to your Microsoft OneDrive for Business account to upload, list files, and more."
+[onedrivedoc]: ./connections/cloud-storage-blob-connections.md "Connects to your personal Microsoft OneDrive and display data from an Excel table."
+[onedrivedoc_original]: ./connections/connection-onedrive.md "Connects to your personal Microsoft OneDrive and upload, list files, and more."
+[onedriveforbusinessdoc]: ./connections/cloud-storage-blob-connections.md "Connects to your Microsoft OneDrive for Business account and display data from an Excel table."
+[onedriveforbusinessdoc_original]: ./connections/connection-onedrive-for-business.md "Connects to your Microsoft OneDrive for Business account to upload, list files, and more."
 [salesforcedoc]: ./connections/connection-salesforce.md "Connect to your Salesforce account and manage  accounts, opportunities, and more."
 [servicebusdoc]: ./connections/connection-azure-servicebus.md "Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions."
 [sendgriddoc]: ./connections/connection-sendgrid.md "Connect to SendGrid to send email and manage recipient lists"

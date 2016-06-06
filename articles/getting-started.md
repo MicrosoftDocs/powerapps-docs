@@ -31,7 +31,7 @@ Each sample app is designed for a specific purpose, such as managing a budget, i
 If you create an app or a co-worker shares an app with you, you'll also find those apps on the **Home** tab of [powerapps.com](https://web.powerapps.com).
 
 ## Generate an app from your data ##
-To create your own apps, [install PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer.
+To create your own apps, [install PowerApps Studio](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer.
 
 You can [automatically generate an app](get-started-create-from-data.md) that's designed specifically for your data, whether it's in:
 
@@ -40,7 +40,9 @@ You can [automatically generate an app](get-started-create-from-data.md) that's 
 - Salesforce or Microsoft Dynamics CRM Online
 - a SQL Azure table
 
-![PowerApps home page](./media/getting-started/afd.png)
+**Watch this video for a quick demo**:
+
+[AZURE.VIDEO nb:cid:UUID:9380084d-bc9a-484f-960e-4554c6bf67b2]
 
 PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. Add your own touches by [customizing the app](get-started-create-from-data.md#customize-the-app).
 

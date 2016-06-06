@@ -19,9 +19,18 @@
 
 # Release notes for PowerApps release 2.0.430 #
 
+For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
 1. **Update required for PowerApps Studio and PowerApps Mobile**.
 
 	Due to an internal change, you must install this update to continue to create and edit apps in PowerApps Studio and run apps in PowerApps Mobile.
+
+	For Windows 8 and Windows 8.1:
+
+	1.	Open the app for the Windows Store.
+	1.	Open the settings for that app.<br>For example, press the Windows key and the “c” key simultaneously, and then select **Settings**.
+	1.	Select  **App updates**, and then select **Check for updates**.
+	1.	In the screen that appears, select **Install** for PowerApps.
 
 1. **Enhanced delegation for large data sets.**
 
@@ -150,7 +159,7 @@
 
 ### Connections ###
 
-With this release, we [support a wide assortment of connections](connections-list.md) including:
+This release supports these connections, among [many others](connections-list.md):
 
 - SharePoint
 - Office 365
@@ -163,50 +172,3 @@ With this release, we [support a wide assortment of connections](connections-lis
 - Twilio
 - Yammer
 - Twitter
-- and many more
-
-### Known limitations ###
-1. **On Apple iPhone 6 Plus devices, an incorrect icon appears for PowerApps.**
-
-	An update has been submitted and should appear soon.
-
-1.  **For apps created from data, the field used for sorting and searching isn't automatically configured.**
-
-	To configure this field, edit the **[Items](controls/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
-
-2. **Co-authoring isn't supported. One author at a time, please.**
-
-	You can corrupt an app or over-write others’ changes if more than one person modifies the same app at the same time. Close the app before someone else edits it.
-
-3. **In the [Form control](controls/control-form-detail.md), you can't change data by using a custom card.**
-
-	The stock custom card is missing the **[Update](controls/control-card.md)** property, which is required to write back changes. To work around this:
-	- Select the form control, and insert a card by using the right-hand pane based on the field that you want the card to show.  
-	- Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card).
-	- Remove or rearrange controls within the card as you see fit, just as you would with the custom card.   
-
-4. **For apps that are created from data, only the first 500 records of a data source can be accessed.**
-
-	In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](functions/function-filter-lookup.md) article for more details about delegation.  
-
-	In this release, delegation doesn't support **[Filter](functions/function-filter-lookup.md)** and **[Sort](functions/function-sort.md)** functions used together, nor does it support the **[In](functions/operators.md#in-and-exactin-operators)** operator.  These features are used by apps that are created from data, so these apps are limited to the first 500 records. To partially work around this issue, you can remove one or both of the Filter and Sort functions from the gallery's **[Items](controls/properties-core.md)** property.
-
-5. **Card gallery is deprecated.**
-
-	Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
-
-5. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash.**
-
-	Users can fix this problem by updating to a lower version of Webview (3x) or update to Android 6.0.
-
-6. **Camera usage may be temporarily disabled if memory is low.**
-
-	If your mobile device is low on memory, the camera is temporarily disabled to avoid crashing the device.
-
-8. **It can sometimes take a moment before a newly shared app can be used.**
-
-	In some cases, a newly shared app won't be immediately available.  Wait a few moments, and it should become available.
-
-9. **Sharing an app for editing doesn't also share the flows.**
-
-	You must share the flows separately so that others can edit them, not just run them.
