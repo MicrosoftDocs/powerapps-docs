@@ -15,10 +15,10 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/11/2016"
+   ms.date="06/06/2016"
    ms.author="anneta"/>
 
-# Show data from Microsoft Translator in PowerApps #
+# Show data from Microsoft Translator in PowerApps
 
 Connect to Microsoft Translator, translate text into another language, and play an audio version of the translation.
 
@@ -26,69 +26,72 @@ Connect to Microsoft Translator, translate text into another language, and play 
 
 Know how to [add and configure a control](add-configure-controls.md).
 
-## Connect to Microsoft Translator ##
-1.  Open PowerApps, select **New** on the **File** menu (near the left edge), and then select **Get started** under **Start from scratch**.
+## Connect to Microsoft Translator
+1.  Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
 
 	![Open a blank app](./media/show-translator-data/blank-app.png)
 
-1. In the lower-right corner, select **Options**, and then select **Insert your data**.
+2. In the lower-right corner, select **Options**, and then select **Add data source**.
 
-	![Insert a data source](./media/show-translator-data/insert-data.png)
+3. Select **Add connection**, and then select **Microsoft Translator**:  
 
-1. Select **Available connections**, and then select **Microsoft Translator**.
+	![Connect to Microsoft Translator](./media/show-translator-data/addconnection.png)
 
 	![Connect to Microsoft Translator](./media/show-translator-data/add-translator.png)
 
-1. Select **Connect**, and then select **Add Data Source**.
+4. Select **Connect**. Your connection appears under **Data sources**:  
 
-	Your connection appears under **Data sources**.
+	![Connect to Microsoft Translator](./media/show-translator-data/translatordatasource.png)
 
-1. Close the **Options** pane by selecting the **X** in its upper-right corner.
+5. Close the **Screen** pane by selecting the **X** in its upper-right corner:  
 
 	![Close the Options pane](./media/show-translator-data/close-options.png)
 
-## Translate text ##
-1. Add a text-input control, and rename it **Source**.
+## Translate text
+1. On the **Insert** menu, select **Text**, and then select **Text input**. Rename the text input control to **Source**:  
 
-1. Add a drop-down list, rename it **TargetLang**, and move it below the **Source** box.
+	![Rename](./media/show-translator-data/renametosource.png)
 
-1. Set the **[Items](controls/properties-core.md)** property of **TargetLang** to this formula:<br>
-**microsofttranslator.Languages()**
+2. Add a **Drop down** list (**Insert** menu > **Controls**), rename it to **TargetLang**, and move it below **Source**. 
 
-1. Add a text box, move it below **TargetLang**, and set the text box's **[Text](controls/properties-core.md)** property to this formula:
-<br>**microsofttranslator.Translate(Source.Text, TargetLang.Selected.Value)**
+3. Set the **[Items](controls/properties-core.md)** property of **TargetLang** to the following formula:  
 
-1. Type text into **Source**, and select a language in **TargetLang**.
+	`MicrosoftTranslator.Languages()`
 
-	The text box shows the text that you specified in the language that you specified.
+4. Add a text box, move it below **TargetLang**, and set its **[Text](controls/properties-core.md)** property to the following formula:  
 
-	![Translate text from English to French](./media/show-translator-data/translate-text.png)
+	`MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
 
-## Speak translated text ##
-1. If you haven't already, follow the steps in the previous procedure for translating text.
+5. Type some text into **Source**, and select a language in **TargetLang**. The text box shows the text that you entered in the language you chose:  
 
-1. Set the **[Items](controls/properties-core.md)** property of the **TargetLang** drop-down list to this formula:<br>
-**microsofttranslator.SpeechLanguages()**
+	![Translate text from English to Spanish](./media/show-translator-data/translate-text.png)
 
-1. Rename the text box (not the **Source** box) to **Target**.
+## Speak translated text
+If you haven't already, follow the steps in the previous section to translate some text. These next steps use the same controls. 
 
-1. Add an audio control, and set its **Media** property to this formula:<br>
-**microsofttranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)**
+1. Set the **[Items](controls/properties-core.md)** property of the **TargetLang** drop-down list to the following formula:  
+	
+	`MicrosoftTranslator.SpeechLanguages()`
 
-1. Press F5, type text into **Source**, select an option in **TargetLang**, and then select the play button in the audio control.
+2. Rename the second text box (not the **Source** box) to **Target**.
 
-	The app plays an audio version of the text that you specified in the language that you specified.
+3. Add an **Audio** control (**Insert** menu > **Media**), and set its **Media** property to the following formula:  
 
-1. Press Esc to return to the default workspace.
+	`MicrosoftTranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)`
 
-## Detect the source language ##
-1. Add a text-input control, and name it **Source**.
+4. Press F5, or select the Preview button (![](./media/show-translator-data/preview.png)). Type some text into **Source**, select a language in **TargetLang**, and then select the play button in the audio control.
 
-1. Add a text box, and then move it under **Source**.
+	The app plays an audio version of the text that you entered in the language you chose.
 
-1. Set the **[Text](controls/properties-core.md)** property of the text box to this formula:
-<br>**microsofttranslator.Detect(Source.Text).Name**
+5. Press Esc to return to the default workspace.
 
-1. Type text into **Source**.
+## Detect the source language
+These next steps use the same **Source** text input and **Target** text controls. You can create new controls if you prefer, just update the names in the formula.
 
-	The text box indicates the language of the text that you typed. For example, the text box shows **French** if you type **bonjour** into **Source** or **Italian** if you type **ciao**.
+1. Select the **Target** text control, and set the **[Text](controls/properties-core.md)** property to the following formula:  
+
+	`MicrosoftTranslator.Detect(Source.Text).Name`
+
+2. Type some text into **Source**. 
+
+	The text box shows you the language of the text that you typed. For example, the text box shows **French** if you type **bonjour**, or **Italian** if you type **ciao**.
