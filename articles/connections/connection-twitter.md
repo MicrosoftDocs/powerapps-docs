@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Overview of the Twitter connection | Microsoft PowerApps"
-	description="See the available Twitter functions, responses, and examples"
+	description="See how to connect to Twitter, step through some examples, and see all the functions"
 	services=""	
 	suite="powerapps"
 	documentationCenter="" 	
