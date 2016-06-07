@@ -83,7 +83,7 @@ The text box shows the information that you entered about the current user.
 
 2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*. 
 
-3. Add a **text box** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
+3. Add a **Text box** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
 
 	- To show information about another user:  
 
@@ -290,4 +290,5 @@ Search for users: Retrieves search results of user profiles
 ## Helpful links
 
 See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.
+Learn how to [add connections](../add-manage-connections.md) to your apps.  
+Some gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).
