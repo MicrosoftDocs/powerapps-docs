@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Overview of the Azure SQL Database connection | Microsoft PowerApps"
-	description="See the available Azure SQL Database functions, responses, and examples"
+	description="See how to connect to Azure SQL Database, step through some examples, and see all the functions"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="06/06/2016"
+ms.date="06/07/2016"
 ms.author="mandia"/>
 
 #  Azure SQL Database
