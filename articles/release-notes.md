@@ -17,9 +17,23 @@
     ms.date="04/27/2016"
     ms.author="gregli"/>
 
-# Release notes for PowerApps release 2.0.430 #
+# Release notes for PowerApps release 2.0.440 #
 
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+1. **Options pane**.
+
+	We've consolidated the **Options** and **Quick Tools** panes, and the **Options** pane remains open all the time.
+
+1. **Edit lookup control**.
+
+	If you add and configure an **Edit Lookup** control in an **Edit form** control, users can add and update items in a SharePoint list that contains these types of columns:
+
+	- Lookup
+	- Person or Group
+	- Managed Metadata
+
+## Release notes for PowerApps release 2.0.430 ##
 
 1. **Update required for PowerApps Studio and PowerApps Mobile**.
 
