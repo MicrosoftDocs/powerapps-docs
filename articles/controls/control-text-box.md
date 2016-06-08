@@ -136,8 +136,6 @@ In this procedure, you'll create a collection, called **CityPopulations**, that 
 
 1. Add a text gallery, and set its **[Items](properties-core.md)** property to **CityPopulations**.
 
-1. With the gallery selected, click or tap **Quick Tools** near the lower-right corner.
+	When the gallery is selected, the right pane shows options for that gallery.
 
-1. If the **Content** tab of the **Quick Tools** pane isn't showing by default, click or tap it.
-
-1. In the **Content** tab, set the top list to **Population**, set the middle list to **City**, and set the bottom list to **Country**.
+1. In the **Gallery1** pane, set the top list to **Population**, set the middle list to **City**, and set the bottom list to **Country**.

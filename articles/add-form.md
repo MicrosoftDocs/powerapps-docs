@@ -43,16 +43,12 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
     This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**.
 
-1. If the **Options** pane isn't open, make sure that the form is still selected, and then select **Options** near the lower-right corner.
-
-	![Open Options pane](./media/add-form/open-options.png)
-
-1. For each field in the **Options** pane, select the option to show that field.
+1. In the right-hand pane, select the option to show each field.
 
 	![Show fields on form](./media/add-form/show-fields.png)
 
 ## Set the card type for a field ##
-1. In the **Options** pane, select the card selector for **Price**, and the select the **View text** option.
+1. In the right-hand pane, select the card selector for **Price**, and then select the **View text** option.
 
 	If you added a **[Display form](controls/control-form-detail.md)** control, you have these options, and this step changes the display from a percentage to a decimal number.
 

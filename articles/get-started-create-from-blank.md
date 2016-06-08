@@ -71,13 +71,7 @@ To follow this tutorial exactly:
 
 	![Option to create an app from data](./media/get-started-create-from-blank/create-from-blank.png)
 
-1. Near the lower-right corner, select **Options**.
-
-	![Connections option on the File menu](./media/get-started-create-from-blank/open-options.png)
-
-	The **Screen** tab of the **Options** pane appears.
-
-1. Under **Data Sources**, select **Add data source**, and then perform one of these steps:
+1. In the right-hand pane, click or tap the **Data sources** tab, click or tap **Add data source**, and then perform one of these steps:
 
 	- If you already have a connection to your cloud-storage account, select it.
 	- If you don't have a connection to your cloud-storage account, select **Add Connection**, select your account type, select **Connect**, and then provide your credentials.
@@ -141,7 +135,7 @@ To follow this tutorial exactly:
 
 	`BrowseGallery1.Selected`
 
-1. For each field in the **Options** pane, select the option to show that field.
+1. In the right-hand pane, select the option to show each field.
 
 	![Show fields on form](./media/get-started-create-from-blank/show-fields.png)
 
