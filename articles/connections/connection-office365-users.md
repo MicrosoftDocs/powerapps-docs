@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Overview of the Office 365 users connection | Microsoft PowerApps"
-	description="See the available Office 365 Users functions, responses, and examples"
+	description="See how to connect to Office 365 users, step through some examples, and see all the functions"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/01/2016"
+   ms.date="06/07/2016"
    ms.author="mandia"/>
 
 # Office 365 Users
@@ -26,11 +26,124 @@ Office 365 Users lets you access user profiles in your organization using your O
 
 You can display this information in a text box on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
 
-This topic shows the available functions.
+This topic shows you how to add Office 365 Users as a connection, add Office 365 Users as a data source to your app, and use table data in a gallery control.
 
 &nbsp;
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+
+
+## Connect to Office 365
+1.  Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
+
+	![Open a blank app](./media/connection-office365-users/blank-app.png)
+
+2. In the lower-right corner, select **Options**, and then select **Add data source**.
+
+3. Select **Add connection**, and then select **Office 365 Users**:  
+
+	![Connect to Office 365](./media/connection-office365-users/addconnection.png)
+
+	![Connect to Office 365](./media/connection-office365-users/add-office.png)
+
+4. Select **Connect**, and if prompted to sign in, enter your work account. Your connection is listed under **Data sources**. If it's not listed, select **Add Data Source**, and select **Office 365 Users**.
+
+5. Close the **Options** pane by selecting the **X** in its upper-right corner:  
+
+	![Close the Options pane](./media/connection-office365-users/close-options.png)
+
+The Office 365 Users connection has been created, and added to your app. Now, it's ready to be used.
+
+
+## Use the Office 365 Users connection in your app
+
+
+### Show information about the current user
+1. On the **Insert** menu, select **Text box**
+2. In the function bar, set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
+
+	`Office365Users.MyProfile().Department`  
+	`Office365Users.MyProfile().DisplayName`  
+	`Office365Users.MyProfile().GivenName`  
+	`Office365Users.MyProfile().Id`  
+	`Office365Users.MyProfile().JobTitle`  
+	`Office365Users.MyProfile().Mail`  
+	`Office365Users.MyProfile().MailNickname`  
+	`Office365Users.MyProfile().Surname`  
+	`Office365Users.MyProfile().TelephoneNumber`  
+	`Office365Users.MyProfile().UserPrincipalName`  
+	`Office365Users.MyProfile().AccountEnabled`  
+
+The text box shows the information that you entered about the current user.
+
+### Show information about another user
+1. On the **Insert** menu, select **Text**, and then select **Text input**. Rename it **InfoAbout**:  
+
+	![Rename control](./media/connection-office365-users/renameinfoabout.png)
+
+2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*. 
+
+3. Add a **Text box** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
+
+	- To show information about another user:  
+
+		`Office365Users.UserProfile(InfoAbout.Text).Department`  
+		`Office365Users.UserProfile(InfoAbout.Text).DisplayName`  
+		`Office365Users.UserProfile(InfoAbout.Text).GivenName`  
+		`Office365Users.UserProfile(InfoAbout.Text).Id`  
+		`Office365Users.UserProfile(InfoAbout.Text).JobTitle`  
+		`Office365Users.UserProfile(InfoAbout.Text).Mail`  
+		`Office365Users.UserProfile(InfoAbout.Text).MailNickname`  
+		`Office365Users.UserProfile(InfoAbout.Text).Surname`  
+		`Office365Users.UserProfile(InfoAbout.Text).TelephoneNumber`  
+		`Office365Users.UserProfile(InfoAbout.Text).UserPrincipalName`  
+		`Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
+
+	- To show information about another user's manager:  
+	
+		`Office365Users.Manager(InfoAbout.Text).Department`  
+		`Office365Users.Manager(InfoAbout.Text).DisplayName`  
+		`Office365Users.Manager(InfoAbout.Text).GivenName`  
+		`Office365Users.Manager(InfoAbout.Text).Id`  
+		`Office365Users.Manager(InfoAbout.Text).JobTitle`  
+		`Office365Users.Manager(InfoAbout.Text).Mail`  
+		`Office365Users.Manager(InfoAbout.Text).MailNickname`  
+		`Office365Users.Manager(InfoAbout.Text).Surname`  
+		`Office365Users.Manager(InfoAbout.Text).TelephoneNumber`  
+		`Office365Users.Manager(InfoAbout.Text).UserPrincipalName`  
+		`Office365Users.Manager(InfoAbout.Text).AccountEnabled`  
+
+The text box shows the information that you entered about the user you entered and that user's manager.
+
+### Show the direct reports of another user
+1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **InfoAbout**.
+
+2. In **InfoAbout**, enter the email address of a user in your organization. For example, enter *yourManagersName*@*yourCompany.com*
+
+3. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
+
+	`Office365Users.DirectReports(InfoAbout.Text)`
+
+	The gallery shows information about the direct reports of the user you entered.
+
+4. With the gallery still selected, select **Options** in the lower-right corner. In the second list, select **JobTitle**. In the third list, select **DisplayName**. The gallery is updated to show these values.  
+
+	<br/>**NOTE** The first box is actually an image control. If you don't have an image, then you can delete the image control, and add a text box in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
+
+
+### Search for users
+1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name. 
+
+2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
+
+	`Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
+
+	The gallery shows users whose name contains the search text you entered.
+
+3. With the gallery still selected, select **Options** in the lower-right corner. In the second list, select **Mail**. In the third list, select **DisplayName**. 
+
+	The second and third text boxes in the gallery are updated. 
+
 
 ## View the available functions
  
@@ -45,7 +158,7 @@ This connection includes the following functions:
 |[SearchUser](connection-office365-users.md#searchuser) | Retrieves search results of user profiles |
 
 
-## MyProfile
+### MyProfile
 Get my profile: Retrieves the profile for the current user.
 
 #### Input properties
@@ -67,16 +180,8 @@ None.
 | UserPrincipalName  | string | User Principal Name. |
 | AccountEnabled  | boolean | Account enabled flag. |
 
-#### Examples
 
-1. In your app, go to the **Insert** tab, and select **Text box**.
-2. In the function bar, set the **[Text](../controls/properties-core.md)** property to any of the following formulas:  
-
-	`office365users.MyProfile().DisplayName`  
-	`Office365Users.MyProfile().Mail`
-
-
-## UserProfile
+### UserProfile
 Get user profile: Retrieves a specific user profile. 
 
 #### Input properties
@@ -101,17 +206,8 @@ Get user profile: Retrieves a specific user profile.
 | UserPrincipalName  | string | User Principal Name. |
 | AccountEnabled  | boolean | Account enabled flag. |
 
-#### Examples
 
-1. In your app, go to the **Insert** tab, and select **Text box**.
-2. In the function bar, set the **[Text](../controls/properties-core.md)** property to any of the following formulas:  
-
-	`Office365Users.UserProfile("useremail@microsoft.com").JobTitle`  
-`Office365Users.UserProfile(Office365Users.MyProfile().UserPrincipalName).Mail`  
-`Office365Users.UserProfile(Office365Users.MyProfile().Id).AccountEnabled`
-
-
-## Manager
+### Manager
 Get manager: Retrieves user profile for the manager of the specified user
 
 #### Input properties
@@ -136,16 +232,8 @@ Get manager: Retrieves user profile for the manager of the specified user
 | UserPrincipalName  | string | User Principal Name. |
 | AccountEnabled  | boolean | Account enabled flag. |
 
-#### Examples  
 
-1. In your app, go to the **Insert** tab, and select **Text box**.
-2. In the function bar, set the **[Text](../controls/properties-core.md)** property to any of the following formulas:  
-
-	`Office365Users.Manager(Office365Users.MyProfile().Id).DisplayName`  
-`Office365Users.Manager(Office365Users.MyProfile().Id).TelephoneNumber` 
-
-
-## DirectReports 
+### DirectReports 
 Get direct reports: Get direct reports
 
 #### Input properties
@@ -170,26 +258,8 @@ Get direct reports: Get direct reports
 | UserPrincipalName  | string | User Principal Name. |
 | AccountEnabled  | boolean | Account enabled flag. |
 
-#### Examples  
 
-1. In your app, go to the **Insert** tab, select **Gallery**, and under **text gallery**, select **Vertical**. 
-2. In the function bar, set the gallery's **[Items](../controls/properties-core.md)** property to any of the following formulas:  
-
-	`Office365Users.DirectReports("useremail@microsoft.com").DisplayName`  
-`Office365Users.DirectReports(Office365Users.MyProfile().Id).Mail`
-
-You can also use an **Input Text** control to enter a manager's email address, and then return her direct reports in the gallery. Steps:  
-
-1. On the **Insert** tab, select **Text**, and then select **Input text**.
-2. Rename the text-input control *infoAbout*, and then type in a manager's email address in that control.
-3. In the function bar, set the gallery's **[Items](../controls/properties-core.md)** property to the following formula:  
-
-	`Office365Users.DirectReports(infoAbout.Text).DisplayName`
-
-> [AZURE.TIP] We use a Gallery because the DirectReports function can return multiple results. 
-
-
-## SearchUser
+### SearchUser
 Search for users: Retrieves search results of user profiles
 
 #### Input properties
@@ -215,20 +285,10 @@ Search for users: Retrieves search results of user profiles
 | AccountEnabled  | boolean | Account enabled flag. |
 
 
-#### Examples
-1. In your app, go to the **Insert** tab, select **Text**, and then select **Input text**.
-2. Rename the text-input control *SearchTerm*, and then type a name in that control.
-3. On the **Insert** tab, select **Gallery**, and under **text gallery**, select **horizontal**.
-4. In the function bar, set the gallery's **[Items](../controls/properties-core.md)** property to the following formula:  
-
-	`office365users.SearchUser({searchTerm: SearchTerm.Text})`
-
-The gallery shows the search results you entered.
-
-> [AZURE.TIP] We use a Gallery because the SearchTerm function can return multiple results. 
 
 
 ## Helpful links
 
 See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.
+Learn how to [add connections](../add-manage-connections.md) to your apps.  
+Some gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).
