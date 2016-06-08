@@ -28,7 +28,7 @@ Create an app automatically based on an Excel file in the cloud, customize the a
 
 - [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
 - A Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business account into which you've saved [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial. The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
-- Format your Excel data as a table. [Create an app from scratch](get-started-create-from-blank.md) lists the steps. The sample Excel file is already formatted as a table. You can also use your own Excel data. 
+- Format your Excel data as a table. [Create an app from scratch](get-started-create-from-blank.md) lists the steps. The sample Excel file is already formatted as a table. You can also use your own Excel data.
 
 **Note** You can just as easily create an app based on a [SharePoint](app-from-sharepoint.md) list, Salesforce data, a table in Dynamics CRM, or another [data source](add-manage-connections.md).
 
@@ -81,13 +81,13 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	![Select first text box](./media/get-started-create-from-data/select-gallery-textbox.png)
 
-1. In the **Options** pane, select **Name** in the top list.
+1. In the right-hand pane, select **Name** in the top list.
 
     ![Set first text box](./media/get-started-create-from-data/set-gallery-textbox.png)
 
 1. In the design workspace, select the lower text box for the first item.
 
-1. In the **Options** pane, select **Category** in the bottom list.
+1. In the right-hand pane, select **Category** in the bottom list.
 
 	**BrowseScreen1** changes to show your selections.
 
@@ -109,7 +109,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
     ![EditScreen 1 Thumbnail](./media/get-started-create-from-data/edit-screen-thumbnail.png)
 
-1. In the **Options** pane, select the card selector for **Overview**.
+1. In the right-hand pane, select the card selector for **Overview**.
 
     ![Expand Card Selector](./media/get-started-create-from-data/card-selector.png)
 

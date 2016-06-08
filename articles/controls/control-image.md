@@ -113,11 +113,13 @@ If you add one or more **Image** controls to your app, you can show individual i
 ### Show a set of images from a data source ###
 1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
 
-1. In PowerApps, click or tap a screen in the left navigation bar, click or tap **Options** near the lower-right corner, and then click or tap **Insert your data**.
+1. In PowerApps, create or open an app, and then click or tap a screen in the left navigation bar.
 
-1. Click or tap **Import from Excel**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
+1. In the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
 
-1. In the right pane, click or tap the **Flooring Estimates** check box, and then click or tap **Insert**.
+1. Click or tap **Add static data to your app**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
+
+1. Select the **Flooring Estimates** check box, and then click or tap **Connect**.
 
 1. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
 
