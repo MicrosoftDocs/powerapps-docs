@@ -19,85 +19,85 @@
    ms.author="anneta"/>
 
 # Date Picker control in PowerApps #
-[AZURE.INCLUDE [control-summary-date-picker](../../includes/control-summary-date-picker.md)]
+A control that the user can click or tap to specify a date.
 
 ## Description ##
-If you add a **Date Picker** control instead of a **Text input** control, you help ensure that the user specifies a date in the correct format.
+If you add a **Date Picker** control instead of a **[Text input](control-text-input.md)** control, you help ensure that the user specifies a date in the correct format.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-startyear](../../includes/short-startyear.md)]
+**DefaultDate** – The initial value of a date control before it is changed by the user.
 
-[AZURE.INCLUDE [short-endyear](../../includes/short-endyear.md)]
+**SelectedDate** – The date currently selected in a date control.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-endyear](../../includes/short-endyear.md)]
+**EndYear** – The latest year to which the user can set value of a date-picker control.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-startyear](../../includes/short-startyear.md)]
+**StartYear** – The earliest year to which the user can set the value of a date-picker control.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**Year**( *DateTimeValue* )](function-datetime-parts.md)
+[**Year**( *DateTimeValue* )](../functions/function-datetime-parts.md)
 
 ## Example ##
 1. Add a **Date Picker** control, and name it **Deadline**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a **Text Box** control, and set its **Items** property to this formula:
+1. Add a **[Text Box](control-text-box.md)** control, and set its **[Items](properties-core.md)** property to this formula:
 <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
 
-	Want more information about the [**DateDiff** function](function-dateadd-datediff.md) or [other functions](formula-reference.md)?
+	Want more information about the **[DateDiff](../functions/function-dateadd-datediff.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, choose a date in **Deadline**, and then click or tap **OK**.
 
-	The **Text Box** control shows the number of days between today and the date that you chose.
+	The **[Text Box](control-text-box.md)** control shows the number of days between today and the date that you chose.
 
 1. To return to the default workspace, press Esc.

@@ -18,116 +18,112 @@
    ms.date="03/11/2016"
    ms.author="anneta"/>
 
-# Column and line charts in PowerApps #
-[AZURE.INCLUDE [control-summary-column-line-charts](../../includes/control-summary-column-line-charts.md)]
+# Column chart and Line chart controls in PowerApps #
+Controls that show data as graphs with x- and y-axes.
 
 ## Description ##
 By default, a **Column chart** control or a **Line chart** control comprises multiple controls grouped together. These controls show a title, data, and a legend.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[AZURE.INCLUDE [short-numberofseries](../../includes/short-numberofseries.md)]
+**NumberOfSeries** – How many columns of data are reflected in a column or line chart.
 
 ## All properties ##
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-gridstyle](../../includes/short-gridstyle.md)]
+**GridStyle** – Whether a column or line chart shows its x-axis, its y-axis, both, or neither.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-itemcolorset](../../includes/short-itemcolorset.md)]
+**ItemColorSet** – The color of each data point in a chart.
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+**ItemsGap** – The distance between columns in a column chart.
 
-[AZURE.INCLUDE [short-itemsgap](../../includes/short-itemsgap.md)]
+- The **ItemsGap** property is available for the **Column chart** control but not the **Line chart** control.
 
-- The **ItemsGap** property is available for column charts but not line charts.
+**Markers** – Whether a column or line chart shows the value of each data point.
 
-[AZURE.INCLUDE [short-markers](../../includes/short-markers.md)]
+**MarkerSuffix** – Text that appears after each value in a column chart for which the **Markers** property is set to **true**.
 
-[AZURE.INCLUDE [short-markersuffix](../../includes/short-markersuffix.md)]
+- The **MarkerSuffix** property is available for the **Column chart** control but not the **Line chart** control.
 
-- The **MarkerSuffix** property is available for column charts but not line charts.
+**MinimumBarWidth** – The narrowest possible width of columns in a column chart.
 
-[AZURE.INCLUDE [short-minimumbarwidth](../../includes/short-minimumbarwidth.md)]
+- The **MinimumBarWidth** property is available for the **Column chart** control but not the **Line chart** control.
 
-- The **MinimumBarWidth** property is available for column charts but not line charts.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-numberofseries](../../includes/short-numberofseries.md)]
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+**SeriesAxisMax** – The maximum value of the y-axis for a column or line chart.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+- The **SeriesAxisMax** property is available for the **Column chart** control but not the **Line chart** control.
 
-[AZURE.INCLUDE [short-seriesaxismax](../../includes/short-seriesaxismax.md)]
+**SeriesAxisMin** – A number that determines the minimum value of the y-axis for a column chart.
 
-- The **SeriesAxisMax** property is available for column charts but not line charts.
+- The **SeriesAxisMin** property is available for the **Column chart** control but not the **Line chart** control.
 
-[AZURE.INCLUDE [short-seriesaxismin](../../includes/short-seriesaxismin.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-- The **SeriesAxisMin** property is available for column charts but not line charts.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+**XLabelAngle** – The angle of the labels below the x-axis of a column or line chart.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
-[AZURE.INCLUDE [short-xlabelangle](../../includes/short-xlabelangle.md)]
+**YAxisMax** – The maximum value of the y-axis for a line chart.
 
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+- The **YAxisMax** property is available for the **Column chart** control but not the **Line chart** control.
 
-[AZURE.INCLUDE [short-yaxismax](../../includes/short-yaxismax.md)]
+**YAxisMin** – The minimum value of the y-axis for a line chart.
 
-- The **YAxisMax** property is available for line charts but not column charts.
+- The **YAxisMin** property is available for the **Column chart** control but not the **Line chart** control.
 
-[AZURE.INCLUDE [short-yaxismin](../../includes/short-yaxismin.md)]
-
-- The **YAxisMin** property is available for line charts but not column charts.
-
-[AZURE.INCLUDE [short-ylabelangle](../../includes/short-ylabelangle.md)]
+**YLabelAngle** – The angle of the labels next to the y-axis of a line or column chart.
 
 ## Related functions ##
 
-[**Max**( *DataSource*, *ColumnName* )](function-aggregates.md)
+[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## Example ##
-1. Add a **Button** control, and set its **OnSelect** property to this formula:<br>
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **Collect(Revenue, {Year:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Year:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Year:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, click or tap the **Button** control, and then press Esc to return to the default workspace.
+1. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.
 
-1. Add a **Column chart** control or a **Line chart** control, set its **Items** property to **Revenue**, and set its **NumberOfSeries** property to **3**.
+1. Add a **Column chart** control or a **Line chart** control, set its **[Items](properties-core.md)** property to **Revenue**, and set its **NumberOfSeries** property to **3**.
 
 	The control shows revenue data for each product over three years.

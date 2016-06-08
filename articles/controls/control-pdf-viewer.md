@@ -19,65 +19,76 @@
    ms.author="anneta"/>
 
 # PDF viewer control in PowerApps #
-[AZURE.INCLUDE [control-summary-pdf-viewer](../../includes/control-summary-pdf-viewer.md)]
+A control that shows the content of a PDF file.
 
 ## Description ##
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-document](../../includes/short-document.md)]
+**Document** – The URL, enclosed in double-quotation marks, of a PDF file.
 
-[AZURE.INCLUDE [short-page](../../includes/short-page.md)]
+## Additional properties ##
 
-## All properties ##
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**ActualZoom** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**CurrentFindText** – The current search term that is in use.
 
-[AZURE.INCLUDE [short-document](../../includes/short-document.md)]
+**CurrentPage** – The number of the page in a PDF file that is actually being shown.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**FindNext** – Finds the next instance of **FindText** in the document.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+**FindPrevious** – Finds the previous instance of **FindText** in the document.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+**FindText** – The search term to look for in the document.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-page](../../includes/short-page.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**OnStateChange** – How an app responds when the state of the control changes.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**Page** – The number of the page that you want to show.
 
-[AZURE.INCLUDE [short-zoom](../../includes/short-zoom.md)]
+**PageCount** – The number of pages in a document.
 
-## Related functions ##
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[**Remove**( *DataSource*, ThisItem )](function-remove-removeif.md)
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
+
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
+
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+
+**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
 
 ## Example ##
 - Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>
@@ -85,4 +96,4 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 	The control shows the PDF file.
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?

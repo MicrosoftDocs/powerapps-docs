@@ -18,135 +18,127 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Text-input control in PowerApps #
-[AZURE.INCLUDE [control-summary-text-input](../../includes/control-summary-text-input.md)]
+# Text input control in PowerApps #
+A box in which the user can type text, numbers, and other data.
 
 ## Description ##
 The user can specify data by typing into a text-input control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+## Additional properties ##
 
-## All properties ##
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-[AZURE.INCLUDE [short-align](../../includes/short-align.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**Clear** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.
 
-[AZURE.INCLUDE [short-clear](../../includes/short-clear.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+**HintText** – Light-grey text that appears in an input-text control if it's empty.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-hinttext](../../includes/short-hinttext.md)]
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**MaxLength** – The number of characters that the user can type into a text-input control.
 
-[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
+**Mode** – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
 
-[AZURE.INCLUDE [short-maxlength](../../includes/short-maxlength.md)]
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [short-mode](../../includes/short-mode.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+**[RadiusBottomLeft](properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**[RadiusBottomRight](properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiusbottomleft](../../includes/short-radiusbottomleft.md)]
+**[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiusbottomright](../../includes/short-radiusbottomright.md)]
+**[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-[AZURE.INCLUDE [short-radiustopleft](../../includes/short-radiustopleft.md)]
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-radiustopright](../../includes/short-radiustopright.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
-
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**DateTimeValue**( *String* )](function-datevalue-timevalue.md)
+[**DateTimeValue**( *String* )](../functions/function-datevalue-timevalue.md)
 
 ## Examples ##
 
 ### Collect data ###
 1. Add two text-input controls, and name them **inputFirst** and **inputLast**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a button, set its **Text** property to **Add**, and set its **OnSelect** property to this formula:<br>
+1. Add a button, set its **[Text](properties-core.md)** property to **Add**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Add a text gallery in portrait/vertical orientation, set its **Items** property to **Names**, and set the **Text** property of **Subtitle1** to **ThisItem.FirstName**.
+1. Add a text gallery in portrait/vertical orientation, set its **[Items](properties-core.md)** property to **Names**, and set the **[Text](properties-core.md)** property of **Subtitle1** to **ThisItem.FirstName**.
 
-1. (optional) In the template gallery, delete the bottom text box, named **Body1**, and set the **TemplateSize** property of the gallery to **80**.
+1. (optional) In the template gallery, delete the bottom text box, named **Body1**, and set the **[TemplateSize](control-gallery.md)** property of the gallery to **80**.
 
 1. Press F5, type a string of text into **inputFirst** and **inputLast**, and then click or tap the **Add** button.
 
@@ -155,10 +147,10 @@ The user can specify data by typing into a text-input control. Depending on how 
 ### Prompt for a password ###
 1. Add a text-input control, name it **inputPassword**, and set its **Mode** property to **Password**.
 
-1. Add a text box, and set its **Text** property to this formula:<br>
+1. Add a text box, and set its **[Text](properties-core.md)** property to this formula:<br>
 **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
-	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
+	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and then type **P@ssw0rd** in **inputPassword**.
 
@@ -168,4 +160,4 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 1. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
 
-1. (optional) Add a button, configure its **Text** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
+1. (optional) Add a button, configure its **[Text](properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.

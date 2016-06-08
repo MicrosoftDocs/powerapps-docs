@@ -19,136 +19,130 @@
    ms.author="anneta"/>
 
 # List Box control in PowerApps #
-[AZURE.INCLUDE [control-summary-list-box](../../includes/control-summary-list-box.md)]
+A list in which the user can select one or multiple items.
 
 ## Description ##
-A **List Box** control always shows all available choices (unlike a **Drop down** control) and in which the user can choose more than one item at a time (unlike a **Radio** control).
+A **List Box** control always shows all available choices (unlike a **[Drop down](control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
 
 ## Key properties ##
 
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+
+**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
+
 [AZURE.INCLUDE [long-items](../../includes/long-items.md)]
 
-[AZURE.INCLUDE [long-default](../../includes/long-default.md)]
+## Additional properties ##
 
-[AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-## All properties ##
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+**ItemPaddingLeft** – The distance between text in a listbox and its left edge.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [short-itempaddingleft](../../includes/short-itempaddingleft.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+**[SelectionFill](properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**SelectMultiple** – Whether a user can select more than one item in a listbox.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-selectioncolor](../../includes/short-selectioncolor.md)]
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-selectionfill](../../includes/short-selectionfill.md)]
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-selectmultiple](../../includes/short-selectmultiple.md)]
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
-
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
-
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example ##
-1. Add a **List box** control, name it **CategoryList**, and set its **Items** property to this formula:<br>
+1. Add a **List box** control, name it **CategoryList**, and set its **[Items](properties-core.md)** property to this formula:<br>
 **["Carpet","Hardwood","Tile"]**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 	![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
 
-1. Add three **Drop down** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
+1. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
 
-1. Set the **Items** property of each **Drop down** control to one of these values:
+1. Set the **[Items](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
 	- CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
 	- HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
 	- TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
 
 	![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
 
-1. Set the **Visible** property of each **Drop down** control to one of these values:
+1. Set the **[Visible](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
 	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
 	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
 	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
 
-	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
+	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and then choose one or more items in **CategoryList**.
 
-	The appropriate **Drop down** control or controls appear based on your choice or choices.
+	The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
 
 	![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
 

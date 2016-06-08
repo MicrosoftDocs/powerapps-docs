@@ -19,92 +19,86 @@
    ms.author="anneta"/>
 
 # Slider control in PowerApps #
-[AZURE.INCLUDE [control-summary-slider](../../includes/control-summary-slider.md)]
+A control with which the user can specify a value by dragging a handle.
 
 ## Description ##
 The user can indicate a value, between a minimum and a maximum value that you specify, by dragging the handle of a slider left-right or up-down, depending on the direction that you choose.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-[AZURE.INCLUDE [short-max](../../includes/short-max.md)]
+**Max** – The maximum value to which the user can set a slider or a rating.
 
-[AZURE.INCLUDE [short-min](../../includes/short-min.md)]
+**Min** – The minimum value to which the user can set a slider.
 
-## All properties ##
+**[Value](properties-core.md)** – The value of an input control.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+## Additional properties ##
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-handleactivefill](../../includes/short-handleactivefill.md)]
+**HandleActiveFill** – The color of the handle for a slider as the user changes its value.
 
-[AZURE.INCLUDE [short-handlefill](../../includes/short-handlefill.md)]
+**HandleFill** – The color of the handle (the element that changes position) in a toggle or slider control.
 
-[AZURE.INCLUDE [short-handlehoverfill](../../includes/short-handlehoverfill.md)]
+**HandleHoverFill** – The color of the handle in a slider when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-layout](../../includes/short-layout.md)]
+**Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
-[AZURE.INCLUDE [short-max](../../includes/short-max.md)]
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [short-min](../../includes/short-min.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-[AZURE.INCLUDE [short-railfill](../../includes/short-railfill.md)]
+**ReadOnly** – Whether a user can change the value of a slider or rating control.
 
-[AZURE.INCLUDE [short-railhoverfill](../../includes/short-railhoverfill.md)]
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-readonly](../../includes/short-readonly.md)]
+**ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-showvalue](../../includes/short-showvalue.md)]
+**ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-valuefill](../../includes/short-valuefill.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-valuehoverfill](../../includes/short-valuehoverfill.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**Sum**( *Value1*, *Value2* )](function-aggregates.md)
+[**Sum**( *Value1*, *Value2* )](../functions/function-aggregates.md)
 
 ## Example ##
-1. Add a button, and set its **OnSelect** property to this formula:
+1. Add a button, and set its **[OnSelect](properties-core.md)** property to this formula:
 <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**ClearCollect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, select the button, and then press Esc.
 
@@ -112,10 +106,10 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 1. Set the slider's **Max** property to **5000000** and its **Min** property to **1000000**.
 
-1. Add a text gallery in vertical/portrait orientation, move it below the slider, and set the gallery's **Items** property to this formula:<br>
+1. Add a text gallery in vertical/portrait orientation, move it below the slider, and set the gallery's **[Items](properties-core.md)** property to this formula:<br>
 **Filter(CityPopulations, Population > MinPopulation)**
 
-1. In the first item of the gallery, set the **Text** property of the top text box to **ThisItem.City**, and set the **Text** property of the bottom text box to this formula:<br> **Text(ThisItem.Population, "##,###")**
+1. In the first item of the gallery, set the **[Text](properties-core.md)** property of the top text box to **ThisItem.City**, and set the **[Text](properties-core.md)** property of the bottom text box to this formula:<br> **Text(ThisItem.Population, "##,###")**
 
 1. Press F5, and then adjust **MinPopulation** to show only those cities that have a population that's greater than the value that you specify.
 

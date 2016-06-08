@@ -19,98 +19,94 @@
    ms.author="anneta"/>
 
 # Microphone control in PowerApps #
-[AZURE.INCLUDE [control-summary-microphone](../../includes/control-summary-microphone.md)]
+A control with which the user can record sounds.
 
 ## Description ##
 If you add this control, the user can update a data source with one or more sounds from wherever the app is running.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-mic](../../includes/short-mic.md)]
+**Mic** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.
 
-[AZURE.INCLUDE [short-onstop](../../includes/short-onstop.md)]
+**OnStop** – How the app responds when the user stops recording with a microphone control.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-image](../../includes/short-image.md)]
+**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
-[AZURE.INCLUDE [short-imageposition](../../includes/short-imageposition.md)]
+**[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-[AZURE.INCLUDE [short-mic](../../includes/short-mic.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**OnStart** – How the app responds when the user starts to record with a microphone control.
 
-[AZURE.INCLUDE [short-onstart](../../includes/short-onstart.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-onstop](../../includes/short-onstop.md)]
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## Example ##
 ### Add sounds to a Custom gallery control ###
 1. Add a **Microphone**, name it **MyMic**, and set its **OnStop** property to this formula:<br>
 **Collect(MySounds, MyMic.Audio)**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Add a **Custom gallery** control, move it below **MyMic**, and set the **Items** property for the **Custom gallery** control to **MySounds**.
+1. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.
 
-1. In the template for the **Custom gallery** control, add an **Audio** control, and set its **Media** property to **ThisItem.Url**.
+1. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
 
 1. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
 
-1. In the **Custom gallery** control, click or tap the play button in the **Audio** control to play back your recording.
+1. In the **Custom gallery** control, click or tap the play button in the **[Audio](control-audio-video.md)** control to play back your recording.
 
 1. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
 
-1. (optional) In the template for the **Custom gallery** control, add a **Button** control, set its **OnSelect** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
+1. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 
-Use the [**SaveData** function](function-savedata-loaddata.md) to save the recordings locally or the [**Patch** function](function-patch.md) to update a data source.
+Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../functions/function-patch.md)** function to update a data source.

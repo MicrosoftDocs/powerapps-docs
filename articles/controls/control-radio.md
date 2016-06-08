@@ -19,120 +19,116 @@
    ms.author="anneta"/>
 
 # Radio control in PowerApps #
-[AZURE.INCLUDE [control-summary-radio](../../includes/control-summary-radio.md)]
+A list that shows all options but the user can select only one at a time.
 
 ## Description ##
 A **Radio** control, with which users have decades of experience, is best used with only a few options that are mutually exclusive.
 
 ## Key properties ##
 
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+
+**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
+
 [AZURE.INCLUDE [long-items](../../includes/long-items.md)]
 
-[AZURE.INCLUDE [long-default](../../includes/long-default.md)]
-
-[AZURE.INCLUDE [long-reset](../../includes/long-reset.md)]
+**[Value](properties-core.md)** – The value of an input control.
 
 ## All properties ##
-[AZURE.INCLUDE [short-align](../../includes/short-align.md)]
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-default](../../includes/short-default.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onchange](../../includes/short-onchange.md)]
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+**RadioBackgroundFill** – The background color of the circles in a radio-button control.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**RadioBorderColor** – The color of the circle for each option in a radio-button control.
 
-[AZURE.INCLUDE [short-radiobackgroundfill](../../includes/short-radiobackgroundfill.md)]
+**RadioSelectionFill** – The color that appears inside the circle of the selected option in a radio-button control.
 
-[AZURE.INCLUDE [short-radiobordercolor](../../includes/short-radiobordercolor.md)]
+**RadioSize** – The diameter of the circles in a radio-button control.
 
-[AZURE.INCLUDE [short-radioselectionfill](../../includes/short-radioselectionfill.md)]
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-radiosize](../../includes/short-radiosize.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-valid](../../includes/short-valid.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**Distinct**( *DataSource*, *ColumnName* )](function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example ##
-1. Add a **Radio** control, name it **Pricing**, and set its **Items** property to this formula:
+1. Add a **Radio** control, name it **Pricing**, and set its **[Items](properties-core.md)** property to this formula:
 <br>**["Standard", "Premium"]**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a **Text box** control, move it below the **Radio** control, and set the **Text** property of the **Text box** control to this formula:
+1. Add a **[Text box](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](properties-core.md)** property of the **[Text box](control-text-box.md)** control to this formula:
 <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
 
-	Want more information about the [**If** function](function-if.md) or [other functions](formula-reference.md)?
+	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and then choose either option in the **Radio** control.
 
-	The **Text box** control shows the appropriate text for your choice.
+	The **[Text box](control-text-box.md)** control shows the appropriate text for your choice.
 
 1. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
 

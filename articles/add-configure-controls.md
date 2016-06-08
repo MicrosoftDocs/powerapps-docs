@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
-	manager="dwrede"
+	authors="sarafankit"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -15,19 +15,18 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/28/2015"
-   ms.author="anneta"/>
+   ms.date="04/17/2016"
+   ms.author="ankitsar"/>
 
 # Add and configure a control in PowerApps #
 
-Add a variety of controls to your app, and configure their properties directly, from the ribbon, or in the formula bar.
+Add a variety of controls to your app, and configure their properties directly, from the ribbon, or in the Formula Bar.
 
 **Prerequisites**
 
-1. Install [PowerApps](http://aka.ms/powerappsinstall) on a tablet, a laptop, or a desktop computer that's running Windows.  
-1. Open PowerApps.  
-1. Sign in for the first time by swiping left (or selecting the arrow near the lower-right corner) to advance through the welcome screens and then providing your credentials.
-1. Select **New** on the **File** menu (near the left edge), and then select **Get started** under **Create from scratch**.
+1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+1. Select **New** on the **File** menu (near the left edge).
+1. Under **Create an app**, select **Phone layout** on the **Blank app** tile.
 
 	![Create an app from scratch](./media/add-configure-controls/blank-app.png)
 
@@ -41,7 +40,7 @@ On the **Insert** tab, follow either of these steps:
 
 		![Text box, Text input, HTML text, and Pen input](./media/add-configure-controls/text-category.png)
 
-		**Tip:** [Write or draw](add-images-pictures-audio-video.md#write-or-draw-in-the-app) by using the pen input.
+		**Tip:** [Write or draw](add-images-pictures-audio-video.md#draw-a-picture) by using the pen input.
 
 	- **Controls**
 
@@ -53,7 +52,13 @@ On the **Insert** tab, follow either of these steps:
 
 		![Vertical and horizontal galleries that show images only, text only, images with captions, images with text, in addition to custom/blank galleries and a card gallery](./media/add-configure-controls/gallery-category.png)
 
-		**Tip:** [Add a card gallery](create-card-gallery.md) if each record contains more data than one screen can show at a time.
+		**Tip:** Show a list of records from a table using a [gallery](add-gallery.md).
+
+	- **Forms**
+
+		![Forms](./media/add-configure-controls/forms-category.png)
+
+		**Tip:** Show or edit a record by using a [form](add-form.md).
 
 	- **Media**
 
@@ -86,15 +91,15 @@ If you need more space for controls, [add a screen](add-screen-context-variables
 
 	**Important:** If a control is selected when you select another control or a blank area of the screen, the first element is no longer selected.
 
-1. Resize the control by dragging any handle of the selection box (or by modifying the **Height**, **Width**, or both properties, as this topic describes later).
+1. Resize the control by dragging any handle of the selection box (or by modifying the **[Height](controls/properties-size-location.md)**, **[Width](controls/properties-size-location.md)**, or both properties, as this topic describes later).
 
-	For example, make the text box shorter by dragging the middle handle on the right edge of the selection box.
+	For example, make the text box shorter by dragging a handle on the right edge of the selection box to the left. (The middle handle appears only if you zoom in.)
 
 	![A resized text box](./media/add-configure-controls/shorter-text-box.png)
 
-1. Move the control by dragging the selection box itself (or by modifying the **X**, **Y**, or both properties, as this topic describes later).
+1. Move the control by dragging the selection box itself (or by modifying the **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, or both properties, as this topic describes later).
 
-1. If a control such as a text box or a button shows text, modify that text by triple-clicking it and then typing the text that you want (or by setting the **Text** property, as this topic describes later).
+1. If a control such as a text box or a button shows text, modify that text by triple-clicking it and then typing the text that you want (or by setting the **[Text](controls/properties-core.md)** property, as this topic describes later).
 
 	![A text box with custom text](./media/add-configure-controls/change-text-directly.png)
 
@@ -119,19 +124,19 @@ If you need more space for controls, [add a screen](add-screen-context-variables
 ## Configure a control in the formula bar ##
 Each change that you made earlier in this topic updated the value of a [property](reference-properties.md) for the control that you configured.
 
-- When you resized the control, you changed its **Width** property.
-- When you moved the control, you changed its **X** and **Y** properties.
-- When you changed the text that the control displays, you changed its **Text** property.
+- When you resized the control, you changed its **[Width](controls/properties-size-location.md)** property.
+- When you moved the control, you changed its **[X](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties.
+- When you changed the text that the control displays, you changed its **[Text](controls/properties-core.md)** property.
 
 Instead of configuring a control directly or from the ribbon, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
 
-1. With the text box selected, select **Text** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
+1. With the text box selected, select **[Text](controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
 
 	![A text box with text aligned to the top of the box](./media/add-configure-controls/text-literal.png)
 
 	When you surround a string of text with quotation marks, you specify that it should be treated exactly as you typed it. As an alternative, you can specify a formula that determines the value of a property.
 
-1. With the text box selected, select **Text** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
+1. With the text box selected, select **[Text](controls/properties-core.md)** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
 
 	The control shows the current date.
 
@@ -139,26 +144,26 @@ Instead of configuring a control directly or from the ribbon, you can also updat
 
 	By using the formula bar, you can set properties that you can't set directly or from the ribbon. For example, you can set a tooltip that appears when a user points to the control but doesn't select it. You can also specify complicated formulas that increase the power of your app.
 
-1. Add a checkbox, and set its **Text** property so that **Show text** appears.
+1. Add a check box, and set its **[Text](controls/properties-core.md)** property so that **Show text** appears.
 
-1. Set the **Visible** property of the text box to this formula:
+1. Set the **[Visible](controls/properties-core.md)** property of the text box to this formula:
 
 	**If(Checkbox1!Value = true, true, false)**
 
-	**Note:** If you add a checkbox, remove it, and then add another checkbox, you might need to rename the checkbox that you're using for the formula to work. If the check box isn't named **Checkbox1**, rename it as this topic describes later.
+	**Note:** If you add a check box, remove it, and then add another check box, you might need to rename the check box that you're using for the formula to work. If the check box isn't named **Checkbox1**, rename it as this topic describes later.
 
-1. Select the checkbox to show the text box.
+1. Select the check box to show the text box.
 
 	![Text box appears when the check box is selected](./media/add-configure-controls/show-text.png)
 
-1. Clear the checkbox to hide the text box.
+1. Clear the check box to hide the text box.
 
 	![Text box disappears when the check box is cleared](./media/add-configure-controls/hide-text.png)
 
 This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md) from simple to complex.
 
 ## Rename a control ##
-1. Select the control that you want to rename, such as the checkbox that you added in the previous procedure.
+1. Select the control that you want to rename, such as the check box that you added in the previous procedure.
 
 1. On the **Home** tab, select the name of the control (to the right of **New screen**), and then type the name that you want.
 

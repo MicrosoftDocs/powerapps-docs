@@ -58,7 +58,7 @@ Also see [working with dates and times](../show-text-dates-times.md) for more in
 
 ### DateValue ###
 
-If you typed **10/11/2014** into an input-text control named **Startdate** and then set the **Text** property of a label to this function:
+If you typed **10/11/2014** into an input-text control named **Startdate** and then set the **[Text](../controls/properties-core.md)** property of a label to this function:
 
 - **Text(DateValue(Startdate.Text), DateTimeFormat.LongDate)**
 
@@ -74,11 +74,11 @@ If you did the same thing on **October 20, 2014**:
 
 - **DateDiff(DateValue(Startdate.Text), Today())**
 
-	If your computer were set to the **en** language, the label would show **9**, indicating the number of days between October 11 and October 20. **[DateDiff](function-dateadd-datediff.md)** can also show the difference in months, quarters, or years.
+	If your computer were set to the **en** language, the label would show **9**, indicating the number of days between October 11 and October 20. The **[DateDiff](function-dateadd-datediff.md)** function can also show the difference in months, quarters, or years.
 
 ### DateTimeValue ###
 
-If you typed **10/11/2014 1:50:24.765 PM** into an input-text control named **Start** and then set the **Text** property of a label to this function:
+If you typed **10/11/2014 1:50:24.765 PM** into an input-text control named **Start** and then set the **[Text](../controls/properties-core.md)** property of a label to this function:
 
 - **Text(DateTimeValue(Start.Text), DateTimeFormat.LongDateTime)**
 
@@ -98,7 +98,7 @@ If you typed **10/11/2014 1:50:24.765 PM** into an input-text control named **St
 
 ### TimeValue ###
 
-Name an input-text control **FinishedAt**, and set the **Text** property of a label to this function:
+Name an input-text control **FinishedAt**, and set the **[Text](../controls/properties-core.md)** property of a label to this function:
 
 **If(TimeValue(FinishedAt.Text)<TimeValue("5:00:00.000 PM"), "You made it!", "Too late!")**
 

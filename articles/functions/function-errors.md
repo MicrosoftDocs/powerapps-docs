@@ -20,19 +20,19 @@
 
 # Errors function in PowerApps #
 
-Provides error information for previous changes to a [data source](working-with-data-sources.md).
+Provides error information for previous changes to a [data source](../working-with-data-sources.md).
 
 ## Overview ##
 
-Errors can happen when a [record](working-with-tables.md#records) of a data source is changed.  Many causes are possible, including network outages, inadequate permissions, and edit conflicts.  
+Errors can happen when a [record](../working-with-tables.md#records) of a data source is changed.  Many causes are possible, including network outages, inadequate permissions, and edit conflicts.  
 
-**[Patch](function-patch.md)** and other data functions don't directly return errors. Instead they return the result of their operation. After a data function executes, you can use the **Errors** function to obtain the details of any errors.  You can check for the existence of errors with the **[IsEmpty]** function in the formula **IsEmpty( Errors ( ... ) )**.
+The **[Patch](function-patch.md)** function and other data functions don't directly return errors. Instead they return the result of their operation. After a data function executes, you can use the **Errors** function to obtain the details of any errors.  You can check for the existence of errors with the **[IsEmpty]** function in the formula **IsEmpty( Errors ( ... ) )**.
 
-You can avoid some errors before they happen by using the **[Validate](function-validate.md)** and **[DataSourceInfo](function-datasourceinfo.md)** functions.  See [working with data sources](working-with-data-sources.md) for more suggestions on how to work with and avoid errors.
+You can avoid some errors before they happen by using the **[Validate](function-validate.md)** and **[DataSourceInfo](function-datasourceinfo.md)** functions.  See [working with data sources](../working-with-data-sources.md) for more suggestions on how to work with and avoid errors.
 
 ## Description ##
 
-The **Errors** function returns a [table](working-with-tables.md) of errors that contains the following [columns](working-with-tables.md#columns):
+The **Errors** function returns a [table](../working-with-tables.md) of errors that contains the following [columns](../working-with-tables.md#columns):
 
 - **Record**.  The record in the data source that had the error.  If the error occurred during the creation of a record, this column will be *blank*.
 
@@ -44,17 +44,19 @@ The **Errors** function returns a [table](working-with-tables.md) of errors that
 
 | ErrorKind | Description |
 |------------|-------------|
-| ErrorKind.Conflict | Another change was made to the same record, resulting in a change conflict.  Use **[Revert](function-revert.md)** to reload the record and try the change again. |
+| ErrorKind.Conflict | Another change was made to the same record, resulting in a change conflict.  Use the **[Refresh](function-refresh.md)** function to reload the record and try the change again. |
 | ErrorKind.ConstraintViolation | One or more constraints have been violated. |
 | ErrorKind.CreatePermission | An attempt was made to create a record, and the current user doesn't have permission to create records. |
 | ErrorKind.DeletePermission | An attempt was made to delete a record, and the current user doesn't have permission to delete records. |
 | ErrorKind.EditPermission | An attempt was made to edit a record, and the current user doesn't have permission to edit records. |
 | ErrorKind.GeneratedValue | An attempt was made to change a column that the data source generates automatically. |
 | ErrorKind.MissingRequired | The value for a required column is missing from the record. |
-| ErrorKind.None | The error is of an unknown kind. |
+| ErrorKind.None | There is no error. |
 | ErrorKind.NotFound | An attempt was made to edit or delete a record, but the record couldn't be found.  Another user may have changed the record. |
 | ErrorKind.ReadOnlyValue | An attempt was made to change a column that's read only. |
-| ErrorKind.Sync | There was an error while synchronizing the change with the data service. |
+| ErrorKind.Sync | An error was reported by the data source.  Check the Message column for more information. |
+| ErrorKind.Unknown | There was an error, but of an unknown kind. |
+| ErrorKind.Validation | There was a general validation issue detected, that did not fit one of the other kinds. |
 
 Errors can be returned for the entire data source, or for only a selected row by providing the *Record* argument to the function.  
 
@@ -78,7 +80,7 @@ For this example, we'll be working with the **IceCream** data source:
 
 ![](media/function-errors/icecream.png)
 
-Through the app, a user loads the Chocolate record into a data-entry form and then changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](working-with-variables.md#create-a-context-variable) **EditRecord**:
+Through the app, a user loads the Chocolate record into a data-entry form and then changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](../working-with-variables.md#create-a-context-variable) **EditRecord**:
 
 - **UpdateContext( { EditRecord: First( Filter( IceCream, Flavor = "Chocolate" ) ) } )**
 
@@ -100,13 +102,13 @@ which returns **false**, because the **Errors** function returned the following 
 
 You can place a label on the form to show this error to the user.
 
-- To show the error, set the label's **Text** property to this formula:<br>
+- To show the error, set the label's **[Text](../controls/properties-core.md)** property to this formula:<br>
 **Label.Text = First(Errors( IceCream, EditRecord )).Message**
 
 You can also add a **Reload** button on the form, so that the user can efficiently resolve the conflict.
 
-- To show the button only when a conflict has occurred, set the button's **Visible** property to this formula:<br>
+- To show the button only when a conflict has occurred, set the button's **[Visible](../controls/properties-core.md)** property to this formula:<br>
 	**!IsEmpty( Lookup( Errors( IceCream, EditRecord ), Error = ErrorKind.Conflict ) )**
 
-- To revert the change which the user selects the button, set its **OnSelect** property to this formula:<br>
+- To revert the change which the user selects the button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
 	**ReloadButton.OnSelect = Revert( IceCream, EditRecord )**

@@ -18,11 +18,11 @@
    ms.date="11/20/2015"
    ms.author="gregli"/>
 
-# Operators in PowerApps #
+# Operators and data types in PowerApps #
 
 |Symbol|Type|Syntax|Description|
 |---|---|---|---|
-|**.**|Property Selector|Slider1.Value<br>Color.Red<br>Acceleration.X|Extracts a property from a [table](working-with-tables.md), control, [signal](signals.md), or enumeration.  For backwards compatibility, **!** may also be used.
+|**.**|Property Selector|Slider1.Value<br>Color.Red<br>Acceleration.X|Extracts a property from a [table](../working-with-tables.md), control, [signal](signals.md), or enumeration.  For backwards compatibility, **!** may also be used.
 |**( )**|Parentheses|Filter(T, A &lt; 10)<br><br>(1 + 2) * 3|Enforces precedence order, and groups sub-expressions in a larger expression|
 |**+**|Arithmetic operators|1 + 2|Addition|
 |**-**|&nbsp;|2 - 1|Subtraction and sign|
@@ -37,10 +37,10 @@
 |**&lt;=**|&nbsp;|Price &lt;= 100|Less than or equal to|
 |**&lt;&gt;** |&nbsp;|Price &lt;&gt; 100|Not equal to|
 |**&amp;**|String concatenation operator|&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;|Makes multiple strings appear continuous|
-|**&amp;&amp;**|Logical operators|Price &lt; 100 &amp;&amp; Slider1.Value = 20|Logical conjunction or **[And](function-logicals.md)**|
-|**&#124;&#124;**|&nbsp;|Price &lt; 100 &#124;&#124; Slider1.Value = 20|Logical disjunction or **[Or](function-logicals.md)**|
-|**!**|&nbsp;|!(Price &lt; 100)|Logical negation or **[Not](function-logicals.md)**|
-|**exactin**|Membership operators|Gallery1.Selected exactin SavedItems|Belonging to a [collection](working-with-data-sources.md#collections) or a table|
+|**&amp;&amp;**|Logical operators|Price &lt; 100 &amp;&amp; Slider1.Value = 20|Logical conjunction or **[And](function-logicals.md)** function|
+|**&#124;&#124;**|&nbsp;|Price &lt; 100 &#124;&#124; Slider1.Value = 20|Logical disjunction or **[Or](function-logicals.md)** function|
+|**!**|&nbsp;|!(Price &lt; 100)|Logical negation or **[Not](function-logicals.md)** function|
+|**exactin**|Membership operators|Gallery1.Selected exactin SavedItems|Belonging to a [collection](../working-with-data-sources.md#collections) or a table|
 |**exactin**|&nbsp;|&quot;Windows&quot; exactin “To display windows in the Windows operating system...”|Substring test (case-sensitive)|
 |**in**|&nbsp;|Gallery1.Selected in SavedItems|Belonging to a collection or a table|
 |**in**|&nbsp;|&quot;The&quot; in &quot;The keyboard and the monitor...&quot;|Substring test (case-insensitive)|
@@ -50,21 +50,33 @@
 
 ## in and exactin operators ##
 
-You can use the **in** and **exactin** operators to find a string in a [data source](working-with-data-sources.md), such as a collection or an imported table. The **in** operator identifies matches regardless of case, and the **exactin** operator identifies matches only if they're capitalized the same way. Here's an example:
+You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
 1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
 
-2. Set the **Items** property of the gallery to this formula:
+2. Set the **[Items](../controls/properties-core.md)** property of the gallery to this formula:
 <br>**Filter(Inventory, "E" in ProductName)**
 
 	The gallery shows all products except Callisto because the name of that product is the only one that doesn't contain the letter you specified.
 
-3. Change the **Items** property of the gallery to this formula:
+3. Change the **[Items](../controls/properties-core.md)** property of the gallery to this formula:
 <br>**Filter(Inventory, "E" exactin ProductName)**
 
 	The gallery shows only Europa because only its name contains the letter that you specified in the case that you specified.
 
-## ThisItem operator for galleries ##
-You show data in a gallery by binding it to a table or a collection and then adding one or more types of controls to show different kinds of data. You use the **ThisItem** operator to specify the [column](working-with-tables.md#columns) of data that each control shows. For example, that operator in the product gallery for [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+## ThisItem operator ##
 
-For nested galleries, **ThisItem** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
+You can show data in **[Gallery](../controls/control-gallery.md)**, **[Edit form](../controls/control-form-detail.md)**, or **[Display form](../controls/control-form-detail.md)** controls by binding it to a table or a collection.  These controls are a container for other cards and controls.  Each card or control within the container can access the bound data through the **[ThisItem](operators.md#thisitem-operator)** operator.   
+
+You use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [column](../working-with-tables.md#columns) of data that each card or control within the outer control. For example, that operator in the product gallery for [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+
+For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
+
+## Parent operator ##
+
+Some controls host other controls.  For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls.  We can the hosting control the "parent" of the controls within.  
+
+As with all controls in PowerApps, any control can be referenced by name from anywhere within the app.  **Screen1** may be the name of a screen in your app.  To retrieve the background color of this screen, you can use **Screen1.Fill**.
+
+Controls on this screen have another option.  They can user a relative reference: **Parent.Fill**.  The **[Parent](operators.md#parent-operator)** operator refers to the control which hosts this control, making available all of its properties.  Using **[Parent](operators.md#parent-operator)** is helpful as it is not dependent on the name of the control.  Container controls can be copied and pasted without needing to adjust any references within the container.  It also makes the relationship between child and parent controls clearer when reading formulas.
+

@@ -19,134 +19,128 @@
    ms.author="anneta"/>
 
 # Timer control in PowerApps #
-[AZURE.INCLUDE [control-summary-timer](../../includes/control-summary-timer.md)]
+A control that can determine how your app responds after a certain amount of time passes.
 
 ## Description ##
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-duration](../../includes/short-duration.md)]
+**Duration** – How long a timer runs.
 
-[AZURE.INCLUDE [short-ontimerend](../../includes/short-ontimerend.md)]
+**OnTimerEnd** – How an app responds when a timer finishes running.
 
-[AZURE.INCLUDE [short-repeat](../../includes/short-repeat.md)]
+**Repeat** – Whether a timer automatically restarts when it finishes running.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-align](../../includes/short-align.md)]
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-[AZURE.INCLUDE [short-autopause](../../includes/short-autopause.md)]
+**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.
 
-[AZURE.INCLUDE [short-autostart](../../includes/short-autostart.md)]
+**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-duration](../../includes/short-duration.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**OnTimerStart** – How an app responds when a timer starts to run.
 
-[AZURE.INCLUDE [short-ontimerend](../../includes/short-ontimerend.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-ontimerstart](../../includes/short-ontimerstart.md)]
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-repeat](../../includes/short-repeat.md)]
+**Start** – Whether an audio or video clip plays.
 
-[AZURE.INCLUDE [short-reset](../../includes/short-reset.md)]
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
-[AZURE.INCLUDE [short-start](../../includes/short-start.md)]
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
-
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**Refresh**( *DataSource* )](function-refresh.md)
+[**Refresh**( *DataSource* )](../functions/function-refresh.md)
 
 ## Examples ##
 ### Show a countdown ###
 1. Add a timer, and name it **Countdown**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Set the timer's **Duration** property to **10000** and its **Repeat** and **Autostart** properties to **true**.
 
-1. (optional) Make the timer easier to read by setting its **Height** property to **160**, its **Width** property to **600**, and its **Size** property to **60**.
+1. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
 
-1. Add a text box, and set its **Text** property to this formula:
+1. Add a text box, and set its **[Text](properties-core.md)** property to this formula:
 <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
 
-	Want more information about the [**RoundUp** function](function-round.md) or [other functions](formula-reference.md)?
+	Want more information about the **[RoundUp](../functions/function-round.md)** function or [other functions](../formula-reference.md)?
 
 	The text box shows how many seconds remain before the timer restarts.
 
-1. (optional) Set the timer's **Visible** property to **false**.
+1. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.
 
 ### Animate a control ###
 1. Add a timer, and name it **FadeIn**.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Set the timer's **Duration** property to **5000** and its **Repeat** and **Autostart** properties to **true**.
 
-1. (optional) Make the timer easier to read by setting its **Height** property to **160**, its **Width** property to **600**, and its **Size** property to **60**.
+1. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
 
-1. Add a text box, set its **Text** property to show **Welcome!** and set its **Color** property to this formula:
+1. Add a text box, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:
 <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
-	Want more information about the [**ColorFade** function](function-colors.md) or [other functions](formula-reference.md)?
+	Want more information about the **[ColorFade](../functions/function-colors.md)** function or [other functions](../formula-reference.md)?
 
 	The text in the text box fades to white, returns to full intensity, and repeats the process.
 
-1. (optional) Set the timer's **Visible** property to **false**.
+1. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.

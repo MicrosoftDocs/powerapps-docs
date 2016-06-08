@@ -19,101 +19,97 @@
    ms.author="anneta"/>
 
 # Export control and Import control in PowerApps #
-[AZURE.INCLUDE [control-summary-export-import](../../includes/control-summary-export-import.md)]
+Controls for exporting data to a local file and then importing that data into another app in PowerApps.
 
 ## Description ##
 If you want to create more than one app that uses the same data but not share that data outside those apps, you can export it and import it by using an **Export** control and an **Import** control. When you export data, you create a compressed file that you can copy to another machine, but you can't read it in any program other than PowerApps.
 
 ## Key properties ##
-[AZURE.INCLUDE [short-data](../../includes/short-data.md)]
-
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
-
-## All properties ##
-
-[AZURE.INCLUDE [short-align](../../includes/short-align.md)]
-
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
-
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
-
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
-
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
-
-[AZURE.INCLUDE [short-data](../../includes/short-data.md)]
+**Data** – The name of a collection that you want to export to a local file.
 
 - The **Data** property is available for an **Export** control but not an **Import** control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+## Additional properties ##
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-padding](../../includes/short-padding.md)]
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-radiusbottomleft](../../includes/short-radiusbottomleft.md)]
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-radiusbottomright](../../includes/short-radiusbottomright.md)]
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-radiustopleft](../../includes/short-radiustopleft.md)]
+**[Padding](properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
 
-[AZURE.INCLUDE [short-radiustopright](../../includes/short-radiustopright.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+**[RadiusBottomLeft](properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+**[RadiusBottomRight](properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
 
-[AZURE.INCLUDE [short-verticalalign](../../includes/short-verticalalign.md)]
+**[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
+
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
+
+**[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
+
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
+
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Example ##
-1. Add a **Button** control, and set its **OnSelect** property to this formula:
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:
 <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**ClearCollect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, click or tap the **Button** control, and then press Esc.
+1. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
 
 1. Add an **Export** control, and set its **Data** property to **Products**.
 
@@ -121,7 +117,7 @@ If you want to create more than one app that uses the same data but not share th
 
 1. Click or tap **Save**, then press Esc to return to the default workspace.
 
-1. In a new or existing app, add an **Import** control, name it **MyData**, and set its **OnSelect** property to this formula:<br>
+1. In a new or existing app, add an **Import** control, name it **MyData**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **Collect(ImportedProducts, MyData.Data)**
 
 1. Press F5, click or tap **MyData**, click or tap the file that you exported, and then click or tap **Open**.

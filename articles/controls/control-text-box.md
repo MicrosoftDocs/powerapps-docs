@@ -18,129 +18,123 @@
    ms.date="02/29/2016"
    ms.author="anneta"/>
 
-# Text-box control in PowerApps #
-[AZURE.INCLUDE [control-summary-text-box](../../includes/control-summary-text-box.md)]
+# Text box control in PowerApps #
+A box that shows data such as text, numbers, dates, or currency.
 
 ## Description ##
 A text box shows data that you specify as a literal string of text, which appears exactly the way you type it, or as a formula that evaluates to a string of text. Text boxes often appear outside of any other control (such as a banner that identifies a screen), as a label that identifies another control (such as a rating or audio control), or in a gallery to show a specific type of information about an item.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-align](../../includes/short-align.md)]
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-[AZURE.INCLUDE [short-autoheight](../../includes/short-autoheight.md)]
+**AutoHeight** – Whether a text box automatically increases its **[Height](properties-size-location.md)** property if its **[Text](properties-core.md)** property contains more characters than the control can show at one time.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledcolor](../../includes/short-disabledcolor.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-fontweight](../../includes/short-fontweight.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-hovercolor](../../includes/short-hovercolor.md)]
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-[AZURE.INCLUDE [short-italic](../../includes/short-italic.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-lineheight](../../includes/short-lineheight.md)]
+**Overflow** – Whether a scrollbar appears in a text box if its **Wrap** property is set to **true** and the value of the control's **[Text](properties-core.md)** property contains more characters than the control can show at one time.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-[AZURE.INCLUDE [short-overflow](../../includes/short-overflow.md)]
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-[AZURE.INCLUDE [short-paddingbottom](../../includes/short-paddingbottom.md)]
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-[AZURE.INCLUDE [short-paddingleft](../../includes/short-paddingleft.md)]
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-[AZURE.INCLUDE [short-paddingright](../../includes/short-paddingright.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-paddingtop](../../includes/short-paddingtop.md)]
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedcolor](../../includes/short-pressedcolor.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-[AZURE.INCLUDE [short-strikethrough](../../includes/short-strikethrough.md)]
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-[AZURE.INCLUDE [short-text](../../includes/short-text.md)]
+**[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
-[AZURE.INCLUDE [short-tooltip](../../includes/short-tooltip.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-underline](../../includes/short-underline.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-verticalalign](../../includes/short-verticalalign.md)]
+**Wrap** – Whether text that's too long to fit in a text box wraps to the next line.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-wrap](../../includes/short-wrap.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**Text**( *Number*, "*FormatCodes*" )](function-text.md)
+[**[Text](properties-core.md)**( *Number*, "*FormatCodes*" )](function-text.md)
 
 ## Examples ##
 
 ### Show a literal string ###
-- Add a text box, and set its **Text** property to **"Hello, world"** (including the double quotation marks).
+- Add a text box, and set its **[Text](properties-core.md)** property to **"Hello, world"** (including the double quotation marks).
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 ### Show the result of a formula ###
 
-- Add a text box, and set its **Text** property to a formula such as this one:<br>
+- Add a text box, and set its **[Text](properties-core.md)** property to a formula such as this one:<br>
 **Today()**
 
 	**Note:** When you specify a formula, you don't use quotation marks unless an argument of the formula is a literal string. In that case, enclose the argument, not the formula, in double quotation marks.
 
-	Want more information about the [**Today** function](function-now-today-istoday.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Today](../functions/function-now-today-istoday.md)** function or [other functions](../formula-reference.md)?
 
 ### Show data in a gallery ###
 In this procedure, you'll create a collection, called **CityPopulations**, that contains data about the population of various cities in Europe. Next, you'll show that data in a gallery that contains three text boxes, and you'll specify the type of data that each text box will show.
 
-1. Add a button, and set its **OnSelect** property to this formula:<br>
+1. Add a button, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
 
 1. Press F5, select the button, and then press Esc.
 
-1. Add a text gallery, and set its **Items** property to **CityPopulations**.
+1. Add a text gallery, and set its **[Items](properties-core.md)** property to **CityPopulations**.
 
 1. With the gallery selected, click or tap **Quick Tools** near the lower-right corner.
 

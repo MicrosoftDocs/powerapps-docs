@@ -39,7 +39,7 @@ The **VarP** function calculates the variance of its arguments.
 You can supply the values for these functions as:
 
 - Separate arguments. For example, **Sum( 1, 2, 3 )** returns 6.
-- A [table](working-with-tables.md) and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each [record](working-with-tables.md#records).  The formula can reference [columns](working-with-tables.md#columns) in the table.  
+- A [table](../working-with-tables.md) and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each [record](../working-with-tables.md#records).  The formula can reference [columns](../working-with-tables.md#columns) in the table.  
 
 These functions operate on numeric values only. Other types of values, such as strings or records, are ignored. Use the **[Value](function-value.md)** function to convert a string into a number.
 
@@ -58,12 +58,12 @@ These functions operate on numeric values only. Other types of values, such as s
 
 ### Step by step ###
 
-Let's say that you had a [data source](working-with-data-sources.md) named **Sales** that contained a **CostPerUnit** column and a **UnitsSold** column, and you set the **Text** property of a label to this function:<br>
+Let's say that you had a [data source](../working-with-data-sources.md) named **Sales** that contained a **CostPerUnit** column and a **UnitsSold** column, and you set the **[Text](../controls/properties-core.md)** property of a label to this function:<br>
 **Sum(Sales, CostPerUnit * UnitsSold)**
 
 The label would show total sales by multiplying the values in those columns for each record and then adding the results from all records together:<br>![Calculate total sales from units sold and cost per unit](./media/function-aggregates/total-sales.png)
 
-As a different example, let's say that you had sliders that were named **Slider1**, **Slider2**, and **Slider3** and a label with its **Text** property set to this formula:<br>
+As a different example, let's say that you had sliders that were named **Slider1**, **Slider2**, and **Slider3** and a label with its **[Text](../controls/properties-core.md)** property set to this formula:<br>
 **Sum(Slider1.Value, Slider2.Value, Slider3.Value)**
 
 The label would show the sum of all values to which the sliders were set.

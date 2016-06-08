@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Launch and Param functions | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the Launch and Param functions in PowerApps"
+	pageTitle="Download, Launch, and Param functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Download, Launch, and Param functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,17 +18,23 @@
    ms.date="11/07/2015"
    ms.author="gregli"/>
 
-# Launch and Param functions in PowerApps #
+# Download, Launch, and Param functions in PowerApps #
 
-Launches a webpage or an app with parameters.  
+Downloads or launches a webpage or an app with parameters.  
 
 ## Description ##
+
+The **Download** function downloads a file from the web to the local device.  The user is prompted for a location to save the file.  **Download** returns the location where the file was stored locally as a string.  
 
 The **Launch** function launches a webpage or an app.  Optionally, this function can pass parameters to the app.  
 
 The **Param** function retrieves a parameter passed to the app when it was launched.  If the named parameter wasn't passed, **Param** returns *blank*.
 
 ## Syntax ##
+
+**Download**( *Address* )
+
+- *Address* - Required.  The address of a web resource to download.
 
 **Launch**( *Address* [, *ParameterName1*, *ParameterValue1*, ... ] )
 
@@ -41,3 +47,5 @@ The **Param** function retrieves a parameter passed to the app when it was launc
 **Param**( *ParameterName* )
 
 - *ParameterName* - Required.  The name of the parameter passed to the app.
+
+

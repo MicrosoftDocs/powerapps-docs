@@ -19,79 +19,75 @@
    ms.author="anneta"/>
 
 # Pie chart control in PowerApps #
-[AZURE.INCLUDE [control-summary-pie-charts](../../includes/control-summary-pie-charts.md)]
+A control that shows relative values in comparison to each other.
 
 ## Description ##
 Add a **Pie chart** control if you want to show relative data from a table that contains labels in the leftmost column and values in the second column from the left.
 
 ## Key properties ##
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[AZURE.INCLUDE [short-showlabels](../../includes/short-showlabels.md)]
+**ShowLabels** – Whether a pie chart shows the value that's associated with each of its wedges.
 
-## All properties ##
+## Additional properties ##
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-color](../../includes/short-color.md)]
+**[Color](properties-color-border.md)** – The color of text in a control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-explode](../../includes/short-explode.md)]
+**Explode** – The distance between wedges in a pie chart.
 
-[AZURE.INCLUDE [short-font](../../includes/short-font.md)]
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-itembordercolor](../../includes/short-itembordercolor.md)]
+**ItemBorderColor** – The color of the border around each wedge in a pie chart.
 
-[AZURE.INCLUDE [short-itemborderthickness](../../includes/short-itemborderthickness.md)]
+**ItemBorderThickness** – The thickness of the border around each wedge in a pie chart.
 
-[AZURE.INCLUDE [short-itemcolorset](../../includes/short-itemcolorset.md)]
+**ItemColorSet** – The color of each data point in a chart.
 
-[AZURE.INCLUDE [short-items](../../includes/short-items.md)]
+**LabelPosition** – The location of labels in a pie chart relative to its wedges.
 
-[AZURE.INCLUDE [short-labelposition](../../includes/short-labelposition.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-[AZURE.INCLUDE [short-showlabels](../../includes/short-showlabels.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-size](../../includes/short-size.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
-
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
-
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
 ## Related functions ##
 
-[**Max**( *DataSource*, *ColumnName* )](function-aggregates.md)
+[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## Example ##
-1. Add a **Button** control, and set its **OnSelect** property to this formula:<br>
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **Collect(Revenue2015, {Product:"Europa", Revenue:27000}, {Product:"Ganymede", Revenue:26300}, {Product:"Callisto", Revenue:29200})**
 
-	Don't know how to [add and configure a control](add-configure-controls.md)?
+	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, click or tap the **Button** control, and then press Esc to return to the default workspace.
+1. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.
 
-1. Add a **Pie chart** control, and set its **Items** property to **Revenue2015**.
+1. Add a **Pie chart** control, and set its **[Items](properties-core.md)** property to **Revenue2015**.
 
 	The **Pie chart** control shows revenue data for each product in relation to the other products.

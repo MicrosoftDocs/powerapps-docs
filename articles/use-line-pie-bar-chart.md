@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/25/2015"
+   ms.date="04/27/2016"
    ms.author="mandia"/>
 
 # Show data in a line, pie, or bar chart in your app
@@ -29,33 +29,33 @@ For example, your data should look similar to the following:
 
 You can create and use these charts within PowerApps. Let's get started.
 
-### Prerequisites
-- Install [PowerApps](http://aka.ms/powerappsinstall) and sign-in with your work or organization account.
-- Create a new app or open an existing app in PowerApps.
-- To familiarize yourself with configuring controls in PowerApps, step through the [configure a control](get-started-test-drive.md#configure-a-control).
+## Prerequisites
+- [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
+- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
+- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 - These steps use the [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own. 
 
 ## Add a pie chart to display your data
 In these steps, we download a sample file. Using a collection, we import this sample data and display it in a pie chart and a column chart.
 
 1. Download the [ChartData](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) zip file.
-2. Create a collection named **ProductRevenue**. Steps include:  
+2. Create a collection named **ProductRevenue** using the following steps:  
 
-	a) On the **Insert** tab, select **Controls**, and then select **Import**.  
-	b) Set the **OnSelect** property to the following function:  
-```Collect(ProductRevenue, Import1!Data)```  
-	c) Double-click the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  
+	1. On the **Insert** tab, select **Controls**, and then select **Import**:  
+	![][11]  
+	2. Set the **[OnSelect](controls/properties-core.md)** property to the following function:  
+```Collect(ProductRevenue, Import1.Data)```  
+	3. Double-click the **Import Data** button to open Windows Explorer. Select *ChartData.zip*, and select **Open**.  
+	In the **File** menu, select **Collections**. The ProductRevenue collection is listed with the chart data you imported:  
+	![][1]  
 
-	In the **File** menu, select **Collections**. The ProductRevenue collection is listed with the chart data you imported:    
-![][1]  
-
-	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app. 
+	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
 
 3. Go back to your designer.
 4. On the **Insert** tab, select **Charts**, and then select **Pie Chart**. Click-and-drag to move the pie chart under the **Import data** button.
 5. In the pie chart control, select the middle of the pie chart:   
 ![][10]  
-6. Set the **Items** property of the pie chart to the **ProductRevenue!Revenue2014** collection you created:  
+6. Set the **[Items](controls/properties-core.md)** property of the pie chart to the ```ProductRevenue.Revenue2014``` collection you created:  
 ![][2]  
 
 	When you do this, the pie chart shows the 2014 revenue of the products:  
@@ -66,8 +66,8 @@ Now, let's use this ProductRevenue collection in a bar chart:
 
 1. On the **Home** tab, create a new screen.
 2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
-3. Select the middle of the column chart. Set the **Items** property of the column chart to **ProductRevenue**:  
-![][2]  
+3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:  
+![][12]  
 
 	When you do this, the column chart shows the 2012 revenue for the products:  
 ![][4]  
@@ -88,7 +88,7 @@ Now, let's use this ProductRevenue collection in a bar chart:
 In this topic, you:
 
 - Used the import control to import sample data in your app.
-- Added a pie chart and bar chart to display the data that you imported. 
+- Added a pie chart and bar chart to display the data that you imported.
 - In the column chart, you used the **Number of Series** property to show data for three years; with each year having its own column.
 
 
@@ -103,3 +103,5 @@ In this topic, you:
 [8]: ./media/use-line-pie-bar-chart/preview.png
 [9]: ./media/use-line-pie-bar-chart/tableformat.png
 [10]: ./media/use-line-pie-bar-chart/middlepiechart.png
+[11]: ./media/use-line-pie-bar-chart/import.png
+[12]: ./media/use-line-pie-bar-chart/itemscolumnchart.png

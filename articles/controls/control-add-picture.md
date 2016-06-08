@@ -19,80 +19,116 @@
    ms.author="anneta"/>
 
 # Add picture control in PowerApps #
-[AZURE.INCLUDE [control-summary-add-picture](../../includes/control-summary-add-picture.md)]
+Load images from the local device, for upload to a data source.
 
 ## Description ##
 If you add this control, your app can upload image files from the user and update your data source with fresh content.
 
-## Key properties ##
+This control is a composite control, made up of two controls.  Press or tap once to select the outer control that shows the image that has been loaded.  Press or tap again to select the inner text box control.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+## Outer control properties ##
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+These properties apply to the outer control. 
 
-## All properties ##
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-[AZURE.INCLUDE [short-bordercolor](../../includes/short-bordercolor.md)]
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-[AZURE.INCLUDE [short-borderstyle](../../includes/short-borderstyle.md)]
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-[AZURE.INCLUDE [short-borderthickness](../../includes/short-borderthickness.md)]
+**[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
-[AZURE.INCLUDE [short-disabled](../../includes/short-disabled.md)]
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledbordercolor](../../includes/short-disabledbordercolor.md)]
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
 
-[AZURE.INCLUDE [short-disabledfill](../../includes/short-disabledfill.md)]
+**Error** - If there is a problem uploading an image, this property will contain an appropriate error string.
 
-[AZURE.INCLUDE [short-fill](../../includes/short-fill.md)]
+**[Fill](properties-color-border.md)** – The background color of a control.
 
-[AZURE.INCLUDE [short-height](../../includes/short-height.md)]
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-[AZURE.INCLUDE [short-hoverbordercolor](../../includes/short-hoverbordercolor.md)]
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-[AZURE.INCLUDE [short-hoverfill](../../includes/short-hoverfill.md)]
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-[AZURE.INCLUDE [short-onselect](../../includes/short-onselect.md)]
+**Media** – An identifier for the clip that an audio or video control plays.
 
-[AZURE.INCLUDE [short-pressedbordercolor](../../includes/short-pressedbordercolor.md)]
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-[AZURE.INCLUDE [short-pressedfill](../../includes/short-pressedfill.md)]
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-visible](../../includes/short-visible.md)]
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-[AZURE.INCLUDE [short-width](../../includes/short-width.md)]
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-[AZURE.INCLUDE [short-x](../../includes/short-x.md)]
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-[AZURE.INCLUDE [short-y](../../includes/short-y.md)]
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+
+## Inner text properties ##
+
+These properties apply to the inner text box control that by default says "Tap or click to add a picture".  To select this inner control, press or tap the **Add picture** control once, and then again.
+
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
+
+**[Color](properties-color-border.md)** – The color of text in a control.
+
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
+
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
+
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
+
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+
+**[Padding](properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
+
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
+
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
+
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
+
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
+
+**[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
 ## Related functions ##
 
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## Example ##
 ### Add images to an Image gallery control ###
 1. Add an **Add picture** control, and then triple-click it.
 
-	Don't know how to [add, name, and configure a control](add-configure-controls.md)?
+	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
 
-1. Add a **Button** control, move it under the **Add picture** control, and set the **OnSelect** property for the **Button** control to this formula:<br>
+1. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
 **Collect(MyPix, AddMediaButton1.Media)**
 
-	Want more information about the [**Collect** function](function-clear-collect-clearcollect.md) or [other functions](formula-reference.md)?
+	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 
-1. Add an **Image gallery** control, and set its **Items** property to **MyPix**.
+1. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **MyPix**.
 
-1. Press F5, and then click or tap the **Button** control.
+1. Press F5, and then click or tap the **[Button](control-button.md)** control.
 
-	The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **Image** control in the **Image gallery** control, set the **ImagePosition** property of the **Image** control to **Fit**.
+	The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Image gallery** control, set the **[ImagePosition](properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
 
-1. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **Button** control that you added.
+1. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **[Button](control-button.md)** control that you added.
 
 	The second image appears in the **Image gallery** control.
 
 1. (optional) Repeat the previous step one or more times, and then return to the default workspace by pressing Esc.
 
-Use the [**SaveData** function](function-savedata-loaddata.md) to save the images locally or the [**Patch** function](function-patch.md) to update a data source.
+Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the images locally or the **[Patch](../functions/function-patch.md)** function to update a data source.

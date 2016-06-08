@@ -28,7 +28,7 @@ The **Abs** function returns the non-negative value of its argument. If a number
 
 The **Sqrt** function returns the number that, when multiplied by itself, equals its argument.
 
-If you pass a single number, the return value is the absolute value or square root of that number.  If you pass a single-column [table](working-with-tables.md) that contains numbers, the return value is a single-column table of absolute values or square roots. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](working-with-tables.md) describes.  
+If you pass a single number, the return value is the absolute value or square root of that number.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of absolute values or square roots. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.  
 
 ## Syntax ##
 
@@ -50,7 +50,7 @@ If you pass a single number, the return value is the absolute value or square ro
 | **Sqrt( 9 )** | Returns the number that, when multiplied by itself, results in 9. | 3 |
 
 ### Single-column table
-The examples in this section use a [data source](working-with-data-sources.md) that's named **ValueTable** and that contains this data:
+The examples in this section use a [data source](../working-with-data-sources.md) that's named **ValueTable** and that contains this data:
 
 ![](media/function-numericals/values.png)
 
@@ -63,7 +63,7 @@ The examples in this section use a [data source](working-with-data-sources.md) t
 
 1. Add an input-text control, and name it **Source**.
 
-2. Add a label, and set its **Text** property to this formula:
+2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
 <br>
 **Sqrt( Value( Source.Text ) )**
 
