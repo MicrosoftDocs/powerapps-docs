@@ -22,9 +22,9 @@
 
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
 
-Office 365 Outlook enables interaction with Office 365 Outlook. For example: creating, editing, and updating contacts and calendar items.
+If you connect to Office 365 Outlook, you can create, edit, and update contacts and calendar items, in addition to other tasks.
 
-You can add controls, including buttons and text boxes, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the To recipient, the Subject, and the body of the email. Then, add a Send button that sends the email. You can also use these controls for similar calendar items, like adding a new calendar item on a specific date, or getting today's events, and then displaying them in your app.
+You can add controls, including buttons and text boxes, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the recipient, the subject, and the body of the email. Then, add a Send button that sends the email. You can also use these controls for similar calendar items, like adding a new calendar item on a specific date, or getting today's events, and then displaying them in your app.
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
@@ -37,7 +37,7 @@ This topic shows you how to add Office 365 Outlook as a connection, add Office 3
 
 	![Open a blank app](./media/connection-office365-outlook/blank-app.png)
 
-2. In the lower-right corner, select **Options**, and then select **Add data source**.
+2. In the right-hand pane, open the **Data sources** tab, and then select **Add data source**.
 
 3. Select **Add connection**, and then select **Office 365 Outlook**:  
 
@@ -47,18 +47,14 @@ This topic shows you how to add Office 365 Outlook as a connection, add Office 3
 
 4. Select **Connect**, and if prompted to sign in, enter your work account. Your connection is listed under **Data sources**. If it's not listed, select **Add Data Source**, and select **Office 365 Users**.
 
-5. Close the **Options** pane by selecting the **X** in its upper-right corner:  
-
-	![Close the Options pane](./media/connection-office365-outlook/close-options.png)
-
 The Office 365 Outlook connection has been created, and added to your app. Now, it's ready to be used.
 
 
 ## Use the Office 365 Users connection in your app
 
-### Get Emails 
+### Get Emails
 
-1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control. 
+1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control.
 
 2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
 
@@ -66,7 +62,7 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 	The gallery control is automatically populated with some of your emails.
 
-3. In the gallery, set the **Text** property of the first text box to `ThisItem.From`. Set the second text box to `ThisItem.Subject`. Set the third text box to `ThisItem.Body`. You can also resize the text boxes. 
+3. In the gallery, set the **Text** property of the first text box to `ThisItem.From`. Set the second text box to `ThisItem.Subject`. Set the third text box to `ThisItem.Body`. You can also resize the text boxes.
 
 	The gallery control is automatically populated with the new properties.
 
@@ -105,7 +101,7 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 ### Delete email
 
-1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control. 
+1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control.
 
 2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
 
@@ -113,7 +109,7 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 	The gallery control is automatically populated with some of your emails.
 
-3. In the gallery, set the **Text** property of the first text box to `ThisItem.Id`. Set the second text box to `ThisItem.Subject`. Set the third text box to `ThisItem.Body`. 
+3. In the gallery, set the **Text** property of the first text box to `ThisItem.Id`. Set the second text box to `ThisItem.Subject`. Set the third text box to `ThisItem.Body`.
 4. Select the first text box in the gallery, and rename it to **EmailID**:
 
 	![Close the Options pane](./media/connection-office365-outlook/renameheading.png)
@@ -122,19 +118,19 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 	`Office365.DeleteEmail(EmailID.Text)`
 
-5. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and click the button. <br/><br/> **NOTE** This deletes the selected email from your inbox. So, choose wisely. 
+5. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and click the button. <br/><br/> **NOTE** This deletes the selected email from your inbox. So, choose wisely.
 
 6. Press Esc to return to the default workspace.
 
 ### Mark email as read
 
-This section uses the same controls as [Delete email](connection-office365-outlook.md#delete-email). 
+This section uses the same controls as [Delete email](connection-office365-outlook.md#delete-email).
 
 1. Set the button's **OnSelect** property to the following formula:  
 
 	`Office365.MarkAsRead(EmailID.Text)`
 
-2. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the  unread emails, and click the button. 
+2. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the  unread emails, and click the button.
 
 3. Press Esc to return to the default workspace.
 
@@ -172,7 +168,7 @@ This connection includes the following functions:
 
 
 ### OnUpcomingEvents
-On event starting soon: Triggers a flow when an upcoming calendar event is starting 
+On event starting soon: Triggers a flow when an upcoming calendar event is starting
 
 #### Input properties
 
@@ -189,7 +185,7 @@ On event starting soon: Triggers a flow when an upcoming calendar event is start
 
 
 ### GetEmails
-Get emails: Retrieves emails from a folder 
+Get emails: Retrieves emails from a folder
 
 #### Input properties
 
@@ -212,7 +208,7 @@ Get emails: Retrieves emails from a folder
 
 
 ### SendEmail
-Send Email: Sends an email message 
+Send Email: Sends an email message
 
 #### Input properties
 
@@ -221,11 +217,11 @@ Send Email: Sends an email message
 |emailMessage| |yes|Email message instance that can include the following properties: <ul><li>Attachment (optional): Send an attachment. Attachment properties include Name (required), and ContentBytes (required).</li><li>From (optional)</li><li>Cc (optional)</li><li>Bcc (optional)</li><li>Subject (required)</li><li>Body (required)</li><li>Importance (optional): "Low", "Normal", or "High"</li><li>IsHtml (optional): Enter true or false</li><li>To (required): Separate email addresses with a comma.</li></ul> |
 
 #### Output properties
-None. 
+None.
 
 
 ### DeleteEmail
-Delete email: Deletes an email message by id 
+Delete email: Deletes an email message by id
 
 #### Input properties
 
@@ -234,11 +230,11 @@ Delete email: Deletes an email message by id
 |messageId|string|yes|Id of the message to delete.|
 
 #### Output properties
-None. 
+None.
 
 
 ### MarkAsRead
-Mark as read: Marks an email message as having been read 
+Mark as read: Marks an email message as having been read
 
 #### Input properties
 
@@ -247,11 +243,11 @@ Mark as read: Marks an email message as having been read
 |messageId|string|yes|Id of the message to be marked as read|
 
 #### Output properties
-None. 
+None.
 
 
 ### ReplyTo
-Reply to message: Replies to an email message 
+Reply to message: Replies to an email message
 
 #### Input properties
 
@@ -262,11 +258,11 @@ Reply to message: Replies to an email message
 |replyAll|boolean|no|Reply to all recipients|
 
 #### Output properties
-None. 
+None.
 
 
 ### GetAttachment
-Get attachment: Retrieves message attachment by id 
+Get attachment: Retrieves message attachment by id
 
 #### Input properties
 
@@ -276,11 +272,11 @@ Get attachment: Retrieves message attachment by id
 |attachmentId|string|yes|Id of the attachment to download|
 
 #### Output properties
-None. 
+None.
 
 
 ### OnNewEmail
-On new email: Triggers a flow when a new email arrives 
+On new email: Triggers a flow when a new email arrives
 
 #### Input properties
 
@@ -302,7 +298,7 @@ On new email: Triggers a flow when a new email arrives
 
 
 ### SendMailWithOptions
-Send email with options: Send an email with multiple options and wait for the recipient to respond back with one of the options. 
+Send email with options: Send an email with multiple options and wait for the recipient to respond back with one of the options.
 
 #### Input properties
 
@@ -322,7 +318,7 @@ Send email with options: Send an email with multiple options and wait for the re
 
 
 ### SendApprovalMail
-Send approval email: Send an approval email and wait for a response from the To recipient. 
+Send approval email: Send an approval email and wait for a response from the To recipient.
 
 #### Input properties
 
@@ -341,7 +337,7 @@ Send approval email: Send an approval email and wait for a response from the To 
 
 
 ### CalendarGetTables
-Get calendars: Retrieves calendars 
+Get calendars: Retrieves calendars
 
 #### Input properties
 None.
@@ -354,7 +350,7 @@ None.
 
 
 ### CalendarGetItems
-Get events: Retrieves items from a calendar 
+Get events: Retrieves items from a calendar
 
 #### Input properties
 
@@ -374,7 +370,7 @@ Get events: Retrieves items from a calendar
 
 
 ### CalendarPostItem
-Create event: Creates a new event 
+Create event: Creates a new event
 
 #### Input properties
 
@@ -390,7 +386,7 @@ Create event: Creates a new event
 
 
 ### CalendarGetItem
-Get event: Retrieves a specific item from a calendar 
+Get event: Retrieves a specific item from a calendar
 
 #### Input properties
 
@@ -406,7 +402,7 @@ Get event: Retrieves a specific item from a calendar
 
 
 ### CalendarDeleteItem
-Delete event: Deletes a calendar item 
+Delete event: Deletes a calendar item
 
 #### Input properties
 
@@ -416,11 +412,11 @@ Delete event: Deletes a calendar item
 |id|string|yes|Unique identifier of calendar item to delete|
 
 #### Output properties
-None. 
+None.
 
 
 ### CalendarPatchItem
-Update event: Partially updates a calendar item 
+Update event: Partially updates a calendar item
 
 #### Input properties
 
@@ -437,7 +433,7 @@ Update event: Partially updates a calendar item
 
 
 ### CalendarGetOnNewItems
-On new items: Triggered when a new calendar item is created 
+On new items: Triggered when a new calendar item is created
 
 #### Input properties
 
@@ -457,7 +453,7 @@ On new items: Triggered when a new calendar item is created
 
 
 ### CalendarGetOnUpdatedItems
-On updated items: Triggered when a calendar item is modified 
+On updated items: Triggered when a calendar item is modified
 
 #### Input properties
 
@@ -477,10 +473,10 @@ On updated items: Triggered when a calendar item is modified
 
 
 ### ContactGetTables
-Get contact folders: Retrieves contacts folders 
+Get contact folders: Retrieves contacts folders
 
 #### Input properties
-None. 
+None.
 
 #### Output properties
 
@@ -490,7 +486,7 @@ None.
 
 
 ### ContactGetItems
-Get contacts: Retrieves contacts from a contacts folder 
+Get contacts: Retrieves contacts from a contacts folder
 
 #### Input properties
 
@@ -510,7 +506,7 @@ Get contacts: Retrieves contacts from a contacts folder
 
 
 ### ContactPostItem
-Create contact: Creates a new contact 
+Create contact: Creates a new contact
 
 #### Input properties
 
@@ -527,7 +523,7 @@ Create contact: Creates a new contact
 
 
 ### ContactGetItem
-Get contact: Retrieves a specific contact from a contacts folder 
+Get contact: Retrieves a specific contact from a contacts folder
 
 #### Input properties
 
@@ -544,7 +540,7 @@ Get contact: Retrieves a specific contact from a contacts folder
 
 
 ### ContactDeleteItem
-Delete contact: Deletes a contact 
+Delete contact: Deletes a contact
 
 #### Input properties
 
@@ -554,11 +550,11 @@ Delete contact: Deletes a contact
 |id|string|yes|Unique identifier of contact to delete|
 
 #### Output properties
-None. 
+None.
 
 
 ### ContactPatchItem
-Update contact: Partially updates a contact 
+Update contact: Partially updates a contact
 
 #### Input properties
 
