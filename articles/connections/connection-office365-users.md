@@ -38,7 +38,7 @@ This topic shows you how to add Office 365 Users as a connection, add Office 365
 
 	![Open a blank app](./media/connection-office365-users/blank-app.png)
 
-2. In the lower-right corner, select **Options**, and then select **Add data source**.
+2. In the right-hand pane, open the **Data sources** tab, and then select **Add data source**.
 
 3. Select **Add connection**, and then select **Office 365 Users**:  
 
@@ -48,12 +48,7 @@ This topic shows you how to add Office 365 Users as a connection, add Office 365
 
 4. Select **Connect**, and if prompted to sign in, enter your work account. Your connection is listed under **Data sources**. If it's not listed, select **Add Data Source**, and select **Office 365 Users**.
 
-5. Close the **Options** pane by selecting the **X** in its upper-right corner:  
-
-	![Close the Options pane](./media/connection-office365-users/close-options.png)
-
 The Office 365 Users connection has been created, and added to your app. Now, it's ready to be used.
-
 
 ## Use the Office 365 Users connection in your app
 
@@ -81,7 +76,7 @@ The text box shows the information that you entered about the current user.
 
 	![Rename control](./media/connection-office365-users/renameinfoabout.png)
 
-2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*. 
+2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*.
 
 3. Add a **Text box** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
 
@@ -100,7 +95,7 @@ The text box shows the information that you entered about the current user.
 		`Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
 
 	- To show information about another user's manager:  
-	
+
 		`Office365Users.Manager(InfoAbout.Text).Department`  
 		`Office365Users.Manager(InfoAbout.Text).DisplayName`  
 		`Office365Users.Manager(InfoAbout.Text).GivenName`  
@@ -126,13 +121,14 @@ The text box shows the information that you entered about the user you entered a
 
 	The gallery shows information about the direct reports of the user you entered.
 
-4. With the gallery still selected, select **Options** in the lower-right corner. In the second list, select **JobTitle**. In the third list, select **DisplayName**. The gallery is updated to show these values.  
+	With the gallery selected, the right-hand pane shows options for that gallery.
 
-	<br/>**NOTE** The first box is actually an image control. If you don't have an image, then you can delete the image control, and add a text box in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
+4. In the second list, select **JobTitle**. In the third list, select **DisplayName**. The gallery is updated to show these values.  
 
+	<br/>**NOTE** The first box is actually an image control. If you don't have an image, you can delete the image control, and add a text box in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 ### Search for users
-1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name. 
+1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
 
 2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
 
@@ -140,13 +136,14 @@ The text box shows the information that you entered about the user you entered a
 
 	The gallery shows users whose name contains the search text you entered.
 
-3. With the gallery still selected, select **Options** in the lower-right corner. In the second list, select **Mail**. In the third list, select **DisplayName**. 
+	With the gallery selected, the right-hand pane shows options for that gallery.
 
-	The second and third text boxes in the gallery are updated. 
+3. In the second list, select **Mail**. In the third list, select **DisplayName**.
 
+	The second and third text boxes in the gallery are updated.
 
 ## View the available functions
- 
+
 This connection includes the following functions:
 
 | Function Name |  Description |
@@ -182,7 +179,7 @@ None.
 
 
 ### UserProfile
-Get user profile: Retrieves a specific user profile. 
+Get user profile: Retrieves a specific user profile.
 
 #### Input properties
 
@@ -233,7 +230,7 @@ Get manager: Retrieves user profile for the manager of the specified user
 | AccountEnabled  | boolean | Account enabled flag. |
 
 
-### DirectReports 
+### DirectReports
 Get direct reports: Get direct reports
 
 #### Input properties

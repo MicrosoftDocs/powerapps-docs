@@ -22,9 +22,7 @@
 
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
 
-Microsoft Translator lets you translate text.
-
-You can display the translated information in a text box on your app. For example, you can create an input text box that asks the user to enter some text to translate. In another text box, you can display the translated text. 
+Add the Microsoft Translator connector to display translated text in a **Text box** control in your app. For example, you can create an input text box that asks the user to enter some text to translate. In another text box, you can display the translated text.
 
 This topic shows you how to create the Microsoft Translator connection, use the Microsoft Translator connection in an app, and lists the available functions.
 
@@ -38,7 +36,7 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 
 	![Open a blank app](./media/connection-microsoft-translator/blank-app.png)
 
-2. In the lower-right corner, select **Options**, and then select **Add data source**.
+2. In the right-hand pane, open the **Data sources** tab, and then select **Add data source**.
 
 3. Select **Add connection**, and then select **Microsoft Translator**:  
 
@@ -50,10 +48,6 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 
 	![Connect to Microsoft Translator](./media/connection-microsoft-translator/translatordatasource.png)
 
-5. Close the **Screen** pane by selecting the **X** in its upper-right corner:  
-
-	![Close the Options pane](./media/connection-microsoft-translator/close-options.png)
-
 ## Use the Microsoft Translator connection in your app
 
 ### Translate text
@@ -61,7 +55,7 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 
 	![Rename](./media/connection-microsoft-translator/renametosource.png)
 
-2. Add a **Drop down** list (**Insert** menu > **Controls**), rename it to **TargetLang**, and move it below **Source**. 
+2. Add a **Drop down** list (**Insert** menu > **Controls**), rename it to **TargetLang**, and move it below **Source**.
 
 3. Set the **[Items](../controls/properties-core.md)** property of **TargetLang** to the following formula:  
 
@@ -76,10 +70,10 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 	![Translate text from English to Spanish](./media/connection-microsoft-translator/translate-text.png)
 
 ### Speak translated text
-If you haven't already, follow the steps in the previous section to translate some text. These next steps use the same controls. 
+If you haven't already, follow the steps in the previous section to translate some text. These next steps use the same controls.
 
 1. Set the **[Items](../controls/properties-core.md)** property of the **TargetLang** drop-down list to the following formula:  
-	
+
 	`MicrosoftTranslator.SpeechLanguages()`
 
 2. Rename the second text box (not the **Source** box) to **Target**.
@@ -101,14 +95,14 @@ These next steps use the same **Source** text input and **Target** text controls
 
 	`MicrosoftTranslator.Detect(Source.Text).Name`
 
-2. Type some text into **Source**. 
+2. Type some text into **Source**.
 
 	The text box shows you the language of the text that you typed. For example, the text box shows **French** if you type **bonjour**, or **Italian** if you type **ciao**.
 
 
 
 ## View the available functions
- 
+
 This connection includes the following functions:
 
 | Function Name |  Description |
@@ -120,7 +114,7 @@ This connection includes the following functions:
 |[TextToSpeech](connection-microsoft-translator.md#texttospeech) | Converts a given text into speech as an audio stream in wave format  |
 
 ### Languages
-Get languages: Retrieves all languages that Microsoft Translator supports 
+Get languages: Retrieves all languages that Microsoft Translator supports
 
 #### Input properties
 None.
@@ -134,7 +128,7 @@ None.
 
 
 ### Translate
-Translate text: Translates text to a specified language using Microsoft Translator 
+Translate text: Translates text to a specified language using Microsoft Translator
 
 #### Input properties
 
@@ -146,11 +140,11 @@ Translate text: Translates text to a specified language using Microsoft Translat
 |category|string|no|Translation category (default: 'general')|
 
 #### Output properties
-None. 
+None.
 
 
 ### Detect
-Detect language: Detects source language of given text 
+Detect language: Detects source language of given text
 
 #### Input properties
 
@@ -167,7 +161,7 @@ Detect language: Detects source language of given text
 
 
 ### SpeechLanguages
-Get speech languages: Retrieves the languages available for speech synthesis 
+Get speech languages: Retrieves the languages available for speech synthesis
 
 #### Input properties
 None.
@@ -181,7 +175,7 @@ None.
 
 
 ### TextToSpeech
-Text to speech: Converts a given text into speech as an audio stream in wave format 
+Text to speech: Converts a given text into speech as an audio stream in wave format
 
 #### Input properties
 
@@ -191,7 +185,7 @@ Text to speech: Converts a given text into speech as an audio stream in wave for
 |language|string|yes|Language code to generate speech (example: 'en-us')|
 
 #### Output properties
-None. 
+None.
 
 
 ## Helpful links

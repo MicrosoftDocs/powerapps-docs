@@ -31,7 +31,7 @@ This topic shows you how to add Azure SQL Database as a connection, add a SQL da
 &nbsp;
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-- An Azure SQL database with its user name and password. You can use these steps at [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database. When you create the SQL database, we suggest you add the **Sample data**. 
+- An Azure SQL database with its user name and password. You can use these steps at [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database. When you create the SQL database, we suggest you add the **Sample data**.
 - A table with a primary key stored in the SQL database.
 
 ## Get the connection string
@@ -90,7 +90,7 @@ A SQL database connection is a "tabular" data source. As a result, use galleries
 
 	![Items property](./media/connection-azure-sqldatabase/galleryparts.png)
 
-	If you open the **Options** pane, the **Text** property of each text box appears:  
+	In the right-hand pane, the **Text** property of each text box appears:  
 
 	![Text box property](./media/connection-azure-sqldatabase/optionsproperties.png)
 
