@@ -151,7 +151,7 @@ To follow this tutorial exactly:
 
 1. Add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
-	`Navigate(ViewScreen,ScreenTransition.None)`
+	`ResetForm(Form1);Navigate(ViewScreen,ScreenTransition.None)`
 
  	When the user selects the arrow, the **[Navigate](functions/function-navigate.md)** function shows the **ViewScreen**.
 
@@ -170,6 +170,12 @@ To follow this tutorial exactly:
 	`Remove(Schedule,BrowseGallery1.Selected);If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))`
 
 	When the user selects this button, the record is [removed](functions/function-remove-removeif.md), and the **ViewScreen** reappears.
+
+1.  Set the **[Visible](controls/properties-core.md)** property of the **Remove** button to this formula:
+
+	`Form1.Mode=FormMode.Edit`
+
+	This hides the **Remove** button when the user is creating a record.
 
 	The **ChangeScreen** matches this example:
 
