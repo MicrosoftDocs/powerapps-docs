@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,24 +16,24 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="06/08/2016"
-   ms.author="mandia"/>
+   ms.author="anneta"/>
 
 #  Excel
 
 ![Excel](./media/connection-excel/excelicon.png)
 
-Connect to a cloud storage account to display Excel table data in your app. 
+Connect to a cloud storage account to display Excel table data in your app.
 
 ## What you need to know
 Excel is *kind of* a connection. To display Excel data in your app, you must do the following:
 
-1. Store an Excel file in a cloud storage connection, including Box, Dropbox, Google Drive, OneDrive, and OneDrive for Business. 
+1. Store an Excel file in a cloud storage connection, including Box, Dropbox, Google Drive, OneDrive, and OneDrive for Business.
 2. Format the Excel data as a table.
-3. In your app, create a connection to the cloud storage account, and then add the Excel table as a data source. 
+3. In your app, create a connection to the cloud storage account, and then add the Excel table as a data source.
 
-Then, you can display this information in a gallery control on your app. 
+Then, you can display this information in a gallery control on your app.
 
-[Overview of the cloud storage connection](cloud-storage-blob-connections.md) shows you how to add the connection, add an Excel table as a data source, and use the Excel data in your app. 
+[Overview of the cloud storage connection](cloud-storage-blob-connections.md) shows you how to add the connection, add an Excel table as a data source, and use the Excel data in your app.
 
 <!--NotAvailableYet
 
@@ -53,7 +53,7 @@ This connection includes the following functions:
 
 
 ### GetTables
-Get tables: Retrieves table names from an Excel file 
+Get tables: Retrieves table names from an Excel file
 
 #### Input properties
 
@@ -69,7 +69,7 @@ Get tables: Retrieves table names from an Excel file
 
 
 ### GetItems
-Get rows: Retrieves rows from an Excel table 
+Get rows: Retrieves rows from an Excel table
 
 #### Input properties
 
@@ -91,7 +91,7 @@ Get rows: Retrieves rows from an Excel table
 
 
 ### PostItem
-Insert row: Inserts a new row into an Excel table 
+Insert row: Inserts a new row into an Excel table
 
 #### Input properties
 
@@ -110,7 +110,7 @@ Insert row: Inserts a new row into an Excel table
 
 
 ### GetItem
-Get row: Retrieves a single row from an Excel table 
+Get row: Retrieves a single row from an Excel table
 
 #### Input properties
 
@@ -130,7 +130,7 @@ Get row: Retrieves a single row from an Excel table
 
 
 ### DeleteItem
-Delete row: Deletes a row from an Excel table 
+Delete row: Deletes a row from an Excel table
 
 #### Input properties
 
@@ -146,7 +146,7 @@ None.
 
 
 ### PatchItem
-Update row: Updates an existing row in an Excel table 
+Update row: Updates an existing row in an Excel table
 
 #### Input properties
 

@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Box connection | Microsoft PowerApps"
 	description="See the available Box functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  Box
 
@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 Connect to Box to manage your files. You can perform various actions such as upload, update, get, and delete files in Box.
 
-For example, you can create an app with several text boxes that asks the user for information, like maybe a picture and a name. Then, you can take this information and update a file in a Dropbox account. In another example, you can show a list of all the files in a Dropbox folder. Then in your app, let your app users select one of the files. 
+For example, you can create an app with several text boxes that asks the user for information, like maybe a picture and a name. Then, you can take this information and update a file in a Dropbox account. In another example, you can show a list of all the files in a Dropbox folder. Then in your app, let your app users select one of the files.
 
 This topic shows the available functions.
 
@@ -52,7 +52,7 @@ This connection includes the following functions:
 
 
 ## GetFileMetadata
-Get file metadata using id: Retrieves file metadata from Box using file id 
+Get file metadata using id: Retrieves file metadata from Box using file id
 
 #### Input properties
 
@@ -77,7 +77,7 @@ Get file metadata using id: Retrieves file metadata from Box using file id
 
 
 ## UpdateFile
-Update file: Updates a file in Box 
+Update file: Updates a file in Box
 
 #### Input properties
 
@@ -103,7 +103,7 @@ Update file: Updates a file in Box
 
 
 ## DeleteFile
-Delete file: Deletes a file from Box 
+Delete file: Deletes a file from Box
 
 #### Input properties
 
@@ -116,7 +116,7 @@ None.
 
 
 ## GetFileMetadataByPath
-Get file metadata using path: Retrieves file metadata from Box using path 
+Get file metadata using path: Retrieves file metadata from Box using path
 
 #### Input properties
 
@@ -141,7 +141,7 @@ Get file metadata using path: Retrieves file metadata from Box using path
 
 
 ## GetFileContentByPath
-Get file content using path: Retrieves file contents from Box using path 
+Get file content using path: Retrieves file contents from Box using path
 
 #### Input properties
 
@@ -154,7 +154,7 @@ None.
 
 
 ## GetFileContent
-Get file content using id: Retrieves file contents from Box using id 
+Get file content using id: Retrieves file contents from Box using id
 
 #### Input properties
 
@@ -167,7 +167,7 @@ None.
 
 
 ## CreateFile
-Create file: Uploads a file to Box 
+Create file: Uploads a file to Box
 
 #### Input properties
 
@@ -195,7 +195,7 @@ Create file: Uploads a file to Box
 
 
 ## CopyFile
-Copy file: Copies a file to Box 
+Copy file: Copies a file to Box
 
 #### Input properties
 
@@ -222,7 +222,7 @@ Copy file: Copies a file to Box
 
 
 ## OnNewFile
-When a file is created: Triggers a flow when a new file is created in a Box folder 
+When a file is created: Triggers a flow when a new file is created in a Box folder
 
 #### Input properties
 
@@ -235,7 +235,7 @@ None.
 
 
 ## OnUpdatedFile
-When a file is modified: Triggers a flow when a file is modified in a Box folder 
+When a file is modified: Triggers a flow when a file is modified in a Box folder
 
 #### Input properties
 
@@ -248,7 +248,7 @@ None.
 
 
 ## ExtractFolderV2
-Extract archive to folder: Extracts an archive file into a folder in Box (example: .zip) 
+Extract archive to folder: Extracts an archive file into a folder in Box (example: .zip)
 
 #### Input properties
 

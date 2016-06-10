@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Twilio connection | Microsoft PowerApps"
 	description="See the available Twilio functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 
 #  Twilio
@@ -25,7 +25,7 @@ ms.author="mandia"/>
 
 Twilio enables apps to send and receive global SMS, MMS and IP messages.
 
-You can display and send messages from your app. For example, you can add a gallery on your app that returns all the messages from a Twilio account. You can also add some input text boxes that asks the user for message information, including the To recipient and the from number. Then add a button that sends the message. You can do all this from your app. 
+You can display and send messages from your app. For example, you can add a gallery on your app that returns all the messages from a Twilio account. You can also add some input text boxes that asks the user for message information, including the To recipient and the from number. Then add a button that sends the message. You can do all this from your app.
 
 This topic shows the available functions.
 
@@ -45,7 +45,7 @@ This connection includes the following functions:
 
 
 ## ListMessages
-List Messages: Returns a list of messages associated with your account 
+List Messages: Returns a list of messages associated with your account
 
 #### Input properties
 
@@ -73,7 +73,7 @@ List Messages: Returns a list of messages associated with your account
 
 
 ## SendMessage
-Send Message: Send a new message to a mobile number. 
+Send Message: Send a new message to a mobile number.
 
 #### Input properties
 
@@ -111,7 +111,7 @@ Send Message: Send a new message to a mobile number.
 
 
 ## GetMessage
-Get Message: Returns a single message specified by the provided Message ID. 
+Get Message: Returns a single message specified by the provided Message ID.
 
 #### Input properties
 

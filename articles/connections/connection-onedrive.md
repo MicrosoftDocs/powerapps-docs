@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/26/2016"
-   ms.author="mandia"/>
+   ms.author="anneta"/>
 
 #  OneDrive
 
@@ -24,7 +24,7 @@
 
 Connect to OneDrive to manage your files. You can perform various actions such as upload, update, get, and delete on files in OneDrive.
 
-You can manage your OneDrive within your app. For example, you can list all the items in a OneDrive folder in your app, and display this list in a Gallery control. 
+You can manage your OneDrive within your app. For example, you can list all the items in a OneDrive folder in your app, and display this list in a Gallery control.
 
 This topic shows the available functions.
 
@@ -54,7 +54,7 @@ This connection includes the following functions:
 
 
 ## GetFileMetadata
-Get file metadata using id: Retrieves metadata of a file in OneDrive using id 
+Get file metadata using id: Retrieves metadata of a file in OneDrive using id
 
 #### Input properties
 
@@ -79,7 +79,7 @@ Get file metadata using id: Retrieves metadata of a file in OneDrive using id
 
 
 ## UpdateFile
-Update file: Updates a file in OneDrive 
+Update file: Updates a file in OneDrive
 
 #### Input properties
 
@@ -105,7 +105,7 @@ Update file: Updates a file in OneDrive
 
 
 ## DeleteFile
-Delete file: Deletes a file from OneDrive 
+Delete file: Deletes a file from OneDrive
 
 #### Input properties
 
@@ -114,11 +114,11 @@ Delete file: Deletes a file from OneDrive
 |id|string|yes|Specify the file to delete|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileMetadataByPath
-Get file metadata using path: Retrieves metadata of a file in OneDrive using path 
+Get file metadata using path: Retrieves metadata of a file in OneDrive using path
 
 #### Input properties
 
@@ -143,7 +143,7 @@ Get file metadata using path: Retrieves metadata of a file in OneDrive using pat
 
 
 ## GetFileContentByPath
-Get file content using path: Retrieves contents of a file in OneDrive using path 
+Get file content using path: Retrieves contents of a file in OneDrive using path
 
 #### Input properties
 
@@ -152,11 +152,11 @@ Get file content using path: Retrieves contents of a file in OneDrive using path
 |path|string|yes|Unique path to the file in OneDrive|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileContent
-Get file content using id: Retrieves contents of a file in OneDrive using id 
+Get file content using id: Retrieves contents of a file in OneDrive using id
 
 #### Input properties
 
@@ -165,11 +165,11 @@ Get file content using id: Retrieves contents of a file in OneDrive using id
 |id|string|yes|Specify the file|
 
 #### Output properties
-None. 
+None.
 
 
 ## CreateFile
-Create file: Uploads a file to OneDrive 
+Create file: Uploads a file to OneDrive
 
 #### Input properties
 
@@ -196,7 +196,7 @@ Create file: Uploads a file to OneDrive
 
 
 ## CopyFile
-Copy file: Copies a file to OneDrive 
+Copy file: Copies a file to OneDrive
 
 #### Input properties
 
@@ -223,7 +223,7 @@ Copy file: Copies a file to OneDrive
 
 
 ## OnNewFile
-When a file is created: Triggers a flow when a new file is created in a OneDrive folder 
+When a file is created: Triggers a flow when a new file is created in a OneDrive folder
 
 #### Input properties
 
@@ -232,11 +232,11 @@ When a file is created: Triggers a flow when a new file is created in a OneDrive
 |folderId|string|yes|Specify a folder|
 
 #### Output properties
-None. 
+None.
 
 
 ## OnUpdatedFile
-When a file is modified: Triggers a flow when a file is modified in a OneDrive folder 
+When a file is modified: Triggers a flow when a file is modified in a OneDrive folder
 
 #### Input properties
 
@@ -245,11 +245,11 @@ When a file is modified: Triggers a flow when a file is modified in a OneDrive f
 |folderId|string|yes|Specify a folder|
 
 #### Output properties
-None. 
+None.
 
 
 ## ListFolder
-List files in folder: Lists files in a OneDrive folder 
+List files in folder: Lists files in a OneDrive folder
 
 #### Input properties
 
@@ -274,7 +274,7 @@ List files in folder: Lists files in a OneDrive folder
 
 
 ## ListRootFolder
-List root folder: Lists files in the OneDrive root folder 
+List root folder: Lists files in the OneDrive root folder
 
 #### Input properties
 None.
@@ -296,7 +296,7 @@ None.
 
 
 ## ExtractFolderV2
-Extract folder: Extracts a folder to OneDrive 
+Extract folder: Extracts a folder to OneDrive
 
 #### Input properties
 
@@ -320,7 +320,7 @@ Extract folder: Extracts a folder to OneDrive
 |IsFolder|boolean|No | |
 |ETag|string|No | |
 |FileLocator|string|No | |
- 
+
 
 ## Helpful links
 

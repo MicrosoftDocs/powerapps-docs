@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/28/2016"
-   ms.author="mandia"/>
+   ms.author="anneta"/>
 
 #  OneDrive for Business
 
@@ -24,7 +24,7 @@
 
 Connect to OneDrive for Business to manage your files. You can perform various actions such as upload, update, get, and delete on files.
 
-You can manage your OneDrive for Business account within your app. For example, you can list all the items in a OneDrive folder in your app, and display this list in a Gallery control. 
+You can manage your OneDrive for Business account within your app. For example, you can list all the items in a OneDrive folder in your app, and display this list in a Gallery control.
 
 This topic shows the available functions.
 
@@ -55,7 +55,7 @@ This connection includes the following functions:
 
 
 ## GetFileMetadata
-Get file metadata using id: Retrieves metadata of a file in OneDrive for Business using id 
+Get file metadata using id: Retrieves metadata of a file in OneDrive for Business using id
 
 #### Input properties
 
@@ -80,7 +80,7 @@ Get file metadata using id: Retrieves metadata of a file in OneDrive for Busines
 
 
 ## UpdateFile
-Update file: Updates a file in OneDrive for Business 
+Update file: Updates a file in OneDrive for Business
 
 #### Input properties
 
@@ -106,7 +106,7 @@ Update file: Updates a file in OneDrive for Business
 
 
 ## DeleteFile
-Delete file: Deletes a file from OneDrive for Business 
+Delete file: Deletes a file from OneDrive for Business
 
 #### Input properties
 
@@ -115,11 +115,11 @@ Delete file: Deletes a file from OneDrive for Business
 |id|string|yes|Specify the file to delete|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileMetadataByPath
-Get file metadata using path: Retrieves metadata of a file in OneDrive for Business using path 
+Get file metadata using path: Retrieves metadata of a file in OneDrive for Business using path
 
 #### Input properties
 
@@ -144,7 +144,7 @@ Get file metadata using path: Retrieves metadata of a file in OneDrive for Busin
 
 
 ## GetFileContentByPath
-Get file content using path: Retrieves contents of a file in OneDrive for Business using path 
+Get file content using path: Retrieves contents of a file in OneDrive for Business using path
 
 #### Input properties
 
@@ -153,11 +153,11 @@ Get file content using path: Retrieves contents of a file in OneDrive for Busine
 |path|string|yes|Unique path to the file in OneDrive for Business|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileContent
-Get file content using id: Retrieves contents of a file in OneDrive for Business using id 
+Get file content using id: Retrieves contents of a file in OneDrive for Business using id
 
 #### Input properties
 
@@ -166,11 +166,11 @@ Get file content using id: Retrieves contents of a file in OneDrive for Business
 |id|string|yes|Specify the file|
 
 #### Output properties
-None. 
+None.
 
 
 ## CreateFile
-Create file: Uploads a file to OneDrive for Business 
+Create file: Uploads a file to OneDrive for Business
 
 #### Input properties
 
@@ -197,7 +197,7 @@ Create file: Uploads a file to OneDrive for Business
 
 
 ## CopyFile
-Copy file: Copies a file to OneDrive for Business 
+Copy file: Copies a file to OneDrive for Business
 
 #### Input properties
 
@@ -224,7 +224,7 @@ Copy file: Copies a file to OneDrive for Business
 
 
 ## OnNewFile
-When a file is created: Triggers a flow when a new file is created in a OneDrive for Business folder 
+When a file is created: Triggers a flow when a new file is created in a OneDrive for Business folder
 
 #### Input properties
 
@@ -233,11 +233,11 @@ When a file is created: Triggers a flow when a new file is created in a OneDrive
 |folderId|string|yes|Specify a folder|
 
 #### Output properties
-None. 
+None.
 
 
 ## OnUpdatedFile
-When a file is modified: Triggers a flow when a file is modified in a OneDrive for Business folder 
+When a file is modified: Triggers a flow when a file is modified in a OneDrive for Business folder
 
 #### Input properties
 
@@ -246,11 +246,11 @@ When a file is modified: Triggers a flow when a file is modified in a OneDrive f
 |folderId|string|yes|Specify a folder|
 
 #### Output properties
-None. 
+None.
 
 
 ## ListFolder
-List files in folder: Lists files in a OneDrive for Business folder 
+List files in folder: Lists files in a OneDrive for Business folder
 
 #### Input properties
 
@@ -275,7 +275,7 @@ List files in folder: Lists files in a OneDrive for Business folder
 
 
 ## ListRootFolder
-List root folder: Lists files in the OneDrive for Business root folder 
+List root folder: Lists files in the OneDrive for Business root folder
 
 #### Input properties
 None.
@@ -297,7 +297,7 @@ None.
 
 
 ## ExtractFolderV2
-Extract folder: Extracts a folder to OneDrive for Business 
+Extract folder: Extracts a folder to OneDrive for Business
 
 #### Input properties
 
@@ -321,7 +321,7 @@ Extract folder: Extracts a folder to OneDrive for Business
 |IsFolder|boolean|No | |
 |ETag|string|No | |
 |FileLocator|string|No | |
- 
+
 
 ## Helpful links
 

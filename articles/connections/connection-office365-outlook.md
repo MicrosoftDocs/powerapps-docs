@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="06/08/2016"
-   ms.author="mandia"/>
+   ms.author="anneta"/>
 
 #  Office 365 Outlook
 
