@@ -22,9 +22,9 @@
 
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
 
-If you connect to Office 365 Outlook, you can create, edit, and update contacts and calendar items, in addition to other tasks.
+If you connect to Office 365 Outlook, you can show, send, delete, and reply to email messages, in addition to other tasks.
 
-You can add controls, including buttons and text boxes, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the recipient, the subject, and the body of the email. Then, add a Send button that sends the email. You can also use these controls for similar calendar items, like adding a new calendar item on a specific date, or getting today's events, and then displaying them in your app.
+You can add controls, including buttons and text boxes, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the recipient, the subject, and the body of the email. Then, add a Send button that sends the email.
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
@@ -50,9 +50,9 @@ This topic shows you how to add Office 365 Outlook as a connection, add Office 3
 The Office 365 Outlook connection has been created, and added to your app. Now, it's ready to be used.
 
 
-## Use the Office 365 Users connection in your app
+## Use the Office 365 Outlook connection in your app
 
-### Get Emails
+### Show email
 
 1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control.
 
@@ -66,7 +66,7 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 	The gallery control is automatically populated with the new properties.
 
-4. This function has several optional parameters available. Set the gallery's **Items** property to the following formulas:
+4. This function has several optional parameters available. Set the gallery's **Items** property to one of the following formulas:
 
 	`Office365.GetEmails({fetchOnlyUnread:false})`  
 	`Office365.GetEmails({fetchOnlyUnread:false, top:2})`  
@@ -141,7 +141,6 @@ This connection includes the following functions:
 
 | Function Name |  Description |
 | --- | --- |
-|[OnUpcomingEvents](connection-office365-outlook.md#onupcomingevents) | Triggers a flow when an upcoming calendar event is starting |
 |[GetEmails](connection-office365-outlook.md#getemails) | Retrieves emails from a folder  |
 |[SendEmail](connection-office365-outlook.md#sendemail) | Sends an email message  |
 |[DeleteEmail](connection-office365-outlook.md#deleteemail) | Deletes an email message using the message id  |
@@ -151,38 +150,6 @@ This connection includes the following functions:
 |[OnNewEmail](connection-office365-outlook.md#onnewemail) | Triggers a flow when a new email arrives   |
 |[SendMailWithOptions](connection-office365-outlook.md#sendmailwithoptions) | Send an email with multiple options and wait for the recipient to respond back with one of the options.   |
 |[SendApprovalMail](connection-office365-outlook.md#sendapprovalmail) | Send an approval email and wait for a response from the To recipient.   |
-|[CalendarGetTables](connection-office365-outlook.md#calendargettables) | Retrieves calendars  |
-|[CalendarGetItems](connection-office365-outlook.md#calendargetitems) |  Retrieves items from a calendar  |
-|[CalendarPostItem](connection-office365-outlook.md#calendarpostitem) | Creates a new event   |
-|[CalendarGetItem](connection-office365-outlook.md#calendargetitem) |  Retrieves a specific item from a calendar  |
-|[CalendarDeleteItem](connection-office365-outlook.md#calendardeleteitem) | Deletes a calendar item   |
-|[CalendarPatchItem](connection-office365-outlook.md#calendarpatchitem) | Partially updates a calendar item   |
-|[CalendarGetOnNewItems](connection-office365-outlook.md#calendargetonnewitems) |  Triggered when a new calendar item is created  |
-|[CalendarGetOnUpdatedItems](connection-office365-outlook.md#calendargetonupdateditems) |  Triggered when a calendar item is modified  |
-|[ContactGetTables](connection-office365-outlook.md#contactgettables) | Retrieves contacts folders   |
-|[ContactGetItems](connection-office365-outlook.md#contactgetitems) | Retrieves contacts from a contacts folder   |
-|[ContactPostItem](connection-office365-outlook.md#contactpostitem) | Creates a new contact   |
-|[ContactGetItem](connection-office365-outlook.md#contactgetitem) | Retrieves a specific contact from a contacts folder   |
-|[ContactDeleteItem](connection-office365-outlook.md#contactdeleteitem) |  Deletes a contact  |
-|[ContactPatchItem](connection-office365-outlook.md#contactpatchitem) | Partially updates a contact   |
-
-
-### OnUpcomingEvents
-On event starting soon: Triggers a flow when an upcoming calendar event is starting
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of the calendar|
-|lookAheadTimeInMinutes|integer|no|Time (in minutes) to look ahead for upcoming events.|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|array | string |no | List of calendar items |
-
 
 ### GetEmails
 Get emails: Retrieves emails from a folder
@@ -334,241 +301,6 @@ Send approval email: Send an approval email and wait for a response from the To 
 |resource|string|No | |
 |notificationType|string|No | |
 |notificationUrl|string|No | |
-
-
-### CalendarGetTables
-Get calendars: Retrieves calendars
-
-#### Input properties
-None.
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|No | |
-
-
-### CalendarGetItems
-Get events: Retrieves items from a calendar
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of the calendar to retrieve|
-|$skip|integer|no|Number of entries to skip (default = 0)|
-|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
-|$filter|string|no|An ODATA filter query to restrict the number of entries|
-|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|No | |
-
-
-### CalendarPostItem
-Create event: Creates a new event
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a calendar|
-|item| |yes|Calendar item to create. You can optionally pass in the ItemInternalId. |
-
-#### Output properties
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|ItemInternalId|string|No |Represents a calendar table item |
-
-
-### CalendarGetItem
-Get event: Retrieves a specific item from a calendar
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a calendar|
-|id|string|yes|Unique identifier of a calendar item to retrieve|
-
-#### Output properties
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|ItemInternalId|string|No |Represents a calendar table item |
-
-
-### CalendarDeleteItem
-Delete event: Deletes a calendar item
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a calendar.|
-|id|string|yes|Unique identifier of calendar item to delete|
-
-#### Output properties
-None.
-
-
-### CalendarPatchItem
-Update event: Partially updates a calendar item
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a calendar|
-|id|string|yes|Unique identifier of calendar item to update|
-|item| |yes|Calendar item to update|
-
-#### Output properties
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|ItemInternalId|string|No | |
-
-
-### CalendarGetOnNewItems
-On new items: Triggered when a new calendar item is created
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a calendar|
-|$skip|integer|no|Number of entries to skip (default = 0)|
-|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
-|$filter|string|no|An ODATA filter query to restrict the number of entries|
-|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description|
-| ---|---|---|---|
-|value|array|No | |
-
-
-### CalendarGetOnUpdatedItems
-On updated items: Triggered when a calendar item is modified
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a calendar|
-|$skip|integer|no|Number of entries to skip (default = 0)|
-|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
-|$filter|string|no|An ODATA filter query to restrict the number of entries|
-|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description|
-| ---|---|---|---|
-|value|array|No | |
-
-
-### ContactGetTables
-Get contact folders: Retrieves contacts folders
-
-#### Input properties
-None.
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description|
-| ---|---|---|---|
-|value|array|No | |
-
-
-### ContactGetItems
-Get contacts: Retrieves contacts from a contacts folder
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of the contacts folder to retrieve|
-|$skip|integer|no|Number of entries to skip (default = 0)|
-|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
-|$filter|string|no|An ODATA filter query to restrict the number of entries|
-|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description|
-| ---|---|---|---|
-|value|array|No | |
-
-
-### ContactPostItem
-Create contact: Creates a new contact
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a contacts folder|
-|item| |yes|Contact to create|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description|
-| ---|---|---|---|
-|ItemInternalId|string|No | |
-
-
-### ContactGetItem
-Get contact: Retrieves a specific contact from a contacts folder
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a contacts folder|
-|id|string|yes|Unique identifier of a contact to retrieve|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description|
-| ---|---|---|---|
-|ItemInternalId|string|No | |
-
-
-### ContactDeleteItem
-Delete contact: Deletes a contact
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a contacts folder.|
-|id|string|yes|Unique identifier of contact to delete|
-
-#### Output properties
-None.
-
-
-### ContactPatchItem
-Update contact: Partially updates a contact
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|table|string|yes|Unique identifier of a contacts folder|
-|id|string|yes|Unique identifier of contact to update|
-|item| |yes|Contact item to update|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description|
-| ---|---|---|---|
-|ItemInternalId|string|No | |
 
 
 ## Helpful links
