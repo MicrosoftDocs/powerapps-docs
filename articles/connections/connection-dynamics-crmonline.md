@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Dynamics CRM Online connection | Microsoft PowerApps"
 	description="See the available Dynamics CRM Online functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  Dynamics CRM Online
 
@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 Dynamics CRM Online provides an API to work with entities on Dynamics CRM Online.
 
-You can display information from items within Dynamics in your app. For example, you can add text boxes to your app, and in these text boxes, display a record from a Dynamics entity. You can also use the gallery control within your app to return a list of all entities in a CRM instances. In another example, you can add a button that control that when selected, it creates a new record or deletes a record for an entity. 
+You can display information from items within Dynamics in your app. For example, you can add text boxes to your app, and in these text boxes, display a record from a Dynamics entity. You can also use the gallery control within your app to return a list of all entities in a CRM instances. In another example, you can add a button that control that when selected, it creates a new record or deletes a record for an entity.
 
 This topic shows the available functions.
 
@@ -47,7 +47,7 @@ This connection includes the following functions:
 
 
 ## GetItems
-Gets records: Get records for an entity 
+Gets records: Get records for an entity
 
 #### Input properties
 
@@ -68,7 +68,7 @@ Gets records: Get records for an entity
 
 
 ## PostItem
-Create a new record: Create a new record of an entity 
+Create a new record: Create a new record of an entity
 
 #### Input properties
 
@@ -86,7 +86,7 @@ Create a new record: Create a new record of an entity
 
 
 ## GetItem
-Gets a record: Retrieve the specified record for an entity 
+Gets a record: Retrieve the specified record for an entity
 
 #### Input properties
 
@@ -104,7 +104,7 @@ Gets a record: Retrieve the specified record for an entity
 
 
 ## DeleteItem
-Delete a record: Delete an record from an entity collection 
+Delete a record: Delete an record from an entity collection
 
 #### Input properties
 
@@ -115,11 +115,11 @@ Delete a record: Delete an record from an entity collection
 |id|string|yes|Identifier for the record|
 
 #### Output properties
-None. 
+None.
 
 
 ## PatchItem
-Update an item: Update an existing record for an entity 
+Update an item: Update an existing record for an entity
 
 #### Input properties
 
@@ -138,7 +138,7 @@ Update an item: Update an existing record for an entity
 
 
 ## GetTables
-Gets entities: Used for getting the list of entities present in a Crm instance 
+Gets entities: Used for getting the list of entities present in a Crm instance
 
 #### Input properties
 

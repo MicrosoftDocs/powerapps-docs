@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Dropbox connection | Microsoft PowerApps"
 	description="See the available Dropbox functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,15 +16,13 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  Dropbox
 
 ![Dropbox](./media/connection-dropbox/dropboxicon.png)
 
-Connect to Dropbox to manage your files. You can perform various actions such as upload, update, get, and delete files in Dropbox.
-
-For example, you can create an app with several text boxes that asks the user for information, like maybe a picture and a name. Then, you can take this information and update a file in a Dropbox account. In another example, you can show a list of all the files in a Dropbox folder. Then in your app, let your app users select one of the files. 
+Upload, update, get, and delete files and other data in Dropbox. For example, list all the files in a Dropbox folder so that users can select one, or create an app that prompts users to provide contact information and adds that data to a file in Dropbox. 
 
 This topic shows the available functions.
 
@@ -53,7 +51,7 @@ This connection includes the following functions:
 |[ExtractFolderV2](connection-dropbox.md#extractfolderv2) | Extracts an archive file into a folder in Dropbox (example: .zip) |
 
 ## GetFileMetadata
-Get file metadata using id: Retrieves file metadata from Dropbox using file id 
+Get file metadata using id: Retrieves file metadata from Dropbox using file id
 
 #### Input properties
 
@@ -78,7 +76,7 @@ Get file metadata using id: Retrieves file metadata from Dropbox using file id
 
 
 ## UpdateFile
-Update file: Updates a file in Dropbox 
+Update file: Updates a file in Dropbox
 
 #### Input properties
 
@@ -104,7 +102,7 @@ Update file: Updates a file in Dropbox
 
 
 ## DeleteFile
-Delete file: Deletes a file from Dropbox 
+Delete file: Deletes a file from Dropbox
 
 #### Input properties
 
@@ -117,7 +115,7 @@ None.
 
 
 ## GetFileMetadataByPath
-Get file metadata using path: Retrieves file metadata from Dropbox using path 
+Get file metadata using path: Retrieves file metadata from Dropbox using path
 
 #### Input properties
 
@@ -142,7 +140,7 @@ Get file metadata using path: Retrieves file metadata from Dropbox using path
 
 
 ## GetFileContentByPath
-Get file content using path: Retrieves file contents from Dropbox using path 
+Get file content using path: Retrieves file contents from Dropbox using path
 
 #### Input properties
 
@@ -155,7 +153,7 @@ None.
 
 
 ## GetFileContent
-Get file content using id: Retrieves file contents from Dropbox using id 
+Get file content using id: Retrieves file contents from Dropbox using id
 
 #### Input properties
 
@@ -168,7 +166,7 @@ None.
 
 
 ## CreateFile
-Create file: Uploads a file to Dropbox 
+Create file: Uploads a file to Dropbox
 
 #### Input properties
 
@@ -195,7 +193,7 @@ Create file: Uploads a file to Dropbox
 
 
 ## CopyFile
-Copy file: Copies a file to Dropbox 
+Copy file: Copies a file to Dropbox
 
 #### Input properties
 
@@ -222,7 +220,7 @@ Copy file: Copies a file to Dropbox
 
 
 ## OnNewFile
-When a file is created: Triggers a flow when a new file is created in a Dropbox folder 
+When a file is created: Triggers a flow when a new file is created in a Dropbox folder
 
 #### Input properties
 
@@ -235,7 +233,7 @@ None.
 
 
 ## OnUpdatedFile
-When a file is modified: Triggers a flow when a file is modified in a Dropbox folder 
+When a file is modified: Triggers a flow when a file is modified in a Dropbox folder
 
 #### Input properties
 
@@ -248,7 +246,7 @@ None.
 
 
 ## ListFolder
-List files and folders in folder: Lists files and folders in a Dropbox folder 
+List files and folders in folder: Lists files and folders in a Dropbox folder
 
 #### Input properties
 
@@ -273,7 +271,7 @@ List files and folders in folder: Lists files and folders in a Dropbox folder
 
 
 ## ListRootFolder
-List files and folders in root folder: Lists files and folders in the Dropbox root folder 
+List files and folders in root folder: Lists files and folders in the Dropbox root folder
 
 #### Input properties
 None.
@@ -295,7 +293,7 @@ None.
 
 
 ## ExtractFolderV2
-Extract archive to folder: Extracts an archive file into a folder in Dropbox (example: .zip) 
+Extract archive to folder: Extracts an archive file into a folder in Dropbox (example: .zip)
 
 #### Input properties
 

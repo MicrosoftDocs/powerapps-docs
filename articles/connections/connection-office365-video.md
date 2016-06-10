@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,15 +16,15 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/26/2016"
-   ms.author="mandia"/>
+   ms.author="anneta"/>
 
-#  Office 365 Video 
+#  Office 365 Video
 
 ![Office 365 Video](./media/connection-office365-video/office365icon.png)
 
 The Office 365 Video provides access to work with Office 365 channels and videos.
 
-You can display video information on your app. For example, you can display all the available videos from a specific Office 365 video channel in your app. You can also display a specific video from a channel, and then play it on your app. 
+You can display video information on your app. For example, you can display all the available videos from a specific Office 365 video channel in your app. You can also display a specific video from a channel, and then play it on your app.
 
 This topic shows the available functions.
 
@@ -47,7 +47,7 @@ This connection includes the following functions:
 
 
 ## IsVideoPortalEnabled
-Checks video portal status: Checks the video portal status to see if video services are enabled 
+Checks video portal status: Checks the video portal status to see if video services are enabled
 
 #### Input properties
 
@@ -56,11 +56,11 @@ Checks video portal status: Checks the video portal status to see if video servi
 |tenant|string|yes|The tenant name for the directory the user is part of|
 
 #### Output properties
-None. 
+None.
 
 
 ## ListViewableChannels
-Get all viewable Channels: Gets all the channels the user has viewing access to 
+Get all viewable Channels: Gets all the channels the user has viewing access to
 
 #### Input properties
 
@@ -78,7 +78,7 @@ Get all viewable Channels: Gets all the channels the user has viewing access to
 
 
 ## ListVideos
-Lists all the Office 365 videos present in a channel: Lists all the Office 365 videos present in a channel 
+Lists all the Office 365 videos present in a channel: Lists all the Office 365 videos present in a channel
 
 #### Input properties
 
@@ -104,7 +104,7 @@ Lists all the Office 365 videos present in a channel: Lists all the Office 365 v
 
 
 ## GetVideo
-Gets information about a particular office 365 video: Gets information about a particular Office 365 video 
+Gets information about a particular office 365 video: Gets information about a particular Office 365 video
 
 #### Input properties
 
@@ -131,7 +131,7 @@ Gets information about a particular office 365 video: Gets information about a p
 
 
 ## GetPlaybackUrl
-Get playback url of the Azure Media Services manifest for a video: Get playback url of the Azure Media Services manifest for a video 
+Get playback url of the Azure Media Services manifest for a video: Get playback url of the Azure Media Services manifest for a video
 
 #### Input properties
 
@@ -143,11 +143,11 @@ Get playback url of the Azure Media Services manifest for a video: Get playback 
 |streamingFormatType|string|yes|Streaming format type: <ul><li>1 - Smooth Streaming or MPEG-DASH</li><li> 0 - HLS Streaming</li></ul>|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetStreamingKeyAccessToken
-Get the bearer token to get access to decrypt the video: Get the bearer token to get access to decrypt the video 
+Get the bearer token to get access to decrypt the video: Get the bearer token to get access to decrypt the video
 
 #### Input properties
 

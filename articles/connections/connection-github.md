@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the GitHub connection | Microsoft PowerApps"
 	description="See the available GitHub functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  GitHub
 
@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 GitHub is a web-based Git repository hosting service. It offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.
 
-You can display this information in a text box on your app. For example, you can manage issues within a GitHub repository using controls within your app. 
+You can display this information in a text box on your app. For example, you can manage issues within a GitHub repository using controls within your app.
 
 This topic shows the available functions.
 
@@ -45,7 +45,7 @@ This connection includes the following functions:
 
 
 ## CreateIssue
-Create an issue: Creates an issue 
+Create an issue: Creates an issue
 
 #### Input properties
 
@@ -69,7 +69,7 @@ Create an issue: Creates an issue
 
 
 ## IssueOpened
-When an issue is opened: An issue is opened 
+When an issue is opened: An issue is opened
 
 #### Input properties
 None.
@@ -88,7 +88,7 @@ None.
 
 
 ## IssueClosed
-When an issue is closed: An issue is closed 
+When an issue is closed: An issue is closed
 
 #### Input properties
 None.
@@ -107,7 +107,7 @@ None.
 
 
 ## IssueAssigned
-When an issue is assigned: An issue is assigned 
+When an issue is assigned: An issue is assigned
 
 #### Input properties
 None.

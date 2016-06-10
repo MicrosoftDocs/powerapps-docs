@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="aftowen"
+	authors="stepsic-microsoft-com"
 	manager="erikre"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/08/2016"
-   ms.author="anneta"/>
+   ms.author="StepSic"/>
 
 # Start a flow in an app #
 

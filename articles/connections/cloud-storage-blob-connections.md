@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags="" />
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="06/06/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 # Cloud storage connections
 PowerApps offers several cloud storage connections. Using these connections, you can store Excel files, and then use the information in the Excel file throughout your app. These connections include:  
@@ -42,7 +42,7 @@ PowerApps offers several cloud storage connections. Using these connections, you
 
 	Once you are signed in, this connection is ready to be used within your apps.
 
-4. In your app, open the **Data sources** tab of the right-hand pane, select your cloud storage connection, and then choose the Excel table. 
+4. In your app, open the **Data sources** tab of the right-hand pane, select your cloud storage connection, and then choose the Excel table.
 
 5. Select **Connect**. When you do this, the table is listed as a Data source:  
 	![Select the Excel table](./media/cloud-storage-blob-connections/selecttable.png)  <br/><br/>**NOTE** Remember, the Excel data must be formatted as a table.

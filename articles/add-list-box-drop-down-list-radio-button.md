@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="MandiOhlinger"
+	authors="lonu"
 	manager="erikre"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/28/2016"
-   ms.author="mandia"/>
+   ms.author="LOnu"/>
 
 
 # Add a list box, drop-down list, or radio button control
@@ -51,10 +51,10 @@ PowerApps includes multi-select and single-select options, including a listbox, 
 6. Set the **[Visible](controls/properties-core.md)** property of the following shapes to the following functions:  
 
 	|Shape | Set Visible function to |
-	|--- | --- | 
-	|circle | ```If("circle" in MyListBox.SelectedItems.Value, true)``` | 
-	|triangle | ```If("triangle" in MyListbox.SelectedItems.Value, true)``` | 
-	|rectangle | ```If("rectangle" in MyListbox.SelectedItems.Value, true)``` | 
+	|--- | --- |
+	|circle | ```If("circle" in MyListBox.SelectedItems.Value, true)``` |
+	|triangle | ```If("triangle" in MyListbox.SelectedItems.Value, true)``` |
+	|rectangle | ```If("rectangle" in MyListbox.SelectedItems.Value, true)``` |
 
 7. Preview what you've created ![][1]. Select the different shapes in the listbox. Only the shape or shapes you select appear. Press **ESC** or select the **X** to go back to your screen.
 

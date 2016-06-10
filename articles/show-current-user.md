@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="MandiOhlinger"
+	authors="lonu"
 	manager="erikre"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="05/03/2016"
-   ms.author="mandia"/>
+   ms.author="LOnu"/>
 
 # Get the signed-in user details
 The User feature can show the full name, email address, and picture associated with the current signed-in user. You can use this information to automatically fill in a form.
