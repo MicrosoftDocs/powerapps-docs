@@ -98,11 +98,11 @@ At the top of the screen, three images sit outside of **DetailForm1** and act as
 
 The **[DataField](controls/control-card.md)** property of a **[Card](controls/control-card.md)** control determines which field the card displays. In this case, that property is set to **AssetID**. The card contains a **[Text box](controls/control-text-box.md)** control for which the **[Text](controls/properties-core.md)** property is set to **Parent.Default**. This control shows the **Default** value for the card, which is set through the **[DataField](controls/control-card.md)** property.
 
-In a generated app, **[Card](controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls if you open the **Options** pane for the form:
+In a generated app, **[Card](controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls in the right-hand pane:
 
 ![Detail screen with options pane open](media/working-with-forms/afd-detail-card-options.png)
 
-In the **Options** pane, you can select which fields to display and in which kind of control each field displays.
+In the right-hand pane, you can select which fields to display and in which kind of control each field displays.
 
 ### Edit/Create screen ###
 
@@ -136,7 +136,7 @@ As with a **[Display form](controls/control-form-detail.md)** control, an **[Edi
 
 In the previous image, the selected card shows the **AssetID** field and  contains a **[Text input](controls/control-text-input.md)** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **[Text box](controls/control-text-box.md)** control, which is read-only.) The **[Text input](controls/control-text-input.md)** control has a **[Default](controls/properties-core.md)** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
 
-In the **Options** pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
+In the right-hand pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
 
 ![Edit screen with options pane open](media/working-with-forms/afd-edit-card-options.png)
 
@@ -178,11 +178,11 @@ If the gallery doesn't show the information that you want, select the arrow for 
 
 The **[Display form](controls/control-form-detail.md)** control uses two properties to display the record:
 
-* **[DataSource](controls/control-form-detail.md)** property.  The name of the data source that holds the record. This property populates the **Options** panel with fields and determines the display name and data type (string, number, date, etc.) of each field.  
+* **[DataSource](controls/control-form-detail.md)** property.  The name of the data source that holds the record. This property populates the right-hand panel with fields and determines the display name and data type (string, number, date, etc.) of each field.  
 
 * **[Item](controls/control-form-detail.md)** property.  The record to display.  This property is often connected to the **Selected** property of the **[Gallery](controls/control-gallery.md)** control so that the user can select a record in the **[Gallery](controls/control-gallery.md)** control and then drill into that record.
 
-When the **[DataSource](controls/control-form-detail.md)** property is set, you can add and remove fields through the **Options** pane and change how they're are displayed.
+When the **[DataSource](controls/control-form-detail.md)** property is set, you can add and remove fields through the right-hand pane and change how they're displayed.
 
 On this screen, users can't intentionally or accidentally change any values of the record. The **[Display form](controls/control-form-detail.md)** control is a read-only control, so it won't modify a record.
 
@@ -190,9 +190,9 @@ To add a **[Display form](controls/control-form-detail.md)** control:
 
 1. Add a screen, and then add a **[Display form](controls/control-form-detail.md)** control to it
 
-3. Set the **[DataSource](controls/control-form-detail.md)** property of the form control to **'Ice Cream'**, and then open the **Options** pane.
+3. Set the **[DataSource](controls/control-form-detail.md)** property of the form control to **'Ice Cream'**.
 
-You can now select the fields to display on your screen and which type of card to display for each field. As you make changes in the **Options** pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field that the user will interact with. Your screen should resemble this example:
+In the right-hand pane, you can select the fields to display on your screen and which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field that the user will interact with. Your screen should resemble this example:
 
 ![Display form for Ice Cream data source](./media/working-with-forms/viewform-icecream.png)
 
@@ -234,7 +234,7 @@ Finally, our last core activity is changing the contents of a record, which acco
 
 The **[Edit form](controls/control-form-detail.md)** control uses two properties to display and edit the record:
 
-* **[DataSource](controls/control-form-detail.md)** property.  The name of the data source that holds the record.  Just as with the **[Display form](controls/control-form-detail.md)** control, this property populates the **Options** panel with fields and determines the display name and data type (string, number, date, etc.) for each field. This property also determines whether each field's value is valid before submitting it to the underlying data source.
+* **[DataSource](controls/control-form-detail.md)** property.  The name of the data source that holds the record.  Just as with the **[Display form](controls/control-form-detail.md)** control, this property populates the right-hand panel with fields and determines the display name and data type (string, number, date, etc.) for each field. This property also determines whether each field's value is valid before submitting it to the underlying data source.
 
 * **[Item](controls/control-form-detail.md)** property.  The record to edit, which is often connected to the **Selected** property of the **[Gallery](controls/control-gallery.md)** control. That way, you can select a record in the **[Gallery](controls/control-gallery.md)** control, show it in the details screen, and edit it in the **Edit and Create** screen.
 
@@ -242,9 +242,9 @@ To add an **[Edit form](controls/control-form-detail.md)** control:
 
 1. Add a screen, add an **[Edit form](controls/control-form-detail.md)** control, and then set the form's **[DataSource](controls/control-form-detail.md)** property to **'Ice Cream'**.
 
-3. Set the **[Item](controls/control-form-detail.md)** property to **Gallery1.Selected**, and then open the **Options** pane.
+3. Set the **[Item](controls/control-form-detail.md)** property to **Gallery1.Selected**.
 
-You can now select the fields to display on your screen.  You can also select which type of card to display for each field. As you make changes in the **Options** pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field your user will interact with.  Your screen should resemble this example:
+You can now select the fields to display on your screen. You can also select which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field your user will interact with.  Your screen should resemble this example:
 
 ![Display form for Ice Cream data source](./media/working-with-forms/edit-icecream.png)
 

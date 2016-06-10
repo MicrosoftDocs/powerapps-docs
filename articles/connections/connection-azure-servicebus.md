@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Azure Service Bus connection | Microsoft PowerApps"
 	description="See the available Azure Service Bus functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  Azure Service Bus
 
@@ -45,7 +45,7 @@ This connection includes the following functions:
 
 
 ## SendMessage
-Send message.: Sends message to Azure Service Bus queue or topic. 
+Send message.: Sends message to Azure Service Bus queue or topic.
 
 #### Input properties
 
@@ -55,11 +55,11 @@ Send message.: Sends message to Azure Service Bus queue or topic.
 |entityName|string|yes|Name of the queue or topic|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetMessageFromQueue
-When a message is received in queue: Gets a new message from Azure Service Bus queue. 
+When a message is received in queue: Gets a new message from Azure Service Bus queue.
 
 #### Input properties
 
@@ -78,7 +78,7 @@ When a message is received in queue: Gets a new message from Azure Service Bus q
 
 
 ## GetMessageFromTopic
-When a message is received in topic subscription: Gets a new message from Azure Service Bus topic subscription. 
+When a message is received in topic subscription: Gets a new message from Azure Service Bus topic subscription.
 
 #### Input properties
 

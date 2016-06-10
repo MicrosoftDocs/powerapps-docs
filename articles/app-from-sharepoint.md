@@ -80,12 +80,12 @@ When an app is built automatically, heuristics suggest the best layout and conte
 4. Select a field on the screen that you want to customize.  
 ![](./media/app-from-sharepoint/SelectField.png)
 
-5. In the **Options** pane, you can use the card selector to change the control that is used to display this field in the **DetailsScreen1**.  
+5. In the right-hand pane, use the card selector to change the control that's used to display this field in the **DetailsScreen1**.  
 ![](./media/app-from-sharepoint/CardSelector.png)  
 
 	For information about which types of column support which types of cards, see [Common issues and resolutions](common-issues-and-resolutions.md#create-an-app-automatically-from-sharepoint).
 
-6. If you select the **View lookup** card for a field, then you have the option to choose which property of the field is displayed in the card.  To do so, select the **Ellipsis** next to the field in the **Options** pane and select **Advanced Options**.  
+6. If you select the **View lookup** card for a field, then you have the option to choose which property of the field is displayed in the card. To do so, select the **Ellipsis** next to the field in the right-hand pane and select **Advanced options**.  
 ![](./media/app-from-sharepoint/Elipsis.png)
 
 7. In the **Data** section, select the property of the field you want to be displayed using the **Value** dropdown.  

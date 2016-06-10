@@ -49,7 +49,7 @@
 
 	Support for document libraries is expected soon.
 
-1. **Not all column types are supported** (as of release 2.0.410).
+1. **Not all column types are supported** (as of release 2.0.410 unless otherwise stated).
 
 	| Column type | Support |
 |---|---|
@@ -61,9 +61,9 @@
 | Date and Time | Yes |
 | Currency | Yes |
 | Picture | Yes (read-only) |
-| Lookup | Yes (read-only) |
-| Person or Group | Yes (read-only) |
-| Managed Metadata | Yes (read-only) |
+| Lookup | Yes (as of release 2.0.440) |
+| Person or Group | Yes (as of release 2.0.440) |
+| Managed Metadata | Yes (as of release 2.0.440) |
 | Choice | Yes (read-only) |
 | Calculated | Yes (read-only) |
 | Task Outcome | No |
@@ -75,21 +75,21 @@
 
 	- For Lookup columns, the **Allow multiple values** checkbox must be cleared.
 
-		![Display choices](./media/common-issues-and-resolutions/lookup.png)
+		![Check box to allow multiple values in a Lookup column](./media/common-issues-and-resolutions/lookup.png)
 
 	- For Managed Metadata columns, the **Allow multiple values** checkbox must be cleared.
 
-		![Display choices](./media/common-issues-and-resolutions/metadata.png)
+		![Check box to allow multiple values in a Managed Metadata column](./media/common-issues-and-resolutions/metadata.png)
 
 	- For Person or Group columns, the **No** option under **Allow multiple selections** must be selected.
 
-		![Display choices](./media/common-issues-and-resolutions/person-group.png)
+		![Options to allow multiple selections for a Person or Group column](./media/common-issues-and-resolutions/person-group.png)
 
 	- For Choice columns, the **Drop-Down Menu** or **Radio Buttons** option under **Display choices using** must be selected.
 
-		![Display choices](./media/common-issues-and-resolutions/choice.png)
+		![Options to display choices for a Choice column](./media/common-issues-and-resolutions/choice.png)
 
-1. **Not all types of columns support all types of cards** (as of release 2.0.410).  
+1. **Not all types of columns support all types of cards** (as of release 2.0.410 unless otherwise stated).  
 
 	| Column type | Supported card/s |
 |---|---|
@@ -101,9 +101,9 @@
 | Date and Time | View text |
 | Currency | View percentage <br/>View rating <br/>View text |
 | Picture | View image <br/>View text |
-| Lookup | View lookup |
-| Person or Group | View lookup |
-| Managed Metadata | View lookup |
+| Lookup | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Person or Group | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Managed Metadata | View lookup<br>Edit lookup (as of release 2.0.440)  |
 | Choice | View lookup |
 
 ## Customize an app

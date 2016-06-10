@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/26/2016"
-   ms.author="mandia"/>
+   ms.author="anneta"/>
 
 #  Google Drive
 
@@ -58,7 +58,7 @@ This connection includes the following functions:
 
 
 ## GetFileMetadata
-Get file metadata using id: Retrieves file metadata from Google Drive using id 
+Get file metadata using id: Retrieves file metadata from Google Drive using id
 
 #### Input properties
 
@@ -87,7 +87,7 @@ Get file metadata using id: Retrieves file metadata from Google Drive using id
 Update file
 
 #### Description
-Updates a file in Google Drive 
+Updates a file in Google Drive
 
 #### Input properties
 
@@ -113,7 +113,7 @@ Updates a file in Google Drive
 
 
 ## DeleteFile
-Delete file: Deletes a file from Google Drive 
+Delete file: Deletes a file from Google Drive
 
 #### Input properties
 
@@ -126,7 +126,7 @@ None.
 
 
 ## GetFileMetadataByPath
-Get file metadata using path: Retrieves file metadata from Google Drive using path 
+Get file metadata using path: Retrieves file metadata from Google Drive using path
 
 #### Input properties
 
@@ -151,7 +151,7 @@ Get file metadata using path: Retrieves file metadata from Google Drive using pa
 
 
 ## GetFileContentByPath
-Get file content using path: Retrieves file content from Google Drive using path 
+Get file content using path: Retrieves file content from Google Drive using path
 
 #### Input properties
 
@@ -164,7 +164,7 @@ None.
 
 
 ## GetFileContent
-Get file content using id: Retrieves file content from Google Drive using id 
+Get file content using id: Retrieves file content from Google Drive using id
 
 #### Input properties
 
@@ -177,7 +177,7 @@ None.
 
 
 ## CreateFile
-Create file: Uploads a file to Google Drive 
+Create file: Uploads a file to Google Drive
 
 #### Input properties
 
@@ -204,7 +204,7 @@ Create file: Uploads a file to Google Drive
 
 
 ## CopyFile
-Copy file: Copies a file on Google Drive 
+Copy file: Copies a file on Google Drive
 
 #### Input properties
 
@@ -231,7 +231,7 @@ Copy file: Copies a file on Google Drive
 
 
 ## ListFolder
-List files in folder: List files in a Google Drive folder 
+List files in folder: List files in a Google Drive folder
 
 #### Input properties
 
@@ -256,7 +256,7 @@ List files in folder: List files in a Google Drive folder
 
 
 ## ListRootFolder
-List files in root folder: Lists files in the Google Drive root folder 
+List files in root folder: Lists files in the Google Drive root folder
 
 #### Input properties
 None.
@@ -278,7 +278,7 @@ None.
 
 
 ## ExtractFolderV2
-Extract archive to folder: Extracts an archive file into a folder in Google Drive (example: .zip) 
+Extract archive to folder: Extracts an archive file into a folder in Google Drive (example: .zip)
 
 #### Input properties
 
@@ -305,7 +305,7 @@ Extract archive to folder: Extracts an archive file into a folder in Google Driv
 
 
 ## GetTables
-Get sheets: Retrieves sheet names from a Google Sheet file 
+Get sheets: Retrieves sheet names from a Google Sheet file
 
 #### Input properties
 
@@ -322,7 +322,7 @@ Get sheets: Retrieves sheet names from a Google Sheet file
 
 
 ## GetItems
-Get rows: Retrieves rows from a Google Sheet 
+Get rows: Retrieves rows from a Google Sheet
 
 #### Input properties
 
@@ -340,11 +340,11 @@ Get rows: Retrieves rows from a Google Sheet
 
 | Property Name | Data Type | Description |
 |---|---|---|
-|value|Item[]|This property is dynamic and depends on what you're connecting to | 
+|value|Item[]|This property is dynamic and depends on what you're connecting to |
 
 
 ## PostItem
-Insert row: Inserts a row into a Google Sheet 
+Insert row: Inserts a row into a Google Sheet
 
 #### Input properties
 
@@ -362,7 +362,7 @@ Insert row: Inserts a row into a Google Sheet
 
 
 ## GetItem
-Get row: Retrieves a single row from a Google Sheet 
+Get row: Retrieves a single row from a Google Sheet
 
 #### Input properties
 
@@ -380,7 +380,7 @@ Get row: Retrieves a single row from a Google Sheet
 
 
 ## DeleteItem
-Delete Row: Deletes a row from a Google Sheet 
+Delete Row: Deletes a row from a Google Sheet
 
 #### Input properties
 
@@ -395,7 +395,7 @@ None.
 
 
 ## PatchItem
-Update row: Updates a row in a Google Sheet 
+Update row: Updates a row in a Google Sheet
 
 #### Input properties
 

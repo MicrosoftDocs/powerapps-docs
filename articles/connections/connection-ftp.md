@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the FTP connection | Microsoft PowerApps"
 	description="See the available FTP functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  FTP
 
@@ -52,7 +52,7 @@ This connection includes the following functions:
 |[ExtractFolderV2](connection-ftp.md#extractfolderv2) | Extracts an archive file into a folder in FTP server (example: .zip) |
 
 ## GetFileMetadata
-Get File Metadata: Retrieves file metadata from FTP server using file id 
+Get File Metadata: Retrieves file metadata from FTP server using file id
 
 #### Input properties
 
@@ -77,7 +77,7 @@ Get File Metadata: Retrieves file metadata from FTP server using file id
 
 
 ## UpdateFile
-Update file: Updates a file in FTP server 
+Update file: Updates a file in FTP server
 
 #### Input properties
 
@@ -103,7 +103,7 @@ Update file: Updates a file in FTP server
 
 
 ## DeleteFile
-Delete file: Deletes a file from FTP server 
+Delete file: Deletes a file from FTP server
 
 #### Input properties
 
@@ -112,11 +112,11 @@ Delete file: Deletes a file from FTP server
 |id|string|yes|Specify the file to delete|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileMetadataByPath
-Get File Metadata using path: Retrieves file metadata from FTP server using path 
+Get File Metadata using path: Retrieves file metadata from FTP server using path
 
 #### Input properties
 
@@ -141,7 +141,7 @@ Get File Metadata using path: Retrieves file metadata from FTP server using path
 
 
 ## GetFileContentByPath
-Get file content using path: Retrieves file contents from FTP server using path 
+Get file content using path: Retrieves file contents from FTP server using path
 
 #### Input properties
 
@@ -150,11 +150,11 @@ Get file content using path: Retrieves file contents from FTP server using path
 |path|string|yes|Unique path to the file in FTP server|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileContent
-Get file content: Retrieves file contents from FTP Server using id 
+Get file content: Retrieves file contents from FTP Server using id
 
 #### Input properties
 
@@ -163,11 +163,11 @@ Get file content: Retrieves file contents from FTP Server using id
 |id|string|yes|Specify the file|
 
 #### Output properties
-None. 
+None.
 
 
 ## CreateFile
-Create file: Uploads a file to FTP server 
+Create file: Uploads a file to FTP server
 
 #### Input properties
 
@@ -194,7 +194,7 @@ Create file: Uploads a file to FTP server
 
 
 ## CopyFile
-Copy file: Copies a file to FTP server 
+Copy file: Copies a file to FTP server
 
 #### Input properties
 
@@ -221,7 +221,7 @@ Copy file: Copies a file to FTP server
 
 
 ## OnUpdatedFile
-When a file is added or modified: Triggers a flow when a file is added or modified in a FTP folder 
+When a file is added or modified: Triggers a flow when a file is added or modified in a FTP folder
 
 #### Input properties
 
@@ -230,11 +230,11 @@ When a file is added or modified: Triggers a flow when a file is added or modifi
 |folderId|string|yes|Specify a folder|
 
 #### Output properties
-None. 
+None.
 
 
 ## ListFolder
-List files in folder: Lists files in a FTP server folder 
+List files in folder: Lists files in a FTP server folder
 
 #### Input properties
 
@@ -259,7 +259,7 @@ List files in folder: Lists files in a FTP server folder
 
 
 ## ListRootFolder
-List files in root folder: Lists files in the FTP server root folder 
+List files in root folder: Lists files in the FTP server root folder
 
 #### Input properties
 None.
@@ -281,7 +281,7 @@ None.
 
 
 ## ExtractFolderV2
-Extract folder: Extracts an archive file into a folder in FTP server (example: .zip) 
+Extract folder: Extracts an archive file into a folder in FTP server (example: .zip)
 
 #### Input properties
 

@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the SendGrid connection | Microsoft PowerApps"
 	description="See the available SendGrid functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  SendGrid
 
@@ -43,7 +43,7 @@ This connection includes the following functions:
 
 
 ## SendEmail
-Send email: Sends an email using SendGrid API (Limited to 10,000 recipients) 
+Send email: Sends an email using SendGrid API (Limited to 10,000 recipients)
 
 #### Input properties
 
@@ -59,7 +59,7 @@ Send email: Sends an email using SendGrid API (Limited to 10,000 recipients)
 
 
 ## AddRecipientToList
-Add recipient to list: Add an individual recipient to a recipient list 
+Add recipient to list: Add an individual recipient to a recipient list
 
 #### Input properties
 
@@ -69,7 +69,7 @@ Add recipient to list: Add an individual recipient to a recipient list
 |recipientId|string|yes|Unique id of the recipient|
 
 #### Output properties
-None. 
+None.
 
 
 ## Helpful links

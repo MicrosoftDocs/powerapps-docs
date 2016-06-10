@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
+	authors="lonu"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/24/2016"
-   ms.author="anneta"/>
+   ms.author="LOnu"/>
 
 # Change app name and icon in PowerApps #
 

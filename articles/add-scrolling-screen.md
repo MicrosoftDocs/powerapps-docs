@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="MandiOhlinger"
+	authors="lonu"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -16,10 +16,10 @@
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
 	ms.date="04/28/2016"
-	ms.author="mandia"/>
+	ms.author="LOnu"/>
 
 # Add a scrolling screen #
-Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. The scrolling screen gives you the ability to add multiple controls, and allow users to see them all clearly by scrolling. 
+Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. The scrolling screen gives you the ability to add multiple controls, and allow users to see them all clearly by scrolling.
 
 When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
 
@@ -42,7 +42,7 @@ When you add multiple controls in a section, the controls maintain their relativ
 
 ## Add elements ##
 
-Now, let's add some controls to the canvas to see how the scrolling screen works. 
+Now, let's add some controls to the canvas to see how the scrolling screen works.
 
 1. In the canvas you added, select **Insert a visual**:  
 
@@ -64,12 +64,12 @@ Now, let's add some controls to the canvas to see how the scrolling screen works
 
 	![Move and resize the pen control][9]
 
-5. Preview what you've created: ![][6]. You can scroll up and down to see the controls you added. 
+5. Preview what you've created: ![][6]. You can scroll up and down to see the controls you added.
 
 
 ## Add a section ##
 
-Now, let's add another card with another control. 
+Now, let's add another card with another control.
 
 1. Near the bottom of the screen, select **Add section**:  
 
@@ -92,8 +92,8 @@ Now, let's add another card with another control.
 In this topic, you:
 
 - Added a scrolling screen to the app.
-- Added controls in different cards and when you preview your app, you see how scrolling up and down displays all the controls. 
- 
+- Added controls in different cards and when you preview your app, you see how scrolling up and down displays all the controls.
+
 
 [1]: ./media/add-scrolling-screen/add-screen.png
 [2]: ./media/add-scrolling-screen/add-canvas.png
