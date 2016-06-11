@@ -93,9 +93,7 @@ You can customize this or any app in these ways, among others:
 
 You can also, for example, change the colors in an app easily by selecting a different theme.
 
-1. If the **Quick Tools** pane isn't open, select **Quick Tools** near the lower-right corner.
-
-1. Select the **Theme** tab, and then select the theme that you want.
+1. If the **Theme** tab isn't open in the right-hand pane, select that tab, and then select the theme that you want.
 
 	![Theme options](./media/get-started-test-drive/select-theme.png)
 

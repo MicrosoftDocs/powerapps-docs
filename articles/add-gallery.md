@@ -31,15 +31,7 @@ Show a list of items from Excel, as this topic describes, or from any other type
 
 	![Add a layout with a heading, a subtitle, and a body element](./media/add-gallery/add-gallery.png)
 
-1. Select the gallery, and then select **Options** (near the lower-right corner).
-
-	![Open Options pane](./media/add-gallery/open-options.png)
-
-	The **Gallery** tab of the **Options** pane appears.
-
-    ![Connections option on the File menu](./media/add-gallery/gallery-options.png)
-
-1. Select the data-source icon, and then select the **FlooringEstimates** data source.
+1. Select the gallery, select data-source icon in the right-hand pane, and then select the **FlooringEstimates** data source.
 
     ![Select datasource](./media/add-gallery/select-data-source.png)
 
@@ -54,7 +46,7 @@ Show a list of items from Excel, as this topic describes, or from any other type
 
     ![Add Text Box](./media/add-gallery/add-text-box.png)
 
-1. With the text box still selected, select **Price** in the bottom list on the **Options** pane.  
+1. With the text box still selected, select **Price** in the bottom list on the right-hand pane.  
 
     ![Change Text Box binding](./media/add-gallery/change-binding.png)
 

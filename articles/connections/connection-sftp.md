@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the SFTP connection | Microsoft PowerApps"
 	description="See the available SFTP functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  SFTP
 
@@ -53,7 +53,7 @@ This connection includes the following functions:
 
 
 ## GetFileMetadata
-Get file metadata: Retrieves file metadata from SFTP using file id 
+Get file metadata: Retrieves file metadata from SFTP using file id
 
 #### Input properties
 
@@ -78,7 +78,7 @@ Get file metadata: Retrieves file metadata from SFTP using file id
 
 
 ## UpdateFile
-Update file: Updates file content using SFTP 
+Update file: Updates file content using SFTP
 
 #### Input properties
 
@@ -104,7 +104,7 @@ Update file: Updates file content using SFTP
 
 
 ## DeleteFile
-Delete file: Deletes a file in SFTP 
+Delete file: Deletes a file in SFTP
 
 #### Input properties
 
@@ -113,11 +113,11 @@ Delete file: Deletes a file in SFTP
 |id|string|yes|Specify the file|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileMetadataByPath
-Get file metadata using path: Retrieves file metadata from SFTP using path 
+Get file metadata using path: Retrieves file metadata from SFTP using path
 
 #### Input properties
 
@@ -142,7 +142,7 @@ Get file metadata using path: Retrieves file metadata from SFTP using path
 
 
 ## GetFileContentByPath
-Get file content using path: Retrieves file contents from SFTP using path 
+Get file content using path: Retrieves file contents from SFTP using path
 
 #### Input properties
 
@@ -151,11 +151,11 @@ Get file content using path: Retrieves file contents from SFTP using path
 |path|string|yes|Unique path of the file in SFTP|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileContent
-Get file content: Retrieves file contents from SFTP using id 
+Get file content: Retrieves file contents from SFTP using id
 
 #### Input properties
 
@@ -164,11 +164,11 @@ Get file content: Retrieves file contents from SFTP using id
 |id|string|yes|Specify the file|
 
 #### Output properties
-None. 
+None.
 
 
 ## CreateFile
-Create file: Uploads a file in SFTP 
+Create file: Uploads a file in SFTP
 
 #### Input properties
 
@@ -195,7 +195,7 @@ Create file: Uploads a file in SFTP
 
 
 ## CopyFile
-Copy file: Copies a file to SFTP 
+Copy file: Copies a file to SFTP
 
 #### Input properties
 
@@ -222,7 +222,7 @@ Copy file: Copies a file to SFTP
 
 
 ## OnUpdatedFile
-When a file is added or modified: Triggers a flow when a file is added or modified in SFTP folder 
+When a file is added or modified: Triggers a flow when a file is added or modified in SFTP folder
 
 #### Input properties
 
@@ -231,11 +231,11 @@ When a file is added or modified: Triggers a flow when a file is added or modifi
 |folderId|string|yes|Specify a folder|
 
 #### Output properties
-None. 
+None.
 
 
 ## ListFolder
-List files in folder: Lists files contained in SFTP folder 
+List files in folder: Lists files contained in SFTP folder
 
 #### Input properties
 
@@ -260,7 +260,7 @@ List files in folder: Lists files contained in SFTP folder
 
 
 ## ListRootFolder
-List files in root folder: List the files in the root folder of SFTP 
+List files in root folder: List the files in the root folder of SFTP
 
 #### Input properties
 None.
@@ -282,7 +282,7 @@ None.
 
 
 ## ExtractFolderV2
-Extract folder: Extracts an archive file into a folder using SFTP (example: .zip) 
+Extract folder: Extracts an archive file into a folder using SFTP (example: .zip)
 
 #### Input properties
 

@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="MandiOhlinger"
-	manager="dwrede"
+	authors="lonu"
+	manager="erikre"
 	editor=""/>
 
 <tags
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/27/2016"
-   ms.author="mandia"/>
+   ms.author="LOnu"/>
 
 # Show data in a line, pie, or bar chart in your app
 Use line charts, pie charts, and bar charts to display your data. When working with charts, the data that you import should be structured like the following:
@@ -33,7 +33,7 @@ You can create and use these charts within PowerApps. Let's get started.
 - [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
 - Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 - Learn how to [configure a control](add-configure-controls.md) in PowerApps.
-- These steps use the [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own. 
+- These steps use the [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
 ## Add a pie chart to display your data
 In these steps, we download a sample file. Using a collection, we import this sample data and display it in a pie chart and a column chart.

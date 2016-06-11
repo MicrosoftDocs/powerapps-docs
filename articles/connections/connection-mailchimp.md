@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the MailChimp connection | Microsoft PowerApps"
 	description="See the available MailChimp functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  MailChimp
 
@@ -48,7 +48,7 @@ This connection includes the following functions:
 
 
 ## newcampaign
-New Campaign: Create a new campaign based on a Campaign Type, Recipients list and Campaign Settings (subject line, title, from_name and reply_to) 
+New Campaign: Create a new campaign based on a Campaign Type, Recipients list and Campaign Settings (subject line, title, from_name and reply_to)
 
 #### Input properties
 
@@ -81,7 +81,7 @@ New Campaign: Create a new campaign based on a Campaign Type, Recipients list an
 
 
 ## newlist
-New List: Create a new list in your MailChimp account 
+New List: Create a new list in your MailChimp account
 
 #### Input properties
 
@@ -114,7 +114,7 @@ New List: Create a new list in your MailChimp account
 
 
 ## addmember
-Add member to list: Add or update a list member 
+Add member to list: Add or update a list member
 
 #### Input properties
 
@@ -151,7 +151,7 @@ Add member to list: Add or update a list member
 
 
 ## removemember
-Remove Member from list: Delete a member from a list. 
+Remove Member from list: Delete a member from a list.
 
 #### Input properties
 
@@ -161,11 +161,11 @@ Remove Member from list: Delete a member from a list.
 |member_email|string|yes|The email address of the member to delete|
 
 #### Output properties
-None. 
+None.
 
 
 ## updatemember
-Update member information: Update information for a specific list member 
+Update member information: Update information for a specific list member
 
 #### Input properties
 
@@ -203,7 +203,7 @@ Update member information: Update information for a specific list member
 
 
 ## OnMemberSubscribed
-When a Member has been added to a list: Triggers a workflow when a new member has been added to a list 
+When a Member has been added to a list: Triggers a workflow when a new member has been added to a list
 
 #### Input properties
 
@@ -221,7 +221,7 @@ When a Member has been added to a list: Triggers a workflow when a new member ha
 
 
 ## OnCreateList
-When a new list is created: Triggers a workflow when a new list is created 
+When a new list is created: Triggers a workflow when a new list is created
 
 #### Input properties
 None.

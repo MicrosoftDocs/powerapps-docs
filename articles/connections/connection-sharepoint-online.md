@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the SharePoint Online connection | Microsoft PowerApps"
 	description="See the available SharePoint Online functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  SharePoint Online
 
@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 SharePoint Online provides an API to work with Lists on SharePoint.
 
-You can use different controls within your app to display this information. For example, you can add input text boxes to your app that asks the user for the SharePoint site, file name, and other properties. Then, add a button control that  when clicked, "creates" this new file on the SharePoint site. In another example, you can add a gallery control to your app. Then get all the items from a SharePoint list, and display them in this gallery control. 
+You can use different controls within your app to display this information. For example, you can add input text boxes to your app that asks the user for the SharePoint site, file name, and other properties. Then, add a button control that  when clicked, "creates" this new file on the SharePoint site. In another example, you can add a gallery control to your app. Then get all the items from a SharePoint list, and display them in this gallery control.
 
 This topic shows the available functions.
 
@@ -50,7 +50,7 @@ This connection includes the following functions:
 
 <!--NotAvailableYet
 ## GetFileMetadata
-Get file metadata using id: Used for getting a file metadata on Document Library 
+Get file metadata using id: Used for getting a file metadata on Document Library
 
 #### Input properties
 
@@ -76,7 +76,7 @@ Get file metadata using id: Used for getting a file metadata on Document Library
 
 
 ## UpdateFile
-Update file: Used for updating a file on Document Library 
+Update file: Used for updating a file on Document Library
 
 #### Input properties
 
@@ -103,7 +103,7 @@ Update file: Used for updating a file on Document Library
 
 
 ## DeleteFile
-Delete file: Used for deleting a file on Document Library 
+Delete file: Used for deleting a file on Document Library
 
 #### Input properties
 
@@ -113,11 +113,11 @@ Delete file: Used for deleting a file on Document Library
 |id|string|yes|Unique identifier of the file|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileMetadataByPath
-Get file metadata using path: Used for getting a file metadata on Document Library 
+Get file metadata using path: Used for getting a file metadata on Document Library
 
 #### Input properties
 
@@ -143,7 +143,7 @@ Get file metadata using path: Used for getting a file metadata on Document Libra
 
 
 ## GetFileContentByPath
-Get file using path: Used for getting a file on Document Library 
+Get file using path: Used for getting a file on Document Library
 
 #### Input properties
 
@@ -153,11 +153,11 @@ Get file using path: Used for getting a file on Document Library
 |path|string|yes|Path of the file|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetFileContent
-Get file using id: Used for getting a file on Document Library 
+Get file using id: Used for getting a file on Document Library
 
 #### Input properties
 
@@ -167,11 +167,11 @@ Get file using id: Used for getting a file on Document Library
 |id|string|yes|Unique identifier of the file|
 
 #### Output properties
-None. 
+None.
 
 
 ## CreateFile
-Create file: Used for uploading a file on Document Library 
+Create file: Used for uploading a file on Document Library
 
 #### Input properties
 
@@ -199,7 +199,7 @@ Create file: Used for uploading a file on Document Library
 
 
 ## CopyFile
-Copy file: Used for copying a file on Document Library 
+Copy file: Used for copying a file on Document Library
 
 #### Input properties
 
@@ -227,7 +227,7 @@ Copy file: Used for copying a file on Document Library
 
 
 ## OnNewFile
-When a file is created: Triggers a flow when a new file is created in a SharePoint folder 
+When a file is created: Triggers a flow when a new file is created in a SharePoint folder
 
 #### Input properties
 
@@ -237,11 +237,11 @@ When a file is created: Triggers a flow when a new file is created in a SharePoi
 |folderId|string|yes|Unique identifier of the folder in SharePoint|
 
 #### Output properties
-None. 
+None.
 
 
 ## OnUpdatedFile
-When a file is modified: Triggers a flow when a file is modified in a SharePoint folder 
+When a file is modified: Triggers a flow when a file is modified in a SharePoint folder
 
 #### Input properties
 
@@ -251,11 +251,11 @@ When a file is modified: Triggers a flow when a file is modified in a SharePoint
 |folderId|string|yes|Unique identifier of the folder in SharePoint|
 
 #### Output properties
-None. 
+None.
 
 
 ## ListFolder
-List folder: List the files on a folder 
+List folder: List the files on a folder
 
 #### Input properties
 
@@ -281,7 +281,7 @@ List folder: List the files on a folder
 
 
 ## ListRootFolder
-List root folder: List the files on Root folder 
+List root folder: List the files on Root folder
 
 #### Input properties
 
@@ -306,7 +306,7 @@ List root folder: List the files on Root folder
 
 
 ## ExtractFolderV2
-Extract folder: Used for extracting a folder on Document Library 
+Extract folder: Used for extracting a folder on Document Library
 
 #### Input properties
 
@@ -334,7 +334,7 @@ Extract folder: Used for extracting a folder on Document Library
 -->
 
 ## GetOnNewItems
-When a new item is created: When a new item is created in a SharePoint list 
+When a new item is created: When a new item is created in a SharePoint list
 
 #### Input properties
 
@@ -355,7 +355,7 @@ When a new item is created: When a new item is created in a SharePoint list
 
 
 ## GetOnUpdatedItems
-When an existing item is modified: When an existing item is modified in a SharePoint list 
+When an existing item is modified: When an existing item is modified in a SharePoint list
 
 #### Input properties
 
@@ -376,7 +376,7 @@ When an existing item is modified: When an existing item is modified in a ShareP
 
 
 ## GetItems
-Get items: Retrieves items from a SharePoint list 
+Get items: Retrieves items from a SharePoint list
 
 #### Input properties
 
@@ -397,7 +397,7 @@ Get items: Retrieves items from a SharePoint list
 
 
 ## PostItem
-Create item: Creates a new item in a SharePoint list 
+Create item: Creates a new item in a SharePoint list
 
 #### Input properties
 
@@ -415,7 +415,7 @@ Create item: Creates a new item in a SharePoint list
 
 
 ## GetItem
-Get item: Retrieves a single item from a SharePoint list 
+Get item: Retrieves a single item from a SharePoint list
 
 #### Input properties
 
@@ -433,7 +433,7 @@ Get item: Retrieves a single item from a SharePoint list
 
 
 ## DeleteItem
-Delete item: Deletes an item from a SharePoint list 
+Delete item: Deletes an item from a SharePoint list
 
 #### Input properties
 
@@ -444,11 +444,11 @@ Delete item: Deletes an item from a SharePoint list
 |id|integer|yes|Unique identifier of item to be deleted|
 
 #### Output properties
-None. 
+None.
 
 
 ## PatchItem
-Update item: Updates an item in a SharePoint list 
+Update item: Updates an item in a SharePoint list
 
 #### Input properties
 
@@ -467,7 +467,7 @@ Update item: Updates an item in a SharePoint list
 
 
 ## GetColumnValues
-Get column values: Retrieves possible values for a SharePoint column 
+Get column values: Retrieves possible values for a SharePoint column
 
 #### Input properties
 
@@ -479,11 +479,11 @@ Get column values: Retrieves possible values for a SharePoint column
 |$search|string|no|An search string to look for values|
 
 #### Output properties
-None. 
+None.
 
 
 ## GetTables
-Get lists: Retrieves SharePoint lists from a site 
+Get lists: Retrieves SharePoint lists from a site
 
 #### Input properties
 
