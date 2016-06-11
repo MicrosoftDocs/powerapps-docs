@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags="" />
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="06/06/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 # Cloud storage connections
 PowerApps offers several cloud storage connections. Using these connections, you can store Excel files, and then use the information in the Excel file throughout your app. These connections include:  
@@ -40,12 +40,12 @@ PowerApps offers several cloud storage connections. Using these connections, you
 3. You are prompted for the user name and password of your cloud storage account. Enter them, and then select **Sign in**:  
 	![Enter user name and password](./media/cloud-storage-blob-connections/signin.png)
 
-	Once you are signed in, this connection is ready to be used within your apps. 
+	Once you are signed in, this connection is ready to be used within your apps.
 
-4. In your app, select **Options** (bottom right), select your cloud storage connection, and then choose the Excel table. 
+4. In your app, open the **Data sources** tab of the right-hand pane, select your cloud storage connection, and then choose the Excel table.
 
 5. Select **Connect**. When you do this, the table is listed as a Data source:  
-	![Select the Excel table](./media/cloud-storage-blob-connections/selecttable.png)  <br/><br/>**NOTE** Remember, the Excel data must be formatted as a table. 
+	![Select the Excel table](./media/cloud-storage-blob-connections/selecttable.png)  <br/><br/>**NOTE** Remember, the Excel data must be formatted as a table.
 
 
 ## Using the Excel data in your app
@@ -55,9 +55,9 @@ PowerApps offers several cloud storage connections. Using these connections, you
 
 	![Items property](./media/cloud-storage-blob-connections/itemsproperty.png)  
 
-	The gallery is automatically updated with information from your Excel table. 
+	The gallery is automatically updated with information from your Excel table.
 
-3. In the gallery, select the second or third **Text box** control. By default, you see the **Text** property of the second and third text boxes is automatically set to `ThisItem.something`. You can set these text boxes to any column in your table. 
+3. In the gallery, select the second or third **Text box** control. By default, you see the **Text** property of the second and third text boxes is automatically set to `ThisItem.something`. You can set these text boxes to any column in your table.
 
 	In the following example, the second text box is set to `ThisItem.Name` and the third text box is set to `ThisItem.Notes`:  
 
@@ -66,7 +66,7 @@ PowerApps offers several cloud storage connections. Using these connections, you
 	![Third text boxes](./media/cloud-storage-blob-connections/items-thirdtextbox.png)  
 
 	Sample output:  
-	![Second and third text boxes](./media/cloud-storage-blob-connections/secondthirdtextboxes.png) 
+	![Second and third text boxes](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
 
 	<br/>**NOTE** The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a text box in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
@@ -79,7 +79,7 @@ PowerApps offers several cloud storage connections. Using these connections, you
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) and [add a data source](../add-data-connection.md) to your apps.  
 [Understand tables and records](../working-with-tables.md) with tabular data sources.  
-Some additional gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md). 
+Some additional gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).
 
 
 
@@ -88,4 +88,4 @@ Some additional gallery resources include [Show a list of items](../add-gallery.
 [dropboxicon]: ./media/cloud-storage-blob-connections/dropboxicon.png
 [googledriveicon]: ./media/cloud-storage-blob-connections/googledriveicon.png
 [onedriveicon]: ./media/cloud-storage-blob-connections/onedriveicon.png
-[onedriveforbusinessicon]: ./media/cloud-storage-blob-connections/onedriveforbusinessicon.png 
+[onedriveforbusinessicon]: ./media/cloud-storage-blob-connections/onedriveforbusinessicon.png

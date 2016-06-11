@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Slack connection | Microsoft PowerApps"
 	description="See the available Slack functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  Slack
 
@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 Slack is a team communication tool, that brings together all of your team communications in one place, instantly searchable and available wherever you go.
 
-In your app, you can add an input text box that asks the user to enter in some text. Then add a button that "posts" the message to a Slack channel. 
+In your app, you can add an input text box that asks the user to enter in some text. Then add a button that "posts" the message to a Slack channel.
 
 This topic shows the available functions.
 
@@ -41,7 +41,7 @@ This connection includes the following functions:
 |[PostMessage](connection-slack.md#postmessage) | Post a Message to a specified channel |
 
 ## PostMessage
-Post Message: Post a Message to a specified channel. 
+Post Message: Post a Message to a specified channel.
 
 #### Input properties
 
@@ -73,4 +73,3 @@ Post Message: Post a Message to a specified channel.
 
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
-

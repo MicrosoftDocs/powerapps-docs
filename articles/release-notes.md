@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/27/2016"
+    ms.date="06/10/2016"
     ms.author="gregli"/>
 
 # Release notes for PowerApps release 2.0.440 #
@@ -33,7 +33,7 @@ For information about known limitations in this release, see [Common issues and 
 	- Person or Group
 	- Managed Metadata
 
-## Release notes for PowerApps release 2.0.430 ##
+## Release 2.0.430 ##
 
 1. **Update required for PowerApps Studio and PowerApps Mobile**.
 
@@ -86,7 +86,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **Bug fixes and performance improvements throughout the product.**
 
-## Release Notes for 2.0.410 ##
+## Release 2.0.410 ##
 
 ### PowerApps.com ###
 1. 	**Use apps directly on the web!**

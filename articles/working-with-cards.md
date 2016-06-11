@@ -21,14 +21,14 @@
 # Understand data cards #
 **[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls. The form represents the entire record, and each card represents a single field of that record.
 
-The easiest way to interact with cards is through the **Options** pane when a form control has been selected in the design workspace.  In that pane, you can choose which fields to show, pick how each field should be shown, and rearrange the fields.
+The easiest way to interact with cards is through the right-hand pane when a form control has been selected in the design workspace. In that pane, you can choose which fields to show, pick how each field should be shown, and rearrange the fields.
 
 ![](./media/working-with-cards/afd-edit-card-options.png)
 
 To get started with cards, see [add a form](add-form.md) and [understand data forms](working-with-forms.md). The remainder of this topic goes into more detail about how cards work and how you can customize or even create your own.
 
 ## Predefined cards ##
-PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the **Options** pane, you can see the variations available and change the card used for a field:
+PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
 
 ![](./media/working-with-cards/imageurl-single.png)
 
@@ -86,25 +86,25 @@ As another example, show an image in an **[Image](controls/control-image.md)** c
 	![](./media/working-with-cards/customize-image4.png)
 
 ## Unlock a card ##
-In addition to containing controls, cards themselves are controls that have properties and formulas just like any other control. When you choose to display a field on a form, the **Options** pane automatically creates the card for you and generates the needed formulas.  We can see these formulas in the **Advanced** pane, available from the **View** tab:
+In addition to containing controls, cards themselves are controls that have properties and formulas just like any other control. When you choose to display a field on a form, the right-hand pane automatically creates the card for you and generates the needed formulas.  We can see these formulas in the **Advanced** pane, available from the **View** tab:
 
 ![](./media/working-with-cards/locked-advanced-view.png)
 
 We immediately see one of the most important properties of the card: the **[DataField](controls/control-card.md)** property. This property indicates which field of the data source the user sees and can edit in this card.  
 
-In the **Advanced** view, the large banner at the top indicates that the properties of this card are locked. A lock icon also appears next to the **[DataField](controls/control-card.md)**, **[Default](controls/properties-core.md)**, and **[DisplayName](controls/control-card.md)** properties. The **Options** pane created these formulas, and the lock prevents accidental changes to these properties.  
+In the **Advanced** view, the large banner at the top indicates that the properties of this card are locked. A lock icon also appears next to the **[DataField](controls/control-card.md)**, **[Default](controls/properties-core.md)**, and **[DisplayName](controls/control-card.md)** properties. The right-hand pane created these formulas, and the lock prevents accidental changes to these properties.  
 
 Click or tap the banner at the top to unlock the card so that you can modify these properties:
 
 ![](./media/working-with-cards/unlocked-advanced-view.png)
 
-Let's modify the **[DisplayName](controls/control-card.md)** to put a space between **Asset** and **ID**. By making this change, we're altering what was generated for us.  In the **Options** pane, this card has a different label:
+Let's modify the **[DisplayName](controls/control-card.md)** to put a space between **Asset** and **ID**. By making this change, we're altering what was generated for us.  In the right-hand pane, this card has a different label:
 
 ![](./media/working-with-cards/unlocked-options.png)
 
 We've now taken control over this card and can modify it further to fit our need. But we've lost the ability to change the card from one representation to another (for example, single-line text to multi-line text) as we did before. We've transformed the predefined card into a "custom card" that we now control.  
 
-A word of caution: you can't relock a card if you unlock it. To get back to a locked state, remove the card, and reinsert it in the **Options** pane.   
+A word of caution: you can't relock a card if you unlock it. To get back to a locked state, remove the card, and reinsert it in the right-hand pane.   
 
 ## Interact with the form ##
 

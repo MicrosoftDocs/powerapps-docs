@@ -4,7 +4,7 @@
    services=""
    suite="powerapps"
    documentationCenter="na"
-   authors="aftowen"
+   authors="gregli-msft"
    manager="erikre"
    editor=""
    tags=""/>
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="03/17/2016"
-   ms.author="anneta"/>
+   ms.author="GregLi"/>
 
 # Controls and properties in PowerApps #
 
@@ -191,7 +191,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[EndYear](controls/control-date-picker.md)** – The latest year to which the user can set value of a date-picker control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
-**Error** – The meaning of this property is dependent on the control: 
+**Error** – The meaning of this property is dependent on the control:
 
 - **[Add picture](controls/control-add-picture.md)** control - If there is a problem uploading an image, this property will contain an appropriate error string.
 - **[Card](controls/control-card.md)** control – The user friendly error message to display for this field when validation fails.
@@ -293,7 +293,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[MinimumBarWidth](controls/control-column-line-chart.md)** – The narrowest possible width of columns in a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
-**Mode** – The meaning of this property is dependent on the control: 
+**Mode** – The meaning of this property is dependent on the control:
 
 - **[Edit form](controls/control-form-detail.md)** control – The control is in **Edit** or **New** mode.
 - **[Pen input](controls/control-pen-input.md)** control – The control is in **Draw**, **Erase**, or **Select** mode.

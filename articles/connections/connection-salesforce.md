@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Salesforce  connection | Microsoft PowerApps"
 	description="See the available Salesforce functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,9 +16,9 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
-#  Salesforce 
+#  Salesforce
 
 ![Salesforce](./media/connection-salesforce/salesforceicon.png)
 
@@ -49,7 +49,7 @@ This connection includes the following functions:
 
 
 ## GetItems
-Get objects: Retrieves Salesforce objects of a certain SObject type (example: 'Lead') 
+Get objects: Retrieves Salesforce objects of a certain SObject type (example: 'Lead')
 
 #### Input properties
 
@@ -69,7 +69,7 @@ Get objects: Retrieves Salesforce objects of a certain SObject type (example: 'L
 
 
 ## PostItem
-Create object: Creates a Salesforce object 
+Create object: Creates a Salesforce object
 
 #### Input properties
 
@@ -86,7 +86,7 @@ Create object: Creates a Salesforce object
 
 
 ## GetItem
-Get object: Retrieves a Salesforce object 
+Get object: Retrieves a Salesforce object
 
 #### Input properties
 
@@ -103,7 +103,7 @@ Get object: Retrieves a Salesforce object
 
 
 ## DeleteItem
-Delete object: Deletes a Salesforce object 
+Delete object: Deletes a Salesforce object
 
 #### Input properties
 
@@ -113,11 +113,11 @@ Delete object: Deletes a Salesforce object
 |id|string|yes|Unique identifier of Salesforce object to delete|
 
 #### Output properties
-None. 
+None.
 
 
 ## PatchItem
-Update object: Updates a Salesforce object 
+Update object: Updates a Salesforce object
 
 #### Input properties
 
@@ -135,7 +135,7 @@ Update object: Updates a Salesforce object
 
 
 ## GetOnNewItems
-When an object is created: Triggers a flow when an object is created in Salesforce 
+When an object is created: Triggers a flow when an object is created in Salesforce
 
 #### Input properties
 
@@ -155,7 +155,7 @@ When an object is created: Triggers a flow when an object is created in Salesfor
 
 
 ## GetOnUpdatedItems
-When an object is modified: Triggers a flow when an object is modified in Salesforce 
+When an object is modified: Triggers a flow when an object is modified in Salesforce
 
 #### Input properties
 
@@ -175,10 +175,10 @@ When an object is modified: Triggers a flow when an object is modified in Salesf
 
 
 ## GetTables
-Get object types (SObjects): Retrieves Salesforce object types (SObjects) 
+Get object types (SObjects): Retrieves Salesforce object types (SObjects)
 
 #### Input properties
-None. 
+None.
 
 #### Output properties
 

@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Twitter connection | Microsoft PowerApps"
 	description="See how to connect to Twitter, step through some examples, and see all the functions"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,14 +16,14 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="06/06/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 
 # Twitter
 
 ![Twitter](./media/connection-twitter/twittericon.png)
 
-Twitter lets you post tweets and get tweets, timeline, friends and followers from your Twitter account.
+Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.
 
 You can display this information in a text box on your app. For example, you can add an input text box, ask the user to enter in some Tweet text, and then add a button that "posts" the tweet. You can use similar methods to get a tweet or search for a tweet, and then display the text in a text box or gallery control in your app.
 
@@ -38,7 +38,7 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 
 	![Open a blank app](./media/connection-twitter/blank-app.png)
 
-2. In the lower-right corner, select **Options**, and then select **Add data source**. 
+2. In the right-hand pane, open the **Data sources** tab, and then select **Add data source**.
 
 3. Select **Add connection**, and then select **Twitter**:  
 
@@ -51,10 +51,6 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 5. Select **Add Data Source**. Your connection appears under **Data sources**:  
 	![Close the Options pane](./media/connection-twitter/twitterdatasource.png)
 
-6. Close the **Screen** pane by selecting the **X** in its upper-right corner:  
-
-	![Close the Options pane](./media/connection-twitter/close-options.png)
-
 The Twitter connection has been created, and added to your app. Now, it's ready to be used.
 
 ## Use the Twitter connection in your app
@@ -64,7 +60,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 2. Let's show some timelines:  
 
 	- To show the current user's timeline, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formulas:
-	
+
 		`Twitter.HomeTimeline().TweetText`  
 		`Twitter.HomeTimeline({maxResults:3}).TweetText`  
 
@@ -72,56 +68,64 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
 		`Twitter.UserTimeline( *TwitterHandle* ).TweetText`
 
-		Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression. 
+		Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression.
 
 	- Add a text input control named **Tweep**, and set its Default property to `Tweep.Text`. In the Tweep text box, type in a Twitter handle such as `satyanadella` (without quotation marks and without the @ symbol).
-	
+
 		In the gallery control, set the Items property to the following formula:  
 
 		`Twitter.UserTimeline(Tweep.Text, {maxResults:5}).TweetText`
 
 		The gallery control automatically shows the tweets of the Twitter handler you type in.
 
-	**TIP** Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline. 
+	**TIP** Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline.
 
-3. Set the gallery's Items property to `Twitter.HomeTimeline()`. With the gallery selected, select **Options** near the lower-right corner. Select **TweetText** in the first list, select **TweetedBy** in the second list, and select **CreatedAt** in the third list.
+3. Set the gallery's **Items** property to `Twitter.HomeTimeline()`.
 
-	The gallery now shows the values of the properties you chose. 
+	With the gallery selected, the right-hand pane shows options for that gallery.
+
+1. Select **TweetText** in the first list, select **TweetedBy** in the second list, and select **CreatedAt** in the third list.
+
+	The gallery now shows the values of the properties you chose.
 
 ### Show followers
 1. Using a **With text** gallery, let's show some followers:  
 
 	- To show the current user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
-	
+
 		`Twitter.MyFollowers()`  
 		`Twitter.MyFollowers({maxResults:3})`
 
 	- To show the another user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
-	
+
 		`Twitter.Followers( *TwitterHandle* )`
 
-		Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression. 
+		Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression.
 
 	- Add a text input control named **Tweep**, and set its Default property to `Tweep.Text`. In the Tweep text box, type in a Twitter handle such as `satyanadella` (without quotation marks and without the @ symbol).
-	
+
 		In the gallery control, set the Items property to the following formula:  
 
 		`Twitter.Followers(Tweep.Text, {maxResults:5})`
 
 		The gallery control automatically shows who is following the Twitter handle you type in.
 
-	**TIP** Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline. 
+	**TIP** Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline.
 
-2. Set the gallery's Items property to `Twitter.MyFollowers()`. With the gallery selected, select **Options** near the lower-right corner. Select **UserName** in the second list, and select **FullName** in the third list.
+2. Set the gallery's **Items** property to `Twitter.MyFollowers()`.
 
-	The gallery now shows the values of the properties you chose. 
+	With the gallery selected, the right-hand pane shows options for that gallery.
+
+1. Select **UserName** in the second list, and select **FullName** in the third list.
+
+	The gallery now shows the values of the properties you chose.
 
 ### Show followed users
 
 1. Using a **With text** gallery, let's show some followed users:  
 
 	- To show which users the current user is following, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
-	
+
 		`Twitter.MyFollowing()`  
 		`Twitter.MyFollowing({maxResults:3})`
 
@@ -129,19 +133,21 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
 		`Twitter.Following( *TwitterHandle* )`
 
-		Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression. 
+		Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression.
 
 	- Add a text input control named **Tweep**, and set its Default property to `Tweep.Text`. In the Tweep text box, type in a Twitter handle such as `satyanadella` (without quotation marks and without the @ symbol).
-	
+
 		In the gallery control, set the Items property to the following formula:  
 
 		`Twitter.Following(Tweep.Text, {maxResults:5})`
 
 		The gallery control automatically shows the other handles you are following.
 
-2. With the gallery selected, select **Options** near the lower-right corner. Select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
+	With the gallery selected, the right-hand pane shows options for that gallery.
 
-	The gallery now shows the values of the properties you chose. 
+2. Select **Description** in the **Body1** list, **UserName** in the **Heading1** list, and **FullName** in the **Subtitle1** list.
+
+	The gallery now shows the values of the properties you chose.
 
 ### Show information about a user
 Add a text box, and then set its **[Text](../controls/properties-core.md)** property to one of these formulas:  
@@ -155,7 +161,7 @@ Add a text box, and then set its **[Text](../controls/properties-core.md)** prop
 - `twitter.User( *TwitterHandle* ).Id`
 - `twitter.User( *TwitterHandle* ).StatusesCount`
 
-Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression. 
+Enter a Twitter handle in double quotation marks or an equivalent value. For example, enter `"satyanadella"` or `"powerapps"` directly in the formula expression.
 
 Or, you can use an input text control to type in a Twitter handle, just as we have throughout this topic.
 
@@ -166,15 +172,19 @@ Or, you can use an input text control to type in a Twitter handle, just as we ha
 
 	Enter a *SearchTerm* in double quotation marks or by referring to an equivalent value. For example, enter `"PowerApps"` or `"microsoft"` directly in the formula.
 
-	Or, you can use an input text control to type in a Twitter handle, just as we have throughout this topic.
+	Or, you can use an **Input text** control to specify a search term, just as we have throughout this topic.
 
 	**TIP** Show the first five results by using maxResults:  
 
 	`Twitter.SearchTweet(SearchTerm.Text, {maxResults:5}).TweetText`
 
-2. Set the gallery's Items property to `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`. With the gallery selected, select **Options** near the lower-right corner. Select **TweetText** in the first list, **TweetedBy** in the second list, and **CreatedAt** in the third list.
+2. Set the gallery's **Items** property to `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`.
 
-	The gallery now shows the values of the properties you chose. 
+	With the gallery selected, the right-hand pane shows options for that gallery.
+
+1. Select **TweetText** in the first list, **TweetedBy** in the second list, and **CreatedAt** in the third list.
+
+	The gallery now shows the values of the properties you chose.
 
 ### Send a tweet
 1. Add a text input control, and then rename it **MyTweet**.
@@ -206,7 +216,7 @@ This connection includes the following functions:
 
 
 ### UserTimeline
-Get user timeline: Retrieves a collection of the most recent tweets posted by the specified user 
+Get user timeline: Retrieves a collection of the most recent tweets posted by the specified user
 
 #### Input properties
 
@@ -228,7 +238,7 @@ Get user timeline: Retrieves a collection of the most recent tweets posted by th
 
 
 ### HomeTimeline
-Get home timeline: Retrieves the most recent tweets and re-tweets posted me and my followers 
+Get home timeline: Retrieves the most recent tweets and re-tweets posted me and my followers
 
 #### Input properties
 
@@ -249,7 +259,7 @@ Get home timeline: Retrieves the most recent tweets and re-tweets posted me and 
 
 
 ### SearchTweet
-Search tweet: Retrieves a collection of relevant tweets matching a specified query 
+Search tweet: Retrieves a collection of relevant tweets matching a specified query
 
 #### Input properties
 
@@ -271,7 +281,7 @@ Search tweet: Retrieves a collection of relevant tweets matching a specified que
 
 
 ### Followers
-Get followers: Retrieves users following the specified user 
+Get followers: Retrieves users following the specified user
 
 #### Input properties
 
@@ -295,7 +305,7 @@ Get followers: Retrieves users following the specified user
 
 
 ### MyFollowers
-Get my followers: Retrieves users who are following me 
+Get my followers: Retrieves users who are following me
 
 #### Input properties
 
@@ -318,7 +328,7 @@ Get my followers: Retrieves users who are following me
 
 
 ### Following
-Get following: Retrieves users who the specified user is following 
+Get following: Retrieves users who the specified user is following
 
 #### Input properties
 
@@ -342,7 +352,7 @@ Get following: Retrieves users who the specified user is following
 
 
 ### MyFollowing
-Get my following: Retrieves users that I am following 
+Get my following: Retrieves users that I am following
 
 #### Input properties
 
@@ -365,7 +375,7 @@ Get my following: Retrieves users that I am following
 
 
 ### User
-Get user: Retrieves details about the specified user (example: user name, description, followers count, etc.) 
+Get user: Retrieves details about the specified user (example: user name, description, followers count, etc.)
 
 #### Input properties
 
@@ -388,7 +398,7 @@ Get user: Retrieves details about the specified user (example: user name, descri
 
 
 ### Tweet
-Post a new tweet: Tweet 
+Post a new tweet: Tweet
 
 #### Input properties
 
@@ -404,7 +414,7 @@ Post a new tweet: Tweet
 
 
 ### OnNewTweet
-When a new tweet appears: Triggers a workflow when a new tweet is posted which matches your search query 
+When a new tweet appears: Triggers a workflow when a new tweet is posted which matches your search query
 
 #### Input properties
 

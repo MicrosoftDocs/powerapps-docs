@@ -1,12 +1,12 @@
 <properties
 	pageTitle="Overview of the Azure Blob connection | Microsoft PowerApps"
 	description="See the available Azure Blob functions, responses, and examples"
-	services=""	
+	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="MandiOhlinger"	
-	manager="erikre"	
-	editor="" 
+	authors="AFTOwen"
+	manager="erikre"
+	editor=""
 	tags="" />
 
 <tags
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="04/26/2016"
-ms.author="mandia"/>
+ms.author="anneta"/>
 
 #  Azure blob storage
 
@@ -24,7 +24,7 @@ ms.author="mandia"/>
 
 Azure Blob storage is a service for storing large amounts of unstructured data. You can perform various actions such as upload, update, get, and delete blobs in Azure blob storage.
 
-For example, you are working with several developers that create sample projects. Using an app, these developers can upload their sample projects to a Blob storage account. Using this same app, the developers can also update their samples, delete their samples, and more. 
+For example, you are working with several developers that create sample projects. Using an app, these developers can upload their sample projects to a Blob storage account. Using this same app, the developers can also update their samples, delete their samples, and more.
 
 This topic shows the available functions.
 
@@ -50,7 +50,7 @@ This connection includes the following functions:
 
 
 ## GetFileMetadata
-Get File Metadata: Retrieves file metadata from Azure Blob Storage using file id 
+Get File Metadata: Retrieves file metadata from Azure Blob Storage using file id
 
 #### Input properties
 
@@ -62,20 +62,20 @@ Get File Metadata: Retrieves file metadata from Azure Blob Storage using file id
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Id | string | 
-| Name | string | 
-| DisplayName | string | 
-| Path | string | 
+| Id | string |
+| Name | string |
+| DisplayName | string |
+| Path | string |
 | LastModified | string |  
-| Size | integer | 
-| MediaType | string | 
-| IsFolder | boolean | 
-| ETag | string | 
-| FileLocator | string | 
+| Size | integer |
+| MediaType | string |
+| IsFolder | boolean |
+| ETag | string |
+| FileLocator | string |
 
 
 ## UpdateFile
-Update file: Updates a file in Azure Blob Storage 
+Update file: Updates a file in Azure Blob Storage
 
 #### Input properties
 
@@ -89,21 +89,21 @@ Update file: Updates a file in Azure Blob Storage
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Id | string | 
-| Name | string | 
-| DisplayName | string | 
-| Path | string | 
+| Id | string |
+| Name | string |
+| DisplayName | string |
+| Path | string |
 | LastModified | string |  
-| Size | integer | 
-| MediaType | string | 
-| IsFolder | boolean | 
-| ETag | string | 
-| FileLocator | string | 
+| Size | integer |
+| MediaType | string |
+| IsFolder | boolean |
+| ETag | string |
+| FileLocator | string |
 
 
 
 ## DeleteFile
-Delete file: Deletes a file from Azure Blob Storage 
+Delete file: Deletes a file from Azure Blob Storage
 
 #### Input properties
 
@@ -112,12 +112,12 @@ Delete file: Deletes a file from Azure Blob Storage
 |id|string|yes|Specify the file to delete|
 
 #### Output properties
-None. 
+None.
 
 
 
 ## GetFileMetadataByPath
-Get File Metadata using path: Retrieves file metadata from Azure Blob Storage using path 
+Get File Metadata using path: Retrieves file metadata from Azure Blob Storage using path
 
 #### Input properties
 
@@ -129,20 +129,20 @@ Get File Metadata using path: Retrieves file metadata from Azure Blob Storage us
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Id | string | 
-| Name | string | 
-| DisplayName | string | 
-| Path | string | 
+| Id | string |
+| Name | string |
+| DisplayName | string |
+| Path | string |
 | LastModified | string |  
-| Size | integer | 
-| MediaType | string | 
-| IsFolder | boolean | 
-| ETag | string | 
-| FileLocator | string | 
+| Size | integer |
+| MediaType | string |
+| IsFolder | boolean |
+| ETag | string |
+| FileLocator | string |
 
 
 ## GetFileContentByPath
-Get file content using path: Retrieves file contents from Azure Blob Storage using path 
+Get file content using path: Retrieves file contents from Azure Blob Storage using path
 
 #### Input properties
 
@@ -155,7 +155,7 @@ None.
 
 
 ## GetFileContent
-Get file content: Retrieves file contents from Azure Blob Storage using id 
+Get file content: Retrieves file contents from Azure Blob Storage using id
 
 #### Input properties
 
@@ -168,7 +168,7 @@ None.
 
 
 ## CreateFile
-Create file: Uploads a file to Azure Blob Storage 
+Create file: Uploads a file to Azure Blob Storage
 
 #### Input properties
 
@@ -182,20 +182,20 @@ Create file: Uploads a file to Azure Blob Storage
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Id | string | 
-| Name | string | 
-| DisplayName | string | 
-| Path | string | 
+| Id | string |
+| Name | string |
+| DisplayName | string |
+| Path | string |
 | LastModified | string |  
-| Size | integer | 
-| MediaType | string | 
-| IsFolder | boolean | 
-| ETag | string | 
-| FileLocator | string | 
+| Size | integer |
+| MediaType | string |
+| IsFolder | boolean |
+| ETag | string |
+| FileLocator | string |
 
 
 ## CopyFile
-Copy file: Copies a file to Azure Blob Storage 
+Copy file: Copies a file to Azure Blob Storage
 
 #### Input properties
 
@@ -209,20 +209,20 @@ Copy file: Copies a file to Azure Blob Storage
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Id | string | 
-| Name | string | 
-| DisplayName | string | 
-| Path | string | 
+| Id | string |
+| Name | string |
+| DisplayName | string |
+| Path | string |
 | LastModified | string |  
-| Size | integer | 
-| MediaType | string | 
-| IsFolder | boolean | 
-| ETag | string | 
-| FileLocator | string | 
+| Size | integer |
+| MediaType | string |
+| IsFolder | boolean |
+| ETag | string |
+| FileLocator | string |
 
 
 ## ExtractFolderV2
-Extract archive to folder: Extracts an archive file into a folder in Azure Blob Storage (example: .zip) 
+Extract archive to folder: Extracts an archive file into a folder in Azure Blob Storage (example: .zip)
 
 #### Input properties
 
@@ -236,16 +236,16 @@ Extract archive to folder: Extracts an archive file into a folder in Azure Blob 
 
 | Property Name | Type | Description |
 | --- | --- | --- |
-| Id | string | 
-| Name | string | 
-| DisplayName | string | 
-| Path | string | 
+| Id | string |
+| Name | string |
+| DisplayName | string |
+| Path | string |
 | LastModified | string |  
-| Size | integer | 
-| MediaType | string | 
-| IsFolder | boolean | 
-| ETag | string | 
-| FileLocator | string | 
+| Size | integer |
+| MediaType | string |
+| IsFolder | boolean |
+| ETag | string |
+| FileLocator | string |
 
 
 
@@ -253,4 +253,3 @@ Extract archive to folder: Extracts an archive file into a folder in Azure Blob 
 
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
-

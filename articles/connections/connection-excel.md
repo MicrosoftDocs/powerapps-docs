@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="MandiOhlinger"
+	authors="AFTOwen"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -15,23 +15,27 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/03/2016"
-   ms.author="mandia"/>
+   ms.date="06/08/2016"
+   ms.author="anneta"/>
 
 #  Excel
 
 ![Excel](./media/connection-excel/excelicon.png)
 
-Connect to Excel. 
+Connect to a cloud storage account to display Excel table data in your app.
 
-You can display this information in a text box on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
+## What you need to know
+Excel is *kind of* a connection. To display Excel data in your app, you must do the following:
 
-This topic shows the available functions.
+1. Store an Excel file in a cloud storage connection, including Box, Dropbox, Google Drive, OneDrive, and OneDrive for Business.
+2. Format the Excel data as a table.
+3. In your app, create a connection to the cloud storage account, and then add the Excel table as a data source.
 
-&nbsp;
+Then, you can display this information in a gallery control on your app.
 
-[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-- Format your Excel data as a table (steps at [Create an app from Excel data](../get-started-create-from-data.md))
+[Overview of the cloud storage connection](cloud-storage-blob-connections.md) shows you how to add the connection, add an Excel table as a data source, and use the Excel data in your app.
+
+<!--NotAvailableYet
 
 ## View the available functions
 
@@ -48,8 +52,8 @@ This connection includes the following functions:
 
 
 
-## GetTables
-Get tables: Retrieves table names from an Excel file 
+### GetTables
+Get tables: Retrieves table names from an Excel file
 
 #### Input properties
 
@@ -64,8 +68,8 @@ Get tables: Retrieves table names from an Excel file
 |value|array|You can output the table name (a string value) and the table display name (a string value). e.g. { "value" : [ { "Name": "Table1", "DisplayName": "Table 1"}, { "Name": "Table2", "DisplayName": "Table 2"} ] }  |
 
 
-## GetItems
-Get rows: Retrieves rows from an Excel table 
+### GetItems
+Get rows: Retrieves rows from an Excel table
 
 #### Input properties
 
@@ -86,8 +90,8 @@ Get rows: Retrieves rows from an Excel table
 
 
 
-## PostItem
-Insert row: Inserts a new row into an Excel table 
+### PostItem
+Insert row: Inserts a new row into an Excel table
 
 #### Input properties
 
@@ -105,8 +109,8 @@ Insert row: Inserts a new row into an Excel table
 
 
 
-## GetItem
-Get row: Retrieves a single row from an Excel table 
+### GetItem
+Get row: Retrieves a single row from an Excel table
 
 #### Input properties
 
@@ -125,8 +129,8 @@ Get row: Retrieves a single row from an Excel table
 
 
 
-## DeleteItem
-Delete row: Deletes a row from an Excel table 
+### DeleteItem
+Delete row: Deletes a row from an Excel table
 
 #### Input properties
 
@@ -141,8 +145,8 @@ None.
 
 
 
-## PatchItem
-Update row: Updates an existing row in an Excel table 
+### PatchItem
+Update row: Updates an existing row in an Excel table
 
 #### Input properties
 
@@ -160,9 +164,10 @@ Update row: Updates an existing row in an Excel table
 |---|---|---|
 |ItemInternalId|string|This property is dynamic and depends on what you're connecting to |
 
-
+-->
 
 ## Helpful links
 
 See all the [available connections](../connections-list.md).  
+Create an app using [Excel data](../get-started-create-from-data.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.

@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="aftowen"
+	authors="lonu"
 	manager="erikre"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/28/2016"
-   ms.author="anneta"/>
+   ms.author="LOnu"/>
 
 # Add an image, a video, or a sound
 
@@ -26,7 +26,7 @@ Make your app stand out by adding multimedia such as images, videos, and sounds.
 [AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Add media from a file ##
-You can choose which media option to add. For example, if you have some pictures or a video available, consider adding one of these. 
+You can choose which media option to add. For example, if you have some pictures or a video available, consider adding one of these.
 
 1. On the **Content** tab, select **Media**.
 2. Under **Media**, select **Images**, **Videos**, or **Audio**, and then select **Browse**:  
@@ -90,7 +90,7 @@ Take multiple pictures with the camera on your computer or mobile device, and th
 1. On the **Insert** tab, select **Text**, and then select **Text input**. Rename it **Description**.
 2. Add a microphone, rename it **MyMicrophone**, and set its **[OnStop](controls/control-microphone.md)** property to this formula:
 
-	```Collect(Interviews, {Recordings:MyMicrophone.Audio, Notes:Description.Text})``` 
+	```Collect(Interviews, {Recordings:MyMicrophone.Audio, Notes:Description.Text})```
 
 	By using this formula, you create a collection named **Interviews**, which contains a column named **Recordings** and a column named **Notes**. Each row contains a sound file that you create by using the microphone and any text in the **Description** box when you stop recording.
 
