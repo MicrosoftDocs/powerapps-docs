@@ -131,6 +131,10 @@
 
 ## Other areas
 
+1. **Windows 10 Insider builds**
+
+	PowerApps will no longer open if you upgrade to Windows 10 Insider build 14631 or later. The Windows team has fixed the issue, but that fix has not yet been released in a build. You can run PowerApps on the current release of Windows 10 or earlier Windows 10 Insider builds.
+
 1. **Co-authoring isn't supported. One author at a time, please** (as of release 2.0.410).
 
 	You can corrupt an app or over-write others’ changes if more than one person modifies the same app at the same time. Close the app before someone else edits it.

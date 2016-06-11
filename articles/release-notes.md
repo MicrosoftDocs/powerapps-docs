@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/27/2016"
+    ms.date="06/10/2016"
     ms.author="gregli"/>
 
 # Release notes for PowerApps release 2.0.440 #
