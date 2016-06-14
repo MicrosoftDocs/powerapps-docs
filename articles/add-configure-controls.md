@@ -70,7 +70,7 @@ On the **Insert** tab, follow either of these steps:
 
 		![Column chart, Line chart, Pie chart](./media/add-configure-controls/chart-category.png)
 
-		**Tip:** [Configure a chart](add-images-pictures-audio-video.md) to showcase mission-critical data.
+		**Tip:** [Configure a chart](use-line-pie-bar-chart.md) to showcase mission-critical data.
 
 	- **Shapes**
 
