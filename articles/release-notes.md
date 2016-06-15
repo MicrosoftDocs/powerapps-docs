@@ -14,12 +14,21 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/10/2016"
+    ms.date="06/15/2016"
     ms.author="gregli"/>
 
-# Release notes for PowerApps release 2.0.440 #
-
+# Release notes for PowerApps release 2.0.450 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+1. **Local or UTC values for a DatePicker control**.
+
+	Set the **DateKind** property to specify whether to interpret the selected value of a **DatePicker** control as local time or Coordinated Universal Time (UTC).
+
+1. **Add data while customizing a form**.
+
+	With a form selected, tap the data source for the form (or **No data source selected**) in the right-hand pane, and then tap **Add a data source**.
+
+## Release 2.0.440 ##
 
 1. **Options pane**.
 
