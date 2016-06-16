@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Release notes for PowerApps | Microsoft PowerApps"
-    description="Release notes"
+    pageTitle="What's new for PowerApps | Microsoft PowerApps"
+    description="Updates for each release of PowerApps, organized by build number"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -17,16 +17,20 @@
     ms.date="06/15/2016"
     ms.author="gregli"/>
 
-# Release notes for PowerApps release 2.0.450 #
+# What's new for PowerApps release 2.0.450 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
-
-1. **Local or UTC values for a DatePicker control**.
-
-	Set the **DateKind** property to specify whether to interpret the selected value of a **DatePicker** control as local time or Coordinated Universal Time (UTC).
 
 1. **Add data while customizing a form**.
 
 	With a form selected, tap the data source for the form (or **No data source selected**) in the right-hand pane, and then tap **Add a data source**.
+
+1. **Show PDF files that are protected by a password**.
+
+	If you configure a **PDF Viewer** control to show a file that requires a password, each user must provide the password to view the file. To remove the password requirement, set the **Password** property of that control to the password for that file.
+
+1. **Specify local or UTC for a DatePicker control**.
+
+	If a user specifies a date in a **DatePicker** control for which the **DateKind** property is set to UTC, the same date will appear in any control that’s bound to that data. For example, a user might specify Jan. 1, 2017, and a **Text box** control that’s configured to show both a date and a time will show Jan. 1, 2017, 12a. If the **DateKind** property is set to **Local** and you’re in the Pacific time zone, the same **Text box** control will show Dec. 31, 2016, 4p.
 
 ## Release 2.0.440 ##
 
