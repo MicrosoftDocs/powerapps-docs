@@ -28,9 +28,9 @@ For information about known limitations in this release, see [Common issues and 
 
 	If you configure a **PDF Viewer** control to show a file that requires a password, each user must provide the password to view the file. To remove the password requirement, set the **Password** property of that control to the password for that file.
 
-1. **Specify local or UTC for a DatePicker control**.
+1. **Coordinated Universal Time in the DatePicker control**.
 
-	If a user specifies a date in a **DatePicker** control for which the **DateKind** property is set to UTC, the same date will appear in any control that’s bound to that data. For example, a user might specify Jan. 1, 2017, and a **Text box** control that’s configured to show both a date and a time will show Jan. 1, 2017, 12a. If the **DateKind** property is set to **Local** and you’re in the Pacific time zone, the same **Text box** control will show Dec. 31, 2016, 4p.
+	By default, the **DatePicker** control converts Coordinated Universal Time (UTC) values to reflect the local time zone. For example, a **DatePicker** control shows Dec. 31, 2016, if you set its **DefaultDate** property to “2017-01-01T00:00:00Z” and you’re in the Pacific time zone (UTC-0800). To show the value in the UTC time zone, change the control's **DateTimeZone** property from **Local** to **UTC**.
 
 ## Release 2.0.440 ##
 
