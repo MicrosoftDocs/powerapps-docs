@@ -30,7 +30,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **Coordinated Universal Time in the DatePicker control**.
 
-	By default, the **DatePicker** control converts Coordinated Universal Time (UTC) values to reflect the local time zone. For example, a **DatePicker** control shows Dec. 31, 2016, if you set its **DefaultDate** property to “2017-01-01T00:00:00Z” and you’re in the Pacific time zone (UTC-0800). To show the value in the UTC time zone, change the control's **DateTimeZone** property from **Local** to **UTC**.
+	By default, the **DatePicker** control interprets all date values in the local time zone. If your input is given as midnight in the Coordinated Universal Time (UTC), it would show a date one day off in certain time zones. For example, a **DatePicker** control shows Dec. 31, 2016, if you set its **DefaultDate** property to “2017-01-01T00:00:00Z” and you’re in the Pacific time zone (UTC-0800). To ensure that the control shows those values correctly, change its **DateTimeZone** property from **Local** to **UTC**.
 
 ## Release 2.0.440 ##
 
