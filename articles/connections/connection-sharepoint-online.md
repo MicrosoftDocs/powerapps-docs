@@ -22,15 +22,97 @@ ms.author="anneta"/>
 
 ![SharePoint Online](./media/connection-sharepoint-online/sharepointicon.png)
 
-SharePoint Online provides an API to work with Lists on SharePoint.
+Connect to SharePoint Online, and then create an app in which users can show, create, and update items in a custom list. If you specify name of the site and then select the list, PowerApps can automatically create an app with three screens: one each for browsing items, showing details, and creating or updating items.
 
-You can use different controls within your app to display this information. For example, you can add input text boxes to your app that asks the user for the SharePoint site, file name, and other properties. Then, add a button control that  when clicked, "creates" this new file on the SharePoint site. In another example, you can add a gallery control to your app. Then get all the items from a SharePoint list, and display them in this gallery control.
+**Prerequisites**
+- Learn how to [add and configure controls](add-configure-controls.md).
+- Identify or create a custom list in SharePoint Online that contains columns of any type except Task Outcome or External Data. For more information, see the list of [common issues and resolutions](common-issues-and-resolutions.md).
 
-This topic shows the available functions.
+For simplicity, this topic shows a list with only a couple of columns and a few entries, but your list can be much more complicated.
 
-&nbsp;
+![List of columns](./media/connection-sharepoint-online/column-list.png)
 
-[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+The Title column is set to show single lines of text, and the ShipDate column is set to show dates.
+
+## Create an app automatically ##
+1. Open PowerApps, and then click or tap **New** in the **File** menu (along the left edge).
+
+	![New option on the File menu](./media/connection-sharepoint-online/file-new.png)
+
+1. In the **SharePoint Online** tile, click or tap **Phone layout**.
+
+	![Phone layout for SharePoint Online](./media/connection-sharepoint-online/phone-layout.png)
+
+1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
+
+	**Note**: Don't include a specific list in the URL.
+
+1. Under **Choose a list**, click or tap the name of the list that you want to use.
+
+	In the search box, you can type or paste at least one letter to show only those lists whose names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
+
+	![Filter or sort lists](./media/connection-sharepoint-online/filter-sort-lists.png)
+
+1. Click or tap **Connect** to automatically create your app.
+
+## Customize the app ##
+1. If the default layout of **BrowseScreen1** doesn't show types of the information that you want, click or tap a different option in the **Layout** tab of the right-hand pane.
+
+	![Change layout](./media/connection-sharepoint-online/change-layout.png)
+
+1. If a particular control doesn't show the specific column that you want, click or tap it, and then select a different option in the drop-down list in the right-hand pane.
+
+	![Change column](./media/connection-sharepoint-online/change-column.png)
+
+1. If the order in which data appears in **DetailScreen1**, **EditScreen1**, or both isn't optimal, click or tap a card, and then drag its title bar up or down.
+
+	![Reorder cards](./media/connection-sharepoint-online/reorder-cards.png)
+
+## Customize a card ##
+1. Click or tap the **ShipDate** card, and then set its **Height** property to **185**.
+
+1. With the **ShipDate** card still selected, click or tap its ellipsis icon in the right-hand pane, and then click or tap **Advanced options**.
+
+1. At the top of the right-hand pane, click or tap the lock icon to unlock the card.
+
+1. In the **ShipDate** card, delete the **Input text** control, add a **DatePicker** control to the card, and name the new control **dpShip**.
+
+1. Click or tap the **ShipDate** card, and then show the **Update** property (under **Data** in the right-hand pane).
+
+1. Set the **Update** property to this formula:<br>
+**dpShip.SelectedDate**
+
+## Update an entry ##
+1. Click or tap **BrowseScreen1** in the left navigation bar, and then open Preview mode by clicking or tapping the play button near the upper-right corner (or by pressing F5).
+
+1. Click or tap the arrow for any item in the list.
+
+	![Show details](./media/connection-sharepoint-online/show-details.png)
+
+1. Click or tap the pencil icon in the upper-right corner to edit the item.
+
+	![Pencil icon](./media/connection-sharepoint-online/pencil-icon.png)
+
+1. In the **DatePicker** control, click or tap a different date, click or tap **OK**, and then click or tap the checkmark icon in the upper-right corner to save your changes.
+
+	![Checkmark icon](./media/connection-sharepoint-online/checkmark-icon.png)
+
+1. (optional) Verify that your list reflects your change.
+
+## Create an entry ##
+1. On **DetailScreen1**, return to **BrowseScreen1** by clicking or tapping the back arrow in the upper-left corner.
+
+	![Back arrow](./media/connection-sharepoint-online/back-arrow.png)
+
+1. On **BrowseScreen1**, click or tap the plus icon in the upper-right corner.
+
+	![Plus icon](./media/connection-sharepoint-online/plus-icon.png)
+
+1. Provide data for the new entry, and then click or tap the checkmark icon in the upper-right corner to save your changes.
+
+	![Checkmark icon](./media/connection-sharepoint-online/checkmark-icon.png)
+
+1. (optional) Verify that your list reflects your change.
 
 ## View the available functions
 
@@ -38,10 +120,10 @@ This connection includes the following functions:
 
 | Function Name |  Description |
 | --- | --- |
-|[GetOnNewItems](connection-sharepoint-online.md#getonnewitems) | When a new item is created in a SharePoint list |
+|[GetOnNewItems](connection-sharepoint-online.md#getonnewitems) | When an item is created in a SharePoint list |
 |[GetOnUpdatedItems](connection-sharepoint-online.md#getonupdateditems) | When an existing item is modified in a SharePoint list |
 |[GetItems](connection-sharepoint-online.md#getitems) | Retrieves items from a SharePoint list |
-|[PostItem](connection-sharepoint-online.md#postitem) | Creates a new item in a SharePoint list |
+|[PostItem](connection-sharepoint-online.md#postitem) | Creates an item in a SharePoint list |
 |[GetItem](connection-sharepoint-online.md#getitem) | Retrieves a single item from a SharePoint list |
 |[DeleteItem](connection-sharepoint-online.md#deleteitem) | Deletes an item from a SharePoint list |
 |[PatchItem](connection-sharepoint-online.md#patchitem) | Updates an item in a SharePoint list |
@@ -333,7 +415,7 @@ Extract folder: Used for extracting a folder on Document Library
 |FileLocator|string|No | |
 -->
 
-## GetOnNewItems
+### GetOnNewItems
 When a new item is created: When a new item is created in a SharePoint list
 
 #### Input properties
@@ -354,7 +436,7 @@ When a new item is created: When a new item is created in a SharePoint list
 |value|array|No | |
 
 
-## GetOnUpdatedItems
+### GetOnUpdatedItems
 When an existing item is modified: When an existing item is modified in a SharePoint list
 
 #### Input properties
@@ -375,7 +457,7 @@ When an existing item is modified: When an existing item is modified in a ShareP
 |value|array|No | |
 
 
-## GetItems
+### GetItems
 Get items: Retrieves items from a SharePoint list
 
 #### Input properties
@@ -396,7 +478,7 @@ Get items: Retrieves items from a SharePoint list
 |value|array|No | |
 
 
-## PostItem
+### PostItem
 Create item: Creates a new item in a SharePoint list
 
 #### Input properties
@@ -414,7 +496,7 @@ Create item: Creates a new item in a SharePoint list
 |ItemInternalId|string|No |
 
 
-## GetItem
+### GetItem
 Get item: Retrieves a single item from a SharePoint list
 
 #### Input properties
@@ -432,7 +514,7 @@ Get item: Retrieves a single item from a SharePoint list
 |ItemInternalId|string|No |
 
 
-## DeleteItem
+### DeleteItem
 Delete item: Deletes an item from a SharePoint list
 
 #### Input properties
@@ -447,7 +529,7 @@ Delete item: Deletes an item from a SharePoint list
 None.
 
 
-## PatchItem
+### PatchItem
 Update item: Updates an item in a SharePoint list
 
 #### Input properties
@@ -465,8 +547,7 @@ Update item: Updates an item in a SharePoint list
 |---|---|---|---|
 |ItemInternalId|string|No |
 
-
-## GetColumnValues
+### GetColumnValues
 Get column values: Retrieves possible values for a SharePoint column
 
 #### Input properties
@@ -482,7 +563,7 @@ Get column values: Retrieves possible values for a SharePoint column
 None.
 
 
-## GetTables
+### GetTables
 Get lists: Retrieves SharePoint lists from a site
 
 #### Input properties
@@ -498,7 +579,7 @@ Get lists: Retrieves SharePoint lists from a site
 |value|array|No | |
 
 
-## Helpful links
+### Helpful links
 
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
