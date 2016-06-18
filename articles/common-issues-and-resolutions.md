@@ -53,21 +53,21 @@
 
 	| Column type | Support |
 |---|---|
-| Boolean (Yes/No) | Yes |
 | Single line of text | Yes |
-| Number | Yes |
-| Hyperlink | Yes |
 | Multiple lines of text | Yes |
-| Date and Time | Yes |
-| Currency | Yes |
-| Picture | Yes (read-only) |
-| Lookup | Yes (as of release 2.0.440) |
-| Person or Group | Yes (as of release 2.0.440) |
-| Managed Metadata | Yes (as of release 2.0.440) |
 | Choice | Yes (read-only) |
+| Number | Yes |
+| Currency | Yes |
+| Date and Time | Yes |
+| Lookup | Yes (as of release 2.0.440) |
+| Boolean (Yes/No) | Yes |
+| Person or Group | Yes (as of release 2.0.440) |
+| Hyperlink | Yes |
+| Picture | Yes (read-only) |
 | Calculated | Yes (read-only) |
 | Task Outcome | No |
 | External data | No |
+| Managed Metadata | Yes (as of release 2.0.440) |
 
 	**Note**: For the column types marked as *Yes (read-only)*, full support is expected soon.
 
