@@ -25,6 +25,7 @@ ms.author="anneta"/>
 Connect to SharePoint Online, and then create an app in which users can show, create, and update items in a custom list. If you specify name of the site and then select the list, PowerApps can automatically create an app with three screens: one each for browsing items, showing details, and creating or updating items.
 
 **Prerequisites**
+
 - Learn how to [add and configure controls](add-configure-controls.md).
 - Identify or create a custom list in SharePoint Online that contains columns of any type except Task Outcome or External Data. For more information, see the list of [common issues and resolutions](common-issues-and-resolutions.md).
 
@@ -64,7 +65,7 @@ The Title column is set to show single lines of text, and the ShipDate column is
 
 	![Change column](./media/connection-sharepoint-online/change-column.png)
 
-1. If the order in which data appears in **DetailScreen1**, **EditScreen1**, or both isn't optimal, click or tap a card, and then drag its title bar up or down.
+1. On **EditScreen1**, swap the positions of cards by clicking or tapping a lower card and then dragging its title bar up (or drag a higher card down).
 
 	![Reorder cards](./media/connection-sharepoint-online/reorder-cards.png)
 
@@ -73,17 +74,27 @@ The Title column is set to show single lines of text, and the ShipDate column is
 
 1. With the **ShipDate** card still selected, click or tap its ellipsis icon in the right-hand pane, and then click or tap **Advanced options**.
 
+	![Open Advanced options](./media/connection-sharepoint-online/advanced-options.png)
+
 1. At the top of the right-hand pane, click or tap the lock icon to unlock the card.
+
+	![Unlock a card](./media/connection-sharepoint-online/lock-icon.png)
 
 1. In the **ShipDate** card, delete the **Input text** control, add a **DatePicker** control to the card, and name the new control **dpShip**.
 
-1. Click or tap the **ShipDate** card, and then show the **Update** property (under **Data** in the right-hand pane).
+	![Replace Text input with DatePicker](./media/connection-sharepoint-online/add-datepicker.png)
 
-1. Set the **Update** property to this formula:<br>
+1. Click or tap the **ShipDate** card, and set its **Update** property (under **Data** in the right-hand pane) to this formula:<br>
 **dpShip.SelectedDate**
 
+	If the **Update** property doesn't appear, click or tap the down arrow at the bottom of the **Data** section.
+
+	![Set the Update property](./media/connection-sharepoint-online/set-update.png)
+
 ## Update an entry ##
-1. Click or tap **BrowseScreen1** in the left navigation bar, and then open Preview mode by clicking or tapping the play button near the upper-right corner (or by pressing F5).
+1. Click or tap **BrowseScreen1** in the left navigation bar, and then open Preview mode by pressing F5.
+
+	 You can also open Preview mode by clicking or tapping the play button near the upper-right corner.
 
 1. Click or tap the arrow for any item in the list.
 
