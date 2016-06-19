@@ -72,7 +72,18 @@ The Title column is set to show single lines of text, and the ShipDate column is
 ## Customize a card ##
 1. Click or tap the **ShipDate** card, and then set its **Height** property to **185**.
 
-1. With the **ShipDate** card still selected, click or tap its ellipsis icon in the right-hand pane, and then click or tap **Advanced options**.
+1. Click or tap just below the **Text input** control to select **ErrorMessage1**, which has no border.
+
+	**Note**: To select **ErrorMessage1** more easily, increase the zoom to **100%**.
+
+	![Select error message](./media/connection-sharepoint-online/select-error.png)
+
+1. Set the Height property of ErrorMessage1 to this formula:<br>
+**dpShip.Y + dpShip.Height**
+
+	An error icon appears, but you'll resolve it in the next few steps.
+
+1. Click or tap the **ShipDate** card, click or tap its ellipsis icon in the right-hand pane, and then click or tap **Advanced options**.
 
 	![Open Advanced options](./media/connection-sharepoint-online/advanced-options.png)
 
@@ -87,7 +98,7 @@ The Title column is set to show single lines of text, and the ShipDate column is
 1. Click or tap the **ShipDate** card, and set its **Update** property (under **Data** in the right-hand pane) to this formula:<br>
 **dpShip.SelectedDate**
 
-	If the **Update** property doesn't appear, click or tap the down arrow at the bottom of the **Data** section.
+	**Note**: If the **Update** property doesn't appear, click or tap the down arrow at the bottom of the **Data** section.
 
 	![Set the Update property](./media/connection-sharepoint-online/set-update.png)
 
