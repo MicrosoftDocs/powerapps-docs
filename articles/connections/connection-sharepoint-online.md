@@ -15,10 +15,10 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/26/2016"
+ms.date="06/18/2016"
 ms.author="anneta"/>
 
-#  SharePoint Online
+# Connect to SharePoint Online in PowerApps
 
 ![SharePoint Online](./media/connection-sharepoint-online/sharepointicon.png)
 
