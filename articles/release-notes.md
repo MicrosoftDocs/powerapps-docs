@@ -24,6 +24,20 @@ For information about known limitations in this release, see [Common issues and 
 
 	With a form selected, tap the data source for the form (or **No data source selected**) in the right-hand pane, and then tap **Add a data source**.
 
+1.	**App from data now fully delegated for SQL Azure and Salesforce connections**.
+
+	When you create an app from data for a SQL Azure or Salesforce connection, the resulting app now delegates all operations to the service. It's now possible to work with large data sets with these generated apps.
+
+	Instead of generating formulas based on **Filter** and **Sort** functions, we now generate formulas based on **Search** and **SortByColumns** functions.  These new functions are easier to delegate to a data service because they don't depend on an arbitrary formula.
+
+1.	**New Search function**.
+
+	Acting as a specialized **Filter** function, the **Search** function takes a single string to look for and a list of text columns to search within. This function also automatically returns all records if no search term is present, suitable for direct use with a search **Text input** control. For more information, see the **Search** function documentation, or take a look at the formulas generated when you create an app from data.
+
+1.	**In operator now supports delegation**.
+
+	Feel free to use this operator in **Filter** functions to accomplish the same effect as the **Search** function.
+
 1. **Show PDF files that are protected by a password**.
 
 	If you configure a **PDF Viewer** control to show a file that requires a password, each user must provide the password to view the file. To remove the password requirement, set the **Password** property of that control to the password for that file.
