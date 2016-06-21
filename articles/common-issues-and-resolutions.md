@@ -106,17 +106,19 @@
 | Managed Metadata | View lookup<br>Edit lookup (as of release 2.0.440)  |
 | Choice | View lookup |
 
-## Customize an app
+## Other areas
+
+1. **Windows 10 Insider builds**
+
+	PowerApps will no longer open if you upgrade to Windows 10 Insider build 14631 or later. The Windows team has fixed the issue, but that fix has not yet been released in a build. You can run PowerApps on the current release of Windows 10 or earlier Windows 10 Insider builds.
+
+1. **Co-authoring isn't supported. One author at a time, please** (as of release 2.0.410).
+
+	You can corrupt an app or over-write others’ changes if more than one person modifies the same app at the same time. Close the app before someone else edits it.
 
 1. **It can sometimes take a moment before a newly shared app can be used** (as of release 2.0.410).
 
 	In some cases, a newly shared app won't be immediately available. Wait a few moments, and it should become available.
-
-1. **Sharing an app for editing doesn't also share the flows** (as of release 2.0.410).
-
-	You must share the flows separately so that others can edit them, not just run them.
-
-## Use controls
 
 1. **In the [Form control](controls/control-form-detail.md), you can't change data by using a custom card** (as of release 2.0.410).
 
@@ -128,16 +130,6 @@
 1. **Card gallery is deprecated** (as of release 2.0.410).
 
 	Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
-
-## Other areas
-
-1. **Windows 10 Insider builds**
-
-	PowerApps will no longer open if you upgrade to Windows 10 Insider build 14631 or later. The Windows team has fixed the issue, but that fix has not yet been released in a build. You can run PowerApps on the current release of Windows 10 or earlier Windows 10 Insider builds.
-
-1. **Co-authoring isn't supported. One author at a time, please** (as of release 2.0.410).
-
-	You can corrupt an app or over-write others’ changes if more than one person modifies the same app at the same time. Close the app before someone else edits it.
 
 1. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash** (as of release 2.0.410).
 
