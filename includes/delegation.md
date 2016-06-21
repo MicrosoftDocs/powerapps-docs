@@ -10,4 +10,4 @@ Additional limitations on delegation (which we are working to remove):
 
 - At this time, **LookUp** doesn't support delegation, but it will be coming soon.
 - For **Sort**, the *Formula* argument can only be the name of a single column and can't include other operators or functions. The *SortOrder* argument has no limitations.
-- For **Filter**, the formula can include =, <>, <, >, >=, <=, &&, ||, and **In** operators. Only names of columns and values that don't depend on the data source can be used.  
+- For **Filter**, the formula can include =, <>, <, >, >=, <=, &&, ||, and **In** operators. Only names of columns and values that don't vary with the records of the data source can be used.  The **ExactIn** operator is not supported.  
