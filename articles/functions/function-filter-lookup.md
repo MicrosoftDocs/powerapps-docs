@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Filter and LookUp functions | Microsoft PowerApps"
+	pageTitle="Filter, Search, and LookUp functions | Microsoft PowerApps"
 	description="Reference information, including syntax and examples, for the Filter and LookUp functions in PowerApps"
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="10/21/2015"
    ms.author="gregli"/>
 
-# Filter and LookUp functions in PowerApps #
+# Filter, Search, and LookUp functions in PowerApps #
 
 Finds one or more [records](../working-with-tables.md#records) in a [table](../working-with-tables.md).
 
@@ -30,24 +30,13 @@ The **LookUp** function finds the first record in a table that satisfies a formu
 
 For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  [Columns](../working-with-tables.md#columns) of the table can be used in the formula, as well as control properties and other values from throughout your app.  Besides the normal formula [operators](operators.md), you can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators for substring matches.
 
-**Filter** returns a table that contains the same columns as the original table and the records that match the criteria.  **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value.  If no records are found, **Filter** returns an [empty](function-isblank-isempty.md) table, and **LookUp** returns *blank*.  
+The **Search** function finds records in a table that contain a string in one of its columns.  The string may occur anywhere within the column, for example searching for "rob" or "bert" would find a match in a column that contains "Robert".  Searching is case-insensitive.  Unlike **Filter** and **LookUp**, a single string to match is used instead of a formula.
 
-[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Filter** and **LookUp** don't modify a table. Instead, they take a table as an argument and return a table, a record, or a single value from it. See [working with tables](../working-with-tables.md) for more details.
+**Filter** and **Search** return a table that contains the same columns as the original table and the records that match the criteria.  **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value.  If no records are found, **Filter** and **Search** return an [empty](function-isblank-isempty.md) table, and **LookUp** returns *blank*.  
 
+[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Filter**, **Search**, and **LookUp** don't modify a table. Instead, they take a table as an argument and return a table, a record, or a single value from it. See [working with tables](../working-with-tables.md) for more details.
 
-## Delegation ##
-
-When possible, PowerApps will delegate filter and sort operations to the data source and page through the results on demand.  For example, when starting an app that shows a **[Gallery](../controls/control-gallery.md)** control filled with data, only the first set of records will be initially brought to the device.  As the user scrolls, additional data will be brought down from the data source.  The result is a faster start time for the app and access to very large data sets.
-
-However, delegation may not always be possible.  Data sources vary on what functions and operators they support while the PowerApps formula language is relatively rich.  If complete delegation of a formula is not possible, the authoring environment will flag the **Filter** or **Sort** formula as a warning.  When possible, consider changing the formula to avoid functions and operators that cannot be delegated.   
-
-PowerApps will delegate what it can, but will only pull down a small set of records to complete the work locally, at most 500 records.  **Filter** and **Sort** will continue to operate, but with a reduced set of records.  What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story which could be confusing to users.  Aggregate operations, such as **Sum** and **Average**, will operate on only a portion of the data source and therefore may not give the result that is expected.
-
-Additional limitations on delegation (which we are working to remove):
-
-- At this time, only **Filter**, **Sort**, and **SortByColumns** support delegation.  **LookUp** support will be coming soon.
-- For **Sort**, the formula can only be the name of a single column and cannot include other operators or functions.
-- For **Filter**, the formula can include =, <>, <, >, >=, <=, &&, and || operators.  Only names of columns and values that do not depend on the data source can be used.  
+[AZURE.INCLUDE [delegation](../../includes/delegation.md)]
 
 ## Syntax ##
 
@@ -55,6 +44,12 @@ Additional limitations on delegation (which we are working to remove):
 
 - *Table* - Required. Table to search.
 - *Formula(s)* - Required. This formula is evaluated for each record of the table, and the result includes those records that result in **true**.  You can reference columns within the table.  If you supply more than one formula, the results of all formulas are combined with the **[And](function-logicals.md)** function.
+
+**Search**( *Table*, *SearchString*, *Column1* [, *Column2*, ... ] )
+
+- *Table* - Required. Table to search.
+- *SearchString* - Required.  The string to search for.  If *blank* or an empty string, all records are returned. 
+- *Column(s)* - Required.  The names of columns within *Table* to search.  Columns to search must contain text.  Column names must be strings and enclosed in double quotes.  If *SearchString* is found within the date any of these columns as a partial match, the full record will be returned.
 
 **LookUp**( *Table*, *Formula* [, *ReductionFormula* ] )
 
@@ -74,6 +69,8 @@ The following examples use the **IceCream** [data source](../working-with-data-s
 | **Filter( IceCream, Quantity + OnOrder > 225 )** | Returns records where the sum of **Quantity** and **OnOrder** columns is greater than 225. | ![](media/function-filter-lookup/icecream-overstock.png) |
 | **Filter( IceCream, "chocolate" in Lower( Flavor ) )** | Returns records where the word "chocolate" appears in the **Flavor** name, independent of uppercase or lowercase letters. | ![](media/function-filter-lookup/icecream-chocolate.png) |
 | **Filter( IceCream, Quantity < 10  && OnOrder < 20 )** | Returns records where the **Quantity** is less than 10 and **OnOrder** is less than 20.  No records match these criteria, so an empty table is returned. | ![](media/function-filter-lookup/icecream-empty.png) |
+| **Search( IceCream, "choc", "Flavor" )** | Returns records where the string "choc" appears in the **Flavor** name, independent of uppercase or lowercase letters. | ![](media/function-filter-lookup/icecream-chocolate.png) |
+| **Search( IceCream, "", "Flavor" ) ** | Since the search term is empty, all records are returned. | ![](media/function-filter-lookup/icecream.png) |
 | **LookUp( IceCream, Flavor = "Chocolate", Quantity )** | Searches for a record with **Flavor** equal to "Chocolate", of which there is one.  For the first record that's found, returns the **Quantity** of that record. | 100 |
 | **LookUp( IceCream, Quantity > 150, Quantity + OnOrder )** | Searches for a record with **Quantity** greater than 100, of which there are multiple.  For the first record that's found, which is "Vanilla" **Flavor**, returns the sum of **Quantity** and **OnOrder** columns. | 250 |
 | **LookUp( IceCream, Flavor = "Pistachio", OnOrder )** | Searches for a record with **Flavor** equal to "Pistachio", of which there are none.  Because none were found, **Lookup** returns *blank*. | *blank* |
