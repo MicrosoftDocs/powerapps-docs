@@ -24,14 +24,12 @@ ms.author="anneta"/>
 
 Connect to SharePoint Online, and then create an app in which users can show, create, and update items in a custom list. If you specify the name of the site and then select the list, PowerApps can automatically create an app with three screens: one each for browsing items, showing details, and creating or updating items.
 
-**Important**: For information about which types of data PowerApps supports, check [Known issues](connection-sharepoint-online.md#known-issues).
-
 **Prerequisites**
 
 - Learn how to [add and configure controls](add-configure-controls.md).
-- Identify or create a custom list in SharePoint Online that contains columns of any type except Task Outcome or External Data. For more information, see the list of [common issues and resolutions](common-issues-and-resolutions.md).
+- Identify or create a custom list in SharePoint Online that contains only [supported columns](connection-sharepoint-online.md#known-issues).
 
-For simplicity, this topic shows a list with only a couple of columns and a few entries, but your list can be much more complicated.
+For simplicity, the list in this topic contains only a couple of columns and a few entries, but your list can be much more complicated.
 
 ![List of columns](./media/connection-sharepoint-online/column-list.png)
 
