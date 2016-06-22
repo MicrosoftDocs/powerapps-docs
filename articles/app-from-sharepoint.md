@@ -25,7 +25,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 ## Prerequisites
 
 - [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
-- A list in SharePoint Online that contains only supported types of columns. For more information, see [Common issues and resolutions](common-issues-and-resolutions.md#create-an-app-from-sharepoint).
+- A list in SharePoint Online that contains only supported types of columns. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 The list in this tutorial contains these columns:  
 ![](./media/app-from-sharepoint/ListColumns.png)
