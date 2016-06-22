@@ -22,7 +22,9 @@ ms.author="anneta"/>
 
 ![SharePoint Online](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to SharePoint Online, and then create an app in which users can show, create, and update items in a custom list. If you specify name of the site and then select the list, PowerApps can automatically create an app with three screens: one each for browsing items, showing details, and creating or updating items.
+Connect to SharePoint Online, and then create an app in which users can show, create, and update items in a custom list. If you specify the name of the site and then select the list, PowerApps can automatically create an app with three screens: one each for browsing items, showing details, and creating or updating items.
+
+**Important**: For information about which types of data PowerApps supports, check [Known issues](connection-sharepoint-online.md#known-issues).
 
 **Prerequisites**
 
@@ -78,7 +80,7 @@ The Title column is set to show single lines of text, and the ShipDate column is
 
 	![Select error message](./media/connection-sharepoint-online/select-error.png)
 
-1. Set the Height property of ErrorMessage1 to this formula:<br>
+1. Set the **Height** property of **ErrorMessage1** to this formula:<br>
 **dpShip.Y + dpShip.Height**
 
 	An error icon appears, but you'll resolve it in the next few steps.
@@ -600,6 +602,47 @@ Get lists: Retrieves SharePoint lists from a site
 |---|---|---|---|
 |value|array|No | |
 
+## Known issues ##
+
+You can add data from a list but not a library.
+
+Not all types of columns are supported, and not all types of columns support all types of cards.
+
+| Column type | Support | Default cards |
+|---|---|----|
+| Single line of text | Yes | View text |
+| Multiple lines of text | Yes | View text |
+| Choice | Yes (read-only) | View lookup |
+| Number | Yes | View percentage<br>View rating<br>View text |
+| Currency | Yes | View percentage<br>View rating<br>View text
+| Date and Time | Yes | View text |
+| Lookup | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Boolean (Yes/No) | Yes | View text<br>View toggle |
+| Person or Group | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Hyperlink | Yes | View URL<br>View text |
+| Picture | Yes (read-only) | View image<br>View text |
+| Calculated | Yes (read-only) |   |
+| Task Outcome | No |  |
+| External data | No |  |
+| Managed Metadata | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
+
+PowerApps doesn't support columns that support multiple values or selections.
+
+- For Lookup columns, the **Allow multiple values** checkbox must be cleared.
+
+	![Check box to allow multiple values in a Lookup column](./media/connection-sharepoint-online/lookup.png)
+
+- For Managed Metadata columns, the **Allow multiple values** checkbox must be cleared.
+
+	![Check box to allow multiple values in a Managed Metadata column](./media/connection-sharepoint-online/metadata.png)
+
+- For Person or Group columns, the **No** option under **Allow multiple selections** must be selected.
+
+	![Options to allow multiple selections for a Person or Group column](./media/connection-sharepoint-online/person-group.png)
+
+- For Choice columns, the **Drop-Down Menu** or **Radio Buttons** option under **Display choices using** must be selected.
+
+	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
 ### Helpful links
 
