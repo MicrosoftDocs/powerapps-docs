@@ -65,6 +65,8 @@
 
 	Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
 
+1. **Office 365 Video connector isn't supported**.
+
 1. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash** (as of release 2.0.410).
 
 	Users can fix this problem by updating to a lower version of Webview (3x) or update to Android 6.0.
