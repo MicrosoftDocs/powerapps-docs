@@ -53,8 +53,8 @@ PowerApps includes multi-select and single-select options, including a listbox, 
 	|Shape | Set Visible function to |
 	|--- | --- |
 	|circle | ```If("circle" in MyListBox.SelectedItems.Value, true)``` |
-	|triangle | ```If("triangle" in MyListbox.SelectedItems.Value, true)``` |
-	|rectangle | ```If("rectangle" in MyListbox.SelectedItems.Value, true)``` |
+	|triangle | ```If("triangle" in MyListBox.SelectedItems.Value, true)``` |
+	|rectangle | ```If("rectangle" in MyListBox.SelectedItems.Value, true)``` |
 
 7. Preview what you've created ![][1]. Select the different shapes in the listbox. Only the shape or shapes you select appear. Press **ESC** or select the **X** to go back to your screen.
 
