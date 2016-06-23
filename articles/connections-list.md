@@ -24,6 +24,8 @@ In PowerApps, connect to data in Office 365, Dropbox, Twitter and other common S
 
 Just getting started with adding connections in PowerApps? Learn how to add [connections](add-manage-connections.md) and [data sources](add-data-connection.md) in your apps.
 
+Ready to take it to the next level? Create [custom APIs](register-custom-api.md) and connect to them within your apps.
+
 ## Available connections
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
@@ -41,9 +43,6 @@ Just getting started with adding connections in PowerApps? Learn how to add [con
 | [![API Icon][sftpicon]][sftpdoc] | [**SFTP**][sftpdoc]  <br/> Upload, get, and delete files, among other tasks || [![API Icon][sharepointicon]][sharepointdoc] | [**SharePoint Online**][sharepointdoc]  <br/> Manage list items |
 | [![API Icon][slackicon]][slackdoc] | [**Slack**][slackdoc]  <br/> Post messages to Slack channels || [![API Icon][smtpicon]][smtpdoc] | [**SMTP**][smtpdoc]  <br/> Send email with attachments|
 | [![API Icon][twilioicon]][twiliodoc] | [**Twilio**][twiliodoc]  <br/> Send and get messages, get available numbers, and more || [![API Icon][twittericon]][twitterdoc] | [**Twitter**][twitterdoc]  <br/> Get timelines, post tweets, and more |
-
-## Custom APIs
-You can also create [custom APIs](register-custom-api.md) and connect to them within your apps.
 
 <!--API Documentation-->
 [azureblobdoc]: ./connections/connection-azure-blob.md "Connect to Azure blob to manage files in your blob container."
