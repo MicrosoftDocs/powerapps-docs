@@ -1,6 +1,6 @@
 <properties
     pageTitle="Manage connections in PowerApps | Microsoft PowerApps"
-    description="Add or manage connections to SharePoint, SQL, OneDrive for Business, Salesforce, Office 365, OneDrive, DropBox, Twitter, Google Drive and more in PowerApps"
+    description="Add or manage connections to SharePoint, SQL, OneDrive for Business, Salesforce, Office 365, OneDrive, DropBox, Twitter, Google Drive, and more in PowerApps"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -20,7 +20,7 @@
 
 # Manage your connections
 
-[AZURE.VIDEO nb:cid:UUID:0156313a-0d00-80c4-fa80-f1e592051e49]
+[AZURE.VIDEO nb:cid:UUID:5bd6ea27-f8c0-41e0-a65b-34ca63a57d3e]
 
 Connections in PowerApps allow you to easily access your data while building apps. PowerApps includes commonly-used connections, including SharePoint, SQL, Office 365, OneDrive for Business, Salesforce, Excel, Dropbox, Twitter, and more.
 
