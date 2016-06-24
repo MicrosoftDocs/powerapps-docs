@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Release notes for PowerApps | Microsoft PowerApps"
-    description="Release notes"
+    pageTitle="What's new for PowerApps | Microsoft PowerApps"
+    description="Updates for each release of PowerApps, organized by build number"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -14,12 +14,39 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/10/2016"
+    ms.date="06/15/2016"
     ms.author="gregli"/>
 
-# Release notes for PowerApps release 2.0.440 #
-
+# What's new for PowerApps release 2.0.450 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+1. **Add data while customizing a form**.
+
+	With a form selected, tap the data source for the form (or **No data source selected**) in the right-hand pane, and then tap **Add a data source**.
+
+1.	**App from data now fully delegated for SQL Azure and Salesforce connections**.
+
+	When you create an app from data for a SQL Azure or Salesforce connection, the resulting app now delegates all operations to the service. It's now possible to work with large data sets with these generated apps.
+
+	Instead of generating formulas based on **Filter** and **Sort** functions, we now generate formulas based on **Search** and **SortByColumns** functions.  These new functions are easier to delegate to a data service because they don't depend on an arbitrary formula.
+
+1.	**New Search function**.
+
+	Acting as a specialized **Filter** function, the **Search** function takes a single string to look for and a list of text columns to search within. This function also automatically returns all records if no search term is present, suitable for direct use with a search **Text input** control. For more information, see the **Search** function documentation, or take a look at the formulas generated when you create an app from data.
+
+1.	**In operator now supports delegation**.
+
+	Feel free to use this operator in **Filter** functions to accomplish the same effect as the **Search** function.
+
+1. **Show PDF files that are protected by a password**.
+
+	If you configure a **PDF Viewer** control to show a file that requires a password, each user must provide the password to view the file. To remove the password requirement, set the **Password** property of that control to the password for that file.
+
+1. **Coordinated Universal Time in the DatePicker control**.
+
+	By default, the **DatePicker** control interprets all date values in the local time zone. If your input is given as midnight in the Coordinated Universal Time (UTC), it would show a date one day off in certain time zones. For example, a **DatePicker** control shows Dec. 31, 2016, if you set its **DefaultDate** property to “2017-01-01T00:00:00Z” and you’re in the Pacific time zone (UTC-0800). To ensure that the control shows those values correctly, change its **DateTimeZone** property from **Local** to **UTC**.
+
+## Release 2.0.440 ##
 
 1. **Options pane**.
 

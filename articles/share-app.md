@@ -27,11 +27,13 @@ You created an app, and now you're ready to share it with your coworkers. You ca
 - A group in Azure Active Directory (AAD)
 - All users within your organization
 
-If you share an app with a group, *everyone* in that group has the permissions that you assign to the group. If users are added or deleted from the group, then these users gain and lose permissions accordingly.
+If you share an app with a group, *everyone* in that group has the permissions that you assign to the group. If users are added or deleted from the group, they gain and lose permissions accordingly.
 
-If you share an app with your organization, *everyone* in your organization has the permission to run the app (default behavior). They cannot change or update the app.
+If you share an app with your organization, *everyone* in your organization has the permission to run the app (default behavior). They can't change or update the app.
 
 **Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, if your app uses an Excel file, you must also [share the Excel or other file](share-app-data.md) in a cloud-storage account.
+
+If you embed a flow within an app and then share the app with others, they’ll need to confirm or update any connections on which the flow relies. In addition, other users can’t customize the flow’s parameters. For example, a flow can send email to your address when an action occurs, but other users can’t change that address to their own.
 
 ## What you need to get started
 
@@ -57,7 +59,7 @@ If you share an app with your organization, *everyone* in your organization has 
 	- **Can use**: Allow the user or group members to run the app. User are not able to share your app with other users or groups.  
 	- **Can use and share**: Allow the user or group members to run your app and share your app.  
 	- **Can edit**: Allow the user or group members to run your app, customize it, and share a new version of your app.  
-  
+
 	![](./media/share-app/new-permission-list-portal.png)
 
 1. To share this app with all users within your organization, select **Allow access to others users in my organization**.
@@ -92,7 +94,7 @@ If you share an app with your organization, *everyone* in your organization has 
 
 	![](./media/share-app/permissions-org.png)
 
-[AZURE.NOTE] If a user is given multiple permission types, the permission with the highest access is used. For example, Nancy is a member of GroupA and GroupB. GroupA is given *Can use* permissions, and GroupB is given *Can edit* permissions. In this scenario, Nancy has *Can edit* permission because it has the highest access. 
+[AZURE.NOTE] If a user is given multiple permission types, the permission with the highest access is used. For example, Nancy is a member of GroupA and GroupB. GroupA is given *Can use* permissions, and GroupB is given *Can edit* permissions. In this scenario, Nancy has *Can edit* permission because it has the highest access.
 
 ## Change or remove permission
 
