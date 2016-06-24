@@ -28,6 +28,8 @@ You can add controls, including buttons and text boxes, to do these functions in
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
+**Important**: As of this writing, the functions for calendar and contacts aren't supported.
+
 &nbsp;
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]

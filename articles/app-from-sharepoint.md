@@ -22,11 +22,13 @@
 
 Create an app for adding, updating, and deleting data in a SharePoint list. Specify the list, create the app automatically, and then specify which data you want to show. Test the app by displaying, sorting, filtering, and updating data.
 
-For information about the types of SharePoint data from which you can create an app and other details/limitations, see [Common issues and resolutions](common-issues-and-resolutions.md#create-an-app-from-sharepoint).
-
 ## Prerequisites
 
 - [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
+- A list in SharePoint Online that contains only supported types of columns. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
+
+The list in this tutorial contains these columns:  
+![](./media/app-from-sharepoint/ListColumns.png)
 
 ## Create an app ##
 1. In PowerApps, select **New** (near the left edge of the screen).  
@@ -48,9 +50,6 @@ For information about the types of SharePoint data from which you can create an 
 5. Under **Choose a list**, select the list that you want to use and then select **Connect**.  
 
 	![Select a list](./media/app-from-sharepoint/SelectList.png)
-
-	Here are the columns of the SharePoint Online custom list that is used for the examples in this article:  
-	![](./media/app-from-sharepoint/ListColumns.png)
 
 	PowerApps builds an app that has three screens:  
 	<!-- **Edit form** control add-form.md -->
