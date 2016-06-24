@@ -1,5 +1,5 @@
-<properties	pageTitle="Add a new data connection | Microsoft PowerApps"
-	description="Add a new data connection to an existing app or when building a new blank app"
+<properties	pageTitle="Add a data connection to an app | Microsoft PowerApps"
+	description="Add a data connection to an existing app or a blank app"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -11,82 +11,52 @@
 <tags
    ms.service="powerapps"
    ms.devlang="na"
-   ms.topic="get-started-article"
+   ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/05/2016"
+   ms.date="06/23/2016"
    ms.author="archanan"/>
 
+# Add a data connection #
+Add a connection to SharePoint Online, Salesforce, OneDrive, or [another data source](connections-list.md), and then display and manage data in that source from your app, as in these examples:
 
-# Add a new data connection #
+- Connect to OneDrive, and manage data in an Excel workbook in your app.
+- Connect to Twilio, and send an SMS message from your app.
+- Connect to SQL Azure, and update a table from your app.
 
-You can add a connection to a data source, including SharePoint Online, Salesforce, Dropbox, Twitter, and more. You "connect" to the data source, and then display the data within your app. For example, you can connect to OneDrive to display Excel data in your app, you can connect to Twilio to send an SMS message from your app, you can connect to SQL Azure and update a table from your app, and so on.
+You can add a connection in PowerApps Studio, as this topic describes, or on [powerapps.com](https://web.powerapps.com), as [Manage connections](add-manage-connections.md) describes.
 
-This topic shows you how to create a data connection within PowerApps. [Connections list](connections-list.md) lists all the available connections you can add.
+**Prerequisites**
 
-## What you need to get started ##
+1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+1. Click or tap **New** on the **File** menu (near the left edge).
+1. Under **Create an app**, click or tap **Phone layout** on the **Blank app** tile.
 
-- Sign-in to PowerApps or the [PowerApps portal][1].
-- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-- Account and sign-in details for the service you are connecting to
+	![Create an app from scratch](./media/add-data-connection/blank-app.png)
 
+## Connect to data ##
+1. In the right-hand pane, click or tap the **Data sources** tab to open it, and then click or tap **Add data source**.
 
-## Add a data source to your app  ##
-1. In PowerApps, go to the **Content** tab, and select **Data sources**:  
+	![Add data source](./media/add-data-connection/add-data-source.png)
 
-	![Data sources](./media/add-data-connection/data-sources.png)
+1. If you've already created a connection that you want to use, click or tap it to add it to your app, and then skip to the next procedure. Otherwise, skip to the next step.
 
-1. The Data sources pane slides out on the right. Select **Add data source**:  
+1. Click or tap **Add connection** to display a list of connectors, click or tap the data source that you want to add, and then click or tap **Connect**.  
 
-	![Data sources pane](./media/add-data-connection/add-data-source.png)
+	Some connectors, such as **Microsoft Translator**, require no additional steps, and you can skip to the next procedure. Other connectors require steps such as providing credentials and specifying a particular set of data. The rest of this procedure demonstrates the steps for adding a connection to **SharePoint Online**.
 
-1. Select an existing connection OR choose to add a new connection:  
-
-	![List of connections](./media/add-data-connection/list-of-connections.png)
-
-1. From the list of available connections, select the data source you want to connect to, such as **SharePoint Online**:  
-
-	![List of APIs](./media/add-data-connection/list-of-api.png)
-
-1. Select **Connect**, and enter any required credentials. In this example, enter the sign-in credentials for SharePoint Online:  
-
-	![SharePoint Online connect screen](./media/add-data-connection/sharepoint-connect.png)
-
-1. Once the connection is established, select a site from the list of **Recent Sites** OR enter a **New Site**:  
+1. Under **Connect to a SharePoint site**, click or tap an entry in the **Recent sites** list, or type or paste the URL for the site that you want to use.
 
 	![Select a SharePoint site](./media/add-data-connection/select-sp-site.png)
 
-1. Select the table you want to use in your app using the checkbox. You can also select multiple tables. Select **Connect**:  
+1. Select the check box for one or more tables that you want to use, and then click or tap **Connect**:  
 
 	![Select the tables in SharePoint](./media/add-data-connection/select-sp-tables.png)
 
-1. The data sources are now added to your app and ready to be consumed:  
+	The data sources are added to your app.
 
-	![List of datasources addded to the app](./media/add-data-connection/data-sources-list.png)
+	![List of data sources added to the app](./media/add-data-connection/data-sources-list.png)
 
-## Consume the data source in your app ##
-
-1. For tabular datasources such as SharePoint, SQL, Dynamics CRM or Excel, you can consume the data in the app by binding the imported table to the controls in the app. See how to [show list of items in your app](add-gallery.md) or how to [show, add or edit a record from a table](add-form.md) for more details.
-
-1. For non-tabular data sources such as Twitter or Microsoft Translator, you can consume the data source in your app by calling functions supported by that service.
-
-	 For example, once you import Microsoft Translator as a datasource in your app (by following steps called out in the previous section), it shows up in the data source pane:  
-
-	 ![Twitter datasource](./media/add-data-connection/translator.png)
-
-	 You can add a Text box to your app and bind the "Text" property of the Text box to `MicrosoftTranslator.Translate("Hello","fr")`. This function translates the text "Hello" to French, and displays the results in the text box:  
-
-	![Function bar for Translator](./media/add-data-connection/translator-func.png)
-
-	![Text box for Translator](./media/add-data-connection/translation-textbox.png)
-
-## Helpful links
-For some examples of adding connections, take a look at these:  
-
-[Create an app using Excel data](get-started-create-from-data.md)  
-[Show a list of items using a gallery](add-gallery.md)  
-[Show, add or edit a record from a table](add-form.md)
-
-
-<!--Reference links in article-->
-[1]: https://web.powerapps.com
+## Next steps ##
+- To show and update data in a source such as Excel, SharePoint, Azure SQL, or Dynamics CRM, [add a form](add-form.md).
+- For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connection-office365-outlook.md), [Twitter](connection-twitter.md), and [Microsoft Translator](connection-microsoft-translator.md).
