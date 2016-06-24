@@ -252,6 +252,8 @@ Other elements include:
 
 **[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to PowerApps private storage.
 
+**[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
+
 **[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.  
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
@@ -317,5 +319,3 @@ Other elements include:
 ## Y ##
 
 **[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
-
-
