@@ -27,8 +27,12 @@ PowerApps offers several cloud storage connections. Using these connections, you
 
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-- An Excel file with the data formatted as a table. [Create an app from scratch](../get-started-create-from-blank.md) lists the steps.
+- An Excel file with the data [formatted as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370):
 
+	1. Open the Excel file, and then select any cell in the data that you want to use.
+	1. On the **Insert** tab, select **Table**.
+	1. In the **Save as Table** dialog box, select the **My table has headers** checkbox, and then select **OK**.
+	1. Save your changes.
 
 ## Connect to the cloud storage connection
 
