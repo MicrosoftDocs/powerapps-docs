@@ -18,7 +18,7 @@
    ms.author="archanan"/>
 
 # Add a data connection #
-Add a connection to SharePoint Online, Salesforce, OneDrive, or [another data source](connections-list.md), and then display and manage data in that source from your app, as in these examples:
+In PowerApps Studio, add a connection to SharePoint Online, Salesforce, OneDrive, or [another data source](connections-list.md), and then display and manage data in that source from your app, as in these examples:
 
 - Connect to OneDrive, and manage data in an Excel workbook in your app.
 - Connect to Twilio, and send an SMS message from your app.
