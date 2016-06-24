@@ -20,8 +20,6 @@
 
 # Add a new data connection #
 
-[AZURE.VIDEO nb:cid:UUID:5bd6ea27-f8c0-41e0-a65b-34ca63a57d3e]
-
 You can add a connection to a data source, including SharePoint Online, Salesforce, Dropbox, Twitter, and more. You "connect" to the data source, and then display the data within your app. For example, you can connect to OneDrive to display Excel data in your app, you can connect to Twilio to send an SMS message from your app, you can connect to SQL Azure and update a table from your app, and so on.
 
 This topic shows you how to create a data connection within PowerApps. [Connections list](connections-list.md) lists all the available connections you can add.
