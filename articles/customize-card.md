@@ -1,6 +1,7 @@
 <properties
 	pageTitle="Customize a card | Microsoft PowerApps"
-	description=""
+	description="Perform basic and advanced customization on a card"
+	services=""
 	suite="powerapps"
 	documentationCenter=""
 	authors="AFTOwen"

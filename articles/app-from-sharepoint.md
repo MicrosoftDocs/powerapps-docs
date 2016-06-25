@@ -19,7 +19,6 @@
    ms.author="jamesol"/>
 
 # Create an app to manage data from SharePoint #
-
 Create an app for adding, updating, and deleting data in a SharePoint list. Specify the list, create the app automatically, and then specify which data you want to show. Test the app by displaying, sorting, filtering, and updating data.
 
 ## Prerequisites
