@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="jamesol-msft"
+    authors="AFTOwen"
     manager="erikre"
     editor=""
     tags=""/>
@@ -14,8 +14,8 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="05/18/2016"
-    ms.author="jamesol"/>
+    ms.date="06/24/2016"
+    ms.author="anneta"/>
 
 # Share an app #
 
