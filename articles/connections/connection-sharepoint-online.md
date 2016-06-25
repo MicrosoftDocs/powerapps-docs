@@ -66,48 +66,16 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 
 	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
-**Prerequisites**
+## Connect to SharePoint ##
+**When PowerApps creates an app for you**
 
-- Learn how to [add and configure controls](add-configure-controls.md).
-- Identify or create a custom list in SharePoint that contains only
+For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
-## Connect by creating an app ##
-1. Open PowerApps, and then click or tap **New** in the **File** menu (along the left edge).
+**When you update an app or build one from scratch**
 
-	![New option on the File menu](./media/connection-sharepoint-online/file-new.png)
+**When you open powerapps.com**
 
-1. In the **SharePoint** tile, click or tap **Phone layout**.
-
-	![Phone layout for SharePoint](./media/connection-sharepoint-online/phone-layout.png)
-
-1. To connect to a SharePoint Online site:
-
-	1. Click or tap **Cloud**.
-
-	1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
-
-		**Note**: Don't include a specific list in the URL.
-
-	1. Under **Choose a list**, click or tap the name of the list that you want to use.
-
-		In the search box, you can type or paste at least one letter to show only those lists whose names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
-
-		![Filter or sort lists](./media/connection-sharepoint-online/filter-sort-lists.png)
-
-1. To connect to an on-premises SharePoint site:
-
-	1. Click or tap **On Prem**.
-
-	1. Under **Authentication type**, leave the default value of **Windows**.
-
-	1. Under **Username** and **Password**, specify your credentials.
-
-	1. Under **Select Gateway**, select an option if you already have a gateway installed. Otherwise, [install a gateway](filename.md).
-
-1. Click or tap **Connect** to automatically create your app.
-
-## View the available functions
-
+## View the available functions ##
 This connection includes the following functions:
 
 | Function Name |  Description |

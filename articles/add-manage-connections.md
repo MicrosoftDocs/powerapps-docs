@@ -29,11 +29,11 @@ In [powerapps.com](https://web.powerapps.com), add a connection from PowerApps t
 - Send email in Office 365.
 - Send a tweet.
 
-In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you can also create connections:
+In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you can also create a connection when you perform these tasks:
 
-- from PowerApps Studio, as [add a connection](add-data-connection.md) describes
-- as you create an [app from data](get-started-create-from-data.md) or [from blank](get-started-create-from-blank.md)
-- when you open an app that another user created and [shared with you](share-app.md)
+- Create an [app from data](get-started-create-from-data.md).
+- Update an existing app, or create one from blank as [add a connection](add-data-connection.md) describes.
+- Open an app that another user created and [shared with you](share-app.md).
 
 **Note**: If you click or tap **Connections** on the **File** menu of PowerApps Studio, [powerapps.com](https://web.powerapps.com) opens so that you can create and manage connections there.
 

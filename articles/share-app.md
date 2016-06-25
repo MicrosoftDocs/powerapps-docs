@@ -36,13 +36,14 @@ Consider these points:
 
 - If you share an app with your entire organization, all users can run the app. Users can share and edit the app only if they're members of a group that has those permissions or you've explicitly granted those users more permissions.
 - If you share an app with a group, existing members of that group and anyone who joins it have the permissions that you specify. Anyone who leaves the group loses those permissions unless they're members of a different group that has access or you specify permissions for them explicitly.
-- Every member of a group has at least as many permissions for an app as the overall group. However, you can specify greater permissions for one or more members of that group to allow them greater access. If you specify fewer permissions to one or more members of a group, they'll still have all the permissions as you've granted to the overall group.
-- If the app uses data to which not all users have access (such as an Excel workbook), [share the data](share-app-data.md) by granting permissions in the cloud-storage account where you store the workbook.
-- If the app includes a flow, any users who run the app will need to confirm or update any connections on which the flow relies. In addition, other users can’t customize the flow’s parameters. For example, a flow can send email to your address when an action occurs, but other users can’t change that address to their own.
+- Every member of a group has at least as many permissions for an app as the overall group. However, you can specify greater permissions for one or more members of that group to allow them greater access. If you specify fewer permissions to one or more members of a group, they'll still have all the permissions that you've granted to the overall group.
+- If a shared app uses data to which not all users have access (such as an Excel workbook), [share the data](share-app-data.md) by granting permissions in the cloud-storage account where you store the workbook.
+- If a shared app includes a flow, any users who run the app will be prompted to confirm or update any connections on which the flow relies. In addition, other users can’t customize the flow’s parameters. For example, a flow can send email to your address when an action occurs, but other users can’t change that address to their own.
 
 **Prerequisites**
 
 [Sign up](signup-for-powerapps.md) for PowerApps, and then do either of the following:
+
 - [Sign in to powerapps.com](https://web.powerapps.com).
 - [Install PowerApps](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
 
@@ -51,7 +52,7 @@ Consider these points:
 
 	![Share option in powerapps.com](./media/share-app/portal-share.png)
 
-1. Specify the users, groups, or both with whom you want to share the app, or select the link to share the app with your organization.
+1. Specify the users, groups, or both with whom you want to share the app, or click or tap the link to share the app with your organization.
 
 	![Specify users in powerapps.com](./media/share-app/portal-users.png)
 
