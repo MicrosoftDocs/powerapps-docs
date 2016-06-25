@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Overview of the SharePoint Online connection | Microsoft PowerApps"
-	description="See the available SharePoint Online functions, responses, and examples"
+	pageTitle="Overview of the SharePoint connection | Microsoft PowerApps"
+	description="See the available SharePoint functions, responses, and examples"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
@@ -18,41 +18,55 @@ ms.workload="na"
 ms.date="06/18/2016"
 ms.author="anneta"/>
 
-# Connect to SharePoint Online in PowerApps
+# Connect to SharePoint in PowerApps
 
-![SharePoint Online](./media/connection-sharepoint-online/sharepointicon.png)
+![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to SharePoint Online, and then create an app in which users can show, create, and update items in a custom list. If you specify the name of the site and then select the list, PowerApps can automatically create an app with three screens: one each for browsing items, showing details, and creating or updating items.
+Connect to a SharePoint Online or on-premises site, and then create an app in which users can show, create, and update items in a custom list. If you specify the name of the site and then select the list, PowerApps can automatically create an app with three screens: one each for browsing items, showing details, and creating or updating items.
 
 **Prerequisites**
 
 - Learn how to [add and configure controls](add-configure-controls.md).
-- Identify or create a custom list in SharePoint Online that contains only [supported columns](connection-sharepoint-online.md#known-issues).
+- Identify or create a custom list in SharePoint that contains only [supported columns](connection-sharepoint-online.md#known-issues).
 
 For simplicity, the list in this topic contains only a couple of columns and a few entries, but your list can be much more complicated.
 
 ![List of columns](./media/connection-sharepoint-online/column-list.png)
 
-The Title column is set to show single lines of text, and the ShipDate column is set to show dates.
+The **Title** column is set to show single lines of text, and the **ShipDate** column is set to show dates.
 
 ## Create an app automatically ##
 1. Open PowerApps, and then click or tap **New** in the **File** menu (along the left edge).
 
 	![New option on the File menu](./media/connection-sharepoint-online/file-new.png)
 
-1. In the **SharePoint Online** tile, click or tap **Phone layout**.
+1. In the **SharePoint** tile, click or tap **Phone layout**.
 
-	![Phone layout for SharePoint Online](./media/connection-sharepoint-online/phone-layout.png)
+	![Phone layout for SharePoint](./media/connection-sharepoint-online/phone-layout.png)
 
-1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
+1. To connect to a SharePoint Online site:
 
-	**Note**: Don't include a specific list in the URL.
+	1. Click or tap **Cloud**.
 
-1. Under **Choose a list**, click or tap the name of the list that you want to use.
+	1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
 
-	In the search box, you can type or paste at least one letter to show only those lists whose names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
+		**Note**: Don't include a specific list in the URL.
 
-	![Filter or sort lists](./media/connection-sharepoint-online/filter-sort-lists.png)
+	1. Under **Choose a list**, click or tap the name of the list that you want to use.
+
+		In the search box, you can type or paste at least one letter to show only those lists whose names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
+
+		![Filter or sort lists](./media/connection-sharepoint-online/filter-sort-lists.png)
+
+1. To connect to an on-premises SharePoint site:
+
+	1. Click or tap **On Prem**.
+
+	1. Under **Authentication type**, leave the default value of **Windows**.
+
+	1. Under **Username** and **Password**, specify your credentials.
+
+	1. Under **Select Gateway**, select an option if you already have a gateway installed. Otherwise, [install a gateway](filename.md).
 
 1. Click or tap **Connect** to automatically create your app.
 

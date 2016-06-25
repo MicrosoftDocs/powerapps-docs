@@ -1,11 +1,11 @@
 <properties
-   pageTitle="Create an app to manage data from SharePoint Online | Microsoft PowerApps"
-   description="Create an app to manage data, such as account information, from SharePoint Online"
+   pageTitle="Create an app to manage data from SharePoint | Microsoft PowerApps"
+   description="Create an app to manage data, such as account information, from SharePoint"
    services=""
    suite="powerapps"
    documentationCenter="na"
    authors="jamesol-msft"
-   manager="darshand"
+   manager="erikre"
    editor=""
    tags=""/>
 
@@ -18,14 +18,14 @@
    ms.date="05/03/2016"
    ms.author="jamesol"/>
 
-# Create an app to manage data from SharePoint Online #
+# Create an app to manage data from SharePoint #
 
 Create an app for adding, updating, and deleting data in a SharePoint list. Specify the list, create the app automatically, and then specify which data you want to show. Test the app by displaying, sorting, filtering, and updating data.
 
 ## Prerequisites
 
 - [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
-- A list in SharePoint Online that contains only supported types of columns. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
+- A SharePoint list that contains only supported types of columns. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 The list in this tutorial contains these columns:  
 ![](./media/app-from-sharepoint/ListColumns.png)
@@ -35,11 +35,11 @@ The list in this tutorial contains these columns:
 
 	![](./media/app-from-sharepoint/Menu.png)
 
-2. Under **Create an app from your data**, select Phone layout on the **SharePoint Online** tile.  
+2. On the **SharePoint** tile, select **Phone layout**.  
 
 	![](./media/app-from-sharepoint/AFD.png)
 
-3. If you haven't connected to SharePoint Online before, select **Connect** when prompted, and then provide your credentials.  
+3. If you haven't connected to SharePoint before, select **Connect** when prompted, and then provide your credentials.  
 
 	![](./media/app-from-sharepoint/Connect.png)
 
@@ -52,7 +52,6 @@ The list in this tutorial contains these columns:
 	![Select a list](./media/app-from-sharepoint/SelectList.png)
 
 	PowerApps builds an app that has three screens:  
-	<!-- **Edit form** control add-form.md -->
 
 	- **BrowseScreen1** shows a list of all items and some information about the items, so that users can easily browse for the item they want.  
 	- **DetailScreen1** shows all information about a single item.  
@@ -63,7 +62,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 1. If you haven't used PowerApps before, take the intro tour by reading each description before selecting **Next** (and then selecting **Done**), or select **Skip**.
 
-2. On the **Home** tab of the ribbon, select **Layouts**, and then select an option that includes images.  
+2. On the **Home** tab of the ribbon, select **Layouts**, and then select an option that suits your data.  
 
 	![Layout option with icons](./media/app-from-sharepoint/change-layout.png)
 
@@ -73,22 +72,25 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	**Note**: If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
 
-3. In the list of thumbnails, select **DetailScreen1**.  
-![](./media/app-from-sharepoint/left-pane.png)
+1. Click or tap any element, such as the **Image** control, in the first item of the gallery.
 
-4. Select a field on the screen that you want to customize.  
-![](./media/app-from-sharepoint/SelectField.png)
+	![Select a control in the gallery](./media/app-from-sharepoint/select-image.png)
 
-5. In the right-hand pane, use the card selector to change the control that's used to display this field in the **DetailsScreen1**.  
-![](./media/app-from-sharepoint/CardSelector.png)  
+1. In the right-hand pane, specify the data that you want to show in each control.
 
-	For information about which types of column support which types of cards, see [Common issues and resolutions](common-issues-and-resolutions.md#create-an-app-automatically-from-sharepoint).
+	![Specify columns](./media/app-from-sharepoint/specify-columns.png)
 
-6. If you select the **View lookup** card for a field, then you have the option to choose which property of the field is displayed in the card. To do so, select the **Ellipsis** next to the field in the right-hand pane and select **Advanced options**.  
-![](./media/app-from-sharepoint/Elipsis.png)
+	The screen changes to reflect your selections.
 
-7. In the **Data** section, select the property of the field you want to be displayed using the **Value** dropdown.  
-![](./media/app-from-sharepoint/AdvancedOptions.png)
+	![EditScreen1](./media/app-from-sharepoint/gallery-final.png)
+
+1. Open **DetailsScreen1**, and then change the cards that appear by clicking or tapping the eye icon for each card in the right-hand pane.
+
+	![Show card](./media/app-from-sharepoint/show-card.png)
+
+1. Change the order in which the cards appear by clicking or tapping a card and then dragging its title bar up or down.
+
+	![Move card](./media/app-from-sharepoint/move-card.png)
 
 ## Run the app ##
 As you customize the app, you can test your changes by running the app in **Preview** mode.
