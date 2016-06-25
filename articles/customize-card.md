@@ -21,6 +21,8 @@ ms.author="anneta"/>
 # Customize a card in Microsoft PowerApps #
 Perform basic customization (without unlocking a card) by, for example, changing its default control or specifying a lookup field. Perform advanced customization by unlocking the card and, for example, adding a control that isn't available for that card by default.
 
+For an overview, see [Understand data cards](working-with-cards.md).
+
 **Prerequisites**
 
 - Learn how to [add and configure controls](add-configure-controls.md).
@@ -33,7 +35,7 @@ Perform basic customization (without unlocking a card) by, for example, changing
 1. In the right-hand pane, click or tap the card selector, and then click or tap the control that you want.  
 ![](./media/customize-card/card-selector.png)  
 
-	For information about which types of column support which types of cards, see [Common issues and resolutions](common-issues-and-resolutions.md#create-an-app-automatically-from-sharepoint).
+	For information about which types of columns support which types of cards, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 1. For lookup data, specify which property of the field appears:
 
