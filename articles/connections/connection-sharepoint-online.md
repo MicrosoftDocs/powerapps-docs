@@ -22,7 +22,7 @@ ms.author="anneta"/>
 
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to a SharePoint Online or on-premises site so that users can show, create, and update items in a custom list.
+Connect to a SharePoint site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
 
 ## What's new ##
 In early July 2016, we added support for on-premises data gateways so that you can connect to on-premises SharePoint sites as well as SharePoint Online sites.
