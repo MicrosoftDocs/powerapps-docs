@@ -80,7 +80,7 @@ Follow the steps to [add a data connection](add-data-connection.md). In the last
 
 	![Select SharePoint Online](./media/connection-sharepoint-online/select-cloud.png)
 
-1. Under **Connect to a SharePoint site**, click or tap an entry in the **Recent sites** list, or type or paste the URL for the site that you want to use.
+1. Under **Connect to a SharePoint site**, click or tap an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then click or tap **Go**.
 
 	![Select a SharePoint site](./media/connection-sharepoint-online/select-sp-site.png)
 
