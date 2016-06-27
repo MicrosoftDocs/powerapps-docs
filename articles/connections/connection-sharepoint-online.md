@@ -67,13 +67,59 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
 ## Connect to SharePoint ##
-**When PowerApps creates an app for you**
+### When PowerApps creates an app for you ###
 
 For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
-**When you update an app or build one from scratch**
+### When you update an app or build one from scratch ###
+Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint** in the list of connectors, and then follow either of these procedures:
 
-**When you open powerapps.com**
+**To connect to SharePoint Online**:
+
+1. Under **SharePoint type**, click or tap **Cloud**, and then click or tap **Connect**.
+
+	![Select SharePoint Online](./media/connection-sharepoint-online/select-cloud.png)
+
+1. Under **Connect to a SharePoint site**, click or tap an entry in the **Recent sites** list, or type or paste the URL for the site that you want to use.
+
+	![Select a SharePoint site](./media/connection-sharepoint-online/select-sp-site.png)
+
+1. Select the check box for one or more tables that you want to use, and then click or tap **Connect**:  
+
+	![Select the tables in SharePoint](./media/connection-sharepoint-online/select-sp-tables.png)
+
+	The data sources are added to your app.
+
+	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
+
+**To connect to an on-premises SharePoint site**
+
+1. Under **SharePoint type**, click or tap **On-prem**, and then click or tap **Connect**.
+
+	![Select an on-premises SharePoint site](./media/connection-sharepoint-online/select-onprem.png)
+
+1. Under **Authentication type**, leave the default value.
+
+1. In **Username** and **Password**, provide your credentials.
+
+1. If you don't have an on-premises data gateway installed, [install one](filename.md).
+
+1. Under **Select Gateway**, click or tap the gateway that you want to use.
+
+1. Click or tap **Connect** to finish creating the connection.
+
+### When you open powerapps.com ###
+1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
+
+	![Connections Manage](./media/connection-sharepoint-online/manage-connections.png)
+
+1. In the upper-right corner, click or tap **New connection**.
+
+1. In the list of connectors, click or tap **SharePoint**.
+
+1. In the dialog box that appears, click or tap **Add connection**.
+
+	![Add SharePoint connection](./media/connection-sharepoint-online/add-sharepoint.png)
 
 ## View the available functions ##
 This connection includes the following functions:
@@ -375,7 +421,7 @@ Extract folder: Used for extracting a folder on Document Library
 |FileLocator|string|No | |
 -->
 
-### GetOnNewItems
+### GetOnNewItems ###
 When a new item is created: When a new item is created in a SharePoint list
 
 #### Input properties
@@ -396,7 +442,7 @@ When a new item is created: When a new item is created in a SharePoint list
 |value|array|No | |
 
 
-### GetOnUpdatedItems
+### GetOnUpdatedItems ###
 When an existing item is modified: When an existing item is modified in a SharePoint list
 
 #### Input properties
@@ -417,7 +463,7 @@ When an existing item is modified: When an existing item is modified in a ShareP
 |value|array|No | |
 
 
-### GetItems
+### GetItems ###
 Get items: Retrieves items from a SharePoint list
 
 #### Input properties
@@ -438,7 +484,7 @@ Get items: Retrieves items from a SharePoint list
 |value|array|No | |
 
 
-### PostItem
+### PostItem ###
 Create item: Creates a new item in a SharePoint list
 
 #### Input properties
@@ -456,7 +502,7 @@ Create item: Creates a new item in a SharePoint list
 |ItemInternalId|string|No |
 
 
-### GetItem
+### GetItem ###
 Get item: Retrieves a single item from a SharePoint list
 
 #### Input properties
@@ -474,7 +520,7 @@ Get item: Retrieves a single item from a SharePoint list
 |ItemInternalId|string|No |
 
 
-### DeleteItem
+### DeleteItem ###
 Delete item: Deletes an item from a SharePoint list
 
 #### Input properties
@@ -489,7 +535,7 @@ Delete item: Deletes an item from a SharePoint list
 None.
 
 
-### PatchItem
+### PatchItem ###
 Update item: Updates an item in a SharePoint list
 
 #### Input properties
@@ -507,7 +553,7 @@ Update item: Updates an item in a SharePoint list
 |---|---|---|---|
 |ItemInternalId|string|No |
 
-### GetColumnValues
+### GetColumnValues ###
 Get column values: Retrieves possible values for a SharePoint column
 
 #### Input properties
@@ -523,7 +569,7 @@ Get column values: Retrieves possible values for a SharePoint column
 None.
 
 
-### GetTables
+### GetTables ###
 Get lists: Retrieves SharePoint lists from a site
 
 #### Input properties
@@ -539,6 +585,6 @@ Get lists: Retrieves SharePoint lists from a site
 |value|array|No | |
 
 
-### Helpful links
+## Helpful links ##
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
