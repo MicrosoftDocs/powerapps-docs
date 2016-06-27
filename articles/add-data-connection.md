@@ -1,5 +1,5 @@
-<properties	pageTitle="Add a data connection to an app | Microsoft PowerApps"
-	description="Add a data connection to an existing app or a blank app"
+<properties	pageTitle="Add a data connection in an app | Microsoft PowerApps"
+	description="Add a data connection in an existing app or a blank app"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -17,20 +17,20 @@
    ms.date="06/23/2016"
    ms.author="archanan"/>
 
-# Add a data connection #
-In PowerApps Studio, add a connection to SharePoint Online, Salesforce, OneDrive, or [another data source](connections-list.md), and then display and manage data in that source from your app, as in these examples:
+# Add a data connection in an app #
+In PowerApps, add a connection in an existing app or an app that you're building from scratch. Connect to SharePoint, Salesforce, OneDrive, or [another data source](connections-list.md), and then display and manage data in that source from your app, as in these examples:
 
 - Connect to OneDrive, and manage data in an Excel workbook in your app.
 - Connect to Twilio, and send an SMS message from your app.
 - Connect to SQL Azure, and update a table from your app.
 
-You can add a connection in PowerApps Studio, as this topic describes, or on [powerapps.com](https://web.powerapps.com), as [Manage connections](add-manage-connections.md) describes.
+You can add a connection in PowerApps, as this topic describes, or on [powerapps.com](https://web.powerapps.com), as [Manage connections](add-manage-connections.md) describes.
 
 **Prerequisites**
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
-## Connect to data ##
+## Add a connection ##
 1. Click or tap **New** on the **File** menu (near the left edge).
 
 1. Under **Create an app**, click or tap **Phone layout** on the **Blank app** tile.
@@ -41,14 +41,16 @@ You can add a connection in PowerApps Studio, as this topic describes, or on [po
 
 	![Add data source](./media/add-data-connection/add-data-source.png)
 
-1. If you've already created a connection that you want to use, click or tap it to add it to your app, and then skip to the next procedure. Otherwise, skip to the next step.
+1. To use an existing connection, click or tap it to add it to the app.
 
-1. Click or tap **Add connection** to display a list of connectors, click or tap the data source that you want to add, and then click or tap **Connect**.  
+	You can use that connection without performing additional steps.
 
-Some connectors, such as **Microsoft Translator**, require no additional steps, and you show data from the connection immediately. Other connectors require steps such as providing credentials and specifying a particular set of data. For information about these types of connectors, see these topics:
+1. To create a connection, click or tap **Add connection** to display a list of connectors, click or tap the type of connection that you want to create, and then click or tap **Connect**.  
 
-- [SharePoint](connector-sharepoint-online.md)
-- [SQL Azure](connection-azure-sqldatabase.md)
+	Some connectors, such as **Microsoft Translator**, require no additional steps. Other connectors require you to provide credentials, specify a particular set of data, or perform other steps. For information about these types of connectors, see these topics:
+
+	- [SharePoint](connector-sharepoint-online.md)
+	- [SQL Azure](connection-azure-sqldatabase.md)
 
 ## Next steps ##
 - To show and update data in a source such as Excel, SharePoint, Azure SQL, or Dynamics CRM, [add a form](add-form.md).

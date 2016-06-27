@@ -22,7 +22,7 @@
 
 [AZURE.VIDEO nb:cid:UUID:5bd6ea27-f8c0-41e0-a65b-34ca63a57d3e]
 
-In [powerapps.com](https://web.powerapps.com), add a connection from PowerApps to one or more data sources, and then access that data from your app. Connect to SharePoint, SQL Azure, Office 365, OneDrive for Business, Salesforce, Excel, and other [data sources](connections-list.md), and then use those connections as in these examples:
+In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, and then access that data from your app. Connect to SharePoint, SQL Azure, Office 365, OneDrive for Business, Salesforce, Excel, and other [data sources](connections-list.md), and then use those connections as in these examples:
 
 - Update a list on a SharePoint site.
 - Get Excel data from your OneDrive for Business account.
@@ -32,10 +32,10 @@ In [powerapps.com](https://web.powerapps.com), add a connection from PowerApps t
 In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you can also create a connection when you perform these tasks:
 
 - Create an [app from data](get-started-create-from-data.md).
-- Update an existing app, or create one from blank as [add a connection](add-data-connection.md) describes.
+- Update an existing app, or create one from scratch as [add a connection](add-data-connection.md) describes.
 - Open an app that another user created and [shared with you](share-app.md).
 
-**Note**: If you click or tap **Connections** on the **File** menu of PowerApps Studio, [powerapps.com](https://web.powerapps.com) opens so that you can create and manage connections there.
+**Note**: If you open PowerApps, open the **File** menu, and then click or tap **Connections**, [powerapps.com](https://web.powerapps.com) opens so that you can create and manage connections there.
 
 **Prerequisites**
 
@@ -58,10 +58,10 @@ The new connector appears under **Connections**, and you can [add it to an app](
 ## Update or delete a connection ##
 In the list of connections, click or tap the connection that you want to update or delete, and then perform either of these steps:
 
-- Click or tap the edit icon, and then provide credentials for that connection.
+- To update the connection, click or tap the edit icon, and then provide credentials for that connection.
 
 	![Connections Manage](./media/add-manage-connections/edit-icon.png)
 
-- Click or tap the delete icon.
+- To delete the connection, click or tap the delete icon.
 
 	![Delete icon](./media/add-manage-connections/delete-icon.png)
