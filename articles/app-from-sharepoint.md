@@ -19,11 +19,13 @@
    ms.author="jamesol"/>
 
 # Create an app to manage data from SharePoint #
-Create an app for adding, updating, and deleting data in a SharePoint list. Specify the list, create the app automatically, and then specify which data you want to show on each screen. Test the app by updating data for an item in the list.
+Create an app for adding, updating, and deleting data in a SharePoint list. Specify the list, create the app automatically, customize the app, and then test it by updating an item in the list.
 
 **Prerequisites**
+
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- A SharePoint list that contains only supported types of columns, as [Known issues](connection-sharepoint-online.md#known-issues) specifies.
+
+As of this writing, PowerApps supports lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 The list in this tutorial contains these columns:  
 ![](./media/app-from-sharepoint/ListColumns.png)
@@ -39,7 +41,7 @@ The list in this tutorial contains these columns:
 
 1. To connect to a SharePoint Online site:
 
-	1. Click or tap **Cloud**.
+	1. Under **SharePoint type**, click or tap **Cloud**.
 
 	1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
 
@@ -47,13 +49,13 @@ The list in this tutorial contains these columns:
 
 	1. Under **Choose a list**, click or tap the name of the list that you want to use.
 
-		In the search box, you can type or paste at least one letter to show only those lists whose names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
+		In the search box, you can type or paste at least one letter to show only those lists of which their names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
 
 		![Filter or sort lists](./media/app-from-sharepoint/filter-sort-lists.png)
 
 1. To connect to an on-premises SharePoint site:
 
-	1. Click or tap **On Prem**.
+	1. Under **SharePoint type**, click or tap **On Prem**.
 
 	1. Under **Authentication type**, leave the default value of **Windows**.
 
