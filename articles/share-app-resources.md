@@ -25,6 +25,8 @@ When you share an app that you created (or that someone shared with you) from Po
 - On-Premise data Gateway
 - Custom APIs
 - Namespaces
+- Excel workbook or other services
+- Microsoft Flow
 
 ## Connections ##
 When you share an app, any sharable connections (such as SQL Server) used by the app will be shared **automatically** with the users of the app.
