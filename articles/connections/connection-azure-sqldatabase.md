@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Overview of the SQL Server connection | Microsoft PowerApps"
-	description="Step-by-step instructions for how to connect to a SQL Server database, on-premises or in Azure"
+	description="Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
