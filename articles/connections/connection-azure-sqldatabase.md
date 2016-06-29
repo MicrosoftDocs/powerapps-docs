@@ -24,11 +24,33 @@ ms.author="anneta"/>
 
 Connect from PowerApps to either Azure SQL or an on-premises SQL Server database so that you can display information from it in your app.
 
-&nbsp;
+**Prerequisites**
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+- Either of the following:
 
-[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-- An Azure SQL database with its user name and password. You can use these steps at [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database. When you create the SQL database, we suggest you add the **Sample data**.
-- A table with a primary key stored in the SQL database.
+	- A connection string for an Azure SQL database in which a table contains a primary key. The connection string must contain the username and password that was specified when the database was created. If you want to connect to an existing database, ask its administrator to provide the connection string.
+
+	If that person gives you only the username and password for the database, get the connection string by following these steps:
+
+		1. Open the [Azure portal](https://portal.azure.com/), click or tap **SQL databases** in the left navigation bar, and then click or tap the database that you want to use.
+
+		1. In the **Essentials** pane, click or tap **Show database connection strings**, copy the string under **ADO.NET(SQL authentication)**, and then paste the string into a text editor.
+
+		1. In the connection string, replace **{your_username}** and **{your_password}** with the username and password from the database administrator.
+
+	If you don't have the username and password for an existing database, create your own:
+
+		1. In the [Azure portal](https://portal.azure.com/), click or tap **New** in the upper-left corner, type or paste **SQL server** in the search box, and then press Enter.
+
+		1. In the list of search results, click or tap **SQL server (logical server)**, and then click or tap **Create**.
+
+		1. Provide the requested information, and then click or tap **Create**.
+
+		1. In the upper-left corner,
+
+	- The server name, the database name, the username, and the password for an on-premises SQL Server database in which a table contains a primary key.
+
+
 
 ## Get the connection string
 
