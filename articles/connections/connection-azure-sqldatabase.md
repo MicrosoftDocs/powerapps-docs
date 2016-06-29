@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Overview of the Azure SQL Database connection | Microsoft PowerApps"
-	description="See how to connect to Azure SQL Database, step through some examples, and see all the functions"
+	pageTitle="Overview of the SQL Server connection | Microsoft PowerApps"
+	description="Step-by-step instructions for how to connect to a SQL Server database, on-premises or in Azure"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
@@ -18,13 +18,13 @@ ms.workload="na"
 ms.date="06/07/2016"
 ms.author="anneta"/>
 
-#  Azure SQL Database
+# SQL Server #
 
 ![Azure SQL Database](./media/connection-azure-sqldatabase/sqlicon.png)
 
 Azure SQL Database provides an API to work with SQL tables.
 
-You can connect to an Azure SQL database and display this information in your app. For example, you can use the gallery controls to display all the rows in a SQL table, or display a single row from a single table.
+You can connect to SQL Server database and display this information in your app. For example, you can use the gallery controls to display all the rows in a SQL table, or display a single row from a single table.
 
 This topic shows you how to add Azure SQL Database as a connection, add a SQL database as a data source to your app, and use table data in a gallery control.
 
@@ -75,29 +75,7 @@ Keep this connection string nearby. You need it to create the connection in Powe
 4. Open your app, and add SQL Azure as a [data source](../add-data-connection.md). Select **default**, and then you should see your tables. The following example uses the Sample data:  
 
 	![Azure SQL Database](./media/connection-azure-sqldatabase/tables.png)
-5. Select some tables (e.g., Product, Customer), and then select **Connect**. The tables are now listed as a data source.
-
-## Using the tables in your app
-
-A SQL database connection is a "tabular" data source. As a result, use galleries to display the data from your tables. These steps use the Sample data in the SQL database, and uses the Product table.
-
-1. On the **Insert** tab, select **Gallery**, and then select a **Text gallery** control.
-2. Set the **[Items](../controls/properties-core.md)** property of the gallery to one of your tables. If you're using the Sample data, then set it to the Product table:  
-
-	![Items property](./media/connection-azure-sqldatabase/itemsproperty.png)
-
-3. In the gallery, select any **Text box** control, and set its **Text** property to `ThisItem.something`. For example, set the top text box to `ThisItem.Name`, the middle text box to `ThisItem.ProductNumber`, and the bottom text box to `ThisItem.ListPrice`:  
-
-	![Items property](./media/connection-azure-sqldatabase/galleryparts.png)
-
-	In the right-hand pane, the **Text** property of each text box appears:  
-
-	![Text box property](./media/connection-azure-sqldatabase/optionsproperties.png)
-
-The gallery is updated with the information in the Product table.
-
-[Understand tables and records](../working-with-tables.md) provides more details and some examples.  
-
+5. Select the check box for one or more tables (for example, **Product**, **Customer**, or both), and then select **Connect**. The tables are now listed as a data source.
 
 <!--NotAvailableYet
 
@@ -228,9 +206,8 @@ None.
 
 -->
 
-## Helpful links
-
-See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.  
-[Understand tables and records](../working-with-tables.md) with tabular data sources.  
-Some additional gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).  
+## Helpful links ##
+- Learn how to [show data from a data source](../add-gallery.md).
+- See all the [available connections](../connections-list.md).  
+- Learn how to [create a connection](../add-manage-connections.md) from PowerApps to a data source.  
+- [Understand tables and records](../working-with-tables.md) with tabular data sources.
