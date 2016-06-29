@@ -28,9 +28,9 @@ For information about known limitations in this release, see [Common issues and 
 
 	You can run, share, and edit apps in the most recent version of the Mozilla Firefox browser.
 
-1. **Sharing apps from an Android device**.
+1. **Sharing apps with users of Android devices**.
 
-	If you [share an app](share-app.md) from an Android device, users with whom you shared the app will receive mail that notifies them of that event.
+	If you [share an app](share-app.md) with one or more users who have installed PowerApps Mobile on Android devices, those users will receive push notifications on those devices.
 
 1. **SharePoint Update control**.
 
