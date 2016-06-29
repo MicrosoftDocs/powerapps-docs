@@ -24,7 +24,6 @@ When you share an app that you created (or that someone shared with you) from Po
 - Connections
 - On-Premise data Gateway
 - Custom APIs
-- Namespaces
 - Excel workbook or other services
 - Microsoft Flow
 
@@ -44,10 +43,6 @@ To view connections created on any Gateway you are an Admim on, go to [powerapps
 If your app uses a custom API, when you share your app, the custom API will also be shared with users of the app. The users of the app will still have to create their own connections to the custom API.
 
 You can view or update permissions on the custom API by going to [powerapps.com](https://web.powerapps.com) and taping or clicking on **Connections** under the **Manage** section. Then, go to **New connection** and switch to **Custom** tab. Select your custom API to view details.
-
-## Namespaces ##
-
-TBD
 
 ## Excel workbook ##
 
