@@ -17,9 +17,26 @@
     ms.date="06/15/2016"
     ms.author="gregli"/>
 
-# What's new for PowerApps release 2.0.450 #
+## What's new for PowerApps release 2.0.460 ##
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+1. **On-premises data**.
+
+	Show and manage data in an on-premises SharePoint site, an on-premises SQL Server database, or both by using an on-premises data gateway. For more information, see [gateway overview](filename.md).
+
+1. **PowerApps on Firefox**.
+
+	You can run, share, and edit apps in the most recent version of the Mozilla Firefox browser.
+
+1. **Sharing apps from an Android device**.
+
+	If you [share an app](share-app.md) from an Android device, users with whom you shared the app will receive mail that notifies them of that event.
+
+1. **SharePoint Update control**.
+
+	This control has been deprecated in favor of newer functionality such as the **[SubmitForm](function-form.md)** function. Apps that contain the control will still open, but the control itself will no longer appear.
+
+## Release 2.0.450 ##
 1. **Add data while customizing a form**.
 
 	With a form selected, tap the data source for the form (or **No data source selected**) in the right-hand pane, and then tap **Add a data source**.

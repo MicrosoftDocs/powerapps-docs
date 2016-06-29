@@ -121,11 +121,11 @@ As you customize the app, you can test your changes by running the app in **Prev
 
 3. On **DetailsScreen1**, click or tap the edit icon (in the upper-right corner) to edit the record.  
 
-	![Edit a record](./media/app-from-sharepoint/select-edit.png)
+	![Edit a record](./media/app-from-sharepoint/select-edit2.png)
 
 4. On **EditScreen1**, change the information in one or more fields, and then click or tap the check mark in the upper-right corner to save your changes back to the SharePoint list.  
 
-	![Save changes on EditScreen1](./media/app-from-sharepoint/edit-item.png)
+	![Save changes on EditScreen1](./media/app-from-sharepoint/edit-item2.png)
 
 ## Next steps ##
 - Press Ctrl-S to save your app so that you can run it from other devices.
