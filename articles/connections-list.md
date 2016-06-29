@@ -29,8 +29,7 @@ Ready to take it to the next level? Create [custom APIs](register-custom-api.md)
 ## Available connections ##
 |&nbsp;|&nbsp;|
 |---|---|
-| ![API Icon][servicebusicon] | [**Azure Service Bus**][servicebusdoc]<br/>Send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions |
-| ![API Icon][sqlicon] | [**SQL Server**][sqldoc]<br/>Create and update data|
+| ![API Icon](./media/connections-list/servicebusicon.png) | [**Azure Service Bus**](./connections/connection-azure-servicebus.md)<br/>Send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions |
 | ![API Icon][blobicon] | [**Azure Storage Blob**][azureblobdoc]<br/>Manage files in your blob container |
 | ![API Icon][boxicon] | [**Box**][boxDoc]<br/>Upload, get, delete, and list files, among other tasks|
 | ![API Icon][dropboxicon] | [**Dropbox**][dropboxdoc]<br/>Get, delete, and list files, among other tasks |
@@ -53,6 +52,7 @@ Ready to take it to the next level? Create [custom APIs](register-custom-api.md)
 | ![API Icon][sharepointicon] | [**SharePoint Online**][sharepointdoc]<br/>Manage list items |
 | ![API Icon][slackicon] | [**Slack**][slackdoc]<br/>Post messages to Slack channels |
 | ![API Icon][smtpicon] | [**SMTP**][smtpdoc]<br/>Send email with attachments|
+| ![API Icon][sqlicon] | [**SQL Server**][sqldoc]<br/>Create and update data|
 | ![API Icon][twilioicon] | [**Twilio**][twiliodoc]<br/>Send and get messages, get available numbers, and more |
 | ![API Icon][twittericon] | [**Twitter**][twitterdoc]<br/>Get timelines, post tweets, and more |
 
