@@ -17,7 +17,7 @@
     ms.date="06/15/2016"
     ms.author="gregli"/>
 
-## What's new for PowerApps release 2.0.460 ##
+# What's new for PowerApps release 2.0.460 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 1. **On-premises data**.
