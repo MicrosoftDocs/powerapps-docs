@@ -34,7 +34,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **SharePoint Update control**.
 
-	This control has been deprecated in favor of newer functionality such as the **[SubmitForm](function-form.md)** function. Apps that contain the control will still open, but the control itself will no longer appear.
+	This control has been deprecated in favor of the **[Edit Form](add-form.md)** control. An app that contains the **SharePoint Update** control will still open, but the control itself will no longer appear.
 
 ## Release 2.0.450 ##
 1. **Add data while customizing a form**.
