@@ -22,11 +22,7 @@ ms.author="anneta"/>
 
 ![Azure SQL Database](./media/connection-azure-sqldatabase/sqlicon.png)
 
-Azure SQL Database provides an API to work with SQL tables.
-
-You can connect to SQL Server database and display this information in your app. For example, you can use the gallery controls to display all the rows in a SQL table, or display a single row from a single table.
-
-This topic shows you how to add Azure SQL Database as a connection, add a SQL database as a data source to your app, and use table data in a gallery control.
+Connect from PowerApps to either Azure SQL or an on-premises SQL Server database so that you can display information from it in your app.
 
 &nbsp;
 
