@@ -19,13 +19,14 @@
 
 # Share app resources #
 Before you [share an app](./share-app.md), consider the types of resources on which it relies, such as one or more of the following:
+
 - a connection to a data source
 - an on-premise data gateway
 - a custom API
 - an Excel workbook or other service
 - a flow
 
-Some of these resources are shared automatically when you share the app. Other resources require you or the people with whom you share the app to take extra steps to ensure that the app works as you expect.
+Some of these resources are shared automatically when you share the app. Other resources require you or the people with whom you share the app to take extra steps so that the app works as you expect.
 
 ## Connections ##
 Some types of connections, such as SQL Server, are shared automatically, but others require users to create their own connections to the data source or sources in the app.
