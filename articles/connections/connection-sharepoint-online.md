@@ -585,6 +585,7 @@ Get lists: Retrieves SharePoint lists from a site
 |value|array|No | |
 
 
-## Helpful links ##
-See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.
+## Next steps ##
+- Learn how to [show data from a data source](../add-gallery.md).
+- Learn how to [view details and create or update records](../add-form.md).
+- See other types of [data sources](../connections-list.md) to which you can connect.  
