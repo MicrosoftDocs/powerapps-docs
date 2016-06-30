@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Manage your On-Premises Data Gateway | Microsoft PowerApps"
-    description="Manage your On-Premises Data Gateway and connections on the Gateway"
+    pageTitle="Manage an on-premises data gateway | Microsoft PowerApps"
+    description="Manage an on-premises data gateway and its connections"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -17,55 +17,51 @@
     ms.date="06/28/2016"
     ms.author="archanan"/>
 
-# Manage your On-Premises data Gateway #
-
-The on-premises data gateway acts as a bridge, providing quick and secure data transfer between on-premises data (data that is not in the cloud) and PowerApps.
-
-If you installed a Gateway or if you were added as an Admin on another Gateway, you will be able to view and manage the Gateway.
+# Manage an on-premises data gateway #
+Install an on-premises data gateway to transfer data quickly and securely between PowerApps and a data source that's not in the cloud. View all gateways for which you have administrative permissions, and manage permissions and connections for those gateways.
 
 **Prerequisites**
 
-- [Sign up](signup-for-powerapps.md) for PowerApps and then sign in.
-- You are an Admin on a Gateway (you can either install a Gateway or you can be added as an Admin on another Gateway)
+- the user name and password that you used to [sign up](signup-for-powerapps.md) for PowerApps
+- administrative permissions on a gateway.
 
-## Install a Gateway ##
-1. In the left navigation bar, click or tap Manage, and then click or tap Gateways.
+	You have these permissions by default for each gateway that you install, and an administrator of another gateway can grant you these permissions for that gateway.
+
+## Install a gateway ##
+1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, and then click or tap **Gateways**.
 
    ![Gateways under Manage section](./media/gateway-management/manage-gateway.png)
 
-1. If you have no Gateway installed or you are not an Admin on any Gateway, you will be able to install a new Gateway by clicking on the "Install a gateway now" link
+1. If you don't have administrative permissions for a gateway, click or tap **Install a gateway now** (or **New Gateway** in the upper-right corner), and then follow the prompts in the wizard that appears.
 
    ![Gateways Install](./media/gateway-management/no-gateway-installed.png)
 
-1. For the detailed Gateway installation instructions, click [here]().
+	For details about how to install a gateway, see [Gateway overview]().
 
-**Note**: You can also install a Gateway by clicking or tapping on the **New Gateway** button on the top right of the page.
+## View and manage permissions for a gateway ##
+1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, click or tap **Gateways**, and then click or tap a gateway.
 
-   ![Gateways Install 2](./media/gateway-management/install-gateway.png)
-
-## View and Manage Permissions on the Gateway ##
-1. In the left navigation bar, click or tap **Manage**, and then click or tap **Gateways**. Select a Gateway you want to view or manage.
-
-1. Switch to the **Users** tab to add new users to the Gateway. You can specify one of these permission levels for the users:
+1. To add a user to a gateway, click or tap **Users**, and then specify a permission level:
 
   Placeholder for Image: Gateways tab and permissions
 
+	- **Admin**: Administrator who has full control, including adding users and setting permissions for the gateway.
+	- **Can use**: User who can create a connection on the gateway.
+	- **Can use + share**: User who can create a connection on the gateway and automatically share it when sharing an app.
 
-- Admin: Adminstrator of the Gateway. Has full control.
-- Can use: User of the Gateway. Can create new connections on the Gateway.
-- Can use + share: User of the Gateway. Can create new connections on the Gateway and has permission to implicitly share the Gateway with other users as a part of app sharing.
+## View and manage connections on a gateway ##
+1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, click or tap **Gateways**, and then click or tap a gateway.
 
-## View and Manage Connections on the Gateway ##
-1. In the left navigation bar, click or tap **Manage**, and then click or tap **Gateways**. Select a Gateway you want to view or manage.
-
-1. Switch to **Connections** tab to view connections created on the Gateway.
+1. Click or tap **Connections**, and then click or tap a connection to view or modify its details.
 
   Placeholder for Image: Connections tab
 
-1. You can select a connection to view details, edit or modify it. You can also choose to share the connection by switching to the **Share** tab and add/remove users to it. See [Manage Connections](./add-manage-connections.md) for more details about connection management.
+1. To share a connection, click or tap **Share**, and then add or remove users.
 
-**Note**: Not all connections are sharable. You can only share "sharable" connections such as SQL.
+	**Note**: You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
 
-# Next Steps #
-- Create an app using [SQL Server]() or [SharePoint]() on-premises connections
-- [Share an app]() that uses on-premises connections
+For more information about how to manage a connection, see [Manage onnections](./add-manage-connections.md).
+
+## Next steps ##
+- Create an app that connects to an on-premises data source, such as [SQL Server]() or [SharePoint]().
+- [Share an app]() that connects to an on-premises data source.
