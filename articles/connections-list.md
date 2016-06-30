@@ -27,33 +27,20 @@ Just getting started with adding connections in PowerApps? Learn how to add [con
 Ready to take it to the next level? Create [custom APIs](register-custom-api.md) and connect to them within your apps.
 
 ## Available connections ##
-|&nbsp;|&nbsp;|
-|---|---|
-| ![API Icon](./media/connections-list/servicebusicon.png) | [**Azure Service Bus**](./connections/connection-azure-servicebus.md)<br/>Send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions |
-| ![API Icon][blobicon] | [**Azure Storage Blob**][azureblobdoc]<br/>Manage files in your blob container |
-| ![API Icon][boxicon] | [**Box**][boxDoc]<br/>Upload, get, delete, and list files, among other tasks|
-| ![API Icon][dropboxicon] | [**Dropbox**][dropboxdoc]<br/>Get, delete, and list files, among other tasks |
-| ![API Icon][crmonlineicon] | [**Dynamics CRM Online**][crmonlinedoc]<br/>Do more with your data |
-| ![API Icon][excelicon] | [**Excel**][exceldoc]<br/>Display data in a table, update the file, and more |
-| ![API Icon][facebookicon] | [**Facebook**][facebookdoc]<br/>Post to a timeline, get a page feed, and more|
-| ![API Icon][ftpicon] | [**FTP**][ftpdoc]<br/>Upload and get files among other tasks on an FTP/FTPS server |
-| ![API Icon][githubicon] | [**GitHub**][githubdoc]<br/>Manage your issues |
-| ![API Icon][googledriveicon] | [**Google Drive**][googledrivedoc]<br/>Interact with your data |
-| ![API Icon][mailchimpicon] | [**MailChimp**][mailchimpdoc] <br/>Create campaigns, manage your lists, and more |
-| ![API Icon][microsofttranslatoricon] | [**Microsoft Translator**][microsofttranslatordoc]<br/>Translate text into different languages |
-| ![API Icon][office365icon] | [**Office 365 Outlook**][office365outlookdoc]<br/>Send and receive emails |
-| ![API Icon][office365icon] | [**Office 365 Users**][office365usersdoc]<br/>View profile information, get direct reports, and more |
-| ![API Icon][office365icon] | [**Office 365 Video**][office365videodoc]<br/>Check the status of a video, return channels, and more |
-| ![API Icon][onedriveicon] | [**OneDrive**][onedrivedoc]<br/>Upload and manage files |
-| ![API Icon][onedriveforbusinessicon] | [**OneDrive for Business**][onedriveforbusinessdoc]<br/>Upload and manage files |
-| ![API Icon][salesforceicon] | [**Salesforce**][salesforcedoc]<br/>Manage accounts, leads, opportunities, and more |
-| ![API Icon][sendgridicon] | [**SendGrid**][sendgriddoc]<br/>Send email and manage recipient lists |
-| ![API Icon][sftpicon] | [**SFTP**][sftpdoc]<br/>Upload, get, and delete files, among other tasks |
-| ![API Icon][sharepointicon] | [**SharePoint Online**][sharepointdoc]<br/>Manage list items |
-| ![API Icon][slackicon] | [**Slack**][slackdoc]<br/>Post messages to Slack channels |
-| ![API Icon][smtpicon] | [**SMTP**][smtpdoc]<br/>Send email with attachments|
-| ![API Icon][sqlicon] | [**SQL Server**][sqldoc]<br/>Create and update data|
-| ![API Icon][twilioicon] | [**Twilio**][twiliodoc]<br/>Send and get messages, get available numbers, and more |
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
+|---|---|---|---|
+| ![API Icon](./media/connections-list/servicebusicon.png) | [**Azure Service Bus**](./connections/connection-azure-servicebus.md)<br/>Send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions | ![API Icon][blobicon] | [**Azure Storage Blob**][azureblobdoc]<br/>Manage files in your blob container |
+| ![API Icon][boxicon] | [**Box**][boxDoc]<br/>Upload, get, delete, and list files, among other tasks| ![API Icon][dropboxicon] | [**Dropbox**][dropboxdoc]<br/>Get, delete, and list files, among other tasks |
+| ![API Icon][crmonlineicon] | [**Dynamics CRM Online**][crmonlinedoc]<br/>Do more with your data | ![API Icon][excelicon] | [**Excel**][exceldoc]<br/>Display data in a table, update the file, and more |
+| ![API Icon][facebookicon] | [**Facebook**][facebookdoc]<br/>Post to a timeline, get a page feed, and more| ![API Icon][ftpicon] | [**FTP**][ftpdoc]<br/>Upload and get files among other tasks on an FTP/FTPS server |
+| ![API Icon][githubicon] | [**GitHub**][githubdoc]<br/>Manage your issues | ![API Icon][googledriveicon] | [**Google Drive**][googledrivedoc]<br/>Interact with your data |
+| ![API Icon][mailchimpicon] | [**MailChimp**][mailchimpdoc] <br/>Create campaigns, manage your lists, and more | ![API Icon][microsofttranslatoricon] | [**Microsoft Translator**][microsofttranslatordoc]<br/>Translate text into different languages |
+| ![API Icon][office365icon] | [**Office 365 Outlook**][office365outlookdoc]<br/>Send and receive emails | ![API Icon][office365icon] | [**Office 365 Users**][office365usersdoc]<br/>View profile information, get direct reports, and more |
+| ![API Icon][onedriveicon] | [**OneDrive**][onedrivedoc]<br/>Upload and manage files | ![API Icon][onedriveforbusinessicon] | [**OneDrive for Business**][onedriveforbusinessdoc]<br/>Upload and manage files |
+| ![API Icon][salesforceicon] | [**Salesforce**][salesforcedoc]<br/>Manage accounts, leads, opportunities, and more | ![API Icon][sendgridicon] | [**SendGrid**][sendgriddoc]<br/>Send email and manage recipient lists |
+| ![API Icon][sftpicon] | [**SFTP**][sftpdoc]<br/>Upload, get, and delete files, among other tasks | ![API Icon][sharepointicon] | [**SharePoint**][sharepointdoc]<br/>Manage list items |
+| ![API Icon][slackicon] | [**Slack**][slackdoc]<br/>Post messages to Slack channels | ![API Icon][smtpicon] | [**SMTP**][smtpdoc]<br/>Send email with attachments|
+| ![API Icon][sqlicon] | [**SQL Server**][sqldoc]<br/>Create and update data| ![API Icon][twilioicon] | [**Twilio**][twiliodoc]<br/>Send and get messages, get available numbers, and more |
 | ![API Icon][twittericon] | [**Twitter**][twitterdoc]<br/>Get timelines, post tweets, and more |
 
 <!--API Documentation-->
