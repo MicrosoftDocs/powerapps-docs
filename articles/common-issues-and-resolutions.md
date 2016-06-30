@@ -38,11 +38,10 @@
 
 	For more information, see [SharePoint Online](connection-sharepoint-online.md#known-issues).
 
-## Other areas
-
+## Other areas ##
 1. **Windows 10 Insider builds**
 
-	You can't open PowerApps on devices that are running Windows Insider builds 14631 through 14375, inclusive. The issue has been resolved, and the fix was first released in build 14376.
+	You can't open PowerApps on devices that are running Windows Insider builds 14361 through 14375, inclusive. The issue has been resolved, and the fix was first released in build 14376.
 
 1. **Co-authoring isn't supported. One author at a time, please** (as of release 2.0.410).
 
