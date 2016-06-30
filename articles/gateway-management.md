@@ -39,12 +39,17 @@ If you installed a Gateway or if you were added as an Admin on another Gateway, 
 
 1. For the detailed Gateway installation instructions, click [here]().
 
+**Note**: You can also install a Gateway by clicking or tapping on the **New Gateway** button on the top right of the page.
+
+   ![Gateways Install 2](./media/gateway-management/install-gateway.png)
+
 ## View and Manage Permissions on the Gateway ##
 1. In the left navigation bar, click or tap **Manage**, and then click or tap **Gateways**. Select a Gateway you want to view or manage.
 
 1. Switch to the **Users** tab to add new users to the Gateway. You can specify one of these permission levels for the users:
 
-  ![Gateways tab and permissions](./media/gateway-management/)
+  Placeholder for Image: Gateways tab and permissions
+
 
 - Admin: Adminstrator of the Gateway. Has full control.
 - Can use: User of the Gateway. Can create new connections on the Gateway.
@@ -55,11 +60,12 @@ If you installed a Gateway or if you were added as an Admin on another Gateway, 
 
 1. Switch to **Connections** tab to view connections created on the Gateway.
 
-  ![Connections tab](./media/gateway-management/)
+  Placeholder for Image: Connections tab
 
-1. You can select a connection to view details, edit or modify it. You can also choose to share the connection by switching to the **Share** tab and add/remove users to it.
-Note: Not all connections are sharable. You can only share "sharable" connections such as SQL.
+1. You can select a connection to view details, edit or modify it. You can also choose to share the connection by switching to the **Share** tab and add/remove users to it. See [Manage Connections](./add-manage-connections.md) for more details about connection management.
+
+**Note**: Not all connections are sharable. You can only share "sharable" connections such as SQL.
 
 # Next Steps #
 - Create an app using [SQL Server]() or [SharePoint]() on-premises connections
-- [Share an app]() using on-premises connections
+- [Share an app]() that uses on-premises connections
