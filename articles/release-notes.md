@@ -26,7 +26,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **PowerApps on Firefox**.
 
-	You can run, share, and edit apps in the most recent version of the Mozilla Firefox browser.
+	You can run and share apps in the most recent version of the Mozilla Firefox browser.
 
 1. **Sharing apps with users of Android devices**.
 
