@@ -25,8 +25,9 @@ ms.author="anneta"/>
 Connect from PowerApps to either Azure SQL or an on-premises SQL Server database so that you can display information from it in your app.
 
 **Prerequisites**
+
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- The server name, the database name, the user name, and the password for the database that you want to use. If you don't have this information, ask the administrator of that database. The database must also contain at least one table with a primary key.
+- The server name, the database name, the user name, and the password for a database that contains at least one table with a primary key. If you don't have this information, ask the administrator of the database that you want to use.
 
 ## Connect to a database ##
 ### When PowerApps creates an app for you ###
@@ -38,28 +39,26 @@ Connect from PowerApps to either Azure SQL or an on-premises SQL Server database
 
 1. Click or tap **Add**, and then click or tap **Sql Server [Hybrid]**.
 
-1. Under **Data location**, perform either of the following steps:
+1. Under **Data location**, click or tap **Cloud** or **On-premises**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
-	- Click or tap **Cloud**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-	- Click or tap **On-premises**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+1. [On-premises only] Specify the authentication type and the gateway.
 
-		**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap **Refresh gateway list**.
+	**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap **Refresh gateway list**.
 
 1. Click or tap **Connect**.
 
-1. Click or tap an option under **Choose a dataset**, and then click or tap an option under **Choose a table**, and then click or tap **Connect**.
+1. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
 
 	PowerApps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
 
 ### When you update an app or build one from scratch ###
 1. Follow the steps to [add a data connection](add-data-connection.md), clicking or tapping **Sql Server [Hybrid]** in the last step.
 
-1. Under **Data location**, perform either of the following steps:
+1. Under **Data location**, click or tap **Cloud** or **On-premises**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
-	- Click or tap **Cloud**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-	- Click or tap **On-premises**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+1. [On-premises only] Specify the authentication type and the gateway.
 
-		**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap the icon to refresh the list.
+	**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap **Refresh gateway list**.
 
 1. Click or tap **Connect**.
 
@@ -75,18 +74,15 @@ Connect from PowerApps to either Azure SQL or an on-premises SQL Server database
 
 1. In the upper-right corner, click or tap **New connection**, and then click or tap **Sql Server [Hybrid]**.
 
-1. Next to **Data location**, perform either of the following steps:
+1. Next to **Data location**, click or tap **Cloud** or **On-premises**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
-	- Click or tap **Cloud**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-	- Click or tap **On-premises**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+1. [On-premises only] Specify the authentication type and the gateway.
 
-		**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap the icon to refresh the list.
+	**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap **Refresh gateway list**.
 
 1. Click or tap **Add connection** to create the connection.
 
-<!--NotAvailableYet
-
-## View the available functions
+## View the available functions ##
 
 This connection includes the following functions:
 
@@ -98,27 +94,6 @@ This connection includes the following functions:
 |[DeleteItem](connection-azure-sqldatabase.md#deleteitem) | Deletes a row from a SQL table |
 |[PatchItem](connection-azure-sqldatabase.md#patchitem) | Updates an existing row in a SQL table |
 |[GetTables](connection-azure-sqldatabase.md#gettables) | Retrieves tables from a SQL database |
-
-
-### ExecuteProcedure
-Execute stored procedure: Executes a stored procedure in SQL
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|procedure|string|yes|Procedure name|
-|parameters| |yes|Input parameters|
-
-#### Output properties
-Result of the stored procedure execution.
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|OutputParameters|object|No | Output parameter values |
-|ReturnCode|integer|No | Return code of a procedure |
-|ResultSets|object|No | Result sets|
-
 
 ### GetItems
 Get rows: Retrieves rows from a SQL table
@@ -180,7 +155,6 @@ Delete row: Deletes a row from a SQL table
 #### Output properties
 None.
 
-
 ### PatchItem
 Update row: Updates an existing row in a SQL table
 
@@ -196,7 +170,7 @@ Update row: Updates an existing row in a SQL table
 
 | Property Name | Data Type | Required | Description |
 |---|---|---|---|
-|ItemInternalId|string|No | |
+|ItemInternalId|string|No | &nbsp; |
 
 
 ### GetTables
@@ -210,6 +184,27 @@ None.
 | Property Name | Data Type | Required | Description |
 |---|---|---|---|
 |value|array|No | Can output the Name and DisplayName properties |
+
+<!--NotAvailableYet
+
+### ExecuteProcedure
+Execute stored procedure: Executes a stored procedure in SQL
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|procedure|string|yes|Procedure name|
+|parameters| |yes|Input parameters|
+
+#### Output properties
+Result of the stored procedure execution.
+
+| Property Name | Data Type | Required | Description |
+|---|---|---|---|
+|OutputParameters|object|No | Output parameter values |
+|ReturnCode|integer|No | Return code of a procedure |
+|ResultSets|object|No | Result sets|
 
 -->
 
