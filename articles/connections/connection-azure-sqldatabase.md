@@ -26,74 +26,63 @@ Connect from PowerApps to either Azure SQL or an on-premises SQL Server database
 
 **Prerequisites**
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- Either of the following:
+- The server name, the database name, the user name, and the password for the database that you want to use. If you don't have this information, ask the administrator of that database. The database must also contain at least one table with a primary key.
 
-	- A connection string for an Azure SQL database in which a table contains a primary key. The connection string must contain the username and password that was specified when the database was created. If you want to connect to an existing database, ask its administrator to provide the connection string.
+## Connect to a database ##
+### When PowerApps creates an app for you ###
+1. Open PowerApps, and then click or tap **New** on the **File** menu (along the left edge).
 
-	If that person gives you only the username and password for the database, get the connection string by following these steps:
+1. Under **Create an app from your data**, click or tap the right arrow at the end of the row of connectors.
 
-		1. Open the [Azure portal](https://portal.azure.com/), click or tap **SQL databases** in the left navigation bar, and then click or tap the database that you want to use.
+1. If you already have a connection to the database that you want to use, click or tap it, and then skip to the last step in this procedure.
 
-		1. In the **Essentials** pane, click or tap **Show database connection strings**, copy the string under **ADO.NET(SQL authentication)**, and then paste the string into a text editor.
+1. Click or tap **Add**, and then click or tap **Sql Server [Hybrid]**.
 
-		1. In the connection string, replace **{your_username}** and **{your_password}** with the username and password from the database administrator.
+1. Under **Data location**, perform either of the following steps:
 
-	If you don't have the username and password for an existing database, create your own:
+	- Click or tap **Cloud**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+	- Click or tap **On-premises**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
 
-		1. In the [Azure portal](https://portal.azure.com/), click or tap **New** in the upper-left corner, type or paste **SQL server** in the search box, and then press Enter.
+		**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap **Refresh gateway list**.
 
-		1. In the list of search results, click or tap **SQL server (logical server)**, and then click or tap **Create**.
+1. Click or tap **Connect**.
 
-		1. Provide the requested information, and then click or tap **Create**.
+1. Click or tap an option under **Choose a dataset**, and then click or tap an option under **Choose a table**, and then click or tap **Connect**.
 
-		1. In the upper-left corner,
+	PowerApps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
 
-	- The server name, the database name, the username, and the password for an on-premises SQL Server database in which a table contains a primary key.
+### When you update an app or build one from scratch ###
+1. Follow the steps to [add a data connection](add-data-connection.md), clicking or tapping **Sql Server [Hybrid]** in the last step.
 
+1. Under **Data location**, perform either of the following steps:
 
+	- Click or tap **Cloud**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+	- Click or tap **On-premises**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
 
-## Get the connection string
+		**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap the icon to refresh the list.
 
-1. In the [Azure portal](https://portal.azure.com/), select **SQL databases**:  
+1. Click or tap **Connect**.
 
-	![SQL Databases](./media/connection-azure-sqldatabase/sqldatabase.png)
-2. Select your SQL database from the list. If you don't have one, go to [Create a SQL database tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database.
+1. Click or tap an option under **Choose a dataset**, and then click or tap an option under **Choose a table**, and then click or tap **Connect**.
 
-3. When you select it, the properties open. Select **Show database connection strings**:  
+### From powerapps.com ###
 
-	![SQL database properties](./media/connection-azure-sqldatabase/properties.png)
-4. Copy the **ADO.NET (SQL authentication)** connection string:  
+1. Sign in to [powerapps.com](https://web.powerapps.com) with the same account that you used to sign up for PowerApps.
 
-	![ADO.NET connection string](./media/connection-azure-sqldatabase/adonetconnectionstring.png)
+1. In the left navigation bar, click or tap **Manage**, and click or tap **Connections**:  
 
-5. Paste the connection string in a text editor, and then look for the following properties:  
+	![Azure SQL Database](./media/connection-azure-sqldatabase/manage-connections.png)
 
-	- User ID={your_username}
-	- Password={your_password}
+1. In the upper-right corner, click or tap **New connection**, and then click or tap **Sql Server [Hybrid]**.
 
-	When the SQL database is created, a user name and password is entered. In your connection string, update the **User ID** and **Password** properties with these user name and password values.
+1. Next to **Data location**, perform either of the following steps:
 
-	For example, if your username is `powerapps` and your password is `powerapps1609`, your connection string looks similar to the following:  
+	- Click or tap **Cloud**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+	- Click or tap **On-premises**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
 
-	`Server=tcp:powerappssqlserver.database.windows.net,1433;Data Source=powerappssqlserver.database.windows.net;Initial Catalog=powerappssqldb;Persist Security Info=False;User ID=powerapps;Password=powerapps1609;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;`
+		**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap the icon to refresh the list.
 
-Keep this connection string nearby. You need it to create the connection in PowerApps.
-
-## Connect to a SQL database and enter your connection string
-
-1. At [powerapps.com](https://web.powerapps.com), expand **Manage**, and select **Connections**:  
-
-	![Azure SQL Database](./media/connection-azure-sqldatabase/connections.png)
-2. Select **New connection**, and select **SQL Azure**.
-3. When prompted, paste in the connection string you updated in the previous section, and then select **Add connection**:  
-
-	![Paste connection string](./media/connection-azure-sqldatabase/enterconnectionstring.png)
-
-	The connection is added to the list.  
-4. Open your app, and add SQL Azure as a [data source](../add-data-connection.md). Select **default**, and then you should see your tables. The following example uses the Sample data:  
-
-	![Azure SQL Database](./media/connection-azure-sqldatabase/tables.png)
-5. Select the check box for one or more tables (for example, **Product**, **Customer**, or both), and then select **Connect**. The tables are now listed as a data source.
+1. Click or tap **Add connection** to create the connection.
 
 <!--NotAvailableYet
 
@@ -224,8 +213,8 @@ None.
 
 -->
 
-## Helpful links ##
+## Next steps ##
 - Learn how to [show data from a data source](../add-gallery.md).
-- See all the [available connections](../connections-list.md).  
-- Learn how to [create a connection](../add-manage-connections.md) from PowerApps to a data source.  
+- Learn how to [view details and create or update records](../add-form.md).
+- See other types of [data sources](../connections-list.md) to which you can connect.  
 - [Understand tables and records](../working-with-tables.md) with tabular data sources.
