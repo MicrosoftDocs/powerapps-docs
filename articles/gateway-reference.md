@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Gateway reference | Microsoft PowerApps"
-	description=""
+	description="Reference information, including installation and troubleshooting, for on-premises data gateways"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
