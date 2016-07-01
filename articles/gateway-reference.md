@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Reference: on-premises data gateways | Microsoft PowerApps"
+	pageTitle="Understand on-premises data gateways | Microsoft PowerApps"
 	description="Reference information, including installation and troubleshooting, for on-premises data gateways"
 	services=""
 	suite="powerapps"
@@ -18,22 +18,7 @@
    ms.date="07/01/2016"
    ms.author="anneta"/>
 
-# On-premises data gateways for Microsoft PowerApps ##
-
-## How the gateway works ##
-When a user interacts with an element that's connected to an on-premises data source:  
-
-1. The cloud service creates a query, along with the encrypted credentials for the data source, and sends the query to the queue for the gateway to process.
-
-1. The service analyzes the query and pushes the request to the [Azure Service Bus](https://azure.microsoft.com/documentation/services/service-bus/).
-
-1. The on-premises data gateway polls the Azure Service Bus for pending requests.
-
-1. The gateway gets the query, decrypts the credentials, and connects to the data source(s) with those credentials.
-
-1. The gateway sends the query to the data source for execution.
-
-1. The results are sent from the data source back to the gateway and then onto the cloud service. The service then uses the results.
+# Understand on-premises data gateways for Microsoft PowerApps ##
 
 ## Installation and configuration ##
 
@@ -52,7 +37,7 @@ Recommended:
 
 Related considerations:  
 - You can't install a gateway on a domain controller.
-- Don't install a gateway on a computer, such a laptop, that may be turned off, asleep, or not connected to the Internet because the gateway can't run under those circumstances. In addition, gateway performance might suffer over a wireless network.
+- You shouldn't install a gateway on a computer, such a laptop, that may be turned off, asleep, or not connected to the Internet because the gateway can't run under any of those circumstances. In addition, gateway performance might suffer over a wireless network.
 
 **Install a gateway**
 
@@ -164,10 +149,10 @@ You can use the third-party tool [Azure Speed Test app](http://azurespeedtest.az
 
 #### High availability/disaster recovery ####
 **Question:** Are there any plans for enabling high availability scenarios with the gateway?  
-**Answer:** Yes. This is on the roadmap, but we don’t have a timeline yet.
+**Answer:** This is on the roadmap, but we don’t have a timeline yet.
 
 **Question:** What options are available for disaster recovery?  
-**Answer:** You can use the recovery key to restore or move a gateway. When you install the gateway, supply the recovery key.
+**Answer:** You can use the recovery key to restore or move a gateway. When you install the gateway, specify the recovery key.
 
 **Question:** What is the benefit of the recovery key?  
 **Answer:** It provides a way to migrate or recover your gateway settings after a disaster.
@@ -180,6 +165,21 @@ You can use the third-party tool [Azure Speed Test app](http://azurespeedtest.az
 **Answer:** You can enable query tracing, which will include the queries being sent. Remember to change it back to the original value when done troubleshooting. Leaving query tracing enabled will cause the logs to be larger.
 
 You can also look at tools that your data source has for tracing queries. For example, you can use Extended Events or SQL Profiler for SQL Server and Analysis Services.
+
+## How the gateway works ##
+When a user interacts with an element that's connected to an on-premises data source:  
+
+1. The cloud service creates a query, along with the encrypted credentials for the data source, and sends the query to the queue for the gateway to process.
+
+1. The service analyzes the query and pushes the request to the [Azure Service Bus](https://azure.microsoft.com/documentation/services/service-bus/).
+
+1. The on-premises data gateway polls the Azure Service Bus for pending requests.
+
+1. The gateway gets the query, decrypts the credentials, and connects to the data source(s) with those credentials.
+
+1. The gateway sends the query to the data source for execution.
+
+1. The results are sent from the data source back to the gateway and then onto the cloud service. The service then uses the results.
 
 ## Troubleshooting ##
 
