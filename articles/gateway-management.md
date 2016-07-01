@@ -36,7 +36,7 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 
    ![Gateways Install](./media/gateway-management/no-gateway-installed.png)
 
-	For details about how to install a gateway, see [Gateway overview]().
+	For details about how to install a gateway, see [Understanding gateways](gateway-reference.md).
 
 ## View and manage permissions for a gateway ##
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, click or tap **Gateways**, and then click or tap a gateway.
@@ -60,8 +60,8 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 
 	**Note**: You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
 
-For more information about how to manage a connection, see [Manage onnections](./add-manage-connections.md).
+For more information about how to manage a connection, see [Manage connections](./add-manage-connections.md).
 
 ## Next steps ##
-- Create an app that connects to an on-premises data source, such as [SQL Server]() or [SharePoint]().
-- [Share an app]() that connects to an on-premises data source.
+- Create an app that connects to an on-premises data source, such as [SQL Server](connection-azure-sqldatabase.md) or [SharePoint](connection-sharepoint-online.md).
+- [Share an app](share-app.md) that connects to an on-premises data source.
