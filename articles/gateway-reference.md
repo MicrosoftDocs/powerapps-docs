@@ -35,13 +35,15 @@ Recommended:
 - 8 GB Memory
 - 64-bit version of Windows 2012 R2 (or later)
 
-Related considerations:  
+Related considerations:
+
 - You can't install a gateway on a domain controller.
 - You shouldn't install a gateway on a computer, such a laptop, that may be turned off, asleep, or not connected to the Internet because the gateway can't run under any of those circumstances. In addition, gateway performance might suffer over a wireless network.
 
 **Install a gateway**
 
-Specify **On-premises data gateway** as the mode, sign in with your work or school account, and then either configure a new gateway or migrate, restore, or take over an existing gateway.  
+Specify **On-premises data gateway** as the mode, sign in with your work or school account, and then either configure a new gateway or migrate, restore, or take over an existing gateway.
+
 - To configure a gateway, type a **name** for it and a **recovery key**, and then click or tap **Configure**.
 
 	Specify a recovery key that contains at least eight characters, and keep it in a safe place. You'll need this key if you want to migrate, restore, or take over its gateway.
@@ -60,13 +62,13 @@ The gateway runs as a Windows service and, as with any other Windows service, yo
 
 **Configure a firewall or proxy**
 
-For information about how to provide proxy information for your gateway, see [Configuring proxy settings for the Power BI Gateways](filename.md).
+For information about how to provide proxy information for your gateway, see [Configure proxy settings](https://powerbi.microsoft.com/en-us/documentation/powerbi-gateway-proxy/).
 
 You can verify whether your firewall, or proxy, may be blocking connections by running the following command from a PowerShell prompt. This will test connectivity to the Azure Service Bus. This only tests network connectivity and doesn't have anything to do with the cloud server service or the gateway. It helps to determine whether your machine can actually get out to the internet.
 
     Test-NetConnection -ComputerName watchdog.servicebus.windows.net -Port 9350
 
-The results should look similar to the following. If **TcpTestSucceeded** is not *true*, you may be blocked by a firewall.
+The results should look similar to this example. If **TcpTestSucceeded** is not *true*, you may be blocked by a firewall.
 
     ComputerName           : watchdog.servicebus.windows.net
     RemoteAddress          : 70.37.104.240
