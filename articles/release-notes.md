@@ -22,11 +22,11 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **On-premises data**.
 
-	Show and manage data in an on-premises SharePoint site, an on-premises SQL Server database, or both by using an on-premises data gateway. For more information, see [gateway overview](filename.md).
+	Show and manage data in an on-premises SharePoint site, an on-premises SQL Server database, or both by using an [on-premises data gateway](gateway-management.md).
 
 1. **PowerApps on Firefox**.
 
-	You can run and share apps in the most recent version of the Mozilla Firefox browser.
+	You can run apps in the most recent version of the Mozilla Firefox browser.
 
 1. **Sharing apps with users of Android devices**.
 
