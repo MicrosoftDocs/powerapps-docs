@@ -38,7 +38,7 @@ You can create and use these charts within PowerApps. Let's get started.
 ## Add a pie chart to display your data
 In these steps, we download a sample file. Using a collection, we import this sample data and display it in a pie chart and a column chart.
 
-1. Download the [ChartData](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) zip file.
+1. Download the [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip) file.
 2. Create a collection named **ProductRevenue** using the following steps:  
 
 	1. On the **Insert** tab, select **Controls**, and then select **Import**:  
