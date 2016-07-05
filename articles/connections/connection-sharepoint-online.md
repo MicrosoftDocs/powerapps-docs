@@ -25,7 +25,7 @@ ms.author="anneta"/>
 Connect to a SharePoint site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
 
 ## What's new ##
-In early July 2016, we added support for on-premises data gateways so that you can connect to on-premises SharePoint sites as well as SharePoint Online sites.
+As of July 2016, you can connect to on-premises SharePoint sites as well as SharePoint Online sites.
 
 ## Known issues ##
 You can add data from a list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
@@ -68,7 +68,6 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 
 ## Connect to SharePoint ##
 ### When PowerApps creates an app for you ###
-
 For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
 ### When you update an app or build one from scratch ###
@@ -102,7 +101,7 @@ Follow the steps to [add a data connection](add-data-connection.md). In the last
 
 1. In **Username** and **Password**, provide your credentials.
 
-1. If you don't have an on-premises data gateway installed, [install one](filename.md).
+1. If you don't have an on-premises data gateway installed, [install one](gateway-reference.md).
 
 1. Under **Select Gateway**, click or tap the gateway that you want to use.
 
