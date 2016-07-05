@@ -18,11 +18,11 @@ ms.workload="na"
 ms.date="06/07/2016"
 ms.author="anneta"/>
 
-# SQL Server #
+# Connect from Microsoft PowerApps to SQL Server #
 
 ![Azure SQL Database](./media/connection-azure-sqldatabase/sqlicon.png)
 
-Connect from PowerApps to either Azure SQL or an on-premises SQL Server database so that you can display information from it in your app.
+Connect to either Azure SQL or an on-premises SQL Server database so that you can display information from it in PowerApps.
 
 **Prerequisites**
 
@@ -39,11 +39,11 @@ Connect from PowerApps to either Azure SQL or an on-premises SQL Server database
 
 1. Click or tap **Add**, and then click or tap **Sql Server [Hybrid]**.
 
-1. Under **Data location**, click or tap **Cloud** or **On-premises**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+1. Click or tap **Connect directly (cloud services)** or **Connect using on-premises data gateway**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
 1. [On-premises only] Specify the authentication type and the gateway.
 
-	**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap **Refresh gateway list**.
+	**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap **Refresh gateway list**.
 
 1. Click or tap **Connect**.
 
@@ -54,11 +54,11 @@ Connect from PowerApps to either Azure SQL or an on-premises SQL Server database
 ### When you update an app or build one from scratch ###
 1. Follow the steps to [add a data connection](add-data-connection.md), clicking or tapping **Sql Server [Hybrid]** in the last step.
 
-1. Under **Data location**, click or tap **Cloud** or **On-premises**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+1. Click or tap **Connect directly (cloud services)** or **Connect using on-premises data gateway**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
 1. [On-premises only] Specify the authentication type and the gateway.
 
-	**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap **Refresh gateway list**.
+	**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the circular icon to refresh the list.
 
 1. Click or tap **Connect**.
 
@@ -78,7 +78,7 @@ Connect from PowerApps to either Azure SQL or an on-premises SQL Server database
 
 1. [On-premises only] Specify the authentication type and the gateway.
 
-	**Note**: If you don't have a gateway, [install one](filename.md), and then click or tap **Refresh gateway list**.
+	**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
 
 1. Click or tap **Add connection** to create the connection.
 

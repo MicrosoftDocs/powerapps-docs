@@ -50,7 +50,7 @@ In addition to creating and managing connections in [powerapps.com](https://web.
 
 	Some connectors, such as **Microsoft Translator**, require no additional steps, and you show data from the connection immediately. Other connectors require steps such as providing credentials and specifying a particular set of data. For information about these types of connectors, see these topics:
 
-	- [SharePoint](connector-sharepoint-online.md)
+	- [SharePoint](connection-sharepoint-online.md)
 	- [SQL Azure](connection-azure-sqldatabase.md)
 
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
