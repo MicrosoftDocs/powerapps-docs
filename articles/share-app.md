@@ -37,10 +37,10 @@ Consider these points:
 - If you share an app with your entire organization, all users can run the app. Users can share and edit the app only if they're members of a group that has those permissions or you've explicitly granted those users more permissions.
 - If you share an app with a group, existing members of that group and anyone who joins it have the permissions that you specify. Anyone who leaves the group loses those permissions unless they're members of a different group that has access or you specify permissions for them explicitly.
 - Every member of a group has at least as many permissions for an app as the overall group. However, you can specify greater permissions for one or more members of that group to allow them greater access. If you specify fewer permissions to one or more members of a group, they'll still have all the permissions that you've granted to the overall group.
-- Apps that you share probably rely on one or more of these types of resources:
+- Most apps rely on at least one of these types of resources:
 
 	- a connection to a data source
-	- an on-premise data gateway
+	- an on-premises data gateway
 	- a custom API
 	- an Excel workbook or other service
 	- a flow

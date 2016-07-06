@@ -29,11 +29,13 @@ For an overview, see [Understand data cards](working-with-cards.md).
 - Create an app from data, such as the one in [create an app from SharePoint](app-from-sharepoint.md).
 
 ## Customize a locked card ##
-1. In **DetailScreen1**, click or tap a card.  
-![](./media/customize-card/select-card.png)
+1. In **DetailScreen1**, click or tap a card.
 
-1. In the right-hand pane, click or tap the card selector, and then click or tap the control that you want.  
-![](./media/customize-card/card-selector.png)  
+	![](./media/customize-card/select-card.png)
+
+1. In the right-hand pane, click or tap the card selector, and then click or tap the control that you want.
+	
+	![](./media/customize-card/card-selector.png)  
 
 	For information about which types of columns support which types of cards, see [Known issues](connection-sharepoint-online.md#known-issues).
 

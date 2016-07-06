@@ -39,6 +39,10 @@
 	For more information, see [SharePoint Online](connection-sharepoint-online.md#known-issues).
 
 ## Other areas ##
+1. **Shared apps that connect to on-premises data**
+
+	Any shared app that connects to an on-premises data source won't open properly in a browser. You can open these apps in PowerApps Mobile or PowerApps Studio.
+
 1. **Windows 10 Insider builds**
 
 	You can't open PowerApps on devices that are running Windows Insider builds 14361 through 14375, inclusive. The issue has been resolved, and the fix was first released in build 14376.
