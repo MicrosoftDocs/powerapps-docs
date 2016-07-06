@@ -42,13 +42,31 @@ Related considerations:
 
 **Install a gateway**
 
-Specify **On-premises data gateway** as the mode, sign in with your work or school account, and then either configure a new gateway or migrate, restore, or take over an existing gateway.
+1. On the first screen of the wizard to install a gateway, click or tap **Next** to acknowledge the reminder about installing a gateway on a laptop.
 
-- To configure a gateway, type a **name** for it and a **recovery key**, and then click or tap **Configure**.
+	![Reminder screen](./media/gateway-reference/laptop-reminder.png)
 
-	Specify a recovery key that contains at least eight characters, and keep it in a safe place. You'll need this key if you want to migrate, restore, or take over its gateway.
+1. Specify the location where you want to install the gateway, select the check box to accept the terms of use and the privacy statement, and then click or tap **Install**.
 
-- To migrate, restore, or take over an existing gateway, provide the recovery key that was specified when the gateway was created.
+1. In the **User Account Control** dialog boxes, click or tap **Yes** to continue.
+
+1. On the next screen of the wizard, click or tap **Sign in**.
+
+	![Sign in](./media/gateway-reference/sign-in.png)
+
+1. Click or tap the option to register a new gateway or migrate, restore, or to take over an existing gateway, and then click or tap **Next**.
+
+	![Choose new or existing](./media/gateway-reference/new-existing.png)
+
+	- To configure a gateway, type a **name** for it and a **recovery key**, click or tap **Configure**, and then click or tap **Close**.
+
+		![Configure a new gateway](./media/gateway-reference/configure-new.png)
+
+		Specify a recovery key that contains at least eight characters, and keep it in a safe place. You'll need this key if you want to migrate, restore, or take over its gateway.
+
+	- To migrate, restore, or take over an existing gateway, provide the name of the gateway and its recovery key, click or tap **Configure**, and then follow any additional prompts.
+
+		![Recover an existing gateway](./media/gateway-reference/recover-existing.png)
 
 **Restart the gateway**
 
@@ -169,11 +187,14 @@ You can use the third-party tool [Azure Speed Test app](http://azurespeedtest.az
 You can also look at tools that your data source has for tracing queries. For example, you can use Extended Events or SQL Profiler for SQL Server and Analysis Services.
 
 ## How the gateway works ##
+
+![How it works](./media/gateway-reference/how-it-works.png)
+
 When a user interacts with an element that's connected to an on-premises data source:  
 
 1. The cloud service creates a query, along with the encrypted credentials for the data source, and sends the query to the queue for the gateway to process.
 
-1. The service analyzes the query and pushes the request to the [Azure Service Bus](https://azure.microsoft.com/documentation/services/service-bus/).
+1. The gateway cloud service analyzes the query and pushes the request to the [Azure Service Bus](https://azure.microsoft.com/documentation/services/service-bus/).
 
 1. The on-premises data gateway polls the Azure Service Bus for pending requests.
 
@@ -197,19 +218,21 @@ You can collect several logs for the gateway. Always start with the logs!
 
 **Installer logs**
 
-    %localappdata%\Temp\Power_BI_Gateway_–Enterprise.log
+    %localappdata%\Temp\On-premises_data_gateway_*.log
 
 **Configuration logs**
 
-    %localappdata%\Microsoft\Power BI Enterprise Gateway\GatewayConfigurator.log
+    %localappdata%\Microsoft\on-premises data gateway\GatewayConfigurator*.log
 
 **Enterprise gateway service logs**
 
-    C:\Users\PBIEgwService\AppData\Local\Microsoft\Power BI Enterprise Gateway\EnterpriseGateway.log
+    C:\Users\PBIEgwService\AppData\Local\Microsoft\on-premises data gateway\Gateway*.log
 
 **Event logs**
 
-The Data Management Gateway and PowerBIGateway logs are present under **Application and Services Logs**.
+The **On-premises data gateway service** event logs are present under **Applications and Services Logs**.
+
+![Event logs](./media/gateway-reference/event-logs.png)
 
 #### Fiddler Trace ####
 [Fiddler](http://www.telerik.com/fiddler) is a free tool from Telerik that monitors HTTP traffic.  You can see the back and forth with the Power BI service from the client machine. This may show errors and other related information.
