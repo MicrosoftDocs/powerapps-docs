@@ -1,6 +1,6 @@
 <properties
-   pageTitle="Create an app to manage data from SharePoint | Microsoft PowerApps"
-   description="Create an app to manage data, such as account information, from SharePoint"
+   pageTitle="Create an app to manage data from SharePoint Online | Microsoft PowerApps"
+   description="Create an app to manage data, such as account information, from SharePoint Online"
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -18,8 +18,8 @@
    ms.date="06/24/2016"
    ms.author="jamesol"/>
 
-# Create an app to manage data from SharePoint #
-Create an app for adding, updating, and deleting data in a SharePoint list. Specify the list, create the app automatically, customize the app, and then test it by updating an item in the list.
+# Create an app to manage data from SharePoint Online#
+Create an app for adding, updating, and deleting data in a SharePoint Online list. Specify the list, create the app automatically, customize the app, and then test it by updating an item in the list.
 
 **Prerequisites**
 
@@ -35,35 +35,19 @@ The list in this tutorial contains these columns:
 
 	![](./media/app-from-sharepoint/Menu.png)
 
-1. On the **SharePoint** tile, click or tap **Phone layout**.  
+1. On the **SharePoint Online** tile, click or tap **Phone layout**.  
 
 	![](./media/app-from-sharepoint/AFD.png)
 
-1. To connect to a SharePoint Online site:
+1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
 
-	1. Under **SharePoint type**, click or tap **Cloud**.
+	**Note**: Don't include a specific list in the URL.
 
-	1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
+1. Under **Choose a list**, click or tap the name of the list that you want to use.
 
-		**Note**: Don't include a specific list in the URL.
+	In the search box, you can type or paste at least one letter to show only those lists of which their names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
 
-	1. Under **Choose a list**, click or tap the name of the list that you want to use.
-
-		In the search box, you can type or paste at least one letter to show only those lists of which their names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
-
-		![Filter or sort lists](./media/app-from-sharepoint/filter-sort-lists.png)
-
-1. To connect to an on-premises SharePoint site:
-
-	1. Under **SharePoint type**, click or tap **On Prem**.
-
-	1. Under **Authentication type**, leave the default value of **Windows**.
-
-	1. Under **Username** and **Password**, specify your credentials.
-
-	1. If you don't have an on-premises data gateway installed, [install one](filename.md).
-
-	1. Under **Select Gateway**, click or tap the gateway that you want to use.
+	![Filter or sort lists](./media/app-from-sharepoint/filter-sort-lists.png)
 
 1. Click or tap **Connect** to automatically create your app.
 
