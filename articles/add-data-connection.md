@@ -49,8 +49,8 @@ You can add a connection in PowerApps, as this topic describes, or on [powerapps
 
 	Some connectors, such as **Microsoft Translator**, require no additional steps. Other connectors require you to provide credentials, specify a particular set of data, or perform other steps. For information about these types of connectors, see these topics:
 
-	- [SharePoint](connector-sharepoint-online.md)
-	- [SQL Azure](connection-azure-sqldatabase.md)
+	- [SharePoint Online](connector-sharepoint-online.md)
+	- [SQL Server](connection-azure-sqldatabase.md)
 
 ## Next steps ##
 - To show and update data in a source such as Excel, SharePoint, Azure SQL, or Dynamics CRM, [add a form](add-form.md).

@@ -38,7 +38,7 @@ Ready to take it to the next level? Create [custom APIs](register-custom-api.md)
 | ![API Icon][office365icon] | [**Office 365 Outlook**][office365outlookdoc]<br/>Send and receive emails | ![API Icon][office365icon] | [**Office 365 Users**][office365usersdoc]<br/>View profile information, get direct reports, and more |
 | ![API Icon][onedriveicon] | [**OneDrive**][onedrivedoc]<br/>Upload and manage files | ![API Icon][onedriveforbusinessicon] | [**OneDrive for Business**][onedriveforbusinessdoc]<br/>Upload and manage files |
 | ![API Icon][salesforceicon] | [**Salesforce**][salesforcedoc]<br/>Manage accounts, leads, opportunities, and more | ![API Icon][sendgridicon] | [**SendGrid**][sendgriddoc]<br/>Send email and manage recipient lists |
-| ![API Icon][sftpicon] | [**SFTP**][sftpdoc]<br/>Upload, get, and delete files, among other tasks | ![API Icon][sharepointicon] | [**SharePoint**][sharepointdoc]<br/>Manage list items |
+| ![API Icon][sftpicon] | [**SFTP**][sftpdoc]<br/>Upload, get, and delete files, among other tasks | ![API Icon][sharepointicon] | [**SharePoint Online**][sharepointdoc]<br/>Manage list items |
 | ![API Icon][slackicon] | [**Slack**][slackdoc]<br/>Post messages to Slack channels | ![API Icon][smtpicon] | [**SMTP**][smtpdoc]<br/>Send email with attachments|
 | ![API Icon][sqlicon] | [**SQL Server**][sqldoc]<br/>Create and update data| ![API Icon][twilioicon] | [**Twilio**][twiliodoc]<br/>Send and get messages, get available numbers, and more |
 | ![API Icon][twittericon] | [**Twitter**][twitterdoc]<br/>Get timelines, post tweets, and more |

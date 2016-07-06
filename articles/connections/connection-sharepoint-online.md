@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Overview of the SharePoint connection | Microsoft PowerApps"
-	description="See the available SharePoint functions, responses, and examples"
+	pageTitle="Overview of the SharePoint Online connection | Microsoft PowerApps"
+	description="See the available functions, responses, and examples for SharePoint Online"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
@@ -18,14 +18,11 @@ ms.workload="na"
 ms.date="06/18/2016"
 ms.author="anneta"/>
 
-# Connect to SharePoint in PowerApps
+# Connect from Microsoft PowerApps to SharePoint Online
 
-![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
+![SharePoint Online](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to a SharePoint site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
-
-## What's new ##
-As of July 2016, you can connect to on-premises SharePoint sites as well as SharePoint Online sites.
+Connect to a SharePoint Online site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
 
 ## Known issues ##
 You can add data from a list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
@@ -66,18 +63,12 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 
 	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
-## Connect to SharePoint ##
+## Connect to SharePoint Online ##
 ### When PowerApps creates an app for you ###
 For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
 ### When you update an app or build one from scratch ###
-Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint** in the list of connectors, and then follow either of these procedures:
-
-**To connect to SharePoint Online**:
-
-1. Under **SharePoint type**, click or tap **Cloud**, and then click or tap **Connect**.
-
-	![Select SharePoint Online](./media/connection-sharepoint-online/select-cloud.png)
+1. Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint Online** in the list of connectors, and then click or tap **Connect**.
 
 1. Under **Connect to a SharePoint site**, click or tap an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then click or tap **Go**.
 
@@ -91,22 +82,6 @@ Follow the steps to [add a data connection](add-data-connection.md). In the last
 
 	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
 
-**To connect to an on-premises SharePoint site**
-
-1. Under **SharePoint type**, click or tap **On-prem**, and then click or tap **Connect**.
-
-	![Select an on-premises SharePoint site](./media/connection-sharepoint-online/select-onprem.png)
-
-1. Under **Authentication type**, leave the default value.
-
-1. In **Username** and **Password**, provide your credentials.
-
-1. If you don't have an on-premises data gateway installed, [install one](gateway-reference.md).
-
-1. Under **Select Gateway**, click or tap the gateway that you want to use.
-
-1. Click or tap **Connect** to finish creating the connection.
-
 ### When you open powerapps.com ###
 1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
 
@@ -114,7 +89,7 @@ Follow the steps to [add a data connection](add-data-connection.md). In the last
 
 1. In the upper-right corner, click or tap **New connection**.
 
-1. In the list of connectors, click or tap **SharePoint**.
+1. In the list of connectors, click or tap **SharePoint Online**.
 
 1. In the dialog box that appears, click or tap **Add connection**.
 

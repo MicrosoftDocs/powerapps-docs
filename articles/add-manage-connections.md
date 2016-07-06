@@ -1,6 +1,6 @@
 <properties
     pageTitle="Manage connections in PowerApps | Microsoft PowerApps"
-    description="Add and manage connections from PowerApps to SharePoint, SQL, OneDrive for Business, Salesforce, Office 365, OneDrive, DropBox, Twitter, Google Drive, and more"
+    description="Add and manage connections from PowerApps to SharePoint Online, SQL Server, OneDrive for Business, Salesforce, Office 365, OneDrive, DropBox, Twitter, Google Drive, and more"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -22,9 +22,9 @@
 
 [AZURE.VIDEO nb:cid:UUID:5bd6ea27-f8c0-41e0-a65b-34ca63a57d3e]
 
-In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, and then access that data from your app. Connect to SharePoint, SQL Azure, Office 365, OneDrive for Business, Salesforce, Excel, and other [data sources](connections-list.md), and then use those connections as in these examples:
+In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, and then access that data from your app. Connect to SharePoint Online, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and other [data sources](connections-list.md), and then use those connections as in these examples:
 
-- Update a list on a SharePoint site.
+- Update a list on a SharePoint Online site.
 - Get Excel data from your OneDrive for Business account.
 - Send email in Office 365.
 - Send a tweet.
@@ -50,8 +50,8 @@ In addition to creating and managing connections in [powerapps.com](https://web.
 
 	Some connectors, such as **Microsoft Translator**, require no additional steps, and you show data from the connection immediately. Other connectors require steps such as providing credentials and specifying a particular set of data. For information about these types of connectors, see these topics:
 
-	- [SharePoint](connection-sharepoint-online.md)
-	- [SQL Azure](connection-azure-sqldatabase.md)
+	- [SharePoint Online](connection-sharepoint-online.md)
+	- [SQL Server](connection-azure-sqldatabase.md)
 
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
 

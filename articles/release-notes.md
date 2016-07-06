@@ -22,7 +22,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **On-premises data**.
 
-	Show and manage data in an on-premises SharePoint site, an on-premises SQL Server database, or both by using an [on-premises data gateway](gateway-management.md).
+	Show and manage data in an on-premises SQL Server database by using an [on-premises data gateway](gateway-management.md).
 
 1. **PowerApps on Firefox**.
 

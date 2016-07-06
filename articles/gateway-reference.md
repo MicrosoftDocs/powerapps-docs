@@ -133,7 +133,7 @@ This isn't the account used to connect to on-premises data sources or the work o
 ## Frequently asked questions ##
 #### General ####
 **Question:** What data sources does the gateway support?  
-**Answer:** As of this writing, SQL Server and SharePoint.
+**Answer:** As of this writing, SQL Server.
 
 **Question:** Do I need a gateway for data sources in the cloud, such as SQL Azure?  
 **Answer:** No. A gateway connects to on-premises data sources only.
