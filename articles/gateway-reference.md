@@ -54,7 +54,7 @@ Related considerations:
 
 	![Sign in](./media/gateway-reference/sign-in.png)
 
-1. Click or tap the option to register a new gateway or migrate, restore, or to take over an existing gateway, and then click or tap **Next**.
+1. Click or tap the option to register a new gateway or to migrate, restore, or take over an existing gateway, and then click or tap **Next**.
 
 	![Choose new or existing](./media/gateway-reference/new-existing.png)
 
@@ -70,7 +70,7 @@ Related considerations:
 
 **Restart the gateway**
 
-The gateway runs as a Windows service and, as with any other Windows service, you can start and stop it in multiple ways. For example, you can open a command prompt with elevated permissions on the machine where the gateway is running, and then run either of these commands:
+The gateway runs as a Windows service, so you can start and stop it in multiple ways. For example, you can open a command prompt with elevated permissions on the machine where the gateway is running and then run either of these commands:
 
 - To stop the service, run this command:<br>
 **net stop PBIEgwService**
@@ -82,11 +82,11 @@ The gateway runs as a Windows service and, as with any other Windows service, yo
 
 For information about how to provide proxy information for your gateway, see [Configure proxy settings](https://powerbi.microsoft.com/en-us/documentation/powerbi-gateway-proxy/).
 
-You can verify whether your firewall, or proxy, may be blocking connections by running the following command from a PowerShell prompt. This will test connectivity to the Azure Service Bus. This only tests network connectivity and doesn't have anything to do with the cloud server service or the gateway. It helps to determine whether your machine can actually get out to the internet.
+You can verify whether your firewall, or proxy, may be blocking connections by running the following command from a PowerShell prompt. This command will test connectivity to the Azure Service Bus. This only tests network connectivity and doesn't have anything to do with the cloud server service or the gateway. It helps to determine whether your machine can actually get out to the internet.
 
     Test-NetConnection -ComputerName watchdog.servicebus.windows.net -Port 9350
 
-The results should look similar to this example. If **TcpTestSucceeded** is not *true*, you may be blocked by a firewall.
+The results should look similar to this example. If **TcpTestSucceeded** is not **True**, you may be blocked by a firewall.
 
     ComputerName           : watchdog.servicebus.windows.net
     RemoteAddress          : 70.37.104.240
@@ -99,7 +99,7 @@ The results should look similar to this example. If **TcpTestSucceeded** is not 
 
 If you want to be exhaustive, substitute the **ComputerName** and **Port** values with those listed under **Configure ports** later in this topic.
 
-The firewall may also be blocking the connections that the Azure Service Bus makes to the Azure data centers. If that is the case, you'll want to whitelist (unblock) all of the IP addresses for your region for those data centers. You can get a list of Azure IP addresses [here](https://www.microsoft.com/download/details.aspx?id=41653).
+The firewall may also be blocking the connections that the Azure Service Bus makes to the Azure data centers. If that's the case, you'll want to whitelist (unblock) all of the IP addresses for your region for those data centers. You can get a list of Azure IP addresses [here](https://www.microsoft.com/download/details.aspx?id=41653).
 
 **Configure ports**
 
@@ -118,7 +118,7 @@ Learn more about [hybrid solutions](https://azure.microsoft.com/documentation/ar
 |login.microsoftonline.com|443|HTTPS|
 |*.msftncsi.com|443|Used to test internet connectivity if the gateway is unreachable by the Power BI service.|
 
-If you need to white list IP addresses instead of the domains, you can download and use the [Microsoft Azure Datacenter IP ranges list](https://www.microsoft.com/download/details.aspx?id=41653). In some cases, the Azure Service Bus connections will be made with IP Address instead of the fully qualified domain names.
+If you need to white list IP addresses instead of the domains, you can download and use the [Microsoft Azure Datacenter IP ranges list](https://www.microsoft.com/download/details.aspx?id=41653). In some cases, the Azure Service Bus connections will be made with IP address instead of the fully qualified domain names.
 
 **Sign-in account**
 

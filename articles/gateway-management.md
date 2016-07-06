@@ -36,14 +36,12 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 
    ![Gateways Install](./media/gateway-management/no-gateway-installed.png)
 
-	For details about how to install a gateway, see [Understanding gateways](gateway-reference.md).
+	For details about how to install a gateway, see [Understand gateways](gateway-reference.md).
 
 ## View and manage permissions for a gateway ##
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, click or tap **Gateways**, and then click or tap a gateway.
 
-1. To add a user to a gateway, click or tap **Users**, and then specify a permission level:
-
-  Placeholder for Image: Gateways tab and permissions
+1. Add a user to a gateway by clicking or tapping **Users**, specifying a user or group, and then specifying a permission level:
 
 	- **Admin**: Administrator who has full control, including adding users and setting permissions for the gateway.
 	- **Can use**: User who can create a connection on the gateway.
@@ -53,8 +51,6 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, click or tap **Gateways**, and then click or tap a gateway.
 
 1. Click or tap **Connections**, and then click or tap a connection to view or modify its details.
-
-  Placeholder for Image: Connections tab
 
 1. To share a connection, click or tap **Share**, and then add or remove users.
 

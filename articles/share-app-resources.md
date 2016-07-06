@@ -21,7 +21,7 @@
 Before you [share an app](./share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
 - a connection to a data source
-- an on-premise data gateway
+- an on-premises data gateway
 - a custom API
 - an Excel workbook or other service
 - a flow
@@ -35,7 +35,7 @@ On [powerapps.com](https://web.powerapps.com), you can determine whether a conne
 
   ![Share tab in connection details page](./media/share-app-resources/shared-connections.png)
 
-## On-premise data gateways ##
+## On-premises data gateways ##
 Some on-premise connections, such as SharePoint, aren't automatically shared, but the on-premise data gateway through which you made the connection is. Users of the app can then create their own connections through that gateway.
 
 On [powerapps.com](https://web.powerapps.com), you can view connections created on any gateway that you created or for which you were given administrative permissions. In the left navigation bar, click or tap **Manage**, click or tap **Gateways**, and then click or tap a gateway.
