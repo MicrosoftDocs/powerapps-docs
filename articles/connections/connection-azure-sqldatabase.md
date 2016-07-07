@@ -22,12 +22,20 @@ ms.author="anneta"/>
 
 ![Azure SQL Database](./media/connection-azure-sqldatabase/sqlicon.png)
 
-Connect to either Azure SQL or an on-premises SQL Server database so that you can display information from it in PowerApps.
+Connect to SQL Server, in either Azure or an on-premises database, so that you can display information from it in PowerApps.
 
 **Prerequisites**
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- The server name, the database name, the user name, and the password for a database that contains at least one table with a primary key. If you don't have this information, ask the administrator of the database that you want to use.
+- The following information for a database that contains at least one table with a primary key:
+
+	- the name of the database
+	- the name of the server on which the database is hosted
+	- a valid user name and password to connect to the database
+	- the type of authentication needed to connect to the database
+
+	If you don't have this information, ask the administrator of the database that you want to use.
+- For an on-premises database, a [data gateway](gateway-management.md) that was shared with you (or that you created).
 
 ## Connect to a database ##
 ### When PowerApps creates an app for you ###
@@ -37,9 +45,9 @@ Connect to either Azure SQL or an on-premises SQL Server database so that you ca
 
 1. If you already have a connection to the database that you want to use, click or tap it, and then skip to the last step in this procedure.
 
-1. Click or tap **Add**, and then click or tap **Sql Server [Hybrid]**.
+1. Click or tap **Add**, and then click or tap **SQL Server**.
 
-1. Click or tap **Connect directly (cloud services)** or **Connect using on-premises data gateway**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+1. Specify **Connect directly (cloud services)** or **Connect using on-premises data gateway**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
 1. [On-premises only] Specify the authentication type and the gateway.
 
@@ -52,7 +60,7 @@ Connect to either Azure SQL or an on-premises SQL Server database so that you ca
 	PowerApps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
 
 ### When you update an app or build one from scratch ###
-1. Follow the steps to [add a data connection](add-data-connection.md), clicking or tapping **Sql Server [Hybrid]** in the last step.
+1. Follow the steps to [add a data connection](add-data-connection.md), clicking or tapping **SQL Server** in the last step.
 
 1. Click or tap **Connect directly (cloud services)** or **Connect using on-premises data gateway**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
@@ -72,7 +80,7 @@ Connect to either Azure SQL or an on-premises SQL Server database so that you ca
 
 	![Azure SQL Database](./media/connection-azure-sqldatabase/manage-connections.png)
 
-1. In the upper-right corner, click or tap **New connection**, and then click or tap **Sql Server [Hybrid]**.
+1. In the upper-right corner, click or tap **New connection**, and then click or tap **SQL Server**.
 
 1. Next to **Data location**, click or tap **Cloud** or **On-premises**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
