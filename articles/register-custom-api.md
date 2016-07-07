@@ -1,6 +1,6 @@
 <properties
-	pageTitle="How to use custom APIs in Logic Flows and PowerApps | Microsoft Azure"
-	description="What are custom APIs, using OAuth providers, and using Swagger to add custom APIs in PowerApps and Logic Flows"
+	pageTitle="How to use custom APIs | Microsoft PowerApps"
+	description="What are custom APIs, using OAuth providers, and using Swagger to add custom APIs in flows and apps"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -21,7 +21,7 @@
 
 [AZURE.VIDEO nb:cid:UUID:a971d001-3731-42d3-8abe-d82d44869343]
 
-Custom APIs are any RESTful APIs that you can bring in and use with your PowerApps and Logic Flows. These APIs can be hosted anywhere, as long as a well-documented specification that conforms to the [OpenAPI][1] standard is available.
+Custom APIs are any RESTful APIs that you can bring in and use with PowerApps and Microsoft Flow. These APIs can be hosted anywhere, as long as a well-documented specification that conforms to the [OpenAPI][1] standard is available.
 
 ## What you need to get started
 
@@ -71,7 +71,7 @@ If your API endpoint allows unauthenticated access, you should remove the ```sec
 * [Azure Resource Manager](customapi-azure-resource-manager-tutorial.md) with AAD authentication
 * [Azure WebApp](customapi-web-api-tutorial.md) with AAD authentication
 
-## Register a Custom API
+## Register a custom API
 
 ### Step 1: Create a Swagger file
 
@@ -87,7 +87,7 @@ When you create the Swagger file, a .json file is created. Keep this .json file 
 
 - If you're brand new to creating a Swagger file or have never created a Swagger file before, [Get started with Swagger][6] is a good resource.
 
-- To create your own API, deploy it to Azure, and create a Swagger file based off this new API, then consider using [Web API tutorial](customapi-web-api-tutorial.md). This tutorial gives you a working Swagger file. There's also a [Hello World example][7] on GitHub.
+- To create your own API, deploy it to Azure, create a Swagger file based off this new API, and then consider using [Web API tutorial](customapi-web-api-tutorial.md). This tutorial gives you a working Swagger file. There's also a [Hello World example][7] on GitHub.
 
 - To validate your Swagger files, use the [Swagger editor][8]. You can paste your .json data, and validation automatically occurs.
 
@@ -134,16 +134,16 @@ Now that the Swagger file (.json file) is generated for the custom API, add the 
 > [AZURE.TIP] If the Swagger files fails to validate, there may be extra characters. For example, mostly all data should be in quotes, including websites. So if you have `https://mywebapi.mywebsite.com` outside of quotes, the file fails to validate.
 
 
-### Step 3: Add the custom API to a Logic Flow and PowerApp
-Now, you're ready to use the custom API with your app or Logic Flow. In this section, we use a custom Weather API.
+### Step 3: Add the custom API to a flow and an app
+Now, you're ready to use the custom API with your app or flow. In this section, we use a custom Weather API.
 
-#### Add the custom API to your logic flow
-In this step, we create a very simple logic flow that shows you how to add your custom API. For a more in-depth experience, see [Get started with logic flows](https://flow.microsoft.com/en-us/documentation/get-started-logic-flow/) at flow.microsoft.com.
+#### Add the custom API to your flow
+In this step, we create a very simple flow that shows you how to add your custom API. For a more in-depth experience, see [Get started with  flows](https://flow.microsoft.com/en-us/documentation/get-started-logic-flow/) at flow.microsoft.com.
 
 1. At [powerapps.com][9], select the **Flows** tab, and select **Create a flow**.
-2. In this window, there are several logic flow templates already created that use some common scenarios. You can use any of these, and add your custom API to it. Or, you can choose **Create from blank** to create a logic flow from scratch.  
+2. In this window, there are several templates already created that use some common scenarios. You can use any of these, and add your custom API to it. Or, you can choose **Create from blank** to create a flow from scratch.  
 
-	The quickest way to add your custom API is to select **Create from blank**. This opens the following logic flow:  
+	The quickest way to add your custom API is to select **Create from blank**, which opens the following flow:  
 	![](./media/register-custom-api/createfromblank.png "Start of Logic Flow")   
 
 4. Select **Recurrence**, and set the frequency to 1 minute:    
@@ -155,7 +155,7 @@ In this step, we create a very simple logic flow that shows you how to add your 
 6. The next steps are determined by what your API can do. In a weather example, maybe your API gets the current temperature, and then sends an email using Office 365:  
 ![](./media/register-custom-api/logicflowexample.png "Weather example")
 
-7. Name your flow and select **Done**.
+7. Name your flow, and then select **Done**.
 
 
 #### Add the custom API to your PowerApp
@@ -163,7 +163,7 @@ In this step, we create a very simple app that shows you how to add your custom 
 
 1. At [powerapps.com][9], select **New App**:  
 	![](./media/register-custom-api/newpowerapp.png "Select New PowerApp")  
-2. A new tab opens in your browser. In this new tab, a blank PowerApp is created automatically. Select **connect to data**:  
+2. A new tab opens in your browser. In this new tab, a blank app is created automatically. Select **connect to data**:  
 ![](./media/register-custom-api/blankpowerapp.png "Select connect to data")  
 3. In the **Content** tab, select **Data sources**:  
 ![](./media/register-custom-api/datasources.png "Select connect to data")  
@@ -194,7 +194,7 @@ Users can also share custom APIs with each other. Once you've added a custom API
 - For each connection created on a custom API, users can make up to 500 requests per minute.
 - Keep in mind that deleting a custom API deletes all the connections created to the API.
 
-For questions or comments on custom APIs, email [customapishelp@microsoft.com](mailto:customapishelp@microsoft.com).
+To ask questions or make comments about custom APIs, [join our community](https://aka.ms/powerapps-community).
 
 <!--Reference links in article-->
 [1]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#securityDefinitionsObject
