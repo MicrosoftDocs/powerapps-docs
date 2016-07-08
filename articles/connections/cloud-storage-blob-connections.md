@@ -27,7 +27,7 @@ PowerApps offers several cloud storage connections. Using these connections, you
 
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-- An Excel file with the data [formatted as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370):
+- An Excel file with the data [formatted as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664):
 
 	1. Open the Excel file, and then select any cell in the data that you want to use.
 	1. On the **Insert** tab, select **Table**.
