@@ -76,13 +76,17 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 	- Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
+		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-fromblank.png)
+
 	- Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
 
-		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap **Refresh gateway list**.
+		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
+
+		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the circular icon to refresh the list.
 
 1. Click or tap **Connect**.
 
-1. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
+1. Click or tap an option under **Choose a dataset**, select one or more checkboxes under **Choose a table**, and then click or tap **Connect**.
 
 ### From powerapps.com ###
 
@@ -98,9 +102,13 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 	- Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
+		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-portal.png)
+
 	- Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
 
-		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap **Refresh gateway list**.
+		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
+
+		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
 
 1. Click or tap **Add connection** to create the connection.
 
