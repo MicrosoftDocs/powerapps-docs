@@ -25,6 +25,10 @@
 
 	Any shared app that connects to an on-premises data source won't open properly in a browser. You can open these apps in PowerApps Mobile or PowerApps Studio.
 
+1. **Connections to SQL Server**
+
+	You can connect to an on-premises SQL Server database if you upgrade to build 2.0.460. If you don't upgrade, you can connect to SQL Azure, but you'll be prompted to specify an authentication type. The connection will succeed regardless of whether you specify anything in that field.
+
 1. **Windows 10 Insider builds**
 
 	You can't open PowerApps on devices that are running Windows Insider builds 14361 through 14375, inclusive. The issue has been resolved, and the fix was first released in build 14376.
