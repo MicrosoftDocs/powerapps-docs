@@ -35,9 +35,13 @@ The list in this tutorial contains these columns:
 
 	![](./media/app-from-sharepoint/Menu.png)
 
-1. On the **SharePoint Online** tile, click or tap **Phone layout**.  
+1. On the **SharePoint Online** tile, click or tap **Phone layout**.
 
 	![](./media/app-from-sharepoint/AFD.png)
+
+1. Click or tap **Connect**.
+
+	![](./media/app-from-sharepoint/sp-connect.png)
 
 1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
 

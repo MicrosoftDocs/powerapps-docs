@@ -37,7 +37,9 @@ You can add a connection in PowerApps, as this topic describes, or on [powerapps
 
 	![Create an app from scratch](./media/add-data-connection/blank-app.png)
 
-1. In the right-hand pane, click or tap the **Data sources** tab to open it, and then click or tap **Add data source**.
+1. In the right-hand pane, click or tap **Add data source**.
+
+	If you're updating an existing app and the right-hand pane doesn't show the **Data sources** tab, select any screen by clicking or tapping it in the left navigation bar.
 
 	![Add data source](./media/add-data-connection/add-data-source.png)
 
@@ -47,11 +49,8 @@ You can add a connection in PowerApps, as this topic describes, or on [powerapps
 
 1. To create a connection, click or tap **Add connection** to display a list of connectors, click or tap the type of connection that you want to create, and then click or tap **Connect**.  
 
-	Some connectors, such as **Microsoft Translator**, require no additional steps. Other connectors require you to provide credentials, specify a particular set of data, or perform other steps. For information about these types of connectors, see these topics:
-
-	- [SharePoint Online](connector-sharepoint-online.md)
-	- [SQL Server](connection-azure-sqldatabase.md)
+	Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint Online](connector-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
 
 ## Next steps ##
-- To show and update data in a source such as Excel, SharePoint, Azure SQL, or Dynamics CRM, [add a form](add-form.md).
+- To show and update data in a source such as Excel, SharePoint Online, SQL Server, or Dynamics CRM, [add a form](add-form.md).
 - For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connection-office365-outlook.md), [Twitter](connection-twitter.md), and [Microsoft Translator](connection-microsoft-translator.md).

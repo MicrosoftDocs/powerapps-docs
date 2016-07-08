@@ -27,7 +27,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 **Prerequisites**
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-- The following information for a database that contains at least one table with a primary key:
+- Gather the following information for a database that contains at least one table with a primary key:
 
 	- the name of the database
 	- the name of the server on which the database is hosted
@@ -35,11 +35,13 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 	- the type of authentication needed to connect to the database
 
 	If you don't have this information, ask the administrator of the database that you want to use.
-- For an on-premises database, a [data gateway](gateway-management.md) that was shared with you (or that you created).
+- For an on-premises database, identify a [data gateway](gateway-management.md) that was shared with you (or create one).
 
 ## Connect to a database ##
 ### When PowerApps creates an app for you ###
 1. Open PowerApps, and then click or tap **New** on the **File** menu (along the left edge).
+
+	![New option on the File menu](./media/connection-azure-sqldatabase/file-new.png)
 
 1. Under **Create an app from your data**, click or tap the right arrow at the end of the row of connectors.
 
@@ -47,11 +49,19 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 1. Click or tap **Add**, and then click or tap **SQL Server**.
 
-1. Specify **Connect directly (cloud services)** or **Connect using on-premises data gateway**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+	![Add SQL Server connection](./media/connection-azure-sqldatabase/add-sql-connection.png)
 
-1. [On-premises only] Specify the authentication type and the gateway.
+1. Perform either of these steps:
 
-	**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap **Refresh gateway list**.
+	- Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+
+		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure.png)
+
+	- Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+
+		![Connect to an on-premises database](./media/connection-azure-sqldatabase/connect-onprem.png)
+
+		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap **Refresh gateway list**.
 
 1. Click or tap **Connect**.
 
@@ -62,15 +72,17 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 ### When you update an app or build one from scratch ###
 1. Follow the steps to [add a data connection](add-data-connection.md), clicking or tapping **SQL Server** in the last step.
 
-1. Click or tap **Connect directly (cloud services)** or **Connect using on-premises data gateway**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+1. Perform either of these steps:
 
-1. [On-premises only] Specify the authentication type and the gateway.
+	- Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
-	**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the circular icon to refresh the list.
+	- Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+
+		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap **Refresh gateway list**.
 
 1. Click or tap **Connect**.
 
-1. Click or tap an option under **Choose a dataset**, and then click or tap an option under **Choose a table**, and then click or tap **Connect**.
+1. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
 
 ### From powerapps.com ###
 
@@ -78,15 +90,17 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 1. In the left navigation bar, click or tap **Manage**, and click or tap **Connections**:  
 
-	![Azure SQL Database](./media/connection-azure-sqldatabase/manage-connections.png)
+	![Manage connections](./media/connection-azure-sqldatabase/manage-connections.png)
 
 1. In the upper-right corner, click or tap **New connection**, and then click or tap **SQL Server**.
 
-1. Next to **Data location**, click or tap **Cloud** or **On-premises**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+1. Perform either of these steps:
 
-1. [On-premises only] Specify the authentication type and the gateway.
+	- Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
 
-	**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
+	- Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+
+		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap **Refresh gateway list**.
 
 1. Click or tap **Add connection** to create the connection.
 

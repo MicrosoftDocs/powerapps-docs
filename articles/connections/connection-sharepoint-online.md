@@ -18,7 +18,7 @@ ms.workload="na"
 ms.date="06/18/2016"
 ms.author="anneta"/>
 
-# Connect from Microsoft PowerApps to SharePoint Online
+# Connect from Microsoft PowerApps to SharePoint Online #
 
 ![SharePoint Online](./media/connection-sharepoint-online/sharepointicon.png)
 
@@ -68,13 +68,17 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
 ### When you update an app or build one from scratch ###
-1. Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint Online** in the list of connectors, and then click or tap **Connect**.
+1. Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint Online** in the list of connectors.
+
+1. Click or tap **Connect**.
+
+	![Connect to SharePoint Online](./media/connection-sharepoint-online/sp-connect.png)
 
 1. Under **Connect to a SharePoint site**, click or tap an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then click or tap **Go**.
 
 	![Select a SharePoint site](./media/connection-sharepoint-online/select-sp-site.png)
 
-1. Select the check box for one or more tables that you want to use, and then click or tap **Connect**:  
+1. Under **Choose a list**, select the check box for one or more tables that you want to use, and then click or tap **Connect**:  
 
 	![Select the tables in SharePoint](./media/connection-sharepoint-online/select-sp-tables.png)
 
@@ -87,9 +91,7 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 	![Connections Manage](./media/connection-sharepoint-online/manage-connections.png)
 
-1. In the upper-right corner, click or tap **New connection**.
-
-1. In the list of connectors, click or tap **SharePoint Online**.
+1. In the upper-right corner, click or tap **New connection**, and then click or tap **SharePoint Online** in the list of connectors.
 
 1. In the dialog box that appears, click or tap **Add connection**.
 

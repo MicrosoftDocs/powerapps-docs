@@ -48,10 +48,7 @@ In addition to creating and managing connections in [powerapps.com](https://web.
 
 1. In the upper-right corner, click or tap **New connection**, click or tap a connector in the list that appears, and then click or tap **Add connection**.
 
-	Some connectors, such as **Microsoft Translator**, require no additional steps, and you show data from the connection immediately. Other connectors require steps such as providing credentials and specifying a particular set of data. For information about these types of connectors, see these topics:
-
-	- [SharePoint Online](connection-sharepoint-online.md)
-	- [SQL Server](connection-azure-sqldatabase.md)
+	Some connectors, such as **Microsoft Translator**, require no additional steps. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint Online](connector-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
 
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
 
