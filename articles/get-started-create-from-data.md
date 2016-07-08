@@ -24,14 +24,12 @@
 
 Create an app automatically based on an Excel file in the cloud, customize the app, and then explore how it works.
 
-## Prerequisites
-
+## Prerequisites ##
 - [Sign up](signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
 - A Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business account into which you've saved [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial. The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
-- Format your Excel data as a table. [Create an app from scratch](get-started-create-from-blank.md) lists the steps. The sample Excel file is already formatted as a table. You can also use your own Excel data.
+- [Format your Excel data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
 **Note** You can just as easily create an app based on a [SharePoint](app-from-sharepoint.md) list, Salesforce data, a table in Dynamics CRM, or another [data source](add-manage-connections.md).
-
 
 ## Create the app ##
 1. In PowerApps, select **New** (near the left edge of the screen).

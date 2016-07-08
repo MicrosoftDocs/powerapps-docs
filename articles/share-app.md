@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="jamesol-msft"
+    authors="AFTOwen"
     manager="erikre"
     editor=""
     tags=""/>
@@ -14,118 +14,72 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="05/18/2016"
-    ms.author="jamesol"/>
+    ms.date="06/24/2016"
+    ms.author="anneta"/>
 
 # Share an app #
 
 [AZURE.VIDEO nb:cid:UUID:7c4368ab-58a7-4930-9df3-6ba255e2b593]
 
-You created an app, and now you're ready to share it with your coworkers. You can give other users permission to run the app, customize the app, and then they can share their own version of the app. You can share an app with:
+Share an app that you created (or that someone shared with you) from PowerApps or [powerapps.com](https://web.powerapps.com). Specify who can run the app, edit it, share it again, or all three.
 
-- Multiple co-workers at the same time
-- A group in Azure Active Directory (AAD)
-- All users within your organization
+When you share an app, specify the names of one or more users or groups in Azure Active Directory, or specify that you want to share the app with your entire organization. Then specify one of these permission levels:
 
-If you share an app with a group, *everyone* in that group has the permissions that you assign to the group. If users are added or deleted from the group, they gain and lose permissions accordingly.
+- **Can use**: Users or groups can run the app but not share it.
+- **Can use and share**: Users or groups can run and share the app.
+- **Can edit**: Users or groups can run the app, customize it, and share the customized version.
 
-If you share an app with your organization, *everyone* in your organization has the permission to run the app (default behavior). They can't change or update the app.
+When you share an app, a message notifies the user or users that you specified and contains a link with which they can access the app. If appropriate, users are prompted to sign up for and install PowerApps.
 
-**Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, if your app uses an Excel file, you must also [share the Excel or other file](share-app-data.md) in a cloud-storage account.
+## Before you share an app ##
+Consider these points:
 
-If you embed a flow within an app and then share the app with others, they’ll need to confirm or update any connections on which the flow relies. In addition, other users can’t customize the flow’s parameters. For example, a flow can send email to your address when an action occurs, but other users can’t change that address to their own.
+- If you share an app with your entire organization, all users can run the app. Users can share and edit the app only if they're members of a group that has those permissions or you've explicitly granted those users more permissions.
+- If you share an app with a group, existing members of that group and anyone who joins it have the permissions that you specify. Anyone who leaves the group loses those permissions unless they're members of a different group that has access or you specify permissions for them explicitly.
+- Every member of a group has at least as many permissions for an app as the overall group. However, you can specify greater permissions for one or more members of that group to allow them greater access. If you specify fewer permissions to one or more members of a group, they'll still have all the permissions that you've granted to the overall group.
+- Most apps rely on at least one of these types of resources:
 
-## What you need to get started
+	- a connection to a data source
+	- an on-premises data gateway
+	- a custom API
+	- an Excel workbook or other service
+	- a flow
 
-- An account that you've signed in to [powerapps.com][2] or PowerApps.
-- Either of the following:
-	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
-	- An app that someone else built and has given you permission to run, customize, and share.
+For more information, see [Share app resources](share-app-resources.md).
 
-## Share an app
+**Prerequisites**
 
-#### powerapps.com
+[Sign up](signup-for-powerapps.md) for PowerApps, and then do either of the following:
 
-1. On [powerapps.com][1], select **My apps** in the left navigation bar:  
-![](./media/share-app/new-file-apps-portal.png)
+- [Sign in to powerapps.com](https://web.powerapps.com).
+- [Install PowerApps](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
 
-1. Select the ellipsis on tile of the app that you want to share, and click **Share**  
-![](./media/share-app/new_app_tile.png)
+## Share an app from powerapps.com
+1.  In the left navigation bar, click or tap **My apps**, click or tap the ellipsis for the app that you want to share, and then click or tap **Share**.
 
-1. Type in your co-worker or group's work name or email address, and then select the person you want from the list. Remember, you can share this app with a co-worker or work group.
+	![Share option in powerapps.com](./media/share-app/portal-share.png)
 
-	In the list of permission types, choose from the following:  
+1. Specify the users, groups, or both with whom you want to share the app, or click or tap the link to share the app with your organization.
 
-	- **Can use**: Allow the user or group members to run the app. User are not able to share your app with other users or groups.  
-	- **Can use and share**: Allow the user or group members to run your app and share your app.  
-	- **Can edit**: Allow the user or group members to run your app, customize it, and share a new version of your app.  
+	![Specify users in powerapps.com](./media/share-app/portal-users.png)
 
-	![](./media/share-app/new-permission-list-portal.png)
+1. Specify the level of permissions, and then click or tap **Save**.
 
-1. To share this app with all users within your organization, select **Allow access to others users in my organization**.
-![](./media/share-app/new-orgwidesharing-portal.png)
+	![Specify permissions in powerapps.com](./media/share-app/portal-permissions.png)
 
-1. Select **Save**. A message is sent that notifies the user or users you entered of your shared app.
+To change permissions for a user or a group, repeat step 1 of this procedure, and then specify a different option in the list of permissions for that user or group. To remove all permissions for a user or group, click or tap the **x** icon for that user or group.
 
-	The message contains a link for the user to access the app. Any users who don't have PowerApps (or aren’t signed up to use it) are prompted to install it, and then sign up for it.
+## Share an app in PowerApps ##
+1. In the **File** menu (near the left edge of the screen), click or tap **Open**, and then click or tap the share icon for the app that you want to share.
 
-#### PowerApps
-1. In PowerApps, go to the **File** menu (near the left edge of the screen), then select **Open**:  
+	![Share option in PowerApps](./media/share-app/studio-share.png)
 
-	![](./media/share-app/new-open-apps.png)
+1. Specify the users, groups, or both with whom you want to share the app, or select the check box to share the app with your organization.
 
-2. Select the share icon for the app that you want to share:  
+	![Specify users in PowerApps](./media/share-app/studio-users.png)
 
-3. Type in your co-worker or groups work name or email address, and then select the person you want from the list. Remember, you can share this app with a co-worker or work group.
+1. Specify the level of permissions, and then click or tap **Share**.
 
-	In the list of permission types:
+	![Specify permissions in PowerApps](./media/share-app/studio-permissions.png)
 
-	- **Can use**: Allow the user or group members to run the app. User are not able to share your app with other users or groups.  
-	- **Can use and share**: Allow the user or group members to run your app and share your app.  
-	- **Can edit**: Allow the user or group members to run your app, customize it, and share a new version of your app.  
-
-    ![](./media/share-app/new-permissions-pa.png)
-
-4. Select **Share**. A message is sent that notifies the user or users you entered of your shared app.
-
-	The message contains a link for the user to access the app. Any users who don't have PowerApps (or aren’t signed up to use it) are prompted to install it, and then sign up for it.
-
-5. To share this app with all users within your organization, select **Allow access to others users in my organization**.
-
-	![](./media/share-app/permissions-org.png)
-
-[AZURE.NOTE] If a user is given multiple permission types, the permission with the highest access is used. For example, Nancy is a member of GroupA and GroupB. GroupA is given *Can use* permissions, and GroupB is given *Can edit* permissions. In this scenario, Nancy has *Can edit* permission because it has the highest access.
-
-## Change or remove permission
-
-#### powerapps.com
-
-1. On [powerapps.com][1], select **My apps** in the left navigation bar.  
-![](./media/share-app/new-file-apps-portal.png)
-
-2. Select the ellipsis on tile of the app that you want to modify, and click **Share**.  
-![](./media/share-app/new_app_tile.png)
-
-3. Select a different permission from the drop-down list. Or select the **x** icon to delete a user, group, or your organization's permission.  
-![](./media/share-app/new-share-permissiontypes-portal.png)
-
-4. Select **Save**.
-
-#### PowerApps
-
-1. In PowerApps, go to the **File** menu (near the left edge of the screen), then select **Open**.
-2. Select the share icon for the app.
-3. Under **Shared with**, select a user's name to see the options for changing or removing permissions. You can also select **My org** under **Shared with**, and then select **Delete** to stop sharing this app with all users in your organization.
-
-
-## Resources
-
-Here are some other good resources for managing your apps:
-
-[Change app name and tile](set-name-tile.md)  
-[Delete an app](delete-app.md)  
-[Restore an app to a previous version](restore-an-app.md)
-
-<!--Reference links in article-->
-[1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
-[2]: http://go.microsoft.com/fwlink/p/?LinkId=708209
+**Note**: To change or remove permissions for a user or a group, repeat step 1 of this procedure, click or tap the user or group, and then specify a different option in the list of permissions.

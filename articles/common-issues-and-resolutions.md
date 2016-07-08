@@ -18,10 +18,22 @@
    ms.date="06/10/2016"
    ms.author="anneta"/>
 
-# Common issues and resolutions
+# Common issues and resolutions #
 
-## App creation
+## Recently added/changed ##
+1. **Shared apps that connect to on-premises data**
 
+	Any shared app that connects to an on-premises data source won't open properly in a browser. You can open these apps in PowerApps Mobile or PowerApps Studio.
+
+1. **Connections to SQL Server**
+
+	You can connect to an on-premises SQL Server database if you upgrade to build 2.0.460. If you don't upgrade, you can connect to SQL Azure, but you'll be prompted to specify an authentication type. The connection will succeed regardless of whether you specify anything in that field.
+
+1. **Windows 10 Insider builds**
+
+	You can't open PowerApps on devices that are running Windows Insider builds 14361 through 14375, inclusive. The issue has been resolved, and the fix was first released in build 14376.
+
+## Older ##
 1.  **When PowerApps generates an app from data, the field used for sorting and searching isn't automatically configured**.
 
 	To configure this field, edit the **[Items](controls/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
@@ -32,16 +44,11 @@
 
 1. **Excel data must be formatted as a table**.
 
-	If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370).
+	If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
 1. **SharePoint lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
 
 	For more information, see [SharePoint Online](connection-sharepoint-online.md#known-issues).
-
-## Other areas ##
-1. **Windows 10 Insider builds**
-
-	You can't open PowerApps on devices that are running Windows Insider builds 14361 through 14375, inclusive. The issue has been resolved, and the fix was first released in build 14376.
 
 1. **Co-authoring isn't supported. One author at a time, please** (as of release 2.0.410).
 
