@@ -37,7 +37,7 @@ You can add a connection in PowerApps, as this topic describes, or on [powerapps
 
 	![Create an app from scratch](./media/add-data-connection/blank-app.png)
 
-1. In the right-hand pane, click or tap **Add data source**.
+1. In the right-hand pane, click or tap the **Data sources** tab if it isn't already showing, and then click or tap **Add data source**.
 
 	If you're updating an existing app and the right-hand pane doesn't show the **Data sources** tab, select any screen by clicking or tapping it in the left navigation bar.
 
