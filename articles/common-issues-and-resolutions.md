@@ -21,10 +21,6 @@
 # Common issues and resolutions #
 
 ## Recently added/changed ##
-1. **Build 2.0.460 on iOS**
-
-	If the most recent build is not yet available in the App Store, the update will arrive shortly.
-
 1. **Shared apps that connect to on-premises data**
 
 	Any shared app that connects to an on-premises data source won't open properly in a browser. You can open these apps in PowerApps Mobile or PowerApps Studio.
