@@ -58,7 +58,7 @@ To follow this tutorial exactly:
 
 1. Near the left edge of the ribbon, type **Schedule** under **Table Name**, and then save your changes.
 
-	For more information, see [Format Excel data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370).
+	For more information, see [Format Excel data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
 4. Copy the Excel file to your cloud-storage account.
 

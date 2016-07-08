@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Overview of the SharePoint Online connection | Microsoft PowerApps"
-	description="See the available SharePoint Online functions, responses, and examples"
+	description="See the available functions, responses, and examples for SharePoint Online"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
@@ -18,118 +18,86 @@ ms.workload="na"
 ms.date="06/18/2016"
 ms.author="anneta"/>
 
-# Connect to SharePoint Online in PowerApps
+# Connect from Microsoft PowerApps to SharePoint Online #
 
 ![SharePoint Online](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to SharePoint Online, and then create an app in which users can show, create, and update items in a custom list. If you specify the name of the site and then select the list, PowerApps can automatically create an app with three screens: one each for browsing items, showing details, and creating or updating items.
+Connect to a SharePoint Online site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
 
-**Prerequisites**
+## Known issues ##
+You can add data from a list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
 
-- Learn how to [add and configure controls](add-configure-controls.md).
-- Identify or create a custom list in SharePoint Online that contains only [supported columns](connection-sharepoint-online.md#known-issues).
+| Column type | Support | Default cards |
+|---|---|----|
+| Single line of text | Yes | View text |
+| Multiple lines of text | Yes | View text |
+| Choice | Yes (read-only) | View lookup |
+| Number | Yes | View percentage<br>View rating<br>View text |
+| Currency | Yes | View percentage<br>View rating<br>View text
+| Date and Time | Yes | View text |
+| Lookup | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Boolean (Yes/No) | Yes | View text<br>View toggle |
+| Person or Group | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Hyperlink | Yes | View URL<br>View text |
+| Picture | Yes (read-only) | View image<br>View text |
+| Calculated | Yes (read-only) |   |
+| Task Outcome | No |  |
+| External data | No |  |
+| Managed Metadata | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
 
-For simplicity, the list in this topic contains only a couple of columns and a few entries, but your list can be much more complicated.
+Moreover, PowerApps doesn't support columns that support multiple values or selections.
 
-![List of columns](./media/connection-sharepoint-online/column-list.png)
+- For Lookup columns, the **Allow multiple values** checkbox must be cleared.
 
-The Title column is set to show single lines of text, and the ShipDate column is set to show dates.
+	![Check box to allow multiple values in a Lookup column](./media/connection-sharepoint-online/lookup.png)
 
-## Create an app automatically ##
-1. Open PowerApps, and then click or tap **New** in the **File** menu (along the left edge).
+- For Managed Metadata columns, the **Allow multiple values** checkbox must be cleared.
 
-	![New option on the File menu](./media/connection-sharepoint-online/file-new.png)
+	![Check box to allow multiple values in a Managed Metadata column](./media/connection-sharepoint-online/metadata.png)
 
-1. In the **SharePoint Online** tile, click or tap **Phone layout**.
+- For Person or Group columns, the **No** option under **Allow multiple selections** must be selected.
 
-	![Phone layout for SharePoint Online](./media/connection-sharepoint-online/phone-layout.png)
+	![Options to allow multiple selections for a Person or Group column](./media/connection-sharepoint-online/person-group.png)
 
-1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
+- For Choice columns, the **Drop-Down Menu** or **Radio Buttons** option under **Display choices using** must be selected.
 
-	**Note**: Don't include a specific list in the URL.
+	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
-1. Under **Choose a list**, click or tap the name of the list that you want to use.
+## Connect to SharePoint Online ##
+### When PowerApps creates an app for you ###
+For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
-	In the search box, you can type or paste at least one letter to show only those lists whose names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
+### When you update an app or build one from scratch ###
+1. Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint Online** in the list of connectors.
 
-	![Filter or sort lists](./media/connection-sharepoint-online/filter-sort-lists.png)
+1. Click or tap **Connect**.
 
-1. Click or tap **Connect** to automatically create your app.
+	![Connect to SharePoint Online](./media/connection-sharepoint-online/sp-connect.png)
 
-## Customize the app ##
-1. If the default layout of **BrowseScreen1** doesn't show types of the information that you want, click or tap a different option in the **Layout** tab of the right-hand pane.
+1. Under **Connect to a SharePoint site**, click or tap an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then click or tap **Go**.
 
-	![Change layout](./media/connection-sharepoint-online/change-layout.png)
+	![Select a SharePoint site](./media/connection-sharepoint-online/select-sp-site.png)
 
-1. If a particular control doesn't show the specific column that you want, click or tap it, and then select a different option in the drop-down list in the right-hand pane.
+1. Under **Choose a list**, select the check box for one or more tables that you want to use, and then click or tap **Connect**:  
 
-	![Change column](./media/connection-sharepoint-online/change-column.png)
+	![Select the tables in SharePoint](./media/connection-sharepoint-online/select-sp-tables.png)
 
-1. On **EditScreen1**, swap the positions of cards by clicking or tapping a lower card and then dragging its title bar up (or drag a higher card down).
+	The data sources are added to your app.
 
-	![Reorder cards](./media/connection-sharepoint-online/reorder-cards.png)
+	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
 
-## Customize a card ##
-1. Click or tap the **ShipDate** card, and then set its **Height** property to **185**.
+### When you open powerapps.com ###
+1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
 
-1. With the the **ShipDate** card still selected, click or tap its ellipsis icon in the right-hand pane, and then click or tap **Advanced options**.
+	![Connections Manage](./media/connection-sharepoint-online/manage-connections.png)
 
-	![Open Advanced options](./media/connection-sharepoint-online/advanced-options.png)
+1. In the upper-right corner, click or tap **New connection**, and then click or tap **SharePoint Online** in the list of connectors.
 
-1. At the top of the right-hand pane, click or tap the lock icon to unlock the card.
+1. In the dialog box that appears, click or tap **Add connection**.
 
-	![Unlock a card](./media/connection-sharepoint-online/lock-icon.png)
+	![Add SharePoint connection](./media/connection-sharepoint-online/add-sharepoint.png)
 
-1. In the card, delete the **Input text** control, add a **DatePicker** control, and name the new control **dpShip**.
-
-	![Replace Text input with DatePicker](./media/connection-sharepoint-online/add-datepicker.png)
-
-1.  In the right-hand pane, set the **Update** property of the **ShipDate** card to this formula:<br>
-**dpShip.SelectedDate**
-
-	**Note**: If the **Update** property doesn't appear, click or tap the down arrow at the bottom of the **Data** section.
-
-	![Set the Update property](./media/connection-sharepoint-online/set-update.png)
-
-1. In the list of controls at the top of the right-hand pane, click or tap **ErrorMessage1**, and set its **Height** property to this formula:<br>
-**dpShip.Y + dpShip.Height**
-
-## Update an entry ##
-1. Click or tap **BrowseScreen1** in the left navigation bar, and then open Preview mode by pressing F5.
-
-	 You can also open Preview mode by clicking or tapping the play button near the upper-right corner.
-
-1. Click or tap the arrow for any item in the list.
-
-	![Show details](./media/connection-sharepoint-online/show-details.png)
-
-1. Click or tap the pencil icon in the upper-right corner to edit the item.
-
-	![Pencil icon](./media/connection-sharepoint-online/pencil-icon.png)
-
-1. In the **DatePicker** control, click or tap a different date, click or tap **OK**, and then click or tap the checkmark icon in the upper-right corner to save your changes.
-
-	![Checkmark icon](./media/connection-sharepoint-online/checkmark-icon.png)
-
-1. (optional) Verify that your list reflects your change.
-
-## Create an entry ##
-1. On **DetailScreen1**, return to **BrowseScreen1** by clicking or tapping the back arrow in the upper-left corner.
-
-	![Back arrow](./media/connection-sharepoint-online/back-arrow.png)
-
-1. On **BrowseScreen1**, click or tap the plus icon in the upper-right corner.
-
-	![Plus icon](./media/connection-sharepoint-online/plus-icon.png)
-
-1. Provide data for the new entry, and then click or tap the checkmark icon in the upper-right corner to save your changes.
-
-	![Checkmark icon](./media/connection-sharepoint-online/checkmark-icon.png)
-
-1. (optional) Verify that your list reflects your change.
-
-## View the available functions
-
+## View the available functions ##
 This connection includes the following functions:
 
 | Function Name |  Description |
@@ -429,7 +397,7 @@ Extract folder: Used for extracting a folder on Document Library
 |FileLocator|string|No | |
 -->
 
-### GetOnNewItems
+### GetOnNewItems ###
 When a new item is created: When a new item is created in a SharePoint list
 
 #### Input properties
@@ -450,7 +418,7 @@ When a new item is created: When a new item is created in a SharePoint list
 |value|array|No | |
 
 
-### GetOnUpdatedItems
+### GetOnUpdatedItems ###
 When an existing item is modified: When an existing item is modified in a SharePoint list
 
 #### Input properties
@@ -471,7 +439,7 @@ When an existing item is modified: When an existing item is modified in a ShareP
 |value|array|No | |
 
 
-### GetItems
+### GetItems ###
 Get items: Retrieves items from a SharePoint list
 
 #### Input properties
@@ -492,7 +460,7 @@ Get items: Retrieves items from a SharePoint list
 |value|array|No | |
 
 
-### PostItem
+### PostItem ###
 Create item: Creates a new item in a SharePoint list
 
 #### Input properties
@@ -510,7 +478,7 @@ Create item: Creates a new item in a SharePoint list
 |ItemInternalId|string|No |
 
 
-### GetItem
+### GetItem ###
 Get item: Retrieves a single item from a SharePoint list
 
 #### Input properties
@@ -528,7 +496,7 @@ Get item: Retrieves a single item from a SharePoint list
 |ItemInternalId|string|No |
 
 
-### DeleteItem
+### DeleteItem ###
 Delete item: Deletes an item from a SharePoint list
 
 #### Input properties
@@ -543,7 +511,7 @@ Delete item: Deletes an item from a SharePoint list
 None.
 
 
-### PatchItem
+### PatchItem ###
 Update item: Updates an item in a SharePoint list
 
 #### Input properties
@@ -561,7 +529,7 @@ Update item: Updates an item in a SharePoint list
 |---|---|---|---|
 |ItemInternalId|string|No |
 
-### GetColumnValues
+### GetColumnValues ###
 Get column values: Retrieves possible values for a SharePoint column
 
 #### Input properties
@@ -577,7 +545,7 @@ Get column values: Retrieves possible values for a SharePoint column
 None.
 
 
-### GetTables
+### GetTables ###
 Get lists: Retrieves SharePoint lists from a site
 
 #### Input properties
@@ -592,49 +560,8 @@ Get lists: Retrieves SharePoint lists from a site
 |---|---|---|---|
 |value|array|No | |
 
-## Known issues ##
 
-You can add data from a list but not a library.
-
-Not all types of columns are supported, and not all types of columns support all types of cards.
-
-| Column type | Support | Default cards |
-|---|---|----|
-| Single line of text | Yes | View text |
-| Multiple lines of text | Yes | View text |
-| Choice | Yes (read-only) | View lookup |
-| Number | Yes | View percentage<br>View rating<br>View text |
-| Currency | Yes | View percentage<br>View rating<br>View text
-| Date and Time | Yes | View text |
-| Lookup | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
-| Boolean (Yes/No) | Yes | View text<br>View toggle |
-| Person or Group | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
-| Hyperlink | Yes | View URL<br>View text |
-| Picture | Yes (read-only) | View image<br>View text |
-| Calculated | Yes (read-only) |   |
-| Task Outcome | No |  |
-| External data | No |  |
-| Managed Metadata | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
-
-PowerApps doesn't support columns that support multiple values or selections.
-
-- For Lookup columns, the **Allow multiple values** checkbox must be cleared.
-
-	![Check box to allow multiple values in a Lookup column](./media/connection-sharepoint-online/lookup.png)
-
-- For Managed Metadata columns, the **Allow multiple values** checkbox must be cleared.
-
-	![Check box to allow multiple values in a Managed Metadata column](./media/connection-sharepoint-online/metadata.png)
-
-- For Person or Group columns, the **No** option under **Allow multiple selections** must be selected.
-
-	![Options to allow multiple selections for a Person or Group column](./media/connection-sharepoint-online/person-group.png)
-
-- For Choice columns, the **Drop-Down Menu** or **Radio Buttons** option under **Display choices using** must be selected.
-
-	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
-
-### Helpful links
-
-See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.
+## Next steps ##
+- Learn how to [show data from a data source](../add-gallery.md).
+- Learn how to [view details and create or update records](../add-form.md).
+- See other types of [data sources](../connections-list.md) to which you can connect.  
