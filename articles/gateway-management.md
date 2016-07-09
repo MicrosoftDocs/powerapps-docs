@@ -34,7 +34,7 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 
 1. If you don't have administrative permissions for a gateway, click or tap **Install a gateway now** (or **New Gateway** in the upper-right corner), and then follow the prompts in the wizard that appears.
 
-   ![Gateways Install](./media/gateway-management/no-gateway-installed.png)
+	![Gateways Install](./media/gateway-management/no-gateway-installed.png)
 
 	For details about how to install a gateway, see [Understand gateways](gateway-reference.md).
 
