@@ -41,8 +41,11 @@ Related considerations:
 - You shouldn't install a gateway on a computer, such a laptop, that may be turned off, asleep, or not connected to the Internet because the gateway can't run under any of those circumstances. In addition, gateway performance might suffer over a wireless network.
 
 **Install a gateway**
+1. [Download the installer](http://go.microsoft.com/fwlink/?LinkID=820931), and then run it.
 
-1. On the first screen of the wizard to install a gateway, click or tap **Next** to acknowledge the reminder about installing a gateway on a laptop.
+	![Run the installer](./media/gateway-reference/run-installer.png)
+
+1. On the first screen of the installation wizard, click or tap **Next** to acknowledge the reminder about installing a gateway on a laptop.
 
 	![Reminder screen](./media/gateway-reference/laptop-reminder.png)
 
