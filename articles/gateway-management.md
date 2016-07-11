@@ -30,11 +30,11 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 ## Install a gateway ##
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, and then click or tap **Gateways**.
 
-   ![Gateways under Manage section](./media/gateway-management/manage-gateway.png)
+	![Gateways under Manage section](./media/gateway-management/manage-gateway.png)
 
-1. If you don't have administrative permissions for a gateway, click or tap **Install a gateway now** (or **New Gateway** in the upper-right corner), and then follow the prompts in the wizard that appears.
+1. If you don't have administrative permissions for a gateway, click or tap [Install a gateway now](http://go.microsoft.com/fwlink/?LinkID=820931) (or **New Gateway** in the upper-right corner), and then follow the prompts in the wizard that appears.
 
-   ![Gateways Install](./media/gateway-management/no-gateway-installed.png)
+	![Gateways Install](./media/gateway-management/no-gateway-installed.png)
 
 	For details about how to install a gateway, see [Understand gateways](gateway-reference.md).
 
