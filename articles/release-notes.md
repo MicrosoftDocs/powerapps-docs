@@ -28,10 +28,6 @@ For information about known limitations in this release, see [Common issues and 
 
 	You can run apps in the most recent version of the Mozilla Firefox browser.
 
-1. **Sharing apps with users of Android devices**.
-
-	If you [share an app](share-app.md) with one or more users who have installed PowerApps Mobile on Android devices, those users will receive push notifications on those devices.
-
 1. **SharePoint Update control**.
 
 	This control has been deprecated in favor of the **[Edit Form](add-form.md)** control. An app that contains the **SharePoint Update** control will still open, but the control itself will no longer appear.

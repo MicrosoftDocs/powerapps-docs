@@ -42,7 +42,11 @@ Related considerations:
 
 **Install a gateway**
 
-1. On the first screen of the wizard to install a gateway, click or tap **Next** to acknowledge the reminder about installing a gateway on a laptop.
+1. [Download the installer](http://go.microsoft.com/fwlink/?LinkID=820931), and then run it.
+
+	![Run the installer](./media/gateway-reference/run-installer.png)
+
+1. On the first screen of the installation wizard, click or tap **Next** to acknowledge the reminder about installing a gateway on a laptop.
 
 	![Reminder screen](./media/gateway-reference/laptop-reminder.png)
 
