@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="gregli-msft"
+    authors="aftowen"
     manager="erikre"
     editor=""
     tags=""/>
@@ -14,8 +14,8 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/15/2016"
-    ms.author="gregli"/>
+    ms.date="07/13/2016"
+    ms.author="anneta"/>
 
 # What's new for PowerApps release 2.0.470 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
@@ -26,12 +26,12 @@ For information about known limitations in this release, see [Common issues and 
 
 	- on-premises SharePoint sites
 	- Azure Mobile Services
-	- REST
+	- REST services that weren't created by using a WADL file
 	- RSS
 
-	If you edit the app, an error icon will appear for any rule that refers to the deprecated data source. To resolve the error, update the rule to refer to a supported data source.
+	If you open the app for editing, an error icon will notify you which control or controls have properties that refer to a deprecated data source.
 
-# Release 2.0.460 #
+## Release 2.0.460 ##
 1. **On-premises data**.
 
 	Show and manage data in an on-premises SQL Server database by using an [on-premises data gateway](gateway-management.md).
