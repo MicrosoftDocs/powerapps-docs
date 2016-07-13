@@ -17,9 +17,21 @@
     ms.date="06/15/2016"
     ms.author="gregli"/>
 
-# What's new for PowerApps release 2.0.460 #
+# What's new for PowerApps release 2.0.470 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+1. **Deprecated data sources from Project Siena**.
+
+	If you created or updated an app in the beta 4 release of Project Siena to include data from any of these sources, that data will no longer appear if you run or edit the app in PowerApps:
+
+	- on-premises SharePoint sites
+	- Azure Mobile Services
+	- REST
+	- RSS
+
+	If you edit the app, an error icon will appear for any rule that refers to the deprecated data source. To resolve the error, update the rule to refer to a supported data source.
+
+# Release 2.0.460 #
 1. **On-premises data**.
 
 	Show and manage data in an on-premises SQL Server database by using an [on-premises data gateway](gateway-management.md).
