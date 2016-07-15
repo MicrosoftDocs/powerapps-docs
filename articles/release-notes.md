@@ -22,7 +22,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **Dates and times when you create an app automatically**.
 
-	If you create an app automatically from a data source that includes date information, users can specify dates by using a **DatePicker** control by default on **EditScreen1**. If the source includes date-time information, users can also specify times by using **Drop down** controls.
+	If you create an app automatically from a data source that includes date information, the app will show that information on **EditScreen1** in a **DatePicker** control by default. If the source also includes time information, it will appear in **Drop down** controls.
 
 1. **Deprecated data sources from Project Siena**.
 
