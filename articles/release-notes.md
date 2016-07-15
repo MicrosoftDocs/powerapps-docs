@@ -20,6 +20,10 @@
 # What's new for PowerApps release 2.0.470 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+1. **Dates and times when you create an app automatically**.
+
+	If you create an app automatically from a data source that includes date information, the app will show that information on **EditScreen1** in a **DatePicker** control by default. If the source also includes time information, it will appear in **Drop down** controls.
+
 1. **Deprecated data sources from Project Siena**.
 
 	If you created or updated an app in the beta 4 release of Project Siena to include data from any of these sources, that data will no longer appear if you run or edit the app in PowerApps:
