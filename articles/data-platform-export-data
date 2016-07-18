@@ -17,6 +17,7 @@
    ms.date="04/19/2016"
    ms.author="robinr"/>
 
+#Export a table
 
 You can export data from a single or multiple standard or custom tables at a time. One Microsoft Excel file is created for each single standard or custom table. 
 To export data:
