@@ -1,0 +1,33 @@
+<properties
+	pageTitle="Export Data | Microsoft PowerApps"
+	description="Export a table from the PowerApps data platform"
+	services="powerapps"
+	documentationCenter="na"
+	authors="robinr"
+	manager="erikre"
+	editor=""
+	tags=""/>
+
+<tags
+   ms.service="powerapps"
+   ms.devlang="na"
+   ms.topic="article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="04/19/2016"
+   ms.author="robinr"/>
+
+#Export a table
+
+You can export data from a single or multiple standard or custom tables at a time. One Microsoft Excel file is created for each single standard or custom table. 
+To export data:
+1. Sign in to PowerApps portal with your organization's account.
+2. Click the **Manage** tab on the left hand navigation pane. Click **Tables** to navigate to the table management page.
+3. Click the ellipsis next to **New Table**.
+4. Click **Export data**.
+5. Select the tables that you want to export data from.
+6. Click **Export** to complete the data export process.
+7. The message **Export Completed** appears when the export is complete.
+8. Click **Download exported data** to download the exported data to a file.
+ 
+
