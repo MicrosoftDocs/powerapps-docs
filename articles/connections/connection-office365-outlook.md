@@ -22,123 +22,84 @@
 
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
 
-If you connect to Office 365 Outlook, you can show, send, delete, and reply to email messages, in addition to other tasks.
+Show, send, delete, and reply to email messages, and show calendar and contact information through a connection to Office 365 Outlook. For example, add **Input text** controls so that users can specify the recipient, the subject, and the body of a message. Add a button that sends the message when the user clicks or taps it.
 
-You can add controls, including buttons and text boxes, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the recipient, the subject, and the body of the email. Then, add a Send button that sends the email.
+**Important**: As of this writing, you can show but not add meetings.
 
-This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
+**Prerequisites**
 
-**Important**: As of this writing, the functions for calendar and contacts aren't supported.
+- Learn how to [add and configure controls](add-configure-controls.md)
+- [Add a connection](add-data-connection.md) to Office 365 Outlook.
 
-&nbsp;
+## Show messages ##
 
-[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+1. Add a **[Text gallery](../controls/control-gallery.md)** control, name it **MessageList**, and set its **[Items](../controls/properties-core.md)** property to this formula:
+<br>**Office365.GetEmails({fetchOnlyUnread:false})**
 
-## Connect to Office 365
-1.  Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
+	Your email messages appear in the control.
 
-	![Open a blank app](./media/connection-office365-outlook/blank-app.png)
+1. In **MessageList**, set the **[Text](../controls/properties-core.md)** property of each text box to one of these values:
 
-2. In the right-hand pane, open the **Data sources** tab, and then select **Add data source**.
+	- **ThisItem.From**
+	- **ThisItem.Subject**
+	- **ThisItem.Body**
 
-3. Select **Add connection**, and then select **Office 365 Outlook**:  
+1. (optional) Specify the number and kinds of messages to show by setting the **[Items](../controls/properties-core.md)** property of **MessageList** to any of these formulas:
 
-	![Connect to Office 365](./media/connection-office365-outlook/addconnection.png)
+	- **Office365.GetEmails({fetchOnlyUnread:false})**
+	- **Office365.GetEmails({fetchOnlyUnread:false, top:2})**
+	- **Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2})**
+	- **Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2, searchQuery:"powerapps"})**
+	- **Office365.GetEmails({folderPath:"Deleted Items", fetchOnlyUnread:false, top:2, skip:3})**
 
-	![Connect to Office 365](./media/connection-office365-outlook/add-office.png)
+## Send a message ##
 
-4. Select **Connect**, and if prompted to sign in, enter your work account. Your connection is listed under **Data sources**. If it's not listed, select **Add Data Source**, and select **Office 365 Users**.
-
-The Office 365 Outlook connection has been created, and added to your app. Now, it's ready to be used.
-
-
-## Use the Office 365 Outlook connection in your app
-
-### Show email
-
-1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control.
-
-2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
-
-	`Office365.GetEmails({fetchOnlyUnread:false})`
-
-	The gallery control is automatically populated with some of your emails.
-
-3. In the gallery, set the **Text** property of the first text box to `ThisItem.From`. Set the second text box to `ThisItem.Subject`. Set the third text box to `ThisItem.Body`. You can also resize the text boxes.
-
-	The gallery control is automatically populated with the new properties.
-
-4. This function has several optional parameters available. Set the gallery's **Items** property to one of the following formulas:
-
-	`Office365.GetEmails({fetchOnlyUnread:false})`  
-	`Office365.GetEmails({fetchOnlyUnread:false, top:2})`  
-	`Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2})`  
-	`Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2, searchQuery:"powerapps"})`  
-	`Office365.GetEmails({folderPath:"Deleted Items", fetchOnlyUnread:false, top:2, skip:3})`
-
-
-### Send email
-
-1. On the **Insert** menu, select **Text**, and then select **Text input**. Do this three times to create three different text input controls. Arrange them in a column:  
+1. Add three **[Text input](../controls/control-text-input.md)** controls, and arrange them in a column:  
 
 	![](./media/connection-office365-outlook/threetextinput.png)
 
-2. Rename them to:  
+2. Give each control one of these names:  
 
 	- **inputTo**
 	- **inputSubject**
 	- **inputBody**
 
-3. On the **Insert** menu, select **Controls**, and then select **Button**. Set its **[OnSelect](../controls/properties-core.md)** property to the following formula:  
+1. Add a **[Button](../controls/control-text-input.md)** control, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+<br>**Office365.SendEmail(inputSubject.Text, inputBody.Text, inputTo.Text)**
 
-	`Office365.SendEmail(inputSubject.Text, inputBody.Text, inputTo.Text)`
+1. Move the button so that it appears under all the other controls, and set its **[Text](../controls/properties-core.md)** property to **"Send email"**.
 
-4. Move the button so that it appears under all the other controls, and set its **[Text](../controls/properties-core.md)** property to **"Send email"**.
+1. Open Preview mode by pressing F5 or clicking or tapping the Preview button (![](./media/connection-office365-outlook/preview.png)).
 
-5. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Type in a valid email address in **inputTo**, and type whatever you want in the other two Text input controls.
+1. In **inputTo**, type a valid email address, and type whatever you want in the other two **Text input** controls.
 
-6. Select **Send email** to send the message. Press Esc to return to the default workspace.
+1. Click or tap **Send email** to send the message, and then press Esc to return to the default workspace.
 
+## Delete a message ##
+1. Follow the steps in [Show messages](connection-office-365-outlook.md#show-messages).
 
+1. In **MessageList**, rename the first **Text box** control **EmailID**.
 
-### Delete email
+1. Select the gallery template by clicking or tapping any message except the first one and then clicking or tapping the pencil icon in the upper-left corner of **MessageList**.
 
-1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control.
+1. With the gallery template selected, add a **Button**, and then set its **OnSelect** property to this formula:  
+<br>**Office365.DeleteEmail(EmailID.Text)**
 
-2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
+1. Open Preview mode by pressing F5 or clicking or tapping the Preview button (![](./media/connection-office365-outlook/preview.png)).
 
-	`Office365.GetEmails({fetchOnlyUnread:false})`
+1. In **MessageList**, click or tap a message that you want to delete, click or tap the button, and then press Esc to return to the default workspace.
 
-	The gallery control is automatically populated with some of your emails.
+## Mark a message as read ##
+1. Follow the steps in [Delete a message](connection-office-365-outlook.md#delete-a-message).
 
-3. In the gallery, set the **Text** property of the first text box to `ThisItem.Id`. Set the second text box to `ThisItem.Subject`. Set the third text box to `ThisItem.Body`.
-4. Select the first text box in the gallery, and rename it to **EmailID**:
+1. Set the button's **OnSelect** property to this formula:
+<br>**Office365.MarkAsRead(EmailID.Text)**
 
-	![Close the Options pane](./media/connection-office365-outlook/renameheading.png)
+1. Open Preview mode by pressing F5 or clicking or tapping the Preview button (![](./media/connection-office365-outlook/preview.png)).
 
-5. Select the third text box in the gallery, and add a **Button** (**Insert** menu). Set the button's **OnSelect** property to the following formula:  
+1. Select an unread message, click or tap the button, and then press Esc to return to the default workspace.
 
-	`Office365.DeleteEmail(EmailID.Text)`
-
-5. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and click the button. <br/><br/> **NOTE** This deletes the selected email from your inbox. So, choose wisely.
-
-6. Press Esc to return to the default workspace.
-
-### Mark email as read
-
-This section uses the same controls as [Delete email](connection-office365-outlook.md#delete-email).
-
-1. Set the button's **OnSelect** property to the following formula:  
-
-	`Office365.MarkAsRead(EmailID.Text)`
-
-2. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the  unread emails, and click the button.
-
-3. Press Esc to return to the default workspace.
-
-
-## View the available functions
-
+## View the available functions ##
 This connection includes the following functions:
 
 | Function Name |  Description |
@@ -152,6 +113,20 @@ This connection includes the following functions:
 |[OnNewEmail](connection-office365-outlook.md#onnewemail) | Triggers a flow when a new email arrives   |
 |[SendMailWithOptions](connection-office365-outlook.md#sendmailwithoptions) | Send an email with multiple options and wait for the recipient to respond back with one of the options.   |
 |[SendApprovalMail](connection-office365-outlook.md#sendapprovalmail) | Send an approval email and wait for a response from the To recipient.   |
+|[CalendarGetTables](connection-office365-outlook.md#calendargettables) | Retrieves calendars  |
+|[CalendarGetItems](connection-office365-outlook.md#calendargetitems) |  Retrieves items from a calendar  |
+|[CalendarPostItem](connection-office365-outlook.md#calendarpostitem) | Creates a new event   |
+|[CalendarGetItem](connection-office365-outlook.md#calendargetitem) |  Retrieves a specific item from a calendar  |
+|[CalendarDeleteItem](connection-office365-outlook.md#calendardeleteitem) | Deletes a calendar item   |
+|[CalendarPatchItem](connection-office365-outlook.md#calendarpatchitem) | Partially updates a calendar item   |
+|[CalendarGetOnNewItems](connection-office365-outlook.md#calendargetonnewitems) |  Triggered when a new calendar item is created  |
+|[CalendarGetOnUpdatedItems](connection-office365-outlook.md#calendargetonupdateditems) |  Triggered when a calendar item is modified  |
+|[ContactGetTables](connection-office365-outlook.md#contactgettables) | Retrieves contacts folders   |
+|[ContactGetItems](connection-office365-outlook.md#contactgetitems) | Retrieves contacts from a contacts folder   |
+|[ContactPostItem](connection-office365-outlook.md#contactpostitem) | Creates a new contact   |
+|[ContactGetItem](connection-office365-outlook.md#contactgetitem) | Retrieves a specific contact from a contacts folder   |
+|[ContactDeleteItem](connection-office365-outlook.md#contactdeleteitem) |  Deletes a contact  |
+|[ContactPatchItem](connection-office365-outlook.md#contactpatchitem) | Partially updates a contact   |
 
 ### GetEmails
 Get emails: Retrieves emails from a folder
@@ -174,8 +149,6 @@ Get emails: Retrieves emails from a folder
 |---|---|---|---|
 |value|array|yes |Receive email messages that can include the following properties: <ul><li>From (optional)</li><li>To (required)</li><li>Subject (required)</li><li>Body (required)</li><li>Importance (optional): "Low", "Normal", or "High"</li><li>HasAttachment (optional)</li><li>Id (optional)</li><li>IsRead (optional)</li><li>DateTimeReceived (optional)</li><li>Attachments (optional): Receive an attachment. Attachment properties include Id (required), ContentType (required), Name (required), ContentBytes (required).</li><li>Cc (optional)</li><li>Bcc (optional)</li><li>IsHtml (optional)</li></ul> |
 
-
-
 ### SendEmail
 Send Email: Sends an email message
 
@@ -187,7 +160,6 @@ Send Email: Sends an email message
 
 #### Output properties
 None.
-
 
 ### DeleteEmail
 Delete email: Deletes an email message by id
@@ -201,7 +173,6 @@ Delete email: Deletes an email message by id
 #### Output properties
 None.
 
-
 ### MarkAsRead
 Mark as read: Marks an email message as having been read
 
@@ -213,7 +184,6 @@ Mark as read: Marks an email message as having been read
 
 #### Output properties
 None.
-
 
 ### ReplyTo
 Reply to message: Replies to an email message
@@ -229,7 +199,6 @@ Reply to message: Replies to an email message
 #### Output properties
 None.
 
-
 ### GetAttachment
 Get attachment: Retrieves message attachment by id
 
@@ -242,7 +211,6 @@ Get attachment: Retrieves message attachment by id
 
 #### Output properties
 None.
-
 
 ### OnNewEmail
 On new email: Triggers a flow when a new email arrives
@@ -265,7 +233,6 @@ On new email: Triggers a flow when a new email arrives
 |---|---|---|---|
 |value|array|No | |
 
-
 ### SendMailWithOptions
 Send email with options: Send an email with multiple options and wait for the recipient to respond back with one of the options.
 
@@ -275,7 +242,6 @@ Send email with options: Send an email with multiple options and wait for the re
 | ---|---|---|---|
 |optionsEmailSubscription| |yes|Subscription Request for Email options, including:  <ul><li>NotificationUrl (optional)</li><li>Message (optional)</li></ul> |
 
-
 #### Output properties
 
 | Property Name | Data Type | Required | Description |
@@ -284,7 +250,6 @@ Send email with options: Send an email with multiple options and wait for the re
 |resource|string|No | |
 |notificationType|string|No | |
 |notificationUrl|string|No | |
-
 
 ### SendApprovalMail
 Send approval email: Send an approval email and wait for a response from the To recipient.
@@ -304,6 +269,226 @@ Send approval email: Send an approval email and wait for a response from the To 
 |notificationType|string|No | |
 |notificationUrl|string|No | |
 
+### CalendarGetTables
+Get calendars: Retrieves calendars
+
+#### Input properties
+None.
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description |
+|---|---|---|---|
+|value|array|No | |
+
+### CalendarGetItems
+Get events: Retrieves items from a calendar
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of the calendar to retrieve|
+|$skip|integer|no|Number of entries to skip (default = 0)|
+|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
+|$filter|string|no|An ODATA filter query to restrict the number of entries|
+|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description |
+|---|---|---|---|
+|value|array|No | |
+
+### CalendarPostItem
+Create event: Creates a new event
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a calendar|
+|item| |yes|Calendar item to create. You can optionally pass in the ItemInternalId. |
+
+#### Output properties
+| Property Name | Data Type | Required | Description |
+|---|---|---|---|
+|ItemInternalId|string|No |Represents a calendar table item |
+
+### CalendarGetItem
+Get event: Retrieves a specific item from a calendar
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a calendar|
+|id|string|yes|Unique identifier of a calendar item to retrieve|
+
+#### Output properties
+| Property Name | Data Type | Required | Description |
+|---|---|---|---|
+|ItemInternalId|string|No |Represents a calendar table item |
+
+### CalendarDeleteItem
+Delete event: Deletes a calendar item
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a calendar.|
+|id|string|yes|Unique identifier of calendar item to delete|
+
+#### Output properties
+None.
+
+### CalendarPatchItem
+Update event: Partially updates a calendar item
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a calendar|
+|id|string|yes|Unique identifier of calendar item to update|
+|item| |yes|Calendar item to update|
+
+#### Output properties
+| Property Name | Data Type | Required | Description |
+|---|---|---|---|
+|ItemInternalId|string|No | |
+
+### CalendarGetOnNewItems
+On new items: Triggered when a new calendar item is created
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a calendar|
+|$skip|integer|no|Number of entries to skip (default = 0)|
+|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
+|$filter|string|no|An ODATA filter query to restrict the number of entries|
+|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description|
+| ---|---|---|---|
+|value|array|No | |
+
+### CalendarGetOnUpdatedItems
+On updated items: Triggered when a calendar item is modified
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a calendar|
+|$skip|integer|no|Number of entries to skip (default = 0)|
+|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
+|$filter|string|no|An ODATA filter query to restrict the number of entries|
+|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description|
+| ---|---|---|---|
+|value|array|No | |
+
+### ContactGetTables
+Get contact folders: Retrieves contacts folders
+
+#### Input properties
+None.
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description|
+| ---|---|---|---|
+|value|array|No | |
+
+### ContactGetItems
+Get contacts: Retrieves contacts from a contacts folder
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of the contacts folder to retrieve|
+|$skip|integer|no|Number of entries to skip (default = 0)|
+|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
+|$filter|string|no|An ODATA filter query to restrict the number of entries|
+|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description|
+| ---|---|---|---|
+|value|array|No | |
+
+### ContactPostItem
+Create contact: Creates a new contact
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a contacts folder|
+|item| |yes|Contact to create|
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description|
+| ---|---|---|---|
+|ItemInternalId|string|No | |
+
+### ContactGetItem
+Get contact: Retrieves a specific contact from a contacts folder
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a contacts folder|
+|id|string|yes|Unique identifier of a contact to retrieve|
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description|
+| ---|---|---|---|
+|ItemInternalId|string|No | |
+
+### ContactDeleteItem
+Delete contact: Deletes a contact
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a contacts folder.|
+|id|string|yes|Unique identifier of contact to delete|
+
+#### Output properties
+None.
+
+### ContactPatchItem
+Update contact: Partially updates a contact
+
+#### Input properties
+
+| Name| Data Type|Required|Description|
+| ---|---|---|---|
+|table|string|yes|Unique identifier of a contacts folder|
+|id|string|yes|Unique identifier of contact to update|
+|item| |yes|Contact item to update|
+
+#### Output properties
+
+| Property Name | Data Type | Required | Description|
+| ---|---|---|---|
+|ItemInternalId|string|No | |
 
 ## Helpful links
 
