@@ -56,7 +56,7 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 ### Show email
 
-1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control.
+1. On the **Insert** menu, select **Gallery**, and then select a **Text gallery** control.
 
 2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
 
@@ -91,11 +91,11 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 3. On the **Insert** menu, select **Controls**, and then select **Button**. Set its **[OnSelect](../controls/properties-core.md)** property to the following formula:  
 
-	`Office365.SendEmail(inputSubject.Text, inputBody.Text, inputTo.Text)`
+	`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text)`
 
 4. Move the button so that it appears under all the other controls, and set its **[Text](../controls/properties-core.md)** property to **"Send email"**.
 
-5. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Type in a valid email address in **inputTo**, and type whatever you want in the other two Text input controls.
+5. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Type in a valid email address in **inputTo**, and type whatever you want in the other two **Text input** controls.
 
 6. Select **Send email** to send the message. Press Esc to return to the default workspace.
 
@@ -103,7 +103,7 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 ### Delete email
 
-1. On the **Insert** menu, select **Text**, and then select a **Text gallery** control.
+1. On the **Insert** menu, select **Gallery**, and then select a **Text gallery** control.
 
 2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
 
