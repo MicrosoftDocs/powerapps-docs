@@ -21,10 +21,6 @@
 # Common issues and resolutions #
 
 ## Recently added/changed ##
-1. **Shared apps that connect to on-premises data**
-
-	Any shared app that connects to an on-premises data source won't open properly in a browser. You can open these apps in PowerApps Mobile or PowerApps Studio.
-
 1. **Connections to SQL Server**
 
 	You can connect to an on-premises SQL Server database if you upgrade to build 2.0.460. If you don't upgrade, you can connect to SQL Azure, but you'll be prompted to specify an authentication type. The connection will succeed regardless of whether you specify anything in that field.

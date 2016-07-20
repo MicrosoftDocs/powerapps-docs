@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="jamesol-msft"
-    manager="darshand"
+    manager="erikre"
     editor=""
     tags=""
  />
@@ -20,13 +20,13 @@
 
 # Sign up for PowerApps
 
-This article shows you how to sign up for a PowerApps account. Also checkout out our [Q&A](signup-question-and-answer.md). 
+This article shows you how to sign up for a PowerApps account. Also checkout out our [Q&A](signup-question-and-answer.md).
 
 ## What email addresses can be used with PowerApps ##
 To sign up for PowerApps, enter your work or school email address.
 
 > **NOTE** Currently, consumer email services, telecommunication providers, government, and military addresses are not supported. This includes:  
-> 
+>
 > - outlook.com, hotmail.com, gmail.com, and so on  
 > - .gov and .mil
 
