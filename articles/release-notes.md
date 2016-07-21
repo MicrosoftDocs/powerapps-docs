@@ -24,6 +24,12 @@ For information about known limitations in this release, see [Common issues and 
 
 	If you create an app automatically from a data source that includes date information, the app will show that information on **EditScreen1** in a **DatePicker** control by default. If the source also includes time information, it will appear in **Drop down** controls.
 
+1. **New sample apps and templates**.
+
+	You can open a sample app that demonstrates a scenario such as showcasing products, measuring employee engagement, and choosing a health plan.
+
+1. **Pass parameters while running an app in the browser using a query string**.
+
 1. **Deprecated data sources from Project Siena**.
 
 	If you created or updated an app in the beta 4 release of Project Siena to include data from any of these sources, that data will no longer appear if you run or edit the app in PowerApps:
