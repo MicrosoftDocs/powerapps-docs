@@ -26,7 +26,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **New sample apps and templates**.
 
-	You can open a sample app that demonstrates a scenario such as showcasing products, measuring employee engagement, and choosing a health plan.
+	You can open a sample app that demonstrates a scenario such as showcasing products, surveying employee engagement, checking out assets, and helping a new employee choose a health plan.
 
 1. **Pass parameters while running an app in the browser using a query string**.
 
