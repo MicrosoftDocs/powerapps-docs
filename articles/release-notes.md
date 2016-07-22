@@ -24,7 +24,7 @@ For information about known limitations in this release, see [Common issues and 
 
 	If you create an app automatically from a data source that includes date information, the app will show that information on **EditScreen1** in a **DatePicker** control by default. If the source also includes time information, it will appear in **Drop down** controls.
 
-1. **New sample apps and templates**.
+1. **New sample apps**.
 
 	You can open a sample app that demonstrates a scenario such as showcasing products, surveying employee engagement, checking out assets, and helping a new employee choose a health plan.
 
