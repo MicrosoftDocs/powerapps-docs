@@ -29,78 +29,16 @@ Ready to take it to the next level? Create [custom APIs](register-custom-api.md)
 ## Available connections ##
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |---|---|---|---|
-| ![API Icon](./media/connections-list/servicebusicon.png) | [**Azure Service Bus**](./connections/connection-azure-servicebus.md)<br/>Send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions | ![API Icon][blobicon] | [**Azure Storage Blob**][azureblobdoc]<br/>Manage files in your blob container |
-| ![API Icon][boxicon] | [**Box**][boxDoc]<br/>Upload, get, delete, and list files, among other tasks| ![API Icon][dropboxicon] | [**Dropbox**][dropboxdoc]<br/>Get, delete, and list files, among other tasks |
-| ![API Icon][crmonlineicon] | [**Dynamics CRM Online**][crmonlinedoc]<br/>Do more with your data | ![API Icon][excelicon] | [**Excel**][exceldoc]<br/>Display data in a table, update the file, and more |
-| ![API Icon][facebookicon] | [**Facebook**][facebookdoc]<br/>Post to a timeline, get a page feed, and more| ![API Icon][ftpicon] | [**FTP**][ftpdoc]<br/>Upload and get files among other tasks on an FTP/FTPS server |
-| ![API Icon][githubicon] | [**GitHub**][githubdoc]<br/>Manage your issues | ![API Icon][googledriveicon] | [**Google Drive**][googledrivedoc]<br/>Interact with your data |
-| ![API Icon][mailchimpicon] | [**MailChimp**][mailchimpdoc] <br/>Create campaigns, manage your lists, and more | ![API Icon][microsofttranslatoricon] | [**Microsoft Translator**][microsofttranslatordoc]<br/>Translate text into different languages |
-| ![API Icon][office365icon] | [**Office 365 Outlook**][office365outlookdoc]<br/>Send and receive emails | ![API Icon][office365icon] | [**Office 365 Users**][office365usersdoc]<br/>View profile information, get direct reports, and more |
-| ![API Icon][onedriveicon] | [**OneDrive**][onedrivedoc]<br/>Upload and manage files | ![API Icon][onedriveforbusinessicon] | [**OneDrive for Business**][onedriveforbusinessdoc]<br/>Upload and manage files |
-| ![API Icon][salesforceicon] | [**Salesforce**][salesforcedoc]<br/>Manage accounts, leads, opportunities, and more | ![API Icon][sendgridicon] | [**SendGrid**][sendgriddoc]<br/>Send email and manage recipient lists |
-| ![API Icon][sftpicon] | [**SFTP**][sftpdoc]<br/>Upload, get, and delete files, among other tasks | ![API Icon][sharepointicon] | [**SharePoint Online**][sharepointdoc]<br/>Manage list items |
-| ![API Icon][slackicon] | [**Slack**][slackdoc]<br/>Post messages to Slack channels | ![API Icon][smtpicon] | [**SMTP**][smtpdoc]<br/>Send email with attachments|
-| ![API Icon][sqlicon] | [**SQL Server**][sqldoc]<br/>Create and update data| ![API Icon][twilioicon] | [**Twilio**][twiliodoc]<br/>Send and get messages, get available numbers, and more |
-| ![API Icon][twittericon] | [**Twitter**][twitterdoc]<br/>Get timelines, post tweets, and more |
-
-<!--API Documentation-->
-[azureblobdoc]: ./connections/connection-azure-blob.md "Connect to Azure blob to manage files in your blob container."
-[boxDoc]: ./connections/cloud-storage-blob-connections.md "Connects to Box and display data from an Excel table."
-[boxDoc_original]: ./connections/connection-box.md "Connects to Box and can upload, get, delete, list, and more file tasks."
-[crmonlinedoc]: ./connections/connection-dynamics-crmonline.md "Connect to Dynamics CRM Online and do more with your CRM Online data."
-[dropboxdoc]: ./connections/cloud-storage-blob-connections.md "Connect to Dropbox and display data from an Excel table."
-[dropboxdoc_original]: ./connections/connection-dropbox.md "Connect to Dropbox and can get, delete, list, and more file tasks."
-[exceldoc]: ./connections/connection-excel.md "Connect to Excel."
-[facebookdoc]: ./connections/connection-facebook.md "Connect to Facebook to post to a timeline, get a page feed, and more."
-[ftpdoc]: ./connections/connection-ftp.md "Connects to an FTP / FTPS server and do different FTP tasks, including uploading, getting, deleting files, and more."
-[googledrivedoc]: ./connections/cloud-storage-blob-connections.md "Connect to GoogleDrive and display data from an Excel table."
-[googledrivedoc_original]: ./connections/connection-googledrive.md "Connect to GoogleDrive and interact with your data."
-[githubdoc]: ./connections/connection-github.md "Connect to GitHub to manage your issues."
-[mailchimpdoc]: ./connections/connection-mailchimp.md "Connect to MailChimp to create new campaigns, manage your lists, and more"
-[microsofttranslatordoc]: ./connections/connection-microsoft-translator.md "Connect to Microsoft Translator and translate your text to different languages"
-[office365outlookdoc]: ./connections/connection-office365-outlook.md "The Office 365 Connector can send and receive emails, manage your calendar, and manage your contacts using your Office 365 account."
-[office365usersdoc]: ./connections/connection-office365-users.md "Connect to Office 365 Users to look up manager information, view profiles, and more"
-[office365videodoc]: ./connections/connection-office365-video.md "Connect to Office 365 to check the status of a video, return channels, and more"
-[onedrivedoc]: ./connections/cloud-storage-blob-connections.md "Connects to your personal Microsoft OneDrive and display data from an Excel table."
-[onedrivedoc_original]: ./connections/connection-onedrive.md "Connects to your personal Microsoft OneDrive and upload, list files, and more."
-[onedriveforbusinessdoc]: ./connections/cloud-storage-blob-connections.md "Connects to your Microsoft OneDrive for Business account and display data from an Excel table."
-[onedriveforbusinessdoc_original]: ./connections/connection-onedrive-for-business.md "Connects to your Microsoft OneDrive for Business account to upload, list files, and more."
-[salesforcedoc]: ./connections/connection-salesforce.md "Connect to your Salesforce account and manage  accounts, opportunities, and more."
-[servicebusdoc]: ./connections/connection-azure-servicebus.md "Can send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions."
-[sendgriddoc]: ./connections/connection-sendgrid.md "Connect to SendGrid to send email and manage recipient lists"
-[sharepointdoc]: ./connections/connection-sharepoint-online.md "Connects to SharePoint Online to manage documents and list items."
-[slackdoc]: ./connections/connection-slack.md "Connect to Slack and post messages to Slack channels."
-[sftpdoc]: ./connections/connection-sftp.md "Connects to SFTP and can upload, get, delete files, and more."
-[smtpdoc]: ./connections/connection-smtp.md "Connects to a SMTP server and can send email with attachments."
-[sqldoc]: ./connections/connection-azure-sqldatabase.md "Connects to Azure SQL Database to create, update entries, and more on an Azure SQL database table."
-[twiliodoc]: ./connections/connection-twilio.md "Connects to Twilio and can send and get messages, get available numbers, and more."
-[twitterdoc]: ./connections/connection-twitter.md "Connects to Twitter and get timelines, post tweets, and more."
-[yammerdoc]: ./connectors-create-api-yammer.md "Connects to Yammer to post messages and get new messages."
-
-<!--Icon references-->
-[blobicon]: ./media/connections-list/blobicon.png
-[bingsearchicon]: ./media/connections-list/bingsearchicon.png
-[boxicon]: ./media/connections-list/boxicon.png
-[ftpicon]: ./media/connections-list/ftpicon.png
-[crmonlineicon]: ./media/connections-list/dynamicscrmicon.png
-[dropboxicon]: ./media/connections-list/dropboxicon.png
-[excelicon]: ./media/connections-list/excelicon.png
-[facebookicon]: ./media/connections-list/facebookicon.png
-[googledriveicon]: ./media/connections-list/googledriveicon.png
-[githubicon]: ./media/connections-list/githubicon.png
-[mailchimpicon]: ./media/connections-list/mailchimpicon.png
-[microsofttranslatoricon]: ./media/connections-list/translatoricon.png
-[office365icon]: ./media/connections-list/office365icon.png
-[onedriveicon]: ./media/connections-list/onedriveicon.png
-[onedriveforbusinessicon]: ./media/connections-list/onedriveforbusinessicon.png
-[salesforceicon]: ./media/connections-list/salesforceicon.png
-[servicebusicon]: ./media/connections-list/servicebusicon.png
-[sendgridicon]: ./media/connections-list/sendgridicon.png
-[sftpicon]: ./media/connections-list/sftpicon.png
-[sharepointicon]: ./media/connections-list/sharepointicon.png
-[slackicon]: ./media/connections-list/slackicon.png
-[smtpicon]: ./media/connections-list/smtpicon.png
-[sqlicon]: ./media/connections-list/sqlicon.png
-[twilioicon]: ./media/connections-list/twilioicon.png
-[twittericon]: ./media/connections-list/twittericon.png
-[yammericon]: ./media/connections-list/yammericon.png
+| ![API icon](./media/connections-list/servicebusicon.png) | [**Azure Service Bus**](./connections/connection-azure-servicebus.md)<br/>Send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions | ![API Icon](./media/connections-list/blobicon.png) | [**Azure Storage Blob**](./connections/connection-azure-blob.md)<br/>Manage files in your blob container |
+| ![API Icon](./media/connections-list/boxicon.png) | [**Box**](./connections/cloud-storage-blob-connections.md)<br/>Upload, get, delete, and list files, among other tasks| ![API Icon](./media/connections-list/dropboxicon.png) | [**Dropbox**](./connections/cloud-storage-blob-connections.md)<br/>Get, delete, and list files, among other tasks |
+| ![API Icon](./media/connections-list/dynamicscrmicon.png) | [**Dynamics CRM Online**](./connections/connection-dynamics-crmonline.md)<br/>Do more with your data | ![API Icon](./media/connections-list/excelicon.png) | [**Excel**](./connections/connection-excel.md)<br/>Display data in a table, update the file, and more |
+| ![API Icon](./media/connections-list/facebookicon.png) | [**Facebook**](./connections/connection-facebook.md)<br/>Post to a timeline, get a page feed, and more| ![API Icon](./media/connections-list/ftpicon.png) | [**FTP**](./connections/connection-ftp.md)<br/>Upload and get files among other tasks on an FTP/FTPS server |
+| ![API Icon](./media/connections-list/githubicon.png) | [**GitHub**](./connections/connection-github.md)<br/>Manage your issues | ![API Icon](./media/connections-list/googledriveicon.png) | [**Google Drive**](./connections/cloud-storage-blob-connections.md)<br/>Interact with your data |
+| ![API Icon](./media/connections-list/mailchimpicon.png) | [**MailChimp**](./connections/connection-mailchimp.md)<br/>Create campaigns, manage your lists, and more | ![API Icon](./media/connections-list/translatoricon.png) | [**Microsoft Translator**](./connections/connection-microsoft-translator.md)<br/>Translate text into different languages |
+| ![API Icon](./media/connections-list/office365icon.png) | [**Office 365 Outlook**](./connections/connection-office365-outlook.md)<br/>Send and receive emails | ![API Icon](./media/connections-list/office365icon.png) | [**Office 365 Users**](./connections/connection-office365-users.md)<br/>View profile information, get direct reports, and more |
+| ![API Icon](./media/connections-list/onedriveicon.png) | [**OneDrive**](./connections/cloud-storage-blob-connections.md)<br/>Upload and manage files | ![API Icon](./media/connections-list/onedriveforbusinessicon.png) | [**OneDrive for Business**](./connections/cloud-storage-blob-connections.md)<br/>Upload and manage files |
+| ![API Icon](./media/connections-list/salesforceicon.png) | [**Salesforce**](./connections/connection-salesforce.md)<br/>Manage accounts, leads, opportunities, and more | ![API Icon](./media/connections-list/sendgridicon.png) | [**SendGrid**](./connections/connection-sendgrid.md)<br/>Send email and manage recipient lists |
+| ![API Icon](./media/connections-list/sftpicon.png) | [**SFTP**](./connections/connection-sftp.md)<br/>Upload, get, and delete files, among other tasks | ![API Icon](./media/connections-list/sharepointicon.png) | [**SharePoint Online**](./connections/connection-sharepoint-online.md)<br/>Manage list items |
+| ![API Icon](./media/connections-list/slackicon.png) | [**Slack**](./connections/connection-slack.md)<br/>Post messages to Slack channels | ![API Icon](./media/connections-list/smtpicon.png) | [**SMTP**](./connections/connection-smtp.md)<br/>Send email with attachments|
+| ![API Icon](./media/connections-list/sqlicon.png) | [**SQL Server**](./connections/connection-azure-sqldatabase.md)<br/>Create and update data| ![API Icon](./media/connections-list/twilioicon.png) | [**Twilio**](./connections/connection-twilio.md)<br/>Send and get messages, get available numbers, and more |
+| ![API Icon](./media/connections-list/twittericon.png) | [**Twitter**](./connections/connection-twitter.md)<br/>Get timelines, post tweets, and more |
