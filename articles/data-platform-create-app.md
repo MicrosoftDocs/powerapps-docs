@@ -3,7 +3,7 @@
 	description="Create an app using Microsoft Common Data Model"
 	services="powerapps"
 	documentationCenter="na"
-	authors="guangyang"
+	authors="karthik-1"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -17,41 +17,36 @@
    ms.date="07/21/2016"
    ms.author="karthikb"/>
 
-# Create an app using Microsoft Common Data Model
+# Create an app using Microsoft Common Data Model #
+Create an app to manage data that's stored in Microsoft Common Data Model, using standard entities (which are built in), custom entities (which your organization creates), or both.
 
-Microsoft Common Data Model makes it easy to store data using both standard entities provided by the platform and custom entities created by your organization. After you have the entities you need, using them to create an app is really simple.
+PowerApps can create an app automatically based on an entity that you specify, or you can create an app from scratch that uses one or more entities that you specify.
 
-There are two ways to create an app using entities in the Common Data Model:
+In either case, you don't need to create a connection from PowerApps to Microsoft Common Data Model, as you do with external connections such as SharePoint, Dynamics CRM, and Salesforce. You need only specify the entities or entities that you want to show, manage, or both in the app.
 
-* Create an app from data
-* Create an app from scratch
+**Prerequisites**
 
-Microsoft Common Data Model is enabled automatically as a data connection so that entities can be added as data sources to PowerApps. This is the same experience as external connections such as Microsoft SharePoint Online, Microsoft Dynamics CRM, or Salesforce.
+1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+1. Select **New** on the **File** menu (near the left edge).
 
-## Create app from data
+## Create an app automatically ##
+1. Under **Create an app from your data**, click or tap **Common data model**, and then click or tap the app layout.
 
-The simplest way to create an app using tables takes just a few minutes:
+1. If prompted, click or tap **Create my database**.
 
-1. Open PowerApps Studio and sign in with your organizational account.
-2. Click **New**
-3. Under *Create an app from your data*, select **Common data model** and then click the app layout. Common data model is available to you automatically. No additional sign-in is needed.
-4. If it is the first time you are using the Common data model, you may need to click on **Create my database**
-4. Select the entity you want to use. Click **Connect**.
+1. Click or tap the entity that you want to use, and then click or tap **Connect**.
 
-The standard "create from data" experience will start. For more information, see [Create an app from a set of data](#get-started-create-from-data.md).
+PowerApps automatically creates an app with three screens, as [Create an app from a set of data](#get-started-create-from-data.md) describes.
 
-## Create app from scratch
+## Create app from scratch ##
+1. Under **Create an app**, click or tap **Blank app**.
 
-Starting from scratch gives you the most flexibility:
+1. In the right-hand pane, click or tap **Data sources** to open that tab, and then click or tap **Add data source**.
 
-1. Open PowerApps Studio and sign in with your organizational account.
-2. Click **New** and then select **Blank app** under *Create an app*. This will create an empty app.
-3. Click **Content** and then **Data sources** on the ribbon to open the data sources pane on the right.
-4. Click **Add data source**.
-5. A list of connections appears for you to choose from. Select **Common data model** and then click **Connect**. The platform is available to you automatically. No additional sign-in is needed.
-4. If it is the first time you are using the Common data model, you may need to click on **Create my database**
-6. In the list of entities, select the one or more entities you want to use. Click **Connect** again.
+1. In the list of connections, click or tap **Common data model** and then click or tap **Connect**.
 
-A data source pointing to the selected table will be added to the app. You can then use it with controls and formulas.
+1. If prompted, click or tap **Create my database**.
 
-For more information about in general how to create an app from scratch, see [Create an app from scratch](#get-started-create-from-blank.md).
+1. In the list of entities, select the check box for one or more entities that you want to use, and then click or tap **Connect**.
+
+The entities or entities that you specified appear in the list of data sources, and you can build your app as [Create an app from scratch](#get-started-create-from-blank.md) describes.

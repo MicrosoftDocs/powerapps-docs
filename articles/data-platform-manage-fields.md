@@ -3,7 +3,7 @@
 	description="Create, read, update and delete fields in an entity."
 	services="powerapps"
 	documentationCenter="na"
-	authors="karthikb-1"
+	authors="karthik-1"
 	manager="erikre"
 	editor=""
 	tags=""/>
