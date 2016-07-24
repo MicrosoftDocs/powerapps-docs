@@ -1,9 +1,9 @@
 <properties
 	pageTitle="Entity relationships via lookup field | Microsoft Common Data Model"
-	description="Build relationships between entities using lookup field."
+	description="Build a relationship between entities by using a lookup field."
 	services="powerapps"
 	documentationCenter="na"
-	authors="karthikb"
+	authors="karthik-1"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -17,56 +17,51 @@
    ms.date="07/21/2016"
    ms.author="karthikb"/>
 
-# Entity relationships via a lookup field
+# Build a relationship between entities in the Common Data Model #
+Data in one entity often relates to data in another entity. For example, you might have **Customers** entity and an **Orders** entity, and the **Orders** entity might have a field to show which customer placed the order. You can use a lookup field to show data from the **Customers** entity based on which orders they placed.
 
-In many cases, entities need to have relationships with each other. For example, a record in *Account* entity represents an organization that might do business with your organization, and a record in the *Contact* represents a person. There is a relationship between *Account* and *Contact*, because an account needs to have a contact so that we know who to contact regarding to a particular account. A relationship like this is modeled as a lookup field in the Microsoft Common Data Model.
+## Define a relationship ##
+You can create several types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one other entity, and each entity can have more than one relationship to another entity. Some common relationship types are:
 
-## Understanding relationships
+- **Normal**: This type of relationship exists between two entities.
 
-A relationship is used to describe the case where you need to connect records from multiple entities together to enable your scenarios. A single relationship is set up between two entities. You can have multiple relationships to the same or different entities, which might have other relationships for themselves.
+- **Self**: This type of relationship exists between an entity and itself.
 
-Some common relationship types are:
+- **One-to-one**: In this type of relationship, each record in entity A can match only one record in entity B, and vice versa.
 
-* **Normal**: This is a relationship from one entity to another entity.
+- **One-to-many**: In this type of relationship, each record in entity A can match more than one record in entity B, but each record in entity B can match only one record in entity A.
 
-* **Self**: This is a relationship from one entity to itself.
+- **Many-to-many**: In this type of relationship, each record in entity A can match more than one record in entity B, and vice versa. The current release of Common Data Model doesn't support this type of relationship.
 
-* **One-to-one**: This is a relationship where one record in an entity A can have no more than one matching record in entity B, and one record in entity B can have no more than one matching record in entity A.
+## Add a lookup field ##
+To add a lookup field to an entity, specify the field's data type as **Lookup**, and specify the entity with which you want to create a relationship.
 
-* **One-to-many**: This is a relationship where one record in entity A can have many matching records in entity B, but a record in entity B can have only one matching record in entity A.
+1. On [powerapps.com](https://web.powerapps.com), click or tap **Manage** in the left navigation pane, and then click or tap **Entities**.
 
-* **Many-to-many**: This is a relationship where one record in entity A can have many matching records in entity B, and one record in entity B can have many matching records in entity A. This will be supported by Common Data Model in the future.
+1. In the list of entities, click or tap an entity to display its fields.
 
-## Lookup field
+	You can filter the list by typing one or more characters in the search bar above the list.
 
-Microsoft Common Data Model supports entity relationships via a lookup field. A lookup field is a field in an entity with the data type specified as **Lookup**. It points to another entity which you need the relationship with.
+1. In the upper-right corner, click or tap **Add field**.
 
-To create a lookup field:
+	A blank row appears at the bottom of the list of fields.
 
-1. Sign in to [PowerApps portal](https://web.powerapps.com) with your organization's account.
-2. Click the **Manage** tab in the left navigation pane. Click **Entities** to navigate to the entity management page.
-3. Find the entity you need. You can search for it in the search bar at the top.
-4. Click the entity to navigate to the fields page, which will show all the fields of the entity.
-5. Click the **Add field** button. This will add a new row to the bottom of the fields grid where you can enter the field information.
-6. Specify the display name and the field name.
-7. For the type, choose **Lookup**.
-8. In the **Lookup entity** list, select the entity you want this field to serve as a lookup to.
-9. Click **Save** to commit the changes.
+1. Specify the display name and the name of the field, and then specify **Lookup** as the data type of the field.
 
-## Using a lookup field in PowerApps
+1. In the **Lookup entity** list, specify the entity with which you want to create a relationship.
 
-You can use a lookup field when building an app in PowerApps.
-1. Create an [app using Common Data Model](data-platform-create-app.md)
-1. The lookup relationship will be modeled as a dropdown with the results populated from the Title field of the referred entity.
+1. Click or tap **Save** to commit the changes.
 
-## Deleting a record with lookup field
+## Use a lookup field in an app ##
+If you [create an app automatically](data-platform-create-app.md) from an entity that contains a lookup field, it appears as a **Drop down** control that contains data from the **Title** field of the referred entity.
 
-If entity A has a lookup field to entity B, it affects the record delete behavior in the following ways:
+## Delete a record with lookup field ##
+If entity A has a lookup field to entity B:
 
-* You can delete any record in entity A without restriction.
-* When you a delete a record in entity B, if this record matches one or multiple records in entity A, you need to delete all the matched records in entity A first.
+- You can delete any record in entity A without restriction.
+- If a record in entity B matches one or more records in entity A, you must delete all matching records in entity A before you can delete the record in entity B.
 
-**Note** If entity B is a standard entity with lookup relationship, when you a delete a record in entity B all matched records in entity A are also deleted if entity A.
+**Note**: If entity B is a standard entity with a lookup relationship to entity A and you delete a record from entity B, all matched records in entity A are also deleted.
 
-## Next steps
-- [Create an app using Common Data Model](data-platform-create-app.md)
+## Next steps ##
+- [Create an app](data-platform-create-app.md)

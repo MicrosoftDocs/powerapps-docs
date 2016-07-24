@@ -21,7 +21,6 @@
 In the Common Data Model, each entity has a set of fields. The entity definition and field definitions together define the schema of the entity.
 
 ## Overview ##
-
 For each field, you can specify these properties.
 
 | Property | Description |
@@ -114,7 +113,7 @@ A few field settings are important to get right at the beginning. This is becaus
 - **Field name**: You can't change the name of a field after you create the field.
 - **Type**: You can change the data type of a field after you create the field, with these restrictions:
 	- If the entity that contains the field doesn't contain data, you can change the field's data type freely.
-	- If the entity that contains the field contains data, you might affect it if you change the data type of the field. For example, you might not be able to change the data type from **Text** to **Number**, because the data in the entity might not be in the correct format for **Number**. However, you can change the data type of a field from **Text** to **Number**.
+	- If the entity that contains the field contains data, you might affect it if you change the data type of the field. For example, you might not be able to change the data type from **Text** to **Number**, because the data in the entity might not be in the correct format for **Number**. However, you can change the data type of a field from **Number** to **Text**.
 	- If the entity that contains the field is used in an app, you might affect or break the app by changing the data type of the field.
 - **Unique value**: You can change this property after you create the field, with these restrictions:
 	- If the entity that contains the field doesn't contain data, you can change the value of this property from **false** to **true** or vice versa.
