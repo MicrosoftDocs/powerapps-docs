@@ -76,9 +76,9 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 	- To connect to an on-premises SharePoint site, click or tap **Connect using on-premises data gateway**, specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *Domain\Alias*.)
 
-	**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+		**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
 
-	Under **Choose a gateway**, click or tap the gateway that you want to use.
+		Under **Choose a gateway**, click or tap the gateway that you want to use.
 
 1. Click or tap **Connect**.
 
@@ -105,9 +105,9 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 	- To connect to an on-premises SharePoint site, click or tap **Connect using on-premises data gateway**, specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *Domain\Alias*.)
 
-	**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+		**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
 
-	Under **Choose a gateway**, click or tap the gateway that you want to use.
+		Under **Choose a gateway**, click or tap the gateway that you want to use.
 
 1. Click or tap **Add connection**.
 
