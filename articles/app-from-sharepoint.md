@@ -1,6 +1,6 @@
 <properties
-   pageTitle="Create an app to manage data from SharePoint Online | Microsoft PowerApps"
-   description="Create an app to manage data, such as account information, from SharePoint Online"
+   pageTitle="Create an app to manage data from SharePoint | Microsoft PowerApps"
+   description="Create an app to manage data, such as account information, from SharePoint"
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -18,8 +18,8 @@
    ms.date="06/24/2016"
    ms.author="jamesol"/>
 
-# Create an app to manage data from SharePoint Online#
-Create an app for adding, updating, and deleting data in a SharePoint Online list. Specify the list, create the app automatically, customize the app, and then test it by updating an item in the list.
+# Create an app to manage data from SharePoint #
+Create an app for adding, updating, and deleting data in a SharePoint list. Specify the list, create the app automatically, customize the app, and then test it by updating an item in the list.
 
 **Prerequisites**
 
@@ -31,19 +31,25 @@ The list in this tutorial contains these columns:
 ![](./media/app-from-sharepoint/ListColumns.png)
 
 ## Create an app ##
-1. In PowerApps, click or tap **New** (near the left edge of the screen).  
+1. In PowerApps, click or tap **New** (near the left edge of the screen).
 
 	![](./media/app-from-sharepoint/Menu.png)
 
-1. On the **SharePoint Online** tile, click or tap **Phone layout**.
+1. On the **SharePoint** tile, click or tap **Phone layout**.
 
-	![](./media/app-from-sharepoint/AFD.png)
+1. Follow the steps in either of these bullets:
+
+	- To connect to SharePoint Online, click or tap **Connect directly (cloud services)**.
+
+	- To connect to an on-premises SharePoint site, click or tap **Connect using on-premises data gateway**, specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *Domain\Alias*.)
+
+	**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+
+	Under **Choose a gateway**, click or tap the gateway that you want to use.
 
 1. Click or tap **Connect**.
 
-	![](./media/app-from-sharepoint/sp-connect.png)
-
-1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use.
+1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use, and then click or tap **Go**.
 
 	**Note**: Don't include a specific list in the URL.
 
@@ -53,7 +59,7 @@ The list in this tutorial contains these columns:
 
 	![Filter or sort lists](./media/app-from-sharepoint/filter-sort-lists.png)
 
-1. Click or tap **Connect** to automatically create your app.
+1. Click or tap **Connect**.
 
 PowerApps builds an app that has three screens:  
 

@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Overview of the SharePoint Online connection | Microsoft PowerApps"
-	description="See the available functions, responses, and examples for SharePoint Online"
+	pageTitle="Overview of the SharePoint connection | Microsoft PowerApps"
+	description="See the available functions, responses, and examples for SharePoint"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
@@ -18,11 +18,11 @@ ms.workload="na"
 ms.date="06/18/2016"
 ms.author="anneta"/>
 
-# Connect from Microsoft PowerApps to SharePoint Online #
+# Connect from Microsoft PowerApps to SharePoint #
 
-![SharePoint Online](./media/connection-sharepoint-online/sharepointicon.png)
+![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to a SharePoint Online site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
+Connect to a SharePoint site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
 
 ## Known issues ##
 You can add data from a list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
@@ -63,16 +63,24 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 
 	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
-## Connect to SharePoint Online ##
+## Connect to SharePoint ##
 ### When PowerApps creates an app for you ###
 For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
 ### When you update an app or build one from scratch ###
-1. Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint Online** in the list of connectors.
+1. Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint** in the list of connectors.
+
+1. Follow the steps in either of these bullets:
+
+	- To connect to SharePoint Online, click or tap **Connect directly (cloud services)**.
+
+	- To connect to an on-premises SharePoint site, click or tap **Connect using on-premises data gateway**, specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *Domain\Alias*.)
+
+	**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+
+	Under **Choose a gateway**, click or tap the gateway that you want to use.
 
 1. Click or tap **Connect**.
-
-	![Connect to SharePoint Online](./media/connection-sharepoint-online/sp-connect.png)
 
 1. Under **Connect to a SharePoint site**, click or tap an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then click or tap **Go**.
 
@@ -89,13 +97,19 @@ For more information, see [create an app automatically from a SharePoint list](a
 ### When you open powerapps.com ###
 1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
 
-	![Connections Manage](./media/connection-sharepoint-online/manage-connections.png)
+1. In the upper-right corner, click or tap **New connection**, and then click or tap **SharePoint** in the list of connectors.
 
-1. In the upper-right corner, click or tap **New connection**, and then click or tap **SharePoint Online** in the list of connectors.
+1. Follow the steps in either of these bullets:
 
-1. In the dialog box that appears, click or tap **Add connection**.
+	- To connect to SharePoint Online, click or tap **Connect directly (cloud services)**.
 
-	![Add SharePoint connection](./media/connection-sharepoint-online/add-sharepoint.png)
+	- To connect to an on-premises SharePoint site, click or tap **Connect using on-premises data gateway**, specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *Domain\Alias*.)
+
+	**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+
+	Under **Choose a gateway**, click or tap the gateway that you want to use.
+
+1. Click or tap **Add connection**.
 
 ## View the available functions ##
 This connection includes the following functions:
