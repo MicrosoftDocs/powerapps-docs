@@ -1,9 +1,9 @@
 <properties
-	pageTitle="Share an app using entities | Microsoft Common Data Model"
-	description="Share an app in PowerApps using entities"
+	pageTitle="Share an app that uses an entity | Microsoft Common Data Model"
+	description="In PowerApps, share an app that uses an entity."
 	services="powerapps"
 	documentationCenter="na"
-	authors="guangyang"
+	authors="karthik-1"
 	manager="erikre"
 	editor=""
 	tags=""/>
@@ -17,29 +17,13 @@
    ms.date="07/21/2016"
    ms.author="karthikb"/>
 
-# Share an app using entities
+# Share an app that uses an entity #
+Share an app that uses an entity in the same way as you [share any other app](share-app.md), but the public-preview release of Common Data Model has some restrictions.
 
-Sharing an app using entities is the same way as sharing an app that does not use entities, but there are some restrictions in the public preview.
+- If you share the app with **Can use** or **Can use and share** permission, users and groups can display and manage all data in the entity or entities that the app uses. However, those users and groups can't modify the schemas of those entities or delete them.
 
-To learn more about app sharing, see [Share an app](share-app.md).
+- If you share the app with **Can edit** permission Share with "can edit" permission, users and groups can fully manage your database. They can modify and even delete your entities, in addition to creating, modifying, and deleting their own.
 
-## Share with "can use" or "can use and share" permission
+	**Important**: You should grant **Can edit** permission only to other authors of the app.
 
-You can share an app using entities with others without any limitation when the permission is either of the following:
-
-* Can use
-* Can use and share
-
-You can share it with an individual or a group.
-
-When you choose to share an app this way, everyone you shared the app with will be able to access and manage the data in the entities. They cannot manage the entities themselves.
-
-## Share with "can edit" permission
-
-You should only share "can edit" permission with others who are also authors of the app.
-
-When you choose to share an app this way, all the approved users you shared the app with will be able to fully manage your database where all your entities are. They'll be able to modify all your entities, delete them, and even create new ones.
-
-## Share with an entire organization
-
-This is not available for entities in public preview.
+- In the public-preview release of Common Data Model, you can't share an app with an entire organization if the app uses one or more entities.
