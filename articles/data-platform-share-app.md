@@ -19,7 +19,7 @@
 
 # Share an app using entities
 
-You share an app using entities the same way you share an app that does not use entities, but there are some restrictions in the public preview.
+Sharing an app using entities is the same way as sharing an app that does not use entities, but there are some restrictions in the public preview.
 
 To learn more about app sharing, see [Share an app](share-app.md).
 
