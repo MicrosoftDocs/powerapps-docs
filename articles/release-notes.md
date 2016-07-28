@@ -17,9 +17,32 @@
     ms.date="06/15/2016"
     ms.author="gregli"/>
 
-# What's new for PowerApps release 2.0.460 #
+# What's new for PowerApps release 2.0.471 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+1. **Dates and times when you create an app automatically**.
+
+	If you create an app automatically from a data source that includes date information, the app will show that information on **EditScreen1** in a **DatePicker** control by default. If the source also includes time information, it will appear in **Drop down** controls.
+
+1. **New sample apps and templates**.
+
+	You can open a sample app that demonstrates a scenario such as showcasing products, surveying employee engagement, checking out assets, and helping a new employee choose a health plan.
+
+1. **Pass parameters while running an app in the browser using a query string**.
+
+1. **Deprecated data sources from Project Siena**.
+
+	If you created or updated an app in the beta 4 release of Project Siena to include data from any of these sources, that data will no longer appear if you run or edit the app in PowerApps:
+
+	- on-premises SharePoint sites
+	- Azure Mobile Services
+	- REST services that weren't created by using a WADL file
+	- RSS
+
+	If you open the app for editing, an error icon will notify you which control or controls have properties that refer to a deprecated data source.
+
+
+## Release 2.0.460 ##
 1. **On-premises data**.
 
 	Show and manage data in an on-premises SQL Server database by using an [on-premises data gateway](gateway-management.md).
