@@ -129,7 +129,7 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 		1. Under **Choose a gateway**, click or tap the gateway that you want to use.
 
-		![Choose gateway](./media/connection-sharepoint-online/choose-gateway-portal.png)
+			![Choose gateway](./media/connection-sharepoint-online/choose-gateway-portal.png)
 
 1. Click or tap **Add connection**.
 
