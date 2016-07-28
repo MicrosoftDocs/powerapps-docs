@@ -28,24 +28,38 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 As of this writing, PowerApps supports lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 The list in this tutorial contains these columns:  
-![](./media/app-from-sharepoint/ListColumns.png)
+![](./media/app-from-sharepoint/list-columns.png)
 
 ## Create an app ##
 1. In PowerApps, click or tap **New** (near the left edge of the screen).
 
-	![](./media/app-from-sharepoint/Menu.png)
+	![](./media/app-from-sharepoint/menu.png)
 
-1. On the **SharePoint** tile, click or tap **Phone layout**.
+1. Under **Create an app from your data**, click or tap the arrow to the right of the row of tiles.
 
-1. Follow the steps in either of these bullets:
+	![](./media/app-from-sharepoint/afdata.png)
 
-	- To connect to SharePoint Online, click or tap **Connect directly (cloud services)**.
+1. Above the list of connectors, click or tap **New connection**, and then click or tap the **SharePoint** tile.
 
-	- To connect to an on-premises SharePoint site, click or tap **Connect using on-premises data gateway**, specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *Domain\Alias*.)
+	![](./media/app-from-sharepoint/add-connector.png)
 
-	**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+1. Specify the type of site to which you want to connect:
 
-	Under **Choose a gateway**, click or tap the gateway that you want to use.
+	![](./media/app-from-sharepoint/choose-connection.png)
+
+	- Click or tap **Connect directly (cloud services)** to connect to SharePoint Online.
+
+	- Click or tap **Connect using on-premises data gateway** to connect to an on-premises SharePoint site.
+
+		Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
+
+		![](./media/app-from-sharepoint/specify-creds.png)
+
+		**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+
+		Under **Choose a gateway**, click or tap the gateway that you want to use.
+
+		![](./media/app-from-sharepoint/choose-gateway.png)
 
 1. Click or tap **Connect**.
 
@@ -53,7 +67,11 @@ The list in this tutorial contains these columns:
 
 	**Note**: Don't include a specific list in the URL.
 
+	![](./media/app-from-sharepoint/specify-site.png)
+
 1. Under **Choose a list**, click or tap the name of the list that you want to use.
+
+	![](./media/app-from-sharepoint/choose-list.png)
 
 	In the search box, you can type or paste at least one letter to show only those lists of which their names contain the letter or letters that you specify. You can also click or tap the sort-order icon to toggle between sorting the list in ascending or descending order.
 
