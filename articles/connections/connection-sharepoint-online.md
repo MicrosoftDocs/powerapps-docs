@@ -125,7 +125,7 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 		![Choose type of SharePoint site](./media/connection-sharepoint-online/specify-creds-portal.png)
 
-		**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+	**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
 
 		Under **Choose a gateway**, click or tap the gateway that you want to use.
 
