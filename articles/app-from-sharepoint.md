@@ -33,7 +33,7 @@ The list in this tutorial contains these columns:
 ## Create an app ##
 1. In PowerApps, click or tap **New** (near the left edge of the screen).
 
-	![](./media/app-from-sharepoint/menu.png)
+	![](./media/app-from-sharepoint/file-menu.png)
 
 1. Under **Create an app from your data**, click or tap the arrow to the right of the row of tiles.
 
