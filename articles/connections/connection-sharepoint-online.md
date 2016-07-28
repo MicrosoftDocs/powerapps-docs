@@ -103,6 +103,7 @@ For more information, see [create an app automatically from a SharePoint list](a
 	The data sources are added to your app.
 
 	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
+
 ### When you open powerapps.com ###
 1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
 
@@ -114,21 +115,21 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 1. Specify the type of SharePoint site to which you want to connect:
 
-	- Click or tap **Connect directly (cloud services)** to connect to SharePoint Online.
+	![Choose type of SharePoint site](./media/connection-sharepoint-online/choose-type-portal.png)
 
-	- Click or tap **Connect using on-premises data gateway** to connect to an on-premises SharePoint site.
+	- Click or tap **Connect directly (cloud services)** to connect to SharePoint Online, and skip to step 4.
 
-		![Choose type of SharePoint site](./media/connection-sharepoint-online/choose-type-portal.png)
+	- Click or tap **Connect using on-premises data gateway** to connect to an on-premises SharePoint site, and then provide this information:
 
-	Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
+		1.  Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
 
-		![Choose type of SharePoint site](./media/connection-sharepoint-online/specify-creds-portal.png)
+			![Specify credentials](./media/connection-sharepoint-online/specify-creds-portal.png)
 
-		**Note**: If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+		1. If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
 
-		Under **Choose a gateway**, click or tap the gateway that you want to use.
+		1. Under **Choose a gateway**, click or tap the gateway that you want to use.
 
-		![Choose gateway](./media/connection-sharepoint-online/choose-gateway-portal.png)
+			![Choose gateway](./media/connection-sharepoint-online/choose-gateway-portal.png)
 
 1. Click or tap **Add connection**.
 
