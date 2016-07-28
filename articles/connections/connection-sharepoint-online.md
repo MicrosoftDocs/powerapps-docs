@@ -103,6 +103,7 @@ For more information, see [create an app automatically from a SharePoint list](a
 	The data sources are added to your app.
 
 	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
+
 ### When you open powerapps.com ###
 1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
 
