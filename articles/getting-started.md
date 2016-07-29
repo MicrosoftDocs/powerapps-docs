@@ -31,7 +31,7 @@ Each sample app is designed for a specific purpose, such as managing a budget, i
 If you create an app or a co-worker shares an app with you, you'll also find those apps on the **Home** tab of [powerapps.com](https://web.powerapps.com).
 
 ## Generate an app from your data ##
-To create your own apps, [install PowerApps Studio](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer.
+To create your own apps, [install PowerApps Studio](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10, or [open PowerApps in a browser](create-app-browser.md).
 
 You can [automatically generate an app](get-started-create-from-data.md) that's designed specifically for your data, whether it's in:
 

@@ -21,6 +21,10 @@
 # Common issues and resolutions #
 
 ## Recently added/changed ##
+1. **Creating and modifying apps in a browser**
+
+	You can do many of the same things in a browser as you can in PowerApps Studio, but you, for example, can't create an app from a template. For more information, see [Create an app in a browser](create-app-browser.md).
+
 1. **Connections to SQL Server**
 
 	You can connect to an on-premises SQL Server database if you upgrade to build 2.0.460. If you don't upgrade, you can connect to SQL Azure, but you'll be prompted to specify an authentication type. The connection will succeed regardless of whether you specify anything in that field.

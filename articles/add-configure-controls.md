@@ -24,7 +24,7 @@ Add a variety of controls to your app, and configure their properties directly, 
 
 **Prerequisites**
 
-1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up. (This topic is written for PowerApps Studio, but you can do many of the same things if you [open PowerApps in a browser](create-app-browser.md).)
 1. Select **New** on the **File** menu (near the left edge).
 1. Under **Create an app**, select **Phone layout** on the **Blank app** tile.
 
