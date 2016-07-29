@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/15/2016"
+    ms.date="07/29/2016"
     ms.author="anneta"/>
 
 # What's new in PowerApps release 2.0.480 #
@@ -26,9 +26,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **Create an app from within a modern list in SharePoint**.
 
-1. **Connect to an on-premises SharePoint site**.
-
-	Use a [data gateway](gateway-management.md) to connect to list data in an on-premises SharePoint site.
+	For more information, see the [blog post from SharePoint](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/).
 
 ## Release 2.0.471 ##
 1. **Dates and times when you create an app automatically**.

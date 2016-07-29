@@ -28,20 +28,13 @@ On another screen, users can create, update, or delete a record in that set of d
 
 ![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
 
-## Prerequisites
+**Prerequisites**
+- Add data to an Excel workbook, [format that data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664), save the file, and upload it to a cloud-storage account such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
+- Learn how to [add a control](add-configure-controls.md) and set the properties that determine its appearance, behavior, and other characteristics. (That topic and this one are written for PowerApps Studio, but you can do many of the same things if you [open PowerApps in a browser](create-app-browser.md).)
 
-- Learn how to [add a control](add-configure-controls.md) and set the properties that determine its appearance, behavior, and other characteristics.
-- A cloud-storage account, such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
-- Format your data as a table in Excel.
+As an example, you can follow this tutorial exactly if you set up your data source by following these steps:
 
-For more information, see [Common issues and resolutions](common-issues-and-resolutions.md).
-
-## Format Excel data as a table
-
-To follow this tutorial exactly:
-
-1. Create an Excel file named **eventsignup.xlsx**.
-1. Add the following data to the Excel file:  
+1. Create an Excel file named **eventsignup.xlsx**, and add this data to it:  
 
 	|Start Day|Start Time|Volunteer 1|Volunteer 2|
 |---|---|---|---|
@@ -58,11 +51,9 @@ To follow this tutorial exactly:
 
 1. Near the left edge of the ribbon, type **Schedule** under **Table Name**, and then save your changes.
 
-	For more information, see [Format Excel data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+1. Copy the Excel file to your cloud-storage account.
 
-4. Copy the Excel file to your cloud-storage account.
-
-## Create a blank app, and connect to data
+## Create a blank app, and connect to data ##
 1. In PowerApps, select **New** (near the left edge of the screen).
 
 	![New option on the File menu](./media/get-started-create-from-blank/file-new.png)
