@@ -26,7 +26,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **Create an app from within a modern list in SharePoint**.
 
-	For more information, see the [blog post from SharePoint](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/).
+	For more information, see this [blog post](http://go.microsoft.com/fwlink/?LinkID=808680).
 
 ## Release 2.0.471 ##
 1. **Dates and times when you create an app automatically**.
