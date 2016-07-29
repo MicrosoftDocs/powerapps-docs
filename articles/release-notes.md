@@ -20,13 +20,13 @@
 # What's new in PowerApps release 2.0.480 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
-1. **Create and modify apps in a browser**.
+1. **Create and modify an app in a browser**.
 
 	You can create and modify apps by opening either PowerApps Studio or a browser such as Edge, Chrome, or Internet Explorer 11. For more information, see [Create an app in a browser](create-app-browser.md).
 
-1. **Create apps directly from SharePoint**.
+1. **Create an app from within a modern list in SharePoint**.
 
-1. **Connect to on-premises SharePoint sites**.
+1. **Connect to an on-premises SharePoint site**.
 
 	Use a [data gateway](gateway-management.md) to connect to list data in an on-premises SharePoint site.
 
