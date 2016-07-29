@@ -15,7 +15,7 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/16/2016"
+   ms.date="07/29/2016"
    ms.author="anneta"/>
 
 # Get started with PowerApps #
@@ -38,7 +38,7 @@ You can [automatically generate an app](get-started-create-from-data.md) that's 
 - an Excel file in a cloud-storage account such as Dropbox, OneDrive, or Google Drive
 - a SharePoint list
 - Salesforce or Microsoft Dynamics CRM Online
-- a SQL Azure table
+- SQL Server
 
 **Watch this video for a quick demo**:
 
