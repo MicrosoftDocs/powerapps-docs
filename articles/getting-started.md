@@ -44,7 +44,7 @@ You can [automatically generate an app](get-started-create-from-data.md) that's 
 
 [AZURE.VIDEO nb:cid:UUID:9380084d-bc9a-484f-960e-4554c6bf67b2]
 
-PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. Add your own touches by [customizing the app](get-started-create-from-data.md#customize-the-app).
+PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. Add your own touches by [customizing the app](get-started-create-from-data.md#change-the-app-layout).
 
 When your app looks and behaves the way you want, [share it](share-app.md) with others on your team so that they can use it too. Remember: they'll need access to the data source that you used to build the app.
 
