@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/24/2016"
+   ms.date="07/30/2016"
    ms.author="jamesol"/>
 
 # Create an app to manage data from SharePoint #
@@ -47,7 +47,7 @@ The list in this tutorial contains these columns:
 
 	![](./media/app-from-sharepoint/choose-connection.png)
 
-	- Click or tap **Connect directly (cloud services)** to connect to SharePoint Online.
+	- Click or tap **Connect directly (cloud services)** to connect to SharePoint Online, and then skip to step 5.
 
 	- Click or tap **Connect using on-premises data gateway** to connect to an on-premises SharePoint site.
 
@@ -90,9 +90,13 @@ When PowerApps builds an app automatically, heuristics suggest the best layout a
 
 1. If you haven't used PowerApps before, take the intro tour (or click or tap **Skip**).
 
-2. On the **Home** tab, click or tap **Layouts**, and then click or tap an option that suits your data.  
+	![Opening screen of the intro tour](./media/app-from-sharepoint/quick-tour.png)
 
-	**Note**: If you open the **Layout** tab with **DetailScreen1** or **EditScreen1** showing, you can choose different options, which reflect the data on that screen.
+	You can always take the intro tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
+
+1. In the right-hand pane, click or tap a layout that suits your data. (To follow this topic exactly, use the layout that's highlighted in this graphic.)
+
+	**Note**: If the **DetailScreen1** or **EditScreen1** is selected, the **Layout** tab offers different options, which reflect the types of data that you can show on that screen.
 
 	![Layout option with icons](./media/app-from-sharepoint/change-layout.png)
 
@@ -104,26 +108,36 @@ When PowerApps builds an app automatically, heuristics suggest the best layout a
 
 	![Select a control in the gallery](./media/app-from-sharepoint/select-image.png)
 
-1. In the right-hand pane, specify the data that you want to show in each control.
+1. In the right-hand pane, specify the data that you want to show in each control. In this example, the upper text box now shows the title instead of the multiple-line description.
 
 	![Specify columns](./media/app-from-sharepoint/specify-columns.png)
 
 	The screen changes to reflect your selections.
 
-	![EditScreen1](./media/app-from-sharepoint/gallery-final.png)
+	![Final layout](./media/app-from-sharepoint/gallery-final.png)
 
-1. Open **DetailsScreen1**, and then change the cards that appear by clicking or tapping the eye icon for each card in the right-hand pane.
+1. In the left navigation bar, click or tap the middle thumbnail to select **DetailsScreen1**.
+
+	![Select details screen](./media/app-from-sharepoint/select-detailscreen.png)
+
+1. Click or tap any field in that screen to show the form-customization options in the right-hand pane.
+
+	![Select a card](./media/app-from-sharepoint/select-card.png)
+
+1. In the right-hand pane, click or tap the eye icon for each card to show or hide it in the app.
 
 	![Show card](./media/app-from-sharepoint/show-card.png)
 
-1. Change the order in which the cards appear by clicking or tapping a card and then dragging its title bar up or down.
+1. Change the order in which the cards appear by clicking or tapping a card to select it and then dragging its title bar up or down.
 
 	![Move card](./media/app-from-sharepoint/move-card.png)
 
 ## Run the app ##
-As you customize the app, you can test your changes by running the app in **Preview** mode.
+As you customize the app, you can test your changes by running the app in **Preview** mode, as the steps in this section demonstrate.
 
-1. In left navigation bar, click or tap **BrowseScreen1**, and then open Preview mode by selecting the **Preview** icon near the upper-right corner (or by pressing **F5**).  
+1. In the left navigation bar, click or tap the top thumbnail to select **BrowseScreen1**.
+
+1. Open Preview mode by pressing F5 (or by selecting the **Preview** icon near the upper-right corner).  
 
 	![Preview icon](./media/app-from-sharepoint/open-preview.png)
 
@@ -141,5 +155,5 @@ As you customize the app, you can test your changes by running the app in **Prev
 
 ## Next steps ##
 - Press Ctrl-S to save your app so that you can run it from other devices.
-- [Customize one or more cards](customize-card.md), for example, to show a date in a **[DatePicker](control-date-picker.md)** control.
+- [Customize one or more cards](customize-card.md) (for example, to change the control in which a type of data appears).
 - [Share the app](share-app.md) so that other people can run it.
