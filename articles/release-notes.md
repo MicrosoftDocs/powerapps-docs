@@ -28,6 +28,10 @@ For information about known limitations in this release, see [Common issues and 
 
 	For more information, see this [blog post](http://go.microsoft.com/fwlink/?LinkID=808680).
 
+1. **Add or duplicate a screen**
+
+	When you add or duplicate a screen, the new screen appears immediately below the selected screen in the left navigation bar instead of at the bottom of that bar.
+
 ## Release 2.0.471 ##
 1. **Dates and times when you create an app automatically**.
 
