@@ -24,7 +24,8 @@
 
 Create an app automatically based on an Excel file in the cloud, customize the app, and then explore how it works.
 
-## Prerequisites ##
+**Prerequisites**
+
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by using the same credentials that you used to sign up.
 
 	This topic was written for PowerApps Studio, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
