@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create or Edit apps in a browser | Microsoft PowerApps"
-	description="Create or Edit apps in a browser."
+	pageTitle="Create or edit apps in a browser | Microsoft PowerApps"
+	description="Create or edit apps in a browser."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,53 +18,59 @@
    ms.date="07/28/2016"
    ms.author="ankitsar"/>
 
-# Create or Edit apps in a browser #
+# Create or edit apps in a browser #
+Learn how to create and edit apps in a browser with PowerApps Studio for web.
 
-**Note** PowerApps Studio for web is in preview and has certain limitations. You can also create and edit apps by [installing PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10.
+**Note**: PowerApps Studio for web is in preview and has certain limitations. You can also create and edit apps by [installing PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10.
 
-Learn how to get with started with PowerApps Studio for web to create and edit apps in a browser. 
+**Prerequisites**
 
-## Prerequisites ##
 - [Sign up](signup-for-powerapps.md) for PowerApps.
-- Microsoft Edge, Google Chrome or Internet Explorer 11 on Windows or Mac
+- Microsoft Edge, Google Chrome, or Internet Explorer 11 on a computer that's running Windows or a Mac.
 
-## Launching  PowerApps Studio for web ##
-1. Sign-in to [powerapps.com](http://go.microsoft.com/fwlink/p/?LinkId=708209)
+## Open PowerApps Studio for web ##
+1. Sign in to [powerapps.com](http://go.microsoft.com/fwlink/p/?LinkId=708209).
 
-1. In the left navigation bar, select **New app** (near the bottom left edge of screen).
+1. In the lower-left corner, click or tap **New app**.
 
-	![New app on navigation bar](./media/create-app-browser/left-nav.png)
+	![New app in left navigation bar](./media/create-app-browser/left-nav.png)
 
-1. In the pop-up, select the second option for **PowerApps Studio for web**.
+1. In the dialog box that appears, click or tap **PowerApps Studio for web**.
 
-	![Select PowerApps Studio for web](./media/create-app-browser/launch-web-authoring.png)
+	![Open PowerApps Studio for web](./media/create-app-browser/launch-web-authoring.png)
 
-1. **PowerApps Studio for web** will launch in a new tab in your browser, you will get the same experiences as the **PowerApps Studio for Windows**. 
+PowerApps Studio for web opens in a new tab in your browser, where you can create and edit apps in the same way as you can in PowerApps Studio for Windows.
 
 ## Next steps ##
-- [Automatically generate an app](get-started-create-from-data.md) that's designed specifically for your data.
-- Learn how to [add a control and set its properties](add-configure-controls.md).
+- Automatically generate an app from your data in, for example, [Excel](get-started-create-from-data.md) or [SharePoint](app-from-sharepoint.md).
+- Learn how to [add a control and set properties](add-configure-controls.md) that determine how it appears and behaves.
 - Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
 
-## Known Issues/Limitations ##
-1. **Creating an app from a template**
-	
-	You can't currently [create an app from a template](get-started-test-drive.md) in a browser. You will have to use PowerApps Studio for Windows to create an app from a template. 
+## Known limitations of the preview release ##
+1. **Create a connection.**
 
-1. **[Acceleration](functions/signals.md)** and **[Compass](functions/signals.md)** functions do not return real values during authoring, they will always return zero values. The functions will return real signals in a published app.
+	To [create a connection](add-manage-connections,md) to a data source that requires service authentication, use [powerapps.com](https://web.powerapps.com), and then [add the connection](add-data-connection.md) to an app in PowerApps Studio for web.
 
-1. **[Export](controls/control-export-import.md)** and **[Import](controls/control-export-import.md)** controls do not work while authoring, they will behave correctly in a published app.
+1. **Create an app from a template.**
 
-1. **[Creating connections](add-manage-connections,md)** to data sources requiring service authentication is currently not supported, you can use existing connections from PowerApps Studio for web. You can [create such connections](add-manage-connections.md) using [powerapps.com](http://go.microsoft.com/fwlink/p/?LinkId=708209).
+	You can [create an app from a template](get-started-test-drive.md) in PowerApps Studio for Windows but not in a browser.
 
-1. **Adding or modifying Flows**
-	
-	Currently it is not possible to [add new or modify existing Flows](using-logic-flows.md) in your app. You must use PowerApps Studio for Windows to add or modify Flows in your apps. 
+1. **Use signal functions.**
 
-1. **Support for Undo/Redo**
-	
-	PowerApps Studio for web does not supports undo/redo of user actions. If you need to revert any changes, you will have to do them manually.
+	**[Acceleration and Compass](functions/signals.md)** functions return accurate values in a published app, but those functions return zero values as you create or modify an app in a browser.
 
-1. **Copying controls across two sessions**
-	
-	You cannot copy controls from one session of PowerApps Studio for web to another session of PowerApps Studio for web
+1. **Export and import data.**
+
+	You can [export and import data](controls/control-export-import.md) in a published app but not as you create or modify an app in a browser.
+
+1. **Add or modify a flow.**
+
+	You can [add or modify a flow](using-logic-flows.md) in PowerApps Studio for Windows but not in a browser.
+
+1. **Undo or redo a change.**
+
+	You can undo and redo changes automatically in PowerApps Studio for Windows but not in a browser.
+
+1. **Copy a control across two sessions.**
+
+	You can't copy controls from one session of PowerApps Studio for web to another session of PowerApps Studio for web.
