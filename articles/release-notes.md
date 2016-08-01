@@ -30,7 +30,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **Add or duplicate a screen**
 
-	When you add or duplicate a screen, the new screen appears immediately below the selected screen in the left navigation bar instead of at the bottom of that bar.
+	In the left navigation bar, you can click or tap the ellipsis for a thumbnail and then click or tap **New Screen** to add a screen or **Duplicate Screen** to copy the current screen. In either case, the new screen appears just below the current screen instead of at the bottom of the navigation bar.
 
 ## Release 2.0.471 ##
 1. **Dates and times when you create an app automatically**.
