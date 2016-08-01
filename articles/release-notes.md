@@ -1,10 +1,10 @@
 <properties
-    pageTitle="What's new for PowerApps | Microsoft PowerApps"
+    pageTitle="What's new in PowerApps | Microsoft PowerApps"
     description="Updates for each release of PowerApps, organized by build number"
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="gregli-msft"
+    authors="aftowen"
     manager="erikre"
     editor=""
     tags=""/>
@@ -14,12 +14,25 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/15/2016"
-    ms.author="gregli"/>
+    ms.date="07/29/2016"
+    ms.author="anneta"/>
 
-# What's new for PowerApps release 2.0.471 #
+# What's new in PowerApps release 2.0.480 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+1. **Create and modify an app in a browser**.
+
+	You can create and modify apps by opening either PowerApps Studio or a browser such as Edge, Chrome, or Internet Explorer 11. For more information, see [Create an app in a browser](create-app-browser.md).
+
+1. **Create an app from within a modern list in SharePoint**.
+
+	For more information, see this [blog post](http://go.microsoft.com/fwlink/?LinkID=808680).
+
+1. **Add or duplicate a screen**
+
+	In the left navigation bar, you can click or tap the ellipsis for a thumbnail and then click or tap **New Screen** to add a screen or **Duplicate Screen** to copy the current screen. In either case, the new screen appears just below the current screen instead of at the bottom of the navigation bar.
+
+## Release 2.0.471 ##
 1. **Dates and times when you create an app automatically**.
 
 	If you create an app automatically from a data source that includes date information, the app will show that information on **EditScreen1** in a **DatePicker** control by default. If the source also includes time information, it will appear in **Drop down** controls.
@@ -40,7 +53,6 @@ For information about known limitations in this release, see [Common issues and 
 	- RSS
 
 	If you open the app for editing, an error icon will notify you which control or controls have properties that refer to a deprecated data source.
-
 
 ## Release 2.0.460 ##
 1. **On-premises data**.
