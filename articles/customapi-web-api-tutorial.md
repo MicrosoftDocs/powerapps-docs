@@ -3,8 +3,8 @@
 	description="ASP.Net web app tutorial to create a custom API in PowerApps and Logic Flows"
 	services=""
     suite="powerapps"
-	documentationCenter="" 
-	authors="sunaysv"
+	documentationCenter=""
+	authors="archnair"
 	manager="erikre"
 	editor=""/>
 
@@ -13,13 +13,13 @@
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
-   ms.workload="na" 
+   ms.workload="na"
    ms.date="04/13/2016"
-   ms.author="mandia"/>
+   ms.author="archanan"/>
 
 # Tutorial: Create a custom AAD protected Web API for PowerApps and Logic Flows
 
-This tutorial shows you how to create a ASP.Net Web API, host it on Azure Web Apps, enable AAD authentication (via easy auth), and then register the ASP.Net web API in PowerApps and Logic flows. 
+This tutorial shows you how to create a ASP.Net Web API, host it on Azure Web Apps, enable AAD authentication (via easy auth), and then register the ASP.Net web API in PowerApps and Logic flows.
 
 ## What you need to get started
 
@@ -57,7 +57,7 @@ You can download the swagger used in this tutorial [here][6]. Be sure to replace
 
 ## Step 2: Set up AAD authentication
 
-This tutorial assumes you know how to create an AAD application in Azure. To learn more about how to create an AAD application, read the [Azure resource manager tutorial](customapi-azure-resource-manager-tutorial.md). We need two AAD applications for this tutorial. 
+This tutorial assumes you know how to create an AAD application in Azure. To learn more about how to create an AAD application, read the [Azure resource manager tutorial](customapi-azure-resource-manager-tutorial.md). We need two AAD applications for this tutorial.
 
 1. The first AAD application is used to secure the Web API. Name it **webAPI**.
 2. The second AAD application is used to secure the custom API registration and acquire delegated access to the Web API protected by the first app. Name this one **webAPI-customAPI** .
@@ -66,11 +66,11 @@ This tutorial assumes you know how to create an AAD application in Azure. To lea
   1. Sign-on url: ***https://login.windows.net***
   2. App-ID Uri: ***https://\<your-root-url\>*** (typically the url of your website deployed on Azure)
   3. Reply url: ***https://\<your-root-url\>/.auth/login/aad/callback***  
-  
+
 	>[AZURE.IMPORTANT] You need the Client ID of this app later, so note it.
 
 4. For **webAPI-customAPI**, use the following configuration:  
-  
+
   1. Sign-on url: **https://login.windows.net**
   2. App-ID Uri: ***can be any unique URL***
   3. Reply url: ***https://msmanaged-na.consent.azure-apim.net/redirect***
@@ -89,14 +89,14 @@ This tutorial assumes you know how to create an AAD application in Azure. To lea
 
 This should setup AAD authentication for you web app.
 
-## Step 4: Set up the Custom API 
+## Step 4: Set up the Custom API
 
-1. We need to modify our swagger a bit to enter the `securityDefintions` object and AAD authentication used for the web app. Add the following lines of code: 
+1. We need to modify our swagger a bit to enter the `securityDefintions` object and AAD authentication used for the web app. Add the following lines of code:
 
 	```javascript
   "host": "<your-root-url>",
   "schemes": [
-    "https"						//Change scheme to https 
+    "https"						//Change scheme to https
   ],
   "securityDefinitions": {
     "AAD": {
@@ -119,16 +119,16 @@ This should setup AAD authentication for you web app.
   3. Login url: ***https://login.windows.net***
   4. ResourceUri: ***Client ID of webAPI*** from 3.4 in **Step 2** (in this topic)
 
-5. Select **Create**, and try creating a connection on the Custom API. If everything is setup correctly, you should be able to sign-in successfully. 
+5. Select **Create**, and try creating a connection on the Custom API. If everything is setup correctly, you should be able to sign-in successfully.
 
-For a more detailed experience on creating PowerApps and Logic Flows, see the following: 
+For a more detailed experience on creating PowerApps and Logic Flows, see the following:
 
 - [Connect to Office 365, Twitter, and Microsoft Translator](powerapps-api-functions.md)
 - [Show data from Office 365](show-office-data.md)
 - [Create an app from data](get-started-create-from-data.md)
 - [Get started with logic flows](using-logic-flows.md)
 
-## Questions and more 
+## Questions and more
 For questions or comments, email [customapishelp@microsoft.com](mailto:customapishelp@microsoft.com).
 
 Walkthrough the [Azure Resource Manager tutorial](customapi-azure-resource-manager-tutorial.md) custom API.
