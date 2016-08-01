@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/20/2016"
-   ms.author="mandia"/>
+   ms.author="anneta"/>
 
 # Add a screen and navigate between screens #
 
