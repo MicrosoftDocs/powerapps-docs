@@ -43,17 +43,13 @@ You can add data from a list but not a library. In addition, not all types of co
 | Calculated | Yes (read-only) |   |
 | Task Outcome | No |  |
 | External data | No |  |
-| Managed Metadata | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Managed Metadata | Yes (read-only) | |
 
 Moreover, PowerApps doesn't support columns that support multiple values or selections.
 
 - For Lookup columns, the **Allow multiple values** checkbox must be cleared.
 
 	![Check box to allow multiple values in a Lookup column](./media/connection-sharepoint-online/lookup.png)
-
-- For Managed Metadata columns, the **Allow multiple values** checkbox must be cleared.
-
-	![Check box to allow multiple values in a Managed Metadata column](./media/connection-sharepoint-online/metadata.png)
 
 - For Person or Group columns, the **No** option under **Allow multiple selections** must be selected.
 
