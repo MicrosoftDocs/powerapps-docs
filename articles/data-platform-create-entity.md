@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="08/1/2016"
+   ms.date="08/01/2016"
    ms.author="karthikb"/>
 
 # Create a custom entity in Common Data Model
