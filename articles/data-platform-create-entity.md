@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/21/2016"
+   ms.date="08/1/2016"
    ms.author="karthikb"/>
 
 # Create a custom entity in Common Data Model
@@ -25,19 +25,28 @@ Create an entity:
 - from scratch so that it contains only [four system fields and a record title field](data-platform-create-entity.md#system-and-record-title-fields) by default
 - based on another entity by copying its fields and settings but not its data
 
-Either way, PowerApps stores and helps secure the data automatically. After you create an entity, you can create or modify one or more of its fields and build relationships between entities.
+Either way, PowerApps automatically stores and helps secure the data. After you create an entity, you can [create or modify one or more of its fields](data-platform-manage-fields.md) and [build relationships between entities](data-platform-manage-fields.md).
 
-**Note**: Before you create an entity, see the [list of standard entities and enumeration types](data-platform-intro.md), which cover common scenarios such as accounts and contacts. Save yourself some time by starting with one of these entities if any of them meets your needs out of the box or with only minor changes.
+**Note**: Before you create an entity, see the [list of standard entities and enumeration types](data-platform-intro.md), which cover common scenarios such as accounts and contacts. Save yourself some time by starting with one of these entities if it meets your needs out of the box or with only minor changes.
 
-## Create a custom entity
+## Create a custom entity ##
 1. On [powerapps.com](http://powerapps.com), click or tap **Manage** in the left navigation pane, and then click or tap **Entities**.
-1. Near the upper-right corner, click or tap **New Entity**, and then specify a name, a display name, and (optionally) a description for your entity.
 
-	**Important**: Be sure to specify a clear and meaningful name for your entity because you can't change it later. You'll reference this name in formulas when you develop an app. The display name and the description should also be meaningful, but you can change them later.
+1. If prompted, click or tap **Create my database**.
 
-1. Click or tap either **Basic entity** (to create an entity from scratch) or the name of an entity (to copy fields from that entity).
+1. Near the upper-right corner, click or tap **New Entity**.
+
+1. Specify an **Entity name** that's clear and meaningful because you can't change it after you create the entity.
+
+	You'll reference the entity by this name in a formula when you develop an app.
+
+1. Specify a **Display name** and (optionally) a **Description** for your entity, and then click or tap **Next**.
+
+1. (optional) Rename the **Title** field to something more meaningful for your data.
 
 1. Click or tap **Create** to create the entity.
+
+Your entity appears in the list of entities in your database. To display your entity at the top of the list, click or tap the **Type** column header. The entities will be sorted by type with all custom entities above all standard entities.
 
 ## System and record-title fields ##
 All entities contain five system fields. These fields are read-only, so you can't change or delete them, and you don't assign values to them.
@@ -50,7 +59,7 @@ All entities contain five system fields. These fields are read-only, so you can'
 | LastModifiedByUser   | Last modified By | User      | The user who most recently modified the record.        |
 | RecordId | Id | Big Integer      | The unique identifier for the record.        |
 
-If you create an entity from scratch, it also contains a custom field that's named **Title** and set as the record-title field. A record title field is the user-friendly identifier of a record whenever you use it in an app. You can change which field is the record-title field, but every entity must have one.
+If you create an entity from scratch, it also contains a custom field that's named **Title** and set as the record-title field. A record-title field is the user-friendly identifier of a record whenever you use it in an app. You can change which field is the record-title field, but every entity must have one.
 
 ## Next steps ##
 - [Manage fields in an entity](data-platform-manage-fields.md)
