@@ -18,7 +18,7 @@
    ms.date="04/27/2016"
    ms.author="gregli"/>
 
-# Understand data forms #
+# Understand data forms in Microsoft PowerApps #
 Add three types of controls so that the user can browse for a record, display details about that record, and edit or create a record:
 
 | Activity | Control | Description |
@@ -34,6 +34,7 @@ Put each control on a different screen to make them easier to distinguish:
 As this topic describes, combine these controls with formulas to create the overall user experience.
 
 **Prerequisites**
+
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 - Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
@@ -90,7 +91,7 @@ This screen features these key formulas:
 
 At the top of the screen, three images sit outside of **DetailForm1** and act as buttons, orchestrating between the three screens of the app.
 
-**DetailForm1** dominates this screen and displays the record that the user selected in the gallery (because the form's **[Item](controls/control-form-detail.md)** property is set to **BrowseGallery1.Selected**).The **[DataSource](controls/control-form-detail.md)** property of the form also provides metadata about the data source, such as a user-friendly display name for each field.
+**DetailForm1** dominates this screen and displays the record that the user selected in the gallery (because the form's **[Item](controls/control-form-detail.md)** property is set to **BrowseGallery1.Selected**). The **[DataSource](controls/control-form-detail.md)** property of the form also provides metadata about the data source, such as a user-friendly display name for each field.
 
 **DetailForm1** contains several **[Card](controls/control-card.md)** controls. You can select either the **[Card](controls/control-card.md)** control itself or the control that it contains to discover additional information.
 
@@ -148,7 +149,7 @@ To get the most from this topic, start with a data source with which you can exp
 
 ![Ice cream SharePoint list](./media/working-with-forms/sharepointlist-icecream.png)
 
-- Create an app from blank, for phones, and connect it to your data source.
+- Create an app from blank, for phones, and [connect it to your data source](add-data-connection.md).
 
 	**Note:** Tablet apps are very similar, but you may want a different [screen layout](#screen-design) to make the most of the extra screen space.
 
@@ -230,13 +231,13 @@ Now, let's return to the **[Gallery](controls/control-gallery.md)** control and 
 1. Select the **[Back](functions/function-navigate.md)** button to return to the gallery of products, and then press Esc.
 
 ## Editing details ##
-Finally, our last core activity is changing the contents of a record, which accomplish in an **[Edit form](controls/control-form-detail.md)** control.
+Finally, our last core activity is changing the contents of a record, which users accomplish in an **[Edit form](controls/control-form-detail.md)** control.
 
 The **[Edit form](controls/control-form-detail.md)** control uses two properties to display and edit the record:
 
-* **[DataSource](controls/control-form-detail.md)** property.  The name of the data source that holds the record.  Just as with the **[Display form](controls/control-form-detail.md)** control, this property populates the right-hand panel with fields and determines the display name and data type (string, number, date, etc.) for each field. This property also determines whether each field's value is valid before submitting it to the underlying data source.
+- **[DataSource](controls/control-form-detail.md)** property.  The name of the data source that holds the record.  Just as with the **[Display form](controls/control-form-detail.md)** control, this property populates the right-hand panel with fields and determines the display name and data type (string, number, date, etc.) for each field. This property also determines whether each field's value is valid before submitting it to the underlying data source.
 
-* **[Item](controls/control-form-detail.md)** property.  The record to edit, which is often connected to the **Selected** property of the **[Gallery](controls/control-gallery.md)** control. That way, you can select a record in the **[Gallery](controls/control-gallery.md)** control, show it in the details screen, and edit it in the **Edit and Create** screen.
+- **[Item](controls/control-form-detail.md)** property.  The record to edit, which is often connected to the **Selected** property of the **[Gallery](controls/control-gallery.md)** control. That way, you can select a record in the **[Gallery](controls/control-gallery.md)** control, show it in the details screen, and edit it in the **Edit and Create** screen.
 
 To add an **[Edit form](controls/control-form-detail.md)** control:
 
@@ -275,7 +276,7 @@ To add navigation to and from this screen:
 
 	![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-edit.png)
 
-You've built a basic app with three screens for viewing and entering data.  To try it out, select the forward arrow "Preview" button near the upper-left corner of the screen (or press F5). The pink dot indicates where the user clicks or taps the screen at each step.
+You've built a basic app with three screens for viewing and entering data.  To try it out, show the gallery screen, and then press F5 (or select the forward arrow "Preview" button near the upper-left corner of the screen). The pink dot indicates where the user clicks or taps the screen at each step.
 
 ![Try out the ice cream app](./media/working-with-forms/try-icecream.png)
 
@@ -320,7 +321,7 @@ If **[SubmitForm](functions/function-form.md)** fails for any reason, the **Erro
 
 ![Display form with added "Edit" button](./media/working-with-forms/edit-icecream-error.png)
 
-In an app that PowerApps generates from data, the **[AutoHeight](controls/control-text-box.md)** property on this control is set to *true* so that no space is consumed if no error occurs. The **[Height](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties of the **[Edit form](controls/control-form-detail.md)** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to use the **Advanced** view (available on the **View** tab) to select this control.
+In an app that PowerApps generates from data, the **[AutoHeight](controls/control-text-box.md)** property on this control is set to *true* so that no space is consumed if no error occurs. The **[Height](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties of the **[Edit form](controls/control-form-detail.md)** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to open the **Advanced** view (available on the **View** tab) to select this control.
 
 ![App from data edit form with error text control selected](./media/working-with-forms/edit-assets-error1.png)
 
@@ -329,7 +330,7 @@ In an app that PowerApps generates from data, the **[AutoHeight](controls/contro
 ## Refresh data ##
 The data source is refreshed whenever the user opens the app, but the user might want to refresh the records in the gallery without closing the app. Add a **Refresh** button so that the user can select it to manually refresh the data:
 
-1. On the screen with the **[Gallery](controls/control-gallery.md)** control, add a **[Button](controls/control-button.md)** control and set its **[Text](controls/properties-core.md)** property to **Refresh**.
+1. On the screen with the **[Gallery](controls/control-gallery.md)** control, add a **[Button](controls/control-button.md)** control and set its **[Text](controls/properties-core.md)** property to show **Refresh**.
 
 4. Set the **[OnSelect](controls/properties-core.md)** property of this control to this formula:<br> **Refresh( 'Ice Cream' )**
 
@@ -374,5 +375,5 @@ Because real estate on phone screens is so limited, you probably want to browse,
 
 On a tablet, you can browse, display, and edit/create on two or even one screen. For the latter, no **[Navigate](functions/function-navigate.md)** or **[Back](functions/function-navigate.md)** function would be required.
 
-If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set this property the **[Disabled](controls/properties-core.md)** property of the gallery to this formula:<br>
+If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](controls/properties-core.md)** property of the gallery to this formula:<br>
 **EditForm.Unsaved**
