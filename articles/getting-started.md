@@ -15,7 +15,7 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/16/2016"
+   ms.date="07/29/2016"
    ms.author="anneta"/>
 
 # Get started with PowerApps #
@@ -31,20 +31,20 @@ Each sample app is designed for a specific purpose, such as managing a budget, i
 If you create an app or a co-worker shares an app with you, you'll also find those apps on the **Home** tab of [powerapps.com](https://web.powerapps.com).
 
 ## Generate an app from your data ##
-To create your own apps, [install PowerApps Studio](https://web.powerapps.com/#/downloads) on a tablet, laptop, or desktop computer.
+To create your own apps, [install PowerApps Studio](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10, or [open PowerApps in a browser](create-app-browser.md).
 
 You can [automatically generate an app](get-started-create-from-data.md) that's designed specifically for your data, whether it's in:
 
 - an Excel file in a cloud-storage account such as Dropbox, OneDrive, or Google Drive
 - a SharePoint list
 - Salesforce or Microsoft Dynamics CRM Online
-- a SQL Azure table
+- SQL Server
 
 **Watch this video for a quick demo**:
 
 [AZURE.VIDEO nb:cid:UUID:9380084d-bc9a-484f-960e-4554c6bf67b2]
 
-PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. Add your own touches by [customizing the app](get-started-create-from-data.md#customize-the-app).
+PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. Add your own touches by [customizing the app](get-started-create-from-data.md#change-the-app-layout).
 
 When your app looks and behaves the way you want, [share it](share-app.md) with others on your team so that they can use it too. Remember: they'll need access to the data source that you used to build the app.
 
