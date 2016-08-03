@@ -31,9 +31,10 @@ On the other screen, users can create a record, update one or more fields in a r
 ![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
 
 **Prerequisites**
+
 - Add data to an Excel workbook, and [format that data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-	To follow this tutorial exactly:
+To follow this tutorial exactly:
 
 - Name the Excel file **eventsignup.xls**.
 - Copy this data, and paste it into the file.
