@@ -15,20 +15,19 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/26/2016"
+   ms.date="07/31/2016"
    ms.author="gregli"/>
 
-# Formula reference #
-
+# Formula reference for PowerApps #
 Formulas combine many elements.  Listed below are:
 
-- **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSelect**.
+- **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSelect**.
 
 - **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 
-- **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here, function specific enumerations are described with the function.
+- **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
 
-- **Named operators** provide access to information from within a container such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Parent](functions/operators.md#parent-operator)**.
+- **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Parent](functions/operators.md#parent-operator)**, provide access to information from within a container.
 
 Other elements include:
 
@@ -48,7 +47,7 @@ Other elements include:
 
 **[App](functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
 
-**[Average](functions/function-aggregates.md)** – Calculates the average of a table expression or set of arguments.
+**[Average](functions/function-aggregates.md)** – Calculates the average of a table expression or a set of arguments.
 
 ## B ##
 
@@ -72,7 +71,7 @@ Other elements include:
 
 **[ColorFade](functions/function-colors.md)** – Fades a color value.
 
-**[ColorValue](functions/function-colors.md)** – Translates a CSS color name or hex code to a color value.  
+**[ColorValue](functions/function-colors.md)** – Translates a CSS color name or a hex code to a color value.  
 
 **[Compass](functions/signals.md)** – Returns your compass heading.
 
@@ -96,7 +95,7 @@ Other elements include:
 
 **[Date](functions/function-date-time.md)** – Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
 
-**[DateAdd](functions/function-dateadd-datediff.md)** – Add days, months, quarters, or years to a date/time value.
+**[DateAdd](functions/function-dateadd-datediff.md)** – Adds days, months, quarters, or years to a date/time value.
 
 **[DateDiff](functions/function-dateadd-datediff.md)** – Subtracts two date values, and shows the result in days, months, quarters, or years.
 
@@ -118,7 +117,7 @@ Other elements include:
 
 ## E ##
 
-**[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)**, for reading the GPS.
+**[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
@@ -134,7 +133,7 @@ Other elements include:
 
 **[First](functions/function-first-last.md)** – Returns the first record of a table.
 
-**[FirstN](functions/function-first-last.md)** – Returns the first N records of a table.
+**[FirstN](functions/function-first-last.md)** – Returns the first set of records (N records) of a table.
 
 ## G ##
 
@@ -160,7 +159,7 @@ Other elements include:
 
 ## L ##
 
-**[Language](functions/function-language.md)** – Access to the language that the app uses.
+**[Language](functions/function-language.md)** – Provides access to the language that the app uses.
 
 **[Last](functions/function-first-last.md)** – Returns the last record of a table.
 
@@ -190,7 +189,7 @@ Other elements include:
 
 **[Minute](functions/function-datetime-parts.md)** – Retrieves the minute portion of a date/time value.  
 
-**[Mod](functions/function-mod.md)** – Returns the remainder after a number is divided by a divisor.
+**[Mod](functions/function-mod.md)** – Returns the remainder after a dividend is divided by a divisor.
 
 **[Month](functions/function-datetime-parts.md)** – Retrieves the month portion of a date/time value.
 
@@ -210,7 +209,7 @@ Other elements include:
 
 ## P ##
 
-**[Param](functions/function-param.md)** – Access to parameters passed to the app when the user opened it.
+**[Param](functions/function-param.md)** – Provides access to parameters passed to the app when the user opened it.
 
 **[Parent](functions/operators.md#parent-operator)** – Provides access to a container control's properties.
 
