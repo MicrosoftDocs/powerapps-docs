@@ -35,18 +35,19 @@ On the other screen, users can create a record, update one or more fields in a r
 
 	To follow this tutorial exactly:
 
-	- Name the Excel file **eventsignup.xls**.
-	- Copy this data, and paste it into the file.
+- Name the Excel file **eventsignup.xls**.
+- Copy this data, and paste it into the file.
 
-		|Start Day|Start Time|Volunteer 1|Volunteer 2|
-	|---|---|---|---|
-	|Saturday|10am-noon|Vasquez|Kumashiro|
-	|Saturday|noon-2pm|Ice|Singhal|
-	|Saturday|2pm-4-pm|Myk|Mueller|
-	|Sunday|10am-noon|Li|Adams|
-	|Sunday|10am-noon|Singh|Morgan|
-	|Sunday|10am-noon|Batye|Nguyen|
-	- Format the data as a table named **Schedule**.
+|Start Day|Start Time|Volunteer 1|Volunteer 2|
+|---|---|---|---|
+|Saturday|10am-noon|Vasquez|Kumashiro|
+|Saturday|noon-2pm|Ice|Singhal|
+|Saturday|2pm-4-pm|Myk|Mueller|
+|Sunday|10am-noon|Li|Adams|
+|Sunday|10am-noon|Singh|Morgan|
+|Sunday|10am-noon|Batye|Nguyen|
+
+- Format the data as a table named **Schedule**.
 
 - Upload your Excel file to a cloud-storage account such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
 - If you're new to PowerApps:
