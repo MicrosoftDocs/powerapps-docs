@@ -62,6 +62,12 @@ On the other screen, users can create a record, update one or more fields in a r
 
 	![Option to create an app from data](./media/get-started-create-from-blank/create-from-blank.png)
 
+1. If prompted, take the intro tour to understand the main areas of PowerApps (or click or tap **Skip**).
+
+	![Quick tour](./media/get-started-create-from-blank/quick-tour.png)
+
+	You can always take the tour later by clicking or tapping the question-mark icon near the upper-left corner of the screen and then clicking or tapping **Take the intro tour**.
+
 1. In the right-hand pane, click or tap **Add data source**, and then perform either of these steps:
 
 	- If you already have a connection to your cloud-storage account, click or tap it.
@@ -88,7 +94,9 @@ On the other screen, users can create a record, update one or more fields in a r
 
 	Several controls are added to the screen, including a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
 
-1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
+1. Select the gallery by clicking or tapping anywhere in it except the first item.
+
+1. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
 
 	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
@@ -101,7 +109,10 @@ On the other screen, users can create a record, update one or more fields in a r
 
 	More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
 
-1. Set the **[Text](controls/properties-core.md)** property of the **[Text box](controls/control-text-box.md)** control at the top of the screen to show **View Records**.
+1. Select the **[Text box](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
+
+1. In the property list, click or tap **[Text](controls/properties-core.md)**, copy this text, and then paste it in the formula bar.<br>
+ **"View Records"**
 
 	![First screen](./media/get-started-create-from-blank/first-screen.png)
 
@@ -114,24 +125,36 @@ On the other screen, users can create a record, update one or more fields in a r
 
 	![Add and rename screen](./media/get-started-create-from-blank/add-screen.png)
 
-1. Add a **[Text box](controls/control-text-box.md)** control that identifies the screen.
+1. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Text box](controls/control-text-box.md)**.
+
+1. In the properties list, click or tap **Text**, copy this text, and then paste it into the formula bar:
+<br>**"Change record"**
+
+1. On the **Home** tab, click or tap the **Fill** button, and then click or tap a medium-blue option.
+
+1. On the **Home** tab, click or tap the **A** icon, and then click or tap the white option.
+
+1. On the **Home** tab, click or tap the align option, and then click or tap the option to align the text in the center.
 
 	![ChangeScreen with banner](./media/get-started-create-from-blank/change-screen-blank.png)
 
-1. Add an **[Edit form](add-form.md)** control, and move and resize it to cover most of the screen.
+1. On the **Insert** tab, click or tap **Forms**, and then click or tap the option to add an **[Edit form](add-form.md)** control.
+
+1. Move and resize the form to cover most of the screen.
 
 	![Add a form](./media/get-started-create-from-blank/add-form.png)
 
 	The form is named **Form1** by default unless you already added and removed a form. In that case, rename the form **Form1**.
 
-1.  Set the **[DataSource](controls/control-form-detail.md)** property of the form to **Schedule** and its **[Item](controls/control-form-detail.md)** property to this formula:
-<br>**BrowseGallery1.Selected**
+1.  With the form still selected, click or tap **[DataSource](controls/control-form-detail.md)** in the property list, and type or paste **Schedule** in the formula bar.
+
+1. With the form still selected, click or tap **[Item](controls/control-form-detail.md)** in the property list, and type or paste **BrowseGallery1.Selected** in the formula bar.
 
 1. In the right-hand pane, click or tap the eye icon for each field to show it.
 
 	![Show fields on form](./media/get-started-create-from-blank/show-fields.png)
 
-1. Near the bottom of the form, click or tap **Add a custom card**, and then add a **[Text box](control-text-box.md)** control to it.
+1. Near the bottom of the form, click or tap **Add a custom card**, and then add a **[Text box](control-text-box.md)** control in the new card.
 
 	![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
