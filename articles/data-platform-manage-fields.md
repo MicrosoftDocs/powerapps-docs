@@ -20,7 +20,9 @@
 # Manage custom fields in the Common Data Model #
 In the Common Data Model, you can create and update one or more custom fields in any entity. When you create a custom field, you specify a set of properties, such as the field's name, its display name, and the type of data that it will contain.
 
-**Note:** Every entity contains [system fields](data-platform-create-entity.md#system-and-record-title-fields), and [standard entities](data-platform-intro.md) contain standard (default) fields. You can't modify or delete system or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
+If you're unfamiliar with the Common Data Model, see [Understand entities](data-platform-intro.md).
+
+**Note:** Every entity contains [system fields](data-platform-create-entity.md#system-and-record-title-fields) (such as when a record was updated most recently and by whom). In addition, [standard entities](data-platform-intro.md) contain standard (default) fields. You can't modify or delete system or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field ##
 1. On [powerapps.com](https://web.powerapps.com), click or tap **Manage** in the left navigation pane, and then click or tap **Entities**.
