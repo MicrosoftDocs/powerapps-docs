@@ -1,6 +1,6 @@
 <properties
     pageTitle="Manage connections in PowerApps | Microsoft PowerApps"
-    description="Add and manage connections from PowerApps to SharePoint Online, SQL Server, OneDrive for Business, Salesforce, Office 365, OneDrive, DropBox, Twitter, Google Drive, and more"
+    description="Add and manage connections from PowerApps to SharePoint, SQL Server, OneDrive for Business, Salesforce, Office 365, OneDrive, DropBox, Twitter, Google Drive, and more"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -22,9 +22,9 @@
 
 [AZURE.VIDEO nb:cid:UUID:5bd6ea27-f8c0-41e0-a65b-34ca63a57d3e]
 
-In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, and then access that data from your app. Connect to SharePoint Online, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and other [data sources](connections-list.md), and then use those connections as in these examples:
+In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, and then access that data from your app. Connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and other [data sources](connections-list.md), and then use those connections as in these examples:
 
-- Update a list on a SharePoint Online site.
+- Update a list on a SharePoint site.
 - Get Excel data from your OneDrive for Business account.
 - Send email in Office 365.
 - Send a tweet.
@@ -48,7 +48,7 @@ In addition to creating and managing connections in [powerapps.com](https://web.
 
 1. In the upper-right corner, click or tap **New connection**, click or tap a connector in the list that appears, and then click or tap **Add connection**.
 
-	Some connectors, such as **Microsoft Translator**, require no additional steps. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint Online](connection-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
+	Some connectors, such as **Microsoft Translator**, require no additional steps. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connection-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
 
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
 

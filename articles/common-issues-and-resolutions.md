@@ -21,6 +21,10 @@
 # Common issues and resolutions #
 
 ## Recently added/changed ##
+1. **Apps that connect to on-premises SharePoint**
+
+	If you share an app that relies on connections that aren’t automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they click or tap **Sign in**. To close the dialog box, click or tap the close (X) icon in the upper-right corner. The dialog box doesn’t appear if you open the app in PowerApps Studio or PowerApps Mobile. For more information about shared connections, see [Share app resources](share-app-resources.md).
+
 1. **Creating and modifying apps in a browser**
 
 	You can do many of the same things in a browser as you can in PowerApps Studio, but you, for example, can't create an app from a template. For more information, see [Create an app in a browser](create-app-browser.md).
