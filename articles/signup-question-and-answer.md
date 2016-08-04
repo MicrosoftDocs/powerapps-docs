@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="MandiOhlinger"
+    authors="jamesol-msft"
     manager="erikre"
     editor=""
     tags=""
@@ -16,7 +16,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="06/02/2016"
-    ms.author="mandia"/>
+    ms.author="jamesol"/>
 
 # PowerApps in your organization Q&A
 This topic describes how users in your organization can use PowerApps, and how you can control the PowerApps service.
@@ -90,7 +90,7 @@ Use the following PowerShell script:
 
 The [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. Note that a separate step is required to disable each sign-up option.
 
-To disable sign up flow Option 1 (i.e., the user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com) and selects **Sign up free**), run the following Windows PowerShell Script. 
+To disable sign up flow Option 1 (i.e., the user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com) and selects **Sign up free**), run the following Windows PowerShell Script.
 
 Use this Windows PowerShell script to disable automatic license distributions for existing users. If you have already disabled automatic license distribution before (e.g., Office 365 for Education for Students, Faculty, and Staff), you do not need to repeat this process.  
 

@@ -14,7 +14,7 @@
 	ms.workload="na"
 	ms.tgt_pltfrm="na"
 	ms.devlang="na"
-	ms.topic="get-started-article"
+	ms.topic="article"
 	ms.date="06/06/2016"
 	ms.author="anneta"/>
 
@@ -38,7 +38,7 @@ Ready to take it to the next level? Create [custom APIs](register-custom-api.md)
 | ![API Icon](./media/connections-list/office365icon.png) | [**Office 365 Outlook**](./connections/connection-office365-outlook.md)<br/>Send and receive emails | ![API Icon](./media/connections-list/office365icon.png) | [**Office 365 Users**](./connections/connection-office365-users.md)<br/>View profile information, get direct reports, and more |
 | ![API Icon](./media/connections-list/onedriveicon.png) | [**OneDrive**](./connections/cloud-storage-blob-connections.md)<br/>Upload and manage files | ![API Icon](./media/connections-list/onedriveforbusinessicon.png) | [**OneDrive for Business**](./connections/cloud-storage-blob-connections.md)<br/>Upload and manage files |
 | ![API Icon](./media/connections-list/salesforceicon.png) | [**Salesforce**](./connections/connection-salesforce.md)<br/>Manage accounts, leads, opportunities, and more | ![API Icon](./media/connections-list/sendgridicon.png) | [**SendGrid**](./connections/connection-sendgrid.md)<br/>Send email and manage recipient lists |
-| ![API Icon](./media/connections-list/sftpicon.png) | [**SFTP**](./connections/connection-sftp.md)<br/>Upload, get, and delete files, among other tasks | ![API Icon](./media/connections-list/sharepointicon.png) | [**SharePoint Online**](./connections/connection-sharepoint-online.md)<br/>Manage list items |
+| ![API Icon](./media/connections-list/sftpicon.png) | [**SFTP**](./connections/connection-sftp.md)<br/>Upload, get, and delete files, among other tasks | ![API Icon](./media/connections-list/sharepointicon.png) | [**SharePoint**](./connections/connection-sharepoint-online.md)<br/>Manage list items |
 | ![API Icon](./media/connections-list/slackicon.png) | [**Slack**](./connections/connection-slack.md)<br/>Post messages to Slack channels | ![API Icon](./media/connections-list/smtpicon.png) | [**SMTP**](./connections/connection-smtp.md)<br/>Send email with attachments|
 | ![API Icon](./media/connections-list/sqlicon.png) | [**SQL Server**](./connections/connection-azure-sqldatabase.md)<br/>Create and update data| ![API Icon](./media/connections-list/twilioicon.png) | [**Twilio**](./connections/connection-twilio.md)<br/>Send and get messages, get available numbers, and more |
 | ![API Icon](./media/connections-list/twittericon.png) | [**Twitter**](./connections/connection-twitter.md)<br/>Get timelines, post tweets, and more |

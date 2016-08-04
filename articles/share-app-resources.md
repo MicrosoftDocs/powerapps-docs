@@ -36,9 +36,14 @@ On [powerapps.com](https://web.powerapps.com), you can determine whether a conne
   ![Share tab in connection details page](./media/share-app-resources/shared-connections.png)
 
 ## On-premises data gateways ##
-Some on-premise connections aren't automatically shared, but the [on-premise data gateway](gateway-management.md) through which you made the connection is. Users of the app can then create their own connections through that gateway.
+If you create and share an app that includes data from an on-premises source, the [on-premises data gateway](gateway-management.md) itself and certain types of connections to that gateway will be shared automatically. For any connection that isn’t shared automatically, you can share it manually (as the previous section shows) or let the app prompt users to create their own connections. To show the connection or connections with which a gateway has been configured:
 
-On [powerapps.com](https://web.powerapps.com), you can view connections created on any gateway that you created or for which you were given administrative permissions. In the left navigation bar, click or tap **Manage**, click or tap **Gateways**, and then click or tap a gateway.
+1.	Open [powerapps.com](https://web.powerapps.com), click or tap **Manage** in the left navigation bar, and then click or tap **Gateways**.
+1.	Click or tap a gateway, and then click or tap the **Connections** tab.
+
+**Note**: If you share one or more connections manually, you might need to reshare them under these circumstances:
+- You add an on-premises data gateway to an app that you’ve already shared.
+- You change the set of people or groups with whom you’ve shared an app that has an on-premises data gateway.
 
 ## Custom APIs ##
 When you share an app that uses a custom API, it is automatically shared, but users must create their own connections to it.

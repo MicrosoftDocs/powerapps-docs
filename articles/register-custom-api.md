@@ -4,7 +4,7 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="sunaysv"
+	authors="archnair"
 	manager="erikre"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="05/23/2016"
-   ms.author="mandia"/>
+   ms.author="archanan"/>
 
 # What are custom APIs
 
