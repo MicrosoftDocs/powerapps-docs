@@ -29,10 +29,19 @@ Either way, PowerApps automatically stores and helps secure the data. After you 
 
 **Note**: Before you create an entity, see the [list of standard entities and enumeration types](data-platform-intro.md), which cover common scenarios such as accounts and contacts. Save yourself some time by starting with one of these entities if it meets your needs out of the box or with only minor changes.
 
-## Create a custom entity ##
+## Create an entity ##
 1. On [powerapps.com](http://powerapps.com), click or tap **Manage** in the left navigation pane, and then click or tap **Entities**.
 
 1. If prompted, click or tap **Create my database**.
+
+	A list of entities appears.
+
+1. Perform either of these steps:
+
+	- To duplicate an entity, click or tap the elllipsis (...) for the entity that you want to duplicate, and then click or tap **Duplicate entity**.
+
+	The entity is created, and a list of its fields appears so that you can customize your new entity.
+	- To create an entity from scratch, go to the next step.
 
 1. Near the upper-right corner, click or tap **New Entity**.
 
