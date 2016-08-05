@@ -38,7 +38,7 @@ If you're not sure whether entities are your best option, consider these benefit
 ## Standard and custom entities ##
 When you develop an app, you can use standard entities, custom entities, or both:
 
-- Microsoft Common Data Model provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts for an organization, such as Contacts, Accounts, and Products. For the full list, see [Standard entities and enumeration types](data-platform-standard-entity.md).
+- Microsoft Common Data Model provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts for an organization, such as Contacts, Accounts, and Products. For the full list, see [Standard entities](data-platform-intro.md#standard-entities).
 - You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [how to create a custom entity](data-platform-create-entity.md).
 
 If a standard entity can serve a particular purpose in your app, you should use it rather than developing a custom entity that does the same thing. If a standard entity would serve a purpose with a few changes, you can add fields to suit your needs. However, you can't make changes that break the entity (such as deleting a standard field) or that restrict its information (such as adding a required field). These requirements ensure that standard entities remain consistent across all organizations.
@@ -54,7 +54,7 @@ All entities, whether standard or custom, are created with a set of read-only fi
 - **LastModifiedByUser**: The user who modified the record most recently.
 
 ### Standard fields ###
-Each standard entity contains a set of default fields that you can't change or delete. For more information, see [the full list of standard entities and their default fields]().
+Each standard entity contains a set of default fields that you can't change or delete. For more information, see [Manage custom fields in the Common Data Model](data-platform-manage-fields.md).
 
 ### Custom fields ###
 You can create custom fields in either a standard entity or a custom entity. You must specify the name, the display name, and the data type of each custom field. PowerApps supports these data types:
@@ -82,6 +82,16 @@ You can navigate between records in entities if they have a relationship that's 
 
 ## Databases
 You create an entity in your own database so that other users can't see it unless you share it with them. In addition, other users can create entities that have the same name without conflicting with your entity. Every database contains a copy of the standard entities.
+
+## Standard entities
+
+Functional Group | Description | Entities
+--- | --- | ---
+Foundation | The Foundation entities contain information that is relevant to nearly every other entity group. This group contains entities such as Address and Currency. | Cost Center<br> Country Region<br> Currency<br> Postal Codes<br> Product<br> Product Category<br> State list<br> Unit Conversion<br> Unit
+People, Organizations, and Groups | These entities encompass a rich set of people and organizations that you might interact with, including employees, contractors, donors, volunteers, fans, alumni, and families. | Alumnus<br> Business Unit<br> Company<br> Constituent<br> Contractor<br> Donor<br> Employee<br> Family<br> Family Member<br> Fan<br> Household<br> Household Member<br> Member<br> Team<br> Team Member<br> Tenant<br> User<br> Volunteer<br>
+Purchasing | The Purchasing entities let you create purchasing solutions.  | Purchase Order<br> Purchase Order Charge<br> Purchase Order Line<br> Purchase Order Line Charge<br> Purchase Order Line Receipt<br> Purchase Order Line Tax<br> Purchase Order Tax<br> Supplier<br> Supplier Invoice<br> Supplier Invoice Charge<br> Supplier Invoice Line<br> Supplier Invoice Line Charge<br> Supplier Invoice Line Tax<br> Supplier Invoice Tax
+Sales | The Sales entities let you create end-to-end sales solutions, from tracking leads and opportunities, to following through with contacts, to accepting and delivering orders, to sending invoices. | Contact<br> Customer<br> Lead<br> Opportunity<br> OpportunityPartyRole<br> Partner<br> SalesInvoice<br> Sales Invoice Charge<br> Sales Invoice Line<br> Sales Invoice Line Charge<br> Sales Invoice Line Tax<br> Sales Invoice Tax<br> Sales Order<br> Sales Order Charge<br> Sales Order Line<br> Sales Order Line Charge<br> Sales Order Line Shipment<br> Sales Order Line Tax<br> Sales Order Tax
+Case Management | The Case Management entities manage issues from your customers, including tracking, escalation, and documentation. | Case<br> Case Activity<br> Case Activity KB Article<br> Case Worker Assignment<br> KB Article
 
 ## Get started ##
 Try it out by [creating an entity](data-platform-create-entity.md) and then [creating an app that uses that entity](data-platform-create-app.md).
