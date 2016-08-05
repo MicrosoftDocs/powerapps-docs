@@ -1,6 +1,6 @@
 <properties
-	pageTitle="How to customize your Swagger definition for PowerApps and Logic Flows| Microsoft Azure"
-	description="View the schema extensions required by Swagger to work with PowerApps and Logic Flows"
+	pageTitle="How to customize your Swagger definition for PowerApps and Microsoft Flow| Microsoft Azure"
+	description="View the schema extensions required by Swagger to work with PowerApps and Microsoft Flow"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -17,29 +17,29 @@
    ms.date="04/13/2016"
    ms.author="archanan"/>
 
-# Customize your Swagger definition for PowerApps and Logic Flows
+# Customize your Swagger definition for PowerApps and Microsoft Flow
 
 ## Author Swagger 2.0 API definition for your API
 
 To learn how to add Swagger to your WebAPI, see [Swashbuckle][1].
 
 ## Schema extensions
-In addition to the standard Swagger specifications, there are some additional swagger extensions available when creating a custom API for PowerApps and Logic Flows. This sections lists and describes these extensions.
+In addition to the standard Swagger specifications, there are some additional swagger extensions available when creating a custom API for PowerApps and Microsoft Flow. This sections lists and describes these extensions.
 
 ##### x-ms-summary
 A string that describes the display names for entities that do not have the `summary` field defined in the Swagger spec. **Parameter names** is an example.
 
 ##### x-ms-visibility
-This value describes whether the entity is displayed in the Logic Flow designer. The following values are available:
+This value describes whether the entity is displayed in the Microsoft Flow designer. The following values are available:
 
 - “none” (default)
 - “advanced”
-- “internal” - Logic Flow designer does not show these operations
+- “internal” - Microsoft Flow designer does not show these operations
 
-If an operation is marked as "important", the Logic Flow client is expected to highlight these operations.
+If an operation is marked as "important", the Microsoft Flow client is expected to highlight these operations.
 
 ##### x-ms-trigger
-Defines whether this operation can be used as a trigger in the Logic Flow. Options include:
+Defines whether this operation can be used as a trigger in the flow. Options include:
 
 - none (default): The operation cannot be used as a trigger.
 - single: This operation can also be used as a trigger.
@@ -47,7 +47,7 @@ Defines whether this operation can be used as a trigger in the Logic Flow. Optio
 
 
 ##### x-ms-dynamic-values
-This is a hint to the Logic Flow designer that the API provides a list of dynamically allowed values for this parameter. The Logic Flow designer can invoke an operation as defined by the value of this field, and extract the possible values from the result.  The Logic Flow designer can then display these values as options to the end user.  
+This is a hint to the Microsoft Flow designer that the API provides a list of dynamically allowed values for this parameter. The Microsoft Flow designer can invoke an operation as defined by the value of this field, and extract the possible values from the result.  The Microsoft Flow designer can then display these values as options to the end user.  
 
 The value is an object that contains the following properties:
 
