@@ -17,7 +17,10 @@
    ms.date="07/21/2016"
    ms.author="karthikb"/>
 
-# Understand entities in Microsoft Common Data Model #
+# Understand entities in the Microsoft Common Data Model #
+
+[AZURE.VIDEO nb:cid:UUID:c3b18e51-05f1-407d-9adb-93a0db7a57dd]
+
 You can store organizational data in one or more custom entities, which offer several benefits over external data sources such as Microsoft Excel and Salesforce. As examples, you can:
 
 - Import data from another format into a custom entity.
@@ -84,7 +87,7 @@ You can navigate between records in entities if they have a relationship that's 
 You create an entity in your own database so that other users can't see it unless you share it with them. In addition, other users can create entities that have the same name without conflicting with your entity. Every database contains a copy of the standard entities.
 
 ## Standard entities
-For a list of the entities and their fields, and a list of the enumerations, see [Microsoft Common Data Model, Entities Reference](http://download.microsoft.com/download/8/9/5/8956ED58-A9B0-40DF-8CB0-BC13AD8DB6E2/CDMEntityReference.docx).
+For a list of the entities, their fields, and a list of the enumerations, see [Microsoft Common Data Model, Entities Reference](http://download.microsoft.com/download/8/9/5/8956ED58-A9B0-40DF-8CB0-BC13AD8DB6E2/CDMEntityReference.docx).
 
 Functional Group | Description | Entities
 --- | --- | ---
