@@ -17,7 +17,7 @@
    ms.date="08/01/2016"
    ms.author="karthikb"/>
 
-# Create a custom entity in Common Data Model
+# Create a custom entity in the Common Data Model
 Create a custom entity to store data that's specific to your organization, and show that data by developing an app that refers to the entity.
 
 Create an entity:
@@ -25,12 +25,12 @@ Create an entity:
 - from scratch so that it contains only [four system fields and a record title field](data-platform-create-entity.md#system-and-record-title-fields) by default
 - based on another entity by copying its fields and settings but not its data
 
-Either way, PowerApps automatically stores and helps secure the data. After you create an entity, you can [create or modify one or more of its fields](data-platform-manage-fields.md) and [build relationships between entities](data-platform-manage-fields.md).
+Either way, PowerApps automatically stores and helps secure the data. After you create an entity, you can [create or modify one or more of its fields](data-platform-manage-fields.md) and [build relationships between entities](data-platform-entity-lookup.md).
 
-**Note**: Before you create an entity, see the [list of standard entities and enumeration types](data-platform-intro.md), which cover common scenarios such as accounts and contacts. Save yourself some time by starting with one of these entities if it meets your needs out of the box or with only minor changes.
+**Note**: Before you create an entity, see the [list of standard entities](data-platform-intro.md#standard-entities), which cover common scenarios such as accounts and contacts. Save yourself some time by starting with one of these entities if it meets your needs out of the box or with only minor changes.
 
 ## Create an entity ##
-1. On [powerapps.com](http://powerapps.com), click or tap **Manage** in the left navigation pane, and then click or tap **Entities**.
+1. On [powerapps.com](https://web.powerapps.com), click or tap **Manage** in the left navigation pane, and then click or tap **Entities**.
 
 1. If prompted, click or tap **Create my database**.
 
@@ -73,4 +73,4 @@ If you create an entity from scratch, it also contains a custom field that's nam
 ## Next steps ##
 - [Manage fields in an entity](data-platform-manage-fields.md)
 - [Define relationships between entities](data-platform-entity-lookup.md)
-- [Create an app using Common Data Model](data-platform-create-app.md)
+- [Create an app using the Common Data Model](data-platform-create-app.md)

@@ -20,7 +20,7 @@
 # Build a relationship between entities in the Common Data Model #
 Data in one entity often relates to data in another entity. For example, you might have a **Customers** entity and an **Orders** entity, and the **Orders** entity might have a field to show which customer placed the order. You can use a lookup field to show data from the **Customers** entity based on which orders they placed.
 
-If you're unfamiliar with the Common Data Model, see [Understand entities](data-platform-intro.md)
+If you're unfamiliar with the Common Data Model, see [Understand entities](data-platform-intro.md).
 
 ## Define a relationship ##
 You can create several types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one other entity, and each entity can have more than one relationship to another entity. Some common relationship types are:
