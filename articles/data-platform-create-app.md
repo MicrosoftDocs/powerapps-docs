@@ -51,4 +51,4 @@ PowerApps automatically creates an app with three screens, as [Create an app fro
 
 1. In the list of entities, select the check box for one or more entities that you want to use, and then click or tap **Connect**.
 
-The entities or entities that you specified appear in the list of data sources, and you can build your app as [Create an app from scratch](#get-started-create-from-blank.md) describes.
+The entities or entities that you specified appear in the list of data sources, and you can build your app as [Create an app from scratch](get-started-create-from-blank.md) describes.
