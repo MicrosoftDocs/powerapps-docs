@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Tutorial: Create a custom API using Azure Resource Manager in PowerApps and Logic Flows | Microsoft Azure"
-	description="Azure Resource Manager tutorial to create a custom API in PowerApps and Logic Flows"
+	pageTitle="Tutorial: Create a custom API using Azure Resource Manager in PowerApps and Microsoft Flow | Microsoft Azure"
+	description="Azure Resource Manager tutorial to create a custom API in PowerApps and Microsoft Flow"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -18,9 +18,9 @@
    ms.author="archanan"/>
 
 
-# Tutorial: Create a custom AAD protected ARM API for PowerApps and Logic Flows
+# Tutorial: Create a custom AAD protected ARM API for PowerApps and Microsoft Flow
 
-This tutorial walks you through the required steps to register a Swagger file describing the [ARM API][6], and  then connect to the custom API in PowerApps.
+This tutorial walks you through the required steps to register a Swagger file describing the [ARM API][6], and then connect to the custom API in PowerApps.
 
 ## What you need to get started
 
@@ -59,7 +59,7 @@ First, we need to create an Azure Active Directory (AAD) application that perfor
 
 9. **Save** your changes. **Copy and save the key to a safe location**.
 
-## Add the connection in PowerApps or Logic Flows
+## Add the connection in PowerApps or Microsoft Flow
 
 Now that the AAD application is configured, let's add the custom API.
 
@@ -75,20 +75,16 @@ Now that the AAD application is configured, let's add the custom API.
 4. On the next screen, since our Swagger file is detected to use AAD authentication, we need to enter the AAD client ID, the client secret (the **key** you stored in a safe location), and other settings:  
 ![](./media/customapi-azure-resource-manager-tutorial/oauthsettings.png "OAuth Settings")
 
-5. If everything is setup correctly, you can use the ARM custom API by creating a connection, and then referencing it while building your PowerApp or Logic Flow:  
+5. If everything is set up correctly, you can use the ARM custom API by creating a connection and then referencing it while building your app or flow:  
 ![](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png "CustomAPI created")
 
 You can similarly access any data that is exposed using RESTful APIs and authenticated using AAD OAuth2.
 
-For a more detailed experience on creating PowerApps and Logic Flows, see the following:
+For more detailed information about how to create an app, see [Create an app from data](get-started-create-from-data.md).
 
-- [Connect to Office 365, Twitter, and Microsoft Translator](powerapps-api-functions.md)
-- [Show data from Office 365](show-office-data.md)
-- [Create an app from data](get-started-create-from-data.md)
-- [Get started with logic flows](using-logic-flows.md)
+For more detailed information about how to use a flow in an app, see [Start a flow in an app](using-logic-flows.md).
 
-For questions or comments on Custom APIs, email [customapishelp@microsoft.com](mailto:customapishelp@microsoft.com).
-
+To ask questions or make comments about custom APIs, [join our community](https://aka.ms/powerapps-community).
 
 <!--Reference links in article-->
 [1]: https://web.powerapps.com
