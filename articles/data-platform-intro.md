@@ -19,7 +19,7 @@
 
 # Understand entities in the Microsoft Common Data Model #
 
-[AZURE.VIDEO nb:cid:UUID:c3b18e51-05f1-407d-9adb-93a0db7a57dd]
+[AZURE.VIDEO nb:cid:UUID:609a7777-309f-4b6b-87eb-274dd33cac94]
 
 You can store organizational data in one or more custom entities, which offer several benefits over external data sources such as Microsoft Excel and Salesforce. As examples, you can:
 
