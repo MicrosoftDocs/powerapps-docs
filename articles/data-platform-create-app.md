@@ -33,7 +33,7 @@ In either case, you don't need to create a connection from PowerApps to the Comm
 
 ## Create an app automatically ##
 
-[AZURE.VIDEO nb:cid:UUID:e50cb8fb-69b4-47a0-b270-c032450895cb]
+[AZURE.VIDEO nb:cid:UUID:e0d83908-aedd-4db3-8ea9-2dbd4695c662]
 
 1. Under **Create an app from your data**, click or tap **Phone layout** on the **Common Data Model** tile.
 
@@ -45,7 +45,7 @@ PowerApps automatically creates an app with three screens, as [Create an app fro
 
 ## Create a app from scratch ##
 
-[AZURE.VIDEO nb:cid:UUID:9208de61-b86a-4603-9701-f1c006704468]
+[AZURE.VIDEO nb:cid:UUID:5e58b2b8-44a0-467f-b6ec-58dee9fd925a]
 
 1. Under **Create an app**, click or tap **Phone layout** on the **Blank app** tile.
 
