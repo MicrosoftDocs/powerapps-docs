@@ -39,6 +39,7 @@ You can [automatically generate an app](get-started-create-from-data.md) that's 
 - a SharePoint list
 - Salesforce or Microsoft Dynamics CRM Online
 - SQL Server
+- [the Microsoft Common Data Model](data-platform-intro.md) (preview)
 
 **Watch this video for a quick demo**:
 
