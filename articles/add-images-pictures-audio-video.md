@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/28/2016"
-   ms.author="LOnu"/>
+   ms.author="lonu"/>
 
 # Add an image, a video, or a sound
 

@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/03/2016"
+   ms.date="07/29/2016"
    ms.author="litran"/>
 
 # Use a sample app #
@@ -26,22 +26,22 @@ In [powerapps.com](http://web.powerapps.com), use a sample app to explore design
 In **Cost Estimator**, for example, you can create an appointment for estimating the cost of installing a flooring product in a room of a particular size. Capture details such as address and square footage, and calculate the price based on discounts and tax rates. Filter a list of appointments to show those for which estimates have been created, for which estimates haven't been created, or all appointments.
 
 ## Open the app ##
-1. Sign in to [powerapps.com](https://web.powerapps.com), and then select **Cost Estimator** in the list of sample apps.
+1. Sign in to [powerapps.com](https://web.powerapps.com), and then click or tap **Cost Estimator** in the list of sample apps.
 
 	![](./media/open-and-run-a-sample-app/portal-homepage.png)
 
-1. Select **Phone** to show the app as it would look on a phone.
+1. Click or tap **Open for phone** to show the app as it would look on a phone.
 
 	The app contains sample data for creating appointments and estimating the cost of installing a specific flooring product in a room of a particular size.
 
 	![](./media/open-and-run-a-sample-app/cost_estimator_home.png)
 
 ## Make and view an appointment ##
-1. Select **+** to make an appointment for an estimate.
+1. Click or tap **+** to make an appointment for an estimate.
 
 	![](./media/open-and-run-a-sample-app/cost_estimator_add.png)
 
-1. Provide details, and then select **Save job**.
+1. Provide details, and then click or tap **Save job**.
 
 	![](./media/open-and-run-a-sample-app/cost_estimator_new.png)
 
@@ -49,19 +49,20 @@ In **Cost Estimator**, for example, you can create an appointment for estimating
 
 	![](./media/open-and-run-a-sample-app/new_job_added.png)
 
-1. Select an appointment, such as the one you created, to view its details, including a map of the location.
+1. Click or tap an appointment, such as the one you created, to view its details, including a map of the location.
 
 	![](./media/open-and-run-a-sample-app/job_details.png)
 
-	**Note**: You can delete an appointment by selecting the trash-can icon in the upper-right corner.
+	**Note**: You can delete an appointment by clicking or tapping the trash-can icon in the upper-right corner.
+
 	![](./media/open-and-run-a-sample-app/job_delete.png)
 
 ## Create an estimate ##
-1. On the details page of an appointment, select **Begin Estimate**.
+1. On the details page of an appointment, click or tap **Begin Estimate**.
 
 	![](./media/open-and-run-a-sample-app/begin_estimate.png)
 
-1. Provide required information about the room, such as its **Name**, **Length**, and **Width**, and then select **Select flooring style**.
+1. Provide required information about the room, such as its **Name**, **Length**, and **Width**, and then click or tap **Select flooring style**.
 
 	![](./media/open-and-run-a-sample-app/dimensions.png)
 
@@ -69,30 +70,30 @@ In **Cost Estimator**, for example, you can create an appointment for estimating
 
 	![](./media/open-and-run-a-sample-app/select_flooring_type.png)
 
-1. Select **Carpet** > **Caserta Sky Grey**.
+1. Click or tap **Carpet**, and then click or tap **Caserta Sky Grey**.
 
 	![](./media/open-and-run-a-sample-app/carpet.png)
 
-1. If you're using the app on a device that has a camera, select **Take photos**.
+1. If you're using the app on a device that has a camera, click or tap **Add photos**.
 
 	![](./media/open-and-run-a-sample-app/add_photos.png)
 
-1. Take one or more photos, and then select **Done**.
+1. Take one or more photos, and then click or tap **Done**.
 
 	![](./media/open-and-run-a-sample-app/take_photos.png)
 
 ## Finish and submit an estimate ##
-1. Select **Review Estimate**.
+1. Click or tap **Review Estimate**.
 
 	![](./media/open-and-run-a-sample-app/review_estimate.png)
 
 1. (optional) Specify a **Price adjustment** and a **Tax** rate.
 
-1. Add a signature, and then select **Submit estimate**.
+1. Add a signature, and then click or tap **Submit estimate**.
 
 	![](./media/open-and-run-a-sample-app/submit_estimate.png)
 
-	Your default mail client opens with a message that contains the estimate information.
+	If your browser settings allow, your default mail client opens with a message that contains the estimate information.
 
 	![](./media/open-and-run-a-sample-app/email.png)
 
@@ -100,10 +101,10 @@ In **Cost Estimator**, for example, you can create an appointment for estimating
 
 	![](./media/open-and-run-a-sample-app/done.png)
 
-1. Select **Done** to return to the list of appointments.
+1. Click or tap **Done** to return to the list of appointments.
 
 	The appointment for the estimate that you just completed appears in green, which indicates that it's closed.
 
 	![](./media/open-and-run-a-sample-app/estimate_done.png)
 
-1. (optional) Select the filter icon in the upper-left corner, and then filter the list by status (open or closed) or show all appointments.
+1. (optional) Click or tap the filter icon in the upper-left corner, and then filter the list by status (open or closed) or show all appointments.

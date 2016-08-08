@@ -1,10 +1,10 @@
 <properties
-	pageTitle="Tutorial: Create a custom API using Azure Resource Manager in PowerApps and Logic Flows | Microsoft Azure"
-	description="Azure Resource Manager tutorial to create a custom API in PowerApps and Logic Flows"
+	pageTitle="Tutorial: Create a custom API using Azure Resource Manager in PowerApps and Microsoft Flow | Microsoft Azure"
+	description="Azure Resource Manager tutorial to create a custom API in PowerApps and Microsoft Flow"
 	services=""
     suite="powerapps"
-	documentationCenter="" 
-	authors="sunaysv"
+	documentationCenter=""
+	authors="archnair"
 	manager="erikre"
 	editor=""/>
 
@@ -13,14 +13,14 @@
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"s
-   ms.workload="na" 
+   ms.workload="na"
    ms.date="04/13/2016"
-   ms.author="mandia"/>
+   ms.author="archanan"/>
 
 
-# Tutorial: Create a custom AAD protected ARM API for PowerApps and Logic Flows 
+# Tutorial: Create a custom AAD protected ARM API for PowerApps and Microsoft Flow
 
-This tutorial walks you through the required steps to register a Swagger file describing the [ARM API][6], and  then connect to the custom API in PowerApps. 
+This tutorial walks you through the required steps to register a Swagger file describing the [ARM API][6], and then connect to the custom API in PowerApps.
 
 ## What you need to get started
 
@@ -29,7 +29,7 @@ This tutorial walks you through the required steps to register a Swagger file de
 
 ## Enable authentication in Azure Active Directory
 
-First, we need to create an Azure Active Directory (AAD) application that performs authentication when calling the ARM API endpoint. 
+First, we need to create an Azure Active Directory (AAD) application that performs authentication when calling the ARM API endpoint.
 
 1. To create an AAD application, sign in to your [Azure subscription][7], and go to **Active Directory**:  
 ![](./media/customapi-azure-resource-manager-tutorial/azureaad.png "Azure AAD")  
@@ -43,7 +43,7 @@ First, we need to create an Azure Active Directory (AAD) application that perfor
 4. In **Sign-on URL**, enter: *http://login.windows.net*. In **App ID URI**, enter any unique URI. Then, select **Complete**:    
 ![](./media/customapi-azure-resource-manager-tutorial/newapplication2.png "New Second Application")  
 
-5. Once the AAD application is created, go to the **Configure** tab. In this tab, we configure the permissions on the application. 
+5. Once the AAD application is created, go to the **Configure** tab. In this tab, we configure the permissions on the application.
 
 6. Under **permissions to other applications**, select **Add application**, and enter the following permissions as shown:  
 ![](./media/customapi-azure-resource-manager-tutorial/permissions.png "Permissions")  
@@ -52,16 +52,16 @@ First, we need to create an Azure Active Directory (AAD) application that perfor
 ![](./media/customapi-azure-resource-manager-tutorial/permissions2.png "Delegate permissions")
 
 7. Under **keys**, select any duration. **Copy and save the key to a safe location**; we need this later. Also make a note of the __Client ID__:  
-![](./media/customapi-azure-resource-manager-tutorial/configurekeys.png "Configure the keys")	
+![](./media/customapi-azure-resource-manager-tutorial/configurekeys.png "Configure the keys")
 
 8. Under **single sign-on**, enter the following URL in __reply-URL__: https://msmanaged-na.consent.azure-apim.net/redirect:  
 ![](./media/customapi-azure-resource-manager-tutorial/redirecturl.png "Redirect URL")
 
 9. **Save** your changes. **Copy and save the key to a safe location**.
 
-## Add the connection in PowerApps or Logic Flows
+## Add the connection in PowerApps or Microsoft Flow
 
-Now that the AAD application is configured, let's add the custom API. 
+Now that the AAD application is configured, let's add the custom API.
 
 1. Open the [PowerApps web portal][1], go to the **Connections** tab, and select __Add a connection__ in the top right corner:  
 ![](./media/customapi-azure-resource-manager-tutorial/createnewconnection.png "Create Custom API")  
@@ -75,20 +75,16 @@ Now that the AAD application is configured, let's add the custom API.
 4. On the next screen, since our Swagger file is detected to use AAD authentication, we need to enter the AAD client ID, the client secret (the **key** you stored in a safe location), and other settings:  
 ![](./media/customapi-azure-resource-manager-tutorial/oauthsettings.png "OAuth Settings")
 
-5. If everything is setup correctly, you can use the ARM custom API by creating a connection, and then referencing it while building your PowerApp or Logic Flow:  
+5. If everything is set up correctly, you can use the ARM custom API by creating a connection and then referencing it while building your app or flow:  
 ![](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png "CustomAPI created")
 
 You can similarly access any data that is exposed using RESTful APIs and authenticated using AAD OAuth2.
 
-For a more detailed experience on creating PowerApps and Logic Flows, see the following: 
+For more detailed information about how to create an app, see [Create an app from data](get-started-create-from-data.md).
 
-- [Connect to Office 365, Twitter, and Microsoft Translator](powerapps-api-functions.md)
-- [Show data from Office 365](show-office-data.md)
-- [Create an app from data](get-started-create-from-data.md)
-- [Get started with logic flows](using-logic-flows.md)
+For more detailed information about how to use a flow in an app, see [Start a flow in an app](using-logic-flows.md).
 
-For questions or comments on Custom APIs, email [customapishelp@microsoft.com](mailto:customapishelp@microsoft.com).
-
+To ask questions or make comments about custom APIs, [join our community](https://aka.ms/powerapps-community).
 
 <!--Reference links in article-->
 [1]: https://web.powerapps.com

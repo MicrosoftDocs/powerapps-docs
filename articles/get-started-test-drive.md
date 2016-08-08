@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/15/2016"
+   ms.date="07/29/2016"
    ms.author="litran"/>
 
 # Create and run an app from a template #
@@ -27,11 +27,11 @@ Create an app automatically based on a template for specific scenario, and then 
 - A cloud-storage account such as DropBox, OneDrive, or Google Drive.
 
 ## Create an app ##
-1. In PowerApps, select **New** on the **File** menu (near the left edge of the screen).
+1. In PowerApps, click or tap **New** on the **File** menu (near the left edge of the screen).
 
 	![The New option on the File menu](./media/get-started-test-drive/file-new.png)
 
-1. Under **Create an app**, select **Phone layout** on the **Start from a template** tile.
+1. Under **Create an app**, click or tap **Phone layout** on the **App templates** tile.
 
 	**Note:** You can create an app for a tablet, but this tutorial focuses on the phone option.
 
@@ -41,34 +41,40 @@ Create an app automatically based on a template for specific scenario, and then 
 
 1. If you don't have a connection to a cloud-storage account:
 
-	1. Near the bottom of the screen, select **Add a connection**.
+	1. Near the bottom of the screen, click or tap **Add a connection**.
 
-		![The option to create connection within template view](./media/get-started-test-drive/Add-a-connection-template.png)
+		![The option to create connection within template view](./media/get-started-test-drive/add-connection.png)
 
-	1. Select the account that you want to use, provide your credentials, and then select **Yes** to grant access.
+	1. Click or tap the account that you want to use, provide your credentials, and then click or tap **Sign in** to grant access.
 
 		![List connection to create app from template](./media/get-started-test-drive/connection-list.png)
 
 		Your connection appears near the bottom of the screen.
 
-		![Open a PowerApps template](./media/get-started-test-drive/connection-setup-done.png)
+		![Connection added](./media/get-started-test-drive/connection-setup-done.png)
 
-1. In the list of templates, select a template, and then select **Use** (near the lower-right corner).
+1. In the list of templates, click or tap a template, and then click or tap **Use** (near the lower-right corner).
 
 	![Open a PowerApps template](./media/get-started-test-drive/open-template.png)
 
 	The sample data is copied to your cloud-storage account, the app is created, and its home page appears.
 
 ## Run the app ##
-An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, let's explore how the app works in **Preview** mode.
+An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, follow the steps in this section to explore how the app works in **Preview** mode.
 
 **Tip:** Design and develop apps in the default workspace, but test them in **Preview** mode before you share them with others.
 
-1. Select the thumbnail at the top of the left navigation bar.
+1. If you haven't used PowerApps before, take the intro tour (or click or tap **Skip**).
 
-	![Thumbnail for the VolunteerDetails screen](./media/get-started-test-drive/vdetails-thumbnail.png)
+	![Opening screen of the quick tour](./media/get-started-test-drive/quick-tour.png)
 
-1. Press F5 (or select the right arrow in the upper-right corner) to open the app in **Preview** mode.
+	You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
+
+1. At the top of the left navigation bar, click or tap the thumbnail.
+
+	![Thumbnail for the browse screen](./media/get-started-test-drive/browse-thumbnail.png)
+
+1. Press F5 (or click or tap the right arrow in the upper-right corner) to open the app in **Preview** mode.
 
 	![Button to open Preview mode](./media/get-started-test-drive/preview-button.png)
 
@@ -91,16 +97,9 @@ You can customize this or any app in these ways, among others:
 - [add and configure more controls](add-configure-controls.md)
 - [change how the app behaves](working-with-formulas.md)
 
-You can also, for example, change the colors in an app easily by selecting a different theme.
-
-1. If the **Theme** tab isn't open in the right-hand pane, select that tab, and then select the theme that you want.
-
-	![Theme options](./media/get-started-test-drive/select-theme.png)
-
-Even if you select a theme, you can still change the color of one or more specific elements by setting a [Color property](controls/properties-color-border.md) or a [Text property](controls/properties-text.md). You can then select a different theme without losing your individual customizations.
-
 ## Next steps ##
-1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.
+1. Press Ctrl-S, give your app a name, and then click or tap **Save** to save your app to the cloud.
+
 1. [Share your app](share-app.md) with other people in your organization.
 
 	**Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.

@@ -4,7 +4,7 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="sunaysv"
+	authors="archnair"
 	manager="erikre"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="05/23/2016"
-   ms.author="mandia"/>
+   ms.author="archanan"/>
 
 # What are custom APIs
 
@@ -171,7 +171,7 @@ In this step, we create a very simple app that shows you how to add your custom 
 ![](./media/register-custom-api/screencustomapi.png "Select your custom API")  
 5. Select **Add data source**.
 
-Once added, you can use your custom API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Show data from Office 365](show-office-data.md) is an example of using the Office 365 API.
+Once added, you can use your custom API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](connection-office365-outlook.md) is an example of using the Office 365 API.
 
 
 ## Sharing a Custom API

@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="MandiOhlinger"
-	manager="dwrede"
+	authors="lonu"
+	manager="erikre"
 	editor=""/>
 
 <tags
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="06/02/2015"
-   ms.author="mandia"/>
+   ms.author="lonu"/>
 
 
 # Show images and text in a gallery, including gallery selection, sort, and filter
