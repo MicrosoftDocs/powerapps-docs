@@ -19,11 +19,9 @@
    ms.author="gregli"/>
 
 # Acceleration, App, Compass, Connection, and Location signals in PowerApps #
-
 Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.  
 
 ## Description and syntax ##
-
 All signals return a [record](../working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](operators.md).
 
 ### Acceleration ###
