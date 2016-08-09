@@ -19,11 +19,9 @@
    ms.author="gregli"/>
 
 # Acceleration, App, Compass, Connection, and Location signals in PowerApps #
-
 Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.  
 
 ## Description and syntax ##
-
 All signals return a [record](../working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](operators.md).
 
 ### Acceleration ###
@@ -91,6 +89,5 @@ From the pitcher's mound at Safeco Field in Seattle, Washington, a baseball pitc
 | **Acceleration** | Returns the acceleration as a record.  | { X: 0, Y: 264, Z: 0 } as the pitcher throws the device. |
 | **Connection.Connected** | Returns a Boolean value that indicates whether the device is connected to a network  | **true** |
 | **Connection.Metered** | Returns a Boolean value that indicates whether the connection is metered | **true** |
-| **App.ActiveScreen** | Returns the name of the displayed screen. | **PlayBall** |
 | **App.ActiveScreen = PlayBall** | Returns a Boolean value that indicates whether **PlayBall** is displayed.  | **true** |
 | **App.ActiveScreen.Fill** | Returns the background color for the displayed screen. | **Color.Green** |
