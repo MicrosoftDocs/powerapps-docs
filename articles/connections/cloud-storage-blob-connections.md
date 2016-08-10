@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Overview of the cloud storage connection | Microsoft PowerApps"
-	description="See how to connect to a cloud storage account, and display Excel data in your app"
+	pageTitle="Overview of the cloud-storage connection | Microsoft PowerApps"
+	description="See how to connect to a cloud-storage account, and display Excel data in your app"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
@@ -18,13 +18,12 @@ ms.workload="na"
 ms.date="06/06/2016"
 ms.author="anneta"/>
 
-# Cloud storage connections
-PowerApps offers several cloud storage connections. Using these connections, you can store Excel files, and then use the information in the Excel file throughout your app. These connections include:  
+# Cloud-storage connections #
+PowerApps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
 
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|---|
-| **Box**<br/>![API Icon][boxicon] | **Dropbox**<br/>![API Icon][dropboxicon]  |  **Google Drive**<br/>![API Icon][googledriveicon]| **OneDrive**<br/>![API Icon][onedriveicon]| **OneDrive for Business**<br/>![API Icon][onedriveforbusinessicon]|
-
+|**Box**|**Dropbox**| **Google Drive**|**OneDrive**|**OneDrive<br>for Business**|**Azure Blob**|
+|---|---|---|---|---|---|
+| ![API Icon][boxicon] | ![API Icon][dropboxicon] | ![API Icon][googledriveicon]| ![API Icon][onedriveicon]| ![API Icon][onedriveforbusinessicon]| ![Icon](./media/cloud-storage-blob-connections/blobicon.png)
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 - An Excel file with the data [formatted as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664):
