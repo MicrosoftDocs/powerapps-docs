@@ -26,7 +26,8 @@ Just getting started with adding connections in PowerApps? Learn how to add [con
 Ready to take it to the next level? Create [custom APIs](register-custom-api.md) and connect to them within your apps.
 
 ## Available connections ##
-|  |  |  |  |
+
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |-|-|-|-|
 | ![](./media/connections-list/azureblob.png) | [**Azure Blob**](./connections/cloud-storage-blob-connections.md)<br>Manage data in an Excel file | ![](./media/connections-list/box.png) | [**Box**](./connections/connection-box.md)<br>Manage data in an Excel file |
 | ![](./media/connections-list/dropbox.png) | [**Dropbox**](./connections/connection-dropbox.md)<br>Manage data in an Excel file | ![](./media/connections-list/dynamicscrm.png) | [**Dynamics CRM Online**](./connections/connection-dynamics-crmonline.md)<br>Do more with your data |
