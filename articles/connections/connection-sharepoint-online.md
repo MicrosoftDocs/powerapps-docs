@@ -24,6 +24,10 @@ ms.author="anneta"/>
 
 Connect to a SharePoint site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
 
+**Prerequisites**
+
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) PowerApps Studio, open it, and then sign in by providing the same credentials that you used to sign up.
+
 ## Known issues ##
 You can add data from a list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
 
@@ -63,12 +67,50 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 
 	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
-## Connect to SharePoint ##
-### When PowerApps creates an app for you ###
+## Generate an app automatically ##
 For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
-### When you update an app or build one from scratch ###
-1. Follow the steps to [add a data connection](add-data-connection.md). In the last step, click or tap **SharePoint** in the list of connectors.
+## Build an app from scratch ##
+1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, and then click or tap **Connections**.
+
+	![Open list of connections](./media/connection-sharepoint-online/manage-connections.png)
+
+1. In the upper-right corner, click or tap **New connection**, and then click or tap **SharePoint** in the list of connectors.
+
+	![Add SharePoint connection](./media/connection-sharepoint-online/add-sp-portal.png)
+
+1. Specify the type of SharePoint site to which you want to connect:
+
+	![Choose type of SharePoint site](./media/connection-sharepoint-online/choose-type-portal.png)
+
+	- Click or tap **Connect directly (cloud services)** to connect to SharePoint Online, and skip to step 4.
+
+	- Click or tap **Connect using on-premises data gateway** to connect to an on-premises SharePoint site, and then provide this information:
+
+		1.  Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
+
+			![Specify credentials](./media/connection-sharepoint-online/specify-creds-portal.png)
+
+		1. If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+
+		1. Under **Choose a gateway**, click or tap the gateway that you want to use.
+
+			![Choose gateway](./media/connection-sharepoint-online/choose-gateway-portal.png)
+
+1. Click or tap **Add connection**.
+
+1. Create an app by using techniques that are similar to those that [Create an app from scratch](get-started-create-from-blank.md) describes.
+
+## Update an app ##
+1. In PowerApps Studio, open the app that you want to update.
+
+1. In the right-hand pane, click or tap the **Data sources** tab, and then click or tap **Add data source**.
+
+	If the right-hand pane doesn't show a **Data sources** tab, click or tap any screen in the left navigation bar.
+
+	![Add data source](./media/connection-sharepoint-online/add-data-source.png)
+
+1. Click or tap **Add connection**, click or tap **SharePoint**, and then click or tap **Connect**.
 
 	![Add SharePoint connection](./media/connection-sharepoint-online/add-sharepoint.png)
 
@@ -104,35 +146,7 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
 
-### When you open powerapps.com ###
-1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
-
-	![Open list of connections](./media/connection-sharepoint-online/manage-connections.png)
-
-1. In the upper-right corner, click or tap **New connection**, and then click or tap **SharePoint** in the list of connectors.
-
-	![Add SharePoint connection](./media/connection-sharepoint-online/add-sp-portal.png)
-
-1. Specify the type of SharePoint site to which you want to connect:
-
-	![Choose type of SharePoint site](./media/connection-sharepoint-online/choose-type-portal.png)
-
-	- Click or tap **Connect directly (cloud services)** to connect to SharePoint Online, and skip to step 4.
-
-	- Click or tap **Connect using on-premises data gateway** to connect to an on-premises SharePoint site, and then provide this information:
-
-		1.  Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
-
-			![Specify credentials](./media/connection-sharepoint-online/specify-creds-portal.png)
-
-		1. If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
-
-		1. Under **Choose a gateway**, click or tap the gateway that you want to use.
-
-			![Choose gateway](./media/connection-sharepoint-online/choose-gateway-portal.png)
-
-1. Click or tap **Add connection**.
-
+<!--NotAvailableYet
 ## View the available functions ##
 This connection includes the following functions:
 
@@ -431,7 +445,6 @@ Extract folder: Used for extracting a folder on Document Library
 |IsFolder|boolean|No | |
 |ETag|string|No | |
 |FileLocator|string|No | |
--->
 
 ### GetOnNewItems ###
 When a new item is created: When a new item is created in a SharePoint list
@@ -595,7 +608,7 @@ Get lists: Retrieves SharePoint lists from a site
 | Property Name | Data Type | Required | Description |
 |---|---|---|---|
 |value|array|No | |
-
+-->
 
 ## Next steps ##
 - Learn how to [show data from a data source](../add-gallery.md).

@@ -93,7 +93,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 1. Click or tap **Add connection** to create the connection.
 
-1. Follow the steps in [Create an app from scratch](get-started-create-from-blank.md)
+1. Create an app by using techniques that are similar to those that [Create an app from scratch](get-started-create-from-blank.md) describes.
 
 ## Update an existing app ##
 1. In PowerApps Studio, open the app that you want to update.
