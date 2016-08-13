@@ -20,13 +20,13 @@
 # What's new in PowerApps release 2.0.490 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
-1. **Use the entities in the Common Data Model to build apps**.
+1. **Use the entities in the Microsoft Common Data Model to build apps**.
 
-	In the Microsoft Common Data Model, store organizational data in standard or custom entities, build and share apps based on those entities, and open the entities in Excel to easily view and edit the data. For more information, see [Understand entities](data-platform-intro.md).
+	Store organizational data in standard or custom entities, build and share apps based on those entities, and open the entities in Excel to easily view and edit the data. For more information, see [Understand entities](data-platform-intro.md).
 
 1. **Connect to data in an on-premises SharePoint site**.
 
-	Show and manage data in an on-premises SharePoint site by using a data gateway. For more information, see [Connect to SharePoint](connection-sharepoint-online.md#connect-to-sharepoint).
+	Show and manage data in an on-premises SharePoint site by using a data gateway. For more information, see [Connect to SharePoint](connection-sharepoint-online.md).
 
 1. **Get push notifications on your Android device when apps are shared with you**.
 
