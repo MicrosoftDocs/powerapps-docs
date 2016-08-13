@@ -146,6 +146,11 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
 
+## Next steps ##
+- Learn how to [show data from a data source](../add-gallery.md).
+- Learn how to [view details and create or update records](../add-form.md).
+- See other types of [data sources](../connections-list.md) to which you can connect.  
+
 <!--NotAvailableYet
 ## View the available functions ##
 This connection includes the following functions:
@@ -609,8 +614,3 @@ Get lists: Retrieves SharePoint lists from a site
 |---|---|---|---|
 |value|array|No | |
 -->
-
-## Next steps ##
-- Learn how to [show data from a data source](../add-gallery.md).
-- Learn how to [view details and create or update records](../add-form.md).
-- See other types of [data sources](../connections-list.md) to which you can connect.  

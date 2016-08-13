@@ -68,7 +68,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 	PowerApps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
 
-1. Customize the app by using techniques that are similar to those that [Create an app from Excel](get-started-create-from-data) describes, starting with changing the app layout.
+1. Customize the app by using techniques that are similar to those that [Create an app from Excel](get-started-create-from-data.md) describes, starting with changing the app layout.
 
 ## Build an app from scratch ##
 1. Sign in to [powerapps.com](https://web.powerapps.com) with the same account that you used to sign up for PowerApps.
@@ -123,6 +123,12 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 1. Under **Choose a dataset**, click or tap an option.
 
 1. Under **Choose a table**, select one or more checkboxes, and then click or tap **Connect**.
+
+## Next steps ##
+- Learn how to [show data from a data source](../add-gallery.md).
+- Learn how to [view details and create or update records](../add-form.md).
+- See other types of [data sources](../connections-list.md) to which you can connect.  
+- [Understand tables and records](../working-with-tables.md) with tabular data sources.
 
 <!--NotAvailableYet
 ## View the available functions ##
@@ -247,9 +253,3 @@ Result of the stored procedure execution.
 |ResultSets|object|No | Result sets|
 
 -->
-
-## Next steps ##
-- Learn how to [show data from a data source](../add-gallery.md).
-- Learn how to [view details and create or update records](../add-form.md).
-- See other types of [data sources](../connections-list.md) to which you can connect.  
-- [Understand tables and records](../working-with-tables.md) with tabular data sources.

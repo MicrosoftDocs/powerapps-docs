@@ -18,22 +18,18 @@ ms.workload="na"
 ms.date="04/26/2016"
 ms.author="anneta"/>
 
-#  SFTP
+# Connect from Microsoft PowerApps to SFTP #
 
 ![SFTP](./media/connection-sftp/sftpicon.png)
 
-Connect to SFTP API to send and receive files. You can perform various operations such as create, update, get or delete files.
+Connect to an SFTP API, and then create, update, and delete files on it from an app that you create in PowerApps.
 
-You can display this information using different controls in your app. For example, you can add a gallery control to your app, then display the contents from an SFTP folder in this gallery.
+- For information about how to create an app, see [Generate an app automatically](get-started-create-from-data.md) or [Create an app from scratch](get-started-create-from-blank.md).	These topics are written for Excel, but the same principles apply to Dynamics.
+- For information about how to add data from Dynamics to an existing app, see [Add a data connection](add-data-connection.md).
+- See all the [available connections](../connections-list.md), and learn how to [add a connection](../add-manage-connections.md) to PowerApps.
 
-This topic shows the available functions.
-
-&nbsp;
-
-[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-
-## View the available functions
-
+<!--NotAvailableYet
+## View the available functions ##
 This connection includes the following functions:
 
 | Function Name |  Description |
@@ -306,9 +302,4 @@ Extract folder: Extracts an archive file into a folder using SFTP (example: .zip
 |IsFolder|boolean|No | |
 |ETag|string|No | |
 |FileLocator|string|No | |
-
-
-## Helpful links
-
-See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.
+-->

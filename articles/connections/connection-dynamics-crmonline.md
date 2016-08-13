@@ -15,23 +15,20 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/26/2016"
+ms.date="08/13/2016"
 ms.author="anneta"/>
 
-#  Dynamics CRM Online
+# Connect from Microsoft PowerApps to Dynamics CRM Online #
 
 ![Dynamics CRM Online](./media/connection-dynamics-crmonline/dynamicscrmicon.png)
 
-Dynamics CRM Online provides an API to work with entities on Dynamics CRM Online.
+Display information from items within Dynamics CRM Online in your app. For example, you can add text boxes to your app, and in these text boxes, display a record from a Dynamics entity. You can also use a gallery control within your app to return a list of all entities in a CRM instance. In another example, you can add a button that, when selected, creates or deletes a record in an entity.
 
-You can display information from items within Dynamics in your app. For example, you can add text boxes to your app, and in these text boxes, display a record from a Dynamics entity. You can also use the gallery control within your app to return a list of all entities in a CRM instances. In another example, you can add a button that control that when selected, it creates a new record or deletes a record for an entity.
+- For information about how to create an app, see [Generate an app automatically](get-started-create-from-data.md) or [Create an app from scratch](get-started-create-from-blank.md).	These topics are written for Excel, but the same principles apply to Dynamics.
+- For information about how to add data from Dynamics to an existing app, see [Add a data connection](add-data-connection.md).
+- See all the [available connections](../connections-list.md), and learn how to [add a connection](../add-manage-connections.md) to PowerApps.
 
-This topic shows the available functions.
-
-&nbsp;
-
-[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-
+<!--NotAvailableYet
 ## View the available functions
 
 This connection includes the following functions:
@@ -151,10 +148,4 @@ Gets entities: Used for getting the list of entities present in a Crm instance
 | Property Name | Data Type | Required | Description |
 |---|---|---|---|
 |value|array|No | Can output the Name and DisplayName properties |
-
-
-
-## Helpful links
-
-See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.
+-->
