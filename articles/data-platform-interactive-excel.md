@@ -19,7 +19,7 @@
 
 # Open entity data in Excel #
 
-[AZURE.VIDEO nb:cid:UUID:2b3cefb3-886c-4ddf-9d8b-faa1a505d985]
+[AZURE.VIDEO nb:cid:UUID:3d731aa8-6eb0-4d36-a9e5-d28bf44b28a0]
 
 Opening entity data in Excel allows for quick and easy viewing and editing of data facilitated by the PowerApps Excel Add-in. The PowerApps Excel Add-in requires Excel 2016.
 
