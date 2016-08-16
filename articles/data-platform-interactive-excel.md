@@ -17,7 +17,10 @@
    ms.date="07/28/2016"
    ms.author="cgarty"/>
 
-# Open entity data in Excel
+# Open entity data in Excel #
+
+[AZURE.VIDEO nb:cid:UUID:2b3cefb3-886c-4ddf-9d8b-faa1a505d985]
+
 Opening entity data in Excel allows for quick and easy viewing and editing of data facilitated by the PowerApps Excel Add-in. The PowerApps Excel Add-in requires Excel 2016.
 
 **Note**: If your Azure Active Directory (AAD) tenant is configured to use Active Directory Federation Services (ADFS) then you need to have to ensure that the May 2016 update has been applied so the Excel Add-in can facilitate sign-in correctly.
