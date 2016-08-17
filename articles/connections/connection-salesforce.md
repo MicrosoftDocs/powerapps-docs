@@ -26,7 +26,7 @@ Manage data from Salesforce by using controls in an app. For example,  display t
 
 - For information about how to create an app, see [Generate an app automatically](get-started-create-from-data.md) or [Create an app from scratch](get-started-create-from-blank.md).	These topics are written for Excel, but the same principles apply to Salesforce.
 - For information about how to add data from Salesforce to an existing app, see [Add a data connection](add-data-connection.md).
-- See all the [available connections](../connections-list.md), and learn how to [add a connection](../add-manage-connections.md) to PowerApps.
+- See the [list of available connections](../connections-list.md), and learn how to [manage connections](../add-manage-connections.md) in PowerApps.
 
 <!--NotAvailableYet
 ## View the available functions ##
