@@ -19,19 +19,44 @@
    ms.author="anneta"/>
 
 # Get started with PowerApps #
-Welcome! [Sign up](signup-for-powerapps.md) to start creating and using custom business apps.
+Welcome! If you've never created an app in PowerApps before, you might want to start by generating a simple app automatically from a data source that you specify. To understand what this process looks like, **watch this video**. It's less than three minutes long and introduces not only automatic app generation but also the Microsoft Common Data Model.
 
-## Check out some apps ##
-[Sign in](https://web.powerapps.com), and then explore a [sample app](open-and-run-a-sample-app.md) to get a quick sense of what's possible and how PowerApps could help your business.
+[AZURE.VIDEO nb:cid:UUID:e0d83908-aedd-4db3-8ea9-2dbd4695c662]
+
+The Common Data Model is one type of data source, but the process is similar for to any [supported data source](connection-list.md), such as these:
+
+- SharePoint
+- SQL Server
+- Salesforce
+- Dynamics CRM
+- an Excel workbook in the cloud
+
+After you generate an app, you can customize it to better suit your needs, or you can build your own app from scratch. To understand how you might build an app from scratch, **watch this video**.
+
+[AZURE.VIDEO nb:cid:UUID:5e58b2b8-44a0-467f-b6ec-58dee9fd925a]
+
+## Open PowerApps ##
+When you're ready to start generating, customizing, and building your own apps, [open powerapps.com](https://web.powerapps.com), and then follow the prompts to sign up by providing credentials for a work or school account.
+
+**Note**: If you have trouble, make sure that you're signing up with a [supported type of account](signup-for-powerapps.md).
+
+On the **Home** tab of [powerapps.com](https://web.powerapps.com), click or tap **New app** at the bottom of the left navigation bar. In the dialog box that appears, you can choose either of these options (depending on your platform):
+
+- install PowerApps from the Windows Store
+- open PowerApps in a browser
+
+**Note**: You can do most of the same things in either version, but you can [review the differences](create-app-browser.md).
+
+In PowerApps, click or tap the **New** tab in the left navigation bar. On that tab, you can
+
+
+
+you'll see a tile for each app that you've created or that someone else has shared with you. You can also explore a variety of [sample apps](open-and-run-a-sample-app.md) that show the kinds of apps that you can create in PowerApps.
 
 ![PowerApps home page](./media/getting-started/portal-home.png)
 
-Each sample app is designed for a specific purpose, such as managing a budget, inspecting a site, or tracking service tickets. Sample apps contain fictitious data to inspire your thinking.
-
-If you create an app or a co-worker shares an app with you, you'll also find those apps on the **Home** tab of [powerapps.com](https://web.powerapps.com).
-
 ## Generate an app from your data ##
-To create your own apps, [install PowerApps Studio](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10, or [open PowerApps in a browser](create-app-browser.md).
+To create your own apps, [install PowerApps Studio](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10, or .
 
 You can [automatically generate an app](get-started-create-from-data.md) that's designed specifically for your data, whether it's in:
 
