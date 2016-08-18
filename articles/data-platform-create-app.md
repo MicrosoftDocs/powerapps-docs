@@ -43,7 +43,7 @@ In either case, you don't need to create a connection from PowerApps to the Comm
 
 PowerApps automatically creates an app with three screens, as [Create an app from a set of data](get-started-create-from-data.md) describes.
 
-## Create a app from scratch ##
+## Create an app from scratch ##
 
 [AZURE.VIDEO nb:cid:UUID:5e58b2b8-44a0-467f-b6ec-58dee9fd925a]
 
