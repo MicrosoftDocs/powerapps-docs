@@ -32,7 +32,7 @@ Create an app automatically based on an Excel file in the cloud, customize the a
 
 - Either download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), or create your own with the data [formatted as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664), and then upload the file to a cloud-storage account such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business. The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
 
-**Note**: You can just as easily create an app based on a [SharePoint list,](app-from-sharepoint.md), Salesforce data, or a table in Dynamics CRM.
+**Note**: You can just as easily create an app based on a [SharePoint list](app-from-sharepoint.md), Salesforce data, or a table in Dynamics CRM.
 
 ## Create the app ##
 1. In PowerApps Studio, click or tap **New** (near the left edge of the screen).
@@ -101,7 +101,7 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
 
-	**Note** By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's **[ShowScrollbar](controls/control-gallery.md)** property](add-configure-controls.md) to **true**.
+	**Note**: By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's ShowScrollbar property](add-configure-controls.md) to **true**.
 
 ## Reorder fields in a form ##
 1. In the left navigation bar, click or tap the middle thumbnail to select **DetailScreen1**.
