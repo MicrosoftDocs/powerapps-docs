@@ -15,50 +15,48 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/29/2016"
+   ms.date="08/18/2016"
    ms.author="anneta"/>
 
 # Get started with PowerApps #
-Welcome! [Sign up](signup-for-powerapps.md) to start creating and using custom business apps.
+Welcome! In PowerApps, you can generate an app automatically, customize it, create an app from scratch, and share and run apps that you create or that others create and share with you.
 
-## Check out some apps ##
-[Sign in](https://web.powerapps.com), and then explore a [sample app](open-and-run-a-sample-app.md) to get a quick sense of what's possible and how PowerApps could help your business.
-
-![PowerApps home page](./media/getting-started/portal-home.png)
-
-Each sample app is designed for a specific purpose, such as managing a budget, inspecting a site, or tracking service tickets. Sample apps contain fictitious data to inspire your thinking.
-
-If you create an app or a co-worker shares an app with you, you'll also find those apps on the **Home** tab of [powerapps.com](https://web.powerapps.com).
-
-## Generate an app from your data ##
-To create your own apps, [install PowerApps Studio](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10, or [open PowerApps in a browser](create-app-browser.md).
-
-You can [automatically generate an app](get-started-create-from-data.md) that's designed specifically for your data, whether it's in:
-
-- an Excel file in a cloud-storage account such as Dropbox, OneDrive, or Google Drive
-- a SharePoint list
-- Salesforce or Microsoft Dynamics CRM Online
-- SQL Server
-- [the Microsoft Common Data Model](data-platform-intro.md) (preview)
-
-**Watch this video for a quick demo**:
+## Generate an app automatically ##
+To generate an app automatically, you just need to specify a data source, as this video demonstrates in under five minutes.
 
 [AZURE.VIDEO nb:cid:UUID:9380084d-bc9a-484f-960e-4554c6bf67b2]
 
-PowerApps creates a mobile app that has three screens: one each for browsing a list of records, viewing details about a specific record, and adding or updating records. Add your own touches by [customizing the app](get-started-create-from-data.md#change-the-app-layout).
+The video is based on an Excel workbook in the cloud, but you can also generate apps from other types of data sources, such as these:
 
-When your app looks and behaves the way you want, [share it](share-app.md) with others on your team so that they can use it too. Remember: they'll need access to the data source that you used to build the app.
+- the [Microsoft Common Data Model](data-platform-intro.md)
+- a SharePoint list
+- a SQL Server database
+- Salesforce
+- Dynamics CRM
 
-## Try out a template ##
-You can also [build an app from a template](get-started-test-drive.md). These templates are based on fictitious data in a cloud account, such as Dropbox, OneDrive, or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to build expertise that you can apply to your own apps.  
+For step-by-step instructions, see [Create an app to manage data in SharePoint](app-from-sharepoint.md). Even though the topic is designed for SharePoint, the same principles apply to other types of data sources.
 
-## Get creative ##
-You can create exactly the app you want with no distractions if you [build an app from scratch](get-started-create-from-blank.md). This way, the entire app comes straight from your brain to the screen. As you roll up your sleeves, you'll want to understand one or more of these concepts at a much deeper level:
+## Customize an app ##
+If the generated app doesn't meet your needs by default, you can [customize it](customize-card.md). You might, for example, want to show data in a different kind of UI element (known as a control).
+
+For ideas about how to improve your app further, you can [open a sample app](open-and-run-a-sample-app.md) to get a sense of what you can invent with some creativity and a bit of experience.
+
+![Sample apps](./media/getting-started/portal-home.png)
+
+You can also [build an app from a template](get-started-test-drive.md). Each template is based on fictitious data in a cloud account, such as Dropbox, OneDrive, or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to discover techniques that you can apply to your own apps.
+
+## Create an app from scratch
+After you've generated an app or two automatically and gained some experience with customization, you can [create an app from scratch](get-started-create-from-blank). By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of [data sources](connections-list.md).
+
+For detailed explanations of some concepts you'll need, see these topics:
 
 - [formulas](formula-reference.md)
 - [galleries and forms](working-with-forms.md)
 - [tables and records](working-with-tables.md)
 - [controls and their properties](reference-properties.md)
 
+## Share and run an app ##
+When you finish your app, you can [share](share-app.md) it with others in your organization, and run either your own apps or shared apps in a [browser](run-app-browser.md) or on a [mobile device](run-app-client.md).
+
 ## Questions? Ideas? We're here to help ##
-We're excited to see what you can do with PowerApps, and we want to make sure that you have a great experience. Check out the detailed tutorials here for more help, and [join our community](https://aka.ms/powerapps-community) to ask questions and share your ideas. [Contact support](https://aka.ms/pasupport) if you run into any issues.
+We're excited to see what you can do with PowerApps, and we want to make sure that you have a great experience. Check out the detailed tutorials on this site for more help, and [join our community](https://aka.ms/powerapps-community) to ask questions and share your ideas. [Contact support](https://aka.ms/pasupport) if you run into any issues.
