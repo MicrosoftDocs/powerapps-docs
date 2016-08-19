@@ -71,7 +71,7 @@ The set of columns automatically added into the workbook can be adjusted using t
 ## Troubleshooting ##
 There are a few troublesome situations that can be resolved with some simple steps:
 
-1. If a "Forbidden" message appears while metadata is being loaded by the Excel Add-in, then the account signed into the Excel Add-in doesn't have permission to use the targeted CDM database. To resolve this situation, verify that the correct user name is shown at the top right of the Excel Add-in. If needed, click the user name at the top right of the Excel Add-in, sign out, and sign back in.
+1. If a "Forbidden" message appears while metadata is being loaded by the Excel Add-in, then the account signed into the Excel Add-in doesn't have permission to use the targeted Common Data Model database. To resolve this situation, verify that the correct user name is shown at the top right of the Excel Add-in. If needed, click the user name at the top right of the Excel Add-in, sign out, and sign back in.
 1. If a blank web page opens during the sign in process, then the account requires ADFS but the version of Excel running the Add-in is not recent enough to support loading a sign-in dialog. Update the version of Excel being used, if needed by [moving from the deferred channel to the current channel](https://technet.microsoft.com/library/mt455210.aspx) using the [Office deployment tool](https://technet.microsoft.com/library/jj219422.aspx).
 
 If you encounter a troublesome situation not detailed here, then contact us via the [support pages](https://powerapps.microsoft.com/support/).
