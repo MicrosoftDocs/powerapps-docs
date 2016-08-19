@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/28/2016"
+   ms.date="08/19/2016"
    ms.author="cgarty"/>
 
 # Open entity data in Excel #
@@ -27,16 +27,17 @@ Opening entity data in Excel allows for quick and easy viewing and editing of da
 
 ## Open entity data in Excel
 
-1. In your web browser, open the [powerapps.com](https://web.powerapps.com) and sign in.
+1. In your web browser, open [powerapps.com](https://web.powerapps.com) and sign in.
 1. In the left navigation pane, click or tap **Manage > Entities**. All of the entities will be shown.
 1. Click the actions menu **"..."** to the right of the desired Entity
 1. Click **Open in Excel** and open the workbook that is provided. The generated workbook has binding information for the desired entity, a pointer to your environment, and a pointer to the PowerApps Excel Add-in.  
 1. In Excel, click **Enable editing** to allow the PowerApps Excel Add-in to run. The Excel Add-in will run in a task pane on the right side of the workbook.
-1. If needed, click **Sign in** and sign in with the same credentials used in the portal. The Excel Add-in will use a previous sign-in context and automatically sign-in if possible, so if you are unsure about which account is signed in then click the user menu in the bottom-right.
-1. The Excel Add-in will automatically read the data for the selected entity.   
+1. If this is the first time running the Add-in, click **Trust this Add-in** to allow the PowerApps Excel Add-in to run.
+1. If needed, click **Sign in** and sign in with the same credentials used on [powerapps.com](https://web.powerapps.com). The Excel Add-in will use a previous sign-in context and automatically sign-in if possible, so verify the user name in the top right of the Excel Add-in.
+1. The Excel Add-in will automatically read the data for the selected entity. Note that there will be no data in the workbook until the Excel Add-in reads it in.
 
 ## View and refresh entity data in Excel ##
-Once entity data is read into the workbook, it can be refreshed at any time by clicking the **Refresh** button in the Excel Add-in.
+Once entity data is read into the workbook by the Excel Add-in, it can be refreshed at any time by clicking the **Refresh** button in the Excel Add-in.
 
 
 ## Edit entity data in Excel ##
@@ -67,6 +68,13 @@ The set of columns automatically added into the workbook can be adjusted using t
 	- Change the order of fields by clicking on the field in the list of **Selected fields** and clicking **Up** or **Down**.
 1. Apply the changes to the data source by clicking **Update** and then click **Done** to exit the designer. If a field (column) was added, click **Refresh** to pull in a refreshed set of data.
 
+## Troubleshooting ##
+There are a few troublesome situations that can be resolved with some simple steps:
+
+1. If a "Forbidden" message appears while metadata is being loaded by the Excel Add-in, then the account signed into the Excel Add-in doesn't have permission to use the targeted Common Data Model database. To resolve this situation, verify that the correct user name is shown at the top right of the Excel Add-in. If needed, click the user name at the top right of the Excel Add-in, sign out, and sign back in.
+1. If a blank web page opens during the sign in process, then the account requires ADFS but the version of Excel running the Add-in is not recent enough to support loading a sign-in dialog. Update the version of Excel being used, if needed by [moving from the deferred channel to the current channel](https://technet.microsoft.com/library/mt455210.aspx) using the [Office deployment tool](https://technet.microsoft.com/library/jj219422.aspx).
+
+If you encounter a troublesome situation not detailed here, then contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
 ## Next steps ##
 - [Manage fields in an entity](data-platform-manage-fields.md)
