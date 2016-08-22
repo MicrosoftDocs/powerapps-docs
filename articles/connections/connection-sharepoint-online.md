@@ -70,6 +70,8 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 ## Generate an app automatically ##
 For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
 
+**Note**: If your list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
+
 ## Build an app from scratch ##
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, and then click or tap **Connections**.
 
@@ -146,12 +148,32 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
 
+## Show data in a gallery ##
+To show data from any of these types of columns in a gallery, use the formula bar to set the **Text** property of one or more **Text box** controls in that gallery:
+
+- For a **Choice** or **Lookup** column, specify **ThisItem.[ColumnName].Value** to show data in that column.
+
+	For example, specify **ThisItem.Location.Value** if you have a **Choice** column named **Location**, and specify **ThisItem.PostalCode.Value** if you have a **Lookup** column named **PostalCode**.
+
+- For a **Person or Group** column, specify **ThisItem.[ColumnName].DisplayName** to show the display name of the user or the group.
+
+	For example, specify **ThisItem.Manager.DisplayName** to show display names from a **Person or Group** column named **Manager**.
+
+	You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (with the trailing period).
+
+	**Note**: For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
+
+- For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
+
+	For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
+
 ## Next steps ##
 - Learn how to [show data from a data source](../add-gallery.md).
 - Learn how to [view details and create or update records](../add-form.md).
 - See other types of [data sources](../connections-list.md) to which you can connect.  
 
 <!--NotAvailableYet
+>>>>>>> 3ee7bcf69103ee075f397c40f242932b91b4e945
 ## View the available functions ##
 This connection includes the following functions:
 
