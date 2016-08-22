@@ -15,25 +15,21 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/26/2016"
+ms.date="08/13/2016"
 ms.author="anneta"/>
 
-#  Salesforce
+# Connect from Microsoft PowerApps to Salesforce#
 
 ![Salesforce](./media/connection-salesforce/salesforceicon.png)
 
-Salesforce provides an API to work with Salesforce objects.
+Manage data from Salesforce by using controls in an app. For example,  display the name and the contact information of a lead in text boxes, and add other controls to create, update, and delete items in your accounts, campaigns, and more.
 
-You can display this information in a text box on your app. For example, you can  get a Lead from Salesforce, and then display this information in your app in a text box. You can use different controls in your app to update and even delete items within your Salesforce accounts, campaigns, and more.
+- For information about how to create an app, see [Generate an app automatically](get-started-create-from-data.md) or [Create an app from scratch](get-started-create-from-blank.md).	These topics are written for Excel, but the same principles apply to Salesforce.
+- For information about how to add data from Salesforce to an existing app, see [Add a data connection](add-data-connection.md).
+- See the [list of available connections](../connections-list.md), and learn how to [manage connections](../add-manage-connections.md) in PowerApps.
 
-This topic shows the available functions.
-
-&nbsp;
-
-[AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
-
-## View the available functions
-
+<!--NotAvailableYet
+## View the available functions ##
 This connection includes the following functions:
 
 | Function Name |  Description |
@@ -186,8 +182,4 @@ None.
 |---|---|---|---|
 |value|array|No | |
 
-
-## Helpful links
-
-See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.
+-->
