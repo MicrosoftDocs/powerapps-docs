@@ -133,6 +133,26 @@ For more information, see [create an app automatically from a SharePoint list](a
 
 1. Click or tap **Add connection**.
 
+## Show fields in a gallery ##
+When you [automatically generate an app from a SharePoint list](app-from-sharepoint.md), data from these types of columns appears as expected in **[Text box](control-text-box.md)** controls in the gallery on the browse screen:
+
+- **Single line of text**
+- **Multiple lines of text**
+- **Date and Time**
+- **Number**
+
+To show data in these types of columns in the same gallery, set the value of the **Text** property of a **Text box** control in that gallery as this list specifies:
+
+- For a **Choice** or **Lookup** column, specify **ThisItem.ColumnName.Value** to show data in that column.
+
+	For example, specify **ThisItem.Location.Value** if you have a **Choice** column named **Location**, and specify **ThisItem.PostalCode.Value** if you have a **Lookup** column named **PostalCode**.
+
+- For a **Person or group** column, specify **ThisItem.ColumnName.DisplayName** to show the display name of the person or group. You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.Manager.** (with the trailing period).
+
+	For example, specify **ThisItem.Manager.DisplayName** to show the display names from a **Person or group** column named **Manager**.
+
+	**Note**: For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created an item in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed an item in the list.
+
 ## View the available functions ##
 This connection includes the following functions:
 
