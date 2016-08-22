@@ -155,13 +155,17 @@ To show data from any of these types of columns in a gallery, use the formula ba
 
 	For example, specify **ThisItem.Location.Value** if you have a **Choice** column named **Location**, and specify **ThisItem.PostalCode.Value** if you have a **Lookup** column named **PostalCode**.
 
-- For a **Person or group** column, specify **ThisItem.[ColumnName].DisplayName** to show the display name of the user or the group.
+- For a **Person or Group** column, specify **ThisItem.[ColumnName].DisplayName** to show the display name of the user or the group.
 
-	For example, specify **ThisItem.Manager.DisplayName** to show display names from a **Person or group** column named **Manager**.
+	For example, specify **ThisItem.Manager.DisplayName** to show display names from a **Person or Group** column named **Manager**.
 
 	You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (with the trailing period).
 
 	**Note**: For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
+
+- For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
+
+	For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
 
 ## Next steps ##
 - Learn how to [show data from a data source](../add-gallery.md).
