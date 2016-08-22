@@ -103,13 +103,20 @@ The results should look similar to this example. If **TcpTestSucceeded** is not 
 
 If you want to be exhaustive, substitute the **ComputerName** and **Port** values with those listed under **Configure ports** later in this topic.
 
-The firewall may also be blocking the connections that the Azure Service Bus makes to the Azure data centers. If that's the case, you'll want to whitelist (unblock) all of the IP addresses for your region for those data centers. You can get a list of Azure IP addresses [here](https://www.microsoft.com/download/details.aspx?id=41653).
+The firewall may also be blocking the connections that the Azure Service Bus makes to the Azure data centers. If that's the case, you'll want to whitelist (unblock) the IP addresses for your region for those data centers. You can get a list of Azure IP addresses [here](https://www.microsoft.com/download/details.aspx?id=41653).
 
 **Configure ports**
 
 The gateway creates an outbound connection to Azure Service Bus. It communicates on outbound ports: TCP 443 (default), 5671, 5672, 9350 thru 9354. The gateway doesn't require inbound ports.
 
 Learn more about [hybrid solutions](https://azure.microsoft.com/documentation/articles/service-bus-fundamentals-hybrid-solutions/).
+
+It is recommended that you whitelist the IP addresses, for your data region, in your firewall. You can download the [Microsoft Azure Datacenter IP list](https://www.microsoft.com/download/details.aspx?id=41653), which is updated weekly.
+
+**Note:** In the Azure Datacenter IP list, addresses are listed in [CIDR notation](http://whatismyipaddress.com/cidr). For example, 10.0.0.0/24 doesn't mean 10.0.0.0 through 10.0.0.24.
+
+Here is a listing of the fully qualified domain names used by the gateway.
+
 
 |Domain names|Outbound ports|Description|
 |---|---|---|
@@ -122,8 +129,6 @@ Learn more about [hybrid solutions](https://azure.microsoft.com/documentation/ar
 |login.microsoftonline.com|443|HTTPS|
 |*.msftncsi.com|443|Used to test internet connectivity if the gateway is unreachable by the Power BI service.|
 
-If you need to white list IP addresses instead of the domains, you can download and use the [Microsoft Azure Datacenter IP ranges list](https://www.microsoft.com/download/details.aspx?id=41653). In some cases, the Azure Service Bus connections will be made with IP address instead of the fully qualified domain names.
-
 **Sign-in account**
 
 Users will sign in with either a work or school account. This is your organization account. If you signed up for an Office 365 offering and didn’t supply your actual work email, it may look like nancy@contoso.onmicrosoft.com. Your account, within a cloud service, is stored within a tenant in Azure Active Directory (AAD). In most cases, your AAD account’s UPN will match the email address.
@@ -133,6 +138,8 @@ Users will sign in with either a work or school account. This is your organizati
 The on-premises data gateway is configured to use *NT SERVICE\PBIEgwService* for the Windows service logon credential. By default, it has the right of Log on as a service. This is in the context of the machine on which you're installing the gateway.
 
 This isn't the account used to connect to on-premises data sources or the work or school account with which you sign in to cloud services.
+
+If you encounter issues with your proxy server due to authentication, you may want to change the Windows service account to a domain-user or managed-service account as [proxy configuration](powerbi-gateway-proxy.md#changing-the-gateway-service-account-to-a-domain-user) describes.
 
 ## Frequently asked questions ##
 #### General ####
@@ -170,6 +177,9 @@ You can use the third-party tool [Azure Speed Test app](http://azurespeedtest.az
 
 **Question:** Where are my credentials stored?  
 **Answer:** The credentials that you enter for a data source are stored encrypted in the gateway cloud service. The credentials are decrypted at the gateway on-premises.
+
+**Question:** Can I place the gateway in a perimeter network (also known as DMZ, demilitarized zone, and screened subnet)?  
+**Answer:** The gateway requires connectivity to the data source. If the data source isn't in your perimeter network, the gateway may not be able to connect to it. For example, the computer that's running SQL Server may not be in your perimeter network, and you can't connect to that computer from the perimeter network. If you placed the gateway in your perimeter network, the gateway wouldn't be able to reach the computer that's running SQL Server.
 
 #### High availability/disaster recovery ####
 **Question:** Are there any plans for enabling high availability scenarios with the gateway?  
