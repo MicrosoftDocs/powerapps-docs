@@ -33,8 +33,10 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 	1. In the **Save as Table** dialog box, select the **My table has headers** checkbox, and then select **OK**.
 	1. Save your changes.
 
-## Connect to the cloud storage connection
+## Known limitations ##
+If your Excel data includes a calculated column, you can add that data to an app. But the app won't show the data, and no error or warning appears.
 
+## Connect to the cloud storage connection ##
 1. At [powerapps.com](https://web.powerapps.com), expand **Manage**, and select **Connections**:  
 
 	![Select Connections](./media/cloud-storage-blob-connections/connections.png)
