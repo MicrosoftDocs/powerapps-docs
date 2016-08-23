@@ -34,7 +34,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 	1. Save your changes.
 
 ## Known limitations ##
-If your Excel data includes a calculated column, you can add that data to an app. But the app won't show the data, and no error or warning appears.
+If your Excel data includes a calculated column, you can't use it to build an app. The app won't show the data, and no error or warning appears.
 
 ## Connect to the cloud storage connection ##
 1. At [powerapps.com](https://web.powerapps.com), expand **Manage**, and select **Connections**:  
