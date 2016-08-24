@@ -84,8 +84,8 @@ The list in this tutorial contains these columns:
 PowerApps builds an app that has three screens:  
 
 - In **BrowseScreen1**, users can easily browse through all items in a **[Gallery](control-gallery.md)** control.  
-- In **DetailScreen1**, users can view all information about a specific item in a **[Display form](edit-form.md)** control.  
-- In **EditScreen1**, users can add or update an item in an **[Edit form](edit-form.md)** control.  
+- In **DetailScreen1**, users can view all information about a specific item in a **[Display form](control-form-detail.md)** control.  
+- In **EditScreen1**, users can add or update an item in an **[Edit form](control-form-detail.md)** control.  
 
 ## Customize the app ##
 When PowerApps builds an app automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
