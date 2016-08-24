@@ -49,7 +49,7 @@ You can add a connection in PowerApps, as this topic describes, or on [powerapps
 
 1. To create a connection, click or tap **Add connection** to display a list of connectors, click or tap the type of connection that you want to create, and then click or tap **Connect**.  
 
-	Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connector-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
+	Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connection-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
 
 ## Next steps ##
 - To show and update data in a source such as Excel, SharePoint Online, SQL Server, or Dynamics CRM, [add a form](add-form.md).

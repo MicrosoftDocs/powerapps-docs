@@ -108,7 +108,7 @@ A text box shows data that you specify as a literal string of text, which appear
 
 ## Related functions ##
 
-[**[Text](properties-core.md)**( *Number*, "*FormatCodes*" )](function-text.md)
+[**Text**( *Number*, "*FormatCodes*" )](function-text.md)
 
 ## Examples ##
 
