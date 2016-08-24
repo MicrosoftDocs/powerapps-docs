@@ -60,6 +60,7 @@ To delete a record, either:
 ## Add or remove columns ##
 The set of columns automatically added into the workbook can be adjusted using the designer:
 
+1. Enable the data source designer of the Excel Add-in by clicking the **Options** button (gear symbol) and checking **Enable design**.
 1. Click the **Design** button in the Excel Add-in. All the data sources are listed.
 1. Next to the data source, click the **Edit** pencil button.
 1. Adjust the list of **Selected fields** as needed:
