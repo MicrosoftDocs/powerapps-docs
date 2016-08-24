@@ -139,7 +139,7 @@ The on-premises data gateway is configured to use *NT SERVICE\PBIEgwService* for
 
 This isn't the account used to connect to on-premises data sources or the work or school account with which you sign in to cloud services.
 
-If you encounter issues with your proxy server due to authentication, you may want to change the Windows service account to a domain-user or managed-service account as [proxy configuration](https://powerbi.microsoft.com/en-us/documentation/powerbi-gateway-proxy/#changing-the-gateway-service-account-to-a-domain-user) describes.
+If you encounter issues with your proxy server due to authentication, you may want to change the Windows service account to a domain-user or managed-service account as [proxy configuration](https://powerbi.microsoft.com/documentation/powerbi-gateway-proxy/#changing-the-gateway-service-account-to-a-domain-user) describes.
 
 ## Frequently asked questions ##
 #### General ####
