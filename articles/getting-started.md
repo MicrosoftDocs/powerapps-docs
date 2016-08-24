@@ -46,7 +46,7 @@ For ideas about how to improve your app further, you can [open a sample app](ope
 You can also [build an app from a template](get-started-test-drive.md). Each template is based on fictitious data in a cloud account, such as Dropbox, OneDrive, or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to discover techniques that you can apply to your own apps.
 
 ## Create an app from scratch
-After you've generated an app or two automatically and gained some experience with customization, you can [create an app from scratch](get-started-create-from-blank). By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of [data sources](connections-list.md).
+After you've generated an app or two automatically and gained some experience with customization, you can [create an app from scratch](get-started-create-from-blank.md). By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of [data sources](connections-list.md).
 
 For detailed explanations of some concepts you'll need, see these topics:
 

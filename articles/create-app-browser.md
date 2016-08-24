@@ -49,7 +49,7 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 ## Known limitations of the preview release ##
 1. **Create a connection.**
 
-	To [create a connection](add-manage-connections,md) to a data source that requires service authentication, use [powerapps.com](https://web.powerapps.com), and then [add the connection](add-data-connection.md) to an app in PowerApps Studio for web.
+	To [create a connection](add-manage-connections.md) to a data source that requires service authentication, use [powerapps.com](https://web.powerapps.com), and then [add the connection](add-data-connection.md) to an app in PowerApps Studio for web.
 
 1. **Create an app from a template.**
 
