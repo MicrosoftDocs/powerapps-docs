@@ -1,6 +1,6 @@
 <properties
     pageTitle="Scan a barcode | Microsoft PowerApps"
-    description="Scan a variety of barcode types, such as Codabar and UPC"
+    description="Scan a variety of barcode types, such as UPC and Codabar"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -19,7 +19,17 @@
    ms.author="anneta"/>
 
 # Scan a barcode in Microsoft PowerApps #
-Scan several types of barcodes by creating an app and running it on a device with a camera. The numerical equivalent of the barcode appears in a **Text box** control, and you can upload it to a variety of data sources.
+Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Text box** control, and you can upload that data to a variety of [data sources](connections-list.md).
+
+If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
+
+## Known limitations ##
+- Barcodes should be at least 1" (2.5cm) high and 1.5" (4cm) wide.
+- To scan barcodes by using a phone, hold it in portrait orientation, and slowly move it from 7-10" (18-25cm) from the barcode.
+- Long barcode types (such as I2of5, which can have 15 or more characters) can give truncated or otherwise incorrect results, especially if the barcode isn't printed clearly.
+- For iPhones and Android devices, you can specify the **Height** property of the **Barcode** control, but a fixed aspect ratio determines its width.
+- To delay running out of memory on devices that are running iOS, set the **Height** property of the **Barcode** control to **700** (or lower) and the **Scanrate** property to **30**.
+- If the device runs out of memory and the app freezes, restart the app.
 
 ## Create a blank app ##
 1. [Sign up for PowerApps](signup-for-powerapps.md), and then do *either* of the following:
@@ -52,7 +62,7 @@ Scan several types of barcodes by creating an app and running it on a device wit
 
 	![Rename the barcode control](./media/scan-barcode/rename-barcode.png)
 
-1. (optional) If you don't expect to scan a UPC barcode, change the type of barcode that you expect to scan.
+1. (optional) To change the type of barcode that you expect to scan from **UPC** to another type:
 
 	1. With **MyScanner** selected, ensure that the properties list shows **BarcodeType**.
 
@@ -84,25 +94,9 @@ Scan several types of barcodes by creating an app and running it on a device wit
 
 	![Open Preview mode](./media/scan-barcode/open-preview.png)
 
-1. Hold a barcode in front of the camera on the device until the numerical equivalent of the barcode appears in the **Text box** control.
+1. Hold a barcode up to the camera on the device until the numerical component of the barcode appears in the **Text box** control.
 
-## Change the barcode type ##
-1. On the **Insert** tab, click or tap **Controls**, and then click or tap **Drop down**.
-
-	![Add drop-down list](./media/scan-barcode/insert-dropdown.png)
-
-1. Move the **Drop down** control so that it appears below the other controls on the screen.
-
-	![Move drop-down list](./media/scan-barcode/move-dropdown.png)
-
-1. With the **Drop down** control still selected, ensure that the properties list shows **Items**, and then type or paste this string of text in the formula bar:<br>
-	**[Codabar, Code128, Code39, Ean, I2of5, Upc]**
-
-	![Set the Items property of the drop-down list](./media/scan-barcode/items-property.png)
-
-1. On the **Home** tab, rename the **Drop down** control to **ChooseType**.
-
-	![Rename the drop-down list](./media/scan-barcode/rename-dropdown.png)
-
-1. Click or tap the **Barcode** control to select it, ensure that the properties list shows **BarcodeType**, and then type or paste this string of text in the formula bar:<br>
-	**ChooseType.Selected.Value**
+## Next steps ##
+- [Connect the app to a data source](add-data-connection.md) so that users can save results.
+- Add a **[Drop down](control-drop-down.md)** control, and configure it so that users can choose which type of barcode they want to scan.
+- Add a **[Slider](control-slider.md)** control, and configure it so that users can adjust the scan rate or the height of the **Barcode** control.
