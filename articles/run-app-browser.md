@@ -19,19 +19,18 @@
     ms.author="karthikb"/>
 
 # Using apps in a web browser #
-PowerApps can run on iOS, Android, and a web browser. Apps running in a browser match the experience as apps running on phones and tablets. Using apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies. 
-
-
+PowerApps can run on iOS, Android, and a web browser. Apps running in a browser match the experience as apps running on phones and tablets. Using apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies.
 
 ## What you need to get started ##
-- Either of the following: 
+- Either of the following:
 	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).  
 	- An app that someone else created and shared with view permissions.
-- A supported browser: 
+- A supported browser:
+	- Edge
 	- Internet Explorer 11 and above
 	- Chrome v47 and above
 	- Safari on iOS 9 and above
-
+	- Firefox
 
 ## Launching an app ##
 To use PowerApps inside a browser, do either of the following:
@@ -49,7 +48,7 @@ To use PowerApps inside a browser, do either of the following:
 
 1. For Apps shared with you, you get an email with the link to the app
 2. Select the link to launch the app in the browser
-	 
+
 ## Sign in to PowerApps ##
 If the app is opened from powerapps.com, chances are you already signed in to PowerApps. If you are launching the app from the web link, you are prompted to sign in using your Azure Active Directory credentials:  
 
@@ -74,4 +73,4 @@ There are several ways you can exit or close the app:
 ## Error and Warnings ##
 If the app contains controls that aren't supported in the browser, then a warning header on the top of the app window displays a link to download the mobile app.
 
-If the app cannot be launched due to invalid links or permission issues, then the error message telling you why is displayed. 
+If the app cannot be launched due to invalid links or permission issues, then the error message telling you why is displayed.
