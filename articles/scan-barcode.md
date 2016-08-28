@@ -25,10 +25,10 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 ## Known limitations ##
 - Barcodes should be at least 1" (2.5cm) high and 1.5" (4cm) wide.
-- To scan barcodes by using a phone, hold it in portrait orientation, and slowly move it from 7-10" (18-25cm) from the barcode.
+- To scan barcodes by using a phone, hold it in portrait orientation, and slowly move it from 7" (18cm) to 10" (25cm) away from the barcode.
 - Long barcode types (such as I2of5, which can have 15 or more characters) can give truncated or otherwise incorrect results, especially if the barcode isn't printed clearly.
 - For iPhones and Android devices, you can specify the **Height** property of the **Barcode** control, but a fixed aspect ratio determines its width.
-- To delay running out of memory on devices that are running iOS, set the **Height** property of the **Barcode** control to **700** (or lower) and the **Scanrate** property to **30**.
+- To delay running out of memory on devices that are running iOS, set the **Height** property of the **Barcode** control to **700** (or lower) and the **Scanrate** property to **35** (or lower).
 - If the device runs out of memory and the app freezes, restart the app.
 
 ## Create a blank app ##
@@ -68,7 +68,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 		![BarcodeType in properties list](./media/scan-barcode/barcodetype-property.png)
 
-	1. Click or tap in the formula bar, and then press Backspace three times to remove **UPC** but not the period.
+	1. Click or tap in the formula bar, and then remove **UPC** but not the period.
 
 		![Select barcode type](./media/scan-barcode/select-type.png)
 
@@ -97,6 +97,6 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 1. Hold a barcode up to the camera on the device until the numerical component of the barcode appears in the **Text box** control.
 
 ## Next steps ##
-- [Connect the app to a data source](add-data-connection.md) so that users can save results.
+- [Connect the app to a data source](add-data-connection.md) and configure the **[Patch](function-patch.md)** function so that users can save results.
 - Add a **[Drop down](control-drop-down.md)** control, and configure it so that users can choose which type of barcode they want to scan.
 - Add a **[Slider](control-slider.md)** control, and configure it so that users can adjust the scan rate or the height of the **Barcode** control.
