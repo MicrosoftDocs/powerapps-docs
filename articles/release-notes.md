@@ -17,9 +17,16 @@
     ms.date="07/29/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.490 #
+# What's new in PowerApps release 2.0.500 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+1. **Scan a barcode**.
+
+	For step-by-step instructions and information about best practices and limitations, see [Scan a barcode](scan-barcode.md).
+
+1. **Bug fixes and performance improvements**.
+
+## Release 2.0.490 ##
 1. **Use the entities in the Microsoft Common Data Model to build apps**.
 
 	Store organizational data in standard or custom entities, build and share apps based on those entities, and open the entities in Excel to easily view and edit the data. For more information, see [Understand entities](data-platform-intro.md).
