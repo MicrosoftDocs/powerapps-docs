@@ -31,7 +31,7 @@ In either case, you don't need to create a connection from PowerApps to the Comm
 1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 1. Click or tap **New** on the **File** menu (near the left edge).
 
-## Create an app automatically ##
+## Generate an app automatically ##
 
 [AZURE.VIDEO nb:cid:UUID:e0d83908-aedd-4db3-8ea9-2dbd4695c662]
 
@@ -43,7 +43,7 @@ In either case, you don't need to create a connection from PowerApps to the Comm
 
 PowerApps automatically creates an app with three screens, as [Create an app from a set of data](get-started-create-from-data.md) describes.
 
-## Create an app from scratch ##
+## Build an app from scratch ##
 
 [AZURE.VIDEO nb:cid:UUID:5e58b2b8-44a0-467f-b6ec-58dee9fd925a]
 
