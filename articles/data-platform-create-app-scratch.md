@@ -37,7 +37,7 @@ When you build an app from the Common Data Model, you don't need to create a con
 
 	![Create from blank](./media/data-platform-create-app-scratch/create-from-blank.png)
 
-1. If you're not familiar with PowerApps, identify key areas of the app by taking the intro tour (or click or tap **Skip**).
+1. If prompted and you're not familiar with PowerApps, identify key areas of the app by taking the intro tour (or click or tap **Skip**).
 
 	![Opening screen of the quick tour](./media/data-platform-create-app-scratch/quick-tour.png)
 

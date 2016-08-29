@@ -67,7 +67,7 @@ Every app that PowerApps generates has three screens by default:
 
 	![Connect button](./media/data-platform-create-app/connect-button.png)
 
-1. If you're not familiar with PowerApps, identify key areas of the app by taking the intro tour (or click or tap **Skip**).
+1. If prompted and you're not familiar with PowerApps, identify key areas of the app by taking the intro tour (or click or tap **Skip**).
 
 	![Opening screen of the quick tour](./media/data-platform-create-app/quick-tour.png)
 
