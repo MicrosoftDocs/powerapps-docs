@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create an app using the Common Data Model | Microsoft Common Data Model"
-	description="Create an app to add, update, and delete records in the Common Data Model"
+	pageTitle="Generate an app using the Common Data Model | Microsoft Common Data Model"
+	description="Generate an app to add, update, and delete records in the Common Data Model"
 	services="powerapps"
 	documentationCenter="na"
 	authors="karthik-1"
@@ -17,19 +17,33 @@
    ms.date="07/21/2016"
    ms.author="karthikb"/>
 
-# Create an app using the Common Data Model #
-Create an app to manage data that's stored in the Common Data Model, using standard entities (which are built in), custom entities (which your organization creates), or both.
-
-If you're unfamiliar with the Common Data Model, see [Understand entities](data-platform-intro.md).
-
-PowerApps can generate an app automatically based on a single entity that you specify, or you can create an app from scratch that uses one or more entities that you specify.
-
-In either case, you don't need to create a connection from PowerApps to the Common Data Model, as you do with external connections such as SharePoint, Dynamics CRM, and Salesforce. You need only specify the entities or entities that you want to show, manage, or both in the app.
-
-## Generate an app automatically ##
+# Generate an app using the Common Data Model #
 
 [AZURE.VIDEO nb:cid:UUID:e0d83908-aedd-4db3-8ea9-2dbd4695c662]
 
+Generate an app automatically to manage data that's stored in the Common Data Model. Manage data in one of many standard entities (which are built in to the model) or a custom entity (which you or someone else in your organization created).
+
+If you're unfamiliar with the Common Data Model, see [Understand entities](data-platform-intro.md).
+
+As this topic describes, you can automatically generate an app based on a single entity that you specify. You can also build an app from scratch that uses one or more entities that you specify. For more information, see [Build an app from scratch](data-platform-create-app-scratch.md).
+
+Every app that PowerApps generates has three screens by default:
+
+- The browse screen shows a subset of fields (perhaps just one) so that users can easily find a specific record.
+
+	![Browse screen](./media/data-platform-create-app/browse-screen.png)
+
+- The details screen shows more or all fields for a specific record.
+
+	![Details screen](./media/data-platform-create-app/details-screen.png)
+
+- The edit screen provides UI elements in which users can create or update a record.
+
+	![Details screen](./media/data-platform-create-app/details-screen.png)
+
+When you generate an app from the Common Data Model, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics CRM, and Salesforce. You need only specify the entity that you want to show, manage, or both in the app.
+
+## Generate an app ##
 1. [Sign up for PowerApps](signup-for-powerapps.md), and then do *either* of the following:
 
 	- [Open PowerApps](https://create.powerapps.com/api/start) in a browser.
@@ -141,46 +155,19 @@ In either case, you don't need to create a connection from PowerApps to the Comm
 
 	![Select FirstName card](./media/data-platform-create-app/select-firstname.png)
 
-1. Drag the title of that card up until the **BusinessPhone** card is highlighted.
+1. Drag its title up until the **BusinessPhone** card is highlighted.
+
+	![Move FirstName card](./media/data-platform-create-app/move-card.png)
 
 1. Release the mouse button so that the **FirstName** card appears above the **BusinessPhone** card.
+
+	![Drop FirstName card](./media/data-platform-create-app/drop-card.png)
 
 1. Repeat the last three steps except move the **LastName** card so that it appears between the **FirstName** card and the **BusinessPhone** card
 
 ## Customize the edit screen ##
-1. Near the upper-right corner of the details screen, click or tap the pencil icon.
+1. Near the upper-right corner of the details screen, click or tap the pencil icon to select it, and then click or tap it again to open the edit screen.
 
 	![Select BusinessPhone card](./media/data-platform-create-app/edit-record.png)
 
 1. Repeat the steps in the previous procedure to show, hide, and arrange the cards on the edit screen as you did on the details screen.
-
-## Build an app from scratch ##
-
-[AZURE.VIDEO nb:cid:UUID:5e58b2b8-44a0-467f-b6ec-58dee9fd925a]
-
-1. [Sign up for PowerApps](signup-for-powerapps.md), and then do *either* of the following:
-
-	- [Open PowerApps](https://create.powerapps.com/api/start) in a browser.
-	- [Install PowerApps](http://aka.ms/powerappsinstall) from the Windows Store. Open PowerApps, sign in, and then click or tap **New** on the **File** menu (along the left edge).
-
-		![New option on the File menu](./media/data-platform-create-app/file-new.png)
-
-1. Under **Create an app**, click or tap **Phone layout** on the **Blank app** tile.
-
-	![Create from blank](./media/data-platform-create-app/create-from-blank.png)
-
-1. If you're not familiar with PowerApps, identify key areas of the app by taking the intro tour (or click or tap **Skip**).
-
-	![Opening screen of the quick tour](./media/data-platform-create-app/quick-tour.png)
-
-	**Note**: You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
-
-1. In the right-hand pane, click or tap **Data sources** to open that tab, and then click or tap **Add data source**.
-
-1. In the list of connections, click or tap **Common Data Model**, and then click or tap **Connect**.
-
-1. If prompted, click or tap **Create my database**.
-
-1. In the list of entities, select the check box for one or more entities that you want to use, and then click or tap **Connect**.
-
-The entities or entities that you specified appear in the list of data sources, and you can build your app as [Create an app from scratch](get-started-create-from-blank.md) describes.
