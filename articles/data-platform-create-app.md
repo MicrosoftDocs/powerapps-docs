@@ -25,11 +25,11 @@ Generate an app automatically to manage data that's stored in the Common Data Mo
 
 If you're unfamiliar with the Common Data Model, see [Understand entities](data-platform-intro.md).
 
-As this topic describes, you can automatically generate an app based on a single entity that you specify. You can also build an app from scratch that uses one or more entities that you specify. For more information, see [Build an app from scratch](data-platform-create-app-scratch.md).
+As this topic describes, you can automatically generate an app based on a single entity that you specify. As [build an app from scratch](data-platform-create-app-scratch.md) describes, you can also build an app based on more than one entity.
 
 Every app that PowerApps generates has three screens by default:
 
-- The browse screen shows a subset of fields (perhaps just one) so that users can easily find a specific record.
+- The browse screen shows a subset of fields (perhaps just one), a search bar, and a sort button so that users can easily find a specific record.
 
 	![Browse screen](./media/data-platform-create-app/browse-screen.png)
 
@@ -37,11 +37,11 @@ Every app that PowerApps generates has three screens by default:
 
 	![Details screen](./media/data-platform-create-app/details-screen.png)
 
-- The edit screen provides UI elements in which users can create or update a record.
+- The edit screen provides UI elements in which users can create or update a record and save the changes.
 
-	![Details screen](./media/data-platform-create-app/details-screen.png)
+	![Edit screen](./media/data-platform-create-app/edit-screen.png)
 
-When you generate an app from the Common Data Model, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics CRM, and Salesforce. You need only specify the entity that you want to show, manage, or both in the app.
+**Note**: When you generate an app from the Common Data Model, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics CRM, and Salesforce. You need only specify the entity that you want to show, manage, or both in the app.
 
 ## Generate an app ##
 1. [Sign up for PowerApps](signup-for-powerapps.md), and then do *either* of the following:
@@ -67,20 +67,20 @@ When you generate an app from the Common Data Model, you don't need to create a 
 
 	![Connect button](./media/data-platform-create-app/connect-button.png)
 
-1. If you're not familiar with PowerApps, identify key areas of the app by taking the intro tour (or click or tap **Skip**).
+1. If prompted and you're not familiar with PowerApps, identify key areas of the app by taking the intro tour (or click or tap **Skip**).
 
 	![Opening screen of the quick tour](./media/data-platform-create-app/quick-tour.png)
 
 	**Note**: You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
 ## Customize the browse screen ##
-1. In the right-hand pane, click or tap the layout that shows just a header.
+1. In the right-hand pane, click or tap the layout that shows just a heading.
 
 	![Choose layout](./media/data-platform-create-app/choose-layout.png)
 
 1. Under the search box, click or tap the **Text box** control to select it.
 
- 	Whenever you select a control, a selection box (with resize handles) surrounds that control.
+	The control doesn't have a border by default, so it doesn't appear until you select it. Whenever you select a control, a selection box (with resize handles) surrounds that control.
 
 	![Select text box](./media/data-platform-create-app/select-text-box.png)
 
@@ -98,6 +98,9 @@ When you generate an app from the Common Data Model, you don't need to create a 
 
 	![Select gallery](./media/data-platform-create-app/select-gallery.png)
 
+1. Copy this formula by highlighting it and then pressing Ctrl-C.
+<br>**SortByColumns(Search(Contact, TextSearchBox1.Text, "LastName"), "LastName", If(SortDescending1, Descending, Ascending))**
+
 1. Near the upper-left corner, ensure that the property list shows **Items**.
 
 	![Items property](./media/data-platform-create-app/items-property.png)
@@ -106,19 +109,26 @@ When you generate an app from the Common Data Model, you don't need to create a 
 
 	![Default value of the Items property](./media/data-platform-create-app/default-items.png)
 
-1. Press Delete to delete the default formula, and then copy this formula.
-<br>**SortByColumns(Search(Contact, TextSearchBox1.Text, "LastName"), "LastName", If(SortDescending1, Descending, Ascending))**
-
-1. In the formula bar, paste the formula that you just copied.
+1. Press Delete to delete the default formula, and then paste the formula that you just copied.
 
 	![Updated value of the Items property](./media/data-platform-create-app/new-items-formula.png)
 
-	The names are sorted alphabetically.
+	The names are sorted alphabetically in the gallery.
+
+1. (optional) If the users of this app won't have touch screens or mousewheels, click or tap the **Gallery** tab, and then click or tap **Show Scrollbar**.
+
+	**Note**: If the **Gallery** tab doesn't appear, ensure that the gallery is still selected.
+
+	![ShowScrollbar property](./media/data-platform-create-app/show-scrollbar.png)
 
 ## Test the browse screen ##
 1. Open Preview mode by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
 
 	![Open Preview mode](./media/data-platform-create-app/open-preview.png)
+
+1. Scroll through all the records by using a touch screen, by using a mousewheel, or by pointing to the gallery with a mouse so that the scrollbar appears.
+
+	![Scroll records](./media/data-platform-create-app/scroll-records.png)
 
 1. Near the upper-right corner, click or tap the sort button one or more times to change order in which the names are listed.
 
@@ -168,6 +178,45 @@ When you generate an app from the Common Data Model, you don't need to create a 
 ## Customize the edit screen ##
 1. Near the upper-right corner of the details screen, click or tap the pencil icon to select it, and then click or tap it again to open the edit screen.
 
-	![Select BusinessPhone card](./media/data-platform-create-app/edit-record.png)
+	![Edit record](./media/data-platform-create-app/edit-record.png)
 
-1. Repeat the steps in the previous procedure to show, hide, and arrange the cards on the edit screen as you did on the details screen.
+1. Repeat the steps in the previous procedure to hide and move the cards on the edit screen as you did on the details screen.
+
+## Test the details and edit screens ##
+1. In the left navigation bar, click or tap the top thumbnail to display the browse screen.
+
+	![Thumbnail for browse screen](./media/data-platform-create-app/browse-thumbnail.png)
+
+1. Open Preview mode by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
+
+	![Open Preview mode](./media/data-platform-create-app/open-preview.png)
+
+1. In the upper-right corner of the browse screen, click or tap the plus icon to create a record.
+
+	![Add record](./media/data-platform-create-app/add-record.png)
+
+1. Add whatever data you want, and then click or tap the checkmark icon to save your new record and return to the browse screen.
+
+	![Save record](./media/data-platform-create-app/save-record.png)
+
+1. If you haven't already, show all records by removing any text from the search bar (near the top of the browse screen).
+
+1. Find the record that you just created, and click or tap the arrow to its right to show the record in the details screen.
+
+	![Save record](./media/data-platform-create-app/show-details.png)
+
+1. In upper-right corner, click or tap the pencil icon to show the record in the edit screen.
+
+	![Edit record](./media/data-platform-create-app/edit-record.png)
+
+1. Change the data in one or more fields, and then click or tap the checkmark icon to save your changes and return to the browse screen.
+
+	![Save record](./media/data-platform-create-app/save-record.png)
+
+1. Find the record that you just updated, and click or tap the arrow to its right.
+
+	![Show details](./media/data-platform-create-app/show-details.png)
+
+1. Near the upper-right corner, click or tap the trash-bin icon to delete the record that you created and updated.
+
+	![Delete record](./media/data-platform-create-app/delete-record.png)
