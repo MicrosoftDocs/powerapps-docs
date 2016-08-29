@@ -173,7 +173,7 @@ Every app that PowerApps generates has three screens by default:
 
 	![Drop FirstName card](./media/data-platform-create-app/drop-card.png)
 
-1. Repeat the last three steps except move the **LastName** card so that it appears between the **FirstName** card and the **BusinessPhone** card
+1. Repeat the last three steps except move the **LastName** card so that it appears between the **FirstName** card and the **BusinessPhone** card.
 
 ## Customize the edit screen ##
 1. Near the upper-right corner of the details screen, click or tap the pencil icon to select it, and then click or tap it again to open the edit screen.
@@ -200,6 +200,8 @@ Every app that PowerApps generates has three screens by default:
 	![Save record](./media/data-platform-create-app/save-record.png)
 
 1. If you haven't already, show all records by removing any text from the search bar (near the top of the browse screen).
+
+	![Clear the search box](./media/data-platform-create-app/clear-search.png)
 
 1. Find the record that you just created, and click or tap the arrow to its right to show the record in the details screen.
 
