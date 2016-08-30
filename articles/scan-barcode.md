@@ -28,7 +28,8 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 - To scan barcodes by using a phone, hold it in portrait orientation, and slowly move it from 7" (18cm) to 10" (25cm) away from the barcode.
 - Long barcode types (such as I2of5, which can have 15 or more characters) can give truncated or otherwise incorrect results, especially if the barcode isn't printed clearly.
 - For iPhones and Android devices, you can specify the **Height** property of the **Barcode** control, but a fixed aspect ratio determines its width.
-- To delay running out of memory on devices that are running iOS, set the **Height** property of the **Barcode** control to **700** (or lower) and the **Scanrate** property to **35** (or lower).
+- You might need to set the **Scanrate** property of the **Barcode** control to **35** or less.
+- To delay running out of memory on devices that are running iOS, set the **Height** property of the **Barcode** control to **700** (or lower) and the **Scanrate** property to **30**.
 - If the device runs out of memory and the app freezes, restart the app.
 
 ## Create a blank app ##
@@ -62,32 +63,41 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 	![Rename the barcode control](./media/scan-barcode/rename-barcode.png)
 
-1. (optional) To change the type of barcode that you expect to scan from **UPC** to another type:
-
-	1. With **MyScanner** selected, ensure that the properties list shows **BarcodeType**.
-
-		![BarcodeType in properties list](./media/scan-barcode/barcodetype-property.png)
-
-	1. Click or tap in the formula bar, and then remove **UPC** but not the period.
-
-		![Select barcode type](./media/scan-barcode/select-type.png)
-
-	1. In the list of barcode types, click or tap the type of barcode that you expect to scan.
-
-## Add a Text box ##
-1. On the **Insert** tab, click or tap **Text box**.
+## Add an Input text control ##
+1. On the **Insert** tab, click or tap **Text**, and then click or tap **Text input**.
 
 	If the **Insert** tab doesn't appear, maximize your PowerApps window.
 
-	![Text box on the Insert tab](./media/scan-barcode/insert-textbox.png)
+	![Add Text input control](./media/scan-barcode/add-text-input.png)
 
-1. Drag the selection box (not the resize handles) around the **Text box** control down until it appears below **MyScanner**.
+1. Drag the selection box (not the resize handles) around the **Text input** control down until it appears below **MyScanner**.
 
-	![Text box with selection box](./media/scan-barcode/move-textbox.png)
+	![Text box with selection box](./media/scan-barcode/move-input-text.png)
 
-1. With the **Text box** control still selected, ensure that **Text** appears in the properties list, and then type or paste **MyScanner.Text** in the formula bar.
+1. With the **Text input** control still selected, ensure that **Default** appears in the properties list, and then type or paste **MyScanner.Text** in the formula bar.
 
 	![Text property of the Text box control](./media/scan-barcode/text-property.png)
+
+## Change the barcode type ##
+1. On the **Insert** tab, click or tap **Controls**, and then click or tap **Drop down**.
+
+	![Add drop-down list](./media/scan-barcode/insert-dropdown.png)
+
+1. Move the **Drop down** control so that it appears below the other controls on the screen.
+
+	![Move drop-down list](./media/scan-barcode/move-dropdown.png)
+
+1. With the **Drop down** control still selected, ensure that the properties list shows **Items**, and then type or paste this string of text in the formula bar:<br>
+	**[Codabar, Code128, Code39, Ean, I2of5, Upc]**
+
+	![Set the Items property of the drop-down list](./media/scan-barcode/items-property.png)
+
+1. On the **Home** tab, rename the **Drop down** control to **ChooseType**.
+
+	![Rename the drop-down list](./media/scan-barcode/rename-dropdown.png)
+
+1. Click or tap **MyScanner** to select it, ensure that the properties list shows **BarcodeType**, and then type or paste this string of text in the formula bar:<br>
+	**ChooseType.Selected.Value**
 
 ## Test the app ##
 1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).
@@ -95,6 +105,8 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 	![Open Preview mode](./media/scan-barcode/open-preview.png)
 
 1. Hold a barcode up to the camera on the device until the numerical component of the barcode appears in the **Text box** control.
+
+	If the numerical component doesn't appear, try a different option in the **BarcodeType** list. If the correct data still doesn't appear, type the correct number in the **Input text** control.
 
 ## Next steps ##
 - [Connect the app to a data source](add-data-connection.md) and configure the **[Patch](function-patch.md)** function so that users can save results.
