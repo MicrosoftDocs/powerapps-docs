@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="karthik-1"
-	manager="erikre"
+	manager="RobinARH"
 	editor=""
 	tags=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="07/21/2016"
-   ms.author="karthikb"/>
+   ms.author="robinr"/>
 
 # Understand entities in the Microsoft Common Data Model #
 
