@@ -24,6 +24,10 @@ For information about known limitations in this release, see [Common issues and 
 
 	For step-by-step instructions and information about best practices and limitations, see [Scan a barcode](scan-barcode.md).
 
+1. **Use an app template to manage data in the Common Data Model**
+
+	Create a phone app that's based on the Case Management entities, or create a tablet app that's based on the Contact entity and that registers people for a contest.
+
 1. **Bug fixes and performance improvements**.
 
 ## Release 2.0.490 ##
