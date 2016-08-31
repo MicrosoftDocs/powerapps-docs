@@ -59,6 +59,8 @@
 
 	If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
+	For more information about limitations when you use Excel as a data source, see [Cloud-storage connections](cloud-storage-blob-connections.md#known-limitations).
+
 1. **SharePoint lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
 
 	For more information, see [SharePoint Online](connection-sharepoint-online.md#known-issues).
