@@ -14,17 +14,17 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="07/29/2016"
+    ms.date="09/01/2016"
     ms.author="anneta"/>
 
 # What's new in PowerApps release 2.0.500 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
-1. **Scan a barcode**.
+1. **Barcode scanner for UPC, Codabar, and other types of codes**.
 
 	For step-by-step instructions and information about best practices and limitations, see [Scan a barcode](scan-barcode.md).
 
-1. **Open app templates that showcase the Common Data Model**.
+1. **App templates that showcase the Common Data Model**.
 
 	Use a template to quickly create a phone app to manage cases or a tablet app to register contacts for a contest. These templates are based on standard entities in the Common Data Model.
 
