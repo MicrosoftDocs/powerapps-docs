@@ -90,7 +90,7 @@ PowerApps builds an app that has three screens:
 ## Customize the app ##
 When PowerApps builds an app automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
 
-1. If you're prompted and you haven't used PowerApps before, take the intro tour (or click or tap **Skip**).
+1. If you haven't used PowerApps before, take the intro tour (or click or tap **Skip**).
 
 	![Opening screen of the intro tour](./media/app-from-sharepoint/quick-tour.png)
 
