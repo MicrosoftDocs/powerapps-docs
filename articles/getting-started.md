@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Get started | Microsoft PowerApps"
+	pageTitle="Introduction | Microsoft PowerApps"
 	description="Quick ways to get started creating and using custom business apps with Microsoft PowerApps"
 	services=""
 	suite="powerapps"
@@ -18,10 +18,10 @@
    ms.date="08/18/2016"
    ms.author="anneta"/>
 
-# Get started with PowerApps #
+# Introduction to PowerApps #
 Welcome! In PowerApps, you can generate an app automatically, customize it, create an app from scratch, and share and run apps that you create or that others create and share with you.
 
-**Note**: If you've automatically generated an app from a SharePoint list, you can [customize the app](app-from-sharepoint.md#customize-the-app) to better suit your needs.
+[AZURE.TIP] If you've automatically generated an app from a SharePoint list, you can [customize the app](app-from-sharepoint.md#customize-the-app) to better suit your needs.
 
 ## Generate an app automatically ##
 To generate an app automatically, you just need to specify a data source, as this video demonstrates in under five minutes.
