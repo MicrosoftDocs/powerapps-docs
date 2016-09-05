@@ -122,5 +122,6 @@ You can always take the tour later by clicking or tapping the question-mark icon
 
 By default, every generated app has a screen for browsing records, a screen for showing details of a record, and a screen for creating or updating records. Heuristics suggest the best layout and content for each screen, but you'll probably need to customize the app to suit your needs.
 
+- To save the app that you've just generated, press Ctrl-S.
 - To customize the browse screen (which appears by default), see [Customize a layout](customize-layout-sharepoint.md).
 - To customize the details or edit screens, see [Customize a form](customize-form-sharepoint.md).

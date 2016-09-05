@@ -119,5 +119,6 @@ For illustration purposes, the list contains this data:
 
 	![New screen title](./media/customize-layout-sharepoint/new-screen-title.png)
 
-## Next step ##
-[Customize the forms](customize-forms-sharepoint.md) in the generated app.
+## Next steps ##
+- Press Ctrl-S to save your changes.
+- [Customize the forms](customize-forms-sharepoint.md) in the app by showing, hiding, and reordering the fields that the forms show.
