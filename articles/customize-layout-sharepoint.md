@@ -23,67 +23,54 @@ After you generate an app automatically in PowerApps, customize the browse scree
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
-This tutorial is based on a SharePoint list that contains these columns, but the same principles apply to any generated app.
+This tutorial is based on a SharePoint list, but the same principles apply to any generated app.
 
-![Sample columns from SharePoint](./media/customize-layout-sharepoint/list-columns.png)
+## Generate an app ##
+1. Create a SharePoint list that contains these columns, and name the list **AppGen**.
 
-For illustration purposes, the list contains this data:
+	![Sample columns from SharePoint](./media/customize-layout-sharepoint/list-columns.png)
 
-![Sample data](./media/customize-layout-sharepoint/sample-data.png)
+1. In the list that you just created, add this data.
+
+	![Sample data](./media/customize-layout-sharepoint/sample-data.png)
+
+1. [Generate an app automatically](app-from-sharepoint.md) based on the list that you just created.
 
 ## Choose a layout ##
-1. Open an app that you generated automatically in PowerApps.
-
-	For example, open an app that you [generated based on a SharePoint list](app-from-sharepoint.md).
-
 1. In the left navigation bar, click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
 
 	![Thumbnail for BrowseScreen1](./media/customize-layout-sharepoint/browse-thumbnail.png)
 
-1. In the right-hand pane, click or tap the layout that contains a heading, a subheading, and a description.
+1. In the right-hand pane, click or tap the layout that contains a heading and a description.
 
-	![Layout option with a heading, a subheading, and a description](./media/customize-layout-sharepoint/choose-layout.png)
+	![Layout option with a heading and a description](./media/customize-layout-sharepoint/choose-layout.png)
 
-	**Tip**: After you finish this tutorial, you can choose whichever layout best suits your data.
+	**BrowseScreen1** shows the layout that you specified and the **Title** and **AccountID** for each item.
 
-1. Click or tap just under the search box to select the **Text box** control at the top of the first item in the list.
+	![Browse screen shows titles and account IDs](./media/customize-layout-sharepoint/browse-accountid.png)
 
-	When you select a control, a selection border with resize handles appears around it.
+	Next, you'll specify that the **OrderDate** for each item will appear instead of the **AccountID**.
 
-	![Select first item](./media/customize-layout-sharepoint/select-heading.png)
+1. Click or tap the **AccountID** for the first item on the screen.
 
-	**Note**: By default, the app shows information from the **Title** column of the sample data. If your data doesn't contain any information in the column that appears by default, the **Text box** control will be empty and won't appear because it has no border. But you can still click or tap the control to select it.
+	When you click or tap a UI element (called a control), you select it, and a selection border with resize handles appears around that control.
+
+	![Select body of first item](./media/customize-layout-sharepoint/select-body.png)
 
 1. In the right-hand pane, click or tap the down arrow for the highlighted list.
 
 	![Select down arrow](./media/customize-layout-sharepoint/select-down-arrow.png)
 
-1. In the list of columns that you can show, click or tap **Availability**.
+1. In the list of columns that you can show, click or tap **OrderDate**.
 
-	![Show title](./media/customize-layout-sharepoint/select-availability.png)
+	![Show title](./media/customize-layout-sharepoint/select-orderdate.png)
 
 	**BrowseScreen1** reflects your change.
 
 	![Layout with dates](./media/customize-layout-sharepoint/browse-dates.png)
 
-1. Click or tap the **Text box** control at the bottom of the first item in the list.
-
-	![Select body](./media/customize-layout-sharepoint/select-body.png)
-
-1. In the right-hand pane, click or tap the down arrow for the highlighted list.
-
-	![Select down arrow](./media/customize-layout-sharepoint/select-down-arrow2.png)
-
-1. In the list of columns that you can show, click or tap **Quantity**.
-
-	![Select quantity](./media/customize-layout-sharepoint/select-quantity.png)
-
-	**BrowseScreen1** reflects your change.
-
-	![Layout with quantity](./media/customize-layout-sharepoint/browse-quantity.png)
-
 ## Set the sort and search columns ##
-1. Select the **Gallery** control by clicking or tapping any item in it except the first one.
+1. Select the **Gallery** control by clicking or tapping any record except the first one.
 
 	![Select gallery](./media/customize-layout-sharepoint/select-gallery.png)
 
@@ -91,17 +78,32 @@ For illustration purposes, the list contains this data:
 
 	![Items property](./media/customize-layout-sharepoint/items-property.png)
 
-1. In the formula bar, replace the default search and sort columns with the columns that you want to use.
+	The value of this property, which appears in the formula bar, determines not only the source of data that appears on the screen but also the search and sort columns.
 
 	For example, the formula bar might contain this formula by default.
 
-	![Default search and sort columns](./media/customize-layout-sharepoint/default-search-column.png)
+	![Default Items property](./media/customize-layout-sharepoint/default-items.png)
 
-	To search and sort by the **Title** column instead of the **Description** column, replace both instances of **"Description"** with **"Title"**. Make sure that you keep the double quotation marks around the column names.
+	Based on this formula, users can search for all records that contains one or more letters in either the **AccountID** column or the **Title** column.
 
-	Now the formula bar should match this example:
+	![Default search columns](./media/customize-layout-sharepoint/default-search.png)
 
-	![Set search and sort columns](./media/customize-layout-sharepoint/set-search-column.png)
+	If a user typed, for example, the letter "v" into the search bar, the screen would show the record for Europa. The title of that record doesn't match the search criterion, but the account ID does. Later in this procedure, you'll change the formula to search only in the **Title** column.
+
+	In any generated app, users can sort records alphabetically in ascending or descending order by clicking or tapping the sort button near the upper-right corner. This formula specifies that the records will be sorted based on the **AccountID** column.
+
+	![Default sort column](./media/customize-layout-sharepoint/default-sort.png)
+
+	Later in this procedure, you'll change the formula to sort the records based on the **Title** column instead.
+
+1. In the formula bar, delete the first instance of **"AccountID"** and the comma that follows it.
+
+1. In the formula bar, replace the remaining instance of **"AccountID"** with **"Title"** (including the double quotation marks).
+
+	The formula bar should now contain a formula that resembles this example:<br>
+	**SortByColumns(Search(AppGen, TextSearchBox1.Text, "Title"), "Title", If(SortDescending1, Descending, Ascending))**
+
+	**Note**: The number that appears after **TextSearchBox** might be higher, depending on what actions you took previously. However, the formula should still work as expected.
 
 ## Test sorting and searching ##
 1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).

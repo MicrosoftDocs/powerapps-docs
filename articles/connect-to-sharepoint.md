@@ -42,7 +42,10 @@ As of this writing, PowerApps supports lists but not libraries. In addition, you
 
 	![Add SharePoint connection](./media/connect-to-sharepoint/add-sp-portal.png)
 
-**Note**: In the dialog box that appears, you specify whether you want to connect to SharePoint Online or on-premises SharePoint. Each choice has a corresponding procedure later in this topic, so you need to  follow only one of those procedures.
+1. Follow the steps in either of these procedures, which appear later in this topic:
+
+	- [Connect to a SharePoint Online site](connect-to-sharepoint.md#connect-to-sharepoint-online).
+	- [Connect to an on-premises SharePoint site](connect-to-sharepoint.md#connect-to-an on-premises-sharepoint-site).
 
 ## Connect to a SharePoint Online site ##
 1. Click or tap **Connect directly (cloud services)**, and then click or tap **Add connection**.
@@ -56,7 +59,9 @@ As of this writing, PowerApps supports lists but not libraries. In addition, you
 
 	![Choose SharePoint on-premises](./media/connect-to-sharepoint/choose-onprem.png)
 
-1. Specify your user name and your password. If your credentials include a domain name, specify it as *Domain\Alias*.
+1. Specify your user name and your password.
+
+	If your credentials include a domain name, specify it as *Domain\Alias*.
 
 	![Specify your credentials](./media/connect-to-sharepoint/specify-credentials.png)
 
