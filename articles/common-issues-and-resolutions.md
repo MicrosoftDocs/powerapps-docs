@@ -21,9 +21,9 @@
 # Common issues and resolutions #
 
 ## Recently added/changed ##
-1. **Windows 10 Insider builds**
+1. **Scanning a barcode**
 
-	You can’t open PowerApps on devices that are running Windows Insider build 14905. The problem is identified by the fifth bullet under “Known issues for PC” in [Announcing Windows 10 Insider Preview Build 14905 for PC & Mobile](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile).
+	For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
 
 1. **Creating and modifying apps in a browser**
 
@@ -33,19 +33,10 @@
 
 	If you change the record-title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the record-title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](data-platform-entity-lookup.md).
 
-
 ## Older ##
 1. **Apps that connect to on-premises SharePoint**
 
 	If you share an app that relies on connections that aren’t automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they click or tap **Sign in**. To close the dialog box, click or tap the close (X) icon in the upper-right corner. The dialog box doesn’t appear if you open the app in PowerApps Studio or PowerApps Mobile. For more information about shared connections, see [Share app resources](share-app-resources.md).
-
-1. **Connections to SQL Server**
-
-	You can connect to an on-premises SQL Server database if you upgrade to build 2.0.460. If you don't upgrade, you can connect to SQL Azure, but you'll be prompted to specify an authentication type. The connection will succeed regardless of whether you specify anything in that field.
-
-1. **Windows 10 Insider builds**
-
-	You can't open PowerApps on devices that are running Windows Insider builds 14361 through 14375, inclusive. The issue has been resolved, and the fix was first released in build 14376.
 
 1.  **When PowerApps generates an app from data, the field used for sorting and searching isn't automatically configured**.
 
@@ -57,7 +48,7 @@
 
 1. **Excel data must be formatted as a table**.
 
-	If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+	For information about limitations when you use Excel as a data source, see [Cloud-storage connections](cloud-storage-blob-connections.md#known-limitations).
 
 1. **SharePoint lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
 
