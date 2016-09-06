@@ -23,14 +23,15 @@ After you generate an app automatically in PowerApps, customize the browse scree
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
-This tutorial is based on a SharePoint list, but the same principles apply to any generated app.
+## Prerequisites ##
+You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
 
-## Generate an app ##
-1. Create a SharePoint list that contains these columns, and name the list **AppGen**.
+1. [Create a connection](connect-to-sharepoint.md) from PowerApps to SharePoint.
+1. Create a SharePoint list, named **AppGen**, that contains these columns.
 
 	![Sample columns from SharePoint](./media/customize-layout-sharepoint/list-columns.png)
 
-1. In the list that you just created, add this data.
+1. Add these items to the list that you just created.
 
 	![Sample data](./media/customize-layout-sharepoint/sample-data.png)
 

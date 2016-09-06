@@ -25,19 +25,14 @@ Each form comprises one or more cards, each of which shows data from a particula
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
-This tutorial is based on a SharePoint list that contains these columns, but the same principles apply to any generated app.
+## Prerequisites ##
+You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
 
-![Sample columns from SharePoint](./media/customize-forms-sharepoint/list-columns.png)
-
-For illustration purposes, the list contains this data:
-
-![Sample data](./media/customize-forms-sharepoint/sample-data.png)
+1. [Create a connection](connect-to-sharepoint.md) from PowerApps to SharePoint.
+1. Create the SharePoint list that [Customize a layout](customize-layout-sharepoint.md) describes.
+1. [Generate an app automatically](app-from-sharepoint.md) based on that list.
 
 ## Show and hide cards ##
-1. Open an app that you generated automatically.
-
-	For example, open an app that you [generated based on a SharePoint list](app-from-sharepoint.md).
-
 1. In the left navigation bar, click or tap the middle thumbnail to select **DetailsScreen1**.
 
 	![Select details screen](./media/customize-forms-sharepoint/details-thumbnail.png)
@@ -46,12 +41,12 @@ For illustration purposes, the list contains this data:
 
 	![Select a card](./media/customize-forms-sharepoint/select-card.png)
 
-1. In the right-hand pane, click or tap the eye icon for each card to show or hide it in the app.
+1. In the right-hand pane, click or tap the eye icon for the **AccountID** card to hide it, and click or tap the eye icon for the **ID** column to show it.
 
 	![Show card](./media/customize-forms-sharepoint/show-card.png)
 
 ## Reorder the cards ##
-- Click or tap a card to select it, and then drag its title bar up or down.
+- Click or tap the **Title** card to select it, and then drag its title bar up until the **OrderDate** card is highlighted.
 
 	![Move card](./media/customize-forms-sharepoint/move-card.png)
 
@@ -98,5 +93,4 @@ For illustration purposes, the list contains this data:
 
 ## Next steps ##
 - Press Ctrl-S to save your app so that you can run it from other devices.
-- [Customize one or more cards](customize-card.md) (for example, to change the control in which a type of data appears).
 - [Share the app](share-app.md) so that other people can run it.
