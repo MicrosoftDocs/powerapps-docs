@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Customize a layout in PowerApps #
-After you generate an app automatically in PowerApps, customize the browse screen by specifying which layout to use, which columns to show, and which columns to use when sorting and searching for records.
+After you generate an app automatically in PowerApps, customize the browse screen, which appears by default. Specify which layout to use, which columns to show, and which columns to use when sorting and searching for records.
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
@@ -36,37 +36,51 @@ For illustration purposes, the list contains this data:
 
 	For example, open an app that you [generated based on a SharePoint list](app-from-sharepoint.md).
 
-1. Ensure that the browse screen (**BrowseScreen1**) is selected by clicking or tapping the tap thumbnail in the left navigation bar.
+1. In the left navigation bar, click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
 
-	![Sample columns from SharePoint](./media/customize-layout-sharepoint/browse-thumbnail.png)
+	![Thumbnail for BrowseScreen1](./media/customize-layout-sharepoint/browse-thumbnail.png)
 
-1. In the right-hand pane, click or tap the layout that contains only a heading.
+1. In the right-hand pane, click or tap the layout that contains a heading, a subheading, and a description.
 
-	![Layout option with heading only](./media/customize-layout-sharepoint/choose-layout.png)
+	![Layout option with a heading, a subheading, and a description](./media/customize-layout-sharepoint/choose-layout.png)
 
 	**Tip**: After you finish this tutorial, you can choose whichever layout best suits your data.
 
-1. Just under the search box, click or tap the **Text box** control to select it.
+1. Click or tap just under the search box to select the **Text box** control at the top of the first item in the list.
 
 	When you select a control, a selection border with resize handles appears around it.
 
 	![Select first item](./media/customize-layout-sharepoint/select-heading.png)
 
-	**Note**: By default, the app shows information from the **Description** column of the sample data. If your data doesn't contain any information in the column that appears by default, the **Text box** control will be empty and won't appear because it has no border. But you can still click or tap the control to select it.
+	**Note**: By default, the app shows information from the **Title** column of the sample data. If your data doesn't contain any information in the column that appears by default, the **Text box** control will be empty and won't appear because it has no border. But you can still click or tap the control to select it.
 
-	![Select first item, which is empty](./media/customize-layout-sharepoint/select-heading-empty.png)
-
-1. In the right-hand pane, click or tap the down arrow to open the list of columns that you can show.
+1. In the right-hand pane, click or tap the down arrow for the highlighted list.
 
 	![Select down arrow](./media/customize-layout-sharepoint/select-down-arrow.png)
 
-1. In the list that appears, click or tap the **Title** column.
+1. In the list of columns that you can show, click or tap **Availability**.
 
-	![Show title](./media/customize-layout-sharepoint/select-title.png)
+	![Show title](./media/customize-layout-sharepoint/select-availability.png)
 
 	**BrowseScreen1** reflects your change.
 
-	![Final layout](./media/customize-layout-sharepoint/browse-final.png)
+	![Layout with dates](./media/customize-layout-sharepoint/browse-dates.png)
+
+1. Click or tap the **Text box** control at the bottom of the first item in the list.
+
+	![Select body](./media/customize-layout-sharepoint/select-body.png)
+
+1. In the right-hand pane, click or tap the down arrow for the highlighted list.
+
+	![Select down arrow](./media/customize-layout-sharepoint/select-down-arrow2.png)
+
+1. In the list of columns that you can show, click or tap **Quantity**.
+
+	![Select quantity](./media/customize-layout-sharepoint/select-quantity.png)
+
+	**BrowseScreen1** reflects your change.
+
+	![Layout with quantity](./media/customize-layout-sharepoint/browse-quantity.png)
 
 ## Set the sort and search columns ##
 1. Select the **Gallery** control by clicking or tapping any item in it except the first one.

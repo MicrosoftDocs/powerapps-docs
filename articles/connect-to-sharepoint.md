@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Connect from PowerApps to SharePoint #
-In powerapps.com, create a connection to SharePoint, for use in generating an app automatically or building one from scratch.
+Create a connection to either SharePoint Online or on-premises SharePoint so that you can generate an app automatically or build one from scratch.
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
@@ -28,26 +28,28 @@ As of this writing, PowerApps supports lists but not libraries. In addition, you
 ## Specify a SharePoint connection##
 1. If you haven't already signed up, [sign up for PowerApps](signup-for-powerapps.md).
 
-1. Sign in to [powerapps.com](https://web.powerapps.com).
+1. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
 
-1. In the left navigation bar, click or tap **Manage** and then click or tap **Connections**.
+1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
 
 	![New option on the File menu](./media/connect-to-sharepoint/manage-connections.png)
 
 1. Near the upper-right corner, click or tap **New connection**.
 
-	![New connection button](./media/app-from-sharepoint/new-connection-portal.png)
+	![New connection button](./media/connect-to-sharepoint/new-connection.png)
 
 1. In the list of connections, click or tap **SharePoint**.
 
 	![Add SharePoint connection](./media/connect-to-sharepoint/add-sp-portal.png)
 
-**Important**: In the dialog box that appears, you specify what kind of SharePoint connection you want to make. Each choice has a corresponding procedure later in this topic. Follow only one of those procedures.
+**Note**: In the dialog box that appears, you specify whether you want to connect to SharePoint Online or on-premises SharePoint. Each choice has a corresponding procedure later in this topic, so you need to  follow only one of those procedures.
 
 ## Connect to a SharePoint Online site ##
-- Click or tap **Connect directly (cloud services)**, and then click or tap **Add connection**.
+1. Click or tap **Connect directly (cloud services)**, and then click or tap **Add connection**.
 
 	![Choose SharePoint Online](./media/connect-to-sharepoint/choose-online.png)
+
+1. Go to [Next steps](connect-to-sharepoint.md#next-steps) at the end of  this topic.
 
 ## Connect to an on-premises SharePoint site ##
 1. Click or tap **Connect using on-premises data gateway**.
