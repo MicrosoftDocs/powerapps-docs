@@ -31,7 +31,7 @@ To generate an app automatically, you just need to specify a data source, as thi
 The video is based on an Excel workbook in the cloud, but you can also generate apps from other types of data sources, such as these:
 
 - the [Microsoft Common Data Model](data-platform-intro.md)
-- a SharePoint list
+- a custom SharePoint list
 - a SQL Server database
 - Salesforce
 - Dynamics CRM
