@@ -29,7 +29,7 @@ Connect to a SharePoint site when you create an app automatically from data, man
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) PowerApps Studio, open it, and then sign in by providing the same credentials that you used to sign up.
 
 ## Known issues ##
-You can add data from a list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
+You can add data from a custom list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
 
 | Column type | Support | Default cards |
 |---|---|----|

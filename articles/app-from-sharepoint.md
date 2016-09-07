@@ -27,7 +27,7 @@ Create an app for adding, updating, and deleting data in a SharePoint list. Spec
 
 	This topic was written for PowerApps Studio, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
 
-As of this writing, PowerApps supports lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
+As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 The list in this tutorial contains these columns:  
 ![](./media/app-from-sharepoint/list-columns.png)
