@@ -22,11 +22,7 @@ ms.author="anneta"/>
 
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to a SharePoint site when you create an app automatically from data, manage connections in powerapps.com, update an existing app, or build an app from scratch.
-
-**Prerequisites**
-
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) PowerApps Studio, open it, and then sign in by providing the same credentials that you used to sign up.
+Connect to a SharePoint site to generate an app automatically from a list, build an app from scratch, or update an existing app.
 
 ## Known issues ##
 You can add data from a list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
@@ -67,43 +63,25 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 
 	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
-## Generate an app automatically ##
-For more information, see [create an app automatically from a SharePoint list](app-from-sharepoint.md#create-an-app).
+## Prerequisites ##
+Open PowerApps by taking *either* of these steps:
 
-**Note**: If your list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
 
-## Build an app from scratch ##
-1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Manage**, and then click or tap **Connections**.
+- [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
 
-	![Open list of connections](./media/connection-sharepoint-online/manage-connections.png)
+	For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](create-app-browser.md).
 
-1. In the upper-right corner, click or tap **New connection**, and then click or tap **SharePoint** in the list of connectors.
+## Create an app ##
+- [Generate an app automatically](app-from-sharepoint.md) based on data in a SharePoint list.
 
-	![Add SharePoint connection](./media/connection-sharepoint-online/add-sp-portal.png)
+	The app will have three screens by default: one each for browsing records, displaying details of a record, and creating or updating a record. After the app is generated, you'll probably want to customize [the browse screen](customize-layout-sharepoint.md) and [the details and edit screens](customize-forms-sharepoint.md) to suit your needs.
 
-1. Specify the type of SharePoint site to which you want to connect:
+	**Note**: If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
 
-	![Choose type of SharePoint site](./media/connection-sharepoint-online/choose-type-portal.png)
+- Build your own app from scratch by [connecting to SharePoint](connect-to-sharepoint.md), reviewing the concepts in [Create an app from scratch](get-started-create-from-blank.md), and applying them to SharePoint instead of Excel.
 
-	- Click or tap **Connect directly (cloud services)** to connect to SharePoint Online, and skip to step 4.
-
-	- Click or tap **Connect using on-premises data gateway** to connect to an on-premises SharePoint site, and then provide this information:
-
-		1.  Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
-
-			![Specify credentials](./media/connection-sharepoint-online/specify-creds-portal.png)
-
-		1. If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
-
-		1. Under **Choose a gateway**, click or tap the gateway that you want to use.
-
-			![Choose gateway](./media/connection-sharepoint-online/choose-gateway-portal.png)
-
-1. Click or tap **Add connection**.
-
-1. Create an app by using techniques that are similar to those that [Create an app from scratch](get-started-create-from-blank.md) describes.
-
-## Update an app ##
+## Add a SharePoint list to an existing app ##
 1. In PowerApps Studio, open the app that you want to update.
 
 1. In the right-hand pane, click or tap the **Data sources** tab, and then click or tap **Add data source**.
