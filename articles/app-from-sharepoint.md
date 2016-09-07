@@ -25,7 +25,7 @@ By default, every generated app has a screen for browsing records, a screen for 
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
-As of this writing, PowerApps supports lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
+As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 ## Specify a SharePoint app ##
 1. If you haven't already created a [connection to SharePoint](connect-to-sharepoint.md), create one.

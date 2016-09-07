@@ -25,7 +25,7 @@ ms.author="anneta"/>
 Connect to a SharePoint site to generate an app automatically from a list, build an app from scratch, or update an existing app.
 
 ## Known issues ##
-You can add data from a list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
+You can add data from a custom list but not a library. In addition, not all types of columns are supported, and not all types of columns support all types of cards.
 
 | Column type | Support | Default cards |
 |---|---|----|
