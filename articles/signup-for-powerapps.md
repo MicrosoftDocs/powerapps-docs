@@ -18,11 +18,10 @@
     ms.date="06/02/2016"
     ms.author="jamesol"/>
 
-# Sign up for PowerApps
+# Sign up for PowerApps #
+This article shows you how to sign up for a PowerApps account. For administration information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
-This article shows you how to sign up for a PowerApps account. Also checkout out our [Q&A](signup-question-and-answer.md).
-
-## What email addresses can be used with PowerApps ##
+## What email addresses can you use with PowerApps ##
 To sign up for PowerApps, enter your work or school email address.
 
 > **NOTE** Currently, consumer email services, telecommunication providers, government, and military addresses are not supported. This includes:  
@@ -30,24 +29,23 @@ To sign up for PowerApps, enter your work or school email address.
 > - outlook.com, hotmail.com, gmail.com, and so on  
 > - .gov and .mil
 
+If you try to sign up with a personal email address, a message indicates that you must use a work or school email address.
 
-If you try to sign up with a personal email address, you get a message indicating to use a work or school email address.
+## Sign up for PowerApps ##
+1. Near the upper-right corner, click or tap **Sign up free**.
 
+	If you're viewing this content on a phone, click or tap the menu icon in the upper-right corner, and then click or tap **Sign up free**.
 
-## Sign up for PowerApps
+1. In the dialog box, type your work or school email address, and then click or tap **Submit**.  
 
-1. Go to [powerapps.com][1].
+	![](./media/signup-for-powerapps/get-started.png)
 
-2. Select **Get started**.
+4. Make sure you've entered the correct email address and click **Sign up**:
 
-3. In the dialog, enter the work or school email address you are signing up with, and then select the **arrow**. Be sure your email address is allowed for sign up.  
-
-	![](./media/signup-for-powerapps/PowerApps_Dialog.png)
-
-4. Make sure you have entered the correct email address and click **Sign up**:  
 	![](./media/signup-for-powerapps/BoxPortal_GettingStarted.png)
 
-5. If your account does not exist within an organization, you get a message to check your email:  
+5. If your account doesn't exist within an organization, you get a message to check your email:
+
 	![](./media/signup-for-powerapps/BoxPortal_CheckYourEmail.png)
 
 	If your account is part of an existing organization, you get a message asking you to sign in with that account. Select **Sign in**, and sign in with your work account:  
@@ -59,10 +57,10 @@ If you try to sign up with a personal email address, you get a message indicatin
 7. If you have an existing organizational account, you see a message asking you to select **Start**:  
 ![](./media/signup-for-powerapps/BoxPortal_AlmostThere.png)
 
-8. You are then taken to [powerapps.com][2], and you can begin using PowerApps.
+	You're then taken to [powerapps.com][2], and you can start to use PowerApps.
 
-## Troubleshoot##
-In many cases, registering for PowerApps is achieved by following the sign up steps in this topic. However, there are several reasons sign up may fail.  The following table summarizes some of the most common reasons, and ways you can workaround these issues.
+## Troubleshoot ##
+In many cases, you register for PowerApps by following the sign-up steps in this topic. However, sign-up may fail because of any of several reason. The following table summarizes some of the most common reasons and ways you can workaround these issues.
 
 | Symptom / Error Message |Cause and Workaround|
 |---|---|
@@ -73,7 +71,7 @@ In many cases, registering for PowerApps is achieved by following the sign up st
 
 ## Next steps
 
-After you successfully sign up for PowerApps, you can start creating some apps. Here are some good resources:
+After you successfully sign up for PowerApps, you can start to create some apps. Here are some good resources:
 
 [Get started](getting-started.md)  
 [Run a sample app](open-and-run-a-sample-app.md)  
