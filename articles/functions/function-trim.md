@@ -20,7 +20,7 @@
 
 # Trim and TrimEnds functions in PowerApps #
 
-Removes extra spaces from text.
+Removes extra spaces from a string of text.
 
 ## Description ##
 
