@@ -40,7 +40,7 @@ By trimming spaces between words, **Trim** is consistent with the function of th
 
 - *String* - Required. The string to remove spaces from.
 
-**Trim**( *SingleColumnTable* )<br>**TrimEnds**( *StringColumnTable* )
+**Trim**( *SingleColumnTable* )<br>**TrimEnds**( *SingleColumnTable* )
 
 - *SingleColumnTable* - Required. A single-column table of strings to remove spaces from.
 
