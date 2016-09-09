@@ -36,13 +36,11 @@ By trimming spaces between words, **Trim** is consistent with the function of th
 
 ## Syntax ##
 
-**Trim**( *String* )
-**TrimEnds**( *String* )
+**Trim**( *String* )<br>**TrimEnds**( *String* )
 
 - *String* - Required. The string to remove spaces from.
 
-**Trim**( *SingleColumnTable* )
-**TrimEnds**( *StringColumnTable* )
+**Trim**( *SingleColumnTable* )<br>**TrimEnds**( *StringColumnTable* )
 
 - *SingleColumnTable* - Required. A single-column table of strings to remove spaces from.
 
