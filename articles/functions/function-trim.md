@@ -51,7 +51,7 @@ By trimming spaces between words, **Trim** is consistent with the function of th
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **Trim(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** | Removes extra spaces from the start, middle, and end of the string. | "Hello World" |
-| **TrimEnds(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** | Removes extra spaces from the start end of the string only. | "Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World" |
+| **TrimEnds(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** | Removes extra spaces from the start and end of the string only. | "Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World" |
 
 The following examples use a collection named **Strings**:
 
