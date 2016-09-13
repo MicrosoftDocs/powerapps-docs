@@ -41,11 +41,21 @@ Other elements include:
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
 
+**[Acos](functions/function-trig.md)** – Returns the arccosine of a number, in radians.
+
+**[Acot](functions/function-trig.md)** – Returns the arccotangent of a number, in radians.
+
 **[AddColumns](functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
 
 **[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the **&&** operator.
 
 **[App](functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
+
+**[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
+
+**[Atan](functions/function-trig.md)** – Returns the arctangent of a number, in radians.
+
+**[Atan2](functions/function-trig.md)** – Returns the arctangent based on an (*x*,*y*) coordinate, in radians.
 
 **[Average](functions/function-aggregates.md)** – Calculates the average of a table expression or a set of arguments.
 
@@ -83,6 +93,10 @@ Other elements include:
 
 **[Count](functions/function-table-counts.md)** – Counts table records that contain numbers.
 
+**[Cos](functions/function-trig.md)** – Returns the cosine of an angle specified in radians.
+
+**[Cot](functions/function-trig.md)** – Returns the cotangent of an angle specified in radians.
+
 **[CountA](functions/function-table-counts.md)** – Counts table records that aren't [empty](functions/function-isblank-isempty.md).
 
 **[CountIf](functions/function-table-counts.md)** – Counts table records that satisfy a condition.  
@@ -107,6 +121,8 @@ Other elements include:
 
 **[Defaults](functions/function-defaults.md)** – Returns the default values for a data source.
 
+**[Degrees](functions/function-trig.md)** - Converts radians to degrees.
+
 **[Disable](functions/function-enable-disable.md)** – Disables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
 **[Distinct](functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
@@ -124,6 +140,8 @@ Other elements include:
 **[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 
 **[Exit](functions/function-exit.md)** – Exits the currently running app.
+
+**[Exp](functions/function-numericals.md)** - Returns *e* raised to a power.
 
 ## F ##
 
@@ -171,6 +189,8 @@ Other elements include:
 
 **[Len](functions/function-len.md)** – Returns the length of a string.
 
+**[Ln](functions/function-numericals.md)** – Returns the natural log.
+
 **[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from PowerApps private storage.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
@@ -215,11 +235,15 @@ Other elements include:
 
 **[Patch](functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
 
+**[Pi](functions/function-trig.md)** – Returns the number &pi;.
+
 **[PlainText](functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
 
 **[Proper](functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 
 ## R ##
+
+**[Radians](functions/function-trig.md)** - Converts degrees to radians.
 
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
@@ -259,6 +283,8 @@ Other elements include:
 
 **[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
 
+**[Sin](functions/function-trig.md)** – Returns the sine of an angle specified in radians.
+
 **[Sort](functions/function-sort.md)** – Returns a sorted table based on a formula.
 
 **[SortByColumns](functions/function-sort.md)** – Returns a sorted table based on one or more columns.
@@ -276,6 +302,8 @@ Other elements include:
 ## T ##
 
 **[Table](functions/function-table.md)** – Creates a temporary table.  
+
+**[Tan](functions/function-trig.md)** - Returns the tangent of an angle specified in radians.
 
 **[Text](functions/function-text.md)** – Formats a number as a string for display.
 
