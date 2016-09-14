@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/26/2016"
+ms.date="09/13/2016"
 ms.author="anneta"/>
 
 #  Connect from Microsoft PowerApps to Dynamics AX
@@ -25,31 +25,12 @@ ms.author="anneta"/>
 Dynamics AX provides an API to work with AX entities. Using this connection, you can connect to your Dynamics AX environment. You can easily build power apps that read, updates and deletes data from Dynamics AX.
 This connection supports the following AX versions:
 
-•	Dynamics AX Update1 + hotfix (KB article - https://fix.lcs.dynamics.com/Issue/Resolved?kb=3175021&bugId=3762232&qc=75f75fb7cb5de685683dafada9bdc618a7674bc4e299935b567a28ac02489b5c )
+•	Dynamics AX Update1 + [hotfix-KB article](https://fix.lcs.dynamics.com/Issue/Resolved?kb=3175021&bugId=3762232&qc=75f75fb7cb5de685683dafada9bdc618a7674bc4e299935b567a28ac02489b5c)
 
-•	Dynamics AX Update 2 ++ versions
+•	Dynamics AX Update 2 and later versions
 
 This topic shows the available functions.
 
-
-<properties
-pageTitle="Microsoft Dynamics AX Connector | Microsoft Azure"
-description="Create Logic apps with Azure App service. The Microsoft Dynamics AX Connector provides a connection to AX Data Entities."
-services="app-servicelogic"
-documentationCenter=".net,nodejs,java" 	
-authors="msftman"
-manager="erikre"
-editor=""
-tags="connectors" />
-
-<tags
-ms.service="app-service-logic"
-ms.devlang="multiple"
-ms.topic="article"
-ms.tgt_pltfrm="na"
-ms.workload="integration"
-ms.date="07/15/2016"
-ms.author="deonhe"/>
 
 # Get started with the Microsoft Dynamics AX Connector connector
 
