@@ -1,11 +1,11 @@
 <properties
-	pageTitle="Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Tan functions | Microsoft PowerApps"
+	pageTitle="Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin, and Tan functions | Microsoft PowerApps"
 	description="Reference information, including syntax and examples, for the Abs and Sqrt functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -15,50 +15,46 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/07/2015"
+   ms.date="09/13/2016"
    ms.author="gregli"/>
 
-# Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, and Tan functions in PowerApps #
+# Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin, and Tan functions in PowerApps #
 
-Trigonometry functions.
+Calculates trigonometric values.
 
 ## Description ##
 
-### Primary Functions ###
-
+### Primary functions ###
 The **Cos** function returns the cosine of its argument, an angle specified in radians.
 
 The **Cot** function returns the cotangent of its argument, an angle specified in radians.
 
-The **Sin** function returns the sine of the argument, an angle specified in radians.
+The **Sin** function returns the sine of its argument, an angle specified in radians.
 
-The **Tan** function returns the tangent of the argument, an angle specified in radians.
+The **Tan** function returns the tangent of its argument, an angle specified in radians.
 
-### Inverse Functions ###
-
+### Inverse functions ###
 The **Acos** function returns the arccosine, or inverse cosine, of its argument. The arccosine is the angle whose cosine is the argument.  The returned angle is given in radians in the range 0 (zero) to &pi;.
 
 The **Acot** function returns the principal value of the arccotangent, or inverse cotangent, of its argument.  The returned angle is given in radians in the range 0 (zero) to &pi;.
 
 The **Asin** function returns the arcsine, or inverse sine, of its argument. The arcsine is the angle whose sine is the argument.  The returned angle is given in radians in the range -&pi;/2 to &pi;/2.
 
-The **Atan** function returns the arctangent, or inverse tangent, of a its argument. The arctangent is the angle whose tangent is the argument. The returned angle is given in radians in the range -&pi;/2 to &pi;/2.
+The **Atan** function returns the arctangent, or inverse tangent, of its argument. The arctangent is the angle whose tangent is the argument. The returned angle is given in radians in the range -&pi;/2 to &pi;/2.
 
-The **Atan2** function returns the arctangent, or inverse tangent, of the specified *x* and *y* coordinates as arguments. The arctangent is the angle from the *x*-axis to a line containing the origin (0, 0) and a point with coordinates (*x*, *y*). The angle is given in radians between -&pi; and &pi;, excluding -&pi;.  A positive result represents a counterclockwise angle from the *x*-axis; a negative result represents a clockwise angle.  **Atan2(&nbsp;*a*,&nbsp;*b*&nbsp;)** equals **Atan(&nbsp;*b*/*a*&nbsp;)**, except that ***a*** can equal 0 (zero) with the **Atan2** function.
+The **Atan2** function returns the arctangent, or inverse tangent, of the specified *x* and *y* coordinates as arguments. The arctangent is the angle from the *x*-axis to a line that contains the origin (0, 0) and a point with coordinates (*x*, *y*). The angle is given in radians between -&pi; and &pi;, excluding -&pi;.  A positive result represents a counterclockwise angle from the *x*-axis; a negative result represents a clockwise angle.  **Atan2(&nbsp;*a*,&nbsp;*b*&nbsp;)** equals **Atan(&nbsp;*b*/*a*&nbsp;)**, except that ***a*** can equal 0 (zero) with the **Atan2** function.
 
-### Helper Functions ###
-
+### Helper functions ###
 The **Degrees** function converts radians to degrees.  &pi; radians equals 180 degrees.
 
-The **Pi** function returns the transcendental number &pi; which begins 3.141592...
+The **Pi** function returns the transcendental number &pi;, which begins 3.141592...
 
 The **Radians** function converts degrees to radians.  
 
 ### Notes ###
-
 If you pass a single number to these functions, the return value is a single result.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of results, one result for each record in the argument's table. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.  
 
-If an argument would result in an undefined valued, the result is *blank*.  This can happen, for example, when using inverse functions with out of range arguments.
+If an argument would result in an undefined value, the result is *blank*.  This can happen, for example, when using inverse functions with arguments that are out of range.
 
 ## Syntax ##
 
@@ -107,20 +103,20 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 |---------|-------------|--------|
 | **Cos(&nbsp;1.047197&nbsp;)** | Returns the cosine of 1.047197 radians or 60 degrees. | 0.5 |
 | **Cot(&nbsp;Pi()/4&nbsp;)** | Returns the cotangent of 0.785398... radians or 45 degrees. | 1 |
-| **Sin(&nbsp;Pi()/2&nbsp;)** | Returns the sine of 1.570796... radians or 90 degrees. | 1 | 
+| **Sin(&nbsp;Pi()/2&nbsp;)** | Returns the sine of 1.570796... radians or 90 degrees. | 1 |
 | **Tan(&nbsp;Radians(60)&nbsp;)** | Returns the tangent of 1.047197... radians or 60 degrees. | 1.732050... |
 | **Acos(&nbsp;0.5&nbsp;)** | Returns the arccosine of 0.5, in radians. | 1.047197... |
 | **Acot(&nbsp;1&nbsp;)** | Returns the arccotangent of 1, in radians. | 0.785398... |
 | **Asin(&nbsp;1&nbsp;)** | Returns the arcsine of 1, in radians. | 1.570796... |
 | **Atan(&nbsp;1.732050&nbsp;)** | Returns the arctangent of 1.732050, in radians | 1.047197... |
-| **Atan2(&nbsp;5,&nbsp;3&nbsp;)** | Returns the arctangent of the angle from the *x*-axis of the line containing the origin (0,0) and the coordinate (5,3). | 1.030376... |
+| **Atan2(&nbsp;5,&nbsp;3&nbsp;)** | Returns the arctangent of the angle from the *x*-axis of the line that contains the origin (0,0) and the coordinate (5,3). | 1.030376... |
 | **Degrees(&nbsp;1.047197&nbsp;)** | Returns the equivalent number of degrees for 1.047197 radians. | 60 |
 | **Pi()** | Returns the transcendental number &pi;. | 3.141592... |
 | **Radians(&nbsp;15&nbsp;)** | Returns the equivalent number of radians for 15 degrees. | 0.261799... |
 
 ### Single-column table
 The examples in this section use a [data source](../working-with-data-sources.md) that's named **ValueTable** and that contains the following data.  The last record in the table is &pi;/2 radians or 90 degrees.
-  
+
 ![](media/function-trig/values.png)
 
 
@@ -136,7 +132,3 @@ The examples in this section use a [data source](../working-with-data-sources.md
 | **Atan(&nbsp;ValueTable&nbsp;)** | Returns the arctangent of each number in the table. | <style> img { max-width: none } </style> ![](media/function-trig/values-atan.png) |
 | **Degrees(&nbsp;ValueTable&nbsp;)** | Returns the equivalent number of degrees for each number in the table, assumed to be angles in radians. | <style> img { max-width: none } </style> ![](media/function-trig/values-degrees.png) |
 | **Radians(&nbsp;ValueTable&nbsp;)** | Returns the equivalent number of radians for each number in the table, assumed to be angles in degrees. | <style> img { max-width: none } </style> ![](media/function-trig/values-radians.png) |
-
-
-
-
