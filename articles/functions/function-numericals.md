@@ -1,11 +1,11 @@
 <properties
 	pageTitle="Abs, Exp, Ln, and Sqrt functions | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the Abs and Sqrt functions in PowerApps"
+	description="Reference information, including syntax and examples, for the Abs, Sqrt, and other functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="erikre"
 	editor=""
 	tags=""/>
 
@@ -15,20 +15,19 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/07/2015"
+   ms.date="09/13/2016"
    ms.author="gregli"/>
 
 # Abs, Exp, Ln, and Sqrt functions in PowerApps #
-
-Numerical functions.
+Calculates absolute values, natural logarithms, square roots, and the results of raising *e* to specified powers.
 
 ## Description ##
 
 The **Abs** function returns the non-negative value of its argument. If a number is negative, **Abs** returns the positive equivalent.
 
-The **Exp** function returns *e* raised to the power of its argument.  The transcendental number *e* which begins 2.7182818...
+The **Exp** function returns *e* raised to the power of its argument.  The transcendental number *e* begins 2.7182818...
 
-The **Ln** function returns the natural logarithm (base *e*) of its argument. 
+The **Ln** function returns the natural logarithm (base *e*) of its argument.
 
 The **Sqrt** function returns the number that, when multiplied by itself, equals its argument.
 
@@ -57,7 +56,6 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 | **Ln( 100 )** | Returns the natural logarithm (base *e*) of the number 100. | 4.605170... |
 | **Sqrt( 9 )** | Returns the number that, when multiplied by itself, results in 9. | 3 |
 
-
 ### Single-column table
 The examples in this section use a [data source](../working-with-data-sources.md) that's named **ValueTable** and that contains this data:
 
@@ -72,10 +70,10 @@ The examples in this section use a [data source](../working-with-data-sources.md
 
 ### Step-by-step example ###
 
-1. Add an input-text control, and name it **Source**.
+1. Add an **Text input** control, and name it **Source**.
 
-2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
+2. Add a **Text box** control, and set its **[Text](../controls/properties-core.md)** property to this formula:
 <br>
 **Sqrt( Value( Source.Text ) )**
 
-3. Type a number into **Source**, and confirm that the label shows the square root of the number that you typed.
+3. Type a number into **Source**, and confirm that the **Text box** control shows the square root of the number that you typed.
