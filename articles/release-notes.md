@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="09/01/2016"
+    ms.date="09/19/2016"
     ms.author="anneta"/>
 
 # What's new in PowerApps release 2.0.510 #
@@ -25,6 +25,8 @@ For information about known limitations in this release, see [Common issues and 
 1. **Mark favorite apps on iOS and Android devices**.
 
 	You can mark an app as a favorite and show only your favorite apps in the list of apps that you can run.
+
+1. **Swipe down to refresh the list of apps on iOS and Android devices**.
 
 1.	**Delay property for text-input controls**.
 
