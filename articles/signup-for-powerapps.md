@@ -60,7 +60,7 @@ If you try to sign up with a personal email address, a message indicates that yo
 	You're then taken to [powerapps.com][2], and you can start to use PowerApps.
 
 ## Troubleshoot ##
-In many cases, you register for PowerApps by following the sign-up steps in this topic. However, sign-up may fail because of any of several reason. The following table summarizes some of the most common reasons and ways you can workaround these issues.
+In many cases, you register for PowerApps by following the sign-up steps in this topic. However, sign-up may fail because of any of several reasons. The following table summarizes some of the most common reasons and ways you can workaround these issues.
 
 | Symptom / Error Message |Cause and Workaround|
 |---|---|

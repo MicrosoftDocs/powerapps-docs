@@ -74,4 +74,4 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 ## Next steps ##
 - To save the app that you've just generated, press Ctrl-S.
 - To customize the browse screen (which appears by default), see [Customize a layout](customize-layout-sharepoint.md).
-- To customize the details or edit screens, see [Customize a form](customize-form-sharepoint.md).
+- To customize the details or edit screens, see [Customize a form](customize-forms-sharepoint.md).
