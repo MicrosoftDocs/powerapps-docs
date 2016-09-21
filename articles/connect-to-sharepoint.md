@@ -44,8 +44,8 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 1. Follow the steps in either of these procedures, which appear later in this topic:
 
-	- [Connect to a SharePoint Online site](connect-to-sharepoint.md#connect-to-sharepoint-online).
-	- [Connect to an on-premises SharePoint site](connect-to-sharepoint.md#connect-to-an on-premises-sharepoint-site).
+	- [Connect to a SharePoint Online site](connect-to-sharepoint.md#connect-to-a-sharepoint-online-site).
+	- [Connect to an on-premises SharePoint site](connect-to-sharepoint.md#connect-to-an-on-premises-sharepoint-site).
 
 ## Connect to a SharePoint Online site ##
 1. Click or tap **Connect directly (cloud services)**, and then click or tap **Add connection**.
