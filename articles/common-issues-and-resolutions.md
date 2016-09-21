@@ -21,6 +21,12 @@
 # Common issues and resolutions #
 
 ## Recently added/changed ##
+1. **Opening an app from a template**.
+
+	If you're running release 2.0.500 or older, an error message appears when you try to create an app from a template. You must upgrade to be able to use this feature.
+
+	If you're running release 2.0.510 or later, an warning might appear when you try to create an app from a template. However, you can close the message and create the app.
+
 1. **Scanning a barcode**
 
 	For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
