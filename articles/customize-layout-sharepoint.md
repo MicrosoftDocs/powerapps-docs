@@ -21,7 +21,8 @@
 # Customize a layout in PowerApps #
 After you generate an app automatically in PowerApps, customize the browse screen, which appears by default. Specify which layout to use, which columns to show, and which columns to use when sorting and searching for records.
 
-If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
+- For information about how to generate an app automatically, see [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md).
+- If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
 ## Prerequisites ##
 You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
