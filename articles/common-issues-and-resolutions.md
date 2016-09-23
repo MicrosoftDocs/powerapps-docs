@@ -33,7 +33,7 @@
 
 1. **Creating and modifying apps in a browser**
 
-	You can do many of the same things in a browser as you can in PowerApps Studio, but you, for example, can't create an app from a template. For more information, see [Create an app in a browser](create-app-browser.md).
+	You can do many of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. However, you can't, for example, create an app from a template. For more information, see [Create an app in a browser](create-app-browser.md).
 
 1. **Changing a record-title field in the Microsoft Common Data Model**
 
