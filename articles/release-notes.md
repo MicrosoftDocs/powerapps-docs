@@ -17,7 +17,7 @@
     ms.date="09/19/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.510 #
+# What's new in PowerApps release 2.0.511 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 1. **Open apps in iOS 10**.
