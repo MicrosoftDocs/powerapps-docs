@@ -55,6 +55,10 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 
 	You can [create an app from a template](get-started-test-drive.md) in PowerApps Studio for Windows but not in a browser.
 
+1. **Edit and save an app locally**.
+
+	For best results, use PowerApps Studio for Windows to edit and save apps locally. In a browser, you can't save changes to a local app, or you must save a new file instead of replacing the file that you opened.
+
 1. **Use signal functions.**
 
 	**[Acceleration and Compass](functions/signals.md)** functions return accurate values in a published app, but those functions return zero values as you create or modify an app in a browser.
