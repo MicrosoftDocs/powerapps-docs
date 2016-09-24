@@ -24,7 +24,7 @@ This tutorial demonstrates how to register a Swagger file describing an [Azure R
 
 ## Prerequisites
 
-- An [Azure subscription](https://azure.microsoft.com/en-us/free/) 
+- An [Azure subscription](https://azure.microsoft.com/en-us/free/)
 - A [PowerApps account](https://powerapps.microsoft.com)
 - The [sample Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json) used in this tutorial.
 
@@ -51,7 +51,7 @@ First, we need to create an Azure Active Directory (AAD) application that will p
     ![Add button](./media/customapi-azure-resource-manager-tutorial/add-app-btn.png)   
 
 5. Enter a name for your application, leave **Web app / API** selected, and then for **Sign-on URL** enter `https://login.windows.net`.  Click Create.  
-    
+
     ![New app form](./media/customapi-azure-resource-manager-tutorial/newapplication.png)
 
 6. Click on the new application in the list.
@@ -59,7 +59,7 @@ First, we need to create an Azure Active Directory (AAD) application that will p
     ![New app in list](./media/customapi-azure-resource-manager-tutorial/newapplication2.png)
 
     The Registered app blade opens.  Make a note of the **Application ID**.  We'll need it later.
-    
+
 7. The Settings blade should have opened, as well.  If it didn't, click the **Settings** button.
 
     ![Settings button](./media/customapi-azure-resource-manager-tutorial/settings-btn.png)
@@ -74,17 +74,17 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
     The Add API access blade opens.
 
-10. Click **Select an API**. In the blade that opens, click **Windows Azure Service Management API** and click **Select**. 
+10. Click **Select an API**. In the blade that opens, click the option for an Azure Service Management API and click **Select**.
 
     ![Select an API](./media/customapi-azure-resource-manager-tutorial/permissions2.png)
 
 11. Click **Select permissions**.  Under *Delegated permissions*, click **Access Azure Service Management as organization users**, then click **Select**.
-    
+
     ![Select an API](./media/customapi-azure-resource-manager-tutorial/permissions2.png)
 
-12. On the Add API access blade, click **Done** 
+12. On the Add API access blade, click **Done**
 
-13. Back on the Settings blade, click **Keys**.  In the Keys blade, type a description for your key, select an expiration period, and then click **Save**.  Your new key will be displayed.  Make note of the key value, as we will need that later, too.  You may now close the Azure portal. 
+13. Back on the Settings blade, click **Keys**.  In the Keys blade, type a description for your key, select an expiration period, and then click **Save**.  Your new key will be displayed.  Make note of the key value, as we will need that later, too.  You may now close the Azure portal.
 
     ![Create a key](./media/customapi-azure-resource-manager-tutorial/configurekeys.png)
 
@@ -103,17 +103,17 @@ Now that the AAD application is configured, let's add the custom API.
     ![New custom API](./media/customapi-azure-resource-manager-tutorial/connecttocustomapi.png)
 
 3. Enter a Name for your connection, then upload the [sample ARM Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Next**.  
-    
+
     ![Connect to a new API endpoint](./media/customapi-azure-resource-manager-tutorial/createcustom.png)
 
 4. On the next screen, since the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, enter the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, enter `https://management.core.windows.net/`.
-    
+
     >[AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
 
     ![OAuth settings](./media/customapi-azure-resource-manager-tutorial/oauthsettings.png)
 
 5. Your custom API is now registered, and can be consumed within your PowerApps or Flow.
-    
+
     ![Custom API added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
 
 >[AZURE.NOTE] The sample Swagger does not define the full set of ARM operations, and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this Swagger or create new Swagger files using the [online Swagger editor](http://editor.swagger.io/).
