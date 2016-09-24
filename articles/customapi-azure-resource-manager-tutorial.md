@@ -50,7 +50,7 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
     ![Add button](./media/customapi-azure-resource-manager-tutorial/add-app-btn.png)   
 
-5. Enter a name for your application, leave **Web app / API** selected, and then for **Sign-on URL** enter *https://login.windows.net*.  Click Create.  
+5. Enter a name for your application, leave **Web app / API** selected, and then for **Sign-on URL** enter `https://login.windows.net`.  Click Create.  
     
     ![New app form](./media/customapi-azure-resource-manager-tutorial/newapplication.png)
 
@@ -64,7 +64,7 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
     ![Settings button](./media/customapi-azure-resource-manager-tutorial/settings-btn.png)
 
-8. In the Settings blade, click **Reply URLs**. In the list of URLs, add *https://msmanaged-na.consent.azure-apim.net/redirect* and click **Save**.
+8. In the Settings blade, click **Reply URLs**. In the list of URLs, add `https://msmanaged-na.consent.azure-apim.net/redirect` and click **Save**.
 
     ![Reply URLs](./media/customapi-azure-resource-manager-tutorial/reply-urls.png)
 
