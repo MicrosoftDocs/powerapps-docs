@@ -106,7 +106,7 @@ Now that the AAD application is configured, let's add the custom API.
     
     ![Connect to a new API endpoint](./media/customapi-azure-resource-manager-tutorial/createcustom.png)
 
-4. On the next screen, since the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client if**, enter the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, enter *https://management.core.windows.net/*.
+4. On the next screen, since the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, enter the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, enter `https://management.core.windows.net/`.
     
     >[AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
 
