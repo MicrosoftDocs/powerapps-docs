@@ -21,13 +21,19 @@
 # Common issues and resolutions #
 
 ## Recently added/changed ##
+1. **Opening an app from a template**.
+
+	If you're running release 2.0.500 or older, an error message appears when you try to create an app from a template. You must upgrade to be able to use this feature.
+
+	If you're running release 2.0.511 or later, an warning might appear when you try to create an app from a template. However, you can close the message and create the app.
+
 1. **Scanning a barcode**
 
 	For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
 
 1. **Creating and modifying apps in a browser**
 
-	You can do many of the same things in a browser as you can in PowerApps Studio, but you, for example, can't create an app from a template. For more information, see [Create an app in a browser](create-app-browser.md).
+	You can do many of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. However, you can't, for example, create an app from a template. For more information, see [Create an app in a browser](create-app-browser.md).
 
 1. **Changing a record-title field in the Microsoft Common Data Model**
 
@@ -50,7 +56,7 @@
 
 	For information about limitations when you use Excel as a data source, see [Cloud-storage connections](cloud-storage-blob-connections.md#known-limitations).
 
-1. **SharePoint lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
+1. **SharePoint custom lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
 
 	For more information, see [SharePoint Online](connection-sharepoint-online.md#known-issues).
 

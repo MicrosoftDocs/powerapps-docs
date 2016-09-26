@@ -21,7 +21,7 @@
 # Introduction to PowerApps #
 Welcome! In PowerApps, you can generate an app automatically, customize it, create an app from scratch, and share and run apps that you create or that others create and share with you.
 
-> **NOTE** If you've automatically generated an app from a SharePoint list, you can [customize the app](app-from-sharepoint.md#customize-the-app) to better suit your needs.
+> [AZURE.NOTE] If you've automatically generated an app from a SharePoint list, you can [customize the app](customize-layout-sharepoint.md) to better suit your needs.
 
 ## Generate an app automatically ##
 To generate an app automatically, you just need to specify a data source, as this video demonstrates in under five minutes.
@@ -31,7 +31,7 @@ To generate an app automatically, you just need to specify a data source, as thi
 The video is based on an Excel workbook in the cloud, but you can also generate apps from other types of data sources, such as these:
 
 - the [Microsoft Common Data Model](data-platform-intro.md)
-- a SharePoint list
+- a custom SharePoint list
 - a SQL Server database
 - Salesforce
 - Dynamics CRM

@@ -14,12 +14,34 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="09/01/2016"
+    ms.date="09/19/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.500 #
+# What's new in PowerApps release 2.0.511 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+1. **Open apps in iOS 10**.
+
+1. **Mark favorite apps on iOS and Android devices**.
+
+	You can mark an app as a favorite and show only your favorite apps in the list of apps that you can run.
+
+1. **Swipe down to refresh the list of apps on iOS and Android devices**.
+
+1.	**Delay property for text-input controls**.
+
+	If you set the **[OnChange](https://powerapps.microsoft.com/en-us/tutorials/properties-core/)** property for a **[Text input](control-text-input.md)** control to an action, that action occurs, by default, every time that the user types a character in the control. For example, a user might type seven letters in a search box, and the results will update every time the user adds a letter, which uses network bandwidth unnecessarily when a data source is searched. If you set the **DelayOutput** property for that control to **true**, the action doesn’t occur until the user types one or more characters and then stops typing in that control for a period of time.
+
+1.	**Mathematical functions added**.
+
+	- Calculate sine, cosine, tangent, and other trigonometric values.
+	- Easily access the value of &pi;.
+	- Convert between units of angle.
+	- Calculate natural exponentiations and logarithms.
+
+	For more information, see [Trigonometric functions](function-trig.md) and [Numerical functions](function-numericals.md).
+
+## Release 2.0.500 ##
 1. **Barcode scanner for UPC, Codabar, and other types of codes**.
 
 	For step-by-step instructions and information about best practices and limitations, see [Scan a barcode](scan-barcode.md).
