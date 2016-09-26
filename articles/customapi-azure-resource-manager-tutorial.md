@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/23/2016"
+   ms.date="09/26/2016"
    ms.author="casoper"/>
 
 
@@ -50,7 +50,7 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
     ![Add button](./media/customapi-azure-resource-manager-tutorial/add-app-btn.png)   
 
-5. Enter a name for your application, leave **Web app / API** selected, and then for **Sign-on URL** enter `https://login.windows.net`.  Click **Create**.  
+5. Type a name for your application, leave **Web app / API** selected, and then for **Sign-on URL** type `https://login.windows.net`.  Click **Create**.  
 
     ![New app form](./media/customapi-azure-resource-manager-tutorial/newapplication.png)
 
@@ -74,13 +74,13 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
     The Add API access blade opens.
 
-10. Click **Select an API**. In the blade that opens, click the option for an Azure Service Management API and click **Select**.
+10. Click **Select an API**. In the blade that opens, click the option for the Azure Service Management API and click **Select**.
 
     ![Select an API](./media/customapi-azure-resource-manager-tutorial/permissions2.png)
 
 11. Click **Select permissions**.  Under *Delegated permissions*, click **Access Azure Service Management as organization users**, and then click **Select**.
 
-    ![Select an API](./media/customapi-azure-resource-manager-tutorial/permissions2.png)
+    ![Delegated permissions](./media/customapi-azure-resource-manager-tutorial/permissions3.png)
 
 12. On the Add API access blade, click **Done**.
 
@@ -102,11 +102,11 @@ Now that the AAD application is configured, let's add the custom API.
 
     ![New custom API](./media/customapi-azure-resource-manager-tutorial/connecttocustomapi.png)
 
-3. Enter a **Name** for your connection, and then upload the [sample ARM Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Next**.  
+3. Type a **Name** for your connection, and then upload the [sample ARM Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Next**.  
 
     ![Connect to a new API endpoint](./media/customapi-azure-resource-manager-tutorial/createcustom.png)
 
-4. On the next screen, because the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, enter the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, enter `https://management.core.windows.net/`.
+4. On the next screen, because the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, type the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, type `https://management.core.windows.net/`.
 
     >[AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
 
