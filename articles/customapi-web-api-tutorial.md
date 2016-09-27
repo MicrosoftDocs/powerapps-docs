@@ -86,7 +86,7 @@ The first AAD application is used to secure the Web API. Name it **webAPI**.  Fo
 The second AAD application is used to secure the custom API registration and acquire delegated access to the Web API protected by the first application. Name this one **webAPI-customAPI** .
 
 - Sign-on URL: `https://login.windows.net`
-- Reply URL: ***https://msmanaged-na.consent.azure-apim.net/redirect***
+- Reply URL: `https://msmanaged-na.consent.azure-apim.net/redirect`
 - Add permissions to have delegated access to Web API.
 - You need the application ID of this application later as well, so note it.
 - Generate a client key and store is somewhere safe. We need this key later.
