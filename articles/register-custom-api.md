@@ -21,7 +21,7 @@
 
 [AZURE.VIDEO nb:cid:UUID:a971d001-3731-42d3-8abe-d82d44869343]
 
-## Intoduction
+## Introduction
 
 PowerApps and Microsoft Flow can leverage any RESTful APIs hosted anywhere.  This tutorial demonstrates registering and using a custom API.
 
