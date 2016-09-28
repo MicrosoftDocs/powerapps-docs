@@ -133,6 +133,8 @@ Other elements include:
 
 ## E ##
 
+**[EditForm](functions/function-form.md)** – Resets a form control for editing of an item.
+
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
