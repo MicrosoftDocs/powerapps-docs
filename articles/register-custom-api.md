@@ -17,18 +17,19 @@
    ms.date="09/27/2016"
    ms.author="casoper"/>
 
-# Introduction
+# Register Custom APIs in PowerApps and Microsoft Flow
 
 [AZURE.VIDEO nb:cid:UUID:a971d001-3731-42d3-8abe-d82d44869343]
 
-PowerApps and Microsoft flow can leverage any RESTful APIs hosted anywhere.  This tutorial demonstrates registering and using a custom API.
+## Intoduction
 
-## What you need to get started
+PowerApps and Microsoft Flow can leverage any RESTful APIs hosted anywhere.  This tutorial demonstrates registering and using a custom API.
 
 ## Prerequisites
 
 - A [PowerApps account](https://powerapps.microsoft.com).
-- A Swagger file (.json) and an icon for your custom API are needed. If you don't have one, we'll show you several options to create the Swagger file.
+- A Swagger file (JSON) for your custom API. If you don't have one, we'll show you several options to create the Swagger file.
+- An image to use as an icon for your custom API (optional).
 
 
 ## Authentication
@@ -79,21 +80,23 @@ You can create a Swagger file from *any* API endpoint, including:
 - An API that you create and deploy to any cloud hosting provider, including Amazon Web Services (AWS), Heroku, Azure Web Apps, Google Cloud, and more.  
 - A custom line-of-business API deployed on your network as long as the API is exposed on the public internet.
 
-When you create the Swagger file, a .json file is created.  You'll need this is Step 2.
+When you create the Swagger file, a JSON file is created.  You'll need this is Step 2.
 
 #### Getting help with Swagger files
 
 - If you're new to Swagger, you should visit the [Getting Started pages on Swagger.io](http://swagger.io/getting-started/).
 
-- To create your own API, deploy it to Azure, create a Swagger file based off this new API, and then consider using [Web API tutorial](customapi-web-api-tutorial.md). This tutorial gives you a working Swagger file. There's also a [Hello World example][7] on GitHub.
+-  There's a Swagger [Hello World example](https://github.com/OAI/OpenAPI-Specification/wiki/Hello-World-Sample) on GitHub.
 
-- To validate your Swagger files, use the [Swagger editor][8]. You can paste your .json data, and validation automatically occurs.
+- To create your own API, deploy it to Azure, create a Swagger file based off this new API, and then register it in PowerApps, see the [Web API tutorial](customapi-web-api-tutorial.md).
 
-- To customize your Swagger document to work with PowerApps and Logic Flows, see [Customize your Swagger definition](customapi-how-to-swagger.md).
+- To validate your Swagger files, use the [Swagger editor](http://editor.swagger.io/#/). You can paste your JSON data, and validation automatically occurs.
+
+- To customize your Swagger document to work with PowerApps and Microsoft Flow, see [Customize your Swagger definition](customapi-how-to-swagger.md).
 
 ### Step 2: Add a connection to the custom API
 
-Now that the Swagger file (.json file) is generated for the custom API, add the connection to PowerApps.
+Now that the Swagger file (JSON file) is generated for the custom API, add the connection to PowerApps.
 
 1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Manage** to expand it, and then click **Connections**. Then click **New connection** in the upper-right corner. 
 
@@ -110,20 +113,20 @@ Now that the Swagger file (.json file) is generated for the custom API, add the 
 	| Property | Description |
 	|----------|-------------|
 	| Name | Type the name of your custom API. |
-	| Swagger API definition | Browse to the .json file created from Swagger. |
+	| Swagger API definition | Browse to the JSON file created from Swagger. |
 	| Upload API icon | Browse an image file for the icon (optional). |
 	| Description | Type a description of your custom API (optional). |
 
 	Select **Next**.
 
-3. Enter any authentication properties. If the .json file uses OAuth2 authentication in the ```securityDefintions``` object, you are prompted for the following values:  
+3. Enter any authentication properties. If the JSON file uses OAuth2 authentication in the ```securityDefintions``` object, you are prompted for the following values:  
 
 	| Property | Description |
 	|----------|-------------|
 	| Client id | Using one of the supported OAuth identity providers, a client ID is provided. Type this client ID. |
 	| Client secret | Type the client secret from the identity provider you chose. |  
 
-	If the .json file does not use the ```securityDefintions``` object, then no additional values may be needed.
+	If the JSON file does not use the ```securityDefintions``` object, then no additional values may be needed.
 	
 4. Select **Create**. 
 
@@ -162,13 +165,13 @@ Now you're ready to use the custom API with your app or flow. To illustrate, we'
 7. Name your flow, and then select **Done**.
 
 
-#### Add the custom API to your PowerApp
+#### Add the custom API to your app
 
 In this step, you'll create a very simple app that shows you how to add your custom API. For more information, see [Create an app from data](get-started-create-from-data.md).
 
 1. In [powerapps.com](https://web.powerapps.com), select **New App**:
 	
-	![New PowerApp](./media/register-custom-api/newpowerapp.png)
+	![New app](./media/register-custom-api/newpowerapp.png)
 
 2. A new tab opens in your browser. In this new tab, a blank app is created automatically. Select **connect to data**.
 
