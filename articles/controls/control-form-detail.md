@@ -86,8 +86,6 @@ Some data sources can detect when two people try to update the same record at th
 
 **Item** – The record in the **DataSource** that the user will show or edit.
 
-- If an **Edit form** control's **Item** property is blank, the form will automatically be in **New** mode. If this property is set to the **SelectedItem** property of a **[Gallery](control-gallery.md)** control, blank is returned if the user hasn't selected a record in that gallery or it contains no records.
-
 **LastSubmit** – The last successfully submitted record, including any server generated fields.
 
 - This property applies only to the **Edit form** control.
@@ -101,11 +99,11 @@ Some data sources can detect when two people try to update the same record at th
 | **FormMode.Edit** | The user can edit a record by using the form. The values in the form's cards are pre-populated with the existing record, for the user to change. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an existing record is modified. |
 | **FormMode.New** | The user can create a record by using the form. The values in the form's controls are pre-popoulated with the defaults for a record of the data source. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an record is created. |
 
-- By default, the form control is in **Edit** mode but switches to **New** mode when the **[NewForm](../functions/function-form.md)** function runs. if the **Item** property of the form is blank, the form is automatically in **New** mode because there's no item to edit).
+- By default, the form control is in **Edit** mode but switches to **New** mode when the **[NewForm](../functions/function-form.md)** function runs. 
 
 The form switches from **New** mode to **Edit** mode when any of these changes occurs:
 - The form is successfully submitted, and a record is created. If the gallery is set to automatically move selection to this new record, the form will be in **Edit** mode for the created record so that the user can make additional changes.
-- The value of the **Item** property changes. This change indicates that user has decided to edit a record instead of creating one.
+- The **[EditForm](../functions/function-form.md)** function runs.
 - The **[ResetForm](../functions/function-form.md)** function runs. For example, the user might select a **Cancel** button that's been configured with this function.
 
 **OnFailure** – How an app responds when a data operation has been unsuccessful.
