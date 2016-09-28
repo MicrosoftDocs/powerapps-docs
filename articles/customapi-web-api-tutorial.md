@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Create a custom Web API for PowerApps and Microsoft Flow | Microsoft Azure"
+	pageTitle="Create a custom Web API for PowerApps and Microsoft Flow | Microsoft PowerApps"
 	description="Learn how to create an ASP.NET Web API with Azure Active Directory authentication in PowerApps and Microsoft Flow"
 	services=""
     suite="powerapps"
