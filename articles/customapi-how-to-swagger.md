@@ -1,11 +1,11 @@
 <properties
-	pageTitle="How to customize your Swagger definition for PowerApps and Microsoft Flow| Microsoft Azure"
+	pageTitle="Customize your Swagger definition for PowerApps and Microsoft Flow | Microsoft PowerApps"
 	description="View the schema extensions required by Swagger to work with PowerApps and Microsoft Flow"
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="archnair"
-	manager="erikre"
+	authors="camsoper"
+	manager="AFTOwen"
 	editor=""/>
 
 <tags
@@ -14,23 +14,22 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/13/2016"
-   ms.author="archanan"/>
+   ms.date="09/27/2016"
+   ms.author="casoper"/>
 
 # Customize your Swagger definition for PowerApps and Microsoft Flow
 
-## Author Swagger 2.0 API definition for your API
+## Introduction
 
-To learn how to add Swagger to your WebAPI, see [Swashbuckle][1].
+To use custom APIs in PowerApps and Microsoft Flow, you must provide a Swagger definition, which is a language-agnostic machine-readable document describing the API's operations and parameters.  In addition to the out-of-the-box Swagger specification, there are some extensions available when creating a custom API for PowerApps and Microsoft Flow.
 
-## Schema extensions
-In addition to the standard Swagger specifications, there are some additional swagger extensions available when creating a custom API for PowerApps and Microsoft Flow. This sections lists and describes these extensions.
+## x-ms-summary
 
-##### x-ms-summary
-A string that describes the display names for entities that do not have the `summary` field defined in the Swagger spec. **Parameter names** is an example.
+Defines the display names for entities that do not have the `summary` field defined in the Swagger definition.
 
-##### x-ms-visibility
-This value describes whether the entity is displayed in the Microsoft Flow designer. The following values are available:
+## x-ms-visibility
+
+Defines whether the entity is displayed in the Microsoft Flow designer. The following values are available:
 
 - “none” (default)
 - “advanced”
@@ -38,15 +37,17 @@ This value describes whether the entity is displayed in the Microsoft Flow desig
 
 If an operation is marked as "important", the Microsoft Flow client is expected to highlight these operations.
 
-##### x-ms-trigger
-Defines whether this operation can be used as a trigger in the flow. Options include:
+## x-ms-trigger
+
+Defines whether this operation can be used as a trigger in a flow. Options include:
 
 - none (default): The operation cannot be used as a trigger.
 - single: This operation can also be used as a trigger.
-- batched: This operation can be used as a trigger.  In addition, this operation responds with a JSON 'array' of objects, and the Logic Flow fires a trigger for each item in the array.
+- batched: This operation can be used as a trigger.  In addition, this operation responds with a JSON array of objects, and the flow fires a trigger for each item in the array.
 
 
-##### x-ms-dynamic-values
+## x-ms-dynamic-values
+
 This is a hint to the Microsoft Flow designer that the API provides a list of dynamically allowed values for this parameter. The Microsoft Flow designer can invoke an operation as defined by the value of this field, and extract the possible values from the result.  The Microsoft Flow designer can then display these values as options to the end user.  
 
 The value is an object that contains the following properties:
@@ -60,7 +61,7 @@ The value is an object that contains the following properties:
 
 Example:
 
-```javascript
+```json
 "/api/tables/{table}/items": {
   "post": {
     "operationId": "TableData_CreateItem",
@@ -84,16 +85,17 @@ Example:
 }
 ```
 
-In this example, the swagger defines the `TableData_CreateItem` operation that creates a new object in Salesforce.
+In this example, the Swagger defines the `TableData_CreateItem` operation that creates a new object in Salesforce.
 
 Salesforce has a lot of built-in objects. `x-ms-dynamic-values` is used here to help the designer figure out the list of the built-in Salesforce objects. It obtains the list by calling `TableMetadata_ListTables`.
 
-##### x-ms-dynamic-schema
-This is a hint to the Logic Flow designer that the schema for this parameter (or response) is dynamic in nature.  It can invoke an operation as defined by the value of this field, and discover the schema dynamically.  It can then display an appropriate UI to take inputs from the user or display available fields.
+## x-ms-dynamic-schema
+
+This is a hint to the flow designer that the schema for this parameter (or response) is dynamic in nature.  It can invoke an operation as defined by the value of this field, and discover the schema dynamically.  It can then display an appropriate UI to take inputs from the user or display available fields.
 
 Example:
 
-```javascript
+```json
 {
   "name": "item",
   "in": "body",
@@ -108,8 +110,13 @@ Example:
 },
 ```
 
-This is useful in scenarios where the inputs to an operation are dynamic. For example, consider the case of SQL. The schema of each table is different. So when a user selects a particular table, the Logic Flow designer needs to understand the structure of the table so that it can display the column names. In this context, if the swagger definition has `x-ms-dynamic-schema`, it calls the corresponding operation to fetch the schema.
+This is useful in scenarios where the inputs to an operation are dynamic. For example, in the case of SQL, the schema for each table is different. When a user selects a particular table, the flow designer needs to understand the structure of the table so that it can display the column names. In this context, if the Swagger definition has `x-ms-dynamic-schema`, it calls the corresponding operation to fetch the schema.
 
+## Next steps
 
-<!--Reference links in article-->
-[1]: https://github.com/domaindrivendev/Swashbuckle/blob/master/README.md
+[Register a custom API](register-custom-api.md).
+
+[Use an ASP.NET Web API](customapi-web-api-tutorial.md).
+
+[Register an Azure Resource Manager API](customapi-azure-resource-manager-tutorial.md).
+
