@@ -1,5 +1,5 @@
 <properties
-	pageTitle="NewForm, SubmitForm, and ResetForm functions | Microsoft PowerApps"
+	pageTitle="EditForm, NewForm, SubmitForm, and ResetForm functions | Microsoft PowerApps"
 	description="Reference information, including syntax and examples, for the NewForm, SubmitForm, and ResetForm functions in PowerApps"
 	services=""
 	suite="powerapps"
@@ -18,35 +18,44 @@
    ms.date="04/21/2016"
    ms.author="gregli"/>
 
-# NewForm, SubmitForm, and ResetForm functions in PowerApps #
-Create an item, save the contents, and reset the controls in an **[Edit Form](../controls/control-form-detail.md)** control.
+# EditForm, NewForm, SubmitForm, and ResetForm functions in PowerApps #
+Edit or create an item, save the contents, and reset the controls in an **[Edit Form](../controls/control-form-detail.md)** control.
 
 ## Description ##
-These functions are often invoked from the **[OnSelect](../controls/properties-core.md)** formula of a **[Button](../controls/control-button.md)** or **[Image](../controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can also [use controls together](../working-with-forms.md) to create a complete solution.
+These functions are often invoked from the **[OnSelect](../controls/properties-core.md)** formula of a **[Button](../controls/control-button.md)** or **[Image](../controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can [use controls and these functions together](../working-with-forms.md) to create a complete solution.
 
 These functions return no values.
 
 ### SubmitForm ###
-Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.md)** property of a Button control to save any changes in a Form control to the data source. Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **[Validate](function-validate.md)** function.
+Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.md)** property of a Button control to save any changes in a Form control to the data source. 
+
+Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **[Validate](function-validate.md)** function.
 
 **SubmitForm** also checks the **[Valid](../controls/control-form-detail.md)** property of the Form, which is an aggregation of all the **[Valid](../controls/control-card.md)** properties of the **[Card](../controls/control-card.md)** controls that the Form control contains. If a problem occurs, the data isn't submitted, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties of the Form control are set accordingly.
 
 If validation passes, **SubmitForm** submits the change to the data source.
 
-- If successful, the Form's **[OnSuccess](../controls/control-form-detail.md)** behavior runs, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties are cleared.
-- If unsuccessful, the Form's **[OnFailure](../controls/control-form-detail.md)** behavior runs, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties are set accordingly.  
+- If successful, the Form's **[OnSuccess](../controls/control-form-detail.md)** behavior runs, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties are cleared.  If the form was in **FormMode.New** mode, it is returned to **FormMode.Edit** mode.
+- If unsuccessful, the Form's **[OnFailure](../controls/control-form-detail.md)** behavior runs, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties are set accordingly.  The mode of the form is unchanged.  
+
+### EditForm ###
+The **EditForm** function changes the Form control's mode to **FormMode.Edit**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are used to populate the form.  If the **SubmitForm** function runs when the form is in this mode, a record is changed, not created.  **FormMode.Edit** is the default for the Form control.
 
 ### NewForm ###
-The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are ignored, and the default values of the Form's **[DataSource](../controls/control-form-detail.md)** property populate the form. If the **SubmitForm** function runs when the form is in this mode, an record is created, not changed.
+The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are ignored, and the default values of the Form's **[DataSource](../controls/control-form-detail.md)** property populate the form. If the **SubmitForm** function runs when the form is in this mode, a record is created, not changed.
 
 ### ResetForm ###
-The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode (unless nothing is present on the **[Item](../controls/control-form-detail.md)** property). The **[OnReset](../controls/control-form-detail.md)** behavior of the form control also runs.
+The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode. The **[OnReset](../controls/control-form-detail.md)** behavior of the form control also runs.
 
 ## Syntax ##
 
 **SubmitForm**( *FormName* )
 
 - *FormName* - Required. Form control to submit to the data source.
+
+**EditForm**( *FormName* )
+
+- *FormName* - Required.  Form control to switch to **FormMode.Edit** mode.
 
 **NewForm**( *FormName* )
 
