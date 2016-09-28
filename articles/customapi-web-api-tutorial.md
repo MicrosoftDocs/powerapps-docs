@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Tutorial: Create a custom API using an ASP.Net web app in PowerApps and Microsoft Flow | Microsoft Azure"
-	description="ASP.Net web app tutorial to create a custom API in PowerApps and Microsoft Flow"
+	pageTitle="Create a custom Web API for PowerApps and Microsoft Flow | Microsoft Azure"
+	description="Learn how to create an ASP.NET Web API with Azure Active Directory authentication in PowerApps and Microsoft Flow"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -17,9 +17,9 @@
    ms.date="09/26/2016"
    ms.author="casoper"/>
 
-# Tutorial: Create a custom AAD protected Web API for PowerApps and Microsoft Flow
+# Create a custom Web API for PowerApps and Microsoft Flow
 
-This tutorial shows you how to create an ASP.NET Web API, host it on Azure Web Apps, enable AAD authentication, and then register the ASP.NET Web API in PowerApps and Microsoft Flow.  
+This tutorial shows you how to create an ASP.NET Web API, host it on Azure Web Apps, enable Azure Active Directory authentication, and then register the ASP.NET Web API in PowerApps and Microsoft Flow.  
 
 ## Prerequisites
 
