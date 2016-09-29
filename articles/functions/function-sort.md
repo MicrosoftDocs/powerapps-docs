@@ -26,7 +26,9 @@ Sorts a [table](../working-with-tables.md).
 
 The **Sort** function sorts a table based on a formula.  
 
-The formula is evaluated for each [record](../working-with-tables.md#records) of the table, and the results are used to sort the table.  You can use [columns](../working-with-tables.md#columns) of the table in the formula. The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
+The formula is evaluated for each [record](../working-with-tables.md#records) of the table, and the results are used to sort the table.  The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
+
+[AZURE.INCLUDE [record-scope](../../includes/record-scope.md)] 
 
 To sort first by one column and then by another, you embed a **Sort** formula within another. For example, you can use this formula to sort a **Contacts** table first by a **LastName** column and then by a **FirstName** column:  **Sort( Sort( Contacts, LastName ), FirstName )**
 

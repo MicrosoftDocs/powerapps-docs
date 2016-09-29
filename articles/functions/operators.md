@@ -28,7 +28,7 @@
 |**-**|&nbsp;|2 - 1|Subtraction and sign|
 |**\***|&nbsp;|2 * 3|Multiplication|
 |**/**|&nbsp;|2 / 3|Division (also see the **[Mod](function-mod.md)** function) |
-|**^**|&nbsp;|2 ^ 3|Exponentiation|
+|**^**|&nbsp;|2 ^ 3|Exponentiation, equivalent to the **[Power](function-numericals.md)** function|
 |**%**|&nbsp;|20%|Percentage (equivalent to &quot;* 1/100&quot;)|
 |**=**|Comparison operators|Price = 100|Equal to|
 |**&gt;** |&nbsp;|Price &gt; 100|Greater than|
@@ -37,9 +37,9 @@
 |**&lt;=**|&nbsp;|Price &lt;= 100|Less than or equal to|
 |**&lt;&gt;** |&nbsp;|Price &lt;&gt; 100|Not equal to|
 |**&amp;**|String concatenation operator|&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;|Makes multiple strings appear continuous|
-|**&amp;&amp;**|Logical operators|Price &lt; 100 &amp;&amp; Slider1.Value = 20|Logical conjunction or **[And](function-logicals.md)** function|
-|**&#124;&#124;**|&nbsp;|Price &lt; 100 &#124;&#124; Slider1.Value = 20|Logical disjunction or **[Or](function-logicals.md)** function|
-|**!**|&nbsp;|!(Price &lt; 100)|Logical negation or **[Not](function-logicals.md)** function|
+|**&amp;&amp;**|Logical operators|Price &lt; 100 &amp;&amp; Slider1.Value = 20|Logical conjunction, equivalent to the **[And](function-logicals.md)** function|
+|**&#124;&#124;**|&nbsp;|Price &lt; 100 &#124;&#124; Slider1.Value = 20|Logical disjunction , equivalent to the **[Or](function-logicals.md)** function|
+|**!**|&nbsp;|!(Price &lt; 100)|Logical negation, equivalent to the **[Not](function-logicals.md)** function|
 |**exactin**|Membership operators|Gallery1.Selected exactin SavedItems|Belonging to a [collection](../working-with-data-sources.md#collections) or a table|
 |**exactin**|&nbsp;|&quot;Windows&quot; exactin “To display windows in the Windows operating system...”|Substring test (case-sensitive)|
 |**in**|&nbsp;|Gallery1.Selected in SavedItems|Belonging to a collection or a table|

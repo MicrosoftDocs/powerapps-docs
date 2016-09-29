@@ -192,7 +192,53 @@ Properties that return records:
 
 - **Selected** - Applies to galleries and list boxes. Returns the currently selected record.
 - **Updates** - Applies to galleries.  Pulls together all the changes that a user makes in a data-entry form.
-- **[Update](functions/function-update-updateif.md)** Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
+- **[Update](functions/function-update-updateif.md)** - Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
+
+## Record Scope ##
+
+Some functions operate by evaluating a formula across all the records of a table individually.  The formula's result is used in various ways:  
+
+- **Filter**, **Lookup** - Formula determines if the record should be included in the output.
+- **Sort** - Formula provides the value to sort on.
+- **ForAll** - Formula can return any value with a potential side effect.
+- **Concat** - Formula determines the string to concatenate together.
+- **Distinct**
+- **AddColumns** - Formula provides the value of the added field.
+- **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
+
+Inside these formulas, you will want to reference the fields of the record being processed.  To accommodate this, each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top level identifiers.  
+
+You can also reference control properties and other values from throughout your app.  Within the record scope, field names will override values of the same name from the app.  When this occurs, you can still access global values with the global disambiguation operator **[@*GlobalObjectName*]**.
+
+### Example ###
+
+For example, take a table of **Products**:
+
+![](media/working-with-tables/requested.png)
+
+To determine if any of any of these products had more requested than is available:
+
+**Filter( Products, 'Quantity Requested' > 'Quantity Available' )**
+
+The first argument to **Filter** is the table of records to operate on and the second argument is a formula.  **Filter** creates a record scope for evaluating this formula in which the fields of each record are avialalbe, in this case **Product**, **Quantity Requested**, and **Quantity Available**.  The result of the comparison determines if each record should be included in the result of the function:
+
+![](media/working-with-tables/needed.png)
+
+Adding to this example, we can calculate how much of each product to order:
+
+**AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' )**
+
+Here we are adding a calculated column to the result.  **AddColumns** has its own record scope that it uses to calculate the difference between what has been requested and what is available.
+
+![](media/working-with-tables/toorder.png)
+
+Finally, we can reduce the result table to just the columns that we desire:
+
+**ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
+
+![](media/working-with-tables/toorderonly.png)
+
+Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.  
 
 ## Inline syntax ##
 
