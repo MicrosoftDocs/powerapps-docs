@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/10/2016"
+   ms.date="09/28/2016"
    ms.author="anneta"/>
 
 # Common issues and resolutions #
@@ -25,7 +25,7 @@
 
 	If you're running release 2.0.500 or older, an error message appears when you try to create an app from a template. You must upgrade to be able to use this feature.
 
-	If you're running release 2.0.511 or later, an warning might appear when you try to create an app from a template. However, you can close the message and create the app.
+	If you're running release 2.0.510 or later, an warning might appear when you try to create an app from a template. However, you can close the message and create the app.
 
 1. **Scanning a barcode**
 
