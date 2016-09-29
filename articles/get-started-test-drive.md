@@ -25,7 +25,7 @@ Create an app automatically based on a template for specific scenario, and then 
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
-	**Note**: To use this feature, make sure that you're running release 2.0.511 or later. To identify your release, open the **File** menu (along the left edge), click or tap **Account**, and then look under **Product information**.
+	**Note**: To use this feature, make sure that you're running release 2.0.510 or later. To identify your release, open the **File** menu (along the left edge), click or tap **Account**, and then look under **Product information**.
 
 - A cloud-storage account such as DropBox, OneDrive, or Google Drive.
 
