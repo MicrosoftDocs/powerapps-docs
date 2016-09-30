@@ -199,16 +199,16 @@ Properties that return records:
 Some functions operate by evaluating a formula across all the records of a table individually.  The formula's result is used in various ways:  
 
 - **Filter**, **Lookup** - Formula determines if the record should be included in the output.
-- **Sort** - Formula provides the value to sort on.
-- **ForAll** - Formula can return any value with a potential side effect.
-- **Concat** - Formula determines the string to concatenate together.
-- **Distinct**
+- **Sort** - Formula provides the value to sort the records on.
+- **Concat** - Formula determines the strings to concatenate together.
+- **ForAll** - Formula can return any value, potentially with a side effect.
+- **Distinct** - Formula returns a value, used to identify duplicate records.  
 - **AddColumns** - Formula provides the value of the added field.
 - **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
 
-Inside these formulas, you will want to reference the fields of the record being processed.  To accommodate this, each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top level identifiers.  
+Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top level identifiers.  
 
-You can also reference control properties and other values from throughout your app.  Within the record scope, field names will override values of the same name from the app.  When this occurs, you can still access global values with the global disambiguation operator **[@*GlobalObjectName*]**.
+You can also reference control properties and other values from throughout your app.  Field names added with the record scope will override the same names from elsewhere in the app.  When this occurs, you can still access global values with the global disambiguation operator **[@*GlobalObjectName*]**.
 
 ### Example ###
 
