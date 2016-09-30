@@ -71,8 +71,9 @@ To create this data source as a collection, use this formula as the OnSelect pro
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **ForAll(&nbsp;Squares,&nbsp;Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** | For all the records of the input table, calculates the square root of the **Value** column.  The **Sqrt** function can also be used with a single column table, making it possible perform this example without using **ForAll**. | <style> img { max-width: none } </style> ![](media/function-forall/sqrt.png) | 
-| **ForAll(&nbsp;Squares,&nbsp;Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** | For all the records of the input table, raises the **Value** column to the third power.  The **Power** function does not support single column tables and therefore **ForAll** must be used in this case. | <style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
+| **ForAll(&nbsp;Squares, Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** | For all the records of the input table, calculates the square root of the **Value** column.  The **Sqrt** function can also be used with a single column table, making it possible perform this example without using **ForAll**. | <style> img { max-width: none } </style> ![](media/function-forall/sqrt.png) | 
+| **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** | For all the records of the input table, raises the **Value** column to the third power.  The **Power** function does not support single column tables and therefore **ForAll** must be used in this case. | <style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
+
 ### Using a Connection ###
 
 The following examples use the **Expressions** [data source](../working-with-data-sources.md):
@@ -97,6 +98,7 @@ Sometimes you need to filter, shape, sort and manipulate data.  PowerApps provid
 And sometime you will want to make a copy of this result for later use.  Or you will want to move information from one data source to another.  PowerApps provides the **Collect** function to copy data.
 
 But before you make that copy, think carefully if it is really needed.  Many situations can be addressed by filtering and shaping the underlying data source on demand with a formula. Some of the downsides to making a copy include:
+
 * Two copies of the same information means that one of them can fall out of sync.  
 * Making a copy can consume a lot of computer memory, network bandwidth, and/or time.  
 * For most data sources, copying cannot be delegated, limiting how much data can be moved.      
@@ -121,7 +123,7 @@ Don't make that copy!  We can use the following formula anywhere we need:
 
 - **ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
 
-A [record scope](../working-with-tables#record-scope) is created by the **Filter** and **AddColumns** functions to perform the comparison and subtraction operations, respectively, with the **'Quantity Requested'** and **'Quantity Available'** fields of each record. 
+A [record scope](../working-with-tables.md#record-scope) is created by the **Filter** and **AddColumns** functions to perform the comparison and subtraction operations, respectively, with the **'Quantity Requested'** and **'Quantity Available'** fields of each record. 
 
 In this example, the **Filter** function can be delegated.  This is important, as it can find all the products that meet the criteria, even if that is only a few records out of a table of millions.  At this time, **ShowColumns** and **AddColumns** cannot be delegated, so the actual number of products that needs to be ordered will be limited.  If you know the size of this result will always be relatively small, then this is fine.
 

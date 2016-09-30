@@ -194,7 +194,7 @@ Properties that return records:
 - **Updates** - Applies to galleries.  Pulls together all the changes that a user makes in a data-entry form.
 - **[Update](functions/function-update-updateif.md)** - Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
 
-## Record Scope ##
+## Record scope ##
 
 Some functions operate by evaluating a formula across all the records of a table individually.  The formula's result is used in various ways:  
 
