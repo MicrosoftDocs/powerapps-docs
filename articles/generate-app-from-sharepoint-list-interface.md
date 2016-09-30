@@ -42,7 +42,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
     ![](./media/generate-app-from-sharepoint-list-interface/enter-app-name.png)
 
-3. Select **Create** to launch the PowerApps Studio for Web in a new browser tab, which creates a default app automatically based on the list’s schema and data.  For details on how can you customize and test apps created from SharePoint lists, see the [Create an app from a SharePoint list tutorial](https://powerapps.microsoft.com/en-us/tutorials/app-from-sharepoint/).
+3. Select **Create** to launch the PowerApps Studio for Web in a new browser tab, which creates a default app automatically based on the list’s schema and data.  For details on how can you customize and test apps created from SharePoint lists, see the [Create an app from a SharePoint list tutorial](https://powerapps.microsoft.com/tutorials/app-from-sharepoint/).
 
     ![](./media/generate-app-from-sharepoint-list-interface/powerapp-studio-for-web.png)
 
