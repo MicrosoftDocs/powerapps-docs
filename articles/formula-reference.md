@@ -155,7 +155,7 @@ Other elements include:
 
 **[FirstN](functions/function-first-last.md)** – Returns the first set of records (N records) of a table.
 
-**[ForAll](functions/function-for.md)** – Calculated values and performs actions for all records of a table.
+**[ForAll](functions/function-forall.md)** – Calculated values and performs actions for all records of a table.
 
 ## G ##
 
