@@ -206,7 +206,7 @@ Some functions operate by evaluating a formula across all the records of a table
 - **AddColumns** - Formula provides the value of the added field.
 - **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
 
-Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top level identifiers.  You can also reference control properties and other values from throughout your app. 
+Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers.  You can also reference control properties and other values from throughout your app. 
 
 For example, take a table of **Products**:
 
@@ -216,7 +216,7 @@ To determine if any of any of these products had more requested than is availabl
 
 **Filter( Products, 'Quantity Requested' > 'Quantity Available' )**
 
-The first argument to **Filter** is the table of records to operate on and the second argument is a formula.  **Filter** creates a record scope for evaluating this formula in which the fields of each record are avialalbe, in this case **Product**, **Quantity Requested**, and **Quantity Available**.  The result of the comparison determines if each record should be included in the result of the function:
+The first argument to **Filter** is the table of records to operate on, and the second argument is a formula.  **Filter** creates a record scope for evaluating this formula in which the fields of each record are available, in this case **Product**, **Quantity Requested**, and **Quantity Available**.  The result of the comparison determines if each record should be included in the result of the function:
 
 ![](media/working-with-tables/needed.png)
 
@@ -309,4 +309,3 @@ You can create single-column tables by specifying values in square brackets. The
 For example, **[ 1, 2, 3, 4 ]** is equivalent to **Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )** and returns this table:
 
 ![](media/working-with-tables/inline-table.png)
-
