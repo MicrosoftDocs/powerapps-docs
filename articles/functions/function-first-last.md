@@ -36,13 +36,11 @@ The **LastN** function returns the last set of records of a table; the second ar
 
 ## Syntax ##
 
-**First**( *Table* )<br>
-**Last**( *Table* )
+**First**( *Table* )<br>**Last**( *Table* )
 
 - *Table* - Rquired. Table to operate on.
 
-**FirstN**( *Table* [, *NumberOfRecords* ] )<br>
-**LastN**( *Table* [, *NumberOfRecords* ] )
+**FirstN**( *Table* [, *NumberOfRecords* ] )<br>**LastN**( *Table* [, *NumberOfRecords* ] )
 
 - *Table* - Required. Table to operate on.
 - *NumberOfRecords* - Optional.  Number of records to return. If you don't specify this argument, the function returns one record.

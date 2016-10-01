@@ -70,13 +70,13 @@ For the following example, the current time is **3:59:37 PM** on **Thursday, Apr
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Year( Now() )** | Returns the year component of the current time and date. | 2015 |
-| **Month( Now() )** | Returns the month component of the current time and date. | 4 |
-| **Day( Now() )** | Returns the day component of the current time and date. | 9 |
-| **Hour( Now() )** | Returns the hour component of the current time and date. | 15 |
-| **Minute( Now() )** | Returns the minute component of the current time and date. | 59 |
-| **Second( Now() )** | Returns the minute component of the current time and date. | 37 |
-| **Weekday( Now() )** | Returns the weekday component of the current time and date, using the default start of the week as Sunday. | 5 |
-| **Weekday( Now(), 14 )** | Returns the weekday component of the current time and date, using an Excel code to specify the start of the week as Friday. | 1 |
+| **Year(&nbsp;Now()&nbsp;)** | Returns the year component of the current time and date. | 2015 |
+| **Month(&nbsp;Now()&nbsp;)** | Returns the month component of the current time and date. | 4 |
+| **Day(&nbsp;Now()&nbsp;)** | Returns the day component of the current time and date. | 9 |
+| **Hour(&nbsp;Now()&nbsp;)** | Returns the hour component of the current time and date. | 15 |
+| **Minute(&nbsp;Now()&nbsp;)** | Returns the minute component of the current time and date. | 59 |
+| **Second(&nbsp;Now()&nbsp;)** | Returns the minute component of the current time and date. | 37 |
+| **Weekday(&nbsp;Now()&nbsp;)** | Returns the weekday component of the current time and date, using the default start of the week as Sunday. | 5 |
+| **Weekday(&nbsp;Now(),&nbsp;14&nbsp;)** | Returns the weekday component of the current time and date, using an Excel code to specify the start of the week as Friday. | 1 |
 
 

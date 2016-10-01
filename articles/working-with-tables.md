@@ -206,11 +206,7 @@ Some functions operate by evaluating a formula across all the records of a table
 - **AddColumns** - Formula provides the value of the added field.
 - **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
 
-Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers.  
-
-You can also reference control properties and other values from throughout your app.  Field names added with the record scope will override the same names from elsewhere in the app.  When this occurs, you can still access global values with the global disambiguation operator **[@*GlobalObjectName*]**.
-
-### Example ###
+Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers.  You can also reference control properties and other values from throughout your app. 
 
 For example, take a table of **Products**:
 
@@ -239,6 +235,44 @@ Finally, we can reduce the result table to just the columns that we desire:
 ![](media/working-with-tables/toorderonly.png)
 
 Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.  
+
+### Disambiguation ###
+
+Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values with the [**@** disambiguation operator](operators.md):
+
+* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.
+* To access global values, such as data sources, collections, and context variables, use this pattern **[@*ObjectName*]**. 
+
+For example, imagine having a collection **X**:
+
+![](media/working-with-tables/X.png)
+
+You can create this collection with **ClearCollect( X, [1, 2] )**. 
+
+And another collection **Y**:
+
+![](media/working-with-tables/Y.png)
+
+You can create this collection with **ClearCollect( Y, ["A", "B"] )**.
+
+In addition, define a context variable named **Value** with this formula: **UpdateContext( {Value: "!"} )**
+
+Let's put it all together.  In this context, the following formula:
+
+* **Ungroup( ForAll( X, ForAll( Y, Y[@Value] & Text( X[@Value] ) & [@Value] ) ), "Value" )**
+
+produces this table: 
+
+![](media/working-with-tables/XY.png)
+
+What is going on here?  The outermost **ForAll** function defines a record scope for **X**, allowing access to the **Value** field of each record as it is processed.  It can be accessed by simply using the word **Value** or by using **X[@Value]**.
+
+The innermost **ForAll** function defines another record scope for **Y**.  Since this table also has a **Value** field defined, using **Value** here refers to the field in **Y**'s record and no longer the one from **X**.  Here, to access **X**'s **Value** field, we must use the longer version with the disambiguation operator.
+
+All the **ForAll** record scopes override the global scope.  The **Value** context variable we defined is not available by name without the disambiguation operator.   To access this value we must use **[@Value]**. 
+
+
+**Ungroup** flattens the result, since nested **ForAll** functions will result in a nested result table.
 
 ## Inline syntax ##
 

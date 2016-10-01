@@ -34,7 +34,7 @@ The **Refresh** function retrieves a fresh copy of a data source.  You'll see ch
 
 - *DataSource* – Required. The data source that you want to refresh.
 
-## Example##
+## Example ##
 
 In this example, you'll refresh the data source named **IceCream**, which starts with this data:
 
