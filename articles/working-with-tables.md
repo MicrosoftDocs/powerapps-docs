@@ -247,7 +247,7 @@ For example, imagine having a collection **X**:
 
 ![](media/working-with-tables/X.png)
 
-You can create this collection with **ClearCollect( X, [1, 2] )**. 
+You can create this collection with **ClearCollect( X, \[1, 2\] )**. 
 
 And another collection **Y**:
 
