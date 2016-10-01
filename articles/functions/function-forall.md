@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -20,7 +20,7 @@
 
 # ForAll function in PowerApps #
 
-Calculated values and performs actions for all [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
+Calculates values and performs actions for all [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description ##
 
@@ -127,7 +127,7 @@ A [record scope](../working-with-tables.md#record-scope) is created by the **Fil
 
 In this example, the **Filter** function can be delegated.  This is important, as it can find all the products that meet the criteria, even if that is only a few records out of a table of millions.  At this time, **ShowColumns** and **AddColumns** cannot be delegated, so the actual number of products that needs to be ordered will be limited.  If you know the size of this result will always be relatively small, then this is fine.
 
-Ans since we didn't make a copy, there is no additional copy of the information to manage or fall out of date.  
+And since we didn't make a copy, there is no additional copy of the information to manage or fall out of date.  
 
 #### ForAll on demand ####
 
