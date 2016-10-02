@@ -108,8 +108,9 @@ If an argument would result in an undefined value, the result is *blank*.  This 
 | **Acos(&nbsp;0.5&nbsp;)** | Returns the arccosine of 0.5, in radians. | 1.047197... |
 | **Acot(&nbsp;1&nbsp;)** | Returns the arccotangent of 1, in radians. | 0.785398... |
 | **Asin(&nbsp;1&nbsp;)** | Returns the arcsine of 1, in radians. | 1.570796... |
-| **Atan(&nbsp;1.732050&nbsp;)** | Returns the arctangent of 1.732050, in radians | 1.047197... |
-| **Atan2(&nbsp;5,&nbsp;3&nbsp;)** | Returns the arctangent of the angle from the *x*-axis of the line that contains the origin (0,0) and the coordinate (5,3). | 1.030376... |
+| **Atan(&nbsp;1.732050&nbsp;)** | Returns the arctangent of 1.732050, in radians. | 1.047197... |
+| **Atan2(&nbsp;5,&nbsp;3&nbsp;)** | Returns the arctangent of the angle from the *x*-axis of the line that contains the origin (0,0) and the coordinate (5,3), which is approximately 31 degrees. | 0.540419... |
+| **Atan2(&nbsp;4,&nbsp;4&nbsp;)** | Returns the arctangent of the angle from the *x*-axis of the line that contains the origin (0,0) and the coordinate (4,4), which is exactly &pi;/4 radians or 45 degrees. | 0.785398... |
 | **Degrees(&nbsp;1.047197&nbsp;)** | Returns the equivalent number of degrees for 1.047197 radians. | 60 |
 | **Pi()** | Returns the transcendental number &pi;. | 3.141592... |
 | **Radians(&nbsp;15&nbsp;)** | Returns the equivalent number of radians for 15 degrees. | 0.261799... |
