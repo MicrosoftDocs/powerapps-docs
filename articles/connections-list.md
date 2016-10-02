@@ -28,7 +28,7 @@ Ready to take it to the next level? Create [custom APIs](register-custom-api.md)
 ## Available connections ##
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 |---|---|---|---|
-|  | **appFigures** | ![](./media/connections-list/azureblob.png) | [**Azure Blob**](./connections/cloud-storage-blob-connections.md) |
+|  | **appFigures** | ![](./media/connections-list/azureblobSM.png) | [**Azure Blob**](./connections/cloud-storage-blob-connections.md) |
 | ![](./media/connections-list/box.png) | [**Box**](./connections/cloud-storage-blob-connections.md) |  | **Common Data Model** |
 | ![](./media/connections-list/dropbox.png) | [**Dropbox**](./connections/cloud-storage-blob-connections.md) | ![](./media/connections-list/dynamicscrm.png) | [**Dynamics CRM Online**](./connections/connection-dynamics-crmonline.md) |
 | ![](./media/connections-list/excel.png) | [**Excel**](./connections/connection-excel.md) | ![](./media/connections-list/facebook.png) | **Facebook** |
