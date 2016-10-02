@@ -28,16 +28,26 @@ Ready to take it to the next level? Create [custom APIs](register-custom-api.md)
 ## Available connections ##
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 |---|---|---|---|
-| ![](./media/connections-list/azureblob.png) | [**Azure Blob**](./connections/cloud-storage-blob-connections.md)<br>Manage data in an Excel file | ![](./media/connections-list/box.png) | [**Box**](./connections/cloud-storage-blob-connections.md)<br>Manage data in an Excel file |
-| ![](./media/connections-list/dropbox.png) | [**Dropbox**](./connections/cloud-storage-blob-connections.md)<br>Manage data in an Excel file | ![](./media/connections-list/dynamicscrm.png) | [**Dynamics CRM Online**](./connections/connection-dynamics-crmonline.md)<br>Do more with your data |
-| ![](./media/connections-list/excel.png) | [**Excel**](./connections/connection-excel.md)<br>Display data in a table, update the file, and more | ![](./media/connections-list/facebook.png) | **Facebook**<br>Post to a timeline, get a page feed, and more |
-| ![](./media/connections-list/ftp.png) | [**FTP**](./connections/connection-ftp.md)<br>Upload and get files among other tasks on an FTP/FTPS server | ![](./media/connections-list/github.png) | **GitHub**<br>Manage your issues |
-| ![](./media/connections-list/googledrive.png) | [**Google Drive**](./connections/cloud-storage-blob-connections.md)<br>Manage data in an Excel file | ![](./media/connections-list/mailchimp.png) | **MailChimp**<br>Create campaigns, manage your lists, and more |
-| ![](./media/connections-list/translator.png) | [**Microsoft Translator**](./connections/connection-microsoft-translator.md)<br>Translate text into different languages | ![](./media/connections-list/office365.png) | [**Office 365 Outlook**](./connections/connection-office365-outlook.md)<br>Send and receive emails |
-| ![](./media/connections-list/office365.png) | [**Office 365 Users**](./connections/connection-office365-users.md)<br>View profile information, get direct reports, and more | ![](./media/connections-list/onedrive.png) | [**OneDrive**](./connectionscloud-storage-blob-connections.md)<br>Manage data in an Excel file |
-| ![](./media/connections-list/onedriveforbusiness.png) | [**OneDrive for Business**](./connections/cloud-storage-blob-connections.md)<br>Manage data in an Excel file | ![](./media/connections-list/salesforce.png) | [**Salesforce**](./connections/connection-salesforce.md)<br>Manage accounts, leads, opportunities, and more |
-| ![](./media/connections-list/sendgrid.png) | **SendGrid**<br>Send email and manage recipient lists | ![](./media/connections-list/servicebus.png) | **Service Bus**<br>Send messages from Service Bus Queues and Topics and receive messages from Service Bus Queues and Subscriptions |
-| ![](./media/connections-list/sftp.png) | [**SFTP**](./connections/connection-sftp.md)<br>Upload, get, and delete files, among other tasks | ![](./media/connections-list/sharepoint.png) | [**SharePoint**](./connections/connection-sharepoint-online.md)<br>Manage list items |
-| ![](./media/connections-list/slack.png) | **Slack**<br>Post messages to Slack channels | ![](./media/connections-list/smtp.png) | **SMTP**<br>Send email with attachments |
-| ![](./media/connections-list/sql.png) | [**SQL Server**](./connections/connection-azure-sqldatabase.md)<br>Create and update data | ![](./media/connections-list/twilio.png) | **Twilio**<br>Send and get messages, get available numbers, and more |
-| ![](./media/connections-list/twitter.png) | [**Twitter**](./connections/connection-twitter.md)<br>Get timelines, post tweets, and more |  |  |
+|  | **appFigures** | ![](./media/connections-list/azureblob.png) | [**Azure Blob**](./connections/cloud-storage-blob-connections.md) |
+| ![](./media/connections-list/box.png) | [**Box**](./connections/cloud-storage-blob-connections.md) |  | **Common Data Model** |
+| ![](./media/connections-list/dropbox.png) | [**Dropbox**](./connections/cloud-storage-blob-connections.md) | ![](./media/connections-list/dynamicscrm.png) | [**Dynamics CRM Online**](./connections/connection-dynamics-crmonline.md) |
+| ![](./media/connections-list/excel.png) | [**Excel**](./connections/connection-excel.md) | ![](./media/connections-list/facebook.png) | **Facebook** |
+| ![](./media/connections-list/ftp.png) | [**FTP**](./connections/connection-ftp.md) | ![](./media/connections-list/github.png) | **GitHub** |
+|  | **Google Calendar** | ![](./media/connections-list/googledrive.png) | [**Google Drive**](./connections/cloud-storage-blob-connections.md) |
+|  | **Google Sheets** |  | **Google Tasks** |
+|  | **Instagram** |  | **Mail** |
+| ![](./media/connections-list/mailchimp.png) | **MailChimp** |  | **Mandrill** |
+| ![](./media/connections-list/translator.png) | [**Microsoft Translator**](./connections/connection-microsoft-translator.md) |  | **Office 365 Bookings** |
+| ![](./media/connections-list/office365.png) | [**Office 365 Outlook**](./connections/connection-office365-outlook.md) | ![](./media/connections-list/office365.png) | [**Office 365 Users**](./connections/connection-office365-users.md) |
+| ![](./media/connections-list/onedrive.png) | [**OneDrive**](./connectionscloud-storage-blob-connections.md) | ![](./media/connections-list/onedriveforbusiness.png) | [**OneDrive for Business**](./connections/cloud-storage-blob-connections.md) |
+|  | **Outlook.com** |  | **Project Online** |
+|  | **Push notification** |  | **RSS** |
+| ![](./media/connections-list/salesforce.png) | [**Salesforce**](./connections/connection-salesforce.md) | ![](./media/connections-list/sendgrid.png) | **SendGrid** |
+| ![](./media/connections-list/servicebus.png) | **Service Bus** | ![](./media/connections-list/sftp.png) | [**SFTP**](./connections/connection-sftp.md) |
+| ![](./media/connections-list/sharepoint.png) | [**SharePoint**](./connections/connection-sharepoint-online.md) | ![](./media/connections-list/slack.png) | **Slack** |
+|  | **SmartSheet** | ![](./media/connections-list/smtp.png) | **SMTP** |
+|  | **SparkPost** | ![](./media/connections-list/sql.png) | [**SQL Server**](./connections/connection-azure-sqldatabase.md) |
+|  | **Todoist** |  | **Trello** |
+| ![](./media/connections-list/twilio.png) | **Twilio** | ![](./media/connections-list/twitter.png) | [**Twitter**](./connections/connection-twitter.md) |
+|  | **Visual Studio Team Services** |  | **Wunderlist** |
+|  | **Yammer** |  | **YouTube** |
