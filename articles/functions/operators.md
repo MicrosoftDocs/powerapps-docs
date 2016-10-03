@@ -47,8 +47,8 @@
 |**@**|[Disambiguation operator](#disambiguation-operator)|MyTable[@fieldname]|Field disambiguation|
 |**@**|&nbsp;|[@MyVariable]|Global disambiguation|
 |**;**|Formula chaining|Collect(T, A); Navigate(S1, &quot;&quot;)|Separate invocations of functions in behavior properties|
-|**Parent**|[Parent operator](#parent-operator)|Parent.Fill|Parent operator, access to properties of a control container|
-|**ThisItem**|[ThisItem operator](#thisitem-operator)|ThisItem.FirstName|ThisItem operator, access to fields of a Gallery or form control|
+|**Parent**|[Parent operator](#parent-operator)|Parent.Fill|Access to properties of a control container|
+|**ThisItem**|[ThisItem operator](#thisitem-operator)|ThisItem.FirstName|Access to fields of a Gallery or form control|
 
 ## in and exactin operators ##
 
