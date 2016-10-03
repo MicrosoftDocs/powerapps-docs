@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/29/2016"
+   ms.date="10/03/2016"
    ms.author="ricksal"/>
 
 # Generate an app from the SharePoint Online list interface#
