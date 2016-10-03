@@ -40,13 +40,15 @@
 |**&amp;&amp;**|Logical operators|Price &lt; 100 &amp;&amp; Slider1.Value = 20|Logical conjunction, equivalent to the **[And](function-logicals.md)** function|
 |**&#124;&#124;**|&nbsp;|Price &lt; 100 &#124;&#124; Slider1.Value = 20|Logical disjunction , equivalent to the **[Or](function-logicals.md)** function|
 |**!**|&nbsp;|!(Price &lt; 100)|Logical negation, equivalent to the **[Not](function-logicals.md)** function|
-|**exactin**|Membership operators|Gallery1.Selected exactin SavedItems|Belonging to a [collection](../working-with-data-sources.md#collections) or a table|
+|**exactin**|[Membership operators](#in-and-exactin-operators)|Gallery1.Selected exactin SavedItems|Belonging to a [collection](../working-with-data-sources.md#collections) or a table|
 |**exactin**|&nbsp;|&quot;Windows&quot; exactin “To display windows in the Windows operating system...”|Substring test (case-sensitive)|
 |**in**|&nbsp;|Gallery1.Selected in SavedItems|Belonging to a collection or a table|
 |**in**|&nbsp;|&quot;The&quot; in &quot;The keyboard and the monitor...&quot;|Substring test (case-insensitive)|
-|**@**|Disambiguation operator|MyTable[@fieldname]|Field disambiguation|
-|&nbsp;|&nbsp;|[@MyTable]|Global disambiguation|
+|**@**|[Disambiguation operator](#disambiguation-operator)|MyTable[@fieldname]|Field disambiguation|
+|**@**|&nbsp;|[@MyVariable]|Global disambiguation|
 |**;**|Formula chaining|Collect(T, A); Navigate(S1, &quot;&quot;)|Separate invocations of functions in behavior properties|
+|**Parent**|[Parent operator](#parent-operator)|Parent.Fill|Parent operator, access to properties of a control container|
+|**ThisItem**|[ThisItem operator](#thisitem-operator)|ThisItem.FirstName|ThisItem operator, access to fields of a Gallery or form control|
 
 ## in and exactin operators ##
 
@@ -73,8 +75,18 @@ You use the **[ThisItem](operators.md#thisitem-operator)** operator to specify t
 For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
 ## Parent operator ##
+
 Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
 
 Any control in PowerApps can be referenced by name from anywhere within the app. **Screen1** may be the name of a screen in your app. To retrieve the background color of this screen, you can use **Screen1.Fill**.
 
 Controls on this screen have another option. They can use a relative reference: **Parent.Fill**. The **[Parent](operators.md#parent-operator)** operator refers to the control that hosts this control, making available all of its properties. Using **[Parent](operators.md#parent-operator)** is helpful because it doesn't depend on the name of the control. You can copy and paste a container control without needing to adjust any references within the container. This operator also makes the relationship between child and parent controls clearer when reading formulas.
+
+## Disambiguation operator ##
+
+Some functions create [record scopes](../working-with-tables.md#record-scope) for accessing the fields of table while processing each record, such as **Filter**, **AddColumns**, and **Sum**.  Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the **@** disambiguation operator:
+
+* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.  
+* To access global values, such as data sources, collections, and context variables, use the pattern **[@*ObjectName*]** (without a table designation).
+
+For more information and examples, see the discussion on [record scopes](../working-with-tables.md#record-scope).
