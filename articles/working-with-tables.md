@@ -238,10 +238,12 @@ Note that in the above, we used double quotes (") in some places and single quot
 
 ### Disambiguation ###
 
-Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values with the [**@** disambiguation operator](operators.md):
+Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](operators.md) operator:
 
-* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.
-* To access global values, such as data sources, collections, and context variables, use this pattern **[@*ObjectName*]**. 
+* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.  
+* To access global values, such as data sources, collections, and context variables, use the pattern **[@*ObjectName*]** (without a table designation).
+
+If the table being operated upon is an expression, such as **Filter( *table*, ... )**, then the disambiguation operator cannot be used.  Only the innermost record scope can access fields from this table expression, by not using the disambiguation operator.
 
 For example, imagine having a collection **X**:
 
@@ -269,8 +271,11 @@ What is going on here?  The outermost **ForAll** function defines a record scope
 
 The innermost **ForAll** function defines another record scope for **Y**.  Since this table also has a **Value** field defined, using **Value** here refers to the field in **Y**'s record and no longer the one from **X**.  Here, to access **X**'s **Value** field, we must use the longer version with the disambiguation operator.
 
-All the **ForAll** record scopes override the global scope.  The **Value** context variable we defined is not available by name without the disambiguation operator.   To access this value we must use **[@Value]**. 
+Since **Y** is the innermost record scope, accessing fields of this table do not require disambiguation, allowing us to use this formula with the same result:
 
+* **Ungroup( ForAll( X, ForAll( Y, Value & Text( X[@Value] ) & [@Value] ) ), "Value" )**
+
+All the **ForAll** record scopes override the global scope.  The **Value** context variable we defined is not available by name without the disambiguation operator.   To access this value we must use **[@Value]**. 
 
 **Ungroup** flattens the result, since nested **ForAll** functions will result in a nested result table.
 
