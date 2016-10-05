@@ -18,7 +18,7 @@
    ms.date="10/05/2016"
    ms.author="ricksal"/>
 
-# Generate an app from the SharePoint Online list interface#
+# Generate an app from the SharePoint Online list interface
 
 In a SharePoint Online list, generate a three-screen app that manages the list.
 
@@ -46,15 +46,18 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
     ![](./media/generate-app-from-sharepoint-list-interface/powerapp-studio-for-web.png)
 
-5. Selecting **Open** from the app’s list view will launch the app in a new tab in the browser.
+5. Preview the app by pressing the small triangle in the tool bar, or F5. The app is launched in a new tab in the browser.
+
+  ![](./media/generate-app-from-sharepoint-list-interface/open-app.png)
+
+6. Select **Open** from the original tab to launch the app.
 
     ![](./media/generate-app-from-sharepoint-list-interface/open-app-in-browser.png)
 
 6. Press Ctrl-S to save the generated app.
 
-    ![](./media/generate-app-from-sharepoint-list-interface/open-app.png)
 
-## Next steps ##
+## Next steps
 
 - To customize the browse screen (which appears by default), see [Customize a layout](customize-layout-sharepoint.md).
 - To customize the details or edit screens, see [Customize a form](customize-forms-sharepoint.md).
