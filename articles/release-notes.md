@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="aftowen"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 <tags
@@ -14,13 +14,34 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="09/19/2016"
+    ms.date="10/05/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.510-2.0.512 #
-Because of administrative details, different platforms show different build numbers, but 2.0.510, 2.0.511, and 2.0.512 were released at effectively the same time.
-
+# What's new in PowerApps release 2.0.530 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+1. **Available in eight languages plus English**.
+
+1. **Select and rename controls more easily**.
+
+1. **Find options on the toolbar more easily**.
+
+1. **Show the Advanced view of control properties more easily**.
+
+1. **Refresh data in generated apps more easily**.
+
+1. **Show two display fields in lookup controls**.
+
+1. **Update multiple records at once by using the Patch function**.
+
+1. **Perform calculations and actions on a set of records by using the ForAll function**.
+
+1. **Calculate exponential values by using the Power function**.
+
+1. **Improved mechanism for providing feedback**.
+
+## Release 2.0.510-2.0.512 ##
+Because of administrative details, different platforms show different build numbers, but 2.0.510, 2.0.511, and 2.0.512 were released at effectively the same time.
 
 1. **Open apps in iOS 10**.
 
