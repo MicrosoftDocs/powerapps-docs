@@ -34,7 +34,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
 1. Open your SharePoint Online list.
 
-2. Select **Power Apps** and then **Create an app** to open a panel in SharePoint that allows you to enter a name for your app and start the app creation process.
+2. Select **PowerApps** and then **Create an app** to open a panel in SharePoint that allows you to enter a name for your app and start the app creation process.
 
     ![](./media/generate-app-from-sharepoint-list-interface/generate-new-app.png)
 
