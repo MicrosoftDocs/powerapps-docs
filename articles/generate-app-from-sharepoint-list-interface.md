@@ -44,8 +44,6 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
 4. Your app is generated, and appears in a PowerApps Studio browser tab.
 
-5. (Optional) You can further customize your app in this tab. You can preview changes you make to the app by pressing the small triangle in the tool bar, or F5. The app is launched in a new tab in the browser.
-
     ![](./media/generate-app-from-sharepoint-list-interface/powerapp-studio-for-web.png)  
 
 6. Select **Open** from the original SharePoint tab to launch the app in a separate browser tab.
