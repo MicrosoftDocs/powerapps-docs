@@ -1,6 +1,6 @@
 <properties
-    pageTitle="How to sign up for PowerApps | Microsoft PowerApps"
-    description="Follow these steps in order to signup for PowerApps."
+    pageTitle="All about pricing, billing, and SKUs | Microsoft PowerApps"
+    description="All about pricing, billing, and SKUs."
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -16,9 +16,9 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="010/07/2016"
-    ms.author="ricksal;jamesol"/>
+    ms.author="ricksal"/>
 
-# Sign up for PowerApps #
+# All about pricing, billing, and SKUs #
 This article shows you how to sign up for a PowerApps account. For administration information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
 ## TBD: UPDATE with new content
