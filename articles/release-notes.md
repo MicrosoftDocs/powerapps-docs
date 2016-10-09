@@ -50,6 +50,10 @@ For information about known limitations in this release, see [Common issues and 
 
 	The **[Power](function-numericals.md)** function returns a number raised to a power. This function is equivalent to the [^ operator](operators.md).
 
+1. **Better sorting and filtering across sessions and devices**.
+
+	If you sort or filter your list of apps on a mobile device, that setting is retained even if you close PowerApps. If you sort your list of apps by when you opened them most recently, the sort order is accurate even if you opened an app on a different device.
+
 1. **Improved mechanism for providing feedback**.
 
 	Instead of clicking or tapping the smile icon near the upper-right corner, create a ticket by clicking or tapping **Contact** on [our support page](https://powerapps.microsoft.com/support/) and then providing information about your question. You can also check the status of tickets that you've filed.
