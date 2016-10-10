@@ -15,16 +15,15 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/28/2016"
+   ms.date="10/10/2016"
    ms.author="anneta"/>
 
 # Common issues and resolutions #
 
 ## Recently added/changed ##
-1. **Using localized versions**.
+1. **Using a localized version**.
 
- 	- In the French version of PowerApps Studio for web, separators appear as commas instead of semi-colons.
- 	- If you're running release 2.0.531 on Windows 8.1, you can't type more than one character in a **Text input** control if the device is set to a language that requires an IME window.
+	If you're running release 2.0.531 on Windows 8.1, you can't type more than one character in a **Text input** control if the device is set to a language that requires an IME window.
 
 1. **Opening an app from a template**.
 
