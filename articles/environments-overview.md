@@ -15,50 +15,82 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/07/2016"
+   ms.date="10/10/2016"
    ms.author="ricksal"/>
 
 # Environments Overview
-Welcome! In PowerApps, you can generate an app automatically, customize it, create an app from scratch, and share and run apps that you create or that others create and share with you.
+Environments are a new concept in PowerApps. Put simply, anything within an environment, lives and dies within that environment.
 
-> [AZURE.NOTE] If you've automatically generated an app from a SharePoint list, you can [customize the app](customize-layout-sharepoint.md) to better suit your needs.
+## Environment scope
+An environment is bound to a geographic location, like the U.S. When you create a flow in an environment, that flow is routed to all datacenters in that geographic location (like the U.S.). If you delete the environment, then all flows within that environment are also deleted. This applies to any items you create in that environment, including connections, gateways, PowerApps, and more.
 
-## Generate an app automatically ##
-To generate an app automatically, you just need to specify a data source, as this video demonstrates in under five minutes.
+Let's say you want to create a flow that inserts data somewhere. Your options are:
 
-[AZURE.VIDEO nb:cid:UUID:9380084d-bc9a-484f-960e-4554c6bf67b2]
+•	Insert data into an Excel file, and store the Excel file in a cloud storage account, such as OneDrive.
 
-The video is based on an Excel workbook in the cloud, but you can also generate apps from other types of data sources, such as these:
+•	Create your own SQL Database, and store your data in it.
 
-- the [Microsoft Common Data Model](data-platform-intro.md)
-- a custom SharePoint list
-- a SQL Server database
-- Salesforce
-- Dynamics CRM
+•	Use Common Data Model to store your data.
 
-For step-by-step instructions, see [Create an app to manage data in SharePoint](app-from-sharepoint.md). Even though the topic is designed for SharePoint, the same principles apply to other types of data sources.
+Every environment can have zero or one Common Data Model, which is basically storage for your flows. Access to a Common Data Model depends on the license you purchase; it is not included with the Free license.
 
-## Customize an app ##
-If the generated app doesn't meet your needs by default, you can [customize it](customize-card.md). You might, for example, want to show data in a different kind of UI element (known as a control).
+## The default environment
+The Default environment is available for every user, and is shared by all users. This environment has a U.S. tenant, and a non-U.S. tenant. Now that Flow is in general availability (GA), the following table lists what U.S. users and non-U.S. users can expect:
 
-For ideas about how to improve your app further, you can [open a sample app](open-and-run-a-sample-app.md) to get a sense of what you can invent with some creativity and a bit of experience.
+User | What happens |
 
-![Sample apps](./media/getting-started/portal-home.png)
+Preview user in U.S. | Automatically uses the default environment
+Preview user not in U.S. | Choose to use an environment; or use the legacy experience, which is no environment. With the legacy experience, existing flows can be updated, but new flows cannot be created.
+New user in the U.S. | Automatically uses the default environment
+New user not in the U.S. | Automatically uses the default environment
 
-You can also [build an app from a template](get-started-test-drive.md). Each template is based on fictitious data in a cloud account, such as Dropbox, OneDrive, or Google Drive. Explore specific screens and controls to understand how they're configured, and experiment with customization to discover techniques that you can apply to your own apps.
+A *Preview user* is someone who was using Microsoft Flow before it's release to General Availability (GA).
 
-## Create an app from scratch
-After you've generated an app or two automatically and gained some experience with customization, you can [create an app from scratch](get-started-create-from-blank.md). By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of [data sources](connections-list.md).
+## Create an environments
+1.	In the Flow admin center, select Environments. Any existing environments are displayed.
+2.	Select Add environment. Enter the following info:
 
-For detailed explanations of some concepts you'll need, see these topics:
+	Property | Description
+	Name | Enter the name of your environment, such as Dev/Test, or Sandbox.
+	Location | Choose the location to host your environment. We recommend using a location closest to your users. For example, if your Flow app users are in London, then choose a Europe location. If your Flow app users are in New York, then choose a U.S. location.
 
-- [formulas](formula-reference.md)
-- [galleries and forms](working-with-forms.md)
-- [tables and records](working-with-tables.md)
-- [controls and their properties](reference-properties.md)
+	Create database automatically | Check this setting to create the Common Data Model. The Common Data Model is available with some licenses. So if you don't see this property, then it's not included with your license.
 
-## Share and run an app ##
-When you finish your app, you can [share](share-app.md) it with others in your organization, and run either your own apps or shared apps in a [browser](run-app-browser.md) or on a [mobile device](run-app-client.md).
+3.	Select Create. Your new environment is listed.
 
-## Questions? Ideas? We're here to help ##
-We're excited to see what you can do with PowerApps, and we want to make sure that you have a great experience. Check out the detailed tutorials on this site for more help, and [join our community](https://aka.ms/powerapps-community) to ask questions and share your ideas. [Contact support](https://aka.ms/pasupport) if you run into any issues.
+## Manage your environments
+1.	In the Flow admin center, select Environments.
+2.	Select an environment to open its properties. The General properties show more details, including who "owns" each environment, its geographic location, and when it was created. You can also upgrade your plan in these properties.
+3.	In the Access properties, Admin and Maker are listed. Use these properties to give users Admin privileges, or Maker privileges to the environment.
+
+	Task | Maker | Admin
+
+	Create Flows | ✔ | ✔
+
+	Delete Flows | ✔ | ✔
+
+	And so on...
+
+
+4. In Resources, all the items within the environment are listed, including Flows, Connections, Custom APIs, Gateways, and PowerApps.
+
+## Frequently asked questions
+Can I migrate a Flow in my U.S. environment, to a Europe environment?
+
+No, flows cannot be moved between environments. Currently, recreate the flow in the new environment.
+
+Which license includes Common Data Model?
+
+Office 365 Business Premium (Plan P2)
+
+Can the Common Data Model be used outside of an environment?
+
+No. Common Data Model requires an environment.
+
+What regions include Microsoft Flow?
+
+Microsoft Flow supports all the same regions that Office 365 supports. Microsoft does not publicly advertise all datacenters, but the Office 365 datacenter map provides more information.
+
+How do I create my own custom environment?
+
+Office 365 Business (Plan P1) and Office 365 Business Premium (Plan P2) license users can create their own environments, in addition to the default environment. Other Office 365 licenses, such as Free, cannot create their own environments
