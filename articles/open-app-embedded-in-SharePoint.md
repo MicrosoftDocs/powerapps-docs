@@ -29,9 +29,9 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 ## Open the app
 
-1. **Open** your SharePoint Online list.
+1. **Open** your SharePoint Online list and select an app from the list.
 
-  ![](./media/open-app-embedded-in-sharepoint/select-app.png)
+  ![](./media/open-app-embedded-in-sharepoint/view-list.png)
 
 2. Click or tap **Open**.
 
