@@ -23,7 +23,7 @@
 ## Recently added/changed ##
 1. **Using a localized version**.
 
-	If you're running release 2.0.531 on Windows 8.1, you can't type more than one character in a **Text input** control if the device is set to a language that requires an IME window.
+	If you're running release 2.0.531 on Windows 8.1, you can't type in a **Text input** control if the device is set to a language that requires an IME window.
 
 1. **Opening an app from a template**.
 
