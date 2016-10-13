@@ -15,18 +15,23 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/28/2016"
+   ms.date="10/10/2016"
    ms.author="anneta"/>
 
 # Common issues and resolutions #
 
 ## Recently added/changed ##
+1. **Using a localized version**.
+
+	If you're running release 2.0.531 on Windows 8.1, you can't type in a **Text input** control if the device is set to a language that requires an IME window.
+
 1. **Opening an app from a template**.
 
 	If you're running release 2.0.500 or older, an error message appears when you try to create an app from a template. You must upgrade to be able to use this feature.
 
 	If you're running release 2.0.510 or later, an warning might appear when you try to create an app from a template. However, you can close the message and create the app.
 
+## Older ##
 1. **Scanning a barcode**
 
 	For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
@@ -39,7 +44,6 @@
 
 	If you change the record-title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the record-title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](data-platform-entity-lookup.md).
 
-## Older ##
 1. **Apps that connect to on-premises SharePoint**
 
 	If you share an app that relies on connections that aren’t automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they click or tap **Sign in**. To close the dialog box, click or tap the close (X) icon in the upper-right corner. The dialog box doesn’t appear if you open the app in PowerApps Studio or PowerApps Mobile. For more information about shared connections, see [Share app resources](share-app-resources.md).

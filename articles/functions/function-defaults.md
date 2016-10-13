@@ -42,4 +42,4 @@ You can combine the **Defaults** function with the **[Patch](function-patch.md)*
 
 | Formula                                 | Description                                                                                                                                           | Result              |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
-| **Defaults( Scores )** | Returns the default values for the **Scores** data source. | **{ Score: 0 }** |
+| **Defaults(&nbsp;Scores&nbsp;)** | Returns the default values for the **Scores** data source. | **{ Score: 0 }** |

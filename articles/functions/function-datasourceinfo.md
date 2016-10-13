@@ -64,9 +64,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
 
 - *DataSource* – Required. The data source to use.
-
 - *Information* – Required.  The type of information that you want to retrieve.
-
 - *ColumnName* – Optional.  For column-level information, the column name as a string.  Column **Phone** would be passed as **"Phone"**, including the double quotes.  For information at the data-source level, the *ColumnName* argument can't be used.
 
 ## Examples ##

@@ -24,7 +24,9 @@ Summarizes [records](../working-with-tables.md#records) of a [table](../working-
 
 ## Description ##
 
-The **Distinct** function evaluates a formula across each record of a table. [Columns](../working-with-tables.md#columns) of the table can be used in the formula.  **Distinct** returns a one-column table that contains the results, with duplicate values removed.  
+The **Distinct** function evaluates a formula across each record of a table. **Distinct** returns a one-column table that contains the results, with duplicate values removed.  
+
+[AZURE.INCLUDE [record-scope](../../includes/record-scope.md)] 
 
 ## Syntax ##
 
