@@ -5,14 +5,14 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="RickSaling"
-	manager="erikre"
+	manager="aneeta"
 	editor=""
 	tags=""/>
 
 <tags
    ms.service="powerapps"
    ms.devlang="na"
-   ms.topic="hero-article"
+   ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/10/2016"

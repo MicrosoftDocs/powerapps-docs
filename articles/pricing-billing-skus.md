@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="jamesol-msft"
-    manager="erikre"
+    manager="aneeta"
     editor=""
     tags=""
  />
@@ -16,7 +16,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="010/07/2016"
-    ms.author="ricksal"/>
+    ms.author="ricksal;ricksal"/>
 
 # All about pricing, billing, and SKUs #
 This article shows you how to sign up for a PowerApps account. For administration information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
