@@ -15,7 +15,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="010/07/2016"
+    ms.date="10/07/2016"
     ms.author="ricksal;jamesol"/>
 
 # Sign up for PowerApps #

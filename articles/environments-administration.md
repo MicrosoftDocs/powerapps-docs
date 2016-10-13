@@ -12,7 +12,7 @@
 <tags
    ms.service="powerapps"
    ms.devlang="na"
-   ms.topic="topic"
+   ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/07/2016"
