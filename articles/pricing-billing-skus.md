@@ -15,8 +15,8 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="010/07/2016"
-    ms.author="ricksal;ricksal"/>
+    ms.date="10/07/2016"
+    ms.author="ricksal"/>
 
 # All about pricing, billing, and SKUs #
 This article shows you how to sign up for a PowerApps account. For administration information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
