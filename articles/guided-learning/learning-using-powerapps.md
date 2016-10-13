@@ -34,7 +34,7 @@ Each sample app is designed for a specific purpose, such as managing a budget, i
 
 ![PowerApps flooring sample app](./media/learning-using-powerapps/powerapps-flooring-sample.png)
 
-If your team has started using PowerApps, people might have **shared apps with you** already. When people share apps with you, they show up in AppSource and also in Dynamics 365 if you choose to include them there.
+If your team has started using PowerApps, people might have **apps shared with you** already. When people share apps with you, they show up in AppSource and also in Dynamics 365 if you choose to include them there.
 
 ![PowerApps sharing](./media/learning-using-powerapps/powerapps-sharing.png)
 

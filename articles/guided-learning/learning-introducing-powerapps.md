@@ -32,7 +32,7 @@ If you're a  **beginner**  with PowerApps this course gets you going, and if you
 
 **PowerApps** is a collection of software services, apps, and data connectors that work together to fundamentally transform and accelerate how you build and share custom line of business applications.
 
-![PowerApps animated introduction](./media/learning-introducing-powerapps/powerapps-intro.png)
+![PowerApps animated introduction](./media/learning-introducing-powerapps/powerapps-intro.gif)
 
 PowerApps connects to the **cloud services and data sources** you're already using, giving you the ability to **quickly build apps** that suit specific needs—without writing code or struggling with integration issues. Apps can be shared instantly with your co-workers across web, tablets, and mobile devices. PowerApps also integrates with **Microsoft Flow** , making it possible to trigger workflows from within apps. Power Apps can be **simple and fast** – capable of producing an app in minutes that pulls in data from Excel or a cloud service. But PowerApps is also robust and **enterprise-grade** , ready for complex requirements like tracking assets across a corporation and tying into your backend systems.
 

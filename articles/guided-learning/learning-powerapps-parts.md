@@ -62,9 +62,9 @@ There are many **data sources** that you might care about, and PowerApps uses **
 
 ## [business data platform]
 
-The [business data platform] makes it easy to integrate business data from multiple sources. The [platform] features a **common data model** that includes many **entities** common to apps and business processes: entities like stores, customers, and sales. The platform stores the data in a scalable and reliable way, and makes the data available in a way that multiple applications can use it. The applications can be apps that you build in PowerApps, other Microsoft applications, or third party applications. The image below shows a portion of the **Customer** entity in web.powerapps.com.
+The [business data platform] makes it easy to integrate business data from multiple sources. The [platform] features a **common data model** that includes many **entities** common to apps and business processes: entities like stores, customers, and sales. The platform stores the data in a scalable and reliable way, and makes the data available in a way that multiple applications can use it. The applications can be apps that you build in PowerApps, other Microsoft applications, or third party applications. The image below shows a portion of the **Contact** entity in web.powerapps.com.
 
-![PowerApps custom entity](./media/learning-powerapps-parts/powerapps-customer.png)
+![PowerApps custom entity](./media/learning-powerapps-parts/powerapps-contact.png)
 
 ## PowerApps Mobile
 
