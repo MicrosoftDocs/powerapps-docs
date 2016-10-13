@@ -15,11 +15,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/10/2016"
+   ms.date="10/13/2016"
    ms.author="ricksal"/>
 
 # Environments Overview
-Environments are a new concept in PowerApps. Put simply, anything within an environment, lives and dies within that environment.
+Environments are a new concept in PowerApps. Put simply, anything within an environment, lives and dies within that environment. They serve as containers to separate apps that may have different roles (Test, Production), security requirements, target audiences, or whatever category you wishto specify.
 
 ## Environment scope
 An environment is bound to a geographic location, like the U.S. When you create a flow in an environment, that flow is routed to all datacenters in that geographic location (like the U.S.). If you delete the environment, then all flows within that environment are also deleted. This applies to any items you create in that environment, including connections, gateways, PowerApps, and more.
@@ -34,63 +34,58 @@ Let's say you want to create a flow that inserts data somewhere. Your options ar
 
 Every environment can have zero or one Common Data Model, which is basically storage for your flows. Access to a Common Data Model depends on the license you purchase; it is not included with the Free license.
 
+## Choosing an environment
+
+Your current environment is specified in the environment picker in the top bar on the right. To choose a different environment, press or click the picker, and a list of available environments appears. Click or press the one you wish to enter.
+
+![](./media/environments-overview/choose-environment.png)
+
 ## The default environment
-The Default environment is available for every user, and is shared by all users. This environment has a U.S. tenant, and a non-U.S. tenant. Now that Flow is in general availability (GA), the following table lists what U.S. users and non-U.S. users can expect:
+
+The Default environment is available for every user, and is shared by all users. This environment has a U.S. tenant, and a non-U.S. tenant.
+
+Now that Flow is in general availability (GA), the following table lists what U.S. users and non-U.S. users can expect:
 
 User | What happens |
 
 Preview user in U.S. | Automatically uses the default environment
+
 Preview user not in U.S. | Choose to use an environment; or use the legacy experience, which is no environment. With the legacy experience, existing flows can be updated, but new flows cannot be created.
+
 New user in the U.S. | Automatically uses the default environment
+
 New user not in the U.S. | Automatically uses the default environment
 
 A *Preview user* is someone who was using Microsoft Flow before it's release to General Availability (GA).
 
-## Create an environments
-1.	In the Flow admin center, select Environments. Any existing environments are displayed.
-2.	Select Add environment. Enter the following info:
-
-	Property | Description
-	Name | Enter the name of your environment, such as Dev/Test, or Sandbox.
-	Location | Choose the location to host your environment. We recommend using a location closest to your users. For example, if your Flow app users are in London, then choose a Europe location. If your Flow app users are in New York, then choose a U.S. location.
-
-	Create database automatically | Check this setting to create the Common Data Model. The Common Data Model is available with some licenses. So if you don't see this property, then it's not included with your license.
-
-3.	Select Create. Your new environment is listed.
-
-## Manage your environments
-1.	In the Flow admin center, select Environments.
-2.	Select an environment to open its properties. The General properties show more details, including who "owns" each environment, its geographic location, and when it was created. You can also upgrade your plan in these properties.
-3.	In the Access properties, Admin and Maker are listed. Use these properties to give users Admin privileges, or Maker privileges to the environment.
-
-	Task | Maker | Admin
-
-	Create Flows | ✔ | ✔
-
-	Delete Flows | ✔ | ✔
-
-	And so on...
 
 
-4. In Resources, all the items within the environment are listed, including Flows, Connections, Custom APIs, Gateways, and PowerApps.
+## Creating an environment
 
-## Frequently asked questions
-Can I migrate a Flow in my U.S. environment, to a Europe environment?
+### Who can create environments
 
-No, flows cannot be moved between environments. Currently, recreate the flow in the new environment.
+Your license determines whether you can create environments.
 
-Which license includes Common Data Model?
+These licenses allow environment creation:
 
-Office 365 Business Premium (Plan P2)
+* PowerApps P2
+* PowerApps P2 Trial
+* Dynamics 365 Plans
 
-Can the Common Data Model be used outside of an environment?
+These licenses do not allow environment creation:
 
-No. Common Data Model requires an environment.
+* Seeded Office 365 Plans
+* Dynamics 365 Apps and Teams Plans
 
-What regions include Microsoft Flow?
+There is a limit of 5 environments that can be created per user.
 
-Microsoft Flow supports all the same regions that Office 365 supports. Microsoft does not publicly advertise all datacenters, but the Office 365 datacenter map provides more information.
+At present you cannot delete an environment.
 
-How do I create my own custom environment?
+### What tools can create environments?
 
-Office 365 Business (Plan P1) and Office 365 Business Premium (Plan P2) license users can create their own environments, in addition to the default environment. Other Office 365 licenses, such as Free, cannot create their own environments
+You can create environments from the following tools:
+
+* Power Apps Admin portal
+* In-line from the PowerApps portal
+
+You cannot create environments from the Studio, WebAuth, or Client experiences.
