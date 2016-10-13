@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="jamesol-msft"
-    manager="aneeta"
+    manager="anneta"
     editor=""
     tags=""
  />
