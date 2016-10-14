@@ -19,9 +19,6 @@
    ms.author="ricksal"/>
 
 # Open app from a SharePoint Online list
-In a SharePoint Online list, open an existing app that manages the list.
-
-## Summary
 
 You can open an existing app inside SharePoint Online and manage a list.
 
@@ -44,7 +41,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 ## Manage list using the app
 
-[AZURE.NOTE] This topic describes how to open and run an app that is automatically generated from a SharePoint list. The more common scenario is where the generated app has been extensively customized to meet your organization's needs, and in this case, usage may be more complex than what is described here.
+> [AZURE.NOTE] This topic describes how to open and run an app that is automatically generated from a SharePoint list. The more common scenario is where the generated app has been extensively customized to meet your organization's needs, and in this case, usage may be more complex than what is described here.
 
 1. To add an item to the list, click or tap the "+" sign.
 
