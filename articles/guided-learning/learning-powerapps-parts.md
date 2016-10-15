@@ -24,33 +24,32 @@
 
 In the first Guided Learning topic you read about the main parts of PowerApps, and in the topic that followed it, you saw different ways to start building apps. Now we're going to provide a little more detail on each of the parts. PowerApps is a set of software services, apps, and data connectors that work together, and there are related technologies that help make this a powerful ecosystem:
 
-- PowerApps features
-  - powerapps.com
-  - PowerApps Studio
-  - Data sources, connections and connectors, and gateways
-  - PowerApps Mobile
-  - admin center
-- Related technologies
-  - [business data platform]
-  - AppSource
-  - Dynamics 365
+- **[web.powerapps.com]** - manage and share the apps you build
+- **PowerApps Studio** - build powerful apps with easy to use visual tools
+- **Data sources, connections and connectors, and gateways** - bring cloud and on-premises data into your apps
+- **PowerApps Mobile** - run apps on Windows, iOS, and Android devices
+- **PowerApps admin center** - administer PowerApps environments and other components
+- **[business data platform]** - integrate business data using the common data model
+- **Microsoft AppSource** - share your apps into this centralized place for Microsoft and our many partners
+- **Microsoft Dynamics 365** - run all your business apps in the web
 
 We don't expect you to take a ton of time just to learn what PowerApps _is_, but we think it's helpful to flesh things out a bit more.
 
-## web.powerapps.com
+## [web.powerapps.com]
 
-If you build apps, this is where you spend most of your time. You learn from the **sample apps and templates** that are available here, and see all the apps you have created. You create apps in **PowerApps Studio for web** , and share those apps with individuals and organizations. You manage data: **connections** , **gateways** , and **entities** (all of which we'll cover shortly.) And you see all the **flows** created in **flows.microsoft.com** , which you can integrate with your apps.
+If you build apps, this is where you spend most of your time. You learn from the **sample apps and templates** that are available here, and see all the apps you have created. You create apps in **PowerApps Studio for web**, and share those apps with individuals and organizations. You manage data: **connections**, **gateways**, and **entities** (all of which we'll cover shortly.) And you see all the **flows** created in **flows.microsoft.com**, which you can integrate with your apps.
 
 ![The web.powerapps.com site](./media/learning-powerapps-parts/powerapps-web-site.png)
 
 ## PowerApps Studio
 
-**Power Apps Studio** is available as a web application that you can use in any modern browser, and as a Windows application. Power Apps Studio has three panes and a ribbon that make app creation feel similar to building a slide deck in PowerPoint:
+**PowerApps Studio** is available as a web application that you can use in any modern browser, and as a Windows application. PowerApps Studio has three panes and a ribbon that make app creation feel similar to building a slide deck in PowerPoint:
 
 1. The left navigation pane, which shows thumbnails of all the screens in your app
 2. The canvas, which contains the app screen you are working on
 3. The right pane, where you set options like layout and data sources
-4. The ribbon, where you add controls and formulas (like in Excel), and customize design elements
+4. The formula bar, where you add formulas (like in Excel) that define app behavior
+5. The ribbon, where you add controls and customize design elements
 
 ![PowerApps Studio](./media/learning-powerapps-parts/powerapps-studio.png)
 

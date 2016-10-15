@@ -42,8 +42,8 @@ In the meantime, here are some resources that you should find useful on your jou
 
 ## Community and documentation
 
-- Dig deeper with the [PowerApps documentation](https://powerapps.microsoft.com/en-us/tutorials/getting-started/)
-- Stay current with the [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/)
+- Dig deeper with the [PowerApps documentation](https://powerapps.microsoft.com/tutorials/getting-started/)
+- Stay current with the [PowerApps blog](https://powerapps.microsoft.com/blog/)
 - Join the [PowerApps community](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1)
 - Improve PowerApps by submitting an [idea](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas)
 
