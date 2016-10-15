@@ -23,7 +23,7 @@
 ## Recently added/changed ##
 1. **Running an app on Windows 8.1**
 
-	Because of a change in Windows 8.1, you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile. 
+	If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile. 
 
 1. **Changing a flow in a shared app**
 
