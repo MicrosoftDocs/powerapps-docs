@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="jamesol-msft"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""
 />
@@ -15,40 +15,37 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/28/2016"
+    ms.date="10/16/2016"
     ms.author="jamesol"/>
 
 # Restore an app to a previous version #
-
 This article shows you how to restore an app to a previous version that was saved to the cloud from your PowerApps account.
 
 ## Restore an app from your account ##
+1. Open [powerapps.com](https://web.powerapps.com), and then click or tap **Apps** in the left navigation bar.
 
-1. On [powerapps.com][1], select **My Apps** in the left navigation bar.  
-![](./media/restore-an-app/new-file-apps-portal.png)
+	![](./media/restore-an-app/file-apps.png)
 
-1. Select the ellipsis on tile of the app that you want to restore, and select **Details**.  
-![](./media/restore-an-app/new_tile_details.png)
+1. (optional) Near the upper-left corner, filter the list of apps to show only those apps that you own or only those apps to which you contribute.
 
-1. Select the **Versions** tab.  
-![](./media/restore-an-app/new_portal_versions_tab.png)
+	![](./media/delete-app/filter-list.png)
 
-1. Find the previous version that you want to restore and select **Restore**.  
-![](./media/restore-an-app/new_portal_version_list.png)
+	**Note**: If the app that you want to restore doesn't appear, make sure that you're in the right environment.
 
-1. Confirm that you want to restore to this version and select **Restore**.  
-![](./media/restore-an-app/new_portal_version_list_restore_button.png)
+1. Near the right edge, click or tap the info icon for the app that you want to restore.
 
-1. When successful, you see a new version added to your version list.  
-![](./media/restore-an-app/new_portal_version_list_new_version_added.png)
+	![](./media/delete-app/app-options.png)
 
-## Resources
+1. Click or tap the **Versions** tab, and then click or tap **Restore** for the version that you want to restore.  
+	![](./media/restore-an-app/restore-button.png)
 
-Here are some other good resources for managing your apps:
+1. In the confirmation dialog box, click or tap **Restore**.  
 
+	A new version is added to your list.
+
+	![](./media/restore-an-app/version-added.png)
+
+## More resources ##
 [Share an app](share-app.md)  
 [Change app name and tile](set-name-tile.md)  
 [Delete an app](delete-app.md)
-
-
-[1]: https://web.powerapps.com
