@@ -31,7 +31,8 @@ On the other screen, users can create a record, update one or more fields in a r
 
 ![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
 
-**Prerequisites**
+## Prerequisites ##
+You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
 
 1. Copy this data, and then paste it into an Excel file.
 

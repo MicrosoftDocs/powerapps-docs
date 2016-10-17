@@ -19,16 +19,20 @@
    ms.author="ankitsar"/>
 
 # Generate an app from Excel data #
-
 Create an app automatically based on an Excel file in the cloud, customize the app, and then explore how it works.
 
-**Prerequisites**
-
+## Prerequisites ##
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by using the same credentials that you used to sign up.
 
 	This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
 
-- Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), and then upload it to a [cloud-storage account](cloud-storage-blob-connections.md) such as OneDrive.
+- You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps:
+
+	1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).
+
+		**Important**: If you decide to use your own Excel file, make sure that the data is formatted as a table. For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
+	1. Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md) such as OneDrive.
 
 	The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
 

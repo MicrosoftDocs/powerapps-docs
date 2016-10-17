@@ -83,11 +83,11 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Save changes](./media/customize-forms-sharepoint/save-record.png)
 
-1. Near the upper-right corner, click or tap the trash-bin icon to delete the record that you just updated and to return to **BrowseScreen1**.
+1. Near the upper-right corner, click or tap the trash-can icon to delete the record that you just updated and to return to **BrowseScreen1**.
 
 	![Delete record](./media/customize-forms-sharepoint/delete-record.png)
 
-1. Close Preview mode by pressing F5 (or by clicking or tapping the close icon near the upper-left corner, *under* the title bar for PowerApps).
+1. Close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-left corner, *under* the title bar for PowerApps).
 
 	![Close Preview mode](./media/customize-forms-sharepoint/close-preview.png)
 
