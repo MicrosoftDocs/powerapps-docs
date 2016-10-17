@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="lonu"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,26 +15,24 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/21/2016"
-   ms.author="LOnu"/>
+   ms.date="10/16/2016"
+   ms.author="lonu"/>
 
 # Change screen size and orientation in PowerApps #
-
 Customize an app by changing its screen size and orientation.
 
-**Prerequisites**
-
+## Prerequisites ##
 1. Create an app, or open one for editing.
-1. On the **File** menu, select **App settings**.
+1. On the **File** menu, click or tap **App settings**.
 
 ## Change screen size and orientation ##
-1. Under **App settings**, select **Screen size + orientation**.
+1. Under **App settings**, click or tap **Screen size + orientation**.
 
 	![Option to change the screen size and orientation of an app](./media/set-aspect-ratio-portrait-landscape/size-orientation.png)
 
-1. In the **Orientation** list, select either **Portrait** or **Landscape**.
+1. In the **Orientation** list, click or tap **Portrait** or **Landscape**.
 
-1. (Tablet apps only) Under **Aspect ratio**, select the ratio that matches the target device for this app.
+1. (Tablet apps only) Under **Aspect ratio**, click or tap the ratio that matches the target device for this app.
 
 	![Change the aspect ratio of a tablet app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
 
