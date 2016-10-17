@@ -181,7 +181,7 @@ Other elements include:
 
 ## L ##
 
-**[Language](functions/function-language.md)** – Provides access to the language that the app uses.
+**[Language](functions/function-language.md)** – Returns the locale of the current user.
 
 **[Last](functions/function-first-last.md)** – Returns the last record of a table.
 

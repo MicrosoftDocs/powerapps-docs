@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/07/2015"
+   ms.date="10/15/2016"
    ms.author="gregli"/>
 
 # Text function in PowerApps #
@@ -53,8 +53,8 @@ See [working with dates and times](../show-text-dates-times.md) for more informa
 |-------------|-------------|
 | **0** (*zero*) | Displays insignificant zeros if a number has fewer digits than there are zeros in the format. For example, use the format **#.00** if you want to display **8.9** as **8.90**. |
 | **#** | Follows the same rules as the **0** (zero). However, **Text** doesn't return extra zeros when the number has fewer digits on either side of the decimal than there are # symbols in the format. For example, **8.9** is displayed if the custom format is **#.##** and the number to format is **8.9**. |
-| **.** (*period*) | Displays the decimal point in a number. |
-| **,** (*comma*) | Displays the thousands separator in a number. **Text** separates thousands by commas if the format contains a comma that's enclosed by number signs (**#**) or by zeros.
+| **.** (*period*) | Displays the decimal point in a number.  Depends on the locale, see [format string locale](#format-string-locale) for more details. |
+| **,** (*comma*) | Displays the thousands separator in a number. **Text** separates thousands by commas if the format contains a comma that's enclosed by number signs (**#**) or by zeros.  Depends on the locale, see [format string locale](#format-string-locale) for more details. |
 
 If a number has more digits to the right of the decimal point than there are placeholders in the format, the number rounds to as many decimal places as there are placeholders. If there are more digits to the left of the decimal point than there are placeholders, the extra digits are displayed. If the format contains only number signs (#) to the left of the decimal point, numbers less than 1 start with a decimal point (for example, **.47**).
 
@@ -105,21 +105,50 @@ You can include any of these characters in your format string.  They will appear
 | **>** | Greater-than sign |
 | &nbsp; | Space character |
 
+### Format string locale ###
+
+How the custom format string itself is interpreted can be dependent on the locale.  Did you intend for "." to be interpreted as a decimal separator or a thousands separator?  
+
+To specify the locale of the custom format string, use:
+
+| Format string locale | Description |
+|----------------------|-------------|
+| **[$-*xx*]** | The language is specified by the two characters ***xx***.  For example, ***xx*** is **en** for English resulting in **"[$-en]"**, **sp** for Spanish resulting in **"[$$-sp]"**, etc. |
+| **[$-*xx*-*YY*]** | The language is specified by the two characters ***xx***, and the region is also specified with the two characters ***YY***.  For example, ***xx*** is "en" for English and ***YY*** is "GB" for Great Britain, resulting in **[$-en-GB]**. |
+
+To see the list of supported locales, type **Text( 1234, "", ** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.     
+
+The locale specifier can appear anywhere in the string, but may only appear once.
+
+If not provided, the authoring tool may insert this specifier for you automatically.  If your app will be used in the same locale as where it was authored, this specifier will be correct.  This only needs to be adjusted if your app will be used across different locales.  **[$-en-US]** is assumed if this specifier is not present when your app is run. 
+
+### Output locale ###
+
+Independent of how the format string is interpreted, there is the question of which locale should be used for the output of **Text**.  Should month names be returned in Spanish or German?
+
+By default, **Text** uses the locale of the user running the app.  You can determine which locale is being used with the **Language** function.  You can override this default by supplying a locale designation for the optional third argument to **Text**.
+
 ## Syntax ##
 
-**Text**( *Number*, *DateTimeFormatEnum* )
+**Text**( *Number*, *DateTimeFormatEnum* [, *OutputLocale* ] )
 
 - *Number* - Required. The number or the date/time value to format.
 - *DateTimeFormat* - Required.  A member of the **DateTimeFormat** enumeration.
+- *OutputLocale* - Optional.  The locale to use for the output text.  By default, this is the locale of the user.
 
-**Text**( *Number*, *FormatString* )
+**Text**( *Number*, *FormatString* [, *OutputLocale* ] )
 
 - *Number* - Required. The number or the date/time value to format.
 - *FormatString* - Required. One or more placeholders enclosed in double quotation marks.
+- *OutputLocale* - Optional.  The locale to use for the output text.  By default, this is the locale of the user.
 
 ## Examples ##
 
+The user running these formulas is located in the United States, with **Language** returning **"en-US"**.
+
 ### Number ###
+
+- English US Locale ("en-US")
 
 | Formula |  Description | Result |
 |-------------|-------------|-------------|
@@ -129,11 +158,12 @@ You can include any of these characters in your format string.  They will appear
 | **Text( 12, "#.0#" )**<br>**Text(&nbsp;1234.568,&nbsp;"#.0#"&nbsp;)** | Pads the decimal portion of the number with zeros for one decimal place, and includes a second decimal place if supplied. | "12.0"<br>"1234.57"  |
 | **Text( 12000, "$ #,###" )**<br>**Text(&nbsp;1200000,&nbsp;"$&nbsp;#,###"&nbsp;)** | Places a thousands separator every three digits, and includes a currency symbol.  | "$&nbsp;12,000"<br>"$&nbsp;1,200,000" |
 
+
 ### Date/Time ###
 
 - At **2:37:47 PM** on **Monday, November 23, 2015**
 - United States Pacific Time Zone (UTC+8)
-- English US Locale
+- English US Locale ("en-US")
 
 | Formula |  Description | Result |
 |-------------|-------------|-------------|
@@ -142,3 +172,11 @@ You can include any of these characters in your format string.  They will appear
 | **Text( Now(), DateTimeFormat.LongTime24 )** |  Formats as a long time string, using a 24-hour clock. | "14:37:47" |
 | **Text( Now(), DateTimeFormat.ShortDate )** | Formats as a short date string, in the language and locale of the current user. | "11/23/2015" |
 | **Text( Now(), "d-mmm-yy" )** | Formats using placeholder characters: <ul><li>**d** for a single-digit or double-digit day of the month<li>**-** as a literal character copied to the result<li>**mmm** for a three-letter abbreviation of the month<li>**-** as another literal character copied to the result<li>**yy** for a two-digit abbreviation of the year</ul> | "23-Nov-15" |
+
+### International ###
+
+| Formula |  Description | Result |
+|-------------|-------------|-------------|
+| **Text( 1234567.89, "[$-en-US]#,###" )** | Interprets **,** as a grouping separator, placed every three characters. As no decimals are to be displayed, the value is rounded up to the next higher whole number. | "1,234,568" |
+| **Text( 1234567.89, "[$-fr-FR]#,###" )** | Interprets **,** as a decimal separator.  Since the **[$-fr-FR]** only determines how the format string is interpreted, the output locale remains "en-US" and a **.** (period) is used as the output decimal separator. | "1234567.89" |
+| **Text( 1234567.89, "[$-fr-FR]#,###", "fr-FR" )** | Interprets **,** as a decimal separator.  The output locale has been set to "fr-FR", which will result in **,** (comma) being used as the decimal separator.  | "1234567,89" |

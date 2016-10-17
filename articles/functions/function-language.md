@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,17 +15,26 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/01/2015"
+   ms.date="10/16/2016"
    ms.author="gregli"/>
 
 # Language function in PowerApps #
 
-Returns the language of the app.
+Returns the locale of the current user.
 
 ## Description ##
-For an app that has been saved to powerapps.com, this function returns the language with which the app was branded when it was saved.
 
-For an app that's new or has only been saved locally, this function returns the currently active language from the language preferences. If you change the language preference while PowerApps is open, you must restart it for the function to reflect the change.
+The **Language** function returns the language and region of the current user.  The return value is a language tag in the format:
+
+***xx*-*YY***
+
+where *xx* is the two character abbreviation of the language and *YY* is the two character abbreviation of the region.  This text is in the format of a [normalized IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47). 
+
+Use the language information to tailor your app across locales.  For example, if you are creating an app that will be used in Italy and France, you can use **Language** to automatically display Italian and French strings to your users in those different locales. This is often referred to as localization.
+
+To see the list of supported locales, type **Text( 1234, "", ** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.  
+
+The **Text** and **Value** functions also use these same language tags.  Use these functions for translating to and from text strings in a locale aware manner.
 
 ## Syntax ##
 
@@ -33,4 +42,70 @@ For an app that's new or has only been saved locally, this function returns the 
 
 ## Example ##
 
-**Language()** could return "en-US" based on your configuration.
+### User's locale ###
+
+In all of these examples, the formula is simply **Language()** with no arguments.  It is assumed that the host operating system and browser are using the default locale for the location.
+
+| Location | Return Value |
+|----------|--------------|
+| Rio de Janeiro, Brazil | "pt-BR" |
+| Lisbon, Portugal | "pt-PT" |
+| Washington DC, USA | "en-US" |
+| Manchester, Great Britain | "en-GB" |
+| Paris, France | "fr-FR" |
+
+### Localization table ###
+
+A simple approach to localization is to create an Excel spreadsheet mapping an author defined **TextID** to an appropriate text string based on the user's language.  Although you could use a collection or any other data source for this table, we chose Excel because it is easy to edit and manage outside of the app by translators.
+
+1. Create the following table in Excel: 
+
+	![](media/function-language/loc-table.png)
+
+	The entry with *blank* for the **Language** column will be used as the default if there is no specific text string found for a given language. This entry must appear after all other entries for a given **TextID**.
+
+	For our purposes, we only need to look at the language of the locale and not the region.  If regional considerations were important, we could have included the full language tag value in the table above. 
+
+1. Use the **Insert** ribbon, **Table** command, to make this into a proper Excel table.  By default, it will be named **Table1** but you can name it whatever you like with the **Table Tools/Design** ribbon and the **Table Name:** text box on the far left hand side.
+ 
+1. Save the Excel file to your local file system.   
+
+1. In PowerApps, in the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
+
+1. Click or tap **Add static data to your app**, click or tap the Excel file that you saved, and then click or tap **Open**.
+
+1. Select the table that you created, and then click or tap **Connect**.
+
+In your app, wherever you would have used the text **"Hello"** before, use this formula instead:
+
+* **First( Filter( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag )))).LocalizedText**  
+
+This formula will lookup the appropriate **LocalizedText** value for the language of the user, and if that is not found, will fall back on the default *blank* version. 
+
+### Translation service ###
+
+You can translate text on demand using a translation service, such as the Microsoft Translator service:  
+
+1. In PowerApps, in the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
+
+1. Click or tap **Microsoft Translator**, click or tap the Excel file that you saved, and then click or tap **Open**.
+
+In your app, wherever you would have used the text **"Hello"** before, use this formula instead:
+
+* **MicrosoftTranslator.Translate( "Hello", Language() )**
+
+The Microsoft Translator service uses the same language tags that the **Language** function returns.
+
+This approach comes with some drawbacks when compared to the previous example that utilized a pre-translated table of text strings:
+
+* The translation will take time to complete, requiring a call to a service across the network.  This will result in a lag to see the translated text in your app. 
+* The translation will be mechanical and may not be what you anticipate or be the best choice for the situation within your app.
+
+
+
+  
+
+ 
+
+
+
