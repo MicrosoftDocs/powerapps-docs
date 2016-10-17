@@ -64,7 +64,7 @@ Basically, you can use this anywhere users would benefit from a form or labels t
 
 	![][7]
 
-[2]: ./media/show-current-user/insertimage.png
+[2]: ./media/show-current-user/add-image.png
 [3]: ./media/show-current-user/imageproperty.png
 [4]: ./media/show-current-user/insertlabel.png
 [5]: ./media/show-current-user/label.png
