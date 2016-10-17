@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/07/2016"
+   ms.date="10/17/2016"
    ms.author="ricksal"/>
 
 # Environments Administration
@@ -23,19 +23,17 @@ Here you learn how to perform administrative tasks for environments.
 
 ## How to create an environment
 
-1.	In the PowerApps admin center, press or click **Environments**. Any existing environments are displayed.
-
-2.	Press or click **New environment**.
+1.	In the PowerApps admin center,  where any existing environments are displayed press or click **New environment**.
 
 	![](./media/environment-admin/environment-list.png)
 
-3. Enter the following info:
+2. Enter the following info:
 
-	Property | Description
-	Name | Enter the name of your environment, such as Dev/Test, or Sandbox.
-	Location | Choose the location to host your environment. We recommend using a location closest to your users. For example, if your Flow app users are in London, then choose a Europe location. If your Flow app users are in New York, then choose a U.S. location.
+	| Property | Description |
+	| Name | Enter the name of your environment, such as Dev/Test, or Sandbox. |
+	| Location | Choose the location to host your environment. We recommend using a location closest to your users. For example, if your app users are in London, then choose a Europe location. If your app users are in New York, then choose a U.S. location. |
 
-	Create database automatically | Check this setting to create the Common Data Model. The Common Data Model is available with some licenses. So if you don't see this property, then it's not included with your license.
+	| Create database automatically | Check this setting to create the Common Data Model. The Common Data Model is available with some licenses. So if you don't see this property, then it's not included with your license. |
 
 	![](./media/environment-admin/new-environment.png)
 
@@ -43,20 +41,19 @@ Here you learn how to perform administrative tasks for environments.
 
 ## Manage your environments
 
-1.	In the PowerApps admin center, select **Environments**.
-
-2.	Select an environment to open its properties. The General properties show more details, including who "owns" each environment, its geographic location, and when it was created. You can also upgrade your plan in these properties.
+1.	In the PowerApps admin center, select an environment to open its properties. The General properties show more details, including who "owns" each environment, its geographic location, and when it was created. You can also upgrade your plan in these properties.
 
 3.	In the Access properties, Admin and Maker are listed. Use these properties to give users Admin privileges, or Maker privileges to the environment.
 
-	Task | Maker | Admin
+	| Task | Maker | Admin |
 
-	Create Flows | ✔ | ✔
+	| Create Flows | ✔ | ✔ |
 
-	Delete Flows | ✔ | ✔
+	| Delete Flows | ✔ | ✔ |
 
 	And so on...
 
+[TBD] adapt or eliminate the rest of this
 
 4. In Resources, all the items within the environment are listed, including Flows, Connections, Custom APIs, Gateways, and PowerApps.
 
