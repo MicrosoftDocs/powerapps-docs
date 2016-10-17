@@ -21,6 +21,14 @@
 # Common issues and resolutions #
 
 ## Recently added/changed ##
+1. **Running an app on Windows 8.1**
+
+	If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile. 
+
+1. **Changing a flow in a shared app**
+
+	If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, re-add the flow, and reshare the app. Otherwise, users who trigger the flow will get an authentication failure.
+
 1. **Using a localized version**.
 
 	If you're running release 2.0.531 on Windows 8.1, you can't type in a **Text input** control if the device is set to a language that requires an IME window.
