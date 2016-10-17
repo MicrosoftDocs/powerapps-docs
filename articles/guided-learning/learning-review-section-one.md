@@ -30,7 +30,7 @@ PowerApps connects to the **cloud services and data sources** you're already usi
 
 There are several features that make up PowerApps and a set of related technologies that make it even more powerful.
 
-![Parts of PowerApps](./media/learning-introducing-powerapps/powerapps-parts.png)
+![Parts of PowerApps](./media/learning-review-section-one/powerapps-parts.png)
 
 The easiest ways to get started with PowerApps are to run the samples, play around with the templates, and generate apps from your own data. You will gain confidence with building apps, and will be sharing them out in no time.
 
