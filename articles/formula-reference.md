@@ -1,4 +1,4 @@
-<properties
+﻿<properties
    pageTitle="Functions, signals, and enumerations | Microsoft PowerApps"
    description="Reference information for functions, signals, and enumerations in PowerApps."
    services=""
@@ -181,7 +181,7 @@ Other elements include:
 
 ## L ##
 
-**[Language](functions/function-language.md)** – Returns the locale of the current user.
+**[Language](functions/function-language.md)** – Returns the language tag of the current user.
 
 **[Last](functions/function-first-last.md)** – Returns the last record of a table.
 
