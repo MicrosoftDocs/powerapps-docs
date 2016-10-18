@@ -30,21 +30,21 @@ Use the language information to tailor your app across locales.  For example, if
 
 ### Lanugage tags ###
 
-The return value of this function is a language tag text in the format:
+The return value of this function is a string of text containing a language tag in the format:
 
-**"*xx*-*YY*"**
+**"*xx-YY*"**
 
 where *xx* is the two character abbreviation for the language and *YY* is the two character abbreviation for the region.  This format is the same as the [IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47) format.  
 
 For example, English in the United States uses the language tag "en-US".  To see the list of supported language tags, type **Value( "1", ** in the formula bar or advanced view and scroll through the list of locales suggested for the second argument.  
 
-The **Text** and **Value** functions also use language tags.  Use these functions for translating to and from text strings in a globally aware manner.
+The **[Text](function-text.md)** and **[Value](function-value.md)** functions also use language tags.  Use these functions for translating to and from text strings in a globally aware manner.
 
 ## Syntax ##
 
 **Language**()
 
-## Example ##
+## Examples ##
 
 ### User's locale ###
 
@@ -60,7 +60,7 @@ It is assumed that the host operating system and/or browser are using the defaul
 
 ### Localization table ###
 
-A simple approach to localization is to create an Excel spreadsheet mapping an author defined **TextID** to an appropriate text string based on the user's language.  Although you could use a collection or any other data source for this table, we chose Excel because it is easy to edit and manage outside of the app by translators.
+A simple approach to localization is to create an Excel spreadsheet mapping an author defined **TextID** to a translated text for the user's language.  Although you could use a collection or any other data source for this table, we chose Excel because it is easy to edit and manage outside of the app by translators.
 
 1. Create the following table in Excel: 
 
