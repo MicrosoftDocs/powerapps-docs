@@ -14,10 +14,10 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/05/2016"
+    ms.date="10/17/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.530 #
+# What's new in PowerApps release 2.0.531 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 1. **Available in several languages in addition to English**.
