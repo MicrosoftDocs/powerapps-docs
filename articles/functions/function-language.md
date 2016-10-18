@@ -38,7 +38,7 @@ where *xx* is the two character abbreviation for the language and *YY* is the tw
 
 For example, English in the United States uses the language tag "en-US".  To see the list of supported language tags, type **Value( "1", ** in the formula bar or advanced view and scroll through the list of locales suggested for the second argument.  
 
-The **Text** and **Value** functions also use language tags.  Use these functions for translating to and from text strings in a global aware manner.
+The **Text** and **Value** functions also use language tags.  Use these functions for translating to and from text strings in a globally aware manner.
 
 ## Syntax ##
 
@@ -55,7 +55,7 @@ It is assumed that the host operating system and/or browser are using the defaul
 | **Language()** | Rio de Janeiro, Brazil | "pt-BR" |
 | **Language()** | Lisbon, Portugal | "pt-PT" |
 | **Language()** | Washington DC, USA | "en-US" |
-| **Lnaguage()** | Manchester, Great Britain | "en-GB" |
+| **Language()** | Manchester, Great Britain | "en-GB" |
 | **Language()** | Paris, France | "fr-FR" |
 
 ### Localization table ###
@@ -92,7 +92,7 @@ You can translate text on demand using a translation service, such as the Micros
 
 1. In PowerApps, in the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
 
-1. Click or tap **Microsoft Translator**, click or tap the Excel file that you saved, and then click or tap **Open**.
+1. Click or tap **Microsoft Translator**.
 
 In your app, wherever you would have used the text **"Hello"** before, use this formula instead:
 
@@ -100,7 +100,7 @@ In your app, wherever you would have used the text **"Hello"** before, use this 
 
 The Microsoft Translator service uses the same language tags that the **Language** function returns.
 
-This approach comes with some drawbacks when compared to the previous example that utilized a pre-translated table of text strings:
+This approach comes with some drawbacks when compared to the previous example which utilized a pre-translated table of text strings:
 
 * The translation will take time to complete, requiring a call to a service across the network.  This will result in a lag to see the translated text in your app. 
 * The translation will be mechanical and may not be what you anticipate or be the best choice for the situation within your app.
