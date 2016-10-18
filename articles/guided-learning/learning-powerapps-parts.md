@@ -71,7 +71,7 @@ The following technologies are often used with PowerApps to build and share robu
 - **Microsoft Dynamics 365** - run all your business apps in the web
 
 ### Microsoft Flow
-Microsoft Flow is a service for automating workflow across the growing number of apps and services that business users rely on. Flow can accelerate your business so you spend less time on mundane, repetitive tasks, and more time on what you want to do. Use Flow in conjunction with PowerApps to build apps that trigger and respond to workflows. This is a powerful combination that requires no code!
+Microsoft Flow is a service for automating workflow across the growing number of apps and services that business users rely on. Microsoft Flow can accelerate your business so you spend less time on mundane, repetitive tasks, and more time on what you want to do. Use Microsoft Flow in conjunction with PowerApps to build apps that trigger and respond to workflows. This is a powerful combination that requires no code!
 
 ![Microsoft Flow](./media/learning-powerapps-parts/powerapps-flow.png)
 
