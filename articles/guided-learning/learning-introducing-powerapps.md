@@ -30,7 +30,7 @@ If you're a  **beginner**  with PowerApps this course gets you going, and if you
 
 ## What is PowerApps?
 
-**PowerApps** is a collection of software services, apps, and data connectors that work together to fundamentally transform and accelerate how you build and share custom line of business applications.
+**PowerApps** is a collection of software services and apps that work together to fundamentally transform and accelerate how you build and share custom line of business applications.
 
 ![PowerApps animated introduction](./media/learning-introducing-powerapps/powerapps-intro.gif)
 
