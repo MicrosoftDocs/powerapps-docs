@@ -24,13 +24,24 @@ Converts a string of text to a number.
 
 ## Description ##
 
-The **Value** function converts a string that contains number characters to a number value. Use this function to perform calculations on strings that the user enters and that contain numbers.
+The **Value** function converts a string of text that contains number characters to a number value. Use this function to perform calculations on text that the user enters and that contain numbers.
 
-The string is parsed in the locale of the current user, which includes how to interpret grouping and decimal separators such as **,** and **.**.  You can specify the locale to use by providing a language tag as an optional argument.
+Different languages interpret **,** and **.** differently.  By default, the text is interpreted in the language of the current user.  You can specify the language to use with a language tag, using the same language tags that are returned by the **[Language](function-language.md)** function.
 
 ## Syntax ##
 
-**Value**( *String* [, *LanguageTag*] )
+**Value**( *String* [, *LanguageTag* ] )
 
 - *String* - Required. String to convert to a numeric value.
-- *LanguageTag* - Optional.  The language to use in parsing the string.  If not specified, the language of the current user, as returned by the **Language** function, is used.
+- *LanguageTag* - Optional.  The language tag in which to parse the string.  If not specified, the language of the current user is used.
+
+## Examples ##
+
+The user running these formulas is located in the United States and has selected English as their language.  The **Language** function is returning "en-US".
+
+| Formula | Description | Result |
+|---------|-------------|--------|
+| **Value( "123.456" )** | The default language of "en-US" will be used, which uses a period as the decimal separator.  | 123.456 |
+| **Value( "123.456", "es-ES" )** | "es-ES" is the language tag for Spanish in Spain.  In Spain, a period is a thousands separator.  | 123456 |
+| **Value( "123,456" )** | The default language of "en-US" will be used, which uses a comma as a thousands separator.  | 123456 |
+| **Value( "123,456", "es-ES" )** | "es-ES" is the language tag for Spanish in Spain.  In Spain, a comma is the decimal separator.  | 123.456 |

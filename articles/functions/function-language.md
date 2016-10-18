@@ -20,21 +20,25 @@
 
 # Language function in PowerApps #
 
-Returns the locale of the current user.
+Returns the language tag of the current user.
 
 ## Description ##
 
-The **Language** function returns the language and region of the current user.  The return value is a language tag in the format:
+The **Language** function returns the language and region of the current user as a language tag.
 
-***xx*-*YY***
+Use the language information to tailor your app across locales.  For example, if you are creating an app that will be used in Italy and France, you can use **Language** to automatically display Italian and French strings to your users in those different locations. 
 
-where *xx* is the two character abbreviation of the language and *YY* is the two character abbreviation of the region.  This text is in the format of a [normalized IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47). 
+### Lanugage tags ###
 
-Use the language information to tailor your app across locales.  For example, if you are creating an app that will be used in Italy and France, you can use **Language** to automatically display Italian and French strings to your users in those different locales. This is often referred to as localization.
+The return value of this function is a language tag text in the format:
 
-To see the list of supported locales, type **Text( 1234, "", ** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.  
+**"*xx*-*YY*"**
 
-The **Text** and **Value** functions also use these same language tags.  Use these functions for translating to and from text strings in a locale aware manner.
+where *xx* is the two character abbreviation for the language and *YY* is the two character abbreviation for the region.  This format is the same as the [IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47) format.  
+
+For example, English in the United States uses the language tag "en-US".  To see the list of supported language tags, type **Value( "1", ** in the formula bar or advanced view and scroll through the list of locales suggested for the second argument.  
+
+The **Text** and **Value** functions also use language tags.  Use these functions for translating to and from text strings in a global aware manner.
 
 ## Syntax ##
 
@@ -44,15 +48,15 @@ The **Text** and **Value** functions also use these same language tags.  Use the
 
 ### User's locale ###
 
-In all of these examples, the formula is simply **Language()** with no arguments.  It is assumed that the host operating system and browser are using the default locale for the location.
+It is assumed that the host operating system and/or browser are using the default locale for the location.
 
-| Location | Return Value |
-|----------|--------------|
-| Rio de Janeiro, Brazil | "pt-BR" |
-| Lisbon, Portugal | "pt-PT" |
-| Washington DC, USA | "en-US" |
-| Manchester, Great Britain | "en-GB" |
-| Paris, France | "fr-FR" |
+| Formula | Location | Return Value |
+|---------|----------|--------------|
+| **Language()** | Rio de Janeiro, Brazil | "pt-BR" |
+| **Language()** | Lisbon, Portugal | "pt-PT" |
+| **Language()** | Washington DC, USA | "en-US" |
+| **Lnaguage()** | Manchester, Great Britain | "en-GB" |
+| **Language()** | Paris, France | "fr-FR" |
 
 ### Localization table ###
 

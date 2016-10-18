@@ -27,7 +27,7 @@ Formats a number or a date/time value for display as a string of text.
 The **Text** function formats a number or a date/time value based on one of these types of arguments:
 
 - A predefined date/time format, which you specify by using the **DateTimeFormat** enumeration.  For dates and times, this approach is preferred as it automatically adjusts to each user's language and locale.
-- A custom format string, which comprises placeholders that describe how to format the number or the date/time value. Placeholders define how many digits to show, whether thousands separators should be used, and how to display the name of a month. PowerApps supports a subset of the placeholders that Microsoft Excel does.
+- A custom format, a string of text which comprises placeholders that describe how to format the number or the date/time value. Placeholders define how many digits to show, whether thousands separators should be used, and how to display the name of a month. PowerApps supports a subset of the placeholders that Microsoft Excel does.
 
 See [working with dates and times](../show-text-dates-times.md) for more information.
 
@@ -105,50 +105,57 @@ You can include any of these characters in your format string.  They will appear
 | **>** | Greater-than sign |
 | &nbsp; | Space character |
 
-### Format string locale ###
+### Global apps ###
 
-How the custom format string itself is interpreted can be dependent on the locale.  Did you intend for "." to be interpreted as a decimal separator or a thousands separator?  
+There are two aspects to using the **Text** function around the world: 
 
-To specify the locale of the custom format string, use:
+* For authors, using the [predefined date/time formats](#predefined-date-time-formats) is the easiest way to format dates and times in a global aware manner.  But if a custom format is used, how should it be interpreted?  The separator characters (**.** and **,**) have different meanings in different languages.  This is handled with a special placeholder containing a language tag.  
 
-| Format string locale | Description |
+* For users, what language should be used in the result of the function?  Names for months and weekdays need to be in the appropriate language for the user of the app.  This is handled with a third optional argument to the **Text** function. 
+
+For both, to see the list of supported languages, type **Text( 1234, "", ** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.
+
+#### Custom format language placeholder ####
+
+To specify the language of the custom format, use:
+
+| Placeholder | Description |
 |----------------------|-------------|
-| **[$-*xx*]** | The language is specified by the two characters ***xx***.  For example, ***xx*** is **en** for English resulting in **"[$-en]"**, **sp** for Spanish resulting in **"[$$-sp]"**, etc. |
-| **[$-*xx*-*YY*]** | The language is specified by the two characters ***xx***, and the region is also specified with the two characters ***YY***.  For example, ***xx*** is "en" for English and ***YY*** is "GB" for Great Britain, resulting in **[$-en-GB]**. |
+| **[$-*LanguageTag*]** | *LanguageTag* is a language tag as returned from the **Language** function.  It can be in the form of just the language such as **[$-en]** for English, or it can also include the region such as **[$-en-GB]** to further specify Great Britain.  |
+  
+The language placeholder can appear anywhere in the string, but may appear only once.
 
-To see the list of supported locales, type **Text( 1234, "", ** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.     
+While writing a formula, if you do not provide a language placeholder and the format string is ambiguous from a global standpoint, the authoring tool will automatically insert the language tag for your current language.  
 
-The locale specifier can appear anywhere in the string, but may only appear once.
+**[$-en-US]** is assumed if this placeholder is not present when your app is run. 
 
-If not provided, the authoring tool may insert this specifier for you automatically.  If your app will be used in the same locale as where it was authored, this specifier will be correct.  This only needs to be adjusted if your app will be used across different locales.  **[$-en-US]** is assumed if this specifier is not present when your app is run. 
+[AZURE.NOTE] In a future version, the syntax of this placeholder may be changing to avoid confusion with a similar, but different, placeholder supported by Excel.
 
-### Output locale ###
+#### Result language tag ####
 
-Independent of how the format string is interpreted, there is the question of which locale should be used for the output of **Text**.  Should month names be returned in Spanish or German?
+Appearing in the result of **Text** are translated strings for month, weekday, and AM/PM designations, as well as the appropriate group and decimal separators.
 
-By default, **Text** uses the locale of the user running the app.  You can determine which locale is being used with the **Language** function.  You can override this default by supplying a locale designation for the optional third argument to **Text**.
+By default, **Text** uses the language of the user running the app.  The **Language** function returns the language tag for the current user.  You can override this default by supplying a language tag for the optional third argument to **Text**.
 
 ## Syntax ##
 
-**Text**( *Number*, *DateTimeFormatEnum* [, *OutputLocale* ] )
+**Text**( *Number*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
 
 - *Number* - Required. The number or the date/time value to format.
 - *DateTimeFormat* - Required.  A member of the **DateTimeFormat** enumeration.
-- *OutputLocale* - Optional.  The locale to use for the output text.  By default, this is the locale of the user.
+- *ResultLanguageTag* - Optional.  The language tag to use for the result text.  By default, the language of the current user is used.
 
-**Text**( *Number*, *FormatString* [, *OutputLocale* ] )
+**Text**( *Number*, *CustomFormat* [, *ResultLanguageTag* ] )
 
 - *Number* - Required. The number or the date/time value to format.
-- *FormatString* - Required. One or more placeholders enclosed in double quotation marks.
-- *OutputLocale* - Optional.  The locale to use for the output text.  By default, this is the locale of the user.
+- *CustomFormat* - Required. One or more placeholders enclosed in double quotation marks.
+- *ResultLanguageTag* - Optional.  The language tag to use for the result text.  By default, the language of the current user is used.
 
 ## Examples ##
 
-The user running these formulas is located in the United States, with **Language** returning **"en-US"**.
+The user running these formulas is located in the United States and has selected English as their language.  The **Language** function is returning "en-US".
 
 ### Number ###
-
-- English US Locale ("en-US")
 
 | Formula |  Description | Result |
 |-------------|-------------|-------------|
@@ -163,7 +170,6 @@ The user running these formulas is located in the United States, with **Language
 
 - At **2:37:47 PM** on **Monday, November 23, 2015**
 - United States Pacific Time Zone (UTC+8)
-- English US Locale ("en-US")
 
 | Formula |  Description | Result |
 |-------------|-------------|-------------|
@@ -173,10 +179,12 @@ The user running these formulas is located in the United States, with **Language
 | **Text( Now(), DateTimeFormat.ShortDate )** | Formats as a short date string, in the language and locale of the current user. | "11/23/2015" |
 | **Text( Now(), "d-mmm-yy" )** | Formats using placeholder characters: <ul><li>**d** for a single-digit or double-digit day of the month<li>**-** as a literal character copied to the result<li>**mmm** for a three-letter abbreviation of the month<li>**-** as another literal character copied to the result<li>**yy** for a two-digit abbreviation of the year</ul> | "23-Nov-15" |
 
-### International ###
+### Global apps ###
 
 | Formula |  Description | Result |
 |-------------|-------------|-------------|
-| **Text( 1234567.89, "[$-en-US]#,###" )** | Interprets **,** as a grouping separator, placed every three characters. As no decimals are to be displayed, the value is rounded up to the next higher whole number. | "1,234,568" |
-| **Text( 1234567.89, "[$-fr-FR]#,###" )** | Interprets **,** as a decimal separator.  Since the **[$-fr-FR]** only determines how the format string is interpreted, the output locale remains "en-US" and a **.** (period) is used as the output decimal separator. | "1234567.89" |
-| **Text( 1234567.89, "[$-fr-FR]#,###", "fr-FR" )** | Interprets **,** as a decimal separator.  The output locale has been set to "fr-FR", which will result in **,** (comma) being used as the decimal separator.  | "1234567,89" |
+| **Text( 1234567.89, "[$-en-US]$ #,###" )** | Interprets **,** as a grouping separator placed every three characters and **$** as the currency symbol. As no decimals are to be displayed, the value is rounded up to the next higher whole number. The **[$-en-US]** is optional in this case, as this is the default.  | "$ 1,234,568" |
+| **Text( 1234567.89, "[$-es-ES]&euro; #,###" )** | Interprets **,** as a decimal separator and **&euro;** as the currency symbol.  Since the **[$-fr-FR]** only determines how the format string is interpreted, the result will use the characters from the default "en-US" lanugage tag: **.** (period) for decimal separator and **$** for currency symbol. | "$ 1234567.89" |
+| **Text( 1234567.89, "[$-es-ES]&euro; #,###", "es-ES" )** | Interprets **,** as a decimal separator.  The result language tag has been set to "fr-FR" which will result in **,** (comma) being used as the decimal separator and **&euro;** as the currency symbol.  | "&euro; 1234567,89" |
+| **Text( Date(2016,1,31), "dddd mmmm d" )** | Returns the weekday, month, and day of the month in the language of the current user. Since none of the placeholders are language dependent, there is no need for a format text language tag.  | "Saturday January 31" |
+| **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** | Returns the weekday, month, and day of the month in the "es-ES" language. | "domingo enero 31" |
