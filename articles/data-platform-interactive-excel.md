@@ -1,10 +1,10 @@
 <properties
-	pageTitle="Open entity data in Excel | Microsoft Common Data Model"
+	pageTitle="Open entity data in Excel | Microsoft PowerApps"
 	description="Open entity data in Excel for interactive viewing and editing"
 	services="powerapps"
 	documentationCenter="na"
 	authors="chrisgarty"
-	manager="erikre"
+	manager="robinarh"
 	editor=""
 	tags=""/>
 
@@ -28,7 +28,7 @@ Opening entity data in Excel allows for quick and easy viewing and editing of da
 ## Open entity data in Excel
 
 1. In your web browser, open [powerapps.com](https://web.powerapps.com) and sign in.
-1. In the left navigation pane, click or tap **Manage > Entities**. All of the entities will be shown.
+1. In the left navigation pane, click or tap **Entities**. All of the entities will be shown.
 1. Click the actions menu **"..."** to the right of the desired Entity
 1. Click **Open in Excel** and open the workbook that is provided. The generated workbook has binding information for the desired entity, a pointer to your environment, and a pointer to the PowerApps Excel Add-in.  
 1. In Excel, click **Enable editing** to allow the PowerApps Excel Add-in to run. The Excel Add-in will run in a task pane on the right side of the workbook.
@@ -80,4 +80,4 @@ If you encounter a troublesome situation not detailed here, then contact us via 
 ## Next steps ##
 - [Manage fields in an entity](data-platform-manage-fields.md)
 - [Define relationships between entities](data-platform-entity-lookup.md)
-- [Create an app using Common Data Model](data-platform-create-app.md)
+- [Generate an app by using a Common Data Service database](data-platform-create-app.md)
