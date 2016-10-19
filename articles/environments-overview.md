@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/13/2016"
+   ms.date="10/19/2016"
    ms.author="ricksal"/>
 
 # Environments Overview
@@ -46,15 +46,12 @@ The Default environment is available for every user, and is shared by all users.
 
 Now that Flow is in general availability (GA), the following table lists what U.S. users and non-U.S. users can expect:
 
-User | What happens |
-
-Preview user in U.S. | Automatically uses the default environment
-
-Preview user not in U.S. | Choose to use an environment; or use the legacy experience, which is no environment. With the legacy experience, existing flows can be updated, but new flows cannot be created.
-
-New user in the U.S. | Automatically uses the default environment
-
-New user not in the U.S. | Automatically uses the default environment
+| User | What happens |
+|-------|--------------|
+|Preview user in U.S. | Automatically uses the default environment|
+|Preview user not in U.S. | Choose to use an environment; or use the legacy experience, which is no environment. With the legacy experience, existing flows can be updated, but new flows cannot be created.|
+|New user in the U.S. | Automatically uses the default environment|
+|New user not in the U.S. | Automatically uses the default environment|
 
 A *Preview user* is someone who was using Microsoft Flow before it's release to General Availability (GA).
 
