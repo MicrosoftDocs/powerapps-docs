@@ -60,8 +60,8 @@ You can export and import entities, picklists, and translation sets as follows:
 
 + **Standard entities** – Customizations are moved across environments. (You can't modify the out-of-box fields of standard entities.)
 + **Custom entities** – Custom entities are moved across environments.
-+ **Standard pick lists** – Standard pick lists are moved across environments. (You can't modify the out-of-box fields of standard pick lists.)
-+ **Custom pick lists** – Custom pick lists are moved across environments.
++ **Standard picklists** – Standard picklists are moved across environments. (You can't modify the out-of-box fields of standard pick lists.)
++ **Custom picklists** – Custom picklists are moved across environments.
 + **Translation sets** – Translation sets are moved across environments. For more information, see [Translation sets](translation-sets.md).
 
 ### Permission sets and roles
