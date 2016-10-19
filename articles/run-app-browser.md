@@ -1,10 +1,10 @@
 <properties
     pageTitle="Use apps in a web browser | Microsoft PowerApps"
-    description="Walkthrough of how to use PowerApps in the web browser"
+    description="Walkthrough of how to use spps in the web browser"
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="karthik-1"
+    authors="fikaradz"
     manager="erikre"
     editor=""
     tags=""
@@ -15,44 +15,42 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="05/03/2016"
-    ms.author="karthikb"/>
+    ms.date="10/12/2016"
+    ms.author="fikaradz"/>
 
 # Using apps in a web browser #
-PowerApps can run on iOS, Android, and a web browser. Apps running in a browser match the experience as apps running on phones and tablets. Using apps in a browser may be the only option when the store app is not available on a specific platform, or cannot be accessed due to your organization policies.
+You can run all your Dynamics 365 apps in a web browser. All your apps can quickly be accessed via the homepage portal or the task pane.
 
-## What you need to get started ##
-- Either of the following:
-	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).  
-	- An app that someone else created and shared with view permissions.
-- A supported browser:
-	- Edge
-	- Internet Explorer 11 and above
-	- Chrome v47 and above
-	- Safari on iOS 9 and above
-	- Firefox
+## Dynamics 365 homepage portal ##
+
+The homepage portal is the home to all your Dynamics 365 apps.  It can be accessed via the Dynamics 365 button in your Office 365 waffle.  
+
+Once you are on the home page you can see your pinned apps as well as all apps that you have installed or were pushed to you by the administrator. Simply click on an app tile to launch the app or the ellipsis to find out more details about the app.
+
+If you are having trouble finding an app, start entering the app name into the **search box** to filter your app list.  You can also filter by app environment in the **Filter** pane.
+
+If you have recently installed a new app it may not show in your app list immediately.  Clicking on **Refresh** will ensure that your app list is updated with all your apps.  Note that this process may take up to a minute.
+
+## Task pane ##
+
+The task pane gives you quick access to all your apps.  It is accessed by clicking on the Dynamics 365 toggle-button on the Dynamics 365 header, which is visible on top of all your Dynamics 365 apps.
+
+You can quickly launch one of your pinned apps from the task pane or find any of your apps via "My apps" sub-menu.
+
+
+## Pinning an app ##
+
+Quickly access your favorite apps from both the homepage and the task pane by pinning them.  To pin an app select "Pin app" from the ellipsis menu on the app tile in both the task pane and the home page.
 
 ## Launching an app ##
-To use PowerApps inside a browser, do either of the following:
+To launch an app simply click on its tile on either the Dynamics 365 home page portal or the task pane.
 
-**Option 1: Launch apps from powerapps.com**
-
-1. Sign in to [powerapps.com](http://web.powerapps.com). Select **Apps** from the left navigation of the screen:  
-	![Listing of apps in powerapps.com](./media/run-app-browser/portal-apps.png)  
-2. Select the app. The app details page opens.
-3. In the right top view, select the **Play** icon to run the app in the browser:  
-	![Play an app](./media/run-app-browser/portal-play.png)
-
-
-**Option 2: Launch apps directly from web URLs shared in email**
-
-1. For Apps shared with you, you get an email with the link to the app
-2. Select the link to launch the app in the browser
+You can also access an app directly via its URL.  This allows you to share apps via email links as well as bookmark them in your web browser.
 
 ## Sign in to PowerApps ##
-If the app is opened from powerapps.com, chances are you already signed in to PowerApps. If you are launching the app from the web link, you are prompted to sign in using your Azure Active Directory credentials:  
+If the app is opened from dynamics.com, chances are you already signed in to Dynamics 365. If you are launching the app from the web link, you are prompted to sign in using your Azure Active Directory credentials:  
 
-![Login user](./media/run-app-browser/web-login.png)
+
 
 ## Give consent ##
 If the app requires a connection to a data sources, or required consent to use the device, you are prompted for the configuration before using the app:  
@@ -60,17 +58,3 @@ If the app requires a connection to a data sources, or required consent to use t
 ![Connection](./media/run-app-browser/app-connection.png)
 
 Typically, you are only prompted the first time.
-
-
-## Exit the app ##
-There are several ways you can exit or close the app:
-
-- Close the browser tab or navigating to a different website URL
-- Or, select the Home icon from the navigation bar
-
-	![Navbar](./media/run-app-browser/web-player-navbar.png)
-
-## Error and Warnings ##
-If the app contains controls that aren't supported in the browser, then a warning header on the top of the app window displays a link to download the mobile app.
-
-If the app cannot be launched due to invalid links or permission issues, then the error message telling you why is displayed.
