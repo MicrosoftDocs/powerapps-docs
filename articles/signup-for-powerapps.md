@@ -15,7 +15,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/07/2016"
+    ms.date="10/19/2016"
     ms.author="ricksal;jamesol"/>
 
 # Sign up for PowerApps #
@@ -38,15 +38,17 @@ If you try to sign up with a personal email address, a message indicates that yo
 
 	If you're viewing this content on a phone, click or tap the menu icon in the upper-right corner, and then click or tap **Sign up free**.
 
-1. In the dialog box, type your work or school email address, and then click or tap **Submit**.  
+  ![](./media/signup-for-powerapps/sign-up.png)
+
+2. In the dialog box, type your work or school email address, and then click or tap **Submit**.  
 
 	![](./media/signup-for-powerapps/get-started.png)
 
-4. Make sure you've entered the correct email address and click **Sign up**:
+3. Make sure you've entered the correct email address and click or tap **Sign up**:
 
 	![](./media/signup-for-powerapps/BoxPortal_GettingStarted.png)
 
-5. If your account doesn't exist within an organization, you get a message to check your email:
+4. If your account doesn't exist within an organization, you get a message to check your email:
 
 	![](./media/signup-for-powerapps/BoxPortal_CheckYourEmail.png)
 

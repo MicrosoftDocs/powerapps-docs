@@ -30,9 +30,9 @@ Here you learn how to perform administrative tasks for environments.
 2. Enter the following info:
 
 	| Property | Description |
+	|------|------------------|
 	| Name | Enter the name of your environment, such as Dev/Test, or Sandbox. |
 	| Location | Choose the location to host your environment. We recommend using a location closest to your users. For example, if your app users are in London, then choose a Europe location. If your app users are in New York, then choose a U.S. location. |
-
 	| Create database automatically | Check this setting to create the Common Data Model. The Common Data Model is available with some licenses. So if you don't see this property, then it's not included with your license. |
 
 	![](./media/environment-admin/new-environment.png)
@@ -43,12 +43,17 @@ Here you learn how to perform administrative tasks for environments.
 
 1.	In the PowerApps admin center, select an environment to open its properties. The General properties show more details, including who "owns" each environment, its geographic location, and when it was created. You can also upgrade your plan in these properties.
 
+	![](./media/environment-admin/choose-environment.png)
+
+2. In the details page, press or click **Security**.
+
+	![](./media/environment-admin/environment-detail.png)
+
 3.	In the Access properties, Admin and Maker are listed. Use these properties to give users Admin privileges, or Maker privileges to the environment.
 
 	| Task | Maker | Admin |
-
+	|------|--------|-------|
 	| Create Flows | ✔ | ✔ |
-
 	| Delete Flows | ✔ | ✔ |
 
 	And so on...
