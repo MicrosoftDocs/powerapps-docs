@@ -20,11 +20,11 @@
 
 # Patch function in PowerApps #
 
-Modifies or creates a [record](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md), or merges records outside of a data source.
+Modifies or creates one or more [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md), or merges records outside of a data source.
 
 ## Overview ##
 
-Use the **Patch** function to modify a record of a data source.  The values of specific [properties](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties.
+Use the **Patch** function to modify one or more records of a data source.  The values of specific [properties](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties.
 
 Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. You can use this behavior to build a [single screen](../working-with-data-sources.md) for both creating and editing records.  
 
@@ -48,6 +48,14 @@ When you update a data source, one or more issues may arise. Use the **[Errors](
 
 Related functions include the **[Update](function-update-updateif.md)** function, which you can use to replace an entire record, and the **[Collect](function-clear-collect-clearcollect.md)** function, which you can use to create a record.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
 
+### Modify or create a set of records in a data source ###
+
+**Patch** can also be used to create or modify multiple records with a single call.
+
+Instead of passing a single base record, a table of base records can be provided in the second argument.  Change records are provided in a table as well, corresponding one-for-one with the base records.  The number of records in each change table must be the same as the number of records in the base table.
+
+When using **Patch** in this manner, the return value is also a table with each record corresponding one-for-one with the base and change records.
+
 ### Merge records outside of a data source ###
 
 Specify two or more records that you want to merge. Records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
@@ -65,6 +73,16 @@ Specify two or more records that you want to merge. Records are processed in ord
 - *BaseRecord* – Required. The record to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](function-defaults.md)** is used, a record is created.
 
 - *ChangeRecord(s)* – Required.  One or more records that contain properties to modify in the *BaseRecord*.  Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
+
+#### Modify or create a set of records in a data source ####
+
+**Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1*, [, *ChangeRecordTable2*, … ] ) 
+
+- *DataSource* – Required. The data source that contains the records that you want to modify or will contain the records that you want to create.
+
+- *BaseRecordTable* – Required. A table of records to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](function-defaults.md)** is used, a record is created.
+
+- *ChangeRecordTable(s)* – Required.  One or more tables of records that contain properties to modify for each record of the *BaseRecordTable*.  Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
 #### Merge records ####
 

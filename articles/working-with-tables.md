@@ -192,7 +192,92 @@ Properties that return records:
 
 - **Selected** - Applies to galleries and list boxes. Returns the currently selected record.
 - **Updates** - Applies to galleries.  Pulls together all the changes that a user makes in a data-entry form.
-- **[Update](functions/function-update-updateif.md)** Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
+- **[Update](functions/function-update-updateif.md)** - Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
+
+## Record scope ##
+
+Some functions operate by evaluating a formula across all the records of a table individually.  The formula's result is used in various ways:  
+
+- **Filter**, **Lookup** - Formula determines if the record should be included in the output.
+- **Sort** - Formula provides the value to sort the records on.
+- **Concat** - Formula determines the strings to concatenate together.
+- **ForAll** - Formula can return any value, potentially with a side effect.
+- **Distinct** - Formula returns a value, used to identify duplicate records.  
+- **AddColumns** - Formula provides the value of the added field.
+- **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
+
+Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers.  You can also reference control properties and other values from throughout your app. 
+
+For example, take a table of **Products**:
+
+![](media/working-with-tables/requested.png)
+
+To determine if any of any of these products had more requested than is available:
+
+**Filter( Products, 'Quantity Requested' > 'Quantity Available' )**
+
+The first argument to **Filter** is the table of records to operate on, and the second argument is a formula.  **Filter** creates a record scope for evaluating this formula in which the fields of each record are available, in this case **Product**, **Quantity Requested**, and **Quantity Available**.  The result of the comparison determines if each record should be included in the result of the function:
+
+![](media/working-with-tables/needed.png)
+
+Adding to this example, we can calculate how much of each product to order:
+
+**AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' )**
+
+Here we are adding a calculated column to the result.  **AddColumns** has its own record scope that it uses to calculate the difference between what has been requested and what is available.
+
+![](media/working-with-tables/toorder.png)
+
+Finally, we can reduce the result table to just the columns that we desire:
+
+**ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
+
+![](media/working-with-tables/toorderonly.png)
+
+Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.  
+
+### Disambiguation ###
+
+Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](operators.md) operator:
+
+* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.  
+* To access global values, such as data sources, collections, and context variables, use the pattern **[@*ObjectName*]** (without a table designation).
+
+If the table being operated upon is an expression, such as **Filter( *table*, ... )**, then the disambiguation operator cannot be used.  Only the innermost record scope can access fields from this table expression, by not using the disambiguation operator.
+
+For example, imagine having a collection **X**:
+
+![](media/working-with-tables/X.png)
+
+You can create this collection with **ClearCollect( X, \[1, 2\] )**. 
+
+And another collection **Y**:
+
+![](media/working-with-tables/Y.png)
+
+You can create this collection with **ClearCollect( Y, ["A", "B"] )**.
+
+In addition, define a context variable named **Value** with this formula: **UpdateContext( {Value: "!"} )**
+
+Let's put it all together.  In this context, the following formula:
+
+* **Ungroup( ForAll( X, ForAll( Y, Y[@Value] & Text( X[@Value] ) & [@Value] ) ), "Value" )**
+
+produces this table: 
+
+![](media/working-with-tables/XY.png)
+
+What is going on here?  The outermost **ForAll** function defines a record scope for **X**, allowing access to the **Value** field of each record as it is processed.  It can be accessed by simply using the word **Value** or by using **X[@Value]**.
+
+The innermost **ForAll** function defines another record scope for **Y**.  Since this table also has a **Value** field defined, using **Value** here refers to the field in **Y**'s record and no longer the one from **X**.  Here, to access **X**'s **Value** field, we must use the longer version with the disambiguation operator.
+
+Since **Y** is the innermost record scope, accessing fields of this table do not require disambiguation, allowing us to use this formula with the same result:
+
+* **Ungroup( ForAll( X, ForAll( Y, Value & Text( X[@Value] ) & [@Value] ) ), "Value" )**
+
+All the **ForAll** record scopes override the global scope.  The **Value** context variable we defined is not available by name without the disambiguation operator.   To access this value we must use **[@Value]**. 
+
+**Ungroup** flattens the result, since nested **ForAll** functions will result in a nested result table.
 
 ## Inline syntax ##
 
@@ -229,4 +314,3 @@ You can create single-column tables by specifying values in square brackets. The
 For example, **[ 1, 2, 3, 4 ]** is equivalent to **Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )** and returns this table:
 
 ![](media/working-with-tables/inline-table.png)
-

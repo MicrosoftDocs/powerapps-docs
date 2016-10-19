@@ -69,7 +69,6 @@ If there are no errors, the table that **Errors** returns will be [empty](functi
 **Errors**( *DataSource* [, *Record* ] )
 
 - *DataSource* – Required. The data source for which you want to return errors.
-
 - *Record* – Optional.  A specific record for which you want to return errors. If you don't specify this argument, the function returns errors for the entire data source.
 
 ## Examples ##

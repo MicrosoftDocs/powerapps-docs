@@ -24,7 +24,9 @@ Concatenates individual strings of text and strings in [tables](../working-with-
 
 ## Description ##
 
-The **Concat** function concatenates the result of a formula applied across all the [records](../working-with-tables.md#records) of a table, resulting in a single string.  You can specify a [column](../working-with-tables.md#columns) of the table in the formula and use this function to summarize the strings of a table, just as the **[Sum](function-aggregates.md)** function does for numbers.
+The **Concat** function concatenates the result of a formula applied across all the [records](../working-with-tables.md#records) of a table, resulting in a single string. Use this function to summarize the strings of a table, just as the **[Sum](function-aggregates.md)** function does for numbers.
+
+[AZURE.INCLUDE [record-scope](../../includes/record-scope.md)] 
 
 The **Concatenate** function concatenates a mix of individual strings and a single-column table of strings. Used with individual strings, this function is equivalent to using the **&** [operator](operators.md). You can use a formula that includes the **[ShowColumns](function-table-shaping.md)** function to create a single-column table from a table that has multiple columns.
 
