@@ -23,7 +23,7 @@ If you've created multiple environments to support the development of your datab
 ## Why use multiple environments?
 Each environment contains resources, such as entities, flows, and apps, that you create or modify during the development process. 
 
-Typically, development is done in the same environment that is used by the organization's end users. This environment is known as the default environment. It's relatively easy to manage resource changes in the same environment. The app maker validates the changes to make sure that all critical business processes and applications are functional, and then releases the app.
+Typically, development is done in the same environment that is used by the organization's end users. This environment is known as the default environment. It's relatively easy to manage resource changes in the same environment. You validate the changes to make sure that all critical business processes and applications are functional, and then you release the app.
 
 Sometimes, development and testing are done in separate environments, and changes are moved to the default environment when they are ready to be used by end users. There are several reasons why you might use separate environments. For example, you might have used a separate environment when you initially evaluated the system. Alternatively, you might want to minimize the risk that is involved when changes are made to the default environment. Separate environments provide isolation, because you make your changes in an environment that isn't the default environment. Depending on the extent of the risks, you might create an additional staging environment. In this case, you have a development environment, a staging environment, and a default environment.
 
