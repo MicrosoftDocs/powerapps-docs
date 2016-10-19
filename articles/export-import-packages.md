@@ -33,7 +33,7 @@ You move resources through separate export and import processes, by using a pack
 The functionality for both resource import and resource export is available in the **Environments** section of the administrator portal. Both export and import occur in the context of a selected environment.
 
 ### Export all resources
-If you select **All resources** as an option, the export package contains all changes to entities, pick lists, translation sets, permission sets, and roles. This option lets you move all the contents of one environment to another environment.
+If you select **All resources** as an option, the export package contains all changes to entities, picklists, translation sets, permission sets, and roles. This option lets you move all the contents of one environment to another environment.
 
 1. On [admin.powerapps.com](https://admin.powerapps.com), in the left navigation pane, click **Environments**.
 1. Select the source environment.
@@ -55,8 +55,8 @@ If the package is only partially applied, you receive an error message that desc
 ## Resource types
 The development process can involve changes to many types of resources. For example, if you update an app, you might add, remove, or update several entities or connections. Changes to most, if not all, resource types can be moved across environments. The following sections describe the types of resources that you can move.
 
-### Entities, pick lists, and translation sets
-You can export and import entities, pick lists, and translation sets as follows:
+### Entities, picklists, and translation sets
+You can export and import entities, picklists, and translation sets as follows:
 
 + **Standard entities** – Customizations are moved across environments. (You can't modify the out-of-box fields of standard entities.)
 + **Custom entities** – Custom entities are moved across environments.
