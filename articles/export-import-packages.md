@@ -30,7 +30,7 @@ Sometimes, development and testing are done in separate environments, and change
 ## Moving resource changes
 You move resources through separate export and import processes, by using a package (.pkg) file. The package file is exported, saved to local storage, sent to the administrator of the target environment, and then imported into the target environment. The import process is often followed by validation testing to help guarantee that no critical business processes have been adversely affected.
 
-The functionality for both resource import and resource export is available in the **Environments** section of the administrator portal. Both export and import occur in the context of a selected environment.
+The functionality for both resource import and resource export is available in the **Environments** section of the admin center. Both export and import occur in the context of a selected environment.
 
 ### Export all resources
 If you select **All resources** as an option, the export package contains all changes to entities, picklists, translation sets, permission sets, and roles. This option lets you move all the contents of one environment to another environment.
