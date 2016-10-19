@@ -15,11 +15,13 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/02/2016"
-    ms.author="jamesol"/>
+    ms.date="10/07/2016"
+    ms.author="ricksal;jamesol"/>
 
 # Sign up for PowerApps #
 This article shows you how to sign up for a PowerApps account. For administration information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
+
+## TBD: UPDATE with new content
 
 ## What email addresses can you use with PowerApps ##
 To sign up for PowerApps, enter your work or school email address.

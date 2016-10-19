@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="jamesol-msft"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""
  />
@@ -15,11 +15,13 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/02/2016"
-    ms.author="jamesol"/>
+    ms.date="10/07/2016"
+    ms.author="ricksal;jamesol"/>
 
 # PowerApps in your organization Q&A
 This topic describes how users in your organization can use PowerApps, and how you can control the PowerApps service.
+
+## TBD UPDATE this content
 
 ## Sign up for PowerApps
 

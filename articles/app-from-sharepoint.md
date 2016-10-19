@@ -5,7 +5,7 @@
    suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
-   manager="erikre"
+   manager="anneta"
    editor=""
    tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/03/2016"
+   ms.date="10/16/2016"
    ms.author="anneta"/>
 
 # Generate an app to manage data in a SharePoint list #
@@ -40,7 +40,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 		For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](create-app-browser.md).
 
-1. Under **Create an app from your data**, click or tap **Phone layout**.
+1. Under **Start with your data**, click or tap **Phone layout** on the SharePoint tile.
 
 	![](./media/app-from-sharepoint/sharepoint-tile.png)
 
