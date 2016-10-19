@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="nimakms"
-	manager="robinarh"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -35,7 +35,7 @@ The functionality for both resource import and resource export is available in t
 ### Export all resources
 If you select **All resources** as an option, the export package contains all changes to entities, picklists, translation sets, permission sets, and roles. This option lets you move all the contents of one environment to another environment.
 
-1. On [admin.powerapps.com](https://admin.powerapps.com), in the left navigation pane, click **Environments**.
+1. In the [admin center](https://admin.powerapps.com), in the left navigation pane, click **Environments**.
 1. Select the source environment.
 1. In the upper right, click **Export resources**.
 1. When you receive an "Export completed" message, save the package file in local storage.
@@ -44,7 +44,7 @@ If you select **All resources** as an option, the export package contains all ch
 
 The first step is to select a package file that was exported from the source environment. The import process validates, analyzes, and tries to import the package.
 
-1. On [admin.powerapps.com](https://admin.powerapps.com), in the navigation pane, click **Environments**.
+1. In the [admin center](https://admin.powerapps.com), in the navigation pane, click **Environments**.
 1. Select the target environment.
 1. In the upper right, click **Import resources**.
 1. Click **Select**, and browse to a package file in local storage.
