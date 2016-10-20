@@ -24,7 +24,7 @@ Learn how to migrate an app from one environment to another.
 ## The scenario
 One common scenario where you may want to migrate apps is where you have a Test or Dev environment and a Production environment. Here, developers and testers have wide access to the apps. When it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
 
-Another scenario is one where each customer has their own environment and data, and when a new customer is added, a new environment is created for them, and you would migrate a number of apps into their environment.
+Another scenario is one where each customer has their own environment and data. When a new customer is added, a new environment is created for them, and you would migrate apps into their environment.
 
 ## Migrating an app
 
