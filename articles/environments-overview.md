@@ -120,6 +120,6 @@ At present you cannot delete an environment.
 
 ### What tools can create environments?
 
-You can create environments from the PowerApps Admin center. For more information, see [Environment Administration](environment-administration.md).
+You can create environments from the PowerApps admin center. For more information, see [Environment Administration](environment-administration.md).
 
 You cannot create environments from PowerApps Studio or PowerApps Mobile.
