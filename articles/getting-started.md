@@ -15,7 +15,7 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="08/18/2016"
+   ms.date="10/20/2016"
    ms.author="anneta"/>
 
 # Introduction to PowerApps #
@@ -30,13 +30,13 @@ To generate an app automatically, you just need to specify a data source, as thi
 
 The video is based on an Excel workbook in the cloud, but you can also generate apps from other types of data sources, such as these:
 
-- the [Microsoft Common Data Model](data-platform-intro.md)
+- the [Common Data Service](data-platform-intro.md)
 - a custom SharePoint list
 - a SQL Server database
 - Salesforce
-- Dynamics CRM
+- Dynamics 365
 
-For step-by-step instructions, see [Create an app to manage data in SharePoint](app-from-sharepoint.md). Even though the topic is designed for SharePoint, the same principles apply to other types of data sources.
+For step-by-step instructions, see [Create an app to manage data in SharePoint](app-from-sharepoint.md). The topic is designed for SharePoint, but the same principles apply to other types of data sources.
 
 ## Customize an app ##
 If the generated app doesn't meet your needs by default, you can [customize it](customize-card.md). You might, for example, want to show data in a different kind of UI element (known as a control).
