@@ -28,8 +28,7 @@ There are several videos that demonstrate how to create and modify a database, a
 You can find more videos on YouTube on the [MS PowerApps](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) and [Microsoft Ignite](https://www.youtube.com/channel/UCrhJmfAGQ5K81XQ8_od1iTg) channels.
 
 ##Blog posts
-You can find how-to posts on the [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/).
+You can find how-to posts on the [PowerApps blog](https://powerapps.microsoft.com/blog/).
 
 ##Microsoft Ignite sessions
 Many sessions of the Microsoft Ignite conference were recorded and are available at [Microsoft Ignite On-Demand](https://myignite.microsoft.com/videos). Search for "PowerApps" and "Common Data Model."
-
