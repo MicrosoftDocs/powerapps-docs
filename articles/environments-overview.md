@@ -38,7 +38,7 @@ Let's say you want to create an app that inserts data somewhere. Your options ar
 
 •	Create a database using the [Microsoft Common Data Service](data-platform-intro.md) to store your data.
 
-Every environment can have zero or one Common Data Model, which is basically storage for your apps. The ability to create a database for your environment depends on the license you purchase for PowerApps. For more information see [Billing, Licensing, and SKUs](pricing-billing-skus.md).
+Every environment can have zero or one Common Data Service, which is basically storage for your apps. The ability to create a database for your environment depends on the license you purchase for PowerApps. For more information see [Billing, Licensing, and SKUs](pricing-billing-skus.md).
 
 When you create an app in an environment, that app is only permitted to connect to the data sources that are also deployed in that same environment, including connections, gateways, flows, and Common Data Services databases.  For example, let’s consider a scenario where you have created two environments named ‘Test’ and ‘Dev’ and created a Common Data Service database in each of the environments. If you create an app in the ‘Test’ environment, it will only be permitted to connect to the ‘Test’ database, it wont be able to connect to the ‘Dev’ database.  
 
@@ -78,7 +78,7 @@ Now that PowerApps is in general availability (GA) any user that participated in
 
 | User | What happens |
 |-------|--------------|
-|Preview user that created a Common Data Model database*|You will see an environment called “<Your name>’s environment” that contains your preview CDM database and any other apps that you built against the database. You will be added to the Maker role of this environment.|
+|Preview user that created a Common Data Service database*|You will see an environment called “<Your name>’s environment” that contains your preview CDM database and any other apps that you built against the database. You will be added to the Maker role of this environment.|
 |Preview user in U.S. | All the apps (except any that connected to a CDM database) that were built during the PowerApps preview period will be available in the default environment.|
 |Preview user not in U.S. | In addition to the default environment, you also see an environment called “<AAD tenant name> (from preview)” that contains all the apps (except any that connector to a CDM database) that were built during the PowerApps preview period. You will be added to the Maker of this environment.|
 
@@ -120,6 +120,6 @@ At present you cannot delete an environment.
 
 ### What tools can create environments?
 
-You can create environments from the PowerApps Admin portal. For more information, see [Environment Administration](environment-administration.md).
+You can create environments from the PowerApps Admin center. For more information, see [Environment Administration](environment-administration.md).
 
-You cannot create environments from the Studio, WebAuth, or Client experiences.
+You cannot create environments from PowerApps Studio or PowerApps Mobile.
