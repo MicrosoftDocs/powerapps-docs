@@ -62,7 +62,7 @@ Environments have two built-in roles that provide access to permissions within a
 
 *	Environment Maker can create new resources within an environment including apps, connections, custom APIs, gateways, and flows using Microsoft Flow.  Users or groups assigned to this role are not automatically given access to the environment’s database (if it exists) and must be given access separately. For more information, see the link to database security.
 
-Users or groups can be assigned to either of these two roles by an Environment Admin from the PowerApps Admin portal. For more information see [Environment Administration](environment-administration.md).
+Users or groups can be assigned to either of these two roles by an Environment Admin from the PowerApps admin center. For more information see [Environment Administration](environment-administration.md).
 
 ## The default environment
 A single default environment is automatically created by PowerApps for each tenant and shared by all users in that tenant. Whenever a new user signs-up for PowerApps they are automatically added to the Maker role of the default environment. The default environment is created in region that is closest to the default region of the AAD tenant.
@@ -87,7 +87,7 @@ A *Preview user* is someone who was using Microsoft Flow before it's release to 
 *Within X weeks of general availability (GA), the environments containing preview content will be marked as read-only. Users of these environments are asked to migrate their content to the default environment or another custom environment as soon as possible.*
 
 ## Choosing an environment
-With the introduction of environments, you will now see a new experience when you come to https://web.powerapps.com.  The apps, connections, and other items that are visible in the site will now be filtered based on the current environment that is selected.  Your current environment is specified in the environment picker in the top bar on the right. To choose a different environment, press or click the picker, and a list of available environments appears. Click or press the one you wish to enter.
+With the introduction of environments, you will now see a new experience when you come to https://web.powerapps.com.  The apps, connections, and other items that are visible in the site will now be filtered based on the current environment that is selected.  Your current environment is specified in the environment picker in the top bar on the right. To choose a different environment, click or tap the picker, and a list of available environments appears. Click or tap the one you wish to enter.
 
 NOTE: An environment will show up in the picker for you if you meet one of the following conditions:
 1.	You are a member of the ‘Admin’ role for the environment

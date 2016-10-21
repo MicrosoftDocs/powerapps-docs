@@ -25,7 +25,7 @@
 #### Question: How do I find out where my data is stored?
 All data is stored in the region that hosts the environment. For example, if your environment is created in the Europe region, then all your data is stored in Europe data centers.
 
-The Microsoft PowerApps admin center shows you the region. This portal is only available to Administrators:
+The Microsoft PowerApps admin center shows you the region. This is only available to Administrators:
 
 1. Go to [admin.powerapps.com](https://admin.powerapps.com), and sign-in with your work account.
 2. In the admin center, all existing environments are listed, including the **Region** where your data is stored:

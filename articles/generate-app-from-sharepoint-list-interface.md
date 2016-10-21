@@ -50,7 +50,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
     ![](./media/generate-app-from-sharepoint-list-interface/open-app-in-browser.png)
 
-7. Press Ctrl-S to save the generated app.
+7. Click or tap Ctrl-S to save the generated app.
 
   ![](./media/generate-app-from-sharepoint-list-interface/open-app.png)
 
