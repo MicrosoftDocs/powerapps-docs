@@ -18,21 +18,21 @@
    ms.date="10/19/2016"
    ms.author="ricksal"/>
 
-# Environments Overview
+# Environments overview
 Environments are a new concept in PowerApps. Put simply, anything within an environment, lives and dies within that environment. They serve as containers to separate apps that may have different roles (Test, Production), security requirements, target audiences, or whatever category you wishto specify.
 
 ## Environment scope
-An environment is bound to a geographic location, like the U.S. When you create a flow in an environment, that flow is routed to all datacenters in that geographic location (like the U.S.). If you delete the environment, then all flows within that environment are also deleted. This applies to any items you create in that environment, including connections, gateways, PowerApps, and more.
+An environment is bound to a geographic location, like the U.S. When you create a flow in an environment, that flow is routed to all datacenters in that geographic location (like the U.S.). If you delete the environment, then all flows within that environment are also deleted. This applies to any items you create in that environment, including connections, gateways, apps, and more.
 
 Let's say you want to create a flow that inserts data somewhere. Your options are:
 
 •	Insert data into an Excel file, and store the Excel file in a cloud storage account, such as OneDrive.
 
-•	Create your own SQL Database, and store your data in it.
+•	Create your own SQL database, and store your data in it.
 
-•	Use Common Data Model to store your data.
+•	Store your data in the Common Data Service.
 
-Every environment can have zero or one Common Data Model, which is basically storage for your flows. Access to a Common Data Model depends on the license you purchase; it is not included with the Free license.
+Every environment can have zero or one databases in the Common Data Service, which is basically storage for your flows. Access to the Common Data Service depends on the license you purchase; it is not included with the Free license.
 
 ## Choosing an environment
 

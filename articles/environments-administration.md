@@ -18,7 +18,7 @@
    ms.date="10/17/2016"
    ms.author="ricksal"/>
 
-# Environments Administration
+# Environments administration
 Here you learn how to perform administrative tasks for environments.
 
 ## How to create an environment
@@ -33,7 +33,7 @@ Here you learn how to perform administrative tasks for environments.
 	|------|------------------|
 	| Name | Enter the name of your environment, such as Dev/Test, or Sandbox. |
 	| Location | Choose the location to host your environment. We recommend using a location closest to your users. For example, if your app users are in London, then choose a Europe location. If your app users are in New York, then choose a U.S. location. |
-	| Create database automatically | Check this setting to create the Common Data Model. The Common Data Model is available with some licenses. So if you don't see this property, then it's not included with your license. |
+	| Create database automatically | Check this setting to enable the Common Data Service, which is available with some licenses. So if you don't see this property, then it's not included with your license. |
 
 	![](./media/environment-admin/new-environment.png)
 
@@ -60,20 +60,20 @@ Here you learn how to perform administrative tasks for environments.
 
 [TBD] adapt or eliminate the rest of this
 
-4. In Resources, all the items within the environment are listed, including Flows, Connections, Custom APIs, Gateways, and PowerApps.
+4. In Resources, all the items within the environment are listed, including flows, connections, custom APIs, gateways, and apps.
 
 ## Frequently asked questions
 Can I migrate a Flow in my U.S. environment, to a Europe environment?
 
 No, flows cannot be moved between environments. Currently, recreate the flow in the new environment.
 
-Which license includes Common Data Model?
+Which license includes Common Data Service?
 
 Office 365 Business Premium (Plan P2)
 
-Can the Common Data Model be used outside of an environment?
+Can the Common Data Service be used outside of an environment?
 
-No. Common Data Model requires an environment.
+No. Common Data Service requires an environment.
 
 What regions include Microsoft Flow?
 
