@@ -23,7 +23,7 @@ Here you learn how to perform administrative tasks for environments.
 
 ## How to create an environment
 
-1.	In the PowerApps admin center,  where any existing environments are displayed press or click **New environment**.
+1.	In the PowerApps admin center,  where any existing environments are displayed click or tap **New environment**.
 
 	![](./media/environment-admin/environment-list.png)
 
@@ -45,7 +45,7 @@ Here you learn how to perform administrative tasks for environments.
 
 	![](./media/environment-admin/choose-environment.png)
 
-2. In the details page, press or click **Security**.
+2. In the details page, click or tap **Security**.
 
 	![](./media/environment-admin/environment-detail.png)
 
