@@ -18,6 +18,7 @@
    ms.date="10/20/2016"
    ms.author="ricksal"/>
 
+
 # Environments Overview
 Environments are a new concept in PowerApps. Put simply, anything within an environment, lives and dies within that environment. An environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you leverage environments depends on your organization and the apps you are trying to build, for example:
 1.	You may choose to only build your apps in a single environment.
@@ -33,7 +34,7 @@ Let's say you want to create an app that inserts data somewhere. Your options ar
 
 •	Insert data into an Excel file, and store the Excel file in a cloud storage account, such as OneDrive.
 
-•	Create your own SQL Database, and store your data in it.
+•	Create your own SQL database, and store your data in it.
 
 •	Create a database using the [Microsoft Common Data Service](data-platform-intro.md) to store your data.
 
