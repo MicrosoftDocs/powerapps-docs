@@ -28,7 +28,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **Specify a description for each app that you create**.
 
-	By adding descriptions, app creators help users decide which apps to run.
+	By adding descriptions, app creators help users find the best apps for their needs.
 
 1. **Better support for the Back button on Android devices**.
 
@@ -36,7 +36,7 @@ For information about known limitations in this release, see [Common issues and 
 
 1. **Bug fixes and other improvements in performance, diagnostics, connections in shared apps, and accessibility**.
 
-	Apps open faster and are easier to use with a screen reader or just a keyboard. We've made gallery layouts more accessible. We've improved the dialog box in which you confirm or change connections when you open an app that someone shared with you. We've added a **Session details** option, which contains diagnostic information such as a session ID.
+	Apps open faster and are easier to use with a screen reader or just a keyboard. We've improved the dialog box in which you confirm or change connections when you open an app that someone shared with you. We've added a **Session details** option, which contains diagnostic information such as a session ID. We've made gallery layouts more accessible and made other improvements throughout the product.
 
 ## Release 2.0.531 ##
 
