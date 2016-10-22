@@ -1,6 +1,6 @@
 <properties
-    pageTitle="How to sign up for PowerApps (users) | Microsoft PowerApps"
-    description="Follow these steps in order to signup for PowerApps as an individual user."
+    pageTitle="How to sign up for PowerApps (admins) | Microsoft PowerApps"
+    description="Follow these steps in order to signup for PowerApps as an administrator."
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,71 +18,37 @@
     ms.date="10/22/2016"
     ms.author="ricksal;jamesol"/>
 
-# Sign up for PowerApps (users) #
-This article shows you how to sign up for a PowerApps account. For administration information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
+# Sign up for PowerApps (Administrator) #
+This article shows you how to sign up for a PowerApps account as an administrator. For more information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
-## TBD: UPDATE with new content
+## Pricing and choosing the right plan for my organization
 
-## What email addresses can you use with PowerApps ##
-To sign up for PowerApps, enter your work or school email address.
+There are a variety of pricing plan options to choose from. To find out the different scenarios and considerations involved in choosing a plan, see [Marketing Pricing Page](TBD).
 
-> **NOTE** Currently, consumer email services, telecommunication providers, government, and military addresses are not supported. This includes:  
->
-> - outlook.com, hotmail.com, gmail.com, and so on  
-> - .gov and .mil
+To learn more detail about what licenses are available to choose from for your organization, see [billing and pricing plans](billing-pricing-skus.md).
 
-If you try to sign up with a personal email address, a message indicates that you must use a work or school email address.
+## Signing up from powerapps.com
 
-## Sign up for PowerApps ##
-1. Near the upper-right corner, click or tap **Sign up free**.
+TBD: getting yourself signed up as an admin HOW??
 
-	If you're viewing this content on a phone, click or tap the menu icon in the upper-right corner, and then click or tap **Sign up free**.
+### Purchasing PowerApps Plan 1 for my organization
 
-  ![](./media/signup-for-powerapps/sign-up.png)
+### Purchasing PowerApps Plan 2 for my organization
 
-2. In the dialog box, type your work or school email address, and then click or tap **Sign up**.  
+## Signing up from Office 365
 
-	![](./media/signup-for-powerapps/get-started.png)
+TBD: getting yourself signed up as an admin HOW??
 
-3. If your account doesn't exist within an organization, you get a message to check your email:
+### Purchasing PowerApps Plan 1 trial for my organization
 
-	![](./media/signup-for-powerapps/BoxPortal_CheckYourEmail.png)
+### Purchasing PowerApps Plan 2 trial for my organization
 
-	If your account is part of an existing organization, you get a message asking you to sign in with that account. Select **Sign in**, and sign in with your work account:  
+### Purchasing PowerApps Plan 1 subscription for my organization
 
-	![](./media/signup-for-powerapps/BoxPortal_WeKnowYou.png)
+### Purchasing PowerApps Plan 2 subscription for my organization
 
-4. If you received an email, select the link within the email to verify your email address. After you verify your address, you may need to enter some additional information about yourself.
-
-5. If you have an existing organizational account, you see a message asking you to select **Start**:  
-  ![](./media/signup-for-powerapps/BoxPortal_AlmostThere.png)
-
-6. You're then taken to [powerapps.com][2], and you can start to use PowerApps.
-
-  ![](./media/signup-for-powerapps/PowerApps-portal.png)
-
-## Enhanced services
-
-### Upsell for P1
-
-TBD I don't know what our story is here.
-
-### Common Data Services
-
-You may wish to have your app store data in a database. Microsoft Common Data Services can enable you to do this, and you can sign up for a free 90-day trial of Microsoft's P2 License.
-
-1. To use Common Data Services, click or tap on **Start P2 trial**.
-
-  ![](./media/signup-for-powerapps/common-data-services.png)
-
-2. Click or tap **Start now**.
-
-  ![](./media/signup-for-powerapps/sign-up-for-P2.png)
-
-3. You can now start creating your database. For more information, see []().
-TBD: probably the wrong page to show...
-
-  ![](./media/signup-for-powerapps/cds-entities.png)
+## Add-ons
+These are coming soon, but are not supported yet.
 
 ## Troubleshoot ##
 In many cases, you register for PowerApps by following the sign-up steps in this topic. However, sign-up may fail because of any of several reasons. The following table summarizes some of the most common reasons and ways you can workaround these issues.
