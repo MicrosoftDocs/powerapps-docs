@@ -15,12 +15,16 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/10/2016"
+   ms.date="10/22/2016"
    ms.author="anneta"/>
 
 # Common issues and resolutions #
 
 ## Recently added/changed ##
+1. **Camera control on a Windows Phone**
+
+	An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/en-us/store/p/upgrade-advisor/9nblggh0f5g4)). 
+
 1. **Running an app on Windows 8.1**
 
 	If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile.
@@ -33,13 +37,13 @@
 
 	If you're running release 2.0.531 on Windows 8.1, you can't type in a **Text input** control if the device is set to a language that requires an IME window.
 
+## Older ##
 1. **Opening an app from a template**.
 
 	If you're running release 2.0.500 or older, an error message appears when you try to create an app from a template. You must upgrade to be able to use this feature.
 
 	If you're running release 2.0.510 or later, an warning might appear when you try to create an app from a template. However, you can close the message and create the app.
 
-## Older ##
 1. **Scanning a barcode**
 
 	For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
