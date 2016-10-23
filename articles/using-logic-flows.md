@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter=""
 	authors="stepsic-microsoft-com"
-	manager="erikre"
+	manager="anneta"
 	editor=""/>
 
 <tags
@@ -14,12 +14,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/08/2016"
-   ms.author="StepSic"/>
+   ms.date="10/23/2016"
+   ms.author="stepsic"/>
 
 # Start a flow in an app #
-
-You can use Microsoft Flow to create logic that performs one or more tasks when an event occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which runs even if you close PowerApps.
+You can use Microsoft Flow to create logic that performs one or more tasks when an event occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close PowerApps.
 
 **Prerequisites**
 
@@ -27,24 +26,24 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 - Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow ##
-1. Sign in to [powerapps.com](http://web.powerapps.com), select **Flows** in the left-hand navigation bar, and then select **Create a flow**.
+1. Sign in to [powerapps.com](http://web.powerapps.com), and then select **Flows** in the left-hand navigation bar.
 
-1. Select **Create from blank**.
+1. On the **My Flows** page, select **Create from blank**.
 
 	![Option to create a flow without using a template](./media/use-logic-flows/create-from-blank.png)
 
-1. Under **How would you like to start?**, select **PowerApps - When a control is selected**.
+1. In the box that says **Search for more triggers**, type or paste **PowerApps**, and then select the **PowerApps** option.
 
 	![Specify the trigger that initiates the flow](./media/use-logic-flows/set-trigger.png)
 
-1. Select the plus icon, and then select **Add an action**.
+1. Select **New step**, and then select **Add an action**.
 
 	![Option to add an action](./media/use-logic-flows/add-action.png)
 
-1. In the box that shows **What would you like to do next?**, specify an action for your flow.
+1. In the box that says **Search for more actions**, specify an action for your flow.
 
 	For example:
-	1. Type **SharePoint** in the box, and then select **SharePoint Online - Create item** in the list under that box.
+	1. Type **SharePoint** in the box, and then select **SharePoint - Create item** in the list under that box.
 
 		![Option to create a SharePoint item](./media/use-logic-flows/create-sharepoint-item.png)
 
@@ -56,25 +55,28 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 	1. In the **LIST NAME** box, select the list that you want to use.
 
-	1. Select the **TITLE** box, and then select **Ask in PowerApps**.
+	1. Click or tap the **TITLE** box, and then select **Add dynamic content**.
 
 		![Add Ask in PowerApps parameter to Title field](./media/use-logic-flows/ask-in-powerapps.png)
 
-1. In the **Flow name** box, type or paste a name for your flow, and then select **Done**.
+	1. In the list of parameters, select **Ask in PowerApps**.
+
+		![Add parameter](./media/use-logic-flows/add-parameter.png)
+
+1. Near the top of the screen, type or paste a name for your flow, and then select **Create flow**.
 
 	![Name and save your flow](./media/use-logic-flows/name-flow.png)
 
 ## Add a flow to an app ##
-
 1. In PowerApps, select **New** in the **File** menu (near the left edge of the screen).
 
-1. Under **Create an app**, select either **Phone layout** or **Tablet layout** on the **Blank app** tile.
+1. On the **Blank app** tile, select **Phone layout**.
 
 1. Add a **[Text input](controls/control-text-input.md)** control, and name it **RecordTitle**.
 
 1. Add a **[Button](controls/control-button.md)** control, and move it under **RecordTitle**.
 
-1. With the **[Button](controls/control-button.md)** control selected, select **Add a flow** on the **Action** tab.
+1. With the **[Button](controls/control-button.md)** control selected, select **Flows** on the **Action** tab.
 
 	![Flows option on the Action tab](./media/use-logic-flows/action-tab.png)
 
@@ -93,4 +95,4 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 1. Type or paste text in **RecordTitle**, and then click the **[Button](controls/control-button.md)** control.
 
-	A SharePoint item is created with the text you specified as the title.
+	A SharePoint item is created in the list you specified with the text you specified as the title.
