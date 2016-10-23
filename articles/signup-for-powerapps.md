@@ -105,7 +105,7 @@ You will need to consent to the terms of use by selecting **Start my trial** in 
 - If you need more time to evaluate powerApps, you can request to extend your trial period for 90 more days
 - Users taking advantage of this in-product PowerApps trial do not appear in the Office 365 admin portal as PowerApps Plan 2 trial users (unless they have another license to Office 365, Dynamics 365, or PowerApps).
 - If you are an IT Administrator wishing to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6].  You will need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.  [Learn more](signup-for-powerapps-admin.md)
-
+sd
 ## Purchase PowerApps Plan 1 as an individual ##
 You can purchase PowerApps Plan 1 from the start, or you can choose to upgrade to Plan 1 after your free Plan 2 trial has ended, however not all of the features of the trial may still be available to you (See [PowerApps pricing][3]). If your account is a part of an organization, you can purchase PowerApps Plan 1 as an individual if your organization has not disabled individual purchases.
 
@@ -169,15 +169,10 @@ In many cases, you register for PowerApps by following the sign-up steps in this
 | **Self-service signup disabled** <br> <br> You receive a message like the following during signup: <br> <br> `We can't finish signing you up. Your IT department has turned off signup for Microsoft PowerApps. Contact them to complete signup.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` | Your organization’s IT administrator has disabled self-service signup for PowerApps. <br> <br> To complete signup, contact your IT administrator and ask them to allow existing users to sign up for PowerApps and to allow new users to join your existing tenant.|
 | **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.` | Your organization uses IDs to sign in to Office 365 and other Microsoft services that are different than your email address.  For example, your email address might be Nancy.Smith@contoso.com but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
 
-## Next steps
-
-After you successfully sign up for PowerApps, you can start to create some apps. Here are some good resources:
-
-[Get started](getting-started.md)  
-[Run a sample app](open-and-run-a-sample-app.md)  
-[Run an app in a browser](run-app-browser.md)  
-[Run an app on a phone](run-app-client.md)  
+## See also
 [PowerApps in your organization Q&A](signup-question-and-answer.md)  
+[Purchasing PowerApps for your organization](signup-for-powerapps-admin.md)  
+More questions? [Try the PowerApps Community][7]
 
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
@@ -186,3 +181,4 @@ After you successfully sign up for PowerApps, you can start to create some apps.
 [4]: https://go.microsoft.com/fwlink/?linkid=832551
 [5]: https://go.microsoft.com/fwlink/?linkid=832552
 [6]: https://portal.office.com/Signup?OfferId=767ad45e-9508-479c-8109-2022f6ea4362
+[7]: https://community.powerapps.com

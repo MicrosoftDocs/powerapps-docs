@@ -1,5 +1,5 @@
 <properties
-    pageTitle="How to sign up for PowerApps (admins) | Microsoft PowerApps"
+    pageTitle="Purchasing PowerApps for your organization | Microsoft PowerApps"
     description="Follow these steps in order to signup for PowerApps as an administrator."
     services=""
     suite="powerapps"
@@ -15,7 +15,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/22/2016"
+    ms.date="10/23/2016"
     ms.author="ricksal;jamesol"/>
 
 # Sign up for PowerApps (Administrator) #
@@ -23,7 +23,7 @@ This article shows you how to sign up for a PowerApps account as an administrato
 
 ## Pricing and choosing the right plan for my organization
 
-There are a variety of pricing plan options to choose from. To find out the different scenarios and considerations involved in choosing a plan, see [Marketing Pricing Page](TBD).
+There are a variety of pricing plan options to choose from. To find out the different scenarios and considerations involved in choosing a plan, see [PowerApps pricing][3].
 
 To learn more detail about what licenses are available to choose from for your organization, see [billing and pricing plans](billing-pricing-skus.md).
 
@@ -73,3 +73,4 @@ After you successfully sign up for PowerApps, you can start to create some apps.
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
 [2]: http://go.microsoft.com/fwlink/p/?LinkId=708209
+[3]: https://go.microsoft.com/fwlink/?linkid=832550
