@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="aftowen"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="08/26/2016"
+   ms.date="10/23/2016"
    ms.author="anneta"/>
 
 # Scan a barcode in Microsoft PowerApps #
@@ -38,7 +38,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 	- [Open PowerApps](https://create.powerapps.com/api/start) in a browser on a device that has a camera.
 	- [Install PowerApps](http://aka.ms/powerappsinstall) from the Windows Store on a device that has a camera. Open PowerApps, sign in, and then click or tap **New** on the **File** menu (along the left edge).
 
-1. Under **Create an app**, click or tap **Phone layout** in the **Blank app** tile.
+1. Under **Start with a blank canvas or template**, click or tap **Phone layout** in the **Blank app** tile.
 
 	![Create an app from scratch](./media/scan-barcode/create-from-blank.png)
 
@@ -63,7 +63,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 	![Rename the barcode control](./media/scan-barcode/rename-barcode.png)
 
-## Add an Input text control ##
+## Add a Text input control ##
 1. On the **Insert** tab, click or tap **Text**, and then click or tap **Text input**.
 
 	If the **Insert** tab doesn't appear, maximize your PowerApps window.
@@ -76,7 +76,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 1. With the **Text input** control still selected, ensure that **Default** appears in the properties list, and then type or paste **MyScanner.Text** in the formula bar.
 
-	![Text property of the Text box control](./media/scan-barcode/text-property.png)
+	![Text property of the Text box control](./media/scan-barcode/default-text.png)
 
 ## Change the barcode type ##
 1. On the **Insert** tab, click or tap **Controls**, and then click or tap **Drop down**.
