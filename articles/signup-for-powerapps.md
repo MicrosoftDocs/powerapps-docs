@@ -1,6 +1,6 @@
 <properties
-    pageTitle="How to sign up for PowerApps (users) | Microsoft PowerApps"
-    description="Follow these steps in order to signup for PowerApps as an individual user."
+    pageTitle="Self-service sign up for PowerApps | Microsoft PowerApps"
+    description="Follow these steps in order to signup for PowerApps as an individual."
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -15,11 +15,13 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/22/2016"
+    ms.date="10/23/2016"
     ms.author="ricksal;jamesol"/>
 
-# Sign up for PowerApps (users) #
-This article shows you how to sign up for a PowerApps account. For administration information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
+# Self-service sign up for PowerApps #
+Signing up for PowerApps, as an individual, is easy! You can choose to use a PowerApps trial account, purchase PowerApps Plan 1, or purchase PowerApps Plan 2, even if you are in an existing organization. Once you have determined which you would like to use, this article will walk you through the steps to get up and running.
+
+For administration information, see [Purchase PowerApps for your organization](signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
 ## TBD: UPDATE with new content
 
