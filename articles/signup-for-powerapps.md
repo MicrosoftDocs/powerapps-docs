@@ -40,7 +40,7 @@ PowerApps is included in select Office 365 and Dynamics 365 plans. See [PowerApp
 
 If your Office 365 or Dynamics 365 plan includes PowerApps, you can access Power with the following steps:
 
-1. Browse to powerapps.com
+1. Browse to [powerapps.microsoft.com][4]
 
 1. Select **Sign in**
 
@@ -53,7 +53,7 @@ If your Office 365 or Dynamics 365 plan includes PowerApps, you can access Power
 ## PowerApps 90 days trial ##
 PowerApps does not offer a free account, but you can choose to try PowerApps Plan 2 for free for 90 days.  You will have access to all of the PowerApps Plan 2 features for the duration of the trial.  PowerApps Plan 2 has all of the features of Plan 1, and additional access to the Common Data Services and administrative features.  It also provides higher flow run capacity and data & file storage capacity in the Common Data Service.   To try a 90-day free trial of PowerApps Plan 2, you can do the following.
 
-1. Browse to powerapps.com
+1. Browse to [powerapps.microsoft.com][4]
 
 1. Near the upper-right corner, click or tap **Sign up free**.
 
@@ -61,26 +61,72 @@ PowerApps does not offer a free account, but you can choose to try PowerApps Pla
 
   ![](./media/signup-for-powerapps/sign-up-updated.png)
 
+  Or you can go to **Pricing** and select **Start free trial**.
+
+    ![](./media/signup-for-powerapps/start-free-trial.png)
+
 1. In the dialog box, type your work or school email address, and then click or tap **Sign up**.  
 
 	![](./media/signup-for-powerapps/get-started.png)
 
 1. If your account doesn't exist within an organization, you get a message to check your email:
 
-	![](./media/signup-for-powerapps/BoxPortal_CheckYourEmail.png)
+	![](./media/signup-for-powerapps/BoxPortal_CheckYourEmail_Updated.png)
 
 	If your account is part of an existing organization, you get a message asking you to sign in with that account. Select **Sign in**, and sign in with your work account:  
 
-	![](./media/signup-for-powerapps/BoxPortal_WeKnowYou.png)
+	![](./media/signup-for-powerapps/BoxPortal_WeKnowYou_Updated.png)
 
 1. If you received an email, select the link within the email to verify your email address. After you verify your address, you may need to enter some additional information about yourself.
 
 1. If you have an existing organizational account, you see a message asking you to select **Start**:  
-  ![](./media/signup-for-powerapps/BoxPortal_AlmostThere.png)
+  ![](./media/signup-for-powerapps/BoxPortal_AlmostThere_Updated.png)
 
 1. You're then taken to [powerapps.com][2], and you can start to use PowerApps.
 
-  ![](./media/signup-for-powerapps/PowerApps-portal.png)
+  ![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
+
+## Purchase PowerApps Plan 1 as an individual ##
+You can purchase PowerApps Plan 1 from the start, or you can choose to upgrade to Plan 1 after your free Plan 2 trial has ended, however not all of the features of the trial may still be available to you (See [PowerApps pricing][3]). If your account is a part of an organization, you can purchase PowerApps Plan 1 as an individual if your organization has not disabled individual purchases.
+
+To purchase PowerApps Plan 1 as an individual, you can do the following.
+
+1. Browse to [powerapps.microsoft.com][4]
+
+1. Select **Pricing**
+
+1. Select **Buy now** for PowerApps Plan 1
+
+  ![](./media/signup-for-powerapps/buy-now-plan-1.png)
+
+1. Answer the questions that are presented to guide the purchase. As an individual, there will be an option to select **Myself**.
+
+  ![](./media/signup-for-powerapps/question-plan-1-myself.png)
+
+  <<italics> **Note:** If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization. [Learn more](signup-for-powerapps-admin.md)
+
+1. You will need to provide information to make the purchase.
+
+## Purchase PowerApps Plan 2 as an individual ##
+You can purchase PowerApps Plan 2 from the start, or you can choose to upgrade to Plan 2 after your free Plan 2 trial has ended. If your account is a part of an organization, you can purchase PowerApps Plan 2 as an individual if your organization has not disabled individual purchases.
+
+To purchase PowerApps Plan 2 as an individual, you can do the following.
+
+1. Browse to [powerapps.microsoft.com][4]
+
+1. Select **Pricing**
+
+1. Select **Buy now** for PowerApps Plan 2
+
+  ![](./media/signup-for-powerapps/buy-now-plan-2.png)
+
+1. Answer the questions that are presented to guide the purchase. As an individual, there will be an option to select **Myself**.
+
+  ![](./media/signup-for-powerapps/question-plan-2-myself.png)
+
+  <<italics> **Note:** If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization. [Learn more](signup-for-powerapps-admin.md)
+
+1. You will need to provide information to make the purchase.
 
 ## Enhanced services
 
@@ -140,3 +186,4 @@ After you successfully sign up for PowerApps, you can start to create some apps.
 [1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
 [2]: http://go.microsoft.com/fwlink/p/?LinkId=708209
 [3]: https://go.microsoft.com/fwlink/?linkid=832550
+[4]: https://go.microsoft.com/fwlink/?linkid=832551
