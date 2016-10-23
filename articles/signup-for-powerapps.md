@@ -87,26 +87,24 @@ PowerApps does not offer a free account, but you can choose to try PowerApps Pla
   ![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
 
 ### Signing up for PowerApps Plan 2 trial as a Office 365, Dynamics 365, or PowerApps Plan 1 user
+If you already have access to PowerApps as a Office 365, Dynamics 365, or PowerApps Plan 1 user, you can optionally choose to try PowerApps Plan 2 for free. To try a 90-day free trial of Plan 2, sign into PowerApps, and try one of these PowerApps Plan 2 features:
+  - [Create and manage instances](signup-for-powerapps-admin.md)  of the Common Data Service.
+  - [Model your data](data-platform-intro.md) using the Common Data Service.
+  - [Create and manage environments](environments-administration.md) and [user policies](prevent-data-loss.md) from the [PowerApps admin center][5].
+  - [ Manage an on-premises data gateway](gateway-management.md) in PowerApps.  
 
+When you try any of these features, you will be prompted to start your free trial, just select **Start my trial**.
 
-TBD I don't know what our story is here.
+  ![](./media/signup-for-powerapps/trial-upsell.png)
 
-### Common Data Services
+You will need to consent to the terms of use by selecting **Start my trial** in order to being your 90-day Plan 2 trial.
 
-You may wish to have your app store data in a database. Microsoft Common Data Services can enable you to do this, and you can sign up for a free 90-day trial of Microsoft's P2 License.
+  ![](./media/signup-for-powerapps/trial-consent.png)
 
-1. To use Common Data Services, click or tap on **Start P2 trial**.
-
-  ![](./media/signup-for-powerapps/common-data-services.png)
-
-2. Click or tap **Start now**.
-
-  ![](./media/signup-for-powerapps/sign-up-for-P2.png)
-
-3. You can now start creating your database. For more information, see []().
-  TBD: probably the wrong page to show...
-
-  ![](./media/signup-for-powerapps/cds-entities.png)
+<@ricksal Need this in italics> **NOTES**
+- If you need more time to evaluate powerApps, you can request to extend your trial period for 90 more days
+- Users taking advantage of this in-product PowerApps trial do not appear in the Office 365 admin portal as PowerApps Plan 2 trial users (unless they have another license to Office 365, Dynamics 365, or PowerApps).
+- If you are an IT Administrator wishing to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6].  You will need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.  [Learn more](signup-for-powerapps-admin.md)
 
 ## Purchase PowerApps Plan 1 as an individual ##
 You can purchase PowerApps Plan 1 from the start, or you can choose to upgrade to Plan 1 after your free Plan 2 trial has ended, however not all of the features of the trial may still be available to you (See [PowerApps pricing][3]). If your account is a part of an organization, you can purchase PowerApps Plan 1 as an individual if your organization has not disabled individual purchases.
@@ -146,7 +144,7 @@ To purchase PowerApps Plan 2 as an individual, you can do the following.
 
   ![](./media/signup-for-powerapps/question-plan-2-myself.png)
 
-  <<italics> **Note:** If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization. [Learn more](signup-for-powerapps-admin.md)
+  <@ricksal Need this in italics> **Note:** If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization. [Learn more](signup-for-powerapps-admin.md)
 
 1. You will need to provide information to make the purchase.
 
@@ -186,3 +184,5 @@ After you successfully sign up for PowerApps, you can start to create some apps.
 [2]: http://go.microsoft.com/fwlink/p/?LinkId=708209
 [3]: https://go.microsoft.com/fwlink/?linkid=832550
 [4]: https://go.microsoft.com/fwlink/?linkid=832551
+[5]: https://go.microsoft.com/fwlink/?linkid=832552
+[6]: https://portal.office.com/Signup?OfferId=767ad45e-9508-479c-8109-2022f6ea4362
