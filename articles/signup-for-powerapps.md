@@ -86,6 +86,28 @@ PowerApps does not offer a free account, but you can choose to try PowerApps Pla
 
   ![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
 
+### Signing up for PowerApps Plan 2 trial as a Office 365, Dynamics 365, or PowerApps Plan 1 user
+
+
+TBD I don't know what our story is here.
+
+### Common Data Services
+
+You may wish to have your app store data in a database. Microsoft Common Data Services can enable you to do this, and you can sign up for a free 90-day trial of Microsoft's P2 License.
+
+1. To use Common Data Services, click or tap on **Start P2 trial**.
+
+  ![](./media/signup-for-powerapps/common-data-services.png)
+
+2. Click or tap **Start now**.
+
+  ![](./media/signup-for-powerapps/sign-up-for-P2.png)
+
+3. You can now start creating your database. For more information, see []().
+  TBD: probably the wrong page to show...
+
+  ![](./media/signup-for-powerapps/cds-entities.png)
+
 ## Purchase PowerApps Plan 1 as an individual ##
 You can purchase PowerApps Plan 1 from the start, or you can choose to upgrade to Plan 1 after your free Plan 2 trial has ended, however not all of the features of the trial may still be available to you (See [PowerApps pricing][3]). If your account is a part of an organization, you can purchase PowerApps Plan 1 as an individual if your organization has not disabled individual purchases.
 
@@ -127,29 +149,6 @@ To purchase PowerApps Plan 2 as an individual, you can do the following.
   <<italics> **Note:** If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization. [Learn more](signup-for-powerapps-admin.md)
 
 1. You will need to provide information to make the purchase.
-
-## Enhanced services
-
-### Upsell for P1
-
-TBD I don't know what our story is here.
-
-### Common Data Services
-
-You may wish to have your app store data in a database. Microsoft Common Data Services can enable you to do this, and you can sign up for a free 90-day trial of Microsoft's P2 License.
-
-1. To use Common Data Services, click or tap on **Start P2 trial**.
-
-  ![](./media/signup-for-powerapps/common-data-services.png)
-
-2. Click or tap **Start now**.
-
-  ![](./media/signup-for-powerapps/sign-up-for-P2.png)
-
-3. You can now start creating your database. For more information, see []().
-TBD: probably the wrong page to show...
-
-  ![](./media/signup-for-powerapps/cds-entities.png)
 
 ## Individual signup has been turned off ##
 When trying to sign up for PowerApps, you may encounter the following message.
