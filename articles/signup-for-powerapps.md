@@ -48,7 +48,7 @@ If your Office 365 or Dynamics 365 plan includes PowerApps, you can access it by
 
 1. Browse to [powerapps.microsoft.com][4], and then select **Sign in**.
 
-  ![](./media/signup-for-powerapps/home-sign-in.png)
+	![](./media/signup-for-powerapps/home-sign-in.png)
 
 1. You're then taken to [powerapps.com][2], and you can start to use PowerApps.
 
@@ -91,7 +91,7 @@ If you already have access to PowerApps through Office 365, Dynamics 365, or Pow
 
 1. You're then taken to [powerapps.com][2], and you can start to use PowerApps.
 
-  ![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
+	![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
 
 ### Start a free trial from within PowerApps ###
 If you already have access to PowerApps as a user of Office 365, Dynamics 365, or PowerApps Plan 1, you can try PowerApps Plan 2 for free. To start a 90-day free trial of Plan 2, sign into PowerApps, and then try one of these PowerApps Plan 2 features:
@@ -110,6 +110,7 @@ To start your trial, you will need to consent to the terms of use by selecting *
   ![](./media/signup-for-powerapps/trial-consent.png)
 
 **NOTES**
+
 - *If you need more time to evaluate PowerApps, you can request to extend your trial period for 90 more days*.
 - *Users who take advantage of this in-product PowerApps trial do not appear in the Office 365 admin portal as PowerApps Plan 2 trial users (unless they have another license to Office 365, Dynamics 365, or PowerApps)*.
 - *If you are an IT administrator who wants to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6]. You will need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.*  [Learn more](signup-for-powerapps-admin.md)
@@ -123,11 +124,11 @@ To purchase PowerApps Plan 1 as an individual:
 
 1. Select **Buy now** for PowerApps Plan 1.
 
-  ![](./media/signup-for-powerapps/buy-now-plan-1.png)
+	![](./media/signup-for-powerapps/buy-now-plan-1.png)
 
 1. Answer the questions that are presented to guide the purchase. As an individual, there will be an option to select **Myself**.
 
-  ![](./media/signup-for-powerapps/question-plan1-myself.png)
+	![](./media/signup-for-powerapps/question-plan1-myself.png)
 
 	**Note:** *If you are interested in purchasing PowerApps for your team or organization, [learn more](signup-for-powerapps-admin.md)*.
 
@@ -142,11 +143,11 @@ To purchase PowerApps Plan 2 as an individual.
 
 1. Select **Buy now** for PowerApps Plan 2.
 
-  ![](./media/signup-for-powerapps/buy-now-plan-2.png)
+	![](./media/signup-for-powerapps/buy-now-plan-2.png)
 
 1. Answer the questions that are presented to guide the purchase. As an individual, there will be an option to select **Myself**.
 
-  ![](./media/signup-for-powerapps/question-plan2-myself.png)
+	![](./media/signup-for-powerapps/question-plan2-myself.png)
 
 	**Note:** *If you are interested in purchasing PowerApps for your team or organization, [learn more](signup-for-powerapps-admin.md)*.
 
