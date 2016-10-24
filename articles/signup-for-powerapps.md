@@ -48,7 +48,7 @@ If your Office 365 or Dynamics 365 plan includes PowerApps, you can access Power
 
 1. You're then taken to [powerapps.com][2], and you can start to use PowerApps.
 
-  ![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
+	![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
 
 ## PowerApps 90 days trial ##
 PowerApps does not offer a free account, but you can choose to try PowerApps Plan 2 for free for 90 days.  You will have access to all of the PowerApps Plan 2 features for the duration of the trial.  PowerApps Plan 2 has all of the features of Plan 1, and additional access to the Common Data Services and administrative features.  It also provides higher flow run capacity and data & file storage capacity in the Common Data Service.   To try a 90-day free trial of PowerApps Plan 2, you can do the following.
@@ -101,29 +101,29 @@ You will need to consent to the terms of use by selecting **Start my trial** in 
 
   ![](./media/signup-for-powerapps/trial-consent.png)
 
-<@ricksal Need this in italics> **NOTES**
-- If you need more time to evaluate powerApps, you can request to extend your trial period for 90 more days
-- Users taking advantage of this in-product PowerApps trial do not appear in the Office 365 admin portal as PowerApps Plan 2 trial users (unless they have another license to Office 365, Dynamics 365, or PowerApps).
-- If you are an IT Administrator wishing to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6].  You will need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.  [Learn more](signup-for-powerapps-admin.md)
-sd
+**NOTES**
+- *If you need more time to evaluate powerApps, you can request to extend your trial period for 90 more days*.
+- *Users taking advantage of this in-product PowerApps trial do not appear in the Office 365 admin portal as PowerApps Plan 2 trial users (unless they have another license to Office 365, Dynamics 365, or PowerApps)*.
+- *If you are an IT administrator wishing to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6]. You will need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.*  [Learn more](signup-for-powerapps-admin.md)
+
 ## Purchase PowerApps Plan 1 as an individual ##
 You can purchase PowerApps Plan 1 from the start, or you can choose to upgrade to Plan 1 after your free Plan 2 trial has ended, however not all of the features of the trial may still be available to you (See [PowerApps pricing][3]). If your account is a part of an organization, you can purchase PowerApps Plan 1 as an individual if your organization has not disabled individual purchases.
 
 To purchase PowerApps Plan 1 as an individual, you can do the following.
 
-1. Browse to [powerapps.microsoft.com][4]
+1. Browse to [powerapps.microsoft.com][4].
 
-1. Select **Pricing**
+1. Select **Pricing**.
 
-1. Select **Buy now** for PowerApps Plan 1
+1. Select **Buy now** for PowerApps Plan 1.
 
   ![](./media/signup-for-powerapps/buy-now-plan-1.png)
 
 1. Answer the questions that are presented to guide the purchase. As an individual, there will be an option to select **Myself**.
 
-  ![](./media/signup-for-powerapps/question-plan-1-myself.png)
+  ![](./media/signup-for-powerapps/question-plan1-myself.png)
 
-  <<italics> **Note:** If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization. [Learn more](signup-for-powerapps-admin.md)
+	**Note:** *If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization*. [Learn more](signup-for-powerapps-admin.md)
 
 1. You will need to provide information to make the purchase.
 
@@ -132,19 +132,19 @@ You can purchase PowerApps Plan 2 from the start, or you can choose to upgrade t
 
 To purchase PowerApps Plan 2 as an individual, you can do the following.
 
-1. Browse to [powerapps.microsoft.com][4]
+1. Browse to [powerapps.microsoft.com][4].
 
-1. Select **Pricing**
+1. Select **Pricing**.
 
-1. Select **Buy now** for PowerApps Plan 2
+1. Select **Buy now** for PowerApps Plan 2.
 
   ![](./media/signup-for-powerapps/buy-now-plan-2.png)
 
 1. Answer the questions that are presented to guide the purchase. As an individual, there will be an option to select **Myself**.
 
-  ![](./media/signup-for-powerapps/question-plan-2-myself.png)
+  ![](./media/signup-for-powerapps/question-plan2-myself.png)
 
-  <@ricksal Need this in italics> **Note:** If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization. [Learn more](signup-for-powerapps-admin.md)
+  **Note:** *If you are interested in the option to purchase for your team or organization, you can about purchasing PowerApps for your organization*. [Learn more](signup-for-powerapps-admin.md)
 
 1. You will need to provide information to make the purchase.
 
@@ -153,7 +153,7 @@ When trying to sign up for PowerApps, you may encounter the following message.
 
 <@ricksal Need this in a gray box> Your IT department has turned off signup for PowerApps.
 
-  ![](./media/signup-for-powerapps/Individual-sign-up-turned-off.png)
+![](./media/signup-for-powerapps/Individual-sign-up-turned-off.png)
 
 This could be because your organization has disabled individual sign ups. It could also be because you purchased Office 365 through a partner. Learn more.
 
@@ -171,7 +171,7 @@ In many cases, you register for PowerApps by following the sign-up steps in this
 
 ## See also
 [PowerApps in your organization Q&A](signup-question-and-answer.md)  
-[Purchasing PowerApps for your organization](signup-for-powerapps-admin.md)  
+[Purchase PowerApps for your organization](signup-for-powerapps-admin.md)  
 More questions? [Try the PowerApps Community][7]
 
 <!--Reference links in article-->
