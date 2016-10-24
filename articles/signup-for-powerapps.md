@@ -74,7 +74,7 @@ If you already have access to PowerApps through Office 365, Dynamics 365, or Pow
 
 1. Under **Get started**, type your work or school email address, and then click or tap **Sign up**.  
 
-	![](./media/signup-for-powerapps/get-started.png)
+	![](./media/signup-for-powerapps/get-started-old.png)
 
 1. If your account doesn't exist within an organization, you get a message to check your email:
 
