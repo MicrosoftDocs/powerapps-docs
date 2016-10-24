@@ -99,7 +99,7 @@ If you already have access to PowerApps as a user of Office 365, Dynamics 365, o
 - [Create and manage instances](signup-for-powerapps-admin.md) of the Common Data Service.
 - [Model your data](data-platform-intro.md) using the Common Data Service.
 - [Create and manage environments](environments-administration.md) and [user policies](prevent-data-loss.md) from the [PowerApps admin center][5].
-- [ Manage an on-premises data gateway](gateway-management.md) in PowerApps.  
+- [Manage an on-premises data gateway](gateway-management.md) in PowerApps.  
 
 When you try any of these features, you will be prompted to start your free trial. Just select **Start my trial**.
 
@@ -173,7 +173,7 @@ In many cases, you can sign up for PowerApps by following the steps in this topi
 | **Self-service signup disabled** <br> <br> You receive a message like the following during signup: <br> <br> `We can't finish signing you up. Your IT department has turned off signup for Microsoft PowerApps. Contact them to complete signup.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` | Your organization’s IT administrator has disabled self-service signup for PowerApps. <br> <br> To complete signup, contact your IT administrator and ask them to allow users to sign up for PowerApps and to allow new users to join your existing tenant.|
 | **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.` | Your organization signs in to Office 365 and other Microsoft services with IDs other than email addresses. For example, your email address might be Nancy.Smith@contoso.com, but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to you for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
 
-## See also
+## See also ##
 [PowerApps in your organization Q&A](signup-question-and-answer.md)  
 [Purchase PowerApps for your organization](signup-for-powerapps-admin.md)  
 More questions? [Try the PowerApps Community][7]

@@ -23,13 +23,13 @@ This article shows you how to purchase PowerApps for your organization as an adm
 
 > **NOTE**   To purchase PowerApps for an organization, you must already be an Office 365 Global or Billing Admin of a tenant, or you must create a tenant.
 
-## Choosing the right plan
+## Choosing the right plan ##
 
 You can choose from a variety of pricing-plan options. For information about scenarios and considerations, see [PowerApps pricing][3].
 
 For details about what licenses you can choose for your organization, see [billing and pricing plans](billing-pricing-skus.md).
 
-## Purchase PowerApps directly
+## Purchase PowerApps directly ##
 
 You can purchase PowerApps subscriptions for your organization from [powerapps.microsoft.com][4] and then assign PowerApps licenses to your users. [Learn more][5].
 1. Open [powerapps.microsoft.com][4], and then select **Pricing**.
@@ -48,11 +48,11 @@ You can purchase PowerApps subscriptions for your organization from [powerapps.m
 
 1. Provide information to make the purchase, and then navigate to the [Office 365 admin center][6] to assign PowerApps licenses to your users.
 
-## Get PowerApps through Office 365
+## Get PowerApps through Office 365 ##
 
 You can purchase PowerApps subscriptions for your organization from the [Office 365 admin center][6] and then assign PowerApps licenses to your users. [Learn more][5].
 
-### Start a free trial
+### Purchase a subscription trial ###
 
 1. Browse to the [Office 365 admin center][6].
 
@@ -68,7 +68,7 @@ You can purchase PowerApps subscriptions for your organization from the [Office 
 
 Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1 Trial** or **Microsoft PowerApps Plan 1 Trial** listed with 100 licenses available. Your free trial will cover 90 days.
 
-### Purchase a subscription
+### Purchase a subscription ###
 1. Browse to the [Office 365 admin center][6].
 
 1. On the left navigation pane, select **Billing -> Subscriptions**.
@@ -87,10 +87,10 @@ Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1 Tr
 
 Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1** or **Microsoft PowerApps Plan 1** listed. If you decide later that you want to add more licenses, go back to **Add subscriptions** and then select **Change license quantity**.
 
-## Add-ons
+## Add-ons  ##
 These are coming soon but are not supported yet.
 
-## See also
+## See also ##
 [PowerApps in your organization Q&A](signup-question-and-answer.md)  
 [Self-service sign up for PowerApps](signup-for-powerapps.md)  
 More questions? [Try the PowerApps Community][7]
