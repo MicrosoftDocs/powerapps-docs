@@ -1,5 +1,5 @@
 <properties
-    pageTitle="How to sign up for PowerApps (admins) | Microsoft PowerApps"
+    pageTitle="Purchasing PowerApps for your organization | Microsoft PowerApps"
     description="Follow these steps in order to signup for PowerApps as an administrator."
     services=""
     suite="powerapps"
@@ -15,61 +15,140 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/22/2016"
+    ms.date="10/23/2016"
     ms.author="ricksal;jamesol"/>
 
-# Sign up for PowerApps (Administrator) #
-This article shows you how to sign up for a PowerApps account as an administrator. For more information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
+# Purchasing PowerApps for your organization #
+This article shows you how to purchase PowerApps for your organization as an administrator. You can purchase PowerApps directly through the PowerApps website, the Office 365 admin center or through your Microsoft representative or partner. This article will look at the trial options available for PowerApps Plan 1 or Plan 2, and then how to purchase PowerApps Plan 1 or Plan 2 as an organization. For more information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
+
+> **NOTE** You will need to be an Office 365 Global or Billing Admin of your existing tenant or create a new tenant in order to complete the sign-up flows outlined in this article.
 
 ## Pricing and choosing the right plan for my organization
 
-There are a variety of pricing plan options to choose from. To find out the different scenarios and considerations involved in choosing a plan, see [Marketing Pricing Page](TBD).
+There are a variety of pricing plan options to choose from. To find out the different scenarios and considerations involved in choosing a plan, see [PowerApps pricing][3].
 
 To learn more detail about what licenses are available to choose from for your organization, see [billing and pricing plans](billing-pricing-skus.md).
 
-## Signing up from powerapps.com
+## Purchasing PowerApps subscriptions from powerapps.com
+You can purchase PowerApps subscriptions for your organization from [powerapps.microsoft.com][4]. Once you have the subscription, you can assign PowerApps licenses to your users. [Learn more][5].
 
-TBD: getting yourself signed up as an admin HOW??
+### Purchase PowerApps Plan 1 subscription from powerapps.com
+1. Browse to [powerapps.microsoft.com][4]
 
-### Purchasing PowerApps Plan 1 for my organization
+1. Select **Pricing**
 
-### Purchasing PowerApps Plan 2 for my organization
+1. Select **Buy now** for PowerApps Plan 1
+  ![](./media/signup-for-powerapps-admin/buy-now-plan-1.png)
 
-## Signing up from Office 365
+1. Answer the questions that are presented to guide the purchase.
 
-TBD: getting yourself signed up as an admin HOW??
+  If you are the admin of an existing Office 365 tenant, there will be an option to select **Yes**.
+    ![](./media/signup-for-powerapps-admin/admin-question-plan-1-yes.png)
+
+  If you are creating a new tenant, there will be an option to select **Team or organization**.
+    ![](./media/signup-for-powerapps-admin/question-plan-1-teamororg.png)
+
+1. You will need to provide information to make the purchase.
+
+1. When the purchase is complete, navigate to the [Office 365 admin center][6] to assign PowerApps licenses to your users.
+
+### Purchase PowerApps Plan 2 subscription from powerapps.com
+1. Browse to [powerapps.microsoft.com][4]
+
+1. Select **Pricing**
+
+1. Select **Buy now** for PowerApps Plan 2
+  ![](./media/signup-for-powerapps-admin/buy-now-plan-2.png)
+
+1. Answer the questions that are presented to guide the purchase.
+
+  If you are the admin of an existing Office 365 tenant, there will be an option to select **Yes**.
+    ![](./media/signup-for-powerapps-admin/admin-question-plan-2-yes.png)
+
+  If you are creating a new tenant, there will be an option to select **Team or organization**.
+    ![](./media/signup-for-powerapps-admin/question-plan-2-teamororg.png)
+
+1. You will need to provide information to make the purchase.
+
+1. When the purchase is complete, navigate to the [Office 365 admin center][6] to assign PowerApps licenses to your users.
+
+## Purchasing PowerApps subscriptions in Office 365
+You can purchase PowerApps subscriptions for your organization from [Office 365 admin center][6]. Once you have the subscription, you can assign PowerApps licenses to your users. [Learn more][5].
 
 ### Purchasing PowerApps Plan 1 trial for my organization
+1. Browse to the [Office 365 admin center][6].
+
+1. On the left navigation pane, select **Billing -> Subscriptions**
+
+1. Select **+ Add subscriptions** on the right side
+
+1. Under Other Plans, hover over the ellipse (...) for Microsoft PowerApps Plan 1 and select **Start free trial**
+  ![](./media/signup-for-powerapps-admin/admin-purchase-plan1-trial.png)
+
+1. On the confirm your order screen, select **Try now**
+
+Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1 Trial** listed with 100 license available.  This is a 90-day trial.
 
 ### Purchasing PowerApps Plan 2 trial for my organization
+1. Browse to the [Office 365 admin center][6].
+
+1. On the left navigation pane, select **Billing -> Subscriptions**
+
+1. Select **+ Add subscriptions** on the right side
+
+1. Under Other Plans, hover over the ellipse (...) for Microsoft PowerApps Plan 2 and select **Start free trial**
+  ![](./media/signup-for-powerapps-admin/admin-purchase-plan2-trial.png)
+
+1. On the confirm your order screen, select **Try now**
+
+Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 2 Trial** listed with 100 license available.  This is a 90-day trial.
 
 ### Purchasing PowerApps Plan 1 subscription for my organization
+1. Browse to the [Office 365 admin center][6].
+
+1. On the left navigation pane, select **Billing -> Subscriptions**
+
+1. Select **+ Add subscriptions** on the right side
+
+1. Under Other Plans, hover over the ellipse (...) for Microsoft PowerApps Plan 1 and select **Buy now**
+  ![](./media/signup-for-powerapps-admin/admin-purchase-plan1-paid.png)
+
+1. Enter the number of licenses you would like to add and select **Check out now** or **Add to cart**
+  > **NOTE** You can add more at a later date if needed.
+
+1. Enter the needed information in the Checkout flow,
+
+Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1** listed.  If you decide later that you want to add more licenses, you can go back to **Add subscriptions**, and select **Change license quantity**.
 
 ### Purchasing PowerApps Plan 2 subscription for my organization
+1. Browse to the [Office 365 admin center][6].
+
+1. On the left navigation pane, select **Billing -> Subscriptions**
+
+1. Select **+ Add subscriptions** on the right side
+
+1. Under Other Plans, hover over the ellipse (...) for Microsoft PowerApps Plan 2 and select **Buy now**
+  ![](./media/signup-for-powerapps-admin/admin-purchase-plan1-paid.png)
+
+1. Enter the number of licenses you would like to add and select **Check out now** or **Add to cart**
+  > **NOTE** You can add more at a later date if needed.
+
+1. Enter the needed information in the Checkout flow,
+
+Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 2** listed.  If you decide later that you want to add more licenses, you can go back to **Add subscriptions**, and select **Change license quantity**.
 
 ## Add-ons
 These are coming soon, but are not supported yet.
 
-## Troubleshoot ##
-In many cases, you register for PowerApps by following the sign-up steps in this topic. However, sign-up may fail because of any of several reasons. The following table summarizes some of the most common reasons and ways you can workaround these issues.
-
-| Symptom / Error Message |Cause and Workaround|
-|---|---|
-| **Personal email addresses (e.g. nancy@gmail.com)** <br> <br> You receive a message like the following during signup: <br> <br> `You entered a personal email address: Please enter your work email address so we can securely store your company's data.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.`| PowerApps does not support email addresses provided by consumer email services or telecommunications providers. <br> <br> To complete signup, try again using an email address assigned by your work or school.|
-| **.gov or .mil email addresses** <br> <br> You receive a message like the following during signup: <br> <br> `PowerApps unavailable: PowerApps is not available for users with .gov or .mil email addresses at this time. Use another work email address or check back later.` <br> <br> or <br> <br> `We can't finish signing you up. It looks like Microsoft PowerApps isn't currently available for your work or school.` | PowerApps does not support .gov or .mil addresses at this time.|
-| **Self-service signup disabled** <br> <br> You receive a message like the following during signup: <br> <br> `We can't finish signing you up. Your IT department has turned off signup for Microsoft PowerApps. Contact them to complete signup.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` | Your organization’s IT administrator has disabled self-service signup for PowerApps. <br> <br> To complete signup, contact your IT administrator and ask them to allow existing users to sign up for PowerApps and to allow new users to join your existing tenant.|
-| **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.` | Your organization uses IDs to sign in to Office 365 and other Microsoft services that are different than your email address.  For example, your email address might be Nancy.Smith@contoso.com but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
-
-## Next steps
-
-After you successfully sign up for PowerApps, you can start to create some apps. Here are some good resources:
-
-[Get started](getting-started.md)  
-[Run a sample app](open-and-run-a-sample-app.md)  
-[Run an app in a browser](run-app-browser.md)  
-[Run an app on a phone](run-app-client.md)  
+## See also
 [PowerApps in your organization Q&A](signup-question-and-answer.md)  
+[Self-service sign up for PowerApps](signup-for-powerapps.md)  
+More questions? [Try the PowerApps Community][7]
 
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
 [2]: http://go.microsoft.com/fwlink/p/?LinkId=708209
+[3]: https://go.microsoft.com/fwlink/?linkid=832550
+[4]: https://go.microsoft.com/fwlink/?linkid=832551
+[5]: https://support.office.com/article/997596b5-4173-4627-b915-36abac6786dc
+[6]: https://portal.office.com/admin/default.aspx
