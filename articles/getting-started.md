@@ -24,11 +24,7 @@ Welcome! In PowerApps, you can generate an app automatically, customize it, crea
 > [AZURE.NOTE] If you've automatically generated an app from a SharePoint list, you can [customize the app](customize-layout-sharepoint.md) to better suit your needs.
 
 ## Generate an app automatically ##
-To generate an app automatically, you just need to specify a data source, as this video demonstrates in under five minutes.
-
-[AZURE.VIDEO nb:cid:UUID:9380084d-bc9a-484f-960e-4554c6bf67b2]
-
-You can generate apps from a variety of data sources, such as these:
+To generate an app automatically, you just need to specify one of a variety of data sources, such as these:
 
 - the [Common Data Service](data-platform-intro.md)
 - a custom SharePoint list

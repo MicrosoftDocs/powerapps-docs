@@ -94,7 +94,6 @@ These are coming soon but are not supported yet.
 ## See also ##
 [PowerApps in your organization Q&A](signup-question-and-answer.md)  
 [Self-service sign up for PowerApps](signup-for-powerapps.md)  
-More questions? [Try the PowerApps Community][7]
 
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/p/?LinkId=715583

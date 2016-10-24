@@ -42,7 +42,7 @@ You can create apps in existing environments that you have access to or in a new
 1. If you are in [powerapps.com](http://web.powerapps.com), select the environment you would like to create your app in. If you are in *PowerApps Studio* or *PowerApps Studio for web*, skip to step 4.
 2. Select **+ New app**
 3. Select **Open PowerApps Studio** or **PowerApps Studio for web**
-4. Once your *PowerApps Studio* or *PowerApps Studio* for web launches, select the environment again at the top right corner. We will improve this experience in the future but, in the current release, you must select this every time you want to create an app in a new environment.
+4. When *PowerApps Studio* or *PowerApps Studio* for web opens, select the environment again at the top right corner. We will improve this experience in the future but, in the current release, you must select this every time you want to create an app in a new environment.
 
   ![Studio switch environment](./media/working-with-environments/studio-switch-env.PNG)
 

@@ -23,7 +23,7 @@
 ## Recently added/changed ##
 1.	**Custom APIs and the Common Data Service**
 
-	If an app created before Nov. 1, 2016, relies on a database in the Common Data Service and at least one custom API in a different environment, you’ll need to deploy the API to the same environment as the database and update the app to use the new API. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](environments-overview.md).
+	If an app created using PowerApps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom API in a different environment, you’ll need to deploy the API to the same environment as the database and update the app to use the new API. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](environments-overview.md).
 
 1. **Camera control on a Windows Phone**
 
