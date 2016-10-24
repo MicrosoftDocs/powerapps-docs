@@ -1,6 +1,6 @@
 <properties
     pageTitle="Use apps in a web browser | Microsoft PowerApps"
-    description="Walkthrough of how to use spps in the web browser"
+    description="Walkthrough of how to use apps in the web browser"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -18,8 +18,17 @@
     ms.date="10/12/2016"
     ms.author="fikaradz"/>
 
-# Using apps in a web browser #
+# Using PowerApps in a web browser #
 You can run all your Dynamics 365 apps in a web browser. All your apps can quickly be accessed via the homepage portal or the task pane.
+
+For PowerApps, the following browser versions are supported:
+* Microsoft Edge
+* Internet Explorer 11 and above
+* Chrome 47.x and above
+* Safari on iOS 9.3 and above
+* Firefox 47 and above
+
+For apps shared with you, you will be notified by email. You can launch the app in the browser by clicking on the app link in the email.
 
 ## Dynamics 365 homepage portal ##
 
@@ -47,14 +56,19 @@ To launch an app simply click on its tile on either the Dynamics 365 home page p
 
 You can also access an app directly via its URL.  This allows you to share apps via email links as well as bookmark them in your web browser.
 
+If your browser does not support all controls, once the app is running inside the browser, you can switch to the native client on iOS, Android or Windows by choosing the download option in the Dynamics 365 header.  
+
 ## Sign in to PowerApps ##
-If the app is opened from dynamics.com, chances are you already signed in to Dynamics 365. If you are launching the app from the web link, you are prompted to sign in using your Azure Active Directory credentials:  
-
-
+If the app is opened from dynamics.com, chances are you already signed in to Dynamics 365. If you are launching the app from the web link, you will be prompted to sign in using your Azure Active Directory credentials.
 
 ## Give consent ##
-If the app requires a connection to a data sources, or required consent to use the device, you are prompted for the configuration before using the app:  
+If the app requires a connection to a data source or requires consent to use device capabilities, you will be prompted for the configuration before you use the app:  
 
 ![Connection](./media/run-app-browser/app-connection.png)
 
 Typically, you are only prompted the first time.
+
+## Exit PowerApps ##
+There are several ways you can exit or close the app:
+1. Choose Sign out from the top right on the Dynamics 365 app header.
+2. Select the Dynamics 365 navigation menu to navigate to home or run another app.
