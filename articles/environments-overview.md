@@ -30,14 +30,6 @@ Environments are a new concept in PowerApps. Put simply, anything within an envi
 ## Environment scope
 An environment is bound to a geographic location, like the US. When you create an app in an environment, that app is routed to only datacenters in that geographic location.  Any items you create in that environment, including connections, gateways, flows using Microsoft Flow, and more, are also bound to the location.
 
-Let's say you want to create an app that inserts data somewhere. Your options are:
-
-•	Insert data into an Excel file, and store the Excel file in a cloud storage account, such as OneDrive.
-
-•	Create your own SQL database, and store your data in it.
-
-•	Create a database using the [Microsoft Common Data Service](data-platform-intro.md) to store your data.
-
 Every environment can have zero or one Common Data Service, which provides storage for your apps. The ability to create a database for your environment depends on the license you purchase for PowerApps. For more information see [Billing, Licensing, and SKUs](pricing-billing-skus.md).
 
 When you create an app in an environment, that app is only permitted to connect to the data sources that are also deployed in that same environment, including connections, gateways, flows, and Common Data Services databases.  For example, let’s consider a scenario where you have created two environments named ‘Test’ and ‘Dev’ and created a Common Data Service database in each of the environments. If you create an app in the ‘Test’ environment, it will only be permitted to connect to the ‘Test’ database, it wont be able to connect to the ‘Dev’ database.  
