@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Overview of Environments | Microsoft PowerApps"
-	description="What environments are, how to use them"
+	pageTitle="Overview of environments | Microsoft PowerApps"
+	description="What environments are and how to use them"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -19,18 +19,18 @@
    ms.author="ricksal"/>
 
 
-# Environments Overview
+# Environments overview
 Environments are a new concept in PowerApps. Put simply, anything within an environment, lives and dies within that environment. An environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you leverage environments depends on your organization and the apps you are trying to build, for example:
+
 1.	You may choose to only build your apps in a single environment.
 2.	You might create separate environments that group the Test and Production versions of your apps.
 3.	You might create separate environments that correspond to specific teams or departments in your company, each containing the relevant data and apps for each audience.
 4.	You might also create separate environments for different global branches of your company.  
 
-
 ## Environment scope
 An environment is bound to a geographic location, like the US. When you create an app in an environment, that app is routed to only datacenters in that geographic location.  Any items you create in that environment, including connections, gateways, flows using Microsoft Flow, and more, are also bound to the location.
 
-Every environment can have zero or one Common Data Service, which provides storage for your apps. The ability to create a database for your environment depends on the license you purchase for PowerApps. For more information see [Billing, Licensing, and SKUs](pricing-billing-skus.md).
+Every environment can have zero or one database in the Common Data Service, which provides storage for your apps. The ability to create a database for your environment depends on the license you purchase for PowerApps. For more information see [Billing, Licensing, and SKUs](pricing-billing-skus.md).
 
 When you create an app in an environment, that app is only permitted to connect to the data sources that are also deployed in that same environment, including connections, gateways, flows, and Common Data Services databases.  For example, let’s consider a scenario where you have created two environments named ‘Test’ and ‘Dev’ and created a Common Data Service database in each of the environments. If you create an app in the ‘Test’ environment, it will only be permitted to connect to the ‘Test’ database, it wont be able to connect to the ‘Dev’ database.  
 
