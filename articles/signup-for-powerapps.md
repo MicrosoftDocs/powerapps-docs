@@ -156,7 +156,7 @@ To purchase PowerApps Plan 2 as an individual.
 ## Individual signup has been turned off ##
 When trying to sign up for PowerApps, you may encounter the following message.
 
-<@ricksal Need this in a gray box> Your IT department has turned off signup for PowerApps.
+> Your IT department has turned off signup for Microsoft PowerApps.
 
 ![](./media/signup-for-powerapps/Individual-sign-up-turned-off.png)
 
