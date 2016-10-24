@@ -46,8 +46,6 @@ Environments have two built-in roles that provide access to permissions within a
 
 	o	Provision a Common Data Service database for the environment
 
-	o	Manage the runtime permissions to the environment’s database (if it exists)
-
 	o	View and manage all resources created within an environment
 
 	o	Set Data Loss Prevention policies. For more information see the link to the DLP article.
