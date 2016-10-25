@@ -132,7 +132,7 @@ Your custom API is now displayed under **Custom**.
 
 > [AZURE.TIP] If the Swagger file fails to validate, there may be extra characters. For example, most data should be in quotes, including website URLs.
 
-5. Now that the custom API is registered, you must create a connection to the custom API so it can be used in your apps.  Click the **+** to the right of the **Modified** date of your custom API and then complete any necessary steps to sign in to your API's data source.  For **OAuth** authentication, that might be a sign-in screen.  For API Key authentication, you might get prompted for a key value.
+5. Now that the custom API is registered, you must create a connection to the custom API so it can be used in your apps.  Click the **+** to the right of the **Modified** date of your custom API and then complete any necessary steps to sign in to your API's data source.  If you're using **OAuth** authentication with your API, you might be presented a sign-in screen.  For API Key authentication, you might be prompted for a key value.
 
 
 ### Step 3: Add the custom API to an app
