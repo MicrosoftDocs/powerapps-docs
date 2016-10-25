@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/16/2016"
+   ms.date="10/25/2016"
    ms.author="lonu"/>
 
 # Barcode scanner control in PowerApps #
@@ -72,21 +72,10 @@ If you add this control, the user can update a data source with one or more phot
 
 ## Example ##
 ### Add photos to an Image gallery control ###
-1. Add a **barcode scanner** control, name it **Mybarcode scanner**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
-**Collect(MyPix, Mybarcode scanner.Photo)**
+1. Add a **barcode scanner** control, name it **Mybarcode scanner**
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-
-1. Add an **Image gallery** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
-
-1. Set the **[Items](properties-core.md)** property of the **Image gallery** control to **MyPix**, press F5, and then take a photo by clicking or tapping **Mybarcode scanner**.
-
-	The photo that you took appears in the **Image gallery** control.
-
-1. Take as many photos as you want, and then return to the default workspace by pressing Esc.
-
-1. (optional) Set the **[OnSelect](properties-core.md)** property of the **[Image](control-image.md)** control in the **Image gallery** control to **Remove(MyPix, ThisItem)**, press F5, and then click or tap a photo to remove it.
-
-Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the photos locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
+1. Add an **Text Box** control and set its output to the Barcode's value.  
+1. Scan a barcode of the type set under BarcodeType property.
+1. The text box is going to display the scanned barcode.

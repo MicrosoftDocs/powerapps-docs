@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/29/2016"
+   ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Button control in PowerApps #
@@ -41,6 +41,8 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 

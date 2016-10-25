@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/11/2016"
+    ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Image control in PowerApps #
@@ -37,6 +37,8 @@ If you add one or more **Image** controls to your app, you can show individual i
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **CalculateOriginalDimensions** – Enables the **OriginalHeight** and **OriginalWidth** properties.
 
