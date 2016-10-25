@@ -68,7 +68,7 @@ Once you have sign in to [powerapps.com](http://web.powerapps.com), you will lan
 
   >*This banner will be disabled from October 26th, 2016 until October 31st, 2016 for metadata upgrading. *
 
-  ![Microsoft Common Data Service](./media/intro-maker-portal/cds.png)
+  ![Microsoft Common Data Service](./media/intro-maker-portal/cds2.png)
 
   Depends on your license or permission, you will see different buttons displayed under **Microsoft Common Data Service**. You will see button:
     * **Start trial** - When you don't have a P2 license, you will see **Start trial** button which will bring you to the page where you can sign up for P2 trial. Microsoft Common Data service requires users to have a P2 license. [Learn more about PowerApps licenses](signup-for-powerapps-admin.md).
