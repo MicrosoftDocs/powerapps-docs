@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/29/2016"
+   ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Text box control in PowerApps #
@@ -26,11 +26,15 @@ A text box shows data that you specify as a literal string of text, which appear
 
 ## Key properties ##
 
+**[AutoHeight](properties-core.md)** – Set to true to allow the text box to auto-grow its height to show all text configurated. Set to false to truncate the text to the height assigned.
+
 **[Color](properties-color-border.md)** – The color of text in a control.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
+
+**[DelayOutput](properties-core.md)** – Set to true to delay action during text input.
 
 ## Additional properties ##
 

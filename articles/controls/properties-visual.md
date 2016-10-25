@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/17/2016"
+   ms.date="10/25/2016"
    ms.author="gregli"/>
 
 # Image properties in PowerApps #

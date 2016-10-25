@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/09/2016"
+    ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Rating control in PowerApps #
@@ -37,6 +37,8 @@ In this control, the user can indicate, for example, how much they liked somethi
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Disabled](properties-core.md)** – Whether the user can interact with the control.
 

@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter=""
 	authors="AFTOwen"
-	manager="erikre"
+	manager="anneta"
 	editor=""/>
 
 <tags
@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/24/2016"
+   ms.date="10/16/2016"
    ms.author="anneta"/>
 
 # Show text and format dates and times in Microsoft PowerApps #
@@ -58,14 +58,14 @@ Here are some examples.
 
 1. Add a **[Text input](controls/control-text-input.md)** control named **BirthDate**, and move it under **ShowText**.
 
-1. In **BirthDate**, type the month and the day of your birthday surrounded by double quotation marks (for example, **"05/18"**).
+1. In **BirthDate**, type the month and the day of your birth (for example, **05/18**).
 
 1. Set the **[Text](controls/properties-core.md)** property of **ShowText** to this formula:
 <br>**DateDiff(Today(), DateValue(BirthDate.Text))**
 
 	![Number of days between today and your birthday](./media/show-text-dates-times/birth-diff.png)
 
-	**ShowText** shows the number of days between today and whatever date you type into **BirthDate**. When you type a date into **BirthDate**, its **[Text](controls/properties-core.md)** property is automatically set to that value. If your birthday has already occurred this year, a negative value appears in **ShowText**.
+	**ShowText** shows the number of days between today and whatever date you type into **BirthDate**. If your birthday has already occurred this year, **ShowText** displays a negative value.
 
 ## Format dates and times by using DateTimeValue ##
 Convert dates and times from strings of text to values, which you can format in a variety of ways and use in calculations. Specify the format by using built-in and custom options.
@@ -84,7 +84,7 @@ Convert dates and times from strings of text to values, which you can format in 
 
 	![Convert a date/time from text to a value](./media/show-text-dates-times/date-value.png)
 
-	**ShowDate** shows the same information that you typed, but it's been converted from text to a value (as the next step demonstrates).
+	**ShowDate** shows the same information that you typed, but it's been converted from text to a value and formatted differently. For example, the year appears as four digits instead of just two.
 
 1. Change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
 <br>**DateTimeValue(ArrivalDateTime.Text, "fr")**
@@ -192,7 +192,7 @@ Convert dates and times from strings of text to values, which you can format in 
 1. Change the **[Text](controls/properties-core.md)** property of **DateAdd** to this formula:
 <br>**DateAdd(DateValue(Start.Text), 3, Months)**
 
-	![Add three months](./media/show-text-dates-times/date-subtract.png)
+	![Add three months](./media/show-text-dates-times/date-add-months.png)
 
 	The label shows **8/10/1985**, which is three months after the date in **Start**. Replace **Months** with **Quarters** or **Years** to identify a date that's the specified number of quarters or years before or after the date in **Start**.
 
@@ -202,7 +202,7 @@ Convert dates and times from strings of text to values, which you can format in 
 1. Set the **[Items](controls/properties-core.md)** property of **Year** to this formula:
 <br>**Table({Year:"2014"}, {Year:"2015"}, {Year:"2016"})**
 
-1. Set the **[Items](controls/properties-core.md)** property of **Month** list to this formula:
+1. Set the **[Items](controls/properties-core.md)** property of **Month** to this formula:
 <br>**Table({Month:"1"}, {Month:"2"}, {Month:"3"}, {Month:"4"}, {Month:"5"}, {Month:"6"}, {Month:"7"}, {Month:"8"}, {Month:"9"}, {Month:"10"}, {Month:"11"}, {Month:"12"})**
 
 1. Set the **[Items](controls/properties-core.md)** property of **Day** to this formula:
