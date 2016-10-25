@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="06/18/2016"
+ms.date="10/23/2016"
 ms.author="anneta"/>
 
 # Connect from Microsoft PowerApps to SharePoint #
@@ -90,7 +90,7 @@ Open PowerApps by taking *either* of these steps:
 
 	![Add data source](./media/connection-sharepoint-online/add-data-source.png)
 
-1. Click or tap **Add connection**, click or tap **SharePoint**, and then click or tap **Connect**.
+1. Click or tap **New connection**, click or tap **SharePoint**, and then click or tap **Connect**.
 
 	![Add SharePoint connection](./media/connection-sharepoint-online/add-sharepoint.png)
 

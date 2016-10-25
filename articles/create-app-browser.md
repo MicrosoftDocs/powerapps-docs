@@ -43,7 +43,7 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 
 ## Next steps ##
 - Automatically generate an app from your data in, for example, [Excel](get-started-create-from-data.md) or [SharePoint](app-from-sharepoint.md).
-- Learn how to [add a control and set properties](add-configure-controls.md) that determine how it appears and behaves.
+- Learn how to [add a control and set properties](add-configure-controls.md) that determine how your app appears and behaves.
 - Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
 
 ## Known limitations of the preview release ##

@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="AFTOwen"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 <tags
@@ -14,8 +14,8 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/24/2016"
-    ms.author="anneta"/>
+    ms.date="10/07/2016"
+    ms.author="ricksal;anneta"/>
 
 # Share an app #
 
@@ -30,6 +30,8 @@ When you share an app, specify the names of one or more users or groups in Azure
 - **Can edit**: Users or groups can run the app, customize it, and share the customized version.
 
 When you share an app, a message notifies the user or users that you specified and contains a link with which they can access the app. If appropriate, users are prompted to sign up for and install PowerApps.
+
+## TBD UPDATE this topic
 
 ## Before you share an app ##
 Consider these points:

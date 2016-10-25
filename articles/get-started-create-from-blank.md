@@ -1,26 +1,27 @@
-<properties	pageTitle="Create an app from scratch | Microsoft PowerApps"
+<properties
+	pageTitle="Create an app from scratch | Microsoft PowerApps"
 	description="Create an app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="sarafankit"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
 <tags
    ms.service="powerapps"
    ms.devlang="na"
-   ms.topic="get-started-article"
+   ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/30/2016"
+   ms.date="10/16/2016"
    ms.author="ankitsar"/>
 
 # Create an app from scratch #
 Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
 
-**Note**: This topic was written for PowerApps Studio, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
+**Note**: This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
 
 By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records:
 
@@ -30,16 +31,12 @@ On the other screen, users can create a record, update one or more fields in a r
 
 ![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
 
-**Prerequisites**
+## Prerequisites ##
+You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
 
-- Add data to an Excel workbook, and [format that data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+1. Copy this data, and then paste it into an Excel file.
 
-To follow this tutorial exactly:
-
-- Name the Excel file **eventsignup.xls**.
-- Copy this data, and paste it into the file.
-
-|Start Day|Start Time|Volunteer 1|Volunteer 2|
+	|Start Day|Start Time|Volunteer 1|Volunteer 2|
 |---|---|---|---|
 |Saturday|10am-noon|Vasquez|Kumashiro|
 |Saturday|noon-2pm|Ice|Singhal|
@@ -48,19 +45,22 @@ To follow this tutorial exactly:
 |Sunday|10am-noon|Singh|Morgan|
 |Sunday|10am-noon|Batye|Nguyen|
 
-- Format the data as a table named **Schedule**.
+1. Format that data as a table named **Schedule**.
 
-- Upload your Excel file to a cloud-storage account such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business.
-- If you're new to PowerApps:
+	For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
+1. Name the Excel file **eventsignup.xls**, and then upload it to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive.
+
+1.  If you're new to PowerApps:
 	- Learn how to [add a control and set its properties](add-configure-controls.md), which determine how the control appears and behaves.
 	- Learn how to [add and rename a screen](add-screen-context-variables.md).
 
 ## Create a blank app, and connect to data ##
-1. In PowerApps, click or tap **New** on the **File menu** (near the left edge of the screen).
+1. In PowerApps Studio, click or tap **New** on the **File menu** (near the left edge of the screen).
 
 	![New option on the File menu](./media/get-started-create-from-blank/file-new.png)
 
-1. Under **Create an app**, click or tap **Phone layout** on the **Blank app** tile.
+1. On the **Blank app** tile, click or tap **Phone layout**.
 
 	![Option to create an app from data](./media/get-started-create-from-blank/create-from-blank.png)
 
@@ -70,7 +70,15 @@ To follow this tutorial exactly:
 
 	You can always take the tour later by clicking or tapping the question-mark icon near the upper-left corner of the screen and then clicking or tapping **Take the intro tour**.
 
-1. In the right-hand pane, click or tap **Add data source**, and then perform either of these steps:
+1. Near the lower-right corner, click or tap **Data Sources**.
+
+	![Open Data Sources tab](./media/get-started-create-from-blank/data-sources-tab.png)
+
+1. In the **Data Sources** tab of the right-hand pane, click or tap **Add data source**.
+
+	![Add data source](./media/get-started-create-from-blank/add-data-source.png)
+
+1. Perform either of these steps:
 
 	- If you already have a connection to your cloud-storage account, click or tap it.
 	- If you don't have a connection to your cloud-storage account, click or tap **Add Connection**, click or tap your account type, click or tap **Connect**, and then (if prompted) provide your credentials.
@@ -98,27 +106,40 @@ To follow this tutorial exactly:
 
 1. Select the gallery by clicking or tapping anywhere in it except the first item.
 
+	![Select gallery](./media/get-started-create-from-blank/select-gallery.png)
+
 1. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
 
 	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-	This gallery shows the data from the **Schedule** table. In addition:
+	**Note**: If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md),
 
-	- A search box can filter the gallery based on text that the user types. If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer 1** field contains the text that the user typed.
-	- The sort button can sort the records based on data in the **Volunteer 1** column. If a user clicks or taps that button, the sort order toggles between ascending and descending.
+	This gallery shows the data from the **Schedule** table.
 
-	![The Schedule data in the gallery by default](./media/get-started-create-from-blank/gallery-data-default.png)
+	![The Schedule data in the gallery by default](./media/get-started-create-from-blank/show-data-default.png)
+
+	A search box can filter the gallery based on text that the user types. If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer 1** field contains the text that the user typed.
+
+	The sort button can sort the records based on data in the **Volunteer 1** column. If a user clicks or taps that button, the sort order toggles between ascending and descending.
+
+1. Type an **i** in the search box, and click or tap the sort button once (or an odd number of times).
+
+	The gallery shows these results.
+
+	![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
 
 	More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
 
 1. Select the **[Text box](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
 
+	![Select title bar](./media/get-started-create-from-blank/select-title-bar.png)
+
 1. In the property list, click or tap **[Text](controls/properties-core.md)**, copy this text, and then paste it in the formula bar.<br>
  **"View Records"**
 
-	![First screen](./media/get-started-create-from-blank/first-screen.png)
+	![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
 
-## Create the ChangeScreen ##
+## Create the ChangeScreen and its banner ##
 1. Rename the default screen from **Screen1** to **ViewScreen**.
 
 	![Rename screen](./media/get-started-create-from-blank/rename-screen.png)
@@ -129,47 +150,65 @@ To follow this tutorial exactly:
 
 1. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Text box](controls/control-text-box.md)**.
 
-1. In the properties list, click or tap **Text**, copy this text, and then paste it into the formula bar:
-<br>**"Change record"**
+1. Configure the **Text box** control that you just added:
 
-1. On the **Home** tab, click or tap the **Fill** button, and then click or tap a medium-blue option.
+	- Set its **Text** property to this formula:
+	<br>**"Change record"**
 
-1. On the **Home** tab, click or tap the **A** icon, and then click or tap the white option.
+	- Set its **Fill** property to this formula:
+	<br>**RGBA(62, 96, 170, 1)**.
 
-1. On the **Home** tab, click or tap the align option, and then click or tap the option to align the text in the center.
+	- Set its **Color** property to this formula:
+	<br>**RGBA(255, 255, 255, 1)**
+
+	- Set its **Align** property to **Center**.
+
+	- Set its **X** property to **0**.
+
+	- Set its **Width** property to **640**.
+
+	The **Text box** control reflects your changes.
 
 	![ChangeScreen with banner](./media/get-started-create-from-blank/change-screen-blank.png)
 
-1. On the **Insert** tab, click or tap **Forms**, and then click or tap the option to add an **[Edit form](add-form.md)** control.
+## Add and configure a form ##
+1. On the **Insert** tab, click or tap **Forms**, and then click or tap  **Edit**.
 
 1. Move and resize the form to cover most of the screen.
 
 	![Add a form](./media/get-started-create-from-blank/add-form.png)
 
-	The form is named **Form1** by default unless you already added and removed a form. In that case, rename the form **Form1**.
+	The form is named **Form1** by default unless you already added and removed a form. In that case, rename the form to **Form1**.
 
-1.  With the form still selected, click or tap **[DataSource](controls/control-form-detail.md)** in the property list, and type or paste **Schedule** in the formula bar.
+1.  Set **[DataSource](controls/control-form-detail.md)** property of **Form1** to **Schedule**.
 
-1. With the form still selected, click or tap **[Item](controls/control-form-detail.md)** in the property list, and type or paste **BrowseGallery1.Selected** in the formula bar.
+1. Set the **Item** property of **Form1** to this expression:
+<br>**BrowseGallery1.Selected**
 
 1. In the right-hand pane, click or tap the eye icon for each field to show it.
 
 	![Show fields on form](./media/get-started-create-from-blank/show-fields.png)
 
-1. Near the bottom of the form, click or tap **Add a custom card**, and then add a **[Text box](control-text-box.md)** control in the new card.
+1. Near the bottom of the form, click or tap **Add a custom card**.
 
 	![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
-1. Set the **[AutoHeight](controls/control-text-box.md)** property of the **[Text box](control-text-box.md)** control **true** and its **[Text](controls/properties-core.md)** property to this formula:
+1. Add a **[Text box](control-text-box.md)** control in the new card.
+
+1. Set the **[AutoHeight](controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](controls/properties-core.md)** property to this formula:
 <br>**Form1.Error**
 
 	The text box will show any errors from the form.
 
-1. Add a **Back arrow** to the lower-left corner of the screen, and set the arrow's **[OnSelect](controls/properties-core.md)** property to this formula:
+1. In the left navigation bar, click or tap the thumbnail for the **ChangeScreen** to select it.
+
+1. On the **Insert** tab, click or tap **Icons**, click or tap the option to add a **Back arrow**, and then move the arrow to the lower-left corner of the screen.
+
+1. Set the arrow's **[OnSelect](controls/properties-core.md)** property to this formula:
 
 	**ResetForm(Form1);Navigate(ViewScreen,ScreenTransition.None)**
 
- 	When the user clicks or taps the arrow, the **[Navigate](functions/function-navigate.md)** function shows the **ViewScreen**.
+ 	When the user clicks or taps the arrow, the **[Navigate](functions/function-navigate.md)** function opens the **ViewScreen**.
 
 1. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](controls/properties-core.md)** property to **"Save"**.
 
@@ -194,10 +233,14 @@ To follow this tutorial exactly:
 
 	The **ChangeScreen** matches this example:
 
-	![Final Change Screen](./media/get-started-create-from-blank/changescreen-final.png)
+	![Final ChangeScreen](./media/get-started-create-from-blank/changescreen-final.png)
 
 ## Set navigation from ViewScreen
-1. In the **ViewScreen**, click or tap the **Next arrow** for the first record in the gallery.
+1. In the left navigation bar, click or tap the thumbnail for the **ViewScreen**.
+
+	![Open ViewScreen](./media/get-started-create-from-blank/select-viewscreen.png)
+
+1. Click or tap the **Next arrow** for the first record in the gallery.
 
 	![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
 
@@ -205,7 +248,7 @@ To follow this tutorial exactly:
 
 	**Navigate(ChangeScreen,ScreenTransition.None)**
 
-1. In the upper-right corner, select the icon to add a record.
+1. In the upper-right corner, click or tap the plus icon.
 
 	![Add record](./media/get-started-create-from-blank/add-record.png)
 
@@ -218,7 +261,7 @@ To follow this tutorial exactly:
 ## Run the app ##
 As you customize the app, test your changes by running the app in Preview mode, as the steps in this section describe.
 
-1. In the left navigation bar, click or tap the top thumbnail to select **ViewScreen**.
+1. In the left navigation bar, click or tap the top thumbnail to select the **ViewScreen**.
 
 	![Select ViewScreen](./media/get-started-create-from-blank/select-viewscreen.png)
 
@@ -228,7 +271,7 @@ As you customize the app, test your changes by running the app in Preview mode, 
 
 1. Click or tap the Next arrow for a record to show details about that record.
 
-1. On **ChangeScreen**, change the information in one or more fields and then save your changes by clicking or tapping **Save**, or remove the record by clicking or tapping **Remove**.
+1. On the **ChangeScreen**, change the information in one or more fields, and then save your changes by clicking or tapping **Save**, or remove the record by clicking or tapping **Remove**.
 
 1. Close Preview mode by pressing Esc (or by clicking or tapping the close icon under the title bar).
 

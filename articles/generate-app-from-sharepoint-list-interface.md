@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/05/2016"
+   ms.date="10/18/2016"
    ms.author="ricksal"/>
 
 # Generate an app from the SharePoint Online list interface
@@ -50,7 +50,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
     ![](./media/generate-app-from-sharepoint-list-interface/open-app-in-browser.png)
 
-7. Press Ctrl-S to save the generated app.
+7. Click or tap Ctrl-S to save the generated app.
 
   ![](./media/generate-app-from-sharepoint-list-interface/open-app.png)
 

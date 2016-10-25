@@ -14,39 +14,51 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="04/18/2016"
+    ms.date="10/16/2016"
     ms.author="ankitsar"/>
 
-# Show a list of items in Microsoft PowerApps  #
+# Show a list of items in PowerApps  #
 Show a list of items from Excel, as this topic describes, or from any other type of data source by adding a **[Gallery](controls/control-gallery.md)** control to your app. Filter the list by configuring the gallery to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
 
 **Prerequisites**
 
-- Create an app in PowerApps, or add a screen to an app.
-- Learn how to [configure a control](add-configure-controls.md) in PowerApps.
-- Create a [connection](add-data-connection.md) to the **FlooringEstimates** table from [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
+- Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
+- Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
+- Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
+- In a new or existing app, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
+- If you're using an existing app, [add a screen](add-screen-context-variables.md) to it.
 
 ## Add a gallery ##
-1. On the **Home** tab, select **Layouts**, and then select the option that contains a thumbnail image, a header, and a description.
+1. In the **Options** tab of the right-hand pane, click or tap the **Layout** tab to open it, and then click or tap the option that contains a thumbnail image, a header, and a description.
 
-	![Add a layout with a heading, a subtitle, and a body element](./media/add-gallery/add-gallery.png)
+	![Add gallery](./media/add-gallery/add-gallery.png)
 
-1. Select the gallery, select data-source icon in the right-hand pane, and then select the **FlooringEstimates** data source.
+1. Select the gallery by clicking or tapping any item in it except the first one.
 
-    ![Select datasource](./media/add-gallery/select-data-source.png)
+	![Select gallery](./media/add-gallery/select-gallery.png)
+
+1. In the right-hand pane, click or tap the data-source icon, and then click or tap the **FlooringEstimates** data source.
+
+	![Select datasource](./media/add-gallery/select-data-source.png)
 
 	The gallery shows the data from the source that you specified.
 
-## Add a control to the gallery ##
-1. In the upper-left corner of the gallery, select the pencil icon to edit the gallery template.
+	![Show data](./media/add-gallery/show-data-default.png)
 
-    ![Edit Gallery Item](./media/add-gallery/edit-item.png)
+## Add a control to the gallery ##
+1. Select the gallery, and click or tap the pencil icon in its upper-left corner to edit the gallery template.
+
+    ![Edit gallery template](./media/add-gallery/edit-item.png)
 
 1. Add a **[Text box](controls/control-text-box.md)** control to the gallery template, and then move and resize the new control so that it doesn't overlap with other controls in the template.
 
-    ![Add Text Box](./media/add-gallery/add-text-box.png)
+	![Add text box](./media/add-gallery/add-text-box.png)
 
-1. With the text box still selected, select **Price** in the bottom list on the right-hand pane.  
+1. With the **Text box** control still selected, open the highlighted list in the right-hand pane.
+
+	![Open drop-down list](./media/add-gallery/open-dropdown.png)
+
+1. In the list of fields that you just opened, click or tap **Price**.  
 
     ![Change Text Box binding](./media/add-gallery/change-binding.png)
 
@@ -63,7 +75,7 @@ The **[Items](controls/properties-core.md)** property of a gallery determines wh
 
 	**If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
-1. Type part of or all of the name of a product in the text box.
+1. Type part of or all of the name of a product in the search box.
 
 	The gallery shows only those items that meet the filter criterion.
 
@@ -78,7 +90,7 @@ The **[Items](controls/properties-core.md)** property of a gallery determines th
 
 1. Select the sort icon to change the sorting order of the gallery by the names of the products.
 
-To sort and filter your gallery, replace the *DataSource* in this formula with name of your data source, and replace *ColumnName* with the name of the column by which you want to sort, filter, or both.
+To sort and filter your gallery, replace both instances of *DataSource* in this formula with name of your data source, and replace both instances of *ColumnName* with the name of the column by which you want to sort and filter.
 
 **Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 

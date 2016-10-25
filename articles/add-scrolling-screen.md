@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="lonu"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,11 +15,11 @@
 	ms.topic="article"
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
-	ms.date="04/28/2016"
+	ms.date="10/25/2016"
 	ms.author="LOnu"/>
-
-# Add a scrolling screen #
-Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. The scrolling screen gives you the ability to add multiple controls, and allow users to see them all clearly by scrolling.
+	
+# Add a scrolling screen in PowerApps #
+Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. By adding a scrolling screen, you can add multiple controls, which users can display if they scroll.
 
 When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
 
@@ -28,10 +28,11 @@ When you add multiple controls in a section, the controls maintain their relativ
 [AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Create a scrolling screen ##
-1. On the **Home** tab, select **New screen**:  
+1. On the **Home** tab, click or tap **New screen**:
+
 	![Option to add a screen to an app][1]
 
-2. On the **Home** tab, select **Layouts**, and then select the option to add an infinite scrolling canvas:  
+2. On the **Home** tab, click or tap **Layouts**, and then click or tap the option to add an infinite scrolling canvas:  
 
 	![Option to add an infinite scrolling canvas][2]
 
@@ -39,16 +40,14 @@ When you add multiple controls in a section, the controls maintain their relativ
 
 	![A screen with an infinite scrolling canvas, as it appears by default][3]
 
-
 ## Add elements ##
-
 Now, let's add some controls to the canvas to see how the scrolling screen works.
 
-1. In the canvas you added, select **Insert a visual**:  
+1. In the canvas you added, click or tap **Add an item from the Insert tab**.
 
 	![][4]
 
-2. On the **Insert** tab, select **Charts**, and then select **Column Chart**:  
+2. On the **Insert** tab, click or tap **Charts**, and then click or tap **Column Chart**.
 
 	![The option to add a column chart][5]
 
@@ -56,7 +55,7 @@ Now, let's add some controls to the canvas to see how the scrolling screen works
 
 	![Default column chart][7]
 
-3. On the **Insert** tab, select **Text** and then select **Pen input**:  
+3. On the **Insert** tab, click or tap **Text**, and then click or tap **Pen input**:  
 
 	![Option to add a pen control][8]
 
@@ -64,14 +63,10 @@ Now, let's add some controls to the canvas to see how the scrolling screen works
 
 	![Move and resize the pen control][9]
 
-5. Preview what you've created: ![][6]. You can scroll up and down to see the controls you added.
-
-
 ## Add a section ##
-
 Now, let's add another card with another control.
 
-1. Near the bottom of the screen, select **Add section**:  
+1. Near the bottom of the screen, click or tap **Add section**:  
 
 	![Option to add a section][10]
 
@@ -79,28 +74,25 @@ Now, let's add another card with another control.
 
 	![A new card below the default section][11]
 
-2. With the card still selected, go to the **Insert** tab, select **Charts**, and select **Line chart**. You'll notice the Line chart is too big to appear on the screen with the other controls:  
+1. With the card still selected, go to the **Insert** tab, click or tap **Charts**, and then click or tap **Line chart**.
+
+	The new chart is too big to appear on the screen with the other controls:  
 
 	![A line chart added to the bottom of the new card][12]
 
-3. Preview what you've created: ![][6]. Scroll down to display the new line chart:  
+1. Open Preview mode by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
+
+	![Open Preview mode](./media/add-scrolling-screen/open-preview.png)
+
+1. Scroll down to display the new line chart.  
 
 	![Preview shows the line chart][13]
-
-## What you learned
-
-In this topic, you:
-
-- Added a scrolling screen to the app.
-- Added controls in different cards and when you preview your app, you see how scrolling up and down displays all the controls.
-
 
 [1]: ./media/add-scrolling-screen/add-screen.png
 [2]: ./media/add-scrolling-screen/add-canvas.png
 [3]: ./media/add-scrolling-screen/default-canvas.png
 [4]: ./media/add-scrolling-screen/insert-visual.png
 [5]: ./media/add-scrolling-screen/add-chart.png
-[6]: ./media/add-scrolling-screen/preview.png
 [7]: ./media/add-scrolling-screen/default-chart.png
 [8]: ./media/add-scrolling-screen/add-pen.png
 [9]: ./media/add-scrolling-screen/move-resize-pen.png

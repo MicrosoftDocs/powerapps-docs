@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/29/2016"
+   ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Toggle control in PowerApps #
@@ -36,6 +36,8 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
