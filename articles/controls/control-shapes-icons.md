@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/11/2016"
+    ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Shape controls and Icon controls in PowerApps #
@@ -39,6 +39,8 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 **[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

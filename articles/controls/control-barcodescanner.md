@@ -1,10 +1,10 @@
 <properties
-    pageTitle="Camera control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Camera control"
+    pageTitle="Barcode scanner control: reference | Microsoft PowerApps"
+    description="Information, including properties and examples, about the barcode scanner control"
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="aftowen"
+    authors="lonu"
     manager="erikre"
     editor=""
     tags=""/>
@@ -16,17 +16,17 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/25/2016"
-   ms.author="anneta"/>
+   ms.author="lonu"/>
 
-# Camera control in PowerApps #
-A control with which the user can take photos by using the camera on the device.
+# Barcode scanner control in PowerApps #
+A control with which the user can take photos by using the barcode scanner on the device.
 
 ## Description ##
 If you add this control, the user can update a data source with one or more photos from wherever the app is running.
 
 ## Key properties ##
 
-**Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses.
+**barcode scanner** – On a device that has more than one barcode scanner, the numeric ID of the barcode scanner that the app uses.
 
 ## Additional properties ##
 
@@ -64,7 +64,7 @@ If you add this control, the user can update a data source with one or more phot
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
 
-**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
+**Zoom** – The percentage by which an image from a barcode scanner is magnified or the view of a file in a PDF viewer.
 
 ## Related functions ##
 
@@ -72,21 +72,10 @@ If you add this control, the user can update a data source with one or more phot
 
 ## Example ##
 ### Add photos to an Image gallery control ###
-1. Add a **Camera** control, name it **MyCamera**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
-**Collect(MyPix, MyCamera.Photo)**
+1. Add a **barcode scanner** control, name it **Mybarcode scanner**
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-
-1. Add an **Image gallery** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
-
-1. Set the **[Items](properties-core.md)** property of the **Image gallery** control to **MyPix**, press F5, and then take a photo by clicking or tapping **MyCamera**.
-
-	The photo that you took appears in the **Image gallery** control.
-
-1. Take as many photos as you want, and then return to the default workspace by pressing Esc.
-
-1. (optional) Set the **[OnSelect](properties-core.md)** property of the **[Image](control-image.md)** control in the **Image gallery** control to **Remove(MyPix, ThisItem)**, press F5, and then click or tap a photo to remove it.
-
-Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the photos locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
+1. Add an **Text Box** control and set its output to the Barcode's value.  
+1. Scan a barcode of the type set under BarcodeType property.
+1. The text box is going to display the scanned barcode.

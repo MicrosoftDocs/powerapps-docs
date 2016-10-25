@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/11/2016"
+    ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Column chart and Line chart controls in PowerApps #

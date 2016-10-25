@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/08/2016"
+    ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Drop down control in PowerApps #
@@ -41,6 +41,8 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **ChevronBackground** – The color behind the down arrow in a dropdown list.
 
