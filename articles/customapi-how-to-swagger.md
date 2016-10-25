@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Customize your Swagger definition for PowerApps and Microsoft Flow | Microsoft PowerApps"
-	description="View the schema extensions required by Swagger to work with PowerApps and Microsoft Flow"
+	pageTitle="Customize your Swagger definition for PowerApps | Microsoft PowerApps"
+	description="View the schema extensions required by Swagger to work with PowerApps"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -17,11 +17,11 @@
    ms.date="10/26/2016"
    ms.author="casoper"/>
 
-# Customize your Swagger definition for PowerApps and Microsoft Flow
+# Customize your Swagger definition for PowerApps
 
 ## Introduction
 
-To use custom APIs in PowerApps and Microsoft Flow, you must provide a Swagger definition, which is a language-agnostic machine-readable document describing the API's operations and parameters.  In addition to the out-of-the-box Swagger specification, there are some extensions available when creating a custom API for PowerApps and Microsoft Flow.
+To use custom APIs in PowerApps, you must provide a Swagger definition, which is a language-agnostic machine-readable document describing the API's operations and parameters.  In addition to the out-of-the-box Swagger specification, there are some extensions available when creating a custom API for PowerApps.
 
 ## x-ms-summary
 
