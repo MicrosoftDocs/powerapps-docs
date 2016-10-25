@@ -25,9 +25,7 @@ This article shows you how to purchase PowerApps for your organization as an adm
 
 ## Choosing the right plan ##
 
-<!--
-You can choose from a variety of pricing-plan options. For information about scenarios and considerations, see [PowerApps pricing][3].
--->
+
 For details about what licenses you can choose for your organization, see [billing and pricing plans](billing-pricing-skus.md).
 
 ## Purchase PowerApps directly ##
@@ -101,5 +99,3 @@ These are coming soon but are not supported yet.
 [4]: https://go.microsoft.com/fwlink/?linkid=832551
 [5]: https://support.office.com/article/997596b5-4173-4627-b915-36abac6786dc
 [6]: https://portal.office.com/admin/default.aspx
-
-<!--[3]: https://go.microsoft.com/fwlink/?linkid=832550-->
