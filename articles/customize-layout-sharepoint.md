@@ -5,7 +5,7 @@
    suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
-   manager="erikre"
+   manager="anneta"
    editor=""
    tags=""/>
 
@@ -15,13 +15,14 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/03/2016"
+   ms.date="10/16/2016"
    ms.author="anneta"/>
 
 # Customize a layout in PowerApps #
 After you generate an app automatically in PowerApps, customize the browse screen, which appears by default. Specify which layout to use, which columns to show, and which columns to use when sorting and searching for records.
 
-If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
+- For information about how to generate an app automatically, see [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md).
+- If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
 ## Prerequisites ##
 You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
@@ -58,7 +59,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Select body of first item](./media/customize-layout-sharepoint/select-body.png)
 
-1. In the right-hand pane, click or tap the down arrow for the highlighted list.
+1. In the right-hand pane, open the highlighted list.
 
 	![Select down arrow](./media/customize-layout-sharepoint/select-down-arrow.png)
 
@@ -85,21 +86,21 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Default Items property](./media/customize-layout-sharepoint/default-items.png)
 
-	Based on this formula, users can search for all records that contains one or more letters in either the **AccountID** column or the **Title** column.
+	Based on this formula, users can search for all records that contains one or more letters in the **AccountID** column.
 
 	![Default search columns](./media/customize-layout-sharepoint/default-search.png)
 
-	If a user typed, for example, the letter "v" into the search bar, the screen would show the record for Europa. The title of that record doesn't match the search criterion, but the account ID does. Later in this procedure, you'll change the formula to search only in the **Title** column.
+	If a user typed, for example, the letter "v" into the search bar, the screen would show the record for Europa. The title of that record doesn't match the search criterion, but the account ID does. Later in this procedure, you'll change the formula to filter records based on the **Title** column.
 
-	In any generated app, users can sort records alphabetically in ascending or descending order by clicking or tapping the sort button near the upper-right corner. This formula specifies that the records will be sorted based on the **AccountID** column.
+	In any generated app, users can sort records alphabetically in ascending or descending order by clicking or tapping the sort button near the upper-right corner. This formula specifies that the records will be sorted based on the **ID** column.
 
 	![Default sort column](./media/customize-layout-sharepoint/default-sort.png)
 
 	Later in this procedure, you'll change the formula to sort the records based on the **Title** column instead.
 
-1. In the formula bar, delete the first instance of **"AccountID"** and the comma that follows it.
+1. In the formula bar, replace **"AccountID"** with **"Title"** (including the double quotation marks).
 
-1. In the formula bar, replace the remaining instance of **"AccountID"** with **"Title"** (including the double quotation marks).
+1. In the formula bar, replace **"ID"** with **"Title"** (including the double quotation marks).
 
 	The formula bar should now contain a formula that resembles this example:<br>
 	**SortByColumns(Search(AppGen, TextSearchBox1.Text, "Title"), "Title", If(SortDescending1, Descending, Ascending))**

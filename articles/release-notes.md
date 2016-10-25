@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="aftowen"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 <tags
@@ -14,17 +14,80 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="09/01/2016"
+    ms.date="10/22/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.510 #
+# What's new in PowerApps release 2.0.540 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+1. **Run apps in any of several languages**.
+
+1. **Manage apps and data in specific environments**.
+
+	For more information, see [Environments overview](environments-overview.md).
+
+1. **Specify a description for each app that you create**.
+
+	By adding descriptions, app creators help users find the best apps for their needs.
+
+1. **Better support for the Back button on Android devices**.
+
+	You're prompted to confirm whether you want to close the app.
+
+1. **Bug fixes and other improvements in performance, diagnostics, connections in shared apps, and accessibility**.
+
+	Apps open faster and are easier to use with a screen reader or just a keyboard. We've improved the dialog box in which you confirm or change connections when you open an app that someone shared with you. We've added a **Session details** option, which contains diagnostic information such as a session ID. We've made gallery layouts more accessible and made other improvements throughout the product.
+
+## Release 2.0.531 ##
+
+1. **Available in several languages in addition to English**.
+
+1. **Select and rename controls more easily**.
+
+	When you select a control, its name and the name or names of any parent controls appear in a "bread-crumb" element near the lower-left corner. You can open the **Rename** text box by double-clicking the name of a control at the top of the right-hand pane or by double-clicking the name of a screen in the left navigation bar.
+
+1. **Find options on the toolbar more easily**.
+
+1. **Show the Advanced view of control properties more easily**.
+
+	 Review and update property values of the selected control in the **Advanced** tab of the right-hand pane.
+
+1. **Refresh data in generated apps more easily**.
+
+	When you automatically generate an app, the default browse screen contains a refresh button. Users can click or tap the button to display the most recent changes to the data from its source without closing the app.
+
+1. **Show two display fields in lookup controls**.
+
+1. **Update multiple records at once by using the Patch function**.
+
+	Create or update more than one record at a time by specifying a table of base records and a table of change records as arguments for the **[Patch](function-patch.md)** function.
+
+1. **Perform calculations and actions on a set of records by using the ForAll function**.
+
+	The **[ForAll](function-forall.md)** function evaluates a formula for all records of a table. The formula can calculate a value and/or perform one or more actions, such as modifying data or working with a connection.
+
+1. **Calculate exponential values by using the Power function**.
+
+	The **[Power](function-numericals.md)** function returns a number raised to a power. This function is equivalent to the [^ operator](operators.md).
+
+1. **Better sorting and filtering across sessions and devices**.
+
+	If you sort or filter your list of apps on a mobile device, that setting is retained even if you close PowerApps. If you sort your list of apps by when you opened them most recently, the sort order is accurate even if you opened an app on a different device.
+
+1. **Improved mechanism for providing feedback**.
+
+	Instead of clicking or tapping the smile icon near the upper-right corner, create a ticket by clicking or tapping **Contact** on [our support page](https://powerapps.microsoft.com/support/) and then providing information about your question. You can also check the status of tickets that you've filed.
+
+## Release 2.0.510-2.0.512 ##
+Because of administrative details, different platforms show different build numbers, but 2.0.510, 2.0.511, and 2.0.512 were released at effectively the same time.
 
 1. **Open apps in iOS 10**.
 
 1. **Mark favorite apps on iOS and Android devices**.
 
 	You can mark an app as a favorite and show only your favorite apps in the list of apps that you can run.
+
+1. **Swipe down to refresh the list of apps on iOS and Android devices**.
 
 1.	**Delay property for text-input controls**.
 

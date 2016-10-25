@@ -1,11 +1,11 @@
 <properties
-	pageTitle="Overview of the Dynamics CRM Online connection | Microsoft PowerApps"
-	description="See the available Dynamics CRM Online functions, responses, and examples"
+	pageTitle="Overview of the Dynamics 365 connection | Microsoft PowerApps"
+	description="Create an app for managing data in Dynamics 365"
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
 	authors="AFTOwen"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags="" />
 
@@ -15,17 +15,17 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="08/13/2016"
+ms.date="10/20/2016"
 ms.author="anneta"/>
 
-# Connect from Microsoft PowerApps to Dynamics CRM Online #
+# Connect from Microsoft PowerApps to Dynamics 365 #
 
-![Dynamics CRM Online](./media/connection-dynamics-crmonline/dynamicscrmicon.png)
+![Dynamics 365](./media/connection-dynamics-crmonline/dynamicscrmicon.png)
 
-Display information from items within Dynamics CRM Online in your app. For example, you can add text boxes to your app, and in these text boxes, display a record from a Dynamics entity. You can also use a gallery control within your app to return a list of all entities in a CRM instance. In another example, you can add a button that, when selected, creates or deletes a record in an entity.
+Display information from items within Dynamics 365 in your app. For example, you can add text boxes to your app, and in these text boxes, display a record from a Dynamics entity. You can also use a gallery control within your app to return a list of all entities in an instance of Dynamics 365. In another example, you can add a button that, when selected, creates or deletes a record in an entity.
 
 - For information about how to create an app, see [Generate an app automatically](get-started-create-from-data.md) or [Create an app from scratch](get-started-create-from-blank.md). These topics are written for Excel, but the same principles apply to Dynamics.
-- For information about how to add data from Dynamics to an existing app, see [Add a data connection](add-data-connection.md).
+- For information about how to add data from Dynamics 365 to an existing app, see [Add a data connection](add-data-connection.md).
 - See the [list of available connections](../connections-list.md), and learn how to [manage connections](../add-manage-connections.md) in PowerApps.
 
 <!--NotAvailableYet

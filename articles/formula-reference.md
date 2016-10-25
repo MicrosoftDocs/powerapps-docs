@@ -1,4 +1,4 @@
-<properties
+﻿<properties
    pageTitle="Functions, signals, and enumerations | Microsoft PowerApps"
    description="Reference information for functions, signals, and enumerations in PowerApps."
    services=""
@@ -47,7 +47,7 @@ Other elements include:
 
 **[AddColumns](functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
 
-**[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the **&&** operator.
+**[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](functions/operators.md).
 
 **[App](functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
 
@@ -133,6 +133,8 @@ Other elements include:
 
 ## E ##
 
+**[EditForm](functions/function-form.md)** – Resets a form control for editing of an item.
+
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
@@ -152,6 +154,8 @@ Other elements include:
 **[First](functions/function-first-last.md)** – Returns the first record of a table.
 
 **[FirstN](functions/function-first-last.md)** – Returns the first set of records (N records) of a table.
+
+**[ForAll](functions/function-forall.md)** – Calculates values and performs actions for all records of a table.
 
 ## G ##
 
@@ -177,7 +181,7 @@ Other elements include:
 
 ## L ##
 
-**[Language](functions/function-language.md)** – Provides access to the language that the app uses.
+**[Language](functions/function-language.md)** – Returns the language tag of the current user.
 
 **[Last](functions/function-first-last.md)** – Returns the last record of a table.
 
@@ -219,13 +223,13 @@ Other elements include:
 
 **[NewForm](functions/function-form.md)** – Resets a form control for creation of an item.
 
-**[Not](functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the **!** operator.
+**[Not](functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the [**!** operator](functions/operators.md).
 
 **[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
 ## O ##
 
-**[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the **||** operator.
+**[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](functions/operators.md).
 
 ## P ##
 
@@ -238,6 +242,8 @@ Other elements include:
 **[Pi](functions/function-trig.md)** – Returns the number &pi;.
 
 **[PlainText](functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
+
+**[Power](functions/function-numericals.md)** – Returns a number raised to a power.  You can also use the [**^** operator](functions/operators.md).
 
 **[Proper](functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 
