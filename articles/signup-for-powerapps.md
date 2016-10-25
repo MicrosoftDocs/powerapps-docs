@@ -122,7 +122,7 @@ To purchase PowerApps Plan 1 as an individual:
 
 1. Browse to [powerapps.microsoft.com][4], and then select **Pricing** (at the top of the screen, near the middle).
 
-1. Select **Buy now** for PowerApps Plan 1.
+1. Select **Buy now** for PowerApps Plan 1
 
 	![](./media/signup-for-powerapps/buy-now-plan-1.png)
 
