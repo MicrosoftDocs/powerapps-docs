@@ -14,14 +14,10 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/27/2016"
+   ms.date="10/26/2016"
    ms.author="casoper"/>
 
 # Register Custom APIs in PowerApps and Microsoft Flow
-
-[AZURE.VIDEO nb:cid:UUID:a971d001-3731-42d3-8abe-d82d44869343]
-
-## Introduction
 
 PowerApps and Microsoft Flow can leverage any RESTful APIs hosted anywhere.  This tutorial demonstrates registering and using a custom API.
 
@@ -135,6 +131,9 @@ Your custom API is now displayed under **Custom**.
 ![Available APIs](./media/register-custom-api/mycustomapi.png)  
 
 > [AZURE.TIP] If the Swagger file fails to validate, there may be extra characters. For example, most data should be in quotes, including website URLs.
+
+5. Now that the custom API is registered, you must create a connection to the custom API so it can be used in your apps and flows.  Click the **+** to the right of the **Modified** date of your custom API and then complete any necessary steps to sign in to your API's data source.  For **OAuth** authentication, that might be a sign-in screen.  For API Key authentication, you might get prompted for a key value.
+
 
 ### Step 3: Add the custom API to a flow and an app
 

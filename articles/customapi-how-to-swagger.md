@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/27/2016"
+   ms.date="10/26/2016"
    ms.author="casoper"/>
 
 # Customize your Swagger definition for PowerApps and Microsoft Flow
