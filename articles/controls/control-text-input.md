@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/29/2016"
+   ms.date="10/25/2016"
    ms.author="anneta"/>
 
 # Text input control in PowerApps #
@@ -39,6 +39,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **Clear** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.
 
