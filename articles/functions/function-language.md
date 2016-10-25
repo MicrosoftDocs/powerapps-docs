@@ -24,21 +24,25 @@ Returns the language tag of the current user.
 
 ## Description ##
 
-The **Language** function returns the language and region of the current user as a language tag.
+The **Language** function returns the language, script, and region of the current user as a language tag.
 
 Use the language information to tailor your app across locales.  For example, if you are creating an app that will be used in Italy and France, you can use **Language** to automatically display Italian and French strings to your users in those different locations. 
 
-### Lanugage tags ###
+### Language tags ###
 
-The return value of this function is a string of text containing a language tag in the format:
+A *language tag* can be in one of three formats:
 
-**"*xx-YY*"**
+| Return value | Description |
+|--------------|-------------|
+| **"*lg&#8209;RE*"** | *lg* is the two character abbreviation for the language and *RE* is the two character abbreviation for the region.  This is the most common return type.  For example, "en-GB" is returned for Great Britain.  |
+| **"*lg*"** | *lg* is the two character abbreviation for the language.  This is the format used when PowerApps has information about the language, but does not have information for the specific region.  |
+| **"*lg&#8209;scrp&#8209;RE*"** | *lg* is the two character abbreviation for the language, *scrp* is the four character abbreviation for the script, and *RE* is the two character abbreviation for the region.   |
 
-where *xx* is the two character abbreviation for the language and *YY* is the two character abbreviation for the region.  This format is the same as the [IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47) format.  
+PowerApps uses the [IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47) format.  
 
-For example, English in the United States uses the language tag "en-US".  To see the list of supported language tags, type **Value( "1", ** in the formula bar or advanced view and scroll through the list of locales suggested for the second argument.  
+To see the list of supported language tags, type **Value( "1", )** in the formula bar or advanced view and scroll through the list of locales suggested for the second argument.  
 
-The **[Text](function-text.md)** and **[Value](function-value.md)** functions also use language tags.  Use these functions for translating to and from text strings in a globally aware manner.
+The **[Text](function-text.md)** and **[Value](function-value.md)** functions also use language tags.  Use these functions for translating to and from text strings in a globally aware manner.  When passing a language tag to these functions and the region would not make a difference, you can use just the language portion of the tag.
 
 ## Syntax ##
 
@@ -52,11 +56,13 @@ It is assumed that the host operating system and/or browser are using the defaul
 
 | Formula | Location | Return Value |
 |---------|----------|--------------|
-| **Language()** | Rio de Janeiro, Brazil | "pt-BR" |
 | **Language()** | Lisbon, Portugal | "pt-PT" |
-| **Language()** | Washington DC, USA | "en-US" |
+| **Language()** | Rio de Janeiro, Brazil | "pt-BR" |
+| **Language()** | Atlanta, USA | "en-US" |
 | **Language()** | Manchester, Great Britain | "en-GB" |
 | **Language()** | Paris, France | "fr-FR" |
+| **Language()** | Roseau, Dominica | "en" |
+| **Language()** | Belgrade, Serbia | "sr-cyrl-RS" or "sr-latn-RS", depending on the user's system settings |
 
 ### Localization table ###
 
