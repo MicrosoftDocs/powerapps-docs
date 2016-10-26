@@ -61,7 +61,7 @@ Pin an app to quickly access it from either the homepage or the task pane. To pi
 ## Open an app ##
 To open an app, click or tap its tile in either the Dynamics 365 homepage or the task pane.
 
-You can also access an app directly using its web URL. You can sending the link over email or bookmark the app in your browser.
+You can also access an app directly using its URL. You can also share the link over email or bookmark it in your browser.
 
 If your browser does not support all the controls used in the app, you can download and use PowerApps Mobile, which is available on iOS, Android or Windows.  
 
