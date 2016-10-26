@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/07/2015"
+   ms.date="10/25/2015"
    ms.author="gregli"/>
 
 # Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps #
