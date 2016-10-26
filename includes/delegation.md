@@ -4,10 +4,6 @@ When possible, PowerApps will delegate filter and sort operations to the data so
 
 However, delegation may not always be possible. Data sources vary on what functions and operators they support while the PowerApps formula language is relatively rich. If complete delegation of a formula isn't possible, the authoring environment will flag the portion that can't be delegated with a warning. When possible, consider changing the formula to avoid functions and operators that can't be delegated.   
 
-PowerApps will delegate what it can but will only pull down a small set of records to complete the work locally: at most 500 records. Filter and sort functions will continue to operate but with a reduced set of records. What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story, which could be confusing to users. Aggregate operations, such as **Sum** and **Average**, will operate on only a portion of the data source and therefore may not give the result that's expected.
+PowerApps will delegate what it can but will only pull down a small set of records to complete the work locally: at most 500 records. Filter and sort functions will continue to operate but with a reduced set of records. What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story, which could be confusing to users. Aggregate functions, such as **[Sum](../functions/function-aggregates.md)** and **[Average](../functions/function-aggregates.md)**, may only operate on a portion of the data source and therefore may not give the result that's expected.
 
-Additional limitations on delegation (which we are working to remove):
-
-- At this time, **LookUp** doesn't support delegation, but it will be coming soon.
-- For **Sort**, the *Formula* argument can only be the name of a single column and can't include other operators or functions. The *SortOrder* argument has no limitations.
-- For **Filter**, the formula can include =, <>, <, >, >=, <=, &&, ||, and **In** operators. Only names of columns and values that don't vary with the records of the data source can be used.  The **ExactIn** operator is not supported.  
+For more information, see the article [Understand delegation](../working-with-delegation.md). 
