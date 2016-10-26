@@ -22,13 +22,14 @@
 You can run all your apps in a web browser by opening Microsoft Dynamics 365. Access your apps quickly through the homepage or the task pane.
 
 PowerApps supports these browser versions:
+
 * Microsoft Edge
 * Internet Explorer 11 and above
 * Chrome 47.x and above
 * Safari on iOS 9.3 and above
 * Firefox 47 and above
 
-When someone shares an app with you, you will receive an email message that contains a link for the app. Click or tap the link to open the app in a browser.
+When someone shares an app with you, you will receive an email message that contains a link to the app. Click or tap the link to open the app in a browser.
 
 ## Microsoft Dynamics 365 homepage ##
 The Dynamics 365 home is the home to all your Dynamics 365 apps. You can access that page by clicking or tapping a button in your Office 365 waffle.  
@@ -44,7 +45,7 @@ If you have recently installed an app, it may not appear in your app list immedi
 ![Connection](./media/run-app-browser/search-sync-filter.png)
 
 ## Task pane ##
-The task pane gives you quick access to all your apps. You access it by clicking or tapping the Dynamics 365 toggle-button on the Dynamics 365 header, which appears on top of all your Dynamics 365 apps.
+The task pane gives you quick access to all your apps. You access it by clicking or tapping the Dynamics 365 toggle-button on the header, which appears on top of your apps.
 
 You can quickly open a pinned app from the task pane or find any of your apps through the "My apps" sub-menu.
 
@@ -60,9 +61,9 @@ Pin an app to quickly access it from either the homepage or the task pane. To pi
 ## Open an app ##
 To open an app, click or tap its tile in either the Dynamics 365 homepage or the task pane.
 
-You can also access an app directly via its URL. This allows you to share an app by sending a link in email as well as bookmark an app in your web browser.
+You can also access an app directly using its URL. You can also share the link over email or bookmark it in your browser.
 
-If your browser does not support all controls in an app, open it in a browser, choose the download option in the Dynamics 365 header, and then open the app in PowerApps Mobile.  
+If your browser does not support all the controls used in the app, you can download and use PowerApps Mobile, which is available on iOS, Android or Windows.  
 
 ## Sign in to PowerApps ##
 If you open an app from dynamics.com, you're probably already signed in to Dynamics 365. If you open the app from a web link, you will be prompted to sign in using your Azure Active Directory credentials.
@@ -77,6 +78,6 @@ If the app requires a connection to a data source or requires consent to use dev
 Typically, you are prompted only the first time.
 
 ## Exit PowerApps ##
-Exit or close the app in either of these ways:
-- Click or tap **Sign out** in the upper-right corner of the app header for Microsoft Dynamics 365.
-- Open the Dynamics 365 navigation menu to navigate to home or run another app.
+Exit or close the app using either of these ways:
+- Click or tap **Sign out** in the Dynamics 365 portal.
+- Navigate to the Dynamics 365 home page or launch another app from the task pane.
