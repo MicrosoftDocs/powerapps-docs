@@ -19,7 +19,7 @@
 
 # Share an app #
 
-[AZURE.VIDEO nb:cid:UUID:7c4368ab-58a7-4930-9df3-6ba255e2b593]
+[AZURE.VIDEO nb:cid:UUID:7bcf3e81-7fbe-4e63-97fd-51036198c051]
 
 Share an app that you created (or that someone shared with you) from PowerApps or [powerapps.com](https://web.powerapps.com). Specify who can run the app, edit it, share it again, or all three.
 
