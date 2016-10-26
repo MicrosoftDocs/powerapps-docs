@@ -28,9 +28,9 @@ In **Cost Estimator**, for example, you can create an appointment for estimating
 ## Open the app ##
 1. Sign in to [powerapps.com](https://web.powerapps.com), and then click or tap **Cost Estimator** in the list of sample apps.
 
-	![](./media/open-and-run-a-sample-app/portal-homepage.png)
+	![](./media/open-and-run-a-sample-app/app-tile.png)
 
-1. Click or tap **Open for phone** to show the app as it would look on a phone.
+1. Click or tap **Open for phone** to show the app as it would look on a phone, and then click or tap **Allow** to give consent to use your device's camera.
 
 	The app contains sample data for creating appointments and estimating the cost of installing a specific flooring product in a room of a particular size.
 
