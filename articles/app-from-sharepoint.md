@@ -19,6 +19,9 @@
    ms.author="anneta"/>
 
 # Generate an app to manage data in a SharePoint list #
+
+[AZURE.VIDEO nb:cid:UUID:34ccfd46-7826-49ce-90d8-cf6a144b6968]
+
 In PowerApps, generate a three-screen app automatically to manage data in a SharePoint list, whether the site is on-premises or in the cloud.
 
 By default, every generated app has a screen for browsing records, a screen for showing details of a record, and a screen for creating or updating records. Heuristics suggest the best layout and content for each screen, but you'll probably need to customize the app to suit your needs.
