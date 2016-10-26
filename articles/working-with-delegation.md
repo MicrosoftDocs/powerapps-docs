@@ -75,6 +75,7 @@ All other functions and operators cannot be delegated.  This includes these nota
 * Aggregates.  Sum, Average, Min, ... P0 
 * Count functions: CountRows, CountA, Count P0
 * Concatenate
+* Collect, ClearCollect
 
 Only names of columns and values that don't vary with the records of the data source can be used.   Context variables and collections not allowed. P0
 
