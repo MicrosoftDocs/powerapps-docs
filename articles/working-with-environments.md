@@ -19,7 +19,7 @@
     ms.author="litran"/>
 
 # Working with environments and Microsoft PowerApps #
-With PowerApps, you can work in different environments and easily switch among them. The scope of this article will cover the following topics on environment:
+With PowerApps, you can work in different environments and easily switch among them. For an overview of environments, see [Environments overview](environments-overview.md), which explains in detail why you use environments and how you can create and manage them. The scope of this article will cover the following topics on environment:
 
 - how to switch the environment on powerapps.com
 - how to an create app in the right environment
@@ -37,7 +37,7 @@ The *Default environment* is accessible to everyone. You can start creating apps
 Once you switch to a different environment (such as Environment 1), you will see all the apps you created or have access to in this new environment.
 
 ## Create apps in the right environment ##
-You can create apps in existing environments that you have access to or in a new environment. Creating your own environment, however, requires a specific plan. Before you create an app, always **make sure you select the environment you want to app to be in**. Otherwise, you will have to deal with moving apps between environments.
+You can create apps in existing environments that you have access to or in a new environment. Creating your own environment, however, requires a specific plan. For more information, see [this topic](pricing-billing-skus.md). Before you create an app, always **make sure you select the environment you want to app to be in**. Otherwise, you will have to deal with moving apps between environments.
 
 1. If you are in [powerapps.com](http://web.powerapps.com), select the environment you would like to create your app in. If you are in *PowerApps Studio* or *PowerApps Studio for web*, skip to step 4.
 2. Select **+ New app**
@@ -68,3 +68,5 @@ Again, to switch environments in [powerapps.com](http://web.powerapps.com):
 To switch environments in PowerApps Studio for Windows or PowerApps Studio for web:
 
   ![Studio switch environment](./media/working-with-environments/studio-switch-env.PNG)
+
+For more information about environments, see [this overview](environments-overview.md).
