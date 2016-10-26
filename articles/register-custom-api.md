@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Register Custom APIs in PowerApps and Microsoft Flow | Microsoft PowerApps"
-	description="Register Custom APIs in PowerApps and Microsoft Flow using Swagger and OAuth."
+	pageTitle="Register Custom APIs in PowerApps | Microsoft PowerApps"
+	description="Register Custom APIs in PowerApps using Swagger and OAuth."
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -14,16 +14,12 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/27/2016"
+   ms.date="10/26/2016"
    ms.author="casoper"/>
 
-# Register Custom APIs in PowerApps and Microsoft Flow
+# Register Custom APIs in PowerApps
 
-[AZURE.VIDEO nb:cid:UUID:a971d001-3731-42d3-8abe-d82d44869343]
-
-## Introduction
-
-PowerApps and Microsoft Flow can leverage any RESTful APIs hosted anywhere.  This tutorial demonstrates registering and using a custom API.
+PowerApps can leverage any RESTful APIs hosted anywhere.  This tutorial demonstrates registering and using a custom API.
 
 ## Prerequisites
 
@@ -34,7 +30,7 @@ PowerApps and Microsoft Flow can leverage any RESTful APIs hosted anywhere.  Thi
 
 ## Authentication
 
-Custom APIs in PowerApps and Microsoft Flow can use any of several authentication mechanisms
+Custom APIs in PowerApps can use any of several authentication mechanisms
 
 - Basic Authentication
 - OAuth 2.0. The specific implementations below are currently supported, with more coming soon.
@@ -92,7 +88,7 @@ When you create the Swagger file, a JSON file is created.  You'll need this is S
 
 - To validate your Swagger files, use the [Swagger editor](http://editor.swagger.io/#/). You can paste your JSON data, and validation automatically occurs.
 
-- To customize your Swagger document to work with PowerApps and Microsoft Flow, see [Customize your Swagger definition](customapi-how-to-swagger.md).
+- To customize your Swagger document to work with PowerApps, see [Customize your Swagger definition](customapi-how-to-swagger.md).
 
 ### Step 2: Add a connection to the custom API
 
@@ -136,36 +132,12 @@ Your custom API is now displayed under **Custom**.
 
 > [AZURE.TIP] If the Swagger file fails to validate, there may be extra characters. For example, most data should be in quotes, including website URLs.
 
-### Step 3: Add the custom API to a flow and an app
-
-Now you're ready to use the custom API with your app or flow. To illustrate, we'll use a custom weather API.
-
->[AZURE.NOTE] This example creates a very simple flow to show you how to add your custom API. For more information, see [Get started with flows](https://flow.microsoft.com/en-us/documentation/get-started-logic-flow/).
-
-#### Add the custom API to your flow
-
-1. In [powerapps.com](https://web.powerapps.com), select the **Flows** tab, and select **Create a flow**.
-
-2. You are presented several templates already representing some common scenarios. You can use any of these and add your custom API to it, or you can choose **Create from blank** to create a flow from scratch.  Select **Create from blank**.
-
-	![New flow](./media/register-custom-api/createfromblank.png)   
-
-4. Select **Recurrence**, and set the frequency to 1 minute.
-
-	![Recurrence](./media/register-custom-api/logicrecurrence.png)  	
-
-5. Select the plus sign ![Plus sign](./media/register-custom-api/flowplussign.png), and then select **Add an action**. In the list, your custom API is listed.
-
-	![Your custom API](./media/register-custom-api/logicflow.png)
-
-6. Select the operation you want to call from your custom API.  For this example, the API gets the current temperature, and then sends an email using Office 365.
-	
-	![Weather example](./media/register-custom-api/logicflowexample.png)
-
-7. Name your flow, and then select **Done**.
+5. Now that the custom API is registered, you must create a connection to the custom API so it can be used in your apps.  Click the **+** to the right of the **Modified** date of your custom API and then complete any necessary steps to sign in to your API's data source.  If you're using **OAuth** authentication with your API, you might be presented a sign-in screen.  For API Key authentication, you might be prompted for a key value.
 
 
-#### Add the custom API to your app
+### Step 3: Add the custom API to an app
+
+Now you're ready to use the custom API with your app. To illustrate, we'll use a custom weather API.
 
 In this step, you'll create a very simple app that shows you how to add your custom API. For more information, see [Create an app from data](get-started-create-from-data.md).
 
