@@ -20,7 +20,7 @@
 
 # Understand delegation #
 
-PowerApps includes a powerful set of functions for filtering, sorting, and shaping data:  **[Filter](functions/function-filter-lookup.md)**, **[Lookup](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, **[Search](functions/function-sort.md)**, **[AddColumns](functions/function-table-shaping.md)**, and **[DropColumns](functions/function-table-shaping.md)** functions to name just a few.  With these functions, you can provide your users with focused access to the information they need.  For those with a database background, this is how you create the equivalent of SQL queries.  
+PowerApps includes a powerful set of functions for filtering, sorting, and shaping data:  **[Filter](functions/function-filter-lookup.md)**, **[Lookup](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, **[Search](functions/function-sort.md)**, and **[AddColumns](functions/function-table-shaping.md)** functions to name just a few.  With these functions, you can provide your users with focused access to the information they need.  For those with a database background, this is how you create the equivalent of SQL queries.  
 
 The key to building efficient apps is to minimize the amount of data that needs to be brought to your device.  This could be only a handful of records from a sea of millions, or a single aggregate value based on thousands of records.  Or perhaps only the first set of records can be retrieved, and the rest brought in as the user gestures that they want more.  Being focused can dramatically reduces the processing power, memory, and network bandwidth needed by your app, resulting in snappier response times for your users, even on phones connected via a wireless network.  
 
@@ -28,77 +28,73 @@ The key to building efficient apps is to minimize the amount of data that needs 
 
 Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a PowerApps' formula can be delegated to every data source.  The PowerApps language mimics Excel's formula language, designed with complete and instant access to a complete workbook in memory.  As a result, the PowerApps language is far richer than any data source can completely support, including powerful database engines such as SQL Server.
 
-**When working with data, you want to only use functions and operators that can be delegated.**  The authoring experience makes this easy to detect with blue dots on formulas that cannot be delegated.
-
-Besides the improved performance mentioned above, there is another important reasons to seek delegation.  If a formula cannot be delegated, PowerApps will only retrieve the first 500 records of the data.  PowerApps imposes this limit to avoid having apps wait for long periods of time while a large amount of data is retrieved, especially if that was not what the user or author intended.  This can be confusing if a user does not find the data they expect, or the data is used in aggregate functions such as **[Sum](functions/function-aggregated.md)** and **[Average](functions/function-aggregates.md)**.
-
-## Blue dot warnings ##
-
-    
+**When working with data, you want to only use formulas that can be delegated.**  
 
 ## Delegatable functions ##
 
-The following functions can be delegated:
+### Filter functions ###
 
-* Filter
-* LookUp (third argument ok)
+**Filter** and **LookUp** can be delegated.  Within these functions, the following can be used with columns of the table to select the appropriate records:
 
-Within these functions, the following functions and operators can be used in predicates:
+* **[And](functions/function-logicals.md)** (including **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](functions/operators.md)**)
+* **[+](functions/operators.md)**, **[-](functions/operators.md)**
+* **[In](functions/operators.md)**
+* **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
+* **[TrimEnds](functions/function-trim.md)**
+* **[IsBlank](functions/function-isblank-isempty.md)**
+* Constant values, which do not include context variables or collections
 
-* And (including &&), Or (including ||), Not (including !)
-* +, -
-* In
-* =, <>, >=, <=, >, <
-* TrimEnds
-* IsBlank
+Portions of your formula that evaluate to a constant value for all records can also be used.  For example, **Left( Language(), 2 )** does not depend on any columns of the record and therefore returns the same value for all records.  It is effectively a constant.  Use of context variables, collections, and signals may not be constant and therefore will prevent **Filter** and **LookUp** from being delegated.  
 
-Constant formulas.  
-Left( Language(), 2 ) Yes
-Left( cv, 2 ) NO
+Some notable items missing from the above list:
 
-Noteable exceltions:
- Concat (including &) P0
-*, /, mod P1
-ExactIn
-* String manupuation functions: Lower, Upper, Left, right, Mid, Len
+* **[If](functions/function-if.md)**
+* **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
+* **[Concatenate](functions/function-concatenate.md)** (including **[&](functions/operators.md)**)
+* **[ExactIn](functions/operators.md)**
+* String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
+* Signals: **[Location](functions/signals.md)**, **[Acceleration](functions/signals.md)**, **[Compass](functions/signals.md)**, ...
+* Volatiles: **[Now](functions/function-now-today-istoday.md)**, **[Rand](functions/function-rand.md)**
+* [Context variables and collections](working-with-variables.md)
 
-Column name only:
-* Sort
-* SortByColumns
-* Search
+### Sorting functions ###
 
-- For **Sort**, the *Formula* argument can only be the name of a single column and can't include other operators or functions. The *SortOrder* argument has no limitations.
+**Sort**, **SortByColumns**, and **Search** can be delegated.  
 
-All other functions and operators cannot be delegated.  This includes these notable categories:
+In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
-* Table shaping.  AddColumns, DropColumns, ...  P1
-* Aggregates.  Sum, Average, Min, ... P0 
-* Count functions: CountRows, CountA, Count P0
-* Concatenate
-* Collect, ClearCollect
+### Other functions ### 
 
-Only names of columns and values that don't vary with the records of the data source can be used.   Context variables and collections not allowed. P0
+All other functions do not support delegation, including these notable functions:
 
-Signals not supported.  
+* Table shaping: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ... 
+* Aggregates: **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, ... 
+* **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
+* **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, **[Count](functions/function-table-counts.md)**
+* **[Concat](functions/function-concatenate.md)**
+* **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
+* **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
 
-Blue dot siuggestion.
+## Non-delegatable limits ##
+
+Formulas that cannot be delegated will be processed locally.  This allows for the full breadth of the PowerApps formula language to be used.  But at a price: all the data must be brought to the device first, which could involve retrieving a large amount of data over the network.  That can take time, giving the impression to users that your app is slow or hung.
+
+To avoid this, PowerApps imposes a limit on the amount of data that can be processed locally from a data source.  The limit is 500 records.  We chose this number so that you would still have complete access to small data sets and you would be able to refine your use of large data sets by seeing partial results.
+
+Obviously care must be taken when using this facility as it can be confusing for users.  For example, consider a **Filter** function with a selection formula that cannot be delegated, over a million record data source.  Since the filtering will be done locally, only the first 500 records of the million records will be scanned.  If the desired record is record 501, or 500,001, it will not be considered or returned by **Filter**.
+
+Another place where this can be a problem is aggregate functions.  Take **Average** over a column of that same million record data source.  Since **Average** cannot be delegated, only the first 500 records will be averaged.  Care must be taken or a partial answer could be misconstrued by a user as a complete answer.
+
+## Blue dot suggestions ##
+
+Obviously, working with non-delegatable formulas could be a problem.  For this reason, the authoring experience will mark non-delegatable formulas with a blue dot:
 
 
-## Delegatable filter formulas ##  
 
-There are two reasons for this.  The first we have already touched on: the app will result in a better user experience with less resource utilization and less network bandwidth consumed.   
+
 
 
     
 
-It is possible to create a very powerful formula that returns exactly the data that you seek.   
 
-With PowerApps, you can build apps that work with large volumes of data efficiently.  
-
-*Delegation* is how this is accomplished.  
-
-
-What is desired is the best of both worlds.  All the power of PowerApps formulas with the ability to push the work off the local device.  
-
-For those of you with a database background: delegation is the equivalent of running a SQL query on a SQL server.  PowerApps 
 
