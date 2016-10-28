@@ -6,4 +6,4 @@ However, delegation may not always be possible. Data sources vary on what functi
 
 PowerApps will delegate what it can but will only pull down a small set of records to complete the work locally: at most 500 records. Filter and sort functions will continue to operate but with a reduced set of records. What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story, which could be confusing to users. Aggregate functions, such as **[Sum](../functions/function-aggregates.md)** and **[Average](../functions/function-aggregates.md)**, may only operate on a portion of the data source and therefore may not give the result that's expected.
 
-For more information, see [Understand delegation](../working-with-delegation.md). 
+See the [delegation overview](../delegation-overview.md) for more information.
