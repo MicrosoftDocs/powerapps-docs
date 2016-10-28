@@ -18,4 +18,4 @@
    ms.author="robinr"/>
 
 # Export and import resources
-This is page is left blank intentionally.
+This is page is intentionally left blank.
