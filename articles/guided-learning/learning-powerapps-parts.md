@@ -20,7 +20,7 @@
    ms.date="10/04/2016"
    ms.author="mblythe"/>
 
-# The Parts of PowerApps
+# The parts of PowerApps
 In the first Guided Learning topic you read about the main parts of PowerApps. Now we're going to provide a little more detail on each of the parts. PowerApps is a set of software services and apps that work together, and there are related technologies that help make this a powerful ecosystem. The PowerApps components are:
 
 - **web.powerapps.com** - manage and share the apps you build
