@@ -50,6 +50,10 @@ Many functions in PowerApps can process more than one value at a time through th
 
 Another consideration is that **ForAll** is not delegatable while other functions may be, such as **Filter**.  
 
+### Delegation ###
+
+When used with a data source, **ForAll** cannot be delegated.  Only the first portion of the data source will be retrieved, up to 500 records, and then the function applied.  A blue dot will appear at authoring time to remind you of this limitation and to suggest switching to delegatable alternatives where possible.  See [understand delegation](../working-with-delegation.md) for more information.
+
 ## Syntax ##
 
 **ForAll**( *Table*, *Formula* )

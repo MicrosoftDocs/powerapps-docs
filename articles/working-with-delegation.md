@@ -81,7 +81,7 @@ Some notable items missing from the above list:
 
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
-### Other functions ### 
+### Other functions ###
 
 All other functions do not support delegation, including these notable functions:
 
