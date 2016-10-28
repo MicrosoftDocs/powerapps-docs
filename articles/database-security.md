@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/38/2016"
+   ms.date="10/28/2016"
    ms.author="robinr"/>
    
 #Configure database security
