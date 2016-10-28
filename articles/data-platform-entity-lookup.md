@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="robinarh"
-	manager="anneta"
+	manager="robinr"
 	editor=""
 	tags=""/>
 
@@ -36,7 +36,7 @@ You can create several types of relationships from one entity to another (or bet
 ## Add a lookup field
 To add a lookup field to an entity, specify the field's data type as **Lookup**, and specify the entity with which you want to create a relationship.
 
-1. On [powerapps.com](https://web.powerapps.com), click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane.
 1. In the list of entities, click or tap an entity to display its fields. You can filter the list by typing one or more characters in the search bar above the list.
 1. Near the top of the screen, click or tap **Add field**. A blank row appears at the bottom of the list of fields.
 1. Specify the display name and the name of the field, and then specify **Lookup** as the data type of the field.
@@ -57,4 +57,5 @@ If entity A has a lookup field to entity B:
 For information about how to delete a field, see [Manage fields](data-platform-manage-fields.md).
 
 ## Next steps ##
-- [Create an app](data-platform-create-app.md)
+- [Generate an app by using a Common Data Service database](data-platform-create-app.md)
+- [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
