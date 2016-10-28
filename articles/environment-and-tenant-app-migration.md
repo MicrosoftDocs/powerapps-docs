@@ -67,7 +67,12 @@ Gateways are only supported in the default, and {tenant name} (from preview)  en
 8. Test the app to verify all compilation issues have been resolved.
 
 ## Common Data Service entity schema changes, new entities, new permission sets, new roles
-1. Export a package from the origin environment from the admin center
-2. Select the destination environment in the admin center
-3. Import the package 
-4. Resolve and address any conflicts
+Here is how you can migrate an entity.
+
+1. From http://web.powerapps.com, select **Common Data Service** in the left nav bar, then select an entity to migrate. Click or tap on **Export data**.
+	![](./media/environment-and-tenant-app-migration/export-entity.png)
+
+2. Export a package from the origin environment from the admin center
+3. Select the destination environment in the admin center
+4. Import the package
+5. Resolve and address any conflicts

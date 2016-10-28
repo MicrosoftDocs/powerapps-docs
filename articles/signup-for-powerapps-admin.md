@@ -31,21 +31,22 @@ For details about what licenses you can choose for your organization, see [billi
 ## Purchase PowerApps directly ##
 
 You can purchase PowerApps subscriptions for your organization from [powerapps.microsoft.com][4] and then assign PowerApps licenses to your users. [Learn more][5].
+
 1. Open [powerapps.microsoft.com][4], and then select **Pricing**.
 
-1. Select **Buy now** for the plan you want.
+2. Select **Buy now** for the plan you want.
 
 	![](./media/signup-for-powerapps-admin/buy-now.png)
 
-1. If you are already the administrator of an Office 365 tenant, select **Yes**. Otherwise, select **No**.
+3. If you are already the administrator of an Office 365 tenant, select **Yes**. Otherwise, select **No**.
 
 	![](./media/signup-for-powerapps-admin/admin-question.png)
 
-1. If you want to create a tenant, select **Team or organization**.
+4. If you want to create a tenant, select **Team or organization**.
 
 	![](./media/signup-for-powerapps-admin/question-teamororg.png)
 
-1. Provide information to make the purchase, and then navigate to the [Office 365 admin center][6] to assign PowerApps licenses to your users.
+5. Provide information to make the purchase, and then navigate to the [Office 365 admin center][6] to assign PowerApps licenses to your users.
 
 ## Get PowerApps through Office 365 ##
 
