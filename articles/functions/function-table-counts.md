@@ -34,6 +34,8 @@ The **CountRows** function counts the number records in a table.
 
 Each of these functions returns a number.
 
+[AZURE.INCLUDE [delegation-no](../../includes/delegation-no.md)]
+
 ## Syntax ##
 
 **Count**( *SingleColumnTable* )<br>
