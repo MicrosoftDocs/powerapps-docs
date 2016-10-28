@@ -15,15 +15,15 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/24/2016"
+    ms.date="10/28/2016"
     ms.author="litran"/>
 
 # Introduction to Maker Portal and Microsoft PowerApps #
-As we march into November, the PowerApps team is re-introducing the PowerApps portal as maker's Portal. This means, we are re-designing the [PowerApps portal](http://web.powerapps.com) as the primary site for makers to easily get started on creating apps, use the Microsoft Common Data Service and manage their apps all in one location. In this article, I will walk you through the following:
+As we march into November, the PowerApps team is re-introducing the [powerapps.com](http://web.powerapps.com) as the new home for creators of PowerApps. This means, we are re-designing the [powerapps.com](http://web.powerapps.com) as the primary site for creators to easily get started on creating apps, use the Microsoft Common Data Service and manage their apps all in one location. In this article, I will walk you through the following:
 
-- our new PowerApps portal's header
-- our new PowerApps portal's homepage
-- our new Apps page
+- our new [powerapps.com](http://web.powerapps.com)'s header
+- our new [powerapps.com](http://web.powerapps.com)'s homepage
+- our new **Apps** page
 
 ## New PowerApps portal header ##
 - When you sign up and first sign in to powerapps.com, you will notice a new site header we have for PowerApps.
