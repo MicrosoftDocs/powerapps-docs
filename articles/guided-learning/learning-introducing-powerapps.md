@@ -37,11 +37,7 @@ PowerApps connects to the **cloud services and data sources** you're already usi
 
 
 ## The Parts of PowerApps
-PowerApps consists of components to create, share, and administer apps; and components to run those apps. The following diagram shows all the components.
-
-![Parts of PowerApps](./media/learning-introducing-powerapps/powerapps-parts.png)
-
-You create apps in  **PowerApps Studio for web**  or  **PowerApps Studio for Windows**, using the **data connections** that your app requires. You use **web.powerapps.com** to configure and manage data connections and on-premises gateways, and to work with the Common Data Service, which we will cover in a later section. After you create an app, you often share it to **Microsoft AppSource**, and administer it in the **admin center**.
+PowerApps consists of components to create, share, and administer apps; and components to run those apps. You create apps in  **PowerApps Studio for web**  or  **PowerApps Studio for Windows**, using the **data connections** that your app requires. You use **web.powerapps.com** to configure and manage data connections and on-premises gateways, and to work with the Common Data Service, which we will cover in a later section. After you create an app, you often share it to **Microsoft AppSource**, and administer it in the **admin center**.
 
 You run apps in a browser from **Microsoft Dynamics 365** or by using **PowerApps Mobile**, which is available for Windows, iOS, and Android devices.
 

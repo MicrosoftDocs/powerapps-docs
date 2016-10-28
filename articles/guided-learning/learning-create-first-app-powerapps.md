@@ -62,19 +62,19 @@ We'll start with the browse screen. The SharePoint list contains an image for ea
 
 ![Change the browse screen layout](./media/learning-create-first-app-powerapps/generate-change-layout.png)
 
-With the right basic layout, now change the fields that are displayed. This provides a better summary of each item in the list.
+With the right basic layout, now change the fields that are displayed. Click or tap a field in the first item, then in the right-hand pane, change the data that is displayed for each item. This provides a better summary of each item in the list.
 
 ![Change the browse screen fields](./media/learning-create-first-app-powerapps/generate-browse-fields.png)
 
 
 ### Details screen
-On the details screen, we want to change the order of the fields and display the image also. This is a different type of screen, so the process is a little different from the browse screen. 
+On the details screen, we want to change the order of the fields and display the image also. This is a different type of screen, so the process is a little different from the browse screen. Click or tap a field, then in the right-hand pane, drag the **Title** field to the top. Then click or tap the **Image** field to display it.
 
 ![Change the detail screen fields](./media/learning-create-first-app-powerapps/generate-detail-fields.png)
 
 
 ### Edit/create screen 
-Finally, on the screen where you edit and create entries, we want to change a field so it's easier to enter text.
+Finally, on the screen where you edit and create entries, we want to change a field so it's easier to enter text. Click or tap the Overview text box then choose the **Edit Multi-line Text** control.
 
 ![Change the edit screen fields](./media/learning-create-first-app-powerapps/generate-edit-fields.png)
 
