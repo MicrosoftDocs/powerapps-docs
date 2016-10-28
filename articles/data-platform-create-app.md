@@ -122,6 +122,4 @@ By default, every app that Microsoft PowerApps generates has three screens:
 1. Near the upper-right corner, click or tap the trash bin button to delete the record that you created and updated.
 
 ## Next steps
-You can create an app starting with a blank app.
-
-[AZURE.VIDEO nb:cid:UUID:5db63c4d-6aeb-45c5-9609-8f4bbdd37bc6]
+[Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
