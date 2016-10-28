@@ -25,10 +25,6 @@
 
 	If an app created using PowerApps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom API in a different environment, you’ll need to deploy the API to the same environment as the database and update the app to use the new API. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](environments-overview.md).
 
-1. **Camera control on a Windows Phone**
-
-	An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/en-us/store/p/upgrade-advisor/9nblggh0f5g4)).
-
 1. **Running an app on Windows 8.1**
 
 	If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile.
