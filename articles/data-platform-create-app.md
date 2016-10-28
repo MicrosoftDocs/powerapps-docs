@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="robinarh"
-	manager="anneta"
+	manager="robinr"
 	editor=""
 	tags=""/>
 
@@ -19,7 +19,7 @@
 
 # Generate an app by using a Common Data Service database
 
-[AZURE.VIDEO nb:cid:UUID:e0d83908-aedd-4db3-8ea9-2dbd4695c662]
+[AZURE.VIDEO nb:cid:UUID:6d7aa0a1-cd31-47c6-9a32-93b4e5476ece]
 
 You can automatically generate an app to manage data that is stored in Common Data Service. You can manage data in one of the many standard entities that are built into the model, or in a custom entity that you or someone else in your organization creates.
 
@@ -45,7 +45,7 @@ By default, every app that Microsoft PowerApps generates has three screens:
 
 ## Generate an app
 1. Create a Common Data Service database. For more information, see [Create a Common Data Service database](create-cdm-database.md).
-1. On [PowerApps.com](https://web.powerapps.com), in the left navigation pane, click or tap **New app**.
+1. On [powerapps.com](https://web.powerapps.com), in the left navigation pane, click or tap **New app**.
 1. In the dialog box that appears, click or tap **PowerApps Studio for web**. (You can also click or tap **PowerApps Studio for Windows**, and then follow the instructions to install PowerApps Studio for Windows. Although the instructions that follow use PowerApps Studio for web, the instructions for the Microsoft Windows app are similar.)
 1. Under **Start with your data**, on the **Common Data Service** tile, click or tap **Phone layout**.
 1. Under **Choose an entity**, click or tap the **Contact** entity.
@@ -56,12 +56,12 @@ By default, every app that Microsoft PowerApps generates has three screens:
 
 	![Select a layout](./media/data-platform-create-app/choose-layout.png)
 
-1. On the **Contact** screen, under the search box, click or tap the **Text box** control to select it. By default, this control doesn't have a border. A border appears only when you select the control. Whenever you select a control, a selection box that has resize handles surrounds the control.
-1. In the right pane, click or tap **Data Sources**, and then, in the **Contact** field, select **Last Name** to show data from that field in the **Text box** control that you selected.
+1. On the **Contact** screen (the browse screen), under the search box, click or tap the **Text box** control to select it. By default, this control doesn't have a border. A border appears only when you select the control. Whenever you select a control, a selection box that has resize handles surrounds the control.
+1. In the right pane, click or tap **Data Sources**, and then, in the **Contact** field, select **Name_Surname** to show data from that field in the **Text box** control that you selected.
 1. On the **Contact** screen, select the gallery by clicking or tapping any name except the top name. A selection box surrounds the gallery.
 1. Copy the following formula by selecting it and then pressing Ctrl+C.
 
-	**SortByColumns(Search(Contact, TextSearchBox1.Text, "LastName"), "LastName", If(SortDescending1, Descending, Ascending))**
+	**SortByColumns(Search(Contact, TextSearchBox1.Text, "Name_Surname"), "Name_Surname", If(SortDescending1, Descending, Ascending))**
 	
 1. Near the upper-left corner, make sure that the property list shows **Items**.
 1. In the formula bar, select the default formula.
@@ -120,3 +120,6 @@ By default, every app that Microsoft PowerApps generates has three screens:
 1. Change the data in one or more fields, and then click or tap the check mark button to save your changes and return to the browse screen.
 1. Find the record that you just updated, and then click or tap the arrow to the right of it.
 1. Near the upper-right corner, click or tap the trash bin button to delete the record that you created and updated.
+
+## Next steps
+[Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
