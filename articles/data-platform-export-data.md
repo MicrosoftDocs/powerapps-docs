@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="RobinARH"
-	manager="anneta"
+	manager="robinr"
 	editor=""
 	tags=""/>
 
@@ -27,7 +27,7 @@ You can move data into or out of the Common Data Service in one of two ways:
 ## Import or export data once ##
 
 ### Import data from Excel ###
-1. On [powerapps.com](https://web.powerapps.com), click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane.
 1. Next to **New entity**, click or tap the ellipsis, and then click or tap **Import data**.
 1. Select the entity that you want to import data into, and then click or tap **Next**.
 1. Click or tap **Search**. Select the file that you want to import data from.
@@ -56,4 +56,4 @@ You can set up ongoing import or export for a single standard entity or custom e
 
 Today, when you use Microsoft Flow to import or export data, it is not a full synchronization service. When an object is added to one service, it will be imported into the other system. However, that means if an object is deleted from one system it will not be deleted in the other system.
 
-How to set up the import depends on if a template already exists for the object that you want to import. If a template exists, you can set it up to copy data from one system to another. For more information, see [How to use a template to import data into the Common Data Model](https://flow.microsoft.com/documentation/get-started-logic-template/). However, if no such template exists, you'll need to create a flow that can use the database. For more details, refer to [How to create a flow from scratch](https://flow.microsoft.com/documentation/get-started-logic-flow/).
+How to set up the import depends on if a template already exists for the object that you want to import. If a template exists, you can set it up to copy data from one system to another. For more information, see [Create a flow that uses the Microsoft Common Data Service](https://flow.microsoft.com/documentation/common-data-model-intro/). However, if no such template exists, you'll need to create a flow that can use the database. For more details, refer to [How to create a flow from scratch](https://flow.microsoft.com/documentation/get-started-logic-flow/).
