@@ -1,5 +1,5 @@
 <properties
-	pageTitle="How to migrate apps between environments and tenants | Microsoft PowerApps"
+	pageTitle="How to migrate PowerApps between environments and tenants | Microsoft PowerApps"
 	description="How to migrate apps among environments and tenants"
 	services=""
 	suite="powerapps"
@@ -15,33 +15,59 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/19/2016"
+   ms.date="10/25/2016"
    ms.author="ricksal"/>
 
 # Environment and tenant app migration
-Learn how to migrate an app from one environment to another.
+Learn how to migrate resources from one environment to another.
 
 ## The scenario
-One common scenario where you may want to migrate apps is where you have a Test or Dev environment and a Production environment. Here, developers and testers have wide access to the apps. When it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
+One common scenario where you may want to migrate resources is where you have Test or Dev environments and a Production environment. Developers and testers have wide access to the apps in their environments. But when it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
 
 Another scenario is one where each customer has their own environment and data. When a new customer is added, a new environment is created for them, and you would migrate apps into their environment.
 
+## What resources you can migrate
+
+There are different procedures for migrating each kind of resource.
+
+1.	Connections, Custom APIs, Flows: cannot be migrated, must be re-created in the destination environment.
+2.  Gateways: gateways are only supported in the default (and {tenant name} (from preview) ) environments, so migration is not supported.
+3.  PowerApps: you save the app locally in the origin environment from PowerApps studio (or webauth), and then open the app and recreate it in the destination environment.
+4.  CDS entity schema changes, new entities, new permission sets, new roles: export a package from the origin environment from the admin center, and import the package in the destination environment.
+
+##  Connections, Custom APIs, Flows
+
+These resources cannot be migrated. You must create each one you need in the destination environment.
+
+## Gateways
+
+Gateways are only supported in the default, and {tenant name} (from preview)  environments, so migration is not supported. You must create any needed gateways in the destination environment.
+
+
 ## Migrating an app
 
-When preparing to migrate an app into another environment, the following artifacts are needed:
-* a business data platform export package
-* a <powerapp-name>.msapp files)
-* Swagger files and icons for any custom APIs
+1. In http://web.powerapps.com, click or tap on **Apps**, then select your app.
 
-### Importing the business data platform export package
-creating a new role
+2. When PowerApps Studio opens, click **Save as** in the left nav bar column, then select **This computer**, then click or tap **Save**. Note where the file was saved on your local machine.
 
-### Recreating the custom APIs in the new environment
+	![](./media/environment-and-tenant-app-migration/save-app.png)
 
-### Recreating the apps in the new environment
+3. Change environment to destination environment in http://web.powerapps.com
 
-* open Studio and change the environment to the new one
+4. Open PowerApps Studio, which will now be in the destination environment. Click or tap **Open** in the left nav bar, and then click or tap **Browse**.
 
-* open the msapps files in the new environment, fix data connections and sources, and test the app
+	![](./media/environment-and-tenant-app-migration/open-app.png)
 
-* assign correct users/groups and share out the app in the new environment
+5. Select your file from where you saved it when in the original environment, and clikc or tap **Open**.
+
+	![](./media/environment-and-tenant-app-migration/save-new-app.png)
+
+6. You may need to address any compilation issues in the app, in accessing resources that may have different names, such as data connections and sources.
+7. Assign correct users/groups and share out the app in the new environment
+8. Test the app to verify all compilation issues have been resolved.
+
+## Common Data Service entity schema changes, new entities, new permission sets, new roles
+1. Export a package from the origin environment from the admin center
+2. Select the destination environment in the admin center
+3. Import the package 
+4. Resolve and address any conflicts

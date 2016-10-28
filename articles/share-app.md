@@ -19,8 +19,6 @@
 
 # Share an app #
 
-[AZURE.VIDEO nb:cid:UUID:7c4368ab-58a7-4930-9df3-6ba255e2b593]
-
 Share an app that you created (or that someone shared with you) from PowerApps or [powerapps.com](https://web.powerapps.com). Specify who can run the app, edit it, share it again, or all three.
 
 When you share an app, specify the names of one or more users or groups in Azure Active Directory, or specify that you want to share the app with your entire organization. Then specify one of these permission levels:

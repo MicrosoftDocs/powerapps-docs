@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Create a custom API using Azure Resource Manager | Microsoft PowerApps"
-	description="Learn how to create a custom API using Azure Resource Manager and add the API to PowerApps and Microsoft Flow"
+	description="Learn how to create a custom API using Azure Resource Manager and add the API to PowerApps"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -14,11 +14,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/26/2016"
+   ms.date="10/26/2016"
    ms.author="casoper"/>
 
 
-# Create a custom API using Azure Resource Manager in PowerApps and Microsoft Flow
+# Create a custom API using Azure Resource Manager in PowerApps
 
 This tutorial demonstrates how to register a Swagger file describing an [Azure Resource Manager (ARM) API](https://msdn.microsoft.com/library/azure/dn790568.aspx) and then connect to it in PowerApps.
 

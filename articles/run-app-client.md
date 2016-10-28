@@ -37,6 +37,13 @@ The first time you open PowerApps, you are prompted to sign in using your Azure 
 
 ![Login user](./media/run-app-client/run-client-login.png)
 
+## Sign up for Windows 10 Mobile Preview ##
+To access Windows 10 Mobile from the store, you need to sign-up. Go to [powerapps.com](https://powerapps.microsoft.com/), choose the app icon for Windows 10 Mobile, and enter your Microsoft account in the pop-up window. Your Microsoft account is the email address and password you use to sign in to personal services like Outlook.com, OneDrive, Windows Phone, or Xbox LIVE.​ You will receive an email confirmation, and then you can download Windows 10 Mobile.
+
+Here are system requirements:
+- **OS**: Anniversary update Redstone 1 (10.0.14267.1002) or higher required
+- **Memory**: At least 2GB of RAM
+
 ## App filters and sorting options ##
 Apps have been categorized into four lists to help you quickly find a specific app.
 
