@@ -101,7 +101,7 @@ For a list of the entities and their fields, and a list of the enumerations, see
 
 Functional group | Description 
 --- | --- 
-Customer Service | The Case Management entities manage issues from your customers, including tracking, escalation, and documentation. | Case<br> Case Activity<br> Case Activity KB Article<br> Case Worker Assignment<br> KB Article
+Customer Service | The Customer Service entities manage issues from your customers, including tracking, escalation, and documentation. | Case<br> Case Activity<br> Case Activity KB Article<br> Case Worker Assignment<br> KB Article
 Foundation | The Foundation entities contain information that is relevant to nearly every other entity group. This group contains entities such as Address and Currency. 
 People, Organizations, and Groups | These entities encompass a rich set of people and organizations that you might interact with, including employees, contractors, donors, volunteers, fans, alumni, and families. 
 Purchasing | The Purchasing entities let you create purchasing solutions.  
