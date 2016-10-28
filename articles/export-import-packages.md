@@ -18,4 +18,4 @@
    ms.author="robinr"/>
 
 # Export and import resources
-This page is intentionally left blank.
+This page is left blank for now.
