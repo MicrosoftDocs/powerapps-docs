@@ -22,15 +22,15 @@
 
 PowerApps includes a powerful set of functions for filtering, sorting, and shaping tables of data:  **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, and **[AddColumns](functions/function-table-shaping.md)** functions to name just a few.  With these functions, you can provide your users with focused access to the information they need.  For those with a database background, using these functions is the equivalent of writing a database query.  
 
-The key to building efficient apps is to minimize the amount of data that needs to be brought to your device.  Perhaps only a handful of records from a sea of millions are needed, or a single aggregate value can represent thousands of records.  Or perhaps only the first set of records can be retrieved, and the rest brought in as the user gestures that they want more.  Being focused can dramatically reduces the processing power, memory, and network bandwidth needed by your app, resulting in snappier response times for your users, even on phones connected via a cellular network.  
+The key to building efficient apps is to minimize the amount of data that needs to be brought to your device.  Perhaps only a handful of records from a sea of millions are needed, or a single aggregate value can represent thousands of records.  Or perhaps only the first set of records can be retrieved, and the rest brought in as the user gestures that they want more.  Being focused can dramatically reduce the processing power, memory, and network bandwidth needed by your app, resulting in snappier response times for your users, even on phones connected via a cellular network.  
 
 *Delegation* is where the expressiveness of PowerApps' formulas meets the need to minimize data moving over the network.  In short it means that PowerApps will delegate the processing of data to the data source, rather than moving the data to the app for processing locally.  
 
 Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a PowerApps' formula can be delegated to every data source.  The PowerApps language mimics Excel's formula language, designed with complete and instant access to a full workbook in memory, with a wide variety of numerical and text manipulation functions.  As a result, the PowerApps language is far richer than most data sources can support, including powerful database engines such as SQL Server.
 
-**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need.  If you are working with small data sets (less than 500 records), then you can use any data source and formula as processing will be done locally.
+**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need.  Take heed of <a href="#blue-dot-suggestions">blue dot suggestions</a> that flag places where delegation is not possible.  If you are working with small data sets (less than 500 records), then you can use any data source and formula as processing will be done locally.  
 
-## Delegatable data sources ##
+## Delegable data sources ##
 
 At this time, these data sources support delegation: 
 
@@ -42,17 +42,17 @@ We are continuing to add delegation support to existing data sources, as well as
 
 Imported Excel workbooks, collections, and tables stored in context variables do not require delegation.  All of this data is already in memory and the full PowerApps language can be applied. 
 
-## Delegatable functions ##
+## Delegable functions ##
 
 The next step is to only use formulas that can be delegated.  Included here are the formula elements that could be delegated.  However, every data source is different, and not all of these are supported by every data source.  Check for blue dot suggestions in your particular formula. 
 
-These lists will be change over time.  We are working to support more functions and operators with delegation. 
+These lists will change over time.  We are working to support more functions and operators with delegation. 
 
 ### Filter functions ###
 
 **[Filter](functions/function-filter-lookup.md)**, **[Search](functions/function-filter-lookup.md)**, and **[LookUp](functions/function-filter-lookup.md)** can be delegated.  
 
-Within the **Fitler** and **LookUp** functions, the following can be used with columns of the table to select the appropriate records:
+Within the **Filter** and **LookUp** functions, the following can be used with columns of the table to select the appropriate records:
 
 * **[And](functions/function-logicals.md)** (including **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](functions/operators.md)**)
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
@@ -72,7 +72,7 @@ Some notable items missing from the above list:
 * **[ExactIn](functions/operators.md)**
 * String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
 * Signals: **[Location](functions/signals.md)**, **[Acceleration](functions/signals.md)**, **[Compass](functions/signals.md)**, ...
-* Volatiles: **[Now](functions/function-now-today-istoday.md)**, **[Rand](functions/function-rand.md)**
+* Volatiles: **[Now](functions/function-now-today-istoday.md)**, **[Today](functions/function-now-today-istoday.md)**, **[Rand](functions/function-rand.md)**, ...
 * [Context variables and collections](working-with-variables.md)
 
 ### Sorting functions ###
@@ -98,9 +98,11 @@ A common pattern is to use **AddColumns** and **LookUp** to merge information fr
 
 * **AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )** 
  
-Even though **Products** and **Suppliers** may be delegatable data sources and **LookUp** is a delegatable function, the **AddColumns** function is not delegatable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  But since the **LookUp** and its data source are delegatable, a match for **Suppliers** can be found anywhere in the data source, even if it is large. 
+Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the **AddColumns** function is not delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  
 
-## Non-delegatable limits ##
+Since the **LookUp** and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it is large.  A potential downside is that **LookUp** will made separate calls to the data source for each of those first records in **Products**, causing a lot of chatter on the network.  If **Suppliers** is small enough and does not change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnVisible**](controls/control-screen.md) on the opening screen) and do the **LookUp** to it instead.  
+
+## Non-delegable limits ##
 
 Formulas that cannot be delegated will be processed locally.  This allows for the full breadth of the PowerApps formula language to be used.  But at a price: all the data must be brought to the device first, which could involve retrieving a large amount of data over the network.  That can take time, giving the impression that your app is slow or possibly hung.
 
@@ -108,13 +110,13 @@ To avoid this, PowerApps imposes a limit on the amount of data that can be proce
 
 Obviously care must be taken when using this facility as it can be confusing for users.  For example, consider a **Filter** function with a selection formula that cannot be delegated, over a million record data source.  Since the filtering will be done locally, only the first 500 records of the million records will be scanned.  If the desired record is record 501, or 500,001, it will not be considered or returned by **Filter**.
 
-Another place where this can be confusing is aggregate functions.  Take **Average** over a column of that same million record data source.  Since **Average** cannot be delegated, only the first 500 records will be averaged.  Care must be taken or a partial answer could be misconstrued by a user as a complete answer.
+Another place where this can be confusing is aggregate functions.  Take **Average** over a column of that same million record data source.  Since **Average** cannot yet be delegated, only the first 500 records will be averaged.  Care must be taken or a partial answer could be misconstrued as a complete answer by a user of your app.
 
 ## Blue dot suggestions ##
 
 To make it easier to know what is and is not being delegated, the authoring experience provides blue dot suggestions when a formula contains something that cannot be delegated.
 
-Blue dots are not placed on formulas for non-delegatable data sources.  
+Blue dots are only shown on formulas that operate on delegable data sources.  If you don't see a blue dot and you believe your formula is not being properly delegated, check the type of data source against the list of <a href="#delegable-data-sources">delegable data sources</a> above.
 
 ## Example ##
 
@@ -128,9 +130,9 @@ Let's type **"Apple"** into the search text box.  If we are very observant, we w
 
 ![](media/delegation-overview/products-apple.png)
 
-Because this is all delegatable, even if the **[dbo].[Products]** table contains millions of records, we will still find them all, paging through them in the gallery as the user scrolls through the results.
+Because this is all delegable, even if the **[dbo].[Products]** table contains millions of records, we will still find them all, paging through them in the gallery as the user scrolls through the results.
 
-You will notice that we are seeing a match for both "Apple" and "Pineapple".  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegatable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
+You will notice that we are seeing a match for both "Apple" and "Pineapple".  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
 
 ![](media/delegation-overview/products-apple-bluedot.png)
 
@@ -138,7 +140,7 @@ This appears to be working, only **"Apples"** is correctly showing now and **"Pi
  
 ![](media/delegation-overview/products-apple-bluepopup.png)
 
-Although we are using **Filter** which is a delegatable function, with SQL Server which is a delegatable data source, the formula we used within **Filter** is not delegatable.  **Mid** and **Len** cannot be delegated to any data source.
+Although we are using **Filter** which is a delegable function, with SQL Server which is a delegable data source, the formula we used within **Filter** is not delegable.  **Mid** and **Len** cannot be delegated to any data source.
 
 But it worked, didn't it?  Well, kind of.  And that is why this is a blue dot instead of a yellow hazard icon and red wavy error.  If the **[dbo].[Products]** table contains less than 500 records, then yes, this worked perfectly.   All records were brought to the device and the **Filter** was applied locally.  
 
