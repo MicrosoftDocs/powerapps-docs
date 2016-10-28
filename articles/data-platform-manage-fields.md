@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="robinarh"
-	manager="anneta"
+	manager="robinr"
 	editor=""
 	tags=""/>
 
@@ -23,7 +23,7 @@ You can create and update one or more custom fields in any entity. When you crea
 **Note:** Every entity has [system fields](data-platform-create-entity.md#system-and-record-title-fields), such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](data-platform-intro.md#standard-entities) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
-1. On [PowerApps.com](https://web.powerapps.com),  in the left navigation pane, click or tap **Entities**. A list of entities appears. To show custom entities at the top of the list, click or tap the **Type** column header. You can also filter the list by typing one or more characters in the search bar.
+1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane. A list of entities appears. To show custom entities at the top of the list, click or tap the **Type** column header. You can also filter the list by typing one or more characters in the search bar.
 1. Click or tap an entity, and then click or tap **Add field** near the top of the screen.
 1. Under **Display name**, specify the string of text that will identify the field to users. For more information, see [Create an app](data-platform-create-app.md).
 1. Under **Name**, specify the string of text that you will use to refer to the field in, for example, a formula when you build an app.
@@ -47,7 +47,7 @@ You can create and update one or more custom fields in any entity. When you crea
 You're notified when the operation is completed successfully. If the operation is unsuccessful, an error message indicates the issues that occurred and how you can fix them.
 
 ## Update or delete a field
-1. On [PowerApps.com](https://web.powerapps.com), click or tap **Manage**, click or tap **Entities**, and then click or tap an entity.
+1. On [powerapps.com](https://web.powerapps.com), click or tap **Manage**, click or tap **Entities**, and then click or tap an entity.
 
 1. In the list of fields for the entity that you selected, click or tap a field, and then follow one of these steps:
 	- Change one or more properties of the field. Keep in mind the [best practices and restrictions](data-platform-manage-fields.md#best-practices-and-restrictions).
@@ -78,3 +78,4 @@ As you create and modify fields, keep these points in mind:
 ## Next steps
 - [Define relationships between entities](data-platform-entity-lookup.md)
 - [Create an app using entities](data-platform-create-app.md)
+- [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
