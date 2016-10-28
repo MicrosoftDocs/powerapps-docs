@@ -15,13 +15,13 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/31/2016"
+   ms.date="10/28/2016"
    ms.author="deonhe"/>
 
 
-# Data loss prevention (DLP) policies 
+# Data loss prevention (DLP) policies
 
-## What is a data loss prevention policy? 
+## What is a data loss prevention policy?
 An organization's data is critical to its success. Its data needs to be readily available for decision-making but it needs to be protected so that it isn't shared with audiences that should not have access to it. To protect this data, Microsoft PowerApps (PowerApps) provides you with the ability to create and enforce policies that define which consumer services/connectors specific business data can be shared with. These policies that define how data can be shared are referred to as data loss prevention (DLP) policies.  
 
 ##	Why create a DLP policy?
@@ -33,7 +33,7 @@ You would create DLP policy to clearly define which consumer services business d
 
 ## Managing DLP policies
 **Prerequisites**  
-In order to create, edit, or delete DLP policies, the following items are required: 
+In order to create, edit, or delete DLP policies, the following items are required:
 - Either environment admin or tenant admin permissions. You can learn more about permissions in the [environments topic](./environments-overview-admin.md)
 
 ##	Create a DLP policy
