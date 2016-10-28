@@ -50,7 +50,7 @@ If **Validate** finds a problem, the function returns an error message that you 
 
 **Validate**( *DataSource*, *OriginalRecord*, *Updates* )
 
- - *DataSource* – Required. The data source to validate with.
+- *DataSource* – Required. The data source to validate with.
 
 - *OriginalRecord* - Required.  The record to which updates are to be validated.
 
