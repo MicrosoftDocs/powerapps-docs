@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="clwesene"
-	manager="anneta"
+	manager="robinr"
 	editor=""
 	tags=""/>
 
@@ -19,7 +19,7 @@
 
 # Understand entities in the Common Data Service
 
-[AZURE.VIDEO nb:cid:UUID:609a7777-309f-4b6b-87eb-274dd33cac94]
+[AZURE.VIDEO nb:cid:UUID:beec68e8-1541-41fb-8fc6-28714ccaca68]
 
 The Common Data Service allows you to securely store and manage data within a set of standard and custom entities. An entity is a set of fields used to store data similarly to a table within a database. After your data is stored you can use Microsoft PowerApps to build rich applications using your data:
 
@@ -33,6 +33,8 @@ The Common Data Service allows you to securely store and manage data within a se
 - Provide global support for your data and applications by leveraging translation of entity and field names.
 
 Each entity contains a set of records that users can create, read, update, and delete. You can create relationships between entities so that you can look up information in one entity based on a record in another entity. For example, you could create a custom entity to track events which a customer had attended. By adding the Customer to your custom entity as a lookup field, you establish a relationship between the two entities which can be leveraged in your app and in reporting.
+
+For information on purchasing a plan for using the Common Data Service, see [Pricing info](pricing-billing-skus.md).
 
 ## Why use entities?
 
@@ -70,21 +72,24 @@ Each standard entity contains a set of default fields that you can't change or d
 ### Custom fields ###
 You can create custom fields in either a standard entity or a custom entity. You must specify the name, display name, and data type of each custom field. PowerApps supports the following data types:
 
+- **Address** -  The first line, second line, city, state/province, postal code, and country/region of an address.
+- **AutoNumber** - A sequence number that's read-only and generated automatically. Usually used as the record's unique ID.
 - **Boolean** - True or false.
 - **Currency** - A numeric value that represents money.
-- **DateTime** - A date and time.
 - **Date** - A date.
+- **DateTime** - A date and time.
 - **Email** - A text value that represents an email address.
-- **Enumeration** - One value from a list of values.
-- **Image** - An image.
+- **Guid** - A Guid.
 - **Integer** - A positive or negative value.
 - **Lookup** - A lookup field into another entity's title field.
-- **Multi line text** - Multiple lines of text.
+- **Multiline text** - Multiple lines of text.
 - **Number** - A number.
-- **Number Sequence** - A sequence number that's read-only and generated automatically. Usually used as the record's unique ID.
+- **PersonName** - Teh given name (first name), middle name, and surname (last name) of a person.
 - **Phone** - A text value that represents a phone number.
+- **Picklist** - One value from a list of values.
+- **Quantity** - A decimal value.
 - **Text** - Text of length up to 128 characters.
-- **URL** - A text value that represents a URL.
+- **Url** - A text value that represents a URL.
 
 For more information, see [Manage fields in an entity](data-platform-manage-fields.md).
 
@@ -94,13 +99,13 @@ You can navigate between records in entities if they have a relationship that's 
 ## Standard entities
 For a list of the entities and their fields, and a list of the enumerations, see [Microsoft Common Data Model, Entities Reference](http://download.microsoft.com/download/8/9/5/8956ED58-A9B0-40DF-8CB0-BC13AD8DB6E2/CDMEntityReference.docx).
 
-Functional group | Description | Entities
---- | --- | ---
-Foundation | The Foundation entities contain information that is relevant to nearly every other entity group. This group contains entities such as Address and Currency. | Cost Center<br> Country Region<br> Currency<br> Postal Codes<br> Product<br> Product Category<br> State list<br> Unit Conversion<br> Unit
-People, Organizations, and Groups | These entities encompass a rich set of people and organizations that you might interact with, including employees, contractors, donors, volunteers, fans, alumni, and families. | Alumnus<br> Business Unit<br> Company<br> Constituent<br> Contractor<br> Donor<br> Employee<br> Family<br> Family Member<br> Fan<br> Household<br> Household Member<br> Member<br> Team<br> Team Member<br> Tenant<br> User<br> Volunteer<br>
-Purchasing | The Purchasing entities let you create purchasing solutions.  | Purchase Order<br> Purchase Order Charge<br> Purchase Order Line<br> Purchase Order Line Charge<br> Purchase Order Line Receipt<br> Purchase Order Line Tax<br> Purchase Order Tax<br> Supplier<br> Supplier Invoice<br> Supplier Invoice Charge<br> Supplier Invoice Line<br> Supplier Invoice Line Charge<br> Supplier Invoice Line Tax<br> Supplier Invoice Tax
-Sales | The Sales entities let you create end-to-end sales solutions, from tracking leads and opportunities, to following through with contacts, accepting and delivering orders, and sending invoices. | Contact<br> Customer<br> Lead<br> Opportunity<br> OpportunityPartyRole<br> Partner<br> SalesInvoice<br> Sales Invoice Charge<br> Sales Invoice Line<br> Sales Invoice Line Charge<br> Sales Invoice Line Tax<br> Sales Invoice Tax<br> Sales Order<br> Sales Order Charge<br> Sales Order Line<br> Sales Order Line Charge<br> Sales Order Line Shipment<br> Sales Order Line Tax<br> Sales Order Tax
-Case Management | The Case Management entities manage issues from your customers, including tracking, escalation, and documentation. | Case<br> Case Activity<br> Case Activity KB Article<br> Case Worker Assignment<br> KB Article
+Functional group | Description 
+--- | --- 
+Customer Service | The Case Management entities manage issues from your customers, including tracking, escalation, and documentation. | Case<br> Case Activity<br> Case Activity KB Article<br> Case Worker Assignment<br> KB Article
+Foundation | The Foundation entities contain information that is relevant to nearly every other entity group. This group contains entities such as Address and Currency. 
+People, Organizations, and Groups | These entities encompass a rich set of people and organizations that you might interact with, including employees, contractors, donors, volunteers, fans, alumni, and families. 
+Purchasing | The Purchasing entities let you create purchasing solutions.  
+Sales | The Sales entities let you create end-to-end sales solutions, from tracking leads and opportunities, to following through with contacts, accepting and delivering orders, and sending invoices. 
 
 ## Get started ##
 Try it out by creating an app using a standard entity or [create a custom entity](data-platform-create-entity.md), and then [create an app that uses that entity](data-platform-create-app.md).
