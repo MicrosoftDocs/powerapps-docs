@@ -18,5 +18,4 @@
    ms.author="robinr"/>
 
 # Share an app that uses an entity
-For information on sharing an app that uses an entity, see [Database security](database-security.md).
-
+When you share an app that uses at least one entity, you need to set permissions on both the app and the entity or entities. For more information, see [Share an app](share-app.md) and [Database security](database-security.md).
