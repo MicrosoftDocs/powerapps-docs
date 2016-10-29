@@ -94,7 +94,7 @@ Now that the AAD application is configured, let's add the custom API.
 
 1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Manage** to expand it, and then click **Connections**. Then click **New connection** in the upper-right corner.
 
-    >[AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
+    > [AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
 
     ![New connection](./media/customapi-azure-resource-manager-tutorial/createnewconnection.png)
 
@@ -108,7 +108,7 @@ Now that the AAD application is configured, let's add the custom API.
 
 4. On the next screen, because the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, type the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, type `https://management.core.windows.net/`.
 
-    >[AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
+    > [AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
 
     ![OAuth settings](./media/customapi-azure-resource-manager-tutorial/oauthsettings.png)
 
@@ -116,7 +116,7 @@ Now that the AAD application is configured, let's add the custom API.
 
     ![Custom API added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
 
->[AZURE.NOTE] The sample Swagger does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this Swagger or create another Swagger file using the [online Swagger editor](http://editor.swagger.io/).
+> [AZURE.NOTE] The sample Swagger does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this Swagger or create another Swagger file using the [online Swagger editor](http://editor.swagger.io/).
 >
 >This process can be used to access any RESTful API authenticated using AAD.
 

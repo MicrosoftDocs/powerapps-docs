@@ -48,8 +48,8 @@ You can do a one-time data export from a standard entity or custom entity, and y
 ## Use Microsoft Flow to set up ongoing import or export ##
 You can set up ongoing import or export for a single standard entity or custom entity at a time. Some possible places you can connect to include:
 
-- Microsoft Dynamics CRM
-- Salesforce.com
+- Dynamics 365
+- Salesforce
 - Microsoft Excel files stored in any cloud file provider
 - A Microsoft SQL database, both in the cloud and on-premises
 - A custom API that you define to connect to your own systems
