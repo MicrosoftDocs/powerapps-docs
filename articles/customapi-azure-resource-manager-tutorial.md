@@ -92,11 +92,9 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
 Now that the AAD application is configured, let's add the custom API.
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Manage** to expand it, and then click **Connections**. Then click **New connection** in the upper-right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **New connection** in the upper-right corner.
 
     > [AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
-
-    ![New connection](./media/customapi-azure-resource-manager-tutorial/createnewconnection.png)
 
 2. Click **Custom** to display your list of custom connections, and then click **New custom API**.
 
