@@ -77,6 +77,7 @@ Roles and permission sets can be edited after creation by clicking the edit icon
 To delete a role or permission set, use the delete icon.
 
 ## Out-of-the-box security roles ##
-Two security roles are provided out of the box.
+Two security roles are provided out of the box:
+
 - Database Owner - The Database owner role is intended for users in an administrative function. The creator of the environment will automatically be added to this role. Users in this role will always have full access to all entities in the database, even as new entities are added. The Database Owner role also provides users the ability to create and edit entity schema in the database. You do not need to add permission sets to this role, only assign users to it.
 - Organization User - The Organization User role is the default role assigned to all users. This role is intended to provide all users access to the entities that contain public data. If an app is shared in restricted mode, then entities it uses should be contained within this role. You do not need to assign this role, everyone in your organization already has it. You only need to add the permission sets that you wish to give to your entire organization.
