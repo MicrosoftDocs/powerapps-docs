@@ -15,20 +15,19 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/18/2016"
+    ms.date="10/29/2016"
     ms.author="karthikb"/>
 
 # Use PowerApps on a phone or a tablet #
-Apps built using PowerApps can run on Windows, iOS, Android, Windows Phone, or in a web browser. Apps running on a mobile device can take advantage of the device's capabilities, such as location and camera. You can download PowerApps Mobile from the Windows Store, the App Store, or Google Play.
+Apps built using PowerApps can run on Windows, iOS, Android, or in a web browser. Apps running on a mobile device can take advantage of the device's capabilities, such as location and camera. You can download PowerApps Mobile from the App Store, or Google Play.
 
 ## What you need to get started ##
 - One of the following:
 	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from a [blank canvas](get-started-create-from-blank.md).
 	- An app that someone else built and shared with you, granting user permissions.
-- PowerApps installed on an iPhone, iPad, Windows Phone, or Android device. Here are the specific versions supported:  
+- PowerApps installed on an iPhone, iPad, or Android device. Here are the specific versions supported:  
 	- iOS versions 9.3 and above
 	- Android versions 5 and above
-	- Windows 10 Mobile (limited preview)
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
@@ -66,7 +65,6 @@ Typically, you are prompted only the first time.
 ## Exit the app ##
 - On an Android phone, slide to the right (or press the back button and then confirm that you intended to exit the app).
 - On an iPhone, slide to the right.
-- On Windows 10 Mobile, press the back button.
 
 ![Exit app](./media/run-app-client/run-client-exit.png)
 
