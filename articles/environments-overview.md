@@ -27,21 +27,22 @@ Environments are a new concept in PowerApps. Put simply, an environment is a spa
 3.	You might create separate environments that correspond to specific teams or departments in your company, each containing the relevant data and apps for each audience.
 4.	You might also create separate environments for different global branches of your company.  
 
-
 ## Environment scope
-An environment is bound to a geographic location, like the US. When you create an app in an environment, that app is routed to only datacenters in that geographic location.  Any items you create in that environment, including connections, gateways, flows using Microsoft Flow, and more, are also bound to the location.
+Each environment is created under an Azure AD tenant and its resources can only be accessed by users within that tenant.  An environment is also bound to a geographic location, like the US. When you create a app in an environment, that app is routed to only datacenters in that geographic location.  Any items you create in that environment, including connections, gateways, flows using Microsoft Flow, and more, are also bound to their environment’s location.
 
-Every environment can have zero or one database in the Common Data Service, which provides storage for your apps. The ability to create a database for your environment depends on the license you purchase for PowerApps. For more information see [Billing, Licensing, and SKUs](pricing-billing-skus.md).
+Every environment can have zero or one Common Data Service databases, which provides storage for your apps. The ability to create a database for your environment will depend on the license you purchase for PowerApps and your permission within that environment. For more information see [Billing, Licensing, and SKUs](pricing-billing-skus.md).
 
-When you create an app in an environment, that app is only permitted to connect to the data sources that are also deployed in that same environment, including connections, gateways, flows, and Common Data Services databases.  For example, let’s consider a scenario where you have created two environments named ‘Test’ and ‘Dev’ and created a Common Data Service database in each of the environments. If you create an app in the ‘Test’ environment, it will only be permitted to connect to the ‘Test’ database, it wont be able to connect to the ‘Dev’ database.  
+When you create an app in an environment, that app is only permitted to connect to the data sources that are also deployed in that same environment, including connections, gateways, flows, and Common Data Service databases.  For example, let’s consider a scenario where you have created two environments named ‘Test’ and ‘Dev’ and created a Common Data Service database in each of the environments. If you create an app in the ‘Test’ environment, it will only be permitted to connect to the ‘Test’ database, it will not be able to connect to the ‘Dev’ database.
 
-There will be a process to move resources between environments. For more information, see [Migrate resources](environment-and-tenant-migration.md).
+There is also a process to move resources between environments. For more information, see [Migrate resources](environment-and-tenant-migration.md).
+
+![](./media/environments-overview/Environments.png)
 
 ## Environment permissions
 
 Environments have two built-in roles that provide access to permissions within an environment:
 
-*	Environment Admin can perform all administrative actions on an environment including the following:
+*	The Environment Admin role can perform all administrative actions on an environment including the following:
 
 	o	Add or remove a user or group from either the Environment Admin or Environment Maker role
 
@@ -49,11 +50,21 @@ Environments have two built-in roles that provide access to permissions within a
 
 	o	View and manage all resources created within an environment
 
-	o	Set Data Loss Prevention policies. For more information see the link to the DLP article.
+	o	Set Data loss prevention policies. For more information see [Data loss prevention policies](prevent-data-loss.md).
 
-*	Environment Maker can create new resources within an environment including apps, connections, custom APIs, gateways, and flows using Microsoft Flow.  Users or groups assigned to this role are not automatically given access to the environment’s database (if it exists) and must be given access separately. For more information, see the link to database security.
+*	The Environment Maker role can create new resources within an environment including apps, connections, custom APIs, gateways, and flows using Microsoft Flow.  Users or groups assigned to these environment roles are not automatically given access to the environment’s database (if it exists) and must be given access separately by a Database owner. For more information see [Configure database security](database-security.md).
 
 Users or groups can be assigned to either of these two roles by an Environment Admin from the PowerApps admin center. For more information see [Environment Administration](environment-administration.md).
+
+
+The Environment Maker role can create new resources within an environment including apps, connections, custom APIs, gateways, and flows using Microsoft Flow.  
+NOTE: Users or groups assigned to these environment roles are not automatically given access to the environment’s database (if it exists) and must be given access separately by a Database owner.
+
+Users or security groups can be assigned to either of these two roles by another Environment Admin.
+
+Environment Makers can also distribute the apps they build in an environment to other users in your organization by sharing the app with individual users, security groups, or to all users in the organization (just like in preview).
+
+
 
 ## The default environment
 A single default environment is automatically created by PowerApps for each tenant and shared by all users in that tenant. Whenever a new user signs-up for PowerApps they are automatically added to the Maker role of the default environment. The default environment is created in region that is closest to the default region of the AAD tenant.
