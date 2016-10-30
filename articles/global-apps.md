@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Worldwide PowerApps | Microsoft PowerApps"
+	pageTitle="Global PowerApps | Microsoft PowerApps"
 	description="Build apps that are used worldwide."
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="10/25/2016"
    ms.author="gregli"/>
 
-# Worldwide PowerApps #
+# Global PowerApps #
 
 PowerApps is a global product.  You can build and use apps in many different languages and regions.
 
