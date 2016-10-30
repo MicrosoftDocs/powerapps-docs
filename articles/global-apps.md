@@ -36,7 +36,7 @@ When using the web experiences, the language used is provided by the browser.  M
 
 The authoring environment adapts to the language of the author.  The app itself is stored in a language agnostic manner, so that authors using different languages can edit the same app.
 
-### Names in formulas ### 
+### Names in formulas ###
 
 Most elements in formula are always in English:
 
