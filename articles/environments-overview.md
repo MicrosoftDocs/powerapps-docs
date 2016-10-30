@@ -20,12 +20,13 @@
 
 
 # Environments overview
-Environments are a new concept in PowerApps. Put simply, anything within an environment, lives and dies within that environment. An environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you leverage environments depends on your organization and the apps you are trying to build, for example:
+Environments are a new concept in PowerApps. Put simply, an environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you choose to leverage environments depends on your organization and the apps you are trying to build, for example:
 
 1.	You may choose to only build your apps in a single environment.
 2.	You might create separate environments that group the Test and Production versions of your apps.
 3.	You might create separate environments that correspond to specific teams or departments in your company, each containing the relevant data and apps for each audience.
 4.	You might also create separate environments for different global branches of your company.  
+
 
 ## Environment scope
 An environment is bound to a geographic location, like the US. When you create an app in an environment, that app is routed to only datacenters in that geographic location.  Any items you create in that environment, including connections, gateways, flows using Microsoft Flow, and more, are also bound to the location.
