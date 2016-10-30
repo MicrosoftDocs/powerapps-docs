@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2016"
-   ms.author="ricksal"/>
+   ms.date="10/30/2016"
+   ms.author="ricksal;jamesol"/>
 
 
 # Environments overview
@@ -123,9 +123,11 @@ A *Preview user* is someone who was using Microsoft Flow before it's release to 
 Two weeks after PowerApps enters general availability (GA), environments containing preview content will be marked as read-only (with the exception of the default environment); all existing apps & flows will continue to work in these environments, but you will not be able to create new apps or flows. We highly recommend that users of these environments migrate their content to the default environment or another custom environment. Please refer to the following blog (which will be posted this week) for more information about the migration process: see the [Common Data Service features announcement blog][3].
 
 ### Example environments for a preview user in U.S.
+
 ![](./media/environments-overview/USUser1.png)
 
 ### Example environments for a preview user not in U.S.
+
 ![](./media/environments-overview/non-USUser1.png)
 
 ## Managing environments for your organization
