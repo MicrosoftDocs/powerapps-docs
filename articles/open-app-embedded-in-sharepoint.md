@@ -22,26 +22,38 @@
 
 You can open an existing app inside SharePoint Online and manage a list.
 
-As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues)
+For information about what types of SharePoint data PowerApps supports, see [Known issues](connection-sharepoint-online.md#known-issues).
+
+## Prerequisites ##
+[Create an app in the SharePoint interface](generate-app-from-sharepoint-list-interface.md).
 
 ## Open the app
 
-1. Open your SharePoint Online list and select an app from the list.
+1. Open your SharePoint Online list, and select an app from the list.
 
-  ![](./media/open-app-embedded-in-sharepoint/view-list.png)
+	![](./media/open-app-embedded-in-sharepoint/view-list.png)
 
 2. Click or tap **Open**.
 
-	![](./media/open-app-embedded-in-sharepoint/open-app.png)
+	![](./media/open-app-embedded-in-sharepoint/open-button.png)
 
-3. The app now appears in a separate browser tab.
+	The app opens in a separate browser tab.
 
-	![](./media/open-app-embedded-in-sharepoint/the-app.png)
+	![](./media/open-app-embedded-in-sharepoint/separate-tab.png)
 
+## Manage the app ##
 
-## Manage list using the app
+![](./media/open-app-embedded-in-sharepoint/command-bar.png)
+
+- If you click or tap **Edit in PowerApps**, the app opens in a separate browser tab so that you can update the app in PowerApps Studio for the web.
+- If you click or tap **Make this view public**, other people in your organization will be able to see it. By default, only you can see views that you create. If you want other people to be able to edit this app, you need to [share it with them](share-app.md) and grant **Contributor** permissions.
+- If you click or tap **Remove this view**, you'll remove the view from SharePoint, but the app will still be in PowerApps unless you [delete it](delete-app.md).
+
+## Manage the list using the app
 
 > [AZURE.NOTE] This topic describes how to open and run an app that is automatically generated from a SharePoint list. The more common scenario is where the generated app has been extensively customized to meet your organization's needs, and in this case, usage may be more complex than what is described here.
+
+1. Open the app as the previous procedure describes.
 
 1. To add an item to the list, click or tap the "+" sign.
 
