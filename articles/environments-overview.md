@@ -54,7 +54,7 @@ Environments have two built-in roles that provide access to permissions within a
 
 *	The Environment Maker role can create new resources within an environment including apps, connections, custom APIs, gateways, and flows using Microsoft Flow.  Users or groups assigned to these environment roles are not automatically given access to the environment’s database (if it exists) and must be given access separately by a Database owner. For more information see [Configure database security](database-security.md).
 
-Users or security groups can be assigned to either of these two roles by an Environment Admin from the [PowerApps admin center][1]. For more information see [Environment Administration](environment-administration.md).
+Users or security groups can be assigned to either of these two roles by an Environment Admin from the [PowerApps admin center][1]. For more information see [Environment Administration](environments-administration.md).
 
 Environment Makers can also distribute the apps they build in an environment to other users in your organization by sharing the app with individual users, security groups, or to all users in the organization. For more information see [Share an app in PowerApps](share-app.md).
 
@@ -63,7 +63,7 @@ Environment Makers can also distribute the apps they build in an environment to 
 ## The default environment
 A single default environment is automatically created by PowerApps for each tenant and shared by all users in that tenant. Whenever a new user signs-up for PowerApps they are automatically added to the Maker role of the default environment. The default environment is created in region that is closest to the default region of the AAD tenant.
 
-> [AZURE-NOTE] No users will be added to the Environment Admin role of the default environment automatically. For more informaton, see [Environment Administration](environment-administration.md).
+> [AZURE-NOTE] No users will be added to the Environment Admin role of the default environment automatically. For more informaton, see [Environment Administration](environments-administration.md).
 
 The default environment is named as follows: “{Azure AD tenant name} (default)”
 
@@ -99,18 +99,12 @@ There is a limit of 5 environments that can be created per user.
 At present you cannot delete an environment.
 
 ### Where can environments be created?
-You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, they you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can be participate in as a member of the Environment Admin or Environment Maker role. For more information, see [Environment Administration](environment-administration.md).
+You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, they you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can be participate in as a member of the Environment Admin or Environment Maker role. For more information, see [Environment Administration](environments-administration.md).
 
 ![](./media/environments-overview/CreateEnvironmentDialog.png)
 
 ## What will change for PowerApps Preview users?
 Any user that has participated in the PowerApps preview will see some changes in their experience with the introduction of environments.  The following table lists what U.S. users and non-U.S. users can expect:
-
-| User | What happens |
-|-------|--------------|
-|Preview user that created a Common Data Service database*|You will see an environment called “<Your name>’s environment” that contains your preview CDM database and any other apps that you built against the database. You will be added to the Maker role of this environment.|
-|Preview user in U.S. | All the apps (except any that connected to a CDM database) that were built during the PowerApps preview period will be available in the default environment.|
-|Preview user not in U.S. | In addition to the default environment, you also see an environment called “<AAD tenant name> (from preview)” that contains all the apps (except any that connector to a CDM database) that were built during the PowerApps preview period. You will be added to the Maker of this environment.|
 
 | User | What happens |
 |--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -124,16 +118,16 @@ Two weeks after PowerApps enters general availability (GA), environments contain
 
 ### Example environments for a preview user in U.S.
 
-![](./media/environments-overview/USUser1.png)
+![](./media/environments-overview/USuser1.png)
 
 ### Example environments for a preview user not in U.S.
 
-![](./media/environments-overview/non-USUser1.png)
+![](./media/environments-overview/non-USuser1.png)
 
 ## Managing environments for your organization
 With the introduction of environments, we will also be launching a new PowerApps admin center, which will allow you to manage all of the environments that you have created or to which you have been added to the Environment Admin role. From the Admin center you will be able to perform all administrative actions on an environment including the following:
 
-* Add or remove a user or group from either the Environment Admin or Environment Maker role.  For more information, see [Environment Administration](environment-administration.md).
+* Add or remove a user or group from either the Environment Admin or Environment Maker role.  For more information, see [Environment Administration](environments-administration.md).
 * Provision a Common Data Service database for the environment. For more information see [Create a Common Data Service database](create-database.md).
 * View and manage all resources created within an environment.
 * Set Data Loss Prevention policies. For more information see [Data loss prevention policies](prevent-data-loss.md).
