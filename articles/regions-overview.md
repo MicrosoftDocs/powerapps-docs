@@ -36,7 +36,6 @@ The Microsoft PowerApps admin center shows you the region. This is only availabl
 The following regions are available, or will be available:
 
 - United States
-- United States (First Release)
 - Europe
 - Asia
 - Australia
@@ -46,7 +45,6 @@ The following regions are available, or will be available:
 - United Kingdom (available after General Availability (GA))  
 
 #### Question: What features are specific to a given region?
-
 Environments can be created in different regions, and are bound to that geographic location. When you create an app in an environment, that app is stored in datacenters in that geographic location. This applies to any items you create in that environment, including  databases in the Common Data Service, apps, connections, gateways, and custom APIs.
 
 For the optimal performance, if your users are in Europe, then create and use the environment in the Europe region. If your users are in the United States, then create and use the environment in the U.S.
@@ -54,6 +52,3 @@ For the optimal performance, if your users are in Europe, then create and use th
 **Gateways**:
 - Currently not available in the **India** region.
 - Currently supported in the default environment. They are not supported in custom environments.
-
-#### Question: What is the "First Release" region?
-This is a special region in the United States that gets new features before any other region. So when a new feature or new functionality is added, these changes are first deployed to this "First Release" region.
