@@ -41,14 +41,6 @@ For information about what types of SharePoint data PowerApps supports, see [Kno
 
 	![](./media/open-app-embedded-in-sharepoint/separate-tab.png)
 
-## Manage the app ##
-
-![](./media/open-app-embedded-in-sharepoint/command-bar.png)
-
-- If you click or tap **Edit in PowerApps**, the app opens in a separate browser tab so that you can update the app in PowerApps Studio for the web.
-- If you click or tap **Make this view public**, other people in your organization will be able to see it. By default, only you can see views that you create. If you want other people to be able to edit this app, you need to [share it with them](share-app.md) and grant **Contributor** permissions.
-- If you click or tap **Remove this view**, you'll remove the view from SharePoint, but the app will still be in PowerApps unless you [delete it](delete-app.md).
-
 ## Manage the list using the app
 
 > [AZURE.NOTE] This topic describes how to open and run an app that is automatically generated from a SharePoint list. The more common scenario is where the generated app has been extensively customized to meet your organization's needs, and in this case, usage may be more complex than what is described here.

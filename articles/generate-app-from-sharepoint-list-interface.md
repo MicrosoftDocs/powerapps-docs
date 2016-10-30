@@ -58,9 +58,18 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
   ![](./media/generate-app-from-sharepoint-list-interface/open-app.png)
 
+
+## Manage the app ##
+
+![](./media/generate-app-from-sharepoint-list-interface/command-bar.png)
+
+- If you click or tap **Edit in PowerApps**, the app opens in a separate browser tab so that you can update the app in PowerApps Studio for the web.
+- If you click or tap **Make this view public**, other people in your organization will be able to see it. By default, only you can see views that you create. If you want other people to be able to edit this app, you need to [share it with them](share-app.md) and grant **Contributor** permissions.
+- If you click or tap **Remove this view**, you'll remove the view from SharePoint, but the app will still be in PowerApps unless you [delete it](delete-app.md).
+
 ## Next steps ##
 
-- [Open the app from within SharePoint](open-app-embedded-in-sharepoint.md).
+- [Add and update items in the list](open-app-embedded-in-sharepoint.md).
 - To customize the browse screen (which appears by default), see [Customize a layout](customize-layout-sharepoint.md).
 - To customize the details or edit screens, see [Customize a form](customize-forms-sharepoint.md).
 - If you want to delete this kind of app, remove the view from SharePoint, and [delete the app](delete-app.md) itself from PowerApps.
