@@ -36,6 +36,8 @@ Notes on the format of the string:
 
 If the number is not in a proper format, **Value** will return *blank*.
 
+To convert date and time values, use the [**DateValue**](function-datevalue-timevalue.md), [**TimeValue**](function-datevalue-timevalue.md), or [**DateTimeValue**](function-datevalue-timevalue.md) functions.
+
 ## Syntax ##
 
 **Value**( *String* [, *LanguageTag* ] )

@@ -24,11 +24,11 @@ PowerApps includes a powerful set of functions for filtering, sorting, and shapi
 
 The key to building efficient apps is to minimize the amount of data that needs to be brought to your device.  Perhaps only a handful of records from a sea of millions are needed, or a single aggregate value can represent thousands of records.  Or perhaps only the first set of records can be retrieved, and the rest brought in as the user gestures that they want more.  Being focused can dramatically reduce the processing power, memory, and network bandwidth needed by your app, resulting in snappier response times for your users, even on phones connected via a cellular network.  
 
-*Delegation* is where the expressiveness of PowerApps' formulas meets the need to minimize data moving over the network.  In short it means that PowerApps will delegate the processing of data to the data source, rather than moving the data to the app for processing locally.  
+*Delegation* is where the expressiveness of PowerApps formulas meets the need to minimize data moving over the network.  In short it means that PowerApps will delegate the processing of data to the data source, rather than moving the data to the app for processing locally.  
 
-Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a PowerApps' formula can be delegated to every data source.  The PowerApps language mimics Excel's formula language, designed with complete and instant access to a full workbook in memory, with a wide variety of numerical and text manipulation functions.  As a result, the PowerApps language is far richer than most data sources can support, including powerful database engines such as SQL Server.
+Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a PowerApps formula can be delegated to every data source.  The PowerApps language mimics Excel's formula language, designed with complete and instant access to a full workbook in memory, with a wide variety of numerical and text manipulation functions.  As a result, the PowerApps language is far richer than most data sources can support, including powerful database engines such as SQL Server.
 
-**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need.  Take heed of <a href="#blue-dot-suggestions">blue dot suggestions</a> that flag places where delegation is not possible.  If you are working with small data sets (less than 500 records), then you can use any data source and formula as processing will be done locally.  
+**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need.  Take heed of <a href="#blue-dot-suggestions">blue dot suggestions</a> that flag places where delegation is not possible.  If you are working with small data sets (less than 500 records), then you can use any data source and formula as processing can be done locally if the formula cannot be delegated.  
 
 ## Delegable data sources ##
 
@@ -40,7 +40,7 @@ At this time, these data sources support delegation:
 
 We are continuing to add delegation support to existing data sources, as well as add more data sources.
 
-Imported Excel workbooks, collections, and tables stored in context variables do not require delegation.  All of this data is already in memory and the full PowerApps language can be applied. 
+Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables do not require delegation.  All of this data is already in memory and the full PowerApps language can be applied. 
 
 ## Delegable functions ##
 
@@ -55,7 +55,6 @@ These lists will change over time.  We are working to support more functions and
 Within the **Filter** and **LookUp** functions, the following can be used with columns of the table to select the appropriate records:
 
 * **[And](functions/function-logicals.md)** (including **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](functions/operators.md)**)
-* **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[In](functions/operators.md)**
 * **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**
@@ -67,7 +66,7 @@ Portions of your formula that evaluate to a constant value for all records can a
 Some notable items missing from the above list:
 
 * **[If](functions/function-if.md)**
-* **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
+* **[+](functions/operators.md)**, **[-](functions/operators.md)**, **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
 * **[Concatenate](functions/function-concatenate.md)** (including **[&](functions/operators.md)**)
 * **[ExactIn](functions/operators.md)**
 * String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
@@ -118,7 +117,7 @@ To make it easier to know what is and is not being delegated, the authoring expe
 
 Blue dots are only shown on formulas that operate on delegable data sources.  If you don't see a blue dot and you believe your formula is not being properly delegated, check the type of data source against the list of <a href="#delegable-data-sources">delegable data sources</a> above.
 
-## Example ##
+## Examples ##
 
 In this example, we will use a SQL Server table that contains products, in particular fruits, names **[dbo].[Products]**.  On the New screen, PowerApps can create a basic three screen app connected to this data source:
 
