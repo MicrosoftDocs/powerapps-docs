@@ -17,7 +17,7 @@
    ms.date="10/18/2016"
    ms.author="robinr"/>
 
-#Samples and other resources
+# Samples and other resources #
 
 ##Samples
 There are several samples that use the Common Data Service. To find these samples, on [powerapps.com](https://web.powerapps.com), select **Home** in the navigation pane.
