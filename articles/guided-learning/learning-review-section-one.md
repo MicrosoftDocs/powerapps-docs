@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/04/2016"
+   ms.date="10/30/2016"
    ms.author="mblythe"/>
 
 # Review the first section
@@ -44,7 +44,7 @@ In the meantime, here are some resources you should find useful on your journey.
 
 
 ## Downloads
-- [PowerApps for Windows and PowerApps Studio for Windows](https://aka.ms/powerappswin)
+- [PowerApps Studio for Windows](https://aka.ms/powerappswin)
 - [PowerApps for iOS](https://aka.ms/powerappsios)
 - [PowerApps for Android](https://aka.ms/powerappsandroid)
 

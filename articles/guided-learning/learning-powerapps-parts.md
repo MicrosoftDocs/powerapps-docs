@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/04/2016"
+   ms.date="10/30/2016"
    ms.author="mblythe"/>
 
 # The parts of PowerApps
@@ -25,7 +25,7 @@ In the first Guided Learning topic you read about the main parts of PowerApps. N
 
 - **web.powerapps.com** - manage and share the apps you build
 - **PowerApps Studio** - build powerful apps with easy to use visual tools
-- **PowerApps Mobile** - run apps on Windows, iOS, and Android devices
+- **PowerApps Mobile** - run apps on iOS and Android devices
 - **PowerApps admin center** - administer PowerApps environments and other components
 
 We don't expect you to take a ton of time just to learn what PowerApps _is_, but we think it's helpful to flesh things out a bit more.
@@ -43,15 +43,15 @@ If you build apps, this is where you spend most of your time. You learn from the
 1. **Left navigation bar**, which shows thumbnails of all the screens in your app
 2. **Middle pane**, which contains the app screen you are working on
 3. **Right-hand pane**, where you set options like layout and data sources
-4. **Formula bar**, where you add formulas (like in Excel) that define app behavior
-5. **Property** drop-down list, where you select the properties that formulas apply to
+4. **Property** drop-down list, where you select the properties that formulas apply to
+5. **Formula bar**, where you add formulas (like in Excel) that define app behavior
 6. **Ribbon**, where you add controls and customize design elements
 
 ![PowerApps Studio](./media/learning-powerapps-parts/powerapps-studio.png)
 
 
 ## PowerApps Mobile
-**PowerApps Mobile for Windows, iOS, or Android** provides an environment where you can find and use apps. Instead of going to separate app stores, you stay in PowerApps and have access to all the apps that you've created and that others have shared with you. When you use apps in PowerApps Mobile, you get the most out of your device's capabilities like camera controls, GPS location, and more.
+**PowerApps Mobile for iOS and Android** provides an environment where you can find and use apps. Instead of going to separate app stores, you stay in PowerApps and have access to all the apps that you've created and that others have shared with you. When you use apps in PowerApps Mobile, you get the most out of your device's capabilities like camera controls, GPS location, and more.
 
 ![PowerApps Mobile](./media/learning-powerapps-parts/powerapps-mobile.png)
 
