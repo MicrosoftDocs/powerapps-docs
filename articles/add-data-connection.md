@@ -70,5 +70,5 @@ You can add a connection in PowerApps, as this topic describes, or on [powerapps
 	Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connection-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
 
 ## Next steps ##
-- To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery), and [add a form](add-form.md).
+- To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
 - For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connection-office365-outlook.md), [Twitter](connection-twitter.md), and [Microsoft Translator](connection-microsoft-translator.md).

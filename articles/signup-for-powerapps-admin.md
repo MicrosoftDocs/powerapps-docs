@@ -25,7 +25,7 @@ This article shows you how to purchase PowerApps for your organization as an adm
 
 ## Choosing the right plan ##
 
-For details about what licenses you can choose for your organization, see [PowerApps licensing overview](billing-pricing-skus.md).
+For details about what licenses you can choose for your organization, see [PowerApps licensing overview](pricing-billing-skus.md).
 
 ## Purchase PowerApps directly ##
 
