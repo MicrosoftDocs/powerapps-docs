@@ -18,33 +18,30 @@
    ms.date="10/18/2016"
    ms.author="ricksal"/>
 
-# Generate an app from the SharePoint Online list interface
+# Generate an app from the SharePoint Online list interface #
 
 [AZURE.VIDEO nb:cid:UUID:639d7eaf-bae5-447c-a34b-ec539a01a15c]
 
 In a SharePoint Online list, generate a three-screen app that manages the list.
 
-You can **Create an app** using PowerApps from the command bar of any SharePoint Online custom list. Apps generated through this flow show up as views within the new SharePoint modern list experience.  This allows you to leverage PowerApps to build custom, mobile-optimized views of your existing lists and share them with your co-workers.  Since PowerApps is a cross-platform service, you can run the apps you generate across all of your devices including Windows, iOS, Android, and the web browser.
+You can **Create an app** using PowerApps from the command bar of any SharePoint Online custom list. Apps generated through this flow show up as views within the new SharePoint modern list experience.  This allows you to leverage PowerApps to build custom, mobile-optimized views of your existing lists and share them with your co-workers. Because PowerApps is a cross-platform service, you can run the apps you generate across all of your devices including Windows, iOS, Android, and the web browser.
 
 For information about what kinds of SharePoint data PowerApps supports, see [Known issues](connection-sharepoint-online.md#known-issues).
 
-## Prerequisites
-
+## Prerequisites ##
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
-## Generate a new app
+## Generate an app ##
 
-1. Open your SharePoint Online list.
-
-2. Select **PowerApps** from the command bar, and then **Create an app** to open a panel in SharePoint that allows you to enter a name for your app and start the app creation process.
+1. Open a custom list in SharePoint Online, select **PowerApps** on the command bar, and then select **Create an app**.
 
     ![](./media/generate-app-from-sharepoint-list-interface/generate-new-app.png)
 
-3. Enter your app name, then select **Create** to launch the PowerApps Studio for web in a new browser tab, which creates a default app automatically based on the list’s schema and data.
+3. In the panel that appears, enter your app name, and then select **Create**.
 
     ![](./media/generate-app-from-sharepoint-list-interface/enter-app-name.png)
 
-	Your app is generated, and appears in a PowerApps Studio browser tab.
+	PowerApps Studio for web opens a new browser tab and creates a default app automatically based on the list’s schema and data.
 
     ![](./media/generate-app-from-sharepoint-list-interface/powerapp-studio-for-web.png)  
 

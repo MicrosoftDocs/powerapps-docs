@@ -19,13 +19,7 @@
     ms.author="ricksal;jamesol"/>
 
 # Self-service sign up for PowerApps #
-Signing up for PowerApps, as an individual, is easy! Even if you are in an existing organization, you can:
-
-- start a PowerApps trial account
-- purchase PowerApps Plan 1
-- purchase PowerApps Plan 2
-
-Once you have determined which you would like to use, this article will walk you through the steps to get up and running.
+Signing up for PowerApps, as an individual, is easy! This article will walk you through the steps to get up and running with a free trial account for PowerApps.
 
 For administration information, see [Purchase PowerApps for your organization](signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
@@ -50,7 +44,7 @@ If your Office 365 or Dynamics 365 plan includes PowerApps, you can access it by
 
 	![](./media/signup-for-powerapps/home-sign-in.png)
 
-1. You're then taken to [powerapps.com][2], and you can start to use PowerApps.
+	You're then taken to [powerapps.com][2], and you can start to use PowerApps.
 
 	![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
 
@@ -72,7 +66,7 @@ If you already have access to PowerApps through Office 365, Dynamics 365, or Pow
 
 	![](./media/signup-for-powerapps/start-free-trial.png)
 
-1. Under **Get started**, type your work or school email address, and then click or tap **Sign up**.  
+1. Under **Let's get started**, type your work or school email address, and then click or tap **Submit**.  
 
 	![](./media/signup-for-powerapps/get-started-old.png)
 
