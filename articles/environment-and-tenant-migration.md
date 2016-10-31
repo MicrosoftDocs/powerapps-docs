@@ -50,17 +50,17 @@ Gateways are only supported in the default, and {tenant name} (from preview)  en
 
 2. When PowerApps Studio opens, click **Save as** in the left nav bar column, then select **This computer**, then click or tap **Save**. Note where the file was saved on your local machine.
 
-	![](./media/environment-and-tenant-app-migration/save-app.png)
+	![](./media/environment-and-tenant-migration/save-app.png)
 
 3. Change environment to destination environment in http://web.powerapps.com
 
 4. Open PowerApps Studio, which will now be in the destination environment. Click or tap **Open** in the left nav bar, and then click or tap **Browse**.
 
-	![](./media/environment-and-tenant-app-migration/open-app.png)
+	![](./media/environment-and-tenant-migration/open-app.png)
 
 5. Select your file from where you saved it when in the original environment, and clikc or tap **Open**.
 
-	![](./media/environment-and-tenant-app-migration/save-new-app.png)
+	![](./media/environment-and-tenant-migration/save-new-app.png)
 
 6. You may need to address any compilation issues in the app, in accessing resources that may have different names, such as data connections and sources.
 7. Assign correct users/groups and share out the app in the new environment
@@ -70,7 +70,7 @@ Gateways are only supported in the default, and {tenant name} (from preview)  en
 Here is how you can migrate an entity.
 
 1. From http://web.powerapps.com, select **Common Data Service** in the left nav bar, then select an entity to migrate. Click or tap on **Export data**.
-	![](./media/environment-and-tenant-app-migration/export-entity.png)
+	![](./media/environment-and-tenant-migration/export-entity.png)
 
 2. Export a package from the origin environment from the admin center
 3. Select the destination environment in the admin center
