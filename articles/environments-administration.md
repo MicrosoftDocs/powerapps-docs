@@ -34,10 +34,11 @@ The PowerApps admin center can be accessed by going directly to [admin.powerapps
 	![](./media/environment-admin/powerapps-gear-dropdown.png)
 
 In order to be able to manage an environment from the PowerApps admin center you meet either of the following requirements:
+
 1. Be a member of the Environment Admin role of the environment
 1. Be a member of the Global Administrator role of your Azure AD or Office 365 tenant
 
-You will als0 need either a PowerApps Plan 2 or Flow Plan 2 to access the admin center. For more information see [PowerApps pricing page][3]
+You will also need either a PowerApps Plan 2 or Flow Plan 2 to access the admin center. For more information see [PowerApps pricing page][3]
 
 Please note that any changes you make in PowerApps Admin center will impact the [Flow admin center][4] and vice versa.
 
