@@ -1,10 +1,10 @@
 <properties
-	pageTitle="Open entity data in Excel | Microsoft Common Data Model"
-	description="Open entity data in Excel for interactive viewing and editing"
+	pageTitle="Open entity data in Excel | Microsoft PowerApps"
+	description="Open entity data in Excel for interactive viewing and editing."
 	services="powerapps"
 	documentationCenter="na"
 	authors="chrisgarty"
-	manager="erikre"
+	manager="robinr"
 	editor=""
 	tags=""/>
 
@@ -17,67 +17,63 @@
    ms.date="08/19/2016"
    ms.author="cgarty"/>
 
-# Open entity data in Excel #
+# Open entity data in Excel
 
-[AZURE.VIDEO nb:cid:UUID:3d731aa8-6eb0-4d36-a9e5-d28bf44b28a0]
+By opening entity data in Microsoft Excel, you can quickly and easily view and edit data by using the Microsoft PowerApps Excel Add-in. The PowerApps Excel Add-in requires Microsoft Excel 2016.
 
-Opening entity data in Excel allows for quick and easy viewing and editing of data facilitated by the PowerApps Excel Add-in. The PowerApps Excel Add-in requires Excel 2016.
-
-**Note**: If your Azure Active Directory (AAD) tenant is configured to use Active Directory Federation Services (ADFS) then you need to have to ensure that the May 2016 update has been applied so the Excel Add-in can facilitate sign-in correctly.
+**Note:** If your Microsoft Azure Active Directory (Azure AD) tenant is configured to use Active Directory Federation Services (AD FS),  you must make sure that the May 2016 update has been applied, so that the Excel Add-in can correctly sign you in.
 
 ## Open entity data in Excel
+1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane. All the entities are shown.
+1. Click the ellipsis (...) to the right of the entity that you're interested in.
+1. Click **Open in Excel**, and then open the workbook that is generated. This workbook has binding information for the  entity, a pointer to your environment, and a pointer to the PowerApps Excel Add-in.  
+1. In Excel, click **Enable editing** to enable the PowerApps Excel Add-in to run. The Excel Add-in runs in a pane on the right side of the Excel window.
+1. If this is the first time that you've run the PowerApps Excel Add-in, click **Trust this Add-in** to allow the Excel Add-in to run.
+1. If you're prompted to sign in, click **Sign in**, and then sign in by using the same credentials that you used on [powerapps.com](https://web.powerapps.com). The Excel Add-in will use a previous sign-in context and automatically sign you in if it can. Therefore, verify the user name in the upper right of the Excel Add-in.
 
-1. In your web browser, open [powerapps.com](https://web.powerapps.com) and sign in.
-1. In the left navigation pane, click or tap **Manage > Entities**. All of the entities will be shown.
-1. Click the actions menu **"..."** to the right of the desired Entity
-1. Click **Open in Excel** and open the workbook that is provided. The generated workbook has binding information for the desired entity, a pointer to your environment, and a pointer to the PowerApps Excel Add-in.  
-1. In Excel, click **Enable editing** to allow the PowerApps Excel Add-in to run. The Excel Add-in will run in a task pane on the right side of the workbook.
-1. If this is the first time running the Add-in, click **Trust this Add-in** to allow the PowerApps Excel Add-in to run.
-1. If needed, click **Sign in** and sign in with the same credentials used on [powerapps.com](https://web.powerapps.com). The Excel Add-in will use a previous sign-in context and automatically sign-in if possible, so verify the user name in the top right of the Excel Add-in.
-1. The Excel Add-in will automatically read the data for the selected entity. Note that there will be no data in the workbook until the Excel Add-in reads it in.
+The Excel Add-in automatically reads the data for the entity that you selected. Note that there will be no data in the workbook until the Excel Add-in reads it in.
 
-## View and refresh entity data in Excel ##
-Once entity data is read into the workbook by the Excel Add-in, it can be refreshed at any time by clicking the **Refresh** button in the Excel Add-in.
+## View and refresh entity data in Excel
+After the Excel Add-in reads entity data into the workbook, you can update the data at any time by clicking **Refresh** in the Excel Add-in.
 
+## Edit entity data in Excel
+You can change entity data as you require and then publish it back by clicking **Publish** in the Excel Add-in.
 
-## Edit entity data in Excel ##
-Entity data can be changed as needed and then published back by clicking the **Publish** button in the Excel Add-in.
+To edit a record, select a cell in the worksheet, and then change the cell value.
 
-To edit a record, select the desired cell and make changes to the cell value.
+To add a new record, follow one of these steps:
 
-To add a new record, either:
+- Click anywhere in the worksheet, and then click **New** in the Excel Add-in.
+- Click in the last row of the worksheet, and then press the Tab key until the cursor moves out of the last column of that row, and a new row is created.
+- Click in the row immediately below the worksheet, and start to enter data in a cell. When you move the focus out of that cell, the worksheet expands to include the new row.
 
-1. Put focus in the table and click the **New** button in the Excel Add-in.
-1. Put focus in the last row in the table and press the **tab** key until the cursor moves out of the last column and into the next row, creating an additional table row.
-1. Put focus in the row immediately below the table and start entering data. The table will grow to include that row when focus moves out of that cell.
+To delete a record, follow one of these steps:
 
-To delete a record, either:
+- Right-click the row number next to the worksheet row to delete, and then click **Delete**.
+- Right-click in the worksheet row to delete, and then click **Delete** > **Table Rows**.
 
-1. Right-click the row number beside the table and click **Delete**
-1. Right-click in the desired table row and click **Delete > Table Rows**
+## Add or remove columns
+You can use the designer to adjust the columns that are automatically added to the worksheet.
 
+1. Enable the data source designer of the Excel Add-in by clicking the **Options** button (the gear symbol) and then selecting the **Enable design** check box.
+1. Click **Design** in the Excel Add-in. All the data sources are listed.
+1. Next to the data source, click the **Edit** button (the pencil symbol).
+1. Adjust the list in the **Selected fields** field as you require:
+	- To add a field from the **Available fields** field to the **Selected fields** field, click the field, and then click **Add**. Alternatively, double-click the field.
+	- To remove a field from the **Selected fields** field, click the field, and then click **Remove**. Alternatively, double-click the field.
+	- To change the order of fields, click the field in the **Selected fields** field, and then click **Up** or **Down**.
+1. Apply your changes to the data source by clicking **Update**, and then click **Done** to exit the designer. If you added a field (column), click **Refresh** to pull in an updated set of data.
 
-## Add or remove columns ##
-The set of columns automatically added into the workbook can be adjusted using the designer:
+## Troubleshooting
+There are a few issues that can be resolved through some easy steps.
 
-1. Enable the data source designer of the Excel Add-in by clicking the **Options** button (gear symbol) and checking **Enable design**.
-1. Click the **Design** button in the Excel Add-in. All the data sources are listed.
-1. Next to the data source, click the **Edit** pencil button.
-1. Adjust the list of **Selected fields** as needed:
-	- Add a field from the list of **Available fields** to **Selected fields** by clicking on the field and clicking **Add**, or by double-clicking the field.
-	- Remove a field from the list of **Selected fields** by clicking on the field and clicking **Remove**, or by double-clicking the field.
-	- Change the order of fields by clicking on the field in the list of **Selected fields** and clicking **Up** or **Down**.
-1. Apply the changes to the data source by clicking **Update** and then click **Done** to exit the designer. If a field (column) was added, click **Refresh** to pull in a refreshed set of data.
+- If you receive a "Forbidden" message while the Excel Add-in is loading metadata, the account that is signed in to the Excel Add-in doesn't have permission to use the targeted Common Data Service database. To resolve this issue, verify that the correct user name appears in the upper right of the Excel Add-in. As required, click the user name in the upper right of the Excel Add-in, sign out, and then sign back in.
+- If a blank webpage opens during the sign-in process, the account requires AD FS, but the version of Excel that is running the Add-in isn't recent enough to load the sign-in dialog box. As required, update the version of Excel that you're using. To update the version of Excel, use the [Office deployment tool](https://technet.microsoft.com/library/jj219422.aspx) to [move from the deferred channel to the current channel](https://technet.microsoft.com/library/mt455210.aspx).
 
-## Troubleshooting ##
-There are a few troublesome situations that can be resolved with some simple steps:
+If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
-1. If a "Forbidden" message appears while metadata is being loaded by the Excel Add-in, then the account signed into the Excel Add-in doesn't have permission to use the targeted Common Data Model database. To resolve this situation, verify that the correct user name is shown at the top right of the Excel Add-in. If needed, click the user name at the top right of the Excel Add-in, sign out, and sign back in.
-1. If a blank web page opens during the sign in process, then the account requires ADFS but the version of Excel running the Add-in is not recent enough to support loading a sign-in dialog. Update the version of Excel being used, if needed by [moving from the deferred channel to the current channel](https://technet.microsoft.com/library/mt455210.aspx) using the [Office deployment tool](https://technet.microsoft.com/library/jj219422.aspx).
-
-If you encounter a troublesome situation not detailed here, then contact us via the [support pages](https://powerapps.microsoft.com/support/).
-
-## Next steps ##
+## Next steps
 - [Manage fields in an entity](data-platform-manage-fields.md)
 - [Define relationships between entities](data-platform-entity-lookup.md)
-- [Create an app using Common Data Model](data-platform-create-app.md)
+- [Generate an app by using a Common Data Service database](data-platform-create-app.md)
+- [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)

@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,56 +15,47 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/20/2016"
+   ms.date="10/16/2016"
    ms.author="anneta"/>
 
 # Add a screen and navigate between screens #
-
 Create an app with multiple screens, and add ways for users to navigate between them.
 
-## What you need to get started ##
-
-- Sign in to PowerApps or the [PowerApps portal][1].
-- Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
+## Prerequisites ##
 - Learn how to [configure a control](add-configure-controls.md).
+- Create or open an app.
 
 ## Add and rename a screen ##
-1. In your app, go to the **Home** tab, and rename the default screen (Screen1) to **Source**:  
-
-	![Rename the default screen](./media/add-screen-context-variables/name-source-screen.png)
-
-1. On the **Home** tab, select **New Screen**:  
+1. On the **Home** tab, click or tap **New screen**.
 
 	![Add Screen option on the Home tab](./media/add-screen-context-variables/add-screen.png)
 
-	The navigation bar shows the default screen, which you renamed **Source**, and the new screen that you added:  
+1. On the **Home** tab, rename the new screen **Source**.
+
+	![Rename the default screen](./media/add-screen-context-variables/name-source-screen.png)
+
+1. Add another screen, and name it **Target**.
 
 	![Two screens in the left navigation bar](./media/add-screen-context-variables/two-screens-in-nav.png)
 
-1. Rename the new screen to **Target**.
-
-## Add navigation to your screens ##
-
-1. On the **Source** screen, go to the **Insert** tab, select **Shapes**, and then select the **Next** arrow:  
+## Add navigation ##
+1. With the **Source** screen selected, open the **Insert** tab, click or tap **Icons**, and then click or tap **Next arrow**.  
 
 	![The Shapes option on the Insert tab](./media/add-screen-context-variables/add-next-arrow.png)
 
-1. (optional) Move the arrow so it appears in the lower-left corner of the screen.
+1. (optional) Move the arrow so that it appears in the lower-right corner of the screen.
 
-1. With the arrow still selected, go to the **Action** tab, and select **Navigate**. When you do this, the **[OnSelect](controls/properties-core.md)** property for the arrow is automatically set to the following:  
+1. With the arrow still selected, click or tap the **Action** tab, and then click or tap **Navigate**.
+
+	The **[OnSelect](controls/properties-core.md)** property for the arrow is automatically set to a **Navigate** function.  
 
 	![OnSelect property set to Navigate function](./media/add-screen-context-variables/onselect-default.png)
 
-	So when a user selects the Next arrow, the **Target** screen fades in.
+	When a user clicks or taps the arrow, the **Target** screen fades in.
 
-1. On the **Target** screen, add a **Back** arrow, and set its **[OnSelect](controls/properties-core.md)** property to the following formula:  
+1. On the **Target** screen, add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
+<br>**Navigate(Source, ScreenTransition.Fade)**
 
-	`Navigate(Source, ScreenTransition.Fade)`
-
-1. **Preview** (![](./media/add-screen-context-variables/preview.png) or press F5), and then switch between the screens by selecting the arrows that you added.
+1. Open Preview mode (![](./media/add-screen-context-variables/preview.png) or press F5), and then switch between the screens by clicking or tapping the arrows that you added.
 
 1. Press **Esc** to return to the default workspace.
-
-
-<!--Reference links in article-->
-[1]: https://web.powerapps.com

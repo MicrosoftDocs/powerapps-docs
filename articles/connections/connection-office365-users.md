@@ -34,19 +34,11 @@ This topic shows you how to add Office 365 Users as a connection, add Office 365
 
 
 ## Connect to Office 365
-1.  Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
-
-	![Open a blank app](./media/connection-office365-users/blank-app.png)
-
-2. In the right-hand pane, open the **Data sources** tab, and then select **Add data source**.
-
-3. Select **Add connection**, and then select **Office 365 Users**:  
-
-	![Connect to Office 365](./media/connection-office365-users/addconnection.png)
+1. [Add a data connection](add-data-connection.md) and select **Office 365 Users**:  
 
 	![Connect to Office 365](./media/connection-office365-users/add-office.png)
 
-4. Select **Connect**, and if prompted to sign in, enter your work account. Your connection is listed under **Data sources**. If it's not listed, select **Add Data Source**, and select **Office 365 Users**.
+1. Select **Connect**, and if prompted to sign in, enter your work account.
 
 The Office 365 Users connection has been created, and added to your app. Now, it's ready to be used.
 
@@ -286,6 +278,5 @@ Search for users: Retrieves search results of user profiles
 
 ## Helpful links
 
-See all the [available connections](../connections-list.md).  
-Learn how to [add connections](../add-manage-connections.md) to your apps.  
-Some gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).
+- See all the [available connections](../connections-list.md).
+- Learn how to [add connections](../add-manage-connections.md) to your apps.

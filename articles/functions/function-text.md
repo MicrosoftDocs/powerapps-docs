@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/15/2016"
+   ms.date="10/25/2016"
    ms.author="gregli"/>
 
 # Text function in PowerApps #
@@ -168,7 +168,7 @@ The user running these formulas is located in the United States and has selected
 ### Date/Time ###
 
 - At **2:37:47 PM** on **Monday, November 23, 2015**
-- United States Pacific Time Zone (UTC+8)
+- United States Pacific Time Zone (UTC-8)
 
 | Formula |  Description | Result |
 |-------------|-------------|-------------|

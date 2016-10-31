@@ -49,6 +49,8 @@ The **ShowColumns** function includes columns of a table and drops all other col
 
 For all these functions, the result is a new table with the transform applied.  The original table isn't modified.
 
+[AZURE.INCLUDE [delegation-no](../../includes/delegation-no.md)]
+
 ## Syntax ##
 
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )

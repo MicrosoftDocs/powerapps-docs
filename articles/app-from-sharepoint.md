@@ -5,7 +5,7 @@
    suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
-   manager="erikre"
+   manager="anneta"
    editor=""
    tags=""/>
 
@@ -15,10 +15,13 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/03/2016"
+   ms.date="10/16/2016"
    ms.author="anneta"/>
 
 # Generate an app to manage data in a SharePoint list #
+
+[AZURE.VIDEO nb:cid:UUID:34ccfd46-7826-49ce-90d8-cf6a144b6968]
+
 In PowerApps, generate a three-screen app automatically to manage data in a SharePoint list, whether the site is on-premises or in the cloud.
 
 By default, every generated app has a screen for browsing records, a screen for showing details of a record, and a screen for creating or updating records. Heuristics suggest the best layout and content for each screen, but you'll probably need to customize the app to suit your needs.
@@ -40,7 +43,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 		For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](create-app-browser.md).
 
-1. Under **Create an app from your data**, click or tap **Phone layout**.
+1. Under **Start with your data**, click or tap **Phone layout** on the SharePoint tile.
 
 	![](./media/app-from-sharepoint/sharepoint-tile.png)
 

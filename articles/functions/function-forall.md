@@ -48,7 +48,11 @@ Several functions that modify data sources, including **Collect**, **Remove**, a
 
 Many functions in PowerApps can process more than one value at a time through the use of a single-column table.  For example, the **Len** function can process a table of text values, returning a table of lengths, in the same manner that **ForAll** could.  This can eliminate the need to use **ForAll** in many cases, can be more efficient, and is easier to read.
 
-Another consideration is that **ForAll** is not delegatable while other functions may be, such as **Filter**.  
+Another consideration is that **ForAll** is not delegable while other functions may be, such as **Filter**.  
+
+### Delegation ###
+
+[AZURE.INCLUDE [delegation-no-one](../../includes/delegation-no-one.md)]
 
 ## Syntax ##
 
@@ -137,7 +141,7 @@ Another approach is to use the **ForAll** function to replace the table-shaping 
 
 This formula may be simpler for some people to read and write.
 
-No part of the **ForAll** is delegatable.  Only the first portion of the **Products** table will be evaluated, which could be a problem if this table is very large.  Because **Filter** could be delegated in the previous example, it could work better with large data sets.
+No part of the **ForAll** is delegable.  Only the first portion of the **Products** table will be evaluated, which could be a problem if this table is very large.  Because **Filter** could be delegated in the previous example, it could work better with large data sets.
 
 #### Collect the result ####
 

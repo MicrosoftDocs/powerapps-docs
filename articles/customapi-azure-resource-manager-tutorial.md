@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Create a custom API using Azure Resource Manager | Microsoft PowerApps"
-	description="Learn how to create a custom API using Azure Resource Manager and add the API to PowerApps and Microsoft Flow"
+	description="Learn how to create a custom API using Azure Resource Manager and add the API to PowerApps"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -14,11 +14,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/26/2016"
+   ms.date="10/26/2016"
    ms.author="casoper"/>
 
 
-# Create a custom API using Azure Resource Manager in PowerApps and Microsoft Flow
+# Create a custom API using Azure Resource Manager in PowerApps
 
 This tutorial demonstrates how to register a Swagger file describing an [Azure Resource Manager (ARM) API](https://msdn.microsoft.com/library/azure/dn790568.aspx) and then connect to it in PowerApps.
 
@@ -92,11 +92,9 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
 Now that the AAD application is configured, let's add the custom API.
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Manage** to expand it, and then click **Connections**. Then click **New connection** in the upper-right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **New connection** in the upper-right corner.
 
-    >[AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
-
-    ![New connection](./media/customapi-azure-resource-manager-tutorial/createnewconnection.png)
+    > [AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
 
 2. Click **Custom** to display your list of custom connections, and then click **New custom API**.
 
@@ -108,7 +106,7 @@ Now that the AAD application is configured, let's add the custom API.
 
 4. On the next screen, because the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, type the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, type `https://management.core.windows.net/`.
 
-    >[AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
+    > [AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
 
     ![OAuth settings](./media/customapi-azure-resource-manager-tutorial/oauthsettings.png)
 
@@ -116,7 +114,7 @@ Now that the AAD application is configured, let's add the custom API.
 
     ![Custom API added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
 
->[AZURE.NOTE] The sample Swagger does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this Swagger or create another Swagger file using the [online Swagger editor](http://editor.swagger.io/).
+> [AZURE.NOTE] The sample Swagger does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this Swagger or create another Swagger file using the [online Swagger editor](http://editor.swagger.io/).
 >
 >This process can be used to access any RESTful API authenticated using AAD.
 

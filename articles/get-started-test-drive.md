@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/29/2016"
+   ms.date="10/25/2016"
    ms.author="litran"/>
 
 # Create and run an app from a template #
@@ -30,11 +30,11 @@ Create an app automatically based on a template for specific scenario, and then 
 - A cloud-storage account such as DropBox, OneDrive, or Google Drive.
 
 ## Create an app ##
-1. In PowerApps, click or tap **New** on the **File** menu (near the left edge of the screen).
+1. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge of the screen).
 
 	![The New option on the File menu](./media/get-started-test-drive/file-new.png)
 
-1. Under **Create an app**, click or tap **Phone layout** on the **App templates** tile.
+1.  On the **App templates** tile, click or tap **Phone layout**.
 
 	**Note:** You can create an app for a tablet, but this tutorial focuses on the phone option.
 
@@ -44,17 +44,17 @@ Create an app automatically based on a template for specific scenario, and then 
 
 1. If you don't have a connection to a cloud-storage account:
 
-	1. Near the bottom of the screen, click or tap **Add a connection**.
+	1. Near the bottom of the screen, click or tap **Choose**.
 
 		![The option to create connection within template view](./media/get-started-test-drive/add-connection.png)
 
-	1. Click or tap the account that you want to use, provide your credentials, and then click or tap **Sign in** to grant access.
+	1. Click or tap the account that you want to use.
 
-		![List connection to create app from template](./media/get-started-test-drive/connection-list.png)
+		![List connection to create app from template](./media/get-started-test-drive/store-data.png)
+
+	1. Provide your credentials, and then click or tap **Use** to grant access.
 
 		Your connection appears near the bottom of the screen.
-
-		![Connection added](./media/get-started-test-drive/connection-setup-done.png)
 
 1. In the list of templates, click or tap a template, and then click or tap **Use** (near the lower-right corner).
 
@@ -79,7 +79,7 @@ An app from a template opens in the default workspace, where you'll spend most o
 
 1. Press F5 (or click or tap the right arrow in the upper-right corner) to open the app in **Preview** mode.
 
-	![Button to open Preview mode](./media/get-started-test-drive/preview-button.png)
+	![Button to open Preview mode](./media/get-started-test-drive/open-preview.png)
 
 	The app is pre-populated with sample data to demonstrate the functionality of the app. For example, the Cost Estimator app contains data for creating appointments and estimating the cost of installing a specific flooring product in a room of a particular size.
 

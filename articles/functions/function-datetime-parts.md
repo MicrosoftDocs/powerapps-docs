@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/07/2015"
+   ms.date="10/25/2016"
    ms.author="gregli"/>
 
 # Day, Month, Year, Hour, Minute, Second, and Weekday functions in PowerApps #
@@ -36,18 +36,18 @@ The **Minute** function returns the minute component of a Date/Time value, rangi
 
 The **Second** function returns the second component of a Date/Time value, ranging from 0 to 59.
 
-The **Weekday** function returns the weekday of a Date/Time value.  By default, the result ranges from 1 (Sunday) to 7 (Saturday).  You can specify a different range with an Microsoft Excel Weekday function code:
+The **Weekday** function returns the weekday of a Date/Time value.  By default, the result ranges from 1 (Sunday) to 7 (Saturday).  You can specify a different range with an Microsoft Excel Weekday function code or a StartOfWeek enumeration value:
 
-| Excel code | Description |
-|-----|--------|
-|  1, 17 | Numbers 1 (Sunday) through 7 (Saturday).  |
-|  2, 11 | Numbers 1 (Monday) through 7 (Sunday). |
-|  3 | Numbers 0 (Monday) through 6 (Sunday). |
-|  12 | Numbers 1 (Tuesday) through 7 (Monday). |
-|  13 | Numbers 1 (Wednesday) through 7 (Tuesday). |
-|  14 | Numbers 1 (Thursday) through 7 (Wednesday). |
-|  15 | Numbers 1 (Friday) through 7 (Thursday). |
-|  16 | Numbers 1 (Saturday) through 7 (Friday). |
+| Excel code | StartOfWeek enumeration | Description |
+|-----|--------|-----|
+|  **1**, **17** | **StartOfWeek.Sunday** | Numbers 1 (Sunday) through 7 (Saturday).  Default. |
+|  **2**, **11** | **StartOfWeek.Monday** | Numbers 1 (Monday) through 7 (Sunday). |
+|  **3** | **StartOfWeek.MondayZero** | Numbers 0 (Monday) through 6 (Sunday). |
+|  **12** | **StartOfWeek.Tuesday** | Numbers 1 (Tuesday) through 7 (Monday). |
+|  **13** | **StartOfWeek.Wednesday** | Numbers 1 (Wednesday) through 7 (Tuesday). |
+|  **14** | **StartOfWeek.Thursday** | Numbers 1 (Thursday) through 7 (Wednesday). |
+|  **15** | **StartOfWeek.Friday** | Numbers 1 (Friday) through 7 (Thursday). |
+|  **16** | **StartOfWeek.Saturday** | Numbers 1 (Saturday) through 7 (Friday). |
 
 All functions return a number.
 
@@ -77,6 +77,6 @@ For the following example, the current time is **3:59:37 PM** on **Thursday, Apr
 | **Minute(&nbsp;Now()&nbsp;)** | Returns the minute component of the current time and date. | 59 |
 | **Second(&nbsp;Now()&nbsp;)** | Returns the minute component of the current time and date. | 37 |
 | **Weekday(&nbsp;Now()&nbsp;)** | Returns the weekday component of the current time and date, using the default start of the week as Sunday. | 5 |
-| **Weekday(&nbsp;Now(),&nbsp;14&nbsp;)** | Returns the weekday component of the current time and date, using an Excel code to specify the start of the week as Friday. | 1 |
-
+| **Weekday(&nbsp;Now(),&nbsp;14&nbsp;)** | Returns the weekday component of the current time and date, using an Excel code to specify the start of the week as Thursday. | 1 |	
+| **Weekday(&nbsp;Now(),&nbsp;StartOfWeek.Wednesday&nbsp;)** | Returns the weekday component of the current time and date, using a **StartOfWeek** enumeration to specify the start of the week as Wednesday. | 2 |
 

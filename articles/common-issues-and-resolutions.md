@@ -15,15 +15,19 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/10/2016"
+   ms.date="10/22/2016"
    ms.author="anneta"/>
 
 # Common issues and resolutions #
 
 ## Recently added/changed ##
+1.	**Custom APIs and the Common Data Service**
+
+	If an app created using PowerApps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom API in a different environment, you’ll need to deploy the API to the same environment as the database and update the app to use the new API. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](environments-overview.md).
+
 1. **Running an app on Windows 8.1**
 
-	If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile. 
+	If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile.
 
 1. **Changing a flow in a shared app**
 
@@ -33,13 +37,13 @@
 
 	If you're running release 2.0.531 on Windows 8.1, you can't type in a **Text input** control if the device is set to a language that requires an IME window.
 
+## Older ##
 1. **Opening an app from a template**.
 
 	If you're running release 2.0.500 or older, an error message appears when you try to create an app from a template. You must upgrade to be able to use this feature.
 
 	If you're running release 2.0.510 or later, an warning might appear when you try to create an app from a template. However, you can close the message and create the app.
 
-## Older ##
 1. **Scanning a barcode**
 
 	For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
@@ -48,9 +52,9 @@
 
 	You can do many of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. However, you can't, for example, create an app from a template. For more information, see [Create an app in a browser](create-app-browser.md).
 
-1. **Changing a record-title field in the Microsoft Common Data Model**
+1. **Changing a Title field in an entity**
 
-	If you change the record-title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the record-title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](data-platform-entity-lookup.md).
+	If you change the Title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](data-platform-entity-lookup.md).
 
 1. **Apps that connect to on-premises SharePoint**
 

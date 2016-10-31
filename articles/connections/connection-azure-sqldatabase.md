@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="" 	
 	authors="AFTOwen"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags="" />
 
@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="06/07/2016"
+ms.date="10/23/2016"
 ms.author="anneta"/>
 
 # Connect from Microsoft PowerApps to SQL Server #
@@ -37,16 +37,18 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 	If you don't have this information, ask the administrator of the database that you want to use.
 - For an on-premises database, identify a [data gateway](gateway-management.md) that was shared with you (or create one).
 
+	**Note**: Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
+
 ## Generate an app automatically ##
 1. In PowerApps Studio, click or tap **New** on the **File** menu (along the left edge).
 
 	![New option on the File menu](./media/connection-azure-sqldatabase/file-new.png)
 
-1. Under **Create an app from your data**, click or tap the right arrow at the end of the row of connectors.
+1. Under **Start with your data**, click or tap the right arrow at the end of the row of connectors.
 
-1. If you already have a connection to the database that you want to use, click or tap it, and then skip to the last step in this procedure.
+1. If you already have a connection to the database that you want to use, click or tap it, and then skip to step 7 in this procedure.
 
-1. Click or tap **Add**, and then click or tap **SQL Server**.
+1. Click or tap **New connection**, and then click or tap **SQL Server**.
 
 	![Add SQL Server connection](./media/connection-azure-sqldatabase/add-sql-connection.png)
 
@@ -73,7 +75,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 ## Build an app from scratch ##
 1. Sign in to [powerapps.com](https://web.powerapps.com) with the same account that you used to sign up for PowerApps.
 
-1. In the left navigation bar, click or tap **Manage**, and click or tap **Connections**:  
+1. In the left navigation bar, click or tap **Connections**:  
 
 	![Manage connections](./media/connection-azure-sqldatabase/manage-connections.png)
 
@@ -91,7 +93,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
 
-1. Click or tap **Add connection** to create the connection.
+1. Click or tap **Create** to create the connection.
 
 1. Create an app by using techniques that are similar to those that [Create an app from scratch](get-started-create-from-blank.md) describes.
 
@@ -104,7 +106,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 	![Add data source](./media/connection-azure-sqldatabase/add-data-source.png)
 
-1. Click or tap **Add connection**, click or tap **SQL Server**, and then click or tap **Connect**.
+1. Click or tap **New connection**, click or tap **SQL Server**, and then click or tap **Connect**.
 
 1. Perform either of these steps:
 

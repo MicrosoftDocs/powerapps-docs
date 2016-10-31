@@ -1,11 +1,11 @@
 <properties
-	pageTitle="Create an app from Excel data | Microsoft PowerApps"
+	pageTitle="Generate an app from Excel data | Microsoft PowerApps"
 	description="Create an app automatically based on an Excel file in the cloud, customize the app, and then explore how it works."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="sarafankit"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,37 +15,45 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/30/2016"
+   ms.date="10/16/2016"
    ms.author="ankitsar"/>
 
-# Create an app from Excel data #
-
-[AZURE.VIDEO nb:cid:UUID:9380084d-bc9a-484f-960e-4554c6bf67b2]
-
+# Generate an app from Excel data #
 Create an app automatically based on an Excel file in the cloud, customize the app, and then explore how it works.
 
-**Prerequisites**
-
+## Prerequisites ##
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by using the same credentials that you used to sign up.
 
-	This topic was written for PowerApps Studio, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
+	This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
 
-- Either download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), or create your own with the data [formatted as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664), and then upload the file to a cloud-storage account such as Box, Dropbox, Google Drive, OneDrive, or OneDrive for Business. The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
+- You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps:
 
-**Note**: You can just as easily create an app based on a [SharePoint list](app-from-sharepoint.md), Salesforce data, or a table in Dynamics CRM.
+	1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).
+
+		**Important**: If you decide to use your own Excel file, make sure that the data is formatted as a table. For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
+	1. Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md) such as OneDrive.
+
+	The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
+
+**Note**: You can just as easily generate an app based on a [custom SharePoint list](app-from-sharepoint.md).
 
 ## Create the app ##
-1. In PowerApps Studio, click or tap **New** (near the left edge of the screen).
+1. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge of the screen).
 
 	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
-1. Under **Create an app from your data**, click or tap **Phone layout** on the tile for your cloud-storage account (such as OneDrive).
+1. Follow any of these steps:
 
-	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
+	- If a tile for your cloud account appears under **Start with your data**, click or tap **Phone layout** on that tile.
 
-1. If you haven't connected PowerApps to your account, click or tap **Connect** when prompted, and then provide your credentials.
+		![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
 
-	![Connect to OneDrive](./media/get-started-create-from-data/connect-onedrive.png)  
+	- If a tile for your cloud account doesn't appear under **Start with your data**, click the arrow at the end of the row of tiles. If an entry for your cloud account appears in the list of connections, click or tap that entry.
+
+	- If your cloud account doesn't appear under **Start with your data** or in the list of connections, click or tap **New connection**, and then click or tap the entry for your cloud account. Click or tap **Connect**, and then follow the prompts.
+
+		![Connect to OneDrive](./media/get-started-create-from-data/connect-onedrive.png)
 
 1. Under **Choose an Excel file**, browse to **FlooringEstimates.xlsx**, and then click or tap it.
 
@@ -64,13 +72,17 @@ PowerApps builds an app that has three screens:
 ## Change the app layout ##
 When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
 
-1. If you haven't used PowerApps before, take the intro tour (or click or tap **Skip**).
+1. If you haven't used PowerApps before, take the intro tour to get familiar with the PowerApps interface (or click or tap **Skip**).
 
 	![Opening screen of the quick tour](./media/get-started-create-from-data/quick-tour.png)
 
 	**Note**: You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
-1. In the right-hand pane, click or tap a layout that includes images (such as the one highlighted in this graphic):
+1. In the right-hand pane, click or tap the **Layout** tab to open it.
+
+	![Open the Layout tab](./media/get-started-create-from-data/open-layout-tab.png)
+
+1. On the **Layout** tab, click to tap the layout that includes images, headers, and descriptions:
 
 	![Layout option with icons](./media/get-started-create-from-data/change-layout.png)
 
@@ -78,48 +90,46 @@ When an app is built automatically, heuristics suggest the best layout and conte
 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
-	**Note:** If **DetailScreen1** or **EditScreen1** is selected, the **Layout** tab offers different options, which reflect the types of data on the selected screen.
-
 ## Show different data ##
 1.  Just under the search box in the app that you're building, click or tap **Carpet** to select that **Text box** control and its associated list in the right-hand pane.
 
 	![Select first text box](./media/get-started-create-from-data/select-gallery-textbox.png)
 
-1. In the right-hand pane, click or tap **Name** in the selected list.
+1. In the right-hand pane, open the highlighted list, and then click or tap **Name**.
 
 	![Set first text box](./media/get-started-create-from-data/set-gallery-textbox.png)
 
-1. Click or tap the **Text box** control just under the one that you selected in the previous step.
+1. Open the bottom list, and then click or tap **Category**.
 
-	![Select lower text box](./media/get-started-create-from-data/select-lower-textbox.png)
-
-1. In the right-hand pane, click or tap **Category** in the selected list.
-
-	![Set lower text box](./media/get-started-create-from-data/set-lower-textbox.png)
+	![Set category](./media/get-started-create-from-data/set-category.png)
 
 	**BrowseScreen1** changes to show your selections.
 
 	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
 
-	**Note**: By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To show the scrollbar, [set the gallery's ShowScrollbar property](add-configure-controls.md) to **true**.
+	**Note**: By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To use a trackpad (or a mouse without a wheel), select the gallery, click or tap **ShowScrollbar** in the property list, and replace **false** with **true** in the formula bar.
 
 ## Reorder fields in a form ##
 1. In the left navigation bar, click or tap the middle thumbnail to select **DetailScreen1**.
 
 	![DetailScreen 1 Thumbnail](./media/get-started-create-from-data/detail-screen-thumbnail.png)
 
-1. Click or tap the **Name** field to show its title bar.
+1. Click or tap the image to show options for customizing the form in the right-hand pane.
 
 	![Select a card](./media/get-started-create-from-data/select-card.png)
 
-1. Drag the title bar so that the field appears above **Category**.
+1. In the list of fields, drag the **Name** field to the top of the list.
 
 	![Move a card](./media/get-started-create-from-data/move-card.png)
+
+	The screen reflects your change.
+
+	![Name at top of screen](./media/get-started-create-from-data/name-first.png)
 
 ## Change a control ##
 1. In the left navigation bar, click or tap the bottom thumbnail to select **EditScreen1**.
 
-	![EditScreen 1 Thumbnail](./media/get-started-create-from-data/edit-screen-thumbnail.png)
+	![EditScreen1 thumbnail](./media/get-started-create-from-data/edit-screen-thumbnail.png)
 
 1. Click or tap **Overview** to select that card.
 
@@ -132,7 +142,9 @@ When an app is built automatically, heuristics suggest the best layout and conte
 ## Run the app ##
 As you customize an app, you can test your changes by running the app in **Preview** mode, as the steps in this section demonstrate.
 
-1. In the left navigation pane, click or tap the top thumbnail to select **BrowseScreen1**, and then open Preview mode by pressing **F5** (or by clicking or tapping the **Preview** icon near the upper-right corner).
+1. In the left navigation pane, click or tap the top thumbnail to select **BrowseScreen1**.
+
+1. Open Preview mode by pressing **F5** (or by clicking or tapping the **Preview** icon near the upper-right corner).
 
 	![Preview icon](./media/get-started-create-from-data/open-preview.png)
 
@@ -148,7 +160,7 @@ As you customize an app, you can test your changes by running the app in **Previ
 
 	![Save changes on EditScreen1](./media/get-started-create-from-data/save-record.png)
 
-1. Close Preview mode by pressing Esc (or clicking or tapping the close icon below the title bar).
+1. Close Preview mode by pressing Esc (or by clicking or tapping the close icon below the title bar).
 
 	![Close Preview mode](./media/get-started-create-from-data/close-preview.png)
 

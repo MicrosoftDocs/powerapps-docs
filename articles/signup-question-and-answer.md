@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="jamesol-msft"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""
  />
@@ -15,8 +15,8 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="06/02/2016"
-    ms.author="jamesol"/>
+    ms.date="10/07/2016"
+    ms.author="ricksal;jamesol"/>
 
 # PowerApps in your organization Q&A
 This topic describes how users in your organization can use PowerApps, and how you can control the PowerApps service.
@@ -31,17 +31,17 @@ PowerApps is currently in public preview.
 
 ### How do users sign up for PowerApps?
 
-There are two possible ways for individual users in your organization to sign up for PowerApps through the website:
+The only sign up only option for individual users in your organization is the PowerApps Plan 2 trial, which they can sign up for through the PowerApps website:
 
 ##### Option 1
 Users can sign up by going to [powerapps.microsoft.com](https://powerapps.microsoft.com), selecting **Sign up free**, and then completing the sign-up process for PowerApps through [portal.office.com](https://portal.office.com/Start?sku=powerapps).
 
 ##### Option 2
-Users can sign up by going to [powerapps.microsoft.com](https://powerapps.microsoft.com), selecting **Sign in**, signing in with their work or school accounts, and accepting the PowerApps terms of use.    
+Users can sign up by going to [powerapps.microsoft.com](https://powerapps.microsoft.com), selecting **Sign in**, signing in with their work or school accounts, and sign up for the PowerApps Plan 2 trial by accepting the PowerApps terms of use.    
 
 When a user in your organization signs up for PowerApps, that user is assigned a PowerApps license automatically.
 
-[Sign up for PowerApps](signup-for-powerapps.md) includes more details.
+See [Self-serivce sign up for PowerApps](signup-for-powerapps.md) for more details.
 
 ### How do individual users in my organization sign up?
 
@@ -195,9 +195,10 @@ You can remove a user from your tenant via the standard process in the Office 36
 
 ### Why did 10,000 licenses for Microsoft PowerApps show up in my Office 365 tenant?
 
-As a qualifying organization, users in your organization are eligible to use Microsoft PowerApps, and these licenses represent the available capacity for new PowerApps users in your tenant. There is no charge for these licenses. If you’ve chosen to allow users to sign up for PowerApps themselves, they are assigned one of these available free licenses when they complete the sign-up process. You can also choose to assign these licenses to users yourself through the Office 365 admin portal.
+As a qualifying organization, users in your organization are eligible to try out Microsoft PowerApps Plan 2 for 90-days, and these trial licenses represent the available capacity for new PowerApps users in your tenant. There is no charge for these licenses. If you’ve chosen to allow users to sign up for PowerApps themselves, they are assigned one of these available free licenses when they complete the sign-up process. You can also choose to assign these licenses to users yourself through the Office 365 admin portal.
 
+Please note that these licenses are Microsoft PowerApps Plan 2 trial licenses that will expire after 90-days of being assigned to a user.
 
 ### Is this free? Will I be charged for these licenses?
 
-These licenses are for the public preview of PowerApps, which is currently free.
+These licenses are free trial licenses for your users to try-out the Microsoft PowerApps Plan 2 for 90-days.
