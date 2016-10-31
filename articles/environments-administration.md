@@ -65,7 +65,7 @@ When you land on the admin center, you arrive in the Environments tab and will s
 
 	![](./media/environment-admin/environment-list-updated.png)
 
-If you are a member of the Global Administrator role of your Azure AD or Office 365 tenant then you will see all the environments that have been created by users in your tenant.
+If you are a member of the Global Administrator role of your Azure AD or Office 365 tenant then you will see all the environments that have been created by users in your tenant (since you are automatically an Environment Admin in all of them).
 
 ## Create Common Data Service database for an environment
 If an environment does not already have a database, then an Environment Admin can create one with the following steps from the [PowerApps admin center][1].  Only users with a PowerApps Plan 2 license are allowed to create Common Data Service databases.
@@ -85,7 +85,7 @@ If an environment does not already have a database, then an Environment Admin ca
 
 Once your database has been created, you will need to decide on a security model, for more information, see [Configure database security](database-security.md).
 
-## Manage security your environments
+## Manage security for your environments
 
 ### Environment permissions
 In an environment, all the users in the Azure AD tenant are users of that environment. However, for them to play a more privileged role, they need to be added to a specific environment roles. Environments have two built-in roles that provide access to permissions within an environment:
