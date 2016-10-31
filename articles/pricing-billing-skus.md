@@ -23,17 +23,20 @@ PowerApps is licensed on a Per User basis.  Each user who is accessing the servi
 
 ## Pricing ##
 Please see [PowerApps pricing page][2] for the latest pricing information for each PowerApps license.
+Please see [Flow pricing page][1] for the latest pricing information for each Flow license.
 
-## PowerApps includes Flow ##
-PowerApps licenses always include Microsoft Flow capabilities.  In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. See [PowerApps pricing page][2] for more information on the specific Flow capabilities that are included in each PowerApps license.
+## Licenses ##
 
-## PowerApps for Office 365 and Dynamics 365 ##
+### PowerApps for Office 365 and Dynamics 365 ###
 PowerApps capabilities for Office 365 and Dynamics 365 enable users to create and run apps within the context of these services.  These apps can also be extended to leverage data in common cloud services including Box.com, Facebook, and many more. Users with access to PowerApps through Office 365 and Dynamics 365 will not able to create or run apps against Microsoft Common Data Service databases. See [PowerApps pricing page][2] for the list of Office 365 and Dynamics 365 plans that include PowerApps capabilities.
 
-## PowerApps standalone Plan 1 and Plan 2 ##
+### PowerApps standalone Plan 1 and Plan 2 ###
 Full-featured standalone PowerApps plans provide users the ability to create and run apps across data sources that extend beyond Office 365 and Dynamics 365, such as Salesforce, on-premises data sources, as well as Microsoft’s Common Data Service.  These subscriptions also include features not available in Office 365 and Dynamics 365 plans.
 * Microsoft PowerApps Plan 2 subscriptions are for users and administrators who need full create & run capabilities. These users have access to important management capabilities like  viewing usage and setting policy.  PowerApps Plan 2 users can model data in the Common Data Service.
 *	Microsoft PowerApps Plan 1 subscriptions are for users who primarily run apps.  These users can still create apps and flows, but they do not have the ability to model data in the Common Data Service or perform management tasks.
+
+## PowerApps includes Flow ##
+PowerApps licenses always include Microsoft Flow capabilities.  In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. See [PowerApps pricing page][2] for more information on the specific Flow capabilities that are included in each PowerApps license.
 
 ## Resource capacity is included with each license ##
 The per user licenses above come with included capacity for resources used when an app or flow is executed.  These resources include Data storage, File storage, Flow runs.  The capacities included in the per user licenses are pooled at the tenant level and when the tenant’s capacity is exhausted, customers may purchase additional capacity through add-on licenses. See [PowerApps pricing page][2] for the capacity quantities that are included with each PowerApps license.
