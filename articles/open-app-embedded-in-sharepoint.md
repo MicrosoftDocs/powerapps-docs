@@ -31,19 +31,19 @@ For information about what types of SharePoint data PowerApps supports, see [Kno
 
 1. Open your SharePoint Online list, and select an app from the list.
 
-	![](./media/open-app-embedded-in-sharepoint/view-list.png)
+	![](./media/open-app-embedded-in-sharepoint/view-list-updated.png)
 
 2. Click or tap **Open**.
 
-	![](./media/open-app-embedded-in-sharepoint/open-button.png)
+	![](./media/open-app-embedded-in-sharepoint/open-button-updated.png)
 
 	The app opens in a separate browser tab.
 
-	![](./media/open-app-embedded-in-sharepoint/separate-tab.png)
+	![](./media/open-app-embedded-in-sharepoint/separate-tab-updated.png)
 
 ## Manage the list using the app
 
-> [AZURE.NOTE] This topic describes how to open and run an app that is automatically generated from a SharePoint list. The more common scenario is where the generated app has been extensively customized to meet your organization's needs, and in this case, usage may be more complex than what is described here.
+> [AZURE.NOTE] This topic describes how to open and run an app that is automatically generated from a SharePoint list. The more common scenario is where the generated app has been extensively customized to meet your organization's needs. In this case, usage may be more complex than what is described here.
 
 1. Open the app as the previous procedure describes.
 

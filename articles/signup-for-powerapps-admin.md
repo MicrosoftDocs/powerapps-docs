@@ -57,7 +57,7 @@ You can purchase PowerApps subscriptions for your organization from the [Office 
 
 1. On the confirmation screen, select **Try now**.
 
-Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1 Trial** or **Microsoft PowerApps Plan 1 Trial** listed with 100 licenses available. Your free trial will cover 90 days.
+Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1 Trial** or **Microsoft PowerApps Plan 2 Trial** listed with 100 licenses available. Your free trial will cover 90 days.
 
 ### Purchase a subscription ###
 1. Browse to the [Office 365 admin center][6].
@@ -76,7 +76,7 @@ Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1 Tr
 
 1. Enter the needed information in the Checkout flow,
 
-Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1** or **Microsoft PowerApps Plan 1** listed. If you decide later that you want to add more licenses, go back to **Add subscriptions** and then select **Change license quantity**.
+Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1** or **Microsoft PowerApps Plan 2** listed. If you decide later that you want to add more licenses, go back to **Add subscriptions** and then select **Change license quantity**.
 
 ## Add-ons  ##
 These are coming soon but are not supported yet.
