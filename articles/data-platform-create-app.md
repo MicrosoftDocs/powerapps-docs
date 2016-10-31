@@ -36,8 +36,8 @@ By default, every app that Microsoft PowerApps generates has three screens:
 **Note:** When you generate an app from Common Data Service, you don't have to create a connection from PowerApps, as you do for data sources such as SharePoint, Dynamics 365, and Salesforce. You must specify only the entity that you want to show, manage, or show and manage in the app.
 
 ## Generate an app
-1. Create a Common Data Service database. For more information, see [Create a Common Data Service database](create-cdm-database.md).
-1. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge).
+1. Create a Common Data Service database. For more information, see [Create a Common Data Service database](create-database.md).
+1. In PowerApps Studio for Windows, click or tap **New** on the **File** menu (near the left edge).
 1. Under **Start with your data**, on the **Common Data Service** tile, click or tap **Phone layout**.
 1. Under **Choose an entity**, click or tap the **Contact** entity.
 1. Click or tap **Connect** to automatically generate an app.
