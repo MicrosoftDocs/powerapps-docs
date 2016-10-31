@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Global PowerApps | Microsoft PowerApps"
+	pageTitle="Global support | Microsoft PowerApps"
 	description="Build apps that are used worldwide."
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="10/25/2016"
    ms.author="gregli"/>
 
-# Global PowerApps #
+# Global support #
 
 PowerApps is a global product.  You can build and use apps in many different languages and regions.
 
@@ -28,13 +28,13 @@ The apps you create can be globally aware as well.  Use the **[Language](functio
 
 ## Language settings ##
 
-When using the native studio or a native player, the language used is provided by the host operating system.  For Windows, this can be controlled under "All Settings" and then "Time & language" settings.  The host operating system may also allow you to individually specify the characters to use for decimal and list separators.  
+When using the native studio or a native player, the language used is provided by the host operating system.  For Windows, this can be controlled under "All Settings" and then "Time & language" settings.  Windows also allow you to specify the characters to use for the decimal separator, overriding the language setting.  
 
 When using the web experiences, the language used is provided by the browser.  Most browser default to the host operating system's setting with some also providing a way to set the language manually.
 
 ## Authoring environment ##
 
-The authoring environment adapts to the language of the author.  The app itself is stored in a language agnostic manner, so that authors using different languages can edit the same app.
+The authoring environment adapts to the language setting of the author.  The app itself is stored in a language agnostic manner, so that authors using different languages can edit the same app.
 
 ### Names in formulas ###
 
@@ -115,7 +115,7 @@ For more information, see the documentation for the **[Language](function/functi
 
 Numbers, dates, and times are written in different formats in different parts of the world.  The meaning of commas, decimals, and the order of month, date, and year vary from location to location.   
 
-The **[Text](function/function-text.md)** function formats numbers and dates in the language of the user.
+The **[Text](function/function-text.md)** function formats numbers and dates using the language setting of the user.
 
 **Text** requires a format string to know how you want to format the number or date.  This format string can take one of two forms:
 
@@ -124,13 +124,13 @@ The **[Text](function/function-text.md)** function formats numbers and dates in 
  
 The "[$-en-US]" on the front of the custom format string tells **Text** in which language to interpret the custom format string.  This is inserted for you and defaults to your authoring language.  Normally you will not need to change this.  It is useful when authors from different languages are editing the same app.
 
-The third argument to **Text** specifies which language to use for the result of the function.  The default is the language of the current user.
+The third argument to **Text** specifies which language to use for the result of the function.  The default is the language setting of the current user.
 
 For more information, see the documentation for the **[Text](function/function-text.md)** function.      
 
 ### Reading numbers, dates, and times ###
 
-There are three functions for reading numbers, dates, and times provided by the user:
+There are four functions for reading numbers, dates, and times provided by the user:
 
 - **[Value](function/function-value.md)**: Converts a number in a text string to a number value.
 - **[DateValue](function/function-datevalue-timevalue.md)**: Converts a date value in a text string to a date/time value.  Any time specified in the text string is ignored.
@@ -142,7 +142,7 @@ If you have used Excel, all of these functions are combined in the single **Valu
 All of these functions have the same arguments:
 
 - *String, required*: A string from the user. For example a string types into a **Text input** control and read from the control with the **Text** property.
-- *Language, optional*: The language in which to interpret the *String*.  By default, the language of the user.
+- *Language, optional*: The language in which to interpret the *String*.  By default, the language setting of the user.
 
 For example:
  
