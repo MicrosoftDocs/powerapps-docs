@@ -55,7 +55,7 @@ Gateways are only supported in the default and {tenant name} (from preview)  env
 
 3. Change the environment to the destination environment.
 
-	For PowerApps Studio for web, you will need to return to http://web.powerapps.com to switch your environment and then re-open PowerApps Studio for web in the browser:
+	For PowerApps Studio for web, return to http://web.powerapps.com to switch your environment and then re-open PowerApps Studio for web in the browser:
 
 	![](./media/environment-and-tenant-migration/select-new-env.png)
 
