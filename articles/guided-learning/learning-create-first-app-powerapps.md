@@ -41,7 +41,7 @@ After you click **Connect**, PowerApps starts to generate the app. PowerApps mak
 
 ## Explore the generated app
 Success! Your new three screen app opens in PowerApps Studio. All apps generated from data have the same set of screens:
-- The **browse** screen: where you browse, sort, filter, and refresh the data pulled in from the list, as well as add items by clicking the ![Add item](./media/learning-create-first-app-powerapps/add-item-plus-sm.png) icon.
+- The **browse** screen: where you browse, sort, filter, and refresh the data pulled in from the list, as well as add items by clicking the (+) icon.
 - The **details** screen: where you view more detail about an item, and can choose to delete or edit the item.
 - The **edit/create** screen: where you edit an existing item or create a new one.
 Click or tap on each screen in the left navigation bar.

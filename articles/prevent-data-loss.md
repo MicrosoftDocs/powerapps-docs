@@ -34,7 +34,7 @@ You would create DLP policy to clearly define which consumer services business d
 ## Managing DLP policies
 **Prerequisites**  
 In order to create, edit, or delete DLP policies, the following items are required:
-- Either environment admin or tenant admin permissions. You can learn more about permissions in the [environments topic](environments-overview-admin.md)
+- Either environment admin or tenant admin permissions. You can learn more about permissions in the [environments topic](environments-administration.md)
 
 ##	Create a DLP policy
 **Prerequisites**  
@@ -70,7 +70,7 @@ Admins can use the search feature from the Admin center to find specific DLP pol
 **NOTE** Admins should publish all DLP policies so that users in the organization are aware of the policies prior to creating PowerApps.
 
 ### Makers
-If you don't have admin permissions and you wish to learn more about the DLP policies in your organization, contact your administrator. You can also learn more from the [maker environments topic](environments-overview-maker.md)  
+If you don't have admin permissions and you wish to learn more about the DLP policies in your organization, contact your administrator. You can also learn more from the [maker environments topic](environments-overview.md)  
 
 **NOTE** Only admins can edit or delete DLP policies.  
 
@@ -99,9 +99,9 @@ Your policy has now been updated. You can confirm that the changes have been mad
 Your policy has now been deleted. You can confirm that the policy is no longer listed in the data loss prevention policies list by selecting the **Data Policies** link on the left and reviewing the list of policies.   
 
 ## DLP policy permissions
-Only tenant and environment admins can create and modify DLP policies. Learn more about permissions in the [environments](environments-overview-admin.md) topic.  
+Only tenant and environment admins can create and modify DLP policies. Learn more about permissions in the [environments](environments-administration.md) topic.  
 
 ## Next steps
-- [Learn more about environments](environments-overview-admin.md)  
+- [Learn more about environments](environments-administration.md)  
 - [Learn more about Microsoft PowerApps](getting-started.md)  
 - [Learn more about the admin center](introduction-to-the-admin-center.md)  
