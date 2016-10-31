@@ -30,7 +30,7 @@ For an overview, see [Understand data cards](working-with-cards.md).
 
 	1. [Create an app from SharePoint](app-from-sharepoint.md).
 	1. [Customize the layout](customize-layout-sharepoint.md).
-	1. [Customize the form](customize-form-sharepoint.md).
+	1. [Customize the form](customize-forms-sharepoint.md).
 
 ## Customize a locked card ##
 1. In **EditScreen1**, click or tap the **Paid** card to select it.
