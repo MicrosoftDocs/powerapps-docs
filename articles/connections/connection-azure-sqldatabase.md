@@ -37,6 +37,8 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 	If you don't have this information, ask the administrator of the database that you want to use.
 - For an on-premises database, identify a [data gateway](gateway-management.md) that was shared with you (or create one).
 
+	**Note**: Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
+
 ## Generate an app automatically ##
 1. In PowerApps Studio, click or tap **New** on the **File** menu (along the left edge).
 

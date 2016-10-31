@@ -59,6 +59,8 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 	![Choose SharePoint on-premises](./media/connect-to-sharepoint/choose-onprem.png)
 
+	**Note**: Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
+
 1. Specify your user name and your password.
 
 	If your credentials include a domain name, specify it as *Domain\Alias*.
