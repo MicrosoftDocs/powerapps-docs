@@ -71,6 +71,7 @@ Gateways are only supported in the default, and {tenant name} (from preview)  en
 	![](./media/environment-and-tenant-migration/save-new-app-updated.png)
 
 6. You may need to address any compilation issues in the app, in accessing resources that may have different names, such as data connections and sources. An easy way to resolve compilation issues with the app is to remove and re-add the data sources for the app in the destination environment, see [Understand data sources](working-with-data-sources.md).
+
 7. Test the app to verify all compilation issues have been resolved.
 
 ## Common Data Service entity schema changes, new entities, new permission sets, new roles
