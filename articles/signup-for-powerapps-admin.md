@@ -25,8 +25,7 @@ This article shows you how to purchase PowerApps for your organization as an adm
 
 ## Choosing the right plan ##
 
-
-For details about what licenses you can choose for your organization, see [billing and pricing plans](billing-pricing-skus.md).
+For details about what licenses you can choose for your organization, see [PowerApps licensing overview](billing-pricing-skus.md).
 
 ## Purchase PowerApps directly ##
 
@@ -38,15 +37,7 @@ You can purchase PowerApps subscriptions for your organization from [powerapps.m
 
 	![](./media/signup-for-powerapps-admin/buy-now.png)
 
-3. If you are already the administrator of an Office 365 tenant, select **Yes**. Otherwise, select **No**.
-
-	![](./media/signup-for-powerapps-admin/admin-question.png)
-
-4. If you want to create a tenant, select **Team or organization**.
-
-	![](./media/signup-for-powerapps-admin/question-teamororg.png)
-
-5. Provide information to make the purchase, and then navigate to the [Office 365 admin center][6] to assign PowerApps licenses to your users.
+3. Provide information to make the purchase, and then navigate to the [Office 365 admin center][6] to assign PowerApps licenses to your users.
 
 ## Get PowerApps through Office 365 ##
 
