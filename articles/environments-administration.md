@@ -46,23 +46,23 @@ You will also need either PowerApps Plan 2 or Flow Plan 2 to access the admin ce
 **Important**: Any changes that you make in PowerApps admin center will affect the [Flow admin center][4] and vice versa.
 
 ## Create an environment
-1. Click **+ New environment** to open a dialog box and create an environment.
+First, click **+ New environment** to open a dialog box and create an environment.
 
-	![](./media/environment-admin/new-environment-button.png)
+![](./media/environment-admin/new-environment-button.png)
 
-1. Enter the following info:
+Then enter the following info:
 
-	| Property | Description |
+| Property | Description |
 |-----|-----------|
 | Environment name | Enter the name of your environment. |
 | Region | Choose the location to host your environment. We recommend using a location closest to your users. For example, if your app users are in London, choose a Europe location. If your app users are in New York, choose the U.S. See [Supported regions](regions-overview.md) for a list of supported environment regions. |
 | Create a database for this environment | Select this check box to create a Common Data Service database for this environment. A database can be configured to either be open to all users in the environment or restricted to database roles. For more information, see [Configure database security](database-security.md). |
 
-	![](./media/environment-admin/new-environment-updated.png)
+![](./media/environment-admin/new-environment-updated.png)
 
-1. Select **Create an environment**.
+Finally, select **Create an environment**.
 
-	The new environment appears in the environments table.
+The new environment appears in the environments table.
 
 > [AZURE.NOTE] When you create an environment, you are automatically added to the Environment Admin role for that environment.
 
