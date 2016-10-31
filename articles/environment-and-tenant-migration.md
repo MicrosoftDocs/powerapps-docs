@@ -33,7 +33,7 @@ There are different procedures for migrating each kind of resource.
 1.	Connections, custom APIs, and flows: you can't be migrate these resources; you must recreate them in the destination environment.
 2.  Gateways: gateways are only supported in the default (and {tenant name} (from preview) ) environments, so migration is not supported.
 3.  PowerApps: you save the app locally in the origin environment by using PowerApps Studio for Windows or PowerApps Studio for web, and then you open the app and recreate it in the destination environment.
-4.  Common Data Service entity schema changes, new entities, new permission sets, new roles: export a package from the origin environment from the admin center, and import the package in the destination environment.
+4.  Common Data Service entity schema changes, new entities, new permission sets, new roles: this is not supported for GA but is coming very soon.
 
 ##  Connections, custom APIs, and flows
 
