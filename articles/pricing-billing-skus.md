@@ -56,8 +56,9 @@ Based on how quickly and easily the order-tracking app was launched, ABC’s Hum
 For this app, IT selects the Common Data Service as the system in which to store time and absence data. The Common Data Service provides the security and data-policy capabilities that IT requires for information related to employees. They assign two IT employees to the project to create the database and model the time and absence app data in the Common Data Service. These employees are also responsible for tracking app usage and establishing the policy applied to this data.
 
 **Licenses required**:
-* PowerApps Plan 2 – 10 licenses:  The 10 IT administrators who will set up the environments for the company to test and deploy their application, model data in the Common Data Service, and establish data-security policies will each require PowerApps Plan 2 to perform these functions.
-* PowerApps Plan 1 – 990 licenses:  The 700 Office 365 users will need to be licensed with PowerApps Plan 1 because this app relies on data stored outside Office 365 (that is, in the Common Data Service). The other 290 users who don’t have Office 365 or the PowerApps Plan 2 license will need this license to have rights to run the app.
+
+- PowerApps Plan 2 – 10 licenses:  The 10 IT administrators who will set up the environments for the company to test and deploy their application, model data in the Common Data Service, and establish data-security policies will each require PowerApps Plan 2 to perform these functions.
+- PowerApps Plan 1 – 990 licenses:  The 700 Office 365 users will need to be licensed with PowerApps Plan 1 because this app relies on data stored outside Office 365 (that is, in the Common Data Service). The other 290 users who don’t have Office 365 or the PowerApps Plan 2 license will need this license to have rights to run the app.
 
 <!--Reference links in article-->
 [1]: https://flow.microsoft.com/pricing/
