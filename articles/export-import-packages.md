@@ -3,7 +3,7 @@
 	description="Resources within environments"
 	services="powerapps"
 	documentationCenter="na"
-	authors="nimakms"
+	authors="aftowen"
 	manager="robinr"
 	editor=""
 	tags=""/>
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/19/2016"
-   ms.author="robinr"/>
+   ms.author="anneta"/>
 
 # Resources within environments #
 Every app that you create in PowerApps is located in an [environment](environments-overview.md), which contains resources that you create or modify during the development process. Typically, development is done in the same environment that is used by the organization's end users. This environment is known as the default environment. It's relatively easy to manage resource changes in the same environment. You validate the changes to make sure that all critical business processes and applications are functional, and then you release the app.
