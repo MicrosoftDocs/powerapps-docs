@@ -45,7 +45,7 @@ Follow these steps to create a DLP policy that prevents data that is stored in y
 ![Sign in](./media/prevent-data-loss/create-policy-1.png)    
 2. Enter the name of the DLP policy as *Secure Data Access for Contoso* in the **Data Policy Name** label at the top of the page that opens:   
 ![Sign in](./media/prevent-data-loss/create-policy-2.png)  
-3. Select the [environment](./environments-overview-admin.md) on the **Applies to** tab.  
+3. Select the [environment](environments-administration.md) on the **Applies to** tab.  
 ![Sign in](./media/prevent-data-loss/create-policy-3.png)  
 4. Select the **Data groups** tab:  
 ![Sign in](./media/prevent-data-loss/create-policy-4.png)  
