@@ -21,7 +21,7 @@
    ms.author="mblythe"/>
 
 # A quick look at creating apps in PowerApps
-Now that you know the basics of PowerApps, let's jump into **a quick tour of how to get started with apps**. We'll quickly look at sample apps, creating apps from a template, using shared apps, and creating apps from a data source. In the next topic, we will get more hands-on with app creation.
+Now that you know the basics of PowerApps, let's jump into **a quick tour of how to get started with apps**. We'll look at sample apps, creating apps from a template, using shared apps, and creating apps from a data source. In the next topic, we will get more hands-on with app creation.
 
 
 ## Check out some sample apps
