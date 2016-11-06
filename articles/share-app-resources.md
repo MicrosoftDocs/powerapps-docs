@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="archnair"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 <tags
