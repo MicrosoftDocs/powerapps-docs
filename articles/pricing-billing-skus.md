@@ -31,6 +31,7 @@ Please see [Microsoft Flow pricing page][1] for the latest pricing information f
 PowerApps capabilities for Office 365 and Dynamics 365 enable users to create and run apps within the context of these services. These apps can also be extended to leverage data in common cloud services including Box.com, Facebook, and many more. Users with access to PowerApps through Office 365 and Dynamics 365 can't create or run apps against Microsoft Common Data Service databases. See the [PowerApps pricing page][2] for the list of Office 365 and Dynamics 365 plans that include PowerApps capabilities.
 
 > **NOTE** PowerApps will be added to existing and new Office 365 subscriptions starting later in November 2016.
+>
 > - If you sign in to PowerApps with an Office 365 subscription prior to this change going out, you will be prompted to sign up for a free PowerApps Plan 2 trial.
 > - Feel free to sign up for the trial if you want to try out PowerApps until the update is made to your Office 365 subscription.  
 > - However, please be aware that the trial license may include features of PowerApps that are not available to you through your Office 365 subscription when the trial expires after 90 days.  See [PowerApps pricing][2] to see what capabilities are included in your Office 365 subscription.
