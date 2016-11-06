@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="aftowen"
-    manager="erikre"
+    authors="fikaradz"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/25/2016"
-   ms.author="anneta"/>
+   ms.author="fikaradz"/>
 
 # Timer control in PowerApps #
 A control that can determine how your app responds after a certain amount of time passes.

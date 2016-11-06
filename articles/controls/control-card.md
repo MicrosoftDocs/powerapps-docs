@@ -6,7 +6,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="gregli-msft"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 

@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="lonu"
-    manager="erikre"
+    authors="fikaradz"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/25/2016"
-   ms.author="lonu"/>
+   ms.author="fikaradz"/>
 
 # Barcode scanner control in PowerApps #
 A control with which the user can take photos by using the barcode scanner on the device.

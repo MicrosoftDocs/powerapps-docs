@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="aftowen"
-    manager="erikre"
+    authors="fikaradz"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
     ms.date="10/25/2016"
-   ms.author="anneta"/>
+   ms.author="fikaradz"/>
 
 # Column chart and Line chart controls in PowerApps #
 Controls that show data as graphs with x- and y-axes.
