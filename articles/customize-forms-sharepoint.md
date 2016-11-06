@@ -5,7 +5,7 @@
    suite="powerapps"
    documentationCenter="na"
    authors="aftowen"
-   manager="erikre"
+   manager="anneta"
    editor=""
    tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="09/03/2016"
+   ms.date="10/16/2016"
    ms.author="anneta"/>
 
 # Customize forms in PowerApps #
