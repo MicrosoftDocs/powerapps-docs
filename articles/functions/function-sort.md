@@ -56,7 +56,7 @@ In addition to sorting ascending or descending, **SortByColumns** can sort based
 
 - *Table* - Required. Table to sort.
 - *ColumnName(s)* - Required. The column names to sort on, as strings.
-- *SortOrder(s)* - Optional.  **SortOrder!Ascending** or **SortOrder!Descending**.  **SortOrder!Ascending** is the default.  If multiple *ColumnNames* are supplied, all but the last column must include a *SortOrder*.
+- *SortOrder(s)* - Optional.  **SortOrder.Ascending** or **SortOrder.Descending**.  **SortOrder.Ascending** is the default.  If multiple *ColumnNames* are supplied, all but the last column must include a *SortOrder*.
 
 **SortByColumns**( *Table*, *ColumnName*, *SortOrderTable* )
 
