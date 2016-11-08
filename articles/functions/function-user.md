@@ -41,6 +41,7 @@ The **User** function returns a [record](../working-with-tables.md#records) of i
 ## Examples ##
 
 The current PowerApps user has the following information:
+
 - Full Name: **"John Doe"**
 - Email address: **"john.doe@contoso.com"**
 - Image: ![](media/function-user/john-doe-picture.png) 
