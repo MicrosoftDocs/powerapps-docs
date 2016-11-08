@@ -113,7 +113,7 @@ The **Text** function is globally aware.  For a wide array of languages, it know
 
 * **The language of the result:** For users, what language should be used in the result of the function?  Names for months and weekdays need to be in the appropriate language for the user of the app.  This is handled with a third optional argument to the **Text** function. 
 
-For both, the language is provided with a [language tag](function-language.md#language-tags).  To see the list of supported languages type **Text( 1234, "", ** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.
+For both, the language is provided with a [language tag](function-language.md#language-tags).  To see the list of supported languages type **Text( 1234, "", )** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.
 
 #### Custom format language placeholder ####
 
@@ -129,7 +129,7 @@ While writing a formula, if you do not provide a language placeholder and the fo
 
 **[$-en-US]** is assumed if this placeholder is not present when your app is run. 
 
-[AZURE.NOTE] In a future version, the syntax of this placeholder may change to avoid confusion with a similar, but different, placeholder supported by Excel.
+**NOTE:** In a future version, the syntax of this placeholder may change to avoid confusion with a similar, but different, placeholder supported by Excel.
 
 #### Result language tag ####
 
