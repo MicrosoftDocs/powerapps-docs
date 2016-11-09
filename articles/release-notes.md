@@ -14,12 +14,19 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/22/2016"
+    ms.date="11/09/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.540 #
+# What's new in PowerApps release 2.0.542-2.0.543 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+1. **PowerApps Mobile available on Windows Phone 10**.
+
+	For more information, see [Use PowerApps on a phone or a tablet](https://powerapps.microsoft.com/en-us/tutorials/run-app-client/).
+
+1. **Bug fixes**.
+
+## Release 2.0.540 ##
 1. **Run apps in any of several languages**.
 
 1. **Manage apps and data in specific environments**.
