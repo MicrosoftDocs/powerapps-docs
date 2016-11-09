@@ -17,12 +17,12 @@
     ms.date="11/09/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.542-2.0.543 #
+# What's new in PowerApps release 2.0.542-2.0.545 #
 For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
-1. **PowerApps Mobile available on Windows Phone 10**.
+1. **Windows Phone 10**.
 
-	For more information, see [Use PowerApps on a phone or a tablet](https://powerapps.microsoft.com/en-us/tutorials/run-app-client/).
+	A preview release of PowerApps Mobile is available for Windows Phone 10. For more information, see [Use PowerApps on a phone or a tablet](https://powerapps.microsoft.com/en-us/tutorials/run-app-client/).
 
 1. **Bug fixes**.
 

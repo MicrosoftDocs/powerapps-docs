@@ -15,10 +15,12 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/22/2016"
+   ms.date="11/09/2016"
    ms.author="anneta"/>
 
-# Common issues and resolutions #
+# Common issues and resolutions for PowerApps #
+
+**Note**: For more information about the Common Data Service, download its [list of known issues](http://download.microsoft.com/download/B/4/5/B457793D-5219-4EBD-AED3-A9A788B7DCB8/CDMKnownIssues.docx).
 
 ## Recently added/changed ##
 1.	**Custom APIs and the Common Data Service**
