@@ -20,7 +20,7 @@
 
 # Common issues and resolutions for PowerApps #
 
-**Note**: For more information about the Common Data Service, download its [list of known issues](http://download.microsoft.com/download/B/4/5/B457793D-5219-4EBD-AED3-A9A788B7DCB8/CDMKnownIssues.docx).
+**Note**: For more information, see the [list of known issues](https://docs.microsoft.com/en-us/common-data-service/entity-reference/known-issues) for the Microsoft Common Data Service.
 
 ## Recently added/changed ##
 1.	**Custom APIs and the Common Data Service**
