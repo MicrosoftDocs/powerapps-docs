@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,10 +15,12 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/22/2016"
+   ms.date="11/09/2016"
    ms.author="anneta"/>
 
-# Common issues and resolutions #
+# Common issues and resolutions for PowerApps #
+
+**Note**: For more information, see the [list of known issues](https://docs.microsoft.com/en-us/common-data-service/entity-reference/known-issues) for the Microsoft Common Data Service.
 
 ## Recently added/changed ##
 1.	**Custom APIs and the Common Data Service**
@@ -36,6 +38,10 @@
 1. **Using a localized version**.
 
 	If you're running release 2.0.531 on Windows 8.1, you can't type in a **Text input** control if the device is set to a language that requires an IME window.
+
+1. **Camera control on a Windows Phone**
+
+	An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4)).
 
 ## Older ##
 1. **Opening an app from a template**.

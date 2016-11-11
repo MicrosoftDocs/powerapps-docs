@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/30/2016"
+   ms.date="11/01/2016"
    ms.author="ricksal;jamesol"/>
 
 
@@ -65,14 +65,14 @@ Users or security groups can be assigned to either of these two roles by an Envi
 ## The default environment
 A single default environment is automatically created by PowerApps for each tenant and shared by all users in that tenant. Whenever a new user signs up for PowerApps, they are automatically added to the Maker role of the default environment. The default environment is created in the closest region to the default region of the AAD tenant.
 
-> [AZURE-NOTE] No users will be added to the Environment Admin role of the default environment automatically. For more informaton, see [Environment Administration](environments-administration.md).
+> [AZURE.NOTE] No users will be added to the Environment Admin role of the default environment automatically. For more informaton, see [Environment Administration](environments-administration.md).
 
 The default environment is named as follows: “{Azure AD tenant name} (default)”
 
 ![](./media/environments-overview/DefaultEnvironment.png)
 
 ## Choosing an environment
-With the introduction of environments, you will now see a new experience when you come to https://web.powerapps.com.  The apps, connections, and other items that are visible in the site will now be filtered based on the current environment that is selected.  Your current environment is specified in the environment picker near the right edge of the header. To choose a different environment, click or tap the picker, and a list of available environments appears. Click or tap the one you wish to enter.
+With the introduction of environments, you will now see a new experience when you come to [https://web.powerapps.com](https://web.powerapps.com).  The apps, connections, and other items that are visible in the site will now be filtered based on the current environment that is selected.  Your current environment is specified in the environment picker near the right edge of the header. To choose a different environment, click or tap the picker, and a list of available environments appears. Click or tap the one you wish to enter.
 
 An environment will show up in your picker if you meet one of the following conditions:
 

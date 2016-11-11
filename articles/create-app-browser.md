@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="sarafankit"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/28/2016"
+   ms.date="10/17/2016"
    ms.author="ankitsar"/>
 
 # Create or edit apps in a browser #

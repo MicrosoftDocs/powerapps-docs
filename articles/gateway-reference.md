@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/01/2016"
+   ms.date="11/01/2016"
    ms.author="anneta"/>
 
 # Understand on-premises data gateways for Microsoft PowerApps ##

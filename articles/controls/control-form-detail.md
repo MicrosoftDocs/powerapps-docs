@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="gregli-msft"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -99,7 +99,7 @@ Some data sources can detect when two people try to update the same record at th
 | **FormMode.Edit** | The user can edit a record by using the form. The values in the form's cards are pre-populated with the existing record, for the user to change. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an existing record is modified. |
 | **FormMode.New** | The user can create a record by using the form. The values in the form's controls are pre-popoulated with the defaults for a record of the data source. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an record is created. |
 
-- By default, the form control is in **Edit** mode but switches to **New** mode when the **[NewForm](../functions/function-form.md)** function runs. 
+- By default, the form control is in **Edit** mode but switches to **New** mode when the **[NewForm](../functions/function-form.md)** function runs.
 
 The form switches from **New** mode to **Edit** mode when any of these changes occurs:
 - The form is successfully submitted, and a record is created. If the gallery is set to automatically move selection to this new record, the form will be in **Edit** mode for the created record so that the user can make additional changes.
@@ -126,7 +126,7 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 **Updates** – The values to write back to the data source for a record loaded in a form control.  
 
 - This property applies only to the **Edit form** control.
-- Use this property to extract the field values from the cards within the control.  You can then use these values to manually update the data source with a **[Patch](../functions/function-patch.md)** function call or another method exposed by a connection.  You do not need to use this property if you are using the **[SubmitForm](../functions/function-form.md)** function. 
+- Use this property to extract the field values from the cards within the control.  You can then use these values to manually update the data source with a **[Patch](../functions/function-patch.md)** function call or another method exposed by a connection.  You do not need to use this property if you are using the **[SubmitForm](../functions/function-form.md)** function.
 - This property returns a record of values.  For example, if the form control contains card controls for **Name** and **Quantity** fields, and the values of the **[Update](control-card.md)** properties for those cards return "Widget" and 10 respectively, then the **Updates** property for the form control would return **{ Name: "Widget", Quantity: 10 }**.
 
 **Valid** – Whether a **[Card](control-card.md)** or **Edit form** control contains valid entries, ready to be submitted to the data source.

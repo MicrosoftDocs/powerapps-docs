@@ -15,7 +15,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="10/28/2016"
-    ms.author="litran;ricksal;anneta"/>
+    ms.author="litran"/>
 
 # Share an app #
 
@@ -95,6 +95,7 @@ Users can also discover the app in   [powerapps.com](http://web.powerapps.com) (
 
 ### App sharing and the resources the app uses ###
 Most apps rely on at least one of these types of resources:
+
 - a connection to a data source
 - an on-premises data gateway
 - a custom API

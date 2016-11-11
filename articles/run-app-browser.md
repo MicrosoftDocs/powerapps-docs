@@ -79,5 +79,6 @@ Typically, you are prompted only the first time.
 
 ## Exit PowerApps ##
 Exit or close the app using either of these ways:
+
 - Click or tap **Sign out** in the Dynamics 365 portal.
 - Navigate to the Dynamics 365 home page or launch another app from the task pane.

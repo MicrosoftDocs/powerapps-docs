@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="aftowen"
-    manager="erikre"
+    authors="fikaradz"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/25/2016"
-   ms.author="anneta"/>
+   ms.author="fikaradz"/>
 
 # Add picture control in PowerApps #
 Load images from the local device, for upload to a data source.
@@ -28,7 +28,7 @@ This control is a composite control, made up of two controls.  Press or tap once
 
 ## Outer control properties ##
 
-These properties apply to the outer control. 
+These properties apply to the outer control.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 

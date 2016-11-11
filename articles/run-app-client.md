@@ -1,4 +1,4 @@
-<properties
+﻿<properties
     pageTitle="Use PowerApps on a phone or a tablet | Microsoft PowerApps"
     description="Walkthrough of using PowerApps on a phone or a tablet"
     services=""
@@ -19,15 +19,16 @@
     ms.author="karthikb"/>
 
 # Use PowerApps on a phone or a tablet #
-Apps built using PowerApps can run on Windows, iOS, Android, or in a web browser. Apps running on a mobile device can take advantage of the device's capabilities, such as location and camera. You can download PowerApps Mobile from the App Store, or Google Play.
+Apps built using PowerApps can run on Windows, iOS, Android, Windows Phone, or in a web browser. Apps running on a mobile device can take advantage of the device's capabilities, such as location and camera. You can download PowerApps Mobile from the Windows Store, the App Store, or Google Play.
 
 ## What you need to get started ##
 - One of the following:
 	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from a [blank canvas](get-started-create-from-blank.md).
 	- An app that someone else built and shared with you, granting user permissions.
-- PowerApps installed on an iPhone, iPad, or Android device. Here are the specific versions supported:  
+- PowerApps installed on an iPhone, iPad, Windows Phone, or Android device. Here are the specific versions supported:  
 	- iOS versions 9.3 and above
 	- Android versions 5 and above
+	- Windows 10 Mobile (Preview)
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
@@ -35,6 +36,13 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 The first time you open PowerApps, you are prompted to sign in using your Azure Active Directory credentials:  
 
 ![Login user](./media/run-app-client/run-client-login.png)
+
+## Windows 10 Mobile Preview ##
+PowerApps for Windows 10 Mobile is available in the Store as a preview. You can also go to [powerapps.com](https://powerapps.microsoft.com/), and there is a link to Windows Store in the bottom of the page.
+
+Here are system requirements:
+- **OS**: Anniversary update Redstone 1 (10.0.14267.1002) or higher required
+- **Memory**: At least 2GB of RAM
 
 ## App filters and sorting options ##
 Apps have been categorized into four lists to help you quickly find a specific app.
@@ -65,6 +73,7 @@ Typically, you are prompted only the first time.
 ## Exit the app ##
 - On an Android phone, slide to the right (or press the back button and then confirm that you intended to exit the app).
 - On an iPhone, slide to the right.
+- On Windows 10 Mobile, press the back button.
 
 ![Exit app](./media/run-app-client/run-client-exit.png)
 

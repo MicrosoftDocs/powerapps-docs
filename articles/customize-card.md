@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter=""
 	authors="AFTOwen"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags="" />
 
@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="06/25/2016"
+ms.date="10/30/2016"
 ms.author="anneta"/>
 
 # Customize a card in Microsoft PowerApps #

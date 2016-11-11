@@ -51,12 +51,12 @@ In addition to creating and managing connections in [powerapps.com](https://web.
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
 
 ## Authorize or delete a connection ##
-- In the list of connections, click or tap the connection that you want to authorize or delete, and then perform either of these steps:
+In the list of connections, click or tap the connection that you want to authorize or delete, and then perform either of these steps:
 
-	- To authorize the connection, click or tap the key icon, and then provide credentials for that connection.
+- To authorize the connection, click or tap the key icon, and then provide credentials for that connection.
 
 	![Authorize connection](./media/add-manage-connections/edit-icon.png)
 
-	- To delete the connection, click or tap the trash-can icon.
+- To delete the connection, click or tap the trash-can icon.
 
 	![Delete icon](./media/add-manage-connections/delete-icon.png)
