@@ -46,7 +46,7 @@ The gallery will update with the list of alerts. For each alert, you will receiv
 ### View the status of an alert
 To view the status of the alert, call the CheckAlertStatus function with the alert ID obtained from the step above.
 
-The alert ID can be passed in either as a literal string (e.g. "1234_") or as a reference to a gallery section populated using the GetAlerts() call (e.g. Gallery1.Selected.alertId)
+The alert ID can be passed in either as a literal string (e.g. "1234") or as a reference to a gallery section populated using the GetAlerts() call (e.g. Gallery1.Selected.alertId)
 
 To proceed, add a text box, and then set its [Text](../controls/properties-core.md) property to one of these formulas:
 
