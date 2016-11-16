@@ -28,7 +28,7 @@ Before you [share an app](./share-app.md), consider the types of resources on wh
 
 Some of these resources are shared automatically when you share the app. Other resources require you or the people with whom you share the app to take extra steps so that the app works as you expect.
 
-You can also share your Connections, Custom APIs and On-premises data gateway with your entire organization.
+You can also share your connections, custom APIs and on-premises data gateway with your entire organization.
 
 ## Connections ##
 Some types of connections, such as SQL Server, are shared automatically, but others require users to create their own connections to the data source or sources in the app.
