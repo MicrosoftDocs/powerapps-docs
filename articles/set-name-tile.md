@@ -44,6 +44,8 @@ Follow one or more of these steps:
 
 - Click or tap **Browse file**, click or tap the image that you want to use, and then click or tap **Open**.
 
+	**Note**: For best results, use a square-shaped icon.
+
 ## Next step ##
 
 On the **File** menu, click or tap **Save** to republish your app with the new settings.
