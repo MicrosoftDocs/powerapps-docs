@@ -14,11 +14,32 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="11/09/2016"
+    ms.date="11/18/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.542-2.0.545 #
-For information about known limitations in this release, see [Common issues and resolutions](common-issues-and-resolutions.md).
+# What's new in PowerApps release 2.0.560-2.0.561 #
+For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+1. **Support for universal links on iOS and Android devices**.
+
+1. **Back button support on Windows Phone devices**.
+
+	When you press the Back button, the app closes.
+
+1. **Better experience when you delete an app**.
+
+	When you delete an app from https://web.powerapps.com, the app is deleted when you reopen PowerApps Mobile or Dynamics 365.
+
+1. **Support for context variables in delegable expressions**.
+
+1. **Improved memory usage when you run an app**.
+
+1. **Added AutoHeight property to the HTML text control**.
+
+1. **Fixed a variety of bugs**, including in the Microphone, Ratings, Dropdown, and Camera controls.
+
+## Release 2.0.542-2.0.545 ##
+For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 1. **Windows Phone 10**.
 
