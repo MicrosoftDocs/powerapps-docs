@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Overview of the Office 365 Users connection | Microsoft PowerApps"
-	description="See how to connect to Office 365 Uers, step through some examples, and see all the functions"
+	description="See how to connect to Office 365 Users, step through some examples, and see all the functions"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
