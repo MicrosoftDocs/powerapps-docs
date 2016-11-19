@@ -18,7 +18,7 @@
    ms.date="06/07/2016"
    ms.author="anneta"/>
 
-# Office 365 Users connection in PowerApps
+# Office 365 Users connection in PowerApps #
 
 ![Office 365 Users](./media/connection-office365-users/office365icon.png)
 
