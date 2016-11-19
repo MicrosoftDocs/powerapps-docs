@@ -39,7 +39,6 @@ For information about known limitations, see [Common issues and resolutions](com
 1. **Fixed a variety of bugs**, including in the Microphone, Ratings, Dropdown, and Camera controls.
 
 ## Release 2.0.542-2.0.545 ##
-For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 1. **Windows Phone 10**.
 
