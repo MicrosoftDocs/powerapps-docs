@@ -36,7 +36,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 1. **Added AutoHeight property to the HTML text control**.
 
-1. **Fixed a variety of bugs**, including in the Microphone, Ratings, Dropdown, and Camera controls.
+1. **Improved performance and fixed a variety of bugs**, including in the Microphone, Ratings, Dropdown, and Camera controls.
 
 ## Release 2.0.542-2.0.545 ##
 
