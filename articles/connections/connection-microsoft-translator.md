@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -25,6 +25,8 @@
 Add the Microsoft Translator connector to display translated text in a **Text box** control in your app. For example, you can create an input text box that asks the user to enter some text to translate. In another text box, you can display the translated text.
 
 This topic shows you how to create the Microsoft Translator connection, use the Microsoft Translator connection in an app, and lists the available functions.
+
+**Note**: This connector is limited to 150 calls per user per day.
 
 &nbsp;
 

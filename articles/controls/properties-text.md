@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="gregli-msft"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -62,4 +62,3 @@ Configure the text that appears on a control, in a tooltip, as a hint when the u
 **VerticalAlign** – The location of text on a control in relation to the vertical center of that control.
 
 - Applies to **[Add picture](control-add-picture.md)**, **[Button](control-button.md)**, **[Check box](control-check-box.md)**, **[Export](control-export-import.md)**, **[Import](control-export-import.md)**, and **[Text box](control-text-box.md)** controls.
-
