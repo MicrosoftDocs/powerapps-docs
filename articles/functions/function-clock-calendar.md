@@ -1,11 +1,11 @@
 <properties
-	pageTitle="PowerApps: Calendar and Clock functions"
+	pageTitle="Calendar and Clock functions | Microsoft PowerApps"
 	description="Reference information for the Calendar and Clock functions in PowerApps, including syntax and examples"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -77,9 +77,3 @@ In the United States, with **[Language](function-language.md)** returning "en-US
 | **Clock.AmPm()** | This language uses a 12-hour clock.  The return value contains the uppercase versions of the full AM and PM designations.  | [ "AM", "PM" ] |
 | **Clock.AmPmShort()** | This language uses a 12-hour clock.  The return value contains the uppercase versions of the short AM and PM designations. | [ "am", "pm" ] |
 | **Clock.IsClock24()** | This language uses a 12-hour clock.  | **false** |
-
-
-
-
-
-

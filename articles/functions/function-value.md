@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -30,7 +30,7 @@ Different languages interpret **,** and **.** differently.  By default, the text
 
 Notes on the format of the string:
 
-* The string may be prefixed with the currency symbol for the current language.  The currency symbol is ignored.  Currency symbols for other languages are not ignored. 
+* The string may be prefixed with the currency symbol for the current language.  The currency symbol is ignored.  Currency symbols for other languages are not ignored.
 * The string may be include a percent sign (**%**) at the end, indicating that it is a percentage.  The number will be divided by 100 before being returned.  Percentages and currency symbols cannot be mixed.
 * The string may be in scientific notation, with 12 x 10<sup>3</sup> expressed as "12e3".
 
@@ -58,4 +58,3 @@ The user running these formulas is located in the United States and has selected
 | **Value( "12.34%" )** | The percentage sign at the end of the string indicates that this is a percentage. | 0.1234 |
 | **Value( "$ 12.34" )** | The currency symbol for the current language is ignored. | 12.34 |
 | **Value( "24e3" )** | Scientific notation for 12 x 10<sup>3</sup>. | 24000 |
-

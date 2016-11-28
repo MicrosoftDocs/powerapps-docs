@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="sirui-sun"
-	manager=""
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -22,7 +22,7 @@
 
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
 
-Power BI is a suite of business analytics tools to analyze data and share insights. Monitor your business and get answers quickly with rich dashboards available on every device. In your app, you can check the status of the data alerts that you have set up in the Power BI service. For more information on data alerts in Power BI, head to the [documentation page](https://powerbi.microsoft.com/documentation/powerbi-service-set-data-alerts/). 
+Power BI is a suite of business analytics tools to analyze data and share insights. Monitor your business and get answers quickly with rich dashboards available on every device. In your app, you can check the status of the data alerts that you have set up in the Power BI service. For more information on data alerts in Power BI, head to the [documentation page](https://powerbi.microsoft.com/documentation/powerbi-service-set-data-alerts/).
 
 This topic shows you how to use the Power BI connection in an app, and lists the available functions.
 
@@ -82,7 +82,7 @@ None.
 ## CheckAlertStatus
 Check the status of an alert.
 
-**Note:** requests to this endpoint will be throttled on a per-alert basis if called too frequently. 
+**Note:** requests to this endpoint will be throttled on a per-alert basis if called too frequently.
 
 #### Input properties
 

@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -52,8 +52,3 @@ If you show an RSS feed in a text gallery and then set the **[Text](../controls/
 If you set the **[Text](../controls/properties-core.md)** property of the label to **PlainText(ThisItem.description)**, the text appears as in this example:
 
 	We have done an unusually "deep" globalization and localization.
-
-
-
-
-

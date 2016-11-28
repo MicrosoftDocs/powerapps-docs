@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="gregli-msft"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -85,4 +85,3 @@ Configure how big a control (or an element of a control) is and where it is in r
 **RadiusTopRight** – The degree to which the top-right corner of a control is rounded.
 
 - Applies to **[Button](control-button.md)**, **[Export](control-export-import.md)**, **[Image](control-image.md)**, **[Import](control-export-import.md)**, and **[Text input](control-text-input.md)** controls.
-
