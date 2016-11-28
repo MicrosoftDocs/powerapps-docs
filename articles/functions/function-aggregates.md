@@ -1,11 +1,11 @@
 <properties
-	pageTitle="PowerApps: Average, Max, Min, StdevP, Sum, and VarP functions"
+	pageTitle="Average, Max, Min, StdevP, Sum, and VarP functions | Microsoft PowerApps"
 	description="Reference information for the Average, Max, Min, StdevP, Sum, and VarP functions in PowerApps, including syntax and examples"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -41,7 +41,7 @@ You can supply the values for these functions as:
 - Separate arguments. For example, **Sum( 1, 2, 3 )** returns 6.
 - A [table](../working-with-tables.md) and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each [record](../working-with-tables.md#records).  
 
-[AZURE.INCLUDE [record-scope](../../includes/record-scope.md)] 
+[AZURE.INCLUDE [record-scope](../../includes/record-scope.md)]
 
 These functions operate on numeric values only. Other types of values, such as strings or records, are ignored. Use the **[Value](function-value.md)** function to convert a string into a number.
 

@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -27,7 +27,7 @@ These functions are often invoked from the **[OnSelect](../controls/properties-c
 These functions return no values.
 
 ### SubmitForm ###
-Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.md)** property of a Button control to save any changes in a Form control to the data source. 
+Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.md)** property of a Button control to save any changes in a Form control to the data source.
 
 Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **[Validate](function-validate.md)** function.
 

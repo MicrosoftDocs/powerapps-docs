@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -109,5 +109,3 @@ Collections are a special kind of data source.  They're local to the app and not
 For more information on working with a collection as a data source, see [create and update a collection](create-update-collection.md).
 
 Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
-
-

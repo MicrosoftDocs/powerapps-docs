@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="gregli-msft"
-    manager="erikre"
+    manager="anneta"
     editor=""
     tags=""/>
 
@@ -34,4 +34,3 @@ Configure graphical elements in your app, including images, photos, and elements
 **ImagePosition** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
 - Applies to **[Audio](control-audio-video.md)**, **[Image](control-image.md)**, **[Microphone](control-microphone.md)**, **[Screen](control-screen.md)**, and **[Video](control-audio-video.md)** controls.
-

@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="linhtranms"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 

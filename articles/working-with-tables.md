@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="erikre"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -206,7 +206,7 @@ Some functions operate by evaluating a formula across all the records of a table
 - **AddColumns** - Formula provides the value of the added field.
 - **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
 
-Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers.  You can also reference control properties and other values from throughout your app. 
+Inside these formulas, you can reference the fields of the record being processed.  Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers.  You can also reference control properties and other values from throughout your app.
 
 For example, take a table of **Products**:
 
@@ -249,7 +249,7 @@ For example, imagine having a collection **X**:
 
 ![](media/working-with-tables/X.png)
 
-You can create this collection with **ClearCollect( X, \[1, 2\] )**. 
+You can create this collection with **ClearCollect( X, \[1, 2\] )**.
 
 And another collection **Y**:
 
@@ -263,7 +263,7 @@ Let's put it all together.  In this context, the following formula:
 
 * **Ungroup( ForAll( X, ForAll( Y, Y[@Value] & Text( X[@Value] ) & [@Value] ) ), "Value" )**
 
-produces this table: 
+produces this table:
 
 ![](media/working-with-tables/XY.png)
 
@@ -275,7 +275,7 @@ Since **Y** is the innermost record scope, accessing fields of this table do not
 
 * **Ungroup( ForAll( X, ForAll( Y, Value & Text( X[@Value] ) & [@Value] ) ), "Value" )**
 
-All the **ForAll** record scopes override the global scope.  The **Value** context variable we defined is not available by name without the disambiguation operator.   To access this value we must use **[@Value]**. 
+All the **ForAll** record scopes override the global scope.  The **Value** context variable we defined is not available by name without the disambiguation operator.   To access this value we must use **[@Value]**.
 
 **Ungroup** flattens the result, since nested **ForAll** functions will result in a nested result table.
 

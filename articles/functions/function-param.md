@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -47,5 +47,3 @@ The **Param** function retrieves a parameter passed to the app when it was launc
 **Param**( *ParameterName* )
 
 - *ParameterName* - Required.  The name of the parameter passed to the app.
-
-

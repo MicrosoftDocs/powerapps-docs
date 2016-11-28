@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -26,7 +26,7 @@ Summarizes [records](../working-with-tables.md#records) of a [table](../working-
 
 The **Distinct** function evaluates a formula across each record of a table. **Distinct** returns a one-column table that contains the results, with duplicate values removed.  
 
-[AZURE.INCLUDE [record-scope](../../includes/record-scope.md)] 
+[AZURE.INCLUDE [record-scope](../../includes/record-scope.md)]
 
 ## Syntax ##
 
