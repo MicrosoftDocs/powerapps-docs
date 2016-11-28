@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -76,7 +76,7 @@ Specify two or more records that you want to merge. Records are processed in ord
 
 #### Modify or create a set of records in a data source ####
 
-**Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1*, [, *ChangeRecordTable2*, … ] ) 
+**Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1*, [, *ChangeRecordTable2*, … ] )
 
 - *DataSource* – Required. The data source that contains the records that you want to modify or will contain the records that you want to create.
 

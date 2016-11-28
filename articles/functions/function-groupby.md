@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="gregli-msft"
-	manager="dwrede"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -34,7 +34,7 @@ You can group records by using **GroupBy**, modify the table that it returns, an
 - Use the **[Filter](function-filter-lookup.md)** function to remove the entire group of records.
 - Use the **Ungroup** function.  
 
-You can also aggregate results based on a grouping: 
+You can also aggregate results based on a grouping:
 
 - Use the **GroupBy** function.
 - Use the **[AddColumns](function-table-shaping.md)** function with **[Sum](function-aggregates.md)**, **[Average](function-aggregates.md)**, and other aggregate functions to add a new column which is an aggregate of the group tables.
@@ -137,7 +137,7 @@ Something else we can do with a grouped table is to aggregate the results.  In t
 
 	![](media/function-groupby/cities-sum.png)
 
-	**[AddColumns](function-table-shaping.md)** starts with the base **CitiesByCountry** collection and adds a new column **Sum of City Populations**.  This column's values are calculated row-by-row, based on the formula **Sum( Cities, Population )**.  **AddColumns** provides the value of the **Cities** column (a table) for each row, and **[Sum](function-aggregates.md)** adds up the **Population** for each row of this sub table. 
+	**[AddColumns](function-table-shaping.md)** starts with the base **CitiesByCountry** collection and adds a new column **Sum of City Populations**.  This column's values are calculated row-by-row, based on the formula **Sum( Cities, Population )**.  **AddColumns** provides the value of the **Cities** column (a table) for each row, and **[Sum](function-aggregates.md)** adds up the **Population** for each row of this sub table.
 
 3. Now that we have the sum that we want, we can use **[DropColumns](function-table-shaping.md)** to remove the sub tables.  Modify the **[OnSelect](../controls/properties-core.md)** property to use this formula:
 
