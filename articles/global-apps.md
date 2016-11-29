@@ -69,7 +69,7 @@ You can use whatever names you like for:
 Some [separators and operators](functions/operators.md) will shift based on the decimal separator of the author's language:
 
 | Author's language decimal separator | PowerApps decimal separator | PowerApps list separator | PowerApps chaining operator | 
-|---|---|---|
+|---|---|---|---|
 | **.** (period) | **.** (period) | **,** (comma) | **;** (semi-colon) |
 | **,** (comma) | **,** (comma) | **;** (semi-colon) | **;;** (double semi-colon) | 
 
@@ -87,7 +87,7 @@ In a language where "," is used for the decimal separator, this will appear in t
 
 * **If( Slider1.Value > 12,59; UpdateContext( { Validation: true; MovingOn: 1 } );; Navigate( "NextScreen", "" ); UpdateContext( { Validation: false } ) )**
 
-Note that the property selection operator **.** in **Slider1.Vlaue** is always the same, no matter what the decimal separator is.
+Note that the property selection operator **.** in **Slider1.Value** is always the same, no matter what the decimal separator is.
 
 Internally the formula does not change, all that changes is how it is displayed and edited by the author.  Two different authors using two different languages can view and edit the same formula, with each seeing the appropriate separators and operators for their language. 
 
