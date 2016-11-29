@@ -46,7 +46,7 @@ The current PowerApps user has the following information:
 - Email address: **"john.doe@contoso.com"**
 - Image: ![](media/function-user/john-doe-picture.png) 
 
-| Formula | Description | Result | 
+| Formula | Description | Result |
 |---------|-------------|--------|
 | **User()** | Record of all information for the current PowerApps user. | { FullName:&nbsp;"John Doe", Email:&nbsp;"john.doe@contoso.com", Image:&nbsp;"blob:1234...5678" } |
 | **User().Email** | The email address of the current PowerApps user. | "john.doe@contoso.com" |
