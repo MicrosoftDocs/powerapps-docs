@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/09/2016"
+   ms.date="11/29/2016"
    ms.author="anneta"/>
 
 # Common issues and resolutions for PowerApps #
@@ -23,6 +23,10 @@
 **Note**: For more information, see the [list of known issues](https://docs.microsoft.com/en-us/common-data-service/entity-reference/known-issues) for the Microsoft Common Data Service.
 
 ## Recently added/changed ##
+1. **Upgrading PowerApps on Windows 8.1**
+
+	If you install PowerApps on a computer that’s running Windows 8 or Windows 8.1, keep the Windows Store app open and active, use the Settings charm to check for updates, and then install them.
+
 1.	**Custom APIs and the Common Data Service**
 
 	If an app created using PowerApps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom API in a different environment, you’ll need to deploy the API to the same environment as the database and update the app to use the new API. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](environments-overview.md).
@@ -31,6 +35,7 @@
 
 	If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile.
 
+## Older ##
 1. **Changing a flow in a shared app**
 
 	If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, re-add the flow, and reshare the app. Otherwise, users who trigger the flow will get an authentication failure.
@@ -43,7 +48,6 @@
 
 	An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4)).
 
-## Older ##
 1. **Opening an app from a template**.
 
 	If you're running release 2.0.500 or older, an error message appears when you try to create an app from a template. You must upgrade to be able to use this feature.
