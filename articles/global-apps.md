@@ -68,7 +68,7 @@ You can use whatever names you like for:
 
 Some [separators and operators](functions/operators.md) will shift based on the decimal separator of the author's language:
 
-| Author's language decimal separator | PowerApps decimal separator | PowerApps list separator | PowerApps chaining operator | 
+| Author's language decimal separator | PowerApps decimal separator | PowerApps list separator | PowerApps chaining operator |
 |---|---|---|---|
 | **.** (period) | **.** (period) | **,** (comma) | **;** (semi-colon) |
 | **,** (comma) | **,** (comma) | **;** (semi-colon) | **;;** (double semi-colon) | 
