@@ -103,7 +103,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 1. **Improved mechanism for providing feedback**.
 
-	Instead of clicking or tapping the smile icon near the upper-right corner, create a ticket by clicking or tapping **Contact** on [our support page](https://powerapps.microsoft.com/support/) and then providing information about your question. You can also check the status of tickets that you've filed.
+	Instead of clicking or tapping the smile icon near the upper-right corner, create a ticket by clicking or tapping **Contact** on [our support page](https://powerapps.microsoft.com/support/) and then providing information about your question.
 
 ## Release 2.0.510-2.0.512 ##
 Because of administrative details, different platforms show different build numbers, but 2.0.510, 2.0.511, and 2.0.512 were released at effectively the same time.
