@@ -28,16 +28,16 @@ Ready to take it to the next level? Create [custom APIs](register-custom-api.md)
 ## Most used connections ##
 | &nbsp; | &nbsp; |
 |---|---|
-|![](./media/connections-list/cdm.png) |[**Common Data Service**](data-platform-intro.md)<br>Description.|
-|![](./media/connections-list/sharepoint.png) |[**SharePoint**](./connections/connection-sharepoint-online.md)<br>Add, edit, and delete items in a custom SharePoint list.|
-|![](./media/connections-list/sql.png) |[**SQL Server**](./connections/connection-azure-sqldatabase.md)<br>Description.|
-|![](./media/connections-list/dynamics-365.png) |[**Dynamics 365**](./connections/connection-dynamics-crmonline.md)<br>Description.|
-|![](./media/connections-list/office365.png) |[**Office 365 Users**](./connections/connection-office365-users.md)<br>Description.|
-|![](./media/connections-list/office365.png) |[**Office 365 Outlook**](./connections/connection-office365-outlook.md)<br>Description.|
-|![](./media/connections-list/excel.png) |[**Excel**](./connections/connection-excel.md)<br>Description.|
-|![](./media/connections-list/onedrive.png) |[**OneDrive for Business**](cloud-storage-blob-connections.md)<br>Description.|
-|![](./media/connections-list/onedrive.png) |[**OneDrive**](cloud-storage-blob-connections.md)<br>Description.|
-|![](./media/connections-list/dropbox.png) |[**Dropbox**](cloud-storage-blob-connections.md)<br>Description.|
+|![](./media/connections-list/cdm.png) |[**Common Data Service**](data-platform-intro.md)<br>|
+|![](./media/connections-list/sharepoint.png) |[**SharePoint**](./connections/connection-sharepoint-online.md)<br>|
+|![](./media/connections-list/sql.png) |[**SQL Server**](./connections/connection-azure-sqldatabase.md)<br>|
+|![](./media/connections-list/dynamics-365.png) |[**Dynamics 365**](./connections/connection-dynamics-crmonline.md)<br>|
+|![](./media/connections-list/office365.png) |[**Office 365 Users**](./connections/connection-office365-users.md)<br>|
+|![](./media/connections-list/office365.png) |[**Office 365 Outlook**](./connections/connection-office365-outlook.md)<br>|
+|![](./media/connections-list/excel.png) |[**Excel**](./connections/connection-excel.md)<br>|
+|![](./media/connections-list/onedrive.png) |[**OneDrive for Business**](cloud-storage-blob-connections.md)<br>|
+|![](./media/connections-list/onedrive.png) |[**OneDrive**](cloud-storage-blob-connections.md)<br>|
+|![](./media/connections-list/dropbox.png) |[**Dropbox**](cloud-storage-blob-connections.md)<br>|
 
 ## All connections ##
 | &nbsp; | &nbsp; |
