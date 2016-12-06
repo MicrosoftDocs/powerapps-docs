@@ -27,8 +27,13 @@ This topic describes how users in your organization can use PowerApps, and how y
 
 Microsoft PowerApps enables users to create applications for Windows, iOS, and Android mobile devices. Using these apps, you can create connections to common SaaS services, including Twitter, Office 365, Dropbox, and Excel.
 
-### How do users sign up for PowerApps?
+### How can users in my organization gain access to PowerApps?
+Users within your organization can gain access to PowerApps in three different ways:
+  1. They can individually sign up for a PowerApps Plan 2 trial as outlined in the [How do users sign up for PowerApps?](#how-do-users-sign-up-for-powerapps) section
+  1. You can assign a PowerApps license to them within the Office 365 admin portal.
+  1. The user has been assigned an Office 365 and Dynamics 365 plans that includes access to the PowerApps service. See the [PowerApps pricing page](https://powerapps.microsoft.com/pricing) for the list of Office 365 and Dynamics 365 plans that include PowerApps capabilities.
 
+### How do users sign up for PowerApps?
 The only sign-up option for individual users in your organization is the PowerApps Plan 2 trial, which they can sign up for through the PowerApps website:
 
 ##### Option 1
@@ -39,81 +44,7 @@ Users can sign up by going to [powerapps.microsoft.com](https://powerapps.micros
 
 When a user in your organization signs up for PowerApps, that user is assigned a PowerApps license automatically.
 
-See [Self-serivce sign up for PowerApps](signup-for-powerapps.md) for more details.
-
-### How do individual users in my organization sign up?
-
-There are three scenarios that might apply to users in your organization:
-
-##### Scenario 1: Your organization already has an existing Office 365 environment and the user signing up for PowerApps already has an Office 365 account
-
-In this scenario, if a user already has a work or school account in the tenant (for example, contoso.com) but does not yet have PowerApps, then Microsoft activates the plan for that account, and the user is automatically notified of how to use PowerApps.
-
-##### Scenario 2: Your organization has an existing Office 365 environment and the user signing up for PowerApps doesn’t have an Office 365 account
-
-In this scenario, the user has an email address in your organization’s domain (for example, contoso.com) but does not yet have an Office 365 account. In this case, the user can sign up for PowerApps and is automatically given an account. This lets the user access PowerApps.
-
-For example, if an employee named Nancy uses her work email address (for example, Nancy@contoso.com) to sign up, Microsoft automatically adds Nancy as a user in Contoso’s Office 365 environment, and activates PowerApps for that account.
-
-##### Scenario 3: Your organization does not have an Office 365 environment connected to your email domain
-
-There are no administrative actions your organization needs to take to use PowerApps.
-
-**IMPORTANT**: If your organization has multiple email domains and you prefer all email address extensions to be in the same tenant, add all email address domains to that tenant before any users create your primary tenant. There is no automated mechanism to move users across tenants after they have been created. For more information about this process, see [If I have multiple domains](#if-i-have-multiple-domains-can-i-control-the-office-365-tenant-that-users-are-added-to) (in this topic) and [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611) online.
-
-### How can I prevent users from joining my existing Office 365 tenant?
-
-As an admin, there are steps you can take to prevent users from signing up for PowerApps. If you do block this, users’ attempts to sign in fail and they are directed to contact their organization’s admin. If you have previously disabled automatic license distribution (e.g., Office 365 for Education for Students, Faculty, and Staff), then you do not need to repeat this process.
-
-These steps require the use of Windows PowerShell. To get started with Windows PowerShell, see the [PowerShell getting started guide](http://go.microsoft.com/fwlink/p/?LinkID=286814).
-
-To perform the following steps, you must download and install the latest 64-bit version of the [Azure Active Directory Module for Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=236297). After you select the link, select **Install** or **Run** to install the package.
-
-**Disable automatic tenant join** : Use the following Windows PowerShell commands to prevent new users from joining a managed tenant:
-
-To disable automatic tenant join for new users:  
-`Set-MsolCompanySettings -AllowEmailVerifiedUsers $false`
-
-### How can I allow users to join my existing Office 365 tenant?
-To allow users to join your tenant, run the opposite command as described in the previous question:  
-`Set-MsolCompanySettings -AllowEmailVerifiedUsers $true`
-
-
-### How do I verify if I have the block on in the tenant?
-Use the following PowerShell script:  
-`Get-MsolCompanyInformation | fl allow*`
-
-
-### How can I prevent my existing users from starting to use PowerApps?
-
-The [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. Note that a separate step is required to disable each sign-up option.
-
-To disable sign up flow Option 1 (i.e., the user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com) and selects **Sign up free**), run the following Windows PowerShell Script.
-
-Use this Windows PowerShell script to disable automatic license distributions for existing users. If you have already disabled automatic license distribution before (e.g., Office 365 for Education for Students, Faculty, and Staff), you do not need to repeat this process.  
-
-To disable automatic license distribution for existing users:  
-`Set-MsolCompanySettings -AllowAdHocSubscriptions $false`  
-
-To enable automatic license distribution for existing users:  
-`Set-MsolCompanySettings -AllowAdHocSubscriptions $true`  
-
-**NOTE**: The `AllowAdHocSubscription` flag controls several user capabilities in your organization, including the ability for users to sign up for the Azure Rights Management Service or Power BI. Changing this flag affects all of these capabilities.  
-
-**NOTE**: This blocking prevents new users in your organization from signing up for PowerApps. Any users who sign up for PowerApps before you disable new signups for your organization keep their licenses. See the [How do I remove PowerApps for users that already signed up?](#how-do-i-remove-powerapps-for-users-that-already-signed-up) section (in this topic) for instructions on how you can remove access to PowerApps for users who previously signed up for the service.  
-
-To disable sign up flow Option 2 (in which the user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com) and selects **Sign In**), [file a support request](https://aka.ms/pasupport).
-
-
-### How can I allow my existing users to sign up for PowerApps?
-
-The [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. Note that a separate step is required to enable each flow.
-
-To enable Option 1 (in which the user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com) and selects **Sign up free**), run the opposite command as described in the previous question:  
-
-`Set-MsolCompanySettings -AllowAdHocSubscriptions $true`
-
-To enable Option 2 (in which the user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com) and selects **Sign In**) after you had previously requested this flow be disabled, [file a support request](https://aka.ms/pasupport).
+See [Self-service sign up for PowerApps](signup-for-powerapps.md) for more details.
 
 ## Administration of PowerApps
 
@@ -152,12 +83,18 @@ If you want all users to be in the same tenant regardless of their email address
 
 **IMPORTANT**: There is no supported automated mechanism to move users across tenants once they have been created. To learn about adding domains to a single Office 365 tenant, see [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-ffdb2216-330d-4d73-832b-3e31bcb5b2a7).
 
+### How can restrict my users' ability to access my organization's business data using PowerApps?
+PowerApps allows you to create data zones for business and non-business data, as shown below.  Once these data loss prevention policies are implemented, users are prevented from designing or running PowerApps that combine business and non-business data.   For more details, See [Data loss prevention (DLP) policies](prevent-data-loss.md).
 
-### How do I remove PowerApps for users that already signed up?
+  ![](./media/signup-question-and-answer/data-loss-prevention-policy.png)
 
-The [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section (in this topic) outlines the two possible ways that users can sign up for PowerApps. A separate step is required to remove users that already signed up through each flow.
+### How can I prevent my existing users from starting to use PowerApps?
+Individual users can sign-up for a 90-day PowerApps Plan 2 trial as outlined in the [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section. This option is available to any user in a tenant and cannot be disabled by an admin.  After the user's trial expires the user will lose access to PowerApps Plan 2 capabilities.  
 
-If a user signed up for PowerApps through sign up flow Option 1 (in which the user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com) and then selects **Sign up free**) but you no longer want them to have access to PowerApps, you can remove the PowerApps license for that user:  
+There is currently no way for individual users in your organization to purchase a paid license to PowerApps on their own (even after their trial expires), they can only be assigned a paid license by an admin via the Office admin portal.
+
+### How do I remove PowerApps from existing users?
+If a user was assigned a PowerApps Plan 1 or PowerApps Plan 2 license then you can take the following steps to remove the PowerApps license for that user:
 
 1. Go to the [Office 365 Admin Portal](https://portal.microsoftonline.com/).
 
@@ -165,33 +102,49 @@ If a user signed up for PowerApps through sign up flow Option 1 (in which the us
 
 3. Find the user you want to remove the license for, and then select their name.
 
-4. On the user details page, select **Licenses** in the left navigation bar.
+4. On the user details pane, in the **Product licenses** section select **Edit**.
 
-5. Clear **Microsoft PowerApps**, and then select **Save**.
+5. Find the license called **Microsoft PowerApps Plan 1** or **Microsoft PowerApps Plan 2**, set the toggle to **Off** and then select **Save**.
 
+  ![](./media/signup-question-and-answer/remove-license.png)
 
-If any users signed up for PowerApps through Option 2 (in which the user goes to [powerapps.microsoft.com](https://powerapps.microsoft.com) and selects **Sign In**) but you no longer want them to have access to PowerApps, [file a support request](https://aka.ms/pasupport).
+If a user has access to PowerApps through their Office 365 and Dynamics 365 plan license, then you can disable their access to the PowerApps service by taking the following steps:
 
+1. Go to the [Office 365 Admin Portal](https://portal.microsoftonline.com/).
 
-### How do I know when new users have joined my tenant?
+2. In the left navigation bar, select **Users**, and then select **Active Users**.
 
-Users who have joined your tenant as part of this program are assigned a unique license that you can filter on within your active user pane in the admin dashboard.
+3. Find the user you want to remove access for, and then select their name.
 
-To create this new view, in the Office 365 admin center, go to **Users** > **Active Users**. On the **Select a View** menu, select **New View**. Name your new view, and under **Assigned license**, select **Microsoft PowerApps**. Once the new view has been created, you can see all the users in your tenant who have enrolled in this program.
+4. On the user details pane, in the **Product licenses** section select **Edit**.
 
+5. Expand the user's Office 365 or Dynamics 365 license, disable access to the service called **PowerApps for Office 365** or **PowerApps for Dynamics 365** and then select **Save**.
 
-### Are there any additional things I should be prepared for?
+  ![](./media/signup-question-and-answer/remove-service-plan.png)
 
-You might experience an increase in password-reset requests. For information about this process, see [Reset a user's password](https://support.office.com/article/Reset-a-users-password-7a5d073b-7fae-4aa5-8f96-9ecd041aba9c).
+Bulk removal of licenses is also possible through PowerShell. See [Remove licenses from user accounts with Office 365 PowerShell](https://technet.microsoft.com/library/dn771774.aspx) for a detailed example.   Finally, further guidance about bulk removal of services within a license can be found at [Disable access to services with Office 365 PowerShell](https://technet.microsoft.com/library/dn771769.aspx).
 
-You can remove a user from your tenant via the standard process in the Office 365 admin center. However, if the user still has an active email address from your organization, they can rejoin unless you block all users from joining.
+Removing of the PowerApps license or service for a user in your organization will also result in the removal of the PowerApps and Dynamics 365 icons from the following locations for that user:
 
+1. [Office.com](https://office.com)
+
+   ![](./media/signup-question-and-answer/office-home.png)
+
+1. Office 365 AppLauncher “waffle”
+
+   ![](./media/signup-question-and-answer/office-waffle.png)
 
 ### Why did 10,000 licenses for Microsoft PowerApps show up in my Office 365 tenant?
 
-As a qualifying organization, users in your organization are eligible to try out Microsoft PowerApps Plan 2 for 90 days, and these trial licenses represent the available capacity for new PowerApps users in your tenant. There is no charge for these licenses. If you’ve chosen to allow users to sign up for PowerApps themselves, they are assigned one of these available free licenses when they complete the sign-up process. You can also choose to assign these licenses to users yourself through the Office 365 admin portal.
+As a qualifying organization, users in your organization are eligible to try out Microsoft PowerApps Plan 2 for 90 days, and these trial licenses represent the available capacity for new PowerApps users in your tenant. There is no charge for these licenses. Specifically, there are two possible reasons why you may see a capacity 10,000 (trial) licenses for PowerApps showing up in the Office 365 admin portal:
 
-Please note that these licenses are Microsoft PowerApps Plan 2 trial licenses that will expire after 90 days of being assigned to a user.
+1. If at least one user in your tenant participated in the PowerApps public preview that spanned from April 2016 to October 2016 then you will see 10,000 licenses labeled as "Microsoft PowerApps and Logic flows"
+    ![](./media/signup-question-and-answer/Licenses2.png)
+
+1. If at least one user in your tenant has signed-up for a PowerApps Plan 2 trial by going through trial signup **Option 1** outlined in the [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section then you will see 10,000 licenses labeled "Microsoft Power Apps & Flow"
+    ![](./media/signup-question-and-answer/Licenses1.png)
+
+You can choose to assign additional licenses to users yourself through the Office 365 admin portal, but please note that these are trial licenses for Microsoft PowerApps Plan 2 and they will expire after 90 days of being assigned to a user.
 
 ### Is this free? Will I be charged for these licenses?
 
