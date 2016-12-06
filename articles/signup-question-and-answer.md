@@ -139,10 +139,10 @@ Removing of the PowerApps license or service for a user in your organization wil
 As a qualifying organization, users in your organization are eligible to try out Microsoft PowerApps Plan 2 for 90 days, and these trial licenses represent the available capacity for new PowerApps users in your tenant. There is no charge for these licenses. Specifically, there are two possible reasons why you may see a capacity 10,000 (trial) licenses for PowerApps showing up in the Office 365 admin portal:
 
 1. If at least one user in your tenant participated in the PowerApps public preview that spanned from April 2016 to October 2016 then you will see 10,000 licenses labeled as "Microsoft PowerApps and Logic flows"
-    ![](./media/signup-question-and-answer/Licenses2.png)
+    ![](./media/signup-question-and-answer/licenses_2.png)
 
 1. If at least one user in your tenant has signed-up for a PowerApps Plan 2 trial by going through trial signup **Option 1** outlined in the [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section then you will see 10,000 licenses labeled "Microsoft Power Apps & Flow"
-    ![](./media/signup-question-and-answer/Licenses1.png)
+    ![](./media/signup-question-and-answer/licenses_1.png)
 
 You can choose to assign additional licenses to users yourself through the Office 365 admin portal, but please note that these are trial licenses for Microsoft PowerApps Plan 2 and they will expire after 90 days of being assigned to a user.
 
