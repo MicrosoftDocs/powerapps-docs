@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="clwesene"
-	manager="robinr"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/19/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Understand entities in the Common Data Service
 
@@ -84,7 +84,7 @@ You can create custom fields in either a standard entity or a custom entity. You
 - **Lookup** - A lookup field into another entity's title field.
 - **Multiline text** - Multiple lines of text.
 - **Number** - A number.
-- **PersonName** - Teh given name (first name), middle name, and surname (last name) of a person.
+- **PersonName** - The given name, middle name, and surname of a person.
 - **Phone** - A text value that represents a phone number.
 - **Picklist** - One value from a list of values.
 - **Quantity** - A decimal value.
@@ -114,4 +114,3 @@ Try it out by creating an app using a standard entity or [create a custom entity
 
 ## Privacy notice
 With the Microsoft PowerApps common data model we collect and store custom entity and field names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The entity and field names that Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
-
