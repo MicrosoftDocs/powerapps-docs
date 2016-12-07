@@ -3,8 +3,8 @@
 	description="Create, read, update, and delete custom fields in an entity."
 	services="powerapps"
 	documentationCenter="na"
-	authors="robinarh"
-	manager="robinr"
+	authors="kfend"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,11 +14,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/18/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Manage custom fields
-You can create and update one or more custom fields in any entity. When you create a custom field, you specify a set of properties, such as the field's name, its display name, and the type of data that it will contain.
+You can create and update one or more custom fields in any entity. When you create a custom field, you specify a set of properties, such as the field's name, its display name, and the type of data that it will contain. For more information, see [Enity field data types](https://docs.microsoft.com/en-us/common-data-service/entity-reference/field-data-types) and [Entity field properties](https://docs.microsoft.com/en-us/common-data-service/entity-reference/field-properties).
 
 **Note:** Every entity has [system fields](data-platform-create-entity.md#system-and-record-title-fields), such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](data-platform-intro.md#standard-entities) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
@@ -82,4 +82,3 @@ As you create and modify fields, keep these points in mind:
 
 ## Privacy notice
 With the Microsoft PowerApps common data model we collect and store custom entity and field names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The entity and field names that Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
-
