@@ -3,8 +3,8 @@
 	description="Samples and other resources you can use to create apps."
 	services="powerapps"
 	documentationCenter="na"
-	authors="robinarh"
-	manager="robinr"
+	authors="kfend"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/18/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Samples and other resources #
 
@@ -32,3 +32,6 @@ You can find how-to posts on the [PowerApps blog](https://powerapps.microsoft.co
 
 ## Microsoft Ignite sessions ##
 Many sessions of the Microsoft Ignite conference were recorded and are available at [Microsoft Ignite On-Demand](https://myignite.microsoft.com/videos). Search for "PowerApps" and "common data model."
+
+## Overview ##
+Learn more about the Common Data Service and Common Data Model here, [Common Data Service and Common Data Model overview](https://docs.microsoft.com/en-us/common-data-service/entity-reference/security-model).
