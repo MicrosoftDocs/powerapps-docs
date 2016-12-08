@@ -17,13 +17,13 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/30/2016"
+   ms.date="12/03/2016"
    ms.author="mblythe"/>
 
 # Guided Learning for PowerApps
 Welcome to  **Guided Learning**  for **Microsoft PowerApps**. This self-paced online course explains PowerApps in a sequential way, so you can build your knowledge from the ground up.
 
-This  **Guided Learning**  course currently has a Getting Started section, and we will add content over the next few weeks. The course is designed to provide guidance in understandable chunks, with a logical flow that helps you learn concepts, see details, and walk through examples. It includes lots of visuals to help you learn, too.
+This  **Guided Learning**  course contains many sections, and each section has many topics. The course is designed to provide guidance in understandable chunks, with a logical flow that helps you learn concepts, see details, and walk through examples. It includes lots of visuals to help you learn, too.
 
 If you're a  **beginner**  with PowerApps this course gets you going, and if you're familiar with PowerApps this course ties concepts together, and fills in the gaps. We hope you enjoy the course, and we look forward to including more content in the future.
 
@@ -39,7 +39,7 @@ PowerApps connects to the **cloud services and data sources** you're already usi
 ## The Parts of PowerApps
 PowerApps consists of components to create, share, and administer apps; and components to run those apps. You create apps in  **PowerApps Studio for web**  or  **PowerApps Studio for Windows**, using the **data connections** that your app requires. You use **web.powerapps.com** to configure and manage data connections and on-premises gateways, and to work with the Common Data Service, which we will cover in a later section. After you create an app, you often share it to **Microsoft AppSource**, and administer it in the **admin center**.
 
-You run apps in a browser from **Microsoft Dynamics 365** or by using **PowerApps Mobile**, which is available for iOS and Android devices.
+You run apps in a browser from **Microsoft Dynamics 365** or by using **PowerApps Mobile**, which is available for Windows, iOS, and Android devices.
 
 We will follow this flow of creating, sharing, administering, and running apps as we go through the rest of PowerApps Guided Learning.
 
@@ -51,4 +51,4 @@ How you use PowerApps may depend on your role in a project or on a team, and you
 
 
 ## Next Steps
-Now that you have an overview of this course, what PowerApps is, and its main elements, in the next topic we will look more closely at each PowerApps component, as well as related technologies.
+Now that you have an overview of this course, what PowerApps is, and its main elements, in the next topic we will look more closely at each PowerApps component.
