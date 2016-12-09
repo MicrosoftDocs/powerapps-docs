@@ -14,12 +14,19 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="11/18/2016"
+    ms.date="12/08/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.560-2.0.561 #
+# What's new in PowerApps #
+
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+**Note**: The version numbers of the most recent releases of PowerApps will vary by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+## Release 2.0.570-2.0.571 ##
+- **Bug fixes and improvements in performance and accessibility**.
+
+## Release 2.0.560-2.0.561 ##
 1. **Support for universal links on iOS and Android devices**.
 
 1. **Back button support on Windows Phone devices**.
