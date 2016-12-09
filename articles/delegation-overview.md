@@ -32,21 +32,22 @@ Where this becomes complicated, and the reason this article exists, is because n
 
 ## Delegable data sources ##
 
-At this time, these data sources support delegation: 
+At this time, these data sources support delegation:
 
 - [Common Data Service](data-platform-intro.md)
 - [Salesforce](connections/connection-salesforce.md)
+- [Dynamics 365](connections/connection-dynamics-crmonline.md)
 - [SQL Server](connections/connection-azure-sqldatabase.md)
 
 We are continuing to add delegation support to existing data sources, as well as add more data sources.
 
-Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables do not require delegation.  All of this data is already in memory and the full PowerApps language can be applied. 
+Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables do not require delegation.  All of this data is already in memory and the full PowerApps language can be applied.
 
 ## Delegable functions ##
 
-The next step is to only use formulas that can be delegated.  Included here are the formula elements that could be delegated.  However, every data source is different, and not all of these are supported by every data source.  Check for blue dot suggestions in your particular formula. 
+The next step is to only use formulas that can be delegated.  Included here are the formula elements that could be delegated.  However, every data source is different, and not all of these are supported by every data source.  Check for blue dot suggestions in your particular formula.
 
-These lists will change over time.  We are working to support more functions and operators with delegation. 
+These lists will change over time.  We are working to support more functions and operators with delegation.
 
 ### Filter functions ###
 
@@ -84,8 +85,8 @@ In **Sort**, the formula can only be the name of a single column and can't inclu
 
 All other functions do not support delegation, including these notable functions:
 
-* Table shaping: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ... 
-* Aggregates: **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, ... 
+* Table shaping: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ...
+* Aggregates: **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, ...
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, **[Count](functions/function-table-counts.md)**
 * **[Concat](functions/function-concatenate.md)**
@@ -95,8 +96,8 @@ All other functions do not support delegation, including these notable functions
 
 A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:
 
-* **AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )** 
- 
+* **AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
+
 Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the **AddColumns** function is not delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  
 
 Since the **LookUp** and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it is large.  A potential downside is that **LookUp** will made separate calls to the data source for each of those first records in **Products**, causing a lot of chatter on the network.  If **Suppliers** is small enough and does not change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnVisible**](controls/control-screen.md) on the opening screen) and do the **LookUp** to it instead.  
@@ -136,7 +137,7 @@ You will notice that we are seeing a match for both "Apple" and "Pineapple".  Th
 ![](media/delegation-overview/products-apple-bluedot.png)
 
 This appears to be working, only **"Apples"** is correctly showing now and **"Pineapple"** is not.  However, there is a blue dot showing next to the gallery and there is a blue wavy line under a portion of the formula.  There is even a blue dot showing in the screen thumbnail.  If we hover over the blue dot next to the gallery, we see the following:
- 
+
 ![](media/delegation-overview/products-apple-bluepopup.png)
 
 Although we are using **Filter** which is a delegable function, with SQL Server which is a delegable data source, the formula we used within **Filter** is not delegable.  **Mid** and **Len** cannot be delegated to any data source.
@@ -144,14 +145,3 @@ Although we are using **Filter** which is a delegable function, with SQL Server 
 But it worked, didn't it?  Well, kind of.  And that is why this is a blue dot instead of a yellow hazard icon and red wavy error.  If the **[dbo].[Products]** table contains less than 500 records, then yes, this worked perfectly.   All records were brought to the device and the **Filter** was applied locally.  
 
 If instead this table contains more than 500 records, then only fruit which begin with **"Apple"** *in the first 500 records of the table* will be displayed in the gallery.  If **"Apple, Fuji"** appears as a name in record 501 or 500,001 it will not be found.
-
-
-
-
-
-
-
-    
-
-
-
