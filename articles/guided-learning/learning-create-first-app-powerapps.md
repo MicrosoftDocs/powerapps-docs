@@ -9,7 +9,7 @@
    editor=""
    tags=""
    featuredVideoId="UCpmP6FOK-s"
-   courseDuration="8m"/>
+   courseDuration="5m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/03/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Create your first app in PowerApps

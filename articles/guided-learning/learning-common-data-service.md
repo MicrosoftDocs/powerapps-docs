@@ -8,7 +8,7 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
+   featuredVideoId="os33pHQ9jSU"
    courseDuration="5m"/>
 
 <tags
@@ -17,11 +17,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/18/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # The Common Data Service
-Data is at the heart of business applications and processes–data from Excel, from on-premises sources like SQL Server, and cloud sources like Salesforce and SharePoint Online. Data can be related to customers, sales, employees, and many other things, but the common theme is that data is crucial to your business, and it plays a key role in the apps you build in PowerApps. You have seen and worked with different types of data sources so far in the course, and we introduced the Microsoft Common Data Service earlier. In this section, we'll spend some time getting into the details, explaining the benefits, and showing you how to use the service.
+Data is at the heart of business applications and processes - data from Excel, from on-premises sources like SQL Server, and cloud sources like Salesforce and SharePoint Online. Data can be related to customers, sales, employees, and many other things, but the common theme is that data is crucial to your business, and it plays a key role in the apps you build in PowerApps. You have seen and worked with different types of data sources so far in the course, and we introduced the Microsoft Common Data Service earlier. In this section, we'll spend some time getting into the details, explaining the benefits, and showing you how to use the service.
 
 
 ## Understanding the service

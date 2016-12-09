@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="5m"/>
+   featuredVideoId="C81IfqIn9LI"
+   courseDuration="6m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/30/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Related technologies
@@ -43,13 +43,13 @@ There are many **data sources** that you might care about, and PowerApps uses **
 
 
 ### Microsoft Common Data Service
-**Common Data Service** makes it easy to integrate business data from multiple sources. The service features a **common data model** that includes many **entities** common to apps and business processes: entities like employees, customers, and sales. The service stores the data in a scalable and reliable way, and makes the data available so that multiple applications can use it. The applications can be apps that you build in PowerApps, other Microsoft applications, or third party applications. The image below shows a portion of the **Contact** entity in web.powerapps.com.
+The **Common Data Service** makes it easy to integrate business data from multiple sources. The service features a **common data model** that includes many **entities** common to apps and business processes: entities like Contact, Product, and Sales Order. The service stores the data in a scalable and reliable way, and makes the data available so that multiple applications can use it. The applications can be apps that you build in PowerApps, other Microsoft applications, or third party applications. The image below shows a portion of the **Contact** entity in web.powerapps.com.
 
 ![PowerApps contact entity](./media/learning-powerapps-parts/powerapps-contact.png)
 
 
 ### Microsoft Dynamics 365
-**Dynamics 365** is a cloud service with purpose-built apps that enable you to address specific business needs like sales automation, operations, or customer service. In PowerApps, you share apps into AppSource, then users you share with view and run those apps in Dynamics 365, as well as on mobile devices. The advantage of having the apps in Dynamics 365 is that you have **one place to run all your business apps**-from creators in your organization, from Microsoft, and from third parties.
+**Dynamics 365** is a cloud service with purpose-built apps that enable you to address specific business needs like sales automation, operations, or customer service. In PowerApps, you share apps into AppSource, then users you share with view and run those apps in Dynamics 365, as well as on mobile devices. The advantage of having the apps in Dynamics 365 is that you have **one place to run all your business apps** - from creators in your organization, from Microsoft, and from third parties.
 
 ![Microsoft Dynamics 365](./media/learning-powerapps-parts/powerapps-dynamics.png)
 
@@ -60,4 +60,4 @@ There are many **data sources** that you might care about, and PowerApps uses **
 ![Microsoft AppSource](./media/learning-powerapps-parts/powerapps-appsource.png)
 
 
-Now you have a little more information about all the parts of PowerApps and related technologies. Don't feel like you have to memorize the list, because we will continue to deepen your knowledge on each of the parts throughout this course. Next up is an introduction to the options you have for creating apps.
+Now you have a little more information about all the parts of PowerApps, and related technologies. Don't feel like you have to memorize the list, because we will continue to deepen your knowledge on each of the parts throughout this course. Next up is an introduction to the options you have for creating apps.

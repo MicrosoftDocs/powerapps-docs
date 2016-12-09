@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/02/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Customize the app (Common Data Service)

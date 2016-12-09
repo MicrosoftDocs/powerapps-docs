@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="3m"/>
+   featuredVideoId="OJ8a9VINeKU"
+   courseDuration="5m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/28/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Explore the generated app (SharePoint list)
@@ -27,9 +27,7 @@ In this topic, we look more closely at the generated app - reviewing the screens
 ## Understanding controls in PowerApps
 A control is simply a UI element that has behaviors associated with it. Many controls in PowerApps are the same as controls that you've used in other apps: text boxes, drop-down lists, navigation elements, and so on. But PowerApps has more specialized controls like **Galleries** (which display summary data) and **Forms** (which display detail data and enable you to create and edit items). And also some other really cool controls like **Image**, **Camera**, and **Barcode**. To see what's available, click or tap **Insert** on the ribbon, and then click or tap each of the options in turn, **Text** thru **Icons**.
 
-![Controls tab on PowerApps Studio ribbon](./media/learning-spo-app-explore-controls/ribbon-controls.png) 
-
-As you click on controls, you can see what formulas are associated with them. 
+![Controls tab on PowerApps Studio ribbon](./media/learning-spo-app-explore-controls/ribbon-controls.png)
 
 
 ## Explore the browse screen

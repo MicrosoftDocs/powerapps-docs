@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="2m"/>
+   featuredVideoId="m6KfAwEdtYU"
+   courseDuration="3m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/28/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Generate an app (SharePoint list)
