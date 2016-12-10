@@ -9,7 +9,7 @@
    editor=""
    tags=""
    featuredVideoId=""
-   courseDuration="5m"/>
+   courseDuration="1m"/>
 
 <tags
    ms.service="powerapps"

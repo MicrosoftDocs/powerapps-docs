@@ -27,11 +27,11 @@ Data is at the heart of business applications and processes - data from Excel, f
 ## Understanding the service
 Let's get oriented with a couple of diagrams. You might have seen the first diagram before - it shows the components of the Microsoft business application platform. You're obviously acquainted with PowerApps by this point, but you might have also used Microsoft Flow, Power BI, or other components. What you see is that the Common Data Service and connectors and gateways are relevant for all of these components. Right now, the Common Data Service is used primarily with PowerApps and Microsoft Flow, but it will be available for other components in time.
 
-[DIAGRAM GOES HERE]
+![Business platform diagram](./media/learning-common-data-service/business-platform.png)
 
 Now that you understand where the Common Data Service fits in, let's look at its parts. Think of the Common Data Service as a hierarchy. At the bottom level, the service stores data in a scalable and reliable way, and makes the data available so that multiple applications can use it. The next level is the common data model that includes many entities used in applications and business processes: entities like Account, Contact, Product, and Sales Order. You can extend the standard entities and create custom ones to meet your business needs.
 
-[DIAGRAM GOES HERE]
+![Common Data Service architecture diagram](./media/learning-common-data-service/architecture.png)
 
 An entity is just a combination of the metadata that describes it (field names, data types, and so on) and the data that you store in it. If you know Access or another database, an entity is very much like a table. We will get into entities more in the next topic, but for now consider the benefits of working with entity data in the Common Data Service:
 

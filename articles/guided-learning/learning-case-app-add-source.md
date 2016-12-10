@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="5m"/>
+   featuredVideoId="Y057qUJ2NNk"
+   courseDuration="11m"/>
 
 <tags
    ms.service="powerapps"
@@ -21,7 +21,7 @@
    ms.author="mblythe"/>
 
 # Add a data source and flow (Common Data Service)
-So far in this section, we have generated an app based on the Case entity from the Common Data Service, explored the app to see how it's put together, and customized the app in several ways. In the final topic for this section, we will bring in another standard entity, and use Microsoft Flow to send an email. The app will trigger a flow so that the person who opened a case is notified when the case is updated. The skills you learn in this topic are applicable across many kinds of apps. Let's get started with the entities.  
+So far in this section, we have generated an app based on the Case entity from the Common Data Service, explored the app to see how it's put together, and customized the app in several ways. In the final topic for this section, we will bring in another standard entity, and use Microsoft Flow to send an email. The app will trigger a flow so that the person who opened a case is notified when the case is updated. We're completing a particular scenario in this topic, but the skills you learn are applicable across many kinds of apps. Let's get started with the entities.
 
 
 ## Review entity relationships
@@ -43,11 +43,11 @@ Note that in this example, we're adding data from another entity, but you can co
 
 
 ## Look up contact information
-Now that we have access to the Contact entity data in our app, it's time to put it to use. As mentioned in the introduction, we want to send an email when a case is updated. We will use two formulas and a flow to accomplish this. The first formula is for the edit screen - the OnSelect property of the save button.
+Now that we have access to the Contact entity data in our app, it's time to put it to use. As mentioned in the introduction, we want to send an email when a case is updated. We will use two formulas and a flow to accomplish this. The first formula is for the edit screen, specifically the OnSelect property of the save button.
 
 ![App edit screen](./media/learning-case-app-add-source/edit-screen.png)
 
-By default, this button uses the formula `SubmitForm(EditForm1)` to submit the update. We need to add to the formula so that it first looks up the contact information for the person who opened the current case, and then stores that information locally in the app: 
+By default, this button uses the formula `SubmitForm(EditForm1)` to submit the update when a user edits data in the form. We need to add to the formula so that it first looks up the contact information for the person who opened the current case, and then stores that information locally in the app: 
 
 ```UpdateContext({contact:LookUp(Contact, ContactId=BrowseGallery1.Selected.CurrentContact.ContactId)}); SubmitForm(EditForm1)```
 
