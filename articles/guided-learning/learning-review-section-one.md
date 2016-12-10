@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/30/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Review the first section
@@ -25,7 +25,7 @@ Let's do a quick review of what you learned in the first section.
 
 **PowerApps** is a collection of software services and apps that work together to fundamentally transform and accelerate how you build and share custom line of business applications.
 
-PowerApps connects to the **cloud services and data sources** you're already using, giving you the ability to **quickly build apps** that suit specific needs-building on skills you already have. You can share apps instantly with your co-workers across web, tablets, and mobile devices. PowerApps also integrates with **Microsoft Flow**, making it possible to trigger workflows from within apps. There are several features that make up PowerApps and a set of related technologies that make it even more powerful.
+PowerApps connects to the **cloud services and data sources** you're already using, giving you the ability to **quickly build apps** that suit specific needs - building on skills you already have. You can share apps instantly with your co-workers across the web, tablets, and mobile devices. PowerApps also integrates with **Microsoft Flow**, making it possible to trigger workflows from within apps. There are several components that make up PowerApps and a set of related technologies that make it even more powerful.
 
 The easiest way to get started with PowerApps is to run the samples, play around with the templates, and generate apps from your own data. You have seen how to generate an app based on a SharePoint list. You now have a solid base, and you will be building and sharing out apps in no time. 
 

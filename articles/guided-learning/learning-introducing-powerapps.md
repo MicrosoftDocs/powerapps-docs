@@ -9,7 +9,7 @@
    editor=""
    tags=""
    featuredVideoId=""
-   courseDuration="4m"/>
+   courseDuration="5m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/03/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Guided Learning for PowerApps
@@ -33,7 +33,7 @@ If you're a  **beginner**  with PowerApps this course gets you going, and if you
 
 ![PowerApps animated introduction](./media/learning-introducing-powerapps/powerapps-intro.gif)
 
-PowerApps connects to the **cloud services and data sources** you're already using, giving you the ability to **quickly build apps** that suit specific needs-building on skills you already have. You can share apps instantly with your co-workers across web, tablets, and mobile devices. PowerApps also integrates with **Microsoft Flow**, making it possible to trigger workflows from within apps. PowerApps can be **simple and fast** – capable of producing an app in minutes that pulls in data from Excel or a cloud service. But PowerApps is also robust and **enterprise-grade**, ready for complex requirements like tracking assets across a corporation and tying into your backend systems.
+PowerApps connects to the **cloud services and data sources** you're already using, giving you the ability to **quickly build apps** that suit specific needs - building on skills you already have. You can share apps instantly with your co-workers across the web, tablets, and mobile devices. PowerApps also integrates with **Microsoft Flow**, making it possible to trigger workflows from within apps. PowerApps can be **simple and fast**  -  capable of producing an app in minutes that pulls in data from Excel or a cloud service. But PowerApps is also robust and **enterprise-grade**, ready for complex requirements like tracking assets across a corporation and tying into your backend systems.
 
 
 ## The Parts of PowerApps

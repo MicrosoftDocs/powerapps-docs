@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="5m"/>
+   featuredVideoId="32olG9uCmBU"
+   courseDuration="8m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/30/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # PowerApps Environments
@@ -31,14 +31,14 @@ If you are new to PowerApps, you might have only the default environment at this
 ## Why use environments?
 An environment is a container for apps and other resources, like data connections and flows from Microsoft Flow. It's a way to group things based on business requirements. There are several reasons to create additional environments beyond the default one:
 
-- **Separate app development by department**: in a large organization, each department could work in a different environment
-- **Support application lifecycle management (ALM)**: you could have separate environments for apps in development and apps that you have already finished and shared
-- **Manage data access**: each environment can have its own Common Data Service database, and other data connections are specific to the environment (i.e. they're not shared across environments)
+- **Separate app development by department**: in a large organization, each department could work in a different environment.
+- **Support application lifecycle management (ALM)**: you could have separate environments for apps in development and apps that you have already finished and shared.
+- **Manage data access**: each environment can have its own Common Data Service database, and other data connections are specific to the environment (i.e. they're not shared across environments).
 
 One thing to keep in mind is that environments are relevant only to app creators and PowerApps admins. When you share an app to a user, that user just runs the app as long as they have the right permissions. They don't have to worry about what environment it came from.
 
 
-## How to create an environment
+## Create an environment
 So far in this course, we have focused on app creators, but environments are created and maintained by admins. If you're not an admin, this information can still be helpful when you talk to your admin about setting up environments. In the PowerApps admin center, click or tap **Environments** then **New environment**. On the **New environment** screen, enter a name for the environment, select a region, select whether to create a Common Data Services database for the environment, and click or tap **Create an environment**.
 
 ![Create an environment](./media/learning-manage-environments/create-environment.png)
@@ -46,7 +46,7 @@ So far in this course, we have focused on app creators, but environments are cre
 That's it, you now have a new environment to work in. If you go back to web.powerapps.com, you will see it in the environments drop-down menu.
  
 
-## How to manage access to an environment
+## Manage access to an environment
 You have access to an environment if you are:
 
 - An **Environment Admin**: you have full permissions in the environment.

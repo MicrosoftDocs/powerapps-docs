@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="5m"/>
+   featuredVideoId="qg25q3MjFBo"
+   courseDuration="6m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/18/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Create custom entities

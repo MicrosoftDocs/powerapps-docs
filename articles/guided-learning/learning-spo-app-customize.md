@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="4m"/>
+   featuredVideoId="KydeusvKndQ"
+   courseDuration="5m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/28/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Customize the app (SharePoint list)
@@ -35,7 +35,7 @@ With the right basic layout, now change the fields that are displayed. Click or 
 
 
 ## Details screen
-On the details screen, we want to change the order of the fields and display the image also. This is a different type of screen, so the process is a little different from the browse screen. Click or tap a field, then in the right-hand pane, drag the **Title** field to the top. Then click or tap the **Image** field to display it.
+On the details screen, we want to change the order of the fields and display the image also. There are different controls on this screen, so the process is a little different from the browse screen. Click or tap a field, then in the right-hand pane, drag the **Title** field to the top. Then click or tap the **Image** field to display it.
 
 ![Change the detail screen fields](./media/learning-spo-app-customize/generate-detail-fields.png)
 
@@ -45,4 +45,4 @@ Finally, on the screen where you edit and create entries, we want to change a fi
 
 ![Change the edit screen fields](./media/learning-spo-app-customize/generate-edit-fields.png)
 
-In this topic we focused on the PowerApps Studio UI, which provides a lot of options for customizing your apps. In the next topic, we'll get into formulas, which play an important role in driving app behavior.  
+You can see how a few basic steps can do a lot to improve the appearance and experience of using a generated app. In this topic we focused on the PowerApps Studio UI, which provides a lot of options for customizing your apps. In the next topic, we'll get into formulas, which play an important role in driving app behavior.  

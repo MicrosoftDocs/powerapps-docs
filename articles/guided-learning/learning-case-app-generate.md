@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="5m"/>
+   featuredVideoId="vTdvguA6xOs"
+   courseDuration="6m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,11 +17,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/02/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Generate an app (Common Data Service)
-In this section of the course, we'll create an app based on entities in the Common Data Service. We'll generate the app from an entity, show you how to customize the app, add another data source, and call a flow from the app. If you already completed the section on creating an app from a SharePoint list, we will cover some of the same territory but in more depth, especially around customzing the app.
+In this section of the course, we'll create an app based on _entities_ in the Common Data Service. Entities are chunks of shared data that can be modified, stored, retrieved, and interacted with. We'll generate the app from an entity, show you how to customize the app, add another data source, and call a flow from the app. If you already completed the section on creating an app from a SharePoint list, we will cover some of the same territory but in more depth, especially around customzing the app.
 
 We'll create a case managment app that could be used by an IT department to track, prioritize, and act on hardware and software issues across an organization. As you go through the topics, you might also think of other uses for an app like this. We're using data from the Common Data Service because it's well-suited to storing app data, but you could build the same app with a different data source. 
 
@@ -29,7 +29,7 @@ PowerApps includes a more complex Case Management template that uses the same en
 
 
 ## Create a Common Data Service database
-The first step in building this app is to create a Common Service database if you don't already have one. You create a Common Data Service database in an _environment_. An environment is a container for apps and other resources, like the Common Data Service (you'll learn more about environments later in the course). An _environment admin_ can follow these steps to create a database (if you're not an admin, check with an admin in your organization).
+The first step in building this app is to create a Common Service database if you don't already have one. You create a Common Data Service database in an _environment_. An environment is a container for apps and other resources (you'll learn more about environments later in the course). An _environment admin_ can follow these steps to create a database (if you're not an admin, check with an admin in your organization).
 
 From the **Home** tab, click **Create Database**.
 
@@ -39,13 +39,13 @@ Specify whether you want to restrict access to the database (we'll keep it open)
 
 ![Common Data Service specify access](./media/learning-case-app-generate/specify-access.png)
 
-When the process is complete, you see all the standard _entities_ that are included in the common data model. Some of them are shown below. Entities are chunks of shared data that can be modified, stored, retrieved, and interacted with.
+When the process is complete, you see all the standard entities that are included in the common data model. Some of them are shown below. 
 
 ![Common Data Service standard entities](./media/learning-case-app-generate/standard-entities.png)
 
 
 ## Generate an app from the Case entity
-Now that the database is created, we connect to the Case entity and generate an app. Click **New app**, then **PowerApps Studio for Web**.
+Now that the database is created, we connect to the Case entity and generate an app. Click **New app**, then **PowerApps Studio for web**.
 
 ![New app in PowerApps Studio for web](./media/learning-case-app-generate/choose-studio.png)
 

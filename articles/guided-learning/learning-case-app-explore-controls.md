@@ -8,7 +8,7 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
+   featuredVideoId="yB-6LHid7OI"
    courseDuration="5m"/>
 
 <tags
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/02/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Explore the generated app (Common Data Service)

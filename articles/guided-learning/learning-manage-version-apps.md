@@ -9,7 +9,7 @@
    editor=""
    tags=""
    featuredVideoId=""
-   courseDuration="5m"/>
+   courseDuration="1m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/30/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Version your apps

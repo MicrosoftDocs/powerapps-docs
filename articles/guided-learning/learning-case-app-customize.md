@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="5m"/>
+   featuredVideoId="wHy72cOe8Os"
+   courseDuration="12m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,7 +17,7 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/02/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Customize the app (Common Data Service)
@@ -51,7 +51,7 @@ If you have used Excel formulas, the approach that PowerApps takes should feel f
 ## Sort and filter based on date
 On the browse screen, the generated app lets you search for cases and sort the list of items in the gallery. We're going to remove the search and sort functionality in favor of showing cases based on a date. You could combine these methods, but we'll focus on the date-based approach for this app. In the image below, you see the items we added:
 
-- A text label so users know what to do: **Insert** > **Text** > **Text box**; change the **Fill** formula to **White**.
+- A text label ("Show cases after:") so users know what to do: **Insert** > **Text** > **Text box**; change the **Fill** formula to **White**.
 - A date picker: **Insert** > **Controls** > **Date picker**.
 - A formula that connects the browse gallery **Items** property to the date picker: `Filter(Case, DatePicker1.SelectedDate < LastModifiedDateTime)`.
 
@@ -65,7 +65,7 @@ We're covering a lot of ground here, but we're almost done with the customizatio
 
 ![Show total and filtered cases](./media/learning-case-app-customize/number-cases.png)
 
-Here's how we set the properties for each text box:
+The video goes into detail about how to add the two text boxes, but here's the basics on which properties we set for each text box:
 
 - **Align** = `Center`
 - **Width** = `Parent.Width/2`

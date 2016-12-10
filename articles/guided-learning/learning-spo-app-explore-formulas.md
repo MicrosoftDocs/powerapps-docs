@@ -8,8 +8,8 @@
    manager="anneta"
    editor=""
    tags=""
-   featuredVideoId=""
-   courseDuration="6m"/>
+   featuredVideoId="9TBA19YU7EA"
+   courseDuration="9m"/>
 
 <tags
    ms.service="powerapps"
@@ -17,11 +17,11 @@
    ms.topic="get-started-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/28/2016"
+   ms.date="12/09/2016"
    ms.author="mblythe"/>
 
 # Explore app formulas (SharePoint list)
-One of the major benefits of PowerApps is not having to write traditional application code - you don't have to be a developer to create apps! But you still need a way to express logic in an app and to control an app's navigation, filtering, sorting, and other functionality. This is where formulas come in. If you have used Excel formulas, the approach that PowerApps takes should feel familiar. In this topic, we'll show a couple of basic formulas for text formatting and then walk through three of the formulas that PowerApps includes in the generated app. You will get a taste of what formulas can do. Then you can spend some time looking at ones in the generated app and writing your own.
+One of the major benefits of PowerApps is not having to write traditional application code - you don't have to be a developer to create apps! But you still need a way to express logic in an app and to control an app's navigation, filtering, sorting, and other functionality. This is where formulas come in. If you have used Excel formulas, the approach that PowerApps takes should feel familiar. In this topic, we'll show a couple of basic formulas for text formatting and then walk through three of the formulas that PowerApps includes in the generated app. You will get a taste of what formulas can do. Then you can spend some time looking at other formulas in the generated app and writing your own.
 
 
 ## Understanding formulas and properties
@@ -33,7 +33,7 @@ Let's start with the currency formatting. By default PowerApps just pulls in a P
 
 ![Price default formatting](./media/learning-spo-app-explore-formulas/price-default.png)
 
-To add the US currency symbol, click or tap the text box control, and then set the **Text** property to this formula in the formula bar.
+To add the US currency symbol, click or tap the text box control, and in the formula bar set the **Text** property to this formula.
 
 ![Price currency formatting](./media/learning-spo-app-explore-formulas/price-formatted.png)
 
@@ -46,7 +46,7 @@ To format the color conditionally based on the price, use a formula like the fol
 ![Price color formatting](./media/learning-spo-app-explore-formulas/color-formatted.png)
 
 ## Formulas included in the generated app
-Now that you understand how to use formulas in conjunction with properties, we'll look at three examples of formulas that PowerApps uses in the generated app. The examples are all from the browse screen and work with the OnSelect property, which defines what happens when a user clicks or taps an app control. In many cases, the property is set to false by default, which means "do nothing." But often you want to do something when the user click or taps a control.
+Now that you understand how to use formulas in conjunction with properties, we'll look at three examples of formulas that PowerApps uses in the generated app. The examples are all from the browse screen and work with the OnSelect property, which defines what happens when a user clicks or taps an app control.
 
 - The first formula is associated with the **IconNewItem1** control: ![New item icon](./media/learning-spo-app-explore-formulas/icon-add-item.png). You click or tap this control to go from the browse screen to the edit/create screen and create an item. 
   - The formula is `NewForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None)`
@@ -64,7 +64,9 @@ There are many other formulas in the app, so take some time to click on controls
 
 
 ## Wrapping it all up
-This brings us to the end of exploring the generated app, and taking a look behind the scenes at the screens, controls, properties, and formulas that give the app its capabilities. If you've followed along, you should have a better understanding of how a generated app works. Now you can take this understanding into creating your own apps. Before moving on to the next section, we want to loop back to SharePoint and show you how the app is now integrated with the list experience. As you can see **FlooringApp** now functions as a _view_ of the list, and you launch the app by clicking **Open**. This provides a simple way to manage your lists with a friendly customized experience.
+This brings us to the end of exploring the generated app, and taking a look behind the scenes at the screens, controls, properties, and formulas that give the app its capabilities. If you've followed along, you should have a better understanding of how a generated app works. Now you can take this understanding into creating your own apps. 
+
+Before moving on to the next section, we want to loop back to SharePoint and show you how the app is now integrated with the list experience. As you can see **FlooringApp** now functions as a _view_ of the list, and you launch the app by clicking **Open**. This provides a simple way to manage your lists with a friendly customized experience.
 
 ![App as view of Sharepoint list](./media/learning-spo-app-explore-formulas/list-view.png)
 
