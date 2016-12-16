@@ -22,6 +22,9 @@ For information about known limitations, see [Common issues and resolutions](com
 
 **Note**: The version numbers of the most recent releases of PowerApps will vary by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
+## Release 2.0.570-2.0.571 ##
+- **Bug fixes and improvements in performance and accessibility**.
+
 ## Release 2.0.560-2.0.561 ##
 1. **Support for universal links on iOS and Android devices**.
 
