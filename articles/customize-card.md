@@ -33,6 +33,8 @@ For an overview, see [Understand data cards](working-with-cards.md).
 	1. [Customize the form](customize-forms-sharepoint.md).
 
 ## Customize a locked card ##
+In this procedure, you'll replace a **[Toggle](control-toggle.md)** control with a **[Radio](control-radio.md)** control without unlocking the card.
+
 1. In **EditScreen1**, click or tap the **Paid** card to select it.
 
 	![](./media/customize-card/select-paid-card.png)
@@ -45,9 +47,11 @@ For an overview, see [Understand data cards](working-with-cards.md).
 
 	![](./media/customize-card/display-radio.png)
 
-	For information about which types of columns support which types of cards, see [Known issues](connection-sharepoint-online.md#known-issues).
+	For information about which types of SharePoint columns support which types of cards, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 ## Unlock and customize a card ##
+In this procedure, you'll unlock a card and then replace a **[Text input](control-text-input.md)** control with a **[Slider](control-slider.md)** control.
+
 1. In **EditScreen1**, click or tap the **Quantity** card.
 
 1. In the right-hand pane, click or tap the ellipsis icon for that card, and then click or tap **Advanced options**.
