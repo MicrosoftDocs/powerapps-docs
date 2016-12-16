@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="aneesmsft"
-	manager="robinr"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Use field groups #
 

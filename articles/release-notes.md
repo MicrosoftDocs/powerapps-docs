@@ -14,12 +14,15 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="11/18/2016"
+    ms.date="12/08/2016"
     ms.author="anneta"/>
 
-# What's new in PowerApps release 2.0.560-2.0.561 #
+# What's new in PowerApps #
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+**Note**: The version numbers of the most recent releases of PowerApps will vary by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+## Release 2.0.560-2.0.561 ##
 1. **Support for universal links on iOS and Android devices**.
 
 1. **Back button support on Windows Phone devices**.
@@ -103,7 +106,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 1. **Improved mechanism for providing feedback**.
 
-	Instead of clicking or tapping the smile icon near the upper-right corner, create a ticket by clicking or tapping **Contact** on [our support page](https://powerapps.microsoft.com/support/) and then providing information about your question. You can also check the status of tickets that you've filed.
+	Instead of clicking or tapping the smile icon near the upper-right corner, create a ticket by clicking or tapping **Contact** on [our support page](https://powerapps.microsoft.com/support/) and then providing information about your question.
 
 ## Release 2.0.510-2.0.512 ##
 Because of administrative details, different platforms show different build numbers, but 2.0.510, 2.0.511, and 2.0.512 were released at effectively the same time.

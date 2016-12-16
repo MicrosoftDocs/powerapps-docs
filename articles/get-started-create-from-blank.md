@@ -110,7 +110,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 1. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
 
-	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer 1'))),'Volunteer 1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer_x0020_1'))),'Volunteer_x0020_1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
 	**Note**: If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md),
 

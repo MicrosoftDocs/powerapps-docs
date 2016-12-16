@@ -3,8 +3,8 @@
 	description="Create a custom entity that is based on another entity, or from scratch."
 	services="powerapps"
 	documentationCenter="na"
-	authors="robinarh"
-	manager="robinr"
+	authors="kfend"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/18/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Create a custom entity
 You can create a custom entity to store data that is specific to your organization. You can then show that data by developing an app that refers to the entity.
@@ -61,4 +61,3 @@ If you create an entity from scratch, it also contains a custom field that is na
 
 ## Privacy notice
 With the Microsoft PowerApps common data model we collect and store custom entity and field names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The entity and field names that Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
-

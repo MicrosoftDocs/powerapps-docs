@@ -4,7 +4,7 @@
 	services="powerapps"
 	documentationCenter="na"
 	authors="maertenm"
-	manager="robinr"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/28/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Configure database security #
 
@@ -30,7 +30,7 @@ It's important to understand what level of access to these entities is needed by
 
 The two most common permissions that are used are read-only and full access. The Common Data Service comes with permissions sets for all its entities at these two permission levels. View permission sets provide read access to the entity. Maintain  permission sets provide full access to the entity.
 
-The security model supports any combination of these permissions to be assigned to a user role. Roles combine the permissions granted across the permission sets added to them. In this way, members of a role can access all the data provided to them by the permission sets included in the role.
+The security model supports any combination of these permissions to be assigned to a user role. Roles combine the permissions granted across the permission sets added to them. In this way, members of a role can access all the data provided to them by the permission sets included in the role. For more information about the Common Data Service security model, see [Security model](https://docs.microsoft.com/en-us/common-data-service/entity-reference/security-model).
 
 ## Identify the entities ##
 To configure the proper access controls for an app, you will need to know what entities it is using. To see the entities an app uses:

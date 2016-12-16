@@ -3,8 +3,8 @@
 	description="Import or export an entity."
 	services="powerapps"
 	documentationCenter="na"
-	authors="RobinARH"
-	manager="robinr"
+	authors="kfend"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/19/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Import or export data from the Common Data Service #
 You can move data into or out of the Common Data Service in one of two ways:
