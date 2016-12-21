@@ -19,7 +19,7 @@
 
 # Linking SharePoint lists with lookup fields
 
-Data in one SharePoint list often relates to data in another list. For example, you might have a **Customers** list and an **Orders** list, and the **Orders** list might have a lookup relation to the **Customers** list to show which customer placed the order. You can use a lookup field in the **Orders** list to show data from the **Customers** list for the customer who placed the order.
+Data in one SharePoint list often relates to data in another list. For example, you might have a **Customers** list and an **Orders** list. The **Orders** list might have a lookup relation to the **Customers** list to show which customer placed the order. You can use a lookup field in the **Orders** list to show data from the **Customers** list for the customer who placed the order.
 
 ## Summary
 What do lookups mean in PowerApps, and why are they important?
@@ -36,7 +36,7 @@ This tutorial shows how lookups work with SharePoint lists. SharePoint provides 
 * Person or group
 
 
-We’ll review the specifics of each and use them in an app that we’ll create right in PowerApps. We'll also show how to enable lookups using more than one field.
+This topic reviews the specifics of each and uses them in a PowerApps app. You'll also see how to enable lookups using more than one field.
 
 ## Create the lists in SharePoint
 
@@ -44,9 +44,9 @@ We’ll review the specifics of each and use them in an app that we’ll create 
 
 This example links two SharePoint custom lists together, **Assets** and **RepairShop**.
 
-The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops we can contact to get it fixed.
+The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
 
-The **Assets** list has a lookup field pointing to a *RepairShop*, so you have to first create the **RepairShop** so that each row in the **Assets** list has something to point to. You use the ContactEmail field to identify the shop, and you may wish to define other fields as well.
+The **Assets** list has a lookup field pointing to a *RepairShop*. You must first create the **RepairShop** list so that each row in the **Assets** list has something to point to. You use the ContactEmail field to identify the shop, and you may wish to define other fields as well.
 
 Next you create the **Assets** list. You define three columns in **Assets**:
 * one of type *lookup* and which points to an email address in the **RepairShop** list.
@@ -61,9 +61,7 @@ The schema looks something like this:
 
 ### Populate the lookup list with data
 
-On your SharePoint site, first enter sample data into the **RepairShop** list.
-
-This ensures that when you create **Assets** entries, there will be **RepairShop** entries available to fill into the *Assets.RepairShop* lookup field.
+On your SharePoint site, first enter sample data into the **RepairShop** list. That way, when you create **Assets** entries,  **RepairShop** entries are available to fill into the *Assets.RepairShop* lookup field.
 
 ## Create an app from the main list
 Now you create an app that uses these lists.
@@ -84,7 +82,7 @@ To build the app, do the following steps:
 
 
 ## Add data to your main list
-Now that the app is generated, let’s run the app and take a look at how the view details screen looks for the three lookup fields.
+Now that the app is generated, let’s run the app and see how the view details screen looks for the three lookup fields.
 
 * Click or tap F5 or the "run triangle" on the upper right of the Studio tool bar.
 
@@ -105,7 +103,7 @@ Now that the app is generated, let’s run the app and take a look at how the vi
 
 * Press *escape* to return to the Studio designer. To save your app, press **File** and **Save as**.
 
-![AZURE.INCLUE](./includes/app-testing.md)
+[AZURE.INCLUDE[](../includes/testing-requirements.md)]
 
 ## Multiple fields in Lookups
 
@@ -115,7 +113,7 @@ For example, let’s assume your data source contains a lookup field to your emp
 
 Multiple field support is available for both SharePoint and Microsoft Common Data Model today with more connector support on the way.
 
-The existing app allows you to lookup **CurrentOwner** by email address. Lets change it to allow you to look the owner up by **DisplayName** and **Department**.
+The existing app allows you to lookup **CurrentOwner** by email address. Lets change it to allow you to look up the owner by **DisplayName** and **Department**.
 
 * Open your app in the Studio designer.
 
@@ -132,7 +130,7 @@ The existing app allows you to lookup **CurrentOwner** by email address. Lets ch
 * Change **Value2** to *Department*.
 ![](./media/sharepoint-lookup-fields/change-value2.png)
 
-* Now run the app, and start typing a name into the **CurrentOwner** text box. Note that names and departments will appear in the dropdown list, enabling you to use both fields to choose.
+* Now run the app, and start typing a name into the **CurrentOwner** text box. Note that names and departments appear in the dropdown list, enabling you to use both fields to choose.
 ![](./media/sharepoint-lookup-fields/multi-field-lookup.png)
 
 
