@@ -22,8 +22,6 @@
 
 ![Office 365 Video](./media/connection-office365-video/office365icon.png)
 
-**Important**: This connector doesn't function in the current build of PowerApps. We're aware of the issue and working to address it.
-
 The Office 365 Video provides access to work with Office 365 channels and videos.
 
 You can display video information on your app. For example, you can display all the available videos from a specific Office 365 video channel in your app. You can also display a specific video from a channel, and then play it on your app.

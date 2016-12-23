@@ -3,8 +3,8 @@
 	description="Generate an app to add, update, and delete records."
 	services="powerapps"
 	documentationCenter="na"
-	authors="robinarh"
-	manager="robinr"
+	authors="kfend"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/30/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Generate an app by using a Common Data Service database
 

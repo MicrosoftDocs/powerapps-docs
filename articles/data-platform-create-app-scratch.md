@@ -3,8 +3,8 @@
 	description="Create an app to add, update, and delete records."
 	services="powerapps"
 	documentationCenter="na"
-	authors="robinarh"
-	manager="robinr"
+	authors="kfend"
+	manager="kfend"
 	editor=""
 	tags=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/28/2016"
-   ms.author="robinr"/>
+   ms.date="12/06/2016"
+   ms.author="kfend"/>
 
 # Create an app from scratch using a Common Data Service database
 Build an app to manage data that's stored in the Common Data Service, using standard entities (which are built in), custom entities (which your organization creates), or both.
