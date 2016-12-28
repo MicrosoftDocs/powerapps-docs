@@ -36,7 +36,7 @@ describes several scenarios for uploading multimedia files to a data source. The
 
 
 ## Add media from a file ##
-You can choose which media option to add. For example, if you have some pictures or a video available, consider adding one of these.
+You can choose which kind of media file to add, for example, pictures, video, or audio.
 
 1. On the **Content** tab, select **Media**.
 2. Under **Media**, select **Images**, **Videos**, or **Audio**, and then select **Browse**:  
@@ -58,7 +58,7 @@ You can choose which media option to add. For example, if you have some pictures
 
 ## Multimedia and data source scenarios
 
-These scenarios requires you to do the following:
+These scenarios require you to do the following:
 * create a OneDrive data source based on an Excel file;
 * generate an app from that file.
 
@@ -186,7 +186,7 @@ In this scenario, you save images in a cloud storage account, OneDrive, and then
 
 When you set the Items property, the Excel table is automatically updated with a new column named __PowerAppsId__.
 
-In the Excel table, the image path can also be the URL to an image. To see an example of this, download the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
+In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
 [!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 
