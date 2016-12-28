@@ -151,7 +151,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 10. Add something else to your drawing, and select the button. The second image in the gallery control displays what you drew.
 
-11.	Close the preview window.
+11.	Close the preview window by pressing the *ESC* key.
 
 12. Go to your cloud storage account. There's a new **SavePen_images** folder that is automatically created. You may need to refresh to see the new folder. This folder contains your saved images with IDs for their file names.
 
