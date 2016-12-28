@@ -58,12 +58,13 @@ You can choose which media option to add. For example, if you have some pictures
 
 ## Multimedia and data source scenarios
 
-The first upload scenario require you to do the following:
+These scenarios requires you to do the following:
 * create a OneDrive data source based on an Excel file;
 * generate an app from that file.
-* modify that app to upload pen images to the data source;
 
-In the second scenario, you add the images in an OneDrive Excel file to your app.
+In the first scenario, you modify that app to upload pen images to the data source.
+
+In the second scenario, you modify the app so you can add the images from a OneDrive Excel file to your app.
 
 ## Create the OneDrive data source and Excel file
 
@@ -104,13 +105,13 @@ In the second scenario, you add the images in an OneDrive Excel file to your app
 
 ## Modify the app to use the pen control
 
-In this scenario, you learn how to modify the app to upload pen drawings to your data source (OneDrive in this case), and examine how the drawings are stored in OneDrive.
+In this scenario, you learn how to upload pen drawings to your data source, OneDrive, and examine how the drawings are stored in OneDrive.
 
 1. As in the preceding sections, create an Excel file with one column named **Image [image]**, in a table named **Drawings**, and save the Excel file to OneDrive as **SavePen.xlsx**.
 
 2.	In PowerApps, create a [blank app](get-started-create-from-blank.md).
 
-3.	In your app, add the cloud storage account as a [data source](add-data-connection.md) by:
+3.	In your app, add the cloud storage account as a [data source](add-data-connection.md):
 
 	*	click or tap the **Content** tab and then click or tap **Data sources**.
 
@@ -124,7 +125,7 @@ In this scenario, you learn how to modify the app to upload pen drawings to your
 
 	*	Select the **Drawings** table and click or tap **Connect**.
 
-4. Once added as a data source, add **SavePen.xlsx** as a connection, and then select the **Drawings** table:  
+4. Once you've added the data source, add **SavePen.xlsx** as a connection, and then select the **Drawings** table:  
 
 	![Connect](./media/add-images-pictures-audio-video/savepen.png)  
 
@@ -144,11 +145,15 @@ In this scenario, you learn how to modify the app to upload pen drawings to your
 
 	![Sample screen](./media/add-images-pictures-audio-video/screen.png)
 
-8.	Press F5 or select Preview ( ![](./media/add-images-pictures-audio-video/preview.png) ). Draw something in MyPen, and the select the button. The first image in the gallery control displays what you drew. Add something else to your drawing, and select the button. The second image in the gallery control displays what you drew.
+8.	Press F5 or select Preview ( ![](./media/add-images-pictures-audio-video/preview.png) ).
 
-	Close the preview window.
+9. Draw something in MyPen, and the select the button. The first image in the gallery control displays what you drew.
 
-9. Go to your cloud storage account. There's a new **SavePen_images** folder that is automatically created. You may need to refresh to see the new folder. This folder contains your saved images with IDs for their file names.
+10. Add something else to your drawing, and select the button. The second image in the gallery control displays what you drew.
+
+11.	Close the preview window.
+
+12. Go to your cloud storage account. There's a new **SavePen_images** folder that is automatically created. You may need to refresh to see the new folder. This folder contains your saved images with IDs for their file names.
 
 10.	Open **SavePen.xlsx**. The *Image* column specifies the path to the new images.
 
