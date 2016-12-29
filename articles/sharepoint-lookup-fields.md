@@ -33,7 +33,7 @@ In this tutorial, you build an app that uses all three kinds of lookup fields. Y
 
 Data in an enterprise is large and complex. Data in one SharePoint list often relates to data in another list. Lookup fields are the primary way such business data comes together.
 
-For example, you might have a **Customers** list and an **Orders** list. The **Orders** list might have a lookup relation to the **Customers** list to show which customer placed the order. You can use the lookup field in the **Orders** list to show data from the **Customers** list for the customer who placed the order. You could also use a lookup field to connect the **Orders** list to a **Product** list, and bring in all the information needed about the product ordered, such as product pictures, specifications, manufacturer details, etc.
+For example, you might have a **Customers** list and an **Orders** list. The **Orders** list might have a lookup relation to the **Customers** list to show which customer placed the order. You can use the lookup field in the **Orders** list to show data from the **Customers** list for the customer who placed the order. You can use a lookup field to connect the **Orders** list to a **Product** list, and bring in all the information needed about the product ordered, such as product pictures, specifications, manufacturer details, etc.
 
 ## Create the lists in SharePoint
 
@@ -113,9 +113,10 @@ For example, let’s assume your data source contains a lookup field to your emp
 
 Multiple field support is available for both SharePoint and the Microsoft Common Data Model today, with more connector support on the way.
 
-The existing app allows you to look up **CurrentOwner** by email address. Lets change it to allow you to look up the owner by **DisplayName** and **Department**.
+The existing app allows you to look up **CurrentOwner** by email address. Lets change it to allow you to look up the owner by *DisplayName* and *Department*.
 
-1. Open your app in the Studio designer.
+1. In the PowerApps Studio, click or tap **Open**, find your app in the list, and click or tap the edit icon.
+![](./media/sharepoint-lookup-fields/edit-app.png)
 
 2. Click or tap on the **EditScreen** in the left panel.
 ![](./media/sharepoint-lookup-fields/choose-edit-screen.png)
@@ -129,7 +130,7 @@ The existing app allows you to look up **CurrentOwner** by email address. Lets c
 5. Change **Value2** to *Department*.
 ![](./media/sharepoint-lookup-fields/change-value2.png)
 
-6. Now run the app, and start typing a name into the **CurrentOwner** text box. Note that names and departments appear in the dropdown list, enabling you to use both fields to choose.
+6. Now run the app, and start typing a name into the **CurrentOwner** text box. Names and departments appear in the dropdown list as you type, enabling you to use both fields to choose.
 ![](./media/sharepoint-lookup-fields/multi-field-lookup.png)
 
 [!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
