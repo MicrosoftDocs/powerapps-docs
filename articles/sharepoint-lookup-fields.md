@@ -23,17 +23,17 @@ This tutorial shows how lookup fields can connect two SharePoint lists.
 
 SharePoint provides three types of lookup fields:
 
-* **Choice**: a small list of items, where you choose one of them;
-* **Lookup**: links to another list, for example a *Customer* may have a lookup field that links to an *Orders* list;
+* **Choice**: a small list of items that you choose from;
+* **Lookup**: links to another list, for example an *Orders* list may have a lookup field that links to a *Customer* list;
 * **Person or group**: links to a special kind of list, the people or groups associated with your SharePoint server.
 
-In this tutorial, you build a PowerApps app that uses all three kinds of lookup fields. You'll also see how to enable lookups using more than one field.
+In this tutorial, you build an app that uses all three kinds of lookup fields. You can also  enable lookups using more than one field.
 
 ## What do you use lookup fields for?
 
 Data in an enterprise is large and complex. Data in one SharePoint list often relates to data in another list. Lookup fields are the primary way such business data comes together.
 
-For example, you might have a **Customers** list and an **Orders** list. The **Orders** list might have a lookup relation to the **Customers** list to show which customer placed the order. You can use the lookup field in the **Orders** list to show data from the **Customers** list for the customer who placed the order. You could also use a lookup field  to connect the **Orders** list to a **Product** list, and bring in all the information needed about the product ordered, such as product pictures, specifications, manufacturer details, etc.
+For example, you might have a **Customers** list and an **Orders** list. The **Orders** list might have a lookup relation to the **Customers** list to show which customer placed the order. You can use the lookup field in the **Orders** list to show data from the **Customers** list for the customer who placed the order. You could also use a lookup field to connect the **Orders** list to a **Product** list, and bring in all the information needed about the product ordered, such as product pictures, specifications, manufacturer details, etc.
 
 ## Create the lists in SharePoint
 
@@ -43,7 +43,7 @@ In this tutorial, you link two SharePoint custom lists together, **Assets** and 
 
 The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
 
-The **Assets** list has a lookup field pointing to a *RepairShop*. You must first create the **RepairShop** list so that each row in the **Assets** list has something to point to. You use the ContactEmail field to identify the shop, and you may wish to define other fields as well.
+The **Assets** list has a lookup field pointing to a **RepairShop**. You must first create the **RepairShop** list so that each row in the **Assets** list has something to point to. You use the *ContactEmail* field to identify the shop, and you may wish to define other fields as well.
 
 Next you create the **Assets** list. You define three lookup columns in **Assets**:
 * one of type *lookup* and which points to an email address in the **RepairShop** list.
@@ -58,15 +58,14 @@ The schema looks something like this:
 
 ### Populate the RepairShop list with data
 
-On your SharePoint site, enter sample data into the **RepairShop** list. That way, when you create **Assets** data,  **RepairShop** entries are available to fill into the *Assets.RepairShop* lookup field.
+On your SharePoint site, enter sample data into the **RepairShop** list. That way, when you create **Assets** data, **RepairShop** entries are available to fill into the *Assets.RepairShop* lookup field.
 
 ## Create an app from the main list
 Now you create an app that uses these lists.
-To build the app, do the following steps:
 
 1. Open PowerApps Studio.
 
-	(New to PowerApps? [Sign up for free](https://powerapps.microsoft.com)  using your organizational email address and follow the instructions to download PowerApps Studio from the Windows store)
+	(New to PowerApps? [Sign up for free](https://powerapps.microsoft.com) using your organizational email address and follow the instructions to download PowerApps Studio from the Windows store)
 
 2. In PowerApps Studio, click or tap New --> ”SharePoint”
 ![](./media/sharepoint-lookup-fields/create-app.png)
@@ -74,18 +73,18 @@ To build the app, do the following steps:
 3. Choose your SharePoint site from the **Recent sites** list or enter your site's url directly into the text box. Click or tap **GO**.
 ![](./media/sharepoint-lookup-fields/choose-sharepoint-site.png)
 
-4. Choose the main list from your SharePoint site, in this example, **Assets**. Click or tap **Connect**.
+4. Choose the main list from your SharePoint site, in this example, **Assets**. Click or tap the **Connect** button in the lower right.
 ![](./media/sharepoint-lookup-fields/choose-main-list.png)
 
 
 ## Add data to your main list
 Now that the app is generated, let’s run the app and see how the view details screen looks for the three lookup fields.
 
-1. Click or tap F5 or the "run triangle" on the upper right of the Studio tool bar.
+1. Click or tap F5 or the "run triangle" on the upper right of the PowerApps Studio tool bar.
 
 2. Enter an *AssetName*.
 
-3. Click or tap the **AssetType** dropdown arrow. Choose one of the entries. Note that the values displayed were those you entered when you created this column.
+3. Click or tap the **AssetType** dropdown arrow. The values displayed are those you entered when you created this column. Choose one of the entries.
 ![](./media/sharepoint-lookup-fields/fill-asset-type.png)
 
 4. Click or tap the **RepairShop** dropdown arrow. Choose one of the entries.
@@ -112,9 +111,9 @@ PowerApps supports using multiple fields from your lookup data source.
 
 For example, let’s assume your data source contains a lookup field to your employee list, and in your company there are multiple people with the same first and last name.  So that users of your app can properly distinguish between “Anne Smith” from accounting and “Anne Smith” from engineering you can configure your lookup to show more than one field.
 
-Multiple field support is available for both SharePoint and Microsoft Common Data Model today with more connector support on the way.
+Multiple field support is available for both SharePoint and the Microsoft Common Data Model today, with more connector support on the way.
 
-The existing app allows you to lookup **CurrentOwner** by email address. Lets change it to allow you to look up the owner by **DisplayName** and **Department**.
+The existing app allows you to look up **CurrentOwner** by email address. Lets change it to allow you to look up the owner by **DisplayName** and **Department**.
 
 1. Open your app in the Studio designer.
 
