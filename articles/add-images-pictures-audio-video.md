@@ -17,23 +17,13 @@
    ms.date="12/28/2016"
    ms.author="ricksal"/>
 
-# Add multimedia files and upload them to a data source
+# Show multimedia files in PowerApps
 
-This topic shows you how to embed multimedia files into your app, and
-describes several scenarios for uploading multimedia files to a data source. The data source used in this topic is an Excel file in OneDrive.
+This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive.
 
 ## Prerequisites
 
-- [Sign up](../articles/signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
-
-- Create an app from a [template](../articles/get-started-test-drive.md), from [data](../articles/get-started-create-from-data.md), or from [scratch](../articles/get-started-create-from-blank.md).
-
-- Familiarity with [adding and configuring controls](add-configure-controls.md).
-
-- Familiarity with [configuring Excel data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370?ui=en-US&rs=en-US&ad=US).
-
-- A [PowerApps connection](add-data-connection.md) to a cloud-storage account (such as Dropbox, OneDrive, or Google Drive) in which you can store an Excel file.
-
+[Sign up](../articles/signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
 
 ## Add media from a file ##
 You can choose which kind of media file to add, for example, pictures, video, or audio.
@@ -43,7 +33,7 @@ You can choose which kind of media file to add, for example, pictures, video, or
 	![][1]  
 3. Select the file that you want to add, and then select **Open**.
 4. When you finish adding files, go back to the app designer. You can also press Esc.
-5. On the **Insert** tab, select **Media**, and then choose image, video, or audio:  
+5. On the **Insert** tab, select **Media**, and then select **Image**, **Video**, or **Audio**:  
 	![][8]
 
 	- If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
@@ -56,17 +46,45 @@ You can choose which kind of media file to add, for example, pictures, video, or
 
 	**Note** Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
-## Multimedia and data source scenarios
+	## Add images in an Excel file to your app
 
-These scenarios require you to do the following:
-* create a OneDrive data source based on an Excel file;
-* generate an app from that file.
+	In this scenario, you save images in a cloud storage account, OneDrive for Business, and then use an Excel table to display the images in your app. This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
-In the first scenario, you modify that app to upload pen images to the data source.
+	> [!NOTE]
+	> When displaying images from an Excel file, the path to these images must use forward slashes. When PowerApps saves images to an Excel table (as with the previous steps), the path uses backslashes. So, you can also use the **SavePen_images** from the previous example. If you do, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
 
-In the second scenario, you modify the app so you can add the images from a OneDrive Excel file to your app.
+	1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 
-## Create the OneDrive data source and Excel file
+	2. Rename the **Assets** folder to **Assets_images**.
+	3. In an Excel spreadsheet, create a one-column table and fill it with the following data:
+
+		![Jackets table](./media/add-images-pictures-audio-video/jackets.png)
+
+	4. Name the table **Jackets**. Name the Excel file **Assets.xlsx**.
+
+	5. In your app, add the **Jackets** table as a data source.  
+
+	6. Add an **Image only** control (**Insert** tab > **Gallery**), and set its **Items** property to `Jackets`:  
+
+		![Items property](./media/add-images-pictures-audio-video/items-jackets.png)
+
+		The gallery is automatically updated with the images:  
+
+		![Jacket images](./media/add-images-pictures-audio-video/images.png)
+
+	When you set the Items property, the Excel table is automatically updated with a new column named __PowerAppsId__.
+
+	In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
+
+## Working with data sources
+
+Data source scenarios require you to do the following:
+1. create a OneDrive data source based on an Excel file;
+2. generate an app from that file.
+
+This section is a detailed reference for these two procedures. Your data source scenario that follows is described in less detail, but you will do very similar procedures.
+
+### Create the OneDrive data source and Excel file
 
 1. In Excel, add **Caption** and **Image [image]** to any two cells that are side by side (for example, A1 and B1) and that are just above two empty cells.
 
@@ -86,11 +104,13 @@ In the second scenario, you modify the app so you can add the images from a OneD
 
 		![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
 
-3. Save the file (for example, as **MediaDemo**), and upload it to your cloud-storage account. If you are using OneDrive, you can save it directly there.
+3. Save the file (for example, as **ImageDemo**), and upload it to your cloud-storage account. If you are using OneDrive, you can save it directly there.
 
-## Create an app from the data source
+Note that the table name and file name may be different, depending on the scenario your app fulfills.
 
-1. In PowerApps, click or tap **New** on the **File** menu (along the left edge if you haven't yet opened an app). Next click or tap **Phone layout** in the tile for your cloud-storage account, OneDrive in this tutorial.
+### Create an app from the data source
+
+1. In PowerApps, click or tap **New** on the **File** menu (along the left edge if you haven't yet opened an app). Next click or tap **Phone layout** in the tile for your cloud-storage account, OneDrive for Business in this tutorial.
 
 	![Select your cloud-storage account](./media/add-images-pictures-audio-video/select-account.png)
 
@@ -103,27 +123,45 @@ In the second scenario, you modify the app so you can add the images from a OneD
 	![Select your table](./media/add-images-pictures-audio-video/select-table.png)
 
 
-## Modify the app to use the pen control
+## Upload pen drawings to OneDrive
 
-In this scenario, you learn how to upload pen drawings to your data source, OneDrive, and examine how the drawings are stored in OneDrive.
+In this scenario, you learn how to upload pen drawings to your data source, OneDrive for Business, and examine how the drawings are stored in OneDrive for Business.
 
-1. As in the preceding sections, create an Excel file with one column named **Image [image]**, in a table named **Drawings**, and save the Excel file to OneDrive as **SavePen.xlsx**.
+1. In Excel, add **Image [image]** to cell A1.
+
+2.	Create a table using the following steps:    
+
+	a. Select cell A1.
+
+	b. On the **Insert** ribbon, select **Table**.
+
+	c. In the dialog window, select **My table has headers**, and select **OK**.
+
+		![Create a table](./media/add-images-pictures-audio-video/create-table.png)
+
+		Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information on table formatting in Excel.
+
+	d. Name the table **Drawings**:  
+
+		![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
+
+3. save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
 2.	In PowerApps, create a [blank app](get-started-create-from-blank.md).
 
 3.	In your app, add the cloud storage account as a [data source](add-data-connection.md):
 
-	*	click or tap the **Content** tab and then click or tap **Data sources**.
+	a.	Click or tap the **Content** tab and then click or tap **Data sources**.
 
 		![](./media/add-images-pictures-audio-video/choose-data-sources.png)
 
-	*	click or tap **Add data source** and click or tap one, OneDrive in this case.
+	b.	Click or tap **Add data source** and click or tap one, OneDrive for Business in this case.
 
 		![](./media/add-images-pictures-audio-video/select-source.png)
 
-	*	Click or tap **SavePen.xlsx**.
+	c.	Click or tap **SavePen.xlsx**.
 
-	*	Select the **Drawings** table and click or tap **Connect**.
+	d.	Select the **Drawings** table and click or tap **Connect**.
 
 4. Once you've added the data source, add **SavePen.xlsx** as a connection, and then select the **Drawings** table:  
 
@@ -131,15 +169,15 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 	Now, the Drawings table is listed as a Data source.
 
-5.  On the **Insert** menu, select **Text**, and then select **Pen input**. Rename it **MyPen**:  
+5.  On the **Insert** tab, select **Text**, and then select **Pen input**. Rename it **MyPen**:  
 
 	![Rename](./media/add-images-pictures-audio-video/rename-mypen.png)
 
-6.	Add a **Button** control (**Insert** menu), and set its **OnSelect** property to the following formula:
+6.	Add a **Button** control (**Insert** tab), and set its **OnSelect** property to the following formula:
 
 			Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})
 
-7.	Add an **Image gallery** control (**Insert** menu > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
+7.	Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
 
 	Your screen should look similar to the following:  
 
@@ -159,34 +197,6 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 [!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 
-## Add the images in an Excel file in OneDrive to your app
-
-In this scenario, you save images in a cloud storage account, OneDrive, and then use an Excel table to display the images in your app. This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
-
-> [!NOTE]
-> When displaying images from an Excel file, the path to these images must use forward slashes. When PowerApps saves images to an Excel table (as with the previous steps), the path uses backslashes. So, you can also use the **SavePen_images** from the previous example. If you do, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
-
-1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
-
-2. In an Excel spreadsheet, create a one-column table and fill it with the following data:
-
-	![Jackets table](./media/add-images-pictures-audio-video/jackets.png)
-
-3. Name the table **Jackets**. Name the Excel file **Assets.xlsx**. You can also rename the **Assets** folder to **Assets_images**.
-
-4. In your app, add the **Jackets** table as a data source.  
-
-5. Add an **Image only** control (**Insert** menu > **Gallery**), and set its **Items** property to `Jackets`:  
-
-	![Items property](./media/add-images-pictures-audio-video/items-jackets.png)
-
-	The gallery is automatically updated with the images:  
-
-	![Jacket images](./media/add-images-pictures-audio-video/images.png)
-
-When you set the Items property, the Excel table is automatically updated with a new column named __PowerAppsId__.
-
-In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
 [!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 
