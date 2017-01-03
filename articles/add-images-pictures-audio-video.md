@@ -46,11 +46,11 @@ You can choose which kind of media file to add, for example, pictures, video, or
 
 	**Note** Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
-## Add images in an Excel file to your app
+## Add images in OneDrive to your app
 
 In this scenario, you save images in a cloud storage account, OneDrive for Business, and then use an Excel table to display the images in your app. This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
-**NOTE**: When displaying images from an Excel file, the path to these images must use forward slashes. When PowerApps saves images to an Excel table (as with the previous steps), the path uses backslashes. So, you can also use the **SavePen_images** from the previous example. If you do, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
+**NOTE**: When displaying images from an Excel file, the path to these images must use forward slashes. When PowerApps saves images to an Excel table, the path uses backslashes. If you use images from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
 
 1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 
