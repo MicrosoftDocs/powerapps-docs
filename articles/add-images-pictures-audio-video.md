@@ -76,7 +76,7 @@ In this scenario, you save images in a cloud storage account, OneDrive for Busin
 	In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
 
-[!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
+[AZURE.INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 
 
 ## Upload pen drawings to OneDrive for Business
@@ -151,7 +151,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 
 
-[!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
+[AZURE.INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 
 ## For more information
 
