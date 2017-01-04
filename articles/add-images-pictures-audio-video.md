@@ -1,11 +1,11 @@
 <properties
-	pageTitle="Add an image, a video, or a sound | Microsoft PowerApps"
-	description="Show an image file, play a video file, take a picture with a camera, draw a picture with a pen, or record and play an audio file"
+	pageTitle="Embed multimedia files into a PowerApps app and upload | Microsoft PowerApps"
+	description="Show multimedia files in an app, and upload them to a data source"
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="lonu"
-	manager="erikre"
+	authors="RickSaling"
+	manager="anneta"
 	editor=""/>
 
 <tags
@@ -14,26 +14,26 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="lonu"/>
+   ms.date="12/28/2016"
+   ms.author="ricksal"/>
 
-# Add an image, a video, or a sound
+# Show multimedia files in PowerApps
 
-Make your app stand out by adding multimedia such as images, videos, and sounds. Upload one or more existing files, create content on the fly by using your device's camera or microphone, or draw with a pen on a virtual whiteboard.
+This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive for Business.
 
-&nbsp;
+## Prerequisites
 
-[AZURE.INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+[Sign up](../articles/signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
 
 ## Add media from a file ##
-You can choose which media option to add. For example, if you have some pictures or a video available, consider adding one of these.
+You can choose which kind of media file to add, for example, pictures, video, or audio.
 
 1. On the **Content** tab, select **Media**.
 2. Under **Media**, select **Images**, **Videos**, or **Audio**, and then select **Browse**:  
 	![][1]  
 3. Select the file that you want to add, and then select **Open**.
 4. When you finish adding files, go back to the app designer. You can also press Esc.
-5. On the **Insert** tab, select **Media**, and then choose image, video, or audio:  
+5. On the **Insert** tab, select **Media**, and then select **Image**, **Video**, or **Audio**:  
 	![][8]
 
 	- If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
@@ -46,117 +46,118 @@ You can choose which media option to add. For example, if you have some pictures
 
 	**Note** Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
-## Add a user picture ##
-When users run your app, they can add their own images from existing files. In a real-estate app, for example, users might upload pictures of houses they want to sell. In an insurance app, users might upload pictures of damage from car accidents so that estimators can respond.
+## Add images in OneDrive for Business to your app
 
-1. On the **Insert** tab, select **Media**, and then select **Add Picture**. The control appears as if another user were running the app:  
+In this scenario, you save images in a cloud storage account, OneDrive for Business, and then use an Excel table to display the images in your app. This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
-	![Preview of an Add Picture control][4]
+**NOTE**: When displaying images from an Excel file, the path to these images must use forward slashes. When PowerApps saves images to an Excel table, the path uses backslashes. If you use images from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
 
-2. Select the control, select the file that you want to add, and then select **Open**.
+1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 
-The picture is displayed.
+2. Rename the **Assets** folder to **Assets_images**.
+3. In an Excel spreadsheet, create a one-column table and fill it with the following data:
 
-**Important** To retain the image after the app is closed, use the [SaveData](functions/function-savedata-loaddata.md) function to save it locally, or use the [Patch](functions/function-patch.md) function to save it to a data source.
+	![Jackets table](./media/add-images-pictures-audio-video/jackets.png)
 
-## Take a set of pictures
-Take multiple pictures with the camera on your computer or mobile device, and then show them in a gallery.
+4. Name the table **Jackets**. Name the Excel file **Assets.xlsx**.
 
-1. On the **Insert** tab, select **Media**, and then select **Camera**. Rename it **MyCamera**:  
-	![][11]
-2. Set its **[OnSelect](controls/properties-core.md)** property to this formula:
+5. In your app, add the **Jackets** table as a data source.  
 
-	```Collect(MyImages, {SinglePicture:MyCamera.Photo})```
+6. Add an **Image only** control (**Insert** tab > **Gallery**), and set its **Items** property to `Jackets`:  
 
-3. On the **Insert** tab, select **Gallery**, and then select one of the **Image only** options. Set the image gallery's  **[Items](controls/properties-core.md)** property to **MyImages**.
+	![Items property](./media/add-images-pictures-audio-video/items-jackets.png)
 
-4. Select the image control for the first item in the gallery, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
+	The gallery is automatically updated with the images:  
 
-	```Remove(MyImages, ThisItem)```
+	![Jacket images](./media/add-images-pictures-audio-video/images.png)
 
-5. Press F5, and select **MyCamera** a couple of times.
+	When you set the Items property, the Excel table is automatically updated with a new column named __PowerAppsId__.
 
-	Each time you select **MyCamera**, an image is added to the gallery.
+	In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
-	![A camera that, when a user selects it, adds pictures to a gallery][5]
 
-6. Select an image in the gallery to remove that image.
+[AZURE.INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 
-7. When you finish adding and removing images from the gallery, press Esc to return to the default workspace.
 
-**Important** To retain the images after the app is closed, use the [SaveData](functions/function-savedata-loaddata.md) function to save them locally, or use the [Patch](functions/function-patch.md) function to save them to a data source.
+## Upload pen drawings to OneDrive for Business
 
-## Record a set of sounds
-1. On the **Insert** tab, select **Text**, and then select **Text input**. Rename it **Description**.
-2. Add a microphone, rename it **MyMicrophone**, and set its **[OnStop](controls/control-microphone.md)** property to this formula:
+In this scenario, you learn how to upload pen drawings to your data source, OneDrive for Business, and examine how the drawings are stored in OneDrive for Business.
 
-	```Collect(Interviews, {Recordings:MyMicrophone.Audio, Notes:Description.Text})```
+1. In Excel, add **Image [image]** to cell A1.
 
-	By using this formula, you create a collection named **Interviews**, which contains a column named **Recordings** and a column named **Notes**. Each row contains a sound file that you create by using the microphone and any text in the **Description** box when you stop recording.
+2.	Create a table using the following steps:    
 
-3. Add a custom gallery, and set its **[Items](controls/properties-core.md)** property to **Interviews**.
+	a. Select cell A1.
 
-4. Select the first item in the gallery, add an audio control to it, and then set the **Media** property for the audio control to **ThisItem.Recordings**.
+	b. On the **Insert** ribbon, select **Table**.
 
-	**Note** You can save visual space by shrinking the audio control so that only the play button appears.
+	c. In the dialog window, select **My table has headers**, and select **OK**.
 
-5. Select the first item in the gallery, add a text box to it, and set the **[Text](controls/properties-core.md)** property of the text box to **ThisItem.Notes**.
+	![Create a table](./media/add-images-pictures-audio-video/create-table.png)
 
-6. Press F5, type a phrase in the **Description** box, and then select **MyMicrophone** to start recording.
+	Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information on table formatting in Excel.
 
-1. When you finish recording, select **MyMicrophone** again to stop recording.
+	d. Name the table **Drawings**:  
 
-	Your description appears in the first item of the gallery, and your recording plays if you select the play button in the audio control.
+	![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
 
-1. Type something else in the **Description** box, make another recording, and repeat as many times as you want.
+3. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
-	Each description and recording appears in the gallery.
+4.	In PowerApps, create a [blank app](get-started-create-from-blank.md).
 
-	![A gallery that shows descriptions and audio controls][6]
+5.	In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 
-1. Press Esc to return to the default workspace.
+	a.	Click or tap the **Content** tab and then click or tap **Data sources**.
 
-1. (optional) In the gallery, set the **[OnSelect](controls/properties-core.md)** property of the text box to **Remove(Interviews, ThisItem)**, press F5, and then select a description to remove it and its recording.
+	![](./media/add-images-pictures-audio-video/choose-data-sources.png)
 
-**Important** To retain the sounds after the app is closed, use the [SaveData](functions/function-savedata-loaddata.md) function to save them locally, or use the [Patch](functions/function-patch.md) function to save them to a data source.
+	b.	Click or tap **Add data source** and click or tap one, OneDrive for Business.
 
-## Draw a picture ##
-Create multiple drawings (or simulate a whiteboard), and show the results in a gallery.
+	![](./media/add-images-pictures-audio-video/select-source.png)
 
-1. Add a pen-input control, rename it **Sketches**, and set its **ShowControls** property to **true**.
-1. Add a button, set its **[Text](controls/properties-core.md)** property to **Add**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
+	c.	Click or tap **SavePen.xlsx**.
 
-	```Collect(Creativity, {Captures:Sketches.Image})```
+	d.	Select the **Drawings** table and click or tap **Connect**.
 
-1. Add an image-only gallery, and set its **[Items](controls/properties-core.md)** property to **Creativity**.
+	![Connect](./media/add-images-pictures-audio-video/savepen.png)  
 
-1. Select the first item in the gallery, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
+	Now, the Drawings table is listed as a Data source.
 
-	```Remove(Creativity, ThisItem)```
+6.  On the **Insert** tab, select **Text**, and then select **Pen input**. Rename it **MyPen**:  
 
-1. Press F5, draw or write something in **Sketches**, and then select the **Add** button.
+	![Rename](./media/add-images-pictures-audio-video/rename-mypen.png)
 
-	The contents of the pen control appear in the first item of the gallery.
+7.	Add a **Button** control from the **Insert** tab, and set its **OnSelect** property to the following formula:
 
-1. Select the clear button (with the "x") in **Sketches**, write or draw something else in it, and then select the **Add** button again.
+			Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})
 
-	The contents of the pen control appear in the second item in the gallery.
+8.	Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
 
-	![A gallery that shows pen drawings][7]
+	Move the controls around so that your screen should look similar to the following:  
 
-	**Tip** To remove a sketch, select it in the gallery.
+	![Sample screen](./media/add-images-pictures-audio-video/screen.png)
 
-1. Repeat these steps as many times as you want, and then press Esc to return to the default workspace.
+8.	Press F5 or select Preview ( ![](./media/add-images-pictures-audio-video/preview.png) ).
 
-	**Important** To retain the images after the app is closed, use the [SaveData](functions/function-savedata-loaddata.md) function to save them locally, or use the [Patch](functions/function-patch.md) function to save them to a data source.
+9. Draw something in MyPen, and the select the button. The first image in the gallery control displays what you drew.
 
-1. (optional) Convert written text to typed text:
+10. Add something else to your drawing, and select the button. The second image in the gallery control displays what you drew.
 
-	1. Add a text box, and set its **[Text](controls/properties-core.md)** property to **Sketches.RecognizedText**.
-	1. Press F5, and then write a word in the pen control.
+11.	Close the preview window by pressing the *ESC* key.
 
-	The text shows the word as typed text.
+12. Go to your cloud storage account. There's a new **SavePen_images** folder that is automatically created. You may need to refresh to see the new folder. This folder contains your saved images with IDs for their file names.
 
+10.	Open **SavePen.xlsx**. The *Image* column specifies the path to the new images.
+
+
+
+[AZURE.INCLUDE [testing-requirements](../includes/testing-requirements.md)]
+
+## For more information
+
+For information on more advanced scenarios involving uploading multimedia directly to a different data source, see [image capture pro tips](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) and [custom api for image upload](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
+
+Another way to upload files to a data source is to use the [Patch](functions/function-patch.md) function.
 
 
 [1]: ./media/add-images-pictures-audio-video/add-image-video-audio-file.png
