@@ -93,13 +93,13 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 	c. In the dialog window, select **My table has headers**, and select **OK**.
 
-		![Create a table](./media/add-images-pictures-audio-video/create-table.png)
+	![Create a table](./media/add-images-pictures-audio-video/create-table.png)
 
-		Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information on table formatting in Excel.
+	Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information on table formatting in Excel.
 
 	d. Name the table **Drawings**:  
 
-		![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
+	![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
 
 3. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
@@ -109,11 +109,11 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 	a.	Click or tap the **Content** tab and then click or tap **Data sources**.
 
-		![](./media/add-images-pictures-audio-video/choose-data-sources.png)
+	![](./media/add-images-pictures-audio-video/choose-data-sources.png)
 
 	b.	Click or tap **Add data source** and click or tap one, OneDrive for Business.
 
-		![](./media/add-images-pictures-audio-video/select-source.png)
+	![](./media/add-images-pictures-audio-video/select-source.png)
 
 	c.	Click or tap **SavePen.xlsx**.
 
