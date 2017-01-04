@@ -19,7 +19,7 @@
 
 # Show multimedia files in PowerApps
 
-This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive.
+This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive for Business.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ You can choose which kind of media file to add, for example, pictures, video, or
 
 	**Note** Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
-## Add images in OneDrive to your app
+## Add images in OneDrive for Business to your app
 
 In this scenario, you save images in a cloud storage account, OneDrive for Business, and then use an Excel table to display the images in your app. This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
@@ -79,7 +79,7 @@ In this scenario, you save images in a cloud storage account, OneDrive for Busin
 [!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 
 
-## Upload pen drawings to OneDrive
+## Upload pen drawings to OneDrive for Business
 
 In this scenario, you learn how to upload pen drawings to your data source, OneDrive for Business, and examine how the drawings are stored in OneDrive for Business.
 
@@ -103,15 +103,15 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 3. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
-2.	In PowerApps, create a [blank app](get-started-create-from-blank.md).
+4.	In PowerApps, create a [blank app](get-started-create-from-blank.md).
 
-3.	In your app, add the cloud storage account as a [data source](add-data-connection.md):
+5.	In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 
 	a.	Click or tap the **Content** tab and then click or tap **Data sources**.
 
 		![](./media/add-images-pictures-audio-video/choose-data-sources.png)
 
-	b.	Click or tap **Add data source** and click or tap one, OneDrive for Business in this case.
+	b.	Click or tap **Add data source** and click or tap one, OneDrive for Business.
 
 		![](./media/add-images-pictures-audio-video/select-source.png)
 
@@ -119,23 +119,21 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 	d.	Select the **Drawings** table and click or tap **Connect**.
 
-4. Once you've added the data source, add **SavePen.xlsx** as a connection, and then select the **Drawings** table:  
-
 	![Connect](./media/add-images-pictures-audio-video/savepen.png)  
 
 	Now, the Drawings table is listed as a Data source.
 
-5.  On the **Insert** tab, select **Text**, and then select **Pen input**. Rename it **MyPen**:  
+6.  On the **Insert** tab, select **Text**, and then select **Pen input**. Rename it **MyPen**:  
 
 	![Rename](./media/add-images-pictures-audio-video/rename-mypen.png)
 
-6.	Add a **Button** control (**Insert** tab), and set its **OnSelect** property to the following formula:
+7.	Add a **Button** control from the **Insert** tab, and set its **OnSelect** property to the following formula:
 
 			Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})
 
-7.	Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
+8.	Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
 
-	Your screen should look similar to the following:  
+	Move the controls around so that your screen should look similar to the following:  
 
 	![Sample screen](./media/add-images-pictures-audio-video/screen.png)
 
