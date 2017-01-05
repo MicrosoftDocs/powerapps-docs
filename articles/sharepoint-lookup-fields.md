@@ -23,11 +23,11 @@ This tutorial shows how lookup fields can connect two SharePoint lists.
 
 SharePoint provides three types of lookup fields:
 
-* **Choice**: a small list of items that you choose from;
-* **Lookup**: links to another list, for example an *Orders* list may have a lookup field that links to a *Customer* list;
-* **Person or group**: links to a special kind of list, the people or groups associated with your SharePoint server.
+* **Choice**: clicking or tapping the field displays a small menu of items that you choose from;
+* **Lookup**: links to another list: for example an *Orders* list may have a lookup field that links to customers in a *Customer* list;
+* **Person or group**: links to people or groups.
 
-In this tutorial, you build an app that uses all three kinds of lookup fields. You can also  enable lookups using more than one field.
+In this tutorial, you build an app that uses all three kinds of lookup fields.
 
 ## What do you use lookup fields for?
 
@@ -37,18 +37,16 @@ For example, you might have an **Orders** list which has a lookup link to a **Cu
 
 ## Create the lists in SharePoint
 
-### The schema used in this example
+In this tutorial, you link two SharePoint custom lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
 
-In this tutorial, you link two SharePoint custom lists together, **Assets** and **RepairShop**.
+### The lookup fields used in this example
 
-The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
-
-The **RepairShop** list uses the *ContactEmail* field to identify the shop, and you may wish to define other fields as well. It must be defined first so that each row in the **Assets** list has something to point to.
+The **RepairShop** list uses the *ContactEmail* field to identify the shop. This list is defined first so that each row in the **Assets** list has something to point to.
 
 The **Assets** list has three lookup columns:
-* one called *RepairShop*, of type *lookup*, which points to an email address in the **RepairShop** list.
-* one called *AssetType*, of type *choice*, in which you populate the choice values when you define the column;
-* one called *CurrentOwner*, of type *Person or Group*.
+* one called *RepairShop*, of type *lookup*, which points to email addresses in the **RepairShop** list. Picking an email address is how you specify what **RepairShop** has this asset.
+* one called *AssetType*, of type *choice*, which lists the kind of hardware that this asset might be;
+* one called *CurrentOwner*, of type *Person or Group*, which is the person responsible for this asset.
 
 You most likely would define additional columns, depending on the information you need to track.
 
@@ -58,15 +56,15 @@ The schema looks like this:
 
 ### Define the RepairShop list and add data
 
-You must do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available to fill into the *Assets.RepairShop* lookup field.
+You must do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available so you can choose one from the *Assets.RepairShop* lookup field.
 
 1. On your SharePoint site, create a new **RepairShop** list.
 
-2. Add a *ContactEmail* text field.
+2. Add a *ContactEmail* field of type "Single line of text".
 
 3. Add any other fields you need.
 
-4. Enter sample data into the list, at least 3 rows with different *ContactEmail* values.
+4. Enter sample data into the list, at least 3 rows with different *ContactEmail* values. When an asset needs to be repaired, you choose one of these.
 
 ### Define the Assets list
 
@@ -76,7 +74,7 @@ You must do this first, so that when you add data to the **Assets** list, **Repa
 
 	![](./media/sharepoint-lookup-fields/choose-more-type.png)
 
-3. Add an *AssetType* column of type **choice**, and fill in the values you want to appear in the choice menu. Then click or tap **OK**.
+3. Add an *AssetType* column of type **Choice**, and in the **Type each choice on a separate line** text box, fill in the values you want to appear in the choice menu. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/define-choice-column.png)
 
 4. Add another column, just like in step 2, and click or tap **More**.
@@ -84,10 +82,12 @@ You must do this first, so that when you add data to the **Assets** list, **Repa
 5. Add an *RepairShop* column of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/setup-lookup-column.png)
 
-6. Add an *CurrentOwner* column of type **Person or Group**. There are a number of options you can choose from, but for this tutorial, leave the default settings. Then click or tap **OK**.
+6. Add another column, just like in step 2, and click or tap **More**.
+
+7. Add an *CurrentOwner* column of type **Person or Group**. There are a number of options you can choose from, but for this tutorial, leave the default settings. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/define-current-owner.png)
 
-7. Add an **AssetName** text column, and define any additional columns you want.
+8. Add an **AssetName** column of type **Single line of text**, and define any additional columns you want.
 
 ## Create an app from the Assets list
 You use this app to add data to the **Assets** list.
@@ -106,7 +106,7 @@ You use this app to add data to the **Assets** list.
 
 
 ## Add data to your main list
-Now that the app is generated, you can run the app and see how the view details screen looks for the three lookup fields.
+Now that the app is generated, you run the app and see how the view details screen looks for the three lookup fields.
 
 1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ). Click or tap the **+** symbol in the upper right corner to add an entry.
 
@@ -136,38 +136,6 @@ Now that the app is generated, you can run the app and see how the view details 
 [AZURE.INCLUDE[](../includes/testing-requirements.md)]
 -->
 
-## Multiple fields in Lookups
-
-PowerApps supports using multiple fields in lookups.
-
-For example, let’s assume your data source contains a lookup field to your employee list, and in your company there are multiple people with the same first and last name.  So that users of your app can distinguish between “Anne Smith” from accounting and “Anne Smith” from engineering, you can configure your lookup to show more than one field.
-
-Multiple field support is available for both SharePoint and the Microsoft Common Data Model today, with more connector support on the way.
-
-The existing app allows you to look up **CurrentOwner** by email address. Lets change it to allow you to look up the owner by *DisplayName* and *Department*.
-
-1. In the PowerApps Studio, click or tap **Open**, find your app in the list, and click or tap the edit icon.
-![](./media/sharepoint-lookup-fields/edit-app.png)
-
-2. Click or tap on the **EditScreen** in the left panel.
-![](./media/sharepoint-lookup-fields/choose-edit-screen.png)
-
-3. Click or tap the **CurrentOwner** field, then click or tap **Advanced**, and finally click or tap **Unlock to change properties**.
-![](./media/sharepoint-lookup-fields/enable-edits.png)
-
-4. Change **Value1** to *DisplayName*.
-![](./media/sharepoint-lookup-fields/change-value1.png)
-
-5. Change **Value2** to *Department*.
-![](./media/sharepoint-lookup-fields/change-value2.png)
-
-6. Now run the app, and start typing a name into the **CurrentOwner** text box. Names and departments appear in the dropdown list as you type, enabling you to use both fields to choose.
-![](./media/sharepoint-lookup-fields/multi-field-lookup.png)
-
-[!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
-<!--
-[AZURE.INCLUDE[](../includes/testing-requirements.md)]
--->
 
 ## For more information ##
 - [Introducing support for lookups and a new sample app](https://powerapps.microsoft.com/en-us/blog/support-for-lookups/)
