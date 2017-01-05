@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/28/2016"
+   ms.date="01/05/2017"
    ms.author="ricksal"/>
 
 # How to link SharePoint lists with lookup fields
@@ -56,14 +56,41 @@ The schema looks like this:
 
 ![](./media/sharepoint-lookup-fields/sharepoint-schema.png)
 
-### Populate the RepairShop list with data
+### Define the RepairShop list and add data
 
-On your SharePoint site, enter sample data into the **RepairShop** list. That way, when you create **Assets** data, **RepairShop** entries are available to fill into the *Assets.RepairShop* lookup field.
+You must do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available to fill into the *Assets.RepairShop* lookup field.
 
-Next you create an app which you use to add data to the **Assets** list.
+1. On your SharePoint site, create a new **RepairShop** list.
+
+2. Add a *ContactEmail* text field.
+
+3. Add any other fields you need.
+
+4. Enter sample data into the list, at least 3 rows with different *ContactEmail* values.
+
+### Define the Assets list
+
+1. On your SharePoint site, create a new **Assets** list.
+
+2. Click or tap the plus sign and choose **More**.
+
+	![](./media/sharepoint-lookup-fields/choose-more-type.png)
+
+3. Add an *AssetType* column of type **choice**, and fill in the values you want to appear in the choice menu. Then click or tap **OK**.
+![](./media/sharepoint-lookup-fields/define-choice-column.png)
+
+4. Add another column, just like in step 2, and click or tap **More**.
+
+5. Add an *RepairShop* column of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
+![](./media/sharepoint-lookup-fields/setup-lookup-column.png)
+
+6. Add an *CurrentOwner* column of type **Person or Group**. There are a number of options you can choose from, but for this tutorial, leave the default settings. Then click or tap **OK**.
+![](./media/sharepoint-lookup-fields/define-current-owner.png)
+
+7. Add an **AssetName** text column, and define any additional columns you want.
 
 ## Create an app from the Assets list
-
+You use this app to add data to the **Assets** list.
 1. Open PowerApps Studio.
 
 	(New to PowerApps? [Sign up for free](https://powerapps.microsoft.com) using your organizational email address and follow the instructions to download PowerApps Studio from the Windows store)
@@ -81,18 +108,21 @@ Next you create an app which you use to add data to the **Assets** list.
 ## Add data to your main list
 Now that the app is generated, you can run the app and see how the view details screen looks for the three lookup fields.
 
-1. Click or tap F5 or the "run triangle" on the upper right of the PowerApps Studio tool bar.
+1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ). Click or tap the **+** symbol in the upper right corner to add an entry.
 
 2. Enter an *AssetName*.
 
 3. Click or tap the **AssetType** dropdown arrow. The values displayed are those you entered when you created this column. Choose one of the entries.
-![](./media/sharepoint-lookup-fields/fill-asset-type.png)
+
+	![](./media/sharepoint-lookup-fields/fill-asset-type.png)
 
 4. Click or tap the **RepairShop** dropdown arrow. Choose one of the entries.
-![](./media/sharepoint-lookup-fields/fill-repair-shop.png)
 
-5. Click or tap the **CurrentOwner** dropdown arrow. Choose one of the entries or enter someone directly.
-![](./media/sharepoint-lookup-fields/choose-current-owner.png)
+	![](./media/sharepoint-lookup-fields/fill-repair-shop.png)
+
+5. Click or tap the **CurrentOwner** dropdown arrow. Choose one of the entries or enter someone's email alias directly.
+
+	![](./media/sharepoint-lookup-fields/choose-current-owner.png)
 
 6. Enter a **Title** and click the check mark in the upper right corner of the app.
 
@@ -110,7 +140,7 @@ Now that the app is generated, you can run the app and see how the view details 
 
 PowerApps supports using multiple fields in lookups.
 
-For example, let’s assume your data source contains a lookup field to your employee list, and in your company there are multiple people with the same first and last name.  So that users of your app can properly distinguish between “Anne Smith” from accounting and “Anne Smith” from engineering, you can configure your lookup to show more than one field.
+For example, let’s assume your data source contains a lookup field to your employee list, and in your company there are multiple people with the same first and last name.  So that users of your app can distinguish between “Anne Smith” from accounting and “Anne Smith” from engineering, you can configure your lookup to show more than one field.
 
 Multiple field support is available for both SharePoint and the Microsoft Common Data Model today, with more connector support on the way.
 
