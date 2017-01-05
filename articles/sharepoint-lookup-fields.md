@@ -43,12 +43,12 @@ In this tutorial, you link two SharePoint custom lists together, **Assets** and 
 
 The **RepairShop** list uses the *ContactEmail* field to identify the shop. This list is defined first so that each row in the **Assets** list has something to point to.
 
-The **Assets** list has three lookup columns:
-* one called *RepairShop*, of type *lookup*, which points to email addresses in the **RepairShop** list. Picking an email address is how you specify what **RepairShop** has this asset.
-* one called *AssetType*, of type *choice*, which lists the kind of hardware that this asset might be;
-* one called *CurrentOwner*, of type *Person or Group*, which is the person responsible for this asset.
+The **Assets** list has three lookup fields:
+* one called *RepairShop*, of type **Lookup**, which points to email addresses in the **RepairShop** list. Picking an email address is how you specify what **RepairShop** has this asset.
+* one called *AssetType*, of type **Choice**, which lists the kinds of hardware that this asset might be;
+* one called *CurrentOwner*, of type **Person or Group**, which is the person responsible for this asset.
 
-You most likely would define additional columns, depending on the information you need to track.
+You most likely would define additional fields, depending on the information you need to track.
 
 The schema looks like this:
 
@@ -56,15 +56,21 @@ The schema looks like this:
 
 ### Define the RepairShop list and add data
 
-You must do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available so you can choose one from the *Assets.RepairShop* lookup field.
+You do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available for you to choose one from the *Assets.RepairShop* lookup field.
 
 1. On your SharePoint site, create a new **RepairShop** list.
 
-2. Add a *ContactEmail* field of type "Single line of text".
+	![](./media/sharepoint-lookup-fields/new-list.png)
+
+2. Add a *ContactEmail* field of type **Single line of text**.
+
+	![](./media/sharepoint-lookup-fields/add-email-field.png)
 
 3. Add any other fields you need.
 
-4. Enter sample data into the list, at least 3 rows with different *ContactEmail* values. When an asset needs to be repaired, you choose one of these.
+4. Click or tap **+ New** to enter sample data into the list, at least 3 rows with different *ContactEmail* values. When an asset needs to be repaired, you choose one of these.
+
+	![](./media/sharepoint-lookup-fields/add-repair-shops.png)
 
 ### Define the Assets list
 
@@ -74,20 +80,20 @@ You must do this first, so that when you add data to the **Assets** list, **Repa
 
 	![](./media/sharepoint-lookup-fields/choose-more-type.png)
 
-3. Add an *AssetType* column of type **Choice**, and in the **Type each choice on a separate line** text box, fill in the values you want to appear in the choice menu. Then click or tap **OK**.
+3. Add an *AssetType* field of type **Choice**, and in the **Type each choice on a separate line** text box, fill in the values you want to appear in the choice menu. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/define-choice-column.png)
 
-4. Add another column, just like in step 2, and click or tap **More**.
+4. Add another field, just like in step 2, and click or tap **More**.
 
-5. Add an *RepairShop* column of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
+5. Add a *RepairShop* field of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/setup-lookup-column.png)
 
-6. Add another column, just like in step 2, and click or tap **More**.
+6. Add another field, just like in step 2, and click or tap **More**.
 
-7. Add an *CurrentOwner* column of type **Person or Group**. There are a number of options you can choose from, but for this tutorial, leave the default settings. Then click or tap **OK**.
+7. Add an *CurrentOwner* field of type **Person or Group**. There are a number of options you can choose from, but for this tutorial, leave the default settings. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/define-current-owner.png)
 
-8. Add an **AssetName** column of type **Single line of text**, and define any additional columns you want.
+8. Add an **AssetName** field of type **Single line of text**, and define any additional fields you want.
 
 ## Create an app from the Assets list
 You use this app to add data to the **Assets** list.
@@ -112,7 +118,7 @@ Now that the app is generated, you run the app and see how the view details scre
 
 2. Enter an *AssetName*.
 
-3. Click or tap the **AssetType** dropdown arrow. The values displayed are those you entered when you created this column. Choose one of the entries.
+3. Click or tap the **AssetType** dropdown arrow. The values displayed are those you entered when you created this field. Choose one of the entries.
 
 	![](./media/sharepoint-lookup-fields/fill-asset-type.png)
 
