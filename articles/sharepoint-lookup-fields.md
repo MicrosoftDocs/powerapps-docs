@@ -126,7 +126,7 @@ Now that the app is generated, you run the app and see how the view details scre
 
 	![](./media/sharepoint-lookup-fields/fill-repair-shop.png)
 
-5. Click or tap the **CurrentOwner** dropdown arrow. Choose one of the entries or enter someone's email alias directly.
+5. Click or tap the **CurrentOwner** dropdown arrow. Choose one of the entries; if the name you want doesn't appear, start entering someone's email alias, which will filter the names that appear in the dropdown, and when the name you want appears, choose it.
 
 	![](./media/sharepoint-lookup-fields/choose-current-owner.png)
 
