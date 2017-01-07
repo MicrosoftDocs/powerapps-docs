@@ -23,6 +23,9 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 **Prerequisites**
 
 - [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+
+	**Note**: You can't add or edit a flow in PowerApps Studio for web.
+
 - Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow ##
@@ -68,7 +71,9 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 	![Name and save your flow](./media/use-logic-flows/name-flow.png)
 
 ## Add a flow to an app ##
-1. In PowerApps, select **New** in the **File** menu (near the left edge of the screen).
+1. In PowerApps Studio for Windows, select **New** in the **File** menu (near the left edge of the screen).
+
+	**Note**: You can't add or edit a flow in PowerApps Studio for web.
 
 1. On the **Blank app** tile, select **Phone layout**.
 
