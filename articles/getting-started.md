@@ -15,11 +15,11 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2016"
+   ms.date="01/06/2017"
    ms.author="anneta"/>
 
 # Introduction to PowerApps #
-Welcome! In PowerApps, you can generate an app automatically, customize it, create an app from scratch, and share and run apps that you create or that others create and share with you.
+Welcome! In PowerApps, you can manage organizational data on a mobile phone or in a browser by running an app that someone else created and shared with you. You can also create your own apps (without learning a traditional programming language such as C#) and share them across your organization. If you're new to app development, you can generate an app automatically based on a single data source and then customize the app to better suit your needs. You can also open a sample app or a template to discover what's possible with PowerApps and to better understand how more complex apps are built. With some experience and creativity, you can develop your own apps from scratch by connecting to data sources, designing screens, adding other UI elements, and specifying app behavior. Starting small and growing your skills at your own pace, you can build and share apps that reinvent how your organization manages data. Ready to take the first step?
 
 > [AZURE.NOTE] If you've automatically generated an app from a SharePoint list, you can [customize the app](customize-layout-sharepoint.md) to better suit your needs.
 
