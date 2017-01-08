@@ -15,13 +15,17 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/06/2017"
+   ms.date="01/07/2017"
    ms.author="anneta"/>
 
 # Introduction to PowerApps #
-Welcome! In PowerApps, you can manage organizational data on a mobile phone or in a browser by running an app that someone else created and shared with you. You can also create your own apps (without learning a traditional programming language such as C#) and share them across your organization. If you're new to app development, you can generate an app automatically based on a single data source and then customize the app to better suit your needs. You can also open a sample app or a template to discover what's possible with PowerApps and to better understand how more complex apps are built. With some experience and creativity, you can develop your own apps from scratch by connecting to data sources, designing screens, adding other UI elements, and specifying app behavior. Starting small and growing your skills at your own pace, you can build and share apps that reinvent how your organization manages data. Ready to take the first step?
+Welcome! In PowerApps, you can manage organizational data by running an app that you created or that someone else created and shared with you. Apps run on an iPhone, an Android phone, or a Windows Phone, or you can run them in a browser from Dynamics 365.
 
-> [AZURE.NOTE] If you've automatically generated an app from a SharePoint list, you can [customize the app](customize-layout-sharepoint.md) to better suit your needs.
+If you're new to app development, you can generate an app automatically based on a single data source and then customize the app to better suit your needs.
+
+> [AZURE.NOTE] If you've automatically generated an app from, for example, a custom SharePoint list, you can change how the app shows [all items](customize-layout-sharepoint.md), [details about each item](customize-forms-sharepoint.md), and [options for creating or editing an item](customize-forms-sharepoint.md).
+
+You can also open a sample app or a template to discover what's possible with PowerApps and to better understand how more complex apps are built. With some experience and creativity, you can develop your own apps from scratch by connecting to data sources, designing screens, adding other UI elements, and specifying app behavior. Starting small and growing your skills at your own pace, you can build and share apps that reinvent how your organization manages data. Ready to take the first step?
 
 ## Generate an app automatically ##
 To generate an app automatically, you just need to specify one of a variety of data sources, as this video demonstrates in five minutes:
@@ -60,5 +64,8 @@ For detailed explanations of some concepts you'll need, see these topics:
 ## Share and run an app ##
 When you finish your app, you can [share](share-app.md) it with others in your organization, and run either your own apps or shared apps in a [browser](run-app-browser.md) or on a [mobile device](run-app-client.md).
 
-## Questions? Ideas? We're here to help ##
-We're excited to see what you can do with PowerApps, and we want to make sure that you have a great experience. Check out the detailed tutorials on this site for more help, and [join our community](https://aka.ms/powerapps-community) to ask questions and share your ideas. [Contact support](https://aka.ms/pasupport) if you run into any issues.
+## More information ##
+This topic is a high-level overview of the kinds of things you can do with PowerApps, but the possibilities are endless. You can find step-by-step procedures and reference information in the topics listed along the left edge of this page. If you have a detailed question that the topics don't address:
+
+- [Join our community](https://aka.ms/powerapps-community) to ask questions and share ideas with other PowerApps users.
+- [Contact support](https://aka.ms/pasupport).
