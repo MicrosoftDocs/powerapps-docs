@@ -144,11 +144,12 @@ Now you can run the app and see how the view details screen looks for the lookup
 
 8. Press *escape* to return to the PowerApps Studio.
 
-[!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
-
 <!--
-[AZURE.INCLUDE[](../includes/testing-requirements.md)]
+[!INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 -->
+
+[AZURE.INCLUDE[](../includes/testing-requirements.md)]
+
 
 <!--
 5. Click or tap the **CurrentOwner** dropdown arrow. Choose one of the entries; if the name you want doesn't appear, start entering someone's email alias, which will filter the names that appear in the dropdown, and when the name you want appears, choose it.
