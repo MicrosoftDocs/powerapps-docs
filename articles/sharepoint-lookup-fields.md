@@ -14,26 +14,32 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/05/2017"
+   ms.date="01/09/2017"
    ms.author="ricksal"/>
 
-# How to link SharePoint lists with lookup fields
+# How to link SharePoint lists using lookup fields
 
-This tutorial shows how lookup fields can connect two SharePoint lists.
+This tutorial shows how you can connect two SharePoint lists with lookup fields.
 
+## Overview
 SharePoint provides three types of lookup fields:
 
-* **Choice**: clicking or tapping the field displays a small menu of items that you choose from;
 * **Lookup**: links to another list: for example an *Orders* list may have a lookup field that links to customers in a *Customer* list;
+* **Choice**: clicking or tapping the field displays a small menu of items that you choose from;
 * **Person or group**: links to people or groups.
 
-In this tutorial, you build an app that uses all three kinds of lookup fields.
+In this tutorial, you build an app that uses the first two kinds of lookup fields.
 
-## What do you use lookup fields for?
+### What do you use lookup fields for?
 
 Data in an enterprise is large and complex. Data in one SharePoint list often relates to data in another list. Lookup fields are the primary way such business data comes together.
 
 For example, you might have an **Orders** list which has a lookup link to a **Customers** list, to show which customer placed the order. The lookup field in the **Orders** list lets you get other data from the **Customers** list for that customer. You might also use a lookup field to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, manufacturer details, etc.
+
+### What are Choice fields used for?
+**Choice** fields are used for very short lists, but instead of actually creating a separate list, you include the list values in a small menu, which appears when you click or tap on the **Choice** field, and you select one of the values.
+
+Examples include things like Customer Status Code, Product Availability, State Codes, basically any fixed list that is relatively short. These could in fact be implemented as separate lists, and then you would use a **Lookup** field to link to them, but it is usually easier and quicker to implement them as **Choice** fields.
 
 ## Create the lists in SharePoint
 
@@ -111,7 +117,7 @@ You use this app to add data to the **Assets** list.
 ![](./media/sharepoint-lookup-fields/choose-main-list.png)
 
 
-## Add data to your main list
+## Add data to the Assets list
 Now that the app is generated, you run the app and see how the view details screen looks for the three lookup fields.
 
 1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ). Click or tap the **+** symbol in the upper right corner to add an entry.
