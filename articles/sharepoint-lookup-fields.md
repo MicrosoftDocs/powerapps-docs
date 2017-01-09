@@ -26,7 +26,7 @@ SharePoint provides three types of lookup fields:
 
 * **Lookup**: links to another list: for example an *Orders* list may have a lookup field that links to customers in a *Customer* list;
 * **Choice**: clicking or tapping the field displays a small menu of items that you choose from;
-* **Person or group**: links to people or groups.
+* **Person or group**: links to people or groups associated with your SharePoint server.
 
 In this tutorial, you build an app that uses the first two kinds of lookup fields.
 
@@ -49,17 +49,21 @@ In this tutorial, you link two SharePoint custom lists together, **Assets** and 
 
 The **RepairShop** list uses the *ContactEmail* field to identify the shop. This list is defined first so that each row in the **Assets** list has something to point to.
 
-The **Assets** list has three lookup fields:
+The **Assets** list has two lookup fields:
 * one called *RepairShop*, of type **Lookup**, which points to email addresses in the **RepairShop** list. Picking an email address is how you specify what **RepairShop** has this asset.
 * one called *AssetType*, of type **Choice**, which lists the kinds of hardware that this asset might be;
+
+<!--
 * one called *CurrentOwner*, of type **Person or Group**, which is the person responsible for this asset.
+-->
 
 You most likely would define additional fields, depending on the information you need to track.
 
+<!--
 The schema looks like this:
 
 ![](./media/sharepoint-lookup-fields/sharepoint-schema.png)
-
+-->
 ### Define the RepairShop list and add data
 
 You do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available for you to choose one from the *Assets.RepairShop* lookup field.
@@ -96,10 +100,12 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 
 6. Add another field, just like in step 2, and click or tap **More**.
 
+<!--
 7. Add an *CurrentOwner* field of type **Person or Group**. There are a number of options you can choose from, but for this tutorial, leave the default settings. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/define-current-owner.png)
 
 8. Add an **AssetName** field of type **Single line of text**, and define any additional fields you want.
+-->
 
 ## Create an app from the Assets list
 You use this app to add data to the **Assets** list.
@@ -126,15 +132,11 @@ Now that the app is generated, you run the app and see how the view details scre
 
 3. Click or tap the **AssetType** dropdown arrow. The values displayed are those you entered when you created this field. Choose one of the entries.
 
-	![](./media/sharepoint-lookup-fields/fill-asset-type.png)
+	![](./media/sharepoint-lookup-fields/fill-asset-type-2.png)
 
 4. Click or tap the **RepairShop** dropdown arrow. Choose one of the entries.
 
-	![](./media/sharepoint-lookup-fields/fill-repair-shop.png)
-
-5. Click or tap the **CurrentOwner** dropdown arrow. Choose one of the entries; if the name you want doesn't appear, start entering someone's email alias, which will filter the names that appear in the dropdown, and when the name you want appears, choose it.
-
-	![](./media/sharepoint-lookup-fields/choose-current-owner.png)
+	![](./media/sharepoint-lookup-fields/fill-repair-shop-2.png)
 
 6. Enter a **Title** and click the check mark in the upper right corner of the app.
 
@@ -148,6 +150,11 @@ Now that the app is generated, you run the app and see how the view details scre
 [AZURE.INCLUDE[](../includes/testing-requirements.md)]
 -->
 
+<!--
+5. Click or tap the **CurrentOwner** dropdown arrow. Choose one of the entries; if the name you want doesn't appear, start entering someone's email alias, which will filter the names that appear in the dropdown, and when the name you want appears, choose it.
+
+	![](./media/sharepoint-lookup-fields/choose-current-owner.png)
+-->
 
 ## For more information ##
 - [Introducing support for lookups and a new sample app](https://powerapps.microsoft.com/en-us/blog/support-for-lookups/)
