@@ -39,7 +39,7 @@ For example, you might have an **Orders** list which has a lookup link to a **Cu
 ### What are Choice fields used for?
 **Choice** fields are used for very short lists, but instead of actually creating a separate list, you include the list values in a small menu, which appears when you click or tap on the **Choice** field, and you select one of the values.
 
-Examples include things like Customer Status Code, Product Availability, State Codes, basically any fixed list that is relatively short. These could in fact be implemented as separate lists, and then you would use a **Lookup** field to link to them, but it is usually easier and quicker to implement them as **Choice** fields.
+Examples include data like Customer Status Code, Product Availability, State Codes; basically any fixed list that is relatively short. This data could in fact be implemented as separate lists, and then you would use a **Lookup** field to link to them, but it is usually easier and quicker to implement them as **Choice** fields.
 
 ## Create the lists in SharePoint
 
@@ -93,12 +93,12 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 3. Add an *AssetType* field of type **Choice**, and in the **Type each choice on a separate line** text box, fill in the values you want to appear in the choice menu. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/define-choice-column.png)
 
-4. Add another field, just like in step 2, and click or tap **More**.
+4. Start to add another field, just like in step 2: click or tap the plus sign and choose **More**.
 
 5. Add a *RepairShop* field of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
 ![](./media/sharepoint-lookup-fields/setup-lookup-column.png)
 
-6. Add another field, just like in step 2, and click or tap **More**.
+6. Add any additional fields you want.
 
 <!--
 7. Add an *CurrentOwner* field of type **Person or Group**. There are a number of options you can choose from, but for this tutorial, leave the default settings. Then click or tap **OK**.
@@ -124,7 +124,7 @@ You use this app to add data to the **Assets** list.
 
 
 ## Add data to the Assets list
-Now that the app is generated, you run the app and see how the view details screen looks for the three lookup fields.
+Now you can run the app and see how the view details screen looks for the lookup fields.
 
 1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ). Click or tap the **+** symbol in the upper right corner to add an entry.
 
