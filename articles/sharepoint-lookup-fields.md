@@ -34,7 +34,7 @@ In this tutorial, you build an app that uses the first two kinds of lookup field
 
 Data in an enterprise is large and complex. Data in one SharePoint list often relates to data in another list. Lookup fields are the primary way such business data comes together.
 
-For example, you might have an **Orders** list which has a lookup link to a **Customers** list, to show which customer placed the order. The lookup field in the **Orders** list lets you get other data from the **Customers** list for that customer. You might also use a lookup field to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, manufacturer details, etc.
+For example, you might have an **Orders** list which has a lookup field that links to a **Customers** list, to show which customer placed the order. The lookup field in the **Orders** list lets you get other data from the **Customers** list as well. You might also use a lookup field to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, manufacturer details, etc.
 
 ### What are Choice fields used for?
 **Choice** fields are used for very short lists, but instead of actually creating a separate list, you include the list values in a small menu, which appears when you click or tap on the **Choice** field, and you select one of the values.
@@ -50,8 +50,8 @@ In this tutorial, you link two SharePoint custom lists together, **Assets** and 
 The **RepairShop** list uses the *ContactEmail* field to identify the shop. This list is defined first so that each row in the **Assets** list has something to point to.
 
 The **Assets** list has two lookup fields:
-* one called *RepairShop*, of type **Lookup**, which points to email addresses in the **RepairShop** list. Picking an email address is how you specify what **RepairShop** has this asset.
-* one called *AssetType*, of type **Choice**, which lists the kinds of hardware that this asset might be;
+* one called *RepairShop*, of type **Lookup**, which uses email addresses to point to entries in the **RepairShop** list;
+* one called *AssetType*, of type **Choice**, which lists the kinds of hardware that this asset might be.
 
 <!--
 * one called *CurrentOwner*, of type **Person or Group**, which is the person responsible for this asset.
@@ -66,7 +66,7 @@ The schema looks like this:
 -->
 ### Define the RepairShop list and add data
 
-You do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available for you to choose one from the *Assets.RepairShop* lookup field.
+You do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available for you to choose from the *Assets.RepairShop* lookup field.
 
 1. On your SharePoint site, create a new **RepairShop** list.
 
