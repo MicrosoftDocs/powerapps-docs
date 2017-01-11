@@ -15,13 +15,14 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/30/2016"
+   ms.date="01/11/2017"M
    ms.author="ricksal;jamesol"/>
 
 # Environments administration
 With the introduction of environments, we are launching the [PowerApps admin center][1], where you can manage all of the environments that you have created or to which you have been added to the Environment Admin role. From the admin center, you can perform these administrative actions for environments:
 
 * Create environments.
+* Rename environments.
 * Add or remove a user or group from either the Environment Admin or Environment Maker role.
 * Provision a Common Data Service database for the environment.
 * Set Data Loss Prevention policies.
@@ -46,6 +47,7 @@ You will also need either PowerApps Plan 2 or Flow Plan 2 to access the admin ce
 **Important**: Any changes that you make in PowerApps admin center will affect the [Flow admin center][4] and vice versa.
 
 ## Create an environment
+
 First, click **+ New environment** to open a dialog box and create an environment.
 
 ![](./media/environment-admin/new-environment-button.png)
@@ -72,6 +74,22 @@ When you open the admin center, the Environments tab appears by default and list
 ![](./media/environment-admin/environment-list-updated.png)
 
 If you are a member of the Global Administrator role of your Azure AD or Office 365 tenant, all the environments that have been created by users in your tenant appear (because you're automatically an Environment Admin for all of them).
+
+## Rename your environment
+
+When you open the admin center, the Environments tab appears by default and lists all of the environments for which you are an Environment Admin (as shown below):
+
+![](./media/environment-admin/environment-list-updated.png)
+
+1. Find the environment to be renamed in the list, and click or tap it.
+
+2. Click or tap **Details**.
+
+	![](./media/environment-admin/environment-rename-details.png)
+
+3. in the **Name** text box, enter the new name.
+
+	![](./media/environment-admin/environment-rename.png)
 
 ## Create a Common Data Service database for an environment
 If an environment doesn't already have a database, an Environment Admin can create one in the [PowerApps admin center][1] by following these steps. Only users with a PowerApps Plan 2 license can create Common Data Service databases.
