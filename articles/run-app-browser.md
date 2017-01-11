@@ -19,7 +19,7 @@
     ms.author="fikaradz"/>
 
 # Using PowerApps in a web browser #
-You can run all your apps in a web browser by opening Microsoft Dynamics 365. Access your apps quickly through the homepage or the task pane.
+You can run all your apps in a web browser by opening [Microsoft Dynamics 365](https://home.dynamics.com/). Access your apps quickly through the homepage or the task pane, or click or tap a link in the email that you receive when someone shares an app with you.
 
 PowerApps supports these browser versions:
 
@@ -28,8 +28,6 @@ PowerApps supports these browser versions:
 * Chrome 47.x and above
 * Safari on iOS 9.3 and above
 * Firefox 47 and above
-
-When someone shares an app with you, you will receive an email message that contains a link to the app. Click or tap the link to open the app in a browser.
 
 ## Microsoft Dynamics 365 homepage ##
 The Dynamics 365 home is the home to all your Dynamics 365 apps. You can access that page by clicking or tapping a button in your Office 365 waffle.  
