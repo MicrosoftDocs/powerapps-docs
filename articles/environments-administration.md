@@ -77,19 +77,19 @@ If you are a member of the Global Administrator role of your Azure AD or Office 
 
 ## Rename your environment
 
-When you open the admin center, the Environments tab appears by default and lists all of the environments for which you are an Environment Admin (as shown below):
-
-![](./media/environment-admin/environment-list-updated.png)
+When you open the admin center, the Environments tab appears by default and lists all of the environments for which you are an Environment Admin.
 
 1. Find the environment to be renamed in the list, and click or tap it.
 
+	![](./media/environment-admin/environment-list-updated3.png)
+
 2. Click or tap **Details**.
 
-	![](./media/environment-admin/environment-rename-details.png)
+	![](./media/environment-admin/environment-rename-details-2.png)
 
 3. in the **Name** text box, enter the new name, then click **Save**.
 
-	![](./media/environment-admin/environment-rename.png)
+	![](./media/environment-admin/environment-rename-2.png)
 
 ## Create a Common Data Service database for an environment
 If an environment doesn't already have a database, an Environment Admin can create one in the [PowerApps admin center][1] by following these steps. Only users with a PowerApps Plan 2 license can create Common Data Service databases.
