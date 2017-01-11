@@ -87,7 +87,7 @@ When you open the admin center, the Environments tab appears by default and list
 
 	![](./media/environment-admin/environment-rename-details.png)
 
-3. in the **Name** text box, enter the new name.
+3. in the **Name** text box, enter the new name, then click **Save**.
 
 	![](./media/environment-admin/environment-rename.png)
 
