@@ -32,15 +32,15 @@ With the introduction of environments, we are launching the [PowerApps admin cen
 ## Access the PowerApps admin center
 To access the PowerApps admin center:
 
-- Go directly to [admin.powerapps.com][1].
-- Go to [powerapps.com][2], and then select the gear icon in the  navigation header.
+- go directly to [admin.powerapps.com][1], OR
+- go to [powerapps.com][2], and then select the gear icon in the  navigation header.
 
 	![](./media/environment-admin/powerapps-gear-dropdown.png)
 
 To manage an environment in the PowerApps admin center, you must have one of these roles:
 
-1. the Environment Admin role of the environment
-1. the Global Administrator role of your Azure AD or Office 365 tenant
+* the Environment Admin role of the environment, or
+* the Global Administrator role of your Azure AD or Office 365 tenant.
 
 You also need either PowerApps Plan 2 or Flow Plan 2 to access the admin center. For more information, see the [PowerApps pricing page][3].
 
@@ -73,13 +73,11 @@ When you open the admin center, the Environments tab appears by default and list
 
 ![](./media/environment-admin/environment-list-updated.png)
 
-If you are a member of the Global Administrator role of your Azure AD or Office 365 tenant, all the environments that have been created by users in your tenant appear (because you're automatically an Environment Admin for all of them).
+If you are a member of the Global Administrator role of your Azure AD or Office 365 tenant, all the environments that have been created by users in your tenant appear, because you're automatically an Environment Admin for all of them.
 
 ## Rename your environment
 
-When you open the admin center, the Environments tab appears by default and lists all the environments for which you are an Environment Admin.
-
-1. Find the environment to be renamed in the list, and click or tap it.
+1. Open the [PowerApps admin center][1], find the environment to be renamed in the list, and click or tap it.
 
 	![](./media/environment-admin/environment-list-updated3.png)
 
@@ -173,7 +171,7 @@ Each user can provision up to two databases.
 
 ### Can I rename an environment?
 
-Not yet, but this functionality is coming soon to the PowerApps admin center.
+Yes, we have just added this functionality.
 
 ### Can I delete an environment?
 
