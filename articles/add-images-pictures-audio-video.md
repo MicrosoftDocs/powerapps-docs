@@ -14,10 +14,10 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="12/28/2016"
+   ms.date="01/17/2017"
    ms.author="ricksal"/>
 
-# Show multimedia files in PowerApps
+# Using multimedia files in PowerApps
 
 This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive for Business.
 
@@ -31,14 +31,16 @@ You can choose which kind of media file to add, for example, pictures, video, or
 1. On the **Content** tab, select **Media**.
 2. Under **Media**, select **Images**, **Videos**, or **Audio**, and then select **Browse**:  
 	![][1]  
-3. Select the file that you want to add, and then select **Open**.
+3. Select the file that you want to add, and then select **Open**. The **Pictures** folder on your computer opens, and you can select images from here or navigate to another folder.
 4. When you finish adding files, go back to the app designer. You can also press Esc.
 5. On the **Insert** tab, select **Media**, and then select **Image**, **Video**, or **Audio**:  
 	![][8]
 
 	- If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
 
-		![Set Image property][9]
+		![Set Image property](./media/add-images-pictures-audio-video/imageproperty.png)
+
+	**Note** Specify the file name only, without the extension, inside single quotes.
 
 	- If you added a video or audio control, set its **Media** property to the file that you added:  
 
@@ -46,11 +48,13 @@ You can choose which kind of media file to add, for example, pictures, video, or
 
 	**Note** Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
-## Add images in OneDrive for Business to your app
+## Add images from the cloud to your app
 
-In this scenario, you save images in a cloud storage account, OneDrive for Business, and then use an Excel table to display the images in your app. This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
+In this scenario, you save images in a cloud storage account, OneDrive for Business. You use an Excel table to contain the path to the images, and display the images in a gallery control in your app.
 
-**NOTE**: When displaying images from an Excel file, the path to these images must use forward slashes. When PowerApps saves images to an Excel table, the path uses backslashes. If you use images from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
+This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
+
+**NOTE**: The path to these images in the Excel file must use forward slashes. When PowerApps saves image paths in an Excel table, the path uses backslashes. If you use image paths from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
 
 1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 
@@ -74,9 +78,6 @@ In this scenario, you save images in a cloud storage account, OneDrive for Busin
 	When you set the Items property, the Excel table is automatically updated with a new column named __PowerAppsId__.
 
 	In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
-
-
-[AZURE.INCLUDE [testing-requirements](../includes/testing-requirements.md)]
 
 
 ## Upload pen drawings to OneDrive for Business
@@ -150,10 +151,9 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 10.	Open **SavePen.xlsx**. The *Image* column specifies the path to the new images.
 
 
-
-[AZURE.INCLUDE [testing-requirements](../includes/testing-requirements.md)]
-
 ## For more information
+
+Be sure to test your app on different platforms, including in the [Dynamics browser](https://home.dynamics.com/), and on a phone.
 
 For information on more advanced scenarios involving uploading multimedia directly to a different data source, see [image capture pro tips](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) and [custom api for image upload](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
 
