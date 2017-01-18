@@ -19,7 +19,7 @@
    ms.author="ricksal;jamesol"/>
 
 # Environments administration
-With the introduction of environments, we are launching the [PowerApps admin center][1]. You can manage all the environments that you have created, or for which you have been added to the Environment Admin role. From the admin center, you can perform these administrative actions for environments:
+The [PowerApps admin center][1] enables you to manage environments. This includes the ones you have created, and also those for which you have been added to the Environment Admin role. From the admin center, you can perform these administrative actions:
 
 * Create environments.
 * Rename environments.
