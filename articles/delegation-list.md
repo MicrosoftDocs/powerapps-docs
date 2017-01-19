@@ -20,7 +20,7 @@
 # Delegable data sources #
 As outlined in detail in the [Understand delegation](delegation-overview.md) article, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the app for processing locally.
 
-Delegation is supported for tabular data sources only. Tabular data sources include Common Data Service, SharePoint, SQL, Dynamics CRM, Salesforce and Excel, with more tabular data sources being added continuously. Delegation support for Excel is coming soon.
+Delegation is supported for tabular data sources only. Tabular data sources include Common Data Service, SharePoint, SQL, Dynamics 365, Dynamics NAV, Salesforce, Excel etc., with more tabular data sources being added continuously. Delegation support for Excel is coming soon.
 
 This document lists the current state of supported delegation per data source.
 
@@ -29,11 +29,11 @@ This document lists the current state of supported delegation per data source.
 - Familiarize yourself with [Understand delegation](delegation-overview.md) article
 
 ## List of data sources and supported delegation ##
-This list will be updated periodically to reflect the current status of delegation support in PowerApps.
+This list of data sources and delegable functions and predicates will be updated periodically to reflect the current status of delegation support in PowerApps.
 
 ### Top Level Delegable Functions ###
 
-|               | Common Data Service              | SharePoint | SQL | Dynamics CRM | Salesforce |
+|               | Common Data Service              | SharePoint | SQL | Dynamics 365 | Salesforce |
 |---------------|----------------------------------|------------|-----|--------------|------------|
 | Filter        | Yes                              | Yes        | Yes | Yes          | Yes        |
 | Sort          | Yes                              | Yes        | Yes | Yes          | Yes        |
@@ -45,7 +45,7 @@ This list will be updated periodically to reflect the current status of delegati
 
 ### Filter and LookUp Delegable Predicates ###
 
-|                            | Common Data Service                              | SharePoint | SQL | Dynamics CRM | Salesforce |
+|                            | Common Data Service                              | SharePoint | SQL | Dynamics 365 | Salesforce |
 |----------------------------|--------------------------------------------------|------------|-----|--------------|------------|
 | Not                        | Yes                                              | No         | Yes | Yes          | Yes        |
 | IsBlank                    | No                                               | No         | Yes | Yes          | No         |
