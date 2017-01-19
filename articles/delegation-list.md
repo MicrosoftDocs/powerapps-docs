@@ -37,9 +37,9 @@ This list will be updated periodically to reflect the current status of delegati
 |---------------|----------------------------------|------------|-----|-------------|------------|
 | Filter        | Yes                              | Yes        | Yes | Yes         | Yes        |
 | Sort          | Yes                              | Yes        | Yes | Yes         | Yes        |
-| SortByColumns | Yes                              | Yes        | Yes | Yes         | Yes?       |
-| Search        | Yes<sup>1</sup>                  | No         | Yes | Yes         | No?        |
-| LookUp        | Yes                              | Yes        | Yes | Yes         | Yes        |
+| SortByColumns | Yes                              | Yes        | Yes | Yes         | Yes        |
+| Search        | Yes<sup>1</sup>                  | No         | Yes | Yes         | No         |
+| LookUp        | Yes                              | Yes        | Yes | Yes         | No         |
 
 <sup>1</sup>For String fields only
 
@@ -48,14 +48,14 @@ This list will be updated periodically to reflect the current status of delegati
 |                            | Common Data Service                              | SharePoint | SQL | DynamicsCRM | Salesforce |
 |----------------------------|--------------------------------------------------|------------|-----|-------------|------------|
 | Not                        | Yes                                              | No         | Yes | Yes         | Yes        |
-| IsBlank                    | No                                               | No         | Yes | Yes         | No?        |
-| TrimEnds                   | No                                               | No         | Yes | No          | No?        |
-| Len (length)               | No                                               | No         | Yes | No          | No?        |
-| Now                        | No                                               | No         | Yes | No          |            |
+| IsBlank                    | No                                               | No         | Yes | Yes         | Yes        |
+| TrimEnds                   | No                                               | No         | Yes | No          | No         |
+| Len (length)               | No                                               | No         | Yes | No          | No         |
+| Now                        | No                                               | No         | Yes | No          | No         |
 | Add                        | No                                               | No         | Yes | No          | No         |
 | Sub                        | No                                               | No         | Yes | No          | No         |
 | <, <=, =, <>, >, >=        | Yes                                              | Yes        | Yes | Yes         | Yes        |
-| And (&&), Or (&#124;&#124;), Not (!) | Yes<sup>2</sup>                                  | Yes        | Yes | Yes         | Yes        |
-| In                         | No                                               |            | Yes | No          |            |
+| And (&&), Or (&#124;&#124;), Not (!) | Yes<sup>2</sup>                        | Yes        | Yes | Yes         | Yes        |
+| In                         | No                                               | No         | Yes | No          | No         |
 
 <sup>2</sup>For operators only. AND/OR function not delegated.
