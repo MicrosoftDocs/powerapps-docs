@@ -63,7 +63,6 @@ This list of data sources and delegable functions and predicates will be updated
 | IsBlank                    | No                                               | No         | Yes | Yes          | No         |
 | TrimEnds                   | No                                               | No         | Yes | No           | No         |
 | Len (length)               | No                                               | No         | Yes | No           | No         |
-| Now                        | No                                               | No         | Yes | No           | No         |
 | Add                        | No                                               | No         | Yes | No           | No         |
 | Sub                        | No                                               | No         | Yes | No           | No         |
 | <, <=, =, <>, >, >=        | Yes                                              | Yes        | Yes | Yes          | Yes        |
