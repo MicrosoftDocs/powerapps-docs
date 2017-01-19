@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="RickSaling"
+	authors="aftowen"
 	manager="anneta"
 	editor=""/>
 
