@@ -20,9 +20,21 @@
 # Delegable data sources #
 As outlined in detail in the [Understand delegation](delegation-overview.md) article, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the app for processing locally.
 
-Delegation is supported for tabular data sources only. Tabular data sources include Common Data Service, SharePoint, SQL, Dynamics 365, Dynamics NAV, Salesforce, Excel etc., with more tabular data sources being added continuously. Delegation support for Excel is coming soon.
+Delegation is supported for tabular data sources only. Currently supported tabular data sources include:
+- Common Data Service
+- SharePoint
+- SQL Server
+- Dynamics 365
+- Dynamics 365 for Operations
+- Dynamics 365 for Financials
+- Dynamics NAV
+- Salesforce
+- Google Sheets
+- Excel
 
-This document lists the current state of supported delegation per data source.
+And more tabular data sources are being added continuously.
+
+This document lists the current state of supported delegation per data source. Delegation support for Excel is coming soon.
 
 **Prerequisites**
 
