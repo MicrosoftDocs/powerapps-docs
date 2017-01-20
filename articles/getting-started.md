@@ -15,20 +15,22 @@
    ms.topic="hero-article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2016"
+   ms.date="01/11/2017"
    ms.author="anneta"/>
 
 # Introduction to PowerApps #
-Welcome! In PowerApps, you can generate an app automatically, customize it, create an app from scratch, and share and run apps that you create or that others create and share with you.
+Welcome! In PowerApps, you can manage organizational data by running an app that you created or that someone else created and shared with you. Apps run on [mobile devices such as phones](run-app-client.md), or you can run them [in a browser](run-app-browser.md) by opening Dynamics 365. You can create an infinite variety of apps &ndash; all without learning a programming language such as C#.
 
-> [AZURE.NOTE] If you've automatically generated an app from a SharePoint list, you can [customize the app](customize-layout-sharepoint.md) to better suit your needs.
-
-## Generate an app automatically ##
-To generate an app automatically, you just need to specify one of a variety of data sources, as this video demonstrates in five minutes:
+If you're new to app development, you can see how a simple app is built by generating one automatically based on a single data source and then customizing the app to better suit your needs. This video demonstrates how in five minutes:
 
 [AZURE.VIDEO nb:cid:UUID:34ccfd46-7826-49ce-90d8-cf6a144b6968]
 
-The video is based on a custom SharePoint list, but you can also generate apps from other types of data sources, such as these:
+After you [automatically generate an app](app-from-sharepoint.md) from, for example, a custom SharePoint list, you can change how the app shows [all items](customize-layout-sharepoint.md), [details about each item](customize-forms-sharepoint.md), and [options for creating or editing an item](customize-forms-sharepoint.md). You can also open a [sample app](open-and-run-a-sample-app.md) or a [template](get-started-test-drive.md) to discover what's possible with PowerApps and to better understand how to build a more complex app.
+
+With some experience and creativity, you can [develop your own apps from scratch](get-started-create-from-blank.md). You can connect to [data sources](connections-list.md), [add UI elements](reference-properties.md) (called controls), and specify app behavior by [building formulas](working-with-formulas.md). Starting small and growing your skills at your own pace, you can build and share apps that reinvent how your organization manages data. Ready to take the first step?
+
+## Generate an app automatically ##
+To generate an app automatically, you specify a data source such as any of these:
 
 - the [Common Data Service](data-platform-intro.md)
 - a SQL Server database
@@ -39,7 +41,7 @@ The video is based on a custom SharePoint list, but you can also generate apps f
 For step-by-step instructions, see [Create an app to manage data in SharePoint](app-from-sharepoint.md). The topic is designed for SharePoint, but the same principles apply to other types of data sources.
 
 ## Customize an app ##
-If the generated app doesn't meet your needs by default, you can [customize it](customize-layout-sharepoint.md). You might, for example, want to show different data or the same data in a different UI element (known as a control).
+If the generated app doesn't meet your needs by default, you can [customize it](customize-layout-sharepoint.md). You might, for example, want to show different data or the same data in a different control.
 
 For ideas about how to improve your app further, you can [open a sample app](open-and-run-a-sample-app.md) to get a sense of what you can invent with some creativity and a bit of experience.
 
@@ -52,13 +54,17 @@ After you've generated an app or two automatically and gained some experience wi
 
 For detailed explanations of some concepts you'll need, see these topics:
 
-- [formulas](formula-reference.md)
-- [galleries and forms](working-with-forms.md)
+- formulas ([tutorial](working-with-formulas.md) or [reference](formula-reference.md))
+- galleries ([tutorial](add-gallery.md) or [reference](reference-properties.md))
+- forms ([tutorial](add-form.md) or [reference](working-with-forms.md))
 - [tables and records](working-with-tables.md)
 - [controls and their properties](reference-properties.md)
 
 ## Share and run an app ##
-When you finish your app, you can [share](share-app.md) it with others in your organization, and run either your own apps or shared apps in a [browser](run-app-browser.md) or on a [mobile device](run-app-client.md).
+When you finish your app, you can [share](share-app.md) it with others in your organization, and run either your own apps or shared apps in a [browser](run-app-browser.md) or on a [phone](run-app-client.md).
 
-## Questions? Ideas? We're here to help ##
-We're excited to see what you can do with PowerApps, and we want to make sure that you have a great experience. Check out the detailed tutorials on this site for more help, and [join our community](https://aka.ms/powerapps-community) to ask questions and share your ideas. [Contact support](https://aka.ms/pasupport) if you run into any issues.
+## More information ##
+This topic is a high-level overview of the kinds of things you can do with PowerApps, but the possibilities are endless. You can find step-by-step procedures and reference information in the topics listed along the left edge of this page. If you have a detailed question that the topics don't address:
+
+- [Join our community](https://aka.ms/powerapps-community) to ask questions and share ideas with other PowerApps users.
+- [Contact support](https://aka.ms/pasupport).
