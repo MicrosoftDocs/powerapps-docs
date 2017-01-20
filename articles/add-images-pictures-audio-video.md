@@ -3,11 +3,11 @@
 	description="Show multimedia files in an app, and upload them to a data source"
 	services=""
 	suite="powerapps"
-	documentationCenter=""
-	authors="aftowen"
+	documentationCenter="na"
+	authors="RickSaling"
 	manager="anneta"
-	editor=""/>
-
+	editor=""
+	tags=""/>
 <tags
    ms.service="powerapps"
    ms.devlang="na"
