@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="RickSaling"
+	authors="aftowen"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="01/17/2017"
-   ms.author="ricksal"/>
+   ms.author="anneta"/>
 
 # Using multimedia files in PowerApps
 
