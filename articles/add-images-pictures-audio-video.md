@@ -3,11 +3,11 @@
 	description="Show multimedia files in an app, and upload them to a data source"
 	services=""
 	suite="powerapps"
-	documentationCenter=""
-	authors="RickSaling"
+	documentationCenter="na"
+	authors="aftowen"
 	manager="anneta"
-	editor=""/>
-
+	editor=""
+	tags=""/>
 <tags
    ms.service="powerapps"
    ms.devlang="na"
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="01/17/2017"
-   ms.author="ricksal"/>
+   ms.author="anneta"/>
 
 # Using multimedia files in PowerApps
 
