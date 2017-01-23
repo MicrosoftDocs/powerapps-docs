@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/30/2016"
+    ms.date="1/23/2017"
     ms.author="archanan"/>
 
 # Delegable data sources #
@@ -27,10 +27,10 @@ Delegation is supported for tabular data sources only. Current list of tabular d
 - Dynamics 365 - **Yes**
 - Salesforce - **Yes**
 - Excel - **Coming soon**
-- Dynamics 365 for Operations
-- Dynamics 365 for Financials
-- Dynamics NAV
-- Google Sheets
+- Dynamics 365 for Operations - Not yet
+- Dynamics 365 for Financials - Not yet
+- Dynamics NAV - Not yet
+- Google Sheets - Not yet
 
 More tabular data sources and delegation support for them are being added continuously.
 
