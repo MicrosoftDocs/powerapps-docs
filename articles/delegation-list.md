@@ -21,6 +21,7 @@
 As outlined in detail in the [Understand delegation](delegation-overview.md) article, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the app for processing locally.
 
 Delegation is supported for tabular data sources only. Current list of tabular data sources and if they support delegation is listed below, with details in the next section.
+
 - Common Data Service - **Yes**
 - SharePoint - **Yes**
 - SQL Server - **Yes**
