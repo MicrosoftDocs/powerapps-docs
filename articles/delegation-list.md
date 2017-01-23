@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="1/23/2017"
+    ms.date="01/23/2017"
     ms.author="archanan"/>
 
 # Delegable data sources #
