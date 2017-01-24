@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create relationships between SharePoint lists via lookup field | Microsoft PowerApps"
-	description="Create relationships between SharePoint lists by using lookup fields."
+	pageTitle="Create a relationship between SharePoint lists via a lookup field | Microsoft PowerApps"
+	description="Create a relationship between SharePoint lists by using a lookup field."
 	services="powerapps"
 	documentationCenter="na"
 	authors="RickSaling"
@@ -18,7 +18,6 @@
    ms.author="ricksal"/>
 
 # How to link SharePoint lists using lookup fields
-
 This tutorial shows how you can connect two SharePoint lists with lookup fields.
 
 ## Overview
@@ -95,22 +94,26 @@ You use this app to add data to the **Assets** list.
 
 1. Open PowerApps Studio. If you are new to PowerApps, [sign up for free](https://powerapps.microsoft.com) using your organizational email address and follow the instructions to download PowerApps Studio from the Windows store.
 
-2. In PowerApps Studio, click or tap New --> ”SharePoint”.
+2. In the **File** menu (along the left edge), click or tap **New**, and then click or tap **SharePoint**.
+
 ![](./media/sharepoint-lookup-fields/create-app.png)
 
 3. Choose your SharePoint site from the **Recent sites** list or enter your site's url directly into the text box. Click or tap **GO**.
+
 ![](./media/sharepoint-lookup-fields/choose-sharepoint-site.png)
 
-4. Choose the main list from your SharePoint site, in this example, **Assets**. Click or tap the **Connect** button in the lower right.
-![](./media/sharepoint-lookup-fields/choose-main-list.png)
+4. Choose the main list from your SharePoint site, in this example, **Assets**. Click or tap the **Connect** button in the lower-right corner.
 
+![](./media/sharepoint-lookup-fields/choose-main-list.png)
 
 ## Add data to the Assets list
 Now you can run the app and see how the view details screen looks for the lookup fields.
 
-1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ). Click or tap the **+** symbol in the upper right corner to add an entry.
+1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ).
 
-2. Enter a *Title* for this asset.
+1. Click or tap the **+** symbol in the upper right corner to add an entry.
+
+2. Enter a **Title** for this asset.
 
 3. Click or tap the **AssetType** dropdown arrow. The values displayed are those you entered when you created this field. Choose one of the entries.
 
@@ -120,13 +123,11 @@ Now you can run the app and see how the view details screen looks for the lookup
 
 	![](./media/sharepoint-lookup-fields/fill-repair-shop-3.png)
 
-5. Click the check mark in the upper right corner of the app.
+5. In the upper-right corner, click or tap the check mark to save the new entry.
 
-6. You can repeat this procedure to add as many items to the list as you want.
+6. (optional) Repeat this procedure to add as many items to the list as you want.
 
-7. Press *escape* to return to the PowerApps Studio.
-
-
+7. Press Esc to return to the default workspace.
 
 ## For more information ##
 - [Introducing support for lookups and a new sample app](https://powerapps.microsoft.com/blog/support-for-lookups/)
