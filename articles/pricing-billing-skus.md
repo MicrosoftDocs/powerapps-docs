@@ -15,7 +15,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/30/2016"
+    ms.date="01/19/2017"
     ms.author="jamesol"/>
 
 # Licensing overview #
