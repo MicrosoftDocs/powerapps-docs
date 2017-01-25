@@ -1,6 +1,6 @@
 <properties
-   pageTitle="Generate an app to manage data from a SharePoint list | Microsoft PowerApps"
-   description="Generate a three-screen app to manage data from a SharePoint list, whether the site is on-premises or in the cloud."
+   pageTitle="Generate an app from within a SharePoint list | Microsoft PowerApps"
+   description="Generate a three-screen app to manage items from within a SharePoint list, whether the site is on-premises or in the cloud."
    services=""
    suite="powerapps"
    documentationCenter="na"
@@ -15,37 +15,37 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/18/2016"
+   ms.date="01/21/2017"
    ms.author="ricksal"/>
 
-# Generate an app from the SharePoint Online list interface #
+# Generate an app from within SharePoint using PowerApps #
 
 [AZURE.VIDEO nb:cid:UUID:639d7eaf-bae5-447c-a34b-ec539a01a15c]
 
-In a SharePoint Online list, generate a three-screen app that manages the list.
+In PowerApps, automatically generate an app in which users can manage items in a custom SharePoint Online list. The app will have three screens so that users can:
 
-You can **Create an app** using PowerApps from the command bar of any SharePoint Online custom list. Apps generated through this flow show up as views within the new SharePoint modern list experience.  This allows you to leverage PowerApps to build custom, mobile-optimized views of your existing lists and share them with your co-workers. Because PowerApps is a cross-platform service, you can run the apps you generate across all of your devices including Windows, iOS, Android, and the web browser.
+- view all items in the list
+- view all fields for a specific item
+- create or edit an item
 
-For information about what kinds of SharePoint data PowerApps supports, see [Known issues](connection-sharepoint-online.md#known-issues).
+If you create an app from the command bar of a custom list in SharePoint Online, the app appears as a view of that list. Users can run also the app on a Windows, iOS, or Android device, in addition to a web browser.
 
-## Prerequisites ##
-If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
+**Important**: PowerApps doesn't support all types of SharePoint data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
 ## Generate an app ##
-
-1. Open a custom list in SharePoint Online, select **PowerApps** on the command bar, and then select **Create an app**.
+1. Open a custom list in SharePoint Online, click or tap **PowerApps** on the command bar, and then click or tap **Create an app**.
 
     ![](./media/generate-app-from-sharepoint-list-interface/generate-new-app.png)
 
-3. In the panel that appears, enter your app name, and then select **Create**.
+3. In the panel that appears, type a name for your app, and then click or tap **Create**.
 
     ![](./media/generate-app-from-sharepoint-list-interface/enter-app-name.png)
 
-	PowerApps Studio for web opens a new browser tab and creates a default app automatically based on the list’s schema and data.
+	A new tab appears in your web browser and shows the app that you generated automatically based on your list.
 
     ![](./media/generate-app-from-sharepoint-list-interface/powerapp-studio-for-web.png)  
 
-6. Select **Open** from the original SharePoint tab.
+6. Click or tap the browser tab for your SharePoint list, and then click or tap **Open**.
 
 	**Note**: You might need to refresh the browser window (for example, by pressing F5) before the app will open.
 
@@ -61,11 +61,12 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 ![](./media/generate-app-from-sharepoint-list-interface/command-bar.png)
 
 - If you click or tap **Edit in PowerApps**, the app opens in a separate browser tab so that you can update the app in PowerApps Studio for the web.
+
 - If you click or tap **Make this view public**, other people in your organization will be able to see it. By default, only you can see views that you create. If you want other people to be able to edit this app, you need to [share it with them](share-app.md) and grant **Contributor** permissions.
+
 - If you click or tap **Remove this view**, you'll remove the view from SharePoint, but the app will still be in PowerApps unless you [delete it](delete-app.md).
 
 ## Next steps ##
-
 - [Add and update items in the list](open-app-embedded-in-sharepoint.md).
 - To customize the browse screen (which appears by default), see [Customize a layout](customize-layout-sharepoint.md).
 - To customize the details or edit screens, see [Customize a form](customize-forms-sharepoint.md).

@@ -1,13 +1,13 @@
 <properties
-	pageTitle="Embed multimedia files into a PowerApps app and upload | Microsoft PowerApps"
+	pageTitle="Embed multimedia files into an app and upload | Microsoft PowerApps"
 	description="Show multimedia files in an app, and upload them to a data source"
 	services=""
 	suite="powerapps"
-	documentationCenter="na"
-	authors="aftowen"
+	documentationCenter=""
+	authors="RickSaling"
 	manager="anneta"
-	editor=""
-	tags=""/>
+	editor=""/>
+
 <tags
    ms.service="powerapps"
    ms.devlang="na"
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="01/17/2017"
-   ms.author="anneta"/>
+   ms.author="ricksal"/>
 
 # Using multimedia files in PowerApps
 
@@ -26,14 +26,22 @@ This topic shows you how to embed multimedia files in your app, upload pen drawi
 [Sign up](../articles/signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
 
 ## Add media from a file ##
-You can choose which kind of media file to add, for example, pictures, video, or audio.
+You can choose which kind of media file to add (for example, images, video, or audio).
 
 1. On the **Content** tab, select **Media**.
-2. Under **Media**, select **Images**, **Videos**, or **Audio**, and then select **Browse**:  
-	![][1]  
-3. Select the file that you want to add, and then select **Open**. The **Pictures** folder on your computer opens, and you can select images from here or navigate to another folder.
-4. When you finish adding files, go back to the app designer. You can also press Esc.
-5. On the **Insert** tab, select **Media**, and then select **Image**, **Video**, or **Audio**:  
+
+2. Under **Media**, select **Images**, **Videos**, or **Audio**, and then select **Browse**:
+
+	![][1]
+
+3. Select the file that you want to add, and then select **Open**.
+
+	The **Pictures** folder on your computer opens, and you can select an image from there or navigate to another folder.
+
+4. When you finish adding files, press Esc to return to the default workspace.
+
+5. On the **Insert** tab, select **Media**, and then select **Image**, **Video**, or **Audio**:
+
 	![][8]
 
 	- If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
@@ -50,20 +58,21 @@ You can choose which kind of media file to add, for example, pictures, video, or
 
 ## Add images from the cloud to your app
 
-In this scenario, you save images in a cloud storage account, OneDrive for Business. You use an Excel table to contain the path to the images, and display the images in a gallery control in your app.
+In this scenario, you save images in a cloud storage account, OneDrive for Business. You use an Excel table to contain the path to the images, and you display the images in a gallery control in your app.
 
 This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
-**NOTE**: The path to these images in the Excel file must use forward slashes. When PowerApps saves image paths in an Excel table, the path uses backslashes. If you use image paths from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images will not display.  
+**NOTE**: The path to these images in the Excel file must use forward slashes. When PowerApps saves image paths in an Excel table, the path uses backslashes. If you use image paths from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images won't display.  
 
 1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 
 2. Rename the **Assets** folder to **Assets_images**.
-3. In an Excel spreadsheet, create a one-column table and fill it with the following data:
+
+3. In an Excel spreadsheet, create a one-column table, and fill it with the following data:
 
 	![Jackets table](./media/add-images-pictures-audio-video/jackets.png)
 
-4. Name the table **Jackets**. Name the Excel file **Assets.xlsx**.
+4. Name the table **Jackets**, and name the Excel file **Assets.xlsx**.
 
 5. In your app, add the **Jackets** table as a data source.  
 
@@ -75,14 +84,12 @@ This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.wind
 
 	![Jacket images](./media/add-images-pictures-audio-video/images.png)
 
-	When you set the Items property, the Excel table is automatically updated with a new column named __PowerAppsId__.
+	When you set the **Items** property, a column named __PowerAppsId__ is automatically added to the Excel table.
 
 	In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
-
-## Upload pen drawings to the cloud
-
-In this scenario, you learn how to upload pen drawings to your data source, OneDrive for Business, and examine how the drawings are stored in OneDrive for Business.
+## Upload pen drawings to the cloud ##
+In this scenario, you learn how to upload pen drawings to your data source, OneDrive for Business, and examine how the drawings are stored there.
 
 1. In Excel, add **Image [image]** to cell A1.
 
@@ -92,13 +99,13 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 	b. On the **Insert** ribbon, select **Table**.
 
-	c. In the dialog window, select **My table has headers**, and select **OK**.
+	c. In the dialog box, select **My table has headers**, and then select **OK**.
 
 	![Create a table](./media/add-images-pictures-audio-video/create-table.png)
 
-	Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information on table formatting in Excel.
+	Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information about table formatting in Excel.
 
-	d. Name the table **Drawings**:  
+	d. Name the table **Drawings**:
 
 	![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
 
@@ -108,54 +115,60 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 5.	In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 
-	a.	Click or tap the **Content** tab and then click or tap **Data sources**.
+	a.	Click or tap the **Content** tab, and then click or tap **Data sources**.
 
 	![](./media/add-images-pictures-audio-video/choose-data-sources.png)
 
-	b.	Click or tap **Add data source** and click or tap one, OneDrive for Business.
+	b.	Click or tap **Add data source**, and then click or tap **OneDrive for Business**.
 
 	![](./media/add-images-pictures-audio-video/select-source.png)
 
 	c.	Click or tap **SavePen.xlsx**.
 
-	d.	Select the **Drawings** table and click or tap **Connect**.
+	d.	Select the **Drawings** table, and then click or tap **Connect**.
 
 	![Connect](./media/add-images-pictures-audio-video/savepen.png)  
 
-	Now, the Drawings table is listed as a Data source.
+	Now, the Drawings table is listed as a data source.
 
-6.  On the **Insert** tab, select **Text**, and then select **Pen input**. Rename it **MyPen**:  
+6.  On the **Insert** tab, select **Text**, and then select **Pen input**.
+
+1. Rename the new control **MyPen**:  
 
 	![Rename](./media/add-images-pictures-audio-video/rename-mypen.png)
 
-7.	Add a **Button** control from the **Insert** tab, and set its **OnSelect** property to the following formula:
+7. On the **Insert** tab, add a **Button** control, and set its **OnSelect** property to this formula:
 
-			Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})
+	```Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})```
 
 8.	Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
 
-	Move the controls around so that your screen should look similar to the following:  
+	Arrange the controls so that your screen resembles the following:  
 
 	![Sample screen](./media/add-images-pictures-audio-video/screen.png)
 
-8.	Press F5 or select Preview ( ![](./media/add-images-pictures-audio-video/preview.png) ).
+8.	Press F5, or select Preview ( ![](./media/add-images-pictures-audio-video/preview.png) ).
 
-9. Draw something in MyPen, and the select the button. The first image in the gallery control displays what you drew.
+9. Draw something in MyPen, and then select the button.
 
-10. Add something else to your drawing, and select the button. The second image in the gallery control displays what you drew.
+	The first image in the gallery control displays what you drew.
 
-11.	Close the preview window by pressing the *ESC* key.
+10. Add something else to your drawing, and select the button.
 
-12. Go to your cloud storage account. There's a new **SavePen_images** folder that is automatically created. You may need to refresh to see the new folder. This folder contains your saved images with IDs for their file names.
+	The second image in the gallery control displays what you drew.
 
-10.	Open **SavePen.xlsx**. The *Image* column specifies the path to the new images.
+11.	Close the preview window by pressing Esc.
+
+	In your cloud storage account, a **SavePen_images** folder has been automatically created. This folder contains your saved images with IDs for their file names. To show the folder, you may need to  refresh the browser window by, for example, pressing F5.
+
+	In **SavePen.xlsx**, the **Image** column specifies the path to the new images.
 
 
 ## For more information
 
-Be sure to test your app on different platforms, including in the [Dynamics browser](https://home.dynamics.com/), and on a phone.
+Be sure to test your app on different platforms, including in [a browser window](https://home.dynamics.com/) and on a phone.
 
-For information on more advanced scenarios involving uploading multimedia directly to a different data source, see [image capture pro tips](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) and [custom api for image upload](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
+For information about more advanced scenarios that involve uploading multimedia directly to a different data source, see [image capture pro tips](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) and [custom api for image upload](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
 
 Another way to upload files to a data source is to use the [Patch](functions/function-patch.md) function.
 
