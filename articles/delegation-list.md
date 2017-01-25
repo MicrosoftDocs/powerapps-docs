@@ -20,7 +20,7 @@
 # Delegable data sources #
 As outlined in detail in the [Understand delegation](delegation-overview.md) article, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the app for processing locally.
 
-Delegation is supported for tabular data sources only. Current list of tabular data sources and if they support delegation is listed below, with details in the next section.
+Delegation is supported for tabular data sources only. This list identifies tabular data sources and whether they support delegation, with details in the next section.
 
 - Common Data Service - **Yes**
 - SharePoint - **Yes**
@@ -39,12 +39,12 @@ This document lists the current state of supported delegation per data source.
 
 **Prerequisites**
 
-- Familiarize yourself with [Understand delegation](delegation-overview.md) article
+- Familiarize yourself with the [Understand delegation](delegation-overview.md) article
 
 ## List of data sources and supported delegation ##
 This list of data sources and delegable functions and predicates will be updated periodically to reflect the current status of delegation support in PowerApps.
 
-### Top Level Delegable Functions ###
+### Top-level delegable functions ###
 
 |               | Common Data Service              | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 |---------------|----------------------------------|------------|------------|--------------|------------|
@@ -54,9 +54,9 @@ This list of data sources and delegable functions and predicates will be updated
 | Search        | Yes<sup>1</sup>                  | No         | Yes        | Yes          | Yes        |
 | LookUp        | Yes                              | Yes        | Yes        | Yes          | Yes        |
 
-<sup>1</sup>For String fields only
+<sup>1</sup>For string fields only
 
-### Filter and LookUp Delegable Predicates ###
+### Filter and LookUp delegable predicates ###
 
 |                                        | Common Data Service        | SharePoint                     | SQL Server | Dynamics 365 | Salesforce |
 |----------------------------------------|----------------------------|--------------------------------|------------|--------------|------------|
