@@ -38,7 +38,9 @@ At this time, these data sources support delegation:
 - [Dynamics 365](connections/connection-dynamics-crmonline.md)
 - [SQL Server](connections/connection-azure-sqldatabase.md)
 
-We are continuing to add delegation support to existing data sources, as well as add more data sources. For more information, see [Delegation list](delegationp-list.md).
+We are continuing to add delegation support to existing data sources, as well as add more data sources.
+
+**Note**: For more information, see [Delegation list](delegation-list.md).
 
 Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full PowerApps language can be applied.
 
