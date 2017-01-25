@@ -24,14 +24,13 @@ PowerApps includes a powerful set of functions for filtering, sorting, and shapi
 
 The key to building efficient apps is to minimize the amount of data that needs to be brought to your device.  Perhaps only a handful of records from a sea of millions are needed, or a single aggregate value can represent thousands of records.  Or perhaps only the first set of records can be retrieved, and the rest brought in as the user gestures that they want more.  Being focused can dramatically reduce the processing power, memory, and network bandwidth needed by your app, resulting in snappier response times for your users, even on phones connected via a cellular network.  
 
-*Delegation* is where the expressiveness of PowerApps formulas meets the need to minimize data moving over the network.  In short it means that PowerApps will delegate the processing of data to the data source, rather than moving the data to the app for processing locally.  
+*Delegation* is where the expressiveness of PowerApps formulas meets the need to minimize data moving over the network.  In short, it means that PowerApps will delegate the processing of data to the data source, rather than moving the data to the app for processing locally.  
 
 Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a PowerApps formula can be delegated to every data source.  The PowerApps language mimics Excel's formula language, designed with complete and instant access to a full workbook in memory, with a wide variety of numerical and text manipulation functions.  As a result, the PowerApps language is far richer than most data sources can support, including powerful database engines such as SQL Server.
 
-**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need.  Take heed of <a href="#blue-dot-suggestions">blue dot suggestions</a> that flag places where delegation is not possible.  If you are working with small data sets (less than 500 records), then you can use any data source and formula as processing can be done locally if the formula cannot be delegated.  
+**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need. Take heed of [blue-dot suggestions](delegation-overview.md#blue-dot-suggestions) that flag places where delegation is not possible.  If you're working with small data sets (less than 500 records), you can use any data source and formula as processing can be done locally if the formula cannot be delegated.  
 
 ## Delegable data sources ##
-
 At this time, these data sources support delegation:
 
 - [Common Data Service](data-platform-intro.md)
@@ -39,15 +38,14 @@ At this time, these data sources support delegation:
 - [Dynamics 365](connections/connection-dynamics-crmonline.md)
 - [SQL Server](connections/connection-azure-sqldatabase.md)
 
-We are continuing to add delegation support to existing data sources, as well as add more data sources.
+We are continuing to add delegation support to existing data sources, as well as add more data sources. For more information, see [Delegation list](delegationp-list.md).
 
-Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables do not require delegation.  All of this data is already in memory and the full PowerApps language can be applied.
+Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full PowerApps language can be applied.
 
 ## Delegable functions ##
+The next step is to use only those formulas that can be delegated. Included here are the formula elements that could be delegated.  However, every data source is different, and not all of them support all of these elements. Check for blue-dot suggestions in your particular formula.
 
-The next step is to only use formulas that can be delegated.  Included here are the formula elements that could be delegated.  However, every data source is different, and not all of these are supported by every data source.  Check for blue dot suggestions in your particular formula.
-
-These lists will change over time.  We are working to support more functions and operators with delegation.
+These lists will change over time. We're working to support more functions and operators with delegation.
 
 ### Filter functions ###
 
