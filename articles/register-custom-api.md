@@ -1,11 +1,11 @@
 <properties
-	pageTitle="Register Custom APIs in PowerApps | Microsoft PowerApps"
-	description="Register Custom APIs in PowerApps using Swagger and OAuth."
+	pageTitle="Register custom APIs in PowerApps | Microsoft PowerApps"
+	description="Register custom APIs in PowerApps using Swagger and OAuth."
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="camsoper"
-	manager="AFTOwen"
+	authors="RickSaling"
+	manager="anneta"
 	editor=""/>
 
 <tags
@@ -15,9 +15,9 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/26/2016"
-   ms.author="casoper"/>
+   ms.author="ricksal"/>
 
-# Register Custom APIs in PowerApps
+# Register custom APIs in PowerApps
 
 PowerApps can leverage any RESTful APIs hosted anywhere.  This tutorial demonstrates registering and using a custom API.
 
@@ -94,14 +94,14 @@ When you create the Swagger file, a JSON file is created.  You'll need this is S
 
 Now that the Swagger file (JSON file) is generated for the custom API, add the connection to PowerApps.
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Manage** to expand it, and then click **Connections**. Then click **New connection** in the upper-right corner. 
+1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Manage** to expand it, and then click **Connections**. Then click **New connection** in the upper-right corner.
 
 	 >[AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
 
 	![Create custom API](./media/register-custom-api/createnewconnection.png)  
 
 2. Select **Custom**, and select **New custom API**:  
-	
+
 	![Custom API properties](./media/register-custom-api/connecttocustomapi.png)  
 
 	You will be prompted for the properties of your API.  
@@ -123,8 +123,8 @@ Now that the Swagger file (JSON file) is generated for the custom API, add the c
 	| Client secret | Type the client secret from the identity provider you chose. |  
 
 	If the JSON file does not use the ```securityDefintions``` object, then no additional values may be needed.
-	
-4. Select **Create**. 
+
+4. Select **Create**.
 
 Your custom API is now displayed under **Custom**.
 
@@ -134,36 +134,10 @@ Your custom API is now displayed under **Custom**.
 
 5. Now that the custom API is registered, you must create a connection to the custom API so it can be used in your apps.  Click the **+** to the right of the **Modified** date of your custom API and then complete any necessary steps to sign in to your API's data source.  If you're using **OAuth** authentication with your API, you might be presented a sign-in screen.  For API Key authentication, you might be prompted for a key value.
 
-
 ### Step 3: Add the custom API to an app
+[Add the custom API to an app](add-data-connection.md) as you would any other data source, and then use the API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](connection-office365-outlook.md) is an example of using the Office 365 API.
 
-Now you're ready to use the custom API with your app. To illustrate, we'll use a custom weather API.
-
-In this step, you'll create a very simple app that shows you how to add your custom API. For more information, see [Create an app from data](get-started-create-from-data.md).
-
-1. In [powerapps.com](https://web.powerapps.com), select **New App**:
-	
-	![New app](./media/register-custom-api/newpowerapp.png)
-
-2. A new tab opens in your browser. In this new tab, a blank app is created automatically. Select **connect to data**.
-
-	![Connect to data](./media/register-custom-api/blankpowerapp.png) 
-
-3. In the **Content** tab, select **Data sources**.
-	
-	![Data sources](./media/register-custom-api/datasources.png)
-
-4. In the new screen, your existing connections are listed, including the custom API you added. Select your custom API.
-	
-	![Custom API](./media/register-custom-api/screencustomapi.png)
-
-5. Select **Add data source**.
-
-Once added, you can use your custom API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](connection-office365-outlook.md) is an example of using the Office 365 API.
-
-
-## Sharing a Custom API
-
+## Share a custom API
 Users can also share custom APIs with each other.
 
 1. In [powerapps.com](https://web.powerapps.com) under **Manage**, select **Connections**, and then select **New connection**.

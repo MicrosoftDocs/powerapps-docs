@@ -4,8 +4,8 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="camsoper"
-	manager="AFTOwen"
+	authors="RickSaling"
+	manager="anneta"
 	editor=""/>
 
 <tags
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/26/2016"
-   ms.author="casoper"/>
+   ms.author="anneta"/>
 
 # Customize your Swagger definition for PowerApps
 
@@ -119,4 +119,3 @@ This is useful in scenarios where the inputs to an operation are dynamic. For ex
 [Use an ASP.NET Web API](customapi-web-api-tutorial.md).
 
 [Register an Azure Resource Manager API](customapi-azure-resource-manager-tutorial.md).
-
