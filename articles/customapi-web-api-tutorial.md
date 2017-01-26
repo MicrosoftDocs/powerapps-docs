@@ -4,8 +4,8 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="camsoper"
-	manager="AFTOwen"
+	authors="RickSaling"
+	manager="anneta"
 	editor=""/>
 
 <tags
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/26/2016"
-   ms.author="casoper"/>
+   ms.author="ricksal"/>
 
 # Create a custom Web API for PowerApps
 
@@ -30,11 +30,11 @@ This tutorial shows you how to create an ASP.NET Web API, host it on Azure Web A
 ## Create an ASP.NET Web API and deploy it to Azure
 
 1. In Visual Studio, click **File** > **New Project** to create a new C# ASP.NET web application.
-    
+
     ![New Web App](./media/customapi-web-api-tutorial/newwebapp.png)
 
 2. Select the **Web API** template.  Leave **Host in the cloud** checked.  Click **Change Authentication**.
-    
+
     ![New Web Project Template](./media/customapi-web-api-tutorial/new-web-api.png)
 
 3. Select **No Authentication**, and then click **OK**.
@@ -52,7 +52,7 @@ This tutorial shows you how to create an ASP.NET Web API, host it on Azure Web A
     >[AZURE.NOTE] To get started with ASP.NET Web API, you can try some of the [official tutorials](http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api).
 
 6. To connect our Web API to PowerApps, we'll need a [Swagger](http://swagger.io/) file that describes its operations.  You could write a Swagger of our own using the [online editor](http://editor.swagger.io/), but for this tutorial, you'll use an open-source tool named [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle/blob/master/README.md).  Install the Swashbuckle Nuget package in your Visual Studio project by clicking **Tools** > **NuGet Package Manager** > **Package Manager Console**, and then, in the Package Managet Console, type the command `Install-Package Swashbuckle`.
-    
+
     ![Install-Package Swashbuckle](./media/customapi-web-api-tutorial/swashbuckle-console.png)
 
     >[AZURE.TIP] When you run your Web API application after installing Swashbuckle, a Swagger file will now be generated at the URL `http://<your root URL>/swagger/docs/v1`.  A generated user interface is also available at `http://<your root URL>/swagger`.

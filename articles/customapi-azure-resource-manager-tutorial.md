@@ -4,8 +4,8 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="camsoper"
-	manager="AFTOwen"
+	authors="RickSaling"
+	manager="anneta"
 	editor=""/>
 
 <tags
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/26/2016"
-   ms.author="casoper"/>
+   ms.author="ricksal"/>
 
 
 # Create a custom API using Azure Resource Manager in PowerApps
