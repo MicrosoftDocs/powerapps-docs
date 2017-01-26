@@ -67,7 +67,7 @@ All entities, whether standard or custom, are created with a set of read-only fi
 - **Last Modified By** - The user who most recently modified the record.
 
 ### Standard fields
-Each standard entity contains a set of default fields that you can't change or delete. For a lishttps://docs.microsoft.com/common-data-service/entity-reference/standard-entitiest of the entities and their fields, and a list of the picklists, see [Microsoft Common Data Model, Entities Reference](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
+Each standard entity contains a set of default fields that you can't change or delete. For a list of the entities and their fields, and a list of the picklists, see [Microsoft Common Data Model, Entities Reference](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
 
 ### Custom fields ###
 You can create custom fields in either a standard entity or a custom entity. You must specify the name, display name, and data type of each custom field. PowerApps supports the following data types:
