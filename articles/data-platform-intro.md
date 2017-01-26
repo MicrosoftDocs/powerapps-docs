@@ -67,7 +67,7 @@ All entities, whether standard or custom, are created with a set of read-only fi
 - **Last Modified By** - The user who most recently modified the record.
 
 ### Standard fields
-Each standard entity contains a set of default fields that you can't change or delete. For a list of the entities and their fields, and a list of the picklists, see [Microsoft Common Data Model, Entities Reference](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
+Each standard entity contains a set of default fields that you can't change or delete. For a lishttps://docs.microsoft.com/common-data-service/entity-reference/standard-entitiest of the entities and their fields, and a list of the picklists, see [Microsoft Common Data Model, Entities Reference](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
 
 ### Custom fields ###
 You can create custom fields in either a standard entity or a custom entity. You must specify the name, display name, and data type of each custom field. PowerApps supports the following data types:
@@ -97,7 +97,7 @@ For more information, see [Manage fields in an entity](data-platform-manage-fiel
 You can navigate between records in entities if they have a relationship that's defined as a field of the **Lookup** data type. To create a lookup relationship, add a field of data type **Lookup** in one entity, and point to the entity in which you want to look up information. For more information, see [Entity relationships via lookup field](data-platform-entity-lookup.md).
 
 ## Standard entities
-For a list of the entities and their fields, and a list of the enumerations, see [Microsoft Common Data Model, Entities Reference](http://download.microsoft.com/download/8/9/5/8956ED58-A9B0-40DF-8CB0-BC13AD8DB6E2/CDMEntityReference.docx).
+For a list of the entities and their fields, and a list of the enumerations, see [Microsoft Common Data Model, Entities Reference](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
 
 Functional group | Description 
 --- | --- 
