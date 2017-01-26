@@ -58,6 +58,8 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
+**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.

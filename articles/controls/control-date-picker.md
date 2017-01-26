@@ -76,6 +76,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **StartYear** – The earliest year to which the user can set the value of a date-picker control.
 
+**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
