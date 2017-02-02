@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="AFTOwen"
+	authors="Mattp123"
 	manager="anneta"
 	editor=""
 	tags="" />
@@ -15,137 +15,124 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="10/20/2016"
-ms.author="anneta"/>
+ms.date="01/31/2017"
+ms.author="matp"/>
 
 # Connect from Microsoft PowerApps to Dynamics 365 #
+PowerApps lets you quickly generate, customize, share, and run mobile apps with little or no code. By using the Dynamics 365 connector, you can create useful mobile apps to share with your organization in just a few minutes.
 
-![Dynamics 365](./media/connection-dynamics-crmonline/dynamicscrmicon.png)
+By following the steps in this topic, you'll create an app in which users can browse, add, delete, and make updates to contacts in Dynamics 365. Users can run the app [in a browser](run-app-browser.md) or [on a mobile device](run-app-client.md) such as a phone.
 
-Display information from items within Dynamics 365 in your app. For example, you can add text boxes to your app, and in these text boxes, display a record from a Dynamics entity. You can also use a gallery control within your app to return a list of all entities in an instance of Dynamics 365. In another example, you can add a button that, when selected, creates or deletes a record in an entity.
+## Prerequisite
+To follow this tutorial, you need a Microsoft Office 365 account that includes a Dynamics 365 subscription.
 
-- For information about how to create an app, see [Generate an app automatically](get-started-create-from-data.md) or [Create an app from scratch](get-started-create-from-blank.md). These topics are written for Excel, but the same principles apply to Dynamics.
-- For information about how to add data from Dynamics 365 to an existing app, see [Add a data connection](add-data-connection.md).
-- See the [list of available connections](../connections-list.md), and learn how to [manage connections](../add-manage-connections.md) in PowerApps.
+## Create a connection
+1. [Sign in to PowerApps](https://web.powerapps.com/).
 
-<!--NotAvailableYet
-## View the available functions
+1. In the left navigation pane, click **Connections**.
 
-This connection includes the following functions:
+	![Connection option on File menu](.\media\connection-dynamics-crmonline\file-connections.png)
 
-| Function Name |  Description |
-| --- | --- |
-|[GetItems](connection-dynamics-crmonline.md#getitems) | Get records for an entity |
-|[PostItem](connection-dynamics-crmonline.md#postitem) | Create a new record of an entity |
-|[GetItem](connection-dynamics-crmonline.md#getitem) | Retrieve the specified record for an entity |
-|[DeleteItem](connection-dynamics-crmonline.md#deleteitem) | Delete an record from an entity collection |
-|[PatchItem](connection-dynamics-crmonline.md#patchitem) | Update an existing record for an entity |
-|[GetTables](connection-dynamics-crmonline.md#gettables) | Used for getting the list of entities present in a Crm instance |
+2. Near the upper-right corner, click **New connection**.
 
+	![New connection](.\media\connection-dynamics-crmonline\new-connection.png)
 
-## GetItems
-Gets records: Get records for an entity
+3. In the list of connections, click **Dynamics 365**.
 
-#### Input properties
+	![Connection option on File menu](.\media\connection-dynamics-crmonline\connection-d365.png)
 
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|dataset|string|yes|Name of CRM Organization Eg: Contoso|
-|table|string|yes|Name of the entity|
-|$skip|integer|no|Number of entries to skip (default = 0)|
-|$top|integer|no|Maximum number of entries to retrieve (default = 256)|
-|$filter|string|no|An ODATA filter query to restrict the number of entries|
-|$orderby|string|no|An ODATA orderBy query for specifying the order of entries|
+1. In the dialog box, click **Create**.
 
-#### Output properties
+	![Create connection](.\media\connection-dynamics-crmonline\create-connection.png)
 
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|No | |
+4. In the **Sign in to your account** dialog box, provide your credentials for the Dynamics 365 (online) tenant.
 
+	A connection is created.
 
-## PostItem
-Create a new record: Create a new record of an entity
+## Generate an app automatically ##
+1. [Sign in to PowerApps](https://web.powerapps.com/), and then click **New app** near the lower-left corner.
 
-#### Input properties
+	![New app](.\media\connection-dynamics-crmonline\new-app.png)
 
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|dataset|string|yes|Name of CRM Organization Eg: Contoso|
-|table|string|yes|Name of the entity|
-|item| |yes|Record to Create|
+3. In the dialog box that appears, click **PowerApps Studio for web**.
 
-#### Output properties
+	![Open PowerApps Studio for web](.\media\connection-dynamics-crmonline\studio-for-web.png)
 
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|ItemInternalId|string|No | |
+4. Under **Start with your data**, click **Phone layout** on the **Dynamics 365** tile.
 
+	![PowerApps select Dynamics 365 connector](.\media\connection-dynamics-crmonline\phonelayout.png)
 
-## GetItem
-Gets a record: Retrieve the specified record for an entity
+5. Under **Connections**, select the connection that you want, and then choose a dataset, which corresponds to the instance of Dynamics 365 that you'll manage in the app.
 
-#### Input properties
+6. Under **Choose a table**, click **Contacts**, and then click **Connect**.
 
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|dataset|string|yes|Name of CRM Organization Eg: Contoso|
-|table|string|yes|Name of the entity|
-|id|string|yes|Identifier for the record|
+PowerApps generates a three-screen app based on contact records.
 
-#### Output properties
+* **BrowseScreen1**. This screen appears by default when users open the app. In the left navigation bar, a thumbnail for this screen appears above the other two screens.
+* **DetailScreen1**. This screen appears when users click an item in **BrowseScreen1**.  In the left navigation bar, a thumbnail for **DetailScreen1** appears between the other two screens.
+* **EditScreen1**. This screen appears when users click the edit icon for an item in **DetailScreen1**. In the left navigation bar, a thumbnail for **EditScreen1** appears under the other two screens.
 
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|ItemInternalId|string|No | |
+The app can run in its initial state, but we can make it more useful by refining the information on each screen.
 
+## Customize BrowseScreen1 ##
+In this procedure, you'll configure **BrowseScreen1** to show the first and last names of each contact. The data will be sorted alphabetically by last name and include images in a two-column grid.
 
-## DeleteItem
-Delete a record: Delete an record from an entity collection
+1. In the right-hand pane, click the layout that shows pictures and text in a two-column grid.
 
-#### Input properties
+	You might need to scroll down to show this option.
 
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|dataset|string|yes|Name of CRM Organization Eg: Contoso|
-|table|string|yes|Name of the entity|
-|id|string|yes|Identifier for the record|
+	![Select layout](.\media\connection-dynamics-crmonline\select-layout.png)
 
-#### Output properties
-None.
+1. In **BrowseScreen1**, select the gallery by clicking any record in it except the first one.
 
+	![Select layout](.\media\connection-dynamics-crmonline\select-gallery.png)
 
-## PatchItem
-Update an item: Update an existing record for an entity
+1. Copy this formula and then, with the gallery still selected, paste the formula in the formula bar (to the right of the **fx** button):
 
-#### Input properties
+	`SortByColumns(Search(Filter(Contacts,statuscode=1), TextSearchBox1.Text, "lastname"), "lastname", If(SortDescending1, Descending, Ascending))`
 
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|dataset|string|yes|Name of CRM Organization Eg: Contoso|
-|table|string|yes|Name of the entity|
-|id|string|yes|Identifier for the record|
-|item| |yes|Record to Update|
+1. In the right-hand pane, set the top drop-down list to **firstname** and the middle drop-down list to **lastname**.
 
-#### Output properties
+	![Select Body1](.\media\connection-dynamics-crmonline\firstname-lastname.png)
 
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|ItemInternalId|string|No | |
+7. (optional) On the **File** menu, click **Save as**, type a name for the app, and then click **Save**.
 
+	By default, the app will be saved to the cloud. Click **This computer** to save your app locally.
 
-## GetTables
-Gets entities: Used for getting the list of entities present in a Crm instance
+## Customize DetailsScreen1 and EditScreen1 ##
+1. In the left navigation bar, click the middle thumbnail to select **DetailsScreen1**.
 
-#### Input properties
+2. On **DetailScreen1**, click anywhere below the title bar to show customization options in the right-hand pane.
 
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|dataset|string|yes|Name of CRM Organization Eg: Contoso|
+	![Show form customization](.\media\connection-dynamics-crmonline\show-customization.png)
 
-#### Output properties
+3. In the right-hand pane, click the eye icon for each field to hide it.
 
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|No | Can output the Name and DisplayName properties |
--->
+	![Hide fields](.\media\connection-dynamics-crmonline\hide-field.png)
+
+1. Click anywhere under the title bar to select **Form1**.
+
+	![Select Form1](.\media\connection-dynamics-crmonline\select-form1.png)
+
+1. In the right-hand pane, click the eye icon for each of these fields, so that the screen will show an image (if the table contains one) and four other fields for each contact:
+
+	- **entityimage**
+	- **firstname**
+	- **lastname**
+	- **mobilephone**
+	- **emailaddress1**
+
+	The right-hand pane should resemble this graphic:
+
+	![Select Form1](.\media\connection-dynamics-crmonline\show-fields.png)
+
+1. Select **EditScreen1** by clicking the bottom thumbnail in the left navigation bar.
+
+1. Repeat the steps in this procedure to customize **EditScreen1** the same way as **DetailsScreen1**.
+
+7. (optional) Save the app.
+
+## Next steps ##
+- Test your app in Preview mode by clicking **BrowseScreen1** in the left navigation bar and then pressing F5 or clicking ![Preview mode](./media/connection-dynamics-crmonline/runpowerapp.png) near the upper-right corner.
+- [Share your app](share-app.md).
+- [Add a second data source](add-data-connection.md).
