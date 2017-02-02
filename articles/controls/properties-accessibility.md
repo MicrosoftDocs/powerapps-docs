@@ -16,12 +16,12 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="01/26/2017"
-   ms.author="fikaradz"/>
+   ms.author="anneta"/>
 
 # Accessibility properties in PowerApps #
 
 ## Overview ##
-Configuration of properties that aide alternative ways of interaction with controls suitable for visually impaired users.
+Configuration of properties that aid alternative ways of interaction with controls suitable for visually impaired users.
 
 ## Properties ##
 
