@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="fikaradz"
+    authors="linhtranms"
     manager="anneta"
     editor=""
     tags=""
@@ -15,60 +15,43 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/12/2016"
-    ms.author="fikaradz"/>
+    ms.date="02/01/2017"
+    ms.author="litran"/>
 
-# Using PowerApps in a web browser #
-After you create an app in PowerApps, you can run that app if you open a browser window and then click or tap the app’s tile on the Dynamics 365 home page. This page may show several types of business apps, but you can find a specific app by typing at least part of its name in the search box. You can also filter the list to show only those apps that were created in PowerApps. If someone else creates an app and shares it with you, you can open it directly by clicking or tapping the link in the mail that you receive. This way, you can bypass the Dynamics 365 home page and explore the app sooner.
+# Use PowerApps in a web browser #
+If you create an app in PowerApps, you can run that app in a browser by opening [Dynamics 365](https://home.dynamics.com) and then clicking or tapping the tile for the app on the home page.
 
-![Connection](./media/run-app-browser/dynamics-365-home.png)
+**Note**: You can find general information about [Microsoft Dynamics 365](https://docs.microsoft.com/en-us/dynamics365/) or [contact support](https://www.microsoft.com/en-us/dynamics365/contact-us) if you have a question about a Dynamics 365 app, such as Sales.
 
-Note: You can find general information about [Microsoft Dynamics 365](https://docs.microsoft.com/en-us/dynamics365/) or [contact support](https://www.microsoft.com/en-us/dynamics365/contact-us) if you have a question about a Dynamics 365 app, such as Sales.
+If your browser doesn't support all the controls used in the app, use it on a mobile device (such as a phone) by downloading PowerApps Mobile for iOS, Android, or Windows.
 
+## Find an app on the home page ##
+The home page may show several types of business apps, but you can find a specific app by typing at least part of its name in the search box. You can also filter the list to show only those apps that were created in PowerApps.
 
-## Searching ##
+If you've recently installed an app, it might not immediately appear in the list of apps. Click or tap **Sync** to show all your apps, but this process may take up to a minute.
 
-If you are having trouble finding an app, filter the list of apps by typing at least part of the app name in the **search box**. You can also filter by app environment in the **Filter** pane.
+![](./media/run-app-browser/dynamics-365-home.png)
 
-If you have recently installed an app, it may not appear in your app list immediately. Click or tap **Sync** to show all your apps, but this process may take up to a minute.
+## Open an app from the task pane ##
+After you find the app, you can pin it to the task pane for easier access. To pin an app, click or tap the ellipsis (...) on the app tile, and then click or tap **Pin this app**.
 
-![Connection](./media/run-app-browser/search-sync-filter.png)
+![](./media/run-app-browser/homepage-pin.png)
 
-## Task pane ##
-The task pane gives you quick access to all your apps. You access it by clicking or tapping the Dynamics 365 toggle-button on the header, which appears on top of your apps.
+The app will then appear in the task pane, which you open by clicking or tapping **Dynamics 365** in the upper-left corner.
 
-You can quickly open a pinned app from the task pane or find any of your apps through the "My apps" sub-menu.
+![](./media/run-app-browser/taskpane.png)
 
-![Connection](./media/run-app-browser/taskpane.png)
+## Open an app from a URL ##
+You can also save the app's URL as a bookmark or send the URL as a link over email. If someone else created an app in PowerApps and shared that app with you, you can run that app by clicking or tapping the link in the mail that you receive. In any of these cases, you might be prompted to sign in using your Azure Active Directory credentials.
 
-## Pin an app ##
-Pin an app to quickly access it from either the homepage or the task pane. To pin an app, open the ellipsis (...) menu on the app tile either in the task pane or the homepage, and then select **Pin this app**.
+![](./media/run-app-browser/web-login.png)
 
-![Connection](./media/run-app-browser/homepage-pin.png)
-
-![Connection](./media/run-app-browser/taskpane-pin.png)
-
-## Open an app ##
-To open an app, click or tap its tile in either the Dynamics 365 homepage or the task pane.
-
-You can also access an app directly using its URL. You can also share the link over email or bookmark it in your browser.
-
-If your browser does not support all the controls used in the app, you can download and use PowerApps Mobile, which is available on iOS, Android or Windows.  
-
-## Sign in to PowerApps ##
-If you open an app from dynamics.com, you're probably already signed in to Dynamics 365. If you open the app from a web link, you will be prompted to sign in using your Azure Active Directory credentials.
-
-![Connection](./media/run-app-browser/web-login.png)
-
-## Give consent ##
-If the app requires a connection to a data source or requires consent to use device capabilities, you will be prompted for configuration before you use the app:  
+## Connect to data ##
+If the app requires a connection to a data source or requires consent to use device capabilities, you will be prompted before you use the app:  
 
 ![Connection](./media/run-app-browser/app-connection.png)
 
 Typically, you are prompted only the first time.
 
-## Exit PowerApps ##
-Exit or close the app using either of these ways:
-
-- Click or tap **Sign out** in the Dynamics 365 portal.
-- Navigate to the Dynamics 365 home page or launch another app from the task pane.
+## Close an app ##
+To close the app, sign out of the Dynamics 365 home page, or open another app.
