@@ -19,14 +19,14 @@ ms.date="01/31/2017"
 ms.author="matp"/>
 
 # Connect from Microsoft PowerApps to Dynamics 365 #
-PowerApps lets you quickly generate, customize, share, and run mobile apps with little or no code. With the Dynamics 365 connector, you can create useful mobile apps to share with your organization in just a few minutes.
+PowerApps lets you quickly generate, customize, share, and run mobile apps with little or no code. By using the Dynamics 365 connector, you can create useful mobile apps to share with your organization in just a few minutes.
 
 By following the steps in this topic, you'll create an app in which users can browse, add, delete, and make updates to contacts in Dynamics 365. Users can run the app [in a browser](run-app-browser.md) or [on a mobile device](run-app-client.md) such as a phone.
 
 ## Prerequisite
 To follow this tutorial, you need a Microsoft Office 365 account that includes a Dynamics 365 subscription.
 
-## Create a connection for Dynamics 365
+## Create a connection
 1. [Sign in to PowerApps](https://web.powerapps.com/).
 
 1. In the left navigation pane, click **Connections**.
@@ -93,8 +93,7 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 
 1. In the right-hand pane, set the top drop-down list to **firstname** and the middle drop-down list to **lastname**.
 
-	![Select Body1](.\media\connection-dynamics-crmonline\firstname-lastname
-.png)
+	![Select Body1](.\media\connection-dynamics-crmonline\firstname-lastname.png)
 
 7. (optional) On the **File** menu, click **Save as**, type a name for the app, and then click **Save**.
 
@@ -105,18 +104,15 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 
 2. On **DetailScreen1**, click anywhere below the title bar to show customization options in the right-hand pane.
 
-	![Show form customization](.\media\connection-dynamics-crmonline\show-customization
-.png)
+	![Show form customization](.\media\connection-dynamics-crmonline\show-customization.png)
 
 3. In the right-hand pane, click the eye icon for each field to hide it.
 
-	![Hide fields](.\media\connection-dynamics-crmonline\hide-field
-.png)
+	![Hide fields](.\media\connection-dynamics-crmonline\hide-field.png)
 
 1. Click anywhere under the title bar to select **Form1**.
 
-	![Select Form1](.\media\connection-dynamics-crmonline\select-form1
-.png)
+	![Select Form1](.\media\connection-dynamics-crmonline\select-form1.png)
 
 1. In the right-hand pane, click the eye icon for each of these fields, so that the screen will show an image (if the table contains one) and four other fields for each contact:
 
@@ -128,8 +124,7 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 
 	The right-hand pane should resemble this graphic:
 
-	![Select Form1](.\media\connection-dynamics-crmonline\show-fields
-.png)
+	![Select Form1](.\media\connection-dynamics-crmonline\show-fields.png)
 
 1. Select **EditScreen1** by clicking the bottom thumbnail in the left navigation bar.
 
@@ -138,6 +133,6 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 7. (optional) Save the app.
 
 ## Next steps ##
-- Test your app in Preview mode by clicking **BrowseScreen1** in the left navigation bar and then pressing F5 or clicking ![PowerApps run app](./media/connection-dynamics-crmonline/runpowerapp.png) near the upper-right corner.
+- Test your app in Preview mode by clicking **BrowseScreen1** in the left navigation bar and then pressing F5 or clicking ![Preview mode](./media/connection-dynamics-crmonline/runpowerapp.png) near the upper-right corner.
 - [Share your app](share-app.md).
 - [Add a second data source](add-data-connection.md).
