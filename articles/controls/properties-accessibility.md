@@ -5,7 +5,7 @@
     suite="powerapps"
     documentationCenter="na"
     authors="fikaradz"
-    manager=""
+    manager="anneta"
     editor=""
     tags=""/>
 
