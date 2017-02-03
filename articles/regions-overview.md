@@ -1,5 +1,5 @@
 <properties
-	pageTitle="PowerApps Overview of Regions | Microsoft PowerApps"
+	pageTitle="Overview of Regions | Microsoft PowerApps"
 	description="Regions in PowerApps: where data is stored, available regions, features specific to a region"
 	services=""
 	suite="powerapps"
