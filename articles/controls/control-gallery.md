@@ -22,7 +22,9 @@
 A control that contains other controls and shows a set of data.
 
 ## Description ##
-A **Gallery** control can show records from a data source, and each record can contain multiple types of data. For example, a **Gallery** control can show contact information that includes a name, an address, and a phone number for each contact. Each type of information appears in a separate control within the **Gallery** control, and you configure those controls in its template. The template appears on the left edge of a **Gallery** control in horizontal/landscape orientation and at the top of a **Gallery** control in vertical/portrait orientation. Any changes that you make in the template are reflected throughout the **Gallery** control.
+A **Gallery** control can show multiple records from a data source, and each record can contain multiple types of data. For example, a **Gallery** control can show multiple contacts with each item showing contact information that includes a name, an address, and a phone number for each contact. Each data field appears in a separate control within the **Gallery** control, and you can configure those controls in its template. The template appears as the first item inside the gallery, on the left edge of a **Gallery** control in horizontal/landscape orientation and at the top of a **Gallery** control in vertical/portrait orientation. Any changes that you make in the template are reflected throughout the **Gallery** control.
+
+Predefined Gallery templates for showing images, text as well as a gallery with variable height items are available.
 
 ## Key properties ##
 
