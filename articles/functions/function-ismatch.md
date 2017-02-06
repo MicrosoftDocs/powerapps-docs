@@ -66,9 +66,7 @@ The predefined patterns above help build regular expressions.  The third column 
 
 Regular expressions are very powerful.  They are available in many programming languages and used for a wide variety of purposes.  It is beyond the scope of this article to describe all aspects of regular expressions, but there is a wealth of information and tutorials published on the web to help you.  
 
-There are different dialects of regular expressions.  PowerApps uses a varient of the JavaScript dialect.  For more information, see:
-- [Creating a regular expression](https://msdn.microsoft.com/en-us/library/ee236359.aspx)
-- [Regular expression syntax](https://msdn.microsoft.com/en-us/library/1400241x.aspx)
+There are different dialects of regular expressions.  PowerApps uses a variant of the JavaScript dialect.  For more information, see [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx).
 
 ### Match options ###
 
