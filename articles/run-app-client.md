@@ -41,11 +41,12 @@ The first time you open PowerApps, you are prompted to sign in using your Azure 
 PowerApps for Windows 10 Mobile is available in the Store as a preview. You can also go to [powerapps.com](https://powerapps.microsoft.com/), and there is a link to Windows Store in the bottom of the page.
 
 Here are system requirements:
+
 - **OS**: Anniversary update Redstone 1 (10.0.14267.1002) or higher required
 - **Memory**: At least 2GB of RAM
 
 ## App filters and sorting options ##
-Apps have been categorized into four lists to help you quickly find a specific app.
+Quickly find an app by searching one of these categories:
 
 - **All**: All apps to which you have access, including apps you created and apps that others shared with you.
 - **My Apps**: Apps that you have run at least once.
