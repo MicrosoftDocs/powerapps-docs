@@ -1,4 +1,4 @@
-﻿<properties
+<properties
    pageTitle="Functions, signals, and enumerations | Microsoft PowerApps"
    description="Reference information for functions, signals, and enumerations in PowerApps."
    services=""
@@ -175,6 +175,8 @@ Other elements include:
 
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
+**[IsMatch](functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
+
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
@@ -295,7 +297,9 @@ Other elements include:
 
 **[SortByColumns](functions/function-sort.md)** – Returns a sorted table based on one or more columns.
 
-**[Sqrt](functions/function-numericals.md)** – Returns the square root of a number.  
+**[Sqrt](functions/function-numericals.md)** – Returns the square root of a number.
+
+**[StartsWith](functions/function-startswith.md)** – Checks if a text string begins with another text string.
 
 **[StdevP](functions/function-aggregates.md)** – Returns the standard deviation of its arguments.  
 
