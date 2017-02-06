@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/21/2015"
+   ms.date="02/05/2017"
    ms.author="gregli"/>
 
 # Filter, Search, and LookUp functions in PowerApps #
@@ -33,6 +33,8 @@ For both, the formula is evaluated for each record of the table.  Records that r
 [AZURE.INCLUDE [record-scope](../../includes/record-scope.md)]
 
 The **Search** function finds records in a table that contain a string in one of their columns. The string may occur anywhere within the column; for example, searching for "rob" or "bert" would find a match in a column that contains "Robert". Searching is case-insensitive. Unlike **Filter** and **LookUp**, the **Search** function uses a single string to match instead of a formula.
+
+Use **Search** to provide your users with control over which columns are searched.  Column names used by **Search** are text strings that can be dynamic, unlike the column names used with the **Filter** function that are not text strings.  Insert a [**Dropdown**](../controls/control-drop-down.md) or other control for users to select the name of the column to search, feeding this choice to the **Search** function.  
 
 **Filter** and **Search** return a table that contains the same columns as the original table and the records that match the criteria. **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value. If no records are found, **Filter** and **Search** return an [empty](function-isblank-isempty.md) table, and **LookUp** returns *blank*.  
 
@@ -77,3 +79,39 @@ The following examples use the **IceCream** [data source](../working-with-data-s
 | **LookUp( IceCream, Quantity > 150, Quantity + OnOrder )** | Searches for a record with **Quantity** greater than 100, of which there are multiple.  For the first record that's found, which is "Vanilla" **Flavor**, returns the sum of **Quantity** and **OnOrder** columns. | 250 |
 | **LookUp( IceCream, Flavor = "Pistachio", OnOrder )** | Searches for a record with **Flavor** equal to "Pistachio", of which there are none.  Because none were found, **Lookup** returns *blank*. | *blank* |
 | **LookUp( IceCream, Flavor = "Vanilla" )** | Searches for a record with **Flavor** equal to "Vanilla", of which there is one.  Since no reduction formula was supplied, the entire record is returned. | { Flavor: "Vanilla", Quantity: 200, OnOrder: 75 } |
+
+### Search user experience ###
+
+In many apps you will find a search box used to look for specific records in a large data set.  As the user types characters, the list of results is automatically filtered to those records that match the search criteria.
+ 
+In this example, we will display the results of searching a **Customers** list which contains:
+
+![](media/function-filter-lookup/customers.png)
+
+To create this data source as a collection, create a **[Button](../controls/control-button.md)** control and set its **OnSelect** property to:
+
+**ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
+
+Imagine we have a screen in our app which displays the results of our search in a [**Gallery control**](../controls/control-gallery.md) shown here at the bottom of the screen.  The search text to apply is provided by the user as a text string in the **SearchInput** [**Text input**](../controls/control-text-input.md) shown at the top of the screen:
+
+![](media/function-filter-lookup/customers-ux-unfiltered.png)
+
+As the user types characters in the text box, the results in the gallery are automatically filtered.  As the user types **co** in the search box, the results become: 
+
+![](media/function-filter-lookup/customers-ux-startswith-co.png)
+
+To filter based on the **Name** column, we can use one of the following patterns.  These formulas are used with the **Items** property of the gallery control:
+
+| Formula | Description | Result |
+|--------|--------|---------|
+| **Filter( Customers, StartsWith( Name, SearchInput.Text ) )** | Filters the **Customers** data source for records that have a **Name** that starts with **"co"**.  The test is case insensitive which brings in **"Colleen Jones"** to the result.  Since we are only testing the beginning of the strings, **"Mike Collins"** is not in the result. | ![](media/function-filter-lookup/customers-name-co-startswith.png) |
+| **Filter( Customers, SearchInput.Text in Name )** | Filters the **Customers** data source for records that have a **Name** that contain **"co"**.  The test is case insensitive which brings in **"Colleen Jones"** to the result.  Since we are searching throughout the strings, **"Mike Collins"** is also in the result. | ![](media/function-filter-lookup/customers-name-co-contains.png) |
+| **Search( Customers, SearchInput.Text, "Name" )** | Similar to using the **in** operator, the **Search** function searches for any match within the **Name** column of each record. Note that the column name must be enclosed in double quotes.  Since the column name is a text string, you can provide a control for the user to change this.   | ![](media/function-filter-lookup/customers-name-co-contains.png) |
+
+We can expand our search to include the **Company** column as well as the **Name** column:
+
+| Formula | Description | Result |
+|--------|--------|---------|
+| **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** | Filters the **Customers** data source for records that have a **Name** or **Company** that starts with **"co"**.  The [**&#124;&#124;** operator](operators.md) is *true* if either **StartsWith** function is *true*. | ![](media/function-filter-lookup/customers-all-co-startswith.png) |
+| **Filter( Customers, SearchInput.Text in Name &#124;&#124; SearchInput.Text in Company )** | Filters the **Customers** data source for records that have a **Name** or **Company** that contains **"co"** anywhere within them. | ![](media/function-filter-lookup/customers-all-co-contains.png) |
+| **Search( Customers, SearchInput.Text, "Name", "Company" )** | Similar to using the **in** operator, the **Search** function searches the **Customers** data source for records that have a **Name** or **Company** that contains **"co"** anywhere within them.  Especially with multiple columns, the **Search** function is easier to read and write than **Filter** with multiple **in** operators.  Note that the column names must be enclosed in double quotes.  Since the column names are text string, you can provide controls for the user to change this. | ![](media/function-filter-lookup/customers-all-co-contains.png) |

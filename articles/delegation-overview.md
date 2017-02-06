@@ -34,8 +34,9 @@ Where this becomes complicated, and the reason this article exists, is because n
 At this time, these data sources support delegation:
 
 - [Common Data Service](data-platform-intro.md)
-- [Salesforce](connections/connection-salesforce.md)
 - [Dynamics 365](connections/connection-dynamics-crmonline.md)
+- [Salesforce](connections/connection-salesforce.md)
+- [SharePoint](connections/connection-sharepoint-online.md)
 - [SQL Server](connections/connection-azure-sqldatabase.md)
 
 We are continuing to add delegation support to existing data sources, as well as add more data sources.
@@ -58,8 +59,11 @@ Within the **Filter** and **LookUp** functions, the following can be used with c
 * **[And](functions/function-logicals.md)** (including **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](functions/operators.md)**)
 * **[In](functions/operators.md)**
 * **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
+* **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**
 * **[IsBlank](functions/function-isblank-isempty.md)**
+* **[StartsWith](functions/function-startswith.md)**
+* [Context variables](working-with-variables.md)
 * Constant values, which do not include context variables or collections
 
 Portions of your formula that evaluate to a constant value for all records can also be used.  For example, **Left( Language(), 2 )** does not depend on any columns of the record and therefore returns the same value for all records.  It is effectively a constant.  Use of context variables, collections, and signals may not be constant and therefore will prevent **Filter** and **LookUp** from being delegated.  
@@ -67,13 +71,13 @@ Portions of your formula that evaluate to a constant value for all records can a
 Some notable items missing from the above list:
 
 * **[If](functions/function-if.md)**
-* **[+](functions/operators.md)**, **[-](functions/operators.md)**, **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
+* **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
 * **[Concatenate](functions/function-concatenate.md)** (including **[&](functions/operators.md)**)
 * **[ExactIn](functions/operators.md)**
 * String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
 * Signals: **[Location](functions/signals.md)**, **[Acceleration](functions/signals.md)**, **[Compass](functions/signals.md)**, ...
 * Volatiles: **[Now](functions/function-now-today-istoday.md)**, **[Today](functions/function-now-today-istoday.md)**, **[Rand](functions/function-rand.md)**, ...
-* [Context variables and collections](working-with-variables.md)
+* [Collections](working-with-variables.md)
 
 ### Sorting functions ###
 
