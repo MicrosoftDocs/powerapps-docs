@@ -14,13 +14,42 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="12/08/2016"
+    ms.date="02/05/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 **Note**: The version numbers of the most recent releases of PowerApps will vary by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+## Release 2.0.590-2.0.591 ##
+1. **Show data in a gallery that resizes to fit items of different heights**.
+
+	Add a variable-height gallery if you have, for example, text (such as a product description) that varies widely in length. By taking this approach, you can show entire descriptions without unnecessary whitespace in a vertical gallery.
+
+	For step-by-step information about how to show data in a gallery, see [Show a list of items](add-gallery.md). For reference information, see [Gallery control](control-gallery.md).
+
+1. **Determine whether strings of text start with a sequence of characters that you specify**.
+
+	For more information, see [StartsWith function](function-startswith.md).
+
+1. **Determine whether strings of text fit a pattern that you specify by using a regular expression**.
+
+	For more information, see [IsMatch function](function-ismatch.md).
+
+1. **Customize the order in which controls are activated when users press the Tab key**.
+
+	By default, the XY coordinates of each control determine the tab order. To specify a different order, set the **TabIndex** property of one or more controls to an integer greater than zero. If you set the value to 1, that control will be activated before a control for which the value is set to 2 or higher. For more information, see [Accessibility properties](properties-accessiblity.md).
+
+1. **Customize the thickness of a slider rail**.
+
+	Users adjust the value of a slider by dragging its handle to the right or the left along its rail. For more information, see [Slider control](control-slider.md).
+
+1. **On Android devices, refresh the list of apps by tapping a button instead of swiping down**.
+
+	For more information, see [Use PowerApps on a phone or a tablet](run-app-client.md).
+
+1. **Bug fixes and performance improvements**.
 
 ## Release 2.0.570-2.0.571 ##
 - **Bug fixes and improvements in performance and accessibility**.
