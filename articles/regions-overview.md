@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Overview of Environments | Microsoft PowerApps"
-	description="What environments are, how to use them"
+	pageTitle="Overview of Regions | Microsoft PowerApps"
+	description="Regions in PowerApps: where data is stored, available regions, features specific to a region"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/20/2016"
+   ms.date="02/03/2017"
    ms.author="ricksal"/>
 
 # Regions overview in Microsoft PowerApps
