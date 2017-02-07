@@ -46,9 +46,9 @@ Combine these elements by using the [string concatenation operator **&**](operat
 
 The simplest pattern is a sequence of ordinary characters to be matched exactly.
 
-For example, the pattern **"Hello"** will match exactly the string "Hello".  No more and no less.  The string "hello!" would not be matched because the of the extra exclamation point on the end and the case is wrong for the letter "h" (see [MatchOptions](#match-options) for ways to modify this behavior.
+For example, the string "Hello" matches the pattern **"Hello"** exactly. No more and no less. The string "hello!" doesn't match the pattern because of the exclamation point on the end and the case is wrong for the letter "h". (See [MatchOptions](#match-options) for ways to modify this behavior.)
 
-Certain characters are reserved in the pattern language for special purposes.  To use these characters, either prefix the character with a **\\** (backslash) to indicate that it should be taken literally or use one of the predefined patterns. This table lists the special characters:
+In the pattern language, certain characters are reserved for special purposes. To use these characters, either prefix the character with a **\\** (backslash) to indicate that the character should be taken literally or use one of the predefined patterns. This table lists the special characters:
 
 | Special character | Description |
 |-------------------|-------------|
@@ -68,7 +68,7 @@ For example, you can match "Hello?" by using the pattern **"Hello\\?"** with a b
 
 ### Predefined patterns ###
 
-Predefined patterns provide a simple way to match one of a set of characters, or a sequence of multiple characters.  Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
+Predefined patterns provide a simple way to match one of a set of characters, or a sequence of multiple characters. Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
 
 | Match Enum | Description | Regular Expression |
 |------------|--------------------|-------------|
@@ -138,7 +138,7 @@ The user types **Hello world** into **TextInput1**.
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **IsMatch( TextInput1.Text, "Hello world" )** | Tests whether the user's input matches, exactly, the string "Hello world" | **true** |
-| **Ismatch( TextInput1.Text, "Good bye" )** | Tests whether the user's input matches, exactly, the string "Good bye" | **false** |
+| **IsMatch( TextInput1.Text, "Good bye" )** | Tests whether the user's input matches, exactly, the string "Good bye" | **false** |
 | **IsMatch( TextInput1.Text, "hello", Contains )** | Tests whether the user's input contains  the word "hello" (case sensitive). | **false** |
 | **IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )** | Tests whether the user's input contains the word "hello" (case insensitive). | **true** |
 
@@ -156,12 +156,9 @@ The user types **Hello world** into **TextInput1**.
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **IsMatch( "986", "\d+" )** | Matches a an integer greater than zero. | **true** |
-| **IsMatch( "1.02", "\d+(\.\d\d)?" )** | Matches a positive currency amount. If there is a decimal point, it requires 2 numeric characters after the decimal point. For example, 3.00 is valid but 3.1 is not. | **true** | 
-| **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** | Matches a positive or negative currency amount. If there is a decimal point, it requires 2 numeric characters after the decimal point. | **true** |
-| **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** | Matches a United States Social Security number.  Validates the format, type, and length of the supplied input field. The input must consist of 3 numeric characters followed by a dash, then 2 numeric characters followed by a dash, and then 4 numeric characters.  | **true** |
-| **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** | Same as the previous example, but one of the hyphens is out of place.  | **false** |
-| **IsMatch( "weakpassword", "(?!^[0-9]*$)(?!^[a-zA-Z]*$)([a-zA-Z0-9]{8,10})" )** | Validates a strong password. It must be between 8 and 10 characters, contain at least one digit and one alphabetic character, and must not contain special characters. | **false** |
+| **IsMatch( "1.02", "\d+(\.\d\d)?" )** | Matches a positive currency amount. If the input contains a decimal point, the input must also contain 2 numeric characters after the decimal point. For example, 3.00 is valid, but 3.1 isn't. | **true** |
+| **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** | Matches a positive or negative currency amount. If the input contains a decimal point, the input must also contain 2 numeric characters after the decimal point. | **true** |
+| **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** | Matches a United States Social Security number.  Validates the format, type, and length of the supplied input field. The string to match must consist of 3 numeric characters followed by a dash, then 2 numeric characters followed by a dash, and then 4 numeric characters.  | **true** |
+| **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** | Same as the previous example, but one of the hyphens is out of place in the input.  | **false** |
+| **IsMatch( "weakpassword", "(?!^[0-9]*$)(?!^[a-zA-Z]*$)([a-zA-Z0-9]{8,10})" )** | Validates a strong password, which must contain 8, 9, or 10 characters, in addition to at least one digit and at least one alphabetic character. The string must not contain special characters. | **false** |
 | **IsMatch( "http://microsoft.com", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?" )** | Validates an http, https, or ftp URL. | **true** |
-
-
-
