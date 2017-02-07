@@ -4,6 +4,6 @@ When possible, PowerApps will delegate filter and sort operations to the data so
 
 However, delegation may not always be possible. Data sources vary on what functions and operators they support with delegation. If complete delegation of a formula isn't possible, the authoring environment will flag the portion that can't be delegated with a warning. When possible, consider changing the formula to avoid functions and operators that can't be delegated.   
 
-If delegation is not possible, PowerApps will only pull down a small set of records to work on locally. Filter and sort functions will operate on a reduced set of records. What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story, which could be confusing to users. 
+If delegation is not possible, PowerApps will pull down only a small set of records to work on locally. Filter and sort functions will operate on a reduced set of records. What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story, which could be confusing to users. 
 
 See the [delegation overview](../delegation-overview.md) for more information.
