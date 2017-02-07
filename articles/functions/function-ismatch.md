@@ -34,20 +34,21 @@ By default, **IsMatch** performs a case-sensitive match for the entire text stri
 
 ## Patterns ##
 
-The key to using **IsMatch** is in describing the pattern to match. You describe the pattern in a text string that combines these elements:
+The key to using **IsMatch** is in describing the pattern to match. You describe the pattern in a text string as a combination of:
+
 - Ordinary characters, such as  **"abc"** or **"123"**.
 - Predefined patterns, such as **Letter**, **MultipleDigits**, or **Email**. (The **Match** enum defines these patterns.)
 - Regular expressions codes, such as **"\d+\s+\d+"** or **"[a-z]+"**.
 
-You can combine these elements by using the [string concatenation operator **&**](operators.md). For example, **"abc" & Digit & "\s+"** is a valid pattern.
+Combine these elements by using the [string concatenation operator **&**](operators.md). For example, **"abc" & Digit & "\s+"** is a valid pattern that matches the characters "a", "b", and "c", followed by a digit from 0 to 9, followed by at least one whitespace character.
 
 ### Ordinary characters ###
 
 The simplest pattern is a sequence of ordinary characters to be matched exactly.
 
-For example, the pattern **"Hello"** will match exactly the string "Hello".  No more and no less.  The string "hello!" would not be matched (without some options described later).
+For example, the pattern **"Hello"** will match exactly the string "Hello".  No more and no less.  The string "hello!" would not be matched because the of the extra exclamation point on the end and the case is wrong for the letter "h" (see [MatchOptions](#match-options) for ways to modify this behavior.
 
-Certain characters are reserved in the pattern language for special purposes.  To use these characters, either prefix the character with a **\** (backslash) to indicate that it should be taken literally or use one of the predefined patterns. This table lists the special characters:
+Certain characters are reserved in the pattern language for special purposes.  To use these characters, either prefix the character with a **\\** (backslash) to indicate that it should be taken literally or use one of the predefined patterns. This table lists the special characters:
 
 | Special character | Description |
 |-------------------|-------------|
@@ -63,11 +64,11 @@ Certain characters are reserved in the pattern language for special purposes.  T
 | **&#124;** | vertical bar or pipe |
 | **\** | backslash |
 
-For example, you can match "Hello?" by using the pattern **"Hello\?"** with a backslash before the question mark.
+For example, you can match "Hello?" by using the pattern **"Hello\\?"** with a backslash before the question mark.
 
 ### Predefined patterns ###
 
-Predefined patterns provide a simple way to match one of a set of characters or a sequence of multiple characters.  Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
+Predefined patterns provide a simple way to match one of a set of characters, or a sequence of multiple characters.  Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
 
 | Match Enum | Description | Regular Expression |
 |------------|--------------------|-------------|
@@ -95,7 +96,7 @@ For example, the pattern **"A" & MultipleDigits** will match the letter "A" foll
 
 ### Regular expressions ###
 
-The pattern that **IsMatch** uses is a regular expression. The ordinary characters and predefined patterns that are described above help build regular expressions.  
+The pattern used by **IsMatch** is a *regular expression*. The ordinary characters and predefined patterns that are described above help build regular expressions.  
 
 Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. This article can't describe all aspects of regular expressions, but a wealth of information and tutorials are published on the web to aid you.  
 
@@ -105,7 +106,7 @@ In the **Match** enum table above, each enum expands into a regular expression, 
 
 ## Match options ##
 
-You can modify the behavior of **IsMatch** by specifying one or more options, which you can combine by using the string concatenation operator.  
+You can modify the behavior of **IsMatch** by specifying one or more options, which you can combine by using the string concatenation operator (**&amp;**).  
 
 By default, **IsMatch** tests for a complete match of the entire text string.
 
@@ -149,3 +150,18 @@ The user types **Hello world** into **TextInput1**.
 | **IsMatch( "joan@contoso.com", Email )** | Matches an email address | **true** |
 | **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )** | Matches a sequence of digits, a period, and then zero or more digits.  | **true** |
 | **IsMatch( "123", MultipleDigits & Period & OptionalDigits )** | Matches a sequence of digits, a period, and then zero or more digits. A period doesn't appear in the text, so this pattern isn't matched. | **false** |
+
+### Regular expressions ###
+
+| Formula | Description | Result |
+|---------|-------------|--------|
+| **IsMatch( "986", "\d+" )** | Matches a an integer greater than zero. | **true** |
+| **IsMatch( "1.02", "^\d+(\.\d\d)?" )** | Matches a positive currency amount. If there is a decimal point, it requires 2 numeric characters after the decimal point. For example, 3.00 is valid but 3.1 is not. | **true** | 
+| **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** | Matches a positive or negative currency amount. If there is a decimal point, it requires 2 numeric characters after the decimal point. | **true** |
+| **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** | Matches a United States Social Security number.  Validates the format, type, and length of the supplied input field. The input must consist of 3 numeric characters followed by a dash, then 2 numeric characters followed by a dash, and then 4 numeric characters.  | **true** |
+| **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** | Same as the previous example, but one of the hyphens is out of place.  | **false** |
+| **IsMatch( "weakpassword", "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})" )** | Validates a strong password. It must be between 8 and 10 characters, contain at least one digit and one alphabetic character, and must not contain special characters. | **false** |
+| **IsMatch( "http://microsoft.com", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?" )** | Validates an http, https, or ftp URL. | **true** |
+
+
+
