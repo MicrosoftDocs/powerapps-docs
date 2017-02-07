@@ -156,11 +156,11 @@ The user types **Hello world** into **TextInput1**.
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **IsMatch( "986", "\d+" )** | Matches a an integer greater than zero. | **true** |
-| **IsMatch( "1.02", "^\d+(\.\d\d)?" )** | Matches a positive currency amount. If there is a decimal point, it requires 2 numeric characters after the decimal point. For example, 3.00 is valid but 3.1 is not. | **true** | 
+| **IsMatch( "1.02", "\d+(\.\d\d)?" )** | Matches a positive currency amount. If there is a decimal point, it requires 2 numeric characters after the decimal point. For example, 3.00 is valid but 3.1 is not. | **true** | 
 | **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** | Matches a positive or negative currency amount. If there is a decimal point, it requires 2 numeric characters after the decimal point. | **true** |
 | **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** | Matches a United States Social Security number.  Validates the format, type, and length of the supplied input field. The input must consist of 3 numeric characters followed by a dash, then 2 numeric characters followed by a dash, and then 4 numeric characters.  | **true** |
 | **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** | Same as the previous example, but one of the hyphens is out of place.  | **false** |
-| **IsMatch( "weakpassword", "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})" )** | Validates a strong password. It must be between 8 and 10 characters, contain at least one digit and one alphabetic character, and must not contain special characters. | **false** |
+| **IsMatch( "weakpassword", "(?!^[0-9]*$)(?!^[a-zA-Z]*$)([a-zA-Z0-9]{8,10})" )** | Validates a strong password. It must be between 8 and 10 characters, contain at least one digit and one alphabetic character, and must not contain special characters. | **false** |
 | **IsMatch( "http://microsoft.com", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?" )** | Validates an http, https, or ftp URL. | **true** |
 
 
