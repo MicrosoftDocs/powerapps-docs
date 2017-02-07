@@ -47,7 +47,7 @@ Use **StartsWith** with the **[Filter](function-filter-lookup.md)** function to 
 
 In many apps, you can type one or more characters into a search box to filter a list of records in a large data set. As you type, the list shows only those records that match the search criteria.
 
-This example shows the results of searching a **Customers** list that contains this data:
+The examples in the rest of this topic show the results of searching a **Customers** list that contains this data:
 
 ![](media/function-startswith/customers.png)
 
@@ -59,8 +59,7 @@ As in this example, you can show a list of records in a [**Gallery control**](..
 
 ![](media/function-startswith/customers-ux-unfiltered.png)
 
-As the user types characters in the text box, the results in the gallery are automatically filtered. In this case, the gallery is configured to show records for which the name of the customer (not the name of the company) starts with the sequence of characters in the search box.
-If the user types **co** in the search box, the results become:
+As the user types characters in **SearchInput**, the results in the gallery are automatically filtered. In this case, the gallery is configured to show records for which the name of the customer (not the name of the company) starts with the sequence of characters in **SearchInput**.If the user types **co** in the search box, the gallery shows these results:
 
 ![](media/function-startswith/customers-ux-startswith-co.png)
 
