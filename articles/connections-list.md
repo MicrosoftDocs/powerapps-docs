@@ -23,7 +23,7 @@ In PowerApps, connect to data in Office 365, Dropbox, Twitter, and other common 
 
 Just getting started with adding connections in PowerApps? Learn how to add [connections](add-manage-connections.md) and [data sources](add-data-connection.md) in your apps.
 
-Ready to take it to the next level? Create [custom APIs](register-custom-api.md), and connect to them within your apps.
+Ready to take it to the next level? Create [custom APIs](register-custom-api.md) and connect to them within your apps.
 
 ## Most used connections ##
 | &nbsp; | &nbsp; |
