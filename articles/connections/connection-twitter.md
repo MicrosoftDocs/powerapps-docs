@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="" 	
 	authors="AFTOwen"
-	manager="anneta"
+	manager="archnair"
 	editor=""
 	tags="" />
 
@@ -16,8 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="06/06/2016"
-ms.author="anneta"/>
-
+ms.author="archanan"/>
 
 # Twitter
 

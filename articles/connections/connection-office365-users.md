@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
+	authors="archnair"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="06/07/2016"
-   ms.author="anneta"/>
+   ms.author="archanan"/>
 
 # Office 365 Users connection in PowerApps #
 
