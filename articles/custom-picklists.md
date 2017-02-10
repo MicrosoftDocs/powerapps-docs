@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Create custom picklists | Microsoft PowerApps"
-	description="Create a custom picklist in the maker portal."
+	description="Create a custom picklist."
 	services="powerapps"
 	documentationCenter="na"
 	authors="pvillads"
