@@ -46,7 +46,7 @@ This list of data sources and delegable functions and predicates will be updated
 
 ### Top-level delegable functions ###
 
-|               | Common Data Service              | SharePoint | SQL Server | Dynamics 365 | Salesforce |
+| &nbsp;              | Common Data Service              | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 |---------------|----------------------------------|------------|------------|--------------|------------|
 | Filter        | Yes                              | Yes        | Yes        | Yes          | Yes        |
 | Sort          | Yes                              | Yes        | Yes        | Yes          | Yes        |
@@ -58,7 +58,7 @@ This list of data sources and delegable functions and predicates will be updated
 
 ### Filter and LookUp delegable predicates ###
 
-|                                        | Common Data Service        | SharePoint                     | SQL Server | Dynamics 365 | Salesforce |
+| &nbsp;                                       | Common Data Service        | SharePoint                     | SQL Server | Dynamics 365 | Salesforce |
 |----------------------------------------|----------------------------|--------------------------------|------------|--------------|------------|
 | Not                                    | Yes                        | No                             | Yes        | Yes          | Yes        |
 | IsBlank                                | No                         | No                             | Yes        | Yes          | No         |
@@ -68,5 +68,6 @@ This list of data sources and delegable functions and predicates will be updated
 | <, <=, =, <>, >, >=                    | Yes                        | Yes (only =)                   | Yes        | Yes          | Yes        |
 | And (&&), Or (&#124;&#124;), Not (!)   | Yes<sup>2</sup>            | Yes (except Not(!))            | Yes        | Yes          | Yes        |
 | In                                     | No                         | No                             | Yes        | No           | Yes        |
+| StartsWith | No | Yes | No | No | No |
 
 <sup>2</sup>For operators only. And/Or/Not function not delegated.
