@@ -31,17 +31,10 @@ Where this becomes complicated, and the reason this article exists, is because n
 **Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need. Take heed of [blue-dot suggestions](delegation-overview.md#blue-dot-suggestions) that flag places where delegation is not possible.  If you're working with small data sets (less than 500 records), you can use any data source and formula as processing can be done locally if the formula cannot be delegated.  
 
 ## Delegable data sources ##
-At this time, these data sources support delegation:
 
-- [Common Data Service](data-platform-intro.md)
-- [Dynamics 365](connections/connection-dynamics-crmonline.md)
-- [Salesforce](connections/connection-salesforce.md)
-- [SharePoint](connections/connection-sharepoint-online.md)
-- [SQL Server](connections/connection-azure-sqldatabase.md)
+See the [delegation list](delegation-list.md) for the full list of which data sources support delegation and to what extent.
 
 We are continuing to add delegation support to existing data sources, as well as add more data sources.
-
-**Note**: For more information, see [Delegation list](delegation-list.md).
 
 Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full PowerApps language can be applied.
 
