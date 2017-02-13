@@ -5,7 +5,7 @@
 	suite="powerapps"
 	documentationCenter="na"
 	authors="AFTOwen"
-	manager="anneta"
+	manager="archnair"
 	editor=""
 	tags=""/>
 
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="06/08/2016"
-   ms.author="anneta"/>
+   ms.author="archanan"/>
 
 #  Office 365 Outlook
 

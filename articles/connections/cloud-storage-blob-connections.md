@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="AFTOwen"
+	authors="archnair"
 	manager="anneta"
 	editor=""
 	tags="" />
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="06/06/2016"
-ms.author="anneta"/>
+ms.author="archanan"/>
 
 # Cloud-storage connections #
 PowerApps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  

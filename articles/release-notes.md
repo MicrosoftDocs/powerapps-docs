@@ -14,13 +14,42 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="12/08/2016"
+    ms.date="02/05/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
-**Note**: The version numbers of the most recent releases of PowerApps will vary by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+**Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+## Release 2.0.590-2.0.591 ##
+1. **Show data in a gallery that resizes to fit items of different heights**.
+
+	Add a variable-height gallery if you have, for example, text (such as a product description) that varies widely in length. By taking this approach, you can show entire descriptions without unnecessary whitespace in a vertical gallery.
+
+	For step-by-step information about how to show data in a gallery, see [Show a list of items](add-gallery.md). For reference information, see [Gallery control](control-gallery.md).
+
+1. **Determine whether strings of text start with a sequence of characters that you specify**.
+
+	Use the [StartsWith function](function-startswith.md) so that users can, for example, type a few letters in a search box to filter a list of items based on the text at the start of a field.
+
+1. **Determine whether strings of text fit a pattern that you specify by using a regular expression**.
+
+	Use the [IsMatch function](function-ismatch.md) to return a true/false value based on whether a field in a record matches, for example, a name, an email address, a phone number, or a U.S. Social Security number.
+
+1. **Customize the order in which controls are activated when users press the Tab key**.
+
+	By default, the XY coordinates of each control determine the tab order. To specify a different order, set the **TabIndex** property of one or more controls to an integer greater than zero. If, for example, the value of a control is set to 1, it will be activated before a control for which the value is set to 2 or higher. You can make your app [more accessible](properties-accessiblity.md) by adding tooltips and ensuring that the tab sequence of each screen is optimal.
+
+1. **Customize the thickness of a slider rail**.
+
+	Users adjust the value of a [Slider control](control-slider.md) by dragging its handle to the right or the left along its rail.
+
+1. **On Android devices, refresh the list of apps by tapping a button instead of swiping down**.
+
+	For more information, see [Use PowerApps on a phone or a tablet](run-app-client.md).
+
+1. **Bug fixes and performance improvements**.
 
 ## Release 2.0.570-2.0.571 ##
 - **Bug fixes and improvements in performance and accessibility**.

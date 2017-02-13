@@ -65,6 +65,8 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
+**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
