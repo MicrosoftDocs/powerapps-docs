@@ -158,3 +158,8 @@ The properties list shows properties alphabetically, but you can also view all t
 You can edit formulas directly within this view.  With the control selector at the top of the pane, you can quickly find a control to work with.  And with the property search, you can quickly find a property of that control.
 
 Initially, this view shows the most important properties.  To reveal all the properties, click the down arrow at the bottom of the pane.  Each control has a long list of properties that govern all aspects of the control's behavior and appearance. You can scroll through the list or search for a property by typing in the box at the top of the pane.
+
+## Syntax highlighting of expressions ##
+While typing expressions in the formula bar, syntax highlighting feature displays different color according to the category of terms. It helps you understand long formulas and improves readability of expressions. Here is the color code list in PowerApps.
+
+![syntax highlighting](./media/working-with-formulas/syntax-highlighting.png)
