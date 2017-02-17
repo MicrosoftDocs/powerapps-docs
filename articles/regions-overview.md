@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/03/2017"
+   ms.date="02/17/2017"
    ms.author="ricksal"/>
 
 # Regions overview in Microsoft PowerApps
@@ -41,8 +41,6 @@ The following regions are available, or will be available:
 - Australia
 - India
 - Japan
-- Canada (available after General Availability (GA))
-- United Kingdom (available after General Availability (GA))  
 
 #### Question: What features are specific to a given region?
 Environments can be created in different regions, and are bound to that geographic location. When you create an app in an environment, that app is stored in datacenters in that geographic location. This applies to any items you create in that environment, including  databases in the Common Data Service, apps, connections, gateways, and custom APIs.
