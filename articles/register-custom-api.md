@@ -80,6 +80,10 @@ You can create a Swagger file from *any* API endpoint, including:
 
 When you create the Swagger file, a JSON file is created.  You'll need this is Step 2.
 
+#### Connecting to Azure App Service or Azure Functions
+
+If your API is built with Azure App Service or Azure Functions, see [Exporting an Azure hosted API to PowerApps](https://docs.microsoft.com/en-us/azure/app-service/app-service-export-api-to-powerapps-and-flow) to learn more.
+
 #### Getting help with Swagger files
 
 - If you're new to Swagger, you should visit the [Getting Started pages on Swagger.io](http://swagger.io/getting-started/).
@@ -92,7 +96,7 @@ When you create the Swagger file, a JSON file is created.  You'll need this is S
 
 - To customize your Swagger document to work with PowerApps, see [Customize your Swagger definition](customapi-how-to-swagger.md).
 
-### Step 2: Add a connection to the custom API
+### Step 2: Register the custom API
 
 Now that the Swagger file (JSON file) is generated for the custom API, register the custom API in PowerApps
 
