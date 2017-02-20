@@ -124,6 +124,8 @@ Now that the Swagger file (JSON file) is generated for the custom API, register 
 	| Client id | Using one of the supported OAuth identity providers, a client ID is provided. Type this client ID. |
 	| Client secret | Type the client secret from the identity provider you chose. |  
 
+	Refer to [Azure Resource Manager](customapi-azure-resource-manager-tutorial.md) and [Azure WebApp](customapi-web-api-tutorial.md) examples to learn how to configure AAD authentication values.
+
 	If the JSON file does not use the ```securityDefintions``` object, then no additional values may be needed.
 
 4. Select **Create**.
