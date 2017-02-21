@@ -24,7 +24,7 @@ PowerApps can leverage any RESTful APIs hosted anywhere.  This tutorial demonstr
 ## Prerequisites
 
 - A [PowerApps account](https://powerapps.microsoft.com).
-- A Swagger file (JSON) OR a URL to Swagger definition for your custom API. If you don't have one, we'll show you several options to create the Swagger file.
+- A Swagger file (JSON) OR a URL to a Swagger definition for your custom API. If you don't have one, we'll show you several options to create the Swagger file.
 - An image to use as an icon for your custom API (optional).
 
 
@@ -100,7 +100,7 @@ If your API is built with Azure App Service or Azure Functions, see [Exporting a
 
 Now that the Swagger file (JSON file) is generated for the custom API, register the custom API in PowerApps
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click on **...** and select **Manage custom APIs** in the upper-right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **...** and select **Manage custom APIs** in the upper-right corner.
 
 	 >[AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
 
@@ -114,7 +114,7 @@ Now that the Swagger file (JSON file) is generated for the custom API, register 
 
 	| Property | Description |
 	|----------|-------------|
-	| Swagger URL OR Swagger API definition  | Paste a URL to Swagger definition OR Browse to the JSON file created from Swagger. |
+	| Swagger URL OR Swagger API definition  | Paste a URL to a Swagger definition OR browse to the JSON file created from Swagger. |
 	| Name | Type the name of your custom API. |
 	| Upload API icon | Browse an image file for the icon (optional). |
 	| Description | Type a description of your custom API (optional). |
@@ -148,11 +148,11 @@ Now that the Swagger file (JSON file) is generated for the custom API, register 
 ## Share a custom API
 Users can also share custom APIs with each other.
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click on **...** and select **Manage custom APIs** in the upper-right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **...** and select **Manage custom APIs** in the upper-right corner.
 
 	![New connection](./media/register-custom-api/managecustomapi.png)
 
-2. Select your API and select **Share**, and then enter the users or groups to whom you want to grant access to your API.  
+2. Select your API, select **Share**, and then enter the users or groups to whom you want to grant access to your API.  
 
 	![Share custom API](./media/register-custom-api/sharecustomapi.png)
 
