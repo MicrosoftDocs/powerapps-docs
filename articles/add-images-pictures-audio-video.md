@@ -26,7 +26,7 @@ This topic shows you how to embed multimedia files in your app, upload pen drawi
 [Sign up](../articles/signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
 
 ## Add media from a file ##
-You can choose which kind of media file to add (for example, images, video, or audio).
+You can choose the kind of media file to add (for example, images, video, or audio).
 
 1. On the **Content** tab, select **Media**.
 
