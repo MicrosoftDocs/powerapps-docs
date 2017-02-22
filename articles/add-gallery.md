@@ -87,7 +87,7 @@ The **[Items](controls/properties-core.md)** property of a gallery determines wh
 
 ## Sort the gallery ##
 
-The **[Items](controls/properties-core.md)** property of a gallery determines the order of items that it shows. You configure that property so that the gallery shows the order of items as set by **ImageSortUpDown1**.
+The **[Items](controls/properties-core.md)** property of a gallery determines the order of items that it shows. In this procedure, you configure that property so that the gallery shows the order of items as set by **ImageSortUpDown1**.
 
 ![Image for sorting](./media/add-gallery/image-sorting.png)
 
