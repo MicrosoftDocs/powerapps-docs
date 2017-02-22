@@ -31,15 +31,17 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 ## Add a gallery ##
 
-1. In the **Options** tab of the right-hand pane, click or tap the **Layout** tab to open it. Then click or tap the option that contains a thumbnail image, a header, and a description.
+1. In the **Options** tab of the right-hand pane, click or tap the **Layout** tab to open it.
+
+2. Click or tap the option that contains a thumbnail image, a header, and a description.
 
 	![Add gallery](./media/add-gallery/add-gallery.png)
 
-2. Select the gallery by clicking or tapping any item in it except the first one.
+3. Select the gallery by clicking or tapping any item in it except the first one.
 
 	![Select gallery](./media/add-gallery/select-gallery.png)
 
-3. In the right-hand pane, click or tap the data-source icon, and then click or tap the **FlooringEstimates** data source.
+4. In the right-hand pane, click or tap the data-source icon, and then click or tap the **FlooringEstimates** data source.
 
 	![Select datasource](./media/add-gallery/select-data-source.png)
 
@@ -71,7 +73,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 ## Filter the gallery ##
 
-The **[Items](controls/properties-core.md)** property of a gallery determines which items it shows. You configure that property so that the gallery shows only those items for which the product name contains the text in **TextSearchBox1**.
+The **[Items](controls/properties-core.md)** property of a gallery determines which items it shows. In this procedure, you configure that property so that the gallery shows only those items for which the product name contains the text in **TextSearchBox1**.
 
 ![Text search box](./media/add-gallery/text-search-box.png)
 
@@ -95,9 +97,9 @@ The **[Items](controls/properties-core.md)** property of a gallery determines th
 
 2. Select the sort icon to change the sorting order of the gallery by the names of the products.
 
-To sort and filter your gallery, replace both instances of *DataSource* in this formula with name of your data source. Replace both instances of *ColumnName* with the name of the column by which you want to sort and filter.
+To sort **and** filter your gallery, replace both instances of *DataSource* in this formula with name of your data source, and replace both instances of *ColumnName* with the name of the column by which you want to sort and filter.
 
-    Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))
+**Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
 ## Next steps ##
 - Learn more about working with a [gallery](working-with-forms.md) and [formulas](working-with-formulas.md).
