@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="RickSaling"
+    authors="sarafankit"
     manager="anneta"
     editor=""
     tags=""/>
@@ -15,7 +15,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="10/16/2016"
-    ms.author="ricksal"/>
+    ms.author="ankitsar"/>
 
 # Show a list of items in PowerApps  #
 
