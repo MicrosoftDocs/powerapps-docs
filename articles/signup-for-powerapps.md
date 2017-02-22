@@ -20,7 +20,7 @@
 
 # Self-service sign up for PowerApps #
 
-Signing up for PowerApps, as an individual, is easy! This article walks you through the steps to get up and running with a free trial account for PowerApps.
+Signing up for PowerApps as an individual, is easy! This article walks you through the steps to get up and running with a free trial account for PowerApps.
 
 For administration information, see [Purchase PowerApps for your organization](signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
@@ -32,7 +32,7 @@ To sign up for PowerApps, enter your work or school email address.
 > **NOTE** Currently, consumer email services, telecommunication providers, government, and military addresses are not supported, including:  
 >
 > - outlook.com, hotmail.com, gmail.com, and so on  
-> - *.gov and *.mil
+> - .gov and .mil
 
 If you try to sign up with a personal email address, a message indicates that you must use a work or school email address.
 
@@ -49,11 +49,6 @@ If your Office 365 or Dynamics 365 plan includes PowerApps, you can access it by
 	You're then taken to [powerapps.com][2], and you can start to use PowerApps.
 
 	![](./media/signup-for-powerapps/web-powerapps-portal-new.png)
-
-  > **NOTE** PowerApps will be added to existing and new Office 365 subscriptions starting later in November 2016.
-  > - If you sign in to PowerApps with an Office 365 subscription prior to this change going out, you will be prompted to sign up for a free PowerApps Plan 2 trial.
-  > - Feel free to sign up for the trial if you want to try out PowerApps until the update is made to your Office 365 subscription.  
-  > - However, please be aware that the trial license may include features of PowerApps that are not available to you through your Office 365 subscription when the trial expires after 90 days.  See [PowerApps pricing][3] to see what capabilities are included in your Office 365 subscription.
 
 ## Try PowerApps Plan 2 for free ##
 PowerApps does not offer a free account, but you can try PowerApps Plan 2 for free for 90 days. You will have access to all of the PowerApps Plan 2 features for the duration of the trial. PowerApps Plan 2 has all of the features of Plan 1, plus access to the Common Data Service and administrative features. Plan 2 also provides higher flow-run capacity and data and file storage capacity in the Common Data Service.
@@ -133,7 +128,7 @@ In many cases, you can sign up for PowerApps by following the steps in this topi
 | Symptom / Error Message |Cause and Workaround|
 |---|---|
 | **Personal email addresses (e.g. nancy@gmail.com)** <br> <br> You receive a message like the following during signup: <br> <br> `You entered a personal email address: Please enter your work email address so we can securely store your company's data.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.`| PowerApps does not support email addresses provided by consumer email services or telecommunications providers. <br> <br> To complete signup, try again using an email address assigned by your work or school.|
-| ** *.gov or *.mil addresses** <br> <br> You receive a message like the following during signup: <br> <br> `PowerApps unavailable: PowerApps is not available for users with *.gov or *.mil email addresses at this time. Use another work email address or check back later.` <br> <br> or <br> <br> `We can't finish signing you up. It looks like Microsoft PowerApps isn't currently available for your work or school.` | PowerApps does not support .gov or .mil addresses at this time.|
+| **.gov or .mil addresses ** <br> <br> You receive a message like the following during signup: <br> <br> `PowerApps unavailable: PowerApps is not available for users with .gov or .mil email addresses at this time. Use another work email address or check back later.` <br> <br> or <br> <br> `We can't finish signing you up. It looks like Microsoft PowerApps isn't currently available for your work or school.` | PowerApps does not support .gov or .mil addresses at this time.|
 | **Self-service sign up disabled** <br> <br> You receive a message like the following during sign up: <br> <br> `We can't finish signing you up. Your IT department has turned off sign up for Microsoft PowerApps. Contact them to complete signup.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` | Your organization’s IT administrator has disabled self-service signup for PowerApps. <br> <br> To complete signup, contact your IT administrator and ask them to allow users to sign up for PowerApps and to allow new users to join your existing tenant.|
 | **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.` | Your organization signs in to Office 365 and other Microsoft services with IDs other than email addresses. For example, your email address might be Nancy.Smith@contoso.com, but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to you for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
 
