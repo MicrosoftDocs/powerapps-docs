@@ -58,28 +58,7 @@ These are the limits for a single flow run.
 |Max recurrence interval|500 days||
 
 
-### Looping and debatching limits
 
-These are limits for a single flow run.
-
-|Name|Limit|Notes|
-|----|----|----|
-|ForEach items|5,000|You can use the filter action to filter larger arrays as needed.|
-|Until iterations|5,000||
-|SplitOn items|5,000||
-|ForEach Parallelism|20||
-
-### Definition limits
-
-These are limits for a single flow.
-
-|Name|Limit|Notes|
-|----|----|----|
-|Actions per workflow|250|You can add nested workflows to extend this as needed.|
-|Allowed action nesting depth|5|You can add nested workflows to extend this as needed.|
-|Max characters per expression|8,192||
-|`action`/`trigger` name limit|80||
-|`description` length limit|256||
 
 ## Configuration
 
@@ -101,7 +80,7 @@ Calls made from a flow directly go through the Azure Logic App service. Some exa
 
 #### Services
 
-Calls made from an API connected through a flow (for example, the SQL API or the SharePoint API) will come from the IP address specified below:
+Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) will come from the IP address specified below:
 
 |Region|Outbound IP|
 |-----|----|
@@ -115,3 +94,20 @@ Calls made from an API connected through a flow (for example, the SQL API or the
 |United States (Early Access)|52.161.26.191, 52.161.27.42, 52.161.29.40, 52.161.26.33, 13.66.213.240, 13.66.214.51, 13.66.210.166, 13.66.213.29|
 
 For example, if you must whitelist IP addresses for your Azure SQL database, you should use these addresses.
+
+#### Services PowerApps uses
+
+This is a list of all services that the PowerApps client talks to, and their usages. Your network must **not** be blocking these services.
+
+|Domain(s)|Protocols|Uses|
+|-----|----|-------|
+|management.azure.com|https|RP|
+|msmanaged-na.azure-apim.net|https|Runtime of Connectors/Apis|
+|login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com|https|ADAL|
+|graph.microsoft.com?<br>graph.windows.net|https|Azure Graph - For getting user info (e.g. profile photo)|
+|gallery.azure.com|https|Sample and Template apps|
+|*.azure-apim.net|https|Api Hubs - Different sub-domains for each locale|
+|*.powerapps.com|https|WebAuth + Portal|
+|*.azureedge.net|https|WebAuth|
+|*.blob.core.windows.net|https|Blob storage|
+|vortex.data.microsoft.com|https|Telemetry|
