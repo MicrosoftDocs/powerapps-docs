@@ -93,7 +93,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	The **Data sources** tab of the right-hand pane shows which data sources you've added to your app.
 
-	![Show connected data sources](./media/get-started-create-from-blank/connected-data-sources.png)
+	![Show connected data sources](./media/get-started-create-from-blank/data-connect.png)
 
 	This tutorial requires only one data source, but you can add more data sources later.
 
