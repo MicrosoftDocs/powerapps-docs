@@ -44,15 +44,15 @@ You can choose the kind of media file to add (for example, images, video, or aud
 
 	![][8]
 
-	- If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
+6. If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
 
-		![Set Image property](./media/add-images-pictures-audio-video/imageproperty.png)
+	![Set Image property](./media/add-images-pictures-audio-video/imageproperty.png)
 
 	**Note** Specify the file name only, without the extension, inside single quotes.
 
-	- If you added a video or audio control, set its **Media** property to the file that you added:  
+7. If you added a video or audio control, set its **Media** property to the file that you added:  
 
-		![Set Media property](./media/add-images-pictures-audio-video/mediaproperty.png))
+	![Set Media property](./media/add-images-pictures-audio-video/mediaproperty.png))
 
 	**Note** Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
