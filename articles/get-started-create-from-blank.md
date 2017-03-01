@@ -93,12 +93,14 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	The **Data sources** tab of the right-hand pane shows which data sources you've added to your app.
 
-	![Show connected data sources](./media/get-started-create-from-blank/connected-data-sources.png)
+	![Show connected data sources](./media/get-started-create-from-blank/data-connect.png)
 
 	This tutorial requires only one data source, but you can add more data sources later.
 
 ## Show the data ##
-1. In the right-hand pane, click or tap the **Layout** tab, and then click or tap the option that contains a heading, a subtitle, and a body element.
+1. In the right-hand pane, click or tap the **Layout** tab.
+
+1. Click or tap the option that contains a heading, a subtitle, and a body element.
 
 	![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
