@@ -24,7 +24,7 @@ PowerApps can leverage any RESTful APIs hosted anywhere.  This tutorial demonstr
 ## Prerequisites
 
 - A [PowerApps account](https://powerapps.microsoft.com).
-- A Swagger file (JSON) for your custom API. If you don't have one, we'll show you several options to create the Swagger file.
+- A Swagger file (JSON) OR a URL to a Swagger definition for your custom API. If you don't have one, we'll show you several options to create the Swagger file.
 - An image to use as an icon for your custom API (optional).
 
 
@@ -32,7 +32,9 @@ PowerApps can leverage any RESTful APIs hosted anywhere.  This tutorial demonstr
 
 Custom APIs in PowerApps can use any of several authentication mechanisms
 
+- API Key
 - Basic Authentication
+- Generic OAuth 2.0
 - OAuth 2.0. The specific implementations below are currently supported, with more coming soon.
 
 	- Azure Active Directory
@@ -78,6 +80,10 @@ You can create a Swagger file from *any* API endpoint, including:
 
 When you create the Swagger file, a JSON file is created.  You'll need this is Step 2.
 
+#### Connecting to Azure App Service or Azure Functions
+
+If your API is built with Azure App Service or Azure Functions, see [Exporting an Azure hosted API to PowerApps](https://docs.microsoft.com/en-us/azure/app-service/app-service-export-api-to-powerapps-and-flow) to learn more.
+
 #### Getting help with Swagger files
 
 - If you're new to Swagger, you should visit the [Getting Started pages on Swagger.io](http://swagger.io/getting-started/).
@@ -90,17 +96,17 @@ When you create the Swagger file, a JSON file is created.  You'll need this is S
 
 - To customize your Swagger document to work with PowerApps, see [Customize your Swagger definition](customapi-how-to-swagger.md).
 
-### Step 2: Add a connection to the custom API
+### Step 2: Register the custom API
 
-Now that the Swagger file (JSON file) is generated for the custom API, add the connection to PowerApps.
+Now that the Swagger file (JSON file) is generated for the custom API, register the custom API in PowerApps
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Manage** to expand it, and then click **Connections**. Then click **New connection** in the upper-right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **...** and select **Manage custom APIs** in the upper-right corner.
 
 	 >[AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
 
-	![Create custom API](./media/register-custom-api/createnewconnection.png)  
+	![Create custom API](./media/register-custom-api/managecustomapi.png)  
 
-2. Select **Custom**, and select **New custom API**:  
+2. Select **New custom API**:  
 
 	![Custom API properties](./media/register-custom-api/connecttocustomapi.png)  
 
@@ -108,8 +114,8 @@ Now that the Swagger file (JSON file) is generated for the custom API, add the c
 
 	| Property | Description |
 	|----------|-------------|
+	| Swagger URL OR Swagger API definition  | Paste a URL to a Swagger definition OR browse to the JSON file created from Swagger. |
 	| Name | Type the name of your custom API. |
-	| Swagger API definition | Browse to the JSON file created from Swagger. |
 	| Upload API icon | Browse an image file for the icon (optional). |
 	| Description | Type a description of your custom API (optional). |
 
@@ -121,6 +127,8 @@ Now that the Swagger file (JSON file) is generated for the custom API, add the c
 	|----------|-------------|
 	| Client id | Using one of the supported OAuth identity providers, a client ID is provided. Type this client ID. |
 	| Client secret | Type the client secret from the identity provider you chose. |  
+
+	Refer to [Azure Resource Manager](customapi-azure-resource-manager-tutorial.md) and [Azure WebApp](customapi-web-api-tutorial.md) examples to learn how to configure AAD authentication values.
 
 	If the JSON file does not use the ```securityDefintions``` object, then no additional values may be needed.
 
@@ -140,17 +148,15 @@ Now that the Swagger file (JSON file) is generated for the custom API, add the c
 ## Share a custom API
 Users can also share custom APIs with each other.
 
-1. In [powerapps.com](https://web.powerapps.com) under **Manage**, select **Connections**, and then select **New connection**.
+1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **...** and select **Manage custom APIs** in the upper-right corner.
 
-	![New connection](./media/register-custom-api/createnewconnection.png)
+	![New connection](./media/register-custom-api/managecustomapi.png)
 
-2. Select **Custom**, and then select your API.
-
-3. Select **Share**, and then enter the users or groups to whom you want to grant access to your API.  
+2. Select your API, select **Share**, and then enter the users or groups to whom you want to grant access to your API.  
 
 	![Share custom API](./media/register-custom-api/sharecustomapi.png)
 
-4. Select **Save**.
+3. Select **Save**.
 
 > [AZURE.NOTE] You may only share custom APIs with other users in your organization.
 
@@ -159,6 +165,7 @@ Users can also share custom APIs with each other.
 - You can create up to five custom APIs in a PowerApps account. Custom APIs that are shared with you don't count against this quota.
 - For each connection created on a custom API, users can make up to 500 requests per minute.
 - Keep in mind that deleting a custom API deletes all the connections created to the API.
+- The size of your Swagger file should be under 1MB.
 
 ## Next steps
 

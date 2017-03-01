@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/25/2017"
+   ms.date="02/24/2017"
    ms.author="kfend"/>
 
 # Understand entities in the Common Data Service
@@ -67,37 +67,16 @@ All entities, whether standard or custom, are created with a set of read-only fi
 - **Last Modified By** - The user who most recently modified the record.
 
 ### Standard fields
-Each standard entity contains a set of default fields that you can't change or delete. For a list of the entities and their fields, and a list of the picklists, see [Microsoft Common Data Model, Entities Reference](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
+Each standard entity contains a set of default fields that you can't change or delete. For a list of the entities and their fields, and a list of the picklists, see [Standard entities](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
 
 ### Custom fields ###
-You can create custom fields in either a standard entity or a custom entity. You must specify the name, display name, and data type of each custom field. PowerApps supports the following data types:
-
-- **Address** -  The first line, second line, city, state/province, postal code, and country/region of an address.
-- **AutoNumber** - A sequence number that's read-only and generated automatically. Usually used as the record's unique ID.
-- **Boolean** - True or false.
-- **Currency** - A numeric value that represents money.
-- **Date** - A date.
-- **DateTime** - A date and time.
-- **Email** - A text value that represents an email address.
-- **Guid** - A Guid.
-- **Integer** - A positive or negative value.
-- **Lookup** - A lookup field into another entity's title field.
-- **Multiline text** - Multiple lines of text.
-- **Number** - A number.
-- **PersonName** - The given name, middle name, and surname of a person.
-- **Phone** - A text value that represents a phone number.
-- **Picklist** - One value from a list of values.
-- **Quantity** - A decimal value.
-- **Text** - Text of length up to 128 characters.
-- **Url** - A text value that represents a URL.
-
-For more information, see [Manage fields in an entity](data-platform-manage-fields.md).
+You can create custom fields in either a standard entity or a custom entity. You must specify the name, display name, and data type of each custom field. For a complete list of supported types, see [Entity field data types](https://docs.microsoft.com/en-us/common-data-service/entity-reference/field-data-types).
 
 ## Lookup relationships ##
 You can navigate between records in entities if they have a relationship that's defined as a field of the **Lookup** data type. To create a lookup relationship, add a field of data type **Lookup** in one entity, and point to the entity in which you want to look up information. For more information, see [Entity relationships via lookup field](data-platform-entity-lookup.md).
 
 ## Standard entities
-For a list of the entities and their fields, and a list of the enumerations, see [Microsoft Common Data Model, Entities Reference](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
+For a list of the entities and their fields, and a list of the enumerations, see [Standard entities](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
 
 Functional group | Description 
 --- | --- 
