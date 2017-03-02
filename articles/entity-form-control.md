@@ -44,19 +44,19 @@ Example: If the **Entity Form** control displays a list of sales order records, 
 Example: If you want the **SalesOrderId** and **Account** fields to appear as links in a form, set the **SelectableFields** property of that form to this value:  
 **{SalesOrderId : true, Account : true}**
 
-**SelectedField** – Determines which field was clicked or tapped. Only fields specified in the **SelectableFields** property are valid for the **SelectedField** property.  
+**SelectedField** – Determines which field was clicked or tapped. This is only applicable to the fields specified as **SelectableFields**.  
 Example: If you set the **SelectableFields** property to **{SalesOrderId : true, Account : true}** and the user clicks or taps the **Account** field, **SelectedField.Account** is set to true.
 
-**OnFieldSelect** – Specifies the function that’s called when the user clicks or taps a field. Only fields specified in the **SelectableFields** property initiate a call to the OnFieldSelect function.
+**OnFieldSelect** – How an app responds when the user clicks or taps a field. This is only applicable to the fields specified as **SelectableFields**.
 
 **Mode** – Determines the mode of the form. To change the mode, use the **ViewForm**, **EditForm**, or **NewForm** function. These functions work only when the **Pattern** property is set to **FormPattern.Details**. Set the value of the **Mode** property to a value of the **FormMode** enumeration. 
 - **FormMode.View** – Allows users to view but not edit a record.
 - **FormMode.Edit** – Allows users to edit a record.
 - **FormMode.New** – Allows users to add a record.
 
-**OnSuccess** – A function that’s called when a user successfully saves the changes to a record.
+**OnSuccess** – How an app responds when a data operation has been successful.
 
-**OnFailure** - A function that’s called when a user edits a record but can’t save the changes.
+**OnFailure** - How an app responds when a data operation has been unsuccessful.
 
 **Unsaved** – Determines whether a record that a user is editing has unsaved changes.
 
