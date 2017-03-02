@@ -17,7 +17,7 @@
    ms.date="03/01/2017"
    ms.author="aneesa"/>
 
-# Use the Entity Form control#
+# Use the Entity Form control #
 
 Create apps faster by using the **Entity Form** control to add rich forms for a [Common Data Service entity](guided-learning/learning-common-data-service-entities.md).
 For an introduction to the **Entity Form** control, please refer to this blog post: [New entity form control for Common Data Service (experimental feature)](https://powerapps.microsoft.com/blog/new-entity-form-control-for-common-data-service-experimental-feature/). **Please be aware of the experimental nature of the Entity Form control** as outlined in the blog post, and be careful about using the **Entity Form** control in production apps, at least for now.
@@ -166,13 +166,15 @@ The Item property of the **SalesOrderDetailsForm** is set to **SalesOrderListFor
 1. Set the **Item** property of **SalesOrderDetailsForm** to **NavigationContext**.  
 <br>![](media/entity-form-control/entityform-tutorial-01-19.png)
 
-2. Preview the app by pressing F5, and then click or tap a link in the sales order list.
-<br>The app opens **SalesOrderDetailsScreen** and displays the details of the sales order that you specified. Let’s dig into how the form-customization pane sets up the navigation and context for us.  
+2. Preview the app by pressing F5, and then click or tap a link in the sales order list.  
+<br>The app opens **SalesOrderDetailsScreen** and displays the details of the sales order that you specified.  
+<br>Let’s dig into how the form-customization pane sets up the navigation and context for us.  
 <br>The **SelectableFields** property of the **SalesOrderListForm** specifies SalesOrderId as a selectable field.  
 <br>![](media/entity-form-control/entityform-tutorial-01-20.png)  
 <br>This was set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**. Therefore, the values in the **SalesOrderId** field appear as links.  
 <br>The **OnFieldSelect** property of the **SalesOrderListForm** is set to an [**If**](functions/function-if.md) function that determines whether the user clicks or taps the sales order ID field: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
-<br>If the function is evaluated as true, the **SalesOrderDetailsScreen** opens with the context variable named **NavigationContext** that we used earlier. All this was also set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**.  
+<br>If the function is evaluated as true, the **SalesOrderDetailsScreen** opens with the context variable named **NavigationContext** that we used earlier.  
+<br>All this was also set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**.  
 <br>Therefore, when the user clicks or taps a sales order ID field, the [**If**](functions/function-if.md) function evaluates to true, and the [**Navigate**](functions/function-navigate.md) function is called with the corresponding context, opening the details screen.  
 <br>![](media/entity-form-control/entityform-tutorial-01-21.png)  
 <br>Note: When you use the form-customization pane, the **NavigationContext** is intelligently determined for you. When the user clicks or taps **SalesOrderId**, **NavigationContext** is set to **SalesOrderListForm.Selected**, as the earlier formula shows. If we had specified the **Account** field for navigation instead, **NavigationContext** would have been set to **SalesOrderListForm.Selected.Account**, ensuring that the correct context is passed. However, to consume that context, you would need an **Entity Form** control connected to the **Account** entity in the Common Data Service.
