@@ -75,7 +75,7 @@ You can use these  shared functions with either the **Entity Form** control or t
 
 Now that you have an overview of the various properties and functions, let’s look at them in action. 
 
-*Note: If you don’t have access to a Common Data Service database, [create one](guided-learning/learning-common-data-service.md) before you start to follow these steps.*
+Note: If you don’t have access to a Common Data Service database, [create one](guided-learning/learning-common-data-service.md) before you start to follow these steps.
 
 ## Display a list of records
 Add a form that shows a list of sales orders.  
@@ -87,7 +87,7 @@ Add a form that shows a list of sales orders.
 <br>![](media/entity-form-control/entityform-tutorial-01-02.png)
 
 3. On the **Insert** tab, click or tap **Forms**, and then click or tap **Entity form (experimental)**.  
-An **Entity Form** control is added to the screen.  
+<br>An **Entity Form** control is added to the screen.  
 <br>![](media/entity-form-control/entityform-tutorial-01-03.png)
 
 4. Rename the **Entity Form** control **SalesOrderListForm**, and resize it to cover the entire screen.
@@ -98,17 +98,17 @@ An **Entity Form** control is added to the screen.
 6. In the list of connections, click or tap the connection for your database.  
 <br>![](media/entity-form-control/entityform-tutorial-01-05.png)
 
-7. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**. 
-A data source for the **Sales order** entity is created, and the **DataSource** property of the **SalesOrderListForm** is set to that data source.  
+7. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.  
+<br>A data source for the **Sales order** entity is created, and the **DataSource** property of the **SalesOrderListForm** is set to that data source.  
 <br>![](media/entity-form-control/entityform-tutorial-01-06.png)  
-<br>The **Entity Form** control shows a list of sales orders. By using the **Entity Form** control, you quickly displayed a list form without having to manually build it.
+<br>The **Entity Form** control shows a list of sales orders. By using the **Entity Form** control, you quickly displayed a list form without having to manually build it.  
 <br>![](media/entity-form-control/entityform-tutorial-01-07.png)  
 <br>You didn’t set the **Pattern** property for the Entity Form control, so it defaults to the **List** pattern. In addition, the **DefaultList** field group of the Sales order entity is used to display the list form. The form is also dynamic and will automatically reflect any change in the field group.
 
 8. (*Optional*) View the **DefaultList** field group of the **Sales order** entity:  
 a. Sign in to [powerapps.com](https://web.powerapps.com), click or tap **Common Data Service** in the left navigation pane, and then click or tap **Entities**.  
 b. In the list of entities, click or tap **Sales order**, click or tap the **Field groups** tab, and then click or tap the **DefaultList** field group.  
-The fields in the sales order list match those listed here.  
+<br>The fields in the sales order list match those listed here.  
 <br>![](media/entity-form-control/entityform-tutorial-01-08.png)   
 <br>In the **Common Data Service**, you can [modify field groups](field-groups.md) for custom entities (but not [standard entities](guided-learning/learning-common-data-service-entities.md)) to change the fields that appear on the corresponding forms that the **Entity Form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity Form** control to display the corresponding form.
 
@@ -122,15 +122,15 @@ Let’s add another **Entity Form** control to display the details of the sales 
 <br>![](media/entity-form-control/entityform-tutorial-01-10.png)
 
 3. Set the **Pattern** property of **SalesOrderDetailsForm** to **FormPattern.Details**.  
-**SalesOrderDetailsForm** uses the **DefaultDetails** field group of the **Sales order** entity to display the form. As with the **SalesOrderListForm**, you can quickly show record details without having to manually build a form.  
+<br>**SalesOrderDetailsForm** uses the **DefaultDetails** field group of the **Sales order** entity to display the form. As with the **SalesOrderListForm**, you can quickly show record details without having to manually build a form.  
 <br>![](media/entity-form-control/entityform-tutorial-01-11.png)
 
 4. Set the **Item** property of **SalesOrderDetailsForm** to **SalesOrderListForm.Selected**.  
-**SalesOrderDetailsForm** will display the details of the record that the user clicks or taps in **SalesOrderListForm**.  
+<br>**SalesOrderDetailsForm** will display the details of the record that the user clicks or taps in **SalesOrderListForm**.  
 <br>![](media/entity-form-control/entityform-tutorial-01-12.png)
 
 5. Preview the app by pressing F5, and then click or tap a sales order in the list on the left.  
-The details of the order that you selected appear on the right side.  
+<br>The details of the order that you selected appear on the right side.  
 <br>![](media/entity-form-control/entityform-tutorial-01-13.png)  
 
 ## Configure a field to navigate to another screen
@@ -167,7 +167,7 @@ The Item property of the **SalesOrderDetailsForm** is set to **SalesOrderListFor
 <br>![](media/entity-form-control/entityform-tutorial-01-19.png)
 
 2. Preview the app by pressing F5, and then click or tap a link in the sales order list.
-The app opens **SalesOrderDetailsScreen** and displays the details of the sales order that you specified. Let’s dig into how the form-customization pane sets up the navigation and context for us.  
+<br>The app opens **SalesOrderDetailsScreen** and displays the details of the sales order that you specified. Let’s dig into how the form-customization pane sets up the navigation and context for us.  
 <br>The **SelectableFields** property of the **SalesOrderListForm** specifies SalesOrderId as a selectable field.  
 <br>![](media/entity-form-control/entityform-tutorial-01-20.png)  
 <br>This was set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**. Therefore, the values in the **SalesOrderId** field appear as links.  
@@ -175,7 +175,7 @@ The app opens **SalesOrderDetailsScreen** and displays the details of the sales 
 <br>If the function is evaluated as true, the **SalesOrderDetailsScreen** opens with the context variable named **NavigationContext** that we used earlier. All this was also set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**.  
 <br>Therefore, when the user clicks or taps a sales order ID field, the [**If**](functions/function-if.md) function evaluates to true, and the [**Navigate**](functions/function-navigate.md) function is called with the corresponding context, opening the details screen.  
 <br>![](media/entity-form-control/entityform-tutorial-01-21.png)  
-<br>*Note: When you use the form-customization pane, the **NavigationContext** is intelligently determined for you. When the user clicks or taps **SalesOrderId**, **NavigationContext** is set to **SalesOrderListForm.Selected**, as the earlier formula shows. If we had specified the **Account** field for navigation instead, **NavigationContext** would have been set to **SalesOrderListForm.Selected.Account**, ensuring that the correct context is passed. However, to consume that context, you would need an **Entity Form** control connected to the **Account** entity in the Common Data Service.*
+<br>Note: When you use the form-customization pane, the **NavigationContext** is intelligently determined for you. When the user clicks or taps **SalesOrderId**, **NavigationContext** is set to **SalesOrderListForm.Selected**, as the earlier formula shows. If we had specified the **Account** field for navigation instead, **NavigationContext** would have been set to **SalesOrderListForm.Selected.Account**, ensuring that the correct context is passed. However, to consume that context, you would need an **Entity Form** control connected to the **Account** entity in the Common Data Service.
 
 ## Edit and save a record
 Finally let’s look at how we can edit and save a record in an **Entity Form** control.  
@@ -188,14 +188,14 @@ Finally let’s look at how we can edit and save a record in an **Entity Form** 
 **SubmitForm(SalesOrderDetailsForm)**  
 <br>![](media/entity-form-control/entityform-tutorial-01-23.png)
 
-3. Preview the app by pressing F5, click or tap a sales order ID link to view the details of a sales order, and then click or tap the edit icon. 
-The **Mode** of the **Entity Form** control is set to **FormMode.Edit** so that you can edit the record.
+3. Preview the app by pressing F5, click or tap a sales order ID link to view the details of a sales order, and then click or tap the edit icon.  
+<br>The **Mode** of the **Entity Form** control is set to **FormMode.Edit** so that you can edit the record.
 
 4. Update the **Order status** to **Invoice**.  
 <br>![](media/entity-form-control/entityform-tutorial-01-24.png)
 
-5. Update the **Sales person** to **WRK014**.
-To help you pick the **Sales person**, the **Entity Form** control automatically renders a rich detailed lookup. To generate and display this lookup, the control uses the **DefaultLookup** field group of the **Worker** entity in the Common Data Service. The **Worker** entity is used because the **Sales person** field is of type **Worker**.  
+5. Update the **Sales person** to **WRK014**.  
+<br>To help you pick the **Sales person**, the **Entity Form** control automatically renders a rich detailed lookup. To generate and display this lookup, the control uses the **DefaultLookup** field group of the **Worker** entity in the Common Data Service. The **Worker** entity is used because the **Sales person** field is of type **Worker**.  
 <br>![](media/entity-form-control/entityform-tutorial-01-25.png)
 
 6. Click or tap the checkmark icon to save your changes.
