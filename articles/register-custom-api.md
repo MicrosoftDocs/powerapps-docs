@@ -162,7 +162,7 @@ Users can also share custom APIs with each other.
 
 ## Quota and throttling
 
-- You can create up to five custom APIs in a PowerApps account. Custom APIs that are shared with you don't count against this quota.
+- See the [PowerApps Pricing](https://powerapps.microsoft.com/pricing/) page for details about custom API creation quotas. Custom APIs that are shared with you don't count against this quota.
 - For each connection created on a custom API, users can make up to 500 requests per minute.
 - Keep in mind that deleting a custom API deletes all the connections created to the API.
 - The size of your Swagger file should be under 1MB.
