@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="12/06/2016"
-   ms.author="aneesmft"/>
+   ms.author="aneesa"/>
 
 # Use field groups #
 
@@ -28,14 +28,14 @@ Common Data Service (CDS) includes several default field groups on entities. The
 
 | Default field group name | Description |
 |-------------------------|-------------|
-|DefaultList |Used to display a list of record in a tabular format.|
-|DefaultCard |Used to display a list of record in a card format.|
+|DefaultList |Used to display a list of records in a tabular format.|
+|DefaultCard |Used to display a list of records in a card format.|
 |DefaultDetails |Used to display the details of a single record in view and edit.|
 |DefaultLookup |Used to display a lookup to select a record.|
 
 ## View a field group ##
-1. Login to [powerapps.com](https://web.powerapps.com). 
-2. If you have access to more than one enviroment, ensure that you have the right environment selected using the enviroment picker in the top bar.
+1. Sign in to [powerapps.com](https://web.powerapps.com). 
+2. If you have access to more than one environment, ensure that you have the right environment selected using the environment picker in the top bar.
 3. Expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane.
 4. In the list of entities, click or tap the entity that you want to view the field group for.
 5. In the header above the list of fields, click or tap **Field groups**. You now see all the field groups that currently exist for the entity.
@@ -66,7 +66,7 @@ Deleting a field group is not currently supported.
 ## Field group usage ##
 The default field groups help speed up application authoring and customization. Some places where you can currently see field groups in action are:
 
-* **Entity form control** - Entity form control uses the default field groups to display dynamic forms that help speed up the app authoring process, help enforce consistency and also ease maintenance. For more details please see, [Use the Entity Form control in PowerApps](entity-form-control.md).
+* **Entity form control** - Entity form control uses the default field groups to display dynamic forms that help speed up the app authoring process, help enforce consistency and also ease maintenance. For more details, please see [Use the Entity Form control](entity-form-control.md).
 
 * **Lookup control** - If one of the fields that you add on your screen is a reference to another linked entity, the field is rendered as a lookup control (picklist). When a user clicks the lookup control to select a record from the linked entity, the fields displayed are determined by the **DefaultLookup** field group on the linked entity. Only the first two fields of the **DefaultLookup** field group are used.
 
