@@ -17,7 +17,7 @@
    ms.date="03/01/2017"
    ms.author="aneesa"/>
 
-# Use the Entity Form control in PowerApps #
+# Use the Entity Form control#
 
 Create apps faster by using the **Entity Form** control to add rich forms for a [Common Data Service entity](guided-learning/learning-common-data-service-entities.md).
 For an introduction to the **Entity Form** control, please refer to this blog post: [New entity form control for Common Data Service (experimental feature)](https://powerapps.microsoft.com/blog/new-entity-form-control-for-common-data-service-experimental-feature/). **Please be aware of the experimental nature of the Entity Form control** as outlined in the blog post, and be careful about using the **Entity Form** control in production apps, at least for now.
@@ -26,7 +26,7 @@ For an introduction to the **Entity Form** control, please refer to this blog po
 Here are the key properties of an **Entity Form** control.
 
 **DataSource** Specifies the data source that contains the record(s) that you want to display.  
-*Note: Currently only entities in the Common Data Service are supported as data sources for the **Entity Form** control.*  
+Note: Currently only entities in the Common Data Service are supported as data sources for the **Entity Form** control.  
 
 **Pattern** – Specifies the style of the form that you want to display in the **Entity Form** control. Set this property by using the **FormPattern** enumeration.  
 - **FormPattern.List** – Displays a tabular list of records.
@@ -78,8 +78,9 @@ Now that you have an overview of the various properties and functions, let’s l
 *Note: If you don’t have access to a Common Data Service database, [create one](guided-learning/learning-common-data-service.md) before you start to follow these steps.*
 
 ## Display a list of records
-Add a form that shows a list of sales orders.
-<br>1. Create a blank tablet app.  
+Add a form that shows a list of sales orders.  
+
+1. Create a blank tablet app.  
 <br>![](media/entity-form-control/entityform-tutorial-01-01.png)
 
 2. Rename the first screen **SalesOrderListScreen**.  
@@ -112,8 +113,9 @@ The fields in the sales order list match those listed here.
 <br>In the **Common Data Service**, you can [modify field groups](field-groups.md) for custom entities (but not [standard entities](guided-learning/learning-common-data-service-entities.md)) to change the fields that appear on the corresponding forms that the **Entity Form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity Form** control to display the corresponding form.
 
 ## Display the details of a record
-Let’s add another **Entity Form** control to display the details of the sales order that’s selected in the list that you created earlier.
-<br>1. Resize **SalesOrderListForm** to cover half the screen, and add a second **Entity Form** control to cover the other half of the screen.  
+Let’s add another **Entity Form** control to display the details of the sales order that’s selected in the list that you created earlier.  
+
+1. Resize **SalesOrderListForm** to cover half the screen, and add a second **Entity Form** control to cover the other half of the screen.  
 <br>![](media/entity-form-control/entityform-tutorial-01-09.png)
 
 2. Rename the second **Entity Form** control **SalesOrderDetailsForm**, and connect it to the **Sales order** data source that you created earlier.  
@@ -132,7 +134,8 @@ The details of the order that you selected appear on the right side.
 <br>![](media/entity-form-control/entityform-tutorial-01-13.png)  
 
 ## Configure a field to navigate to another screen
-Next let’s add more screens to our app and configure fields in an **Entity Form** control to navigate to another screen in the app when the user clicks or taps a field.
+Next let’s add more screens to our app and configure fields in an **Entity Form** control to navigate to another screen in the app when the user clicks or taps a field.  
+
 1. Add a second screen to the app, and rename the screen **SalesOrderDetailsScreen**.
 
 2. Cut the **SalesOrderDetailsForm**, paste it on the **SalesOrderDetailsScreen**, and resize the form to cover most of the screen, leaving enough space for an icon at the top.
@@ -158,8 +161,9 @@ Next let’s add more screens to our app and configure fields in an **Entity For
 <br>To display the details of a different sales order, click or tap the back arrow to navigate back to the list, and then click or tap the link of the order for which you want to show details.
 
 ## Navigate with a context variable
-The Item property of the **SalesOrderDetailsForm** is set to **SalesOrderListForm.Selected** so that **SalesOrderDetailsForm** shows details about the record that the user selects in **SalesOrderListForm**. You can also get the context of the selected record by using the **NavigationContext** context variable, which gets automatically created when you use the form-customization pane to configure a field to navigate.
-<br>1. Set the **Item** property of **SalesOrderDetailsForm** to **NavigationContext**.  
+The Item property of the **SalesOrderDetailsForm** is set to **SalesOrderListForm.Selected** so that **SalesOrderDetailsForm** shows details about the record that the user selects in **SalesOrderListForm**. You can also get the context of the selected record by using the **NavigationContext** context variable, which gets automatically created when you use the form-customization pane to configure a field to navigate.  
+
+1. Set the **Item** property of **SalesOrderDetailsForm** to **NavigationContext**.  
 <br>![](media/entity-form-control/entityform-tutorial-01-19.png)
 
 2. Preview the app by pressing F5, and then click or tap a link in the sales order list.
@@ -174,8 +178,9 @@ The app opens **SalesOrderDetailsScreen** and displays the details of the sales 
 <br>*Note: When you use the form-customization pane, the **NavigationContext** is intelligently determined for you. When the user clicks or taps **SalesOrderId**, **NavigationContext** is set to **SalesOrderListForm.Selected**, as the earlier formula shows. If we had specified the **Account** field for navigation instead, **NavigationContext** would have been set to **SalesOrderListForm.Selected.Account**, ensuring that the correct context is passed. However, to consume that context, you would need an **Entity Form** control connected to the **Account** entity in the Common Data Service.*
 
 ## Edit and save a record
-Finally let’s look at how we can edit and save a record in an **Entity Form** control.
-<br>1. On the **SalesOrderDetailsScreen**, add an edit icon, and then set its **OnSelect** property to this formula:  
+Finally let’s look at how we can edit and save a record in an **Entity Form** control.  
+
+1. On the **SalesOrderDetailsScreen**, add an edit icon, and then set its **OnSelect** property to this formula:  
 **EditForm(SalesOrderDetailsForm)**  
 <br>![](media/entity-form-control/entityform-tutorial-01-22.png)
 

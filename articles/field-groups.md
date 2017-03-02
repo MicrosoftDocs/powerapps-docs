@@ -24,7 +24,7 @@ Field groups provide a way to group one or more fields of an entity. Field group
 Field groups are stored on an entity and are shared across all apps that use the same entity. At any given time there may be many different apps using the same entity and field groups of that entity. This centralization and sharing of field groups helps enforce consistency, because a field group will always display the same fields wherever it's used. This makes maintenance easy because a change to a field group is automatically reflected in all the places using that field group. Field groups help speed up the app authoring and customization process because an application author works with groups of fields, rather than individual fields.
 
 ## Default field groups ##
-Common Data Service (CDS) includes several default field groups on entities. These field groups are used in various places to help speed up and ease app creation and customization.
+Common Data Service includes several default field groups on entities. These field groups are used in various places to help speed up and ease app creation and customization.
 
 | Default field group name | Description |
 |-------------------------|-------------|
