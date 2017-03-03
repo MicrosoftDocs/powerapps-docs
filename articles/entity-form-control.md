@@ -33,10 +33,10 @@ Here are the key properties of an **Entity form** control.
 
 **Pattern** – Specifies the style of the form that you want to display in the **Entity form** control. Set this property by using the **FormPattern** enumeration.
 
-	- **FormPattern.List** – Displays a tabular list of records.
-	- **FormPattern.CardList** – Displays a card list of records.
-	- **FormPattern.Details** – Displays a form to view or edit the details of a single record.
-	- **FormPattern.None** – No style has been explicitly specified. Defaults to **List** for tablet apps and **CardList** for phone apps.
+- **FormPattern.List** – Displays a tabular list of records.
+- **FormPattern.CardList** – Displays a card list of records.
+- **FormPattern.Details** – Displays a form to view or edit the details of a single record.
+- **FormPattern.None** – No style has been explicitly specified. Defaults to **List** for tablet apps and **CardList** for phone apps.
 
 **Item** – Specifies the record in the data source that the **Entity form** control should display. This property is used only when **Pattern** is set to **FormPattern.Details**.
 
@@ -55,9 +55,9 @@ Example: If you set the **SelectableFields** property to **{SalesOrderId : true,
 
 **Mode** – Determines the mode of the form. To change the mode, use the **ViewForm**, **EditForm**, or **NewForm** function. These functions work only when the **Pattern** property is set to **FormPattern.Details**. Set the value of the **Mode** property to a value of the **FormMode** enumeration.
 
-	- **FormMode.View** – Allows users to view but not edit or add a record.
-	- **FormMode.Edit** – Allows users to edit a record.
-	- **FormMode.New** – Allows users to add a record.
+- **FormMode.View** – Allows users to view but not edit or add a record.
+- **FormMode.Edit** – Allows users to edit a record.
+- **FormMode.New** – Allows users to add a record.
 
 **OnSuccess** – How an app responds when a data operation has been successful.
 
