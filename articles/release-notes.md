@@ -235,7 +235,7 @@ Because of administrative details, different platforms show different build numb
 
 1. **SharePoint Update control**.
 
-	This control has been deprecated in favor of the **[Edit Form](add-form.md)** control. An app that contains the **SharePoint Update** control will still open, but the control itself will no longer appear.
+	This control has been deprecated in favor of the **[Edit form](add-form.md)** control. An app that contains the **SharePoint Update** control will still open, but the control itself will no longer appear.
 
 ## Release 2.0.450 ##
 1. **Add data while customizing a form**.
@@ -323,7 +323,7 @@ Because of administrative details, different platforms show different build numb
 
 	You can configure a DatePicker control with a blank value as its default.
 
-1. **Improvements to Display Form and Edit Form controls.**
+1. **Improvements to Display form and Edit form controls.**
 
 	Form controls now show both a display name and the name of the field if they differ, and you can change the display name of a lookup control.
 

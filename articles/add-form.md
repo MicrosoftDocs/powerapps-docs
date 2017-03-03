@@ -37,7 +37,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
 	The list shows names of flooring products from the data source.
 
-1. Add an **Edit Form** control, move it below **ChooseProduct**, and resize the form to cover most of the screen.
+1. Add an **Edit form** control, move it below **ChooseProduct**, and resize the form to cover most of the screen.
 
     ![Add a form](./media/add-form/add-a-form.png)
 
