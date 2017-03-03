@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Limits and configuration | Microsoft PowerApps"
-	description="Limits and configuration"
+	description="Limits and configuration values for PowerApps"
 	services=""
 	suite="PowerApps"
 	documentationCenter="na"
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/23/2017"
+   ms.date="03/03/2017"
    ms.author="ricksal"/>
 
 # Limits and configuration in Microsoft PowerApps
@@ -38,8 +38,6 @@ These are limits for a single outgoing request.
 |Retry attempts|4|
 
 **NOTE**: This value may vary. For certain error conditions it does not make sense to retry.
-
-**TBD**: should we explain this in more detail perhaps? Or is the preceding note adequate?
 
 ## Configuration
 
