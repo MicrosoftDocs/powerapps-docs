@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/03/2017"
+   ms.date="03/06/2017"
    ms.author="ricksal"/>
 
 # Limits and configuration in Microsoft PowerApps
@@ -69,7 +69,7 @@ This is a list of all services that the PowerApps client talks to, and their usa
 |management.azure.com|https|RP|
 |msmanaged-na.azure-apim.net|https|Runtime of Connectors/Apis|
 |login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com|https|ADAL|
-|graph.microsoft.com?<br>graph.windows.net|https|Azure Graph - For getting user info (e.g. profile photo)|
+|graph.microsoft.com<br>graph.windows.net|https|Azure Graph - For getting user info (e.g. profile photo)|
 |gallery.azure.com|https|Sample and Template apps|
 |*.azure-apim.net|https|Api Hubs - Different sub-domains for each locale|
 |*.powerapps.com|https|WebAuth + Portal|
