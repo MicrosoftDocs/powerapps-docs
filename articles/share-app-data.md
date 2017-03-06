@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="RickSaling"
+    authors="jamesol-msft"
     manager="anneta"
     editor=""
     tags=""
@@ -15,8 +15,8 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="03/06/2017"
-    ms.author="ricksal"/>
+    ms.date="10/16/2016"
+    ms.author="jamesol"/>
 
 # Share Excel data used by your app #
 You can share Excel data with your app users in a [cloud account](cloud-storage-blob-connections.md), such as OneDrive.
@@ -31,17 +31,17 @@ This topic shows you how to share data in an Excel spreadsheet using Dropbox, On
 
 1. Sign in to Dropbox using the same account that you used to create a connection from PowerApps to Dropbox.
 
-2. Select the folder that contains the Excel file, and then select **Share**:  
+1. Select the folder that contains the Excel file, and then select **Share**:  
 
 	![Share command](./media/share-app-data/dropbox-share.png)
 
-3. In the dialog box, enter the email addresses with which your app users sign in to Dropbox.  
+1. In the dialog box, enter the email addresses with which your app users sign in to Dropbox.  
 
 	![Share on Dropbox](./media/share-app-data/dropbox-perms.png)
 
-4. If your app users will add, modify, or delete data in your app,  select **Can edit**. Otherwise, select **Can view**.
+1. If your app users will add, modify, or delete data in your app,  select **Can edit**. Otherwise, select **Can view**.
 
-5. Select **Share**.
+1. Select **Share**.
 
 For more information, see [Sharing folders on Dropbox](https://www.dropbox.com/en/help/19).
 
