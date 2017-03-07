@@ -26,9 +26,9 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 ## Key properties ##
 
-**[Color](properties-color-border.md)** – The color of text in a control.
+**[Color](properties-color-border.md)** – The color of input strokes.
 
-**Mode** – The control is in **Draw**, **Erase**, or **Select** mode.
+**Mode** – The control is in **Draw** or **Erase** mode.  Select mode has been deprecated.
 
 ## Additional properties ##
 
