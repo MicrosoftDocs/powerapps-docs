@@ -20,7 +20,13 @@
 
 # Understand data sources in PowerApps #
 
-Data sources are extensions of [tables](working-with-tables.md) that can retrieve and store information.  Connected data sources read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.  Static data sources and collections are alternative data sources that can be loaded and saved locally.
+Most PowerApps apps use external sources of information. This information is called a **Data Source**. Apps are able to access these data sources by using **Connectors**.
+
+The most commonly used data sources are [tables](working-with-tables.md) that can retrieve and store information.  Connected data sources read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.
+
+There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications. This article does not discuss these other kinds of data sources.
+
+Another special kind of data source is the [Collection](working-with-data-sources.md#Collections).  They're local to the app and not backed by a connection to a service in the cloud, so the information can not be shared across devices for the same user or between users. Collections can be loaded and saved locally.
 
 Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](working-with-forms.md).  When you ask PowerApps to create an app from data, these controls are used.
 
