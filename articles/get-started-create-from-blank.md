@@ -19,7 +19,7 @@
    ms.author="ankitsar"/>
 
 # Create an app from scratch #
-Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow.
+Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
 
 **Note**: This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
 
@@ -45,11 +45,11 @@ You can review this tutorial for general concepts only, or you can follow it exa
 |Sunday|10am-noon|Singh|Morgan|
 |Sunday|10am-noon|Batye|Nguyen|
 
-1. Format that data as a table named **Schedule**.
+1. Format that data as a table, named **Schedule**, so that PowerApps can parse the information.
 
 	For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-1. Name the Excel file **eventsignup.xls**, and then upload it to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive.
+1. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive.
 
 1.  If you're new to PowerApps:
 	- Learn how to [add a control and set its properties](add-configure-controls.md), which determine how the control appears and behaves.
@@ -123,6 +123,8 @@ You can review this tutorial for general concepts only, or you can follow it exa
 	A search box can filter the gallery based on text that the user types. If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer 1** field contains the text that the user typed.
 
 	The sort button can sort the records based on data in the **Volunteer 1** column. If a user clicks or taps that button, the sort order toggles between ascending and descending.
+
+	That formula contains the **Sort**, **If**, **IsBlank**, **Filter**, and **Text** functions. For more information about these and other functions, see the [formula reference](formula-reference.md)
 
 1. Type an **i** in the search box, and click or tap the sort button once (or an odd number of times).
 
