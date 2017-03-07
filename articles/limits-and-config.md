@@ -37,15 +37,15 @@ These are limits for a single outgoing request.
 |----|----|
 |Retry attempts|4|
 
-**NOTE**: This value may vary. For certain error conditions it does not make sense to retry.
+**NOTE**: This value may vary. For certain error conditions, it doesn't make sense to retry.
 
 ## Configuration
 
 ### IP address
 
-Requests from PowerApps use IP addresses that depends on the region of the [environment](environments-overview.md) that the app is in. We don't currently publish FQDNs available for PowerApps scenarios.
+Requests from PowerApps use IP addresses that depend on the region of the [environment](environments-overview.md) that the app is in. We don't currently publish fully qualified domain names available for PowerApps scenarios.
 
-Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified below.
+Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this topic.
 
 So for example, if you must whitelist IP addresses for your Azure SQL database, you should use these addresses.
 
@@ -62,7 +62,7 @@ So for example, if you must whitelist IP addresses for your Azure SQL database, 
 
 ### Services that PowerApps must use
 
-This is a list of all services that the PowerApps client talks to, and their usages. Your network must **not** be blocking these services.
+This is a list of all services to which the PowerApps client talks and their usages. Your network must **not** block these services.
 
 |Domain(s)|Protocols|Uses|
 |-----|----|-------|
