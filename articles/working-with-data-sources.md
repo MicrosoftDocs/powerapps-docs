@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="gregli-msft"
+	authors="RickSaling"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -15,20 +15,24 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/10/2015"
-   ms.author="gregli"/>
+   ms.date="03/08/2017
+   ms.author="ricksal"/>
 
 # Understand data sources in PowerApps #
 
-Most PowerApps apps use external sources of information called **Data Sources**. Apps are able to access these data sources by using **Connectors**.
+Most PowerApps apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connectors**.
+
+This article discusses the different kinds of data sources, and how to work with table data sources.
 
 It is easy to create an app that does basic reading and writing to a data source. But sometimes you want more control over how data flows in and out of your app.  This article describes how the **[Patch](functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](functions/function-validate.md)**, and **[Errors](functions/function-errors.md)** functions provide more control.
 
 ## Kinds of data sources ##
 
+Data sources can be connected to a cloud service, or local to an app.
+
 ### Connected data sources
 
-The most commonly used data sources are [tables](working-with-tables.md) with which you can retrieve and store information. You can use **connectors** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which are stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
+The commonest data sources are **tables** with which you can use to retrieve and store information. You can use **connectors** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
 
 There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications. This article does not discuss these other kinds of data sources.
 
@@ -36,15 +40,17 @@ There are other kinds of data sources that are not tables, such as email, calend
 
 Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](working-with-forms.md).  
 
-When you ask PowerApps to create an app from data, these controls are used. Behind the scenes, the app is using an internal table to store and manipulate the data that comes from the data source.
+When you ask PowerApps to create an app from data, these controls are used. Behind the scenes, the app uses an internal table to store and manipulate the data that comes from the data source.
 
 A special kind of data source is the [Collection](working-with-data-sources.md#Collections), which is local to the app and not backed by a connection to a service in the cloud, so the information can not be shared across devices for the same user or between users. Collections can be loaded and saved locally.
 
 ### Kinds of tables
 
-As we learned in [Working with tables](working-with-tables.md), tables that are internal to a PowerApps app are fixed values, just as a number or a string is a value. Internal tables aren't stored anywhere, they just exist in your app's memory. You can't directly modify the structure and data of a table. What you can do instead is to create a new table through a formula: you use that formula to make a modified copy of the original table.
+Tables that are internal to a PowerApps app are fixed values, just as a number or a string is a value. Internal tables aren't stored anywhere, they just exist in your app's memory. You can't directly modify the structure and data of a table. What you can do instead is to create a new table through a formula: you use that formula to make a modified copy of the original table.
 
 External tables are stored in a data source for later retrieval and sharing.  PowerApps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your app, and each will become a separate *data source*.  
+
+To learn more, [Working with tables](working-with-tables.md) goes into more detail about internal tables, but it is also applicable to external tables residing in a cloud service.
 
 ## Working with tables
 
@@ -61,7 +67,7 @@ You can use table data sources the same way that you use an internal PowerApps t
 
 ### Creating data sources
 
-PowerApps can't be used to create a connected data source, or modify its structure; the table must already exist in a service elsewhere. To create a table, for example, in an Excel workbook stored on OneDrive, you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  
+PowerApps can't be used to create a connected data source, or modify its structure; the data source must already exist in a service somewhere. To create a table, for example, in an Excel workbook stored on OneDrive, you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  
 
 However, collection data sources *can* be created and modified in an app, but are only temporary.
 
@@ -120,9 +126,9 @@ The **[Errors](functions/function-errors.md)** function returns a table of error
 
 When you are creating reports from large data sources (perhaps millions of records), you want to minimize network traffic. Let's say you want to report on all Customers having a StatusCode of "Platinum" in New York City. And that your Customers table contains millions of records.
 
-You do **not** want to bring those millions of Customers into your app, and then choose the ones you want. What you want to do is to have that choosing happen inside the cloud service where your table is stored, and only send the chosen records over the network.
+You do **not** want to bring those millions of Customers into your app, and then choose the ones you want. What you want is to have that choosing happen inside the cloud service where your table is stored, and only send the chosen records over the network.
 
-Many, but not all, functions that you can use to choose records can be *delegated*, which means that they are run inside the cloud service. You can learn how to do this by reading about [Delegation](delegation-overview.md). 
+Many, but not all, functions that you can use to choose records can be *delegated*, which means that they are run inside the cloud service. You can learn how to do this by reading about [Delegation](delegation-overview.md).
 
 ## Collections ##
 
