@@ -20,25 +20,35 @@
 
 # Understand data sources in PowerApps #
 
-Most PowerApps apps use external sources of information. This information is called a **Data Source**. Apps are able to access these data sources by using **Connectors**.
+Most PowerApps apps use external sources of information called **Data Sources**. Apps are able to access these data sources by using **Connectors**.
 
-The most commonly used data sources are [tables](working-with-tables.md) that can retrieve and store information.  Connected data sources read and write data in Microsoft Excel workbooks, SharePoint lists, SQL Server tables, and many other services.
+It is easy to create an app that does basic reading and writing to a data source. But sometimes you want more control over how data flows in and out of your app.  This article describes how the **[Patch](functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](functions/function-validate.md)**, and **[Errors](functions/function-errors.md)** functions provide more control.
+
+## Kinds of data sources ##
+
+### Connected data sources
+
+The most commonly used data sources are [tables](working-with-tables.md) with which you can retrieve and store information. You can use **connectors** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which are stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
 
 There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications. This article does not discuss these other kinds of data sources.
 
-Another special kind of data source is the [Collection](working-with-data-sources.md#Collections).  They're local to the app and not backed by a connection to a service in the cloud, so the information can not be shared across devices for the same user or between users. Collections can be loaded and saved locally.
+### Local data sources
 
-Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](working-with-forms.md).  When you ask PowerApps to create an app from data, these controls are used.
+Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](working-with-forms.md).  
 
-Sometimes you will want more control over how data flows in and out of your app.  This article describes how the **[Patch](functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](functions/function-validate.md)**, and **[Errors](functions/function-errors.md)** functions provide more control.
+When you ask PowerApps to create an app from data, these controls are used. Behind the scenes, the app is using an internal table to store and manipulate the data that comes from the data source.
 
-## Data sources ##
+A special kind of data source is the [Collection](working-with-data-sources.md#Collections), which is local to the app and not backed by a connection to a service in the cloud, so the information can not be shared across devices for the same user or between users. Collections can be loaded and saved locally.
 
-As we learned in [Working with tables](working-with-tables.md), tables in PowerApps are values, just as a number or a string is a value. Tables aren't stored anywhere. You can't directly modify the structure and data of a table, only derivative tables that you create through a formula.
+### Kinds of tables
 
-Some of the most interesting tables are stored for later retrieval and sharing.  PowerApps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your app, and each will become a separate *data source*.  
+As we learned in [Working with tables](working-with-tables.md), tables that are internal to a PowerApps app are fixed values, just as a number or a string is a value. Internal tables aren't stored anywhere, they just exist in your app's memory. You can't directly modify the structure and data of a table. What you can do instead is to create a new table through a formula: you use that formula to make a modified copy of the original table.
 
-A data source is an extension of a table, and you can use it in any context that you use a table.  Just like a table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas.  In addition:
+External tables are stored in a data source for later retrieval and sharing.  PowerApps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your app, and each will become a separate *data source*.  
+
+## Working with tables
+
+You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas.  In addition:
 
 - The data source has the same column names and data types as the underlying table in the connection.
 - The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](functions/function-refresh.md)** function.
@@ -49,9 +59,13 @@ A data source is an extension of a table, and you can use it in any context that
 	- Errors when working with a data source are available through the **[Errors](functions/function-errors.md)** function.
 - The **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](functions/function-defaults.md)**, and **[Validate](functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
 
-PowerApps can't be used to create or modify a data source; the table must already exist in a service elsewhere.  To create a table (for example, in an Excel workbook stored on OneDrive), you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  Collections can be created and modified in an app but are only temporary.
+### Creating data sources
 
-## Display one or more records ##
+PowerApps can't be used to create a connected data source, or modify its structure; the table must already exist in a service elsewhere. To create a table, for example, in an Excel workbook stored on OneDrive, you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  
+
+However, collection data sources *can* be created and modified in an app, but are only temporary.
+
+### Display one or more records
 ![](media/working-with-data-sources/reading-from-a-datasource.png)
 The diagram above shows the flow of information when an app reads the information in a data source:
 
@@ -61,7 +75,7 @@ The diagram above shows the flow of information when an app reads the informatio
 - Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **[Items](controls/properties-core.md)** property to the data source: **Gallery.Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **[Default](controls/properties-core.md)** property.  
 - The data source is also a table.  So you can use **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, **[AddColumns](functions/function-table-shaping.md)**, and other functions to refine and augment the data source before using it as a whole.  You can also use the **[Lookup](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, and other functions to work with individual records.
 
-## Modify a record ##
+### Modify a record
 
 In the last section, we showed you how to read a data source.  Note that the arrows in the diagram above are one way.  Changes to a data source aren't pushed back through the same formulas in which the data was retrieved.  Instead, new formulas are used.  Often a different screen is used for editing a record than for browsing records, especially on a mobile device.
 
@@ -78,7 +92,7 @@ The diagram above shows the flow of information to update a data source:
 
 For more fine grained control over the process, you can also use the **[Patch](functions/function-patch.md)** and **[Errors](functions/function-errors.md)** function.  The **[Edit form](controls/control-form-detail.md)** control exposes an **[Updates](controls/control-form-detail.md)** property so that you can read the values of the fields within the form.  You can also use this property to call a custom API on a connection, completely bypassing the **Patch** and **SubmitForm** functions.
 
-## Validation ##
+### Validation
 
 Before making a change to a record, the app should do what it can to make sure the change will be acceptable.  There are two reasons for this:
 
@@ -90,7 +104,7 @@ PowerApps offers two tools for validation:
 - The data source can provide information about what is and isn't valid.  For example, numbers can have minimum and maximum values, and one or more entries can be required.  You can access this information with the **[DataSourceInfo](functions/function-datasourceinfo.md)** function.  
 - The **[Validate](functions/function-validate.md)** function uses this same information to check the value of a single column or of an entire record.
 
-## Error handling ##
+### Error handling
 
 Great, you've validated your record.  Time to update that record with **[Patch](functions/function-patch.md)**!
 
@@ -101,6 +115,14 @@ When errors occur with a data source, your app automatically records the error i
 If an error occurs when a record is created with **[Patch](functions/function-patch.md)** or **[Collect](functions/function-clear-collect-clearcollect.md)**, there is no record to associate any errors with.  In this case, *blank* will be returned by **[Patch](functions/function-patch.md)** and can be used as the record argument to **[Errors](functions/function-errors.md)**.  Creation errors are cleared with the next operation.
 
 The **[Errors](functions/function-errors.md)** function returns a table of error information.  This information can include the column information, if the error can be attributed to a particular column.  Use column-level error messages in label controls that are close to where the column is located on the edit screen.  Use record-level error messages where the **Column** in the error table is *blank*, in a location close to the **Save** button for the entire record.  
+
+### Working with large data sources
+
+When you are creating reports from large data sources (perhaps millions of records), you want to minimize network traffic. Let's say you want to report on all Customers having a StatusCode of "Platinum" in New York City. And that your Customers table contains millions of records.
+
+You do **not** want to bring those millions of Customers into your app, and then choose the ones you want. What you want to do is to have that choosing happen inside the cloud service where your table is stored, and only send the chosen records over the network.
+
+Many, but not all, functions that you can use to choose records can be *delegated*, which means that they are run inside the cloud service. You can learn how to do this by reading about [Delegation](delegation-overview.md). 
 
 ## Collections ##
 
