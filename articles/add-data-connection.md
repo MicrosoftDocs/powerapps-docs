@@ -26,9 +26,27 @@ In PowerApps, add a connection in an existing app or an app that you're building
 
 You can add a connection in PowerApps, as this topic describes, or on [powerapps.com](https://web.powerapps.com), as [Manage connections](add-manage-connections.md) describes.
 
-**Prerequisites**
+## Background on data connections-list
 
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+Most PowerApps apps use external information stored in cloud services called Data Sources. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connectors**.
+
+Data sources can be connected to a cloud service, or local to an app.
+
+### Connected data sources
+
+The commonest data sources are tables with which you can use to retrieve and store information. You can use connectors to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
+
+There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications.
+
+### Local data sources
+
+Using the Gallery, Display form, and Edit form controls, it is easy to create an app that reads and writes data from a data source. To get started, read the article Understand data forms.
+
+When you ask PowerApps to create an app from data, these controls are used. Behind the scenes, the app uses an internal table to store and manipulate the data that comes from the data source.
+
+## Prerequisites
+
+[Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
 ## Add a connection ##
 1. Click or tap **New** on the **File** menu (near the left edge).
