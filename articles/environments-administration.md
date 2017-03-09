@@ -91,15 +91,18 @@ If you are a member of the Global Administrator role of your Azure AD or Office 
 
 ## Delete your environment
 
-	1. Open the [PowerApps admin center][1], find the environment to be deleted in the list, and click or tap it.
+1. Open the [PowerApps admin center][1], find the environment to be deleted in the list, and click or tap it.
 
-		![](./media/environment-admin/environment-list-updated3.png)
-	2. Click or tap **Details**.
+	![](./media/environment-admin/environment-list-updated3.png)
 
-		![](./media/environment-admin/environment-rename-details-2.png)
-	3. Click **Delete environment** to delete your environment
+2. Click or tap **Details**.
 
-		![](./media/environment-admin/delete-env.png).
+	![](./media/environment-admin/environment-rename-details-2.png)
+
+3. Click **Delete environment** to delete your environment.
+
+	![](./media/environment-admin/delete-env.png)
+
 ## Create a Common Data Service database for an environment
 If an environment doesn't already have a database, an Environment Admin can create one in the [PowerApps admin center][1] by following these steps. Only users with a PowerApps Plan 2 license can create Common Data Service databases.
 
