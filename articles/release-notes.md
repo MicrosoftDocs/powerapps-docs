@@ -394,7 +394,7 @@ Because of administrative details, different platforms show different build numb
 
 	Until now, all Filter and Sort operations were handled on the device, which required the time-consuming and bandwidth-choking fetch of all the data.  With this release, in certain situations, these operations can be delegated to the data source, which makes your apps more responsive and able to handle a large number of records.  You can read more about it on the [Filter](functions/function-filter-lookup.md) and [Sort](functions/function-sort.md) pages.
 
-	Delegation is limited to certain situations. Apps created from data don't qualify.  See [Known limitations](#known-limitations) later in this article for more details.  We will expand the scenarios in which delegation can be used.
+	Delegation is limited to certain situations. Apps created from data don't qualify.  See [Common issues and resolutions](common-issues-and-resolutions.md) later in this article for more details.  We will expand the scenarios in which delegation can be used.
 
 	To take advantage of this new capability, the **[Gallery](controls/control-gallery.md)** control now supports paging.  As the user reaches the end of a list of data, the control fetches more from the data source, seamlessly.
 
