@@ -14,13 +14,36 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="02/05/2017"
+    ms.date="03/10/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+## Release 2.0.600-2.0.601 ##
+1. **Experimental feature: Add dynamic forms with the Entity Form control in which users can view, navigate, and edit relational data from the Common Data Service.**
+
+	For more information, see [Use the Entity form control](entity-form-control.md).
+
+1. **Identify data sources more easily with an icon for each connection type.**
+
+1. **Read long formulas more easily with color-coded syntax elements.**
+
+	For more information, see [Getting started with formulas](working-with-formulas.md#formula-syntax).
+
+1. **Use the PowerApps Notification connection to send push notifications from an app or a flow, and target any other app.**
+
+	Choose the users that should receive the notification, and pass in the message and parameters to the target app for a fully customized experience.
+
+1. **Rename or delete an environment from the admin center.**
+
+	For more information, see [Environments administration](environments-administration.md).
+
+1. **Create a custom API by specifying the URL to a Swagger API definition.**
+
+	For more information, see [Register custom APIs](register-custom-api.md).
 
 ## Release 2.0.590-2.0.591 ##
 1. **Show data in a gallery that resizes to fit items of different heights**.
