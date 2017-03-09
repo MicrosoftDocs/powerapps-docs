@@ -1,10 +1,10 @@
 <properties
-    pageTitle="Manage connections in PowerApps | Microsoft PowerApps"
-    description="Add and manage connections from PowerApps to data sources such as SharePoint, SQL Server, OneDrive for Business, Salesforce, and Office 365"
+    pageTitle="Add and manage connections to data sources in cloud services | Microsoft PowerApps"
+    description="Add, delete, and authenticate connections to data sources such as SharePoint, SQL Server, OneDrive for Business, Salesforce, and Office 365"
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="archnair"
+    authors="RickSaling"
     manager="anneta"
     editor=""
     tags=""/>
@@ -15,16 +15,39 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/16/2016"
-   ms.author="archanan"/>
+   ms.date="03/09/2017"
+   ms.author="ricksal"/>
 
 # Manage your connections in PowerApps #
-In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, and then access that data from your app. Connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and other [data sources](connections-list.md), and then use those connections as in these examples:
 
-- Update a list on a SharePoint site.
-- Get Excel data from your OneDrive for Business account.
-- Send email in Office 365.
-- Send a tweet.
+In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, delete a connection, and authenticate a connection.
+
+Your app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and other [data sources](connections-list.md).
+
+Your next step after this article is to display and manage data from the data source in your app, as in these examples:
+
+* Connect to OneDrive for Business, and manage data in an Excel workbook in your app.
+* Connect to Twilio, and send an SMS message from your app.
+* Connect to SQL Server, and update a table from your app.
+* Update a list on a SharePoint site.
+* Send email in Office 365.
+* Send a tweet.
+
+
+## Prerequisites
+
+1. [Sign up](signup-for-powerapps.md) for PowerApps.
+2. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
+
+## Background on data connections
+
+Most PowerApps apps use external information called **Data Sources** that is stored in cloud services. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using Connectors.
+
+The commonest type of data source is the table, which you can use to retrieve and store information. You can use connectors to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
+
+There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications.
+
+Using the Gallery, Display form, and Edit form controls, it is easy to create an app that reads and writes data from a data source. To get started, read the article Understand data forms.
 
 In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you can also create a connection when you perform these tasks:
 
@@ -33,11 +56,6 @@ In addition to creating and managing connections in [powerapps.com](https://web.
 - Open an app that another user created and [shared with you](share-app.md).
 
 **Note**: If you open PowerApps Studio, open the **File** menu, and then click or tap **Connections**, [powerapps.com](https://web.powerapps.com) opens so that you can create and manage connections there.
-
-**Prerequisites**
-
-1. [Sign up](signup-for-powerapps.md) for PowerApps.
-1. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
 
 ## Add a connection ##
 1. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
