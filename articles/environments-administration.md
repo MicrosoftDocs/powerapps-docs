@@ -91,7 +91,7 @@ If you are a member of the Global Administrator role of your Azure AD or Office 
 
 ## Delete your environment
 
-1. Open the [PowerApps admin center][1], find the environment to be deleted in the list, and then click or tap it.
+1. In the [PowerApps admin center][1], click or tap the environment that you want to delete.
 
 	![](./media/environment-admin/environment-list-updated3.png)
 
