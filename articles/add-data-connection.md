@@ -62,25 +62,36 @@ Using the Gallery, Display form, and Edit form controls, it is easy to create an
 
 	![Add data source](./media/add-data-connection/add-data-source.png)
 
-5. To use an existing connection, click or tap it to add it to the app.
+5. Check the list on connections and see if the one you want to use is in the list.
 
-	You can use that connection without performing additional steps.
+	![Add data source](./media/add-data-connection/existing-connections.png)
 
-6. To create a connection, follow these steps:
 
-	a. Click or tap **Add connection** to display a list of connectors.
+### Using an existing connection
 
-	![Add connection](./media/add-data-connection/add-connection.png)
+If the connection you want to use appears in the list of connections, click or tap it to add it to the app.
 
-	b. Scroll through the list of connectors until the type of connection that you want to create appears (for example, **Office 365 Outlook**), and then click or tap it.
+![Add data source](./media/add-data-connection/choose-existing-connections.png)
+
+### Creating a connection
+
+If the list of connections does not include the one you want, follow these steps:
+
+1. Click or tap **New connection** to display a list of connectors.
+
+	![Add connection](./media/add-data-connection/new-connection.png)
+
+2. Scroll through the list of connectors until the type of connection that you want to create appears (for example, **Office 365 Outlook**), and then click or tap it.
 
 	![Choose connection](./media/add-data-connection/choose-connection.png)
 
-	c. Click or tap **Connect** to both create the connection and add it to your app.
+3. Click or tap **Create** to both create the connection and add it to your app.
 
 	![Connect button](./media/add-data-connection/connect-button.png)
 
-	Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connection-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
+### Additional steps
+
+Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connection-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
 
 ## Next steps ##
 - To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
