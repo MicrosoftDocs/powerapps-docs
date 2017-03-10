@@ -29,13 +29,15 @@ For information about known limitations, see [Common issues and resolutions](com
 
 1. **Identify data sources more easily with an icon for each connection type.**
 
+	When you add a connection in the data-source panel of PowerApps Studio, each connection type has a distinct icon. After you add that connection, the icon appears next to the connection to help you remember which data sources you've added. For example, a connection to the Common Data Service appears with the icon for that type of connection, along with its name and the name of the entity.
+
 1. **Read long formulas more easily with color-coded syntax elements.**
 
-	For more information, see [Getting started with formulas](working-with-formulas.md#formula-syntax).
+	As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. For a table of elements and their colors, see [Getting started with formulas](working-with-formulas.md#formula-syntax).
 
 1. **Use the PowerApps Notification connection to send push notifications from an app or a flow, and target any other app.**
 
-	Choose the users that should receive the notification, and pass in the message and parameters to the target app for a fully customized experience.
+	Choose the users that should receive the notification, and pass in the message and parameters to the target app for a fully customized experience. For more information, see [Add push notifications to your app](https://powerapps.microsoft.com/blog/add-push-notification-to-you-app-and-boost-usage-and-retention/).
 
 1. **Rename or delete an environment from the admin center.**
 
