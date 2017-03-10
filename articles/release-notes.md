@@ -29,7 +29,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 1. **Identify data sources more easily with an icon for each connection type.**
 
-	When you add a connection in the data-source panel of PowerApps Studio, each connection type has a distinct icon. After you add that connection, the icon appears next to the connection to help you remember which data sources you've added. For example, a connection to the Common Data Service appears with the icon for that type of connection, along with its name and the name of the entity.
+	When you add a connection in the data-source panel of PowerApps Studio, connection types such as SharePoint, OneDrive, and YouTube have distinct icons. After you add that connection, the icon appears next to the connection to help you remember which data sources you've added. For example, a connection to the Common Data Service appears with the icon for that type of connection, along with its name and the name of the entity.
 
 1. **Read long formulas more easily with color-coded syntax elements.**
 
