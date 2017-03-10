@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="RickSaling"
+	authors="gregli-msft"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -15,12 +15,12 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/08/2017
-   ms.author="ricksal"/>
+   ms.date="03/08/2017"
+   ms.author="gregli"/>
 
 # Understand data sources in PowerApps #
 
-Most PowerApps apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connectors**.
+Most PowerApps apps use external information stored in cloud services called **Data Sources**. A common example is a table in an Excel file stored in OneDrive for Business. Apps access these data sources by using **Connections**.
 
 This article discusses the different kinds of data sources, and how to work with table data sources.
 
@@ -28,11 +28,11 @@ It is easy to create an app that does basic reading and writing to a data source
 
 ## Kinds of data sources ##
 
-Data sources can be connected to a cloud service, or local to an app.
+Data sources can be connected to a cloud service, or they can be local to an app.
 
 ### Connected data sources
 
-The commonest data sources are **tables** with which you can use to retrieve and store information. You can use **connectors** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
+The commonest data sources are **tables**, which you can use to retrieve and store information. You can use **connections** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
 
 There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications. This article does not discuss these other kinds of data sources.
 
@@ -69,7 +69,7 @@ You can use table data sources the same way that you use an internal PowerApps t
 
 PowerApps can't be used to create a connected data source, or modify its structure; the data source must already exist in a service somewhere. To create a table, for example, in an Excel workbook stored on OneDrive, you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  
 
-However, collection data sources *can* be created and modified in an app, but are only temporary.
+However, collection data sources *can* be created and modified inside an app, but are only temporary.
 
 ### Display one or more records
 ![](media/working-with-data-sources/reading-from-a-datasource.png)
