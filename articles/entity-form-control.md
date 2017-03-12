@@ -14,14 +14,14 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/01/2017"
+   ms.date="03/11/2017"
    ms.author="aneesa"/>
 
 # Use the Entity form control #
 
 Create apps faster by using the **Entity form** control to add rich forms for a [Common Data Service entity](learning-common-data-service-entities.md).
 
-For an introduction to the **Entity form** control, see this blog post: [New entity form control for Common Data Service (experimental feature)](https://powerapps.microsoft.com/blog/new-entity-form-control-for-common-data-service-experimental-feature/).
+For an introduction to the **Entity form** control, see this blog post: [New entity form control (experimental feature) for Common Data Service](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
 
 **Important**: Please be aware of the experimental nature of the **Entity form** control as outlined in the blog post, and be careful about using the **Entity form** control in production apps, at least for now.
 
