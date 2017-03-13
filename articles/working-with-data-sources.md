@@ -67,7 +67,7 @@ You can use table data sources the same way that you use an internal PowerApps t
 
 ### Creating data sources
 
-PowerApps can't be used to create a connected data source, or modify its structure; the data source must already exist in a service somewhere. To create a table, for example, in an Excel workbook stored on OneDrive, you would use Excel Online on OneDrive first to create a workbook and then create a connection to it from your app.  
+PowerApps can't be used to create a connected data source, or modify its structure; the data source must already exist in a service somewhere. For example, to create a table in an Excel workbook stored on OneDrive, you first use Excel Online on OneDrive to create a workbook. Next you create a connection to it from your app.  
 
 However, collection data sources *can* be created and modified inside an app, but are only temporary.
 
@@ -77,13 +77,13 @@ The diagram above shows the flow of information when an app reads the informatio
 
 - The information is stored and shared through a storage service (in this case, a SharePoint list of an Office 365 site).
 - A connection makes this information available to the app.  The connection takes care of authentication of the user to access the information.
-- When the app is started or the **[Refresh](functions/function-refresh.md)** function invokes, information is drawn from the connection into a data source in the app for local use.
+- When the app is started or the **[Refresh](functions/function-refresh.md)** function is pressed, information is drawn from the connection into a data source in the app for local use.
 - Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **[Items](controls/properties-core.md)** property to the data source: **Gallery.Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **[Default](controls/properties-core.md)** property.  
 - The data source is also a table.  So you can use **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, **[AddColumns](functions/function-table-shaping.md)**, and other functions to refine and augment the data source before using it as a whole.  You can also use the **[Lookup](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, and other functions to work with individual records.
 
 ### Modify a record
 
-In the last section, we showed you how to read a data source.  Note that the arrows in the diagram above are one way.  Changes to a data source aren't pushed back through the same formulas in which the data was retrieved.  Instead, new formulas are used.  Often a different screen is used for editing a record than for browsing records, especially on a mobile device.
+In the prededing section, you saw how to read a data source.  Note that the arrows in the diagram above are one way.  Changes to a data source aren't pushed back through the same formulas in which the data was retrieved.  Instead, new formulas are used.  Often a different screen is used for editing a record than for browsing records, especially on a mobile device.
 
 Note that, to modify an existing record of a data source, the record must have originally come from the data source.  The record may have traveled through a gallery, a [context variable](working-with-variables.md#create-a-context-variable), and any number of formulas, but its origin should be traceable back to the data source.  This is important because additional information travels with the record that uniquely identifies it, ensuring that you modify the correct record.    
 
