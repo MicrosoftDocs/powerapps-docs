@@ -23,7 +23,7 @@ For information about known limitations, see [Common issues and resolutions](com
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
 ## Release 2.0.600-2.0.601 ##
-1. **Experimental feature: Add dynamic forms with the Entity Form control in which users can view, navigate, and edit relational data from the Common Data Service.**
+1. **Experimental feature: Add dynamic forms with the Entity form control in which users can view, navigate, and edit relational data from the Common Data Service.**
 
 	For more information, see [Use the Entity form control](entity-form-control.md).
 
