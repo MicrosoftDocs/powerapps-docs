@@ -164,6 +164,10 @@ As you customize an app, you can test your changes by running the app in **Previ
 
 	![Close Preview mode](./media/get-started-create-from-data/close-preview.png)
 
+## Known limitations
+
+There are currently [certain limitations](./connections/cloud-storage-blob-connections.md#Sharing-Excel-Tables) with connectors involving Excel files. These affect apps that you share within your organization.
+
 ## Next steps ##
 - Press Ctrl-S to save your app so that you can run it from other devices.
 - Customize your app further, as [Create an app from scratch](get-started-create-from-blank.md) describes.

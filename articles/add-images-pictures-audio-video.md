@@ -139,7 +139,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 7. On the **Insert** tab, add a **Button** control, and set its **OnSelect** property to this formula:
 
-	```Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})```
+		Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})
 
 8.	Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
 
@@ -163,6 +163,9 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 	In **SavePen.xlsx**, the **Image** column specifies the path to the new images.
 
+## Known limitations
+
+There are currently [certain limitations](./connections/cloud-storage-blob-connections.md#Sharing-Excel-Tables) with connectors involving Excel files. These affect apps that you share within your organization.
 
 ## For more information
 

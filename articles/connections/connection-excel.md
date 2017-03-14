@@ -33,6 +33,10 @@ Excel is *kind of* a connection. To display Excel data in your app:
 
 For information about how to connect to other types of data, see the [list of connections for PowerApps](../connections-list.md).
 
+## Known limitations
+
+There are currently [certain limitations](./connections/cloud-storage-blob-connections.md#Sharing-Excel-Tables) with connectors involving Excel files. These affect apps that you share within your organization.
+
 <!--NotAvailableYet
 
 ## View the available functions
