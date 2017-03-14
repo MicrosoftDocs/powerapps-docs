@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Overview of Regions | Microsoft PowerApps"
-	description="Regions in PowerApps: where data is stored, available regions, features specific to a region"
+	pageTitle="Overview of regions | Microsoft PowerApps"
+	description="List of regions in PowerApps and features specific to a region"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,22 +18,8 @@
    ms.date="02/17/2017"
    ms.author="ricksal"/>
 
-# Regions overview in Microsoft PowerApps
-
-## Q & A
-
-#### Question: How do I find out where my data is stored?
-All data is stored in the region that hosts the environment. For example, if your environment is created in the Europe region, then all your data is stored in Europe data centers.
-
-The Microsoft PowerApps admin center shows you the region. This is only available to Administrators:
-
-1. Go to [admin.powerapps.com](https://admin.powerapps.com), and sign-in with your work account.
-2. In the admin center, all existing environments are listed, including the **Region** where your data is stored:
-
-   ![](./media/regions-overview/environment-list.png)
-
-#### Question: What regions are available?
-The following regions are available, or will be available:
+# Regions in Microsoft PowerApps #
+When you create an environment, you specify one of these regions for it:
 
 - United States
 - Europe
@@ -42,11 +28,8 @@ The following regions are available, or will be available:
 - India
 - Japan
 
-#### Question: What features are specific to a given region?
-Environments can be created in different regions, and are bound to that geographic location. When you create an app in an environment, that app is stored in datacenters in that geographic location. This applies to any items you create in that environment, including  databases in the Common Data Service, apps, connections, gateways, and custom APIs.
+If you're an administrator, you can determine the region of each environment in the [PowerApps admin center](https://admin.powerapps.com).
 
-For the optimal performance, if your users are in Europe, then create and use the environment in the Europe region. If your users are in the United States, then create and use the environment in the U.S.
+   ![](./media/regions-overview/environment-list.png)
 
-**Gateways**:
-- Currently not available in the **India** region.
-- Currently supported in the default environment. They are not supported in custom environments.
+**Note**: On-premises data gateways aren't available in the India region or in custom environments. You must create gateways in the default environment.
