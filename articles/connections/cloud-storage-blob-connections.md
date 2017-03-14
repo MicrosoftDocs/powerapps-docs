@@ -33,10 +33,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 	1. In the **Save as Table** dialog box, select the **My table has headers** checkbox, and then select **OK**.
 	1. Save your changes.
 
-## Known limitations ##
-If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
 
 ## Connect to the cloud storage connection ##
 1. At [powerapps.com](https://web.powerapps.com), expand **Manage**, and select **Connections**:  
@@ -79,6 +76,34 @@ If your Excel data includes a calculated column, you can't use it to build an ap
 
 
 [Understand tables and records](../working-with-tables.md) provides more details and some examples.  
+
+## Sharing your app
+
+You can [share your app](../share-app.md), [your resources](../share-app-resources.md) such as connectors, and [your data](../share-app-data.md) with others in your organization.
+
+There are currently [certain limitations](#Sharing-Excel-Tables) with connectors involving Excel files.
+
+
+## Known limitations ##
+
+If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
+If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
+
+### Sharing Excel tables
+
+The following table summarizes the following issues:
+- When sharing, do you share the file or the folder containing the file?
+- Do multimedia links inside the Excel table display correctly in the shared version of the app?
+- Additional conditions
+
+|**Connector**|**Sharing Folder**|**Sharing Files (Excel only)**|**Works with Media assets**|**Additional condition**|
+|--|--|--|--|--|
+|OneDrive for Business|No|Yes|No|-|
+|OneDrive|No|Yes|No|-|
+|Google Drive|Yes|Yes|No|-|
+|Dropbox|Yes|-|Yes|Shared folder should be attached to user’s Dropbox|
+|Box|Yes|-|Yes|Slow|
 
 
 ## Helpful links
