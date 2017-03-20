@@ -19,10 +19,10 @@
    ms.author="fikaradz"/>
 
 # Add picture control in PowerApps #
-Load images from the local device, for upload to a data source.
+Takes a photo or loads images from the local device.
 
 ## Description ##
-If you add this control, your app can upload image files from the user and update your data source with fresh content.
+With this control users can take photos or upload image files from their device and update the data source with this content. On a mobile device the user is presented with the device's choice dialog to choose between taking a photo or selecting one already available.
 
 This control is a composite control, made up of two controls.  Press or tap once to select the outer control that shows the image that has been loaded.  Press or tap again to select the inner text box control.
 
