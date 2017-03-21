@@ -97,13 +97,17 @@ The following table summarizes the following issues:
 - Do multimedia links inside the Excel table display correctly in the shared version of the app?
 - Additional conditions
 
-|**Connector**|**Sharing Folder**|**Sharing Files (Excel only)**|**Works with Media assets**|**Additional condition**|
-|--|--|--|--|--|
-|OneDrive for Business|No|Yes|No|-|
-|OneDrive|No|Yes|No|-|
-|Google Drive|Yes|Yes|No|-|
-|Dropbox|Yes|-|Yes|Shared folder should be attached to user’s Dropbox|
-|Box|Yes|-|Yes|Slow|
+|**Connector**|**Sharing Folder / File?**|**Non-multi-media**|**Media URLs?**|**Media file paths?**|
+|--|--|--|--|--|--|
+|OneDrive|||||
+||File   | No  | No   | No  | 
+||Folder |No   |No    | No  |
+|Google Drive|||||
+||File   | Yes | Yes  | No  |
+||Folder |Yes  | Yes  |No|
+|Dropbox|||||
+||File   | Yes | Yes  | Yes  |
+||Folder |Yes  |  Yes |Yes|
 
 
 ## Helpful links
