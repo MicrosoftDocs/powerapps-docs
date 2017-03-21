@@ -97,10 +97,10 @@ The following table summarizes the following issues:
 - Do multimedia links inside the Excel table display correctly in the shared version of the app?
 - Additional conditions
 
-|**Connector**|**Sharing Folder / File?**|**Non-multi-media**|**Media URLs?**|**Media file paths?**|
-|--|--|--|--|--|--|
+|**Connector**|**Sharing Folder or File?**|**Non-multi-media**|**Media URLs?**|**Media file paths?**|
+|--|--|--|--|--|
 |OneDrive|||||
-||File   | No  | No   | No  | 
+||File   | No  | No   | No  |
 ||Folder |No   |No    | No  |
 |Google Drive|||||
 ||File   | Yes | Yes  | No  |
