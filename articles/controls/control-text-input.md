@@ -46,6 +46,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
+**DelayOutput** – When set to true, user input is registered after half a second delay.  Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).
+
 **[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
 **[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.

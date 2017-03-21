@@ -202,7 +202,7 @@ You can also look at tools that your data source has for tracing queries. For ex
 
 ## How the gateway works ##
 
-![How it works](./media/gateway-reference/how-it-works.png)
+![How it works](./media/gateway-reference/gateway-arch.png)
 
 When a user interacts with an element that's connected to an on-premises data source:  
 
