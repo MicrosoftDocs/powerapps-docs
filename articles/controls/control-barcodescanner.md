@@ -60,9 +60,9 @@ If you add this control, the user can update a data source with one or more phot
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 **Zoom** – The percentage by which an image from a barcode scanner is magnified or the view of a file in a PDF viewer.
 
