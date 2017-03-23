@@ -14,13 +14,38 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="02/05/2017"
+    ms.date="03/10/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+## Release 2.0.600-2.0.601 ##
+1. **Experimental feature: Add dynamic forms with the Entity form control in which users can view, navigate, and edit relational data from the Common Data Service.**
+
+	For more information, see [Use the Entity form control](entity-form-control.md).
+
+1. **Identify data sources more easily with an icon for each connection type.**
+
+	When you add a connection in the data-source panel of PowerApps Studio, connection types such as SharePoint, OneDrive, and YouTube have distinct icons. After you add that connection, the icon appears next to the connection to help you remember which data sources you've added. For example, a connection to the Common Data Service appears with the icon for that type of connection, along with its name and the name of the entity.
+
+1. **Read long formulas more easily with color-coded syntax elements.**
+
+	As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. For a table of elements and their colors, see [Getting started with formulas](working-with-formulas.md#formula-syntax).
+
+1. **Use the PowerApps Notification connection to send push notifications from an app or a flow, and target any other app.**
+
+	Choose the users that should receive the notification, and pass in the message and parameters to the target app for a fully customized experience. For more information, see [Add push notifications to your app](https://powerapps.microsoft.com/blog/add-push-notification-to-you-app-and-boost-usage-and-retention/).
+
+1. **Rename or delete an environment from the admin center.**
+
+	For more information, see [Environments administration](environments-administration.md).
+
+1. **Create a custom API by specifying the URL to a Swagger API definition.**
+
+	For more information, see [Register custom APIs](register-custom-api.md).
 
 ## Release 2.0.590-2.0.591 ##
 1. **Show data in a gallery that resizes to fit items of different heights**.
@@ -235,7 +260,7 @@ Because of administrative details, different platforms show different build numb
 
 1. **SharePoint Update control**.
 
-	This control has been deprecated in favor of the **[Edit Form](add-form.md)** control. An app that contains the **SharePoint Update** control will still open, but the control itself will no longer appear.
+	This control has been deprecated in favor of the **[Edit form](add-form.md)** control. An app that contains the **SharePoint Update** control will still open, but the control itself will no longer appear.
 
 ## Release 2.0.450 ##
 1. **Add data while customizing a form**.
@@ -323,7 +348,7 @@ Because of administrative details, different platforms show different build numb
 
 	You can configure a DatePicker control with a blank value as its default.
 
-1. **Improvements to Display Form and Edit Form controls.**
+1. **Improvements to Display form and Edit form controls.**
 
 	Form controls now show both a display name and the name of the field if they differ, and you can change the display name of a lookup control.
 
@@ -394,7 +419,7 @@ Because of administrative details, different platforms show different build numb
 
 	Until now, all Filter and Sort operations were handled on the device, which required the time-consuming and bandwidth-choking fetch of all the data.  With this release, in certain situations, these operations can be delegated to the data source, which makes your apps more responsive and able to handle a large number of records.  You can read more about it on the [Filter](functions/function-filter-lookup.md) and [Sort](functions/function-sort.md) pages.
 
-	Delegation is limited to certain situations. Apps created from data don't qualify.  See [Known limitations](#known-limitations) later in this article for more details.  We will expand the scenarios in which delegation can be used.
+	Delegation is limited to certain situations. Apps created from data don't qualify.  See [Common issues and resolutions](common-issues-and-resolutions.md) later in this article for more details.  We will expand the scenarios in which delegation can be used.
 
 	To take advantage of this new capability, the **[Gallery](controls/control-gallery.md)** control now supports paging.  As the user reaches the end of a list of data, the control fetches more from the data source, seamlessly.
 

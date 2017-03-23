@@ -19,14 +19,11 @@
    ms.author="anneta"/>
 
 # Add and configure a control in PowerApps #
-
-Add a variety of controls to your app, and configure their properties directly, from the toolbar, or in the formula bar.
+Add a variety of UI elements to your app, and configure aspects of their appearance and behavior directly, from the toolbar, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
 
 **Prerequisites**
 
 1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-
-	This topic is written for PowerApps Studio for Windows, but you can do many of the same things if you open [PowerApps Studio for web](create-app-browser.md).
 
 1. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge).
 
@@ -119,6 +116,8 @@ In this procedure, you'll add and configure a **Text box** control, but you can 
 1. Restore the **Text box** control by pressing Ctrl-Z (or by repeating the first four steps in this procedure).
 
 ## Configure a control from the toolbar ##
+By configuring a control from the toolbar, you can specify a wider variety of options than you can directly.
+
 1. With the **Text box** control selected, click or tap the **Home** tab of the toolbar.
 
 	![Home tab](./media/add-configure-controls/home-tab.png)
@@ -148,6 +147,8 @@ In this procedure, you'll add and configure a **Text box** control, but you can 
 	![A text box with text aligned to the top of the box](./media/add-configure-controls/change-align.png)
 
 ## Configure a control in the formula bar ##
+By using the formula bar, you can set properties that you can't set directly or from the toolbar. For example, you can set a tooltip that appears when a user points to the control but doesn't click or tap it. You can also specify complicated formulas that increase the power of your app.
+
 Each change that you made earlier in this topic updated the value of a [property](reference-properties.md) for the control that you configured.
 
 - When you resized the control, you changed its **[Width](controls/properties-size-location.md)** property.
@@ -170,7 +171,8 @@ Instead of configuring a control directly or from the toolbar, you can also upda
 
 	**Tip:** You can [format dates and times](show-text-dates-times.md) in various ways, in addition to performing calculations on them.
 
-	By using the formula bar, you can set properties that you can't set directly or from the toolbar. For example, you can set a tooltip that appears when a user points to the control but doesn't click or tap it. You can also specify complicated formulas that increase the power of your app.
+## Configure two controls to interact with each other ##
+In this procedure, you'll add a check box and then configure the text box that you already have to appear only when the check box is selected.
 
 1. Click or tap the **Insert** tab.
 
@@ -198,7 +200,7 @@ Instead of configuring a control directly or from the toolbar, you can also upda
 
 1. In the formula bar, delete **true**, and then type or paste this formula:
 
-	**If(Checkbox1!Value = true, true, false)**
+	**If(MyCheckbox!Value = true, true, false)**
 
 	This **[If function](function-if.md)** states that the text box should appear only when the check box is selected. Because the check box is cleared, the **Text box** control disappears (except for the selection box).
 
@@ -217,6 +219,8 @@ Instead of configuring a control directly or from the toolbar, you can also upda
 This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md) from simple to complex.
 
 ## Rename a screen or a control ##
+By renaming a screen or control, you can build formulas that are easier to read and maintain.
+
 1. Click or tap the screen or the control that you want to rename.
 
 1. On the **Home** tab, click or tap the name of the control (to the right of **New screen**), and then type the name that you want.

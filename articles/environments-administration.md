@@ -15,11 +15,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="01/11/2017"M
+   ms.date="01/11/2017"
    ms.author="ricksal;jamesol"/>
 
-# Environments administration
-The [PowerApps admin center][1] enables you to manage environments. This includes the ones you have created, and also those for which you have been added to the Environment Admin role. From the admin center, you can perform these administrative actions:
+# Environments administration in PowerApps
+In the [PowerApps admin center][1], manage environments that you've created and those for which you have been added to the Environment Admin role. From the admin center, you can perform these administrative actions:
 
 * Create environments.
 * Rename environments.
@@ -88,6 +88,20 @@ If you are a member of the Global Administrator role of your Azure AD or Office 
 3. in the **Name** text box, enter the new name, then click **Save**.
 
 	![](./media/environment-admin/environment-rename-2.png)
+
+## Delete your environment
+
+1. In the [PowerApps admin center][1], click or tap the environment that you want to delete.
+
+	![](./media/environment-admin/environment-list-updated3.png)
+
+2. Click or tap **Details**.
+
+	![](./media/environment-admin/environment-rename-details-2.png)
+
+3. Click or tap **Delete environment** to delete your environment.
+
+	![](./media/environment-admin/delete-environment.png)
 
 ## Create a Common Data Service database for an environment
 If an environment doesn't already have a database, an Environment Admin can create one in the [PowerApps admin center][1] by following these steps. Only users with a PowerApps Plan 2 license can create Common Data Service databases.
