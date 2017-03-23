@@ -1,6 +1,6 @@
 <properties
     pageTitle="Add and manage connections to data sources in cloud services | Microsoft PowerApps"
-    description="Add, delete, and authenticate connections to data sources such as SharePoint, SQL Server, OneDrive for Business, Salesforce, and Office 365"
+    description="Add, delete, and update connections to data sources such as SharePoint, SQL Server, OneDrive for Business, Salesforce, and Office 365"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -20,7 +20,7 @@
 
 # Manage your connections in PowerApps #
 
-In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, delete a connection, or authenticate a connection.
+In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, delete a connection, or update its credentials.
 
 Your app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and many other [data sources](connections-list.md).
 
@@ -86,12 +86,11 @@ In addition to creating and managing connections in [powerapps.com](https://web.
 
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
 
-## Authorize or delete a connection ##
-In the list of connections, find the connection that you want to authorize or delete, and then click or tap the ellipsis (3-dots-symbol) on the right of the connection.
+## Update or delete a connection ##
+In the list of connections, find the connection that you want to update or delete, and then click or tap the ellipsis (3-dots-symbol) on the right of the connection.
 
-![Authorize connection](./media/add-manage-connections/auth-or-delete.png)
+![Update connection](./media/add-manage-connections/auth-or-delete.png)
 
-- To authorize the connection, click or tap the line with the key icon and "Auth" text, and then provide credentials for that connection.
+- To update the credentials for a connection, click or tap the key icon, and then provide credentials for that connection.
 
-
-- To delete the connection, click or tap the line with the trash-can icon and "Delete" text.
+- To delete the connection, click or tap the trash-can icon.
