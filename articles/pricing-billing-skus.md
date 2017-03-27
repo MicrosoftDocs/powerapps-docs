@@ -42,6 +42,10 @@ Full-featured standalone PowerApps plans provide users the ability to create and
 - Microsoft PowerApps Plan 2 subscriptions are for users and administrators who need full create and run capabilities. These users have access to important management capabilities like viewing usage and setting policy. PowerApps Plan 2 users can model data in the Common Data Service.
 - Microsoft PowerApps Plan 1 subscriptions are for users who primarily run apps. These users can still create apps and flows, but they can't model data in the Common Data Service or perform management tasks.
 
+### PowerApps Plan 2 90 day trial ###
+
+https://powerapps.microsoft.com/tutorials/signup-for-powerapps/#try-powerapps-plan-2-for-free
+
 ## PowerApps includes Flow ##
 PowerApps licenses always include Microsoft Flow capabilities.  In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. See [PowerApps pricing page][2] for more information on the specific Microsoft Flow capabilities that each PowerApps license includes.
 
