@@ -45,7 +45,7 @@ Full-featured standalone PowerApps plans provide users the ability to create and
 ### PowerApps Plan 2 free trial ###
 PowerApps does not offer a free account, but users have the option to try PowerApps Plan 2 for free for 90 days. See [Self-service signup for PowerApps][3] for details on how to sign-up for a trial.
 
-During the length of the trial, users will have access to all of the PowerApps Plan 2 features for the duration of the trial. PowerApps Plan 2 has all of the features of Plan 1, plus access to the Common Data Service and administrative features. See [PowerApps pricing page][2] for the list of all features included in Plan 2.
+During the length of the trial, users will have access to all of the PowerApps Plan 2 features.
 
 When a user's trial expires they have the following options:
 1. If they already have access to PowerApps or Microsoft Flow as a user of Office 365 or Dynamics 365 then they will still be able to access PowerApps or Microsoft Flow.  However, they will lose access to any Plan 2 exclusive features as outlined on the [PowerApps pricing page][2].
