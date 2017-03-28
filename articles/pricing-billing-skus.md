@@ -42,6 +42,17 @@ Full-featured standalone PowerApps plans provide users the ability to create and
 - Microsoft PowerApps Plan 2 subscriptions are for users and administrators who need full create and run capabilities. These users have access to important management capabilities like viewing usage and setting policy. PowerApps Plan 2 users can model data in the Common Data Service.
 - Microsoft PowerApps Plan 1 subscriptions are for users who primarily run apps. These users can still create apps and flows, but they can't model data in the Common Data Service or perform management tasks.
 
+### PowerApps Plan 2 free trial ###
+PowerApps does not offer a free account, but users have the option to try PowerApps Plan 2 for free for 90 days. See [Self-service signup for PowerApps][3] for details on how to sign-up for a trial.
+
+During the length of the trial, users will have access to all of the PowerApps Plan 2 features.
+
+When a user's trial expires they have the following options:
+1. If they already have access to PowerApps or Microsoft Flow as a user of Office 365 or Dynamics 365 then they will still be able to access PowerApps or Microsoft Flow.  However, they will lose access to any Plan 2 exclusive features as outlined on the [PowerApps pricing page][2].
+1. If they don’t have access to Office 365 or Dynamics 365, but  would like to continue using PowerApps or Microsoft Flow, then they can request to extend their trial or purchase a stand-alone plan.  See [Purchase PowerApps for your organization][4] for more details.
+
+> **NOTE**   To purchase PowerApps for an organization, you must already be an Office 365 Global or Billing Admin of a tenant, or you must create a tenant.
+
 ## PowerApps includes Flow ##
 PowerApps licenses always include Microsoft Flow capabilities.  In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. See [PowerApps pricing page][2] for more information on the specific Microsoft Flow capabilities that each PowerApps license includes.
 
@@ -69,3 +80,5 @@ For this app, IT selects the Common Data Service as the system in which to store
 <!--Reference links in article-->
 [1]: https://flow.microsoft.com/pricing/
 [2]: https://powerapps.microsoft.com/pricing
+[3]: https://powerapps.microsoft.com/tutorials/signup-for-powerapps/#try-powerapps-plan-2-for-free
+[4]: https://powerapps.microsoft.com/tutorials/signup-for-powerapps-admin/
