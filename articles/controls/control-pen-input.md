@@ -26,9 +26,9 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 ## Key properties ##
 
-**[Color](properties-color-border.md)** – The color of text in a control.
+**[Color](properties-color-border.md)** – The color of input strokes.
 
-**Mode** – The control is in **Draw**, **Erase**, or **Select** mode.
+**Mode** – The control is in **Draw** or **Erase** mode.  Select mode has been deprecated.
 
 ## Additional properties ##
 
@@ -62,9 +62,9 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions ##
 

@@ -47,6 +47,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Edit form](controls/control-form-detail.md)** – Edit and create records in a data source using a form.
 
+**[Entity form](entity-form-control.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Common Data Service.
+
 **[Export](controls/control-export-import.md)** – Export data for use elsewhere in PowerApps.
 
 **[Gallery](controls/control-gallery.md)** – Show a list of records that can contain multiple types of data.
@@ -505,13 +507,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### X ###
 
-**[X](controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.  Applies to many controls.
+**[X](controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).  Applies to many controls.
 
 **[XLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels below the x-axis of a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### Y ###
 
-**[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.  Applies to many controls.
+**[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).  Applies to many controls.
 
 **[YAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
