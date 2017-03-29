@@ -32,7 +32,7 @@ Take your form designs to the next level with PowerApp Form controls! In this we
 - How to Configure Cascading Dropdown Lists
 - How to Patch Data for Unstructured Form Formats
 
-Registration Link: TBD
+- [Subscribe and join live!](https://www.youtube.com/watch?v=WnuwLkNbWk4)
 
 
 **Getting Started with the Common Data Service by Juno Luk 04/18/17 @ 10:00AM Pacific Time, 1:00PM Eastern Time**
@@ -43,7 +43,7 @@ Learn more about this new and exciting Data Store!
 - Permissions and Security
 - Data Policies
 
-Registration Link: https://info.microsoft.com/US-PowerBI-WBNR-FY17-04Apr-18-GettingStartedwiththeCommonDataServices312618_01Registration-ForminBody.html
+- [Register here!](https://info.microsoft.com/US-PowerBI-WBNR-FY17-04Apr-18-GettingStartedwiththeCommonDataServices312618_01Registration-ForminBody.html)
 
 
 **Getting Started with PowerApp Media Controls by Audrie Gordon 04/25/17 @ 10:00AM Pacific Time, 1:00PM Eastern Time**
@@ -55,7 +55,7 @@ PowerApps currently has 7 media controls, which include Barcode and Video contro
 - Tips on Using Bar Codes
 - Q&A
 
-Registration Link: TBD
+- [Subscribe and join live!](https://www.youtube.com/watch?v=ohQcxcVZSK4)
 
 
 **Getting Started with PowerApps DevOps Workflows by Laura Onu 05/02/17 @ 10:00AM Pacific Time, 1:00PM Eastern Time**
@@ -67,18 +67,14 @@ Laura Onu, Senior Program Manager on the PowerApps team will be presenting on ho
 Registration Link: TBD
 
 
-**Best Practices for Using Gateways with PowerApps by Archana Nair and Dimah Zaidalklani 05/09/17 @ 10:00AM Pacific Time, 1:00PM Eastern Time**
+**Best Practices for PowerApps Development with Archana Nair and Dimah Zaidalklani 05/16/17 @ 10:00AM Pacific Time, 1:00PM Eastern Time**
 
-Equip your team with best practices on using PowerApp Gateways. This webinar will cover topics such as:
-- Getting Ready for On-Premise Gateways
-- Troubleshooting Connection Issues
-- Optimizing for Performance
-- Demos
+With six months of producing PowerApps applications inside of Microsoft and with our largest customers, the team has amassed a series of best practices, tips, and tricks for PowerApps development. In this week’s webinar, Archana Nair will walk you through her list of top tips that will help you be even more productive with your PowerApps development.
 
-Registration Link:  TBD
+- [Subscribe and join live!](https://www.youtube.com/watch?v=YBdO2MAulx8)
 
 
-## Latest webinars ##
+## Latest webinars on demand ##
 Webinars are available on-demand after the live broadcast. Please note that you will need to re-enter registration details, and then you will be sent a link to the recording via email.
 
 **Getting Started with PowerApp Galleries by Audrie Gordon 02/28/17**
@@ -89,7 +85,7 @@ PowerApps Gallery controls are really useful for more than what meets the eye! T
 - Galleries for Displaying, Filtering, and Searching Connected Data
 - Using Galleries for Table Grids
 
-Registration Link: https://info.microsoft.com/US-EAD-WBNR-FY17-02Feb-28-GettingStartedwithPowerAppsGalleries300759_01Registration-ForminBody.html
+Request On-Demand Link here: https://info.microsoft.com/US-EAD-WBNR-FY17-02Feb-28-GettingStartedwithPowerAppsGalleries300759_01Registration-ForminBody.html
 
 **Getting Started with PowerApp Formulas by Audrie Gordon 03/14/17**
 
@@ -100,4 +96,4 @@ PowerApps combines the ease of use typical to Excel Formulas, with the power of 
 - Using Formulas for Error Management
 - Tips on how to become a formula pro!
 
-Registration Link:  https://info.microsoft.com/US-EAD-WBNR-FY17-03Mar-14-GettingStartedwithPowerAppsFormulas300770_01Registration-ForminBody.html
+Request On-Demand Link here:  https://info.microsoft.com/US-EAD-WBNR-FY17-03Mar-14-GettingStartedwithPowerAppsFormulas300770_01Registration-ForminBody.html
