@@ -159,7 +159,7 @@ We use the same table shaping as the previous two examples, but we capture the r
 
 Finally, we can perform the **Collect** directly within the **ForAll**:
 
-- **Clear( ProductsToOrder ); ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', Collect( NewOrder, { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) )**
+- **Clear( ProductsToOrder ); ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', Collect( NewOrder, { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) ) )**
 
 Again, the **ForAll** function can't be delegated at this time.  If our **Products** table is large, **ForAll** will look at the first set of records only and we may miss some products that need to be ordered.  But for tables that we know will remain small, this approach is fine.
 
