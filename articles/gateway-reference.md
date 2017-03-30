@@ -39,6 +39,7 @@ Related considerations:
 
 - You can't install a gateway on a domain controller.
 - You shouldn't install a gateway on a computer, such a laptop, that may be turned off, asleep, or not connected to the Internet because the gateway can't run under any of those circumstances. In addition, gateway performance might suffer over a wireless network.
+- For SharePoint, gateways support HTTP traffic but not HTTPS traffic.
 
 **Install a gateway**
 
@@ -144,7 +145,14 @@ If you encounter issues with your proxy server due to authentication, you may wa
 ## Frequently asked questions ##
 #### General ####
 **Question:** What data sources does the gateway support?  
-**Answer:** As of this writing, SQL Server and SharePoint.
+**Answer:** As of this writing:
+
+- SQL Server
+- SharePoint
+- Oracle
+- Informix
+- Filesystem
+- DB2
 
 **Question:** Do I need a gateway for data sources in the cloud, such as SQL Azure?  
 **Answer:** No. A gateway connects to on-premises data sources only.
