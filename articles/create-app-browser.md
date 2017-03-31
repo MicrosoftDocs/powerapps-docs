@@ -47,13 +47,13 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 - Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
 
 ## Known limitations of the preview release ##
+1. **Undo or redo a change.**
+
+	You can undo and redo changes automatically in PowerApps Studio for Windows but not in a browser.
+
 1. **Create a connection.**
 
 	To [create a connection](add-manage-connections.md) to a data source that requires service authentication, use [powerapps.com](https://web.powerapps.com), and then [add the connection](add-data-connection.md) to an app in PowerApps Studio for web.
-
-1. **Create an app from a template.**
-
-	You can [create an app from a template](get-started-test-drive.md) in PowerApps Studio for Windows but not in a browser.
 
 1. **Edit and save an app locally**.
 
@@ -70,10 +70,6 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 1. **Add or modify a flow.**
 
 	You can [add or modify a flow](using-logic-flows.md) in PowerApps Studio for Windows but not in a browser.
-
-1. **Undo or redo a change.**
-
-	You can undo and redo changes automatically in PowerApps Studio for Windows but not in a browser.
 
 1. **Copy a control across two sessions.**
 
