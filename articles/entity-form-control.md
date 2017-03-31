@@ -83,7 +83,7 @@ Now that you have an overview of the various properties and functions, let’s l
 **Note**: If you don’t have access to a Common Data Service database, [create one](learning-common-data-service.md) before you start to follow these steps.
 
 ## Display a list of records
-Add a form that shows a list of sales orders.  
+The next five procedures provide a single, end-to-end example of how to use **Entity form** controls. In this procedure, add a form that shows a list of sales orders.  
 
 1. Create a blank tablet app.
 
