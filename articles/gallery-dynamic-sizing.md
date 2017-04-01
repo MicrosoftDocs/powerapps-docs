@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Dynamic sizing and positioning | Microsoft PowerApps"
-    description="Use a variable height gallery to show a dynamic list of items in your app"
+    pageTitle="Show items of different heights in a gallery | Microsoft PowerApps"
+    description="Add and configure a flexible height gallery to automatically fit the amount of content in each item of the gallery"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -14,75 +14,91 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/16/2016"
+    ms.date="04/01/2017"
     ms.author="fikaradz"/>
 
-# Dynamic layout of lists  #
+# Show items of different heights in a PowerApps gallery #
+If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control to size each item appropriately for its contents, and position each control so that it automatically appears just under the control above it.
 
-This tutorial shows you how to create a list of items where each item has a different amount of content inside (a.k.a. variable height list).  We will use a **Flexible height gallery** control which automatically adjusts the height of each item based on the size of its content.
+**Suggested reading**
 
-This tutorial builds on concepts shown in [Show a list of items](add-gallery.md) tutorial and uses the same data set and connection.
+If you've never added controls to a gallery, follow the steps in [Show a list of items](add-gallery.md) before you proceed in this topic.
 
-**Prerequisites**
+## Add data to a blank app ##
+1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).
 
-- Learn how to [show a simple list of items](add-gallery.md) in PowerApps.
+	![Flooring products](./media/gallery-dynamic-sizing/flooring-products.png)
 
-## Add a Flexible height gallery ##
+	This file contains information about flooring products, including a name, a category, an overview, and a link to an image for each product. The descriptions vary in length, so you'll use a **Flexible height** gallery control to ensure that its layout reflects the content of each item.
 
-1. Create a new blank app for phone layout.
+1. Upload the Excel file to a cloud account such as OneDrive, Dropbox, or Google Drive.
 
-2. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table from [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).  For more details on adding the data source, see the **[Show a list of items](add-gallery.md)** tutorial.
+1. In PowerApps Studio, click or tap **New** on the **File** menu.
 
-3. Add a **Flexible height gallery** from the **Insert** tab, **Gallery** sub-menu.
-	![Add gallery](./media/galleryDynamicSizing/addGallery.png)
+1. On the **Blank app** tile, click or tap **Phone layout**.
 
-  Resize the gallery to take up the entire screen.
+	![New option on the File menu](./media/gallery-dynamic-sizing/blank-app.png)
 
-4. Assign the data source to the gallery by setting the **[Items](controls/properties-core.md)** property of the gallery to **FlooringEstimates**.
+1. Add a connection to the **FlooringEstimates** table in the Excel file.
 
-5.  Click on the pencil icon in the top-right corner to edit the gallery template. Once you populate the gallery with content, you can also click on the first gallery item to select the template.
+	For more information, see [Add a connection](add-data-connection.md).
 
-  Note that you can resize the template item to make it easier to add controls to it. This will only affect the design experience, at runtime the height of each item will be set dynamically based on its content.
+## Add data to a gallery ##
+1. On the **Insert** tab, click or tap **Gallery**, scroll to the bottom of the menu, and then click or tap **Flexible height**.
 
-## Add controls to the gallery ##
+	![Add gallery](./media/gallery-dynamic-sizing/add-gallery.png)
 
-1. With the gallery template selected, add a **[Text box](controls/control-text-box.md)** control to the gallery template.  
+1. Resize the gallery to take up the entire screen.
 
-	![Add text box](./media/galleryDynamicSizing/addTextBox.png)
+1. Set the gallery's **[Items](controls/properties-core.md)** property to **FlooringEstimates**.
 
-  The **Text** property of the Text box should be set to **ThisItem.Name**.
+## Show the product names ##
+1. In the upper-left corner of the gallery, click or tap the pencil icon to select the gallery template.
 
-2. With the gallery template selected, add another **Text box** control and position it below the first text box.  
+	![Pencil icon](./media/gallery-dynamic-sizing/edit-template.png)
 
-  The **Text** property of this Text box should be set to **ThisItem.Overview**.
+1. With the gallery template selected, add a **[Text box](controls/control-text-box.md)** control to it.
 
-3. With the second Text box selected, click on the name tag icon in the content tab and rename the control to **OverviewText**.
+1. Set the **Text** property of the **Text box** control to this expression:<br>
+**ThisItem.Name**
 
-    ![Rename text box](./media/galleryDynamicSizing/renameTextBox.png)
+	![Add text box](./media/gallery-dynamic-sizing/add-text-box.png)
 
-3. Set the **AutoHeight** property of the OverviewText Text box  to **true**.  This will ensure that the text box will be automatically sized to fit the entire text assigned to it.
+## Show the product overviews ##
+1. With the gallery template selected, add another **Text box** control, and move it below the first **Text box** control.  
 
-  	![Text auto height](./media/galleryDynamicSizing/autoHeightText.png)
+1. Set the **Text** property of the second **Text box** control to this expression:<br> **ThisItem.Overview**
 
-4. With the gallery template selected, add an **[Image](controls/control-image.md)** control and position it below the first text box.
+1. With the second **Text box** control selected, click or tap the name-tag icon on the **Content** tab, and rename the control to **OverviewText**.
 
-The **Image** property of the Image should be set to **ThisItem.'Image [image]'**
+    ![Rename text box](./media/gallery-dynamic-sizing/rename-text-box.png)
 
-## Dynamically position the image ##
+1. Set the **AutoHeight** property of the **OverviewText** box to **true**.
 
-Because the overview text for each item can vary in length, the height of each item's text box will be different.  Since we'll want to position the image to be directly below the overview text, we'll need to dynamically calculate its placement within the template.
+	This step ensures that the box will grow or shrink to fit its contents.
 
-To do so, we'll need to set the **[Y](controls/properties-core.md)** property of the Image to be based on the position and size of the OverviewText control.
+  	![Text auto height](./media/gallery-dynamic-sizing/autoheight-text.png)
 
-1. Set the **[Y](controls/properties-core.md)** property of the gallery to this formula:
+## Show the product images ##
+1. Resize the template so that it's twice as tall as it was.
 
-        OverviewText.Y + OverviewText.Height + 5
+	You can add controls to the template more easily as you build the app, and this change won't affect how the app looks when it runs.
 
-This ensures that the image's vertical placement is 5 pixels below the end of the OverviewText text box.  And since we are using a flexible height gallery, each item will get the right amount of vertical space needed to display its content.
+1. With the gallery template selected, add an **[Image](controls/control-image.md)** control, and move it below the **OverviewText** box.
 
-![Final app](./media/galleryDynamicSizing/dynamicApp.png)
+1. Ensure that the **Image** property of the **Image** control is set to this expression:<br>
+	**ThisItem.Image**
 
-If additional items need to be placed into the gallery template, the same concept can be applied.  Each item's Y property should be calculated based on the Y and height of the item that preceeds it.
+	The overview text for each item varies in length, so the height of each item's **OverviewText** box will differ. We'll want the image to be directly below the overview text, so we'll need to dynamically calculate its location within the template.
+
+1. Set the **[Y](controls/properties-core.md)** property of the image based on the position and the size of the **OverviewText** control, as in this formula:
+<br>**OverviewText.Y + OverviewText.Height + 5**
+
+	This formula ensures that the image is 5 pixels below the **OverviewText** box. Because we're using a **Flexible height** gallery control, each item will get the right amount of vertical space needed to display its content.
+
+	![Final app](./media/gallery-dynamic-sizing/dynamic-app.png)
+
+Apply the same concept if you want to add more controls: set each control's **Y** property based on the **Y** and **Height** properties of the control above it.
 
 ## Next steps ##
-- Learn more about working with a [gallery](working-with-forms.md) and [formulas](working-with-formulas.md).
+Learn more about how to work with a [gallery](working-with-forms.md) control and [formulas](working-with-formulas.md).
