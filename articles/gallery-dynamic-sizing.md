@@ -18,9 +18,12 @@
     ms.author="fikaradz"/>
 
 # Show items of different heights in a PowerApps gallery #
-If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control to size each item appropriately for its contents, and position each control so that it automatically appears just under the control above it.
+If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control so that you can:
 
-In this tutorial, you'll show data about flooring products in a **Flexible height** gallery control so that the image of each product appears 5 pixels below the overview, whether the overview contains five lines of text or two lines.
+- Configure **Text box** controls to expand or shrink based on their contents.
+- Position each control so that it automatically appears just under the control above it.
+
+In this tutorial, you show data about flooring products in a **Flexible height** gallery control. The image of each product appears 5 pixels below the overview, whether the overview contains five lines of text or two lines.
 
 ![Final app](./media/gallery-dynamic-sizing/dynamic-app.png)
 
@@ -94,7 +97,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 1. Set the **[Y](controls/properties-core.md)** property of the **Image** control based on the position and the size of the **OverviewText** box, as in this expression:
 <br>**OverviewText.Y + OverviewText.Height + 5**
 
-	![Final app](./media/gallery-dynamic-sizing/dynamic-app.png)
+	![Final app](./media/gallery-dynamic-sizing/final-app.png)
 
 Apply the same concept if you want to add more controls: set each control's **Y** property based on the **Y** and **Height** properties of the control above it.
 
