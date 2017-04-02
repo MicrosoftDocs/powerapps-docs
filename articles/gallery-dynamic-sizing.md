@@ -20,18 +20,20 @@
 # Show items of different heights in a PowerApps gallery #
 If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control to size each item appropriately for its contents, and position each control so that it automatically appears just under the control above it.
 
+In this tutorial, you'll show data about flooring products in a **Flexible height** gallery control so that the image of each product appears 5 pixels below the overview, whether the overview contains five lines of text or two lines.
+
+![Final app](./media/gallery-dynamic-sizing/dynamic-app.png)
+
 **Suggested reading**
 
 If you've never added controls to a gallery, follow the steps in [Show a list of items](add-gallery.md) before you proceed in this topic.
 
 ## Add data to a blank app ##
-1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).
+1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains names, overviews, and links to images of flooring products.
 
 	![Flooring products](./media/gallery-dynamic-sizing/flooring-products.png)
 
-	This file contains information about flooring products, including a name, a category, an overview, and a link to an image for each product. The descriptions vary in length, so you'll use a **Flexible height** gallery control to ensure that its layout reflects the content of each item.
-
-1. Upload the Excel file to a cloud account such as OneDrive, Dropbox, or Google Drive.
+1. Upload the Excel file to a cloud-storage account such as OneDrive, Dropbox, or Google Drive.
 
 1. In PowerApps Studio, click or tap **New** on the **File** menu.
 
@@ -89,12 +91,8 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 1. Ensure that the **Image** property of the **Image** control is set to this expression:<br>
 	**ThisItem.Image**
 
-	The overview text for each item varies in length, so the height of each item's **OverviewText** box will differ. We'll want the image to be directly below the overview text, so we'll need to dynamically calculate its location within the template.
-
-1. Set the **[Y](controls/properties-core.md)** property of the image based on the position and the size of the **OverviewText** control, as in this formula:
+1. Set the **[Y](controls/properties-core.md)** property of the **Image** control based on the position and the size of the **OverviewText** box, as in this expression:
 <br>**OverviewText.Y + OverviewText.Height + 5**
-
-	This formula ensures that the image is 5 pixels below the **OverviewText** box. Because we're using a **Flexible height** gallery control, each item will get the right amount of vertical space needed to display its content.
 
 	![Final app](./media/gallery-dynamic-sizing/dynamic-app.png)
 
