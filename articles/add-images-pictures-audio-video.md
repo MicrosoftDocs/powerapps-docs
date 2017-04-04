@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="RickSaling"
+	authors="karthik-1"
 	manager="anneta"
 	editor=""/>
 
@@ -25,7 +25,7 @@ This topic shows you how to embed multimedia files in your app, upload pen drawi
 
 [Sign up](../articles/signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
 
-## Add media from a file or cloud ##
+## Add media from a file or the cloud ##
 You can choose the kind of media file to add (for example, images, video, or audio).
 
 1. On the **Content** tab, select **Media**.
@@ -56,17 +56,17 @@ You can choose the kind of media file to add (for example, images, video, or aud
 
 	**Note** Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
-## Use Azure Media services
-You can use PowerApps to build and run apps with media hosted on Azure Media Services.
+## Add media from Azure Media Services ##
 1.	From your Azure Media Services account, upload and publish your video asset from **AMS > Settings > Assets**.
 
 2.	After the video is published, copy its URL.
 
 3.	From PowerApps, add the **Video** control from **Insert > Media**.
 
-4.	Set the **Media** property to the URL that you copied
+4.	Set the **Media** property to the URL that you copied.
 
-As this graphic shows, you can choose any streaming URL that AMS supports:
+As this graphic shows, you can choose any streaming URL that Azure Media Services supports:
+
 ![Set Media property](./media/add-images-pictures-audio-video/ams-with-powerapps.png)
 
 
