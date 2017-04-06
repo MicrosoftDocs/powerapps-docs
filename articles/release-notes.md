@@ -22,6 +22,21 @@ For information about known limitations, see [Common issues and resolutions](com
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
+## Release 2.0.610-2.0.611 ##
+1. **Create an app from a template in a browser**.
+
+	For more information, see [Create and run an app from a template](get-started-test-drive.md).
+
+1. **Automatically connect to Microsoft services such as SharePoint, Office, and OneDrive**.
+
+1. **Play videos that are hosted on Azure Media Services**.
+
+1. **Use the same control to add an image from a file or the camera on your phone**.
+
+	For more information, see [Add picture control](control-add-picture.md).
+
+1. **Magnify an app by using your browser’s zoom feature**.
+
 ## Release 2.0.600-2.0.601 ##
 1. **Experimental feature: Add dynamic forms with the Entity form control in which users can view, navigate, and edit relational data from the Common Data Service.**
 

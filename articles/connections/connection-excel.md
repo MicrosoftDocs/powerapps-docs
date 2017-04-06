@@ -29,6 +29,8 @@ Excel is *kind of* a connection. To display Excel data in your app:
 1. [Connect to the cloud-storage account](../add-manage-connections.md), and then add the Excel table as a data source.
 1. Display this information in your app by [generating an app automatically](../get-started-create-from-data.md) or by adding and configuring, for example, a **Gallery** control.
 
+Note: Once you connect to your Excel table from PowerApps, PowerApps will create a new column called **\__PowerAppsId__**, with a unique ID for each row of your Excel table.
+
 [Overview of the cloud-storage connection](cloud-storage-blob-connections.md) shows you how to add the connection, add an Excel table as a data source, and use the Excel data in your app.
 
 For information about how to connect to other types of data, see the [list of connections for PowerApps](../connections-list.md).
