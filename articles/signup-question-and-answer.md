@@ -1,5 +1,5 @@
 <properties
-    pageTitle="PowerApps sign-up Q&A in your organization | Microsoft PowerApps"
+    pageTitle="Sign-up Q&A in your organization | Microsoft PowerApps"
     description="Common questions and answers about licenses, administration, and users signing up for PowerApps in your Office 365 tenant"
     services=""
     suite="powerapps"

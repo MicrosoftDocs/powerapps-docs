@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Getting started with formulas | Microsoft PowerApps"
+	pageTitle="Get started with formulas | Microsoft PowerApps"
 	description="Use formulas to customize an app."
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="04/26/2016"
    ms.author="gregli"/>
 
-# Getting started with formulas #
+# Get started with formulas #
 Configure your app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
 - In Excel, you build formulas that, for example, populate cells and create tables and charts.

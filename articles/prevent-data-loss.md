@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Data loss prevention (DLP) policies for Microsoft PowerApps| Microsoft PowerApps"
+    pageTitle="Data loss prevention (DLP) policies | Microsoft PowerApps"
     description="Introduction to data loss prevention policies for Microsoft PowerApps."
     services=""
     suite="powerapps"
