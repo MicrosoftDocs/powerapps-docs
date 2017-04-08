@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Understanding tables | Microsoft PowerApps"
+	pageTitle="Understand tables | Microsoft PowerApps"
 	description="Reference information for working with tables, columns, and records"
 	services=""
 	suite="powerapps"

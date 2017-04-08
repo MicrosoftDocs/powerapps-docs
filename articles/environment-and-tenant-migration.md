@@ -1,6 +1,6 @@
 <properties
-	pageTitle="How to migrate PowerApps between environments and tenants | Microsoft PowerApps"
-	description="How to migrate apps among environments and tenants"
+	pageTitle="Migrate apps between environments and tenants | Microsoft PowerApps"
+	description="Migrate apps among environments and tenants"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"

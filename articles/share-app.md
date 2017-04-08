@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Share an app in PowerApps | Microsoft PowerApps"
+    pageTitle="Share an app | Microsoft PowerApps"
     description="Share your app by giving other users permission to run or modify it"
     services=""
     suite="powerapps"
@@ -17,7 +17,7 @@
     ms.date="10/28/2016"
     ms.author="litran"/>
 
-# Share an app #
+# Share an app in PowerApps #
 
 It’s great to build apps that address your own business needs, but the real magic of PowerApps comes from sharing those apps with others. In this topic, you will learn how to share apps with specific users or security groups, or you can share it with your entire organization.
 

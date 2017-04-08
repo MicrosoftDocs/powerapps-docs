@@ -1,6 +1,6 @@
 <properties
-    pageTitle="Data groups for Microsoft PowerApps | Microsoft PowerApps"
-    description="Introduction to Data groups for Microsoft PowerApps."
+    pageTitle="Data groups | Microsoft PowerApps"
+    description="Introduction to data groups for Microsoft PowerApps."
     services=""
     suite="powerapps"
     documentationCenter="na"

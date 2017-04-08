@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Register custom APIs in PowerApps | Microsoft PowerApps"
+	pageTitle="Register custom APIs | Microsoft PowerApps"
 	description="Register custom APIs in PowerApps using Swagger and OAuth."
 	services=""
     suite="powerapps"
