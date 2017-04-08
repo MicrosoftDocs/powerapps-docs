@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Show images and text in a gallery; Sort and filter the gallery in PowerApps | Microsoft PowerApps"
+	pageTitle="Show, sort, and filter data in a gallery | Microsoft PowerApps"
 	description="Use a gallery to display images and text. Sort and filter the images in PowerApps."
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.author="lonu"/>
 
 
-# Show images and text in a gallery, including gallery selection, sort, and filter
+# Show, sort, and filter data in a PowerApps gallery #
 Create a gallery to show images and text about several products, and sort and filter that information.
 
 In PowerApps, you can use a gallery to show several related items, just as you see in a catalog. Galleries are great for showing information about products, such as names and prices. In this topic, we create a gallery and sort and filter the information using Excel-like functions. Also, when an item is selected, a border is placed around the item.

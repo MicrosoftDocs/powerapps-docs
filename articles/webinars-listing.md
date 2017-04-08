@@ -34,7 +34,7 @@ Take your form designs to the next level with form controls! In this webinar, yo
 
 [Subscribe and join live!](https://www.youtube.com/watch?v=WnuwLkNbWk4)
 
-**"Get started with the Common Data Service" by Juno Luk**
+**"Get started with the Common Data Service" by Jono Luk**
 <br>*April 18, 2017, @ 10:00AM Pacific Time, 1:00PM Eastern Time*
 
 Learn more about this new and exciting data store!

@@ -1,5 +1,5 @@
 <properties
-   pageTitle="PowerApps Environments | Microsoft PowerApps"
+   pageTitle="Environments | Microsoft PowerApps"
    description="Work with containers for apps, connections, and other resources"
    services=""
    suite="powerapps"
@@ -42,9 +42,9 @@ One thing to keep in mind is that environments are relevant only to app creators
 So far in this course, we have focused on app creators, but environments are created and maintained by admins. If you're not an admin, this information can still be helpful when you talk to your admin about setting up environments. In the PowerApps admin center, click or tap **Environments** then **New environment**. On the **New environment** screen, enter a name for the environment, select a region, select whether to create a Common Data Services database for the environment, and click or tap **Create an environment**.
 
 ![Create an environment](./media/learning-manage-environments/create-environment.png)
- 
+
 That's it, you now have a new environment to work in. If you go back to web.powerapps.com, you will see it in the environments drop-down menu.
- 
+
 
 ## Manage access to an environment
 You have access to an environment if you are:

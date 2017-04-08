@@ -1,6 +1,6 @@
 <properties
-	pageTitle="How to administer environments | Microsoft PowerApps"
-	description="How to administer environments"
+	pageTitle="Administer environments | Microsoft PowerApps"
+	description="Administer environments in PowerApps, including creation, renaming, deletion, and security"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
