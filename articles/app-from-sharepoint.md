@@ -24,7 +24,7 @@
 
 In PowerApps, generate a three-screen app automatically to manage data in a SharePoint list, whether the site is on-premises or in the cloud.
 
-By default, every generated app has a screen for browsing records, a screen for showing details of a record, and a screen for creating or updating records. Heuristics suggest the best layout and content for each screen, but you'll probably need to customize the app to suit your needs.
+By default, every generated app has a screen for browsing records, a screen for showing details of a record, and a screen for creating or updating records. The best layout and content for each screen is automatically determined, but you'll probably need to customize the app to suit your needs.
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
@@ -39,7 +39,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 		![New option on the File menu](./media/app-from-sharepoint/file-menu.png)
 
-	- [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
+	- Or, [open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
 
 		For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](create-app-browser.md).
 
@@ -48,7 +48,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 	![](./media/app-from-sharepoint/sharepoint-tile.png)
 
 ## Specify a site and a list ##
-1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use, and then click or tap **Go**.
+1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list you want to use, and then click or tap **Go**.
 
 	**Note**: Don't include a specific list in the URL.
 
@@ -60,7 +60,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 	![](./media/app-from-sharepoint/sort-button.png)
 
-	You can also type or paste at least one letter in the search box to show only those list names that contain the text that you specify.
+	You can also type or paste at least one letter in the search box to show only those list names containing the text that you specify.
 
 	![](./media/app-from-sharepoint/choose-list.png)
 
