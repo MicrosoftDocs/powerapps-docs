@@ -19,7 +19,7 @@
    ms.author="manasma"/>
 
 # Plan 2 Trial for PowerApps #
-Sign up for the PowerApps Plan 2 Trial to get all functionality free for 90 days. This trial offers the same functionality as ‘PowerApps for Office 365 and Dynamics 365’, which many Office 365 and Dynamics 365 plans include. However, the trial also includes higher capacity and these premium features:
+Sign up for the PowerApps Plan 2 Trial to get all functionality free for 90 days. This trial offers more capacity and premium features in addition to the PowerApps functionality that you get from many [Office 365 and Dynamics 365 plans](pricing-billing-skus.md). Premium features include:
 
 - **Access to the Common Data Service**, which is a secure business data platform built into PowerApps. This service comes with hundreds of standard business entities, so all your apps can share the same definition of “customer,” “product,” “lead,” and more. [Learn more](data-platform-intro.md)
 
@@ -31,16 +31,14 @@ Sign up for the PowerApps Plan 2 Trial to get all functionality free for 90 days
 
 	![](./media/trial-plan/premium-badge.png)
 
-- **Access to the PowerApps admin center**, in which you can manage your environment, your database, user permissions, and data policies.  [Learn more](introduction-to-the-admin-center.md)
+- **Access to the PowerApps admin center**, in which you can manage your environments, databases, user permissions, and data policies.  [Learn more](introduction-to-the-admin-center.md)
 
 For more information about additional functionality and capacity in the Plan 2 Trial, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-**Who can sign up?**
+You can use a work or school account to sign up for the trial from the [PowerApps site](https://powerapps.microsoft.com/). If you already have access to PowerApps through Office 365, Dynamics 365, or PowerApps Plan 1, you'll be prompted to sign up for the trial if you try to access a Plan 2 feature.
 
-Anybody can sign up for the trial from the [PowerApps site](https://powerapps.microsoft.com/). If you already have access to PowerApps through Office 365, Dynamics 365, or PowerApps Plan 1, you'll be prompted to sign up for the trial if you try to access a Plan 2 feature.
-
-## Trial expiration ##
-The Plan 2 Trial expires after 90 days, when you'll be prompted to request a 90-day extension of the trial or purchase a plan. You can find details about all plans [on the pricing page](https://powerapps.microsoft.com/pricing/).
+## What happens when my trial expires? ##
+After 90 days, you'll be prompted to request a 90-day extension of the trial or purchase a plan. You can find details about all plans [on the pricing page](https://powerapps.microsoft.com/pricing/).
 
 - If you have access to PowerApps through Office 365, Dynamics 365, or PowerApps Plan 1, you can still use PowerApps, but you might lose access to the Common Data Service, premium connectors, the admin center, and other Plan 2 features. For example, this screen might appear if you try to create a premium connection:
 
@@ -54,15 +52,15 @@ The Plan 2 Trial expires after 90 days, when you'll be prompted to request a 90-
 
 	![](./media/trial-plan/extend-screen.png)
 
-**How many days are left before my trial expires?**
+## How many days are left before my trial expires? ##
 
 You'll soon be able to see how many days are left before your trial expires.
 
-**What happens to my data when my trial expires?**
+## What happens to my data when my trial expires? ##
 
 If you still have access to PowerApps, you can continue to use it. Any data in the Common Data Service will remain as it is, and any app or flow that used the Common Data Service as a data source will continue to run as it did. But you won't be able to use that app or flow, and you'll be prompted to request an extension of the trial or purchase a plan if you try to modify a schema or entities in the Common Data Service.
 
-**What should I do next?**
+## What should I do next? ##
 
 You can retain access to PowerApps and its features by following either of these steps:
 
