@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="archnair"
+	authors="sarafankit"
 	manager="anneta"
 	editor=""
 	tags="" />
@@ -15,8 +15,8 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="4/18/2017"
-ms.author="archanan"/>
+ms.date="04/18/2017"
+ms.author="ankitsar"/>
 
 # Connect from Microsoft PowerApps to SharePoint #
 
