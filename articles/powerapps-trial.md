@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="manasma"
+	authors="aftowen"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/18/2017"
-   ms.author="manasma"/>
+   ms.author="anneta"/>
 
 # PowerApps Trial #
 PowerApps offers a free trial for its full-functionality Plan 2 for 90 days. ‘PowerApps for Office 365 and Dynamics 365’ are included in many Office 365 and Dynamics 365 plans. With PowerApps Plan 2 Trial you not only get all the PowerApps functionalities which are available with Office 365 and Dynamics 365 plans, but also get access to premium functionalities and higher capacity as well. Premium functionalities include:
