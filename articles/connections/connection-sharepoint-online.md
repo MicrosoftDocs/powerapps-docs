@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="10/23/2016"
+ms.date="4/18/2017"
 ms.author="archanan"/>
 
 # Connect from Microsoft PowerApps to SharePoint #
@@ -31,19 +31,20 @@ You can add data from a custom list but not a library. In addition, not all type
 |---|---|----|
 | Single line of text | Yes | View text |
 | Multiple lines of text | Yes | View text |
-| Choice | Yes (read-only) | View lookup |
+| Choice | Yes (single values only) | View lookup |
 | Number | Yes | View percentage<br>View rating<br>View text |
 | Currency | Yes | View percentage<br>View rating<br>View text
 | Date and Time | Yes | View text |
-| Lookup | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Lookup | Yes (single values only) | View lookup<br>Edit lookup |
 | Boolean (Yes/No) | Yes | View text<br>View toggle |
-| Person or Group | Yes (as of release 2.0.440) | View lookup<br>Edit lookup (as of release 2.0.440) |
+| Person or Group | Yes (single values only) | View lookup<br>Edit lookup |
 | Hyperlink | Yes | View URL<br>View text |
 | Picture | Yes (read-only) | View image<br>View text |
 | Calculated | Yes (read-only) |   |
 | Task Outcome | No |  |
 | External data | No |  |
 | Managed Metadata | Yes (read-only) |  |
+| Rating | No |  |
 
 Moreover, PowerApps doesn't support columns that support multiple values or selections.
 
