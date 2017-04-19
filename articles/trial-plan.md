@@ -1,10 +1,10 @@
 <properties
-	pageTitle="PowerApps Trial | Microsoft PowerApps"
-	description="PowerApps trial sign-up and expiration"
+	pageTitle="Plan 2 Trial | Microsoft PowerApps"
+	description="Information about what the free PowerApps trial plan includes, how to sign up for it, and what happens when it expires"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="aftowen"
+	authors="manasmamsft"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,67 +16,55 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/18/2017"
-   ms.author="anneta"/>
+   ms.author="manasma"/>
 
-# PowerApps Trial #
-PowerApps offers a free trial for its full-functionality Plan 2 for 90 days. ‘PowerApps for Office 365 and Dynamics 365’ are included in many Office 365 and Dynamics 365 plans. With PowerApps Plan 2 Trial you not only get all the PowerApps functionalities which are available with Office 365 and Dynamics 365 plans, but also get access to premium functionalities and higher capacity as well. Premium functionalities include:
+# Plan 2 Trial for PowerApps #
+Sign up for the PowerApps Plan 2 Trial to get all functionality free for 90 days. This trial offers the same functionality as ‘PowerApps for Office 365 and Dynamics 365’, which many Office 365 and Dynamics 365 plans include. However, the trial also includes higher capacity and these premium features:
 
-1. Access to Common Data Service: The Common Data Service is a secure business data platform built into PowerApps. It comes with hundreds of standard business entities already defined, which means that now all your apps can share the same definition of “customer,” “product,” “lead,” and more. [Learn more][data-platform-intro.md]
+- **Access to the Common Data Service**, which is a secure business data platform built into PowerApps. This service comes with hundreds of standard business entities, so all your apps can share the same definition of “customer,” “product,” “lead,” and more. [Learn more](data-platform-intro.md)
 
-2. Access to Premium connections: With PowerApps, you can connect to data sources with the help of connectors. With Office 365 and Dynamics 365 plans you get access to Standard connectors which includes connectors to data sources like Office 365, Dynamics 365, Dropbox, Twitter, etc. With PowerApps Plan 2 Trial you as well get access to Premium connectors like Salesforce, Common Data Service, DB2, Zendesk, etc.
-Here are some of the examples of Premium connectors
+- **Access to premium connections** such as Salesforce, DB2, Zendesk, and the Common Data Service. With many Office 365 and Dynamics 365 plans, you can connect to data sources such as Office 365, Dynamics 365, Dropbox, and Twitter. With the Plan 2 Trial, you can also connect to data through premium connectors such as these:
 
 	![](./media/trial-plan/premium-connectors.png)
 
-	You can read about the complete list of premium connectors [here][connections-list.md]. They are marked with a premium badge:
+	In the [complete list of connectors](connections-list.md), premium connectors appear with a badge:
 
 	![](./media/trial-plan/premium-badge.png)
 
-3. Access to PowerApps admin center:  You can manage your environment, database, user permissions, data policies using PowerApps admin center. Learn more about the details [here][introduction-to-the-admin-center.md].
+- **Access to the PowerApps admin center**, in which you can manage your environment, your database, user permissions, and data policies.  [Learn more](introduction-to-the-admin-center.md)
 
-And more. You can learn about details on functionality and capacity on [PowerApps Pricing page][https://powerapps.microsoft.com/pricing/].
+For more information about additional functionality and capacity in the Plan 2 Trial, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-**Who can sign up for PowerApps Free Trial?**
-1.	If you already have Office 365, Dynamics 365 or PowerApps Plan 1, you already have a license to access PowerApps. You can sign-up for the PowerApps Free trial, to try out premium functionalities. You will be notified to sign-up for the trial while trying out the premium functionalities OR you can as well sign-up from [PowerApps site][https://powerapps.microsoft.com/].
+**Who can sign up?**
 
-2.	If you are trying to use PowerApps for the first time and don’t have any license to access PowerApps, you can sign-up for the PowerApps free trial from [PowerApps site][https://powerapps.microsoft.com/]
+Anybody can sign up for the trial from the [PowerApps site](https://powerapps.microsoft.com/). If you already have access to PowerApps through Office 365, Dynamics 365, or PowerApps Plan 1, you'll be prompted to sign up for the trial if you try to access a Plan 2 feature.
 
-## PowerApps Trial expiration ##
-PowerApps offers a free trial of its full-functionality. This trial provides Plan 2 for 90 days, which includes using premium functionalities like [Common Data Service][data-platform-intro.md], using [premium connections][connections-list.md], or accessing [admin center][introduction-to-the-admin-center.md].
+## Trial expiration ##
+The Plan 2 Trial expires after 90 days, when you'll be prompted to request a 90-day extension of the trial or purchase a plan. You can find details about all plans [on the pricing page](https://powerapps.microsoft.com/pricing/).
 
-**What happens when Trial expires?**  
-When trial expires, you might be restricted on using functionalities for which you were given access with the full-featured PowerApps Plan 2 trial. There can be two scenarios here:
+- If you have access to PowerApps through Office 365, Dynamics 365, or PowerApps Plan 1, you can still use PowerApps, but you might lose access to the Common Data Service, premium connectors, the admin center, and other Plan 2 features. For example, this screen might appear if you try to create a premium connection:
 
-1. After your PowerApps trial expires you have a valid license to PowerApps through Office 365 or Dynamics 365:
-
-	This scenario can happen if the you had any other valid PowerApps plan and signed-up for the PowerApps trial or vice-versa. You can read about the details of all valid plan [here][https://powerapps.microsoft.com/pricing/]. When trial expires after 90 days, the user can continue using PowerApps with Office 365 or Dynamics 365,  but might get restricted on using specific premium functionalities e.g. using Common Data Service, premium connectors, or access to admin center.
-
-2. After your PowerApps trial expires you have no other valid license to PowerApps through Office 365 or Dynamics 365:
-
-	This scenario can happen if you signed-up from [PowerApps site][http://powerapps.microsoft.com/] or from [PowerApps Pricing page][4]. In such scenario, you were given PowerApps Plan 2 Trial to start using PowerApps. This trial would have expired after 90 days of you signing-up, leading to no more valid PowerApps license. With this, you will not have access to PowerApps and will see an experience like below while signing-in to any of the PowerApps web portal or clients.
-
-![](./media/trial-plan/extend-screen.png)
-
-**How do I see how many days are left for my trial expiration?**
-We are working on the feature on how many days are left with your PowerApps free trial. This is coming soon
-
-**What happens to my data while my trial is expired?**
-
-If you still have access to PowerApps via Office 365 or Dynamics 365 then you can continue using PowerApps but will lose access to the following functionalities:
-
-	a.	Common Data Service:
-	•	The data in Common Data Service database will remain as is.
-	•	You will not be able to modify the schema or entities from web.powerapps.com and will be shown screen as shown below, as you no more have Plan 2 Trial with you.
-	![](./media/trial-plan/cds.png)
-	•	For the apps and flows which were using Common Data Service as one of their data source, will continue to run as is. It’s just that you will not be able to use them, as you don’t have Plan 2 or Plan 2 Trial.
-
-	b.	Premium Connections:
-	Accessing [Premium connections][connections-list.md] is only available with Plan 1 and Plan 2 (and Plan 2 Trial). If you have any other valid PowerApps license (not Plan 1 or Plan 2) along with expired Plan 2 Trial, you cannot use these connections.   You will be prompted with the message on either extending your trial or purchase a plan.
-
-	If you are creating a new connection:
 	![](./media/trial-plan/premium-trial-expired.png)
 
-**What should you do next?**
-There are two options for you to continue using the premium functionalities or access to PowerApps based on the above two scenarios mentioned. You can either request for extending the trial for next 90 days or purchase a PowerApps plan.
-•	Request for extending your trial: When using PowerApps, you will be given option on extending the trial. Many of the examples are shown in the images in this document. You can fill out the form with details and request for an extension for next 90 days.
-•	Purchase a valid PowerApps plan: You will see the option of viewing the PowerApps plans OR you can directly visit PowerApps pricing page. [Learn more][signup-for-powerapps-admin.md] on how to purchase a plan.
+	This screen might appear if you try to modify a schema or entities in the Common Data Service:
+
+	![](./media/trial-plan/cds.png)
+
+- If your only access to PowerApps is through the trial (for which you signed up on the [PowerApps site](http://powerapps.microsoft.com/) or the [pricing page](http://powerapps.microsoft.com/pricing)), a screen like this will appear if you try to access PowerApps:
+
+	![](./media/trial-plan/extend-screen.png)
+
+**How many days are left before my trial expires?**
+
+You'll soon be able to see how many days are left before your trial expires.
+
+**What happens to my data when my trial expires?**
+
+If you still have access to PowerApps, you can continue to use it. Any data in the Common Data Service will remain as it is, and any app or flow that used the Common Data Service as a data source will continue to run as it did. But you won't be able to use that app or flow, and you'll be prompted to request an extension of the trial or purchase a plan if you try to modify a schema or entities in the Common Data Service.
+
+**What should I do next?**
+
+You can retain access to features in the Plan 2 Trial by following either of these steps:
+
+- When prompted, request to extend your trial for another 90 days.
+- Purchase a plan. You can view the available plans or visit the PowerApps pricing page. [Learn more](signup-for-powerapps-admin.md) about how to purchase a plan.
