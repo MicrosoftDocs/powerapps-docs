@@ -41,7 +41,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     ![](./media/generate-app-from-sharepoint-list-interface/enter-app-name.png)
 
-	A new tab appears in your web browser showing the app you automatically generated based on your SharePoint list.
+	A new tab appears in your web browser that shows the app that you automatically generated based on your SharePoint list.
 
     ![](./media/generate-app-from-sharepoint-list-interface/powerapp-studio-for-web.png)  
 
@@ -49,11 +49,11 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
 	**Note**: You might need to refresh the browser window (for example, by pressing F5) before the app will open.
 
-  ![](./media/generate-app-from-sharepoint-list-interface/open-app-in-browser.png)
+    ![](./media/generate-app-from-sharepoint-list-interface/open-app-in-browser.png)
 
-	The app opens in a separate browser tab.
+    The app opens in a separate browser tab.
 
-  ![](./media/generate-app-from-sharepoint-list-interface/open-app.png)
+    ![](./media/generate-app-from-sharepoint-list-interface/open-app.png)
 
 
 ## Manage the app ##
@@ -62,7 +62,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
 - If you click or tap **Edit in PowerApps**, the app opens in a separate browser tab where you can update the app in PowerApps Studio for the web.
 
-- If you click or tap **Make this view public**, other people in your organization can view it. By default, you're the only one who can see views that you create. If you want to allow other people to edit your app, you need to [share it with them](share-app.md), and then grant **Contributor** permissions.
+- If you click or tap **Make this view public**, other people in your organization can view it. By default, only you can see views that you create. If you want to allow other people to edit your app, you need to [share it with them](share-app.md), and then grant **Contributor** permissions.
 
 - If you click or tap **Remove this view**, you'll remove the view from SharePoint, but the app will remain in PowerApps unless you [delete it](delete-app.md).
 
