@@ -24,7 +24,7 @@
 
 In PowerApps, generate a three-screen app automatically to manage data in a SharePoint list, whether the site is on-premises or in the cloud.
 
-By default, every generated app has a screen for browsing records, a screen for showing details of a record, and a screen for creating or updating records. Heuristics suggest the best layout and content for each screen, but you'll probably need to customize the app to suit your needs.
+By default, every generated app has a screen for browsing records, a screen for showing details of a record, and a screen for creating or updating records. The initial layout and content for each screen is automatically determined, but you'll probably need to customize the app to suit your needs.
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
@@ -54,7 +54,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 	![](./media/app-from-sharepoint/specify-site.png)
 
-1. Under **Choose a list**, click or tap the name of the list that you want to use.
+2. Under **Choose a list**, click or tap the name of the list that you want to use.
 
 	You can sort the list names alphabetically by clicking or tapping the sort button.
 
@@ -64,11 +64,11 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 	![](./media/app-from-sharepoint/choose-list.png)
 
-1. Click or tap **Connect** to generate the app.
+3. Click or tap **Connect** to generate the app.
 
 	![Connect button](./media/app-from-sharepoint/connect-button.png)
 
-1. If you're prompted to take the intro tour, click or tap **Next** to get familiar with key areas of the PowerApps interface (or click or tap **Skip**).
+4. If you're prompted to take the intro tour, click or tap **Next** to get familiar with key areas of the PowerApps interface (or click or tap **Skip**).
 
 	![Opening screen of the intro tour](./media/app-from-sharepoint/quick-tour.png)
 
