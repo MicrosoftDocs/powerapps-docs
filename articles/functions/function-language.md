@@ -92,7 +92,7 @@ In your app, wherever you would have used the text **"Hello"** before, use this 
 
 This formula will lookup the appropriate **LocalizedText** value for the language of the user, and if that is not found, will fall back on the default *blank* version. 
 
-Be aware that translated strings in other languages could be significantly longer than they are in your language.  In many cases, the text boxes and other elements that display the strings in your user interface will need to be wider to accommodate.
+Be aware that translated strings in other languages could be significantly longer than they are in your language.  In many cases, the labels and other elements that display the strings in your user interface will need to be wider to accommodate.
 
 ### Translation service ###
 

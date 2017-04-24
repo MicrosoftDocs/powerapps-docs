@@ -128,14 +128,14 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 	Want more information about the **[UpdateContext](../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
 
-1. Add a **[Text box](control-text-box.md)** control, set its **[Text](properties-core.md)** property to show **Total**, and then press F5.
+1. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to show **Total**, and then press F5.
 
 1. Type a number in **Source**, and then click or tap **Add**.
 
-	The **[Text box](control-text-box.md)** control shows the number that you typed.
+	The **[Label](control-text-box.md)** control shows the number that you typed.
 
 1. Repeat the previous step one or more times.
 
-	The **[Text box](control-text-box.md)** control shows the sum of the numbers that you typed.
+	The **[Label](control-text-box.md)** control shows the sum of the numbers that you typed.
 
 1. To return to the default workspace, press Esc.

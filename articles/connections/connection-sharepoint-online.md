@@ -128,7 +128,7 @@ Open PowerApps by taking *either* of these steps:
 	![List of data sources added to the app](./media/connection-sharepoint-online/data-sources-list.png)
 
 ## Show data in a gallery ##
-To show data from any of these types of columns in a gallery, use the formula bar to set the **Text** property of one or more **Text box** controls in that gallery:
+To show data from any of these types of columns in a gallery, use the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
 
 - For a **Choice** or **Lookup** column, specify **ThisItem.[ColumnName].Value** to show data in that column.
 

@@ -58,23 +58,23 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
 
 	You can change the name of the selected control in the **Content** tab by clicking the name.
 
-1. Add a **[Text box](controls/control-text-box.md)** control to the screen.
+1. Add a **[Label](controls/control-text-box.md)** control to the screen.
 
 	![Added a TextBox control](./media/working-with-formulas/add-a-label.png)
 
-	When you add a text box, the property list automatically shows the **[Text](controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
+	When you add a label, the property list automatically shows the **[Text](controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
 
 1. Set the value of the **[Text](controls/properties-core.md)** property to **"Hello World"** by typing that string, surrounded by double quotes, into the formula bar:
 
 	![Using the label "Hello World"](./media/working-with-formulas/label-hello-world.png)
 
-	The text box reflects this new value as you type it.  The screen may show yellow exclamation-point icons while you type. These icons indicate errors, but they'll go away when you finish entering a valid value. For example, a string without double quotation marks on both ends isn't valid.
+	The label reflects this new value as you type it.  The screen may show yellow exclamation-point icons while you type. These icons indicate errors, but they'll go away when you finish entering a valid value. For example, a string without double quotation marks on both ends isn't valid.
 
-	In Excel, you can show a number, such as **42**, by typing it into a cell or by typing a formula that resolves to that number, such as **=SUM(30,12)**. In PowerApps, you can achieve the same effect by setting the **Text** property of a control, such as a text box, to **42** or **Sum(30,12)**. The cell and the text box will always show that number regardless of what else changes in the worksheet or the app.
+	In Excel, you can show a number, such as **42**, by typing it into a cell or by typing a formula that resolves to that number, such as **=SUM(30,12)**. In PowerApps, you can achieve the same effect by setting the **Text** property of a control, such as a label, to **42** or **Sum(30,12)**. The cell and the label will always show that number regardless of what else changes in the worksheet or the app.
 
 	**Note:** In PowerApps, you don't precede a formula with an equals sign or a plus sign as you do in Excel. The formula bar treats anything you type there as a formula by default. You also don't surround a formula with double quotation marks ("), as you did earlier to specify a string of text.
 
-1. In the **[Text](controls/properties-core.md)** property of the text box, replace **"Hello World"** with **Sum(1,2,3)**.
+1. In the **[Text](controls/properties-core.md)** property of the label, replace **"Hello World"** with **Sum(1,2,3)**.
 
 	![Typing the partial function Sum(1,2,3 without a closing parenthesis shows errors](./media/working-with-formulas/label-sum-partial.png)
 
@@ -87,18 +87,18 @@ In Excel, you type **=SUM(A1:A2)** into a cell to show the sum of whatever value
 
 ![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.png)
 
-In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the text box from the previous procedure and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
+In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the label from the previous procedure and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc1.png)
 
-Regardless of what numbers you type in the input-text controls, the text box always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
+Regardless of what numbers you type in the text input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
 <br>**TextInput1 + TextInput2**
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc2.png)
 
 In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the **[If](functions/function-if.md)** function, which behaves similarly to how it behaves in Excel.
 
-1. Set the **[Color](controls/properties-color-border.md)** property of the text box to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
+1. Set the **[Color](controls/properties-color-border.md)** property of the label to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
 
 	**Note:** In a formula, specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **[Text](controls/properties-core.md)** property of **TextBox1** by typing **TextBox1.Text**.
 
@@ -108,7 +108,7 @@ In Excel, you can use conditional formatting to show, for example, negative valu
 
 	![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color2.png)
 
-	The value in the text box appears in red.
+	The value in the label appears in red.
 
 ## Change a color based on user input ##
 You can configure your app with formulas so that users can change your app's appearance or behavior. For example, you can create a filter to show only data that contains a string of text that the user specifies, or you can let users sort a set of data based on a certain column in the data set. In this procedure, you'll let users change the color of the screen by adjusting one or more sliders.
@@ -117,7 +117,7 @@ You can configure your app with formulas so that users can change your app's app
 
 	![Insert a slider control](./media/working-with-formulas/insert-slider.png)
 
-1. Arrange the sliders so they don't overlap, add three text boxes, and configure them to show **Red**, **Green**, and **Blue**:
+1. Arrange the sliders so they don't overlap, add three labels, and configure them to show **Red**, **Green**, and **Blue**:
 
 	![Arrange sliders and add labels for each color component](./media/working-with-formulas/three-sliders.png)
 

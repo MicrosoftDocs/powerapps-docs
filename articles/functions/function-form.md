@@ -76,7 +76,7 @@ See [Understand data forms](../working-with-forms.md) for complete examples.
 
 	**Back()**
 
-1. Name a **[Text box](../controls/control-text-box.md)** control **ErrorText**, and set its **[Text](../controls/properties-core.md)** property to this formula:
+1. Name a **[Label](../controls/control-text-box.md)** control **ErrorText**, and set its **[Text](../controls/properties-core.md)** property to this formula:
 
 	**EditForm.Error**
 

@@ -64,18 +64,18 @@ If your Excel data includes a calculated column, you can't use it to build an ap
 
 	The gallery is automatically updated with information from your Excel table.
 
-3. In the gallery, select the second or third **Text box** control. By default, you see the **Text** property of the second and third text boxes is automatically set to `ThisItem.something`. You can set these text boxes to any column in your table.
+3. In the gallery, select the second or third **Label** control. By default, you see the **Text** property of the second and third labels is automatically set to `ThisItem.something`. You can set these labels to any column in your table.
 
-	In the following example, the second text box is set to `ThisItem.Name` and the third text box is set to `ThisItem.Notes`:  
+	In the following example, the second label is set to `ThisItem.Name` and the third label is set to `ThisItem.Notes`:  
 
-	![Second text boxe](./media/cloud-storage-blob-connections/items-secondtextbox.png)  
+	![Second label](./media/cloud-storage-blob-connections/items-secondtextbox.png)  
 
-	![Third text boxes](./media/cloud-storage-blob-connections/items-thirdtextbox.png)  
+	![Third label](./media/cloud-storage-blob-connections/items-thirdtextbox.png)  
 
 	Sample output:  
-	![Second and third text boxes](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
+	![Second and third labels](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
 
-	<br/>**NOTE** The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a text box in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
+	<br/>**NOTE** The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 
 [Understand tables and records](../working-with-tables.md) provides more details and some examples.  

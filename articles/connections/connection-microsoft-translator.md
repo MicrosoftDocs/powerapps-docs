@@ -22,7 +22,7 @@
 
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
 
-Add the Microsoft Translator connector to display translated text in a **Text box** control in your app. For example, you can create an input text box that asks the user to enter some text to translate. In another text box, you can display the translated text.
+Add the Microsoft Translator connector to display translated text in a **Label** control in your app. For example, you can create an input text box that asks the user to enter some text to translate. In another label, you can display the translated text.
 
 This topic shows you how to create the Microsoft Translator connection, use the Microsoft Translator connection in an app, and lists the available functions.
 
@@ -63,11 +63,11 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 
 	`MicrosoftTranslator.Languages()`
 
-4. Add a text box, move it below **TargetLang**, and set its **[Text](../controls/properties-core.md)** property to the following formula:  
+4. Add a label, move it below **TargetLang**, and set its **[Text](../controls/properties-core.md)** property to the following formula:  
 
 	`MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
 
-5. Type some text into **Source**, and select a language in **TargetLang**. The text box shows the text that you entered in the language you chose:  
+5. Type some text into **Source**, and select a language in **TargetLang**. The label shows the text that you entered in the language you chose:  
 
 	![Translate text from English to Spanish](./media/connection-microsoft-translator/translate-text.png)
 
@@ -78,7 +78,7 @@ If you haven't already, follow the steps in the previous section to translate so
 
 	`MicrosoftTranslator.SpeechLanguages()`
 
-2. Rename the second text box (not the **Source** box) to **Target**.
+2. Rename the second label (not the **Source** box) to **Target**.
 
 3. Add an **Audio** control (**Insert** menu > **Media**), and set its **Media** property to the following formula:  
 
@@ -99,7 +99,7 @@ These next steps use the same **Source** text input and **Target** text controls
 
 2. Type some text into **Source**.
 
-	The text box shows you the language of the text that you typed. For example, the text box shows **French** if you type **bonjour**, or **Italian** if you type **ciao**.
+	The label shows you the language of the text that you typed. For example, the label shows **French** if you type **bonjour**, or **Italian** if you type **ciao**.
 
 
 

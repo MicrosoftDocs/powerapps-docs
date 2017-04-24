@@ -59,7 +59,7 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 
 #### Concatenate ####
 
-1. Add an input-text control, and name it **AuthorName**.
+1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **AuthorName**.
 
 1. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:<br>
 **Concatenate("By ", AuthorName.Text)**

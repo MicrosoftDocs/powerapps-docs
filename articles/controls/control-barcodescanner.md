@@ -76,6 +76,6 @@ If you add this control, the user can update a data source with one or more phot
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add an **Text Box** control and set its output to the Barcode's value.  
+1. Add a **Label** control and set its output to the Barcode's value.  
 1. Scan a barcode of the type set under BarcodeType property.
-1. The text box is going to display the scanned barcode.
+1. The label is going to display the scanned barcode.
