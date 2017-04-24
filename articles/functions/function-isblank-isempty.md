@@ -1,6 +1,6 @@
 <properties
-	pageTitle="IsBlank and IsEmpty functions | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the IsBlank and IsEmpty functions in PowerApps"
+	pageTitle="Blank, IsBlank, and IsEmpty functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Blank, IsBlank, and IsEmpty functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,13 +18,13 @@
    ms.date="11/01/2015"
    ms.author="gregli"/>
 
-# IsBlank and IsEmpty functions in PowerApps #
+# Blank, IsBlank, and IsEmpty functions in PowerApps #
 
-Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records).
+Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records) and provides a way to create *blank* values.
 
 ## Overview ##
 
-*Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  
+*Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  Some data sources can store and return NULL values which are represented in PowerApps as *blank*.
 
 Any property or calculated value can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank*.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank but can hold the values **TRUE** or **FALSE**, among others. At any time, the contents of the cell can be removed, and it would return to a *blank* state.
 
@@ -32,8 +32,11 @@ Any property or calculated value can be *blank*.  For example, a Boolean value n
 
 ## Description ##
 
+The **Blank** function returns a *blank* value.  Use this store a NULL value in a data source that supports these values.  
+
 The **IsBlank** function tests for a *blank* value. *Blank* values are found in situations such as these:
 
+- The return value from **Blank**.
 - A control property has no formula set for it.
 - No value is typed into a text-input control, or no selection is made in a listbox.  You can use **IsBlank** to provide feedback that a field is required.
 - A string that contains no characters has a **[Len](function-len.md)** of 0.
@@ -47,6 +50,8 @@ The **IsEmpty** function tests whether a table contains any records. It's equiva
 The return value for both functions is a Boolean **true** or **false**.
 
 ## Syntax ##
+
+**Blank**(&nbsp;)
 
 **IsBlank**( *Value* )
 
@@ -78,6 +83,7 @@ Other examples:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
+| **IsBlank( Blank() )** | Tests the return value from **Blank**. | **true** |
 | **IsBlank( "" )** | A string that contains no characters. | **true** |
 | **IsBlank( "Hello" )** | A string that contains one or more characters. | **false** |
 | **IsBlank( *AnyCollection* )** | Because the [collection](../working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. | **false** |
