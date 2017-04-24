@@ -90,15 +90,15 @@ When an app is created, it has a default layout based on your data, but you can 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
 ## Change the data that appears ##
-1.  Under **Search items**, click or tap **Carpet** to select the **Text box** control.
+1.  Under **Search items**, click or tap **Carpet** to select the **Label** control.
 
 	The associated list is highlighted in the right-hand pane.
 
-	![Select first text box](./media/get-started-create-from-data/select-gallery-textbox.png)
+	![Select first label](./media/get-started-create-from-data/select-gallery-textbox.png)
 
 2. In the right-hand pane, open the highlighted list, and then click or tap **Name**.
 
-	![Set first text box](./media/get-started-create-from-data/set-gallery-textbox.png)
+	![Set first label](./media/get-started-create-from-data/set-gallery-textbox.png)
 
 3. Open the bottom list, and then click or tap **Category**.
 

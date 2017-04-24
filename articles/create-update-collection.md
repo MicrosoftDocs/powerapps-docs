@@ -77,7 +77,7 @@ Now, let's bind the Destinations collection to a listbox:
 	When you do this, the listbox is automatically populated with the items you previously entered in the Destinations collection:  
 ![][4]  
 
-Preview your changes: ![][7]. In the listbox, you can see the different cities you entered. In the input text box, enter a new city, and select the **Add** button. The listbox is automatically updated to include the new city you entered.
+Preview your changes: ![][7]. In the listbox, you can see the different cities you entered. In the input text control, enter a new city, and select the **Add** button. The listbox is automatically updated to include the new city you entered.
 
 
 ## Create a multi-column collection

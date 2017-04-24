@@ -24,7 +24,7 @@ ms.author="archanan"/>
 
 Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.
 
-You can display this information in a text box on your app. For example, you can add an input text box, ask the user to enter in some Tweet text, and then add a button that "posts" the tweet. You can use similar methods to get a tweet or search for a tweet, and then display the text in a text box or gallery control in your app.
+You can display this information in a label on your app. For example, you can add an input text box, ask the user to enter in some Tweet text, and then add a button that "posts" the tweet. You can use similar methods to get a tweet or search for a tweet, and then display the text in a label or gallery control in your app.
 
 This topic shows you how to create the Twitter connection, use the Twitter connection in an app, and lists the available functions.
 
@@ -149,7 +149,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 	The gallery now shows the values of the properties you chose.
 
 ### Show information about a user
-Add a text box, and then set its **[Text](../controls/properties-core.md)** property to one of these formulas:  
+Add a label, and then set its **[Text](../controls/properties-core.md)** property to one of these formulas:  
 
 - `twitter.User( *TwitterHandle* ).Description`
 - `twitter.User( *TwitterHandle* ).FullName`

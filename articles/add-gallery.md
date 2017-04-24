@@ -55,17 +55,17 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 
-2. Add a **[Text box](controls/control-text-box.md)** control to the gallery template, and then move and resize the new control so that it doesn't overlap with other controls in the template.
+2. Add a **[Label](controls/control-text-box.md)** control to the gallery template, and then move and resize the new control so that it doesn't overlap with other controls in the template.
 
-	![Add text box](./media/add-gallery/add-text-box.png)
+	![Add label](./media/add-gallery/add-text-box.png)
 
-3. With the **Text box** control still selected, open the highlighted list in the right-hand pane.
+3. With the **Label** control still selected, open the highlighted list in the right-hand pane.
 
 	![Open drop-down list](./media/add-gallery/open-dropdown.png)
 
 4. In the list of fields that you just opened, click or tap **Price**.  
 
-    ![Change Text Box binding](./media/add-gallery/change-binding.png)
+    ![Change label binding](./media/add-gallery/change-binding.png)
 
     The gallery shows the new values
 

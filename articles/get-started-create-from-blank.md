@@ -134,7 +134,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
 
-1. Select the **[Text box](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
+1. Select the **[Label](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
 
 	![Select title bar](./media/get-started-create-from-blank/select-title-bar.png)
 
@@ -152,9 +152,9 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Add and rename screen](./media/get-started-create-from-blank/add-screen.png)
 
-1. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Text box](controls/control-text-box.md)**.
+1. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Label](controls/control-text-box.md)**.
 
-1. Configure the **Text box** control that you just added:
+1. Configure the **Label** control that you just added:
 
 	- Set its **Text** property to this formula:
 	<br>**"Change record"**
@@ -171,7 +171,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	- Set its **Width** property to **640**.
 
-	The **Text box** control reflects your changes.
+	The **Label** control reflects your changes.
 
 	![ChangeScreen with banner](./media/get-started-create-from-blank/change-screen-blank.png)
 
@@ -197,12 +197,12 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
-1. Add a **[Text box](control-text-box.md)** control in the new card.
+1. Add a **[Label](control-text-box.md)** control in the new card.
 
 1. Set the **[AutoHeight](controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](controls/properties-core.md)** property to this formula:
 <br>**Form1.Error**
 
-	The text box will show any errors from the form.
+	The label will show any errors from the form.
 
 1. In the left navigation bar, click or tap the thumbnail for the **ChangeScreen** to select it.
 

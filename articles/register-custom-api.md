@@ -143,7 +143,7 @@ Now that the Swagger file (JSON file) is generated for the custom API, register 
 5. Now that the custom API is registered, you must create a connection to the custom API so it can be used in your apps.  Click the **+** to the right of the **Modified** date of your custom API and then complete any necessary steps to sign in to your API's data source. If you're using **OAuth** authentication with your API, you might be presented a sign-in screen. For API Key authentication, you might be prompted for a key value.
 
 ### Step 3: Add the custom API to an app
-[Add the custom API to an app](add-data-connection.md) as you would any other data source, and then use the API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](connection-office365-outlook.md) is an example of using the Office 365 API.
+[Add the custom API to an app](add-data-connection.md) as you would any other data source, and then use the API within the function bar, a label, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](connection-office365-outlook.md) is an example of using the Office 365 API.
 
 ## Share a custom API
 Users can also share custom APIs with each other.

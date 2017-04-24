@@ -123,7 +123,7 @@ In this example, we will use a SQL Server table that contains products, in parti
 
 Note the formula for the Gallery's **Items** property.  It is using **SortByColumns** and **Search** functions, both of which can be delegated.
 
-Let's type **"Apple"** into the search text box.  If we are very observant, we will momentarily see marching dots on the top of the screen while the new entry in the new search is processed.  The marching dots indicate that we are communicating with the SQL Server:
+Let's type **"Apple"** into the search input text control.  If we are very observant, we will momentarily see marching dots on the top of the screen while the new entry in the new search is processed.  The marching dots indicate that we are communicating with the SQL Server:
 
 ![](media/delegation-overview/products-apple.png)
 

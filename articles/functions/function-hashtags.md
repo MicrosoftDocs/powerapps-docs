@@ -43,7 +43,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 
 ### Step by step ###
 
-1. Add an input-text control, name it **Tweet**, and type this sentence into it:
+1. Add a text input control, name it **Tweet**, and type this sentence into it:
 
 	**This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$*(#@")**
 

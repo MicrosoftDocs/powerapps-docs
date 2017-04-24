@@ -81,7 +81,7 @@ As another example, show an image in an **[Image](controls/control-image.md)** c
 
 	And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **[Image](controls/properties-visual.md)** property, but it wouldn't have updated as the user entered a new URL.
 
-4. We can do the same thing on the second screen of this app, where we use a **[Display form](controls/control-form-detail.md)** control to display the details of a record.  Here we may want to hide the text box (set the **[Visible](controls/properties-core.md)** property of the text-box control, not the card, to *false*) because the user won't edit the URL on that screen:
+4. We can do the same thing on the second screen of this app, where we use a **[Display form](controls/control-form-detail.md)** control to display the details of a record.  Here we may want to hide the label (set the **[Visible](controls/properties-core.md)** property of the text-box control, not the card, to *false*) because the user won't edit the URL on that screen:
 
 	![](./media/working-with-cards/customize-image4.png)
 
@@ -146,10 +146,10 @@ Four controls make this card work:
 
 | Name | Type | Description |
 |--------------|--------------|-------------|
-| **TextRequiredStar** | **[Text box](controls/control-text-box.md)** control | Displays a star, which is commonly used on data-entry forms to indicate that a field is required. |
-| **TextFieldDisplayName** | **[Text box](controls/control-text-box.md)** control | Displays the user-friendly name of this field. This name can differ from what is in the data source's schema. |
+| **TextRequiredStar** | **[Label](controls/control-text-box.md)** control | Displays a star, which is commonly used on data-entry forms to indicate that a field is required. |
+| **TextFieldDisplayName** | **[Label](controls/control-text-box.md)** control | Displays the user-friendly name of this field. This name can differ from what is in the data source's schema. |
 | **InputText** | **Input text** control | Displays the initial value of the field and allows the user to change that value. |
-| **TextErrorMessage** | **[Text box](controls/control-text-box.md)** control | Displays a user-friendly error message to the user if a problem occurs with validation. Also ensures that the field has a value if one is required. |
+| **TextErrorMessage** | **[Label](controls/control-text-box.md)** control | Displays a user-friendly error message to the user if a problem occurs with validation. Also ensures that the field has a value if one is required. |
 
 To populate these controls with data, their properties can be driven from the properties of the card, through these key formulas. Note that none of these formulas refers to a specific field. Instead, all information comes from the card.
 

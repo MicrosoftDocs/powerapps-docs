@@ -24,7 +24,7 @@
 
 If you connect to Office 365 Outlook, you can show, send, delete, and reply to email messages, in addition to other tasks.
 
-You can add controls, including buttons and text boxes, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the recipient, the subject, and the body of the email. Then, add a Send button that sends the email.
+You can add controls, including buttons and labels, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the recipient, the subject, and the body of the email. Then, add a Send button that sends the email.
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
@@ -56,7 +56,7 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 	The gallery control is automatically populated with some of your emails.
 
-3. In the gallery, set the **Text** property of the first text box to `ThisItem.From`. Set the second text box to `ThisItem.Subject`. Set the third text box to `ThisItem.Body`. You can also resize the text boxes.
+3. In the gallery, set the **Text** property of the first label to `ThisItem.From`. Set the second label to `ThisItem.Subject`. Set the third label to `ThisItem.Body`. You can also resize the labels.
 
 	The gallery control is automatically populated with the new properties.
 
@@ -103,12 +103,12 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 	The gallery control is automatically populated with some of your emails.
 
-3. In the gallery, set the **Text** property of the first text box to `ThisItem.Id`. Set the second text box to `ThisItem.Subject`. Set the third text box to `ThisItem.Body`.
-4. Select the first text box in the gallery, and rename it to **EmailID**:
+3. In the gallery, set the **Text** property of the first label to `ThisItem.Id`. Set the second label to `ThisItem.Subject`. Set the third label to `ThisItem.Body`.
+4. Select the first label in the gallery, and rename it to **EmailID**:
 
 	![Close the Options pane](./media/connection-office365-outlook/renameheading.png)
 
-5. Select the third text box in the gallery, and add a **Button** (**Insert** menu). Set the button's **OnSelect** property to the following formula:  
+5. Select the third label in the gallery, and add a **Button** (**Insert** menu). Set the button's **OnSelect** property to the following formula:  
 
 	`Office365.DeleteEmail(EmailID.Text)`
 

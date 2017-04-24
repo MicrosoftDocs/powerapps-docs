@@ -20,7 +20,7 @@
 # Show items of different heights in a PowerApps gallery #
 If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control so that you can:
 
-- Configure **Text box** controls to expand or shrink based on their contents.
+- Configure **Label** controls to expand or shrink based on their contents.
 - Position each control so that it automatically appears just under the control above it.
 
 In this tutorial, you show data about flooring products in a **Flexible height** gallery control. The image of each product appears 5 pixels below the overview, whether the overview contains five lines of text or two lines.
@@ -62,21 +62,21 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 
 	![Pencil icon](./media/gallery-dynamic-sizing/edit-template.png)
 
-1. With the gallery template selected, add a **[Text box](controls/control-text-box.md)** control to it.
+1. With the gallery template selected, add a **[Label](controls/control-text-box.md)** control to it.
 
-1. Set the **Text** property of the **Text box** control to this expression:<br>
+1. Set the **Text** property of the **Label** control to this expression:<br>
 **ThisItem.Name**
 
-	![Add text box](./media/gallery-dynamic-sizing/add-text-box.png)
+	![Add label](./media/gallery-dynamic-sizing/add-text-box.png)
 
 ## Show the product overviews ##
-1. With the gallery template selected, add another **Text box** control, and move it below the first **Text box** control.  
+1. With the gallery template selected, add another **Label** control, and move it below the first **Label** control.  
 
-1. Set the **Text** property of the second **Text box** control to this expression:<br> **ThisItem.Overview**
+1. Set the **Text** property of the second **Label** control to this expression:<br> **ThisItem.Overview**
 
-1. With the second **Text box** control selected, click or tap the name-tag icon on the **Content** tab, and rename the control to **OverviewText**.
+1. With the second **Label** control selected, click or tap the name-tag icon on the **Content** tab, and rename the control to **OverviewText**.
 
-    ![Rename text box](./media/gallery-dynamic-sizing/rename-text-box.png)
+    ![Rename label](./media/gallery-dynamic-sizing/rename-text-box.png)
 
 1. Set the **AutoHeight** property of the **OverviewText** box to **true**.
 

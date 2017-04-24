@@ -42,7 +42,7 @@ Basically, you can use this anywhere users would benefit from a form or labels t
 
 	![][3]
 
-1. On the **Insert** tab, click or tap **Text**, and then click or tap **Text box**:  
+1. On the **Insert** tab, click or tap **Text**, and then click or tap **Label**:  
 
 	![][4]
 
@@ -55,7 +55,7 @@ Basically, you can use this anywhere users would benefit from a form or labels t
 
 	![][5]
 
-1. Add another text box, and set its **[Text](controls/properties-core.md)** property to this formula:
+1. Add another label, and set its **[Text](controls/properties-core.md)** property to this formula:
 <br>**User().Email**  
 
 	![][8]

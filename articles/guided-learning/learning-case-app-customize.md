@@ -51,7 +51,7 @@ If you have used Excel formulas, the approach that PowerApps takes should feel f
 ## Sort and filter based on date
 On the browse screen, the generated app lets you search for cases and sort the list of items in the gallery. We're going to remove the search and sort functionality in favor of showing cases based on a date. You could combine these methods, but we'll focus on the date-based approach for this app. In the image below, you see the items we added:
 
-- A text label ("Show cases after:") so users know what to do: **Insert** > **Text** > **Text box**; change the **Fill** formula to **White**.
+- A text label ("Show cases after:") so users know what to do: **Insert** > **Text** > **Label**; change the **Fill** formula to **White**.
 - A date picker: **Insert** > **Controls** > **Date picker**.
 - A formula that connects the browse gallery **Items** property to the date picker: `Filter(Case, DatePicker1.SelectedDate < LastModifiedDateTime)`.
 
@@ -61,11 +61,11 @@ The date is set to Oct 20 and you see the result that the app is showing the cas
 
 
 ## Show total number of cases
-We're covering a lot of ground here, but we're almost done with the customizations. The last thing we'll do in this topic is add text boxes that show two numbers: the total number of cases and the number of cases that match our date-based filter.
+We're covering a lot of ground here, but we're almost done with the customizations. The last thing we'll do in this topic is add labels that show two numbers: the total number of cases and the number of cases that match our date-based filter.
 
 ![Show total and filtered cases](./media/learning-case-app-customize/number-cases.png)
 
-The video goes into detail about how to add the two text boxes, but here's the basics on which properties we set for each text box:
+The video goes into detail about how to add the two labels, but here's the basics on which properties we set for each label:
 
 - **Align** = `Center`
 - **Width** = `Parent.Width/2`
