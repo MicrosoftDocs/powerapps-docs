@@ -56,7 +56,7 @@ In the following examples, a slider control named **Slider1** has a value of **2
 
 ### Branching in behavior formulas ###
 
-In the following examples, a **Text input** control named **FirstName** has the value "John" typed into it.
+In the following examples, a **[Text input](../controls/control-text-input.md)** control named **FirstName** has the value "John" typed into it.
 
 | Formula | Description | Result |
 |---------|-------------|--------|
@@ -65,7 +65,7 @@ In the following examples, a **Text input** control named **FirstName** has the 
 
 ### Step by step ###
 
-1. On an empty screen, add a **Text input** control, and name it **Text1** if it doesn't have that name by default.
+1. On an empty screen, add a **[Text input](../controls/control-text-input.md)** control, and name it **Text1** if it doesn't have that name by default.
 
 2. In **Text1**, type **15**.
 

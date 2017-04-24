@@ -79,7 +79,7 @@ The examples in this section use a [data source](../working-with-data-sources.md
 
 ### Step-by-step example ###
 
-1. Add an **Text input** control, and name it **Source**.
+1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **Source**.
 
 2. Add a **Label** control, and set its **[Text](../controls/properties-core.md)** property to this formula:
 <br>

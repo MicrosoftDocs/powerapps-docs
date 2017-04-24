@@ -24,7 +24,7 @@ Tests whether a value is blank or a [table](../working-with-tables.md) contains 
 
 ## Overview ##
 
-*Blank* is a placeholder for "no value" or "unknown value." A **Text input** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  
+*Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  
 
 Any property or calculated value can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank*.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank but can hold the values **TRUE** or **FALSE**, among others. At any time, the contents of the cell can be removed, and it would return to a *blank* state.
 
@@ -35,7 +35,7 @@ Any property or calculated value can be *blank*.  For example, a Boolean value n
 The **IsBlank** function tests for a *blank* value. *Blank* values are found in situations such as these:
 
 - A control property has no formula set for it.
-- No value is typed into a text input control, or no selection is made in a listbox.  You can use **IsBlank** to provide feedback that a field is required.
+- No value is typed into a text-input control, or no selection is made in a listbox.  You can use **IsBlank** to provide feedback that a field is required.
 - A string that contains no characters has a **[Len](function-len.md)** of 0.
 - An error occurred in a function. Often, one of the arguments to the function wasn't valid. Many functions return *blank* if the value of an argument is *blank*.
 - Connected [data sources](../working-with-data-sources.md), such as SQL Server, may use "null" values.  These values appear as *blank* in PowerApps.
@@ -60,15 +60,15 @@ The return value for both functions is a Boolean **true** or **false**.
 
 ### IsBlank ###
 
-1. Create an app from scratch, add a text input control, and name it **FirstName**.
+1. Create an app from scratch, add a text-input control, and name it **FirstName**.
 
 1. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
 
 	**If( IsBlank( FirstName.Text ), "First Name is a required field." )**
 
-	By default, the **[Text](../controls/properties-core.md)** property of a text input control is set to **"Input Text"**. Because the control contains a value, it isn't blank, and the label control doesn't display any message.
+	By default, the **[Text](../controls/properties-core.md)** property of a text-input control is set to **"Input Text"**. Because the control contains a value, it isn't blank, and the label control doesn't display any message.
 
-1. Remove all the characters from the text input control, including any spaces.
+1. Remove all the characters from the text-input control, including any spaces.
 
 	Because the control no longer contains any characters, its **[Text](../controls/properties-core.md)** property will be *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 

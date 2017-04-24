@@ -51,7 +51,7 @@ If the starting position is negative or beyond the end of the string, **Mid** re
 ## Examples ##
 
 ### Single string ###
-The examples in this section use a text input control as their [data source](../working-with-data-sources.md). The control is named **Author** and contains the string "E. E. Cummings".
+The examples in this section use a text-input control as their [data source](../working-with-data-sources.md). The control is named **Author** and contains the string "E. E. Cummings".
 
 | Formula | Description | Result |
 |---------|-------------|--------|
