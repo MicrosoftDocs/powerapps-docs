@@ -41,7 +41,7 @@ On the details screen, we want to change the order of the fields and display the
 
 
 ## Edit/create screen 
-Finally, on the screen where you edit and create entries, we want to change a field so it's easier to enter text. Click or tap the **Overview** text input box then choose the **Edit Multi-line Text** control.
+Finally, on the screen where you edit and create entries, we want to change a field so it's easier to enter text. Click or tap the **Overview** field drop-down and choose the **Edit Multi-line Text** control.
 
 ![Change the edit screen fields](./media/learning-spo-app-customize/generate-edit-fields.png)
 

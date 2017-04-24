@@ -125,7 +125,7 @@ Now, let's add to our filter:
 2. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control to **NameFilter**. Move the text control below the slider.
 3. Set the **[Items](controls/properties-core.md)** property of the gallery to the following expression:  
 ```Filter(Inventory, UnitsInStock<=StockFilter!Value && NameFilter!Text in ProductName)```
-4. In **Preview**, set the slider to *30*, and type the letter *g* in the **Text input** control. The gallery shows the only product with less than 30 units in stock *and* has a name with the letter "g":  
+4. In **Preview**, set the slider to *30*, and type the letter *g* in the text-input control. The gallery shows the only product with less than 30 units in stock *and* has a name with the letter "g":  
 ![][14]  
 
 ## Tips and Tricks

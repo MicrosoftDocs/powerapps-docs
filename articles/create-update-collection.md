@@ -32,7 +32,7 @@ You can create and use collections within PowerApps. Let's get started.
 The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.
 
 1. Open your app.
-2. On the **Insert** tab, select **Text**, and then select **Input Text**:  
+2. On the **Insert** tab, select **Text**, and then select **Text input**:  
 ![][1]  
 
 3. In the top left corner, select **Text1**, and rename the control to **Destination**:  
@@ -77,22 +77,22 @@ Now, let's bind the Destinations collection to a listbox:
 	When you do this, the listbox is automatically populated with the items you previously entered in the Destinations collection:  
 ![][4]  
 
-Preview your changes: ![][7]. In the listbox, you can see the different cities you entered. In the input text control, enter a new city, and select the **Add** button. The listbox is automatically updated to include the new city you entered.
+Preview your changes: ![][7]. In the listbox, you can see the different cities you entered. In the text-input control, enter a new city, and select the **Add** button. The listbox is automatically updated to include the new city you entered.
 
 
 ## Create a multi-column collection
 The following steps show you how to create a collection within your app using the Collect function, and how to add multiple rows to your collection.
 
 1. On the **Home** tab, open a new screen.
-2. On the **Insert** tab, select **Text**, and then select **Input Text**.
+2. On the **Insert** tab, select **Text**, and then select **Text input**.
 3. Rename the text control to **City**:  
 ![][9]  
 
-4. Insert another input text control, and rename it to **States**.
+4. Insert another text-input control, and rename it to **States**.
 5. Move the City and States text controls so you can see them both:  
 ![][10]  
 
-	**Note**: You can replace 'Input Text' with something like 'City' or 'State', which was done in the image.  
+	**Note**: You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
 
 6. On the **Insert** tab, select **Button**. Set its **[OnSelect](controls/properties-core.md)** property to the following function:  
 ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
@@ -100,7 +100,7 @@ The following steps show you how to create a collection within your app using th
 	It should look like the following:  
 	![][11]  
 
-	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another input text for Country to add a Countries column:
+	**Note**: You can use this same function to add additional columns to this collection. For example, you can add another text-input control for Country to add a Countries column:
 
 	`Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
 

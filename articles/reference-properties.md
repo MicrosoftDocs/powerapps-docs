@@ -233,7 +233,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Height](controls/properties-size-location.md)** – The distance between a control's top and bottom edges.  Applies to many controls.
 
-**[HintText](controls/control-text-input.md)** – Light-grey text that appears in an text input control if it's empty.  Applies to the **[Text input](controls/control-text-input.md)** control.
+**[HintText](controls/control-text-input.md)** – Light-grey text that appears in a text-input control if it's blank.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
 **[HoverBorderColor](controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.  Applies to many controls.
 
