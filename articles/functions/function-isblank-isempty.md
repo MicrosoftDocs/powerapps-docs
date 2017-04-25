@@ -47,7 +47,7 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 
 The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can use **IsEmpty** to check for data-source errors by combining it with the **[Errors](function-errors.md)** function.
 
-The return value for both functions is a Boolean **true** or **false**.
+The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or **false**.
 
 ## Syntax ##
 
