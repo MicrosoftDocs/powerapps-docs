@@ -91,7 +91,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 	![Collection showing Seattle with a blank Weather](media/function-isblank-isempty/seattle-blank.png)
 
-	Now the label control will now display **true** as the weather field no longer contains a value.
+	The label control we previously added will now display **true** as the weather field no longer contains a value.
 
 ### IsBlank ###
 
