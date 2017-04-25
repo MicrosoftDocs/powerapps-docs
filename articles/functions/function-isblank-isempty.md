@@ -15,37 +15,37 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/01/2015"
+   ms.date="04/24/2017"
    ms.author="gregli"/>
 
 # Blank, IsBlank, and IsEmpty functions in PowerApps #
 
-Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records) and provides a way to create *blank* values.
+Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records), and provides a way to create *blank* values.
 
 ## Overview ##
 
-*Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  Some data sources can store and return NULL values which are represented in PowerApps as *blank*.
+*Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  Some data sources can store and return NULL values, which are represented in PowerApps as *blank*.
 
 Any property or calculated value can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank*.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank but can hold the values **TRUE** or **FALSE**, among others. At any time, the contents of the cell can be removed, and it would return to a *blank* state.
 
-*Empty* is specific to tables that contain no records. The table structure may be intact, complete with [column](../working-with-tables.md#columns) names, but no data is in the table.  A table may start as empty, take on records and no longer be empty, and then have the records removed and again be empty.
+*Empty* is specific to tables that contain no records. The table structure may be intact, complete with [column](../working-with-tables.md#columns) names, but no data is in the table. A table may start as empty, take on records and no longer be empty, and then have the records removed and again be empty.
 
 ## Description ##
 
-The **Blank** function returns a *blank* value.  Use this to store a NULL value in a data source that supports these values, effectively removing any value from the field.
+The **Blank** function returns a *blank* value. Use this to store a NULL value in a data source that supports these values, effectively removing any value from the field.
 
 The **IsBlank** function tests for a *blank* value. *Blank* values are found in situations such as these:
 
-- The return value from **Blank**.
+- The return value from the **Blank** function.
 - A control property has no formula set for it.
-- No value is typed into a text-input control, or no selection is made in a listbox.  You can use **IsBlank** to provide feedback that a field is required.
+- No value is typed into a text-input control, or no selection is made in a listbox. You can use **IsBlank** to provide feedback that a field is required.
 - A string that contains no characters has a **[Len](function-len.md)** of 0.
 - An error occurred in a function. Often, one of the arguments to the function wasn't valid. Many functions return *blank* if the value of an argument is *blank*.
-- Connected [data sources](../working-with-data-sources.md), such as SQL Server, may use "null" values.  These values appear as *blank* in PowerApps.
+- Connected [data sources](../working-with-data-sources.md), such as SQL Server, may use "null" values. These values appear as *blank* in PowerApps.
 - The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
-- You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns you didn't specify.
+- You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
 
-The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can use **IsEmpty** to check for data-source errors by combining it with the **[Errors](function-errors.md)** function.
+The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](function-errors.md)** function.
 
 The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or **false**.
 
@@ -65,33 +65,39 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 ### Blank ###
 
-1. Create an app from scratch and add a button control.
+1. Create an app from scratch, and add a **Button** control.
 
-1. Set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+1. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
 
 	**ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )**
 
-1. Preview your app and press the button you added.  
+1. Preview your app, click or tap the button that you added, and then close Preview.  
 
-1. Exit preview.  Use the **File** menu and select **Collections** to view the **Cities** collection.  You will see one record with "Seattle" and "Rainy":
+1. On the **File** menu, click or tap **Collections**.
+
+ 	The **Cities** collection appears, showing one record with "Seattle" and "Rainy":
 
 	![Collection showing Seattle with Rainy weather](media/function-isblank-isempty/seattle-rainy.png)
 
-1. Add a label control.  Set its **Text** property to this formula:
+1. Click or tap the back arrow to return to the default workspace.
+
+1. Add a **Label** control, and set its **Text** property to this formula:
 
 	**IsBlank( First( Cities ).Weather )**
 
-	The label will display **false** as the Weather field contains a value ("Rainy").
+	The label shows **false** because the **Weather** field contains a value ("Rainy").
 
-1. Add a second button control.  Set its **OnSelect** property to this formula:
+1. Add a second button, and set its **OnSelect** property to this formula:
 
 	**Patch( Cities, First( Cities ), { Weather: Blank() } )**
 
-	The **Patch** function will replace the **Weather** field of the first record in **Cities** with a *blank*, removing the "Rainy" that was there previously.
+1. Preview your app, click or tap the button that you added, and then close Preview.  
 
-	![Collection showing Seattle with a blank Weather](media/function-isblank-isempty/seattle-blank.png)
+	The **Weather** field of the first record in **Cities** is replaced with a *blank*, removing the "Rainy" that was there previously.
 
-	The label control we previously added will now display **true** as the weather field no longer contains a value.
+	![Collection showing Seattle with a blank Weather field](media/function-isblank-isempty/seattle-blank.png)
+
+	The label shows **true** because the **Weather** field no longer contains a value.
 
 ### IsBlank ###
 
@@ -101,19 +107,19 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 	**If( IsBlank( FirstName.Text ), "First Name is a required field." )**
 
-	By default, the **[Text](../controls/properties-core.md)** property of a text-input control is set to **"Input Text"**. Because the control contains a value, it isn't blank, and the label control doesn't display any message.
+	By default, the **[Text](../controls/properties-core.md)** property of a text-input control is set to **"Text input"**. Because the property contains a value, it isn't blank, and the label doesn't display any message.
 
 1. Remove all the characters from the text-input control, including any spaces.
 
-	Because the control no longer contains any characters, its **[Text](../controls/properties-core.md)** property will be *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
+	Because the **[Text](../controls/properties-core.md)** property no longer contains any characters, it's *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 
-You can perform validation by using other tools. See the **[Validate](function-validate.md)** function and [working with data sources](../working-with-data-sources.md).  
+For information about how to perform validation by using other tools, see the **[Validate](function-validate.md)** function and [working with data sources](../working-with-data-sources.md).  
 
 Other examples:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **IsBlank( Blank() )** | Tests the return value from the **Blank** function which always returns a *blank* value. | **true** |
+| **IsBlank( Blank() )** | Tests the return value from the **Blank** function, which always returns a *blank* value. | **true** |
 | **IsBlank( "" )** | A string that contains no characters. | **true** |
 | **IsBlank( "Hello" )** | A string that contains one or more characters. | **false** |
 | **IsBlank( *AnyCollection* )** | Because the [collection](../working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. | **false** |
@@ -122,19 +128,25 @@ Other examples:
 
 ### IsEmpty ###
 
-1. Create a collection named **IceCream** by setting the **[OnSelect](../controls/properties-core.md)** property of a button to this formula and then pressing the button:
+1. Create an app from scratch, and add a **Button** control.
+
+1. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
 
 	**Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
 
-	The collection contains this data:
+1. Preview your app, click or tap the button that you added, and then close Preview.  
+
+	A collection named **IceCream** is created and contains this data:
 
 	![](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
 
 	This collection has two records and isn't empty. **IsEmpty( IceCream )** returns **false**, and **CountRows( IceCream )** returns **2**.
 
-2. Empty the collection by changing the **[OnSelect](../controls/properties-core.md)** property of the button to this formula and then pressing the button:
+1. Add a second button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
 
 	**Clear( IceCream )**
+
+1. Preview your app, click or tap the second button, and then close Preview.  
 
 	The collection is now empty:
 
