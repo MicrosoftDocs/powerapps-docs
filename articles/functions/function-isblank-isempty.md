@@ -32,7 +32,7 @@ Any property or calculated value can be *blank*.  For example, a Boolean value n
 
 ## Description ##
 
-The **Blank** function returns a *blank* value.  Use this store a NULL value in a data source that supports these values.  
+The **Blank** function returns a *blank* value.  Use this to store a NULL value in a data source that supports these values, effectively removing any value from the field.
 
 The **IsBlank** function tests for a *blank* value. *Blank* values are found in situations such as these:
 
@@ -51,7 +51,7 @@ The return value for both functions is a Boolean **true** or **false**.
 
 ## Syntax ##
 
-**Blank**(&nbsp;)
+**Blank**()
 
 **IsBlank**( *Value* )
 
@@ -62,6 +62,36 @@ The return value for both functions is a Boolean **true** or **false**.
 - *Table* - Required. Table to test for records.
 
 ## Examples ##
+
+### Blank ###
+
+1. Create an app from scratch and add a button control.
+
+1. Set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+
+	**ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )**
+
+1. Preview your app and press the button you added.  
+
+1. Exit preview.  Use the **File** menu and select **Collections** to view the **Cities** collection.  You will see one record with "Seattle" and "Rainy":
+
+	![Collection showing Seattle with Rainy weather](media/function-isblank-isempty/seattle-rainy.png)
+
+1. Add a label control.  Set its **Text** property to this formula:
+
+	**IsBlank( First( Cities ).Weather )**
+
+	The label will display **false** as the Weather field contains a value ("Rainy").
+
+1. Add a second button control.  Set its **OnSelect** property to this formula:
+
+	**Patch( Cities, First( Cities ), { Weather: Blank() } )**
+
+	The **Patch** function will replace the **Weather** field of the first record in **Cities** with a *blank*, removing the "Rainy" that was there previously.
+
+	![Collection showing Seattle with a blank Weather](media/function-isblank-isempty/seattle-blank.png)
+
+	Now the label control will now display **true** as the weather field no longer contains a value.
 
 ### IsBlank ###
 
@@ -83,7 +113,7 @@ Other examples:
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **IsBlank( Blank() )** | Tests the return value from **Blank**. | **true** |
+| **IsBlank( Blank() )** | Tests the return value from the **Blank** function which always returns a *blank* value. | **true** |
 | **IsBlank( "" )** | A string that contains no characters. | **true** |
 | **IsBlank( "Hello" )** | A string that contains one or more characters. | **false** |
 | **IsBlank( *AnyCollection* )** | Because the [collection](../working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. | **false** |
