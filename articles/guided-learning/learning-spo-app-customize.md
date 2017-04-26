@@ -33,16 +33,14 @@ With the right basic layout, now change the fields that are displayed. Click or 
 
 ![Change the browse screen fields](./media/learning-spo-app-customize/generate-browse-fields.png)
 
-
 ## Details screen
 On the details screen, we want to change the order of the fields and display the image also. There are different controls on this screen, so the process is a little different from the browse screen. Click or tap a field, then in the right-hand pane, drag the **Title** field to the top. Then click or tap the **Image** field to display it.
 
 ![Change the detail screen fields](./media/learning-spo-app-customize/generate-detail-fields.png)
 
-
-## Edit/create screen 
-Finally, on the screen where you edit and create entries, we want to change a field so it's easier to enter text. Click or tap the **Overview** field drop-down and choose the **Edit Multi-line Text** control.
+## Edit/create screen
+Finally, on the screen where you edit and create entries, we want to change a field so that it's easier to enter text. Click or tap the drop-down list for the **Overview** field, and then click or tap the **Edit Multi-line Text** control.
 
 ![Change the edit screen fields](./media/learning-spo-app-customize/generate-edit-fields.png)
 
-You can see how a few basic steps can do a lot to improve the appearance and experience of using a generated app. In this topic we focused on the PowerApps Studio UI, which provides a lot of options for customizing your apps. In the next topic, we'll get into formulas, which play an important role in driving app behavior.  
+You can see how a few basic steps can do a lot to improve the appearance and experience of using a generated app. In this topic, we focused on the PowerApps Studio UI, which provides a lot of options for customizing your apps. In the next topic, we'll get into formulas, which play an important role in driving app behavior.  

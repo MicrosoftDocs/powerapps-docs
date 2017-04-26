@@ -91,7 +91,7 @@ In PowerApps, you can achieve a similar result by adding controls and setting th
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc1.png)
 
-Regardless of what numbers you type in the text input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
+Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
 <br>**TextInput1 + TextInput2**
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc2.png)
