@@ -56,8 +56,8 @@ The **Search** function finds records in a table that contain a string in one of
 **LookUp**( *Table*, *Formula* [, *ReductionFormula* ] )
 
 - *Table* - Required. Table to search.
-- *Formula* - Required. This formula is evaluated for each record of the table, and the first record that results in **true** is returned.  You can reference columns within the table.  
-- *ReductionFormula* - Optional. This formula is evaluated over the record that was found, reducing the record to a single value.  You can reference columns within the table.  If this parameter is not supplied, the function returns the full record from the table.  
+- *Formula* - Required. Formula to evaluate for each record of the table, and the first record that results in **true** is returned.  You can reference columns within the table.
+- *ReductionFormula* - Optional. Formula to evaluate over the record that was found, reducing the record to a single value.  You can reference columns within the table.  If this parameter is not used, the function returns the full record from the table.
 
 ## Examples ##
 
