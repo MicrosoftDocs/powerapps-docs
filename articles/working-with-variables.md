@@ -156,14 +156,14 @@ Let's recreate our adding machine by using a collection:
 
 	![](media/working-with-variables/collection-2.png)
 
-1. To display the running total, add a text-box control, and set its **[Text](controls/properties-core.md)** property to this formula:<br>
+1. To display the running total, add a label, and set its **[Text](controls/properties-core.md)** property to this formula:<br>
 **First(RunningTotal).Value**
 
 	This formula extracts the **Value** field of the first record of the **RunningTotal** collection. The label will automatically show the value of **RunningTotal** as it changes based on the buttons that the user selects.
 
 	![](media/working-with-variables/collection-3.png)
 
-1. To run the adding machine, press F5 to open Preview, enter numbers in the text-input controls, and select buttons.
+1. To run the adding machine, press F5 to open Preview, enter numbers in the text-input control, and select buttons.
 
 1. To return to the default workspace, press Esc.
 
