@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Customize a layout | Microsoft PowerApps"
+   pageTitle="Customize a gallery layout | Microsoft PowerApps"
    description="Specify which controls to show, which fields to show in each control, and which columns to use for sorting and searching for records."
    services=""
    suite="powerapps"
