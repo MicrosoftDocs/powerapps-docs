@@ -4,7 +4,7 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="RickSaling"
+	authors="archnair"
 	manager="anneta"
 	editor=""/>
 
@@ -14,8 +14,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/26/2016"
-   ms.author="ricksal"/>
+   ms.date="04/28/2017"
+   ms.author="archanan"/>
 
 # Register custom APIs in PowerApps
 
@@ -24,9 +24,8 @@ PowerApps can leverage any RESTful APIs hosted anywhere.  This tutorial demonstr
 ## Prerequisites
 
 - A [PowerApps account](https://powerapps.microsoft.com).
-- A Swagger file (JSON) OR a URL to a Swagger definition for your custom API. If you don't have one, we'll show you several options to create the Swagger file.
+- A Swagger file (JSON), URL to a Swagger definition OR a Postman collection for your API. If you don't have one, we'll show you several options to create the Swagger file or the Postman collection.
 - An image to use as an icon for your custom API (optional).
-
 
 ## Authentication
 
@@ -70,7 +69,7 @@ If your API endpoint allows unauthenticated access, you should remove the ```sec
 
 ## Register a custom API
 
-### Step 1: Create a Swagger file
+### Step 1a: Create a Swagger file
 
 You can create a Swagger file from *any* API endpoint, including:
 
@@ -96,9 +95,16 @@ If your API is built with Azure App Service or Azure Functions, see [Exporting a
 
 - To customize your Swagger document to work with PowerApps, see [Customize your Swagger definition](customapi-how-to-swagger.md).
 
+### Step 1b: Create a Postman collection
+
+If you don't already have or want to create a Swagger file for your API, you can still easily create a custom API by using a [Postman](https://www.getpostman.com/) collection.
+
+- To get started, install the [Postman app](https://www.getpostman.com/apps)
+- See [how to create Postman Collection](postman-collection.md) to learn more details
+
 ### Step 2: Register the custom API
 
-Now that the Swagger file (JSON file) is generated for the custom API, register the custom API in PowerApps
+Use the Swagger file (JSON file) or the Postman collection to register the custom API in PowerApps.
 
 1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **...** and select **Manage custom APIs** in the upper-right corner.
 
@@ -106,22 +112,26 @@ Now that the Swagger file (JSON file) is generated for the custom API, register 
 
 	![Create custom API](./media/register-custom-api/managecustomapi.png)  
 
-2. Select **New custom API**:  
+1. Select **Create custom API**:  
 
-	![Custom API properties](./media/register-custom-api/connecttocustomapi.png)  
+	![Custom API properties](./media/register-custom-api/newcustomapi.png)
 
-	You will be prompted for the properties of your API.  
+1. In the **General** tab, choose how you want to create the custom API
+	- Upload Swagger
+	- Paste Swagger URL
+	- [Upload Postman collection V1](postman-collection.md)
 
-	| Property | Description |
-	|----------|-------------|
-	| Swagger URL OR Swagger API definition  | Paste a URL to a Swagger definition OR browse to the JSON file created from Swagger. |
-	| Name | Type the name of your custom API. |
-	| Upload API icon | Browse an image file for the icon (optional). |
-	| Description | Type a description of your custom API (optional). |
+	 Note: The Postman collection will be parsed and translated into a Swagger definition file.
 
-	Select **Next**.
+	![How to create custom API](./media/register-custom-api/choosehowtocreate.png)
 
-3. Enter any authentication properties. If the JSON file uses OAuth2 authentication in the ```securityDefintions``` object, you are prompted for the following values:  
+	Upload an icon for your custom API. Description, Host and Base URL fields will be auto populated with the information from the Swagger file. If not, you can add information to those fields. Select **Continue**.
+
+1. In the **Security** tab, enter any authentication properties. The Authentication type will be auto selected based on what is defined in your Swagger ```securityDefintions``` object.
+
+  ![Authentication types](./media/register-custom-api/authenticationtypes.png)
+
+  For example, if the Swagger uses OAuth2 authentication in the ```securityDefintions``` object, you are prompted for the following values:
 
 	| Property | Description |
 	|----------|-------------|
@@ -132,17 +142,41 @@ Now that the Swagger file (JSON file) is generated for the custom API, register 
 
 	If the JSON file does not use the ```securityDefintions``` object, then no additional values may be needed.
 
-4. Select **Create**.
+	Note: When using a Postman collection, Authentication type will be auto populated only when using supported authentication types such as OAuth 2.0 or Basic.
 
-	Your custom API is now displayed under **Custom**.
+1. In the **Definitions** tab, all the operations defined in your Swagger file or Postman collection, along with the Request and Response, will be auto populated. At this stage, if you have all your required operations defined, you can proceed to the next step.
 
-	![Available APIs](./media/register-custom-api/mycustomapi.png)  
+	![Definition tab](./media/register-custom-api/definitiontab.png)
 
-	> [AZURE.TIP] If the Swagger file fails to validate, there may be extra characters. For example, most data should be in quotes, including website URLs.
+  If you want to edit existing actions or add new actions to your custom API, continue reading below.
 
-5. Now that the custom API is registered, you must create a connection to the custom API so it can be used in your apps.  Click the **+** to the right of the **Modified** date of your custom API and then complete any necessary steps to sign in to your API's data source. If you're using **OAuth** authentication with your API, you might be presented a sign-in screen. For API Key authentication, you might be prompted for a key value.
+	If you want to add a new action that was not already in your Swagger file or Postman collection, select **New action** in the left pane and fill in the General section with the name, description and visibility of your operation.
 
-### Step 3: Add the custom API to an app
+	In the Request section, select **Import from sample** on the top right. You will see a form where you can paste in a sample request. These sample requests are usually available on the API documentation.
+
+	For example, for the [Cognitive Services Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api), you can get information about the HTTP Verb, Request URL, Headers, Body [here](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/operations/56f30ceeeda5650db055a3c6).
+
+	![Import from sample](./media/register-custom-api/importfromsample.png)
+
+	Select **Import** to complete the Request definition. You can similarly define the Response too.
+
+1. Once you have all your operations defined, select **Create** to create your custom API.
+
+1. You must create a connection to the custom API so it can be used in your apps. Click on the **+** next to the custom API in the list then complete any necessary steps to sign in to your API. If you're using **OAuth** authentication with your API, you might be presented a sign-in screen. For API Key authentication, you might be prompted for a key value.
+
+### Step 3: Test the custom API
+
+1. Once you have created your custom API, you can go to the **Test** tab, to test the operations defined in the custom API.
+
+	Choose a connection and provide input parameters to test the operation.
+
+	![Test custom API](./media/register-custom-api/testcustomapi.png)
+
+	If the call was successful, you will see a valid response.
+
+	![Test API Response](./media/register-custom-api/testapiresponse.png)
+
+### Step 4: Add the custom API to an app
 [Add the custom API to an app](add-data-connection.md) as you would any other data source, and then use the API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](connection-office365-outlook.md) is an example of using the Office 365 API.
 
 ## Share a custom API
@@ -168,6 +202,8 @@ Users can also share custom APIs with each other.
 - The size of your Swagger file should be under 1MB.
 
 ## Next steps
+
+[Learn how to create a Postman collection](postman-collection.md)
 
 [Learn about custom Swagger extensions](customapi-how-to-swagger.md).
 
