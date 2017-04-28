@@ -26,11 +26,11 @@ Provides information about a [data source](../working-with-data-sources.md).
 
 Data sources can provide a wealth of information to optimize the user experience.
 
-You can use [column](../working-with-tables.md#columns)-level information to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function.  The **[Validate](function-validate.md)** function uses this same information.
+You can use [column](../working-with-tables.md#columns)-level information to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function. The **[Validate](function-validate.md)** function uses this same information.
 
 You can use information at the data-source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have permissions to edit and create [records](../working-with-tables.md#records).
 
-Data sources vary in how much information they provide, including not providing any at all.  [Collections](../working-with-data-sources.md#collections) provide no information.  If a piece of information isn't provided, a default is used, or *blank* is returned.
+Data sources vary in how much information they provide, including not providing any at all.  [Collections](../working-with-data-sources.md#collections) provide no information. If a piece of information isn't provided, a default is used, or *blank* is returned.
 
 ## Description ##
 
@@ -40,11 +40,11 @@ You can use **DataSourceInfo** to obtain information about a particular column o
 
 | Information Argument | Result Type | Description |
 |-------------|-------------|-------------|
-| **DataSourceInfo.DisplayName** | String | Display name for the column.  If no display name is defined, returns the column name. |
-| **DataSourceInfo.MaxLength** | Number | Maximum number of characters that the column can hold.  Applies only to columns that contain strings.  If a maximum isn't set, returns *blank*. |
-| **DataSourceInfo.MaxValue** | Number | Maximum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a maximum isn't set, returns *blank*.|
-| **DataSourceInfo.MinValue** | Number | Minimum numeric value that a column can hold.  Applies only to columns that contain numbers.  If a minimum isn't set, returns *blank*.|
-| **DataSourceInfo.Required** | Boolean | Is a value required for this column?  If not set by the data source, returns **false**.  |
+| **DataSourceInfo.DisplayName** | String | Display name for the column. If no display name is defined, returns the column name. |
+| **DataSourceInfo.MaxLength** | Number | Maximum number of characters that the column can hold. Applies only to columns that contain strings. If a maximum isn't set, returns *blank*. |
+| **DataSourceInfo.MaxValue** | Number | Maximum numeric value that a column can hold. Applies only to columns that contain numbers. If a maximum isn't set, returns *blank*.|
+| **DataSourceInfo.MinValue** | Number | Minimum numeric value that a column can hold. Applies only to columns that contain numbers. If a minimum isn't set, returns *blank*.|
+| **DataSourceInfo.Required** | Boolean | Is a value required for this column? If not set by the data source, returns **false**.  |
 
 The third argument is the name of a column as a string.  For example, column **Phone** in collection **People** would be passed as **"Phone"** including the double quotes.
 
@@ -54,18 +54,19 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 
 | Information Argument | Result Type | Description |
 |-------------|-------------|-------------|
-| **DataSourceInfo.CreatePermission** | Boolean | Does the current user have permission to create records in this data source?  If not set by the data source, returns **true**. |
-| **DataSourceInfo.DeletePermission** | Boolean | Does the current user have permission to delete records in this data source?  If not set by the data source, returns **true**.|
-| **DataSourceInfo.EditPermission** | Boolean | Does the current user have permission to edit records in this data source?  If not set by the data source, returns **true**.|
-| **DataSourceInfo.ReadPermission** | Boolean | Does the current user have permission to read records in this data source?  If not set by the data source, returns **true**.|
+| **DataSourceInfo.AllowedValues** | Boolean | Display a list of all available types of permission that are allowed for the current user in this data source. If not set by the data source, returns *blank*. |
+| **DataSourceInfo.CreatePermission** | Boolean | Does the current user have permission to create records in this data source? If not set by the data source, returns **true**. |
+| **DataSourceInfo.DeletePermission** | Boolean | Does the current user have permission to delete records in this data source? If not set by the data source, returns **true**.|
+| **DataSourceInfo.EditPermission** | Boolean | Does the current user have permission to edit records in this data source? If not set by the data source, returns **true**.|
+| **DataSourceInfo.ReadPermission** | Boolean | Does the current user have permission to read records in this data source? If not set by the data source, returns **true**.|
 
 ## Syntax ##
 
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
 
 - *DataSource* – Required. The data source to use.
-- *Information* – Required.  The type of information that you want to retrieve.
-- *ColumnName* – Optional.  For column-level information, the column name as a string.  Column **Phone** would be passed as **"Phone"**, including the double quotes.  For information at the data-source level, the *ColumnName* argument can't be used.
+- *Information* – Required. The type of information that you want to retrieve.
+- *ColumnName* – Optional. For column-level information, the column name as a string. Column **Phone** would be passed as **"Phone"**, including the double quotes. For information at the data-source level, the *ColumnName* argument can't be used.
 
 ## Examples ##
 
