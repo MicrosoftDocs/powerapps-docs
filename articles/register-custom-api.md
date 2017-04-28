@@ -131,13 +131,6 @@ Use the Swagger file (JSON file) or the Postman collection to register the custo
 
   ![Authentication types](./media/register-custom-api/authenticationtypes.png)
 
-  For example, if the Swagger uses OAuth2 authentication in the ```securityDefintions``` object, you are prompted for the following values:
-
-	| Property | Description |
-	|----------|-------------|
-	| Client id | Using one of the supported OAuth identity providers, a client ID is provided. Type this client ID. |
-	| Client secret | Type the client secret from the identity provider you chose. |  
-
 	Refer to [Azure Resource Manager](customapi-azure-resource-manager-tutorial.md) and [Azure WebApp](customapi-web-api-tutorial.md) examples to learn how to configure AAD authentication values.
 
 	If the JSON file does not use the ```securityDefintions``` object, then no additional values may be needed.
