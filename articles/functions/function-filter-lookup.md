@@ -45,7 +45,7 @@ The **Search** function finds records in a table that contain a string in one of
 **Filter**( *Table*, *Formula1* [, *Formula2*, ... ] )
 
 - *Table* - Required. Table to search.
-- *Formula(s)* - Required. This formula evaluates each record of the table, and then returns those records that result in **true**. You can reference columns within the table. If you supply more than one formula, the results of all formulas are combined with the **[And](function-logicals.md)** function.
+- *Formula(s)* - Required. The formula by which each record of the table is evaluated. The function returns all records that result in **true**. You can reference columns within the table. If you supply more than one formula, the results of all formulas are combined with the **[And](function-logicals.md)** function.
 
 **Search**( *Table*, *SearchString*, *Column1* [, *Column2*, ... ] )
 
@@ -56,8 +56,9 @@ The **Search** function finds records in a table that contain a string in one of
 **LookUp**( *Table*, *Formula* [, *ReductionFormula* ] )
 
 - *Table* - Required. Table to search.
-- *Formula* - Required. This formula evaluates each record of the table, and the first record that results in **true** is returned. You can reference columns within the table.
-- *ReductionFormula* - Optional. This formula evaluates over the record that was found, and then reduces the record to a single value. You can reference columns within the table. If you don't use this parameter, the function returns the full record from the table.
+- *Formula* - Required.
+The formula by which each record of the table is evaluated. The function returns the first record that results in **true**. You can reference columns within the table.
+- *ReductionFormula* - Optional. This formula is evaluated over the record that was found, and then reduces the record to a single value. You can reference columns within the table. If you don't use this parameter, the function returns the full record from the table.
 
 ## Examples ##
 

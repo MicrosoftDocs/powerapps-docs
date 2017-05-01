@@ -54,7 +54,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 
 | Information Argument | Result Type | Description |
 |-------------|-------------|-------------|
-| **DataSourceInfo.AllowedValues** | Boolean | Display a list of all available types of permission that are allowed for the current user in this data source. If not set by the data source, returns *blank*. |
+| **DataSourceInfo.AllowedValues** | Boolean | What types of permissions can users be granted for this data source? If not set by the data source, returns *blank*. |
 | **DataSourceInfo.CreatePermission** | Boolean | Does the current user have permission to create records in this data source? If not set by the data source, returns **true**. |
 | **DataSourceInfo.DeletePermission** | Boolean | Does the current user have permission to delete records in this data source? If not set by the data source, returns **true**.|
 | **DataSourceInfo.EditPermission** | Boolean | Does the current user have permission to edit records in this data source? If not set by the data source, returns **true**.|

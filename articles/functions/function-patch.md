@@ -24,7 +24,7 @@ Modifies or creates one or more [records](../working-with-tables.md#records) in 
 
 Use the **Patch** function to modify records in complex situations, such as when you perform updates that require no user interaction or use forms that span multiple screens.
 
-Similar to **Patch**, the **Edit form** control is an easier way to update records in a data source. Add an **Edit form** control to provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../working-with-forms.md).
+In less complex situations, you can use the **Edit form** control to update records in a data source more easily. When you add an **Edit form** control, you provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../working-with-forms.md).
 
 ## Overview ##
 
