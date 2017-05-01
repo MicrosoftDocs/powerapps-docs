@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create Postman Collection | Microsoft PowerApps"
-	description="Create a Postman collection for registering custom APIs"
+	pageTitle="Create a Postman Collection | Microsoft PowerApps"
+	description="Create a Postman Collection for registering custom APIs"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -17,56 +17,57 @@
    ms.date="04/28/2017"
    ms.author="archanan"/>
 
-# Create a Postman Collection
+# Create a Postman Collection for a custom API
 
-[Postman](https://www.getpostman.com/) is a tool for making your API development faster and easier. This tutorial demonstrates how to create a Postman collection, that you can use to easily create [Custom APIs](register-custom-api.md).
+[Postman](https://www.getpostman.com/) is a tool for making your API development faster and easier. This tutorial demonstrates how to create a Postman collection, which you can then use to easily create [Custom APIs](register-custom-api.md) in PowerApps.
+
 
 ## Prerequisites
 
 - Install the [Postman app](https://www.getpostman.com/apps)
 
-## Create a Postman collection
 
-Let's build a postman collection for [Cognitive Services Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api).
+## Create a Postman Collection
 
-- The first step in creating a Postman collection is to create a request. When creating the request, you can set the HTTP verb, the request URL, query or path parameters, headers and the body. More details on sending request through Postman are available [here](https://www.getpostman.com/docs/requests).
+Let's build a Postman Collection for the Azure Cognitive Services [Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api). This API identifies the language, sentiment, and key phrases in text that you pass to it.
 
-- For the Detect Language API endpoint, the values would be set as follows:
+1. The first step in creating a Postman Collection is to create a request. When creating the request, you can set the HTTP verb, the request URL, query or path parameters, headers, and the body. For more information, see [Sending Requests](https://www.getpostman.com/docs/requests) in the Postman documentation. For the Detect Language API endpoint, set the values as follows:
 
-	![Postman request](./media/postman-collection/1-Request.png)
+    ![Postman request](./media/postman-collection/1-Request.png)
 
-Details of parameters and values used:
+    Details of parameters and values used:
 
-| Parameter     | Value                                                                                |
-|---------------|--------------------------------------------------------------------------------------|
-| Verb          |  POST                                                                                |
-| Request URL   | https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/languages             |
-| Params        | numberOfLanguagesToDetect                                                            |
-| Authorization | “No Auth”                                                                            |
-| Headers       |  Ocp-Apim-Subscription-Key = <your subscription key> <br/>Content-Type = application/json |
-| Body          |	<code>{<br/>&nbsp;&nbsp;&nbsp;"documents": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": "1",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"text": "Hello World"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}<code>|
+    | Parameter     | Value                                                                                |
+    |---------------|--------------------------------------------------------------------------------------|
+    | Verb          |  POST                                                                                |
+    | Request URL   | https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/languages             |
+    | Params        | numberOfLanguagesToDetect                                                            |
+    | Authorization | “No Auth”                                                                            |
+    | Headers       |  Ocp-Apim-Subscription-Key = <your subscription key> <br/>Content-Type = application/json |
+    | Body          |	<code>{<br/>&nbsp;&nbsp;&nbsp;"documents": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": "1",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"text": "Hello World"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}<code>|
 
-- Click **Send** to make the request and get the response back.
-- Save the Request into a Postman collection by clicking on **Save**.
+2. Click **Send** to make the request and get the response back.
 
-![Postman response](./media/postman-collection/2-RequestResponseSave.png)
+3. Click **Save** to save the request into a Postman Collection.
 
-- Provide a Request Name and Description in the Save Request dialog. The same values will be used for Operation Name and Description for your custom API as well.
+    ![Postman response](./media/postman-collection/2-RequestResponseSave.png)
 
-![Postman Save Collection](./media/postman-collection/3-SaveRequestNote.png)
+4. Provide a **Request name** and **Request description** in the **Save Request** dialog box. You will use these values in your custom API.
 
-- You can also save the Response of the request. Custom APIs currently only support a single response per request. If you save multiple responses per request, only the first one will be used.
+    ![Postman Save Collection](./media/postman-collection/3-SaveRequestNote.png)
 
-![Postman Save Response](./media/postman-collection/4-SaveResponse.png)
+    You can also save the response to the request. Custom APIs currently only support a single response per request. If you save multiple responses per request, only the first one is used.
 
-- Continue building your Postman collection by creating and saving other requests and responses.
+    ![Postman Save Response](./media/postman-collection/4-SaveResponse.png)
 
-- Once you have completed building the Postman collection for all your requests and responses, you can export the collection.
+5. Continue building your Postman Collection by creating and saving other requests and responses.
 
-![Postman Export](./media/postman-collection/5-Export.png)
+6. Once you have completed building the Postman Collection for all your requests and responses, export the collection.
 
-- Choose Collection v1 as the format to export your collection.
+    ![Postman Export](./media/postman-collection/5-Export.png)
 
-![Postman Export](./media/postman-collection/6-Export1.png)
+7. Choose **Collection v1** as the export format.
 
-You can now use this Postman collection for creating a [Custom API](register-custom-api.md) in PowerApps.
+    ![Postman Export](./media/postman-collection/6-Export1.png)
+
+You can now use this Postman collection to create a custom API in PowerApps. For more information, see [Register and use custom APIs in PowerApps](register-custom-api.md). 
