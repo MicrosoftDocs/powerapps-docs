@@ -69,22 +69,19 @@ Assuming you have an API with some type of authenticated access, you need a way 
 - An API that you create and deploy to any cloud hosting provider, including Azure, Amazon Web Services (AWS), Heroku, Google Cloud, and more.
 - A custom line-of-business API deployed on your network as long as the API is exposed on the public internet.
 
-Swagger files and Postman Collections use different formats, but both are language-agnostic machine-readable documents that describe your API's operations and parameters. PowerApps ultimately uses Swagger behind the scenes, so a Postman Collection is parsed and translated into a Swagger definition file. You can generate these documents using a variety of tools depending on the language and platform that your API is built on. **Note**: The file size must be less than 1MB.
+Swagger files and Postman Collections use different formats, but both are language-agnostic machine-readable documents that describe your API's operations and parameters:
+- You can generate these documents using a variety of tools depending on the language and platform that your API is built on. See the [Text Analytics API documentation](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/export?DocumentFormat=Swagger&ApiName=Azure) for an example of a Swagger file.
+- If you don't already have a Swagger file for your API and don't want to create one, you can still easily create a custom API by using a Postman Collection. See [Create a Postman Collection](postman-collection.md) for more information.
+- PowerApps ultimately uses Swagger behind the scenes, so a Postman Collection is parsed and translated into a Swagger definition file. 
 
-The following Swagger snippet is from the **DetectLanguage** function we showed in the introduction:
-
-{TODO: Add snippet here + link to https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/export?DocumentFormat=Swagger&ApiName=Azure}
-
-If you don't already have Swagger file for your API and don't want to create one, you can still easily create a custom API by using a Postman Collection. The following Postman snippet is from the same **DetectLanguage** function. You can see that the formats are different, but they both describe the function.
-
-{TODO: Add snippet here}
+**Note**: Your file size must be less than 1MB.
 
 
 ### Getting started with Swagger and Postman
 
 - If you're new to Swagger, see [Getting Started with Swagger](http://swagger.io/getting-started/) on the swagger.io site.
-- If you're new to Postman, install the [Postman app](https://www.getpostman.com/apps) from their site, and see [Create a Postman Collection](postman-collection.md) to learn more details.
-- If your API is built with Azure API Apps or Azure Functions, see [Exporting an Azure hosted API to PowerApps](https://docs.microsoft.com/azure/app-service/app-service-export-api-to-powerapps-and-flow) and Microsoft Flow to learn more.
+- If you're new to Postman, install the [Postman app](https://www.getpostman.com/apps) from their site.
+- If your API is built with Azure API Apps or Azure Functions, see [Exporting an Azure hosted API to PowerApps and Microsoft Flow](https://docs.microsoft.com/azure/app-service/app-service-export-api-to-powerapps-and-flow) for more information.
 
 
 ## Register your API
