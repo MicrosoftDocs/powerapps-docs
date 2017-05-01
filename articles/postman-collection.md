@@ -33,7 +33,7 @@ Let's build a Postman Collection for the Azure Cognitive Services [Text Analytic
 
 1. The first step in creating a Postman Collection is to create a request. When creating the request, you can set the HTTP verb, the request URL, query or path parameters, headers, and the body. For more information, see [Sending Requests](https://www.getpostman.com/docs/requests) in the Postman documentation. For the Detect Language API endpoint, set the values as follows:
 
-    ![Postman request](./media/postman-collection/1-Request.png)
+    ![Postman request](./media/postman-collection/request.png)
 
     Details of parameters and values used:
 
@@ -50,24 +50,24 @@ Let's build a Postman Collection for the Azure Cognitive Services [Text Analytic
 
 3. Click **Save** to save the request into a Postman Collection.
 
-    ![Postman response](./media/postman-collection/2-RequestResponseSave.png)
+    ![Postman response](./media/postman-collection/request-response-save.png)
 
 4. Provide a **Request name** and **Request description** in the **Save Request** dialog box. You will use these values in your custom API.
 
-    ![Postman Save Collection](./media/postman-collection/3-SaveRequestNote.png)
+    ![Postman Save Collection](./media/postman-collection/save-request-note.png)
 
     You can also save the response to the request. Custom APIs currently only support a single response per request. If you save multiple responses per request, only the first one is used.
 
-    ![Postman Save Response](./media/postman-collection/4-SaveResponse.png)
+    ![Postman Save Response](./media/postman-collection/save-response.png)
 
 5. Continue building your Postman Collection by creating and saving other requests and responses.
 
 6. Once you have completed building the Postman Collection for all your requests and responses, export the collection.
 
-    ![Postman Export](./media/postman-collection/5-Export.png)
+    ![Postman Export](./media/postman-collection/export.png)
 
 7. Choose **Collection v1** as the export format.
 
-    ![Postman Export](./media/postman-collection/6-Export1.png)
+    ![Postman Export](./media/postman-collection/export2.png)
 
 You can now use this Postman collection to create a custom API in PowerApps. For more information, see [Register and use custom APIs in PowerApps](register-custom-api.md). 
