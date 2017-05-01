@@ -18,22 +18,11 @@
    ms.author="archanan"/>
 
 # Register and use custom APIs in PowerApps
+PowerApps enables you to build full-featured apps with no traditional application code. But in some cases you need to extend PowerApps capabilites, and web services are a natual fit for this. Your app can connect to a service, perform operations, and get data back. When you have a web service you want to connect to with PowerApps, you register the service as a custom API. This process enables PowerApps to understand the characteristics of your web API, including the authentication that it requires, the operations that it supports, and the parameters and outputs for each of those operations.
 
-{TODO: search for - ' | &lt; | &gt; | & | collection | en-us | AZURE.NOTE | {} | click }
+In this topic, we'll look at the steps required to register and use a custom API, and we'll use the Azure Cognitive Services [Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api). This API identifies the language, sentiment, and key phrases in text that you pass to it. Below is a graphic that shows the interaction between the service, the custom API we create from it, and the app that calls the API.
 
-{TODO} 
-
-Make sure of function name to call from COG API
-
-Call it Text Analytics API throughout
-
-Why you should care + graphic that shows an Azure Function for calling a COGSERVICES API--
-When you have a web service that you want to be able to automate with Microsoft Flow, you'll first need to build a custom API. By registering a custom API, you teach Microsoft Flow about the characteristics of your web API, including the authentication that it requires, the triggers and actions that it supports, and the parameters and outputs for each of those actions.
-You can use custom APIs in PowerApps to extend the capabilities of your app, enabli it to do things that are not ossible or are mor difficult in PA.
-For example COGSERVICESGraphic calling COGSERVICES app
-PowerApps can leverage any RESTful APIs hosted anywhere. This tutorial demonstrates registering and using a custom API.
-{/TODO}
-
+{TODO: add graphic}
 
 ## Prerequisites
 
@@ -168,13 +157,7 @@ You will now use the Swagger file or Postman Collection to register your custom 
 
 ## Use your API
 
-{TODO: Make these into steps}
-
-Now that the custom API is registered, you next create a connection to the custom API so it can be used in your apps. Click the + to the right of the Modified date of your custom API and then complete any necessary steps to sign in to your API's data source. If you're using OAuth authentication with your API, you might be presented a sign-in screen. For API Key authentication, you might be prompted for a key value.
-
-{TODO: Use COGSERVICES function}
-
-[Add the custom API to an app](https://powerapps.microsoft.com/tutorials/add-data-connection/) as you would any other data source, and then use the API within the function bar, a text box, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](https://powerapps.microsoft.com/tutorials/connection-office365-outlook/) is an example of using the Office 365 API.
+{TODO: Show connection to new API, then calling the API from an app to return the language of the text I pass.}
 
 ### Quota and throttling
 
@@ -182,9 +165,9 @@ Now that the custom API is registered, you next create a connection to the custo
 - For each connection created on a custom API, users can make up to 500 requests per minute.
 
 ## Share your API
-Users can also share custom APIs with each other. You can share custom APIs only with other users in your organization. Keep in mind that deleting a custom API deletes all the connections to the API.
+Now that you have a custom API, you can share it with other users in your organization (but not publicly using PowerApps). Keep in mind that when you share an API, others might start to depend on it, and deleting a custom API deletes all the connections to the API.
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **...** and select **Manage custom APIs** in the upper-right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom APIs** in the upper right corner.
 
 	![New connection](./media/register-custom-api/managecustomapi.png)
 
