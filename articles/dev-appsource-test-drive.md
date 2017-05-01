@@ -4,7 +4,7 @@
    services=""
    suite="powerapps"
    documentationCenter="na"
-   authors="mgblythe"
+   authors="linhtranms"
    manager="anneta"
    editor=""
    tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/28/2016"
-   ms.author="mblythe"/>
+   ms.author="litran"/>
 
 
 # AppSource Test Drive #
