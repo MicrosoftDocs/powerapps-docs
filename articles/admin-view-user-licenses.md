@@ -43,7 +43,7 @@ The file might take a few minutes to download. Wait a few minutes for the .csv f
 Note: If you close the window before the file finishes downloading, you might have to restart the process.
 
 This example shows two users who have licenses to both PowerApps and Microsoft Flow through different means. Jane Doe has access through a subscription to Office 365, and John Doe got a trial license for each product.
-![File and Share](./media/admin-view-user-licenses/table.png)
+![File and Share](./media/admin-view-user-licenses/table2.png)
 
 Both users have accessed PowerApps or Microsoft Flow. There might be more users in the organization who have license to access PowerApps and Microsoft Flow, but have never accessed these products. These users will not appear in this list. You can view all the user licenses from [Office 365 admin center][1].
 If a user has left the organization, the list will show Unknown in columns such as User name and Email address. If the list shows Unknown but nobody has left the organization, download the list again after several minutes.
