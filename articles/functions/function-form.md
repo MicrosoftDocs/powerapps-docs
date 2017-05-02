@@ -19,7 +19,7 @@
    ms.author="gregli"/>
 
 # EditForm, NewForm, SubmitForm, and ResetForm functions in PowerApps #
-Edit or create an item, save the contents, and reset the controls in an **[Edit Form](../controls/control-form-detail.md)** control.
+Edit or create an item, save the contents, and reset the controls in an **[Edit form](../controls/control-form-detail.md)** control.
 
 ## Description ##
 These functions are often invoked from the **[OnSelect](../controls/properties-core.md)** formula of a **[Button](../controls/control-button.md)** or **[Image](../controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can [use controls and these functions together](../working-with-forms.md) to create a complete solution.

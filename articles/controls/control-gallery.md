@@ -44,8 +44,6 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**Direction** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.
-
 **[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
@@ -74,11 +72,11 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**WrapCount** – How many records appear in each item of a gallery.
+**WrapCount** – Number of items shown per row or column based on horizontal or vertical layout.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions ##
 

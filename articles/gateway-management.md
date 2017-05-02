@@ -20,7 +20,18 @@
 # Manage an on-premises data gateway in PowerApps #
 Install an on-premises data gateway to transfer data quickly and securely between PowerApps and a data source that's not in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. View all gateways for which you have administrative permissions, and manage permissions and connections for those gateways.
 
-**Prerequisites**
+With a gateway, you can connect to on-premises data over these connections:
+
+- SharePoint
+- SQL Server
+- Oracle
+- Informix
+- Filesystem
+- DB2
+
+**Note:** For SharePoint, gateways support HTTP traffic but not HTTPS traffic.
+
+## Prerequisites ##
 
 - The user name and password that you used to [sign up](signup-for-powerapps.md) for PowerApps
 - Administrative permissions on a gateway (You have these permissions by default for each gateway that you install, and an administrator of another gateway can grant you these permissions for that gateway.)

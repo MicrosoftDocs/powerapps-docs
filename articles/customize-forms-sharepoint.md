@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Customize forms in PowerApps | Microsoft PowerApps"
+   pageTitle="Customize forms | Microsoft PowerApps"
    description="Specify which data to show, in which order to show them, and in which controls."
    services=""
    suite="powerapps"

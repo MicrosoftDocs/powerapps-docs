@@ -1,5 +1,5 @@
  <properties
-	pageTitle="Samples and other resources | Microsoft PowerApps"
+	pageTitle="Samples and other resources for the Common Data Service | Microsoft PowerApps"
 	description="Samples and other resources you can use to create apps."
 	services="powerapps"
 	documentationCenter="na"
@@ -17,7 +17,7 @@
    ms.date="12/06/2016"
    ms.author="kfend"/>
 
-# Samples and other resources #
+# Samples and other resources  for the Common Data Service #
 
 ## Samples ##
 There are several samples that use the Common Data Service. To find these samples, on [powerapps.com](https://web.powerapps.com), select **Home** in the navigation pane.

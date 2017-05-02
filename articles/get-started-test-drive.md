@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="litran"/>
+   ms.date="04/03/2017"
+   ms.author="karthikb"/>
 
 # Create and run an app from a template #
 Create an app automatically based on a template for specific scenario, and then run it to understand its default behavior. Experiment with how to customize an app, and then save and share it with others.
@@ -30,13 +30,13 @@ Create an app automatically based on a template for specific scenario, and then 
 - A cloud-storage account such as DropBox, OneDrive, or Google Drive.
 
 ## Create an app ##
-1. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge of the screen).
+1. From PowerApps Studio for Windows or PowerApps Studio for web, click or tap **New** (near the left edge of the screen).
 
 	![The New option on the File menu](./media/get-started-test-drive/file-new.png)
 
 1.  On the **App templates** tile, click or tap **Phone layout**.
 
-	**Note:** You can create an app for a tablet, but this tutorial focuses on the phone option.
+	**Note:** You can also create an app from a template for a tablet layout, but this tutorial focuses on the phone option.
 
 	![The option to create an app for a tablet or a phone](./media/get-started-test-drive/phone-app.png)
 

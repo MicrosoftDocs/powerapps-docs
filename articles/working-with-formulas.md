@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Getting started with formulas | Microsoft PowerApps"
+	pageTitle="Get started with formulas | Microsoft PowerApps"
 	description="Use formulas to customize an app."
 	services=""
 	suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="04/26/2016"
    ms.author="gregli"/>
 
-# Getting started with formulas #
+# Get started with formulas #
 Configure your app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
 - In Excel, you build formulas that, for example, populate cells and create tables and charts.
@@ -158,3 +158,8 @@ The properties list shows properties alphabetically, but you can also view all t
 You can edit formulas directly within this view.  With the control selector at the top of the pane, you can quickly find a control to work with.  And with the property search, you can quickly find a property of that control.
 
 Initially, this view shows the most important properties.  To reveal all the properties, click the down arrow at the bottom of the pane.  Each control has a long list of properties that govern all aspects of the control's behavior and appearance. You can scroll through the list or search for a property by typing in the box at the top of the pane.
+
+## Formula syntax ##
+As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in PowerApps.
+
+![syntax highlighting](./media/working-with-formulas/syntax-highlighting.png)

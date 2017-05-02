@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Understanding Common Data Service entities | Microsoft PowerApps"
+   pageTitle="Understand Common Data Service entities | Microsoft PowerApps"
    description="Define and use entities that map to your business data and processes"
    services=""
    suite="powerapps"
@@ -20,7 +20,7 @@
    ms.date="12/09/2016"
    ms.author="mblythe"/>
 
-# Understanding entities
+# Understand entities
 In the first topic in this section, we introduced you to the Common Data Service, which includes a common data model. The model in turn contains entities. Entities are chunks of shared data that can be modified, stored, retrieved, and interacted with. In this topic, you'll learn more about entities, fields, and data types.
 
 
@@ -41,7 +41,7 @@ The entities are grouped into categories so it's easy to see which ones typicall
 
 
 ## Fields and data types
-Each entity contains a set of default fields that you can't change or delete. Some of those fields, like **Contact ID**, are specific to an entity. Others, like **Created on date time**, are common to all entities. You can extend standard entities by adding fields. Just click or tap **Add field** and specify the new field's properties. 
+Each entity contains a set of default fields that you can't change or delete. Some of those fields, like **Contact ID**, are specific to an entity. Others, like **Created on date time**, are common to all entities. You can extend standard entities by adding fields. Just click or tap **Add field** and specify the new field's properties.
 
 ![Contact entity fields and data types](./media/learning-common-data-service-entities/contact-entity-fields.png)
 
@@ -60,7 +60,7 @@ When you open an entity, you see a lot of information and several actions that y
 ![Entity tabs](./media/learning-common-data-service-entities/entity-tabs.png)
 
 - **Fields**: see fields and data types, and add fields, all of which we discussed above.
-- **Key**: the field that identifies each row in an entity, like Contact ID for the Contact entity. 
+- **Key**: the field that identifies each row in an entity, like Contact ID for the Contact entity.
 - **Relationships**: connections between related entities like Product and Product category. We'll see an example in the next topic.
 - **Field groups**: used to control various behaviors, like which fields to automatically show when you create an app screen in PowerApps.
 - **Data**: browse sample data and your own data after it's imported.
@@ -70,7 +70,7 @@ When you open an entity, you see a lot of information and several actions that y
 - **Open in Excel**: if you have the PowerApps add-in installed, use this option to explore and edit your data in Excel.
 - **Import data**: bring in data from Excel and CSV files.
 - **Export data**: export data to an Excel file.
-- **Export template**: export the structure of an entity to an Excel file so you can populate the file and import it back into the entity. 
+- **Export template**: export the structure of an entity to an Excel file so you can populate the file and import it back into the entity.
 - **Settings** and **Delete**: not available for standard entities.
 
 
@@ -80,4 +80,3 @@ Now that you understand what entities are, we'll look at how to connect to the C
 ![Connect to entity in PowerApps Studio](./media/learning-common-data-service-entities/connect-to-standard-entity.png)
 
 In the next topic, we'll show you how to create custom entities, as well as relationships between entities.
-

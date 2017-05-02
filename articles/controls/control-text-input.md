@@ -46,6 +46,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
+**DelayOutput** – When set to true, user input is registered after half a second delay.  Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).
+
 **[Disabled](properties-core.md)** – Whether the user can interact with the control.
 
 **[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
@@ -120,9 +122,9 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of the screen.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the screen.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions ##
 

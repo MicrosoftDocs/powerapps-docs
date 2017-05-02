@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Show the current user details or information in PowerApps | Microsoft PowerApps"
+	pageTitle="Show details about the current user | Microsoft PowerApps"
 	description="Insert the User function to display the name and email address of the signed-in user in PowerApps"
 	services=""
 	suite="powerapps"

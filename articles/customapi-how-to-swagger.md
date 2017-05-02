@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Customize your Swagger definition for PowerApps | Microsoft PowerApps"
+	pageTitle="Customize your Swagger definition | Microsoft PowerApps"
 	description="View the schema extensions required by Swagger to work with PowerApps"
 	services=""
     suite="powerapps"

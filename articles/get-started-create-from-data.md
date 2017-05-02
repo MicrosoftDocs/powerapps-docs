@@ -19,152 +19,157 @@
    ms.author="ankitsar"/>
 
 # Generate an app from Excel data #
-Create an app automatically based on an Excel file in the cloud, customize the app, and then explore how it works.
+Create an app automatically based on data in an Excel file that you upload to a cloud-storage account, such as OneDrive. After you generate the app, customize it to better suit your needs, and then run it to make sure that it works as you expect.
+
+Generated apps have three screens by default:
+
+- **BrowseScreen1** shows a subset of one or more fields, a search bar, and a sort button that lets users easily find a specific record.
+- **DetailsScreen1** shows more or all fields for a specific record.
+- **EditScreen1** provides UI elements that let users create or update a record and save the changes.
+
+**Note**: You can also generate an app based on a [custom SharePoint list](app-from-sharepoint).
 
 ## Prerequisites ##
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by using the same credentials that you used to sign up.
+- [Sign up](signup-for-powerapps.md) for PowerApps, and then follow either of these steps:
+	- Install [PowerApps Studio for Windows](http://aka.ms/powerappsinstall) on a computer that's running Windows 8, Windows 8.1, or Windows 10.
+	- Open [PowerApps Studio for web](create-app-browser.md) (preview) in a browser.
+- Sign in to PowerApps by using the same credentials that you used to sign up.
+- To follow this tutorial exactly, download this [Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).
 
-	This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
+	**Important**: You can use your own Excel file if the data is formatted as a table. For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-- You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps:
+- Upload the Excel file to OneDrive or another [cloud-storage account](cloud-storage-blob-connections.md).
 
-	1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).
-
-		**Important**: If you decide to use your own Excel file, make sure that the data is formatted as a table. For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
-
-	1. Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md) such as OneDrive.
-
-	The tutorial shows how to use OneDrive, but the process is similar for the other types of accounts.
-
-**Note**: You can just as easily generate an app based on a [custom SharePoint list](app-from-sharepoint.md).
-
-## Create the app ##
-1. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge of the screen).
+## Create an app ##
+1. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge).
 
 	![New option on the File menu](./media/get-started-create-from-data/file-new.png)
 
-1. Follow any of these steps:
+2. Follow any of these steps:
+	- If your cloud-storage account appears under **Start with your data**, click or tap **Phone layout**.
 
-	- If a tile for your cloud account appears under **Start with your data**, click or tap **Phone layout** on that tile.
+ 	![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
 
-		![Option to create an app from data](./media/get-started-create-from-data/create-from-data.png)
+	- If your cloud-storage account doesn't appear under **Start with your data**, click the arrow at the end of the row of tiles. If your account appears in the list of connections, click or tap that entry.
 
-	- If a tile for your cloud account doesn't appear under **Start with your data**, click the arrow at the end of the row of tiles. If an entry for your cloud account appears in the list of connections, click or tap that entry.
+	- If your cloud-storage storage account doesn't appear under **Start with your data** or in the list of connections, click or tap **New connection**, and then click or tap the entry for your account. Click or tap **Connect**, and follow the prompts to configure the connection.
 
-	- If your cloud account doesn't appear under **Start with your data** or in the list of connections, click or tap **New connection**, and then click or tap the entry for your cloud account. Click or tap **Connect**, and then follow the prompts.
+	![Connect to OneDrive](./media/get-started-create-from-data/connect-onedrive.png)
 
-		![Connect to OneDrive](./media/get-started-create-from-data/connect-onedrive.png)
-
-1. Under **Choose an Excel file**, browse to **FlooringEstimates.xlsx**, and then click or tap it.
+3. Under **Choose an Excel file**, browse to **FlooringEstimates.xlsx**, and then click or tap it.
 
 	![FlooringEstimates Excel file](./media/get-started-create-from-data/choose-spreadsheet.png)  
 
-1. Under **Choose a table**, click or tap **FlooringEstimates**, and then click or tap **Connect**.  
+4. Under **Choose a table**, click or tap **FlooringEstimates**.  
 
 	![Select FlooringEstimates table](./media/get-started-create-from-data/choose-table.png)
 
-PowerApps builds an app that has three screens:
+5. Click or tap **Connect** to generate the app.
 
-- **BrowseScreen1** shows a list of all items and some information about them so that users can easily browse for the item they want.
-- **DetailScreen1** shows all information about a single item.
-- **EditScreen1** provides an **[Edit form](add-form.md)** control for adding an item or updating information about an item.
+6. If you're prompted to take an introductory tour, click or tap **Next** to get familiar with key areas of the PowerApps user interface (or click or tap **Skip**).
 
-## Change the app layout ##
-When an app is built automatically, heuristics suggest the best layout and content based on the data. You might need to change the app for your needs.
-
-1. If you haven't used PowerApps before, take the intro tour to get familiar with the PowerApps interface (or click or tap **Skip**).
-
-	![Opening screen of the quick tour](./media/get-started-create-from-data/quick-tour.png)
+	![Choose Next for tour](./media/get-started-create-from-data/quick-tour.png)
 
 	**Note**: You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
-1. In the right-hand pane, click or tap the **Layout** tab to open it.
+## Change the app layout ##
+When an app is created, it has a default layout based on your data, but you can customize the layout to fit your needs.
+
+1. In the left navigation bar, click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
+
+2. In the right-hand pane, with the **Layout** tab open, click or tap the layout that you want to use.
 
 	![Open the Layout tab](./media/get-started-create-from-data/open-layout-tab.png)
 
-1. On the **Layout** tab, click to tap the layout that includes images, headers, and descriptions:
+3. Click or tap the layout that includes headers, pictures, and descriptions.
 
-	![Layout option with icons](./media/get-started-create-from-data/change-layout.png)
+	![Select layout](./media/get-started-create-from-data/change-layout.png)
 
-	The layout of **BrowseScreen1** changes to reflect your selection.
+	The layout of the app changes to show a header, a picture, and a description for each record.
 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
-## Show different data ##
-1.  Just under the search box in the app that you're building, click or tap **Carpet** to select that **Text box** control and its associated list in the right-hand pane.
+## Change the data that appears ##
+1.  Under **Search items**, click or tap **Carpet** to select the **Text box** control.
+
+	The associated list is highlighted in the right-hand pane.
 
 	![Select first text box](./media/get-started-create-from-data/select-gallery-textbox.png)
 
-1. In the right-hand pane, open the highlighted list, and then click or tap **Name**.
+2. In the right-hand pane, open the highlighted list, and then click or tap **Name**.
 
 	![Set first text box](./media/get-started-create-from-data/set-gallery-textbox.png)
 
-1. Open the bottom list, and then click or tap **Category**.
+3. Open the bottom list, and then click or tap **Category**.
 
 	![Set category](./media/get-started-create-from-data/set-category.png)
 
-	**BrowseScreen1** changes to show your selections.
+	**BrowseScreen1** changes to show a name and a category for each record.
 
 	![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
 
-	**Note**: By default, you can scroll through the list (called a gallery) by using a mousewheel or by swiping up and down. To use a trackpad (or a mouse without a wheel), select the gallery, click or tap **ShowScrollbar** in the property list, and replace **false** with **true** in the formula bar.
+	**Note**: By default, you can scroll through the list (called a gallery) by using a mouse wheel or by swiping up and down on a touch screen. To use either a trackpad or a mouse without a wheel, select the gallery, click or tap **Show Scrollbar** in the property list, and then replace **false** with **true** in the formula bar.
 
-## Reorder fields in a form ##
-1. In the left navigation bar, click or tap the middle thumbnail to select **DetailScreen1**.
+## Change the order of fields in a form ##
+1. In the left navigation bar, click or tap the middle thumbnail to open the details screen (**DetailsScreen1**).
 
 	![DetailScreen 1 Thumbnail](./media/get-started-create-from-data/detail-screen-thumbnail.png)
 
-1. Click or tap the image to show options for customizing the form in the right-hand pane.
+2. Click or tap the image to show options that are available to customize the form.
 
 	![Select a card](./media/get-started-create-from-data/select-card.png)
 
-1. In the list of fields, drag the **Name** field to the top of the list.
+3. In the right-hand pane, drag the **Name** field to the top of the list.
 
 	![Move a card](./media/get-started-create-from-data/move-card.png)
 
-	The screen reflects your change.
+	The screen updates to reflect the changes you made.
 
 	![Name at top of screen](./media/get-started-create-from-data/name-first.png)
 
 ## Change a control ##
-1. In the left navigation bar, click or tap the bottom thumbnail to select **EditScreen1**.
+1. In the left navigation bar, click or tap the bottom thumbnail to open the edit screen (**EditScreen1**).
 
 	![EditScreen1 thumbnail](./media/get-started-create-from-data/edit-screen-thumbnail.png)
 
-1. Click or tap **Overview** to select that card.
+2. Click or tap **Overview**.
+
+	This step selects the Overview card. Each card contains text that describes the purpose of the card. You can also customize the controls on a card. For more information, see [Card control in PowerApps](controls/control-card.md).
 
 	![Select overview card](./media/get-started-create-from-data/select-overview.png)
 
-1. In the right-hand pane, click or tap the down arrow for the selected card, scroll down, and then click or tap **Edit multi-line text** to show the overview of each product in a control that's large enough to display the text.
+3. In the right-hand pane, click or tap the down arrow for the card, scroll down, and then click or tap **Edit multi-line text**.
+
+	This step shows an overview of each product in a control that's large enough to display the text.
 
 	![Change card](./media/get-started-create-from-data/card-selector.png)
 
 ## Run the app ##
-As you customize an app, you can test your changes by running the app in **Preview** mode, as the steps in this section demonstrate.
+As you customize an app, you can test your changes by running the app in Preview mode.
 
-1. In the left navigation pane, click or tap the top thumbnail to select **BrowseScreen1**.
+1. In the left navigation bar, click or tap the top thumbnail to open the browse screen (**BrowseScreen1**).
 
-1. Open Preview mode by pressing **F5** (or by clicking or tapping the **Preview** icon near the upper-right corner).
+2. Open Preview mode by pressing F5 or by clicking or tapping the **Play** button near the upper-right corner.
 
 	![Preview icon](./media/get-started-create-from-data/open-preview.png)
 
-1. On **BrowseScreen1**, click or tap the arrow for a record to show details about that record.
+3. On **BrowseScreen1**, click or tap the arrow to the right of a record to show the record in the details screen (**DetailsScreen1**).
 
 	![Select an arrow on BrowseScreen1](./media/get-started-create-from-data/select-record.png)
 
-1. On **DetailsScreen1**, click or tap the edit icon (in the upper-right corner) to edit the record.
+4. On **DetailsScreen1**, click or tap the pencil icon in the upper-right corner to show the record in the edit screen (**EditScreen1**).
 
 	![Edit a record](./media/get-started-create-from-data/edit-record.png)
 
-1. On **EditScreen1**, change the information in one or more fields, and then click or tap the check mark in the upper-right corner to save your changes.
+5. On **EditScreen1**, change the information in one or more fields, and then click or tap the check mark in the upper-right corner to save your changes.
 
 	![Save changes on EditScreen1](./media/get-started-create-from-data/save-record.png)
 
-1. Close Preview mode by pressing Esc (or by clicking or tapping the close icon below the title bar).
+6. Close Preview mode by pressing Esc (or by clicking or tapping the close icon below the title bar).
 
 	![Close Preview mode](./media/get-started-create-from-data/close-preview.png)
 
 ## Next steps ##
-- Press Ctrl-S to save your app so that you can run it from other devices.
-- Customize your app further, as [Create an app from scratch](get-started-create-from-blank.md) describes.
+- To save the app so that you can run it from other devices, press Ctrl-S.
+- Now that you've learned how to generate an app from data, you can [create an app from scratch](get-started-create-from-blank.md).
 - [Share the app](share-app.md) so that other people can run it.
