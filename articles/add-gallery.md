@@ -31,27 +31,31 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 ## Add a gallery ##
 
-1. In the **Options** tab of the right-hand pane, click or tap the **Layout** tab to open it.
+1. Start from inserting **New Screen** and choose **List Screen**. This new screen contains a title bar, a search bar, and a vertical gallery. You can also insert a single gallery in any screen. Here is how to do it. In the **Insert** tab of the ribbon, click the **Gallery** tab to choose which gallery you want to insert. There are 3 sets of gallery layout options namely Vertical, Horizontal, and Flexible Height, each with a respective blank layout option. Choose **Vertical** for this one.
 
-2. Click or tap the option that contains a thumbnail image, a header, and a description.
+  ![Add gallery](./media/add-gallery/gallery-dropdown.png)
 
-	![Add gallery](./media/add-gallery/add-gallery.png)
+   **Vertical**: Galleries that scroll vertically   
 
-3. Select the gallery by clicking or tapping any item in it except the first one.
+   **Horizontal**: Galleries that scroll horizontally
 
-	![Select gallery](./media/add-gallery/select-gallery.png)
+   **Flexible Height**: The height of each grid dynamically adjusts to the contained content (ex. choose this one if you want to add a News Feed to your app)
 
-4. In the right-hand pane, click or tap the data-source icon, and then click or tap the **FlooringEstimates** data source.
+2. Select the gallery and this brings the gallery pane on the right. Now choose a layout in the right-hand pane.
 
-	![Select datasource](./media/add-gallery/select-data-source.png)
+	![Add gallery](./media/add-gallery/select-layout.png)
 
-	The gallery shows the data from the source that you specified.
+3. In the right-hand pane, click the data-source, and then choose the **FlooringEstimates** data source.
+
+	![Select datasource](./media/add-gallery/choose-data.png)
+
+	The gallery shows the data from the source that you specified. And how to configure sort and search is stated in the latter part of this article.
 
 	![Show data](./media/add-gallery/show-data-default.png)
 
 ## Add a control to the gallery ##
 
-1. To edit the gallery template, select the gallery, and click or tap the pencil icon in its upper-left corner.
+1. **Decide on a gallery layout before you do any customization.** The first grid in a gallery control is the gallery template and the rest grids repeat the template. To edit the gallery template, select the first grid, and then insert a control from the ribbon. Another way to do this is to click anywhere on the gallery except the first grid and click on the pencil icon shows in its upper-left corner.
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 

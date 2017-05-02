@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Customize a layout | Microsoft PowerApps"
+   pageTitle="Customize a gallery layout | Microsoft PowerApps"
    description="Specify which controls to show, which fields to show in each control, and which columns to use for sorting and searching for records."
    services=""
    suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="10/16/2016"
    ms.author="anneta"/>
 
-# Customize a layout in PowerApps #
+# Customize a gallery layout in PowerApps #
 After you generate an app automatically in PowerApps, customize the browse screen, which appears by default. Specify which layout to use, which columns to show, and which columns to use when sorting and searching for records.
 
 - For information about how to generate an app automatically, see [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md).
@@ -38,38 +38,29 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 1. [Generate an app automatically](app-from-sharepoint.md) based on the list that you just created.
 
-## Choose a layout ##
-1. In the left navigation bar, click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
+## Customize the gallery ##
 
-	![Thumbnail for BrowseScreen1](./media/customize-layout-sharepoint/browse-thumbnail.png)
-
-1. In the right-hand pane, click or tap the layout that contains a heading and a description.
-
-	![Layout option with a heading and a description](./media/customize-layout-sharepoint/choose-layout.png)
-
-	**BrowseScreen1** shows the layout that you specified and the **Title** and **AccountID** for each item.
+1. **BrowseScreen1** shows the SharePoint list and the **Title** and **AccountID** for each item.
 
 	![Browse screen shows titles and account IDs](./media/customize-layout-sharepoint/browse-accountid.png)
 
 	Next, you'll specify that the **OrderDate** for each item will appear instead of the **AccountID**.
 
-1. Click or tap the **AccountID** for the first item on the screen.
+1. Click the **AccountID** for the first item on the screen.
 
-	When you click or tap a UI element (called a control), you select it, and a selection border with resize handles appears around that control.
+	When you click a UI element (called a control), you select it, and a selection border with resize handles appears around that control.
 
 	![Select body of first item](./media/customize-layout-sharepoint/select-body.png)
 
-1. In the right-hand pane, open the highlighted list.
+1. In the right-hand pane, choose what data field to show up in the gallery. Choose **OrderDate** for Heading1.
 
-	![Select down arrow](./media/customize-layout-sharepoint/select-down-arrow.png)
-
-1. In the list of columns that you can show, click or tap **OrderDate**.
-
-	![Show title](./media/customize-layout-sharepoint/select-orderdate.png)
+	![Show title](./media/customize-layout-sharepoint/bind-data.png)
 
 	**BrowseScreen1** reflects your change.
 
 	![Layout with dates](./media/customize-layout-sharepoint/browse-dates.png)
+
+1. Learn more about how to add controls in a gallery, please read [Show a list of items in PowerApps](add-gallery.md).
 
 ## Set the sort and search columns ##
 1. Select the **Gallery** control by clicking or tapping any record except the first one.
