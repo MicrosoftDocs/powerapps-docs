@@ -24,28 +24,33 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 **Prerequisites**
 
 - Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
-- Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
-- Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
-- In a new or existing app, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
-- If you're using an existing app, [add a screen](add-screen-context-variables.md) to it.
+- Set up the sample data:
 
-## Add a gallery ##
+	1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
+	1. Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
+	1. In a new or existing app, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
-1. Start from inserting **New Screen** and choose **List Screen**. This new screen contains a title bar, a search bar, and a vertical gallery. You can also insert a single gallery in any screen. Here is how to do it. In the **Insert** tab of the ribbon, click the **Gallery** tab to choose which gallery you want to insert. There are 3 sets of gallery layout options namely Vertical, Horizontal, and Flexible Height, each with a respective blank layout option. Choose **Vertical** for this one.
+## Add a gallery in a new screen ##
+1. On the **Home** tab, click or tap **New screen**.
 
-  ![Add gallery](./media/add-gallery/gallery-dropdown.png)
+	You can add a screen that's empty, that contains a scrollable screen, or a screen that contains a gallery with default controls.
 
-   **Vertical**: Galleries that scroll vertically   
+1. Click or tap **List screen** to add a screen that contains a title bar and a gallery that scrolls vertically.
 
-   **Horizontal**: Galleries that scroll horizontally
+	If you click or tap near the bottom of the gallery to select it, you can choose a different layout in the right-hand pane. For this tutorial, leave the default layout.
 
-   **Flexible Height**: The height of each grid dynamically adjusts to the contained content (ex. choose this one if you want to add a News Feed to your app)
+	![Choose gallery layout](./media/add-gallery/select-layout.png)
 
-2. Select the gallery and this brings the gallery pane on the right. Now choose a layout in the right-hand pane.
+## Add a gallery to an existing screen ##
+1. On the **Insert** tab, click or tap **Gallery**.
 
-	![Add gallery](./media/add-gallery/select-layout.png)
+	At this point, you can choose from galleries that are empty or that contain a default set of controls. You can specify whether the gallery should scroll vertically or horizontally. You can also add a **Flexible height** gallery, which automatically bases its size on the amount of content in each item.
 
-3. In the right-hand pane, click the data-source, and then choose the **FlooringEstimates** data source.
+  	![Add gallery](./media/add-gallery/gallery-dropdown.png)
+
+1. Click or tap the **Vertical** option that contains a default set of controls.
+
+1. In the right-hand pane, click the data-source, and then choose the **FlooringEstimates** data source.
 
 	![Select datasource](./media/add-gallery/choose-data.png)
 
