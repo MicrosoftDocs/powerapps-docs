@@ -19,7 +19,7 @@
 
 # Create a custom Web API for PowerApps
 
-This tutorial shows you how to create an ASP.NET Web API, host it on Azure Web Apps, enable Azure Active Directory authentication, and then register the ASP.NET Web API in PowerApps.  
+This tutorial shows you how to start bulding an ASP.NET Web API, host it on Azure Web Apps, enable Azure Active Directory authentication, and then register the ASP.NET Web API in PowerApps. After the API is registered, you can connect to it and call it from your app.
 
 ## Prerequisites
 
@@ -47,11 +47,11 @@ This tutorial shows you how to create an ASP.NET Web API, host it on Azure Web A
 
     Select your Azure account, type a **Web App name** (or leave the default), and select your Azure **Subscription**.  Select or create an **App Service plan** (a collection of Web Apps within your subscription).  Select or create a **Resource group** (a grouping of Azure resources within your subscription).  Select the region where the Web App should be deployed.  If required for your Web API, select or create an Azure **Database server**.  Finally, click **OK**.
 
-5. Create your Web API.
+5. Build out your Web API.
 
-    >[AZURE.NOTE] To get started with ASP.NET Web API, you can try some of the [official tutorials](http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api).
+    >[AZURE.NOTE] If you don't already have code ready for a Web API, try the tutorial [Getting Started with ASP.NET Web API 2 (C#)](http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api).
 
-6. To connect our Web API to PowerApps, we'll need a [Swagger](http://swagger.io/) file that describes its operations.  You could write a Swagger of our own using the [online editor](http://editor.swagger.io/), but for this tutorial, you'll use an open-source tool named [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle/blob/master/README.md).  Install the Swashbuckle Nuget package in your Visual Studio project by clicking **Tools** > **NuGet Package Manager** > **Package Manager Console**, and then, in the Package Managet Console, type the command `Install-Package Swashbuckle`.
+6. To connect our Web API to PowerApps, we'll need a [Swagger](http://swagger.io/) file that describes its operations.  You could write a Swagger of your own using the [online editor](http://editor.swagger.io/), but for this tutorial, you'll use an open-source tool named [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle/blob/master/README.md).  Install the Swashbuckle Nuget package in your Visual Studio project by clicking **Tools** > **NuGet Package Manager** > **Package Manager Console**, and then, in the Package Managet Console, type the command `Install-Package Swashbuckle`.
 
     ![Install-Package Swashbuckle](./media/customapi-web-api-tutorial/swashbuckle-console.png)
 
@@ -59,7 +59,7 @@ This tutorial shows you how to create an ASP.NET Web API, host it on Azure Web A
 
 7. When your Web API is ready, publish it to Azure. To publish from Visual Studio, right-click on the web project in Solution Explorer, click **Publish...**, and then follow the prompts in the Publish dialog.
 
-8. Retrieve the swagger JSON by navigating to `https://<azure-webapp-url>/swagger/docs/v1`.  Save the content as a JSON file.  Depending on your browser, you may need to copy and paste the text into an empty text file.   
+8. Retrieve the Swagger JSON by navigating to `https://<azure-webapp-url>/swagger/docs/v1`.  Save the content as a JSON file.  Depending on your browser, you may need to copy and paste the text into an empty text file.   
 
 	>[AZURE.IMPORTANT] A Swagger document with duplicate operation IDs is invalid. If you are using the sample C# template, the operation ID `Values_Get` is repeated twice. You can correct this by changing one instance to `Value_Get` and re-publishing.
     >
@@ -67,16 +67,16 @@ This tutorial shows you how to create an ASP.NET Web API, host it on Azure Web A
 
 ## Set up Azure Active Directory authentication
 
-You will now create some Azure Active Directory (AAD) applications in Azure.  For an example of how to do this, see the [Azure resource manager tutorial](customapi-azure-resource-manager-tutorial.md#enable-authentication-in-azure-active-directory). You need two AAD applications for this tutorial.
+You will now create two Azure Active Directory (AAD) applications in Azure.  For an example of how to do this, see the [Azure Resource Manager tutorial](customapi-azure-resource-manager-tutorial.md#enable-authentication-in-azure-active-directory).
 
 >[AZURE.IMPORTANT] Both apps must be in the same directory.
 
 ### First AAD application: Securing the Web API
 
-The first AAD application is used to secure the Web API. Name it **webAPI**.  Follow the above linked tutorial steps (just the section titled *Enable authentication in Azure Active Directory) with the following values:
+The first AAD application is used to secure the Web API. Name it **webAPI**.  Follow the above linked tutorial steps (just the section titled "Enable authentication in Azure Active Directory") with the following values:
 
-- **Sign-on URL**: `https://login.windows.net`
-- **Reply URL**: `https://<your-root-url>/.auth/login/aad/callback`
+- Sign-on URL: `https://login.windows.net`
+- Reply URL: `https://<your-root-url>/.auth/login/aad/callback`
 - There is no need for a client key.
 - There is no need to delegate any permissions.
 - **Important!** Note the application ID.  You will need it later.
@@ -123,7 +123,7 @@ You should now be able to use AAD to authenticate your web application.
 // The rest of the Swagger follows...
 ```
 
-2. Browse to [PowerApps](https://web.powerapps.com), and add a custom API as described in [What are custom APIs](register-custom-api.md).
+2. Browse to [PowerApps](https://web.powerapps.com), and add a custom API as described in [Register and use custom APIs in PowerApps](register-custom-api.md).
 
 3. Once you have uploaded your Swagger, the wizard auto-detects that you are using AAD authentication for your Web API.
 
@@ -138,10 +138,4 @@ You should now be able to use AAD to authenticate your web application.
 
 ## Next Steps
 
-Walk through the [Azure Resource Manager tutorial](customapi-azure-resource-manager-tutorial.md) custom API.
-
-For more detailed information about how to create an app, see [Create an app from data](get-started-create-from-data.md).
-
-For more detailed information about how to use a flow in an app, see [Start a flow in an app](using-logic-flows.md).
-
-To ask questions or make comments about custom APIs, [join our community](https://aka.ms/powerapps-community).
+Walk through the [Azure Resource Manager custom API tutorial](customapi-azure-resource-manager-tutorial.md).

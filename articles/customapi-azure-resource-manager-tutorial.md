@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create a custom API using Azure Resource Manager | Microsoft PowerApps"
-	description="Learn how to create a custom API using Azure Resource Manager and add the API to PowerApps"
+	pageTitle="Create a custom API for Azure Resource Manager | Microsoft PowerApps"
+	description="Learn how to create a custom API for Azure Resource Manager, then add the API to PowerApps."
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -14,19 +14,20 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/26/2016"
+   ms.date="05/03/2016"
    ms.author="ricksal"/>
 
 
-# Create a custom API using Azure Resource Manager in PowerApps
+# Create a custom API for Azure Resource Manager in PowerApps
 
-This tutorial demonstrates how to register a Swagger file describing an [Azure Resource Manager (ARM) API](https://msdn.microsoft.com/library/azure/dn790568.aspx) and then connect to it in PowerApps.
+Azure Resource Manager (ARM) enables you to manage the components of a solution on Azure - components like databases, virtual machines, and web apps. This tutorial demonstrates how to enable authentication in Azure Active Directory, register one of the ARM APIs as a custom API, then connect to it in PowerApps. This would be useful if you want to manage Azure resources directly from an app. For more information about ARM, see [Azure Resource Manager Overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).
 
 ## Prerequisites
 
 - An [Azure subscription](https://azure.microsoft.com/en-us/free/).
 - A [PowerApps account](https://powerapps.microsoft.com).
 - The [sample Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json) used in this tutorial.
+
 
 ## Enable authentication in Azure Active Directory
 
@@ -88,19 +89,22 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
     ![Create a key](./media/customapi-azure-resource-manager-tutorial/configurekeys.png)
 
+
 ## Add the connection in PowerApps
 
 Now that the AAD application is configured, let's add the custom API.
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **New connection** in the upper-right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom APIs** in the upper right corner.
 
-    > [AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
+	 **Tip**: If you can't find where to manage custom APIs in a mobile browser, it might be under a menu in the upper left corner.
 
-2. Click **Custom** to display your list of custom connections, and then click **New custom API**.
+	![Create custom API](./media/customapi-azure-resource-manager-tutorial/managecustomapi.png)  
 
-    ![New custom API](./media/customapi-azure-resource-manager-tutorial/connecttocustomapi.png)
+2. Select **Create custom API**.
 
-3. Type a **Name** for your connection, and then upload the [sample ARM Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Next**.  
+	![Custom API properties](./media/customapi-azure-resource-manager-tutorial/newcustomapi.png)
+
+3. Type a name for your connection, and then upload the [sample ARM Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Continue**.  
 
     ![Connect to a new API endpoint](./media/customapi-azure-resource-manager-tutorial/createcustom.png)
 
@@ -117,6 +121,7 @@ Now that the AAD application is configured, let's add the custom API.
 > [AZURE.NOTE] The sample Swagger does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this Swagger or create another Swagger file using the [online Swagger editor](http://editor.swagger.io/).
 >
 >This process can be used to access any RESTful API authenticated using AAD.
+
 
 ## Next steps
 
