@@ -36,4 +36,4 @@ Generate new leads for your business by building an app with PowerApps and publi
 
 ## Get started today for free
 
-Sign-up for the PowerApps commuity plan for free, and start building apps in a dedicated personal environment. [Learn more](dev-community-plan.md)
+Sign-up for the PowerApps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](dev-community-plan.md)

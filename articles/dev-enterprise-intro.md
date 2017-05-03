@@ -26,9 +26,16 @@ As an enterprise developer, empower your organization to build robust tailored s
 
 Develop custom APIs to connect to your organization's data and web services through PowerApps. [Learn more](register-custom-api.md)
 
+
+## Build Azure Functions
+
+Craft Azure Functions to extend apps with custom server-side logic. [Learn more](https://powerapps.microsoft.com/blog/using-azure-functions-in-powerapps/)
+
+
 ## Embed apps
 
-Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](dev-embed-apps.md)
+Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](embed-apps-dev.md)
+
 
 ## Work with data using the Common Data Service SDK
 

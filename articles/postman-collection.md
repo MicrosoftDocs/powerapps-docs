@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Create a Postman Collection | Microsoft PowerApps"
+	pageTitle="Describe a custom API with Postman | Microsoft PowerApps"
 	description="Create a Postman Collection for registering custom APIs"
 	services=""
     suite="powerapps"
@@ -17,7 +17,7 @@
    ms.date="04/28/2017"
    ms.author="archanan"/>
 
-# Create a Postman Collection for a custom API
+# Describe a custom API with Postman
 
 [Postman](https://www.getpostman.com/) is a tool for making your API development faster and easier. This tutorial demonstrates how to create a Postman collection, which you can then use to easily create [Custom APIs](register-custom-api.md) in PowerApps.
 
