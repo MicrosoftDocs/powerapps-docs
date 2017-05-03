@@ -15,11 +15,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/16/2016"
+   ms.date="05/02/2017"
    ms.author="anneta"/>
 
 # Customize a gallery layout in PowerApps #
-After you generate an app automatically in PowerApps, customize the browse screen, which appears by default. Specify which layout to use, which columns to show, and which columns to use when sorting and searching for records.
+After you generate an app automatically in PowerApps, customize the browse screen, which appears by default. Specify which layout to use, which columns to show, and which columns to use when sorting and filtering records.
 
 - For information about how to generate an app automatically, see [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md).
 - If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
@@ -39,20 +39,23 @@ You can review this tutorial for general concepts only, or you can follow it exa
 1. [Generate an app automatically](app-from-sharepoint.md) based on the list that you just created.
 
 ## Customize the gallery ##
+1. In the left navigation bar, click or tap the top thumbnail to ensure that **BrowseScreen1** is selected.
 
-1. **BrowseScreen1** shows the SharePoint list and the **Title** and **AccountID** for each item.
+	![Thumbnail for BrowseScreen1](./media/customize-layout-sharepoint/browse-thumbnail.png)
+
+	**BrowseScreen1** shows the **AccountID** and **Title** of each item in the SharePoint list.
 
 	![Browse screen shows titles and account IDs](./media/customize-layout-sharepoint/browse-accountid.png)
 
 	Next, you'll specify that the **OrderDate** for each item will appear instead of the **AccountID**.
 
-1. Click the **AccountID** for the first item on the screen.
+1. Click or tap the **AccountID** for the first item on the screen.
 
-	When you click a UI element (called a control), you select it, and a selection border with resize handles appears around that control.
+	When you click or tap a UI element (called a control), you select it, and a selection border with resize handles appears around that control.
 
 	![Select body of first item](./media/customize-layout-sharepoint/select-body.png)
 
-1. In the right-hand pane, choose what data field to show up in the gallery. Choose **OrderDate** for Heading1.
+1. In the right-hand pane, open the **Title1** list, and then click or tap **OrderDate**.
 
 	![Show title](./media/customize-layout-sharepoint/bind-data.png)
 
@@ -60,7 +63,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Layout with dates](./media/customize-layout-sharepoint/browse-dates.png)
 
-1. Learn more about how to add controls in a gallery, please read [Show a list of items in PowerApps](add-gallery.md).
+For more information about galleries, see [Show a list of items in PowerApps](add-gallery.md).
 
 ## Set the sort and search columns ##
 1. Select the **Gallery** control by clicking or tapping any record except the first one.
@@ -71,30 +74,28 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Items property](./media/customize-layout-sharepoint/items-property.png)
 
-	The value of this property, which appears in the formula bar, determines not only the source of data that appears on the screen but also the search and sort columns.
+	The value of this property, which appears in the formula bar, determines not only the source of data that appears on the screen but also the filter and sort columns.
 
 	For example, the formula bar might contain this formula by default.
 
 	![Default Items property](./media/customize-layout-sharepoint/default-items.png)
 
-	Based on this formula, users can search for all records that contains one or more letters in the **AccountID** column.
+	Based on this formula, users can show only those records that start with one or more letters in the **AccountID** column.
 
 	![Default search columns](./media/customize-layout-sharepoint/default-search.png)
 
-	If a user typed, for example, the letter "v" into the search bar, the screen would show the record for Europa. The title of that record doesn't match the search criterion, but the account ID does. Later in this procedure, you'll change the formula to filter records based on the **Title** column.
+	If a user typed, for example, the letter "A" into the search bar, the screen would show the record for Europa. The title of that record doesn't match the search criterion, but the account ID does. Later in this procedure, you'll change the formula to filter records based on the **Title** column.
 
-	In any generated app, users can sort records alphabetically in ascending or descending order by clicking or tapping the sort button near the upper-right corner. This formula specifies that the records will be sorted based on the **ID** column.
+	In any generated app, users can sort records alphabetically in ascending or descending order by clicking or tapping the sort button near the upper-right corner. This formula specifies that the records will be sorted based on the **AccountID** column.
 
 	![Default sort column](./media/customize-layout-sharepoint/default-sort.png)
 
 	Later in this procedure, you'll change the formula to sort the records based on the **Title** column instead.
 
-1. In the formula bar, replace **"AccountID"** with **"Title"** (including the double quotation marks).
-
-1. In the formula bar, replace **"ID"** with **"Title"** (including the double quotation marks).
+1. In the formula bar, replace both instances of **AccountID** with **Title** (including the double quotation marks around the second instance).
 
 	The formula bar should now contain a formula that resembles this example:<br>
-	**SortByColumns(Search(AppGen, TextSearchBox1.Text, "Title"), "Title", If(SortDescending1, Descending, Ascending))**
+	**SortByColumns(Filter(AppGen, StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**
 
 	**Note**: The number that appears after **TextSearchBox** might be higher, depending on what actions you took previously. However, the formula should still work as expected.
 
@@ -107,7 +108,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Test the sort button](./media/customize-layout-sharepoint/test-sort.png)
 
-1. In the search box, type one more letters to show only those records of which the title contains the letter or letters that you type, regardless of case.
+1. In the search box, type one more letters to show only those records of which the title starts with the letter or letters that you type.
 
 	![Test the search bar](./media/customize-layout-sharepoint/test-search.png)
 
