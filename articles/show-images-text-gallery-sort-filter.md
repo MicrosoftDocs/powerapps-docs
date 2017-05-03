@@ -48,8 +48,10 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
 
 2. Select the back arrow to return to the designer.
-3. On the **Insert** tab, select **Gallery**. Under **Image Galleries**, select the horizontal **With Text** image gallery:  
-![][4]  
+3. On the **Insert** tab, select **Gallery**. Select the **Horizontal** gallery.
+![][4]
+4. On the right-hand pane of gallery, choose the layout which the tile and subtitle overlay as shown in the second:  
+![][15]
 4. Set the **[Items](controls/properties-core.md)** property of the gallery to **Inventory**:  
 ![][5]  
 5. Rename the gallery to **ProductGallery**, and move the gallery so it doesn't block the other controls. Resize the gallery so it shows three products:  
@@ -150,7 +152,7 @@ In this topic, you:
 [1]: ./media/show-images-text-gallery-sort-filter/import.png
 [2]: ./media/show-images-text-gallery-sort-filter/preview.png
 [3]: ./media/show-images-text-gallery-sort-filter/inventorycollection.png
-[4]: ./media/show-images-text-gallery-sort-filter/withtext.png
+[4]: ./media/show-images-text-gallery-sort-filter/insert-vertical.png
 [5]: ./media/show-images-text-gallery-sort-filter/itemsinventory.png
 [6]: ./media/show-images-text-gallery-sort-filter/threeimages.png
 [7]: ./media/show-images-text-gallery-sort-filter/firstitem.png
@@ -161,3 +163,4 @@ In this topic, you:
 [12]: ./media/show-images-text-gallery-sort-filter/onselect.png
 [13]: ./media/show-images-text-gallery-sort-filter/slider.png
 [14]: ./media/show-images-text-gallery-sort-filter/inputandslider.png
+[15]: ./media/show-images-text-gallery-sort-filter/select-overlay.png
