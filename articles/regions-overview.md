@@ -15,13 +15,14 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/17/2017"
+   ms.date="05/04/2017"
    ms.author="ricksal"/>
 
 # Regions in Microsoft PowerApps #
 When you create an environment, you specify one of these regions for it:
 
 - United States
+- Canada
 - Europe
 - Asia
 - Australia
