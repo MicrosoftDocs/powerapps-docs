@@ -81,6 +81,8 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 
 You can [share your app](../share-app.md), [your resources](../share-app-resources.md) such as connectors, and [your data](../share-app-data.md) with others in your organization.
 
+If you are sharing a folder via Dropbox, the shared folder must be attached to the user's Dropbox.
+
 There are currently [certain limitations](#Sharing-Excel-Tables) with connectors involving Excel files.
 
 
@@ -99,6 +101,9 @@ The following table summarizes the following issues:
 
 |**Connector**|**Sharing Folder or File?**|**Non-multi-media**|**Media URLs?**|**Media file paths?**|
 |--|--|--|--|--|
+|OneDrive for Business| | | | |
+| |File   | Yes | Yes  | Yes |
+| |Folder | No |  No   | No |
 |OneDrive| | | | |
 | |File   | No  | Yes  | Yes |
 | |Folder | Yes|  No   | Yes |
