@@ -67,22 +67,22 @@ The Data table control lets you show a dataset in a tabular format that includes
 1. Create a blank Tablet app.
 2. On the **Insert** tab, click or tap **Data table**.
 
-   ![Add a Data table control to a screen](Media/insertDataTable.png "Add a Data table control to a screen")
+   ![Add a Data table control to a screen](media/power-apps-data-table-control/insert-data-table.png)
 
    A Data table control is added to the screen.
 
 3. Rename the Data table control **SalesOrderTable**, and resize it so that it covers the whole screen.
 4. In the right pane, click or tap the down arrow next to the **No data source selected** text, and then click or tap **Add a data source**.
 
-   ![Add a data source](Media/addDataToDataTable.png "Add a data source")
+   ![Add a data source](media/power-apps-data-table-control/add-data-to-data-table.png)
 
 5. In the list of connections, click or tap the connection for your database.
 
-   ![Select the connection for your data source](Media/chooseCDSDataTable.png "Select your data connection")
+   ![Select the connection for your data source](media/power-apps-data-table-control/choose-cds-data-table.png)
 
 6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
 
-   ![Select the **Sales order** entity](Media/chooseSODataTable.png "Select the Sales order entity")
+   ![Select the **Sales order** entity](media/power-apps-data-table-control/choose-so-data-table.png)
 
    The Data table is now attached to the **Sales order** data source. However, no data will be shown until you select fields.
 
@@ -90,38 +90,38 @@ The Data table control lets you show a dataset in a tabular format that includes
 
    The Data table is filled with data that is based on the selected fields.
 
-   ![Data table](Media/preOrderDataTable.png "Data table")
+   ![Data table](media/power-apps-data-table-control/pre-order-data-table.png)
 
 8. Reorder the fields by dragging them in the right pane.
 
-   ![Reorder the fields as desired](Media/fieldReorderDataTable.png "Reorder the fields")
+   ![Reorder the fields as desired](media/power-apps-data-table-control/field-reorder-data-table.png)
 
    The Data table is updated to show the fields in the new order.
 
-   ![Updated Data table](Media/postOrderDataTable.png "Updated Data table")
+   ![Updated Data table](media/power-apps-data-table-control/post-order-data-table.png)
 
 ### Restyle the Data table header
 
-1. In the right pane, click the **Advanced** tab.
+1. In the right pane, click the **Advanced** tab.-
 2. Click or tap the field for the **HeadingFill** property, and change the value to **RGBA(62,96,170,1)**.
 3. Click or tap the field for the **HeadingColor** property, and change the value to **White**.
 4. Click or tap the field for the **HeadingSize** property, and change the value to **14**.
 
-   ![Data table](Media/restyledDataTable.png "Data table")
+   ![Data table](media/power-apps-data-table-control/restyled-data-table.png)
 
 ### Connect a Data table to another control
 
 1. Add an **Edit** form to the screen.
 2. Resize the Data table and the **Edit** form so that the Data table uses the left part of the screen and the **Edit** form uses the right part of the screen.
 
-   ![Data table and **Edit** form on the same screen](Media/dataTableEmptyForm.png "Data table and Edit form on the same screen")
+   ![Data table and **Edit** form on the same screen](media/power-apps-data-table-control/data-table-empty-form.png)
 
 3. Connect the **Edit** form to the Sales order data source.
 4. In the right pane, select the fields to show in the **Edit** form. For this example, select **SalesOrderId**, **Status**, **Name**, **Description**, and **Total amount**.
 
-   ![**Edit** form the shows five fields](Media/dataTableDisconnectedForm.png "Edit form that shows five fields")
+   ![**Edit** form the shows five fields](media/power-apps-data-table-control/data-table-disconnected-form.png)
 
 3. In the right pane, click the **Advanced** tab.
 4. Set the **Item** property for the **Edit** form to **SalesOrderTable.Selected**, so that the **Edit** form shows information from the row that is selected in the Data table.
 
-   ![**Edit** form connected to the Data table](Media/connectedFormDataTable.png "Edit form connected to the Data table")
+   ![**Edit** form connected to the Data table](media/power-apps-data-table-control/connected-form-data-table.png)
