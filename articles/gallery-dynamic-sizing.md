@@ -49,7 +49,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 	For more information, see [Add a connection](add-data-connection.md).
 
 ## Add data to a gallery ##
-1. On the **Insert** tab, click or tap **Gallery**, scroll to the bottom of the menu, and then click or tap **Flexible height**.
+1. On the **Insert** tab, click or tap **Gallery**, and then click or tap **Flexible height**.
 
 	![Add gallery](./media/gallery-dynamic-sizing/add-flexible.png)
 

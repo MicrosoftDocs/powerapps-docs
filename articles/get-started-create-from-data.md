@@ -77,11 +77,15 @@ When an app is created, it has a default layout based on your data, but you can 
 
 1. In the left navigation bar, click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
 
-2. Select anywhere on the gallery and choose layout in the gallery pane on the right. In this example, choose the layout with an image, title, and subtitle.
+1. Click or tap anywhere in the gallery, such as the first image.
+
+	![Select image](./media/get-started-create-from-data/select-image.png)
+
+1. In the right-hand pane, open the **Layout** list, and then click or tap the layout that contains an image, a title, and a subtitle.
 
 	![Select layout](./media/get-started-create-from-data/select-layout.png)
 
-	The layout of the app changes to show a header, a picture, and a description for each record.
+	The layout of the app changes to reflect your choice.
 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
