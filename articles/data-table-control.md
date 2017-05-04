@@ -31,7 +31,7 @@ Imagine that you have a collection of data (such as a list sales orders, a set o
 + **Column headings** – A row of column headings appears at the top of the Data table for reference. You can currently restyle the column headings to achieve the appearance that you want.  
 + **Broad customization support** – Several properties have been exposed that let you restyle and customize the Data table. For example, you can adjust the style for the whole set of data rows, the selected row, or the row that the mouse pointer is currently pointing to.   
 
-To learn more about the Data table control, its properties, and how to use it, see [Data table controls in PowerApps](/power-apps-data-table-control.md).
+To learn more about the Data table control, its properties, and how to use it, see [Data table controls in PowerApps](/power-apps-data-table-control).
 
 ## We want your feedback
 
