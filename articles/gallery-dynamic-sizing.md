@@ -51,7 +51,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 ## Add data to a gallery ##
 1. On the **Insert** tab, click or tap **Gallery**, scroll to the bottom of the menu, and then click or tap **Flexible height**.
 
-	![Add gallery](./media/gallery-dynamic-sizing/add-gallery.png)
+	![Add gallery](./media/gallery-dynamic-sizing/add-flexible.png)
 
 1. Resize the gallery to take up the entire screen.
 

@@ -56,7 +56,7 @@ You can add any control in a variety of categories by clicking or tapping the **
 
 - **Gallery**
 
-	![Options in the Gallery category](./media/add-configure-controls/gallery-category.png)
+	![Options in the Gallery category](./media/add-configure-controls/insert-gallery.png)
 
 	**Tip:** Show a list of records from a table using a [gallery](add-gallery.md).
 

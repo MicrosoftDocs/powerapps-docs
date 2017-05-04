@@ -72,18 +72,14 @@ Generated apps have three screens by default:
 
 	**Note**: You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
-## Change the app layout ##
-When an app is created, it has a default layout based on your data, but you can customize the layout to fit your needs.
+## Change the gallery layout ##
+When an app is created, it has a default layout based on your data, but you can customize the gallery layout to fit your needs.
 
 1. In the left navigation bar, click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
 
-2. In the right-hand pane, with the **Layout** tab open, click or tap the layout that you want to use.
+2. Select anywhere on the gallery and choose layout in the gallery pane on the right. In this example, choose the layout with an image, title, and subtitle.
 
-	![Open the Layout tab](./media/get-started-create-from-data/open-layout-tab.png)
-
-3. Click or tap the layout that includes headers, pictures, and descriptions.
-
-	![Select layout](./media/get-started-create-from-data/change-layout.png)
+	![Select layout](./media/get-started-create-from-data/select-layout.png)
 
 	The layout of the app changes to show a header, a picture, and a description for each record.
 

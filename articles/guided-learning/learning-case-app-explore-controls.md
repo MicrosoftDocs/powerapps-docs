@@ -41,7 +41,7 @@ Each of the three app screens has a main control and some additional controls. T
 
 PowerApps has a variety of gallery types so you can use the one that best suits your app's layout requirements. You will see more ways to control layout later in this section.
 
-![PowerApps gallery options](./media/learning-case-app-explore-controls/galleries.png)
+![PowerApps gallery options](./media/learning-case-app-explore-controls/insert-gallery.png)
 
 
 ## Explore the details screen
