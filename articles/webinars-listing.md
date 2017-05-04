@@ -43,11 +43,12 @@ Click to join webinar on [May 25th!](https://www.youtube.com/watch?v=LF49hFB14Cs
 Looking for new ways to leverage PowerApps? In this webinar Audrie will interview one of the PowerApp developers, Marie Hoeger. We will get some insight from Marie on what inspired her to develop for Microsoft, and get some ideas on typical PowerApp use cases for science and education. We’ll demo a couple of fun apps on the topic as well!
 
 Click to join webinar on [June 1st!](https://www.youtube.com/watch?v=YF3DKZxlUdM)
-<br>  	
+<br>
+  	
 **Deep dive on PowerApps formulas by Greg Lindhorst**
 <br>*June 20, 2017, @ 10:00AM Pacific Time, 1:00PM Eastern Time*
 
-Join Greg Lindhorst on a deep dive on PowerApps formulas, by the author of the entire [formula reference](https://powerapps.microsoft.com/en-us/tutorials/formula-reference/)
+Join Greg Lindhorst on a deep dive on PowerApps formulas, by the author of the entire [formula reference](https://powerapps.microsoft.com/tutorials/formula-reference/)
 
 Click to join webinar on [June 20th!](https://www.youtube.com/watch?v=PuePMMuj5ps)
 
