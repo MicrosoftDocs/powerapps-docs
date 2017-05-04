@@ -100,11 +100,11 @@ The following table summarizes the following issues:
 |**Connector**|**Sharing Folder or File?**|**Non-multi-media**|**Media URLs?**|**Media file paths?**|
 |--|--|--|--|--|
 |OneDrive| | | | |
-| |File   | No  | No   | No  |
-| |Folder |No   |No    | No  |
+| |File   | No  | Yes  | Yes |
+| |Folder | Yes|  No   | Yes |
 |Google Drive| | | | |
-| |File   | Yes | Yes  | No  |
-| |Folder |Yes  | Yes  |No|
+| |File   | Yes | Yes  | Yes |
+| |Folder | Yes | Yes  | Yes |
 |Dropbox| | | | |
 | |File   | Yes | Yes  | Yes  |
 | |Folder |Yes  |  Yes |Yes|
