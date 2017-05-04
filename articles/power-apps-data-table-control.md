@@ -80,7 +80,7 @@ The Data table control lets you show a dataset in a tabular format that includes
 
    ![Select the connection for your data source](media/power-apps-data-table-control/choose-cds-data-table.png)
 
-6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
+6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**. 
 
    ![Select the **Sales order** entity](media/power-apps-data-table-control/choose-so-data-table.png)
 
