@@ -23,17 +23,15 @@
 # Explore the generated app (Common Data Service)
 In this topic, we look more closely at the generated app - reviewing the screens and controls that define the app's behavior. We won't go through all the details, but seeing more about how this app works will help you to build your own apps. In a later topic, we'll look at the formulas that work with screens and controls.
 
-
 ## Run the app in preview mode
 Click or tap ![Start app preview arrow](./media/learning-case-app-explore-controls/f5-arrow-sm.png) in the top right to run the app. If you navigate through the app, you see that it includes data from the entity and provides a good default experience.
 
 ![Run the app in preview mode](./media/learning-case-app-explore-controls/run-app.png)
 
-
 ## Understanding controls in PowerApps
-A control is simply a UI element that has behaviors associated with it. Many controls in PowerApps are the same as controls that you've used in other apps: text boxes, drop-down lists, navigation elements, and so on. But PowerApps has more specialized controls like **Galleries** (which display summary data) and **Forms** (which display detail data and enable you to create and edit items). And also some other really cool controls like **Image**, **Camera**, and **Barcode**. To see what's available, click or tap **Insert** on the ribbon, and then click or tap each of the options in turn, **Text** thru **Icons**.
+A control is simply a UI element that has behaviors associated with it. Many controls in PowerApps are the same as controls that you've used in other apps: labels, text-input boxes, drop-down lists, navigation elements, and so on. But PowerApps has more specialized controls like **Galleries** (which display summary data) and **Forms** (which display detail data and enable you to create and edit items). And also some other really cool controls like **Image**, **Camera**, and **Barcode**. To see what's available, click or tap **Insert** on the ribbon, and then click or tap each of the options in turn, **Text** through **Icons**.
 
-![Controls tab on PowerApps Studio ribbon](./media/learning-case-app-explore-controls/ribbon-controls.png) 
+![Controls tab on PowerApps Studio ribbon](./media/learning-case-app-explore-controls/ribbon-controls.png)
 
 
 ## Explore the browse screen
@@ -43,7 +41,7 @@ Each of the three app screens has a main control and some additional controls. T
 
 PowerApps has a variety of gallery types so you can use the one that best suits your app's layout requirements. You will see more ways to control layout later in this section.
 
-![PowerApps gallery options](./media/learning-case-app-explore-controls/galleries.png)
+![PowerApps gallery options](./media/learning-case-app-explore-controls/insert-gallery.png)
 
 
 ## Explore the details screen

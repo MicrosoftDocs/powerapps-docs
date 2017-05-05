@@ -22,6 +22,16 @@ For information about known limitations, see [Common issues and resolutions](com
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
+## Release 2.0.630-2.0.631 ##
+1. Navigate the toolbar more easily, and open help from tooltips.
+1. Learn from [sample apps](open-and-run-a-sample-app.md) that show your data, not fake data.
+1. Open and edit sample apps in [PowerApps Studio for web](create-app-browser.md).
+1. Select a type of **[Gallery](control-gallery.md)** control more easily, and choose from a wider variety of layouts.
+1. Show data in a tabular format with the **[Data table](control-data-table.md)** control.
+1. Use screen templates for common data patterns.
+1. Browse environments in an alphabetized list with clearer labels.
+1. Administrators can [view user licenses](admin-view-user-licenses.md) for PowerApps and Microsoft Flow.
+
 ## Release 2.0.610-2.0.611 ##
 1. **Create an app from a template in a browser**.
 

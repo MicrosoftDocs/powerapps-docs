@@ -118,12 +118,12 @@ Timers can, for example, determine how long a control appears or change other pr
 
 1. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
 
-1. Add a text box, and set its **[Text](properties-core.md)** property to this formula:
+1. Add a label, and set its **[Text](properties-core.md)** property to this formula:
 <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
 
 	Want more information about the **[RoundUp](../functions/function-round.md)** function or [other functions](../formula-reference.md)?
 
-	The text box shows how many seconds remain before the timer restarts.
+	The label shows how many seconds remain before the timer restarts.
 
 1. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.
 
@@ -136,11 +136,11 @@ Timers can, for example, determine how long a control appears or change other pr
 
 1. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
 
-1. Add a text box, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:
+1. Add a label, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:
 <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
 	Want more information about the **[ColorFade](../functions/function-colors.md)** function or [other functions](../formula-reference.md)?
 
-	The text in the text box fades to white, returns to full intensity, and repeats the process.
+	The text in the label fades to white, returns to full intensity, and repeats the process.
 
 1. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.

@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Scan a barcode in Microsoft PowerApps #
-Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Text box** control, and you can upload that data to a variety of [data sources](connections-list.md).
+Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](connections-list.md).
 
 If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
@@ -72,11 +72,11 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 1. Drag the selection box (not the resize handles) around the **Text input** control down until it appears below **MyScanner**.
 
-	![Text box with selection box](./media/scan-barcode/move-input-text.png)
+	![Label with selection box](./media/scan-barcode/move-input-text.png)
 
 1. With the **Text input** control still selected, ensure that **Default** appears in the properties list, and then type or paste **MyScanner.Text** in the formula bar.
 
-	![Text property of the Text box control](./media/scan-barcode/default-text.png)
+	![Text property of the Label control](./media/scan-barcode/default-text.png)
 
 ## Change the barcode type ##
 1. On the **Insert** tab, click or tap **Controls**, and then click or tap **Drop down**.
@@ -104,7 +104,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 	![Open Preview mode](./media/scan-barcode/open-preview.png)
 
-1. Hold a barcode up to the camera on the device until the numerical component of the barcode appears in the **Text box** control.
+1. Hold a barcode up to the camera on the device until the numerical component of the barcode appears in the **Label** control.
 
 	If the numerical component doesn't appear, try a different option in the **BarcodeType** list. If the correct data still doesn't appear, type the correct number in the **Input text** control.
 

@@ -72,33 +72,33 @@ Generated apps have three screens by default:
 
 	**Note**: You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
-## Change the app layout ##
-When an app is created, it has a default layout based on your data, but you can customize the layout to fit your needs.
+## Change the gallery layout ##
+When an app is created, it has a default layout based on your data, but you can customize the gallery layout to fit your needs.
 
 1. In the left navigation bar, click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
 
-2. In the right-hand pane, with the **Layout** tab open, click or tap the layout that you want to use.
+1. Click or tap anywhere in the gallery, such as the first image.
 
-	![Open the Layout tab](./media/get-started-create-from-data/open-layout-tab.png)
+	![Select image](./media/get-started-create-from-data/select-image.png)
 
-3. Click or tap the layout that includes headers, pictures, and descriptions.
+1. In the right-hand pane, open the **Layout** list, and then click or tap the layout that contains an image, a title, and a subtitle.
 
-	![Select layout](./media/get-started-create-from-data/change-layout.png)
+	![Select layout](./media/get-started-create-from-data/select-layout.png)
 
-	The layout of the app changes to show a header, a picture, and a description for each record.
+	The layout of the app changes to reflect your choice.
 
 	![BrowseScreen1 with new layout](./media/get-started-create-from-data/browse-layout.png)
 
 ## Change the data that appears ##
-1.  Under **Search items**, click or tap **Carpet** to select the **Text box** control.
+1.  Under **Search items**, click or tap **Carpet** to select the **Label** control.
 
 	The associated list is highlighted in the right-hand pane.
 
-	![Select first text box](./media/get-started-create-from-data/select-gallery-textbox.png)
+	![Select first label](./media/get-started-create-from-data/select-gallery-textbox.png)
 
 2. In the right-hand pane, open the highlighted list, and then click or tap **Name**.
 
-	![Set first text box](./media/get-started-create-from-data/set-gallery-textbox.png)
+	![Set first label](./media/get-started-create-from-data/set-gallery-textbox.png)
 
 3. Open the bottom list, and then click or tap **Category**.
 

@@ -22,7 +22,7 @@ ms.author="archanan"/>
 
 ![Salesforce](./media/connection-salesforce/salesforceicon.png)
 
-Manage data from Salesforce by using controls in an app. For example,  display the name and the contact information of a lead in text boxes, and add other controls to create, update, and delete items in your accounts, campaigns, and more.
+Manage data from Salesforce by using controls in an app. For example,  display the name and the contact information of a lead in labels, and add other controls to create, update, and delete items in your accounts, campaigns, and more.
 
 - For information about how to create an app, see [Generate an app automatically](get-started-create-from-data.md) or [Create an app from scratch](get-started-create-from-blank.md).	These topics are written for Excel, but the same principles apply to Salesforce.
 - For information about how to add data from Salesforce to an existing app, see [Add a data connection](add-data-connection.md).

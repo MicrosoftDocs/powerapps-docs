@@ -48,14 +48,14 @@ To view the status of the alert, call the CheckAlertStatus function with the ale
 
 The alert ID can be passed in either as a literal string (e.g. "1234") or as a reference to a gallery section populated using the GetAlerts() call (e.g. Gallery1.Selected.alertId)
 
-To proceed, add a text box, and then set its [Text](../controls/properties-core.md) property to one of these formulas:
+To proceed, add a label, and then set its [Text](../controls/properties-core.md) property to one of these formulas:
 
 * `PowerBI.CheckAlertStatus( /* alert ID that you received from GetAlert */ ).alertTitle`
 * `PowerBI.CheckAlertStatus( /* alert ID that you received from GetAlert */ ).currentTileValue`
 * `PowerBI.CheckAlertStatus( /* alert ID that you received from GetAlert */ ).alertThreshold`
 * `PowerBI.CheckAlertStatus( /* alert ID that you received from GetAlert */ ).isAlertTriggered`
 
-The text box will update with the current status of the alert.
+The label will update with the current status of the alert.
 
 ## View the available functions
 

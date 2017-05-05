@@ -56,7 +56,7 @@ You can add any control in a variety of categories by clicking or tapping the **
 
 - **Gallery**
 
-	![Options in the Gallery category](./media/add-configure-controls/gallery-category.png)
+	![Options in the Gallery category](./media/add-configure-controls/insert-gallery.png)
 
 	**Tip:** Show a list of records from a table using a [gallery](add-gallery.md).
 
@@ -85,40 +85,40 @@ You can add any control in a variety of categories by clicking or tapping the **
 If you need more space for controls, [add a screen](add-screen-context-variables.md).
 
 ## Configure a control directly ##
-In this procedure, you'll add and configure a **Text box** control, but you can apply many of the same principles to other controls.
+In this procedure, you'll add and configure a **Label** control, but you can apply many of the same principles to other controls.
 
-1. In the toolbar, click or tap the **Insert** tab, and then click or tap **Text box**.
+1. In the toolbar, click or tap the **Insert** tab, and then click or tap **Label**.
 
 	![Insert tab](./media/add-configure-controls/insert-text-box.png)
 
-	When you add a control, it's selected by default. You can also select an existing control by clicking or tapping it. When a control is selected, a selection box surrounds it, and other areas of the UI change so that you can configure the selected control. For example, a selected **Text box** control resembles this graphic.
+	When you add a control, it's selected by default. You can also select an existing control by clicking or tapping it. When a control is selected, a selection box surrounds it, and other areas of the UI change so that you can configure the selected control. For example, a selected **Label** control resembles this graphic.
 
-	![A selected text box](./media/add-configure-controls/selected-text-box.png)
+	![A selected label](./media/add-configure-controls/selected-text-box.png)
 
 	**Important:** If a control is selected when you select another control or a blank area of the screen, the first element is no longer selected.
 
-1. Make the **Text box** control narrower by dragging a handle on the right edge of the selection box to the left. (The middle handle appears only if you zoom in.)
+1. Make the **Label** control narrower by dragging a handle on the right edge of the selection box to the left. (The middle handle appears only if you zoom in.)
 
-	![A resized text box](./media/add-configure-controls/shorter-text-box.png)
+	![A resized label](./media/add-configure-controls/shorter-text-box.png)
 
  	You can also resize a control by modifying its **[Height](controls/properties-size-location.md)**, **[Width](controls/properties-size-location.md)**, or both properties, as this topic describes later.
 
-1. Move the **Text box** control by dragging the selection box itself (or by modifying the **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, or both properties, as this topic describes later).
+1. Move the **Label** control by dragging the selection box itself (or by modifying the **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, or both properties, as this topic describes later).
 
-1. Triple-click the text that appears in the **Text box** control, and then type **Hello, world**.
+1. Triple-click the text that appears in the **Label** control, and then type **Hello, world**.
 
-	![A text box with custom text](./media/add-configure-controls/change-text-directly.png)
+	![A label with custom text](./media/add-configure-controls/change-text-directly.png)
 
  	You can also modify this text by setting the **[Text](controls/properties-core.md)** property of this control, as this topic describes later.
 
-1. Delete the **Text box** control by clicking or tapping it and then pressing Delete.
+1. Delete the **Label** control by clicking or tapping it and then pressing Delete.
 
-1. Restore the **Text box** control by pressing Ctrl-Z (or by repeating the first four steps in this procedure).
+1. Restore the **Label** control by pressing Ctrl-Z (or by repeating the first four steps in this procedure).
 
 ## Configure a control from the toolbar ##
 By configuring a control from the toolbar, you can specify a wider variety of options than you can directly.
 
-1. With the **Text box** control selected, click or tap the **Home** tab of the toolbar.
+1. With the **Label** control selected, click or tap the **Home** tab of the toolbar.
 
 	![Home tab](./media/add-configure-controls/home-tab.png)
 
@@ -126,25 +126,25 @@ By configuring a control from the toolbar, you can specify a wider variety of op
 
 	![Fill option](./media/add-configure-controls/fill-option.png)
 
-	The **Text box** control reflects your selection.
+	The **Label** control reflects your selection.
 
-	![A text box with aquamarine fill](./media/add-configure-controls/change-fill.png)
+	![A label with aquamarine fill](./media/add-configure-controls/change-fill.png)
 
 1. Change the font family and the size of the text (for example, to 18 pt. Georgia).
 
 	![Font controls](./media/add-configure-controls/font-size.png)
 
-	The **Text box** control reflects your selection.
+	The **Label** control reflects your selection.
 
 	![18-point Georgia](./media/add-configure-controls/change-font.png)
 
-1. Click or tap the **Text box** tab, click or tap **VerticalAlign**, and then click or tap **Top**.
+1. Click or tap the **Label** tab, click or tap **VerticalAlign**, and then click or tap **Top**.
 
 	![Text-box tab](./media/add-configure-controls/text-box-tab.png)
 
-	The **Text box** control reflects your selection.
+	The **Label** control reflects your selection.
 
-	![A text box with text aligned to the top of the box](./media/add-configure-controls/change-align.png)
+	![A label with text aligned to the top of the box](./media/add-configure-controls/change-align.png)
 
 ## Configure a control in the formula bar ##
 By using the formula bar, you can set properties that you can't set directly or from the toolbar. For example, you can set a tooltip that appears when a user points to the control but doesn't click or tap it. You can also specify complicated formulas that increase the power of your app.
@@ -157,13 +157,13 @@ Each change that you made earlier in this topic updated the value of a [property
 
 Instead of configuring a control directly or from the toolbar, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
 
-1. With the **Text box** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
+1. With the **Label** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
 
-	![A literal string in a text box](./media/add-configure-controls/text-literal.png)
+	![A literal string in a label](./media/add-configure-controls/text-literal.png)
 
 	When you surround a string of text with quotation marks, you specify that it should be treated exactly as you typed it. As an alternative, you can set the value of a property to a formula.
 
-1. With the **Text box** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
+1. With the **Label** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
 
 	The control shows the current date.
 
@@ -172,7 +172,7 @@ Instead of configuring a control directly or from the toolbar, you can also upda
 	**Tip:** You can [format dates and times](show-text-dates-times.md) in various ways, in addition to performing calculations on them.
 
 ## Configure two controls to interact with each other ##
-In this procedure, you'll add a check box and then configure the text box that you already have to appear only when the check box is selected.
+In this procedure, you'll add a check box and then configure the label that you already have to appear only when the check box is selected.
 
 1. Click or tap the **Insert** tab.
 
@@ -182,7 +182,7 @@ In this procedure, you'll add a check box and then configure the text box that y
 
 	![Insert check box](./media/add-configure-controls/insert-check-box.png)
 
-1. Move the **Check box** control so that it appears below the **Text box** control, and set the **[Text](controls/properties-core.md)** property of the **Check box** control so that **Show text** appears.
+1. Move the **Check box** control so that it appears below the **Label** control, and set the **[Text](controls/properties-core.md)** property of the **Check box** control so that **Show text** appears.
 
 	![Configure check box](./media/add-configure-controls/configure-check-box.png)
 
@@ -194,7 +194,7 @@ In this procedure, you'll add a check box and then configure the text box that y
 
 	![Rename check box](./media/add-configure-controls/rename-checkbox2.png)
 
-1. Click or tap the **Text box** control to select it, click or tap the **Text box** tab, and then click or tap the **Visible** option.
+1. Click or tap the **Label** control to select it, click or tap the **Label** tab, and then click or tap the **Visible** option.
 
 	![Visible property](./media/add-configure-controls/visible-property.png)
 
@@ -202,19 +202,19 @@ In this procedure, you'll add a check box and then configure the text box that y
 
 	**If(MyCheckbox!Value = true, true, false)**
 
-	This **[If function](function-if.md)** states that the text box should appear only when the check box is selected. Because the check box is cleared, the **Text box** control disappears (except for the selection box).
+	This **[If function](function-if.md)** states that the label should appear only when the check box is selected. Because the check box is cleared, the **Label** control disappears (except for the selection box).
 
 	![Visible formula](./media/add-configure-controls/visible-formula.png)
 
 1. Click or tap the **Check box** control to add the selection box to it, and then click or tap it again to add a check mark.
 
-	The **Text box** reappears:
+	The **Label** reappears:
 
-	![Text box appears when the check box is selected](./media/add-configure-controls/show-text.png)
+	![Label appears when the check box is selected](./media/add-configure-controls/show-text.png)
 
-1. Clear the **Check box** control to hide the **Text box** control.
+1. Clear the **Check box** control to hide the **Label** control.
 
-	![Text box disappears when the check box is cleared](./media/add-configure-controls/hide-text.png)
+	![Label disappears when the check box is cleared](./media/add-configure-controls/hide-text.png)
 
 This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md) from simple to complex.
 
