@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Introducing the Data table control in PowerApps"
+	pageTitle="Show tabular data | Microsoft PowerApps"
 	description="This topic introduces the Data table control in Microsoft PowerApps."
 	services="powerapps"
 	documentationCenter="na"
@@ -16,23 +16,24 @@
    ms.workload="na"
    ms.date="04/24/2017"
    ms.author="kfend"/>
-   
-# Introducing the Data table control in PowerApps
-   
-Imagine that you have a collection of data (such as a list sales orders, a set of service tickets, or a directory of contacts), and that you want to show this data in your Microsoft PowerApps app in a tabular format, where each column represents a field and each row represents a record. In the past, you might have been able to roughly simulate this visualization, although the process required some effort. However, by using the Data table control that was recently added to PowerApps, you can now quickly and easily achieve this very typical visualization. You just have to link your Data table to a data source and then select which fields to show. 
 
-![Data table control](media/data-table-control/data-table-example.png)
+# Show tabular data in PowerApps #
+Show tabular data in an app, where each column represents a field and each row represents a record. Examples of this type of data include a list of sales orders, a set of service tickets, or a directory of contacts. To easily present tabular data, add a **Data table** control, link it to a data source, and then specify which fields to show.
 
-## What is included in the Data table control
+![Data table control](./media/data-table-control/data-table-example.png)
 
-+ **Connected data sources** – The Data table can be used in conjunction with connected data sources. 
-+ **Single record selection** – Users can select only one row at a time in the Data table control. The **Selected** property can then be used to access field values from that row and provide data context to other PowerApps controls.    
-+ **Read-only data** – Like the data that is shown in the Gallery control, the data that is shown in the Data table control is read-only. To enable a record to be edited, you must link the selected row in the Data table to an **Edit** form or other editable controls.  
-+ **Column headings** – A row of column headings appears at the top of the Data table for reference. You can currently restyle the column headings to achieve the appearance that you want.  
-+ **Broad customization support** – Several properties have been exposed that let you restyle and customize the Data table. For example, you can adjust the style for the whole set of data rows, the selected row, or the row that the mouse pointer is currently pointing to.   
+## What the **Data table** control includes ##
++ **Connected data sources**<br>You can use the **Data table** control in conjunction with connected data sources.
 
-To learn more about the Data table control, its properties, and how to use it, see [Data table controls in PowerApps](/power-apps-data-table-control).
++ **Single-record selection**<br>Users can select only one row at a time in the **Data table** control. You can then use the **Selected** property to access field values from that row and provide data context to other controls in the app.
 
-## We want your feedback
++ **Read-only data**<br>As in **Gallery** controls, **Data table** controls show read-only data. To enable a record to be edited, you must link the selected row in the **Data table** control to an **Edit form** control or another control that supports updating data.
 
-We hope that you find the Data table control a useful tool for building apps that have the visuals that you want. As always, we are extremely interested in any feedback that you have about this new feature. You can leave your comments on this page or on [PowerApps community](http://aka.ms/powerapps-community "PowerApps community"). We look forward to incorporating your feedback and suggestions to improve the control and PowerApps as a whole!
++ **Column headings**<br>A row of column headings appears at the top of the **Data table** control for reference. You can style the column headings to achieve the appearance that you want.
+
++ **Broad customization support**<br>You can restyle a **Data table** control by customizing several properties. For example, you can adjust the style for the whole set of data rows, the selected row, or the row to which the user is pointing with a mouse.   
+
+To learn more about the **Data table** control, its properties, and how to use it, see its [reference topic](data-table-control.md).
+
+## We want your feedback ##
+We hope that you find the **Data table** control useful for building apps that have the visuals that you want. As always, we're extremely interested in any feedback that you have about this feature. You can leave your comments on this page or in the [PowerApps community](http://aka.ms/powerapps-community). We look forward to improving this control and PowerApps as a whole by incorporating your feedback and suggestions!
