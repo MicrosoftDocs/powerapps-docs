@@ -33,7 +33,7 @@ Show tabular data in an app, where each column represents a field and each row r
 
 + **Broad customization support**<br>You can restyle a **Data table** control by customizing several properties. For example, you can adjust the style for the whole set of data rows, the selected row, or the row to which the user is pointing with a mouse.   
 
-To learn more about the **Data table** control, its properties, and how to use it, see its [reference topic](data-table-control.md).
+To learn more about the **Data table** control, its properties, and how to use it, see its [reference topic](control-data-table.md).
 
 ## We want your feedback ##
 We hope that you find the **Data table** control useful for building apps that have the visuals that you want. As always, we're extremely interested in any feedback that you have about this feature. You can leave your comments on this page or in the [PowerApps community](http://aka.ms/powerapps-community). We look forward to improving this control and PowerApps as a whole by incorporating your feedback and suggestions!
