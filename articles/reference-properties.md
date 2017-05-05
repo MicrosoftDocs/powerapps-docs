@@ -15,10 +15,9 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="03/17/2016"
-   ms.author="GregLi"/>
+   ms.author="gregli"/>
 
 # Controls and properties in PowerApps #
-
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
 ## Controls ##
@@ -38,6 +37,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Check box](controls/control-check-box.md)** – Select or clear an option to specify **true** or **false**.
 
 **[Column chart](controls/control-column-line-chart.md)** – Show values as vertical bars relative to two axes.
+
+**[Data table](controls/control-data-table.md)** - Show data in a tabular format.
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
 
