@@ -1,5 +1,5 @@
 <properties
-   pageTitle="AppSource Test Drive | Microsoft PowerApps"
+   pageTitle="Let customers test drive your apps | Microsoft PowerApps"
    description="Use AppSource to share apps with customers, and generate leads for your business."
    services=""
    suite="powerapps"
@@ -19,7 +19,7 @@
    ms.author="litran"/>
 
 
-# AppSource Test Drive #
+# Let customers test drive your apps on AppSource #
 
 Are you passionate about building apps in PowerApps? Do you have an app you would like to share with customers? We now support a PowerApps Test Drive solution on [AppSource.com](https://appsource.microsoft.com) as a way for you to share apps with customers, and generate leads for your business.
 

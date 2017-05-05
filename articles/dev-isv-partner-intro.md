@@ -1,5 +1,5 @@
 <properties
-   pageTitle="PowerApps for ISVs and Microsoft partners | Microsoft PowerApps"
+   pageTitle="PowerApps for Microsoft partners and ISVs | Microsoft PowerApps"
    description="An introduction for ISVs and Microsoft partners to developing apps in PowerApps."
    services=""
    suite="powerapps"
@@ -18,9 +18,9 @@
    ms.date="05/01/2016"
    ms.author="mblythe"/>
 
-# PowerApps for ISVs and Microsoft partners
+# PowerApps for Microsoft partners and ISVs
 
-As a Microsoft partner or ISV, you can accelerate customer adoption by extending your products to integrate with your customer's data and business processes. Work with data stored in the Common Data Service, and build connectors that enable your customers to connect to your products through the apps they build in PowerApps. Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive.
+As a Microsoft partner or Independent Software Vendor (ISV), you can accelerate customer adoption by extending your products to integrate with your customer's data and business processes. Work with data stored in the Common Data Service, and build connectors that enable your customers to connect to your products through the apps they build in PowerApps. Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive.
 
 ## Build apps on the Common Data Model using the Common Data Service SDK
 
