@@ -23,12 +23,10 @@
 # Explore the generated app (SharePoint list)
 In this topic, we look more closely at the generated app - reviewing the screens and controls that define the app's behavior. We won't go through all the details, but seeing more about how this app works will help you to build your own apps. In a later topic, we'll look at the formulas that work with screens and controls.
 
-
 ## Understanding controls in PowerApps
-A control is simply a UI element that has behaviors associated with it. Many controls in PowerApps are the same as controls that you've used in other apps: text boxes, drop-down lists, navigation elements, and so on. But PowerApps has more specialized controls like **Galleries** (which display summary data) and **Forms** (which display detail data and enable you to create and edit items). And also some other really cool controls like **Image**, **Camera**, and **Barcode**. To see what's available, click or tap **Insert** on the ribbon, and then click or tap each of the options in turn, **Text** thru **Icons**.
+A control is simply a UI element that has behaviors associated with it. Many controls in PowerApps are the same as controls that you've used in other apps: labels, text-input boxes, drop-down lists, navigation elements, and so on. But PowerApps has more specialized controls like **Galleries** (which display summary data) and **Forms** (which display detail data and enable you to create and edit items). And also some other really cool controls like **Image**, **Camera**, and **Barcode**. To see what's available, click or tap **Insert** on the ribbon, and then click or tap each of the options in turn, **Text** through **Icons**.
 
 ![Controls tab on PowerApps Studio ribbon](./media/learning-spo-app-explore-controls/ribbon-controls.png)
-
 
 ## Explore the browse screen
 Each of the three app screens has a main control and some additional controls. The first screen in the app is the browse screen, named **BrowseScreen1** by default. The main control on this screen is a gallery named **BrowseGallery1**. **BrowseGallery1** contains other controls, like **NextArrow1** (an icon control - click or tap it to go to the details screen). There are also separate controls on the screen, like **IconNewItem1** (an icon control - click or tap it to create an item in the edit/create screen).

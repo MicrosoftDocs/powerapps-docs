@@ -134,7 +134,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 1. Add a **Text gallery** control in vertical/portrait orientation, and set its **[Items](properties-core.md)** property to this formula:
 <br>**Filter(CityPopulations, Countries.Selected.Value in Country)**
 
-1. In the first item of the **Text gallery** control, set the **[Text](properties-core.md)** property of the upper **[Text box](control-text-box.md)** control to **ThisItem.City**, and delete the bottom **[Text box](control-text-box.md)** control.
+1. In the first item of the **Text gallery** control, set the **[Text](properties-core.md)** property of the upper **[Label](control-text-box.md)** control to **ThisItem.City**, and delete the bottom **[Label](control-text-box.md)** control.
 
 1. Set the **[TemplateSize](control-gallery.md)** property of the **Text gallery** control to **80**.
 

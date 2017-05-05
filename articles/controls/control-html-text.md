@@ -79,7 +79,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 ## Example ##
 
-1. Add a **[Text box](control-text-box.md)** control, name it **Source**, and set its **[Text](properties-core.md)** property to this string:
+1. Add a **[Label](control-text-box.md)** control, name it **Source**, and set its **[Text](properties-core.md)** property to this string:
 
 \<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization. \<p>
 
@@ -88,4 +88,4 @@ Don't know how to [add, name, and configure a control](../add-configure-controls
 1. Add an **HTML text** control, and set its **HTMLText** property to this value:<br>
 **Source.Text**
 
- 	The **HTML text** control shows the same text as the **[Text box](control-text-box.md)** control but converts the tags to the appropriate characters.
+ 	The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.

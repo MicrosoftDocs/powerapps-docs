@@ -49,13 +49,13 @@ By default, every app that Microsoft PowerApps generates has three screens:
 
 	![Select a layout](./media/data-platform-create-app/choose-gallery-layout.png)
 
-1. Under the search box, click or tap the **Text box** control to select it.
+1. Under the search box, click or tap the **Label** control to select it.
 
-	![Select a text box](./media/data-platform-create-app/select-textbox.png)
+	![Select a label](./media/data-platform-create-app/select-textbox.png)
 
 1. In the right pane, select **Surname of Given name** in the dropdown list
 
- 	The **Text box** control that you selected shows data from that field.
+ 	The **Label** control that you selected shows data from that field.
 
 1. In the browse screen, select the gallery by clicking or tapping any name except the top name.
 

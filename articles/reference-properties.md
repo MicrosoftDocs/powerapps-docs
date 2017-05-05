@@ -15,10 +15,9 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="03/17/2016"
-   ms.author="GregLi"/>
+   ms.author="gregli"/>
 
 # Controls and properties in PowerApps #
-
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
 ## Controls ##
@@ -38,6 +37,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Check box](controls/control-check-box.md)** – Select or clear an option to specify **true** or **false**.
 
 **[Column chart](controls/control-column-line-chart.md)** – Show values as vertical bars relative to two axes.
+
+**[Data table](controls/control-data-table.md)** - Show data in a tabular format.
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
 
@@ -83,7 +84,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Slider](controls/control-slider.md)** – Specify a value by dragging a handle.
 
-**[Text box](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency,
+**[Label](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency,
 
 **[Text input](controls/control-text-input.md)** – Type text, numbers, and other data.
 
@@ -117,7 +118,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](controls/control-image.md)** controls.
 
-**[AutoHeight](controls/control-text-box.md)** – Whether a text box automatically increases its **[Height](controls/properties-size-location.md)** property if its **[Text](controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
+**[AutoHeight](controls/control-text-box.md)** – Whether a label automatically increases its **[Height](controls/properties-size-location.md)** property if its **[Text](controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Label](controls/control-text-box.md)** control.
 
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -233,7 +234,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Height](controls/properties-size-location.md)** – The distance between a control's top and bottom edges.  Applies to many controls.
 
-**[HintText](controls/control-text-input.md)** – Light-grey text that appears in an input-text control if it's empty.  Applies to the **[Text input](controls/control-text-input.md)** control.
+**[HintText](controls/control-text-input.md)** – Light-grey text that appears in a text-input control if it's blank.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
 **[HoverBorderColor](controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.  Applies to many controls.
 
@@ -275,7 +276,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](controls/control-gallery.md)** and **[Slider](controls/control-slider.md)** controls.
 
-**[LineHeight](controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](controls/control-radio.md)**, **[Text box](controls/control-text-box.md)**, and **[Text input](controls/control-text-input.md)** controls.
+**[LineHeight](controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](controls/control-radio.md)**, **[Label](controls/control-text-box.md)**, and **[Text input](controls/control-text-input.md)** controls.
 
 **[Loop](controls/control-audio-video.md)** – Whether an audio or video clip automatically starts over as soon as it finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -349,7 +350,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OriginalWidth](controls/control-image.md)** – Original width of an image, enabled with the **[CalculateOriginalDimensions](controls/control-image.md)** property.  Applies to the **[Image](controls/control-image.md)** control.
 
-**[Overflow](controls/control-text-box.md)** – Whether a scrollbar appears in a text box if its **[Wrap](controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Text box](controls/control-text-box.md)** control.
+**[Overflow](controls/control-text-box.md)** – Whether a scrollbar appears in a label if its **[Wrap](controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Label](controls/control-text-box.md)** control.
 
 ### P ###
 
@@ -501,7 +502,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Width](controls/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
 
-**[Wrap](controls/control-text-box.md)** – Whether text that's too long to fit in a text box wraps to the next line.  Applies to the **[Text box](controls/control-text-box.md)** control.
+**[Wrap](controls/control-text-box.md)** – Whether text that's too long to fit in a label wraps to the next line.  Applies to the **[Label](controls/control-text-box.md)** control.
 
 **[WrapCount](controls/control-gallery.md)** – How many records appear in each item of a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
