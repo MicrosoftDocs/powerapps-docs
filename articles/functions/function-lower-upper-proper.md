@@ -47,7 +47,7 @@ If you pass a single string, the return value is the converted version of that s
 ## Examples ##
 
 ### Single string ###
-The examples in this section use an input-text control, named **Author**, as their [data source](../working-with-data-sources.md). The control contains the string "E. E. CummINGS".
+The examples in this section use a text-input control, named **Author**, as their [data source](../working-with-data-sources.md). The control contains the string "E. E. CummINGS".
 
 | Formula | Description | Result |
 |---------|-------------|--------|
@@ -70,7 +70,7 @@ Each formula returns a single-column table that contains the converted strings.
 
 ### Step-by-step example ###
 
-1. Add an input-text control, and name it **Source**.
+1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **Source**.
 
 1. Add a label, and set its **[Text](../controls/properties-core.md)** property to this function:<br>**Proper(Source.Text)**
 

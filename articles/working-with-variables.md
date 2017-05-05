@@ -40,7 +40,7 @@ Excel doesn't have variables. The value of a cell that contains a formula change
 ### PowerApps ###
 Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas.
 
-For example, you can replicate the Excel behavior in an app by adding a **[Text box](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
+For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
 ![](media/working-with-variables/recalc1.png)
 
@@ -50,7 +50,7 @@ Notice that the **TextBox1** control is selected, showing its **[Text](controls/
 
 The formula for **TextBox1** has been automatically recalculated, showing the new value.
 
-In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the text box will automatically show negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
+In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
 <br>**If( Value(TextBox1.Text) < 0, Red, Black )**
 
 ![](media/working-with-variables/recalc-color1.png)
@@ -68,7 +68,7 @@ You can use formulas for a wide variety of scenarios:
 Using formulas to build apps has many advantages:
 
 - If you know Excel, you know PowerApps. The model and formula language are the same.
-- If you've used other programming tools, think about how much code would be required to accomplish these examples.  In Visual Basic, you'd need to write an event handler for the change event on each text box.  The code to perform the calculation in each of these is redundant and could get out of sync, or you'd need to write a common subroutine.  In PowerApps, you accomplished all of that with a single, one-line formula.
+- If you've used other programming tools, think about how much code would be required to accomplish these examples.  In Visual Basic, you'd need to write an event handler for the change event on each text-input control.  The code to perform the calculation in each of these is redundant and could get out of sync, or you'd need to write a common subroutine.  In PowerApps, you accomplished all of that with a single, one-line formula.
 - To understand where **TextBox1**'s text is coming from, you know exactly where to look: the formula in the **[Text](controls/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
 - If the user changes a slider control and then changes their mind, they can change the slider back to its original value.  And it's as if nothing had ever changed: the app shows the same control values as it did before.  There are no ramifications for experimenting and asking "what if," just as there are none in Excel.  
 
@@ -119,7 +119,7 @@ Let's rebuild our adding machine by using a context variable:
 
 	![](media/working-with-variables/context-variable-2.png)
 
-3. Add a **[Text box](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
+3. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
 
 	This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
 
@@ -156,14 +156,14 @@ Let's recreate our adding machine by using a collection:
 
 	![](media/working-with-variables/collection-2.png)
 
-1. To display the running total, add a text-box control, and set its **[Text](controls/properties-core.md)** property to this formula:<br>
+1. To display the running total, add a label, and set its **[Text](controls/properties-core.md)** property to this formula:<br>
 **First(RunningTotal).Value**
 
-	This formula extracts the **Value** field of the first record of the **RunningTotal** collection. The text box will automatically show the value of **RunningTotal** as it changes based on the buttons that the user selects.
+	This formula extracts the **Value** field of the first record of the **RunningTotal** collection. The label will automatically show the value of **RunningTotal** as it changes based on the buttons that the user selects.
 
 	![](media/working-with-variables/collection-3.png)
 
-1. To run the adding machine, press F5 to open Preview, enter numbers in the text-input box, and select buttons.
+1. To run the adding machine, press F5 to open Preview, enter numbers in the text-input control, and select buttons.
 
 1. To return to the default workspace, press Esc.
 

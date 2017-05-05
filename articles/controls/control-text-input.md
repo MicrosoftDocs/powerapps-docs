@@ -144,7 +144,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 1. Add a text gallery in portrait/vertical orientation, set its **[Items](properties-core.md)** property to **Names**, and set the **[Text](properties-core.md)** property of **Subtitle1** to **ThisItem.FirstName**.
 
-1. (optional) In the template gallery, delete the bottom text box, named **Body1**, and set the **[TemplateSize](control-gallery.md)** property of the gallery to **80**.
+1. (optional) In the template gallery, delete the bottom label, named **Body1**, and set the **[TemplateSize](control-gallery.md)** property of the gallery to **80**.
 
 1. Press F5, type a string of text into **inputFirst** and **inputLast**, and then click or tap the **Add** button.
 
@@ -153,14 +153,14 @@ The user can specify data by typing into a text-input control. Depending on how 
 ### Prompt for a password ###
 1. Add a text-input control, name it **inputPassword**, and set its **Mode** property to **Password**.
 
-1. Add a text box, and set its **[Text](properties-core.md)** property to this formula:<br>
+1. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
 **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
 	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and then type **P@ssw0rd** in **inputPassword**.
 
-	When you finish typing the password, the text box stops showing **Access denied** and starts to show **Access granted**.
+	When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
 
 1. To return to the default workspace, press Esc.
 

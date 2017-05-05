@@ -83,7 +83,7 @@ You can also define a single-column table with square brackets.  An equivalent w
 In Excel and PowerApps, you use formulas to manipulate numbers and strings of text in similar ways:
 
 - In Excel, type a value, such as **42**, in cell **A1**, and then type a formula, such as **A1+2**, in another cell to show the value of **44**.
-- In PowerApps, set the **[Default](controls/properties-core.md)** property of **Slider1** to **42**, and set the **[Text](controls/properties-core.md)** property of a text box to **Slider1.Value + 2** to show the value of **44**.
+- In PowerApps, set the **[Default](controls/properties-core.md)** property of **Slider1** to **42**, and set the **[Text](controls/properties-core.md)** property of a label to **Slider1.Value + 2** to show the value of **44**.
 
 In both cases, the calculated value changes automatically if you change the values of the arguments (for example, the number in cell **A1** or the value of **Slider1**).
 
@@ -158,13 +158,13 @@ You can also build a formula that calculates data for an individual record, take
 
 ![](media/working-with-tables/selected-collection.png)
 
-This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body1** column, which represents the text box that shows the data from that column. Select the table icon in the **Body1** column to drill into that data.
+This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body1** column, which represents the label that shows the data from that column. Select the table icon in the **Body1** column to drill into that data.
 
 Now that you have the selected record, you can extract individual fields from it with the **.** operator.
 
-1. Press Esc to return to the default workspace, and then add a text box below the gallery.
+1. Press Esc to return to the default workspace, and then add a label below the gallery.
 
-1. Set the **[Text](controls/properties-core.md)** property of the text box to this formula:<br>
+1. Set the **[Text](controls/properties-core.md)** property of the label to this formula:<br>
 	**Gallery.Selected.Heading**
 
 	![](media/working-with-tables/gallery-selected.png)

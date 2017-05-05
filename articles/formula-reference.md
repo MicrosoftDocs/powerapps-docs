@@ -63,6 +63,8 @@ Other elements include:
 
 **[Back](functions/function-navigate.md)** – Displays the previous screen.  
 
+**[Blank](functions/function-isblank-isempty.md)** – Returns a *blank* value that can be used to insert a NULL value in a data source.
+
 ## C ##
 
 **[Calendar](functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.

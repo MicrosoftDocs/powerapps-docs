@@ -68,7 +68,7 @@ Create an app automatically in which users can show, add, or delete images from 
 
 1. Add as many images as you want by repeating the last three steps, and then press Esc to return to the default workspace.
 
-1. (optional) Delete either **Text box** control that shows the caption for each image.
+1. (optional) Delete either **Label** control that shows the caption for each image.
 
 ## Add a drawing ##
 1. Show **EditScreen1** by clicking or tapping it in the left navigation bar, and then click or tap the image card to select it.

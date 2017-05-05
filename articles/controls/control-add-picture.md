@@ -24,7 +24,7 @@ Takes a photo or loads images from the local device.
 ## Description ##
 With this control users can take photos or upload image files from their device and update the data source with this content. On a mobile device the user is presented with the device's choice dialog to choose between taking a photo or selecting one already available.
 
-This control is a composite control, made up of two controls.  Press or tap once to select the outer control that shows the image that has been loaded.  Press or tap again to select the inner text box control.
+This control is a composite control, made up of two controls.  Press or tap once to select the outer control that shows the image that has been loaded.  Press or tap again to select the inner label control.
 
 ## Outer control properties ##
 
@@ -70,7 +70,7 @@ These properties apply to the outer control.
 
 ## Inner text properties ##
 
-These properties apply to the inner text box control that by default says "Tap or click to add a picture".  To select this inner control, press or tap the **Add picture** control once, and then again.
+These properties apply to the inner label control that by default says "Tap or click to add a picture".  To select this inner control, press or tap the **Add picture** control once, and then again.
 
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 

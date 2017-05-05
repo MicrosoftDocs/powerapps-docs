@@ -72,7 +72,7 @@ Assuming you have an API with some type of authenticated access, you need a way 
 Swagger files and Postman Collections use different formats, but both are language-agnostic machine-readable documents that describe your API's operations and parameters:
 - You can generate these documents using a variety of tools depending on the language and platform that your API is built on. See the [Text Analytics API documentation](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/export?DocumentFormat=Swagger&ApiName=Azure) for an example of a Swagger file.
 - If you don't already have a Swagger file for your API and don't want to create one, you can still easily create a custom API by using a Postman Collection. See [Create a Postman Collection](postman-collection.md) for more information.
-- PowerApps ultimately uses Swagger behind the scenes, so a Postman Collection is parsed and translated into a Swagger definition file. 
+- PowerApps ultimately uses Swagger behind the scenes, so a Postman Collection is parsed and translated into a Swagger definition file.
 
 **Note**: Your file size must be less than 1MB.
 
@@ -107,12 +107,12 @@ You will now use the Swagger file or Postman Collection to register your custom 
 
 	Upload an icon for your custom API. Description, Host, and Base URL fields are typically auto-populated with the information from the Swagger file. If they are not auto-populated, you can add information to those fields. Select **Continue**.
 
-4. In the **Security** tab, enter any authentication properties. 
+4. In the **Security** tab, enter any authentication properties.
 
 	![Authentication types](./media/register-custom-api/authenticationtypes.png)
-	
+
 	- The authentication type is auto-populated based on what is defined in your Swagger `securityDefinitions` object. Below is an OAuth2.0 example.
-		
+
 		```
 		"securityDefinitions": {
 			"AAD": {
@@ -152,7 +152,8 @@ You will now use the Swagger file or Postman Collection to register your custom 
 
 	![Test API Response](./media/register-custom-api/testapiresponse.png)
 
-## Use your API
+### Step 3: Add the custom API to an app
+[Add the custom API to an app](add-data-connection.md) as you would any other data source, and then use the API within the function bar, a label, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](connection-office365-outlook.md) is an example of using the Office 365 API.
 
 {TODO: Show connection to new API, then calling the API from an app to return the language of the text I pass.}
 

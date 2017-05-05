@@ -107,7 +107,7 @@ And then use a formula such as the following to pull translated strings from the
 
 * **LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
 
-Be aware that translated strings in other languages could be significantly longer than they are in your language.  In many cases, the text boxes and other elements that display the strings in your user interface will need to be wider to accommodate.
+Be aware that translated strings in other languages could be significantly longer than they are in your language.  In many cases, the labels and other elements that display the strings in your user interface will need to be wider to accommodate.
 
 For more information, see the documentation for the **[Language](function/function-language.md)** function.
 
