@@ -3,8 +3,8 @@
 	description="This topic introduces the Data table control in Microsoft PowerApps."
 	services="powerapps"
 	documentationCenter="na"
-	authors="jasongre"
-	manager="kfend"
+	authors="aftowen"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="04/24/2017"
-   ms.author="kfend"/>
+   ms.author="anneta"/>
 
 # Show tabular data in PowerApps #
 Show tabular data in an app, where each column represents a field and each row represents a record. Examples of this type of data include a list of sales orders, a set of service tickets, or a directory of contacts. To easily present tabular data, add a **Data table** control, link it to a data source, and then specify which fields to show.
