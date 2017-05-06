@@ -14,15 +14,16 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/28/2017"
+   ms.date="05/05/2017"
    ms.author="archanan"/>
 
 # Register and use custom APIs in PowerApps
 PowerApps enables you to build full-featured apps with no traditional application code. But in some cases you need to extend PowerApps capabilites, and web services are a natual fit for this. Your app can connect to a service, perform operations, and get data back. When you have a web service you want to connect to with PowerApps, you register the service as a custom API. This process enables PowerApps to understand the characteristics of your web API, including the authentication that it requires, the operations that it supports, and the parameters and outputs for each of those operations.
 
-In this topic, we'll look at the steps required to register and use a custom API, and we'll use the Azure Cognitive Services [Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api). This API identifies the language, sentiment, and key phrases in text that you pass to it. Below is a graphic that shows the interaction between the service, the custom API we create from it, and the app that calls the API.
+In this topic, we'll look at the steps required to register and use a custom API, and we'll use the Azure Cognitive Services [Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api) as an example. This API identifies the language, sentiment, and key phrases in text that you pass to it. The following image shows the interaction between the service, the custom API we create from it, and the app that calls the API.
 
-{TODO: add graphic}
+![API, custom connector, and app](./media/register-custom-api/intro-graphic.png)
+
 
 ## Prerequisites
 
@@ -152,10 +153,38 @@ You will now use the Swagger file or Postman Collection to register your custom 
 
 	![Test API Response](./media/register-custom-api/testapiresponse.png)
 
-### Step 3: Add the custom API to an app
-[Add the custom API to an app](add-data-connection.md) as you would any other data source, and then use the API within the function bar, a label, and more. For example, in the function bar, you can start typing **MySampleWebAPI** to see the available functions. [Office 365 Outlook](connection-office365-outlook.md) is an example of using the Office 365 API.
 
-{TODO: Show connection to new API, then calling the API from an app to return the language of the text I pass.}
+## Use your custom connector
+Now that you've registered your API, add the custom connector to your app like you would any other data source. We'll go through a brief example here. For more information about data connections, see [Add a data connection in PowerApps](add-data-connection.md).
+
+1. In PowerApps Studio, in the right pane, click or tap **Add data source**.
+
+	![](./media/register-custom-api/data-source.png)
+
+2. Click or tap the custom connector that you created.
+
+	![](./media/register-custom-api/connector.png)
+
+3. Complete any steps necessary to sign in to the service you're connecting to. If your API uses OAuth authentication, you might be presented a sign-in screen. For API key authentication, you might be prompted for a key value.
+
+4. Call the API in your app. For our example, we created an app that submits text to Cognitive Services and gets back a sentiment score of 0 to 1, which the app shows as a percentage. 
+
+	- With this connector, if you start typing "Az" in the formula bar, you see the API and the operations that it makes available.
+
+		![](./media/register-custom-api/formula.png)
+
+	- The complete call looks like this, where we pass in text from the `TextInput` control and get back a score to display in the app: 
+
+		```
+		'AzureMachineLearning-TextAnalytics'.Sentiment({documents:Table({language:"en",id:"1",text:TextInput.Text})}).documents.score)
+		```
+
+	- We do a little more work in the app to handle the data that comes back, but it's not too complicated.
+
+The finished app looks like the following image. It's a simple app, but it gains powerful functionality by being able to call Cognitive Services through a custom connector.
+
+![](./media/register-custom-api/finished-app.png)
+
 
 ### Quota and throttling
 
@@ -179,8 +208,6 @@ Now that you have a custom API, you can share it with other users in your organi
 ## Next steps
 
 [Learn how to create a Postman Collection](postman-collection.md)
-
-[Learn about custom Swagger extensions](customapi-how-to-swagger.md). {TODO: Remove for PowerApps}
 
 [Use an ASP.NET Web API](customapi-web-api-tutorial.md).
 

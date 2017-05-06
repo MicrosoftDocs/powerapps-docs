@@ -37,6 +37,11 @@ Craft Azure Functions to extend apps with custom server-side logic. [Learn more]
 Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](embed-apps-dev.md)
 
 
+## Build offline-capable apps
+
+Develop offline-capable apps so your users are productive whether they are online or offline. [Learn more](offline-apps.md)
+
+
 ## Work with data using the Common Data Service SDK
 
 Use the CDS SDK with Azure Functions to extend your query and data manipulation capabilities in PowerApps. [Learn more](https://aka.ms/whgr2w)
