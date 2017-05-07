@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Register and use custom APIs | Microsoft PowerApps"
-	description="Register and use custom APIs in PowerApps, using Swagger and Postman."
+	description="Register and use custom APIs in PowerApps, using OpenAPI and Postman."
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -28,7 +28,7 @@ In this topic, we'll look at the steps required to register and use a custom API
 ## Prerequisites
 
 - A [PowerApps account](https://powerapps.microsoft.com).
-- A Swagger file in JSON format, a URL to a Swagger definition, or a Postman Collection for your API. If you don't have any of these, we'll provide guidance for you.
+- An OpenAPI file in JSON format, a URL to an OpenAPI definition, or a Postman Collection for your API. If you don't have any of these, we'll provide guidance for you.
 - An image to use as an icon for your custom API (optional).
 
 
@@ -52,10 +52,10 @@ The custom API process has several steps, which we describe briefly below. This 
 
 3. **Describe your API** in one of two industry-standard ways, so that PowerApps can connect to it.
 
-	- A Swagger file
+	- An OpenAPI file (also known as a Swagger file)
 	- A Postman Collection
 
-	You can also build a Swagger file in step 4 as part of the registration process.
+	You can also build an OpenAPI file in step 4 as part of the registration process.
 
 4. **Register your API** using a wizard in PowerApps, where you specify an API description, security details, and other information.
 5. **Use your API** in an app. Create a connection to the API in your app, and call any operations that the API provides, just like you call native functions in PowerApps.
@@ -64,30 +64,30 @@ The custom API process has several steps, which we describe briefly below. This 
 
 ## Describe your API
 
-Assuming you have an API with some type of authenticated access, you need a way to describe the API so that PowerApps can connect to it. To do this, you create a Swagger file or a Postman Collection – which you can do from _any_ REST API endpoint, including:
+Assuming you have an API with some type of authenticated access, you need a way to describe the API so that PowerApps can connect to it. To do this, you create an OpenAPI file or a Postman Collection – which you can do from _any_ REST API endpoint, including:
 
 - Publicly available APIs. Some examples include [Spotify](https://developer.spotify.com/), [Uber](https://developer.uber.com/), [Slack](https://api.slack.com/), [Rackspace](http://docs.rackspace.com/), and more.
 - An API that you create and deploy to any cloud hosting provider, including Azure, Amazon Web Services (AWS), Heroku, Google Cloud, and more.
 - A custom line-of-business API deployed on your network as long as the API is exposed on the public internet.
 
-Swagger files and Postman Collections use different formats, but both are language-agnostic machine-readable documents that describe your API's operations and parameters:
-- You can generate these documents using a variety of tools depending on the language and platform that your API is built on. See the [Text Analytics API documentation](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/export?DocumentFormat=Swagger&ApiName=Azure) for an example of a Swagger file.
-- If you don't already have a Swagger file for your API and don't want to create one, you can still easily create a custom API by using a Postman Collection. See [Create a Postman Collection](postman-collection.md) for more information.
-- PowerApps ultimately uses Swagger behind the scenes, so a Postman Collection is parsed and translated into a Swagger definition file.
+OpenAPI files and Postman Collections use different formats, but both are language-agnostic machine-readable documents that describe your API's operations and parameters:
+- You can generate these documents using a variety of tools depending on the language and platform that your API is built on. See the [Text Analytics API documentation](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/export?DocumentFormat=OpenAPI&ApiName=Azure) for an example of an OpenAPI file.
+- If you don't already have an OpenAPI file for your API and don't want to create one, you can still easily create a custom API by using a Postman Collection. See [Create a Postman Collection](postman-collection.md) for more information.
+- PowerApps ultimately uses OpenAPI behind the scenes, so a Postman Collection is parsed and translated into an OpenAPI definition file.
 
 **Note**: Your file size must be less than 1MB.
 
 
-### Getting started with Swagger and Postman
+### Getting started with OpenAPI and Postman
 
-- If you're new to Swagger, see [Getting Started with Swagger](http://swagger.io/getting-started/) on the swagger.io site.
+- If you're new to OpenAPI, see [Getting Started with OpenAPI](http://swagger.io/getting-started/) on the swagger.io site.
 - If you're new to Postman, install the [Postman app](https://www.getpostman.com/apps) from their site.
 - If your API is built with Azure API Apps or Azure Functions, see [Exporting an Azure hosted API to PowerApps and Microsoft Flow](https://docs.microsoft.com/azure/app-service/app-service-export-api-to-powerapps-and-flow) for more information.
 
 
 ## Register your API
 
-You will now use the Swagger file or Postman Collection to register your custom API in PowerApps.
+You will now use the OpenAPI file or Postman Collection to register your custom API in PowerApps.
 
 1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom APIs** in the upper right corner.
 
@@ -100,19 +100,19 @@ You will now use the Swagger file or Postman Collection to register your custom 
 	![Custom API properties](./media/register-custom-api/newcustomapi.png)
 
 3. In the **General** tab, choose how you want to create the custom API.
-	- Upload Swagger
-	- Paste Swagger URL
-	- Upload a Postman Collection V1
+	- Upload an OpenAPI file
+	- Use an OpenAPI URL
+	- Upload Postman Collection V1
 
 	![How to create custom API](./media/register-custom-api/choosehowtocreate.png)
 
-	Upload an icon for your custom API. Description, Host, and Base URL fields are typically auto-populated with the information from the Swagger file. If they are not auto-populated, you can add information to those fields. Select **Continue**.
+	Upload an icon for your custom API. Description, Host, and Base URL fields are typically auto-populated with the information from the OpenAPI file. If they are not auto-populated, you can add information to those fields. Select **Continue**.
 
 4. In the **Security** tab, enter any authentication properties.
 
 	![Authentication types](./media/register-custom-api/authenticationtypes.png)
 
-	- The authentication type is auto-populated based on what is defined in your Swagger `securityDefinitions` object. Below is an OAuth2.0 example.
+	- The authentication type is auto-populated based on what is defined in your OpenAPI `securityDefinitions` object. Below is an OAuth2.0 example.
 
 		```
 		"securityDefinitions": {
@@ -125,17 +125,17 @@ You will now use the Swagger file or Postman Collection to register your custom 
 		},
 		```
 
-	- If the Swagger file does not use the `securityDefintions` object, then no additional values are needed.
+	- If the OpenAPI file does not use the `securityDefintions` object, then no additional values are needed.
 	- When using a Postman Collection, authentication type is auto-populated only when using supported authentication types, such as OAuth 2.0 or Basic.
 	- For an example of setting up Azure Active Directory (AAD) authenthication, see the "Set up Azure Active Directory authentication" section of [Create a custom Web API for PowerApps](customapi-web-api-tutorial.md).
 
-5. In the **Definitions** tab, all the operations defined in your Swagger file or Postman Collection, along with request and response values, are auto-populated. If all your required operations are defined, you can go to step 6 in the registration process without making changes on this screen.
+5. In the **Definitions** tab, all the operations defined in your OpenAPI file or Postman Collection, along with request and response values, are auto-populated. If all your required operations are defined, you can go to step 6 in the registration process without making changes on this screen.
 
 	![Definition tab](./media/register-custom-api/definitiontab.png)
 
 	If you want to edit existing actions or add new actions to your custom API, continue reading below.
 
-	1. If you want to add a new action that was not already in your Swagger file or Postman Collection, select **New action** in the left pane and fill in the **General** section with the name, description, and visibility of your operation.
+	1. If you want to add a new action that was not already in your OpenAPI file or Postman Collection, select **New action** in the left pane and fill in the **General** section with the name, description, and visibility of your operation.
 
 	2. In the **Request** section, select **Import from sample** on the top right. In the form on the right, paste in a sample request. Sample requests are usually available in the API documentation, where you can get information to fill out the **Verb**, **Request URL**, **Headers**, and **Body** fields. See the [Text Analytics API documentation](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/operations/56f30ceeeda5650db055a3c6) for an example.
 

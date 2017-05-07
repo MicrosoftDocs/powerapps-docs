@@ -68,7 +68,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 	For more information, see [Environments administration](environments-administration.md).
 
-1. **Create a custom API by specifying the URL to a Swagger API definition.**
+1. **Create a custom API by specifying the URL to an OpenAPI definition.**
 
 	For more information, see [Register custom APIs](register-custom-api.md).
 

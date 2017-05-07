@@ -26,7 +26,7 @@ Azure Resource Manager (ARM) enables you to manage the components of a solution 
 
 - An [Azure subscription](https://azure.microsoft.com/en-us/free/).
 - A [PowerApps account](https://powerapps.microsoft.com).
-- The [sample Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json) used in this tutorial.
+- The [sample OpenAPI file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json) used in this tutorial.
 
 
 ## Enable authentication in Azure Active Directory
@@ -104,11 +104,11 @@ Now that the AAD application is configured, let's add the custom API.
 
 	![Custom API properties](./media/customapi-azure-resource-manager-tutorial/newcustomapi.png)
 
-3. Type a name for your connection, and then upload the [sample ARM Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Continue**.  
+3. Type a name for your connection, and then upload the [sample ARM OpenAPI file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Continue**.  
 
     ![Connect to a new API endpoint](./media/customapi-azure-resource-manager-tutorial/createcustom.png)
 
-4. On the next screen, because the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, type the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, type `https://management.core.windows.net/`.
+4. On the next screen, because the OpenAPI file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, type the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, type `https://management.core.windows.net/`.
 
     > [AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
 
@@ -118,7 +118,7 @@ Now that the AAD application is configured, let's add the custom API.
 
     ![Custom API added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
 
-> [AZURE.NOTE] The sample Swagger does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this Swagger or create another Swagger file using the [online Swagger editor](http://editor.swagger.io/).
+> [AZURE.NOTE] The sample OpenAPI does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this OpenAPI file or create another OpenAPI file using the [online OpenAPI editor](http://editor.swagger.io/).
 >
 >This process can be used to access any RESTful API authenticated using AAD.
 
