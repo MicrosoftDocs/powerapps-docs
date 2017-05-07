@@ -68,9 +68,9 @@ For information about known limitations, see [Common issues and resolutions](com
 
 	For more information, see [Environments administration](environments-administration.md).
 
-1. **Create a custom API by specifying the URL to an OpenAPI definition.**
+1. **Create a custom connector by specifying the URL to an OpenAPI definition.**
 
-	For more information, see [Register custom APIs](register-custom-api.md).
+	For more information, see [Register and use custom connectors](register-custom-api.md).
 
 ## Release 2.0.590-2.0.591 ##
 1. **Show data in a gallery that resizes to fit items of different heights**.

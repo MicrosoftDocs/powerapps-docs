@@ -81,9 +81,9 @@ The first AAD application is used to secure the Web API. Name it **webAPI**.  Fo
 - There is no need to delegate any permissions.
 - **Important!** Note the application ID.  You will need it later.
 
-### Second AAD application: Securing the custom API and delegated access
+### Second AAD application: Securing the custom connector and delegated access
 
-The second AAD application is used to secure the custom API registration and acquire delegated access to the Web API protected by the first application. Name this one **webAPI-customAPI** .
+The second AAD application is used to secure the custom connector registration and acquire delegated access to the Web API protected by the first application. Name this one **webAPI-customAPI** .
 
 - Sign-on URL: `https://login.windows.net`
 - Reply URL: `https://msmanaged-na.consent.azure-apim.net/redirect`
@@ -100,7 +100,7 @@ The second AAD application is used to secure the custom API registration and acq
 
 You should now be able to use AAD to authenticate your web application.
 
-## Add the custom API to PowerApps
+## Add the custom connector to PowerApps
 
 1. Modify your OpenAPI file to add the `securityDefintions` object and AAD authentication used for the Web App. The section of your OpenAPI file with the **host** property should look like this:
 
@@ -123,19 +123,19 @@ You should now be able to use AAD to authenticate your web application.
 // The rest of the OpenAPI document follows...
 ```
 
-2. Browse to [PowerApps](https://web.powerapps.com), and add a custom API as described in [Register and use custom APIs in PowerApps](register-custom-api.md).
+2. Browse to [PowerApps](https://web.powerapps.com), and add a custom connector as described in [Register and use custom connectors in PowerApps](register-custom-api.md).
 
 3. Once you have uploaded your OpenAPI file, the wizard auto-detects that you are using AAD authentication for your Web API.
 
-4. Configure the AAD authentication for the custom API.  
+4. Configure the AAD authentication for the custom connector.  
 
   - **Client ID**: *Client ID of webAPI-CustomAPI*
   - **Secret**: *Client key of webAPI-CustomAPI*
   - **Login URL**: `https://login.windows.net`
   - **ResourceUri**: *Client ID of webAPI*
 
-5. Click **Create** and creating a connection to the custom API.
+5. Click **Create** and creating a connection to the custom connector.
 
 ## Next Steps
 
-Walk through the [Azure Resource Manager custom API tutorial](customapi-azure-resource-manager-tutorial.md).
+Walk through the [Azure Resource Manager custom connector tutorial](customapi-azure-resource-manager-tutorial.md).

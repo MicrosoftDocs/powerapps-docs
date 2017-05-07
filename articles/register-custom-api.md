@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Register and use custom APIs | Microsoft PowerApps"
-	description="Register and use custom APIs in PowerApps, using OpenAPI and Postman."
+	pageTitle="Register and use custom connectors | Microsoft PowerApps"
+	description="Register and use custom connectors in PowerApps, using OpenAPI and Postman."
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -17,10 +17,10 @@
    ms.date="05/05/2017"
    ms.author="archanan"/>
 
-# Register and use custom APIs in PowerApps
-PowerApps enables you to build full-featured apps with no traditional application code. But in some cases you need to extend PowerApps capabilites, and web services are a natual fit for this. Your app can connect to a service, perform operations, and get data back. When you have a web service you want to connect to with PowerApps, you register the service as a custom API. This process enables PowerApps to understand the characteristics of your web API, including the authentication that it requires, the operations that it supports, and the parameters and outputs for each of those operations.
+# Register and use custom connectors in PowerApps
+PowerApps enables you to build full-featured apps with no traditional application code. But in some cases you need to extend PowerApps capabilites, and web services are a natual fit for this. Your app can connect to a service, perform operations, and get data back. When you have a web service you want to connect to with PowerApps, you register the service as a custom connector. This process enables PowerApps to understand the characteristics of your web API, including the authentication that it requires, the operations that it supports, and the parameters and outputs for each of those operations.
 
-In this topic, we'll look at the steps required to register and use a custom API, and we'll use the Azure Cognitive Services [Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api) as an example. This API identifies the language, sentiment, and key phrases in text that you pass to it. The following image shows the interaction between the service, the custom API we create from it, and the app that calls the API.
+In this topic, we'll look at the steps required to register and use a custom connector, and we'll use the Azure Cognitive Services [Text Analytics API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api) as an example. This API identifies the language, sentiment, and key phrases in text that you pass to it. The following image shows the interaction between the service, the custom connector we create from it, and the app that calls the API.
 
 ![API, custom connector, and app](./media/register-custom-api/intro-graphic.png)
 
@@ -29,12 +29,12 @@ In this topic, we'll look at the steps required to register and use a custom API
 
 - A [PowerApps account](https://powerapps.microsoft.com).
 - An OpenAPI file in JSON format, a URL to an OpenAPI definition, or a Postman Collection for your API. If you don't have any of these, we'll provide guidance for you.
-- An image to use as an icon for your custom API (optional).
+- An image to use as an icon for your custom connector (optional).
 
 
-## Steps in the custom API process
+## Steps in the custom connector process
 
-The custom API process has several steps, which we describe briefly below. This article assumes you already have a RESTful API with some type of authenticated access, so we'll focus on steps 3-6 in the rest of the article. For an example of steps 1 and 2, see [Create a custom Web API for PowerApps](customapi-web-api-tutorial.md).
+The custom connector process has several steps, which we describe briefly below. This article assumes you already have a RESTful API with some type of authenticated access, so we'll focus on steps 3-6 in the rest of the article. For an example of steps 1 and 2, see [Create a custom Web API for PowerApps](customapi-web-api-tutorial.md).
 
 1. **Build a RESTful API** in the language and platform of your choice. For Microsoft technologies, we recommend one of the following.
 
@@ -59,7 +59,7 @@ The custom API process has several steps, which we describe briefly below. This 
 
 4. **Register your API** using a wizard in PowerApps, where you specify an API description, security details, and other information.
 5. **Use your API** in an app. Create a connection to the API in your app, and call any operations that the API provides, just like you call native functions in PowerApps.
-6. **Share your API** like you do other data connections in PowerApps. This step is optional, but it often makes sense to share custom APIs across multiple app creators.
+6. **Share your API** like you do other data connections in PowerApps. This step is optional, but it often makes sense to share custom connectors across multiple app creators.
 
 
 ## Describe your API
@@ -72,7 +72,7 @@ Assuming you have an API with some type of authenticated access, you need a way 
 
 OpenAPI files and Postman Collections use different formats, but both are language-agnostic machine-readable documents that describe your API's operations and parameters:
 - You can generate these documents using a variety of tools depending on the language and platform that your API is built on. See the [Text Analytics API documentation](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/export?DocumentFormat=OpenAPI&ApiName=Azure) for an example of an OpenAPI file.
-- If you don't already have an OpenAPI file for your API and don't want to create one, you can still easily create a custom API by using a Postman Collection. See [Create a Postman Collection](postman-collection.md) for more information.
+- If you don't already have an OpenAPI file for your API and don't want to create one, you can still easily create a custom connector by using a Postman Collection. See [Create a Postman Collection](postman-collection.md) for more information.
 - PowerApps ultimately uses OpenAPI behind the scenes, so a Postman Collection is parsed and translated into an OpenAPI definition file.
 
 **Note**: Your file size must be less than 1MB.
@@ -87,26 +87,26 @@ OpenAPI files and Postman Collections use different formats, but both are langua
 
 ## Register your API
 
-You will now use the OpenAPI file or Postman Collection to register your custom API in PowerApps.
+You will now use the OpenAPI file or Postman Collection to register your custom connector in PowerApps.
 
-1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom APIs** in the upper right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom connectors** in the upper right corner.
 
-	 **Tip**: If you can't find where to manage custom APIs in a mobile browser, it might be under a menu in the upper left corner.
+	 **Tip**: If you can't find where to manage custom connectors in a mobile browser, it might be under a menu in the upper left corner.
 
-	![Create custom API](./media/register-custom-api/managecustomapi.png)  
+	![Create custom connector](./media/register-custom-api/managecustomapi.png)  
 
-2. Select **Create custom API**.
+2. Select **Create custom connector**.
 
-	![Custom API properties](./media/register-custom-api/newcustomapi.png)
+	![Custom connector properties](./media/register-custom-api/newcustomapi.png)
 
-3. In the **General** tab, choose how you want to create the custom API.
+3. In the **General** tab, choose how you want to create the custom connector.
 	- Upload an OpenAPI file
 	- Use an OpenAPI URL
 	- Upload Postman Collection V1
 
-	![How to create custom API](./media/register-custom-api/choosehowtocreate.png)
+	![How to create a custom connector](./media/register-custom-api/choosehowtocreate.png)
 
-	Upload an icon for your custom API. Description, Host, and Base URL fields are typically auto-populated with the information from the OpenAPI file. If they are not auto-populated, you can add information to those fields. Select **Continue**.
+	Upload an icon for your custom connector. Description, Host, and Base URL fields are typically auto-populated with the information from the OpenAPI file. If they are not auto-populated, you can add information to those fields. Select **Continue**.
 
 4. In the **Security** tab, enter any authentication properties.
 
@@ -133,7 +133,7 @@ You will now use the OpenAPI file or Postman Collection to register your custom 
 
 	![Definition tab](./media/register-custom-api/definitiontab.png)
 
-	If you want to edit existing actions or add new actions to your custom API, continue reading below.
+	If you want to edit existing actions or add new actions to your custom connector, continue reading below.
 
 	1. If you want to add a new action that was not already in your OpenAPI file or Postman Collection, select **New action** in the left pane and fill in the **General** section with the name, description, and visibility of your operation.
 
@@ -143,11 +143,11 @@ You will now use the OpenAPI file or Postman Collection to register your custom 
 
 	3. Select **Import** to complete the request definition. Define the response in a similar way.
 
-6. Once you have all your operations defined, select **Create** to create your custom API.
+6. Once you have all your operations defined, select **Create** to create your custom connector.
 
-7. Once you have created your custom API, go to the **Test** tab to test the operations defined in the API. Choose a connection, and provide input parameters to test an operation.
+7. Once you have created your custom connector, go to the **Test** tab to test the operations defined in the API. Choose a connection, and provide input parameters to test an operation.
 
-	![Test custom API](./media/register-custom-api/testcustomapi.png)
+	![Test custom connector](./media/register-custom-api/testcustomapi.png)
 
 	If the call is successful, you get a valid response.
 
@@ -188,19 +188,19 @@ The finished app looks like the following image. It's a simple app, but it gains
 
 ### Quota and throttling
 
-- See the [PowerApps Pricing](https://powerapps.microsoft.com/pricing/) page for details about custom API creation quotas. Custom APIs that are shared with you don't count against this quota.
-- For each connection created on a custom API, users can make up to 500 requests per minute.
+- See the [PowerApps Pricing](https://powerapps.microsoft.com/pricing/) page for details about custom connector creation quotas. Custom connectors that are shared with you don't count against this quota.
+- For each connection created on a custom connector, users can make up to 500 requests per minute.
 
 ## Share your API
-Now that you have a custom API, you can share it with other users in your organization (but not publicly using PowerApps). Keep in mind that when you share an API, others might start to depend on it, and deleting a custom API deletes all the connections to the API.
+Now that you have a custom connector, you can share it with other users in your organization (but not publicly using PowerApps). Keep in mind that when you share an API, others might start to depend on it, and deleting a custom connector deletes all the connections to the API.
 
-1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom APIs** in the upper right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom connectors** in the upper right corner.
 
 	![New connection](./media/register-custom-api/managecustomapi.png)
 
 2. Select your API, select **Share**, and then enter the users or groups to whom you want to grant access to your API.  
 
-	![Share custom API](./media/register-custom-api/sharecustomapi.png)
+	![Share custom connector](./media/register-custom-api/sharecustomapi.png)
 
 3. Select **Save**.
 
