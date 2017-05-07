@@ -98,7 +98,7 @@ Most apps rely on at least one of these types of resources:
 
 - a connection to a data source
 - an on-premises data gateway
-- a custom API
+- a custom connector
 - an Excel workbook or other service
 - a flow
 

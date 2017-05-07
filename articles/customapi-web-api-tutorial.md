@@ -51,19 +51,19 @@ This tutorial shows you how to start bulding an ASP.NET Web API, host it on Azur
 
     >[AZURE.NOTE] If you don't already have code ready for a Web API, try the tutorial [Getting Started with ASP.NET Web API 2 (C#)](http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api).
 
-6. To connect our Web API to PowerApps, we'll need a [Swagger](http://swagger.io/) file that describes its operations.  You could write a Swagger of your own using the [online editor](http://editor.swagger.io/), but for this tutorial, you'll use an open-source tool named [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle/blob/master/README.md).  Install the Swashbuckle Nuget package in your Visual Studio project by clicking **Tools** > **NuGet Package Manager** > **Package Manager Console**, and then, in the Package Managet Console, type the command `Install-Package Swashbuckle`.
+6. To connect our Web API to PowerApps, we'll need an [OpenAPI](http://swagger.io/) file that describes its operations.  You could write an OpenAPI of your own using the [online editor](http://editor.swagger.io/), but for this tutorial, you'll use an open-source tool named [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle/blob/master/README.md).  Install the Swashbuckle Nuget package in your Visual Studio project by clicking **Tools** > **NuGet Package Manager** > **Package Manager Console**, and then, in the Package Managet Console, type the command `Install-Package Swashbuckle`.
 
     ![Install-Package Swashbuckle](./media/customapi-web-api-tutorial/swashbuckle-console.png)
 
-    >[AZURE.TIP] When you run your Web API application after installing Swashbuckle, a Swagger file will now be generated at the URL `http://<your root URL>/swagger/docs/v1`.  A generated user interface is also available at `http://<your root URL>/swagger`.
+    >[AZURE.TIP] When you run your Web API application after installing Swashbuckle, an OpenAPI file will now be generated at the URL `http://<your root URL>/swagger/docs/v1`.  A generated user interface is also available at `http://<your root URL>/swagger`.
 
 7. When your Web API is ready, publish it to Azure. To publish from Visual Studio, right-click on the web project in Solution Explorer, click **Publish...**, and then follow the prompts in the Publish dialog.
 
-8. Retrieve the Swagger JSON by navigating to `https://<azure-webapp-url>/swagger/docs/v1`.  Save the content as a JSON file.  Depending on your browser, you may need to copy and paste the text into an empty text file.   
+8. Retrieve the OpenAPI JSON by navigating to `https://<azure-webapp-url>/swagger/docs/v1`.  Save the content as a JSON file.  Depending on your browser, you may need to copy and paste the text into an empty text file.   
 
-	>[AZURE.IMPORTANT] A Swagger document with duplicate operation IDs is invalid. If you are using the sample C# template, the operation ID `Values_Get` is repeated twice. You can correct this by changing one instance to `Value_Get` and re-publishing.
+	>[AZURE.IMPORTANT] A OpenAPI document with duplicate operation IDs is invalid. If you are using the sample C# template, the operation ID `Values_Get` is repeated twice. You can correct this by changing one instance to `Value_Get` and re-publishing.
     >
-    >You can also download a [sample Swagger](http://pwrappssamples.blob.core.windows.net/samples/webAPI.json) from this tutorial. Be sure to remove the comments (starting with `//`) before using it.
+    >You can also download a [sample OpenAPI file](http://pwrappssamples.blob.core.windows.net/samples/webAPI.json) from this tutorial. Be sure to remove the comments (starting with `//`) before using it.
 
 ## Set up Azure Active Directory authentication
 
@@ -81,9 +81,9 @@ The first AAD application is used to secure the Web API. Name it **webAPI**.  Fo
 - There is no need to delegate any permissions.
 - **Important!** Note the application ID.  You will need it later.
 
-### Second AAD application: Securing the custom API and delegated access
+### Second AAD application: Securing the custom connector and delegated access
 
-The second AAD application is used to secure the custom API registration and acquire delegated access to the Web API protected by the first application. Name this one **webAPI-customAPI** .
+The second AAD application is used to secure the custom connector registration and acquire delegated access to the Web API protected by the first application. Name this one **webAPI-customAPI** .
 
 - Sign-on URL: `https://login.windows.net`
 - Reply URL: `https://msmanaged-na.consent.azure-apim.net/redirect`
@@ -100,9 +100,9 @@ The second AAD application is used to secure the custom API registration and acq
 
 You should now be able to use AAD to authenticate your web application.
 
-## Add the custom API to PowerApps
+## Add the custom connector to PowerApps
 
-1. Modify your Swagger to add the `securityDefintions` object and AAD authentication used for the Web App. The section of your Swagger with the **host** property should look like this:
+1. Modify your OpenAPI file to add the `securityDefintions` object and AAD authentication used for the Web App. The section of your OpenAPI file with the **host** property should look like this:
 
 ```javascript
 // File header should be above here...
@@ -120,22 +120,22 @@ You should now be able to use AAD to authenticate your web application.
     }
 },
 
-// The rest of the Swagger follows...
+// The rest of the OpenAPI document follows...
 ```
 
-2. Browse to [PowerApps](https://web.powerapps.com), and add a custom API as described in [Register and use custom APIs in PowerApps](register-custom-api.md).
+2. Browse to [PowerApps](https://web.powerapps.com), and add a custom connector as described in [Register and use custom connectors in PowerApps](register-custom-api.md).
 
-3. Once you have uploaded your Swagger, the wizard auto-detects that you are using AAD authentication for your Web API.
+3. Once you have uploaded your OpenAPI file, the wizard auto-detects that you are using AAD authentication for your Web API.
 
-4. Configure the AAD authentication for the custom API.  
+4. Configure the AAD authentication for the custom connector.  
 
   - **Client ID**: *Client ID of webAPI-CustomAPI*
   - **Secret**: *Client key of webAPI-CustomAPI*
   - **Login URL**: `https://login.windows.net`
   - **ResourceUri**: *Client ID of webAPI*
 
-5. Click **Create** and creating a connection to the custom API.
+5. Click **Create** and creating a connection to the custom connector.
 
 ## Next Steps
 
-Walk through the [Azure Resource Manager custom API tutorial](customapi-azure-resource-manager-tutorial.md).
+Walk through the [Azure Resource Manager custom connector tutorial](customapi-azure-resource-manager-tutorial.md).
