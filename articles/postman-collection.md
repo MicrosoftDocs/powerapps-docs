@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Describe a custom API with Postman | Microsoft PowerApps"
-	description="Create a Postman Collection for registering custom APIs"
+	pageTitle="Describe a custom connector with Postman | Microsoft PowerApps"
+	description="Create a Postman Collection for registering custom connectors"
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -17,9 +17,9 @@
    ms.date="04/28/2017"
    ms.author="archanan"/>
 
-# Describe a custom API with Postman
+# Describe a custom connector with Postman
 
-[Postman](https://www.getpostman.com/) is a tool for making your API development faster and easier. This tutorial demonstrates how to create a Postman collection, which you can then use to easily create [Custom APIs](register-custom-api.md) in PowerApps.
+[Postman](https://www.getpostman.com/) is a tool for making your API development faster and easier. This tutorial demonstrates how to create a Postman collection, which you can then use to easily create [Custom connectors](register-custom-api.md) in PowerApps.
 
 
 ## Prerequisites
@@ -52,11 +52,11 @@ Let's build a Postman Collection for the Azure Cognitive Services [Text Analytic
 
     ![Postman response](./media/postman-collection/request-response-save.png)
 
-4. Provide a **Request name** and **Request description** in the **Save Request** dialog box. You will use these values in your custom API.
+4. Provide a **Request name** and **Request description** in the **Save Request** dialog box. You will use these values in your custom connector.
 
     ![Postman Save Collection](./media/postman-collection/save-request-note.png)
 
-    You can also save the response to the request. Custom APIs currently only support a single response per request. If you save multiple responses per request, only the first one is used.
+    You can also save the response to the request. Custom connectors currently only support a single response per request. If you save multiple responses per request, only the first one is used.
 
     ![Postman Save Response](./media/postman-collection/save-response.png)
 
@@ -70,4 +70,4 @@ Let's build a Postman Collection for the Azure Cognitive Services [Text Analytic
 
     ![Postman Export](./media/postman-collection/export2.png)
 
-You can now use this Postman collection to create a custom API in PowerApps. For more information, see [Register and use custom APIs in PowerApps](register-custom-api.md). 
+You can now use this Postman collection to create a custom connector in PowerApps. For more information, see [Register and use custom connectors in PowerApps](register-custom-api.md). 

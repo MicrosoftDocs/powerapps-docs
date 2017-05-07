@@ -22,13 +22,13 @@ Before you [share an app](./share-app.md), consider the types of resources on wh
 
 - a connection to a data source
 - an on-premises data gateway
-- a custom API
+- a custom connector
 - an Excel workbook or other service
 - a flow
 
 Some of these resources are shared automatically when you share the app. Other resources require you or the people with whom you share the app to take extra steps so that the app works as you expect.
 
-You can also share your connections, custom APIs and on-premises data gateway with your entire organization.
+You can also share your connections, custom connectors and on-premises data gateway with your entire organization.
 
 ## Connections ##
 Some types of connections, such as SQL Server, are shared automatically, but others require users to create their own connections to the data source or sources in the app.
@@ -47,10 +47,10 @@ If you create and share an app that includes data from an on-premises source, th
 - You add an on-premises data gateway to an app that you’ve already shared.
 - You change the set of people or groups with whom you’ve shared an app that has an on-premises data gateway.
 
-## Custom APIs ##
-When you share an app that uses a custom API, it is automatically shared, but users must create their own connections to it.
+## Custom connectors ##
+When you share an app that uses a custom connector, it is automatically shared, but users must create their own connections to it.
 
-On [powerapps.com](https://web.powerapps.com), you can view or update permissions for a custom API. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap **New connection** (in the upper-right corner). Click or tap **Custom**, and then click or tap a custom API to display details about it.
+On [powerapps.com](https://web.powerapps.com), you can view or update permissions for a custom connector. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap **New connection** (in the upper-right corner). Click or tap **Custom**, and then click or tap a custom connector to display details about it.
 
 ## Excel workbooks ##
 If a shared app uses data to which not all users have access (such as an Excel workbook in a cloud-storage account), [share the data](share-app-data.md).

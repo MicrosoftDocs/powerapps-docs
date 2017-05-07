@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create a custom API for Azure Resource Manager | Microsoft PowerApps"
-	description="Learn how to create a custom API for Azure Resource Manager, then add the API to PowerApps."
+	pageTitle="Create a custom connector for Azure Resource Manager | Microsoft PowerApps"
+	description="Learn how to create a custom connector for Azure Resource Manager, then add the API to PowerApps."
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -18,9 +18,9 @@
    ms.author="ricksal"/>
 
 
-# Create a custom API for Azure Resource Manager in PowerApps
+# Create a custom connector for Azure Resource Manager in PowerApps
 
-Azure Resource Manager (ARM) enables you to manage the components of a solution on Azure - components like databases, virtual machines, and web apps. This tutorial demonstrates how to enable authentication in Azure Active Directory, register one of the ARM APIs as a custom API, then connect to it in PowerApps. This would be useful if you want to manage Azure resources directly from an app. For more information about ARM, see [Azure Resource Manager Overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).
+Azure Resource Manager (ARM) enables you to manage the components of a solution on Azure - components like databases, virtual machines, and web apps. This tutorial demonstrates how to enable authentication in Azure Active Directory, register one of the ARM APIs as a custom connector, then connect to it in PowerApps. This would be useful if you want to manage Azure resources directly from an app. For more information about ARM, see [Azure Resource Manager Overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).
 
 ## Prerequisites
 
@@ -92,17 +92,17 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
 ## Add the connection in PowerApps
 
-Now that the AAD application is configured, let's add the custom API.
+Now that the AAD application is configured, let's add the custom connector.
 
-1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom APIs** in the upper right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom connectors** in the upper right corner.
 
-	 **Tip**: If you can't find where to manage custom APIs in a mobile browser, it might be under a menu in the upper left corner.
+	 **Tip**: If you can't find where to manage custom connectors in a mobile browser, it might be under a menu in the upper left corner.
 
-	![Create custom API](./media/customapi-azure-resource-manager-tutorial/managecustomapi.png)  
+	![Create custom connector](./media/customapi-azure-resource-manager-tutorial/managecustomapi.png)  
 
-2. Select **Create custom API**.
+2. Select **Create custom connector**.
 
-	![Custom API properties](./media/customapi-azure-resource-manager-tutorial/newcustomapi.png)
+	![Custom connector properties](./media/customapi-azure-resource-manager-tutorial/newcustomapi.png)
 
 3. Type a name for your connection, and then upload the [sample ARM OpenAPI file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Continue**.  
 
@@ -114,9 +114,9 @@ Now that the AAD application is configured, let's add the custom API.
 
     ![OAuth settings](./media/customapi-azure-resource-manager-tutorial/oauthsettings.png)
 
-5. Your custom API is now registered and can be consumed within PowerApps or Microsoft Flow.
+5. Your custom connector is now registered and can be consumed within PowerApps or Microsoft Flow.
 
-    ![Custom API added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
+    ![Custom connector added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
 
 > [AZURE.NOTE] The sample OpenAPI does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this OpenAPI file or create another OpenAPI file using the [online OpenAPI editor](http://editor.swagger.io/).
 >
@@ -129,4 +129,4 @@ For more detailed information about how to create an app, see [Create an app fro
 
 For more detailed information about how to use a flow in an app, see [Start a flow in an app](using-logic-flows.md).
 
-To ask questions or make comments about custom APIs, [join our community](https://aka.ms/powerapps-community).
+To ask questions or make comments about custom connectors, [join our community](https://aka.ms/powerapps-community).
