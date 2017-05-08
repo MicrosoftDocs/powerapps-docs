@@ -57,9 +57,9 @@ The custom connector process has several steps, which we describe briefly below.
 
 	You can also build an OpenAPI file in step 4 as part of the registration process.
 
-4. **Register your API** using a wizard in PowerApps, where you specify an API description, security details, and other information.
-5. **Use your API** in an app. Create a connection to the API in your app, and call any operations that the API provides, just like you call native functions in PowerApps.
-6. **Share your API** like you do other data connections in PowerApps. This step is optional, but it often makes sense to share custom connectors across multiple app creators.
+4. **Register your custom connector** using a wizard in PowerApps, where you specify an API description, security details, and other information.
+5. **Use your custom connector** in an app. Create a connection to the API in your app, and call any operations that the API provides, just like you call native functions in PowerApps.
+6. **Share your custom connector** like you do other data connections in PowerApps. This step is optional, but it often makes sense to share custom connectors across multiple app creators.
 
 
 ## Describe your API
@@ -85,7 +85,7 @@ OpenAPI files and Postman Collections use different formats, but both are langua
 - If your API is built with Azure API Apps or Azure Functions, see [Exporting an Azure hosted API to PowerApps and Microsoft Flow](https://docs.microsoft.com/azure/app-service/app-service-export-api-to-powerapps-and-flow) for more information.
 
 
-## Register your API
+## Register your custom connector
 
 You will now use the OpenAPI file or Postman Collection to register your custom connector in PowerApps.
 
@@ -191,18 +191,22 @@ The finished app looks like the following image. It's a simple app, but it gains
 - See the [PowerApps Pricing](https://powerapps.microsoft.com/pricing/) page for details about custom connector creation quotas. Custom connectors that are shared with you don't count against this quota.
 - For each connection created on a custom connector, users can make up to 500 requests per minute.
 
-## Share your API
-Now that you have a custom connector, you can share it with other users in your organization (but not publicly using PowerApps). Keep in mind that when you share an API, others might start to depend on it, and deleting a custom connector deletes all the connections to the API.
+## Share your custom connector
+Now that you have a custom connector, you can share it with other users in your organization. Keep in mind that when you share an API, others might start to depend on it, and deleting a custom connector deletes all the connections to the API. If you want to provide a connector for users outside your organization, see [Overview of certifying custom connectors in PowerApps](api-connector-overview.md).
 
 1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom connectors** in the upper right corner.
 
 	![New connection](./media/register-custom-api/managecustomapi.png)
 
-2. Select your API, select **Share**, and then enter the users or groups to whom you want to grant access to your API.  
+2. Select the ellipsis (**. . .**) button for your connector, then select **View properties**.  
+
+	![View connector properties](./media/register-custom-api/view-properties.png)
+
+3. Select your API, select **Share**, and then enter the users or groups to whom you want to grant access to your API.  
 
 	![Share custom connector](./media/register-custom-api/sharecustomapi.png)
 
-3. Select **Save**.
+4. Select **Save**.
 
 
 ## Next steps
