@@ -18,7 +18,7 @@
     ms.author="archanan"/>
 
 # Manage an on-premises data gateway in PowerApps #
-Install an on-premises data gateway to transfer data quickly and securely between PowerApps and a data source that's not in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. View all gateways for which you have administrative permissions, and manage permissions and connections for those gateways.
+Install an on-premises data gateway to transfer data quickly and securely between PowerApps and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. View all gateways for which you have administrative permissions, and manage permissions and connections for those gateways.
 
 With a gateway, you can connect to on-premises data over these connections:
 
