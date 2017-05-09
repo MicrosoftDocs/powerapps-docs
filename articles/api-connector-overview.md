@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Overview of certifying custom connectors | Microsoft PowerApps"
+    pageTitle="Overview of certifying API connectors | Microsoft PowerApps"
     description="ISVs and SaaS service owners can build connectors and have them certified by Microsoft."
     services=""
     suite="powerapps"
@@ -19,9 +19,9 @@
    ms.author="astay"/>
 
 
-# Overview of certifying custom connectors in PowerApps
+# Overview of certifying API connectors in PowerApps
 
-A **custom connector** is an OpenAPI (Swagger) based wrapper around a REST API that allows the underlying service to talk to [Microsoft Flow](https://flow.microsoft.com), [PowerApps](https://powerapps.microsoft.com), and [Logic Apps](https://docs.microsoft.com/azure/logic-apps/). It provides a way for users to connect their accounts and leverage a set of pre-built **triggers** and **actions** to build their apps and workflows.
+A **API connector** is an OpenAPI (Swagger) based wrapper around a REST API that allows the underlying service to talk to [Microsoft Flow](https://flow.microsoft.com), [PowerApps](https://powerapps.microsoft.com), and [Logic Apps](https://docs.microsoft.com/azure/logic-apps/). It provides a way for users to connect their accounts and leverage a set of pre-built **triggers** and **actions** to build their apps and workflows.
 
 As an **Independent software vendor (ISV)** or **SaaS service owner**, you can build connectors to enable a wide range of business and productivity scenarios for your users. A connector helps you to go beyond a definite set of integrations, and increase the reach, discoverability, and usage of your service.
 
@@ -36,13 +36,13 @@ To build and submit a connector, your service must meet the following requiremen
 
 ## Build your connector
 
-The first step to getting certified is to build a fully functional custom connector. By default, this connector is limited in availability to its author and specific users within the author's tenant. After it's certifed, it's availalable to anyone who uses PowerApps, Microsoft Flow, or Logic Apps.
+The first step to building an API Connector is to build a fully functional custom connector. A custom connector operates exactly like an API connector but it is limited in availability to its author and specific users within the author's tenant.
 
 The process to build a connector involves multiple steps:
 
-![custom connector authoring steps](./media/api-connectors-overview/authoring-steps.png)
+![API connector authoring steps](./media/api-connectors-overview/authoring-steps.png)
 
-[Learn more](api-connector-dev.md) about how to develop a custom connector.
+[Learn more](api-connector-dev.md) about how to develop an API connector.
  
 
 ## Submit for certification
