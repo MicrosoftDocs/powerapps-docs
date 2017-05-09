@@ -1,6 +1,6 @@
 <properties
-    pageTitle=" Submit custom connectors for certification | Microsoft PowerApps"
-    description="By certifying a connector, it becomes available to all users of Flow, PowerApps and Logic Apps."
+    pageTitle="Submit custom connectors for certification | Microsoft PowerApps"
+    description="By certifying a connector, it becomes available to all users of Microsoft Flow, PowerApps and Logic Apps."
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -21,14 +21,14 @@
 
 # Submit custom connectors for certification in PowerApps
 
-As part of our third party certification process, we review your connector before publishing. By certifying a connector, it becomes available to all users of Flow, PowerApps, and Logic Apps. Following are the criteria and steps for certification.
+As part of our third party certification process, we review your connector before publishing. By certifying a connector, it becomes available to all users of Microsoft Flow, PowerApps, and Logic Apps. Following are the criteria and steps for certification.
 
 
 ## Criteria
 
 | Capability | Details | Required or Recommended |
 |------------|---------|-------------------------|
-| Software as a Service (SaaS) app for business |  Business user scenario that fits well with Flow, PowerApps, and Logic Apps | Required |
+| Software as a Service (SaaS) app for business |  Business user scenario that fits well with Microsoft Flow, PowerApps, and Logic Apps | Required |
 | Authentication Type | Your API must support OAuth2, API key, or Basic authentication | Required |
 | Support | You must provide a support contact where customers can find help | Required |
 | Availability / Uptime | Your app should have an uptime of at least 99.9% | Recommended |
@@ -36,7 +36,7 @@ As part of our third party certification process, we review your connector befor
 
 ## Submitting your connector
 
-Certify your connector for Flow, PowerApps, and Logic Apps in three simple steps:
+Certify your connector for Microsoft Flow, PowerApps, and Logic Apps in three simple steps:
 
 1. **Nomination**
 

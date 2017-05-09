@@ -21,7 +21,7 @@
 
 # Overview of certifying custom connectors in PowerApps
 
-A **custom connector** is an OpenAPI (Swagger) based wrapper around a REST API that allows the underlying service to talk to [Microsoft Flow](https://flow.microsoft.com), [PowerApps](https://powerapps.microsoft.com), and [Logic Apps](https://azure.microsoft.com/services/logic-apps). It provides a way for users to connect their accounts and leverage a set of pre-built **triggers** and **actions** to build their apps and workflows.
+A **custom connector** is an OpenAPI (Swagger) based wrapper around a REST API that allows the underlying service to talk to [Microsoft Flow](https://flow.microsoft.com), [PowerApps](https://powerapps.microsoft.com), and [Logic Apps](https://docs.microsoft.com/azure/logic-apps/). It provides a way for users to connect their accounts and leverage a set of pre-built **triggers** and **actions** to build their apps and workflows.
 
 As an **Independent software vendor (ISV)** or **SaaS service owner**, you can build connectors to enable a wide range of business and productivity scenarios for your users. A connector helps you to go beyond a definite set of integrations, and increase the reach, discoverability, and usage of your service.
 
@@ -30,13 +30,13 @@ As an **Independent software vendor (ISV)** or **SaaS service owner**, you can b
 
 To build and submit a connector, your service must meet the following requirements:
 
-- Business user scenario that fits well with Flow, PowerApps, and Logic Apps
+- Business user scenario that fits well with Microsoft Flow, PowerApps, and Logic Apps
 - Publicly available service with stable REST APIs
 
 
 ## Build your connector
 
-The first step to getting certified is to build a fully functional custom connector. By default, this connector is limited in availability to its author and specific users within the author's tenant. After it's certifed, it's availalable to anyone who uses PowerApps, Flow, or Logic Apps.
+The first step to getting certified is to build a fully functional custom connector. By default, this connector is limited in availability to its author and specific users within the author's tenant. After it's certifed, it's availalable to anyone who uses PowerApps, Microsoft Flow, or Logic Apps.
 
 The process to build a connector involves multiple steps:
 
@@ -49,7 +49,7 @@ The process to build a connector involves multiple steps:
 
 After you've built a connector, you submit it for certification. As part of our third party certification process, Microsoft reviews the connector before publishing.
 
-This process validates the functionality of your connector in Flow and PowerApps, and checks for technical and content compliance.
+This process validates the functionality of your connector in Microsoft Flow and PowerApps, and checks for technical and content compliance.
 
 [Learn more](api-connector-submission.md) about the process to submit your connector for certification and publishing.
 

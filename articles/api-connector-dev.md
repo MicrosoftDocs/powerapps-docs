@@ -36,7 +36,7 @@ Custom connectors are described using the [OpenAPI standard](https://swagger.io/
 If you start from either of these API descriptions, the metadata fields in the wizard are auto-populated. You can edit these at any time.  
 
 
-## Specify the authenication type and security details
+## Specify the authentication type and security details
 
 Pick the authentication type supported by your service, and provide additional details to enable identity to flow appropriately between your service and any clients. 
 
@@ -53,10 +53,10 @@ Pick the authentication type supported by your service, and provide additional d
 
 2. Using the wizard, you can add new operations or edit the schema and response for existing ones. The **General** properties for each operation enable you to control the end-user experience for your connector. Learn more about the different types of operations using the links below:
 
-    - [Triggers for Flow](customapi-webhooks.md)
-    - [Actions for Flow and PowerApps](register-custom-api.md)
+    - [Triggers for Microsoft Flow](customapi-webhooks.md)
+    - [Actions for Microsoft Flow and PowerApps](register-custom-api.md)
 
-    To implement advanced functionality for Flow, refer to the [OpenAPI extensions for custom connectors](https://flow.microsoft.com/documentation/customapi-how-to-swagger/). 
+    To implement advanced functionality for Microsoft Flow, refer to the [OpenAPI extensions for custom connectors](https://flow.microsoft.com/documentation/customapi-how-to-swagger/). 
 
 3. Finally, click or tap **Create connector** to register the custom connector.
 
@@ -68,5 +68,5 @@ For additional features not available in the wizard, please contact [condevhelp@
 Prior to submission, test your custom connector in one or more ways: 
 
 - Using the custom connector [Testing wizard](https://flow.microsoft.com/blog/new-updates-custom-api/), you can call each operation to verify its functionality and the response schema.
-- In the Flow designer, you can visually build flows using your custom connector. This method of testing gives you visibility into the user interface functionality and features of your connector.
-- In the PowerApps studio, you can call each operation using the formula bar, and bind the response to controls on your screen.
+- In the designer for Microsoft Flow, you can visually build flows using your custom connector. This method of testing gives you visibility into the user interface functionality and features of your connector.
+- In the PowerApps Studio, you can call each operation using the formula bar, and bind the response to controls on your screen.
