@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Let customers test drive your apps | Microsoft PowerApps"
+   pageTitle="Let customers test drive your apps on AppSource | Microsoft PowerApps"
    description="Use AppSource to share apps with customers, and generate leads for your business."
    services=""
    suite="powerapps"
