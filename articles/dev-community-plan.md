@@ -53,19 +53,27 @@ If you are a Visual Studio Dev Essentials user, PowerApps is included in your be
 
 With the individual environment, you get the following functionality:
 
-|   **Functionality** | **Environment for individual use** |
+|   **Functionalities** | **Environment for individual use** |
 | --- | --- |
-| Create apps and flows | Yes. You can create unlimited apps and flows. |
-| Run apps | Yes |
-| Share apps and flows\* | No |
-| Connect to Office 365, Dynamics 365, and other connectors | Yes |
-| Use premium connectors | Yes |
-| Access on-premises gateways | Yes |
-| Create custom connectors | Yes. You can create unlimited custom connectors. |
-| Create and run apps on the Common Data Service | Yes |
+| **Key features** |   |
+| Create and run apps | Yes. You can create unlimited apps |
+| Share apps\* | No |
+| Use the Common Data Service | Yes |
 | Model your data using the Common Data Service | Yes |
+| Enterprise-grade administration of the environment and user policies | Yes |
+| **Connectivity** |   |
+| Connect to Office 365, Dynamics 365, and other connectors | Yes |
+| Connect to cloud-based services like Azure SQL, Dropbox, Twitter, and many more | Yes |
+| Use premium connectors like Salesforce, DB2 and many more | Yes |
+| Access on‐premises data using an on-premises gateway | Yes |
+| Create custom connectors to connect to your own systems | Yes. You can create unlimited custom connectors |
+| **Common Data Service** |   |
+| Create and run applications on the Common Data Service | Yes |
+| Model your data in the Common Data Service | Yes |
+| Create a database in the Common Data Service | Yes |
+| **Management** |   |
 | Add co-workers as environment makers and admins | No |
-| Add co-workers to Common Data Service database roles | No |
+| Add co-workers to the database roles | No |
 | Supports data policies established by the Office 365 administrator | Yes |
 | Establish data policies for the individual environment | Yes |
 
