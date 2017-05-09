@@ -1,5 +1,5 @@
 <properties
-    pageTitle=" Overview of certifying custom connectors | Microsoft PowerApps"
+    pageTitle="Overview of certifying custom connectors | Microsoft PowerApps"
     description="ISVs and SaaS service owners can build connectors and have them certified by Microsoft."
     services=""
     suite="powerapps"

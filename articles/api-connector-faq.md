@@ -46,7 +46,7 @@
 
 - **Q:** Can I build triggers without webhooks? 
 
-  **A:** Custom connectors  for Microsoft Flow and Logic Apps allow you to build webhook-based triggers only. If you have a request for other forms of implementation, please contact [condevhelp@microsoft.com](mailto:condevhelp@microsoft.com) along with more details about your API.
+  **A:** Custom connectors for Microsoft Flow and Logic Apps allow you to build webhook-based triggers only. If you have a request for other forms of implementation, please contact [condevhelp@microsoft.com](mailto:condevhelp@microsoft.com) along with more details about your API.
 
 
 ## Miscellaneous
