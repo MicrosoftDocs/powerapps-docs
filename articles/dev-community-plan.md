@@ -43,7 +43,7 @@ After signing up for the Community Plan, you will be redirected to web.powerapps
 
 ![Individual environment for Community Plan](media/dev-community-plan/individual-environment.png)
 
-### Get PowerApps Community Plan with Visual Studio Dev Essentials
+### Get the Community Plan with Visual Studio Dev Essentials
 
 If you are a Visual Studio Dev Essentials user, PowerApps is included in your benefits. Visit [My benefits](https://my.visualstudio.com/benefits) and click on the PowerApps tile to sign-up for the PowerApps Community Plan.
 
@@ -117,9 +117,9 @@ Do you have an app you would like to share with customers? We now support a Powe
 
     **A:** Both PowerApps Plan 2 Trial and PowerApps Community Plan are free, but are created for different purposes:
 
-    **PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 90 days. This is meant for trying out PowerApps, the Common Data Service, and Microsoft Flow. Once your trial expires, you can purchase a plan. This is the right plan to try out PowerApps premium features. If you are using PowerApps with Office 365 or Dynamics 365, you are already using PowerApps Plan 2.
+    **PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 90 days. This is meant for trying out PowerApps, Common Data Service, and Microsoft Flow. Once your trial expires, you can purchase a plan. If you are already using PowerApps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with PowerApps Plan 2.
 
-    **PowerApps Community Plan** gives you access to PowerApps premium features, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed in AppSource. This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
+    **PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](https://go.microsoft.com/fwlink/?linkid=848595). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
 
 6. **Q:** Can I sign-up with my personal account?
 
