@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create a custom Web API | Microsoft PowerApps"
-	description="Learn how to create an ASP.NET Web API with Azure Active Directory authentication in PowerApps"
+	pageTitle="Build a custom connector for a Web API | Microsoft PowerApps"
+	description="Learn how to create an ASP.NET Web API with Azure Active Directory authentication in PowerApps."
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -17,7 +17,7 @@
    ms.date="10/26/2016"
    ms.author="ricksal"/>
 
-# Create a custom Web API for PowerApps
+# Build a custom connector for a Web API in PowerApps
 
 This tutorial shows you how to start bulding an ASP.NET Web API, host it on Azure Web Apps, enable Azure Active Directory authentication, and then register the ASP.NET Web API in PowerApps. After the API is registered, you can connect to it and call it from your app.
 
