@@ -52,7 +52,7 @@ You can set up ongoing import or export for a single standard entity or custom e
 - Salesforce
 - Microsoft Excel files stored in any cloud file provider
 - A Microsoft SQL database, both in the cloud and on-premises
-- A custom API that you define to connect to your own systems
+- A custom connector that you define to connect to your own systems
 
 Today, when you use Microsoft Flow to import or export data, it is not a full synchronization service. When an object is added to one service, it will be imported into the other system. However, that means if an object is deleted from one system it will not be deleted in the other system.
 
