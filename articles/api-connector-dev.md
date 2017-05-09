@@ -69,4 +69,4 @@ Prior to submission, test your API connector in one or more ways:
 - In the designer for Microsoft Flow, you can visually build flows using your API connector. This method of testing gives you visibility into the user interface functionality and features of your connector.
 - In the PowerApps Studio, you can call each operation using the formula bar, and bind the response to controls on your screen.
 
-This topic provides an overview; for more information, see [Register and use an API connector](register-custom-api.md).
+This topic provides an overview; for more information, see [Register and use a custom connector](register-custom-api.md).
