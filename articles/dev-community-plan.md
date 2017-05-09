@@ -43,6 +43,12 @@ After signing up for the Community Plan, you will be redirected to web.powerapps
 
 ![Individual environment for Community Plan](media/dev-community-plan/individual-environment.png)
 
+### Get PowerApps Community Plan with Visual Studio Dev Essentials
+
+If you are a Visual Studio Dev Essentials user, PowerApps is included in your benefits. Visit [My benefits](https://my.visualstudio.com/benefits) and click on the PowerApps tile to sign-up for the PowerApps Community Plan.
+
+![Community Plan in Visual Studio](media/dev-community-plan/visual-studio.png)
+
 ## Which features are included in the PowerApps Community Plan?
 
 With the individual environment, you get the following functionality:

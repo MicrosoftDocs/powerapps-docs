@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create a custom connector for Azure Resource Manager | Microsoft PowerApps"
-	description="Learn how to create a custom connector for Azure Resource Manager, then add the API to PowerApps."
+	pageTitle="Use Azure Active Directory with a custom connector | Microsoft PowerApps"
+	description="Learn how to create a custom connector for Azure Resource Manager, with Azure Active Directory authentication."
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -14,17 +14,17 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/03/2016"
+   ms.date="05/03/2017"
    ms.author="ricksal"/>
 
 
-# Create a custom connector for Azure Resource Manager in PowerApps
+# Use Azure Active Directory with a custom connector in PowerApps
 
-Azure Resource Manager (ARM) enables you to manage the components of a solution on Azure - components like databases, virtual machines, and web apps. This tutorial demonstrates how to enable authentication in Azure Active Directory, register one of the ARM APIs as a custom connector, then connect to it in PowerApps. This would be useful if you want to manage Azure resources directly from an app. For more information about ARM, see [Azure Resource Manager Overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).
+Azure Resource Manager (ARM) enables you to manage the components of a solution on Azure - components like databases, virtual machines, and web apps. This tutorial demonstrates how to enable authentication in Azure Active Directory, register one of the ARM APIs as a custom connector, then connect to it in PowerApps. This would be useful if you want to manage Azure resources directly from an app. For more information about ARM, see [Azure Resource Manager Overview](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview).
 
 ## Prerequisites
 
-- An [Azure subscription](https://azure.microsoft.com/en-us/free/).
+- An [Azure subscription](https://azure.microsoft.com/free/).
 - A [PowerApps account](https://powerapps.microsoft.com).
 - The [sample OpenAPI file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json) used in this tutorial.
 

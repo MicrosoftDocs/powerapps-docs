@@ -68,8 +68,8 @@ At a high level, the app does the following:
 
 ### Step 2: Add a Twitter connection
 
-1. Click or tap **Content** > **Data sources** , then choose **Add data source** on the **Data sources** panel.
-2. Click or tap **New Connection** , select **Twitter** , and click **Create**.
+1. Click or tap **Content** > **Data sources**, then choose **Add data source** on the **Data sources** panel.
+2. Click or tap **New Connection** , select **Twitter** , and click or tap **Create**.
 3. Enter your credentials, and create the connection.
 
     ![Add a Twitter connection](media/offline-apps/twitter-connection.png)
@@ -94,7 +94,7 @@ If(Connection.Connected,
 
 );
 
-LoadData(LocalTweetsToPost, "LocalTweetsToPost", true);
+LoadData(LocalTweetsToPost, "LocalTweets", true);
 
 SaveData(LocalTweets, "Tweets")
 ```
@@ -108,12 +108,12 @@ This formula checks if the device is online:
 
 ### Step 4: Add a gallery and bind it to the LocalTweets collection
 
-1. Insert a new flexible height gallery: **Insert** > **Gallery** > **Flexible height**.
+1. Insert a new flexible height gallery: **Insert** > **Gallery** > **Blank flexible height**.
 2. Set the **Items** property to **LocalTweets**.
 3. Add four **Label** controls to display data from each tweet, and set the **Text** properties to:
     - **ThisItem.TweetText**
-    - **ThisItem.UserDetails.FullName &amp; " @" &amp; ThisItem.UserDetails.UserName**
-    - **"RT: " &amp; ThisItem.RetweetCount**
+    - **ThisItem.UserDetails.FullName & " @" & ThisItem.UserDetails.UserName**
+    - **"RT: " & ThisItem.RetweetCount**
     - **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
 4. Add an **Image** control, and set the **Image** property to **ThisItem.UserDetails.ProfileImageUrl**.
 
