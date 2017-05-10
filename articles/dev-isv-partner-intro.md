@@ -26,7 +26,7 @@ As a Microsoft partner or Independent Software Vendor (ISV), you can accelerate 
 
 Build custom apps, or enhance your product with deeper data integration by connecting to your customers' data in the Common Data Service. [Learn more](https://aka.ms/eek20s)
 
-## Build a connector
+## Build an API connector
 
 Bring your product into the Microsoft cloud by building a connector that enables PowerApps to talk to your service. [Learn more](api-connector-overview.md)
 
