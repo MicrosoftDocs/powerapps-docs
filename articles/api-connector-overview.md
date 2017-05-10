@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Overview of certifying API connectors | Microsoft PowerApps"
+    pageTitle="API connector overview | Microsoft PowerApps"
     description="ISVs and SaaS service owners can build connectors and have them certified by Microsoft."
     services=""
     suite="powerapps"
@@ -19,7 +19,7 @@
    ms.author="astay"/>
 
 
-# Overview of certifying API connectors in PowerApps
+# API connector overview (PowerApps)
 
 An **API connector** is an OpenAPI (Swagger) based wrapper around a REST API that allows the underlying service to talk to [Microsoft Flow](https://flow.microsoft.com), [PowerApps](https://powerapps.microsoft.com), and [Logic Apps](https://docs.microsoft.com/azure/logic-apps/). It provides a way for users to connect their accounts and leverage a set of pre-built **triggers** and **actions** to build their apps and workflows.
 

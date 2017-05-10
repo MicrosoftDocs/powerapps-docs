@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Develop API connectors for certification | Microsoft PowerApps"
+    pageTitle="Develop an API connector | Microsoft PowerApps"
     description="Describe your API, specify authentication type, build triggers and actions, and test."
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="05/06/2017"
    ms.author="astay"/>
 
-# Develop API connectors for certification in PowerApps
+# Develop an API connector (PowerApps)
 
 Building a connector involves multiple steps. To get started - in [PowerApps](https://web.powerapps.com/), click or tap the **Settings** button (the gear icon) at the upper right of the page. Then click or tap **Custom Connectors**.
 
