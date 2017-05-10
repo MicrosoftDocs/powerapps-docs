@@ -25,7 +25,7 @@ If you want to build skills and learn more about PowerApps, Microsoft Flow, and 
 
 - Learn to build business apps and workflows with the full functionality of PowerApps and Microsoft Flow.
 - Connect to any data source by using our 100+ [out of the box connectors](connections-list.md) or by creating your own [custom connectors](register-custom-api.md).
-- Explore how you can use [the Common Data Service](https://aka.ms/eek20s) to build powerful business apps with the common data model and a [the SDK](https://aka.ms/whgr2w).
+- Explore how you can use [the Common Data Service](https://aka.ms/eek20s) to build powerful business apps with the common data model and [the SDK](https://aka.ms/whgr2w).
 - Export the solutions you create in your individual environment, and [list them on AppSource](dev-appsource-test-drive.md) so your customers can test-drive them.
 
 ## Who can sign-up for the PowerApps Community Plan?
@@ -45,7 +45,7 @@ After signing up for the Community Plan, you will be redirected to web.powerapps
 
 ### Get the Community Plan with Visual Studio Dev Essentials
 
-If you are a Visual Studio Dev Essentials user, PowerApps is included in your benefits. Visit [My benefits](https://my.visualstudio.com/benefits) and click on the PowerApps tile to sign-up for the PowerApps Community Plan.
+If you are a Visual Studio Dev Essentials user, PowerApps is included in your benefits. Visit [My benefits](https://my.visualstudio.com/benefits) and click or tap the PowerApps tile to sign-up for the PowerApps Community Plan.
 
 ![Community Plan in Visual Studio](media/dev-community-plan/visual-studio.png)
 
@@ -53,19 +53,27 @@ If you are a Visual Studio Dev Essentials user, PowerApps is included in your be
 
 With the individual environment, you get the following functionality:
 
-|   **Functionality** | **Environment for individual use** |
+|   **Functionalities** | **Environment for individual use** |
 | --- | --- |
-| Create apps and flows | Yes. You can create unlimited apps and flows. |
-| Run apps | Yes |
-| Share apps and flows\* | No |
-| Connect to Office 365, Dynamics 365, and other connectors | Yes |
-| Use premium connectors | Yes |
-| Access on-premises gateways | Yes |
-| Create custom connectors | Yes. You can create unlimited custom connectors. |
-| Create and run apps on the Common Data Service | Yes |
+| **Key features** |   |
+| Create and run apps | Yes. You can create unlimited apps |
+| Share apps\* | No |
+| Use the Common Data Service | Yes |
 | Model your data using the Common Data Service | Yes |
+| Enterprise-grade administration of the environment and user policies | Yes |
+| **Connectivity** |   |
+| Connect to Office 365, Dynamics 365, and other connectors | Yes |
+| Connect to cloud-based services like Azure SQL, Dropbox, Twitter, and many more | Yes |
+| Use premium connectors like Salesforce, DB2 and many more | Yes |
+| Access on‐premises data using an on-premises gateway | Yes |
+| Create custom connectors to connect to your own systems | Yes. You can create unlimited custom connectors |
+| **Common Data Service** |   |
+| Create and run applications on the Common Data Service | Yes |
+| Model your data in the Common Data Service | Yes |
+| Create a database in the Common Data Service | Yes |
+| **Management** |   |
 | Add co-workers as environment makers and admins | No |
-| Add co-workers to Common Data Service database roles | No |
+| Add co-workers to the database roles | No |
 | Supports data policies established by the Office 365 administrator | Yes |
 | Establish data policies for the individual environment | Yes |
 
@@ -119,7 +127,7 @@ Do you have an app you would like to share with customers? We now support a Powe
 
     **PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 90 days. This is meant for trying out PowerApps, Common Data Service, and Microsoft Flow. Once your trial expires, you can purchase a plan. If you are already using PowerApps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with PowerApps Plan 2.
 
-    **PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](https://go.microsoft.com/fwlink/?linkid=848595). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
+    **PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
 
 6. **Q:** Can I sign-up with my personal account?
 

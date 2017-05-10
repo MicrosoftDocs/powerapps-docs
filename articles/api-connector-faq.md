@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Frequently Asked Questions for certifying custom connectors | Microsoft PowerApps"
+    pageTitle="Frequently Asked Questions for certifying API connectors | Microsoft PowerApps"
     description="Find answers to questions about requirements, triggers, and other areas."
     services=""
     suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="05/06/2017"
    ms.author="astay"/>
 
-# Frequently Asked Questions for certifying custom connectors in PowerApps
+# Frequently Asked Questions for certifying API connectors in PowerApps
 
 
 ## Requirements
@@ -30,7 +30,7 @@
 
 **Q:** Can I build a connector without REST APIs?
 
-**A:** No. In order to build a custom connector, you are required to support stable HTTP REST APIs for your service.
+**A:** No. In order to build an API connector, you are required to support stable HTTP REST APIs for your service.
 
 
 **Q:** What are the supported authentication types?
@@ -46,14 +46,14 @@
 
 **Q:** Can I build triggers without webhooks? 
 
-**A:** Custom connectors for Microsoft Flow and Logic Apps allow you to build webhook-based triggers only. If you have a request for other forms of implementation, please contact [condevhelp@microsoft.com](mailto:condevhelp@microsoft.com) along with more details about your API.
+**A:** API connectors for Microsoft Flow and Logic Apps allow you to build webhook-based triggers only. If you have a request for other forms of implementation, please contact [condevhelp@microsoft.com](mailto:condevhelp@microsoft.com) along with more details about your API.
 
 
 ## Miscellaneous
 
 **Q:** My APIs use a dynamic host. How do I implement this in the OpenAPI?
 
-**A:** The custom connector feature doesn't support dynamic hosts. Please use a static host for development and testing purposes. During submission, talk to your Microsoft contact regarding the dynamic implementation.
+**A:** The API connector feature doesn't support dynamic hosts. Please use a static host for development and testing purposes. During submission, talk to your Microsoft contact regarding the dynamic implementation.
 
 
 **Q:** Do you support Postman Collection V2?
