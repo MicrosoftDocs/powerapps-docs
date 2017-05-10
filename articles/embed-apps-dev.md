@@ -39,7 +39,7 @@ https://web.powerapps.com/webplayer/iframeapp?hideNavBar=true&
 source=iframe&appId=/providers/Microsoft.PowerApps/apps/[AppID]
 ```
 
-**Note**: We add a line break so the URI displays better on the page.
+**Note**: We added a line break so the URI displays better on the page.
 
 The only thing you have to do is substitute the ID of your app for [AppID] in the URI. We'll show you how to get that value shortly, but first here are all the parameters available in the URI:
 

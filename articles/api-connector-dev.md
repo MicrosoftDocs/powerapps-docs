@@ -20,7 +20,7 @@
 
 # Develop API connectors for certification in PowerApps
 
-Building a connector involves multiple steps. To get started - in [PowerApps](https://web.powerapps.com/), click or tap the **Settings** button (the gear icon) at the upper right of the page. Then click or tap **custom connectors**.
+Building a connector involves multiple steps. To get started - in [PowerApps](https://web.powerapps.com/), click or tap the **Settings** button (the gear icon) at the upper right of the page. Then click or tap **Custom Connectors**.
 
 ![Finding API connectors](./media/api-connectors-dev/finding-custom-apis.png)
 
