@@ -22,7 +22,7 @@
 
 As an enterprise developer, empower your organization to build robust tailored solutions on PowerApps. Use custom connectors that connect to your data and web services; embed apps in your organization's websites; and work with data in the Common Data Service.
 
-## Build Custom connectors
+## Build custom connectors
 
 Develop custom connectors to connect to your organization's data and web services through PowerApps. [Learn more](register-custom-api.md)
 
