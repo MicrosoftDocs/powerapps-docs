@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/17/2017"
+   ms.date="05/04/2017"
    ms.author="ricksal"/>
 
 # Regions overview in PowerApps
@@ -34,6 +34,7 @@ If you're an administrator, you can determine the region of each environment in 
 ## What regions are available?
 
 - United States
+- Canada
 - Europe
 - Asia
 - Australia
