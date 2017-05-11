@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Configure database security"
+	pageTitle="Configure database security | Microsoft PowerApps"
 	description="This topic explains how to configure database security."
 	services="powerapps"
 	documentationCenter="na"
@@ -55,7 +55,7 @@ To enable access to a new app, you must first create a new permission set.
 1. Click or tap **Save**.
 
 ## Create a policy (Technical Preview) ##
-To enable restrict access to the records in an entity, you must first create a policy.
+To enable or restrict access to the records in an entity, you must first create a policy.
 
 1.	Click or tap **Policies**.
 1.	Click or tap **New policy**.
