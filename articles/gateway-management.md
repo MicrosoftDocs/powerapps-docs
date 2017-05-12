@@ -54,11 +54,11 @@ With a gateway, you can connect to on-premises data over these connections:
 
 1. Add a user to a gateway by clicking or tapping **Users**, specifying a user or group, and then specifying a permission level:
 
-	- **Can use**: User who can create a connection on the gateway.
-	- **Can use + share**: User who can create a connection on the gateway and automatically share it when sharing an app.
-    - **Admin**: Administrator who has full control of the gateway, including adding users and setting permissions, creating a connection on the gateway, and specifying the type of connections that can be used with the gateway.
+	- **Can use**: Users who can create connections on the gateway to use for apps and flows, but cannot share the gateway. Use this permission for users who only need to work with apps that will not be shared.
+	- **Can use + share**: Users who can create a connection on the gateway to use for apps and flows, and automatically share the gateway when sharing an app. Use this permission for users who need to share apps with other users or with the organization.
+    - **Admin**: Administrators who have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
-For **Can use** and **Can use + share** permission levels, also select the data sources that the user is allowed to connect to using the gateway.
+For **Can use** and **Can use + share** permission levels, select the data sources that the user can connect to over the gateway.
 
 ## View and manage gateway connections ##
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Gateways**, and then click or tap a gateway.
@@ -70,6 +70,11 @@ For **Can use** and **Can use + share** permission levels, also select the data 
 	**Note**: You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
 
 For more information about how to manage a connection, see [Manage your connections](./add-manage-connections.md).
+
+## Troubleshooting and Advanced Configuration ##
+For more information on troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](gateway-reference.md). 
+
+
 
 ## Next steps ##
 - Create an app that connects to an on-premises data source, such as [SQL Server](connection-azure-sqldatabase.md) or [SharePoint](connection-sharepoint-online.md).
