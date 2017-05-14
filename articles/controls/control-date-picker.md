@@ -30,6 +30,10 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **SelectedDate** – The date currently selected in a date control.
 
+**Format** – The text format in which date is shown and input in the text box by user. For example: “yy-mm-dd” would be displayed as: “17-12-31". Values of **ShortDate** and **LongDate** return language specific values.
+
+**Language** – Determines the language used to format date including month names. When property is not set (default) end-user's device setting will be used.
+
 ## Additional properties ##
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.

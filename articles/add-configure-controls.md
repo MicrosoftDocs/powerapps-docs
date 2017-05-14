@@ -200,7 +200,7 @@ In this procedure, you'll add a check box and then configure the label that you 
 
 1. In the formula bar, delete **true**, and then type or paste this formula:
 
-	**If(MyCheckbox!Value = true, true, false)**
+	**If(MyCheckbox.Value = true, true, false)**
 
 	This **[If function](function-if.md)** states that the label should appear only when the check box is selected. Because the check box is cleared, the **Label** control disappears (except for the selection box).
 
