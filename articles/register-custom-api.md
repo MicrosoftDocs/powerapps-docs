@@ -127,7 +127,7 @@ You will now use the OpenAPI file or Postman Collection to register your custom 
 
 	- If the OpenAPI file does not use the `securityDefintions` object, then no additional values are needed.
 	- When using a Postman Collection, authentication type is auto-populated only when using supported authentication types, such as OAuth 2.0 or Basic.
-	- For an example of setting up Azure Active Directory (AAD) authenthication, see the "Set up Azure Active Directory authentication" section of [Create a custom Web API for PowerApps](customapi-web-api-tutorial.md).
+	- For an example of setting up Azure Active Directory (AAD) authenthication, see [Create a custom Web API for PowerApps](customapi-web-api-tutorial.md#set-up-azure-active-directory-authentication).
 
 5. In the **Definitions** tab, all the operations defined in your OpenAPI file or Postman Collection, along with request and response values, are auto-populated. If all your required operations are defined, you can go to step 6 in the registration process without making changes on this screen.
 
