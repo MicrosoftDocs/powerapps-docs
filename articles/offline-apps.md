@@ -183,8 +183,7 @@ Add a new **Timer** control:
         SaveData(LocalTweetsToPost, "LocalTweetsToPost");
 
         UpdateContext({statusText: "Online data"})
-
-  )
+    )
     ```
 
 This formula checks if the device is online. If it is, the app tweets all the items in the **LocalTweetsToPost** collection. Then it clears the collection.

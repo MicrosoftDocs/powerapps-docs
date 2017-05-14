@@ -1,5 +1,5 @@
 <properties
-    pageTitle="Submit API connectors for certification | Microsoft PowerApps"
+    pageTitle="Submit for certification as an API Connector | Microsoft PowerApps"
     description="By certifying a connector, it becomes available to all users of Microsoft Flow, PowerApps and Logic Apps."
     services=""
     suite="powerapps"
@@ -19,7 +19,7 @@
    ms.author="astay"/>
 
 
-# Submit API connectors for certification in PowerApps
+# Submit for certification as an API Connector (PowerApps)
 
 As part of our third party certification process, we review your connector before publishing. By certifying a connector, it becomes available to all users of Microsoft Flow, PowerApps, and Logic Apps. Following are the criteria and steps for certification.
 

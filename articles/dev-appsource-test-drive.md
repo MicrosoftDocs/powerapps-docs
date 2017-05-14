@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/28/2016"
+   ms.date="05/08/2017"
    ms.author="litran"/>
 
 
@@ -80,13 +80,15 @@ You've seen how to read data directly and from a collection; now we'll show you 
 **To add a row to a collection**, use [Collect( DataSource, Item, ... )](functions/function-clear-collect-clearcollect.md):
 
 ```
-Collect(SiteInspectorCollect,{ID:Value(Max(SiteInspectorCollect, ID)+1),Title:TitleText.Text,SubTitle:SubTitleText.Text,Description:DescriptionText.Text)
+Collect(SiteInspectorCollect,{ID:Value(Max(SiteInspectorCollect, ID)+1),
+    Title:TitleText.Text,SubTitle:SubTitleText.Text,Description:DescriptionText.Text)
 ```
 
 **To update a row in a collection**, use [UpdateIf( DataSource, Condition1, ChangeRecord1 [, Condition2, ChangeRecord2, ...] )](functions/function-update-updateif.md):
 
 ```
-UpdateIf(SiteInspectorCollect,ID=record.ID,{Title:TitleEditText.Text,SubTitle:SubTitleEditText.Text,Description:DescriptionEditText.Text)
+UpdateIf(SiteInspectorCollect,ID=record.ID,
+    {Title:TitleEditText.Text,SubTitle:SubTitleEditText.Text,Description:DescriptionEditText.Text)
 ```
 
 **To delete a row from a collection**, use [RemoveIf( DataSource, Condition [, ...] )](functions/function-remove-removeif.md):
