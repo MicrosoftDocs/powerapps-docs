@@ -59,3 +59,5 @@ Certify your connector for Microsoft Flow, PowerApps, and Logic Apps in three si
 3. **Publishing**
 
     After we validate connector functionality and content, we will stage the connector for deployment across all products and regions. 
+
+    By default, all connectors are published as "premium". If your app is built on Azure, you can apply to have your connector listed as a “standard” connector available to all users of Office 365 Enterprise plans. Ask your nomination contact for more details.
