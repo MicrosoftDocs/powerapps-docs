@@ -23,14 +23,6 @@ These webinars can help you to leverage the features and functions of Microsoft 
 
 ## Upcoming webinars ##
 
-**Connecting to on-premises data from PowerApps**
-<br>by Archana Nair and Dimah Zaidalkilani
-<br>*May 16, 2017, @ 10:00AM Pacific Time, 1:00PM Eastern Time*
-
-With six months of producing PowerApps applications inside of Microsoft and with our largest customers, the team has amassed a series of best practices, tips, and tricks for PowerApps development. In this week’s webinar, Archana Nair will walk you through her list of top tips that will help you be even more productive with your PowerApps development.
-
-[Click to join](https://www.youtube.com/watch?v=YBdO2MAulx8) on May 16th!
-
 **Deploying your PowerApps applications**
 <br>by James Oleinik
 <br>*May 25, 2017, @ 10:00AM Pacific Time, 1:00PM Eastern Time*
@@ -83,3 +75,7 @@ Webinars are available on-demand after the live broadcast. Please note that you 
 **Rebuilding an InfoPath Designer form in PowerApps**
 <br>by Daniel Christian
 [Watch now](https://www.youtube.com/watch?v=ohQcxcVZSK4)
+
+**Connecting to on-premises data from PowerApps**
+<br>by Archana Nair and Dimah Zaidalkilani
+[Watch now](https://www.youtube.com/watch?v=YBdO2MAulx8)
