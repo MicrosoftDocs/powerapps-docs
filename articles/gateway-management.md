@@ -54,7 +54,7 @@ With a gateway, you can connect to on-premises data over these connections:
 
 1. Add a user to a gateway by clicking or tapping **Users**, specifying a user or group, and then specifying a permission level:
 
-	- **Can use**: Users who can create connections on the gateway to use for apps and flows, but cannot share the gateway. Use this permission for users who only need to work with apps that will not be shared.
+	- **Can use**: Users who can create connections on the gateway to use for apps and flows, but cannot share the gateway. Use this permission for users who will run apps but not share them.
 	- **Can use + share**: Users who can create a connection on the gateway to use for apps and flows, and automatically share the gateway when sharing an app. Use this permission for users who need to share apps with other users or with the organization.
     - **Admin**: Administrators who have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
