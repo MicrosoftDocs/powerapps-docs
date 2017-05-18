@@ -30,11 +30,11 @@ The **Data table** control is a relatively recent addition to PowerApps and will
 The following is a list of the functionality that is currently supported:
 - Read-only data
 - Single row selection
-- Connected data sources
+- Connected data sources (excluding the Microsoft Excel connector)
 
 ### Functionality not supported ###
 The following is a list of functionality that isn't currently supported but is in planning for future releases.
-- Support for static data sources
+- Support for local data sources (collections)
 - Support for customizing a column, including column widths, texts, and styling
 - Support for hyperlinks inside the Data table
 - Ability for users to change column widths while running the app
@@ -49,9 +49,9 @@ The following is a list of functionality that isn't currently supported but is i
 - Selection of multiple rows
 
 ### Known issues ###
-- Use of the FirstN function in the Data table Items property
-- Resetting of the field list after modifying the Items property
-- Losing connection to the data source after modifying the **Items** property for some connectors
+- Use of the FirstN function in the **Data table Items** property results in no data displayed in the control.
+- Modifying the **Items** property resets your field list and all columns are lost.
+- Modifying the **Items** property for some connectors will in a lost connection to the data source.
 
 ## Key properties ##
 + [**Items**](properties-core.md) – The source of data that the control shows.
