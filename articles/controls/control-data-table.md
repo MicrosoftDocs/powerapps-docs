@@ -18,13 +18,13 @@
    ms.author="kfend"/>
 
 # Data table control in PowerApps #
-The Data table control in Microsoft PowerApps is a control that shows a set of data in a tabular format.
+The **Data table** control in Microsoft PowerApps is a control that shows a set of data in a tabular format.
 
 ## Description ##
 The **Data table** control shows data in a format that includes column headers for each field that the control shows. You can specify which fields to show and in which order. This control maintains a **Selected** property that, like the **Gallery** control, points to the single row that the user selected. Therefore, you can link the **Data table** control to other controls.
 
 ## Capabilities ##
-The Data table control is a relatively recent addition to PowerApps and will be evolving its capabilities over time. This section will highlight items that are supported as well as those that are known not to be currently supported based on the latest release.
+The **Data table** control is a relatively recent addition to PowerApps and will be evolving its capabilities over time. This section will highlight items that are supported as well as those that are known not to be currently supported based on the latest release.
 
 ### Supported functionality ###
 The following is a list of the functionality that is currently supported:
@@ -40,18 +40,18 @@ The following is a list of functionality that isn't currently supported but is i
 - Ability for users to change column widths while running the app
 - Use of Data table inside Form controls
 - Ability to change the height of all the rows
-- Copy/paste of the Data table control
+- Copy/paste of the **Data table** control
 - Support for showing images in the Data table
 - Ability to show fields from related entities
 - Built-in filter/sort support from the Data table column headings
-- Use of Data table inside the Gallery control
+- Use of Data table inside the **Gallery** control
 - Editing data in the Data table
 - Selection of multiple rows
 
 ### Known issues ###
 - Use of the FirstN function in the Data table Items property
 - Resetting of the field list after modifying the Items property
-- Losing connection to the data source after modifying the Items property for some connectors
+- Losing connection to the data source after modifying the **Items** property for some connectors
 
 ## Key properties ##
 + [**Items**](properties-core.md) – The source of data that the control shows.
