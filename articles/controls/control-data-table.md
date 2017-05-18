@@ -166,15 +166,13 @@ The following is a list of functionality that isn't currently supported but is i
 1. Add an **Edit form** control to the screen.
 
 2. Resize the **Data table** and the **Edit form** controls so that the **Data table** control appears in the left part of the screen and the **Edit form** control appears in the right part of the screen.
+
    ![Data table and **Edit** form on the same screen](./media/control-data-table/data-table-empty-form.png)
-
 3. Connect the **Edit form** control to the **Sales order** data source.
-
 4. In the right-hand pane, show the **SalesOrderId**, **Status**, **Name**, **Description**, and **Total amount** in the **Edit form** control.
+
    ![**Edit** form shows five fields](./media/control-data-table/data-table-disconnected-form.png)
-
 3. In the right-hand pane, click or tap the **Advanced** tab.
-
 4. Set the **Item** property for the **Edit form** control to **SalesOrderTable.Selected**.
 
 	The **Edit form** control shows information from the row that's selected in the **Data table** control.
