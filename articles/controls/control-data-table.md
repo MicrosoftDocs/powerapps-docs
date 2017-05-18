@@ -118,6 +118,7 @@ The following is a list of functionality that isn't currently supported but is i
 1. Create a blank app for a tablet.
 
 2. On the **Insert** tab, click or tap **Data table**.
+
    ![Add a Data table control to a screen](./media/control-data-table/insert-data-table.png)
 
    A **Data table** control is added to the screen.
@@ -125,12 +126,13 @@ The following is a list of functionality that isn't currently supported but is i
 3. Rename the new control **SalesOrderTable**, and resize it so that it covers the whole screen.
 
 4. In the right-hand pane, click or tap the down arrow next to **No data source selected**, and then click or tap **Add a data source**.
+   
    ![Add a data source](./media/control-data-table/add-data-to-data-table.png)
-
 5. In the list of connections, click or tap the connection for your Common Data Service database.
    ![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png)
 
 6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
+   
    ![Select the **Sales order** entity](./media/control-data-table/choose-so-data-table.png)
 
    **SalesOrderTable** is now attached to the **Sales order** data source. However, no data will appear until you select fields.
@@ -143,6 +145,7 @@ The following is a list of functionality that isn't currently supported but is i
    ![Data table](./media/control-data-table/pre-order-data-table.png)
 
 8. Reorder the fields by dragging them up or down in the right-hand pane.
+   
    ![Reorder the fields as desired](./media/control-data-table/field-reorder-data-table.png)
 
    **SalesOrderTable** shows the fields in the order that you specified.
