@@ -14,14 +14,41 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/05/2017"
+   ms.date="05/17/2017"
    ms.author="kfend"/>
 
 # Data table control in PowerApps #
-A control that shows data in a tabular format.
+Shows a set of data in a tabular format.
 
 ## Description ##
 The **Data table** control shows data in a format that includes column headers for each field that the control shows. You can specify which fields to show and in which order. This control maintains a **Selected** property that, like the **Gallery** control, points to the single row that the user selected. Therefore, you can link the **Data table** control to other controls.
+
+## Capabilities ##
+The **Data table** control is a relatively recent addition to PowerApps. This control already supports some capabilities, while others are planned for later releases.
+
+**Now available**
+
+- Read-only data
+- Single-row selection
+- Connected data sources (excluding the Microsoft Excel connector)
+
+**Not yet available**
+
+- Show data in local data sources (collections)
+- Customize a column, including width, text, and styling
+- Show images, and add hyperlinks
+- Change column widths while running the app
+- Add a **Data table** control inside a form or a **Gallery** control
+- Change the height of all rows
+- Copy and paste a **Data table** control
+- Edit data, and select multiple rows
+- Show fields from related entities
+- Easily filter or sort data based on column headings
+
+**Known issues**
+
+- No data appears if you set the value of the **Items** property to a formula that uses the **FirstN** function.
+- If you modify the value of the **Items** property, your field list is reset, all columns are lost, and you'll lose your data-source connection for some connectors.
 
 ## Key properties ##
 + [**Items**](properties-core.md) – The source of data that the control shows.
@@ -93,7 +120,7 @@ The **Data table** control shows data in a format that includes column headers f
 
    A **Data table** control is added to the screen.
 
-3. Rename the new control **SalesOrderTable**, and resize it so that it covers the whole screen.
+3. Rename the new control **SalesOrderTable**, and resize it to cover the whole screen.
 
 4. In the right-hand pane, click or tap the down arrow next to **No data source selected**, and then click or tap **Add a data source**.
 
@@ -114,7 +141,6 @@ The **Data table** control shows data in a format that includes column headers f
 	For this example, show **SalesOrderId**, **Account**, **OrderDate**, and **Status**.
 
    **SalesOrderTable** shows data from the fields that you specified.
-
    ![Data table](./media/control-data-table/pre-order-data-table.png)
 
 8. Reorder the fields by dragging them up or down in the right-hand pane.
@@ -133,7 +159,6 @@ The **Data table** control shows data in a format that includes column headers f
 3. Click or tap the field for the **HeadingColor** property, and change the value to **White**.
 
 4. Click or tap the field for the **HeadingSize** property, and then change the value to **14**.
-
    ![Data table](./media/control-data-table/restyled-data-table.png)
 
 ### Connect a **Data table** control to another control
@@ -149,9 +174,9 @@ The **Data table** control shows data in a format that includes column headers f
 
    ![**Edit** form shows five fields](./media/control-data-table/data-table-disconnected-form.png)
 
-3. In the right-hand pane, click or tap the **Advanced** tab.
+5. In the right-hand pane, click or tap the **Advanced** tab.
 
-4. Set the **Item** property for the **Edit form** control to **SalesOrderTable.Selected**.
+6. Set the **Item** property for the **Edit form** control to **SalesOrderTable.Selected**.
 
 	The **Edit form** control shows information from the row that's selected in the **Data table** control.
 
