@@ -78,4 +78,4 @@ Webinars are available on-demand after the live broadcast. Please note that you 
 
 **Connecting to on-premises data from PowerApps**
 <br>by Archana Nair and Dimah Zaidalkilani
-[Watch now](https://www.youtube.com/watch?v=YBdO2MAulx8) 
+[Watch now](https://www.youtube.com/watch?v=YBdO2MAulx8)
