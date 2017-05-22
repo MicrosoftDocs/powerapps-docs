@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/16/2017"
+   ms.date="05/19/2017"
    ms.author="audrie"/>
 
 # PowerApps webinar listing #
