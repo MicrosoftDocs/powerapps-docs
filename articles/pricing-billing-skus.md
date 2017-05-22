@@ -32,8 +32,37 @@ PowerApps capabilities for Office 365 and Dynamics 365 enable users to create an
 
 |                                                                | Included plans                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Which Microsoft Office 365 plans include PowerApps?            | These plans include PowerApps for Office 365: <br><br>Office 365 Business Essentials <br>Office 365 Business Premium <br>Office 365 Education <br>Office 365 Education Plus <br>Office 365 Enterprise E1 <br>Office 365 Enterprise E3 <br>Office 365 Enterprise E5<br><br>**Office 365 Enterprise E2 includes the same capabilities as Office 365 Enterprise E1, and Office 365 Enterprise E4 includes the same capabilities as Office 365 Enterprise E3.*                                                                                                                                                                                                                                                                                                              |
+| Which Microsoft Office 365 plans include PowerApps?            | These plans include PowerApps for Office 365: <br><br>Office 365 Business Essentials <br>Office 365 Business Premium <br>Office 365 Education <br>Office 365 Education Plus <br>Office 365 Enterprise E1 <br>Office 365 Enterprise E3 <br>Office 365 Enterprise E5<br><br>**Office 365 Enterprise E2 includes the same capabilities as Office 365 Enterprise E1, and Office 365 Enterprise E4 includes the same capabilities as Office 365 Enterprise E3.*<br><br>Office 365 Enterprise K1 includes PowerApps for Office 365 K1                                                                                                                                                                                                                                                                                                              |
 | Which Microsoft Dynamics 365 apps and plans include PowerApps? | These apps include PowerApps for Dynamics 365:<br><br>Dynamics 365 for Sales, Enterprise edition <br>Dynamics 365 for Customer Service, Enterprise edition <br>Dynamics 365 for Operations, Enterprise edition <br>Dynamics 365 for Field Service, Enterprise edition <br>Dynamics 365 for Project Service Automation, Enterprise edition <br>Dynamics 365 for Team Members, Enterprise edition <br>Dynamics 365 for Financials, Business edition <br>Dynamics 365 for Team Members, Business edition <br><br>These plans include PowerApps Plan 2:<br><br>Dynamics 365, Enterprise edition, Plan 1<br>Dynamics 365, Enterprise edition, Plan 2 <br><br>**PowerApps for Dynamics 365 is also included in existing CRM Online Enterprise, Professional, Basic, and Essential subscriptions.* |
+
+### PowerApps for Office 365 Enterprise K1 ###
+PowerApps is included with Office 365 Enterprise K1. This plan provides users the ability to run apps and automate workflows. The key difference between this plan and other Office 365 plans (like E1, E3 and E5) is that you can’t create apps with Office 365 Enterprise K1, whereas you can do that with other Office 365 plans(like E1, E3 and E5). Here are how the details of the plan included with Office 365 Enterprise K1 looks like:
+
+|  **Functionalities** | **PowerApps for Office 365 K1** |
+| --- | --- |
+| **Create and run apps** | |
+| Create apps| No |
+| Run apps| Yes |
+| Share apps | No |
+| ** Capacity** | |
+| Flow runs per month (per user)	| 750 |
+| Data storage in the Common Data Service (per user)	| - |
+| File storage in the Common Data Service (per user) | - |
+| **Connectivity** |   |
+| Connect to Office 365, Dynamics 365, and other connectors | Yes |
+| Connect to cloud-based services like Azure SQL, Dropbox, Twitter, and many more | Yes |
+| Use premium connectors like Salesforce, DB2 and many more | No |
+| Access on‐premises data using an on-premises gateway | No |
+| Create custom connectors to connect to your own systems | Yes (1) |
+| **Common Data Service** |   |
+| Create and run applications on the Common Data Service | No |
+| Model your data in the Common Data Service | No |
+| Create a database in the Common Data Service | No |
+| **Management** |   |
+| Add co-workers as environment makers and admins | No |
+| Add co-workers to the database roles | No |
+| Supports data policies established by the Office 365 administrator | Yes |
+| Establish data policies for the environments | No |
 
 ### PowerApps standalone Plan 1 and Plan 2 ###
 Full-featured standalone PowerApps plans provide users the ability to create and run apps across data sources that extend beyond Office 365 and Dynamics 365, such as Salesforce and on-premises data sources, as well as Microsoft’s Common Data Service. These subscriptions also include features not available in Office 365 and Dynamics 365 plans.
@@ -50,6 +79,9 @@ When the trial expires, users have these options:
 - Users who don't have access through Office 365 or Dynamics 365 can request to extend the trial, or they can purchase a stand-alone plan. For more information, see [Purchase PowerApps for your organization][4].
 
 > **NOTE**   To purchase PowerApps for an organization, you must be an Office 365 Global or Billing Admin of a tenant, or you must create a tenant.
+
+### PowerApps Community Plan ###
+If you want to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service, the PowerApps Community Plan is the right plan for you. The PowerApps Community Plan gives you a free development environment for individual use to learn with full functionality of PowerApps. See [here][5] for PowerApps Community Plan.
 
 ## PowerApps includes Flow ##
 PowerApps licenses always include Microsoft Flow capabilities.  In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. See [PowerApps pricing page][2] for more information on the specific Microsoft Flow capabilities that each PowerApps license includes.
@@ -80,3 +112,4 @@ For this app, IT selects the Common Data Service as the system in which to store
 [2]: https://powerapps.microsoft.com/pricing
 [3]: https://powerapps.microsoft.com/tutorials/signup-for-powerapps/#try-powerapps-plan-2-for-free
 [4]: https://powerapps.microsoft.com/tutorials/signup-for-powerapps-admin/
+[5]: https://powerapps.microsoft.com/tutorials/dev-community-plan/
