@@ -311,6 +311,8 @@ Other elements include:
 
 **[Sum](functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
 
+**[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula.
+
 ## T ##
 
 **[Table](functions/function-table.md)** – Creates a temporary table.  
