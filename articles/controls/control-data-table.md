@@ -24,15 +24,15 @@ The **Data table** control in Microsoft PowerApps is a control that shows a set 
 The **Data table** control lets you show a dataset in a format that includes column headers for each field that the control shows. As the maker, you have full control over the fields that are shown from the data source and the order that the fields appear in. The **Data table** control maintains a **Selected** property that, like the **Gallery**, points to the single row that is currently selected. Therefore, the **Data table** control can be linked to other controls.
 
 ## Capabilities ##
-The **Data table** control is a relatively recent addition to PowerApps. This section provides information about items that are supported and those that are known to be not currently supported based on the latest release.
+The **Data table** control is a relatively recent addition to PowerApps. This section provides information about items that are supported and those that are not supported.
 
 **Now available**
 
 - The **Data table** control data is read-only.
 - A single row is always selected in a **Data table** control.
-- A **Data table** control can be linked to connected data s ources.
-- **(New)** A **Data table** control can be linked to local data sources (collections).
-- **(New) Data table** control column widths can be adjusted whiile the app is running, though the changes are not saved.
+- A **Data table** control can be linked to connected data sources.
+- **(New)** Link a **Data table** control to local data sources (collections).
+- **(New)** Adjust **data table** control column widths while the app is running, though changes are not saved.
 - **(New)** By default, when you link a **Data table** control to connectors that have implemented this capability, such as Microsoft Common Data Service, a set of initial fields are shown. You can add or remove these and additional fields as necessary.
 
 **Not yet available**
@@ -117,7 +117,7 @@ The **Data table** control is a relatively recent addition to PowerApps. This se
 
 ## Examples
 ### Basic usage
-1. Create a blank Tablet app.
+1. Create a blank tablet app.
 
 2. On the **Insert** tab, click or tap **Data table**.
 	
