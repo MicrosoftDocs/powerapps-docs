@@ -30,6 +30,8 @@ The **DateDiff** function returns the difference between two date/time values.  
 
 For both functions, units can be in **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters**, or **Years**.  By default, both functions use **Days** as units.
 
+**DateAdd** can be used with the [**TimeZoneOffset**](function-timezoneoffset.md) function to convert between the user's local time and UTC (Coordinated Universal Time).  
+
 Also see [working with dates and times](../show-text-dates-times.md) for more information.
 
 ## Syntax ##

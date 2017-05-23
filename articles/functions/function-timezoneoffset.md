@@ -20,11 +20,11 @@
 
 # TimeZoneOffset functions in PowerApps #
 
-Returns the difference between UTC and the user's time zone in minutes.
+Returns the difference between UTC and the user's local time in minutes.
 
 ## Description ##
 
-The **TimeZoneOffset** function returns the number of minutes between the user's time zone and UTC (Coordinated Universal Time).   
+The **TimeZoneOffset** function returns the number of minutes between the user's local time and UTC (Coordinated Universal Time).   
 
 This value can be used with the [**DateAdd**](function-dateadd-datediff.md) function to convert to and from UTC. Adding **TimeZoneOffset** will convert a local time to UTC, subtracting (adding the negative) will convert from UTC to local time.
 
