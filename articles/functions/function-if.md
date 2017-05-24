@@ -19,12 +19,12 @@
    ms.author="gregli"/>
 
 # If and Switch functions in PowerApps #
-Returns a value based on the results of one or more formulas, whether each result is Boolean (**true**/**false**) or a value that's compared against each value in a set to find a match.
+Returns a result based on whether any condition in a set is **true** or the result of a formula matches any value in a set.
 
 ## Description ##
-The **If** function tests one or more conditions until a **true** result is found. If such a result is found, a corresponding value is returned. If no such result is found, a default result is returned.
+The **If** function tests one or more conditions until a **true** result is found. If such a result is found, a corresponding value is returned. If no such result is found, a default value is returned. In either case, the returned value might be a string to show, a formula to evaluate, or another form of result.
 
-The **Switch** function evaluates a formula and determines whether the result matches any value in a sequence that you specify. If a match is found, a corresponding value is returned. If no match is found, a default result is returned.
+The **Switch** function evaluates a formula and determines whether the result matches any value in a sequence that you specify. If a match is found, a corresponding value is returned. If no match is found, a default value is returned. In either case, the returned value might be a string to show, a formula to evaluate, or another form of result.
 
 **If** and **Switch** are very similar, but you should use the best function for your situation:
 
