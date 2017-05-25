@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Use an app in Microsoft Teams | Microsoft PowerApps"
-	description="Use an existing app in Microsoft Teams."
+	pageTitle="Add and open an app in Microsoft Teams | Microsoft PowerApps"
+	description="Add and open an app in Microsoft Teams."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,20 +18,13 @@
    ms.date="5/20/2017"
    ms.author="ankitsar"/>
 
-# Use an app in Microsoft Teams
+# Add and open an app in Microsoft Teams
+Add an app to a Microsoft Teams channel so that anybody with whom the app was shared can open it from within that channel. You can add any app that you built or for which you have **Can use** or **Can edit** permissions, and you can both add and open the app from a browser or the desktop app for Microsoft Teams.
 
-You can add and use an existing app inside Microsoft Teams channel.
+## Add an app ##
+1. [Share the app](share-app.md) with other members of the team.
 
-## What you need to get started ##
-- One of the following:
-	- An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from a [blank canvas](get-started-create-from-blank.md).
-	- An app that someone else built and shared with you, granting user permissions.
-
-## Add an app to a Microsoft Team channel
-
-1. Open Microsoft Teams (In a browser or on your desktop)
-
-1. Select your Team and the channel
+1. In Microsoft Teams, select a team and a channel for that team.
 
 	![](./media/open-app-embedded-in-teams/teams-select-channel.png)
 
@@ -39,42 +32,40 @@ You can add and use an existing app inside Microsoft Teams channel.
 
 	![](./media/open-app-embedded-in-teams/teams-add-tab.png)
 
-1. Click or tap PowerApps from the **Add a tab** dialog
-	
+1. In the **Add a tab** dialog box, click or tap **PowerApps**.
+
 	![](./media/open-app-embedded-in-teams/add-a-tab.png)
 
-1. Click or tap the PowerApps app you want to add to the channel
-	- You can find your app by searching for app name, author or environment.
+1. Click or tap the app that you want to add.
+
+	**Note**: You can search for an app by name, author, or environment.
 
 	![](./media/open-app-embedded-in-teams/select-an-app.png)
-	
-	**Note**: Make sure to [share your app](share-app.md) with your team members.
 
-1. Click or top the **Save** button
+1. Click or tap the **Save** button.
 
 	![](./media/open-app-embedded-in-teams/save-tab.png)
 
-1. The app is now available to use in the team channel
-	
+	The app is now available to use in the channel.
+
 	![](./media/open-app-embedded-in-teams/app-in-channel.png)
 
-## Use an app in a Microsoft Team channel
-
-1. Open Microsoft Teams (In a browser or on your desktop)
-
-1. Select your Team and the channel
+## Open an app ##
+1. In Microsoft Teams, select the team and the channel that contains the app.
 
 	![](./media/open-app-embedded-in-teams/teams-select-channel.png)
 
-1. Click or tap the tab with the **app name** to open the app.
+1. Click or tap the tab that's named for the app.
 
 	![](./media/open-app-embedded-in-teams/open-tab.png)
 
-1. The app will start running in the team channel
-	
+	The app opens in the channel.
+
 	![](./media/open-app-embedded-in-teams/app-in-channel.png)
 
-### Notes ###	
-- Apps will not be able to load images, pdfs, or any content over non-secure http connection in the Microsoft Teams desktop app
-- Some sensors (Acceleration, Compass, and Location) are not supported in Microsoft Teams desktop
-- Microsoft Teams desktop can only support AAC, H264, OGG Vorbis, and WAV audio formats. 
+## Known issues ##
+In the desktop app for Microsoft Teams:
+- Apps must load content over a secure (https) connection.
+- Apps can't load images or .pdf files.
+- Not all sensors, such as **Acceleration**, **Compass**, and **Location**, are supported.
+- Only these audio formats are supported: AAC, H264, OGG Vorbis, and WAV.
