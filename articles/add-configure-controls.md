@@ -226,3 +226,23 @@ By renaming a screen or control, you can build formulas that are easier to read 
 1. On the **Home** tab, click or tap the name of the control (to the right of **New screen**), and then type the name that you want.
 
 	![Rename a checkbox](./media/add-configure-controls/rename-control.png)
+
+## Tree view ##
+Tree view is a cascading list of existing controls. Top level are screens, and each screen expand to a list of controls and nested controls. It is meant to help with selecting controls when they are hidden or overlapping. It also visualizes the structure of your app in a hierarchical manner. There are quick actions you can do from the tree view.
+- **Toggle**
+
+	Use the icons on top right of tree view to switch between the list of controls and thumbnail preview of screens.
+
+	![Toggle the views](./media/add-configure-controls/toggle-view.png)
+
+- **Search**
+
+	On top of tree view, there is a search bar and you can search by control names. The search results show up in cascading manner and matching texts are highlighted in purple. Clicking on any of the search results selects the actual control on the canvas.
+
+	![Search in tree view](./media/add-configure-controls/search.png)
+
+- **Context menu**
+
+	You can click on the three dots next to the control or right click to bring the context menu. As for now, screen explorer has enabled copying and pasting controls, moving up and down screens, duplicating screens, deleting, and renaming. For renaming, double clicking on a control can also trigger it.
+
+	![Tree view context menu](./media/add-configure-controls/context.png)
