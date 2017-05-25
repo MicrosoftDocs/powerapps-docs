@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
-	manager="archnair"
+	authors="RickSaling"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/08/2016"
-   ms.author="archanan"/>
+   ms.date="05/25/2017"
+   ms.author="ricksal"/>
 
 #  Office 365 Outlook
 
@@ -28,7 +28,7 @@ You can add controls, including buttons and labels, to do these functions in you
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
-**Important**: As of this writing, the functions for calendar and contacts aren't supported.
+**Important**: As of this writing, the calendar operation does not support listing recurring events.
 
 &nbsp;
 
@@ -90,6 +90,32 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 5. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Type in a valid email address in **inputTo**, and type whatever you want in the other two **Text input** controls.
 
 6. Select **Send email** to send the message. Press Esc to return to the default workspace.
+
+### Send email with attachment(s)
+
+You can create a camera app in which you take pictures and then email the photo images as attachments. For example, a claims adjuster may take photos of an auto accident and send them to the Claims Processing Department. You can also attach many other kinds of files to an email app.
+
+To add attachments to an email, proceed as in the prior step. But in the third step where you call the SendEmail method, you add an additional parameter that specifies the attachment(s).
+
+That parameter looks like this:
+
+			{Attachments: Table({first attachment's properties}, {2nd attachment's properties}, etc.)}
+
+The properties for each attachment are the following:
+
+1. Name: description of this attachment
+2. ContentBytes: name of the file to be attached
+3. @odata.type: must be defined. You can set it to an empty string.  Note, if you have multiple tables, you only need to set this parameter once.
+
+#### Sample formula
+
+This formula sends email with a single file attached.
+
+			Office365.SendEmail("your.name@contoso.com", "Subject", "Email content", {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""})})
+
+And this formula sends email with two attachments.
+
+			Office365.SendEmail("archanan@microsoft.com", "Test", "Blah Blah", {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':"#Microsoft.OutlookServices.FileAttachment"}, {Name:"AudioFile", ContentBytes:microphone1.audio })})
 
 
 
@@ -301,3 +327,4 @@ Send approval email: Send an approval email and wait for a response from the To 
 
 - See all the [available connections](../connections-list.md).  
 - Learn how to [manage your connections](../add-manage-connections.md).
+- For more detail, see the [Office 365 Outlook reference](https://docs.microsoft.com/en-us/connectors/office365connector/).
