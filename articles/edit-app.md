@@ -50,7 +50,7 @@ You can edit apps from either the powerapps.com or from PowerApps Studio on Wind
 
 1. Near the upper-right corner, click or tap the edit icon and choose **Edit on the web (preview)**
 
-	![](./media/edit-app/edit-icon.png)
+	![](./media/edit-app/editicon.png)
 
 
 ## Edit an app on Windows ##
@@ -69,13 +69,13 @@ When more than one user attempts to edit the same app simultaneously from the po
 
  1. An app edited by a user reopened for edit by the same user in another machine or browser. In this case PowerApps provides the option to override the previous session and continue editing on the client.
 
-	![](./media/edit-app/applock-self.png)
+	![](./media/edit-app/applock-selfuser.png)
 
  **Note** If the user chooses to override, there is a chance that unsaved edits from the previous session can be lost.
 
  1. An app edited by one user is opened for editing by another user. In this case the app cannot be edited unless the first user closes the app or the session times out for that user. Authors cannot override sessions of other authors.
 
- ![](./media/edit-app/applock-others.png)
+ ![](./media/edit-app/applock-otheruser.png)
 
  ## Next Steps ##
  Learn more about how to add a [screen](add-screen-context-variables.md), add a [control](add-configure-controls.md) or add a [data connection](add-data-connection.md).
