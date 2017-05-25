@@ -42,52 +42,23 @@ Add a variety of UI elements to your app, and configure aspects of their appeara
 ## Add a control ##
 You can add any control in a variety of categories by clicking or tapping the **Insert** tab of the toolbar, clicking or tapping a category, and then clicking or tapping the control that you want. In this section, review the controls in each category to get familiar with the types of controls that you can add and where you might find each type.
 
-- **Text**
+- On the **Insert** tab, click or tap any of these categories, and then click or tap the control that you want to add:
 
-	![Options in the Text category](./media/add-configure-controls/text-category.png)
+	**Text**: Label, Text input, HTML Text, Pen input<br>
+	**Controls**: Button, Drop down, Date picker, List box, Check box, Radio, Toggle, Slider, Rating, Timer<br>
+	**Gallery**: Vertical, Horizontal, Flexible height, Blank vertical, Blank horizontal, Blank flexible height<br>
+	**Data table**<br>
+	**Forms**: Edit, Display, Entity form<br>
+	**Media**: Image, Camera, Barcode, Video, Audio, Microphone, Add picture<br>
+	**Charts**: Column chart, Line chart, Pie chart<br>
+	**Icons**
 
-	**Tip:** [Write or draw](add-images-pictures-audio-video.md#draw-a-picture) by using the pen input.
-
-- **Controls**
-
-	![Options in the Control category](./media/add-configure-controls/controls-category.png)
-
-	**Tip:** Offer choices in your app by adding [a list box, a drop-down list, or radio buttons](add-list-box-drop-down-list-radio-button.md).
-
-- **Gallery**
-
-	![Options in the Gallery category](./media/add-configure-controls/insert-gallery.png)
-
-	**Tip:** Show a list of records from a table using a [gallery](add-gallery.md).
-
-- **Forms**
-
-	![Options in the Form category](./media/add-configure-controls/forms-category.png)
-
-	**Tip:** Show or edit a record by using a [form](add-form.md).
-
-- **Media**
-
-	![Options in the Media category](./media/add-configure-controls/media-category.png)
-
-	**Tip:** Show data other than text by [adding multimedia](add-images-pictures-audio-video.md) to your app.
-
-- **Charts**
-
-	![Column chart, Line chart, Pie chart](./media/add-configure-controls/chart-category.png)
-
-	**Tip:** [Configure a chart](use-line-pie-bar-chart.md) to showcase mission-critical data.
-
-- **Icons**
-
-	This category contains a variety of shapes, action icons, and symbol icons. Scroll through to review all the options.
-
-If you need more space for controls, [add a screen](add-screen-context-variables.md).
+**Tip**: If you need more space for controls, [add another screen](add-screen-context-variables.md).
 
 ## Configure a control directly ##
 In this procedure, you'll add and configure a **Label** control, but you can apply many of the same principles to other controls.
 
-1. In the toolbar, click or tap the **Insert** tab, and then click or tap **Label**.
+1. Click or tap the **Insert** tab, and then click or tap **Label**.
 
 	![Insert tab](./media/add-configure-controls/insert-text-box.png)
 
@@ -116,7 +87,7 @@ In this procedure, you'll add and configure a **Label** control, but you can app
 1. Restore the **Label** control by pressing Ctrl-Z (or by repeating the first four steps in this procedure).
 
 ## Configure a control from the toolbar ##
-By configuring a control from the toolbar, you can specify a wider variety of options than you can directly.
+By configuring a control from the toolbar, you can specify a wider variety of options than you can by configuring a control directly.
 
 1. With the **Label** control selected, click or tap the **Home** tab of the toolbar.
 
@@ -226,3 +197,22 @@ By renaming a screen or control, you can build formulas that are easier to read 
 1. On the **Home** tab, click or tap the name of the control (to the right of **New screen**), and then type the name that you want.
 
 	![Rename a checkbox](./media/add-configure-controls/rename-control.png)
+
+## Find and select a screen or a control ##
+You can find and select a screen or a control, even if it's hidden or overlaps with another control, by searching for it in the left-hand pane. This pane shows either a thumbnail of each screen in the app or a hierarchical view of each screen and the controls that it contains.
+
+- **To switch between the thumbnails and the hierarchical view**, click or tap an icon in the upper-right corner of the pane.
+
+	![Toggle the views](./media/add-configure-controls/toggle-view.png)
+
+- **To find a control**, type one or more characters to highlight the control names that contain the text that you typed.
+
+	If you click or tap a search result, you select that control in the app.
+
+	![Search in tree view](./media/add-configure-controls/search.png)
+
+- **To move a screen up or down, duplicate it, delete it, or rename it**, right-click it (or click or tap the ellipsis next to it), and then click or tap the option that you want.
+
+	![Tree view context menu](./media/add-configure-controls/context.png)
+
+- **To copy/paste a control, delete it, or rename it**, right-click it (or click or tap the ellipsis next to it), and then click or tap the option that you want.
