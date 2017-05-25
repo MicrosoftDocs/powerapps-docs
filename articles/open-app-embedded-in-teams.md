@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="5/20/2017"
+   ms.date="05/20/2017"
    ms.author="ankitsar"/>
 
 # Add and open an app in Microsoft Teams
