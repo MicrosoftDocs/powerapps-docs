@@ -115,7 +115,7 @@ This formula sends email with a single file attached.
 
 And this formula sends email with two attachments.
 
-			Office365.SendEmail("archanan@microsoft.com", "Test", "Blah Blah", {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':"#Microsoft.OutlookServices.FileAttachment"}, {Name:"AudioFile", ContentBytes:microphone1.audio })})
+			Office365.SendEmail("archanan@microsoft.com", "Test", "Blah Blah", {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})
 
 
 
