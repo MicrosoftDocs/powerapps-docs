@@ -19,7 +19,7 @@
    ms.author="karthikb"/>
 
 # Edit an app in PowerApps #
-This article shows you how you can edit your app. It also talks about cases when more than one person or session attempts to edit the same app.
+This article shows you how you can edit your app. It also talks about cases when more than one person or session attempts to edit an app simultaneously.
 
 **Prerequisites**
 
@@ -65,15 +65,15 @@ app-editstudio
 
 
 ## Session locks ##
-When more than one user attempts to edit the same app simultaneously on the portal or Studio, there is a good chance that the app will be corrupted. PowerApps will lock apps being edited to a given user and report an error in the following two cases:
+When more than one user attempts to edit the same app simultaneously from the portal or from Studio, there is a good chance for the app to get corrupted. PowerApps will prevent such a scenario by locking the app edited by a user. The following two cases apply to session locks:
 
- 1. The app is edited by a user and the same user attempts to open the app again on a different client. In this case PowerApps provides the option to override the previous session and continue editing on the client.
+ 1. An app edited by a user reopened for edit by the same user in another machine or browser. In this case PowerApps provides the option to override the previous session and continue editing on the client.
 
 	![](./media/edit-app/applock-self.png)
 
  **Note** If the user chooses to override, there is a chance that unsaved edits from the previous session can be lost.
 
- 1. The app is edited by one user and another user attempts to open the same app. In this case the app cannot be edited unless the first user closes the app or the access to app by the user times out.
+ 1. An app edited by one user is opened for editing by another user. In this case the app cannot be edited unless the first user closes the app or the session times out for that user. Authors cannot override sessions of other authors.
 
  ![](./media/edit-app/applock-others.png)
 
