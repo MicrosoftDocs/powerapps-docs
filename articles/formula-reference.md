@@ -327,7 +327,7 @@ Other elements include:
 
 **[TimeValue](functions/function-datevalue-timevalue.md)** – Converts a time-only string to a date/time value.
 
-**[TimeZoneOffset](functions/function-timezoneoffset.md)** – Returns the difference between UTC and the user's local time in minutes.
+**[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
 **[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
