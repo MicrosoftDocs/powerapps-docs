@@ -14,41 +14,46 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="05/17/2017"
+   ms.date="05/23/2017"
    ms.author="kfend"/>
 
 # Data table control in PowerApps #
 Shows a set of data in a tabular format.
 
 ## Description ##
-The **Data table** control shows data in a format that includes column headers for each field that the control shows. You can specify which fields to show and in which order. This control maintains a **Selected** property that, like the **Gallery** control, points to the single row that the user selected. Therefore, you can link the **Data table** control to other controls.
+The **Data table** control shows a dataset in a format that includes column headers for each field that the control shows. As an app maker, you have full control over which fields appear and in what order. As in the **Gallery** control, the **Data table** control maintains a **Selected** property that points to the selected row. Therefore, you can link the **Data table** control to other controls.
 
 ## Capabilities ##
-The **Data table** control is a relatively recent addition to PowerApps. This control already supports some capabilities, while others are planned for later releases.
+PowerApps introduced the **Data table** control on May 5, 2017. This section provides information about items that are supported and those that aren't supported.
 
 **Now available**
 
-- Read-only data
-- Single-row selection
-- Connected data sources (excluding the Microsoft Excel connector)
+- Data in a **Data table** control is read-only.
+- A single row is always selected in a **Data table** control.
+- Link a **Data table** control to a connected data source.
+- **(New)** Link a **Data table** control to a local data source (collection).
+- **(New)** Adjust column widths in a **Data table** control while you run the app, though your changes aren't saved.
+- **(New)** A set of default fields appear in a **Data table** control when you link it to a connector that has implemented this capability, such as the Common Data Service. You can then show or hide these fields and others as necessary.
 
 **Not yet available**
 
-- Show data in local data sources (collections)
-- Customize a column, including width, text, and styling
-- Show images, and add hyperlinks
-- Change column widths while running the app
-- Add a **Data table** control inside a form or a **Gallery** control
+- Customize columns, including widths, text, and styling
+- Show hyperlinks in a **Data table** control
+- Add a **Data table** control in a form control
 - Change the height of all rows
 - Copy and paste a **Data table** control
-- Edit data, and select multiple rows
+- Show images in a **Data table** control
 - Show fields from related entities
-- Easily filter or sort data based on column headings
+- Use built-in functionality to filter and sort data by column heading
+- Add a **Data table** control in a **Gallery** control
+- Edit data in the **Data table** control
+- Select multiple rows
 
 **Known issues**
 
-- No data appears if you set the value of the **Items** property to a formula that uses the **FirstN** function.
-- If you modify the value of the **Items** property, your field list is reset, all columns are lost, and you'll lose your data-source connection for some connectors.
+- No data appears if you use the **FirstN** function in the **Items** property.
+- If you modify the **Items** property, the field list is reset.
+- For some connectors, the connection to the data source is lost if you modify the **Items** property.
 
 ## Key properties ##
 + [**Items**](properties-core.md) – The source of data that the control shows.
@@ -112,17 +117,17 @@ The **Data table** control is a relatively recent addition to PowerApps. This co
 
 ## Examples
 ### Basic usage
-1. Create a blank app for a tablet.
+1. Create a blank tablet app.
 
 2. On the **Insert** tab, click or tap **Data table**.
 
-   ![Add a Data table control to a screen](./media/control-data-table/insert-data-table.png)
+	![Add a Data table control to a screen](./media/control-data-table/insert-data-table.png)
 
-   A **Data table** control is added to the screen.
+	A **Data table** control is added to the screen.
 
 3. Rename the new control **SalesOrderTable**, and resize it to cover the whole screen.
 
-4. In the right-hand pane, click or tap the down arrow next to **No data source selected**, and then click or tap **Add a data source**.
+4. In the right pane, click or tap the data source icon to the left of the **No data source selected**, and then click or tap **Add a data source**.
 
    ![Add a data source](./media/control-data-table/add-data-to-data-table.png)
 
@@ -134,29 +139,27 @@ The **Data table** control is a relatively recent addition to PowerApps. This co
 
    ![Select the **Sales order** entity](./media/control-data-table/choose-so-data-table.png)
 
-   **SalesOrderTable** is now attached to the **Sales order** data source. However, no data will appear until you select fields.
+   The **SalesOrderTable** control is now attached to the **Sales order** data source. However, no data will appear until you select fields.
 
-7. In the right-hand pane, click or tap the eye icon for each field that you want to show.
-
-	For this example, show **SalesOrderId**, **Account**, **OrderDate**, and **Status**.
+7. In the right pane, click or tap the eye icon for each field select the fields to show. For this example, show **SalesOrderId**, **Account**, **OrderDate**, and **Status**.
 
    **SalesOrderTable** shows data from the fields that you specified.
    ![Data table](./media/control-data-table/pre-order-data-table.png)
 
-8. Reorder the fields by dragging them up or down in the right-hand pane.
+8. Reorder the fields by dragging them up or down in the right pane.
 
    ![Reorder the fields as desired](./media/control-data-table/field-reorder-data-table.png)
 
-   **SalesOrderTable** shows the fields in the order that you specified.
+   The **SalesOrderTable** control shows the fields in the order that you specified.
 
    ![Updated Data table](./media/control-data-table/post-order-data-table.png)
 
-### Restyle the header ###
-1. With the **Data table** control selected, click or tap the **Advanced** tab in the right-hand pane.
+### Restyle the **Data table** control header ###
+1. With the **Data table** control selected, in the right pane, click or tap the **Advanced** tab.
 
 2. Click or tap the field for the **HeadingFill** property, and then change the value to **RGBA(62,96,170,1)**.
 
-3. Click or tap the field for the **HeadingColor** property, and change the value to **White**.
+3. Click or tap the field for the **HeadingColor** property, and then change the value to **White**.
 
 4. Click or tap the field for the **HeadingSize** property, and then change the value to **14**.
    ![Data table](./media/control-data-table/restyled-data-table.png)
@@ -170,11 +173,11 @@ The **Data table** control is a relatively recent addition to PowerApps. This co
 
 3. Connect the **Edit form** control to the **Sales order** data source.
 
-4. In the right-hand pane, show the **SalesOrderId**, **Status**, **Name**, **Description**, and **Total amount** in the **Edit form** control.
+4. In the **Edit form** control in the right pane, select the field to show. For this example, select **SalesOrderId**, **Status**, **Name**, **Description**, and **Total amount**.
 
    ![**Edit** form shows five fields](./media/control-data-table/data-table-disconnected-form.png)
 
-5. In the right-hand pane, click or tap the **Advanced** tab.
+5. In the right pane, click or tap the **Advanced** tab.
 
 6. Set the **Item** property for the **Edit form** control to **SalesOrderTable.Selected**.
 
