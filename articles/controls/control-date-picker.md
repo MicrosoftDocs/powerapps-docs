@@ -26,9 +26,16 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 ## Key properties ##
 
-**DefaultDate** – The initial value of a date control before it is changed by the user.
+**DefaultDate** – The initial value of a date control unless the user changes it.
 
 **SelectedDate** – The date currently selected in a date control.
+
+**Format** – The text format in which the control shows the date and the user specifies the date. You can set this property to **ShortDate** (default) or **LongDate** to format dates based on the **Language** property of this control. You can also set this property to an expression, such as **yyyy/mm/dd** if you want the same format regardless of language. For example:
+
+- The control shows **12/31/2017** if the user clicks or taps the last day of 2017, the **Format** property is set to **ShortDate**, and the **Language** property is set to **en-us**.
+- The control shows **dimanche 31 decembre 2017** if the user clicks or taps the last day of 2017, the **Format** property is set to **LongDate**, and the **Language** property is set to **fr-fr**.
+
+**Language** – Determines the language used to format dates, including names of months. If this property isn't specified, the user's device setting determines the language.
 
 ## Additional properties ##
 
