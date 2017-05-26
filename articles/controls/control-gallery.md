@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="fikaradz"
+    authors="RickSaling"
     manager="anneta"
     editor=""
     tags=""/>
@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+   ms.date="05/25/2017"
+   ms.author="ricksal"/>
 
 # Gallery control in PowerApps #
 A control that contains other controls and shows a set of data.
@@ -77,6 +77,17 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+## Examples
+
+### Default property
+
+Use this property to initialize how a gallery should appear on startup of your app.
+
+If you do not specify a value, the entire data source backing the gallery will appear, in scrollable form.
+
+You can specify a filter that displays only some of the items in the data source.
+
 
 ## Related functions ##
 
