@@ -1,6 +1,6 @@
 <properties
-	pageTitle="DateAdd and DateDiff functions | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the DateAdd and DateDiff functions in PowerApps"
+	pageTitle="DateAdd, DateDiff, and TimeZoneOffset functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the DateAdd, DateDiff, and TimeZoneOffset functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,9 +18,9 @@
    ms.date="05/23/2017"
    ms.author="gregli"/>
 
-# DateAdd and DateDiff functions in PowerApps #
+# DateAdd, DateDiff, and TimeZoneOffset functions in PowerApps #
 
-Adds to or finds the difference in date/time values.
+Adds to or finds the difference in date/time values and converts between local time and UTC.
 
 ## Description ##
 
@@ -30,7 +30,9 @@ The **DateDiff** function returns the difference between two date/time values. T
 
 For both functions, units can be **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters**, or **Years**.  By default, both functions use **Days** as units.
 
-You can use **DateAdd** with the [**TimeZoneOffset**](function-timezoneoffset.md) function to convert between the user's local time and UTC (Coordinated Universal Time).  
+The **TimeZoneOffset** function returns the number of minutes between the user's local time and UTC (Coordinated Universal Time).   
+
+You can use **DateAdd** with the **TimeZoneOffset** to convert between the user's local time and UTC (Coordinated Universal Time).  Adding **TimeZoneOffset** will convert a local time to UTC, and subtracting it (adding the negative) will convert from UTC to local time.
 
 Also see [working with dates and times](../show-text-dates-times.md) for more information.
 
@@ -47,6 +49,10 @@ Also see [working with dates and times](../show-text-dates-times.md) for more in
 - *StartDateTime* - Required. Starting date/time value.
 - *EndDateTime* - Required. Ending date/time value.
 - *Units* - Optional. The type of *Units* to add: **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters**, or **Years**.  If not specified, **Days** are used.
+
+**TimeZoneOffset**( [ *DateTime* ] )
+
+- *DateTime* - Optional.  Date/time value for which to return the offset.  By default, the current date/time is used.
 
 ## Examples ##
 In all of these examples, assume that the current date and time is **July 15, 2013, 1:02 PM**.
