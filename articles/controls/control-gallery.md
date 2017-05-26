@@ -28,7 +28,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 ## Key properties ##
 
-**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
@@ -84,9 +84,9 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 Use this property to initialize how a gallery should appear on startup of your app.
 
-If you do not specify a value, the entire data source backing the gallery will appear, in scrollable form.
 
-You can specify a filter that displays only some of the items in the data source.
+
+
 
 
 ## Related functions ##
