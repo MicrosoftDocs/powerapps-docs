@@ -1,11 +1,11 @@
 <properties
 	pageTitle="Edit an app | Microsoft PowerApps"
-	description="Step-by-step instructions for editing apps and session locking scenarios."
+	description="Step-by-step instructions for editing apps and session-locking scenarios."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
 	authors="karthik-1"
-	manager="karthikb"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,67 +15,61 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="5/19/2017"
+   ms.date="05/19/2017"
    ms.author="karthikb"/>
 
 # Edit an app in PowerApps #
-This article shows you how you can edit your app. It also talks about cases when more than one person or session attempts to edit an app simultaneously.
+Edit any app that you built, that you own, or for which you have **Can edit** permissions. You can edit an app in either PowerApps Studio for web or PowerApps Studio for Windows. If you try to edit an app that's open for editing elsewhere, a message tells you whether you already have it open or another user does.
 
-**Prerequisites**
+## Verify your permissions ##
+1. Sign in to [PowerApps](https://web.powerapps.com), and then click or tap **Apps** in the **File** menu (on the left edge).
 
-1. An app authored by you or shared with you with contributor permissions
+	![Apps option on the File menu](./media/edit-app/file-apps.png)
 
-1. (Optional) The app authored by you is shared with one or more members in your organization
+1. Open the app-category selector, and then click or tap either **Apps I own** or **Apps I contribute to**.
 
-## Permissions ##
-Only apps with Owner or Can edit permissions will be editable. You can check your permissions to any app from powerapps.com. Go to Apps section and click on the **All apps** dropdown. Choose either **Apps I Own** or **Apps I contribute to**. All apps in these two categories can be edited.
+	![App-category selector](./media/edit-app/app-category.png)
 
-![App Category](./media/edit-app/app-category.png)
+	You can edit any app in the list that appears. You can also search for an app by typing one or more characters in the search box near the upper-right corner.
 
+	**Note**: If you still don't see the app that you want to edit, verify that you've selected the correct environment near the upper-right corner.
 
-## Edit an app from the portal ##
-You can edit apps from either the powerapps.com or from PowerApps Studio on Windows.
+	![Environment list](./media/edit-app/environment-list.png)
 
-1. Open [powerapps.com](https://web.powerapps.com), and then click or tap **Apps** in the left navigation bar.
+## Edit an app in PowerApps Studio for web ##
+1. Follow the steps in the previous procedure to find the app that you want to edit.
 
-	![](./media/delete-app/file-apps.png)
+1. Click or tap the app's info icon near the right edge.
 
-1. (optional) Near the upper-left corner, filter the list of apps to show only those apps that you own or only those apps to which you contribute.
+	![Info icon](./media/edit-app/app-edit.png)
 
-	**Note**: If the app that you want to edit doesn't appear, make sure that you're in the right environment.
+1. Click or tap the **Edit** icon near the upper-right corner, and then click or tap **Edit on the web**.
 
-1. Near the right edge, click or tap the info icon for the app that you want to edit.
+	![Edit icon](./media/edit-app/edit-icon.png)
 
-	![](./media/edit-app/app-edit.png)
+## Edit an app in PowerApps Studio for Windows ##
+1. Open PowerApps Studio for Windows.
 
-1. Near the upper-right corner, click or tap the edit icon and choose **Edit on the web (preview)**
+1. On the page that appears by default, find the app that you want to edit.
 
-	![](./media/edit-app/editicon.png)
+	To find an app more easily, click or tap the search icon near the upper-right corner, and then type one or more characters in the name of the app. You can also sort the list by name, date most recently modified, or date most recently opened. If the app you want still doesn't appear, confirm that you're in the right PowerApps environment, as the first procedure describes.
 
-
-## Edit an app on Windows ##
-1. To edit apps on Windows, login to PowerApps Studio and click on the  app page
-	![](./media/edit-app/app-openhub.png)
-
-1. (optional) Near the upper-right corner, search the list of apps to show only those apps that match the name. Notice apps which have a dark pencil icon can be edited.
-app-editstudio
+	![](./media/edit-app/sort-filter.png)
 
 1. Near the right edge, click or tap the pencil icon for the app that you want to edit.
+
+	You can edit any app for which the pencil icon is black, not grey.
+
 	![](./media/edit-app/app-editstudio.png)
 
+## Collaborate on an app ##
+Anybody who has **Can edit** permission for an app can edit it, but only one person can edit an app at a time. If you try to edit an app that someone else is already editing, this message appears. You can't proceed until the other person closes the app (or that person's session times out).
 
-## Session locks ##
-When more than one user attempts to edit the same app simultaneously from the portal or from Studio, there is a good chance for the app to get corrupted. PowerApps will prevent such a scenario by locking the app edited by a user. The following two cases apply to session locks:
+![](./media/edit-app/applock-otheruser.png)
 
- 1. An app edited by a user reopened for edit by the same user in another machine or browser. In this case PowerApps provides the option to override the previous session and continue editing on the client.
+In addition, this message appears if you open an app for editing and then try to open it on another device or in another browser window. You can override the previous session, but you might lose any changes that you haven't saved.
 
-	![](./media/edit-app/applock-selfuser.png)
+![](./media/edit-app/applock-selfuser.png)
 
- **Note** If the user chooses to override, there is a chance that unsaved edits from the previous session can be lost.
-
- 1. An app edited by one user is opened for editing by another user. In this case the app cannot be edited unless the first user closes the app or the session times out for that user. Authors cannot override sessions of other authors.
-
- ![](./media/edit-app/applock-otheruser.png)
-
- ## Next Steps ##
- Learn more about how to add a [screen](add-screen-context-variables.md), add a [control](add-configure-controls.md) or add a [data connection](add-data-connection.md).
+## Next Steps ##
+Learn more about how to add a [screen](add-screen-context-variables.md), a [control](add-configure-controls.md) or a [data connection](add-data-connection.md).
