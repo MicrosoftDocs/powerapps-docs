@@ -78,17 +78,6 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Examples
-
-### Default property
-
-Use this property to initialize how a gallery should appear on startup of your app.
-
-
-
-
-
-
 ## Related functions ##
 
 [**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
