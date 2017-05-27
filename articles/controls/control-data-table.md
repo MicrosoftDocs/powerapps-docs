@@ -129,32 +129,32 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 
 4. In the right pane, click or tap the data source icon to the left of the **No data source selected**, and then click or tap **Add a data source**.
 
-   ![Add a data source](./media/control-data-table/add-data-to-data-table.png)
+	![Add a data source](./media/control-data-table/add-data-to-data-table.png)
 
 5. In the list of connections, click or tap the connection for your Common Data Service database.
 
-   ![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png)
+	![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png)
 
 6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
 
-   ![Select the **Sales order** entity](./media/control-data-table/choose-so-data-table.png)
+	![Select the **Sales order** entity](./media/control-data-table/choose-so-data-table.png)
 
-   The **SalesOrderTable** control is now attached to the **Sales order** data source. However, no data will appear until you select fields.
+	The **SalesOrderTable** control is now attached to the **Sales order** data source. However, no data will appear until you select fields.
 
-7. In the right pane, click or tap the eye icon for each field select the fields to show. For this example, show **SalesOrderId**, **Account**, **OrderDate**, and **Status**.
+7. In the right pane, click or tap the eye icon for each field that you want to show. For this example, show **SalesOrderId**, **Account**, **OrderDate**, and **Status**.
 
-   **SalesOrderTable** shows data from the fields that you specified.
-   ![Data table](./media/control-data-table/pre-order-data-table.png)
+	**SalesOrderTable** shows data from the fields that you specified.
+	![Data table](./media/control-data-table/pre-order-data-table.png)
 
 8. Reorder the fields by dragging them up or down in the right pane.
 
-   ![Reorder the fields as desired](./media/control-data-table/field-reorder-data-table.png)
+	![Reorder the fields as desired](./media/control-data-table/field-reorder-data-table.png)
 
    The **SalesOrderTable** control shows the fields in the order that you specified.
 
-   ![Updated Data table](./media/control-data-table/post-order-data-table.png)
+	![Updated Data table](./media/control-data-table/post-order-data-table.png)
 
-### Restyle the **Data table** control header ###
+### Restyle the header for the **Data table** control ###
 1. With the **Data table** control selected, in the right pane, click or tap the **Advanced** tab.
 
 2. Click or tap the field for the **HeadingFill** property, and then change the value to **RGBA(62,96,170,1)**.
@@ -162,20 +162,21 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 3. Click or tap the field for the **HeadingColor** property, and then change the value to **White**.
 
 4. Click or tap the field for the **HeadingSize** property, and then change the value to **14**.
-   ![Data table](./media/control-data-table/restyled-data-table.png)
+
+	![Data table](./media/control-data-table/restyled-data-table.png)
 
 ### Connect a **Data table** control to another control
 1. Add an **Edit form** control to the screen.
 
 2. Resize the **Data table** and the **Edit form** controls so that the **Data table** control appears in the left part of the screen and the **Edit form** control appears in the right part of the screen.
 
-   ![Data table and **Edit** form on the same screen](./media/control-data-table/data-table-empty-form.png)
+	![Data table and **Edit** form on the same screen](./media/control-data-table/data-table-empty-form.png)
 
 3. Connect the **Edit form** control to the **Sales order** data source.
 
-4. In the **Edit form** control in the right pane, select the field to show. For this example, select **SalesOrderId**, **Status**, **Name**, **Description**, and **Total amount**.
+4. With the **Edit form** control selected, in the right pane, select the fields to show. For this example, select **SalesOrderId**, **Status**, **Name**, **Description**, and **Total amount**.
 
-   ![**Edit** form shows five fields](./media/control-data-table/data-table-disconnected-form.png)
+	![**Edit** form shows five fields](./media/control-data-table/data-table-disconnected-form.png)
 
 5. In the right pane, click or tap the **Advanced** tab.
 
@@ -183,4 +184,4 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 
 	The **Edit form** control shows information from the row that's selected in the **Data table** control.
 
-   ![**Edit** form connected to the Data table](./media/control-data-table/connected-form-data-table.png)
+	![**Edit** form connected to the Data table](./media/control-data-table/connected-form-data-table.png)
