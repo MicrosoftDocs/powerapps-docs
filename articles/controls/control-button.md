@@ -118,7 +118,9 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 [**Navigate**( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)
 
-## Example ##
+## Examples ##
+### Add a basic formula to a button ###
+
 1. Add a **[Text input](control-text-input.md)** control, and name it **Source**.
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
@@ -128,7 +130,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 	Want more information about the **[UpdateContext](../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
 
-1. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to show **Total**, and then press F5.
+1. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to show **Total**, and then press **F5**.
 
 1. Type a number in **Source**, and then click or tap **Add**.
 
@@ -139,3 +141,58 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 	The **[Label](control-text-box.md)** control shows the sum of the numbers that you typed.
 
 1. To return to the default workspace, press Esc.
+
+### Use a button for multiple formulas ###
+
+Add additional functionality to the **Add** button to clear the text input box control between entries.
+
+1. Select **Source** and set its **[HintText](control-text-input.md)** property to **"Enter a number"**.
+
+1. Select **Add** and add this second formula to the **[OnSelect](properties-core.md)** property:
+
+    **UpdateContext({ClearInput: ""})**
+
+    **Note:** Separate multiple formulas with a semi-colon “**;**”.
+
+1. Select **Source** and set its **[Default](properties-core.md)** property to **ClearInput**. 
+
+1. Press **F5** and enter several numbers to test the app.
+
+### Add a second button to reset the total ###
+
+Add a second button to clear the total between calculations. 
+
+1. Add another **Button** control, set its **[Text](properties-core.md)** property to **"Clear"**, and set its **[OnSelect](properties-core.md)** property to this formula:
+
+    **UpdateContext({Total:0})**
+
+1. Press **F5**, add several numbers together, and then click **Clear** to reset the total.
+
+### Configure button design properties ###
+
+#### Modify the shape of the button ####
+
+By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** by setting its **[Height](properties-size-location.md)**, **[Width](properties-size-location.md)**, and **[Radius](properties-size-location.md)** properties.
+
+**Note:** **[Icons and Shapes](control-shapes-icons.md)** can also perform some of the same basic functions that **Buttons** do, and provide a wide variety of designs. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](properties-core.md)** property. 
+
+1. Add a **Button** control, and set the **[Height](properties-size-location.md)** and **[Width](properties-size-location.md)** properties to **300** to make a square **Button**.
+
+1. Modify the **[RadiusTopLeft](properties-size-location.md)**, **[RadiusTopRight](properties-size-location.md)**, **[RadiusBottomLeft](properties-size-location.md)**, and **[RadiusBottomRight](properties-size-location.md)** properties to adjust the amount of curvature on each corner. Here are some examples of different shapes, each one starting from a 300 x 300 square **Button**:
+
+    - Set all four **[Radius](properties-size-location.md)** values to **150** to create a circle.
+    - Set the values for **[RadiusTopLeft](properties-size-location.md)** and **[RadiusBottomRight](properties-size-location.md)** to **300** to create a leaf-shaped **Button**.
+    - Set the values for **[RadiusTopLeft](properties-size-location.md)** and **[RadiusTopRight](properties-size-location.md)** to **300**, and the values for **[RadiusBottomLeft](properties-size-location.md)** and **[RadiusBottomRight](properties-size-location.md)** to **100** to create a tab-shaped menu **Button**.
+
+#### Modify the behavior when you hover over a button with the mouse ####
+
+By default, hovering over a **Button** will dim the fill color by 20%. You can adjust this with the **[HoverFill](properties-color-border.md)** property, which uses the **[ColorFade](function-colors.md)** formula. Increasing the percentage in the **[ColorFade](function-colors.md)** formula makes the color lighter, while a negative percentage makes the color darker.
+
+- Change the **[ColorFade](function-colors.md)** percentage in the **[HoverFill](properties-color-border.md)** property of one of the **Buttons** that you created and observe the effects.
+
+You can also change the color of the **Button** with the **[HoverFill](properties-color-border.md)** property by replacing the **[ColorFade](function-colors.md)** formula with the **[ColorValue](function-colors.md)** formula, for example:
+
+**ColorValue("Red")**  
+
+**Note:** The color value can be any CSS color definition, either a name or a hex value. 
+- Replace the **[ColorFade](function-colors.md)** formula with a **[ColorValue](function-colors.md)** formula in one of the **Buttons** that you created and observe the effects.
