@@ -150,7 +150,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 
 	![Reorder the fields as desired](./media/control-data-table/field-reorder-data-table.png)
 
-   The **SalesOrderTable** control shows the fields in the order that you specified.
+	The **SalesOrderTable** control shows the fields in the order that you specified.
 
 	![Updated Data table](./media/control-data-table/post-order-data-table.png)
 
