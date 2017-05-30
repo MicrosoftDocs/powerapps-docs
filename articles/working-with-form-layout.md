@@ -80,7 +80,7 @@ Since 6 and 12 are large numbers, by default cards will span 2 or 3 columns resp
 
 Let's position and size our cards to where we want them to be:
 
-0. Set the number of columns to 12.  This won't look any different since we were already using 4 columns, but we will soon discover that we have more snap points.
+1. Set the number of columns to 12.  This won't look any different since we were already using 4 columns, but we will soon discover that we have more snap points.
 
 	![Sales order in basic four column layout](media/working-with-form-layout/sales-order-form-screen-4-12.png)
 
