@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="03/10/2017"
+    ms.date="05/30/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
@@ -24,7 +24,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 ## Release 2.0.640-2.0.641 ##
 1. Identify and select controls more easily by navigating a [cascading list of screens](add-configure-controls.md#find-and-select-a-screen-or-a-control).
-1. Easily create forms with multiple columns using a new capability of the **Display form** and **Edit form** controls.
+1. Easily [create forms with multiple columns](working-with-form-layout.md) using a new capability of the **Display form** and **Edit form** controls.
 1. Improvements to [data tables](control-data-table.md), including support for static data sources, default fields, and column resizing for app users.
 1. [Format dates more easily](control-date-picker.md), and [convert between local time and UTC](function-dateadd-datediff.md).
 1. [Simultaneous edits](edit-app.md) that corrupt apps are prevented.
