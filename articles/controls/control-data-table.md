@@ -127,7 +127,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 
 4. In the right pane, click or tap the data source icon to the left of the **No data source selected**, and then click or tap **Add a data source**.
 
-	![Add a data source](./media/control-data-table/add-data-to-data-table.png)
+	![Add a data source](./media/control-data-table/add-data-to-data-table-old.png)
 
 5. In the list of connections, click or tap the connection for your Common Data Service database.
 
