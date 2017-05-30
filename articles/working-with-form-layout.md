@@ -24,7 +24,7 @@ PowerApps makes it easy to create forms that are attractive and efficient to use
 
 ![Sample sales order](media/working-with-form-layout/sales-order.png)
 
-In this articule, we'll walk through the steps to create this form.  We'll also look at some advanced topics such as dynamic sizing of fields to fill available space.
+In this article, we'll walk through the steps to create this form.  We'll also look at some advanced topics such as dynamic sizing of fields to fill available space.
 
 ## Getting started ##
 
@@ -76,11 +76,11 @@ Cards can span multiple columns.  Drag and drop the width of the card and it wil
 
 To have rows that contain a variety of 2, 3, or 4 columns, let's switch to 12 columns.  Initially, this doesn't look any different than 4 columns but now we have more snap points for the widths and positions of cards.  12 columns is commonly used in user interface design as it is evenly divisible by 1, 2, 3, 4, and 6.  
 
-Since 6 and 12 are large numbers, by default cards will span 2 or 3 columns respectively but can be sized smaller or lager after they are initially placed.  
+Since 6 and 12 are large numbers, by default cards will span 2 or 3 columns respectively but can be sized smaller or larger after they are initially placed.  
 
 Let's position and size our cards to where we want them to be:
 
-0. Set the number of columns to 12.  This won't look any different since we were already using 4 columns, but we will soon discover that we have more snap points.
+1. Set the number of columns to 12.  This won't look any different since we were already using 4 columns, but we will soon discover that we have more snap points.
 
 	![Sales order in basic four column layout](media/working-with-form-layout/sales-order-form-screen-4-12.png)
 
@@ -88,7 +88,7 @@ Let's position and size our cards to where we want them to be:
 
 	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-1.png)
 
-2. Re-size the "Order date" card by dragging the right drag handle to the right one snap point.  It will not take up one more twelfth of the form, now at 4/12 or 1/3.  This is the right size for 3 cards across. 
+2. Re-size the "Order date" card by dragging the right drag handle to the right one snap point.  It will not take up one more twelfth of the form, now at 4/12 or 1/3.  This is the right size for 3 cards across.
 
 	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-15s.png)
 
@@ -126,27 +126,27 @@ All done.  We have our desired form, mixing rows with 1, 2, 3, and 4 columns:
 
 ## Data card manipulations ##
 
-The delivery address is made up of lots of pieces of information that we want to visually group together for the user.  Each field will remain in it's own data card, but we can manipulate the controls within the card to make them fit better together.
+The delivery address is made up of lots of pieces of information that we want to visually group together for the user.  Each field will remain in its own data card, but we can manipulate the controls within the card to make them fit better together.
 
-![Sales order delivery address sized](media/working-with-form-layout/delivery-address-resize.png) 
+![Sales order delivery address sized](media/working-with-form-layout/delivery-address-resize.png)
 
 Let's start by changing the text of the "First line of Delivery address" to be the label for the group of controls, calling it simply "Delivery address".  We can do this by selecting the label control within the card and typing a text string.
 
-![Sales order delivery address renaming the first line label](media/working-with-form-layout/delivery-address-rename.png) 
+![Sales order delivery address renaming the first line label](media/working-with-form-layout/delivery-address-rename.png)
 
-For the second line's label, we can select and delete the text.  It is tempting to simply remove the label control and in many cases that will work fine.  But there may be formulas that depend on that control being present.  The safer approach is to remove the text or to set the **Visible** property of the control to **False**. 
+For the second line's label, we can select and delete the text.  It is tempting to simply remove the label control and in many cases that will work fine.  But there may be formulas that depend on that control being present.  The safer approach is to remove the text or to set the **Visible** property of the control to **False**.
 
-![Sales order delivery address renaming the second line label](media/working-with-form-layout/delivery-address-rename-2.png) 
+![Sales order delivery address renaming the second line label](media/working-with-form-layout/delivery-address-rename-2.png)
 
 We can now move the input text box over the label to reduce the space between the first and second lines of the address.  The size of the card will shrink as the contents within them take up less space.
 
-![Sales order delivery address renaming the second line label](media/working-with-form-layout/delivery-address-move-input.png) 
+![Sales order delivery address renaming the second line label](media/working-with-form-layout/delivery-address-move-input.png)
 
-Now let's turn attention to the third line of the address.  Similar to what we just did, let's shorten the text of each labels for these cards and arrange the input text box to be the right of each label.  Here are the steps for the State card:
+Now let's turn our attention to the third line of the address.  Similar to what we just did, let's shorten the text of each label for these cards and arrange the input text box to be to the right of each label.  Here are the steps for the State card:
 
 | Step | Description | Result |
 |------|-------------|--------|
-| 1 | Start by selecting the state card. Notice that grab handles appear around the card.  | ![](media/working-with-form-layout/state-morph-2.png) | 
+| 1 | Start by selecting the state card. Notice that grab handles appear around the card.  | ![](media/working-with-form-layout/state-morph-2.png) |
 | 2 | Select the label within this card.  Notice that grab handles are now around the interior label control. | ![](media/working-with-form-layout/state-morph-3.png)
 | 3 | Place the cursor to the right of the text, and delete the portion we don't need. | ![](media/working-with-form-layout/state-morph-3b.png) |
 | 4 | Using the grab handles on the sides, size the label control to fit the new text size. | ![](media/working-with-form-layout/state-morph-4b.png) |
@@ -156,8 +156,8 @@ Now let's turn attention to the third line of the address.  Similar to what we j
 | 8 | Our modifications to the state card are now complete.  | ![](media/working-with-form-layout/state-morph-8.png)
 
 The result for the complete third address line:
- 
-![Sales order delivery address with more concise third line](media/working-with-form-layout/delivery-address-resize-city-1.png) 
+
+![Sales order delivery address with more concise third line](media/working-with-form-layout/delivery-address-resize-city-1.png)
 
 Note that many of the cards start out with dynamic formulas for their properties.  For example, the Text input control we sized and moved above had a Width property based on the width of its parent.  These dynamic formulas are lost when you drag-and-drop and are replaced with static values.  If desired, you can restore the dynamic formulas by using the formula bar.
 
@@ -167,17 +167,17 @@ Sometimes you will want finer control than the standard 12 columns can provide. 
 
 In our example, the four components that make up the third line of the address all have exactly the same width.  But this may not be the best layout, as City names are often longer than State names, and the input control for Country/region is short due to the length of its label.  
 
-To adjust this, turn off "Snap to columns" in the right hand pane.  You can now hold down the ALT key while sizing and positioning these cards.  While doing this, you will notice that all the controls on the screen will show black captions which is by design, this is a shortcut for seeing control names.
+To adjust this, turn off "Snap to columns" in the right hand pane.  You can now hold down the ALT key while sizing and positioning these cards.  While doing this, you will notice that all the controls on the screen will show black captions which is by design; this is a shortcut for seeing control names.
 
-![Positioning and sizing with the ALT key held down](media/working-with-form-layout/delivery-address-alt-resize.png) 
+![Positioning and sizing with the ALT key held down](media/working-with-form-layout/delivery-address-alt-resize.png)
 
-After careful positioning, the result with appropriate sizes for each field and even spacing horizontally between fields:
+After careful positioning, the result has appropriate sizes for each field and even spacing horizontally between fields:
 
-![Sales order delivery address third line exactly positioned](media/working-with-form-layout/delivery-address-resize-city-2.png) 
+![Sales order delivery address third line exactly positioned](media/working-with-form-layout/delivery-address-resize-city-2.png)
 
 In summary, what are the differences when snap to columns is on versus off?
 
-| Behavior | Snap to columns On | Snap to Columns Off |
+| Behavior | Snap to columns On | Snap to columns Off |
 |---|----|----|
 | Resize snaps to | Number of columns you select<br>1, 2, 3, 4, 6, or 12 | 12 |
 | Resize snap can be overriden | No | Yes, with ALT key |
@@ -185,7 +185,7 @@ In summary, what are the differences when snap to columns is on versus off?
 
 ## Card properties ##
 
-As with everything in PowerApps, the form's layout is governed by properties on the card controls.  The drag-and-drop positioning and sizing we have covered so far all manipulate these properties on your behalf.  But there will be situations in which you will want to understand and manipulate these properties yourself, especially when making your forms dynamic with formulas. 
+As with everything in PowerApps, the form's layout is governed by properties on the card controls.  The drag-and-drop positioning and sizing we have covered so far all manipulate these properties on your behalf.  But there will be situations in which you will want to understand and manipulate these properties yourself, especially when making your forms dynamic with formulas.
 
 ### Basic Layout: X, Y, and Width ###
 
@@ -214,7 +214,7 @@ When sizing and positioning cards with snap to columns on, these three propertie
 
 The overflow in the last example created a space after the second "Order status" card of the first row.  We could manually adjust the Width properties of the two remaining cards to fill this space but this is tedious.  
 
-An alternative is to use the **WidthFit** property.  If one or more cards of a row have this property set to **True**, any remaining space on the row will be evenly divided between them.  This is why we said earlier that the **Width** property of a card is a *minimum* and what is actually seen be wider.  Note that the card will not shrink in size, only expand.  
+An alternative is to use the **WidthFit** property.  If one or more cards of a row have this property set to **True**, any remaining space on the row will be evenly divided between them.  This is why we said earlier that the **Width** property of a card is a *minimum* and what is actually seen can be wider.  Note that the card will not shrink in size, only expand.  
 
 If we set **WidthFit** on the second "Order status" card then the first card will remain unchanged while the second card fills the available space:
 
@@ -234,42 +234,14 @@ Here, we will set the **Visible** property of the "Order status" field to a stat
 
 With the second card effectively removed, the third card can now return to the same row as the first card.  Since the first card still has **WidthFit** set to **True**, it alone expands to fill the available space.
 
-Since it is now invisible, selecting the second card can become difficult.  The screen explorer on the left hand side of the screen can be very helpful for selecting the card. 
+Since it is now invisible, selecting the second card can become difficult.  The screen explorer on the left hand side of the screen can be very helpful for selecting the card.
 
 ### Height ###
 
-The Height property governs the height of each card.  But be aware that cards have the equivalent of **WidthFit** for Height and it always set to **True**.  Imagine there was a **HeightFit** property, but don't go looking for it in the product as it is not exposed (yet). 
+The Height property governs the height of each card.  But be aware that cards have the equivalent of **WidthFit** for Height and it always set to **True**.  Imagine there was a **HeightFit** property, but don't go looking for it in the product as it is not exposed (yet).
 
 Since you cannot turn off this behavior, changing the heights of cards can be challenging as all cards within a row will appear to be the same height as the tallest card.  You may be looking at a row like this:
 
 ![WidthFit set to true on first card with status order invisible](media/working-with-form-layout/height-3.png)
 
-But which card is making the row tall?   In the picture above, the "Total amount" card is selected and appears tall, but in this case it isn't the "Total amount" card as its **Hieght** property is set to 80 (same as the height of the first row).  Except for the tallest card of the row, selecting any other card and attempting to change the height through drag-and-drop will not show any changes.  You will need to look at the **Height** property for each card to discover the one that is making the row tall.
- 
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
- 
-
-
+But which card is making the row tall?   In the picture above, the "Total amount" card is selected and appears tall, but in this case it isn't the "Total amount" card as its **Height** property is set to 80 (same as the height of the first row).  Except for the tallest card of the row, selecting any other card and attempting to change the height through drag-and-drop will not show any changes.  You will need to look at the **Height** property for each card to discover the one that is making the row tall.
