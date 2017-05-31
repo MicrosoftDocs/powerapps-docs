@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="03/10/2017"
+    ms.date="05/30/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
@@ -22,7 +22,15 @@ For information about known limitations, see [Common issues and resolutions](com
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
-## Release 2.0.630-2.0.631 ##
+## Release 2.0.640-2.0.641 ##
+1. Identify and select controls more easily by navigating a [cascading list of screens](add-configure-controls.md#find-and-select-a-screen-or-a-control).
+1. Easily [create forms with multiple columns](working-with-form-layout.md) using a new capability of the **Display form** and **Edit form** controls.
+1. Improvements to [data tables](control-data-table.md), including support for static data sources, default fields, and column resizing for app users.
+1. [Format dates more easily](control-date-picker.md), and [convert between local time and UTC](function-dateadd-datediff.md).
+1. [Simultaneous edits](edit-app.md) that corrupt apps are prevented.
+1. Build skills in an [individual environment](dev-community-plan.md) (always free).
+
+## Release 2.0.630-2.0.632 ##
 1. Navigate the toolbar more easily, and open help from tooltips.
 1. Learn from [sample apps](open-and-run-a-sample-app.md) that show your data, not fake data.
 1. Open and edit sample apps in [PowerApps Studio for web](create-app-browser.md).
