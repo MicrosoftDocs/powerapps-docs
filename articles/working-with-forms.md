@@ -151,6 +151,8 @@ To get the most from this topic, start with a data source with which you can exp
 
 - Create an app from blank, for phones, and [connect it to your data source](add-data-connection.md).
 
+	**Note:** If you use a SharePoint list or an Excel table that contains column names with spaces as your data source, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+
 	**Note:** Tablet apps are very similar, but you may want a different [screen layout](#screen-design) to make the most of the extra screen space.
 
 	The examples in the rest of the topic are based on a data source named **Ice Cream**.

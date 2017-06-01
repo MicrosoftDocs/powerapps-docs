@@ -64,6 +64,8 @@ Moreover, PowerApps doesn't support columns that support multiple values or sele
 
 	![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
+Columns that contain spaces can by read by PowerApps, but the spaces are replaced with the hexidecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula. 
+
 ## Prerequisites ##
 Open PowerApps by taking *either* of these steps:
 

@@ -45,6 +45,8 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     ![](./media/generate-app-from-sharepoint-list-interface/powerapp-studio-for-web.png)  
 
+    **Note:** If your SharePoint list contains column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**.
+
 3. Click or tap the browser tab for your SharePoint list, and then click or tap **Open**.
 
 	**Note**: You might need to refresh the browser window (for example, by pressing F5) before the app will open.

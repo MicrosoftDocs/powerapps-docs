@@ -116,6 +116,8 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	**SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer_x0020_1"), "Volunteer_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
+	**Note:** For Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. In this example, the column **"Volunteer 1"**  displays as **"Volunteer_x0020_1"** when used in a formula.
+
 	**Note**: If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md),
 
 	This gallery shows the data from the **Schedule** table.
