@@ -49,13 +49,13 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
     This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**.
 
-1. In the right-hand pane, click or tap the eye icon for each field to show it.
+1. In the right-hand pane, click or tap the checkbox for each field to show it.
 
-	![Show fields on form](./media/add-form/show-fields.png)
+	![Show fields on form](./media/add-form/checkbox.png)
 
 1. In the right-hand pane, drag the **Name** entry to the top of the list.
 
-	![Move a card](./media/add-form/move-card.png)
+	![Move a card](./media/add-form/drag-field.png)
 
 	The **Edit form** control reflects your change.
 
@@ -64,7 +64,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 ## Set the card type for a field ##
 1. With the form selected, click or tap the card selector for **Price** in the right-hand pane.
 
-	![Select card selector](./media/add-form/card-selector.png)
+	![Select card selector](./media/add-form/price-card.png)
 
 1. Scroll down, and then click or tap the **View text** option to make the field read-only.
 
