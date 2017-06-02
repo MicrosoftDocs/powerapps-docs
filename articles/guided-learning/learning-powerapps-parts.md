@@ -40,7 +40,7 @@ If you build apps, this is where you spend most of your time. You learn from the
 ## PowerApps Studio
 **PowerApps Studio** is available as a web application that you can use in any modern browser, and as a Windows application. PowerApps Studio has three panes and a ribbon that make app creation feel **similar to building a slide deck in PowerPoint**:
 
-1. **Left navigation bar**, which shows thumbnails of all the screens in your app
+1. **Left navigation bar**, which has two views to select from: One view shows thumbnails of all the screens in your app, and the other is a hierarchical view of all the controls on each screen 
 2. **Middle pane**, which contains the app screen you are working on
 3. **Right-hand pane**, where you set options like layout and data sources
 4. **Property** drop-down list, where you select the properties that formulas apply to

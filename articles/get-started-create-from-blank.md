@@ -70,6 +70,10 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	You can always take the tour later by clicking or tapping the question-mark icon near the upper-left corner of the screen and then clicking or tapping **Take the intro tour**.
 
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+
+	![Toggle the views](./media/get-started-create-from-blank/toggle-view.png)
+
 1. Near the lower-right corner, click or tap **Data Sources**.
 
 	![Open Data Sources tab](./media/get-started-create-from-blank/data-sources-tab.png)

@@ -46,7 +46,11 @@ Success! Your new three screen app opens in PowerApps Studio. All apps generated
 - The **details** screen: where you view more detail about an item, and can choose to delete or edit the item.
 - The **edit/create** screen: where you edit an existing item or create a new one.
 
-Click or tap on each screen in the left navigation bar.
+In the left navigation bar, click or tap an icon in the upper-right corner to switch to the  thumbnail view. 
+
+![Toggle the views](./media/learning-create-first-app-powerapps/toggle-view.png)
+
+Click or tap on each thumbnail screen to view the controls on that screen.
 
 ![The generated app](./media/learning-create-first-app-powerapps/generate-finished-app.png)
 

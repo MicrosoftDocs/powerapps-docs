@@ -44,6 +44,10 @@ By default, every app that Microsoft PowerApps generates has three screens:
 
 	At this point, you may be prompted to take an introductory tour. You can also take the tour later by clicking or tapping the question mark near the upper-right corner, and then clicking or tapping **Take the intro tour**.
 
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+
+	![Toggle the views](./media/data-platform-create-app/toggle-view.png)
+
 ## Customize the browse screen
 1. In the right pane, click or tap the layout that shows just a heading.
 

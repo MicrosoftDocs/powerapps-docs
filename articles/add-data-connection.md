@@ -56,7 +56,9 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 
 	![Open data sources tab](./media/add-data-connection/data-sources-tab.png)
 
-	**Note**: If you're updating an existing app and the right-hand pane doesn't show the **Data sources** tab, select any screen by clicking or tapping it in the left navigation bar.
+	**Note**: If you're updating an existing app and the right-hand pane doesn't show the **Data sources** tab, click or tap an icon in the upper-right corner of the left navigation bar to switch to the thumbnail view, and then click or tap any screen.
+
+	![Toggle the views](./media/add-data-connection/toggle-view.png)
 
 4. In the **Data sources** tab, click or tap **Add data source**.
 

@@ -102,7 +102,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 1. In the right-hand pane, click or tap the **Data sources** tab, and then click or tap **Add data source**.
 
-	If the right-hand pane doesn't show a **Data sources** tab, click or tap any screen in the left navigation bar.
+	**Note:** If the right-hand pane doesn't show a **Data sources** tab, click or tap an icon in the upper-right corner of the left navigation bar to switch to the thumbnail view, and then click or tap any screen.
 
 	![Add data source](./media/connection-azure-sqldatabase/add-data-source.png)
 

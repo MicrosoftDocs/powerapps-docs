@@ -61,6 +61,9 @@ Create an app automatically based on a template for specific scenario, and then 
 	![Open a PowerApps template](./media/get-started-test-drive/open-template.png)
 
 	The sample data is copied to your cloud-storage account, the app is created, and its home page appears.
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+
+	![Toggle the views](./media/get-started-test-drive/toggle-view.png)
 
 ## Run the app ##
 An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, follow the steps in this section to explore how the app works in **Preview** mode.

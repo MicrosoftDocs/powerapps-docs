@@ -89,7 +89,7 @@ Open PowerApps by taking *either* of these steps:
 
 1. In the right-hand pane, click or tap the **Data sources** tab, and then click or tap **Add data source**.
 
-	If the right-hand pane doesn't show a **Data sources** tab, click or tap any screen in the left navigation bar.
+	**Note:** If the right-hand pane doesn't show a **Data sources** tab, click or tap an icon in the upper-right corner of the left navigation bar to switch to the thumbnail view, and then click or tap any screen.
 
 	![Add data source](./media/connection-sharepoint-online/add-data-source.png)
 
