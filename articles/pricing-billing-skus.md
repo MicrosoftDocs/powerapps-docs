@@ -53,7 +53,7 @@ PowerApps is included with Office 365 Enterprise K1, with which users can run ap
 | Connect to Azure SQL Server, Dropbox, Twitter, and many other cloud-based services | Yes |
 | Connect to Salesforce, DB2, and many other data sources through premium connectors | No |
 | Access on‐premises data by using a gateway | No |
-| Create custom connectors to manage data in your own systems | Yes (1) |
+| Create custom connectors to manage data in your own systems | No |
 | **Common Data Service** |   |
 | Create and run apps on the Common Data Service | No |
 | Model your data in the Common Data Service | No |
