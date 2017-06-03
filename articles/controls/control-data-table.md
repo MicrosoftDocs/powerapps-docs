@@ -113,8 +113,6 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 
 + [**Search**](function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
 
-+ [**Lookup**](function-filter-lookup.md)(*DataSource*, *Formula*)
-
 ## Examples
 ### Basic usage
 1. Create a blank tablet app.
