@@ -64,7 +64,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 ## Set the card type for a field ##
 1. With the form selected, click or tap the card selector for **Price** in the right-hand pane.
 
-	![Select card selector](./media/add-form/price-card.png)
+	![Select card selector](./media/add-form/price-card2.png)
 
 1. Scroll down, and then click or tap the **View text** option to make the field read-only.
 
