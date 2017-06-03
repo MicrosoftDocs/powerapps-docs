@@ -101,7 +101,7 @@ The **[DataField](controls/control-card.md)** property of a **[Card](controls/co
 
 In a generated app, **[Card](controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls in the right-hand pane:
 
-![Detail screen with options pane open](media/working-with-forms/afd-detail-card-options.png)
+![Detail screen with options pane open](media/working-with-forms/detail-screen.png)
 
 In the right-hand pane, you can select which fields to display and in which kind of control each field displays.
 
@@ -139,7 +139,7 @@ In the previous image, the selected card shows the **AssetID** field and  contai
 
 In the right-hand pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
 
-![Edit screen with options pane open](media/working-with-forms/afd-edit-card-options.png)
+![Edit screen with options pane open](media/working-with-forms/detail-screen.png)
 
 ## Build an app from scratch ##
 By understanding how PowerApps generates an app, you can build one yourself that uses the same building blocks and formulas discussed earlier in this topic.
@@ -195,7 +195,7 @@ To add a **[Display form](controls/control-form-detail.md)** control:
 
 In the right-hand pane, you can select the fields to display on your screen and which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field that the user will interact with. Your screen should resemble this example:
 
-![Display form for Ice Cream data source](./media/working-with-forms/viewform-icecream.png)
+![Display form for Ice Cream data source](./media/working-with-forms/ice-cream.png)
 
 Finally, we need to connect the **[Display form](controls/control-form-detail.md)** control to the **[Gallery](controls/control-gallery.md)** control so that we can look at details for a specific record.  As soon as we complete setting the **[Item](controls/control-form-detail.md)** property, the first record from the gallery will appear in our form.
 
@@ -203,7 +203,7 @@ Finally, we need to connect the **[Display form](controls/control-form-detail.md
 
 	The details for the selected item appear in the form.
 
-	![Display form for Ice Cream data source, connected to the gallery control](./media/working-with-forms/viewform-icecream-selected.png)
+	![Display form for Ice Cream data source, connected to the gallery control](./media/working-with-forms/view-form-select.png)
 
 Great!  We now turn to navigation: how a user opens the details screen from the gallery screen and opens the gallery screen from the details screen.
 
@@ -247,7 +247,7 @@ To add an **[Edit form](controls/control-form-detail.md)** control:
 
 You can now select the fields to display on your screen. You can also select which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field your user will interact with.  Your screen should resemble this example:
 
-![Display form for Ice Cream data source](./media/working-with-forms/edit-icecream.png)
+![Display form for Ice Cream data source](./media/working-with-forms/edit-screen-ice-cream.png)
 
 These two properties are the same as the properties on the **[Display form](controls/control-form-detail.md)** control.  And with these alone, we can display the details of a record.  
 

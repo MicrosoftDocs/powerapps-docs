@@ -191,9 +191,9 @@ You can review this tutorial for general concepts only, or you can follow it exa
 1. Set the **Item** property of **Form1** to this expression:
 <br>**BrowseGallery1.Selected**
 
-1. In the right-hand pane, click or tap the eye icon for each field to show it.
+1. In the right-hand pane, click or tap the checkbox for each field to show it.
 
-	![Show fields on form](./media/get-started-create-from-blank/show-fields.png)
+	![Show fields on form](./media/get-started-create-from-blank/schedule-checkbox.png)
 
 1. Near the bottom of the form, click or tap **Add a custom card**.
 
