@@ -36,9 +36,9 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 	![Option to create a flow without using a template](./media/use-logic-flows/create-from-blank.png)
 
-1. In the box that says **Search all services and triggers**, type or paste **PowerApps** and then, under **Triggers**, select **PowerApps**.
+1. **PowerApps** is added as the default trigger.
 
-	![Specify the trigger that initiates the flow](./media/use-logic-flows/set-trigger.png)
+	![PowerApps as the trigger that initiates the flow](./media/use-logic-flows/set-trigger.png)
 
 1. Select **New step**, and then select **Add an action**.
 

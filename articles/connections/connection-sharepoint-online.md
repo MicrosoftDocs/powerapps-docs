@@ -15,8 +15,8 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="04/18/2017"
-ms.author="ankitsar"/>
+ms.date="06/05/2017"
+ms.author="karthikb"/>
 
 # Connect from Microsoft PowerApps to SharePoint #
 
@@ -121,9 +121,13 @@ Open PowerApps by taking *either* of these steps:
 
 	![Select a SharePoint site](./media/connection-sharepoint-online/select-sp-site.png)
 
-1. Under **Choose a list**, select the check box for one or more tables that you want to use, and then click or tap **Connect**:  
+1. Under **Choose a list**, select the check box for one or more lists that you want to use, and then click or tap **Connect**:  
 
 	![Select the tables in SharePoint](./media/connection-sharepoint-online/select-sp-tables.png)
+
+	You can also type a custom list name if it is not shown by default. Custom list name is the last option in **Choose a list**.
+
+	![Custom list in SharePoint](./media/connection-sharepoint-online/custom-list.png)
 
 	The data sources are added to your app.
 
