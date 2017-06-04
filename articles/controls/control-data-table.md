@@ -113,8 +113,6 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 
 + [**Search**](function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
 
-+ [**Lookup**](function-filter-lookup.md)(*DataSource*, *Formula*)
-
 ## Examples
 ### Basic usage
 1. Create a blank tablet app.
@@ -148,7 +146,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 
 8. Reorder the fields by dragging them up or down in the right pane.
 
-	![Reorder the fields as desired](./media/control-data-table/field-reorder-data-table.png)
+	![Reorder the fields as desired](./media/control-data-table/drag-sale-order.png)
 
 	The **SalesOrderTable** control shows the fields in the order that you specified.
 

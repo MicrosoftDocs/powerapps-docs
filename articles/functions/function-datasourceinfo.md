@@ -68,6 +68,8 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 - *Information* – Required. The type of information that you want to retrieve.
 - *ColumnName* – Optional. For column-level information, the column name as a string. Column **Phone** would be passed as **"Phone"**, including the double quotes. For information at the data-source level, the *ColumnName* argument can't be used.
 
+	**Note:** For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
+
 ## Examples ##
 
 The examples in this section use this data source, named **IceCream**:
