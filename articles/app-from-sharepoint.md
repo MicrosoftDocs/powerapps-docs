@@ -1,22 +1,22 @@
 <properties
-   pageTitle="Generate an app to manage data in a SharePoint list | Microsoft PowerApps"
-   description="Generate a three-screen app to manage data in a SharePoint list, whether the site is on-premises or in the cloud."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="aftowen"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="Generate an app to manage data in a SharePoint list | Microsoft PowerApps"
+	description="Generate a three-screen app to manage data in a SharePoint list, whether the site is on-premises or in the cloud."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="aftowen"
+	manager="anneta"
+	editor=""
+	tags=""/>
 
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="06/05/2017"
-   ms.author="karthikb"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="06/05/2017"
+	ms.author="karthikb"/>
 
 # Generate an app to manage data in a SharePoint list #
 
@@ -66,9 +66,9 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 	![](./media/app-from-sharepoint/choose-list.png)
 
-  You can also type a custom list name if it is not shown by default. Custom list name is the last option in **Choose a list**.
+	Not all types of lists appear by default. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the list name in the box that contains **Enter custom list name**.
 
-  ![](./media/app-from-sharepoint/custom-list.png)
+	![](./media/app-from-sharepoint/custom-list.png)
 
 3. Click or tap **Connect** to generate the app.
 
