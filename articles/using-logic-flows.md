@@ -14,17 +14,15 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/23/2016"
-   ms.author="stepsic"/>
+   ms.date="06/05/2017"
+   ms.author="karthikb"/>
 
 # Start a flow in an app #
 You can use Microsoft Flow to create logic that performs one or more tasks when an event occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close PowerApps.
 
 **Prerequisites**
 
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-
-	**Note**: You can't add or edit a flow in PowerApps Studio for web.
+- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up. You can add or edit a flow in PowerApps Studio on Windows or on the web.
 
 - Learn how to [configure a control](add-configure-controls.md).
 
@@ -35,7 +33,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 	![Option to create a flow without using a template](./media/use-logic-flows/create-from-blank.png)
 
-1. In the box that says **Search for more triggers**, type or paste **PowerApps**, and then select the **PowerApps** option.
+1. In the box that says **Search all services and triggers**, type or paste **PowerApps**, and then select the **PowerApps** option under Triggers.
 
 	![Specify the trigger that initiates the flow](./media/use-logic-flows/set-trigger.png)
 
@@ -43,22 +41,22 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 	![Option to add an action](./media/use-logic-flows/add-action.png)
 
-1. In the box that says **Search for more actions**, specify an action for your flow.
+1. In the box that says **Search all services and actions**, specify an action for your flow.
 
 	For example:
-	1. Type **SharePoint** in the box, and then select **SharePoint - Create item** in the list under that box.
+	1. Type **SharePoint** in the box, and then select **SharePoint - Create item** in the list under Actions.
 
 		![Option to create a SharePoint item](./media/use-logic-flows/create-sharepoint-item.png)
 
 	1. If prompted, provide credentials to connect to SharePoint.
 
-	1. In the **SITE URL** box, type or paste the URL of a SharePoint Online site that contains a list.
+	1. In the **Site Address** box, type or paste the URL of a SharePoint Online site that contains a list.
 
-		**Note:** Specify the URL for the site itself, not including the list.
+		**Note:** Specify the URL for the site not including the list.
 
-	1. In the **LIST NAME** box, select the list that you want to use.
+	1. In the **List Name** box, select the list that you want to use.
 
-	1. Click or tap the **TITLE** box, and then select **Add dynamic content**.
+	1. Click or tap the **Title** box, and then select **Add dynamic content**.
 
 		![Add Ask in PowerApps parameter to Title field](./media/use-logic-flows/ask-in-powerapps.png)
 
@@ -71,9 +69,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 	![Name and save your flow](./media/use-logic-flows/name-flow.png)
 
 ## Add a flow to an app ##
-1. In PowerApps Studio for Windows, select **New** in the **File** menu (near the left edge of the screen).
-
-	**Note**: You can't add or edit a flow in PowerApps Studio for web.
+1. In PowerApps, select **New** in the **File** menu.
 
 1. On the **Blank app** tile, select **Phone layout**.
 
