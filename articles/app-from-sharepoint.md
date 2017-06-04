@@ -68,6 +68,8 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
 	![Connect button](./media/app-from-sharepoint/connect-button.png)
 
+    **Note:** If your SharePoint list has column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**. 
+
 4. If you're prompted to take the intro tour, click or tap **Next** to get familiar with key areas of the PowerApps interface (or click or tap **Skip**).
 
 	![Opening screen of the intro tour](./media/app-from-sharepoint/quick-tour.png)

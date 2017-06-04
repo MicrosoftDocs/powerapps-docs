@@ -66,6 +66,10 @@ To follow this tutorial, you need a Microsoft Office 365 account that includes a
 
 6. Under **Choose a table**, click **Contacts**, and then click **Connect**.
 
+7. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+
+	![Toggle the views](./media/connection-dynamics-crmonline/toggle-view.png)
+
 PowerApps generates a three-screen app based on contact records.
 
 * **BrowseScreen1**. This screen appears by default when users open the app. In the left navigation bar, a thumbnail for this screen appears above the other two screens.

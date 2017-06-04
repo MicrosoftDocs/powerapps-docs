@@ -50,12 +50,16 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 
 - *Table* - Required. Table to be grouped.
 - *ColumnName(s)* - Required.  The column names in *Table* by which to group records.  These columns become columns in the resulting table.
-- *GroupColumnName* - Required.  The column name for the storage of record data not in the *ColumnName(s)*.
+- *GroupColumnName* - Required.  The column name for the storage of record data not in the *ColumnName(s)*. 
+
+	**Note:** For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**. 
 
 **Ungroup**( *Table*, *GroupColumnName* )
 
 - *Table* - Required. Table to be ungrouped.
-- *GroupColumnName* - Required.  The column that contains the record data setup with the **GroupBy** function.
+- *GroupColumnName* - Required.  The column that contains the record data setup with the **GroupBy** function. 
+
+	**Note:** For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**. 
 
 ## Examples ##
 

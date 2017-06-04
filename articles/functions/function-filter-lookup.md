@@ -51,7 +51,9 @@ The **Search** function finds records in a table that contain a string in one of
 
 - *Table* - Required. Table to search.
 - *SearchString* - Required. The string to search for. If *blank* or an empty string, all records are returned.
-- *Column(s)* - Required. The names of columns within *Table* to search. Columns to search must contain text. Column names must be strings and enclosed in double quotes. However, the column names must be static and cannot be calculated with a formula. If *SearchString* is found within the data of any of these columns as a partial match, the full record will be returned.
+- *Column(s)* - Required. The names of columns within *Table* to search. Columns to search must contain text. Column names must be strings and enclosed in double quotes. However, the column names must be static and cannot be calculated with a formula. If *SearchString* is found within the data of any of these columns as a partial match, the full record will be returned. 
+
+	**Note:** For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**. 
 
 **LookUp**( *Table*, *Formula* [, *ReductionFormula* ] )
 

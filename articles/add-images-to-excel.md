@@ -47,10 +47,16 @@ Create an app automatically in which users can show, add, or delete images from 
 
 	![Select your table](./media/add-images-to-excel/select-table.png)
 
-## Add an image from a file ##
 1. If you just installed or upgraded PowerApps, take the quick tour, or click or tap **Skip**.
 
 	![First screen of quick tour](./media/add-images-to-excel/quick-tour.png)
+
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+
+	![Toggle the views](./media/add-images-to-excel/toggle-view.png)
+
+## Add an image from a file ##
+
 
 1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner), and then click or tap the plus icon in the upper-right corner.
 

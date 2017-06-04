@@ -57,6 +57,8 @@ To learn more, [Working with tables](working-with-tables.md) goes into more deta
 You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas.  In addition:
 
 - The data source has the same column names and data types as the underlying table in the connection.
+
+	**Note:** For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 - The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](functions/function-refresh.md)** function.
 - As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
 	- Records can be created with the **[Patch](functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  

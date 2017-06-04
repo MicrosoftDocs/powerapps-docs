@@ -115,7 +115,11 @@ If you add one or more **Image** controls to your app, you can show individual i
 ### Show a set of images from a data source ###
 1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
 
-1. In PowerApps, create or open an app, and then click or tap a screen in the left navigation bar.
+1. In PowerApps Studio, create or open an app, and then, in the left navigation bar, click or tap an icon in the upper-right corner to switch to the  thumbnail view. 
+
+    ![Toggle the views](./media/control-image/toggle-view.png)
+
+1. Click or tap a screen in the left navigation bar.
 
 1. In the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
 

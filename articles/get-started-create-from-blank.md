@@ -70,6 +70,10 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	You can always take the tour later by clicking or tapping the question-mark icon near the upper-left corner of the screen and then clicking or tapping **Take the intro tour**.
 
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+
+	![Toggle the views](./media/get-started-create-from-blank/toggle-view.png)
+
 1. Near the lower-right corner, click or tap **Data Sources**.
 
 	![Open Data Sources tab](./media/get-started-create-from-blank/data-sources-tab.png)
@@ -115,6 +119,8 @@ You can review this tutorial for general concepts only, or you can follow it exa
 1. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
 
 	**SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer_x0020_1"), "Volunteer_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+
+	**Note:** For Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. In this example, the column **"Volunteer 1"**  displays as **"Volunteer_x0020_1"** when used in a formula.
 
 	**Note**: If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md),
 
