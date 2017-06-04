@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/16/2016"
-   ms.author="anneta"/>
+   ms.date="06/05/2017"
+   ms.author="karthikb"/>
 
 # Generate an app to manage data in a SharePoint list #
 
@@ -30,7 +30,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
 As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
-**Note:** If any column name contains a space, PowerApps will show it as **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**. 
+**Note:** If any column name contains a space, PowerApps will show it as **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**.
 
 ## Specify a SharePoint app ##
 1. If you haven't already created a [connection to SharePoint](connect-to-sharepoint.md), create one.
@@ -65,6 +65,10 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 	You can also type or paste at least one letter in the search box to show only those list names that contain the text that you specify.
 
 	![](./media/app-from-sharepoint/choose-list.png)
+
+  You can also type a custom list name if it is not shown by default. Custom list name is the last option in **Choose a list**.
+
+  ![](./media/app-from-sharepoint/custom-list.png)
 
 3. Click or tap **Connect** to generate the app.
 
