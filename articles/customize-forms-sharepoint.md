@@ -29,10 +29,12 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
 
 1. [Create a connection](connect-to-sharepoint.md) from PowerApps to SharePoint.
+
 1. Create the SharePoint list that [Customize a layout](customize-layout-sharepoint.md) describes.
+
 1. [Generate an app automatically](app-from-sharepoint.md) based on that list.
 
-1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
 
     ![Toggle the views](./media/customize-forms-sharepoint/toggle-view.png)
 

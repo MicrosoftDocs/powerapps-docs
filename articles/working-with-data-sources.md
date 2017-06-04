@@ -32,9 +32,9 @@ Data sources can be connected to a cloud service, or they can be local to an app
 
 ### Connected data sources
 
-The commonest data sources are **tables**, which you can use to retrieve and store information. You can use **connections** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
+The most common data sources are **tables**, which you can use to retrieve and store information. You can use **connections** to data sources to read and write data in Microsoft Excel workbooks, SharePoint lists, SQL tables, and many other formats, which can be stored in cloud services like OneDrive for Business, DropBox, SQL Server, etc.
 
-There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications. This article does not discuss these other kinds of data sources.
+Data sources other than tables include email, calendars, Twitter, and notifications, but this article doesn't discuss these other kinds of data sources.
 
 ### Local data sources
 
@@ -54,11 +54,12 @@ To learn more, [Working with tables](working-with-tables.md) goes into more deta
 
 ## Working with tables
 
-You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas.  In addition:
+You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas. In addition:
 
 - The data source has the same column names and data types as the underlying table in the connection.
 
 	**Note:** For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+	
 - The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](functions/function-refresh.md)** function.
 - As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
 	- Records can be created with the **[Patch](functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  

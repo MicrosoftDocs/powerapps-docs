@@ -31,19 +31,19 @@ To follow this tutorial, you need a Microsoft Office 365 account that includes a
 
 1. In the left navigation pane, click **Connections**.
 
-	![Connection option on File menu](.\media\connection-dynamics-crmonline\file-connections.png)
+	![Connection option on File menu](./media/connection-dynamics-crmonline/file-connections.png)
 
 2. Near the upper-right corner, click **New connection**.
 
-	![New connection](.\media\connection-dynamics-crmonline\new-connection.png)
+	![New connection](./media/connection-dynamics-crmonline/new-connection.png)
 
 3. In the list of connections, click **Dynamics 365**.
 
-	![Connection option on File menu](.\media\connection-dynamics-crmonline\connection-d365.png)
+	![Connection option on File menu](./media/connection-dynamics-crmonline/connection-d365.png)
 
 1. In the dialog box, click **Create**.
 
-	![Create connection](.\media\connection-dynamics-crmonline\create-connection.png)
+	![Create connection](./media/connection-dynamics-crmonline/create-connection.png)
 
 4. In the **Sign in to your account** dialog box, provide your credentials for the Dynamics 365 (online) tenant.
 
@@ -52,21 +52,17 @@ To follow this tutorial, you need a Microsoft Office 365 account that includes a
 ## Generate an app automatically ##
 1. [Sign in to PowerApps](https://web.powerapps.com/), and then click **New app** near the lower-left corner.
 
-	![New app](.\media\connection-dynamics-crmonline\new-app.png)
-
-3. In the dialog box that appears, click **PowerApps Studio for web**.
-
-	![Open PowerApps Studio for web](.\media\connection-dynamics-crmonline\studio-for-web.png)
+	![New app](./media/connection-dynamics-crmonline/new-app.png)
 
 4. Under **Start with your data**, click **Phone layout** on the **Dynamics 365** tile.
 
-	![PowerApps select Dynamics 365 connector](.\media\connection-dynamics-crmonline\phonelayout.png)
+	![PowerApps select Dynamics 365 connector](./media/connection-dynamics-crmonline/phonelayout.png)
 
 5. Under **Connections**, select the connection that you want, and then choose a dataset, which corresponds to the instance of Dynamics 365 that you'll manage in the app.
 
 6. Under **Choose a table**, click **Contacts**, and then click **Connect**.
 
-7. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+7. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
 
 	![Toggle the views](./media/connection-dynamics-crmonline/toggle-view.png)
 
@@ -85,11 +81,11 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 
 	You might need to scroll down to show this option.
 
-	![Select layout](.\media\connection-dynamics-crmonline\select-layout.png)
+	![Select layout](./media/connection-dynamics-crmonline/select-layout.png)
 
 1. In **BrowseScreen1**, select the gallery by clicking any record in it except the first one.
 
-	![Select layout](.\media\connection-dynamics-crmonline\select-gallery.png)
+	![Select layout](./media/connection-dynamics-crmonline/select-gallery.png)
 
 1. Copy this formula and then, with the gallery still selected, paste the formula in the formula bar (to the right of the **fx** button):
 
@@ -97,7 +93,7 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 
 1. In the right-hand pane, set the top drop-down list to **firstname** and the middle drop-down list to **lastname**.
 
-	![Select Body1](.\media\connection-dynamics-crmonline\firstname-lastname.png)
+	![Select Body1](./media/connection-dynamics-crmonline/firstname-lastname.png)
 
 7. (optional) On the **File** menu, click **Save as**, type a name for the app, and then click **Save**.
 
@@ -108,15 +104,15 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 
 2. On **DetailScreen1**, click anywhere below the title bar to show customization options in the right-hand pane.
 
-	![Show form customization](.\media\connection-dynamics-crmonline\show-customization.png)
+	![Show form customization](./media/connection-dynamics-crmonline/show-customization.png)
 
 3. In the right-hand pane, click the eye icon for each field to hide it.
 
-	![Hide fields](.\media\connection-dynamics-crmonline\hide-field.png)
+	![Hide fields](./media/connection-dynamics-crmonline/hide-field.png)
 
 1. Click anywhere under the title bar to select **Form1**.
 
-	![Select Form1](.\media\connection-dynamics-crmonline\select-form1.png)
+	![Select Form1](./media/connection-dynamics-crmonline/select-form1.png)
 
 1. In the right-hand pane, click the eye icon for each of these fields, so that the screen will show an image (if the table contains one) and four other fields for each contact:
 
@@ -128,7 +124,7 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 
 	The right-hand pane should resemble this graphic:
 
-	![Select Form1](.\media\connection-dynamics-crmonline\show-fields.png)
+	![Select Form1](./media/connection-dynamics-crmonline/show-fields.png)
 
 1. Select **EditScreen1** by clicking the bottom thumbnail in the left navigation bar.
 

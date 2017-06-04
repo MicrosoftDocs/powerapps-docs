@@ -37,7 +37,7 @@
 
 1. **Column names with spaces**
 
-	If you are using a Sharepoint list or an Excel table as a data source and the column names contain spaces, PowerApps will replace the spaces with **"\_x0020\_"**.  For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+	If you're using a SharePoint list or an Excel table in which a column name contains a space, PowerApps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
 ## Older ##
 1. **Changing a flow in a shared app**
