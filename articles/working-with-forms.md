@@ -145,13 +145,15 @@ In the right-hand pane, you can show or hide each card, rearrange them, or confi
 By understanding how PowerApps generates an app, you can build one yourself that uses the same building blocks and formulas discussed earlier in this topic.
 
 ## Identify test data ##
-To get the most from this topic, start with a data source with which you can experiment. It should contain test data that you can read and update without concern. To follow the rest of this topic exactly, create a SharePoint list named "Ice Cream" that contains this data:
+To get the most from this topic, start with a data source with which you can experiment. It should contain test data that you can read and update without concern.
+
+**Note:** If you use a SharePoint list or an Excel table that contains column names with spaces as your data source, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+
+To follow the rest of this topic exactly, create a SharePoint list named "Ice Cream" that contains this data:
 
 ![Ice cream SharePoint list](./media/working-with-forms/sharepointlist-icecream.png)
 
 - Create an app from blank, for phones, and [connect it to your data source](add-data-connection.md).
-
-	**Note:** If you use a SharePoint list or an Excel table that contains column names with spaces as your data source, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
 	**Note:** Tablet apps are very similar, but you may want a different [screen layout](#screen-design) to make the most of the extra screen space.
 

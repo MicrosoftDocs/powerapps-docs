@@ -30,6 +30,8 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
 As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connection-sharepoint-online.md#known-issues).
 
+**Note:** If any column name contains a space, PowerApps will show it as **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**. 
+
 ## Specify a SharePoint app ##
 1. If you haven't already created a [connection to SharePoint](connect-to-sharepoint.md), create one.
 
@@ -67,8 +69,6 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 3. Click or tap **Connect** to generate the app.
 
 	![Connect button](./media/app-from-sharepoint/connect-button.png)
-
-    **Note:** If your SharePoint list has column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**. 
 
 4. If you're prompted to take the intro tour, click or tap **Next** to get familiar with key areas of the PowerApps interface (or click or tap **Skip**).
 

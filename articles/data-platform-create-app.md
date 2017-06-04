@@ -44,7 +44,7 @@ By default, every app that Microsoft PowerApps generates has three screens:
 
 	At this point, you may be prompted to take an introductory tour. You can also take the tour later by clicking or tapping the question mark near the upper-right corner, and then clicking or tapping **Take the intro tour**.
 
-1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
 
 	![Toggle the views](./media/data-platform-create-app/toggle-view.png)
 
@@ -78,10 +78,6 @@ By default, every app that Microsoft PowerApps generates has three screens:
 	![Default value of the Items property](./media/data-platform-create-app/default-items.png)
 
 1. Press Delete to delete the default formula, and then paste the formula that you copied. The names in the gallery are sorted alphabetically.
-
-1. Optional: If the users of this app won't have touchscreens or mouse wheels, click or tap the **Gallery** tab, and then click or tap **Show Scrollbar**.
-
-	**Note:** If the **Gallery** tab doesn't appear, make sure that the gallery is still selected.
 
 ## Test the browse screen
 1. Open Preview mode by pressing F5, or by clicking or tapping the **Play** button near the upper-right corner.
