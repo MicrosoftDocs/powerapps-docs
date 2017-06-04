@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Create or edit apps in a browser | Microsoft PowerApps"
-	description="Create or edit apps in a browser."
+	description="Create or edit apps in a browser by using PowerApps Studio for web."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -18,8 +18,8 @@
    ms.date="06/05/2017"
    ms.author="karthikb"/>
 
-# Create or edit apps in a browser #
-Learn how to create and edit apps in a browser with PowerApps Studio for web.
+# Create or edit apps in PowerApps Studio for web #
+Create and edit apps in PowerApps Studio for web, which opens in a browser window on Windows or other platforms.
 
 **Note**: PowerApps Studio for web is in preview and has certain limitations. You can also create and edit apps by [installing PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10.
 

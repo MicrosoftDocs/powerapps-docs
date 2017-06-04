@@ -22,18 +22,21 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 **Prerequisites**
 
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up. You can add or edit a flow in PowerApps Studio on Windows or on the web.
+- [Sign up](signup-for-powerapps.md) for PowerApps, and then follow either of these steps:
+
+	- [Install](http://aka.ms/powerappsinstall) PowerApps Studio for Windows, open it, and then sign in by providing the same credentials that you used to sign up.
+	- In [powerapps.com](http://web.powerapps.com), open PowerApps Studio for web by clicking or tapping **New app** in the lower-left corner.
 
 - Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow ##
-1. Sign in to [powerapps.com](http://web.powerapps.com), and then select **Flows** in the left-hand navigation bar.
+1. Sign in to [powerapps.com](http://web.powerapps.com), and then select **Flows** in the left navigation bar.
 
 1. On the **My Flows** page, select **Create from blank**.
 
 	![Option to create a flow without using a template](./media/use-logic-flows/create-from-blank.png)
 
-1. In the box that says **Search all services and triggers**, type or paste **PowerApps**, and then select the **PowerApps** option under Triggers.
+1. In the box that says **Search all services and triggers**, type or paste **PowerApps** and then, under **Triggers**, select **PowerApps**.
 
 	![Specify the trigger that initiates the flow](./media/use-logic-flows/set-trigger.png)
 
