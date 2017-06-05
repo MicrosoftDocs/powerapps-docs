@@ -34,13 +34,19 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 ## Show data in a gallery
 
 1. Create a collection named **Inventory** using the sample data. Steps include:  
-	1. On the **Insert** tab, select **Controls**, and then select **Import**:  
+	1. On the **Insert** tab, select **Controls**, and then select **Import**:
+
 	![][1]  
-	2. Set the **[OnSelect](controls/properties-core.md)** property of the import control to the following expression:  
-	```Collect(Inventory, Import1!Data)```  
+
+	1. Set the **[OnSelect](controls/properties-core.md)** property of the import control to the following formula:  
+	**Collect(Inventory, Import1!Data)**
+
 	![][12]  
-	3. Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.  	
-	4. In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:  
+
+	1. Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.
+
+	1. In the **File** menu, select **Collections**. The Inventory collection is listed with the data you imported:
+
 	![][3]  
 
 	You've just created the Inventory collection, which contains information about five products, including a design image, the name of the product, and the number of units in stock.
@@ -48,21 +54,34 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 	> [AZURE.NOTE] The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
 
 2. Select the back arrow to return to the designer.
-3. On the **Insert** tab, select **Gallery**. Under **Image Galleries**, select the horizontal **With Text** image gallery:  
-![][4]  
-4. Set the **[Items](controls/properties-core.md)** property of the gallery to **Inventory**:  
-![][5]  
-5. Rename the gallery to **ProductGallery**, and move the gallery so it doesn't block the other controls. Resize the gallery so it shows three products:  
-![][6]  
+
+3. On the **Insert** tab, click or tap **Gallery**, and then click or tap the **Horizontal** gallery.
+
+	![][4]
+
+4. In the right-hand pane, click or tap the option in which the title and the subtitle overlay the graphic:
+
+	![][15]
+
+4. Set the **[Items](controls/properties-core.md)** property of the gallery to **Inventory**:
+
+	![][5]
+
+5. Rename the gallery to **ProductGallery**, and move the gallery so it doesn't block the other controls. Resize the gallery so it shows three products:
+
+	![][6]
+
 6. In the first item of the gallery, select the bottom label:  
-![][7]  
+
+	![][7]  
 
 	> [AZURE.NOTE] When you change the first item in any gallery, you automatically change all other items in the gallery.  
 
 7. Set the **[Text](controls/properties-core.md)** property of the label to the following expression:  
-```ThisItem!UnitsInStock``` <br/>
+	**ThisItem!UnitsInStock** <br/>
 
-	When you do this, the label shows the units in stock for each product:  
+	When you do this, the label shows the units in stock for each product:
+
 ![][8]  
 
 > [AZURE.NOTE] By default, the **[Text](controls/properties-core.md)** property of the top label is set to ```ThisItem!ProductName```. You can change it to any other item in your collection. For example, if your collection has *ProductDescription* or *Price* fields, you can set the label to ```ThisItem!ProductDescription``` or ```ThisItem!Price```.
@@ -78,15 +97,15 @@ Using these steps, you imported data that includes .jpg images into a collection
 4. Select **Border**, select **Border Style**, and then select the solid line.
 5. Select **Border** again, and set the thickness to 3. Resize the rectangle so that it surrounds the gallery item. The items in your gallery now have a blue border and should look similar to the following:  
 ![][10]  
-6. On the **Shape** tab, select **Visible**, and then enter the following expression in the Function Bar:  
-```If(ThisItem!IsSelected, true)```
+6. On the **Shape** tab, select **Visible**, and then enter the following formula in the Formula Bar:  
+
+	**If(ThisItem!IsSelected, true)**
 
 	A blue rectangle surrounds the current selection in a gallery. Select a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![][2] to see and test what you're creating.
 
 > [AZURE.TIP] Select the rectangle, select **Reorder** on the **Home** tab, and then select **Send to Back**. Using this feature, you can select a gallery item without the border blocking anything.
 
 Using these steps, you added a border around the current selection in the gallery.
-
 
 ## Sort and filter items in the gallery
 In these steps, we are going to sort the gallery items in ascending and descending order. Also, we'll add a slider control to 'filter' gallery items by the units in stock that you choose.
@@ -95,13 +114,15 @@ In these steps, we are going to sort the gallery items in ascending and descendi
 
 1. Select any item in the gallery *except* the first one.
 2. The **[Items](controls/properties-core.md)** property is currently set to Inventory (the name of your collection). Change it to the following:  
-```Sort(Inventory, ProductName)```
+
+	**Sort(Inventory, ProductName)**
 
 	When you do this, the items in the gallery are sorted by the product name in ascending order:
 	![][11]  
 
-	Try descending order. Set the **[Items](controls/properties-core.md)** property of the gallery to the following expression:  
-```Sort(Inventory, ProductName, Descending)```  
+	Try descending order. Set the **[Items](controls/properties-core.md)** property of the gallery to the following formula:  
+
+	Sort(Inventory, ProductName, Descending)  
 
 #### Add a slider control and filter items in the gallery
 
@@ -125,7 +146,7 @@ Now, let's add to our filter:
 2. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control to **NameFilter**. Move the text control below the slider.
 3. Set the **[Items](controls/properties-core.md)** property of the gallery to the following expression:  
 ```Filter(Inventory, UnitsInStock<=StockFilter!Value && NameFilter!Text in ProductName)```
-4. In **Preview**, set the slider to *30*, and type the letter *g* in the input text box. The gallery shows the only product with less than 30 units in stock *and* has a name with the letter "g":  
+4. In **Preview**, set the slider to *30*, and type the letter *g* in the text-input control. The gallery shows the only product with less than 30 units in stock *and* has a name with the letter "g":  
 ![][14]  
 
 ## Tips and Tricks
@@ -144,13 +165,10 @@ In this topic, you:
 - Sorted the items by product name in ascending and descending order.
 - Added a slider and an input text control to filter the products by units in stock and product name.
 
-
-
-
 [1]: ./media/show-images-text-gallery-sort-filter/import.png
 [2]: ./media/show-images-text-gallery-sort-filter/preview.png
 [3]: ./media/show-images-text-gallery-sort-filter/inventorycollection.png
-[4]: ./media/show-images-text-gallery-sort-filter/withtext.png
+[4]: ./media/show-images-text-gallery-sort-filter/insert-vertical.png
 [5]: ./media/show-images-text-gallery-sort-filter/itemsinventory.png
 [6]: ./media/show-images-text-gallery-sort-filter/threeimages.png
 [7]: ./media/show-images-text-gallery-sort-filter/firstitem.png
@@ -161,3 +179,4 @@ In this topic, you:
 [12]: ./media/show-images-text-gallery-sort-filter/onselect.png
 [13]: ./media/show-images-text-gallery-sort-filter/slider.png
 [14]: ./media/show-images-text-gallery-sort-filter/inputandslider.png
+[15]: ./media/show-images-text-gallery-sort-filter/select-overlay.png

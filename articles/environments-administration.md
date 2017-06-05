@@ -137,7 +137,7 @@ In an environment, all the users in the Azure AD tenant are users of that enviro
 
 	o	Set data loss prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
 
-*	The **Environment Maker** role can create resources within an environment including apps, connections, custom APIs, gateways, and flows using Microsoft Flow. Environment Makers can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users, security groups, or all users in the organization. For more information, see [Share an app in PowerApps](share-app.md).
+*	The **Environment Maker** role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow. Environment Makers can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users, security groups, or all users in the organization. For more information, see [Share an app in PowerApps](share-app.md).
 
 To assign a user or a security group to an environment role, an Environment Admin can take these steps in the [PowerApps admin center][1]:
 
@@ -177,7 +177,7 @@ An organization's data must be protected so that it isn't shared with audiences 
 
 ### How many environments can I create?
 
-Each user can create up to five databases.
+Each user can create up to five environments.
 
 ### How many databases can I provision?
 

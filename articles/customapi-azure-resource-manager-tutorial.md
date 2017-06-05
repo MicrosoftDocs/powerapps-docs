@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Create a custom API using Azure Resource Manager | Microsoft PowerApps"
-	description="Learn how to create a custom API using Azure Resource Manager and add the API to PowerApps"
+	pageTitle="Use Azure Active Directory with a custom connector | Microsoft PowerApps"
+	description="Learn how to create a custom connector for Azure Resource Manager, with Azure Active Directory authentication."
 	services=""
     suite="powerapps"
 	documentationCenter=""
@@ -14,19 +14,20 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/26/2016"
+   ms.date="05/03/2017"
    ms.author="ricksal"/>
 
 
-# Create a custom API using Azure Resource Manager in PowerApps
+# Use Azure Active Directory with a custom connector in PowerApps
 
-This tutorial demonstrates how to register a Swagger file describing an [Azure Resource Manager (ARM) API](https://msdn.microsoft.com/library/azure/dn790568.aspx) and then connect to it in PowerApps.
+Azure Resource Manager (ARM) enables you to manage the components of a solution on Azure - components like databases, virtual machines, and web apps. This tutorial demonstrates how to enable authentication in Azure Active Directory, register one of the ARM APIs as a custom connector, then connect to it in PowerApps. This would be useful if you want to manage Azure resources directly from an app. For more information about ARM, see [Azure Resource Manager Overview](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview).
 
 ## Prerequisites
 
-- An [Azure subscription](https://azure.microsoft.com/en-us/free/).
+- An [Azure subscription](https://azure.microsoft.com/free/).
 - A [PowerApps account](https://powerapps.microsoft.com).
-- The [sample Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json) used in this tutorial.
+- The [sample OpenAPI file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json) used in this tutorial.
+
 
 ## Enable authentication in Azure Active Directory
 
@@ -88,35 +89,37 @@ First, we need to create an Azure Active Directory (AAD) application that will p
 
     ![Create a key](./media/customapi-azure-resource-manager-tutorial/configurekeys.png)
 
+
 ## Add the connection in PowerApps
 
-Now that the AAD application is configured, let's add the custom API.
+Now that the AAD application is configured, let's add the custom connector.
 
-1. In [powerapps.com](https://web.powerapps.com), in the menu on the left, click **Connections**. Then click **New connection** in the upper-right corner.
+1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom connectors** in the upper right corner.
 
-    > [AZURE.TIP] If you can't find the menu, it may be under a hamburger button in the upper-left corner in mobile browsers.
+	 **Tip**: If you can't find where to manage custom connectors in a mobile browser, it might be under a menu in the upper left corner.
 
-2. Click **Custom** to display your list of custom connections, and then click **New custom API**.
+	![Create custom connector](./media/customapi-azure-resource-manager-tutorial/managecustomapi.png)  
 
-    ![New custom API](./media/customapi-azure-resource-manager-tutorial/connecttocustomapi.png)
+2. Select **Create custom connector**.
 
-3. Type a **Name** for your connection, and then upload the [sample ARM Swagger file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Next**.  
+	![Custom connector properties](./media/customapi-azure-resource-manager-tutorial/newcustomapi.png)
+
+3. Type a name for your connection, and then upload the [sample ARM OpenAPI file](http://pwrappssamples.blob.core.windows.net/samples/AzureResourceManager.json).  Click **Continue**.  
 
     ![Connect to a new API endpoint](./media/customapi-azure-resource-manager-tutorial/createcustom.png)
 
-4. On the next screen, because the Swagger file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, type the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, type `https://management.core.windows.net/`.
+4. On the next screen, because the OpenAPI file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, type the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, type `https://management.core.windows.net/`.
 
-    > [AZURE.IMPORTANT] Be sure to include the Resource URL exactly as written above, including the trailing slash.
+    **Important**: Be sure to include the Resource URL exactly as written above, including the trailing slash.
 
     ![OAuth settings](./media/customapi-azure-resource-manager-tutorial/oauthsettings.png)
 
-5. Your custom API is now registered and can be consumed within PowerApps or Microsoft Flow.
+5. Your custom connector is now registered and can be consumed within PowerApps or Microsoft Flow.
 
-    ![Custom API added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
+    ![Custom connector added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
 
-> [AZURE.NOTE] The sample Swagger does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this Swagger or create another Swagger file using the [online Swagger editor](http://editor.swagger.io/).
->
->This process can be used to access any RESTful API authenticated using AAD.
+    **Note**: The sample OpenAPI does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this OpenAPI file or create another OpenAPI file using the [online OpenAPI editor](http://editor.swagger.io/). This process can be used to access any RESTful API authenticated using AAD.
+
 
 ## Next steps
 
@@ -124,4 +127,4 @@ For more detailed information about how to create an app, see [Create an app fro
 
 For more detailed information about how to use a flow in an app, see [Start a flow in an app](using-logic-flows.md).
 
-To ask questions or make comments about custom APIs, [join our community](https://aka.ms/powerapps-community).
+To ask questions or make comments about custom connectors, [join our community](https://aka.ms/powerapps-community).

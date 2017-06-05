@@ -33,8 +33,14 @@ The **LoadData** function re-loads a collection by name that was previously save
 Storage is encrypted and in a private location on the local device, isolated from other users and other apps.  
 
 ## Syntax ##
-
-**SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* )
+**SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
 
 - *Collection* - Required.  Collection to be stored or loaded.
 - *Name* - Required.  Name of the storage. You must use the same name to save and load the same set of data. The name space isn't shared with other apps or users.
+- *IgnoreNonexistentFile* - Optional. Boolean (**true**/**false**) value that indicates whether **LoadData** function should display or ignore errors when it can't locate a matching file. If you specify **false**, errors will be displayed. If you specify **true**, errors will be ignored, which is useful for offline scenarios. **SaveData** may create a file if the device is offline (that is, if the **Connection.Connected** status is **false**).
+
+## Examples ##
+| Formula | Description | Result |
+|---------|-------------|--------|
+| **If(Connection.Connected, ClearCollect(LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100})),LoadData(LocalTweets, "Tweets", true))** | If the device is connected, load the LocalTweets collection from the Twitter service; otherwise, load the collection from the local file cache. | The content is rendered whether the device is online or offline. |
+| **SaveData(LocalTweets, "Tweets")** | Save the LocalTweets collection as a local file cache on the device. | Data is saved locally so that **LoadData** can load it into a collection. |

@@ -63,6 +63,8 @@ Other elements include:
 
 **[Back](functions/function-navigate.md)** – Displays the previous screen.  
 
+**[Blank](functions/function-isblank-isempty.md)** – Returns a *blank* value that can be used to insert a NULL value in a data source.
+
 ## C ##
 
 **[Calendar](functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.
@@ -309,6 +311,8 @@ Other elements include:
 
 **[Sum](functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
 
+**[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula. 
+
 ## T ##
 
 **[Table](functions/function-table.md)** – Creates a temporary table.  
@@ -322,6 +326,8 @@ Other elements include:
 **[Time](functions/function-date-time.md)** – Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
 
 **[TimeValue](functions/function-datevalue-timevalue.md)** – Converts a time-only string to a date/time value.
+
+**[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
 **[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 

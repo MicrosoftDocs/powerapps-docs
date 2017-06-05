@@ -24,7 +24,7 @@
 
 Office 365 Users lets you access user profiles in your organization using your Office 365 account. You can perform various actions such as get your profile, a user's profile, a user's manager or direct reports.
 
-You can display this information in a text box on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
+You can display this information in a label on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
 
 This topic shows you how to add Office 365 Users as a connection, add Office 365 Users as a data source to your app, and use table data in a gallery control.
 
@@ -44,7 +44,7 @@ The Office 365 Users connection has been created and added to your app. Now, it'
 ## Use the connection in your app
 
 ### Show information about the current user
-1. On the **Insert** menu, select **Text box**
+1. On the **Insert** menu, select **Label**
 2. In the function bar, set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
 
 	`Office365Users.MyProfile().Department`  
@@ -59,7 +59,7 @@ The Office 365 Users connection has been created and added to your app. Now, it'
 	`Office365Users.MyProfile().UserPrincipalName`  
 	`Office365Users.MyProfile().AccountEnabled`  
 
-The text box shows the information that you entered about the current user.
+The label shows the information that you entered about the current user.
 
 ### Show information about another user
 1. On the **Insert** menu, select **Text**, and then select **Text input**. Rename it **InfoAbout**:  
@@ -68,7 +68,7 @@ The text box shows the information that you entered about the current user.
 
 2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*.
 
-3. Add a **Text box** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
+3. Add a **Label** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
 
 	- To show information about another user:  
 
@@ -98,14 +98,14 @@ The text box shows the information that you entered about the current user.
 		`Office365Users.Manager(InfoAbout.Text).UserPrincipalName`  
 		`Office365Users.Manager(InfoAbout.Text).AccountEnabled`  
 
-The text box shows the information that you entered about the user you specified or that user's manager.
+The label shows the information that you entered about the user you specified or that user's manager.
 
 **Note**: If you're developing an app based on an entity in the Common Data Service, you can specify a user based on ID instead of email address.
 
-For example, you can [create an app automatically](data-platform-create-app.md), add a screen that contains a **Text box** control, and set the control's **Text** property to this formula:
+For example, you can [create an app automatically](data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
 <br>**Office365Users.UserProfile(BrowseGallery1.Selected.CreatedByUser).DisplayName**
 
-If you create a contact and select that contact in the browse screen of the app, the **Text box** control will show your display name.
+If you create a contact and select that contact in the browse screen of the app, the **Label** control will show your display name.
 
 ### Show the direct reports of another user
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **InfoAbout**.
@@ -122,7 +122,7 @@ If you create a contact and select that contact in the browse screen of the app,
 
 4. In the second list, select **JobTitle**. In the third list, select **DisplayName**. The gallery is updated to show these values.  
 
-	<br/>**NOTE** The first box is actually an image control. If you don't have an image, you can delete the image control, and add a text box in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
+	<br/>**NOTE** The first box is actually an image control. If you don't have an image, you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 ### Search for users
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
@@ -137,7 +137,7 @@ If you create a contact and select that contact in the browse screen of the app,
 
 3. In the second list, select **Mail**. In the third list, select **DisplayName**.
 
-	The second and third text boxes in the gallery are updated.
+	The second and third labels in the gallery are updated.
 
 ## View the available functions
 

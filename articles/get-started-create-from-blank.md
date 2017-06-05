@@ -74,7 +74,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Open Data Sources tab](./media/get-started-create-from-blank/data-sources-tab.png)
 
-1. In the **Data Sources** tab of the right-hand pane, click or tap **Add data source**.
+1. In the right-hand pane, click or tap **Add data source**.
 
 	![Add data source](./media/get-started-create-from-blank/add-data-source.png)
 
@@ -98,21 +98,23 @@ You can review this tutorial for general concepts only, or you can follow it exa
 	This tutorial requires only one data source, but you can add more data sources later.
 
 ## Show the data ##
-1. In the right-hand pane, click or tap the **Layout** tab.
-
-1. Click or tap the option that contains a heading, a subtitle, and a body element.
+1. In the **Home** tab, click or tap **New screen** and then click or tap **List screen**.
 
 	![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
-	Several controls are added to the screen, including a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
+	A screen is added with several default controls, such as a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
 
-1. Select the gallery by clicking or tapping anywhere in it except the first item.
+1. Click or tap anywhere in the gallery except an arrow, such as directly under the search box.
 
 	![Select gallery](./media/get-started-create-from-blank/select-gallery.png)
 
+1. In the right-hand pane, open the **Layouts** list, and then click or tap the option that shows a title and a subtitle only.
+
+	![Select gallery](./media/get-started-create-from-blank/select-layout.png)
+
 1. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
 
-	**Sort(If(IsBlank(TextSearchBox1.Text), Schedule, Filter(Schedule, TextSearchBox1.Text in Text('Volunteer_x0020_1'))),'Volunteer_x0020_1', If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+	**SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer_x0020_1"), "Volunteer_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
 	**Note**: If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md),
 
@@ -134,7 +136,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
 
-1. Select the **[Text box](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
+1. Select the **[Label](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
 
 	![Select title bar](./media/get-started-create-from-blank/select-title-bar.png)
 
@@ -152,9 +154,9 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Add and rename screen](./media/get-started-create-from-blank/add-screen.png)
 
-1. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Text box](controls/control-text-box.md)**.
+1. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Label](controls/control-text-box.md)**.
 
-1. Configure the **Text box** control that you just added:
+1. Configure the **Label** control that you just added:
 
 	- Set its **Text** property to this formula:
 	<br>**"Change record"**
@@ -171,7 +173,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	- Set its **Width** property to **640**.
 
-	The **Text box** control reflects your changes.
+	The **Label** control reflects your changes.
 
 	![ChangeScreen with banner](./media/get-started-create-from-blank/change-screen-blank.png)
 
@@ -197,12 +199,12 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
-1. Add a **[Text box](control-text-box.md)** control in the new card.
+1. Add a **[Label](control-text-box.md)** control in the new card.
 
 1. Set the **[AutoHeight](controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](controls/properties-core.md)** property to this formula:
 <br>**Form1.Error**
 
-	The text box will show any errors from the form.
+	The label will show any errors from the form.
 
 1. In the left navigation bar, click or tap the thumbnail for the **ChangeScreen** to select it.
 

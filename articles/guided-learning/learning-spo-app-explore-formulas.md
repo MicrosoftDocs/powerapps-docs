@@ -29,19 +29,19 @@ In the previous topic, we included the Price field in the browse screen gallery,
 
 ![Text formatting for color and currency](./media/learning-spo-app-explore-formulas/text-formatting.png)
 
-Let's start with the currency formatting. By default PowerApps just pulls in a Price value for each item, which is set as the **Text** _property_ of the text box that displays the price.
+Let's start with the currency formatting. By default PowerApps just pulls in a Price value for each item, which is set as the **Text** _property_ of the label that displays the price.
 
 ![Price default formatting](./media/learning-spo-app-explore-formulas/price-default.png)
 
-To add the US currency symbol, click or tap the text box control, and in the formula bar set the **Text** property to this formula.
+To add the US currency symbol, click or tap the label control, and in the formula bar set the **Text** property to this formula.
 
 ![Price currency formatting](./media/learning-spo-app-explore-formulas/price-formatted.png)
 
-The formula - `Text(Price, "[$-en-US]$ ##.00"` uses the **Text** _function_ to specify how the number should be formatted. The formula is like an Excel formula, but PowerApps formulas refer to controls and other app elements rather than cells in a spreadsheet. If you click or tap a control and then click or tap the property drop down list, you see a list of properties that are relevant to the control. For example, here is a partial list of the properties for a text box. Some properties are relevant across a broad range of controls and others only for a specific control.
+The formula - `Text(Price, "[$-en-US]$ ##.00"` uses the **Text** _function_ to specify how the number should be formatted. The formula is like an Excel formula, but PowerApps formulas refer to controls and other app elements rather than cells in a spreadsheet. If you click or tap a control and then click or tap the property drop down list, you see a list of properties that are relevant to the control. For example, here is a partial list of the properties for a label. Some properties are relevant across a broad range of controls and others only for a specific control.
 
 ![Setting properties](./media/learning-spo-app-explore-formulas/properties.png)
 
-To format the color conditionally based on the price, use a formula like the following for the **Color** property of the text box: `If(Price > 5, Color.Red, Color.Green)`.
+To format the color conditionally based on the price, use a formula like the following for the **Color** property of the label: `If(Price > 5, Color.Red, Color.Green)`.
 
 ![Price color formatting](./media/learning-spo-app-explore-formulas/color-formatted.png)
 

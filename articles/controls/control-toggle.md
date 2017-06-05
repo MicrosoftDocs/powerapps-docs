@@ -90,13 +90,13 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a text box, and set its **[Text](properties-core.md)** property to this formula:
+1. Add a label, and set its **[Text](properties-core.md)** property to this formula:
 <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
 
 	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
 1. Press F5, and change the value of **MemberDiscount**.
 
-	The text box shows a different price, depending on whether **MemberDiscount** is on or off.
+	The label shows a different price, depending on whether **MemberDiscount** is on or off.
 
 1. To return to the default workspace, press Esc.

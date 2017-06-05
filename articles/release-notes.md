@@ -14,13 +14,31 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="03/10/2017"
+    ms.date="05/30/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+## Release 2.0.640-2.0.641 ##
+1. Identify and select controls more easily by navigating a [cascading list of screens](add-configure-controls.md#find-and-select-a-screen-or-a-control).
+1. Easily [create forms with multiple columns](working-with-form-layout.md) using a new capability of the **Display form** and **Edit form** controls.
+1. Improvements to [data tables](control-data-table.md), including support for static data sources, default fields, and column resizing for app users.
+1. [Format dates more easily](control-date-picker.md), and [convert between local time and UTC](function-dateadd-datediff.md).
+1. [Simultaneous edits](edit-app.md) that corrupt apps are prevented.
+1. Build skills in an [individual environment](dev-community-plan.md) (always free).
+
+## Release 2.0.630-2.0.632 ##
+1. Navigate the toolbar more easily, and open help from tooltips.
+1. Learn from [sample apps](open-and-run-a-sample-app.md) that show your data, not fake data.
+1. Open and edit sample apps in [PowerApps Studio for web](create-app-browser.md).
+1. Select a type of **[Gallery](control-gallery.md)** control more easily, and choose from a wider variety of layouts.
+1. Show data in a tabular format with the **[Data table](control-data-table.md)** control.
+1. Use screen templates for common data patterns.
+1. Browse environments in an alphabetized list with clearer labels.
+1. Administrators can [view user licenses](admin-view-user-licenses.md) for PowerApps and Microsoft Flow.
 
 ## Release 2.0.610-2.0.611 ##
 1. **Create an app from a template in a browser**.
@@ -58,9 +76,9 @@ For information about known limitations, see [Common issues and resolutions](com
 
 	For more information, see [Environments administration](environments-administration.md).
 
-1. **Create a custom API by specifying the URL to a Swagger API definition.**
+1. **Create a custom connector by specifying the URL to an OpenAPI definition.**
 
-	For more information, see [Register custom APIs](register-custom-api.md).
+	For more information, see [Register and use custom connectors](register-custom-api.md).
 
 ## Release 2.0.590-2.0.591 ##
 1. **Show data in a gallery that resizes to fit items of different heights**.
