@@ -95,36 +95,36 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 1. Create a blank tablet app.
 2. On the **Insert** tab, click or tap **Data table**.
 
-	![Add a Data table control to a screen](Media/insertDataTable.png "Add a Data table control to a screen")
+	![Add a Data table control to a screen](./media/control-data-table/insert-data-table.png "Add a Data table control to a screen")
    
    	A **Data table** control is added to the screen.
 
 3. Rename the **Data table** control **SalesOrderTable**, and resize it so that it covers the whole screen.
 4. In the right pane, click or tap the data source icon to the right of the **No data source selected** text, and then click or tap **Add a data source**.
 
-	![Add a data source](Media/addDataToDataTable.png "Add a data source")
+	![Add a data source](./media/control-data-table/add-data-to-data-table.png "Add a data source")
 
 5. In the list of connections, click or tap the connection for your Common Data Service database.
 
-	![Select the connection for your data source](Media/chooseCDSDataTable.png "Select your data connection")
+	![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png "Select your data connection")
 
 6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
 
-  	![Select the Sales order entity](Media/chooseSODataTable.png "Select the Sales order entity")
+  	![Select the Sales order entity](./media/control-data-table/choose-so-data-table.png "Select the Sales order entity")
    
 	The **Data table** control is now attached to the **Sales order** data source. Several initial fields appear in the **Data table** control, because we are using a connector that supports that capability.
 
-	![Data table](Media/preOrderDataTable.png "Data table")
+	![Data table](./media/control-data-table/pre-order-data-table.png "Data table")
 
 7. In the right pane, click or tap the eye icon to show or hide individual fields. For example, click or tap the eye icon next to **CustomerPurchaseOrderReference** to hide this field.
 
 8. In the right pane, reorder the fields by dragging them up or down.
 
-	![Reorder the fields as desired](Media/fieldReorderDataTable.png "Reorder the fields")
+	![Reorder the fields as desired](./media/control-data-table/field-re-order-data-table.png "Reorder the fields")
   
   	The **SalesOrderTable** control shows the fields in the order that you specified.
   
-	![Updated Data table](Media/postOrderDataTable.png "Updated Data table")
+	![Updated Data table](./media/control-data-table/post-order-data-table.png "Updated Data table")
 
 ### Restyle the header for the Data table control
 
@@ -133,21 +133,21 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 3. Click or tap the field for the **HeadingColor** property, and then change the value to **White**.
 4. Click or tap the field for the **HeadingSize** property, and then change the value to **14**.
 
-	![Data table](Media/restyledDataTable.png "Data table")
+	![Data table](./media/control-data-table/restyled-data-table.png "Data table")
 
 ### Connect a Data table control to another control
 
 1. Add an **Edit** form control to the screen.
 2. Resize the **Data table** and **Edit form** controls so that the **Data table** control appears in the left part of the screen and the **Edit form** control appears the right part of the screen.
 
-	![Data table and Edit form on the same screen](Media/dataTableEmptyForm.png "Data table and Edit form on the same screen")
+	![Data table and Edit form on the same screen](./media/control-data-table/data-table-empty-form.png "Data table and Edit form on the same screen")
 
 3. While **Form1** is selected, in the right pane, change the number of columns to **1**.
 4. Connect **Form1** to the **Sales order** data source. Several initial fields appear in **Form1**.
 
-	![Form1 with initial fields](Media/dataTableDisconnectedForm.png "Form1 with initial fields")
+	![Form1 with initial fields](./media/control-data-table/data-table-disconnected-form.png "Form1 with initial fields")
 
 5. In the right pane, click or tap the **Advanced** tab.
 6. Set the **Item** property for **Form1** to **SalesOrderTable.Selected**. **Form1** shows information from the row that is selected in the **Data table** control.
 
-	![Edit form connected to the Data table](Media/connectedFormDataTable.png "Edit form connected to the Data table")
+	![Edit form connected to the Data table](./media/control-data-table/connected-form-data-table.png "Edit form connected to the Data table")
