@@ -23,22 +23,22 @@
 
 The easiest way to interact with cards is through the right-hand pane when a form control has been selected in the design workspace. In that pane, you can choose which fields to show, pick how each field should be shown, and rearrange the fields.
 
-![](./media/working-with-cards/detail-screen.png)
+![](./media/working-with-cards/first-screen.png)
 
 To get started with cards, see [add a form](add-form.md) and [understand data forms](working-with-forms.md). The remainder of this topic goes into more detail about how cards work and how you can customize or even create your own.
 
 ## Predefined cards ##
 PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
 
-![](./media/working-with-cards/detail-field.png)
+![](./media/working-with-cards/second-screen.png)
 
 In this example, a single-line text card is selected, but the URL's text is longer than can be shown on a single line. Let's change this to a multi-line text card to give our users more room to edit:
 
-![](./media/working-with-cards/multi-line-field.png)
+![](./media/working-with-cards/third-screen.png)
 
-You'll also notice that several fields of this data source aren't being shown. Show and hide these by selecting the eye icon:
+You'll also notice that several fields of this data source aren't being shown. Show and hide these by selecting the checkbox:
 
-![](./media/working-with-cards/enable-security.png)
+![](./media/working-with-cards/add-security.png)
 
 ## Customize a card ##
 Cards comprise other controls. The user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
@@ -100,7 +100,7 @@ Click or tap the banner at the top to unlock the card so that you can modify the
 
 Let's modify the **[DisplayName](controls/control-card.md)** to put a space between **Asset** and **ID**. By making this change, we're altering what was generated for us.  In the right-hand pane, this card has a different label:
 
-![](./media/working-with-cards/custom-card.png)
+![](./media/working-with-cards/custom-card-new.png)
 
 We've now taken control over this card and can modify it further to fit our need. But we've lost the ability to change the card from one representation to another (for example, single-line text to multi-line text) as we did before. We've transformed the predefined card into a "custom card" that we now control.  
 

@@ -148,7 +148,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 	![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
 
 ## Create the ChangeScreen and its banner ##
-1. Rename the default screen from **Screen1** to **ViewScreen**.
+1. Rename the screen from the previous step which contains the gallery to **ViewScreen**.
 
 	![Rename screen](./media/get-started-create-from-blank/rename-screen.png)
 
