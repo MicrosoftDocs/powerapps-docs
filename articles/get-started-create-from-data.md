@@ -75,7 +75,11 @@ Generated apps have three screens by default:
 ## Change the gallery layout ##
 When an app is created, it has a default layout based on your data, but you can customize the gallery layout to fit your needs.
 
-1. In the left navigation bar, click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
+
+	![Toggle the views](./media/get-started-create-from-data/toggle-view.png)
+
+1. Click or tap the top thumbnail to ensure that the browse screen (**BrowseScreen1**) is selected.
 
 1. Click or tap anywhere in the gallery, such as the first image.
 

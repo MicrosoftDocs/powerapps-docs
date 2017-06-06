@@ -39,9 +39,9 @@ In this procedure, you'll replace a **[Toggle](control-toggle.md)** control with
 
 	![](./media/customize-card/select-paid-card.png)
 
-1. In the right-hand pane, click or tap the card selector for the **Paid** card, and then click or tap **Edit options**.
+1. In the right-hand pane, click or tap the card selector for the **Paid** card, and then click or tap **View Toggle**.
 
-	![](./media/customize-card/select-radio.png)
+	![](./media/customize-card/select-toggle.png)
 
 	The screen reflects your change.
 
