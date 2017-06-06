@@ -38,6 +38,10 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 1. [Generate an app automatically](app-from-sharepoint.md) based on the list that you just created.
 
+1. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
+
+	![Toggle the views](./media/customize-layout-sharepoint/toggle-view.png)
+
 ## Customize the gallery ##
 1. In the left navigation bar, click or tap the top thumbnail to ensure that **BrowseScreen1** is selected.
 

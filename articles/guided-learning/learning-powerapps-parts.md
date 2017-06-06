@@ -36,19 +36,17 @@ If you build apps, this is where you spend most of your time. You learn from the
 
 ![The web.powerapps.com site](./media/learning-powerapps-parts/powerapps-web-site.png)
 
-
 ## PowerApps Studio
 **PowerApps Studio** is available as a web application that you can use in any modern browser, and as a Windows application. PowerApps Studio has three panes and a ribbon that make app creation feel **similar to building a slide deck in PowerPoint**:
 
-1. **Left navigation bar**, which shows thumbnails of all the screens in your app
-2. **Middle pane**, which contains the app screen you are working on
-3. **Right-hand pane**, where you set options like layout and data sources
+1. **Left navigation bar**, in which you can show a thumbnail for each screen in your app or a hierarchical view of all the controls on each screen
+2. **Middle pane**, which shows the screen that you're working on
+3. **Right-hand pane**, where you set options such as layout and data sources
 4. **Property** drop-down list, where you select the properties that formulas apply to
-5. **Formula bar**, where you add formulas (like in Excel) that define app behavior
+5. **Formula bar**, where you add formulas (as in Excel) that define app behavior
 6. **Ribbon**, where you add controls and customize design elements
 
 ![PowerApps Studio](./media/learning-powerapps-parts/powerapps-studio.png)
-
 
 ## PowerApps Mobile
 **PowerApps Mobile for Windows, iOS, and Android** provides an environment where you can find and use apps. Instead of going to separate app stores, you stay in PowerApps and have access to all the apps that you've created and that others have shared with you. When you use apps in PowerApps Mobile, you get the most out of your device's capabilities like camera controls, GPS location, and more.
