@@ -49,7 +49,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 1. In the right-hand pane, click or tap the checkbox for the **AccountID** card to hide it, and click or tap the eye icon for the **ID** column to show it.
 
-	![Show card](./media/customize-forms-sharepoint/enable-checkbox.png)
+	![Show card](./media/customize-forms-sharepoint/checkbox.png)
 
 ## Reorder the cards ##
 - Click or tap the **Title** card to select it, and then drag its title bar up until the **OrderDate** card is highlighted.

@@ -108,7 +108,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 	![Select gallery](./media/get-started-create-from-blank/select-gallery.png)
 
-1. In the right-hand pane, open the **Layouts** list, and then click or tap the option that shows a title and a subtitle only.
+1. In the right-hand pane, open the **Layouts** list, and then click or tap the option that shows a title, a subtitle and body.
 
 	![Select gallery](./media/get-started-create-from-blank/select-layout.png)
 
