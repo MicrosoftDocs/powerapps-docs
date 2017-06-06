@@ -38,6 +38,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Column chart](controls/control-column-line-chart.md)** – Show values as vertical bars relative to two axes.
 
+**[Column](controls/control-column.md)** - Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.
+
 **[Data table](controls/control-data-table.md)** - Show data in a tabular format.
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
