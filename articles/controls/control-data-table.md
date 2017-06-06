@@ -65,7 +65,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 + [**BorderThickness**](properties-color-border.md) – The thickness of the **Data table** control's border.
 + [**Color**](properties-color-border.md) – The default text color for all data rows.
 + [**Fill**](properties-color-border.md) – The default background color for all data rows.
-+ [**Font**](properties-text.md – The default font for all data rows.
++ [**Font**](properties-text.md) - The default font for all data rows.
 + [**FontWeight**](properties-text.md) – The default font weight for all data rows.
 + **HeadingColor** – The text color for the column headings.
 + **HeadingFill** – The background color of the column headings.
