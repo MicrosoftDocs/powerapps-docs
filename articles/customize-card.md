@@ -39,9 +39,9 @@ In this procedure, you'll replace a **[Toggle](control-toggle.md)** control with
 
 	![](./media/customize-card/select-paid-card.png)
 
-1. In the right-hand pane, click or tap the card selector for the **Paid** card, and then click or tap **View Toggle**.
+1. In the right-hand pane, click or tap the card selector for the **Paid** card, and then click or tap **Edit Toggle**.
 
-	![](./media/customize-card/select-toggle.png)
+	![](./media/customize-card/select-toggle-paid.png)
 
 	The screen reflects your change.
 
@@ -56,7 +56,7 @@ In this procedure, you'll unlock a card and then replace a **[Text input](contro
 
 1. In the right-hand pane, click or tap the ellipsis icon for that card, and then click or tap **Advanced options**.
 
-	![Open Advanced options](./media/customize-card/qty-advanced-options.png)
+	![Open Advanced options](./media/customize-card/advanced-options.png)
 
 1. At the top of the right-hand pane, click or tap the lock icon to unlock the card.
 

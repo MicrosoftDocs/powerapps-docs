@@ -247,7 +247,7 @@ To add an **[Edit form](controls/control-form-detail.md)** control:
 
 You can now select the fields to display on your screen. You can also select which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field your user will interact with.  Your screen should resemble this example:
 
-![Display form for Ice Cream data source](./media/working-with-forms/edit-screen-ice-cream-new.png)
+![Display form for Ice Cream data source](./media/working-with-forms/icecream-edit.png)
 
 These two properties are the same as the properties on the **[Display form](controls/control-form-detail.md)** control.  And with these alone, we can display the details of a record.  
 

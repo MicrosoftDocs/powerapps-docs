@@ -30,7 +30,7 @@ To get started with cards, see [add a form](add-form.md) and [understand data fo
 ## Predefined cards ##
 PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
 
-![](./media/working-with-cards/second-screen.png)
+![](./media/working-with-cards/second-screenshot.png)
 
 In this example, a single-line text card is selected, but the URL's text is longer than can be shown on a single line. Let's change this to a multi-line text card to give our users more room to edit:
 
@@ -38,7 +38,7 @@ In this example, a single-line text card is selected, but the URL's text is long
 
 You'll also notice that several fields of this data source aren't being shown. Show and hide these by selecting the checkbox:
 
-![](./media/working-with-cards/add-security.png)
+![](./media/working-with-cards/add-field.png)
 
 ## Customize a card ##
 Cards comprise other controls. The user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
