@@ -19,11 +19,11 @@
    
 # Column control in PowerApps
 
-Provides the display experience for a single field in a [**Data table**](https://powerapps.microsoft.com/en-us/tutorials/control-data-table/) control.
+Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.
 
 ## Description
 
-The [**Data table**](https://powerapps.microsoft.com/en-us/tutorials/control-data-table/) control shows a dataset in a tabular format, and each column in that tabular format is represented by a **Column** control. The **Column** control provides properties that the app maker can use to customize the appearance and behavior of the column.
+The [**Data table**](control-data-table.md) control shows a dataset in a tabular format, and each column in that tabular format is represented by a **Column** control. The **Column** control provides properties that the app maker can use to customize the appearance and behavior of the column.
 
 ## Capabilities
 
@@ -46,7 +46,7 @@ The [**Data table**](https://powerapps.microsoft.com/en-us/tutorials/control-dat
     > This property will soon be renamed **HeaderText**.
 
 + **IsHyperlink** – A value that indicates whether the data in the column should be underlined to indicate that it's a hyperlink.
-+ [**Width**](https://powerapps.microsoft.com/en-us/tutorials/properties-size-location/ "Width") – The distance between the **Column** control’s left and right edges.
++ [**Width**](properties-size-location.md) – The distance between the **Column** control’s left and right edges.
 
 ## Examples
 ### Resize a column
@@ -58,8 +58,8 @@ The [**Data table**](https://powerapps.microsoft.com/en-us/tutorials/control-dat
 6. In the list of entities, click or tap **Account**, and then click or tap **Connect**. The **Data table** control is initialized and shows a set of default fields. 
 7. Click or tap the **Total amount** column.
 
-	![Column control selected](./media/control-column/pre-resize-column.png "Column control selected")
+	![Column control selected](./media/control-column/pre-resize-column.png)
 
 8. Drag the adorner on the right side to resize the field.
 
-	![Column control resized](./media/control-column/post-resize-column.png "Column control resized")
+	![Column control resized](./media/control-column/post-resize-column.png)
