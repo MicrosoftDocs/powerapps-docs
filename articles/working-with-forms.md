@@ -101,7 +101,7 @@ The **[DataField](controls/control-card.md)** property of a **[Card](controls/co
 
 In a generated app, **[Card](controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls in the right-hand pane:
 
-![Detail screen with options pane open](media/working-with-forms/detail-screen.png)
+![Detail screen with options pane open](media/working-with-forms/detail-screen-new.png)
 
 In the right-hand pane, you can select which fields to display and in which kind of control each field displays.
 
@@ -139,7 +139,7 @@ In the previous image, the selected card shows the **AssetID** field and  contai
 
 In the right-hand pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
 
-![Edit screen with options pane open](media/working-with-forms/detail-screen.png)
+![Edit screen with options pane open](media/working-with-forms/edit-screen.png)
 
 ## Build an app from scratch ##
 By understanding how PowerApps generates an app, you can build one yourself that uses the same building blocks and formulas discussed earlier in this topic.
@@ -162,21 +162,21 @@ To follow the rest of this topic exactly, create a SharePoint list named "Ice Cr
 ## Browse records ##
 Get a quick piece of information from a record by finding it in a gallery on a browse screen.
 
-1. Add a **Text gallery** control in the **Vertical** orientation, and set its **[Items](controls/properties-core.md)** property to **Ice Cream**.
+1. Add a **Vertical gallery** and change the layout to **Title** only.
 
-	![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream.png)
+	![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery.png)
 
-	By default, the gallery shows the first three fields for this data source, which aren't the most useful. Next, you'll configure the gallery to show exactly the data you want.
+1. Set its **[Items](controls/properties-core.md)** property to **Ice Cream**. Set the **[Text](controls/properties-core.md)** property of the first text control in the gallery to **ThisItem.Title** if it is not already changed to it.
 
-1. Set the **[Text](controls/properties-core.md)** property of the first text control in the gallery to **ThisItem.Title**.
+	The label now shows the value in the **Title** field for each record.
 
-	Instead of showing the date/time when each record was created, the label shows the value in the **Title** field for each record.
+	![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery-2.png)
 
-1. Remove the other two labels from the gallery, resize it to fill the screen, and set its **[TemplateSize](controls/control-gallery.md)** property to **60**.
+1. Resize it to fill the screen, and set its **[TemplateSize](controls/control-gallery.md)** property to **60**.
 
 	The screen resembles this example, which shows all records in the data source:
 
-	![Gallery connected to Ice Cream data source](./media/working-with-forms/gallery-icecream-cleaned.png)
+	![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery-icecream.png)
 
 ## View details ##
 If the gallery doesn't show the information that you want, select the arrow for a record to open the details screen. A **[Display form](controls/control-form-detail.md)** control on that screen shows more, possibly all, fields for the record that you selected.
@@ -199,7 +199,7 @@ To add a **[Display form](controls/control-form-detail.md)** control:
 
 In the right-hand pane, you can select the fields to display on your screen and which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field that the user will interact with. Your screen should resemble this example:
 
-![Display form for Ice Cream data source](./media/working-with-forms/ice-cream.png)
+![Display form for Ice Cream data source](./media/working-with-forms/ice-cream-new.png)
 
 Finally, we need to connect the **[Display form](controls/control-form-detail.md)** control to the **[Gallery](controls/control-gallery.md)** control so that we can look at details for a specific record.  As soon as we complete setting the **[Item](controls/control-form-detail.md)** property, the first record from the gallery will appear in our form.
 
@@ -207,7 +207,7 @@ Finally, we need to connect the **[Display form](controls/control-form-detail.md
 
 	The details for the selected item appear in the form.
 
-	![Display form for Ice Cream data source, connected to the gallery control](./media/working-with-forms/view-form-select.png)
+	![Display form for Ice Cream data source, connected to the gallery control](./media/working-with-forms/view-form-select-coconut.png)
 
 Great!  We now turn to navigation: how a user opens the details screen from the gallery screen and opens the gallery screen from the details screen.
 
@@ -219,16 +219,12 @@ Great!  We now turn to navigation: how a user opens the details screen from the 
 
 Now, let's return to the **[Gallery](controls/control-gallery.md)** control and add some navigation to our detail screen.
 
-1. Switch to the first screen, which is hosting our **[Gallery](controls/control-gallery.md)** control, and select the first item in the gallery.
-
-2. On the **Insert** tab, select **Shapes**, and then select the right arrow.
-
-1. Move and resize the arrow as appropriate for the right-hand side of the gallery.
+1. Switch to the first screen, which is hosting our **[Gallery](controls/control-gallery.md)** control, and select the first arrow in the first item in the gallery.
 
 3. Set the **[OnSelect](controls/properties-core.md)** property of the shape to this formula:
 <br>**Navigate( Screen2, None )**
 
-![Display form for Ice Cream data source with back button](./media/working-with-forms/gallery-icecream-nav.png)
+![Display form for Ice Cream data source with back button](./media/working-with-forms/gallery-icecream-nav-new.png)
 
 1. Press F5, select an arrow in the gallery to show the details for an item.
 
@@ -251,7 +247,7 @@ To add an **[Edit form](controls/control-form-detail.md)** control:
 
 You can now select the fields to display on your screen. You can also select which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field your user will interact with.  Your screen should resemble this example:
 
-![Display form for Ice Cream data source](./media/working-with-forms/edit-screen-ice-cream.png)
+![Display form for Ice Cream data source](./media/working-with-forms/icecream-edit.png)
 
 These two properties are the same as the properties on the **[Display form](controls/control-form-detail.md)** control.  And with these alone, we can display the details of a record.  
 
