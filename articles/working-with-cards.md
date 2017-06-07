@@ -36,7 +36,7 @@ In this example, a single-line text card is selected, but the URL's text is long
 
 ![](./media/working-with-cards/third-screen.png)
 
-You'll also notice that several fields of this data source aren't being shown. Show and hide these by selecting the checkbox:
+You'll also notice that several fields of this data source aren't being shown. Show and hide a field by selecting its checkbox:
 
 ![](./media/working-with-cards/add-field.png)
 
@@ -65,15 +65,15 @@ Let's walk through some examples of changing the card's appearance by manipulati
 
 	This new control is now a part of the card and will travel with the card if, for example, you reorder the cards within the form.
 
-As another example, show an image in an **[Image](controls/control-image.md)** control instead of the image's URL in a **Text-input** control, as this graphic shows
+	As another example, show an image in an **[Image](controls/control-image.md)** control instead of the image's URL in a **Text input** control, as this graphic shows
 
-![](./media/working-with-cards/customize-image1.png)
+	![](./media/working-with-cards/customize-image1.png)
 
 2. On the **Insert** tab, add an image control under the **ImageURL** card:
 
 	![](./media/working-with-cards/customize-image2.png)
 
-3. In the formula bar, set the **[Image](controls/properties-visual.md)** property of this control to **TextBox.Text**, where **TextBox** is the name of the **Input text** control that holds the URL:
+3. In the formula bar, set the **[Image](controls/properties-visual.md)** property of this control to *TextBox*.**Text**, where *TextBox* is the name of the **Input text** control that holds the URL:
 
 	**Tip**: Press the Alt key to show the name of each control.
 
