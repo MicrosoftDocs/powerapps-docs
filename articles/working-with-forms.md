@@ -207,7 +207,7 @@ Finally, we need to connect the **[Display form](controls/control-form-detail.md
 
 	The details for the selected item appear in the form.
 
-	![Display form for Ice Cream data source, connected to the gallery control](./media/working-with-forms/view-form-select-new.png)
+	![Display form for Ice Cream data source, connected to the gallery control](./media/working-with-forms/view-form-select-coconut.png)
 
 Great!  We now turn to navigation: how a user opens the details screen from the gallery screen and opens the gallery screen from the details screen.
 

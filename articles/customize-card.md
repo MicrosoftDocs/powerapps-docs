@@ -39,7 +39,7 @@ In this procedure, you'll replace a **[Toggle](control-toggle.md)** control with
 
 	![](./media/customize-card/select-paid-card.png)
 
-1. In the right-hand pane, click or tap the card selector for the **Paid** card, and then click or tap **Edit Toggle**.
+1. In the right-hand pane, click or tap the card selector for the **Paid** card, and then click or tap **Edit Options**.
 
 	![](./media/customize-card/select-toggle-paid.png)
 
