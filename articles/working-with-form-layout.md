@@ -30,9 +30,9 @@ In this article, we'll walk through the steps to create this form.  We'll also l
 
 To begin, [create a new tablet app](get-started-create-from-blank.md).  Everything discussed here applies to phone layouts as well but phone apps often only have one vertical column.
 
-[Connect to a data source](add-manage-connections.md).  In this example, we are using the "Sales order" entity in the [Common Data Service](data-platform-intro.md).  Any data source can be used including collections.
+[Connect to a data source](add-manage-connections.md).  In this example, we are using the "Sales order" entity in the [Common Data Service](data-platform-intro.md).  Any data source can be used including SharePoint lists and Excel tables.
 
-You will want a way to select a particular record from this data source.  On your first screen, insert a [**Gallery** control](controls/control-gallery.md) and connect it to the data source.  We can then use **Gallery1.Selected** to refer to the currently selected record.  Your screen should look something like this:
+You will want a way to select a particular record from this data source.  On your first screen, [insert a **Gallery** control](add-gallery.md) and connect it to the data source.  We can then use **Gallery1.Selected** to refer to the currently selected record.  Your screen should look something like this:
 
 ![Sales order list](media/working-with-form-layout/sales-order-gallery-screen.png)
 
@@ -224,7 +224,7 @@ If we also set **WidthFit** on the first "Order date" card the both cards will e
 
 ![WidthFit set to true on first and second cards](media/working-with-form-layout/manual-widthfit-2.png)
 
-Note that grab handles on these cards reflect their expanded form.  It can be confusing to manipulate the Width property while WidthFit is turned on - you may want to turn it off, make changes to Width, and then turn it back on.
+Note that grab handles on these cards take into account the extra width provided by **WidthFit**, not the minimum width provided by the **Width** property.  It can be confusing to manipulate the **Width** property while **WidthFit** is turned on - you may want to turn it off, make changes to Width, and then turn it back on.
 
 When might **WidthFit** be useful?  If you have a field that is only used in certain situations, you can set its **Visible** property to **False** and the other cards on the row will automatically fill the space around it.  You might want to use a formula that shows a field when another field has a particular value.  
 
@@ -238,10 +238,15 @@ Since it is now invisible, selecting the second card can become difficult.  The 
 
 ### Height ###
 
-The Height property governs the height of each card.  But be aware that cards have the equivalent of **WidthFit** for Height and it always set to **True**.  Imagine there was a **HeightFit** property, but don't go looking for it in the product as it is not exposed (yet).
+The **Height** property governs the height of each card.  Be aware that cards have the equivalent of **WidthFit** for Height and it always set to **True**.  Imagine there was a **HeightFit** property, but don't go looking for it in the product as it is not yet exposed as a property.
 
 Since you cannot turn off this behavior, changing the heights of cards can be challenging as all cards within a row will appear to be the same height as the tallest card.  You may be looking at a row like this:
 
 ![WidthFit set to true on first card with status order invisible](media/working-with-form-layout/height-3.png)
 
-But which card is making the row tall?   In the picture above, the "Total amount" card is selected and appears tall, but in this case it isn't the "Total amount" card as its **Height** property is set to 80 (same as the height of the first row).  Except for the tallest card of the row, selecting any other card and attempting to change the height through drag-and-drop will not show any changes.  You will need to look at the **Height** property for each card to discover the one that is making the row tall.
+And asking which card is making the row tall?   In the picture above, the "Total amount" card is selected and appears tall, but in reality its **Height** property is set to 80 (same as the height of the first row).  Except for the tallest card of the row, selecting any other card and attempting to change the height through drag-and-drop will not show any changes.  You will need to look at the **Height** property for each card to discover the one that is making the row tall.
+
+### AutoHeight ###
+
+Review alt text.
+
