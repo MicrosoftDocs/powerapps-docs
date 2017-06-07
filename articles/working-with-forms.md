@@ -162,17 +162,19 @@ To follow the rest of this topic exactly, create a SharePoint list named "Ice Cr
 ## Browse records ##
 Get a quick piece of information from a record by finding it in a gallery on a browse screen.
 
-1. Add a **Vertical gallery** and change the layout to **Title** only.
+1. Add a **Vertical** gallery, and change the layout to **Title** only.
 
 	![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery.png)
 
-1. Set its **[Items](controls/properties-core.md)** property to **Ice Cream**. Set the **[Text](controls/properties-core.md)** property of the first text control in the gallery to **ThisItem.Title** if it is not already changed to it.
+1. Set the gallery's **[Items](controls/properties-core.md)** property to **Ice Cream**.
+
+1. Set the **[Text](controls/properties-core.md)** property of the first label in the gallery to **ThisItem.Title** if it's set to something else.
 
 	The label now shows the value in the **Title** field for each record.
 
 	![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery-2.png)
 
-1. Resize it to fill the screen, and set its **[TemplateSize](controls/control-gallery.md)** property to **60**.
+1. Resize the gallery to fill the screen, and set its **[TemplateSize](controls/control-gallery.md)** property to **60**.
 
 	The screen resembles this example, which shows all records in the data source:
 
@@ -219,14 +221,14 @@ Great!  We now turn to navigation: how a user opens the details screen from the 
 
 Now, let's return to the **[Gallery](controls/control-gallery.md)** control and add some navigation to our detail screen.
 
-1. Switch to the first screen, which is hosting our **[Gallery](controls/control-gallery.md)** control, and select the first arrow in the first item in the gallery.
+1. Switch to the first screen, which is hosting our **[Gallery](controls/control-gallery.md)** control, and select the arrow in the first item in the gallery.
 
 3. Set the **[OnSelect](controls/properties-core.md)** property of the shape to this formula:
 <br>**Navigate( Screen2, None )**
 
-![Display form for Ice Cream data source with back button](./media/working-with-forms/gallery-icecream-nav-new.png)
+	![Display form for Ice Cream data source with back button](./media/working-with-forms/gallery-icecream-nav-new.png)
 
-1. Press F5, select an arrow in the gallery to show the details for an item.
+1. Press F5, and then select an arrow in the gallery to show the details for an item.
 
 1. Select the **[Back](functions/function-navigate.md)** button to return to the gallery of products, and then press Esc.
 
