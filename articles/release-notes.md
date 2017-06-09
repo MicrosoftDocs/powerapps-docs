@@ -22,6 +22,15 @@ For information about known limitations, see [Common issues and resolutions](com
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
+## Release 2.0.650-2.0.651 ##
+1. Save changes to a shared app, and then [publish them later](save-publish-app.md).
+1. Add prepopulated galleries that have rich layouts and that automatically show data from some of the most commonly used standard entities in the Common Data Service.
+1. Customize the columns in a **[Data table](control-data-table.md)** control.
+1. Create and edit flows, and automatically undo changes as you develop apps in [PowerApps Studio for web](create-app-browser.md).
+1. Specify a SharePoint list by name if isn't listed by default. 
+1. Configure a form control by using an improved UI.
+1. Run a behavior formula when an app opens.
+
 ## Release 2.0.640-2.0.641 ##
 1. Identify and select controls more easily by navigating a [cascading list of screens](add-configure-controls.md#find-and-select-a-screen-or-a-control).
 1. Easily [create forms with multiple columns](working-with-form-layout.md) using a new capability of the **Display form** and **Edit form** controls.
