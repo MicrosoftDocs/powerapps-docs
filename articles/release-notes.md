@@ -25,9 +25,9 @@ For information about known limitations, see [Common issues and resolutions](com
 ## Release 2.0.650-2.0.651 ##
 1. Save changes to a shared app, and then [publish them later](save-publish-app.md).
 1. Add prepopulated galleries that have rich layouts and that automatically show data from some of the most commonly used standard entities in the Common Data Service.
-1. Customize the columns in a **[Data table](control-data-table.md)** control.
-1. Create and edit flows, and automatically undo changes as you develop apps in [PowerApps Studio for web](create-app-browser.md).
-1. Specify a SharePoint list by name if isn't listed by default. 
+1. Customize the columns in a **[Data table](control-data-table.md)** control, and copy and paste that type of control.
+1. In [PowerApps Studio for web](create-app-browser.md), undo/redo changes, and create/edit flows.
+1. Specify a SharePoint list by name if isn't listed by default.
 1. Configure a form control by using an improved UI.
 1. Run a behavior formula when an app opens.
 
