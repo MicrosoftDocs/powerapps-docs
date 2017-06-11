@@ -68,6 +68,10 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 - Use this property's formula to pull the values from the edit controls of the card in order to write back to the data source. For example, set a card's **Update** property to **Slider.Value** to update the data source with a value from the slider in that card.
 
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+
+**[WidthFit](properties-size-location.md)** – Allows a control to automatically grow horizontally to fill any empty space of a container control such as a **[Form control](control-form-detail.md)**.  If multiple cards have this property set then the space is divided between them.  For more information see **[understand data form layout](../working-with-form-layout.md)**.
+
 ## Additional properties ##
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -84,12 +88,10 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).  For a **[Card](controls/control-card.md)** determines the column of the card within the container control.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
-
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
-
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).  For a **[Card](controls/control-card.md)** determines the row of the card within the container control.
+  
 ## Examples ##
 
-See [Understand data cards](../working-with-cards.md) for examples.
+See [Understand data cards](../working-with-cards.md) and [Understand data form layout](../working-with-form-layout.md) for examples.
