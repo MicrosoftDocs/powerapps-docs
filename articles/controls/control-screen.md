@@ -38,6 +38,13 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **OnVisible** – How an app responds when the user navigates to a screen.
 
+**OnStart** – How the app responds when the user starts to record with a microphone control or when the app begins to execute.  
+
+- This property is executed before the first screen of the app is displayed.  You can change which screen is displayed first when the app starts by calling the [**Navigate**](../functions/function-navigate.md) function.
+- You cannot set [context variables](../workding-with-variables.md) with the [**UpdateContext**](../functions/function-updatecontext.md) function as no screen has been displayed yet.  You can pass context variables in the **Navigate** function.  You can also create and fill [collections](../workding-with-variables.md) with the [**Collect**](../functions/function-collect.md) function.   
+- When authoring, this property will execute when the app is loaded into the studio.  To see the impact of changing this property, you will need to save, close, and re-load your app.
+- The **OnStart** property is not actually a property of the screen control but instead of the app.  For editing convenience, it is viewed and modified as a property on the first screen of your app.  If you remove the first screen or reorder screens, it may become hard to find this property.  If this occurs, save, close, and re-load your app and it will reappear again as a property of the first screen.
+
 ## Related functions ##
 
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)

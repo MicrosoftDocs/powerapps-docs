@@ -120,7 +120,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](controls/control-image.md)** controls.
 
-**[AutoHeight](controls/control-text-box.md)** – Whether a label automatically increases its **[Height](controls/properties-size-location.md)** property if its **[Text](controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Label](controls/control-text-box.md)** control.
+**[AutoHeight](controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](controls/properties-core.md)** property contains more characters than the control can show.  Applies to the **[Label](controls/control-text-box.md)** control.
 
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -330,7 +330,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnSelect](controls/properties-core.md)** – How the app responds when the user taps or clicks a control.  Applies to many controls.
 
-**OnStart** – How the app responds when the user starts to record with a microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**OnStart** – How the app responds when the user starts to record with a microphone control or when the app begins to execute.  Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, **[Screen](controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[OnStateChange](controls/control-pdf-viewer.md)** – How an app responds when the state of the control changes.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -504,19 +504,21 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Width](controls/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
 
+**[WidthFit](properties-size-location.md)** – Allows a control to automatically grow horizontally to fill any empty space of a container control such as a **[Form control](control-form-detail.md)**.  If multiple cards have this property set then the space is divided between them.  For more information see **[understand data form layout](../working-with-form-layout.md)**.
+
 **[Wrap](controls/control-text-box.md)** – Whether text that's too long to fit in a label wraps to the next line.  Applies to the **[Label](controls/control-text-box.md)** control.
 
 **[WrapCount](controls/control-gallery.md)** – How many records appear in each item of a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 ### X ###
 
-**[X](controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).  Applies to many controls.
+**[X](controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).  Applies to many controls.  For a **[Card](controls/control-card.md)** determines the column of the card within the container control.
 
 **[XLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels below the x-axis of a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### Y ###
 
-**[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).  Applies to many controls.
+**[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).  Applies to many controls.  For a **[Card](controls/control-card.md)** determines the row of the card within the container control.
 
 **[YAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
