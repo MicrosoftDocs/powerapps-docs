@@ -86,39 +86,39 @@ Let's position and size our cards to where we want them to be:
 
 1. Drag and drop the "Postal code of Delivery address" card to the second half (indicating after) the "Country/Region of Delivery address".  The cards will automatically re-layout to fill the space left behind.
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-1.png)
+	![Move a card with drag and drop](media/working-with-form-layout/card-resize-1.png)
 
 2. Re-size the "Order date" card by dragging the right drag handle to the right one snap point.  It will not take up one more twelfth of the form, now at 4/12 or 1/3.  This is the right size for 3 cards across.
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-15s.png)
+	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-15s.png)
 
 3. Re-size the "Order status" card to take up one more twelfth of the form also now at 1/3.
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-16s.png)
+	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-16s.png)
 
 4. Drag and drop the "Customer purchase order reference" card to the second half (indicating after) of the "Order status" card.
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-5.png)
+	![Move a card with drag and drop](media/working-with-form-layout/card-resize-5.png)
 
 1. Re-size the card we just moved to fill out the form.
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-17s.png)
+	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-17s.png)
 
 5. Re-size the "Name" card to take up 6/12 or 1/2 of the form, halfway across.
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-21s.png)
+	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-21s.png)
 
 6. Re-size the "Description" card to take up 6/12 or 1/2 of the form, consuming the other half of that same row.
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-22s.png)
+	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-22s.png)
 
 1. Now let's turn our attention to the address fields.  We'll make the first line of the Delivery address stretch entirely across the form:
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-31s.png)
+	![Resize a card across the form control with drag and drop](media/working-with-form-layout/card-resize-31s.png)
 
 1. And the same for the second address line:
 
-	![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-32s.png)
+	![Resize a card across the form control with drag and drop](media/working-with-form-layout/card-resize-32s.png)
 
 All done.  We have our desired form, mixing rows with 1, 2, 3, and 4 columns:
 
@@ -146,14 +146,14 @@ Now let's turn our attention to the third line of the address.  Similar to what 
 
 | Step | Description | Result |
 |------|-------------|--------|
-| 1 | Start by selecting the state card. Notice that grab handles appear around the card.  | ![](media/working-with-form-layout/state-morph-2.png) |
-| 2 | Select the label within this card.  Notice that grab handles are now around the interior label control. | ![](media/working-with-form-layout/state-morph-3.png)
-| 3 | Place the cursor to the right of the text, and delete the portion we don't need. | ![](media/working-with-form-layout/state-morph-3b.png) |
-| 4 | Using the grab handles on the sides, size the label control to fit the new text size. | ![](media/working-with-form-layout/state-morph-4b.png) |
-| 5 | Select the text input control within this card. | ![](media/working-with-form-layout/state-morph-6.png) |
-| 6 | Using the grab handles on the sides, size the text input control to the size desired. | ![](media/working-with-form-layout/state-morph-6b.png) |
-| 7 | Drag and drop the text input box up and to the right of the label control. | ![](media/working-with-form-layout/state-morph-7b.png) |
-| 8 | Our modifications to the state card are now complete.  | ![](media/working-with-form-layout/state-morph-8.png)
+| 1 | Start by selecting the state card. Notice that grab handles appear around the card.  | ![Select a card](media/working-with-form-layout/state-morph-2.png) |
+| 2 | Select the label within this card.  Notice that grab handles are now around the interior label control. | ![Select a control within a card](media/working-with-form-layout/state-morph-3.png)
+| 3 | Place the cursor to the right of the text, and delete the portion we don't need. | ![Change the text within a control within a card](media/working-with-form-layout/state-morph-3b.png) |
+| 4 | Using the grab handles on the sides, size the label control to fit the new text size. | ![Resize a control within a card](media/working-with-form-layout/state-morph-4b.png) |
+| 5 | Select the text input control within this card. | ![Select a different control within the card](media/working-with-form-layout/state-morph-6.png) |
+| 6 | Using the grab handles on the sides, size the text input control to the size desired. | ![Resize a control within a card](media/working-with-form-layout/state-morph-6b.png) |
+| 7 | Drag and drop the text input box up and to the right of the label control. | ![Move a control within a card](media/working-with-form-layout/state-morph-7b.png) |
+| 8 | Our modifications to the state card are now complete.  | ![Modifications to the card are complete](media/working-with-form-layout/state-morph-8.png)
 
 The result for the complete third address line:
 
@@ -189,26 +189,28 @@ As with everything in PowerApps, the form's layout is governed by properties on 
 
 ### Basic Layout: X, Y, and Width ###
 
-The position of cards is controlled with the X and Y properties.  When we are working with controls on the raw canvas these properties provide an absolute position.  But when in a form, these properties have a different meaning:
+The position of cards is controlled with the **X** and **Y** properties.  When we are working with controls on the raw canvas these properties provide an absolute position.  But when in a form, these properties have a different meaning:
 
 - **X**: Order within a row.
 - **Y**: Row number.
 
-Similar to controls on the canvas, the Width property specifies the minimum width of the card (more on the minimum aspect in a moment).    
+Similar to controls on the canvas, the **Width** property specifies the minimum width of the card (more on the minimum aspect in a moment).    
 
-Let's take a look at the X, Y, and Width properties of the cards in our form:
+Let's take a look at the **X**, **Y**, and **Width** properties of the cards in our form:
 
 ![Sales order form X and Y coordinates](media/working-with-form-layout/sales-order-xy.png)
 
 ### Overflowing rows ###
 
-What happens if the cards on a row are too wide to fit on that row?  The cards will automatically wrap to create effectively a *new* row.  For example, let's manually change the Width property of our "Customer purchase order reference" card (first row, third item) to 500 (first row, third card):
+What happens if the cards on a row are too wide to fit on that row?  Normally you don't need to worry about this.  With snap to columns on, these three properties will automatically be adjusted so that everything fits nicely within rows without overflowing.
+
+But with snap to columns turned off or formula based **Width** on one or more of your cards, overflowing a row can happen.  In this case, the cards will automatically wrap to create effectively a *new* row.  For example, let's manually change the Width property of our "Customer purchase order reference" card (first row, third item) to 500 (first row, third card):
 
 ![Manual resize of card, reflow to a new row](media/working-with-form-layout/manual-size-500.png)
 
-Notice that the three cards on the top row no longer fit in the horizontally and that effectively a new row has been created to wrap the overflow.  The Y coordinate for all these cards is still the same at 0, and the "Name" and "Description" cards still have a Y of 1.  Cards will not be merged across rows with different Y values.
+Notice that the three cards on the top row no longer fit in the horizontally and that effectively a new row has been created to wrap the overflow.  The **Y** coordinate for all these cards is still the same at 0, and the "Name" and "Description" cards still have a **Y** of 1.  Cards will not be merged across rows with different **Y** values.
 
-When sizing and positioning cards with snap to columns on, these three properties will automatically be adjusted so that everything fits nicely within rows without wrapping.
+You can use this behavior to create a fully dynamic layout where cards are placed based on a Z-order, filling across as much as possible and then moving to the next row.  To do this, give all the cards the same **Y** value and use **X** for the order of the cards.   
 
 ### Filling spaces: WidthFit ###
 
@@ -238,7 +240,7 @@ Since it is now invisible, selecting the second card can become difficult.  The 
 
 ### Height ###
 
-The **Height** property governs the height of each card.  Be aware that cards have the equivalent of **WidthFit** for Height and it always set to **True**.  Imagine there was a **HeightFit** property, but don't go looking for it in the product as it is not yet exposed as a property.
+The **Height** property governs the height of each card.  Be aware that cards have the equivalent of **WidthFit** for Height and it always set to **True**.  Imagine there was a HeightFit property, but don't go looking for it in the product as it is not yet exposed.
 
 Since you cannot turn off this behavior, changing the heights of cards can be challenging as all cards within a row will appear to be the same height as the tallest card.  You may be looking at a row like this:
 
@@ -248,5 +250,22 @@ And asking which card is making the row tall?   In the picture above, the "Total
 
 ### AutoHeight ###
 
-Review alt text.
+Another factor that impacts the height of a card when rendered is if any controls within the card have their **AutoHeight** property set to **true**.  Many of the cards provide a label to display an error message if there is a validation problem with the field's value.  
+
+Without any text to display (no error) the label will collapse to zero height.  If you didn't know any better you wouldn't know it was there and that's as it should be:
+
+![Cards that contain controls with AutoHeight set to true showing no height](media/working-with-form-layout/autoheight-0.png)
+
+The screen explorer in the left hand pane shows **ErrorMessage1** which is our label control.  At authoring time only, selecting this control will give the control some height providing grab handles that are easier to position and size the control.  The blue boxed "A" indicates that the control has **AutoHeight**:
+
+![At authoring time, AutoHeight controls show some height making it easier to drag and drop](media/working-with-form-layout/autoheight-1.png)
+
+The **Text** property of this control is set to **Parent.Error** which is used to obtain dynamic error information based no validation rules.  For illustration purposes, let's statically set the **Text** property of this control which will automatically grow the height of the control and by extension the card to accommodate the length of the text:  
+
+![With an error message, the control and card automatically grow](media/working-with-form-layout/autoheight-2.png)
+
+Let's make the error message a little longer, and again the control and card grow to accommodate.  Note that the row overall grows in height retaining vertical alignment between the cards:
+
+![With a longer error message, the control and card grow even more, and note that the cards on the same row all grow together](media/working-with-form-layout/autoheight-3.png)
+
 
