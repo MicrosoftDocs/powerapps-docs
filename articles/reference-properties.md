@@ -120,7 +120,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](controls/control-image.md)** controls.
 
-**[AutoHeight](controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](controls/properties-core.md)** property contains more characters than the control can show.  Applies to the **[Label](controls/control-text-box.md)** control.
+**[AutoHeight](controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](controls/properties-core.md)** property contains more characters than the control can show. Applies to the **[Label](controls/control-text-box.md)** control.
 
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -314,39 +314,39 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### O ###
 
-**[OnChange](controls/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).  Applies to many controls.
+**[OnChange](controls/properties-core.md)** – The behavior of an app when the user changes the value of a control (for example, by adjusting a slider).  Applies to many controls.
 
-**OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](controls/control-toggle.md)** controls.
+**OnCheck** – The behavior of an app when the value of a checkbox or a toggle changes to **true**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
-**[OnEnd](controls/control-audio-video.md)** – How an app responds when an audio or video clip finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
+**[OnEnd](controls/control-audio-video.md)** – The behavior of an app when an audio or video clip finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
-**[OnFailure](controls/control-form-detail.md)** – How an app responds when a data operation has been unsuccessful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
+**[OnFailure](controls/control-form-detail.md)** – The behavior of an app when a data operation has been unsuccessful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**[OnHidden](controls/control-screen.md)** – How an app responds when the user navigates away from a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
+**[OnHidden](controls/control-screen.md)** – The behavior of an app when the user navigates away from a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
-**[OnPause](controls/control-audio-video.md)** – How an app responds when the user pauses the clip that an audio or video control is playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
+**[OnPause](controls/control-audio-video.md)** – The behavior of an app when the user pauses the clip that an audio or video control is playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
-**[OnReset](controls/control-form-detail.md)** – How an app responds when an **[Edit form](controls/control-form-detail.md)** control is reset.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
+**[OnReset](controls/control-form-detail.md)** – The behavior of an app when an **[Edit form](controls/control-form-detail.md)** control is reset.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**[OnSelect](controls/properties-core.md)** – How the app responds when the user taps or clicks a control.  Applies to many controls.
+**[OnSelect](controls/properties-core.md)** – The behavior of an app  when the user taps or clicks a control.  Applies to many controls.
 
-**OnStart** – How the app responds when the user starts to record with a microphone control or when the app begins to execute.  Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, **[Screen](controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**OnStart** – The behavior of an app when the user opens it or starts to record with a microphone control. Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, **[Screen](controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**[OnStateChange](controls/control-pdf-viewer.md)** – How an app responds when the state of the control changes.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
+**[OnStateChange](controls/control-pdf-viewer.md)** – The behavior of an app when the state of the control changes. Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
-**[OnStop](controls/control-microphone.md)** – How the app responds when the user stops recording with a microphone control.  Applies to the **[Microphone](controls/control-microphone.md)** control.
+**[OnStop](controls/control-microphone.md)** – The behavior of an app when the user stops recording with a microphone control. Applies to the **[Microphone](controls/control-microphone.md)** control.
 
-**[OnStream](controls/control-camera.md)** – How the app responds when the **[Stream](controls/control-camera.md)** property is updated.  Applies to the **[Camera](controls/control-camera.md)** control.
+**[OnStream](controls/control-camera.md)** – The behavior of an app when the **[Stream](controls/control-camera.md)** property is updated.  Applies to the **[Camera](controls/control-camera.md)** control.
 
-**[OnSuccess](controls/control-form-detail.md)** – How an app responds when a data operation has been successful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
+**[OnSuccess](controls/control-form-detail.md)** – The behavior of an app when a data operation has been successful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**[OnTimerEnd](controls/control-timer.md)** – How an app responds when a timer finishes running.  Applies to the **[Timer](controls/control-timer.md)** control.
+**[OnTimerEnd](controls/control-timer.md)** – The behavior of an app when a timer finishes running.  Applies to the **[Timer](controls/control-timer.md)** control.
 
-**[OnTimerStart](controls/control-timer.md)** – How an app responds when a timer starts to run.  Applies to the **[Timer](controls/control-timer.md)** control.
+**[OnTimerStart](controls/control-timer.md)** – The behavior of an app when a timer starts to run.  Applies to the **[Timer](controls/control-timer.md)** control.
 
-**OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](controls/control-toggle.md)** controls.
+**OnUncheck** – The behavior of an app when the value of a checkbox or a toggle changes to **false**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
-**[OnVisible](controls/control-screen.md)** – How an app responds when the user navigates to a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
+**[OnVisible](controls/control-screen.md)** – The behavior of an app the user navigates to a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
 **[OriginalHeight](controls/control-image.md)** – Original height of an image, enabled with the **[CalculateOriginalDimensions](controls/control-image.md)** property.  Applies to the **[Image](controls/control-image.md)** control.
 
@@ -504,7 +504,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Width](controls/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
 
-**[WidthFit](properties-size-location.md)** – Allows a control to automatically grow horizontally to fill any empty space of a container control such as a **[Form control](control-form-detail.md)**.  If multiple cards have this property set then the space is divided between them.  For more information see **[understand data form layout](../working-with-form-layout.md)**.
+**[WidthFit](properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space of a container control such as an **[Edit form](control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](../working-with-form-layout.md).
 
 **[Wrap](controls/control-text-box.md)** – Whether text that's too long to fit in a label wraps to the next line.  Applies to the **[Label](controls/control-text-box.md)** control.
 
@@ -512,13 +512,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### X ###
 
-**[X](controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).  Applies to many controls.  For a **[Card](controls/control-card.md)** determines the column of the card within the container control.
+**[X](controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
 
 **[XLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels below the x-axis of a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### Y ###
 
-**[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).  Applies to many controls.  For a **[Card](controls/control-card.md)** determines the row of the card within the container control.
+**[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
 
 **[YAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
