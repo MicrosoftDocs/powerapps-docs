@@ -29,7 +29,7 @@ Building a connector involves multiple steps. To get started - in [PowerApps](ht
 
 API connectors are described using the [OpenAPI standard](https://swagger.io/) for defining the interface of an HTTP API. You can start building with an existing OpenAPI file, or you can import a [Postman Collection](https://www.getpostman.com/docs/collections), which auto-generates the OpenAPI file for you. 
 
-![Define your API diagram](./media/api-connectors-dev/build-your-api.png)
+![Define your API diagram](./media/api-connectors-dev/build-your-api-updated.png)
 
 If you start from either of these API descriptions, the metadata fields in the wizard are auto-populated. You can edit these at any time.  
 
