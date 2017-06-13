@@ -1,10 +1,10 @@
 <properties
 	pageTitle="Create or edit apps in a browser | Microsoft PowerApps"
-	description="Create or edit apps in a browser."
+	description="Create or edit apps in a browser by using PowerApps Studio for web."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="sarafankit"
+	authors="karthik-1"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -15,11 +15,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/17/2016"
-   ms.author="ankitsar"/>
+   ms.date="06/05/2017"
+   ms.author="karthikb"/>
 
-# Create or edit apps in a browser #
-Learn how to create and edit apps in a browser with PowerApps Studio for web.
+# Create or edit apps in PowerApps Studio for web #
+Create and edit apps in PowerApps Studio for web, which opens in a browser window on Windows or other platforms.
 
 **Note**: PowerApps Studio for web is in preview and has certain limitations. You can also create and edit apps by [installing PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10.
 
@@ -35,10 +35,6 @@ Learn how to create and edit apps in a browser with PowerApps Studio for web.
 
 	![New app in left navigation bar](./media/create-app-browser/left-nav.png)
 
-1. In the dialog box that appears, click or tap **PowerApps Studio for web**.
-
-	![Open PowerApps Studio for web](./media/create-app-browser/launch-web-authoring.png)
-
 PowerApps Studio for web opens in a new tab in your browser, where you can create and edit apps in the same way as you can in PowerApps Studio for Windows.
 
 ## Next steps ##
@@ -47,9 +43,6 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 - Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
 
 ## Known limitations of the preview release ##
-1. **Undo or redo a change.**
-
-	You can undo and redo changes automatically in PowerApps Studio for Windows but not in a browser.
 
 1. **Create a connection.**
 
@@ -66,10 +59,6 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 1. **Export and import data.**
 
 	You can [export and import data](controls/control-export-import.md) in a published app but not as you create or modify an app in a browser.
-
-1. **Add or modify a flow.**
-
-	You can [add or modify a flow](using-logic-flows.md) in PowerApps Studio for Windows but not in a browser.
 
 1. **Copy a control across two sessions.**
 

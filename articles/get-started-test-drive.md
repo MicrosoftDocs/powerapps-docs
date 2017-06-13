@@ -73,9 +73,7 @@ An app from a template opens in the default workspace, where you'll spend most o
 
 	You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
-1. At the top of the left navigation bar, click or tap the thumbnail.
-
-	![Thumbnail for the browse screen](./media/get-started-test-drive/browse-thumbnail.png)
+1. In the left navigation bar, click or tap the screen that's closest to the top.
 
 1. Press F5 (or click or tap the right arrow in the upper-right corner) to open the app in **Preview** mode.
 

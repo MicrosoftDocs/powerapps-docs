@@ -58,11 +58,15 @@ In addition to sorting ascending or descending, **SortByColumns** can sort based
 - *ColumnName(s)* - Required. The column names to sort on, as strings.
 - *SortOrder(s)* - Optional.  **SortOrder.Ascending** or **SortOrder.Descending**.  **SortOrder.Ascending** is the default.  If multiple *ColumnNames* are supplied, all but the last column must include a *SortOrder*.
 
+	**Note:** For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
+
 **SortByColumns**( *Table*, *ColumnName*, *SortOrderTable* )
 
 - *Table* - Required. Table to sort.
 - *ColumnName* - Required. The column name to sort on, as strings.
 - *SortOrderTable* - Required.  Single column table of values to sort by.
+
+	**Note:** For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
 
 ## Examples ##
 

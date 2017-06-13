@@ -59,6 +59,12 @@ Some data sources can detect when two people try to update the same record at th
 
 **Tip:** If you offer a **Cancel** button on your form so that the user can abandon changes in progress, add the **[ResetForm](../functions/function-form.md)** function to the button's **[OnSelect](properties-core.md)** property even that property also contains a **[Navigate](../functions/function-navigate.md)** function to change screens. Otherwise, the form will retain the user's changes.
 
+### Layout ###
+
+By default, cards are placed in a single column for phone apps and three columns for tablet apps. You can specify how many columns a form has and whether cards should snap to them as you configure the form. These settings aren't exposed as properties because they're used only to set the **X**, **Y**, and **Width** properties of the cards.
+
+For more information, see [Understand data form layout](../working-with-form-layout.md).
+
 ## Key properties ##
 
 **DataSource** – The data source that contains the record that the user will show, edit, or create.

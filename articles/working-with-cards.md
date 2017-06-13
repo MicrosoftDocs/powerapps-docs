@@ -23,22 +23,22 @@
 
 The easiest way to interact with cards is through the right-hand pane when a form control has been selected in the design workspace. In that pane, you can choose which fields to show, pick how each field should be shown, and rearrange the fields.
 
-![](./media/working-with-cards/afd-edit-card-options.png)
+![](./media/working-with-cards/first-screen.png)
 
 To get started with cards, see [add a form](add-form.md) and [understand data forms](working-with-forms.md). The remainder of this topic goes into more detail about how cards work and how you can customize or even create your own.
 
 ## Predefined cards ##
 PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
 
-![](./media/working-with-cards/imageurl-single.png)
+![](./media/working-with-cards/second-screenshot.png)
 
 In this example, a single-line text card is selected, but the URL's text is longer than can be shown on a single line. Let's change this to a multi-line text card to give our users more room to edit:
 
-![](./media/working-with-cards/imageurl-multi.png)
+![](./media/working-with-cards/third-screen.png)
 
-You'll also notice that several fields of this data source aren't being shown. Show and hide these by selecting the eye icon:
+You'll also notice that several fields of this data source aren't being shown. Show and hide a field by selecting its checkbox:
 
-![](./media/working-with-cards/add-securitycode.png)
+![](./media/working-with-cards/add-field.png)
 
 ## Customize a card ##
 Cards comprise other controls. The user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
@@ -65,15 +65,15 @@ Let's walk through some examples of changing the card's appearance by manipulati
 
 	This new control is now a part of the card and will travel with the card if, for example, you reorder the cards within the form.
 
-As another example, show an image in an **[Image](controls/control-image.md)** control instead of the image's URL in a **Text-input** control, as this graphic shows
+	As another example, show an image in an **[Image](controls/control-image.md)** control instead of the image's URL in a **Text input** control, as this graphic shows
 
-![](./media/working-with-cards/customize-image1.png)
+	![](./media/working-with-cards/customize-image1.png)
 
 2. On the **Insert** tab, add an image control under the **ImageURL** card:
 
 	![](./media/working-with-cards/customize-image2.png)
 
-3. In the formula bar, set the **[Image](controls/properties-visual.md)** property of this control to **TextBox.Text**, where **TextBox** is the name of the **Input text** control that holds the URL:
+3. In the formula bar, set the **[Image](controls/properties-visual.md)** property of this control to *TextBox*.**Text**, where *TextBox* is the name of the **Input text** control that holds the URL:
 
 	**Tip**: Press the Alt key to show the name of each control.
 
@@ -100,7 +100,7 @@ Click or tap the banner at the top to unlock the card so that you can modify the
 
 Let's modify the **[DisplayName](controls/control-card.md)** to put a space between **Asset** and **ID**. By making this change, we're altering what was generated for us.  In the right-hand pane, this card has a different label:
 
-![](./media/working-with-cards/unlocked-options.png)
+![](./media/working-with-cards/custom-card-new.png)
 
 We've now taken control over this card and can modify it further to fit our need. But we've lost the ability to change the card from one representation to another (for example, single-line text to multi-line text) as we did before. We've transformed the predefined card into a "custom card" that we now control.  
 
