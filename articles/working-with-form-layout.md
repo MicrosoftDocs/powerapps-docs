@@ -47,7 +47,14 @@ At the top of this screen, insert a **[Label](controls/control-text-box.md)** co
 - Move and resize the label so that it spans the width of the screen.
 - Set the **Text** property of the label to **"Sales Order " & Gallery1.Selected.SalesOrderId**.
 
-Insert an **Edit form** control, and then move and resize it to fill the screen under the label. Connect the form control to the **Sales order** data source. It may take a few moments for the data cards to appear and settle into their final positions. Connect the **Item** property to **Gallery1.Selected**, and you should see a very basic form layout with three columns:
+Insert an **Edit form** control, and then move and resize it to fill the screen under the label. Connect the form control to the **Sales order** data source:
+
+1. In the right-hand pane, click or tap the down arrow next to **No data source selected**.
+1. Click or tap **Sales order**.
+
+It may take a few moments for the data cards to be added and then a few more moments for the cards to settle into their final positions.  Connect the Item property to **Gallery1.Selected**.  And you should see a very basic form layout with three columns:
+
+It may take a few moments for the data cards to appear and settle into their final positions. Connect the **Item** property to **Gallery1.Selected**, and you should see a very basic form layout with three columns:
 
 ![Sales order in basic three column layout](media/working-with-form-layout/sales-order-form-screen-3.png)
 
