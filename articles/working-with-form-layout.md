@@ -40,7 +40,12 @@ In order to have plenty of room to work with, create another blank screen where 
 
 Insert a [**Label** control](controls/control-text-box.md) at the top of this screen.  Here we will have our title bar with sales order number displayed.  Using the ribbon, change the fill color to blue, the text color to white, and increase the font size as desired.  Enter the formula for the Text property as **"Sales Order " & Gallery1.Selected.SalesOrderId**.
 
-Insert an Edit form control and enlarge it to fill the entire screen.  Connect this form control to the Sales order data source.  It may take a few moments for the data cards to be added and then a few more moments for the cards to settle into their final positions.  Connect the Item property to **Gallery1.Selected**.  And you should see a very basic form layout with three columns:
+Insert an **Edit form** control, and enlarge it to fill the entire screen. Connect the form control to the **Sales order** data source:
+
+1. In the right-hand pane, click or tap the down arrow next to **No data source selected**.
+1. Click or tap **Sales order**.
+
+It may take a few moments for the data cards to be added and then a few more moments for the cards to settle into their final positions.  Connect the Item property to **Gallery1.Selected**.  And you should see a very basic form layout with three columns:
 
 ![Sales order in basic three column layout](media/working-with-form-layout/sales-order-form-screen-3.png)
 
