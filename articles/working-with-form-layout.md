@@ -26,7 +26,7 @@ In PowerApps, you can easily create forms that are attractive and efficient to u
 In this tutorial, we'll walk through the steps to create this form. We'll also look at some advanced topics, such as dynamic sizing of fields to fill available space.
 
 ## Before you start ##
-If you're new to PowerApps (or have only generated an app automatically from data), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with the concepts mentioned only in passing later in this topic, such as adding data sources and controls.
+If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with the concepts mentioned only in passing later in this topic, such as adding data sources and controls.
 
 ## Add a gallery ##
 1. Create a tablet app from scratch.
@@ -37,9 +37,13 @@ If you're new to PowerApps (or have only generated an app automatically from dat
 
 	Outside of this tutorial, you can use any data source, including SharePoint lists and Excel tables.
 
-1. Add a vertical **Gallery** control, change its **Layout** to show only a **Title and subtitle**, and set its **Items** property to **'Sales order'** so that the data appears.
+1. Add a vertical **Gallery** control, and set its **Items** property to **'Sales order'**.
 
-	Later in this topic, you'll configure a form to show the record that the user selected in the gallery. For now, your screen should resemble this example:
+	(optional) To match the examples in this tutorial, change the gallery's **Layout** to show only **Title and subtitle**.
+
+	![Sales order list](media/working-with-form-layout/gallery-layout.png)
+
+	The gallery resembles this example so that users can select a record in the gallery and show all its data in the form that you'll add on another screen.
 
 	![Sales order list](media/working-with-form-layout/sales-order-gallery-screen.png)
 
@@ -48,64 +52,56 @@ If you're new to PowerApps (or have only generated an app automatically from dat
 
 	Outside of this tutorial, you can put the **Gallery** and **[Edit form](controls/control-form-detail.md)** controls on the same screen, but you'll have more room to work with if you put them on separate screens.
 
-1. At the top of the new screen, add a **[Label](controls/control-text-box.md)** control, and configure it as a title bar.
-
- 	For an example, see the graphic at the end of this procedure.
-
-1. Show the sales-order number of the selected record by setting the label's **Text** property to this expression:
+1. At the top of the new screen, add a **[Label](controls/control-text-box.md)** control, and set its **Text** property to this expression:
 <br>**"Sales Order " & Gallery1.Selected.SalesOrderId**
+
+	The label shows the sales-order number of the record that the user selects in the gallery.
+
+1. (optional) Configure the label as in the graphic at the end of this procedure.
 
 1. Add an **Edit form** control, and then move and resize it to fill the screen under the label.
 
-	In the next step, you'll connect the form control to the **Sales order** data source.
+	In the next step, you'll connect the form control to the **Sales order** data source by using the right-hand pane, not the formula bar. If you use the formula bar, the form won't show any fields by default. You can always show any fields that you want by selecting one or more check boxes in the right-hand pane.
 
 1. In the right-hand pane, click or tap the down arrow next to **No data source selected**, and then click or tap **Sales order**.
 
-	A default set of fields from the **Sales order** data source will appear in a simple, three-column layout. However, they'll be blank and may take a few moments to settle into their final positions.  
+	A default set of fields from the **Sales order** data source will appear in a simple, three-column layout. However, many are blank, and they may take a few moments to settle into their final positions.  
 
 1. Set the form's **Item** property to **Gallery1.Selected** to show a data from single record in the data source:
 
 	![Sales order in a basic, three-column layout](media/working-with-form-layout/sales-order-form-screen-3.png)
 
-## Select fields to display ##
-On the **Options** tab of the right-hand pane, you can show or hide a field by selecting or clearing its check box. You can also reorder fields by dragging them up or down and then dropping them in the locations that you want.
+## Show, hide, or reorder fields ##
+On the **Options** tab of the right-hand pane, you can show or hide a field by selecting or clearing its check box. You can also reorder fields by dragging one up or down and then dropping it in the location that you want.
 
-## Data cards ##
+## Select a data card ##
 Each field displayed has a corresponding data card on the form. This card comprises a set of controls for the field title, an input box, a star (which appears if the field is required), and a validation error message.
 
-You can also select cards directly on the form. When selected, a black caption appears above the card. To delete a card, select it, and then press Delete.
-
-You can also reorder cards by dragging them in the form. Select the black caption, and then drag it to a different location. You can drop the card on either end of an existing card, and a gray drop zone appears while you hover.
+You can also select cards directly on the form. When selected, a black caption appears above the card.
 
 ![Data card selection](media/working-with-form-layout/sales-order-data-card-selection.png)
 
-## Snap to columns ##
-When turned on, "Snap to columns" will organize all the cards into the specified number of columns. By default, tablet apps have three columns, and phone apps have one.
+You can also reorder cards by dragging them in the form. Select the black caption, and then drag it to a different location. You can drop the card on either end of an existing card, and a gray drop zone appears while you hover. To delete a card (not just hide it), select it, and then press Delete.
 
-You can change the number of columns at any time, and all the cards will be re-sized to fit the new number of columns. In this graphic, we've changed the form to four columns:
+## Arrange cards in columns ##
+By default, tablet apps have three columns, and phone apps have one. You can specify not only how many columns a form has but also whether all cards should horizontally align with column borders.
 
-![Sales order in basic four column layout](media/working-with-form-layout/sales-order-form-screen-4.png)
+In this graphic, the number of columns in the form was changed from three to four with the **Snap to columns** check box selected. The cards in the form were arranged automatically to fit the new layout
 
-If you select a card, you can increase its width by dragging the left or right border of its selection box until it spans multiple columns. As you drag the border, the card will "snap" to column boundaries.
+![Sales order in a basic four-column layout](media/working-with-form-layout/sales-order-form-screen-4.png)
 
-## Specify the number of columns ##
-Depending on how many columns you want and the width of each card, you can configure a different number of cards in each row. For example, your first row might contain two cards, your second row might have four, and your third row might have three.
+## Resize cards across multiple columns ##
+Depending on the data in each card, you might want some cards to fit in a single column and other cards to span multiple columns. If a card contains more data than you want to show in a single column, you can widen the card by dragging the left or right border of its selection box. As you drag the border, the card will "snap" to column boundaries.
 
-For this kind of flexibility, you'll want to increase the number of columns in this form to 12. User-interface designers often specify 12 columns because it's evenly divisible by 1, 2, 3, 4, and 6.
+To make your design more flexible but retain some structure, you can increase the number of columns to 12. With that change, you can easily configure each card to span the entire form, half of the form, one-third, one-quarter, one-sixth, and so forth. Let's see this in action.
 
-In a 12-column layout, each column is relatively narrow. By default, cards will span multiple columns, but you can always adjust the width of each card to meet your needs.
+1. Set the number of columns in the form to 12.
 
-Let's position and size our cards to where we want them to be:
+	The form doesn't visibly change, but you have more snap points as you drag the left or right border of a card's selection box.
 
-1. Set the number of columns to 12.
+1. With the **Customer purchase order reference** card selected, drag it to several locations on the form to show how the form guides you, and then drop the card just to the right of the **Freight terms** card.
 
-	This change won't look any different from four columns, but you have more snap points as you drag the left or right border of a card's selection box.
-
-	![Sales order in basic four column layout](media/working-with-form-layout/sales-order-form-screen-4-12.png)
-
-1. Drag the **Postal code of Delivery address** card, and drop it after the **Country/Region of Delivery address** card.
-
-	The cards automatically change size and location to fill the empty space.
+	The cards automatically move to fill the empty space.
 
 	![Move a card with drag and drop](media/working-with-form-layout/card-resize-1.png)
 
