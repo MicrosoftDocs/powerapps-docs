@@ -88,56 +88,58 @@ You can change the number of columns at any time, and all the cards will be re-s
 
 If you select a card, you can increase its width by dragging the left or right border of its selection box until it spans multiple columns. As you drag the border, the card will "snap" to column boundaries.
 
-## Varying number of columns ##
-Depending on the width of each card, each row can have a different number of cards (or columns). For example, your first row might contain two fields, your second row might have four, and your third row might have three.
+## Specify the number of columns ##
+Depending on how many columns you want and the width of each card, you can configure a different number of cards in each row. For example, your first row might contain two cards, your second row might have four, and your third row might have three.
 
-To have rows that contain a variety of 2, 3, or 4 columns, let's switch to 12 columns. Initially, this doesn't look any different than 4 column option, but now we have more snap points for the widths and positions of cards. 12 columns is commonly used in user interface design because it's evenly divisible by 1, 2, 3, 4, and 6.
+For this kind of flexibility, you'll want to increase the number of columns in this form to 12. User-interface designers often specify 12 columns because it's evenly divisible by 1, 2, 3, 4, and 6.
 
-Since 6 and 12 are large numbers, by default cards will span 2 or 3 columns respectively but can be sized smaller or larger after they are initially placed.
+In a 12-column layout, each column is relatively narrow. By default, cards will span multiple columns, but you can always adjust the width of each card to meet your needs.
 
 Let's position and size our cards to where we want them to be:
 
-1. Set the number of columns to 12. This won't look any different since we were already using 4 columns, but we will soon discover that we have more snap points.
+1. Set the number of columns to 12.
+
+	This change won't look any different from four columns, but you have more snap points as you drag the left or right border of a card's selection box.
 
 	![Sales order in basic four column layout](media/working-with-form-layout/sales-order-form-screen-4-12.png)
 
-1. Drag and drop the "Postal code of Delivery address" card to the second half (indicating after) the "Country/Region of Delivery address". The cards will automatically re-layout to fill the space left behind.
+1. Drag the **Postal code of Delivery address** card, and drop it after the **Country/Region of Delivery address** card.
+
+	The cards automatically change size and location to fill the empty space.
 
 	![Move a card with drag and drop](media/working-with-form-layout/card-resize-1.png)
 
-2. Re-size the "Order date" card by dragging the right drag handle to the right one snap point. It will not take up one more twelfth of the form, now at 4/12 or 1/3. This is the right size for 3 cards across.
+2. Increase the width of the **Order date** card by dragging the right border of the selection box to the right one snap point.
+
+	The card spans four of the form's 12 columns (or 1/3 of the form), instead of only three of the form's 12 columns (or 1/4 of the form). Whenever you increase a card's width by one snap point, the card spans an additional 1/12 of the form.
 
 	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-15s.png)
 
-3. Re-size the "Order status" card to take up one more twelfth of the form also now at 1/3.
+3. Increase the width of the **Order status** card to match the width of the **Order date** card.
 
 	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-16s.png)
 
-4. Drag and drop the "Customer purchase order reference" card to the second half (indicating after) of the "Order status" card.
+4. Drag the **Customer purchase order reference** card, and drop it after the **Order status** card.
 
 	![Move a card with drag and drop](media/working-with-form-layout/card-resize-5.png)
 
-1. Re-size the card we just moved to fill out the form.
+1. Resize the card you just moved to fill out the form.
 
 	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-17s.png)
 
-5. Re-size the "Name" card to take up 6/12 or 1/2 of the form, halfway across.
+5. Resize the **Name** card to take up six columns (or 1/2) of the form, halfway across.
 
 	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-21s.png)
 
-6. Re-size the "Description" card to take up 6/12 or 1/2 of the form, consuming the other half of that same row.
+6. Resize the **Description** card to take up the other half of the same row.
 
 	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-22s.png)
 
-1. Now let's turn our attention to the address fields. We'll make the first line of the Delivery address stretch entirely across the form:
+1. Make the first two lines of the delivery address stretch entirely across the form:
 
 	![Resize a card across the form control with drag and drop](media/working-with-form-layout/card-resize-31s.png)
 
-1. And the same for the second address line:
-
-	![Resize a card across the form control with drag and drop](media/working-with-form-layout/card-resize-32s.png)
-
-All done. We have our desired form, mixing rows with 1, 2, 3, and 4 columns:
+All done. We have our desired form, mixing rows with different numbers of columns:
 
 ![Sales order in 12 column layout with resizing](media/working-with-form-layout/card-resize-done.png)
 
