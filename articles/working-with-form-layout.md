@@ -26,7 +26,7 @@ In PowerApps, you can easily create forms that are attractive and efficient to u
 In this tutorial, we'll walk through the steps to create this form. We'll also look at some advanced topics, such as dynamic sizing of fields to fill available space.
 
 ## Before you start ##
-If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with the concepts mentioned only in passing later in this topic, such as adding data sources and controls.
+If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with the concepts mentioned only in passing, such as adding data sources and controls.
 
 ## Add a gallery ##
 1. Create a tablet app from scratch.
@@ -81,10 +81,10 @@ You can also select cards directly on the form. When selected, a black caption a
 
 ![Data card selection](media/working-with-form-layout/sales-order-data-card-selection.png)
 
-You can also reorder cards by dragging them in the form. Select the black caption, and then drag it to a different location. You can drop the card on either end of an existing card, and a gray drop zone appears while you hover. To delete a card (not just hide it), select it, and then press Delete.
+You can also reorder cards by dragging them in the form. Select the black caption, and then drag it to a different location. You can drop the card on either end of another card, and a gray drop zone appears while you hover. To delete a card (not just hide it), select it, and then press Delete.
 
 ## Arrange cards in columns ##
-By default, tablet apps have three columns, and phone apps have one. You can specify not only how many columns a form has but also whether all cards should horizontally align with column borders.
+By default, forms in tablet apps have three columns, and those in phone apps have one. You can specify not only how many columns a form has but also whether all cards should fit within column borders.
 
 In this graphic, the number of columns in the form was changed from three to four with the **Snap to columns** check box selected. The cards in the form were arranged automatically to fit the new layout
 
@@ -99,11 +99,15 @@ To make your design more flexible but retain some structure, you can increase th
 
 	The form doesn't visibly change, but you have more snap points as you drag the left or right border of a card's selection box.
 
-1. With the **Customer purchase order reference** card selected, drag it to several locations on the form to show how the form guides you, and then drop the card just to the right of the **Freight terms** card.
+1. With the **Customer purchase order reference** card selected, drag it to several locations on the form to show how it guides you, and then drop the card just to the left of the **Freight terms** card.
 
 	The cards automatically move to fill the empty space.
 
 	![Move a card with drag and drop](media/working-with-form-layout/card-resize-1.png)
+
+1. Hide the **Sales order ID** card.
+
+	The label already shows that information, so the form doesn't need it.
 
 2. Increase the width of the **Order date** card by dragging the right border of the selection box to the right one snap point.
 
@@ -123,7 +127,7 @@ To make your design more flexible but retain some structure, you can increase th
 
 	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-17s.png)
 
-5. Resize the **Name** card to take up six columns (or 1/2) of the form, halfway across.
+5. Resize the **Name** card to take up six columns (or 1/2) of the form.
 
 	![Resize a card with drag and drop](media/working-with-form-layout/card-resize-21s.png)
 
@@ -141,44 +145,44 @@ All done. We have our desired form, mixing rows with different numbers of column
 
 ## Data-card manipulations ##
 
-The delivery address is made up of lots of pieces of information that we want to visually group together for the user. Each field will remain in its own data card, but we can manipulate the controls within the card to make them fit better together.
+The delivery address comprises several pieces of information that we want to visually group together for the user. Each field will remain in its own data card, but we can manipulate the controls within the card to make them fit better together.
 
 ![Sales order delivery address sized](media/working-with-form-layout/delivery-address-resize.png)
 
-Let's start by changing the text of the "First line of Delivery address" to be the label for the group of controls, calling it simply "Delivery address". We can do this by selecting the label control within the card and typing a text string.
+Let's start by changing the text of the **First line of Delivery address** to be the label for the group of controls, calling it simply **Delivery address**. We can do this by selecting the label control within the card and then removing the first three words from the text.
 
 ![Sales order delivery address renaming the first line label](media/working-with-form-layout/delivery-address-rename.png)
 
-For the second line's label, we can select and delete the text. It is tempting to simply remove the label control and in many cases that will work fine. But there may be formulas that depend on that control being present. The safer approach is to remove the text or to set the **Visible** property of the control to **False**.
+For the second line's label, we can select and delete the text. It's tempting to simply remove the label control and, in many cases, that will work fine. But formulas might depend on that control being present. The safer approach is to remove the text or to set the **Visible** property of the control to **false**.
 
 ![Sales order delivery address renaming the second line label](media/working-with-form-layout/delivery-address-rename-2.png)
 
-We can now move the input text box over the label to reduce the space between the first and second lines of the address. The size of the card will shrink as the contents within them take up less space.
+We can now move the Text input box over the label to reduce the space between the first and second lines of the address. The height of the card shrinks when its contents take up less space.
 
 ![Sales order delivery address renaming the second line label](media/working-with-form-layout/delivery-address-move-input.png)
 
-Now let's turn our attention to the third line of the address. Similar to what we just did, let's shorten the text of each label for these cards and arrange the input text box to be to the right of each label. Here are the steps for the State card:
+Now let's turn our attention to the third line of the address. Similar to what we just did, let's shorten the text of each label for these cards and arrange the Text input box to be to the right of each label. Here are the steps for the **State** card:
 
 | Step | Description | Result |
 |------|-------------|--------|
-| 1 | Start by selecting the state card. Notice that grab handles appear around the card. | ![Select a card](media/working-with-form-layout/state-morph-2.png) |
-| 2 | Select the label within this card. Notice that grab handles are now around the interior label control. | ![Select a control within a card](media/working-with-form-layout/state-morph-3.png)
-| 3 | Place the cursor to the right of the text, and delete the portion we don't need. | ![Change the text within a control within a card](media/working-with-form-layout/state-morph-3b.png) |
+| 1 | Select the **State** card so that grab handles appear around it. | ![Select a card](media/working-with-form-layout/state-morph-2.png) |
+| 2 | Select the label within this card so that grab handles appear around it. | ![Select a control within a card](media/working-with-form-layout/state-morph-3.png)
+| 3 | Place the cursor to the right of the text, and then delete the portion that we don't need. | ![Change the text within a control within a card](media/working-with-form-layout/state-morph-3b.png) |
 | 4 | Using the grab handles on the sides, size the label control to fit the new text size. | ![Resize a control within a card](media/working-with-form-layout/state-morph-4b.png) |
 | 5 | Select the text input control within this card. | ![Select a different control within the card](media/working-with-form-layout/state-morph-6.png) |
-| 6 | Using the grab handles on the sides, size the text input control to the size desired. | ![Resize a control within a card](media/working-with-form-layout/state-morph-6b.png) |
-| 7 | Drag and drop the text input box up and to the right of the label control. | ![Move a control within a card](media/working-with-form-layout/state-morph-7b.png) |
-| 8 | Our modifications to the state card are now complete. | ![Modifications to the card are complete](media/working-with-form-layout/state-morph-8.png)
+| 6 | Using the grab handles on the sides, size the text input control to the size that you want. | ![Resize a control within a card](media/working-with-form-layout/state-morph-6b.png) |
+| 7 | Drag the text input box up and to the right of the label control, and then drop the text input box. | ![Move a control within a card](media/working-with-form-layout/state-morph-7b.png) |
+|   | Our modifications to the **State** card are now complete. | ![Modifications to the card are complete](media/working-with-form-layout/state-morph-8.png)
 
 The result for the complete third address line:
 
 ![Sales order delivery address with more concise third line](media/working-with-form-layout/delivery-address-resize-city-1.png)
 
-Note that many of the cards start out with dynamic formulas for their properties. For example, the Text input control we sized and moved above had a Width property based on the width of its parent. These dynamic formulas are lost when you drag-and-drop and are replaced with static values. If desired, you can restore the dynamic formulas by using the formula bar.
+Note that many of the cards start out with dynamic formulas for their properties. For example, the Text input control that we resized and moved above had a **Width** property based on the width of its parent. When you move or resize a control, these dynamic formulas are replaced with static values. If you want, you can restore the dynamic formulas by using the formula bar.
 
-## Turning off snap to columns ##
+## Turning off Snap to columns ##
 
-Sometimes you will want finer control than the standard 12 columns can provide. For these cases you can turn off "Snap to columns" and position cards manually. The form will continue snapping to 12 columns, but you can also hold down the ALT key to manually position and size a card as desired.
+Sometimes you'll want finer control than the standard 12 columns can provide. For these cases, you can turn off "Snap to columns" and position cards manually. The form will continue snapping to 12 columns, but you can also hold down the ALT key to manually position and size a card as desired.
 
 In our example, the four components that make up the third line of the address all have exactly the same width. But this may not be the best layout, as City names are often longer than State names, and the input control for Country/region is short due to the length of its label.
 
