@@ -90,7 +90,7 @@ If you're new to PowerApps (or have only generated apps automatically), you'll w
 	- **Sales person**
 	- **Account contact**
 
-1. Move the **Order status** by dragging it to the left and then dropping it on the other side of the **Customer purchase order reference** field.
+1. Move the **Order status** field by dragging it to the left and then dropping it on the other side of the **Customer purchase order reference** field.
 
 	Your screen should resemble this example:
 
@@ -108,7 +108,7 @@ You can also select cards directly on the form. When a card is selected, a black
 ## Arrange cards in columns ##
 By default, forms in tablet apps have three columns, and those in phone apps have one. You can specify not only how many columns a form has but also whether all cards should fit within column borders.
 
-In this graphic, the number of columns in the form was changed from three to four with the **Snap to columns** check box selected. The cards in the form were arranged automatically to fit the new layout
+In this graphic, the number of columns in the form was changed from three to four with the **Snap to columns** check box selected. The cards in the form were arranged automatically to fit the new layout.
 
 ![Sales order in a basic four-column layout](media/working-with-form-layout/sales-order-form-screen-4.png)
 
@@ -242,7 +242,7 @@ If we also set **WidthFit** to **true** on the **Order date** card, both cards w
 
 Note that grab handles on these cards take into account the extra width provided by **WidthFit**, not the minimum width provided by the **Width** property. It can be confusing to manipulate the **Width** property while **WidthFit** is turned on; 	you may want to turn it off, make changes to **Width**, and then turn it back on.
 
-When might **WidthFit** be useful? If you have a field that is used  only in certain situations, you can set its **Visible** property to **false**, and the other cards on the row will automatically fill the space around it. You might want to use a formula that shows a field when another field has a particular value.
+When might **WidthFit** be useful? If you have a field that is used  only in certain situations, you can set its **Visible** property to **false**, and the other cards on the row will automatically fill the space around it. You might want to use a formula that shows a field only when another field has a particular value.
 
 Here, we'll set the **Visible** property of the **Order status** field to a static **false**:
 
