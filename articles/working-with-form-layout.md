@@ -15,7 +15,7 @@
 	ms.topic="article"
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
-	ms.date="05/23/2017"
+	ms.date="06/17/2017"
 	ms.author="gregli"/>
 
 # Understand data-form layout in Microsoft PowerApps #
@@ -86,8 +86,9 @@ If you're new to PowerApps (or have only generated apps automatically), you'll w
 1. In the right-hand pane, hide each of these fields by clearing its checkbox:
 
 	- **Sales order ID**
-	- **Account contact**
+	- **Account**
 	- **Sales person**
+	- **Account contact**
 
 1. Move the **Order status** by dragging it to the left and then dropping it on the other side of the **Customer purchase order reference** field.
 
