@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Create an app to handle project requests | Microsoft PowerApps"
+   pageTitle="Generate an app to handle project requests | Microsoft PowerApps"
    description="In this task, we'll generate a basic *three screen app* directly from a SharePoint list."
    services=""
    suite="powerapps"
@@ -17,7 +17,7 @@
    ms.date="06/12/2017"
    ms.author="mblythe"/>
 
-# Create an app to handle project requests
+# Generate an app to handle project requests
 
 **Note:** This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
@@ -37,7 +37,15 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
 ## Step 2: Review the app in PowerApps Studio
 
-1. In PowerApps Studio, click or tap each screen in the left navigation bar to review that screen in the middle pane. There are three screens:
+1. In PowerApps Studio, the left navigation bar by default shows a hierarchical view of the screens and controls in the app.
+
+    ![PowerApps Studio with hierarchical view](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
+
+2. Click or tap the thumbnail icon to switch views.
+
+    ![PowerApps Studio view selector](./media/sharepoint-scenario-generate-app/02-02-02-studio-view-selector.png)
+
+3. Click or tap each screen to view it in the middle pane. There are three screens:
 
     1. The **browse** screen, where you browse, sort, and filter the data pulled in from the list.
 
@@ -45,7 +53,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
     3. The **edit/create** screen, where you edit an existing item or create a new one.
 
-       ![PowerApps Studio with app screens](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens.png)
+    ![PowerApps Studio with thumbnail view](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
 
 ## Step 3: Customize the app's browse screen
 
@@ -123,7 +131,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
 4. Click or tap ![Pencil edit icon](./media/sharepoint-scenario-generate-app/icon-pencil.png) to edit the item.
 
-5.  Update the **Description** field – change the last word from "group" to "team," then click or tap ![Check mark icon](./media/sharepoint-scenario-generate-app/icon-check-mark.png).
+5.  Update the **Description** field – change the last word from "group" to "team," then click or tap ![Check mark icon](./media/sharepoint-scenario-generate-app/icon-check-mark.png)
 
     ![Update Description field](./media/sharepoint-scenario-generate-app/02-05-07-edit.png)
 

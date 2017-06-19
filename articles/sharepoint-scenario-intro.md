@@ -17,7 +17,7 @@
    ms.date="06/12/2017"
    ms.author="mblythe"/>
 
-# Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online (Introduction)
+# Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online
 
 Do you have SharePoint Online and want to better automate and streamline your business processes? Have you worked with PowerApps, Microsoft Flow, or Power BI, but you're not sure how to use them with SharePoint Online? You've come to the right place! This series of tutorials explores how to build out a basic project-management app based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Microsoft Flow, and Power BI. These technologies work together, making it easy to *measure* your business, *act* on the results, and *automate* your workflows. When you're done with this series, you will have a cool scenario like the following:
 
@@ -26,7 +26,7 @@ Do you have SharePoint Online and want to better automate and streamline your bu
 
 ## Business scenario
 
-In this series of tutorials, the company Contoso has a SharePoint Online site where they manage the lifecycle of projects, from request, to approval, to development to final review. A *project requestor*, such as a department head, requests an IT project by adding an item to a SharePoint list. A *project approver*, such as an IT manager, reviews the project, and then approves it or rejects it. If approved, the project is assigned to a *project manager*, and additional detail is added to a second list through the same app. A *business analyst* reviews current and completed projects using a Power BI report embedded in SharePoint.  Microsoft Flow is used to send approval email and respond to Power BI alerts.
+In this series of tutorials, the company Contoso has a SharePoint Online site where they manage the lifecycle of projects, from request, to approval, to development, to final review. A *project requestor*, such as a department head, requests an IT project by adding an item to a SharePoint list. A *project approver*, such as an IT manager, reviews the project, and then approves it or rejects it. If approved, the project is assigned to a *project manager*, and additional detail is added to a second list through the same app. A *business analyst* reviews current and completed projects using a Power BI report embedded in SharePoint.  Microsoft Flow is used to send approval email and respond to Power BI alerts.
 
 ## Getting started quickly
 
@@ -49,11 +49,11 @@ To complete the scenario, you need the following subscriptions and desktop tools
 | **Subscription or tool**                 | **Link** |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Office 365 Business Premium subscription | [Trial subscription](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) |
-| PowerApps subscription                   | [Trial subscription](https://powerapps.microsoft.com/) (click **Sign up free**) |
+| PowerApps subscription                   | [Trial subscription](https://powerapps.microsoft.com/) (click **Get started free**) |
 | PowerApps Studio                         | Use PowerApps Studio for web or [PowerApps Studio for Windows](https://aka.ms/powerappswin) |
 | Microsoft Flow subscription              | [Trial subscription](https://flow.microsoft.com/) (click **Sign up free**) |
-| Power BI Pro subscription                | [Trial subscription](https://powerbi.microsoft.com/get-started/) (click **Sign up**) |
-| Power BI Desktop                         | [Free download](https://powerbi.microsoft.com/get-started/) (click **Download**) |
+| Power BI Pro subscription                | [Trial subscription](https://powerbi.microsoft.com/get-started/) (click **TRY FREE**) |
+| Power BI Desktop                         | [Free download](https://powerbi.microsoft.com/get-started/) (click **DOWNLOAD FREE**) |
 
 Ideally, you have basic familiarity with each technology, but you can still complete the scenario if you're new to some of these technologies. Use the following content to get up to speed:
 
