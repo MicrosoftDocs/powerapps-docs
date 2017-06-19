@@ -115,7 +115,7 @@ In this step, we'll connect to the **Product Details** SharePoint list. We only 
 
     The **Data sources** tab in the right pane now shows the connection that you have created.
 
-   ![Data sources tab](./media/sharepoint-scenario-build-app/04-02-06-data-sources.png)
+    ![Data sources tab](./media/sharepoint-scenario-build-app/04-02-06-data-sources.png)
 
 ## Step 3: Build the SelectTask screen
 

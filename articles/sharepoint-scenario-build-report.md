@@ -123,13 +123,13 @@ In this step, we'll first connect to the two lists. Then we'll clean up the data
 
 1. Select the **ProjectedDays** column, click or tap **Data Type: Any**, then **Whole Number**.
 
-   ![Change data type to whole number](./media/sharepoint-scenario-build-report/05-01-10-datatype-number.png)
+    ![Change data type to whole number](./media/sharepoint-scenario-build-report/05-01-10-datatype-number.png)
 
 2. Repeat the previous step for the **ActualDays** column.
 
 3. Select the **ApprovedDate** column, click or tap **Data Type: Any**, then **Date**.
 
-   ![ Change data type to date](./media/sharepoint-scenario-build-report/05-01-11-datatype-date.png)
+    ![ Change data type to date](./media/sharepoint-scenario-build-report/05-01-11-datatype-date.png)
 
 4. Repeat the previous step for the **ProjectedStartDate** and **ProjectedEndDate** columns.
 
@@ -393,11 +393,11 @@ After we've created these report visualizations in Power BI Desktop, we'll publi
 
     The visualization should now look like the following image.
 
-   ![VarProjectedActual by PMAssigned](./media/sharepoint-scenario-build-report/05-03-08-chart-variance.png)
+    ![VarProjectedActual by PMAssigned](./media/sharepoint-scenario-build-report/05-03-08-chart-variance.png)
 
     You can see from this chart how much more variability there is for projects that were run by Irvin Sayers versus Joni Sherman. Drill in to see the variability by project, and whether the days projected was more or less than the actual days.
 
-   ![VarProjectedActual by Title](./media/sharepoint-scenario-build-report/05-03-09-chart-variance-drill.png)
+    ![VarProjectedActual by Title](./media/sharepoint-scenario-build-report/05-03-09-chart-variance-drill.png)
 
 6. Before we create more visualizations, move and resize the ones you already created, so they fit side-by-side.
 

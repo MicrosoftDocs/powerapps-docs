@@ -55,7 +55,7 @@ The second list is **Project Details**, which tracks details for all approved pr
 
 ## Step 2: Create and review the lists
 
-To continue with the scenario, you need to create the two SharePoint lists and populate them with sample data. We'll show you how to do this by creating the list and pasting sample data into it.
+To continue with the scenario, you need to create the two SharePoint lists and populate them with sample data. We'll show you how to do this by creating the list and pasting sample data into it. Make sure you have the Excel files from the [download package](https://aka.ms/o4ia0f).
 
 **Note:** Use Internet Explorer for this step.
 
@@ -83,17 +83,17 @@ To continue with the scenario, you need to create the two SharePoint lists and p
 
     ![Create description column](./media/sharepoint-scenario-setup/01-01-05-description-column.png)
 
-3. Repeat steps **a**. and **b.** for the other columns in the list:
+3. Repeat steps **1.** and **2.** for the other columns in the list:
 
-    1. **Single line of text** &gt; "ProjectType"
+    1. **Single line of text** > "ProjectType"
 
-    2. **Date** &gt; "RequestDate"
+    2. **Date** > "RequestDate"
 
-    3. **Single line of text** &gt; "Requestor"
+    3. **Single line of text** > "Requestor"
 
-    4. **Number** &gt; "EstimatedDays"
+    4. **Number** > "EstimatedDays"
 
-    5. **Single line of text** &gt; "Approved"
+    5. **Single line of text** > "Approved"
 
 ### Copy data into the list
 
@@ -123,7 +123,7 @@ As noted in the introduction to this tutorial series, we included two sample app
 
 1. Open **project-management-app.msapp** in PowerApps Studio.
 
-2. Click or tap **Allow**, so that PowerApps to use SharePoint.
+2. Click or tap **Allow**, so that PowerApps can use SharePoint.
 
 3. On the ribbon, on the **Content** tab, click or tap **Data sources**.
 
