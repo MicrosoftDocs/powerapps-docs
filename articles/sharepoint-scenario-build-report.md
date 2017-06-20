@@ -229,19 +229,19 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 
 2. Enter this formula into the formula bar:
 
-   ```
-   ApprovedStartDiff = CALCULATE(SUM(Dates[IsWeekday]),
+    ```
+    ApprovedStartDiff = CALCULATE(SUM(Dates[IsWeekday]),
 
-      DATESBETWEEN(Dates[Date], 
+       DATESBETWEEN(Dates[Date], 
 
-         'Project Details'[ApprovedDate],
+          'Project Details'[ApprovedDate],
 
-         'Project Details'[ProjectedStartDate] 
+          'Project Details'[ProjectedStartDate] 
 
-     )
+      )
 
-   )
-   ```
+    )
+    ```
 
     This formula calculates the difference in days between when a project was approved and when it is projected to start. It uses the **IsWeekday** column from the **Dates** table, so it counts only weekdays.
 

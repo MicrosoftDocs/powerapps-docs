@@ -31,7 +31,7 @@ You used PowerApps Studio for web in the last task, but we want to make sure you
 
 PowerApps Studio has three panes and a ribbon that make app creation feel like building a slide deck in PowerPoint:
 
-1. Left navigation bar, which shows thumbnails of all the screens in your app and a tree view of all the app's controls
+1. Left navigation bar, which shows a hierarchical view of all the app's screens and controls, as well as thumbnails of the screens
 
 2. Middle pane, which contains the app screen you are working on
 
@@ -64,11 +64,11 @@ With that review out of the way, let's start building an app. In this step, we'l
 
     1. Click or tap **File**, which opens to an **App settings** tab. Enter the name "Project Management app".
 
-       ![App name](./media/sharepoint-scenario-build-app/04-01-02-app-name.png)
+    ![App name](./media/sharepoint-scenario-build-app/04-01-02-app-name.png)
 
     2. Click or tap **Save as**, verify that app will save to the cloud, then click **Save** in the lower right corner.
 
-        ![Save to the cloud](./media/sharepoint-scenario-build-app/04-01-03-save-to-cloud.png)
+    ![Save to the cloud](./media/sharepoint-scenario-build-app/04-01-03-save-to-cloud.png)
 
     3. Click or tap ![Back to app icon](./media/sharepoint-scenario-build-app/icon-back-to-app.png) to go back to the app.
 
@@ -571,7 +571,7 @@ First, we'll assume the role of the project approver - we'll look for any projec
 
     ![Updated SharePoint list](./media/sharepoint-scenario-build-app/04-07-11-updated-list.png)
 
-## Formula deep-dive (2) - optional
+## Formula deep-dive
 
 This is the second optional section on PowerApps formulas. In the first deep-dive, we looked at one of the formulas that PowerApps generates for the browse gallery in a three-screen app. In this deep-dive, we'll look at a formula that we use for the **AssignManager** screen of our second app. Here's the formula:
 
