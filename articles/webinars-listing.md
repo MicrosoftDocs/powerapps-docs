@@ -23,30 +23,43 @@ These webinars can help you to leverage the features and functions of Microsoft 
 
 ## Upcoming webinars ##
 
-**Deploying your PowerApps applications**
-<br>by James Oleinik
-<br>*May 25, 2017, @ 10:00AM Pacific Time, 1:00PM Eastern Time*
+**Top 5 Tips for Designing PowerApps that Mean Business**
+<br>by Audrie Gordon on June 27th, 10:00AM PST, 1:00PM EST
 
-James Oleinik, Senior Program Manager on the PowerApps team, will be presenting on how to move, deploy, and migrate your PowerApps applications across environments and tenants. In this webinar, James will cover the deployment strategies, migrating from Tenants (like Test to Production), and finish with the administration and the security best practices involved with these deployments.
+This demonstration will give you an advantage as an app builder or designer; optimizing change management, and reducing the number of formulas you’ll need to configure:<br>
+- Learn to build 3 object relationships that help you to edit once, and ripple changes throughout your apps (aka “styling” you apps)
+- Learn to pass parameters from one screen to the next (limits number of screens needed and can improve performance)
+- Learn to document your app to facilitate knowledge transfer, and/or team iterations!
 
-[Click to join](https://www.youtube.com/watch?v=LF49hFB14Cs) on May 25th!
+[Click here to watch on June 27th](https://www.youtube.com/watch?v=Ql-pK9ixKxw<p>)
 
-**Look behind the curtain with one of the PowerApp Developers: Marie Hoeger**
-<br>by Audrie Gordon
-<br>*June 1, 2017, @ 10:00AM Pacific Time, 1:00PM Eastern Time*
+**Application LIfecycle with the new Save and publish options in PowerApps**
+<br>by Karthik Bharathy on July 11th, 10:00AM PST, 1:00PM EST
 
-Looking for new ways to leverage PowerApps? In this webinar Audrie will interview one of the PowerApp developers, Marie Hoeger. We will get some insight from Marie on what inspired her to develop for Microsoft, and get some ideas on typical PowerApp use cases for science and education. We’ll demo a couple of fun apps on the topic as well!
-
-[Click to join](https://www.youtube.com/watch?v=YF3DKZxlUdM) on June 1st!
+In this session app authors will learn how they can control what users see when there are multiple revisions of the app from authors. We will also look at saving apps, publishing apps and restoring versions in this walkthrough.
 <br>
-  	
-**Deep dive on PowerApps formulas**
-<br>by Greg Lindhorst
-<br>*June 20, 2017, @ 10:00AM Pacific Time, 1:00PM Eastern Time*
+[Click here to watch on July 11th](https://www.youtube.com/watch?v=Np3DXBQvq2I)
 
-Join Greg Lindhorst on a deep dive on PowerApps formulas, by the author of the entire [formula reference](https://powerapps.microsoft.com/tutorials/formula-reference/)
+**Pro Tips for Connecting to Excel on OneDrive for Business from PowerApps**
+<br>by Audrie Gordon on July 18th, 10:00AM PST, 1:00PM EST
 
-[Click to join](https://www.youtube.com/watch?v=PuePMMuj5ps) in June 20th!
+Excel users we’ve heard your requests, and we’re excited to share a collection of best practices for anyone connecting to Excel data. We’ll focus on create, read, update, and delete formulas with Excel…and give you several shortcuts along the way!
+<br>
+[Click here to watch on July 18th](https://www.youtube.com/watch?v=WPhux5_3Sfs)
+
+**Rapidly Build Applications with PowerApps Studio**
+<br>by Karthik Bharathy on July 25th, 10:00AM PST, 1:00PM EST
+
+PowerApps Studio comes with a host of new capabilities allowing users to rapidly build applications. In this walkthrough app authors will use the latest Studio capabilities to quickly build production applications without having to invest in a lot of learning.
+<br>
+[Click here to watch on July 25th](https://www.youtube.com/watch?v=Bqp2tCnsBR0)
+
+**Overview of PowerApps Feature Releases for 2017**
+<br>by Darshan Desai on August 1st, 10:00AM PST, 1:00PM EST
+
+It’s hard to keep up these days with the Product Team releasing new features every single sprint! Let’s take a step back and review the long list of new features released thus far this year….you won’t be disappointed!
+<br>
+[Click here to watch on August 1st](https://www.youtube.com/watch?v=Bqp2tCnsBR0)
 
 
 ## Past webinars ##
@@ -72,6 +85,14 @@ Webinars are available on-demand after the live broadcast. Please note that you 
 
 **Pro Topics:**
 
+**Deploying your PowerApps applications**
+<br>by James Oleinik
+[Watch now](https://www.youtube.com/watch?v=LF49hFB14Cs)
+
+**Deep dive on PowerApps formulas**
+<br>by Greg Lindhorst
+[Watch now](https://www.youtube.com/watch?v=PuePMMuj5ps)
+
 **Rebuilding an InfoPath Designer form in PowerApps**
 <br>by Daniel Christian
 [Watch now](https://www.youtube.com/watch?v=ohQcxcVZSK4)
@@ -79,3 +100,10 @@ Webinars are available on-demand after the live broadcast. Please note that you 
 **Connecting to on-premises data from PowerApps**
 <br>by Archana Nair and Dimah Zaidalkilani
 [Watch now](https://www.youtube.com/watch?v=YBdO2MAulx8)
+
+**App Designer Topics:**
+
+**Look behind the curtain with one of the PowerApp Developers: Marie Hoeger**
+<br>by Audrie Gordon
+[Click to join](https://www.youtube.com/watch?v=YF3DKZxlUdM) on June 1st!
+  	
