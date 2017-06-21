@@ -97,6 +97,14 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Greg Lindhorst
 [Watch now](https://www.youtube.com/watch?v=PuePMMuj5ps)
 
+**Deploying your PowerApps applications**
+<br>by James Oleinik
+[Watch now](https://www.youtube.com/watch?v=LF49hFB14Cs)
+
+**Deep dive on PowerApps formulas**
+<br>by Greg Lindhorst
+[Watch now](https://www.youtube.com/watch?v=PuePMMuj5ps)
+
 **Rebuilding an InfoPath Designer form in PowerApps**
 <br>by Daniel Christian
 [Watch now](https://www.youtube.com/watch?v=ohQcxcVZSK4)
@@ -109,5 +117,5 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 
 **Look behind the curtain with one of the PowerApps Developers: Marie Hoeger**
 <br>by Audrie Gordon
-[Click to join](https://www.youtube.com/watch?v=YF3DKZxlUdM) on June 1st!
+[Watch now](https://www.youtube.com/watch?v=YF3DKZxlUdM)
   	
