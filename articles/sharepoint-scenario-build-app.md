@@ -47,7 +47,27 @@ PowerApps Studio has three panes and a ribbon that make app creation feel like b
 
 ## Step 1: Create screens
 
-With that review out of the way, let's start building an app. In this step, we'll create four blank screens for the app. We'll build these screens out in later steps.
+With that review out of the way, let's start building an app.
+
+### Create and save the app
+
+1. In PowerApps Studio, click or tap **New**, then under **Blank app**, click or tap **Phone Layout**.
+
+    ![Blank app - phone layout](./media/sharepoint-scenario-build-app/04-01-01-blank-phone-app.png)
+
+2. Click or tap **File**, which opens to an **App settings** tab. Enter the name "Project Management app".
+
+    ![App name](./media/sharepoint-scenario-build-app/04-01-02-app-name.png)
+
+3. Click or tap **Save as**, verify that app will save to the cloud, then click **Save** in the lower right corner.
+
+    ![Save to the cloud](./media/sharepoint-scenario-build-app/04-01-03-save-to-cloud.png)
+
+4. Click or tap ![Back to app icon](./media/sharepoint-scenario-build-app/icon-back-to-app.png) to go back to the app.
+
+### Add four screens to the app
+
+In this step, we'll create four blank screens for the app. We'll use different screen layouts, depending on the screen's purpose. We'll add to these screens in later steps.
 
 | **Screen**        | **Purpose**                                       |
 |-------------------|---------------------------------------------------|
@@ -56,36 +76,30 @@ With that review out of the way, let's start building an app. In this step, we'l
 | **ViewProjects**  | View a list of projects, with summary information |
 | **UpdateDetails** | View and update the details for a project         |
 
-1. In PowerApps Studio, click or tap **New**, then under **Blank app**, click or tap **Phone Layout**.
 
-    ![Blank app - phone layout](./media/sharepoint-scenario-build-app/04-01-01-blank-phone-app.png)
+1. On the **Home** tab, click or tap **NewScreen**, then **Scrollable screen**.
 
-2. Save the app to the cloud:
+    ![Scrollable screen](./media/sharepoint-scenario-build-app/04-01-03a-scrollable-screen.png)
 
-    1. Click or tap **File**, which opens to an **App settings** tab. Enter the name "Project Management app".
-
-    ![App name](./media/sharepoint-scenario-build-app/04-01-02-app-name.png)
-
-    2. Click or tap **Save as**, verify that app will save to the cloud, then click **Save** in the lower right corner.
-
-    ![Save to the cloud](./media/sharepoint-scenario-build-app/04-01-03-save-to-cloud.png)
-
-    3. Click or tap ![Back to app icon](./media/sharepoint-scenario-build-app/icon-back-to-app.png) to go back to the app.
-
-
-3. On the **Home** tab, click or tap **Screen1,** then rename the screen to **SelectTask**.
+2. Rename the screen to **SelectTask**.
 
     ![Rename screen](./media/sharepoint-scenario-build-app/04-01-04-rename-screen.png)
 
-4. Create and rename additional screens:
+3. Create and rename additional screens:
 
-    1. On the **Home** tab, click or tap **New screen**, then rename that screen to **AssignManager**.
+    1. Click or tap **NewScreen**, then **Scrollable screen**. Rename the screen to **AssignManager**.
 
-    2. Repeat the previous step for the other screens: **ViewProjects** and **UpdateDetails**.
+    2. Click or tap **NewScreen**, then **List screen**. Rename the screen to **ViewProjects**.
 
-    The app should now look like the following image.
+    3. Click or tap **NewScreen**, then **Form screen**. Rename the screen to **UpdateDetails**.
 
-    ![All app screens](./media/sharepoint-scenario-build-app/04-01-05-all-screens.png)
+4. Select the ellipsis (**. . .**) next to **Screen1**, then click or tap **Delete**.
+
+    ![Delete screen](./media/sharepoint-scenario-build-app/04-01-04a-delete-screen.png)
+
+The app should now look like the following image.
+
+![All app screens](./media/sharepoint-scenario-build-app/04-01-05-all-screens.png)
 
 ## Step 2: Connect to a SharePoint list
 
@@ -93,23 +107,27 @@ In this step, we'll connect to the **Product Details** SharePoint list. We only 
 
 1. In the left navigation bar, click or tap the **SelectTask** screen.
 
-2. In the middle pane, click or tap **connect to data**.
+2. In the right pane, click or tap **Add data source**.
 
     ![Connect to data](./media/sharepoint-scenario-build-app/04-02-01-connect.png)
 
-3. In the right pane, click or tap **New connection**.
+3. Click or tap **New connection**.
 
     ![New connection](./media/sharepoint-scenario-build-app/04-02-02-new-connection.png)
 
-4. Click or tap **SharePoint**, then **Connect**.
+4. Click or tap **SharePoint**.
 
     ![SharePoint connection](./media/sharepoint-scenario-build-app/04-02-03-sharepoint-connection.png)
 
-5. Enter a SharePoint URL, then click or tap **Go**.
+5. Select **Connect directly (cloud services)**, then **Create**.
+
+    ![Connect directly (cloud services)](./media/sharepoint-scenario-build-app/04-02-03a-sharepoint-cloud.png)
+
+6. Enter a SharePoint URL, then click or tap **Go**.
 
     ![SharePoint URL for connection](./media/sharepoint-scenario-build-app/04-02-04-sharepoint-url.png)
 
-6. Select the **Project Details** list, then click or tap **Connect**.
+7. Select the **Project Details** list, then click or tap **Connect**.
 
     ![Select Project Details list](./media/sharepoint-scenario-build-app/04-02-05-sharepoint-lists.png)
 
@@ -121,25 +139,19 @@ In this step, we'll connect to the **Product Details** SharePoint list. We only 
 
 In this step, we'll provide a way to navigate to the other screens in the app - working with some of the controls, formulas, and formatting options that PowerApps provides.
 
-### Update the layout for the screen
+### Update the title and insert introductory text
 
-1. In the left navigation bar, click or tap the **SelectTask** screen.
+1. In the left navigation bar, select the **SelectTask** screen.
 
-2. On the **Home** tab, click or tap **Layout**, then select the layout at top left.
-
-    ![Select layout](./media/sharepoint-scenario-build-app/04-03-01-select-layout.png)
-
-3. In the middle pane, select the default **[Title]**, then in the formula bar, update the **Text** property to "Contoso Project Management".
+2. In the middle pane, select the default **[Title]**, then in the formula bar, update the **Text** property to "Contoso Project Management".
 
     ![Text property in formula bar](./media/sharepoint-scenario-build-app/04-03-02-text-property.png)
 
-### Insert introductory text
-
-1. On the **Insert** tab, click or tap **Text box**, then drag the text box down below the top banner.
+3. On the **Insert** tab, click or tap **Label**, then drag the label down below the top banner.
 
     ![Add label](./media/sharepoint-scenario-build-app/04-03-03-text-default.png)
 
-2. In the formula bar, set the following properties for the text box:
+4. In the formula bar, set the following properties for the label:
 
     - **Color** property = **DarkGray**
 
@@ -151,7 +163,7 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
 
 ### Add two navigation buttons
 
-1. On the **Insert** tab, click or tap **Button**, then drag the button below the text box.
+1. On the **Insert** tab, click or tap **Button**, then drag the button below the label.
 
     ![Add button](./media/sharepoint-scenario-build-app/04-03-05-button-default.png)
 
@@ -165,17 +177,15 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
 
     ![Update button text](./media/sharepoint-scenario-build-app/04-03-06-button-updated.png)
 
-4. Copy the button and paste it below the first one, so you can create a second button with some different properties.
-
-    ![Copy buttons](./media/sharepoint-scenario-build-app/04-03-07-buttons-copied.png)
-
-5.  Set the following properties for the second button:
+4. Insert another button with the following properties:
 
     - **OnSelect** property = **Navigate(ViewProjects, Fade)**.
 
     - **Text** property = **"Update Details"**
 
     ![Update button text](./media/sharepoint-scenario-build-app/04-03-08-buttons-final.png)
+
+    **Note:** The button is labeled **Update Details**, but we first navigate to the **ViewProjects** screen to select a project to update.
 
 ### Run the app
 
@@ -191,7 +201,7 @@ The app doesn't do a lot yet, but you can run it if you like:
 
 ## Step 4: Build the AssignManager screen 
 
-In this step, we'll add a gallery to display all projects that have been approved but don't yet have a manager. We'll add other controls, so you can assign a manager.
+In this step, we'll use a gallery to display all projects that have been approved but don't yet have a manager. We'll add other controls, so you can assign a manager.
 
 **Note:**  We'll build a page later in the app that allows you to edit all fields for a project (including the manager field), but we thought it would be cool to show you how to build a screen like this one as well.
 
@@ -199,13 +209,11 @@ In this step, we'll add a gallery to display all projects that have been approve
 
 2. In the left navigation bar, click or tap the **AssignManager** screen.
 
-### Update the layout for the screen
+### Update the title and insert introductory text
 
-1. Change the layout style to include a blue bar at the top.
+1. Change **[Title]** to **Assign Manager**.
 
-2. Change **[Title]** to **Assign Manager**.
-
-3. Add a text box with the following properties:
+2. Add a label with the following properties:
 
     - **Color** property = **DarkGray**
 
@@ -271,7 +279,7 @@ In this step, we'll add a gallery to display all projects that have been approve
 
     - **FontWeight** property = **Bold**
 
-5. Resize text boxes in the gallery as appropriate. The screen should now look like the following image.
+5. Resize labels in the gallery as appropriate. The screen should now look like the following image.
 
     ![Formatted gallery](./media/sharepoint-scenario-build-app/04-04-07-gallery-size-text.png)
 
@@ -283,11 +291,11 @@ In this step, we'll add a gallery to display all projects that have been approve
 
     ![Gallery with selected item](./media/sharepoint-scenario-build-app/04-04-08-gallery-selected.png)
 
-### Add a text box, text input, and OK button to submit manager assignments
+### Add a label, text input, and OK button to submit manager assignments
 
 1.  Click or tap outside the gallery you've been working on.
 
-2.  On the **Insert** tab, click or tap **Text box**. Drag the button below the gallery, to the left. Set the following properties for the text box:
+2.  On the **Insert** tab, click or tap **Label**. Drag the button below the gallery, to the left. Set the following properties for the label:
 
     - **Size** property = **20**
 
@@ -529,7 +537,7 @@ First, we'll assume the role of the project approver - we'll look for any projec
 
     ![Gallery with item selected](./media/sharepoint-scenario-build-app/04-07-04-selected.png)
 
-5. In the **Manager** text box, enter "Joni Sherman", then click **OK**.
+5. In the **Manager** text input, enter "Joni Sherman", then click **OK**.
 
     The change is applied to the list, and the gallery refreshes so only the remaining unassigned project is displayed.
 
@@ -577,7 +585,7 @@ This is the second optional section on PowerApps formulas. In the first deep-div
 
 **Patch ( 'Project Details', LookUp ( 'Project Details', ID = Gallery1.Selected.ID ), {PMAssigned: TextInput2.Text} )**
 
-What does this formula do? When you select an item in the gallery and click the **OK** button, the formula updates the **Project Details** list, setting the **PMAssigned** column to the value that you specify in the text box. The formula uses functions to do its work:
+What does this formula do? When you select an item in the gallery and click the **OK** button, the formula updates the **Project Details** list, setting the **PMAssigned** column to the value that you specify in the text input. The formula uses functions to do its work:
 
 - The [**Patch** function](functions/function-patch.md) modifies one or more records of a data source.
 

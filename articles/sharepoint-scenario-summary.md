@@ -17,7 +17,7 @@
    ms.date="06/12/2017"
    ms.author="mblythe"/>
 
-# End-to-end walkthrough of SharePoint Online integration scenario
+# Walk end-to-end through the completed SharePoint Online integration scenario
 
 **Note:** This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
@@ -97,7 +97,7 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
 
     ![Unassigned project selected in app](./media/sharepoint-scenario-summary/09-03-03-selected.png)
 
-5. In the **Manager** text box, enter "Joni Sherman", then click **OK**.
+5. In the **Manager** text input, enter "Joni Sherman", then click **OK**.
 
     The change is applied to the list, and the gallery refreshes so only the remaining unassigned project is displayed.
 
