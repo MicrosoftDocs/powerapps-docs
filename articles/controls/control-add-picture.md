@@ -36,11 +36,11 @@ These properties apply to the outer control.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **Error** - If there is a problem uploading an image, this property will contain an appropriate error string.
 
@@ -76,7 +76,7 @@ These properties apply to the inner label control that by default says "Tap or c
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 

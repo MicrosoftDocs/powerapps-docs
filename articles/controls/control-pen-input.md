@@ -38,7 +38,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 

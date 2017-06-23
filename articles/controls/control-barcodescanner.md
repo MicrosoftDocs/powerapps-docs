@@ -40,7 +40,7 @@ If you add this control, the user can update a data source with one or more phot
 
 **Contrast** – How easily the user can distinguish between similar colors in an image.
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
