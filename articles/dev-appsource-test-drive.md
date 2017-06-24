@@ -103,4 +103,6 @@ In summary, you can create a version of your app with embedded data, which simul
 
 ## How do I list my Test Drive solution on AppSource.com? ##
 
-Now that your app is ready, it's time to publish it to AppSource.com. In order to start this process, please complete the [application form](https://powerapps.microsoft.com/partners/get-listed/) on PowerApps.com. Once you apply you will receive an email with instructions on how to submit your app to be published on AppSource.com.
+Now that your app is ready, it's time to publish it to AppSource.com. In order to start this process, please complete the [application form](https://powerapps.microsoft.com/partners/get-listed/) on PowerApps.com.
+
+Once you apply you will receive an email with instructions on how to submit your app to be published on AppSource.com. The onboarding documentation that captures the full end-to-end process can also be downloaded [here](https://go.microsoft.com/fwlink/?linkid=851031).

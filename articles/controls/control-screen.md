@@ -34,9 +34,19 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-**OnHidden** – How an app responds when the user navigates away from a screen.
+**OnHidden** – The behavior of an app when the user navigates away from a screen.
 
-**OnVisible** – How an app responds when the user navigates to a screen.
+**OnVisible** – The behavior of an app when the user navigates to a screen.
+
+**OnStart** – The behavior of an app when the user opens it or starts to record with a **Microphone** control.
+
+- The formula to which this property is set runs before the first screen of the app appears. Call the [**Navigate**](../functions/function-navigate.md) function to change which screen appears first when the app starts.
+
+- You can't set [context variables](../workding-with-variables.md) with the [**UpdateContext**](../functions/function-updatecontext.md) function because no screen has appeared yet. However, you can pass context variables in the **Navigate** function and create and fill a [collection](../workding-with-variables.md) by using the [**Collect**](../functions/function-collect.md) function.
+
+- When you update an app, the formula to which this property is set runs when the app is loaded into PowerApps Studio. To see the impact of changing this property, you'll need to save, close, and reload your app.
+
+- The **OnStart** property is actually a property of the app, not the screen. For editing convenience, you view and modify it as a property on the first screen of your app. If you remove the first screen or reorder screens, this property may become hard to find. In this case, save, close, and reload your app, and the property will reappear as a property of the first screen.
 
 ## Related functions ##
 

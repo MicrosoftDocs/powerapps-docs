@@ -37,13 +37,13 @@ This article shows you how to restore an app to a previous version that was save
 	![](./media/delete-app/app-options.png)
 
 1. Click or tap the **Versions** tab, and then click or tap **Restore** for the version that you want to restore.  
-	![](./media/restore-an-app/restore-button.png)
+	![](./media/restore-an-app/restore-button-2.png)
 
 1. In the confirmation dialog box, click or tap **Restore**.  
 
 	A new version is added to your list.
 
-	![](./media/restore-an-app/version-added.png)
+	![](./media/restore-an-app/versions-added-2.png)
 
 ## More resources ##
 [Share an app](share-app.md)  
