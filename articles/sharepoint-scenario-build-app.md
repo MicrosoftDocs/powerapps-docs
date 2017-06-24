@@ -119,7 +119,7 @@ In this step, we'll connect to the **Product Details** SharePoint list. We only 
 
     ![SharePoint connection](./media/sharepoint-scenario-build-app/04-02-03-sharepoint-connection.png)
 
-5. Select **Connect directly (cloud services)**, then **Create**.
+5. Select **Connect directly (cloud services)**, then click or tap **Create**.
 
     ![Connect directly (cloud services)](./media/sharepoint-scenario-build-app/04-02-03a-sharepoint-cloud.png)
 
@@ -203,7 +203,7 @@ The app doesn't do a lot yet, but you can run it if you like:
 
 In this step, we'll use a gallery to display all projects that have been approved but don't yet have a manager. We'll add other controls, so you can assign a manager.
 
-**Note:**  We'll build a page later in the app that allows you to edit all fields for a project (including the manager field), but we thought it would be cool to show you how to build a screen like this one as well.
+**Note:**  We'll build a page later in the app that allows you to edit all fields for a project (including the manager field), but we thought it would be cool to build a screen like this one as well.
 
 1. Save the changes you've made so far.
 
@@ -245,15 +245,19 @@ In this step, we'll use a gallery to display all projects that have been approve
 
 ### Add and modify a gallery
 
-1. On the **Insert** tab, click or tap **Gallery**, then **Text gallery** – **Vertical**.
+1. On the **Insert** tab, click or tap **Gallery**, then **Vertical**.
 
-    ![Add a text gallery](./media/sharepoint-scenario-build-app/04-04-04-gallery.png)
+    ![Add a vertical gallery](./media/sharepoint-scenario-build-app/04-04-04-gallery.png)
 
-    The gallery is inserted with default text.
+2. Select **Title, subtitle, and body** from the **Layout** menu in the right pane. 
+
+    ![Change the gallery layout](./media/sharepoint-scenario-build-app/04-04-04a-gallery-layout.png)
+
+    The gallery now has the right layout, but it still has the default sample text. We'll fix that next.
 
     ![Gallery with default text](./media/sharepoint-scenario-build-app/04-04-05-gallery-default.png)
 
-2. Set the following properties for the gallery:
+3. Set the following properties for the gallery:
 
     - **BorderThickness** property = **1**
 
@@ -263,25 +267,23 @@ In this step, we'll use a gallery to display all projects that have been approve
 
     ![Gallery with text from list](./media/sharepoint-scenario-build-app/04-04-06-gallery-updated.png)
 
-3. In the right pane, update the fields to match the following list:
+4. In the right pane, update the fields to match the following list:
 
     - **ApprovedDate**
 
-    - **Title**
-
     - **Status**
+
+    - **Title**
 
     ![Gallery fields](./media/sharepoint-scenario-build-app/04-04-07-gallery-fields.png)
 
-4. Select the title in the first gallery item, and set the following properties:
+5. Resize labels in the gallery as appropriate, and remove the arrow from the first gallery item (we don't need to navigate anywhere from this gallery).
 
-    - **Size** property = **16**.
+    ![Remove arrow icon](./media/sharepoint-scenario-build-app/04-04-07a-remove-arrow.png)
 
-    - **FontWeight** property = **Bold**
+    The screen should now look like the following image.
 
-5. Resize labels in the gallery as appropriate. The screen should now look like the following image.
-
-    ![Formatted gallery](./media/sharepoint-scenario-build-app/04-04-07-gallery-size-text.png)
+    ![Formatted gallery](./media/sharepoint-scenario-build-app/04-04-07b-gallery-size-text.png)
 
 ### Change the color of an item if it's selected
 
