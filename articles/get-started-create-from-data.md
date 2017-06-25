@@ -174,8 +174,7 @@ As you customize an app, you can test your changes by running the app in Preview
 	![Close Preview mode](./media/get-started-create-from-data/close-preview.png)
 
 ## Known limitations
-
-There are currently [certain limitations](./connections/cloud-storage-blob-connections.md#Sharing-Excel-Tables) with connectors involving Excel files. These affect apps that you share within your organization.
+For information about how to share Excel data within your organization, [review these limitations](./connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 
 ## Next steps ##
 - To save the app so that you can run it from other devices, press Ctrl-S.

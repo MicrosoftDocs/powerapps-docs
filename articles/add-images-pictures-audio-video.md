@@ -177,9 +177,8 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 	In **SavePen.xlsx**, the **Image** column specifies the path to the new images.
 
-## Known limitations
-
-There are currently [certain limitations](./connections/cloud-storage-blob-connections.md#Sharing-Excel-Tables) with connectors involving Excel files. These affect apps that you share within your organization.
+## Known limitations ##
+For information about how to share Excel data within your organization, [review these limitations](./connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 
 ## For more information
 
