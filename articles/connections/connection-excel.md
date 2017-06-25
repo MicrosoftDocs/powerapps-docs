@@ -35,6 +35,10 @@ Note: Once you connect to your Excel table from PowerApps, PowerApps will create
 
 For information about how to connect to other types of data, see the [list of connections for PowerApps](../connections-list.md).
 
+## Known limitations
+
+There are currently [certain limitations](./connections/cloud-storage-blob-connections.md#Sharing-Excel-Tables) with connectors involving Excel files. These affect apps that you share within your organization.
+
 <!--NotAvailableYet
 
 ## View the available functions

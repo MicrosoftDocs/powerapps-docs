@@ -78,3 +78,7 @@ For more information, see [Share OneDrive files and folders](https://support.off
 1. Select **Done**.
 
 For more information, see [Share Google Drive files and folders](https://support.google.com/drive/answer/2494822).
+
+## Known limitations
+
+There are currently [certain limitations](./connections/cloud-storage-blob-connections.md#Sharing-Excel-Tables) with connectors involving Excel files. These affect apps that you share within your organization.
