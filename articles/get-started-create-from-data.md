@@ -173,6 +173,9 @@ As you customize an app, you can test your changes by running the app in Preview
 
 	![Close Preview mode](./media/get-started-create-from-data/close-preview.png)
 
+## Known limitations
+For information about how to share Excel data within your organization, [review these limitations](./connections/cloud-storage-blob-connections.md#sharing-excel-tables).
+
 ## Next steps ##
 - To save the app so that you can run it from other devices, press Ctrl-S.
 - Now that you've learned how to generate an app from data, you can [create an app from scratch](get-started-create-from-blank.md).
