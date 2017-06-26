@@ -297,7 +297,7 @@ In this step, we'll use a gallery to display all projects that have been approve
 
 1.  Click or tap outside the gallery you've been working on.
 
-2.  On the **Insert** tab, click or tap **Label**. Drag the button below the gallery, to the left. Set the following properties for the label:
+2.  On the **Insert** tab, click or tap **Label**. Drag the label below the gallery, to the left. Set the following properties for the label:
 
     - **Size** property = **20**
 
@@ -343,9 +343,9 @@ In this step, we'll change properties for the gallery on the **ViewProjects** sc
 
 1. In the left navigation bar, click or tap the **ViewProjects** screen.
 
-2. In the blue bar at the top of the app, click or tap **[Title]**. In the formula bar, set the **Text** property to **"View Projects"**.
+2. Change **[Title]** to **"View Projects"**.
 
-3. In the left navigation bar, click or tap **Gallery1** under **AssignManager**.
+3. In the left navigation bar, click or tap **BrowserGallery1** under **ViewProjects**.
 
 4. Select **Title, subtitle, and body** from the **Layout** menu in the right pane. 
 
@@ -365,7 +365,7 @@ In this step, we'll change properties for the gallery on the **ViewProjects** sc
 
 2. Select the back arrow you added there, and copy it.
 
-3. Paste the arrow into the **View Projects** screen and position it to the left of the refresh button. 
+3. Paste the arrow into the **ViewProjects** screen and position it to the left of the refresh button. 
 
     ![Back button](./media/sharepoint-scenario-build-app/04-05-04-left-arrow-v.png)
 
@@ -401,7 +401,7 @@ In this step, we'll connect the edit form on the **UpdateDetails** screen to our
 
 1. In the left navigation bar, click or tap the **UpdateDetails** screen.
 
-2. In the blue bar at the top of the app, click or tap **[Title]**. In the formula bar, set the **Text** property to **"Update Details"**.
+2. Change **[Title]** to **"Update Details"**.
 
 3. In the left navigation bar, click or tap **EditForm1** under **UpdateDetails**.
 
@@ -533,7 +533,7 @@ Now that we have the app in our SharePoint site, we'll assume the role of the pr
 
 This is the second optional section on PowerApps formulas. In the first deep-dive, we looked at one of the formulas that PowerApps generates for the browse gallery in a three-screen app. In this deep-dive, we'll look at a formula that we use for the **AssignManager** screen of our second app. Here's the formula:
 
-**Patch ( 'Project Details', LookUp ( 'Project Details', ID = Gallery1.Selected.ID ), {PMAssigned: TextInput2.Text} )**
+**Patch ( 'Project Details', LookUp ( 'Project Details', ID = Gallery1.Selected.ID ), {PMAssigned: TextInput1.Text} )**
 
 What does this formula do? When you select an item in the gallery and click the **OK** button, the formula updates the **Project Details** list, setting the **PMAssigned** column to the value that you specify in the text input. The formula uses functions to do its work:
 
@@ -547,7 +547,7 @@ When you put the functions together in the formula, here's what happens:
 
 2. Within the **Patch** function, the **LookUp** function identifies which row of the **Project Details** list to update. It does this by comparing the ID of the selected gallery item to the ID in the list. For example, an ID of 12 means that the entry for **New BI software** should be updated.
 
-3. Now that the **Patch** function has the right ID, it updates the **PMAssigned** field to the value in **TextInput2.Text**.
+3. Now that the **Patch** function has the right ID, it updates the **PMAssigned** field to the value in **TextInput1.Text**.
 
 ## Next steps
 
