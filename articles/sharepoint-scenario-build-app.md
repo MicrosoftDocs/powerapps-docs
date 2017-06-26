@@ -307,6 +307,8 @@ In this step, we'll use a gallery to display all projects that have been approve
 
 3.  On the **Insert** tab, click or tap **Text**, then **Text input**. Drag the text input below the gallery, in the center. Set the following properties for the drop down:
 
+    - **Default** property = **""**
+
     - **Height** property = **60**
 
     - **Size** property = **20**
@@ -319,7 +321,7 @@ In this step, we'll use a gallery to display all projects that have been approve
 
     - **Height** property = **60**
 
-    - **OnSelect** property = **Patch('Project Details', LookUp('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput2.Text})**. For more information, see [Formula deep-dive](#formula-deep-dive).
+    - **OnSelect** property = **Patch('Project Details', LookUp('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**. For more information, see [Formula deep-dive](#formula-deep-dive).
 
     - This formula updates the **Project Details** list, setting a value for the PMAssigned field.
 
@@ -337,65 +339,55 @@ The completed screen should now look like the following image.
 
 ## Step 5: Build the ViewProjects screen
 
-In this step, we'll add a gallery to the **ViewProjects** screen, like the gallery in the first app that we generated. This gallery provides a lot of functionality with minimal effort. The gallery displays items from the **Project Details** list. You select an item on this screen, then you edit the details on the **UpdateDetails** screen.
+In this step, we'll change properties for the gallery on the **ViewProjects** screen. This gallery displays items from the **Project Details** list. You select an item on this screen, then you edit the details on the **UpdateDetails** screen.
 
 1. In the left navigation bar, click or tap the **ViewProjects** screen.
 
-2. On the **Home** tab, click or tap **Layouts**, then select the layout you see in the following image.
+2. In the blue bar at the top of the app, click or tap **[Title]**. In the formula bar, set the **Text** property to **"View Projects"**.
 
-    ![Select layout](./media/sharepoint-scenario-build-app/04-05-01-layout-v.png)
+3. In the left navigation bar, click or tap **Gallery1** under **AssignManager**.
 
-    PowerApps builds a complete screen, and inserts a gallery with default text.
+4. Select **Title, subtitle, and body** from the **Layout** menu in the right pane. 
 
-3. In the blue bar at the top of the app, click or tap **[Title]**. In the formula bar, set the **Text** property to **"View Projects"**.
+    ![Change the gallery layout](./media/sharepoint-scenario-build-app/04-04-04a-gallery-layout.png)
 
-    ![View Projects gallery](./media/sharepoint-scenario-build-app/04-05-02-gallery-default-v.png)
+    The gallery now has the right layout, with the default sample text.
 
-4. Select the refresh button ![Refresh icon](./media/sharepoint-scenario-build-app/icon-refresh.png), and set its **OnSelect** property to **Refresh('Project Details')**.
+    ![Gallery with default text](./media/sharepoint-scenario-build-app/04-04-04b-gallery-default.png)
 
-5.  Select the new item button ![Add new icon](./media/sharepoint-scenario-build-app/icon-add-item.png), and set its **OnSelect** property to **NewForm(Form2); Navigate(UpdateDetails, ScreenTransition.None)**.
+3. Select the refresh button ![Refresh icon](./media/sharepoint-scenario-build-app/icon-refresh.png), and set its **OnSelect** property to **Refresh('Project Details')**.
+
+4.  Select the new item button ![Add new icon](./media/sharepoint-scenario-build-app/icon-add-item.png), and set its **OnSelect** property to **NewForm(EditForm1); Navigate(UpdateDetails, ScreenTransition.None)**.
 
 ### Add a back arrow to return to the SelectTask screen
 
-1. Click or tap the blue bar at the top of the screen.
+1. In the left navigation bar, click or tap the **AssignManager** screen.
 
-2. On the **Insert** tab, click or tap **Icons**, then click or tap **Left**.
+2. Select the back arrow you added there, and copy it.
 
-    ![Insert left arrow](./media/sharepoint-scenario-build-app/04-05-03-icon-left-v.png)
-
-3. Move the arrow to the left of the refresh button in the blue bar, and set the following properties:
-
-    - **Color** property = **White**
-
-    - **Height** property = **40**
-
-    - **OnSelect** property = **Navigate(SelectTask, Fade)**
-
-    - **Width** property = **40**
+3. Paste the arrow into the **View Projects** screen and position it to the left of the refresh button. 
 
     ![Back button](./media/sharepoint-scenario-build-app/04-05-04-left-arrow-v.png)
 
-### Change the data source for the BrowseGallery2 gallery
+    All its properties come along with it, including the **OnSelect** property of **Navigate(SelectTask, Fade)**.
 
-1. Select the **BrowseGallery2** gallery
+### Change the data source for the BrowseGallery1 gallery
 
-    ![View Projects gallery](./media/sharepoint-scenario-build-app/04-05-05a-gallery-selected-v.png)
-
-2. Set the **Items** property of the gallery to **SortByColumns(Filter('Project Details', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
+1. Select the **BrowseGallery1** gallery, and set the **Items** property of the gallery to **SortByColumns(Filter('Project Details', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
 
     This sets the data source of the gallery to the **Project Details** list, and uses the **Title** field for search and sort.
 
-3. Select the ![Details arrow icon](./media/sharepoint-scenario-build-app/icon-details-arrow.png) in the first gallery item, and set the **OnSelect** property to **Navigate(UpdateDetails, None)**.
+2. Select the ![Details arrow icon](./media/sharepoint-scenario-build-app/icon-details-arrow.png) in the first gallery item, and set the **OnSelect** property to **Navigate(UpdateDetails, None)**.
 
     ![ View Projects gallery - first item selected](./media/sharepoint-scenario-build-app/04-05-05b-gallery-arrow-v.png)
 
-4. In the right pane, update the fields to match the following list:
+3. In the right pane, update the fields to match the following list:
 
     - **Status**
 
-    - **Title**
-
     - **PMAssigned**
+
+    - **Title**
 
     ![Gallery fields](./media/sharepoint-scenario-build-app/04-05-06-gallery-fields.png)
 
@@ -405,35 +397,21 @@ In this step, we'll add a gallery to the **ViewProjects** screen, like the galle
 
 ## Step 6: Build the UpdateDetails screen
 
-In this step, we'll add an edit form and related controls to the **UpdateDetails** screen. On this screen, you edit details for a project that you selected on the **View Projects** screen.
-
-### Update the layout for the screen
+In this step, we'll connect the edit form on the **UpdateDetails** screen to our data source, and we'll make some property and field changes. On this screen, you edit details for a project that you selected on the **View Projects** screen.
 
 1. In the left navigation bar, click or tap the **UpdateDetails** screen.
 
-2. Update the screen layout like you did for the **AssignManager** screen:
+2. In the blue bar at the top of the app, click or tap **[Title]**. In the formula bar, set the **Text** property to **"Update Details"**.
 
-    1. Change the layout style to include a blue bar at the top.
+3. In the left navigation bar, click or tap **EditForm1** under **UpdateDetails**.
 
-    2. Change **[Title]** to **Update Details**.
-
-### Add an edit form to the screen
-
-1. On the **Insert** tab, click or tap **Forms**, then **Edit**.
-
-    ![Insert edit form](./media/sharepoint-scenario-build-app/04-06-01-insert-edit-form.png)
-
-2. Drag the form below the blue bar, then drag the bottom handle so the form covers the rest of the screen.
-
-    ![Blank edit form](./media/sharepoint-scenario-build-app/04-06-02-blank-edit-form.png)
-
-3. Set the following properties for the form:
+4. Set the following properties for the form:
 
     - **DataSource** property = **'Project Details'**
 
-    - **Item property** = **BrowseGallery2.Selected**
+    - **Item** property = **BrowseGallery1.Selected**
 
-4. With the form still selected, in the right pane click or tap the eye icon for each field in the following order:
+5. With the form still selected, in the right pane click or tap the checkbox for the following fields, in the order shown:
 
     - **Title**
 
@@ -451,37 +429,9 @@ In this step, we'll add an edit form and related controls to the **UpdateDetails
 
     ![Edit form fields](./media/sharepoint-scenario-build-app/04-06-03-edit-fields.png)
 
-### Add controls to submit and reset the form
+6. Select the cancel button ![Cancel icon](./media/sharepoint-scenario-build-app/icon-cancel.png), and set its **OnSelect** property to **ResetForm(EditForm1); Back()**.
 
-1. Click or tap the blue bar at the top of the screen.
-
-2. On the **Insert** tab, click or tap **Icons**, then click or tap **Check**.
-
-    ![Insert check mark](./media/sharepoint-scenario-build-app/04-06-04-check.png)
-
-3. Move the check mark to the right of the blue bar, and set the following properties:
-
-    - **Color** property = **White**
-
-    - **Height** property = **40**
-
-    - **OnSelect** property = **Submit(Form2)**. Because we're using the edit form control, we can use **Submit()** and other simple functions, instead of using **Patch()** like we did earlier.
-
-    - **Width** property = **40**
-
-4. On the **Insert** tab, click or tap **Icons**, then click or tap **Cancel**.
-
-    ![Insert cancel mark](./media/sharepoint-scenario-build-app/04-06-05-cancel.png)
-
-5. Move the cancel icon to the left of the blue bar, and set the following properties:
-
-    - **Color** property = **White**
-
-    - **Height** property = **40**
-
-    - **OnSelect** property = **ResetForm(Form2); Back()**. This resets the form to its original values, and navigates back to the **ViewProjects** screen.
-
-    - **Width** property = **40**
+7. Select the save button ![Checkmark save icon](./media/sharepoint-scenario-build-app/icon-check-mark.png) and check out the **OnSelect** formula - **SubmitForm(EditForm1)**. Because we're using the edit form control, we can use **Submit()**, instead of using **Patch()** like we did earlier.
 
 The completed screen should now look like the following image (if the fields are blank, make sure you select an item on the **View Projects** screen).
 
@@ -491,15 +441,13 @@ The completed screen should now look like the following image (if the fields are
 
 Now that the app is complete, let's run it to see how it works. We'll add a link on the SharePoint site to the app. You will be able to run the app in the browser, but you might need to share the app for other people to run it. For more information, see [Share your apps](https://powerapps.microsoft.com/guided-learning/learning-manage-share-apps).
 
-First, we'll assume the role of the project approver - we'll look for any projects that don't have a manager assigned, and assign a manager to one of the projects. Then we'll assume the role of the project manager, and add some information about a project that is assigned to us.
-
 ### Add a link to the app
 
 1. In the Office 365 app launcher, click or tap **PowerApps**.
 
     ![PowerApps in Office 365 app launcher](./media/sharepoint-scenario-build-app/04-07-02a-waffle.png)
 
-2. In PowerApps, click or tap **Project Management app**.
+2. In PowerApps, click or tap the ellipsis (**. . .**) for **Project Management app**, then **Open**.
 
     ![Select Project Management app](./media/sharepoint-scenario-build-app/04-07-02b-select-app.png)
 
@@ -525,6 +473,8 @@ First, we'll assume the role of the project approver - we'll look for any projec
 
 ### Assign a manager to a project
 
+Now that we have the app in our SharePoint site, we'll assume the role of the project approver - we'll look for any projects that don't have a manager assigned, and assign a manager to one of the projects. Then we'll assume the role of the project manager, and add some information about a project that is assigned to us.
+
 1. First, let's look at the **Project Details** list in SharePoint. Two projects have a value of **Unassigned** in the **PMAssigned** column. We will see these in the app.
 
     ![Unassigned projects in SharePoint list](./media/sharepoint-scenario-build-app/04-07-01-unassigned.png)
@@ -545,7 +495,7 @@ First, we'll assume the role of the project approver - we'll look for any projec
 
     ![Assign manager to project](./media/sharepoint-scenario-build-app/04-07-05-updated.png)
 
-6. Go back to the SharePoint list. You'll see that the project entry is now updated with the project manager name.
+6. Go back to the SharePoint list and refresh the page. You'll see that the project entry is now updated with the project manager name.
 
     ![Project manager assigned in SharePoint list](./media/sharepoint-scenario-build-app/04-07-07-assigned.png)
 
@@ -564,8 +514,6 @@ First, we'll assume the role of the project approver - we'll look for any projec
     ![Gallery item selected](./media/sharepoint-scenario-build-app/04-07-10-select-project.png)
 
 4.  On the **Update Details** screen, set the following values:
-
-    - The **Status** field = "Not started"
 
     - The **ProjectedStartDate** field = "3/6/2017"
 
