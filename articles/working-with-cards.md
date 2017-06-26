@@ -98,7 +98,7 @@ In the formula bar, set the **Image** property of this control to *TextBox*.**Te
 
 ![](./media/working-with-cards/show-image.png)
 
-And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the Image property, but it wouldn't have updated if the user changed the URL.
+And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **Image** property, but it wouldn't have updated if the user changed the URL.
 
 We can do the same thing on the second screen of this app, where we use a **Display form** control to display the details of a record. In this case, we may want to hide the label (set the **Visible** property of the label, not the card, to **false**) because the user won't edit the URL on that screen:
 
