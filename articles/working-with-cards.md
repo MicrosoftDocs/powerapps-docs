@@ -21,7 +21,7 @@
 # Understand data cards #
 **[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls. The form represents the entire record, and each card represents a single field of that record.
 
-The easiest way to interact with cards is through the right-hand pane when a form control has been selected in the design workspace. In that pane, you can choose which fields to show, pick how each field should be shown, and rearrange the fields.
+You can interact with cards most easily in the right-hand pane after you select a form control in the design workspace. In that pane, you can choose which fields to show, how to show each field, and in what order to show them. This example shows an **Edit form** control in an app built from a SharePoint list that's named **Assets**.
 
 ![](./media/working-with-cards/first-screen.png)
 
@@ -32,16 +32,16 @@ PowerApps offers a predefined set of cards for strings, numbers, and other data 
 
 ![](./media/working-with-cards/selected-card.png)
 
-In this example, the email address appears as plain text. Let's change this to a hyperlink:
+In this example, a single-line text card is selected, but the URL's text is longer than can be shown on a single line. Let's change this to a multi-line text card to give our users more room to edit:
 
-![](./media/working-with-cards/email-address.png)
+![](./media/working-with-cards/multiline-edit.png)
 
-You'll also notice that several fields of this data source aren't being shown. Show and hide a field by selecting its checkbox:
+Several fields of this data source aren't being shown, but you can show or hide a field by selecting its checkbox. This example illustrates how to show the **SecurityCode** field.
 
 ![](./media/working-with-cards/add-security-code.png)
 
 ## Customize a card ##
-Cards comprise other controls. The user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
+Cards comprise other controls. In an **Edit form** control, the user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
 
 Let's walk through an example of how to change a card's appearance by manipulating controls in it.
 
@@ -51,13 +51,13 @@ Let's walk through an example of how to change a card's appearance by manipulati
 
 2. Select the **[Text input](controls/control-text-input.md)** control inside the card by clicking or tapping the input control itself.
 
-	![](./media/working-with-cards/select-textbox.png)
+	![](./media/working-with-cards/select-text-input.png)
 
 3. Move this control within the card by dragging the selection box, and resize the control by dragging the handles along the edge of the selection box:
 
-	![](./media/working-with-cards/customize-textbox.png)  
+	![](./media/working-with-cards/customize-text-input.png)  
 
-You can resize, move, and make other modifications to controls within a card, but you can't delete it without unlocking it first. The next section describes how to unlock a card.
+You can resize, move, and make other modifications to controls within a card, but you can't delete it without unlocking it first.
 
 ## Unlock a card ##
 In addition to containing controls, cards themselves are controls that have properties and formulas just like any other control. When you choose to display a field on a form, the right-hand pane automatically creates the card for you and generates the needed formulas.  We can see these formulas in the **Advanced** tab of the right-hand pane:
@@ -74,7 +74,7 @@ Click or tap the banner at the top to unlock the card so that you can modify the
 
 ![](./media/working-with-cards/unlocked-card.png)
 
-Let's modify the **[DisplayName](controls/control-card.md)** to put a space between **Image** and **URL**. By making this change, we're altering what was generated for us.  In the right-hand pane, this card has a different label:
+Let's modify the **[DisplayName](controls/control-card.md)** to put a space between **Asset** and **ID**. By making this change, we're altering what was generated for us.  In the right-hand pane, this card has a different label:
 
 ![](./media/working-with-cards/change-display-name.png)
 
@@ -88,15 +88,21 @@ You can change the appearance and behavior of an unlocked card in a variety of w
 
 The star is now a part of the card and will travel with it if, for example, you reorder the cards within the form.
 
-You can also delete a control in an unlocked card and add a different control to better represent the data that you want to show. For example, you can show an image in an **[Image](controls/control-image.md)** control instead of the image's URL.
-
-To make this change, delete the control that shows the URL, add an **[Image](controls/control-image.md)** control in its place, moving and resizing as appropriate.
+As another example, unlock the **ImageURL** card, and then add an **Image** control to it from the **Insert** tab:
 
 ![](./media/working-with-cards/add-image.png)
 
-Set the control's **Image** property to **Parent.Default** to show the selected device.
+In the formula bar, set the **Image** property of this control to *TextBox*.**Text**, where *TextBox* is the name of the **Text input** control that holds the URL:
+
+**Tip**: Press the Alt key to show the name of each control.
 
 ![](./media/working-with-cards/show-image.png)
+
+And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **Image** property, but it wouldn't have updated if the user changed the URL.
+
+We can do the same thing on the second screen of this app, where we use a **Display form** control to display the details of a record. In this case, we may want to hide the label (set the **Visible** property of the label, not the card, to **false**) because the user won't edit the URL on that screen:
+
+![](./media/working-with-cards/show-image-display.png)
 
 ## Interact with a form ##
 
