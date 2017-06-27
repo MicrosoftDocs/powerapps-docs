@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="sarafankit"
+    authors="karthik-1"
     manager="anneta"
     editor=""
     tags=""/>
@@ -15,7 +15,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="05/02/2017"
-    ms.author="ankitsar"/>
+    ms.author="karthikb"/>
 
 # Show a list of items in PowerApps  #
 Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your app. This topic uses Excel as the data source. Filter the list by configuring the gallery to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
