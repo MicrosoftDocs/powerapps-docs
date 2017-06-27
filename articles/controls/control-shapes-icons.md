@@ -32,7 +32,7 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 
 ## Additional properties ##
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 

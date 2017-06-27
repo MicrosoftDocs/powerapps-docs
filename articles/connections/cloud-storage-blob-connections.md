@@ -33,11 +33,6 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 	1. In the **Save as Table** dialog box, select the **My table has headers** checkbox, and then select **OK**.
 	1. Save your changes.
 
-## Known limitations ##
-If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
-
-If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
-
 ## Connect to the cloud storage connection ##
 1. At [powerapps.com](https://web.powerapps.com), expand **Manage**, and select **Connections**:  
 
@@ -80,15 +75,32 @@ If your Excel data includes a calculated column, you can't use it to build an ap
 
 [Understand tables and records](../working-with-tables.md) provides more details and some examples.  
 
+## Sharing your app
+
+You can share [your app](../share-app.md), [your resources](../share-app-resources.md) such as connectors, and [your data](../share-app-data.md) with others in your organization.
+
+If you're sharing a folder in Dropbox, the shared folder must be attached to the user's Dropbox account.
+
+There are [certain limitations](#sharing-excel-tables) with connectors involving Excel files.
+
+## Known limitations ##
+
+If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
+If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
+
+### Sharing Excel tables
+To share data in an Excel file:
+
+- In OneDrive for Business, share the file itself.
+- In OneDrive, share the folder that contains the file, and specify file paths, not URLs, for any media.
+- In Dropbox or Google Drive, share either the file or the folder.
 
 ## Helpful links
-
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) and [add a data source](../add-data-connection.md) to your apps.  
 [Understand tables and records](../working-with-tables.md) with tabular data sources.  
 Some additional gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).
-
-
 
 <!--Icon references-->
 [boxicon]: ./media/cloud-storage-blob-connections/boxicon.png

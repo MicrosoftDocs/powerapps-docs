@@ -34,7 +34,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-**AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.
+**AutoDisableOnSelect** – Automatically disables the control while the **OnSelect** behavior is running.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -42,17 +42,17 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when it has keyboard focus.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -116,26 +116,79 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 ## Related functions ##
 
-[**Navigate**( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)
+**[Navigate( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)**
 
-## Example ##
+## Examples ##
+### Add a basic formula to a button ###
 1. Add a **[Text input](control-text-input.md)** control, and name it **Source**.
 
 	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add a **Button** control, set its **[Text](properties-core.md)** property to show **Add**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
+1. Add a **Button** control, set its **[Text](properties-core.md)** property to "Add", and set its **[OnSelect](properties-core.md)** property to this formula:<br>
 **UpdateContext({Total:Total + Value(Source.Text)})**
 
 	Want more information about the **[UpdateContext](../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
 
-1. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to show **Total**, and then press F5.
+1. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to **Total**, and then press **F5**.
 
-1. Type a number in **Source**, and then click or tap **Add**.
+1. Clear the default text from **Source**, type a number in it, and then click or tap **Add**.
 
 	The **[Label](control-text-box.md)** control shows the number that you typed.
 
-1. Repeat the previous step one or more times.
+1. Clear the number from **Source**, type another number in it, and then click or tap **Add**.
 
-	The **[Label](control-text-box.md)** control shows the sum of the numbers that you typed.
+	The **[Label](control-text-box.md)** control shows the sum of the two numbers that you typed.
 
-1. To return to the default workspace, press Esc.
+1. (optional) Repeat the previous step one or more times.
+
+1. To return to the default workspace, press Esc (or click or tap the close icon in the upper-right corner).
+
+### Configure a button with multiple formulas ###
+Add a formula that clears the **Text input** control between entries.
+
+1. Set the **[HintText](control-text-input.md)** property of **Source** to "Enter a number".
+
+1. Set the **[OnSelect](properties-core.md)** property of **Add** to this formula:
+
+    **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
+
+    **Note:** Separate multiple formulas with a semi-colon “**;**”.
+
+1. Set the **[Default](properties-core.md)** property of **Source** to **ClearInput**.
+
+1. Press **F5**, and then test the app by adding several numbers together.
+
+### Add another button to reset the total ###
+Add a second button to clear the total between calculations.
+
+1. Add another **Button** control, set its **[Text](properties-core.md)** property to "Clear", and set its **[OnSelect](properties-core.md)** property to this formula:
+
+    **UpdateContext({Total:0})**
+
+1. Press **F5**, add several numbers together, and then click or tap **Clear** to reset the total.
+
+### Change a button's appearance ###
+
+#### Change a button's shape ####
+
+By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](properties-size-location.md)**, **[Width](properties-size-location.md)**, and **[Radius](properties-size-location.md)** properties.
+
+**Note: [Icons and Shapes](control-shapes-icons.md)** provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](properties-core.md)** property.
+
+1. Add a **Button** control, and set its **[Height](properties-size-location.md)** and **[Width](properties-size-location.md)** properties to **300** to make a large square button.
+
+1. Modify the **[RadiusTopLeft](properties-size-location.md)**, **[RadiusTopRight](properties-size-location.md)**, **[RadiusBottomLeft](properties-size-location.md)**, and **[RadiusBottomRight](properties-size-location.md)** properties to adjust the amount of curvature on each corner. Here are some examples of different shapes, each one starting from a 300 x 300 square button:
+
+    - Set all four **[Radius](properties-size-location.md)** values to **150** to create a circle.
+    - Set the values for **[RadiusTopLeft](properties-size-location.md)** and **[RadiusBottomRight](properties-size-location.md)** to **300** to create a leaf-shaped **Button**.
+    - Set the values for **[RadiusTopLeft](properties-size-location.md)** and **[RadiusTopRight](properties-size-location.md)** to **300**, and the values for **[RadiusBottomLeft](properties-size-location.md)** and **[RadiusBottomRight](properties-size-location.md)** to **100** to create a tab-shaped button.
+
+#### Change a button's color when you hover over it ####
+By default, the fill color of a **Button** control will dim by 20% when you hover over it with a mouse. You can adjust this behavior by changing the **[HoverFill](properties-color-border.md)** property, which uses the **[ColorFade](function-colors.md)** function. If you set the **[ColorFade](function-colors.md)** formula to a positive percentage, the color becomes lighter when you hover over the button, while a negative percentage makes the color darker.
+
+- Change the **[ColorFade](function-colors.md)** percentage in the **[HoverFill](properties-color-border.md)** property of one of the buttons that you created, and observe the effects.
+
+You can also specify the color of a **Button** control by setting its **[HoverFill](properties-color-border.md)** property to a formula that contains the **[ColorValue](function-colors.md)** function instead of the **[ColorFade](function-colors.md)** function, as in **ColorValue("Red")**.
+
+**Note:** The color value can be any CSS color definition, either a name or a hex value.
+- Replace the **[ColorFade](function-colors.md)** function with a **[ColorValue](function-colors.md)** function in one of the buttons that you created, and observe the effects.

@@ -40,9 +40,9 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 

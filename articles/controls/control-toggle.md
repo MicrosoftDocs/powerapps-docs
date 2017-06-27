@@ -39,9 +39,9 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 

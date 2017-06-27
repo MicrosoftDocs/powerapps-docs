@@ -1,0 +1,57 @@
+<properties
+	pageTitle="Save and publish an app | Microsoft PowerApps"
+	description="Step-by-step instructions for saving and publishing app for app makers"
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="karthik-1"
+	manager="anneta"
+	editor=""
+	tags=""/>
+
+<tags
+   ms.service="powerapps"
+   ms.devlang="na"
+   ms.topic="article"
+   ms.tgt_pltfrm="na"
+   ms.workload="na"
+   ms.date="06/07/2017"
+   ms.author="karthikb"/>
+
+# Save and publish an app in PowerApps #
+Whenever you save changes to an app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you explicitly publish them to make them available to everyone with whom the app is shared.
+
+For information about how to share an app, see [Share an app](share-app.md).
+
+## Save changes to an app ##
+In PowerApps Studio, click or tap **Save** on the **File** menu (on the left edge), and then follow either of these steps:
+
+- If you've never saved the app before, provide a name for it, and then click or tap **Save**.
+
+	![Save new app](./media/save-publish-app/save-as.png)
+
+- If the app has ever been saved, click or tap **Save**.
+
+	![Save updated app](./media/save-publish-app/save-app.png)
+
+## Publish an app
+1. In PowerApps Studio, click or tap **Save** on the **File** menu (on the left edge), and then click or tap **Publish this version**.
+
+	![Publish app](./media/save-publish-app/publish-app.png)
+
+1. In the **Publish** dialog box, tap or click **Publish this version** to publish the app to all users with whom the app is shared.
+
+ ![Review Publish](./media/save-publish-app/publish-review.png)
+
+## Identify the live version ##
+In [powerapps.com](https://web.powerapps.com), click or tap **Apps** on the **File** menu (on the left edge), click or tap the details icon for an app, and then click or tap the **Versions** tab.
+
+The **Live** version is published for everyone with whom the app is shared. The most recent version of any app is available only to those who have edit permissions for it.
+
+![Publish from portal](./media/save-publish-app/publish-portal.png)
+
+To publish the most recent version, click or tap **Publish this version**, and then click or tap **Publish this version** in the **Publish** dialog box.
+
+## Next steps ##
+- [Rename an app](set-name-tile.md) from powerapps.com.
+- [Restore an app](restore-an-app.md) if you have multiple versions of an app.

@@ -42,11 +42,11 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **CalculateOriginalDimensions** – Enables the **OriginalHeight** and **OriginalWidth** properties.
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[Disabled](properties-core.md)** property is set to **true**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -115,16 +115,16 @@ If you add one or more **Image** controls to your app, you can show individual i
 ### Show a set of images from a data source ###
 1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
 
-1. In PowerApps, create or open an app, and then click or tap a screen in the left navigation bar.
+1. In PowerApps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
 
-1. In the right-hand pane, click or tap the **Data Sources** tab, and then click or tap **Add data source**.
+	If **Add data source** doesn't appear in the right-hand pane, click or tap a screen in the left navigation bar.
 
 1. Click or tap **Add static data to your app**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
 
 1. Select the **Flooring Estimates** check box, and then click or tap **Connect**.
 
-1. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
+1. Add a **Gallery** control with images, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
 
 	Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-	The **Image gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.
+	The **Gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.
