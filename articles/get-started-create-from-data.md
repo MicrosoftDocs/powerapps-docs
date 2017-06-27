@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="sarafankit"
+	authors="karthik-1"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/16/2016"
-   ms.author="ankitsar"/>
+   ms.author="karthikb"/>
 
 # Generate an app from Excel data #
 Create an app automatically based on data in an Excel file that you upload to a cloud-storage account, such as OneDrive. After you generate the app, customize it to better suit your needs, and then run it to make sure that it works as you expect.

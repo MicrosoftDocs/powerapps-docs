@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="sarafankit"
+    authors="karthik-1"
     manager="anneta"
     editor=""
     tags=""/>
@@ -15,7 +15,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="10/16/2016"
-    ms.author="ankitsar"/>
+    ms.author="karthikb"/>
 
 # Show, edit, or add a record from a table in PowerApps #
 To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control.
