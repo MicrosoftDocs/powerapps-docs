@@ -44,14 +44,12 @@ Even within the scenario, you can focus on the tasks that interest you, and comp
 
 ## Prerequisites
 
-To complete the scenario, you need the following subscriptions and desktop tools.
+To complete the scenario, you need the following subscriptions and desktop tools. The Office 365 Business Premium subscription includes PowerApps and Microsoft Flow.
 
 | **Subscription or tool**                 | **Link** |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Office 365 Business Premium subscription | [Trial subscription](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) |
-| PowerApps subscription                   | [Trial subscription](https://powerapps.microsoft.com/) (click **Get started free**) |
-| PowerApps Studio                         | Use PowerApps Studio for web or [PowerApps Studio for Windows](https://aka.ms/powerappswin) |
-| Microsoft Flow subscription              | [Trial subscription](https://flow.microsoft.com/) (click **Sign up free**) |
+| PowerApps Studio                         | Use PowerApps Studio for web (no download required) or [PowerApps Studio for Windows](https://aka.ms/powerappswin) |
 | Power BI Pro subscription                | [Trial subscription](https://powerbi.microsoft.com/get-started/) (click **TRY FREE**) |
 | Power BI Desktop                         | [Free download](https://powerbi.microsoft.com/get-started/) (click **DOWNLOAD FREE**) |
 
@@ -61,7 +59,7 @@ Ideally, you have basic familiarity with each technology, but you can still comp
 
 - [PowerApps Guided Learning](https://powerapps.microsoft.com/guided-learning/)
 
-- [Flow Guided Learning](https://flow.microsoft.com/guided-learning/)
+- [Microsoft Flow Guided Learning](https://flow.microsoft.com/guided-learning/)
 
 - [Power BI Guided Learning](https://powerbi.microsoft.com/guided-learning/)
 

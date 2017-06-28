@@ -203,7 +203,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 
     This formula and the other ones in this section use Data Analysis Expressions (DAX), a formula language for Power BI and other technologies. For more information, see [DAX basics in Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-quickstart-learn-dax-basics/).
 
-3. Press enter to create the **Dates** table.
+3. Press Enter to create the **Dates** table.
 
     ![Dates table](./media/sharepoint-scenario-build-report/05-02-07-date-table.png)
 
@@ -217,7 +217,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 
     This formula determines whether a date in the **Date** column is a weekday. If the date is a weekday, the **IsWeekDay** column gets a value of 1; otherwise it gets a value of 0.
 
-3. Press enter to add the **IsWeekDay** column to the **Dates** table.
+3. Press Enter to add the **IsWeekDay** column to the **Dates** table.
 
     ![Add IsWeekDay column](./media/sharepoint-scenario-build-report/05-02-08-column-isweekday.png)
 
@@ -245,7 +245,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 
     This formula calculates the difference in days between when a project was approved and when it is projected to start. It uses the **IsWeekday** column from the **Dates** table, so it counts only weekdays.
 
-3. Press enter to add the **ApprovedStartDiff** column to the **Project Details** table.
+3. Press Enter to add the **ApprovedStartDiff** column to the **Project Details** table.
 
     ![Add ApprovedStartDiff column](./media/sharepoint-scenario-build-report/05-02-09-column-approvedstartdiff.png)
 
@@ -273,7 +273,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 
     This formula calculates the difference in days between when a project was requested and today's date (NOW()). Again, the formula counts only weekdays. This column is used to look for the project that has been pending the longest.
 
-1. Press enter to add the **RequestDateAge** column to the **Project Requests** table.
+1. Press Enter to add the **RequestDateAge** column to the **Project Requests** table.
 
     ![Add RequestDateAge column](./media/sharepoint-scenario-build-report/05-02-10-column-requestdateage.png)
 
@@ -297,7 +297,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 
     This formula calculates the variance between actual and projected days for a project. We add this as a measure, rather than a calculated column, so it returns the correct results regardless of how the data is filtered or aggregated in a report.
 
-3. Press enter to add the **VarProjectedActual** measure to the **Project Details** table.
+3. Press Enter to add the **VarProjectedActual** measure to the **Project Details** table.
 
     ![Add VarProjectedActual measure](./media/sharepoint-scenario-build-report/05-02-11-measure-varprojectedactual.png)
 
@@ -321,7 +321,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 
     This formula finds the project that has been pending the longest, based on the calculated column we defined earlier.
 
-3. Press enter to add the **MaxDaysPending** measure to the **Project Requests** table.
+3. Press Enter to add the **MaxDaysPending** measure to the **Project Requests** table.
 
     ![Add MaxDaysPending measure](./media/sharepoint-scenario-build-report/05-02-12-measure-maxdayspending.png)
 
@@ -361,7 +361,7 @@ After we've created these report visualizations in Power BI Desktop, we'll publi
 
     ![ProjectedDays and ActualDays by PMAssigned](./media/sharepoint-scenario-build-report/05-03-04-chart-projected.png)
 
-6.  Drag **Status** from **Project Details** in the **Fields** pane to the **Filters** area of the **Visualizations** pane, then check the **Completed** check box.
+6.  Drag **Status** from **Project Details** in the **Fields** pane to the **Filters** area of the **Visualizations** pane, then select the **Completed** check box.
 
     ![Filter by Status column](./media/sharepoint-scenario-build-report/05-03-05-filters-projected.png)
 
@@ -387,7 +387,7 @@ After we've created these report visualizations in Power BI Desktop, we'll publi
 
     ![Value in the Visualizations pane](./media/sharepoint-scenario-build-report/05-03-07a-value-variance.png)
 
-5. Drag **Status** from **Project Details** in the **Fields** pane to the **Filters** area of the **Visualizations** pane, then check the **Completed** check box.
+5. Drag **Status** from **Project Details** in the **Fields** pane to the **Filters** area of the **Visualizations** pane, then select the **Completed** check box.
 
     ![Filter by Status column](./media/sharepoint-scenario-build-report/05-03-07b-filters-variance.png)
 
@@ -445,7 +445,7 @@ After we've created these report visualizations in Power BI Desktop, we'll publi
 
     ![Filter by ProjectedStartDate](./media/sharepoint-scenario-build-report/05-03-17-filters-diff.png)
 
-5. Drag the columns of the table so you can see all the data. The visualization should now look like the following image.
+5. Resize the columns of the table so you can see all the data. The visualization should now look like the following image.
 
     ![Table with ApprovedStartDiff values](./media/sharepoint-scenario-build-report/05-03-18-chart-diff.png)
 

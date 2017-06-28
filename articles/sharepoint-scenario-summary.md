@@ -197,6 +197,8 @@ That brings us to the conclusion of our end-to-end walkthrough and this series o
 
 - [Power BI](http://www.powerbi.com)
 
+- [Power Users Community](https://powerusers.microsoft.com/)
+
 - [SharePoint](http://sharepoint.microsoft.com)
 
 - [Microsoft Tech Community](https://techcommunity.microsoft.com/)

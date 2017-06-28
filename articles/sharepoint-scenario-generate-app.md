@@ -49,7 +49,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
     1. The **browse** screen, where you browse, sort, and filter the data pulled in from the list.
 
-    2. The **details** screen, where you view more detail about an item, and edit or delete the item.
+    2. The **details** screen, where you view more detail about an item.
 
     3. The **edit/create** screen, where you edit an existing item or create a new one.
 
@@ -145,7 +145,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
     ![Verify your edit](./media/sharepoint-scenario-generate-app/02-05-09-verify-edit.png)
 
-This is a pretty simple app, and we only made a few basic customizations, but you can see it's possible to quickly build something interesting. We're going to move on to the next task, but look around the app a little more if want, and see how the controls and formulas work together to drive app behavior.
+This is a pretty simple app, and we only made a few basic customizations, but you can see it's possible to quickly build something interesting. We're going to move on to the next task, but look around the app a little more if you want, and see how the controls and formulas work together to drive app behavior.
 
 ## Formula deep-dive
 
