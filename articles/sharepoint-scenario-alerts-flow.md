@@ -45,7 +45,7 @@ In this task we'll add an alert in Power BI to let us know if pending projects a
 
 The alert won't fire right now even though 56 is above the threshold of 25. It will fire when data is updated, which we'll see when we [run through the scenario end-to-end](sharepoint-scenario-summary.md).
 
-When the alerts fires, Power BI sends email to the creator of the alert, and we'll see how to send additional mail using Flow, in the next step.
+When the alerts fires, Power BI sends email to the creator of the alert, and we'll see how to send additional mail using Microsoft Flow, in the next step.
 
 ## Step 2: Create a flow that responds to the alert
 
