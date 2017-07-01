@@ -21,7 +21,7 @@
 
 **Note:** This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
-SharePoint has a ton of features for sharing and collaboration, but we will focus on one feature for this scenario: [SharePoint lists](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). A list is just a collection of data that you can share with team members and other site users. We'll review the lists, then you can create them in your own SharePoint Online site.
+SharePoint has a ton of features for sharing and collaboration, but we will focus on one feature for this scenario: [SharePoint lists](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). A list is just a collection of data that you can share with team members and other site users. We'll review the lists used for this scenario, then you can create them in your own SharePoint Online site.
 
 ## Step 1: Understand the lists
 
@@ -113,7 +113,7 @@ To continue with the scenario, you need to create the two SharePoint lists and p
 
     ![Completed list with data](./media/sharepoint-scenario-setup/01-01-09-full-grid.png)
 
-5. Repeat the list creation and copy process for the "Project Details" list, using the project-details.xlsx workbook. Refer to the table above for the column names and data types.
+5. Repeat the list creation and copy process for the "Project Details" list, using the project-details.xlsx workbook. Refer to the Project Details table in [Step 1: Understand the lists](#step-1-understand-the-lists) for the column names and data types.
 
 ## Step 3: Update connections to samples - optional
 
@@ -125,7 +125,7 @@ As noted in the introduction to this tutorial series, we included two sample app
 
 2. Click or tap **Allow**, so that PowerApps can use SharePoint.
 
-3. On the ribbon, on the **Content** tab, click or tap **Data sources**.
+3. On the ribbon, on the **View** tab, click or tap **Data sources**.
 
     ![PowerApps data sources](./media/sharepoint-scenario-setup/01-03-01-data-sources.png)
 
