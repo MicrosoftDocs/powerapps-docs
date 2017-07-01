@@ -59,7 +59,7 @@ With that review out of the way, let's start building an app.
 
     ![App name](./media/sharepoint-scenario-build-app/04-01-02-app-name.png)
 
-3. Click or tap **Save as**, verify that app will save to the cloud, then click **Save** in the lower right corner.
+3. Click or tap **Save as**, verify that the app will save to the cloud, then click **Save** in the lower right corner.
 
     ![Save to the cloud](./media/sharepoint-scenario-build-app/04-01-03-save-to-cloud.png)
 
@@ -191,7 +191,7 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
 
 The app doesn't do a lot yet, but you can run it if you like:
 
-1. Click or tap the **SelectTask** screen (the app always starts from the selected screen).
+1. Click or tap the **SelectTask** screen (the app always starts from the selected screen in Preview mode in PowerApps Studio).
 
 2. Click or tap ![Run app icon](./media/sharepoint-scenario-build-app/icon-run-arrow.png) in the upper right corner to run the app.
 
