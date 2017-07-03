@@ -88,7 +88,113 @@ You'll sometimes need a variable for your app to behave the way you want.  But t
 - The running total can no longer be calculated based on the values of other controls. It depends on how many times the user selected the **Add** button and what value was in the text-input control each time. Did the user enter 77 and select **Add** twice, or did they specify 24 and 130 for each of the additions? You can't tell the difference after the total has reached 154.
 - Changes to the total can come from different paths. In this example, both the **Add** and **Clear** buttons can update the total. If the app doesn't behave the way you expect, which button is causing the problem?
 
+## Create a variable ##
+
+To create our adding machine, we require a variable to hold the running total. The simplest variables to work with in PowerApps are *global variables*.  
+
+How global variables work:
+
+- You set the value of the global variable with the **[Set](functions/function-set)** function.  **Set( MyVar, 1 )** sets the global variable **MyVar** to a value of **1**.
+- You use the global variable by referencing the name used with the **Set** function.  In this case, **MyVar** will return **1**. 
+- Global variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
+
+Let's rebuild our adding machine by using a global variable:
+
+1. Add a text-input control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
+
+1. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
+
+1. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
+ 
+	**Set( RunningTotal, RunningTotal + Text1 )**.
+
+	The first time a user selects the **Add** button and **[Set](functions/function-set.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
+
+	![](media/working-with-variables/global-variable-1.png)
+
+1. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
+
+	**Set( RunningTotal, 0 )**
+
+	![](media/working-with-variables/global-variable-2.png)
+
+3. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
+
+	This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
+
+	![](media/working-with-variables/global-variable-3.png)
+
+4. Preview the app, and we have our adding machine as described above.
+
+## Types of variables ##
+
+There are three types of variables in PowerApps:
+
+| Variables type | Scope | Description | Functions |
+|----------------|-------|------|-----------|
+| Global variables | App | Simplest to use.  Holds a number, text string, record, or table that can be references from anywhere in the app. | [**Set**](functions/function-set.md) |
+| Context variables | Screen | Great for passing values to a screen, much like parameters to a procedure in other languages.  Can only be referenced from one screen. | [**UpdateContext**](functions/function-updatecontext.md)<br>[**Navigate**](functions/function-navigate.md) |
+| Collections | App | Holds a table that can be references from anywhere in the app.  Allows the contents of the table to be modified rather than being set as a whole. Can be saved to the local device for later use. | [**Collect**](functions/function-collect.md)<br>[**Patch**](functions/function-patch.md)<br>[**Update**](functions/function-update.md)<br>[**Remove**](functions/function-remove.md)<br>[**SaveData**](functions/function-savedata-loaddata.md)<br>etc. |
+
+All of these variables are held in memory while the app is running.  After the app closes, the values of the variables is lost.  Variables can be stored to a Data Source or in the case of collections can be stored to the local device with the **SaveData** function.
+
+All of these variables are referenced by name.
+
+
+## Create a collection ##
+To refer a variable from any screen (not only the one on which it was created), use a [collection](working-with-data-sources.md#collections) to hold a global variable.
+
+How collections work:
+
+- Create and set collections by using the **[ClearCollect](functions/function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](functions/function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
+- A collection is a data source and, therefore, a table. To access a single value in a collection, use the **[First](functions/function-first-last.md)** function, and extract one field from the resulting record. If you used a single value with **[ClearCollect](functions/function-clear-collect-clearcollect.md)**, this will be the **Value** field, as in this example:<br>**First(** *VariableName* **).Value**
+- Any formula can access a collection from any screen in the app.
+- When a user closes an app, all of its collections are emptied.
+
+Let's recreate our adding machine by using a collection:
+
+1. Add a **[Text input](controls/control-text-input.md)** control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
+
+1. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to **"Clear"**.
+
+1. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:<br> **ClearCollect( RunningTotal, First( RunningTotal ).Value + TextInput1 )**
+
+	By using **[ClearCollect](functions/function-clear-collect-clearcollect.md)** with a single value, a record will be created in the collection with a single **Value** field. The first time that the user selects the **Add** button and **[ClearCollect](functions/function-clear-collect-clearcollect.md)** is called, **RunningTotal** will be [empty](functions/function-isblank-isempty.md). In the addition, **[First](functions/function-first-last.md)** will return *blank* and will be treated as a zero.
+
+	![](media/working-with-variables/collection-1.png)
+
+1. To set the running total to **0** whenever a user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
+**ClearCollect( RunningTotal, 0 )**
+
+	Again, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** is used with the formula **ClearCollect( RunningTotal, 0 )**.
+
+	![](media/working-with-variables/collection-2.png)
+
+1. To display the running total, add a label, and set its **[Text](controls/properties-core.md)** property to this formula:<br>
+**First(RunningTotal).Value**
+
+	This formula extracts the **Value** field of the first record of the **RunningTotal** collection. The label will automatically show the value of **RunningTotal** as it changes based on the buttons that the user selects.
+
+	![](media/working-with-variables/collection-3.png)
+
+1. To run the adding machine, press F5 to open Preview, enter numbers in the text-input control, and select buttons.
+
+1. To return to the default workspace, press Esc.
+
+1. To see the values in your collection, select **Collections** on the **File** menu.
+
+	![](media/working-with-variables/view-collections.png)
+
+
+
+
+
+
+
 ## Create a context variable ##
+
+
+
 To create our adding machine, we require a variable to hold the running total. The simplest variables in PowerApps are *context variables*.  
 
 How context variables work:
