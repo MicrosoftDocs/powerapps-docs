@@ -1,11 +1,11 @@
 <properties
 	pageTitle="Overview of the Office 365 Outlook connection | Microsoft PowerApps"
-	description="See how to connect to Office 365 users, step through some examples, and see all the functions"
+	description="Reference information, including examples, for the Office 365 Outlook connection to PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
-	manager="archnair"
+	authors="archnair"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/08/2016"
+   ms.date="05/25/2017"
    ms.author="archanan"/>
 
 #  Office 365 Outlook
@@ -24,30 +24,26 @@
 
 If you connect to Office 365 Outlook, you can show, send, delete, and reply to email messages, in addition to other tasks.
 
-You can add controls, including buttons and labels, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the recipient, the subject, and the body of the email. Then, add a Send button that sends the email.
+You can add controls to perform these functions in your app. For example, you can add **Text input** controls to ask for the recipient, the subject, and the body of the email, and add a **Button** control to send the email.
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
-**Important**: As of this writing, the functions for calendar and contacts aren't supported.
+**Important**: As of this writing, the calendar operation doesn't support recurring events.
 
 &nbsp;
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
-## Connect to Office 365
+## Connect to Office 365 Outlook
 1. [Add a data connection](add-data-connection.md) and select **Office 365 Outlook**:  
 
 	![Connect to Office 365](./media/connection-office365-outlook/add-office.png)
 
 1. Select **Connect**, and if prompted to sign in, enter your work account.
 
-The Office 365 Outlook connection has been created, and added to your app. Now, it's ready to be used.
+The Office 365 Outlook connection has been created and added to your app. Now, it's ready to be used.
 
-
-## Use the Office 365 Outlook connection in your app
-
-### Show email
-
+## Show messages ##
 1. On the **Insert** menu, select **Gallery**, and then select a **Text gallery** control.
 
 2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
@@ -68,14 +64,14 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 	`Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2, searchQuery:"powerapps"})`  
 	`Office365.GetEmails({folderPath:"Deleted Items", fetchOnlyUnread:false, top:2, skip:3})`
 
+## Send a message ##
+1. On the **Insert** menu, select **Text**, and then select **Text input**.
 
-### Send email
-
-1. On the **Insert** menu, select **Text**, and then select **Text input**. Do this three times to create three different text input controls. Arrange them in a column:  
+1. Repeat the previous step two more times so that you have three boxes, and then arrange them in a column:  
 
 	![](./media/connection-office365-outlook/threetextinput.png)
 
-2. Rename them to:  
+2. Rename the controls to:  
 
 	- **inputTo**
 	- **inputSubject**
@@ -91,9 +87,26 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 6. Select **Send email** to send the message. Press Esc to return to the default workspace.
 
+## Send a message with an attachment ##
+You can, for example, create an app in which the user takes pictures by using the device's camera and then sends them as attachments. Users can also attach many other kinds of files to an email app.
 
+To add an attachment to a message, follow the steps in the previous section, but add a parameter to specify an attachment (when you set the **OnSelect** property of the button). This parameter is structured as a table in which you specify up to three properties for each attachment:
 
-### Delete email
+- Name
+- ContentBytes
+- @odata.type
+
+**Note**: You can specify the @odata.type property for only one attachment, and you can set it to an empty string.
+
+In this example, a photo will be sent as **file1.jpg**:
+
+`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""})})`
+
+In this example, an audio file will be sent in addition to the photo:
+
+`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})`
+
+## Delete a message ##
 
 1. On the **Insert** menu, select **Gallery**, and then select a **Text gallery** control.
 
@@ -116,7 +129,7 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 6. Press Esc to return to the default workspace.
 
-### Mark email as read
+## Mark a message as read ##
 
 This section uses the same controls as [Delete email](connection-office365-outlook.md#delete-email).
 
@@ -124,180 +137,12 @@ This section uses the same controls as [Delete email](connection-office365-outlo
 
 	`Office365.MarkAsRead(EmailID.Text)`
 
-2. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the  unread emails, and click the button.
+2. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the unread emails, and then click the button.
 
 3. Press Esc to return to the default workspace.
 
+## Helpful links ##
 
-## View the available functions
-
-This connection includes the following functions:
-
-| Function Name |  Description |
-| --- | --- |
-|[GetEmails](connection-office365-outlook.md#getemails) | Retrieves emails from a folder  |
-|[SendEmail](connection-office365-outlook.md#sendemail) | Sends an email message  |
-|[DeleteEmail](connection-office365-outlook.md#deleteemail) | Deletes an email message using the message id  |
-|[MarkAsRead](connection-office365-outlook.md#markasread) | Marks an email message as having been read  |
-|[ReplyTo](connection-office365-outlook.md#replyto) | Replies to an email message   |
-|[GetAttachment](connection-office365-outlook.md#getattachment) |  Retrieves message attachment by id  |
-|[OnNewEmail](connection-office365-outlook.md#onnewemail) | Triggers a flow when a new email arrives   |
-|[SendMailWithOptions](connection-office365-outlook.md#sendmailwithoptions) | Send an email with multiple options and wait for the recipient to respond back with one of the options.   |
-|[SendApprovalMail](connection-office365-outlook.md#sendapprovalmail) | Send an approval email and wait for a response from the To recipient.   |
-
-### GetEmails
-Get emails: Retrieves emails from a folder
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|folderPath|string|no|Path of the folder to retrieve messages (default: 'Inbox')|
-|top|integer|no|Number of emails to retrieve (default: 10)|
-|fetchOnlyUnread|boolean|no|Retrieve only unread messages? (default: true)|
-|includeAttachments|boolean|no|If set to true, attachments will also be retrieved along with the email message. (default: false)|
-|searchQuery|string|no|Search query to filter emails|
-|skip|integer|no|Number of emails to skip (default: 0)|
-|skipToken|string|no|Skip token to fetch new page|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|yes |Receive email messages that can include the following properties: <ul><li>From (optional)</li><li>To (required)</li><li>Subject (required)</li><li>Body (required)</li><li>Importance (optional): "Low", "Normal", or "High"</li><li>HasAttachment (optional)</li><li>Id (optional)</li><li>IsRead (optional)</li><li>DateTimeReceived (optional)</li><li>Attachments (optional): Receive an attachment. Attachment properties include Id (required), ContentType (required), Name (required), ContentBytes (required).</li><li>Cc (optional)</li><li>Bcc (optional)</li><li>IsHtml (optional)</li></ul> |
-
-
-
-### SendEmail
-Send Email: Sends an email message
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|emailMessage| |yes|Email message instance that can include the following properties: <ul><li>Attachment (optional): Send an attachment. Attachment properties include Name (required), and ContentBytes (required).</li><li>From (optional)</li><li>Cc (optional)</li><li>Bcc (optional)</li><li>Subject (required)</li><li>Body (required)</li><li>Importance (optional): "Low", "Normal", or "High"</li><li>IsHtml (optional): Enter true or false</li><li>To (required): Separate email addresses with a comma.</li></ul> |
-
-#### Output properties
-None.
-
-
-### DeleteEmail
-Delete email: Deletes an email message by id
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|messageId|string|yes|Id of the message to delete.|
-
-#### Output properties
-None.
-
-
-### MarkAsRead
-Mark as read: Marks an email message as having been read
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|messageId|string|yes|Id of the message to be marked as read|
-
-#### Output properties
-None.
-
-
-### ReplyTo
-Reply to message: Replies to an email message
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|messageId|string|yes|Id of the message to reply to|
-|comment|string|yes|Reply comment|
-|replyAll|boolean|no|Reply to all recipients|
-
-#### Output properties
-None.
-
-
-### GetAttachment
-Get attachment: Retrieves message attachment by id
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|messageId|string|yes|Id of the message|
-|attachmentId|string|yes|Id of the attachment to download|
-
-#### Output properties
-None.
-
-
-### OnNewEmail
-On new email: Triggers a flow when a new email arrives
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|folderPath|string|no|Email folder to retrieve (default: Inbox, Inbox\ToMe etc.)|
-|to|string|no|Recipient email addresses|
-|from|string|no|From address|
-|importance|string|no|Importance of the email (High, Normal, Low) (default: Normal)|
-|fetchOnlyWithAttachment|boolean|no|Retrieve only emails with an attachment|
-|includeAttachments|boolean|no|Include attachments|
-|subjectFilter|string|no|String to look for in the subject.|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|No | |
-
-
-### SendMailWithOptions
-Send email with options: Send an email with multiple options and wait for the recipient to respond back with one of the options.
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|optionsEmailSubscription| |yes|Subscription Request for Email options, including:  <ul><li>NotificationUrl (optional)</li><li>Message (optional)</li></ul> |
-
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|id|string|No | |
-|resource|string|No | |
-|notificationType|string|No | |
-|notificationUrl|string|No | |
-
-
-### SendApprovalMail
-Send approval email: Send an approval email and wait for a response from the To recipient.
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|approvalEmailSubscription| |yes|Subscription Request for Approval Email, including: <ul><li>NotificationUrl (optional)</li><li>Message (optional)</li></ul>|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|id|string|No | |
-|resource|string|No | |
-|notificationType|string|No | |
-|notificationUrl|string|No | |
-
-
-## Helpful links
-
+- For a list of all functions and their parameters, see the [Office 365 Outlook reference](https://docs.microsoft.com/en-us/connectors/office365connector/).
 - See all the [available connections](../connections-list.md).  
 - Learn how to [manage your connections](../add-manage-connections.md).
