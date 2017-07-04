@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
-	manager="archnair"
+	authors="RickSaling"
+	manager="anneta"
 	editor=""
 	tags=""/>
 
@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/08/2016"
-   ms.author="archanan"/>
+   ms.date="05/25/2017"
+   ms.author="ricksal"/>
 
 #  Office 365 Outlook
 
@@ -28,7 +28,7 @@ You can add controls, including buttons and labels, to do these functions in you
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
-**Important**: As of this writing, the functions for calendar and contacts aren't supported.
+**Important**: As of this writing, the calendar operation does not support listing recurring events.
 
 &nbsp;
 
@@ -91,6 +91,32 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 6. Select **Send email** to send the message. Press Esc to return to the default workspace.
 
+### Send email with attachment(s)
+
+You can create a camera app in which you take pictures and then email the photo images as attachments. For example, a claims adjuster may take photos of an auto accident and send them to the Claims Processing Department. You can also attach many other kinds of files to an email app.
+
+To add attachments to an email, proceed as in the prior step. But in the third step where you call the SendEmail method, you add an additional parameter that specifies the attachment(s).
+
+That parameter looks like this:
+
+			{Attachments: Table({first attachment's properties}, {2nd attachment's properties}, etc.)}
+
+The properties for each attachment are the following:
+
+1. Name: description of this attachment
+2. ContentBytes: name of the file to be attached
+3. @odata.type: must be defined. You can set it to an empty string.  Note, if you have multiple tables, you only need to set this parameter once.
+
+#### Sample formula
+
+This formula sends email with a single file attached.
+
+			Office365.SendEmail("your.name@contoso.com", "Subject", "Email content", {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""})})
+
+And this formula sends email with two attachments.
+
+			Office365.SendEmail("archanan@microsoft.com", "Test", "Blah Blah", {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})
+
 
 
 ### Delete email
@@ -129,175 +155,8 @@ This section uses the same controls as [Delete email](connection-office365-outlo
 3. Press Esc to return to the default workspace.
 
 
-## View the available functions
-
-This connection includes the following functions:
-
-| Function Name |  Description |
-| --- | --- |
-|[GetEmails](connection-office365-outlook.md#getemails) | Retrieves emails from a folder  |
-|[SendEmail](connection-office365-outlook.md#sendemail) | Sends an email message  |
-|[DeleteEmail](connection-office365-outlook.md#deleteemail) | Deletes an email message using the message id  |
-|[MarkAsRead](connection-office365-outlook.md#markasread) | Marks an email message as having been read  |
-|[ReplyTo](connection-office365-outlook.md#replyto) | Replies to an email message   |
-|[GetAttachment](connection-office365-outlook.md#getattachment) |  Retrieves message attachment by id  |
-|[OnNewEmail](connection-office365-outlook.md#onnewemail) | Triggers a flow when a new email arrives   |
-|[SendMailWithOptions](connection-office365-outlook.md#sendmailwithoptions) | Send an email with multiple options and wait for the recipient to respond back with one of the options.   |
-|[SendApprovalMail](connection-office365-outlook.md#sendapprovalmail) | Send an approval email and wait for a response from the To recipient.   |
-
-### GetEmails
-Get emails: Retrieves emails from a folder
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|folderPath|string|no|Path of the folder to retrieve messages (default: 'Inbox')|
-|top|integer|no|Number of emails to retrieve (default: 10)|
-|fetchOnlyUnread|boolean|no|Retrieve only unread messages? (default: true)|
-|includeAttachments|boolean|no|If set to true, attachments will also be retrieved along with the email message. (default: false)|
-|searchQuery|string|no|Search query to filter emails|
-|skip|integer|no|Number of emails to skip (default: 0)|
-|skipToken|string|no|Skip token to fetch new page|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|yes |Receive email messages that can include the following properties: <ul><li>From (optional)</li><li>To (required)</li><li>Subject (required)</li><li>Body (required)</li><li>Importance (optional): "Low", "Normal", or "High"</li><li>HasAttachment (optional)</li><li>Id (optional)</li><li>IsRead (optional)</li><li>DateTimeReceived (optional)</li><li>Attachments (optional): Receive an attachment. Attachment properties include Id (required), ContentType (required), Name (required), ContentBytes (required).</li><li>Cc (optional)</li><li>Bcc (optional)</li><li>IsHtml (optional)</li></ul> |
-
-
-
-### SendEmail
-Send Email: Sends an email message
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|emailMessage| |yes|Email message instance that can include the following properties: <ul><li>Attachment (optional): Send an attachment. Attachment properties include Name (required), and ContentBytes (required).</li><li>From (optional)</li><li>Cc (optional)</li><li>Bcc (optional)</li><li>Subject (required)</li><li>Body (required)</li><li>Importance (optional): "Low", "Normal", or "High"</li><li>IsHtml (optional): Enter true or false</li><li>To (required): Separate email addresses with a comma.</li></ul> |
-
-#### Output properties
-None.
-
-
-### DeleteEmail
-Delete email: Deletes an email message by id
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|messageId|string|yes|Id of the message to delete.|
-
-#### Output properties
-None.
-
-
-### MarkAsRead
-Mark as read: Marks an email message as having been read
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|messageId|string|yes|Id of the message to be marked as read|
-
-#### Output properties
-None.
-
-
-### ReplyTo
-Reply to message: Replies to an email message
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|messageId|string|yes|Id of the message to reply to|
-|comment|string|yes|Reply comment|
-|replyAll|boolean|no|Reply to all recipients|
-
-#### Output properties
-None.
-
-
-### GetAttachment
-Get attachment: Retrieves message attachment by id
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|messageId|string|yes|Id of the message|
-|attachmentId|string|yes|Id of the attachment to download|
-
-#### Output properties
-None.
-
-
-### OnNewEmail
-On new email: Triggers a flow when a new email arrives
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|folderPath|string|no|Email folder to retrieve (default: Inbox, Inbox\ToMe etc.)|
-|to|string|no|Recipient email addresses|
-|from|string|no|From address|
-|importance|string|no|Importance of the email (High, Normal, Low) (default: Normal)|
-|fetchOnlyWithAttachment|boolean|no|Retrieve only emails with an attachment|
-|includeAttachments|boolean|no|Include attachments|
-|subjectFilter|string|no|String to look for in the subject.|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|value|array|No | |
-
-
-### SendMailWithOptions
-Send email with options: Send an email with multiple options and wait for the recipient to respond back with one of the options.
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|optionsEmailSubscription| |yes|Subscription Request for Email options, including:  <ul><li>NotificationUrl (optional)</li><li>Message (optional)</li></ul> |
-
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|id|string|No | |
-|resource|string|No | |
-|notificationType|string|No | |
-|notificationUrl|string|No | |
-
-
-### SendApprovalMail
-Send approval email: Send an approval email and wait for a response from the To recipient.
-
-#### Input properties
-
-| Name| Data Type|Required|Description|
-| ---|---|---|---|
-|approvalEmailSubscription| |yes|Subscription Request for Approval Email, including: <ul><li>NotificationUrl (optional)</li><li>Message (optional)</li></ul>|
-
-#### Output properties
-
-| Property Name | Data Type | Required | Description |
-|---|---|---|---|
-|id|string|No | |
-|resource|string|No | |
-|notificationType|string|No | |
-|notificationUrl|string|No | |
-
-
 ## Helpful links
 
+- For a detailed list of all available functions, including their parameters, see the [Office 365 Outlook reference](https://docs.microsoft.com/en-us/connectors/office365connector/).
 - See all the [available connections](../connections-list.md).  
 - Learn how to [manage your connections](../add-manage-connections.md).
