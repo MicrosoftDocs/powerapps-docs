@@ -20,8 +20,7 @@
 # Show a list of items in PowerApps  #
 Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your app. This topic uses Excel as the data source. Filter the list by configuring the gallery to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
 
-## Prerequisites
-
+## Prerequisites ##
 - Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 - Set up the sample data:
 
@@ -114,22 +113,19 @@ To sort *and* filter your gallery, replace both instances of *DataSource* in thi
 
 **Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-## Change the default selected item
-If you have a long list, and want the gallery to start with a specific item, instead of the first one, you can set the **Default** property.
+## Highlight the selected item ##
+Set the gallery's **TemplateFill** property to a formula that's similar to this example:
 
-To make the selected item in the gallery visible, add the following code to the gallery's **TemplateFill** property:
+**If(ThisItem.IsSelected, LightCyan, White)**
 
-        If( ThisItem.IsSelected, LightCyan, White)
+## Change the default selection ##
+Set the gallery's **Default** property to the record that you want to select by default. For example, specify the fifth item in the **FlooringEstimates** data source:
 
-To make a gallery to appear with the fifth item selected, set the Default property to this:
+**Last(FirstN(FlooringEstimates, 5))**
 
-        Last(FirstN(FlooringEstimates, 5))
+In this example, you specify the first item in the **Hardwood** category of the **FlooringEstimates** data source:
 
-Or suppose you want the selected item to be the first "Hardwood" item. You would use this formula:
-
-        First(Filter(FlooringEstimates, Category = "Hardwood"))
-
-The **default** property is a record in the data source. Some functions like **Filter** return tables, so if you use that function, then in order to produce a record for the property, you need to enclose it inside a function like **First** or **Last**.
+**First(Filter(FlooringEstimates, Category = "Hardwood"))**
 
 ## Next steps ##
 - Learn how to work with [forms](working-with-forms.md) and [formulas](working-with-formulas.md).
