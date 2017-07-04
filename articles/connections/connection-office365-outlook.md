@@ -1,10 +1,10 @@
 <properties
 	pageTitle="Overview of the Office 365 Outlook connection | Microsoft PowerApps"
-	description="See how to connect to Office 365 users, step through some examples, and see all the functions"
+	description="Reference information, including examples, for the Office 365 Outlook connection to PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="RickSaling"
+	authors="archnair"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="05/25/2017"
-   ms.author="ricksal"/>
+   ms.author="archanan"/>
 
 #  Office 365 Outlook
 
@@ -24,30 +24,26 @@
 
 If you connect to Office 365 Outlook, you can show, send, delete, and reply to email messages, in addition to other tasks.
 
-You can add controls, including buttons and labels, to do these functions in your app. For example, you can add input text boxes on your app that asks for email information, including the recipient, the subject, and the body of the email. Then, add a Send button that sends the email.
+You can add controls to perform these functions in your app. For example, you can add **Text input** controls to ask for the recipient, the subject, and the body of the email, and add a **Button** control to send the email.
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
-**Important**: As of this writing, the calendar operation does not support listing recurring events.
+**Important**: As of this writing, the calendar operation doesn't support recurring events.
 
 &nbsp;
 
 [AZURE.INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
-## Connect to Office 365
+## Connect to Office 365 Outlook
 1. [Add a data connection](add-data-connection.md) and select **Office 365 Outlook**:  
 
 	![Connect to Office 365](./media/connection-office365-outlook/add-office.png)
 
 1. Select **Connect**, and if prompted to sign in, enter your work account.
 
-The Office 365 Outlook connection has been created, and added to your app. Now, it's ready to be used.
+The Office 365 Outlook connection has been created and added to your app. Now, it's ready to be used.
 
-
-## Use the Office 365 Outlook connection in your app
-
-### Show email
-
+## Show messages ##
 1. On the **Insert** menu, select **Gallery**, and then select a **Text gallery** control.
 
 2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
@@ -68,14 +64,14 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 	`Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2, searchQuery:"powerapps"})`  
 	`Office365.GetEmails({folderPath:"Deleted Items", fetchOnlyUnread:false, top:2, skip:3})`
 
+## Send a message ##
+1. On the **Insert** menu, select **Text**, and then select **Text input**.
 
-### Send email
-
-1. On the **Insert** menu, select **Text**, and then select **Text input**. Do this three times to create three different text input controls. Arrange them in a column:  
+1. Repeat the previous step two more times so that you have three boxes, and then arrange them in a column:  
 
 	![](./media/connection-office365-outlook/threetextinput.png)
 
-2. Rename them to:  
+2. Rename the controls to:  
 
 	- **inputTo**
 	- **inputSubject**
@@ -91,33 +87,24 @@ The Office 365 Outlook connection has been created, and added to your app. Now, 
 
 6. Select **Send email** to send the message. Press Esc to return to the default workspace.
 
-### Send email with attachment(s)
+## Send a message with an attachment ##
+You can, for example, create an app in which the user takes pictures by using the device's camera and then sends them as attachments. Users can also attach many other kinds of files to an email app.
 
-You can create a camera app in which you take pictures and then email the photo images as attachments. For example, a claims adjuster may take photos of an auto accident and send them to the Claims Processing Department. You can also attach many other kinds of files to an email app.
+To add an attachment to a message, follow the steps in the previous section, but add a parameter to specify an attachment (when you set the **OnSelect** property of the button). This parameter is structured as a table in which you specify up to three properties for each attachment:
 
-To add attachments to an email, proceed as in the prior step. But in the third step where you call the SendEmail method, you add an additional parameter that specifies the attachment(s).
+- Name
+- ContentBytes
+- @odata.type
 
-That parameter looks like this:
+**Note**: You can specify the @odata.type property for only one attachment, and you can set it to an empty string.
 
-			{Attachments: Table({first attachment's properties}, {2nd attachment's properties}, etc.)}
+In this example, a photo will be sent as **file1.jpg**:
 
-The properties for each attachment are the following:
+`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""})})`
 
-1. Name: description of this attachment
-2. ContentBytes: name of the file to be attached
-3. @odata.type: must be defined. You can set it to an empty string.  Note, if you have multiple tables, you only need to set this parameter once.
+In this example, an audio file will be sent in addition to the photo:
 
-#### Sample formula
-
-This formula sends email with a single file attached.
-
-			Office365.SendEmail("your.name@contoso.com", "Subject", "Email content", {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""})})
-
-And this formula sends email with two attachments.
-
-			Office365.SendEmail("archanan@microsoft.com", "Test", "Blah Blah", {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})
-
-
+`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})`
 
 ### Delete email
 
