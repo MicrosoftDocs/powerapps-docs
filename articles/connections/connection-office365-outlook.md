@@ -106,7 +106,7 @@ In this example, an audio file will be sent in addition to the photo:
 
 `Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})`
 
-### Delete email
+## Delete a message ##
 
 1. On the **Insert** menu, select **Gallery**, and then select a **Text gallery** control.
 
@@ -129,7 +129,7 @@ In this example, an audio file will be sent in addition to the photo:
 
 6. Press Esc to return to the default workspace.
 
-### Mark email as read
+## Mark a message as read ##
 
 This section uses the same controls as [Delete email](connection-office365-outlook.md#delete-email).
 
@@ -137,13 +137,12 @@ This section uses the same controls as [Delete email](connection-office365-outlo
 
 	`Office365.MarkAsRead(EmailID.Text)`
 
-2. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the  unread emails, and click the button.
+2. Press F5, or select the Preview button (![](./media/connection-office365-outlook/preview.png)). Select one of the unread emails, and then click the button.
 
 3. Press Esc to return to the default workspace.
 
+## Helpful links ##
 
-## Helpful links
-
-- For a detailed list of all available functions, including their parameters, see the [Office 365 Outlook reference](https://docs.microsoft.com/en-us/connectors/office365connector/).
+- For a list of all functions and their parameters, see the [Office 365 Outlook reference](https://docs.microsoft.com/en-us/connectors/office365connector/).
 - See all the [available connections](../connections-list.md).  
 - Learn how to [manage your connections](../add-manage-connections.md).
