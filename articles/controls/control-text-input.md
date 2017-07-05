@@ -62,6 +62,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
+**Format** – Whether the user input is restricted to numbers only or can be any text.
+
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **HintText** – Light-grey text that appears in an input-text control if it's empty.

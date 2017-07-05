@@ -38,7 +38,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **OnVisible** – The behavior of an app when the user navigates to a screen.
 
-**OnStart** – The behavior of an app when the user opens it or starts to record with a **Microphone** control.
+**OnStart** – The behavior of the app when the user opens the app.
 
 - The formula to which this property is set runs before the first screen of the app appears. Call the [**Navigate**](../functions/function-navigate.md) function to change which screen appears first when the app starts.
 
