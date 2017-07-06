@@ -416,7 +416,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Required](controls/control-card.md)** – Whether a card, editing the field of a data source, must contain a value.  Applies to the **[Card](controls/control-card.md)** control.
 
-**[Reset](controls/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.
+**[Reset](controls/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.  Also see the **[Reset](../functions/function-reset.md)** function.
 
 ### S ###
 
