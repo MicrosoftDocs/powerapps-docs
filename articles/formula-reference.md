@@ -359,6 +359,8 @@ Other elements include:
 
 **[VarP](functions/function-aggregates.md)** – Returns the variance of its arguments.  
 
+**[ViewForm](functions/function-form.md)** – Resets a form control for viewing of an existing item.
+
 ## W ##
 
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
