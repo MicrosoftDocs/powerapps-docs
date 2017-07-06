@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/06/2016"
+   ms.date="07/06/2017"
    ms.author="gregli"/>
 
 # EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in PowerApps #
