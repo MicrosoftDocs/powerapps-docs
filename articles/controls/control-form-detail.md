@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/25/2016"
+   ms.date="07/06/2017"
    ms.author="gregli"/>
 
 # Edit form and Display form controls in PowerApps #
@@ -71,6 +71,18 @@ For more information, see [Understand data form layout](../working-with-form-lay
 
 - If you don't set this property, the user can't show, edit, or create a record, and no additional metadata or validation is provided.
 
+**DefaultMode** - The initial mode of the form control.  See the description of **Mode** below for the acceptable values and their meanings. 
+
+**DisplayMode** - The mode to use for data cards and controls within the form control.  
+
+Derived from the **Mode** property based and cannot be set independently:
+
+| Mode | DisplayMode | Description |
+|------|-------------|-------------|
+| **FormMode.Edit** | **DisplayMode.Edit** | Data cards and controls are editable, ready to accept changes to a record. 
+| **FormMode.New**| **DisplayMode.Edit** | Data cards and controls are editable, ready to accept a new record. 
+| **FormMode.View** | **DisplayMode.View** |  Data cards and controls are not editable and optimized for viewing. |
+
 **Error** – A user friendly error message to display for this form when the **[SubmitForm](../functions/function-form.md)** function fails.
 
 - This property applies only to the **Edit form** control.
@@ -85,10 +97,10 @@ For more information, see [Understand data form layout](../working-with-form-lay
 
 | ErrorKind | Description |
 |------------|-------------|
-| ErrorKind.Conflict | Another user changed the same record, resulting in a change conflict. Execute the **[Refresh](../functions/function-refresh.md)** function to reload the record, and try the change again. |
-| ErrorKind.None | The error is of an unknown kind. |
-| ErrorKind.Sync | The data source reported an error. Check the **Error** property for more information. |
-| ErrorKind.Validation | A general validation issue was detected. |
+| **ErrorKind.Conflict** | Another user changed the same record, resulting in a change conflict. Execute the **[Refresh](../functions/function-refresh.md)** function to reload the record, and try the change again. |
+| **ErrorKind.None** | The error is of an unknown kind. |
+| **ErrorKind.Sync** | The data source reported an error. Check the **Error** property for more information. |
+| **ErrorKind.Validation** | A general validation issue was detected. |
 
 **Item** – The record in the **DataSource** that the user will show or edit.
 
@@ -104,8 +116,7 @@ For more information, see [Understand data form layout](../working-with-form-lay
 |----------|-------------|
 | **FormMode.Edit** | The user can edit a record by using the form. The values in the form's cards are pre-populated with the existing record, for the user to change. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an existing record is modified. |
 | **FormMode.New** | The user can create a record by using the form. The values in the form's controls are pre-popoulated with the defaults for a record of the data source. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an record is created. |
-
-- By default, the form control is in **Edit** mode but switches to **New** mode when the **[NewForm](../functions/function-form.md)** function runs.
+| **FormMode.View** | The user can view a record by using the form. The values in the form's controls are pre-popoulated with the defaults for a record of the data source.  |
 
 The form switches from **New** mode to **Edit** mode when any of these changes occurs:
 - The form is successfully submitted, and a record is created. If the gallery is set to automatically move selection to this new record, the form will be in **Edit** mode for the created record so that the user can make additional changes.
