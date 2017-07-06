@@ -287,7 +287,9 @@ Other elements include:
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
-**[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.  
+**[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value. 
+
+**[Set](functions/function-set.md)** – Sets the value of a global variable.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
@@ -341,7 +343,7 @@ Other elements include:
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
-**[UpdateContext](functions/function-updatecontext.md)** – Creates or updates one or more [context variables](working-with-variables.md#create-a-context-variable) of the current screen.
+**[UpdateContext](functions/function-updatecontext.md)** – Sets the value of one or more [context variables](working-with-variables.md#create-a-context-variable) of the current screen.
 
 **[UpdateIf](functions/function-update-updateif.md)** – Modifies a set of records in a data source based on a condition.
 
