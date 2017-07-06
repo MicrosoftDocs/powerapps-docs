@@ -28,7 +28,7 @@ The **Reset** function resets a control to its **Default** property value.  Any 
 
 You cannot reset controls that are within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control from outside those controls.  You can reset controls from formulas on controls within the same gallery or form.   
 
-The **Reset** function is an easier to use alternative to toggling the **Reset** property of input controls.  The **Reset** property may be a better choice if many controls need to be reset at once.
+The **Reset** function is an alternative to toggling the **Reset** property of input controls.  The **Reset** property may be a better choice if many controls need to be reset at once.
 
 Controls are also reset when their **Default** property changes.
 
