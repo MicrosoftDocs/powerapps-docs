@@ -54,7 +54,7 @@ In the pattern language, certain characters are reserved for special purposes. T
 |-------------------|-------------|
 | **.** | dot or period |
 | **?** | question mark |  
-| **\*** | asterisk |
+| **&#42;** | asterisk |
 | **\+** | plus |
 | **( )** | parenthesis |
 | **[ ]** | square brackets |
