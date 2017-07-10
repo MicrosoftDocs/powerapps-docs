@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/16/2016"
+   ms.date="07/10/2017"
    ms.author="anneta"/>
 
 # Add and configure a control in PowerApps #
@@ -117,6 +117,37 @@ By configuring a control from the toolbar, you can specify a wider variety of op
 
 	![A label with text aligned to the top of the box](./media/add-configure-controls/change-align.png)
 
+## Configure a control from the Properties panel ##
+Using the **Properties** panel you can configure the properties of a control without writing an expression. In this procedure, you'll add and configure a **Label** control, but you can apply many of the same principles to other controls.
+
+1. With the **Label** control selected, click or tap the **Properties** panel to the right of the canvas.
+
+	![Properties panel](./media/add-configure-controls/properties-panel.png)
+
+1. Click or tap on text box for **Text** property, and then type **Hello, World**.
+
+	![Properties panel Label Text](./media/add-configure-controls/properties-panel-text.png)
+
+	The **Label** control shows the entered text.
+
+	![Properties panel canvas Text](./media/add-configure-controls/properties-panel-canvas-text.png)
+
+1. Click or tap the **Fill** icon in the **Properties** panel, and then click or tap a color.
+
+	![Properties panel color Text](./media/add-configure-controls/properties-panel-color.png)
+
+	The **Label** control reflects your selection.
+
+	![Properties panel canvas color](./media/add-configure-controls/properties-panel-canvas-color.png)
+
+1. Click or tap the **Color** property in the properties panel.
+
+	![Properties panel property](./media/add-configure-controls/properties-panel-property.png)
+
+	The value of the **Color** property is highlighted in the formula bar.
+
+	![Properties panel property expression](./media/add-configure-controls/properties-panel-property-expression.png)
+
 ## Configure a control in the formula bar ##
 By using the formula bar, you can set properties that you can't set directly or from the toolbar. For example, you can set a tooltip that appears when a user points to the control but doesn't click or tap it. You can also specify complicated formulas that increase the power of your app.
 
@@ -157,17 +188,13 @@ In this procedure, you'll add a check box and then configure the label that you 
 
 	![Configure check box](./media/add-configure-controls/configure-check-box.png)
 
-1. With the **Check box** control still selected, click or tap the **Home** tab.
+1. With the **Check box** control still selected, click or tap the current name of the **Check box** control just above the **Properties** panel on the right and then type **MyCheckbox**
 
-	![Rename check box](./media/add-configure-controls/rename-checkbox1.png)
+	![Rename check box](./media/add-configure-controls/properties-panel-rename.png)
 
-1. Click or tap the current name of the **Check box** control (to the right of **New screen**), and then type **MyCheckbox**.
+1. Click or tap the **Label** control to select it, and then click or tap the **Visible** property from the **Properties** panel on the right.
 
-	![Rename check box](./media/add-configure-controls/rename-checkbox2.png)
-
-1. Click or tap the **Label** control to select it, click or tap the **Label** tab, and then click or tap the **Visible** option.
-
-	![Visible property](./media/add-configure-controls/visible-property.png)
+	![Visible property](./media/add-configure-controls/properties-panel-visible-property.png)
 
 1. In the formula bar, delete **true**, and then type or paste this formula:
 
@@ -194,9 +221,9 @@ By renaming a screen or control, you can build formulas that are easier to read 
 
 1. Click or tap the screen or the control that you want to rename.
 
-1. On the **Home** tab, click or tap the name of the control (to the right of **New screen**), and then type the name that you want.
+1. Click or tap the current name of the control just above the **Properties** panel on the right and then type the name that you want.
 
-	![Rename a checkbox](./media/add-configure-controls/rename-control.png)
+	![Rename check box](./media/add-configure-controls/properties-panel-rename.png)
 
 ## Find and select a screen or a control ##
 You can find and select a screen or a control, even if it's hidden or overlaps with another control, by searching for it in the left-hand pane. This pane shows either a thumbnail of each screen in the app or a hierarchical view of each screen and the controls that it contains.
