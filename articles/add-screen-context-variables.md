@@ -30,7 +30,7 @@ Create an app with multiple screens, and add ways for users to navigate between 
 
 	![Add Screen option on the Home tab](./media/add-screen-context-variables/add-screen.png)
 
-1. Click or tap the current name of the screen just above the **Properties** panel on the right and then type the new name **Source**.
+1. In the right-hand pane, click or tap the name of the screen (just above the **Properties** tab), and then type the new name **Source**.
 
 	![Rename the default screen](./media/add-screen-context-variables/name-source-screen.png)
 
