@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Add and configure a control | Microsoft PowerApps"
-	description="Step-by-step instructions for adding and configuring controls directly, from the toolbar, or in the formula bar."
+	description="Step-by-step instructions for adding and configuring controls directly, from the toolbar, in the Properties tab, or in the formula bar."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -19,7 +19,7 @@
    ms.author="anneta"/>
 
 # Add and configure a control in PowerApps #
-Add a variety of UI elements to your app, and configure aspects of their appearance and behavior directly, from the toolbar, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
+Add a variety of UI elements to your app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
 
 **Prerequisites**
 
@@ -29,7 +29,7 @@ Add a variety of UI elements to your app, and configure aspects of their appeara
 
 	![New option on File menu](./media/add-configure-controls/file-new.png)
 
-1. On the **Blank app** tile, click or tap **Phone layout** .
+1. On the **Blank app** tile, click or tap **Phone layout**.
 
 	![Create an app from scratch](./media/add-configure-controls/blank-app.png)
 
@@ -82,10 +82,6 @@ In this procedure, you'll add and configure a **Label** control, but you can app
 
  	You can also modify this text by setting the **[Text](controls/properties-core.md)** property of this control, as this topic describes later.
 
-1. Delete the **Label** control by clicking or tapping it and then pressing Delete.
-
-1. Restore the **Label** control by pressing Ctrl-Z (or by repeating the first four steps in this procedure).
-
 ## Configure a control from the toolbar ##
 By configuring a control from the toolbar, you can specify a wider variety of options than you can by configuring a control directly.
 
@@ -117,14 +113,16 @@ By configuring a control from the toolbar, you can specify a wider variety of op
 
 	![A label with text aligned to the top of the box](./media/add-configure-controls/change-align.png)
 
-## Configure a control from the Properties panel ##
-Using the **Properties** panel you can configure the properties of a control without writing an expression. In this procedure, you'll add and configure a **Label** control, but you can apply many of the same principles to other controls.
+## Configure a control from the Properties tab ##
+By using the **Properties** tab, you can configure a control without writing a formula. In this procedure, you'll add and configure another **Label** control, but you can apply many of the same principles to other controls.
 
-1. With the **Label** control selected, click or tap the **Properties** panel to the right of the canvas.
+1. Add another **Label** control as described earlier in this topic.
+
+1. With the new control selected, click or tap the **Properties** tab in the right-hand pane.
 
 	![Properties panel](./media/add-configure-controls/properties-panel.png)
 
-1. Click or tap on text box for **Text** property, and then type **Hello, World**.
+1. In the **Text** box, type **Properties tab**.
 
 	![Properties panel Label Text](./media/add-configure-controls/properties-panel-text.png)
 
@@ -148,8 +146,10 @@ Using the **Properties** panel you can configure the properties of a control wit
 
 	![Properties panel property expression](./media/add-configure-controls/properties-panel-property-expression.png)
 
+	1. Delete the second **Label** control by clicking or tapping it and then pressing Delete.
+
 ## Configure a control in the formula bar ##
-By using the formula bar, you can set properties that you can't set directly or from the toolbar. For example, you can set a tooltip that appears when a user points to the control but doesn't click or tap it. You can also specify complicated formulas that increase the power of your app.
+By using the formula bar, you can set properties that you can't set directly, in the **Properties** tab, or from the toolbar. For example, you can set a tooltip that appears when a user points to the control but doesn't click or tap it. You can also specify complicated formulas that increase the power of your app.
 
 Each change that you made earlier in this topic updated the value of a [property](reference-properties.md) for the control that you configured.
 
@@ -157,9 +157,9 @@ Each change that you made earlier in this topic updated the value of a [property
 - When you moved the control, you changed its **[X](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties.
 - When you changed the text that the control displays, you changed its **[Text](controls/properties-core.md)** property.
 
-Instead of configuring a control directly or from the toolbar, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
+Instead of configuring a control directly, in the **Properties** tab, or from the toolbar, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
 
-1. With the **Label** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
+1. With the remaining **Label** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
 
 	![A literal string in a label](./media/add-configure-controls/text-literal.png)
 
@@ -188,11 +188,13 @@ In this procedure, you'll add a check box and then configure the label that you 
 
 	![Configure check box](./media/add-configure-controls/configure-check-box.png)
 
-1. With the **Check box** control still selected, click or tap the current name of the **Check box** control just above the **Properties** panel on the right and then type **MyCheckbox**
+1. With the **Check box** control still selected, click or tap its name just above the **Properties** tab, and then type **MyCheckbox**
 
 	![Rename check box](./media/add-configure-controls/properties-panel-rename.png)
 
-1. Click or tap the **Label** control to select it, and then click or tap the **Visible** property from the **Properties** panel on the right.
+1. Click or tap the **Label** control to select it.
+
+1. On the **Properties** tab, click or tap the **Visible** property.
 
 	![Visible property](./media/add-configure-controls/properties-panel-visible-property.png)
 
@@ -221,7 +223,7 @@ By renaming a screen or control, you can build formulas that are easier to read 
 
 1. Click or tap the screen or the control that you want to rename.
 
-1. Click or tap the current name of the control just above the **Properties** panel on the right and then type the name that you want.
+1. In the right-hand pane, click or tap the name of the control (just above the **Properties** tab), and then type the name that you want.
 
 	![Rename check box](./media/add-configure-controls/properties-panel-rename.png)
 
