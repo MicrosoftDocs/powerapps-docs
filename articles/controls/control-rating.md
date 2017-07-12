@@ -40,7 +40,7 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 **[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
-**[Disabled](properties-core.md)** – Whether the user can interact with the control.
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 

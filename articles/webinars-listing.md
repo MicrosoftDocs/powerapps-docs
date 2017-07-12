@@ -22,7 +22,6 @@
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-
 **Top 5 Tips for Designing Apps that Mean Business**
 <br>by Audrie Gordon
 <br>*June 27th, 10:00AM PST, 1:00PM EST*
@@ -70,7 +69,6 @@ It’s hard to keep up these days with the product team releasing new features e
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
 
 ### Getting Started Webinar Series ###
-
 **Get started with gallery controls**
 <br>by Audrie Gordon
 [Register and watch now](https://info.microsoft.com/US-EAD-WBNR-FY17-02Feb-28-GettingStartedwithPowerAppsGalleries300759_01Registration-ForminBody.html)
@@ -88,7 +86,6 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 [Watch now](https://info.microsoft.com/US-PowerBI-WBNR-FY17-04Apr-18-GettingStartedwiththeCommonDataServices312618_01Registration-ForminBody.html)
 
 ### Pro Topics ###
-
 **Deploying your PowerApps applications**
 <br>by James Oleinik
 [Watch now](https://www.youtube.com/watch?v=LF49hFB14Cs)
@@ -106,8 +103,7 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 [Watch now](https://www.youtube.com/watch?v=YBdO2MAulx8)
 
 ### App Designer Topics ###
-
 **Look behind the curtain with one of the PowerApps Developers: Marie Hoeger**
 <br>by Audrie Gordon
-[Click to join](https://www.youtube.com/watch?v=YF3DKZxlUdM) on June 1st!
+[Watch now](https://www.youtube.com/watch?v=YF3DKZxlUdM)
   	

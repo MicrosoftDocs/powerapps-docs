@@ -21,7 +21,7 @@
 # Understand data cards #
 **[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls. The form represents the entire record, and each card represents a single field of that record.
 
-The easiest way to interact with cards is through the right-hand pane when a form control has been selected in the design workspace. In that pane, you can choose which fields to show, pick how each field should be shown, and rearrange the fields.
+You can interact with cards most easily in the right-hand pane after you select a form control in the design workspace. In that pane, you can choose which fields to show, how to show each field, and in what order to show them. This example shows an **Edit form** control in an app built from a SharePoint list that's named **Assets**.
 
 ![](./media/working-with-cards/first-screen.png)
 
@@ -30,85 +30,83 @@ To get started with cards, see [add a form](add-form.md) and [understand data fo
 ## Predefined cards ##
 PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
 
-![](./media/working-with-cards/second-screenshot.png)
+![](./media/working-with-cards/selected-card.png)
 
 In this example, a single-line text card is selected, but the URL's text is longer than can be shown on a single line. Let's change this to a multi-line text card to give our users more room to edit:
 
-![](./media/working-with-cards/third-screen.png)
+![](./media/working-with-cards/multiline-edit.png)
 
-You'll also notice that several fields of this data source aren't being shown. Show and hide a field by selecting its checkbox:
+Several fields of this data source aren't being shown, but you can show or hide a field by selecting its checkbox. This example illustrates how to show the **SecurityCode** field.
 
-![](./media/working-with-cards/add-field.png)
+![](./media/working-with-cards/add-security-code.png)
 
 ## Customize a card ##
-Cards comprise other controls. The user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
+Cards comprise other controls. In an **Edit form** control, the user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
 
-Let's walk through some examples of changing the card's appearance by manipulating controls.
+Let's walk through an example of how to change a card's appearance by manipulating controls in it.
 
 1. First, let's return to the card that we inserted most recently, for the **SecurityCode** field. Select this card by clicking or tapping it once:
 
-	![](./media/working-with-cards/customize-textbox0.png)
+	![](./media/working-with-cards/select-security-code.png)
 
 2. Select the **[Text input](controls/control-text-input.md)** control inside the card by clicking or tapping the input control itself.
 
-	![](./media/working-with-cards/customize-textbox1.png)
+	![](./media/working-with-cards/select-text-input.png)
 
 3. Move this control within the card by dragging the selection box, and resize the control by dragging the handles along the edge of the selection box:
 
-	![](./media/working-with-cards/customize-textbox2.png)  
+	![](./media/working-with-cards/customize-text-input.png)  
 
-	You can resize, move, and make other modifications to the control, but you can't delete it without unlocking it first. The next section describes how to unlock a card.
-
-4. Insert one or more controls into the card, such as this star shape from the **Shapes** menu on the **Insert** tab:
-
-	![](./media/working-with-cards/customize-textbox3.png)
-
-	This new control is now a part of the card and will travel with the card if, for example, you reorder the cards within the form.
-
-	As another example, show an image in an **[Image](controls/control-image.md)** control instead of the image's URL in a **Text input** control, as this graphic shows
-
-	![](./media/working-with-cards/customize-image1.png)
-
-2. On the **Insert** tab, add an image control under the **ImageURL** card:
-
-	![](./media/working-with-cards/customize-image2.png)
-
-3. In the formula bar, set the **[Image](controls/properties-visual.md)** property of this control to *TextBox*.**Text**, where *TextBox* is the name of the **Input text** control that holds the URL:
-
-	**Tip**: Press the Alt key to show the name of each control.
-
-	![](./media/working-with-cards/customize-image3.png)
-
-	And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **[Image](controls/properties-visual.md)** property, but it wouldn't have updated as the user entered a new URL.
-
-4. We can do the same thing on the second screen of this app, where we use a **[Display form](controls/control-form-detail.md)** control to display the details of a record.  Here we may want to hide the label (set the **[Visible](controls/properties-core.md)** property of the text-box control, not the card, to *false*) because the user won't edit the URL on that screen:
-
-	![](./media/working-with-cards/customize-image4.png)
+You can resize, move, and make other modifications to controls within a card, but you can't delete it without unlocking it first.
 
 ## Unlock a card ##
-In addition to containing controls, cards themselves are controls that have properties and formulas just like any other control. When you choose to display a field on a form, the right-hand pane automatically creates the card for you and generates the needed formulas.  We can see these formulas in the **Advanced** pane, available from the **View** tab:
+In addition to containing controls, cards themselves are controls that have properties and formulas just like any other control. When you choose to display a field on a form, the right-hand pane automatically creates the card for you and generates the needed formulas.  We can see these formulas in the **Advanced** tab of the right-hand pane:
 
-![](./media/working-with-cards/locked-advanced-view.png)
+![](./media/working-with-cards/advanced-locked.png)
 
 We immediately see one of the most important properties of the card: the **[DataField](controls/control-card.md)** property. This property indicates which field of the data source the user sees and can edit in this card.  
 
-In the **Advanced** view, the large banner at the top indicates that the properties of this card are locked. A lock icon also appears next to the **[DataField](controls/control-card.md)**, **[Default](controls/properties-core.md)**, and **[DisplayName](controls/control-card.md)** properties. The right-hand pane created these formulas, and the lock prevents accidental changes to these properties.  
+On the **Advanced** tab, the banner at the top indicates that the properties of this card are locked. A lock icon also appears next to the **[DataField](controls/control-card.md)**, **[DisplayName](controls/control-card.md)**, and **[Required](controls/control-card.md)** properties. The right-hand pane created these formulas, and the lock prevents accidental changes to these properties.
+
+![](./media/working-with-cards/lock-icons.png)
 
 Click or tap the banner at the top to unlock the card so that you can modify these properties:
 
-![](./media/working-with-cards/unlocked-advanced-view.png)
+![](./media/working-with-cards/unlocked-card.png)
 
 Let's modify the **[DisplayName](controls/control-card.md)** to put a space between **Asset** and **ID**. By making this change, we're altering what was generated for us.  In the right-hand pane, this card has a different label:
 
-![](./media/working-with-cards/custom-card-new.png)
+![](./media/working-with-cards/change-display-name.png)
 
 We've now taken control over this card and can modify it further to fit our need. But we've lost the ability to change the card from one representation to another (for example, single-line text to multi-line text) as we did before. We've transformed the predefined card into a "custom card" that we now control.  
 
-A word of caution: you can't relock a card if you unlock it. To get back to a locked state, remove the card, and reinsert it in the right-hand pane.   
+**Important**: You can't relock a card if you unlock it. To get a card back to a locked state, remove it, and reinsert it in the right-hand pane.
 
-## Interact with the form ##
+You can change the appearance and behavior of an unlocked card in a variety of ways, such as adding and deleting controls within it. For example, you can add a star shape from the **Icons** menu on the **Insert** tab.
 
-After you unlock the card, you can change how it interacts with the form that contains it.
+![](./media/working-with-cards/add-star.png)
+
+The star is now a part of the card and will travel with it if, for example, you reorder the cards within the form.
+
+As another example, unlock the **ImageURL** card, and then add an **Image** control to it from the **Insert** tab:
+
+![](./media/working-with-cards/add-image.png)
+
+In the formula bar, set the **Image** property of this control to *TextBox*.**Text**, where *TextBox* is the name of the **Text input** control that holds the URL:
+
+**Tip**: Press the Alt key to show the name of each control.
+
+![](./media/working-with-cards/show-image.png)
+
+And now we can see the images and edit their URLs. Note that we could have used **Parent.Default** as the **Image** property, but it wouldn't have updated if the user changed the URL.
+
+We can do the same thing on the second screen of this app, where we use a **Display form** control to display the details of a record. In this case, we may want to hide the label (set the **Visible** property of the label, not the card, to **false**) because the user won't edit the URL on that screen:
+
+![](./media/working-with-cards/show-image-display.png)
+
+## Interact with a form ##
+
+After you unlock a card, you can change how it interacts with the form that contains it.
 
 Below are some guidelines for how controls should work with their card and how the cards should work with the form. These are only guidelines. As with any control in PowerApps, you can create formulas that reference any other control in PowerApps, and that's no less true for cards and controls within cards. Be creative: you can create an app in many ways.  
 

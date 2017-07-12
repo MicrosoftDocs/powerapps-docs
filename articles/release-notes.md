@@ -14,13 +14,20 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="05/30/2017"
+    ms.date="07/11/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+
+## Release 2.0.660-2.0.661 ##
+1. [Configure properties of controls](add-configure-controls.md) more easily by using the right-hand pane.
+1. Set an input control’s **DisplayMode** property to support showing data, editing data, or neither.
+1. Reset an input control to its default value by using the **[Reset](function-reset.md)** function.
+1. Create global variables by using the **[Set](function-set.md)** function.
+1. Show, create, or edit a record [in the same form](function-form.md).
 
 ## Release 2.0.650-2.0.651 ##
 1. Save changes to a shared app, and then [publish them later](save-publish-app.md).

@@ -49,6 +49,11 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 - For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **[Default](properties-core.md)** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
 
+**DisplayMode** – Values can be **Edit, View,** or **Disabled**. Configures whether the control inside the card allows user input (**Edit**), only displays data (**View**) or is disabled (**Disabled**).  
+
+- Allows a single card to be used in both edit and view forms, by configuring this property, which is tied to the Form's behavior by default.
+- In **View** mode, child controls such as **[Text input](control-text-input.md)**, **[Drop down](control-drop-down.md)**, **[Date Picker](control-date-picker.md)** will only display the text value and will not render any interactive elements or decorations.
+
 **DisplayName** – The user friendly name for a field in a data source.
 
 - The **[DataSourceInfo](../functions/function-datasourceinfo.md)** function provides this metadata from the data source.

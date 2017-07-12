@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/16/2016"
+   ms.date="07/10/2017"
    ms.author="anneta"/>
 
 # Add a screen and navigate between screens #
@@ -30,7 +30,7 @@ Create an app with multiple screens, and add ways for users to navigate between 
 
 	![Add Screen option on the Home tab](./media/add-screen-context-variables/add-screen.png)
 
-1. On the **Home** tab, rename the new screen **Source**.
+1. In the right-hand pane, click or tap the name of the screen (just above the **Properties** tab), and then type the new name **Source**.
 
 	![Rename the default screen](./media/add-screen-context-variables/name-source-screen.png)
 

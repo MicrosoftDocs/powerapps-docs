@@ -35,7 +35,7 @@ You can use these functions to display dates and times in the language of the cu
 | **Calendar.WeekdaysLong()** | Single-column table containing the full names of each weekday, starting with "Sunday". |
 | **Calendar.WeekdaysShort()** | Single-column table containing the full names of each weekday, starting with "Sun" for Sunday.  |
 | **Clock.AmPm()** | Single-column table containing the long uppercase "AM" and "PM" designations.  If the language uses a 24-hour clock, the table will be empty. |
-| **Clock.AmPmShort()** | Single-column table containing the short uppercase "am" and "pm" designations.  If the language uses a 24-hour clock, the table will be empty. |
+| **Clock.AmPmShort()** | Single-column table containing the short uppercase "A" and "P" designations.  If the language uses a 24-hour clock, the table will be empty. |
 | **Clock.IsClock24()** | Boolean indicating if a 24-hour clock is used in this locale. |
 
 Use the **[Text](function-text.md)** function to format date and time values using this same information.  The **[Language](function-language.md)** function returns the current language and region code.
@@ -75,5 +75,5 @@ In the United States, with **[Language](function-language.md)** returning "en-US
 | **Calendar.WeekdaysLong()** | The return value contains the the full names of each month, starting with "Sunday".   | [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ] |
 | **Calendar.WeekdaysShort()** | The return value contains the the abbreviated names of each month, starting with "Sunday".  | [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ] |
 | **Clock.AmPm()** | This language uses a 12-hour clock.  The return value contains the uppercase versions of the full AM and PM designations.  | [ "AM", "PM" ] |
-| **Clock.AmPmShort()** | This language uses a 12-hour clock.  The return value contains the uppercase versions of the short AM and PM designations. | [ "am", "pm" ] |
+| **Clock.AmPmShort()** | This language uses a 12-hour clock.  The return value contains the uppercase versions of the short AM and PM designations. | [ "A", "P" ] |
 | **Clock.IsClock24()** | This language uses a 12-hour clock.  | **false** |
