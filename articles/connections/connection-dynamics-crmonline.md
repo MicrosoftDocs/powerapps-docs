@@ -81,7 +81,9 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 
 	![Select layout](./media/connection-dynamics-crmonline/select-gallery.png)
 
-1. Click or tap on the **Data** tab in the right-hand pane. Click on the layout dropdown and choose the one that shows pictures and text in a two-column grid.
+1. In the right-hand pane, click or tap the **Data** tab.
+
+1. In the list of layouts, click or tap the one that shows pictures and text in a two-column grid.
 
 	You might need to scroll down to show this option.
 

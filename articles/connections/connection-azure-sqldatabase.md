@@ -100,7 +100,9 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 ## Update an existing app ##
 1. In PowerApps Studio, open the app that you want to update.
 
-1. Click or tap on **Data sources** in the **View** ribbon menu. In the right-hand pane, click or tap on **Add a data source**.
+1. Click or tap **Data sources** on the **View** tab of the ribbon.
+
+1. In the right-hand pane, click or tap **Add a data source**.
 
 	![Add data source](./media/connection-azure-sqldatabase/add-data-source.png)
 
