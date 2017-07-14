@@ -37,7 +37,7 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 
 	![Open a blank app](./media/connection-twitter/blank-app.png)
 
-2. Click or tap on **Data** tab in the right-hand pane, and then select **Add data source**.
+2. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
 
 3. Select **New connection**, and then select **Twitter**:  
 
