@@ -29,8 +29,6 @@ With a gateway, you can connect to on-premises data over these connections:
 - Filesystem
 - DB2
 
-**Note:** For SharePoint, gateways support HTTP traffic but not HTTPS traffic.
-
 ## Prerequisites ##
 
 - The user name and password that you used to [sign up](signup-for-powerapps.md) for PowerApps.
@@ -72,7 +70,7 @@ For **Can use** and **Can use + share** permission levels, select the data sourc
 For more information about how to manage a connection, see [Manage your connections](./add-manage-connections.md).
 
 ## Troubleshooting and Advanced Configuration ##
-For more information on troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](gateway-reference.md). 
+For more information on troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](gateway-reference.md).
 
 
 
