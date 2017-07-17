@@ -65,6 +65,7 @@ Add an app to a Microsoft Teams channel so that anybody with whom the app was sh
 
 ## Known issues ##
 In the desktop app for Microsoft Teams:
+
 - Apps must load content such as images and .pdf files over a secure (https) connection.
 - Not all sensors, such as **Acceleration**, **Compass**, and **Location**, are supported.
 - Only these audio formats are supported: AAC, H264, OGG Vorbis, and WAV.
