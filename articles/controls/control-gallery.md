@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="fikaradz"
+    authors="RickSaling"
     manager="anneta"
     editor=""
     tags=""/>
@@ -15,8 +15,8 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+   ms.date="05/25/2017"
+   ms.author="ricksal"/>
 
 # Gallery control in PowerApps #
 A control that contains other controls and shows a set of data.
@@ -28,7 +28,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 ## Key properties ##
 
-**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 

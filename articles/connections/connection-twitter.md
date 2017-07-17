@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="06/06/2016"
+ms.date="07/12/2017"
 ms.author="archanan"/>
 
 # Twitter
@@ -37,9 +37,9 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 
 	![Open a blank app](./media/connection-twitter/blank-app.png)
 
-2. In the right-hand pane, open the **Data sources** tab, and then select **Add data source**.
+2. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
 
-3. Select **Add connection**, and then select **Twitter**:  
+3. Select **New connection**, and then select **Twitter**:  
 
 	![Connect to Twitter](./media/connection-twitter/addconnection.png)
 

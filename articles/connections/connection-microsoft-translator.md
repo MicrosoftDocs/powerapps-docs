@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/06/2016"
+   ms.date="07/12/2017"
    ms.author="archanan"/>
 
 #  Microsoft Translator
@@ -38,9 +38,9 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 
 	![Open a blank app](./media/connection-microsoft-translator/blank-app.png)
 
-2. In the right-hand pane, open the **Data sources** tab, and then select **Add data source**.
+2. In the right-hand pane, click or tap **Data** tab, and then click or tap **Add data source**.
 
-3. Select **Add connection**, and then select **Microsoft Translator**:  
+3. Select **New connection**, and then select **Microsoft Translator**:  
 
 	![Connect to Microsoft Translator](./media/connection-microsoft-translator/addconnection.png)
 

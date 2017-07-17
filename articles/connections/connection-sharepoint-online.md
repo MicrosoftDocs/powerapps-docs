@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="06/05/2017"
+ms.date="07/12/2017"
 ms.author="karthikb"/>
 
 # Connect from Microsoft PowerApps to SharePoint #
@@ -87,9 +87,9 @@ Open PowerApps by taking *either* of these steps:
 ## Add a SharePoint list to an existing app ##
 1. In PowerApps Studio, open the app that you want to update.
 
-1. In the right-hand pane, click or tap the **Data sources** tab, and then click or tap **Add data source**.
+1. On the **View** tab of the ribbon, click or tap **Data sources**
 
-	**Note:** If the right-hand pane doesn't show a **Data sources** tab, click or tap any screen in the left navigation bar.
+1. In the right-hand pane, click or tap **Add data source**.
 
 	![Add data source](./media/connection-sharepoint-online/add-data-source.png)
 

@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/03/2017"
+   ms.date="07/12/2017"
    ms.author="karthikb"/>
 
 # Using multimedia files in PowerApps
@@ -129,7 +129,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 5.	In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 
-	a.	Click or tap the **Content** tab, and then click or tap **Data sources**.
+	a.	Click or tap the **View** tab, and then click or tap **Data sources**.
 
 	![](./media/add-images-pictures-audio-video/choose-data-sources.png)
 

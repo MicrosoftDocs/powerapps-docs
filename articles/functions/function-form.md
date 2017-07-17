@@ -1,6 +1,6 @@
 <properties
-	pageTitle="EditForm, NewForm, SubmitForm, and ResetForm functions | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the NewForm, SubmitForm, and ResetForm functions in PowerApps"
+	pageTitle="EditForm, NewForm, SubmitForm, ResetForm, And ViewForm functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -15,18 +15,30 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/21/2016"
+   ms.date="07/06/2017"
    ms.author="gregli"/>
 
-# EditForm, NewForm, SubmitForm, and ResetForm functions in PowerApps #
-Edit or create an item, save the contents, and reset the controls in an **[Edit form](../controls/control-form-detail.md)** control.
+# EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in PowerApps #
+View, edit, or create an item, save the contents, and reset the controls in an **[Edit form](../controls/control-form-detail.md)** control.
+
+## Overview ##
+
+These functions change the state of the **Edit form** control.  The form control can be in one of these modes:
+
+| Mode | Description |
+|------|-------------|
+| **FormMode.Edit** | The form is populated with an existing record and the user can modify the values of the fields.  Once complete, the user can save the changes to the record. |
+| **FormMode.New** |  The form is populates with default values and the user can modify the values of the fields.  Once complete, the user can add the record to the data source. |
+| **FormMode.View** | The form is populated with an existing record but the user cannot modify the values of the fields. |
 
 ## Description ##
+
 These functions are often invoked from the **[OnSelect](../controls/properties-core.md)** formula of a **[Button](../controls/control-button.md)** or **[Image](../controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can [use controls and these functions together](../working-with-forms.md) to create a complete solution.
 
 These functions return no values.
 
 ### SubmitForm ###
+
 Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.md)** property of a Button control to save any changes in a Form control to the data source.
 
 Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **[Validate](function-validate.md)** function.
@@ -45,7 +57,21 @@ The **EditForm** function changes the Form control's mode to **FormMode.Edit**. 
 The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are ignored, and the default values of the Form's **[DataSource](../controls/control-form-detail.md)** property populate the form. If the **SubmitForm** function runs when the form is in this mode, a record is created, not changed.
 
 ### ResetForm ###
-The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode. The **[OnReset](../controls/control-form-detail.md)** behavior of the form control also runs.
+The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode. The **[OnReset](../controls/control-form-detail.md)** behavior of the form control also runs.  You can also reset individual controls with the **[Reset](function-reset.md)** function but only from within the form.
+
+### ViewForm ###
+The **ViewForm** function changes the Form control's mode to **FormMode.View**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are used to populate the form.  The **SubmitForm** and **RestForm** functions have no effect when in this mode.
+
+### DisplayMode Poperty ###
+
+The current mode can be read through the **Mode** property.  The mode also determines the value of the **DisplayMode** property which can be used by data cards and controls within the form control.  Often, the data card's **DisplayMode** property will be set to **Parent.DisplayMode** (refernceing the form) as will the control's **DisplayMode** property (referncing the data card): 
+
+| Mode | DisplayMode | Description |
+|------|-------------|-------------|
+| **FormMode.Edit** | **DisplayMode.Edit** | Data cards and controls are editable, ready to accept changes to a record. 
+| **FormMode.New**| **DisplayMode.Edit** | Data cards and controls are editable, ready to accept a new record. 
+| **FormMode.View** | **DisplayMode.View** |  Data cards and controls are not editable and optimized for viewing. |
+ 
 
 ## Syntax ##
 
@@ -64,6 +90,10 @@ The **ResetForm** function resets the contents of a form to their initial values
 **ResetForm**( *FormName* )
 
 - *FormName* - Required. Form control to reset to initial values. Also switches the form from **FormMode.New** mode to **FormMode.Edit** mode.
+
+**ViewForm**( *FormName* )
+
+- *FormName* - Required.  Form control to switch to **FormMode.View** mode.
 
 ## Examples ##
 See [Understand data forms](../working-with-forms.md) for complete examples.

@@ -15,7 +15,7 @@ ms.devlang="na"
 ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
-ms.date="01/31/2017"
+ms.date="07/12/2017"
 ms.author="matp"/>
 
 # Connect from Microsoft PowerApps to Dynamics 365 #
@@ -77,15 +77,17 @@ The app can run in its initial state, but we can make it more useful by refining
 ## Customize BrowseScreen1 ##
 In this procedure, you'll configure **BrowseScreen1** to show the first and last names of each contact. The data will be sorted alphabetically by last name and include images in a two-column grid.
 
-1. In the right-hand pane, click the layout that shows pictures and text in a two-column grid.
+1. In **BrowseScreen1**, select the gallery by clicking any record in it except the first one.
+
+	![Select layout](./media/connection-dynamics-crmonline/select-gallery.png)
+
+1. In the right-hand pane, click or tap the **Data** tab.
+
+1. In the list of layouts, click or tap the one that shows pictures and text in a two-column grid.
 
 	You might need to scroll down to show this option.
 
 	![Select layout](./media/connection-dynamics-crmonline/select-layout.png)
-
-1. In **BrowseScreen1**, select the gallery by clicking any record in it except the first one.
-
-	![Select layout](./media/connection-dynamics-crmonline/select-gallery.png)
 
 1. Copy this formula and then, with the gallery still selected, paste the formula in the formula bar (to the right of the **fx** button):
 

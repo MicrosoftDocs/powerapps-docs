@@ -54,7 +54,7 @@ In the pattern language, certain characters are reserved for special purposes. T
 |-------------------|-------------|
 | **.** | dot or period |
 | **?** | question mark |  
-| **\*** | asterisk |
+| **&#42;** | asterisk |
 | **\+** | plus |
 | **( )** | parenthesis |
 | **[ ]** | square brackets |
@@ -62,7 +62,7 @@ In the pattern language, certain characters are reserved for special purposes. T
 | **^** | caret |
 | **$** | dollar sign |
 | **&#124;** | vertical bar or pipe |
-| **\** | backslash |
+| **\\** | backslash |
 
 For example, you can match "Hello?" by using the pattern **"Hello\\?"** with a backslash before the question mark.
 

@@ -49,9 +49,9 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 
 	![Create an app from scratch](./media/add-data-connection/blank-app.png)
 
-1. In the right-hand pane, click or tap **Add data source**.
+1. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
 
-	**Note**: If you're updating an existing app and **Add data source** doesn't appear in the right-hand pane, click or tap any screen in the left navigation bar.
+	**Note**: If you're updating an existing app and **Add data source** doesn't appear in the right-hand pane, click or tap **Data sources** on the **View** tab of the ribbon.
 
 1. If the list of connections includes the one that you want, click or tap it to add it to the app. Otherwise, skip to the next step.
 
