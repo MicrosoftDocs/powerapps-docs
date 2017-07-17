@@ -25,7 +25,7 @@ Just getting started with adding connections in PowerApps? Learn how to add [con
 
 Ready to take it to the next level? Create [custom connectors](register-custom-api.md), and connect to them within your apps.
 
-#### The full list of connector documentation is available [here](https://docs.microsoft.com/en-us/connectors/). ####
+#### The full list of connector documentation is available [here](https://docs.microsoft.com/connectors/). ####
 
 ## Most Popular Connectors ##
 | &nbsp; | &nbsp; |
