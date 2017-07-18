@@ -21,33 +21,22 @@
 # Limits and configuration in Microsoft PowerApps
 This topic contains information about the current limits and configuration details for PowerApps.
 
-## Request limits
-
-These are limits for a single outgoing request.
-
-### Timeout
+## Requests ##
+These limits apply to each single outgoing request:
 
 |Name|Limit|
 |----|----|
-|Request Timeout|180 Seconds|
-
-### Retry policy
-
-|Name|Limit|
-|----|----|
+|Timeout|180 Seconds|
 |Retry attempts|4|
 
-**NOTE**: This value may vary. For certain error conditions, it doesn't make sense to retry.
+**NOTE**: The retry value may vary. For certain error conditions, it doesn't make sense to retry.
 
-## Configuration
-
-### IP address
-
-Requests from PowerApps use IP addresses that depend on the region of the [environment](environments-overview.md) that the app is in. We don't currently publish fully qualified domain names available for PowerApps scenarios.
+## IP addresses ##
+Requests from PowerApps use IP addresses that depend on the region of the [environment](environments-overview.md) that the app is in. We don't publish fully qualified domain names available for PowerApps scenarios.
 
 Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this topic.
 
-So for example, if you must whitelist IP addresses for your Azure SQL database, you should use these addresses.
+You should use these addresses if, for example, you must whitelist IP addresses for an Azure SQL database.
 
 |Region|Outbound IP|
 |-----|----|
@@ -60,9 +49,8 @@ So for example, if you must whitelist IP addresses for your Azure SQL database, 
 |United States|104.43.232.28, 104.43.232.242, 104.43.235.249, 104.43.234.211, 52.160.93.247, 52.160.91.66, 52.160.92.131, 52.160.95.100, 40.117.101.91, 40.117.98.246, 40.117.101.120, 40.117.100.191|
 |United States (Early Access)|52.161.26.191, 52.161.27.42, 52.161.29.40, 52.161.26.33, 13.66.213.240, 13.66.214.51, 13.66.210.166, 13.66.213.29|
 
-### Services that PowerApps must use
-
-This is a list of all services to which the PowerApps client talks and their usages. Your network must **not** block these services.
+## Required services ##
+This list identifies all services to which PowerApps Studio talks and their usages. Your network must **not** block these services.
 
 |Domain(s)|Protocols|Uses|
 |-----|----|-------|
@@ -76,3 +64,8 @@ This is a list of all services to which the PowerApps client talks and their usa
 |*.azureedge.net|https|WebAuth|
 |*.blob.core.windows.net|https|Blob storage|
 |vortex.data.microsoft.com|https|Telemetry|
+
+## App versions ##
+|Name|Limit|
+|-|-|
+|Versions shown|600|
