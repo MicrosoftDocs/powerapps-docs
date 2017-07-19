@@ -66,6 +66,7 @@ This list identifies all services to which PowerApps Studio talks and their usag
 |vortex.data.microsoft.com|https|Telemetry|
 
 ## App versions ##
-|Name|Limit|
-|-|-|
-|Versions shown|600|
+
+|     Name       | Limit |
+|----------------|-------|
+| Versions shown |  600  |
