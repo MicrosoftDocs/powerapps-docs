@@ -1,6 +1,6 @@
 <properties
     pageTitle="Power BI tile control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the PBI tile  control"
+    description="Information, including properties and examples, about the Power BI tile control"
     services=""
     suite="powerapps"
     documentationCenter="na"
@@ -19,15 +19,15 @@
    ms.author="fikaradz"/>
 
 # Power BI tile control in PowerApps #
-A control that shows a **[Power BI ](https://powerbi.microsoft.com)**  tile inside a PowerApp.
+A control that shows a [Power BI ](https://powerbi.microsoft.com) tile inside an app.
 
 ## Description ##
-Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://powerbi.microsoft.com/en-us/documentation/powerbi-service-dashboard-tiles/)** inside your apps.  Choose the tile you want to show by setting its **Workspace**, **Dashboard** and **Tile** properties in the Data tab of the options panel.
+Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://powerbi.microsoft.com/documentation/powerbi-service-dashboard-tiles/)** inside your apps.  Choose the tile you want to show by setting its **Workspace**, **Dashboard** and **Tile** properties in the **Data** tab of the options panel.
 
 
 ## Sharing and security ##
-Once shared, the PowerApp will be accessible by all users who have permissions to access the app.  However in order to make the Power BI content visible to those users, the Dashboard where the tile comes from needs to be
-[shared](https://powerbi.microsoft.com/en-us/documentation/powerbi-service-how-should-i-share-my-dashboard/) with the user on Power BI.  This ensures that Power BI sharing permissions are respected as its content is used elsewhere.
+Once shared, the PowerApp will be accessible by all users who have permissions to access the app.  However in order to make the Power BI content visible to those users, the dashboard where the tile comes from needs to be
+[shared](https://powerbi.microsoft.com/documentation/powerbi-service-how-should-i-share-my-dashboard/) with the user on Power BI.  This ensures that Power BI sharing permissions are respected when Power BI content is accessed in an app.
 
 ## Key properties ##
 
@@ -61,8 +61,8 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
 
 
 ## Example ##
-- Add a **Power BI tile** control from the Controls section.  
-- In the **Data** tab on options panel choose "My Workspace" for the Worspace setting.  Choose a Dashboard from the list of dashboards, and a Tile from the list of tiles.
+1. Add a **Power BI tile** control from the **Insert** tab, **Controls** menu.  
+1. In the **Data** tab on options panel choose "My Workspace" for the **Workspace** setting.  Choose a dashboard from the list of dashboards, and a tile from the list of tiles.
 
 	The control renders the Power BI tile.
 
