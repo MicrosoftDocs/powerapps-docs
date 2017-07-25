@@ -47,7 +47,7 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 - The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
 - You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
 
-The **Coalesce** function evaluates its arguments in order, returning the first value which is not *blank*.  Use this function to replace a *blank* value with a different value, but leave non-*blank* values unchanged.  If all of the arguments are *blank* then the function returns *blank*.  **Coalesce( expr1, expr2 )** Is the more concise equivalent of **If( IsBlank( expr1 ), expr1, expr2 )** and does not require **expr1** to be evaluated twice.
+The **Coalesce** function evaluates its arguments in order, returning the first value which is not *blank*.  Use this function to replace a *blank* value with a different value, but leave non-*blank* values unchanged.  If all of the arguments are *blank* then the function returns *blank*.  All arguments to **Coalesce** must be of the same type, for example you cannot mix numbers and text strings.  **Coalesce( value1, value2 )** is the more concise equivalent of **If( IsBlank( value1 ), value1, value2 )** and does not require **value1** to be evaluated twice.  
 
 The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](function-errors.md)** function.
 
@@ -114,7 +114,7 @@ NOTE: At this time, the following example only works for local collections.  We 
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **Coalesce( Blank(), 1 )** | Tests the return value from the **Blank** function which always returns a *blank* value. As the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value is found.  | **1** |
-| **Coalesce( TextInput1.Text, "No Value" )** | Tests the Text property of the **TextInput1** control.  If the user has not typed anything into this box, the result will be *blank* and evaluation will continue with the next argument.  | If the user has typed something into **TextInput1** then that value, otherwise **"No Value"** |
+| **Coalesce( Blank(), Blank(), Blank(), Blank(), 2, 3 )** | **Coalesce** starts at the beginning of the argument list evaluating each in turn until a non-*blank* is found.  As the first four arguments all return *blank*, evaluation continues to the fifth argument.  As this argument is non-*blank*, evaluation stops here and the value is returned.  The 	sixth argument is not evaluated. | **2** |
 
 ### IsBlank ###
 
