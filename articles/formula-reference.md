@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/31/2016"
+   ms.date="07/24/2017"
    ms.author="gregli"/>
 
 # Formula reference for PowerApps #
@@ -76,6 +76,8 @@ Other elements include:
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
 
 **[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
+
+**[Coalesce](functions/function-isblank-isempty.md)** – Replaces *blank* values while leaving non-*blank* values unchanged.
 
 **[Collect](functions/function-clear-collect-clearcollect.md)** – Creates a collection or adds data to a data source.
 
@@ -138,6 +140,8 @@ Other elements include:
 **[EditForm](functions/function-form.md)** – Resets a form control for editing of an item.
 
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
+
+**[EndsWith](functions/function-startswith.md)** – Checks if a text string ends with another text string.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
