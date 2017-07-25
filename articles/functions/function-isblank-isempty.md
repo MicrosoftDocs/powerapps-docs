@@ -1,5 +1,5 @@
 <properties
-	pageTitle="Blank, IsBlank, and IsEmpty functions | Microsoft PowerApps"
+	pageTitle="Blank, Coalesce, IsBlank, and IsEmpty functions | Microsoft PowerApps"
 	description="Reference information, including syntax and examples, for the Blank, IsBlank, and IsEmpty functions in PowerApps"
 	services=""
 	suite="powerapps"
@@ -15,10 +15,10 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/24/2017"
+   ms.date="07/24/2017"
    ms.author="gregli"/>
 
-# Blank, IsBlank, and IsEmpty functions in PowerApps #
+# Blank, Coalesce, IsBlank, and IsEmpty functions in PowerApps #
 
 Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records), and provides a way to create *blank* values.
 
@@ -47,6 +47,8 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 - The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
 - You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
 
+The **Coalesce** function evaluates its arguments in order, returning the first value which is not *blank*.  Use this function to replace a *blank* value with a different value, but leave non-*blank* values unchanged.  If all of the arguments are *blank* then the function returns *blank*.  **Coalesce( expr1, expr2 )** Is the more concise equivalent of **If( IsBlank( expr1 ), expr1, expr2 )** and does not require **expr1** to be evaluated twice.
+
 The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](function-errors.md)** function.
 
 The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or **false**.
@@ -54,6 +56,10 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 ## Syntax ##
 
 **Blank**()
+
+**Coalesce**( *Value1* [, *Value2*, ... ] )
+
+- *Value(s)* – Required. Values to test.  Each Value is evaluated in order until a non-*blank* is found.  Values after the non-*blank* value are not evaluated.  
 
 **IsBlank**( *Value* )
 
@@ -102,6 +108,13 @@ NOTE: At this time, the following example only works for local collections.  We 
 	![Collection showing Seattle with a blank Weather field](media/function-isblank-isempty/seattle-blank.png)
 
 	The label shows **true** because the **Weather** field no longer contains a value.
+
+### Coalesce ###
+
+| Formula | Description | Result |
+|---------|-------------|--------|
+| **Coalesce( Blank(), 1 )** | Tests the return value from the **Blank** function which always returns a *blank* value. As the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value is found.  | **1** |
+| **Coalesce( TextInput1.Text, "No Value" )** | Tests the Text property of the **TextInput1** control.  If the user has not typed anything into this box, the result will be *blank* and evaluation will continue with the next argument.  | If the user has typed something into **TextInput1** then that value, otherwise **"No Value"** |
 
 ### IsBlank ###
 
