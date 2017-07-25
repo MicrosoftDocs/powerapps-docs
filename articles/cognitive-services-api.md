@@ -101,7 +101,7 @@ Follow the steps below to create this screen. If a control name is specified, th
 
 1. On the **Home** tab, click or tap **New Screen**, then **Scrollable screen**. 
 
-1. On **Screen2**, select "[Title]" and change it to "Text Analysis".
+1. On **Screen2**, select **[Title]** and change it to **Text Analysis**.
 
 1. Add a **Label** control for the introductory text.
 
@@ -131,7 +131,7 @@ OK, we have a nice-looking app, but it doesn't do anything yet. We'll fix that i
 
 1. The app makes specific API calls based on the check boxes selected in the app. When we click or tap **Analyze text**, the app makes 1, 2, or 3 API calls.
 
-1. Data that the API returns is stored in three different [collections](create-update-collection.md): **languageCollect**, **sentimentCollect**, and **phrasesCollect**.
+1. Data that the API returns is stored in three different [collections](working-with-variables.md#create-a-collection): **languageCollect**, **sentimentCollect**, and **phrasesCollect**.
 
 1. The **Text** property for two of the labels, and the **Items** property for the gallery, are updated based on what's in the three collections.
 
