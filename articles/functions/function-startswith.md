@@ -37,7 +37,7 @@ Use **EndsWith** and **StartsWith** with the **[Filter](function-filter-lookup.m
 **EndsWith**( *Text*, *EndText* )
 
 - *Text* – Required.  The text to test.
-- *EndText* – Required.  The text to search for at the beginning of *Text*.  If *EndText* is an empty string, **EndsWith** returns *true*.
+- *EndText* – Required.  The text to search for at the end of *Text*.  If *EndText* is an empty string, **EndsWith** returns *true*.
 
 **StartsWith**( *Text*, *StartText* )
 
