@@ -59,7 +59,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 **Coalesce**( *Value1* [, *Value2*, ... ] )
 
-- *Value(s)* – Required. Values to test.  Each value is evaluated in order until a non-*blank* is found.  Values after the first non-*blank* value aren't evaluated.  
+- *Value(s)* – Required. Values to test.  Each value is evaluated in order until a non-*blank* value is found.  Values after the first non-*blank* value aren't evaluated.  
 
 **IsBlank**( *Value* )
 
@@ -114,7 +114,7 @@ NOTE: At this time, the following example only works for local collections.  We 
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **Coalesce( Blank(), 1 )** | Tests the return value from the **Blank** function, which always returns a *blank* value. Because the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value is found.  | **1** |
-| **Coalesce( Blank(), Blank(), Blank(), Blank(), 2, 3 )** | **Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* is found.  In this case, the first four arguments all return *blank*, so evaluation continues to the fifth argument. The fifth argument is non-*blank*, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. | **2** |
+| **Coalesce( Blank(), Blank(), Blank(), Blank(), 2, 3 )** | **Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* value is found.  In this case, the first four arguments all return *blank*, so evaluation continues to the fifth argument. The fifth argument is non-*blank*, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. | **2** |
 
 ### IsBlank ###
 
