@@ -49,16 +49,16 @@ Use **EndsWith** and **StartsWith** with the **[Filter](function-filter-lookup.m
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **EndsWith( "Hello World", "world" )** | Tests whether **"Hello World"** ends with **"world"**.  The test is case insensitive. | **true** |
-| **EndsWith( "Good bye", "good" )** | Tests whether **"Good bye"** ends with **"good"**.  Although **"good"** appears in the text, it doesn't appear at the end. | **false** |
+| **EndsWith( "Good bye", "good" )** | Tests whether **"Good bye"** ends with **"good"**.  The *EndText* argument (**"good"**) appears in the text but not at the end. | **false** |
 | **EndsWith( "Always say hello", "hello" )** | Tests whether **"Always say hello"** ends with **"hello"**. | **true** |
-| **Endswith( "Bye bye", "" )** | Tests whether **"Bye bye"** ends with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **EndsWith** is defined to return **true** in this case.  | **true** | 
+| **Endswith( "Bye bye", "" )** | Tests whether **"Bye bye"** ends with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **EndsWith** is defined to return **true** in this case.  | **true** |
 
 | Formula | Description | Result |
 |---------|-------------|--------|
 | **StartsWith( "Hello World", "hello" )** | Tests whether **"Hello World"** begins with **"hello"**.  The test is case insensitive. | **true** |
 | **StartsWith( "Good bye", "hello" )** | Tests whether **"Good bye"** begins with **"hello"**. | **false** |
 | **StartsWith( "Always say hello", "hello" )** | Tests whether **"Always say hello"** begins with **"hello"**.  Although **"hello"** appears in the text, it doesn't appear at the beginning. | **false** |
-| **Startswith( "Bye bye", "" )** | Tests whether **"Bye bye"** starts with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **StartsWith** is defined to return **true** in this case.  | **true** | 
+| **StartsWith( "Bye bye", "" )** | Tests whether **"Bye bye"** starts with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **StartsWith** is defined to return **true** in this case.  | **true** |
 ### Search user experience ###
 
 In many apps, you can type one or more characters into a search box to filter a list of records in a large data set. As you type, the list shows only those records that match the search criteria.
