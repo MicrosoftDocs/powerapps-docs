@@ -141,7 +141,7 @@ Other elements include:
 
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
-**[EndsWith](functions/function-startswith.md)** – Checks if a text string ends with another text string.
+**[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
@@ -293,7 +293,7 @@ Other elements include:
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
-**[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value. 
+**[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
@@ -319,7 +319,7 @@ Other elements include:
 
 **[Sum](functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
 
-**[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula. 
+**[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula.
 
 ## T ##
 
