@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/29/2016"
+   ms.date="07/26/2017"
    ms.author="anneta"/>
 
 # Common issues and resolutions for PowerApps #
@@ -23,6 +23,10 @@
 **Note**: For more information, see the [list of known issues](https://docs.microsoft.com/en-us/common-data-service/entity-reference/known-issues) for the Microsoft Common Data Service.
 
 ## Recently added/changed ##
+1. **"Empty" gallery when opening an app**
+
+	If you generate an app automatically from data, save the app, and then reopen it, the browse gallery might not immediately show any data. To resolve this issue, type at least one character in the search box, and then delete the text that you typed. The gallery will then show data as expected.
+
 1. **Upgrading PowerApps on Windows 8.1**
 
 	If you install PowerApps on a computer that’s running Windows 8 or Windows 8.1, keep the Windows Store app open and active, use the Settings charm to check for updates, and then install them.
@@ -64,7 +68,7 @@
 
 1. **Creating and modifying apps in a browser**
 
-	You can do many of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. However, you can't, for example, create an app from a template. For more information, see [Create an app in a browser](create-app-browser.md).
+	You can do many, but not all, of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. For more information, see [Create an app in a browser](create-app-browser.md).
 
 1. **Changing a Title field in an entity**
 
