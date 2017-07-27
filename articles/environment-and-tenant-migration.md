@@ -18,10 +18,12 @@
    ms.date="10/30/2016"
    ms.author="ricksal;jamesol"/>
 
+[comment]: <> (#sign-off)
+
 # Environment and tenant app migration through Packaging
 Learn how to migrate resources from one environment to another with packaging. These environments can be within the same tenant or across different tenants.
 
-> **NOTE**  The packaging preview will launch on 07/31/0217, which eliminates the  need to manually move  apps by locally saving .msapp files from a DEV/UAT environment and re-saving the apps in your production environment from PowerApps Studio.
+> **NOTE**  The packaging preview will launch on 07/31/2017 eliminating the  need to manually move  apps by locally saving .msapp files from a DEV/UAT environment and re-saving the apps in your production environment from PowerApps Studio.
 
 ![](https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/blog/Packaging.gif)
 
@@ -30,7 +32,7 @@ One common scenario where you may want to migrate resources is where you have Te
 
 Another scenario is one where each customer has their own environment and data. When a new customer is added, a new environment is created for them, and you would migrate apps into their environment.
 
-## What resources you can migrate through packaging
+## Which resources can I migrate through packaging?
 
 When you export an app, the dependent resources for your app will also get exported into the package.  Initially only a subset of all possible resource types will be supported as outlined in the table below.
 
