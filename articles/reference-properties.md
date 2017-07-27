@@ -76,6 +76,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Pie chart](controls/control-pie-chart.md)** – Show how values relate to each other.
 
+**[Power BI tile](controls/control-power-bi-tile.md )** – Display a Power BI tile inside an app.
+
 **[Radio](controls/control-radio.md)** – Show options that are mutually exclusive.
 
 **[Rating](controls/control-rating.md)** – Indicate a value between 1 and a specified number.

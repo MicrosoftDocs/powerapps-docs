@@ -1,6 +1,6 @@
 <properties
-	pageTitle="StartsWith function | Microsoft PowerApps"
-	description="Reference information, including syntax and examples for the StartsWith function in PowerApps"
+	pageTitle="EndsWith and StartsWith functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples for the EndsWith and StartsWith functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -15,20 +15,29 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="02/05/2017"
+   ms.date="07/24/2017"
    ms.author="gregli"/>
 
-# StartsWith function in PowerApps #
+# EndsWith and StartsWith functions in PowerApps #
 
-Tests whether a text string begins another text string.
+Tests whether a text string begins or ends another text string.
 
 ## Description ##
 
-The **StartsWith** function tests whether one text string begins with another.  The test is case insensitive.  The return value is a boolean **true** or **false**.  
+The **EndsWith** function tests whether one text string ends with another.
 
-Use **StartsWith** with the **[Filter](function-filter-lookup.md)** function to search the data within your app. You can also use the **[in](operators.md#in-and-exactin-operators)** operator or the **[Search](function-fitler-lookup.md)** function to look anywhere within text strings, not just at the beginning.  Your choice of functions will depend on the needs of your app and which function can be [delegated](../delegation-overview.md) for your particular data source.  If one of these functions can't be delegated, a blue dot will appear at authoring time to warn you of this limitation.
+The **StartsWith** function tests whether one text string begins with another.    
+
+For both functions, the tests are case insensitive.  The return value of both is a Boolean **true** or **false**.  
+
+Use **EndsWith** and **StartsWith** with the **[Filter](function-filter-lookup.md)** function to search the data within your app. You can also use the **[in](operators.md#in-and-exactin-operators)** operator or the **[Search](function-fitler-lookup.md)** function to look anywhere within text strings, not just at the beginning or end.  Your choice of functions will depend on the needs of your app and which function can be [delegated](../delegation-overview.md) for your particular data source.  If one of these functions can't be delegated, a blue dot will appear at authoring time to warn you of this limitation.
 
 ## Syntax ##
+
+**EndsWith**( *Text*, *EndText* )
+
+- *Text* – Required.  The text to test.
+- *EndText* – Required.  The text to search for at the end of *Text*.  If *EndText* is an empty string, **EndsWith** returns *true*.
 
 **StartsWith**( *Text*, *StartText* )
 
@@ -39,10 +48,17 @@ Use **StartsWith** with the **[Filter](function-filter-lookup.md)** function to 
 
 | Formula | Description | Result |
 |---------|-------------|--------|
+| **EndsWith( "Hello World", "world" )** | Tests whether **"Hello World"** ends with **"world"**.  The test is case insensitive. | **true** |
+| **EndsWith( "Good bye", "good" )** | Tests whether **"Good bye"** ends with **"good"**.  The *EndText* argument (**"good"**) appears in the text but not at the end. | **false** |
+| **EndsWith( "Always say hello", "hello" )** | Tests whether **"Always say hello"** ends with **"hello"**. | **true** |
+| **Endswith( "Bye bye", "" )** | Tests whether **"Bye bye"** ends with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **EndsWith** is defined to return **true** in this case.  | **true** |
+
+| Formula | Description | Result |
+|---------|-------------|--------|
 | **StartsWith( "Hello World", "hello" )** | Tests whether **"Hello World"** begins with **"hello"**.  The test is case insensitive. | **true** |
 | **StartsWith( "Good bye", "hello" )** | Tests whether **"Good bye"** begins with **"hello"**. | **false** |
 | **StartsWith( "Always say hello", "hello" )** | Tests whether **"Always say hello"** begins with **"hello"**.  Although **"hello"** appears in the text, it doesn't appear at the beginning. | **false** |
-
+| **StartsWith( "Bye bye", "" )** | Tests whether **"Bye bye"** starts with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **StartsWith** is defined to return **true** in this case.  | **true** |
 ### Search user experience ###
 
 In many apps, you can type one or more characters into a search box to filter a list of records in a large data set. As you type, the list shows only those records that match the search criteria.

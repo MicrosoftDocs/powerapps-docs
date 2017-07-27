@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Blank, IsBlank, and IsEmpty functions | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the Blank, IsBlank, and IsEmpty functions in PowerApps"
+	pageTitle="Blank, Coalesce, IsBlank, and IsEmpty functions | Microsoft PowerApps"
+	description="Reference information, including syntax and examples, for the Blank, Coalesce, IsBlank, and IsEmpty functions in PowerApps"
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -15,10 +15,10 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="04/24/2017"
+   ms.date="07/24/2017"
    ms.author="gregli"/>
 
-# Blank, IsBlank, and IsEmpty functions in PowerApps #
+# Blank, Coalesce, IsBlank, and IsEmpty functions in PowerApps #
 
 Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records), and provides a way to create *blank* values.
 
@@ -47,6 +47,8 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 - The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
 - You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
 
+The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank*.  Use this function to replace a *blank* value with a different value but leave non-*blank* values unchanged.  If all of the arguments are *blank*, then the function returns *blank*.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  **Coalesce( value1, value2 )** is the more concise equivalent of **If( IsBlank( value1 ) value1, value2 )** and doesn't require **value1** to be evaluated twice.  
+
 The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](function-errors.md)** function.
 
 The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or **false**.
@@ -54,6 +56,10 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 ## Syntax ##
 
 **Blank**()
+
+**Coalesce**( *Value1* [, *Value2*, ... ] )
+
+- *Value(s)* – Required. Values to test.  Each value is evaluated in order until a non-*blank* value is found.  Values after the first non-*blank* value aren't evaluated.  
 
 **IsBlank**( *Value* )
 
@@ -102,6 +108,13 @@ NOTE: At this time, the following example only works for local collections.  We 
 	![Collection showing Seattle with a blank Weather field](media/function-isblank-isempty/seattle-blank.png)
 
 	The label shows **true** because the **Weather** field no longer contains a value.
+
+### Coalesce ###
+
+| Formula | Description | Result |
+|---------|-------------|--------|
+| **Coalesce( Blank(), 1 )** | Tests the return value from the **Blank** function, which always returns a *blank* value. Because the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value is found.  | **1** |
+| **Coalesce( Blank(), Blank(), Blank(), Blank(), 2, 3 )** | **Coalesce** starts at the beginning of the argument list and evaluates each argument in turn until a non-*blank* value is found.  In this case, the first four arguments all return *blank*, so evaluation continues to the fifth argument. The fifth argument is non-*blank*, so evaluation stops here. The value of the fifth argument is returned, and the sixth argument isn't evaluated. | **2** |
 
 ### IsBlank ###
 
