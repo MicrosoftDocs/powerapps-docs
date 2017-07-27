@@ -50,44 +50,39 @@ When you export an app, the dependent resources for your app will also get expor
 
 	![](./media/environment-and-tenant-migration/select-export.png)
 
-2. When the export package page opens, enter a Name and Description for the package.
+1. When the export package page opens, enter a Name and Description for the package.
 
 	![](./media/environment-and-tenant-migration/package-details.png)
 
+1. Within the ‘Review Package Content’ section you can optionally add comments or notes or change the setting for how each individual resource will be imported into the target environment during package import.
+
+	![](./media/environment-and-tenant-migration/export-package-content.png)
+
+1. When you are done select **Export** and the package file will begin downloading within a few seconds.
 
 ## Importing an app
 
+1. In http://web.powerapps.com, click or tap **Apps**, and then select **Import package (preview)**.
 
-## Migrating an app
+	![](./media/environment-and-tenant-migration/select-import.png)
 
-1. In http://web.powerapps.com, click or tap **Apps**, select the ellipses for the app you want to migrate, and then choose to edit the app in either the PowerApps Studio for Windows or PowerApps Studio for web.
+1. Select **Upload** and select the app package file that you want to import.
 
-	![](./media/environment-and-tenant-migration/select-app.png)
+	![](./media/environment-and-tenant-migration/select-file.png)
 
-2. When PowerApps Studio opens, click **Save as** in the left navigation bar, select **This computer**, and then click or tap **Save**. Note where the file was saved on your local machine.
+1. Once the package has been uploaded you will need to review the package contents and will need to provide additional input for any item marked with a red icon by selecting the wrench icon for each item and entering the required information.
 
-	![](./media/environment-and-tenant-migration/select-this-computer.png)
+	![](./media/environment-and-tenant-migration/import-package-content.png)
 
-3. Change the environment to the destination environment.
+1. Once you have provided all of the required information select **Import**.
 
-	For PowerApps Studio for web, return to http://web.powerapps.com to switch your environment and then re-open PowerApps Studio for web in the browser:
+	![](./media/environment-and-tenant-migration/import-package-content-dirty.png)
 
-	![](./media/environment-and-tenant-migration/select-new-env.png)
+1. When import completes you will be automatically redirected to a page (similar to the one below) that outlines whether or not the import operation was successful.
 
-	For PowerApps Studio for Windows, you can change your environment by opening your account information:
+	![](./media/environment-and-tenant-migration/import-results.png)
 
-	![](./media/environment-and-tenant-migration/select-new-env-studio.png)
-
-4. Open PowerApps Studio, which will now be in the destination environment. Click or tap **Open** in the left nav bar, and then click or tap **Browse**.
-
-	![](./media/environment-and-tenant-migration/open-app-updated.png)
-
-5. Select your file from where you saved it when in the original environment, and then click or tap **Open**.
-
-	![](./media/environment-and-tenant-migration/save-new-app-updated.png)
-
-6. You may need to address any compilation issues in the app, in accessing resources that may have different names, such as data connections and sources. An easy way to resolve compilation issues with the app is to remove and re-add the data sources for the app in the destination environment. See [Understand data sources](working-with-data-sources.md).
-7. Test the app to verify whether all compilation issues have been resolved.
+> **NOTE**  If you are importing an app and chose to **Update** an existing app, the new changes will be saved as a draft of the applications.  You will need to [publish](http://powerapps.microsoft.com/tutorials/save-publish-app/#publish-an-app) those changes in order for them to be available all other users of the applications.
 
 ## Known limitations
 | Limitation                                                                                                                                | Status                                                                                    |
