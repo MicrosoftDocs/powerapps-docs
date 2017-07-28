@@ -51,6 +51,7 @@ In this webinar Audrie will give an overview of the most often used PowerApps Co
 <br>*August 22nd, 10:00AM PST, 1:00PM EST*
 
 One of the most exciting opportunities on the Business Application Platform is the increasing number of data connectors. As this list grows, so does the value-add of your apps and workflows! Please come and learn how to make your power user solutions more powerful directly from Theresa Palmer-Boroski, who is a Senior Program Manager working on the Gateways and Connectors product team! What we'll cover:
+
 * An overview of connector services
 * Tips on how to use docs to leverage the connectors you love most
 * Getting started guidance for anyone planning to develop 'custom' connectors.
@@ -62,6 +63,7 @@ One of the most exciting opportunities on the Business Application Platform is t
 <br>*September 5th, 10:00AM PST, 1:00PM EST*
 
 Are you a business forms and workflow designer looking to leverage PowerApps and Flow? This is the webinar for you. Audrie will help you to make the switch with the top 10 forms and workflow tips for PowerApps and Flow! Don't miss it! What you'll get:
+
 * Demos of the most recent enhancements for forms designers
 * We will rebuild a typical InfoPath form in PowerApps; live from start to finish
 * Review a helpful decision tree for planning form rebuilds using PowerApps
