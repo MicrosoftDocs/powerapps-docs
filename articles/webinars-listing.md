@@ -28,7 +28,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
 
 It’s hard to keep up these days with the product team releasing new features every single sprint! Let’s take a step back and review the long list of new features released thus far this year….you won’t be disappointed!
 
-[Click here to watch on August 1st](https://www.youtube.com/watch?v=Bqp2tCnsBR0)
+[Click here to watch on August 1st](https://www.youtube.com/watch?v=XFMh8-zLkEM)
 
 **Rapidly Build Applications with PowerApps Studio**
 <br>by Karthik Bharathy
@@ -36,7 +36,7 @@ It’s hard to keep up these days with the product team releasing new features e
 
 PowerApps Studio comes with a host of new capabilities allowing users to rapidly build applications. In this walkthrough, app authors will use the latest Studio capabilities to quickly build production applications without having to invest in a lot of learning.
 
-[Click here to watch on August 8th](https://www.youtube.com/watch?v=Bqp2tCnsBR0)
+[Click here to watch on August 8th](https://www.youtube.com/watch?v=us85WpXe4cA)
 
 **Introduction to PowerApps Controls**
 <br>by Audrie Gordon
@@ -44,29 +44,29 @@ PowerApps Studio comes with a host of new capabilities allowing users to rapidly
 
 In this webinar Audrie will give an overview of the most often used PowerApps Controls. She will walk you through a simple use-case guide on which controls to use when, including 3 control tricks to help you to design "finger-friendly" experiences in your mobile apps too!
 
-[Click here to watch on August 15th]https://www.youtube.com/watch?v=lUo0DXvJENI
+[Click here to watch on August 15th](https://www.youtube.com/watch?v=lUo0DXvJENI)
 
 **Optimizing Connectors in PowerApps and Microsoft Flow**
 <br>by Theresa Palmer-Boroski
 <br>*August 22nd, 10:00AM PST, 1:00PM EST*
 
 One of the most exciting opportunities on the Business Application Platform is the increasing number of data connectors. As this list grows, so does the value-add of your apps and workflows! Please come and learn how to make your power user solutions more powerful directly from Theresa Palmer-Boroski, who is a Senior Program Manager working on the Gateways and Connectors product team! What we'll cover:
-1. An overview of connector services
-2. Tips on how to use docs to leverage the connectors you love most
-3. Getting started guidance for anyone planning to develop 'custom' connectors.
+* An overview of connector services
+* Tips on how to use docs to leverage the connectors you love most
+* Getting started guidance for anyone planning to develop 'custom' connectors.
 
-[Click here to watch on August 22nd]https://www.youtube.com/watch?v=6jwt4qXA2IQ
+[Click here to watch on August 22nd](https://www.youtube.com/watch?v=6jwt4qXA2IQ)
 
 **Pro Tips for InfoPath Designers Transitioning to PowerApps**
 <br>by Audrie Gordon
 <br>*September 5th, 10:00AM PST, 1:00PM EST*
 
 Are you a business forms and workflow designer looking to leverage PowerApps and Flow? This is the webinar for you. Audrie will help you to make the switch with the top 10 forms and workflow tips for PowerApps and Flow! Don't miss it! What you'll get:
-1. Demos of the most recent enhancements for forms designers
-2. We will rebuild a typical InfoPath form in PowerApps; live from start to finish
-3. Review a helpful decision tree for planning form rebuilds using PowerApps
+* Demos of the most recent enhancements for forms designers
+* We will rebuild a typical InfoPath form in PowerApps; live from start to finish
+* Review a helpful decision tree for planning form rebuilds using PowerApps
 
-[Click here to watch on September 5th]https://www.youtube.com/watch?v=EZ09dRuiWLw
+[Click here to watch on September 5th](https://www.youtube.com/watch?v=EZ09dRuiWLw)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
