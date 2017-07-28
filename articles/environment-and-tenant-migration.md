@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="RickSaling"
+	authors="jamesol-msft"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="07/28/2017"
-   ms.author="jamesol"/>
+   ms.author="jamesol-msft"/>
 
 # Environment and tenant app migration through Packaging
 Learn how to migrate resources from one environment to another with packaging. These environments can be within the same tenant or across different tenants.
