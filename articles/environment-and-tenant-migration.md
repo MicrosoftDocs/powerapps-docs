@@ -23,7 +23,7 @@ Learn how to migrate resources from one environment to another with packaging. T
 
 > **NOTE**  The packaging preview will launch on 07/31/2017 eliminating the  need to manually move  apps by locally saving .msapp files from a DEV/UAT environment and re-saving the apps in your production environment from PowerApps Studio.
 
-![Packaging flow](./media/environment-and-tenant-migration/Packaging.gif)
+![Packaging flow](./media/environment-and-tenant-migration/packaging.gif)
 
 ## The scenario
 One common scenario where you may want to migrate resources is where you have Test or Dev environments and a Production environment. Developers and testers have wide access to the apps in their environments. But when it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
