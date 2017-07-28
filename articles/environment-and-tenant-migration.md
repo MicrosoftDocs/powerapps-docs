@@ -21,8 +21,6 @@
 # Environment and tenant app migration through Packaging
 Learn how to migrate resources from one environment to another with packaging. These environments can be within the same tenant or across different tenants.
 
-> **NOTE**  The packaging preview will launch on 07/31/2017 eliminating the  need to manually move  apps by locally saving .msapp files from a DEV/UAT environment and re-saving the apps in your production environment from PowerApps Studio.
-
 ![Packaging flow](./media/environment-and-tenant-migration/packaging.gif)
 
 ## The scenario
