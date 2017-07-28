@@ -21,7 +21,7 @@
 # Environment and tenant app migration through Packaging
 Learn how to migrate resources from one environment to another with packaging. These environments can be within the same tenant or across different tenants.
 
-![Packaging flow](./media/environment-and-tenant-migration/packaging.gif)
+![Packaging flow](./media/environment-and-tenant-migration/packaging-gif.gif)
 
 ## The scenario
 One common scenario where you may want to migrate resources is where you have Test or Dev environments and a Production environment. Developers and testers have wide access to the apps in their environments. But when it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
