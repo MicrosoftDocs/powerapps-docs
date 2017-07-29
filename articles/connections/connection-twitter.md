@@ -4,8 +4,8 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="" 	
-	authors="AFTOwen"
-	manager="archnair"
+	authors="archnair"
+	manager="anneta"
 	editor=""
 	tags="" />
 
