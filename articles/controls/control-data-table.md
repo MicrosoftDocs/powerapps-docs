@@ -33,9 +33,9 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 - Link a **Data table** control to a connected or local data source.
 - Adjust column widths in a **Data table** control while you run the app, though your changes aren't saved.
 - A set of default fields appear in a **Data table** control when you link it to a connector that has implemented this capability, such as the Common Data Service. You can then show or hide these fields and others as necessary.
-- **(New)** Customize column width and heading text.
-- **(New)** Show hyperlinks in a **Data table** control.
-- **(New)** Copy and paste a **Data table** control.
+- Customize column width and heading text.
+- Show hyperlinks in a **Data table** control.
+- Copy and paste a **Data table** control.
 
 ### Not yet available
 - Customize the styling of individual columns.
@@ -50,8 +50,6 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 
 ### Known issues
 - No data appears if you use the **FirstN** function in the **Items** property.
-- If you modify the **Items** property, the field list is reset.
-- For some connectors, the connection to the data source is lost if you modify the **Items** property.
 
 ## Key properties
 

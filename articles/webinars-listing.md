@@ -22,48 +22,53 @@
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Top 5 Tips for Designing Apps that Mean Business**
-<br>by Audrie Gordon
-<br>*June 27th, 10:00AM PST, 1:00PM EST*
-
-This demonstration will give you an advantage as an app builder or designer; optimizing change management, and reducing the number of formulas you’ll need to configure:<br>
-- Learn to build 3 object relationships that help you to edit once, and ripple changes throughout your apps (aka “styling” your apps)
-- Learn to pass parameters from one screen to the next (limits number of screens needed and can improve performance)
-- Learn to document your app to facilitate knowledge transfer, and/or team iterations!
-
-[Click here to watch on June 27th](https://www.youtube.com/watch?v=Ql-pK9ixKxw)
-
-**Application Lifecycle with the new Save and publish options in PowerApps**
-<br>by Karthik Bharathy
-<br>*July 11th, 10:00AM PST, 1:00PM EST*
-
-In this session, app authors will learn how they can control what users see when there are multiple revisions of the app from authors. We will also look at saving apps, publishing apps, and restoring versions in this walkthrough.
-
-[Click here to watch on July 11th](https://www.youtube.com/watch?v=Np3DXBQvq2I)
-
-**Pro Tips for Connecting to Excel on OneDrive for Business from PowerApps**
-<br>by Audrie Gordon
-<br>*July 18th, 10:00AM PST, 1:00PM EST*
-
-Excel users we’ve heard your requests, and we’re excited to share a collection of best practices for anyone connecting to Excel data. We’ll focus on create, read, update, and delete formulas with Excel…and give you several shortcuts along the way!
-
-[Click here to watch on July 18th](https://www.youtube.com/watch?v=WPhux5_3Sfs)
-
-**Rapidly Build Applications with PowerApps Studio**
-<br>by Karthik Bharathy
-<br>*July 25th, 10:00AM PST, 1:00PM EST*
-
-PowerApps Studio comes with a host of new capabilities allowing users to rapidly build applications. In this walkthrough, app authors will use the latest Studio capabilities to quickly build production applications without having to invest in a lot of learning.
-
-[Click here to watch on July 25th](https://www.youtube.com/watch?v=Bqp2tCnsBR0)
-
 **Overview of PowerApps Feature Releases for 2017**
 <br>by Darshan Desai
 <br>*August 1st, 10:00AM PST, 1:00PM EST*
 
 It’s hard to keep up these days with the product team releasing new features every single sprint! Let’s take a step back and review the long list of new features released thus far this year….you won’t be disappointed!
 
-[Click here to watch on August 1st](https://www.youtube.com/watch?v=Bqp2tCnsBR0)
+[Click here to watch on August 1st](https://www.youtube.com/watch?v=XFMh8-zLkEM)
+
+**Rapidly Build Applications with PowerApps Studio**
+<br>by Karthik Bharathy
+<br>*August 8th, 10:00AM PST, 1:00PM EST*
+
+PowerApps Studio comes with a host of new capabilities allowing users to rapidly build applications. In this walkthrough, app authors will use the latest Studio capabilities to quickly build production applications without having to invest in a lot of learning.
+
+[Click here to watch on August 8th](https://www.youtube.com/watch?v=us85WpXe4cA)
+
+**Introduction to PowerApps Controls**
+<br>by Audrie Gordon
+<br>*August 15th, 10:00AM PST, 1:00PM EST*
+
+In this webinar Audrie will give an overview of the most often used PowerApps Controls. She will walk you through a simple use-case guide on which controls to use when, including 3 control tricks to help you to design "finger-friendly" experiences in your mobile apps too!
+
+[Click here to watch on August 15th](https://www.youtube.com/watch?v=lUo0DXvJENI)
+
+**Optimizing Connectors in PowerApps and Microsoft Flow**
+<br>by Theresa Palmer-Boroski
+<br>*August 22nd, 10:00AM PST, 1:00PM EST*
+
+One of the most exciting opportunities on the Business Application Platform is the increasing number of data connectors. As this list grows, so does the value-add of your apps and workflows! Please come and learn how to make your power user solutions more powerful directly from Theresa Palmer-Boroski, who is a Senior Program Manager working on the Gateways and Connectors product team! What we'll cover:
+
+* An overview of connector services
+* Tips on how to use docs to leverage the connectors you love most
+* Getting started guidance for anyone planning to develop 'custom' connectors.
+
+[Click here to watch on August 22nd](https://www.youtube.com/watch?v=6jwt4qXA2IQ)
+
+**Pro Tips for InfoPath Designers Transitioning to PowerApps**
+<br>by Audrie Gordon
+<br>*September 5th, 10:00AM PST, 1:00PM EST*
+
+Are you a business forms and workflow designer looking to leverage PowerApps and Flow? This is the webinar for you. Audrie will help you to make the switch with the top 10 forms and workflow tips for PowerApps and Flow! Don't miss it! What you'll get:
+
+* Demos of the most recent enhancements for forms designers
+* We will rebuild a typical InfoPath form in PowerApps; live from start to finish
+* Review a helpful decision tree for planning form rebuilds using PowerApps
+
+[Click here to watch on September 5th](https://www.youtube.com/watch?v=EZ09dRuiWLw)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
@@ -80,6 +85,10 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Get started with forms in PowerApps**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=WnuwLkNbWk4)
+
+**Top 5 Tips for Designing Apps that Mean Business**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=Ql-pK9ixKxw)
 
 **Get started with the Common Data Service**
 <br>by Jono Luk
@@ -101,6 +110,14 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Connecting to on-premises data from PowerApps**
 <br>by Archana Nair and Dimah Zaidalkilani
 [Watch now](https://www.youtube.com/watch?v=YBdO2MAulx8)
+
+**Application Lifecycle with the new Save and publish options in PowerApps**
+<br>by Karthik Bharathy
+[Watch now](https://www.youtube.com/watch?v=Np3DXBQvq2I)
+
+**Pro Tips for Connecting to Excel on OneDrive for Business from PowerApps**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=WPhux5_3Sfs)
 
 ### App Designer Topics ###
 **Look behind the curtain with one of the PowerApps Developers: Marie Hoeger**
