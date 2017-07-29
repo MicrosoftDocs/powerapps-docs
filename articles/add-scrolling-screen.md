@@ -16,8 +16,8 @@
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
 	ms.date="10/25/2016"
-	ms.author="LOnu"/>
-	
+	ms.author="lonu"/>
+
 # Add a scrolling screen in PowerApps #
 Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. By adding a scrolling screen, you can add multiple controls, which users can display if they scroll.
 
