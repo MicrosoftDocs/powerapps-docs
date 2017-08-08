@@ -1,6 +1,6 @@
 <properties
 	pageTitle="Add notifications | Microsoft PowerApps"
-	description="Create a flow that sends native push notifications to a targeted app."
+	description="Sends native push notifications to a PowerApp."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -15,10 +15,10 @@
 	ms.topic="article"
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
-	ms.date="4/21/2017"
+	ms.date="08/08/2017"
 	ms.author="jamesol"/>
 
-## Introduction ##
+# Send a push notification to a PowerApp #
 Notifications are ubiquitous today to increase usage and retention of mobile apps. They are largely used across consumer and business applications to help engage users and prioritize towards their key tasks. In PowerApps sending notifications is done via “Powerapps Notification” connector. Today I can send native push notifications to all app created with PowerApps. Additional types of notifications are to be added in the future.
 
 ![Option to send native push notification][1]
@@ -30,7 +30,7 @@ Notifications are ubiquitous today to increase usage and retention of mobile app
 
 
 ## Before getting started ##
-Choose an app that would be receiving the push notification. For tutorial below, I’ve chosen the "Case Management" app from the PowerApps templates. Please look at **[Create an app from template tutorial](https://powerapps.microsoft.com/en-us/tutorials/get-started-test-drive/)** for detailed steps on how to quickly create an app from template.
+Choose an app that would be receiving the push notification. For tutorial below, I’ve chosen the "Case Management" app from the PowerApps templates. Please look at **[Create an app from template tutorial](https://powerapps.microsoft.com/tutorials/get-started-test-drive/)** for detailed steps on how to quickly create an app from template.
 
 ## Setting up permissions ##
 
@@ -38,7 +38,7 @@ Choose an app that would be receiving the push notification. For tutorial below,
  In order to target an app with push notifications you have to have contributor permissions when you create the connection.
 
 ### App user permissions ###
-Your app user needs to have the app showing under "My apps". They need to either open the app from their PowerApps iOS/Android/WinPhone client application view or pull it from the AppSource org gallery in [home.dynamics.com](https://home.dynamics.com/). 
+Your app user needs to have the app showing under "My apps". They need to either open the app from their PowerApps iOS/Android/WinPhone client application view or pull it from the AppSource org gallery in [home.dynamics.com](https://home.dynamics.com/).
 
 This protects users from having an app shared app with the entire company and directly have that send push notifications before they become users of it.
 
