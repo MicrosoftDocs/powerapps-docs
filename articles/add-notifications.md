@@ -7,7 +7,8 @@
 	authors="jamesol-msft"
 	manager="anneta"
 	editor=""
-	tags=""/>
+	tags=""
+	/>
 
 <tags
 	ms.service="powerapps"
@@ -132,14 +133,14 @@ For a connection refrence documentation please refer to: **[PowerApps connector 
 
 
 
-[1]: ./media/add-notification/pic1-SendNotif.jpg
-[2]: ./media/add-notification/pic2-Diagram.jpg
-[3]: ./media/add-notification/pic3-SelectAppID.jpg
-[4]: ./media/add-notification/pic4-Step1-Flow.jpg
-[5]: ./media/add-notification/pic5-Step2-CreateConnection.jpg
-[6]: ./media/add-notification/pic6-Step3-ConfigureNotif.jpg
-[7]: ./media/add-notification/pic7-CaseTable.jpg
-[8]: ./media/add-notification/grab_id.png
-[9]: ./media/add-notification/create_connection.png
-[10]: ./media/add-notification/add_connection.png
-[11]: ./media/add-notification/powerapps_function.png
+[1]: ./media/add-notifications/pic1-SendNotif.jpg
+[2]: ./media/add-notifications/pic2-Diagram.jpg
+[3]: ./media/add-notifications/pic3-SelectAppID.jpg
+[4]: ./media/add-notifications/pic4-Step1-Flow.jpg
+[5]: ./media/add-notifications/pic5-Step2-CreateConnection.jpg
+[6]: ./media/add-notifications/pic6-Step3-ConfigureNotif.jpg
+[7]: ./media/add-notifications/pic7-CaseTable.jpg
+[8]: ./media/add-notifications/grab_id.png
+[9]: ./media/add-notifications/create_connection.png
+[10]: ./media/add-notifications/add_connection.png
+[11]: ./media/add-notifications/powerapps_function.png
