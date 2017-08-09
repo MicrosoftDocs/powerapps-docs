@@ -133,13 +133,13 @@ For a connection refrence documentation please refer to: [PowerApps connector re
 
 
 
-[1]: ./media/add-notifications/pic1-SendNotif.jpg
-[2]: ./media/add-notifications/pic2-Diagram.jpg
-[3]: ./media/add-notifications/pic3-SelectAppID.jpg
-[4]: ./media/add-notifications/pic4-Step1-Flow.jpg
-[5]: ./media/add-notifications/pic5-Step2-CreateConnection.jpg
-[6]: ./media/add-notifications/pic6-Step3-ConfigureNotif.jpg
-[7]: ./media/add-notifications/pic7-CaseTable.jpg
+[1]: ./media/add-notifications/pic1-send-notif.jpg
+[2]: ./media/add-notifications/pic2-diagramoverview.jpg
+[3]: ./media/add-notifications/pic3-select-app-id.jpg
+[4]: ./media/add-notifications/pic4-step1-flowupdated.jpg
+[5]: ./media/add-notifications/pic5-step2-create-connection.jpg
+[6]: ./media/add-notifications/pic6-step3-configure-notif.jpg
+[7]: ./media/add-notifications/pic7-case-table.jpg
 [8]: ./media/add-notifications/grab_id.png
 [9]: ./media/add-notifications/create_connection.png
 [10]: ./media/add-notifications/add_connection.png
