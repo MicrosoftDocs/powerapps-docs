@@ -20,7 +20,7 @@
 	ms.author="jamesol"/>
 
 # Send a push notification to a PowerApp #
-Notifications are ubiquitous today to increase usage and retention of mobile apps. They are largely used across consumer and business applications to help engage users and prioritize towards their key tasks. In PowerApps sending notifications is done via “Powerapps Notification” connector. Today I can send native push notifications to all app created with PowerApps. Additional types of notifications are to be added in the future.
+Notifications are ubiquitous today to increase usage and retention of mobile apps. They are largely used across consumer and business applications to help engage users and prioritize towards their key tasks. In PowerApps sending notifications is done via the “Powerapps Notification connector”. Today I can send native push notifications to all app created with PowerApps. Additional types of notifications are to be added in the future.
 
 ![Option to send native push notification][1]
 
@@ -31,17 +31,17 @@ Notifications are ubiquitous today to increase usage and retention of mobile app
 
 
 ## Before getting started ##
-Choose an app that would be receiving the push notification. For tutorial below, I’ve chosen the "Case Management" app from the PowerApps templates. Please look at **[Create an app from template tutorial](https://powerapps.microsoft.com/tutorials/get-started-test-drive/)** for detailed steps on how to quickly create an app from template.
+Choose an app that would be receiving the push notification. For the tutorial below, I’ve chosen the "Case Management" app from the PowerApps templates. Please look at [Create an app from template tutorial](https://powerapps.microsoft.com/tutorials/get-started-test-drive/) for detailed steps on how to quickly create an app from template.
 
 ## Setting up permissions ##
 
-### Creator permissions ###
+### Contributor permissions ###
  In order to target an app with push notifications you have to have contributor permissions when you create the connection.
 
 ### App user permissions ###
 Your app user needs to have the app showing under "My apps". They need to either open the app from their PowerApps iOS/Android/WinPhone client application view or pull it from the AppSource org gallery in [home.dynamics.com](https://home.dynamics.com/).
 
-This protects users from having an app shared app with the entire company and directly have that send push notifications before they become users of it.
+This protects users from having an app shared with the entire company and directly have that app send push notifications before they become users of it.
 
 
 ## Trigger a push notification from a Flow ##
@@ -56,7 +56,7 @@ This protects users from having an app shared app with the entire company and di
 
 1. Next enter the app ID for the PowerApp that you want to send notifications to.
 
-1. You may optionally choose to pass parameters to the app when it is launched from the user clicking the push notifications.  In this example, we are pass along the **Case ID** and **Initial Owner** fields for the selected contact.
+1. You may optionally choose to pass parameters to the app when it is launched from the user clicking the push notifications.  In this example, we are passing along the **Case ID** and **Initial Owner** fields for the selected contact.
 ![Option to send native push notification][6]
 
 ## Trigger a push notification directly from an App ##
@@ -83,7 +83,7 @@ To do that, add a Timer to the app, and call ``Timer.Start()`` under OnVisible p
 #### Tip #1 ####
  Hide the timer: Set the Visible property of the Timer to false.
 #### Tip #2 ####
- Control the app behavior so you can edit the first screen: Create an empty screen that your app does not navigate to. In there add an empty editfield. Now set the timer.Duration to be the value in the editfield. As you are creating the app set the timer to a non-0 value. When you are ready publish the app set the value to 0 for immediate triggering of the timer.
+ Control the app behavior so you can edit the first screen: Create an empty screen that your app does not navigate to. In there add a Text Input control. Now set the timer.Duration to be the value in the control. As you are creating the app set the timer to a non-0 value. When you are ready publish the app set the value to 0 for immediate triggering of the timer.
 
 ## Syntax ##
 
@@ -129,7 +129,7 @@ PowerAppsNotification.SendPushNotification(
 
 1. With Flow you can only have one recipient at a time.
 
-For a connection refrence documentation please refer to: **[PowerApps connector refrence](https://blogs.msdn.microsoft.com/carlosag/2016/11/22/the-unofficial-powerapps-connectors-reference-draft//)**
+For a connection refrence documentation please refer to: [PowerApps connector reference](https://docs.microsoft.com/en-us/connectors/powerappsnotification/)
 
 
 
