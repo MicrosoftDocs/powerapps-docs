@@ -140,7 +140,7 @@ For a connection refrence documentation please refer to: [PowerApps connector re
 [5]: ./media/add-notifications/pic5-step2-create-connection.jpg
 [6]: ./media/add-notifications/pic6-step3-configure-notif.jpg
 [7]: ./media/add-notifications/pic7-case-table.jpg
-[8]: ./media/add-notifications/grab_id.png
-[9]: ./media/add-notifications/create_connection.png
-[10]: ./media/add-notifications/add_connection.png
-[11]: ./media/add-notifications/powerapps_function.png
+[8]: ./media/add-notifications/grab-id.png
+[9]: ./media/add-notifications/create-connection.png
+[10]: ./media/add-notifications/add-connection.png
+[11]: ./media/add-notifications/powerapps-function.png
