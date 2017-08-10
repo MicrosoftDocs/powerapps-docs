@@ -16,7 +16,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="10/23/2016"
-    ms.author="ricksal;jamesol"/>
+    ms.author="jamesol"/>
 
 # Purchase PowerApps for your organization #
 This article shows you how to purchase PowerApps for your organization as an administrator. You can purchase PowerApps through the PowerApps website directly, through the Office 365 admin center, or through your Microsoft representative or partner. This article will discuss the trial options available for PowerApps Plan 1 or Plan 2 and then explain how to purchase PowerApps Plan 1 or Plan 2 as an organization. For more information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).

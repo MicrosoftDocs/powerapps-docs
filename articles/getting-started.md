@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="aftowen"
+	authors="skjerland"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="05/28/2017"
-   ms.author="anneta"/>
+   ms.author="sharik"/>
 
 # Introduction to PowerApps #
 Welcome! In PowerApps, you can manage organizational data by running an app that you created or that someone else created and shared with you. Apps run on **[mobile devices such as phones](run-app-client.md)**, or you can run them **[in a browser](run-app-browser.md)** by opening Dynamics 365. You can create an infinite variety of apps &ndash; all without learning a programming language such as C#.
