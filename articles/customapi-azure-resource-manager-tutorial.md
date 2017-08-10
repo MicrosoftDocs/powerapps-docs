@@ -4,7 +4,7 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="RickSaling"
+	authors="mgblythe"
 	manager="anneta"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="05/03/2017"
-   ms.author="ricksal"/>
+   ms.author="mblythe"/>
 
 
 # Use Azure Active Directory with a custom connector in PowerApps

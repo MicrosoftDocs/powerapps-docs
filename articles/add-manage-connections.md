@@ -4,7 +4,7 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="RickSaling"
+    authors="archnair"
     manager="anneta"
     editor=""
     tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="03/09/2017"
-   ms.author="ricksal"/>
+   ms.author="archanan"/>
 
 # Manage your connections in PowerApps #
 

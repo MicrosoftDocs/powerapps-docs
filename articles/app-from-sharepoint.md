@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="aftowen"
+	authors="skjerland"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
 	ms.date="06/05/2017"
-	ms.author="karthikb"/>
+	ms.author="sharik"/>
 
 # Generate an app to manage data in a SharePoint list #
 

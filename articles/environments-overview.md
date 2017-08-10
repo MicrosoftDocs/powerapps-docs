@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="RickSaling"
+	authors="jamesol-msft"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="11/01/2016"
-   ms.author="ricksal;jamesol"/>
+   ms.author="jamesol"/>
 
 
 # Environments overview

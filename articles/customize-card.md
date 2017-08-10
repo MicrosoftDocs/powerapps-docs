@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter=""
-	authors="AFTOwen"
+	authors="skjerland"
 	manager="anneta"
 	editor=""
 	tags="" />
@@ -16,7 +16,7 @@ ms.topic="article"
 ms.tgt_pltfrm="na"
 ms.workload="na"
 ms.date="10/30/2016"
-ms.author="anneta"/>
+ms.author="sharik"/>
 
 # Customize a card in Microsoft PowerApps #
 Perform basic customization (without unlocking a card) by, for example, changing its control. Perform advanced customization by unlocking the card and, for example, adding a control that isn't available for that card by default.
