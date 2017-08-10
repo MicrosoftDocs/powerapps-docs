@@ -16,7 +16,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="10/07/2016"
-    ms.author="ricksal;jamesol"/>
+    ms.author="jamesol"/>
 
 # PowerApps in your organization Q&A
 This topic describes how users in your organization can use PowerApps, and how you can control the PowerApps service.

@@ -4,7 +4,7 @@
    services=""
    suite="powerapps"
    documentationCenter="na"
-   authors="aftowen"
+   authors="skjerland"
    manager="anneta"
    editor=""
    tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="09/03/2016"
-   ms.author="anneta"/>
+   ms.author="sharik"/>
 
 # Connect from PowerApps to SharePoint #
 Create a connection to either SharePoint Online or on-premises SharePoint so that you can generate an app automatically or build one from scratch.

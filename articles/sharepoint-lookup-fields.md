@@ -3,7 +3,7 @@
 	description="Create a relationship between SharePoint lists by using a lookup field."
 	services="powerapps"
 	documentationCenter="na"
-	authors="RickSaling"
+	authors="skjerland"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="01/20/2017"
-   ms.author="ricksal"/>
+   ms.author="sharik"/>
 
 # How to link SharePoint lists using lookup fields
 This tutorial shows how you can connect two SharePoint lists with lookup fields.

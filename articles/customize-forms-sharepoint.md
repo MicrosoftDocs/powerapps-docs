@@ -4,7 +4,7 @@
    services=""
    suite="powerapps"
    documentationCenter="na"
-   authors="aftowen"
+   authors="skjerland"
    manager="anneta"
    editor=""
    tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/16/2016"
-   ms.author="anneta"/>
+   ms.author="sharik"/>
 
 # Customize forms in PowerApps #
 Customize a **Display form** control and an **Edit form** control so that they show the data that matters most, in the most intuitive order, and in the controls that help users easily understand and update the data.

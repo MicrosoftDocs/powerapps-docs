@@ -3,7 +3,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="RickSaling"
+	authors="archnair"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="03/09/2017"
-   ms.author="ricksal"/>
+   ms.author="archanan"/>
 
 # Add a data connection in PowerApps #
 In PowerApps, add a data connection to an existing app or to an app that you're building from scratch. In this topic, you use PowerApps Studio, but you can also use [powerapps.com](https://web.powerapps.com), as the [Manage connections](add-manage-connections.md) topic describes.

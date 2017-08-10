@@ -16,7 +16,7 @@
     ms.tgt_pltfrm="na"
     ms.workload="na"
     ms.date="10/23/2016"
-    ms.author="ricksal;jamesol"/>
+    ms.author="jamesol"/>
 
 # Self-service signup for PowerApps #
 
