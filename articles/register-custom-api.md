@@ -4,7 +4,7 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="archnair"
+	authors="mgblythe"
 	manager="anneta"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="05/05/2017"
-   ms.author="archanan"/>
+   ms.author="mblythe"/>
 
 # Register and use custom connectors in PowerApps
 PowerApps enables you to build full-featured apps with no traditional application code. But in some cases you need to extend PowerApps capabilites, and web services are a natual fit for this. Your app can connect to a service, perform operations, and get data back. When you have a web service you want to connect to with PowerApps, you register the service as a custom connector. This process enables PowerApps to understand the characteristics of your web API, including the authentication that it requires, the operations that it supports, and the parameters and outputs for each of those operations.
@@ -167,13 +167,13 @@ Now that you've registered your API, add the custom connector to your app like y
 
 3. Complete any steps necessary to sign in to the service you're connecting to. If your API uses OAuth authentication, you might be presented a sign-in screen. For API key authentication, you might be prompted for a key value.
 
-4. Call the API in your app. For our example, we created an app that submits text to Cognitive Services and gets back a sentiment score of 0 to 1, which the app shows as a percentage. 
+4. Call the API in your app. For our example, we created an app that submits text to Cognitive Services and gets back a sentiment score of 0 to 1, which the app shows as a percentage.
 
 	- With this connector, if you start typing "Az" in the formula bar, you see the API and the operations that it makes available.
 
 		![](./media/register-custom-api/formula.png)
 
-	- The complete call looks like this, where we pass in text from the `TextInput` control and get back a score to display in the app: 
+	- The complete call looks like this, where we pass in text from the `TextInput` control and get back a score to display in the app:
 
 		```
 		'AzureMachineLearning-TextAnalytics'.Sentiment({documents:Table({language:"en",id:"1",text:TextInput.Text})}).documents.score)

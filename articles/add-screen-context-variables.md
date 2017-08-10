@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="AFTOwen"
+	authors="skjerland"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="07/10/2017"
-   ms.author="anneta"/>
+   ms.author="sharik"/>
 
 # Add a screen and navigate between screens #
 Create an app with multiple screens, and add ways for users to navigate between them.

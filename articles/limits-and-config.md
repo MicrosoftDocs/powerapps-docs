@@ -4,7 +4,7 @@
 	services=""
 	suite="PowerApps"
 	documentationCenter="na"
-	authors="RickSaling"
+	authors="skjerland"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="03/06/2017"
-   ms.author="ricksal"/>
+   ms.author="sharik"/>
 
 # Limits and configuration in Microsoft PowerApps
 This topic contains information about the current limits and configuration details for PowerApps.

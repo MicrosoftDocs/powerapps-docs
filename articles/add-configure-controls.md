@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="aftowen"
+	authors="skjerland"
 	manager="anneta"
 	editor=""
 	tags=""/>
@@ -16,7 +16,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="07/10/2017"
-   ms.author="anneta"/>
+   ms.author="sharik"/>
 
 # Add and configure a control in PowerApps #
 Add a variety of UI elements to your app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.

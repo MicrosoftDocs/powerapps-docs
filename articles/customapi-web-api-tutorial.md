@@ -4,7 +4,7 @@
 	services=""
     suite="powerapps"
 	documentationCenter=""
-	authors="RickSaling"
+	authors="mgblythe"
 	manager="anneta"
 	editor=""/>
 
@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="10/26/2016"
-   ms.author="ricksal"/>
+   ms.author="mblythe"/>
 
 # Build a custom connector for a Web API in PowerApps
 
