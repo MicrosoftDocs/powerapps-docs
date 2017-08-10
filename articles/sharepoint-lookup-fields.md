@@ -15,7 +15,7 @@
    ms.tgt_pltfrm="na"
    ms.workload="na"
    ms.date="01/20/2017"
-   ms.author=sharik"/>
+   ms.author="sharik"/>
 
 # How to link SharePoint lists using lookup fields
 This tutorial shows how you can connect two SharePoint lists with lookup fields.
