@@ -187,7 +187,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 
     3. The screen should look like the following image. When you're ready, click or tap **OK**.
 
-       ![Create Relationship](./media/sharepoint-scenario-build-report/05-02-04-create-relationship.png)
+        ![Create Relationship](./media/sharepoint-scenario-build-report/05-02-04-create-relationship.png)
 
 ### Add a date table to make date-based calculations easier
 
@@ -232,11 +232,11 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ```
     ApprovedStartDiff = CALCULATE(SUM(Dates[IsWeekday]),
 
-       DATESBETWEEN(Dates[Date], 
+       DATESBETWEEN(Dates[Date],
 
           'Project Details'[ApprovedDate],
 
-          'Project Details'[ProjectedStartDate] 
+          'Project Details'[ProjectedStartDate]
 
       )
 
@@ -260,11 +260,11 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ```
     RequestDateAge = CALCULATE(SUM(Dates[IsWeekday]),
 
-       DATESBETWEEN(Dates[Date], 
+       DATESBETWEEN(Dates[Date],
 
           'Project Requests'[RequestDate],
 
-          NOW() 
+          NOW()
 
        )
 
@@ -288,7 +288,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ```
     VarProjectedActual = DIVIDE(
 
-        SUM('Project Details'[ActualDays]) - SUM('Project Details'[ProjectedDays]), 
+        SUM('Project Details'[ActualDays]) - SUM('Project Details'[ProjectedDays]),
 
         SUM('Project Details'[ProjectedDays])
 
@@ -312,7 +312,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
     ```
     MaxDaysPending = MAXX(
 
-        FILTER('Project Requests', 'Project Requests'[Approved]="Pending"), 
+        FILTER('Project Requests', 'Project Requests'[Approved]="Pending"),
 
         'Project Requests'[RequestDateAge]
 
@@ -474,4 +474,3 @@ That brings us to the end of the report section, and you should now have a compl
 ## Next steps
 
 The next step in this tutorial series is to [publish the Power BI project report and create a dashboard](sharepoint-scenario-publish-report.md).
-
