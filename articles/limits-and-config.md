@@ -64,9 +64,3 @@ This list identifies all services to which PowerApps Studio talks and their usag
 |*.azureedge.net|https|WebAuth|
 |*.blob.core.windows.net|https|Blob storage|
 |vortex.data.microsoft.com|https|Telemetry|
-
-## App versions ##
-
-|     Name       | Limit |
-|----------------|-------|
-| Versions shown |  600  |
