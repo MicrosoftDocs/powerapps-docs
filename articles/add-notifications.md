@@ -86,8 +86,7 @@ You can set your app to go directly to the **Case details** page (in our example
 1. Add a Timer control to the app.
 2. Under the **OnVisible** property of the page element, call **Timer.Start()**.
 3. Select the Timer control, and then set its **OnTimerEnd** value to **Navigate(EditCase, ScreenTransition.None)**.
-	
-	**Note**: To hide the Timer control, set the **Visible** property of the Timer control to **false**.
+4. (Optional) To hide the Timer control, set the **Visible** property of the Timer control to **false**.
 
 **Tip**: It's a good idea to create a unique first page in the app for the notification:
 
