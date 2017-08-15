@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/07/2015"
+   ms.date="08/15/2017"
    ms.author="gregli"/>
 
 # Average, Max, Min, StdevP, Sum, and VarP functions in PowerApps #
