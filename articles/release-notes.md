@@ -23,7 +23,8 @@ For information about known limitations, see [Common issues and resolutions](com
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
 ## Release 2.0.680-2.0.681 ##
-- Download a [list of apps](admin-view-apps.md) used in your organization.
+1. Download a [list of apps](admin-view-apps.md) used in your organization.
+1. Delegate **Sum**, **Average**, **Min**, and **Max** functions for SQL Server.
 
 ## Release 2.0.670-2.0.671 ##
 1. Display a [Power BI tile](control-power-bi-tile.md) inside an app.
