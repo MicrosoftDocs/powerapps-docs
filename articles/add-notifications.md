@@ -28,8 +28,8 @@ Push notifications for mobile apps primarily are used in consumer and business a
 ## When to use push notifications in your app
 
 - You have critical content that you need to make your users aware of immediately.
-- You have important tasks for your users to act on via your app, with a preloaded context.
-- You want to engage your users on a specific interval, or you need them to enter the app in a specific context.
+- You have important tasks for your users to act on via your app, in a preloaded context.
+- You want to engage your users on a specific interval, or you need users to enter the app in a specific context.
 
 
 ## Choose your app
@@ -40,7 +40,7 @@ Choose the app that you want to receive the push notification. For detailed step
 
 ### Admin permissions
 
-To add push notifications to an app, first you create a connection to the app. To create a connection, you must have contributor permissions for the app.
+To add push notifications to an app, first you create a connection to the app. To create a connection, you must have Contributor permission for the app.
 
 ### App user permissions
 
@@ -49,14 +49,14 @@ To receive notifications, the app must be in **My apps** on the user's device. T
 
 ## Trigger a push notification from a flow
 
-**Note**: Currently, if you use a flow to trigger the notification, you can send a push notification to only one user or one security group at a time.
+**Note**: Currently, if you use a flow to trigger a push notification, you can send the notification to only one user or one security group at a time.
 
 1. Create a flow. In our example, a flow is triggered when a new record is added to the Case entity in Common Data Service.
 	![Option to send native push notification][4]
 2. Search for and then select the **PowerApps Notification** connector. You also have the option to rename the connection to reflect your scenario.
 	![Option to send native push notification][5]
 3. Enter the App ID of the PowerApps app that you want to send notifications to.
-4. (Optional) You can pass parameters to the app when the app starts, after the user taps the push notification. In our example, we pass along the **Case ID** and **Initial Owner** fields for the selected contact.
+4. (Optional) You can pass parameters to the app when the app opens, after the user taps the push notification. In our example, we pass along the **Case ID** and **Initial Owner** fields for the selected contact.
 	![Option to send native push notification][6]
 
 ## Trigger a push notification directly from an app
@@ -77,18 +77,19 @@ You can use PowerApps to send a push notification directly from one app to anoth
 
 ### Pass parameters
 
-Your push notification can pass specific parameters to the app. For example, to read the **CaseID** value, use *Param("CaseID")*. To help you quickly identify this parameter, you can add a label to your app. In the label, set the text to **Param("CaseID")**. If the app is opened from the All apps list, the value is empty. If the app is opened from another location on the device, the value is populated with the **CaseID** value.
+Your push notification can pass specific parameters to the app. For example, to read the **CaseID** value, use *Param("CaseID")*. To help you quickly identify this parameter, you can add a label to your app. In the label, set the text to **Param("CaseID")**. If the user opens the app from the All apps list, the value is empty. If the user opens the app from another location on the device, the value is populated with the **CaseID** value.
 
 ### Set the start page
 
 You can set your app to go directly to the **Case details** page (in our example):
+
 1. Add a Timer control to the app.
 2. Under the **OnVisible** property of the page element, call **Timer.Start()**.
 3. Select the Timer control, and then set its **OnTimerEnd** value to **Navigate(EditCase, ScreenTransition.None)**.
-
 	**Note**: To hide the Timer control, set the **Visible** property of the Timer control to **false**.
 
 **Tip**: It's a good idea to create a unique first page in the app for the notification:
+
 1. Create an empty page that your app does not already go to.
 2. On the page, add a Text Input control.
 3. In the Text Input control, set the **timer.Duration** value.
@@ -98,7 +99,7 @@ You can set your app to go directly to the **Case details** page (in our example
 
 | Name                 | Description                                                                                  |
 |----------------------|------------------------------------------------------------------------------------------|
-| SendPushNotification | Sends a push notification to the app that is specified in the PowerApps Notification connection settings. |
+| SendPushNotification | Sends a push notification to the app that is specified in the push notification connection settings. |
 
 ### Parameters
 | Name       | Type                      | Description                                                                                                                                                             |
@@ -108,7 +109,7 @@ You can set your app to go directly to the **Case details** page (in our example
 | openApp    | Boolean, optional         | Whether to open the app when the user taps the push notification.                                                                                             |
 | params     | Parameters, optional      | Key-value parameters to pass with the notification. These can be further processed in the app to go to a specific page and load a specific state. |
 
-## PowerApps formula samples
+### PowerApps formula samples
 
 ```
 //Send a basic notification.
@@ -119,7 +120,7 @@ PowerAppsNotification.SendPushNotification(
  }
 )
 
-//Send a notification that opens the targeted PowerApps app, and pass along specific parameters.
+//Send a notification that opens the targeted PowerApps app, and passes along specific parameters.
 PowerAppsNotification.SendPushNotification(
 {
   recipients:["email1@contoso.com", "email2@contoso.com"],
