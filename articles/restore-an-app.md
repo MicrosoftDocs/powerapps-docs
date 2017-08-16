@@ -44,7 +44,7 @@ This article shows you how to restore an app to a previous version that was save
 	A new version is added to your list.
 
 	![](./media/restore-an-app/versions-added-2.png)
-
+  
 ## More resources ##
 [Share an app](share-app.md)  
 [Change app name and tile](set-name-tile.md)  
