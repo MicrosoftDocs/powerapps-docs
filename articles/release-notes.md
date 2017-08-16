@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="07/11/2017"
+    ms.date="08/15/2017"
     ms.author="anneta"/>
 
 # What's new in PowerApps #
@@ -22,12 +22,15 @@ For information about known limitations, see [Common issues and resolutions](com
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
+## Release 2.0.680-2.0.681 ##
+1. Download a [list of apps](admin-view-apps.md) used in your organization.
+1. Delegate **Sum**, **Average**, **Min**, and **Max** functions for SQL Server.
+
 ## Release 2.0.670-2.0.671 ##
 1. Display a [Power BI tile](control-power-bi-tile.md) inside an app.
 1. Use the **[Coalesce](function-isblank-isempty.md)** function to more easily replace a blank value but leave other values as they were.
 1. Use the **[EndsWith](function-startswith)** function to test whether a text string ends another text string.
 1. Use the **[And](operators.md)**, **[Or](operators.md)**, or **[Not](operators.md)** operator in a formula.
-
 
 ## Release 2.0.660-2.0.661 ##
 1. [Configure properties of controls](add-configure-controls.md) more easily by using the right-hand pane.

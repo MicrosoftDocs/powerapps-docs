@@ -20,7 +20,7 @@
 	ms.author="jamesol"/>
 
 # Send a push notification to a PowerApp #
-Notifications are ubiquitous today to increase usage and retention of mobile apps. They are largely used across consumer and business applications to help engage users and prioritize towards their key tasks. In PowerApps sending notifications is done via the “Powerapps Notification connector”. Today I can send native push notifications to all app created with PowerApps. Additional types of notifications are to be added in the future.
+Notifications are ubiquitous today to increase usage and retention of mobile apps. They are largely used across consumer and business applications to help engage users and prioritize towards their key tasks. In PowerApps sending notifications is done via the “PowerApps Notification connector”. Today I can send native push notifications to all app created with PowerApps. Additional types of notifications are to be added in the future.
 
 ![Option to send native push notification][1]
 

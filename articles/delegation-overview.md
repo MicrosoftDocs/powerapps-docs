@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/25/2016"
+   ms.date="08/15/2017"
    ms.author="gregli"/>
 
 # Understand delegation #
@@ -56,8 +56,7 @@ Within the **Filter** and **LookUp** functions, the following can be used with c
 * **[TrimEnds](functions/function-trim.md)**
 * **[IsBlank](functions/function-isblank-isempty.md)**
 * **[StartsWith](functions/function-startswith.md)**
-* [Context variables](working-with-variables.md)
-* Constant values, which do not include context variables or collections
+* Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
 
 Portions of your formula that evaluate to a constant value for all records can also be used.  For example, **Left( Language(), 2 )** does not depend on any columns of the record and therefore returns the same value for all records.  It is effectively a constant.  Use of context variables, collections, and signals may not be constant and therefore will prevent **Filter** and **LookUp** from being delegated.  
 
@@ -78,14 +77,20 @@ Some notable items missing from the above list:
 
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
+### Aggregate functions ###
+
+**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated.  Only a limited number of data sources support this delegation at this time, check the [delegation list](delegation-list.md) for more details.
+
+Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** cannot be delegated.
+
+Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** cannot be delegated.
+
 ### Other functions ###
 
 All other functions do not support delegation, including these notable functions:
 
 * Table shaping: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ...
-* Aggregates: **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, ...
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
-* **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, **[Count](functions/function-table-counts.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
 * **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
