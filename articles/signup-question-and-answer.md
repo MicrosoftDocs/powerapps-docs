@@ -41,9 +41,10 @@ See [Self-service sign up for PowerApps](signup-for-powerapps.md) for more detai
 
 ### How can users in my organization gain access to PowerApps?
 Users within your organization can gain access to PowerApps in three different ways:
-  1. They can individually sign up for a PowerApps Plan 2 trial as outlined in the [How do users sign up for PowerApps?](#how-do-users-sign-up-for-powerapps) section
-  1. You can assign a PowerApps license to them within the Office 365 admin portal.
-  1. The user has been assigned an Office 365 and Dynamics 365 plans that includes access to the PowerApps service. See the [PowerApps pricing page](https://powerapps.microsoft.com/pricing) for the list of Office 365 and Dynamics 365 plans that include PowerApps capabilities.
+
+- They can individually sign up for a PowerApps Plan 2 trial as outlined in the [How do users sign up for PowerApps?](#how-do-users-sign-up-for-powerapps) section.
+- You can assign a PowerApps license to them within the Office 365 admin portal.
+- The user has been assigned an Office 365 and Dynamics 365 plans that includes access to the PowerApps service. See the [PowerApps pricing page](https://powerapps.microsoft.com/pricing) for the list of Office 365 and Dynamics 365 plans that include PowerApps capabilities.
 
 ### Can I block users in my organization from signing up for PowerApps?
 Any individual can try out the features of Microsoft PowerApps Plan 2 for 90 days, and incur no costs as outlined in the [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section.  This option is available to any user in a tenant and cannot be disabled by an admin.  After the user's trial expires the user will lose access to PowerApps Plan 2 capabilities.  
@@ -72,7 +73,7 @@ If a user was assigned a PowerApps Plan 1 or PowerApps Plan 2 license then you c
 
 5. Find the license called **Microsoft PowerApps Plan 1** or **Microsoft PowerApps Plan 2**, set the toggle to **Off** and then select **Save**.
 
-  ![](./media/signup-question-and-answer/remove-license.png)
+    ![](./media/signup-question-and-answer/remove-license.png)
 
 If a user has access to PowerApps through their Office 365 and Dynamics 365 plan license, then you can disable their access to the PowerApps service by taking the following steps:
 
@@ -86,34 +87,36 @@ If a user has access to PowerApps through their Office 365 and Dynamics 365 plan
 
 5. Expand the user's Office 365 or Dynamics 365 license, disable access to the service called **PowerApps for Office 365** or **PowerApps for Dynamics 365** and then select **Save**.
 
-  ![](./media/signup-question-and-answer/remove-service-plan.png)
+    ![](./media/signup-question-and-answer/remove-service-plan.png)
 
 Bulk removal of licenses is also possible through PowerShell. See [Remove licenses from user accounts with Office 365 PowerShell](https://technet.microsoft.com/library/dn771774.aspx) for a detailed example.   Finally, further guidance about bulk removal of services within a license can be found at [Disable access to services with Office 365 PowerShell](https://technet.microsoft.com/library/dn771769.aspx).
 
 Removing of the PowerApps license or service for a user in your organization will also result in the removal of the PowerApps and Dynamics 365 icons from the following locations for that user:
 
-1. [Office.com](https://office.com)
+- [Office.com](https://office.com)
 
-   ![](./media/signup-question-and-answer/office-home.png)
+    ![](./media/signup-question-and-answer/office-home.png)
 
-1. Office 365 AppLauncher “waffle”
+- Office 365 AppLauncher “waffle”
 
-   ![](./media/signup-question-and-answer/office-waffle.png)
+    ![](./media/signup-question-and-answer/office-waffle.png)
 
 ### How can restrict my users' ability to access my organization's business data using PowerApps?
-PowerApps allows you to create data zones for business and non-business data, as shown below.  Once these data loss prevention policies are implemented, users are prevented from designing or running PowerApps that combine business and non-business data.   For more details, See [Data loss prevention (DLP) policies](prevent-data-loss.md).
+PowerApps allows you to create data zones for business and non-business data, as shown below.  Once these data loss prevention policies are implemented, users are prevented from designing or running PowerApps that combine business and non-business data. For more details, See [Data loss prevention (DLP) policies](prevent-data-loss.md).
 
-  ![](./media/signup-question-and-answer/data-loss-prevention-policy.png)
+![](./media/signup-question-and-answer/data-loss-prevention-policy.png)
 
 ### Why did 10,000 licenses for Microsoft PowerApps show up in my Office 365 tenant?
 
 As a qualifying organization, users in your organization are eligible to try out Microsoft PowerApps Plan 2 for 90 days, and these trial licenses represent the available capacity for new PowerApps users in your tenant. There is no charge for these licenses. Specifically, there are two possible reasons why you may see a capacity 10,000 (trial) licenses for PowerApps showing up in the Office 365 admin portal:
 
-   1. If at least one user in your tenant participated in the PowerApps public preview that spanned from April 2016 to October 2016 then you will see 10,000 licenses labeled as "Microsoft PowerApps and Logic flows"
-       ![](./media/signup-question-and-answer/licenses_2.png)
+- If at least one user in your tenant participated in the PowerApps public preview that spanned from April 2016 to October 2016 then you will see 10,000 licenses labeled as "Microsoft PowerApps and Logic flows"
 
-   1. If at least one user in your tenant has signed-up for a PowerApps Plan 2 trial by going through trial signup **Option 1** outlined in the [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section then you will see 10,000 licenses labeled "Microsoft Power Apps & Flow"
-       ![](./media/signup-question-and-answer/licenses_1.png)
+    ![](./media/signup-question-and-answer/licenses_2.png)
+
+- If at least one user in your tenant has signed-up for a PowerApps Plan 2 trial by going through trial signup **Option 1** outlined in the [How do users sign up for PowerApps](#how-do-users-sign-up-for-powerapps) section then you will see 10,000 licenses labeled "Microsoft Power Apps & Flow"
+
+    ![](./media/signup-question-and-answer/licenses_1.png)
 
 You can choose to assign additional licenses to users yourself through the Office 365 admin portal, but please note that these are trial licenses for Microsoft PowerApps Plan 2 and they will expire after 90 days of being assigned to a user.
 
@@ -135,14 +138,13 @@ If a tenant was created by Microsoft, you can claim and manage that tenant using
 
 2. Claim admin control by verifying domain ownership: once you are in the tenant, you can promote yourself to the admin role by verifying domain ownership. To do so, follow these steps:
 
-	1. Go to [https://portal.office.com](https://portal.office.com/Start?sku=powerapps).
+1. Go to [https://portal.office.com](https://portal.office.com/Start?sku=powerapps).
 
-	2. Select the app-launcher icon in the upper-left corner, and then choose Admin.
+2. Select the app-launcher icon in the upper-left corner, and then choose Admin.
 
-	3. Read the instructions on the **Become the admin** page, and then choose **Yes, I want to be the admin**.  
+3. Read the instructions on the **Become the admin** page, and then choose **Yes, I want to be the admin**.  
 
-		**NOTE**: If this option doesn’t appear, an Office 365 administrator is already in place.
-
+**NOTE**: If this option doesn’t appear, an Office 365 administrator is already in place.
 
 ### If I have multiple domains, can I control the Office 365 tenant that users are added to?
 

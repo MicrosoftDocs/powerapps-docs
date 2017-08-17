@@ -19,6 +19,7 @@
 	ms.date="08/08/2017"
 	ms.author="jamesol"/>
 
+
 # Add a push notification to a PowerApps app
 
 Push notifications for mobile apps primarily are used in consumer and business applications, to engage app users, and help them prioritize key tasks. In Microsoft PowerApps, you can send notifications by using the PowerApps Notification connector. You can send native push notifications to all apps that you created by using PowerApps. We plan to add more notification types in the future.

@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="01/23/2017"
+    ms.date="08/15/2017"
     ms.author="archanan"/>
 
 # Delegable data sources #
@@ -48,11 +48,15 @@ This list of data sources and delegable functions and predicates will be updated
 
 | &nbsp;              | Common Data Service              | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 |---------------|----------------------------------|------------|------------|--------------|------------|
+| Average        | No                              | No        | Yes        | No         | No        |
 | Filter        | Yes                              | Yes        | Yes        | Yes          | Yes        |
+| LookUp        | Yes                              | Yes        | Yes        | Yes          | Yes        |
+| Max        | No                              | No        | Yes        | No         | No        |
+| Min        | No                              | No        | Yes        | No         | No        |
+| Search        | Yes<sup>1</sup>                  | No         | Yes        | Yes          | Yes        |
 | Sort          | Yes                              | Yes        | Yes        | Yes          | Yes        |
 | SortByColumns | Yes                              | Yes        | Yes        | Yes          | Yes        |
-| Search        | Yes<sup>1</sup>                  | No         | Yes        | Yes          | Yes        |
-| LookUp        | Yes                              | Yes        | Yes        | Yes          | Yes        |
+| Sum	| No  | No | Yes | No | No |
 
 <sup>1</sup>For string fields only
 
