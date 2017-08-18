@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="davidiseminger"
-    manager="anneta"
+    authors="mllopis"
+    manager="kfend"
     editor=""
     tags=""/>
 
@@ -32,7 +32,7 @@ With **Power Query** integration, business app developers using PowerApps can cr
 
 This feature is available in your PowerApps tenant, but is not turned on by default. You can enable it in [web.powerapps.com](https://aka.ms/pqocds).
 
-**Note:** You can create new custom entities only in databases that you own.
+**Note:** You can create new custom entities only in databases that you have created.
 
 In the PowerApps portal, take the following steps to enable this feature:
 

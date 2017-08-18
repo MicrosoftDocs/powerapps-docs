@@ -4,8 +4,8 @@
     services=""
     suite="powerapps"
     documentationCenter="na"
-    authors="davidiseminger"
-    manager="anneta"
+    authors="mllopis"
+    manager="kfend"
     editor=""
     tags=""/>
 
