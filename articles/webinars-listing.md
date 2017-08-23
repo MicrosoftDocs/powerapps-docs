@@ -22,30 +22,6 @@
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Overview of PowerApps Feature Releases for 2017**
-<br>by Darshan Desai
-<br>*August 1st, 10:00AM PST, 1:00PM EST*
-
-It’s hard to keep up these days with the product team releasing new features every single sprint! Let’s take a step back and review the long list of new features released thus far this year….you won’t be disappointed!
-
-[Click here to watch on August 1st](https://www.youtube.com/watch?v=XFMh8-zLkEM)
-
-**Rapidly Build Applications with PowerApps Studio**
-<br>by Karthik Bharathy
-<br>*August 8th, 10:00AM PST, 1:00PM EST*
-
-PowerApps Studio comes with a host of new capabilities allowing users to rapidly build applications. In this walkthrough, app authors will use the latest Studio capabilities to quickly build production applications without having to invest in a lot of learning.
-
-[Click here to watch on August 8th](https://www.youtube.com/watch?v=us85WpXe4cA)
-
-**Introduction to PowerApps Controls**
-<br>by Audrie Gordon
-<br>*August 15th, 10:00AM PST, 1:00PM EST*
-
-In this webinar Audrie will give an overview of the most often used PowerApps Controls. She will walk you through a simple use-case guide on which controls to use when, including 3 control tricks to help you to design "finger-friendly" experiences in your mobile apps too!
-
-[Click here to watch on August 15th](https://www.youtube.com/watch?v=lUo0DXvJENI)
-
 **Optimizing Connectors in PowerApps and Microsoft Flow**
 <br>by Theresa Palmer-Boroski
 <br>*August 22nd, 10:00AM PST, 1:00PM EST*
@@ -60,7 +36,7 @@ One of the most exciting opportunities on the Business Application Platform is t
 
 **Pro Tips for InfoPath Designers Transitioning to PowerApps**
 <br>by Audrie Gordon
-<br>*September 5th, 10:00AM PST, 1:00PM EST*
+<br>*September 19th, 10:00AM PST, 1:00PM EST*
 
 Are you a business forms and workflow designer looking to leverage PowerApps and Flow? This is the webinar for you. Audrie will help you to make the switch with the top 10 forms and workflow tips for PowerApps and Flow! Don't miss it! What you'll get:
 
@@ -68,7 +44,7 @@ Are you a business forms and workflow designer looking to leverage PowerApps and
 * We will rebuild a typical InfoPath form in PowerApps; live from start to finish
 * Review a helpful decision tree for planning form rebuilds using PowerApps
 
-[Click here to watch on September 5th](https://www.youtube.com/watch?v=EZ09dRuiWLw)
+[Click here to watch on September 19th](https://www.youtube.com/watch?v=EZ09dRuiWLw)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
@@ -89,6 +65,10 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Top 5 Tips for Designing Apps that Mean Business**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=Ql-pK9ixKxw)
+
+**Getting started with PowerApps controls**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=lUo0DXvJENI)
 
 **Get started with the Common Data Service**
 <br>by Jono Luk
@@ -120,7 +100,15 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 [Watch now](https://www.youtube.com/watch?v=WPhux5_3Sfs)
 
 ### App Designer Topics ###
-**Look behind the curtain with one of the PowerApps Developers: Marie Hoeger**
+**Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=YF3DKZxlUdM)
+
+**Rapidly build applications with PowerApps Studio**
+<br>by Karthik Bharathy
+[Watch now](https://www.youtube.com/watch?v=us85WpXe4cA)
+
+
+
+
   	
