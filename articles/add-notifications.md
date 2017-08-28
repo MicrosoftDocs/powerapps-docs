@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Add push notifications | Microsoft PowerApps"
-	description="Learn how to send native push notifications to a PowerApps app."
+	pageTitle="Send a push notification | Microsoft PowerApps"
+	description="Learn how to send native push notifications to an app in PowerApps."
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
@@ -19,98 +19,99 @@
 	ms.date="08/08/2017"
 	ms.author="jamesol"/>
 
+# Send a push notification in PowerApps #
+Push notifications are used in mobile apps for consumer and business scenarios primarily to engage app users and help them prioritize key tasks. In PowerApps, you can send notifications by using the PowerApps Notification connector. You can send native push notifications to any app that you create in PowerApps. We plan to add more notification types in the future.
 
-# Add a push notification to a PowerApps app
+![Example of what a push notification looks like](./media/add-notifications/pic1-send-notif.jpg)
 
-Push notifications for mobile apps primarily are used in consumer and business applications, to engage app users, and help them prioritize key tasks. In Microsoft PowerApps, you can send notifications by using the PowerApps Notification connector. You can send native push notifications to all apps that you created by using PowerApps. We plan to add more notification types in the future.
-
-![Option to send native push notification][1]
-
-## When to use push notifications in your app
-
+Add a push notification to your app if:
 - You have critical content that you need to make your users aware of immediately.
 - You have important tasks for your users to act on via your app, in a preloaded context.
 - You want to engage your users on a specific interval, or you need users to enter the app in a specific context.
 
+**Note**: To get a push notification, each user must first either open the app in PowerApps Mobile or get the app from AppSource in [Dynamics 365](https://home.dynamics.com/).
 
-## Choose your app
+## Before you start ##
+In an app for which you have the **Contributor** permission, add a PowerApps Notification connection. If you don't already have an app, you can quickly [create one from a template](get-started-test-drive.md), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
 
-Choose the app that you want to receive the push notification. For detailed steps on how to quickly create an app from a template, see the [Create an app from a template tutorial](https://powerapps.microsoft.com/tutorials/get-started-test-drive/). In the tutorial, and in this article, we use the Case Management PowerApps app template. 
+## Send a notification from a flow ##
+**Note**: If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time currently.
 
-## Set up permissions
+1. In [Microsoft Flow](https://flow.microsoft.com), create a trigger that specifies when the push notification is sent.
 
-### Admin permissions
+	For example, you might want to send a notification when a record is added to the Case entity in the Common Data Service.
 
-To add push notifications to an app, first you create a connection to the app. To create a connection, you must have Contributor permission for the app.
+	![](./media/add-notifications/pic4-step1-flowupdated.jpg)
 
-### App user permissions
+2. Create an action for the flow by using the **PowerApps Notification** connector, and enter the App ID of the app to which you want to send notifications.
 
-To receive notifications, the app must be in **My apps** on the user's device. The app user must either open the app in the user's PowerApps iOS, Android, or Windows phone client application view, or get the app from the organization's AppSource gallery at [Dynamics 365](https://home.dynamics.com/). These measures prevent the app from being shared with the entire organization. When the user accesses the app from one of these locations, the user can choose to receive app push notifications when they install the app.
+	You can also rename the connection to reflect your scenario.
 
+	![](./media/add-notifications/pic5-step2-create-connection.jpg)
 
-## Trigger a push notification from a flow
+4. (optional) Pass parameters to the app when it opens (after the user taps the push notification).
 
-**Note**: Currently, if you use a flow to trigger a push notification, you can send the notification to only one user or one security group at a time.
+	In our example, we pass along the **Case ID** and **Initial Owner** fields for the selected contact.
 
-1. Create a flow. In our example, a flow is triggered when a new record is added to the Case entity in Common Data Service.
-	![Option to send native push notification][4]
-2. Search for and then select the **PowerApps Notification** connector. You also have the option to rename the connection to reflect your scenario.
-	![Option to send native push notification][5]
-3. Enter the App ID of the PowerApps app that you want to send notifications to.
-4. (Optional) You can pass parameters to the app when the app opens, after the user taps the push notification. In our example, we pass along the **Case ID** and **Initial Owner** fields for the selected contact.
-	![Option to send native push notification][6]
+	![](./media/add-notifications/pic6-step3-configure-notif.jpg)
 
-## Trigger a push notification directly from an app
+## Send a notification from an app
+You can send a push notification from one app to another or to the same app.
 
-You can use PowerApps to send a push notification directly from one app to another app, or to the same app.
+1. In [PowerApps](https://web.powerapps.com/), go to the app to which you want to send push notifications.
 
-1. In [PowerApps](https://web.powerapps.com/), go to the app that you want to send push notifications to. On the **Details** tab, copy the App ID of the app that will receive the push notification.
-	![Get App ID][8]
-2. Select the **Connections** tab, and then complete the steps to create a connection to the PowerApps Notification connector. You'll paste in the App ID from step 1.
-	![Create connection][9]
-3. Add the connection to the trigger app. In our example, we use the same app as the trigger app. The user that reassigns the case is the one that triggers the push notification. The new case owner is the one who receives the push notification.
-	![Add connection][10]
-4. From the push notification connection, call the **SendPushNotification** method. In our example, we trigger this notification by using the **OnSuccess** property in a Form control.
-	![PowerApps formula][11]
+1. On the **Details** tab, copy the App ID of that app.
 
+	![Get App ID](./media/add-notifications/grab-id.png)
+
+2. On the **Connections** tab, create a connection to the PowerApps Notification connector, and paste in the App ID from step 1.
+
+	![Create connection](./media/add-notifications/create-connection.png)
+
+3. Add the connection to the trigger app.
+
+	In our example, we use the same app as the trigger app. The user who reassigns the case also triggers a push notification to the new case owner.
+
+	![Add connection](./media/add-notifications/add-connection.png)
+
+4. From the push notification connection, call the **SendPushNotification** method.
+
+	In our example, we trigger this notification by using the **OnSuccess** property in a form.
+
+	![PowerApps formula](./media/add-notifications/powerapps-function.png)
 
 ## Load a specific page and context when a user taps the notification
 
 ### Pass parameters
-
-Your push notification can pass specific parameters to the app. For example, to read the **CaseID** value, use *Param("CaseID")*. To help you quickly identify this parameter, you can add a label to your app. In the label, set the text to **Param("CaseID")**. If the user opens the app from the All apps list, the value is empty. If the user opens the app from another location on the device, the value is populated with the **CaseID** value.
+Your push notification can pass specific parameters to the app. For example, to read the **CaseID** value, use *Param("CaseID")*. To quickly identify this parameter, add a **Label** control to your app. Set the **Text** property of that control to **Param("CaseID")**. If the user opens the app from the **All apps** list, the value is empty. If the user opens the app from another location on the device, the value is populated with the **CaseID** value.
 
 ### Set the start page
-
 You can set your app to go directly to the **Case details** page (in our example):
 
-1. Add a Timer control to the app.
-2. Under the **OnVisible** property of the page element, call **Timer.Start()**.
-3. Select the Timer control, and then set its **OnTimerEnd** value to **Navigate(EditCase, ScreenTransition.None)**.
-4. (Optional) To hide the Timer control, set the **Visible** property of the Timer control to **false**.
+1. Add a **Timer** control, and set its **OnTimerEnd** property to **Navigate(EditCase, ScreenTransition.None)**..
+1. (optional) Hide the **Timer** control by setting its **Visible** property to **false**.
+1. Set the **OnVisible** property of the screen to **Timer.Start()**.
 
 **Tip**: It's a good idea to create a unique first page in the app for the notification:
 
-1. Create an empty page that your app does not already go to.
-2. On the page, add a Text Input control.
-3. In the Text Input control, set the **timer.Duration** value.
-4. When you create the app, set the timer to a non-zero value. When you are ready to publish the app, set the value to **0** to immediately trigger the timer.
+1. Create an empty page that your app doesn't already open, add a **Text Input** control, and set its **timer.Duration** value.
+4. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
 
 ## Syntax
 
-| Name                 | Description                                                                                  |
-|----------------------|------------------------------------------------------------------------------------------|
-| SendPushNotification | Sends a push notification to the app that is specified in the push notification connection settings. |
+| Name | Description |
+|------|-------------|
+| SendPushNotification | Sends a push notification to the app that's specified in the connection settings for the notification. |
 
 ### Parameters
-| Name       | Type                      | Description                                                                                                                                                             |
-|------------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| recipients | String array, required | A list of: <ul> <li>User emails</li> <li>User Azure Active Directory (Azure AD) object IDs</li> <li>Security group emails</li> <li>Security group Azure AD object IDs </li></ul>                |
-| message    | String, required          | The push notification message body.                                                                                                                             |
+| Name       | Type    | Description |
+|------------|---------|-------------|
+| recipients | String array, required | A list of: <ul> <li>Email addresses for users or security groups</li> <li>Object IDs for users or security groups in Azure Active Directory</li></ul>                |
+| message    | String, required          | The message body of the push notification.    |
 | openApp    | Boolean, optional         | Whether to open the app when the user taps the push notification.                                                                                             |
-| params     | Parameters, optional      | Key-value parameters to pass with the notification. These can be further processed in the app to go to a specific page and load a specific state. |
+| params     | Parameters, optional      | Key-value parameters to pass with the notification. These can be further processed in the app to open a specific page and load a specific state. |
 
-### PowerApps formula samples
+### Sample formulas
 
 ```
 //Send a basic notification.
@@ -121,7 +122,7 @@ PowerAppsNotification.SendPushNotification(
  }
 )
 
-//Send a notification that opens the targeted PowerApps app, and passes along specific parameters.
+//Send a notification that opens an app and passes along specific parameters.
 PowerAppsNotification.SendPushNotification(
 {
   recipients:["email1@contoso.com", "email2@contoso.com"],
@@ -129,28 +130,12 @@ PowerAppsNotification.SendPushNotification(
   params:Table({key:"notificationKey", value:"The value for notificationKey"}),
   openApp:true
  }
-)
-```
+)```
 
-## Known limitations for the PowerApps Notification connector
-
-* Currently, notifications are not displayed on the Windows phone client.
-* Currently, we don't provide push notifications for users who run apps only in a web browser.
-* Notifications show the generic PowerApps icon instead of a specific app icon.
-* When you use Microsoft Flow, you can send a push notification to only one recipient at a time.
+## Known limitations ##
+- Currently, notifications aren't displayed on PowerApps Mobile for Windows Phone.
+- Currently, we don't provide push notifications for users who run apps only in a web browser.
+- Notifications show the generic PowerApps icon instead of a specific app icon.
+- When you use Microsoft Flow, you can send a push notification to only one recipient at a time.
 
 For reference information, see [PowerApps Notification reference](https://docs.microsoft.com/en-us/connectors/powerappsnotification/).
-
-
-
-[1]: ./media/add-notifications/pic1-send-notif.jpg
-[2]: ./media/add-notifications/pic2-diagramoverview.jpg
-[3]: ./media/add-notifications/pic3-select-app-id.jpg
-[4]: ./media/add-notifications/pic4-step1-flowupdated.jpg
-[5]: ./media/add-notifications/pic5-step2-create-connection.jpg
-[6]: ./media/add-notifications/pic6-step3-configure-notif.jpg
-[7]: ./media/add-notifications/pic7-case-table.jpg
-[8]: ./media/add-notifications/grab-id.png
-[9]: ./media/add-notifications/create-connection.png
-[10]: ./media/add-notifications/add-connection.png
-[11]: ./media/add-notifications/powerapps-function.png
