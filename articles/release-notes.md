@@ -29,7 +29,7 @@ For information about known limitations, see [Common issues and resolutions](com
 ## Release 2.0.670-2.0.671 ##
 1. Display a [Power BI tile](control-power-bi-tile.md) inside an app.
 1. Use the **[Coalesce](function-isblank-isempty.md)** function to more easily replace a blank value but leave other values as they were.
-1. Use the **[EndsWith](function-startswith)** function to test whether a text string ends another text string.
+1. Use the **[EndsWith](function-startswith.md)** function to test whether a text string ends another text string.
 1. Use the **[And](operators.md)**, **[Or](operators.md)**, or **[Not](operators.md)** operator in a formula.
 
 ## Release 2.0.660-2.0.661 ##
