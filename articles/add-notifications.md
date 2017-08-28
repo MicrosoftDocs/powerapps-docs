@@ -25,11 +25,12 @@ Push notifications are used in mobile apps for consumer and business scenarios p
 ![Example of what a push notification looks like](./media/add-notifications/pic1-notification-screenshot.png)
 
 Add a push notification to your app if:
-- You have critical content that you need to make your users aware of immediately.
-- You have important tasks for your users to act on via your app, in a preloaded context.
+
+- Your users need to know information immediately.
+- Your users must complete important tasks by using your app, in a preloaded context.
 - You want to engage your users on a specific interval, or you need users to enter the app in a specific context.
 
-**Note**: To get a push notification, each user must first either open the app in PowerApps Mobile or get the app from AppSource in [Dynamics 365](https://home.dynamics.com/).
+**Note**: To receive push notifications, each user must have opened the app in PowerApps Mobile once or gotten the app from AppSource in [Dynamics 365](https://home.dynamics.com/).
 
 ## Before you start ##
 In an app for which you have the **Contributor** permission, add a PowerApps Notification connection. If you don't already have an app, you can quickly [create one from a template](get-started-test-drive.md), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
@@ -86,10 +87,13 @@ You can send a push notification from one app to another or to the same app.
 Your push notification can pass specific parameters to the app. For example, to read the **CaseID** value, use *Param("CaseID")*. To quickly identify this parameter, add a **Label** control to your app. Set the **Text** property of that control to **Param("CaseID")**. If the user opens the app from the **All apps** list, the value is empty. If the user opens the app from another location on the device, the value is populated with the **CaseID** value.
 
 ### Set the start page
-You can set your app to go directly to the **Case details** page (in our example):
+You can set your app to open, for example, the **Case details** page as soon as the app opens:
 
-1. Add a **Timer** control, and set its **OnTimerEnd** property to **Navigate(EditCase, ScreenTransition.None)**..
+1. Add a **Timer** control, and set its **OnTimerEnd** property to this formula:
+<br>**Navigate(EditCase, ScreenTransition.None)**.
+
 1. (optional) Hide the **Timer** control by setting its **Visible** property to **false**.
+
 1. Set the **OnVisible** property of the screen to **Timer.Start()**.
 
 **Tip**: It's a good idea to create a unique first page in the app for the notification:
@@ -113,16 +117,20 @@ You can set your app to go directly to the **Case details** page (in our example
 
 ### Sample formulas
 
+
+Send a basic notification.
+
 ```
-//Send a basic notification.
 PowerAppsNotification.SendPushNotification(
- {
+{
   recipients: [""f60ccf6f-7579-4f92-967c-2920473c966b", 72f988bf-86f1-41af-91ab-2d7cd011db47],
   message: "A new case was assigned to you."
  }
 )
+```
 
-//Send a notification that opens an app and passes along specific parameters.
+Send a notification that opens an app and passes along specific parameters.
+```
 PowerAppsNotification.SendPushNotification(
 {
   recipients:["email1@contoso.com", "email2@contoso.com"],
@@ -130,7 +138,8 @@ PowerAppsNotification.SendPushNotification(
   params:Table({key:"notificationKey", value:"The value for notificationKey"}),
   openApp:true
  }
-)```
+)
+```
 
 ## Known limitations ##
 - Currently, notifications aren't displayed on PowerApps Mobile for Windows Phone.
