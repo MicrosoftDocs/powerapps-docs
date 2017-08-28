@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="11/07/2015"
+   ms.date="08/28/2017"
    ms.author="gregli"/>
 
 # Concat and Concatenate functions in PowerApps #
@@ -25,6 +25,8 @@ Concatenates individual strings of text and strings in [tables](../working-with-
 ## Description ##
 
 The **Concat** function concatenates the result of a formula applied across all the [records](../working-with-tables.md#records) of a table, resulting in a single string. Use this function to summarize the strings of a table, just as the **[Sum](function-aggregates.md)** function does for numbers.
+
+Use the [**Split**](function-split.md) to split a string into a table of substrings.
 
 [AZURE.INCLUDE [record-scope](../../includes/record-scope.md)]
 
