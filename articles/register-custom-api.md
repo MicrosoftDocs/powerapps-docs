@@ -44,7 +44,7 @@ The custom connector process has several steps, which we describe briefly below.
 
 2. **Secure your API** using one of the following authentication mechanisms. You can allow unauthenticated access to your APIs, but we don't recommend it.
 
-	- Azure Active Directory
+	- Azure Active Directory. For more information, see [Use Azure Active Directory with a custom connector in PowerApps](customapi-azure-resource-manager-tutorial.md).
 	- OAuth 2.0 for specific services like Dropbox, Facebook, and SalesForce
 	- Generic OAuth 2.0
 	- API Key
