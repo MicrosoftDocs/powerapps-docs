@@ -90,7 +90,7 @@ Your push notification can pass specific parameters to the app. For example, to 
 You can set your app to open, for example, the **Case details** page as soon as the app opens:
 
 1. Add a **Timer** control, and set its **OnTimerEnd** property to this formula:
-<br>**Navigate(EditCase, ScreenTransition.None)**.
+<br>**Navigate(EditCase, ScreenTransition.None)**
 
 1. (optional) Hide the **Timer** control by setting its **Visible** property to **false**.
 
