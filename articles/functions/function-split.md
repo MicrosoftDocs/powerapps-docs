@@ -24,18 +24,18 @@ Splits a text string into a table of substrings.
 
 ## Description ##
 
-The **Split** function breaks a text string into a table of substrings.  Use **Split** to break up a comma delimited list, a date that use a slash between date parts, and in other situations in which a well defined delimiter is used.  
+The **Split** function breaks a text string into a table of substrings.  Use **Split** to break up comma delimited lists, dates that use a slash between date parts, and in other situations where a well defined delimiter is used.  
 
-A separator string is used to break the text string apart.  The separator can be zero, one, or more characters that are matched in the text string. The separator characters that are matched are not returned in the result.
+A separator string is used to break the text string apart.  The separator can be zero, one, or more characters that are matched as a whole in the text string.  Using a zero length or *blank* string results in each character being broken out individually.  The matched separator characters are not returned in the result.  If no separator match is found then the entire text string is returned as a single result.
 
-Use the [**Concat**](function-concat.md) function to recombine the string (without the separators).  
+Use the [**Concat**](function-concatenate.md) function to recombine the string (without the separators).  
 
 ## Syntax ##
 
 **Split**( *Text*, *Separator* )
 
 - *Text* - Required.  Text to split.
-- *Separator* - Required.  Separator to use in splitting the string.
+- *Separator* - Required.  Separator to use in splitting the string.  Can be zero, one, or more characters.
 
 ## Examples ##
 
