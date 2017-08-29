@@ -28,7 +28,7 @@ The **Concat** function concatenates the result of a formula applied across all 
 
 [AZURE.INCLUDE [record-scope](../../includes/record-scope.md)]
 
-Use the [**Split**](function-split.md) function to split a string into a table of substrings.
+Use the **[Split](function-split.md)** function to split a string into a table of substrings.
 
 The **Concatenate** function concatenates a mix of individual strings and a single-column table of strings. Used with individual strings, this function is equivalent to using the **&** [operator](operators.md). You can use a formula that includes the **[ShowColumns](function-table-shaping.md)** function to create a single-column table from a table that has multiple columns.
 
