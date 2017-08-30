@@ -18,7 +18,7 @@ ms.workload="na"
 ms.date="07/12/2016"
 ms.author="archanan"/>
 
-# Connect from Microsoft PowerApps to SQL Server #
+# Connect to SQL Server from PowerApps #
 
 ![SQL Server icon](./media/connection-azure-sqldatabase/sqlicon.png)
 

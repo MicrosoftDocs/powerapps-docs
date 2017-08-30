@@ -31,30 +31,24 @@ The following table has links to more information about our most popular connect
 |![Dynamics 365](./media/connections-list/dynamics-365.png) |[**Dynamics 365**](./connections/connection-dynamics-crmonline.md)| &nbsp; |![OneDrive](./media/connections-list/onedrive.png) |[**OneDrive**](cloud-storage-blob-connections.md)|
 |![Office 365 Users](./media/connections-list/office365.png) |[**Office 365 Users**](./connections/connection-office365-users.md)| &nbsp; |![Dropbox](./media/connections-list/dropbox.png) |[**Dropbox**](cloud-storage-blob-connections.md)|
 
+If you have questions about a specific connector, please use the [PowerApps Forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). If you have an idea for a new connector or suggestions for improvement, use [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas). 
+
 ## Types of connectors
-PowerApps has two categories of connectors: standard connectors like the ones listed above, and custom connectors. If you're connecting to a data source that PowerApps supports with a standard connector, use that connector. If you need to connect to another source, like a service that you've built, see [Register and use custom connectors](register-custom-api.md).
+PowerApps has two types of connectors: *standard connectors* like the ones listed above, and *custom connectors*. If you're connecting to a data source that PowerApps supports with a standard connector, use that connector. If you need to connect to another source, like a service that you've built, see [Register and use custom connectors](register-custom-api.md).
 
-Standard connectors behave differently depending on the type of service they connect to and how data is returned by that service. Consider the following three examples:
+Standard connectors behave differently depending on the type of data source they connect to and how data is returned by that data source:
 
-- Connectors that work with tabular data, such as SharePoint lists, SQL Server tables, and Excel workbooks. PowerApps uses standard in-built functions such as Patch(), Collect(), Update() etc., in order to interact with such tabular data. For more information on working with tabular data, see the following articles:
+- Some connectors work with tabular data sources, such as SharePoint, SQL Server, and Excel. When working with these data sources, data is returned to PowerApps as a table. PowerApps uses its own functions, such as [Patch()](functions/function-patch.md), [Collect()](functions/function-clear-collect-clearcollect.md), [Update()](functions/function-update-updateif.md), and so on to interact with the data. Tabular data is also easy to use in forms and galleries, where a field in a table is displayed as a field in a gallery or form. For more information, see the following articles:
 
     [Understand data sources in PowerApps](working-with-data-sources.md)
 
     [Generate an app from Excel data](get-started-create-from-data.md)
 
-    [Create an app from scratch](get-started-create-from-blank.md) 
+    [Create an app from scratch](get-started-create-from-blank.md)
 
-- Connectors that call APIs exposed by the underlying service directly. Examples of action connectors are Twitter, Facebook, Office365 Outlook, Office365 Users, Planner etc. PowerApps can directly calls the APIs exposed by the service via the connector. For more information on working with APIs directly, see the following articles:
+- Other connectors work with function-based data sources, such as Twitter, Facebook, and Office 365 Outlook. When working with these data sources, data is returned to PowerApps based on calling specific functions in the underlying service. For example, with the Twitter connector you call `Twitter.MyFollowers()` to return a list of your followers. You can still use this data in a form or gallery, but it requires a little more work than tabular data. For more information, see the following article:
 
-- [TODO: add link to example here]()
-
-- Blob/Storage connectors are storage connectors, that allow you to connect to Excel files stored on these connectors. Examples of such connectors are OneDrive for Business, Azure Blob, Google Drive, Dropbox etc. For more information on working with cloud storage, see the following articles:
-- 
-    [Understand data sources in PowerApps](../connections/cloud-storage-blob-connections.md)
-
-    [Generate an app from Excel data](get-started-create-from-data.md)
-
-    [Create an app from scratch](get-started-create-from-blank.md) 
+    [Connect to Twitter from PowerApps](connections/connection-twitter.md)
 
 
 
