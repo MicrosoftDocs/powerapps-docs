@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/24/2017"
+   ms.date="08/28/2017"
    ms.author="gregli"/>
 
 # Formula reference for PowerApps #
@@ -306,6 +306,8 @@ Other elements include:
 **[Sort](functions/function-sort.md)** – Returns a sorted table based on a formula.
 
 **[SortByColumns](functions/function-sort.md)** – Returns a sorted table based on one or more columns.
+
+**[Split](functions/function-split.md)** – Splits a text string into a table of substrings.
 
 **[Sqrt](functions/function-numericals.md)** – Returns the square root of a number.
 
