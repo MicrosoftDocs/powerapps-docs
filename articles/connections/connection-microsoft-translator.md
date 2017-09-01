@@ -18,7 +18,7 @@
    ms.date="07/12/2017"
    ms.author="archanan"/>
 
-#  Microsoft Translator
+# Connect to Microsoft Translator from PowerApps #
 
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
 

@@ -18,7 +18,7 @@
    ms.date="10/02/2016"
    ms.author="archanan"/>
 
-# Connect to Excel from Microsoft PowerApps #
+# Connect to Excel from PowerApps #
 
 ![Excel](./media/connection-excel/excelicon.png)
 

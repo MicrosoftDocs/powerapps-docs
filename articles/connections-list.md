@@ -1,5 +1,5 @@
 <properties
-	pageTitle="List of connections | Microsoft PowerApps"
+	pageTitle="Connectors overview | Microsoft PowerApps"
 	description="Overview of all the available connections you can use to build apps"
 	services=""
 	suite="powerapps"
@@ -15,33 +15,40 @@
 	ms.tgt_pltfrm="na"
 	ms.devlang="na"
 	ms.topic="article"
-	ms.date="02/08/2017"
+	ms.date="08/28/2017"
 	ms.author="archanan"/>
 
-# Connections list for Microsoft PowerApps #
-In PowerApps, connect to data in Office 365, Dropbox, Twitter, and other common SaaS and enterprise services. Review these options to identify possibilities, and check back to discover what's been added recently. Some connectors have a topic that describes specific functions for that connector.
+# Overview of connectors for PowerApps #
+Data is at the core of most apps, including those you build in PowerApps. Data is stored in a *data source*, and you bring that data into your app by creating a *connection*. The connection uses a specific *connector* to talk to the data source. PowerApps has connectors for many popular services and on-premises data sources, including SharePoint, SQL Server, Office 365, Salesforce, Twitter, and more. To get started adding data to an app, see [Add a data connection in PowerApps](add-data-connection.md).
 
-Just getting started with adding connections in PowerApps? Learn how to add [connections](add-manage-connections.md) and [data sources](add-data-connection.md) in your apps.
+The following table has links to more information about our most popular connectors. For a full list of connectors, see the [Microsoft Connector Reference](https://docs.microsoft.com/connectors/).
 
-Ready to take it to the next level? Create [custom connectors](register-custom-api.md), and connect to them within your apps.
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|---|---|---|---|---|
+|![Common Data Service](./media/connections-list/cdm.png) |[**Common Data Service**](data-platform-intro.md)| &nbsp; |![Office 365 Outlook](./media/connections-list/office365.png) |[**Office 365 Outlook**](./connections/connection-office365-outlook.md)| 
+|![SharePoint](./media/connections-list/sharepoint.png) |[**SharePoint**](./connections/connection-sharepoint-online.md)| &nbsp; |![Excel](./media/connections-list/excel.png) |[**Excel**](./connections/connection-excel.md)|
+|![SQL Server](./media/connections-list/sql.png) |[**SQL Server**](./connections/connection-azure-sqldatabase.md)| &nbsp; |![OneDrive for Business](./media/connections-list/onedrive.png) |[**OneDrive for Business**](./connections/cloud-storage-blob-connections.md)|
+|![Dynamics 365](./media/connections-list/dynamics-365.png) |[**Dynamics 365**](./connections/connection-dynamics-crmonline.md)| &nbsp; |![OneDrive](./media/connections-list/onedrive.png) |[**OneDrive**](./connections/cloud-storage-blob-connections.md)|
+|![Office 365 Users](./media/connections-list/office365.png) |[**Office 365 Users**](./connections/connection-office365-users.md)| &nbsp; |![Dropbox](./media/connections-list/dropbox.png) |[**Dropbox**](./connections/cloud-storage-blob-connections.md)|
 
-#### The full list of connector documentation is available [here](https://docs.microsoft.com/connectors/). ####
+If you have questions about a specific connector, please use the [PowerApps Forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). If you have an idea for a new connector or suggestions for improvement, use [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas). 
 
-## Most Popular Connectors ##
-| &nbsp; | &nbsp; |
-|---|---|
-|![](./media/connections-list/cdm.png) |[**Common Data Service**](data-platform-intro.md)<br>![](./media/connections-list/premium.png)|
-|![](./media/connections-list/sharepoint.png) |[**SharePoint**](./connections/connection-sharepoint-online.md)|
-|![](./media/connections-list/sql.png) |[**SQL Server**](./connections/connection-azure-sqldatabase.md)|
-|![](./media/connections-list/dynamics-365.png) |[**Dynamics 365**](./connections/connection-dynamics-crmonline.md)|
-|![](./media/connections-list/office365.png) |[**Office 365 Users**](./connections/connection-office365-users.md)|
-|![](./media/connections-list/office365.png) |[**Office 365 Outlook**](./connections/connection-office365-outlook.md)|
-|![](./media/connections-list/excel.png) |[**Excel**](./connections/connection-excel.md)|
-|![](./media/connections-list/onedrive.png) |[**OneDrive for Business**](cloud-storage-blob-connections.md)|
-|![](./media/connections-list/onedrive.png) |[**OneDrive**](cloud-storage-blob-connections.md)|
-|![](./media/connections-list/dropbox.png) |[**Dropbox**](cloud-storage-blob-connections.md)|
+## Types of connectors
+PowerApps has two types of connectors: *standard connectors* like the ones listed above, and *custom connectors*. If you're connecting to a data source that PowerApps supports with a standard connector, use that connector. If you need to connect to another source, like a service that you've built, see [Register and use custom connectors](register-custom-api.md).
 
-## All connections ##
-| &nbsp; | &nbsp; |
-|---|---|
-|10to8 Appointment Scheduling<br>Act!<br>appFigures<br>Asana<br>Azure Automation<br>[**Azure Blob Storage**](./connections/cloud-storage-blob-connections.md)<br>Azure Data Lake<br>Azure DocumentDB<br>Azure Queues<br>Azure Resource Manager<br>Basecamp 2<br>Basecamp 3<br>Bitbucket ![](./media/connections-list/premium.png)<br>Bitly<br>Blogger<br>[**Box**](./connections/cloud-storage-blob-connections.md)<br>bttn<br>Buffer<br>Campfire<br>Capsule CRM<br>Chatter ![](./media/connections-list/premium.png)<br>[**Common Data Service**](data-platform-intro.md) ![](./media/connections-list/premium.png)<br>Computer Vision API<br>DB2 ![](./media/connections-list/premium.png)<br>Disqus<br>DocuSign ![](./media/connections-list/premium.png)<br>[**Dropbox**](./connections/cloud-storage-blob-connections.md)<br>[**Dynamics 365**](./connections/connection-dynamics-crmonline.md)<br>Dynamics 365 for Financials<br>[**Dynamics for Operations**](./connections/connection-dynamicsax.md)<br>Dynamics NAV<br>Easy Redmine ![](./media/connections-list/premium.png)<br>[**Excel**](./connections/connection-excel.md)<br>Eventbrite ![](./media/connections-list/premium.png)<br>Face API<br>Facebook<br>File System<br>Flic<br>FreshBooks ![](./media/connections-list/premium.png)<br>Freshdesk<br>[**FTP**](./connections/connection-ftp.md)<br>GitHub<br>Gmail<br>Google Calendar<br>Google Contacts<br>[**Google Drive**](./connections/cloud-storage-blob-connections.md)<br>Google Sheets<br>Google Tasks<br>GoToMeeting ![](./media/connections-list/premium.png)<br>GoToTraining ![](./media/connections-list/premium.png)<br>GoToWebinar ![](./media/connections-list/premium.png)<br>Harvest ![](./media/connections-list/premium.png)<br>HelloSign ![](./media/connections-list/premium.png)<br>HipChat<br>Informix ![](./media/connections-list/premium.png)<br>Infusionsoft ![](./media/connections-list/premium.png)<br>Inoreader<br>Insightly<br>Instagram<br>Instapaper|Intercom<br>JIRA ![](./media/connections-list/premium.png)<br>LeanKit ![](./media/connections-list/premium.png)<br>LUIS<br>Mail<br>MailChimp ![](./media/connections-list/premium.png)<br>Mandrill ![](./media/connections-list/premium.png)<br>Medium<br>[**Microsoft Translator**](./connections/connection-microsoft-translator.md)<br>MSN Weather<br>Muhimbi PDF<br>Notifications<br>Office 365 Bookings<br>[**Office 365 Outlook**](./connections/connection-office365-outlook.md)<br>[**Office 365 Users**](./connections/connection-office365-users.md)<br>[**Office 365 Video**](./connections/connection-office365-video.md)<br>[**OneDrive**](./connections/cloud-storage-blob-connections.md)<br>[**OneDrive for Business**](./connections/cloud-storage-blob-connections.md)<br>OneNote (Business)<br>[**Oracle Database**](./connections/connection-oracledb.md) ![](./media/connections-list/premium.png)<br>Outlook Tasks<br>Outlook.com<br>PagerDuty<br>Pinterest<br>Pipedrive ![](./media/connections-list/premium.png)<br>Pivotal Tracker<br>[**Power BI**](./connections/connection-powerbi.md)<br>PowerApps Notification ![](./media/connections-list/premium.png)<br>Project Online<br>Redmine<br>RSS<br>[**Salesforce**](./connections/connection-salesforce.md) ![](./media/connections-list/premium.png)<br>SendGrid<br>Service Bus<br>[**SFTP**](./connections/connection-sftp.md)<br>[**SharePoint**](./connections/connection-sharepoint-online.md)<br>Slack<br>SmartSheet<br>SMTP<br>SparkPost<br>[**SQL Server**](./connections/connection-azure-sqldatabase.md)<br>Stripe ![](./media/connections-list/premium.png)<br>SurveyMonkey ![](./media/connections-list/premium.png)<br>Text Analytics<br>Todoist<br>Toodledo<br>Trello<br>Twilio<br>[**Twitter**](./connections/connection-twitter.md)<br>TypeForm<br>UserVoice ![](./media/connections-list/premium.png)<br>Vimeo<br>Visual Studio Team Services<br>WebMerge<br>WordPress<br>Wunderlist<br>Yammer<br>YouTube<br>Zendesk ![](./media/connections-list/premium.png)|
+Standard connectors behave differently depending on the type of data source they connect to and how data is returned by that data source:
+
+- Some connectors work with tabular data sources, such as SharePoint, SQL Server, and Excel. When working with these data sources, data is returned to PowerApps as a table. PowerApps uses its own functions, such as [Patch()](functions/function-patch.md), [Collect()](functions/function-clear-collect-clearcollect.md), [Update()](functions/function-update-updateif.md), and so on to interact with the data. Tabular data is also easy to use in forms and galleries, where a field in a table is displayed as a field in a gallery or form. For more information, see the following articles:
+
+    [Understand data sources in PowerApps](working-with-data-sources.md)
+
+    [Generate an app from Excel data](get-started-create-from-data.md)
+
+    [Create an app from scratch](get-started-create-from-blank.md)
+
+    **Note:** To connect to data in Excel, the workbook must be hosted in a cloud-storage service like OneDrive. For more information, see [Connect to cloud-storage from PowerApps](./connections/cloud-storage-blob-connections.md).
+
+- Other connectors work with function-based data sources, such as Twitter, Facebook, and Office 365 Outlook. When working with these data sources, data is returned to PowerApps based on calling specific functions in the underlying service. For example, with the Twitter connector you call `Twitter.MyFollowers()` to return a list of your followers. You can still use this data in a form or gallery, but it requires a little more work than tabular data. For more information, see [Connect to Twitter from PowerApps](connections/connection-twitter.md).
+
+
+

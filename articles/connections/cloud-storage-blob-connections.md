@@ -18,7 +18,8 @@ ms.workload="na"
 ms.date="07/12/2016"
 ms.author="archanan"/>
 
-# Cloud-storage connections #
+# Connect to cloud-storage from PowerApps #
+
 PowerApps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
 
 |**Azure Blob**|**Box**|**Dropbox**| **Google Drive**|**OneDrive**|**OneDrive<br>for Business**|
