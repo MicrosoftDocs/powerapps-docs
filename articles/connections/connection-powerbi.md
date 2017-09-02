@@ -18,7 +18,7 @@
    ms.date="10/12/2016"
    ms.author="sirsu"/>
 
-#  Power BI
+# Connect to Power BI from PowerApps #
 
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
 
