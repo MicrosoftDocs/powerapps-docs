@@ -18,7 +18,7 @@
    ms.date="05/25/2017"
    ms.author="archanan"/>
 
-#  Office 365 Outlook
+# Connect to Office 365 Outlook from PowerApps #
 
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
 

@@ -18,7 +18,7 @@ ms.workload="na"
 ms.date="07/12/2017"
 ms.author="archanan"/>
 
-# Twitter
+# Connect to Twitter from PowerApps #
 
 ![Twitter](./media/connection-twitter/twittericon.png)
 

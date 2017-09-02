@@ -18,7 +18,7 @@ ms.workload="na"
 ms.date="07/12/2017"
 ms.author="karthikb"/>
 
-# Connect from Microsoft PowerApps to SharePoint #
+# Connect to SharePoint from PowerApps #
 
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 

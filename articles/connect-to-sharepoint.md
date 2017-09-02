@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Connect to SharePoint | Microsoft PowerApps"
+   pageTitle="Create a connection to SharePoint from PowerApps | Microsoft PowerApps"
    description="In powerapps.com, create a connection to SharePoint, for use in generating an app automatically or building one from scratch."
    services=""
    suite="powerapps"
@@ -18,7 +18,7 @@
    ms.date="09/03/2016"
    ms.author="sharik"/>
 
-# Connect from PowerApps to SharePoint #
+# Create a connection to SharePoint from PowerApps #
 Create a connection to either SharePoint Online or on-premises SharePoint so that you can generate an app automatically or build one from scratch.
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
