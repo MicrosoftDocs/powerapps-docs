@@ -4,7 +4,7 @@
 	services=""
 	suite="powerapps"
 	documentationCenter="na"
-	authors="archnair"
+	authors="mgblythe"
 	manager="anneta"
 	editor=""
 	tags=""/>
