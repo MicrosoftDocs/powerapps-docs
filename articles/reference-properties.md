@@ -40,6 +40,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Column](controls/control-column.md)** - Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.
 
+**[Combo box](controls/control-combo-box.md)** - Allows users to make selections from provided choices. Supports search and multi-select.
+
 **[Data table](controls/control-data-table.md)** - Show data in a tabular format.
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
