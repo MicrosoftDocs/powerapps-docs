@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-    ms.date="07/07/2016"
+    ms.date="09/13/2017"
    ms.author="fikaradz"/>
 
 # Combo box control in PowerApps #
@@ -58,9 +58,9 @@ When searching for items to select, for each item you can choose to show a singl
 
 **InputTextPlaceholder** – Instructional text shown to end-users when no items are selected.
 
-**[OnChange](properties-core.md)** – How the app responds when the user changes a selection.
+**OnChange** – How the app responds when the user changes a selection.
 
-**[OnNavigate](properties-core.md)** – How the app responds when the user clicks on an item.
+**OnNavigate** – How the app responds when the user clicks on an item.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
@@ -76,9 +76,9 @@ When searching for items to select, for each item you can choose to show a singl
 ## Example ##
 1. Add a **Combo box** control from the Insert tab, Controls menu.  
 1. In the Properties options tab, click on Data.  
-1. Select the data source, Layout and related properties below.
-1. Set the SelectMultiple property in the Advanced tab.
+1. Select the data source, layout and related properties below.
+1. Set the **SelectMultiple** property in the Advanced tab.
 
-	A functional Combo box will appear in your app.
+	A functional **Combo box** will appear in your app.
 
 	Don't know how to [add and configure a control](../add-configure-controls.md)?.
