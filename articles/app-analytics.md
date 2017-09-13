@@ -29,9 +29,9 @@ The App usage report gives you the ability to track how many users are using you
 ![App usage report](./media/app-analytics/analytics.png)
 
 ## How do I get access to my app's reports? ##
-All reports are available to any user with ‘Can edit’ permission to the app, but the user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order to access the report.
+All reports are available to any user with "Can edit" permission to the app, but the user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order to access the report.
 
-*NOTE: While the Analytics report are in preview, any user with a valid PowerApps license will be able to access and try out the report*
+*NOTE: While analytics reports are in preview, any user with a valid PowerApps license will be able to access and try out the report*
 
 ## Where do I find my app's reports? ##
 You can view your app's reports via the following steps:
