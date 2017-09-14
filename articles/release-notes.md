@@ -23,7 +23,7 @@ For information about known limitations, see [Common issues and resolutions](com
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
 ## Release 2.0.690-2.0.691 ##
-1. For apps that you create, track usage in an embedded dashboard from Power BI.
+1. For apps that you create, [track usage](app-analytics.md) in an embedded dashboard from Power BI.
 1. Use a delimiter to break a text string into parts by using the **[Split](function-split.md)** function.
 
 ## Release 2.0.680-2.0.681 ##
