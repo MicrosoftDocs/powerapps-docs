@@ -185,15 +185,17 @@ Each user can provision up to two databases.
 
 ### Can I rename an environment?
 
-Yes, we have just added this functionality.
+Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md).
 
 ### Can I delete an environment?
 
-Not yet, but this functionality is coming soon to the PowerApps admin center.
+Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md).
 
 ### As an Environment Admin, can I view and manage all resources (apps, flows, APIs, etc.) for an environment?
 
 Not yet, but this functionality is coming soon to the PowerApps admin center.
+
+https://powerapps.microsoft.com/en-us/tutorials/admin-view-apps/
 
 ### Which license includes Common Data Service?
 
