@@ -185,11 +185,11 @@ Each user can provision up to two databases.
 
 ### Can I rename an environment?
 
-Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md) for more details.
+Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md#rename-your-environment) for more details.
 
 ### Can I delete an environment?
 
-Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md) for more details.
+Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md#delete-your-environment) for more details.
 
 ### As an Environment Admin, can I view and manage all resources (apps, flows, APIs, etc.) for an environment?
 
