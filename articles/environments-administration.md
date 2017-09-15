@@ -177,7 +177,7 @@ An organization's data must be protected so that it isn't shared with audiences 
 
 ### How many environments can I create?
 
-Each user can create up to five environments.
+Each user can create up to two environments.
 
 ### How many databases can I provision?
 
