@@ -1,6 +1,6 @@
 <properties
-	pageTitle="Using Rules in apps | Microsoft PowerApps"
-	description="Step-by-step instructions to creating Rules for app makers"
+	pageTitle="Create a rule | Microsoft PowerApps"
+	description="Step-by-step instructions for building app logic by creating rules"
 	services=""
 	suite="PowerApps"
 	documentationCenter="na"
@@ -18,51 +18,73 @@
    ms.date="09/14/2017"
    ms.author="karthikb"/>
 
-# Using Rules in PowerApps #
-Rules empower app authors to modify the state of the app based on certain conditions. App authors can define the conditions, which when true trigger one or more actions. The actions can modify the properties of the control like its color, location, visibility and so on.
+# Create a rule in PowerApps #
+Create rules to automatically modify an app based on criteria that you specify. For example, show list items in red, yellow, or green based on their status, or show an approval button only for certain users (such as managers).
 
-For example, using Rules app authors can define conditional formatting of controls (say formatting the status as red-yellow-green) or conditionally show or hide controls (say show approval button only for managers).
+You can add rules to a variety of controls. In this topic, you'll add a rule to change the text color of a **Label** control if the value of a **Slider** control is greater than 70.
 
-## Adding a rule ##
-In PowerApps Studio, add a new control or select an existing control, click or tap **Rules** panel (next to the properties panel on the right), and then follow these steps:
+## Add a rule ##
+1. Select a control (or add a control and leave it selected).
 
-- If you've never created a rule, click or tap **+ New rule**.
+	For this topic, [add a label and a slider](add-configure-controls.md), set the label's **Text** property to **Slider1.Value**, and then select the slider.
+
+1. In the right-hand panel, click or tap **Rules**, and then click or tap **New rule**.
 
 	![Create new rule](./media/working-with-rules/new-rule.png)
 
-- If you have created rules before, click or tap an exiting Rule.  
+	If you select a control for which one or more rules has already been defined, you can edit any of them if you click or tap it.  
 
-## Adding conditions ##
-Conditions define when actions in a rule will be triggered. Conditions are PowerApps expressions that evaluate to true or false. The rules panel provides out-of-box templates that help write conditions. You can use IntelliSense to modify the PowerApps expression.
+## Add a condition ##
+A condition is an expression that evaluates to true or false, such as whether a value is greater than 70. You can write the expression based on a template or start from scratch, and you can customize the expression based on guidance in the UI (Intellisense).
 
-![Add condition](./media/working-with-rules/rule-conditions.png)
+1. Click or tap **Add a condition**, and then click a template or **Custom condition**.
 
+	For this topic, click or tap **Greater than**.
 
-## Adding Actions
-1. In the rules fly out panel, click or tap **+ Define actions**. Click or tap on **Let's go** in the confirmation dialog box.
+	![Add condition](./media/working-with-rules/rule-conditions.png)
+
+1. Finish the expression to define when the rule applies.
+
+	For this topic, use this expression:
+	<br>**Value(Slider1.Value) > 70**
+
+## Add an action ##
+Actions define what happens when the rule is applied. PowerApps can create actions automatically based on changes you make to controls.
+
+1. Click or tap **Define actions**.
 
 	![Define actions](./media/working-with-rules/rule-define-actions.png)
 
-1. You can now change properties of controls directly on the canvas or using the Properties panel.
+1. In the confirmation dialog box, click or tap **Let's go** so that PowerApps will capture your next change or changes as one or more actions.
 
- ![Capture properties](./media/working-with-rules/rule-capture-properties.png)
+1. Configure one or more controls to match your expectations when the condition is true.
 
-1. Review the set of properties by clicking or tapping on **Show actions**. Click or tap **Done** to exit the capture mode.
+	For this topic, change the color of the label.
+
+	![Capture properties](./media/working-with-rules/rule-capture-properties.png)
+
+1. (optional) Review your changes by clicking or tapping **Show actions**.
 
 	![Review actions](./media/working-with-rules/rule-review-actions.png)
 
-1. In the rules fly out review the Rule condition and actions. Click or tap **Done** to save the rule.
+1. When you finish adding actions, click or tap **Done**.
+
+1. Review the condition and actions for the rule, and then click or tap **Done** to save it.
 
 	![Review rule](./media/working-with-rules/rule-review.png)
 
-## Testing the rule ##
-Once the rule is defined on the control, you can preview the app by clicking on the play  button or hitting F5 on the keyboard. If the set of conditions are met the rules would trigger the actions.
+## Test the rule ##
+1. Preview the app by pressing F5 (or by clicking the play button near the upper-right corner).
 
-In the above example you will see the label color change to green when the slider value is more than 70.
+	![Open preview](./media/working-with-rules/open-preview.png)
+
+1. Make the condition that you specified true, and then confirm that the actions work as you expect.
+
+	For this topic, set the slider to a value that's greater than 70, and confirm that the label text changes color.
 
 ## Known limitations ##
-- Rule names are auto generated for the first release.
+As of this writing:
 
-- **ThisItem** property of a Form or a Gallery is not available in Conditions.
-
-- Conditions need the specific property of the control used in the comparison. In future releases, we plan to infer common properties like "Text" or "Value" of the Control from the condition.
+- You can't rename rules.
+- You can't specify the **ThisItem** property of a form or a gallery as part of a condition.
+- When you write a condition, you must specify the property of the control used in the comparison. In future releases, common properties of the control (such as **Text** or **Value**) might be inferred from the condition.
