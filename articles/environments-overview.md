@@ -97,9 +97,7 @@ Your license determines whether you can create environments.
 |Office 365 Plans|x|
 |Dynamics 365 Apps and Teams Plans|x|
 
-Each user can create up to five environments.
-
-At present you cannot delete an environment.
+Each user can create up to two  environments.
 
 ### Where can environments be created?
 You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, they you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can be participate in as a member of the Environment Admin or Environment Maker role. For more information, see [Environment Administration](environments-administration.md).
