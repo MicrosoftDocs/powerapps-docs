@@ -24,6 +24,8 @@ A control that can determine how your app responds after a certain amount of tim
 ## Description ##
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.
 
+Note that you need to preview the app in order for Timer to run in the designer.  This allows user to configure the timer in the designer without any time restrictions.
+
 ## Key properties ##
 
 **Duration** – How long a timer runs.
