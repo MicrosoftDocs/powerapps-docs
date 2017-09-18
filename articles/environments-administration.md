@@ -177,7 +177,7 @@ An organization's data must be protected so that it isn't shared with audiences 
 
 ### How many environments can I create?
 
-Each user can create up to five environments.
+Each user can create up to two environments.
 
 ### How many databases can I provision?
 
@@ -185,15 +185,15 @@ Each user can provision up to two databases.
 
 ### Can I rename an environment?
 
-Yes, we have just added this functionality.
+Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md#rename-your-environment) for more details.
 
 ### Can I delete an environment?
 
-Not yet, but this functionality is coming soon to the PowerApps admin center.
+Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md#delete-your-environment) for more details.
 
 ### As an Environment Admin, can I view and manage all resources (apps, flows, APIs, etc.) for an environment?
 
-Not yet, but this functionality is coming soon to the PowerApps admin center.
+Yes, the ability to view the apps and flows for an environment is available from the PowerApps admin center. See [View Apps](admin-view-apps.md) for more details.
 
 ### Which license includes Common Data Service?
 

@@ -41,6 +41,15 @@ When you export an app, the dependent resources for your app will also get expor
 | Gateways                                | No        | Gateways are only supported in the default (and {tenant name} (from preview) ) environments, so export/migration is not supported.                                                                                                                                                                                                                                                                                                                                                                      |
 | CDS data rows                           | No        | Export rows from CDS entities is not current supported, so the only option today to manually [export and import](data-platform-export-data.md) data after your CDS schema changes have been applied in a new environment.                                                                                                                                                                                                                                                                               |
 
+## How do I get access to packaging for my app? ##
+The ability to export an app is available to any user with "Can edit" permission to the app.
+
+The ability to import an app is available to any user with "Environment Maker" permission in the destination environment.
+
+A  user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order to export or import any app.
+
+*NOTE: While packaging is in preview, any user with a valid PowerApps license will be able to try out packaging for their apps and environments.*
+
 ## Exporting an app
 
 1. In http://web.powerapps.com, click or tap **Apps**, select the ellipses for the app you want to migrate, and then select **Export (preview)**.
