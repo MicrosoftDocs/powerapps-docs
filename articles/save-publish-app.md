@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/07/2017"
+   ms.date="09/14/2017"
    ms.author="karthikb"/>
 
 # Save and publish an app in PowerApps #
@@ -30,9 +30,13 @@ In PowerApps Studio, click or tap **Save** on the **File** menu (on the left edg
 
 	![Save new app](./media/save-publish-app/save-as.png)
 
-- If the app has ever been saved, click or tap **Save**.
+- If the app has ever been saved, click or tap **Save**.  
 
 	![Save updated app](./media/save-publish-app/save-app.png)
+
+PowerApps can also periodically save the app every 2 minutes. If you have saved the app once, PowerApps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** setting from the **Account** tab on the **File** menu. 
+
+![Auto save setting](./media/save-publish-app/autosave.png)
 
 ## Publish an app
 1. In PowerApps Studio, click or tap **Save** on the **File** menu (on the left edge), and then click or tap **Publish this version**.
