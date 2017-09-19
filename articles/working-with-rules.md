@@ -89,4 +89,3 @@ As of this writing:
 
 - You can't rename rules.
 - You can't specify the **ThisItem** property of a form or a gallery as part of a condition.
-- When you write a condition, you must specify the property of the control used in the comparison. In future releases, common properties of the control (such as **Text** or **Value**) might be inferred from the condition.
