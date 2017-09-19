@@ -48,6 +48,8 @@ A condition is an expression that evaluates to true or false, such as whether a 
 	For this topic, use this expression:
 	<br>**Value(Slider1.Value) > 70**
 
+	**Note**: As of this writing, you must specify the property of the control used in the comparison. In future releases, PowerApps might infer common properties of the control (such as **Text** or **Value**).
+
 ## Add an action ##
 Actions define what happens when the rule is applied. PowerApps can create actions automatically based on changes you make to controls.
 
@@ -87,4 +89,3 @@ As of this writing:
 
 - You can't rename rules.
 - You can't specify the **ThisItem** property of a form or a gallery as part of a condition.
-- When you write a condition, you must specify the property of the control used in the comparison. In future releases, common properties of the control (such as **Text** or **Value**) might be inferred from the condition.
