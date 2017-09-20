@@ -22,6 +22,12 @@ For information about known limitations, see [Common issues and resolutions](com
 
 **Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
+
+## Release 2.0.700-2.0.701 ##
+1. Easily [create rules](working-with-rules.md) for conditional formatting without writing expressions - just set your condition and then design the results right on the PowerApps canvas.
+1. More easily configure forms, galleries, and data tables with a full-height data pane that pops out when a control is added.
+1. Get contextual quick-tips to help you create an app, whether starting from a blank app, a template, a data source, or SharePoint.
+
 ## Release 2.0.690-2.0.691 ##
 1. For apps that you create, [track usage](app-analytics.md) in an embedded dashboard from Power BI.
 1. Use a delimiter to break a text string into parts by using the **[Split](function-split.md)** function.
