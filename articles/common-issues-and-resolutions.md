@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="07/26/2017"
+   ms.date="09/21/2017"
    ms.author="anneta"/>
 
 # Common issues and resolutions for PowerApps #
@@ -23,6 +23,10 @@
 **Note**: For more information, see the [list of known issues](https://docs.microsoft.com/en-us/common-data-service/entity-reference/known-issues) for the Microsoft Common Data Service.
 
 ## Recently added/changed ##
+1. **Release 2.0.700 on Android devices**
+
+	If you install release 2.0.700 on an Android device and then can't open apps (or an app stops responding), uninstall PowerApps, restart the device, and then reinstall PowerApps. 
+
 1. **"Empty" gallery when opening an app**
 
 	If you generate an app automatically from data, save the app, and then reopen it, the browse gallery might not immediately show any data. To resolve this issue, type at least one character in the search box, and then delete the text that you typed. The gallery will then show data as expected.
