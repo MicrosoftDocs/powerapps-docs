@@ -15,6 +15,7 @@
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
 	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online
 

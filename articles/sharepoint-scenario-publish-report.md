@@ -15,6 +15,7 @@
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
 	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Publish the Power BI project report and create a dashboard
 

@@ -15,6 +15,7 @@
 	ms.tgt_pltfrm="na"
 	ms.workload="na"
 	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Set up lists for SharePoint Online integration with PowerApps, Microsoft Flow, and Power BI 
 
