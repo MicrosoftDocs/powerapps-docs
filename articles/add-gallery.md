@@ -22,7 +22,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 ## Prerequisites ##
 - Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
-- Set up the sample data:
+ - Set up the sample data:
 
 	1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 	1. Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
@@ -50,7 +50,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 	![Choose gallery layout](./media/add-gallery/select-layout.png)
 
-1. In the right-hand pane, click or tap the data source, and then click or tap **FlooringEstimates**.
+1. Click or tap on the gallery control you just added. In the right-hand pane, click or tap **Data**, and then click or tap **FlooringEstimates**.
 
 	![Select datasource](./media/add-gallery/choose-data.png)
 
@@ -67,11 +67,11 @@ Before you do any customization, decide on a gallery layout. The first set of co
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 
-2. Add a **[Label](controls/control-text-box.md)** control to the gallery template, and then move and resize the new control so that it doesn't overlap with other controls in the template.
+2. Add a **[Label](controls/control-text-box.md)** control to the gallery template, and then move and resize the new control so that it doesn't overlap with other controls in the template. Be sure to keep only the first gallery cell highlighted, otherwise the Label control will not be added to the gallery control and will not be linked to the flooring estimates data source.
 
 	![Add label](./media/add-gallery/add-text-box.png)
 
-3. With the **Label** control still selected, open the highlighted list in the right-hand pane.
+3. With the **Label** control still selected, open the highlighted list in the right-hand pane. If the Data pane is closed, reopen it by clicking or tapping on the gallery control in the left pane, then click or tap **FlooringEstimates** Data in the right pane to reopen the Data pane.
 
 	![Open drop-down list](./media/add-gallery/open-dropdown.png)
 
@@ -88,7 +88,9 @@ The **[Items](controls/properties-core.md)** property of a gallery determines wh
 
 ![Text search box](./media/add-gallery/text-search-box.png)
 
-1. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
+1. Select the template by clicking or tapping near the bottom of the gallery control.
+
+1. Set the Advanced tab **[Items](controls/properties-core.md)** property of the gallery to this formula:
 
 	**If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
@@ -109,7 +111,9 @@ The **[Items](controls/properties-core.md)** property of a gallery determines th
 
 2. Select the sort icon to change the sorting order of the gallery by the names of the products.
 
-To sort *and* filter your gallery, replace both instances of *DataSource* in this formula with name of your data source, and replace both instances of *ColumnName* with the name of the column by which you want to sort and filter.
+To sort *and* filter your gallery:
+- Replace both instances of *DataSource* in this formula with name of your data source
+- Replace both instances of *ColumnName* with the name of the column by which you want to sort and filter
 
 **Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 

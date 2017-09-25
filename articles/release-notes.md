@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="09/01/2017"
+    ms.date="09/24/2017"
     ms.author="sharik"/>
 
 # What's new in PowerApps #
@@ -24,6 +24,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 
 ## Release 2.0.700-2.0.701 ##
+1. After you [save an app](save-publish-app.md) for the first time, additional changes are saved every two minutes automatically by default.
 1. Easily [create rules](working-with-rules.md) for conditional formatting without writing expressions - just set your condition and then design the results right on the PowerApps canvas.
 1. More easily configure forms, galleries, and data tables with a full-height data pane that pops out when a control is added.
 1. Get contextual quick-tips to help you create an app, whether starting from a blank app, a template, a data source, or SharePoint.
