@@ -1,21 +1,21 @@
 <properties
-   pageTitle="End-to-end walkthrough of SharePoint Online integration scenario | Microsoft PowerApps"
-   description="Take an end-to-end walk through the scenario we've built out in this series of tutorials."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="End-to-end walkthrough of SharePoint Online integration scenario | Microsoft PowerApps"
+	description="Take an end-to-end walk through the scenario we've built out in this series of tutorials."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="mgblythe"
+	manager="anneta"
+	editor=""
+	tags=""/>
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="06/12/2017"
-   ms.author="mblythe"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Walk end-to-end through the completed SharePoint Online integration scenario
 
