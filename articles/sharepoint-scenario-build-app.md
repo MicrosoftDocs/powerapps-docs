@@ -1,21 +1,21 @@
 <properties
-   pageTitle="Create an app to manage projects  | Microsoft PowerApps"
-   description="In this task, we'll build an app from scratch. This app allows a user to assign a manager to projects and to update project details."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="Create an app to manage projects  | Microsoft PowerApps"
+	description="In this task, we'll build an app from scratch. This app allows a user to assign a manager to projects and to update project details."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="mgblythe"
+	manager="anneta"
+	editor=""
+	tags=""/>
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="06/12/2017"
-   ms.author="mblythe"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Create an app to manage projects 
 

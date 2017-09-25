@@ -1,21 +1,21 @@
 <properties
-   pageTitle="Embed the Power BI project report in SharePoint Online | Microsoft PowerApps"
-   description="In this task, we'll embed our Power BI report in the same SharePoint Online site that hosts our two lists."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="Embed the Power BI project report in SharePoint Online | Microsoft PowerApps"
+	description="In this task, we'll embed our Power BI report in the same SharePoint Online site that hosts our two lists."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="mgblythe"
+	manager="anneta"
+	editor=""
+	tags=""/>
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="06/12/2017"
-   ms.author="mblythe"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Embed the Power BI project report in SharePoint Online
 

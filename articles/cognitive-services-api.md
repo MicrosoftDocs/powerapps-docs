@@ -1,21 +1,22 @@
 <properties
-   pageTitle="Use Cognitive Services in PowerApps | Microsoft PowerApps"
-   description="Build a basic app that uses the Microsoft Cognitive Services Text Analytics API to analyze text."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="Use Cognitive Services in PowerApps | Microsoft PowerApps"
+	description="Build a basic app that uses the Microsoft Cognitive Services Text Analytics API to analyze text."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="mgblythe"
+	manager="anneta"
+	editor=""
+	tags=""/>
+
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="07/24/2017"
-   ms.author="mblythe"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="07/24/2017"
+	ms.author="mblythe"/>
 
 # Use Cognitive Services in PowerApps
 

@@ -1,21 +1,21 @@
 <properties
-   pageTitle="Create a flow to manage project approvals | Microsoft PowerApps"
-   description="In this task we'll create a flow that drives the process of approving projects."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="Create a flow to manage project approvals | Microsoft PowerApps"
+	description="In this task we'll create a flow that drives the process of approving projects."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="mgblythe"
+	manager="anneta"
+	editor=""
+	tags=""/>
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="09/12/2017"
-   ms.author="mblythe"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Create a flow to manage project approvals
 

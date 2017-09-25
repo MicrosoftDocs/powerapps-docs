@@ -1,21 +1,21 @@
 <properties
-   pageTitle="Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online (Introduction) | Microsoft PowerApps"
-   description="This series of tutorials explores how to build out a basic project-management app based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Microsoft Flow, and Power BI."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online (Introduction) | Microsoft PowerApps"
+	description="This series of tutorials explores how to build out a basic project-management app based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Microsoft Flow, and Power BI."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="mgblythe"
+	manager="anneta"
+	editor=""
+	tags=""/>
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="06/12/2017"
-   ms.author="mblythe"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online
 

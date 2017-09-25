@@ -1,21 +1,21 @@
 <properties
-   pageTitle="Publish the Power BI project report and create a dashboard | Microsoft PowerApps"
-   description="In this task, we'll publish our dataset and report to the Power BI service; then we'll create a dashboard based on the report."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="Publish the Power BI project report and create a dashboard | Microsoft PowerApps"
+	description="In this task, we'll publish our dataset and report to the Power BI service; then we'll create a dashboard based on the report."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="mgblythe"
+	manager="anneta"
+	editor=""
+	tags=""/>
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="06/12/2017"
-   ms.author="mblythe"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Publish the Power BI project report and create a dashboard
 

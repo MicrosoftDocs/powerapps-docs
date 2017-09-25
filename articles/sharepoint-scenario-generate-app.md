@@ -1,21 +1,21 @@
 <properties
-   pageTitle="Generate an app to handle project requests | Microsoft PowerApps"
-   description="In this task, we'll generate a basic *three screen app* directly from a SharePoint list."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""/>
+	pageTitle="Generate an app to handle project requests | Microsoft PowerApps"
+	description="In this task, we'll generate a basic *three screen app* directly from a SharePoint list."
+	services=""
+	suite="powerapps"
+	documentationCenter="na"
+	authors="mgblythe"
+	manager="anneta"
+	editor=""
+	tags=""/>
 <tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="06/12/2017"
-   ms.author="mblythe"/>
+	ms.service="powerapps"
+	ms.devlang="na"
+	ms.topic="article"
+	ms.tgt_pltfrm="na"
+	ms.workload="na"
+	ms.date="06/12/2017"
+	ms.author="mblythe"/>
 
 # Generate an app to handle project requests
 
