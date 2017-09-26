@@ -34,7 +34,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 1. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
-1. (optional) Add a gallery to the default screen by clicking or tapping the **Insert** tab, clicking or tapping **Gallery**, and then clicking or tapping a **Gallery** control that's empty (blank) or that contains a default set of controls.
+1. (optional) Add a **Gallery** control to the default screen by clicking or tapping the **Insert** tab, clicking or tapping **Gallery**, and then clicking or tapping a **Gallery** control that's empty (blank) or that contains a default set of controls.
 
 	These options include **Gallery** controls that scroll horizontally or vertically. You can also add a **Gallery** control that automatically bases its size on the amount of content in each item.
 
@@ -46,7 +46,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 1. Click or tap **List screen** to add a screen that contains a **Gallery** control and other controls such as a search bar.
 
-	**Note**: Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the gallery to select it and then choose a different layout in the **Data** pane. For this tutorial, leave the default layout.
+	**Note**: Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the **Gallery** control to select it and then choose a different layout in the **Data** pane. For this tutorial, leave the default layout.
 
 	![Choose gallery layout](./media/add-gallery/select-layout.png)
 
@@ -67,7 +67,7 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 
-2. Add a **[Label](controls/control-text-box.md)** control to the **Gallery** control template, and then move and resize the new control so that it doesn't overlap with other controls in the template. Be sure to keep only the first **Gallery** control cell highlighted, otherwise the Label control will not be added to the **Gallery** control and will not be linked to the flooring estimates data source.
+2. Add a **[Label](controls/control-text-box.md)** control to the **Gallery** control template, and then move and resize the new control so that it doesn't overlap with other controls in the template. Be sure to keep only the first **Gallery** control cell highlighted, otherwise the **Label** control will not be added to the **Gallery** control and will not be linked to the flooring estimates data source.
 
 	![Add label](./media/add-gallery/add-text-box.png)
 
@@ -79,12 +79,12 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
 
     ![Change label binding](./media/add-gallery/change-binding.png)
 
-    The gallery shows the new values
+    The **Gallery** control shows the new values
 
     ![Final Gallery](./media/add-gallery/final-gallery.png)
 
-## Filter the gallery ##
-The **[Items](controls/properties-core.md)** property of a gallery determines which items it shows. In this procedure, you configure that property so that the gallery shows only those items for which the product name contains the text in **TextSearchBox1**.
+## Filter the Gallery control ##
+The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so that the **Gallery** control shows only those items for which the product name contains the text in **TextSearchBox1**.
 
 ![Text search box](./media/add-gallery/text-search-box.png)
 
