@@ -16,13 +16,12 @@
     ms.workload="na"
     ms.date="05/03/2017"
     ms.author="karthikb"/>
-
 # Show a list of items in PowerApps  #
 Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
 
 ## Prerequisites ## 
 - Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
- - Set up the sample data:
+- Set up the sample data:
 
 	1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 	1. Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
@@ -50,7 +49,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 	![Choose gallery layout](./media/add-gallery/select-layout.png)
 
-1. Click or tap **Gallery** control you just added. In the **Properties** pane, click or tap **CustomGallerySample**.  In the **Data** panel, click or tap **CustomGallerySample** and select **FlooringEstimates**.
+1. Click or tap the **Gallery** control you just added. In the **Properties** pane, click or tap **CustomGallerySample**.  In the **Data** pane, click or tap **CustomGallerySample** and select **FlooringEstimates**.
 
 	![Select datasource](./media/add-gallery/choose-data.png)
 
@@ -71,11 +70,11 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
 
 	![Add label](./media/add-gallery/add-text-box.png)
 
-3. With the **Label** control still selected, open the highlighted list in the right-hand pane. If the **Data** pane is closed, reopen it by clicking or tapping on the **Gallery** control in the left pane, then click or tap **FlooringEstimates** Data in the right pane to reopen the **Data** pane.
+3. With the **Label** control still selected, open the highlighted list in the **Data** pane. If the **Data** pane is closed, reopen it by clicking or tapping the **Gallery** control. Then click or tap **FlooringEstimates** Data in the right pane to reopen the **Data** pane.
 
 	![Open drop-down list](./media/add-gallery/open-dropdown.png)
 
-4. In the list of fields that you just opened, click or tap **Price**.  
+4. In the list of fields that you just opened, locate the **Label** control you just added, then click or tap **Price**.  
 
     ![Change label binding](./media/add-gallery/change-binding.png)
 
@@ -91,7 +90,7 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
 1. Select the template by clicking or tapping near the bottom of the **Gallery** control.
 
-1. On the Advanced tab, set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
+1. On the **Advanced tab**, set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
 	**If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
@@ -114,7 +113,7 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
 To sort *and* filter your **Gallery** control:
 
-- Replace both instances of *DataSource* in this formula with name of your data source.
+- Replace both instances of *DataSource* in this formula with the name of your data source.
 - Replace both instances of *ColumnName* with the name of the column by which you want to sort and filter.
 
 **Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
