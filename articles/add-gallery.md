@@ -23,13 +23,15 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 - Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 - Set up the sample data:
 
-	1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
-	1. Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
+	- Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
+	- Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
 
 ## Add a Gallery control ##
 1. Open PowerApps, and then click or tap **New** near the left edge.
 
 1. On the **Blank app** tile, click or tap **Phone layout**.
+
+1. In the Welcome to PowerApps Studio dialog box, click or tap **Skip**.
 
 1. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
@@ -66,11 +68,11 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 
-2. Add a **[Label](controls/control-text-box.md)** control to the **Gallery** control template, and then move and resize the new control so that it doesn't overlap with other controls in the template. Be sure to keep only the first **Gallery** control cell highlighted, otherwise the **Label** control will not be added to the **Gallery** control and will not be linked to the flooring estimates data source.
+2. Add a **[Label](controls/control-text-box.md)** control to the **Gallery** control template, and then move and resize the new control so that it doesn't overlap with other controls in the template. Be sure to keep only the first **Gallery** control cell highlighted; otherwise the **Label** control will not be added to the **Gallery** control and will not be linked to the flooring estimates data source.
 
 	![Add label](./media/add-gallery/add-text-box.png)
 
-3. With the **Label** control still selected, open the highlighted list in the **Data** pane. If the **Data** pane is closed, reopen it by clicking or tapping the **Gallery** control. Then click or tap **FlooringEstimates** Data in the right pane to reopen the **Data** pane.
+3. With the **Label** control still selected, open the highlighted list in the **Data** pane. If the **Data** pane is closed, reopen it by clicking or tapping the **Gallery** control. Then click or tap **FlooringEstimates** Data in the right **Properties** pane to reopen the **Data** pane.
 
 	![Open drop-down list](./media/add-gallery/open-dropdown.png)
 
