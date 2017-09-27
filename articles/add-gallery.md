@@ -81,7 +81,8 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
 
     The **Gallery** control shows the new values
 
-    ![Final Gallery](./media/add-gallery/final-gallery.png)
+
+![Final Gallery](./media/add-gallery/final-gallery.png)
 
 ## Filter the Gallery control ##
 The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so that the **Gallery** control shows only those items for which the product name contains the text in **TextSearchBox1**.
@@ -112,8 +113,9 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 2. Select the sort icon to change the sorting order of the **Gallery** control by the names of the products.
 
 To sort *and* filter your **Gallery** control:
-1. Replace both instances of *DataSource* in this formula with name of your data source
-2. Replace both instances of *ColumnName* with the name of the column by which you want to sort and filter
+
+- Replace both instances of *DataSource* in this formula with name of your data source.
+- Replace both instances of *ColumnName* with the name of the column by which you want to sort and filter.
 
 **Sort(If(IsBlank(TextSearchBox1.Text),** *DataSource*, **Filter(** *DataSource*, **TextSearchBox1.Text in Text(** *ColumnName* **))),** *ColumnName*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
