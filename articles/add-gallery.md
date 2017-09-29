@@ -1,3 +1,4 @@
+
 <properties
     pageTitle="Show a list of items | Microsoft PowerApps"
     description="Use a gallery to show a list of items in your app, and filter the list by specifying a criterion."
@@ -14,7 +15,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="05/03/2017"
+    ms.date="09/28/2017"
     ms.author="karthikb"/>
 # Show a list of items in PowerApps  #
 Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
@@ -23,15 +24,15 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 - Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 - Set up the sample data:
 
-	- Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
-	- Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
+	1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
+	2. Upload the Excel file to a [cloud-storage account](cloud-storage-blob-connections.md), such as OneDrive for Business.
 
 ## Add a Gallery control ##
 1. Open PowerApps, and then click or tap **New** near the left edge.
 
 1. On the **Blank app** tile, click or tap **Phone layout**.
 
-1. In the Welcome to PowerApps Studio dialog box, click or tap **Skip**.
+1. In the **Welcome to PowerApps Studio** dialog box, click or tap **Skip**.
 
 1. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
@@ -47,11 +48,13 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 1. Click or tap **List screen** to add a screen that contains a **Gallery** control and other controls such as a search bar.
 
-	**Note**: Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the **Gallery** control to select it and then choose a different layout in the **Data** pane. For this tutorial, leave the default layout.
+	**Note**: Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the **Gallery** control to select it and then click or tap a different layout in the **Data** pane. For this tutorial, leave the default layout.
 
 	![Choose gallery layout](./media/add-gallery/select-layout.png)
 
-1. Click or tap the **Gallery** control you just added. In the **Properties** pane, click or tap **CustomGallerySample**.  In the **Data** pane, click or tap **CustomGallerySample** and select **FlooringEstimates**.
+1. Click or tap the **Gallery** control in the screen you just added.
+1. On the **Properties** tab in the right-hand pane, click or tap **CustomGallerySample**.
+1. In the **Data** pane, click or tap **CustomGallerySample**, and then click or tap **FlooringEstimates**.
 
 	![Select datasource](./media/add-gallery/choose-data.png)
 
@@ -64,23 +67,25 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 ## Add a control to the Gallery control ##
 Before you do any customization, decide on a **Gallery** control layout. The first set of controls in a **Gallery** control is the template, which determines how all data in the **Gallery** control appears.
 
-1. Select the template by clicking or tapping near the bottom of the **Gallery** control and then clicking or tapping the pencil icon in the upper-left corner of the **Gallery** control.
+1. Select the template by clicking or tapping near the bottom of the **Gallery** control and then clicking or tapping the pencil icon in the upper-left corner.
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 
-2. Add a **[Label](controls/control-text-box.md)** control to the **Gallery** control template, and then move and resize the new control so that it doesn't overlap with other controls in the template. Be sure to keep only the first **Gallery** control cell highlighted; otherwise the **Label** control will not be added to the **Gallery** control and will not be linked to the flooring estimates data source.
+2. With the template still selected, add a **[Label](controls/control-text-box.md)** control, and then move and resize it so that it doesn't overlap with other controls in the template.
 
 	![Add label](./media/add-gallery/add-text-box.png)
 
-3. With the **Label** control still selected, open the highlighted list in the **Data** pane. If the **Data** pane is closed, reopen it by clicking or tapping the **Gallery** control. Then click or tap **FlooringEstimates** Data in the right **Properties** pane to reopen the **Data** pane.
+3. Open the **Data** pane by selecting the template and then clicking or tapping **Flooring Estimates** in the right-hand pane.
+
+4. Select the label that you added earlier in this procedure, and then open the highlighted list in the **Data** pane.
 
 	![Open drop-down list](./media/add-gallery/open-dropdown.png)
 
-4. In the list of fields that you just opened, locate the **Label** control you just added, then click or tap **Price**.  
+4. In the list, click or tap **Price**.  
 
     ![Change label binding](./media/add-gallery/change-binding.png)
 
-    The **Gallery** control shows the new values
+    The **Gallery** control shows the new values.
 
 
 ![Final Gallery](./media/add-gallery/final-gallery.png)
@@ -90,7 +95,7 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
 ![Text search box](./media/add-gallery/text-search-box.png)
 
-1. Select the template by clicking or tapping near the bottom of the **Gallery** control.
+1. Select the **Gallery** control by clicking or tapping near the bottom of the that control.
 
 1. On the **Advanced tab**, set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
