@@ -97,7 +97,7 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
 1. Select the **Gallery** control by clicking or tapping near the bottom of the that control.
 
-1. On the **Advanced tab**, set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
+1. On the **Advanced** tab, set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
 	**If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
