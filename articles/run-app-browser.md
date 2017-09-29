@@ -7,15 +7,14 @@
     authors="linhtranms"
     manager="anneta"
     editor=""
-    tags=""
- />
+    tags=""/>
 <tags
     ms.service="powerapps"
     ms.devlang="na"
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="02/01/2017"
+    ms.date="09/27/2017"
     ms.author="litran"/>
 
 # Use PowerApps in a web browser #
@@ -37,12 +36,12 @@ After you find the app, you can pin it to the task pane for easier access. To pi
 
 ![](./media/run-app-browser/homepage-pin.png)
 
-The app will then appear in the task pane, which you open by clicking or tapping **Dynamics 365** in the upper-left corner.
+The app will then appear under **My apps** in the task pane, which you open by clicking or tapping **Dynamics 365** in the upper-left corner.
 
 ![](./media/run-app-browser/taskpane.png)
 
 ## Open an app from a URL ##
-You can also save the app's URL as a bookmark or send the URL as a link over email. If someone else created an app in PowerApps and shared that app with you, you can run that app by clicking or tapping the link in the mail that you receive. In any of these cases, you might be prompted to sign in using your Azure Active Directory credentials.
+You can also save the app's URL as a bookmark in your browser, or send the URL as a link over email. If someone else created an app in PowerApps and shared that app with you, you can run that app by clicking or tapping the link in the mail that you receive. In any of these cases, you might be prompted to sign in using your Azure Active Directory credentials.
 
 ![](./media/run-app-browser/web-login.png)
 
