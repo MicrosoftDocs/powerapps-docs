@@ -14,7 +14,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="03/09/2017"
+   ms.date="10/02/2017"
    ms.author="archanan"/>
 
 # Add a data connection in PowerApps #
