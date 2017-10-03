@@ -52,7 +52,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 	![Choose gallery layout](./media/add-gallery/select-layout.png)
 
-1. Click or tap the **Gallery** control in the screen you just added.
+1. Click or tap the **Gallery** control in the screen that you just added.
 1. On the **Properties** tab in the right-hand pane, click or tap **CustomGallerySample**.
 1. In the **Data** pane, click or tap **CustomGallerySample**, and then click or tap **FlooringEstimates**.
 
