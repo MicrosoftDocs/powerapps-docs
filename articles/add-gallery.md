@@ -81,7 +81,7 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
 
 	![Open drop-down list](./media/add-gallery/open-dropdown.png)
 
-4. In the list, click or tap **Price**.  
+4. In that list, click or tap **Price**.
 
     ![Change label binding](./media/add-gallery/change-binding.png)
 
