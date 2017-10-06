@@ -14,13 +14,23 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="09/27/2017"
+    ms.date="10/05/2017"
     ms.author="litran"/>
 
 # Use PowerApps in a web browser #
 If you create an app in PowerApps, you can run that app in a browser by opening [Dynamics 365](https://home.dynamics.com) and then clicking or tapping the tile for the app on the home page.
 
 **Note**: You can find general information about [Microsoft Dynamics 365](https://docs.microsoft.com/en-us/dynamics365/) or [contact support](https://www.microsoft.com/en-us/dynamics365/contact-us) if you have a question about a Dynamics 365 app, such as Sales.
+
+The following browsers and operating systems are supported:
+
+| **Browser** | **Operating system** |
+| --- | --- |
+| Google Chrome (latest version) | Windows 7 SP1, 8.1, and 10 <br>macOS <br>iOS 8 or later<br>Android |
+| Microsoft Edge| Windows 10 |
+| Microsoft Internet Explorer 11| Windows 7 SP1, 8.1, and 10 |
+| Mozilla Firefox (latest version) | Windows 7 SP1, 8.1, and 10 <br> Android <br>macOS |
+| Apple Safari (latest version) | macOS <br> iOS 8 or later |
 
 If your browser doesn't support all the controls used in the app, use it on a mobile device (such as a phone) by downloading PowerApps Mobile for iOS, Android, or Windows.
 
