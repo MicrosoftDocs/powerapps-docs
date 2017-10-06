@@ -53,7 +53,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 	![Choose gallery layout](./media/add-gallery/select-layout.png)
 
 1. Click or tap the **Gallery** control in the screen that you just added.
-1. On the **Properties** tab in the right-hand pane, click or tap **CustomGallerySample**.
+1. On the **Properties** tab of the right-hand pane, click or tap **CustomGallerySample**.
 1. In the **Data** pane, click or tap **CustomGallerySample**, and then click or tap **FlooringEstimates**.
 
 	![Select datasource](./media/add-gallery/choose-data.png)
@@ -95,7 +95,7 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
 ![Text search box](./media/add-gallery/text-search-box.png)
 
-1. Select the **Gallery** control by clicking or tapping near the bottom of the that control.
+1. Select the **Gallery** control by clicking or tapping near the bottom of that control.
 
 1. On the **Advanced** tab, set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
