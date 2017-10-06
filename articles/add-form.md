@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/16/2016"
+    ms.date="10/6/2017"
     ms.author="karthikb"/>
 
 # Show, edit, or add a record from a table in PowerApps #
