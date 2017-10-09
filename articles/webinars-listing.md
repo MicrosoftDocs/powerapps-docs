@@ -15,36 +15,36 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/20/2017"
+   ms.date="10/06/2017"
    ms.author="audrie"/>
 
 # PowerApps webinar listing #
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Optimizing Connectors in PowerApps and Microsoft Flow**
-<br>by Theresa Palmer-Boroski
-<br>*August 22nd, 10:00AM PST, 1:00PM EST*
-
-One of the most exciting opportunities on the Business Application Platform is the increasing number of data connectors. As this list grows, so does the value-add of your apps and workflows! Please come and learn how to make your power user solutions more powerful directly from Theresa Palmer-Boroski, who is a Senior Program Manager working on the Gateways and Connectors product team! What we'll cover:
-
-* An overview of connector services
-* Tips on how to use docs to leverage the connectors you love most
-* Getting started guidance for anyone planning to develop 'custom' connectors.
-
-[Click here to watch on August 22nd](https://www.youtube.com/watch?v=6jwt4qXA2IQ)
-
-**Pro Tips for InfoPath Designers Transitioning to PowerApps**
+**Pro Series | Transitioning from InfoPath to PowerApps - Part 2**
 <br>by Audrie Gordon
-<br>*September 19th, 10:00AM PST, 1:00PM EST*
+<br>*October 10th, 10:00AM PST, 1:00PM EST*
 
-Are you a business forms and workflow designer looking to leverage PowerApps and Flow? This is the webinar for you. Audrie will help you to make the switch with the top 10 forms and workflow tips for PowerApps and Flow! Don't miss it! What you'll get:
+We continue this series with a focus on creating forms from a SharePoint list using new features released at Ignite. In case you missed it, you can watch [Part 1 here](https://www.youtube.com/watch?v=EZ09dRuiWLw).
 
-* Demos of the most recent enhancements for forms designers
-* We will rebuild a typical InfoPath form in PowerApps; live from start to finish
-* Review a helpful decision tree for planning form rebuilds using PowerApps
+[Click here to watch Part 2 on October 10th](https://www.youtube.com/watch?v=Bm2XePxLcSM)
 
-[Click here to watch on September 19th](https://www.youtube.com/watch?v=EZ09dRuiWLw)
+**Deep Dive | Introducing List Forms in SharePoint Online**
+<br>by Ankit Saraf
+<br>*October 24th, 10:00AM PST, 1:00PM EST*
+
+Having sent the presentations at Ignite, we're all excited to deep dive into the new features and discover new opportunities for form design. Ankit Saraf summarizes the new stack of features, and demonstrates a few best practices and user tips as well. Don't miss it.
+
+[Click here to watch on October 24th](https://www.youtube.com/watch?v=3dCwg6wtViI)
+
+**Getting Started | Exploring Office Graph Templates**
+<br>by Emma Cooper
+<br>*October 31st, 10:00AM PST, 1:00PM EST*
+
+Discover new opportunities in connector services through Office Graph connections! Emma Cooper, a Senior Program Manager on the PowerApps team will be sharing brand new templates and usage highlights for Office Graph integration. You'll see how to leverage this connector to bring Delve-like content and contacts to your consumers easily, either by starting with one of the new templates, and/or by extending a template using best practices and tips from Emma. Don't miss this one!
+
+[Click here to watch on October 31st](https://www.youtube.com/watch?v=SwLNN3tPVNs)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
@@ -98,6 +98,14 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Pro Tips for Connecting to Excel on OneDrive for Business from PowerApps**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=WPhux5_3Sfs)
+
+**Optimizing Connectors in PowerApps and Microsoft Flow**
+<br>by Theresa Palmer-Boroski
+[Watch now](https://www.youtube.com/watch?v=6jwt4qXA2IQ)
+
+**Pro Tips for InfoPath Designers Transitioning to PowerApps - Part 1**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=EZ09dRuiWLw)
 
 ### App Designer Topics ###
 **Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
