@@ -15,13 +15,11 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="06/05/2017"
+   ms.date="10/06/2017"
    ms.author="karthikb"/>
 
 # Create or edit apps in PowerApps Studio for web #
 Create and edit apps in PowerApps Studio for web, which opens in a browser window on Windows or other platforms.
-
-**Note**: PowerApps Studio for web is in preview and has certain limitations. You can also create and edit apps by [installing PowerApps Studio for Windows](https://web.powerapps.com/#/downloads) on a computer that's running Windows 8.1 or Windows 10.
 
 **Prerequisites**
 
@@ -42,7 +40,7 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 - Learn how to [add a control and set properties](add-configure-controls.md) that determine how your app appears and behaves.
 - Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
 
-## Known limitations of the preview release ##
+## Known limitations ##
 
 1. **Create a connection.**
 
