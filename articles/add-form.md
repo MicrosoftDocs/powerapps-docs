@@ -14,7 +14,7 @@
     ms.topic="article"
     ms.tgt_pltfrm="na"
     ms.workload="na"
-    ms.date="10/16/2016"
+    ms.date="10/06/2017"
     ms.author="karthikb"/>
 
 # Show, edit, or add a record from a table in PowerApps #
@@ -49,11 +49,13 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
     This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**.
 
-1. In the right-hand pane, click or tap the checkbox for each field to show it.
+1. In the **Data** pane, click or tap the checkbox for each field to show it.
+
+	Note: If the **Data** pane is closed, open it by selecting the form in the left-hand pane and then clicking or tapping **Data** in the right-hand pane.
 
 	![Show fields on form](./media/add-form/checkbox.png)
 
-1. In the right-hand pane, drag the **Name** entry to the top of the list.
+1. In the **Data** pane, drag the **Name** entry to the top of the list.
 
 	![Move a card](./media/add-form/drag-field.png)
 
@@ -62,7 +64,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 	![Name at top](./media/add-form/move-card-form.png)
 
 ## Set the card type for a field ##
-1. With the form selected, click or tap the card selector for **Price** in the right-hand pane.
+1. With the form selected, click or tap the card selector for **Price** in the **Data** pane.
 
 	![Select card selector](./media/add-form/price-card2.png)
 
@@ -75,7 +77,11 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 	![Read-only number](./media/add-form/read-only.png)  
 
 ## (Edit form only) Save changes ##
-1. Select the form by clicking or tapping its scrollbar, and then rename the form **EditForm**.
+1.  In the left-hand pane, select the form, and then click or tap the ellipsis (...).
+
+	![Select the form](./media/add-form/select-form.png)  
+
+1. Click or tap **Rename**, and then rename the form **EditForm**.
 
 1. Add a **[Button](controls/control-button.md)** control, and set its **[Text](controls/properties-core.md)** property to **Save**.
 
@@ -87,7 +93,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
 1. Open Preview mode by selecting the play button near the upper-right corner (or by pressing F5).
 
-	![Open Preview mode](./media/add-form/open-preview.png)  
+	![Open Preview mode](./media/add-form/open-preview.png)
 
 1. Change the name of a product, and then click or tap the **Save** button that you created.
 
