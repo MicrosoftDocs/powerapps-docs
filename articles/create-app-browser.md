@@ -40,7 +40,7 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 - Learn how to [add a control and set properties](add-configure-controls.md) that determine how your app appears and behaves.
 - Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
 
-## Known limitations of the preview release ##
+## Known limitations ##
 
 1. **Create a connection.**
 
