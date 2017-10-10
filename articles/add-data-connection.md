@@ -67,6 +67,15 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 
 	Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connection-sharepoint-online.md) and [SQL Server](connection-azure-sqldatabase.md) require additional information before you can use them.
 
+## Data sources of galleries and forms ##
+Here is how to view or switch the data sources of controls that have **Item** property, such as **Gallery** and **Form**. First, select the control that you want to view the data source of. Notice here, you don't want to select controls inside the gallery or form. To make sure correct selection, the tree view on the left of the canvas can be very helpful to select the actual gallery or form, since it lists the controls of your app.
+
+![example link](./media/add-data-connection/example-link.png)
+
+Then, clicking the link next to **Data** in the property pane. This will invoke another pane to slide in next to the property pane and you can view or edit data source from the new pane. Here is an example of viewing data source of a form which connects to a table nomads "Accounts".
+
+![choose link](./media/add-data-connection/choose-link.png)
+
 ## Next steps ##
 - To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
 - For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connection-office365-outlook.md), [Twitter](connection-twitter.md), and [Microsoft Translator](connection-microsoft-translator.md).
