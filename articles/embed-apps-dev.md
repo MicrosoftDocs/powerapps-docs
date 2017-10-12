@@ -29,7 +29,7 @@ In this topic, we'll show you how to set parameters for app embedding; then we'l
 Keep the following restrictions in mind:
 
 - Only PowerApps users in the same tenant can access the embedded app.
-- PowerApps supports Internet Explorer 11 in non-compatibility mode only.
+- PowerApps supports Internet Explorer 11 only with Compatibility View turned off.
 
 You can also integrate PowerApps into SharePoint Online (without using an iframe). For more information, see [Generate an app from within SharePoint using PowerApps](generate-app-from-sharepoint-list-interface.md).
 

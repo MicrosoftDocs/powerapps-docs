@@ -28,7 +28,7 @@ The following browsers and operating systems are supported:
 | --- | --- |
 | Google Chrome (latest version) | Windows 7 SP1, 8.1, and 10 <br>macOS <br>iOS 8 or later<br>Android |
 | Microsoft Edge| Windows 10 |
-| Microsoft Internet Explorer 11| Windows 7 SP1, 8.1, and 10 |
+| Microsoft Internet Explorer 11 (Compatibility View off)| Windows 7 SP1, 8.1, and 10 |
 | Mozilla Firefox (latest version) | Windows 7 SP1, 8.1, and 10 <br> Android <br>macOS |
 | Apple Safari (latest version) | macOS <br> iOS 8 or later |
 
