@@ -15,7 +15,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="na"
-   ms.date="10/10/2017"
+   ms.date="10/13/2017"
    ms.author="v-thuch"/>
 
 # PowerApps webinar listing #
@@ -106,10 +106,6 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Pro Tips for InfoPath Designers Transitioning to PowerApps - Part 1**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=EZ09dRuiWLw)
-
-**Pro Series | Transitioning from InfoPath to PowerApps - Part 2**
-<br>by Audrie Gordon
-[Watch now]
 
 ### App Designer Topics ###
 **Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
