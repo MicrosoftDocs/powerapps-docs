@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -19,7 +20,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif"
         ],
         "exclude": [
           "**/obj/**",
@@ -29,7 +31,11 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "contributors_to_exclude": ["openpublishingbuild","sudeepku"],
+      "breadcrumb_path": "breadcrumb/toc.yml",
+      "searchScope": ["PowerApps"] 
+    },
     "fileMetadata": {},
     "template": [],
     "dest": "powerapps-docs"
