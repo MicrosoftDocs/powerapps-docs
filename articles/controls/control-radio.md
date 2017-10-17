@@ -1,40 +1,39 @@
-<properties
-    pageTitle="Radio control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Radio control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Radio control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Radio control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Radio control in PowerApps #
+---
+# Radio control in PowerApps
 A list that shows all options but the user can select only one at a time.
 
-## Description ##
+## Description
 A **Radio** control, with which users have decades of experience, is best used with only a few options that are mutually exclusive.
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[AZURE.INCLUDE [long-items](../../includes/long-items.md)]
+[!INCLUDE [long-items](../../includes/long-items.md)]
 
 **[Value](properties-core.md)** – The value of an input control.
 
-## All properties ##
+## All properties
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -115,25 +114,21 @@ A **Radio** control, with which users have decades of experience, is best used w
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
-## Example ##
+## Example
 1. Add a **Radio** control, name it **Pricing**, and set its **[Items](properties-core.md)** property to this formula:
-<br>**["Standard", "Premium"]**
+   <br>**["Standard", "Premium"]**
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Add a **[Label](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](properties-core.md)** property of the **[Label](control-text-box.md)** control to this formula:
+   <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
+   
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+3. Press F5, and then choose either option in the **Radio** control.
+   
+    The **[Label](control-text-box.md)** control shows the appropriate text for your choice.
+4. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
+5. To return to the default workspace, press Esc.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Add a **[Label](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](properties-core.md)** property of the **[Label](control-text-box.md)** control to this formula:
-<br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
-
-	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, and then choose either option in the **Radio** control.
-
-	The **[Label](control-text-box.md)** control shows the appropriate text for your choice.
-
-1. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
-
-1. To return to the default workspace, press Esc.

@@ -1,136 +1,113 @@
-<properties
-	pageTitle="Overview of the SQL Server connection | Microsoft PowerApps"
-	description="Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database"
-	services=""
-	suite="powerapps"
-	documentationCenter="" 	
-	authors="archnair"
-	manager="anneta"
-	editor=""
-	tags="" />
+---
+title: Overview of the SQL Server connection | Microsoft Docs
+description: Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database
+services: ''
+suite: powerapps
+documentationcenter: ''
+author: archnair
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-ms.service="powerapps"
-ms.devlang="na"
-ms.topic="article"
-ms.tgt_pltfrm="na"
-ms.workload="na"
-ms.date="07/12/2016"
-ms.author="archanan"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 07/12/2016
+ms.author: archanan
 
-# Connect to SQL Server from PowerApps #
-
+---
+# Connect to SQL Server from PowerApps
 ![SQL Server icon](./media/connection-azure-sqldatabase/sqlicon.png)
 
 Connect to SQL Server, in either Azure or an on-premises database, so that you can display information from it in PowerApps.
 
 **Prerequisites**
 
-- [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) PowerApps Studio, open it, and then sign in by providing the same credentials that you used to sign up.
-- Gather the following information for a database that contains at least one table with a primary key:
+* [Sign up](../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) PowerApps Studio, open it, and then sign in by providing the same credentials that you used to sign up.
+* Gather the following information for a database that contains at least one table with a primary key:
+  
+  * the name of the database
+  * the name of the server on which the database is hosted
+  * a valid user name and password to connect to the database
+  * the type of authentication needed to connect to the database
+    
+    If you don't have this information, ask the administrator of the database that you want to use.
+* For an on-premises database, identify a [data gateway](../gateway-management.md) that was shared with you (or create one).
+  
+    **Note**: Gateways and on-premises connections can only be created and used in the user's [default environment](../working-with-environments.md).
 
-	- the name of the database
-	- the name of the server on which the database is hosted
-	- a valid user name and password to connect to the database
-	- the type of authentication needed to connect to the database
-
-	If you don't have this information, ask the administrator of the database that you want to use.
-- For an on-premises database, identify a [data gateway](gateway-management.md) that was shared with you (or create one).
-
-	**Note**: Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
-
-## Generate an app automatically ##
+## Generate an app automatically
 1. In PowerApps Studio, click or tap **New** on the **File** menu (along the left edge).
+   
+    ![New option on the File menu](./media/connection-azure-sqldatabase/file-new.png)
+2. Under **Start with your data**, click or tap the right arrow at the end of the row of connectors.
+3. If you already have a connection to the database that you want to use, click or tap it, and then skip to step 7 in this procedure.
+4. Click or tap **New connection**, and then click or tap **SQL Server**.
+   
+    ![Add SQL Server connection](./media/connection-azure-sqldatabase/add-sql-connection.png)
+5. Perform either of these steps:
+   
+   * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+     
+       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure.png)
+   * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+     
+       ![Connect to an on-premises database](./media/connection-azure-sqldatabase/connect-onprem.png)
+     
+       **Note**: If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap **Refresh gateway list**.
+6. Click or tap **Connect**.
+7. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
+   
+    PowerApps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
+8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../get-started-create-from-data.md) describes, starting with changing the app layout.
 
-	![New option on the File menu](./media/connection-azure-sqldatabase/file-new.png)
-
-1. Under **Start with your data**, click or tap the right arrow at the end of the row of connectors.
-
-1. If you already have a connection to the database that you want to use, click or tap it, and then skip to step 7 in this procedure.
-
-1. Click or tap **New connection**, and then click or tap **SQL Server**.
-
-	![Add SQL Server connection](./media/connection-azure-sqldatabase/add-sql-connection.png)
-
-1. Perform either of these steps:
-
-	- Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-
-		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure.png)
-
-	- Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
-
-		![Connect to an on-premises database](./media/connection-azure-sqldatabase/connect-onprem.png)
-
-		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap **Refresh gateway list**.
-
-1. Click or tap **Connect**.
-
-1. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
-
-	PowerApps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
-
-1. Customize the app by using techniques that are similar to those that [Create an app from Excel](get-started-create-from-data.md) describes, starting with changing the app layout.
-
-## Build an app from scratch ##
+## Build an app from scratch
 1. Sign in to [powerapps.com](https://web.powerapps.com) with the same account that you used to sign up for PowerApps.
+2. In the left navigation bar, click or tap **Connections**:  
+   
+    ![Manage connections](./media/connection-azure-sqldatabase/manage-connections.png)
+3. In the upper-right corner, click or tap **New connection**, and then click or tap **SQL Server**.
+4. Perform either of these steps:
+   
+   * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+     
+       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-portal.png)
+   * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+     
+       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
+     
+       **Note**: If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
+5. Click or tap **Create** to create the connection.
+6. Create an app by using techniques that are similar to those that [Create an app from scratch](../get-started-create-from-blank.md) describes.
 
-1. In the left navigation bar, click or tap **Connections**:  
-
-	![Manage connections](./media/connection-azure-sqldatabase/manage-connections.png)
-
-1. In the upper-right corner, click or tap **New connection**, and then click or tap **SQL Server**.
-
-1. Perform either of these steps:
-
-	- Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-
-		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-portal.png)
-
-	- Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
-
-		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
-
-		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
-
-1. Click or tap **Create** to create the connection.
-
-1. Create an app by using techniques that are similar to those that [Create an app from scratch](get-started-create-from-blank.md) describes.
-
-## Update an existing app ##
+## Update an existing app
 1. In PowerApps Studio, open the app that you want to update.
+2. Click or tap **Data sources** on the **View** tab of the ribbon.
+3. In the right-hand pane, click or tap **Add a data source**.
+   
+    ![Add data source](./media/connection-azure-sqldatabase/add-data-source.png)
+4. Click or tap **New connection**, click or tap **SQL Server**, and then click or tap **Connect**.
+5. Perform either of these steps:
+   
+   * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
+     
+       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-fromblank.png)
+   * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
+     
+       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
+     
+       **Note**: If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap the circular icon to refresh the list.
+6. Click or tap **Connect**.
+7. Under **Choose a dataset**, click or tap an option.
+8. Under **Choose a table**, select one or more checkboxes, and then click or tap **Connect**.
 
-1. Click or tap **Data sources** on the **View** tab of the ribbon.
-
-1. In the right-hand pane, click or tap **Add a data source**.
-
-	![Add data source](./media/connection-azure-sqldatabase/add-data-source.png)
-
-1. Click or tap **New connection**, click or tap **SQL Server**, and then click or tap **Connect**.
-
-1. Perform either of these steps:
-
-	- Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-
-		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-fromblank.png)
-
-	- Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
-
-		![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
-
-		**Note**: If you don't have a gateway, [install one](gateway-reference.md), and then click or tap the circular icon to refresh the list.
-
-1. Click or tap **Connect**.
-
-1. Under **Choose a dataset**, click or tap an option.
-
-1. Under **Choose a table**, select one or more checkboxes, and then click or tap **Connect**.
-
-## Next steps ##
-- Learn how to [show data from a data source](../add-gallery.md).
-- Learn how to [view details and create or update records](../add-form.md).
-- See other types of [data sources](../connections-list.md) to which you can connect.  
-- [Understand tables and records](../working-with-tables.md) with tabular data sources.
+## Next steps
+* Learn how to [show data from a data source](../add-gallery.md).
+* Learn how to [view details and create or update records](../add-form.md).
+* See other types of [data sources](../connections-list.md) to which you can connect.  
+* [Understand tables and records](../working-with-tables.md) with tabular data sources.
 
 <!--NotAvailableYet
 ## View the available functions ##

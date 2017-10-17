@@ -1,35 +1,33 @@
-<properties
-    pageTitle="Barcode scanner control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the barcode scanner control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Barcode scanner control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the barcode scanner control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Barcode scanner control in PowerApps #
+---
+# Barcode scanner control in PowerApps
 A control with which the user can take photos by using the barcode scanner on the device.
 
-## Description ##
+## Description
 If you add this control, the user can update a data source with one or more photos from wherever the app is running.
 
-## Key properties ##
-
+## Key properties
 **barcode scanner** – On a device that has more than one barcode scanner, the numeric ID of the barcode scanner that the app uses.
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -66,16 +64,15 @@ If you add this control, the user can update a data source with one or more phot
 
 **Zoom** – The percentage by which an image from a barcode scanner is magnified or the view of a file in a PDF viewer.
 
-## Related functions ##
-
+## Related functions
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
-## Example ##
-### Add photos to an Image gallery control ###
+## Example
+### Add photos to an Image gallery control
 1. Add a **barcode scanner** control, name it **Mybarcode scanner**
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Add a **Label** control and set its output to the Barcode's value.  
+3. Scan a barcode of the type set under BarcodeType property.
+4. The label is going to display the scanned barcode.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Add a **Label** control and set its output to the Barcode's value.  
-1. Scan a barcode of the type set under BarcodeType property.
-1. The label is going to display the scanned barcode.

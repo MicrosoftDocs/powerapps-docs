@@ -1,42 +1,37 @@
-<properties
-   pageTitle="Functions, signals, and enumerations | Microsoft PowerApps"
-   description="Reference information for functions, signals, and enumerations in PowerApps."
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="gregli-msft"
-   manager="anneta"
-   editor=""
-   tags=""/>
+---
+title: Functions, signals, and enumerations | Microsoft Docs
+description: Reference information for functions, signals, and enumerations in PowerApps.
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="08/28/2017"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 08/28/2017
+ms.author: gregli
 
-# Formula reference for PowerApps #
+---
+# Formula reference for PowerApps
 Formulas combine many elements.  Listed below are:
 
-- **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSelect**.
-
-- **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
-
-- **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
-
-- **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Parent](functions/operators.md#parent-operator)**, provide access to information from within a container.
+* **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md#behavior-formulas) such as **Button.OnSelect**.
+* **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
+* **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
+* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Parent](functions/operators.md#parent-operator)**, provide access to information from within a container.
 
 Other elements include:
 
-- [All operators](functions/operators.md)
+* [All operators](functions/operators.md)
+* [Controls and their properties](reference-properties.md)
 
-- [Controls and their properties](reference-properties.md)
-
-## A ##
-
+## A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
@@ -59,14 +54,12 @@ Other elements include:
 
 **[Average](functions/function-aggregates.md)** – Calculates the average of a table expression or a set of arguments.
 
-## B ##
-
+## B
 **[Back](functions/function-navigate.md)** – Displays the previous screen.  
 
 **[Blank](functions/function-isblank-isempty.md)** – Returns a *blank* value that can be used to insert a NULL value in a data source.
 
-## C ##
-
+## C
 **[Calendar](functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.
 
 **[Char](functions/function-char.md)** – Translates a character code into a string.
@@ -107,8 +100,7 @@ Other elements include:
 
 **[CountRows](functions/function-table-counts.md)** – Counts table records.   
 
-## D ##
-
+## D
 **[DataSourceInfo](functions/function-datasourceinfo.md)** – Provides information about a data source.
 
 **[Date](functions/function-date-time.md)** – Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
@@ -135,8 +127,7 @@ Other elements include:
 
 **[DropColumns](functions/function-table-shaping.md)** – Returns a table with one or more columns removed.
 
-## E ##
-
+## E
 **[EditForm](functions/function-form.md)** – Resets a form control for editing of an item.
 
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
@@ -151,8 +142,7 @@ Other elements include:
 
 **[Exp](functions/function-numericals.md)** - Returns *e* raised to a power.
 
-## F ##
-
+## F
 **[Filter](functions/function-filter-lookup.md)** – Returns a filtered table based on one or more criteria.
 
 **[Find](functions/function-find.md)** – Checks whether one string appears within another and returns the location.
@@ -163,18 +153,15 @@ Other elements include:
 
 **[ForAll](functions/function-forall.md)** – Calculates values and performs actions for all records of a table.
 
-## G ##
-
+## G
 **[GroupBy](functions/function-groupby.md)** – Returns a table with records grouped together.
 
-## H ##
-
+## H
 **[HashTags](functions/function-hashtags.md)** – Extracts the hashtags (#strings) from a string.
 
 **[Hour](functions/function-datetime-parts.md)** – Returns the hour portion of a date/time value.
 
-## I ##
-
+## I
 **[If](functions/function-if.md)** – Returns one value if a condition is true and another value if not.  
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
@@ -187,8 +174,7 @@ Other elements include:
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
-## L ##
-
+## L
 **[Language](functions/function-language.md)** – Returns the language tag of the current user.
 
 **[Last](functions/function-first-last.md)** – Returns the last record of a table.
@@ -211,8 +197,7 @@ Other elements include:
 
 **[Lower](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all lowercase.
 
-## M ##
-
+## M
 **[Max](functions/function-aggregates.md)** – Maximum value of a table expression or a set of arguments.
 
 **[Mid](functions/function-left-mid-right.md)** – Returns the middle portion of a string.
@@ -225,8 +210,7 @@ Other elements include:
 
 **[Month](functions/function-datetime-parts.md)** – Retrieves the month portion of a date/time value.
 
-## N ##
-
+## N
 **[Navigate](functions/function-navigate.md)** – Changes which screen is displayed.
 
 **[NewForm](functions/function-form.md)** – Resets a form control for creation of an item.
@@ -235,12 +219,10 @@ Other elements include:
 
 **[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
-## O ##
-
+## O
 **[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](functions/operators.md).
 
-## P ##
-
+## P
 **[Param](functions/function-param.md)** – Provides access to parameters passed to the app when the user opened it.
 
 **[Parent](functions/operators.md#parent-operator)** – Provides access to a container control's properties.
@@ -255,8 +237,7 @@ Other elements include:
 
 **[Proper](functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 
-## R ##
-
+## R
 **[Radians](functions/function-trig.md)** - Converts degrees to radians.
 
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
@@ -287,8 +268,7 @@ Other elements include:
 
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
-## S ##
-
+## S
 **[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to PowerApps private storage.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
@@ -323,8 +303,7 @@ Other elements include:
 
 **[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula.
 
-## T ##
-
+## T
 **[Table](functions/function-table.md)** – Creates a temporary table.  
 
 **[Tan](functions/function-trig.md)** - Returns the tangent of an angle specified in radians.
@@ -345,8 +324,7 @@ Other elements include:
 
 **[TrimEnds](functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
 
-## U ##
-
+## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
@@ -359,8 +337,7 @@ Other elements include:
 
 **[User](functions/function-user.md)** – Returns information about the current user.
 
-## V ##
-
+## V
 **[Validate](functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.
 
 **[Value](functions/function-value.md)** – Converts a string to a number.
@@ -369,10 +346,9 @@ Other elements include:
 
 **[ViewForm](functions/function-form.md)** – Resets a form control for viewing of an existing item.
 
-## W ##
-
+## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
 
-## Y ##
-
+## Y
 **[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
+

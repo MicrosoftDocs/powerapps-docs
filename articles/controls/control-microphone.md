@@ -1,37 +1,35 @@
-<properties
-    pageTitle="Microphone control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Microphone control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Microphone control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Microphone control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Microphone control in PowerApps #
+---
+# Microphone control in PowerApps
 A control with which the user can record sounds.
 
-## Description ##
+## Description
 If you add this control, the user can update a data source with one or more sounds from wherever the app is running.
 
-## Key properties ##
-
+## Key properties
 **Mic** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.
 
 **OnStop** – How the app responds when the user stops recording with a microphone control.
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -84,29 +82,23 @@ If you add this control, the user can update a data source with one or more soun
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
-## Example ##
-### Add sounds to a Custom gallery control ###
+## Example
+### Add sounds to a Custom gallery control
 1. Add a **Microphone**, name it **MyMic**, and set its **OnStop** property to this formula:<br>
-**Collect(MySounds, MyMic.Audio)**
-
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-
-1. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.
-
-1. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
-
-1. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
-
-1. In the **Custom gallery** control, click or tap the play button in the **[Audio](control-audio-video.md)** control to play back your recording.
-
-1. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
-
-1. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
+   **Collect(MySounds, MyMic.Audio)**
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+   
+    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+2. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.
+3. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
+4. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
+5. In the **Custom gallery** control, click or tap the play button in the **[Audio](control-audio-video.md)** control to play back your recording.
+6. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
+7. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 
 Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
+

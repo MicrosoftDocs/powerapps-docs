@@ -1,29 +1,27 @@
-<properties
-	pageTitle="And, Or, and Not functions | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the And, Or, and Not functions in PowerApps"
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="gregli-msft"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: And, Or, and Not functions | Microsoft Docs
+description: Reference information, including syntax and examples, for the And, Or, and Not functions in PowerApps
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/07/2015"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 11/07/2015
+ms.author: gregli
 
-# And, Or, and Not functions in PowerApps #
-
+---
+# And, Or, and Not functions in PowerApps
 Boolean logic functions, commonly used to manipulate the results of comparisons and tests.
 
-## Description ##
-
+## Description
 The **And** function returns **true** if all of its arguments are **true**.  The **&&** [operator](operators.md) is equivalent to **And**.
 
 The **Or** function returns **true** if any of its arguments are **true**.  The **||** operator is equivalent to **Or**.
@@ -32,18 +30,15 @@ The **Not** function returns **true** if its argument is **false**; it returns *
 
 These functions work with logical values. They can't be passed a number or a string directly; instead a comparison or test must be made. For example, a comparison such as **x > 1** is a logical formula that evaluates to the Boolean value **true** if **x** is greater than **1**. If **x** is less than **1**, the formula evaluates to **false.**
 
-## Syntax ##
-
+## Syntax
 **And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
 **Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
 **Not**( *LogicalFormula* )
 
-- *LogicalFormula(s)* - Required.  Logical formulas to evaluate and operate on.
+* *LogicalFormula(s)* - Required.  Logical formulas to evaluate and operate on.
 
-## Examples ##
-
-### Step by step ###
-
+## Examples
+### Step by step
 Use this function to determine whether a slider's value falls outside the 50 to 100 range:
 
 **Or(Slider1.Value < 50, Slider1.Value> 100)**
@@ -57,3 +52,4 @@ As an alternative, use the || operator to get the same results as what the previ
 **Slider1.Value < 50 || Slider1.Value> 100**
 
 **Dept = "HR" || Salary > 200000**
+

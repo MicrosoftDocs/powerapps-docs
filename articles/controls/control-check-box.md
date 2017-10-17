@@ -1,39 +1,37 @@
-<properties
-    pageTitle="Check Box control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Check Box control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Check Box control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Check Box control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Check box control in PowerApps #
+---
+# Check box control in PowerApps
 A control that the user can select or clear to set its value to **true** or **false**.
 
-## Description ##
+## Description
 The user can specify a Boolean value by using this familiar control, which has been used in GUIs for decades.
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 **[Value](properties-core.md)** – The value of an input control.
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -114,22 +112,19 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**If**( *Condition*, *Result* )](../functions/function-if.md)
 
-## Example ##
+## Example
 1. Add a **Check box** control, name it **chkReserve**, and set its **[Text](properties-core.md)** property to show **Reserve now**.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Add a **[Date picker](control-date-picker.md)** control, and set its **[Visible](properties-core.md)** property to this formula:
+   <br>**If(chkReserve.Value = true, true)**
+   
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+3. Press F5, click or tap **chkReserve** to set its **[Value](properties-core.md)** property to **true**, and then click or tap **chkReserve** again to set its **[Value](properties-core.md)** property to **false**.
+   
+    The **[Date Picker](control-date-picker.md)** control appears when the **[Value](properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
+4. To return to the default workspace, press Esc.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Add a **[Date picker](control-date-picker.md)** control, and set its **[Visible](properties-core.md)** property to this formula:
-<br>**If(chkReserve.Value = true, true)**
-
-	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, click or tap **chkReserve** to set its **[Value](properties-core.md)** property to **true**, and then click or tap **chkReserve** again to set its **[Value](properties-core.md)** property to **false**.
-
-	The **[Date Picker](control-date-picker.md)** control appears when the **[Value](properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
-
-1. To return to the default workspace, press Esc.

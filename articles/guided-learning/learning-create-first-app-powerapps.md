@@ -1,25 +1,25 @@
-<properties
-   pageTitle="Create your first app | Microsoft PowerApps"
-   description="Generate an app from a SharePoint list"
-   services=""
-   suite="powerapps"
-   documentationCenter="na"
-   authors="mgblythe"
-   manager="anneta"
-   editor=""
-   tags=""
-   featuredVideoId="ixRpT48Z6IQ"
-   courseDuration="5m"/>
+---
+title: Create your first app | Microsoft Docs
+description: Generate an app from a SharePoint list
+services: ''
+suite: powerapps
+documentationcenter: na
+author: mgblythe
+manager: anneta
+editor: ''
+tags: ''
+featuredvideoid: ixRpT48Z6IQ
+courseduration: 5m
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="get-started-article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="12/09/2016"
-   ms.author="mblythe"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: get-started-article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 12/09/2016
+ms.author: mblythe
 
+---
 # Create your first app in PowerApps
 You're now familiar with all the parts of PowerApps and the options for creating apps, so it's time to actually build an app. For this topic, we'll generate a phone app from a SharePoint Online list, but you could use data from lots of other sources, including Excel, cloud services like Salesforce, and on-premises sources such as SQL Server.
 
@@ -41,9 +41,9 @@ After you click **Connect**, PowerApps starts to generate the app. PowerApps mak
 ## Explore the generated app
 Success! Your new three screen app opens in PowerApps Studio. All apps generated from data have the same set of screens:
 
-- The **browse** screen: where you browse, sort, filter, and refresh the data pulled in from the list, as well as add items by clicking the (+) icon.
-- The **details** screen: where you view more detail about an item, and can choose to delete or edit the item.
-- The **edit/create** screen: where you edit an existing item or create a new one.
+* The **browse** screen: where you browse, sort, filter, and refresh the data pulled in from the list, as well as add items by clicking the (+) icon.
+* The **details** screen: where you view more detail about an item, and can choose to delete or edit the item.
+* The **edit/create** screen: where you edit an existing item or create a new one.
 
 In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view. 
 
@@ -56,3 +56,4 @@ Click or tap each thumbnail to view the controls on that screen.
 Click or tap ![Start app preview arrow](./media/learning-create-first-app-powerapps/f5-arrow-sm.png) in the top right to run the app. If you navigate through the app, you see that it includes all the data from the list and provides a good default experience.
 
 Wow, that was pretty easy! In a few minutes you learned how to connect to a data source, generate an app, and get acquainted with PowerApps Studio and the three app screens. In later sections, you'll see how to customize generated apps. In the next topic we review this section of the course and get you ready for future lessons.
+

@@ -1,31 +1,31 @@
-<properties
-    pageTitle="Introduction to powerapps.com | Microsoft PowerApps"
-    description="A new home for all makers of apps."
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="linhtranms"
-    manager="anneta"
-    editor=""
-    tags=""
- />
-<tags
-    ms.service="powerapps"
-    ms.devlang="na"
-    ms.topic="article"
-    ms.tgt_pltfrm="na"
-    ms.workload="na"
-    ms.date="10/28/2016"
-    ms.author="litran"/>
+---
+title: Introduction to powerapps.com | Microsoft Docs
+description: A new home for all makers of apps.
+services: ''
+suite: powerapps
+documentationcenter: na
+author: linhtranms
+manager: anneta
+editor: ''
+tags: ''
 
-# Introduction to powerapps.com #
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/28/2016
+ms.author: litran
+
+---
+# Introduction to powerapps.com
 As we march into November, the PowerApps team is re-introducing [powerapps.com](http://web.powerapps.com) as the new home for app creators. We've re-designed the page as the primary site for creators to easily get started on creating apps, use the Microsoft Common Data Service, and manage their apps all in one location. In this article, I will walk you through the following:
 
-- the header
-- the homepage
-- the **Apps** page
+* the header
+* the homepage
+* the **Apps** page
 
-## Header ##
+## Header
 When you sign up and first sign in to powerapps.com, you will notice the site's new header. Near the left edge of the header is the Office waffle. This is a quick place for you to access all other Office products such as PowerPoint, OneNote, and Word, as well as Microsoft Flow and Dynamics 365.
 
 ![Header Waffle](./media/intro-maker-portal/waffle.png)
@@ -46,7 +46,7 @@ Next to settings, you will see a question-mark icon for help. Click or tap this 
 
 ![Header Help](./media/intro-maker-portal/help_items2.png)
 
-## Homepage ##
+## Homepage
 After you sign in to [powerapps.com](http://web.powerapps.com), you'll land on the homepage by default. We have changed the layout of this homepage to help you get started quickly, whether you're creating apps or want to explore the Common Data Service.
 
 If you've signed in to PowerApps before and run or created some apps, the first section you will see on your homepage is a list of **Recent apps**. They are sorted by the date on which they were most recently opened.
@@ -70,37 +70,34 @@ Below the **Create an app** banner is the **Use the Microsoft Common Data Servic
 ![Microsoft Common Data Service](./media/intro-maker-portal/cds2.png)
 
 Under **Common Data Service**, a different button will appear, depending on your license or permission.
-- If the **Start trial** button appears, you don't have a PowerApps P2 license, which the Common Data Service requires. Click or tap this button to open the page where you can sign up for a free, 90-day trial of this license. [Learn more about PowerApps licenses](signup-for-powerapps.md).
 
-- If the **Get started** button appears, you're in an environment that doesn't have a Common Data Service database or you don't have access to it. Click or tap this button to create an environment and database at once, so you can start to use Common Data Services for your apps. [Learn more about creating environments](environments-administration.md).
-
-	![Create an environment and a database](./media/intro-maker-portal/createenvanddb2.png)
-
-	If you don't want to create an environment, you can always switch to an environment to which you have access.
-
-- If the **Create database** button appears, you're in an environment that doesn't have a Common Data Service database but you have permission to create one.
-
-	![Create database](./media/intro-maker-portal/cds-createdb2.png)
-
-	Clicking or tapping this button will provision a database for this environment.
-
-	![Create database](./media/intro-maker-portal/cds_createdb22.png)
-
-- If the **Browse entities** button appears, you're in an environment that has a Common Data Service database provisioned already and you have access to it. Click or tap that button to open the **Entities** page.
-
-	![Create database](./media/intro-maker-portal/cds_browseentities2.png)
+* If the **Start trial** button appears, you don't have a PowerApps P2 license, which the Common Data Service requires. Click or tap this button to open the page where you can sign up for a free, 90-day trial of this license. [Learn more about PowerApps licenses](signup-for-powerapps.md).
+* If the **Get started** button appears, you're in an environment that doesn't have a Common Data Service database or you don't have access to it. Click or tap this button to create an environment and database at once, so you can start to use Common Data Services for your apps. [Learn more about creating environments](environments-administration.md).
+  
+    ![Create an environment and a database](./media/intro-maker-portal/createenvanddb2.png)
+  
+    If you don't want to create an environment, you can always switch to an environment to which you have access.
+* If the **Create database** button appears, you're in an environment that doesn't have a Common Data Service database but you have permission to create one.
+  
+    ![Create database](./media/intro-maker-portal/cds-createdb2.png)
+  
+    Clicking or tapping this button will provision a database for this environment.
+  
+    ![Create database](./media/intro-maker-portal/cds_createdb22.png)
+* If the **Browse entities** button appears, you're in an environment that has a Common Data Service database provisioned already and you have access to it. Click or tap that button to open the **Entities** page.
+  
+    ![Create database](./media/intro-maker-portal/cds_browseentities2.png)
 
 Below the **Use the Microsoft Common Data Service** banner, you'll see a set of sample apps and connected sample apps that we created for you to use.
 
-- **Sample apps** - Sample apps were built for different business scenarios in either phone or tablet layout. You can click an app to quickly view a description of what the app does, what layout the app was built for, and what capabilities the app showcases such as camera, GPS, or radio buttons. It's a quick way for new users to learn capabilities of PowerApps, and you can use a template to create an identical app in PowerApps Studio for Windows.
+* **Sample apps** - Sample apps were built for different business scenarios in either phone or tablet layout. You can click an app to quickly view a description of what the app does, what layout the app was built for, and what capabilities the app showcases such as camera, GPS, or radio buttons. It's a quick way for new users to learn capabilities of PowerApps, and you can use a template to create an identical app in PowerApps Studio for Windows.
+  
+    ![Sample Apps](./media/intro-maker-portal/sampleapps2.png)
+* **Connected sample apps** - These apps connect to your data via a data connection such as Office 365, Salesforce, Trello, and Wunderlist. This set of apps is different from the sample apps above. When you click or tap a connected sample app, you actually provision a new instance of the app (think of it as a template). It will prompt you to enter your credentials to connect to your data. The beautiful thing about a connected sample app is that an instance is provisioned for you right here, and you can open it in PowerApps Studio to learn how the corresponding app was built. The downside is that it can take pretty long (up to a minute) to create. So please be patient and let the browser open when you click or tap a connected sample app.
+  
+    ![Connected Sample Apps](./media/intro-maker-portal/connectedsampleapps2.png)
 
-	![Sample Apps](./media/intro-maker-portal/sampleapps2.png)
-
-- **Connected sample apps** - These apps connect to your data via a data connection such as Office 365, Salesforce, Trello, and Wunderlist. This set of apps is different from the sample apps above. When you click or tap a connected sample app, you actually provision a new instance of the app (think of it as a template). It will prompt you to enter your credentials to connect to your data. The beautiful thing about a connected sample app is that an instance is provisioned for you right here, and you can open it in PowerApps Studio to learn how the corresponding app was built. The downside is that it can take pretty long (up to a minute) to create. So please be patient and let the browser open when you click or tap a connected sample app.
-
-	![Connected Sample Apps](./media/intro-maker-portal/connectedsampleapps2.png)
-
-## New Apps page ##
+## New Apps page
 You can access the **Apps** page via the left navigation bar on [powerapps.com](http://web.powerapps.com).
 
 ![Left navigation](./media/intro-maker-portal/leftnav2.png)
@@ -113,17 +110,17 @@ Please note that the list view shows only apps in the selected environment. To v
 
 What's new?
 
-- Clicking or tapping an app now opens it in PowerApps Studio for web in a new tab.
--  By default, the **Apps** page shows all apps that you have permission to edit. To view **All apps** (including apps you can only use), select the **All apps** filter.
-
-	![Apps filter](./media/intro-maker-portal/allapps_filter.png)
+* Clicking or tapping an app now opens it in PowerApps Studio for web in a new tab.
+* By default, the **Apps** page shows all apps that you have permission to edit. To view **All apps** (including apps you can only use), select the **All apps** filter.
+  
+   ![Apps filter](./media/intro-maker-portal/allapps_filter.png)
 
 We also have:
 
-- **Apps I can use**, which lists all apps that have been shared with you with User permission (can only run the app). Please note that you can also acquire these apps in [Dynamics 365](http://home.dynamics.com).
-- **Apps I own**, which lists all apps you have authored.
-- **Apps I contribute to**, which lists all apps that have been shared with you with Contributor permission.
-- **Sample apps**, which lists all sample apps (not connected sample apps).
+* **Apps I can use**, which lists all apps that have been shared with you with User permission (can only run the app). Please note that you can also acquire these apps in [Dynamics 365](http://home.dynamics.com).
+* **Apps I own**, which lists all apps you have authored.
+* **Apps I contribute to**, which lists all apps that have been shared with you with Contributor permission.
+* **Sample apps**, which lists all sample apps (not connected sample apps).
 
 If you click or tap the information circle, the app details page opens.
 
@@ -134,3 +131,4 @@ If you click the ellipsis for an app, options such as Play, Edit, Share, and Det
 ![App's options](./media/intro-maker-portal/ellipsis.png)
 
 That is mainly what's new on powerapps.com, which is geared toward app makers. We hope this is helpful to you. Please leave comments on what you like so far and would like to see. We'd love to hear your feedback!
+

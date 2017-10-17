@@ -1,41 +1,39 @@
-<properties
-    pageTitle="Timer control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the timer control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Timer control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the timer control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Timer control in PowerApps #
+---
+# Timer control in PowerApps
 A control that can determine how your app responds after a certain amount of time passes.
 
-## Description ##
+## Description
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.
 
 Note that you need to preview the app in order for Timer to run in the designer.  This allows user to configure the timer in the designer without any time restrictions.
 
-## Key properties ##
-
+## Key properties
 **Duration** – How long a timer runs.
 
 **OnTimerEnd** – How an app responds when a timer finishes running.
 
 **Repeat** – Whether a timer automatically restarts when it finishes running.
 
-## Additional properties ##
-
+## Additional properties
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.
@@ -106,43 +104,35 @@ Note that you need to preview the app in order for Timer to run in the designer.
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Refresh**( *DataSource* )](../functions/function-refresh.md)
 
-## Examples ##
-### Show a countdown ###
+## Examples
+### Show a countdown
 1. Add a timer, and name it **Countdown**.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Set the timer's **Duration** property to **10000** and its **Repeat** and **Autostart** properties to **true**.
+3. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
+4. Add a label, and set its **[Text](properties-core.md)** property to this formula:
+   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
+   
+    Want more information about the **[RoundUp](../functions/function-round.md)** function or [other functions](../formula-reference.md)?
+   
+    The label shows how many seconds remain before the timer restarts.
+5. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Set the timer's **Duration** property to **10000** and its **Repeat** and **Autostart** properties to **true**.
-
-1. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
-
-1. Add a label, and set its **[Text](properties-core.md)** property to this formula:
-<br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
-
-	Want more information about the **[RoundUp](../functions/function-round.md)** function or [other functions](../formula-reference.md)?
-
-	The label shows how many seconds remain before the timer restarts.
-
-1. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.
-
-### Animate a control ###
+### Animate a control
 1. Add a timer, and name it **FadeIn**.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Set the timer's **Duration** property to **5000** and its **Repeat** and **Autostart** properties to **true**.
+3. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
+4. Add a label, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:
+   <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
+   
+    Want more information about the **[ColorFade](../functions/function-colors.md)** function or [other functions](../formula-reference.md)?
+   
+    The text in the label fades to white, returns to full intensity, and repeats the process.
+5. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Set the timer's **Duration** property to **5000** and its **Repeat** and **Autostart** properties to **true**.
-
-1. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
-
-1. Add a label, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:
-<br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
-
-	Want more information about the **[ColorFade](../functions/function-colors.md)** function or [other functions](../formula-reference.md)?
-
-	The text in the label fades to white, returns to full intensity, and repeats the process.
-
-1. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.

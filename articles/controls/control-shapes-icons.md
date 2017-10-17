@@ -1,37 +1,35 @@
-<properties
-    pageTitle="Shape controls and icon controls: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about shape controls and icon controls"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Shape controls and icon controls: reference | Microsoft Docs'
+description: Information, including properties and examples, about shape controls and icon controls
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Shape controls and Icon controls in PowerApps #
+---
+# Shape controls and Icon controls in PowerApps
 Graphics for which you can configure appearance and behavior properties.
 
-## Description ##
+## Description
 These controls include arrows, geometric shapes, action icons, and symbols for which you can configure properties such as fill, size, and location. You can also configure their **[OnSelect](properties-core.md)** property so that the app responds if the user clicks or taps the control.
 
-## Key properties ##
-
+## Key properties
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-## Additional properties ##
-
+## Additional properties
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
@@ -50,23 +48,19 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Navigate**( *ScreenName*, *ScreenTransition* )](../functions/function-navigate.md)
 
-## Example ##
+## Example
 1. Name the default **[Screen](control-screen.md)** control **Target**, add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to show **Target**.
+   
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
+2. Add a **[Screen](control-screen.md)** control, and name it **Source**.
+3. In **Source**, add a **Shape** control, and set its **[OnSelect](properties-core.md)** property to this formula:
+   <br>**Navigate(Target, ScreenTransition.Fade)**
+4. Press F5, and then click or tap the **Shape** control.
+   
+    The **Target** screen appears.
+5. (optional) Press Esc to return to the default workspace, add a **Shape** control to **Target**, and set the **[OnSelect](properties-core.md)** property of the **Shape** control to this formula:
+   <br>**Navigate(Source, ScreenTransition.Fade)**
 
-	Don't know how to [add and configure a control](../add-configure-controls.md)?
-
-1. Add a **[Screen](control-screen.md)** control, and name it **Source**.
-
-1. In **Source**, add a **Shape** control, and set its **[OnSelect](properties-core.md)** property to this formula:
-<br>**Navigate(Target, ScreenTransition.Fade)**
-
-1. Press F5, and then click or tap the **Shape** control.
-
-	The **Target** screen appears.
-
-1. (optional) Press Esc to return to the default workspace, add a **Shape** control to **Target**, and set the **[OnSelect](properties-core.md)** property of the **Shape** control to this formula:
-<br>**Navigate(Source, ScreenTransition.Fade)**

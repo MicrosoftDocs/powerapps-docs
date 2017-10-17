@@ -1,35 +1,33 @@
-<properties
-    pageTitle="Image control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Image control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Image control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Image control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Image control in PowerApps #
+---
+# Image control in PowerApps
 A control that shows an image from, for example, a local file or a data source.
 
-## Description ##
+## Description
 If you add one or more **Image** controls to your app, you can show individual images that aren't part of a data set, or you can incorporate images from records in data sources.
 
-## Key properties ##
-
+## Key properties
 **[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
-## Additional properties ##
-
+## Additional properties
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -96,35 +94,29 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Remove**( *DataSource*, ThisItem )](../functions/function-remove-removeif.md)
 
-## Examples ##
-### Show an image from a local file ###
+## Examples
+### Show an image from a local file
 1. On the **Content** tab, click or tap **Media**, and then click or tap **Browse**.
+2. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
+3. Add an **Image** control, and set its **[Items](properties-core.md)** property to the name of the file that you added.
+   
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
+   
+    The **Image** control shows the image that you specified.
 
-1. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
-
-1. Add an **Image** control, and set its **[Items](properties-core.md)** property to the name of the file that you added.
-
-	Don't know how to [add and configure a control](../add-configure-controls.md)?
-
-	The **Image** control shows the image that you specified.
-
-### Show a set of images from a data source ###
+### Show a set of images from a data source
 1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
+2. In PowerApps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
+   
+    If **Add data source** doesn't appear in the right-hand pane, click or tap a screen in the left navigation bar.
+3. Click or tap **Add static data to your app**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
+4. Select the **Flooring Estimates** check box, and then click or tap **Connect**.
+5. Add a **Gallery** control with images, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
+   
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
+   
+    The **Gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.
 
-1. In PowerApps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
-
-	If **Add data source** doesn't appear in the right-hand pane, click or tap a screen in the left navigation bar.
-
-1. Click or tap **Add static data to your app**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
-
-1. Select the **Flooring Estimates** check box, and then click or tap **Connect**.
-
-1. Add a **Gallery** control with images, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
-
-	Don't know how to [add and configure a control](../add-configure-controls.md)?
-
-	The **Gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.

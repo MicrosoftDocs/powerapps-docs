@@ -1,29 +1,27 @@
-<properties
-	pageTitle="First, FirstN, Last, and LastN functions | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the First, FirstN, Last, and LastN functions in PowerApps"
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="gregli-msft"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: First, FirstN, Last, and LastN functions | Microsoft Docs
+description: Reference information, including syntax and examples, for the First, FirstN, Last, and LastN functions in PowerApps
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/07/2015"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 11/07/2015
+ms.author: gregli
 
-# First, FirstN, Last, and LastN functions in PowerApps #
-
+---
+# First, FirstN, Last, and LastN functions in PowerApps
 Returns a table's first or last set of [records](../working-with-tables.md#records).
 
-## Description ##
-
+## Description
 The **First** function returns the first record of a [table](../working-with-tables.md).
 
 The **FirstN** function returns the first set of records of a table; the second argument specifies the number of records to return.
@@ -34,23 +32,22 @@ The **LastN** function returns the last set of records of a table; the second ar
 
 **First** and **Last** return a single record.  **FirstN** and **LastN** return a table, even if you specify only a single record.
 
-[AZURE.INCLUDE [delegation-no](../../includes/delegation-no.md)]
+[!INCLUDE [delegation-no](../../includes/delegation-no.md)]
 
-## Syntax ##
-
+## Syntax
 **First**( *Table* )<br>**Last**( *Table* )
 
-- *Table* - Rquired. Table to operate on.
+* *Table* - Rquired. Table to operate on.
 
 **FirstN**( *Table* [, *NumberOfRecords* ] )<br>**LastN**( *Table* [, *NumberOfRecords* ] )
 
-- *Table* - Required. Table to operate on.
-- *NumberOfRecords* - Optional.  Number of records to return. If you don't specify this argument, the function returns one record.
+* *Table* - Required. Table to operate on.
+* *NumberOfRecords* - Optional.  Number of records to return. If you don't specify this argument, the function returns one record.
 
-## Examples ##
-
+## Examples
 This formula returns the first record from a table named **Employees**:<br>
 **First(Employees)**
 
 This formula returns the last 15 records from a table named **Employees**:<br>
 **LastN(Employees, 15)**
+

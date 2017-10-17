@@ -1,42 +1,39 @@
-<properties
-	pageTitle="Distinct function | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the Distinct function in PowerApps"
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="gregli-msft"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: Distinct function | Microsoft Docs
+description: Reference information, including syntax and examples, for the Distinct function in PowerApps
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/07/2015"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 11/07/2015
+ms.author: gregli
 
-# Distinct function in PowerApps #
-
+---
+# Distinct function in PowerApps
 Summarizes [records](../working-with-tables.md#records) of a [table](../working-with-tables.md), removing duplicates.
 
-## Description ##
-
+## Description
 The **Distinct** function evaluates a formula across each record of a table. **Distinct** returns a one-column table that contains the results, with duplicate values removed.  
 
-[AZURE.INCLUDE [record-scope](../../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../includes/record-scope.md)]
 
-## Syntax ##
-
+## Syntax
 **Distinct**( *Table*, *Formula* )
 
-- *Table* - Required.  Table to evaluate across.
-- *Formula* - Required.  Formula to evaluate for each record.
+* *Table* - Required.  Table to evaluate across.
+* *Formula* - Required.  Formula to evaluate for each record.
 
-## Example ##
-
+## Example
 If you had an **Employees** table that contained a **Department** column, this function would list each unique department name in that column, no matter how many times each name appeared in that column:
 
 **Distinct(Employees, Department)**
+

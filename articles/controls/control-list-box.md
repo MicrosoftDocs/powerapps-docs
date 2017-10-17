@@ -1,39 +1,37 @@
-<properties
-    pageTitle="List Box control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the List Box control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'List Box control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the List Box control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# List Box control in PowerApps #
+---
+# List Box control in PowerApps
 A list in which the user can select one or multiple items.
 
-## Description ##
+## Description
 A **List Box** control always shows all available choices (unlike a **[Drop down](control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[AZURE.INCLUDE [long-items](../../includes/long-items.md)]
+[!INCLUDE [long-items](../../includes/long-items.md)]
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -116,38 +114,35 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
-## Example ##
+## Example
 1. Add a **List box** control, name it **CategoryList**, and set its **[Items](properties-core.md)** property to this formula:<br>
-**["Carpet","Hardwood","Tile"]**
+   **["Carpet","Hardwood","Tile"]**
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+   
+    ![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
+2. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
+3. Set the **[Items](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+   
+   * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
+   * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
+   * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
+     
+     ![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
+4. Set the **[Visible](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+   
+   * CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
+   * HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
+   * TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
+     
+     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+5. Press F5, and then choose one or more items in **CategoryList**.
+   
+    The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
+   
+    ![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
+6. (optional) Press Esc to return to the default workspace.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-	![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
-
-1. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
-
-1. Set the **[Items](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
-	- CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
-	- HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
-	- TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
-
-	![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
-
-1. Set the **[Visible](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
-	- CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
-	- HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
-	- TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
-
-	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, and then choose one or more items in **CategoryList**.
-
-	The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
-
-	![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
-
-1. (optional) Press Esc to return to the default workspace.

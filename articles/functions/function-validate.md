@@ -1,36 +1,35 @@
-<properties
-	pageTitle="Validate function | Microsoft PowerApps"
-	description="Reference information, including syntax and examples, for the Validate function in PowerApps"
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="gregli-msft"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: Validate function | Microsoft Docs
+description: Reference information, including syntax and examples, for the Validate function in PowerApps
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/01/2015"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 11/01/2015
+ms.author: gregli
 
-# Validate function in PowerApps #
-
+---
+# Validate function in PowerApps
 The **Validate** function checks whether the value of a single [column](../working-with-tables.md#columns) or a complete [record](../working-with-tables.md#records) is valid for a [data source](../working-with-data-sources.md).  
 
-## Description ##
-
+## Description
 Before a user submits a data change, you can provide immediate feedback on the validity of that submission, resulting in a better user experience.
 
 Data sources can provide information on what constitutes valid values within a record. This information can include many constraints, such as these examples:
-- whether a column requires a value
-- how long a string of text can be
-- how high and low a number can be
-- how early and late a date can be
+
+* whether a column requires a value
+* how long a string of text can be
+* how high and low a number can be
+* how early and late a date can be
 
 The **Validate** function uses this information to determine whether a value is valid and to return an appropriate error message if not. You can use the **[DataSourceInfo](function-datasourceinfo.md)** function to view the same information that **Validate** uses.
 
@@ -38,35 +37,31 @@ Data sources vary in how much validation information they provide, including not
 
 If **Validate** finds a problem, the function returns an error message that you can show to the user of the app. If all values are valid, **Validate** returns [blank](function-isblank-isempty.md). When you work with a [collection](../working-with-data-sources.md#collections) that has no validation information, values are always valid.
 
-## Syntax ##
-
+## Syntax
 **Validate**( *DataSource*, *Column*, *Value* )
 
-- *DataSource* – Required. The data source to validate with.
-
-- *Column* – Required. The column to validate.
-
-- *Value* – Required. The value for the selected column to be validated.
+* *DataSource* – Required. The data source to validate with.
+* *Column* – Required. The column to validate.
+* *Value* – Required. The value for the selected column to be validated.
 
 **Validate**( *DataSource*, *OriginalRecord*, *Updates* )
 
-- *DataSource* – Required. The data source to validate with.
+* *DataSource* – Required. The data source to validate with.
+* *OriginalRecord* - Required.  The record to which updates are to be validated.
+* *Updates* - Required.  The changes to apply to the original record.
 
-- *OriginalRecord* - Required.  The record to which updates are to be validated.
-
-- *Updates* - Required.  The changes to apply to the original record.
-
-## Examples ##
+## Examples
 For these examples, values in the **Percentage** column of the **Scores** data source must be between 0 and 100, inclusive. If the data passes validation, the function returns *blank*. Otherwise, the function returns an error message.
 
-### Validate with a single column ###
+### Validate with a single column
 | Formula | Description | Result |
-|---------|-------------|--------|
-| **Validate( Scores, Percentage, 10 )** | Checks whether **10** is a valid value for the **Percentage** column in the **Scores** data source. | *blank* |
-| **Validate( Scores, Percentage, 120 )** | Checks whether **120** is a valid value for the **Percentage** column in the **Scores** data source.| "Values must be between 0 and 100." |
+| --- | --- | --- |
+| **Validate( Scores, Percentage, 10 )** |Checks whether **10** is a valid value for the **Percentage** column in the **Scores** data source. |*blank* |
+| **Validate( Scores, Percentage, 120 )** |Checks whether **120** is a valid value for the **Percentage** column in the **Scores** data source. |"Values must be between 0 and 100." |
 
-### Validate with a complete record ###
+### Validate with a complete record
 | Formula | Description | Result |
-|---------|-------------|--------|
-| **Validate( Scores, EditRecord, Gallery.Updates )** | Checks whether **10** is a valid value for the **Percentage** column in the **Scores** data source. | *blank* |
-| **Validate( Scores, EditRecord, Gallery.Updates )** | Checks whether **120** is a valid value for the **Percentage** column in the **Scores** data source. | "Values must be between 0 and 100."  |
+| --- | --- | --- |
+| **Validate( Scores, EditRecord, Gallery.Updates )** |Checks whether **10** is a valid value for the **Percentage** column in the **Scores** data source. |*blank* |
+| **Validate( Scores, EditRecord, Gallery.Updates )** |Checks whether **120** is a valid value for the **Percentage** column in the **Scores** data source. |"Values must be between 0 and 100." |
+

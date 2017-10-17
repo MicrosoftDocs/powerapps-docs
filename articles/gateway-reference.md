@@ -1,86 +1,77 @@
-<properties
-	pageTitle="Understand on-premises data gateways | Microsoft PowerApps"
-	description="Reference information, including installation and troubleshooting, for on-premises data gateways"
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="skjerland"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: Understand on-premises data gateways | Microsoft Docs
+description: Reference information, including installation and troubleshooting, for on-premises data gateways
+services: ''
+suite: powerapps
+documentationcenter: na
+author: skjerland
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/01/2016"
-   ms.author="sharik"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 11/01/2016
+ms.author: sharik
 
-# Understand on-premises data gateways for Microsoft PowerApps ##
-
-## Installation and configuration ##
-
+---
+# Understand on-premises data gateways for Microsoft PowerApps
+## Installation and configuration
 **Prerequisites**
 
 Minimum:
 
-- .NET 4.5 Framework
-- 64-bit version of Windows 7 or Windows Server 2008 R2 (or later)
+* .NET 4.5 Framework
+* 64-bit version of Windows 7 or Windows Server 2008 R2 (or later)
 
 Recommended:
 
-- 8 Core CPU
-- 8 GB Memory
-- 64-bit version of Windows 2012 R2 (or later)
+* 8 Core CPU
+* 8 GB Memory
+* 64-bit version of Windows 2012 R2 (or later)
 
 Related considerations:
 
-- You can't install a gateway on a domain controller.
-- You shouldn't install a gateway on a computer, such a laptop, that may be turned off, asleep, or not connected to the Internet because the gateway can't run under any of those circumstances. In addition, gateway performance might suffer over a wireless network.
+* You can't install a gateway on a domain controller.
+* You shouldn't install a gateway on a computer, such a laptop, that may be turned off, asleep, or not connected to the Internet because the gateway can't run under any of those circumstances. In addition, gateway performance might suffer over a wireless network.
 
 **Install a gateway**
 
 1. [Download the installer](http://go.microsoft.com/fwlink/?LinkID=820931), and then run it.
-
-	![Run the installer](./media/gateway-reference/run-installer.png)
-
-1. On the first screen of the installation wizard, click or tap **Next** to acknowledge the reminder about installing a gateway on a laptop.
-
-	![Reminder screen](./media/gateway-reference/laptop-reminder.png)
-
-1. Specify the location where you want to install the gateway, select the check box to accept the terms of use and the privacy statement, and then click or tap **Install**.
-
-1. In the **User Account Control** dialog boxes, click or tap **Yes** to continue.
-
-1. On the next screen of the wizard, click or tap **Sign in**.
-
-	![Sign in](./media/gateway-reference/sign-in.png)
-
-1. Click or tap the option to register a new gateway or to migrate, restore, or take over an existing gateway, and then click or tap **Next**.
-
-	![Choose new or existing](./media/gateway-reference/new-existing.png)
-
-	- To configure a gateway, type a **name** for it and a **recovery key**, click or tap **Configure**, and then click or tap **Close**.
-
-		![Configure a new gateway](./media/gateway-reference/configure-new.png)
-
-		Specify a recovery key that contains at least eight characters, and keep it in a safe place. You'll need this key if you want to migrate, restore, or take over its gateway.
-
-	- To migrate, restore, or take over an existing gateway, provide the name of the gateway and its recovery key, click or tap **Configure**, and then follow any additional prompts.
-
-		![Recover an existing gateway](./media/gateway-reference/recover-existing.png)
+   
+    ![Run the installer](./media/gateway-reference/run-installer.png)
+2. On the first screen of the installation wizard, click or tap **Next** to acknowledge the reminder about installing a gateway on a laptop.
+   
+    ![Reminder screen](./media/gateway-reference/laptop-reminder.png)
+3. Specify the location where you want to install the gateway, select the check box to accept the terms of use and the privacy statement, and then click or tap **Install**.
+4. In the **User Account Control** dialog boxes, click or tap **Yes** to continue.
+5. On the next screen of the wizard, click or tap **Sign in**.
+   
+    ![Sign in](./media/gateway-reference/sign-in.png)
+6. Click or tap the option to register a new gateway or to migrate, restore, or take over an existing gateway, and then click or tap **Next**.
+   
+    ![Choose new or existing](./media/gateway-reference/new-existing.png)
+   
+   * To configure a gateway, type a **name** for it and a **recovery key**, click or tap **Configure**, and then click or tap **Close**.
+     
+       ![Configure a new gateway](./media/gateway-reference/configure-new.png)
+     
+       Specify a recovery key that contains at least eight characters, and keep it in a safe place. You'll need this key if you want to migrate, restore, or take over its gateway.
+   * To migrate, restore, or take over an existing gateway, provide the name of the gateway and its recovery key, click or tap **Configure**, and then follow any additional prompts.
+     
+       ![Recover an existing gateway](./media/gateway-reference/recover-existing.png)
 
 **Restart the gateway**
 
 The gateway runs as a Windows service, so you can start and stop it in multiple ways. For example, you can open a command prompt with elevated permissions on the machine where the gateway is running and then run either of these commands:
 
-- To stop the service, run this command:<br>
-**net stop PBIEgwService**
-
-- To start the service, run this command:<br>
-**net start PBIEgwService**
+* To stop the service, run this command:<br>
+  **net stop PBIEgwService**
+* To start the service, run this command:<br>
+  **net start PBIEgwService**
 
 **Configure a firewall or proxy**
 
@@ -117,17 +108,16 @@ It is recommended that you whitelist the IP addresses, for your data region, in 
 
 Here is a listing of the fully qualified domain names used by the gateway.
 
-
-|Domain names|Outbound ports|Description|
-|---|---|---|
-|*.analysis.windows.net|443|HTTPS|
-|*.login.windows.net|443|HTTPS|
-|*.servicebus.windows.net|5671-5672|Advanced Message Queuing Protocol (AMQP)|
-|*.servicebus.windows.net|443, 9350-9354|Listeners on Service Bus Relay over TCP (requires 443 for Access Control token acquisition)|
-|*.frontend.clouddatahub.net|443|HTTPS|
-|*.core.windows.net|443|HTTPS|
-|login.microsoftonline.com|443|HTTPS|
-|*.msftncsi.com|443|Used to test internet connectivity if the gateway is unreachable by the Power BI service.|
+| Domain names | Outbound ports | Description |
+| --- | --- | --- |
+| *.analysis.windows.net |443 |HTTPS |
+| *.login.windows.net |443 |HTTPS |
+| *.servicebus.windows.net |5671-5672 |Advanced Message Queuing Protocol (AMQP) |
+| *.servicebus.windows.net |443, 9350-9354 |Listeners on Service Bus Relay over TCP (requires 443 for Access Control token acquisition) |
+| *.frontend.clouddatahub.net |443 |HTTPS |
+| *.core.windows.net |443 |HTTPS |
+| login.microsoftonline.com |443 |HTTPS |
+| *.msftncsi.com |443 |Used to test internet connectivity if the gateway is unreachable by the Power BI service. |
 
 **Sign-in account**
 
@@ -141,17 +131,17 @@ This isn't the account used to connect to on-premises data sources or the work o
 
 If you encounter issues with your proxy server due to authentication, you may want to change the Windows service account to a domain-user or managed-service account as [proxy configuration](https://powerbi.microsoft.com/documentation/powerbi-gateway-proxy/#changing-the-gateway-service-account-to-a-domain-user) describes.
 
-## Frequently asked questions ##
-#### General ####
+## Frequently asked questions
+#### General
 **Question:** What data sources does the gateway support?  
 **Answer:** As of this writing:
 
-- SQL Server
-- SharePoint
-- Oracle
-- Informix
-- Filesystem
-- DB2
+* SQL Server
+* SharePoint
+* Oracle
+* Informix
+* Filesystem
+* DB2
 
 **Question:** Do I need a gateway for data sources in the cloud, such as SQL Azure?  
 **Answer:** No. A gateway connects to on-premises data sources only.
@@ -188,7 +178,7 @@ You can use the third-party tool [Azure Speed Test app](http://azurespeedtest.az
 **Question:** Can I place the gateway in a perimeter network (also known as DMZ, demilitarized zone, and screened subnet)?  
 **Answer:** The gateway requires connectivity to the data source. If the data source isn't in your perimeter network, the gateway may not be able to connect to it. For example, the computer that's running SQL Server may not be in your perimeter network, and you can't connect to that computer from the perimeter network. If you placed the gateway in your perimeter network, the gateway wouldn't be able to reach the computer that's running SQL Server.
 
-#### High availability/disaster recovery ####
+#### High availability/disaster recovery
 **Question:** Are there any plans for enabling high availability scenarios with the gateway?  
 **Answer:** This is on the roadmap, but we don’t have a timeline yet.
 
@@ -198,7 +188,7 @@ You can use the third-party tool [Azure Speed Test app](http://azurespeedtest.az
 **Question:** What is the benefit of the recovery key?  
 **Answer:** It provides a way to migrate or recover your gateway settings after a disaster.
 
-#### Troubleshooting ####
+#### Troubleshooting
 **Question:** Where are the gateway logs?  
 **Answer:** See [Tools](gateway-reference.md#tools) later in this topic.
 
@@ -207,34 +197,27 @@ You can use the third-party tool [Azure Speed Test app](http://azurespeedtest.az
 
 You can also look at tools that your data source has for tracing queries. For example, you can use Extended Events or SQL Profiler for SQL Server and Analysis Services.
 
-## How the gateway works ##
-
+## How the gateway works
 ![How it works](./media/gateway-reference/gateway-arch.png)
 
 When a user interacts with an element that's connected to an on-premises data source:  
 
 1. The cloud service creates a query, along with the encrypted credentials for the data source, and sends the query to the queue for the gateway to process.
+2. The gateway cloud service analyzes the query and pushes the request to the [Azure Service Bus](https://azure.microsoft.com/documentation/services/service-bus/).
+3. The on-premises data gateway polls the Azure Service Bus for pending requests.
+4. The gateway gets the query, decrypts the credentials, and connects to the data source(s) with those credentials.
+5. The gateway sends the query to the data source for execution.
+6. The results are sent from the data source back to the gateway and then onto the cloud service. The service then uses the results.
 
-1. The gateway cloud service analyzes the query and pushes the request to the [Azure Service Bus](https://azure.microsoft.com/documentation/services/service-bus/).
+## Troubleshooting
+#### Update to the latest version
+A lot of issues can surface when the gateway version is out of date.  It is a good general practice to make sure you are on the latest version.  If you haven't updated the gateway for a month, or longer, you may want to consider installing the latest version of the gateway and see if you can reproduce the issue.
 
-1. The on-premises data gateway polls the Azure Service Bus for pending requests.
-
-1. The gateway gets the query, decrypts the credentials, and connects to the data source(s) with those credentials.
-
-1. The gateway sends the query to the data source for execution.
-
-1. The results are sent from the data source back to the gateway and then onto the cloud service. The service then uses the results.
-
-## Troubleshooting ##
-
-#### Update to the latest version ####
-A lot of issues can surface when the gateway version is out of date.  It is a good general practice to make sure you are on the latest version.  If you haven't updated the gateway for a month, or longer, you may want to consider installing the latest version of the gateway and see if you can reproduce the issue.
-
-#### Error: Failed to add user to group.  (-2147463168   PBIEgwService   Performance Log Users   ) ####
+#### Error: Failed to add user to group.  (-2147463168   PBIEgwService   Performance Log Users   )
 You may receive this error if you are trying to install the gateway on a domain controller, which isn't supported. You'll need to deploy the gateway on a machine that isn't a domain controller.
 
-## Tools ##
-#### Collecting logs from the gateway configurator ####
+## Tools
+#### Collecting logs from the gateway configurator
 You can collect several logs for the gateway. Always start with the logs!
 
 **Installer logs**
@@ -255,5 +238,6 @@ The **On-premises data gateway service** event logs are present under **Applicat
 
 ![Event logs](./media/gateway-reference/event-logs.png)
 
-#### Fiddler Trace ####
-[Fiddler](http://www.telerik.com/fiddler) is a free tool from Telerik that monitors HTTP traffic.  You can see the back and forth with the Power BI service from the client machine. This may show errors and other related information.
+#### Fiddler Trace
+[Fiddler](http://www.telerik.com/fiddler) is a free tool from Telerik that monitors HTTP traffic.  You can see the back and forth with the Power BI service from the client machine. This may show errors and other related information.
+

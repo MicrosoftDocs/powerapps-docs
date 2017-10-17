@@ -1,35 +1,33 @@
-<properties
-    pageTitle="Camera control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Camera control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Camera control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Camera control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Camera control in PowerApps #
+---
+# Camera control in PowerApps
 A control with which the user can take photos by using the camera on the device.
 
-## Description ##
+## Description
 If you add this control, the user can update a data source with one or more photos from wherever the app is running.
 
-## Key properties ##
-
+## Key properties
 **Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses.
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -66,32 +64,26 @@ If you add this control, the user can update a data source with one or more phot
 
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
 
-## Related functions ##
-
+## Related functions
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
-## Example ##
-### Add photos to an Image gallery control ###
+## Example
+### Add photos to an Image gallery control
 1. Add a **Camera** control, name it **MyCamera**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
-**Collect(MyPix, MyCamera.Photo)**
-
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, and then take a photo by clicking or tapping **MyCamera**.
-
-1. Add an **[Image gallery](control-gallery.md)** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
-
-1. Set the **[Items](properties-core.md)** property of the **Image gallery** control to this expression:<br>**MyPix.Url**.
-
-1. Set the **[Image](properties-visual.md)** property of the **Image** control in the gallery to this expression:<br>
-**ThisItem.Url**
-
-	The photo that you took appears in the **Image gallery** control.
-
-1. Take as many photos as you want, and then return to the default workspace by pressing Esc.
-
-1. (optional) Set the **OnSelect** property of the **Image** control in the **Image gallery** control to **Remove(MyPix, ThisItem)**, press F5, and then click or tap a photo to remove it.
+   **Collect(MyPix, MyCamera.Photo)**
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+   
+    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+2. Press F5, and then take a photo by clicking or tapping **MyCamera**.
+3. Add an **[Image gallery](control-gallery.md)** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
+4. Set the **[Items](properties-core.md)** property of the **Image gallery** control to this expression:<br>**MyPix.Url**.
+5. Set the **[Image](properties-visual.md)** property of the **Image** control in the gallery to this expression:<br>
+   **ThisItem.Url**
+   
+    The photo that you took appears in the **Image gallery** control.
+6. Take as many photos as you want, and then return to the default workspace by pressing Esc.
+7. (optional) Set the **OnSelect** property of the **Image** control in the **Image gallery** control to **Remove(MyPix, ThisItem)**, press F5, and then click or tap a photo to remove it.
 
 Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the photos locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
+

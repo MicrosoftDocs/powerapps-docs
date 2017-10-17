@@ -1,27 +1,27 @@
-<properties
-	pageTitle="Webinar listing | Microsoft PowerApps"
-	description="Displays a listing of past and future webinars, including time/date and topics covered."
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="anhthuchang"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: Webinar listing | Microsoft Docs
+description: Displays a listing of past and future webinars, including time/date and topics covered.
+services: ''
+suite: powerapps
+documentationcenter: na
+author: anhthuchang
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/13/2017"
-   ms.author="v-thuch"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/13/2017
+ms.author: v-thuch
 
-# PowerApps webinar listing #
+---
+# PowerApps webinar listing
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
-## Upcoming webinars ##
+## Upcoming webinars
 **Pro Series | Transitioning from InfoPath to PowerApps - Part 2**
 <br>by Audrie Gordon
 <br>*October 10th, 10:00AM PST, 1:00PM EST*
@@ -46,10 +46,10 @@ Discover new opportunities in connector services through Office Graph connection
 
 [Click here to watch on October 31st](https://www.youtube.com/watch?v=SwLNN3tPVNs)
 
-## Past webinars ##
+## Past webinars
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
 
-### Getting Started Webinar Series ###
+### Getting Started Webinar Series
 **Get started with gallery controls**
 <br>by Audrie Gordon
 [Register and watch now](https://info.microsoft.com/US-EAD-WBNR-FY17-02Feb-28-GettingStartedwithPowerAppsGalleries300759_01Registration-ForminBody.html)
@@ -74,7 +74,7 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Jono Luk
 [Watch now](https://info.microsoft.com/US-PowerBI-WBNR-FY17-04Apr-18-GettingStartedwiththeCommonDataServices312618_01Registration-ForminBody.html)
 
-### Pro Topics ###
+### Pro Topics
 **Deploying your PowerApps applications**
 <br>by James Oleinik
 [Watch now](https://www.youtube.com/watch?v=LF49hFB14Cs)
@@ -107,7 +107,7 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=EZ09dRuiWLw)
 
-### App Designer Topics ###
+### App Designer Topics
 **Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=YF3DKZxlUdM)
@@ -116,7 +116,3 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Karthik Bharathy
 [Watch now](https://www.youtube.com/watch?v=us85WpXe4cA)
 
-
-
-
-  	

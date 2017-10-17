@@ -1,38 +1,37 @@
-<properties
-    pageTitle="HTML text control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the HTML text control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'HTML text control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the HTML text control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# HTML text control in PowerApps #
+---
+# HTML text control in PowerApps
 A box that shows text and converts HTML tags to formatting.
 
-## Description ##
+## Description
 An **HTML text** control not only shows plain text and numbers but also converts HTML tags, such as non-breaking spaces.
 
-## Key properties ##
-
+## Key properties
 **[Color](properties-color-border.md)** – The color of text in a control.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **HTMLText** – Text that appears in an HTML text control and that may contain HTML tags.
 
-## Additional properties ##
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -73,12 +72,10 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
 
-## Example ##
-
+## Example
 1. Add a **[Label](control-text-box.md)** control, name it **Source**, and set its **[Text](properties-core.md)** property to this string:
 
 \<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization. \<p>
@@ -86,6 +83,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
 1. Add an **HTML text** control, and set its **HTMLText** property to this value:<br>
-**Source.Text**
+   **Source.Text**
+   
+     The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
- 	The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.

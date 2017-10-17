@@ -1,37 +1,35 @@
-<properties
-    pageTitle="Text-input control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the text-input control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Text-input control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the text-input control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Text input control in PowerApps #
+---
+# Text input control in PowerApps
 A box in which the user can type text, numbers, and other data.
 
-## Description ##
+## Description
 The user can specify data by typing into a text-input control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way.
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
-## Additional properties ##
-
+## Additional properties
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -128,44 +126,33 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**DateTimeValue**( *String* )](../functions/function-datevalue-timevalue.md)
 
-## Examples ##
-
-### Collect data ###
+## Examples
+### Collect data
 1. Add two text-input controls, and name them **inputFirst** and **inputLast**.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Add a button, set its **[Text](properties-core.md)** property to **Add**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
+   **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
+   
+    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+3. Add a text gallery in portrait/vertical orientation, set its **[Items](properties-core.md)** property to **Names**, and set the **[Text](properties-core.md)** property of **Subtitle1** to **ThisItem.FirstName**.
+4. (optional) In the template gallery, delete the bottom label, named **Body1**, and set the **[TemplateSize](control-gallery.md)** property of the gallery to **80**.
+5. Press F5, type a string of text into **inputFirst** and **inputLast**, and then click or tap the **Add** button.
+6. (optional) Add more names to the collection, and then press Esc to return to the default workspace.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Add a button, set its **[Text](properties-core.md)** property to **Add**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
-**Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
-
-	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-
-1. Add a text gallery in portrait/vertical orientation, set its **[Items](properties-core.md)** property to **Names**, and set the **[Text](properties-core.md)** property of **Subtitle1** to **ThisItem.FirstName**.
-
-1. (optional) In the template gallery, delete the bottom label, named **Body1**, and set the **[TemplateSize](control-gallery.md)** property of the gallery to **80**.
-
-1. Press F5, type a string of text into **inputFirst** and **inputLast**, and then click or tap the **Add** button.
-
-1. (optional) Add more names to the collection, and then press Esc to return to the default workspace.
-
-### Prompt for a password ###
+### Prompt for a password
 1. Add a text-input control, name it **inputPassword**, and set its **Mode** property to **Password**.
+2. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
+   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
+   
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+3. Press F5, and then type **P@ssw0rd** in **inputPassword**.
+   
+    When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
+4. To return to the default workspace, press Esc.
+5. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
+6. (optional) Add a button, configure its **[Text](properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
 
-1. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
-**If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
-
-	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, and then type **P@ssw0rd** in **inputPassword**.
-
-	When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
-
-1. To return to the default workspace, press Esc.
-
-1. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
-
-1. (optional) Add a button, configure its **[Text](properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.

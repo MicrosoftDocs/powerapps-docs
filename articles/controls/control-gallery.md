@@ -1,41 +1,39 @@
-<properties
-    pageTitle="Gallery control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Gallery control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="RickSaling"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Gallery control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Gallery control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: RickSaling
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="05/25/2017"
-   ms.author="ricksal"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 05/25/2017
+ms.author: ricksal
 
-# Gallery control in PowerApps #
+---
+# Gallery control in PowerApps
 A control that contains other controls and shows a set of data.
 
-## Description ##
+## Description
 A **Gallery** control can show multiple records from a data source, and each record can contain multiple types of data. For example, a **Gallery** control can show multiple contacts with each item showing contact information that includes a name, an address, and a phone number for each contact. Each data field appears in a separate control within the **Gallery** control, and you can configure those controls in its template. The template appears as the first item inside the gallery, on the left edge of a **Gallery** control in horizontal/landscape orientation and at the top of a **Gallery** control in vertical/portrait orientation. Any changes that you make in the template are reflected throughout the **Gallery** control.
 
 Predefined Gallery templates for showing images, text as well as a gallery with variable height items are available.
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **Selected** – The selected item.
 
-## Additional properties ##
-
+## Additional properties
 **AllItems** – All items in a gallery, including additional control values that are a part of the gallery's template.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -78,20 +76,20 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
 
-## Examples ##
-### Show and filter data ###
-- [Show text](control-text-box.md#show-data-in-a-gallery)
-- [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
-- [Filter data by selecting a list option](control-drop-down.md#example)
-- [Filter data by adjusting a slider](control-slider.md#example)
+## Examples
+### Show and filter data
+* [Show text](control-text-box.md#show-data-in-a-gallery)
+* [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
+* [Filter data by selecting a list option](control-drop-down.md#example)
+* [Filter data by adjusting a slider](control-slider.md#example)
 
-### Get data from the user ###
-- [Get text](control-text-input.md#collect-data)
-- [Get images](control-add-picture.md#add-images-to-an-image-gallery-control)
-- [Get photos](control-camera.md#example)
-- [Get sounds](control-microphone.md#example)
-- [Get drawings](control-pen-input.md#create-a-set-of-images)
+### Get data from the user
+* [Get text](control-text-input.md#collect-data)
+* [Get images](control-add-picture.md#add-images-to-an-image-gallery-control)
+* [Get photos](control-camera.md#example)
+* [Get sounds](control-microphone.md#example)
+* [Get drawings](control-pen-input.md#create-a-set-of-images)
+

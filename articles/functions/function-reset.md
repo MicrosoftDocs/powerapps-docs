@@ -1,29 +1,27 @@
-<properties
-	pageTitle="Reset function | Microsoft PowerApps"
-	description="Reference information, including syntax and an example, for the Reset function in PowerApps"
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="gregli-msft"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: Reset function | Microsoft Docs
+description: Reference information, including syntax and an example, for the Reset function in PowerApps
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="07/06/2017"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 07/06/2017
+ms.author: gregli
 
-# Reset function in PowerApps #
-
+---
+# Reset function in PowerApps
 Resets a control to its default value, discarding any user changes.  
 
-## Description ##
-
+## Description
 The **Reset** function resets a control to its **Default** property value.  Any user changes are discarded.
 
 You cannot reset controls that are within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control from outside those controls.  You can reset controls from formulas on controls within the same gallery or form.  You can also reset all the controls within a form with the [**ResetForm**](function-form.md) function. 
@@ -34,19 +32,16 @@ Input controls are also reset when their **Default** property changes.
 
 **Reset** has no return value, and you can use it only in [behavior formulas](../working-with-formulas-in-depth.md#behavior-formulas).
 
-## Syntax ##
-
+## Syntax
 **Reset**( *Control* )
 
-- *Control* – Required. The control to reset.
+* *Control* – Required. The control to reset.
 
-## Example ##
-
+## Example
 1. Insert a **Text input** control on a screen.  By default, it's name will be **TextInput1** and its **Default** property will be set to **"Text input"**.
 2. Type a new value in the text box.  
 3. Insert a **Button** control on the screen.
 4. Set the button's **OnSelect** property to **Reset( TextInput1 )**.
 5. Select the button.  This can be done even when authoring by selecting toward the ends of the control.
 6. The contents of the text box will return to the value of the **Default** property.
-
 

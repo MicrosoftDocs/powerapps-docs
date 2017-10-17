@@ -1,37 +1,35 @@
-<properties
-    pageTitle="Rating control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Rating control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Rating control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Rating control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Rating control in PowerApps #
+---
+# Rating control in PowerApps
 A control with which users can indicate a value between 1 and a maximum number that you specify.
 
-## Description ##
+## Description
 In this control, the user can indicate, for example, how much they liked something by selecting a certain number of stars.
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **Max** – The maximum value to which the user can set a slider or a rating.
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -70,28 +68,23 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Average**( *Value1*, *Value2,* ... )](../functions/function-aggregates.md)
 
-## Example ##
+## Example
 1. Add a **Rating** control, and name it **Quantitative**.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Add a **[Text input](control-text-input.md)** control, name it **Qualitative**, and move it below the **Rating** control.
+3. Set the **[Default](properties-core.md)** property of the **[Text input](control-text-input.md)** control to **""**, and set its **HintText** to this formula:
+   <br>**If(Quantitative.Value > 3, "What did you especially like?", "How might we do better?")**
+   
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+4. Press F5, and then click or tap either four or five stars in the **Rating** control.
+   
+    The hint text in the **[Text input](control-text-input.md)** control changes to reflect the high rating.
+5. Click or tap fewer than four stars in **Quantitative**.
+   
+    The hint text in the **[Text input](control-text-input.md)** control changes to reflect the low rating.
+6. To return to the default workspace, press Esc.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Add a **[Text input](control-text-input.md)** control, name it **Qualitative**, and move it below the **Rating** control.
-
-1. Set the **[Default](properties-core.md)** property of the **[Text input](control-text-input.md)** control to **""**, and set its **HintText** to this formula:
-<br>**If(Quantitative.Value > 3, "What did you especially like?", "How might we do better?")**
-
-	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, and then click or tap either four or five stars in the **Rating** control.
-
-	The hint text in the **[Text input](control-text-input.md)** control changes to reflect the high rating.
-
-1. Click or tap fewer than four stars in **Quantitative**.
-
-	The hint text in the **[Text input](control-text-input.md)** control changes to reflect the low rating.
-
-1. To return to the default workspace, press Esc.

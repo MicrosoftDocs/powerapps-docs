@@ -1,22 +1,22 @@
-<properties
-	pageTitle="Export and import resources | Microsoft PowerApps"
-	description="Export and import resources"
-	services="powerapps"
-	documentationCenter="na"
-	authors="nimakms"
-	manager="kfend"
-	editor=""
-	tags=""/>
+---
+title: Export and import resources | Microsoft Docs
+description: Export and import resources
+services: powerapps
+documentationcenter: na
+author: nimakms
+manager: kfend
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="07/28/2017"
-   ms.author="kfend"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 07/28/2017
+ms.author: kfend
 
+---
 # Export and import resources
 If you've created multiple environments to support the development of your database and apps, you must move changes from one environment to another environment. You can use **Export resources** and **Import resources** to move resources between environments.
 
@@ -36,41 +36,40 @@ The functionality for both resource import and resource export is available in t
 The export package will contain all changes to **entities, and picklists**. We are working to enable the export of more resource types such as apps, flows, connectors, roles and others. This option lets you move contents of one environment to another environment.
 
 1. In the [admin center](https://admin.powerapps.com), in the left navigation pane, click **Environments**.
-1. Select the source environment.
-1. In the upper right, click **Export resources**.
-1. Choose the resources you want to start with:
-	1. Select the tab corresponding to a resource type you want to select, such as **Entities**.
-	1. Select all resources under the type by clicking the header checkbox, or select resources individually.
-	1. Click **Next**.
-1. Include related resources if appropriate:
-	1. If we discover any related resources, we will show you a pre-selected list.
-	1. Exclude all related resources by clicking the header checkbox, or unselect resources individually.
-	1. Click **Next**.
-1. Add a **Name** for the exported package.
-1. Optionally, you can customize setup actions to be performed upon import of resources:
-	1. For each resource, click the **Import setup** to see a dialog.
-	2. Select the setup action you want performed by default when this package is imported
-	1. Click **Save**.
-1. Click **Export**.
-1. When export is completed, save the package file in local storage.
+2. Select the source environment.
+3. In the upper right, click **Export resources**.
+4. Choose the resources you want to start with:
+   1. Select the tab corresponding to a resource type you want to select, such as **Entities**.
+   2. Select all resources under the type by clicking the header checkbox, or select resources individually.
+   3. Click **Next**.
+5. Include related resources if appropriate:
+   1. If we discover any related resources, we will show you a pre-selected list.
+   2. Exclude all related resources by clicking the header checkbox, or unselect resources individually.
+   3. Click **Next**.
+6. Add a **Name** for the exported package.
+7. Optionally, you can customize setup actions to be performed upon import of resources:
+   1. For each resource, click the **Import setup** to see a dialog.
+   2. Select the setup action you want performed by default when this package is imported
+   3. Click **Save**.
+8. Click **Export**.
+9. When export is completed, save the package file in local storage.
 
 Alternatively, you can click **Select all resources** in the resource selection page to include all resources of all supported types in the final package, and go directly to the final export page.
 
 ### Import resources
-
 The first step is to select a package file that was exported from the source environment. The import process validates, analyzes, and tries to import the package.
 
 1. In the [admin center](https://admin.powerapps.com), in the navigation pane, click **Environments**.
-1. Select the target environment.
-1. In the upper right, click **Import resources**.
-1. Click **Upload**, and browse to a package file in local storage.
-1. Click **Next** to go to the final import page.
-1. Resolve import validation errors and warnings:
-	1. Look for warnings or errors, as indicated by the icon to the left of a resource **Name**.
-	1. Click the **Import setup** field or the icon under **Action** for more information.
-	1. Select an appropriate import setup action.
-	1. The package being imported is automatically validated again.
-1. Proceed to **Import** if there are no errors.
+2. Select the target environment.
+3. In the upper right, click **Import resources**.
+4. Click **Upload**, and browse to a package file in local storage.
+5. Click **Next** to go to the final import page.
+6. Resolve import validation errors and warnings:
+   1. Look for warnings or errors, as indicated by the icon to the left of a resource **Name**.
+   2. Click the **Import setup** field or the icon under **Action** for more information.
+   3. Select an appropriate import setup action.
+   4. The package being imported is automatically validated again.
+7. Proceed to **Import** if there are no errors.
 
 If the package is only partially applied, you receive an error message that describes what was imported and what wasn't imported.
 
@@ -80,9 +79,10 @@ The development process can involve changes to many types of resources. For exam
 ### Entities, picklists
 You can export and import entities, and picklists as follows:
 
-+ **Standard entities** – Only customizations are moved across environments. (You can't modify the out-of-box fields of standard entities.)
-+ **Custom entities** – Custom entities are moved across environments.
-+ **Custom picklists** – Custom picklists are moved across environments.
+* **Standard entities** – Only customizations are moved across environments. (You can't modify the out-of-box fields of standard entities.)
+* **Custom entities** – Custom entities are moved across environments.
+* **Custom picklists** – Custom picklists are moved across environments.
 
 ## Data
 You can't move database data as part of the export and import of resources. To move data, you can use Microsoft Excel. For more information, see [Import or export data](data-platform-export-data.md).
+

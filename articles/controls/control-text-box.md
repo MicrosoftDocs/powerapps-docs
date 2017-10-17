@@ -1,31 +1,30 @@
-<properties
-    pageTitle="Label control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the label control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Label control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the label control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Label control in PowerApps #
+---
+# Label control in PowerApps
 A box that shows data such as text, numbers, dates, or currency.
 
-## Description ##
+## Description
 A label shows data that you specify as a literal string of text, which appears exactly the way you type it, or as a formula that evaluates to a string of text. Labels often appear outside of any other control (such as a banner that identifies a screen), as a label that identifies another control (such as a rating or audio control), or in a gallery to show a specific type of information about an item.
 
-## Key properties ##
-
+## Key properties
 **[AutoHeight](properties-core.md)** – Set to true to allow the label to auto-grow its height to show all text configurated. Set to false to truncate the text to the height assigned.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
@@ -36,8 +35,7 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[DelayOutput](properties-core.md)** – Set to true to delay action during text input.
 
-## Additional properties ##
-
+## Additional properties
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **AutoHeight** – Whether a label automatically increases its **[Height](properties-size-location.md)** property if its **[Text](properties-core.md)** property contains more characters than the control can show at one time.
@@ -110,36 +108,31 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
+## Related functions
+[**Text**( *Number*, "*FormatCodes*" )](../functions/function-text.md)
 
-[**Text**( *Number*, "*FormatCodes*" )](function-text.md)
+## Examples
+### Show a literal string
+* Add a label, and set its **[Text](properties-core.md)** property to **"Hello, world"** (including the double quotation marks).
+  
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-## Examples ##
+### Show the result of a formula
+* Add a label, and set its **[Text](properties-core.md)** property to a formula such as this one:<br>
+  **Today()**
+  
+    **Note:** When you specify a formula, you don't use quotation marks unless an argument of the formula is a literal string. In that case, enclose the argument, not the formula, in double quotation marks.
+  
+    Want more information about the **[Today](../functions/function-now-today-istoday.md)** function or [other functions](../formula-reference.md)?
 
-### Show a literal string ###
-- Add a label, and set its **[Text](properties-core.md)** property to **"Hello, world"** (including the double quotation marks).
-
-	Don't know how to [add and configure a control](../add-configure-controls.md)?
-
-### Show the result of a formula ###
-
-- Add a label, and set its **[Text](properties-core.md)** property to a formula such as this one:<br>
-**Today()**
-
-	**Note:** When you specify a formula, you don't use quotation marks unless an argument of the formula is a literal string. In that case, enclose the argument, not the formula, in double quotation marks.
-
-	Want more information about the **[Today](../functions/function-now-today-istoday.md)** function or [other functions](../formula-reference.md)?
-
-### Show data in a gallery ###
+### Show data in a gallery
 In this procedure, you'll create a collection, called **CityPopulations**, that contains data about the population of various cities in Europe. Next, you'll show that data in a gallery that contains three labels, and you'll specify the type of data that each label will show.
 
 1. Add a button, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
-**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
+   **ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
+2. Press F5, select the button, and then press Esc.
+3. Add a text gallery, and set its **[Items](properties-core.md)** property to **CityPopulations**.
+   
+    When the gallery is selected, the right pane shows options for that gallery.
+4. In the **Gallery1** pane, set the top list to **Population**, set the middle list to **City**, and set the bottom list to **Country**.
 
-1. Press F5, select the button, and then press Esc.
-
-1. Add a text gallery, and set its **[Items](properties-core.md)** property to **CityPopulations**.
-
-	When the gallery is selected, the right pane shows options for that gallery.
-
-1. In the **Gallery1** pane, set the top list to **Population**, set the middle list to **City**, and set the bottom list to **Country**.

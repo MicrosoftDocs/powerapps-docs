@@ -1,41 +1,38 @@
-<properties
-	pageTitle="Char function | Microsoft PowerApps"
-	description="Reference information for the Char function in PowerApps, including syntax and examples"
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="gregli-msft"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: Char function | Microsoft Docs
+description: Reference information for the Char function in PowerApps, including syntax and examples
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/07/2015"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 11/07/2015
+ms.author: gregli
 
-# Char function in PowerApps #
-
+---
+# Char function in PowerApps
 Translates a character code into a string.
 
-## Description ##
-
+## Description
 The **Char** function returns a string that contains the appropriate ASCII character for your platform.
 
-## Syntax ##
-
+## Syntax
 **Char**( *CharacterCode* )
 
-- *CharacterCode* - Required. ASCII character code to translate.
+* *CharacterCode* - Required. ASCII character code to translate.
 
-## Examples ##
-
+## Examples
 | Formula | Description | Result |
-|---------|-------------|--------|
-| **Char( 65 )** | Returns the character that corresponds to ASCII code 65. | A |
-| **Char( 105 )** | Returns the character that corresponds to ASCII code 105. | i |
-| **Char( 35 )** | Returns the character that corresponds to ASCII code 35. | # |
+| --- | --- | --- |
+| **Char( 65 )** |Returns the character that corresponds to ASCII code 65. |A |
+| **Char( 105 )** |Returns the character that corresponds to ASCII code 105. |i |
+| **Char( 35 )** |Returns the character that corresponds to ASCII code 35. |# |
+

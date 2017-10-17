@@ -1,28 +1,28 @@
 
-<properties
-    pageTitle="Card control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Card control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="gregli-msft"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Card control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Card control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: gregli
 
-# Card control in PowerApps #
+---
+# Card control in PowerApps
 Provides the display and editing experience for a single field of a **[Display form](control-form-detail.md)** or **[Edit form](control-form-detail.md)** control.
 
-## Description ##
+## Description
 **[Display form](control-form-detail.md)** and **[Edit form](control-form-detail.md)** controls act as containers for displaying and viewing entire records. Each container can hold a set of **Card** controls that display individual fields or provide a way to update those fields. Each card has a **DataField** property that specifies which field of the record it works on.  
 
 Predefined cards are defined for different data types and user experiences.  For example, there may be a card to edit a number field with a **[Text input](control-text-input.md)** control, which is great for use with the keyboard. Another card might support editing a number by using a **[Slider](control-slider.md)** control instead. With the form control selected, you can, in the right-hand pane, easily select a card based on a field.
@@ -39,46 +39,45 @@ You can use the **Parent** reference to configure a control to reference the pro
 
 See [Understand data cards](../working-with-cards.md) for examples of how to customize, unlock, and create cards.
 
-## Key properties ##
+## Key properties
 **DataField** – The name of the field within a record that this card displays and edits.
 
-- Specify the name as a single static string that's enclosed in double quotation marks (for example, **"Name"**), not a formula.
-- Unbind a card by setting its **DataField** property *blank*. The **Valid** and **Update** properties are ignored for unbound cards.
+* Specify the name as a single static string that's enclosed in double quotation marks (for example, **"Name"**), not a formula.
+* Unbind a card by setting its **DataField** property *blank*. The **Valid** and **Update** properties are ignored for unbound cards.
 
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-- For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **[Default](properties-core.md)** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
+* For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **[Default](properties-core.md)** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
 
 **DisplayMode** – Values can be **Edit, View,** or **Disabled**. Configures whether the control inside the card allows user input (**Edit**), only displays data (**View**) or is disabled (**Disabled**).  
 
-- Allows a single card to be used in both edit and view forms, by configuring this property, which is tied to the Form's behavior by default.
-- In **View** mode, child controls such as **[Text input](control-text-input.md)**, **[Drop down](control-drop-down.md)**, **[Date Picker](control-date-picker.md)** will only display the text value and will not render any interactive elements or decorations.
+* Allows a single card to be used in both edit and view forms, by configuring this property, which is tied to the Form's behavior by default.
+* In **View** mode, child controls such as **[Text input](control-text-input.md)**, **[Drop down](control-drop-down.md)**, **[Date Picker](control-date-picker.md)** will only display the text value and will not render any interactive elements or decorations.
 
 **DisplayName** – The user friendly name for a field in a data source.
 
-- The **[DataSourceInfo](../functions/function-datasourceinfo.md)** function provides this metadata from the data source.
-- Controls within the card should use **Parent.DisplayName** to refer to the name of the field.
+* The **[DataSourceInfo](../functions/function-datasourceinfo.md)** function provides this metadata from the data source.
+* Controls within the card should use **Parent.DisplayName** to refer to the name of the field.
 
 **Error** – The user friendly error message to display for this field when validation fails.
 
-- This property is set when **SubmitForm** is called.  
-- The message describes validation problems based on the data source's metadata and checking the card's **Required** property.
+* This property is set when **SubmitForm** is called.  
+* The message describes validation problems based on the data source's metadata and checking the card's **Required** property.
 
 **Required** – Whether a card, editing the field of a data source, must contain a value.
 
-- The **[DataSourceInfo](../functions/function-datasourceinfo.md)** function provides the required metadata from the data source.
-- Controls within the card should use **Parent.Required** to determine whether that card's field is required.
+* The **[DataSourceInfo](../functions/function-datasourceinfo.md)** function provides the required metadata from the data source.
+* Controls within the card should use **Parent.Required** to determine whether that card's field is required.
 
 **Update** – The value to write back to the data source for a field.
 
-- Use this property's formula to pull the values from the edit controls of the card in order to write back to the data source. For example, set a card's **Update** property to **Slider.Value** to update the data source with a value from the slider in that card.
+* Use this property's formula to pull the values from the edit controls of the card in order to write back to the data source. For example, set a card's **Update** property to **Slider.Value** to update the data source with a value from the slider in that card.
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
 **[WidthFit](properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space in a container control such as an **[Edit form](control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](../working-with-form-layout.md).
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -93,10 +92,10 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). For a **[Card](controls/control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). For a **[Card](control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). For a **[Card](controls/control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). For a **[Card](control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
 
-## Examples ##
-
+## Examples
 See [Understand data cards](../working-with-cards.md) and [Understand data form layout](../working-with-form-layout.md) for examples.
+

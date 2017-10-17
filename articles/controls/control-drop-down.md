@@ -1,41 +1,39 @@
-<properties
-    pageTitle="Drop down control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Drop down control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Drop down control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Drop down control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Drop down control in PowerApps #
+---
+# Drop down control in PowerApps
 A list that shows only the first item unless the user opens it.
 
-## Description ##
+## Description
 A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices.
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[AZURE.INCLUDE [long-items](../../includes/long-items.md)]
+[!INCLUDE [long-items](../../includes/long-items.md)]
 
 **Selected** – The selected item.
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -116,28 +114,22 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Example ##
+## Example
 1. Add a **[Button](control-button.md)** control, and set its **[Text](properties-core.md)** property to show **Collect**.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Set the **[OnSelect](properties-core.md)** property of the **[Button](control-button.md)** control to this formula:
+   <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
+   
+    Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+3. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
+4. Add a **Drop down** control, name it **Countries**, and set its **[Items](properties-core.md)** property to this formula:
+   <br>**Distinct(CityPopulations, Country)**
+5. Add a **Text gallery** control in vertical/portrait orientation, and set its **[Items](properties-core.md)** property to this formula:
+   <br>**Filter(CityPopulations, Countries.Selected.Value in Country)**
+6. In the first item of the **Text gallery** control, set the **[Text](properties-core.md)** property of the upper **[Label](control-text-box.md)** control to **ThisItem.City**, and delete the bottom **[Label](control-text-box.md)** control.
+7. Set the **[TemplateSize](control-gallery.md)** property of the **Text gallery** control to **80**.
+8. Press F5, click or tap the chevron in the **Countries** list, and then choose an option in that list.
+   
+    The **Text gallery** control shows only those cities in the country that you chose.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Set the **[OnSelect](properties-core.md)** property of the **[Button](control-button.md)** control to this formula:
-<br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
-
-	Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
-
-1. Add a **Drop down** control, name it **Countries**, and set its **[Items](properties-core.md)** property to this formula:
-<br>**Distinct(CityPopulations, Country)**
-
-1. Add a **Text gallery** control in vertical/portrait orientation, and set its **[Items](properties-core.md)** property to this formula:
-<br>**Filter(CityPopulations, Countries.Selected.Value in Country)**
-
-1. In the first item of the **Text gallery** control, set the **[Text](properties-core.md)** property of the upper **[Label](control-text-box.md)** control to **ThisItem.City**, and delete the bottom **[Label](control-text-box.md)** control.
-
-1. Set the **[TemplateSize](control-gallery.md)** property of the **Text gallery** control to **80**.
-
-1. Press F5, click or tap the chevron in the **Countries** list, and then choose an option in that list.
-
-	The **Text gallery** control shows only those cities in the country that you chose.

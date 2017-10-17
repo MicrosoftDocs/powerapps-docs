@@ -1,39 +1,37 @@
-<properties
-    pageTitle="Audio and Video controls: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Audio and Video controls"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Audio and Video controls: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Audio and Video controls
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Audio and Video controls in PowerApps #
+---
+# Audio and Video controls in PowerApps
 A control that plays an audio file, a video file, or a video on YouTube.
 
-## Description ##
+## Description
 An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL.
 
-## Key properties ##
-
+## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.
 
 **Media** – An identifier for the clip that an audio or video control plays.
 
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
-## Additional properties ##
-
+## Additional properties
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.
 
 **AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
@@ -80,29 +78,23 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**First**( *TableName* )](../functions/function-first-last.md)
 
-## Examples ##
-### Play an audio or video file ###
+## Examples
+### Play an audio or video file
 1. On the **File** menu, click or tap **Media**, click or tap **Videos** or **Audio**, and then click or tap **Browse**.
+2. Browse to the file you want to use, click or tap it, and then click or tap **Open**.
+3. Press Esc to return to the default workspace, add an **Audio** or **Video** control, and set its **Media** property to the file that you added.
+   
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
+4. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
+   
+    **Tip:** The play button of the **Video** control appears when you hover over the control.
+5. Press Esc to return to the default workspace.
 
-1. Browse to the file you want to use, click or tap it, and then click or tap **Open**.
-
-1. Press Esc to return to the default workspace, add an **Audio** or **Video** control, and set its **Media** property to the file that you added.
-
-	Don't know how to [add and configure a control](../add-configure-controls.md)?
-
-1. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
-
-	**Tip:** The play button of the **Video** control appears when you hover over the control.
-
-1. Press Esc to return to the default workspace.
-
-### Play a YouTube video ###
+### Play a YouTube video
 1. Add a **Video** control, and set its **Media** property to the URL, enclosed in double quotation marks, of a YouTube video.
+2. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
+3. Press Esc to return to the default workspace.
 
-1. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
-
-1. Press Esc to return to the default workspace.

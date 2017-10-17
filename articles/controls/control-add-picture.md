@@ -1,33 +1,32 @@
-<properties
-    pageTitle="Add picture control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the Add picture control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Add picture control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Add picture control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Add picture control in PowerApps #
+---
+# Add picture control in PowerApps
 Takes a photo or loads images from the local device.
 
-## Description ##
+## Description
 With this control users can take photos or upload image files from their device and update the data source with this content. On a mobile device the user is presented with the device's choice dialog to choose between taking a photo or selecting one already available.
 
 This control is a composite control, made up of two controls.  Press or tap once to select the outer control that shows the image that has been loaded.  Press or tap again to select the inner label control.
 
-## Outer control properties ##
-
+## Outer control properties
 These properties apply to the outer control.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -68,8 +67,7 @@ These properties apply to the outer control.
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Inner text properties ##
-
+## Inner text properties
 These properties apply to the inner label control that by default says "Tap or click to add a picture".  To select this inner control, press or tap the **Add picture** control once, and then again.
 
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
@@ -102,33 +100,27 @@ These properties apply to the inner label control that by default says "Tap or c
 
 **[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
-## Related functions ##
-
+## Related functions
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
-## Example ##
-### Add images to an Image gallery control ###
+## Example
+### Add images to an Image gallery control
 1. Add an **Add picture** control, and then triple-click it.
-
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
-
-1. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
-**Collect(MyPix, AddMediaButton1.Media)**
-
-	Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-
-1. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **MyPix**.
-
-1. Press F5, and then click or tap the **[Button](control-button.md)** control.
-
-	The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Image gallery** control, set the **[ImagePosition](properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
-
-1. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **[Button](control-button.md)** control that you added.
-
-	The second image appears in the **Image gallery** control.
-
-1. (optional) Repeat the previous step one or more times, and then return to the default workspace by pressing Esc.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
+3. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
+   **Collect(MyPix, AddMediaButton1.Media)**
+   
+    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+4. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **MyPix**.
+5. Press F5, and then click or tap the **[Button](control-button.md)** control.
+   
+    The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Image gallery** control, set the **[ImagePosition](properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
+6. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **[Button](control-button.md)** control that you added.
+   
+    The second image appears in the **Image gallery** control.
+7. (optional) Repeat the previous step one or more times, and then return to the default workspace by pressing Esc.
 
 Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the images locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
+

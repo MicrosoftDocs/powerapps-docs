@@ -1,35 +1,33 @@
-<properties
-    pageTitle="PDF viewer control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the PDF viewer control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'PDF viewer control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the PDF viewer control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-    ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# PDF viewer control in PowerApps #
+---
+# PDF viewer control in PowerApps
 A control that shows the content of a PDF file.
 
-## Description ##
+## Description
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
-## Key properties ##
-
+## Key properties
 **Document** – The URL, enclosed in double-quotation marks, of a PDF file.
 
-## Additional properties ##
-
+## Additional properties
 **ActualZoom** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -90,10 +88,11 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
 
-## Example ##
-- Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>
-**"http://www.who.int/gho/publications/world_health_statistics/EN_WHS2015_TOC.pdf?ua=1"**
+## Example
+* Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>
+  **"http://www.who.int/gho/publications/world_health_statistics/EN_WHS2015_TOC.pdf?ua=1"**
+  
+    The control shows the PDF file.
+  
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-	The control shows the PDF file.
-
-	Don't know how to [add and configure a control](../add-configure-controls.md)?

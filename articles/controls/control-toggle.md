@@ -1,36 +1,35 @@
-<properties
-    pageTitle="Toggle control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the toggle control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Toggle control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the toggle control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Toggle control in PowerApps #
+---
+# Toggle control in PowerApps
 A control that the user can turn on or off by moving its handle.
 
-## Description ##
+## Description
 A toggle is designed for recent GUIs but behaves the same way as a check box.
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **[Value](properties-core.md)** – The value of an input control.
 
-## Additional properties ##
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -81,22 +80,19 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**If**( *Condition*, *Result* )](../functions/function-if.md)
 
-## Example ##
+## Example
 1. Add a toggle, and name it **MemberDiscount**.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Add a label, and set its **[Text](properties-core.md)** property to this formula:
+   <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
+   
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+3. Press F5, and change the value of **MemberDiscount**.
+   
+    The label shows a different price, depending on whether **MemberDiscount** is on or off.
+4. To return to the default workspace, press Esc.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Add a label, and set its **[Text](properties-core.md)** property to this formula:
-<br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
-
-	Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, and change the value of **MemberDiscount**.
-
-	The label shows a different price, depending on whether **MemberDiscount** is on or off.
-
-1. To return to the default workspace, press Esc.

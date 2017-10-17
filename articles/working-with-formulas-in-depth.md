@@ -1,27 +1,25 @@
-<properties
-	pageTitle="Understand behavior formulas | Microsoft PowerApps"
-	description="Reference information for working with behavior formulas"
-	services=""
-	suite="powerapps"
-	documentationCenter="na"
-	authors="gregli-msft"
-	manager="anneta"
-	editor=""
-	tags=""/>
+---
+title: Understand behavior formulas | Microsoft Docs
+description: Reference information for working with behavior formulas
+services: ''
+suite: powerapps
+documentationcenter: na
+author: gregli-msft
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="11/10/2015"
-   ms.author="gregli"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 11/10/2015
+ms.author: gregli
 
-# Understand behavior formulas in PowerApps #
-
-## Behavior formulas ##
-
+---
+# Understand behavior formulas in PowerApps
+## Behavior formulas
 Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might want to show the value in a **[Label](controls/control-text-box.md)** control in red if the value is less than zero or in black otherwise. So you can set the **[Color](controls/properties-color-border.md)** property of that control to this formula:
 <br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 
@@ -29,17 +27,18 @@ In this context, what does it mean when the user selects a **[Button](controls/c
 
 By selecting a **[Button](controls/control-button.md)** control, the user initiates a sequence of actions, or behaviors, that will change the state of the app:
 
-- Change the screen that's displayed: **[Back](functions/function-navigate.md)** and **[Navigate](functions/function-navigate.md)** functions.
-- Control a [signal](functions/signals.md): **[Enable](functions/function-enable-disable.md)** and **[Disable](functions/function-enable-disable.md)** functions.
-- Refresh, update, or remove items in a [data source](working-with-data-sources.md): **[Refresh](functions/function-refresh.md)**, **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)**, **[Patch](functions/function-patch.md)**, **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** functions.
-- Update a [context variable](working-with-variables.md#create-a-context-variable):  **[UpdateContext](functions/function-updatecontext.md)** function.
-- Create, update, or remove items in a [collection](working-with-data-sources.md#collections):  **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** functions.
+* Change the screen that's displayed: **[Back](functions/function-navigate.md)** and **[Navigate](functions/function-navigate.md)** functions.
+* Control a [signal](functions/signals.md): **[Enable](functions/function-enable-disable.md)** and **[Disable](functions/function-enable-disable.md)** functions.
+* Refresh, update, or remove items in a [data source](working-with-data-sources.md): **[Refresh](functions/function-refresh.md)**, **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)**, **[Patch](functions/function-patch.md)**, **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** functions.
+* Update a [context variable](working-with-variables.md#create-a-context-variable):  **[UpdateContext](functions/function-updatecontext.md)** function.
+* Create, update, or remove items in a [collection](working-with-data-sources.md#collections):  **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** functions.
 
 Because these functions change the state of the app, they can't be automatically recalculated. You can use them in the formulas for the **[OnSelect](controls/properties-core.md)**, **[OnVisible](controls/control-screen.md)**, **[OnHidden](controls/control-screen.md)**, and other **On...** properties, which are called behavior formulas.
 
-### More than one action ###
+### More than one action
 Use semicolons to create a list of actions to perform. For example, you might want to update a context variable and then return to the previous screen:
 
-- **UpdateContext( { x: 1 } ); Back()**
+* **UpdateContext( { x: 1 } ); Back()**
 
 Actions are performed in the order in which they appear in the formula.  The next function won't start until the current function has completed. If an error occurs, subsequent functions might not start.
+

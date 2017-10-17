@@ -1,31 +1,30 @@
-<properties
-    pageTitle="Slider control: reference | Microsoft PowerApps"
-    description="Information, including properties and examples, about the slider control"
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="fikaradz"
-    manager="anneta"
-    editor=""
-    tags=""/>
+---
+title: 'Slider control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the slider control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
 
-<tags
-   ms.service="powerapps"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="na"
-   ms.date="10/25/2016"
-   ms.author="fikaradz"/>
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
 
-# Slider control in PowerApps #
+---
+# Slider control in PowerApps
 A control with which the user can specify a value by dragging a handle.
 
-## Description ##
+## Description
 The user can indicate a value, between a minimum and a maximum value that you specify, by dragging the handle of a slider left-right or up-down, depending on the direction that you choose.
 
-## Key properties ##
-
+## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **Max** – The maximum value to which the user can set a slider or a rating.
@@ -34,8 +33,7 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **[Value](properties-core.md)** – The value of an input control.
 
-## Additional properties ##
-
+## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -92,29 +90,22 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-## Related functions ##
-
+## Related functions
 [**Sum**( *Value1*, *Value2* )](../functions/function-aggregates.md)
 
-## Example ##
+## Example
 1. Add a button, and set its **[OnSelect](properties-core.md)** property to this formula:
-<br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
+   <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+   
+    Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+2. Press F5, select the button, and then press Esc.
+3. Add a slider, move it below the button, and name the slider **MinPopulation**.
+4. Set the slider's **Max** property to **5000000** and its **Min** property to **1000000**.
+5. Add a text gallery in vertical/portrait orientation, move it below the slider, and set the gallery's **[Items](properties-core.md)** property to this formula:<br>
+   **Filter(CityPopulations, Population > MinPopulation)**
+6. In the first item of the gallery, set the **[Text](properties-core.md)** property of the top label to **ThisItem.City**, and set the **[Text](properties-core.md)** property of the bottom label to this formula:<br> **Text(ThisItem.Population, "##,###")**
+7. Press F5, and then adjust **MinPopulation** to show only those cities that have a population that's greater than the value that you specify.
+8. To return to the default workspace, press Esc.
 
-	Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-	Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-
-1. Press F5, select the button, and then press Esc.
-
-1. Add a slider, move it below the button, and name the slider **MinPopulation**.
-
-1. Set the slider's **Max** property to **5000000** and its **Min** property to **1000000**.
-
-1. Add a text gallery in vertical/portrait orientation, move it below the slider, and set the gallery's **[Items](properties-core.md)** property to this formula:<br>
-**Filter(CityPopulations, Population > MinPopulation)**
-
-1. In the first item of the gallery, set the **[Text](properties-core.md)** property of the top label to **ThisItem.City**, and set the **[Text](properties-core.md)** property of the bottom label to this formula:<br> **Text(ThisItem.Population, "##,###")**
-
-1. Press F5, and then adjust **MinPopulation** to show only those cities that have a population that's greater than the value that you specify.
-
-1. To return to the default workspace, press Esc.
