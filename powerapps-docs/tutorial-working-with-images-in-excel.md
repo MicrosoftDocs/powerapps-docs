@@ -20,7 +20,7 @@ ms.author: anneta
 # How to save images in an Excel file, and then add these images to your app
 &nbsp;
 
-[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+[!INCLUDE [app-customization-requirements](includes/app-customization-requirements.md)]
 
 * Learn how to [add a data source](add-data-connection.md)
 

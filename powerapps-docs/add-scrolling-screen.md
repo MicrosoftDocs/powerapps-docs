@@ -25,7 +25,7 @@ When you add multiple controls in a section, the controls maintain their relativ
 
 &nbsp;
 
-[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+[!INCLUDE [app-customization-requirements](includes/app-customization-requirements.md)]
 
 ## Create a scrolling screen
 1. On the **Home** tab, click or tap **New screen**:

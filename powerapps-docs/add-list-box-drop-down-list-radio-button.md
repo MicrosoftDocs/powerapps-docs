@@ -22,7 +22,7 @@ PowerApps includes multi-select and single-select options, including a list box,
 
 &nbsp;
 
-[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+[!INCLUDE [app-customization-requirements](includes/app-customization-requirements.md)]
 
 ## Add a list box
 1. On the **Insert** tab, select **Controls**, and then select **List box**:  
