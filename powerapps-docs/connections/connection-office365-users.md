@@ -29,7 +29,7 @@ This topic shows you how to add Office 365 Users as a connection, add Office 365
 
 &nbsp;
 
-[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
 ## Add a connection
 1. [Add a data connection](../add-data-connection.md) and select **Office 365 Users**:  

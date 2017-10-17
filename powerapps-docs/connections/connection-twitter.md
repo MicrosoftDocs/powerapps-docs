@@ -29,7 +29,7 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 
 &nbsp;
 
-[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
 ## Connect to Twitter
 1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
