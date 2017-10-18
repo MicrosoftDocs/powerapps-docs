@@ -170,7 +170,7 @@
     href: sharepoint-scenario-summary.md
   - name: Integrate Cognitive Services
     href: cognitive-services-api.md
-- name: Develop: enterprise developers
+- name: "Develop: enterprise developers"
   items:
   - name: PowerApps for enterprise developers
     href: dev-enterprise-intro.md
@@ -186,7 +186,7 @@
     href: embed-apps-dev.md
   - name: Develop offline-capable apps
     href: offline-apps.md
-- name: Develop: partners and ISVs
+- name: "Develop: partners and ISVs"
   items:
   - name: PowerApps for Microsoft partners and ISVs
     href: dev-isv-partner-intro.md
