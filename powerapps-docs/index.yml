@@ -1,0 +1,21 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Microsoft Flow Docs
+metadata:
+  title: Microsoft Flow docs, videos, reference and more
+  description: Get started creating, sharing and managing flows using the resources here. You can start with a simple button, or create your own approval flows.
+  author: SKjerland
+  manager: anneta
+  layout: LandingPage
+  ms.assetid: 
+  ms.service: powerapps
+  ms.tgt_pltfrm: na
+  ms.devlang: na
+  ms.topic: landing-page
+  ms.date: 10/20/2017
+  ms.author: sharik
+sections:
+- items:
+  - type: markdown
+    text: |
+      Welcome to PowerApps. This landing page will look like the [Microsoft Flow landing page](https://docs.microsoft.com/en-us/flow/) when it's done.
