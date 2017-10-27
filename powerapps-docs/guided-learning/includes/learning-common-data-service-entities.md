@@ -1,26 +1,3 @@
----
-title: Understand Common Data Service entities | Microsoft Docs
-description: Define and use entities that map to your business data and processes
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: JJa6n_YaD-w
-courseduration: 8m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Understand entities
 In the first topic in this section, we introduced you to the Common Data Service, which includes a common data model. The model in turn contains entities. Entities are chunks of shared data that can be modified, stored, retrieved, and interacted with. In this topic, you'll learn more about entities, fields, and data types.
 
 ## Standard entities
