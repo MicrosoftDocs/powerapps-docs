@@ -1,0 +1,37 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: Managing apps
+metadata:
+  title: Managing apps | Microsoft PowerApps
+  title: Managing apps
+  description: TODO
+  level: Beginner
+  nextTutorialHref: TODO
+  nextTutorialTitle: TODO
+  displayType: one-column
+  author: mgblythe
+  manager: anneta
+  ms.service: powerapps
+  ms.topic: get-started-article
+  ms.date: 10/27/2017
+  ms.author: mblythe
+items:
+- durationInMinutes: 1
+  content: |
+    TODO: Opening paragraph.
+- title: Share your apps | Microsoft Docs
+  durationInMinutes:  5m
+  content: |
+    > [!Video https://www.youtube.com/embed/_nUU7oOy4oU?rel=0]
+
+    [!INCLUDE [](includes/learning-manage-share-apps.md)]
+- title: Version your apps | Microsoft Docs
+  durationInMinutes:  1m
+  content: |
+    [!INCLUDE [](includes/learning-manage-version-apps.md)]
+- title: Environments | Microsoft Docs
+  durationInMinutes:  8m
+  content: |
+    > [!Video https://www.youtube.com/embed/32olG9uCmBU?rel=0]
+
+    [!INCLUDE [](includes/learning-manage-environments.md)]

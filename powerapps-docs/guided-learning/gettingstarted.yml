@@ -1,0 +1,55 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: Getting started
+metadata:
+  title: Getting started | Microsoft PowerApps
+  title: Getting started
+  description: TODO
+  level: Beginner
+  nextTutorialHref: TODO
+  nextTutorialTitle: TODO
+  displayType: one-column
+  author: mgblythe
+  manager: anneta
+  ms.service: powerapps
+  ms.topic: get-started-article
+  ms.date: 10/27/2017
+  ms.author: mblythe
+items:
+- durationInMinutes: 1
+  content: |
+    TODO: Opening paragraph.
+- title: Introducing PowerApps | Microsoft Docs
+  durationInMinutes:  5m
+  content: |
+    > [!Video https://www.youtube.com/embed/n9fkvkekINE?rel=0]
+
+    [!INCLUDE [](includes/learning-introducing-powerapps.md)]
+- title: Parts of PowerApps | Microsoft Docs
+  durationInMinutes:  6m
+  content: |
+    > [!Video https://www.youtube.com/embed/r6mowYePq1Q?rel=0]
+
+    [!INCLUDE [](includes/learning-powerapps-parts.md)]
+- title: Related technologies | Microsoft Docs
+  durationInMinutes:  6m
+  content: |
+    > [!Video https://www.youtube.com/embed/C81IfqIn9LI?rel=0]
+
+    [!INCLUDE [](includes/learning-related-technologies.md)]
+- title: A quick look at creating apps | Microsoft Docs
+  durationInMinutes:  6m
+  content: |
+    > [!Video https://www.youtube.com/embed/NOv3kacXqho?rel=0]
+
+    [!INCLUDE [](includes/learning-quick-look-powerapps.md)]
+- title: Create your first app | Microsoft Docs
+  durationInMinutes:  5m
+  content: |
+    > [!Video https://www.youtube.com/embed/ixRpT48Z6IQ?rel=0]
+
+    [!INCLUDE [](includes/learning-create-first-app-powerapps.md)]
+- title: Review this section | Microsoft Docs
+  durationInMinutes:  2m
+  content: |
+    [!INCLUDE [](includes/learning-review-section-one.md)]
