@@ -1,0 +1,10 @@
+- name: Getting started
+  href: gettingstarted.yml#step-1
+- name: Creating an app from SharePoint
+  href: creatinganappspo.yml#step-1
+- name: Creating an app from the Common Data Service
+  href: creatinganappcds.yml#step-1
+- name: Managing apps
+  href: managingapps.yml#step-1
+- name: Managing data
+  href: managingdata.yml#step-1
