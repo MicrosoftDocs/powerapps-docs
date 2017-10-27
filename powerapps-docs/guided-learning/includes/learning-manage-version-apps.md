@@ -1,26 +1,3 @@
----
-title: Version your apps | Microsoft Docs
-description: Control which version of an app is used and shared
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: ''
-courseduration: 1m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Version your apps
 If something goes wrong or you save a change to an app you shouldn't have, it's good to know that PowerApps can help you out. For apps that are saved in the cloud, PowerApps keeps a history of the changes that you make. You can view the versions that are saved and restore your app to a previous version if necessary. Be aware that if the app is shared, the people you shared with also receive the restored version.
 
 ## How to version an app
