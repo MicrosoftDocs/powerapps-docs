@@ -1,26 +1,3 @@
----
-title: Generate an app (SharePoint list) | Microsoft Docs
-description: Generate a three screen app from a SharePoint list
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: m6KfAwEdtYU
-courseduration: 3m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Generate an app (SharePoint list)
 In this section of the course, we'll create an app from a "Flooring Estimates" SharePoint list. The app could be used by someone, such as an estimator out at customer sites, to refer to the list and keep it up-to-date. In the Getting Started section, we showed you how to generate an app from the same list - so why look at it again? First, instead of starting in PowerApps Studio, we now show you how PowerApps is integrated into SharePoint Online. Second, we dig deeper into how the app is put together, and show you how to customize it. You'll definitely get some new information going through this section, so let's jump in!
 
 ## Generate the app

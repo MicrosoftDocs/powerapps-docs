@@ -1,0 +1,45 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: Creating an app from SharePoint
+metadata:
+  title: Creating an app from SharePoint | Microsoft PowerApps
+  title: Creating an app from SharePoint
+  description: TODO
+  level: Beginner
+  nextTutorialHref: TODO
+  nextTutorialTitle: TODO
+  displayType: one-column
+  author: mgblythe
+  manager: anneta
+  ms.service: powerapps
+  ms.topic: get-started-article
+  ms.date: 10/27/2017
+  ms.author: mblythe
+items:
+- durationInMinutes: 1
+  content: |
+    TODO: Opening paragraph.
+- title: Generate an app (SharePoint list) | Microsoft Docs
+  durationInMinutes:  3m
+  content: |
+    > [!Video https://www.youtube.com/embed/m6KfAwEdtYU?rel=0]
+
+    [!INCLUDE [](includes/learning-spo-app-generate.md)]
+- title: Explore a generated app (SharePoint list) | Microsoft Docs
+  durationInMinutes:  5m
+  content: |
+    > [!Video https://www.youtube.com/embed/OJ8a9VINeKU?rel=0]
+
+    [!INCLUDE [](includes/learning-spo-app-explore-controls.md)]
+- title: Customize the app (SharePoint list) | Microsoft Docs
+  durationInMinutes:  5m
+  content: |
+    > [!Video https://www.youtube.com/embed/KydeusvKndQ?rel=0]
+
+    [!INCLUDE [](includes/learning-spo-app-customize.md)]
+- title: Explore app formulas (SharePoint list) | Microsoft Docs
+  durationInMinutes:  9m
+  content: |
+    > [!Video https://www.youtube.com/embed/9TBA19YU7EA?rel=0]
+
+    [!INCLUDE [](includes/learning-spo-app-explore-formulas.md)]
