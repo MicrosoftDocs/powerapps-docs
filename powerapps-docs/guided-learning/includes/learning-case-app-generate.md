@@ -1,26 +1,3 @@
----
-title: Generate an app (Common Data Service) | Microsoft Docs
-description: Generate a three screen app from the Common Data Service
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: Gi5TQF7_pz8
-courseduration: 6m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Generate an app (Common Data Service)
 In this section of the course, we'll create an app based on *entities* in the Common Data Service. Entities are chunks of shared data that can be modified, stored, retrieved, and interacted with. We'll generate the app from an entity, show you how to customize the app, add another data source, and call a flow from the app. If you already completed the section on creating an app from a SharePoint list, we will cover some of the same territory but in more depth, especially around customizing the app.
 
 We'll create a case-management app that an IT department could use to track, prioritize, and act on hardware and software issues across an organization. As you go through the topics, you might also think of other uses for an app like this. We're using data from the Common Data Service because it's well-suited to storing app data, but you could build the same app with a different data source.

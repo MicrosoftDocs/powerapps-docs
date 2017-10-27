@@ -1,26 +1,3 @@
----
-title: Add a data source and flow (Common Data Service) | Microsoft Docs
-description: Bring in additional data and trigger a flow from the app
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: Y057qUJ2NNk
-courseduration: 11m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Add a data source and flow (Common Data Service)
 So far in this section, we have generated an app based on the Case entity from the Common Data Service, explored the app to see how it's put together, and customized the app in several ways. In the final topic for this section, we will bring in another standard entity, and use Microsoft Flow to send an email. The app will trigger a flow so that the person who opened a case is notified when the case is updated. We're completing a particular scenario in this topic, but the skills you learn are applicable across many kinds of apps. Let's get started with the entities.
 
 ## Review entity relationships
