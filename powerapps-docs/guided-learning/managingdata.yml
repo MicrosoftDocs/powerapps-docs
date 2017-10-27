@@ -1,0 +1,51 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: Managing data
+metadata:
+  title: Managing data | Microsoft PowerApps
+  title: Managing data
+  description: TODO
+  level: Beginner
+  nextTutorialHref: TODO
+  nextTutorialTitle: TODO
+  displayType: one-column
+  author: mgblythe
+  manager: anneta
+  ms.service: powerapps
+  ms.topic: get-started-article
+  ms.date: 10/27/2017
+  ms.author: mblythe
+items:
+- durationInMinutes: 1
+  content: |
+    TODO: Opening paragraph.
+- title: The Common Data Service | Microsoft Docs
+  durationInMinutes:  5m
+  content: |
+    > [!Video https://www.youtube.com/embed/os33pHQ9jSU?rel=0]
+
+    [!INCLUDE [](includes/learning-common-data-service.md)]
+- title: Understand Common Data Service entities | Microsoft Docs
+  durationInMinutes:  8m
+  content: |
+    > [!Video https://www.youtube.com/embed/JJa6n_YaD-w?rel=0]
+
+    [!INCLUDE [](includes/learning-common-data-service-entities.md)]
+- title: Create custom entities | Microsoft Docs
+  durationInMinutes:  6m
+  content: |
+    > [!Video https://www.youtube.com/embed/qg25q3MjFBo?rel=0]
+
+    [!INCLUDE [](includes/learning-common-data-service-custom-entities.md)]
+- title: Manage entity data | Microsoft Docs
+  durationInMinutes:  7m
+  content: |
+    > [!Video https://www.youtube.com/embed/n6RizzixvxM?rel=0]
+
+    [!INCLUDE [](includes/learning-common-data-service-manage.md)]
+- title: Common Data Service security | Microsoft Docs
+  durationInMinutes:  8m
+  content: |
+    > [!Video https://www.youtube.com/embed/uwm8ghMUCeI?rel=0]
+
+    [!INCLUDE [](includes/learning-common-data-service-security.md)]

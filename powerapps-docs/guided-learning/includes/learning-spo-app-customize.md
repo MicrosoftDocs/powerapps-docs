@@ -1,26 +1,3 @@
----
-title: Customize the app (SharePoint list) | Microsoft Docs
-description: Update app screens, controls, and fields
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: KydeusvKndQ
-courseduration: 5m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Customize the app (SharePoint list)
 In the first two topics in this section, you generated an app from a SharePoint list and explored the app to get a better understanding of how three screen apps are composed. The app that PowerApps generated is useful, but you will often customize an app after it's generated. In this topic, we'll walk through some basic changes for each screen in the app. There is a lot more you can do to customize an app - we'll get to that in later topics. In the meantime, you can take what you learn in this topic and build on it. Take any app you generate-from a list, an Excel file, or another source-and see how you can customize it. It really is the best way to learn how apps are put together.
 
 ## Browse screen

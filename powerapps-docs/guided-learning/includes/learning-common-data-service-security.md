@@ -1,26 +1,3 @@
----
-title: Common Data Service security | Microsoft Docs
-description: Use role-based security to control access to entities
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: uwm8ghMUCeI
-courseduration: 8m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Common Data Service security
 In this topic, we'll cover security in the Common Data Service. The service uses a role-based system to grant users permissions to data. The security model is a hierarchy, with each level representing a different level of access. At the lowest level are individual create, read, update, and delete permissions on a single entity. A collection of these entity-level permissions forms a permission set. One or more permission sets can then be used by a role. A role is at the top level - encompassing all the permissions needed by a user or a group of users.
 
 ## Understanding roles and permission sets

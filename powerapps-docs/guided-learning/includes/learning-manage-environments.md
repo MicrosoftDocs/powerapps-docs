@@ -1,26 +1,3 @@
----
-title: Environments | Microsoft Docs
-description: Work with containers for apps, connections, and other resources
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: 32olG9uCmBU
-courseduration: 8m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# PowerApps Environments
 If you have followed along with the course so far, you've spent some time working in web.powerapps.com. Whether you knew it or not, you have been working in a specific *environment* the whole time. An environment is simply a grouping of apps and other resources (more on this in a minute). Look at the upper right of the screen in web.powerapps.com, and you see a drop-down menu that shows your current environment.
 
 ![Environment picker](./media/learning-manage-environments/environment-picker.png)

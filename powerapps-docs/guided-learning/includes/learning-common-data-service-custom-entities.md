@@ -1,26 +1,3 @@
----
-title: Create custom entities | Microsoft Docs
-description: Extend the common data model with custom entities
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: qg25q3MjFBo
-courseduration: 6m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Create custom entities
 The Common Data Service is designed for all our business customers, from the smallest shops to the largest enterprises. The common data model includes a set of standard entities that address many common business scenarios, and you saw in the previous topic that you can extend those standard entities if necessary. But sometimes you need something completely different to solve problems specific to your business. In that case you need a custom entity, and we'll show you how to build one in this topic.
 
 There are two ways to create an entity:

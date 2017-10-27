@@ -1,26 +1,3 @@
----
-title: Manage entity data | Microsoft Docs
-description: Work with data in the service and Excel
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: n6RizzixvxM
-courseduration: 7m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Manage entity data
 In this topic, we'll cover data management in the Common Data Service. We have touched on importing and exporting data in other topics, but we'll spend more time now on working with data in Excel.
 
 ## Import data from Excel or CSV

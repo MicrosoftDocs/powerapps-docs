@@ -1,26 +1,3 @@
----
-title: Review this section | Microsoft Docs
-description: Review what you learned in this introduction to PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: ''
-courseduration: 2m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Review the first section
 Let's do a quick review of what you learned in the first section.
 
 **PowerApps** is a collection of software services and apps that work together to fundamentally transform and accelerate how you build and share custom line of business applications.

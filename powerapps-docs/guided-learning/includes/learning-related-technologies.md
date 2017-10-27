@@ -1,26 +1,3 @@
----
-title: Related technologies | Microsoft Docs
-description: Key technologies that you use with PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: C81IfqIn9LI
-courseduration: 6m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Related technologies
 The following technologies are often used with PowerApps to build and share robust apps across your organization. Your apps can integrate data from multiple sources and include workflows that automate tasks. 
 
 * **Microsoft Flow** - create automated workflows between your favorite apps and services

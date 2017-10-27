@@ -1,26 +1,3 @@
----
-title: Parts of PowerApps | Microsoft Docs
-description: See the different parts of PowerApps, and how they relate
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: r6mowYePq1Q
-courseduration: 6m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# The parts of PowerApps
 In the first Guided Learning topic you read about the main parts of PowerApps. Now we're going to provide a little more detail on each of the parts. PowerApps is a set of software services and apps that work together, and there are related technologies that help make this a powerful ecosystem. The PowerApps components are:
 
 * **web.powerapps.com** - manage and share the apps you build

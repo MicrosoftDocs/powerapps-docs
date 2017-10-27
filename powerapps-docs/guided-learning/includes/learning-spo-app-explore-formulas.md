@@ -1,26 +1,3 @@
----
-title: Explore app formulas (SharePoint list) | Microsoft Docs
-description: Use formulas to further customize app behavior
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: 9TBA19YU7EA
-courseduration: 9m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Explore app formulas (SharePoint list)
 One of the major benefits of PowerApps is not having to write traditional application code - you don't have to be a developer to create apps! But you still need a way to express logic in an app and to control an app's navigation, filtering, sorting, and other functionality. This is where formulas come in. If you have used Excel formulas, the approach that PowerApps takes should feel familiar. In this topic, we'll show a couple of basic formulas for text formatting and then walk through three of the formulas that PowerApps includes in the generated app. You will get a taste of what formulas can do. Then you can spend some time looking at other formulas in the generated app and writing your own.
 
 ## Understanding formulas and properties

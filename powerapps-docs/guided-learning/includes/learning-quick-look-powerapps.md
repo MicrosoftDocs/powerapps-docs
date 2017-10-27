@@ -1,26 +1,3 @@
----
-title: A quick look at creating apps | Microsoft Docs
-description: Look at the different ways you can create apps
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: NOv3kacXqho
-courseduration: 6m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# A quick look at creating apps in PowerApps
 Now that you know the basics of PowerApps, let's jump into **a quick tour of how to get started with apps**. We'll look at sample apps, creating apps from a template, using shared apps, and creating apps from a data source. In the next topic, we will get more hands-on with app creation.
 
 ## Check out some sample apps

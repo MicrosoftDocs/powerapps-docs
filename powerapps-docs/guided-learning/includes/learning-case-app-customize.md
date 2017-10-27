@@ -1,26 +1,3 @@
----
-title: Customize the app (Common Data Service) | Microsoft Docs
-description: Update app screens, controls, and fields
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: wHy72cOe8Os
-courseduration: 12m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Customize the app (Common Data Service)
 In the first two topics in this section, you generated an app from a Common Data Service entity and explored the app to get a better understanding of how three screen apps are composed. The app that PowerApps generated is useful, but you will often customize an app after it's generated. In this topic, we'll walk through some changes for the browse screen of the app. You can customize any of the screens, but we wanted to focus on one and provide a bit more depth to the customizations. We encourage you to take any app you generate - from an entity, an Excel file, or another source - and see how you can customize it. It really is the best way to learn how apps are put together.
 
 ## Change gallery and data bindings

@@ -1,26 +1,3 @@
----
-title: Introducing PowerApps | Microsoft Docs
-description: Understand what PowerApps is, and its software elements
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: n9fkvkekINE
-courseduration: 5m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Guided Learning for PowerApps
 Welcome to  **Guided Learning**  for **Microsoft PowerApps**. This self-paced online course explains PowerApps in a sequential way, so you can build your knowledge from the ground up.
 
 This  **Guided Learning**  course contains many sections, and each section has many topics. The course is designed to provide guidance in understandable chunks, with a logical flow that helps you learn concepts, see details, and walk through examples. It includes lots of visuals to help you learn, too.

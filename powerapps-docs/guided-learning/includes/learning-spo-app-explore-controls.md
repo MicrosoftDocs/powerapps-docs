@@ -1,26 +1,3 @@
----
-title: Explore a generated app (SharePoint list) | Microsoft Docs
-description: Explore screens and controls from the app
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: OJ8a9VINeKU
-courseduration: 5m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Explore the generated app (SharePoint list)
 In this topic, we look more closely at the generated app - reviewing the screens and controls that define the app's behavior. We won't go through all the details, but seeing more about how this app works will help you to build your own apps. In a later topic, we'll look at the formulas that work with screens and controls.
 
 ## Understanding controls in PowerApps

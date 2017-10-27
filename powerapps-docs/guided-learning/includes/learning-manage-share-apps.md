@@ -1,26 +1,3 @@
----
-title: Share your apps | Microsoft Docs
-description: Share apps with colleagues and others
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
-featuredvideoid: _nUU7oOy4oU
-courseduration: 5m
-
-ms.service: powerapps
-ms.devlang: na
-ms.topic: get-started-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 12/09/2016
-ms.author: mblythe
-
----
-# Share your apps
 It's great to build apps that address your own business needs, but the real magic of PowerApps comes from sharing those apps with others. Now that you know how to build an app, in this topic you will learn how to share it. You can share an app with specific users or groups, or you can share it with your entire organization. When you share an app with someone, they can run it from Dynamics 365 in a browser or in PowerApps Mobile for Windows, iOS, or Android. If you give someone contributor permissions, they can also update the app.
 
 ## Prepare to share an app
