@@ -3,8 +3,8 @@ documentType: Tutorial
 title: Creating an app from SharePoint
 metadata:
   title: Creating an app from SharePoint | Microsoft PowerApps
-  title: Creating an app from SharePoint
   description: TODO
+  audience: Business User
   level: Beginner
   nextTutorialHref: TODO
   nextTutorialTitle: TODO
@@ -43,3 +43,5 @@ items:
     > [!Video https://www.youtube.com/embed/9TBA19YU7EA?rel=0]
 
     [!INCLUDE [](includes/learning-spo-app-explore-formulas.md)]
+- content: |
+    You've completed the **Creating an app from SharePoint** section of Microsoft Power BI Guided Learning.
