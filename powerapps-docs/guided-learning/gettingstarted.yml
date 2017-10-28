@@ -6,8 +6,8 @@ metadata:
   description: TODO
   audience: Business User
   level: Beginner
-  nextTutorialHref: TODO
-  nextTutorialTitle: TODO
+  nextTutorialHref: creatinganappspo
+  nextTutorialTitle: Creating an app from SharePoint
   displayType: one-column
   author: mgblythe
   manager: anneta

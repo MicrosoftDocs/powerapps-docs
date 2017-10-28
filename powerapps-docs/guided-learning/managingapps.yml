@@ -6,8 +6,8 @@ metadata:
   description: TODO
   audience: Business User
   level: Beginner
-  nextTutorialHref: TODO
-  nextTutorialTitle: TODO
+  nextTutorialHref: managingdata
+  nextTutorialTitle: Managing data
   displayType: one-column
   author: mgblythe
   manager: anneta
