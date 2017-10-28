@@ -22,7 +22,7 @@ You can create a custom entity to store data that is specific to your organizati
 
 There are two ways to create an entity:
 
-* Create the entity from scratch. By default, the entity contains only [four system fields and a record title field](data-platform-create-entity.md#system-and-record-title-fields).
+* Create the entity from scratch. By default, the entity contains only [four system fields and a record title field](data-platform-create-entity.md#system-fields-and-the-record-title-field).
 * Create an entity that is based on another entity, by copying the fields and settings of that entity, but not its data.
 
 In both cases, Microsoft PowerApps automatically stores and helps secure the data. After you create an entity, you can [create or modify one or more of its fields](data-platform-manage-fields.md), and [build relationships between entities](data-platform-entity-lookup.md).

@@ -21,7 +21,7 @@ ms.author: jamesol
 # View analytics reports for your app
 Have you built an app and shared it out to your organization?  Are you curious how many of your colleagues are using it on a daily basis?
 
-Introducing the first  PowerApps analytics report that is now available in preview from [web.powerapps.com](1.md); the **App usage report**.
+Introducing the first  PowerApps analytics report that is now available in preview from [web.powerapps.com][1]; the **App usage report**.
 
 The App usage report gives you the ability to track how many users are using your app over the past 30 days broken down by day, device platform and location.
 
@@ -35,7 +35,7 @@ All reports are available to any user with "Can edit" permission to the app, but
 ## Where do I find my app's reports?
 You can view your app's reports via the following steps:
 
-1. Go to [web.powerapps.com](1.md)
+1. Go to [web.powerapps.com][1]
 2. Select **Apps** from the left navigation bar
    
     ![Left navigation bar](./media/app-analytics/left-nav.png)
@@ -54,7 +54,7 @@ Yes, you are able to download a .csv file with the data for any chart in a repor
 ## Are there going to be any other reports?
 Yes! In fact we are planning to develop similar reports around app performance and error reporting.
 
-If you have specific feedback, questions, or requests we would love to hear about them on our [PowerApps Ideas forum](2.md).
+If you have specific feedback, questions, or requests we would love to hear about them on our [PowerApps Ideas forum][2].
 
 [1]: https://web.powerapps.com
 [2]: https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas
