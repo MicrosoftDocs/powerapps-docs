@@ -3,7 +3,7 @@ documentType: Tutorial
 title: Getting started
 metadata:
   title: Getting started | Microsoft PowerApps
-  description: Understand what PowerApps is: its software elements, and related technologies.
+  description: Understand what PowerApps is - its software elements, and related technologies.
   audience: Business User
   level: Beginner
   nextTutorialHref: creatinganappspo
@@ -18,7 +18,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Understand what PowerApps is: its software elements, and related technologies. Look at the different ways you can create apps, and generate an app from a SharePoint list.
+    Understand what PowerApps is - its software elements, and related technologies. Look at the different ways you can create apps, and generate an app from a SharePoint list.
 - title: Introducing PowerApps
   durationInMinutes: 5
   content: |
