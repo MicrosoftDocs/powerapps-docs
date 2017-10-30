@@ -1,9 +1,9 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Microsoft Power BI Guided Learning
+title: Microsoft PowerApps Guided Learning
 metadata:
-  title: Microsoft Power BI Guided Learning
-  meta.description: Start your learning journey with this sequenced collection of courses, and understand the extensive and powerful capabilities of Microsoft Power BI.
+  title: Microsoft PowerApps Guided Learning
+  meta.description: Start your learning journey with this sequenced collection of courses, and understand the extensive and powerful capabilities of Microsoft PowerApps.
   author: mgblythe
   manager: anneta
   layout: LandingPage
@@ -12,7 +12,7 @@ metadata:
   ms.date: 10/27/2017
   ms.author: mblythe
 abstract:
-  description: Start your learning journey with this sequenced collection of courses, and understand the extensive and powerful capabilities of Microsoft Power BI.
+  description: Start your learning journey with this sequenced collection of courses, and understand the extensive and powerful capabilities of Microsoft PowerApps.
 sections:
 - items:
   - type: list
@@ -20,23 +20,23 @@ sections:
     className: cardsF
     columns: 2
     items:
-    - html: <p><a href="gettingstarted#step-1"> Introducing PowerApps | Microsoft Docs</a> - 5 min</p><p><a href="gettingstarted#step-2"> Parts of PowerApps | Microsoft Docs</a> - 6 min</p><p><a href="gettingstarted#step-3"> Related technologies | Microsoft Docs</a> - 6 min</p><p><a href="gettingstarted#step-4"> A quick look at creating apps | Microsoft Docs</a> - 6 min</p><p><a href="gettingstarted#step-5"> Create your first app | Microsoft Docs</a> - 5 min</p><p><a href="gettingstarted#step-6"> Review this section | Microsoft Docs</a> - 2 min</p>
+    - html: <p><a href="gettingstarted#step-1"> Introducing PowerApps</a> - 5 min</p><p><a href="gettingstarted#step-2"> Parts of PowerApps</a> - 6 min</p><p><a href="gettingstarted#step-3"> Related technologies</a> - 6 min</p><p><a href="gettingstarted#step-4"> A quick look at creating apps</a> - 6 min</p><p><a href="gettingstarted#step-5"> Create your first app</a> - 5 min</p><p><a href="gettingstarted#step-6"> Review this section</a> - 2 min</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       title: Getting started
-    - html: <p><a href="creatinganappspo#step-1"> Generate an app (SharePoint list) | Microsoft Docs</a> - 3 min</p><p><a href="creatinganappspo#step-2"> Explore a generated app (SharePoint list) | Microsoft Docs</a> - 5 min</p><p><a href="creatinganappspo#step-3"> Customize the app (SharePoint list) | Microsoft Docs</a> - 5 min</p><p><a href="creatinganappspo#step-4"> Explore app formulas (SharePoint list) | Microsoft Docs</a> - 9 min</p>
+    - html: <p><a href="creatinganappspo#step-1"> Generate an app (SharePoint list)</a> - 3 min</p><p><a href="creatinganappspo#step-2"> Explore a generated app (SharePoint list)</a> - 5 min</p><p><a href="creatinganappspo#step-3"> Customize the app (SharePoint list)</a> - 5 min</p><p><a href="creatinganappspo#step-4"> Explore app formulas (SharePoint list)</a> - 9 min</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       title: Creating an app from SharePoint
-    - html: <p><a href="creatinganappcds#step-1"> Generate an app (Common Data Service) | Microsoft Docs</a> - 6 min</p><p><a href="creatinganappcds#step-2"> Generate an app (Common Data Service) | Microsoft Docs</a> - 5 min</p><p><a href="creatinganappcds#step-3"> Customize the app (Common Data Service) | Microsoft Docs</a> - 12 min</p><p><a href="creatinganappcds#step-4"> Add a data source and flow (Common Data Service) | Microsoft Docs</a> - 11 min</p>
+    - html: <p><a href="creatinganappcds#step-1"> Generate an app (Common Data Service)</a> - 6 min</p><p><a href="creatinganappcds#step-2"> Generate an app (Common Data Service)</a> - 5 min</p><p><a href="creatinganappcds#step-3"> Customize the app (Common Data Service)</a> - 12 min</p><p><a href="creatinganappcds#step-4"> Add a data source and flow (Common Data Service)</a> - 11 min</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       title: Creating an app from the Common Data Service
-    - html: <p><a href="managingapps#step-1"> Share your apps | Microsoft Docs</a> - 5 min</p><p><a href="managingapps#step-2"> Version your apps | Microsoft Docs</a> - 1 min</p><p><a href="managingapps#step-3"> Environments | Microsoft Docs</a> - 8 min</p>
+    - html: <p><a href="managingapps#step-1"> Share your apps</a> - 5 min</p><p><a href="managingapps#step-2"> Version your apps</a> - 1 min</p><p><a href="managingapps#step-3"> Environments</a> - 8 min</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       title: Managing apps
-    - html: <p><a href="managingdata#step-1"> The Common Data Service | Microsoft Docs</a> - 5 min</p><p><a href="managingdata#step-2"> Understand Common Data Service entities | Microsoft Docs</a> - 8 min</p><p><a href="managingdata#step-3"> Create custom entities | Microsoft Docs</a> - 6 min</p><p><a href="managingdata#step-4"> Manage entity data | Microsoft Docs</a> - 7 min</p><p><a href="managingdata#step-5"> Common Data Service security | Microsoft Docs</a> - 8 min</p>
+    - html: <p><a href="managingdata#step-1"> The Common Data Service</a> - 5 min</p><p><a href="managingdata#step-2"> Understand Common Data Service entities</a> - 8 min</p><p><a href="managingdata#step-3"> Create custom entities</a> - 6 min</p><p><a href="managingdata#step-4"> Manage entity data</a> - 7 min</p><p><a href="managingdata#step-5"> Common Data Service security</a> - 8 min</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       title: Managing data

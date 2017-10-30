@@ -3,7 +3,7 @@ documentType: Tutorial
 title: Getting started
 metadata:
   title: Getting started | Microsoft PowerApps
-  description: TODO
+  description: Understand what PowerApps is: its software elements, and related technologies.
   audience: Business User
   level: Beginner
   nextTutorialHref: creatinganappspo
@@ -18,40 +18,40 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    TODO: Opening paragraph.
-- title: Introducing PowerApps | Microsoft Docs
-  durationInMinutes:  5m
+    Understand what PowerApps is: its software elements, and related technologies. Look at the different ways you can create apps, and generate an app from a SharePoint list.
+- title: Introducing PowerApps
+  durationInMinutes: 5
   content: |
     > [!Video https://www.youtube.com/embed/n9fkvkekINE?rel=0]
 
     [!INCLUDE [](includes/learning-introducing-powerapps.md)]
-- title: Parts of PowerApps | Microsoft Docs
-  durationInMinutes:  6m
+- title: Parts of PowerApps
+  durationInMinutes: 6
   content: |
     > [!Video https://www.youtube.com/embed/r6mowYePq1Q?rel=0]
 
     [!INCLUDE [](includes/learning-powerapps-parts.md)]
-- title: Related technologies | Microsoft Docs
-  durationInMinutes:  6m
+- title: Related technologies
+  durationInMinutes: 6
   content: |
     > [!Video https://www.youtube.com/embed/C81IfqIn9LI?rel=0]
 
     [!INCLUDE [](includes/learning-related-technologies.md)]
-- title: A quick look at creating apps | Microsoft Docs
-  durationInMinutes:  6m
+- title: A quick look at creating apps
+  durationInMinutes: 6
   content: |
     > [!Video https://www.youtube.com/embed/NOv3kacXqho?rel=0]
 
     [!INCLUDE [](includes/learning-quick-look-powerapps.md)]
-- title: Create your first app | Microsoft Docs
-  durationInMinutes:  5m
+- title: Create your first app
+  durationInMinutes: 5
   content: |
     > [!Video https://www.youtube.com/embed/ixRpT48Z6IQ?rel=0]
 
     [!INCLUDE [](includes/learning-create-first-app-powerapps.md)]
-- title: Review this section | Microsoft Docs
-  durationInMinutes:  2m
+- title: Review this section
+  durationInMinutes: 2
   content: |
     [!INCLUDE [](includes/learning-review-section-one.md)]
 - content: |
-    You've completed the **Getting started** section of Microsoft Power BI Guided Learning.
+    You've completed the **Getting started** section of Microsoft PowerApps Guided Learning.

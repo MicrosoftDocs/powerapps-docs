@@ -3,7 +3,7 @@ documentType: Tutorial
 title: Managing data
 metadata:
   title: Managing data | Microsoft PowerApps
-  description: TODO
+  description: Understand how to store, model, extend, and secure data in the Common Data Service.
   audience: Business User
   level: Beginner
   displayType: one-column
@@ -16,36 +16,36 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    TODO: Opening paragraph.
-- title: The Common Data Service | Microsoft Docs
-  durationInMinutes:  5m
+    Understand how to store and model data in the Common Data Service. Define and use entities that map to your business data and processes, and extend the common data model with custom entities. Use role-based security to control access to entities. Work with data directly in the service, and in Excel.
+- title: The Common Data Service
+  durationInMinutes: 5
   content: |
     > [!Video https://www.youtube.com/embed/os33pHQ9jSU?rel=0]
 
     [!INCLUDE [](includes/learning-common-data-service.md)]
-- title: Understand Common Data Service entities | Microsoft Docs
-  durationInMinutes:  8m
+- title: Understand Common Data Service entities
+  durationInMinutes: 8
   content: |
     > [!Video https://www.youtube.com/embed/JJa6n_YaD-w?rel=0]
 
     [!INCLUDE [](includes/learning-common-data-service-entities.md)]
-- title: Create custom entities | Microsoft Docs
-  durationInMinutes:  6m
+- title: Create custom entities
+  durationInMinutes: 6
   content: |
     > [!Video https://www.youtube.com/embed/qg25q3MjFBo?rel=0]
 
     [!INCLUDE [](includes/learning-common-data-service-custom-entities.md)]
-- title: Manage entity data | Microsoft Docs
-  durationInMinutes:  7m
+- title: Manage entity data
+  durationInMinutes: 7
   content: |
     > [!Video https://www.youtube.com/embed/n6RizzixvxM?rel=0]
 
     [!INCLUDE [](includes/learning-common-data-service-manage.md)]
-- title: Common Data Service security | Microsoft Docs
-  durationInMinutes:  8m
+- title: Common Data Service security
+  durationInMinutes: 8
   content: |
     > [!Video https://www.youtube.com/embed/uwm8ghMUCeI?rel=0]
 
     [!INCLUDE [](includes/learning-common-data-service-security.md)]
 - content: |
-    You've completed the **Managing data** section of Microsoft Power BI Guided Learning.
+    You've completed the **Managing data** section of Microsoft PowerApps Guided Learning.
