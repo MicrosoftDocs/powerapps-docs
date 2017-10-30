@@ -18,4 +18,6 @@ sections:
 - items:
   - type: markdown
     text: |
-      Welcome to PowerApps. This landing page will look like the [Microsoft Flow landing page](https://docs.microsoft.com/en-us/flow/) when it's done.
+      Welcome to PowerApps. This landing page will look like the [Microsoft Flow landing page](https://docs.microsoft.com/en-us/flow/) when it's done. 
+      
+      [Guided Learning content is also available on this review site](guided-learning).
