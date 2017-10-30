@@ -3,11 +3,11 @@ documentType: Tutorial
 title: Managing apps
 metadata:
   title: Managing apps | Microsoft PowerApps
-  title: Managing apps
   description: TODO
+  audience: Business User
   level: Beginner
-  nextTutorialHref: TODO
-  nextTutorialTitle: TODO
+  nextTutorialHref: managingdata
+  nextTutorialTitle: Managing data
   displayType: one-column
   author: mgblythe
   manager: anneta
@@ -35,3 +35,5 @@ items:
     > [!Video https://www.youtube.com/embed/32olG9uCmBU?rel=0]
 
     [!INCLUDE [](includes/learning-manage-environments.md)]
+- content: |
+    You've completed the **Managing apps** section of Microsoft Power BI Guided Learning.

@@ -3,11 +3,11 @@ documentType: Tutorial
 title: Getting started
 metadata:
   title: Getting started | Microsoft PowerApps
-  title: Getting started
   description: TODO
+  audience: Business User
   level: Beginner
-  nextTutorialHref: TODO
-  nextTutorialTitle: TODO
+  nextTutorialHref: creatinganappspo
+  nextTutorialTitle: Creating an app from SharePoint
   displayType: one-column
   author: mgblythe
   manager: anneta
@@ -53,3 +53,5 @@ items:
   durationInMinutes:  2m
   content: |
     [!INCLUDE [](includes/learning-review-section-one.md)]
+- content: |
+    You've completed the **Getting started** section of Microsoft Power BI Guided Learning.
