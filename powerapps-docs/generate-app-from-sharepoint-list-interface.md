@@ -19,7 +19,7 @@ ms.author: sharik
 
 ---
 # Generate an app from within SharePoint using PowerApps
-[!VIDEO nb:cid:UUID:639d7eaf-bae5-447c-a34b-ec539a01a15c]
+
 
 
 In PowerApps, automatically generate an app in which users can manage items in a custom SharePoint Online list. The app will have three screens in which users can:

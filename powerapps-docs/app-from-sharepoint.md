@@ -19,7 +19,7 @@ ms.author: sharik
 
 ---
 # Generate an app to manage data in a SharePoint list
-[!VIDEO nb:cid:UUID:34ccfd46-7826-49ce-90d8-cf6a144b6968]
+
 
 
 In PowerApps, generate a three-screen app automatically to manage data in a SharePoint list, whether the site is on-premises or in the cloud.

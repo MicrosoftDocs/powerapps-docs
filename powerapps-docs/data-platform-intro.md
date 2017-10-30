@@ -18,7 +18,7 @@ ms.author: kfend
 
 ---
 # Understand entities in the Common Data Service
-[!VIDEO nb:cid:UUID:beec68e8-1541-41fb-8fc6-28714ccaca68]
+
 
 
 The Common Data Service allows you to securely store and manage data within a set of standard and custom entities. An entity is a set of fields used to store data similarly to a table within a database. After your data is stored you can use Microsoft PowerApps to build rich applications using your data:

@@ -21,9 +21,7 @@ ms.author: sharik
 # Introduction to PowerApps
 Welcome! In PowerApps, you can manage organizational data by running an app that you created or that someone else created and shared with you. Apps run on **[mobile devices such as phones](run-app-client.md)**, or you can run them **[in a browser](run-app-browser.md)** by opening Dynamics 365. You can create an infinite variety of apps &ndash; all without learning a programming language such as C#.
 
-If you're new to app development, you can see how a simple app is built by generating one automatically based on a single data source and then customizing the app to better suit your needs. This video demonstrates how in five minutes:
-
-[!VIDEO nb:cid:UUID:34ccfd46-7826-49ce-90d8-cf6a144b6968]
+If you're new to app development, you can see how a simple app is built by generating one automatically based on a single data source and then customizing the app to better suit your needs. 
 
 
 After you **[automatically generate an app](app-from-sharepoint.md)** from, for example, a custom SharePoint list, you can change how the app shows **[all items](customize-layout-sharepoint.md)**, **[details about each item](customize-forms-sharepoint.md)**, and **[options for creating or editing an item](customize-forms-sharepoint.md)**. You can also open a **[sample app](open-and-run-a-sample-app.md)** or a **[template](get-started-test-drive.md)** to discover what's possible with PowerApps and to better understand how to build a more complex app.

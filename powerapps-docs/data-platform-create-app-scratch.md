@@ -22,7 +22,7 @@ Build an app to manage data that's stored in the Common Data Service, using stan
 
 When you build an app from the Common Data Service, you don't need to create a connection from Microsoft PowerApps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You only need to specify the entities that you want to show, manage, or use for both activities in the app.
 
-[!VIDEO nb:cid:UUID:5db63c4d-6aeb-45c5-9609-8f4bbdd37bc6]
+
 
 
 1. Create a Common Data Service database. For more information, see [Create a Common Data Service database](create-database.md).
