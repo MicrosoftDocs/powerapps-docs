@@ -3,11 +3,9 @@ documentType: Tutorial
 title: Managing data
 metadata:
   title: Managing data | Microsoft PowerApps
-  title: Managing data
   description: TODO
+  audience: Business User
   level: Beginner
-  nextTutorialHref: TODO
-  nextTutorialTitle: TODO
   displayType: one-column
   author: mgblythe
   manager: anneta
@@ -49,3 +47,5 @@ items:
     > [!Video https://www.youtube.com/embed/uwm8ghMUCeI?rel=0]
 
     [!INCLUDE [](includes/learning-common-data-service-security.md)]
+- content: |
+    You've completed the **Managing data** section of Microsoft Power BI Guided Learning.
