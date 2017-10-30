@@ -3,7 +3,7 @@ documentType: Tutorial
 title: Creating an app from SharePoint
 metadata:
   title: Creating an app from SharePoint | Microsoft PowerApps
-  description: TODO
+  description: Generate a three screen app from a SharePoint list, then explore and update the app.
   audience: Business User
   level: Beginner
   nextTutorialHref: creatinganappcds
@@ -18,30 +18,30 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    TODO: Opening paragraph.
-- title: Generate an app (SharePoint list) | Microsoft Docs
-  durationInMinutes:  3m
+    Generate a three screen app from a SharePoint list, then explore screens and controls from the app. Update app screens, controls, and fields; and use formulas to further customize app behavior.
+- title: Generate an app (SharePoint list)
+  durationInMinutes: 3
   content: |
     > [!Video https://www.youtube.com/embed/m6KfAwEdtYU?rel=0]
 
     [!INCLUDE [](includes/learning-spo-app-generate.md)]
-- title: Explore a generated app (SharePoint list) | Microsoft Docs
-  durationInMinutes:  5m
+- title: Explore a generated app (SharePoint list)
+  durationInMinutes: 5
   content: |
     > [!Video https://www.youtube.com/embed/OJ8a9VINeKU?rel=0]
 
     [!INCLUDE [](includes/learning-spo-app-explore-controls.md)]
-- title: Customize the app (SharePoint list) | Microsoft Docs
-  durationInMinutes:  5m
+- title: Customize the app (SharePoint list)
+  durationInMinutes: 5
   content: |
     > [!Video https://www.youtube.com/embed/KydeusvKndQ?rel=0]
 
     [!INCLUDE [](includes/learning-spo-app-customize.md)]
-- title: Explore app formulas (SharePoint list) | Microsoft Docs
-  durationInMinutes:  9m
+- title: Explore app formulas (SharePoint list)
+  durationInMinutes: 9
   content: |
     > [!Video https://www.youtube.com/embed/9TBA19YU7EA?rel=0]
 
     [!INCLUDE [](includes/learning-spo-app-explore-formulas.md)]
 - content: |
-    You've completed the **Creating an app from SharePoint** section of Microsoft Power BI Guided Learning.
+    You've completed the **Creating an app from SharePoint** section of Microsoft PowerApps Guided Learning.
