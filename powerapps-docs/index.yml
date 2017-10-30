@@ -1,9 +1,9 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Microsoft Flow Docs
+title: Microsoft PowerApps Docs
 metadata:
-  title: Microsoft Flow docs, videos, reference and more
-  description: Get started creating, sharing and managing flows using the resources here. You can start with a simple button, or create your own approval flows.
+  title: Microsoft PowerApps docs, videos, reference, and more
+  description: Get started building and sharing apps using the resources here. You can start from a blank app, start with your own data, or start from one of our sample apps.
   author: SKjerland
   manager: anneta
   layout: LandingPage
