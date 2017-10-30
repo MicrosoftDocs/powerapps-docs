@@ -60,7 +60,7 @@ When you develop an app, you can use standard entities, custom entities, or both
 Each field has a name, display name, data type, and some simple validation. Data types include, for example, **text**, **date**, or **number**. Validation ensures that required fields contain data and records are unique if the entity requires them to be. Every field falls into one of three categories: system fields, standard fields, or custom fields.
 
 ### System fields
-All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. For more information, see [System and record title fields](data-platform-create-entity.md#system-and-record-title-fields). These are the most important system fields:
+All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. For more information, see [System and record title fields](data-platform-create-entity.md#system-fields-and-the-record-title-field). These are the most important system fields:
 
 * **Created Record Date** - The date and time when a record was created.
 * **Created By** - The user who created the record.

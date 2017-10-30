@@ -122,7 +122,7 @@ For information about known limitations, see [Common issues and resolutions](com
     Use the [IsMatch function](functions/function-ismatch.md) to return a true/false value based on whether a field in a record matches, for example, a name, an email address, a phone number, or a U.S. Social Security number.
 4. **Customize the order in which controls are activated when users press the Tab key**.
    
-    By default, the XY coordinates of each control determine the tab order. To specify a different order, set the **TabIndex** property of one or more controls to an integer greater than zero. If, for example, the value of a control is set to 1, it will be activated before a control for which the value is set to 2 or higher. You can make your app [more accessible](properties-accessiblity.md) by adding tooltips and ensuring that the tab sequence of each screen is optimal.
+    By default, the XY coordinates of each control determine the tab order. To specify a different order, set the **TabIndex** property of one or more controls to an integer greater than zero. If, for example, the value of a control is set to 1, it will be activated before a control for which the value is set to 2 or higher. You can make your app [more accessible](controls/properties-accessibility.md) by adding tooltips and ensuring that the tab sequence of each screen is optimal.
 5. **Customize the thickness of a slider rail**.
    
     Users adjust the value of a [Slider control](controls/control-slider.md) by dragging its handle to the right or the left along its rail.
