@@ -47,7 +47,8 @@ If entity A has a lookup relation to entity B:
 * You can delete any record in entity A without restriction.
 * If a record in entity B matches one or more records in entity A, you must delete all matching records in entity A before you can delete the record in entity B.
 
-**Note**: If entity B is a standard entity with a parent relationship to entity A and you delete a record from entity A, all matched records in entity B are also deleted.
+> [!NOTE]
+> If entity B is a standard entity with a parent relationship to entity A and you delete a record from entity A, all matched records in entity B are also deleted.
 
 For information about how to delete a field, see [Manage fields](data-platform-manage-fields.md).
 

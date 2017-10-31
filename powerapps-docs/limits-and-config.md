@@ -29,7 +29,8 @@ These limits apply to each single outgoing request:
 | Timeout |180 Seconds |
 | Retry attempts |4 |
 
-**NOTE**: The retry value may vary. For certain error conditions, it doesn't make sense to retry.
+> [!NOTE]
+> The retry value may vary. For certain error conditions, it doesn't make sense to retry.
 
 ## IP addresses
 Requests from PowerApps use IP addresses that depend on the region of the [environment](environments-overview.md) that the app is in. We don't publish fully qualified domain names available for PowerApps scenarios.

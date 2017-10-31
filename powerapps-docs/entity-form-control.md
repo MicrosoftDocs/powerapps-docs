@@ -22,13 +22,15 @@ Create apps faster by using the **Entity form** control to add rich forms for a 
 
 For an introduction to the **Entity form** control, see this blog post: [New entity form control (experimental feature) for Common Data Service](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
 
-**Important**: Please be aware of the experimental nature of the **Entity form** control as outlined in the blog post, and be careful about using the **Entity form** control in production apps, at least for now.
+> [!IMPORTANT]
+> Please be aware of the experimental nature of the **Entity form** control as outlined in the blog post, and be careful about using the **Entity form** control in production apps, at least for now.
 
 ## Key properties
 Here are the key properties of an **Entity form** control.
 
 **DataSource** – Specifies the data source that contains the record(s) that you want to display.   
-**Note**: Currently only entities in the Common Data Service are supported as data sources for the **Entity form** control.  
+> [!NOTE]
+> Currently only entities in the Common Data Service are supported as data sources for the **Entity form** control.  
 
 **Pattern** – Specifies the style of the form that you want to display in the **Entity form** control. Set this property by using the **FormPattern** enumeration.
 
@@ -79,7 +81,8 @@ You can use these  shared functions with either the **Entity form** control or t
 
 Now that you have an overview of the various properties and functions, let’s look at them in action.
 
-**Note**: If you don’t have access to a Common Data Service database, [create one](guided-learning/learning-common-data-service.md) before you start to follow these steps.
+> [!NOTE]
+> If you don’t have access to a Common Data Service database, [create one](guided-learning/learning-common-data-service.md) before you start to follow these steps.
 
 ## Display a list of records
 The next five procedures provide a single, end-to-end example of how to use **Entity form** controls. In this procedure, add a form that shows a list of sales orders.  
@@ -203,7 +206,8 @@ Therefore, when the user clicks or taps a sales order ID field, the [**If**](fun
 
 ![](media/entity-form-control/entityform-tutorial-01-21.png)  
 
-**Note**: When you use the form-customization pane, the **NavigationContext** is intelligently determined for you. When the user clicks or taps **SalesOrderId**, **NavigationContext** is set to **SalesOrderListForm.Selected**, as the earlier formula shows. If we had specified the **Account** field for navigation instead, **NavigationContext** would have been set to **SalesOrderListForm.Selected.Account**, ensuring that the correct context is passed. However, to consume that context, you would need an **Entity form** control connected to the **Account** entity in the Common Data Service.
+> [!NOTE]
+> When you use the form-customization pane, the **NavigationContext** is intelligently determined for you. When the user clicks or taps **SalesOrderId**, **NavigationContext** is set to **SalesOrderListForm.Selected**, as the earlier formula shows. If we had specified the **Account** field for navigation instead, **NavigationContext** would have been set to **SalesOrderListForm.Selected.Account**, ensuring that the correct context is passed. However, to consume that context, you would need an **Entity form** control connected to the **Account** entity in the Common Data Service.
 
 ## Edit and save a record
 Finally let’s look at how we can edit and save a record in an **Entity form** control.  

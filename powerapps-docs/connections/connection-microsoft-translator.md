@@ -25,7 +25,8 @@ Add the Microsoft Translator connector to display translated text in a **Label**
 
 This topic shows you how to create the Microsoft Translator connection, use the Microsoft Translator connection in an app, and lists the available functions.
 
-**Note**: This connector is limited to 150 calls per user per day.
+> [!NOTE]
+> This connector is limited to 150 calls per user per day.
 
 &nbsp;
 

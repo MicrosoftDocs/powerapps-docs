@@ -94,7 +94,8 @@ The label shows the information that you entered about the current user.
 
 The label shows the information that you entered about the user you specified or that user's manager.
 
-**Note**: If you're developing an app based on an entity in the Common Data Service, you can specify a user based on ID instead of email address.
+> [!NOTE]
+> If you're developing an app based on an entity in the Common Data Service, you can specify a user based on ID instead of email address.
 
 For example, you can [create an app automatically](../data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
 <br>**Office365Users.UserProfile(BrowseGallery1.Selected.CreatedByUser).DisplayName**
@@ -113,7 +114,8 @@ If you create a contact and select that contact in the browse screen of the app,
     With the gallery selected, the right-hand pane shows options for that gallery.
 4. In the second list, select **JobTitle**. In the third list, select **DisplayName**. The gallery is updated to show these values.  
    
-    <br/>**NOTE** The first box is actually an image control. If you don't have an image, you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
+    <br/>> [!NOTE]
+> The first box is actually an image control. If you don't have an image, you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 ### Search for users
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.

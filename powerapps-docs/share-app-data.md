@@ -46,7 +46,8 @@ For more information, see [Sharing folders on Dropbox](https://www.dropbox.com/e
    
     ![Share command](./media/share-app-data/onedrive-share.png)
    
-    **Note**: In OneDrive for Business, share the file itself, not the folder that contains the file.
+    > [!NOTE]
+> In OneDrive for Business, share the file itself, not the folder that contains the file.
 3. In the dialog box, select **Email**.
    
     ![Share by email](./media/share-app-data/onedrive-email.png)

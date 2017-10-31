@@ -44,7 +44,8 @@ If you create and share an app that includes data from an on-premises source, th
 1. Open [powerapps.com](https://web.powerapps.com), click or tap **Manage** in the left navigation bar, and then click or tap **Gateways**.
 2. Click or tap a gateway, and then click or tap the **Connections** tab.
 
-**Note**: If you share one or more connections manually, you might need to reshare them under these circumstances:
+> [!NOTE]
+> If you share one or more connections manually, you might need to reshare them under these circumstances:
 
 * You add an on-premises data gateway to an app that you’ve already shared.
 * You change the set of people or groups with whom you’ve shared an app that has an on-premises data gateway.

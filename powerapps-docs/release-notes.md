@@ -21,7 +21,8 @@ ms.author: sharik
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
-**Note**: The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
+> [!NOTE]
+> The version number of the most recent release of PowerApps varies by platform. To ensure that you have the most recent release of PowerApps for your platform, install it from the Windows Store, the App Store, or Google Play.
 
 ## Release 2.0.700-2.0.701
 1. After you [save an app](save-publish-app.md) for the first time, additional changes are saved every two minutes automatically by default.

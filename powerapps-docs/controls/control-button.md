@@ -142,7 +142,8 @@ Add a formula that clears the **Text input** control between entries.
    
     **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
    
-    **Note:** Separate multiple formulas with a semi-colon “**;**”.
+    > [!NOTE]
+> Separate multiple formulas with a semi-colon “**;**”.
 3. Set the **[Default](properties-core.md)** property of **Source** to **ClearInput**.
 4. Press **F5**, and then test the app by adding several numbers together.
 
@@ -158,7 +159,8 @@ Add a second button to clear the total between calculations.
 #### Change a button's shape
 By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](properties-size-location.md)**, **[Width](properties-size-location.md)**, and **[Radius](properties-size-location.md)** properties.
 
-**Note: [Icons and Shapes](control-shapes-icons.md)** provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](properties-core.md)** property.
+**> [!NOTE]
+> [Icons and Shapes](control-shapes-icons.md)** provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](properties-core.md)** property.
 
 1. Add a **Button** control, and set its **[Height](properties-size-location.md)** and **[Width](properties-size-location.md)** properties to **300** to make a large square button.
 2. Modify the **[RadiusTopLeft](properties-size-location.md)**, **[RadiusTopRight](properties-size-location.md)**, **[RadiusBottomLeft](properties-size-location.md)**, and **[RadiusBottomRight](properties-size-location.md)** properties to adjust the amount of curvature on each corner. Here are some examples of different shapes, each one starting from a 300 x 300 square button:
@@ -174,7 +176,8 @@ By default, the fill color of a **Button** control will dim by 20% when you hove
 
 You can also specify the color of a **Button** control by setting its **[HoverFill](properties-color-border.md)** property to a formula that contains the **[ColorValue](../functions/function-colors.md)** function instead of the **[ColorFade](../functions/function-colors.md)** function, as in **ColorValue("Red")**.
 
-**Note:** The color value can be any CSS color definition, either a name or a hex value.
+> [!NOTE]
+> The color value can be any CSS color definition, either a name or a hex value.
 
 * Replace the **[ColorFade](../functions/function-colors.md)** function with a **[ColorValue](../functions/function-colors.md)** function in one of the buttons that you created, and observe the effects.
 

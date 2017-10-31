@@ -67,7 +67,8 @@ OpenAPI files and Postman Collections use different formats, but both are langua
 * If you don't already have an OpenAPI file for your API and don't want to create one, you can still easily create a custom connector by using a Postman Collection. See [Create a Postman Collection](postman-collection.md) for more information.
 * PowerApps ultimately uses OpenAPI behind the scenes, so a Postman Collection is parsed and translated into an OpenAPI definition file.
 
-**Note**: Your file size must be less than 1MB.
+> [!NOTE]
+> Your file size must be less than 1MB.
 
 ### Getting started with OpenAPI and Postman
 * If you're new to OpenAPI, see [Getting Started with OpenAPI](http://swagger.io/getting-started/) on the swagger.io site.
@@ -79,7 +80,8 @@ You will now use the OpenAPI file or Postman Collection to register your custom 
 
 1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom connectors** in the upper right corner.
    
-     **Tip**: If you can't find where to manage custom connectors in a mobile browser, it might be under a menu in the upper left corner.
+     > [!TIP]
+> If you can't find where to manage custom connectors in a mobile browser, it might be under a menu in the upper left corner.
    
     ![Create custom connector](./media/register-custom-api/managecustomapi.png)  
 2. Select **Create custom connector**.

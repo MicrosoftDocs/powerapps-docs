@@ -27,7 +27,8 @@ Generated apps have three screens by default:
 * **DetailsScreen1** shows more or all fields for a specific record.
 * **EditScreen1** provides UI elements that let users create or update a record and save the changes.
 
-**Note**: You can also generate an app based on a [custom SharePoint list](app-from-sharepoint.md).
+> [!NOTE]
+> You can also generate an app based on a [custom SharePoint list](app-from-sharepoint.md).
 
 ## Prerequisites
 * [Sign up](signup-for-powerapps.md) for PowerApps, and then follow either of these steps:
@@ -36,7 +37,8 @@ Generated apps have three screens by default:
 * Sign in to PowerApps by using the same credentials that you used to sign up.
 * To follow this tutorial exactly, download this [Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).
   
-    **Important**: You can use your own Excel file if the data is formatted as a table. For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+    > [!IMPORTANT]
+> You can use your own Excel file if the data is formatted as a table. For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 * Upload the Excel file to OneDrive or another [cloud-storage account](connections/cloud-storage-blob-connections.md).
 
 ## Create an app
@@ -63,7 +65,8 @@ Generated apps have three screens by default:
    
     ![Choose Next for tour](./media/get-started-create-from-data/quick-tour.png)
    
-    **Note**: You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
+    > [!NOTE]
+> You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
 ## Change the gallery layout
 When an app is created, it has a default layout based on your data, but you can customize the gallery layout to fit your needs.
@@ -100,7 +103,8 @@ When an app is created, it has a default layout based on your data, but you can 
    
     ![BrowseScreen1 with new content](./media/get-started-create-from-data/browse-content.png)
    
-    **Note**: By default, you can scroll through the list (called a gallery) by using a mouse wheel or by swiping up and down on a touch screen. To use either a trackpad or a mouse without a wheel, select the gallery, click or tap **Show Scrollbar** in the property list, and then replace **false** with **true** in the formula bar.
+    > [!NOTE]
+> By default, you can scroll through the list (called a gallery) by using a mouse wheel or by swiping up and down on a touch screen. To use either a trackpad or a mouse without a wheel, select the gallery, click or tap **Show Scrollbar** in the property list, and then replace **false** with **true** in the formula bar.
 
 ## Change the order of fields in a form
 1. In the left navigation bar, click or tap the middle thumbnail to open the details screen (**DetailsScreen1**).

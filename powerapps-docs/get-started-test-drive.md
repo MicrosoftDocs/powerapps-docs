@@ -25,7 +25,8 @@ Create an app automatically based on a template for specific scenario, and then 
 
 * [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
   
-    **Note**: To use this feature, make sure that you're running release 2.0.510 or later. To identify your release, open the **File** menu (along the left edge), click or tap **Account**, and then look under **Product information**.
+    > [!NOTE]
+> To use this feature, make sure that you're running release 2.0.510 or later. To identify your release, open the **File** menu (along the left edge), click or tap **Account**, and then look under **Product information**.
 * A cloud-storage account such as DropBox, OneDrive, or Google Drive.
 
 ## Create an app
@@ -34,7 +35,8 @@ Create an app automatically based on a template for specific scenario, and then 
     ![The New option on the File menu](./media/get-started-test-drive/file-new.png)
 2. On the **App templates** tile, click or tap **Phone layout**.
    
-   **Note:** You can also create an app from a template for a tablet layout, but this tutorial focuses on the phone option.
+   > [!NOTE]
+> You can also create an app from a template for a tablet layout, but this tutorial focuses on the phone option.
    
    ![The option to create an app for a tablet or a phone](./media/get-started-test-drive/phone-app.png)
    
@@ -59,7 +61,8 @@ Create an app automatically based on a template for specific scenario, and then 
 ## Run the app
 An app from a template opens in the default workspace, where you'll spend most of your time customizing. Before you make any changes to the app, follow the steps in this section to explore how the app works in **Preview** mode.
 
-**Tip:** Design and develop apps in the default workspace, but test them in **Preview** mode before you share them with others.
+> [!TIP]
+> Design and develop apps in the default workspace, but test them in **Preview** mode before you share them with others.
 
 1. If you haven't used PowerApps before, take the intro tour (or click or tap **Skip**).
    
@@ -92,5 +95,6 @@ You can customize this or any app in these ways, among others:
 1. Press Ctrl-S, give your app a name, and then click or tap **Save** to save your app to the cloud.
 2. [Share your app](share-app.md) with other people in your organization.
    
-    **Note**: Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+    > [!NOTE]
+> Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
 

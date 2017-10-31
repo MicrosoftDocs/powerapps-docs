@@ -44,7 +44,8 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
     You can add a screen that's empty, that scrolls, that contains a **Gallery** control, or that contains a form.
 7. Click or tap **List screen** to add a screen that contains a **Gallery** control and other controls such as a search bar.
    
-    **Note**: Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the **Gallery** control to select it, click or tap **Flooring Estimates** in the right-hand pane, and then click or tap a different layout in the **Data** pane. For this tutorial, leave the default layout.
+    > [!NOTE]
+> Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the **Gallery** control to select it, click or tap **Flooring Estimates** in the right-hand pane, and then click or tap a different layout in the **Data** pane. For this tutorial, leave the default layout.
    
     ![Choose gallery layout](./media/add-gallery/select-layout.png)
 8. Click or tap the **Gallery** control in the screen that you just added.

@@ -44,7 +44,8 @@ To manage an environment in the PowerApps admin center, you must have one of the
 
 You also need either PowerApps Plan 2 or Flow Plan 2 to access the admin center. For more information, see the [PowerApps pricing page][3].
 
-**Important**: Any changes that you make in PowerApps admin center affect the [Flow admin center][4] and vice versa.
+> [!IMPORTANT]
+> Any changes that you make in PowerApps admin center affect the [Flow admin center][4] and vice versa.
 
 ## Create an environment
 First, click **+ New environment** to open a dialog box and create an environment.

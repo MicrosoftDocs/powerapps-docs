@@ -78,7 +78,8 @@ Let's modify the **[DisplayName](controls/control-card.md)** to put a space betw
 
 We've now taken control over this card and can modify it further to fit our need. But we've lost the ability to change the card from one representation to another (for example, single-line text to multi-line text) as we did before. We've transformed the predefined card into a "custom card" that we now control.  
 
-**Important**: You can't relock a card if you unlock it. To get a card back to a locked state, remove it, and reinsert it in the right-hand pane.
+> [!IMPORTANT]
+> You can't relock a card if you unlock it. To get a card back to a locked state, remove it, and reinsert it in the right-hand pane.
 
 You can change the appearance and behavior of an unlocked card in a variety of ways, such as adding and deleting controls within it. For example, you can add a star shape from the **Icons** menu on the **Insert** tab.
 
@@ -92,7 +93,8 @@ As another example, unlock the **ImageURL** card, and then add an **Image** cont
 
 In the formula bar, set the **Image** property of this control to *TextBox*.**Text**, where *TextBox* is the name of the **Text input** control that holds the URL:
 
-**Tip**: Press the Alt key to show the name of each control.
+> [!TIP]
+> Press the Alt key to show the name of each control.
 
 ![](./media/working-with-cards/show-image.png)
 

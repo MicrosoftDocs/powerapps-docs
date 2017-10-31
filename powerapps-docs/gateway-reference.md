@@ -104,7 +104,8 @@ Learn more about [hybrid solutions](https://azure.microsoft.com/documentation/ar
 
 It is recommended that you whitelist the IP addresses, for your data region, in your firewall. You can download the [Microsoft Azure Datacenter IP list](https://www.microsoft.com/download/details.aspx?id=41653), which is updated weekly.
 
-**Note:** In the Azure Datacenter IP list, addresses are listed in [CIDR notation](http://whatismyipaddress.com/cidr). For example, 10.0.0.0/24 doesn't mean 10.0.0.0 through 10.0.0.24.
+> [!NOTE]
+> In the Azure Datacenter IP list, addresses are listed in [CIDR notation](http://whatismyipaddress.com/cidr). For example, 10.0.0.0/24 doesn't mean 10.0.0.0 through 10.0.0.24.
 
 Here is a listing of the fully qualified domain names used by the gateway.
 

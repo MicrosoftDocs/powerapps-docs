@@ -34,14 +34,16 @@ To show all fields in a record, add and configure a **[Display form](controls/co
    
     **FlooringEstimates.Name**
    
-    **Note**: If you're not sure how to add a control, rename it, or set a property, see [Add and configure controls](add-configure-controls.md).
+    > [!NOTE]
+> If you're not sure how to add a control, rename it, or set a property, see [Add and configure controls](add-configure-controls.md).
    
     The list shows names of flooring products from the data source.
 2. Add an **Edit form** control, move it below **ChooseProduct**, and then resize the form to cover most of the screen.
    
     ![Add a form](./media/add-form/add-a-form.png)
    
-    **Note**: This topic describes the **Edit form** control, but similar principles apply to the **Display form** control.
+    > [!NOTE]
+> This topic describes the **Edit form** control, but similar principles apply to the **Display form** control.
 3. Set the **[DataSource](controls/control-form-detail.md)** property of the form to **FlooringEstimates** and the **[Item](controls/control-form-detail.md)** property of the form to this formula:
    
    **First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))**
@@ -49,7 +51,8 @@ To show all fields in a record, add and configure a **[Display form](controls/co
    This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**.
 4. In the **Data** pane, click or tap the checkbox for each field to show it.
    
-    Note: If the **Data** pane is closed, open it by selecting the form in the left-hand pane and then clicking or tapping **Data** in the right-hand pane.
+    > [!NOTE]
+> If the **Data** pane is closed, open it by selecting the form in the left-hand pane and then clicking or tapping **Data** in the right-hand pane.
    
     ![Show fields on form](./media/add-form/checkbox.png)
 5. In the **Data** pane, drag the **Name** entry to the top of the list.

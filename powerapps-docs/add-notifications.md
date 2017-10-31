@@ -29,13 +29,15 @@ Add a push notification to your app if:
 * Your users must complete important tasks by using your app, in a preloaded context.
 * You want to engage your users on a specific interval, or you need users to enter the app in a specific context.
 
-**Note**: To receive push notifications, each user must have opened the app in PowerApps Mobile once or gotten the app from AppSource in [Dynamics 365](https://home.dynamics.com/).
+> [!NOTE]
+> To receive push notifications, each user must have opened the app in PowerApps Mobile once or gotten the app from AppSource in [Dynamics 365](https://home.dynamics.com/).
 
 ## Before you start
 In an app for which you have the **Contributor** permission, add a PowerApps Notification connection. If you don't already have an app, you can quickly [create one from a template](get-started-test-drive.md), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
 
 ## Send a notification from a flow
-**Note**: If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time currently.
+> [!NOTE]
+> If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time currently.
 
 1. In [Microsoft Flow](https://flow.microsoft.com), create a trigger that specifies when the push notification is sent.
    
@@ -86,7 +88,8 @@ You can set your app to open, for example, the **Case details** page as soon as 
 2. (optional) Hide the **Timer** control by setting its **Visible** property to **false**.
 3. Set the **OnVisible** property of the screen to **Timer.Start()**.
 
-**Tip**: It's a good idea to create a unique first page in the app for the notification:
+> [!TIP]
+> It's a good idea to create a unique first page in the app for the notification:
 
 1. Create an empty page that your app doesn't already open, add a **Text Input** control, and set its **timer.Duration** value.
 2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.

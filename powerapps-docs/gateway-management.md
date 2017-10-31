@@ -61,7 +61,8 @@ For **Can use** and **Can use + share** permission levels, select the data sourc
 2. Click or tap **Connections**, and then click or tap a connection to view its details, edit the settings, or delete it.
 3. To share a connection, click or tap **Share**, and then add or remove users.
    
-    **Note**: You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
+    > [!NOTE]
+> You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
 
 For more information about how to manage a connection, see [Manage your connections](add-manage-connections.md).
 

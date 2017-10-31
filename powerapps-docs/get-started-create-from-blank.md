@@ -21,7 +21,8 @@ ms.author: karthikb
 # Create an app from scratch
 Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
 
-**Note**: This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
+> [!NOTE]
+> This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
 
 By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records:
 
@@ -106,7 +107,8 @@ You can review this tutorial for general concepts only, or you can follow it exa
    
     If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md).
    
-    **Note:** For Excel or SharePoint data sources that contain column names with spaces, PowerApps shows the spaces as **"\_x0020\_"**. In this example, the column **"Volunteer 1"** appears in a formula as **"Volunteer_x0020_1"**.
+    > [!NOTE]
+> For Excel or SharePoint data sources that contain column names with spaces, PowerApps shows the spaces as **"\_x0020\_"**. In this example, the column **"Volunteer 1"** appears in a formula as **"Volunteer_x0020_1"**.
    
     This gallery shows the data from the **Schedule** table.
    

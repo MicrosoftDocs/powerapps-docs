@@ -20,7 +20,8 @@ ms.author: kfend
 # Open entity data in Excel
 By opening entity data in Microsoft Excel, you can quickly and easily view and edit data by using the Microsoft PowerApps Excel Add-in. The PowerApps Excel Add-in requires Microsoft Excel 2016.
 
-**Note:** If your Microsoft Azure Active Directory (Azure AD) tenant is configured to use Active Directory Federation Services (AD FS),  you must make sure that the May 2016 update has been applied, so that the Excel Add-in can correctly sign you in.
+> [!NOTE]
+> If your Microsoft Azure Active Directory (Azure AD) tenant is configured to use Active Directory Federation Services (AD FS),  you must make sure that the May 2016 update has been applied, so that the Excel Add-in can correctly sign you in.
 
 ## Open entity data in Excel
 1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane. All the entities are shown.

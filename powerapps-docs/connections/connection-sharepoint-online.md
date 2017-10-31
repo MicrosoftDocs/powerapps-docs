@@ -75,7 +75,8 @@ Open PowerApps by taking *either* of these steps:
   
     The app will have three screens by default: one each for browsing records, displaying details of a record, and creating or updating a record. After the app is generated, you'll probably want to customize [the browse screen](../customize-layout-sharepoint.md) and [the details and edit screens](../customize-forms-sharepoint.md) to suit your needs.
   
-    **Note**: If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
+    > [!NOTE]
+> If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
 * Build your own app from scratch by [connecting to SharePoint](../connect-to-sharepoint.md), reviewing the concepts in [Create an app from scratch](../get-started-create-from-blank.md), and applying them to SharePoint instead of Excel.
 
 ## Add a SharePoint list to an existing app
@@ -98,7 +99,8 @@ Open PowerApps by taking *either* of these steps:
      
        ![Specify credentials](./media/connection-sharepoint-online/specify-creds.png)
      
-       **Note**: If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+       > [!NOTE]
+> If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
      
        Under **Choose a gateway**, click or tap the gateway that you want to use.
      
@@ -131,7 +133,8 @@ To show data from any of these types of columns in a gallery, use the formula ba
   
     You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (with the trailing period).
   
-    **Note**: For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
+    > [!NOTE]
+> For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
 * For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
   
     For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.

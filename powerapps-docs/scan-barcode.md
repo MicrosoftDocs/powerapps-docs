@@ -44,7 +44,8 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
    
     ![Opening screen of the quick tour](./media/scan-barcode/quick-tour.png)
    
-    **Note**: You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
+    > [!NOTE]
+> You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
 ## Add a Barcode control
 1. On the **Insert** tab, click or tap **Media**, and then click or tap **Barcode**.
@@ -55,7 +56,8 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
     ![Selection box](./media/scan-barcode/selection-box.png)
 3. On the **Home** tab, click or tap **Barcode1**, and then type or paste **MyScanner** under **Rename**.
    
-    **Tip**: The first **Barcode** control that you add is named **Barcode1** by default. If you delete that control and add another **Barcode** control, it will be named **Barcode2** by default. By manually renaming a control, you ensure that formulas will refer to the control by its correct name.
+    > [!TIP]
+> The first **Barcode** control that you add is named **Barcode1** by default. If you delete that control and add another **Barcode** control, it will be named **Barcode2** by default. By manually renaming a control, you ensure that formulas will refer to the control by its correct name.
    
     ![Rename the barcode control](./media/scan-barcode/rename-barcode.png)
 

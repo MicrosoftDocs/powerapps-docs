@@ -121,7 +121,8 @@ A label shows data that you specify as a literal string of text, which appears e
 * Add a label, and set its **[Text](properties-core.md)** property to a formula such as this one:<br>
   **Today()**
   
-    **Note:** When you specify a formula, you don't use quotation marks unless an argument of the formula is a literal string. In that case, enclose the argument, not the formula, in double quotation marks.
+    > [!NOTE]
+> When you specify a formula, you don't use quotation marks unless an argument of the formula is a literal string. In that case, enclose the argument, not the formula, in double quotation marks.
   
     Want more information about the **[Today](../functions/function-now-today-istoday.md)** function or [other functions](../formula-reference.md)?
 

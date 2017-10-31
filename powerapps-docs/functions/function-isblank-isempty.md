@@ -24,7 +24,8 @@ Tests whether a value is blank or a [table](../working-with-tables.md) contains 
 ## Overview
 *Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  Some data sources can store and return NULL values, which are represented in PowerApps as *blank*.
 
-**Note**: At this time, storing *blank* values is supported only for local collections. We know that many data sources support *blank* (NULL) values, and we're working to lift this limitation.
+> [!NOTE]
+> At this time, storing *blank* values is supported only for local collections. We know that many data sources support *blank* (NULL) values, and we're working to lift this limitation.
 
 Any property or calculated value can be *blank*.  For example, a Boolean value normally has one of two values: **true** or **false**.  But in addition to these two, it can also be *blank*.  This is similar to Microsoft Excel, where a worksheet cell starts out as blank but can hold the values **TRUE** or **FALSE**, among others. At any time, the contents of the cell can be removed, and it would return to a *blank* state.
 
@@ -67,7 +68,8 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 ## Examples
 ### Blank
-NOTE: At this time, the following example only works for local collections.  We know that many data sources support *blank* (NULL) values and We are working to lift this limitation.
+> [!NOTE]
+> At this time, the following example only works for local collections.  We know that many data sources support *blank* (NULL) values and We are working to lift this limitation.
 
 1. Create an app from scratch, and add a **Button** control.
 2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:

@@ -82,7 +82,8 @@ With the individual environment, you get the following functionality:
 
 You cannot apply add-ons to the quantities that we include. If you hit capacity limits, we recommend purchasing PowerApps Plan 2. Learn more about it from the [PowerApps pricing page](https://powerapps.microsoft.com/pricing/).
 
-**Note** : the capacity of the individual environment, whether or not it's used, doesn't contribute to your company's overall quota.
+> [!NOTE]
+> : the capacity of the individual environment, whether or not it's used, doesn't contribute to your company's overall quota.
 
 ## Publishing to AppSource
 Do you have an app you would like to share with customers? We now support a PowerApps Test Drive solution on [AppSource.com](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Let customers test drive your apps on AppSource](dev-appsource-test-drive.md).

@@ -60,7 +60,8 @@ All values within a column are of the same data type. In the above example, the 
 
 You may have referred to columns as "fields" in other tools.
 
-**Note:** For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+> [!NOTE]
+> For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
 ### Table
 A table comprises one or more records, each with multiple fields that have consistent names across the records.
@@ -93,7 +94,8 @@ Let's walk through some simple examples.
    
     By default, the gallery shows placeholder text from a table named **TextualGallerySample**. The **[Items](controls/properties-core.md)** property of the gallery is automatically set to that table.
    
-    **Note:** Some controls have been rearranged and enlarged for illustration purposes.
+    > [!NOTE]
+> Some controls have been rearranged and enlarged for illustration purposes.
    
     ![](media/working-with-tables/gallery-items.png)
 2. Instead of setting the **[Items](controls/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:<br>

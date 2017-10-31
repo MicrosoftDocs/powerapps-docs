@@ -19,7 +19,8 @@ ms.author: mblythe
 
 ---
 # Set up data alerts for the Power BI dashboard
-**Note**: This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> [!NOTE]
+> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task we'll add an alert in Power BI to let us know if pending projects are taking too long to approve, and a flow that responds when that alert occurs. For more information on alerts, see [Data alerts in Power BI service](https://powerbi.microsoft.com/documentation/powerbi-service-set-data-alerts).
 

@@ -48,7 +48,8 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
    2. If prompted, provide credentials to connect to SharePoint.
    3. In the **Site Address** box, type or paste the URL of a SharePoint Online site that contains a list.
       
-       **Note:** Specify the URL for the site not including the list.
+       > [!NOTE]
+> Specify the URL for the site not including the list.
    4. In the **List Name** box, select the list that you want to use.
    5. Click or tap the **Title** box, and then select **Add dynamic content**.
       
@@ -71,7 +72,8 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
     ![Flows option on the Action tab](./media/use-logic-flows/action-tab.png)
 6. In the pane that appears, select the flow that you created in the previous procedure.
    
-    **Note**: If the flow that you created isn't available, confirm whether PowerApps is set to the environment in which you created the flow.
+    > [!NOTE]
+> If the flow that you created isn't available, confirm whether PowerApps is set to the environment in which you created the flow.
    
     ![Add a flow from the customization pane](./media/use-logic-flows/add-flow-from-pane.png)
 7. In the formula bar, type or paste **RecordTitle.Text)** at the end of the formula that's been automatically added.
