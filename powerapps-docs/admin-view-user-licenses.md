@@ -29,7 +29,8 @@ If you’re a global administrator for Office 365 or a tenant administrator for 
 ## Download the list of users
 1. In the PowerApps admin center, click or tap **User licenses** near the left edge.
    
-    **Important**: This option is available to Office 365 Global administrators and Azure Active Directory tenant admininstrators only.
+    > [!IMPORTANT]
+> This option is available to Office 365 Global administrators and Azure Active Directory tenant admininstrators only.
    
     ![File and Share](./media/admin-view-user-licenses/leftnav.png)
 2. Click or tap **Download a list of active user licenses**.
@@ -38,7 +39,8 @@ If you’re a global administrator for Office 365 or a tenant administrator for 
    
     The file might take a few minutes to download. Wait a few minutes for the .csv file to download, and then open it in Excel.
    
-    **Note**: If you close the window before the file finishes downloading, you might have to restart the process.
+    > [!NOTE]
+> If you close the window before the file finishes downloading, you might have to restart the process.
 
 This example shows two users who have licenses to both PowerApps and Microsoft Flow through different means. Jane Doe has access through a subscription to Office 365, and John Doe got a trial license for each product.
 

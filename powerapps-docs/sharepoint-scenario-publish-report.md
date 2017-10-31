@@ -19,7 +19,8 @@ ms.author: mblythe
 
 ---
 # Publish the Power BI project report and create a dashboard
-**Note:** This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> [!NOTE]
+> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll publish our dataset and report to the Power BI service; then we'll create a dashboard based on the report. In many cases a report has a large number of visualizations and only a subset are used in a dashboard. In our case, we'll add all four visualizations to the dashboard.
 
@@ -45,7 +46,8 @@ In this task, we'll publish our dataset and report to the Power BI service; then
    
     You can see that when we published, Power BI Desktop uploaded a dataset **(d)** and a report **(c)**. You create dashboards in the service, not Power BI Desktop, and this workspace doesn't have any dashboards yet **(b)**. We'll create one next.
    
-    **Note:** Power BI has a new navigation experience coming out, and it could be enabled in your site. If the left navigation pane looks different from the above image, see [The new Power BI navigation experience](https://powerbi.microsoft.com/documentation/powerbi-service-the-new-power-bi-experience) for more information.
+    > [!NOTE]
+> Power BI has a new navigation experience coming out, and it could be enabled in your site. If the left navigation pane looks different from the above image, see [The new Power BI navigation experience](https://powerbi.microsoft.com/documentation/powerbi-service-the-new-power-bi-experience) for more information.
 
 ## Step 2: Configure credentials for refresh
 1. In the service, click or tap ![Gear icon](./media/sharepoint-scenario-publish-report/icon-gear.png) in the top right corner, then click or tap **Settings**.

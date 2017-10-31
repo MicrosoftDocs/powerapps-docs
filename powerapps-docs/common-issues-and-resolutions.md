@@ -19,7 +19,8 @@ ms.author: sharik
 
 ---
 # Common issues and resolutions for PowerApps
-**Note**: For more information, see the [list of known issues](https://docs.microsoft.com/en-us/common-data-service/entity-reference/known-issues) for the Microsoft Common Data Service.
+> [!NOTE]
+> For more information, see the [list of known issues](https://docs.microsoft.com/en-us/common-data-service/entity-reference/known-issues) for the Microsoft Common Data Service.
 
 ## Recently added/changed
 1. **Camera controls in PowerApps Studio for Windows**

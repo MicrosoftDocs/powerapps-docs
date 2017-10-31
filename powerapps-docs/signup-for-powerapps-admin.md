@@ -21,7 +21,8 @@ ms.author: jamesol
 # Purchase PowerApps for your organization
 This article shows you how to purchase PowerApps for your organization as an administrator. You can purchase PowerApps through the PowerApps website directly, through the Office 365 admin center, or through your Microsoft representative or partner. This article will discuss the trial options available for PowerApps Plan 1 or Plan 2 and then explain how to purchase PowerApps Plan 1 or Plan 2 as an organization. For more information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
-> **NOTE**   To purchase PowerApps for an organization, you must already be an Office 365 Global or Billing Admin of a tenant, or you must create a tenant.
+> > [!NOTE]
+>   To purchase PowerApps for an organization, you must already be an Office 365 Global or Billing Admin of a tenant, or you must create a tenant.
 > 
 > 
 
@@ -40,7 +41,8 @@ You can purchase PowerApps subscriptions for your organization from [powerapps.m
 ## Get PowerApps through Office 365
 You can purchase PowerApps subscriptions for your organization from the [Office 365 admin center][6] and then assign PowerApps licenses to your users. [Learn more][5].
 
-> **NOTE** PowerApps will be added to existing and new Office 365 subscriptions starting later in November 2016.
+> > [!NOTE]
+> PowerApps will be added to existing and new Office 365 subscriptions starting later in November 2016.
 > 
 > * If you sign in to PowerApps with an Office 365 subscription prior to this change going out, you will be prompted to sign up for a free PowerApps Plan 2 trial.
 > * Feel free to sign up for the trial if you want to try out PowerApps until the update is made to your Office 365 subscription.  
@@ -68,7 +70,8 @@ Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1 Tr
     ![](./media/signup-for-powerapps-admin/admin-purchase-paid.png)
 5. Enter the number of licenses you would like to add, and then select **Check out now** or **Add to cart**.
    
-   > **NOTE** You can add more later if needed.
+   > > [!NOTE]
+> You can add more later if needed.
    > 
    > 
 6. Enter the needed information in the Checkout flow,

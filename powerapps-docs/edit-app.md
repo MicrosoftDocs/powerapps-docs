@@ -31,7 +31,8 @@ Edit any app that you built, that you own, or for which you have **Can edit** pe
    
     You can edit any app in the list that appears. You can also search for an app by typing one or more characters in the search box near the upper-right corner.
    
-    **Note**: If you still don't see the app that you want to edit, verify that you've selected the correct environment near the upper-right corner.
+    > [!NOTE]
+> If you still don't see the app that you want to edit, verify that you've selected the correct environment near the upper-right corner.
    
     ![Environment list](./media/edit-app/environment-list.png)
 

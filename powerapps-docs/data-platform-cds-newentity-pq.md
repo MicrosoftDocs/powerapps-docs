@@ -30,7 +30,8 @@ With **Power Query** integration, business app developers using PowerApps can cr
 ## Enabling the CDS New Entities from Power Query feature
 This feature is available in your PowerApps tenant, but is not turned on by default. You can enable it in [web.powerapps.com](https://aka.ms/pqocds).
 
-**Note:** You can create new custom entities only in databases that you have created.
+> [!NOTE]
+> You can create new custom entities only in databases that you have created.
 
 In the PowerApps portal, take the following steps to enable this feature:
 

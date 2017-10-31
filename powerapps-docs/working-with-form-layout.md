@@ -94,7 +94,8 @@ You can also select cards directly on the form. When a card is selected, a black
 
 ![Data card selection](media/working-with-form-layout/sales-order-data-card-selection.png)
 
-**Note**: To delete a card (not just hide it), select it, and then press Delete.
+> [!NOTE]
+> To delete a card (not just hide it), select it, and then press Delete.
 
 ## Arrange cards in columns
 By default, forms in tablet apps have three columns, and those in phone apps have one. You can specify not only how many columns a form has but also whether all cards should fit within column borders.

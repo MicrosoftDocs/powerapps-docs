@@ -50,7 +50,8 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
    
     ![Select the Excel table](./media/cloud-storage-blob-connections/selecttable.png)
    
-    **NOTE** Remember, the Excel data must be formatted as a table.
+    > [!NOTE]
+> Remember, the Excel data must be formatted as a table.
 
 ## Using the Excel data in your app
 1. On the **Insert** tab, select **Gallery**, and then select a **With text** gallery control.
@@ -70,7 +71,8 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
     Sample output:  
     ![Second and third labels](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
    
-    <br/>**NOTE** The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
+    <br/>> [!NOTE]
+> The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 [Understand tables and records](../working-with-tables.md) provides more details and some examples.  
 

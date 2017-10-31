@@ -62,7 +62,8 @@ In this procedure, you'll unlock a card and then replace a **[Text input](contro
 5. In the right-hand pane, set the **Update** property of the **Quantity** card to this formula:<br>
    **QtySlider.Value**
    
-   **Note**: If the **Update** property doesn't appear, click or tap **More options** at the bottom of the **Data** section.
+   > [!NOTE]
+> If the **Update** property doesn't appear, click or tap **More options** at the bottom of the **Data** section.
    
    ![Set the Update property](./media/customize-card/set-qty-update.png)
 6. Click or tap the slider to select it, and then open the list of controls at the top of the right-hand pane.

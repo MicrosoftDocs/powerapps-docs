@@ -94,7 +94,8 @@ For more information about galleries, see [Show a list of items in PowerApps](ad
     The formula bar should now contain a formula that resembles this example:<br>
     **SortByColumns(Filter(AppGen, StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**
    
-    **Note**: The number that appears after **TextSearchBox** might be higher, depending on what actions you took previously. However, the formula should still work as expected.
+    > [!NOTE]
+> The number that appears after **TextSearchBox** might be higher, depending on what actions you took previously. However, the formula should still work as expected.
 
 ## Test sorting and searching
 1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).

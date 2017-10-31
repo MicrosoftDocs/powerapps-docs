@@ -69,7 +69,8 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
      
        The gallery control automatically shows the tweets of the Twitter handler you type in.
      
-     **TIP** Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline.
+     > [!TIP]
+> Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline.
 3. Set the gallery's **Items** property to `Twitter.HomeTimeline()`.
    
     With the gallery selected, the right-hand pane shows options for that gallery.
@@ -97,7 +98,8 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
      
        The gallery control automatically shows who is following the Twitter handle you type in.
      
-     **TIP** Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline.
+     > [!TIP]
+> Some of these formulas use the **maxResults** argument to show the *x* number of most recent tweets in a timeline.
 2. Set the gallery's **Items** property to `Twitter.MyFollowers()`.
    
     With the gallery selected, the right-hand pane shows options for that gallery.
@@ -155,7 +157,8 @@ Or, you can use an input text control to type in a Twitter handle, just as we ha
    
     Or, you can use an **Input text** control to specify a search term, just as we have throughout this topic.
    
-    **TIP** Show the first five results by using maxResults:  
+    > [!TIP]
+> Show the first five results by using maxResults:  
    
     `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5}).TweetText`
 2. Set the gallery's **Items** property to `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`.

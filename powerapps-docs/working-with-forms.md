@@ -56,7 +56,8 @@ The primary control on this screen, **BrowseGallery1**, covers most of the area 
 
 Set the **[Items](controls/properties-core.md)** property of a gallery to show records from a data source in it. For example, set that property to **Assets** to show records from a data source of that name.
 
-**Note**: In a generated app, **[Items](controls/properties-core.md)** is set to a significantly more complicated formula by default so that the user can sort and search for records. You'll learn how to build that formula later in this topic; the simpler version is enough for now.
+> [!NOTE]
+> In a generated app, **[Items](controls/properties-core.md)** is set to a significantly more complicated formula by default so that the user can sort and search for records. You'll learn how to build that formula later in this topic; the simpler version is enough for now.
 
 Instead of finding a record to display or edit, the user can create a record by selecting the "+" symbol above the gallery. Create this effect by adding an **[Image](controls/control-image.md)** control, showing a "+" symbol in it, and setting its **[OnSelect](controls/properties-core.md)** property to this formula:
 <br>**NewForm( EditForm1 ); Navigate( EditScreen1, None )**
@@ -145,7 +146,8 @@ By understanding how PowerApps generates an app, you can build one yourself that
 ## Identify test data
 To get the most from this topic, start with a data source with which you can experiment. It should contain test data that you can read and update without concern.
 
-**Note:** If you use a SharePoint list or an Excel table that contains column names with spaces as your data source, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+> [!NOTE]
+> If you use a SharePoint list or an Excel table that contains column names with spaces as your data source, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
 To follow the rest of this topic exactly, create a SharePoint list named "Ice Cream" that contains this data:
 
@@ -153,7 +155,8 @@ To follow the rest of this topic exactly, create a SharePoint list named "Ice Cr
 
 * Create an app from blank, for phones, and [connect it to your data source](add-data-connection.md).
   
-    **Note:** Tablet apps are very similar, but you may want a different [screen layout](#screen-design) to make the most of the extra screen space.
+    > [!NOTE]
+> Tablet apps are very similar, but you may want a different [screen layout](#screen-design) to make the most of the extra screen space.
   
     The examples in the rest of the topic are based on a data source named **Ice Cream**.
 

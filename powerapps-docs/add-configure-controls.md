@@ -50,7 +50,8 @@ You can add any control in a variety of categories by clicking or tapping the **
     **Charts**: Column chart, Line chart, Pie chart<br>
     **Icons**
 
-**Tip**: If you need more space for controls, [add another screen](add-screen-context-variables.md).
+> [!TIP]
+> If you need more space for controls, [add another screen](add-screen-context-variables.md).
 
 ## Configure a control directly
 In this procedure, you'll add and configure a **Label** control, but you can apply many of the same principles to other controls.
@@ -63,7 +64,8 @@ In this procedure, you'll add and configure a **Label** control, but you can app
    
     ![A selected label](./media/add-configure-controls/selected-text-box.png)
    
-    **Important:** If a control is selected when you select another control or a blank area of the screen, the first element is no longer selected.
+    > [!IMPORTANT]
+> If a control is selected when you select another control or a blank area of the screen, the first element is no longer selected.
 2. Make the **Label** control narrower by dragging a handle on the right edge of the selection box to the left. (The middle handle appears only if you zoom in.)
    
     ![A resized label](./media/add-configure-controls/shorter-text-box.png)
@@ -157,7 +159,8 @@ Instead of configuring a control directly, in the **Properties** tab, or from th
    
     ![Today function](./media/add-configure-controls/today-function.png)
    
-    **Tip:** You can [format dates and times](show-text-dates-times.md) in various ways, in addition to performing calculations on them.
+    > [!TIP]
+> You can [format dates and times](show-text-dates-times.md) in various ways, in addition to performing calculations on them.
 
 ## Configure two controls to interact with each other
 In this procedure, you'll add a check box and then configure the label that you already have to appear only when the check box is selected.

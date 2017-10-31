@@ -69,8 +69,10 @@ If a number has more digits to the right of the decimal point than there are pla
 | **yyyy** |Displays the year as a four-digit number. |
 | **h** |Displays the hour as a number without a leading zero. |
 | **hh** |Displays the hour as a number with a leading zero when appropriate. If the format contains **AM** or **PM**, the hour is shown based on the 12-hour clock. Otherwise, the hour is shown based on the 24-hour clock. |
-| **m** |Displays the minute as a number without a leading zero.  Note: The **m** or the **mm** code must appear immediately after the **h** or **hh** code or immediately before the **ss** code; otherwise, **Text** returns the month instead of minutes. |
-| **mm** |Displays the minute as a number with a leading zero when appropriate. Note: The **m** or the **mm** placeholder must appear immediately after the **h** or **hh** placeholder or immediately before the **ss** placeholder. Otherwise, **Text** returns the month  instead of minutes. |
+| **m** |Displays the minute as a number without a leading zero.  > [!NOTE]
+> The **m** or the **mm** code must appear immediately after the **h** or **hh** code or immediately before the **ss** code; otherwise, **Text** returns the month instead of minutes. |
+| **mm** |Displays the minute as a number with a leading zero when appropriate. > [!NOTE]
+> The **m** or the **mm** placeholder must appear immediately after the **h** or **hh** placeholder or immediately before the **ss** placeholder. Otherwise, **Text** returns the month  instead of minutes. |
 | **s** |Displays the second as a number without a leading zero. |
 | **ss** |Displays the second as a number with a leading zero when appropriate. |
 | **f** |Displays the fractions of seconds. |
@@ -120,7 +122,8 @@ While writing a formula, if you do not provide a language placeholder and the fo
 
 **[$-en-US]** is assumed if this placeholder is not present when your app is run. 
 
-**NOTE:** In a future version, the syntax of this placeholder may change to avoid confusion with a similar, but different, placeholder supported by Excel.
+> [!NOTE]
+> In a future version, the syntax of this placeholder may change to avoid confusion with a similar, but different, placeholder supported by Excel.
 
 #### Result language tag
 Appearing in the result of **Text** are translated strings for month, weekday, and AM/PM designations, as well as the appropriate group and decimal separators.

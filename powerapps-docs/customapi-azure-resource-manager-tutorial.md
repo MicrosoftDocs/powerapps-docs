@@ -77,7 +77,8 @@ Now that the AAD application is configured, let's add the custom connector.
 
 1. In [powerapps.com](https://web.powerapps.com), in the left menu, select **Connections**. Select the ellipsis (**...**), then select **Manage custom connectors** in the upper right corner.
    
-     **Tip**: If you can't find where to manage custom connectors in a mobile browser, it might be under a menu in the upper left corner.
+     > [!TIP]
+> If you can't find where to manage custom connectors in a mobile browser, it might be under a menu in the upper left corner.
    
     ![Create custom connector](./media/customapi-azure-resource-manager-tutorial/managecustomapi.png)  
 2. Select **Create custom connector**.
@@ -88,14 +89,16 @@ Now that the AAD application is configured, let's add the custom connector.
     ![Connect to a new API endpoint](./media/customapi-azure-resource-manager-tutorial/createcustom.png)
 4. On the next screen, because the OpenAPI file uses our AAD application for authentication, we need to give PowerApps some information about our application.  Under **Client id**, type the AAD **Application ID** you noted earlier.  For client secret, use the **key**.  And finally, for **Resource URL**, type `https://management.core.windows.net/`.
    
-    **Important**: Be sure to include the Resource URL exactly as written above, including the trailing slash.
+    > [!IMPORTANT]
+> Be sure to include the Resource URL exactly as written above, including the trailing slash.
    
     ![OAuth settings](./media/customapi-azure-resource-manager-tutorial/oauthsettings.png)
 5. Your custom connector is now registered and can be consumed within PowerApps or Microsoft Flow.
    
     ![Custom connector added](./media/customapi-azure-resource-manager-tutorial/createdcustomapi.png)
    
-    **Note**: The sample OpenAPI does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this OpenAPI file or create another OpenAPI file using the [online OpenAPI editor](http://editor.swagger.io/). This process can be used to access any RESTful API authenticated using AAD.
+    > [!NOTE]
+> The sample OpenAPI does not define the full set of ARM operations and currently only contains the [List all subscriptions](https://msdn.microsoft.com/library/azure/dn790531.aspx) operation.  You can edit this OpenAPI file or create another OpenAPI file using the [online OpenAPI editor](http://editor.swagger.io/). This process can be used to access any RESTful API authenticated using AAD.
 
 ## Next steps
 For more detailed information about how to create an app, see [Create an app from data](get-started-create-from-data.md).

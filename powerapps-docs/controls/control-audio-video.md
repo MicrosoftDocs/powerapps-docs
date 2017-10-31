@@ -90,7 +90,8 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 4. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
    
-    **Tip:** The play button of the **Video** control appears when you hover over the control.
+    > [!TIP]
+> The play button of the **Video** control appears when you hover over the control.
 5. Press Esc to return to the default workspace.
 
 ### Play a YouTube video

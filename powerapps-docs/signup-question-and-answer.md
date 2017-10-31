@@ -126,7 +126,8 @@ If a tenant was created by Microsoft, you can claim and manage that tenant using
 4. Select the app-launcher icon in the upper-left corner, and then choose Admin.
 5. Read the instructions on the **Become the admin** page, and then choose **Yes, I want to be the admin**.  
 
-**NOTE**: If this option doesn’t appear, an Office 365 administrator is already in place.
+> [!NOTE]
+> If this option doesn’t appear, an Office 365 administrator is already in place.
 
 ### If I have multiple domains, can I control the Office 365 tenant that users are added to?
 If you do nothing, a tenant is created for each user email domain and subdomain.
@@ -135,5 +136,6 @@ If you want all users to be in the same tenant regardless of their email address
 
 * Create a target tenant ahead of time or use an existing tenant. Add all the existing domains and subdomains that you want consolidated within that tenant. Then all the users with email addresses ending in those domains and subdomains automatically join the target tenant when they sign up.
 
-**IMPORTANT**: There is no supported automated mechanism to move users across tenants once they have been created. To learn about adding domains to a single Office 365 tenant, see [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-ffdb2216-330d-4d73-832b-3e31bcb5b2a7).
+> [!IMPORTANT]
+> There is no supported automated mechanism to move users across tenants once they have been created. To learn about adding domains to a single Office 365 tenant, see [Add your users and domain to Office 365](https://support.office.com/article/Add-your-users-and-domain-to-Office-365-ffdb2216-330d-4d73-832b-3e31bcb5b2a7).
 

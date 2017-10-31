@@ -33,7 +33,8 @@ By default, every app that Microsoft PowerApps generates has three screens:
 * The details screen shows more or all fields for a specific record.
 * The edit screen provides UI elements that let users create or update a record and save their changes.
 
-**Note:** When you generate an app from Common Data Service, you don't have to create a connection from PowerApps, as you do for data sources such as SharePoint, Dynamics 365, and Salesforce. You must specify only the entity that you want to show, manage, or show and manage in the app.
+> [!NOTE]
+> When you generate an app from Common Data Service, you don't have to create a connection from PowerApps, as you do for data sources such as SharePoint, Dynamics 365, and Salesforce. You must specify only the entity that you want to show, manage, or show and manage in the app.
 
 ## Generate an app
 1. Create a Common Data Service database. For more information, see [Create a Common Data Service database](create-database.md).

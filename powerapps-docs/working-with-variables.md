@@ -250,5 +250,6 @@ Let's recreate our adding machine by using a collection:
      ![](media/working-with-variables/papertape-6.png)
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons.  Select the **Save** button.  Close and reload your app, and select the **Load** button to reload your collection.  
     
-     Note: **SaveData** and **LoadData** do not function when running in a web browser, you must be using the studio installed on Windows or one of the players for mobile device.  
+     > [!NOTE]
+> **SaveData** and **LoadData** do not function when running in a web browser, you must be using the studio installed on Windows or one of the players for mobile device.  
 

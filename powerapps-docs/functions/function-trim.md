@@ -57,5 +57,6 @@ To create this collection, set the **OnSelect** property of a **[Button](../cont
 | **Trim(&nbsp;Spaces&nbsp;)** |Trims all spaces from the start and end of each string and extra spaces from within each string in the **Spaces** collection. |<style> img { max-width: none } </style> ![](media/function-trim/output-trim.png) |
 | **TrimEnds(&nbsp;Spaces&nbsp;)** |Trims all spaces from the start and end of each string in the **Spaces** collection. |<style> img { max-width: none } </style> ![](media/function-trim/output-trimends.png) |
 
-**Note**: Extra spaces don't appear if you display a collection by clicking or tapping **Collections** on the **File** menu. To verify string length, use the **[Len](function-len.md)** function.
+> [!NOTE]
+> Extra spaces don't appear if you display a collection by clicking or tapping **Collections** on the **File** menu. To verify string length, use the **[Len](function-len.md)** function.
 

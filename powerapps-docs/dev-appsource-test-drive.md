@@ -90,7 +90,8 @@ UpdateIf(SiteInspectorCollect,ID=record.ID,
 RemoveIf(SiteInspectorCollect,ID=record.ID)
 ```
 
-**Note** : Collections hold data only while the app is running; any changes are discarded when the app is closed.
+> [!NOTE]
+> : Collections hold data only while the app is running; any changes are discarded when the app is closed.
 
 In summary, you can create a version of your app with embedded data, which simulates the experience of your app connecting to external data. After the data is embedded, you will be ready to publish this app as a Test Drive solution on  AppSource.com.
 

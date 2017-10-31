@@ -19,11 +19,13 @@ ms.author: mblythe
 
 ---
 # Create an app to manage projects
-**Note:** This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> [!NOTE]
+> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll build an app from scratch. This app allows a user to assign a manager to projects and to update project details. You will see some of the same controls and formulas you saw in the first app, but you will build more of the app yourself this time. The process is more complex, but you'll learn more, so we think it's a fair trade-off.
 
-**Tip:** The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-details-app.msapp.
+> [!TIP]
+> The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-details-app.msapp.
 
 ## Quick review of PowerApps Studio
 You used PowerApps Studio for web in the last task, but we want to make sure you understand all the parts before we move on. You can continue to work in PowerApps Studio for web, or you can use [PowerApps Studio for Windows](https://aka.ms/powerappswin).
@@ -147,7 +149,8 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
      
      ![Update button text](./media/sharepoint-scenario-build-app/04-03-08-buttons-final.png)
      
-     **Note:** The button is labeled **Update Details**, but we first navigate to the **ViewProjects** screen to select a project to update.
+     > [!NOTE]
+> The button is labeled **Update Details**, but we first navigate to the **ViewProjects** screen to select a project to update.
 
 ### Run the app
 The app doesn't do a lot yet, but you can run it if you like:
@@ -160,7 +163,8 @@ The app doesn't do a lot yet, but you can run it if you like:
 ## Step 4: Build the AssignManager screen
 In this step, we'll use a gallery to display all projects that have been approved but don't yet have a manager. We'll add other controls, so you can assign a manager.
 
-**Note:**  We'll build a page later in the app that allows you to edit all fields for a project (including the manager field), but we thought it would be cool to build a screen like this one as well.
+> [!NOTE]
+>  We'll build a page later in the app that allows you to edit all fields for a project (including the manager field), but we thought it would be cool to build a screen like this one as well.
 
 1. Save the changes you've made so far.
 2. In the left navigation bar, click or tap the **AssignManager** screen.

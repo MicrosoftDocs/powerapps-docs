@@ -34,7 +34,8 @@ Add an app to a Microsoft Teams channel so that anybody with whom the app was sh
     ![](./media/open-app-embedded-in-teams/add-a-tab.png)
 5. Click or tap the app that you want to add.
    
-    **Note**: You can search for an app by name, author, or environment.
+    > [!NOTE]
+> You can search for an app by name, author, or environment.
    
     ![](./media/open-app-embedded-in-teams/select-an-app.png)
 6. Click or tap the **Save** button.

@@ -23,14 +23,16 @@ Signing up for PowerApps as an individual, is easy! This article walks you throu
 
 For administration information, see [Purchase PowerApps for your organization](signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
-> **NOTE** If you are in an organization, individual signup may be disabled. If you get an error indicating it has been turned off, see [Individual signup has been turned off](#Individual-sign-up-turned-off) (in this topic) for more information.
+> > [!NOTE]
+> If you are in an organization, individual signup may be disabled. If you get an error indicating it has been turned off, see [Individual signup has been turned off](#Individual-sign-up-turned-off) (in this topic) for more information.
 > 
 > 
 
 ## What email addresses can you use
 To sign up for PowerApps, enter your work or school email address.
 
-> **NOTE** Currently, consumer email services, telecommunication providers, government, and military addresses are not supported, including:  
+> > [!NOTE]
+> Currently, consumer email services, telecommunication providers, government, and military addresses are not supported, including:  
 > 
 > * outlook.com, hotmail.com, gmail.com, and so on  
 > * .gov and .mil

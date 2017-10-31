@@ -41,12 +41,14 @@ You can choose the kind of media file to add (for example, images, video, or aud
    
     ![Set Image property](./media/add-images-pictures-audio-video/imageproperty.png)
    
-    **Note** Specify the file name only, without the extension, inside single quotes.
+    > [!NOTE]
+> Specify the file name only, without the extension, inside single quotes.
 7. If you added a video or audio control, set its **Media** property to the file that you added:  
    
     ![Set Media property](./media/add-images-pictures-audio-video/mediaproperty.png)
    
-    **Note** Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
+    > [!NOTE]
+> Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
 ## Add media from Azure Media Services
 1. From your Azure Media Services account, upload and publish your video asset from **AMS > Settings > Assets**.
@@ -63,7 +65,8 @@ In this scenario, you save images in a cloud storage account, OneDrive for Busin
 
 This scenario uses the [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
 
-**NOTE**: The path to these images in the Excel file must use forward slashes. When PowerApps saves image paths in an Excel table, the path uses backslashes. If you use image paths from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images won't display.  
+> [!NOTE]
+> The path to these images in the Excel file must use forward slashes. When PowerApps saves image paths in an Excel table, the path uses backslashes. If you use image paths from such a table, change the paths in the Excel table to use forward slashes instead of backslashes. Otherwise, the images won't display.  
 
 1. Download [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 2. Rename the **Assets** folder to **Assets_images**.

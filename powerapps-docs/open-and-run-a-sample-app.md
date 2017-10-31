@@ -50,7 +50,8 @@ In **Cost Estimator**, for example, you can create an appointment for estimating
    
     ![](./media/open-and-run-a-sample-app/job_details.png)
    
-    **Note**: You can delete an appointment by clicking or tapping the trash-can icon in the upper-right corner.
+    > [!NOTE]
+> You can delete an appointment by clicking or tapping the trash-can icon in the upper-right corner.
    
     ![](./media/open-and-run-a-sample-app/job_delete.png)
 

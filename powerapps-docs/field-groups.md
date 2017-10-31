@@ -47,7 +47,8 @@ Common Data Service includes several default field groups on entities. These fie
 3. To remove a field group, click the **X** next to the field name in the **Field group fields** list.
 4. Click or tap the **Save** button.
 
-*Note: Modifying field groups for [standard entities](guided-learning/learning-common-data-service-entities.md) isn't currently supported, but you can modify field groups for your custom entities.*
+*> [!NOTE]
+> Modifying field groups for [standard entities](guided-learning/learning-common-data-service-entities.md) isn't currently supported, but you can modify field groups for your custom entities.*
 
 ## Creating a field group
 Default field groups are automatically created when you create an entity. Creating additional field groups isn't currently supported.
