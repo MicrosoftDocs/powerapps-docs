@@ -24,8 +24,12 @@ You can delete custom entities, but you can't delete standard entities.
 2. In the list of entities, click or tap the entity to delete, and then click or tap the trash bin button in the upper-right corner.
 3. In the dialog box that appears, click or tap **Delete** to delete the entity.
 
-## Notes
-* When you delete an entity, you delete both the entity definition and all data that the entity contains.
-* You might break an app if you delete an entity that is used in that app.
-* If entity A has [lookup fields](data-platform-entity-lookup.md) to entity B, you might have to delete entity B before you can delete entity A.
+>[!NOTE]
+>When you delete an entity, you delete both the entity definition and all data that the entity contains.
+
+>[!NOTE]
+>You might break an app if you delete an entity that is used in that app.
+
+>[!NOTE]
+>If entity A has [lookup fields](data-platform-entity-lookup.md) to entity B, you might have to delete entity B before you can delete entity A.
 
