@@ -48,7 +48,7 @@ The ability to import an app is available to any user with "Environment Maker" p
 A  user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order to export or import any app.
 
 > [!NOTE]
-> While packaging is in preview, any user with a valid PowerApps license will be able to try out packaging for their apps and environments.*
+> While packaging is in preview, any user with a valid PowerApps license will be able to try out packaging for their apps and environments.
 
 ## Exporting an app
 1. In http://web.powerapps.com, click or tap **Apps**, select the ellipses for the app you want to migrate, and then select **Export (preview)**.
