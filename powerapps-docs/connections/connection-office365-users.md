@@ -114,7 +114,7 @@ If you create a contact and select that contact in the browse screen of the app,
     With the gallery selected, the right-hand pane shows options for that gallery.
 4. In the second list, select **JobTitle**. In the third list, select **DisplayName**. The gallery is updated to show these values.  
    
-    <br/>> [!NOTE]
+> [!NOTE]
 > The first box is actually an image control. If you don't have an image, you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 ### Search for users

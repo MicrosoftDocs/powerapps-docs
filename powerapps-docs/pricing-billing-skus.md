@@ -77,7 +77,7 @@ When the trial expires, users have these options:
 * Users who have access to PowerApps or Microsoft Flow through Office 365 or Dynamics 365 can still access PowerApps or Microsoft Flow.  However, those users will lose access to any features that are exclusive to Plan 2, as outlined on the [PowerApps pricing page][2].
 * Users who don't have access through Office 365 or Dynamics 365 can request to extend the trial, or they can purchase a stand-alone plan. For more information, see [Purchase PowerApps for your organization][4].
 
-> > [!NOTE]
+> [!NOTE]
 >   To purchase PowerApps for an organization, you must be an Office 365 Global or Billing Admin of a tenant, or you must create a tenant.
 > 
 > 
