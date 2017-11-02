@@ -6,7 +6,7 @@ metadata:
   description: Understand what PowerApps is - its software elements, and related technologies.
   audience: Business User
   level: Beginner
-  nextTutorialHref: creatinganappspo
+  nextTutorialHref: create-app-sharepoint
   nextTutorialTitle: Creating an app from SharePoint
   displayType: one-column
   author: mgblythe

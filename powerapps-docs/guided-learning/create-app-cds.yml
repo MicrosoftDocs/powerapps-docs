@@ -6,7 +6,7 @@ metadata:
   description: Generate a three screen app from the Common Data Service, then explore and update the app.
   audience: Business User
   level: Beginner
-  nextTutorialHref: managingapps
+  nextTutorialHref: manage-apps
   nextTutorialTitle: Managing apps
   displayType: one-column
   author: mgblythe
@@ -19,25 +19,25 @@ items:
 - durationInMinutes: 1
   content: |
     Generate a three screen app from the Common Data Service, then explore screens and controls from the app. Update app screens, controls, and fields; bring in additional data and trigger a flow from the app.
-- title: Generate an app (Common Data Service)
+- title: Generate an app
   durationInMinutes: 6
   content: |
     > [!Video https://www.youtube.com/embed/Gi5TQF7_pz8?rel=0]
 
     [!INCLUDE [](includes/learning-case-app-generate.md)]
-- title: Generate an app (Common Data Service)
+- title: Generate an app
   durationInMinutes: 5
   content: |
     > [!Video https://www.youtube.com/embed/98d6SZueEek?rel=0]
 
     [!INCLUDE [](includes/learning-case-app-explore-controls.md)]
-- title: Customize the app (Common Data Service)
+- title: Customize the app
   durationInMinutes: 12
   content: |
     > [!Video https://www.youtube.com/embed/wHy72cOe8Os?rel=0]
 
     [!INCLUDE [](includes/learning-case-app-customize.md)]
-- title: Add a data source and flow (Common Data Service)
+- title: Add a data source and flow
   durationInMinutes: 11
   content: |
     > [!Video https://www.youtube.com/embed/Y057qUJ2NNk?rel=0]
