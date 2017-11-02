@@ -34,7 +34,7 @@ sections:
       title: Creating an app from the Common Data Service
     - html: <p><a href="manage-apps#step-1"> Share your apps</a> - 5 min</p><p><a href="manage-apps#step-2"> Version your apps</a> - 1 min</p><p><a href="manage-apps#step-3"> Environments</a> - 8 min</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_api.svg
+        src: https://docs.microsoft.com/media/common/i_management.svg
       title: Managing apps
     - html: <p><a href="manage-data#step-1"> The Common Data Service</a> - 5 min</p><p><a href="manage-data#step-2"> Understand Common Data Service entities</a> - 8 min</p><p><a href="manage-data#step-3"> Create custom entities</a> - 6 min</p><p><a href="manage-data#step-4"> Manage entity data</a> - 7 min</p><p><a href="manage-data#step-5"> Common Data Service security</a> - 8 min</p>
       image:
