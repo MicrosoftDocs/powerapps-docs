@@ -6,7 +6,7 @@ metadata:
   description: Generate a three screen app from the Common Data Service, then explore and update the app.
   audience: Business User
   level: Beginner
-  nextTutorialHref: managingapps
+  nextTutorialHref: manage-apps
   nextTutorialTitle: Managing apps
   displayType: one-column
   author: mgblythe
