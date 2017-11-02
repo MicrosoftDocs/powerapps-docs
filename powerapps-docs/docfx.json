@@ -39,6 +39,7 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "powerapps-docs"
+    "dest": "powerapps-docs",
+    "titleSuffix": "PowerApps"
   }
 }
