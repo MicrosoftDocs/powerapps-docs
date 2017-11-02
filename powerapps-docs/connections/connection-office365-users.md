@@ -27,8 +27,6 @@ You can display this information in a label on your app. You can display one fun
 
 This topic shows you how to add Office 365 Users as a connection, add Office 365 Users as a data source to your app, and use table data in a gallery control.
 
-&nbsp;
-
 [!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
 ## Add a connection

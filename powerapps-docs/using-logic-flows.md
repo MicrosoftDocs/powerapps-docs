@@ -14,13 +14,13 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 06/05/2017
-ms.author: karthikb
+ms.author: sharik
 
 ---
 # Start a flow in an app
 You can use Microsoft Flow to create logic that performs one or more tasks when an event occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close PowerApps.
 
-**Prerequisites**
+## Prerequisites
 
 * [Sign up](signup-for-powerapps.md) for PowerApps, and then follow either of these steps:
   

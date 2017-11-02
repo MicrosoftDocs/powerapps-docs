@@ -21,7 +21,6 @@ ms.author: sharik
 # Understand on-premises data gateways for Microsoft PowerApps
 ## Installation and configuration
 **Prerequisites**
-
 Minimum:
 
 * .NET 4.5 Framework

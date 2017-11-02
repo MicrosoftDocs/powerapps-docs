@@ -28,8 +28,6 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 > [!NOTE]
 > This connector is limited to 150 calls per user per day.
 
-&nbsp;
-
 [!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
 ## Connect to Microsoft Translator

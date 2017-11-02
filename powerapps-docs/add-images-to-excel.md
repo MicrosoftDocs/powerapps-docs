@@ -20,7 +20,7 @@ ms.author: sharik
 # Add images to Excel from PowerApps
 Create an app automatically in which users can show, add, or delete images from files or drawings from a **Pen** control. The app is based on an Excel file that you create and upload to a cloud-storage account.
 
-**Prerequisites**
+## Prerequisites
 
 * Familiarity with [adding and configuring controls](add-configure-controls.md).
 * Familiarity with [configuring Excel data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370?ui=en-US&rs=en-US&ad=US).

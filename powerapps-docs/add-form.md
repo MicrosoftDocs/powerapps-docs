@@ -15,13 +15,13 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 10/06/2017
-ms.author: karthikb
+ms.author: sharik
 
 ---
 # Show, edit, or add a record from a table in PowerApps
 To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control.
 
-**Prerequisites**
+## Prerequisites
 
 * Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 * Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.

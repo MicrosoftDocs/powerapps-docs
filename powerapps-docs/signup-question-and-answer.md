@@ -90,7 +90,7 @@ Removing of the PowerApps license or service for a user in your organization wil
   
     ![](./media/signup-question-and-answer/office-waffle.png)
 
-### How can restrict my users' ability to access my organization's business data using PowerApps?
+### How can I restrict my users' ability to access my organization's business data using PowerApps?
 PowerApps allows you to create data zones for business and non-business data, as shown below.  Once these data loss prevention policies are implemented, users are prevented from designing or running PowerApps that combine business and non-business data. For more details, See [Data loss prevention (DLP) policies](prevent-data-loss.md).
 
 ![](./media/signup-question-and-answer/data-loss-prevention-policy.png)

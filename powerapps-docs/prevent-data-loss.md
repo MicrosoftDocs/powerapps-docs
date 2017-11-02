@@ -19,24 +19,25 @@ ms.author: deonhe
 
 ---
 # Data loss prevention (DLP) policies
-## What is a data loss prevention policy?
+
 An organization's data is critical to its success. Its data needs to be readily available for decision-making but it needs to be protected so that it isn't shared with audiences that should not have access to it. To protect this data, Microsoft PowerApps (PowerApps) provides you with the ability to create and enforce policies that define which consumer services/connectors specific business data can be shared with. These policies that define how data can be shared are referred to as data loss prevention (DLP) policies.  
 
 ## Why create a DLP policy?
 You would create DLP policy to clearly define which consumer services business data may be shared with. For example, an organization that uses PowerApps may not want its business data that's stored in SharePoint to be automatically published to its Twitter feed. To prevent this, you can create a DLP policy that blocks SharePoint data from being used as the source for tweets.
 
-## Benefits of a DLP policy
+Benefits of a DLP policy
+:
 * Ensures that data is managed in a uniform manner across the organization  
 * Prevents important business data from being accidentally published to services such as social media sites.   
 
 ## Managing DLP policies
-**Prerequisites**  
+## Prerequisites  
 In order to create, edit, or delete DLP policies, the following items are required:
 
 * Either environment admin or tenant admin permissions. You can learn more about permissions in the [environments topic](environments-administration.md)
 
 ## Create a DLP policy
-**Prerequisites**  
+## Prerequisites  
 In order to create a DLP policy, you must have permissions to at least one environment.  
 
 Follow these steps to create a DLP policy that prevents data that is stored in your SharePoint database from being published to Twitter:  
@@ -63,8 +64,7 @@ Follow these steps to create a DLP policy that prevents data that is stored in y
 
 Congratulations, you have now created a DLP policy that allows app to share data between SharePoint and Salesforce and blocks the sharing of data with any other services.  
 
-## Find a DLP policy
-### Admins
+### Find a DLP policy### Admins
 Admins can use the search feature from the Admin center to find specific DLP policies.  
 
 > [!NOTE]

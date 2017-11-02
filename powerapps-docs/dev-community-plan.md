@@ -26,21 +26,21 @@ If you want to build skills and learn more about PowerApps, Microsoft Flow, and 
 * Explore how you can use [the Common Data Service](https://docs.microsoft.com/en-us/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
 * Export the solutions you create in your individual environment, and [list them on AppSource](dev-appsource-test-drive.md) so your customers can test-drive them.
 
-## Who can sign-up for the PowerApps Community Plan?
-Anyone with a [work or school account](signup-for-powerapps.md#what-email-addresses-can-you-use) can sign-up for the PowerApps Community Plan. But we especially recommend this plan if you:
+## Who can sign up for the PowerApps Community Plan?
+Anyone with a [work or school account](signup-for-powerapps.md#what-email-addresses-can-you-use) can sign up for the PowerApps Community Plan. But we especially recommend this plan if you:
 
 * Want to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service.
 * Are interested in building business apps and workflows to distribute on AppSource.
 
-## Where can I sign-up for the PowerApps Community Plan?
-Sign-up on the [PowerApps Community Plan website](https://powerapps.microsoft.com/communityplan). If you are an existing user of PowerApps with Office 365 or Dynamics 365, you can also [create an environment for individual use](https://web.powerapps.com/community/signup).
+## Where can I sign up for the PowerApps Community Plan?
+Sign up on the [PowerApps Community Plan website](https://powerapps.microsoft.com/communityplan). If you are an existing user of PowerApps with Office 365 or Dynamics 365, you can also [create an environment for individual use](https://web.powerapps.com/community/signup).
 
 After signing up for the Community Plan, you will be redirected to the [PowerApps site](https://web.powerapps.com) and will land in your individual environment. The environment is named with your name, for example 'John Doe's environment'. If there is already an environment with that name, the individual environment will be named as 'John Doe's (1) environment'.  The following image shows how the environment appears.
 
 ![Individual environment for Community Plan](media/dev-community-plan/individual-environment.png)
 
 ### Get the Community Plan with Visual Studio Dev Essentials
-If you are a Visual Studio Dev Essentials user, PowerApps is included in your benefits. Visit [My benefits](https://my.visualstudio.com/benefits) and click or tap the PowerApps tile to sign-up for the PowerApps Community Plan.
+If you are a Visual Studio Dev Essentials user, PowerApps is included in your benefits. Visit [My benefits](https://my.visualstudio.com/benefits) and click or tap the PowerApps tile to sign up for the PowerApps Community Plan.
 
 ![Community Plan in Visual Studio](media/dev-community-plan/visual-studio.png)
 

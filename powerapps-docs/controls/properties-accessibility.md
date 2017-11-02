@@ -19,10 +19,9 @@ ms.author: anneta
 
 ---
 # Accessibility properties in PowerApps
-## Overview
 Configuration of properties that aid alternative ways of interaction with controls suitable for visually impaired users.
 
-## Properties
+### Properties
 **Tooltip** – Explanatory text that appears when the user hovers over a control.  Text is used by Aria labels that aid screen readers.
 
 * Applies to **[Audio](control-audio-video.md)**, **[Button](control-button.md)**, **[Camera](control-camera.md)**, **[Check box](control-check-box.md)**, **[Drop down](control-drop-down.md)**, **[HTML text](control-html-text.md)**, **[Image](control-image.md)**, **[Label](control-text-box.md)**, **[List Box](control-list-box.md)**, **[Microphone](control-microphone.md)**, **[PDF viewer](control-pdf-viewer.md)**, **[Pen input](control-pen-input.md)**, **[Radio](control-radio.md)**, **[Rating](control-rating.md)**, **[Slider](control-slider.md)**, **[Text input](control-text-input.md)**, **[Timer](control-timer.md)**, **[Toggle](control-toggle.md)**, and **[Video](control-audio-video.md)** controls.

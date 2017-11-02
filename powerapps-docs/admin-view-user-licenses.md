@@ -26,7 +26,7 @@ If you’re a global administrator for Office 365 or a tenant administrator for 
 * access to both products through a Dynamics 365 license
 * access from PowerApps and Microsoft Flow plans
 
-## Download the list of users
+### Download the list of users
 1. In the PowerApps admin center, click or tap **User licenses** near the left edge.
    
     > [!IMPORTANT]

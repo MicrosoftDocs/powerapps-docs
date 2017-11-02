@@ -15,13 +15,13 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 10/29/2016
-ms.author: karthikb
+ms.author: sharik
 
 ---
 # Use PowerApps on a phone or a tablet
 Apps built using PowerApps can run on Windows, iOS, Android, Windows Phone, or in a web browser. Apps running on a mobile device can take advantage of the device's capabilities, such as location and camera. You can download PowerApps Mobile from the Windows Store, the App Store, or Google Play.
 
-## What you need to get started
+## Prerequisites
 * One of the following:
   * An app that you built from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from a [blank canvas](get-started-create-from-blank.md).
   * An app that someone else built and shared with you, granting user permissions.

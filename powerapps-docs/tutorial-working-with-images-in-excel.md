@@ -18,9 +18,6 @@ ms.author: anneta
 
 ---
 # How to save images in an Excel file, and then add these images to your app
-&nbsp;
-
-[!INCLUDE [app-customization-requirements](includes/app-customization-requirements.md)]
 
 * Learn how to [add a data source](add-data-connection.md)
 
@@ -32,7 +29,8 @@ In this tutorial, we:
 * Save the images created from the pen input control to an Excel file
 * Display images from an Excel file in your app
 
-## Create the Excel file as a table
+
+[!INCLUDE [app-customization-requirements](includes/app-customization-requirements.md)]## Create the Excel file as a table
 1. In a blank Excel file, name a column **Image [image]**.
 2. Create a table using the following steps:    
    

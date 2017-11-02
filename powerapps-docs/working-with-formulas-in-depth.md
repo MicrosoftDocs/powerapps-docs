@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Understand behavior formulas in PowerApps
-## Behavior formulas
+
 Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might want to show the value in a **[Label](controls/control-text-box.md)** control in red if the value is less than zero or in black otherwise. So you can set the **[Color](controls/properties-color-border.md)** property of that control to this formula:
 <br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 

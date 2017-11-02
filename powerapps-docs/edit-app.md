@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 05/19/2017
-ms.author: karthikb
+ms.author: sharik
 
 ---
 # Edit an app in PowerApps

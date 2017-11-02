@@ -19,7 +19,6 @@ ms.author: gregli
 
 ---
 # Text properties in PowerApps
-## Overview
 Configure the text that appears on a control, in a tooltip, as a hint when the user types data, and specify other text-related characteristics.
 
 ## Text appearance
