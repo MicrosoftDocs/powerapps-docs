@@ -31,13 +31,12 @@ Benefits of a DLP policy
 * Prevents important business data from being accidentally published to services such as social media sites.   
 
 ## Managing DLP policies
-## Prerequisites  
+### Prerequisites
 In order to create, edit, or delete DLP policies, the following items are required:
 
 * Either environment admin or tenant admin permissions. You can learn more about permissions in the [environments topic](environments-administration.md)
 
-## Create a DLP policy
-## Prerequisites  
+### Create a DLP policy
 In order to create a DLP policy, you must have permissions to at least one environment.  
 
 Follow these steps to create a DLP policy that prevents data that is stored in your SharePoint database from being published to Twitter:  
@@ -64,19 +63,20 @@ Follow these steps to create a DLP policy that prevents data that is stored in y
 
 Congratulations, you have now created a DLP policy that allows app to share data between SharePoint and Salesforce and blocks the sharing of data with any other services.  
 
-### Find a DLP policy### Admins
+### Find a DLP policy
+#### Admins
 Admins can use the search feature from the Admin center to find specific DLP policies.  
 
 > [!NOTE]
 > Admins should publish all DLP policies so that users in the organization are aware of the policies prior to creating PowerApps.
 
-### Makers
+#### Makers
 If you don't have admin permissions and you wish to learn more about the DLP policies in your organization, contact your administrator. You can also learn more from the [maker environments topic](environments-overview.md)  
 
 > [!NOTE]
 > Only admins can edit or delete DLP policies.  
 
-## Edit a DLP policy
+### Edit a DLP policy
 1. Launch the Admin center by browsing to https://admin.powerapps.com.   
 2. In the Admin center that launches, select the **Data polices** link on the left side.  
    ![Sign in](./media/prevent-data-loss/2.png)  
@@ -88,7 +88,7 @@ If you don't have admin permissions and you wish to learn more about the DLP pol
 
 Your policy has now been updated. You can confirm that the changes have been made to your policy by finding it in the data loss prevention policies list and reviewing its properties.   
 
-## Delete a DLP policy
+### Delete a DLP policy
 1. Launch the Admin center by browsing to https://admin.powerapps.com    
 2. In the Admin center that launches, select the **Data polices** link on the left side.  
    ![Sign in](./media/prevent-data-loss/2.png)  
@@ -99,7 +99,7 @@ Your policy has now been updated. You can confirm that the changes have been mad
 
 Your policy has now been deleted. You can confirm that the policy is no longer listed in the data loss prevention policies list by selecting the **Data Policies** link on the left and reviewing the list of policies.   
 
-## DLP policy permissions
+### DLP policy permissions
 Only tenant and environment admins can create and modify DLP policies. Learn more about permissions in the [environments](environments-administration.md) topic.  
 
 ## Next steps

@@ -74,9 +74,12 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
    
    ![](./media/sharepoint-lookup-fields/define-choice-column.png)
 
+
 4. Start to add another field, just like in step 2: click or tap the plus sign and choose **More**.
 5. Add a *RepairShop* field of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
+   
    ![](./media/sharepoint-lookup-fields/setup-lookup-column.png)
+   
 6. Add any additional fields you want.
 
 ## Create an app from the Assets list
