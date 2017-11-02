@@ -71,7 +71,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
     Sample output:  
     ![Second and third labels](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
    
-    <br/>> [!NOTE]
+> [!NOTE]
 > The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 [Understand tables and records](../working-with-tables.md) provides more details and some examples.  

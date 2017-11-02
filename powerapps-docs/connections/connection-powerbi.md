@@ -76,7 +76,7 @@ None.
 Check the status of an alert.
 
 > [!NOTE]
-> requests to this endpoint will be throttled on a per-alert basis if called too frequently.
+> Requests to this endpoint will be throttled on a per-alert basis if called too frequently.
 
 #### Input properties
 | Property Name | Data Type | Required | Description |

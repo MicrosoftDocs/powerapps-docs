@@ -91,8 +91,8 @@ You can set your app to open, for example, the **Case details** page as soon as 
 > [!TIP]
 > It's a good idea to create a unique first page in the app for the notification:
 
-1. Create an empty page that your app doesn't already open, add a **Text Input** control, and set its **timer.Duration** value.
-2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
+>1. Create an empty page that your app doesn't already open, add a **Text Input** control, and set its **timer.Duration** value.
+>2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
 
 ## Syntax
 | Name | Description |
