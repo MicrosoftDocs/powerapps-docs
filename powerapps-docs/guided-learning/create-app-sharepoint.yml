@@ -19,25 +19,25 @@ items:
 - durationInMinutes: 1
   content: |
     Generate a three screen app from a SharePoint list, then explore screens and controls from the app. Update app screens, controls, and fields; and use formulas to further customize app behavior.
-- title: Generate an app (SharePoint list)
+- title: Generate an app
   durationInMinutes: 3
   content: |
     > [!Video https://www.youtube.com/embed/m6KfAwEdtYU?rel=0]
 
     [!INCLUDE [](includes/learning-spo-app-generate.md)]
-- title: Explore a generated app (SharePoint list)
+- title: Explore a generated app
   durationInMinutes: 5
   content: |
     > [!Video https://www.youtube.com/embed/OJ8a9VINeKU?rel=0]
 
     [!INCLUDE [](includes/learning-spo-app-explore-controls.md)]
-- title: Customize the app (SharePoint list)
+- title: Customize the app
   durationInMinutes: 5
   content: |
     > [!Video https://www.youtube.com/embed/KydeusvKndQ?rel=0]
 
     [!INCLUDE [](includes/learning-spo-app-customize.md)]
-- title: Explore app formulas (SharePoint list)
+- title: Explore app formulas
   durationInMinutes: 9
   content: |
     > [!Video https://www.youtube.com/embed/9TBA19YU7EA?rel=0]
