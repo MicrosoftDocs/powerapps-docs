@@ -35,11 +35,11 @@
     "globalMetadata": {
       "contributors_to_exclude": ["openpublishingbuild","sudeepku"],
       "breadcrumb_path": "breadcrumb/toc.yml",
-      "searchScope": ["PowerApps"] 
+      "searchScope": ["PowerApps"],
+      "titleSuffix": "PowerApps"
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "powerapps-docs",
-    "titleSuffix": "PowerApps"
+    "dest": "powerapps-docs"
   }
 }
