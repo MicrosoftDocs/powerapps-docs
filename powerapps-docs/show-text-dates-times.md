@@ -22,7 +22,7 @@ Add dates and times, and format them to show the right level of detail or to ref
 
 For example, add data from users about stock trades or client meetings, data from an external source, or data from another app created in PowerApps. If that data includes times down to the millisecond, round it to the nearest minute for simplicity. Calculate how many days remain before a major milestone. If you want to schedule client meetings every five days, calculate those dates automatically. If May 10, 1985, is stored in separate fields for the day, the month, and the year, consolidate them into a single value. Conversely, break each date into separate values if your app manages them separately.
 
-**Prerequisites**
+## Prerequisites
 
 * [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 * Create an app or open an existing app in PowerApps.

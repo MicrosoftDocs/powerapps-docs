@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 09/13/2016
-ms.author: kuntalme
+ms.author: sharik
 
 ---
 # Connect from Microsoft PowerApps to Dynamics AX
@@ -33,7 +33,7 @@ For information about how to add data from Dynamics AX to an existing app, see [
 
 See the [list of available connections](../connections-list.md), and learn how to [manage connections](../add-manage-connections.md) in PowerApps.
 
-## Next steps
+### Next steps
 * Learn how to [show data from a data source](../add-gallery.md).
 * Learn how to [view details and create or update records](../add-form.md).
 

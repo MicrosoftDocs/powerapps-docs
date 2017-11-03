@@ -30,8 +30,6 @@ This topic shows you how to add Office 365 Outlook as a connection, add Office 3
 > [!IMPORTANT]
 > As of this writing, the calendar operation doesn't support recurring events.
 
-&nbsp;
-
 [!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
 ## Connect to Office 365 Outlook

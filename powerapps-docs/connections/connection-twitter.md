@@ -27,8 +27,6 @@ You can display this information in a label on your app. For example, you can ad
 
 This topic shows you how to create the Twitter connection, use the Twitter connection in an app, and lists the available functions.
 
-&nbsp;
-
 [!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
 ## Connect to Twitter

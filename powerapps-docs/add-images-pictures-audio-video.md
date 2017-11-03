@@ -14,7 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 07/12/2017
-ms.author: karthikb
+ms.author: sharik
 
 ---
 # Using multimedia files in PowerApps
@@ -150,7 +150,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
     
     In **SavePen.xlsx**, the **Image** column specifies the path to the new images.
 
-## Known limitations
+### Known limitations
 For information about how to share Excel data within your organization, [review these limitations](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 
 ## For more information

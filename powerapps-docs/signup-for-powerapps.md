@@ -46,7 +46,7 @@ Select Office 365 and Dynamics 365 plans include PowerApps, so if you already ha
 
 If your Office 365 or Dynamics 365 plan includes PowerApps, you can access it by following these steps:
 
-1. Browse to [powerapps.microsoft.com][4], and then select **Sign in**.
+* Browse to [powerapps.microsoft.com][4], and then select **Sign in**.
    
     ![](./media/signup-for-powerapps/home-sign-in.png)
    

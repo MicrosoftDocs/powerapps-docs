@@ -31,7 +31,7 @@ In both cases, Microsoft PowerApps automatically stores and helps secure the dat
 > Before you create an entity, see the [list of standard entities](data-platform-intro.md#standard-entities). These entities cover typical scenarios, such as accounts and contacts. If one of these entities will meet your requirements out of the box or after only minor changes, you can save yourself some time by starting with that entity.
 
 ## Create an entity
-1. 1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane.
 2. If you haven't created a database, you need to create one. For more information, see [Create a Common Data Service database](create-database.md).
 3. Near the upper-right corner, click or tap **New entity**.
 4. In the **Entity name** field, enter a name for the entity. Make sure that the name is clear and meaningful, because you can't change it after you create the entity. When you develop an app, you will reference the entity by this name in a formula.

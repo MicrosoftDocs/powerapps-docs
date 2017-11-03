@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 10/16/2016
-ms.author: karthikb
+ms.author: sharik
 
 ---
 # Create an app from scratch

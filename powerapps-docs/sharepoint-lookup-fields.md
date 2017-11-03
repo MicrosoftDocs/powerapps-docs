@@ -71,10 +71,15 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
    
     ![](./media/sharepoint-lookup-fields/choose-more-type.png)
 3. Add an *AssetType* field of type **Choice**, and in the **Type each choice on a separate line** text box, fill in the values you want to appear in the choice menu. Then click or tap **OK**.
+   
    ![](./media/sharepoint-lookup-fields/define-choice-column.png)
+
+
 4. Start to add another field, just like in step 2: click or tap the plus sign and choose **More**.
 5. Add a *RepairShop* field of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
+   
    ![](./media/sharepoint-lookup-fields/setup-lookup-column.png)
+   
 6. Add any additional fields you want.
 
 ## Create an app from the Assets list
@@ -82,16 +87,17 @@ You use this app to add data to the **Assets** list.
 
 1. Open PowerApps Studio. If you are new to PowerApps, [sign up for free](https://powerapps.microsoft.com) using your organizational email address and follow the instructions to download PowerApps Studio from the Windows store.
 2. In the **File** menu (along the left edge), click or tap **New**, and then click or tap **SharePoint**.
-
-![](./media/sharepoint-lookup-fields/create-app.png)
-
+   
+   ![](./media/sharepoint-lookup-fields/create-app.png)
+   
 1. Choose your SharePoint site from the **Recent sites** list or enter your site's url directly into the text box. Click or tap **GO**.
-
-![](./media/sharepoint-lookup-fields/choose-sharepoint-site.png)
-
+   
+   ![](./media/sharepoint-lookup-fields/choose-sharepoint-site.png)
+   
 1. Choose the main list from your SharePoint site, in this example, **Assets**. Click or tap the **Connect** button in the lower-right corner.
+   
+   ![](./media/sharepoint-lookup-fields/choose-main-list.png)
 
-![](./media/sharepoint-lookup-fields/choose-main-list.png)
 
 ## Add data to the Assets list
 Now you can run the app and see how the view details screen looks for the lookup fields.

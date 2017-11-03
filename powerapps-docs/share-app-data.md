@@ -70,6 +70,6 @@ For more information, see [Share OneDrive files and folders](https://support.off
 
 For more information, see [Share Google Drive files and folders](https://support.google.com/drive/answer/2494822).
 
-## Known limitations
+### Known limitations
 For information about how to share Excel data within your organization, [review these limitations](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 

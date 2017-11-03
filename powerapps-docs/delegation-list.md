@@ -38,7 +38,7 @@ More tabular data sources and delegation support for them are being added contin
 
 This document lists the current state of supported delegation per data source.
 
-**Prerequisites**
+## Prerequisites
 
 * Familiarize yourself with the [Understand delegation](delegation-overview.md) article
 

@@ -30,7 +30,7 @@ You can use formulas for a wide variety of scenarios. For example, you can use y
 
 This topic provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use.
 
-**Prerequisites**
+## Prerequisites
 
 * [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.

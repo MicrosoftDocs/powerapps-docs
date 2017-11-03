@@ -28,7 +28,6 @@ This can occur when you're using the feature to create *Custom Entities* in the 
 * An **Azure Active Directory** (AAD) tenant administrator has disallowed users' ability to consent to apps accessing company data on their behalf.
 * Using an unmanaged Active Directory tenant. An unmanaged tenant is a directory without a global administrator that was created to complete a self-service signup offer. To fix this scenario, users must *first* convert to a managed tenant, then follow one of the two solutions to this issue, described in the following section.
 
-## How to fix the issue
 There are two ways to fix the issue described above:
 
 * Have the AAD administrator follow the steps necessary for users to consent to apps accessing company data
@@ -36,7 +35,8 @@ There are two ways to fix the issue described above:
 
 Each of the steps necessary for these solutions are described next.
 
-### Allowing users to give apps consent to access company data
+## Allowing users to give apps consent to access company data
+
 You can contact the AAD tenant administrator, and have him or her perform the following steps, which enables users to consent to any app accessing company data:
 
 1. Visit [https://portal.azure.com](https://portal.azure.com)
@@ -47,7 +47,7 @@ You can contact the AAD tenant administrator, and have him or her perform the fo
 
 This is perhaps the easiest approach, but it allows for broader permissions than the next option.
 
-### Allowing Power Query to access company data
+## Allowing Power Query to access company data
 Another solution is to have the tenant administrator give consent to **Power Query** without modifying tenant-wide permissions. Have the tenant administrator take the following steps achieve this:
 
 1. Install [Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps)

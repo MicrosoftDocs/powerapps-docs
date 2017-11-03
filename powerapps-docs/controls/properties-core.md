@@ -19,10 +19,9 @@ ms.author: gregli
 
 ---
 # Core properties in PowerApps
-## Overview
 Configure whether the user can see and interact with a control.
 
-## Properties
+### Properties
 **Default** – The initial value of a control before it is changed by the user.
 
 * Applies to **[Card](control-card.md)**, **[Check box](control-check-box.md)**, **[Drop down](control-drop-down.md)**, **[Gallery](control-gallery.md)**, **[List Box](control-list-box.md)**, **[Radio](control-radio.md)**, **[Rating](control-rating.md)**, **[Slider](control-slider.md)**, **[Text input](control-text-input.md)**, and **[Toggle](control-toggle.md)** controls.

@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 09/14/2017
-ms.author: karthikb
+ms.author: sharik
 
 ---
 # Create a rule in PowerApps

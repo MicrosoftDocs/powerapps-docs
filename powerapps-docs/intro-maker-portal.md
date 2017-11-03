@@ -19,7 +19,7 @@ ms.author: litran
 
 ---
 # Introduction to powerapps.com
-As we march into November, the PowerApps team is re-introducing [powerapps.com](http://web.powerapps.com) as the new home for app creators. We've re-designed the page as the primary site for creators to easily get started on creating apps, use the Microsoft Common Data Service, and manage their apps all in one location. In this article, I will walk you through the following:
+The PowerApps team is re-introducing [powerapps.com](http://web.powerapps.com) as the new home for app creators. We've re-designed the page as the primary site for creators to easily get started on creating apps, use the Microsoft Common Data Service, and manage their apps all in one location. In this article, I will walk you through the following:
 
 * the header
 * the homepage
@@ -108,7 +108,7 @@ The **Apps** page previously allowed you to switch between tile view and list vi
 
 Please note that the list view shows only apps in the selected environment. To view apps in a different environment, switch to it by using the environment switcher in the header. [Learn more about switching environments](working-with-environments.md).
 
-What's new?
+## What's new?
 
 * Clicking or tapping an app now opens it in PowerApps Studio for web in a new tab.
 * By default, the **Apps** page shows all apps that you have permission to edit. To view **All apps** (including apps you can only use), select the **All apps** filter.

@@ -15,7 +15,7 @@ ms.topic: get-started-article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 10/16/2016
-ms.author: karthikb
+ms.author: sharik
 
 ---
 # Generate an app from Excel data
@@ -156,7 +156,7 @@ As you customize an app, you can test your changes by running the app in Preview
    
     ![Close Preview mode](./media/get-started-create-from-data/close-preview.png)
 
-## Known limitations
+### Known limitations
 For information about how to share Excel data within your organization, [review these limitations](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 
 ## Next steps

@@ -23,7 +23,7 @@ Perform basic customization (without unlocking a card) by, for example, changing
 
 For an overview, see [Understand data cards](working-with-cards.md).
 
-**Prerequisites**
+## Prerequisites
 
 * Learn how to [add and configure controls](add-configure-controls.md).
 * You can review this topic for general concepts only. To follow it exactly (step by step), follow the steps in these topics:
