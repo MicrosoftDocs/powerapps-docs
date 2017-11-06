@@ -25,17 +25,17 @@ sections:
     className: cardsM
     columns: 2
     items:
-    - href: \guided-learning\
+    - href: guided-learning/index
       html: <p>Take the Guided Learning tour</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       title: Take a tour
-    - href: https://powerapps.microsoft.com/en-us/tutorials/getting-started
+    - href: getting-started
       html: <p>Get an overview of PowerApps</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       title: Get started
-    - href: https://powerapps.microsoft.com/en-us/tutorials/webinars-listing
+    - href: webinars-listing
       html: <p>Watch webinars live and on-demand</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
@@ -58,34 +58,34 @@ sections:
 - title: Step-by-step tutorials
   items:
   - type: paragraph
-    text: 'todo-text'
+    text: 'Learn the basics about how to build an app.'
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items: 
-    - href: todo-href
-      title: todo-title
+    - href: app-from-sharepoint
+      title: Generate an app to manage data in a SharePoint list
       image: 
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
+    - href: get-started-create-from-data
+      title: Generate an app from Excel data
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
+    - href: get-started-test-drive
+      title: Create and run an app from a template
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
+    - href: get-started-create-from-blank
+      title: Create an app from scratch
       image: 
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
+    - href: connections-list
+      title: Overview of connectors
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
+    - href: working-with-formulas
+      title: Get started with formulas
       image: 
         src: https://docs.microsoft.com/media/common/i_get-started.svg
 - title: Video overview of PowerApps
@@ -95,33 +95,33 @@ sections:
 - title: Advanced tutorials
   items:
   - type: paragraph
-    text: 'todo-text'
+    text: 'Learn about more advanced concepts.'
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items: 
-    - href: todo-href
-      title: todo-title
+    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-data-sources
+      title: Understand data sources
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-tables
+      title: Understand tables and records
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-forms
+      title: Understand data forms
       image: 
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
+    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-variables
+      title: Understand variables
       image: 
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
+    - href: https://powerapps.microsoft.com/en-us/tutorials/gateway-reference
+      title: Understand on-premises data gateways
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-    - href: todo-href
-      title: todo-title
+    - href: https://powerapps.microsoft.com/en-us/tutorials/data-platform-intro
+      title: Understand entities in the Common Data Service
       image: 
         src: https://docs.microsoft.com/media/common/i_get-started.svg
