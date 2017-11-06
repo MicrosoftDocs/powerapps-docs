@@ -1,6 +1,6 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Microsoft PowerApps Docs
+title: Microsoft PowerApps docs
 metadata:
   title: Microsoft PowerApps docs, videos, reference, and more
   description: Get started creating, customizing, and sharing apps in PowerApps by using the resources here.
@@ -12,7 +12,7 @@ metadata:
   ms.tgt_pltfrm: na
   ms.devlang: na
   ms.topic: landing-page
-  ms.date: 10/20/2017
+  ms.date: 11/05/2017
   ms.author: sharik
 sections:
 - items:
@@ -25,36 +25,36 @@ sections:
     className: cardsM
     columns: 2
     items:
-    - href: todo-href
-      html: <p>todo-html</p>
+    - href: \guided-learning\
+      html: <p>Take the Guided Learning tour</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: todo-title
-    - href: todo-href
-      html: <p>todo-html</p>
+      title: Take a tour
+    - href: https://powerapps.microsoft.com/en-us/tutorials/getting-started
+      html: <p>Get an overview of PowerApps</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: todo-title
-    - href: todo-href
-      html: <p>todo-html</p>
+      title: Get started
+    - href: https://powerapps.microsoft.com/en-us/tutorials/webinars-listing
+      html: <p>Watch webinars live and on-demand</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: todo-title
-    - href: todo-href
-      html: <p>todo-html</p>
+      title: Learn from experts
+    - href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
+      html: <p>Join the PowerApps Community</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: todo-title
-    - href: todo-href
-      html: <p>todo-html</p>
+      title: Engage with others
+    - href: https://powerapps.microsoft.com/blog/
+      html: <p>Check out the PowerApps blog</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: todo-title
-    - href: todo-href
-      html: <p>todo-html</p>
+      title: Stay informed
+    - href: https://powerapps.microsoft.com/support/
+      html: <p>Get help and support</p>
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: todo-title
+      title: We're here to help
 - title: Step-by-step tutorials
   items:
   - type: paragraph
@@ -91,7 +91,7 @@ sections:
 - title: Video overview of PowerApps
   items:
   - type: markdown
-    text: <iframe width="560" height="315" src="https://www.youtube.com/watch?v=sEHsnVIx31E&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
+    text: <iframe width="560" height="315" src="https://www.youtube.com/embed/sEHsnVIx31E" frameborder="0" allowfullscreen></iframe>
 - title: Advanced tutorials
   items:
   - type: paragraph
