@@ -3,7 +3,7 @@ documentType: LandingData
 title: Microsoft PowerApps Docs
 metadata:
   title: Microsoft PowerApps docs, videos, reference, and more
-  description: Get started building and sharing apps using the resources here. You can start from a blank app, start with your own data, or start from one of our sample apps.
+  description: Get started creating, customizing, and sharing apps in PowerApps by using the resources here.
   author: SKjerland
   manager: anneta
   layout: LandingPage
@@ -18,6 +18,110 @@ sections:
 - items:
   - type: markdown
     text: |
-      Welcome to PowerApps. This landing page will look like the [Microsoft Flow landing page](https://docs.microsoft.com/en-us/flow/) when it's done. 
-      
-      [Guided Learning content is also available on this review site](guided-learning).
+      Get started creating, customizing, and sharing apps by using the resources here. You can start by generating an app automatically and then customizing it, or you can try your hand at building an app from scratch.
+- items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 2
+    items:
+    - href: todo-href
+      html: <p>todo-html</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: todo-title
+    - href: todo-href
+      html: <p>todo-html</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: todo-title
+    - href: todo-href
+      html: <p>todo-html</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: todo-title
+    - href: todo-href
+      html: <p>todo-html</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: todo-title
+    - href: todo-href
+      html: <p>todo-html</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: todo-title
+    - href: todo-href
+      html: <p>todo-html</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: todo-title
+- title: Step-by-step tutorials
+  items:
+  - type: paragraph
+    text: 'todo-text'
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items: 
+    - href: todo-href
+      title: todo-title
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+- title: Video overview of PowerApps
+  items:
+  - type: markdown
+    text: <iframe width="560" height="315" src="https://www.youtube.com/watch?v=sEHsnVIx31E&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
+- title: Advanced tutorials
+  items:
+  - type: paragraph
+    text: 'todo-text'
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items: 
+    - href: todo-href
+      title: todo-title
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: todo-href
+      title: todo-title
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
