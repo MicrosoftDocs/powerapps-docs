@@ -1,9 +1,9 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Microsoft PowerApps Docs
+title: Microsoft PowerApps docs
 metadata:
   title: Microsoft PowerApps docs, videos, reference, and more
-  description: Get started building and sharing apps using the resources here. You can start from a blank app, start with your own data, or start from one of our sample apps.
+  description: Get started creating, customizing, and sharing apps in PowerApps by using the resources here.
   author: SKjerland
   manager: anneta
   layout: LandingPage
@@ -12,12 +12,116 @@ metadata:
   ms.tgt_pltfrm: na
   ms.devlang: na
   ms.topic: landing-page
-  ms.date: 10/20/2017
+  ms.date: 11/05/2017
   ms.author: sharik
 sections:
 - items:
   - type: markdown
     text: |
-      Welcome to PowerApps. This landing page will look like the [Microsoft Flow landing page](https://docs.microsoft.com/en-us/flow/) when it's done. 
-      
-      [Guided Learning content is also available on this review site](guided-learning).
+      Get started creating, customizing, and sharing apps by using the resources here. You can start by generating an app automatically and then customizing it, or you can try your hand at building an app from scratch.
+- items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 2
+    items:
+    - href: guided-learning/index
+      html: <p>Take the Guided Learning tour</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: Take a tour
+    - href: getting-started
+      html: <p>Get an overview of PowerApps</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: Get started
+    - href: webinars-listing
+      html: <p>Watch webinars live and on-demand</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: Learn from experts
+    - href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
+      html: <p>Join the PowerApps Community</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: Engage with others
+    - href: https://powerapps.microsoft.com/blog/
+      html: <p>Check out the PowerApps blog</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: Stay informed
+    - href: https://powerapps.microsoft.com/support/
+      html: <p>Get help and support</p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: We're here to help
+- title: Step-by-step tutorials
+  items:
+  - type: paragraph
+    text: 'Learn the basics about how to build an app.'
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items: 
+    - href: app-from-sharepoint
+      title: Generate an app to manage data in a SharePoint list
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: get-started-create-from-data
+      title: Generate an app from Excel data
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: get-started-test-drive
+      title: Create and run an app from a template
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: get-started-create-from-blank
+      title: Create an app from scratch
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: connections-list
+      title: Overview of connectors
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: working-with-formulas
+      title: Get started with formulas
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+- title: Video overview of PowerApps
+  items:
+  - type: markdown
+    text: <iframe width="560" height="315" src="https://www.youtube.com/embed/sEHsnVIx31E" frameborder="0" allowfullscreen></iframe>
+- title: Advanced tutorials
+  items:
+  - type: paragraph
+    text: 'Learn about more advanced concepts.'
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items: 
+    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-data-sources
+      title: Understand data sources
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-tables
+      title: Understand tables and records
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-forms
+      title: Understand data forms
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-variables
+      title: Understand variables
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: https://powerapps.microsoft.com/en-us/tutorials/gateway-reference
+      title: Understand on-premises data gateways
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: https://powerapps.microsoft.com/en-us/tutorials/data-platform-intro
+      title: Understand entities in the Common Data Service
+      image: 
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
