@@ -40,9 +40,9 @@ If you try to sign up with a personal email address, a message indicates that yo
 ## Access through Office 365 or Dynamics 365
 Select Office 365 and Dynamics 365 plans include PowerApps, so if you already have access, you can just sign in. See [PowerApps pricing][3] to determine whether your license includes PowerApps.
 
-If your Office 365 or Dynamics 365 plan includes PowerApps, you can access it by following these steps:
+If your Office 365 or Dynamics 365 plan includes PowerApps:
 
-1. Browse to [powerapps.microsoft.com][4], and then select **Sign in**.
+* Browse to [powerapps.microsoft.com][4], and then select **Sign in**.
    
     ![Sign in to PowerApps](./media/signup-for-powerapps/home-sign-in.png)
    

@@ -52,7 +52,8 @@ When you develop an app, you can use standard entities, custom entities, or both
 
 > [!NOTE]
 > If possible, use standard entities (with custom fields added, if required). This will ensure that you can benefit from new features or apps that leverage these entities in the future.
-> 
+
+
 ## Fields
 Each field has a name, display name, data type, and some simple validation. Data types include, for example, **text**, **date**, or **number**. Validation ensures that required fields contain data and records are unique if the entity requires them to be. Every field falls into one of three categories: system fields, standard fields, or custom fields.
 

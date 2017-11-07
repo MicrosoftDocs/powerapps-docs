@@ -109,8 +109,9 @@ In this example, an audio file will be sent in addition to the photo:
 5. Select the third label in the gallery, and add a **Button** (**Insert** menu). Set the button's **OnSelect** property to the following formula:  
    
     `Office365.DeleteEmail(EmailID.Text)`
-6. Press F5, or select the Preview button (![Preview button](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and click the button. <br/><br/> > [!NOTE]
-> This deletes the selected email from your inbox. So, choose wisely.
+6. Press F5, or select the Preview button (![Preview button](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and click the button. 
+    > [!NOTE]
+    > This deletes the selected email from your inbox. So, choose wisely.
 7. Press Esc to return to the default workspace.
 
 ## Mark a message as read
