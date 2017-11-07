@@ -27,9 +27,8 @@ You can add controls to perform these functions in your app. For example, you ca
 
 This topic shows you how to add Office 365 Outlook as a connection, add Office 365 Outlook as a data source to your app, and use this data in different controls.
 
-**Important**: As of this writing, the calendar operation doesn't support recurring events.
-
-&nbsp;
+> [!IMPORTANT]
+> As of this writing, the calendar operation doesn't support recurring events.
 
 [!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
@@ -85,7 +84,8 @@ To add an attachment to a message, follow the steps in the previous section, but
 * ContentBytes
 * @odata.type
 
-**Note**: You can specify the @odata.type property for only one attachment, and you can set it to an empty string.
+> [!NOTE]
+> You can specify the @odata.type property for only one attachment, and you can set it to an empty string.
 
 In this example, a photo will be sent as **file1.jpg**:
 
@@ -109,7 +109,8 @@ In this example, an audio file will be sent in addition to the photo:
 5. Select the third label in the gallery, and add a **Button** (**Insert** menu). Set the button's **OnSelect** property to the following formula:  
    
     `Office365.DeleteEmail(EmailID.Text)`
-6. Press F5, or select the Preview button (![Preview button](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and click the button. <br/><br/> **NOTE** This deletes the selected email from your inbox. So, choose wisely.
+6. Press F5, or select the Preview button (![Preview button](./media/connection-office365-outlook/preview.png)). Select one of the emails in your gallery, and click the button. <br/><br/> > [!NOTE]
+> This deletes the selected email from your inbox. So, choose wisely.
 7. Press Esc to return to the default workspace.
 
 ## Mark a message as read

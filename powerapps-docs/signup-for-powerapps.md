@@ -23,12 +23,14 @@ Signing up for PowerApps as an individual, is easy! This article walks you throu
 
 For administration information, see [Purchase PowerApps for your organization](signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
-**Note:** If you're in an organization, individual signup may be disabled. If you get an error indicating it's been turned off, see [Individual signup has been turned off](signup-for-powerapps.md#individual-signup-has-been-turned-off) (in this topic) for more information.
+> [!NOTE]
+> If you're in an organization, individual signup may be disabled. If you get an error indicating it's been turned off, see [Individual signup has been turned off](signup-for-powerapps.md#individual-signup-has-been-turned-off) (in this topic) for more information.
 
 ## What email addresses can you use
 To sign up for PowerApps, enter your work or school email address.
 
-**Note:** Currently, consumer email services, telecommunication providers, government, and military addresses are not supported, including:  
+> [!NOTE]
+> Currently, consumer email services, telecommunication providers, government, and military addresses are not supported, including:  
 
 * outlook.com, hotmail.com, gmail.com, and so on  
 * .gov and .mil
@@ -97,11 +99,14 @@ To start your trial, you will need to consent to the terms of use by selecting *
 
   ![Agree to terms of use](./media/signup-for-powerapps/trial-consent.png)
 
-**Notes:**
+> [!NOTE]
+> If you need more time to evaluate PowerApps, you can request to extend your trial period for 90 more days.
 
-* If you need more time to evaluate PowerApps, you can request to extend your trial period for 90 more days.
-* Users who take advantage of this in-product PowerApps trial do not appear in the Office 365 admin portal as PowerApps Plan 2 trial users (unless they have another license to Office 365, Dynamics 365, or PowerApps).
-* If you're an IT administrator who wants to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6]. You'll need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.  [Learn more](signup-for-powerapps-admin.md)
+> [!NOTE]
+> Users who take advantage of this in-product PowerApps trial do not appear in the Office 365 admin portal as PowerApps Plan 2 trial users (unless they have another license to Office 365, Dynamics 365, or PowerApps).
+
+> [!NOTE]
+> If you're an IT administrator who wants to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6]. You'll need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.  [Learn more](signup-for-powerapps-admin.md)
 
 ## Individual signup has been turned off
 When trying to sign up for PowerApps, you may encounter the following message.

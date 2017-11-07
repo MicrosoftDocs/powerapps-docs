@@ -44,5 +44,6 @@ Environments can be created in different regions, and are bound to that geograph
 
 For optimal performance, if your users are in Europe, create and use the environment in the Europe region. If your users are in the United States, create and use the environment in the U.S.
 
-**Note**: On-premises data gateways aren't available in the India region or in custom environments. You must create gateways in the default environment.
+> [!NOTE]
+> On-premises data gateways aren't available in the India region or in custom environments. You must create gateways in the default environment.
 
