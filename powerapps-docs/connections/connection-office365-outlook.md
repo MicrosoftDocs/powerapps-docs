@@ -31,7 +31,7 @@ This topic shows you how to add Office 365 Outlook as a connection, add Office 3
 
 &nbsp;
 
-[!INCLUDE [connection-requirements](includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
 ## Connect to Office 365 Outlook
 1. [Add a data connection](../add-data-connection.md) and select **Office 365 Outlook**:  
