@@ -33,10 +33,12 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-MSPowerApps",
       "contributors_to_exclude": ["openpublishingbuild","sudeepku"],
       "breadcrumb_path": "breadcrumb/toc.yml",
       "searchScope": ["PowerApps"],
       "titleSuffix": "PowerApps"
+      
     },
     "fileMetadata": {},
     "template": [],
