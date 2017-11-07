@@ -23,7 +23,7 @@ ms.author: mblythe
                 <div class="cardPadding">
                   <div class="card" style="padding: 0 12px 54px 0;">
                       <div class="cardText" style="box-shadow: 0 2px 5px #e8e8e8; border: 1px solid #dbdbdb;">
-                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px">
+                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
                             <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
                               <div class="cardImage" style="width: 32px;">
                                 <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
@@ -33,24 +33,28 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-1">Introducing Power BI</a>
+                                <a class="barLink" href="get-started#step-1">Introducing PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-2">Using Power BI</a>
-                                <span style="margin-left: 32px; align-self: center;">4m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-3">The Building Blocks of Power BI</a>
+                                <a class="barLink" href="get-started#step-2">Parts of PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-4">A quick look at the Power BI service</a>
-                                <span style="margin-left: 32px; align-self: center;">9m</span>
+                                <a class="barLink" href="get-started#step-3">Related technologies</a>
+                                <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-5">Review and What's Next</a>
+                                <a class="barLink" href="get-started#step-4">A quick look at creating apps</a>
+                                <span style="margin-left: 32px; align-self: center;">6m</span>
+                              </li>
+                              <li style="display: flex; justify-content: space-between;">
+                                <a class="barLink" href="get-started#step-5">Create your first app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
+                              </li>
+                              <li style="display: flex; justify-content: space-between;">
+                                <a class="barLink" href="get-started#step-6">Review this section</a>
+                                <span style="margin-left: 32px; align-self: center;">2m</span>
                               </li>
                           </ul>
                       </div>
@@ -63,7 +67,7 @@ ms.author: mblythe
                 <div class="cardPadding">
                   <div class="card" style="padding: 0 12px 54px 0;">
                       <div class="cardText" style="box-shadow: 0 2px 5px #e8e8e8; border: 1px solid #dbdbdb;">
-                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px">
+                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
                             <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
                               <div class="cardImage" style="width: 32px;">
                                 <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
@@ -73,26 +77,22 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-1">Introducing Power BI</a>
+                                <a class="barLink" href="create-app-sharepoint#step-1">Generate an app</a>
+                                <span style="margin-left: 32px; align-self: center;">3m</span>
+                              </li>
+                              <li style="display: flex; justify-content: space-between;">
+                                <a class="barLink" href="create-app-sharepoint#step-2">Explore a generated app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-2">Using Power BI</a>
-                                <span style="margin-left: 32px; align-self: center;">4m</span>
+                                <a class="barLink" href="create-app-sharepoint#step-3">Customize the app</a>
+                                <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-3">The Building Blocks of Power BI</a>
-                                <span style="margin-left: 32px; align-self: center;">6m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-4">A quick look at the Power BI service</a>
+                                <a class="barLink" href="create-app-sharepoint#step-4">Explore app formulas</a>
                                 <span style="margin-left: 32px; align-self: center;">9m</span>
                               </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-5">Review and What's Next</a>
-                                <span style="margin-left: 32px; align-self: center;">5m</span>
-                              </li>
-                          </ul>
+                            </ul>
                       </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ ms.author: mblythe
                 <div class="cardPadding">
                   <div class="card" style="padding: 0 12px 54px 0;">
                       <div class="cardText" style="box-shadow: 0 2px 5px #e8e8e8; border: 1px solid #dbdbdb;">
-                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px">
+                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
                             <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
                               <div class="cardImage" style="width: 32px;">
                                 <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
@@ -113,24 +113,20 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-1">Introducing Power BI</a>
-                                <span style="margin-left: 32px; align-self: center;">5m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-2">Using Power BI</a>
-                                <span style="margin-left: 32px; align-self: center;">4m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-3">The Building Blocks of Power BI</a>
+                                <a class="barLink" href="create-app-cds#step-1">Generate an app</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-4">A quick look at the Power BI service</a>
-                                <span style="margin-left: 32px; align-self: center;">9m</span>
+                                <a class="barLink" href="create-app-cds#step-2">Generate an app</a>
+                                <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-5">Review and What's Next</a>
-                                <span style="margin-left: 32px; align-self: center;">5m</span>
+                                <a class="barLink" href="create-app-cds#step-3">Customize the app</a>
+                                <span style="margin-left: 32px; align-self: center;">12m</span>
+                              </li>
+                              <li style="display: flex; justify-content: space-between;">
+                                <a class="barLink" href="create-app-cds#step-4">Add a data source and flow</a>
+                                <span style="margin-left: 32px; align-self: center;">11m</span>
                               </li>
                           </ul>
                       </div>
@@ -143,7 +139,7 @@ ms.author: mblythe
                 <div class="cardPadding">
                   <div class="card" style="padding: 0 12px 54px 0;">
                       <div class="cardText" style="box-shadow: 0 2px 5px #e8e8e8; border: 1px solid #dbdbdb;">
-                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px">
+                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
                             <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
                               <div class="cardImage" style="width: 32px;">
                                 <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
@@ -153,24 +149,16 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-1">Introducing Power BI</a>
+                                <a class="barLink" href="manage-apps#step-1">Share your apps</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-2">Using Power BI</a>
-                                <span style="margin-left: 32px; align-self: center;">4m</span>
+                                <a class="barLink" href="manage-apps#step-2">Version your apps</a>
+                                <span style="margin-left: 32px; align-self: center;">1m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-3">The Building Blocks of Power BI</a>
-                                <span style="margin-left: 32px; align-self: center;">6m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-4">A quick look at the Power BI service</a>
-                                <span style="margin-left: 32px; align-self: center;">9m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-5">Review and What's Next</a>
-                                <span style="margin-left: 32px; align-self: center;">5m</span>
+                                <a class="barLink" href="manage-apps#step-3">Environments</a>
+                                <span style="margin-left: 32px; align-self: center;">8m</span>
                               </li>
                           </ul>
                       </div>
@@ -183,7 +171,7 @@ ms.author: mblythe
                 <div class="cardPadding">
                   <div class="card" style="padding: 0 12px 54px 0;">
                       <div class="cardText" style="box-shadow: 0 2px 5px #e8e8e8; border: 1px solid #dbdbdb;">
-                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px">
+                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
                             <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
                               <div class="cardImage" style="width: 32px;">
                                 <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
@@ -193,24 +181,24 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-1">Introducing Power BI</a>
+                                <a class="barLink" href="manage-data#step-1">The Common Data Service</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-2">Using Power BI</a>
-                                <span style="margin-left: 32px; align-self: center;">4m</span>
+                                <a class="barLink" href="manage-data#step-2">Understand Common Data Service entities</a>
+                                <span style="margin-left: 32px; align-self: center;">8m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-3">The Building Blocks of Power BI</a>
+                                <a class="barLink" href="manage-data#step-3">Create custom entities</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-4">A quick look at the Power BI service</a>
-                                <span style="margin-left: 32px; align-self: center;">9m</span>
+                                <a class="barLink" href="manage-data#step-4">Manage entity data</a>
+                                <span style="margin-left: 32px; align-self: center;">7m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="gettingstarted#step-5">Review and What's Next</a>
-                                <span style="margin-left: 32px; align-self: center;">5m</span>
+                                <a class="barLink" href="manage-data#step-5">Common Data Service security</a>
+                                <span style="margin-left: 32px; align-self: center;">8m</span>
                               </li>
                           </ul>
                       </div>
