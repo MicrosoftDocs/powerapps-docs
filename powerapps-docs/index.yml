@@ -28,7 +28,7 @@ sections:
     - href: guided-learning/index
       html: <p>Take the Guided Learning tour</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_overview.svg
       title: Take a tour
     - href: getting-started
       html: <p>Get an overview of PowerApps</p>
@@ -38,22 +38,22 @@ sections:
     - href: webinars-listing
       html: <p>Watch webinars live and on-demand</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_video.svg
       title: Learn from experts
     - href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
       html: <p>Join the PowerApps Community</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_configure-teams.svg
       title: Engage with others
     - href: https://powerapps.microsoft.com/blog/
       html: <p>Check out the PowerApps blog</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_blog.svg
       title: Stay informed
     - href: https://powerapps.microsoft.com/support/
       html: <p>Get help and support</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_support.svg
       title: We're here to help
 - title: Step-by-step tutorials
   items:
@@ -67,27 +67,27 @@ sections:
     - href: app-from-sharepoint
       title: Generate an app to manage data in a SharePoint list
       image: 
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
     - href: get-started-create-from-data
       title: Generate an app from Excel data
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_excel-data.svg
     - href: get-started-test-drive
       title: Create and run an app from a template
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_template.svg
     - href: get-started-create-from-blank
       title: Create an app from scratch
       image: 
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_build.svg
     - href: connections-list
       title: Overview of connectors
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
     - href: working-with-formulas
       title: Get started with formulas
       image: 
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_formula.svg
 - title: Video overview of PowerApps
   items:
   - type: markdown
@@ -104,24 +104,24 @@ sections:
     - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-data-sources
       title: Understand data sources
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_generic-database.svg
     - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-tables
       title: Understand tables and records
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_table.svg
     - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-forms
       title: Understand data forms
       image: 
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_form.svg
     - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-variables
       title: Understand variables
       image: 
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_variable.svg
     - href: https://powerapps.microsoft.com/en-us/tutorials/gateway-reference
       title: Understand on-premises data gateways
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_data-gateway.svg
     - href: https://powerapps.microsoft.com/en-us/tutorials/data-platform-intro
       title: Understand entities in the Common Data Service
       image: 
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_common-data-service.svg
