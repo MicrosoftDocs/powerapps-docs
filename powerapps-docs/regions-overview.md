@@ -28,7 +28,7 @@ If you're an administrator, you can determine the region of each environment in 
   
     In the admin center, all existing environments are listed on the **Environments** tab. This list shows the **Region** where your app is deployed:
   
-   ![](./media/regions-overview/environment-list.png)
+   ![Environments tab](./media/regions-overview/environment-list.png)
 
 ## What regions are available?
 * United States
@@ -44,6 +44,5 @@ Environments can be created in different regions, and are bound to that geograph
 
 For optimal performance, if your users are in Europe, create and use the environment in the Europe region. If your users are in the United States, create and use the environment in the U.S.
 
-> [!NOTE]
-> On-premises data gateways aren't available in the India region or in custom environments. You must create gateways in the default environment.
+**Note**: On-premises data gateways aren't available in the India region or in custom environments. You must create gateways in the default environment.
 

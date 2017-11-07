@@ -14,13 +14,14 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 11/01/2016
+ms.date: 10/20/2017
 ms.author: sharik
 
 ---
 # Understand on-premises data gateways for Microsoft PowerApps
 ## Installation and configuration
 **Prerequisites**
+
 Minimum:
 
 * .NET 4.5 Framework
@@ -103,8 +104,7 @@ Learn more about [hybrid solutions](https://azure.microsoft.com/documentation/ar
 
 It is recommended that you whitelist the IP addresses, for your data region, in your firewall. You can download the [Microsoft Azure Datacenter IP list](https://www.microsoft.com/download/details.aspx?id=41653), which is updated weekly.
 
-> [!NOTE]
-> In the Azure Datacenter IP list, addresses are listed in [CIDR notation](http://whatismyipaddress.com/cidr). For example, 10.0.0.0/24 doesn't mean 10.0.0.0 through 10.0.0.24.
+**Note:** In the Azure Datacenter IP list, addresses are listed in [CIDR notation](http://whatismyipaddress.com/cidr). For example, 10.0.0.0/24 doesn't mean 10.0.0.0 through 10.0.0.24.
 
 Here is a listing of the fully qualified domain names used by the gateway.
 
@@ -153,7 +153,7 @@ If you encounter issues with your proxy server due to authentication, you may wa
 **Answer:** No. The gateway uses outbound connections to Azure Service Bus.
 
 **Question:** What if I block outbound connections? What do I need to open?  
-**Answer:** See the [ports](gateway-reference.md#ports) and hosts that the gateway uses.
+**Answer:** Refer to the list of ports and hosts that the gateway uses above.
 
 **Question:** Does the gateway have to be installed on the same machine as the data source?  
 **Answer:** No. The gateway will connect to the data source using the connection information that was provided. Think of the gateway as a client application in this sense. It will just need to be able to connect to the server name that was provided.

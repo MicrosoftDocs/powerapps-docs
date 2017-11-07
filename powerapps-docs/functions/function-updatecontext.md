@@ -35,9 +35,9 @@ To create or update a context variable, pass a single [record](../working-with-t
 * If you specify the name of a variable that doesn't yet exist, **UpdateContext** creates a variable with that name and sets the value of that variable to the value that you specify.
 * If you've previously defined a variable but don't specify it in this particular **UpdateContext** formula, its value remains the same.
 
-Context variables are implicitly created by using the **UpdateContext** or [**Navigate** function](function-navigate.md).  There is no explicit declaration required.  If you remove all the **UpdateContext** and **Navigate** references to a context variable, then that context variable will cease to exist.  To clear a variable set its value to the result of the [**Blank** function](function-isblank-isempty.md). 
+Context variables are implicitly created by using the **UpdateContext** or [**Navigate** function](function-navigate.md).  There is no explicit declaration required.  If you remove all the **UpdateContext** and **Navigate** references to a context variable, then that context variable will cease to exist.  To clear a variable set its value to the result of the [**Blank** function](function-isblank-isempty.md).
 
-You can see your variables' values, definitions, and uses with the Variables view under the File menu in the authoring environment. 
+You can see your variables' values, definitions, and uses with the Variables view under the File menu in the authoring environment.
 
 You reference a context variable in a formula by using the variable's column name. For example, **UpdateContext( { ShowLogo: true } )** creates a context variable named **ShowLogo** and sets its value to **true**. You can then use the value of this context variable by using the name **ShowLogo** in a formula.  You can write **ShowLogo** as the formula for the **Visible** property of an image control and show or hide that control based on whether the value of the context variable is **true** or **false**.
 

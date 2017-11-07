@@ -91,7 +91,7 @@ To create our adding machine, we require a variable to hold the running total. T
 How global variables work:
 
 * You set the value of the global variable with the **[Set](functions/function-set.md)** function.  **Set( MyVar, 1 )** sets the global variable **MyVar** to a value of **1**.
-* You use the global variable by referencing the name used with the **Set** function.  In this case, **MyVar** will return **1**. 
+* You use the global variable by referencing the name used with the **Set** function.  In this case, **MyVar** will return **1**.
 * Global variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
 
 Let's rebuild our adding machine by using a global variable:
@@ -179,7 +179,7 @@ Let's rebuild our adding machine by using a context variable:
     ![](media/working-with-variables/context-variable-4.png)
 7. You can set the value of a context variable while navigating to a screen.  This is useful for passing "context" or "parameters" from one screen to another.  To see this, insert a new screen, and insert a button with the **OnSelect** property set to:
    
-    **Navigate( Screen1, None, { RunningTotal: -1000 } )** 
+    **Navigate( Screen1, None, { RunningTotal: -1000 } )**
    
     ![](media/working-with-variables/context-variable-5.png)
    
@@ -250,6 +250,5 @@ Let's recreate our adding machine by using a collection:
      ![](media/working-with-variables/papertape-6.png)
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons.  Select the **Save** button.  Close and reload your app, and select the **Load** button to reload your collection.  
     
-     > [!NOTE]
-> **SaveData** and **LoadData** do not function when running in a web browser, you must be using the studio installed on Windows or one of the players for mobile device.  
+     Note: **SaveData** and **LoadData** do not function when running in a web browser, you must be using the studio installed on Windows or one of the players for mobile device.  
 

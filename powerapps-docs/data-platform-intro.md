@@ -13,12 +13,12 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/24/2017
+ms.date: 10/20/2017
 ms.author: kfend
 
 ---
 # Understand entities in the Common Data Service
-
+[!VIDEO nb:cid:UUID:beec68e8-1541-41fb-8fc6-28714ccaca68]
 
 
 The Common Data Service allows you to securely store and manage data within a set of standard and custom entities. An entity is a set of fields used to store data similarly to a table within a database. After your data is stored you can use Microsoft PowerApps to build rich applications using your data:
@@ -47,13 +47,12 @@ Entities within the Common Data Service, both standard and custom, allow a secur
 * **Picklists** - Include picklists from a rich set of standard picklists to provide quick drop downs within your entities and apps.
 
 ## Standard and custom entities
-When you develop an app, you can use standard entities, custom entities, or both. If a standard entity can serve a particular purpose in your app, you should use it rather than developing a custom entity that does the same thing. If a standard entity would serve a purpose with a few changes, you can add fields to suit your needs. 
+When you develop an app, you can use standard entities, custom entities, or both. If a standard entity can serve a particular purpose in your app, you should use it rather than developing a custom entity that does the same thing. If a standard entity would serve a purpose with a few changes, you can add fields to suit your needs.
 
 * The Common Data Service provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts for an organization, such as Contacts, Accounts, and Products. For a full list of entities, see [Standard entities](data-platform-intro.md#standard-entities).
 * You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](data-platform-create-entity.md).
 
-> [!NOTE]
-> If possible, use standard entities (with custom fields added, if required). This will ensure that you can benefit from new features or apps that leverage these entities in the future.
+> **Note:** If possible, use standard entities (with custom fields added, if required). This will ensure that you can benefit from new features or apps that leverage these entities in the future.
 > 
 > 
 
