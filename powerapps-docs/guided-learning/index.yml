@@ -26,11 +26,11 @@ sections:
       title: Getting started
     - html: <p><a href="create-app-sharepoint#step-1"> Generate an app</a> - 3 min</p><p><a href="create-app-sharepoint#step-2"> Explore a generated app</a> - 5 min</p><p><a href="create-app-sharepoint#step-3"> Customize the app</a> - 5 min</p><p><a href="create-app-sharepoint#step-4"> Explore app formulas</a> - 9 min</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_kaban.svg
+        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
       title: Creating an app from SharePoint
     - html: <p><a href="create-app-cds#step-1"> Generate an app</a> - 6 min</p><p><a href="create-app-cds#step-2"> Generate an app</a> - 5 min</p><p><a href="create-app-cds#step-3"> Customize the app</a> - 12 min</p><p><a href="create-app-cds#step-4"> Add a data source and flow</a> - 11 min</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_code-samples.svg
+        src: https://docs.microsoft.com/media/common/i_common-data-service.svg
       title: Creating an app from the Common Data Service
     - html: <p><a href="manage-apps#step-1"> Share your apps</a> - 5 min</p><p><a href="manage-apps#step-2"> Version your apps</a> - 1 min</p><p><a href="manage-apps#step-3"> Environments</a> - 8 min</p>
       image:
@@ -38,5 +38,5 @@ sections:
       title: Managing apps
     - html: <p><a href="manage-data#step-1"> The Common Data Service</a> - 5 min</p><p><a href="manage-data#step-2"> Understand Common Data Service entities</a> - 8 min</p><p><a href="manage-data#step-3"> Create custom entities</a> - 6 min</p><p><a href="manage-data#step-4"> Manage entity data</a> - 7 min</p><p><a href="manage-data#step-5"> Common Data Service security</a> - 8 min</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_generic-database.svg
+        src: https://docs.microsoft.com/media/common/i_common-data-service.svg
       title: Managing data
