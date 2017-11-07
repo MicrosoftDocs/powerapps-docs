@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/12/2017
+ms.date: 10/20/2017
 ms.author: mblythe
 
 ---
@@ -28,7 +28,7 @@ In this topic, we'll show you how to set parameters for app embedding; then we'l
 Keep the following restrictions in mind:
 
 * Only PowerApps users in the same tenant can access the embedded app.
-* PowerApps supports Internet Explorer 11 only with Compatibility View turned off.
+* To access PowerApps using Internet Explorer 11, you must turn off Compatibility View.
 
 You can also integrate PowerApps into SharePoint Online (without using an iframe). For more information, see [Generate an app from within SharePoint using PowerApps](generate-app-from-sharepoint-list-interface.md).
 
@@ -40,8 +40,7 @@ https://web.powerapps.com/webplayer/iframeapp?source=iframe
 &appId=/providers/Microsoft.PowerApps/apps/[AppID]
 ```
 
-> [!NOTE]
-> We added a line break so the URI displays better on the page.
+**Note**: We added a line break so the URI displays better on the page.
 
 The only thing you have to do is substitute the ID of your app for [AppID] in the URI (including '[' & ']'). We'll show you how to get that value shortly, but first here are all the parameters available in the URI:
 

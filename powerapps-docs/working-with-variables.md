@@ -23,7 +23,7 @@ If you've used another programming tool, such as Visual Basic or JavaScript, you
 
 In other tools, you may have explicitly performed a calculation and stored the result in a variable. However, PowerApps and Excel both automatically recalculate formulas as the input data changes, so you usually don't need to create and update variables. By taking this approach whenever possible, you can  more easily create, understand, and maintain your app.
 
-In some cases, you'll need to use variables in PowerApps, which extends Excel's model by adding [behavior formulas](working-with-formulas-in-depth.md). These formulas run when, for example, a user selects a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
+In some cases, you'll need to use variables in PowerApps, which extends Excel's model by adding [behavior formulas](working-with-formulas-in-depth.md#behavior-formulas). These formulas run when, for example, a user selects a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
 In general, avoid using variables. But sometimes only a variable can enable the experience you want.
 
@@ -91,7 +91,7 @@ To create our adding machine, we require a variable to hold the running total. T
 How global variables work:
 
 * You set the value of the global variable with the **[Set](functions/function-set.md)** function.  **Set( MyVar, 1 )** sets the global variable **MyVar** to a value of **1**.
-* You use the global variable by referencing the name used with the **Set** function.  In this case, **MyVar** will return **1**. 
+* You use the global variable by referencing the name used with the **Set** function.  In this case, **MyVar** will return **1**.
 * Global variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
 
 Let's rebuild our adding machine by using a global variable:
@@ -179,7 +179,7 @@ Let's rebuild our adding machine by using a context variable:
     ![](media/working-with-variables/context-variable-4.png)
 7. You can set the value of a context variable while navigating to a screen.  This is useful for passing "context" or "parameters" from one screen to another.  To see this, insert a new screen, and insert a button with the **OnSelect** property set to:
    
-    **Navigate( Screen1, None, { RunningTotal: -1000 } )** 
+    **Navigate( Screen1, None, { RunningTotal: -1000 } )**
    
     ![](media/working-with-variables/context-variable-5.png)
    
@@ -250,6 +250,5 @@ Let's recreate our adding machine by using a collection:
      ![](media/working-with-variables/papertape-6.png)
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons.  Select the **Save** button.  Close and reload your app, and select the **Load** button to reload your collection.  
     
-     > [!NOTE]
-> **SaveData** and **LoadData** do not function when running in a web browser, you must be using the studio installed on Windows or one of the players for mobile device.  
+     Note: **SaveData** and **LoadData** do not function when running in a web browser, you must be using the studio installed on Windows or one of the players for mobile device.  
 

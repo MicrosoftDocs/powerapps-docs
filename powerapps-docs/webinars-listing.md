@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/13/2017
+ms.date: 10/31/2017
 ms.author: v-thuch
 
 ---
@@ -40,11 +40,11 @@ Having sent the presentations at Ignite, we're all excited to deep dive into the
 
 **Getting Started | Exploring Office Graph Templates**
 <br>by Emma Cooper
-<br>*October 31st, 10:00AM PST, 1:00PM EST*
+<br>*November 7th, 10:00AM PST, 1:00PM EST*
 
 Discover new opportunities in connector services through Office Graph connections! Emma Cooper, a Program Manager on the PowerApps team will be sharing brand new templates and usage highlights for Office Graph integration. You'll see how to leverage this connector to bring Delve-like content and contacts to your consumers easily, either by starting with one of the new templates, and/or by extending a template using best practices and tips from Emma. Don't miss this one!
 
-[Click here to watch on October 31st](https://www.youtube.com/watch?v=SwLNN3tPVNs)
+[Click here to watch on November 7th](https://www.youtube.com/watch?v=SwLNN3tPVNs)
 
 ## Past webinars
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
