@@ -174,7 +174,7 @@ ms.author: mblythe
                           <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
                             <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
                               <div class="cardImage" style="width: 32px;">
-                                <img src="includes/media/index/common/i_common-data-service.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
+                                <img src="includes/media/index/i_common-data-service.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
                               </div>
                             </div>
                             Managing data
