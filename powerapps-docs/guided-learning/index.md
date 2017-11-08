@@ -11,7 +11,7 @@ ms.author: mblythe
 ---
 <div id="main" class="v2">
     <div class="container">
-        <h1>Microsoft Power Apps Guided Learning</h1>
+        <h1>Microsoft PowerApps Guided Learning</h1>
         <ul id="databases" class="cardsL panelContent" style="display: block; margin: 0px;">
           <li class="fullSpan">
               <div class="container intro">
