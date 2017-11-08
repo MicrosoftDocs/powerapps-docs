@@ -28,7 +28,6 @@ Delegation is supported for tabular data sources only. This list identifies tabu
 * SQL Server - **Yes**
 * Dynamics 365 - **Yes**
 * Salesforce - **Yes**
-* Excel - **Coming soon**
 * Dynamics 365 for Operations - Not yet
 * Dynamics 365 for Financials - Not yet
 * Dynamics NAV - Not yet
@@ -74,4 +73,3 @@ This list of data sources and delegable functions and predicates will be updated
 | StartsWith |No |Yes |No |No |No |
 
 <sup>2</sup>For operators only. And/Or/Not function not delegated.
-
