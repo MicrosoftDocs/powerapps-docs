@@ -89,37 +89,42 @@ You cannot apply add-ons to the quantities that we include. If you hit capacity 
 Do you have an app you would like to share with customers? We now support a PowerApps Test Drive solution on [AppSource.com](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Let customers test drive your apps on AppSource](dev-appsource-test-drive.md).
 
 ## Frequently Asked Questions
-1. **Q:** What should I do if reach the capacity limits of the environment?
-   
-    **A:** There is a limited capacity provided because this environment is meant for individual use, not for a team or production use. The capacity provided is:
-   
-   | **Capacity** |  |
-   | --- | --- |
-   | Flow runs/month |750 |
-   | Database size |200 MB |
-   | File storage |2GB |
-   
-    If you reach one or more capacity limits, we recommend you purchase a plan that supports production use. Learn more about our plans and their limits on the [PowerApps pricing page](https://powerapps.microsoft.com/pricing/).
-2. **Q:** Can I transfer the apps, flows, and other resources created in the individual environment, to another environment?
-   
-    **A:** Yes, you should be able to export the resources from this environment to other environments. For more information, see [Environment and tenant app migration](environment-and-tenant-migration.md).
-3. **Q:** Will my PowerApps Community Plan subscription ever expire?
-   
-    **A:** You can use your PowerApps Community Plan subscription perpetually for free. If you are actively using an individual environment, then you won't lose access to any of the resources or functionality in that environment. You may, however, notice a delay when accessing your Common Data Service Database for the first time after a long period of inactivity.  This delay does not impact the data or entities stored in the Common Data Service.
-4. **Q:** Can I get or create multiple individual environments?
-   
-    **A:** No, you can only have one individual environment, which is created for you by PowerApps when you sign up for the Community Plan.
-5. **Q:** What's the difference between PowerApps Plan 2 Trial and PowerApps Community Plan; and which one should I sign-up for?
-   
-    **A:** Both PowerApps Plan 2 Trial and PowerApps Community Plan are free, but are created for different purposes:
-   
-    **PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 90 days. This is meant for trying out PowerApps, Common Data Service, and Microsoft Flow. Once your trial expires, you can purchase a plan. If you are already using PowerApps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with PowerApps Plan 2.
-   
-    **PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
-6. **Q:** Can I sign-up with my personal account?
-   
-    **A:** No, you can only sign-up with your [work or school account](signup-for-powerapps.md#what-email-addresses-can-you-use). We currently do not support signing up with a personal account.
-7. **Q:** Can I delete my individual environment?
-   
-    **A:** You can't delete this environment on your own. Your tenant admin has permissions to delete the environment.
+**Q:** What should I do if reach the capacity limits of the environment?
 
+**A:** There is a limited capacity provided because this environment is meant for individual use, not for a team or production use. The capacity provided is:
+
+| **Capacity** |  |
+| --- | --- |
+| Flow runs/month |750 |
+| Database size |200 MB |
+| File storage |2GB |
+
+If you reach one or more capacity limits, we recommend you purchase a plan that supports production use. Learn more about our plans and their limits on the [PowerApps pricing page](https://powerapps.microsoft.com/pricing/).
+
+**Q:** Can I transfer the apps, flows, and other resources created in the individual environment, to another environment?
+
+**A:** Yes, you should be able to export the resources from this environment to other environments. For more information, see [Environment and tenant app migration](environment-and-tenant-migration.md).
+
+**Q:** Will my PowerApps Community Plan subscription ever expire?
+
+**A:** You can use your PowerApps Community Plan subscription perpetually for free. If you are actively using an individual environment, then you won't lose access to any of the resources or functionality in that environment. You may, however, notice a delay when accessing your Common Data Service Database for the first time after a long period of inactivity.  This delay does not impact the data or entities stored in the Common Data Service.
+
+**Q:** Can I get or create multiple individual environments?
+
+**A:** No, you can only have one individual environment, which is created for you by PowerApps when you sign up for the Community Plan.
+
+**Q:** What's the difference between PowerApps Plan 2 Trial and PowerApps Community Plan; and which one should I sign-up for?
+
+**A:** Both PowerApps Plan 2 Trial and PowerApps Community Plan are free, but are created for different purposes:
+
+**PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 90 days. This is meant for trying out PowerApps, Common Data Service, and Microsoft Flow. Once your trial expires, you can purchase a plan. If you are already using PowerApps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with PowerApps Plan 2.
+
+**PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
+
+**Q:** Can I sign-up with my personal account?
+
+**A:** No, you can only sign-up with your [work or school account](signup-for-powerapps.md#what-email-addresses-can-you-use). We currently do not support signing up with a personal account.
+
+**Q:** Can I delete my individual environment?
+
+**A:** You can't delete this environment on your own. Your tenant admin has permissions to delete the environment.
