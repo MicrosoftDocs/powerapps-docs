@@ -101,27 +101,27 @@ sections:
     className: cardsM
     columns: 3
     items: 
-    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-data-sources
+    - href: working-with-data-sources
       title: Understand data sources
       image:
         src: https://docs.microsoft.com/media/common/i_generic-database.svg
-    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-tables
+    - href: working-with-tables
       title: Understand tables and records
       image:
         src: https://docs.microsoft.com/media/common/i_table.svg
-    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-forms
+    - href: working-with-forms
       title: Understand data forms
       image: 
         src: https://docs.microsoft.com/media/common/i_form.svg
-    - href: https://powerapps.microsoft.com/en-us/tutorials/working-with-variables
+    - href: working-with-variables
       title: Understand variables
       image: 
         src: https://docs.microsoft.com/media/common/i_variable.svg
-    - href: https://powerapps.microsoft.com/en-us/tutorials/gateway-reference
+    - href: gateway-reference
       title: Understand on-premises data gateways
       image:
         src: https://docs.microsoft.com/media/common/i_data-gateway.svg
-    - href: https://powerapps.microsoft.com/en-us/tutorials/data-platform-intro
+    - href: data-platform-intro
       title: Understand entities in the Common Data Service
       image: 
         src: https://docs.microsoft.com/media/common/i_common-data-service.svg
