@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #55d2f6;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #556a8a;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>i_table</title>
+  <g id="ICONS-64x">
+    <rect class="cls-1" x="2" y="18" width="60" height="39"/>
+    <rect class="cls-2" x="2" y="7" width="60" height="11"/>
+    <rect class="cls-3" x="2" y="7" width="60" height="50"/>
+    <line class="cls-3" x1="2" y1="18" x2="62" y2="18"/>
+    <line class="cls-3" x1="2" y1="31" x2="62" y2="31"/>
+    <line class="cls-3" x1="2" y1="44" x2="62" y2="44"/>
+    <line class="cls-3" x1="17" y1="18" x2="17" y2="56"/>
+    <line class="cls-3" x1="32" y1="18" x2="32" y2="56"/>
+    <line class="cls-3" x1="47" y1="18" x2="47" y2="56"/>
+  </g>
+</svg>
