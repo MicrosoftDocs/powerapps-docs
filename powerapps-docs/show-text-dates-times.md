@@ -55,7 +55,9 @@ Here are some examples.
    * **Today**, which calculates the current day as a value.
    * **DateValue**, which converts a literal string, as shown between double quotation marks, to a value on which calculations can be performed.
 3. Add a **[Text input](controls/control-text-input.md)** control named **BirthDate**, and move it under **ShowText**.
+
 4. In **BirthDate**, type the month and the day of your birth (for example, **05/18**).
+
 5. Set the **[Text](controls/properties-core.md)** property of **ShowText** to this formula:
    <br>**DateDiff(Today(), DateValue(BirthDate.Text))**
    
@@ -122,6 +124,7 @@ Convert dates and times from strings of text to values, which you can format in 
 
 ## Format a date by using DateValue
 1. Add a **[Text input](controls/control-text-input.md)** control named **ArrivalDate**, and then type a date in it (for example, **5/10/85**).
+
 2. Add a **[Label](controls/control-text-box.md)** control named **FormatDate**, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**DateValue(ArrivalDate.Text)**
    
@@ -141,7 +144,9 @@ Convert dates and times from strings of text to values, which you can format in 
 
 ## Format a time using DateTimeValue
 1. Add a **[Text input](controls/control-text-input.md)** control named **ArrivalTime**, and then type **6:15 AM** in it.
+
 2. Add a **[Label](controls/control-text-box.md)** control named **ShowTime**.
+
 3. To use one of several built-in formats, set the **[Text](controls/properties-core.md)** property of **ShowTime** to this formula:
    <br>**Text(DateTimeValue(ArrivalTime.Text), DateTimeFormat.LongTime)**
    
@@ -191,13 +196,18 @@ Convert dates and times from strings of text to values, which you can format in 
     The label shows **8/10/1985**, which is three months after the date in **Start**. Replace **Months** with **Quarters** or **Years** to identify a date that's the specified number of quarters or years before or after the date in **Start**.
 
 ## Calculate dates based on years, months, and days
+
 1. Add three **[Drop down](controls/control-drop-down.md)** controls named **Year**, **Month**, and **Day**.
+
 2. Set the **[Items](controls/properties-core.md)** property of **Year** to this formula:
    <br>**Table({Year:"2014"}, {Year:"2015"}, {Year:"2016"})**
+
 3. Set the **[Items](controls/properties-core.md)** property of **Month** to this formula:
    <br>**Table({Month:"1"}, {Month:"2"}, {Month:"3"}, {Month:"4"}, {Month:"5"}, {Month:"6"}, {Month:"7"}, {Month:"8"}, {Month:"9"}, {Month:"10"}, {Month:"11"}, {Month:"12"})**
+
 4. Set the **[Items](controls/properties-core.md)** property of **Day** to this formula:
    <br>**Table({Day:"1"}, {Day:"2"}, {Day:"3"}, {Day:"4"}, {Day:"5"}, {Day:"6"}, {Day:"7"}, {Day:"8"}, {Day:"9"}, {Day:"10"}, {Day:"11"}, {Day:"12"}, {Day:"13"}, {Day:"14"}, {Day:"15"}, {Day:"16"}, {Day:"17"}, {Day:"18"}, {Day:"19"}, {Day:"20"}, {Day:"21"}, {Day:"22"}, {Day:"23"}, {Day:"24"}, {Day:"25"}, {Day:"26"}, {Day:"27"}, {Day:"28"}, {Day:"29"}, {Day:"30"}, {Day:"31"})**
+
 5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**Text(Date(Value(Year.Selected.Value), Value(Month.Selected.Value), Value(Day.Selected.Value)), DateTimeFormat.LongDate)**
    
@@ -214,13 +224,18 @@ You may need to convert data that you didn't expect. If you add **[Text input](c
 * If a day value is less than 1, the function subtracts that many days, plus 1, from the first day of the specified month.
 
 ## Calculate times based on hours, minutes, and seconds
+
 1. Add two **Drop-down** lists named **Hour** and **Minute**.
+
 2. Set the **[Items](controls/properties-core.md)** property of **Hour** to this formula:
    <br>**Table({Hour:"9"}, {Hour:"10"}, {Hour:"11"}, {Hour:"12"}, {Hour:"13"}, {Hour:"14"}, {Hour:"15"}, {Hour:"16"}, {Hour:"17"})**
+
 3. Set the **[Items](controls/properties-core.md)** property of **Minute** to this formula:
    <br>**Table({Minute:"0"}, {Minute:"15"}, {Minute:"30"}, {Minute:"45"})**
+
 4. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to this formula:  
    <br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), 0), DateTimeFormat.ShortTime)**
+
 5. Select **15** in **Hour** and **45** in **Minute**.
    
     The **[Label](controls/control-text-box.md)** control shows **3:45 PM**.
