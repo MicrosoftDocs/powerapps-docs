@@ -36,7 +36,9 @@ This feature is available in your PowerApps tenant, but is not turned on by defa
 In the PowerApps portal, take the following steps to enable this feature:
 
 1. Browse to the **Common Data Service > Entities** tab, in the left navigation pane.
+
 2. From the **Entities** list, select the **New Entity** dropdown.
+
 3. From the list that appears in the dropdown menu, select **New Entity from Data (Technical Preview)** as shown in the following image.
    
     ![New entity from data](media/data-platform-cds-newentity-pq/data-platform-cds-pq-02.jpg)

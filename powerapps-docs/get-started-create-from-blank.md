@@ -165,14 +165,17 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
    * Set its **Text** property to this formula:
      <br>**"Change record"**
+
    * Set its **Fill** property to this formula:
      <br>**RGBA(62, 96, 170, 1)**.
+
    * Set its **Color** property to this formula:
      <br>**RGBA(255, 255, 255, 1)**
+
    * Set its **Align** property to **Center**.
    * Set its **X** property to **0**.
-   * Set its **Width** property to **640**.
 
+   * Set its **Width** property to **640**.
      The **Label** control reflects your changes.
 
      ![ChangeScreen with banner](./media/get-started-create-from-blank/change-screen-blank.png)

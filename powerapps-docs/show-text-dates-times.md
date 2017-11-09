@@ -123,6 +123,7 @@ Convert dates and times from strings of text to values, which you can format in 
    > 
 
 ## Format a date by using DateValue
+
 1. Add a **[Text input](controls/control-text-input.md)** control named **ArrivalDate**, and then type a date in it (for example, **5/10/85**).
 
 2. Add a **[Label](controls/control-text-box.md)** control named **FormatDate**, and set its **[Text](controls/properties-core.md)** property to this formula:
@@ -143,6 +144,7 @@ Convert dates and times from strings of text to values, which you can format in 
     **FormatDate** shows the date in the format that you specified.
 
 ## Format a time using DateTimeValue
+
 1. Add a **[Text input](controls/control-text-input.md)** control named **ArrivalTime**, and then type **6:15 AM** in it.
 
 2. Add a **[Label](controls/control-text-box.md)** control named **ShowTime**.
@@ -162,8 +164,11 @@ Convert dates and times from strings of text to values, which you can format in 
    > 
 
 ## Show the time between dates
+
 1. Add two **[Text input](controls/control-text-input.md)** controls named **Start** and **End**.
+
 2. Type **4/1/2015** in **Start**, and type **1/1/2016** in **End**.
+
 3. Add a **[Label](controls/control-text-box.md)** control named **DateDiff**, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text))**
    
@@ -175,7 +180,9 @@ Convert dates and times from strings of text to values, which you can format in 
     **DateDiff** shows **9**, which is the number of months between April 1, 2015, and January 1, 2016. Replace **Months** with **Quarters** or **Years** to show the time in those units.
 
 ## Identify a date before or after another date
+
 1. Add a **[Text input](controls/control-text-input.md)** control named **Start**, and type **5/10/1985** in it.
+
 2. Add a **[Label](controls/control-text-box.md)** control named **DateAdd**, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**DateAdd(DateValue(Start.Text), 3)**
    
