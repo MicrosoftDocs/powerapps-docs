@@ -41,27 +41,33 @@ Related considerations:
 **Install a gateway**
 
 1. [Download the installer](http://go.microsoft.com/fwlink/?LinkID=820931), and then run it.
-   
+
     ![Run the installer](./media/gateway-reference/run-installer.png)
+
 2. On the first screen of the installation wizard, click or tap **Next** to acknowledge the reminder about installing a gateway on a laptop.
-   
+
     ![Reminder screen](./media/gateway-reference/laptop-reminder.png)
+
 3. Specify the location where you want to install the gateway, select the check box to accept the terms of use and the privacy statement, and then click or tap **Install**.
+
 4. In the **User Account Control** dialog boxes, click or tap **Yes** to continue.
+
 5. On the next screen of the wizard, click or tap **Sign in**.
-   
+
     ![Sign in](./media/gateway-reference/sign-in.png)
+
 6. Click or tap the option to register a new gateway or to migrate, restore, or take over an existing gateway, and then click or tap **Next**.
-   
+
     ![Choose new or existing](./media/gateway-reference/new-existing.png)
-   
+
    * To configure a gateway, type a **name** for it and a **recovery key**, click or tap **Configure**, and then click or tap **Close**.
-     
+
        ![Configure a new gateway](./media/gateway-reference/configure-new.png)
-     
+
        Specify a recovery key that contains at least eight characters, and keep it in a safe place. You'll need this key if you want to migrate, restore, or take over its gateway.
+
    * To migrate, restore, or take over an existing gateway, provide the name of the gateway and its recovery key, click or tap **Configure**, and then follow any additional prompts.
-     
+
        ![Recover an existing gateway](./media/gateway-reference/recover-existing.png)
 
 **Restart the gateway**
@@ -70,6 +76,7 @@ The gateway runs as a Windows service, so you can start and stop it in multiple 
 
 * To stop the service, run this command:<br>
   **net stop PBIEgwService**
+
 * To start the service, run this command:<br>
   **net start PBIEgwService**
 
@@ -79,7 +86,7 @@ For information about how to provide proxy information for your gateway, see [Co
 
 You can verify whether your firewall, or proxy, may be blocking connections by running the following command from a PowerShell prompt. This command will test connectivity to the Azure Service Bus. This only tests network connectivity and doesn't have anything to do with the cloud server service or the gateway. It helps to determine whether your machine can actually get out to the internet.
 
-    Test-NetConnection -ComputerName watchdog.servicebus.windows.net -Port 9350
+**Test-NetConnection -ComputerName watchdog.servicebus.windows.net -Port 9350**
 
 The results should look similar to this example. If **TcpTestSucceeded** is not **True**, you may be blocked by a firewall.
 
@@ -204,10 +211,15 @@ You can also look at tools that your data source has for tracing queries. For ex
 When a user interacts with an element that's connected to an on-premises data source:  
 
 1. The cloud service creates a query, along with the encrypted credentials for the data source, and sends the query to the queue for the gateway to process.
+
 2. The gateway cloud service analyzes the query and pushes the request to the [Azure Service Bus](https://azure.microsoft.com/documentation/services/service-bus/).
+
 3. The on-premises data gateway polls the Azure Service Bus for pending requests.
+
 4. The gateway gets the query, decrypts the credentials, and connects to the data source(s) with those credentials.
+
 5. The gateway sends the query to the data source for execution.
+
 6. The results are sent from the data source back to the gateway and then onto the cloud service. The service then uses the results.
 
 ## Troubleshooting
@@ -223,15 +235,15 @@ You can collect several logs for the gateway. Always start with the logs!
 
 **Installer logs**
 
-    %localappdata%\Temp\On-premises_data_gateway_*.log
+%localappdata%\Temp\On-premises_data_gateway_*.log
 
 **Configuration logs**
 
-    %localappdata%\Microsoft\on-premises data gateway\GatewayConfigurator*.log
+%localappdata%\Microsoft\on-premises data gateway\GatewayConfigurator*.log
 
 **Enterprise gateway service logs**
 
-    C:\Users\PBIEgwService\AppData\Local\Microsoft\on-premises data gateway\Gateway*.log
+C:\Users\PBIEgwService\AppData\Local\Microsoft\on-premises data gateway\Gateway*.log
 
 **Event logs**
 
@@ -241,4 +253,3 @@ The **On-premises data gateway service** event logs are present under **Applicat
 
 #### Fiddler Trace
 [Fiddler](http://www.telerik.com/fiddler) is a free tool from Telerik that monitors HTTP traffic.  You can see the back and forth with the Power BI service from the client machine. This may show errors and other related information.
-
