@@ -110,16 +110,21 @@ In this step, we'll first connect to the two lists. Then we'll clean up the data
 3. Select the **ApprovedDate** column, click or tap **Data Type: Any**, then **Date**.
    
     ![ Change data type to date](./media/sharepoint-scenario-build-report/05-01-11-datatype-date.png)
+
 4. Repeat the previous step for the **ProjectedStartDate** and **ProjectedEndDate** columns.
 
 ### Change the data type on Project Requests columns
+
 1. Select the **EstimatedDays** column, click or tap **Data Type: Any**, then **Whole Number**.
+
 2. Select the **RequestDate** column, click or tap **Data Type: Any**, then **Date**.
 
 ### Apply and save changes
+
 1. On the **Home** tab, click **Close and Apply** to close Query Editor and go back to the main Power BI Desktop window.
    
     ![Close and apply changes](./media/sharepoint-scenario-build-report/05-01-12-close-apply.png)
+
 2. Click or tap **File**, then **Save**, and save with the name project-analysis.pbix.
 
 ## Step 2: Improve the data model
@@ -138,17 +143,23 @@ When Power BI Desktop brought the lists in, it created a relationship between th
 1. Click or tap the **Data view** icon.
    
     ![Data view](./media/sharepoint-scenario-build-report/05-02-01-data-view.png)
+
 2. On the **Modeling** tab, click or tap **Manage Relationships**. We'll stay on this tab in the **Data** view for all the data modeling steps.
    
     ![Manage Relationships](./media/sharepoint-scenario-build-report/05-02-02-manage-relationships.png)
+
 3. Make sure the existing relationship is selected, click or tap **Delete**, then **Delete** again to confirm.
    
     ![Delete Relationship](./media/sharepoint-scenario-build-report/05-02-03-delete-relationship.png)
+
 4. Click **New** to create a different relationship.
+
 5. In the **Create Relationship** dialog box:
    
    1. For the first table, select **Project Requests**, and the **Id** column.
+   
    2. For the second table, select **Project Details**, and the **RequestId** column.
+   
    3. The screen should look like the following image. When you're ready, click or tap **OK**.
       
        ![Create Relationship](./media/sharepoint-scenario-build-report/05-02-04-create-relationship.png)

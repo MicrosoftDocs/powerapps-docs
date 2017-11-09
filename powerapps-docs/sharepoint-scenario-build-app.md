@@ -382,11 +382,17 @@ In this step, we'll connect the edit form on the **UpdateDetails** screen to our
 5. With the form still selected, in the right pane click or tap the checkbox for the following fields, in the order shown:
    
    * **Title**
+
    * **PMAssigned**
+
    * **Status**
+
    * **ProjectedStartDate**
+
    * **ProjectedEndDate**
+
    * **ProjectedDays**
+
    * **ActualDays**
      
      ![Edit form fields](./media/sharepoint-scenario-build-app/04-06-03-edit-fields.png)

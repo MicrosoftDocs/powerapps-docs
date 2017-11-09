@@ -35,11 +35,17 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
 4. Fill out the form with the following values:
    
    * **Title** = "Mobile devices for design team"
+
    * **Approved** = "Pending"
+
    * **Description** = "The design team will now use Contoso-supplied devices"
+
    * **EstimatedDays** = "30"
+
    * **ProjectType** = "New hardware"
+
    * **RequestDate** = "03/01/2017"
+
    * **Requestor** = "Emily Braun"
      
      ![Project requests edit form](./media/sharepoint-scenario-summary/09-01-01-app-new.png)
@@ -98,8 +104,11 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
 4. On the **Update Details** screen, set the following values:
    
    * The **Status** field = "Not started"
+
    * The **ProjectedStartDate** field = "3/6/2017"
+
    * The **ProjectedEndDate** field = "3/24/2017"
+
    * The **ProjectedDays** field = "15"
      
      ![Update project details](./media/sharepoint-scenario-summary/09-04-03-update.png)
