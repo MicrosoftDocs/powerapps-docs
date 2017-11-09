@@ -92,7 +92,7 @@ All other functions do not support delegation, including these notable functions
 
 A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:
 
-* **AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
+**AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
 
 Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the **AddColumns** function is not delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  
 
@@ -115,27 +115,26 @@ Blue dots are only shown on formulas that operate on delegable data sources.  If
 ## Examples
 In this example, we will use a SQL Server table that contains products, in particular fruits, names **[dbo].[Products]**.  On the New screen, PowerApps can create a basic three screen app connected to this data source:
 
-![](media/delegation-overview/products-afd.png)
+![Three-screen app](media/delegation-overview/products-afd.png)
 
 Note the formula for the Gallery's **Items** property.  It is using **SortByColumns** and **Search** functions, both of which can be delegated.
 
 Let's type **"Apple"** into the search text-input control.  If we are very observant, we will momentarily see marching dots on the top of the screen while the new entry in the new search is processed.  The marching dots indicate that we are communicating with the SQL Server:
 
-![](media/delegation-overview/products-apple.png)
+![Search text-input control](media/delegation-overview/products-apple.png)
 
 Because this is all delegable, even if the **[dbo].[Products]** table contains millions of records, we will still find them all, paging through them in the gallery as the user scrolls through the results.
 
 You will notice that we are seeing a match for both "Apple" and "Pineapple".  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
 
-![](media/delegation-overview/products-apple-bluedot.png)
+![Remove SortByColumns call](media/delegation-overview/products-apple-bluedot.png)
 
 This appears to be working, only **"Apples"** is correctly showing now and **"Pineapple"** is not.  However, there is a blue dot showing next to the gallery and there is a blue wavy line under a portion of the formula.  There is even a blue dot showing in the screen thumbnail.  If we hover over the blue dot next to the gallery, we see the following:
 
-![](media/delegation-overview/products-apple-bluepopup.png)
+![Hover over blue dot](media/delegation-overview/products-apple-bluepopup.png)
 
 Although we are using **Filter** which is a delegable function, with SQL Server which is a delegable data source, the formula we used within **Filter** is not delegable.  **Mid** and **Len** cannot be delegated to any data source.
 
 But it worked, didn't it?  Well, kind of.  And that is why this is a blue dot instead of a yellow hazard icon and red wavy error.  If the **[dbo].[Products]** table contains less than 500 records, then yes, this worked perfectly.   All records were brought to the device and the **Filter** was applied locally.  
 
 If instead this table contains more than 500 records, then only fruit which begin with **"Apple"** *in the first 500 records of the table* will be displayed in the gallery.  If **"Apple, Fuji"** appears as a name in record 501 or 500,001 it will not be found.
-
