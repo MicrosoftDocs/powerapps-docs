@@ -113,8 +113,8 @@ You should now be able to use AAD to authenticate your web application.
         }
     },
 
-// The rest of the OpenAPI document follows...
-```
+    // The rest of the OpenAPI document follows...
+    ```
 
 1. Browse to [PowerApps](https://web.powerapps.com), and add a custom connector as described in [Register and use custom connectors in PowerApps](register-custom-api.md).
 
