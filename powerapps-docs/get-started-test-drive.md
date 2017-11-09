@@ -22,11 +22,11 @@ ms.author: sharik
 Create an app automatically based on a template for specific scenario, and then run it to understand its default behavior. Experiment with how to customize an app, and then save and share it with others.
 
 ## Prerequisites
-
 * [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
     > [!NOTE]
 > To use this feature, make sure that you're running release 2.0.510 or later. To identify your release, open the **File** menu (along the left edge), click or tap **Account**, and then look under **Product information**.
+
 * A cloud-storage account such as DropBox, OneDrive, or Google Drive.
 
 ## Create an app
@@ -41,6 +41,7 @@ Create an app automatically based on a template for specific scenario, and then 
    ![The option to create an app for a tablet or a phone](./media/get-started-test-drive/phone-app.png)
 
    A list of templates appears.
+
 3. If you don't have a connection to a cloud-storage account:
 
    1. Near the bottom of the screen, click or tap **Choose**.
@@ -50,8 +51,9 @@ Create an app automatically based on a template for specific scenario, and then 
 
        ![List connection to create app from template](./media/get-started-test-drive/store-data.png)
    3. Provide your credentials, and then click or tap **Use** to grant access.
-      
+
        Your connection appears near the bottom of the screen.
+
 4. In the list of templates, click or tap a template, and then click or tap **Use** (near the lower-right corner).
 
     ![Open a PowerApps template](./media/get-started-test-drive/open-template.png)
