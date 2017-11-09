@@ -81,10 +81,13 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 4. Select the existing dashboard, then click or tap **Pin**.
    
     ![Pin chart to existing dashboard](./media/sharepoint-scenario-publish-report/06-01-15-pin-existing.png)
+
 5. Repeat the pinning process for the other two visuals.
+
 6. In the left navigation pane, click or tap the dashboard name.
    
     ![New dashboard in site navigation](./media/sharepoint-scenario-publish-report/06-01-16-dashboard-menu.png)
+
 7. Review the dashboard. If you click on a tile, you will go back to the report.
    
     ![Completed dashboard](./media/sharepoint-scenario-publish-report/06-01-17-dashboard-completed.png)

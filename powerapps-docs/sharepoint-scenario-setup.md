@@ -107,7 +107,9 @@ As noted in the introduction to this tutorial series, we included two sample app
 
 ### Update connections for the sample apps
 1. Open **project-management-app.msapp** in PowerApps Studio.
+
 2. Click or tap **Allow**, so that PowerApps can use SharePoint.
+
 3. On the ribbon, on the **View** tab, click or tap **Data sources**.
    
     ![PowerApps data sources](./media/sharepoint-scenario-setup/01-03-01-data-sources.png)
@@ -136,11 +138,14 @@ As noted in the introduction to this tutorial series, we included two sample app
 10. In the right pane, click or tap the ellipsis (**. . .**) next to **Project Details**, then click or tap **Refresh**.
     
     ![Refresh Project Details data source](./media/sharepoint-scenario-setup/01-03-02-remove.png)
+
 11. Click ![Run app icon](./media/sharepoint-scenario-setup/icon-run-arrow.png) in the upper right corner to run the app, and make sure the connections work properly.
+
 12. Repeat the steps in this section for **project-requests-app.msapp**, using the **Project Requests** list.
 
 ### Update connections for the sample report
 1. Open **project-analysis.pbix** in Power BI Desktop.
+
 2. On the ribbon, on the **Home** tab, click or tap **Edit queries**, then **Data source settings**.
    
     ![Edit queries](./media/sharepoint-scenario-setup/01-03-04-edit-queries.png)
