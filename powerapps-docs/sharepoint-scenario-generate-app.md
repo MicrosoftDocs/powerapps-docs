@@ -39,14 +39,18 @@ Now that the SharePoint lists are in place, we can build and customize our first
 1. In PowerApps Studio, the left navigation bar by default shows a hierarchical view of the screens and controls in the app.
    
     ![PowerApps Studio with hierarchical view](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
+
 2. Click or tap the thumbnail icon to switch views.
    
     ![PowerApps Studio view selector](./media/sharepoint-scenario-generate-app/02-02-02-studio-view-selector.png)
+
 3. Click or tap each screen to view it in the middle pane. There are three screens:
    
-   1. The **browse** screen, where you browse, sort, and filter the data pulled in from the list.
-   2. The **details** screen, where you view more detail about an item.
-   3. The **edit/create** screen, where you edit an existing item or create a new one.
+    1. The **browse** screen, where you browse, sort, and filter the data pulled in from the list.
+    
+    2. The **details** screen, where you view more detail about an item.
+    
+    3. The **edit/create** screen, where you edit an existing item or create a new one.
       
       ![PowerApps Studio with thumbnail view](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
 
@@ -63,7 +67,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
    * **Description**
    * **Title**
    * **Requestor**
-     
+
      ![Gallery fields](./media/sharepoint-scenario-generate-app/02-03-02-gallery-fields.png)
 4. With **BrowseGallery1** still selected, select the **Items** property.
    
@@ -73,6 +77,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
     ![Formula bar](./media/sharepoint-scenario-generate-app/02-03-04-formula.png)
    
     This allows you to sort and search by the **Title** field, instead of the default that PowerApps picked. See [Formula deep-dive](#formula-deep-dive) for more information.
+
 6. Click or tap **File**, then **Save**. Click or tap ![Back to app icon](./media/sharepoint-scenario-generate-app/icon-back-to-app.png) to go back to the app.
 
 ## Step 4: Customize the app's details screen and edit screen
@@ -139,12 +144,15 @@ When you put the functions together in the formula, here's what happens:
     **StartsWith ( Title, TextSearchBox1.Text )**
    
     For example, if you enter "de" in the search box, you see four results, including items that start with "Desktop" and "Device." You won't see all the "Mobile devices" items because those don't *start with* "de."
+
 2. The **Filter** function *returns* rows from the **Project Requests** table. If there is no text in the search box to compare, **Filter** returns all rows.
    
     **Filter ( 'Project Requests', StartsWith ( Title, TextSearchBox1.Text )**
+
 3. The **If** function looks at whether the variable **SortDescending1** is set to true or false (the sort button in the app sets it). The function then returns a value of **Descending** or **Ascending**.
    
     **If ( SortDescending1, Descending, Ascending )**
+
 4. Now the **SortByColumns** function can sort the gallery. In this case, it sorts based on the **Title** field, but this can be a different field than the one you search on.
 
 If you stuck with us up to this point, we hope you have a better sense of how this formula works, and how you can combine functions and other elements to drive the behavior your apps require. For more information, see [Formula reference for PowerApps](formula-reference.md).
