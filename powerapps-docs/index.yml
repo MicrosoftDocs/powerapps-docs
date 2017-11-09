@@ -25,7 +25,7 @@ sections:
     className: cardsM
     columns: 2
     items:
-    - href: guided-learning/index
+    - href: guided-learning
       html: <p>Take the Guided Learning tour</p>
       image:
         src: https://docs.microsoft.com/media/common/i_overview.svg
