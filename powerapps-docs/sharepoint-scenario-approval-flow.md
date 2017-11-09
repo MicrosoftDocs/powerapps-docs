@@ -133,11 +133,17 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
 1. In the **Project Requests** list, click **Quick Edit** and add an item like the following:
    
    * **Title** = "New monitor for Megan"
+
    * **Approved** = "Pending"
+
    * **Description** = "Megan needs a 24" monitor"
+
    * **EstimatedDays** = "1"
+
    * **ProjectType** = "New hardware"
+
    * **RequestDate** = "02/03/2017"
+
    * **Requestor** = "Megan Bowen"
      
      ![Item added to list](./media/sharepoint-scenario-approval-flow/03-02-01-list-add.png)
