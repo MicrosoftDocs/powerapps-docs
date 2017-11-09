@@ -21,10 +21,10 @@ ms.author: jamesol
 # Environments overview
 Environments are a new concept in PowerApps. Put simply, an environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you choose to leverage environments depends on your organization and the apps you are trying to build. For example:
 
-1. You may choose to only build your apps in a single environment.
-2. You might create separate environments that group the Test and Production versions of your apps.
-3. You might create separate environments that correspond to specific teams or departments in your company, each containing the relevant data and apps for each audience.
-4. You might also create separate environments for different global branches of your company.  
+* You may choose to only build your apps in a single environment.
+* You might create separate environments that group the Test and Production versions of your apps.
+* You might create separate environments that correspond to specific teams or departments in your company, each containing the relevant data and apps for each audience.
+* You might also create separate environments for different global branches of your company.  
 
 ## Environment scope
 Each environment is created under an Azure AD tenant, and its resources can only be accessed by users within that tenant. An environment is also bound to a geographic location, like the US. When you create an app in an environment, that app is routed to only datacenters in that geographic location. Any items that you create in that environment (including connections, gateways, flows using Microsoft Flow, and more) are also bound to their environment’s location.
@@ -42,13 +42,14 @@ Environments have two built-in roles that provide access to permissions within a
 
 * The Environment Admin role can perform all administrative actions on an environment including the following:
   
-  o    Add or remove a user or group from either the Environment Admin or Environment Maker role
+    * Add or remove a user or group from either the Environment Admin or Environment Maker role
   
-  o    Provision a Common Data Service database for the environment
+    * Provision a Common Data Service database for the environment
   
-  o    View and manage all resources created within an environment
+    * View and manage all resources created within an environment
   
-  o    Set data loss prevention policies. For more information see [Data loss prevention policies](prevent-data-loss.md).
+    * Set data loss prevention policies. For more information see [Data loss prevention policies](prevent-data-loss.md).
+
 * The Environment Maker role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow.
 
 Environment Makers can also distribute the apps they build in an environment to other users in your organization by sharing the app with individual users, security groups, or to all users in the organization. For more information, see [Share an app in PowerApps](share-app.md).
@@ -76,10 +77,9 @@ With the introduction of environments, you will now see a new experience when yo
 
 An environment will show up in your picker if you meet one of the following conditions:
 
-1. You are a member of the Environment Admin role for the environment.
-2. You are a member of the Environment Maker role for the environment.
-3. You are not an Environment Admin or Environment Maker of the environment, but you have been given ‘Contributor’ access to at least one app within the environment. For more information, see [share an app](share-app.md). > [!NOTE]
-> in this case, you will not be able to create apps in this environment. You will only be able to modify the existing apps that have been shared with you.
+* You are a member of the Environment Admin role for the environment.
+* You are a member of the Environment Maker role for the environment.
+* You are not an Environment Admin or Environment Maker of the environment, but you have been given ‘Contributor’ access to at least one app within the environment. For more information, see [share an app](share-app.md). In this case, you will not be able to create apps in this environment. You will only be able to modify the existing apps that have been shared with you.
 
 ![](./media/environments-overview/EnvironmentPicker.png)
 
@@ -109,8 +109,7 @@ Any user that has participated in the PowerApps preview will see some changes in
 
 | User | What happens |
 | --- | --- |
-| Preview user who created a Common Data Service database |You will see an environment called “{Your name}’s environment” that contains your preview Common Data Service database and any apps that you built against it.  You will be added to the Environment Maker role and Environment Admin role of this environment and as a Database owner of the database. When PowerApps enters general availability, we will upgrade the metadata of the Common Data Service. The impact of this change means that you will still be able to use the entities and apps that you have already built against your preview Common Data Service database; however, you won't be able to create fields or entities in that database. We will soon publish guidance on how you can create an environment with a database that contains the upgraded metadata and migrate your apps over to that environment.<br>> [!NOTE]
-> If any of your apps that were built against your preview Common Data Service database also leverage a custom connector as a data source, they will be temporarily broken in this environment because all custom connectors will be migrated to the default environment. You'll need to re-create the custom connector in this environment to repair any affected apps. |
+| Preview user who created a Common Data Service database |You will see an environment called “{Your name}’s environment” that contains your preview Common Data Service database and any apps that you built against it.  You will be added to the Environment Maker role and Environment Admin role of this environment and as a Database owner of the database. When PowerApps enters general availability, we will upgrade the metadata of the Common Data Service. The impact of this change means that you will still be able to use the entities and apps that you have already built against your preview Common Data Service database; however, you won't be able to create fields or entities in that database. We will soon publish guidance on how you can create an environment with a database that contains the upgraded metadata and migrate your apps over to that environment. <br> If any of your apps that were built against your preview Common Data Service database also leverage a custom connector as a data source, they will be temporarily broken in this environment because all custom connectors will be migrated to the default environment. You'll need to re-create the custom connector in this environment to repair any affected apps. |
 | Preview user in the U.S. |The following resources that you created during the PowerApps preview period will be available in your tenant’s default environment:<br>- All apps you created (except any that connected to a preview Common Data Service database)<br>- All connections and custom connectors that you created<br>- All on-premises data gateways you installed |
 | Preview user not in U.S. |In addition to the default environment, you will also see an environment called “{Azure AD tenant} (from preview)” that contains the following resources you created during the PowerApps preview period:<br>- All apps you created (except any that connected to a preview Common Data Service database)<br>- All connections and custom connectors that you created<br>- All on-premises data gateways you installed.<br>You will be added to the Environment Maker role of this environment. |
 

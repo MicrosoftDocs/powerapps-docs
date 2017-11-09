@@ -60,6 +60,7 @@ A  user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order 
 3. Within the ‘Review Package Content’ section you can optionally add comments or notes or change the setting for how each individual resource will be imported into the target environment during package import.
    
     ![Configure package content](./media/environment-and-tenant-migration/export-package-content.png)
+
 4. When you are done select **Export** and the package file will begin downloading within a few seconds.
 
 ## Importing an app
