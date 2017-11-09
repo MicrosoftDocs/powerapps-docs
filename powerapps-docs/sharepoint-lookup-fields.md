@@ -55,47 +55,53 @@ You most likely would define additional fields, depending on the information you
 You do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available for you to choose from the *Assets.RepairShop* lookup field.
 
 1. On your SharePoint site, create a new **RepairShop** list.
-   
+
     ![](./media/sharepoint-lookup-fields/new-list.png)
+
 2. Add a *ContactEmail* field of type **Single line of text**.
-   
+
     ![](./media/sharepoint-lookup-fields/add-email-field.png)
+
 3. Add any other fields you need.
+
 4. Click or tap **+ New** to enter sample data into the list, at least 3 rows with different *ContactEmail* values. When an asset needs to be repaired, you choose one of these.
-   
+
     ![](./media/sharepoint-lookup-fields/add-repair-shops.png)
 
 ### Define the Assets list
 1. On your SharePoint site, create a new **Assets** list.
+
 2. Click or tap the plus sign and choose **More**.
-   
+
     ![](./media/sharepoint-lookup-fields/choose-more-type.png)
+
 3. Add an *AssetType* field of type **Choice**, and in the **Type each choice on a separate line** text box, fill in the values you want to appear in the choice menu. Then click or tap **OK**.
-   
+
    ![](./media/sharepoint-lookup-fields/define-choice-column.png)
 
-
 4. Start to add another field, just like in step 2: click or tap the plus sign and choose **More**.
+
 5. Add a *RepairShop* field of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
-   
+
    ![](./media/sharepoint-lookup-fields/setup-lookup-column.png)
-   
+
 6. Add any additional fields you want.
 
 ## Create an app from the Assets list
 You use this app to add data to the **Assets** list.
 
 1. Open PowerApps Studio. If you are new to PowerApps, [sign up for free](https://powerapps.microsoft.com) using your organizational email address and follow the instructions to download PowerApps Studio from the Windows store.
+
 2. In the **File** menu (along the left edge), click or tap **New**, and then click or tap **SharePoint**.
-   
+
    ![](./media/sharepoint-lookup-fields/create-app.png)
-   
+
 1. Choose your SharePoint site from the **Recent sites** list or enter your site's url directly into the text box. Click or tap **GO**.
-   
+
    ![](./media/sharepoint-lookup-fields/choose-sharepoint-site.png)
-   
+
 1. Choose the main list from your SharePoint site, in this example, **Assets**. Click or tap the **Connect** button in the lower-right corner.
-   
+
    ![](./media/sharepoint-lookup-fields/choose-main-list.png)
 
 
@@ -103,16 +109,23 @@ You use this app to add data to the **Assets** list.
 Now you can run the app and see how the view details screen looks for the lookup fields.
 
 1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ).
+
 2. Click or tap the **+** symbol in the upper right corner to add an entry.
+
 3. Enter a **Title** for this asset.
+
 4. Click or tap the **AssetType** dropdown arrow. The values displayed are those you entered when you created this field. Choose one of the entries.
-   
+
     ![](./media/sharepoint-lookup-fields/fill-asset-type-3.png)
+
 5. Click or tap the **RepairShop** dropdown arrow. Choose one of the entries.
-   
+
     ![](./media/sharepoint-lookup-fields/fill-repair-shop-3.png)
+
 6. In the upper-right corner, click or tap the check mark to save the new entry.
+
 7. (optional) Repeat this procedure to add as many items to the list as you want.
+
 8. Press Esc to return to the default workspace.
 
 ## For more information
@@ -120,4 +133,3 @@ Now you can run the app and see how the view details screen looks for the lookup
 * [Performance, Refresh button, ForAll, and multiple field lookups](https://powerapps.microsoft.com/blog/performance-refresh-forall-multiple-field-lookups-531/)
 * [Generate an app by using a Common Data Service database](data-platform-create-app.md)
 * [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
-

@@ -52,7 +52,7 @@ Quickly find an app by searching one of these categories:
 * **My Apps**: Apps that you have run at least once.
 * **Samples**: Sample apps that Microsoft provided to showcase real application scenarios with fictitious data and to help you explore design possibilities.
 * **Favorites**: Apps that you've marked by using the "…" option of each app. You can unmark an app to remove it from this list.
-  
+
     ![App filters](./media/run-app-client/run-client-applist.png)
 
 After you choose a list, you can also sort it by the dates on which apps were most recently opened or modified. These preferences are retained when you close and reopen PowerApps.  
@@ -76,7 +76,7 @@ Typically, you are prompted only the first time.
 * On an iPhone, slide to the right.
 * On Windows 10 Mobile, press the back button.
 
-![Exit app](./media/run-app-client/run-client-exit.png)
+    ![Exit app](./media/run-app-client/run-client-exit.png)
 
 ## Share the app
 For information about how to share an app from [powerapps.com](https://web.powerapps.com), see [Sharing an app](share-app.md).
@@ -85,4 +85,3 @@ For information about how to share an app from [powerapps.com](https://web.power
 If you've downloaded an app and used it at least once, you can pin it to the home screen of your device for quick access. Tap the ellipsis (...) for an app, tap **Pin**, and then follow the instructions that appear.
 
 ![Pin app](./media/run-app-client/run-client-pin.png)
-
