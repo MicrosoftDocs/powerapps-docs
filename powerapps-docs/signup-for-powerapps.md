@@ -63,12 +63,15 @@ If you already have access to PowerApps through Office 365, Dynamics 365, or Pow
        If you're viewing this content on a phone, click or tap the menu icon in the upper-right corner, and then click or tap **Sign up free**.
 
        ![Sign up for free](./media/signup-for-powerapps/sign-up-updated.png)
+
    * Select **Pricing** (near the middle of the screen), and then select **Start free trial**.
 
      ![Start free trial](./media/signup-for-powerapps/start-free-trial.png)
+
 2. Under **Let's get started**, type your work or school email address, and then click or tap **Submit**.  
 
     ![Type email address](./media/signup-for-powerapps/get-started-old.png)
+
 3. If your account doesn't exist within an organization, you get a message to check your email:
 
     ![Message to check email](./media/signup-for-powerapps/BoxPortal_CheckYourEmail_Updated.png)
@@ -76,9 +79,11 @@ If you already have access to PowerApps through Office 365, Dynamics 365, or Pow
     If your account is part of an existing organization, you get a message asking you to sign in with that account. Select **Sign in**, and sign in with your work account:  
 
     ![Sign in with work account](./media/signup-for-powerapps/BoxPortal_WeKnowYou_Updated.png)
+
 4. If you received an email message, select the link within the message to verify your email address. After you verify your address, you may need to enter some additional information about yourself.
 
-5. If you have an existing organizational account, you see a message asking you to click **Start**:  
+5. If you have an existing organizational account, you see a message asking you to click **Start**:
+
     ![Click start](./media/signup-for-powerapps/BoxPortal_AlmostThere_Updated.png)
 
 6. You're then taken to [powerapps.com][2], and you can start to use PowerApps.
