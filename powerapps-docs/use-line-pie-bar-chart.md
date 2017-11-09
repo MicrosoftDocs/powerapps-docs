@@ -71,9 +71,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
     ![][10]
 
-4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression:
-
-   ```ProductRevenue.Revenue2014```
+4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression: `ProductRevenue.Revenue2014`
 
     ![][2]  
 

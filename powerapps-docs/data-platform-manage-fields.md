@@ -24,23 +24,32 @@ You can create and update one or more custom fields in any entity. When you crea
 > Every entity has [system fields](data-platform-create-entity.md#system-fields-and-the-record-title-field), such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](data-platform-intro.md#standard-entities) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
+
 1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane. A list of entities appears. To show custom entities at the top of the list, click or tap the **Type** column header. You can also filter the list by typing one or more characters in the search bar.
+
 2. Click or tap an entity, and then click or tap **Add field** near the top of the screen.
+
 3. Under **Display name**, specify the string of text that will identify the field to users. For more information, see [Create an app](data-platform-create-app.md).
+
 4. Under **Name**, specify the string of text that you will use to refer to the field in, for example, a formula when you build an app.
    
     > [!IMPORTANT]
     > Specify a name that's unique, clear, and meaningful, because you can't change the name after you create the field.
+
 5. Under **Type**, specify the type of data that the field will contain, such as **Text** or **Number**.
    
     > [!IMPORTANT]
     > Specify this property carefully, because you might not be able to change it after the field contains data. For information about the types of data that you can specify, see [Understand entities](data-platform-intro.md#custom-fields).
+
 6. If you're prompted, specify additional information for the data type that you specified.
+
 7. Under **Unique**, select the check box if every record must have a unique value in this field.
+
 8. Under **Required**, select the check box if every record must have a value in this field.
    
     > [!IMPORTANT]
     > You can't require that a custom field in a standard entity contain data. This restriction prevents you from breaking any apps that rely on that entity.
+
 9. Click or tap **Save** to submit your changes.
    
     > [!IMPORTANT]
