@@ -57,8 +57,11 @@ At a high level, the app does the following:
     ![Blank app, phone layout](media/offline-apps/blank-app.png)
 
 ### Step 2: Add a Twitter connection
+
 1. Click or tap **Content** > **Data sources**, then choose **Add data source** on the **Data sources** panel.
+
 2. Click or tap **New Connection** , select **Twitter** , and click or tap **Create**.
+
 3. Enter your credentials, and create the connection.
    
     ![Add a Twitter connection](media/offline-apps/twitter-connection.png)
@@ -94,8 +97,11 @@ This formula checks if the device is online:
 * If the device is offline, it loads the local cache from a file called "Tweets," if it's available.
 
 ### Step 4: Add a gallery and bind it to the LocalTweets collection
+
 1. Insert a new flexible height gallery: **Insert** > **Gallery** > **Blank flexible height**.
+
 2. Set the **Items** property to **LocalTweets**.
+
 3. Add four **Label** controls to display data from each tweet, and set the **Text** properties to:
    * **ThisItem.TweetText**
    * **ThisItem.UserDetails.FullName & " @" & ThisItem.UserDetails.UserName**
@@ -113,7 +119,9 @@ If (Connection.Connected, "Connected", "Offline")
 This formula checks if the device is online. If it is, the text of the label is "Connected", otherwise it's "Offline".
 
 ### Step 6: Add a text input to compose new tweets
+
 1. Insert a new **Text input** control named "NewTweetTextInput".
+
 2. Set the **Reset** property of the text input to **resetNewTweet**.
 
 ### Step 7: Add a button to post the tweet
@@ -147,7 +155,9 @@ Then the formula resets the text in the text box.
 Add a new **Timer** control:
 
 * Set the **Duration** property to 300000.
+
 * Set the **AutoStart** property to true.
+
 * Set the **OnTimerEnd** to the following formula:
   
     ```
@@ -174,16 +184,12 @@ Now that the app is finished, let's check out how it looks before we move on to 
 ## Testing the app
 Use the following steps to test the app:
 
-1. Run PowerApps on a mobile device while online.
-   
-    You must run an app at least once while being online, so you can download the app to the device.
+1. Run PowerApps on a mobile device while online. You must run an app at least once while being online, so you can download the app to the device.
 2. Launch the Twitter app.
 3. Notice that the tweets are loaded, and that the status shows **Connected**.
 4. Close PowerApps completely.
 5. Set the device to airplane mode to ensure that it's offline.
-6. Run PowerApps.
-   
-    You can now run the Twitter app offline, and you have access to any other apps that you have previously run on this device while online (i.e. PowerApps hides any apps that haven't yet been downloaded to your device).
+6. Run PowerApps. You can now run the Twitter app offline, and you have access to any other apps that you have previously run on this device while online (i.e. PowerApps hides any apps that haven't yet been downloaded to your device).
 7. Run the app again.
 8. Notice how it correctly reflects the connection state, with a status of **Offline**.
 9. Write a new tweet. It will be stored locally in the **LocalTweetsToPost** collection.

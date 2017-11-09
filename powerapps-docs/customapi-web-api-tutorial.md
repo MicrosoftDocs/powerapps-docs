@@ -69,7 +69,8 @@ The first AAD application is used to secure the Web API. Name it **webAPI**.  Fo
 * Reply URL: `https://<your-root-url>/.auth/login/aad/callback`
 * There is no need for a client key.
 * There is no need to delegate any permissions.
-* > [!IMPORTANT]
+
+> [!IMPORTANT]
 > Note the application ID.  You will need it later.
 
 ### Second AAD application: Securing the custom connector and delegated access
@@ -82,9 +83,13 @@ The second AAD application is used to secure the custom connector registration a
 * Generate a client key and store is somewhere safe. We need this key later.
 
 ## Add authentication to your Azure Web App
+
 1. Sign in to the [Azure portal](https://portal.azure.com) and then find your Web App that you deployed in the first section.
+
 2. Click **Settings**, and then select **Authentication / Authorization**.
+
 3. Turn on **App Service Authentication** and then select **Azure Active Directory**.  On the next blade, select **Express**.  
+
 4. Click **Select Existing AD App**, and select the **webAPI** AAD application you created earlier.
 
 You should now be able to use AAD to authenticate your web application.
@@ -92,27 +97,29 @@ You should now be able to use AAD to authenticate your web application.
 ## Add the custom connector to PowerApps
 1. Modify your OpenAPI file to add the `securityDefintions` object and AAD authentication used for the Web App. The section of your OpenAPI file with the **host** property should look like this:
 
-```javascript
-// File header should be above here...
+    ```javascript
+    // File header should be above here...
 
-"host": "<your-root-url>",
-"schemes": [
-    "https"         //Make sure this is https!
-],
-"securityDefinitions": {
-    "AAD": {
-        "type": "oauth2",
-        "flow": "implicit",
-        "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
-        "scopes": {}
-    }
-},
+    "host": "<your-root-url>",
+    "schemes": [
+        "https"         //Make sure this is https!
+    ],
+    "securityDefinitions": {
+        "AAD": {
+            "type": "oauth2",
+            "flow": "implicit",
+            "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+            "scopes": {}
+        }
+    },
 
-// The rest of the OpenAPI document follows...
-```
+    // The rest of the OpenAPI document follows...
+    ```
 
 1. Browse to [PowerApps](https://web.powerapps.com), and add a custom connector as described in [Register and use custom connectors in PowerApps](register-custom-api.md).
+
 2. Once you have uploaded your OpenAPI file, the wizard auto-detects that you are using AAD authentication for your Web API.
+
 3. Configure the AAD authentication for the custom connector.  
    
    * **Client ID**: *Client ID of webAPI-CustomAPI*

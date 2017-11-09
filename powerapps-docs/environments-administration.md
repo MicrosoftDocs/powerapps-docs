@@ -32,15 +32,17 @@ In the [PowerApps admin center][1], manage environments that you've created and 
 ## Access the PowerApps admin center
 To access the PowerApps admin center:
 
-* go directly to [admin.powerapps.com][1], OR
-* go to [powerapps.com][2], and then select the gear icon in the  navigation header.
+* Go directly to [admin.powerapps.com][1], OR
+
+* Go to [powerapps.com][2], and then select the gear icon in the  navigation header.
   
     ![](./media/environment-admin/powerapps-gear-dropdown.png)
 
 To manage an environment in the PowerApps admin center, you must have one of these roles:
 
-* the Environment Admin role of the environment, or
-* the Global Administrator role of your Azure AD or Office 365 tenant.
+* The Environment Admin role of the environment, OR
+
+* The Global Administrator role of your Azure AD or Office 365 tenant.
 
 You also need either PowerApps Plan 2 or Flow Plan 2 to access the admin center. For more information, see the [PowerApps pricing page][3].
 
@@ -118,18 +120,20 @@ If an environment doesn't already have a database, an Environment Admin can crea
 After you create a database, choose a security model. For more information, see [Configure database security](database-security.md).
 
 ## Manage security for your environments
+
 ### Environment permissions
 In an environment, all the users in the Azure AD tenant are users of that environment. However, for them to play a more privileged role, they need to be added to a specific environment role. Environments have two built-in roles that provide access to permissions within an environment:
 
 * The **Environment Admin** role can perform all administrative actions on an environment including the following:
   
-  o    Add or remove a user or group from either the Environment Admin or Environment Maker role.
+    * Add or remove a user or group from either the Environment Admin or Environment Maker role.
   
-  o    Provision a Common Data Service database for the environment.
+    * Provision a Common Data Service database for the environment.
   
-  o    View and manage all resources created within an environment.
+    * View and manage all resources created within an environment.
   
-  o    Set data loss prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
+    * Set data loss prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
+
 * The **Environment Maker** role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow. Environment Makers can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users, security groups, or all users in the organization. For more information, see [Share an app in PowerApps](share-app.md).
 
 To assign a user or a security group to an environment role, an Environment Admin can take these steps in the [PowerApps admin center][1]:

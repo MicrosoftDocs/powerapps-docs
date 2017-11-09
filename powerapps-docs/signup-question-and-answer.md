@@ -62,9 +62,13 @@ See the following section if you'd like to remove the PowerApps tile from the ap
 If a user was assigned a PowerApps Plan 1 or PowerApps Plan 2 license then you can take the following steps to remove the PowerApps license for that user:
 
 1. Go to the [Office 365 Admin Portal](https://portal.microsoftonline.com/).
+
 2. In the left navigation bar, select **Users**, and then select **Active Users**.
+
 3. Find the user you want to remove the license for, and then select their name.
+
 4. On the user details pane, in the **Product licenses** section select **Edit**.
+
 5. Find the license called **Microsoft PowerApps Plan 1** or **Microsoft PowerApps Plan 2**, set the toggle to **Off** and then select **Save**.
    
     ![](./media/signup-question-and-answer/remove-license.png)
@@ -72,9 +76,13 @@ If a user was assigned a PowerApps Plan 1 or PowerApps Plan 2 license then you c
 If a user has access to PowerApps through their Office 365 and Dynamics 365 plan license, then you can disable their access to the PowerApps service by taking the following steps:
 
 1. Go to the [Office 365 Admin Portal](https://portal.microsoftonline.com/).
+
 2. In the left navigation bar, select **Users**, and then select **Active Users**.
+
 3. Find the user you want to remove access for, and then select their name.
+
 4. On the user details pane, in the **Product licenses** section select **Edit**.
+
 5. Expand the user's Office 365 or Dynamics 365 license, disable access to the service called **PowerApps for Office 365** or **PowerApps for Dynamics 365** and then select **Save**.
    
     ![](./media/signup-question-and-answer/remove-service-plan.png)
