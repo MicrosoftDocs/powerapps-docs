@@ -117,7 +117,7 @@ ms.author: mblythe
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds#step-2">Generate an app</a>
+                                <a class="barLink" href="create-app-cds#step-2">Explore a generated app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
