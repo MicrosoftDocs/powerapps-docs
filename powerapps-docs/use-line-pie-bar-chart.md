@@ -23,7 +23,8 @@ Use line charts, pie charts, and bar charts to display your data. When working w
 * Each series should be in the first row.
 * Labels should be in the leftmost column.
 
-For example, your data should look similar to the following:  
+For example, your data should look similar to the following:
+
 ![][9]
 
 You can create and use these charts within PowerApps. Let's get started.
@@ -38,59 +39,73 @@ You can create and use these charts within PowerApps. Let's get started.
 In these steps, we import the sample data into a collection, named **ProductRevenue**.
 
 1. On the **Insert** tab, select **Controls**, and then select **Import**:  
-   
+
     ![][11]  
+
 2. Set the control's **[OnSelect](controls/properties-core.md)** property to the following function:  
+
    ```Collect(ProductRevenue, Import1.Data)```
+
 3. Press F5 to open Preview mode, and then select the **Import Data** button.
-4. In the **Open** dialog box, select ChartData.zip, select **Open**, and then press Esc.  
+
+4. In the **Open** dialog box, select ChartData.zip, select **Open**, and then press Esc.
+
 5. On the **File** menu, select **Collections**.
-   
-    The ProductRevenue collection is listed with the chart data you imported:  
+
+    The ProductRevenue collection is listed with the chart data you imported:
+
     ![][1]  
-   
+
    > [!NOTE]
    > The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
-   > 
-   > 
+   >
+
 6. Press Esc to return to the default workspace.
 
 ## Add a pie chart
 1. On the **Insert** tab, select **Charts**, and then select **Pie Chart**.
+
 2. Move the pie chart under the **Import data** button.
+
 3. In the pie-chart control, select the middle of the pie chart:   
-   
+
     ![][10]
-4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression:</br>
+
+4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression:
+
    ```ProductRevenue.Revenue2014```
-   
+
     ![][2]  
-   
+
     The pie chart shows the revenue data from 2014.
-   
+
     ![][3]  
 
 ## Add a bar chart to display your data
 Now, let's use this ProductRevenue collection in a bar chart:
 
-1. On the **Home** tab, add a screen.
+1. On the **Home** tab, add a screen.]
+
 2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
+
 3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
-   
+
     ![][12]  
-   
+
     The column chart shows the revenue data from 2012:
-   
+
     ![][4]  
+
 4. In the column chart, select the center square:
-   
+
     ![][5]
+
 5. On the **Chart** tab, select **Number of Series**, and then enter **3** in the formula bar:
-   
+
     ![][6]  
-   
+
     The column chart shows revenue data for each product over three years:
-   
+
     ![][7]  
 
 [1]: ./media/use-line-pie-bar-chart/productrevenuecollection.png

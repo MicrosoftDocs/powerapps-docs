@@ -43,41 +43,48 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 
 ## Add a connection
 1. Click or tap **New** on the **File** menu (near the left edge).
-   
+
     ![New option on the File menu](./media/add-data-connection/file-new.png)
+
 2. On the **Blank app** tile, click or tap **Phone layout** .
-   
+
     ![Create an app from scratch](./media/add-data-connection/blank-app.png)
+
 3. In the center pane, click or tap **connect to data**.
+
 4. If the list of connections in the **Data** pane includes the one that you want, click or tap it to add it to the app. Otherwise, skip to the next step.
-   
+
     ![Add data source](./media/add-data-connection/choose-existing-connections.png)
+
 5. Click or tap **New connection** to display a list of connectors.
-   
+
     ![Add connection](./media/add-data-connection/new-connection.png)
+
 6. Scroll through the list of connectors until the type of connection that you want to create appears (for example, **Office 365 Outlook**), and then click or tap it.
-   
+
     ![Choose connection](./media/add-data-connection/choose-connection.png)
+
 7. Click or tap **Create** to both create the connection and add it to your app.
-   
+
     Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/connection-azure-sqldatabase.md) require additional information before you can use them.
 
 ## View or change a data source
 If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control that has an **Item** property. For example, you might be working on an app that someone else created, or you might want to remind yourself of a data source that you configured a while ago.
 
 1. Select the control for which you want to identify the data source.
-   
+
     For example, select a gallery (not a control within the gallery) by clicking or tapping it in the hierarchical list of screens and controls near the left edge.
-   
+
     The name of the data source appears on the **Properties** tab of the right-hand pane.
-   
+
     ![Data source on Properties tab](./media/add-data-connection/properties-tab.png)
+
 2. To show more information about the data source or change it, click or tap **Data** in the right-hand pane.
-   
+
     ![Data pane](./media/add-data-connection/data-pane.png)
+
 3. To change the data source, click or tap the down arrow next to the data source, and then choose or create another source.
 
 ## Next steps
 * To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
 * For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connections/connection-office365-outlook.md), [Twitter](connections/connection-twitter.md), and [Microsoft Translator](connections/connection-microsoft-translator.md).
-

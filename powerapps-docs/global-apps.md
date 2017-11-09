@@ -76,11 +76,11 @@ The change in the PowerApps list separator is consistent with that happens to th
 
 For example, consider the following formula in "en-US":
 
-* **If( Slider1.Value > 12.59, UpdateContext( { Validation: true, MovingOn: 1 } ); Navigate( "NextScreen", "" ), UpdateContext( { Validation: false } ) )**
+**If( Slider1.Value > 12.59, UpdateContext( { Validation: true, MovingOn: 1 } ); Navigate( "NextScreen", "" ), UpdateContext( { Validation: false } ) )**
 
 In a language where "," is used for the decimal separator, this will appear in the authoring experience as:
 
-* **If( Slider1.Value > 12,59; UpdateContext( { Validation: true; MovingOn: 1 } );; Navigate( "NextScreen", "" ); UpdateContext( { Validation: false } ) )**
+**If( Slider1.Value > 12,59; UpdateContext( { Validation: true; MovingOn: 1 } );; Navigate( "NextScreen", "" ); UpdateContext( { Validation: false } ) )**
 
 Note that the property selection operator **.** in **Slider1.Value** is always the same, no matter what the decimal separator is.
 
@@ -98,7 +98,7 @@ Among other things, you can use **Language** to display translated text for your
 
 And then use a formula such as the following to pull translated strings from the table:
 
-* **LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
+**LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
 
 Be aware that translated strings in other languages could be significantly longer than they are in your language.  In many cases, the labels and other elements that display the strings in your user interface will need to be wider to accommodate.
 
@@ -150,4 +150,3 @@ The **[Calendar](functions/function-clock-calendar.md)** and **[Clock](functions
 Among other things, use these functions to provide a **Dropdown** control with a list of choices.  
 
 For more information, see the documentation for the **[Calendar](functions/function-clock-calendar.md)** and **[Clock](functions/function-clock-calendar.md)**  functions.
-
