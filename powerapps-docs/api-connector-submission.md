@@ -39,15 +39,13 @@ Certify your connector for Microsoft Flow, PowerApps, and Logic Apps in three si
    * We'll check if your app meets the criteria. Once approved, we'll notify you along with instructions for onboarding.
 2. **Review**
    
-    Submit the following information to your nomination contact for review:
+    Submit the following information to your nomination contact for review. If additional information is required, we'll contact you with more details.
    
    * OpenAPI file that describes your API
    * icon.png file (~160px logo inside a 230px square, white on a colored background is preferred)
    * Brand color in hex (matching the colored background in the icon file)
    * A test account for validation
    * A support contact
-     
-     If additional information is required, we'll contact you with more details.
 3. **Publishing**
    
     After we validate connector functionality and content, we will stage the connector for deployment across all products and regions. 

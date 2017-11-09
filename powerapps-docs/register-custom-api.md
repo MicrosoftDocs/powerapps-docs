@@ -46,12 +46,12 @@ The custom connector process has several steps, which we describe briefly below.
    * Basic Authentication
 3. **Describe your API** in one of two industry-standard ways, so that PowerApps can connect to it.
    
-   * An OpenAPI file (also known as a Swagger file)
+   * An OpenAPI file (also known as a Swagger file) - You can also build an OpenAPI file in step 4 as part of the registration process.
    * A Postman Collection
-     
-     You can also build an OpenAPI file in step 4 as part of the registration process.
 4. **Register your custom connector** using a wizard in PowerApps, where you specify an API description, security details, and other information.
+
 5. **Use your custom connector** in an app. Create a connection to the API in your app, and call any operations that the API provides, just like you call native functions in PowerApps.
+
 6. **Share your custom connector** like you do other data connections in PowerApps. This step is optional, but it often makes sense to share custom connectors across multiple app creators.
 
 ## Describe your API
@@ -90,7 +90,9 @@ You will now use the OpenAPI file or Postman Collection to register your custom 
 3. In the **General** tab, choose how you want to create the custom connector.
    
    * Upload an OpenAPI file
+
    * Use an OpenAPI URL
+
    * Upload Postman Collection V1
      
      ![How to create a custom connector](./media/register-custom-api/choosehowtocreate.png)
@@ -125,6 +127,7 @@ You will now use the OpenAPI file or Postman Collection to register your custom 
    2. In the **Request** section, select **Import from sample** on the top right. In the form on the right, paste in a sample request. Sample requests are usually available in the API documentation, where you can get information to fill out the **Verb**, **Request URL**, **Headers**, and **Body** fields. See the [Text Analytics API documentation](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics.V2.0/operations/56f30ceeeda5650db055a3c6) for an example.
       
        ![Import from sample](./media/register-custom-api/importfromsample.png)
+
    3. Select **Import** to complete the request definition. Define the response in a similar way.
 6. Once you have all your operations defined, select **Create** to create your custom connector.
 7. Once you have created your custom connector, go to the **Test** tab to test the operations defined in the API. Choose a connection, and provide input parameters to test an operation.
