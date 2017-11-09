@@ -16,7 +16,7 @@ ms.workload: na
 ms.date: 12/06/2016
 ms.author: kfend
 
-
+---
 # Generate an app by using a Common Data Service database
 You can automatically generate an app to manage data that is stored in Common Data Service. You can manage data in one of the many standard entities that are built into the model, or in a custom entity that you or someone else in your organization creates.
 
