@@ -43,14 +43,14 @@ You can add any control in a variety of categories by clicking or tapping the **
 
 On the **Insert** tab, click or tap any of these categories, and then click or tap the control that you want to add:
 
-    **Text**: Label, Text input, HTML Text, Pen input<br>
-    **Controls**: Button, Drop down, Date picker, List box, Check box, Radio, Toggle, Slider, Rating, Timer<br>
-    **Gallery**: Vertical, Horizontal, Flexible height, Blank vertical, Blank horizontal, Blank flexible height<br>
-    **Data table**<br>
-    **Forms**: Edit, Display, Entity form<br>
-    **Media**: Image, Camera, Barcode, Video, Audio, Microphone, Add picture<br>
-    **Charts**: Column chart, Line chart, Pie chart<br>
-    **Icons**
+**Text**: Label, Text input, HTML Text, Pen input<br>
+**Controls**: Button, Drop down, Date picker, List box, Check box, Radio, Toggle, Slider, Rating, Timer<br>
+**Gallery**: Vertical, Horizontal, Flexible height, Blank vertical, Blank horizontal, Blank flexible height<br>
+**Data table**<br>
+**Forms**: Edit, Display, Entity form<br>
+**Media**: Image, Camera, Barcode, Video, Audio, Microphone, Add picture<br>
+**Charts**: Column chart, Line chart, Pie chart<br>
+**Icons**
 
 > [!TIP]
 > If you need more space for controls, [add another screen](add-screen-context-variables.md).

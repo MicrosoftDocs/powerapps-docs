@@ -152,7 +152,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 8. On the **Insert** tab, add a **Button** control, and set its **OnSelect** property to this formula:
 
-    Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})
+    **Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})**
 
 9. Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
 
