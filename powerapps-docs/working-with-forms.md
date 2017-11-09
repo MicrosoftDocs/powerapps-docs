@@ -213,16 +213,19 @@ Great!  We now turn to navigation: how a user opens the details screen from the 
    
     This formula returns the user back to the gallery when they finish viewing details.
 
-![Display form for Ice Cream data source with back button](./media/working-with-forms/viewform-icecream-back.png)
+    ![Display form for Ice Cream data source with back button](./media/working-with-forms/viewform-icecream-back.png)
 
 Now, let's return to the **[Gallery](controls/control-gallery.md)** control and add some navigation to our detail screen.
 
 1. Switch to the first screen, which is hosting our **[Gallery](controls/control-gallery.md)** control, and select the arrow in the first item in the gallery.
+
 2. Set the **[OnSelect](controls/properties-core.md)** property of the shape to this formula:
    <br>**Navigate( Screen2, None )**
    
     ![Display form for Ice Cream data source with back button](./media/working-with-forms/gallery-icecream-nav-new.png)
+
 3. Press F5, and then select an arrow in the gallery to show the details for an item.
+
 4. Select the **[Back](functions/function-navigate.md)** button to return to the gallery of products, and then press Esc.
 
 ## Editing details
@@ -302,12 +305,11 @@ In this app, an error occurs when the value of a field is not valid, a required 
 
 If **[SubmitForm](functions/function-form.md)** fails for any reason, the **Error** property of the **[Edit form](controls/control-form-detail.md)** control contains an error message to show the user. With this information, the user should be able to correct the issue and resubmit the change, or they can cancel the update.
 
-1. On the Edit and Create screen, add a **[Label](controls/control-text-box.md)** control, and move it just below the **Save** button.
-   
-    Any error will be easy to see after the user selects this control to save changes.
+1. On the Edit and Create screen, add a **[Label](controls/control-text-box.md)** control, and move it just below the **Save** button. Any error will be easy to see after the user selects this control to save changes.
+
 2. Set the **[Text](controls/properties-core.md)** property of the **[Label](controls/control-text-box.md)** control to show **Form1.Error**.
 
-![Display form with added "Edit" button](./media/working-with-forms/edit-icecream-error.png)
+    ![Display form with added "Edit" button](./media/working-with-forms/edit-icecream-error.png)
 
 In an app that PowerApps generates from data, the **[AutoHeight](controls/control-text-box.md)** property on this control is set to *true* so that no space is consumed if no error occurs. The **[Height](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties of the **[Edit form](controls/control-form-detail.md)** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to open the **Advanced** view (available on the **View** tab) to select this control.
 
@@ -319,9 +321,10 @@ In an app that PowerApps generates from data, the **[AutoHeight](controls/contro
 The data source is refreshed whenever the user opens the app, but the user might want to refresh the records in the gallery without closing the app. Add a **Refresh** button so that the user can select it to manually refresh the data:
 
 1. On the screen with the **[Gallery](controls/control-gallery.md)** control, add a **[Button](controls/control-button.md)** control and set its **[Text](controls/properties-core.md)** property to show **Refresh**.
+
 2. Set the **[OnSelect](controls/properties-core.md)** property of this control to this formula:<br> **Refresh( 'Ice Cream' )**
 
-![Refresh the data source](./media/working-with-forms/browse-icecream-refresh.png)
+    ![Refresh the data source](./media/working-with-forms/browse-icecream-refresh.png)
 
 ## Search and sort the gallery
 In the app that PowerApps generated from data, we neglected to discuss two controls at the top of the Browse screen. By using these controls, the user can search for one or more records, sort the list of records in ascending or descending order, or both.

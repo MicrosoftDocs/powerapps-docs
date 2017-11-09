@@ -97,7 +97,9 @@ How global variables work:
 Let's rebuild our adding machine by using a global variable:
 
 1. Add a text-input control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
+
 2. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
+
 3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **Set( RunningTotal, RunningTotal + Text1 )**
@@ -154,7 +156,9 @@ How context variables work:
 Let's rebuild our adding machine by using a context variable:
 
 1. Add a text-input control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
+
 2. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
+
 3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**
@@ -204,7 +208,9 @@ How collections work:
 Let's recreate our adding machine by using a collection:
 
 1. Add a **[Text input](controls/control-text-input.md)** control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
+
 2. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to **"Clear"**.
+
 3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **Collect( PaperTape, TextInput1.Text )**

@@ -148,7 +148,9 @@ You can also build a formula that calculates data for an individual record, take
 
 1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
     **Collect( SelectedRecord, Gallery1.Selected )**
+
 2. If the button isn't selected, click it to select it, and then click it again to run the formula.
+
 3. In the **File** menu, select **Collections.**
 
 ![](media/working-with-tables/selected-collection.png)
@@ -158,6 +160,7 @@ This formula returns a record that includes not only the data from the record th
 Now that you have the selected record, you can extract individual fields from it with the **.** operator.
 
 1. Press Esc to return to the default workspace, and then add a label below the gallery.
+
 2. Set the **[Text](controls/properties-core.md)** property of the label to this formula:<br>
     **Gallery.Selected.Heading**
    

@@ -56,12 +56,17 @@ If you're new to PowerApps (or have only generated apps automatically), you'll w
     The label shows the sales-order number of the record that you selected in the gallery.
 3. (optional) Format the label as follows:
    
-   1. Set its **Align** property to **Center**.
-   2. Set its **Size** property to **20**.
-   3. Set its **Fill** property to **Navy**.
-   4. Set its **Color** property to **White**.
-   5. Set its **Width** property to **Parent.Width**.
-   6. Set its **X** and **Y** properties to **0**.
+    1. Set its **Align** property to **Center**.
+   
+    2. Set its **Size** property to **20**.
+   
+    3. Set its **Fill** property to **Navy**.
+   
+    4. Set its **Color** property to **White**.
+   
+    5. Set its **Width** property to **Parent.Width**.
+   
+    6. Set its **X** and **Y** properties to **0**.
       
       ![Title bar](media/working-with-form-layout/title-bar.png)
 
@@ -122,7 +127,9 @@ To make your design more flexible but retain some structure, you can increase th
 3. Repeat the previous step with the **Order status** and **Customer purchase order reference** cards.
    
     ![Three cards in first row](media/working-with-form-layout/card-resize-2.png)
+
 4. Resize the **Name** and **Description** cards to take up six columns (or 1/2) of the form.
+
 5. Make the first two lines of the delivery address stretch entirely across the form:
 
 All done. We have our desired form, mixing rows with different numbers of columns:
