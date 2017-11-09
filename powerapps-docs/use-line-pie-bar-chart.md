@@ -43,6 +43,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
     ![][11]  
 
 2. Set the control's **[OnSelect](controls/properties-core.md)** property to the following function:  
+
    ```Collect(ProductRevenue, Import1.Data)```
 
 3. Press F5 to open Preview mode, and then select the **Import Data** button.
@@ -58,6 +59,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
    > [!NOTE]
    > The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
    >
+
 6. Press Esc to return to the default workspace.
 
 ## Add a pie chart
@@ -69,7 +71,8 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
     ![][10]
 
-4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression:</br>
+4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression:
+
    ```ProductRevenue.Revenue2014```
 
     ![][2]  

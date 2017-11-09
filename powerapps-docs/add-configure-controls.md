@@ -41,7 +41,7 @@ Add a variety of UI elements to your app, and configure aspects of their appeara
 ## Add a control
 You can add any control in a variety of categories by clicking or tapping the **Insert** tab of the toolbar, clicking or tapping a category, and then clicking or tapping the control that you want. In this section, review the controls in each category to get familiar with the types of controls that you can add and where you might find each type.
 
-* On the **Insert** tab, click or tap any of these categories, and then click or tap the control that you want to add:
+On the **Insert** tab, click or tap any of these categories, and then click or tap the control that you want to add:
 
     **Text**: Label, Text input, HTML Text, Pen input<br>
     **Controls**: Button, Drop down, Date picker, List box, Check box, Radio, Toggle, Slider, Rating, Timer<br>

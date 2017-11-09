@@ -108,19 +108,19 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 2. Create a table using the following steps:    
 
-    a. Select cell A1.
+   1. Select cell A1.
 
-    b. On the **Insert** ribbon, select **Table**.
+   2. On the **Insert** ribbon, select **Table**.
 
-    c. In the dialog box, select **My table has headers**, and then select **OK**.
+   3. In the dialog box, select **My table has headers**, and then select **OK**.
 
-    ![Create a table](./media/add-images-pictures-audio-video/create-table.png)
+       ![Create a table](./media/add-images-pictures-audio-video/create-table.png)
 
-    Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information about table formatting in Excel.
+       Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information about table formatting in Excel.
 
-    d. Name the table **Drawings**:
+   4. Name the table **Drawings**:
 
-    ![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
+       ![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
 
 3. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
@@ -128,21 +128,21 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 5. In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 
-    a.    Click or tap the **View** tab, and then click or tap **Data sources**.
+   1. Click or tap the **View** tab, and then click or tap **Data sources**.
 
-    ![](./media/add-images-pictures-audio-video/choose-data-sources.png)
+       ![](./media/add-images-pictures-audio-video/choose-data-sources.png)
 
-    b.    Click or tap **Add data source**, and then click or tap **OneDrive for Business**.
+   2. Click or tap **Add data source**, and then click or tap **OneDrive for Business**.
 
-    ![](./media/add-images-pictures-audio-video/select-source.png)
+       ![](./media/add-images-pictures-audio-video/select-source.png)
 
-    c.    Click or tap **SavePen.xlsx**.
+   3. Click or tap **SavePen.xlsx**.
 
-    d.    Select the **Drawings** table, and then click or tap **Connect**.
+   4. Select the **Drawings** table, and then click or tap **Connect**.
 
-    ![Connect](./media/add-images-pictures-audio-video/savepen.png)  
+       ![Connect](./media/add-images-pictures-audio-video/savepen.png)  
 
-    Now, the Drawings table is listed as a data source.
+       Now, the Drawings table is listed as a data source.
 
 6. On the **Insert** tab, select **Text**, and then select **Pen input**.
 
