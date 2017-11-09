@@ -64,9 +64,13 @@ Now that the SharePoint lists are in place, we can build and customize our first
 3. In the right pane, update the fields to match the following list:
    
    * **RequestDate**
+
    * **Description**
+
    * **Title**
+
    * **Requestor**
+
      ![Gallery fields](./media/sharepoint-scenario-generate-app/02-03-02-gallery-fields.png)
 4. With **BrowseGallery1** still selected, select the **Items** property.
    
