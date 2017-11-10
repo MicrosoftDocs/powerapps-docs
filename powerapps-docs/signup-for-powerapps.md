@@ -19,7 +19,7 @@ ms.author: jamesol
 
 ---
 # Self-service signup for PowerApps
-Signing up for PowerApps as an individual, is easy! This article walks you through the steps to get up and running with a free trial account for PowerApps.
+Signing up for PowerApps as an individual is easy! This article walks you through the steps to get up and running with a free trial account for PowerApps.
 
 For administration information, see [Purchase PowerApps for your organization](signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
