@@ -31,9 +31,9 @@ To sign up for PowerApps, enter your work or school email address.
 
 > [!NOTE]
 > Currently, consumer email services, telecommunication providers, government, and military addresses are not supported, including:  
-
-* outlook.com, hotmail.com, gmail.com, and so on  
-* .gov and .mil
+> 
+> * outlook.com, hotmail.com, gmail.com, and so on  
+> * .gov and .mil
 
 If you try to sign up with a personal email address, a message indicates that you must use a work or school email address.
 
