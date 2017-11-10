@@ -26,7 +26,7 @@ For administration information, see [Purchase PowerApps for your organization](s
 > [!NOTE]
 > If you're in an organization, individual signup may be disabled. If you get an error indicating it's been turned off, see [Individual signup has been turned off](signup-for-powerapps.md#individual-signup-has-been-turned-off) (in this topic) for more information.
 
-## What email addresses can you use
+## What email addresses can you use?
 To sign up for PowerApps, enter your work or school email address.
 
 > [!NOTE]
