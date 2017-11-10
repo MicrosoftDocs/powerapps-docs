@@ -19,21 +19,21 @@ ms.author: jamesol
 
 ---
 # Self-service signup for PowerApps
-Signing up for PowerApps as an individual, is easy! This article walks you through the steps to get up and running with a free trial account for PowerApps.
+Signing up for PowerApps as an individual is easy! This article walks you through the steps to get up and running with a free trial account for PowerApps.
 
 For administration information, see [Purchase PowerApps for your organization](signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](signup-question-and-answer.md).
 
 > [!NOTE]
 > If you're in an organization, individual signup may be disabled. If you get an error indicating it's been turned off, see [Individual signup has been turned off](signup-for-powerapps.md#individual-signup-has-been-turned-off) (in this topic) for more information.
 
-## What email addresses can you use
+## What email addresses can you use?
 To sign up for PowerApps, enter your work or school email address.
 
 > [!NOTE]
 > Currently, consumer email services, telecommunication providers, government, and military addresses are not supported, including:  
-
-* outlook.com, hotmail.com, gmail.com, and so on  
-* .gov and .mil
+> 
+> * outlook.com, hotmail.com, gmail.com, and so on  
+> * .gov and .mil
 
 If you try to sign up with a personal email address, a message indicates that you must use a work or school email address.
 

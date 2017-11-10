@@ -14,12 +14,15 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/30/2017
+ms.date: 11/10/2017
 ms.author: sharik
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+## Nov. 10
+* [Rename rules](working-with-rules.md) in an app and show rules when the selected control is in the rule condition.
 
 ## Oct. 30
 1. [Show all rules](working-with-rules.md) in an app, not just those for the selected control.
@@ -69,14 +72,3 @@ For information about known limitations, see [Common issues and resolutions](com
 4. [Format dates more easily](controls/control-date-picker.md), and [convert between local time and UTC](functions/function-dateadd-datediff.md).
 5. [Simultaneous edits](edit-app.md) that corrupt apps are prevented.
 6. Build skills in an [individual environment](dev-community-plan.md) (always free).
-
-## May 5
-1. Navigate the toolbar more easily, and open help from tooltips.
-2. Learn from [sample apps](open-and-run-a-sample-app.md) that show your data, not fake data.
-3. Open and edit sample apps in [PowerApps Studio for web](create-app-browser.md).
-4. Select a type of **[Gallery](controls/control-gallery.md)** control more easily, and choose from a wider variety of layouts.
-5. Show data in a tabular format with the **[Data table](controls/control-data-table.md)** control.
-6. Use screen templates for common data patterns.
-7. Browse environments in an alphabetized list with clearer labels.
-8. Administrators can [view user licenses](admin-view-user-licenses.md) for PowerApps and Microsoft Flow.
-
