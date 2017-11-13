@@ -1,24 +1,25 @@
-<properties
-    pageTitle="
-Customize a SharePoint list form using PowerApps | Microsoft PowerApps"
-    description="Use PowerApps to customize a list form in SharePoint."
-    services=""
-    suite="powerapps"
-    documentationCenter="na"
-    authors="skjerland"
-    manager="anneta"
-    editor=""
-    tags=""/>
-<tags
-    ms.service="powerapps"
-    ms.devlang="na"
-    ms.topic="article"
-    ms.tgt_pltfrm="na"
-    ms.workload="na"
-    ms.date="09/25/2017"
-    ms.author="sharik"/>
+---
+title: Customize a SharePoint list form using PowerApps | Microsoft Docs
+description: Use PowerApps to customize a list form in SharePoint.
+services: ''
+suite: powerapps
+documentationcenter: na
+author: skjerland
+manager: anneta
+editor: ''
+tags: ''
 
-# Customize a SharePoint list form using PowerApps #
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 11/13/2017
+ms.author: sharik
+
+---
+# Customize a SharePoint list form using PowerApps
+
 You can now easily customize any SharePoint list form in PowerApps. Much of what you were doing with InfoPath to customize SharePoint list forms you can now do inline in a browser with PowerApps. Plus, PowerApps gives you the ability to do so much more!
 
 PowerApps is directly integrated with SharePoint - there's no need to download another app to your computer. And with PowerApps, you can create richly customized forms without needing to write any code. Once published, the forms are embedded within the SharePoint list and are available to all users of the list.
@@ -27,10 +28,13 @@ And because PowerApps is seamlessly integrated into SharePoint, there's no need 
 
 Ready to start customizing? Let's get started!
 
-**Note**: This functionality is being rolled out to SharePoint customers in stages. If you don't currently see a **Customize forms** option in your SharePoint list, you'll see it soon.
+> [!NOTE]
+> This functionality is being rolled out to SharePoint customers in stages. If you don't currently see a **Customize forms** option in your SharePoint list, you'll see it soon.
 
-## Create a custom list form app in PowerApps ##
-**Note**: The **Customize forms** option will be unavailable, or may not work correctly, if the SharePoint list contains data types that PowerApps doesn't support.
+## Create a custom list form app in PowerApps
+
+> [!NOTE]
+> The **Customize forms** option will be unavailable, or may not work correctly, if the SharePoint list contains data types that PowerApps doesn't support.
 
 Within your SharePoint list, click or tap **PowerApps** on the command bar, and then click or tap **Customize forms**. This takes you to PowerApps Studio for web in a browser, where PowerApps generates a single-screen form app, as shown in the following example.
 
@@ -38,7 +42,8 @@ Within your SharePoint list, click or tap **PowerApps** on the command bar, and 
 
 To return to your SharePoint list at any time, click or tap **Back to SharePoint** in the upper-left corner of PowerApps Studio for web.
 
-## Customize the list form ##
+## Customize the list form
+
 PowerApps offers many ways to customize your form. For example, you can change the layout, format the text, add images or charts, add custom data validation, add rules, or create additional views.
 
 Let's say your form has an **AccountID** field that you don't want visible.
@@ -51,14 +56,16 @@ Hiding the field is easy in PowerApps - in the form customization options, just 
 
 For step-by-step instructions on how to hide fields and make other form changes, see [Customize forms in PowerApps](customize-forms-sharepoint.md).
 
-## Save and publish the list form back to SharePoint ##
+## Save and publish the list form back to SharePoint
+
 1. When you're done, click or tap **File**, and then click or tap **Save**. This saves your changes to the PowerApps form app.
 
 1. To publish your form back to SharePoint so that others can use it, click or tap **Publish to SharePoint**. You don't need to worry about sharing the form - the form inherits permissions from the SharePoint list.
 
     ![Publish to SharePoint](./media/customize-list-form/publish-to-sharepoint.png)  
 
-## View your list form in SharePoint ##
+## View your list form in SharePoint
+
 1. To see your customized form, click or tap **Back to SharePoint**, and then click or tap any item in the SharePoint list. The form opens inline on the right-hand side of the browser window.
 
     ![Open form inline in SharePoint](./media/customize-list-form/list-form-open.png)
@@ -69,28 +76,32 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
     You can customize and save as many times as you want, but your changes will not be visible in SharePoint until you click or tap **Publish to SharePoint**.
 
-## Toggle between using the default SharePoint form and the custom form ##
+## Toggle between using the default SharePoint form and the custom form
+
 1. From your list in SharePoint, click or tap **Settings**, click or tap **List settings**, and then click or tap **Form settings**.
 
 1. On the **Form Settings** page, click or tap one of the following, and then click or tap **OK**.
 
-    - **Use the default SharePoint form** - SharePoint will use the default SharePoint form for your list.
+    * **Use the default SharePoint form** - SharePoint will use the default SharePoint form for your list.
 
-    - **Use a custom form created in PowerApps** - SharePoint will use the form that you customized in PowerApps. (Alternatively, you can re-publish the form from the **Save** page in PowerApps Studio for web.)
+    * **Use a custom form created in PowerApps** - SharePoint will use the form that you customized in PowerApps. (Alternatively, you can re-publish the form from the **Save** page in PowerApps Studio for web.)
 
     You can toggle back and forth between options, as needed.
 
     ![Form Settings options](./media/customize-list-form/form-settings.png)
 
-## Delete the custom list form ##
+## Delete the custom list form
+
 1. From your list in SharePoint, click or tap **Settings**, click or tap **List settings**, and then click or tap **Form settings**.
 
 1. On the **Form Settings** page, click or tap **Use the default SharePoint form**, and then under the **Use a custom form created in PowerApps** option, click or tap **Delete custom form**. This will delete the custom form that you created in PowerApps and your form will revert to a default SharePoint form.
 
     ![Delete the custom form](./media/customize-list-form/use-default-sharepoint.png)
 
-## Top questions about list form customization##
-### Customizing forms versus creating apps ###
+## Top questions about list form customization
+
+### Customizing forms versus creating apps
+
 **Q:** How does a customized list form differ from a standalone app that I create from SharePoint or PowerApps?
 
 **A:** The list form app that you create from SharePoint is a special type of PowerApps app that can only be used within a SharePoint list. These list form apps don't appear in your app list in PowerApps Studio for web or PowerApps Mobile, and you can't run them outside of the SharePoint list.
@@ -111,7 +122,8 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 **A:** No. Currently you can create customized list forms only in your organization's default PowerApps environment; you cannot create customized list forms in, or migrate them to, another environment.
 
-### Managing your custom list form ###
+### Managing your custom list form
+
 **Q:** How do I get a direct link to my list form that I can share with others?
 
 **A:** Open the form in the SharePoint list, and then click or tap **Copy link**.
@@ -140,7 +152,8 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 **A:** No. This functionality is not currently supported.
 
-### Administering your custom list form ###
+### Administering your custom list form
+
 **Q:** How do I share my custom list form with others?
 
 **A:** You don't need to share the form - the form inherits permissions from the SharePoint list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-list-form-back-to-sharepoint) so that others can use it.
