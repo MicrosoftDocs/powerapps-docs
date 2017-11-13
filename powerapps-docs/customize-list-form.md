@@ -140,13 +140,15 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 1. In PowerApps Studio for web, click or tap **File**, and then on the **Save** page, click or tap **See all versions**. The **Versions** page opens in a new browser tab.
 
-    **Note:** If you don't see the **See all versions** button, click or tap **Save**. The button should appear.
+    > [!NOTE]
+    > If you don't see the **See all versions** button, click or tap **Save**. The button should appear.
 
 1. Without closing the **Versions** page or the browser tab, go back to the **Save** page in the other browser tab, click or tap the arrow at the top of the left navigation pane, and then click or tap **Back to SharePoint** to unlock your form and exit PowerApps Studio for web.
 
 1. Go back to the **Versions** page in the other browser tab, locate the version that you want to restore, and then click **Restore**.
 
-    **Note:** If you get an error message saying the restore failed because the form is locked by another user, wait until the user unlocks the form, and then try again.
+    > [!NOTE]
+    > If you get an error message saying the restore failed because the form is locked by another user, wait until the user unlocks the form, and then try again.
 
 **Q:** Can I move my custom list form from one list to another?
 
