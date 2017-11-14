@@ -24,6 +24,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 ## Controls
 **[Add picture](controls/control-add-picture.md)** – Load images from the local device, for upload to a data source.
 
+**[Attachments](controls/control-attachments.md)** – Download and upload files from the local device to a data source.
+
 **[Audio](controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
 **[Barcode scanner](controls/control-barcodescanner.md)** – Scan a barcode by using a device that has a camera.
@@ -512,4 +514,3 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### Z
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.  Applies to **[Camera](controls/control-camera.md)** and **[PDF viewer](controls/control-pdf-viewer.md)** controls.
-

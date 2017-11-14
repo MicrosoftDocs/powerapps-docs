@@ -26,7 +26,10 @@ A **Combo box** control allows you to search for items you will select.  The sea
 
 Single or multi-select mode is configured via the SelectMultiple property.
 
-When searching for items to select, for each item you can choose to show a single data value, two values or a picture and two values (Person) by modifying the Layout setting in the Data pane.
+When searching for items to select, for each item you can choose to show a single data value, two values, or a picture and two values (Person) by modifying the Layout settings in the Data pane.
+
+## People picker
+To use **Combo box** as a people picker, choose the **Person** template from the Layout settings in the Data pane and configure the related data properties to be shown for the person below.
 
 ## Key properties
 **[Items](properties-core.md)** – The source of data from which selections can be made.
@@ -75,8 +78,7 @@ When searching for items to select, for each item you can choose to show a singl
 2. In the Properties options tab, click on Data.  
 3. Select the data source, layout and related properties below.
 4. Set the **SelectMultiple** property in the Advanced tab.
-   
-    A functional **Combo box** will appear in your app.
-   
-    Don't know how to [add and configure a control](../add-configure-controls.md)?.
 
+    A functional **Combo box** will appear in your app.
+
+    Don't know how to [add and configure a control](../add-configure-controls.md)?.
