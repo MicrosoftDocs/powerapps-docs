@@ -22,10 +22,9 @@ ms.author: fikaradz
 A control that allows users to download files to their device.  Upload functionality will be coming soon.
 
 ## Description
-An **Attachments** control allows you to open files stored on a data source.
+An **Attachments** control lets you open files stored on a data source.
 
 ## Key properties
-
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.
 
 **MaxAttachments** – The maximum number of files the control will accept.
@@ -37,8 +36,7 @@ An **Attachments** control allows you to open files stored on a data source.
 **[OnSelect](properties-core.md)** – How the app responds when the user clicks on an attachment.
 
 ## Additional properties
-
-**AddAttachmentText** – Label text for the button used to add a new attachment.
+**AddAttachmentText** – The label text for the button used to add a new attachment.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -52,23 +50,23 @@ An **Attachments** control allows you to open files stored on a data source.
 
 **NoAttachmentsText** – Instructional text shown to the user when there are no attachments to show.
 
-**[Visible](properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control is visible or hidden.
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or screen, if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or screen, if no parent container).
 
 
 ## Example
-1. Create an app from data using a SharePoint List as a data source.  Alternatively add a form to your app and set a SharePoint list as its data source.
+1. Create an app from data using a SharePoint list as a data source.  Alternatively, add a form to your app and set a SharePoint list as its data source.
 
-2. Select the **Form** control in the tree view on the left hand side.
+2. Select the **Form** control in the tree view on the left-hand side.
 
-3. Click on **Data** in the Properties tab in the options panel on the right.
+3. Click **Data** in the Properties tab in the options panel on the right.
 
-4. Under Fields, enable the **Attachments** field.
+4. Under **Fields**, enable the **Attachments** field.
 
     The Attachments field associated with the SharePoint list will appear in the form.
 
