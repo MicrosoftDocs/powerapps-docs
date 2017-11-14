@@ -14,12 +14,17 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 11/10/2017
+ms.date: 11/13/2017
 ms.author: sharik
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+## Nov. 13
+1. Select multiple values for the same field in SharePoint lists.
+2. [View and download attachment](controls/control-attachments.md) in SharePoint lists.
+3. [Customize SharePoint list forms](customize-list-form.md) using PowerApps.
 
 ## Nov. 10
 * [Rename rules](working-with-rules.md) in an app and show rules when the selected control is in the rule condition.
