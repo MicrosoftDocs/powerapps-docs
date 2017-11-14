@@ -1,0 +1,14 @@
+{
+    "redirections": [
+        {
+        "source_path": "cloud-storage-blob-connections.md",
+        "redirect_url": "/connections/cloud-storage-blob-connections",
+        "redirect_document_id": false 
+        },
+        {
+        "source_path": "connection-azure-sqldatabase.md",
+        "redirect_url": "connections/connection-azure-sqldatabase",
+        "redirect_document_id": false 
+        }
+    ]
+}
