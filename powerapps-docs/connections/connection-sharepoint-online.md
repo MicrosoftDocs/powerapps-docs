@@ -30,13 +30,13 @@ You can add data from a custom list but not a library. In addition, not all type
 | --- | --- | --- |
 | Single line of text |Yes |View text |
 | Multiple lines of text |Yes |View text |
-| Choice |Yes |View lookup<br>Edit lookup |
+| Choice |Yes |View lookup<br>Edit lookup<br>View multiselect<br>Edit multiselect |
 | Number |Yes |View percentage<br>View rating<br>View text |
 | Currency |Yes |View percentage<br>View rating<br>View text |
 | Date and Time |Yes |View text |
-| Lookup |Yes |View lookup<br>Edit lookup |
+| Lookup |Yes |View lookup<br>Edit lookup<br>View multiselect<br>Edit multiselect |
 | Boolean (Yes/No) |Yes |View text<br>View toggle |
-| Person or Group |Yes |View lookup<br>Edit lookup |
+| Person or Group |Yes |View lookup<br>Edit lookup<br>View multiselect<br>Edit multiselect |
 | Hyperlink |Yes |View URL<br>View text |
 | Picture |Yes (read-only) |View image<br>View text |
 | Attachment |Yes (read-only) |View Attachments|
