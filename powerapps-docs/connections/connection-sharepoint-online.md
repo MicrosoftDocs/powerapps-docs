@@ -52,6 +52,7 @@ Columns that contain spaces can by read by PowerApps, but the spaces are replace
 Open PowerApps by taking *either* of these steps:
 
 * [Sign up](../signup-for-powerapps.md) for PowerApps, [install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
+
 * [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
 
     For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](../create-app-browser.md).
@@ -67,18 +68,23 @@ Open PowerApps by taking *either* of these steps:
 
 ## Add a SharePoint list to an existing app
 1. In PowerApps Studio, open the app that you want to update.
+
 2. On the **View** tab of the ribbon, click or tap **Data sources**
+
 3. In the right-hand pane, click or tap **Add data source**.
 
     ![Add data source](./media/connection-sharepoint-online/add-data-source.png)
+
 4. Click or tap **New connection**, click or tap **SharePoint**, and then click or tap **Connect**.
 
     ![Add SharePoint connection](./media/connection-sharepoint-online/add-sharepoint.png)
+
 5. Specify the type of SharePoint site to which you want to connect:
 
     ![Specify type of connection](./media/connection-sharepoint-online/choose-type.png)
 
    * Click or tap **Connect directly (cloud services)** to connect to SharePoint Online.
+
    * Click or tap **Connect using on-premises data gateway** to connect to an on-premises SharePoint site.
 
        Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
