@@ -93,13 +93,11 @@ The **SharePointIntegration** control has the following properties:
 
 **SelectedListItemID** - Item ID for the selected item in a SharePoint list.
 
-**Data Source** - The list that contains the record that the form will show, edit, or create.
-
-* If you change this property, the **Selected** and **SelectedItemID** properties may stop working.
+**Data Source** - The list that contains the record that the form will show, edit, or create. Note that if you change this property, the **Selected** and **SelectedItemID** properties may stop working.
 
 ## Customize the default form
 
-Now that you have a good understanding of the default generated form and the **SharePointIntegration** control, you can change the formulas to customize the forms further. Here are a few tips on how to customize the forms:
+Now that you have a better understanding of the default generated form and the **SharePointIntegration** control, you can change the formulas to customize the forms further. Here are some things to keep in mind when you customize forms:
 
 * To create separate custom experiences for creating, showing, or editing an item, set the **OnNew**, **OnView**, or **OnEdit** formulas of the **SharePointIntegration** control to set variables or navigate to different screens.
 
