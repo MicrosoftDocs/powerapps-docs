@@ -122,7 +122,7 @@ To show data from any of these types of columns in a gallery, use the formula ba
 
     You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (with the trailing period).
 
-    **Note: For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
+    **Note:** For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
 
 * For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
 
