@@ -42,6 +42,12 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
+**FalseFill** – The toggle fill color when the toggle is off.
+
+**FalseHoverFill** – The toggle hover fill color when toggle is off.
+
+**FalseText** – The text shown when the toggle is off.
+
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
@@ -64,9 +70,19 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
+**ShowLabel** – Whether a text label is shown beside the toggle control.
+
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
+**TextPosition** – Whether the label is to the left or the right of the toggle control.
+
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+
+**TrueFill** – Toggle fill color when the toggle is on.
+
+**TrueHoverFill** – Toggle hover fill color when the toggle is on.
+
+**TrueText** – Text shown when the toggle is on.
 
 **ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
@@ -85,14 +101,13 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 ## Example
 1. Add a toggle, and name it **MemberDiscount**.
-   
+
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Add a label, and set its **[Text](properties-core.md)** property to this formula:
    <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
-   
+
     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, and change the value of **MemberDiscount**.
-   
+
     The label shows a different price, depending on whether **MemberDiscount** is on or off.
 4. To return to the default workspace, press Esc.
-

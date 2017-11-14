@@ -32,27 +32,31 @@
     href: open-and-run-a-sample-app.md
   - name: Use a template
     href: get-started-test-drive.md
-- name: Create an app from SharePoint
+- name: Start with a SharePoint list
   items:
-  - name: Start from SharePoint
+  - name: Create an app from SharePoint
     href: generate-app-from-sharepoint-list-interface.md
-  - name: Start from PowerApps
+  - name: Create an app from PowerApps
     href: app-from-sharepoint.md
+  - name: Customize a list form with PowerApps
+    href: customize-list-form.md
+  - name: Understand SharePoint forms integration
+    href: sharepoint-form-integration.md
   - name: Create a connection
     href: connect-to-sharepoint.md
-  - name: Customize a layout
+  - name: Customize a gallery layout
     href: customize-layout-sharepoint.md
-  - name: Customize forms
+  - name: Customize a PowerApps form
     href: customize-forms-sharepoint.md
   - name: Customize a card
     href: customize-card.md
-  - name: Add a lookup field
+  - name: Connect lists using lookups
     href: sharepoint-lookup-fields.md
-- name: Create an app from another data source
+- name: Start with another data source
   items:
-  - name: From an entity
+  - name: Create an app from an entity
     href: data-platform-create-app.md
-  - name: From Excel data
+  - name: Create an app from Excel data
     href: get-started-create-from-data.md
   - name: Get started with formulas
     href: working-with-formulas.md
