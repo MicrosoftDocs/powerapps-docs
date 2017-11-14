@@ -30,35 +30,21 @@ You can add data from a custom list but not a library. In addition, not all type
 | --- | --- | --- |
 | Single line of text |Yes |View text |
 | Multiple lines of text |Yes |View text |
-| Choice |Yes (single values only) |View lookup |
+| Choice |Yes |View lookup<br>Edit lookup<br>View multiselect<br>Edit multiselect |
 | Number |Yes |View percentage<br>View rating<br>View text |
 | Currency |Yes |View percentage<br>View rating<br>View text |
 | Date and Time |Yes |View text |
-| Lookup |Yes (single values only) |View lookup<br>Edit lookup |
+| Lookup |Yes |View lookup<br>Edit lookup<br>View multiselect<br>Edit multiselect |
 | Boolean (Yes/No) |Yes |View text<br>View toggle |
-| Person or Group |Yes (single values only) |View lookup<br>Edit lookup |
+| Person or Group |Yes |View lookup<br>Edit lookup<br>View multiselect<br>Edit multiselect |
 | Hyperlink |Yes |View URL<br>View text |
 | Picture |Yes (read-only) |View image<br>View text |
+| Attachment |Yes (read-only) |View Attachments|
 | Calculated |Yes (read-only) | |
 | Task Outcome |No | |
 | External data |No | |
 | Managed Metadata |Yes (read-only) | |
 | Rating |No | |
-
-Moreover, PowerApps doesn't support columns that support multiple values or selections.
-
-* For Lookup columns, the **Allow multiple values** checkbox must be cleared.
-  
-    ![Check box to allow multiple values in a Lookup column](./media/connection-sharepoint-online/lookup.png)
-* For Managed Metadata columns, the **Allow multiple values** checkbox must be cleared.
-  
-    ![Check box to allow multiple values in a Managed Metadata column](./media/connection-sharepoint-online/metadata.png)
-* For Person or Group columns, the **No** option under **Allow multiple selections** must be selected.
-  
-    ![Options to allow multiple selections for a Person or Group column](./media/connection-sharepoint-online/person-group.png)
-* For Choice columns, the **Drop-Down Menu** or **Radio Buttons** option under **Display choices using** must be selected.
-  
-    ![Options to display choices for a Choice column](./media/connection-sharepoint-online/choice.png)
 
 Columns that contain spaces can by read by PowerApps, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
