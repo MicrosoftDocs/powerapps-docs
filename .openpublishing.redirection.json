@@ -1,0 +1,15 @@
+{
+    "redirections": [
+        {
+        "source_path": "powerapps-docs/cloud-storage-blob-connections.md",
+        "redirect_url": "/powerapps/connections/cloud-storage-blob-connections",
+        "redirect_document_id": false 
+        },
+        {
+        "source_path": "powerapps-docs/connection-azure-sqldatabase.md",
+        "redirect_url": "/powerapps/connections/connection-azure-sqldatabase",
+        "redirect_document_id": false 
+        }
+    ]
+}
+
