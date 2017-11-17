@@ -44,9 +44,16 @@ To return to your SharePoint list at any time, click or tap **Back to SharePoint
 
 ## Customize the list form
 
-PowerApps offers many ways to customize your form. For example, you can change the layout, format the text, add images or charts, add custom data validation, add rules, or create additional views.
+PowerApps offers many ways to customize your form. Here are some examples:
 
-Let's say your form has an **AccountID** field that you don't want visible.
+* [Change the size and orientation](set-aspect-ratio-portrait-landscape.md)
+* [Format the text](controls/properties-text.md)
+* [Add images](add-images-pictures-audio-video.md) or [charts](use-line-pie-bar-chart.md)
+* [Add custom data validation](functions/function-validate.md)
+* [Add rules](working-with-rules.md)
+* [Create additional views](https://powerapps.microsoft.com/blog/separate-custom-forms/)
+
+To illustrate, let's say your form has an **AccountID** field that you don't want visible.
 
 ![Select AccountID field](./media/customize-list-form/select-card.png)
 
@@ -54,7 +61,7 @@ Hiding the field is easy in PowerApps - in the form customization options, just 
 
 ![Clear AccountID checkbox](./media/customize-list-form/checkbox.png)
 
-For step-by-step instructions on how to hide fields and make other form changes, see [Customize forms in PowerApps](customize-forms-sharepoint.md).
+For step-by-step instructions on how to hide fields and make other form changes, see [Customize forms in PowerApps](customize-forms-sharepoint.md). For a complete list of resources, see [Microsoft PowerApps docs](https://docs.microsoft.com/powerapps/).
 
 ## Save and publish the list form back to SharePoint
 
