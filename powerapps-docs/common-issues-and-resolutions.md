@@ -48,7 +48,7 @@ ms.author: sharik
 	Solution: Before you copy the control, confirm that the **Filter** function doesn’t reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control.
 1. **Camera controls in PowerApps Studio for Windows**
 
-    Due to a Windows update, PowerApps Studio for Windows may crash if you add a camera control or open an app that uses a camera control. To avoid this problem, use [PowerApps Studio for web](create-app-browser.md) when adding or using a camera control.
+    PowerApps Studio for Windows may crash if you add a camera control or open an app that uses a camera control. To avoid this problem, use [PowerApps Studio for web](create-app-browser.md) when adding or using a camera control.
 2. **Release 2.0.700 on Android devices**
 
     If you install release 2.0.700 on an Android device and then can't open apps (or an app stops responding), uninstall PowerApps, restart the device, and then reinstall PowerApps.
@@ -127,6 +127,7 @@ ms.author: sharik
 
      If your mobile device is low on memory, the camera is temporarily disabled to avoid crashing the device.
 18. **Office 365 Video connector isn't supported**.
+
 19. **Card gallery is deprecated**.
 
      Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
