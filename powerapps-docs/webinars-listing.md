@@ -22,25 +22,6 @@ ms.author: v-thuch
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Getting Started | Exploring Office Graph Templates**
-<br>by Emma Cooper
-<br>*November 9th, 10:00AM PST, 1:00PM EST*
-
-Add the power of Office Graph within your apps using new PowerApps templates! In this webinar Emma Cooper, Program Manager on the PowerApps team, will be demonstrating our newest PowerApps templates! Discover extended opportunities for building rich apps by leveraging Office Graph connections! You'll see how to use new connector syntax to bring Delve-like content and contacts to your consumers easily, either by starting with one of the new templates, and/or by extending a template using best practices and tips from Emma. Don't miss this one!
-
-[Click here to watch on November 9th](https://www.youtube.com/watch?v=SwLNN3tPVNs)
-
-**Getting Started | Using Connector Documentation for Data Mash-ups by Audrie Gordon**
-<br>by Audrie Gordon
-<br>*November 14th, 10:00AM PST, 1:00PM EST*
-
-In this webinar we will focus on how to work with the many connectors we offer for the Business Application Platform. We're going to demonstrate how to use connector documentation (link below) to determine feasibility for data mash-ups in your business! This would be a great opportunity for you to bring your connector syntax questions too! We'll be responding live in the chat!
-
-Link to Connector Documentation:
-https://docs.microsoft.com/connectors/
-
-[Click here to watch on November 14th](https://www.youtube.com/watch?v=UJ8DEPhFCaM)
-
 **Getting Engaged | PowerApps Community Opportunities & Rewards by Mackenzie & Audrie**
 <br>by Mackenzie Lyng & Audrie Gordon
 <br>*November 28th, 10:00AM PST, 1:00PM EST*
@@ -117,6 +98,14 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Introducing List Forms in SharePoint Online**
 <br>by Ankit Saraf
 [Watch now](https://www.youtube.com/watch?v=3dCwg6wtViI)
+
+**Exploring Office Graph Templates**
+<br>by Emma Cooper
+[Watch now](https://www.youtube.com/watch?v=SwLNN3tPVNs)
+
+**Using Connector Documentation for Data Mash-ups**
+<br>by Audrie Gordon
+[Watch Now](https://www.youtube.com/watch?v=UJ8DEPhFCaM)
 
 ### App Designer Topics ###
 **Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
