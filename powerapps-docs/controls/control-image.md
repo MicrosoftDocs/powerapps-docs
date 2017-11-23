@@ -28,6 +28,8 @@ If you add one or more **Image** controls to your app, you can show individual i
 **[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
 ## Additional properties
+**ApplyEXIFOrientation** – Whether to automatically apply the orientation specified in the EXIF data embedded with the image.
+
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -48,6 +50,10 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
+**FlipHorizontal** – Whether to flip the image horizontally before displaying it.
+
+**FlipVertical** – Whether to flip the image vertically before displaying it.
+
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
@@ -55,6 +61,8 @@ If you add one or more **Image** controls to your app, you can show individual i
 **[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
 **[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+
+**ImageRotation** – How to rotate the image before displaying it.  Values can be none, clockwise (CW) 90 degrees, counter-clockwise (CCW) 90 degrees and clockwise 180 degrees.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
@@ -102,21 +110,20 @@ If you add one or more **Image** controls to your app, you can show individual i
 1. On the **Content** tab, click or tap **Media**, and then click or tap **Browse**.
 2. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
 3. Add an **Image** control, and set its **[Items](properties-core.md)** property to the name of the file that you added.
-   
+
     Don't know how to [add and configure a control](../add-configure-controls.md)?
-   
+
     The **Image** control shows the image that you specified.
 
 ### Show a set of images from a data source
 1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
 2. In PowerApps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
-   
+
     If **Add data source** doesn't appear in the right-hand pane, click or tap a screen in the left navigation bar.
 3. Click or tap **Add static data to your app**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
 4. Select the **Flooring Estimates** check box, and then click or tap **Connect**.
 5. Add a **Gallery** control with images, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
-   
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
-   
-    The **Gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.
 
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
+
+    The **Gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.
