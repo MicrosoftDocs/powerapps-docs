@@ -506,9 +506,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### Y
 **[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
 
-**[YAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
+**[YAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Line chart](controls/control-column-line-chart.md)** control.
 
-**[YAxisMin](controls/control-column-line-chart.md)** – The minimum value of the y-axis for a line chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
+**[YAxisMin](controls/control-column-line-chart.md)** – The minimum value of the y-axis for a line chart.  Applies to the **[Line chart](controls/control-column-line-chart.md)** control.
 
 **[YLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels next to the y-axis of a line or column chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
