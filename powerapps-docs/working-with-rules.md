@@ -43,13 +43,10 @@ A condition is an expression that evaluates to true or false, such as whether a 
 
     ![Add condition](./media/working-with-rules/rule-conditions.png)
 
-1. Finish the expression to define when the rule applies.
+1. Update the expression to define when the rule applies.
 
-    For this topic, use this expression:
-    <br>**Value(Slider1.Value) > 70**
-
-    > [!NOTE] 
-    > As of this writing, you must specify the property of the control used in the comparison. In future releases, PowerApps might infer common properties of the control (such as **Text** or **Value**).
+    For this topic, change 0 to 70 to get this expression:
+    <br>**Slider1.Value > 70**
 
 ## Add an action
 Actions define what happens when the rule is applied. PowerApps can create actions automatically based on changes you make to controls.
