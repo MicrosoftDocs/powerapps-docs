@@ -68,7 +68,7 @@ For more information, check out the following topics:
 If you have a question about PowerApps, there are several ways to get help:
 
 * Explore the step-by-step and reference topics in the navigation pane on the left.
-* Work through the self-paced [Guided Learning course](https://docs.microsoft.com/powerapps/guided-learning/).
+* Work through the self-paced [Guided Learning courses](https://docs.microsoft.com/powerapps/guided-learning/).
 * Read and post in the [PowerApps Community](https://aka.ms/powerapps-community). This is a place where anyone who uses PowerApps can post a question and others can answer. Before you post a question, search the community to see if your question has already been asked and answered.
 * Check out the [upcoming webinars](webinars-listing.md#upcoming-webinars), which can help you leverage the features and functions of PowerApps. You can also access [past webinars](webinars-listing.md#past-webinars) on demand.
 * Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a PowerApps administrator for your organization, you can also open a support ticket in the [admin portal](https://portal.office.com/Support/Support.aspx).
@@ -76,4 +76,4 @@ If you have a question about PowerApps, there are several ways to get help:
 In addition, we want your help to make PowerApps great!
 
 * To submit an idea for how we can make PowerApps better, go to [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas) and tell us about it.
-* To report an issue that you're having with PowerApps, go to the [PowerApps Forum](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas) and provide details so we can look into it.
+* To report an issue that you're having with PowerApps, go to the [PowerApps Forum](https://powerusers.microsoft.com/t5/General-Discussion/bd-p/PowerAppsForum1) and provide details so we can look into it.
