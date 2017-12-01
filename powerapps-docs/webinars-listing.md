@@ -22,14 +22,6 @@ ms.author: v-malyng
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Getting Started | New Office Graph Templates (Part 2) by Emma Cooper**
-<br>by Emma Cooper
-<br>*December 9th, 10:00AM PST, 1:00PM EST*
-
-Emma Cooper returns to share brand new office graph templates available in PowerApps. These templates are easy to use and will enable you to further leverage the power of Office Graph quickly and easily in your organization!
-
-[Click here to watch on December 9th](https://www.youtube.com/watch?v=9PopTeLdpmU)
-
 **Deep Dive | PowerApps Focus on the Lookup Function by Audrie Gordon**
 <br>by Audrie Gordon
 <br>*December 12th, 10:00AM PST, 1:00PM EST*
@@ -45,6 +37,14 @@ Audrie Gordon, Sr Program Manager of the PowerApps team, shows how to leverage t
 Audrie Gordon, Sr Program Manager of the PowerApps team, shows how to leverage PowerApps for creating calendar events! This is by popular demand, and will answer your questions regarding SharePoint and Outlook Calendar updates from an app.
 
 [Click here to watch on December 14th](https://www.youtube.com/watch?v=AOGGyoElGaQ)
+
+**Getting Started | New Office Graph Templates (Part 2) by Emma Cooper**
+<br>by Emma Cooper
+<br>*January 9th, 10:00AM PST, 1:00PM EST*
+
+Emma Cooper returns to share brand new office graph templates available in PowerApps. These templates are easy to use and will enable you to further leverage the power of Office Graph quickly and easily in your organization!
+
+[Click here to watch on January 9th](https://www.youtube.com/watch?v=9PopTeLdpmU)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
