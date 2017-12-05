@@ -102,5 +102,4 @@ By default, the **Rules** tab shows only the rules for the selected control and 
 ## Known limitations
 As of this writing:
 
-* You can't rename rules.
 * You can't specify the **ThisItem** property of a form or a gallery as part of a condition.
