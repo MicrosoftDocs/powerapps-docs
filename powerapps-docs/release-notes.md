@@ -22,7 +22,8 @@ ms.author: sharik
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 ## Dec. 8
-* [Condition templates](working-with-rules.md) for rules now infer common properties of a control (such as **Text** or **Value**).
+1. [Condition templates](working-with-rules.md) for rules infer common properties of a control (such as **Text** or **Value**).
+2. Stop displaying the [**Defining actions** confirmation dialog box](working-with-rules.md) when defining rule actions.
 
 ## Nov. 13
 1. Select multiple values for the same field in SharePoint lists.
