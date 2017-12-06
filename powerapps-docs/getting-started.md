@@ -48,6 +48,8 @@ If the default generated app doesn't meet your needs, you can customize it. For 
 
 For ideas on how to improve your app further, you can open a sample app to get a sense of what you can do with some creativity and a bit of experience. For more information, see [Use a sample app](open-and-run-a-sample-app.md).
 
+![Sample apps](./media/getting-started/sample-apps.png)
+
 ## Create an app from scratch
 After you've generated an app or two automatically and gained some experience with customization, you can create an app from scratch. By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
 
