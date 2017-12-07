@@ -14,12 +14,16 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 11/13/2017
+ms.date: 12/08/2017
 ms.author: sharik
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+## Dec. 8
+1. [Condition templates](working-with-rules.md) for rules infer common properties of a control (such as **Text** or **Value**).
+2. Stop displaying the [**Defining actions** confirmation dialog box](working-with-rules.md) when defining rule actions.
 
 ## Nov. 13
 1. Select multiple values for the same field in SharePoint lists.
@@ -60,20 +64,3 @@ For information about known limitations, see [Common issues and resolutions](com
 3. Reset an input control to its default value by using the **[Reset](functions/function-reset.md)** function.
 4. Create global variables by using the **[Set](functions/function-set.md)** function.
 5. Show, create, or edit a record [in the same form](functions/function-form.md).
-
-## June 13
-1. Save changes to a shared app, and then [publish them later](save-publish-app.md).
-2. Add prepopulated galleries that have rich layouts and that automatically show data from some of the most commonly used standard entities in the Common Data Service.
-3. Customize the columns in a **[Data table](controls/control-data-table.md)** control, and copy and paste that type of control.
-4. In [PowerApps Studio for web](create-app-browser.md), undo/redo changes, and create/edit flows.
-5. Specify a SharePoint list by name if isn't listed by default.
-6. Configure a form control by using an improved UI.
-7. Run a behavior formula when an app opens.
-
-## May 26
-1. Identify and select controls more easily by navigating a [cascading list of screens](add-configure-controls.md#find-and-select-a-screen-or-a-control).
-2. Easily [create forms with multiple columns](working-with-form-layout.md) using a new capability of the **Display form** and **Edit form** controls.
-3. Improvements to [data tables](controls/control-data-table.md), including support for static data sources, default fields, and column resizing for app users.
-4. [Format dates more easily](controls/control-date-picker.md), and [convert between local time and UTC](functions/function-dateadd-datediff.md).
-5. [Simultaneous edits](edit-app.md) that corrupt apps are prevented.
-6. Build skills in an [individual environment](dev-community-plan.md) (always free).
