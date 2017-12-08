@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 07/24/2017
+ms.date: 12/08/2017
 ms.author: mblythe
 
 ---
@@ -63,25 +63,23 @@ The API is available as a free preview, and it is associated with an Azure subsc
    
     ![Azure menu](./media/cognitive-services-api/azure-menu-keys.png)
 
-8. Copy one of the keys on the right of the screen. We will use this key later when we create a connection to the API.
+8. Copy one of the keys on the right of the screen. You use this key later when you create a connection to the API.
    
     ![API keys](./media/cognitive-services-api/azure-keys.png)
 
 ## Build the app
-Now that we have the Text Analytics API up and running, we can connect to it from PowerApps, and build an app that calls the API. This is a single screen app that provides functionality similar to the demo on the Text Analytics API page. Let's get started on building this!
+Now that you have the Text Analytics API up and running, you connect to it from PowerApps, and build an app that calls the API. This is a single screen app that provides functionality similar to the demo on the Text Analytics API page. Let's get started on building this!
 
 ### Create the app and add a connection
-First, we'll create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in PowerApps](add-manage-connections.md).
+First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in PowerApps](add-manage-connections.md).
 
-1. In PowerApps Studio, click or tap **File** > **New**, then under **Blank app**, click or tap **Phone layout**.
-   
-    ![Blank app - phone layout](./media/cognitive-services-api/blank-app.png)
+1. In [web.powerapps.com](https://web.powerapps.com), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
 
-2. In the middle pane, click or tap **connect to data**.
+    ![Start from blank](./media/cognitive-services-api/start-from-blank.png)
 
-3. In the right pane, click or tap **New connection** > **Text Analytics**.
-   
-    ![PowerApps data sources](./media/cognitive-services-api/data-sources.png)
+2. In the middle pane of the PowerApps Studio, choose **connect to data**.
+
+3. On the **Data** panel, click or tap **New connection** > **Text Analytics**.
 
 4. Copy your key into **Account Key**, then click or tap **Create**.
    
@@ -100,34 +98,36 @@ Follow the steps below to create this screen. If a control name is specified, th
 
 3. Add a **Label** control for the introductory text.
 
-4. Add a **Text input** control, so we can enter text to analyze. Name the control **tiTextToAnalyze**. The app should now look like the following image.
+4. Add a **Text input** control, so you can enter text to analyze. Name the control **tiTextToAnalyze**. The app should now look like the following image.
    
     ![App with title, subtitle, and text input](./media/cognitive-services-api/partial-app-step1.png)
 
-5. Add three **Check box** controls, so we can choose which API operations to perform. Name the controls **chkLanguage**, **chkPhrases**, and **chkSentiment**.
+5. Add three **Check box** controls, so you can choose which API operations to perform. Name the controls **chkLanguage**, **chkPhrases**, and **chkSentiment**.
 
-6. Add a button, so we can call the API after selecting which operations to perform. The app should now look like the following image.
+6. Add a button, so you can call the API after selecting which operations to perform. The app should now look like the following image.
    
     ![App with check boxes and button](./media/cognitive-services-api/partial-app-step2.png)
 
-7. Add three **Label** controls. The first two will hold results from the language and sentiment API calls; the third is just an introduction for the gallery at the bottom of the screen.
+7. Add three **Label** controls. The first two hold results from the language and sentiment API calls; the third is just an introduction for the gallery at the bottom of the screen.
 
-8. Add a **Blank vertical gallery** control, then add a **Label** control to the gallery. The gallery will hold results from the key phrases API call. The app should now look like the following image.
+8. Add a **Blank vertical gallery** control, then add a **Label** control to the gallery. The gallery holds results from the key phrases API call. The app should now look like the following image.
    
     ![App with labels and gallery](./media/cognitive-services-api/partial-app-step3.png)
 
-9. In the left pane, select **Screen1** > ellipsis (**. . .**) > **Delete** (we don't need this screen for our app).
+9. In the left pane, select **Screen1** > ellipsis (**. . .**) > **Delete** (you don't need this screen for the app).
 
-We're keeping this app simple to focus on calling the Text Analytics API, but you could add things, like logic to show and hide controls based on the check boxes selected, error handling if the user doesn't select any options, and so on.
+We're keeping this app simple to focus on calling the Text Analytics API, but you could add things - like logic to show and hide controls based on the check boxes selected, error handling if the user doesn't select any options, and so on.
 
 ### Add logic to make the right API calls
-OK, we have a nice-looking app, but it doesn't do anything yet. We'll fix that in a moment. But before we dive into the details, let's understand the pattern that the app follows:
+OK, you have a nice-looking app, but it doesn't do anything yet. You'll fix that in a moment. But before we dive into the details, let's understand the pattern that the app follows:
 
-1. The app makes specific API calls based on the check boxes selected in the app. When we click or tap **Analyze text**, the app makes 1, 2, or 3 API calls.
-2. Data that the API returns is stored in three different [collections](working-with-variables.md#create-a-collection): **languageCollect**, **sentimentCollect**, and **phrasesCollect**.
-3. The **Text** property for two of the labels, and the **Items** property for the gallery, are updated based on what's in the three collections.
+1. The app makes specific API calls based on the check boxes selected in the app. When you click or tap **Analyze text**, the app makes 1, 2, or 3 API calls.
 
-With that background, let's add the formula for the **OnSelect** property of our button. This is where all the magic happens.
+2. The app stores data that the API returns in three different [collections](working-with-variables.md#create-a-collection): **languageCollect**, **sentimentCollect**, and **phrasesCollect**.
+
+3. The app updates the **Text** property for two of the labels, and the **Items** property for the gallery, based on what's in the three collections.
+
+With that background, let's add the formula for the **OnSelect** property of the button. This is where all the magic happens.
 
 ```
 If(chkLanguage.Value=true,
@@ -155,39 +155,42 @@ There's a bit going on here, so let's break it down:
 
 * Within each call, specify the appropriate parameters:
 
-  * In all three calls, we specify **tiTextToAnalyze.Text** as the input text.
+  * In all three calls, you specify **tiTextToAnalyze.Text** as the input text.
 
-  * In **DetectLanguage()**, we hard-code **numberOfLanguagesToDetect** as 1, but we could pass this parameter based on some logic in the app.
+  * In **DetectLanguage()**, **numberOfLanguagesToDetect** is hard-coded as 1, but you could pass this parameter based on some logic in the app.
 
-  * In **KeyPhrases()** and **DetectSentiment()**, we hard-code language as "en", but we could pass this parameter based on some logic in the app. For example, we could detect the language first, then set this parameter based on what **DetectLanguage()** returns.
+  * In **KeyPhrases()** and **DetectSentiment()**,**language** is hard-coded as "en", but you could pass this parameter based on some logic in the app. For example, you could detect the language first, then set this parameter based on what **DetectLanguage()** returns.
 
 * For each call that is made, add the results to the appropriate collection:
 
-  * For **languageCollect**, we add the **name** of the language that was identified in the text.
+    * For **languageCollect**, add the **name** of the language that was identified in the text.
 
-  * For **phrasesCollect**, we add the **keyPhrases** that were identified in the text.
+    * For **phrasesCollect**, add the **keyPhrases** that were identified in the text.
 
-  * For **sentimentCollect**, we add the sentiment **score** for the text, which is a value of 0-1, with 1 being 100% positive.
+    * For **sentimentCollect**, add the sentiment **score** for the text, which is a value of 0-1, with 1 being 100% positive.
 
 ### Display the results of the API calls
 To display the results of the API calls, reference the appropriate collection in each control:
 
 1. Set the **Text** property of the language label to: `"The language detected is " & First(languageCollect).name`.
    
-    The **First()** function returns the first (and in this case only) record in **languageCollect**, and we display the **name** (the only field) associated with that record.
+    The **First()** function returns the first (and in this case only) record in **languageCollect**, and the app displays the **name** (the only field) associated with that record.
+
 2. Set the **Text** property of the sentiment label to: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value, 3)\*100 & "% positive."`.
    
     This formula also uses the **First()** function, gets the **Value** (0-1) from the first and only record, then formats it as a percentage.
+
 3. Set the **Items** property of the key phrases gallery to: `phrasesCollect`.
    
-    We're now working with a gallery so we don't need the **First()** function to extract a single value. We reference the collection, and the gallery displays the key phrases as a list.
+    You're now working with a gallery so you don't need the **First()** function to extract a single value. You reference the collection, and the gallery displays the key phrases as a list.
 
 ## Run the app
-Now that the app is finished, let's run it to see how it works. In the following image, all three options are selected, and the text is the same as the default text on the Text Analytics API page.
+
+Now that the app is finished, run it to see how it works: click or tap the run button in the upper right corner ![Run the app](./media/cognitive-services-api/icon-run-app.png). In the following image, all three options are selected, and the text is the same as the default text on the Text Analytics API page.
 
 ![Finished app with data](./media/cognitive-services-api/finished-app.png)
 
-If you compare the output of this app to the Text Analytics API page at the beginning of this article, you see that we get the same results.
+If you compare the output of this app to the Text Analytics API page at the beginning of this article, you see that the results are the same.
 
 We hope you now understand a little more about the Text Analytics API, and you've enjoyed seeing how to incorporate it into an app. Let us know if there are other Cognitive Services (or other services in general) that you would like us to focus on in our articles. As always, please leave feedback and any questions in the comments.
 
