@@ -9,8 +9,8 @@ The easiest way to get started with PowerApps is to run the samples, play around
 ## What's Next?
 Congratulations! You have finished the first section of PowerApps Guided Learning. Regardless of how much experience you began with, we hope you now have a very clear picture of what PowerApps is and how you can start creating apps. We've included some useful resources and downloads below, but you should definitely take a look at more of Guided Learning. At this point, you can choose where to go next:
 
-* [Create and customize an app from a SharePoint list](learning-spo-app-generate.md)
-* [Create and customize an app from the Common Data Service](learning-case-app-generate.md) 
+* [Create and customize an app from a SharePoint list](create-app-sharepoint#step-1)
+* [Create and customize an app from the Common Data Service](create-app-cds#step-1) 
 
 Both sections show how to generate and customize an app. The SharePoint section has a bit more information on the generated app, and the Common Data Service section includes more complex customizations. Of course you can go through both sections, just pick a place to start. 
 
