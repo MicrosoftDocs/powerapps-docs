@@ -48,8 +48,8 @@ Before moving on to the next section, we want to loop back to SharePoint and sho
 
 Now that you've gone through the SharePoint app section, you have a choice about where to go next:
 
-* [Manage apps](manage-apps#step-1)
-* [Create and customize an app from the Common Data Service](create-app-cds#step-1)
+* [Manage apps](../manage-apps#step-1)
+* [Create and customize an app from the Common Data Service](../create-app-cds#step-1)
 
 The management section shows you how to share and version apps, and introduces environments, which are containers for apps, data, and other resources. We recommend that everyone go through the management section at some point, but the Common Data Service section has some great information too, including more app customizations. 
 
