@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 11/13/2017
+ms.date: 01/02/2017
 ms.author: sharik
 
 ---
@@ -161,7 +161,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 **A:** No. This functionality is not currently supported.
 
-### Administering your custom list form
+### Administering custom list forms
 
 **Q:** How do I share my custom list form with others?
 
@@ -170,6 +170,10 @@ For step-by-step instructions on how to hide fields and make other form changes,
 **Q:** Who can customize list forms?
 
 **A:** Anyone with SharePoint permissions to manage, design, or edit the associated list.
+
+**Q:** Do I need to have a PowerApps license to create or use custom list forms?
+
+**A:** If you have any [Office 365 plan that includes PowerApps](pricing-billing-skus.md#licenses), you can create or use custom list forms.
 
 **Q:** What happens when guest users access a list that has a custom form?
 
