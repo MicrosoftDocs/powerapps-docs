@@ -171,7 +171,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 **A:** Anyone with SharePoint permissions to manage, design, or edit the associated list.
 
-**Q:** Do I need to have a PowerApps license to create or use custom list forms?
+**Q:** Do I need a PowerApps license to create or use custom list forms?
 
 **A:** If you have any [Office 365 plan that includes PowerApps](pricing-billing-skus.md#licenses), you can create or use custom list forms.
 
