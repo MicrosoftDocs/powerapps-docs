@@ -28,14 +28,17 @@ Now that the SharePoint lists are in place, we can build and customize our first
 > The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-requests-app.msapp.
 
 ## Step 1: Generate an app from a SharePoint list
+
 1. In the **Project Requests** list you created, click or tap **PowerApps**, then **Create an app**.
    
     ![Create an app](./media/sharepoint-scenario-generate-app/02-01-01-create-app.png)
+
 2. Give the app a name, like "Project Requests app", then click or tap **Create**. When the app is ready, it opens in PowerApps Studio for web.
    
     ![Specify a name for the app](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 
 ## Step 2: Review the app in PowerApps Studio
+
 1. In PowerApps Studio, the left navigation bar by default shows a hierarchical view of the screens and controls in the app.
    
     ![PowerApps Studio with hierarchical view](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
@@ -46,36 +49,41 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
 3. Click or tap each screen to view it in the middle pane. There are three screens:
    
-    1. The **browse** screen, where you browse, sort, and filter the data pulled in from the list.
+    (a). The **browse** screen, where you browse, sort, and filter the data pulled in from the list.
     
-    2. The **details** screen, where you view more detail about an item.
+    (b). The **details** screen, where you view more detail about an item.
     
-    3. The **edit/create** screen, where you edit an existing item or create a new one.
+    (c). The **edit/create** screen, where you edit an existing item or create a new one.
       
       ![PowerApps Studio with thumbnail view](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
 
 ## Step 3: Customize the app's browse screen
+
 1. Click or tap the browse screen.
    
     This screen has a *layout* that contains a *gallery* to show list items, as well as other *controls*, like a search bar and sort button.
+
 2. Select the **BrowseGallery1** gallery by clicking or tapping any record except the first one.
    
     ![Browse gallery](./media/sharepoint-scenario-generate-app/02-03-01-browse-gallery.png)
-3. In the right pane, update the fields to match the following list:
+
+3. In the right pane, under **Properties**, click or tap **Project Requests**. 
+
+4. Update the fields to match the following list:
    
    * **RequestDate**
 
-   * **Description**
+   * **Requestor**
 
    * **Title**
 
-   * **Requestor**
-
      ![Gallery fields](./media/sharepoint-scenario-generate-app/02-03-02-gallery-fields.png)
-4. With **BrowseGallery1** still selected, select the **Items** property.
+
+5. With **BrowseGallery1** still selected, select the **Items** property.
    
     ![Items property](./media/sharepoint-scenario-generate-app/02-03-03-items.png)
-5. Change the formula to **SortByColumns(Filter('Project Requests', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
+
+6. Change the formula to **SortByColumns(Filter('Project Requests', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
    
     ![Formula bar](./media/sharepoint-scenario-generate-app/02-03-04-formula.png)
    
@@ -83,41 +91,40 @@ Now that the SharePoint lists are in place, we can build and customize our first
 
 6. Click or tap **File**, then **Save**. Click or tap ![Back to app icon](./media/sharepoint-scenario-generate-app/icon-back-to-app.png) to go back to the app.
 
-## Step 4: Customize the app's details screen and edit screen
+## Step 4: Review the app's details screen and edit screen
 1. Click or tap the details screen.
    
     This screen has a different layout that contains a *display form* to show the details for an item selected in the gallery. It has controls to edit and delete items, and to go back to the browse screen.
-2. Select the **DetailForm1** display form.
    
     ![Details display form](./media/sharepoint-scenario-generate-app/02-04-01-details.png)
-3. In the right pane, drag the **Title** field to the top.
-   
-    ![Title field](./media/sharepoint-scenario-generate-app/02-04-02-title-field.png)
+
 4. Click or tap the edit screen.
    
     This screen contains an *edit form* to edit the selected item, or create a new one (if you come here directly from the browse screen). It has controls to save or discard changes.
-5. Select the **EditForm1** edit form.
-   
+
     ![Edit form](./media/sharepoint-scenario-generate-app/02-04-03-edit.png)
-6. As above, drag the **Title** field to the top.
-   
-    ![Title field](./media/sharepoint-scenario-generate-app/02-04-02-title-field.png)
 
 ## Step 5: Run the app from the list
+
 1. In the **Project Requests** list, click or tap **All Items**, then **Project Requests app**.
    
     ![View Project Requests app](./media/sharepoint-scenario-generate-app/02-05-01-view-app.png)
 2. Click **Open**, which opens the app in a new browser tab.
    
     ![Open Project Requests app](./media/sharepoint-scenario-generate-app/02-05-02-open-app.png)
+
 3. In the app, click or tap ![Go to details icon](./media/sharepoint-scenario-generate-app/icon-details-arrow.png) for the first item in the browse gallery.
    
     ![First gallery item](./media/sharepoint-scenario-generate-app/02-05-04-first-item.png)
+
 4. Click or tap ![Pencil edit icon](./media/sharepoint-scenario-generate-app/icon-pencil.png) to edit the item.
+
 5. Update the **Description** field – change the last word from "group" to "team," then click or tap ![Check mark icon](./media/sharepoint-scenario-generate-app/icon-check-mark.png)
    
    ![Update Description field](./media/sharepoint-scenario-generate-app/02-05-07-edit.png)
+
 6. Close the browser tab.
+
 7. Go back to the **Project Requests** list, click or tap **Project Requests app**, then **All Items**.
    
    ![View all items](./media/sharepoint-scenario-generate-app/02-05-08-view-all.png)

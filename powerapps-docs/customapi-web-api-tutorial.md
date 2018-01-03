@@ -116,17 +116,17 @@ You should now be able to use AAD to authenticate your web application.
     // The rest of the OpenAPI document follows...
     ```
 
-1. Browse to [PowerApps](https://web.powerapps.com), and add a custom connector as described in [Register and use custom connectors in PowerApps](register-custom-api.md).
+2. Browse to [PowerApps](https://web.powerapps.com), and add a custom connector as described in [Register and use custom connectors in PowerApps](register-custom-api.md).
 
-2. Once you have uploaded your OpenAPI file, the wizard auto-detects that you are using AAD authentication for your Web API.
+3. Once you have uploaded your OpenAPI file, the wizard auto-detects that you are using AAD authentication for your Web API.
 
-3. Configure the AAD authentication for the custom connector.  
+4. Configure the AAD authentication for the custom connector.  
    
    * **Client ID**: *Client ID of webAPI-CustomAPI*
    * **Secret**: *Client key of webAPI-CustomAPI*
    * **Login URL**: `https://login.windows.net`
    * **ResourceUri**: *Client ID of webAPI*
-4. Click **Create** and creating a connection to the custom connector.
+5. Click **Create** and creating a connection to the custom connector.
 
 ## Next Steps
 Walk through the [Azure Resource Manager custom connector tutorial](customapi-azure-resource-manager-tutorial.md).
