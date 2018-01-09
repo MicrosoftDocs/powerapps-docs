@@ -1,6 +1,6 @@
 ---
 title: What's new in PowerApps | Microsoft Docs
-description: Updates for each release of PowerApps, organized by build number
+description: Updates to PowerApps, organized by release date
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -14,12 +14,15 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/08/2017
+ms.date: 01/08/2018
 ms.author: sharik
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+## Jan. 5
+* Act on data right from your Power BI report or dashboard by integrating a [PowerApps custom visual (preview release)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), which pulls contextual data from your Power BI report.
 
 ## Dec. 8
 1. [Condition templates](working-with-rules.md) for rules infer common properties of a control (such as **Text** or **Value**).
