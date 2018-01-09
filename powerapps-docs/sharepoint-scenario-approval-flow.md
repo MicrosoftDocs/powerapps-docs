@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 06/12/2017
+ms.date: 01/09/18
 ms.author: mblythe
 
 ---
@@ -121,7 +121,7 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
 8. In the **Approved** box, enter "No". This part of the flow should now look like the following image.
    
     ![List update](./media/sharepoint-scenario-approval-flow/03-01-08-no-update-complete.png)
-9. At the top right of the screen, click or tap **Create flow**, then **Done**.
+9. At the top right of the screen, click or tap **Create flow**.
    
     ![Done button](./media/sharepoint-scenario-approval-flow/03-01-15a-done-button.png)
    
@@ -129,23 +129,27 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
    
     ![Completed flow](./media/sharepoint-scenario-approval-flow/03-01-16-flow-complete.png)
 
+10. At the top right of the screen, click or tap **Done**.
+   
+    ![Done button](./media/sharepoint-scenario-approval-flow/03-01-15a-done-button.png)
+
 ## Step 4: Run the approval flow
 1. In the **Project Requests** list, click **Quick Edit** and add an item like the following:
    
    * **Title** = "New monitor for Megan"
 
-   * **Approved** = "Pending"
-
    * **Description** = "Megan needs a 24" monitor"
-
-   * **EstimatedDays** = "1"
 
    * **ProjectType** = "New hardware"
 
    * **RequestDate** = "02/03/2017"
 
    * **Requestor** = "Megan Bowen"
-     
+
+   * **EstimatedDays** = "1"
+
+   * **Approved** = "Pending"
+
      ![Item added to list](./media/sharepoint-scenario-approval-flow/03-02-01-list-add.png)
 2. Click **Done** at the top of the page when you're finished.
    
