@@ -150,29 +150,31 @@
     href: data-platform-interactive-excel.md
   - name: Samples and resources
     href: samples-resources.md
-- name: Integration scenarios
+- name: Integrate with other technologies
   items:
-  - name: Integrate with SharePoint Online (tutorial series)
-    href: sharepoint-scenario-intro.md
-  - name: Set up SharePoint Online lists
-    href: sharepoint-scenario-setup.md
-  - name: Generate an app
-    href: sharepoint-scenario-generate-app.md
-  - name: Create a flow for approvals
-    href: sharepoint-scenario-approval-flow.md
-  - name: Create an app from scratch
-    href: sharepoint-scenario-build-app.md
-  - name: Create a Power BI report
-    href: sharepoint-scenario-build-report.md
-  - name: Publish the Power BI report
-    href: sharepoint-scenario-publish-report.md
-  - name: Embed the Power BI report
-    href: sharepoint-scenario-embed-report.md
-  - name: Create a flow for alerts
-    href: sharepoint-scenario-alerts-flow.md
-  - name: Walk through the completed scenario
-    href: sharepoint-scenario-summary.md
-  - name: Integrate Cognitive Services
+  - name: Integrate with SharePoint Online
+    items:
+    - name: SharePoint Online integration overview
+      href: sharepoint-scenario-intro.md
+    - name: Set up SharePoint Online lists
+      href: sharepoint-scenario-setup.md
+    - name: Generate an app
+      href: sharepoint-scenario-generate-app.md
+    - name: Create a flow for approvals
+      href: sharepoint-scenario-approval-flow.md
+    - name: Create an app from scratch
+      href: sharepoint-scenario-build-app.md
+    - name: Create a Power BI report
+      href: sharepoint-scenario-build-report.md
+    - name: Publish the Power BI report
+      href: sharepoint-scenario-publish-report.md
+    - name: Embed the Power BI report
+      href: sharepoint-scenario-embed-report.md
+    - name: Create a flow for alerts
+      href: sharepoint-scenario-alerts-flow.md
+    - name: Walk through the completed scenario
+      href: sharepoint-scenario-summary.md
+  - name: Integrate with Cognitive Services
     href: cognitive-services-api.md
 - name: "Develop: enterprise developers"
   items:
