@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 06/12/2017
+ms.date: 01/10/2018
 ms.author: mblythe
 
 ---
@@ -98,7 +98,7 @@ In this step, we'll first connect to the two lists. Then we'll clean up the data
 4. Remove all columns to the right of the **PMAssigned** column (a total of 22 columns). The table should match the following image:
    
     ![Project Details table in Query Editor](./media/sharepoint-scenario-build-report/05-01-08-table-details.png)
-5. Repeat the process you went through for **Project Details**, and remove all columns to the right of the **Approved** column (a total of 22 columns). The table should match the following image:
+5. Repeat the process you just went through, now for **Project Requests**: remove **FileSystemObjectType**, **ServerRedirectedEmbedURL**, **ContentTypeId**, and all columns to the right of the **Approved** column (a total of 22 columns). The table should match the following image:
    
     ![ Project Requests table in Query Editor](./media/sharepoint-scenario-build-report/05-01-09-table-requests.png)
 
@@ -160,7 +160,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
    
    2. For the second table, select **Project Details**, and the **RequestId** column.
    
-   3. The screen should look like the following image. When you're ready, click or tap **OK**.
+   3. The screen should look like the following image. When you're ready, click or tap **OK**, then **Close**.
       
        ![Create Relationship](./media/sharepoint-scenario-build-report/05-02-04-create-relationship.png)
 
@@ -172,7 +172,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
    
     ![Formula bar with Dates = CALENDARAUTO()](./media/sharepoint-scenario-build-report/05-02-06-formula-bar.png)
    
-    This formula creates a table called **Dates** with a single date column. The table covers all dates from your other tables and updates automatically if additional dates are added (i.e. if data is refreshed).
+    This formula creates a table called **Dates** with a single date column. The table covers all dates from your other table, and it updates automatically if additional dates are added (i.e. if data is refreshed).
    
     This formula and the other ones in this section use Data Analysis Expressions (DAX), a formula language for Power BI and other technologies. For more information, see [DAX basics in Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-quickstart-learn-dax-basics/).
 3. Press Enter to create the **Dates** table.
@@ -375,16 +375,16 @@ After we've created these report visualizations in Power BI Desktop, we'll publi
 4. Drag **ProjectedStartDate** from **Project Details** in the **Fields** pane to the **Filters** area of the **Visualizations** pane, then select all dates except for **(Blank)**.
    
     ![Filter by ProjectedStartDate](./media/sharepoint-scenario-build-report/05-03-17-filters-diff.png)
-5. Resize the columns of the table so you can see all the data. The visualization should now look like the following image.
+5. Resize the columns of the table so you can see all the data, and sort by **ApprovedStartDiff**, descending. The visualization should now look like the following image.
    
     ![Table with ApprovedStartDiff values](./media/sharepoint-scenario-build-report/05-03-18-chart-diff.png)
-6. Click or tap the down arrow for **ApprovedStartDiff**, then click or tap **Average**, so we can see the average duration between project approval and projected start date.
+6. In the **Values** area, click or tap the down arrow for **ApprovedStartDiff**, then click or tap **Average**. Now we can see the average duration between project approval and projected start date.
    
     ![Calculate average](./media/sharepoint-scenario-build-report/05-03-20a-average-menu.png)
-7. Click or tap the down arrow for **ApprovedStartDiff** again, then click or tap **Conditional formatting**.
+7. Click or tap the down arrow for **ApprovedStartDiff** again, click or tap **Conditional formatting**, then click or tap **Background color scales**.
    
    ![Conditional formatting](./media/sharepoint-scenario-build-report/05-03-20b-conditional-menu.png)
-8. Use the default settings and click **OK**.
+8. Set colors for the **Minimum** and **Maximum** fields as shown below, then click or tap **OK**.
    
    ![Conditional formatting options](./media/sharepoint-scenario-build-report/05-03-21-conditional-dialog.png)
    
