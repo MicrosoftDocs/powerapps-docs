@@ -14,12 +14,16 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 01/18/2018
 ms.author: sharik
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+## Jan. 18
+* PowerApps for iOS and Android now supports integration with Microsoft Authenticator.
+* Within a combo box, see all items in a long list with enhanced Read mode.
 
 ## Jan. 5
 * Act on data right from your Power BI report or dashboard by integrating a [PowerApps custom visual (preview release)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), which pulls contextual data from your Power BI report.
