@@ -34,7 +34,6 @@ The following browsers and operating systems are supported:
 | Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android <br>macOS |
 | Apple Safari (latest version) |macOS <br> iOS 8 or later |
 
-
 If your browser doesn't support all of the controls used in the app, use it on a mobile device (such as a phone) by downloading PowerApps for iOS or Android.
 
 ## Find an app on the home page
