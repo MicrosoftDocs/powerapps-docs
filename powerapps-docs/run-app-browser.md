@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/12/2017
+ms.date: 01/16/2018
 ms.author: litran
 
 ---
@@ -28,13 +28,14 @@ The following browsers and operating systems are supported:
 
 | **Browser** | **Operating system** |
 | --- | --- |
-| Google Chrome (latest version) |Windows 7 SP1, 8.1, and 10 <br>macOS <br>iOS 8 or later<br>Android |
-| Microsoft Edge |Windows 10 |
+| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS <br>iOS 8 or later<br>Android |
+| Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
 | Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
 | Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android <br>macOS |
 | Apple Safari (latest version) |macOS <br> iOS 8 or later |
 
-If your browser doesn't support all the controls used in the app, use it on a mobile device (such as a phone) by downloading PowerApps Mobile for iOS, Android, or Windows.
+
+If your browser doesn't support all of the controls used in the app, use it on a mobile device (such as a phone) by downloading PowerApps for iOS or Android.
 
 ## Find an app on the home page
 The home page may show several types of business apps, but you can find a specific app by typing at least part of its name in the search box. You can also filter the list to show only those apps that were created in PowerApps.
@@ -66,4 +67,3 @@ Typically, you are prompted only the first time.
 
 ## Close an app
 To close the app, sign out of the Dynamics 365 home page, or open another app.
-
