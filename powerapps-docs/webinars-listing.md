@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/1/2017
+ms.date: 1/16/2018
 ms.author: v-malyng
 
 ---
@@ -22,29 +22,30 @@ ms.author: v-malyng
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Deep Dive | PowerApps Focus on the Lookup Function by Audrie Gordon**
+**Connector Series | Working with Connectors: Using the Planner Connector**
 <br>by Audrie Gordon
-<br>*December 12th, 10:00AM PST, 1:00PM EST*
+<br>*January 22th, 10:00AM PST, 1:00PM EST*
 
-Audrie Gordon, Sr Program Manager of the PowerApps team, shows how to leverage the LookUp() function in PowerApps. This is a deep dive that will help you to: Know when to use LookUp rather than Filter and Search, as well as to understand which data sources support these functions. Get a few ideas on business scenarios where it will be the most useful too!
+In this new monthly "Connector Series" of webinars, we will be exploring options for using our over 200 data and SaaS connectors with PowerApps and Flow. We start this series with a review of the "Planner" Connector for Office 365. Expect a few tips on usage, and several new ideas for business apps using PowerApps with the Planner connector.
 
-[Click here to watch on December 12th](https://www.youtube.com/watch?v=uTPtNaSK_gc)
+[Click here to watch on January 22th](https://www.youtube.com/watch?v=NBPL9Uw7qzg)
 
-**Deep Dive | Using PowerApps to Create Calendar Events**
+
+**Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
 <br>by Audrie Gordon
-<br>*December 14th, 10:00AM PST, 1:00PM EST*
+<br>*January 29th, 10:00AM PST, 1:00PM EST*
 
-Audrie Gordon, Sr Program Manager of the PowerApps team, shows how to leverage PowerApps for creating calendar events! This is by popular demand, and will answer your questions regarding SharePoint and Outlook Calendar updates from an app.
+Join this webinar to see how PowerApps and Teams work together to create more powerful business solutions in a snap! We'll show you how to leverage PowerApps within your Teams channels, and give you some new ideas on how to leverage these products together for improved team collaboration.
 
-[Click here to watch on December 14th](https://www.youtube.com/watch?v=AOGGyoElGaQ)
+[Click here to watch on January 29th](https://www.youtube.com/watch?v=obBQk-aSElI)
 
-**Getting Started | New Office Graph Templates (Part 2) by Emma Cooper**
-<br>by Emma Cooper
-<br>*January 9th, 10:00AM PST, 1:00PM EST*
+**Connector Series | The Power of Office Graph with PowerApps**
+<br>by Audrie Gordon
+<br>*February 5th, 10:00AM PST, 1:00PM EST*
 
-Emma Cooper returns to share brand new office graph templates available in PowerApps. These templates are easy to use and will enable you to further leverage the power of Office Graph quickly and easily in your organization!
+Audrie Gordon, Sr Program Manager of the PowerApps team, shows how to leverage PowerApps with Office Graph technologies. We will customize one of our templates and maximize the impact of Office Group for a typical business scenario.
 
-[Click here to watch on January 9th](https://www.youtube.com/watch?v=9PopTeLdpmU)
+[Click here to watch on February 5th](https://www.youtube.com/watch?v=AOGGyoElGaQ)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
@@ -119,13 +120,17 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Emma Cooper
 [Watch now](https://www.youtube.com/watch?v=SwLNN3tPVNs)
 
-**Using Connector Documentation for Data Mash-ups**
-<br>by Audrie Gordon
-[Watch Now](https://www.youtube.com/watch?v=UJ8DEPhFCaM)
-
 **PowerApps Community Opportunities & Rewards**
 <br> by Audrie Gordon & Mackenzie Lyng
 [Watch Now](https://www.youtube.com/watch?v=MTIkTPUgDSY)
+
+**PowerApps Focus on Using the Lookup Function**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=uTPtNaSK_gc)
+
+**New Office Graph Templates (Part 2)**
+<br>by Emma Cooper
+[Watch now](https://www.youtube.com/watch?v=9PopTeLdpmU)
 
 ### App Designer Topics ###
 **Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
