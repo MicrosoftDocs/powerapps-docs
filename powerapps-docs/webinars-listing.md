@@ -32,11 +32,11 @@ Vishwas will showcase a PowerApp that is essentially a “portal” for existing
 
 **Connector Series | Working with Connectors: Using the Planner Connector**
 <br>by Audrie Gordon
-<br>*January 22th, 10:00AM PST, 1:00PM EST*
+<br>*January 22nd, 10:00AM PST, 1:00PM EST*
 
 In this new monthly "Connector Series" of webinars, we will be exploring options for using our over 200 data and SaaS connectors with PowerApps and Flow. We start this series with a review of the "Planner" Connector for Office 365. Expect a few tips on usage, and several new ideas for business apps using PowerApps with the Planner connector.
 
-[Click here to watch on January 22th](https://www.youtube.com/watch?v=NBPL9Uw7qzg)
+[Click here to watch on January 22nd](https://www.youtube.com/watch?v=NBPL9Uw7qzg)
 
 **Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
 <br>by Audrie Gordon
