@@ -23,7 +23,9 @@ For information about known limitations, see [Common issues and resolutions](com
 
 ## Jan. 18
 * PowerApps for iOS and Android now supports integration with Microsoft Authenticator.
+* A combo box replaces the SharePoint lookup control in forms and a new data card template for single-select lookup fields is selected by default in PowerApps Studio.
 * Within a combo box, see all items in a long list with enhanced Read mode.
+* [Control the size of the local record limit store](https://powerapps.microsoft.com/blog/powerapps-data-row-limit-for-non-delegable-queries/) up to a maximum of 2000 records in non-delegable queries. (Experimental feature)
 
 ## Jan. 5
 * Act on data right from your Power BI report or dashboard by integrating a [PowerApps custom visual (preview release)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), which pulls contextual data from your Power BI report.
