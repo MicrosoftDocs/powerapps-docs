@@ -22,14 +22,21 @@ ms.author: v-malyng
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
+**Using PowerApps and Flow to create Line of Business “portals” with Vishwas Lele**
+<br>by Vishwas Lele
+<br>*January 18th, 10:00AM PST, 1:00PM EST*
+
+Vishwas will showcase a PowerApp that is essentially a “portal” for existing Line of Business Enterprise Applications (inventory, contracts etc.) and Services ( Dynamics, O365, DropBox etc. )Through the use of PowerApps features like the out of the box connectors, integration with Flow and mobile enablement, learn how easy it is to build an app for the information workers that allows them to  have all the information in one location and on a device of their choice.  
+
+[Click here to watch on January 18th](http://www.youtube.com/watch?v=eSMAAFHK44c)
+
 **Connector Series | Working with Connectors: Using the Planner Connector**
 <br>by Audrie Gordon
-<br>*January 22th, 10:00AM PST, 1:00PM EST*
+<br>*January 22nd, 10:00AM PST, 1:00PM EST*
 
 In this new monthly "Connector Series" of webinars, we will be exploring options for using our over 200 data and SaaS connectors with PowerApps and Flow. We start this series with a review of the "Planner" Connector for Office 365. Expect a few tips on usage, and several new ideas for business apps using PowerApps with the Planner connector.
 
-[Click here to watch on January 22th](https://www.youtube.com/watch?v=NBPL9Uw7qzg)
-
+[Click here to watch on January 22nd](https://www.youtube.com/watch?v=NBPL9Uw7qzg)
 
 **Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
 <br>by Audrie Gordon
@@ -123,6 +130,10 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **PowerApps Community Opportunities & Rewards**
 <br> by Audrie Gordon & Mackenzie Lyng
 [Watch Now](https://www.youtube.com/watch?v=MTIkTPUgDSY)
+
+**Overview of PowerApps Feature Releases for 2017**
+<br>by Darshan Desai
+[Watch now](https://www.youtube.com/watch?v=XFMh8-zLkEM)
 
 **PowerApps Focus on Using the Lookup Function**
 <br>by Audrie Gordon
