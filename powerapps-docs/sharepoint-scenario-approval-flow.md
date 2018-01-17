@@ -123,8 +123,6 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
     ![List update](./media/sharepoint-scenario-approval-flow/03-01-08-no-update-complete.png)
 9. At the top right of the screen, click or tap **Create flow**.
    
-    ![Done button](./media/sharepoint-scenario-approval-flow/03-01-15a-done-button.png)
-   
     The flow is now complete, and it should look like the following image if you collapse the boxes.
    
     ![Completed flow](./media/sharepoint-scenario-approval-flow/03-01-16-flow-complete.png)
