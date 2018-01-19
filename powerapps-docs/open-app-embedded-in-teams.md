@@ -1,5 +1,5 @@
 ---
-title: Quickstart: Add an app to Microsoft Teams | Microsoft Docs
+title: Add an app to Microsoft Teams | Microsoft Docs
 description: Add an app to a Microsoft Teams channel so that people you've shared the app with can open it in that channel
 services: ''
 suite: powerapps
@@ -91,4 +91,4 @@ To remove the app from the channel, choose the **Product Showcase** tab > **Remo
 In this quickstart, you added the Product Showcase sample app to a Teams channel, and then opened the app from that channel. To learn more about PowerApps, continue to the PowerApps tutorials.
 
 > [!div class="nextstepaction"]
-> [PowerApps Tutorials](get-started-create-from-blank)
+> [PowerApps Tutorials](get-started-create-from-blank.md)
