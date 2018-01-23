@@ -19,11 +19,11 @@ ms.author: mandia
 ---
 # Quickstart: Create an app using SharePoint
 
-This quickstart shows how to automatically create your first app using a SharePoint Online list within PowerApps. In this article, you create a new app, select an existing SharePoint Online list, and then see what you created. Every generated app automatically includes a screen to browse records, a screen that shows record details, and a screen to create or update records. You can then customize the app to suit your needs. If you're brand new to PowerApps, this is a quick way to get a working app using your SharePoint data. 
+This quickstart shows how to automatically create your first app using a SharePoint Online list within PowerApps. In this article, you create a new app, select an existing SharePoint Online list, and then see what you created. Every generated app automatically includes a screen to browse records, to show record details, and to create or update records. You can also customize the app. If you're brand new to PowerApps, this is a quick way to get a working app using your SharePoint data. 
 
 To follow this quickstart, you need a SharePoint Online URL that also has a SharePoint list.
 
-If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=). 
+If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=). 
 
 ## Sign in to PowerApps 
 

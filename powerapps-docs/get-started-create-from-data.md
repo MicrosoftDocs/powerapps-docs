@@ -19,11 +19,13 @@ ms.author: mandia
 ---
 # Quickstart: Create an app using Excel
 
-This quickstart shows how to automatically create your first app using Excel table data within PowerApps. In this article, you create a new app, select an existing Excel file, and then see what you created. Every generated app automatically includes a screen to browse records, a screen that shows record details, and a screen to create or update records. You can then customize the app to suit your needs. If you're brand new to PowerApps, this is a quick way to get a working app using Excel data. The Excel data can be in a cloud-storage account, such as OneDrive, Google Drive, Box, and so on. 
+This quickstart shows how to automatically create your first app using Excel table data within PowerApps. In this article, you create a new app, select an existing Excel file, and then see what you created. Every generated app automatically includes a screen to browse records, to show record details, and to create or update records. You can also customize the app. If you're brand new to PowerApps, this is a quick way to get a working app using Excel data. 
 
-To follow this quickstart, download the [flooring estimates Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md). This quickstart uses OneDrive for Business. If you have Excel data [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664), then you can use your own Excel file. 
+The Excel data can be in a cloud-storage account, such as OneDrive, Google Drive, Box, and so on. This quickstart uses OneDrive for Business.
 
-If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=).
+To follow this quickstart, download the [flooring estimates Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md). If you have Excel data [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664), then you can use your own Excel file. 
+
+If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=).
 
 ## Sign in to PowerApps
 
