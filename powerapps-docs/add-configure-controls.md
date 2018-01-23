@@ -19,7 +19,7 @@ ms.author: sharik
 
 ---
 # Add and configure a control in PowerApps
-Add a variety of UI elements to your app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties. 
+Add a variety of UI elements to your app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
 
 ## Prerequisites
 1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
