@@ -19,7 +19,7 @@ ms.author: mandia
 ---
 # Quickstart: Create an app using Excel
 
-This quickstart shows how to automatically create your first app using Excel table data within PowerApps. In this article, you create a new app, select an existing Excel file, and then see what you created. Every generated app automatically includes a screen to browse records, to show record details, and to create or update records. You can also customize the app. If you're brand new to PowerApps, this is a quick way to get a working app using Excel data. 
+This quickstart shows how to automatically create your first app using Excel table data within PowerApps. In this article, you create a new app, select an existing Excel file, and then see what you created. Every generated app automatically includes screens to browse records, show record details, and create or update records. This is a quick way to get a working app using Excel data. You can also customize the app. 
 
 The Excel data can be in a cloud-storage account, such as OneDrive, Google Drive, Box, and so on. This quickstart uses OneDrive for Business.
 
@@ -48,7 +48,7 @@ In PowerApps Studio, select **See a preview of this app**. Play the app. Select 
 ## Clean up your resources
 Apps aren't saved until you save them. If you want to keep this app, then save it (Ctrl + S). If you don't want to save this app, then close it using `Ctrl + F4`, or go to the **File** menu, and select **Close**. 
 
-To remove the One Drive for Business connection, go to the **File** menu, select **Connections**. In the list, select your connection, and then **Delete**.
+To remove the One Drive for Business connection, go to the **File** menu, and select **Connections**. In the list, select your connection, and then **Delete**.
 
 ## Next steps
 In this quick start, you created an app using existing data in an Excel table. To get more hands-on experience creating apps, use one of our templates.
