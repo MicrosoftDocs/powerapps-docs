@@ -33,27 +33,27 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-1">Introducing PowerApps</a>
+                                <a class="barLink" href="get-started.yml#step-1">Introducing PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-2">Parts of PowerApps</a>
+                                <a class="barLink" href="get-started.yml#step-2">Parts of PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-3">Related technologies</a>
+                                <a class="barLink" href="get-started.yml#step-3">Related technologies</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-4">A quick look at creating apps</a>
+                                <a class="barLink" href="get-started.yml#step-4">A quick look at creating apps</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-5">Create your first app</a>
+                                <a class="barLink" href="get-started.yml#step-5">Create your first app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-6">Review this section</a>
+                                <a class="barLink" href="get-started.yml#step-6">Review this section</a>
                                 <span style="margin-left: 32px; align-self: center;">2m</span>
                               </li>
                           </ul>
