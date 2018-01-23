@@ -14,12 +14,18 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 01/18/2018
 ms.author: sharik
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+## Jan. 18
+* PowerApps for iOS and Android now supports integration with Microsoft Authenticator.
+* A combo box replaces the SharePoint lookup control in forms and a new data card template for single-select lookup fields is selected by default in PowerApps Studio.
+* Within a combo box, see all items in a long list with enhanced Read mode.
+* [Control the size of the local record limit store](https://powerapps.microsoft.com/blog/powerapps-data-row-limit-for-non-delegable-queries/) up to a maximum of 2000 records in non-delegable queries. (Experimental feature)
 
 ## Jan. 5
 * Act on data right from your Power BI report or dashboard by integrating a [PowerApps custom visual (preview release)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), which pulls contextual data from your Power BI report.
@@ -60,10 +66,3 @@ For information about known limitations, see [Common issues and resolutions](com
 2. Use the **[Coalesce](functions/function-isblank-isempty.md)** function to more easily replace a blank value but leave other values as they were.
 3. Use the **[EndsWith](functions/function-startswith.md)** function to test whether a text string ends another text string.
 4. Use the **[And](functions/operators.md)**, **[Or](functions/operators.md)**, or **[Not](functions/operators.md)** operator in a formula.
-
-## July 12
-1. [Configure properties of controls](add-configure-controls.md) more easily by using the right-hand pane.
-2. Set an input control’s **DisplayMode** property to support showing data, editing data, or neither.
-3. Reset an input control to its default value by using the **[Reset](functions/function-reset.md)** function.
-4. Create global variables by using the **[Set](functions/function-set.md)** function.
-5. Show, create, or edit a record [in the same form](functions/function-form.md).
