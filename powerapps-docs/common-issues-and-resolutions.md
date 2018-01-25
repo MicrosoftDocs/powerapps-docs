@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/08/2017
+ms.date: 01/24/2018
 ms.author: sharik
 
 ---
@@ -22,7 +22,7 @@ ms.author: sharik
 ## Recently added/changed
 1. **App won't work**
 
-	If you create an app and don't update and/or re-publish it within six months of first publishing it, it may stop working without warning. To avoid this problem, make sure you update and/or re-publish your app within six months of first publishing it. 
+	If you create an app and don't update and/or re-publish it within six months of first publishing it, it may stop working without warning. To avoid this problem, make sure you update and/or re-publish your app within six months of first publishing it.
 
 1. **Data Table control**
 
