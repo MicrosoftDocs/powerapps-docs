@@ -21,16 +21,7 @@ ms.author: sharik
 # Quickstart: Run an app in a web browser
 When you create a canvas-driven or model-driven app, or an app creator shares an app with you, you can run that app in a web browser from the [Dynamics 365](https://home.dynamics.com) Home page, or you can run it on a mobile device. In this quickstart, you'll learn how to run an app in a web browser.
 
-## Prerequisites
-To follow this quickstart, you need a Microsoft Office 365 account that includes a Dynamics 365 subscription, and you need access to one of the following supported browsers and operating systems:
-
-| **Browser** | **Operating system** |
-| --- | --- |
-| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS <br>iOS 8 or later<br>Android |
-| Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
-| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
-| Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android <br>macOS |
-| Apple Safari (latest version) |macOS <br> iOS 8 or later |
+To follow this quickstart, you need a [Microsoft Office 365 subscription](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) that includes Dynamics 365, and access to a [supported browser and operating system](limits-and-config.md).
 
 ## Sign in to Dynamics 365
 Sign in to Dynamics 365 at [https://home.dynamics.com]([https://home.dynamics.com).
