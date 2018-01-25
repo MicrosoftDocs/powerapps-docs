@@ -22,7 +22,7 @@ ms.author: sharik
 ## Recently added/changed
 1. **App won't work**
 
-	If you create an app and don't update and/or re-publish it within six months of first publishing it, it may stop working without warning. To avoid this problem, make sure you update and/or re-publish your app within six months of first publishing it.
+	If an app you created stops working without warning, it might be because you haven't updated or re-published it in the last six months. To resolve this issue, update and/or re-publish your app to sync it with the latest version of PowerApps, and then make sure that you continue to update and/or re-publish the app within six months of last publishing it.
 
 1. **Data Table control**
 
