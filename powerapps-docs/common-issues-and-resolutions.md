@@ -20,6 +20,10 @@ ms.author: sharik
 ---
 # Common issues and resolutions for PowerApps
 ## Recently added/changed
+1. **App won't work**
+
+	If you create an app and don't update and/or re-publish it within six months of first publishing it, it may stop working without warning. To avoid this problem, make sure you update and/or re-publish your app within six months of first publishing it. 
+
 1. **Data Table control**
 
 	If you copy and paste a **Data Table** control for which the **Items** property is set to a formula that contains a **Filter** function, the formula for the **Items** property on the new **Data Table** control ends up with field names that contain a **_1** suffix. This makes the field names invalid and results in no data showing up in the data table. To work around this issue, before you copy the control, confirm that the **Filter** function doesn't reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control. Alternatively, remove the **_1** suffix from the invalid field names so they match the names in the entity.
