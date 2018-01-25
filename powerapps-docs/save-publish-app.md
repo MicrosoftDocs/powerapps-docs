@@ -4,7 +4,7 @@ description: Step-by-step instructions for saving and publishing app for app mak
 services: ''
 suite: powerapps
 documentationcenter: na
-author: karthik-1
+author: SKjerland
 manager: anneta
 editor: ''
 tags: ''
