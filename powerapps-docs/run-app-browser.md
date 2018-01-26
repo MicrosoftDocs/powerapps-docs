@@ -48,11 +48,9 @@ You can save an app's URL as a bookmark in your browser and run it by selecting 
 ![](./media/run-app-browser/web-login.png)
 
 ## Connect to data
-If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you use the app:  
+If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
 
 ![Connection](./media/run-app-browser/app-connection.png)
-
-Typically, you're prompted only the first time.
 
 ## Close an app
 To close an app, sign out of the Dynamics 365 Home page, or open another app.
