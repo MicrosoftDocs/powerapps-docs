@@ -1,6 +1,6 @@
 ---
-title: Run an app in a web browser | Microsoft Docs
-description: Walkthrough of how to run an app in a web browser
+title: Run a canvas-based or model-driven app in a web browser | Microsoft Docs
+description: Walkthrough of how to run a canvas-based or model-driven app in a web browser
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -18,15 +18,15 @@ ms.date: 01/23/2018
 ms.author: sharik
 
 ---
-# Quickstart: Run an app in a web browser
-When you create a canvas-driven or model-driven app, or an app creator shares an app with you, you can run that app in a web browser from the [Dynamics 365](https://home.dynamics.com) Home page, or you can run it on a mobile device. In this quickstart, you'll learn how to run an app in a web browser.
+# Quickstart: Run a canvas-based or model-driven app in a web browser
+When you create a canvas-based or model-driven app, or an app creator shares an app with you, you can run that app in a web browser from the [Dynamics 365](https://home.dynamics.com) Home page, or you can run it on a mobile device. In this quickstart, you'll learn how to run an app in a web browser.
 
 To follow this quickstart, you need a [Microsoft Office 365 subscription](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) that includes Dynamics 365, and access to a [supported browser and operating system](limits-and-config.md).
 
 ## Sign in to Dynamics 365
 Sign in to Dynamics 365 at [https://home.dynamics.com]([https://home.dynamics.com).
 
-## Find the app on the home page
+## Find the app on the Home page
 The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You can also filter the list to show only apps created by a specific source, such as PowerApps or Dynamics 365. To do this, click or tap **Filter** and then select the source.
 
 If you've recently installed the app, it might not immediately appear in the list of apps. Click or tap **Sync** to show all of your apps. This process may take up to a minute.
