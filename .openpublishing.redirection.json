@@ -17,12 +17,12 @@
         },
         {
         "source_path": "powerapps-docs/api-connector-overview.md",
-        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/submit-certification",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/api-connector-dev.md",
-        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/submit-certification",
         "redirect_document_id": false
         },
         {
