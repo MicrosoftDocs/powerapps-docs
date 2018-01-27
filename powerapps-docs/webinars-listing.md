@@ -42,7 +42,7 @@ Audrie Gordon, Sr Program Manager of the PowerApps team, shows how to leverage P
 <br>by Audrie Gordon
 <br>*February 19th, 10:00AM PST, 1:00PM EST*
 
-Brian Blanchard from Microsoft Retail Stores demonstrates how he build apps for his team to manage server patching schedules. He will share both the desktop and mobile version which they use today to expedite and simplify the patching process. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
+Brian Blanchard from Microsoft Retail Stores demonstrates how he builds apps for his team to manage server patching schedules. He will share both the desktop and mobile version which they use today to expedite and simplify the patching process. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
 
 [Click here to watch on February 19th](https://www.youtube.com/watch?v=QAe0oBecowU)
 
