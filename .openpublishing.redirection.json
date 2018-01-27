@@ -1,6 +1,41 @@
 {
     "redirections": [
         {
+        "source_path": "powerapps-docs/postman-collection.md",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/define-postman-collection",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/customapi-azure-resource-manager-tutorial.md",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/azure-active-directory-authentication",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/customapi-web-api-tutorial.md",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/create-web-api-connector",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/api-connector-overview.md",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/api-connector-dev.md",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/api-connector-submission.md",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/submit-certification",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/api-connector-faq.md",
+        "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/faq",
+        "redirect_document_id": false
+        },
+        {
         "source_path": "powerapps-docs/cloud-storage-blob-connections.md",
         "redirect_url": "/powerapps/connections/cloud-storage-blob-connections",
         "redirect_document_id": false 
