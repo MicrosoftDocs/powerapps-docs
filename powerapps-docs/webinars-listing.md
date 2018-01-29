@@ -1,3 +1,4 @@
+
 ---
 title: Webinar listing | Microsoft Docs
 description: Displays a listing of past and future webinars, including time/date and topics covered.
@@ -14,7 +15,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 1/16/2018
+ms.date: 1/29/2018
 ms.author: v-malyng
 
 ---
@@ -24,11 +25,11 @@ These webinars can help you to leverage the features and functions of Microsoft 
 ## Upcoming webinars ##
 **Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
 <br>by Audrie Gordon
-<br>*January 29th, 10:00AM PST, 1:00PM EST*
+<br>*January 31st, 10:00AM PST, 1:00PM EST*
 
 Join this webinar to see how PowerApps and Teams work together to create more powerful business solutions in a snap! We'll show you how to leverage PowerApps within your Teams channels, and give you some new ideas on how to leverage these products together for improved team collaboration.
 
-[Click here to watch on January 29th](https://www.youtube.com/watch?v=obBQk-aSElI)
+[Click here to watch on January 31st](https://www.youtube.com/watch?v=obBQk-aSElI)
 
 **Connector Series | The Power of Office Graph with PowerApps**
 <br>by Audrie Gordon
@@ -42,7 +43,7 @@ Audrie Gordon, Sr Program Manager of the PowerApps team, shows how to leverage P
 <br>by Audrie Gordon
 <br>*February 19th, 10:00AM PST, 1:00PM EST*
 
-Brian Blanchard from Microsoft Retail Stores demonstrates how he builds apps for his team to manage server patching schedules. He will share both the desktop and mobile version which they use today to expedite and simplify the patching process. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
+Brian Blanchard from Microsoft Retail Stores demonstrates how he build apps for his team to manage server patching schedules. He will share both the desktop and mobile version which they use today to expedite and simplify the patching process. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
 
 [Click here to watch on February 19th](https://www.youtube.com/watch?v=QAe0oBecowU)
 
@@ -135,7 +136,7 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Emma Cooper
 [Watch now](https://www.youtube.com/watch?v=9PopTeLdpmU)
 
-**Using PowerApps and Flow to create Line of Business “portals” with Vishwas Lele**
+**Using PowerApps and Flow to create Line of Business “portals”**
 <br>by Vishwas Lele
 [Watch Now](http://www.youtube.com/watch?v=eSMAAFHK44c)
 
