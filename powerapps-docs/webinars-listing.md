@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 1/29/2018
-ms.author: v-malyng
+ms.author: Mackenzie Lyng (v-malyng)
 
 ---
 # PowerApps webinar listing #
