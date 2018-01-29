@@ -22,7 +22,7 @@ ms.author: fikaradz
 A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description
-An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL.
+An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL with optional closed captions.
 
 ## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.
@@ -41,6 +41,8 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+
+**ClosedCaptionsUrl** – Video control only.  URL of closed captions file in WebVTT format.  Both video and captions URLs must be HTTPS. Server hosting both video and captions file needs to be CORS enabled.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
@@ -86,10 +88,10 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 1. On the **File** menu, click or tap **Media**, click or tap **Videos** or **Audio**, and then click or tap **Browse**.
 2. Browse to the file you want to use, click or tap it, and then click or tap **Open**.
 3. Press Esc to return to the default workspace, add an **Audio** or **Video** control, and set its **Media** property to the file that you added.
-   
+
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 4. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
-   
+
     > [!TIP]
 > The play button of the **Video** control appears when you hover over the control.
 5. Press Esc to return to the default workspace.
@@ -98,4 +100,3 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 1. Add a **Video** control, and set its **Media** property to the URL, enclosed in double quotation marks, of a YouTube video.
 2. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
 3. Press Esc to return to the default workspace.
-
