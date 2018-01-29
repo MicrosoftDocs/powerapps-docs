@@ -33,27 +33,27 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-1">Introducing PowerApps</a>
+                                <a class="barLink" href="get-started.yml#step-1">Introducing PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-2">Parts of PowerApps</a>
+                                <a class="barLink" href="get-started.yml#step-2">Parts of PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-3">Related technologies</a>
+                                <a class="barLink" href="get-started.yml#step-3">Related technologies</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-4">A quick look at creating apps</a>
+                                <a class="barLink" href="get-started.yml#step-4">A quick look at creating apps</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-5">Create your first app</a>
+                                <a class="barLink" href="get-started.yml#step-5">Create your first app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started#step-6">Review this section</a>
+                                <a class="barLink" href="get-started.yml#step-6">Review this section</a>
                                 <span style="margin-left: 32px; align-self: center;">2m</span>
                               </li>
                           </ul>
@@ -77,19 +77,19 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint#step-1">Generate an app</a>
+                                <a class="barLink" href="create-app-sharepoint.yml#step-1">Generate an app</a>
                                 <span style="margin-left: 32px; align-self: center;">3m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint#step-2">Explore a generated app</a>
+                                <a class="barLink" href="create-app-sharepoint.yml#step-2">Explore a generated app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint#step-3">Customize the app</a>
+                                <a class="barLink" href="create-app-sharepoint.yml#step-3">Customize the app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint#step-4">Explore app formulas</a>
+                                <a class="barLink" href="create-app-sharepoint.yml#step-4">Explore app formulas</a>
                                 <span style="margin-left: 32px; align-self: center;">9m</span>
                               </li>
                             </ul>
@@ -113,19 +113,19 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds#step-1">Generate an app</a>
+                                <a class="barLink" href="create-app-cds.yml#step-1">Generate an app</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds#step-2">Explore a generated app</a>
+                                <a class="barLink" href="create-app-cds.yml#step-2">Explore a generated app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds#step-3">Customize the app</a>
+                                <a class="barLink" href="create-app-cds.yml#step-3">Customize the app</a>
                                 <span style="margin-left: 32px; align-self: center;">12m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds#step-4">Add a data source and flow</a>
+                                <a class="barLink" href="create-app-cds.yml#step-4">Add a data source and flow</a>
                                 <span style="margin-left: 32px; align-self: center;">11m</span>
                               </li>
                           </ul>
@@ -149,15 +149,15 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps#step-1">Share your apps</a>
+                                <a class="barLink" href="manage-apps.yml#step-1">Share your apps</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps#step-2">Version your apps</a>
+                                <a class="barLink" href="manage-apps.yml#step-2">Version your apps</a>
                                 <span style="margin-left: 32px; align-self: center;">1m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps#step-3">Environments</a>
+                                <a class="barLink" href="manage-apps.yml#step-3">Environments</a>
                                 <span style="margin-left: 32px; align-self: center;">8m</span>
                               </li>
                           </ul>
@@ -181,23 +181,23 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data#step-1">The Common Data Service</a>
+                                <a class="barLink" href="manage-data.yml#step-1">The Common Data Service</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data#step-2">Understand Common Data Service entities</a>
+                                <a class="barLink" href="manage-data.yml#step-2">Understand Common Data Service entities</a>
                                 <span style="margin-left: 32px; align-self: center;">8m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data#step-3">Create custom entities</a>
+                                <a class="barLink" href="manage-data.yml#step-3">Create custom entities</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data#step-4">Manage entity data</a>
+                                <a class="barLink" href="manage-data.yml#step-4">Manage entity data</a>
                                 <span style="margin-left: 32px; align-self: center;">7m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data#step-5">Common Data Service security</a>
+                                <a class="barLink" href="manage-data.yml#step-5">Common Data Service security</a>
                                 <span style="margin-left: 32px; align-self: center;">8m</span>
                               </li>
                           </ul>
