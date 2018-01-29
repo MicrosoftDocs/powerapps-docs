@@ -135,7 +135,7 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Emma Cooper
 [Watch now](https://www.youtube.com/watch?v=9PopTeLdpmU)
 
-**Using PowerApps and Flow to create Line of Business “portals” with Vishwas Lele**
+**Using PowerApps and Flow to create Line of Business “portals”**
 <br>by Vishwas Lele
 [Watch Now](http://www.youtube.com/watch?v=eSMAAFHK44c)
 
