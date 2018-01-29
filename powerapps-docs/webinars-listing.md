@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 1/16/2018
+ms.date: 1/29/2018
 ms.author: v-malyng
 
 ---
@@ -24,11 +24,11 @@ These webinars can help you to leverage the features and functions of Microsoft 
 ## Upcoming webinars ##
 **Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
 <br>by Audrie Gordon
-<br>*January 29th, 10:00AM PST, 1:00PM EST*
+<br>*January 31st, 10:00AM PST, 1:00PM EST*
 
 Join this webinar to see how PowerApps and Teams work together to create more powerful business solutions in a snap! We'll show you how to leverage PowerApps within your Teams channels, and give you some new ideas on how to leverage these products together for improved team collaboration.
 
-[Click here to watch on January 29th](https://www.youtube.com/watch?v=obBQk-aSElI)
+[Click here to watch on January 31st](https://www.youtube.com/watch?v=obBQk-aSElI)
 
 **Connector Series | The Power of Office Graph with PowerApps**
 <br>by Audrie Gordon
