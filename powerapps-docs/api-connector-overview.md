@@ -4,7 +4,7 @@ description: ISVs and SaaS service owners can build connectors and have them cer
 services: ''
 suite: powerapps
 documentationcenter: na
-author: asavaritayal
+author: mgblythe
 manager: anneta
 editor: ''
 tags: ''
@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 05/06/2017
-ms.author: astay
+ms.author: mblythe
 
 ---
 # API connector overview (PowerApps)
