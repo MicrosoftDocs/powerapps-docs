@@ -24,6 +24,10 @@ A control that shows the content of a PDF file.
 ## Description
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
+## Limitations
+Note that due to the security architecture of PowerApps, PDF Viewer only supports HTTPS links and not HTTP.  
+If the PDF document resides on a server with restrictive CORS settings, you may not be able to view it within your app.  In case the document cannot be opened in PowerApps, the option to open the document in an external browser is presented to the end user.
+
 ## Key properties
 **Document** – The URL, enclosed in double-quotation marks, of a PDF file.
 
@@ -91,8 +95,7 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 ## Example
 * Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>
   **"http://www.who.int/gho/publications/world_health_statistics/EN_WHS2015_TOC.pdf?ua=1"**
-  
-    The control shows the PDF file.
-  
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
 
+    The control shows the PDF file.
+
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
