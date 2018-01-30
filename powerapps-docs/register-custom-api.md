@@ -18,7 +18,7 @@ ms.author: mblythe
 
 ---
 
-# Custom connectors in Microsoft Flow
+# Custom connectors in PowerApps
 
 Without writing any code, you can build workflows and apps with [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow](https://flow.microsoft.com), and [PowerApps](https://powerapps.microsoft.com). To help you integrate your data and business processes, these services offer [180+ connectors](https://docs.microsoft.com/connectors/) - for Microsoft services and products, as well as other services, like GitHub, Salesforce, Twitter, and more. 
 
