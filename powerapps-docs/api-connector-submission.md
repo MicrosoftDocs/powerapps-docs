@@ -4,7 +4,7 @@ description: By certifying a connector, it becomes available to all users of Mic
 services: ''
 suite: powerapps
 documentationcenter: na
-author: asavaritayal
+author: mgblythe
 manager: anneta
 editor: ''
 tags: ''
@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 05/06/2017
-ms.author: astay
+ms.author: mblythe
 
 ---
 # Submit for certification as an API Connector (PowerApps)

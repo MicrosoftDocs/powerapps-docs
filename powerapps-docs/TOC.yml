@@ -176,34 +176,16 @@
       href: sharepoint-scenario-summary.md
   - name: Integrate with Cognitive Services
     href: cognitive-services-api.md
-- name: "Develop: enterprise developers"
+- name: Develop for PowerApps
   items:
-  - name: PowerApps for enterprise developers
+  - name: PowerApps for enterprise developers, partners, and ISVs
     href: dev-enterprise-intro.md
-  - name: Register and use custom connectors
+  - name: Build and certify custom connectors
     href: register-custom-api.md
-  - name: Describe a custom connector with Postman
-    href: postman-collection.md
-  - name: Use Azure Active Directory with a custom connector
-    href: customapi-azure-resource-manager-tutorial.md
-  - name: Build a custom connector for a Web API
-    href: customapi-web-api-tutorial.md
   - name: Integrate with websites and other technologies
     href: embed-apps-dev.md
   - name: Develop offline-capable apps
     href: offline-apps.md
-- name: "Develop: partners and ISVs"
-  items:
-  - name: PowerApps for Microsoft partners and ISVs
-    href: dev-isv-partner-intro.md
-  - name: Overview of certifying API connectors
-    href: api-connector-overview.md
-  - name: Develop API connectors for certification
-    href: api-connector-dev.md
-  - name: Submit API connectors for certification
-    href: api-connector-submission.md
-  - name: FAQ for certifying API connectors
-    href: api-connector-faq.md
   - name: Let customers test drive your apps
     href: dev-appsource-test-drive.md
 - name: Administration and ALM

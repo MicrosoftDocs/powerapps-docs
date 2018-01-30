@@ -1,6 +1,6 @@
 ---
-title: PowerApps for enterprise developers | Microsoft Docs
-description: An introduction for enterprise developers to developing apps in PowerApps.
+title: PowerApps for enterprise developers, partners, and ISVs | Microsoft Docs
+description: An introduction developing solutions in PowerApps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -18,21 +18,33 @@ ms.date: 05/01/2017
 ms.author: mblythe
 
 ---
-# PowerApps for enterprise developers
-As an enterprise developer, empower your organization to build robust tailored solutions on PowerApps. Use custom connectors that connect to your data and web services; embed apps in your organization's websites; and work with data in the Common Data Service.
 
-## Build custom connectors
-Develop custom connectors to connect to your organization's data and web services through PowerApps. [Learn more](register-custom-api.md)
+# PowerApps for enterprise developers, partners, and ISVs
 
-## Build Azure Functions
-Craft Azure Functions to extend apps with custom server-side logic. [Learn more](https://powerapps.microsoft.com/blog/using-azure-functions-in-powerapps/)
+As a developer, you can extend PowerApps, enabling even more powerful solutions for organizations and customers.
 
-## Embed apps
-Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](embed-apps-dev.md)
+## PowerApps for enterprise developers
 
-## Build offline-capable apps
-Develop offline-capable apps so your users are productive whether they are online or offline. [Learn more](offline-apps.md)
+As an enterprise developer, empower your organization to build robust tailored solutions on PowerApps:
 
-## Work with data using the Common Data Service SDK
-Use the Common Data Service SDK with Azure Functions to extend your query and data manipulation capabilities in PowerApps. [Learn more](https://aka.ms/whgr2w)
+- **Build custom connectors**: Develop custom connectors to connect to your organization's data and web services through Microsoft Flow. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/)
 
+- **Build Azure Functions**: Craft Azure Functions to extend apps with custom server-side logic. [Learn more](https://docs.microsoft.com/azure/azure-functions/functions-powerapps-scenario)
+
+- **Embed apps**: Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](embed-apps-dev.md)
+
+- **Build offline-capable apps**: Develop offline-capable apps so your users are productive whether they are online or offline. [Learn more](offline-apps.md)
+
+- **Work with data using the Common Data Service SDK**: Use the Common Data Service SDK with Azure Functions to extend your query and data manipulation capabilities in PowerApps. [Learn more](https://aka.ms/whgr2w)
+
+## PowerApps for ISVs and Microsoft partners
+
+As a Microsoft partner or Independent Software Vendor (ISV), accelerate customer adoption by extending your products to integrate with your customers' data and business processes:
+
+- **Build apps on the Common Data Model using the Common Data Service SDK**: Build custom apps, or enhance your product with deeper data integration by connecting to your customers' data in the Common Data Service. [Learn more](https://aka.ms/eek20s)
+
+- **Build and certify custom connectors**: Bring your product into the Microsoft cloud by building a connector that enables PowerApps to talk to your service. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
+
+- **List your solution on AppSource**: Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive. [Learn more](dev-appsource-test-drive.md)
+
+- **Get started today for free**: Sign-up for the PowerApps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](dev-community-plan.md)

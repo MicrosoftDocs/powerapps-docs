@@ -4,7 +4,7 @@ description: Create a Postman Collection for registering custom connectors
 services: ''
 suite: powerapps
 documentationcenter: ''
-author: archnair
+author: mgblythe
 manager: anneta
 editor: ''
 
@@ -14,7 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 04/28/2017
-ms.author: archanan
+ms.author: mblythe
 
 ---
 # Describe a custom connector with Postman
