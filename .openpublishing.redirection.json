@@ -16,6 +16,11 @@
         "redirect_document_id": true
         },
         {
+        "source_path": "powerapps-docs/dev-isv-partner-intro.md",
+        "redirect_url": "https://docs.microsoft.com/powerapps/dev-enterprise-intro",
+        "redirect_document_id": true
+        },
+        {
         "source_path": "powerapps-docs/api-connector-overview.md",
         "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/submit-certification",
         "redirect_document_id": true
