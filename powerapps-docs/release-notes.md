@@ -14,18 +14,22 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/18/2018
+ms.date: 01/31/2018
 ms.author: sharik
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+## Jan. 31
+1. Add closed captions to [Video](controls/control-audio-video.md) controls.
+2. Improved error handling in [PDF Viewer](controls/control-pdf-viewer.md) controls.
+
 ## Jan. 18
-* PowerApps for iOS and Android now supports integration with Microsoft Authenticator.
-* A [combo box](controls/control-combo-box.md) replaces the [SharePoint lookup control](sharepoint-lookup-fields.md) in forms and a new [data card](working-with-cards.md) template for single-select lookup fields is selected by default in PowerApps Studio.
-* Within a [combo box](controls/control-combo-box.md), see all items in a long list with enhanced Read mode.
-* Control the size of the local record limit store up to a maximum of 2000 records in [non-delegable queries](delegation-overview.md#non-delegable-limits). (Experimental feature)
+1. PowerApps for iOS and Android now supports integration with Microsoft Authenticator.
+2. A [combo box](controls/control-combo-box.md) replaces the [SharePoint lookup control](sharepoint-lookup-fields.md) in forms and a new [data card](working-with-cards.md) template for single-select lookup fields is selected by default in PowerApps Studio.
+3. Within a [combo box](controls/control-combo-box.md), see all items in a long list with enhanced Read mode.
+4. Control the size of the local record limit store up to a maximum of 2000 records in [non-delegable queries](delegation-overview.md#non-delegable-limits). (Experimental feature)
 
 ## Jan. 5
 * Act on data right from your Power BI report or dashboard by integrating a [PowerApps custom visual (preview release)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), which pulls contextual data from your Power BI report.
@@ -60,9 +64,3 @@ For information about known limitations, see [Common issues and resolutions](com
 ## Aug. 15
 1. Download a [list of apps](admin-view-apps.md) used in your organization.
 2. Delegate **Sum**, **Average**, **Min**, and **Max** functions for SQL Server.
-
-## July 26
-1. Display a [Power BI tile](controls/control-power-bi-tile.md) inside an app.
-2. Use the **[Coalesce](functions/function-isblank-isempty.md)** function to more easily replace a blank value but leave other values as they were.
-3. Use the **[EndsWith](functions/function-startswith.md)** function to test whether a text string ends another text string.
-4. Use the **[And](functions/operators.md)**, **[Or](functions/operators.md)**, or **[Not](functions/operators.md)** operator in a formula.
