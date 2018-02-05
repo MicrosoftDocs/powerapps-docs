@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/02/2018
+ms.date: 02/05/2018
 ms.author: sharik
 
 ---
@@ -27,9 +27,6 @@ PowerApps is directly integrated with SharePoint - there's no need to download a
 And because PowerApps is seamlessly integrated into SharePoint, there's no need to manage forms from two places: permissions are inherited from and managed through SharePoint. Best of all, having PowerApps integrated with SharePoint gives you access to many powerful features, such as analytics reports, easy point-and-click rules for conditional formatting, and connections to other data sources.
 
 Ready to start customizing? Let's get started!
-
-> [!NOTE]
-> This functionality is being rolled out to SharePoint customers in stages. If you don't currently see a **Customize forms** option in your SharePoint list, you'll see it soon.
 
 ## Create a custom list form app in PowerApps
 
