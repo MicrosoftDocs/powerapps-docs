@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 06/12/2017
+ms.date: 01/30/2018
 ms.author: mblythe
 
 ---
@@ -22,18 +22,18 @@ ms.author: mblythe
 > [!NOTE]
 > This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
-The last task in this scenario is to embed our Power BI report in the same SharePoint Online site that hosts our two lists. Power BI supports a variety of approaches to embedding, and has recently added integration directly into SharePoint pages for web and mobile views.
+We'll now embed our Power BI report in the same SharePoint Online site that hosts our two lists. Power BI supports a variety of approaches to embedding, including directly integrating into SharePoint pages for web and mobile views.
 
-With this type of embedding, Power BI embeds the report as a web part, provides appropriate access for users, and lets you click through from the embedded report to the report at powerbi.com. First, we'll generate an embed link in Power BI, then use that link in a page that we create. For more information on embedding, see [Embed with report web part in SharePoint Online](https://powerbi.microsoft.com/documentation/powerbi-service-embed-report-spo) (especially the Requirements section).
+With this type of embedding, Power BI embeds the report as a web part, provides appropriate access for users, and lets you click through from the embedded report to the report at powerbi.com. First, we'll generate an embed link in Power BI, then use that link in a page that we create. For more information on embedding, see [Embed with report web part in SharePoint Online](https://powerbi.microsoft.com/documentation/powerbi-service-embed-report-spo).
 
 ## Step 1: Generate an embed link
 1. Sign in to Power BI, then in the left navigation pane, click or tap the report name.
    
     ![Navigate to report](./media/sharepoint-scenario-embed-report/08-01-01-reports.png)
-2. Click or tap **Embed in SharePoint Online**.
+2. Click or tap **File**, then **Embed in SharePoint Online**.
    
     ![Embed in SharePoint Online](./media/sharepoint-scenario-embed-report/08-01-02-embed-spo.png)
-3. Copy the embed link from the dialog box to a file, then click **Close**. We will use the link after we create a SharePoint page.
+3. Copy the embed link from the dialog box to a file, then click or tap **Close**. We will use the link after we create a SharePoint page.
    
     ![Embed link for SharePoint](./media/sharepoint-scenario-embed-report/08-01-03-embed-url.png)
 
@@ -59,7 +59,7 @@ With this type of embedding, Power BI embeds the report as a web part, provides 
     ![Report embedding complete](./media/sharepoint-scenario-embed-report/08-01-09-report-complete.png)
 
 ## Step 3: Grant access to the report.
-If you are using Office 365 Groups as we recommend, make sure users who need access are members of the group workspace within the Power BI service. This ensures that users can view the contents of that group. For more information, see [Creating groups in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-group-in-power-bi).
+If you are using Office 365 Groups as we recommend, make sure users who need access are members of the group workspace within the Power BI service. This ensures that users can view the contents of that group. For more information, see [Creating groups in Power BI](https://docs.microsoft.com/power-bi/service-collaborate-power-bi-workspace).
 
 That wraps up our work in Power BI for this scenario. You started by pulling data from our SharePoint lists into Power BI, and have now come full circle to embedding your Power BI report back into SharePoint.
 
