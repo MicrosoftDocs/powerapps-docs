@@ -22,7 +22,7 @@ ms.author: sharik
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 ## Feb. 7
-1. Removed the Zoom, Brightness, and Contrast properties from the [Camera](controls/control-camera.md) and [Barcode scanner](controls/control-barcodescanner) controls.
+1. Removed the Zoom, Brightness, and Contrast properties from the [Camera](controls/control-camera.md) and [Barcode scanner](controls/control-barcodescanner.md) controls.
 2. Added accessibility enhancements to [multimedia](add-images-pictures-audio-video.md) controls.
 
 ## Jan. 31
