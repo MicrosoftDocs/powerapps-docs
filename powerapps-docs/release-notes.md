@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/07/2018
+ms.date: 02/08/2018
 ms.author: sharik
 
 ---
@@ -23,7 +23,8 @@ For information about known limitations, see [Common issues and resolutions](com
 
 ## Feb. 7
 1. Removed the Zoom, Brightness, and Contrast properties from the [Camera](controls/control-camera.md) and [Barcode scanner](controls/control-barcodescanner.md) controls.
-2. Added accessibility enhancements to [multimedia](add-images-pictures-audio-video.md) controls.
+2. Fixed the issue where Clear buttons on [Text input](controls/control-text-input.md) controls limit the space alloted for user input. As a result of this fix, the [Clear](controls/control-text-input.md#additional-properties) property of a Text input control is supported only in Microsoft Edge (latest version) and Internet Explorer 11 web browsers.
+3. Added accessibility enhancements to [multimedia](add-images-pictures-audio-video.md) controls.
 
 ## Jan. 31
 1. Add closed captions to [Video](controls/control-audio-video.md) controls.
