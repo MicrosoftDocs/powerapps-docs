@@ -27,7 +27,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 
 [!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
-* An Excel file with the data [formatted as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664):
+* An Excel file with the data [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664):
   
   1. Open the Excel file, and then select any cell in the data that you want to use.
   2. On the **Insert** tab, select **Table**.
@@ -84,7 +84,7 @@ If you're sharing a folder in Dropbox, the shared folder must be attached to the
 There are [certain limitations](#sharing-excel-tables) with connectors involving Excel files.
 
 ## Known limitations
-If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
 If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
 

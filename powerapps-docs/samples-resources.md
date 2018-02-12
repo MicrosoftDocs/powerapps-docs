@@ -33,5 +33,5 @@ You can find how-to posts on the [PowerApps blog](https://powerapps.microsoft.co
 Many sessions of the Microsoft Ignite conference were recorded and are available at [Microsoft Ignite On-Demand](https://myignite.microsoft.com/videos). Search for "PowerApps" and "common data model."
 
 ## Overview
-Learn more about the Common Data Service and Common Data Model here, [Common Data Service and Common Data Model overview](https://docs.microsoft.com/en-us/common-data-service/entity-reference/security-model).
+Learn more about the Common Data Service and Common Data Model here, [Common Data Service and Common Data Model overview](https://docs.microsoft.com/common-data-service/entity-reference/security-model).
 

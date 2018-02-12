@@ -38,7 +38,7 @@ Generated apps have three screens by default:
 * To follow this tutorial exactly, download this [Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx).
   
     > [!IMPORTANT]
-> You can use your own Excel file if the data is formatted as a table. For more information, see [Create an Excel table in a worksheet](https://support.office.com/en-us/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+> You can use your own Excel file if the data is formatted as a table. For more information, see [Create an Excel table in a worksheet](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 * Upload the Excel file to OneDrive or another [cloud-storage account](connections/cloud-storage-blob-connections.md).
 
 ## Create an app
