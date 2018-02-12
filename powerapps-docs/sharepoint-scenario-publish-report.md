@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 06/12/2017
+ms.date: 01/30/2018
 ms.author: mblythe
 
 ---
@@ -40,14 +40,11 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 5. After publishing completes, click or tap **Open 'project-analysis.pbx' in Power BI**.
    
     ![Publishing success](./media/sharepoint-scenario-publish-report/06-01-05-open-report.png)
-6. The Power BI service loads the report in a browser. Click or tap the menu at the top left **(a)** to see the left navigation pane.
+6. The Power BI service loads the report in a browser. If the left navigation pane isn't expanded, click or tap the menu at the top left **(a)** to expand it.
    
     ![Report in Power BI service](./media/sharepoint-scenario-publish-report/06-01-06-service-report.png)
    
-    You can see that when we published, Power BI Desktop uploaded a dataset **(d)** and a report **(c)**. You create dashboards in the service, not Power BI Desktop, and this workspace doesn't have any dashboards yet **(b)**. We'll create one next.
-   
-    > [!NOTE]
-> Power BI has a new navigation experience coming out, and it could be enabled in your site. If the left navigation pane looks different from the above image, see [The new Power BI navigation experience](https://powerbi.microsoft.com/documentation/powerbi-service-the-new-power-bi-experience) for more information.
+    You can see that when we published, Power BI Desktop uploaded a dataset **(d)** and a report **(c)**. You create dashboards in the service, not Power BI Desktop, and this workspace doesn't have any dashboards yet **(b)**. We'll create one shortly.
 
 ## Step 2: Configure credentials for refresh
 1. In the service, click or tap ![Gear icon](./media/sharepoint-scenario-publish-report/icon-gear.png) in the top right corner, then click or tap **Settings**.
@@ -69,13 +66,16 @@ In this task, we'll publish our dataset and report to the Power BI service; then
     ![Data source updated](./media/sharepoint-scenario-publish-report/06-01-11-updated.png)
 
 ## Step 3: Create a dashboard
-1. In the service, click or tap the chart on the upper left, then click or tap ![Pin icon](./media/sharepoint-scenario-publish-report/icon-pin.png).
+
+1. To get back to your report, under **REPORTS** click or tap **project-analysis**.
+
+1. Click or tap the chart on the upper left, then click or tap ![Pin icon](./media/sharepoint-scenario-publish-report/icon-pin.png).
    
     ![Pin chart](./media/sharepoint-scenario-publish-report/06-01-12-pin-projected.png)
 2. Enter a name for the dashboard you want to pin to, then click or tap **Pin**.
    
     ![Pin chart to new dashboard](./media/sharepoint-scenario-publish-report/06-01-13-pin-new.png)
-3. Click or tap the chart on the upper left, then click or tap tap ![Pin icon](./media/sharepoint-scenario-publish-report/icon-pin.png).
+3. Click or tap the chart on the upper right, then click or tap tap ![Pin icon](./media/sharepoint-scenario-publish-report/icon-pin.png).
    
     ![Pin chart](./media/sharepoint-scenario-publish-report/06-01-14-pin-variance.png)
 4. Select the existing dashboard, then click or tap **Pin**.
