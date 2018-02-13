@@ -116,7 +116,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
        ![Create a table](./media/add-images-pictures-audio-video/create-table.png)
 
-       Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information about table formatting in Excel.
+       Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information about table formatting in Excel.
 
    4. Name the table **Drawings**:
 

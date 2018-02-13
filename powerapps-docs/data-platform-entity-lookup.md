@@ -18,7 +18,7 @@ ms.author: kfend
 
 ---
 # Build a relationship between entities
-Data in one entity often relates to data in another entity. For example, you might have a **Customers** entity and an **Orders** entity, and the **Orders** entity might have a lookup relation to the **Customers** entity to show which customer placed the order. You can use a lookup field to show data from the **Customers** entity for the customer who placed the order. For more information, see [Entity relationships and lookup fields](https://docs.microsoft.com/en-us/common-data-service/entity-reference/relationships).
+Data in one entity often relates to data in another entity. For example, you might have a **Customers** entity and an **Orders** entity, and the **Orders** entity might have a lookup relation to the **Customers** entity to show which customer placed the order. You can use a lookup field to show data from the **Customers** entity for the customer who placed the order. For more information, see [Entity relationships and lookup fields](https://docs.microsoft.com/common-data-service/entity-reference/relationships).
 
 ## Define a relationship
 You can create several types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one entity, and each entity can have more than one relationship to another entity. Some common relationship types are:

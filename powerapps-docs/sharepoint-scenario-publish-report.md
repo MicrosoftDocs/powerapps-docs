@@ -34,7 +34,7 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 3. Enter a password, then click or tap **Sign in**.
    
     ![Enter account password](./media/sharepoint-scenario-publish-report/06-01-03-password.png)
-4. Choose a destination for the report, then click or tap **Select**. We recommend publishing to a group workspace to simplify access to the report in SharePoint. In this case, we are publishing to the **Project Management** group workspace. For more information, see [Creating groups in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-group-in-power-bi).
+4. Choose a destination for the report, then click or tap **Select**. We recommend publishing to a group workspace to simplify access to the report in SharePoint. In this case, we are publishing to the **Project Management** group workspace. For more information, see [Collaborate in your Power BI app workspace](https://docs.microsoft.com/power-bi/service-collaborate-power-bi-workspace).
    
     ![Destination workspace](./media/sharepoint-scenario-publish-report/06-01-04-workspace.png)
 5. After publishing completes, click or tap **Open 'project-analysis.pbx' in Power BI**.

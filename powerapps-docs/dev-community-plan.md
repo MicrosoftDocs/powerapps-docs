@@ -23,7 +23,7 @@ If you want to build skills and learn more about PowerApps, Microsoft Flow, and 
 
 * Learn to build business apps and workflows with the full functionality of PowerApps and Microsoft Flow.
 * Connect to any data source by using our 100+ [out of the box connectors](connections-list.md) or by creating your own [custom connectors](register-custom-api.md).
-* Explore how you can use [the Common Data Service](https://docs.microsoft.com/en-us/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
+* Explore how you can use [the Common Data Service](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
 * Export the solutions you create in your individual environment, and [list them on AppSource](dev-appsource-test-drive.md) so your customers can test-drive them.
 
 ## Who can sign up for the PowerApps Community Plan?
