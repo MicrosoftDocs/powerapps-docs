@@ -39,7 +39,7 @@ In this tutorial, we:
    2. On the **Insert** ribbon, select **Table**.
    3. In the dialog window, select **My table has headers**, and select **OK**.
       
-      Your Excel file is now in a table format. [Format the data as a table](https://support.office.com/en-us/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) provides additional details on table formatting in Excel.
+      Your Excel file is now in a table format. [Format the data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) provides additional details on table formatting in Excel.
    4. Name the table **Drawings**:  
       
       ![Rename table to Drawings](./media/tutorial-working-with-images-in-excel/drawings-table.png)

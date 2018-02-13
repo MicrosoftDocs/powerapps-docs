@@ -29,7 +29,7 @@ It's important that you understand what level of access to these entities users 
 
 The two permission levels that are most often used are read-only access and full access. The Common Data Service includes permission sets at these two permission levels for all its entities. View permission sets provide read access to an entity. Maintain permission sets provide full access to an entity.
 
-The security model enables any combination of these permissions to be assigned to a user role. Roles combine the various permissions that are granted across the permission sets that are added to them. Therefore, the members of a role can access all the data that the permission sets that are included in the role give them access to. For more information about the Common Data Service security model, see [Security model](https://docs.microsoft.com/en-us/common-data-service/entity-reference/security-model).
+The security model enables any combination of these permissions to be assigned to a user role. Roles combine the various permissions that are granted across the permission sets that are added to them. Therefore, the members of a role can access all the data that the permission sets that are included in the role give them access to. For more information about the Common Data Service security model, see [Security model](https://docs.microsoft.com/common-data-service/entity-reference/security-model).
 
 ## Identify the entities
 To configure the correct access controls for an app, you must know what entities the app uses. To see a list of the entities that an app uses, follow these steps.

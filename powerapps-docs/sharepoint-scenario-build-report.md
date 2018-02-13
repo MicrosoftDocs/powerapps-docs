@@ -174,7 +174,7 @@ When Power BI Desktop brought the lists in, it created a relationship between th
    
     This formula creates a table called **Dates** with a single date column. The table covers all dates from your other table, and it updates automatically if additional dates are added (i.e. if data is refreshed).
    
-    This formula and the other ones in this section use Data Analysis Expressions (DAX), a formula language for Power BI and other technologies. For more information, see [DAX basics in Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-quickstart-learn-dax-basics/).
+    This formula and the other ones in this section use Data Analysis Expressions (DAX), a formula language for Power BI and other technologies. For more information, see [DAX basics in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-quickstart-learn-dax-basics).
 3. Press Enter to create the **Dates** table.
    
     ![Dates table](./media/sharepoint-scenario-build-report/05-02-07-date-table.png)

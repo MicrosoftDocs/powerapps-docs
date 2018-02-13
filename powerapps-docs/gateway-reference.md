@@ -82,7 +82,7 @@ The gateway runs as a Windows service, so you can start and stop it in multiple 
 
 **Configure a firewall or proxy**
 
-For information about how to provide proxy information for your gateway, see [Configure proxy settings](https://powerbi.microsoft.com/en-us/documentation/powerbi-gateway-proxy/).
+For information about how to provide proxy information for your gateway, see [Configure proxy settings](https://docs.microsoft.com/power-bi/service-gateway-proxy).
 
 You can verify whether your firewall, or proxy, may be blocking connections by running the following command from a PowerShell prompt. This command will test connectivity to the Azure Service Bus. This only tests network connectivity and doesn't have anything to do with the cloud server service or the gateway. It helps to determine whether your machine can actually get out to the internet.
 
@@ -137,7 +137,7 @@ The on-premises data gateway is configured to use *NT SERVICE\PBIEgwService* for
 
 This isn't the account used to connect to on-premises data sources or the work or school account with which you sign in to cloud services.
 
-If you encounter issues with your proxy server due to authentication, you may want to change the Windows service account to a domain-user or managed-service account as [proxy configuration](https://powerbi.microsoft.com/documentation/powerbi-gateway-proxy/#changing-the-gateway-service-account-to-a-domain-user) describes.
+If you encounter issues with your proxy server due to authentication, you may want to change the Windows service account to a domain-user or managed-service account as [proxy configuration](https://docs.microsoft.com/power-bi/service-gateway-proxy#changing-the-gateway-service-account-to-a-domain-user) describes.
 
 ## Frequently asked questions
 #### General

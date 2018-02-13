@@ -138,5 +138,5 @@ PowerAppsNotification.SendPushNotification(
 * Notifications show the generic PowerApps icon instead of a specific app icon.
 * When you use Microsoft Flow, you can send a push notification to only one recipient at a time.
 
-For reference information, see [PowerApps Notification reference](https://docs.microsoft.com/en-us/connectors/powerappsnotification/).
+For reference information, see [PowerApps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
 
