@@ -22,11 +22,11 @@ ms.author: fikaradz
 A control that shows a [Power BI ](https://powerbi.microsoft.com) tile inside an app.
 
 ## Description
-Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://powerbi.microsoft.com/documentation/powerbi-service-dashboard-tiles/)** inside your apps.  Choose the tile you want to show by setting its **Workspace**, **Dashboard** and **Tile** properties in the **Data** tab of the options panel.
+Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** inside your apps.  Choose the tile you want to show by setting its **Workspace**, **Dashboard** and **Tile** properties in the **Data** tab of the options panel.
 
 ## Sharing and security
 Once shared, the PowerApp will be accessible by all users who have permissions to access the app.  However in order to make the Power BI content visible to those users, the dashboard where the tile comes from needs to be
-[shared](https://powerbi.microsoft.com/documentation/powerbi-service-how-should-i-share-my-dashboard/) with the user on Power BI.  This ensures that Power BI sharing permissions are respected when Power BI content is accessed in an app.
+[shared](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) with the user on Power BI.  This ensures that Power BI sharing permissions are respected when Power BI content is accessed in an app.
 
 ## Key properties
 **Workspace** – The Power BI workspace where the tile comes from.
@@ -64,5 +64,5 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
    
     Don't know how to [add and configure a control](../add-configure-controls.md)?
    
-   Don't have have Power BI? [Sign up](https://powerbi.microsoft.com/en-us/documentation/powerbi-service-self-service-signup-for-power-bi/).
+   Don't have have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 

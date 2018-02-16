@@ -21,7 +21,7 @@ ms.author: sirsu
 # Connect to Power BI from PowerApps
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
 
-Power BI is a suite of business analytics tools to analyze data and share insights. Monitor your business and get answers quickly with rich dashboards available on every device. In your app, you can check the status of the data alerts that you have set up in the Power BI service. For more information on data alerts in Power BI, head to the [documentation page](https://powerbi.microsoft.com/documentation/powerbi-service-set-data-alerts/).
+Power BI is a suite of business analytics tools to analyze data and share insights. Monitor your business and get answers quickly with rich dashboards available on every device. In your app, you can check the status of the data alerts that you have set up in the Power BI service. For more information on data alerts in Power BI, head to the [documentation page](https://https://docs.microsoft.com/power-bi/service-set-data-alerts).
 
 This topic shows you how to use the Power BI connection in an app, and lists the available functions.
 
