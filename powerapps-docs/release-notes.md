@@ -14,12 +14,18 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/08/2018
+ms.date: 02/13/2018
 ms.author: sharik
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+
+> [!NOTE]
+> Releases are rolled out over several days. New or updated functionality may not appear immediately.
+
+## Feb. 12
+* The volume control for embedded [video](controls/control-audio-video.md) and [audio](controls/control-audio-video.md) playback is now inline. To mute playback, instead of clicking or tapping a button, users must now use the volume control to lower the volume.
 
 ## Feb. 7
 1. Removed the Zoom, Brightness, and Contrast properties from the [Camera](controls/control-camera.md) and [Barcode scanner](controls/control-barcodescanner.md) controls.
