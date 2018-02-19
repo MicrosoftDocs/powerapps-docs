@@ -178,16 +178,22 @@
     href: cognitive-services-api.md
 - name: Develop for PowerApps
   items:
-  - name: PowerApps for enterprise developers, partners, and ISVs
-    href: dev-enterprise-intro.md
-  - name: Build and certify custom connectors
-    href: register-custom-api.md
-  - name: Integrate with websites and other technologies
-    href: embed-apps-dev.md
-  - name: Develop offline-capable apps
-    href: offline-apps.md
-  - name: Let customers test drive your apps
-    href: dev-appsource-test-drive.md
+  - name: Canvas apps
+    items: 
+    - name: PowerApps for enterprise developers, partners, and ISVs
+      href: dev-enterprise-intro.md
+    - name: Build and certify custom connectors
+      href: register-custom-api.md
+    - name: Integrate with websites and other technologies
+      href: embed-apps-dev.md
+    - name: Develop offline-capable apps
+      href: offline-apps.md
+    - name: Let customers test drive your apps
+      href: dev-appsource-test-drive.md
+  - name: Model apps
+    items: 
+    - name: Model apps for developers
+      href: model-apps-for-developers.md
 - name: Administration and ALM
   items:
   - name: PowerApps in your organization Q&A
