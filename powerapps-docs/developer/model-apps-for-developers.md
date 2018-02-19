@@ -40,7 +40,7 @@ Let's look at what you can do with model apps.
 
 ## Distribute your apps on AppSource
 
-If you are an ISV, you can sell the model applications you create using AppSource. With AppSource you can promote your app and offer customers the opportunity to try it, buy it, or contact you for more information. When people find your apps on AppSource they will know that it has passed a review of a set of criteria to ensure they will have a good experience with it. Each app is included within a solution.
+If you are an ISV, you can sell the model applications you create using [AppSource](https://appsource.microsoft.com). With AppSource you can promote your app and offer customers the opportunity to try it, buy it, or contact you for more information. When people find your apps on AppSource they will know that it has passed a review of a set of criteria to ensure they will have a good experience with it. Each app is included within a solution.
 
 More information: [Publish your app on AppSource](/dynamics365/customer-engagement/developer/publish-app-appsource)
 
@@ -112,8 +112,11 @@ More information: [Programming models for Dynamics 365 Customer Engagement](/dyn
 ## Get Started
 
 As a developer, you probably want to just start looking at the APIs and understand how you write code for model apps using CDS. Slow down.
+
 Remember that all the benefits you gain by using model apps comes from the integrated platform that model apps are built upon. Rather than building an app with code, you will build your app using the app tools which will consume and append to the underlying metadata that drives the platform. Most of the time, you won’t need to or want to define your app using code.
+
 Instead, you will use code to extend the business logic or app behavior when the robust configuration options to customize the app are not sufficient to meet requirements. To avoid writing unnecessary code, you should first understand whether you can achieve the requirement without it. If you find a gap, you can write code to fill that gap rather than attempt to replace existing functionality with code you must write and maintain.
+
 The first step for any developer is to understand how to build and extend model applications without code.
 
 <!-- <continue on to introduce learning path for developers in a separate topic> -->
