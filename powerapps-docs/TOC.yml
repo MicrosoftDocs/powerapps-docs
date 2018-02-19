@@ -193,7 +193,7 @@
   - name: Model apps
     items: 
     - name: Model apps for developers
-      href: model-apps-for-developers.md
+      href: developer/model-apps-for-developers.md
 - name: Administration and ALM
   items:
   - name: PowerApps in your organization Q&A
