@@ -1,6 +1,6 @@
 ---
 title: Model apps for developers| Microsoft Docs
-description: Describes the value proposition for model apps for developers.
+description: Learn how developers can add value to model apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -18,21 +18,24 @@ ms.author: jdaly
 ---
 # Model apps for developers
 
-Model apps offers customers, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. These days there is little time to write a lot of custom code to deliver solutions. To meet requirements for business applications you need a framework that provides the agility and flexibility to rapidly adapt to changes and get user acceptance and adoption. 
+Model apps offers businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. These days there is little time to write a lot of custom code to deliver solutions. To meet requirements for business applications you need a framework that provides the agility and flexibility to rapidly adapt to changes and get user acceptance and adoption. 
 
-Business apps typically model and track connections between various types of business data (people, places, and things). Model apps provide for declarative development of relational business applications with flexible data models and web services. In addition to the declarative app capabilities, model apps can be extended and integrated with external systems through a set of web services and behaviors can be added to the client using a client API.
+Business apps typically model and track connections between various types of business data (people, places, and things). Unlike canvas apps, model apps provide for declarative development of relational business applications with flexible data models and web services. In addition to the declarative app capabilities, model apps can be extended and integrated with external systems through a set of web services as well as capabiliites to include client-side logic using JavaScript.
 
 ## How are model apps different from canvas apps?
 
-Model apps use the new Common Data Service (CDS) that includes the core capabilities of Dynamics 365 Customer Engagement apps. One of these capabilities is to define an app and all the supporting components into a *solution* file that you can export. You can then import the solution into a different environment to move all the functionality of your model app to that environment. 
-
-More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)
-
-Each CDS instance includes a website that provides a user interface for the app you configure in your solution. When you create a model app, you choose which entities to expose in your app and what the navigation experience will be. You will also configure what lists are available and design forms people will use to view and edit data. Users can access your app using their browser or through apps for their phone or tablet. 
-
+While canvas apps can connect to data in the Common Data Service (CDS), model apps are part of the new CDS that includes the core capabilities of Dynamics 365 Customer Engagement. Like canvas apps, no code is required to create a model app. Each CDS instance includes a web application that provides a user interface for the app you configure. When you create a model app, you choose which entities to expose in your app and what the navigation experience will be. You will also configure what lists are available and design forms people will use to view and edit data. Users can access your app using their browser or through apps for their phone or tablet.
+<!-- Look for new content in this repo -->
 More information: [Create or edit an app by using the app designer](/dynamics365/customer-engagement/customize/create-edit-app)
 
-Like canvas apps, no code is required to create a model app. However, the new CDS exposes the complete set of web services and APIs used by Dynamics 365 Customer Engagement. This opens a wide range of new possibilities for developers you can learn about in the [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide).
+For developers, one of the most important capabilities is to define an app and all the supporting components into a *solution* file that you can export. You can then import the solution file into a different environment to move all the functionality of your model app to that environment. 
+
+The solution framework is the key to many of the benefits for developers creating model apps. Think of a solution as both the way you define a software project, like a Visual Studio project, and as how you will distribute your software, like an installer. 
+
+More information: [Introduction to solutions](introduction-solutions.md)
+
+Because the new CDS in this preview release is an instance of Dynamics 365 Customer Engagement, you will find more information for developers in the 
+ [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide).
 
 ## What can you do?
 
@@ -40,15 +43,17 @@ Let's look at what you can do with model apps.
 
 ## Distribute your apps on AppSource
 
-If you are an ISV, you can sell the model applications you create using [AppSource](https://appsource.microsoft.com). With AppSource you can promote your app and offer customers the opportunity to try it, buy it, or contact you for more information. When people find your apps on AppSource they will know that it has passed a review of a set of criteria to ensure they will have a good experience with it. Each app is included within a solution.
+If you are an ISV, you can sell the model apps you create using [AppSource](https://appsource.microsoft.com). With AppSource you can promote your app and offer customers the opportunity to try it, buy it, or contact you for more information. When people find your apps on AppSource they will know that it has passed a review of a set of criteria to ensure they will have a good experience with it. Each model app is included within a solution.
 
 More information: [Publish your app on AppSource](/dynamics365/customer-engagement/developer/publish-app-appsource)
 
 ## Create modular solution libraries
 
+Line of business applications are frequently delivered as modules for specific industries or groups of users. Each of these apps frequently include similar functionality. Developers need flexibility in how they compose what they ship.
+
 The solution framework allows you to create a discrete set of components that provide a set of functionalities that can include entities, security roles, business logic, apps and more. Each solution can be installed and uninstalled to return the customer’s deployment to its original state. Each solution you create runs on top of the system solution and can access the capabilities of that underlying solution.
 
-You can also build solutions that run on top of other solutions to create a set of functionalities that can be shared by different solutions. In this way, you can build and maintain a common solution library as a module to support multiple solutions. This way customers only need to install the solution that is right for them and you don’t need to include the same shared functionality in every solution. If you need to push out an update to a solution library that supports multiple solutions, you only need to update the common solution library.
+You can also build solutions that run on top of other solutions to create a set of functionalities that can be shared by different model apps. In this way, you can build and maintain a common solution library as a module to support multiple solutions. This solution does not need to include a definition of a model app. This way customers only need to install the solution that is right for them and you don’t need to include the same shared functionality in every solution. If you need to push out an update to a solution library that supports multiple solutions, you only need to update the common solution library.
 
 Customers, SIs, and other ISVs can then build solutions on top of your solutions to achieve the specific customizations they require.
 
@@ -93,7 +98,6 @@ More information: [Add Office 365 Online services](/dynamics365/customer-engagem
 ## Use Cross-platform mobile applications
 
 Model mobile apps download metadata about your data model, security configuration, business processes and rules, transforming the out-of-the-box experience into a customized mobile app for your app.
-Canvas mobile apps provide highly tailored experiences that can be rapidly created without code.
 
 More information [User Guide (Dynamics 365 for phones and tablets)](/dynamics365/customer-engagement/mobile-app/dynamics-365-phones-tablets-users-guide)
 
