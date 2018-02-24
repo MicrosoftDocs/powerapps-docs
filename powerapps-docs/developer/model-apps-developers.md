@@ -18,24 +18,105 @@ ms.author: jdaly
 ---
 # Model apps for developers
 
-Model apps offers businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. These days there is little time to write a lot of custom code to deliver solutions. To meet requirements for business applications you need a framework that provides the agility and flexibility to rapidly adapt to changes and get user acceptance and adoption. 
+PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are model apps built using the new Common Data Service (CDS). The new CDS now contains the core functionality of the Dynamics 365 Customer Engagement family of applications. With model apps, you can build apps that use the same extensibility capabilities as those applications, or extend those applications.
 
-Business apps typically model and track connections between various types of business data (people, places, and things). Unlike canvas apps, model apps provide for declarative development of relational business applications with flexible data models and web services. In addition to the declarative app capabilities, model apps can be extended and integrated with external systems through a set of web services as well as capabiliites to include client-side logic using JavaScript.
+> [!NOTE]
+> Because the new CDS in this preview release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the 
+ [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide). This topic will provide an overview with links to more information.
+
+## Progress from simple to sophisticated
+
+![Diagram showing the simple to sophisticated progression](../media/dev-model-apps/simple-to-sophisticated.png)
+
+Canvas apps let power users to create the task-focused apps they need connected to a wide range of data sources, including the new Common Data Service (CDS). 
+
+Model apps provide the way to step up into sophisticated enterprise applications where events that occur within the CDS can trigger logic that can leverage  declarative processes, call custom code, or integrate with external data.
+
+## Declarative development
+
+Model apps provide for declarative development of metadata-driven relational business applications with flexible data models and web services. This means you will usually build model applications without writing code by customizing the application using customization tools provided rather than by writing code.
+
+This approach allows for customers who use your apps or SIs who deploy your apps to adapt them to meet the requirements for each business without having to write code.
+
+### Schema designers
+
+You can add or modify the entities in the system and how they are related to each other. You can create new fields and define how they should behave.
+
+### Business Logic
+
+You can use the Process designers to apply business logic that is evaluated and invoked on the server or on the client.
+
+## Developing with code
+
+While declarative development can address most requirements, there will always be some requirements that are better addressed using code. The CDS enables this in several ways:
+
+### Web services for data operations
+
+Every data operation performed by the application can be done via web services. There are two main web services:
+- **Web API**: An OData v4 RESTful web service
+    - Recommended for use from external systems written on any language or platform.
+    - Frequently used by client-side JavaScript
+- **Organization Service**: A WCF service supported by .NET SDK assemblies
+    - Required for use in plug-ins
+
+Both services use OAuth 2.0 for authentication
+
+### Plug-ins for server events
+
+You can write .NET assemblies and register them for specific events that occur within the CDS. These assemblies will accept contextual data about the events that occur and you can do the following:
+ - Determine that the operation should not complete and cancel it with an error
+ - Enrich or modify the data in the operation.
+ - Perform additional operations using the organization service.
+ - Invoke processes on external system via integration with Azure Service bus or a web hook
+
+These event handlers can respond synchronously or asynchronously. Asynchronous responses for events are added to a queue and performed in a deferred manner to improve overall system performance.
+
+### Web resources
+
+There is a virtual folder called `webresources` within each CDS instance where you can upload HTML, JS, CSS, and image files and access each of them by name in your browser. These files can refer to each other using relative path names. This gives  all the building blocks you need to make web applications using files that are processed within the authenticated session of your browser. Using only client-side code with AJAX techniques, you can create rich applications that can run within a browser window or within an IFrame in a form or dashboard.
+
+### JavaScript for client events
+
+You can write event handler functions using JavaScript for specified form events such as the value of a field in a form changing or a form being saved. Each event is passed contextual data about the events which includes an object model with methods you can call to perform actions within the context of the event. Some things you can do include the following:
+ - Cancel the operation
+ - Hide or display UI elements depending on rules
+ - Display notifications to the user
+ - Perform additional data operations using the Web API
+
+JavaScript can also be used to perform operations when custom commands are added to the application.
+
+### Web services for metadata
+
+Both the Web API and Organization Service provide Metadata APIs. You can use these to extend the metadata model with code, but generally you should use the designers. 
+
+The most common scenario is to read metadata so that the logic you apply in code can adapt to how environment has been customized.
+
+
+## Web services for deployment
+
+, the web services built into the CDS used by model apps allow developers familiar with standards-based web technologies to extend and integrate their business applications built on CDS using HTML, JavaScript, and CSS, and the .NET Framework. The CDS exposes the same end user and administrative capabilities you've seen in the UI through a RESTful web service API built on open standards including OAuth 2.0 and OData v4. Because the CDS embraces web standards, external systems can integrate with your business app built on the CDS using their platform and languages of choice.
+
+More information: [Programming models for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/programming-models)
 
 ## How are model apps different from canvas apps?
 
-While canvas apps can connect to data in the Common Data Service (CDS), model apps are part of the new CDS that includes the core capabilities of Dynamics 365 Customer Engagement. Like canvas apps, no code is required to create a model app. Each CDS instance includes a web application that provides a user interface for the app you configure. When you create a model app, you choose which entities to expose in your app and what the navigation experience will be. You will also configure what lists are available and design forms people will use to view and edit data. Users can access your app using their browser or through apps for their phone or tablet.
+While canvas apps can connect to data in the Common Data Service (CDS) as well as other sources, model apps are part of the new CDS that includes the core capabilities of the Dynamics 365 Customer Engagement family of applications. 
+
+
+
+
+Like canvas apps, no code is required to create a model app. Each CDS instance includes a web application that provides a user interface for the app you configure. When you create a model app, you choose which CDS entities to expose in your app and what the navigation experience will be. You will also configure what common lists are available and design forms everyone will use to view and edit data. Users can access your app using their browser or through apps for their phone or tablet.
 <!-- Look for new content in this repo -->
 More information: [Create or edit an app by using the app designer](/dynamics365/customer-engagement/customize/create-edit-app)
 
-For developers, one of the most important capabilities is to define an app and all the supporting components into a *solution* file that you can export. You can then import the solution file into a different environment to move all the functionality of your model app to that environment. 
+### Transport your model app in a solution file
+For developers, one of the most important capabilities is to define a model app and all the supporting components into a *solution* file that you can export. You can then import the solution file into a different environment to move all the functionality of your model app to that environment. 
 
-The solution framework is the key to many of the benefits for developers creating model apps. Think of a solution as both the way you define a software project, like a Visual Studio project, and as how you will distribute your software, like an installer. 
+The solution framework is the key to many of the benefits for developers creating model apps. Think of a solution as both the way you define a software project, like a Visual Studio project, and as how you will distribute your software, like an installer.  When a team of developers work together to create a model app, the components of the solution can be disassembled and checked into your source code repository and then re-assembled so that the functionality included in the solution can be added to another environment or distributed to customers. 
 
 More information: [Introduction to solutions](introduction-solutions.md)
 
-Because the new CDS in this preview release is an instance of Dynamics 365 Customer Engagement, you will find more information for developers in the 
- [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide).
+
 
 ## What can you do?
 
@@ -109,9 +190,7 @@ More information: [Reporting and Analytics Guide for Dynamics 365 Customer Engag
 
 ## Extend with code
 
-While low code or no code customizations are preferred, the web services built into the CDS used by model apps allow developers familiar with standards-based web technologies to extend and integrate their business applications built on CDS using HTML, JavaScript, and CSS, and the .NET Framework. The CDS exposes the same end user and administrative capabilities you've seen in the UI through a RESTful web service API built on open standards including OAuth 2.0 and OData v4. Because the CDS embraces web standards, external systems can integrate with your business app built on the CDS using their platform and languages of choice.
 
-More information: [Programming models for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/programming-models)
 
 ## Get Started
 
