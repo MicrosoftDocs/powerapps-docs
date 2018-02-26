@@ -18,9 +18,9 @@ ms.author: jdaly
 ---
 # Introduction to solutions
 
-*Solutions* are how customizers and developers author, package, and maintain units of software that extend the Common Data Service (CDS). Customizers and developers distribute solutions so that organizations can use the CDS to install and uninstall the business functionality defined by the solution.
-Every customization that you make to the CDS is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different CDS environment.
-If you intend to transport customizations or extensions between different CDS environments or distribute solutions using AppSource, you must understand the solution framework.
+*Solutions* are how customizers and developers author, package, and maintain units of software that extend the Common Data Service for Apps. Customizers and developers distribute solutions so that organizations can use the Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
+Every customization that you make to the Common Data Service for Apps is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
+If you intend to transport customizations or extensions between different Common Data Service for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
 
 ## Unmanaged and managed solutions
 
@@ -60,7 +60,7 @@ More information: [Developer Guide: Maintain managed solutions > Create managed 
 
 It is possible for two managed solutions to be installed which contradict each other or for some customizations applied to the environment to override a managed solution. How does this work?
 
-It works because CDS evaluates managed solutions by the order in which they are installed and any customizations that are not in a managed solution are evaluated last.
+It works because Common Data Service for Apps evaluates managed solutions by the order in which they are installed and any customizations that are not in a managed solution are evaluated last.
 
 The following diagram introduces how managed solutions and unmanaged customizations interact to control what is included at runtime in the application.
 <!-- TODO: update this diagram with a modern look -->

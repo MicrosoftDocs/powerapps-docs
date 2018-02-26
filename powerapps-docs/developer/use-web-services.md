@@ -19,7 +19,7 @@ ms.author: jdaly
 
 # Use Web Services with model apps
 
-The CDS provides two web services you can use to interact with data. Choose the one which best matches the requirement and your skills. More information: [Developer Guide: Choose your development style for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/choose-development-style)
+The Common Data Service for Apps provides two web services you can use to interact with data. Choose the one which best matches the requirement and your skills. More information: [Developer Guide: Choose your development style for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/choose-development-style)
 
 ## Web API
 The Web API is an OData v4 RESTful endpoint. Use this for any programming language that supports HTTP requests and authentication using OAuth 2.0.
@@ -28,7 +28,7 @@ More information: [Developer Guide: Use the Dynamics 365 Customer Engagement Web
 
 ## Organization Service
 
-The Organization service is a core part of the CDS platform. It is a Windows Communication Foundation (WCF) service and currently exposes only a SOAP endpoint. 
+The Organization service is a core part of the Common Data Service for Apps platform. It is a Windows Communication Foundation (WCF) service and currently exposes only a SOAP endpoint. 
 .NET developers can use the SDK assemblies to perform data operations. Within a Plug-in, the Organization service via the SDK assemblies is the only option.
 > [!NOTE]
 > It is possible for developers to use the SOAP endpoint of the organization service without using the .NET SDK assemblies, but the RESTful nature of the Web API makes it a much superior alternative.
@@ -49,7 +49,7 @@ The SOAP endpoint for the organization service was introduced in 2011 and we hav
 
 ## Discovery services
 
-Each CDS user may be able to access multiple CDS instances. Discovery services let you write code to provide users a list of instances they can connect to based on the Microsoft account they use. Each instance includes a URL that you can then use to connect to the instance they choose. 
+Each Common Data Service for Apps user may be able to access multiple Common Data Service for Apps instances. Discovery services let you write code to provide users a list of instances they can connect to based on the Microsoft account they use. Each instance includes a URL that you can then use to connect to the instance they choose. 
 
 A Discovery service is accessed through either the Web API or the Organization Service.
 
@@ -81,7 +81,7 @@ Some examples:
 - The number of options available in an optionset attribute can change. Rather than hard-code the values in your environment, consider whether different options are present. You can query the system to determine whether the current environment has different options.
 - The display name for an entity can be changed. The default display name for the account entity is *Account*. This could be changed to *Company*. If you want to display a message to a user and refer to the name of an entity, you should not hard-code this but instead use the value that matches what the user is accustomed to seeing and use the display name retrieved from the entity metadata instead.
 
-Developing a good working understanding of the metadata in the system can help you understand how the CDS platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. 
+Developing a good working understanding of the metadata in the system can help you understand how the Common Data Service for Apps platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. 
 
 More information: [Developer Documentation : Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
 

@@ -30,7 +30,7 @@ More information: [Developer Guide: Custom workflow activities (workflow assembl
 
 ## Create a plug-in
 
-You can write a .NET assembly to plug-in to the data transaction flow to apply business logic on the server. With the CDS platform there is a framework that allows you to register specific events to execute code defined within a class in an assembly. That class inherits a specific interface that exposes an [Execute method](/dotnet/api/microsoft.xrm.sdk.iplugin.execute). When the registered event occurs, the `Execute` method on the class is invoked and passed contextual data about the event.
+You can write a .NET assembly to plug-in to the data transaction flow to apply business logic on the server. With the Common Data Service for Apps platform there is a framework that allows you to register specific events to execute code defined within a class in an assembly. That class inherits a specific interface that exposes an [Execute method](/dotnet/api/microsoft.xrm.sdk.iplugin.execute). When the registered event occurs, the `Execute` method on the class is invoked and passed contextual data about the event.
 
 You will use the *Plug-in Registration Tool* to register your assemblies.
 

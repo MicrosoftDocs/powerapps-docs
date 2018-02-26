@@ -17,7 +17,7 @@ ms.date: 02/20/2018
 ms.author: jdaly
 ---
 # Introduction to model apps for developers
-PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are model apps built using the new Common Data Service (CDS). The new CDS now contains the core functionality of the Dynamics 365 Customer Engagement  applications. With model apps, you can build apps that use the same extensibility capabilities as those applications or extend those applications.
+PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are model apps built using the new Common Data Service for Apps. The Common Data Service for Apps now contains the core functionality of the Dynamics 365 Customer Engagement  applications. With model apps, you can build apps that use the same extensibility capabilities as those applications or extend those applications.
 
 ## Get a developer instance
 The first thing to do is get an environment you can experiment with as you learn.
@@ -36,7 +36,7 @@ If you are new to the Dynamics 365 Customer Engagement applications, the followi
 - [Use Web Services](use-web-services.md)
 
 > [!NOTE]
-> Because the new CDS in this preview release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
+> Because the Common Data Service for Apps in this preview release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
 
 
 ## Tools and resources for developers
@@ -51,9 +51,9 @@ The following tools are distributed in NuGet packages. The [Developer Guide: Dow
 |---------|---------|
 |Code generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the entity data model used by the organization service. <br />More information: <br />[Organization Service](use-web-services.md#organization-service)<br />[Developer Guide: Create early bound entity classes with the code generation tool ](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)|
 |Configuration Migration tool `DataMigrationUtility.exe`|Used to move configuration data across environments. Configuration data is used to define custom functionality  and is typically stored in custom entities. This tool is not designed to move business data. <br /> More information: [Administrator Guide: Move configuration data across instances and organizations with the Configuration Migration tool](/dynamics365/customer-engagement/admin/manage-configuration-data)|
-|Package Deployer `PackageDeployer.exe`|Used to deploy packages on CDS instances. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy Solution Packages](introduction-solutions.md#deploy-solution-packages)<br />[Distribute your apps on AppSource](what-developers-can-do-with-model-apps.md#distribute-your-apps-on-appsource)<br />[Developer Guide: Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)|
+|Package Deployer `PackageDeployer.exe`|Used to deploy packages on Common Data Service for Apps instances. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy Solution Packages](introduction-solutions.md#deploy-solution-packages)<br />[Distribute your apps on AppSource](what-developers-can-do-with-model-apps.md#distribute-your-apps-on-appsource)<br />[Developer Guide: Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)|
 |Plug-in Registration Tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to server events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Developer Guide: Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)|
-|SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a CDS compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development of solutions](introduction-solutions.md#team-development-of-solutions)<br />[Developer Guide: Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
+|SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a Common Data Service for Apps compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development of solutions](introduction-solutions.md#team-development-of-solutions)<br />[Developer Guide: Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
 
 ### .NET SDK Assemblies 
 
@@ -69,7 +69,7 @@ The following are assemblies .NET developers can use to interact with the organi
 
 ### Community Tools
 
-The Dynamics 365 community creates tools! Many of the most popular ones are distributed via in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to CDS, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
+The Dynamics 365 community creates tools! Many of the most popular ones are distributed via in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service for Apps, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
 
 The following is a selected list of community tools distributed via the XrmToolBox
 
