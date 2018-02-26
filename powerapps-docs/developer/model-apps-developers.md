@@ -25,11 +25,11 @@ The first thing to do is get an environment you can experiment with as you learn
 - TODO: Link to how to get an instance
 - TODO: Describe the developer licence
 
-## Learning Path
+## Get Started
 If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience building model apps. There are some new designers available to you, but generally the concepts are the same.
 
 If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working with model apps.
-- [Understand what developers get with model apps](what-developers-get-with-model-apps.md)
+- [Understand what developers get with model apps](what-developers-can-do-with-model-apps.md)
 - [Introduction to solutions](introduction-solutions.md)
 - [Apply Business Logic with code](apply-business-logic-with-code.md)
 - [Use Web Services](use-web-services.md)
@@ -50,7 +50,7 @@ The following tools are distributed in NuGet packages. The [Developer Guide: Dow
 |---------|---------|
 |Code generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the entity data model used by the organization service. <br />More information: <br />[Organization Service](use-web-services.md#organization-service)<br />[Developer Guide: Create early bound entity classes with the code generation tool ](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)|
 |Configuration Migration tool `DataMigrationUtility.exe`|Used to move configuration data across environments. Configuration data is used to define custom functionality  and is typically stored in custom entities. This tool is not designed to move business data. <br /> More information: [Administrator Guide: Move configuration data across instances and organizations with the Configuration Migration tool](/dynamics365/customer-engagement/admin/manage-configuration-data)|
-|Package Deployer `PackageDeployer.exe`|Used to deploy packages on CDS instances. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy Solution Packages](introduction-solutions.md#deploy-solution-packages)<br />[Distribute your apps on AppSource](what-developers-get-with-model-apps.md#distribute-your-apps-on-appsource)<br />[Developer Guide: Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)|
+|Package Deployer `PackageDeployer.exe`|Used to deploy packages on CDS instances. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy Solution Packages](introduction-solutions.md#deploy-solution-packages)<br />[Distribute your apps on AppSource](what-developers-can-do-with-model-apps.md#distribute-your-apps-on-appsource)<br />[Developer Guide: Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)|
 |Plug-in Registration Tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to server events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Developer Guide: Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)|
 |SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a CDS compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development of solutions](introduction-solutions.md#team-development-of-solutions)<br />[Developer Guide: Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
 

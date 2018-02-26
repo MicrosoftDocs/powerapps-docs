@@ -47,7 +47,7 @@ An **unmanaged** solution is one that is still under development or isn’t inte
 ## Solution publishers
 Each solution is linked to a solution publisher. The solution publisher provides information about how to contact the publisher as well a customization prefix value. The default value is `new`.
 
-When any schema changes are included as part of a solution, the solution publisher customization prefix is prepended to the name of the schema items. Any custom actions (See [Create Custom Actions](use-web-services.md#create-custom-actions)) also have this value appended to them. This is valuable because it allows for easy recognition of which solution added the schema item or custom action. It is not required for all schema items and custom actions in a solution to use the same customization prefix, but it is strongly recommended.
+When any schema changes are included as part of a solution, the solution publisher customization prefix is prepended to the name of the schema items. Any custom actions (See [Use Custom Actions](use-web-services.md#use-custom-actions)) also have this value appended to them. This is valuable because it allows for easy recognition of which solution added the schema item or custom action. It is not required for all schema items and custom actions in a solution to use the same customization prefix, but it is strongly recommended.
 
 > [!IMPORTANT]
 > Before you start creating a solution, you should create a solution publisher record and create a new solution linked to it. You should make sure the customization prefix represents a value that makes sense for you. 

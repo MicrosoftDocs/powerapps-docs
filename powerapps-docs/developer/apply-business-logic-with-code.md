@@ -1,6 +1,26 @@
+---
+title: Apply Business Logic with code | Microsoft Docs
+description: Learn how developers can use code to apply business logic to model apps.
+services: ''
+suite: powerapps
+documentationcenter: na
+author: JimDaly
+manager: faisalmo
+editor: ''
+tags: ''
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 02/26/2018
+ms.author: jdaly
+---
 # Apply Business Logic with code
 
-Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.
+Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
+
+When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.
 
 ## Create a workflow extension
 

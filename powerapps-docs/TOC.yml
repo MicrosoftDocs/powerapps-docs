@@ -194,8 +194,8 @@
     items: 
     - name: Model apps for developers
       href: developer/model-apps-developers.md
-    - name: Understand what developers get with model apps
-      href: developer/what-developers-get-with-model-apps.md
+    - name: Understand what developers can do with model apps
+      href: developer/what-developers-can-do-with-model-apps.md
     - name: Introduction to solutions
       href: developer/introduction-solutions.md
     - name: Apply Business Logic with code

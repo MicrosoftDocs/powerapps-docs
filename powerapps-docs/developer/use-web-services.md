@@ -1,4 +1,23 @@
-# Use Web Services
+---
+title: Use Web Services with model apps | Microsoft Docs
+description: Learn how developers can use web services with model apps.
+services: ''
+suite: powerapps
+documentationcenter: na
+author: JimDaly
+manager: faisalmo
+editor: ''
+tags: ''
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 02/26/2018
+ms.author: jdaly
+---
+
+# Use Web Services with model apps
 
 The CDS provides two web services you can use to interact with data. Choose the one which best matches the requirement and your skills. More information: [Developer Guide: Choose your development style for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/choose-development-style)
 
@@ -29,7 +48,7 @@ The SOAP endpoint for the organization service was introduced in 2011 and we hav
 ## Discovery services
 TODO: Add information about the discovery services
 
-## Create Custom Actions
+## Use Custom Actions
 
 One of the declarative options available for processes is to create a *custom action*. A custom action is essentially creating a new message in the organization service. You can use custom actions to combine a set of operations into a named reusable operation. For example, you might create a new message called *new_Escalate* that combines a standard set of operations that are involved in notifying the correct people when an important customer is experiencing a serious issue.
 
