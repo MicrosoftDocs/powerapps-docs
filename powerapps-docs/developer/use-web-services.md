@@ -43,10 +43,18 @@ The organization service defines the supported operations as messages. Each mess
 
 The Web API provides all the same operations as the organization service but presents them in an RESTful style using the OData v4 protocol. OData v4 provides for named operations via *functions* or *actions*. Almost every message available in the organization service is exposed as a corresponding named function or action. Those messages that correspond to CRUD operations are not available in the Web API because as a RESTful service they have implementations using GET, POST, PATCH, and DELETE HTTP methods.
 
+The .NET SDK assemblies for the organization service SOAP endpoint were designed to closely model the underlying platform services based on [IOrganizationService interface](/dotnet/api/microsoft.xrm.sdk.iorganizationservice). However they are not the same components and should not be confused with one another. 
+
 The SOAP endpoint for the organization service was introduced in 2011 and we have announced that it is deprecated. This means that it will continue to work and be supported until we remove it. We have also announced that we will update the .NET SDK assemblies so that they will continue to work after the SOAP endpoint is removed. This means that there will be updated SDK assemblies available before the SOAP endpoint is removed and developers will be required to update their code to use these new assemblies at some point in the future.
 
 ## Discovery services
-TODO: Add information about the discovery services
+
+Each CDS user may be able to access multiple CDS instances. Discovery services let you write code to provide users a list of instances they can connect to based on the Microsoft account they use. Each instance includes a URL that you can then use to connect to the instance they choose. 
+
+A Discovery service is accessed through either the Web API or the Organization Service.
+
+- For the Web API see: [Developer Guide: Discover the URL for your organization using the Web API](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)
+- For the Organization Service see: [Developer Guide: Discover the URL for your organization using the Organization Service](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
 
 ## Use Custom Actions
 

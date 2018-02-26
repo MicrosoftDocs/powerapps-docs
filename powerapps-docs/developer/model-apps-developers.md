@@ -24,6 +24,7 @@ The first thing to do is get an environment you can experiment with as you learn
 
 - TODO: Link to how to get an instance
 - TODO: Describe the developer licence
+- TODO: Describe next steps to get set up for full ISV licensing
 
 ## Get Started
 If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience building model apps. There are some new designers available to you, but generally the concepts are the same.
