@@ -194,8 +194,14 @@
     items: 
     - name: Model apps for developers
       href: developer/model-apps-developers.md
+    - name: Understand what developers get with model apps
+      href: developer/what-developers-get-with-model-apps.md
     - name: Introduction to solutions
       href: developer/introduction-solutions.md
+    - name: Apply Business Logic with code
+      href: developer/apply-business-logic-with-code.md
+    - name: Use Web Services
+      href: developer/use-web-services.md
 - name: Administration and ALM
   items:
   - name: PowerApps in your organization Q&A
