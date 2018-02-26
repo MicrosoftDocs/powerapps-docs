@@ -68,7 +68,7 @@ The following are assemblies .NET developers can use to interact with the organi
 
 ### Community Tools
 
-The Dynamics 365 community has created tools. Many of the most popular ones are distributed via in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to CDS, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
+The Dynamics 365 community creates tools! Many of the most popular ones are distributed via in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to CDS, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
 
 The following is a selected list of community tools distributed via the XrmToolBox
 
@@ -92,7 +92,7 @@ Another tool that is not distributed via the XrmToolBox is Jason Lattimer's [CRM
 
 
 > [!NOTE]
-> Tools created by the community are not supported by Microsoft. If you have questions or issues with the tools, contact the publisher of the tool.
+> Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
 
 
