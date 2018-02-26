@@ -1,5 +1,5 @@
 ---
-title: Understand what developers can to with model apps| Microsoft Docs
+title: Understand what developers can do with model apps| Microsoft Docs
 description: Learn how developers can do with model apps as well as things they don't need to do.
 services: ''
 suite: powerapps
@@ -16,7 +16,7 @@ ms.workload: na
 ms.date: 02/26/2018
 ms.author: jdaly
 ---
-# Understand what developers can to with model apps
+# Understand what developers can do with model apps
 
 As a developer working with the PowerApps platform it is important for you to understand what you can do and what this means about where and when you will write code.
 
