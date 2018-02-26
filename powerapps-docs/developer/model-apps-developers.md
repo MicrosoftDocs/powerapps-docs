@@ -30,7 +30,7 @@ The first thing to do is get an environment you can experiment with as you learn
 If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience building model apps. There are some new designers available to you, but generally the concepts are the same.
 
 If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working with model apps.
-- [Understand what developers get with model apps](what-developers-can-do-with-model-apps.md)
+- [Understand what developers can do with model apps](what-developers-can-do-with-model-apps.md)
 - [Introduction to solutions](introduction-solutions.md)
 - [Apply Business Logic with code](apply-business-logic-with-code.md)
 - [Use Web Services](use-web-services.md)
