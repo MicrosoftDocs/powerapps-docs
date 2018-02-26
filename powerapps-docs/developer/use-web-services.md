@@ -31,13 +31,13 @@ TODO: Add information about the discovery services
 
 ## Create Custom Actions
 
-One of the declarative options available for processes is to create a custom action. A custom action is essentially creating a new message in the organization service. You can use custom actions to combine a set of operations into a named reusable operation. For example, you might create a new message called *Escalate* that combines a standard set of operations that are involved in notifying the correct people when an important customer is experiencing a serious issue.
+One of the declarative options available for processes is to create a *custom action*. A custom action is essentially creating a new message in the organization service. You can use custom actions to combine a set of operations into a named reusable operation. For example, you might create a new message called *new_Escalate* that combines a standard set of operations that are involved in notifying the correct people when an important customer is experiencing a serious issue.
 
 When you define a custom action, you choose the signature of the operation by defining input parameters and properties to be included in any result that is returned. Custom actions can then be invoked from a declarative process using the designer or by code. 
 
 The unique value of custom actions is that the specific operations they contain can be modified by someone who is not a developer using the designer without impacting other processes or code that calls it.  This remains true if the signature of the action does not change. If you need different input parameters or output properties, you should create a new, different custom action to avoid breaking any processes or code using an existing one.
 
-When a custom action is defined in an environment, a new OData v4 Action is available using the Web API and within the organization service the custom action can be invoked using the [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest) directly or by using a strongly typed class generated using the *Code Generation tool (CrmSvcUtil.exe)*
+When a custom action is defined in an environment, a new OData v4 Action is available using the Web API and within the organization service the custom action can be invoked using the [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest) directly or by using a strongly typed class generated using the *Code Generation tool (CrmSvcUtil.exe)*.
 
 More information: 
 - [Customization Guide: Actions overview](/dynamics365/customer-engagement/customize/actions)
@@ -46,13 +46,13 @@ More information:
 
 ## Metadata Services
 
-Both the Web API and the organization service include capabilities to perform CRUD operations on the entity schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements.
+Both the Web API and the organization service include capabilities to perform CRUD operations on the entity schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read metadata.
 
 A more common use for the metadata services is to retrieve metadata about the environment that your extension is running within. Because every environment can be different and schema metadata contains much of the information about how the environment is configured, you may need to retrieve this information to allow for your extensions to adapt to other customizations that are in effect in that environment.
 
 Some examples:
 - The number of options available in an optionset attribute can change. Rather than hard-code the values in your environment, consider whether different options are present. You can query the system to determine whether the current environment has different options.
-- The display name for an entity can be changed. The default display name for the account entity is Account. This could be changed to Company. If you want to display a message to a user and refer to the name of an entity, you should not hard-code this but instead use the value that matches what the user is accustomed to seeing and use the display name retrieved from the entity metadata instead.
+- The display name for an entity can be changed. The default display name for the account entity is *Account*. This could be changed to *Company*. If you want to display a message to a user and refer to the name of an entity, you should not hard-code this but instead use the value that matches what the user is accustomed to seeing and use the display name retrieved from the entity metadata instead.
 
 Developing a good working understanding of the metadata in the system can help you understand how the CDS platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. 
 

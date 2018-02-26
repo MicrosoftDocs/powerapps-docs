@@ -31,21 +31,23 @@ A **managed** solution is a completed solution that is intended to be distribute
 - You cannot export a managed solution.
 - You can add unmanaged customizations to components of a managed solution. When you do this, you create a dependency between your unmanaged customizations and the managed solution. When a dependency exists, the managed solution cannot be uninstalled until you remove the dependency.
 - When a managed solution is deleted (uninstalled), all the customizations and extensions included with it are removed.
+
  > [!IMPORTANT]
- > When you uninstall a managed solution, the following data is lost: data stored in custom entities that are part of the solution and data stored in custom attributes on system entities that are part of the managed solution.
+ > When you uninstall a managed solution, the following data is lost: data stored in custom entities that are part of the managed solution and data stored in custom attributes that are part of the managed solution on other entities that are not part of the managed solution.
 
 An **unmanaged** solution is one that is still under development or isn’t intended to be distributed. 
 - While a solution is unmanaged, you can continue to add and remove components to it. 
 - You can export an unmanaged solution to transport unmanaged customizations from one environment to another.
 - When an unmanaged solution is deleted, only the solution container of any customizations included in it is deleted. All the unmanaged customizations remain in effect and belong to the default solution. 
 - When the unmanaged solution is complete and you want to distribute it, export it as a managed solution.
+
  > [!NOTE]
  > You cannot import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
 
 ## Solution publishers
 Each solution is linked to a solution publisher. The solution publisher provides information about how to contact the publisher as well a customization prefix value. The default value is `new`.
 
-When any schema changes are included as part of a solution, the solution publisher customization prefix is prepended to the name of the schema items. This is valuable because it allows for easy recognition of which solution added the schema item. It is not required for all schema items in a solution to use the same customization prefix, but it is strongly recommended.
+When any schema changes are included as part of a solution, the solution publisher customization prefix is prepended to the name of the schema items. Any custom actions (See [Create Custom Actions](use-web-services.md#create-custom-actions)) also have this value appended to them. This is valuable because it allows for easy recognition of which solution added the schema item or custom action. It is not required for all schema items and custom actions in a solution to use the same customization prefix, but it is strongly recommended.
 
 > [!IMPORTANT]
 > Before you start creating a solution, you should create a solution publisher record and create a new solution linked to it. You should make sure the customization prefix represents a value that makes sense for you. 

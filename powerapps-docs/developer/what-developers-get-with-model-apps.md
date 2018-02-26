@@ -95,7 +95,7 @@ The commands that appear within a form or list command bar are customizable.
 - You can define *enable rules* that control whether a command is enabled based on various conditions such as the currently selected item in the UI.
 - You must define an *action* for each command to tell it what to do when selected. A command can open a URL or execute a function defined within a JavaScript web resource.
 
-Custom commands are positioned based on any existing commands. You must compose a custom action that defines what change to apply to the existing set of commands. There is no designer provided for commands. Fortunately, the community has provided tools. The [Ribbon Workbench](http://www.develop1.net/public/rwb/ribbonworkbench.aspx) provides a graphical interface and is the most commonly used tool to customize commands.
+Custom commands are positioned based on any existing commands. You must compose a *custom action* that defines what change to apply to the existing set of commands. There is no designer provided for commands. Fortunately, the community has provided tools. The [Ribbon Workbench](http://www.develop1.net/public/rwb/ribbonworkbench.aspx) provides a graphical interface and is the most commonly used tool to customize commands.
 
 More information: [Developer Guide: Customize commands and the ribbon](/dynamics365/customer-engagement/developer/customize-dev/customize-commands-ribbon)
 
