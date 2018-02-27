@@ -45,6 +45,6 @@ As a Microsoft partner or Independent Software Vendor (ISV), accelerate customer
 
 - **Build and certify custom connectors**: Bring your product into the Microsoft cloud by building a connector that enables PowerApps to talk to your service. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
 
-- **List your solution on AppSource**: Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive. [Learn more](dev-appsource-test-drive.md)
+- **List your solution on AppSource**: Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive. [Learn more](developer/dev-appsource-test-drive.md)
 
 - **Get started today for free**: Sign-up for the PowerApps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](dev-community-plan.md)
