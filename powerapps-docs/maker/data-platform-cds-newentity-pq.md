@@ -25,7 +25,7 @@ The **Common Data Service** lets users securely store and manage data within a s
 
 With **Power Query** integration, business app developers using PowerApps can create new entities in the **Common Data Service** based on data from external data sources, such as on-premises data sources like relational databases (SQL Server, IBM DB2, and so on), Excel, Access, and text files, as well as online services such as Salesforce, Azure SQL Database and Data Warehouse, Web APIs, OData feeds, and many more sources. In addition to the wide array of data sources to which you can connect, using **Power Query** also lets you filter, transform, and combine data before loading it into the Common Data Service.
 
-![New entity from data](media/data-platform-cds-newentity-pq/data-platform-cds-pq-01.jpg)
+![New entity from data](./media/data-platform-cds-newentity-pq/data-platform-cds-pq-01.jpg)
 
 ## Enabling the CDS New Entities from Power Query feature
 This feature is available in your PowerApps tenant, but is not turned on by default. You can enable it in [web.powerapps.com](https://aka.ms/pqocds).
@@ -41,10 +41,10 @@ In the PowerApps portal, take the following steps to enable this feature:
 
 3. From the list that appears in the dropdown menu, select **New Entity from Data (Technical Preview)** as shown in the following image.
    
-    ![New entity from data](media/data-platform-cds-newentity-pq/data-platform-cds-pq-02.jpg)
+    ![New entity from data](./media/data-platform-cds-newentity-pq/data-platform-cds-pq-02.jpg)
 4. Once you select **New Entity from Data (Technical Preview)** from the menu, a dialog appears with the list of available connectors in this Technical Preview, as shown in the following image.
    
-   ![Available connectors](media/data-platform-cds-newentity-pq/data-platform-cds-pq-03.jpg)
+   ![Available connectors](./media/data-platform-cds-newentity-pq/data-platform-cds-pq-03.jpg)
 5. Once you've selected the connector you want to use, you can continue to the next steps to specify data source connection details and credentials, select which tables to import, and so on. You may be able to access the **Query Editor** as well (using the **Edit** button in the **Navigator** view) and thereby apply filters or data transformation steps before importing data into CDS.
    
     ![](media/data-platform-cds-newentity-pq/data-platform-cds-pq-04.jpg)
