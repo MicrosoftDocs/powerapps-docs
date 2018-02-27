@@ -37,7 +37,7 @@ The *Default environment* is accessible to everyone. You can start creating apps
 Once you switch to a different environment (such as Environment 1), you will see all the apps you created or have access to in this new environment.
 
 ## Create apps in the right environment
-You can create apps in existing environments that you have access to or in a new environment. Creating your own environment, however, requires a specific plan. For more information, see [this topic](pricing-billing-skus.md). Before you create an app, always **make sure you select the environment you want to app to be in**. Otherwise, you will have to deal with moving apps between environments.
+You can create apps in existing environments that you have access to or in a new environment. Creating your own environment, however, requires a specific plan. For more information, see [this topic](administrator/pricing-billing-skus.md). Before you create an app, always **make sure you select the environment you want to app to be in**. Otherwise, you will have to deal with moving apps between environments.
 
 1. If you are in [powerapps.com](http://web.powerapps.com), select the environment you would like to create your app in. If you are in *PowerApps Studio* or *PowerApps Studio for web*, skip to step 4.
 

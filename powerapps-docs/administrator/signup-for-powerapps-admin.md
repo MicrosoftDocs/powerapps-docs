@@ -25,7 +25,7 @@ This article shows you how to purchase PowerApps for your organization as an adm
 >   To purchase PowerApps for an organization, you must already be an Office 365 Global or Billing Admin of a tenant, or you must create a tenant.
 
 ## Choosing the right plan
-For details about what licenses you can choose for your organization, see [PowerApps licensing overview](../pricing-billing-skus.md).
+For details about what licenses you can choose for your organization, see [PowerApps licensing overview](pricing-billing-skus.md).
 
 ## Purchase PowerApps directly
 You can purchase PowerApps subscriptions for your organization from [powerapps.microsoft.com][4] and then assign PowerApps licenses to your users. [Learn more][5].
