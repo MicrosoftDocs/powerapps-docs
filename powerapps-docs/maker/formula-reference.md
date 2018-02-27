@@ -304,7 +304,7 @@ Other elements include:
 **[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula.
 
 ## T
-**[Table](../functions/function-table.md)** – Creates a temporary table.  
+**[Table](functions/function-table.md)** – Creates a temporary table.  
 
 **[Tan](../functions/function-trig.md)** - Returns the tangent of an angle specified in radians.
 

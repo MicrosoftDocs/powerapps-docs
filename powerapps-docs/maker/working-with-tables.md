@@ -68,7 +68,7 @@ A table comprises one or more records, each with multiple fields that have consi
 
 Any table that's stored in a data source or a collection has a name, which you use to refer to the table and pass it to functions that take tables as arguments.  Tables can also be the result of a function or a formula.
 
-As in the following example, you can express a table in a formula by using the **[Table](../functions/function-table.md)** function with a set of records, which you express in curly braces:
+As in the following example, you can express a table in a formula by using the **[Table](functions/function-table.md)** function with a set of records, which you express in curly braces:
 
 **Table( { Value: "Strawberry" }, { Value: "Vanilla" } )**
 
@@ -292,7 +292,7 @@ Enclose each column name that contains a special character, such as a space or a
 Note that the value in the **Price** column doesn't include a currency symbol, such as a dollar sign. That formatting will be applied when the value is displayed.  
 
 ### Tables
-You can create a table by using the **[Table](../functions/function-table.md)** function and a set of records. You can express the table at the start of this topic by using this formula:
+You can create a table by using the **[Table](functions/function-table.md)** function and a set of records. You can express the table at the start of this topic by using this formula:
 
 **Table( { Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Name: "Water", Price: 4.95, 'Quantity on Hand': 10, 'Quantity on Order': 0 } )**
 
