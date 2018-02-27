@@ -27,26 +27,26 @@ A **Gallery** control can show multiple records from a data source, and each rec
 Predefined Gallery templates for showing images, text as well as a gallery with variable height items are available.
 
 ## Key properties
-**[Default](properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.
+**[Default](../../controls/properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.
 
-**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
+**[Items](../../controls/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **Selected** – The selected item.
 
 ## Additional properties
 **AllItems** – All items in a gallery, including additional control values that are a part of the gallery's template.
 
-**[BorderColor](properties-color-border.md)** – The color of a control's border.
+**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[Fill](properties-color-border.md)** – The background color of a control.
+**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
 
-**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
@@ -66,30 +66,30 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **Transition** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.
 
-**[Visible](properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
 **WrapCount** – Number of items shown per row or column based on horizontal or vertical layout.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
+[**Filter**( *DataSource*, *Formula* )](../../functions/function-filter-lookup.md)
 
 ## Examples
 ### Show and filter data
-* [Show text](control-text-box.md#show-data-in-a-gallery)
-* [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
-* [Filter data by selecting a list option](../maker/controls/control-drop-down.md#example)
-* [Filter data by adjusting a slider](control-slider.md#example)
+* [Show text](../../controls/control-text-box.md#show-data-in-a-gallery)
+* [Show images](../../controls/control-image.md#show-a-set-of-images-from-a-data-source)
+* [Filter data by selecting a list option](control-drop-down.md#example)
+* [Filter data by adjusting a slider](../../controls/control-slider.md#example)
 
 ### Get data from the user
-* [Get text](control-text-input.md#collect-data)
-* [Get images](../maker/controls/control-add-picture.md#add-images-to-an-image-gallery-control)
-* [Get photos](../maker/controls/control-camera.md#example)
-* [Get sounds](control-microphone.md#example)
-* [Get drawings](control-pen-input.md#create-a-set-of-images)
+* [Get text](../../controls/control-text-input.md#collect-data)
+* [Get images](control-add-picture.md#add-images-to-an-image-gallery-control)
+* [Get photos](control-camera.md#example)
+* [Get sounds](../../controls/control-microphone.md#example)
+* [Get drawings](../../controls/control-pen-input.md#create-a-set-of-images)
 

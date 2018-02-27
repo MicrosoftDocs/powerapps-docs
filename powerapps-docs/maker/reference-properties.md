@@ -58,7 +58,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Export](controls/control-export-import.md)** – Export data for use elsewhere in PowerApps.
 
-**[Gallery](../controls/control-gallery.md)** – Show a list of records that can contain multiple types of data.
+**[Gallery](controls/control-gallery.md)** – Show a list of records that can contain multiple types of data.
 
 **[HTML text](../controls/control-html-text.md)** – Convert HTML tags automatically.
 
@@ -119,7 +119,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Align](../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.  Applies to many controls.
 
-**[AllItems](../controls/control-gallery.md)** – All items in a gallery, including additional control values that are a part of the gallery's template.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[AllItems](controls/control-gallery.md)** – All items in a gallery, including additional control values that are a part of the gallery's template.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](../controls/control-image.md)** controls.
 
@@ -180,7 +180,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[DefaultMode](controls/control-form-detail.md)** – The initial mode of a form control, either **Edit**, **New**, or **View**.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**[Direction](../controls/control-gallery.md)** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[Direction](controls/control-gallery.md)** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **[Disabled](../controls/properties-core.md)** – Whether the user can interact with the control.  Applies to many controls.
 
@@ -274,7 +274,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[LastSubmit](controls/control-form-detail.md)** – The last successfully submitted record, including any server generated fields.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](../controls/control-gallery.md)** and **[Slider](../controls/control-slider.md)** controls.
+**Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](controls/control-gallery.md)** and **[Slider](../controls/control-slider.md)** controls.
 
 **[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](../controls/control-list-box.md)**, **[Radio](../controls/control-radio.md)**, **[Label](../controls/control-text-box.md)**, and **[Text input](../controls/control-text-input.md)** controls.
 
@@ -304,7 +304,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 * **[Text input](../controls/control-text-input.md)** control – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
 
 ### N
-**[NavigationStep](../controls/control-gallery.md)** – How far a gallery scrolls if its **[ShowNavigation](../controls/control-gallery.md)** property is set to **true** and the user selects a navigation arrow at either end of that gallery.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[NavigationStep](controls/control-gallery.md)** – How far a gallery scrolls if its **[ShowNavigation](controls/control-gallery.md)** property is set to **true** and the user selects a navigation arrow at either end of that gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **[NumberOfSeries](controls/control-column-line-chart.md)** – How many columns of data are reflected in a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
@@ -408,7 +408,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Reset](../controls/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.  Also see the **[Reset](../functions/function-reset.md)** function.
 
 ### S
-**Selected** – The selected item.  Applies to **[Drop down](controls/control-drop-down.md)** and **[Gallery](../controls/control-gallery.md)** controls.
+**Selected** – The selected item.  Applies to **[Drop down](controls/control-drop-down.md)** and **[Gallery](controls/control-gallery.md)** controls.
 
 **[SelectedDate](controls/control-date-picker.md)** – The date currently selected in a date control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
@@ -428,15 +428,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ShowLabels](../controls/control-pie-chart.md)** – Whether a pie chart shows the value that's associated with each of its wedges.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
 
-**[ShowNavigation](../controls/control-gallery.md)** – Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[ShowNavigation](controls/control-gallery.md)** – Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**[ShowScrollbar](../controls/control-gallery.md)** – Whether a scrollbar appears when the user hovers over a gallery.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[ShowScrollbar](controls/control-gallery.md)** – Whether a scrollbar appears when the user hovers over a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.  Applies to **[Rating](../controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
 
 **[Size](../controls/properties-text.md)** – The font size of the text that appears on a control.  Applies to many controls.
 
-**[Snap](../controls/control-gallery.md)** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[Snap](controls/control-gallery.md)** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **Start** – Whether an audio or video clip plays.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -451,11 +451,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Strikethrough](../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.  Applies to many controls.
 
 ### T
-**[TemplateFill](../controls/control-gallery.md)** – The background color of a gallery.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[TemplateFill](controls/control-gallery.md)** – The background color of a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**[TemplatePadding](../controls/control-gallery.md)** – The distance between items in a gallery.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[TemplatePadding](controls/control-gallery.md)** – The distance between items in a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**[TemplateSize](../controls/control-gallery.md)** – The height of the template for a gallery in vertical/portrait orientation or the width of the template for a gallery in horizontal/landscape orientation.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[TemplateSize](controls/control-gallery.md)** – The height of the template for a gallery in vertical/portrait orientation or the width of the template for a gallery in horizontal/landscape orientation.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **[Text](../controls/properties-core.md)** – Text that appears on a control or that the user types into a control.  Applies to many controls.
 
@@ -463,7 +463,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Tooltip](../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.  Applies to many controls.
 
-**[Transition](../controls/control-gallery.md)** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[Transition](controls/control-gallery.md)** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **[Transparency](../controls/control-image.md)** – The degree to which controls behind an image remain visible.  Applies to the **[Image](../controls/control-image.md)** control.
 
@@ -496,7 +496,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Wrap](../controls/control-text-box.md)** – Whether text that's too long to fit in a label wraps to the next line.  Applies to the **[Label](../controls/control-text-box.md)** control.
 
-**[WrapCount](../controls/control-gallery.md)** – How many records appear in each item of a gallery.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
+**[WrapCount](controls/control-gallery.md)** – How many records appear in each item of a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 ### X
 **[X](../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.

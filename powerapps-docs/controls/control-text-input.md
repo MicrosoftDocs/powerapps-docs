@@ -139,7 +139,7 @@ The user can specify data by typing into a text-input control. Depending on how 
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../maker/formula-reference.md)?
 3. Add a text gallery in portrait/vertical orientation, set its **[Items](properties-core.md)** property to **Names**, and set the **[Text](properties-core.md)** property of **Subtitle1** to **ThisItem.FirstName**.
-4. (optional) In the template gallery, delete the bottom label, named **Body1**, and set the **[TemplateSize](control-gallery.md)** property of the gallery to **80**.
+4. (optional) In the template gallery, delete the bottom label, named **Body1**, and set the **[TemplateSize](../maker/controls/control-gallery.md)** property of the gallery to **80**.
 5. Press F5, type a string of text into **inputFirst** and **inputLast**, and then click or tap the **Add** button.
 6. (optional) Add more names to the collection, and then press Esc to return to the default workspace.
 

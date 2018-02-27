@@ -23,7 +23,7 @@ Add three types of controls so that the user can browse for a record, display de
 
 | Activity | Control | Description |
 | --- | --- | --- |
-| **Browse for a record** |**[Gallery](../controls/control-gallery.md)** control |Filter, sort, search, and scroll through records in a data source, and select a specific record. Display only a few fields from each record to show several records at a time, even on a small screen. |
+| **Browse for a record** |**[Gallery](controls/control-gallery.md)** control |Filter, sort, search, and scroll through records in a data source, and select a specific record. Display only a few fields from each record to show several records at a time, even on a small screen. |
 | **Show details of a record** |**[Display form](controls/control-form-detail.md)** control |For a single record, display many or all fields in that record. |
 | **Edit or create a record** |**[Edit form](controls/control-form-detail.md)** control |Update one or more fields in a single record (or create a record starting with default values), and save those changes back to the underlying data source. |
 
@@ -172,7 +172,7 @@ Get a quick piece of information from a record by finding it in a gallery on a b
     The label now shows the value in the **Title** field for each record.
    
     ![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery-2.png)
-4. Resize the gallery to fill the screen, and set its **[TemplateSize](../controls/control-gallery.md)** property to **60**.
+4. Resize the gallery to fill the screen, and set its **[TemplateSize](controls/control-gallery.md)** property to **60**.
    
     The screen resembles this example, which shows all records in the data source:
    
@@ -184,7 +184,7 @@ If the gallery doesn't show the information that you want, select the arrow for 
 The **[Display form](controls/control-form-detail.md)** control uses two properties to display the record:
 
 * **[DataSource](controls/control-form-detail.md)** property.  The name of the data source that holds the record. This property populates the right-hand panel with fields and determines the display name and data type (string, number, date, etc.) of each field.  
-* **[Item](controls/control-form-detail.md)** property.  The record to display.  This property is often connected to the **Selected** property of the **[Gallery](../controls/control-gallery.md)** control so that the user can select a record in the **[Gallery](../controls/control-gallery.md)** control and then drill into that record.
+* **[Item](controls/control-form-detail.md)** property.  The record to display.  This property is often connected to the **Selected** property of the **[Gallery](controls/control-gallery.md)** control so that the user can select a record in the **[Gallery](controls/control-gallery.md)** control and then drill into that record.
 
 When the **[DataSource](controls/control-form-detail.md)** property is set, you can add and remove fields through the right-hand pane and change how they're displayed.
 
@@ -199,7 +199,7 @@ In the right-hand pane, you can select the fields to display on your screen and 
 
 ![Display form for Ice Cream data source](./media/working-with-forms/ice-cream-new.png)
 
-Finally, we need to connect the **[Display form](controls/control-form-detail.md)** control to the **[Gallery](../controls/control-gallery.md)** control so that we can look at details for a specific record.  As soon as we complete setting the **[Item](controls/control-form-detail.md)** property, the first record from the gallery will appear in our form.
+Finally, we need to connect the **[Display form](controls/control-form-detail.md)** control to the **[Gallery](controls/control-gallery.md)** control so that we can look at details for a specific record.  As soon as we complete setting the **[Item](controls/control-form-detail.md)** property, the first record from the gallery will appear in our form.
 
 * Set the **[Item](controls/control-form-detail.md)** property of the **[Display form](controls/control-form-detail.md)** control to **Gallery1.Selected**.
    
@@ -215,9 +215,9 @@ Great!  We now turn to navigation: how a user opens the details screen from the 
 
     ![Display form for Ice Cream data source with back button](./media/working-with-forms/viewform-icecream-back.png)
 
-Now, let's return to the **[Gallery](../controls/control-gallery.md)** control and add some navigation to our detail screen.
+Now, let's return to the **[Gallery](controls/control-gallery.md)** control and add some navigation to our detail screen.
 
-1. Switch to the first screen, which is hosting our **[Gallery](../controls/control-gallery.md)** control, and select the arrow in the first item in the gallery.
+1. Switch to the first screen, which is hosting our **[Gallery](controls/control-gallery.md)** control, and select the arrow in the first item in the gallery.
 
 2. Set the **[OnSelect](../controls/properties-core.md)** property of the shape to this formula:
    <br>**Navigate( Screen2, None )**
@@ -234,7 +234,7 @@ Finally, our last core activity is changing the contents of a record, which user
 The **[Edit form](controls/control-form-detail.md)** control uses two properties to display and edit the record:
 
 * **[DataSource](controls/control-form-detail.md)** property.  The name of the data source that holds the record.  Just as with the **[Display form](controls/control-form-detail.md)** control, this property populates the right-hand panel with fields and determines the display name and data type (string, number, date, etc.) for each field. This property also determines whether each field's value is valid before submitting it to the underlying data source.
-* **[Item](controls/control-form-detail.md)** property.  The record to edit, which is often connected to the **Selected** property of the **[Gallery](../controls/control-gallery.md)** control. That way, you can select a record in the **[Gallery](../controls/control-gallery.md)** control, show it in the details screen, and edit it in the **Edit and Create** screen.
+* **[Item](controls/control-form-detail.md)** property.  The record to edit, which is often connected to the **Selected** property of the **[Gallery](controls/control-gallery.md)** control. That way, you can select a record in the **[Gallery](controls/control-gallery.md)** control, show it in the details screen, and edit it in the **Edit and Create** screen.
 
 To add an **[Edit form](controls/control-form-detail.md)** control:
 
@@ -320,7 +320,7 @@ In an app that PowerApps generates from data, the **[AutoHeight](../controls/con
 ## Refresh data
 The data source is refreshed whenever the user opens the app, but the user might want to refresh the records in the gallery without closing the app. Add a **Refresh** button so that the user can select it to manually refresh the data:
 
-1. On the screen with the **[Gallery](../controls/control-gallery.md)** control, add a **[Button](controls/control-button.md)** control and set its **[Text](../controls/properties-core.md)** property to show **Refresh**.
+1. On the screen with the **[Gallery](controls/control-gallery.md)** control, add a **[Button](controls/control-button.md)** control and set its **[Text](../controls/properties-core.md)** property to show **Refresh**.
 
 2. Set the **[OnSelect](../controls/properties-core.md)** property of this control to this formula:<br> **Refresh( 'Ice Cream' )**
 
@@ -336,7 +336,7 @@ When the user selects the sort button, the sort order of the gallery reverses. T
 
 The **[UpdateContext](../functions/function-updatecontext.md)** function creates the **SortDescending1** context variable if it doesn't already exist. The function will read the value of the variable and set it to the logical opposite by using the **!** operator. If the value is *true*, it becomes *false*. If the value is *false*, it becomes *true*.
 
-The formula for the **[Items](../controls/properties-core.md)** property of the **[Gallery](../controls/control-gallery.md)** control uses this context variable, along with the text in the **TextSearchBox1** control:
+The formula for the **[Items](../controls/properties-core.md)** property of the **[Gallery](controls/control-gallery.md)** control uses this context variable, along with the text in the **TextSearchBox1** control:
 
     Gallery1.Items = Sort( If( IsBlank(TextSearchBox1.Text),
                                Assets,
@@ -366,6 +366,6 @@ Because real estate on phone screens is so limited, you probably want to browse,
 
 On a tablet, you can browse, display, and edit/create on two or even one screen. For the latter, no **[Navigate](../functions/function-navigate.md)** or **[Back](../functions/function-navigate.md)** function would be required.
 
-If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](../controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](../controls/properties-core.md)** property of the gallery to this formula:<br>
+If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](../controls/properties-core.md)** property of the gallery to this formula:<br>
 **EditForm.Unsaved**
 

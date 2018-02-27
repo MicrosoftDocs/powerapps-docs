@@ -128,7 +128,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 5. Add a **Text gallery** control in vertical/portrait orientation, and set its **[Items](../../controls/properties-core.md)** property to this formula:
    <br>**Filter(CityPopulations, Countries.Selected.Value in Country)**
 6. In the first item of the **Text gallery** control, set the **[Text](../../controls/properties-core.md)** property of the upper **[Label](../../controls/control-text-box.md)** control to **ThisItem.City**, and delete the bottom **[Label](../../controls/control-text-box.md)** control.
-7. Set the **[TemplateSize](../../controls/control-gallery.md)** property of the **Text gallery** control to **80**.
+7. Set the **[TemplateSize](control-gallery.md)** property of the **Text gallery** control to **80**.
 8. Press F5, click or tap the chevron in the **Countries** list, and then choose an option in that list.
    
     The **Text gallery** control shows only those cities in the country that you chose.

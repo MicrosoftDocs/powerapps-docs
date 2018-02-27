@@ -104,7 +104,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
-    A screen is added with several default controls, such as a search box and a **[Gallery](../controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
+    A screen is added with several default controls, such as a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
 
 2. Click or tap anywhere in the gallery except an arrow, such as directly under the search box.
 
