@@ -107,7 +107,7 @@ The **Text** function is globally aware.  For a wide array of languages, it know
 * **The language of the custom format:** For authors, how should a custom format be interpreted?  The separator characters (**.** and **,**) have different meanings in different languages.  This is handled with a special placeholder containing a language tag.  Even easier, the [predefined date/time formats](#predefined-datetime-formats) are language agnostic.
 * **The language of the result:** For users, what language should be used in the result of the function?  Names for months and weekdays need to be in the appropriate language for the user of the app.  This is handled with a third optional argument to the **Text** function. 
 
-For both, the language is provided with a [language tag](function-language.md#language-tags).  To see the list of supported languages type **Text( 1234, "", )** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.
+For both, the language is provided with a [language tag](../maker/functions/function-language.md#language-tags).  To see the list of supported languages type **Text( 1234, "", )** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.
 
 #### Custom format language placeholder
 To specify the language of the custom format, use:

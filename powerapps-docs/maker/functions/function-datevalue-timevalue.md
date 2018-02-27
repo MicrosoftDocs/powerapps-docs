@@ -49,7 +49,7 @@ To convert numbers, see the **[Value](../../functions/function-value.md)** funct
 **DateValue**( *String* [, *Language* ])<br>**DateTimeValue**( *String* [, *Language* ])<br>**TimeValue**( *String* [, *Language* ])
 
 * *String* - Required.  A text string that contains a date, time, or combination date and time value.
-* *Language* - Optional.  A language string, such as would be returned by the first two characters from the **[Language](../../functions/function-language.md)** function.  If not provided, the language of the current user's client is used.  
+* *Language* - Optional.  A language string, such as would be returned by the first two characters from the **[Language](function-language.md)** function.  If not provided, the language of the current user's client is used.  
 
 ## Examples
 ### DateValue

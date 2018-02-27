@@ -175,7 +175,7 @@ Other elements include:
 **[IsToday](../functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
 ## L
-**[Language](../functions/function-language.md)** – Returns the language tag of the current user.
+**[Language](functions/function-language.md)** – Returns the language tag of the current user.
 
 **[Last](functions/function-first-last.md)** – Returns the last record of a table.
 
