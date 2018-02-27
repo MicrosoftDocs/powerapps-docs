@@ -162,7 +162,7 @@ Other elements include:
 **[Hour](functions/function-datetime-parts.md)** – Returns the hour portion of a date/time value.
 
 ## I
-**[If](../functions/function-if.md)** – Returns one value if a condition is true and another value if not.  
+**[If](functions/function-if.md)** – Returns one value if a condition is true and another value if not.  
 
 **[IsBlank](../functions/function-isblank-isempty.md)** – Checks for a [blank](../functions/function-isblank-isempty.md) value.
 
@@ -301,7 +301,7 @@ Other elements include:
 
 **[Sum](functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
 
-**[Switch](../functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula.
+**[Switch](functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula.
 
 ## T
 **[Table](../functions/function-table.md)** – Creates a temporary table.  

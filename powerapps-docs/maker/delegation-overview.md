@@ -59,7 +59,7 @@ Portions of your formula that evaluate to a constant value for all records can a
 
 Some notable items missing from the above list:
 
-* **[If](../functions/function-if.md)**
+* **[If](functions/function-if.md)**
 * **[*](../functions/operators.md)**, **[/](../functions/operators.md)**, **[Mod](../functions/function-mod.md)**
 * **[Concatenate](functions/function-concatenate.md)** (including **[&](../functions/operators.md)**)
 * **[ExactIn](../functions/operators.md)**

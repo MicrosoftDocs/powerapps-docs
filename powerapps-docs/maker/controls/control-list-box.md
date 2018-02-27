@@ -138,7 +138,7 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
    * HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
    * TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
      
-     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 5. Press F5, and then choose one or more items in **CategoryList**.
    
     The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.

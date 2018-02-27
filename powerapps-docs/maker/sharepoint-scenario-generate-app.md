@@ -145,7 +145,7 @@ But what does this formula do? It determines the source of data that appears in 
 * The [**SortByColumns** function](../functions/function-sort.md) sorts a table based on one or more columns.
 * The [**Filter** function](functions/function-filter-lookup.md) finds the records in a table that satisfy a formula that you specify.
 * The [**StartsWith** function](../functions/function-startswith.md) tests whether one text string begins with another.
-* The [**If** function](../functions/function-if.md) returns one value if a condition is true, and returns another value if the same condition is false.
+* The [**If** function](functions/function-if.md) returns one value if a condition is true, and returns another value if the same condition is false.
 
 When you put the functions together in the formula, here's what happens:
 

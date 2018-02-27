@@ -92,7 +92,7 @@ Regardless of what numbers you type in the text-input controls, the label always
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc2.png)
 
-In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the **[If](../functions/function-if.md)** function, which behaves similarly to how it behaves in Excel.
+In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the **[If](functions/function-if.md)** function, which behaves similarly to how it behaves in Excel.
 
 1. Set the **[Color](controls/properties-color-border.md)** property of the label to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
    

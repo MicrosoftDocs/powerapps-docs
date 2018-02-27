@@ -196,13 +196,13 @@ The **SelectableFields** property of the **SalesOrderListForm** specifies **Sale
 
 This was set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**. Therefore, the values in the **SalesOrderId** field appear as links.
 
-The **OnFieldSelect** property of the **SalesOrderListForm** is set to an [**If**](../functions/function-if.md) function, which determines whether the user clicks or taps the **Sales order ID** field: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
+The **OnFieldSelect** property of the **SalesOrderListForm** is set to an [**If**](functions/function-if.md) function, which determines whether the user clicks or taps the **Sales order ID** field: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
 
 If the function is evaluated as true, the **SalesOrderDetailsScreen** opens with the context variable named **NavigationContext** that we used earlier.  
 
 All this was also set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**.  
 
-Therefore, when the user clicks or taps a sales order ID field, the [**If**](../functions/function-if.md) function evaluates to true, and the [**Navigate**](../functions/function-navigate.md) function is called with the corresponding context, opening the details screen.  
+Therefore, when the user clicks or taps a sales order ID field, the [**If**](functions/function-if.md) function evaluates to true, and the [**Navigate**](../functions/function-navigate.md) function is called with the corresponding context, opening the details screen.  
 
 ![](media/entity-form-control/entityform-tutorial-01-21.png)  
 

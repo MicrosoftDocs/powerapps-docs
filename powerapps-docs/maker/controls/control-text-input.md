@@ -148,7 +148,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 2. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
    **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
    
-    Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, and then type **P@ssw0rd** in **inputPassword**.
    
     When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.

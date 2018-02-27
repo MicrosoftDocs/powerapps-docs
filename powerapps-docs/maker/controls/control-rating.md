@@ -79,7 +79,7 @@ In this control, the user can indicate, for example, how much they liked somethi
 3. Set the **[Default](properties-core.md)** property of the **[Text input](control-text-input.md)** control to **""**, and set its **HintText** to this formula:
    <br>**If(Quantitative.Value > 3, "What did you especially like?", "How might we do better?")**
    
-    Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 4. Press F5, and then click or tap either four or five stars in the **Rating** control.
    
     The hint text in the **[Text input](control-text-input.md)** control changes to reflect the high rating.

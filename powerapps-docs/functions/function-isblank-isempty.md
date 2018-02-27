@@ -42,7 +42,7 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 * A string that contains no characters has a **[Len](function-len.md)** of 0.
 * An error occurred in a function. Often, one of the arguments to the function wasn't valid. Many functions return *blank* if the value of an argument is *blank*.
 * Connected [data sources](../maker/working-with-data-sources.md), such as SQL Server, may use "null" values. These values appear as *blank* in PowerApps.
-* The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
+* The *else* portion of an **[If](../maker/functions/function-if.md)** function wasn't specified, and all conditions were **false**.
 * You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
 
 The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank*.  Use this function to replace a *blank* value with a different value but leave non-*blank* values unchanged.  If all of the arguments are *blank*, then the function returns *blank*.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  **Coalesce( value1, value2 )** is the more concise equivalent of **If( IsBlank( value1 ) value1, value2 )** and doesn't require **value1** to be evaluated twice.  
@@ -126,7 +126,7 @@ Other examples:
 | **IsBlank( "Hello" )** |A string that contains one or more characters. |**false** |
 | **IsBlank( *AnyCollection* )** |Because the [collection](../maker/working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. |**false** |
 | **IsBlank( Mid( "Hello", 17, 2 ) )** |The starting character for **[Mid](function-left-mid-right.md)** is beyond the end of the string.  The result is an empty string. |**true** |
-| **IsBlank( If( false, false ) )** |An **[If](function-if.md)** function with no *ElseResult*.  Because the condition is always **false**, this **[If](function-if.md)** always returns *blank*. |**true** |
+| **IsBlank( If( false, false ) )** |An **[If](../maker/functions/function-if.md)** function with no *ElseResult*.  Because the condition is always **false**, this **[If](../maker/functions/function-if.md)** always returns *blank*. |**true** |
 
 ### IsEmpty
 1. Create an app from scratch, and add a **Button** control.

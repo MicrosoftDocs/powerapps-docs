@@ -203,7 +203,7 @@ In this procedure, you'll add a check box and then configure the label that you 
 
     **If(MyCheckbox.Value = true, true, false)**
 
-    This **[If function](../functions/function-if.md)** states that the label should appear only when the check box is selected. Because the check box is cleared, the **Label** control disappears (except for the selection box).
+    This **[If function](functions/function-if.md)** states that the label should appear only when the check box is selected. Because the check box is cleared, the **Label** control disappears (except for the selection box).
 
     ![Visible formula](./media/add-configure-controls/visible-formula.png)
 

@@ -97,7 +97,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**If**( *Condition*, *Result* )](../../functions/function-if.md)
+[**If**( *Condition*, *Result* )](../functions/function-if.md)
 
 ## Example
 1. Add a toggle, and name it **MemberDiscount**.
@@ -106,7 +106,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 2. Add a label, and set its **[Text](properties-core.md)** property to this formula:
    <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
 
-    Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, and change the value of **MemberDiscount**.
 
     The label shows a different price, depending on whether **MemberDiscount** is on or off.

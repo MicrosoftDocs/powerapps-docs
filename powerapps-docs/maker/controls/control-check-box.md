@@ -113,7 +113,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**If**( *Condition*, *Result* )](../../functions/function-if.md)
+[**If**( *Condition*, *Result* )](../functions/function-if.md)
 
 ## Example
 1. Add a **Check box** control, name it **chkReserve**, and set its **[Text](properties-core.md)** property to show **Reserve now**.
@@ -122,7 +122,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 2. Add a **[Date picker](control-date-picker.md)** control, and set its **[Visible](properties-core.md)** property to this formula:
    <br>**If(chkReserve.Value = true, true)**
    
-    Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, click or tap **chkReserve** to set its **[Value](properties-core.md)** property to **true**, and then click or tap **chkReserve** again to set its **[Value](properties-core.md)** property to **false**.
    
     The **[Date Picker](control-date-picker.md)** control appears when the **[Value](properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
