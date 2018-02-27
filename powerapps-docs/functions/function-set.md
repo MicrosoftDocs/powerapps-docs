@@ -29,7 +29,7 @@ Global variables are available throughout your app on all screens.  These are th
 PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Global variables don't offer this benefit and can make your app harder to create and understand.  Before you use a variable, review [working with variables](../maker/working-with-variables.md).
 
 ## Description
-Global variables are implicitly created by using the **Set** function.  There is no explicit declaration required.  If you remove all the **Set** functions for a global variable, then that global variable will cease to exist.  To clear a variable set its value to the result of the [**Blank** function](function-isblank-isempty.md).
+Global variables are implicitly created by using the **Set** function.  There is no explicit declaration required.  If you remove all the **Set** functions for a global variable, then that global variable will cease to exist.  To clear a variable set its value to the result of the [**Blank** function](../maker/functions/function-isblank-isempty.md).
 
 You can see your variables' values, definitions, and uses with the Variables view under the File menu in the authoring environment.
 

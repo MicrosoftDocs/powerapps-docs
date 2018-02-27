@@ -39,7 +39,7 @@ You can use both of these functions in [behavior formulas](../working-with-formu
 ## Syntax
 **If**( *Condition*, *ThenResult* [, *DefaultResult* ] )<br>**If**( *Condition1*, *ThenResult1* [, *Condition2*, *ThenResult2*, ... [ , *DefaultResult* ] ] )
 
-* *Condition(s)* - Required. Formula(s) to test for **true**. Such formulas commonly contain comparison [operators](../../functions/operators.md) (such as **<**, **>**, and **=**) and test functions such as **[IsBlank](../../functions/function-isblank-isempty.md)** and **[IsEmpty](../../functions/function-isblank-isempty.md)**.
+* *Condition(s)* - Required. Formula(s) to test for **true**. Such formulas commonly contain comparison [operators](../../functions/operators.md) (such as **<**, **>**, and **=**) and test functions such as **[IsBlank](function-isblank-isempty.md)** and **[IsEmpty](function-isblank-isempty.md)**.
 * *ThenResult(s)* - Required. The corresponding value to return for a condition that evaluates to **true**.
 * *DefaultResult* - Optional. The value to return if no condition evaluates to **true**.  If you don't specify this argument, *blank* is returned.
 
@@ -72,7 +72,7 @@ In these examples, a **[Text input](../controls/control-text-input.md)** control
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **If( ! IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ) )** |The condition is **true**, so the **[Navigate](../../functions/function-navigate.md)** function runs. You can use the **[IsBlank](../../functions/function-isblank-isempty.md)** function to test whether a required form field has been filled in.  If **FirstName** were [blank](../../functions/function-isblank-isempty.md), this formula would have no effect. |**true**<br><br>The display is changed to **Screen1**. |
+| **If( ! IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ) )** |The condition is **true**, so the **[Navigate](../../functions/function-navigate.md)** function runs. You can use the **[IsBlank](function-isblank-isempty.md)** function to test whether a required form field has been filled in.  If **FirstName** were [blank](function-isblank-isempty.md), this formula would have no effect. |**true**<br><br>The display is changed to **Screen1**. |
 | **If( IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** |Without the **!** operator, the condition is **false**, so the **[Navigate](../../functions/function-navigate.md)** function doesn't run. The **[Back](../../functions/function-navigate.md)** function was provided as a *DefaultResult*, so it runs. |**true**<br><br>The display goes back to the screen that was previously shown. |
 | **Switch( FirstName.Text, "Carlos", Navigate(&nbsp;Screen1, ScreenTransition.None ), "Kirstin", Navigate( Screen2, ScreenTransition.None ), "John", Navigate( Screen3, ScreenTransition.None ) )** |The value of **FirstName.Text** is compared against "Carlos", "Kirstin", and "John" in that order. A match is found with "John", so the app navigates to **Screen3**. |**true**<br><br>The display is changed to **Screen3**. |
 

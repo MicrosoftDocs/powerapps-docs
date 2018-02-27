@@ -57,7 +57,7 @@ Other elements include:
 ## B
 **[Back](../functions/function-navigate.md)** – Displays the previous screen.  
 
-**[Blank](../functions/function-isblank-isempty.md)** – Returns a *blank* value that can be used to insert a NULL value in a data source.
+**[Blank](functions/function-isblank-isempty.md)** – Returns a *blank* value that can be used to insert a NULL value in a data source.
 
 ## C
 **[Calendar](functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.
@@ -70,7 +70,7 @@ Other elements include:
 
 **[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
-**[Coalesce](../functions/function-isblank-isempty.md)** – Replaces *blank* values while leaving non-*blank* values unchanged.
+**[Coalesce](functions/function-isblank-isempty.md)** – Replaces *blank* values while leaving non-*blank* values unchanged.
 
 **[Collect](functions/function-clear-collect-clearcollect.md)** – Creates a collection or adds data to a data source.
 
@@ -94,7 +94,7 @@ Other elements include:
 
 **[Cot](../functions/function-trig.md)** – Returns the cotangent of an angle specified in radians.
 
-**[CountA](../functions/function-table-counts.md)** – Counts table records that aren't [empty](../functions/function-isblank-isempty.md).
+**[CountA](../functions/function-table-counts.md)** – Counts table records that aren't [empty](functions/function-isblank-isempty.md).
 
 **[CountIf](../functions/function-table-counts.md)** – Counts table records that satisfy a condition.  
 
@@ -164,9 +164,9 @@ Other elements include:
 ## I
 **[If](functions/function-if.md)** – Returns one value if a condition is true and another value if not.  
 
-**[IsBlank](../functions/function-isblank-isempty.md)** – Checks for a [blank](../functions/function-isblank-isempty.md) value.
+**[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
-**[IsEmpty](../functions/function-isblank-isempty.md)** – Checks for an empty table.
+**[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
 **[IsMatch](../functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
 

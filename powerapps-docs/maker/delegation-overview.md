@@ -51,7 +51,7 @@ Within the **Filter** and **LookUp** functions, the following can be used with c
 * **[=](../functions/operators.md)**, **[<>](../functions/operators.md)**, **[>=](../functions/operators.md)**, **[<=](../functions/operators.md)**, **[>](../functions/operators.md)**, **[<](../functions/operators.md)**
 * **[+](../functions/operators.md)**, **[-](../functions/operators.md)**
 * **[TrimEnds](../functions/function-trim.md)**
-* **[IsBlank](../functions/function-isblank-isempty.md)**
+* **[IsBlank](functions/function-isblank-isempty.md)**
 * **[StartsWith](../functions/function-startswith.md)**
 * Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
 

@@ -56,7 +56,7 @@ Errors can be returned for the entire data source, or for only a selected row by
 
 **[Patch](../../functions/function-patch.md)** or another data function may return a *blank* value if, for example, a record couldn't be created. You can pass *blank* to **Errors**, and it will return appropriate error information in these cases.  Subsequent use of data functions on the same data source will clear this error information.
 
-If there are no errors, the table that **Errors** returns will be [empty](../../functions/function-isblank-isempty.md) and can be tested with the **[IsEmpty](../../functions/function-isblank-isempty.md)** function.
+If there are no errors, the table that **Errors** returns will be [empty](function-isblank-isempty.md) and can be tested with the **[IsEmpty](function-isblank-isempty.md)** function.
 
 ## Syntax
 **Errors**( *DataSource* [, *Record* ] )

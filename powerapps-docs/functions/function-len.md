@@ -24,7 +24,7 @@ Returns the length of a string of text.
 ## Description
 If you specify a single string as the argument, the return value is the length as a number.  If you specify a single-column [table](../maker/working-with-tables.md) that contains strings, the return value is a single-column table that contains the length of each string. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../maker/working-with-tables.md) describes.
 
-If you specify an [empty](function-isblank-isempty.md) string, **Len** returns 0.
+If you specify an [empty](../maker/functions/function-isblank-isempty.md) string, **Len** returns 0.
 
 ## Syntax
 **Len**( *String* )

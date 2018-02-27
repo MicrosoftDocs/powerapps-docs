@@ -55,7 +55,7 @@ You check the **[Errors](../maker/functions/function-errors.md)** table and find
 Based on the **Error** column, you have a **Reload** button for which the **[OnSelect](../maker/controls/properties-core.md)** property to set to this formula:<br>
 **Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**
 
-After you select the **Reload** button, the **[Errors](../maker/functions/function-errors.md)** table is [empty](function-isblank-isempty.md), and the new value for **Strawberry** has been loaded:
+After you select the **Reload** button, the **[Errors](../maker/functions/function-errors.md)** table is [empty](../maker/functions/function-isblank-isempty.md), and the new value for **Strawberry** has been loaded:
 
 ![](media/function-revert/icecream-after.png)
 

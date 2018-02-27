@@ -24,7 +24,7 @@ Counts all [records](../maker/working-with-tables.md#records) in a [table](../ma
 ## Description
 The **Count** function counts the number of records that contain a number in a single-column table.
 
-The **CountA** function counts the number of records that aren't *blank* in a single-column table. This function includes [empty](function-isblank-isempty.md) text ("") in the count.
+The **CountA** function counts the number of records that aren't *blank* in a single-column table. This function includes [empty](../maker/functions/function-isblank-isempty.md) text ("") in the count.
 
 The **CountIf** function counts the number of records in a table that are **true** for a logical formula.  The formula can reference [columns](../maker/working-with-tables.md#columns) of the table.
 
