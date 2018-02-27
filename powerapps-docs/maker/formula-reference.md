@@ -154,7 +154,7 @@ Other elements include:
 **[ForAll](functions/function-forall.md)** – Calculates values and performs actions for all records of a table.
 
 ## G
-**[GroupBy](../functions/function-groupby.md)** – Returns a table with records grouped together.
+**[GroupBy](functions/function-groupby.md)** – Returns a table with records grouped together.
 
 ## H
 **[HashTags](../functions/function-hashtags.md)** – Extracts the hashtags (#strings) from a string.
@@ -325,7 +325,7 @@ Other elements include:
 **[TrimEnds](../functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
 
 ## U
-**[Ungroup](../functions/function-groupby.md)** – Removes a grouping.
+**[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
 **[Update](../functions/function-update-updateif.md)** – Replaces a record in a data source.
 

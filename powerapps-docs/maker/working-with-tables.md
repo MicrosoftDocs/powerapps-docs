@@ -44,7 +44,7 @@ A field is an individual piece of information in a record. You can visualize thi
 
 Just as with a control, you refer to a field of a record by using the **.** [operator](../functions/operators.md) on the record.  For example, **First(Products).Name** returns the **Name** field for the first record in the **Products** table.
 
-A field can contain another record or table, as the example for the **[GroupBy](../functions/function-groupby.md)** function shows. You can nest as many levels of records and tables as you want.
+A field can contain another record or table, as the example for the **[GroupBy](functions/function-groupby.md)** function shows. You can nest as many levels of records and tables as you want.
 
 ### Columns
 A column refers to the same field for one or more records in a table. In the above example, each product has a price field, and that price is in the same column for all products.  The above table has four columns, shown horizontally across the top:
