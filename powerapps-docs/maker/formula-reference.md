@@ -62,7 +62,7 @@ Other elements include:
 ## C
 **[Calendar](../functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.
 
-**[Char](../functions/function-char.md)** – Translates a character code into a string.
+**[Char](functions/function-char.md)** – Translates a character code into a string.
 
 **[Clear](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
