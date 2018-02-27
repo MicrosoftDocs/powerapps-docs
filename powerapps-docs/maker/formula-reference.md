@@ -29,7 +29,7 @@ Formulas combine many elements.  Listed below are:
 Other elements include:
 
 * [All operators](../functions/operators.md)
-* [Controls and their properties](../reference-properties.md)
+* [Controls and their properties](reference-properties.md)
 
 ## A
 **[Abs](../functions/function-numericals.md)** – Absolute value of a number.  

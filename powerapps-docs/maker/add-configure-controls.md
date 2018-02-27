@@ -151,7 +151,7 @@ By using the **Properties** tab, you can configure a control without writing a f
 ## Configure a control in the formula bar
 By using the formula bar, you can set properties that you can't set directly, in the **Properties** tab, or from the toolbar. For example, you can set a tooltip that appears when a user points to the control but doesn't click or tap it. You can also specify complicated formulas that increase the power of your app.
 
-Each change that you made earlier in this topic updated the value of a [property](../reference-properties.md) for the control that you configured.
+Each change that you made earlier in this topic updated the value of a [property](reference-properties.md) for the control that you configured.
 
 * When you resized the control, you changed its **[Width](../controls/properties-size-location.md)** property.
 * When you moved the control, you changed its **[X](../controls/properties-size-location.md)** and **[Y](../controls/properties-size-location.md)** properties.

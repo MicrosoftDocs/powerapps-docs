@@ -47,7 +47,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
    
     This bar has two parts:
    
-   * *Property list*:  Each control and screen has a [set of properties](reference-properties.md).  Use this list to select a specific property.  
+   * *Property list*:  Each control and screen has a [set of properties](maker/reference-properties.md).  Use this list to select a specific property.  
    * *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](maker/formula-reference.md).
      
      In the formula bar, you can see and edit properties for the selected control or for the screen if no controls are selected.  You can see the name of the selected control on the **Content** tab:

@@ -30,7 +30,7 @@ It's easy to automatically generate an app in PowerApps. All you need to do is s
 * SharePoint
 * Excel
 
-You can also generate an app automatically from a template. Each template is based on fictitious data in a cloud account, such as Dropbox. Explore specific screens and UI elements (called [controls](../reference-properties.md)) to understand how they're configured, and experiment with customization to discover techniques that you can apply to your own apps.
+You can also generate an app automatically from a template. Each template is based on fictitious data in a cloud account, such as Dropbox. Explore specific screens and UI elements (called [controls](reference-properties.md)) to understand how they're configured, and experiment with customization to discover techniques that you can apply to your own apps.
 
 For more information, check out the following topics:
 
