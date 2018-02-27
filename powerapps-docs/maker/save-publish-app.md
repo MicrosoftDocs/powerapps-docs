@@ -58,5 +58,5 @@ The **Live** version is published for everyone with whom the app is shared. The 
 To publish the most recent version, click or tap **Publish this version**, and then click or tap **Publish this version** in the **Publish** dialog box.
 
 ## Next steps
-* [Rename an app](../set-name-tile.md) from powerapps.com.
+* [Rename an app](set-name-tile.md) from powerapps.com.
 * [Restore an app](restore-an-app.md) if you have multiple versions of an app.

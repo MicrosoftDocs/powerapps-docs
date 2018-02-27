@@ -29,18 +29,18 @@ Customize an app by changing its name and tile.
 ## Rename an app
 Under **App name**, click or tap **Rename this app**, and then type a different name.
 
-![Close an app](./media/set-aspect-ratio-portrait-landscape/rename-app.png)
+![Close an app](./media/set-name-tile/rename-app.png)
 
 ## Change an app tile
 Follow one or more of these steps:
 
 * Click or tap a different background color from the list of options.
 
-    ![Select a tile color](./media/set-aspect-ratio-portrait-landscape/tile-colors.png)
+    ![Select a tile color](./media/set-name-tile/tile-colors.png)
 
 * Click or tap an icon from the list of default icons.
 
-    ![Select a tile icon](./media/set-aspect-ratio-portrait-landscape/tile-icons.png)
+    ![Select a tile icon](./media/set-name-tile/tile-icons.png)
 
 * Click or tap **Browse file**, click or tap the image that you want to use, and then click or tap **Open**.
 
@@ -51,6 +51,6 @@ Follow one or more of these steps:
 On the **File** menu, click or tap **Save** to republish your app with the new settings.
 
 ## More resources
-* [Share an app](share-app.md)
-* [Delete an app](maker/delete-app.md)
-* [Restore an app to a previous version](maker/restore-an-app.md)
+* [Share an app](../share-app.md)
+* [Delete an app](delete-app.md)
+* [Restore an app to a previous version](restore-an-app.md)
