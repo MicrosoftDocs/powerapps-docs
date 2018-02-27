@@ -76,7 +76,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[PDF viewer](controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
 
-**[Pen input](../controls/control-pen-input.md)** – Draw an image or text, and save it in the app or to a data source.
+**[Pen input](controls/control-pen-input.md)** – Draw an image or text, and save it in the app or to a data source.
 
 **[Pie chart](../controls/control-pie-chart.md)** – Show how values relate to each other.
 
@@ -251,7 +251,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ImagePosition](../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
 
-**[Input](../controls/control-pen-input.md)** – Input.  Applies to the **[Pen input](../controls/control-pen-input.md)** control.
+**[Input](controls/control-pen-input.md)** – Input.  Applies to the **[Pen input](controls/control-pen-input.md)** control.
 
 **[Italic](../controls/properties-text.md)** – Whether the text in a control is italic.  Applies to many controls.
 
@@ -300,7 +300,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **Mode** – The meaning of this property is dependent on the control:
 
 * **[Edit form](controls/control-form-detail.md)** control – The control is in **Edit** or **New** mode.
-* **[Pen input](../controls/control-pen-input.md)** control – The control is in **Draw**, **Erase**, or **Select** mode.
+* **[Pen input](controls/control-pen-input.md)** control – The control is in **Draw**, **Erase**, or **Select** mode.
 * **[Text input](../controls/control-text-input.md)** control – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
 
 ### N
@@ -412,11 +412,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[SelectedDate](controls/control-date-picker.md)** – The date currently selected in a date control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
-**[SelectionColor](../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](controls/control-list-box.md)**, and **[Pen input](../controls/control-pen-input.md)** controls.
+**[SelectionColor](../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](controls/control-list-box.md)**, and **[Pen input](controls/control-pen-input.md)** controls.
 
 **[SelectionFill](../controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](controls/control-drop-down.md)** and **[List Box](controls/control-list-box.md)** controls.
 
-**[SelectionThickness](../controls/control-pen-input.md)** – The thickness of the selection tool for a pen-input control.  Applies to the **[Pen input](../controls/control-pen-input.md)** control.
+**[SelectionThickness](controls/control-pen-input.md)** – The thickness of the selection tool for a pen-input control.  Applies to the **[Pen input](controls/control-pen-input.md)** control.
 
 **[SelectMultiple](controls/control-list-box.md)** – Whether a user can select more than one item in a listbox.  Applies to the **[List Box](controls/control-list-box.md)** control.
 
@@ -424,7 +424,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[SeriesAxisMin](controls/control-column-line-chart.md)** – A number that determines the minimum value of the y-axis for a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
-**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to **[Audio](controls/control-audio-video.md)**, **[PDF viewer](controls/control-pdf-viewer.md)**, **[Pen input](../controls/control-pen-input.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to **[Audio](controls/control-audio-video.md)**, **[PDF viewer](controls/control-pdf-viewer.md)**, **[Pen input](controls/control-pen-input.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[ShowLabels](../controls/control-pie-chart.md)** – Whether a pie chart shows the value that's associated with each of its wedges.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
 
