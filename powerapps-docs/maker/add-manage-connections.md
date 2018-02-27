@@ -21,7 +21,7 @@ ms.author: archanan
 # Manage your connections in PowerApps
 In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, delete a connection, or update its credentials.
 
-Your app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and many other [data sources](connections-list.md).
+Your app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and many other [data sources](../connections-list.md).
 
 Your next step after this article is to display and manage data from the data source in your app, as in these examples:
 
@@ -33,7 +33,7 @@ Your next step after this article is to display and manage data from the data so
 * Connect to Twilio, and send an SMS message from your app.
 
 ## Prerequisites
-1. [Sign up](signup-for-powerapps.md) for PowerApps.
+1. [Sign up](../signup-for-powerapps.md) for PowerApps.
 2. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
 
 ## Background on data connections
@@ -43,13 +43,13 @@ The commonest type of data source is the table, which you can use to retrieve an
 
 There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications.
 
-Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](working-with-forms.md).
+Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../controls/control-form-detail.md)**, and **[Edit form](../controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](../working-with-forms.md).
 
 In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you also create connections when you do these tasks:
 
-* Automatically generate an [app from data](app-from-sharepoint.md), such as a custom SharePoint list.
-* Update an existing app, or create one from scratch as [add a connection](maker/add-data-connection.md) describes.
-* Open an app that another user created and [shared with you](share-app.md).
+* Automatically generate an [app from data](../app-from-sharepoint.md), such as a custom SharePoint list.
+* Update an existing app, or create one from scratch as [add a connection](add-data-connection.md) describes.
+* Open an app that another user created and [shared with you](../share-app.md).
 
 > [!NOTE]
 > If you want to use PowerApps Studio instead, open the **File** menu, and then click or tap **Connections**, [powerapps.com](https://web.powerapps.com) opens so that you can create and manage connections there.
@@ -72,10 +72,10 @@ In addition to creating and managing connections in [powerapps.com](https://web.
    
    For example, these connectors require additional information before you can use them.
    
-   * [SharePoint](connections/connection-sharepoint-online.md)
-   * [SQL Server](connections/connection-azure-sqldatabase.md)
+   * [SharePoint](../connections/connection-sharepoint-online.md)
+   * [SQL Server](../connections/connection-azure-sqldatabase.md)
 
-The new connector appears under **Connections**, and you can [add it to an app](maker/add-data-connection.md).
+The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
 
 ## Update or delete a connection
 In the list of connections, find the connection that you want to update or delete, and then click or tap the ellipsis (3-dots-symbol) on the right of the connection.

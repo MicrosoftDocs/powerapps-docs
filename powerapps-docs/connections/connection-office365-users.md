@@ -254,5 +254,5 @@ Search for users: Retrieves search results of user profiles
 
 ## Helpful links
 * See all the [available connections](../connections-list.md).
-* Learn how to [add connections](../add-manage-connections.md) to your apps.
+* Learn how to [add connections](../maker/add-manage-connections.md) to your apps.
 

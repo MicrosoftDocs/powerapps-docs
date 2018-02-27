@@ -25,7 +25,7 @@ Excel is *kind of* a connection. To display Excel data in your app:
 
 1. [Format the Excel data as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 2. Store the Excel file in a cloud-storage account, such as Box, Dropbox, Google Drive, OneDrive, and OneDrive for Business.
-3. [Connect to the cloud-storage account](../add-manage-connections.md), and then add the Excel table as a data source.
+3. [Connect to the cloud-storage account](../maker/add-manage-connections.md), and then add the Excel table as a data source.
 4. Display this information in your app by [generating an app automatically](../get-started-create-from-data.md) or by adding and configuring, for example, a **Gallery** control.
 
 > [!NOTE]

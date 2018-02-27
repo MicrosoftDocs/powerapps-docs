@@ -68,7 +68,7 @@ For **Can use** and **Can use + share** permission levels, select the data sourc
     > [!NOTE]
 > You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
 
-For more information about how to manage a connection, see [Manage your connections](add-manage-connections.md).
+For more information about how to manage a connection, see [Manage your connections](maker/add-manage-connections.md).
 
 ## Troubleshooting and Advanced Configuration
 For more information on troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](gateway-reference.md).

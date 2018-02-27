@@ -38,7 +38,7 @@ For more information, check out the following topics:
 * [Generate an app in PowerApps to manage data in a SharePoint list](app-from-sharepoint.md)
 * [Generate an app from Excel](get-started-create-from-data.md)
 * [Generate an app from SQL Server](connections/connection-azure-sqldatabase.md)
-* [Generate an app from Salesforce](add-manage-connections.md)
+* [Generate an app from Salesforce](maker/add-manage-connections.md)
 * [Generate an app from Dynamics 365](connections/connection-dynamics-crmonline.md)
 * [Generate an app from the Common Data Service](data-platform-create-app.md)
 * [Generate an app from a template](get-started-test-drive.md)

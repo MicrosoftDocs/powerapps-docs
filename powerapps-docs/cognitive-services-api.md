@@ -71,7 +71,7 @@ The API is available as a free preview, and it is associated with an Azure subsc
 Now that you have the Text Analytics API up and running, you connect to it from PowerApps, and build an app that calls the API. This is a single screen app that provides functionality similar to the demo on the Text Analytics API page. Let's get started on building this!
 
 ### Create the app and add a connection
-First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in PowerApps](add-manage-connections.md).
+First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in PowerApps](maker/add-manage-connections.md).
 
 1. In [web.powerapps.com](https://web.powerapps.com), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
 
