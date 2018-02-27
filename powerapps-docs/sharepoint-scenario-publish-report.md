@@ -95,5 +95,5 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 That wraps up most of the work in Power BI. If that was your first experience creating reports and dashboards, congratulations! If you're already a pro, we hope you could move through it quickly. Now we will add alerting to make sure we know if the dashboard needs our attention.
 
 ## Next steps
-The next step in this tutorial series is to [set up data alerts for the Power BI project report](sharepoint-scenario-alerts-flow.md).
+The next step in this tutorial series is to [set up data alerts for the Power BI project report](maker/sharepoint-scenario-alerts-flow.md).
 
