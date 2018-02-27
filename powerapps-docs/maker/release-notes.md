@@ -63,7 +63,7 @@ For information about known limitations, see [Common issues and resolutions](com
 3. Improved performance of apps on Android and iOS devices.
 
 ## Sept. 20
-1. After you [save an app](../save-publish-app.md) for the first time, additional changes are saved every two minutes automatically by default.
+1. After you [save an app](save-publish-app.md) for the first time, additional changes are saved every two minutes automatically by default.
 2. Easily [create rules](../working-with-rules.md) for conditional formatting without writing expressions - just set your condition and then design the results right on the PowerApps canvas.
 3. More easily configure forms, galleries, and data tables with a full-height data pane that pops out when a control is added.
 4. Get contextual quick-tips to help you create an app, whether starting from a blank app, a template, a data source, or SharePoint.

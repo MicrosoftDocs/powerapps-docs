@@ -21,7 +21,7 @@ ms.author: sharik
 # Save and publish an app in PowerApps
 Whenever you save changes to an app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you must explicitly publish them to make them available to everyone with whom the app is shared.
 
-For information about how to share an app, see [Share an app](share-app.md).
+For information about how to share an app, see [Share an app](../share-app.md).
 
 ## Save changes to an app
 In PowerApps Studio, click or tap **Save** on the **File** menu (on the left edge), and then follow either of these steps:
@@ -58,5 +58,5 @@ The **Live** version is published for everyone with whom the app is shared. The 
 To publish the most recent version, click or tap **Publish this version**, and then click or tap **Publish this version** in the **Publish** dialog box.
 
 ## Next steps
-* [Rename an app](set-name-tile.md) from powerapps.com.
-* [Restore an app](maker/restore-an-app.md) if you have multiple versions of an app.
+* [Rename an app](../set-name-tile.md) from powerapps.com.
+* [Restore an app](restore-an-app.md) if you have multiple versions of an app.
