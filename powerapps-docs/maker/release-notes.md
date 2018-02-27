@@ -34,7 +34,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 ## Jan. 31
 1. Add closed captions to [Video](controls/control-audio-video.md) controls.
-2. Improved error handling in [PDF Viewer](../controls/control-pdf-viewer.md) controls.
+2. Improved error handling in [PDF Viewer](controls/control-pdf-viewer.md) controls.
 
 ## Jan. 18
 1. PowerApps for iOS and Android now supports integration with Microsoft Authenticator.

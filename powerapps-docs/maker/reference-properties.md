@@ -74,7 +74,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
-**[PDF viewer](../controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
+**[PDF viewer](controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
 
 **[Pen input](../controls/control-pen-input.md)** – Draw an image or text, and save it in the app or to a data source.
 
@@ -115,7 +115,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ## All properties
 ### A
-**[ActualZoom](../controls/control-pdf-viewer.md)** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[ActualZoom](controls/control-pdf-viewer.md)** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
 **[Align](../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.  Applies to many controls.
 
@@ -163,9 +163,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Contrast](controls/control-camera.md)** – How easily the user can distinguish between similar colors in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
-**[CurrentFindText](../controls/control-pdf-viewer.md)** – The current search term that is in use.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[CurrentFindText](controls/control-pdf-viewer.md)** – The current search term that is in use.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
-**[CurrentPage](../controls/control-pdf-viewer.md)** – The number of the page in a PDF file that is actually being shown.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[CurrentPage](controls/control-pdf-viewer.md)** – The number of the page in a PDF file that is actually being shown.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
 ### D
 **[Data](controls/control-export-import.md)** – The name of a collection that you want to export to a local file.  Applies to the **[Export](controls/control-export-import.md)** control.
@@ -194,7 +194,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[DisplayMode](../controls/properties-core.md)** – Values can be Edit, View, or Disabled. Configures whether the control allows user input (Edit), only displays data (View) or is disabled (Disabled).
 
-**[Document](../controls/control-pdf-viewer.md)** – The URL, enclosed in double-quotation marks, of a PDF file.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[Document](controls/control-pdf-viewer.md)** – The URL, enclosed in double-quotation marks, of a PDF file.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
 **[Duration](../controls/control-timer.md)** – How long a timer runs.  Applies to the **[Timer](../controls/control-timer.md)** control.
 
@@ -214,11 +214,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### F
 **[Fill](../controls/properties-color-border.md)** – The background color of a control.  Applies to many controls.
 
-**[FindNext](../controls/control-pdf-viewer.md)** – Finds the next instance of **FindText** in the document.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[FindNext](controls/control-pdf-viewer.md)** – Finds the next instance of **FindText** in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
-**[FindPrevious](../controls/control-pdf-viewer.md)** – Finds the previous instance of **FindText** in the document.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[FindPrevious](controls/control-pdf-viewer.md)** – Finds the previous instance of **FindText** in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
-**[FindText](../controls/control-pdf-viewer.md)** – The search term to look for in the document.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[FindText](controls/control-pdf-viewer.md)** – The search term to look for in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
 **[Font](../controls/properties-text.md)** – The name of the family of fonts in which text appears.  Applies to many controls.
 
@@ -327,7 +327,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **OnStart** – The behavior of an app when the user opens it or starts to record with a microphone control. Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, **[Screen](../controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**[OnStateChange](../controls/control-pdf-viewer.md)** – The behavior of an app when the state of the control changes. Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[OnStateChange](controls/control-pdf-viewer.md)** – The behavior of an app when the state of the control changes. Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
 **[OnStop](controls/control-microphone.md)** – The behavior of an app when the user stops recording with a microphone control. Applies to the **[Microphone](controls/control-microphone.md)** control.
 
@@ -360,9 +360,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[PaddingTop](../controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.  Applies to many controls.
 
-**[Page](../controls/control-pdf-viewer.md)** – The number of the page that you want to show.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[Page](controls/control-pdf-viewer.md)** – The number of the page that you want to show.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
-**[PageCount](../controls/control-pdf-viewer.md)** – The number of pages in a document.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
+**[PageCount](controls/control-pdf-viewer.md)** – The number of pages in a document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
 **[Paused](controls/control-audio-video.md)** – *True* if a media playback control is currently paused, *false* otherwise.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -424,7 +424,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[SeriesAxisMin](controls/control-column-line-chart.md)** – A number that determines the minimum value of the y-axis for a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
-**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to **[Audio](controls/control-audio-video.md)**, **[PDF viewer](../controls/control-pdf-viewer.md)**, **[Pen input](../controls/control-pen-input.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to **[Audio](controls/control-audio-video.md)**, **[PDF viewer](controls/control-pdf-viewer.md)**, **[Pen input](../controls/control-pen-input.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[ShowLabels](../controls/control-pie-chart.md)** – Whether a pie chart shows the value that's associated with each of its wedges.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
 
@@ -513,4 +513,4 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[YLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels next to the y-axis of a line or column chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### Z
-**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.  Applies to **[Camera](controls/control-camera.md)** and **[PDF viewer](../controls/control-pdf-viewer.md)** controls.
+**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.  Applies to **[Camera](controls/control-camera.md)** and **[PDF viewer](controls/control-pdf-viewer.md)** controls.
