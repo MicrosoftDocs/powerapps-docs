@@ -96,7 +96,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Text input](controls/control-text-input.md)** – Type text, numbers, and other data.
 
-**[Timer](../controls/control-timer.md)** – Configure your app to respond after a certain amount of time passes.
+**[Timer](controls/control-timer.md)** – Configure your app to respond after a certain amount of time passes.
 
 **[Toggle](../controls/control-toggle.md)** – Drag a handle to specify **true** or **false**.
 
@@ -125,9 +125,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[AutoHeight](../controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](../controls/properties-core.md)** property contains more characters than the control can show. Applies to the **[Label](controls/control-text-box.md)** control.
 
-**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 ### B
 **[BackgroundImage](../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
@@ -196,7 +196,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Document](controls/control-pdf-viewer.md)** – The URL, enclosed in double-quotation marks, of a PDF file.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
-**[Duration](../controls/control-timer.md)** – How long a timer runs.  Applies to the **[Timer](../controls/control-timer.md)** control.
+**[Duration](controls/control-timer.md)** – How long a timer runs.  Applies to the **[Timer](controls/control-timer.md)** control.
 
 ### E
 **[EndYear](controls/control-date-picker.md)** – The latest year to which the user can set value of a date-picker control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
@@ -335,9 +335,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnSuccess](controls/control-form-detail.md)** – The behavior of an app when a data operation has been successful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**[OnTimerEnd](../controls/control-timer.md)** – The behavior of an app when a timer finishes running.  Applies to the **[Timer](../controls/control-timer.md)** control.
+**[OnTimerEnd](controls/control-timer.md)** – The behavior of an app when a timer finishes running.  Applies to the **[Timer](controls/control-timer.md)** control.
 
-**[OnTimerStart](../controls/control-timer.md)** – The behavior of an app when a timer starts to run.  Applies to the **[Timer](../controls/control-timer.md)** control.
+**[OnTimerStart](controls/control-timer.md)** – The behavior of an app when a timer starts to run.  Applies to the **[Timer](controls/control-timer.md)** control.
 
 **OnUncheck** – The behavior of an app when the value of a checkbox or a toggle changes to **false**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
@@ -401,7 +401,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **ReadOnly** – Whether a user can change the value of a slider or rating control.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](controls/control-slider.md)** controls.
 
-**[Repeat](../controls/control-timer.md)** – Whether a timer automatically restarts when it finishes running.  Applies to the **[Timer](../controls/control-timer.md)** control.
+**[Repeat](controls/control-timer.md)** – Whether a timer automatically restarts when it finishes running.  Applies to the **[Timer](controls/control-timer.md)** control.
 
 **[Required](controls/control-card.md)** – Whether a card, editing the field of a data source, must contain a value.  Applies to the **[Card](controls/control-card.md)** control.
 
@@ -438,7 +438,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Snap](controls/control-gallery.md)** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**Start** – Whether an audio or video clip plays.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**Start** – Whether an audio or video clip plays.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[StartTime](controls/control-audio-video.md)** – The time after the start of an audio or video clip when the clip starts to play.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
