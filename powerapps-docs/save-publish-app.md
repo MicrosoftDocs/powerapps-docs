@@ -59,4 +59,4 @@ To publish the most recent version, click or tap **Publish this version**, and t
 
 ## Next steps
 * [Rename an app](set-name-tile.md) from powerapps.com.
-* [Restore an app](restore-an-app.md) if you have multiple versions of an app.
+* [Restore an app](maker/restore-an-app.md) if you have multiple versions of an app.

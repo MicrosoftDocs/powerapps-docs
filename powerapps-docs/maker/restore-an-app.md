@@ -28,14 +28,14 @@ This article shows you how to restore an app to a previous version that was save
 
 2. (optional) Near the upper-left corner, filter the list of apps to show only those apps that you own or only those apps to which you contribute.
 
-    ![Filter on apps you own](./media/delete-app/filter-list.png)
+    ![Filter on apps you own](./media/restore-an-app/filter-list.png)
 
     > [!NOTE]
 > If the app that you want to restore doesn't appear, make sure that you're in the right environment.
 
 3. Near the right edge, click or tap the info icon for the app that you want to restore.
 
-    ![Info icon](./media/delete-app/app-options.png)
+    ![Info icon](./media/restore-an-app/app-options.png)
 
 4. Click or tap the **Versions** tab, and then click or tap **Restore** for the version that you want to restore.
 
@@ -48,6 +48,6 @@ This article shows you how to restore an app to a previous version that was save
     ![Restored version](./media/restore-an-app/versions-added-2.png)
 
 ## More resources
-[Share an app](share-app.md)  
-[Change app name and tile](set-name-tile.md)  
-[Delete an app](maker/delete-app.md)
+[Share an app](../share-app.md)  
+[Change app name and tile](../set-name-tile.md)  
+[Delete an app](delete-app.md)
