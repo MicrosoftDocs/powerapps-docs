@@ -113,7 +113,7 @@ Other elements include:
 
 **[DateValue](../functions/function-datevalue-timevalue.md)** – Converts a date-only string to a date/time value.
 
-**[Day](../functions/function-datetime-parts.md)** – Retrieves the day portion of a date/time value.  
+**[Day](functions/function-datetime-parts.md)** – Retrieves the day portion of a date/time value.  
 
 **[Defaults](../functions/function-defaults.md)** – Returns the default values for a data source.
 
@@ -159,7 +159,7 @@ Other elements include:
 ## H
 **[HashTags](../functions/function-hashtags.md)** – Extracts the hashtags (#strings) from a string.
 
-**[Hour](../functions/function-datetime-parts.md)** – Returns the hour portion of a date/time value.
+**[Hour](functions/function-datetime-parts.md)** – Returns the hour portion of a date/time value.
 
 ## I
 **[If](../functions/function-if.md)** – Returns one value if a condition is true and another value if not.  
@@ -204,11 +204,11 @@ Other elements include:
 
 **[Min](functions/function-aggregates.md)** – Minimum value of a table expression or a set of arguments.
 
-**[Minute](../functions/function-datetime-parts.md)** – Retrieves the minute portion of a date/time value.  
+**[Minute](functions/function-datetime-parts.md)** – Retrieves the minute portion of a date/time value.  
 
 **[Mod](../functions/function-mod.md)** – Returns the remainder after a dividend is divided by a divisor.
 
-**[Month](../functions/function-datetime-parts.md)** – Retrieves the month portion of a date/time value.
+**[Month](functions/function-datetime-parts.md)** – Retrieves the month portion of a date/time value.
 
 ## N
 **[Navigate](../functions/function-navigate.md)** – Changes which screen is displayed.
@@ -273,7 +273,7 @@ Other elements include:
 
 **[Search](../functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
-**[Second](../functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
+**[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
 
 **[Set](../functions/function-set.md)** – Sets the value of a global variable.
 
@@ -347,8 +347,8 @@ Other elements include:
 **[ViewForm](../functions/function-form.md)** – Resets a form control for viewing of an existing item.
 
 ## W
-**[Weekday](../functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
+**[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
 
 ## Y
-**[Year](../functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
+**[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  
 

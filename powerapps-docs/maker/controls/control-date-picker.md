@@ -92,7 +92,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-**[Year](../../functions/function-datetime-parts.md)**( *DateTimeValue* )
+**[Year](../functions/function-datetime-parts.md)**( *DateTimeValue* )
 
 ## Example
 1. Add a **Date Picker** control, and name it **Deadline**.
