@@ -77,7 +77,7 @@ ms.author: sharik
 
 5. **Scanning a barcode**
 
-    For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](../scan-barcode.md).
+    For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
 
 6. **Creating and modifying apps in a browser**
 

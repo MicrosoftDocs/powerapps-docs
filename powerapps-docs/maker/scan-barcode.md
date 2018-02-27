@@ -19,9 +19,9 @@ ms.author: anneta
 
 ---
 # Scan a barcode in Microsoft PowerApps
-Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](maker/connections-list.md).
+Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](connections-list.md).
 
-If you're unfamiliar with PowerApps, see [Get started](maker/getting-started.md).
+If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 ## Known limitations
 * Barcodes should be at least 1" (2.5cm) high and 1.5" (4cm) wide.
@@ -33,7 +33,7 @@ If you're unfamiliar with PowerApps, see [Get started](maker/getting-started.md)
 * If the device runs out of memory and the app freezes, restart the app.
 
 ## Create a blank app
-1. [Sign up for PowerApps](signup-for-powerapps.md), and then do *either* of the following:
+1. [Sign up for PowerApps](../signup-for-powerapps.md), and then do *either* of the following:
 
    * [Open PowerApps](https://create.powerapps.com/api/start) in a browser on a device that has a camera.
    * [Install PowerApps](http://aka.ms/powerappsinstall) from the Windows Store on a device that has a camera. Open PowerApps, sign in, and then click or tap **New** on the **File** menu (along the left edge).
@@ -111,6 +111,6 @@ If you're unfamiliar with PowerApps, see [Get started](maker/getting-started.md)
     If the numerical component doesn't appear, try a different option in the **BarcodeType** list. If the correct data still doesn't appear, type the correct number in the **Input text** control.
 
 ## Next steps
-* [Connect the app to a data source](maker/add-data-connection.md) and configure the **[Patch](functions/function-patch.md)** function so that users can save results.
-* Add a **[Drop down](controls/control-drop-down.md)** control, and configure it so that users can choose which type of barcode they want to scan.
-* Add a **[Slider](controls/control-slider.md)** control, and configure it so that users can adjust the scan rate or the height of the **Barcode** control.
+* [Connect the app to a data source](add-data-connection.md) and configure the **[Patch](../functions/function-patch.md)** function so that users can save results.
+* Add a **[Drop down](../controls/control-drop-down.md)** control, and configure it so that users can choose which type of barcode they want to scan.
+* Add a **[Slider](../controls/control-slider.md)** control, and configure it so that users can adjust the scan rate or the height of the **Barcode** control.
