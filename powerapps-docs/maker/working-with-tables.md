@@ -135,7 +135,7 @@ This formula creates a single-column table that contains all the data from the *
 If you specify a data source as an argument for one of these functions, it will modify the records of that data source and, in general, return the data source's new value as a table.
 
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** - Creates, clears, and adds to a collection.
-* **[Update](../functions/function-update-updateif.md)**, **[UpdateIf](../functions/function-update-updateif.md)** - Updates records that match one or more criteria that you specify.
+* **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** - Updates records that match one or more criteria that you specify.
 * **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** - Deletes records that match one or more criteria that you specify.
 
 The following controls have properties that are tables:
@@ -188,7 +188,7 @@ Properties that return records:
 
 * **Selected** - Applies to galleries and list boxes. Returns the currently selected record.
 * **Updates** - Applies to galleries.  Pulls together all the changes that a user makes in a data-entry form.
-* **[Update](../functions/function-update-updateif.md)** - Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
+* **[Update](functions/function-update-updateif.md)** - Applies to input controls such as text-input controls and sliders. Sets up individual properties for the gallery to pull together.
 
 ## Record scope
 Some functions operate by evaluating a formula across all the records of a table individually.  The formula's result is used in various ways:  

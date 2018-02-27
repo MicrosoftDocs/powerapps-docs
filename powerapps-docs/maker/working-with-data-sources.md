@@ -57,7 +57,7 @@ You can use table data sources the same way that you use an internal PowerApps t
 * The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](functions/function-refresh.md)** function.
 * As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
   * Records can be created with the **[Patch](functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  
-  * Records can be modified with the **[Patch](functions/function-patch.md)**, **[Update](../functions/function-update-updateif.md)**, and **[UpdateIf](../functions/function-update-updateif.md)** functions.
+  * Records can be modified with the **[Patch](functions/function-patch.md)**, **[Update](functions/function-update-updateif.md)**, and **[UpdateIf](functions/function-update-updateif.md)** functions.
   * Records can be removed with the **[Remove](functions/function-remove-removeif.md)** and **[RemoveIf](functions/function-remove-removeif.md)** functions.
   * Errors when working with a data source are available through the **[Errors](functions/function-errors.md)** function.
 * The **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](functions/function-defaults.md)**, and **[Validate](../functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.

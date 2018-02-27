@@ -327,11 +327,11 @@ Other elements include:
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
-**[Update](../functions/function-update-updateif.md)** – Replaces a record in a data source.
+**[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
 **[UpdateContext](../functions/function-updatecontext.md)** – Sets the value of one or more [context variables](working-with-variables.md#create-a-context-variable) of the current screen.
 
-**[UpdateIf](../functions/function-update-updateif.md)** – Modifies a set of records in a data source based on a condition.
+**[UpdateIf](functions/function-update-updateif.md)** – Modifies a set of records in a data source based on a condition.
 
 **[Upper](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all uppercase.
 

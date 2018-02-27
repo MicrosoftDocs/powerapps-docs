@@ -77,7 +77,7 @@ Collect(SiteInspectorCollect,{ID:Value(Max(SiteInspectorCollect, ID)+1),
     Title:TitleText.Text,SubTitle:SubTitleText.Text,Description:DescriptionText.Text)
 ```
 
-**To update a row in a collection**, use [UpdateIf( DataSource, Condition1, ChangeRecord1 [, Condition2, ChangeRecord2, ...] )](../functions/function-update-updateif.md):
+**To update a row in a collection**, use [UpdateIf( DataSource, Condition1, ChangeRecord1 [, Condition2, ChangeRecord2, ...] )](../maker/functions/function-update-updateif.md):
 
 ```
 UpdateIf(SiteInspectorCollect,ID=record.ID,

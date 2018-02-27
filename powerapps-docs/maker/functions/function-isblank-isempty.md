@@ -43,7 +43,7 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 * An error occurred in a function. Often, one of the arguments to the function wasn't valid. Many functions return *blank* if the value of an argument is *blank*.
 * Connected [data sources](../working-with-data-sources.md), such as SQL Server, may use "null" values. These values appear as *blank* in PowerApps.
 * The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
-* You used the **[Update](../../functions/function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
+* You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
 
 The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank*.  Use this function to replace a *blank* value with a different value but leave non-*blank* values unchanged.  If all of the arguments are *blank*, then the function returns *blank*.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  **Coalesce( value1, value2 )** is the more concise equivalent of **If( IsBlank( value1 ) value1, value2 )** and doesn't require **value1** to be evaluated twice.  
 

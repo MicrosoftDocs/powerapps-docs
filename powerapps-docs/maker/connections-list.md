@@ -36,7 +36,7 @@ PowerApps has two types of connectors: *standard connectors* like the ones liste
 
 Standard connectors behave differently depending on the type of data source they connect to and how data is returned by that data source:
 
-* Some connectors work with tabular data sources, such as SharePoint, SQL Server, and Excel. When working with these data sources, data is returned to PowerApps as a table. PowerApps uses its own functions, such as [Patch()](functions/function-patch.md), [Collect()](functions/function-clear-collect-clearcollect.md), [Update()](../functions/function-update-updateif.md), and so on to interact with the data. Tabular data is also easy to use in forms and galleries, where a field in a table is displayed as a field in a gallery or form. For more information, see the following articles:
+* Some connectors work with tabular data sources, such as SharePoint, SQL Server, and Excel. When working with these data sources, data is returned to PowerApps as a table. PowerApps uses its own functions, such as [Patch()](functions/function-patch.md), [Collect()](functions/function-clear-collect-clearcollect.md), [Update()](functions/function-update-updateif.md), and so on to interact with the data. Tabular data is also easy to use in forms and galleries, where a field in a table is displayed as a field in a gallery or form. For more information, see the following articles:
 
     [Understand data sources in PowerApps](working-with-data-sources.md)
 
