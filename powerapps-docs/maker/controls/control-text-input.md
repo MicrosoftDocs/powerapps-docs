@@ -62,7 +62,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **Format** – Whether the user input is restricted to numbers only or can be any text.
 
-**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **HintText** – Light-grey text that appears in an input-text control if it's empty.
 
@@ -84,13 +84,13 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-**[PaddingBottom](../../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-**[PaddingLeft](../../controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-**[PaddingRight](../../controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-**[PaddingTop](../../controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
@@ -98,13 +98,13 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[RadiusBottomLeft](../../controls/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
+**[RadiusBottomLeft](properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
 
-**[RadiusBottomRight](../../controls/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
+**[RadiusBottomRight](properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
 
-**[RadiusTopLeft](../../controls/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
+**[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
 
-**[RadiusTopRight](../../controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
+**[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
@@ -120,11 +120,11 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
 [**DateTimeValue**( *String* )](../../functions/function-datevalue-timevalue.md)

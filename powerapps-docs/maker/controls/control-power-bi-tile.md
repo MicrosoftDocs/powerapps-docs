@@ -44,17 +44,17 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control. Default behavior takes the user to the Power BI report associated with the tile.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
 1. Add a **Power BI tile** control from the **Insert** tab, **Controls** menu.  

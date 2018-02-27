@@ -55,7 +55,7 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **InputTextPlaceholder** – Instructional text shown to end-users when no items are selected.
 
@@ -67,11 +67,11 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
 1. Add a **Combo box** control from the Insert tab, Controls menu.  

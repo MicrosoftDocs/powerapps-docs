@@ -67,7 +67,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * **HeadingFont** – The font of the column headings.
 * **HeadingFontWeight** – The font weight of the column headings.
 * **HeadingSize** – The font size of the column headings.
-* [**Height**](../../controls/properties-size-location.md) – The distance between the **Data table** control's top and bottom edges.
+* [**Height**](properties-size-location.md) – The distance between the **Data table** control's top and bottom edges.
 * [**HoverColor**](properties-color-border.md) – The text color for the row that the mouse pointer is pointing at.
 * [**HoverFill**](properties-color-border.md) – The background color of the row that the mouse pointer is pointing at.
 * **NoDataText** – The message that the user receives when there are no records to show in the **Data table** control.
@@ -75,9 +75,9 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * **SelectedFill** – The background color of the selected row.
 * [**Size**](../../controls/properties-text.md) – The default font size for all data rows.
 * [**Visible**](properties-core.md) – A value that determines whether the **Data table** control appears or is hidden.
-* [**Width**](../../controls/properties-size-location.md) – The distance between the **Data table** control's left and right edges.
-* [**X**](../../controls/properties-size-location.md) – The distance between the left edge of the **Data table** control and the left edge of its parent container (or the left edge of the screen if there is no parent container).
-* [**Y**](../../controls/properties-size-location.md) – The distance between the top edge of the **Data table** control and the top edge of its parent container (or the top edge of the screen if there is no parent container).
+* [**Width**](properties-size-location.md) – The distance between the **Data table** control's left and right edges.
+* [**X**](properties-size-location.md) – The distance between the left edge of the **Data table** control and the left edge of its parent container (or the left edge of the screen if there is no parent container).
+* [**Y**](properties-size-location.md) – The distance between the top edge of the **Data table** control and the top edge of its parent container (or the top edge of the screen if there is no parent container).
 
 ## Related functions
 * [**Filter(DataSource, Formula)**](../../functions/function-filter-lookup.md)(*DataSource*, *Formula*)

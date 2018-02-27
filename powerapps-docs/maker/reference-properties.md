@@ -109,7 +109,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Image](../controls/properties-visual.md)** – Configure what image is shown and how it fills the control.
 
-**[Size and location](../controls/properties-size-location.md)** – Configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.
+**[Size and location](controls/properties-size-location.md)** – Configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.
 
 **[Text](../controls/properties-text.md)** – Configure how text appears in controls, such as font characteristics, alignment, line height.  
 
@@ -123,7 +123,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](controls/control-image.md)** controls.
 
-**[AutoHeight](../controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](controls/properties-core.md)** property contains more characters than the control can show. Applies to the **[Label](controls/control-text-box.md)** control.
+**[AutoHeight](controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](controls/properties-core.md)** property contains more characters than the control can show. Applies to the **[Label](controls/control-text-box.md)** control.
 
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -234,7 +234,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[HandleHoverFill](controls/control-slider.md)** – The color of the handle in a slider when the user keeps the mouse pointer on it.  Applies to the **[Slider](controls/control-slider.md)** control.
 
-**[Height](../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.  Applies to many controls.
+**[Height](controls/properties-size-location.md)** – The distance between a control's top and bottom edges.  Applies to many controls.
 
 **[HintText](controls/control-text-input.md)** – Light-grey text that appears in a text-input control if it's blank.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
@@ -350,15 +350,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Overflow](controls/control-text-box.md)** – Whether a scrollbar appears in a label if its **[Wrap](controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Label](controls/control-text-box.md)** control.
 
 ### P
-**[Padding](../controls/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Export](controls/control-export-import.md)**, and **[Import](controls/control-export-import.md)** controls.
+**[Padding](controls/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Export](controls/control-export-import.md)**, and **[Import](controls/control-export-import.md)** controls.
 
-**[PaddingBottom](../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.  Applies to many controls.
+**[PaddingBottom](controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.  Applies to many controls.
 
-**[PaddingLeft](../controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.  Applies to many controls.
+**[PaddingLeft](controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.  Applies to many controls.
 
-**[PaddingRight](../controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.  Applies to many controls.
+**[PaddingRight](controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.  Applies to many controls.
 
-**[PaddingTop](../controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.  Applies to many controls.
+**[PaddingTop](controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.  Applies to many controls.
 
 **[Page](controls/control-pdf-viewer.md)** – The number of the page that you want to show.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -385,13 +385,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[RadioSize](controls/control-radio.md)** – The diameter of the circles in a radio-button control.  Applies to the **[Radio](controls/control-radio.md)** control.
 
-**[RadiusBottomLeft](../controls/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.  Applies to many controls.
+**[RadiusBottomLeft](controls/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.  Applies to many controls.
 
-**[RadiusBottomRight](../controls/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.  Applies to many controls.
+**[RadiusBottomRight](controls/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.  Applies to many controls.
 
-**[RadiusTopLeft](../controls/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.  Applies to many controls.
+**[RadiusTopLeft](controls/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.  Applies to many controls.
 
-**[RadiusTopRight](../controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.  Applies to many controls.
+**[RadiusTopRight](controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.  Applies to many controls.
 
 **RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
@@ -490,21 +490,21 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Visible](controls/properties-core.md)** – Whether a control appears or is hidden.  Applies to many controls.
 
 ### W
-**[Width](../controls/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
+**[Width](controls/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
 
-**[WidthFit](../controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space of a container control such as an **[Edit form](controls/control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](working-with-form-layout.md).
+**[WidthFit](controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space of a container control such as an **[Edit form](controls/control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](working-with-form-layout.md).
 
 **[Wrap](controls/control-text-box.md)** – Whether text that's too long to fit in a label wraps to the next line.  Applies to the **[Label](controls/control-text-box.md)** control.
 
 **[WrapCount](controls/control-gallery.md)** – How many records appear in each item of a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 ### X
-**[X](../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
+**[X](controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
 
 **[XLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels below the x-axis of a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### Y
-**[Y](../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
+**[Y](controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
 
 **[YAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Line chart](controls/control-column-line-chart.md)** control.
 

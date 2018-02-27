@@ -40,7 +40,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **Input** – Input.
 
@@ -58,11 +58,11 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
 [**Collect**( *CollectionName*, *DatatoCollect* )](../../functions/function-clear-collect-clearcollect.md)

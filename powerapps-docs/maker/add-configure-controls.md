@@ -72,9 +72,9 @@ In this procedure, you'll add and configure a **Label** control, but you can app
 
     ![A resized label](./media/add-configure-controls/shorter-text-box.png)
 
-     You can also resize a control by modifying its **[Height](../controls/properties-size-location.md)**, **[Width](../controls/properties-size-location.md)**, or both properties, as this topic describes later.
+     You can also resize a control by modifying its **[Height](controls/properties-size-location.md)**, **[Width](controls/properties-size-location.md)**, or both properties, as this topic describes later.
 
-3. Move the **Label** control by dragging the selection box itself (or by modifying the **[X](../controls/properties-size-location.md)**, **[Y](../controls/properties-size-location.md)**, or both properties, as this topic describes later).
+3. Move the **Label** control by dragging the selection box itself (or by modifying the **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, or both properties, as this topic describes later).
 
 4. Triple-click the text that appears in the **Label** control, and then type **Hello, world**.
 
@@ -153,8 +153,8 @@ By using the formula bar, you can set properties that you can't set directly, in
 
 Each change that you made earlier in this topic updated the value of a [property](reference-properties.md) for the control that you configured.
 
-* When you resized the control, you changed its **[Width](../controls/properties-size-location.md)** property.
-* When you moved the control, you changed its **[X](../controls/properties-size-location.md)** and **[Y](../controls/properties-size-location.md)** properties.
+* When you resized the control, you changed its **[Width](controls/properties-size-location.md)** property.
+* When you moved the control, you changed its **[X](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties.
 * When you changed the text that the control displays, you changed its **[Text](controls/properties-core.md)** property.
 
 Instead of configuring a control directly, in the **Properties** tab, or from the toolbar, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.

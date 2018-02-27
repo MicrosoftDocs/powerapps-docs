@@ -62,7 +62,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 
 **[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
@@ -98,11 +98,11 @@ Note that you need to preview the app in order for Timer to run in the designer.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
 [**Refresh**( *DataSource* )](../../functions/function-refresh.md)
@@ -113,7 +113,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Set the timer's **Duration** property to **10000** and its **Repeat** and **Autostart** properties to **true**.
-3. (optional) Make the timer easier to read by setting its **[Height](../../controls/properties-size-location.md)** property to **160**, its **[Width](../../controls/properties-size-location.md)** property to **600**, and its **[Size](../../controls/properties-text.md)** property to **60**.
+3. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](../../controls/properties-text.md)** property to **60**.
 4. Add a label, and set its **[Text](properties-core.md)** property to this formula:
    <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
 
@@ -127,7 +127,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Set the timer's **Duration** property to **5000** and its **Repeat** and **Autostart** properties to **true**.
-3. (optional) Make the timer easier to read by setting its **[Height](../../controls/properties-size-location.md)** property to **160**, its **[Width](../../controls/properties-size-location.md)** property to **600**, and its **[Size](../../controls/properties-text.md)** property to **60**.
+3. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](../../controls/properties-text.md)** property to **60**.
 4. Add a label, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:
    <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 

@@ -58,7 +58,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
@@ -68,13 +68,13 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
 
-**[PaddingBottom](../../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
+**[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
-**[PaddingLeft](../../controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
+**[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
 
-**[PaddingRight](../../controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
+**[PaddingRight](properties-size-location.md)** – The distance between text in a control and the right edge of that control.
 
-**[PaddingTop](../../controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+**[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
 **Pressed** – *True* while a control is being pressed, *false* otherwise.
 
@@ -84,13 +84,13 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[RadiusBottomLeft](../../controls/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
+**[RadiusBottomLeft](properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
 
-**[RadiusBottomRight](../../controls/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
+**[RadiusBottomRight](properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
 
-**[RadiusTopLeft](../../controls/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
+**[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
 
-**[RadiusTopRight](../../controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
+**[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 
@@ -106,11 +106,11 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
 **[Navigate( *ScreenName*, *ScreenTransitionValue* )](../../functions/function-navigate.md)**
@@ -157,17 +157,17 @@ Add a second button to clear the total between calculations.
 
 ### Change a button's appearance
 #### Change a button's shape
-By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](../../controls/properties-size-location.md)**, **[Width](../../controls/properties-size-location.md)**, and **[Radius](../../controls/properties-size-location.md)** properties.
+By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](properties-size-location.md)**, **[Width](properties-size-location.md)**, and **[Radius](properties-size-location.md)** properties.
 
 > [!NOTE]
 > [Icons and Shapes](control-shapes-icons.md) provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](properties-core.md)** property.
 
-1. Add a **Button** control, and set its **[Height](../../controls/properties-size-location.md)** and **[Width](../../controls/properties-size-location.md)** properties to **300** to make a large square button.
-2. Modify the **[RadiusTopLeft](../../controls/properties-size-location.md)**, **[RadiusTopRight](../../controls/properties-size-location.md)**, **[RadiusBottomLeft](../../controls/properties-size-location.md)**, and **[RadiusBottomRight](../../controls/properties-size-location.md)** properties to adjust the amount of curvature on each corner. Here are some examples of different shapes, each one starting from a 300 x 300 square button:
+1. Add a **Button** control, and set its **[Height](properties-size-location.md)** and **[Width](properties-size-location.md)** properties to **300** to make a large square button.
+2. Modify the **[RadiusTopLeft](properties-size-location.md)**, **[RadiusTopRight](properties-size-location.md)**, **[RadiusBottomLeft](properties-size-location.md)**, and **[RadiusBottomRight](properties-size-location.md)** properties to adjust the amount of curvature on each corner. Here are some examples of different shapes, each one starting from a 300 x 300 square button:
    
-   * Set all four **[Radius](../../controls/properties-size-location.md)** values to **150** to create a circle.
-   * Set the values for **[RadiusTopLeft](../../controls/properties-size-location.md)** and **[RadiusBottomRight](../../controls/properties-size-location.md)** to **300** to create a leaf-shaped **Button**.
-   * Set the values for **[RadiusTopLeft](../../controls/properties-size-location.md)** and **[RadiusTopRight](../../controls/properties-size-location.md)** to **300**, and the values for **[RadiusBottomLeft](../../controls/properties-size-location.md)** and **[RadiusBottomRight](../../controls/properties-size-location.md)** to **100** to create a tab-shaped button.
+   * Set all four **[Radius](properties-size-location.md)** values to **150** to create a circle.
+   * Set the values for **[RadiusTopLeft](properties-size-location.md)** and **[RadiusBottomRight](properties-size-location.md)** to **300** to create a leaf-shaped **Button**.
+   * Set the values for **[RadiusTopLeft](properties-size-location.md)** and **[RadiusTopRight](properties-size-location.md)** to **300**, and the values for **[RadiusBottomLeft](properties-size-location.md)** and **[RadiusBottomRight](properties-size-location.md)** to **100** to create a tab-shaped button.
 
 #### Change a button's color when you hover over it
 By default, the fill color of a **Button** control will dim by 20% when you hover over it with a mouse. You can adjust this behavior by changing the **[HoverFill](properties-color-border.md)** property, which uses the **[ColorFade](../../functions/function-colors.md)** function. If you set the **[ColorFade](../../functions/function-colors.md)** formula to a positive percentage, the color becomes lighter when you hover over the button, while a negative percentage makes the color darker.

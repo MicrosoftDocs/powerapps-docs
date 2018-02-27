@@ -43,7 +43,7 @@ The [**Data table**](control-data-table.md) control shows a dataset in a tabular
   > 
   > 
 * **IsHyperlink** – A value that indicates whether the data in the column should be underlined to indicate that it's a hyperlink.
-* [**Width**](../../controls/properties-size-location.md) – The distance between the **Column** control’s left and right edges.
+* [**Width**](properties-size-location.md) – The distance between the **Column** control’s left and right edges.
 
 ## Examples
 ### Resize a column
