@@ -99,7 +99,7 @@ To share data in an Excel file:
 See all the [available connections](../maker/connections-list.md).  
 Learn how to [add connections](../maker/add-manage-connections.md) and [add a data source](../maker/add-data-connection.md) to your apps.  
 [Understand tables and records](../working-with-tables.md) with tabular data sources.  
-Some additional gallery resources include [Show a list of items](../maker/add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).
+Some additional gallery resources include [Show a list of items](../maker/add-gallery.md) and [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md).
 
 <!--Icon references-->
 [boxicon]: ./media/cloud-storage-blob-connections/boxicon.png

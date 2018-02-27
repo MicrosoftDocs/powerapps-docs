@@ -68,7 +68,7 @@ In these examples, you'll replace or modify records in a data source that's name
 | **UpdateIf(&nbsp;IceCream, true, {&nbsp;Quantity:&nbsp;0&nbsp;} )** |Sets the value of the **Quantity** property for all records in the data source to 0. |![ ](media/function-update-updateif/icecream-mint-zero.png)<br> <br>The **IceCream** data source has been modified. |
 
 ### Step by step
-1. Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](../show-images-text-gallery-sort-filter.md) describes.
+1. Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
 2. Name the gallery **ProductGallery**.
 3. Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery.Selected.UnitsInStock**
 4. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**UpdateIf(Inventory, ProductName = ProductGallery.Selected.ProductName, {UnitsInStock:UnitsInStock-UnitsSold.Value})**

@@ -67,7 +67,7 @@ Each example in this section extracts strings from the **Address** [column](../w
 | **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** |Extracts the last seven characters of each string. |![](media/function-left-mid-right/people-table-right.png) |
 
 ### Step-by-step example
-1. Import or create a [collection](../working-with-data-sources.md#collections) named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
+1. Import or create a [collection](../working-with-data-sources.md#collections) named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
 2. Set the **[Text](../controls/properties-core.md)** property of the lower label in the gallery to this function:
    
     **Right(ThisItem.ProductName, 3)**

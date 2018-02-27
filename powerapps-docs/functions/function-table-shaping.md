@@ -87,7 +87,7 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 | **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Performs the following table transforms in order, starting from the inside of the formula: <ol><li>Adds a **Revenue** column based on the per-record calculation of **UnitPrice * Quantity**.<li>Renames **UnitPrice** to **Price**.<li>Excludes the **Quantity** column.</ol>  Note that order is important. For example, we can't calculate with **UnitPrice** after it has been renamed. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### Step by step
-1. Import or create a collection named **Inventory** as the first subprocedure in [Show text and images in a gallery](../show-images-text-gallery-sort-filter.md) describes.
+1. Import or create a collection named **Inventory** as the first subprocedure in [Show text and images in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
 2. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
    
     **ClearCollect(Inventory2, RenameColumns(Inventory, "ProductName", "JacketID"))**

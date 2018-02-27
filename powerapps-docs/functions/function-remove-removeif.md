@@ -69,7 +69,7 @@ In these examples, you'll remove a record or records in a data source that's nam
 | **RemoveIf(&nbsp;IceCream, true )** |Removes all records from the data source. |![](media/function-remove-removeif/icecream-empty.png)<br><br>The **IceCream** data source has been modified. |
 
 ### Step by step
-1. Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](../show-images-text-gallery-sort-filter.md) describes.
+1. Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
 2. In the gallery, set the **[OnSelect](../controls/properties-core.md)** property of the image to this expression:<br>**Remove(Inventory, ThisItem)**
 3. Press F5, and then select an image in the gallery.<br>The item is removed from the gallery and the collection.
 
