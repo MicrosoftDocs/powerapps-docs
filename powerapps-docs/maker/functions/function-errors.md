@@ -26,7 +26,7 @@ Errors can happen when a [record](../working-with-tables.md#records) of a data s
 
 The **[Patch](function-patch.md)** function and other data functions don't directly return errors. Instead they return the result of their operation. After a data function executes, you can use the **Errors** function to obtain the details of any errors.  You can check for the existence of errors with the **[IsEmpty]** function in the formula **IsEmpty( Errors ( ... ) )**.
 
-You can avoid some errors before they happen by using the **[Validate](../../functions/function-validate.md)** and **[DataSourceInfo](function-datasourceinfo.md)** functions.  See [working with data sources](../working-with-data-sources.md) for more suggestions on how to work with and avoid errors.
+You can avoid some errors before they happen by using the **[Validate](function-validate.md)** and **[DataSourceInfo](function-datasourceinfo.md)** functions.  See [working with data sources](../working-with-data-sources.md) for more suggestions on how to work with and avoid errors.
 
 ## Description
 The **Errors** function returns a [table](../working-with-tables.md) of errors that contains the following [columns](../working-with-tables.md#columns):

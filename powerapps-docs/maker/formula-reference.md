@@ -338,7 +338,7 @@ Other elements include:
 **[User](functions/function-user.md)** – Returns information about the current user.
 
 ## V
-**[Validate](../functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.
+**[Validate](functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.
 
 **[Value](../functions/function-value.md)** – Converts a string to a number.
 

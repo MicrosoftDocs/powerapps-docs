@@ -115,7 +115,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
    
     Because the **[Text](../controls/properties-core.md)** property no longer contains any characters, it's *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 
-For information about how to perform validation by using other tools, see the **[Validate](../../functions/function-validate.md)** function and [working with data sources](../working-with-data-sources.md).  
+For information about how to perform validation by using other tools, see the **[Validate](function-validate.md)** function and [working with data sources](../working-with-data-sources.md).  
 
 Other examples:
 

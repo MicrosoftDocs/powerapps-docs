@@ -24,7 +24,7 @@ Provides information about a [data source](../working-with-data-sources.md).
 ## Overview
 Data sources can provide a wealth of information to optimize the user experience.
 
-You can use [column](../working-with-tables.md#columns)-level information to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function. The **[Validate](../../functions/function-validate.md)** function uses this same information.
+You can use [column](../working-with-tables.md#columns)-level information to validate user input and provide immediate feedback to the user before using the **[Patch](function-patch.md)** function. The **[Validate](function-validate.md)** function uses this same information.
 
 You can use information at the data-source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have permissions to edit and create [records](../working-with-tables.md#records).
 
