@@ -84,7 +84,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Radio](controls/control-radio.md)** – Show options that are mutually exclusive.
 
-**[Rating](../controls/control-rating.md)** – Indicate a value between 1 and a specified number.
+**[Rating](controls/control-rating.md)** – Indicate a value between 1 and a specified number.
 
 **[Screen](../controls/control-screen.md)** – Show and update data about a specific task.
 
@@ -285,7 +285,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[MarkerSuffix](controls/control-column-line-chart.md)** – Text that appears after each value in a column chart for which the **[Markers](controls/control-column-line-chart.md)** property is set to **true**.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
-**Max** – The maximum value to which the user can set a slider or a rating.  Applies to **[Rating](../controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
+**Max** – The maximum value to which the user can set a slider or a rating.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
 
 **[MaxLength](../controls/control-text-input.md)** – The number of characters that the user can type into a text-input control.  Applies to the **[Text input](../controls/control-text-input.md)** control.
 
@@ -397,9 +397,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](../controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
-**[RatingFill](../controls/control-rating.md)** – The color of the stars in a rating control.  Applies to the **[Rating](../controls/control-rating.md)** control.
+**[RatingFill](controls/control-rating.md)** – The color of the stars in a rating control.  Applies to the **[Rating](controls/control-rating.md)** control.
 
-**ReadOnly** – Whether a user can change the value of a slider or rating control.  Applies to **[Rating](../controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
+**ReadOnly** – Whether a user can change the value of a slider or rating control.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
 
 **[Repeat](../controls/control-timer.md)** – Whether a timer automatically restarts when it finishes running.  Applies to the **[Timer](../controls/control-timer.md)** control.
 
@@ -432,7 +432,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ShowScrollbar](controls/control-gallery.md)** – Whether a scrollbar appears when the user hovers over a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.  Applies to **[Rating](../controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
+**ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
 
 **[Size](../controls/properties-text.md)** – The font size of the text that appears on a control.  Applies to many controls.
 
