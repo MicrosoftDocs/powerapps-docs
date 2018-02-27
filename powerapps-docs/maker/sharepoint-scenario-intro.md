@@ -54,5 +54,5 @@ Ideally, you have basic familiarity with each technology, but you can still comp
 * [Power BI Guided Learning](https://docs.microsoft.com/power-bi/guided-learning/)
 
 ## Next steps
-The next step in this tutorial series is to [set up the SharePoint Online lists](../sharepoint-scenario-setup.md) that we use throughout the series.
+The next step in this tutorial series is to [set up the SharePoint Online lists](sharepoint-scenario-setup.md) that we use throughout the series.
 
