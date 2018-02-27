@@ -32,7 +32,7 @@ In both cases, Microsoft PowerApps automatically stores and helps secure the dat
 
 ## Create an entity
 1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane.
-2. If you haven't created a database, you need to create one. For more information, see [Create a Common Data Service database](create-database.md).
+2. If you haven't created a database, you need to create one. For more information, see [Create a Common Data Service database](administrator/create-database.md).
 3. Near the upper-right corner, click or tap **New entity**.
 4. In the **Entity name** field, enter a name for the entity. Make sure that the name is clear and meaningful, because you can't change it after you create the entity. When you develop an app, you will reference the entity by this name in a formula.
 5. Specify a display name and, optionally, a description for the entity, and then click or tap **Next**.

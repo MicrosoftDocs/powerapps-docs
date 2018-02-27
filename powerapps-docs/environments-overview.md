@@ -127,7 +127,7 @@ Two weeks after PowerApps enters general availability (GA), environments that co
 With the introduction of environments, we are also launching the PowerApps admin center, where you can manage all of the environments that you have created or to which you have been added to the Environment Admin role. From the Admin center, you can perform all administrative actions on an environment, including the following:
 
 * Add or remove a user or group from either the Environment Admin or Environment Maker role.  For more information, see [Environment Administration](environments-administration.md).
-* Provision a Common Data Service database for the environment. For more information, see [Create a Common Data Service database](create-database.md).
+* Provision a Common Data Service database for the environment. For more information, see [Create a Common Data Service database](administrator/create-database.md).
 * Set Data Loss Prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
 * Set database security policies (as open or restricted by database roles). For more information, see [Configure database security](database-security.md).
 * Members of the Azure AD tenant Global administrator role (includes Office 365 Global admins) can also manage all environments that have been created in their tenant and set tenant-wide policies from the PowerApps admin center.
