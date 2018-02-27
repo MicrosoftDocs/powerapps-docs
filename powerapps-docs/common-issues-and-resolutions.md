@@ -93,7 +93,7 @@ ms.author: sharik
 
 9. **When PowerApps generates an app from data, the field used for sorting and searching isn't automatically configured**.
 
-   To configure this field, edit the **[Items](controls/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
+   To configure this field, edit the **[Items](controls/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](maker/add-gallery.md) describe.
 
 10. **For apps that are created from data, only the first 500 records of a data source can be accessed**.
 

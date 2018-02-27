@@ -30,7 +30,7 @@ In this tutorial, you show data about flooring products in a **Flexible height**
 
 **Suggested reading**
 
-If you've never added controls to a gallery, follow the steps in [Show a list of items](add-gallery.md) before you proceed in this topic.
+If you've never added controls to a gallery, follow the steps in [Show a list of items](maker/add-gallery.md) before you proceed in this topic.
 
 ## Add data to a blank app
 1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains names, overviews, and links to images of flooring products.

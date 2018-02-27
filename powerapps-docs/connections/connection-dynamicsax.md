@@ -34,6 +34,6 @@ For information about how to add data from Dynamics AX to an existing app, see [
 See the [list of available connections](../connections-list.md), and learn how to [manage connections](../add-manage-connections.md) in PowerApps.
 
 ### Next steps
-* Learn how to [show data from a data source](../add-gallery.md).
+* Learn how to [show data from a data source](../maker/add-gallery.md).
 * Learn how to [view details and create or update records](../maker/add-form.md).
 

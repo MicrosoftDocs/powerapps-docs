@@ -62,7 +62,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
    
     ![Layout with dates](./media/customize-layout-sharepoint/browse-dates.png)
 
-For more information about galleries, see [Show a list of items in PowerApps](add-gallery.md).
+For more information about galleries, see [Show a list of items in PowerApps](maker/add-gallery.md).
 
 ## Set the sort and search columns
 1. Select the **Gallery** control by clicking or tapping any record except the first one.
