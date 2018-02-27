@@ -29,7 +29,7 @@ In this series of tutorials, the company Contoso has a SharePoint Online site wh
 ## Getting started quickly
 The scenario we present in this series of tutorials is simple compared to a full-blown project management and analysis app, but it still takes some time to complete all the tasks. If you just want a quick introduction to using PowerApps, Microsoft Flow, and Power BI with SharePoint, check out the following articles:
 
-* **PowerApps**: [Generate an app from within SharePoint using PowerApps](maker/generate-app-from-sharepoint-list-interface.md) and [Generate an app to manage data in a SharePoint list](maker/app-from-sharepoint.md)
+* **PowerApps**: [Generate an app from within SharePoint using PowerApps](generate-app-from-sharepoint-list-interface.md) and [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md)
 * **Microsoft Flow**: [Wait for approval in Microsoft Flow](https://docs.microsoft.com/flow/wait-for-approvals)
 * **Power BI**: [Embed with report web part in SharePoint Online](https://docs.microsoft.com/power-bi/service-embed-report-spo)
 
@@ -49,10 +49,10 @@ To complete the scenario, you need the following subscriptions and desktop tools
 Ideally, you have basic familiarity with each technology, but you can still complete the scenario if you're new to some of these technologies. Use the following content to get up to speed:
 
 * [Get started with SharePoint](https://support.office.com/article/Get-started-with-SharePoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261)
-* [PowerApps Guided Learning](guided-learning/index.md)
+* [PowerApps Guided Learning](../guided-learning/index.md)
 * [Microsoft Flow Guided Learning](https://docs.microsoft.com/flow/guided-learning/)
 * [Power BI Guided Learning](https://docs.microsoft.com/power-bi/guided-learning/)
 
 ## Next steps
-The next step in this tutorial series is to [set up the SharePoint Online lists](sharepoint-scenario-setup.md) that we use throughout the series.
+The next step in this tutorial series is to [set up the SharePoint Online lists](../sharepoint-scenario-setup.md) that we use throughout the series.
 
