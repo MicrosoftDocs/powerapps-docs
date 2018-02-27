@@ -71,7 +71,7 @@ Below the **Create an app** banner is the **Use the Microsoft Common Data Servic
 
 Under **Common Data Service**, a different button will appear, depending on your license or permission.
 
-* If the **Start trial** button appears, you don't have a PowerApps P2 license, which the Common Data Service requires. Click or tap this button to open the page where you can sign up for a free, 90-day trial of this license. [Learn more about PowerApps licenses](../signup-for-powerapps.md).
+* If the **Start trial** button appears, you don't have a PowerApps P2 license, which the Common Data Service requires. Click or tap this button to open the page where you can sign up for a free, 90-day trial of this license. [Learn more about PowerApps licenses](signup-for-powerapps.md).
 * If the **Get started** button appears, you're in an environment that doesn't have a Common Data Service database or you don't have access to it. Click or tap this button to create an environment and database at once, so you can start to use Common Data Services for your apps. [Learn more about creating environments](../administrator/environments-administration.md).
   
     ![Create an environment and a database](./media/intro-maker-portal/createenvanddb2.png)

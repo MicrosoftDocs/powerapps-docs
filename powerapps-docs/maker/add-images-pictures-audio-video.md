@@ -21,7 +21,7 @@ ms.author: sharik
 This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive for Business.
 
 ## Prerequisites
-[Sign up](../signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
+[Sign up](signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
 
 ## Add media from a file or the cloud
 You can choose the kind of media file to add (for example, images, video, or audio).

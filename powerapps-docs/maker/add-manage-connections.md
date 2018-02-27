@@ -33,7 +33,7 @@ Your next step after this article is to display and manage data from the data so
 * Connect to Twilio, and send an SMS message from your app.
 
 ## Prerequisites
-1. [Sign up](../signup-for-powerapps.md) for PowerApps.
+1. [Sign up](signup-for-powerapps.md) for PowerApps.
 2. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
 
 ## Background on data connections

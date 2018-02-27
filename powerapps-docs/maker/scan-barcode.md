@@ -33,7 +33,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 * If the device runs out of memory and the app freezes, restart the app.
 
 ## Create a blank app
-1. [Sign up for PowerApps](../signup-for-powerapps.md), and then do *either* of the following:
+1. [Sign up for PowerApps](signup-for-powerapps.md), and then do *either* of the following:
 
    * [Open PowerApps](https://create.powerapps.com/api/start) in a browser on a device that has a camera.
    * [Install PowerApps](http://aka.ms/powerappsinstall) from the Windows Store on a device that has a camera. Open PowerApps, sign in, and then click or tap **New** on the **File** menu (along the left edge).

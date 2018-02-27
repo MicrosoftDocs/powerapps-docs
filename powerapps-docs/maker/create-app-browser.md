@@ -23,7 +23,7 @@ Create and edit apps in PowerApps Studio for web, which opens in a browser windo
 
 ## Prerequisites
 
-* [Sign up](../signup-for-powerapps.md) for PowerApps.
+* [Sign up](signup-for-powerapps.md) for PowerApps.
 * Microsoft Edge, Google Chrome, or Internet Explorer 11 on a computer that's running Windows or a Mac.
 
 ## Open PowerApps Studio for web
