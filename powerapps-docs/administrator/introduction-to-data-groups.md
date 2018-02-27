@@ -20,7 +20,7 @@ ms.author: deonhe
 ---
 # Learn all about data groups
 
-Data groups are a simple way to categorize services within a [data loss prevention (DLP) policy](prevent-data-loss.md). The two data groups available are the **Business data only** group and the **No business data allowed** group. Organizations are free to determine which services are placed into a particular data group. A good way to categorize services is to place them in groups, based on the impact to the organization. By default, all services are placed into the **No business data allowed** data group. You manage the services in a data group when you create or modify the properties of a DLP policy from the admin center.
+Data groups are a simple way to categorize services within a [data loss prevention (DLP) policy](../prevent-data-loss.md). The two data groups available are the **Business data only** group and the **No business data allowed** group. Organizations are free to determine which services are placed into a particular data group. A good way to categorize services is to place them in groups, based on the impact to the organization. By default, all services are placed into the **No business data allowed** data group. You manage the services in a data group when you create or modify the properties of a DLP policy from the admin center.
 
 ## How data is shared between data groups
 Data cannot be shared among services located in different groups. For example, if you place SharePoint and Salesforce in the **Business data only** group and you place Facebook and Twitter in the **No business data allowed** group, you cannot create a PowerApp that moves data between SharePoint and Facebook. While data cannot be shared among services in different groups, you can share data among the services within a specific group. So, going back to the earlier example, since SharePoint and Salesforce were placed in the same data group, PowerApps that your end users create can share data between SharePoint and Salesforce. The key point is that services in a specific group can share data, while services in different groups cannot share data.
@@ -61,7 +61,7 @@ In this walk-through, we will change the default data group from the **no busine
    ![change default group](./media/introduction-to-data-groups/default-data-group-2.png)   
 
 ## Next steps
-* [Learn more about data loss prevention (DLP) policies](prevent-data-loss.md)
-* [Learn more about environments](administrator/environments-overview.md)
-* [Learn more about Microsoft PowerApps](maker/getting-started.md)
+* [Learn more about data loss prevention (DLP) policies](../prevent-data-loss.md)
+* [Learn more about environments](environments-overview.md)
+* [Learn more about Microsoft PowerApps](../maker/getting-started.md)
 
