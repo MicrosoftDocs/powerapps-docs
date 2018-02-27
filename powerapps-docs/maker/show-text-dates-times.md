@@ -69,7 +69,7 @@ Here are some examples.
 Convert dates and times from strings of text to values, which you can format in a variety of ways and use in calculations. Specify the format by using built-in and custom options.
 
 > [!NOTE]
-> The **[DateTimeValue](../functions/function-datevalue-timevalue.md)** and **[DateValue](../functions/function-datevalue-timevalue.md)** functions can convert dates in any of these formats into values:  
+> The **[DateTimeValue](functions/function-datevalue-timevalue.md)** and **[DateValue](functions/function-datevalue-timevalue.md)** functions can convert dates in any of these formats into values:  
 > 
 > * MM/DD/YYYY  
 > * DD/MM/YYYY  

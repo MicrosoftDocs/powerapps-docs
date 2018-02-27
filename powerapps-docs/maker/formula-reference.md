@@ -109,9 +109,9 @@ Other elements include:
 
 **[DateDiff](functions/function-dateadd-datediff.md)** – Subtracts two date values, and shows the result in days, months, quarters, or years.
 
-**[DateTimeValue](../functions/function-datevalue-timevalue.md)** – Converts a date and time string to a date/time value.
+**[DateTimeValue](functions/function-datevalue-timevalue.md)** – Converts a date and time string to a date/time value.
 
-**[DateValue](../functions/function-datevalue-timevalue.md)** – Converts a date-only string to a date/time value.
+**[DateValue](functions/function-datevalue-timevalue.md)** – Converts a date-only string to a date/time value.
 
 **[Day](functions/function-datetime-parts.md)** – Retrieves the day portion of a date/time value.  
 
@@ -314,7 +314,7 @@ Other elements include:
 
 **[Time](functions/function-date-time.md)** – Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
 
-**[TimeValue](../functions/function-datevalue-timevalue.md)** – Converts a time-only string to a date/time value.
+**[TimeValue](functions/function-datevalue-timevalue.md)** – Converts a time-only string to a date/time value.
 
 **[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 

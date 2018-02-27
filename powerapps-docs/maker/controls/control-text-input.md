@@ -127,7 +127,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**DateTimeValue**( *String* )](../../functions/function-datevalue-timevalue.md)
+[**DateTimeValue**( *String* )](../functions/function-datevalue-timevalue.md)
 
 ## Examples
 ### Collect data
