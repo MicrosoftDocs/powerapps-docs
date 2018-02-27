@@ -19,13 +19,13 @@ ms.author: jamesol
 
 ---
 # Purchase PowerApps for your organization
-This article shows you how to purchase PowerApps for your organization as an administrator. You can purchase PowerApps through the PowerApps website directly, through the Office 365 admin center, or through your Microsoft representative or partner. This article will discuss the trial options available for PowerApps Plan 1 or Plan 2 and then explain how to purchase PowerApps Plan 1 or Plan 2 as an organization. For more information, see [PowerApps in your organization Q&A](signup-question-and-answer.md).
+This article shows you how to purchase PowerApps for your organization as an administrator. You can purchase PowerApps through the PowerApps website directly, through the Office 365 admin center, or through your Microsoft representative or partner. This article will discuss the trial options available for PowerApps Plan 1 or Plan 2 and then explain how to purchase PowerApps Plan 1 or Plan 2 as an organization. For more information, see [PowerApps in your organization Q&A](../signup-question-and-answer.md).
 
 > [!NOTE]
 >   To purchase PowerApps for an organization, you must already be an Office 365 Global or Billing Admin of a tenant, or you must create a tenant.
 
 ## Choosing the right plan
-For details about what licenses you can choose for your organization, see [PowerApps licensing overview](pricing-billing-skus.md).
+For details about what licenses you can choose for your organization, see [PowerApps licensing overview](../pricing-billing-skus.md).
 
 ## Purchase PowerApps directly
 You can purchase PowerApps subscriptions for your organization from [powerapps.microsoft.com][4] and then assign PowerApps licenses to your users. [Learn more][5].
@@ -89,8 +89,8 @@ You can purchase PowerApps subscriptions for your organization from the [Office 
 These are coming soon but are not supported yet.
 
 ## See also
-[PowerApps in your organization Q&A](signup-question-and-answer.md)  
-[Self-service sign up for PowerApps](signup-for-powerapps.md)  
+[PowerApps in your organization Q&A](../signup-question-and-answer.md)  
+[Self-service sign up for PowerApps](../signup-for-powerapps.md)  
 
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/p/?LinkId=715583
