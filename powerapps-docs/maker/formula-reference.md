@@ -275,7 +275,7 @@ Other elements include:
 
 **[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
 
-**[Set](../functions/function-set.md)** – Sets the value of a global variable.
+**[Set](functions/function-set.md)** – Sets the value of a global variable.
 
 **[ShowColumns](../functions/function-table-shaping.md)** – Returns a table with only selected columns.
 

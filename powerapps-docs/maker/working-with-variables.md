@@ -90,7 +90,7 @@ To create our adding machine, we require a variable to hold the running total. T
 
 How global variables work:
 
-* You set the value of the global variable with the **[Set](../functions/function-set.md)** function.  **Set( MyVar, 1 )** sets the global variable **MyVar** to a value of **1**.
+* You set the value of the global variable with the **[Set](functions/function-set.md)** function.  **Set( MyVar, 1 )** sets the global variable **MyVar** to a value of **1**.
 * You use the global variable by referencing the name used with the **Set** function.  In this case, **MyVar** will return **1**.
 * Global variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
 
@@ -104,7 +104,7 @@ Let's rebuild our adding machine by using a global variable:
    
     **Set( RunningTotal, RunningTotal + Text1 )**
    
-    The first time a user selects the **Add** button and **[Set](../functions/function-set.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
+    The first time a user selects the **Add** button and **[Set](functions/function-set.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
    
     ![](media/working-with-variables/global-variable-1.png)
 4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
@@ -132,7 +132,7 @@ There are three types of variables in PowerApps:
 
 | Variables type | Scope | Description | Functions |
 | --- | --- | --- | --- |
-| Global variables |App |Simplest to use.  Holds a number, text string, Boolean, record, table, etc. that can be references from anywhere in the app. |[**Set**](../functions/function-set.md) |
+| Global variables |App |Simplest to use.  Holds a number, text string, Boolean, record, table, etc. that can be references from anywhere in the app. |[**Set**](functions/function-set.md) |
 | Context variables |Screen |Great for passing values to a screen, much like parameters to a procedure in other languages.  Can only be referenced from one screen. |[**UpdateContext**](functions/function-navigate.md) |
 | Collections |App |Holds a table that can be references from anywhere in the app.  Allows the contents of the table to be modified rather than being set as a whole. Can be saved to the local device for later use. |[**Collect**](functions/function-savedata-loaddata.md)<br>etc. |
 
