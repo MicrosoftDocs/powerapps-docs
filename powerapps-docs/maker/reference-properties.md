@@ -72,7 +72,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[List box](controls/control-list-box.md)** – Select one or more items in a list.
 
-**[Microphone](../controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
+**[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
 **[PDF viewer](../controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
 
@@ -247,7 +247,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[HTMLText](controls/control-html-text.md)** – Text that appears in an HTML text control and that may contain HTML tags.  Applies to the **[HTML text](controls/control-html-text.md)** control.
 
 ### I
-**[Image](../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](controls/control-image.md)**, **[Microphone](../controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**[Image](../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](controls/control-image.md)**, **[Microphone](controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[ImagePosition](../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
 
@@ -291,7 +291,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Media** – An identifier for the clip that an audio or video control plays.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Audio](controls/control-audio-video.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**[Mic](../controls/control-microphone.md)** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.  Applies to the **[Microphone](../controls/control-microphone.md)** control.
+**[Mic](controls/control-microphone.md)** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.  Applies to the **[Microphone](controls/control-microphone.md)** control.
 
 **[Min](../controls/control-slider.md)** – The minimum value to which the user can set a slider.  Applies to the **[Slider](../controls/control-slider.md)** control.
 
@@ -325,11 +325,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnSelect](../controls/properties-core.md)** – The behavior of an app  when the user taps or clicks a control.  Applies to many controls.
 
-**OnStart** – The behavior of an app when the user opens it or starts to record with a microphone control. Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](../controls/control-microphone.md)**, **[Screen](../controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**OnStart** – The behavior of an app when the user opens it or starts to record with a microphone control. Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, **[Screen](../controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[OnStateChange](../controls/control-pdf-viewer.md)** – The behavior of an app when the state of the control changes. Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
 
-**[OnStop](../controls/control-microphone.md)** – The behavior of an app when the user stops recording with a microphone control. Applies to the **[Microphone](../controls/control-microphone.md)** control.
+**[OnStop](controls/control-microphone.md)** – The behavior of an app when the user stops recording with a microphone control. Applies to the **[Microphone](controls/control-microphone.md)** control.
 
 **[OnStream](controls/control-camera.md)** – The behavior of an app when the **[Stream](controls/control-camera.md)** property is updated.  Applies to the **[Camera](controls/control-camera.md)** control.
 

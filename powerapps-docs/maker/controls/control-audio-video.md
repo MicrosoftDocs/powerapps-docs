@@ -22,7 +22,7 @@ ms.author: fikaradz
 A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description
-An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](../../controls/control-microphone.md)** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL with optional closed captions.
+An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL with optional closed captions.
 
 ## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.

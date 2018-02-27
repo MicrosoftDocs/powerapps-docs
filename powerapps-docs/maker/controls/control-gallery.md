@@ -90,6 +90,6 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 * [Get text](../../controls/control-text-input.md#collect-data)
 * [Get images](control-add-picture.md#add-images-to-an-image-gallery-control)
 * [Get photos](control-camera.md#example)
-* [Get sounds](../../controls/control-microphone.md#example)
+* [Get sounds](control-microphone.md#example)
 * [Get drawings](../../controls/control-pen-input.md#create-a-set-of-images)
 
