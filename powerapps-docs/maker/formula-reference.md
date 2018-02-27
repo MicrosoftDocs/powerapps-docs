@@ -240,7 +240,7 @@ Other elements include:
 ## R
 **[Radians](../functions/function-trig.md)** - Converts degrees to radians.
 
-**[Rand](../functions/function-rand.md)** – Returns a pseudo-random number.
+**[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
 **[Refresh](../functions/function-refresh.md)** – Refreshes the records of a data source.
 
