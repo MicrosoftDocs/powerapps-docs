@@ -19,7 +19,7 @@ ms.author: sharik
 
 ---
 # What's new in PowerApps
-For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+For information about known limitations, see [Common issues and resolutions](maker/common-issues-and-resolutions.md).
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.

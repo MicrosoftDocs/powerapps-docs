@@ -30,7 +30,7 @@ ms.author: sharik
 
 1. **Camera controls in PowerApps Studio for Windows**
 
-    PowerApps Studio for Windows may crash if you add a camera control or open an app that uses a camera control. To avoid this problem, use [PowerApps Studio for web](create-app-browser.md) when adding or using a camera control.
+    PowerApps Studio for Windows may crash if you add a camera control or open an app that uses a camera control. To avoid this problem, use [PowerApps Studio for web](../create-app-browser.md) when adding or using a camera control.
 
 2. **Release 2.0.700 on Android devices**
 
@@ -46,7 +46,7 @@ ms.author: sharik
 
 5. **Custom connectors and the Common Data Service**
 
-   If an app created using PowerApps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](environments-overview.md).
+   If an app created using PowerApps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../environments-overview.md).
 
 6. **Running an app on Windows 8.1**
 
@@ -77,35 +77,35 @@ ms.author: sharik
 
 5. **Scanning a barcode**
 
-    For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
+    For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](../scan-barcode.md).
 
 6. **Creating and modifying apps in a browser**
 
-    You can do many, but not all, of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. For more information, see [Create an app in a browser](create-app-browser.md).
+    You can do many, but not all, of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. For more information, see [Create an app in a browser](../create-app-browser.md).
 
 7. **Changing a Title field in an entity**
 
-    If you change the Title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](data-platform-entity-lookup.md).
+    If you change the Title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](../data-platform-entity-lookup.md).
 
 8. **Apps that connect to on-premises SharePoint**
 
-    If you share an app that relies on connections that aren’t automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they click or tap **Sign in**. To close the dialog box, click or tap the close (X) icon in the upper-right corner. The dialog box doesn’t appear if you open the app in PowerApps Studio or PowerApps Mobile. For more information about shared connections, see [Share app resources](share-app-resources.md).
+    If you share an app that relies on connections that aren’t automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they click or tap **Sign in**. To close the dialog box, click or tap the close (X) icon in the upper-right corner. The dialog box doesn’t appear if you open the app in PowerApps Studio or PowerApps Mobile. For more information about shared connections, see [Share app resources](../share-app-resources.md).
 
 9. **When PowerApps generates an app from data, the field used for sorting and searching isn't automatically configured**.
 
-   To configure this field, edit the **[Items](controls/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](maker/add-gallery.md) describe.
+   To configure this field, edit the **[Items](../controls/properties-core.md)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](add-gallery.md) describe.
 
 10. **For apps that are created from data, only the first 500 records of a data source can be accessed**.
 
-     In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](functions/function-filter-lookup.md) article for more details about delegation.
+     In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](../functions/function-filter-lookup.md) article for more details about delegation.
 
 11. **Excel data must be formatted as a table**.
 
-     For information about limitations when you use Excel as a data source, see [Cloud-storage connections](connections/cloud-storage-blob-connections.md#known-limitations).
+     For information about limitations when you use Excel as a data source, see [Cloud-storage connections](../connections/cloud-storage-blob-connections.md#known-limitations).
 
 12. **SharePoint custom lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
 
-     For more information, see [SharePoint Online](connections/connection-sharepoint-online.md#known-issues).
+     For more information, see [SharePoint Online](../connections/connection-sharepoint-online.md#known-issues).
 
 13. **Co-authoring isn't supported. One author at a time, please**.
 
@@ -115,12 +115,12 @@ ms.author: sharik
 
      In some cases, a newly shared app won't be immediately available. Wait a few moments, and it should become available.
 
-15. **In the [Form control](controls/control-form-detail.md), you can't change data by using a custom card**.
+15. **In the [Form control](../controls/control-form-detail.md), you can't change data by using a custom card**.
 
-     The stock custom card is missing the **[Update](controls/control-card.md)** property, which is required to write back changes. To work around this:
+     The stock custom card is missing the **[Update](../controls/control-card.md)** property, which is required to write back changes. To work around this:
 
     * Select the form control, and insert a card by using the right-hand pane based on the field that you want the card to show.  
-    * Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card).
+    * Unlock the card, as described in [Understanding data cards](../working-with-cards.md#unlock-a-card).
     * Remove or rearrange controls within the card as you see fit, just as you would with the custom card.
 
 16. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash**.
@@ -135,4 +135,4 @@ ms.author: sharik
 
 19. **Card gallery is deprecated**.
 
-     Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
+     Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](../controls/control-form-detail.md)** and **[Display form](../controls/control-form-detail.md)** controls.
