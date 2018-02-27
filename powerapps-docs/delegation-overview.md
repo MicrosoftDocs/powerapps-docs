@@ -30,7 +30,7 @@ Where this becomes complicated, and the reason this article exists, is because n
 **Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need. Take heed of [blue-dot suggestions](delegation-overview.md#blue-dot-suggestions) that flag places where delegation is not possible.  If you're working with small data sets (less than 500 records), you can use any data source and formula as processing can be done locally if the formula cannot be delegated.  
 
 ## Delegable data sources
-See the [delegation list](delegation-list.md) for the full list of which data sources support delegation and to what extent.
+See the [delegation list](maker/delegation-list.md) for the full list of which data sources support delegation and to what extent.
 
 We are continuing to add delegation support to existing data sources, as well as add more data sources.
 
@@ -74,7 +74,7 @@ Some notable items missing from the above list:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated.  Only a limited number of data sources support this delegation at this time, check the [delegation list](delegation-list.md) for more details.
+**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated.  Only a limited number of data sources support this delegation at this time, check the [delegation list](maker/delegation-list.md) for more details.
 
 Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** cannot be delegated.
 
