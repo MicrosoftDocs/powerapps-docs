@@ -81,7 +81,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
    
     The image that you drew appears in the **Image gallery** control.
 7. (optional) In the **Pen input** control, click or tap the icon to clear the image that you drew, draw another image, and then click or tap the **[Button](../maker/controls/control-button.md)** control.
-8. In the **Image gallery** control, set the **[OnSelect](properties-core.md)** property of the **[Image](control-image.md)** control to this formula:<br>
+8. In the **Image gallery** control, set the **[OnSelect](properties-core.md)** property of the **[Image](../maker/controls/control-image.md)** control to this formula:<br>
    **Remove(Doodles, ThisItem)**
 9. Remove a drawing by clicking or tapping it in the **Image gallery** control.
 

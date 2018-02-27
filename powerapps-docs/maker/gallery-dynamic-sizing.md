@@ -89,7 +89,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 
     You can add controls to the template more easily as you build the app, and this change won't affect how the app looks when it runs.
 
-2. With the gallery template selected, add an **[Image](../controls/control-image.md)** control, and move it below the **OverviewText** box.
+2. With the gallery template selected, add an **[Image](controls/control-image.md)** control, and move it below the **OverviewText** box.
 
 3. Ensure that the **Image** property of the **Image** control is set to this expression:<br>
     **ThisItem.Image**

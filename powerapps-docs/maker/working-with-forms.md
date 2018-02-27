@@ -59,7 +59,7 @@ Set the **[Items](../controls/properties-core.md)** property of a gallery to sho
 > [!NOTE]
 > In a generated app, **[Items](../controls/properties-core.md)** is set to a significantly more complicated formula by default so that the user can sort and search for records. You'll learn how to build that formula later in this topic; the simpler version is enough for now.
 
-Instead of finding a record to display or edit, the user can create a record by selecting the "+" symbol above the gallery. Create this effect by adding an **[Image](../controls/control-image.md)** control, showing a "+" symbol in it, and setting its **[OnSelect](../controls/properties-core.md)** property to this formula:
+Instead of finding a record to display or edit, the user can create a record by selecting the "+" symbol above the gallery. Create this effect by adding an **[Image](controls/control-image.md)** control, showing a "+" symbol in it, and setting its **[OnSelect](../controls/properties-core.md)** property to this formula:
 <br>**NewForm( EditForm1 ); Navigate( EditScreen1, None )**
 
 This formula opens the **Edit and Create** screen, which features an **[Edit form](controls/control-form-detail.md)** control named **EditForm1**. The formula also switches that form into **New** mode, in which the form shows default values from the data source so that the user can easily create a record from scratch.

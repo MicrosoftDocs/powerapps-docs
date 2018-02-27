@@ -31,7 +31,7 @@ These functions change the state of the **Edit form** control.  The form control
 | **FormMode.View** |The form is populated with an existing record but the user cannot modify the values of the fields. |
 
 ## Description
-These functions are often invoked from the **[OnSelect](../controls/properties-core.md)** formula of a **[Button](../maker/controls/control-button.md)** or **[Image](../controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can [use controls and these functions together](../maker/working-with-forms.md) to create a complete solution.
+These functions are often invoked from the **[OnSelect](../controls/properties-core.md)** formula of a **[Button](../maker/controls/control-button.md)** or **[Image](../maker/controls/control-image.md)** control so that the user can save edits, abandon edits, or create a record. You can [use controls and these functions together](../maker/working-with-forms.md) to create a complete solution.
 
 These functions return no values.
 

@@ -76,7 +76,7 @@ If you add this control, the user can update a data source with one or more phot
    
     Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, and then take a photo by clicking or tapping **MyCamera**.
-3. Add an **[Image gallery](control-gallery.md)** control, and then resize its **[Image](../../controls/control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
+3. Add an **[Image gallery](control-gallery.md)** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
 4. Set the **[Items](../../controls/properties-core.md)** property of the **Image gallery** control to this expression:<br>**MyPix.Url**.
 5. Set the **[Image](../../controls/properties-visual.md)** property of the **Image** control in the gallery to this expression:<br>
    **ThisItem.Url**

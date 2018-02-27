@@ -64,7 +64,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Icon](../controls/control-shapes-icons.md)** – Add graphic appeal and visual interest.
 
-**[Image](../controls/control-image.md)** – Show an image from, for example, a local file or a data source.
+**[Image](controls/control-image.md)** – Show an image from, for example, a local file or a data source.
 
 **[Import](controls/control-export-import.md)** – Import data from elsewhere in PowerApps.
 
@@ -121,7 +121,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[AllItems](controls/control-gallery.md)** – All items in a gallery, including additional control values that are a part of the gallery's template.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](../controls/control-image.md)** controls.
+**AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](controls/control-image.md)** controls.
 
 **[AutoHeight](../controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](../controls/properties-core.md)** property contains more characters than the control can show. Applies to the **[Label](../controls/control-text-box.md)** control.
 
@@ -141,7 +141,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Brightness](controls/control-camera.md)** – How much light the user is likely to perceive in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 ### C
-**[CalculateOriginalDimensions](../controls/control-image.md)** – Enables the **[OriginalHeight](../controls/control-image.md)** and **[OriginalWidth](../controls/control-image.md)** properties.  Applies to the **[Image](../controls/control-image.md)** control.
+**[CalculateOriginalDimensions](controls/control-image.md)** – Enables the **[OriginalHeight](controls/control-image.md)** and **[OriginalWidth](controls/control-image.md)** properties.  Applies to the **[Image](controls/control-image.md)** control.
 
 **[Camera](controls/control-camera.md)** – On a device that has more than one camera, the numeric ID of the camera that the app uses.  Applies to the **[Camera](controls/control-camera.md)** control.
 
@@ -247,7 +247,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[HTMLText](controls/control-html-text.md)** – Text that appears in an HTML text control and that may contain HTML tags.  Applies to the **[HTML text](controls/control-html-text.md)** control.
 
 ### I
-**[Image](../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](../controls/control-image.md)**, **[Microphone](../controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**[Image](../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](controls/control-image.md)**, **[Microphone](../controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[ImagePosition](../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
 
@@ -343,9 +343,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnVisible](../controls/control-screen.md)** – The behavior of an app the user navigates to a screen.  Applies to the **[Screen](../controls/control-screen.md)** control.
 
-**[OriginalHeight](../controls/control-image.md)** – Original height of an image, enabled with the **[CalculateOriginalDimensions](../controls/control-image.md)** property.  Applies to the **[Image](../controls/control-image.md)** control.
+**[OriginalHeight](controls/control-image.md)** – Original height of an image, enabled with the **[CalculateOriginalDimensions](controls/control-image.md)** property.  Applies to the **[Image](controls/control-image.md)** control.
 
-**[OriginalWidth](../controls/control-image.md)** – Original width of an image, enabled with the **[CalculateOriginalDimensions](../controls/control-image.md)** property.  Applies to the **[Image](../controls/control-image.md)** control.
+**[OriginalWidth](controls/control-image.md)** – Original width of an image, enabled with the **[CalculateOriginalDimensions](controls/control-image.md)** property.  Applies to the **[Image](controls/control-image.md)** control.
 
 **[Overflow](../controls/control-text-box.md)** – Whether a scrollbar appears in a label if its **[Wrap](../controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](../controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Label](../controls/control-text-box.md)** control.
 
@@ -465,7 +465,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Transition](controls/control-gallery.md)** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**[Transparency](../controls/control-image.md)** – The degree to which controls behind an image remain visible.  Applies to the **[Image](../controls/control-image.md)** control.
+**[Transparency](controls/control-image.md)** – The degree to which controls behind an image remain visible.  Applies to the **[Image](controls/control-image.md)** control.
 
 ### U
 **[Underline](../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.  Applies to many controls.
