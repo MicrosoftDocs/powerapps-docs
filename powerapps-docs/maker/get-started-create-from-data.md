@@ -23,7 +23,7 @@ This quickstart shows how to automatically create your first app using Excel tab
 
 The Excel data can be in a cloud-storage account, such as OneDrive, Google Drive, Box, and so on. This quickstart uses OneDrive for Business.
 
-To follow this quickstart, download the [flooring estimates Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), and save it in your [cloud storage account](../connections/cloud-storage-blob-connections.md). If you have Excel data [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664), then you can use your own Excel file. 
+To follow this quickstart, download the [flooring estimates Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md). If you have Excel data [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664), then you can use your own Excel file. 
 
 If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=).
 

@@ -31,10 +31,10 @@ Excel is *kind of* a connection. To display Excel data in your app:
 > [!NOTE]
 > Once you connect to your Excel table from PowerApps, PowerApps will create a new column called **\_*PowerAppsId_***, with a unique ID for each row of your Excel table.
 
-[Overview of the cloud-storage connection](cloud-storage-blob-connections.md) shows you how to add the connection, add an Excel table as a data source, and use the Excel data in your app.
+[Overview of the cloud-storage connection](../maker/connections/cloud-storage-blob-connections.md) shows you how to add the connection, add an Excel table as a data source, and use the Excel data in your app.
 
 For information about how to connect to other types of data, see the [list of connections for PowerApps](../maker/connections-list.md).
 
 ### Known limitations
-For information about how to share Excel data within your organization, [review these limitations](cloud-storage-blob-connections.md#sharing-excel-tables).
+For information about how to share Excel data within your organization, [review these limitations](../maker/connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 

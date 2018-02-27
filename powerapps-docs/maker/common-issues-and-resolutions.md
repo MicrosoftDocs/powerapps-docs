@@ -101,7 +101,7 @@ ms.author: sharik
 
 11. **Excel data must be formatted as a table**.
 
-     For information about limitations when you use Excel as a data source, see [Cloud-storage connections](../connections/cloud-storage-blob-connections.md#known-limitations).
+     For information about limitations when you use Excel as a data source, see [Cloud-storage connections](connections/cloud-storage-blob-connections.md#known-limitations).
 
 12. **SharePoint custom lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
 

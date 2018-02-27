@@ -27,7 +27,7 @@ Show a list of items from any data source by adding a **[Gallery](../controls/co
 * Set up the sample data:
     1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 
-    2. Upload the Excel file to a [cloud-storage account](../connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
+    2. Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 
 ## Add a Gallery control
 1. Open PowerApps, and then click or tap **New** near the left edge.

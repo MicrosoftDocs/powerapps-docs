@@ -25,7 +25,7 @@ To show all fields in a record, add and configure a **[Display form](../controls
 
 * Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 * Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
-* Upload the Excel file to a [cloud-storage account](../connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
+* Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 * In a new or existing app, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 * If you're using an existing app, [add a screen](add-screen-context-variables.md) to it.
 

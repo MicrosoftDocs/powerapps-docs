@@ -177,7 +177,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
     In **SavePen.xlsx**, the **Image** column specifies the path to the new images.
 
 ### Known limitations
-For information about how to share Excel data within your organization, [review these limitations](../connections/cloud-storage-blob-connections.md#sharing-excel-tables).
+For information about how to share Excel data within your organization, [review these limitations](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 
 ## For more information
 Be sure to test your app on different platforms, including in [a browser window](https://home.dynamics.com/) and on a phone.

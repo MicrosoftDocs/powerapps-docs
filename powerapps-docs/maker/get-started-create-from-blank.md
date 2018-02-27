@@ -50,7 +50,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     For more information, see [Create an Excel table in a worksheet](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-3. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](../connections/cloud-storage-blob-connections.md), such as OneDrive.
+3. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
 
 4. If you're new to PowerApps:
 

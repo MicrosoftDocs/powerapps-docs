@@ -19,7 +19,7 @@ ms.author: jamesol
 
 ---
 # Share Excel data used by your app
-You can share Excel data with your app users in a [cloud account](../connections/cloud-storage-blob-connections.md), such as OneDrive.
+You can share Excel data with your app users in a [cloud account](connections/cloud-storage-blob-connections.md), such as OneDrive.
 
 For example, you might create an app that shows the names and phone numbers of the technical-support group at your company. The information is stored in an Excel spreadsheet, which you put in a folder in Dropbox. You then share the folder with your app users so that they can see the names and phone numbers.
 
@@ -71,5 +71,5 @@ For more information, see [Share OneDrive files and folders](https://support.off
 For more information, see [Share Google Drive files and folders](https://support.google.com/drive/answer/2494822).
 
 ### Known limitations
-For information about how to share Excel data within your organization, [review these limitations](../../connections/cloud-storage-blob-connections.md#sharing-excel-tables).
+For information about how to share Excel data within your organization, [review these limitations](../connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 

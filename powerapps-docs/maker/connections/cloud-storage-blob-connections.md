@@ -25,7 +25,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 | --- | --- | --- | --- | --- | --- |
 | ![Icon](./media/cloud-storage-blob-connections/blobicon.png) |![API Icon][boxicon] |![API Icon][dropboxicon] |![API Icon][googledriveicon] |![API Icon][onedriveicon] |![API Icon][onedriveforbusinessicon] |
 
-[!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 * An Excel file with the data [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664):
   
@@ -55,7 +55,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 
 ## Using the Excel data in your app
 1. On the **Insert** tab, select **Gallery**, and then select a **With text** gallery control.
-2. Set the **[Items](../controls/properties-core.md)** property of the gallery to your Excel table. For example, if your Excel table is named **Table1**, then set it to Table1:  
+2. Set the **[Items](../../controls/properties-core.md)** property of the gallery to your Excel table. For example, if your Excel table is named **Table1**, then set it to Table1:  
    
     ![Items property](./media/cloud-storage-blob-connections/itemsproperty.png)  
    
@@ -72,12 +72,12 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
     ![Second and third labels](./media/cloud-storage-blob-connections/secondthirdtextboxes.png)
    
 > [!NOTE]
-> The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../maker/add-configure-controls.md) is a good resource.
+> The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
-[Understand tables and records](../maker/working-with-tables.md) provides more details and some examples.  
+[Understand tables and records](../working-with-tables.md) provides more details and some examples.  
 
 ## Sharing your app
-You can share [your app](../maker/share-app.md), [your resources](../maker/share-app-resources.md) such as connectors, and [your data](../maker/share-app-data.md) with others in your organization.
+You can share [your app](../share-app.md), [your resources](../share-app-resources.md) such as connectors, and [your data](../share-app-data.md) with others in your organization.
 
 If you're sharing a folder in Dropbox, the shared folder must be attached to the user's Dropbox account.
 
@@ -96,10 +96,10 @@ To share data in an Excel file:
 * In Dropbox or Google Drive, share either the file or the folder.
 
 ## Helpful links
-See all the [available connections](../maker/connections-list.md).  
-Learn how to [add connections](../maker/add-manage-connections.md) and [add a data source](../maker/add-data-connection.md) to your apps.  
-[Understand tables and records](../maker/working-with-tables.md) with tabular data sources.  
-Some additional gallery resources include [Show a list of items](../maker/add-gallery.md) and [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md).
+See all the [available connections](../connections-list.md).  
+Learn how to [add connections](../add-manage-connections.md) and [add a data source](../add-data-connection.md) to your apps.  
+[Understand tables and records](../working-with-tables.md) with tabular data sources.  
+Some additional gallery resources include [Show a list of items](../add-gallery.md) and [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md).
 
 <!--Icon references-->
 [boxicon]: ./media/cloud-storage-blob-connections/boxicon.png
