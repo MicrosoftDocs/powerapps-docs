@@ -76,7 +76,7 @@ In **Sort**, the formula can only be the name of a single column and can't inclu
 ### Aggregate functions
 **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated.  Only a limited number of data sources support this delegation at this time, check the [delegation list](delegation-list.md) for more details.
 
-Counting functions such as **[CountRows](../functions/function-table-counts.md)**, **[CountA](../functions/function-table-counts.md)**, and **[Count](../functions/function-table-counts.md)** cannot be delegated.
+Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** cannot be delegated.
 
 Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** cannot be delegated.
 
@@ -87,7 +87,7 @@ All other functions do not support delegation, including these notable functions
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
-* **[CountIf](../functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](../functions/function-update-updateif.md)**
+* **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](../functions/function-update-updateif.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
 
 A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:

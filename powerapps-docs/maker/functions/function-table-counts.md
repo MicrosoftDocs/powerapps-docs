@@ -19,20 +19,20 @@ ms.author: gregli
 
 ---
 # Count, CountA, CountIf, and CountRows functions in PowerApps
-Counts all [records](../maker/working-with-tables.md#records) in a [table](../maker/working-with-tables.md), or counts all records that satisfy a condition.
+Counts all [records](../working-with-tables.md#records) in a [table](../working-with-tables.md), or counts all records that satisfy a condition.
 
 ## Description
 The **Count** function counts the number of records that contain a number in a single-column table.
 
-The **CountA** function counts the number of records that aren't *blank* in a single-column table. This function includes [empty](../maker/functions/function-isblank-isempty.md) text ("") in the count.
+The **CountA** function counts the number of records that aren't *blank* in a single-column table. This function includes [empty](function-isblank-isempty.md) text ("") in the count.
 
-The **CountIf** function counts the number of records in a table that are **true** for a logical formula.  The formula can reference [columns](../maker/working-with-tables.md#columns) of the table.
+The **CountIf** function counts the number of records in a table that are **true** for a logical formula.  The formula can reference [columns](../working-with-tables.md#columns) of the table.
 
 The **CountRows** function counts the number records in a table.
 
 Each of these functions returns a number.
 
-[!INCLUDE [delegation-no](../includes/delegation-no.md)]
+[!INCLUDE [delegation-no](../../includes/delegation-no.md)]
 
 ## Syntax
 **Count**( *SingleColumnTable* )<br>
@@ -50,18 +50,18 @@ Each of these functions returns a number.
 * *Table* - Required.  Table of records to count.
 
 ## Example
-1. Import or create a [collection](../maker/working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
-2. Add a label, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
+1. Import or create a [collection](../working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
+2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
    
     **CountIf(Inventory, UnitsInStock < 30)**
    
     The label shows **2** because two products (Ganymede and Callisto) have fewer than 30 units in stock.
-3. Add another label, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
+3. Add another label, and set its **[Text](../controls/properties-core.md)** property to this formula:
    
     **CountA(Inventory.UnitsInStock)**
    
     The label shows **5**, the number of non-empty cells in the **UnitsInStock** column.
-4. Add another label, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
+4. Add another label, and set its **[Text](../controls/properties-core.md)** property to this formula:
    
     **CountRows(Inventory)**
    

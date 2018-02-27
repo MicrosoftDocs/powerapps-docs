@@ -88,17 +88,17 @@ Other elements include:
 
 **[Connection](../functions/signals.md)** – Returns information about your network connection.
 
-**[Count](../functions/function-table-counts.md)** – Counts table records that contain numbers.
+**[Count](functions/function-table-counts.md)** – Counts table records that contain numbers.
 
 **[Cos](../functions/function-trig.md)** – Returns the cosine of an angle specified in radians.
 
 **[Cot](../functions/function-trig.md)** – Returns the cotangent of an angle specified in radians.
 
-**[CountA](../functions/function-table-counts.md)** – Counts table records that aren't [empty](functions/function-isblank-isempty.md).
+**[CountA](functions/function-table-counts.md)** – Counts table records that aren't [empty](functions/function-isblank-isempty.md).
 
-**[CountIf](../functions/function-table-counts.md)** – Counts table records that satisfy a condition.  
+**[CountIf](functions/function-table-counts.md)** – Counts table records that satisfy a condition.  
 
-**[CountRows](../functions/function-table-counts.md)** – Counts table records.   
+**[CountRows](functions/function-table-counts.md)** – Counts table records.   
 
 ## D
 **[DataSourceInfo](functions/function-datasourceinfo.md)** – Provides information about a data source.
