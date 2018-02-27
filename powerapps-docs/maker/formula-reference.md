@@ -147,9 +147,9 @@ Other elements include:
 
 **[Find](functions/function-find.md)** – Checks whether one string appears within another and returns the location.
 
-**[First](../functions/function-first-last.md)** – Returns the first record of a table.
+**[First](functions/function-first-last.md)** – Returns the first record of a table.
 
-**[FirstN](../functions/function-first-last.md)** – Returns the first set of records (N records) of a table.
+**[FirstN](functions/function-first-last.md)** – Returns the first set of records (N records) of a table.
 
 **[ForAll](../functions/function-forall.md)** – Calculates values and performs actions for all records of a table.
 
@@ -177,9 +177,9 @@ Other elements include:
 ## L
 **[Language](../functions/function-language.md)** – Returns the language tag of the current user.
 
-**[Last](../functions/function-first-last.md)** – Returns the last record of a table.
+**[Last](functions/function-first-last.md)** – Returns the last record of a table.
 
-**[LastN](../functions/function-first-last.md)** – Returns the last set of records (N records) of a table.
+**[LastN](functions/function-first-last.md)** – Returns the last set of records (N records) of a table.
 
 **[Launch](../functions/function-param.md)** – Launches a web address or an app.
 

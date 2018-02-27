@@ -81,7 +81,7 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**First**( *TableName* )](../../functions/function-first-last.md)
+[**First**( *TableName* )](../functions/function-first-last.md)
 
 ## Examples
 ### Play an audio or video file

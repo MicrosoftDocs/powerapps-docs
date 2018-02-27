@@ -203,7 +203,7 @@ Finally, let's look at creating our adding machine with a collection.  Since a c
 How collections work:
 
 * Create and set collections by using the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](../functions/function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
-* A collection is a kind of data source and, therefore, a table. To access a single value in a collection, use the **[First](../functions/function-first-last.md)** function, and extract one field from the resulting record. If you used a single value with **[ClearCollect](../functions/function-clear-collect-clearcollect.md)**, this will be the **Value** field, as in this example:<br>**First(** *VariableName* **).Value**
+* A collection is a kind of data source and, therefore, a table. To access a single value in a collection, use the **[First](functions/function-first-last.md)** function, and extract one field from the resulting record. If you used a single value with **[ClearCollect](../functions/function-clear-collect-clearcollect.md)**, this will be the **Value** field, as in this example:<br>**First(** *VariableName* **).Value**
 
 Let's recreate our adding machine by using a collection:
 

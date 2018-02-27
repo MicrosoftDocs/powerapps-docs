@@ -84,7 +84,7 @@ Other aggregate functions such as **[StdevP](functions/function-aggregates.md)**
 All other functions do not support delegation, including these notable functions:
 
 * Table shaping: **[AddColumns](../functions/function-table-shaping.md)**, **[DropColumns](../functions/function-table-shaping.md)**, **[ShowColumns](../functions/function-table-shaping.md)**, ...
-* **[First](../functions/function-first-last.md)**, **[FirstN](../functions/function-first-last.md)**, **[Last](../functions/function-first-last.md)**, **[LastN](../functions/function-first-last.md)**
+* **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
 * **[CountIf](../functions/function-table-counts.md)**, **[RemoveIf](../functions/function-remove-removeif.md)**, **[UpdateIf](../functions/function-update-updateif.md)**

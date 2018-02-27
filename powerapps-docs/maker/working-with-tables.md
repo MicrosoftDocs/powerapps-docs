@@ -107,7 +107,7 @@ Let's walk through some simple examples.
 3. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:<br>
    **FirstN(Sort(TextualGallerySample, Heading, Descending), 2)**
    
-    In this formula, you use the **[FirstN](../functions/function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](../functions/function-sort.md)** function as the first argument to **[FirstN](../functions/function-first-last.md)** and a number (in this case, **2**) as the second argument, which specifies how many records to show.
+    In this formula, you use the **[FirstN](functions/function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](../functions/function-sort.md)** function as the first argument to **[FirstN](functions/function-first-last.md)** and a number (in this case, **2**) as the second argument, which specifies how many records to show.
    
     The entire formula returns a table that contains the first two records of the **TextualGallerySample** table, sorted by the **Heading** column in descending order.
    
@@ -117,7 +117,7 @@ Let's walk through some simple examples.
 Many functions in PowerApps take the name of a table as an argument, create a second table that contains the same data, manipulate the new table based the other arguments, and then return the result. These functions don't modify the original table, even if it's a data source.
 
 * **[Sort](../functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** - Sorts and filters records.
-* **[FirstN](../functions/function-first-last.md)**, **[LastN](../functions/function-first-last.md)** - Returns the first N or last N records of the table.
+* **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first N or last N records of the table.
 * **[Abs](../functions/function-numericals.md)**, **[Sqrt](../functions/function-numericals.md)**, **[Round](../functions/function-round.md)**, **[RoundUp](../functions/function-round.md)**, **[RoundDown](../functions/function-round.md)** - Arithmetic operations on each record of a single-column table, resulting in a single-column table of results.
 * **[Left](../functions/function-left-mid-right.md)**, **[Mid](../functions/function-left-mid-right.md)**, **[Right](../functions/function-left-mid-right.md)**, **[Replace](../functions/function-replace-substitute.md)**, **[Substitute](../functions/function-replace-substitute.md)**, **[Trim](../functions/function-trim.md)**, **[Lower](../functions/function-lower-upper-proper.md)**, **[Upper](../functions/function-lower-upper-proper.md)**, **[Proper](../functions/function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
 * **[Len](../functions/function-len.md)** - For a column of strings, returns a single-column table that contains the length of each string.
@@ -179,7 +179,7 @@ In these cases, the record was never a part of a table.
 ### Record functions and control properties
 Functions that return records:
 
-* **[FirstN](../functions/function-first-last.md)**, **[LastN](../functions/function-first-last.md)** - Returns the first or last record or records of the table.
+* **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first or last record or records of the table.
 * **[Lookup](functions/function-filter-lookup.md)** - Returns the first record from a table that matches one or more criteria.
 * **[Patch](../functions/function-patch.md)** - Updates a data source or merges records.
 * **[Defaults](functions/function-defaults.md)** - Returns the default values for a data source.
