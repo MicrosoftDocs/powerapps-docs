@@ -21,19 +21,19 @@ ms.author: sharik
 # Customize a card in Microsoft PowerApps
 Perform basic customization (without unlocking a card) by, for example, changing its control. Perform advanced customization by unlocking the card and, for example, adding a control that isn't available for that card by default.
 
-For an overview, see [Understand data cards](working-with-cards.md).
+For an overview, see [Understand data cards](../working-with-cards.md).
 
 ## Prerequisites
 
-* Learn how to [add and configure controls](maker/add-configure-controls.md).
+* Learn how to [add and configure controls](add-configure-controls.md).
 * You can review this topic for general concepts only. To follow it exactly (step by step), follow the steps in these topics:
 
-  1. [Create an app from SharePoint](maker/app-from-sharepoint.md).
-  2. [Customize the layout](customize-layout-sharepoint.md).
-  3. [Customize the form](customize-forms-sharepoint.md).
+  1. [Create an app from SharePoint](app-from-sharepoint.md).
+  2. [Customize the layout](../customize-layout-sharepoint.md).
+  3. [Customize the form](../customize-forms-sharepoint.md).
 
 ## Customize a locked card
-In this procedure, you'll replace a **[Toggle](controls/control-toggle.md)** control with a **[Radio](controls/control-radio.md)** control without unlocking the card.
+In this procedure, you'll replace a **[Toggle](../controls/control-toggle.md)** control with a **[Radio](../controls/control-radio.md)** control without unlocking the card.
 
 1. In **EditScreen1**, click or tap the **Paid** card to select it.
 
@@ -47,10 +47,10 @@ In this procedure, you'll replace a **[Toggle](controls/control-toggle.md)** con
 
     ![](./media/customize-card/display-radio.png)
    
-    For information about which types of SharePoint columns support which types of cards, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
+    For information about which types of SharePoint columns support which types of cards, see [Known issues](../connections/connection-sharepoint-online.md#known-issues).
 
 ## Unlock and customize a card
-In this procedure, you'll unlock a card and then replace a **[Text input](controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md)** control.
+In this procedure, you'll unlock a card and then replace a **[Text input](../controls/control-text-input.md)** control with a **[Slider](../controls/control-slider.md)** control.
 
 1. In **EditScreen1**, click or tap the **Quantity** card.
 
