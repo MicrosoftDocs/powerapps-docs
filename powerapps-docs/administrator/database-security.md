@@ -18,7 +18,7 @@ ms.author: kfend
 
 ---
 # Configure database security
-The Common Data Service uses a role-based security model to help secure access to the database. This topic explains how to create the security artifacts that you must have to help secure an app. The user roles control run-time access to data and are separate from the Environment roles that govern environment administrators and environment makers. For an overview of environments, see [Environments overview](environments-overview.md).
+The Common Data Service uses a role-based security model to help secure access to the database. This topic explains how to create the security artifacts that you must have to help secure an app. The user roles control run-time access to data and are separate from the Environment roles that govern environment administrators and environment makers. For an overview of environments, see [Environments overview](../environments-overview.md).
 
 It's important that you understand what level of access to these entities users of the app require. The Common Data Service supports create, read, update, and delete (CRUD) permissions on entities.
 
