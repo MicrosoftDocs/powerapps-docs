@@ -24,7 +24,7 @@ Tests whether a text string matches a pattern.
 ## Description
 The **IsMatch** function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a [regular expression](#regular-expressions).  
 
-Use **IsMatch** to validate what a user has typed in a **[Text input](../maker/controls/control-text-input.md)** control. For example, you can confirm whether the user has entered a valid email address before the result is saved to your data source. If the entry doesn't match your criteria, add other controls that prompt the user to correct the entry.
+Use **IsMatch** to validate what a user has typed in a **[Text input](../controls/control-text-input.md)** control. For example, you can confirm whether the user has entered a valid email address before the result is saved to your data source. If the entry doesn't match your criteria, add other controls that prompt the user to correct the entry.
 
 By default, **IsMatch** performs a case-sensitive match for the entire text string. You can modify this behavior by specifying one or more [**MatchOptions**](#match-options).
 
@@ -37,7 +37,7 @@ The key to using **IsMatch** is in describing the pattern to match. You describe
 * Predefined patterns, such as **Letter**, **MultipleDigits**, or **Email**. (The **Match** enum defines these patterns.)
 * Regular expressions codes, such as **"\d+\s+\d+"** or **"[a-z]+"**.
 
-Combine these elements by using the [string concatenation operator **&**](operators.md). For example, **"abc" & Digit & "\s+"** is a valid pattern that matches the characters "a", "b", and "c", followed by a digit from 0 to 9, followed by at least one whitespace character.
+Combine these elements by using the [string concatenation operator **&**](../../functions/operators.md). For example, **"abc" & Digit & "\s+"** is a valid pattern that matches the characters "a", "b", and "c", followed by a digit from 0 to 9, followed by at least one whitespace character.
 
 ### Ordinary characters
 The simplest pattern is a sequence of ordinary characters to be matched exactly.
@@ -63,7 +63,7 @@ In the pattern language, certain characters are reserved for special purposes. T
 For example, you can match "Hello?" by using the pattern **"Hello\\?"** with a backslash before the question mark.
 
 ### Predefined patterns
-Predefined patterns provide a simple way to match one of a set of characters, or a sequence of multiple characters. Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
+Predefined patterns provide a simple way to match one of a set of characters, or a sequence of multiple characters. Use the [string concatenation operator **&**](../../functions/operators.md) to combine your own text strings with members of the **Match** enum:
 
 | Match Enum | Description | Regular Expression |
 | --- | --- | --- |
