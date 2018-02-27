@@ -19,7 +19,7 @@ ms.author: archanan
 
 ---
 # Share app resources
-Before you [share an app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
+Before you [share an app](../share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
 * a connection to a data source
 * an on-premises data gateway
@@ -39,7 +39,7 @@ On [powerapps.com](https://web.powerapps.com), you can determine whether a conne
   ![Share tab in connection details page](./media/share-app-resources/shared-connections.png)
 
 ## On-premises data gateways
-If you create and share an app that includes data from an on-premises source, the [on-premises data gateway](maker/gateway-management.md) itself and certain types of connections to that gateway will be shared automatically. For any connection that isn’t shared automatically, you can share it manually (as the previous section shows) or let the app prompt users to create their own connections. To show the connection or connections with which a gateway has been configured:
+If you create and share an app that includes data from an on-premises source, the [on-premises data gateway](gateway-management.md) itself and certain types of connections to that gateway will be shared automatically. For any connection that isn’t shared automatically, you can share it manually (as the previous section shows) or let the app prompt users to create their own connections. To show the connection or connections with which a gateway has been configured:
 
 1. Open [powerapps.com](https://web.powerapps.com), click or tap **Manage** in the left navigation bar, and then click or tap **Gateways**.
 2. Click or tap a gateway, and then click or tap the **Connections** tab.
@@ -56,7 +56,7 @@ When you share an app that uses a custom connector, it is automatically shared, 
 On [powerapps.com](https://web.powerapps.com), you can view or update permissions for a custom connector. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap **New connection** (in the upper-right corner). Click or tap **Custom**, and then click or tap a custom connector to display details about it.
 
 ## Excel workbooks
-If a shared app uses data to which not all users have access (such as an Excel workbook in a cloud-storage account), [share the data](maker/share-app-data.md).
+If a shared app uses data to which not all users have access (such as an Excel workbook in a cloud-storage account), [share the data](share-app-data.md).
 
 ## Flows
 If you share an app that includes a flow, users who run the app will be prompted to confirm or update any connections on which the flow relies. In addition, only the person who created the flow can customize its parameters. For example, you can create a flow that sends mail to an address that you specify, but other users can’t change that address.

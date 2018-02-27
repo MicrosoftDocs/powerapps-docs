@@ -92,7 +92,7 @@ Most apps rely on at least one of these types of resources:
 * an Excel workbook or other service
 * a flow
 
-Users and contributors need permissions to any data connections and gateways that the app uses. Some permissions come along implicitly with the app, but others must be explicitly granted. For more information, see [Share app resources](share-app-resources.md).
+Users and contributors need permissions to any data connections and gateways that the app uses. Some permissions come along implicitly with the app, but others must be explicitly granted. For more information, see [Share app resources](maker/share-app-resources.md).
 
 When you share an app that uses the Common Data Service, notice the information bar indicating that you must share the runtime permission to the Common Data Service separately. If you don’t have permission to do this, see your environment admin. [Read more](administrator/database-security.md) about security for the Common Data Service.
 
