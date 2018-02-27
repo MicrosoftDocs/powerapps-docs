@@ -195,7 +195,7 @@ Other elements include:
 
 **[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
 
-**[Lower](../functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all lowercase.
+**[Lower](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all lowercase.
 
 ## M
 **[Max](functions/function-aggregates.md)** – Maximum value of a table expression or a set of arguments.
@@ -235,7 +235,7 @@ Other elements include:
 
 **[Power](../functions/function-numericals.md)** – Returns a number raised to a power.  You can also use the [**^** operator](../functions/operators.md).
 
-**[Proper](../functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
+**[Proper](functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 
 ## R
 **[Radians](../functions/function-trig.md)** - Converts degrees to radians.
@@ -333,7 +333,7 @@ Other elements include:
 
 **[UpdateIf](../functions/function-update-updateif.md)** – Modifies a set of records in a data source based on a condition.
 
-**[Upper](../functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all uppercase.
+**[Upper](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all uppercase.
 
 **[User](../functions/function-user.md)** – Returns information about the current user.
 

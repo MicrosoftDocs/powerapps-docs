@@ -24,7 +24,7 @@ Shapes a [table](../maker/working-with-tables.md) by adding, dropping, renaming,
 ## Overview
 These functions shape a table by adjusting its columns:
 
-* Reduce a table that contains multiple columns down to a single column for use with single-column functions, such as **[Lower](function-lower-upper-proper.md)** or **[Abs](function-numericals.md)**.  
+* Reduce a table that contains multiple columns down to a single column for use with single-column functions, such as **[Lower](../maker/functions/function-lower-upper-proper.md)** or **[Abs](function-numericals.md)**.  
 * Add a calculated column to a table (for example, a **Total Price** column that shows the results of multiplying **Quantity** by **Unit Price**).
 * Rename a column to something more meaningful, for display to users or for use in formulas.
 
