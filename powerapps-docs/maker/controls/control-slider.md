@@ -91,7 +91,7 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Sum**( *Value1*, *Value2* )](../../functions/function-aggregates.md)
+[**Sum**( *Value1*, *Value2* )](../functions/function-aggregates.md)
 
 ## Example
 1. Add a button, and set its **[OnSelect](properties-core.md)** property to this formula:

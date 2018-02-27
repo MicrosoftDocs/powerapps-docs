@@ -109,7 +109,7 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 **YLabelAngle** – The angle of the labels next to the y-axis of a line or column chart.
 
 ## Related functions
-[**Max**( *DataSource*, *ColumnName* )](../../functions/function-aggregates.md)
+[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## Example
 1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>

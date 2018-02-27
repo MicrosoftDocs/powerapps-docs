@@ -52,7 +52,7 @@ Other elements include:
 
 **[Atan2](../functions/function-trig.md)** – Returns the arctangent based on an (*x*,*y*) coordinate, in radians.
 
-**[Average](../functions/function-aggregates.md)** – Calculates the average of a table expression or a set of arguments.
+**[Average](functions/function-aggregates.md)** – Calculates the average of a table expression or a set of arguments.
 
 ## B
 **[Back](../functions/function-navigate.md)** – Displays the previous screen.  
@@ -198,11 +198,11 @@ Other elements include:
 **[Lower](../functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all lowercase.
 
 ## M
-**[Max](../functions/function-aggregates.md)** – Maximum value of a table expression or a set of arguments.
+**[Max](functions/function-aggregates.md)** – Maximum value of a table expression or a set of arguments.
 
 **[Mid](../functions/function-left-mid-right.md)** – Returns the middle portion of a string.
 
-**[Min](../functions/function-aggregates.md)** – Minimum value of a table expression or a set of arguments.
+**[Min](functions/function-aggregates.md)** – Minimum value of a table expression or a set of arguments.
 
 **[Minute](../functions/function-datetime-parts.md)** – Retrieves the minute portion of a date/time value.  
 
@@ -293,13 +293,13 @@ Other elements include:
 
 **[StartsWith](../functions/function-startswith.md)** – Checks if a text string begins with another text string.
 
-**[StdevP](../functions/function-aggregates.md)** – Returns the standard deviation of its arguments.  
+**[StdevP](functions/function-aggregates.md)** – Returns the standard deviation of its arguments.  
 
 **[Substitute](../functions/function-replace-substitute.md)** – Replaces part of a string with another string, by matching strings.
 
 **[SubmitForm](../functions/function-form.md)** – Saves the item in a form control to the data source.
 
-**[Sum](../functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
+**[Sum](functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
 
 **[Switch](../functions/function-if.md)** – Matches with a set of values and then evaluates a corresponding formula.
 
@@ -342,7 +342,7 @@ Other elements include:
 
 **[Value](../functions/function-value.md)** – Converts a string to a number.
 
-**[VarP](../functions/function-aggregates.md)** – Returns the variance of its arguments.  
+**[VarP](functions/function-aggregates.md)** – Returns the variance of its arguments.  
 
 **[ViewForm](../functions/function-form.md)** – Resets a form control for viewing of an existing item.
 

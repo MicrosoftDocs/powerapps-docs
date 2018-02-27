@@ -69,7 +69,7 @@ In this control, the user can indicate, for example, how much they liked somethi
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Average**( *Value1*, *Value2,* ... )](../../functions/function-aggregates.md)
+[**Average**( *Value1*, *Value2,* ... )](../functions/function-aggregates.md)
 
 ## Example
 1. Add a **Rating** control, and name it **Quantitative**.
