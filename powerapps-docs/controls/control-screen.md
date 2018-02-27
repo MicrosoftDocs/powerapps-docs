@@ -55,7 +55,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 3. On **Source**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Navigate(Target, ScreenTransition.Fade)**
    
-    Want more information about the **[Navigate](../functions/function-navigate.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[Navigate](../functions/function-navigate.md)** function or [other functions](../maker/formula-reference.md)?
 4. In **Target**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Navigate(Source, ScreenTransition.Fade)**
 5. Set the **[Fill](properties-color-border.md)** property of **Target** to this formula:<br>

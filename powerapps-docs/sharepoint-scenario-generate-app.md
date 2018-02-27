@@ -165,7 +165,7 @@ When you put the functions together in the formula, here's what happens:
 
 4. Now the **SortByColumns** function can sort the gallery. In this case, it sorts based on the **Title** field, but this can be a different field than the one you search on.
 
-If you stuck with us up to this point, we hope you have a better sense of how this formula works, and how you can combine functions and other elements to drive the behavior your apps require. For more information, see [Formula reference for PowerApps](formula-reference.md).
+If you stuck with us up to this point, we hope you have a better sense of how this formula works, and how you can combine functions and other elements to drive the behavior your apps require. For more information, see [Formula reference for PowerApps](maker/formula-reference.md).
 
 ## Next steps
 The next step in this tutorial series is to [Create a flow to manage project approvals](sharepoint-scenario-approval-flow.md).

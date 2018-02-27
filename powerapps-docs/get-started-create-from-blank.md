@@ -131,7 +131,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     The sort button can sort the records based on data in the **Volunteer 1** column. If a user clicks or taps that button, the sort order toggles between ascending and descending.
 
-    That formula contains the **Sort**, **If**, **IsBlank**, **Filter**, and **Text** functions. For more information about these and other functions, see the [formula reference](formula-reference.md)
+    That formula contains the **Sort**, **If**, **IsBlank**, **Filter**, and **Text** functions. For more information about these and other functions, see the [formula reference](maker/formula-reference.md)
 
 5. Type an **i** in the search box, and click or tap the sort button once (or an odd number of times).
 
@@ -139,7 +139,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
 
-    More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
+    More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](maker/formula-reference.md)
 
 6. Select the **[Label](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
 

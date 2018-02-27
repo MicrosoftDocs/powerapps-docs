@@ -217,7 +217,7 @@ In this procedure, you'll add a check box and then configure the label that you 
 
     ![Label disappears when the check box is cleared](./media/add-configure-controls/hide-text.png)
 
-This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](../formula-reference.md) from simple to complex.
+This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md) from simple to complex.
 
 ## Rename a screen or a control
 By renaming a screen or control, you can build formulas that are easier to read and maintain.

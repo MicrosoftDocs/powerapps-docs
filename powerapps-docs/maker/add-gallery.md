@@ -104,7 +104,7 @@ The **[Items](../controls/properties-core.md)** property of a **Gallery** contro
 
     **If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
-    For more information about the functions in this formula, see the [formula reference](../formula-reference.md).
+    For more information about the functions in this formula, see the [formula reference](formula-reference.md).
 
 3. Type part or all of a product name in the search box.
 

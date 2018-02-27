@@ -124,7 +124,7 @@ A label shows data that you specify as a literal string of text, which appears e
     > [!NOTE]
 > When you specify a formula, you don't use quotation marks unless an argument of the formula is a literal string. In that case, enclose the argument, not the formula, in double quotation marks.
   
-    Want more information about the **[Today](../functions/function-now-today-istoday.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[Today](../functions/function-now-today-istoday.md)** function or [other functions](../maker/formula-reference.md)?
 
 ### Show data in a gallery
 In this procedure, you'll create a collection, called **CityPopulations**, that contains data about the population of various cities in Europe. Next, you'll show that data in a gallery that contains three labels, and you'll specify the type of data that each label will show.

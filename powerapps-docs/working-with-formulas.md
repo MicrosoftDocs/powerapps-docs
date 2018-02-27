@@ -28,7 +28,7 @@ For example, you build a formula to determine how your app responds when users s
 
 You can use formulas for a wide variety of scenarios. For example, you can use your device's GPS, a map control, and a formula that uses **Location.Latitude** and **Location.Longitude** to display your current location. As you move, the map automatically tracks your location.
 
-This topic provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use.
+This topic provides only an overview of working with formulas. Browse the [formula reference](maker/formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use.
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
     This bar has two parts:
    
    * *Property list*:  Each control and screen has a [set of properties](reference-properties.md).  Use this list to select a specific property.  
-   * *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md).
+   * *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](maker/formula-reference.md).
      
      In the formula bar, you can see and edit properties for the selected control or for the screen if no controls are selected.  You can see the name of the selected control on the **Content** tab:
      

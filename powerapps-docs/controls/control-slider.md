@@ -99,7 +99,7 @@ The user can indicate a value, between a minimum and a maximum value that you sp
    
     Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
    
-    Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../maker/formula-reference.md)?
 2. Press F5, select the button, and then press Esc.
 3. Add a slider, move it below the button, and name the slider **MinPopulation**.
 4. Set the slider's **Max** property to **5000000** and its **Min** property to **1000000**.

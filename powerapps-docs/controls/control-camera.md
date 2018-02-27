@@ -74,7 +74,7 @@ If you add this control, the user can update a data source with one or more phot
    
     Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
    
-    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../maker/formula-reference.md)?
 2. Press F5, and then take a photo by clicking or tapping **MyCamera**.
 3. Add an **[Image gallery](control-gallery.md)** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
 4. Set the **[Items](properties-core.md)** property of the **Image gallery** control to this expression:<br>**MyPix.Url**.
