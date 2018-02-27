@@ -22,7 +22,7 @@ ms.author: gregli
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
 ## Controls
-**[Add picture](../controls/control-add-picture.md)** – Load images from the local device, for upload to a data source.
+**[Add picture](controls/control-add-picture.md)** – Load images from the local device, for upload to a data source.
 
 **[Attachments](../controls/control-attachments.md)** – Download and upload files from the local device to a data source.
 
@@ -203,7 +203,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Error** – The meaning of this property is dependent on the control:
 
-* **[Add picture](../controls/control-add-picture.md)** control - If there is a problem uploading an image, this property will contain an appropriate error string.
+* **[Add picture](controls/control-add-picture.md)** control - If there is a problem uploading an image, this property will contain an appropriate error string.
 * **[Card](../controls/control-card.md)** control – The user friendly error message to display for this field when validation fails.
 * **[Edit form](../controls/control-form-detail.md)** control – A user friendly error message to display for this form when the **[SubmitForm](../functions/function-form.md)** function fails.
 
@@ -289,7 +289,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[MaxLength](../controls/control-text-input.md)** – The number of characters that the user can type into a text-input control.  Applies to the **[Text input](../controls/control-text-input.md)** control.
 
-**Media** – An identifier for the clip that an audio or video control plays.  Applies to **[Add picture](../controls/control-add-picture.md)**, **[Audio](../controls/control-audio-video.md)**, and **[Video](../controls/control-audio-video.md)** controls.
+**Media** – An identifier for the clip that an audio or video control plays.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Audio](../controls/control-audio-video.md)**, and **[Video](../controls/control-audio-video.md)** controls.
 
 **[Mic](../controls/control-microphone.md)** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.  Applies to the **[Microphone](../controls/control-microphone.md)** control.
 
@@ -350,7 +350,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Overflow](../controls/control-text-box.md)** – Whether a scrollbar appears in a label if its **[Wrap](../controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](../controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Label](../controls/control-text-box.md)** control.
 
 ### P
-**[Padding](../controls/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.  Applies to **[Add picture](../controls/control-add-picture.md)**, **[Export](../controls/control-export-import.md)**, and **[Import](../controls/control-export-import.md)** controls.
+**[Padding](../controls/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Export](../controls/control-export-import.md)**, and **[Import](../controls/control-export-import.md)** controls.
 
 **[PaddingBottom](../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.  Applies to many controls.
 
