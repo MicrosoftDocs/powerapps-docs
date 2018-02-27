@@ -86,7 +86,7 @@ For a list of the entities and their fields, and a list of the enumerations, see
 | Sales |The Sales entities let you create end-to-end sales solutions, from tracking leads and opportunities, to following through with contacts, accepting and delivering orders, and sending invoices. |
 
 ## Get started
-Try it out by creating an app using a standard entity or [create a custom entity](data-platform-create-entity.md), and then [create an app that uses that entity](data-platform-create-app.md).
+Try it out by creating an app using a standard entity or [create a custom entity](data-platform-create-entity.md), and then [create an app that uses that entity](maker/data-platform-create-app.md).
 
 <!--TODO - Add Link for Standard entity app - Template? -->
 

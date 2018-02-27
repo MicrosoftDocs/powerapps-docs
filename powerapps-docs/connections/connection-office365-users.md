@@ -95,7 +95,7 @@ The label shows the information that you entered about the user you specified or
 > [!NOTE]
 > If you're developing an app based on an entity in the Common Data Service, you can specify a user based on ID instead of email address.
 
-For example, you can [create an app automatically](../data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
+For example, you can [create an app automatically](../maker/data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
 <br>**Office365Users.UserProfile(BrowseGallery1.Selected.CreatedByUser).DisplayName**
 
 If you create a contact and select that contact in the browse screen of the app, the **Label** control will show your display name.

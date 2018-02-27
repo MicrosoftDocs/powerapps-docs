@@ -29,7 +29,7 @@ You can create and update one or more custom fields in any entity. When you crea
 
 2. Click or tap an entity, and then click or tap **Add field** near the top of the screen.
 
-3. Under **Display name**, specify the string of text that will identify the field to users. For more information, see [Create an app](data-platform-create-app.md).
+3. Under **Display name**, specify the string of text that will identify the field to users. For more information, see [Create an app](maker/data-platform-create-app.md).
 
 4. Under **Name**, specify the string of text that you will use to refer to the field in, for example, a formula when you build an app.
    
@@ -87,7 +87,7 @@ As you create and modify fields, keep these points in mind:
 
 ## Next steps
 * [Define relationships between entities](data-platform-entity-lookup.md)
-* [Create an app using entities](data-platform-create-app.md)
+* [Create an app using entities](maker/data-platform-create-app.md)
 * [Create an app from scratch using a Common Data Service database](maker/data-platform-create-app-scratch.md)
 
 ## Privacy notice

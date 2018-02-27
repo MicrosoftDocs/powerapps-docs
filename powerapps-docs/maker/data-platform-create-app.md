@@ -20,9 +20,9 @@ ms.author: mandia
 
 This quickstart shows how to automatically create your first app using a Common Data Service database within PowerApps. In this article, you create a new app, select a Common Data Service entity, and then see what you created. Every generated app automatically includes screens to browse records, show record details, and create or update records. This is a quick way to get a working app using Common Data Service. You can also customize the app. 
 
-This app can access data in standard entities that are built-in, or in a custom entity that you or someone in your organization creates. [Understand entities](data-platform-intro.md) is a good resource to get acquainted with Common Data Service. 
+This app can access data in standard entities that are built-in, or in a custom entity that you or someone in your organization creates. [Understand entities](../data-platform-intro.md) is a good resource to get acquainted with Common Data Service. 
 
-To follow this quickstart, you need to create a [Common Data Service database](administrator/create-database.md). Be sure you **Create a database** to get sample data.
+To follow this quickstart, you need to create a [Common Data Service database](../administrator/create-database.md). Be sure you **Create a database** to get sample data.
 
 If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=).
 
@@ -54,4 +54,4 @@ To remove the Common Data Service database (and entities), go to the **File** me
 In this quick start, you created an app using existing data in a Common Data Service database. To get more hands-on experience creating apps, use one of our templates.
 
 > [!div class="nextstepaction"]
-> [Create and run an app from a template](get-started-test-drive.md)
+> [Create and run an app from a template](../get-started-test-drive.md)
