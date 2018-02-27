@@ -94,9 +94,9 @@ If you add this control, the user can update a data source with one or more soun
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../maker/formula-reference.md)?
 2. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.
-3. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
+3. In the template for the **Custom gallery** control, add an **[Audio](../maker/controls/control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
 4. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
-5. In the **Custom gallery** control, click or tap the play button in the **[Audio](control-audio-video.md)** control to play back your recording.
+5. In the **Custom gallery** control, click or tap the play button in the **[Audio](../maker/controls/control-audio-video.md)** control to play back your recording.
 6. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
 7. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 

@@ -25,7 +25,7 @@ For information about known limitations, see [Common issues and resolutions](com
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
 
 ## Feb. 12
-* The volume control for embedded [video](../controls/control-audio-video.md) and [audio](../controls/control-audio-video.md) playback is now inline. To mute playback, instead of clicking or tapping a button, users must now use the volume control to lower the volume.
+* The volume control for embedded [video](controls/control-audio-video.md) and [audio](controls/control-audio-video.md) playback is now inline. To mute playback, instead of clicking or tapping a button, users must now use the volume control to lower the volume.
 
 ## Feb. 7
 1. Removed the Zoom, Brightness, and Contrast properties from the [Camera](../controls/control-camera.md) and [Barcode scanner](../controls/control-barcodescanner.md) controls.
@@ -33,7 +33,7 @@ For information about known limitations, see [Common issues and resolutions](com
 3. Added accessibility enhancements to [multimedia](add-images-pictures-audio-video.md) controls.
 
 ## Jan. 31
-1. Add closed captions to [Video](../controls/control-audio-video.md) controls.
+1. Add closed captions to [Video](controls/control-audio-video.md) controls.
 2. Improved error handling in [PDF Viewer](../controls/control-pdf-viewer.md) controls.
 
 ## Jan. 18

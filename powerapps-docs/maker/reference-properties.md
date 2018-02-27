@@ -26,7 +26,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Attachments](controls/control-attachments.md)** – Download and upload files from the local device to a data source.
 
-**[Audio](../controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
+**[Audio](controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
 **[Barcode scanner](../controls/control-barcodescanner.md)** – Scan a barcode by using a device that has a camera.
 
@@ -100,7 +100,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Toggle](../controls/control-toggle.md)** – Drag a handle to specify **true** or **false**.
 
-**[Video](../controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
+**[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
 
 ## Common properties by category
 **[Color and border](../controls/properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
@@ -125,9 +125,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[AutoHeight](../controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](../controls/properties-core.md)** property contains more characters than the control can show. Applies to the **[Label](../controls/control-text-box.md)** control.
 
-**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](../controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](../controls/control-audio-video.md)** controls.
+**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.  Applies to **[Audio](../controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](../controls/control-audio-video.md)** controls.
+**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 ### B
 **[BackgroundImage](../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](../controls/control-screen.md)** control.
@@ -247,7 +247,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[HTMLText](../controls/control-html-text.md)** – Text that appears in an HTML text control and that may contain HTML tags.  Applies to the **[HTML text](../controls/control-html-text.md)** control.
 
 ### I
-**[Image](../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](../controls/control-audio-video.md)**, **[Image](../controls/control-image.md)**, **[Microphone](../controls/control-microphone.md)**, and **[Video](../controls/control-audio-video.md)** controls.
+**[Image](../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](../controls/control-image.md)**, **[Microphone](../controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[ImagePosition](../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
 
@@ -278,7 +278,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](../controls/control-list-box.md)**, **[Radio](../controls/control-radio.md)**, **[Label](../controls/control-text-box.md)**, and **[Text input](../controls/control-text-input.md)** controls.
 
-**[Loop](../controls/control-audio-video.md)** – Whether an audio or video clip automatically starts over as soon as it finishes playing.  Applies to **[Audio](../controls/control-audio-video.md)** and **[Video](../controls/control-audio-video.md)** controls.
+**[Loop](controls/control-audio-video.md)** – Whether an audio or video clip automatically starts over as soon as it finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
 ### M
 **[Markers](../controls/control-column-line-chart.md)** – Whether a column or line chart shows the value of each data point.  Applies to **[Column chart](../controls/control-column-line-chart.md)** and **[Line chart](../controls/control-column-line-chart.md)** controls.
@@ -289,7 +289,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[MaxLength](../controls/control-text-input.md)** – The number of characters that the user can type into a text-input control.  Applies to the **[Text input](../controls/control-text-input.md)** control.
 
-**Media** – An identifier for the clip that an audio or video control plays.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Audio](../controls/control-audio-video.md)**, and **[Video](../controls/control-audio-video.md)** controls.
+**Media** – An identifier for the clip that an audio or video control plays.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Audio](controls/control-audio-video.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[Mic](../controls/control-microphone.md)** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.  Applies to the **[Microphone](../controls/control-microphone.md)** control.
 
@@ -313,19 +313,19 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **OnCheck** – The behavior of an app when the value of a checkbox or a toggle changes to **true**.  Applies to **[Check box](../controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
-**[OnEnd](../controls/control-audio-video.md)** – The behavior of an app when an audio or video clip finishes playing.  Applies to **[Audio](../controls/control-audio-video.md)** and **[Video](../controls/control-audio-video.md)** controls.
+**[OnEnd](controls/control-audio-video.md)** – The behavior of an app when an audio or video clip finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
 **[OnFailure](../controls/control-form-detail.md)** – The behavior of an app when a data operation has been unsuccessful.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
 
 **[OnHidden](../controls/control-screen.md)** – The behavior of an app when the user navigates away from a screen.  Applies to the **[Screen](../controls/control-screen.md)** control.
 
-**[OnPause](../controls/control-audio-video.md)** – The behavior of an app when the user pauses the clip that an audio or video control is playing.  Applies to **[Audio](../controls/control-audio-video.md)** and **[Video](../controls/control-audio-video.md)** controls.
+**[OnPause](controls/control-audio-video.md)** – The behavior of an app when the user pauses the clip that an audio or video control is playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
 **[OnReset](../controls/control-form-detail.md)** – The behavior of an app when an **[Edit form](../controls/control-form-detail.md)** control is reset.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
 
 **[OnSelect](../controls/properties-core.md)** – The behavior of an app  when the user taps or clicks a control.  Applies to many controls.
 
-**OnStart** – The behavior of an app when the user opens it or starts to record with a microphone control. Applies to **[Audio](../controls/control-audio-video.md)**, **[Microphone](../controls/control-microphone.md)**, **[Screen](../controls/control-screen.md)**, and **[Video](../controls/control-audio-video.md)** controls.
+**OnStart** – The behavior of an app when the user opens it or starts to record with a microphone control. Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](../controls/control-microphone.md)**, **[Screen](../controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[OnStateChange](../controls/control-pdf-viewer.md)** – The behavior of an app when the state of the control changes. Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
 
@@ -364,7 +364,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[PageCount](../controls/control-pdf-viewer.md)** – The number of pages in a document.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
 
-**[Paused](../controls/control-audio-video.md)** – *True* if a media playback control is currently paused, *false* otherwise.  Applies to **[Audio](../controls/control-audio-video.md)** and **[Video](../controls/control-audio-video.md)** controls.
+**[Paused](controls/control-audio-video.md)** – *True* if a media playback control is currently paused, *false* otherwise.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
 **[Photo](../controls/control-camera.md)** – The image captured  when the user takes a picture.  Applies to the **[Camera](../controls/control-camera.md)** control.
 
@@ -424,7 +424,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[SeriesAxisMin](../controls/control-column-line-chart.md)** – A number that determines the minimum value of the y-axis for a column chart.  Applies to the **[Column chart](../controls/control-column-line-chart.md)** control.
 
-**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to **[Audio](../controls/control-audio-video.md)**, **[PDF viewer](../controls/control-pdf-viewer.md)**, **[Pen input](../controls/control-pen-input.md)**, and **[Video](../controls/control-audio-video.md)** controls.
+**ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to **[Audio](controls/control-audio-video.md)**, **[PDF viewer](../controls/control-pdf-viewer.md)**, **[Pen input](../controls/control-pen-input.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[ShowLabels](../controls/control-pie-chart.md)** – Whether a pie chart shows the value that's associated with each of its wedges.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
 
@@ -438,9 +438,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Snap](../controls/control-gallery.md)** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
 
-**Start** – Whether an audio or video clip plays.  Applies to **[Audio](../controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](../controls/control-audio-video.md)** controls.
+**Start** – Whether an audio or video clip plays.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**[StartTime](../controls/control-audio-video.md)** – The time after the start of an audio or video clip when the clip starts to play.  Applies to **[Audio](../controls/control-audio-video.md)** and **[Video](../controls/control-audio-video.md)** controls.
+**[StartTime](controls/control-audio-video.md)** – The time after the start of an audio or video clip when the clip starts to play.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
 **[StartYear](../controls/control-date-picker.md)** – The earliest year to which the user can set the value of a date-picker control.  Applies to the **[Date Picker](../controls/control-date-picker.md)** control.
 
@@ -459,7 +459,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Text](../controls/properties-core.md)** – Text that appears on a control or that the user types into a control.  Applies to many controls.
 
-**[Time](../controls/control-audio-video.md)** – A media control's current position.  Applies to **[Audio](../controls/control-audio-video.md)** and **[Video](../controls/control-audio-video.md)** controls.
+**[Time](controls/control-audio-video.md)** – A media control's current position.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
 **[Tooltip](../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.  Applies to many controls.
 
