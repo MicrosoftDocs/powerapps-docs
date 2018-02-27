@@ -25,7 +25,7 @@ There are two ways to create an entity:
 * Create the entity from scratch. By default, the entity contains only [four system fields and a record title field](data-platform-create-entity.md#system-fields-and-the-record-title-field).
 * Create an entity that is based on another entity, by copying the fields and settings of that entity, but not its data.
 
-In both cases, Microsoft PowerApps automatically stores and helps secure the data. After you create an entity, you can [create or modify one or more of its fields](../data-platform-manage-fields.md), and [build relationships between entities](../data-platform-entity-lookup.md).
+In both cases, Microsoft PowerApps automatically stores and helps secure the data. After you create an entity, you can [create or modify one or more of its fields](../data-platform-manage-fields.md), and [build relationships between entities](data-platform-entity-lookup.md).
 
 > [!NOTE]
 > Before you create an entity, see the [list of standard entities](../data-platform-intro.md#standard-entities). These entities cover typical scenarios, such as accounts and contacts. If one of these entities will meet your requirements out of the box or after only minor changes, you can save yourself some time by starting with that entity.
@@ -56,7 +56,7 @@ If you create an entity from scratch, it also contains a custom field that is na
 
 ## Next steps
 * [Manage fields in an entity](../data-platform-manage-fields.md)
-* [Define relationships between entities](../data-platform-entity-lookup.md)
+* [Define relationships between entities](data-platform-entity-lookup.md)
 * [Generate an app by using a Common Data Service database](data-platform-create-app.md)
 * [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
 

@@ -74,7 +74,7 @@ If you encounter an issue that isn't described here, contact us via the [support
 
 ## Next steps
 * [Manage fields in an entity](data-platform-manage-fields.md)
-* [Define relationships between entities](data-platform-entity-lookup.md)
+* [Define relationships between entities](maker/data-platform-entity-lookup.md)
 * [Generate an app by using a Common Data Service database](maker/data-platform-create-app.md)
 * [Create an app from scratch using a Common Data Service database](maker/data-platform-create-app-scratch.md)
 

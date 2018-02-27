@@ -72,7 +72,7 @@ Each standard entity contains a set of default fields that you can't change or d
 You can create custom fields in either a standard entity or a custom entity. You must specify the name, display name, and data type of each custom field. For a complete list of supported types, see [Entity field data types](https://docs.microsoft.com/common-data-service/entity-reference/field-data-types).
 
 ## Lookup relationships
-You can navigate between records in entities if they have a relationship that's defined as a field of the **Lookup** data type. To create a lookup relationship, add a field of data type **Lookup** in one entity, and point to the entity in which you want to look up information. For more information, see [Entity relationships via lookup field](data-platform-entity-lookup.md).
+You can navigate between records in entities if they have a relationship that's defined as a field of the **Lookup** data type. To create a lookup relationship, add a field of data type **Lookup** in one entity, and point to the entity in which you want to look up information. For more information, see [Entity relationships via lookup field](maker/data-platform-entity-lookup.md).
 
 ## Standard entities
 For a list of the entities and their fields, and a list of the enumerations, see [Standard entities](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).

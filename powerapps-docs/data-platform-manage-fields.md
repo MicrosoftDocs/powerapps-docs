@@ -86,7 +86,7 @@ As you create and modify fields, keep these points in mind:
   * You require unique values, but two or more records contain the same value in that field.
 
 ## Next steps
-* [Define relationships between entities](data-platform-entity-lookup.md)
+* [Define relationships between entities](maker/data-platform-entity-lookup.md)
 * [Create an app using entities](maker/data-platform-create-app.md)
 * [Create an app from scratch using a Common Data Service database](maker/data-platform-create-app-scratch.md)
 
