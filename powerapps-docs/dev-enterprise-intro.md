@@ -47,4 +47,4 @@ As a Microsoft partner or Independent Software Vendor (ISV), accelerate customer
 
 - **List your solution on AppSource**: Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive. [Learn more](developer/dev-appsource-test-drive.md)
 
-- **Get started today for free**: Sign-up for the PowerApps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](dev-community-plan.md)
+- **Get started today for free**: Sign-up for the PowerApps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](maker/dev-community-plan.md)
