@@ -42,7 +42,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 | **&amp;&amp;** or **And** |Logical operators |**Price &lt; 100 &amp;&amp; Slider1.Value = 20**<br>or **Price &lt; 100 And Slider1.Value = 20** |Logical conjunction, equivalent to the **[And](function-logicals.md)** function |
 | **&#124;&#124;** or **Or** |&nbsp; |**Price &lt; 100 &#124;&#124; Slider1.Value = 20** or **Price &lt; 100 Or Slider1.Value = 20** |Logical disjunction, equivalent to the **[Or](function-logicals.md)** function |
 | **!** or **Not** |&nbsp; |**!(Price &lt; 100)** or **Not (Price &lt; 100)** |Logical negation, equivalent to the **[Not](function-logicals.md)** function |
-| **exactin** |[Membership operators](#in-and-exactin-operators) |**Gallery1.Selected exactin SavedItems** |Belonging to a [collection](../working-with-data-sources.md#collections) or a table |
+| **exactin** |[Membership operators](#in-and-exactin-operators) |**Gallery1.Selected exactin SavedItems** |Belonging to a [collection](../maker/working-with-data-sources.md#collections) or a table |
 | **exactin** |&nbsp; |**&quot;Windows&quot; exactin “To display windows in the Windows operating system...”** |Substring test (case-sensitive) |
 | **in** |&nbsp; |**Gallery1.Selected in SavedItems** |Belonging to a collection or a table |
 | **in** |&nbsp; |**&quot;The&quot; in &quot;The keyboard and the monitor...&quot;** |Substring test (case-insensitive) |
@@ -54,7 +54,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 | **ThisItem** |[ThisItem operator](#thisitem-operator) |**ThisItem.FirstName** |Access to fields of a Gallery or form control |
 
 ## in and exactin operators
-You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
+You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../maker/working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
 1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
 2. Set the **[Items](../controls/properties-core.md)** property of the gallery to this formula:

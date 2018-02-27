@@ -61,7 +61,7 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 | **Sqrt( 9 )** |Returns the number that, when multiplied by itself, results in 9. |3 |
 
 ### Single-column table
-The examples in this section use a [data source](../working-with-data-sources.md) that's named **ValueTable** and that contains this data:
+The examples in this section use a [data source](../maker/working-with-data-sources.md) that's named **ValueTable** and that contains this data:
 
 ![](media/function-numericals/values.png)
 

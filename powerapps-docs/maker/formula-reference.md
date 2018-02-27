@@ -64,7 +64,7 @@ Other elements include:
 
 **[Char](../functions/function-char.md)** – Translates a character code into a string.
 
-**[Clear](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](../working-with-data-sources.md#collections).
+**[Clear](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
 **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](../working-with-tables.md#records).
 

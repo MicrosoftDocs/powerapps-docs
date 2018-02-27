@@ -19,13 +19,13 @@ ms.author: gregli
 
 ---
 # Remove and RemoveIf functions in PowerApps
-Removes [records](../working-with-tables.md#records) from a [data source](../working-with-data-sources.md).
+Removes [records](../working-with-tables.md#records) from a [data source](../maker/working-with-data-sources.md).
 
 ## Description
 ### Remove function
 Use the **Remove** function to remove a specific record or records from a data source.  
 
-For [collections](../working-with-data-sources.md#collections), the entire record must match. You can use the **All** argument to remove all copies of a record; otherwise, only one copy of the record is removed.
+For [collections](../maker/working-with-data-sources.md#collections), the entire record must match. You can use the **All** argument to remove all copies of a record; otherwise, only one copy of the record is removed.
 
 ### RemoveIf function
 Use the **RemoveIf** function to remove a record or records based on a condition or a set of conditions. Each condition can be any formula that results in a **true** or **false** and can reference [columns](../working-with-tables.md#columns) of the data source by name. Each condition is evaluated individually for each record, and the record is removed if all conditions evaluate to **true**.

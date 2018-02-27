@@ -68,7 +68,7 @@ A table is a value in PowerApps, just like a string or a number. You can specify
     **ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
 3. Press F5, select the **Original** button, and then press Esc.
    
-    You just created a [collection](../working-with-data-sources.md#collections), named **CityPopulations**, that contains this data:
+    You just created a [collection](../maker/working-with-data-sources.md#collections), named **CityPopulations**, that contains this data:
    
     ![](media/function-groupby/cities.png)
 4. To display this collection, select **Collections** on the **File** menu and then select the **CityPopulations** collection.  The first five records in the collection appear:

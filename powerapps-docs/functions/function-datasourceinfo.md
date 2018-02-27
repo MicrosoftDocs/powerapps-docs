@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # DataSourceInfo function in PowerApps
-Provides information about a [data source](../working-with-data-sources.md).
+Provides information about a [data source](../maker/working-with-data-sources.md).
 
 ## Overview
 Data sources can provide a wealth of information to optimize the user experience.
@@ -28,7 +28,7 @@ You can use [column](../working-with-tables.md#columns)-level information to val
 
 You can use information at the data-source level, for example, to disable or hide **Edit** and **New** buttons for users who don't have permissions to edit and create [records](../working-with-tables.md#records).
 
-Data sources vary in how much information they provide, including not providing any at all.  [Collections](../working-with-data-sources.md#collections) provide no information. If a piece of information isn't provided, a default is used, or *blank* is returned.
+Data sources vary in how much information they provide, including not providing any at all.  [Collections](../maker/working-with-data-sources.md#collections) provide no information. If a piece of information isn't provided, a default is used, or *blank* is returned.
 
 ## Description
 ### Column information

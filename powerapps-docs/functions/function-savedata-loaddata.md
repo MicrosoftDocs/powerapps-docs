@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # SaveData and LoadData functions in PowerApps
-Saves and re-loads a [collection](../working-with-data-sources.md#collections).
+Saves and re-loads a [collection](../maker/working-with-data-sources.md#collections).
 
 ## Description
 The **SaveData** function stores a collection for later use under a name.  

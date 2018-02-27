@@ -41,7 +41,7 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 * No value is typed into a text-input control, or no selection is made in a listbox. You can use **IsBlank** to provide feedback that a field is required.
 * A string that contains no characters has a **[Len](function-len.md)** of 0.
 * An error occurred in a function. Often, one of the arguments to the function wasn't valid. Many functions return *blank* if the value of an argument is *blank*.
-* Connected [data sources](../working-with-data-sources.md), such as SQL Server, may use "null" values. These values appear as *blank* in PowerApps.
+* Connected [data sources](../maker/working-with-data-sources.md), such as SQL Server, may use "null" values. These values appear as *blank* in PowerApps.
 * The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
 * You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
 
@@ -115,7 +115,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
    
     Because the **[Text](../controls/properties-core.md)** property no longer contains any characters, it's *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 
-For information about how to perform validation by using other tools, see the **[Validate](function-validate.md)** function and [working with data sources](../working-with-data-sources.md).  
+For information about how to perform validation by using other tools, see the **[Validate](function-validate.md)** function and [working with data sources](../maker/working-with-data-sources.md).  
 
 Other examples:
 
@@ -124,7 +124,7 @@ Other examples:
 | **IsBlank( Blank() )** |Tests the return value from the **Blank** function, which always returns a *blank* value. |**true** |
 | **IsBlank( "" )** |A string that contains no characters. |**true** |
 | **IsBlank( "Hello" )** |A string that contains one or more characters. |**false** |
-| **IsBlank( *AnyCollection* )** |Because the [collection](../working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. |**false** |
+| **IsBlank( *AnyCollection* )** |Because the [collection](../maker/working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. |**false** |
 | **IsBlank( Mid( "Hello", 17, 2 ) )** |The starting character for **[Mid](function-left-mid-right.md)** is beyond the end of the string.  The result is an empty string. |**true** |
 | **IsBlank( If( false, false ) )** |An **[If](function-if.md)** function with no *ElseResult*.  Because the condition is always **false**, this **[If](function-if.md)** always returns *blank*. |**true** |
 

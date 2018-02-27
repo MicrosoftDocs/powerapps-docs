@@ -61,7 +61,7 @@ The **Search** function finds records in a table that contain a string in one of
 * *ReductionFormula* - Optional. This formula is evaluated over the record that was found, and then reduces the record to a single value. You can reference columns within the table. If you don't use this parameter, the function returns the full record from the table. In the UI, the syntax is shown as *result* above the function box.
 
 ## Examples
-The following examples use the **IceCream** [data source](../working-with-data-sources.md):
+The following examples use the **IceCream** [data source](../maker/working-with-data-sources.md):
 
 ![](media/function-filter-lookup/icecream.png)
 

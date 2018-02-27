@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Patch function in PowerApps
-Modifies or creates one or more [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md), or merges records outside of a data source.
+Modifies or creates one or more [records](../working-with-tables.md#records) in a [data source](../maker/working-with-data-sources.md), or merges records outside of a data source.
 
 Use the **Patch** function to modify records in complex situations, such as when you perform updates that require no user interaction or use forms that span multiple screens.
 
@@ -30,7 +30,7 @@ Use the **Patch** function to modify one or more records of a data source.  The 
 
 **Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: “1-212-555-1234” } )**
 
-Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. Use this behavior to build a [single screen](../working-with-data-sources.md) for both creating and editing records. For example, this formula creates a record for a customer named Contoso:
+Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. Use this behavior to build a [single screen](../maker/working-with-data-sources.md) for both creating and editing records. For example, this formula creates a record for a customer named Contoso:
 
 **Patch( Customers, Defaults( Customer ), { Name: “Contoso” } )**
 
@@ -49,7 +49,7 @@ Then specify one or more change records, each of which contains new property val
 
 The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically.
 
-When you update a data source, one or more issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine issues, as [Working with Data Sources](../working-with-data-sources.md) describes.
+When you update a data source, one or more issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine issues, as [Working with Data Sources](../maker/working-with-data-sources.md) describes.
 
 Related functions include the **[Update](function-update-updateif.md)** function, which you can use to replace an entire record, and the **[Collect](function-clear-collect-clearcollect.md)** function, which you can use to create a record.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
 

@@ -32,7 +32,7 @@ The **Shuffle** function reorders the records of a table.
 * *Table* - Required.  Table to shuffle.
 
 ## Example
-If you stored details about playing cards in a [collection](../working-with-data-sources.md#collections) named **Deck**, this formula would return a copy of that collection that has been randomly shuffled.
+If you stored details about playing cards in a [collection](../maker/working-with-data-sources.md#collections) named **Deck**, this formula would return a copy of that collection that has been randomly shuffled.
 
 **Shuffle(Deck)**
 

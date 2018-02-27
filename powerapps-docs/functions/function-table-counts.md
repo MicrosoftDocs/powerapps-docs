@@ -50,7 +50,7 @@ Each of these functions returns a number.
 * *Table* - Required.  Table of records to count.
 
 ## Example
-1. Import or create a [collection](../working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
+1. Import or create a [collection](../maker/working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
 2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
    
     **CountIf(Inventory, UnitsInStock < 30)**

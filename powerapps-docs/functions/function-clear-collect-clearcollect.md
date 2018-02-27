@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Collect, Clear, and ClearCollect functions in PowerApps
-Creates and clears [collections](../working-with-data-sources.md#collections) and adds [records](../working-with-tables.md#records) to any [data source](../working-with-data-sources.md).
+Creates and clears [collections](../maker/working-with-data-sources.md#collections) and adds [records](../working-with-tables.md#records) to any [data source](../maker/working-with-data-sources.md).
 
 ## Description
 ### Collect

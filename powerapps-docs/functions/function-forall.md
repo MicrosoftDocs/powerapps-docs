@@ -56,7 +56,7 @@ Another consideration is that **ForAll** is not delegable while other functions 
 
 ## Examples
 ### Calculations
-The following examples use the **Squares** [data source](../working-with-data-sources.md):
+The following examples use the **Squares** [data source](../maker/working-with-data-sources.md):
 
 ![](media/function-forall/squares.png)
 
@@ -70,7 +70,7 @@ To create this data source as a collection, set the **OnSelect** property of a *
 | **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** |For all the records of the input table, raises the **Value** column to the third power.  The **Power** function does not support single-column tables. Therefore, **ForAll** must be used in this case. |<style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
 
 ### Using a connection
-The following examples use the **Expressions** [data source](../working-with-data-sources.md):
+The following examples use the **Expressions** [data source](../maker/working-with-data-sources.md):
 
 ![](media/function-forall/translate.png)
 
@@ -96,7 +96,7 @@ But before you make that copy, think carefully if it is really needed.  Many sit
 * Making a copy can consume a lot of computer memory, network bandwidth, and/or time.  
 * For most data sources, copying cannot be delegated, limiting how much data can be moved.      
 
-The following examples use the **Products** [data source](../working-with-data-sources.md):
+The following examples use the **Products** [data source](../maker/working-with-data-sources.md):
 
 ![](media/function-forall/prod.png)
 

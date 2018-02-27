@@ -68,7 +68,7 @@ In addition to sorting ascending or descending, **SortByColumns** can sort based
 > For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
 
 ## Examples
-For the following examples, we'll use the **IceCream** [data source](../working-with-data-sources.md), which contains the data in this table:
+For the following examples, we'll use the **IceCream** [data source](../maker/working-with-data-sources.md), which contains the data in this table:
 
 ![](media/function-sort/icecream.png)
 
@@ -82,7 +82,7 @@ For the following examples, we'll use the **IceCream** [data source](../working-
 | **SortByColumns( IceCream, "Flavor", [&nbsp;"Pistachio",&nbsp;"Strawberry"&nbsp;] )** |Sorts **IceCream** by it's **Flavor** column based on the single column table containing "Pistachio" and "Strawberry".  Records which have a **Flavor** of "Pistachio" will appear first in the result, followed by records that contain "Strawberry".  For values in the **Flavor** column that are not matched, such as "Vanilla", they will appear after the items that were matched. |![](media/function-sort/icecream-onflavor-sorttable.png) |
 
 ### Step by step
-To run these examples yourself, create the **IceCream** data source as a [collection](../working-with-data-sources.md#collections):
+To run these examples yourself, create the **IceCream** data source as a [collection](../maker/working-with-data-sources.md#collections):
 
 1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
 2. Preview the app, select the button, and then press Esc to return to the default workspace.

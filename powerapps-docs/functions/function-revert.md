@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Revert function in PowerApps
-Refreshes and clears errors for the [records](../working-with-tables.md#records) of a [data source](../working-with-data-sources.md).
+Refreshes and clears errors for the [records](../working-with-tables.md#records) of a [data source](../maker/working-with-data-sources.md).
 
 ## Description
 The **Revert** function refreshes an entire data source or a single record in that data source. You'll see changes that other users made.

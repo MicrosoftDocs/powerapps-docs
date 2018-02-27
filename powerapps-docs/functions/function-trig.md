@@ -108,7 +108,7 @@ If an argument would result in an undefined value, the result is *blank*.  This 
 | **Radians(&nbsp;15&nbsp;)** |Returns the equivalent number of radians for 15 degrees. |0.261799... |
 
 ### Single-column table
-The examples in this section use a [data source](../working-with-data-sources.md) that's named **ValueTable** and that contains the following data.  The last record in the table is &pi;/2 radians or 90 degrees.
+The examples in this section use a [data source](../maker/working-with-data-sources.md) that's named **ValueTable** and that contains the following data.  The last record in the table is &pi;/2 radians or 90 degrees.
 
 ![](media/function-trig/values.png)
 

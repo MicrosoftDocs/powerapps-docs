@@ -37,7 +37,7 @@ If you specify an [empty](function-isblank-isempty.md) string, **Len** returns 0
 
 ## Examples
 ### Single string
-For the examples in this section, the [data source](../working-with-data-sources.md) is a text-input control that's named **Author** and that contains the string "E. E. Cummings".
+For the examples in this section, the [data source](../maker/working-with-data-sources.md) is a text-input control that's named **Author** and that contains the string "E. E. Cummings".
 
 | Formula | Description | Result |
 | --- | --- | --- |

@@ -19,13 +19,13 @@ ms.author: gregli
 
 ---
 # Update and UpdateIf functions in PowerApps
-Updates [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md).
+Updates [records](../working-with-tables.md#records) in a [data source](../maker/working-with-data-sources.md).
 
 ## Description
 ### Update function
 Use the **Update** function to replace an entire record in a data source. In contrast, the **UpdateIf** and the **[Patch](function-patch.md)** functions modify one or more values in a record, leaving the other values alone.
 
-For a [collection](../working-with-data-sources.md#collections), the entire record must match. Collections allow duplicate records, so multiple records might match. You can use the **All** argument to update all copies of a record; otherwise, only one copy of the record is updated.
+For a [collection](../maker/working-with-data-sources.md#collections), the entire record must match. Collections allow duplicate records, so multiple records might match. You can use the **All** argument to update all copies of a record; otherwise, only one copy of the record is updated.
 
 If the data source generates a column's value automatically, the value of that [column](../working-with-tables.md#columns) must be reaffirmed.
 

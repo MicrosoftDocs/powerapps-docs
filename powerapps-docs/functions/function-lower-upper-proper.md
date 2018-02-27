@@ -43,7 +43,7 @@ If you pass a single string, the return value is the converted version of that s
 
 ## Examples
 ### Single string
-The examples in this section use a text-input control, named **Author**, as their [data source](../working-with-data-sources.md). The control contains the string "E. E. CummINGS".
+The examples in this section use a text-input control, named **Author**, as their [data source](../maker/working-with-data-sources.md). The control contains the string "E. E. CummINGS".
 
 | Formula | Description | Result |
 | --- | --- | --- |
