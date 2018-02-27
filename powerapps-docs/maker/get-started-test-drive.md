@@ -102,4 +102,4 @@ You can customize this or any app in these ways, among others:
 2. [Share your app](../share-app.md) with other people in your organization.
 
     > [!NOTE]
-> Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](../share-app-data.md) in a cloud-storage account.
+> Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
