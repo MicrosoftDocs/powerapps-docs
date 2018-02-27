@@ -30,7 +30,7 @@ Keep the following restrictions in mind:
 * Only PowerApps users in the same tenant can access the embedded app.
 * To access PowerApps using Internet Explorer 11, you must turn off Compatibility View.
 
-You can also integrate PowerApps into SharePoint Online (without using an iframe). For more information, see [Generate an app from within SharePoint using PowerApps](../generate-app-from-sharepoint-list-interface.md).
+You can also integrate PowerApps into SharePoint Online (without using an iframe). For more information, see [Generate an app from within SharePoint using PowerApps](../maker/generate-app-from-sharepoint-list-interface.md).
 
 ## Set URI parameters for your app
 If you have an app you want to embed, the first step is to set parameters for the Uniform Resource Identifier (URI), so that the iframe knows where to find the app. The URI is in the following form:
