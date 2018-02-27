@@ -33,7 +33,7 @@ Add a push notification to your app if:
 > To receive push notifications, each user must have opened the app in PowerApps Mobile once or gotten the app from AppSource in [Dynamics 365](https://home.dynamics.com/).
 
 ## Before you start
-In an app for which you have the **Contributor** permission, add a PowerApps Notification connection. If you don't already have an app, you can quickly [create one from a template](get-started-test-drive.md), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
+In an app for which you have the **Contributor** permission, add a PowerApps Notification connection. If you don't already have an app, you can quickly [create one from a template](../get-started-test-drive.md), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
 
 ## Send a notification from a flow
 > [!NOTE]
