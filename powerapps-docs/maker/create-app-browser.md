@@ -48,7 +48,7 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
     For best results, use PowerApps Studio for Windows to edit and save apps locally. In a browser, you can't save changes to a local app, or you must save a new file instead of replacing the file that you opened.
 3. **Use signal functions.**
    
-    **[Acceleration and Compass](../functions/signals.md)** functions return accurate values in a published app, but those functions return zero values as you create or modify an app in a browser.
+    **[Acceleration and Compass](functions/signals.md)** functions return accurate values in a published app, but those functions return zero values as you create or modify an app in a browser.
 4. **Export and import data.**
    
     You can [export and import data](controls/control-export-import.md) in a published app but not as you create or modify an app in a browser.

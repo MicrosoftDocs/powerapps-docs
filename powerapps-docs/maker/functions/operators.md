@@ -23,7 +23,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 
 | Symbol | Type | Syntax | Description |
 | --- | --- | --- | --- |
-| **.** |Property Selector |**Slider1.Value<br>Color.Red<br>Acceleration.X** |Extracts a property from a [table](../working-with-tables.md), control, [signal](../../functions/signals.md), or enumeration.  For backwards compatibility, **!** may also be used. |
+| **.** |Property Selector |**Slider1.Value<br>Color.Red<br>Acceleration.X** |Extracts a property from a [table](../working-with-tables.md), control, [signal](signals.md), or enumeration.  For backwards compatibility, **!** may also be used. |
 | **.**<br>[or **,** [depending on the language](../global-apps.md)] |Decimal separator |**1.23**<br>[or **1,23** depending on the language] |Separator between whole and fractional parts of a number.  The character is dependent on the language. |
 | **( )** |Parentheses |**Filter(T, A &lt; 10)**<br><br>**(1 + 2) * 3** |Enforces precedence order, and groups sub-expressions in a larger expression |
 | **+** |Arithmetic operators |**1 + 2** |Addition |

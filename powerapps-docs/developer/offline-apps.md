@@ -24,7 +24,7 @@ One of the most common scenarios you face as a mobile app developer is enabling 
 
 * Launch the PowerApps mobile app when offline.
 * Run apps you develop when offline.
-* Determine when an app is offline, online, or in a metered connection by using the [Connection](../functions/signals.md#connection) signal object.
+* Determine when an app is offline, online, or in a metered connection by using the [Connection](../maker/functions/signals.md#connection) signal object.
 * Use [collections](../maker/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../maker/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
 ## How to build offline capable apps

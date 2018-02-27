@@ -22,7 +22,7 @@ ms.author: gregli
 Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.  
 
 ## Description and syntax
-All signals return a [record](../maker/working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](../maker/functions/operators.md).
+All signals return a [record](../working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](operators.md).
 
 ### Acceleration
 The **Acceleration** signal returns the device's acceleration in three dimensions relative to the device's screen. Acceleration is measured in *g* units of 9.81 m/second<sup>2</sup> or 32.2 ft/second<sup>2</sup> (the acceleration that the Earth imparts to objects at its surface due to gravity).
@@ -38,7 +38,7 @@ The **App** signal returns information about the running app.
 
 | Signal Property | Description |
 | --- | --- |
-| **App.ActiveScreen** |Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](../maker/functions/function-navigate.md)** or **[Navigate](../maker/functions/function-navigate.md)** function, you can change the displayed screen. |
+| **App.ActiveScreen** |Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function, you can change the displayed screen. |
 
 ### Compass
 The **Compass** signal returns the compass heading of the top of the screen. The heading is based on magnetic north.
@@ -60,7 +60,7 @@ The **Location** signal returns the location of the device based on the Global P
 
 When a user accesses the location information for the first time, the device may prompt that user to allow access to this information.
 
-As the location changes, dependencies on the location will continuously recalculate, which will consume power from the device's battery. To conserve battery life, you can use the **[Enable](../maker/functions/function-enable-disable.md)** and **[Disable](../maker/functions/function-enable-disable.md)** functions to turn location updates on and off. Location is automatically turned off if the displayed screen doesn't depend on location information.
+As the location changes, dependencies on the location will continuously recalculate, which will consume power from the device's battery. To conserve battery life, you can use the **[Enable](function-enable-disable.md)** and **[Disable](function-enable-disable.md)** functions to turn location updates on and off. Location is automatically turned off if the displayed screen doesn't depend on location information.
 
 | Signal Property | Description |
 | --- | --- |

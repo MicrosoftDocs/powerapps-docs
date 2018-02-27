@@ -22,7 +22,7 @@ ms.author: gregli
 Formulas combine many elements.  Listed below are:
 
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
-* **Signals** return information about the environment. For example, **[Location](../functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
+* **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 * **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
 * **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Parent](functions/operators.md#parent-operator)**, provide access to information from within a container.
 
@@ -34,7 +34,7 @@ Other elements include:
 ## A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
-**[Acceleration](../functions/signals.md)** – Reads the acceleration sensor in your device.
+**[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
 
 **[Acos](functions/function-trig.md)** – Returns the arccosine of a number, in radians.
 
@@ -44,7 +44,7 @@ Other elements include:
 
 **[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](../functions/operators.md).
 
-**[App](../functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
+**[App](functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
 
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
 
@@ -80,13 +80,13 @@ Other elements include:
 
 **[ColorValue](functions/function-colors.md)** – Translates a CSS color name or a hex code to a color value.  
 
-**[Compass](../functions/signals.md)** – Returns your compass heading.
+**[Compass](functions/signals.md)** – Returns your compass heading.
 
 **[Concat](functions/function-concatenate.md)** – Concatenates strings in a data source.  
 
 **[Concatenate](functions/function-concatenate.md)** – Concatenates strings.
 
-**[Connection](../functions/signals.md)** – Returns information about your network connection.
+**[Connection](functions/signals.md)** – Returns information about your network connection.
 
 **[Count](functions/function-table-counts.md)** – Counts table records that contain numbers.
 
@@ -119,7 +119,7 @@ Other elements include:
 
 **[Degrees](functions/function-trig.md)** - Converts radians to degrees.
 
-**[Disable](functions/function-enable-disable.md)** – Disables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
+**[Disable](functions/function-enable-disable.md)** – Disables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
 **[Distinct](functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
 
@@ -130,7 +130,7 @@ Other elements include:
 ## E
 **[EditForm](functions/function-form.md)** – Resets a form control for editing of an item.
 
-**[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
+**[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
 **[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
@@ -191,7 +191,7 @@ Other elements include:
 
 **[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from PowerApps private storage.
 
-**[Location](../functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
+**[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
 **[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
 
