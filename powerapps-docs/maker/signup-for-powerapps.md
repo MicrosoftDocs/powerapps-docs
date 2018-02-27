@@ -21,7 +21,7 @@ ms.author: jamesol
 # Self-service signup for PowerApps
 Signing up for PowerApps as an individual is easy! This article walks you through the steps to get up and running with a free trial account for PowerApps.
 
-For administration information, see [Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](../signup-question-and-answer.md).
+For administration information, see [Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](../administrator/signup-question-and-answer.md).
 
 > [!NOTE]
 > If you're in an organization, individual signup may be disabled. If you get an error indicating it's been turned off, see [Individual signup has been turned off](signup-for-powerapps.md#individual-signup-has-been-turned-off) (in this topic) for more information.
@@ -135,7 +135,7 @@ In many cases, you can sign up for PowerApps by following the steps in this topi
 | **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.` |Your organization signs in to Office 365 and other Microsoft services with IDs other than email addresses. For example, your email address might be Nancy.Smith@contoso.com, but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to you for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
 
 ## See also
-[PowerApps in your organization Q&A](../signup-question-and-answer.md)  
+[PowerApps in your organization Q&A](../administrator/signup-question-and-answer.md)  
 [Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md)  
 More questions? [Try the PowerApps Community][7]
 
