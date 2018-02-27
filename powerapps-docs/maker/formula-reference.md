@@ -32,7 +32,7 @@ Other elements include:
 * [Controls and their properties](reference-properties.md)
 
 ## A
-**[Abs](../functions/function-numericals.md)** – Absolute value of a number.  
+**[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
 **[Acceleration](../functions/signals.md)** – Reads the acceleration sensor in your device.
 
@@ -140,7 +140,7 @@ Other elements include:
 
 **[Exit](functions/function-exit.md)** – Exits the currently running app.
 
-**[Exp](../functions/function-numericals.md)** - Returns *e* raised to a power.
+**[Exp](functions/function-numericals.md)** - Returns *e* raised to a power.
 
 ## F
 **[Filter](functions/function-filter-lookup.md)** – Returns a filtered table based on one or more criteria.
@@ -187,7 +187,7 @@ Other elements include:
 
 **[Len](functions/function-len.md)** – Returns the length of a string.
 
-**[Ln](../functions/function-numericals.md)** – Returns the natural log.
+**[Ln](functions/function-numericals.md)** – Returns the natural log.
 
 **[LoadData](../functions/function-savedata-loaddata.md)** – Loads a collection from PowerApps private storage.
 
@@ -233,7 +233,7 @@ Other elements include:
 
 **[PlainText](functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
 
-**[Power](../functions/function-numericals.md)** – Returns a number raised to a power.  You can also use the [**^** operator](../functions/operators.md).
+**[Power](functions/function-numericals.md)** – Returns a number raised to a power.  You can also use the [**^** operator](../functions/operators.md).
 
 **[Proper](functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 
@@ -289,7 +289,7 @@ Other elements include:
 
 **[Split](../functions/function-split.md)** – Splits a text string into a table of substrings.
 
-**[Sqrt](../functions/function-numericals.md)** – Returns the square root of a number.
+**[Sqrt](functions/function-numericals.md)** – Returns the square root of a number.
 
 **[StartsWith](../functions/function-startswith.md)** – Checks if a text string begins with another text string.
 

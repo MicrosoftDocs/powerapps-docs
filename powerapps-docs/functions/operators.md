@@ -30,7 +30,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 | **-** |&nbsp; |**2 - 1** |Subtraction and sign |
 | **\*** |&nbsp; |**2 * 3** |Multiplication |
 | **/** |&nbsp; |**2 / 3** |Division (also see the **[Mod](../maker/functions/function-mod.md)** function) |
-| **^** |&nbsp; |**2 ^ 3** |Exponentiation, equivalent to the **[Power](function-numericals.md)** function |
+| **^** |&nbsp; |**2 ^ 3** |Exponentiation, equivalent to the **[Power](../maker/functions/function-numericals.md)** function |
 | **%** |&nbsp; |**20%** |Percentage (equivalent to &quot;* 1/100&quot;) |
 | **=** |Comparison operators |**Price = 100** |Equal to |
 | **&gt;** |&nbsp; |**Price &gt; 100** |Greater than |
