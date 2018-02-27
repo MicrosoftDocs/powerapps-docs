@@ -22,7 +22,7 @@ ms.author: sharik
 Create an app automatically based on a template for specific scenario, and then run it to understand its default behavior. Experiment with how to customize an app, and then save and share it with others.
 
 ## Prerequisites
-* [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
     > [!NOTE]
 > To use this feature, make sure that you're running release 2.0.510 or later. To identify your release, open the **File** menu (along the left edge), click or tap **Account**, and then look under **Product information**.
@@ -91,15 +91,15 @@ An app from a template opens in the default workspace, where you'll spend most o
 ## Customize the app
 You can customize this or any app in these ways, among others:
 
-* [change the screen size, orientation, or both](set-aspect-ratio-portrait-landscape.md)
-* [add another data source](maker/add-data-connection.md)
-* [add one or more screens](maker/add-screen-context-variables.md)
-* [add and configure more controls](maker/add-configure-controls.md)
-* [change how the app behaves](working-with-formulas.md)
+* [change the screen size, orientation, or both](../set-aspect-ratio-portrait-landscape.md)
+* [add another data source](add-data-connection.md)
+* [add one or more screens](add-screen-context-variables.md)
+* [add and configure more controls](add-configure-controls.md)
+* [change how the app behaves](../working-with-formulas.md)
 
 ## Next steps
 1. Press Ctrl-S, give your app a name, and then click or tap **Save** to save your app to the cloud.
-2. [Share your app](share-app.md) with other people in your organization.
+2. [Share your app](../share-app.md) with other people in your organization.
 
     > [!NOTE]
-> Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+> Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](../share-app-data.md) in a cloud-storage account.

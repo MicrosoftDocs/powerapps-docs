@@ -41,7 +41,7 @@ For more information, check out the following topics:
 * [Generate an app from Salesforce](maker/add-manage-connections.md)
 * [Generate an app from Dynamics 365](connections/connection-dynamics-crmonline.md)
 * [Generate an app from the Common Data Service](maker/data-platform-create-app.md)
-* [Generate an app from a template](get-started-test-drive.md)
+* [Generate an app from a template](maker/get-started-test-drive.md)
 
 ## Customize an app
 If the default generated app doesn't meet your needs, you can customize it. For example, you might want to change the appearance or behavior of certain controls, or perhaps add an image or video. To learn more about customization, in the navigation pane on the left, click or tap **Customize an app**. You'll see a list of topics that pertain to the different things you can customize. Click or tap any of the topics to get step-by-step instructions.

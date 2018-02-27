@@ -54,4 +54,4 @@ To remove the Common Data Service database (and entities), go to the **File** me
 In this quick start, you created an app using existing data in a Common Data Service database. To get more hands-on experience creating apps, use one of our templates.
 
 > [!div class="nextstepaction"]
-> [Create and run an app from a template](../get-started-test-drive.md)
+> [Create and run an app from a template](get-started-test-drive.md)

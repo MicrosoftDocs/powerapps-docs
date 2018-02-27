@@ -54,4 +54,4 @@ To remove the One Drive for Business connection, go to the **File** menu, and se
 In this quick start, you created an app using existing data in an Excel table. To get more hands-on experience creating apps, use one of our templates.
 
 > [!div class="nextstepaction"]
-> [Create and run an app from a template](../get-started-test-drive.md)
+> [Create and run an app from a template](get-started-test-drive.md)
