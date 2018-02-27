@@ -28,7 +28,7 @@ For the records reverted, **Revert** also clears any errors from the [table](../
 
 If the **[Errors](function-errors.md)** function reports a conflict after a **[Patch](function-patch.md)** or other data operation, **Revert** the record to start with the conflicting version and reapply the change.
 
-**Revert** has no return value. You can use it only in a [behavior formula](../working-with-formulas-in-depth.md).
+**Revert** has no return value. You can use it only in a [behavior formula](../maker/working-with-formulas-in-depth.md).
 
 ## Syntax
 **Revert**( *DataSource* [, *Record* ] )

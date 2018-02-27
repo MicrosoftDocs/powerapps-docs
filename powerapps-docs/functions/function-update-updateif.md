@@ -36,7 +36,7 @@ To specify a modification, use a change record that contains new property values
 
 Similar to **UpdateIf**, you can also use the **[Patch](function-patch.md)** function to change specific columns of a record without affecting other columns.
 
-Both **Update** and **UpdateIf** return the modified data source as a [table](../working-with-tables.md). You must use either function in a [behavior formula](../working-with-formulas-in-depth.md).
+Both **Update** and **UpdateIf** return the modified data source as a [table](../working-with-tables.md). You must use either function in a [behavior formula](../maker/working-with-formulas-in-depth.md).
 
 ### Delegation
 [!INCLUDE [delegation-no](../includes/delegation-no.md)]

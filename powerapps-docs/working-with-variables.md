@@ -23,7 +23,7 @@ If you've used another programming tool, such as Visual Basic or JavaScript, you
 
 In other tools, you may have explicitly performed a calculation and stored the result in a variable. However, PowerApps and Excel both automatically recalculate formulas as the input data changes, so you usually don't need to create and update variables. By taking this approach whenever possible, you can  more easily create, understand, and maintain your app.
 
-In some cases, you'll need to use variables in PowerApps, which extends Excel's model by adding [behavior formulas](working-with-formulas-in-depth.md). These formulas run when, for example, a user selects a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
+In some cases, you'll need to use variables in PowerApps, which extends Excel's model by adding [behavior formulas](maker/working-with-formulas-in-depth.md). These formulas run when, for example, a user selects a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
 In general, avoid using variables. But sometimes only a variable can enable the experience you want.
 

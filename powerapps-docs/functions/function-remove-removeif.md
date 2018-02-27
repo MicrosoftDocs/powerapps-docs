@@ -30,7 +30,7 @@ For [collections](../maker/working-with-data-sources.md#collections), the entire
 ### RemoveIf function
 Use the **RemoveIf** function to remove a record or records based on a condition or a set of conditions. Each condition can be any formula that results in a **true** or **false** and can reference [columns](../working-with-tables.md#columns) of the data source by name. Each condition is evaluated individually for each record, and the record is removed if all conditions evaluate to **true**.
 
-**Remove** and **RemoveIf** return the modified data source as a [table](../working-with-tables.md). You can use both functions only in [behavior formulas](../working-with-formulas-in-depth.md).
+**Remove** and **RemoveIf** return the modified data source as a [table](../working-with-tables.md). You can use both functions only in [behavior formulas](../maker/working-with-formulas-in-depth.md).
 
 You can also use the **[Clear](function-clear-collect-clearcollect.md)** function to remove all of the records in a data source.
 

@@ -31,7 +31,7 @@ The **Enable** and **Disable** functions turn a signal on and off, respectively.
 
 These functions currently only work for the **[Location](signals.md)** signal.
 
-These functions have no return value. You can use them only in [behavior formulas](../working-with-formulas-in-depth.md).
+These functions have no return value. You can use them only in [behavior formulas](../maker/working-with-formulas-in-depth.md).
 
 ## Syntax
 **Enable**( *Signal* )<br>**Disable**( *Signal* )

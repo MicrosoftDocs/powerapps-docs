@@ -45,7 +45,7 @@ A global variable holds its value until the app is closed.  Once closed, the glo
 
 Global variables cannot use the same name as an existing collection or control.  It can use the same name as a context variable.  To disambiguate between the two, use the [disambiguation operator](operators.md#disambiguation-operator).
 
-**Set** has no return value, and you can use it only within a [behavior formula](../working-with-formulas-in-depth.md).
+**Set** has no return value, and you can use it only within a [behavior formula](../maker/working-with-formulas-in-depth.md).
 
 ## Syntax
 **Set**( *VariableName*, *Value* )

@@ -30,7 +30,7 @@ Using the **Reset** function is an alternative to toggling the **Reset** propert
 
 Input controls are also reset when their **Default** property changes.
 
-**Reset** has no return value, and you can use it only in [behavior formulas](../working-with-formulas-in-depth.md).
+**Reset** has no return value, and you can use it only in [behavior formulas](../maker/working-with-formulas-in-depth.md).
 
 ## Syntax
 **Reset**( *Control* )

@@ -50,7 +50,7 @@ Set the **[OnHidden](../controls/control-screen.md)** property of the old screen
 
 **Back** normally returns **true** but returns **false** if the user is on the first screen shown and there is no previous screen.  **Navigate** normally returns **true** but returns **false** if there is a problem with one of its arguments.
 
-You can use these functions only within a [behavior formula](../working-with-formulas-in-depth.md).
+You can use these functions only within a [behavior formula](../maker/working-with-formulas-in-depth.md).
 
 ## Syntax
 **Back**()
