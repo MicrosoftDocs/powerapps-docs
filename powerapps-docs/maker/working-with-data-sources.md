@@ -23,7 +23,7 @@ Most PowerApps apps use external information stored in cloud services called **D
 
 This article discusses the different kinds of data sources, and how to work with table data sources.
 
-It is easy to create an app that does basic reading and writing to a data source. But sometimes you want more control over how data flows in and out of your app.  This article describes how the **[Patch](../functions/function-patch.md)**, **[DataSourceInfo](../functions/function-datasourceinfo.md)**, **[Validate](../functions/function-validate.md)**, and **[Errors](../functions/function-errors.md)** functions provide more control.
+It is easy to create an app that does basic reading and writing to a data source. But sometimes you want more control over how data flows in and out of your app.  This article describes how the **[Patch](../functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](../functions/function-validate.md)**, and **[Errors](../functions/function-errors.md)** functions provide more control.
 
 ## Kinds of data sources
 Data sources can be connected to a cloud service, or they can be local to an app.
@@ -60,7 +60,7 @@ You can use table data sources the same way that you use an internal PowerApps t
   * Records can be modified with the **[Patch](../functions/function-patch.md)**, **[Update](../functions/function-update-updateif.md)**, and **[UpdateIf](../functions/function-update-updateif.md)** functions.
   * Records can be removed with the **[Remove](../functions/function-remove-removeif.md)** and **[RemoveIf](../functions/function-remove-removeif.md)** functions.
   * Errors when working with a data source are available through the **[Errors](../functions/function-errors.md)** function.
-* The **[DataSourceInfo](../functions/function-datasourceinfo.md)**, **[Defaults](../functions/function-defaults.md)**, and **[Validate](../functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
+* The **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](../functions/function-defaults.md)**, and **[Validate](../functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
 
 ### Creating data sources
 PowerApps can't be used to create a connected data source, or modify its structure; the data source must already exist in a service somewhere. For example, to create a table in an Excel workbook stored on OneDrive, you first use Excel Online on OneDrive to create a workbook. Next you create a connection to it from your app.  
@@ -101,7 +101,7 @@ Before making a change to a record, the app should do what it can to make sure t
 
 PowerApps offers two tools for validation:
 
-* The data source can provide information about what is and isn't valid.  For example, numbers can have minimum and maximum values, and one or more entries can be required.  You can access this information with the **[DataSourceInfo](../functions/function-datasourceinfo.md)** function.  
+* The data source can provide information about what is and isn't valid.  For example, numbers can have minimum and maximum values, and one or more entries can be required.  You can access this information with the **[DataSourceInfo](functions/function-datasourceinfo.md)** function.  
 * The **[Validate](../functions/function-validate.md)** function uses this same information to check the value of a single column or of an entire record.
 
 ### Error handling

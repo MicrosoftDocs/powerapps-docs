@@ -31,7 +31,7 @@ Data sources can provide information on what constitutes valid values within a r
 * how high and low a number can be
 * how early and late a date can be
 
-The **Validate** function uses this information to determine whether a value is valid and to return an appropriate error message if not. You can use the **[DataSourceInfo](function-datasourceinfo.md)** function to view the same information that **Validate** uses.
+The **Validate** function uses this information to determine whether a value is valid and to return an appropriate error message if not. You can use the **[DataSourceInfo](../maker/functions/function-datasourceinfo.md)** function to view the same information that **Validate** uses.
 
 Data sources vary in how much validation information they provide, including not providing any at all. **Validate** can only verify values based on this information. Even if  **Validate** doesn't find a problem, applying the data change may still fail. You can use the **[Errors](function-errors.md)** function to obtain information about the failure.
 

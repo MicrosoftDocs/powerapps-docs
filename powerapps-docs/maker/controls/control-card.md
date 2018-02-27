@@ -56,7 +56,7 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 **DisplayName** – The user friendly name for a field in a data source.
 
-* The **[DataSourceInfo](../../functions/function-datasourceinfo.md)** function provides this metadata from the data source.
+* The **[DataSourceInfo](../functions/function-datasourceinfo.md)** function provides this metadata from the data source.
 * Controls within the card should use **Parent.DisplayName** to refer to the name of the field.
 
 **Error** – The user friendly error message to display for this field when validation fails.
@@ -66,7 +66,7 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 **Required** – Whether a card, editing the field of a data source, must contain a value.
 
-* The **[DataSourceInfo](../../functions/function-datasourceinfo.md)** function provides the required metadata from the data source.
+* The **[DataSourceInfo](../functions/function-datasourceinfo.md)** function provides the required metadata from the data source.
 * Controls within the card should use **Parent.Required** to determine whether that card's field is required.
 
 **Update** – The value to write back to the data source for a field.

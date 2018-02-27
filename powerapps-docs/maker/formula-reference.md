@@ -101,7 +101,7 @@ Other elements include:
 **[CountRows](../functions/function-table-counts.md)** – Counts table records.   
 
 ## D
-**[DataSourceInfo](../functions/function-datasourceinfo.md)** – Provides information about a data source.
+**[DataSourceInfo](functions/function-datasourceinfo.md)** – Provides information about a data source.
 
 **[Date](../functions/function-date-time.md)** – Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
 
