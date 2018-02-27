@@ -52,10 +52,10 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 [**Navigate**( *ScreenName*, *ScreenTransition* )](../functions/function-navigate.md)
 
 ## Example
-1. Name the default **[Screen](control-screen.md)** control **Target**, add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to show **Target**.
+1. Name the default **[Screen](../maker/controls/control-screen.md)** control **Target**, add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to show **Target**.
    
     Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
-2. Add a **[Screen](control-screen.md)** control, and name it **Source**.
+2. Add a **[Screen](../maker/controls/control-screen.md)** control, and name it **Source**.
 3. In **Source**, add a **Shape** control, and set its **[OnSelect](properties-core.md)** property to this formula:
    <br>**Navigate(Target, ScreenTransition.Fade)**
 4. Press F5, and then click or tap the **Shape** control.

@@ -86,7 +86,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Rating](controls/control-rating.md)** – Indicate a value between 1 and a specified number.
 
-**[Screen](../controls/control-screen.md)** – Show and update data about a specific task.
+**[Screen](controls/control-screen.md)** – Show and update data about a specific task.
 
 **[Shape](../controls/control-shapes-icons.md)** – Display arrows and geometric shapes, such as rectangles.
 
@@ -130,7 +130,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](../controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 ### B
-**[BackgroundImage](../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](../controls/control-screen.md)** control.
+**[BackgroundImage](../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
 **[BorderColor](../controls/properties-color-border.md)** – The color of a control's border.  Applies to many controls.
 
@@ -317,7 +317,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnFailure](controls/control-form-detail.md)** – The behavior of an app when a data operation has been unsuccessful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**[OnHidden](../controls/control-screen.md)** – The behavior of an app when the user navigates away from a screen.  Applies to the **[Screen](../controls/control-screen.md)** control.
+**[OnHidden](controls/control-screen.md)** – The behavior of an app when the user navigates away from a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
 **[OnPause](controls/control-audio-video.md)** – The behavior of an app when the user pauses the clip that an audio or video control is playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -325,7 +325,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnSelect](../controls/properties-core.md)** – The behavior of an app  when the user taps or clicks a control.  Applies to many controls.
 
-**OnStart** – The behavior of an app when the user opens it or starts to record with a microphone control. Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, **[Screen](../controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**OnStart** – The behavior of an app when the user opens it or starts to record with a microphone control. Applies to **[Audio](controls/control-audio-video.md)**, **[Microphone](controls/control-microphone.md)**, **[Screen](controls/control-screen.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 **[OnStateChange](controls/control-pdf-viewer.md)** – The behavior of an app when the state of the control changes. Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -341,7 +341,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **OnUncheck** – The behavior of an app when the value of a checkbox or a toggle changes to **false**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
-**[OnVisible](../controls/control-screen.md)** – The behavior of an app the user navigates to a screen.  Applies to the **[Screen](../controls/control-screen.md)** control.
+**[OnVisible](controls/control-screen.md)** – The behavior of an app the user navigates to a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
 **[OriginalHeight](controls/control-image.md)** – Original height of an image, enabled with the **[CalculateOriginalDimensions](controls/control-image.md)** property.  Applies to the **[Image](controls/control-image.md)** control.
 

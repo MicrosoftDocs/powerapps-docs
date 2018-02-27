@@ -27,7 +27,7 @@ If you've customized a form for a SharePoint list, you've likely noticed that th
 
 The default generated form consists of the following controls and their corresponding defaults:
 
-* **FormScreen1** - This is the [screen](../controls/control-screen.md) that contains the form.
+* **FormScreen1** - This is the [screen](controls/control-screen.md) that contains the form.
 
 * **SharePointForm1** - This is the [form](working-with-forms.md) that's used to create, show, or edit the list item.
 

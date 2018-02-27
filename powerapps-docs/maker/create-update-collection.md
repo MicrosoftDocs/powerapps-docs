@@ -155,7 +155,7 @@ There are a few sections in this walk-through. When complete, you'll know how to
    
     > [!NOTE]
 > When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
-4. Select the **Screen** tab and set the **[OnVisible](../controls/control-screen.md)** property to the following expression:  
+4. Select the **Screen** tab and set the **[OnVisible](controls/control-screen.md)** property to the following expression:  
    
     ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```
 
