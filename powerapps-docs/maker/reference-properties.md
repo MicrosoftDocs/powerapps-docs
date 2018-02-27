@@ -78,7 +78,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Pen input](controls/control-pen-input.md)** – Draw an image or text, and save it in the app or to a data source.
 
-**[Pie chart](../controls/control-pie-chart.md)** – Show how values relate to each other.
+**[Pie chart](controls/control-pie-chart.md)** – Show how values relate to each other.
 
 **[Power BI tile](../controls/control-power-bi-tile.md)** – Display a Power BI tile inside an app.
 
@@ -209,7 +209,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ErrorKind](controls/control-form-detail.md)** – If an error occurs when **SubmitForm** runs, the kind of error that occurred.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
-**[Explode](../controls/control-pie-chart.md)** – The distance between wedges in a pie chart.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
+**[Explode](controls/control-pie-chart.md)** – The distance between wedges in a pie chart.  Applies to the **[Pie chart](controls/control-pie-chart.md)** control.
 
 ### F
 **[Fill](../controls/properties-color-border.md)** – The background color of a control.  Applies to many controls.
@@ -257,11 +257,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Item](controls/control-form-detail.md)** – The record in the **DataSource** that the user will show or edit.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
-**[ItemBorderColor](../controls/control-pie-chart.md)** – The color of the border around each wedge in a pie chart.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
+**[ItemBorderColor](controls/control-pie-chart.md)** – The color of the border around each wedge in a pie chart.  Applies to the **[Pie chart](controls/control-pie-chart.md)** control.
 
-**[ItemBorderThickness](../controls/control-pie-chart.md)** – The thickness of the border around each wedge in a pie chart.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
+**[ItemBorderThickness](controls/control-pie-chart.md)** – The thickness of the border around each wedge in a pie chart.  Applies to the **[Pie chart](controls/control-pie-chart.md)** control.
 
-**ItemColorSet** – The color of each data point in a chart.  Applies to **[Column chart](controls/control-column-line-chart.md)**, **[Line chart](controls/control-column-line-chart.md)**, and **[Pie chart](../controls/control-pie-chart.md)** controls.
+**ItemColorSet** – The color of each data point in a chart.  Applies to **[Column chart](controls/control-column-line-chart.md)**, **[Line chart](controls/control-column-line-chart.md)**, and **[Pie chart](controls/control-pie-chart.md)** controls.
 
 **[ItemPaddingLeft](controls/control-list-box.md)** – The distance between text in a listbox and its left edge.  Applies to the **[List Box](controls/control-list-box.md)** control.
 
@@ -270,7 +270,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[ItemsGap](controls/control-column-line-chart.md)** – The distance between columns in a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
 ### L
-**[LabelPosition](../controls/control-pie-chart.md)** – The location of labels in a pie chart relative to its wedges.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
+**[LabelPosition](controls/control-pie-chart.md)** – The location of labels in a pie chart relative to its wedges.  Applies to the **[Pie chart](controls/control-pie-chart.md)** control.
 
 **[LastSubmit](controls/control-form-detail.md)** – The last successfully submitted record, including any server generated fields.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
@@ -426,7 +426,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to **[Audio](controls/control-audio-video.md)**, **[PDF viewer](controls/control-pdf-viewer.md)**, **[Pen input](controls/control-pen-input.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**[ShowLabels](../controls/control-pie-chart.md)** – Whether a pie chart shows the value that's associated with each of its wedges.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
+**[ShowLabels](controls/control-pie-chart.md)** – Whether a pie chart shows the value that's associated with each of its wedges.  Applies to the **[Pie chart](controls/control-pie-chart.md)** control.
 
 **[ShowNavigation](controls/control-gallery.md)** – Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
