@@ -22,7 +22,7 @@ ms.author: mblythe
 This article shows you how to build a basic app that uses the [Microsoft Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) to analyze text. We'll show you how to set up the Text Analytics API, and connect to it with the [Text Analytics connector](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Then we'll show you how to create an app that calls the API.
 
 > [!NOTE]
-> If you are new to building apps in PowerApps, we recommend reading [Create an app from scratch](get-started-create-from-blank.md) before diving into this article.
+> If you are new to building apps in PowerApps, we recommend reading [Create an app from scratch](../get-started-create-from-blank.md) before diving into this article.
 
 ## Introduction to Microsoft Cognitive Services
 Microsoft Cognitive Services are a set of APIs, SDKs, and services available to make your applications more intelligent, engaging, and discoverable. These services enable you to easily add intelligent features – such as emotion and video detection; facial, speech and vision recognition; and speech and language understanding – into your applications.
@@ -71,7 +71,7 @@ The API is available as a free preview, and it is associated with an Azure subsc
 Now that you have the Text Analytics API up and running, you connect to it from PowerApps, and build an app that calls the API. This is a single screen app that provides functionality similar to the demo on the Text Analytics API page. Let's get started on building this!
 
 ### Create the app and add a connection
-First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in PowerApps](maker/add-manage-connections.md).
+First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](../get-started-create-from-blank.md) and [Manage your connections in PowerApps](add-manage-connections.md).
 
 1. In [web.powerapps.com](https://web.powerapps.com), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
 
@@ -123,7 +123,7 @@ OK, you have a nice-looking app, but it doesn't do anything yet. You'll fix that
 
 1. The app makes specific API calls based on the check boxes selected in the app. When you click or tap **Analyze text**, the app makes 1, 2, or 3 API calls.
 
-2. The app stores data that the API returns in three different [collections](working-with-variables.md#create-a-collection): **languageCollect**, **sentimentCollect**, and **phrasesCollect**.
+2. The app stores data that the API returns in three different [collections](../working-with-variables.md#create-a-collection): **languageCollect**, **sentimentCollect**, and **phrasesCollect**.
 
 3. The app updates the **Text** property for two of the labels, and the **Items** property for the gallery, based on what's in the three collections.
 
