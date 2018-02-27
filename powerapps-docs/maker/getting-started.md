@@ -46,7 +46,7 @@ For more information, check out the following topics:
 ## Customize an app
 If the default generated app doesn't meet your needs, you can customize it. For example, you might want to change the appearance or behavior of certain controls, or perhaps add an image or video. To learn more about customization, in the navigation pane on the left, click or tap **Customize an app**. You'll see a list of topics that pertain to the different things you can customize. Click or tap any of the topics to get step-by-step instructions.
 
-For ideas on how to improve your app further, you can open a sample app to get a sense of what you can do with some creativity and a bit of experience. For more information, see [Use a sample app](../open-and-run-a-sample-app.md).
+For ideas on how to improve your app further, you can open a sample app to get a sense of what you can do with some creativity and a bit of experience. For more information, see [Use a sample app](open-and-run-a-sample-app.md).
 
 ![Sample apps](./media/getting-started/sample-apps.png)
 
