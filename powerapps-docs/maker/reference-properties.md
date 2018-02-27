@@ -60,7 +60,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Gallery](controls/control-gallery.md)** – Show a list of records that can contain multiple types of data.
 
-**[HTML text](../controls/control-html-text.md)** – Convert HTML tags automatically.
+**[HTML text](controls/control-html-text.md)** – Convert HTML tags automatically.
 
 **[Icon](../controls/control-shapes-icons.md)** – Add graphic appeal and visual interest.
 
@@ -244,7 +244,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[HoverFill](../controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.  Applies to many controls.
 
-**[HTMLText](../controls/control-html-text.md)** – Text that appears in an HTML text control and that may contain HTML tags.  Applies to the **[HTML text](../controls/control-html-text.md)** control.
+**[HTMLText](controls/control-html-text.md)** – Text that appears in an HTML text control and that may contain HTML tags.  Applies to the **[HTML text](controls/control-html-text.md)** control.
 
 ### I
 **[Image](../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](../controls/control-image.md)**, **[Microphone](../controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
