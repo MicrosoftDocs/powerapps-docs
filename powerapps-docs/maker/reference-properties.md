@@ -98,7 +98,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Timer](controls/control-timer.md)** – Configure your app to respond after a certain amount of time passes.
 
-**[Toggle](../controls/control-toggle.md)** – Drag a handle to specify **true** or **false**.
+**[Toggle](controls/control-toggle.md)** – Drag a handle to specify **true** or **false**.
 
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
 
@@ -311,7 +311,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### O
 **[OnChange](../controls/properties-core.md)** – The behavior of an app when the user changes the value of a control (for example, by adjusting a slider).  Applies to many controls.
 
-**OnCheck** – The behavior of an app when the value of a checkbox or a toggle changes to **true**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**OnCheck** – The behavior of an app when the value of a checkbox or a toggle changes to **true**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
 **[OnEnd](controls/control-audio-video.md)** – The behavior of an app when an audio or video clip finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -339,7 +339,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnTimerStart](controls/control-timer.md)** – The behavior of an app when a timer starts to run.  Applies to the **[Timer](controls/control-timer.md)** control.
 
-**OnUncheck** – The behavior of an app when the value of a checkbox or a toggle changes to **false**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**OnUncheck** – The behavior of an app when the value of a checkbox or a toggle changes to **false**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
 **[OnVisible](controls/control-screen.md)** – The behavior of an app the user navigates to a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
@@ -393,9 +393,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[RadiusTopRight](../controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.  Applies to many controls.
 
-**RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
-**RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
 **[RatingFill](controls/control-rating.md)** – The color of the stars in a rating control.  Applies to the **[Rating](controls/control-rating.md)** control.
 
@@ -479,11 +479,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### V
 **Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
-**[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](controls/control-radio.md)**, **[Slider](controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
+**[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](controls/control-radio.md)**, **[Slider](controls/control-slider.md)**, and **[Toggle](controls/control-toggle.md)** controls.
 
-**ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
-**ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](controls/control-toggle.md)** controls.
 
 **[VerticalAlign](../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.  Applies to many controls.
 
