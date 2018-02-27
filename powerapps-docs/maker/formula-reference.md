@@ -128,7 +128,7 @@ Other elements include:
 **[DropColumns](../functions/function-table-shaping.md)** – Returns a table with one or more columns removed.
 
 ## E
-**[EditForm](../functions/function-form.md)** – Resets a form control for editing of an item.
+**[EditForm](functions/function-form.md)** – Resets a form control for editing of an item.
 
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
 
@@ -213,7 +213,7 @@ Other elements include:
 ## N
 **[Navigate](../functions/function-navigate.md)** – Changes which screen is displayed.
 
-**[NewForm](../functions/function-form.md)** – Resets a form control for creation of an item.
+**[NewForm](functions/function-form.md)** – Resets a form control for creation of an item.
 
 **[Not](../functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the [**!** operator](../functions/operators.md).
 
@@ -254,7 +254,7 @@ Other elements include:
 
 **[Reset](../functions/function-reset.md)** – Resets an input control to its default value, discarding any user changes.
 
-**[ResetForm](../functions/function-form.md)** – Resets a form control for editing of an existing item.
+**[ResetForm](functions/function-form.md)** – Resets a form control for editing of an existing item.
 
 **[Revert](../functions/function-revert.md)** – Reloads and clears errors for the records of a data source.
 
@@ -297,7 +297,7 @@ Other elements include:
 
 **[Substitute](../functions/function-replace-substitute.md)** – Replaces part of a string with another string, by matching strings.
 
-**[SubmitForm](../functions/function-form.md)** – Saves the item in a form control to the data source.
+**[SubmitForm](functions/function-form.md)** – Saves the item in a form control to the data source.
 
 **[Sum](functions/function-aggregates.md)** – Calculates the sum of a table expression or a set of arguments.  
 
@@ -344,7 +344,7 @@ Other elements include:
 
 **[VarP](functions/function-aggregates.md)** – Returns the variance of its arguments.  
 
-**[ViewForm](../functions/function-form.md)** – Resets a form control for viewing of an existing item.
+**[ViewForm](functions/function-form.md)** – Resets a form control for viewing of an existing item.
 
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.

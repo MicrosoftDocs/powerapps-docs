@@ -67,7 +67,7 @@ Example: If you set the **SelectableFields** property to **{SalesOrderId : true,
 **Unsaved** – Determines whether a record that a user is editing has unsaved changes.
 
 ## Related functions
-You can use these  shared functions with either the **Entity form** control or the [Edit form control](../functions/function-form.md). These functions work with the **Entity form** control only when its **Pattern** property is set to **FormPattern.Details**.
+You can use these  shared functions with either the **Entity form** control or the [Edit form control](functions/function-form.md). These functions work with the **Entity form** control only when its **Pattern** property is set to **FormPattern.Details**.
 
 **ViewForm** – Sets the **Mode** property of an **Entity form** control to **FormMode.View**.
 

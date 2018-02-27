@@ -227,7 +227,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     **SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
 
-    When the user clicks or taps the button, the **[SubmitForm](../functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.
+    When the user clicks or taps the button, the **[SubmitForm](functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.
 
 14. At the bottom of the screen, add another button, set its **[Text](controls/properties-core.md)** property to **"Remove"**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 

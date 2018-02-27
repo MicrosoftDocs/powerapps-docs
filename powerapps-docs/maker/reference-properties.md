@@ -205,7 +205,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 * **[Add picture](controls/control-add-picture.md)** control - If there is a problem uploading an image, this property will contain an appropriate error string.
 * **[Card](controls/control-card.md)** control – The user friendly error message to display for this field when validation fails.
-* **[Edit form](controls/control-form-detail.md)** control – A user friendly error message to display for this form when the **[SubmitForm](../functions/function-form.md)** function fails.
+* **[Edit form](controls/control-form-detail.md)** control – A user friendly error message to display for this form when the **[SubmitForm](functions/function-form.md)** function fails.
 
 **[ErrorKind](controls/control-form-detail.md)** – If an error occurs when **SubmitForm** runs, the kind of error that occurred.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 

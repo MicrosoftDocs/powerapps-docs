@@ -123,9 +123,9 @@ This screen features these key formulas:
 
 As in the **Details** screen, a form control, named **EditForm1**, dominates the **Edit and Create** screen. In addition, the **[Item](controls/control-form-detail.md)** property of **EditForm1** is set to **BrowseGallery1.Selected**, so the form displays the record that the user selected in **BrowseScreen1**. While the **Details** screen shows each field as read-only, the user can update the value of one or more fields by using the controls in **EditForm1**. It also uses the **[DataSource](controls/control-form-detail.md)** property to access metadata about this data source, such as the user-friendly display name for each field and the location where changes should be saved.
 
-If the user selects the "X" icon to cancel an update, the **[ResetForm](../functions/function-form.md)** function discards any unsaved changes, and the **[Back](../functions/function-navigate.md)** function opens the **Details** screen. Both the **Details** screen and the **Edit and Create** screen show the same record until the user selects a different one on **BrowseScreen1**. The fields in that record remain set to the values that were most recently saved, not any changes that the user made and then abandoned.
+If the user selects the "X" icon to cancel an update, the **[ResetForm](functions/function-form.md)** function discards any unsaved changes, and the **[Back](../functions/function-navigate.md)** function opens the **Details** screen. Both the **Details** screen and the **Edit and Create** screen show the same record until the user selects a different one on **BrowseScreen1**. The fields in that record remain set to the values that were most recently saved, not any changes that the user made and then abandoned.
 
-If the user changes one or more values in the form and then selects the "checkmark" icon, the **[SubmitForm](../functions/function-form.md)** function sends the user's changes to the data source.
+If the user changes one or more values in the form and then selects the "checkmark" icon, the **[SubmitForm](functions/function-form.md)** function sends the user's changes to the data source.
 
 * If the changes are successfully saved, the form's **[OnSuccess](controls/control-form-detail.md)** formula runs, and the **Back()** function opens the detail screen to show the updated record.
 * If the changes aren't successfully saved, the form's **[OnFailure](controls/control-form-detail.md)** formula runs, but it doesn't change anything because it's *blank*. The **Edit and Create** screen remains open so that the user can either cancel the changes or fix the error. **LblFormError1** shows a user-friendly error message, to which the form's **Error** property is set.
@@ -247,7 +247,7 @@ You can now select the fields to display on your screen. You can also select whi
 
 These two properties are the same as the properties on the **[Display form](controls/control-form-detail.md)** control.  And with these alone, we can display the details of a record.  
 
-The **[Edit form](controls/control-form-detail.md)** control goes further by offering the **[SubmitForm](../functions/function-form.md)** function to write back changes to the data source. You use this with a button or image control to save a user's changes.
+The **[Edit form](controls/control-form-detail.md)** control goes further by offering the **[SubmitForm](functions/function-form.md)** function to write back changes to the data source. You use this with a button or image control to save a user's changes.
 
 * Add a **[Button](controls/control-button.md)** control, set its **[Text](controls/properties-core.md)** property to show **Save**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
   **SubmitForm( Form1 )**
@@ -275,11 +275,11 @@ You've built a basic app with three screens for viewing and entering data.  To t
 ![Try out the ice cream app](./media/working-with-forms/try-icecream.png)
 
 ## Create a record
-The user interacts with the same **Edit** form to both update and create records. When the user wants to create a record, the **[NewForm](../functions/function-form.md)** function switches the form to **New** mode.
+The user interacts with the same **Edit** form to both update and create records. When the user wants to create a record, the **[NewForm](functions/function-form.md)** function switches the form to **New** mode.
 
 When the form is in **New** mode, the value of each field is set to the defaults of the data source. The record that's provided to the form's **[Item](controls/control-form-detail.md)** property is ignored.  
 
-When the user is ready to save the new record, **[SubmitForm](../functions/function-form.md)** runs. After the form is successfully submitted, the form is switched back to **EditMode**.  
+When the user is ready to save the new record, **[SubmitForm](functions/function-form.md)** runs. After the form is successfully submitted, the form is switched back to **EditMode**.  
 
 On the first screen, you'll add a **New** button:
 
@@ -291,7 +291,7 @@ On the first screen, you'll add a **New** button:
 
 ![Display form with added "Edit" button](./media/working-with-forms/gallery-icecream-new.png)
 
-When the Edit and Create screen opens, the form is empty, ready for the user to add an item. When the user selects the **Save** button, the **[SubmitForm](../functions/function-form.md)** function ensures that a record is created instead of being updated. If the user selects the **Cancel** button, the **[ResetForm](../functions/function-form.md)** function switches the form back to **Edit** mode, and the **[Back](../functions/function-navigate.md)** function opens the screen for browsing the gallery.
+When the Edit and Create screen opens, the form is empty, ready for the user to add an item. When the user selects the **Save** button, the **[SubmitForm](functions/function-form.md)** function ensures that a record is created instead of being updated. If the user selects the **Cancel** button, the **[ResetForm](functions/function-form.md)** function switches the form back to **Edit** mode, and the **[Back](../functions/function-navigate.md)** function opens the screen for browsing the gallery.
 
 ## Delete a record
 1. On the **Display** screen, add a button, and set its **[Text](controls/properties-core.md)** property to show **Delete**..
@@ -303,7 +303,7 @@ When the Edit and Create screen opens, the form is empty, ready for the user to 
 ## Handling errors
 In this app, an error occurs when the value of a field is not valid, a required field is blank, you're disconnected from the network, or any number of other problems pop up.  
 
-If **[SubmitForm](../functions/function-form.md)** fails for any reason, the **Error** property of the **[Edit form](controls/control-form-detail.md)** control contains an error message to show the user. With this information, the user should be able to correct the issue and resubmit the change, or they can cancel the update.
+If **[SubmitForm](functions/function-form.md)** fails for any reason, the **Error** property of the **[Edit form](controls/control-form-detail.md)** control contains an error message to show the user. With this information, the user should be able to correct the issue and resubmit the change, or they can cancel the update.
 
 1. On the Edit and Create screen, add a **[Label](controls/control-text-box.md)** control, and move it just below the **Save** button. Any error will be easy to see after the user selects this control to save changes.
 

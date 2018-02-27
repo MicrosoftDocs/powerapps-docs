@@ -101,7 +101,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
 6. Change the name of a product, and then click or tap the **Save** button that you created.
 
-    The **[SubmitForm](../functions/function-form.md)** function saves your changes to the data source with which you configured the form.
+    The **[SubmitForm](functions/function-form.md)** function saves your changes to the data source with which you configured the form.
 
 7. (optional) Select the close icon to close Preview (or press Esc).
 

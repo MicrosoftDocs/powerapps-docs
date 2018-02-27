@@ -122,7 +122,7 @@ Each control within the card should reference **Parent.Default** to get at the f
 By default, **DefaultValue** and **[Required](controls/control-card.md)** properties are taken from the data source's metadata based on the **[DataField](controls/control-card.md)** property. You can override these formulas with your own logic, integrating the data source's metadata by using the **[DataSourceInfo](functions/function-datasourceinfo.md)** function.
 
 ### Information flowing out
-After the user modifies a record by using controls in the cards, the **[SubmitForm](../functions/function-form.md)** function saves those changes to the data source. When that function runs, the form control reads the values of each card's **[DataField](controls/control-card.md)** property to know what field to change.  
+After the user modifies a record by using controls in the cards, the **[SubmitForm](functions/function-form.md)** function saves those changes to the data source. When that function runs, the form control reads the values of each card's **[DataField](controls/control-card.md)** property to know what field to change.  
 
 The form control also reads the value of each card's **[Update](controls/control-card.md)** property. This value will be stored in the data source for this field. This is the place to apply another transform, perhaps to reverse the transform that was applied in the card's **[Default](controls/properties-core.md)** formula.
 
@@ -162,5 +162,5 @@ To pull information out of these controls and push it back into the data source,
 | Control name | Formula | Description |
 | --- | --- | --- |
 | **DataCard.DataField** |**"ApproverEmail"** |The name of the field that the user can display and edit in this card. |
-| **DataCard.Update** |**InputText.Text** |The value to validate and push back into the data source when **[SubmitForm](../functions/function-form.md)** runs. |
+| **DataCard.Update** |**InputText.Text** |The value to validate and push back into the data source when **[SubmitForm](functions/function-form.md)** runs. |
 

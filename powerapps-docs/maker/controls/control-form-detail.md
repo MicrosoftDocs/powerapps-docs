@@ -36,21 +36,21 @@ Each form control contains one or more **[Card](control-card.md)** controls. By 
 ### Create a record
 When an **Edit form** control is in **Edit** mode, the user can update the record that's specified in the form's **Item** property. If inspected, the **Mode** property returns **Edit**.
 
-When an **Edit form** control is in **New** mode, however, the **Item** property is ignored. The form doesn't show an existing record; instead, the values in each field match the default values of the data source with which you configured the form. The **[NewForm](../../functions/function-form.md)** function causes a form to switch to this mode.
+When an **Edit form** control is in **New** mode, however, the **Item** property is ignored. The form doesn't show an existing record; instead, the values in each field match the default values of the data source with which you configured the form. The **[NewForm](../functions/function-form.md)** function causes a form to switch to this mode.
 
-For example, you can set the **[Text](properties-core.md)** property of a button to show **New** and its **[OnSelect](properties-core.md)** property to a formula that includes the **[NewForm](../../functions/function-form.md)** function. If the user selects that button, the form switches to **New** mode so that the user can create a record starting with known values.
+For example, you can set the **[Text](properties-core.md)** property of a button to show **New** and its **[OnSelect](properties-core.md)** property to a formula that includes the **[NewForm](../functions/function-form.md)** function. If the user selects that button, the form switches to **New** mode so that the user can create a record starting with known values.
 
-A form switches back to **Edit** mode if either the **[ResetForm](../../functions/function-form.md)** function runs or the **[SubmitForm](../../functions/function-form.md)** function runs successfully.
+A form switches back to **Edit** mode if either the **[ResetForm](../functions/function-form.md)** function runs or the **[SubmitForm](../functions/function-form.md)** function runs successfully.
 
-* You can set the **[Text](properties-core.md)** property of a button to show **Cancel** and its **[OnSelect](properties-core.md)** property to a formula that includes the **[ResetForm](../../functions/function-form.md)** function. If the user selects that button, any changes in progress are discarded, and the values in the form, once again, match the default values of the data source.
-* You can set the **[Text](properties-core.md)** property of a button to show **Save changes** and its **[OnSelect](properties-core.md)** property to a formula that includes the **[SubmitForm](../../functions/function-form.md)** function. If the user selects that button and the data source is updated, the values in the form are reset to the default values of the data source.
+* You can set the **[Text](properties-core.md)** property of a button to show **Cancel** and its **[OnSelect](properties-core.md)** property to a formula that includes the **[ResetForm](../functions/function-form.md)** function. If the user selects that button, any changes in progress are discarded, and the values in the form, once again, match the default values of the data source.
+* You can set the **[Text](properties-core.md)** property of a button to show **Save changes** and its **[OnSelect](properties-core.md)** property to a formula that includes the **[SubmitForm](../functions/function-form.md)** function. If the user selects that button and the data source is updated, the values in the form are reset to the default values of the data source.
 
 ### Save changes
-If you create a **Save changes** button as the previous section describes, the user can create or update a record and then select that button to save those changes to the data source. You could, instead, configure an **[Image](control-image.md)** control or some other control to perform the same task, as long as you configure that control with the **[SubmitForm](../../functions/function-form.md)** function. In any case, the **Error**, **ErrorKind**, **OnSuccess**, and **OnFailure** properties provide feedback on the outcome.
+If you create a **Save changes** button as the previous section describes, the user can create or update a record and then select that button to save those changes to the data source. You could, instead, configure an **[Image](control-image.md)** control or some other control to perform the same task, as long as you configure that control with the **[SubmitForm](../functions/function-form.md)** function. In any case, the **Error**, **ErrorKind**, **OnSuccess**, and **OnFailure** properties provide feedback on the outcome.
 
-When the **[SubmitForm](../../functions/function-form.md)** function runs, it first validates the data that user wants to submit. If a required field doesn't contain a value or another value doesn't conform to some other constraint, the **ErrorKind** properties are set, and the **OnFailure** formula runs. You can configure the **Save changes** button or other control so that the user can select it only if the data is valid (that is, if the **Valid** property of the form is **true**). Note that the user must not only correct the problem but also select the **Save changes** button again (or discard the changes by selecting a **Cancel** button, as described earlier) to reset the **Error** and **ErrorKind** properties.
+When the **[SubmitForm](../functions/function-form.md)** function runs, it first validates the data that user wants to submit. If a required field doesn't contain a value or another value doesn't conform to some other constraint, the **ErrorKind** properties are set, and the **OnFailure** formula runs. You can configure the **Save changes** button or other control so that the user can select it only if the data is valid (that is, if the **Valid** property of the form is **true**). Note that the user must not only correct the problem but also select the **Save changes** button again (or discard the changes by selecting a **Cancel** button, as described earlier) to reset the **Error** and **ErrorKind** properties.
 
-If the data passes validation, **[SubmitForm](../../functions/function-form.md)** sends it to the data source, which can take some time depending on network latency.
+If the data passes validation, **[SubmitForm](../functions/function-form.md)** sends it to the data source, which can take some time depending on network latency.
 
 * If the submission succeeds, the **Error** property is cleared, the **ErrorKind** property is set to **ErrorKind.None**, and the **OnSuccess** formula runs. If the user created a record (that is, if the form was previously in **New** mode), the form is switched to **Edit** mode so that the user can edit the newly created record or a different one.
 * If the submission fails, the **Error** property contains a user-friendly error message from the data source, explaining the problem. The **ErrorKind** property is set appropriately, depending on the issue, and the **OnFailure** formula runs.
@@ -58,7 +58,7 @@ If the data passes validation, **[SubmitForm](../../functions/function-form.md)*
 Some data sources can detect when two people try to update the same record at the same time  In this case, **ErrorKind** is set to **ErrorKind.Conflict**, and the remedy is to refresh the data source with the other user's changes and reapply the change made by this user.
 
 > [!TIP]
-> If you offer a **Cancel** button on your form so that the user can abandon changes in progress, add the **[ResetForm](../../functions/function-form.md)** function to the button's **[OnSelect](properties-core.md)** property even that property also contains a **[Navigate](../../functions/function-navigate.md)** function to change screens. Otherwise, the form will retain the user's changes.
+> If you offer a **Cancel** button on your form so that the user can abandon changes in progress, add the **[ResetForm](../functions/function-form.md)** function to the button's **[OnSelect](properties-core.md)** property even that property also contains a **[Navigate](../../functions/function-navigate.md)** function to change screens. Otherwise, the form will retain the user's changes.
 
 ### Layout
 By default, cards are placed in a single column for phone apps and three columns for tablet apps. You can specify how many columns a form has and whether cards should snap to them as you configure the form. These settings aren't exposed as properties because they're used only to set the **X**, **Y**, and **Width** properties of the cards.
@@ -82,10 +82,10 @@ Derived from the **Mode** property based and cannot be set independently:
 | **FormMode.New** |**DisplayMode.Edit** |Data cards and controls are editable, ready to accept a new record. |
 | **FormMode.View** |**DisplayMode.View** |Data cards and controls are not editable and optimized for viewing. |
 
-**Error** – A user friendly error message to display for this form when the **[SubmitForm](../../functions/function-form.md)** function fails.
+**Error** – A user friendly error message to display for this form when the **[SubmitForm](../functions/function-form.md)** function fails.
 
 * This property applies only to the **Edit form** control.
-* This property changes only when the **[SubmitForm](../../functions/function-form.md)**, **EditForm**, or **[ResetForm](../../functions/function-form.md)** function runs.
+* This property changes only when the **[SubmitForm](../functions/function-form.md)**, **EditForm**, or **[ResetForm](../functions/function-form.md)** function runs.
 * If no error occurs, this property is *blank*, and **ErrorKind** is set to **ErrorKind.None**.
 * When possible, the error message returned will be in the user's language. Some error messages come from the data source directly and may not be in the user's language.
 
@@ -113,15 +113,15 @@ Derived from the **Mode** property based and cannot be set independently:
 
 | Mode | Description |
 | --- | --- |
-| **FormMode.Edit** |The user can edit a record by using the form. The values in the form's cards are pre-populated with the existing record, for the user to change. If the **[SubmitForm](../../functions/function-form.md)** function runs successfully, an existing record is modified. |
-| **FormMode.New** |The user can create a record by using the form. The values in the form's controls are pre-popoulated with the defaults for a record of the data source. If the **[SubmitForm](../../functions/function-form.md)** function runs successfully, an record is created. |
+| **FormMode.Edit** |The user can edit a record by using the form. The values in the form's cards are pre-populated with the existing record, for the user to change. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an existing record is modified. |
+| **FormMode.New** |The user can create a record by using the form. The values in the form's controls are pre-popoulated with the defaults for a record of the data source. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an record is created. |
 | **FormMode.View** |The user can view a record by using the form. The values in the form's controls are pre-popoulated with the defaults for a record of the data source. |
 
 The form switches from **New** mode to **Edit** mode when any of these changes occurs:
 
 * The form is successfully submitted, and a record is created. If the gallery is set to automatically move selection to this new record, the form will be in **Edit** mode for the created record so that the user can make additional changes.
-* The **[EditForm](../../functions/function-form.md)** function runs.
-* The **[ResetForm](../../functions/function-form.md)** function runs. For example, the user might select a **Cancel** button that's been configured with this function.
+* The **[EditForm](../functions/function-form.md)** function runs.
+* The **[ResetForm](../functions/function-form.md)** function runs. For example, the user might select a **Cancel** button that's been configured with this function.
 
 **OnFailure** – How an app responds when a data operation has been unsuccessful.
 
@@ -143,7 +143,7 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 **Updates** – The values to write back to the data source for a record loaded in a form control.  
 
 * This property applies only to the **Edit form** control.
-* Use this property to extract the field values from the cards within the control.  You can then use these values to manually update the data source with a **[Patch](../../functions/function-patch.md)** function call or another method exposed by a connection.  You do not need to use this property if you are using the **[SubmitForm](../../functions/function-form.md)** function.
+* Use this property to extract the field values from the cards within the control.  You can then use these values to manually update the data source with a **[Patch](../../functions/function-patch.md)** function call or another method exposed by a connection.  You do not need to use this property if you are using the **[SubmitForm](../functions/function-form.md)** function.
 * This property returns a record of values.  For example, if the form control contains card controls for **Name** and **Quantity** fields, and the values of the **[Update](control-card.md)** properties for those cards return "Widget" and 10 respectively, then the **Updates** property for the form control would return **{ Name: "Widget", Quantity: 10 }**.
 
 **Valid** – Whether a **[Card](control-card.md)** or **Edit form** control contains valid entries, ready to be submitted to the data source.
