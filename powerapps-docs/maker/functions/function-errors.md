@@ -19,17 +19,17 @@ ms.author: gregli
 
 ---
 # Errors function in PowerApps
-Provides error information for previous changes to a [data source](../maker/working-with-data-sources.md).
+Provides error information for previous changes to a [data source](../working-with-data-sources.md).
 
 ## Overview
-Errors can happen when a [record](../maker/working-with-tables.md#records) of a data source is changed.  Many causes are possible, including network outages, inadequate permissions, and edit conflicts.  
+Errors can happen when a [record](../working-with-tables.md#records) of a data source is changed.  Many causes are possible, including network outages, inadequate permissions, and edit conflicts.  
 
-The **[Patch](function-patch.md)** function and other data functions don't directly return errors. Instead they return the result of their operation. After a data function executes, you can use the **Errors** function to obtain the details of any errors.  You can check for the existence of errors with the **[IsEmpty]** function in the formula **IsEmpty( Errors ( ... ) )**.
+The **[Patch](../../functions/function-patch.md)** function and other data functions don't directly return errors. Instead they return the result of their operation. After a data function executes, you can use the **Errors** function to obtain the details of any errors.  You can check for the existence of errors with the **[IsEmpty]** function in the formula **IsEmpty( Errors ( ... ) )**.
 
-You can avoid some errors before they happen by using the **[Validate](function-validate.md)** and **[DataSourceInfo](../maker/functions/function-datasourceinfo.md)** functions.  See [working with data sources](../maker/working-with-data-sources.md) for more suggestions on how to work with and avoid errors.
+You can avoid some errors before they happen by using the **[Validate](../../functions/function-validate.md)** and **[DataSourceInfo](function-datasourceinfo.md)** functions.  See [working with data sources](../working-with-data-sources.md) for more suggestions on how to work with and avoid errors.
 
 ## Description
-The **Errors** function returns a [table](../maker/working-with-tables.md) of errors that contains the following [columns](../maker/working-with-tables.md#columns):
+The **Errors** function returns a [table](../working-with-tables.md) of errors that contains the following [columns](../working-with-tables.md#columns):
 
 * **Record**.  The record in the data source that had the error.  If the error occurred during the creation of a record, this column will be *blank*.
 * **Column**.  The column that caused the error, if the error can be attributed to a single column. If not, this will be *blank*.
@@ -38,7 +38,7 @@ The **Errors** function returns a [table](../maker/working-with-tables.md) of er
 
 | ErrorKind | Description |
 | --- | --- |
-| ErrorKind.Conflict |Another change was made to the same record, resulting in a change conflict.  Use the **[Refresh](function-refresh.md)** function to reload the record and try the change again. |
+| ErrorKind.Conflict |Another change was made to the same record, resulting in a change conflict.  Use the **[Refresh](../../functions/function-refresh.md)** function to reload the record and try the change again. |
 | ErrorKind.ConstraintViolation |One or more constraints have been violated. |
 | ErrorKind.CreatePermission |An attempt was made to create a record, and the current user doesn't have permission to create records. |
 | ErrorKind.DeletePermission |An attempt was made to delete a record, and the current user doesn't have permission to delete records. |
@@ -54,9 +54,9 @@ The **Errors** function returns a [table](../maker/working-with-tables.md) of er
 
 Errors can be returned for the entire data source, or for only a selected row by providing the *Record* argument to the function.  
 
-**[Patch](function-patch.md)** or another data function may return a *blank* value if, for example, a record couldn't be created. You can pass *blank* to **Errors**, and it will return appropriate error information in these cases.  Subsequent use of data functions on the same data source will clear this error information.
+**[Patch](../../functions/function-patch.md)** or another data function may return a *blank* value if, for example, a record couldn't be created. You can pass *blank* to **Errors**, and it will return appropriate error information in these cases.  Subsequent use of data functions on the same data source will clear this error information.
 
-If there are no errors, the table that **Errors** returns will be [empty](function-isblank-isempty.md) and can be tested with the **[IsEmpty](function-isblank-isempty.md)** function.
+If there are no errors, the table that **Errors** returns will be [empty](../../functions/function-isblank-isempty.md) and can be tested with the **[IsEmpty](../../functions/function-isblank-isempty.md)** function.
 
 ## Syntax
 **Errors**( *DataSource* [, *Record* ] )
@@ -70,17 +70,17 @@ For this example, we'll be working with the **IceCream** data source:
 
 ![](media/function-errors/icecream.png)
 
-Through the app, a user loads the Chocolate record into a data-entry form and then changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](../maker/working-with-variables.md#create-a-context-variable) **EditRecord**:
+Through the app, a user loads the Chocolate record into a data-entry form and then changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](../working-with-variables.md#create-a-context-variable) **EditRecord**:
 
 * **UpdateContext( { EditRecord: First( Filter( IceCream, Flavor = "Chocolate" ) ) } )**
 
-To make this change in the data source, the **[Patch](function-patch.md)** function is used:
+To make this change in the data source, the **[Patch](../../functions/function-patch.md)** function is used:
 
 * **Patch( IceCream, EditRecord, Gallery.Updates )**
 
 where **Gallery.Updates** evaluates to **{ Quantity: 90 }**, since only the **Quantity** property has been modified.
 
-Unfortunately, just before the **[Patch](function-patch.md)** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
+Unfortunately, just before the **[Patch](../../functions/function-patch.md)** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
 
 * **IsEmpty( Errors( IceCream, EditRecord ) )**
 
@@ -92,13 +92,13 @@ which returns **false**, because the **Errors** function returned the following 
 
 You can place a label on the form to show this error to the user.
 
-* To show the error, set the label's **[Text](../maker/controls/properties-core.md)** property to this formula:<br>
+* To show the error, set the label's **[Text](../controls/properties-core.md)** property to this formula:<br>
   **Label.Text = First(Errors( IceCream, EditRecord )).Message**
 
 You can also add a **Reload** button on the form, so that the user can efficiently resolve the conflict.
 
-* To show the button only when a conflict has occurred, set the button's **[Visible](../maker/controls/properties-core.md)** property to this formula:<br>
+* To show the button only when a conflict has occurred, set the button's **[Visible](../controls/properties-core.md)** property to this formula:<br>
     **!IsEmpty( Lookup( Errors( IceCream, EditRecord ), Error = ErrorKind.Conflict ) )**
-* To revert the change which the user selects the button, set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>
+* To revert the change which the user selects the button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
     **ReloadButton.OnSelect = Revert( IceCream, EditRecord )**
 

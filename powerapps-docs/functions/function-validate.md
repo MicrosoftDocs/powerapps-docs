@@ -33,7 +33,7 @@ Data sources can provide information on what constitutes valid values within a r
 
 The **Validate** function uses this information to determine whether a value is valid and to return an appropriate error message if not. You can use the **[DataSourceInfo](../maker/functions/function-datasourceinfo.md)** function to view the same information that **Validate** uses.
 
-Data sources vary in how much validation information they provide, including not providing any at all. **Validate** can only verify values based on this information. Even if  **Validate** doesn't find a problem, applying the data change may still fail. You can use the **[Errors](function-errors.md)** function to obtain information about the failure.
+Data sources vary in how much validation information they provide, including not providing any at all. **Validate** can only verify values based on this information. Even if  **Validate** doesn't find a problem, applying the data change may still fail. You can use the **[Errors](../maker/functions/function-errors.md)** function to obtain information about the failure.
 
 If **Validate** finds a problem, the function returns an error message that you can show to the user of the app. If all values are valid, **Validate** returns [blank](function-isblank-isempty.md). When you work with a [collection](../maker/working-with-data-sources.md#collections) that has no validation information, values are always valid.
 

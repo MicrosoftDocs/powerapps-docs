@@ -49,7 +49,7 @@ Then specify one or more change records, each of which contains new property val
 
 The return value of **Patch** is the record that you modified or created.  If you created a record, the return value may include properties that the data source generated automatically.
 
-When you update a data source, one or more issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine issues, as [Working with Data Sources](../maker/working-with-data-sources.md) describes.
+When you update a data source, one or more issues may arise. Use the **[Errors](../maker/functions/function-errors.md)** function to identify and examine issues, as [Working with Data Sources](../maker/working-with-data-sources.md) describes.
 
 Related functions include the **[Update](function-update-updateif.md)** function, which you can use to replace an entire record, and the **[Collect](../maker/functions/function-clear-collect-clearcollect.md)** function, which you can use to create a record.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
 

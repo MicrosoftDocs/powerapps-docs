@@ -92,7 +92,7 @@ Derived from the **Mode** property based and cannot be set independently:
 **ErrorKind** – If an error occurs when **SubmitForm** runs, the kind of error that occurred.
 
 * Applies only to an **Edit form** control.
-* This property has the same enumeration as the **[Errors](../../functions/function-errors.md)** function. An **Edit form** control can return these values:
+* This property has the same enumeration as the **[Errors](../functions/function-errors.md)** function. An **Edit form** control can return these values:
 
 | ErrorKind | Description |
 | --- | --- |

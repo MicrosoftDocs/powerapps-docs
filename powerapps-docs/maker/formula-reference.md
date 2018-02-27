@@ -134,7 +134,7 @@ Other elements include:
 
 **[EndsWith](../functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
-**[Errors](../functions/function-errors.md)** – Provides error information for previous changes to a data source.
+**[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
 **[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 

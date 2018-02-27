@@ -47,7 +47,7 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 
 The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank*.  Use this function to replace a *blank* value with a different value but leave non-*blank* values unchanged.  If all of the arguments are *blank*, then the function returns *blank*.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  **Coalesce( value1, value2 )** is the more concise equivalent of **If( IsBlank( value1 ) value1, value2 )** and doesn't require **value1** to be evaluated twice.  
 
-The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](function-errors.md)** function.
+The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](../maker/functions/function-errors.md)** function.
 
 The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or **false**.
 
