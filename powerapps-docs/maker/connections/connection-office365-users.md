@@ -27,10 +27,10 @@ You can display this information in a label on your app. You can display one fun
 
 This topic shows you how to add Office 365 Users as a connection, add Office 365 Users as a data source to your app, and use table data in a gallery control.
 
-[!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## Add a connection
-1. [Add a data connection](../maker/add-data-connection.md) and select **Office 365 Users**:  
+1. [Add a data connection](../add-data-connection.md) and select **Office 365 Users**:  
    
     ![Connect to Office 365](./media/connection-office365-users/add-office.png)
 2. Select **Connect**, and if prompted to sign in, enter your work account.
@@ -40,7 +40,7 @@ The Office 365 Users connection has been created and added to your app. Now, it'
 ## Use the connection in your app
 ### Show information about the current user
 1. On the **Insert** menu, select **Label**
-2. In the function bar, set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
+2. In the function bar, set its **[Text](../../controls/properties-core.md)** property to any of the following formulas:
    
     `Office365Users.MyProfile().Department`  
     `Office365Users.MyProfile().DisplayName`  
@@ -61,7 +61,7 @@ The label shows the information that you entered about the current user.
    
     ![Rename control](./media/connection-office365-users/renameinfoabout.png)
 2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*.
-3. Add a **Label** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
+3. Add a **Label** (**Insert** menu), and set its **[Text](../../controls/properties-core.md)** property to any of the following formulas:
    
    * To show information about another user:  
      
@@ -95,7 +95,7 @@ The label shows the information that you entered about the user you specified or
 > [!NOTE]
 > If you're developing an app based on an entity in the Common Data Service, you can specify a user based on ID instead of email address.
 
-For example, you can [create an app automatically](../maker/data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
+For example, you can [create an app automatically](../data-platform-create-app.md), add a screen that contains a **Label** control, and set the control's **Text** property to this formula:
 <br>**Office365Users.UserProfile(BrowseGallery1.Selected.CreatedByUser).DisplayName**
 
 If you create a contact and select that contact in the browse screen of the app, the **Label** control will show your display name.
@@ -103,7 +103,7 @@ If you create a contact and select that contact in the browse screen of the app,
 ### Show the direct reports of another user
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **InfoAbout**.
 2. In **InfoAbout**, enter the email address of a user in your organization. For example, enter *yourManagersName*@*yourCompany.com*
-3. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
+3. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../../controls/properties-core.md)** property to the following formula:
    
     `Office365Users.DirectReports(InfoAbout.Text)`
    
@@ -113,11 +113,11 @@ If you create a contact and select that contact in the browse screen of the app,
 4. In the second list, select **JobTitle**. In the third list, select **DisplayName**. The gallery is updated to show these values.  
    
 > [!NOTE]
-> The first box is actually an image control. If you don't have an image, you can delete the image control, and add a label in its place. [Add and configure controls](../maker/add-configure-controls.md) is a good resource.
+> The first box is actually an image control. If you don't have an image, you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 ### Search for users
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
-2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
+2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../../controls/properties-core.md)** property to the following formula:
    
     `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
    
@@ -253,6 +253,6 @@ Search for users: Retrieves search results of user profiles
 | AccountEnabled |boolean |Account enabled flag. |
 
 ## Helpful links
-* See all the [available connections](../maker/connections-list.md).
-* Learn how to [add connections](../maker/add-manage-connections.md) to your apps.
+* See all the [available connections](../connections-list.md).
+* Learn how to [add connections](../add-manage-connections.md) to your apps.
 
