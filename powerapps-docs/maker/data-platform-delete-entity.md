@@ -31,5 +31,5 @@ You can delete custom entities, but you can't delete standard entities.
 >You might break an app if you delete an entity that is used in that app.
 
 >[!NOTE]
->If entity A has [lookup fields](data-platform-entity-lookup.md) to entity B, you might have to delete entity B before you can delete entity A.
+>If entity A has [lookup fields](../data-platform-entity-lookup.md) to entity B, you might have to delete entity B before you can delete entity A.
 
