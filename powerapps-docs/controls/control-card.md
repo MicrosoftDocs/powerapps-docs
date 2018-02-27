@@ -37,7 +37,7 @@ Within the form's container, the **ThisItem** record is available and contains a
 
 You can use the **Parent** reference to configure a control to reference the properties of a card.  For example, a control should use **Parent.Default** to read the initial state of the field from the data source. By using **Parent** instead of directly accessing the information that you want, the card is better encapsulated, and you can change it to a different field without breaking internal formulas.
 
-See [Understand data cards](../working-with-cards.md) for examples of how to customize, unlock, and create cards.
+See [Understand data cards](../maker/working-with-cards.md) for examples of how to customize, unlock, and create cards.
 
 ## Key properties
 **DataField** – The name of the field within a record that this card displays and edits.
@@ -97,5 +97,5 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). For a **[Card](control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
 
 ## Examples
-See [Understand data cards](../working-with-cards.md) and [Understand data form layout](../working-with-form-layout.md) for examples.
+See [Understand data cards](../maker/working-with-cards.md) and [Understand data form layout](../working-with-form-layout.md) for examples.
 

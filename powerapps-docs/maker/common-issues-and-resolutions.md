@@ -120,7 +120,7 @@ ms.author: sharik
      The stock custom card is missing the **[Update](../controls/control-card.md)** property, which is required to write back changes. To work around this:
 
     * Select the form control, and insert a card by using the right-hand pane based on the field that you want the card to show.  
-    * Unlock the card, as described in [Understanding data cards](../working-with-cards.md#unlock-a-card).
+    * Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card).
     * Remove or rearrange controls within the card as you see fit, just as you would with the custom card.
 
 16. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash**.
