@@ -115,7 +115,7 @@ You can configure your app with formulas so that users can change your app's app
 2. Arrange the sliders so they don't overlap, add three labels, and configure them to show **Red**, **Green**, and **Blue**:
    
     ![Arrange sliders and add labels for each color component](./media/working-with-formulas/three-sliders.png)
-3. Set the **Max** property of each slider to 255, which is the maximum value of a color component for the **[RGBA](../functions/function-colors.md)** function.
+3. Set the **Max** property of each slider to 255, which is the maximum value of a color component for the **[RGBA](functions/function-colors.md)** function.
    
     You can specify the **Max** property by selecting it on the **Content** tab or in the property list:
    
@@ -131,7 +131,7 @@ You can configure your app with formulas so that users can change your app's app
     ![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-complete-rgba.png)
 5. Adjust the sliders, and see how your changes affect the background color.
    
-    As each slider changes, the formula that contains the **[RGBA](../functions/function-colors.md)** function is recalculated, which immediately changes how the screen appears.
+    As each slider changes, the formula that contains the **[RGBA](functions/function-colors.md)** function is recalculated, which immediately changes how the screen appears.
    
     ![Change the formula for the background fill color of the screen, now complete](./media/working-with-formulas/three-sliders-example-colors.png)
 

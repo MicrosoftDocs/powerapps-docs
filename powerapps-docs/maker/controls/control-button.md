@@ -170,14 +170,14 @@ By default, PowerApps creates a rectangular **Button** control with rounded corn
    * Set the values for **[RadiusTopLeft](properties-size-location.md)** and **[RadiusTopRight](properties-size-location.md)** to **300**, and the values for **[RadiusBottomLeft](properties-size-location.md)** and **[RadiusBottomRight](properties-size-location.md)** to **100** to create a tab-shaped button.
 
 #### Change a button's color when you hover over it
-By default, the fill color of a **Button** control will dim by 20% when you hover over it with a mouse. You can adjust this behavior by changing the **[HoverFill](properties-color-border.md)** property, which uses the **[ColorFade](../../functions/function-colors.md)** function. If you set the **[ColorFade](../../functions/function-colors.md)** formula to a positive percentage, the color becomes lighter when you hover over the button, while a negative percentage makes the color darker.
+By default, the fill color of a **Button** control will dim by 20% when you hover over it with a mouse. You can adjust this behavior by changing the **[HoverFill](properties-color-border.md)** property, which uses the **[ColorFade](../functions/function-colors.md)** function. If you set the **[ColorFade](../functions/function-colors.md)** formula to a positive percentage, the color becomes lighter when you hover over the button, while a negative percentage makes the color darker.
 
-* Change the **[ColorFade](../../functions/function-colors.md)** percentage in the **[HoverFill](properties-color-border.md)** property of one of the buttons that you created, and observe the effects.
+* Change the **[ColorFade](../functions/function-colors.md)** percentage in the **[HoverFill](properties-color-border.md)** property of one of the buttons that you created, and observe the effects.
 
-You can also specify the color of a **Button** control by setting its **[HoverFill](properties-color-border.md)** property to a formula that contains the **[ColorValue](../../functions/function-colors.md)** function instead of the **[ColorFade](../../functions/function-colors.md)** function, as in **ColorValue("Red")**.
+You can also specify the color of a **Button** control by setting its **[HoverFill](properties-color-border.md)** property to a formula that contains the **[ColorValue](../functions/function-colors.md)** function instead of the **[ColorFade](../functions/function-colors.md)** function, as in **ColorValue("Red")**.
 
 > [!NOTE]
 > The color value can be any CSS color definition, either a name or a hex value.
 
-* Replace the **[ColorFade](../../functions/function-colors.md)** function with a **[ColorValue](../../functions/function-colors.md)** function in one of the buttons that you created, and observe the effects.
+* Replace the **[ColorFade](../functions/function-colors.md)** function with a **[ColorValue](../functions/function-colors.md)** function in one of the buttons that you created, and observe the effects.
 

@@ -23,7 +23,7 @@ Formulas combine many elements.  Listed below are:
 
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
 * **Signals** return information about the environment. For example, **[Location](../functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
-* **Enumerations** return a pre-defined constant value. For example, **[Color](../functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
+* **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
 * **Named operators**, such as **[ThisItem](../../functions/operators.md#thisitem-operator)** and **[Parent](../../functions/operators.md#parent-operator)**, provide access to information from within a container.
 
 Other elements include:
@@ -74,11 +74,11 @@ Other elements include:
 
 **[Collect](functions/function-clear-collect-clearcollect.md)** – Creates a collection or adds data to a data source.
 
-**[Color](../functions/function-colors.md)** – Sets a property to a built-in color value.
+**[Color](functions/function-colors.md)** – Sets a property to a built-in color value.
 
-**[ColorFade](../functions/function-colors.md)** – Fades a color value.
+**[ColorFade](functions/function-colors.md)** – Fades a color value.
 
-**[ColorValue](../functions/function-colors.md)** – Translates a CSS color name or a hex code to a color value.  
+**[ColorValue](functions/function-colors.md)** – Translates a CSS color name or a hex code to a color value.  
 
 **[Compass](../functions/signals.md)** – Returns your compass heading.
 
@@ -258,7 +258,7 @@ Other elements include:
 
 **[Revert](../functions/function-revert.md)** – Reloads and clears errors for the records of a data source.
 
-**[RGBA](../functions/function-colors.md)** – Returns a color value for a set of red, green, blue, and alpha components.
+**[RGBA](functions/function-colors.md)** – Returns a color value for a set of red, green, blue, and alpha components.
 
 **[Right](../functions/function-left-mid-right.md)** – Returns the right-most portion of a string.
 

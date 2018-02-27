@@ -131,7 +131,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 4. Add a label, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:
    <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
-    Want more information about the **[ColorFade](../../functions/function-colors.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[ColorFade](../functions/function-colors.md)** function or [other functions](../formula-reference.md)?
 
     The text in the label fades to white, returns to full intensity, and repeats the process.
 5. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.
