@@ -1,6 +1,6 @@
 ---
-title: 'List Box control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the List Box control
+title: 'Radio control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Radio control
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -18,11 +18,11 @@ ms.date: 10/25/2016
 ms.author: fikaradz
 
 ---
-# List Box control in PowerApps
-A list in which the user can select one or multiple items.
+# Radio control in PowerApps
+A list that shows all options but the user can select only one at a time.
 
 ## Description
-A **List Box** control always shows all available choices (unlike a **[Drop down](control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
+A **Radio** control, with which users have decades of experience, is best used with only a few options that are mutually exclusive.
 
 ## Key properties
 **[Default](../../controls/properties-core.md)** – The initial value of a control before it is changed by the user.
@@ -31,7 +31,11 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 [!INCLUDE [long-items](../../includes/long-items.md)]
 
-## Additional properties
+**[Value](../../controls/properties-core.md)** – The value of an input control.
+
+## All properties
+**[Align](../../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.
+
 **[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -58,15 +62,11 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
-
 **[HoverColor](../../controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
 **[HoverFill](../../controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
 **[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
-
-**ItemPaddingLeft** – The distance between text in a listbox and its left edge.
 
 **[LineHeight](../../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
@@ -82,19 +82,19 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[PaddingTop](../../controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[PressedBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
-
 **[PressedColor](../../controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
 **[PressedFill](../../controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
+**RadioBackgroundFill** – The background color of the circles in a radio-button control.
+
+**RadioBorderColor** – The color of the circle for each option in a radio-button control.
+
+**RadioSelectionFill** – The color that appears inside the circle of the selected option in a radio-button control.
+
+**RadioSize** – The diameter of the circles in a radio-button control.
+
 **[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
-
-**[SelectionColor](../../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
-
-**[SelectionFill](../../controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.
-
-**SelectMultiple** – Whether a user can select more than one item in a listbox.
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 
@@ -118,31 +118,17 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 [**Distinct**( *DataSource*, *ColumnName* )](../../functions/function-distinct.md)
 
 ## Example
-1. Add a **List box** control, name it **CategoryList**, and set its **[Items](../../controls/properties-core.md)** property to this formula:<br>
-   **["Carpet","Hardwood","Tile"]**
+1. Add a **Radio** control, name it **Pricing**, and set its **[Items](../../controls/properties-core.md)** property to this formula:
+   <br>**["Standard", "Premium"]**
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Add a **[Label](../../controls/control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](../../controls/properties-core.md)** property of the **[Label](../../controls/control-text-box.md)** control to this formula:
+   <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
    
-    ![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
-2. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
-3. Set the **[Items](../../controls/properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+    Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+3. Press F5, and then choose either option in the **Radio** control.
    
-   * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
-   * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
-   * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
-     
-     ![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
-4. Set the **[Visible](../../controls/properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
-   
-   * CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
-   * HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
-   * TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
-     
-     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-5. Press F5, and then choose one or more items in **CategoryList**.
-   
-    The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
-   
-    ![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
-6. (optional) Press Esc to return to the default workspace.
+    The **[Label](../../controls/control-text-box.md)** control shows the appropriate text for your choice.
+4. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
+5. To return to the default workspace, press Esc.
 

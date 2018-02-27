@@ -33,7 +33,7 @@ For an overview, see [Understand data cards](working-with-cards.md).
   3. [Customize the form](customize-forms-sharepoint.md).
 
 ## Customize a locked card
-In this procedure, you'll replace a **[Toggle](../controls/control-toggle.md)** control with a **[Radio](../controls/control-radio.md)** control without unlocking the card.
+In this procedure, you'll replace a **[Toggle](../controls/control-toggle.md)** control with a **[Radio](controls/control-radio.md)** control without unlocking the card.
 
 1. In **EditScreen1**, click or tap the **Paid** card to select it.
 

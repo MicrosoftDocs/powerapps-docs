@@ -47,7 +47,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example
-1. Add a **[Radio](control-radio.md)** control, name it **ScreenFills**, and set its **[Items](properties-core.md)** property to this value:<br>
+1. Add a **[Radio](../maker/controls/control-radio.md)** control, name it **ScreenFills**, and set its **[Items](properties-core.md)** property to this value:<br>
    **["Red", "Green"]**
    
     Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
@@ -60,10 +60,10 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
    **Navigate(Source, ScreenTransition.Fade)**
 5. Set the **[Fill](properties-color-border.md)** property of **Target** to this formula:<br>
    **If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))**
-6. From **Source**, press F5, click or tap either option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control.
+6. From **Source**, press F5, click or tap either option in the **[Radio](../maker/controls/control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control.
    
     **Target** appears in the color that you chose.
 7. On **Target**, click or tap the **[Shape](control-shapes-icons.md)** control to return to **Source**.
-8. (optional) Click or tap the other option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control to confirm that **Target** appears in the other color.
+8. (optional) Click or tap the other option in the **[Radio](../maker/controls/control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control to confirm that **Target** appears in the other color.
 9. To return to the default workspace, press Esc.
 

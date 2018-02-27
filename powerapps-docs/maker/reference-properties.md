@@ -82,7 +82,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Power BI tile](controls/control-power-bi-tile.md)** – Display a Power BI tile inside an app.
 
-**[Radio](../controls/control-radio.md)** – Show options that are mutually exclusive.
+**[Radio](controls/control-radio.md)** – Show options that are mutually exclusive.
 
 **[Rating](../controls/control-rating.md)** – Indicate a value between 1 and a specified number.
 
@@ -276,7 +276,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](controls/control-gallery.md)** and **[Slider](../controls/control-slider.md)** controls.
 
-**[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](../controls/control-radio.md)**, **[Label](../controls/control-text-box.md)**, and **[Text input](../controls/control-text-input.md)** controls.
+**[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](controls/control-radio.md)**, **[Label](../controls/control-text-box.md)**, and **[Text input](../controls/control-text-input.md)** controls.
 
 **[Loop](controls/control-audio-video.md)** – Whether an audio or video clip automatically starts over as soon as it finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -377,13 +377,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[PressedFill](../controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.  Applies to many controls.
 
 ### R
-**[RadioBackgroundFill](../controls/control-radio.md)** – The background color of the circles in a radio-button control.  Applies to the **[Radio](../controls/control-radio.md)** control.
+**[RadioBackgroundFill](controls/control-radio.md)** – The background color of the circles in a radio-button control.  Applies to the **[Radio](controls/control-radio.md)** control.
 
-**[RadioBorderColor](../controls/control-radio.md)** – The color of the circle for each option in a radio-button control.  Applies to the **[Radio](../controls/control-radio.md)** control.
+**[RadioBorderColor](controls/control-radio.md)** – The color of the circle for each option in a radio-button control.  Applies to the **[Radio](controls/control-radio.md)** control.
 
-**[RadioSelectionFill](../controls/control-radio.md)** – The color that appears inside the circle of the selected option in a radio-button control.  Applies to the **[Radio](../controls/control-radio.md)** control.
+**[RadioSelectionFill](controls/control-radio.md)** – The color that appears inside the circle of the selected option in a radio-button control.  Applies to the **[Radio](controls/control-radio.md)** control.
 
-**[RadioSize](../controls/control-radio.md)** – The diameter of the circles in a radio-button control.  Applies to the **[Radio](../controls/control-radio.md)** control.
+**[RadioSize](controls/control-radio.md)** – The diameter of the circles in a radio-button control.  Applies to the **[Radio](controls/control-radio.md)** control.
 
 **[RadiusBottomLeft](../controls/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.  Applies to many controls.
 
@@ -479,7 +479,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### V
 **Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
-**[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](../controls/control-radio.md)**, **[Slider](../controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
+**[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](controls/control-radio.md)**, **[Slider](../controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
 
 **ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](../controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
