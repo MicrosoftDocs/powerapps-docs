@@ -27,7 +27,7 @@ In this context, what does it mean when the user selects a **[Button](controls/c
 
 By selecting a **[Button](controls/control-button.md)** control, the user initiates a sequence of actions, or behaviors, that will change the state of the app:
 
-* Change the screen that's displayed: **[Back](../functions/function-navigate.md)** and **[Navigate](../functions/function-navigate.md)** functions.
+* Change the screen that's displayed: **[Back](functions/function-navigate.md)** and **[Navigate](functions/function-navigate.md)** functions.
 * Control a [signal](../functions/signals.md): **[Enable](functions/function-enable-disable.md)** and **[Disable](functions/function-enable-disable.md)** functions.
 * Refresh, update, or remove items in a [data source](working-with-data-sources.md): **[Refresh](../functions/function-refresh.md)**, **[Update](../functions/function-update-updateif.md)**, **[UpdateIf](../functions/function-update-updateif.md)**, **[Patch](../functions/function-patch.md)**, **[Remove](../functions/function-remove-removeif.md)**, **[RemoveIf](../functions/function-remove-removeif.md)** functions.
 * Update a [context variable](working-with-variables.md#create-a-context-variable):  **[UpdateContext](../functions/function-updatecontext.md)** function.

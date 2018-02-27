@@ -38,7 +38,7 @@ The **App** signal returns information about the running app.
 
 | Signal Property | Description |
 | --- | --- |
-| **App.ActiveScreen** |Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function, you can change the displayed screen. |
+| **App.ActiveScreen** |Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](../maker/functions/function-navigate.md)** or **[Navigate](../maker/functions/function-navigate.md)** function, you can change the displayed screen. |
 
 ### Compass
 The **Compass** signal returns the compass heading of the top of the screen. The heading is based on magnetic north.

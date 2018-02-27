@@ -38,7 +38,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **OnStart** – The behavior of the app when the user opens the app.
 
-* The formula to which this property is set runs before the first screen of the app appears. Call the [**Navigate**](../../functions/function-navigate.md) function to change which screen appears first when the app starts.
+* The formula to which this property is set runs before the first screen of the app appears. Call the [**Navigate**](../functions/function-navigate.md) function to change which screen appears first when the app starts.
 * You can't set [context variables](../working-with-variables.md) with the [**UpdateContext**](../../functions/function-updatecontext.md) function because no screen has appeared yet. However, you can pass context variables in the **Navigate** function and create and fill a [collection](../working-with-variables.md) by using the [**Collect**](../functions/function-clear-collect-clearcollect.md) function.
 * When you update an app, the formula to which this property is set runs when the app is loaded into PowerApps Studio. To see the impact of changing this property, you'll need to save, close, and reload your app.
 * The **OnStart** property is actually a property of the app, not the screen. For editing convenience, you view and modify it as a property on the first screen of your app. If you remove the first screen or reorder screens, this property may become hard to find. In this case, save, close, and reload your app, and the property will reappear as a property of the first screen.
@@ -55,7 +55,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 3. On **Source**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Navigate(Target, ScreenTransition.Fade)**
    
-    Want more information about the **[Navigate](../../functions/function-navigate.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[Navigate](../functions/function-navigate.md)** function or [other functions](../formula-reference.md)?
 4. In **Target**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Navigate(Source, ScreenTransition.Fade)**
 5. Set the **[Fill](properties-color-border.md)** property of **Target** to this formula:<br>

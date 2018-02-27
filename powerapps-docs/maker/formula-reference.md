@@ -55,7 +55,7 @@ Other elements include:
 **[Average](functions/function-aggregates.md)** – Calculates the average of a table expression or a set of arguments.
 
 ## B
-**[Back](../functions/function-navigate.md)** – Displays the previous screen.  
+**[Back](functions/function-navigate.md)** – Displays the previous screen.  
 
 **[Blank](functions/function-isblank-isempty.md)** – Returns a *blank* value that can be used to insert a NULL value in a data source.
 
@@ -211,7 +211,7 @@ Other elements include:
 **[Month](functions/function-datetime-parts.md)** – Retrieves the month portion of a date/time value.
 
 ## N
-**[Navigate](../functions/function-navigate.md)** – Changes which screen is displayed.
+**[Navigate](functions/function-navigate.md)** – Changes which screen is displayed.
 
 **[NewForm](functions/function-form.md)** – Resets a form control for creation of an item.
 

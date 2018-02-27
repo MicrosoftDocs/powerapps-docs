@@ -217,7 +217,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
      **ResetForm(Form1);Navigate(ViewScreen,ScreenTransition.None)**
 
-      When the user clicks or taps the arrow, the **[Navigate](../functions/function-navigate.md)** function opens the **ViewScreen**.
+      When the user clicks or taps the arrow, the **[Navigate](functions/function-navigate.md)** function opens the **ViewScreen**.
 
 12. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](controls/properties-core.md)** property to **"Save"**.
 

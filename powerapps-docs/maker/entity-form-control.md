@@ -156,7 +156,7 @@ Next let’s add more screens to our app and then configure fields in an **Entit
 1. Add a second screen to the app, and rename the screen **SalesOrderDetailsScreen**.
 2. Cut the **SalesOrderDetailsForm**, paste it on the **SalesOrderDetailsScreen**, and resize the form to cover most of the screen, leaving enough space for an icon at the top.
 3. Add a back-arrow icon near the upper-left corner of **SalesOrderDetailsScreen**.
-4. Set the **OnSelect** property of the back-arrow icon to the [**Back**](../functions/function-navigate.md) function.  
+4. Set the **OnSelect** property of the back-arrow icon to the [**Back**](functions/function-navigate.md) function.  
    
     ![](media/entity-form-control/entityform-tutorial-01-14.png)
 5. On the **SalesOrderListScreen**, resize the **SalesOrderListForm** to cover the entire screen.
@@ -202,7 +202,7 @@ If the function is evaluated as true, the **SalesOrderDetailsScreen** opens with
 
 All this was also set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**.  
 
-Therefore, when the user clicks or taps a sales order ID field, the [**If**](functions/function-if.md) function evaluates to true, and the [**Navigate**](../functions/function-navigate.md) function is called with the corresponding context, opening the details screen.  
+Therefore, when the user clicks or taps a sales order ID field, the [**If**](functions/function-if.md) function evaluates to true, and the [**Navigate**](functions/function-navigate.md) function is called with the corresponding context, opening the details screen.  
 
 ![](media/entity-form-control/entityform-tutorial-01-21.png)  
 

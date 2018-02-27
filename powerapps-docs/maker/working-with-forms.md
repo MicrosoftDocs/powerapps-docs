@@ -123,7 +123,7 @@ This screen features these key formulas:
 
 As in the **Details** screen, a form control, named **EditForm1**, dominates the **Edit and Create** screen. In addition, the **[Item](controls/control-form-detail.md)** property of **EditForm1** is set to **BrowseGallery1.Selected**, so the form displays the record that the user selected in **BrowseScreen1**. While the **Details** screen shows each field as read-only, the user can update the value of one or more fields by using the controls in **EditForm1**. It also uses the **[DataSource](controls/control-form-detail.md)** property to access metadata about this data source, such as the user-friendly display name for each field and the location where changes should be saved.
 
-If the user selects the "X" icon to cancel an update, the **[ResetForm](functions/function-form.md)** function discards any unsaved changes, and the **[Back](../functions/function-navigate.md)** function opens the **Details** screen. Both the **Details** screen and the **Edit and Create** screen show the same record until the user selects a different one on **BrowseScreen1**. The fields in that record remain set to the values that were most recently saved, not any changes that the user made and then abandoned.
+If the user selects the "X" icon to cancel an update, the **[ResetForm](functions/function-form.md)** function discards any unsaved changes, and the **[Back](functions/function-navigate.md)** function opens the **Details** screen. Both the **Details** screen and the **Edit and Create** screen show the same record until the user selects a different one on **BrowseScreen1**. The fields in that record remain set to the values that were most recently saved, not any changes that the user made and then abandoned.
 
 If the user changes one or more values in the form and then selects the "checkmark" icon, the **[SubmitForm](functions/function-form.md)** function sends the user's changes to the data source.
 
@@ -209,7 +209,7 @@ Finally, we need to connect the **[Display form](controls/control-form-detail.md
 
 Great!  We now turn to navigation: how a user opens the details screen from the gallery screen and opens the gallery screen from the details screen.
 
-* Add a **[Button](controls/control-button.md)** control to the screen, set its **[Text](controls/properties-core.md)** property to show **[Back](../functions/function-navigate.md)**, and set its **[OnSelect](controls/properties-core.md)** property to **Back()**.
+* Add a **[Button](controls/control-button.md)** control to the screen, set its **[Text](controls/properties-core.md)** property to show **[Back](functions/function-navigate.md)**, and set its **[OnSelect](controls/properties-core.md)** property to **Back()**.
    
     This formula returns the user back to the gallery when they finish viewing details.
 
@@ -226,7 +226,7 @@ Now, let's return to the **[Gallery](controls/control-gallery.md)** control and 
 
 3. Press F5, and then select an arrow in the gallery to show the details for an item.
 
-4. Select the **[Back](../functions/function-navigate.md)** button to return to the gallery of products, and then press Esc.
+4. Select the **[Back](functions/function-navigate.md)** button to return to the gallery of products, and then press Esc.
 
 ## Editing details
 Finally, our last core activity is changing the contents of a record, which users accomplish in an **[Edit form](controls/control-form-detail.md)** control.
@@ -291,7 +291,7 @@ On the first screen, you'll add a **New** button:
 
 ![Display form with added "Edit" button](./media/working-with-forms/gallery-icecream-new.png)
 
-When the Edit and Create screen opens, the form is empty, ready for the user to add an item. When the user selects the **Save** button, the **[SubmitForm](functions/function-form.md)** function ensures that a record is created instead of being updated. If the user selects the **Cancel** button, the **[ResetForm](functions/function-form.md)** function switches the form back to **Edit** mode, and the **[Back](../functions/function-navigate.md)** function opens the screen for browsing the gallery.
+When the Edit and Create screen opens, the form is empty, ready for the user to add an item. When the user selects the **Save** button, the **[SubmitForm](functions/function-form.md)** function ensures that a record is created instead of being updated. If the user selects the **Cancel** button, the **[ResetForm](functions/function-form.md)** function switches the form back to **Edit** mode, and the **[Back](functions/function-navigate.md)** function opens the screen for browsing the gallery.
 
 ## Delete a record
 1. On the **Display** screen, add a button, and set its **[Text](controls/properties-core.md)** property to show **Delete**..
@@ -362,9 +362,9 @@ This is but one example; you can craft your own formula for the **[Items](contro
 ## Screen design
 So far, we haven't discussed other ways to distribute controls across screens. That's because you have many options, and the best selection depends on your specific app's needs.
 
-Because real estate on phone screens is so limited, you probably want to browse, display, and edit/create on different screens. In this topic, the **[Navigate](../functions/function-navigate.md)** and **[Back](../functions/function-navigate.md)** functions open each screen.  
+Because real estate on phone screens is so limited, you probably want to browse, display, and edit/create on different screens. In this topic, the **[Navigate](functions/function-navigate.md)** and **[Back](functions/function-navigate.md)** functions open each screen.  
 
-On a tablet, you can browse, display, and edit/create on two or even one screen. For the latter, no **[Navigate](../functions/function-navigate.md)** or **[Back](../functions/function-navigate.md)** function would be required.
+On a tablet, you can browse, display, and edit/create on two or even one screen. For the latter, no **[Navigate](functions/function-navigate.md)** or **[Back](functions/function-navigate.md)** function would be required.
 
 If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](controls/properties-core.md)** property of the gallery to this formula:<br>
 **EditForm.Unsaved**

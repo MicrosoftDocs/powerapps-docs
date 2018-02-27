@@ -35,7 +35,7 @@ To create or update a context variable, pass a single [record](../maker/working-
 * If you specify the name of a variable that doesn't yet exist, **UpdateContext** creates a variable with that name and sets the value of that variable to the value that you specify.
 * If you've previously defined a variable but don't specify it in this particular **UpdateContext** formula, its value remains the same.
 
-Context variables are implicitly created by using the **UpdateContext** or [**Navigate** function](function-navigate.md).  There is no explicit declaration required.  If you remove all the **UpdateContext** and **Navigate** references to a context variable, then that context variable will cease to exist.  To clear a variable set its value to the result of the [**Blank** function](../maker/functions/function-isblank-isempty.md).
+Context variables are implicitly created by using the **UpdateContext** or [**Navigate** function](../maker/functions/function-navigate.md).  There is no explicit declaration required.  If you remove all the **UpdateContext** and **Navigate** references to a context variable, then that context variable will cease to exist.  To clear a variable set its value to the result of the [**Blank** function](../maker/functions/function-isblank-isempty.md).
 
 You can see your variables' values, definitions, and uses with the Variables view under the File menu in the authoring environment.
 
@@ -51,7 +51,7 @@ As the examples later in this topic show, context variables can hold several kin
 
 A context variable holds its value until the app is closed.  If you define a context variable and set its value on a particular screen, that information remains intact even if the user switches to a different screen.  Once the app is closed, the context variable's value will be lost and must be recreated when the app is loaded again.  
 
-Every context variable is scoped to a screen. If you want to define a context variable on one screen and modify that variable from another screen, you must build a formula that's based on the **[Navigate](function-navigate.md)** function.  Or use a global variable.
+Every context variable is scoped to a screen. If you want to define a context variable on one screen and modify that variable from another screen, you must build a formula that's based on the **[Navigate](../maker/functions/function-navigate.md)** function.  Or use a global variable.
 
 **UpdateContext** has no return value, and you can use it only within a [behavior formula](../maker/working-with-formulas-in-depth.md).
 

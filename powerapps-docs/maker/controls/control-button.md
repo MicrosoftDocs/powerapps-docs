@@ -113,7 +113,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-**[Navigate( *ScreenName*, *ScreenTransitionValue* )](../../functions/function-navigate.md)**
+**[Navigate( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)**
 
 ## Examples
 ### Add a basic formula to a button
