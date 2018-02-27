@@ -250,7 +250,7 @@ Other elements include:
 
 **[RenameColumns](../functions/function-table-shaping.md)** – Renames columns of a table.
 
-**[Replace](../functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
+**[Replace](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
 
 **[Reset](../functions/function-reset.md)** – Resets an input control to its default value, discarding any user changes.
 
@@ -295,7 +295,7 @@ Other elements include:
 
 **[StdevP](functions/function-aggregates.md)** – Returns the standard deviation of its arguments.  
 
-**[Substitute](../functions/function-replace-substitute.md)** – Replaces part of a string with another string, by matching strings.
+**[Substitute](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by matching strings.
 
 **[SubmitForm](functions/function-form.md)** – Saves the item in a form control to the data source.
 
