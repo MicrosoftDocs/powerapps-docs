@@ -125,7 +125,7 @@ Other examples:
 | **IsBlank( "" )** |A string that contains no characters. |**true** |
 | **IsBlank( "Hello" )** |A string that contains one or more characters. |**false** |
 | **IsBlank( *AnyCollection* )** |Because the [collection](../working-with-data-sources.md#collections) exists, it isn't blank, even if it doesn't contain any records. To check for an empty collection, use **IsEmpty** instead. |**false** |
-| **IsBlank( Mid( "Hello", 17, 2 ) )** |The starting character for **[Mid](../../functions/function-left-mid-right.md)** is beyond the end of the string.  The result is an empty string. |**true** |
+| **IsBlank( Mid( "Hello", 17, 2 ) )** |The starting character for **[Mid](function-left-mid-right.md)** is beyond the end of the string.  The result is an empty string. |**true** |
 | **IsBlank( If( false, false ) )** |An **[If](function-if.md)** function with no *ElseResult*.  Because the condition is always **false**, this **[If](function-if.md)** always returns *blank*. |**true** |
 
 ### IsEmpty

@@ -28,9 +28,9 @@ The **Left**, **Mid**, and **Right** functions return a portion of a string.
 * **Mid** returns the middle characters of a string.
 * **Right** returns the ending characters of a string.
 
-If you specify a single string as an argument, the function returns the portion that you requested of the string. If you specify a single-column [table](../maker/working-with-tables.md) that contains strings, the function returns a single-column table of the portions that you requested of those strings. If you specify a multi-column table, you can shape it into a single-column table, as [working with tables](../maker/working-with-tables.md) describes.
+If you specify a single string as an argument, the function returns the portion that you requested of the string. If you specify a single-column [table](../working-with-tables.md) that contains strings, the function returns a single-column table of the portions that you requested of those strings. If you specify a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.
 
-If the starting position is negative or beyond the end of the string, **Mid** returns *blank*.  You can check the length of a string by using the **[Len](function-len.md)** function. If you request more characters than the string contains, the function returns as many characters as possible.
+If the starting position is negative or beyond the end of the string, **Mid** returns *blank*.  You can check the length of a string by using the **[Len](../../functions/function-len.md)** function. If you request more characters than the string contains, the function returns as many characters as possible.
 
 ## Syntax
 **Left**( *String*, *NumberOfCharacters* )<br>**Mid**( *String*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *String*, *NumberOfCharacters* )
@@ -47,7 +47,7 @@ If the starting position is negative or beyond the end of the string, **Mid** re
 
 ## Examples
 ### Single string
-The examples in this section use a text-input control as their [data source](../maker/working-with-data-sources.md). The control is named **Author** and contains the string "E. E. Cummings".
+The examples in this section use a text-input control as their [data source](../working-with-data-sources.md). The control is named **Author** and contains the string "E. E. Cummings".
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ The examples in this section use a text-input control as their [data source](../
 | **Right( Author.Text, 5 )** |Extracts up to five characters from the end of the string. |"mings" |
 
 ### Single-column table
-Each example in this section extracts strings from the **Address** [column](../maker/working-with-tables.md#columns) of this data source, named **People**, and returns a single-column table that contains the results:
+Each example in this section extracts strings from the **Address** [column](../working-with-tables.md#columns) of this data source, named **People**, and returns a single-column table that contains the results:
 
 ![](media/function-left-mid-right/people-table.png)
 
@@ -67,8 +67,8 @@ Each example in this section extracts strings from the **Address** [column](../m
 | **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** |Extracts the last seven characters of each string. |![](media/function-left-mid-right/people-table-right.png) |
 
 ### Step-by-step example
-1. Import or create a [collection](../maker/working-with-data-sources.md#collections) named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
-2. Set the **[Text](../maker/controls/properties-core.md)** property of the lower label in the gallery to this function:
+1. Import or create a [collection](../working-with-data-sources.md#collections) named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
+2. Set the **[Text](../controls/properties-core.md)** property of the lower label in the gallery to this function:
    
     **Right(ThisItem.ProductName, 3)**
    

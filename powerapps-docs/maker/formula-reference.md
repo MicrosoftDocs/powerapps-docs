@@ -183,7 +183,7 @@ Other elements include:
 
 **[Launch](../functions/function-param.md)** – Launches a web address or an app.
 
-**[Left](../functions/function-left-mid-right.md)** – Returns the left-most portion of a string.
+**[Left](functions/function-left-mid-right.md)** – Returns the left-most portion of a string.
 
 **[Len](../functions/function-len.md)** – Returns the length of a string.
 
@@ -200,7 +200,7 @@ Other elements include:
 ## M
 **[Max](functions/function-aggregates.md)** – Maximum value of a table expression or a set of arguments.
 
-**[Mid](../functions/function-left-mid-right.md)** – Returns the middle portion of a string.
+**[Mid](functions/function-left-mid-right.md)** – Returns the middle portion of a string.
 
 **[Min](functions/function-aggregates.md)** – Minimum value of a table expression or a set of arguments.
 
@@ -260,7 +260,7 @@ Other elements include:
 
 **[RGBA](functions/function-colors.md)** – Returns a color value for a set of red, green, blue, and alpha components.
 
-**[Right](../functions/function-left-mid-right.md)** – Returns the right-most portion of a string.
+**[Right](functions/function-left-mid-right.md)** – Returns the right-most portion of a string.
 
 **[Round](../functions/function-round.md)** – Rounds to the closest number.
 
