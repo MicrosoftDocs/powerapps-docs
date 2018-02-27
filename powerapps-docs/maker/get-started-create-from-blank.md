@@ -139,7 +139,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
 
-    More information about the **[Sort](../functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
+    More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
 
 6. Select the **[Label](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
 

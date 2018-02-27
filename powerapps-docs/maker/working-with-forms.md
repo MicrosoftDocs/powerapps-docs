@@ -347,7 +347,7 @@ The formula for the **[Items](controls/properties-core.md)** property of the **[
 
 Let's break this down:
 
-* On the outside, we have the **[Sort](../functions/function-sort.md)** function, which takes three arguments: a table, a field on which to sort, and the direction in which to sort.  
+* On the outside, we have the **[Sort](functions/function-sort.md)** function, which takes three arguments: a table, a field on which to sort, and the direction in which to sort.  
   
   * The sort direction is taken from the context variable that toggles when the user selects the **ImageSortUpDown1** control. The *true*/*false* value is translated to the constants **Descending** and **Ascending**.
   * The field to sort on is fixed to **ApproverEmail**. If you change the fields that appear in the gallery, you'll need to change this argument too.
@@ -357,7 +357,7 @@ Let's break this down:
   * The expression searches for an instance of the string in **TextSearchBox1** within the **ApproverEmail** field.  Again, if you change the fields that appear in the gallery, you'll also need to update this argument.
   * If **TextSearchBox1** is empty, the user wants to show all records, and the **[Filter](functions/function-filter-lookup.md)** function is bypassed.
 
-This is but one example; you can craft your own formula for the **[Items](controls/properties-core.md)** property, depending on the needs of your app, by composing **[Filter](functions/function-filter-lookup.md)**, **[Sort](../functions/function-sort.md)**, and other functions and operators together.    
+This is but one example; you can craft your own formula for the **[Items](controls/properties-core.md)** property, depending on the needs of your app, by composing **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, and other functions and operators together.    
 
 ## Screen design
 So far, we haven't discussed other ways to distribute controls across screens. That's because you have many options, and the best selection depends on your specific app's needs.

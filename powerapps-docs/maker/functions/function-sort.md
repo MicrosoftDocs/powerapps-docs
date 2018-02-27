@@ -19,14 +19,14 @@ ms.author: gregli
 
 ---
 # Sort and SortByColumns functions in PowerApps
-Sorts a [table](../maker/working-with-tables.md).
+Sorts a [table](../working-with-tables.md).
 
 ## Description
 The **Sort** function sorts a table based on a formula.  
 
-The formula is evaluated for each [record](../maker/working-with-tables.md#records) of the table, and the results are used to sort the table.  The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
+The formula is evaluated for each [record](../working-with-tables.md#records) of the table, and the results are used to sort the table.  The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
 
-[!INCLUDE [record-scope](../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../includes/record-scope.md)]
 
 To sort first by one column and then by another, you embed a **Sort** formula within another. For example, you can use this formula to sort a **Contacts** table first by a **LastName** column and then by a **FirstName** column:  **Sort( Sort( Contacts, LastName ), FirstName )**
 
@@ -34,13 +34,13 @@ The **SortByColumns** function can also be used to sort a table based on one or 
 
 The parameter list for **SortByColumns** provides the names of the columns to sort by and the sort direction per column.  Sorting is performed in the order of the parameters (sorted first by the first column, then the second, and so on).  Column names are specified as strings, requiring double quotes if directly included in the parameter list.  For example, **SortByColumns( CustomerTable, "LastName" )**.
 
-You can combine **SortByColumns** with a **[Drop down](../maker/controls/control-drop-down.md)** or **[List box](../maker/controls/control-list-box.md)** control to enable users to select which column to sort by.
+You can combine **SortByColumns** with a **[Drop down](../controls/control-drop-down.md)** or **[List box](../controls/control-list-box.md)** control to enable users to select which column to sort by.
 
 In addition to sorting ascending or descending, **SortByColumns** can sort based on a single column table of values.  For example, you can sort record based on the name of a day of the week by supplying **[ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]** as the sort order.  All records which have **Monday"** will come first, followed by **Tuesday**, and so on.  Records found that do not appear in the sort table are put at the end of the list.
 
-[Tables](../maker/working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../maker/working-with-tables.md) for more details.
+[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../working-with-tables.md) for more details.
 
-[!INCLUDE [delegation](../includes/delegation.md)]
+[!INCLUDE [delegation](../../includes/delegation.md)]
 
 ## Syntax
 **Sort**( *Table*, *Formula* [, *SortOrder* ] )
@@ -68,7 +68,7 @@ In addition to sorting ascending or descending, **SortByColumns** can sort based
 > For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
 
 ## Examples
-For the following examples, we'll use the **IceCream** [data source](../maker/working-with-data-sources.md), which contains the data in this table:
+For the following examples, we'll use the **IceCream** [data source](../working-with-data-sources.md), which contains the data in this table:
 
 ![](media/function-sort/icecream.png)
 
@@ -82,14 +82,14 @@ For the following examples, we'll use the **IceCream** [data source](../maker/wo
 | **SortByColumns( IceCream, "Flavor", [&nbsp;"Pistachio",&nbsp;"Strawberry"&nbsp;] )** |Sorts **IceCream** by it's **Flavor** column based on the single column table containing "Pistachio" and "Strawberry".  Records which have a **Flavor** of "Pistachio" will appear first in the result, followed by records that contain "Strawberry".  For values in the **Flavor** column that are not matched, such as "Vanilla", they will appear after the items that were matched. |![](media/function-sort/icecream-onflavor-sorttable.png) |
 
 ### Step by step
-To run these examples yourself, create the **IceCream** data source as a [collection](../maker/working-with-data-sources.md#collections):
+To run these examples yourself, create the **IceCream** data source as a [collection](../working-with-data-sources.md#collections):
 
-1. Add a button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
+1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
 2. Preview the app, select the button, and then press Esc to return to the default workspace.
 3. Select **Collections** on the **File** menu to display the collection that you just created, and then press Esc to return to the default workspace.
 
 #### Sort
-1. Add another button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>
+1. Add another button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
    **ClearCollect( SortByFlavor, Sort( IceCream, Flavor ) )**
    
      The previous formula creates a second collection, named **SortByFlavor**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted alphabetically by the **Flavor** column in ascending order.
@@ -98,7 +98,7 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 4. Repeat the last three steps, but change the name of the collection that you want to create, and replace the **Sort** formula with a different formula from the table of examples earlier in this section that uses **Sort**.
 
 #### SortByColumns
-1. Add another button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>
+1. Add another button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
    **ClearCollect( SortByQuantity, SortByColumns( IceCream, "Quantity", Ascending, "Flavor", Descending ) )**
    
      The previous formula creates a third collection, named **SortByQuantity**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted numerically by the **Quanity** column in ascending order, and then by the **Flavor** column in descending order.

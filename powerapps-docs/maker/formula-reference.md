@@ -283,9 +283,9 @@ Other elements include:
 
 **[Sin](../functions/function-trig.md)** – Returns the sine of an angle specified in radians.
 
-**[Sort](../functions/function-sort.md)** – Returns a sorted table based on a formula.
+**[Sort](functions/function-sort.md)** – Returns a sorted table based on a formula.
 
-**[SortByColumns](../functions/function-sort.md)** – Returns a sorted table based on one or more columns.
+**[SortByColumns](functions/function-sort.md)** – Returns a sorted table based on one or more columns.
 
 **[Split](../functions/function-split.md)** – Splits a text string into a table of substrings.
 
