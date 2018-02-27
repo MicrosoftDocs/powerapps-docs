@@ -63,7 +63,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 7. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
    
     PowerApps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
-8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../get-started-create-from-data.md) describes, starting with changing the app layout.
+8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../maker/get-started-create-from-data.md) describes, starting with changing the app layout.
 
 ## Build an app from scratch
 1. Sign in to [powerapps.com](https://web.powerapps.com) with the same account that you used to sign up for PowerApps.

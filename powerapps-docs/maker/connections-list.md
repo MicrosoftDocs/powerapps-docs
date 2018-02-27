@@ -40,7 +40,7 @@ Standard connectors behave differently depending on the type of data source they
 
     [Understand data sources in PowerApps](../working-with-data-sources.md)
 
-    [Generate an app from Excel data](../get-started-create-from-data.md)
+    [Generate an app from Excel data](get-started-create-from-data.md)
 
     [Create an app from scratch](get-started-create-from-blank.md)
 

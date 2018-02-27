@@ -19,7 +19,7 @@ ms.author: sharik
 
 ---
 # Create an app from scratch
-Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](../get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
+Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
 
 > [!NOTE]
 > This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
