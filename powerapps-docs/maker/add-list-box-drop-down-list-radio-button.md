@@ -20,7 +20,7 @@ ms.author: lonu
 # Add a list box, a drop-down list, or radio buttons
 PowerApps includes multi-select and single-select options, including a list box, a drop-down list, and radio buttons. In this topic, we add these controls and use a **Table** formula to build the lists. When an item is selected in the list, it updates other controls.
 
-[!INCLUDE [app-customization-requirements](includes/app-customization-requirements.md)]
+[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
 
 ## Add a list box
 1. On the **Insert** tab, select **Controls**, and then select **List box**:  
@@ -31,7 +31,7 @@ PowerApps includes multi-select and single-select options, including a list box,
 
     ![][3]
 
-3. Set its **[Items](controls/properties-core.md)** property to the following expression:  
+3. Set its **[Items](../controls/properties-core.md)** property to the following expression:  
    ```["circle","triangle","rectangle"]```  <br/>
 
     Your designer looks similar to the following:
@@ -46,7 +46,7 @@ PowerApps includes multi-select and single-select options, including a list box,
 
     ![][6]  
 
-6. Set the **[Visible](controls/properties-core.md)** property of the following shapes to the following functions:  
+6. Set the **[Visible](../controls/properties-core.md)** property of the following shapes to the following functions:  
 
    | Shape | Set Visible function to |
    | --- | --- |
@@ -65,7 +65,7 @@ In these steps, you used an expression to create a list of items in a **List box
 
     ![][10]  
 
-3. Rename the **Radio** control to **Choices**, and set its **[Items](controls/properties-core.md)** property to this formula:  
+3. Rename the **Radio** control to **Choices**, and set its **[Items](../controls/properties-core.md)** property to this formula:  
    ```["red","green","blue"]```  <br/>
 
     ![][12]  
@@ -74,7 +74,7 @@ In these steps, you used an expression to create a list of items in a **List box
 
 4. On the **Insert** tab, select **Icons**, and then select the circle.
 
-5. Set the **[Fill](controls/properties-color-border.md)** property of the circle to the following function:  
+5. Set the **[Fill](../controls/properties-color-border.md)** property of the circle to the following function:  
    ```If(Choices.Selected.Value = "red", RGBA(192, 0, 0, 1), Choices.Selected.Value = "green", RGBA(0, 176, 80, 1), Choices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```  
 
     In this formula, the circle changes its color depending on which radio button you choose.
@@ -90,10 +90,10 @@ In these steps, you used an expression to create a list of items in a **List box
 
     ![][15]  
 
-2. Rename the control to **DDChoices**, and set its **[Items](controls/properties-core.md)** property to this formula:<br>
+2. Rename the control to **DDChoices**, and set its **[Items](../controls/properties-core.md)** property to this formula:<br>
    **["red","green","blue"]**
 
-3. Add a circle, move it below the **Drop down** control, and set the circle's **[Fill](controls/properties-color-border.md)** property to this formula:  
+3. Add a circle, move it below the **Drop down** control, and set the circle's **[Fill](../controls/properties-color-border.md)** property to this formula:  
    ```If(DDChoices.Selected.Value = "red", RGBA(192, 0, 0, 1), DDChoices.Selected.Value = "green", RGBA(0, 176, 80, 1), DDChoices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```
 
 4. Preview what you've created: ![][1]. Select the different options to change the color of the circle.
