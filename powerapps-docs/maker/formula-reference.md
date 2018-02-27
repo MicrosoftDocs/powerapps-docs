@@ -36,9 +36,9 @@ Other elements include:
 
 **[Acceleration](../functions/signals.md)** – Reads the acceleration sensor in your device.
 
-**[Acos](../functions/function-trig.md)** – Returns the arccosine of a number, in radians.
+**[Acos](functions/function-trig.md)** – Returns the arccosine of a number, in radians.
 
-**[Acot](../functions/function-trig.md)** – Returns the arccotangent of a number, in radians.
+**[Acot](functions/function-trig.md)** – Returns the arccotangent of a number, in radians.
 
 **[AddColumns](functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
 
@@ -46,11 +46,11 @@ Other elements include:
 
 **[App](../functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
 
-**[Asin](../functions/function-trig.md)** – Returns the arcsine of a number, in radians.
+**[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
 
-**[Atan](../functions/function-trig.md)** – Returns the arctangent of a number, in radians.
+**[Atan](functions/function-trig.md)** – Returns the arctangent of a number, in radians.
 
-**[Atan2](../functions/function-trig.md)** – Returns the arctangent based on an (*x*,*y*) coordinate, in radians.
+**[Atan2](functions/function-trig.md)** – Returns the arctangent based on an (*x*,*y*) coordinate, in radians.
 
 **[Average](functions/function-aggregates.md)** – Calculates the average of a table expression or a set of arguments.
 
@@ -90,9 +90,9 @@ Other elements include:
 
 **[Count](functions/function-table-counts.md)** – Counts table records that contain numbers.
 
-**[Cos](../functions/function-trig.md)** – Returns the cosine of an angle specified in radians.
+**[Cos](functions/function-trig.md)** – Returns the cosine of an angle specified in radians.
 
-**[Cot](../functions/function-trig.md)** – Returns the cotangent of an angle specified in radians.
+**[Cot](functions/function-trig.md)** – Returns the cotangent of an angle specified in radians.
 
 **[CountA](functions/function-table-counts.md)** – Counts table records that aren't [empty](functions/function-isblank-isempty.md).
 
@@ -117,7 +117,7 @@ Other elements include:
 
 **[Defaults](functions/function-defaults.md)** – Returns the default values for a data source.
 
-**[Degrees](../functions/function-trig.md)** - Converts radians to degrees.
+**[Degrees](functions/function-trig.md)** - Converts radians to degrees.
 
 **[Disable](functions/function-enable-disable.md)** – Disables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
 
@@ -229,7 +229,7 @@ Other elements include:
 
 **[Patch](functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
 
-**[Pi](../functions/function-trig.md)** – Returns the number &pi;.
+**[Pi](functions/function-trig.md)** – Returns the number &pi;.
 
 **[PlainText](functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
 
@@ -238,7 +238,7 @@ Other elements include:
 **[Proper](functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 
 ## R
-**[Radians](../functions/function-trig.md)** - Converts degrees to radians.
+**[Radians](functions/function-trig.md)** - Converts degrees to radians.
 
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
@@ -281,7 +281,7 @@ Other elements include:
 
 **[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
 
-**[Sin](../functions/function-trig.md)** – Returns the sine of an angle specified in radians.
+**[Sin](functions/function-trig.md)** – Returns the sine of an angle specified in radians.
 
 **[Sort](functions/function-sort.md)** – Returns a sorted table based on a formula.
 
@@ -306,7 +306,7 @@ Other elements include:
 ## T
 **[Table](functions/function-table.md)** – Creates a temporary table.  
 
-**[Tan](../functions/function-trig.md)** - Returns the tangent of an angle specified in radians.
+**[Tan](functions/function-trig.md)** - Returns the tangent of an angle specified in radians.
 
 **[Text](functions/function-text.md)** – Formats a number as a string for display.
 
