@@ -52,7 +52,7 @@ For information about known limitations, see [Common issues and resolutions](mak
 ## Nov. 13
 1. Select multiple values for the same field in SharePoint lists.
 2. [View and download attachment](controls/control-attachments.md) in SharePoint lists.
-3. [Customize SharePoint list forms](customize-list-form.md) using PowerApps.
+3. [Customize SharePoint list forms](maker/customize-list-form.md) using PowerApps.
 
 ## Nov. 10
 * [Rename rules](working-with-rules.md) in an app and show rules when the selected control is in the rule condition.

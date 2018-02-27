@@ -43,11 +43,11 @@ To return to your SharePoint list at any time, click or tap **Back to SharePoint
 
 PowerApps offers many ways to customize your form. Here are some examples:
 
-* [Change the size and orientation](set-aspect-ratio-portrait-landscape.md)
-* [Format the text](controls/properties-text.md)
-* [Add images](maker/add-images-pictures-audio-video.md) or [charts](use-line-pie-bar-chart.md)
-* [Add custom data validation](functions/function-validate.md)
-* [Add rules](working-with-rules.md)
+* [Change the size and orientation](../set-aspect-ratio-portrait-landscape.md)
+* [Format the text](../controls/properties-text.md)
+* [Add images](add-images-pictures-audio-video.md) or [charts](../use-line-pie-bar-chart.md)
+* [Add custom data validation](../functions/function-validate.md)
+* [Add rules](../working-with-rules.md)
 * [Create additional views](https://powerapps.microsoft.com/blog/separate-custom-forms/)
 
 To illustrate, let's say your form has an **AccountID** field that you don't want visible.
@@ -58,7 +58,7 @@ Hiding the field is easy in PowerApps - in the form customization options, just 
 
 ![Clear AccountID checkbox](./media/customize-list-form/checkbox.png)
 
-For step-by-step instructions on how to hide fields and make other form changes, see [Customize forms in PowerApps](maker/customize-forms-sharepoint.md). For a complete list of resources, see [Microsoft PowerApps docs](https://docs.microsoft.com/powerapps/).
+For step-by-step instructions on how to hide fields and make other form changes, see [Customize forms in PowerApps](customize-forms-sharepoint.md). For a complete list of resources, see [Microsoft PowerApps docs](https://docs.microsoft.com/powerapps/).
 
 ## Save and publish the list form back to SharePoint
 
@@ -74,7 +74,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
     ![Open form inline in SharePoint](./media/customize-list-form/list-form-open.png)
 
-1. If you want to [further customize your form](sharepoint-form-integration.md), click or tap **Customize**, and then make your changes. When you're done, be sure to save your changes.
+1. If you want to [further customize your form](../sharepoint-form-integration.md), click or tap **Customize**, and then make your changes. When you're done, be sure to save your changes.
 
     ![Customize button](./media/customize-list-form/customize-button.png)
 
@@ -120,7 +120,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 **Q:** Are the customization features for customizing a list form the same as those for customizing a standalone app?
 
-**A:** Yes. You can [add and configure controls](maker/add-configure-controls.md), [connect to available data sources](maker/add-data-connection.md), or [add your own data sources](register-custom-api.md), just like you can with standalone apps.
+**A:** Yes. You can [add and configure controls](add-configure-controls.md), [connect to available data sources](add-data-connection.md), or [add your own data sources](../register-custom-api.md), just like you can with standalone apps.
 
 **Q:** Can I create customized list forms in an environment other than the default environment in my organization?
 
@@ -170,7 +170,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 **Q:** Do I need a PowerApps license to create or use custom list forms?
 
-**A:** If you have any [Office 365 plan that includes PowerApps](pricing-billing-skus.md#licenses), you can create or use custom list forms.
+**A:** If you have any [Office 365 plan that includes PowerApps](../pricing-billing-skus.md#licenses), you can create or use custom list forms.
 
 **Q:** What happens when guest users access a list that has a custom form?
 
