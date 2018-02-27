@@ -138,7 +138,7 @@ Other elements include:
 
 **[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 
-**[Exit](../functions/function-exit.md)** – Exits the currently running app.
+**[Exit](functions/function-exit.md)** – Exits the currently running app.
 
 **[Exp](../functions/function-numericals.md)** - Returns *e* raised to a power.
 
