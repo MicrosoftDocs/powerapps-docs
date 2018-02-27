@@ -64,11 +64,11 @@ Instead of finding a record to display or edit, the user can create a record by 
 
 This formula opens the **Edit and Create** screen, which features an **[Edit form](controls/control-form-detail.md)** control named **EditForm1**. The formula also switches that form into **New** mode, in which the form shows default values from the data source so that the user can easily create a record from scratch.
 
-To examine any control that appears in **BrowseGallery1**, select that control in the first section of that gallery, which serves as a template for all other sections. For example, select the middle **[Label](../controls/control-text-box.md)** control on the left edge:
+To examine any control that appears in **BrowseGallery1**, select that control in the first section of that gallery, which serves as a template for all other sections. For example, select the middle **[Label](controls/control-text-box.md)** control on the left edge:
 
 ![Browse screen controls](./media/working-with-forms/afd-browse-gallery-controls.png)
 
-In this example, the control's **[Text](../controls/properties-core.md)** property is set to **ThisItem.AssignedTo**, which is a field in the **Assets** data source. The **[Text](../controls/properties-core.md)** property of the other three **[Label](../controls/control-text-box.md)** controls in the gallery are set to similar formulas, and each control shows a different field in the data source.  
+In this example, the control's **[Text](../controls/properties-core.md)** property is set to **ThisItem.AssignedTo**, which is a field in the **Assets** data source. The **[Text](../controls/properties-core.md)** property of the other three **[Label](controls/control-text-box.md)** controls in the gallery are set to similar formulas, and each control shows a different field in the data source.  
 
 Select the **[Shape](controls/control-shapes-icons.md)** control (the arrow), and confirm that its **[OnSelect](../controls/properties-core.md)** property is set to this formula:
 <br>**Navigate( DetailScreen1, None )**
@@ -97,7 +97,7 @@ At the top of the screen, three images sit outside of **DetailForm1** and act as
 
 ![Detail card and card controls selected in the authoring experience](./media/working-with-forms/afd-detail-card-controls.png)
 
-The **[DataField](controls/control-card.md)** property of a **[Card](controls/control-card.md)** control determines which field the card displays. In this case, that property is set to **AssetID**. The card contains a **[Label](../controls/control-text-box.md)** control for which the **[Text](../controls/properties-core.md)** property is set to **Parent.Default**. This control shows the **Default** value for the card, which is set through the **[DataField](controls/control-card.md)** property.
+The **[DataField](controls/control-card.md)** property of a **[Card](controls/control-card.md)** control determines which field the card displays. In this case, that property is set to **AssetID**. The card contains a **[Label](controls/control-text-box.md)** control for which the **[Text](../controls/properties-core.md)** property is set to **Parent.Default**. This control shows the **Default** value for the card, which is set through the **[DataField](controls/control-card.md)** property.
 
 In a generated app, **[Card](controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls in the right-hand pane:
 
@@ -134,7 +134,7 @@ As with a **[Display form](controls/control-form-detail.md)** control, an **[Edi
 
 ![Edit card and card controls selected in the authoring experience](./media/working-with-forms/afd-edit-card-controls.png)
 
-In the previous image, the selected card shows the **AssetID** field and  contains a **[Text input](../controls/control-text-input.md)** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **[Label](../controls/control-text-box.md)** control, which is read-only.) The **[Text input](../controls/control-text-input.md)** control has a **[Default](../controls/properties-core.md)** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
+In the previous image, the selected card shows the **AssetID** field and  contains a **[Text input](../controls/control-text-input.md)** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **[Label](controls/control-text-box.md)** control, which is read-only.) The **[Text input](../controls/control-text-input.md)** control has a **[Default](../controls/properties-core.md)** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
 
 In the right-hand pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
 
@@ -305,13 +305,13 @@ In this app, an error occurs when the value of a field is not valid, a required 
 
 If **[SubmitForm](../functions/function-form.md)** fails for any reason, the **Error** property of the **[Edit form](controls/control-form-detail.md)** control contains an error message to show the user. With this information, the user should be able to correct the issue and resubmit the change, or they can cancel the update.
 
-1. On the Edit and Create screen, add a **[Label](../controls/control-text-box.md)** control, and move it just below the **Save** button. Any error will be easy to see after the user selects this control to save changes.
+1. On the Edit and Create screen, add a **[Label](controls/control-text-box.md)** control, and move it just below the **Save** button. Any error will be easy to see after the user selects this control to save changes.
 
-2. Set the **[Text](../controls/properties-core.md)** property of the **[Label](../controls/control-text-box.md)** control to show **Form1.Error**.
+2. Set the **[Text](../controls/properties-core.md)** property of the **[Label](controls/control-text-box.md)** control to show **Form1.Error**.
 
     ![Display form with added "Edit" button](./media/working-with-forms/edit-icecream-error.png)
 
-In an app that PowerApps generates from data, the **[AutoHeight](../controls/control-text-box.md)** property on this control is set to *true* so that no space is consumed if no error occurs. The **[Height](../controls/properties-size-location.md)** and **[Y](../controls/properties-size-location.md)** properties of the **[Edit form](controls/control-form-detail.md)** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to open the **Advanced** view (available on the **View** tab) to select this control.
+In an app that PowerApps generates from data, the **[AutoHeight](controls/control-text-box.md)** property on this control is set to *true* so that no space is consumed if no error occurs. The **[Height](../controls/properties-size-location.md)** and **[Y](../controls/properties-size-location.md)** properties of the **[Edit form](controls/control-form-detail.md)** control are also adjusted dynamically to account for this control growing when an error occurs. For more details, generate an app from existing data, and inspect these properties. The text-box control for errors is very short when no error has occurred, you may need to open the **Advanced** view (available on the **View** tab) to select this control.
 
 ![App from data edit form with error text control selected](./media/working-with-forms/edit-assets-error1.png)
 

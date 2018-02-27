@@ -98,7 +98,7 @@ See [Understand data forms](../maker/working-with-forms.md) for complete example
 2. Set the **[OnFailure](../maker/controls/control-form-detail.md)** property of a Form control to blank and its **[OnSuccess](../maker/controls/control-form-detail.md)** property to this formula:
    
     **Back()**
-3. Name a **[Label](../controls/control-text-box.md)** control **ErrorText**, and set its **[Text](../controls/properties-core.md)** property to this formula:
+3. Name a **[Label](../maker/controls/control-text-box.md)** control **ErrorText**, and set its **[Text](../controls/properties-core.md)** property to this formula:
    
     **EditForm.Error**
    

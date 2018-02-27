@@ -143,10 +143,10 @@ Four controls make this card work:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| **TextRequiredStar** |**[Label](../controls/control-text-box.md)** control |Displays a star, which is commonly used on data-entry forms to indicate that a field is required. |
-| **TextFieldDisplayName** |**[Label](../controls/control-text-box.md)** control |Displays the user-friendly name of this field. This name can differ from what is in the data source's schema. |
+| **TextRequiredStar** |**[Label](controls/control-text-box.md)** control |Displays a star, which is commonly used on data-entry forms to indicate that a field is required. |
+| **TextFieldDisplayName** |**[Label](controls/control-text-box.md)** control |Displays the user-friendly name of this field. This name can differ from what is in the data source's schema. |
 | **InputText** |**Input text** control |Displays the initial value of the field and allows the user to change that value. |
-| **TextErrorMessage** |**[Label](../controls/control-text-box.md)** control |Displays a user-friendly error message to the user if a problem occurs with validation. Also ensures that the field has a value if one is required. |
+| **TextErrorMessage** |**[Label](controls/control-text-box.md)** control |Displays a user-friendly error message to the user if a problem occurs with validation. Also ensures that the field has a value if one is required. |
 
 To populate these controls with data, their properties can be driven from the properties of the card, through these key formulas. Note that none of these formulas refers to a specific field. Instead, all information comes from the card.
 

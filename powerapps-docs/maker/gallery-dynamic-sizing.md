@@ -62,7 +62,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 
     ![Pencil icon](./media/gallery-dynamic-sizing/edit-template.png)
 
-2. With the gallery template selected, add a **[Label](../controls/control-text-box.md)** control to it.
+2. With the gallery template selected, add a **[Label](controls/control-text-box.md)** control to it.
 
 3. Set the **Text** property of the **Label** control to this expression:<br>
    **ThisItem.Name**

@@ -122,13 +122,13 @@ A **Radio** control, with which users have decades of experience, is best used w
    <br>**["Standard", "Premium"]**
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Label](../../controls/control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](../../controls/properties-core.md)** property of the **[Label](../../controls/control-text-box.md)** control to this formula:
+2. Add a **[Label](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](../../controls/properties-core.md)** property of the **[Label](control-text-box.md)** control to this formula:
    <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
    
     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, and then choose either option in the **Radio** control.
    
-    The **[Label](../../controls/control-text-box.md)** control shows the appropriate text for your choice.
+    The **[Label](control-text-box.md)** control shows the appropriate text for your choice.
 4. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
 5. To return to the default workspace, press Esc.
 

@@ -98,12 +98,12 @@ If you add a **Date Picker** control instead of a **[Text input](../../controls/
 1. Add a **Date Picker** control, and name it **Deadline**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Label](../../controls/control-text-box.md)** control, and set its **[Text](../../controls/properties-core.md)** property to this formula:
+2. Add a **[Label](control-text-box.md)** control, and set its **[Text](../../controls/properties-core.md)** property to this formula:
    <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
    
     Want more information about the **[DateDiff](../../functions/function-dateadd-datediff.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, choose a date in **Deadline**, and then click or tap **OK**.
    
-    The **[Label](../../controls/control-text-box.md)** control shows the number of days between today and the date that you chose.
+    The **[Label](control-text-box.md)** control shows the number of days between today and the date that you chose.
 4. To return to the default workspace, press Esc.
 

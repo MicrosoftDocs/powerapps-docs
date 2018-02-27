@@ -44,7 +44,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 2. Add a vertical custom gallery, and set its **[Items](../controls/properties-core.md)** property to this function:
    
     **HashTags(Tweet.Text)**
-3. Add a **[Label](../controls/control-text-box.md)** control to the gallery template.
+3. Add a **[Label](../maker/controls/control-text-box.md)** control to the gallery template.
    
     The gallery shows these hashtags:
    

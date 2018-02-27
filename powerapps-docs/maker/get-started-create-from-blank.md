@@ -141,7 +141,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     More information about the **[Sort](../functions/function-sort.md)**, **[Filter](../functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
 
-6. Select the **[Label](../controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
+6. Select the **[Label](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
 
     ![Select title bar](./media/get-started-create-from-blank/select-title-bar.png)
 
@@ -159,7 +159,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add and rename screen](./media/get-started-create-from-blank/add-screen.png)
 
-3. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Label](../controls/control-text-box.md)**.
+3. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Label](controls/control-text-box.md)**.
 
 4. Configure the **Label** control that you just added:
 
@@ -202,9 +202,9 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
-7. Add a **[Label](../controls/control-text-box.md)** control in the new card.
+7. Add a **[Label](controls/control-text-box.md)** control in the new card.
 
-8. Set the **[AutoHeight](../controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](../controls/properties-core.md)** property to this formula:
+8. Set the **[AutoHeight](controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](../controls/properties-core.md)** property to this formula:
    <br>**Form1.Error**
 
     The label will show any errors from the form.

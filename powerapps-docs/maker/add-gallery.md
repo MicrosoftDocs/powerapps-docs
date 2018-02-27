@@ -76,7 +76,7 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 
-2. With the template still selected, add a **[Label](../controls/control-text-box.md)** control, and then move and resize it so that it doesn't overlap with other controls in the template.
+2. With the template still selected, add a **[Label](controls/control-text-box.md)** control, and then move and resize it so that it doesn't overlap with other controls in the template.
 
     ![Add label](./media/add-gallery/add-text-box.png)
 3. Open the **Data** pane by selecting the template and then clicking or tapping **Flooring Estimates** in the right-hand pane.

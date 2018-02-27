@@ -38,7 +38,7 @@ Excel doesn't have variables. The value of a cell that contains a formula change
 ### PowerApps
 Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas.
 
-For example, you can replicate the Excel behavior in an app by adding a **[Label](../controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](../controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](../controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
+For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](../controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](../controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
 ![](media/working-with-variables/recalc1.png)
 
@@ -112,7 +112,7 @@ Let's rebuild our adding machine by using a global variable:
     **Set( RunningTotal, 0 )**
    
     ![](media/working-with-variables/global-variable-2.png)
-5. Add a **[Label](../controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to **RunningTotal**.
+5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to **RunningTotal**.
    
     This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
    
@@ -173,7 +173,7 @@ Let's rebuild our adding machine by using a context variable:
     Again, **[UpdateContext](../functions/function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
    
     ![](media/working-with-variables/context-variable-2.png)
-5. Add a **[Label](../controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to **RunningTotal**.
+5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to **RunningTotal**.
    
     This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
    

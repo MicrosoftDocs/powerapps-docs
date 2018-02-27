@@ -52,7 +52,7 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 [**Navigate**( *ScreenName*, *ScreenTransition* )](../../functions/function-navigate.md)
 
 ## Example
-1. Name the default **[Screen](control-screen.md)** control **Target**, add a **[Label](../../controls/control-text-box.md)** control, and set its **[Text](../../controls/properties-core.md)** property to show **Target**.
+1. Name the default **[Screen](control-screen.md)** control **Target**, add a **[Label](control-text-box.md)** control, and set its **[Text](../../controls/properties-core.md)** property to show **Target**.
    
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 2. Add a **[Screen](control-screen.md)** control, and name it **Source**.

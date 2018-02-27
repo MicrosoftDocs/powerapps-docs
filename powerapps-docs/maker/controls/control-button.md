@@ -124,13 +124,13 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
    **UpdateContext({Total:Total + Value(Source.Text)})**
    
     Want more information about the **[UpdateContext](../../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
-3. Add a **[Label](../../controls/control-text-box.md)** control, set its **[Text](../../controls/properties-core.md)** property to **Total**, and then press **F5**.
+3. Add a **[Label](control-text-box.md)** control, set its **[Text](../../controls/properties-core.md)** property to **Total**, and then press **F5**.
 4. Clear the default text from **Source**, type a number in it, and then click or tap **Add**.
    
-    The **[Label](../../controls/control-text-box.md)** control shows the number that you typed.
+    The **[Label](control-text-box.md)** control shows the number that you typed.
 5. Clear the number from **Source**, type another number in it, and then click or tap **Add**.
    
-    The **[Label](../../controls/control-text-box.md)** control shows the sum of the two numbers that you typed.
+    The **[Label](control-text-box.md)** control shows the sum of the two numbers that you typed.
 6. (optional) Repeat the previous step one or more times.
 7. To return to the default workspace, press Esc (or click or tap the close icon in the upper-right corner).
 

@@ -50,7 +50,7 @@ If you're new to PowerApps (or have only generated apps automatically), you'll w
 1. Add a blank screen where you'll put the form.
    
     Outside of this tutorial, you can put the **Gallery** and **[Edit form](controls/control-form-detail.md)** controls on the same screen, but you'll have more room to work with if you put them on separate screens.
-2. At the top of the new screen, add a **[Label](../controls/control-text-box.md)** control, and set its **Text** property to this expression:
+2. At the top of the new screen, add a **[Label](controls/control-text-box.md)** control, and set its **Text** property to this expression:
    <br>**"Sales Order " & Gallery1.Selected.SalesOrderId**
    
     The label shows the sales-order number of the record that you selected in the gallery.

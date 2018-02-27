@@ -55,7 +55,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
      ![Content bar shows the currently selected control](./media/working-with-formulas/content-tab-selection.png)
      
      You can change the name of the selected control in the **Content** tab by clicking the name.
-3. Add a **[Label](../controls/control-text-box.md)** control to the screen.
+3. Add a **[Label](controls/control-text-box.md)** control to the screen.
    
     ![Added a TextBox control](./media/working-with-formulas/add-a-label.png)
    

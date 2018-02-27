@@ -22,7 +22,7 @@ ms.author: fikaradz
 A UI element that contains one or more other controls in an app.
 
 ## Description
-Most apps have multiple **Screen** controls that contain **[Label](../../controls/control-text-box.md)** controls, **[Button](control-button.md)** controls, and other controls that show data and support navigation.
+Most apps have multiple **Screen** controls that contain **[Label](control-text-box.md)** controls, **[Button](control-button.md)** controls, and other controls that show data and support navigation.
 
 ## Key properties
 **[BackgroundImage](../../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.
