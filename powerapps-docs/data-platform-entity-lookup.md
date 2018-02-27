@@ -54,5 +54,5 @@ For information about how to delete a field, see [Manage fields](data-platform-m
 
 ## Next steps
 * [Generate an app by using a Common Data Service database](data-platform-create-app.md)
-* [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
+* [Create an app from scratch using a Common Data Service database](maker/data-platform-create-app-scratch.md)
 
