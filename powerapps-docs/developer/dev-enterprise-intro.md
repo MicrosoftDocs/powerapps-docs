@@ -31,9 +31,9 @@ As an enterprise developer, empower your organization to build robust tailored s
 
 - **Build Azure Functions**: Craft Azure Functions to extend apps with custom server-side logic. [Learn more](https://docs.microsoft.com/azure/azure-functions/functions-powerapps-scenario)
 
-- **Embed apps**: Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](embed-apps-dev.md)
+- **Embed apps**: Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](../embed-apps-dev.md)
 
-- **Build offline-capable apps**: Develop offline-capable apps so your users are productive whether they are online or offline. [Learn more](offline-apps.md)
+- **Build offline-capable apps**: Develop offline-capable apps so your users are productive whether they are online or offline. [Learn more](../offline-apps.md)
 
 - **Work with data using the Common Data Service SDK**: Use the Common Data Service SDK with Azure Functions to extend your query and data manipulation capabilities in PowerApps. [Learn more](https://aka.ms/whgr2w)
 
@@ -45,6 +45,6 @@ As a Microsoft partner or Independent Software Vendor (ISV), accelerate customer
 
 - **Build and certify custom connectors**: Bring your product into the Microsoft cloud by building a connector that enables PowerApps to talk to your service. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
 
-- **List your solution on AppSource**: Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive. [Learn more](developer/dev-appsource-test-drive.md)
+- **List your solution on AppSource**: Generate new leads for your business by building an app with PowerApps and publishing it to AppSource for new customers to test-drive. [Learn more](dev-appsource-test-drive.md)
 
-- **Get started today for free**: Sign-up for the PowerApps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](maker/dev-community-plan.md)
+- **Get started today for free**: Sign-up for the PowerApps Community Plan for free and start building apps in a dedicated individual environment. [Learn more](../maker/dev-community-plan.md)
