@@ -39,7 +39,7 @@ In this task we'll add an alert in Power BI to let us know if pending projects a
    
     ![Set alert threshold and save](./media/sharepoint-scenario-alerts-flow/07-01-04-save-alert.png)
 
-The alert won't fire right now even though 56 is above the threshold of 25. It will fire when data is updated, which we'll see when we [run through the scenario end-to-end](../sharepoint-scenario-summary.md).
+The alert won't fire right now even though 56 is above the threshold of 25. It will fire when data is updated, which we'll see when we [run through the scenario end-to-end](sharepoint-scenario-summary.md).
 
 When the alerts fires, Power BI sends email to the creator of the alert, and we'll see how to send additional mail using Microsoft Flow, in the next step.
 
@@ -67,7 +67,7 @@ When the alerts fires, Power BI sends email to the creator of the alert, and we'
    
     ![Done button](./media/sharepoint-scenario-alerts-flow/07-01-12-done.png)
 
-We will see this flow run when we [run through the scenario end-to-end](../sharepoint-scenario-summary.md). Now we'll move on to the last task in this scenario - embedding a Power BI report into SharePoint.
+We will see this flow run when we [run through the scenario end-to-end](sharepoint-scenario-summary.md). Now we'll move on to the last task in this scenario - embedding a Power BI report into SharePoint.
 
 ## Next steps
 The next step in this tutorial series is to [embed the Power BI project report in SharePoint Online](sharepoint-scenario-embed-report.md).

@@ -64,5 +64,5 @@ If you are using Office 365 Groups as we recommend, make sure users who need acc
 That wraps up our work in Power BI for this scenario. You started by pulling data from our SharePoint lists into Power BI, and have now come full circle to embedding your Power BI report back into SharePoint.
 
 ## Next steps
-The next step in this tutorial series is to [run through the workflow we created end-to-end](../sharepoint-scenario-summary.md).
+The next step in this tutorial series is to [run through the workflow we created end-to-end](sharepoint-scenario-summary.md).
 
