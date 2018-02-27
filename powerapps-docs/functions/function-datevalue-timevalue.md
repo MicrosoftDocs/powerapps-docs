@@ -69,7 +69,7 @@ If you did the same thing on **October 20, 2014**:
 
 * **DateDiff(DateValue(Startdate.Text), Today())**
   
-    If your computer were set to the **en** language, the label would show **9**, indicating the number of days between October 11 and October 20. The **[DateDiff](function-dateadd-datediff.md)** function can also show the difference in months, quarters, or years.
+    If your computer were set to the **en** language, the label would show **9**, indicating the number of days between October 11 and October 20. The **[DateDiff](../maker/functions/function-dateadd-datediff.md)** function can also show the difference in months, quarters, or years.
 
 ### DateTimeValue
 If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Start** and then set the **[Text](../maker/controls/properties-core.md)** property of a label to this function:

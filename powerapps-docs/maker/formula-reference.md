@@ -105,9 +105,9 @@ Other elements include:
 
 **[Date](functions/function-date-time.md)** – Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
 
-**[DateAdd](../functions/function-dateadd-datediff.md)** – Adds days, months, quarters, or years to a date/time value.
+**[DateAdd](functions/function-dateadd-datediff.md)** – Adds days, months, quarters, or years to a date/time value.
 
-**[DateDiff](../functions/function-dateadd-datediff.md)** – Subtracts two date values, and shows the result in days, months, quarters, or years.
+**[DateDiff](functions/function-dateadd-datediff.md)** – Subtracts two date values, and shows the result in days, months, quarters, or years.
 
 **[DateTimeValue](../functions/function-datevalue-timevalue.md)** – Converts a date and time string to a date/time value.
 
@@ -316,7 +316,7 @@ Other elements include:
 
 **[TimeValue](../functions/function-datevalue-timevalue.md)** – Converts a time-only string to a date/time value.
 
-**[TimeZoneOffset](../functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
+**[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
 **[Today](../functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
