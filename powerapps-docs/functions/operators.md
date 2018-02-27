@@ -19,12 +19,12 @@ ms.author: gregli
 
 ---
 # Operators and data types in PowerApps
-Some of these operators are dependent on the language of the author.  See [Global apps](../global-apps.md) for more information.
+Some of these operators are dependent on the language of the author.  See [Global apps](../maker/global-apps.md) for more information.
 
 | Symbol | Type | Syntax | Description |
 | --- | --- | --- | --- |
 | **.** |Property Selector |**Slider1.Value<br>Color.Red<br>Acceleration.X** |Extracts a property from a [table](../working-with-tables.md), control, [signal](signals.md), or enumeration.  For backwards compatibility, **!** may also be used. |
-| **.**<br>[or **,** [depending on the language](../global-apps.md)] |Decimal separator |**1.23**<br>[or **1,23** depending on the language] |Separator between whole and fractional parts of a number.  The character is dependent on the language. |
+| **.**<br>[or **,** [depending on the language](../maker/global-apps.md)] |Decimal separator |**1.23**<br>[or **1,23** depending on the language] |Separator between whole and fractional parts of a number.  The character is dependent on the language. |
 | **( )** |Parentheses |**Filter(T, A &lt; 10)**<br><br>**(1 + 2) * 3** |Enforces precedence order, and groups sub-expressions in a larger expression |
 | **+** |Arithmetic operators |**1 + 2** |Addition |
 | **-** |&nbsp; |**2 - 1** |Subtraction and sign |
@@ -48,8 +48,8 @@ Some of these operators are dependent on the language of the author.  See [Globa
 | **in** |&nbsp; |**&quot;The&quot; in &quot;The keyboard and the monitor...&quot;** |Substring test (case-insensitive) |
 | **@** |[Disambiguation operator](#disambiguation-operator) |**MyTable[@fieldname]** |Field disambiguation |
 | **@** |&nbsp; |**[@MyVariable]** |Global disambiguation |
-| **,**<br>[or **;** [depending on the language](../global-apps.md)] |List separator |**If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]**<br>[or **If( X < 10; "Low"; "Good" )<br>{ FirstName: "Jane"; LastName: "Doe" }<br>[ 1; 2; 3 ]** ] |Separates: <ul><li>arguments in function calls</li><li>fields in a [record](../working-with-tables.md#elements-of-a-table)</li><li>records in a [Value table](../working-with-tables.md#inline-syntax)</li></ul>.  This characters is dependent on the language. |
-| **;**<br>[or **;;** [depending on the language](../global-apps.md)] |Formula chaining |**Collect(T, A); Navigate(S1, &quot;&quot;)**<br>[or **Collect(T; A);; Navigate(S1; &quot;&quot;)**] |Separate invocations of functions in behavior properties.  The chaining operator is dependent on the language. |
+| **,**<br>[or **;** [depending on the language](../maker/global-apps.md)] |List separator |**If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]**<br>[or **If( X < 10; "Low"; "Good" )<br>{ FirstName: "Jane"; LastName: "Doe" }<br>[ 1; 2; 3 ]** ] |Separates: <ul><li>arguments in function calls</li><li>fields in a [record](../working-with-tables.md#elements-of-a-table)</li><li>records in a [Value table](../working-with-tables.md#inline-syntax)</li></ul>.  This characters is dependent on the language. |
+| **;**<br>[or **;;** [depending on the language](../maker/global-apps.md)] |Formula chaining |**Collect(T, A); Navigate(S1, &quot;&quot;)**<br>[or **Collect(T; A);; Navigate(S1; &quot;&quot;)**] |Separate invocations of functions in behavior properties.  The chaining operator is dependent on the language. |
 | **Parent** |[Parent operator](#parent-operator) |**Parent.Fill** |Access to properties of a control container |
 | **ThisItem** |[ThisItem operator](#thisitem-operator) |**ThisItem.FirstName** |Access to fields of a Gallery or form control |
 
