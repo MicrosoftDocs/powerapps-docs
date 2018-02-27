@@ -67,7 +67,7 @@ Example: If you set the **SelectableFields** property to **{SalesOrderId : true,
 **Unsaved** – Determines whether a record that a user is editing has unsaved changes.
 
 ## Related functions
-You can use these  shared functions with either the **Entity form** control or the [Edit form control](functions/function-form.md). These functions work with the **Entity form** control only when its **Pattern** property is set to **FormPattern.Details**.
+You can use these  shared functions with either the **Entity form** control or the [Edit form control](../functions/function-form.md). These functions work with the **Entity form** control only when its **Pattern** property is set to **FormPattern.Details**.
 
 **ViewForm** – Sets the **Mode** property of an **Entity form** control to **FormMode.View**.
 
@@ -125,7 +125,7 @@ The next five procedures provide a single, end-to-end example of how to use **En
       
       ![](media/entity-form-control/entityform-tutorial-01-08.png)   
       
-      In the **Common Data Service**, you can [modify field groups](field-groups.md) for custom entities (but not [standard entities](guided-learning/manage-data.yml#step-2)) to change the fields that appear on the corresponding forms that the **Entity form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity form** control to display the corresponding form.
+      In the **Common Data Service**, you can [modify field groups](../field-groups.md) for custom entities (but not [standard entities](guided-learning/manage-data.yml#step-2)) to change the fields that appear on the corresponding forms that the **Entity form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity form** control to display the corresponding form.
 
 ## Display the details of a record
 Let’s add another **Entity form** control to display the details of the sales order that’s selected in the list that you created earlier.  
@@ -156,7 +156,7 @@ Next let’s add more screens to our app and then configure fields in an **Entit
 1. Add a second screen to the app, and rename the screen **SalesOrderDetailsScreen**.
 2. Cut the **SalesOrderDetailsForm**, paste it on the **SalesOrderDetailsScreen**, and resize the form to cover most of the screen, leaving enough space for an icon at the top.
 3. Add a back-arrow icon near the upper-left corner of **SalesOrderDetailsScreen**.
-4. Set the **OnSelect** property of the back-arrow icon to the [**Back**](functions/function-navigate.md) function.  
+4. Set the **OnSelect** property of the back-arrow icon to the [**Back**](../functions/function-navigate.md) function.  
    
     ![](media/entity-form-control/entityform-tutorial-01-14.png)
 5. On the **SalesOrderListScreen**, resize the **SalesOrderListForm** to cover the entire screen.
@@ -196,13 +196,13 @@ The **SelectableFields** property of the **SalesOrderListForm** specifies **Sale
 
 This was set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**. Therefore, the values in the **SalesOrderId** field appear as links.
 
-The **OnFieldSelect** property of the **SalesOrderListForm** is set to an [**If**](functions/function-if.md) function, which determines whether the user clicks or taps the **Sales order ID** field: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
+The **OnFieldSelect** property of the **SalesOrderListForm** is set to an [**If**](../functions/function-if.md) function, which determines whether the user clicks or taps the **Sales order ID** field: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
 
 If the function is evaluated as true, the **SalesOrderDetailsScreen** opens with the context variable named **NavigationContext** that we used earlier.  
 
 All this was also set up automatically when we used the form-customization pane to make the **SalesOrderId** field navigate to the **SalesOrderDetailsScreen**.  
 
-Therefore, when the user clicks or taps a sales order ID field, the [**If**](functions/function-if.md) function evaluates to true, and the [**Navigate**](functions/function-navigate.md) function is called with the corresponding context, opening the details screen.  
+Therefore, when the user clicks or taps a sales order ID field, the [**If**](../functions/function-if.md) function evaluates to true, and the [**Navigate**](../functions/function-navigate.md) function is called with the corresponding context, opening the details screen.  
 
 ![](media/entity-form-control/entityform-tutorial-01-21.png)  
 
