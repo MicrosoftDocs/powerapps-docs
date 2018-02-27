@@ -157,7 +157,7 @@ Other elements include:
 **[GroupBy](functions/function-groupby.md)** – Returns a table with records grouped together.
 
 ## H
-**[HashTags](../functions/function-hashtags.md)** – Extracts the hashtags (#strings) from a string.
+**[HashTags](functions/function-hashtags.md)** – Extracts the hashtags (#strings) from a string.
 
 **[Hour](functions/function-datetime-parts.md)** – Returns the hour portion of a date/time value.
 

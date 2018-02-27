@@ -125,7 +125,7 @@ Many functions in PowerApps take the name of a table as an argument, create a se
 * **[AddColumns](../functions/function-table-shaping.md)**, **[DropColumns](../functions/function-table-shaping.md)**, **[RenameColumns](../functions/function-table-shaping.md)**, **[ShowColumns](../functions/function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
 * **[Distinct](functions/function-distinct.md)** - Removes duplicates records.
 * **[Shuffle](../functions/function-shuffle.md)** - Shuffles records into a random order.
-* **[HashTags](../functions/function-hashtags.md)** - Searches for hashtags in a string.
+* **[HashTags](functions/function-hashtags.md)** - Searches for hashtags in a string.
 * **[Errors](functions/function-errors.md)** - Provides error information when you work with a data source.
 
 You can run a function on a table that contains multiple columns, even if the function requires a single column as an argument. To extract a single column from a multi-column table, use the **[ShowColumns](../functions/function-table-shaping.md)** function as an argument for the function that you want to use, as in this example:<br>**Lower( ShowColumns( Products, "Name" ) )**

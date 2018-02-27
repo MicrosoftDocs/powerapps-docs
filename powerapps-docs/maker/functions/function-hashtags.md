@@ -29,7 +29,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 * underscores
 * currency symbols (such as $)
 
-**HashTags** returns a one-column [table](../maker/working-with-tables.md) that contains the hashtags in the string.  If the string contains no hashtags, the function returns a one-column table that's [empty](function-isblank-isempty.md).
+**HashTags** returns a one-column [table](../working-with-tables.md) that contains the hashtags in the string.  If the string contains no hashtags, the function returns a one-column table that's [empty](../../functions/function-isblank-isempty.md).
 
 ## Syntax
 **HashTags**( *String* )
@@ -38,13 +38,13 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 
 ## Examples
 ### Step by step
-1. Add a **[Text input](../maker/controls/control-text-input.md)** control, name it **Tweet**, and type this sentence into it:
+1. Add a **[Text input](../controls/control-text-input.md)** control, name it **Tweet**, and type this sentence into it:
    
     **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#@")**
-2. Add a vertical custom gallery, and set its **[Items](../maker/controls/properties-core.md)** property to this function:
+2. Add a vertical custom gallery, and set its **[Items](../controls/properties-core.md)** property to this function:
    
     **HashTags(Tweet.Text)**
-3. Add a **[Label](../maker/controls/control-text-box.md)** control to the gallery template.
+3. Add a **[Label](../controls/control-text-box.md)** control to the gallery template.
    
     The gallery shows these hashtags:
    
