@@ -95,7 +95,7 @@ You can customize this or any app in these ways, among others:
 * [add another data source](add-data-connection.md)
 * [add one or more screens](add-screen-context-variables.md)
 * [add and configure more controls](add-configure-controls.md)
-* [change how the app behaves](../working-with-formulas.md)
+* [change how the app behaves](working-with-formulas.md)
 
 ## Next steps
 1. Press Ctrl-S, give your app a name, and then click or tap **Save** to save your app to the cloud.

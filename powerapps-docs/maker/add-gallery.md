@@ -144,4 +144,4 @@ In this example, you specify the first item in the **Hardwood** category of the 
 **First(Filter(FlooringEstimates, Category = "Hardwood"))**
 
 ## Next steps
-Learn how to work with [forms](working-with-forms.md) and [formulas](../working-with-formulas.md).
+Learn how to work with [forms](working-with-forms.md) and [formulas](working-with-formulas.md).

@@ -28,15 +28,15 @@ For example, you build a formula to determine how your app responds when users s
 
 You can use formulas for a wide variety of scenarios. For example, you can use your device's GPS, a map control, and a formula that uses **Location.Latitude** and **Location.Longitude** to display your current location. As you move, the map automatically tracks your location.
 
-This topic provides only an overview of working with formulas. Browse the [formula reference](maker/formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use.
+This topic provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use.
 
 ## Prerequisites
 
-* [Sign up](maker/signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
-* Learn how to [configure a control](maker/add-configure-controls.md) in PowerApps.
+* [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+* Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Show a simple value
-In Excel, you can enter a specific piece of data, such as the number **42** or the phrase **Hello World**, by typing it into a cell. That cell will always show that data exactly as you typed it. In PowerApps, you can similarly specify a piece of data that doesn't change by setting the **[Text](controls/properties-core.md)** property of a label to the exact sequence of characters that you want, surrounded by double quotation marks.
+In Excel, you can enter a specific piece of data, such as the number **42** or the phrase **Hello World**, by typing it into a cell. That cell will always show that data exactly as you typed it. In PowerApps, you can similarly specify a piece of data that doesn't change by setting the **[Text](../controls/properties-core.md)** property of a label to the exact sequence of characters that you want, surrounded by double quotation marks.
 
 1. Select **New** on the **File** menu (near the left edge of the screen).
 2. Under **Create an app**, select **Phone layout** on the **Blank app** tile.
@@ -47,20 +47,20 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
    
     This bar has two parts:
    
-   * *Property list*:  Each control and screen has a [set of properties](maker/reference-properties.md).  Use this list to select a specific property.  
-   * *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](maker/formula-reference.md).
+   * *Property list*:  Each control and screen has a [set of properties](reference-properties.md).  Use this list to select a specific property.  
+   * *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md).
      
      In the formula bar, you can see and edit properties for the selected control or for the screen if no controls are selected.  You can see the name of the selected control on the **Content** tab:
      
      ![Content bar shows the currently selected control](./media/working-with-formulas/content-tab-selection.png)
      
      You can change the name of the selected control in the **Content** tab by clicking the name.
-3. Add a **[Label](controls/control-text-box.md)** control to the screen.
+3. Add a **[Label](../controls/control-text-box.md)** control to the screen.
    
     ![Added a TextBox control](./media/working-with-formulas/add-a-label.png)
    
-    When you add a label, the property list automatically shows the **[Text](controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
-4. Set the value of the **[Text](controls/properties-core.md)** property to **"Hello World"** by typing that string, surrounded by double quotes, into the formula bar:
+    When you add a label, the property list automatically shows the **[Text](../controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
+4. Set the value of the **[Text](../controls/properties-core.md)** property to **"Hello World"** by typing that string, surrounded by double quotes, into the formula bar:
    
     ![Using the label "Hello World"](./media/working-with-formulas/label-hello-world.png)
    
@@ -70,7 +70,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
    
     > [!NOTE]
 > In PowerApps, you don't precede a formula with an equals sign or a plus sign as you do in Excel. The formula bar treats anything you type there as a formula by default. You also don't surround a formula with double quotation marks ("), as you did earlier to specify a string of text.
-5. In the **[Text](controls/properties-core.md)** property of the label, replace **"Hello World"** with **Sum(1,2,3)**.
+5. In the **[Text](../controls/properties-core.md)** property of the label, replace **"Hello World"** with **Sum(1,2,3)**.
    
     ![Typing the partial function Sum(1,2,3 without a closing parenthesis shows errors](./media/working-with-formulas/label-sum-partial.png)
    
@@ -83,21 +83,21 @@ In Excel, you type **=SUM(A1:A2)** into a cell to show the sum of whatever value
 
 ![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.png)
 
-In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the label from the previous procedure and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
+In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the label from the previous procedure and two **[Text input](../controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc1.png)
 
-Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
+Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](../controls/properties-core.md)** property is set to this formula:
 <br>**TextInput1 + TextInput2**
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc2.png)
 
-In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the **[If](functions/function-if.md)** function, which behaves similarly to how it behaves in Excel.
+In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the **[If](../functions/function-if.md)** function, which behaves similarly to how it behaves in Excel.
 
-1. Set the **[Color](controls/properties-color-border.md)** property of the label to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
+1. Set the **[Color](../controls/properties-color-border.md)** property of the label to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
    
     > [!NOTE]
-> In a formula, specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **[Text](controls/properties-core.md)** property of **TextBox1** by typing **TextBox1.Text**.
+> In a formula, specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **[Text](../controls/properties-core.md)** property of **TextBox1** by typing **TextBox1.Text**.
    
     ![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color1.png)
 2. In **TextInput1** and **TextInput2**, specify two numbers that, when added together, result in a negative number.
@@ -115,14 +115,14 @@ You can configure your app with formulas so that users can change your app's app
 2. Arrange the sliders so they don't overlap, add three labels, and configure them to show **Red**, **Green**, and **Blue**:
    
     ![Arrange sliders and add labels for each color component](./media/working-with-formulas/three-sliders.png)
-3. Set the **Max** property of each slider to 255, which is the maximum value of a color component for the **[RGBA](functions/function-colors.md)** function.
+3. Set the **Max** property of each slider to 255, which is the maximum value of a color component for the **[RGBA](../functions/function-colors.md)** function.
    
     You can specify the **Max** property by selecting it on the **Content** tab or in the property list:
    
     ![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-max.png)
-4. Select the screen by clicking away from any control, and then set the screen's **[Fill](controls/properties-color-border.md)** property to this formula:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
+4. Select the screen by clicking away from any control, and then set the screen's **[Fill](../controls/properties-color-border.md)** property to this formula:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
    
-    As already described, you access control properties by using the **.** operator.  **Slider1.Value** refers to the slider's **[Value](controls/properties-core.md)** property, which reflects where the user has placed the slider between the **Min** and **Max** values. As you type this formula, each control that it contains is color coded between the screen and the formula bar:
+    As already described, you access control properties by using the **.** operator.  **Slider1.Value** refers to the slider's **[Value](../controls/properties-core.md)** property, which reflects where the user has placed the slider between the **Min** and **Max** values. As you type this formula, each control that it contains is color coded between the screen and the formula bar:
    
     ![Change the formula for the background fill color of the screen, but not yet complete](./media/working-with-formulas/three-sliders-partial-rgba.png)
    
@@ -131,14 +131,14 @@ You can configure your app with formulas so that users can change your app's app
     ![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-complete-rgba.png)
 5. Adjust the sliders, and see how your changes affect the background color.
    
-    As each slider changes, the formula that contains the **[RGBA](functions/function-colors.md)** function is recalculated, which immediately changes how the screen appears.
+    As each slider changes, the formula that contains the **[RGBA](../functions/function-colors.md)** function is recalculated, which immediately changes how the screen appears.
    
     ![Change the formula for the background fill color of the screen, now complete](./media/working-with-formulas/three-sliders-example-colors.png)
 
 ## Manage app behavior
-You can use formulas not only to perform calculations and change appearance but also to take action. For example, you can set the **[OnSelect](controls/properties-core.md)** property of a button to a formula that includes the **[Navigate](functions/function-navigate.md)** function. When a user selects that button, the screen that you specify in the formula appears.
+You can use formulas not only to perform calculations and change appearance but also to take action. For example, you can set the **[OnSelect](../controls/properties-core.md)** property of a button to a formula that includes the **[Navigate](../functions/function-navigate.md)** function. When a user selects that button, the screen that you specify in the formula appears.
 
-You can use some functions, such as **[Navigate](functions/function-navigate.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)**, only in behavior formulas.  The formula reference calls out if you can use a function only in this context.  
+You can use some functions, such as **[Navigate](../functions/function-navigate.md)** and **[Collect](../functions/function-clear-collect-clearcollect.md)**, only in behavior formulas.  The formula reference calls out if you can use a function only in this context.  
 
 You can take more than one action in a behavior formula if you separate functions with a semi-colon (;). For example, you might want to update a context variable, push data to a data source, and finally navigate to another screen.
 

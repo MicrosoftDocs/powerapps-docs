@@ -108,4 +108,4 @@ To show all fields in a record, add and configure a **[Display form](../controls
     ![Close Preview](./media/add-form/close-preview.png)
 
 ## Next steps
-Learn more about working with [forms](working-with-forms.md) and [formulas](../working-with-formulas.md).
+Learn more about working with [forms](working-with-forms.md) and [formulas](working-with-formulas.md).
