@@ -77,7 +77,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Filter**( *DataSource*, *Formula* )](../../functions/function-filter-lookup.md)
+[**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
 
 ## Examples
 ### Show and filter data

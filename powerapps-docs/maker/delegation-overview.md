@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Understand delegation
-PowerApps includes a powerful set of functions for filtering, sorting, and shaping tables of data:  **[Filter](../functions/function-filter-lookup.md)**, **[Sort](../functions/function-sort.md)**, and **[AddColumns](../functions/function-table-shaping.md)** functions to name just a few.  With these functions, you can provide your users with focused access to the information they need.  For those with a database background, using these functions is the equivalent of writing a database query.  
+PowerApps includes a powerful set of functions for filtering, sorting, and shaping tables of data:  **[Filter](functions/function-filter-lookup.md)**, **[Sort](../functions/function-sort.md)**, and **[AddColumns](../functions/function-table-shaping.md)** functions to name just a few.  With these functions, you can provide your users with focused access to the information they need.  For those with a database background, using these functions is the equivalent of writing a database query.  
 
 The key to building efficient apps is to minimize the amount of data that needs to be brought to your device.  Perhaps only a handful of records from a sea of millions are needed, or a single aggregate value can represent thousands of records.  Or perhaps only the first set of records can be retrieved, and the rest brought in as the user gestures that they want more.  Being focused can dramatically reduce the processing power, memory, and network bandwidth needed by your app, resulting in snappier response times for your users, even on phones connected via a cellular network.  
 
@@ -42,7 +42,7 @@ The next step is to use only those formulas that can be delegated. Included here
 These lists will change over time. We're working to support more functions and operators with delegation.
 
 ### Filter functions
-**[Filter](../functions/function-filter-lookup.md)**, **[Search](../functions/function-filter-lookup.md)**, and **[LookUp](../functions/function-filter-lookup.md)** can be delegated.  
+**[Filter](functions/function-filter-lookup.md)**, **[Search](functions/function-filter-lookup.md)**, and **[LookUp](functions/function-filter-lookup.md)** can be delegated.  
 
 Within the **Filter** and **LookUp** functions, the following can be used with columns of the table to select the appropriate records:
 

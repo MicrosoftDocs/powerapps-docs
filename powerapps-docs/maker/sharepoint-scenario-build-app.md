@@ -502,7 +502,7 @@ What does this formula do? When you select an item in the gallery and click the 
 
 * The [**Patch** function](../functions/function-patch.md) modifies one or more records of a data source.
 
-* The [**LookUp** function](../functions/function-filter-lookup.md) finds the first record in a table that satisfies a formula.
+* The [**LookUp** function](functions/function-filter-lookup.md) finds the first record in a table that satisfies a formula.
 
 When you put the functions together in the formula, here's what happens:
 

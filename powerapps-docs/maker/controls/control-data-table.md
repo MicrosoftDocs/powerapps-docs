@@ -80,8 +80,8 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * [**Y**](properties-size-location.md) – The distance between the top edge of the **Data table** control and the top edge of its parent container (or the top edge of the screen if there is no parent container).
 
 ## Related functions
-* [**Filter(DataSource, Formula)**](../../functions/function-filter-lookup.md)(*DataSource*, *Formula*)
-* [**Search(DataSource, SearchString, Column)**](../../functions/function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
+* [**Filter(DataSource, Formula)**](../functions/function-filter-lookup.md)(*DataSource*, *Formula*)
+* [**Search(DataSource, SearchString, Column)**](../functions/function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
 
 ## Examples
 ### Basic usage

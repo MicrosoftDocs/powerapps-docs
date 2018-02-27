@@ -143,7 +143,7 @@ This section is optional, but it will help you understand more about how formula
 But what does this formula do? It determines the source of data that appears in the gallery, filters the data based on any text entered in the search box, and sorts the results based on the sort button in the app. The formula uses *functions* to do its work. Functions take parameters (i.e. input), perform an operation (like filtering), and return a value (i.e. output):
 
 * The [**SortByColumns** function](../functions/function-sort.md) sorts a table based on one or more columns.
-* The [**Filter** function](../functions/function-filter-lookup.md) finds the records in a table that satisfy a formula that you specify.
+* The [**Filter** function](functions/function-filter-lookup.md) finds the records in a table that satisfy a formula that you specify.
 * The [**StartsWith** function](../functions/function-startswith.md) tests whether one text string begins with another.
 * The [**If** function](../functions/function-if.md) returns one value if a condition is true, and returns another value if the same condition is false.
 

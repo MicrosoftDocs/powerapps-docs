@@ -29,7 +29,7 @@ The **Ungroup** function reverses the **GroupBy** process. This function returns
 You can group records by using **GroupBy**, modify the table that it returns, and then ungroup records in the modified table by using **Ungroup**. For example, you can remove a group of records by following this approach:
 
 * Use the **GroupBy** function.
-* Use the **[Filter](function-filter-lookup.md)** function to remove the entire group of records.
+* Use the **[Filter](../maker/functions/function-filter-lookup.md)** function to remove the entire group of records.
 * Use the **Ungroup** function.  
 
 You can also aggregate results based on a grouping:

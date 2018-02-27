@@ -143,7 +143,7 @@ Other elements include:
 **[Exp](../functions/function-numericals.md)** - Returns *e* raised to a power.
 
 ## F
-**[Filter](../functions/function-filter-lookup.md)** – Returns a filtered table based on one or more criteria.
+**[Filter](functions/function-filter-lookup.md)** – Returns a filtered table based on one or more criteria.
 
 **[Find](../functions/function-find.md)** – Checks whether one string appears within another and returns the location.
 
@@ -193,7 +193,7 @@ Other elements include:
 
 **[Location](../functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
-**[LookUp](../functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
+**[LookUp](functions/function-filter-lookup.md)** – Looks up a single record in a table based on one or more criteria.
 
 **[Lower](../functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all lowercase.
 
@@ -271,7 +271,7 @@ Other elements include:
 ## S
 **[SaveData](../functions/function-savedata-loaddata.md)** – Saves a collection to PowerApps private storage.
 
-**[Search](../functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
+**[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
 **[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
 

@@ -97,7 +97,7 @@ ms.author: sharik
 
 10. **For apps that are created from data, only the first 500 records of a data source can be accessed**.
 
-     In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](../functions/function-filter-lookup.md) article for more details about delegation.
+     In general, PowerApps works with any size data source by delegating operations to the data source. For operations that can't be delegated, PowerApps will give a warning at authoring time and operate on only the first 500 records of the data source.  See the [Filter function](functions/function-filter-lookup.md) article for more details about delegation.
 
 11. **Excel data must be formatted as a table**.
 
