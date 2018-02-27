@@ -48,7 +48,7 @@ This article shows you how to delete an app from your PowerApps account and from
     ![](./media/delete-app/delete-button.png)
 
 ## More resources
-[Share an app](share-app.md)  
-[Change app name and tile](set-name-tile.md)  
-[Restore an app to a previous version](restore-an-app.md)  
+[Share an app](../share-app.md)  
+[Change app name and tile](../set-name-tile.md)  
+[Restore an app to a previous version](../restore-an-app.md)  
 

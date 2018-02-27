@@ -60,11 +60,11 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
 * If you click or tap **Edit in PowerApps**, the app opens in a separate browser tab where you can update the app in PowerApps Studio for the web.
 * If you click or tap **Make this view public**, other people in your organization can view it. By default, only you can see views that you create. If you want to allow other people to edit your app, you need to [share it with them](share-app.md), and then grant **Contributor** permissions.
-* If you click or tap **Remove this view**, you'll remove the view from SharePoint, but the app will remain in PowerApps unless you [delete it](delete-app.md).
+* If you click or tap **Remove this view**, you'll remove the view from SharePoint, but the app will remain in PowerApps unless you [delete it](maker/delete-app.md).
 
 ## Next steps
 * To add or update items in the list, see the "Manage the list using the app" section in [Open app from a SharePoint Online list](open-app-embedded-in-sharepoint.md).
 * To customize the browse screen (which appears by default), see [Customize a layout](maker/customize-layout-sharepoint.md).
 * To customize the details or edit screens, see [Customize a form](maker/customize-forms-sharepoint.md).
-* If you want to delete the app, remove the view from SharePoint, and then [delete the app](delete-app.md) from PowerApps.
+* If you want to delete the app, remove the view from SharePoint, and then [delete the app](maker/delete-app.md) from PowerApps.
 

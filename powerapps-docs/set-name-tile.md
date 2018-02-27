@@ -52,5 +52,5 @@ On the **File** menu, click or tap **Save** to republish your app with the new s
 
 ## More resources
 * [Share an app](share-app.md)
-* [Delete an app](delete-app.md)
+* [Delete an app](maker/delete-app.md)
 * [Restore an app to a previous version](restore-an-app.md)
