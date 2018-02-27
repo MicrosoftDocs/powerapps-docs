@@ -256,7 +256,7 @@ Other elements include:
 
 **[ResetForm](functions/function-form.md)** – Resets a form control for editing of an existing item.
 
-**[Revert](../functions/function-revert.md)** – Reloads and clears errors for the records of a data source.
+**[Revert](functions/function-revert.md)** – Reloads and clears errors for the records of a data source.
 
 **[RGBA](functions/function-colors.md)** – Returns a color value for a set of red, green, blue, and alpha components.
 
