@@ -33,7 +33,7 @@ As an enterprise developer, empower your organization to build robust tailored s
 
 - **Embed apps**: Embed apps directly into your website experiences to create integrated solutions, surfacing apps where people in your organization already do their work. [Learn more](embed-apps-dev.md)
 
-- **Build offline-capable apps**: Develop offline-capable apps so your users are productive whether they are online or offline. [Learn more](../offline-apps.md)
+- **Build offline-capable apps**: Develop offline-capable apps so your users are productive whether they are online or offline. [Learn more](offline-apps.md)
 
 - **Work with data using the Common Data Service SDK**: Use the Common Data Service SDK with Azure Functions to extend your query and data manipulation capabilities in PowerApps. [Learn more](https://aka.ms/whgr2w)
 

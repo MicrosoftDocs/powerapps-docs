@@ -24,13 +24,13 @@ One of the most common scenarios you face as a mobile app developer is enabling 
 
 * Launch the PowerApps mobile app when offline.
 * Run apps you develop when offline.
-* Determine when an app is offline, online, or in a metered connection by using the [Connection](functions/signals.md#connection) signal object.
-* Use [collections](maker/create-update-collection.md) and leverage functions such as [LoadData and SaveData](functions/function-savedata-loaddata.md) for basic data storage when offline.
+* Determine when an app is offline, online, or in a metered connection by using the [Connection](../functions/signals.md#connection) signal object.
+* Use [collections](../maker/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../functions/function-savedata-loaddata.md) for basic data storage when offline.
 
 ## How to build offline capable apps
-The first thing to think about in offline scenarios is how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](maker/connections-list.md) that the platform provides, such as SharePoint, Office 365, and the Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
+The first thing to think about in offline scenarios is how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../maker/connections-list.md) that the platform provides, such as SharePoint, Office 365, and the Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
-![PowerApps app with connectors](media/offline-apps/online-app.png)
+![PowerApps app with connectors](./media/offline-apps/online-app.png)
 
 ### Handling offline data
 One of the most interesting aspects of PowerApps is its set of capabilities and formulas that enable you to filter, search, sort, aggregate, and manipulate data in a consistent way regardless of the data source. Sources range from in-memory collections in the app, to SharePoint lists, to SQL databases and the Common Data Service. This consistency enables you to easily retarget an app to use a different backend. More importantly here, it also enables you to use local collections for data management with almost no changes to an app's logic. In fact, local collections are the primary mechanism for handling offline data.
@@ -43,18 +43,18 @@ At a high level, the app does the following:
 1. On app startup (based on the first screen's **OnVisible** property):
    
    * If the device is online, we access the Twitter connector directly to fetch data, and populate a collection with that data.
-   * If the device is offline, we load the data from a local cache file using [LoadData](functions/function-savedata-loaddata.md).
+   * If the device is offline, we load the data from a local cache file using [LoadData](../functions/function-savedata-loaddata.md).
    * We enable the user to submit tweets - if online we post directly to Twitter and refresh the local cache.
 2. Every 5 minutes, if online:
    
    * We post any tweets that we have in the local cache.
-   * We refresh the local cache and save it using [SaveData](functions/function-savedata-loaddata.md).
+   * We refresh the local cache and save it using [SaveData](../functions/function-savedata-loaddata.md).
 
 ### Step 1: Create a new phone app
 1. Open PowerApps Studio.
 2. Click or tap **New** > **Blank app** > **Phone layout**.
    
-    ![Blank app, phone layout](media/offline-apps/blank-app.png)
+    ![Blank app, phone layout](./media/offline-apps/blank-app.png)
 
 ### Step 2: Add a Twitter connection
 
@@ -64,7 +64,7 @@ At a high level, the app does the following:
 
 3. Enter your credentials, and create the connection.
    
-    ![Add a Twitter connection](media/offline-apps/twitter-connection.png)
+    ![Add a Twitter connection](./media/offline-apps/twitter-connection.png)
 
 ### Step 3: Load tweets into a LocalTweets collection on app startup
 Select the **OnVisible** property for **Screen1** in the app, and copy in the following formula:
@@ -89,7 +89,7 @@ LoadData(LocalTweetsToPost, "LocalTweets", true);
 SaveData(LocalTweets, "Tweets")
 ```
 
-![Formula to load tweets](media/offline-apps/load-tweets.png)
+![Formula to load tweets](./media/offline-apps/load-tweets.png)
 
 This formula checks if the device is online:
 
@@ -179,7 +179,7 @@ This formula checks if the device is online. If it is, the app tweets all the it
 
 Now that the app is finished, let's check out how it looks before we move on to testing. On the left, the app is connected; and on the right, it's offline, with one tweet ready to post when it's online again.
 
-![Finished app with online and offline modes](media/offline-apps/finished-app.png)
+![Finished app with online and offline modes](./media/offline-apps/finished-app.png)
 
 ## Testing the app
 Use the following steps to test the app:
