@@ -89,7 +89,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 ### Get data from the user
 * [Get text](control-text-input.md#collect-data)
 * [Get images](../maker/controls/control-add-picture.md#add-images-to-an-image-gallery-control)
-* [Get photos](control-camera.md#example)
+* [Get photos](../maker/controls/control-camera.md#example)
 * [Get sounds](control-microphone.md#example)
 * [Get drawings](control-pen-input.md#create-a-set-of-images)
 

@@ -32,7 +32,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Button](controls/control-button.md)** – Interact with the app by clicking or tapping.
 
-**[Camera](../controls/control-camera.md)** – Take and save photos in the app or to a data source.
+**[Camera](controls/control-camera.md)** – Take and save photos in the app or to a data source.
 
 **[Card](../controls/control-card.md)** – Display and edit an individual field of a record in a **[Edit form](../controls/control-form-detail.md)** or **[Display form](../controls/control-form-detail.md)** control.
 
@@ -138,12 +138,12 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[BorderThickness](../controls/properties-color-border.md)** – The thickness of a control's border.  Applies to many controls.
 
-**[Brightness](../controls/control-camera.md)** – How much light the user is likely to perceive in an image.  Applies to the **[Camera](../controls/control-camera.md)** control.
+**[Brightness](controls/control-camera.md)** – How much light the user is likely to perceive in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 ### C
 **[CalculateOriginalDimensions](../controls/control-image.md)** – Enables the **[OriginalHeight](../controls/control-image.md)** and **[OriginalWidth](../controls/control-image.md)** properties.  Applies to the **[Image](../controls/control-image.md)** control.
 
-**[Camera](../controls/control-camera.md)** – On a device that has more than one camera, the numeric ID of the camera that the app uses.  Applies to the **[Camera](../controls/control-camera.md)** control.
+**[Camera](controls/control-camera.md)** – On a device that has more than one camera, the numeric ID of the camera that the app uses.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[CheckboxBackgroundFill](../controls/control-check-box.md)** – The background color of the box that surrounds the checkmark in a checkbox control.  Applies to the **[Check box](../controls/control-check-box.md)** control.
 
@@ -161,7 +161,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Color](../controls/properties-color-border.md)** – The color of text in a control.  Applies to many controls.
 
-**[Contrast](../controls/control-camera.md)** – How easily the user can distinguish between similar colors in an image.  Applies to the **[Camera](../controls/control-camera.md)** control.
+**[Contrast](controls/control-camera.md)** – How easily the user can distinguish between similar colors in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[CurrentFindText](../controls/control-pdf-viewer.md)** – The current search term that is in use.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
 
@@ -331,7 +331,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnStop](../controls/control-microphone.md)** – The behavior of an app when the user stops recording with a microphone control. Applies to the **[Microphone](../controls/control-microphone.md)** control.
 
-**[OnStream](../controls/control-camera.md)** – The behavior of an app when the **[Stream](../controls/control-camera.md)** property is updated.  Applies to the **[Camera](../controls/control-camera.md)** control.
+**[OnStream](controls/control-camera.md)** – The behavior of an app when the **[Stream](controls/control-camera.md)** property is updated.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[OnSuccess](../controls/control-form-detail.md)** – The behavior of an app when a data operation has been successful.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
 
@@ -366,7 +366,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Paused](controls/control-audio-video.md)** – *True* if a media playback control is currently paused, *false* otherwise.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
-**[Photo](../controls/control-camera.md)** – The image captured  when the user takes a picture.  Applies to the **[Camera](../controls/control-camera.md)** control.
+**[Photo](controls/control-camera.md)** – The image captured  when the user takes a picture.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[Pressed](controls/control-button.md)** – *True* while a control is being pressed, *false* otherwise.  Applies to the **[Button](controls/control-button.md)** control.
 
@@ -444,9 +444,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[StartYear](../controls/control-date-picker.md)** – The earliest year to which the user can set the value of a date-picker control.  Applies to the **[Date Picker](../controls/control-date-picker.md)** control.
 
-**[Stream](../controls/control-camera.md)** – Automatically updated image based on the **[StreamRate](../controls/control-camera.md)** property.  Applies to the **[Camera](../controls/control-camera.md)** control.
+**[Stream](controls/control-camera.md)** – Automatically updated image based on the **[StreamRate](controls/control-camera.md)** property.  Applies to the **[Camera](controls/control-camera.md)** control.
 
-**[StreamRate](../controls/control-camera.md)** – How often to update the image on the **[Stream](../controls/control-camera.md)** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).  Applies to the **[Camera](../controls/control-camera.md)** control.
+**[StreamRate](controls/control-camera.md)** – How often to update the image on the **[Stream](controls/control-camera.md)** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[Strikethrough](../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.  Applies to many controls.
 
@@ -513,4 +513,4 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[YLabelAngle](../controls/control-column-line-chart.md)** – The angle of the labels next to the y-axis of a line or column chart.  Applies to **[Column chart](../controls/control-column-line-chart.md)** and **[Line chart](../controls/control-column-line-chart.md)** controls.
 
 ### Z
-**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.  Applies to **[Camera](../controls/control-camera.md)** and **[PDF viewer](../controls/control-pdf-viewer.md)** controls.
+**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.  Applies to **[Camera](controls/control-camera.md)** and **[PDF viewer](../controls/control-pdf-viewer.md)** controls.
