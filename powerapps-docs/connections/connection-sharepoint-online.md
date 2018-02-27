@@ -55,7 +55,7 @@ Open PowerApps by taking *either* of these steps:
 
 * [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
 
-    For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](../create-app-browser.md).
+    For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](../maker/create-app-browser.md).
 
 ## Create an app
 * [Generate an app automatically](../maker/app-from-sharepoint.md) based on data in a SharePoint list.

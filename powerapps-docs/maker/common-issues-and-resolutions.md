@@ -30,7 +30,7 @@ ms.author: sharik
 
 1. **Camera controls in PowerApps Studio for Windows**
 
-    PowerApps Studio for Windows may crash if you add a camera control or open an app that uses a camera control. To avoid this problem, use [PowerApps Studio for web](../create-app-browser.md) when adding or using a camera control.
+    PowerApps Studio for Windows may crash if you add a camera control or open an app that uses a camera control. To avoid this problem, use [PowerApps Studio for web](create-app-browser.md) when adding or using a camera control.
 
 2. **Release 2.0.700 on Android devices**
 
@@ -81,7 +81,7 @@ ms.author: sharik
 
 6. **Creating and modifying apps in a browser**
 
-    You can do many, but not all, of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. For more information, see [Create an app in a browser](../create-app-browser.md).
+    You can do many, but not all, of the same things in PowerApps Studio for web as you can in PowerApps Studio for Windows. For more information, see [Create an app in a browser](create-app-browser.md).
 
 7. **Changing a Title field in an entity**
 
