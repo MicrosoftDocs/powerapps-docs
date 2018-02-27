@@ -132,7 +132,7 @@ In an environment, all the users in the Azure AD tenant are users of that enviro
   
     * View and manage all resources created within an environment.
   
-    * Set data loss prevention policies. For more information, see [Data loss prevention policies](../prevent-data-loss.md).
+    * Set data loss prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
 
 * The **Environment Maker** role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow. Environment Makers can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users, security groups, or all users in the organization. For more information, see [Share an app in PowerApps](../share-app.md).
 
@@ -168,7 +168,7 @@ The ability to create and modify a database schema and to connect to the data st
 > 
 
 ## Data policies
-An organization's data must be protected so that it isn't shared with audiences that should not have access to it. To protect this data, you can create and enforce policies that define which consumer services and connector-specific business data can be shared with. Policies that define how data can be shared are referred to as data loss prevention (DLP) policies. You can manage the DLP policies for your environments  from the **Data Policies** section of the [PowerApps admin center][1].  For more information, see [Data loss prevention policies](../prevent-data-loss.md).
+An organization's data must be protected so that it isn't shared with audiences that should not have access to it. To protect this data, you can create and enforce policies that define which consumer services and connector-specific business data can be shared with. Policies that define how data can be shared are referred to as data loss prevention (DLP) policies. You can manage the DLP policies for your environments  from the **Data Policies** section of the [PowerApps admin center][1].  For more information, see [Data loss prevention policies](prevent-data-loss.md).
 
 ![](./media/environment-admin/data-policies.png)
 

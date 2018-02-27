@@ -24,7 +24,7 @@ ms.author: deonhe
 In the [admin center](https://admin.powerapps.com), you can:
 
 * Manage users, permissions and roles in [environments](environments-administration.md). (PowerApps P2 plan required)
-* Manage [data loss prevention policies](../prevent-data-loss.md), which control how business data is shared with services in PowerApps. (PowerApps P2 plan or Office 365 Global administrator permissions required)
+* Manage [data loss prevention policies](prevent-data-loss.md), which control how business data is shared with services in PowerApps. (PowerApps P2 plan or Office 365 Global administrator permissions required)
 
 Any changes that you make in the admin center are immediately available to users within the organization.     
 

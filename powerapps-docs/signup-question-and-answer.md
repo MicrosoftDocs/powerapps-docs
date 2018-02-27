@@ -50,7 +50,7 @@ Any individual can try out the features of Microsoft PowerApps Plan 2 for 90 day
 
 If a person signs up for a 90 day trial of Microsoft PowerApps Plan 2, and you choose to not support them inside of your organization, they can in no way incur costs to your company. When an individual signs up for Microsoft PowerApps, that is a relationship between that individual and Microsoft directly, like any many public cloud services from Microsoft, such as Bing, Wunderlist, OneDrive or Outlook.com, and does not in any way imply that the service is provided by your organization.
 
-Finally, if your company wishes to restrict the use of organizational-only data inside of Microsoft PowerApps, that is possible through Data loss prevention (DLP) policies. For more details, See [Data loss prevention (DLP) policies](prevent-data-loss.md).
+Finally, if your company wishes to restrict the use of organizational-only data inside of Microsoft PowerApps, that is possible through Data loss prevention (DLP) policies. For more details, See [Data loss prevention (DLP) policies](administrator/prevent-data-loss.md).
 
 ## Administration of PowerApps
 ### Why has the PowerApps icon appeared in the Office 365 app launcher?
@@ -99,7 +99,7 @@ Removing of the PowerApps license or service for a user in your organization wil
     ![](./media/signup-question-and-answer/office-waffle.png)
 
 ### How can I restrict my users' ability to access my organization's business data using PowerApps?
-PowerApps allows you to create data zones for business and non-business data, as shown below.  Once these data loss prevention policies are implemented, users are prevented from designing or running PowerApps that combine business and non-business data. For more details, See [Data loss prevention (DLP) policies](prevent-data-loss.md).
+PowerApps allows you to create data zones for business and non-business data, as shown below.  Once these data loss prevention policies are implemented, users are prevented from designing or running PowerApps that combine business and non-business data. For more details, See [Data loss prevention (DLP) policies](administrator/prevent-data-loss.md).
 
 ![](./media/signup-question-and-answer/data-loss-prevention-policy.png)
 

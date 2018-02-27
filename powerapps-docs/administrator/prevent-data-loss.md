@@ -34,7 +34,7 @@ Benefits of a DLP policy
 ### Prerequisites
 In order to create, edit, or delete DLP policies, the following items are required:
 
-* Either environment admin or tenant admin permissions. You can learn more about permissions in the [environments topic](administrator/environments-administration.md)
+* Either environment admin or tenant admin permissions. You can learn more about permissions in the [environments topic](environments-administration.md)
 
 ### Create a DLP policy
 In order to create a DLP policy, you must have permissions to at least one environment.  
@@ -45,7 +45,7 @@ Follow these steps to create a DLP policy that prevents data that is stored in y
    ![Sign in](./media/prevent-data-loss/create-policy-1.png)    
 2. Enter the name of the DLP policy as *Secure Data Access for Contoso* in the **Data Policy Name** label at the top of the page that opens:   
    ![Sign in](./media/prevent-data-loss/create-policy-2.png)  
-3. Select the [environment](administrator/environments-administration.md) on the **Applies to** tab.  
+3. Select the [environment](environments-administration.md) on the **Applies to** tab.  
    ![Sign in](./media/prevent-data-loss/create-policy-3.png)  
 4. Select the **Data groups** tab:  
    ![Sign in](./media/prevent-data-loss/create-policy-4.png)  
@@ -71,7 +71,7 @@ Admins can use the search feature from the Admin center to find specific DLP pol
 > Admins should publish all DLP policies so that users in the organization are aware of the policies prior to creating PowerApps.
 
 #### Makers
-If you don't have admin permissions and you wish to learn more about the DLP policies in your organization, contact your administrator. You can also learn more from the [maker environments topic](administrator/environments-overview.md)  
+If you don't have admin permissions and you wish to learn more about the DLP policies in your organization, contact your administrator. You can also learn more from the [maker environments topic](environments-overview.md)  
 
 > [!NOTE]
 > Only admins can edit or delete DLP policies.  
@@ -100,10 +100,10 @@ Your policy has now been updated. You can confirm that the changes have been mad
 Your policy has now been deleted. You can confirm that the policy is no longer listed in the data loss prevention policies list by selecting the **Data Policies** link on the left and reviewing the list of policies.   
 
 ### DLP policy permissions
-Only tenant and environment admins can create and modify DLP policies. Learn more about permissions in the [environments](administrator/environments-administration.md) topic.  
+Only tenant and environment admins can create and modify DLP policies. Learn more about permissions in the [environments](environments-administration.md) topic.  
 
 ## Next steps
-* [Learn more about environments](administrator/environments-administration.md)  
-* [Learn more about Microsoft PowerApps](maker/getting-started.md)  
-* [Learn more about the admin center](administrator/introduction-to-the-admin-center.md)  
+* [Learn more about environments](environments-administration.md)  
+* [Learn more about Microsoft PowerApps](../maker/getting-started.md)  
+* [Learn more about the admin center](introduction-to-the-admin-center.md)  
 
