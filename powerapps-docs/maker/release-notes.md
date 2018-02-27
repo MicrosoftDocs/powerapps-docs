@@ -70,4 +70,4 @@ For information about known limitations, see [Common issues and resolutions](com
 
 ## Sept. 6
 1. For apps that you create, [track usage](../administrator/app-analytics.md) in an embedded dashboard from Power BI.
-2. Use a delimiter to break a text string into parts by using the **[Split](../functions/function-split.md)** function.
+2. Use a delimiter to break a text string into parts by using the **[Split](functions/function-split.md)** function.

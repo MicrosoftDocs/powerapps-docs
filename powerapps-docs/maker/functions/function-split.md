@@ -26,7 +26,7 @@ The **Split** function breaks a text string into a table of substrings.  Use **S
 
 A separator string is used to break the text string apart.  The separator can be zero, one, or more characters that are matched as a whole in the text string.  Using a zero length or *blank* string results in each character being broken out individually.  The matched separator characters are not returned in the result.  If no separator match is found then the entire text string is returned as a single result.
 
-Use the **[Concat](../maker/functions/function-concatenate.md)** function to recombine the string (without the separators).  
+Use the **[Concat](function-concatenate.md)** function to recombine the string (without the separators).  
 
 ## Syntax
 **Split**( *Text*, *Separator* )
@@ -38,7 +38,7 @@ Use the **[Concat](../maker/functions/function-concatenate.md)** function to rec
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Split( "Apples,&nbsp;Oranges,&nbsp;Bananas", "," )** |Splits the different fruits apart, based on the comma separator.  The split is performed based on only the comma and not the space after it, resulting in a space at the front of "&nbsp;Oranges" and "&nbsp;Bananas". |<style> img { max-width: none; } </style> ![](media/function-split/fruit1.png) |
-| **TrimEnds( Split( "Apples,&nbsp;Oranges,&nbsp;Bananas", "," ) )** |Same as the previous example, but in this case the space is removed by the [**TrimEnds** function](function-trim.md), operating on the single column table that is produced by **Split**. We could have also used the separator **",&nbsp;"** which includes the space after the comma, but that would not have worked properly if there is no space or there are two spaces. |<style> img { max-width: none; } </style> ![](media/function-split/fruit2.png) |
+| **TrimEnds( Split( "Apples,&nbsp;Oranges,&nbsp;Bananas", "," ) )** |Same as the previous example, but in this case the space is removed by the [**TrimEnds** function](../../functions/function-trim.md), operating on the single column table that is produced by **Split**. We could have also used the separator **",&nbsp;"** which includes the space after the comma, but that would not have worked properly if there is no space or there are two spaces. |<style> img { max-width: none; } </style> ![](media/function-split/fruit2.png) |
 | **Split( "08/28/17", "/" )** |Splits the date apart, using a forward slash as the separator. |<style> img { max-width: none; } </style> ![](media/function-split/date.png) |
 | **Split( "Hello,&nbsp;World", "," )** |Splits the words apart, using a comma as the separator.  The second result starts with a space since this was the character immediately following the comma. |<style> img { max-width: none; } </style> ![](media/function-split/comma.png) |
 | **Split( "Hello,&nbsp;World", "o" )** |Splits the string apart, using the character "o" as the separator. |<style> img { max-width: none; } </style> ![](media/function-split/o.png) |

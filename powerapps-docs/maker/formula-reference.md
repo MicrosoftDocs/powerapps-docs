@@ -287,7 +287,7 @@ Other elements include:
 
 **[SortByColumns](functions/function-sort.md)** – Returns a sorted table based on one or more columns.
 
-**[Split](../functions/function-split.md)** – Splits a text string into a table of substrings.
+**[Split](functions/function-split.md)** – Splits a text string into a table of substrings.
 
 **[Sqrt](functions/function-numericals.md)** – Returns the square root of a number.
 
