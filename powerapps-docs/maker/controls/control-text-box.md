@@ -109,7 +109,7 @@ A label shows data that you specify as a literal string of text, which appears e
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Text**( *Number*, "*FormatCodes*" )](../../functions/function-text.md)
+[**Text**( *Number*, "*FormatCodes*" )](../functions/function-text.md)
 
 ## Examples
 ### Show a literal string

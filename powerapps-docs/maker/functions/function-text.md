@@ -27,7 +27,7 @@ The **Text** function formats a number or a date/time value based on one of thes
 * A predefined date/time format, which you specify by using the **DateTimeFormat** enumeration.  For dates and times, this approach is preferred as it automatically adjusts to each user's language and location.
 * A custom format, a string of text that comprises placeholders that describe how to format the number or the date/time value. Placeholders define how many digits to show, whether grouping separators should be used, and how to display the name of a month. PowerApps supports a subset of the placeholders that Microsoft Excel does.
 
-See [working with dates and times](../maker/show-text-dates-times.md) for more information.
+See [working with dates and times](../show-text-dates-times.md) for more information.
 
 ### <a name="predefined-datetime-formats"></a> Predefined date/time formats
 | Predefined Format | Description |
@@ -107,7 +107,7 @@ The **Text** function is globally aware.  For a wide array of languages, it know
 * **The language of the custom format:** For authors, how should a custom format be interpreted?  The separator characters (**.** and **,**) have different meanings in different languages.  This is handled with a special placeholder containing a language tag.  Even easier, the [predefined date/time formats](#predefined-datetime-formats) are language agnostic.
 * **The language of the result:** For users, what language should be used in the result of the function?  Names for months and weekdays need to be in the appropriate language for the user of the app.  This is handled with a third optional argument to the **Text** function. 
 
-For both, the language is provided with a [language tag](../maker/functions/function-language.md#language-tags).  To see the list of supported languages type **Text( 1234, "", )** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.
+For both, the language is provided with a [language tag](function-language.md#language-tags).  To see the list of supported languages type **Text( 1234, "", )** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.
 
 #### Custom format language placeholder
 To specify the language of the custom format, use:

@@ -23,7 +23,7 @@ PowerApps is a global product.  You can build and use apps in many different lan
 
 Both while building and running apps, the text displayed by PowerApps has been translated into a variety of languages.  You will see menu items, dialog boxes, ribbon tabs, and other text in your native language.  Typing in and displaying dates and numbers is also adapted for your particular language and region.  For example, some regions of the world use "." as a decimal separator while others use ",".  
 
-The apps you create can be globally aware as well.  Use the **[Language](functions/function-language.md)**, **[Text](../functions/function-text.md)**, **[Value](../functions/function-value.md)**, **[DateValue](functions/function-datevalue-timevalue.md)** and other functions to adapt what is displayed and used as input in different languages.   
+The apps you create can be globally aware as well.  Use the **[Language](functions/function-language.md)**, **[Text](functions/function-text.md)**, **[Value](../functions/function-value.md)**, **[DateValue](functions/function-datevalue-timevalue.md)** and other functions to adapt what is displayed and used as input in different languages.   
 
 ## Language settings
 When using the native studio or a native player, the language used is provided by the host operating system.  For Windows, this can be controlled under "All Settings" and then "Time & language" settings.  Windows also allows you to specify the characters to use for the decimal separator, overriding the language setting.  
@@ -107,7 +107,7 @@ For more information, see the documentation for the **[Language](functions/funct
 ### Formatting numbers, dates, and times
 Numbers, dates, and times are written in different formats in different parts of the world.  The meaning of commas, decimals, and the order of month, date, and year vary from location to location.   
 
-The **[Text](../functions/function-text.md)** function formats numbers and dates using the language setting of the user.
+The **[Text](functions/function-text.md)** function formats numbers and dates using the language setting of the user.
 
 **Text** requires a format string to know how you want to format the number or date.  This format string can take one of two forms:
 
@@ -118,7 +118,7 @@ The "[$-en-US]" on the front of the custom format string tells **Text** in which
 
 The third argument to **Text** specifies which language to use for the result of the function.  The default is the language setting of the current user.
 
-For more information, see the documentation for the **[Text](../functions/function-text.md)** function.      
+For more information, see the documentation for the **[Text](functions/function-text.md)** function.      
 
 ### Reading numbers, dates, and times
 There are four functions for reading numbers, dates, and times provided by the user:

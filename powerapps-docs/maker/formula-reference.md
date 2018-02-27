@@ -308,7 +308,7 @@ Other elements include:
 
 **[Tan](../functions/function-trig.md)** - Returns the tangent of an angle specified in radians.
 
-**[Text](../functions/function-text.md)** – Formats a number as a string for display.
+**[Text](functions/function-text.md)** – Formats a number as a string for display.
 
 **[ThisItem](../../functions/operators.md#thisitem-operator)** – When in a gallery or form, returns the data for the current item from the container.
 

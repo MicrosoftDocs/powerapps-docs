@@ -36,7 +36,7 @@ You can use these functions to display dates and times in the language of the cu
 | **Clock.AmPmShort()** |Single-column table containing the short uppercase "A" and "P" designations.  If the language uses a 24-hour clock, the table will be empty. |
 | **Clock.IsClock24()** |Boolean indicating if a 24-hour clock is used in this locale. |
 
-Use the **[Text](../../functions/function-text.md)** function to format date and time values using this same information.  The **[Language](function-language.md)** function returns the current language and region code.
+Use the **[Text](function-text.md)** function to format date and time values using this same information.  The **[Language](function-language.md)** function returns the current language and region code.
 
 ## Syntax
 **Calendar.MonthsLong**()
