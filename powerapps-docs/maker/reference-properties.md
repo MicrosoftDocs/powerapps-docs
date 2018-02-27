@@ -56,7 +56,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Entity form](entity-form-control.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Common Data Service.
 
-**[Export](../controls/control-export-import.md)** – Export data for use elsewhere in PowerApps.
+**[Export](controls/control-export-import.md)** – Export data for use elsewhere in PowerApps.
 
 **[Gallery](../controls/control-gallery.md)** – Show a list of records that can contain multiple types of data.
 
@@ -66,7 +66,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Image](../controls/control-image.md)** – Show an image from, for example, a local file or a data source.
 
-**[Import](../controls/control-export-import.md)** – Import data from elsewhere in PowerApps.
+**[Import](controls/control-export-import.md)** – Import data from elsewhere in PowerApps.
 
 **[Line chart](controls/control-column-line-chart.md)** – Show values as data points relative to two axes.
 
@@ -168,7 +168,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[CurrentPage](../controls/control-pdf-viewer.md)** – The number of the page in a PDF file that is actually being shown.  Applies to the **[PDF viewer](../controls/control-pdf-viewer.md)** control.
 
 ### D
-**[Data](../controls/control-export-import.md)** – The name of a collection that you want to export to a local file.  Applies to the **[Export](../controls/control-export-import.md)** control.
+**[Data](controls/control-export-import.md)** – The name of a collection that you want to export to a local file.  Applies to the **[Export](controls/control-export-import.md)** control.
 
 **[DataField](controls/control-card.md)** – The name of the field within a record that this card displays and edits.  Applies to the **[Card](controls/control-card.md)** control.
 
@@ -350,7 +350,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Overflow](../controls/control-text-box.md)** – Whether a scrollbar appears in a label if its **[Wrap](../controls/control-text-box.md)** property is set to **true** and the value of the control's **[Text](../controls/properties-core.md)** property contains more characters than the control can show at one time.  Applies to the **[Label](../controls/control-text-box.md)** control.
 
 ### P
-**[Padding](../controls/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Export](../controls/control-export-import.md)**, and **[Import](../controls/control-export-import.md)** controls.
+**[Padding](../controls/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Export](controls/control-export-import.md)**, and **[Import](controls/control-export-import.md)** controls.
 
 **[PaddingBottom](../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.  Applies to many controls.
 
