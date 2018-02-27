@@ -22,13 +22,13 @@ ms.author: gregli
 Returns information about the current user.
 
 ## Description
-The **User** function returns a [record](../maker/working-with-tables.md#records) of information about the current user:
+The **User** function returns a [record](../working-with-tables.md#records) of information about the current user:
 
 | Property | Description |
 | --- | --- |
 | **User().Email** |Email address of the current user. |
 | **User().FullName** |Full name of the current user, including first and last names. |
-| **User().Image** |Image of the current user. This will be an image URL of the form "blob:*identifier*". Set the **[Image](../maker/controls/properties-visual.md)** property of the **[Image](../maker/controls/control-image.md)** control to this value to display the image in the app. |
+| **User().Image** |Image of the current user. This will be an image URL of the form "blob:*identifier*". Set the **[Image](../controls/properties-visual.md)** property of the **[Image](../controls/control-image.md)** control to this value to display the image in the app. |
 
 > [!NOTE]
 > The information returned is for the current PowerApps user.  It will match the "Account" information that is displayed in the PowerApps players and studio, which can be found outside of any authored apps.  This may not match the current user's information in Office 365 or other services.

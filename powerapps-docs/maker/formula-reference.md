@@ -335,7 +335,7 @@ Other elements include:
 
 **[Upper](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all uppercase.
 
-**[User](../functions/function-user.md)** – Returns information about the current user.
+**[User](functions/function-user.md)** – Returns information about the current user.
 
 ## V
 **[Validate](../functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.
