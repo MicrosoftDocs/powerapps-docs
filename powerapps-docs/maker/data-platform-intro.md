@@ -32,7 +32,7 @@ The Common Data Service allows you to securely store and manage data within a se
 
 Each entity contains a set of records that users can create, read, update, and delete. You can create relationships between entities so that you can look up information in one entity based on a record in another entity. For example, you could create a custom entity to track events which a customer had attended. By adding the Customer to your custom entity as a lookup field, you establish a relationship between the two entities which can be leveraged in your app and in reporting.
 
-For information on purchasing a plan for using the Common Data Service, see [Pricing info](pricing-billing-skus.md).
+For information on purchasing a plan for using the Common Data Service, see [Pricing info](../pricing-billing-skus.md).
 
 ## Why use entities?
 Entities within the Common Data Service, both standard and custom, allow a secure and cloud-based storage option for your data. Entities allow you to create a business-focused definition of your data for use within your apps. If you're not sure if entities are your best option, consider these benefits:
@@ -48,7 +48,7 @@ Entities within the Common Data Service, both standard and custom, allow a secur
 When you develop an app, you can use standard entities, custom entities, or both. If a standard entity can serve a particular purpose in your app, you should use it rather than developing a custom entity that does the same thing. If a standard entity would serve a purpose with a few changes, you can add fields to suit your needs.
 
 * The Common Data Service provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts for an organization, such as Contacts, Accounts, and Products. For a full list of entities, see [Standard entities](data-platform-intro.md#standard-entities).
-* You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](maker/data-platform-create-entity.md).
+* You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](data-platform-create-entity.md).
 
 > [!NOTE]
 > If possible, use standard entities (with custom fields added, if required). This will ensure that you can benefit from new features or apps that leverage these entities in the future.
@@ -58,7 +58,7 @@ When you develop an app, you can use standard entities, custom entities, or both
 Each field has a name, display name, data type, and some simple validation. Data types include, for example, **text**, **date**, or **number**. Validation ensures that required fields contain data and records are unique if the entity requires them to be. Every field falls into one of three categories: system fields, standard fields, or custom fields.
 
 ### System fields
-All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. For more information, see [System and record title fields](maker/data-platform-create-entity.md#system-fields-and-the-record-title-field). These are the most important system fields:
+All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. For more information, see [System and record title fields](data-platform-create-entity.md#system-fields-and-the-record-title-field). These are the most important system fields:
 
 * **Created Record Date** - The date and time when a record was created.
 * **Created By** - The user who created the record.
@@ -72,7 +72,7 @@ Each standard entity contains a set of default fields that you can't change or d
 You can create custom fields in either a standard entity or a custom entity. You must specify the name, display name, and data type of each custom field. For a complete list of supported types, see [Entity field data types](https://docs.microsoft.com/common-data-service/entity-reference/field-data-types).
 
 ## Lookup relationships
-You can navigate between records in entities if they have a relationship that's defined as a field of the **Lookup** data type. To create a lookup relationship, add a field of data type **Lookup** in one entity, and point to the entity in which you want to look up information. For more information, see [Entity relationships via lookup field](maker/data-platform-entity-lookup.md).
+You can navigate between records in entities if they have a relationship that's defined as a field of the **Lookup** data type. To create a lookup relationship, add a field of data type **Lookup** in one entity, and point to the entity in which you want to look up information. For more information, see [Entity relationships via lookup field](data-platform-entity-lookup.md).
 
 ## Standard entities
 For a list of the entities and their fields, and a list of the enumerations, see [Standard entities](https://docs.microsoft.com/common-data-service/entity-reference/standard-entities).
@@ -86,7 +86,7 @@ For a list of the entities and their fields, and a list of the enumerations, see
 | Sales |The Sales entities let you create end-to-end sales solutions, from tracking leads and opportunities, to following through with contacts, accepting and delivering orders, and sending invoices. |
 
 ## Get started
-Try it out by creating an app using a standard entity or [create a custom entity](maker/data-platform-create-entity.md), and then [create an app that uses that entity](maker/data-platform-create-app.md).
+Try it out by creating an app using a standard entity or [create a custom entity](data-platform-create-entity.md), and then [create an app that uses that entity](data-platform-create-app.md).
 
 <!--TODO - Add Link for Standard entity app - Template? -->
 

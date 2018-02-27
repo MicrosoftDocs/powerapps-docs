@@ -21,7 +21,7 @@ ms.author: kfend
 You can create and update one or more custom fields in any entity. When you create a custom field, you specify a set of properties, such as the field's name, its display name, and the type of data that it will contain. For more information, see [Enity field data types](https://docs.microsoft.com/common-data-service/entity-reference/field-data-types) and [Entity field properties](https://docs.microsoft.com/common-data-service/entity-reference/field-properties).
 
 > [!NOTE]
-> Every entity has [system fields](maker/data-platform-create-entity.md#system-fields-and-the-record-title-field), such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](data-platform-intro.md#standard-entities) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
+> Every entity has [system fields](maker/data-platform-create-entity.md#system-fields-and-the-record-title-field), such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](maker/data-platform-intro.md#standard-entities) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
 
@@ -39,7 +39,7 @@ You can create and update one or more custom fields in any entity. When you crea
 5. Under **Type**, specify the type of data that the field will contain, such as **Text** or **Number**.
    
     > [!IMPORTANT]
-    > Specify this property carefully, because you might not be able to change it after the field contains data. For information about the types of data that you can specify, see [Understand entities](data-platform-intro.md#custom-fields).
+    > Specify this property carefully, because you might not be able to change it after the field contains data. For information about the types of data that you can specify, see [Understand entities](maker/data-platform-intro.md#custom-fields).
 
 6. If you're prompted, specify additional information for the data type that you specified.
 
