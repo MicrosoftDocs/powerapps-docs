@@ -30,7 +30,7 @@ Use the **Patch** function to modify one or more records of a data source.  The 
 
 **Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: “1-212-555-1234” } )**
 
-Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. Use this behavior to build a [single screen](../maker/working-with-data-sources.md) for both creating and editing records. For example, this formula creates a record for a customer named Contoso:
+Use **Patch** with the **[Defaults](../maker/functions/function-defaults.md)** function to create records. Use this behavior to build a [single screen](../maker/working-with-data-sources.md) for both creating and editing records. For example, this formula creates a record for a customer named Contoso:
 
 **Patch( Customers, Defaults( Customer ), { Name: “Contoso” } )**
 
@@ -43,7 +43,7 @@ Even if you're not working with a data source, you can use **Patch** to merge tw
 To use this function with a data source, specify the data source, and then specify a base record:
 
 * To modify a record, the base record needs to have come from a data source.  The base record may have come through a gallery's **[Items](../maker/controls/properties-core.md)** property, been placed in a [context variable](../maker/working-with-variables.md#create-a-context-variable), or come through some other path. But you should be able to trace the base record back to the data source.  This is important as the record will include additional information to help find the record again for modification.  
-* To create a record, use the **[Defaults](function-defaults.md)** function to create a base record with default values.  
+* To create a record, use the **[Defaults](../maker/functions/function-defaults.md)** function to create a base record with default values.  
 
 Then specify one or more change records, each of which contains new property values that override property values in the base record. Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
@@ -70,14 +70,14 @@ Specify two or more records that you want to merge. Records are processed in ord
 **Patch**( *DataSource*, *BaseRecord*, *ChangeRecord1* [, *ChangeRecord2*, … ])
 
 * *DataSource* – Required. The data source that contains the record that you want to modify or will contain the record that you want to create.
-* *BaseRecord* – Required. The record to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](function-defaults.md)** is used, a record is created.
+* *BaseRecord* – Required. The record to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](../maker/functions/function-defaults.md)** is used, a record is created.
 * *ChangeRecord(s)* – Required.  One or more records that contain properties to modify in the *BaseRecord*.  Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
 #### Modify or create a set of records in a data source
 **Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1*, [, *ChangeRecordTable2*, … ] )
 
 * *DataSource* – Required. The data source that contains the records that you want to modify or will contain the records that you want to create.
-* *BaseRecordTable* – Required. A table of records to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](function-defaults.md)** is used, a record is created.
+* *BaseRecordTable* – Required. A table of records to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](../maker/functions/function-defaults.md)** is used, a record is created.
 * *ChangeRecordTable(s)* – Required.  One or more tables of records that contain properties to modify for each record of the *BaseRecordTable*.  Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
 #### Merge records
@@ -94,7 +94,7 @@ In these examples, you'll modify or create a record in a data source, named **Ic
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Patch(&nbsp;IceCream,<br>First( Filter( IceCream, Flavor = "Chocolate" ) ), {&nbsp;Quantity:&nbsp;400&nbsp;} )** |Modifies a record in the **IceCream** data source:<ul><li> The **ID** column of the record to modify contains the value of **1**. (The **Chocolate** record has that ID.)</li><li>The value in the **Quantity** column changes to **400**. |{&nbsp;ID:&nbsp;1, Flavor:&nbsp;"Chocolate", Quantity:&nbsp;400 }<br><br>The **Chocolate** entry in the **IceCream** data source has been modified. |
-| **Patch( IceCream, Defaults(&nbsp;IceCream ), {&nbsp;Flavor:&nbsp;“Strawberry”&nbsp;}&nbsp;)** |Creates a record in the **IceCream** data source:<ul><li>The **ID** column contains the value **3**, which the data source generates automatically.</li><li>The **Quantity** column contains **0**, which is the default value for that column in the **IceCream** data source, as the **[Defaults](function-defaults.md)** function specifies.<li>The **Flavor** column contains the value of **Strawberry**.</li> |{ ID:&nbsp;3, Flavor:&nbsp;“Strawberry”, Quantity:&nbsp;0&nbsp;}<br><br>The **Strawberry** entry in the **IceCream** data source has been created. |
+| **Patch( IceCream, Defaults(&nbsp;IceCream ), {&nbsp;Flavor:&nbsp;“Strawberry”&nbsp;}&nbsp;)** |Creates a record in the **IceCream** data source:<ul><li>The **ID** column contains the value **3**, which the data source generates automatically.</li><li>The **Quantity** column contains **0**, which is the default value for that column in the **IceCream** data source, as the **[Defaults](../maker/functions/function-defaults.md)** function specifies.<li>The **Flavor** column contains the value of **Strawberry**.</li> |{ ID:&nbsp;3, Flavor:&nbsp;“Strawberry”, Quantity:&nbsp;0&nbsp;}<br><br>The **Strawberry** entry in the **IceCream** data source has been created. |
 
 After the previous formulas have been evaluated, the data source ends with these values:
 

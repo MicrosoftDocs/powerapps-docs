@@ -182,7 +182,7 @@ Functions that return records:
 * **[FirstN](../functions/function-first-last.md)**, **[LastN](../functions/function-first-last.md)** - Returns the first or last record or records of the table.
 * **[Lookup](../functions/function-filter-lookup.md)** - Returns the first record from a table that matches one or more criteria.
 * **[Patch](../functions/function-patch.md)** - Updates a data source or merges records.
-* **[Defaults](../functions/function-defaults.md)** - Returns the default values for a data source.
+* **[Defaults](functions/function-defaults.md)** - Returns the default values for a data source.
 
 Properties that return records:
 

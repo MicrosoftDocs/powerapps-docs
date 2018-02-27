@@ -60,7 +60,7 @@ You can use table data sources the same way that you use an internal PowerApps t
   * Records can be modified with the **[Patch](../functions/function-patch.md)**, **[Update](../functions/function-update-updateif.md)**, and **[UpdateIf](../functions/function-update-updateif.md)** functions.
   * Records can be removed with the **[Remove](../functions/function-remove-removeif.md)** and **[RemoveIf](../functions/function-remove-removeif.md)** functions.
   * Errors when working with a data source are available through the **[Errors](../functions/function-errors.md)** function.
-* The **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](../functions/function-defaults.md)**, and **[Validate](../functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
+* The **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](functions/function-defaults.md)**, and **[Validate](../functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
 
 ### Creating data sources
 PowerApps can't be used to create a connected data source, or modify its structure; the data source must already exist in a service somewhere. For example, to create a table in an Excel workbook stored on OneDrive, you first use Excel Online on OneDrive to create a workbook. Next you create a connection to it from your app.  

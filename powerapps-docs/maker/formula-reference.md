@@ -115,7 +115,7 @@ Other elements include:
 
 **[Day](functions/function-datetime-parts.md)** – Retrieves the day portion of a date/time value.  
 
-**[Defaults](../functions/function-defaults.md)** – Returns the default values for a data source.
+**[Defaults](functions/function-defaults.md)** – Returns the default values for a data source.
 
 **[Degrees](../functions/function-trig.md)** - Converts radians to degrees.
 
