@@ -117,7 +117,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 4. Add a label, and set its **[Text](properties-core.md)** property to this formula:
    <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
 
-    Want more information about the **[RoundUp](../../functions/function-round.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[RoundUp](../functions/function-round.md)** function or [other functions](../formula-reference.md)?
 
     The label shows how many seconds remain before the timer restarts.
 5. (optional) Set the timer's **[Visible](properties-core.md)** property to **false**.

@@ -262,11 +262,11 @@ Other elements include:
 
 **[Right](functions/function-left-mid-right.md)** – Returns the right-most portion of a string.
 
-**[Round](../functions/function-round.md)** – Rounds to the closest number.
+**[Round](functions/function-round.md)** – Rounds to the closest number.
 
-**[RoundDown](../functions/function-round.md)** – Rounds down to the largest previous number.
+**[RoundDown](functions/function-round.md)** – Rounds down to the largest previous number.
 
-**[RoundUp](../functions/function-round.md)** – Rounds up to the smallest next number.
+**[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
 **[SaveData](../functions/function-savedata-loaddata.md)** – Saves a collection to PowerApps private storage.
