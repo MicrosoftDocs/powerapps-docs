@@ -35,5 +35,5 @@ See the [list of available connections](../connections-list.md), and learn how t
 
 ### Next steps
 * Learn how to [show data from a data source](../add-gallery.md).
-* Learn how to [view details and create or update records](../add-form.md).
+* Learn how to [view details and create or update records](../maker/add-form.md).
 

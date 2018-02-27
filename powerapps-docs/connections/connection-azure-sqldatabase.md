@@ -109,7 +109,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 ## Next steps
 * Learn how to [show data from a data source](../add-gallery.md).
-* Learn how to [view details and create or update records](../add-form.md).
+* Learn how to [view details and create or update records](../maker/add-form.md).
 * See other types of [data sources](../connections-list.md) to which you can connect.  
 * [Understand tables and records](../working-with-tables.md) with tabular data sources.
 
