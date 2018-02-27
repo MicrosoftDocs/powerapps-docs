@@ -59,7 +59,7 @@ Then enter the following info:
 | Property | Description |
 | --- | --- |
 | Environment name |Enter the name of your environment. |
-| Region |Choose the location to host your environment. We recommend using a location closest to your users. For example, if your app users are in London, choose a Europe location. If your app users are in New York, choose the U.S. See [Supported regions](../regions-overview.md) for a list of supported environment regions. |
+| Region |Choose the location to host your environment. We recommend using a location closest to your users. For example, if your app users are in London, choose a Europe location. If your app users are in New York, choose the U.S. See [Supported regions](regions-overview.md) for a list of supported environment regions. |
 | Create a database for this environment |Select this check box to create a Common Data Service database for this environment. A database can be configured to either be open to all users in the environment or restricted to database roles. For more information, see [Configure database security](database-security.md). |
 
 ![](./media/environment-admin/new-environment-updated.png)
