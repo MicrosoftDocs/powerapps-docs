@@ -27,7 +27,7 @@ To show all fields in a record, add and configure a **[Display form](../controls
 * Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 * Upload the Excel file to a [cloud-storage account](../connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 * In a new or existing app, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
-* If you're using an existing app, [add a screen](../add-screen-context-variables.md) to it.
+* If you're using an existing app, [add a screen](add-screen-context-variables.md) to it.
 
 ## Add a form, and show data
 1. Add a **[Drop down](../controls/control-drop-down.md)** control, name it **ChooseProduct**, and set its **[Items](../controls/properties-core.md)** property to this value:

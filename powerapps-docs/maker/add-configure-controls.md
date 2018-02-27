@@ -53,7 +53,7 @@ On the **Insert** tab, click or tap any of these categories, and then click or t
 **Icons**
 
 > [!TIP]
-> If you need more space for controls, [add another screen](../add-screen-context-variables.md).
+> If you need more space for controls, [add another screen](add-screen-context-variables.md).
 
 ## Configure a control directly
 In this procedure, you'll add and configure a **Label** control, but you can apply many of the same principles to other controls.

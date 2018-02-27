@@ -55,7 +55,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 4. If you're new to PowerApps:
 
    * Learn how to [add a control and set its properties](maker/add-configure-controls.md), which determine how the control appears and behaves.
-   * Learn how to [add and rename a screen](add-screen-context-variables.md).
+   * Learn how to [add and rename a screen](maker/add-screen-context-variables.md).
 
 ## Create a blank app, and connect to data
 1. In PowerApps Studio, click or tap **New** on the **File menu** (near the left edge of the screen).

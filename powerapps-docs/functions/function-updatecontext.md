@@ -91,5 +91,5 @@ Every context variable is scoped to a screen. If you want to define a context va
     On the **Target** screen, the label appears in the language that corresponds to the button that you selected.
 10. Press Esc to return to the default workspace.
 
-[Another example](../add-screen-context-variables.md)
+[Another example](../maker/add-screen-context-variables.md)
 

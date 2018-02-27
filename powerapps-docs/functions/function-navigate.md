@@ -76,5 +76,5 @@ You can use these functions only within a [behavior formula](../working-with-for
 4. Add a button to **AddlScreen**, and set its **[OnSelect](../controls/properties-core.md)** property to this function:<br>**Navigate(DefaultScreen, ScreenTransition.Fade)**
 5. From the **AddlScreen**, press F5, and then select the button.<br>**DefaultScreen** appears.
 
-[Another example](../add-screen-context-variables.md)
+[Another example](../maker/add-screen-context-variables.md)
 
