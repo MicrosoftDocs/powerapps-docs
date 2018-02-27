@@ -27,7 +27,7 @@ A label shows data that you specify as a literal string of text, which appears e
 ## Key properties
 **[AutoHeight](../../controls/properties-core.md)** – Set to true to allow the label to auto-grow its height to show all text configurated. Set to false to truncate the text to the height assigned.
 
-**[Color](../../controls/properties-color-border.md)** – The color of text in a control.
+**[Color](properties-color-border.md)** – The color of text in a control.
 
 **[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -40,31 +40,31 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **AutoHeight** – Whether a label automatically increases its **[Height](../../controls/properties-size-location.md)** property if its **[Text](../../controls/properties-core.md)** property contains more characters than the control can show at one time.
 
-**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
 **[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](../../controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](../../controls/properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](../../controls/properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 **[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[HoverColor](../../controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-**[HoverFill](../../controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
 **[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
 
@@ -82,11 +82,11 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[PaddingTop](../../controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[PressedBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-**[PressedColor](../../controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-**[PressedFill](../../controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 

@@ -25,20 +25,20 @@ A control in which the user can draw, erase, and highlight areas of an image.
 The user can use this control like a whiteboard, drawing diagrams and writing words that can be converted to typed text.
 
 ## Key properties
-**[Color](../../controls/properties-color-border.md)** – The color of input strokes.
+**[Color](properties-color-border.md)** – The color of input strokes.
 
 **Mode** – The control is in **Draw** or **Erase** mode.  Select mode has been deprecated.
 
 ## Additional properties
-**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
 **[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -46,7 +46,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-**[SelectionColor](../../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
+**[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
 **SelectionThickness** – The thickness of the selection tool for a pen-input control.
 

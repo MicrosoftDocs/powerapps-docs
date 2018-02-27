@@ -27,7 +27,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 ## Key properties
 **[BackgroundImage](../../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.
 
-**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 ## Additional properties
 **[ImagePosition](../../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
@@ -58,7 +58,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
     Want more information about the **[Navigate](../../functions/function-navigate.md)** function or [other functions](../formula-reference.md)?
 4. In **Target**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
    **Navigate(Source, ScreenTransition.Fade)**
-5. Set the **[Fill](../../controls/properties-color-border.md)** property of **Target** to this formula:<br>
+5. Set the **[Fill](properties-color-border.md)** property of **Target** to this formula:<br>
    **If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))**
 6. From **Source**, press F5, click or tap either option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control.
    

@@ -78,13 +78,13 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 **[WidthFit](../../controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space in a container control such as an **[Edit form](control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](../working-with-form-layout.md).
 
 ## Additional properties
-**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 

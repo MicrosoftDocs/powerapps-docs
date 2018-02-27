@@ -43,11 +43,11 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **IsSearchable** – Whether the user can search for items before selecting.
 
 ## Additional properties
-**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
 **[Default](../../controls/properties-core.md)** – The initial selection before it is changed by the user in single-select mode.
 

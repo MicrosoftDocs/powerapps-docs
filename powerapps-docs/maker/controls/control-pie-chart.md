@@ -30,17 +30,17 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 **ShowLabels** – Whether a pie chart shows the value that's associated with each of its wedges.
 
 ## Additional properties
-**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[Color](../../controls/properties-color-border.md)** – The color of text in a control.
+**[Color](properties-color-border.md)** – The color of text in a control.
 
 **[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](../../controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
 **Explode** – The distance between wedges in a pie chart.
 
@@ -48,7 +48,7 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
 **ItemBorderColor** – The color of the border around each wedge in a pie chart.
 
@@ -60,7 +60,7 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 
 **[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-**[PressedBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 

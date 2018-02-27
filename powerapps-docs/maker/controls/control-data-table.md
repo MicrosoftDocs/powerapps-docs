@@ -55,11 +55,11 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * **Selected** – The selected row in the **Data table** control.
 
 ## Other properties
-* [**BorderColor**](../../controls/properties-color-border.md) – The color of the **Data table** control's border.
-* [**BorderStyle**](../../controls/properties-color-border.md) – The style of the **Data table** control's border. The options are **Solid**, **Dashed**, **Dotted**, and **None**.
-* [**BorderThickness**](../../controls/properties-color-border.md) – The thickness of the **Data table** control's border.
-* [**Color**](../../controls/properties-color-border.md) – The default text color for all data rows.
-* [**Fill**](../../controls/properties-color-border.md) – The default background color for all data rows.
+* [**BorderColor**](properties-color-border.md) – The color of the **Data table** control's border.
+* [**BorderStyle**](properties-color-border.md) – The style of the **Data table** control's border. The options are **Solid**, **Dashed**, **Dotted**, and **None**.
+* [**BorderThickness**](properties-color-border.md) – The thickness of the **Data table** control's border.
+* [**Color**](properties-color-border.md) – The default text color for all data rows.
+* [**Fill**](properties-color-border.md) – The default background color for all data rows.
 * [**Font**](../../controls/properties-text.md) - The default font for all data rows.
 * [**FontWeight**](../../controls/properties-text.md) – The default font weight for all data rows.
 * **HeadingColor** – The text color for the column headings.
@@ -68,8 +68,8 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * **HeadingFontWeight** – The font weight of the column headings.
 * **HeadingSize** – The font size of the column headings.
 * [**Height**](../../controls/properties-size-location.md) – The distance between the **Data table** control's top and bottom edges.
-* [**HoverColor**](../../controls/properties-color-border.md) – The text color for the row that the mouse pointer is pointing at.
-* [**HoverFill**](../../controls/properties-color-border.md) – The background color of the row that the mouse pointer is pointing at.
+* [**HoverColor**](properties-color-border.md) – The text color for the row that the mouse pointer is pointing at.
+* [**HoverFill**](properties-color-border.md) – The background color of the row that the mouse pointer is pointing at.
 * **NoDataText** – The message that the user receives when there are no records to show in the **Data table** control.
 * **SelectedColor** – The color of the text in the selected row.
 * **SelectedFill** – The background color of the selected row.

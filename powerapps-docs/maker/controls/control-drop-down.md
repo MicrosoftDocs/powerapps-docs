@@ -34,29 +34,29 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **Selected** – The selected item.
 
 ## Additional properties
-**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[FocusedBorderThickness](../../controls/properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **ChevronBackground** – The color behind the down arrow in a dropdown list.
 
 **ChevronFill** – The color of the down arrow in a dropdown list.
 
-**[Color](../../controls/properties-color-border.md)** – The color of text in a control.
+**[Color](properties-color-border.md)** – The color of text in a control.
 
 **[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](../../controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](../../controls/properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](../../controls/properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -64,11 +64,11 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[HoverColor](../../controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-**[HoverFill](../../controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
 **[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
 
@@ -84,17 +84,17 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[PaddingTop](../../controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[PressedBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-**[PressedColor](../../controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-**[PressedFill](../../controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
 **[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
 
-**[SelectionColor](../../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
+**[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
-**[SelectionFill](../../controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.
+**[SelectionFill](properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 

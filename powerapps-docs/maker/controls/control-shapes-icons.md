@@ -25,7 +25,7 @@ Graphics for which you can configure appearance and behavior properties.
 These controls include arrows, geometric shapes, action icons, and symbols for which you can configure properties such as fill, size, and location. You can also configure their **[OnSelect](../../controls/properties-core.md)** property so that the app responds if the user clicks or taps the control.
 
 ## Key properties
-**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 **[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
@@ -34,11 +34,11 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverFill](../../controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[PressedBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-**[FocusedBorderThickness](../../controls/properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
 

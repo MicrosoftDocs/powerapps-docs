@@ -34,25 +34,25 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 
 **AutoDisableOnSelect** – Automatically disables the control while the **OnSelect** behavior is running.
 
-**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
+**[BorderColor](properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[FocusedBorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border when it has keyboard focus.
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when it has keyboard focus.
 
-**[Color](../../controls/properties-color-border.md)** – The color of text in a control.
+**[Color](properties-color-border.md)** – The color of text in a control.
 
 **[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](../../controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](../../controls/properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](../../controls/properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
 
-**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
+**[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -60,11 +60,11 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[HoverBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+**[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[HoverColor](../../controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+**[HoverColor](properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
 
-**[HoverFill](../../controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+**[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
 **[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
 
@@ -78,11 +78,11 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 
 **Pressed** – *True* while a control is being pressed, *false* otherwise.
 
-**[PressedBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-**[PressedColor](../../controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[PressedColor](properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
 
-**[PressedFill](../../controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
 **[RadiusBottomLeft](../../controls/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
 
@@ -170,11 +170,11 @@ By default, PowerApps creates a rectangular **Button** control with rounded corn
    * Set the values for **[RadiusTopLeft](../../controls/properties-size-location.md)** and **[RadiusTopRight](../../controls/properties-size-location.md)** to **300**, and the values for **[RadiusBottomLeft](../../controls/properties-size-location.md)** and **[RadiusBottomRight](../../controls/properties-size-location.md)** to **100** to create a tab-shaped button.
 
 #### Change a button's color when you hover over it
-By default, the fill color of a **Button** control will dim by 20% when you hover over it with a mouse. You can adjust this behavior by changing the **[HoverFill](../../controls/properties-color-border.md)** property, which uses the **[ColorFade](../../functions/function-colors.md)** function. If you set the **[ColorFade](../../functions/function-colors.md)** formula to a positive percentage, the color becomes lighter when you hover over the button, while a negative percentage makes the color darker.
+By default, the fill color of a **Button** control will dim by 20% when you hover over it with a mouse. You can adjust this behavior by changing the **[HoverFill](properties-color-border.md)** property, which uses the **[ColorFade](../../functions/function-colors.md)** function. If you set the **[ColorFade](../../functions/function-colors.md)** formula to a positive percentage, the color becomes lighter when you hover over the button, while a negative percentage makes the color darker.
 
-* Change the **[ColorFade](../../functions/function-colors.md)** percentage in the **[HoverFill](../../controls/properties-color-border.md)** property of one of the buttons that you created, and observe the effects.
+* Change the **[ColorFade](../../functions/function-colors.md)** percentage in the **[HoverFill](properties-color-border.md)** property of one of the buttons that you created, and observe the effects.
 
-You can also specify the color of a **Button** control by setting its **[HoverFill](../../controls/properties-color-border.md)** property to a formula that contains the **[ColorValue](../../functions/function-colors.md)** function instead of the **[ColorFade](../../functions/function-colors.md)** function, as in **ColorValue("Red")**.
+You can also specify the color of a **Button** control by setting its **[HoverFill](properties-color-border.md)** property to a formula that contains the **[ColorValue](../../functions/function-colors.md)** function instead of the **[ColorFade](../../functions/function-colors.md)** function, as in **ColorValue("Red")**.
 
 > [!NOTE]
 > The color value can be any CSS color definition, either a name or a hex value.

@@ -48,7 +48,7 @@ Notice that the **TextBox1** control is selected, showing its **[Text](../contro
 
 The formula for **TextBox1** has been automatically recalculated, showing the new value.
 
-In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](../controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](../functions/function-if.md)** function should look very familiar from Excel:
+In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](../functions/function-if.md)** function should look very familiar from Excel:
 <br>**If( Value(TextBox1.Text) < 0, Red, Black )**
 
 ![](media/working-with-variables/recalc-color1.png)

@@ -103,7 +103,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
 
 ## Common properties by category
-**[Color and border](../controls/properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
+**[Color and border](controls/properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
 
 **[Core](../controls/properties-core.md)** – Configure whether the user can see and interact with a control.
 
@@ -132,11 +132,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### B
 **[BackgroundImage](../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
-**[BorderColor](../controls/properties-color-border.md)** – The color of a control's border.  Applies to many controls.
+**[BorderColor](controls/properties-color-border.md)** – The color of a control's border.  Applies to many controls.
 
-**[BorderStyle](../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.  Applies to many controls.
+**[BorderStyle](controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.  Applies to many controls.
 
-**[BorderThickness](../controls/properties-color-border.md)** – The thickness of a control's border.  Applies to many controls.
+**[BorderThickness](controls/properties-color-border.md)** – The thickness of a control's border.  Applies to many controls.
 
 **[Brightness](controls/control-camera.md)** – How much light the user is likely to perceive in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
@@ -159,7 +159,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Clear](controls/control-text-input.md)** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
-**[Color](../controls/properties-color-border.md)** – The color of text in a control.  Applies to many controls.
+**[Color](controls/properties-color-border.md)** – The color of text in a control.  Applies to many controls.
 
 **[Contrast](controls/control-camera.md)** – How easily the user can distinguish between similar colors in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
@@ -184,11 +184,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Disabled](../controls/properties-core.md)** – Whether the user can interact with the control.  Applies to many controls.
 
-**[DisabledBorderColor](../controls/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../controls/properties-core.md)** property is set to **true**.  Applies to many controls.
+**[DisabledBorderColor](controls/properties-color-border.md)** – The color of a control's border if the control's **[Disabled](../controls/properties-core.md)** property is set to **true**.  Applies to many controls.
 
-**[DisabledColor](../controls/properties-color-border.md)** – The color of text in a control if its **[Disabled](../controls/properties-core.md)** property is set to **true**.  Applies to many controls.
+**[DisabledColor](controls/properties-color-border.md)** – The color of text in a control if its **[Disabled](../controls/properties-core.md)** property is set to **true**.  Applies to many controls.
 
-**[DisabledFill](../controls/properties-color-border.md)** – The background color of a control if its **[Disabled](../controls/properties-core.md)** property is set to **true**.  Applies to many controls.
+**[DisabledFill](controls/properties-color-border.md)** – The background color of a control if its **[Disabled](../controls/properties-core.md)** property is set to **true**.  Applies to many controls.
 
 **[DisplayName](controls/control-card.md)** – The user friendly name for a field in a data source.  Applies to the **[Card](controls/control-card.md)** control.
 
@@ -212,7 +212,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Explode](controls/control-pie-chart.md)** – The distance between wedges in a pie chart.  Applies to the **[Pie chart](controls/control-pie-chart.md)** control.
 
 ### F
-**[Fill](../controls/properties-color-border.md)** – The background color of a control.  Applies to many controls.
+**[Fill](controls/properties-color-border.md)** – The background color of a control.  Applies to many controls.
 
 **[FindNext](controls/control-pdf-viewer.md)** – Finds the next instance of **FindText** in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -238,11 +238,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[HintText](controls/control-text-input.md)** – Light-grey text that appears in a text-input control if it's blank.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
-**[HoverBorderColor](../controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.  Applies to many controls.
+**[HoverBorderColor](controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.  Applies to many controls.
 
-**[HoverColor](../controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.  Applies to many controls.
+**[HoverColor](controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.  Applies to many controls.
 
-**[HoverFill](../controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.  Applies to many controls.
+**[HoverFill](controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.  Applies to many controls.
 
 **[HTMLText](controls/control-html-text.md)** – Text that appears in an HTML text control and that may contain HTML tags.  Applies to the **[HTML text](controls/control-html-text.md)** control.
 
@@ -370,11 +370,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Pressed](controls/control-button.md)** – *True* while a control is being pressed, *false* otherwise.  Applies to the **[Button](controls/control-button.md)** control.
 
-**[PressedBorderColor](../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.  Applies to many controls.
+**[PressedBorderColor](controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.  Applies to many controls.
 
-**[PressedColor](../controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.  Applies to many controls.
+**[PressedColor](controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.  Applies to many controls.
 
-**[PressedFill](../controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.  Applies to many controls.
+**[PressedFill](controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.  Applies to many controls.
 
 ### R
 **[RadioBackgroundFill](controls/control-radio.md)** – The background color of the circles in a radio-button control.  Applies to the **[Radio](controls/control-radio.md)** control.
@@ -412,9 +412,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[SelectedDate](controls/control-date-picker.md)** – The date currently selected in a date control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
-**[SelectionColor](../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](controls/control-list-box.md)**, and **[Pen input](controls/control-pen-input.md)** controls.
+**[SelectionColor](controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](controls/control-list-box.md)**, and **[Pen input](controls/control-pen-input.md)** controls.
 
-**[SelectionFill](../controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](controls/control-drop-down.md)** and **[List Box](controls/control-list-box.md)** controls.
+**[SelectionFill](controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](controls/control-drop-down.md)** and **[List Box](controls/control-list-box.md)** controls.
 
 **[SelectionThickness](controls/control-pen-input.md)** – The thickness of the selection tool for a pen-input control.  Applies to the **[Pen input](controls/control-pen-input.md)** control.
 

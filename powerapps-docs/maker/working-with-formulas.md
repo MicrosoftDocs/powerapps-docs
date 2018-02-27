@@ -94,7 +94,7 @@ Regardless of what numbers you type in the text-input controls, the label always
 
 In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the **[If](../functions/function-if.md)** function, which behaves similarly to how it behaves in Excel.
 
-1. Set the **[Color](../controls/properties-color-border.md)** property of the label to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
+1. Set the **[Color](controls/properties-color-border.md)** property of the label to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
    
     > [!NOTE]
 > In a formula, specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **[Text](../controls/properties-core.md)** property of **TextBox1** by typing **TextBox1.Text**.
@@ -120,7 +120,7 @@ You can configure your app with formulas so that users can change your app's app
     You can specify the **Max** property by selecting it on the **Content** tab or in the property list:
    
     ![Change the maximum value of each slider](./media/working-with-formulas/three-sliders-max.png)
-4. Select the screen by clicking away from any control, and then set the screen's **[Fill](../controls/properties-color-border.md)** property to this formula:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
+4. Select the screen by clicking away from any control, and then set the screen's **[Fill](controls/properties-color-border.md)** property to this formula:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
    
     As already described, you access control properties by using the **.** operator.  **Slider1.Value** refers to the slider's **[Value](../controls/properties-core.md)** property, which reflects where the user has placed the slider between the **Min** and **Max** values. As you type this formula, each control that it contains is color coded between the screen and the formula bar:
    
