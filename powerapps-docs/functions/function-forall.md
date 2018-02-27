@@ -78,7 +78,7 @@ To create this data source as a collection, set the **OnSelect** property of a *
 
 * **ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )**
 
-This example also uses a [Microsoft Translator](../connections/connection-microsoft-translator.md) connection.  To add this connection to your app, see the topic about how to [manage connections](../maker/add-manage-connections.md).
+This example also uses a [Microsoft Translator](../maker/connections/connection-microsoft-translator.md) connection.  To add this connection to your app, see the topic about how to [manage connections](../maker/add-manage-connections.md).
 
 | Formula | Description | Result |
 | --- | --- | --- |
