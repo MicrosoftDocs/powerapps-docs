@@ -21,7 +21,7 @@ ms.author: sharik
 # Customize a gallery layout in PowerApps
 After you generate an app automatically in PowerApps, customize the browse screen, which appears by default. Specify which layout to use, which columns to show, and which columns to use when sorting and filtering records.
 
-* For information about how to generate an app automatically, see [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md).
+* For information about how to generate an app automatically, see [Generate an app to manage data in a SharePoint list](maker/app-from-sharepoint.md).
 * If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
 ## Prerequisites
@@ -34,7 +34,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 3. Add these items to the list that you just created.
    
     ![Sample data](./media/customize-layout-sharepoint/sample-data.png)
-4. [Generate an app automatically](app-from-sharepoint.md) based on the list that you just created.
+4. [Generate an app automatically](maker/app-from-sharepoint.md) based on the list that you just created.
 5. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
    
     ![Toggle the views](./media/customize-layout-sharepoint/toggle-view.png)

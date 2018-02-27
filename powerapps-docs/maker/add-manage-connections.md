@@ -47,7 +47,7 @@ Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../con
 
 In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you also create connections when you do these tasks:
 
-* Automatically generate an [app from data](../app-from-sharepoint.md), such as a custom SharePoint list.
+* Automatically generate an [app from data](app-from-sharepoint.md), such as a custom SharePoint list.
 * Update an existing app, or create one from scratch as [add a connection](add-data-connection.md) describes.
 * Open an app that another user created and [shared with you](../share-app.md).
 

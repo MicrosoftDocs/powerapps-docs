@@ -29,7 +29,7 @@ In this series of tutorials, the company Contoso has a SharePoint Online site wh
 ## Getting started quickly
 The scenario we present in this series of tutorials is simple compared to a full-blown project management and analysis app, but it still takes some time to complete all the tasks. If you just want a quick introduction to using PowerApps, Microsoft Flow, and Power BI with SharePoint, check out the following articles:
 
-* **PowerApps**: [Generate an app from within SharePoint using PowerApps](generate-app-from-sharepoint-list-interface.md) and [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md)
+* **PowerApps**: [Generate an app from within SharePoint using PowerApps](generate-app-from-sharepoint-list-interface.md) and [Generate an app to manage data in a SharePoint list](maker/app-from-sharepoint.md)
 * **Microsoft Flow**: [Wait for approval in Microsoft Flow](https://docs.microsoft.com/flow/wait-for-approvals)
 * **Power BI**: [Embed with report web part in SharePoint Online](https://docs.microsoft.com/power-bi/service-embed-report-spo)
 

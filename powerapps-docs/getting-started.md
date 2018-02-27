@@ -35,7 +35,7 @@ You can also generate an app automatically from a template. Each template is bas
 For more information, check out the following topics:
 
 * [Generate an app from SharePoint](generate-app-from-sharepoint-list-interface.md)
-* [Generate an app in PowerApps to manage data in a SharePoint list](app-from-sharepoint.md)
+* [Generate an app in PowerApps to manage data in a SharePoint list](maker/app-from-sharepoint.md)
 * [Generate an app from Excel](get-started-create-from-data.md)
 * [Generate an app from SQL Server](connections/connection-azure-sqldatabase.md)
 * [Generate an app from Salesforce](maker/add-manage-connections.md)

@@ -35,7 +35,7 @@ Create and edit apps in PowerApps Studio for web, which opens in a browser windo
 PowerApps Studio for web opens in a new tab in your browser, where you can create and edit apps in the same way as you can in PowerApps Studio for Windows.
 
 ## Next steps
-* Automatically generate an app from your data in, for example, [Excel](get-started-create-from-data.md) or [SharePoint](app-from-sharepoint.md).
+* Automatically generate an app from your data in, for example, [Excel](get-started-create-from-data.md) or [SharePoint](maker/app-from-sharepoint.md).
 * Learn how to [add a control and set properties](maker/add-configure-controls.md) that determine how your app appears and behaves.
 * Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
 

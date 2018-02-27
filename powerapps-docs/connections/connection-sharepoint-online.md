@@ -58,7 +58,7 @@ Open PowerApps by taking *either* of these steps:
     For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](../create-app-browser.md).
 
 ## Create an app
-* [Generate an app automatically](../app-from-sharepoint.md) based on data in a SharePoint list.
+* [Generate an app automatically](../maker/app-from-sharepoint.md) based on data in a SharePoint list.
 
     The app will have three screens by default: one each for browsing records, displaying details of a record, and creating or updating a record. After the app is generated, you'll probably want to customize [the browse screen](../customize-layout-sharepoint.md) and [the details and edit screens](../customize-forms-sharepoint.md) to suit your needs.
 

@@ -77,5 +77,5 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
     ![Choose a gateway](./media/connect-to-sharepoint/choose-gateway.png)
 
 ## Next steps
-* [Generate an app automatically](app-from-sharepoint.md) based on a list that you specify. The app will have three screens by default: one each for browsing records, displaying details about a single record, and creating or updating a record.
+* [Generate an app automatically](maker/app-from-sharepoint.md) based on a list that you specify. The app will have three screens by default: one each for browsing records, displaying details about a single record, and creating or updating a record.
 * [Build an app from scratch](get-started-create-from-blank.md). This topic was written for Excel, but the same principles apply to SharePoint.
