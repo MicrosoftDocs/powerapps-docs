@@ -39,7 +39,7 @@ On [powerapps.com](https://web.powerapps.com), you can determine whether a conne
   ![Share tab in connection details page](./media/share-app-resources/shared-connections.png)
 
 ## On-premises data gateways
-If you create and share an app that includes data from an on-premises source, the [on-premises data gateway](gateway-management.md) itself and certain types of connections to that gateway will be shared automatically. For any connection that isn’t shared automatically, you can share it manually (as the previous section shows) or let the app prompt users to create their own connections. To show the connection or connections with which a gateway has been configured:
+If you create and share an app that includes data from an on-premises source, the [on-premises data gateway](maker/gateway-management.md) itself and certain types of connections to that gateway will be shared automatically. For any connection that isn’t shared automatically, you can share it manually (as the previous section shows) or let the app prompt users to create their own connections. To show the connection or connections with which a gateway has been configured:
 
 1. Open [powerapps.com](https://web.powerapps.com), click or tap **Manage** in the left navigation bar, and then click or tap **Gateways**.
 2. Click or tap a gateway, and then click or tap the **Connections** tab.

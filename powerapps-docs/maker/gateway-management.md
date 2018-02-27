@@ -31,10 +31,10 @@ With a gateway, you can connect to on-premises data over these connections:
 * DB2
 
 ## Prerequisites
-* The user name and password that you used to [sign up](signup-for-powerapps.md) for PowerApps.
+* The user name and password that you used to [sign up](../signup-for-powerapps.md) for PowerApps.
 * Administrative permissions on a gateway. (You have these permissions by default for each gateway that you install, and an administrator of another gateway can grant you these permissions for that gateway.)
 * A license that supports accessing on-premises data using an on-premises gateway. For more information, see the “Connectivity” section of the [pricing page](https://powerapps.microsoft.com/pricing/).
-* Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
+* Gateways and on-premises connections can only be created and used in the user's [default environment](../working-with-environments.md).
 
 ## Install a gateway
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Gateways**.
@@ -45,7 +45,7 @@ With a gateway, you can connect to on-premises data over these connections:
 
     ![Gateways Install](./media/gateway-management/no-gateway-installed.png)
 
-    For details about how to install a gateway, see [Understand on-premises data gateways](gateway-reference.md).
+    For details about how to install a gateway, see [Understand on-premises data gateways](../gateway-reference.md).
 
 ## View and manage gateway permissions
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Gateways**, and then click or tap a gateway.
@@ -66,13 +66,13 @@ For **Can use** and **Can use + share** permission levels, select the data sourc
 3. To share a connection, click or tap **Share**, and then add or remove users.
 
     > [!NOTE]
-> You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
+> You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](../share-app-resources.md).
 
-For more information about how to manage a connection, see [Manage your connections](maker/add-manage-connections.md).
+For more information about how to manage a connection, see [Manage your connections](add-manage-connections.md).
 
 ## Troubleshooting and Advanced Configuration
-For more information on troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](gateway-reference.md).
+For more information on troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](../gateway-reference.md).
 
 ## Next steps
-* Create an app that connects to an on-premises data source, such as [SQL Server](connections/connection-azure-sqldatabase.md) or [SharePoint](connections/connection-sharepoint-online.md).
-* [Share an app](share-app.md) that connects to an on-premises data source.
+* Create an app that connects to an on-premises data source, such as [SQL Server](../connections/connection-azure-sqldatabase.md) or [SharePoint](../connections/connection-sharepoint-online.md).
+* [Share an app](../share-app.md) that connects to an on-premises data source.

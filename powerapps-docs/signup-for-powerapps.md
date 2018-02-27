@@ -96,7 +96,7 @@ If you already have access to PowerApps as a user of Office 365, Dynamics 365, o
 * [Create and manage instances](administrator/signup-for-powerapps-admin.md) of the Common Data Service.
 * [Model your data](maker/data-platform-intro.md) using the Common Data Service.
 * [Create and manage environments](administrator/environments-administration.md) from the [PowerApps admin center][5].
-* [Manage an on-premises data gateway](gateway-management.md) in PowerApps.  
+* [Manage an on-premises data gateway](maker/gateway-management.md) in PowerApps.  
 
 When you try any of these features, you will be prompted to start your free trial. Just select **Start my trial**.
 
