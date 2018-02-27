@@ -83,7 +83,7 @@ PowerApps creates an app that has three screens and shows data from the table th
 ## Next steps
 * To save the app that you've just generated, press Ctrl-S.
 * To customize **BrowseScreen1** (which appears by default), see [Customize a layout](../customize-layout-sharepoint.md).
-* To customize **DetailsScreen1** or **EditScreen1**, see [Customize a form](../customize-forms-sharepoint.md).
+* To customize **DetailsScreen1** or **EditScreen1**, see [Customize a form](../maker/customize-forms-sharepoint.md).
 
 ## Known issues, tips, and troubleshooting
 1. Cannot reach the Gateway.

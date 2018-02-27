@@ -30,7 +30,7 @@ For an overview, see [Understand data cards](../working-with-cards.md).
 
   1. [Create an app from SharePoint](app-from-sharepoint.md).
   2. [Customize the layout](../customize-layout-sharepoint.md).
-  3. [Customize the form](../customize-forms-sharepoint.md).
+  3. [Customize the form](customize-forms-sharepoint.md).
 
 ## Customize a locked card
 In this procedure, you'll replace a **[Toggle](../controls/control-toggle.md)** control with a **[Radio](../controls/control-radio.md)** control without unlocking the card.

@@ -65,6 +65,6 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 ## Next steps
 * To add or update items in the list, see the "Manage the list using the app" section in [Open app from a SharePoint Online list](open-app-embedded-in-sharepoint.md).
 * To customize the browse screen (which appears by default), see [Customize a layout](customize-layout-sharepoint.md).
-* To customize the details or edit screens, see [Customize a form](customize-forms-sharepoint.md).
+* To customize the details or edit screens, see [Customize a form](maker/customize-forms-sharepoint.md).
 * If you want to delete the app, remove the view from SharePoint, and then [delete the app](delete-app.md) from PowerApps.
 

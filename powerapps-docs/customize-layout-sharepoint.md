@@ -125,5 +125,5 @@ For more information about galleries, see [Show a list of items in PowerApps](ma
 
 ## Next steps
 * Press Ctrl-S to save your changes.
-* [Customize the forms](customize-forms-sharepoint.md) in the app by showing, hiding, and reordering the fields that the forms show.
+* [Customize the forms](maker/customize-forms-sharepoint.md) in the app by showing, hiding, and reordering the fields that the forms show.
 

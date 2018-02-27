@@ -58,7 +58,7 @@ Hiding the field is easy in PowerApps - in the form customization options, just 
 
 ![Clear AccountID checkbox](./media/customize-list-form/checkbox.png)
 
-For step-by-step instructions on how to hide fields and make other form changes, see [Customize forms in PowerApps](customize-forms-sharepoint.md). For a complete list of resources, see [Microsoft PowerApps docs](https://docs.microsoft.com/powerapps/).
+For step-by-step instructions on how to hide fields and make other form changes, see [Customize forms in PowerApps](maker/customize-forms-sharepoint.md). For a complete list of resources, see [Microsoft PowerApps docs](https://docs.microsoft.com/powerapps/).
 
 ## Save and publish the list form back to SharePoint
 
