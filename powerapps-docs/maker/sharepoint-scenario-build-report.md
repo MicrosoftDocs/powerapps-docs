@@ -399,5 +399,5 @@ That brings us to the end of the report section, and you should now have a compl
 ![Completed report](./media/sharepoint-scenario-build-report/05-03-23-report-completed.png)
 
 ## Next steps
-The next step in this tutorial series is to [publish the Power BI project report and create a dashboard](../sharepoint-scenario-publish-report.md).
+The next step in this tutorial series is to [publish the Power BI project report and create a dashboard](sharepoint-scenario-publish-report.md).
 
