@@ -32,7 +32,7 @@ When searching for items to select, for each item you can choose to show a singl
 To use **Combo box** as a people picker, choose the **Person** template from the Layout settings in the Data pane and configure the related data properties to be shown for the person below.
 
 ## Key properties
-**[Items](properties-core.md)** – The source of data from which selections can be made.
+**[Items](../../controls/properties-core.md)** – The source of data from which selections can be made.
 
 **DefaultItems** – The initial selected item(s) before the user interacts with the control.
 
@@ -43,19 +43,19 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **IsSearchable** – Whether the user can search for items before selecting.
 
 ## Additional properties
-**[BorderColor](properties-color-border.md)** – The color of a control's border.
+**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
 
-**[Default](properties-core.md)** – The initial selection before it is changed by the user in single-select mode.
+**[Default](../../controls/properties-core.md)** – The initial selection before it is changed by the user in single-select mode.
 
 **DisplayFields** – List of fields shown for each item returned by the search.  Easiest to configure via the Data pane in the Properties option tab.
 
-**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **InputTextPlaceholder** – Instructional text shown to end-users when no items are selected.
 
@@ -63,15 +63,15 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **OnNavigate** – How the app responds when the user clicks on an item.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-**[Visible](properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
 1. Add a **Combo box** control from the Insert tab, Controls menu.  
@@ -81,4 +81,4 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
     A functional **Combo box** will appear in your app.
 
-    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?.
+    Don't know how to [add and configure a control](../add-configure-controls.md)?.
