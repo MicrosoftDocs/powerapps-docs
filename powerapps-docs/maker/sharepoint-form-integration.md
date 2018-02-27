@@ -19,7 +19,7 @@ ms.author: ankitsar
 
 ---
 # Understand SharePoint forms integration
-You can now easily [customize any SharePoint list form](maker/customize-list-form.md) in PowerApps. In this article, we'll walk through the details of how these forms work and how you can customize them further.
+You can now easily [customize any SharePoint list form](customize-list-form.md) in PowerApps. In this article, we'll walk through the details of how these forms work and how you can customize them further.
 
 If you've customized a form for a SharePoint list, you've likely noticed that the default generated form works for all operations, like creating, showing, or editing an item. This is accomplished with the help of generated formulas and the **SharePointIntegration** control.
 
@@ -27,9 +27,9 @@ If you've customized a form for a SharePoint list, you've likely noticed that th
 
 The default generated form consists of the following controls and their corresponding defaults:
 
-* **FormScreen1** - This is the [screen](./controls/control-screen.md) that contains the form.
+* **FormScreen1** - This is the [screen](../controls/control-screen.md) that contains the form.
 
-* **SharePointForm1** - This is the [form](working-with-forms.md) that's used to create, show, or edit the list item.
+* **SharePointForm1** - This is the [form](../working-with-forms.md) that's used to create, show, or edit the list item.
 
     * **Data Source** - The list for which the form has been customized.
 

@@ -74,7 +74,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
     ![Open form inline in SharePoint](./media/customize-list-form/list-form-open.png)
 
-1. If you want to [further customize your form](../sharepoint-form-integration.md), click or tap **Customize**, and then make your changes. When you're done, be sure to save your changes.
+1. If you want to [further customize your form](sharepoint-form-integration.md), click or tap **Customize**, and then make your changes. When you're done, be sure to save your changes.
 
     ![Customize button](./media/customize-list-form/customize-button.png)
 
