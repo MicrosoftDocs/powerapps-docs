@@ -67,14 +67,14 @@ You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](
     The gallery shows only Europa because only its name contains the letter that you specified in the case that you specified.
 
 ## ThisItem operator
-You can show data in **[Gallery](../controls/control-gallery.md)**, **[Edit form](../controls/control-form-detail.md)**, or **[Display form](../controls/control-form-detail.md)** controls by binding it to a table or a collection.  These controls are a container for other cards and controls.  Each card or control within the container can access the bound data through the **[ThisItem](operators.md#thisitem-operator)** operator.   
+You can show data in **[Gallery](../controls/control-gallery.md)**, **[Edit form](../maker/controls/control-form-detail.md)**, or **[Display form](../maker/controls/control-form-detail.md)** controls by binding it to a table or a collection.  These controls are a container for other cards and controls.  Each card or control within the container can access the bound data through the **[ThisItem](operators.md#thisitem-operator)** operator.   
 
 You use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [column](../maker/working-with-tables.md#columns) of data that each card or control within the outer control. For example, that operator in the product gallery for [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
 
 For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
 ## Parent operator
-Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../maker/controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
+Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../maker/controls/control-card.md)**, **[Edit form](../maker/controls/control-form-detail.md)**, and **[Display form](../maker/controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
 
 Any control in PowerApps can be referenced by name from anywhere within the app. **Screen1** may be the name of a screen in your app. To retrieve the background color of this screen, you can use **Screen1.Fill**.
 

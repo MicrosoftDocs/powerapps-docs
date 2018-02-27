@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Understand data cards
-**[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](../controls/control-form-detail.md)** and **[Display form](../controls/control-form-detail.md)** controls. The form represents the entire record, and each card represents a single field of that record.
+**[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls. The form represents the entire record, and each card represents a single field of that record.
 
 You can interact with cards most easily in the right-hand pane after you select a form control in the design workspace. In that pane, you can choose which fields to show, how to show each field, and in what order to show them. This example shows an **Edit form** control in an app built from a SharePoint list that's named **Assets**.
 

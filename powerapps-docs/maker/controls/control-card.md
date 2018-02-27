@@ -20,10 +20,10 @@ ms.author: gregli
 
 ---
 # Card control in PowerApps
-Provides the display and editing experience for a single field of a **[Display form](../../controls/control-form-detail.md)** or **[Edit form](../../controls/control-form-detail.md)** control.
+Provides the display and editing experience for a single field of a **[Display form](control-form-detail.md)** or **[Edit form](control-form-detail.md)** control.
 
 ## Description
-**[Display form](../../controls/control-form-detail.md)** and **[Edit form](../../controls/control-form-detail.md)** controls act as containers for displaying and viewing entire records. Each container can hold a set of **Card** controls that display individual fields or provide a way to update those fields. Each card has a **DataField** property that specifies which field of the record it works on.  
+**[Display form](control-form-detail.md)** and **[Edit form](control-form-detail.md)** controls act as containers for displaying and viewing entire records. Each container can hold a set of **Card** controls that display individual fields or provide a way to update those fields. Each card has a **DataField** property that specifies which field of the record it works on.  
 
 Predefined cards are defined for different data types and user experiences.  For example, there may be a card to edit a number field with a **[Text input](../../controls/control-text-input.md)** control, which is great for use with the keyboard. Another card might support editing a number by using a **[Slider](../../controls/control-slider.md)** control instead. With the form control selected, you can, in the right-hand pane, easily select a card based on a field.
 
@@ -75,7 +75,7 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[WidthFit](../../controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space in a container control such as an **[Edit form](../../controls/control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](../working-with-form-layout.md).
+**[WidthFit](../../controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space in a container control such as an **[Edit form](control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](../working-with-form-layout.md).
 
 ## Additional properties
 **[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
@@ -88,7 +88,7 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**Valid** – Whether a **Card** or **[Edit form](../../controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.
+**Valid** – Whether a **Card** or **[Edit form](control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.
 
 **[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
 

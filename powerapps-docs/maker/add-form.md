@@ -19,7 +19,7 @@ ms.author: sharik
 
 ---
 # Show, edit, or add a record from a table in PowerApps
-To show all fields in a record, add and configure a **[Display form](../controls/control-form-detail.md)** control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](../controls/control-form-detail.md)** control.
+To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ To show all fields in a record, add and configure a **[Display form](../controls
     > [!NOTE]
 > This topic describes the **Edit form** control, but similar principles apply to the **Display form** control.
 
-3. Set the **[DataSource](../controls/control-form-detail.md)** property of the form to **FlooringEstimates** and the **[Item](../controls/control-form-detail.md)** property of the form to this formula:
+3. Set the **[DataSource](controls/control-form-detail.md)** property of the form to **FlooringEstimates** and the **[Item](controls/control-form-detail.md)** property of the form to this formula:
 
    **First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))**
 

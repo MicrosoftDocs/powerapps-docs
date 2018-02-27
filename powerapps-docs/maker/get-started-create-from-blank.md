@@ -189,7 +189,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     The form is named **Form1** by default unless you already added and removed a form. In that case, rename the form to **Form1**.
 
-3. Set **[DataSource](../controls/control-form-detail.md)** property of **Form1** to **Schedule**.
+3. Set **[DataSource](controls/control-form-detail.md)** property of **Form1** to **Schedule**.
 
 4. Set the **Item** property of **Form1** to this expression:
    <br>**BrowseGallery1.Selected**

@@ -34,7 +34,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Camera](controls/control-camera.md)** – Take and save photos in the app or to a data source.
 
-**[Card](controls/control-card.md)** – Display and edit an individual field of a record in a **[Edit form](../controls/control-form-detail.md)** or **[Display form](../controls/control-form-detail.md)** control.
+**[Card](controls/control-card.md)** – Display and edit an individual field of a record in a **[Edit form](controls/control-form-detail.md)** or **[Display form](controls/control-form-detail.md)** control.
 
 **[Check box](controls/control-check-box.md)** – Select or clear an option to specify **true** or **false**.
 
@@ -48,11 +48,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
 
-**[Display form](../controls/control-form-detail.md)** – Display records in a data source using a form.
+**[Display form](controls/control-form-detail.md)** – Display records in a data source using a form.
 
 **[Drop down](controls/control-drop-down.md)** – Show the first item in a list until a chevron is selected.
 
-**[Edit form](../controls/control-form-detail.md)** – Edit and create records in a data source using a form.
+**[Edit form](controls/control-form-detail.md)** – Edit and create records in a data source using a form.
 
 **[Entity form](entity-form-control.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Common Data Service.
 
@@ -172,13 +172,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[DataField](controls/control-card.md)** – The name of the field within a record that this card displays and edits.  Applies to the **[Card](controls/control-card.md)** control.
 
-**[DataSource](../controls/control-form-detail.md)** – The data source that contains the record that the user will show, edit, or create.  Applies to **[Display form](../controls/control-form-detail.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
+**[DataSource](controls/control-form-detail.md)** – The data source that contains the record that the user will show, edit, or create.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
 **[Default](../controls/properties-core.md)** – The initial value of a control before it is changed by the user.  Applies to many controls.
 
 **[DefaultDate](controls/control-date-picker.md)** – The initial value of a date control before it is changed by the user.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
-**[DefaultMode](../controls/control-form-detail.md)** – The initial mode of a form control, either **Edit**, **New**, or **View**.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
+**[DefaultMode](controls/control-form-detail.md)** – The initial mode of a form control, either **Edit**, **New**, or **View**.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 **[Direction](../controls/control-gallery.md)** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
 
@@ -205,9 +205,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 * **[Add picture](controls/control-add-picture.md)** control - If there is a problem uploading an image, this property will contain an appropriate error string.
 * **[Card](controls/control-card.md)** control – The user friendly error message to display for this field when validation fails.
-* **[Edit form](../controls/control-form-detail.md)** control – A user friendly error message to display for this form when the **[SubmitForm](../functions/function-form.md)** function fails.
+* **[Edit form](controls/control-form-detail.md)** control – A user friendly error message to display for this form when the **[SubmitForm](../functions/function-form.md)** function fails.
 
-**[ErrorKind](../controls/control-form-detail.md)** – If an error occurs when **SubmitForm** runs, the kind of error that occurred.  Applies to **[Display form](../controls/control-form-detail.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
+**[ErrorKind](controls/control-form-detail.md)** – If an error occurs when **SubmitForm** runs, the kind of error that occurred.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
 **[Explode](../controls/control-pie-chart.md)** – The distance between wedges in a pie chart.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
 
@@ -255,7 +255,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Italic](../controls/properties-text.md)** – Whether the text in a control is italic.  Applies to many controls.
 
-**[Item](../controls/control-form-detail.md)** – The record in the **DataSource** that the user will show or edit.  Applies to **[Display form](../controls/control-form-detail.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
+**[Item](controls/control-form-detail.md)** – The record in the **DataSource** that the user will show or edit.  Applies to **[Display form](controls/control-form-detail.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
 **[ItemBorderColor](../controls/control-pie-chart.md)** – The color of the border around each wedge in a pie chart.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
 
@@ -272,7 +272,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### L
 **[LabelPosition](../controls/control-pie-chart.md)** – The location of labels in a pie chart relative to its wedges.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
 
-**[LastSubmit](../controls/control-form-detail.md)** – The last successfully submitted record, including any server generated fields.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
+**[LastSubmit](controls/control-form-detail.md)** – The last successfully submitted record, including any server generated fields.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](../controls/control-gallery.md)** and **[Slider](../controls/control-slider.md)** controls.
 
@@ -299,7 +299,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Mode** – The meaning of this property is dependent on the control:
 
-* **[Edit form](../controls/control-form-detail.md)** control – The control is in **Edit** or **New** mode.
+* **[Edit form](controls/control-form-detail.md)** control – The control is in **Edit** or **New** mode.
 * **[Pen input](../controls/control-pen-input.md)** control – The control is in **Draw**, **Erase**, or **Select** mode.
 * **[Text input](../controls/control-text-input.md)** control – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
 
@@ -315,13 +315,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnEnd](controls/control-audio-video.md)** – The behavior of an app when an audio or video clip finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
-**[OnFailure](../controls/control-form-detail.md)** – The behavior of an app when a data operation has been unsuccessful.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
+**[OnFailure](controls/control-form-detail.md)** – The behavior of an app when a data operation has been unsuccessful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 **[OnHidden](../controls/control-screen.md)** – The behavior of an app when the user navigates away from a screen.  Applies to the **[Screen](../controls/control-screen.md)** control.
 
 **[OnPause](controls/control-audio-video.md)** – The behavior of an app when the user pauses the clip that an audio or video control is playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
-**[OnReset](../controls/control-form-detail.md)** – The behavior of an app when an **[Edit form](../controls/control-form-detail.md)** control is reset.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
+**[OnReset](controls/control-form-detail.md)** – The behavior of an app when an **[Edit form](controls/control-form-detail.md)** control is reset.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 **[OnSelect](../controls/properties-core.md)** – The behavior of an app  when the user taps or clicks a control.  Applies to many controls.
 
@@ -333,7 +333,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnStream](controls/control-camera.md)** – The behavior of an app when the **[Stream](controls/control-camera.md)** property is updated.  Applies to the **[Camera](controls/control-camera.md)** control.
 
-**[OnSuccess](../controls/control-form-detail.md)** – The behavior of an app when a data operation has been successful.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
+**[OnSuccess](controls/control-form-detail.md)** – The behavior of an app when a data operation has been successful.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 **[OnTimerEnd](../controls/control-timer.md)** – The behavior of an app when a timer finishes running.  Applies to the **[Timer](../controls/control-timer.md)** control.
 
@@ -470,14 +470,14 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### U
 **[Underline](../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.  Applies to many controls.
 
-**[Unsaved](../controls/control-form-detail.md)** – True if the **[Edit form](../controls/control-form-detail.md)** control contains user changes that have not been saved.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
+**[Unsaved](controls/control-form-detail.md)** – True if the **[Edit form](controls/control-form-detail.md)** control contains user changes that have not been saved.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 **[Update](controls/control-card.md)** – The value to write back to the data source for a field.  Applies to the **[Card](controls/control-card.md)** control.
 
-**[Updates](../controls/control-form-detail.md)** – The values to write back to the data source for a record loaded in a form control.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
+**[Updates](controls/control-form-detail.md)** – The values to write back to the data source for a record loaded in a form control.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
 ### V
-**Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](../controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
+**Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
 **[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](../controls/control-radio.md)**, **[Slider](../controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
 
@@ -492,7 +492,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### W
 **[Width](../controls/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
 
-**[WidthFit](../controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space of a container control such as an **[Edit form](../controls/control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](working-with-form-layout.md).
+**[WidthFit](../controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space of a container control such as an **[Edit form](controls/control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](working-with-form-layout.md).
 
 **[Wrap](../controls/control-text-box.md)** – Whether text that's too long to fit in a label wraps to the next line.  Applies to the **[Label](../controls/control-text-box.md)** control.
 

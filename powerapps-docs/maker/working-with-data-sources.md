@@ -34,7 +34,7 @@ The most common data sources are **tables**, which you can use to retrieve and s
 Data sources other than tables include email, calendars, Twitter, and notifications, but this article doesn't discuss these other kinds of data sources.
 
 ### Local data sources
-Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../controls/control-form-detail.md)**, and **[Edit form](../controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](working-with-forms.md).  
+Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source.  To get started, read the article [Understand data forms](working-with-forms.md).  
 
 When you ask PowerApps to create an app from data, these controls are used. Behind the scenes, the app uses an internal table to store and manipulate the data that comes from the data source.
 
@@ -85,13 +85,13 @@ Note that, to modify an existing record of a data source, the record must have o
 ![](media/working-with-data-sources/writing-to-a-datasource.png)
 The diagram above shows the flow of information to update a data source:
 
-* An **[Edit form](../controls/control-form-detail.md)** control provides a container for input cards, which are made up of user input controls such as a text-input control or a slider.  The **[DataSource](../controls/control-form-detail.md)** and **[Item](../controls/control-form-detail.md)** properties are used to identify the record to edit.
+* An **[Edit form](controls/control-form-detail.md)** control provides a container for input cards, which are made up of user input controls such as a text-input control or a slider.  The **[DataSource](controls/control-form-detail.md)** and **[Item](controls/control-form-detail.md)** properties are used to identify the record to edit.
 * Each input card has a **[Default](../controls/properties-core.md)** property, which is usually set to the field of the form's **ThisItem** record.  The controls within the input card will then take their input values from **[Default](../controls/properties-core.md)**.  Normally you do not need to modify this.
 * Each input card exposes an **[Update](controls/control-card.md)** property.  This property maps the user's input to a specific field of the record for writing back to the data source.  Normally you do not need to modify this.
 * A button or an image control on the screen enables the user to save changes to the record.  The **[OnSelect](../controls/properties-core.md)** formula of the control calls the **[SubmitForm](../functions/function-form.md)** function to do this work.  **[SubmitForm](../functions/function-form.md)** reads all the **[Update](controls/control-card.md)** properties of the cards and uses this to write back to the data source.
-* Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the app didn't know about.  The **Error** and **[ErrorKind](../controls/control-form-detail.md)** properties of the form control makes this information available, so you can display it to the user.  
+* Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the app didn't know about.  The **Error** and **[ErrorKind](controls/control-form-detail.md)** properties of the form control makes this information available, so you can display it to the user.  
 
-For more fine grained control over the process, you can also use the **[Patch](../functions/function-patch.md)** and **[Errors](../functions/function-errors.md)** function.  The **[Edit form](../controls/control-form-detail.md)** control exposes an **[Updates](../controls/control-form-detail.md)** property so that you can read the values of the fields within the form.  You can also use this property to call a custom connector on a connection, completely bypassing the **Patch** and **SubmitForm** functions.
+For more fine grained control over the process, you can also use the **[Patch](../functions/function-patch.md)** and **[Errors](../functions/function-errors.md)** function.  The **[Edit form](controls/control-form-detail.md)** control exposes an **[Updates](controls/control-form-detail.md)** property so that you can read the values of the fields within the form.  You can also use this property to call a custom connector on a connection, completely bypassing the **Patch** and **SubmitForm** functions.
 
 ### Validation
 Before making a change to a record, the app should do what it can to make sure the change will be acceptable.  There are two reasons for this:

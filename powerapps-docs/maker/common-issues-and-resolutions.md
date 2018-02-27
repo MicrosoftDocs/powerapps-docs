@@ -115,7 +115,7 @@ ms.author: sharik
 
      In some cases, a newly shared app won't be immediately available. Wait a few moments, and it should become available.
 
-15. **In the [Form control](../controls/control-form-detail.md), you can't change data by using a custom card**.
+15. **In the [Form control](controls/control-form-detail.md), you can't change data by using a custom card**.
 
      The stock custom card is missing the **[Update](controls/control-card.md)** property, which is required to write back changes. To work around this:
 
@@ -135,4 +135,4 @@ ms.author: sharik
 
 19. **Card gallery is deprecated**.
 
-     Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](../controls/control-form-detail.md)** and **[Display form](../controls/control-form-detail.md)** controls.
+     Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.

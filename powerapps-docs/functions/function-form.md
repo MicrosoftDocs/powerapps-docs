@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in PowerApps
-View, edit, or create an item, save the contents, and reset the controls in an **[Edit form](../controls/control-form-detail.md)** control.
+View, edit, or create an item, save the contents, and reset the controls in an **[Edit form](../maker/controls/control-form-detail.md)** control.
 
 ## Overview
 These functions change the state of the **Edit form** control.  The form control can be in one of these modes:
@@ -40,24 +40,24 @@ Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.
 
 Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **[Validate](function-validate.md)** function.
 
-**SubmitForm** also checks the **[Valid](../controls/control-form-detail.md)** property of the Form, which is an aggregation of all the **[Valid](../maker/controls/control-card.md)** properties of the **[Card](../maker/controls/control-card.md)** controls that the Form control contains. If a problem occurs, the data isn't submitted, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties of the Form control are set accordingly.
+**SubmitForm** also checks the **[Valid](../maker/controls/control-form-detail.md)** property of the Form, which is an aggregation of all the **[Valid](../maker/controls/control-card.md)** properties of the **[Card](../maker/controls/control-card.md)** controls that the Form control contains. If a problem occurs, the data isn't submitted, and the **[Error](../maker/controls/control-form-detail.md)** and **[ErrorKind](../maker/controls/control-form-detail.md)** properties of the Form control are set accordingly.
 
 If validation passes, **SubmitForm** submits the change to the data source.
 
-* If successful, the Form's **[OnSuccess](../controls/control-form-detail.md)** behavior runs, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties are cleared.  If the form was in **FormMode.New** mode, it is returned to **FormMode.Edit** mode.
-* If unsuccessful, the Form's **[OnFailure](../controls/control-form-detail.md)** behavior runs, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties are set accordingly.  The mode of the form is unchanged.  
+* If successful, the Form's **[OnSuccess](../maker/controls/control-form-detail.md)** behavior runs, and the **[Error](../maker/controls/control-form-detail.md)** and **[ErrorKind](../maker/controls/control-form-detail.md)** properties are cleared.  If the form was in **FormMode.New** mode, it is returned to **FormMode.Edit** mode.
+* If unsuccessful, the Form's **[OnFailure](../maker/controls/control-form-detail.md)** behavior runs, and the **[Error](../maker/controls/control-form-detail.md)** and **[ErrorKind](../maker/controls/control-form-detail.md)** properties are set accordingly.  The mode of the form is unchanged.  
 
 ### EditForm
-The **EditForm** function changes the Form control's mode to **FormMode.Edit**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are used to populate the form.  If the **SubmitForm** function runs when the form is in this mode, a record is changed, not created.  **FormMode.Edit** is the default for the Form control.
+The **EditForm** function changes the Form control's mode to **FormMode.Edit**. In this mode, the contents of the Form control's **[Item](../maker/controls/control-form-detail.md)** property are used to populate the form.  If the **SubmitForm** function runs when the form is in this mode, a record is changed, not created.  **FormMode.Edit** is the default for the Form control.
 
 ### NewForm
-The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are ignored, and the default values of the Form's **[DataSource](../controls/control-form-detail.md)** property populate the form. If the **SubmitForm** function runs when the form is in this mode, a record is created, not changed.
+The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **[Item](../maker/controls/control-form-detail.md)** property are ignored, and the default values of the Form's **[DataSource](../maker/controls/control-form-detail.md)** property populate the form. If the **SubmitForm** function runs when the form is in this mode, a record is created, not changed.
 
 ### ResetForm
-The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode. The **[OnReset](../controls/control-form-detail.md)** behavior of the form control also runs.  You can also reset individual controls with the **[Reset](function-reset.md)** function but only from within the form.
+The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode. The **[OnReset](../maker/controls/control-form-detail.md)** behavior of the form control also runs.  You can also reset individual controls with the **[Reset](function-reset.md)** function but only from within the form.
 
 ### ViewForm
-The **ViewForm** function changes the Form control's mode to **FormMode.View**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are used to populate the form.  The **SubmitForm** and **RestForm** functions have no effect when in this mode.
+The **ViewForm** function changes the Form control's mode to **FormMode.View**. In this mode, the contents of the Form control's **[Item](../maker/controls/control-form-detail.md)** property are used to populate the form.  The **SubmitForm** and **RestForm** functions have no effect when in this mode.
 
 ### DisplayMode Poperty
 The current mode can be read through the **Mode** property.  The mode also determines the value of the **DisplayMode** property which can be used by data cards and controls within the form control.  Often, the data card's **DisplayMode** property will be set to **Parent.DisplayMode** (refernceing the form) as will the control's **DisplayMode** property (referncing the data card): 
@@ -95,7 +95,7 @@ See [Understand data forms](../maker/working-with-forms.md) for complete example
 1. Add a Button control, set its **[Text](../controls/properties-core.md)** property to show **Save**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
    
     **SubmitForm( EditForm )**
-2. Set the **[OnFailure](../controls/control-form-detail.md)** property of a Form control to blank and its **[OnSuccess](../controls/control-form-detail.md)** property to this formula:
+2. Set the **[OnFailure](../maker/controls/control-form-detail.md)** property of a Form control to blank and its **[OnSuccess](../maker/controls/control-form-detail.md)** property to this formula:
    
     **Back()**
 3. Name a **[Label](../controls/control-text-box.md)** control **ErrorText**, and set its **[Text](../controls/properties-core.md)** property to this formula:
