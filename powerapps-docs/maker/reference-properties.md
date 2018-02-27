@@ -34,7 +34,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Camera](controls/control-camera.md)** – Take and save photos in the app or to a data source.
 
-**[Card](../controls/control-card.md)** – Display and edit an individual field of a record in a **[Edit form](../controls/control-form-detail.md)** or **[Display form](../controls/control-form-detail.md)** control.
+**[Card](controls/control-card.md)** – Display and edit an individual field of a record in a **[Edit form](../controls/control-form-detail.md)** or **[Display form](../controls/control-form-detail.md)** control.
 
 **[Check box](../controls/control-check-box.md)** – Select or clear an option to specify **true** or **false**.
 
@@ -170,7 +170,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### D
 **[Data](../controls/control-export-import.md)** – The name of a collection that you want to export to a local file.  Applies to the **[Export](../controls/control-export-import.md)** control.
 
-**[DataField](../controls/control-card.md)** – The name of the field within a record that this card displays and edits.  Applies to the **[Card](../controls/control-card.md)** control.
+**[DataField](controls/control-card.md)** – The name of the field within a record that this card displays and edits.  Applies to the **[Card](controls/control-card.md)** control.
 
 **[DataSource](../controls/control-form-detail.md)** – The data source that contains the record that the user will show, edit, or create.  Applies to **[Display form](../controls/control-form-detail.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
 
@@ -190,7 +190,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[DisabledFill](../controls/properties-color-border.md)** – The background color of a control if its **[Disabled](../controls/properties-core.md)** property is set to **true**.  Applies to many controls.
 
-**[DisplayName](../controls/control-card.md)** – The user friendly name for a field in a data source.  Applies to the **[Card](../controls/control-card.md)** control.
+**[DisplayName](controls/control-card.md)** – The user friendly name for a field in a data source.  Applies to the **[Card](controls/control-card.md)** control.
 
 **[DisplayMode](../controls/properties-core.md)** – Values can be Edit, View, or Disabled. Configures whether the control allows user input (Edit), only displays data (View) or is disabled (Disabled).
 
@@ -204,7 +204,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **Error** – The meaning of this property is dependent on the control:
 
 * **[Add picture](controls/control-add-picture.md)** control - If there is a problem uploading an image, this property will contain an appropriate error string.
-* **[Card](../controls/control-card.md)** control – The user friendly error message to display for this field when validation fails.
+* **[Card](controls/control-card.md)** control – The user friendly error message to display for this field when validation fails.
 * **[Edit form](../controls/control-form-detail.md)** control – A user friendly error message to display for this form when the **[SubmitForm](../functions/function-form.md)** function fails.
 
 **[ErrorKind](../controls/control-form-detail.md)** – If an error occurs when **SubmitForm** runs, the kind of error that occurred.  Applies to **[Display form](../controls/control-form-detail.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
@@ -403,7 +403,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Repeat](../controls/control-timer.md)** – Whether a timer automatically restarts when it finishes running.  Applies to the **[Timer](../controls/control-timer.md)** control.
 
-**[Required](../controls/control-card.md)** – Whether a card, editing the field of a data source, must contain a value.  Applies to the **[Card](../controls/control-card.md)** control.
+**[Required](controls/control-card.md)** – Whether a card, editing the field of a data source, must contain a value.  Applies to the **[Card](controls/control-card.md)** control.
 
 **[Reset](../controls/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.  Also see the **[Reset](../functions/function-reset.md)** function.
 
@@ -472,12 +472,12 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Unsaved](../controls/control-form-detail.md)** – True if the **[Edit form](../controls/control-form-detail.md)** control contains user changes that have not been saved.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
 
-**[Update](../controls/control-card.md)** – The value to write back to the data source for a field.  Applies to the **[Card](../controls/control-card.md)** control.
+**[Update](controls/control-card.md)** – The value to write back to the data source for a field.  Applies to the **[Card](controls/control-card.md)** control.
 
 **[Updates](../controls/control-form-detail.md)** – The values to write back to the data source for a record loaded in a form control.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
 
 ### V
-**Valid** – Whether a **[Card](../controls/control-card.md)** or **[Edit form](../controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](../controls/control-card.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
+**Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](../controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
 
 **[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](../controls/control-check-box.md)**, **[Radio](../controls/control-radio.md)**, **[Slider](../controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
 
@@ -499,12 +499,12 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[WrapCount](../controls/control-gallery.md)** – How many records appear in each item of a gallery.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
 
 ### X
-**[X](../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). Applies to many controls. For a **[Card](../controls/control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
+**[X](../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
 
 **[XLabelAngle](../controls/control-column-line-chart.md)** – The angle of the labels below the x-axis of a column or line chart.  Applies to **[Column chart](../controls/control-column-line-chart.md)** and **[Line chart](../controls/control-column-line-chart.md)** controls.
 
 ### Y
-**[Y](../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). Applies to many controls. For a **[Card](../controls/control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
+**[Y](../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
 
 **[YAxisMax](../controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Line chart](../controls/control-column-line-chart.md)** control.
 

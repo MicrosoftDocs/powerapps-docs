@@ -84,7 +84,7 @@ This screen features these key formulas:
 | --- | --- | --- |
 | **DetailForm1** |Displays a record in the **Assets** data source |Set the **[DataSource](../controls/control-form-detail.md)** property to **Assets**. |
 | **DetailForm1** |Determines which record to display. In a generated app, displays the record that the user selected in the gallery. |Set the **[Item](../controls/control-form-detail.md)** property of this control to this value:<br>**BrowseGallery1.Selected** |
-| **[Card](../controls/control-card.md)** controls |In a **[Display form](../controls/control-form-detail.md)** control, displays a single field in a record. |Set the **[DataField](../controls/control-card.md)** property to the name of a field, enclosed in double quotation marks (for example, **"Name"**). |
+| **[Card](controls/control-card.md)** controls |In a **[Display form](../controls/control-form-detail.md)** control, displays a single field in a record. |Set the **[DataField](controls/control-card.md)** property to the name of a field, enclosed in double quotation marks (for example, **"Name"**). |
 | **ImageBackArrow1** |When the user selects this control, opens **BrowseScreen1**. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**Back()** |
 | **ImageDelete1** |When the user selects this control, deletes a record. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**Remove( Assets, BrowseGallery1.Selected )** |
 | **ImageEdit1** |When the user selects this control, opens the **Edit and Create** screen to the current record. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**Navigate( EditScreen1, None )** |
@@ -93,13 +93,13 @@ At the top of the screen, three images sit outside of **DetailForm1** and act as
 
 **DetailForm1** dominates this screen and displays the record that the user selected in the gallery (because the form's **[Item](../controls/control-form-detail.md)** property is set to **BrowseGallery1.Selected**). The **[DataSource](../controls/control-form-detail.md)** property of the form also provides metadata about the data source, such as a user-friendly display name for each field.
 
-**DetailForm1** contains several **[Card](../controls/control-card.md)** controls. You can select either the **[Card](../controls/control-card.md)** control itself or the control that it contains to discover additional information.
+**DetailForm1** contains several **[Card](controls/control-card.md)** controls. You can select either the **[Card](controls/control-card.md)** control itself or the control that it contains to discover additional information.
 
 ![Detail card and card controls selected in the authoring experience](./media/working-with-forms/afd-detail-card-controls.png)
 
-The **[DataField](../controls/control-card.md)** property of a **[Card](../controls/control-card.md)** control determines which field the card displays. In this case, that property is set to **AssetID**. The card contains a **[Label](../controls/control-text-box.md)** control for which the **[Text](../controls/properties-core.md)** property is set to **Parent.Default**. This control shows the **Default** value for the card, which is set through the **[DataField](../controls/control-card.md)** property.
+The **[DataField](controls/control-card.md)** property of a **[Card](controls/control-card.md)** control determines which field the card displays. In this case, that property is set to **AssetID**. The card contains a **[Label](../controls/control-text-box.md)** control for which the **[Text](../controls/properties-core.md)** property is set to **Parent.Default**. This control shows the **Default** value for the card, which is set through the **[DataField](controls/control-card.md)** property.
 
-In a generated app, **[Card](../controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](../controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls in the right-hand pane:
+In a generated app, **[Card](controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls in the right-hand pane:
 
 ![Detail screen with options pane open](./media/working-with-forms/detail-screen-new.png)
 
@@ -114,7 +114,7 @@ This screen features these key formulas:
 | --- | --- | --- |
 | **EditForm1** |Displays a record in the **Assets** data source. |Set the **[DataSource](../controls/control-form-detail.md)** property to **Assets**. |
 | **EditForm1** |Determines which record to display. In a generated app, displays the record that the user selected in **BrowseScreen1**. |Set the **[Item](../controls/control-form-detail.md)** property to this value:<br>**BrowseGallery1.Selected** |
-| **[Card](../controls/control-card.md)** controls |In a **[Edit form](../controls/control-form-detail.md)** control, provides controls so that the user can edit one or more fields in a record. |Set the **[DataField](../controls/control-card.md)** property to the name of a field, enclosed in double quotation marks (for example, **"Name"**). |
+| **[Card](controls/control-card.md)** controls |In a **[Edit form](../controls/control-form-detail.md)** control, provides controls so that the user can edit one or more fields in a record. |Set the **[DataField](controls/control-card.md)** property to the name of a field, enclosed in double quotation marks (for example, **"Name"**). |
 | **ImageCancel1** |When the user selects this control, discards any changes in progress, and opens the **Details** screen. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**ResetForm( EditForm1 ); Back()** |
 | **ImageAccept1** |When the user selects this control, submits changes to the data source. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**SubmitForm( EditForm1 )** |
 | **EditForm1** |If changes are accepted, returns to the previous screen. |Set the **[OnSuccess](../controls/control-form-detail.md)** property to this formula:<br>**Back()** |
@@ -130,7 +130,7 @@ If the user changes one or more values in the form and then selects the "checkma
 * If the changes are successfully saved, the form's **[OnSuccess](../controls/control-form-detail.md)** formula runs, and the **Back()** function opens the detail screen to show the updated record.
 * If the changes aren't successfully saved, the form's **[OnFailure](../controls/control-form-detail.md)** formula runs, but it doesn't change anything because it's *blank*. The **Edit and Create** screen remains open so that the user can either cancel the changes or fix the error. **LblFormError1** shows a user-friendly error message, to which the form's **Error** property is set.
 
-As with a **[Display form](../controls/control-form-detail.md)** control, an **[Edit form](../controls/control-form-detail.md)** control contains **[Card](../controls/control-card.md)** controls, which contain other controls that show different fields in a record:
+As with a **[Display form](../controls/control-form-detail.md)** control, an **[Edit form](../controls/control-form-detail.md)** control contains **[Card](controls/control-card.md)** controls, which contain other controls that show different fields in a record:
 
 ![Edit card and card controls selected in the authoring experience](./media/working-with-forms/afd-edit-card-controls.png)
 
@@ -195,7 +195,7 @@ To add a **[Display form](../controls/control-form-detail.md)** control:
 1. Add a screen, and then add a **[Display form](../controls/control-form-detail.md)** control to it
 2. Set the **[DataSource](../controls/control-form-detail.md)** property of the form control to **'Ice Cream'**.
 
-In the right-hand pane, you can select the fields to display on your screen and which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](../controls/control-card.md)** property on each **[Card](../controls/control-card.md)** control is set to the field that the user will interact with. Your screen should resemble this example:
+In the right-hand pane, you can select the fields to display on your screen and which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field that the user will interact with. Your screen should resemble this example:
 
 ![Display form for Ice Cream data source](./media/working-with-forms/ice-cream-new.png)
 
@@ -241,7 +241,7 @@ To add an **[Edit form](../controls/control-form-detail.md)** control:
 1. Add a screen, add an **[Edit form](../controls/control-form-detail.md)** control, and then set the form's **[DataSource](../controls/control-form-detail.md)** property to **'Ice Cream'**.
 2. Set the **[Item](../controls/control-form-detail.md)** property to **Gallery1.Selected**.
 
-You can now select the fields to display on your screen. You can also select which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](../controls/control-card.md)** property on each **[Card](../controls/control-card.md)** control is set to the field your user will interact with.  Your screen should resemble this example:
+You can now select the fields to display on your screen. You can also select which type of card to display for each field. As you make changes in the right-hand pane, the **[DataField](controls/control-card.md)** property on each **[Card](controls/control-card.md)** control is set to the field your user will interact with.  Your screen should resemble this example:
 
 ![Display form for Ice Cream data source](./media/working-with-forms/icecream-edit.png)
 

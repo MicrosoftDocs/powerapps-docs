@@ -117,7 +117,7 @@ ms.author: sharik
 
 15. **In the [Form control](../controls/control-form-detail.md), you can't change data by using a custom card**.
 
-     The stock custom card is missing the **[Update](../controls/control-card.md)** property, which is required to write back changes. To work around this:
+     The stock custom card is missing the **[Update](controls/control-card.md)** property, which is required to write back changes. To work around this:
 
     * Select the form control, and insert a card by using the right-hand pane based on the field that you want the card to show.  
     * Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card).

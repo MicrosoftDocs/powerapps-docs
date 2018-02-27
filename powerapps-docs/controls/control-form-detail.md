@@ -31,7 +31,7 @@ If you add a **[Gallery](control-gallery.md)** control, you can configure it to 
 ### Record selection
 For either type of form, you set its **DataSource** property to a table of records, and you set the form's **Item** property to show a specific record in that table. For example, you can set the **Item** property of a form to the **SelectedItem** property of a **[Gallery](control-gallery.md)** control. When the user selects a record in the gallery, the same record appears in the form, except that the form can show more fields. If the user returns to the gallery and selects a different record, the **SelectedItem** property of the gallery changes. This change updates the **Item** property of the form, which then shows the newly selected record.
 
-Each form control contains one or more **[Card](control-card.md)** controls. By setting the **[DataField](control-card.md)** property of a card, you [specify which field that card shows and other details](../maker/add-form.md).
+Each form control contains one or more **[Card](../maker/controls/control-card.md)** controls. By setting the **[DataField](../maker/controls/control-card.md)** property of a card, you [specify which field that card shows and other details](../maker/add-form.md).
 
 ### Create a record
 When an **Edit form** control is in **Edit** mode, the user can update the record that's specified in the form's **Item** property. If inspected, the **Mode** property returns **Edit**.
@@ -144,12 +144,12 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 
 * This property applies only to the **Edit form** control.
 * Use this property to extract the field values from the cards within the control.  You can then use these values to manually update the data source with a **[Patch](../functions/function-patch.md)** function call or another method exposed by a connection.  You do not need to use this property if you are using the **[SubmitForm](../functions/function-form.md)** function.
-* This property returns a record of values.  For example, if the form control contains card controls for **Name** and **Quantity** fields, and the values of the **[Update](control-card.md)** properties for those cards return "Widget" and 10 respectively, then the **Updates** property for the form control would return **{ Name: "Widget", Quantity: 10 }**.
+* This property returns a record of values.  For example, if the form control contains card controls for **Name** and **Quantity** fields, and the values of the **[Update](../maker/controls/control-card.md)** properties for those cards return "Widget" and 10 respectively, then the **Updates** property for the form control would return **{ Name: "Widget", Quantity: 10 }**.
 
-**Valid** – Whether a **[Card](control-card.md)** or **Edit form** control contains valid entries, ready to be submitted to the data source.
+**Valid** – Whether a **[Card](../maker/controls/control-card.md)** or **Edit form** control contains valid entries, ready to be submitted to the data source.
 
 * This property applies only to the **Edit form** control.
-* A **Form** control's **Valid** property aggregates the **Valid** properties of all the **[Card](control-card.md)** controls in the form. A form's **Valid** property is **true** only if the data in all cards in that form is valid; otherwise, the form's **Valid** property is **false**.
+* A **Form** control's **Valid** property aggregates the **Valid** properties of all the **[Card](../maker/controls/control-card.md)** controls in the form. A form's **Valid** property is **true** only if the data in all cards in that form is valid; otherwise, the form's **Valid** property is **false**.
 * To enable a button to save changes only when the data in a form is valid but hasn't yet been submitted, set the button's **Enabled** to this formula:
   
     **SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**

@@ -74,7 +74,7 @@ You use the **[ThisItem](operators.md#thisitem-operator)** operator to specify t
 For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
 ## Parent operator
-Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
+Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../maker/controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
 
 Any control in PowerApps can be referenced by name from anywhere within the app. **Screen1** may be the name of a screen in your app. To retrieve the background color of this screen, you can use **Screen1.Fill**.
 

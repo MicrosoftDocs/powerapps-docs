@@ -40,7 +40,7 @@ Use the **SubmitForm** function in the **[OnSelect](../controls/properties-core.
 
 Before submitting any changes, this function checks for validation issues with any field that's marked as required or that has one or more constraints on its value. This behavior matches that of the **[Validate](function-validate.md)** function.
 
-**SubmitForm** also checks the **[Valid](../controls/control-form-detail.md)** property of the Form, which is an aggregation of all the **[Valid](../controls/control-card.md)** properties of the **[Card](../controls/control-card.md)** controls that the Form control contains. If a problem occurs, the data isn't submitted, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties of the Form control are set accordingly.
+**SubmitForm** also checks the **[Valid](../controls/control-form-detail.md)** property of the Form, which is an aggregation of all the **[Valid](../maker/controls/control-card.md)** properties of the **[Card](../maker/controls/control-card.md)** controls that the Form control contains. If a problem occurs, the data isn't submitted, and the **[Error](../controls/control-form-detail.md)** and **[ErrorKind](../controls/control-form-detail.md)** properties of the Form control are set accordingly.
 
 If validation passes, **SubmitForm** submits the change to the data source.
 
