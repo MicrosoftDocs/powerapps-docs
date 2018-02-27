@@ -51,20 +51,20 @@ Columns that contain spaces can by read by PowerApps, but the spaces are replace
 ## Prerequisites
 Open PowerApps by taking *either* of these steps:
 
-* [Sign up](../maker/signup-for-powerapps.md) for PowerApps, [install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, [install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
 
 * [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
 
-    For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](../maker/create-app-browser.md).
+    For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](../create-app-browser.md).
 
 ## Create an app
-* [Generate an app automatically](../maker/app-from-sharepoint.md) based on data in a SharePoint list.
+* [Generate an app automatically](../app-from-sharepoint.md) based on data in a SharePoint list.
 
-    The app will have three screens by default: one each for browsing records, displaying details of a record, and creating or updating a record. After the app is generated, you'll probably want to customize [the browse screen](../maker/customize-layout-sharepoint.md) and [the details and edit screens](../maker/customize-forms-sharepoint.md) to suit your needs.
+    The app will have three screens by default: one each for browsing records, displaying details of a record, and creating or updating a record. After the app is generated, you'll probably want to customize [the browse screen](../customize-layout-sharepoint.md) and [the details and edit screens](../customize-forms-sharepoint.md) to suit your needs.
 
     **Note:** If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
 
-* Build your own app from scratch by [connecting to SharePoint](../connect-to-sharepoint.md), reviewing the concepts in [Create an app from scratch](../maker/get-started-create-from-blank.md), and applying them to SharePoint instead of Excel.
+* Build your own app from scratch by [connecting to SharePoint](../../connect-to-sharepoint.md), reviewing the concepts in [Create an app from scratch](../get-started-create-from-blank.md), and applying them to SharePoint instead of Excel.
 
 ## Add a SharePoint list to an existing app
 1. In PowerApps Studio, open the app that you want to update.
@@ -91,7 +91,7 @@ Open PowerApps by taking *either* of these steps:
 
        ![Specify credentials](./media/connection-sharepoint-online/specify-creds.png)
 
-       **Note:** If you don't have an on-premises data gateway installed, [install one](../maker/gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+       **Note:** If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
 
        Under **Choose a gateway**, click or tap the gateway that you want to use.
 
@@ -135,6 +135,6 @@ To show data from any of these types of columns in a gallery, use the formula ba
     For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
 
 ## Next steps
-* Learn how to [show data from a data source](../maker/add-gallery.md).
-* Learn how to [view details and create or update records](../maker/add-form.md).
-* See other types of [data sources](../maker/connections-list.md) to which you can connect.
+* Learn how to [show data from a data source](../add-gallery.md).
+* Learn how to [view details and create or update records](../add-form.md).
+* See other types of [data sources](../connections-list.md) to which you can connect.

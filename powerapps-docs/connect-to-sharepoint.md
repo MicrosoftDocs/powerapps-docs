@@ -23,7 +23,7 @@ Create a connection to either SharePoint Online or on-premises SharePoint so tha
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](maker/getting-started.md).
 
-As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
+As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](maker/connections/connection-sharepoint-online.md#known-issues).
 
 ## Specify a SharePoint connection
 1. If you haven't already signed up, [sign up for PowerApps](maker/signup-for-powerapps.md).

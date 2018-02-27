@@ -47,7 +47,7 @@ In this procedure, you'll replace a **[Toggle](../controls/control-toggle.md)** 
 
     ![](./media/customize-card/display-radio.png)
    
-    For information about which types of SharePoint columns support which types of cards, see [Known issues](../connections/connection-sharepoint-online.md#known-issues).
+    For information about which types of SharePoint columns support which types of cards, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 
 ## Unlock and customize a card
 In this procedure, you'll unlock a card and then replace a **[Text input](../controls/control-text-input.md)** control with a **[Slider](../controls/control-slider.md)** control.

@@ -31,7 +31,7 @@ In PowerApps, automatically generate an app in which users can manage items in a
 If you create an app of a custom list from the SharePoint Online command bar, the app appears as a view of that list. You can also run the app on a Windows Phone, iOS, or Android device, in addition to a web browser.
 
 > [!IMPORTANT]
-> PowerApps doesn't support all types of SharePoint data. For more information, see [Known issues](../connections/connection-sharepoint-online.md#known-issues).
+> PowerApps doesn't support all types of SharePoint data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 
 ## Generate an app
 1. Open a custom list in SharePoint Online, click or tap **PowerApps** on the command bar, and then click or tap **Create an app**.

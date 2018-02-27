@@ -72,7 +72,7 @@ In addition to creating and managing connections in [powerapps.com](https://web.
    
    For example, these connectors require additional information before you can use them.
    
-   * [SharePoint](../connections/connection-sharepoint-online.md)
+   * [SharePoint](connections/connection-sharepoint-online.md)
    * [SQL Server](connections/connection-azure-sqldatabase.md)
 
 The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).

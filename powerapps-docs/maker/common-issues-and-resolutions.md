@@ -105,7 +105,7 @@ ms.author: sharik
 
 12. **SharePoint custom lists are supported but not libraries, some types of list columns, or columns that support multiple values or selections**.
 
-     For more information, see [SharePoint Online](../connections/connection-sharepoint-online.md#known-issues).
+     For more information, see [SharePoint Online](connections/connection-sharepoint-online.md#known-issues).
 
 13. **Co-authoring isn't supported. One author at a time, please**.
 
