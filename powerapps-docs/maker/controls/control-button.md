@@ -160,7 +160,7 @@ Add a second button to clear the total between calculations.
 By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](../../controls/properties-size-location.md)**, **[Width](../../controls/properties-size-location.md)**, and **[Radius](../../controls/properties-size-location.md)** properties.
 
 > [!NOTE]
-> [Icons and Shapes](../../controls/control-shapes-icons.md) provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](../../controls/control-shapes-icons.md)** don’t have a **[Text](../../controls/properties-core.md)** property.
+> [Icons and Shapes](control-shapes-icons.md) provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](../../controls/properties-core.md)** property.
 
 1. Add a **Button** control, and set its **[Height](../../controls/properties-size-location.md)** and **[Width](../../controls/properties-size-location.md)** properties to **300** to make a large square button.
 2. Modify the **[RadiusTopLeft](../../controls/properties-size-location.md)**, **[RadiusTopRight](../../controls/properties-size-location.md)**, **[RadiusBottomLeft](../../controls/properties-size-location.md)**, and **[RadiusBottomRight](../../controls/properties-size-location.md)** properties to adjust the amount of curvature on each corner. Here are some examples of different shapes, each one starting from a 300 x 300 square button:

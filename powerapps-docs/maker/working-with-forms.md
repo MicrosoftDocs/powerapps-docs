@@ -70,7 +70,7 @@ To examine any control that appears in **BrowseGallery1**, select that control i
 
 In this example, the control's **[Text](../controls/properties-core.md)** property is set to **ThisItem.AssignedTo**, which is a field in the **Assets** data source. The **[Text](../controls/properties-core.md)** property of the other three **[Label](../controls/control-text-box.md)** controls in the gallery are set to similar formulas, and each control shows a different field in the data source.  
 
-Select the **[Shape](../controls/control-shapes-icons.md)** control (the arrow), and confirm that its **[OnSelect](../controls/properties-core.md)** property is set to this formula:
+Select the **[Shape](controls/control-shapes-icons.md)** control (the arrow), and confirm that its **[OnSelect](../controls/properties-core.md)** property is set to this formula:
 <br>**Navigate( DetailScreen1, None )**
 
 If the user finds a record in **BrowseGallery1**, the user can select the arrow for that record to show more information about it in **DetailScreen1**. By selecting an arrow, the user changes the value of the **Selected** property of **BrowseGallery1**. In this app, that property determines which record appears in not only **DetailScreen1** but also, if the user decides to update the record, the **Edit and Create** screen.

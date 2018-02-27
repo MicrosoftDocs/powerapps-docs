@@ -62,7 +62,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[HTML text](controls/control-html-text.md)** – Convert HTML tags automatically.
 
-**[Icon](../controls/control-shapes-icons.md)** – Add graphic appeal and visual interest.
+**[Icon](controls/control-shapes-icons.md)** – Add graphic appeal and visual interest.
 
 **[Image](controls/control-image.md)** – Show an image from, for example, a local file or a data source.
 
@@ -88,7 +88,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Screen](controls/control-screen.md)** – Show and update data about a specific task.
 
-**[Shape](../controls/control-shapes-icons.md)** – Display arrows and geometric shapes, such as rectangles.
+**[Shape](controls/control-shapes-icons.md)** – Display arrows and geometric shapes, such as rectangles.
 
 **[Slider](../controls/control-slider.md)** – Specify a value by dragging a handle.
 

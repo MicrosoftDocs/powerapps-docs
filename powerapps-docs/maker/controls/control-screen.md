@@ -52,18 +52,18 @@ Most apps have multiple **Screen** controls that contain **[Label](../../control
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Name the default **Screen** control **Source**, add another **Screen** control, and name it **Target**.
-3. On **Source**, add a **[Shape](../../controls/control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
+3. On **Source**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
    **Navigate(Target, ScreenTransition.Fade)**
    
     Want more information about the **[Navigate](../../functions/function-navigate.md)** function or [other functions](../formula-reference.md)?
-4. In **Target**, add a **[Shape](../../controls/control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
+4. In **Target**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
    **Navigate(Source, ScreenTransition.Fade)**
 5. Set the **[Fill](../../controls/properties-color-border.md)** property of **Target** to this formula:<br>
    **If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))**
-6. From **Source**, press F5, click or tap either option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](../../controls/control-shapes-icons.md)** control.
+6. From **Source**, press F5, click or tap either option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control.
    
     **Target** appears in the color that you chose.
-7. On **Target**, click or tap the **[Shape](../../controls/control-shapes-icons.md)** control to return to **Source**.
-8. (optional) Click or tap the other option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](../../controls/control-shapes-icons.md)** control to confirm that **Target** appears in the other color.
+7. On **Target**, click or tap the **[Shape](control-shapes-icons.md)** control to return to **Source**.
+8. (optional) Click or tap the other option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control to confirm that **Target** appears in the other color.
 9. To return to the default workspace, press Esc.
 
