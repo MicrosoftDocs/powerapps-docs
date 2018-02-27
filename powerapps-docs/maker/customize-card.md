@@ -29,7 +29,7 @@ For an overview, see [Understand data cards](../working-with-cards.md).
 * You can review this topic for general concepts only. To follow it exactly (step by step), follow the steps in these topics:
 
   1. [Create an app from SharePoint](app-from-sharepoint.md).
-  2. [Customize the layout](../customize-layout-sharepoint.md).
+  2. [Customize the layout](customize-layout-sharepoint.md).
   3. [Customize the form](customize-forms-sharepoint.md).
 
 ## Customize a locked card

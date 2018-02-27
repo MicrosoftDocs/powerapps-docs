@@ -60,7 +60,7 @@ Open PowerApps by taking *either* of these steps:
 ## Create an app
 * [Generate an app automatically](../maker/app-from-sharepoint.md) based on data in a SharePoint list.
 
-    The app will have three screens by default: one each for browsing records, displaying details of a record, and creating or updating a record. After the app is generated, you'll probably want to customize [the browse screen](../customize-layout-sharepoint.md) and [the details and edit screens](../maker/customize-forms-sharepoint.md) to suit your needs.
+    The app will have three screens by default: one each for browsing records, displaying details of a record, and creating or updating a record. After the app is generated, you'll probably want to customize [the browse screen](../maker/customize-layout-sharepoint.md) and [the details and edit screens](../maker/customize-forms-sharepoint.md) to suit your needs.
 
     **Note:** If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
 

@@ -21,20 +21,20 @@ ms.author: sharik
 # Customize a gallery layout in PowerApps
 After you generate an app automatically in PowerApps, customize the browse screen, which appears by default. Specify which layout to use, which columns to show, and which columns to use when sorting and filtering records.
 
-* For information about how to generate an app automatically, see [Generate an app to manage data in a SharePoint list](maker/app-from-sharepoint.md).
-* If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
+* For information about how to generate an app automatically, see [Generate an app to manage data in a SharePoint list](app-from-sharepoint.md).
+* If you're unfamiliar with PowerApps, see [Introduction to PowerApps](../getting-started.md).
 
 ## Prerequisites
 You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
 
-1. [Create a connection](connect-to-sharepoint.md) from PowerApps to SharePoint.
+1. [Create a connection](../connect-to-sharepoint.md) from PowerApps to SharePoint.
 2. Create a SharePoint list, named **AppGen**, that contains these columns.
    
     ![Sample columns from SharePoint](./media/customize-layout-sharepoint/list-columns.png)
 3. Add these items to the list that you just created.
    
     ![Sample data](./media/customize-layout-sharepoint/sample-data.png)
-4. [Generate an app automatically](maker/app-from-sharepoint.md) based on the list that you just created.
+4. [Generate an app automatically](app-from-sharepoint.md) based on the list that you just created.
 5. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
    
     ![Toggle the views](./media/customize-layout-sharepoint/toggle-view.png)
@@ -62,7 +62,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
    
     ![Layout with dates](./media/customize-layout-sharepoint/browse-dates.png)
 
-For more information about galleries, see [Show a list of items in PowerApps](maker/add-gallery.md).
+For more information about galleries, see [Show a list of items in PowerApps](add-gallery.md).
 
 ## Set the sort and search columns
 1. Select the **Gallery** control by clicking or tapping any record except the first one.
@@ -125,5 +125,5 @@ For more information about galleries, see [Show a list of items in PowerApps](ma
 
 ## Next steps
 * Press Ctrl-S to save your changes.
-* [Customize the forms](maker/customize-forms-sharepoint.md) in the app by showing, hiding, and reordering the fields that the forms show.
+* [Customize the forms](customize-forms-sharepoint.md) in the app by showing, hiding, and reordering the fields that the forms show.
 
