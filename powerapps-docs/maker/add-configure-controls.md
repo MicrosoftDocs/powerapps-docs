@@ -172,7 +172,7 @@ Instead of configuring a control directly, in the **Properties** tab, or from th
     ![Today function](./media/add-configure-controls/today-function.png)
 
     > [!TIP]
-> You can [format dates and times](../show-text-dates-times.md) in various ways, in addition to performing calculations on them.
+> You can [format dates and times](show-text-dates-times.md) in various ways, in addition to performing calculations on them.
 
 ## Configure two controls to interact with each other
 In this procedure, you'll add a check box and then configure the label that you already have to appear only when the check box is selected.

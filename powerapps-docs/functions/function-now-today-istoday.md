@@ -30,7 +30,7 @@ The **IsToday** function tests whether a date/time value is between midnight tod
 
 All these functions work with the local time of the current user.
 
-See [working with dates and times](../show-text-dates-times.md) for more information.
+See [working with dates and times](../maker/show-text-dates-times.md) for more information.
 
 ## Syntax
 **Now**()

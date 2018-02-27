@@ -41,7 +41,7 @@ Dates must be in one of these formats:
 
 See the **[Date](function-date-time.md)** and **[Time](function-date-time.md)** functions to convert from numeric components date, month, and year, and hour, minute, and second.
 
-Also see [working with dates and times](../show-text-dates-times.md) for more information.
+Also see [working with dates and times](../maker/show-text-dates-times.md) for more information.
 
 To convert numbers, see the **[Value](function-value.md)** function.
 

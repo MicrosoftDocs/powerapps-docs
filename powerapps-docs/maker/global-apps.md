@@ -142,7 +142,7 @@ For example:
 * **TimeValue( "11:43:02", "fr-FR" )** or **DateValue( "11:43:02" )** when located where "fr-FR" is the user's language returns the date/time value **January 1, 1970 at 11:43:02**.
 * **TimeDateValue( "11:43:02 1/2/01", "de-DE" )** or **DateValue( "11:43:02" )** when located where "de-DE" is the user's language returns the date/time value **February 1, 2001 at 11:43:02**.
 
-For more information, see the documentation for the **[Value](../functions/function-value.md)** and **[DateValue, TimeValue, and DateTimeValue](../functions/function-datevalue-timevalue.md)**  functions and [working with dates and times](../show-text-dates-times.md).
+For more information, see the documentation for the **[Value](../functions/function-value.md)** and **[DateValue, TimeValue, and DateTimeValue](../functions/function-datevalue-timevalue.md)**  functions and [working with dates and times](show-text-dates-times.md).
 
 ### Calendar and Clock information
 The **[Calendar](../functions/function-clock-calendar.md)** and **[Clock](../functions/function-clock-calendar.md)** functions provide calendar and clock information for the user's current language.  
