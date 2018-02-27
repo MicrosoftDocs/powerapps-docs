@@ -52,9 +52,9 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -64,11 +64,11 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **ItemPaddingLeft** – The distance between text in a listbox and its left edge.
 
-**[LineHeight](../../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.
+**[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
 **[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
@@ -96,15 +96,15 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **SelectMultiple** – Whether a user can select more than one item in a listbox.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-**[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

@@ -35,7 +35,7 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 ## Additional properties
-**[Align](../../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -55,9 +55,9 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -67,7 +67,7 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 
 **[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **[Padding](properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
 
@@ -85,15 +85,15 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 
 **[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-**[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
-**[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**[VerticalAlign](../../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
+**[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

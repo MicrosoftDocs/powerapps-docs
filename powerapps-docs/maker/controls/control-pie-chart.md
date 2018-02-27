@@ -44,7 +44,7 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 
 **Explode** – The distance between wedges in a pie chart.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -62,7 +62,7 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

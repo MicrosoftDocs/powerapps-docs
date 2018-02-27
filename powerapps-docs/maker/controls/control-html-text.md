@@ -27,7 +27,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 ## Key properties
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **HTMLText** – Text that appears in an HTML text control and that may contain HTML tags.
 
@@ -60,7 +60,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 

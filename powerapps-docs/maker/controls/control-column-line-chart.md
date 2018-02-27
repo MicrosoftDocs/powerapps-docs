@@ -42,7 +42,7 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 **[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **GridStyle** – Whether a column or line chart shows its x-axis, its y-axis, both, or neither.
 
@@ -86,7 +86,7 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 * The **SeriesAxisMin** property is available for the **Column chart** control but not the **Line chart** control.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

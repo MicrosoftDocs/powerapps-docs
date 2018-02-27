@@ -58,9 +58,9 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -70,7 +70,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
 
@@ -94,15 +94,15 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-**[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**[VerticalAlign](../../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
+**[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

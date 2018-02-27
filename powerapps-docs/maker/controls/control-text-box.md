@@ -29,14 +29,14 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 **[DelayOutput](properties-core.md)** – Set to true to delay action during text input.
 
 ## Additional properties
-**[Align](../../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **AutoHeight** – Whether a label automatically increases its **[Height](properties-size-location.md)** property if its **[Text](properties-core.md)** property contains more characters than the control can show at one time.
 
@@ -56,7 +56,7 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -66,9 +66,9 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
-**[LineHeight](../../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.
+**[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
@@ -88,15 +88,15 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-**[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**[VerticalAlign](../../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
+**[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

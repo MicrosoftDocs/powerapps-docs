@@ -44,7 +44,7 @@ To return to your SharePoint list at any time, click or tap **Back to SharePoint
 PowerApps offers many ways to customize your form. Here are some examples:
 
 * [Change the size and orientation](set-aspect-ratio-portrait-landscape.md)
-* [Format the text](../controls/properties-text.md)
+* [Format the text](controls/properties-text.md)
 * [Add images](add-images-pictures-audio-video.md) or [charts](use-line-pie-bar-chart.md)
 * [Add custom data validation](../functions/function-validate.md)
 * [Add rules](working-with-rules.md)

@@ -60,8 +60,8 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * [**BorderThickness**](properties-color-border.md) – The thickness of the **Data table** control's border.
 * [**Color**](properties-color-border.md) – The default text color for all data rows.
 * [**Fill**](properties-color-border.md) – The default background color for all data rows.
-* [**Font**](../../controls/properties-text.md) - The default font for all data rows.
-* [**FontWeight**](../../controls/properties-text.md) – The default font weight for all data rows.
+* [**Font**](properties-text.md) - The default font for all data rows.
+* [**FontWeight**](properties-text.md) – The default font weight for all data rows.
 * **HeadingColor** – The text color for the column headings.
 * **HeadingFill** – The background color of the column headings.
 * **HeadingFont** – The font of the column headings.
@@ -73,7 +73,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * **NoDataText** – The message that the user receives when there are no records to show in the **Data table** control.
 * **SelectedColor** – The color of the text in the selected row.
 * **SelectedFill** – The background color of the selected row.
-* [**Size**](../../controls/properties-text.md) – The default font size for all data rows.
+* [**Size**](properties-text.md) – The default font size for all data rows.
 * [**Visible**](properties-core.md) – A value that determines whether the **Data table** control appears or is hidden.
 * [**Width**](properties-size-location.md) – The distance between the **Data table** control's left and right edges.
 * [**X**](properties-size-location.md) – The distance between the left edge of the **Data table** control and the left edge of its parent container (or the left edge of the screen if there is no parent container).

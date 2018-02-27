@@ -52,7 +52,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 

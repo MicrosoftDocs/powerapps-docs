@@ -59,13 +59,13 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
@@ -77,7 +77,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
 **StartYear** – The earliest year to which the user can set the value of a date-picker control.
 

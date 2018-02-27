@@ -30,7 +30,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 ## Additional properties
-**[Align](../../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.
+**[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **AutoDisableOnSelect** – Automatically disables the control while the **OnSelect** behavior is running.
 
@@ -54,9 +54,9 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
-**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -66,7 +66,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
+**[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -92,17 +92,17 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-**[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
+**[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
+**[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**[VerticalAlign](../../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
+**[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
