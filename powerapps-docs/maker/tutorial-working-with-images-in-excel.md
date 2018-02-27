@@ -27,8 +27,8 @@ In this tutorial, we:
 * Save the images created from the pen input control to an Excel file
 * Display images from an Excel file in your app
 
-[!INCLUDE [app-customization-requirements](includes/app-customization-requirements.md)]
-* Learn how to [add a data source](maker/add-data-connection.md)
+[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+* Learn how to [add a data source](add-data-connection.md)
 
 ## Create the Excel file as a table
 
@@ -46,8 +46,8 @@ In this tutorial, we:
 3. Name the Excel file **SavePen.xlsx**, and save the file to your cloud storage account (OneDrive for Business, Dropbox, and so on).
 
 ## Create an app with the pen control
-1. In PowerApps, create a [blank app](maker/get-started-create-from-blank.md).
-2. In your app, add the cloud storage account as a [data source](maker/add-data-connection.md). Once added as a data source, add **SavePen.xlsx** as a connection, and then select the **Drawings** table:  
+1. In PowerApps, create a [blank app](get-started-create-from-blank.md).
+2. In your app, add the cloud storage account as a [data source](add-data-connection.md). Once added as a data source, add **SavePen.xlsx** as a connection, and then select the **Drawings** table:  
    ![Connect](./media/tutorial-working-with-images-in-excel/savepen.png)  
    
    Now, the Drawings table is listed as a Data source.
@@ -95,7 +95,7 @@ When you set the Items property, the Excel table is automatically updated with a
 In the Excel table, the image path can also be the URL to an image. Download the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
 ## Learn more
-[Add an image, a video, or a sound](maker/add-images-pictures-audio-video.md)  
-[Show data in a line, pie, or bar chart in your app](use-line-pie-bar-chart.md)  
-[Understand tables and records in PowerApps](working-with-tables.md)
+[Add an image, a video, or a sound](add-images-pictures-audio-video.md)  
+[Show data in a line, pie, or bar chart in your app](../use-line-pie-bar-chart.md)  
+[Understand tables and records in PowerApps](../working-with-tables.md)
 
