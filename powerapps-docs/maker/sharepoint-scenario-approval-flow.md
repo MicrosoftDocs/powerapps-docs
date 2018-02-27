@@ -163,5 +163,5 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
     ![Email to Megan Bowen](./media/sharepoint-scenario-approval-flow/03-02-05-megan-email.png)
 
 ## Next steps
-The next step in this tutorial series is to [create an app to manage projects](../sharepoint-scenario-build-app.md).
+The next step in this tutorial series is to [create an app to manage projects](sharepoint-scenario-build-app.md).
 

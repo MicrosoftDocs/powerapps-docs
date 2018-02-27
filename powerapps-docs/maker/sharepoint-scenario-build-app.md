@@ -20,7 +20,7 @@ ms.author: mblythe
 ---
 # Create an app to manage projects
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](../sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 In this task, we'll build an app from scratch. This app allows a user to assign a manager to projects and to update project details. You will see some of the same controls and formulas you saw in the first app, but you will build more of the app yourself this time. The process is more complex, but you'll learn more, so we think it's a fair trade-off.
 
@@ -500,9 +500,9 @@ This is the second optional section on PowerApps formulas. In the first deep-div
 
 What does this formula do? When you select an item in the gallery and click the **OK** button, the formula updates the **Project Details** list, setting the **PMAssigned** column to the value that you specify in the text input. The formula uses functions to do its work:
 
-* The [**Patch** function](functions/function-patch.md) modifies one or more records of a data source.
+* The [**Patch** function](../functions/function-patch.md) modifies one or more records of a data source.
 
-* The [**LookUp** function](functions/function-filter-lookup.md) finds the first record in a table that satisfies a formula.
+* The [**LookUp** function](../functions/function-filter-lookup.md) finds the first record in a table that satisfies a formula.
 
 When you put the functions together in the formula, here's what happens:
 
@@ -513,5 +513,5 @@ When you put the functions together in the formula, here's what happens:
 3. Now that the **Patch** function has the right ID, it updates the **PMAssigned** field to the value in **TextInput1.Text**.
 
 ## Next steps
-The next step in this tutorial series is to [create a Power BI report to analyze projects](sharepoint-scenario-build-report.md).
+The next step in this tutorial series is to [create a Power BI report to analyze projects](../sharepoint-scenario-build-report.md).
 
