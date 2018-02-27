@@ -61,12 +61,12 @@ Deleting a field group isn't currently supported.
 2. There is an Excel icon next to each field group. The Excel icon is enabled only if the field group has fields.
 3. Click the Excel icon for the field group that you want to open in Excel. A workbook is generated containing the entity field list, the Excel Add-in, and a pointer to your environment.
 4. Open the generated workbook that's provided by the browser.
-5. After the workbook is open, enable editing. The Excel Add-in will then read the data into the workbook. For more information, see [Open entity data in Excel](maker/data-platform-interactive-excel.md).
+5. After the workbook is open, enable editing. The Excel Add-in will then read the data into the workbook. For more information, see [Open entity data in Excel](data-platform-interactive-excel.md).
 
 ## Field group usage
 The default field groups help speed up application authoring and customization. Some places where you can currently see field groups in action are:
 
-* **Entity form control** - Entity form control uses the default field groups to display dynamic forms that help speed up the app authoring process, help enforce consistency, and also ease maintenance. For more details, see [Use the Entity Form control](maker/entity-form-control.md).
+* **Entity form control** - Entity form control uses the default field groups to display dynamic forms that help speed up the app authoring process, help enforce consistency, and also ease maintenance. For more details, see [Use the Entity Form control](entity-form-control.md).
 * **Lookup control** - If one of the fields that you add on your screen is a reference to another linked entity, the field is rendered as a lookup control (picklist). When a user clicks the lookup control to select a record from the linked entity, the fields displayed are determined by the **DefaultLookup** field group on the linked entity. Only the first two fields of the **DefaultLookup** field group are used.
 * **Creating an app** - When you generate an app by choosing the option to create an app from data, the screens for the entity that you select are automatically created. The **Display form** control on the **Display** screen and the **Edit form** control on the **Edit** screen use the **DefaultDetails** field group to determine which fields will be added by default to those screens.
 

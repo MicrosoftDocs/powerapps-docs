@@ -125,7 +125,7 @@ The next five procedures provide a single, end-to-end example of how to use **En
       
       ![](media/entity-form-control/entityform-tutorial-01-08.png)   
       
-      In the **Common Data Service**, you can [modify field groups](../field-groups.md) for custom entities (but not [standard entities](guided-learning/manage-data.yml#step-2)) to change the fields that appear on the corresponding forms that the **Entity form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity form** control to display the corresponding form.
+      In the **Common Data Service**, you can [modify field groups](field-groups.md) for custom entities (but not [standard entities](guided-learning/manage-data.yml#step-2)) to change the fields that appear on the corresponding forms that the **Entity form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity form** control to display the corresponding form.
 
 ## Display the details of a record
 Let’s add another **Entity form** control to display the details of the sales order that’s selected in the list that you created earlier.  
