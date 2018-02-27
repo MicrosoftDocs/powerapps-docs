@@ -19,12 +19,12 @@ ms.author: gregli
 
 ---
 # Distinct function in PowerApps
-Summarizes [records](../maker/working-with-tables.md#records) of a [table](../maker/working-with-tables.md), removing duplicates.
+Summarizes [records](../working-with-tables.md#records) of a [table](../working-with-tables.md), removing duplicates.
 
 ## Description
 The **Distinct** function evaluates a formula across each record of a table. **Distinct** returns a one-column table that contains the results, with duplicate values removed.  
 
-[!INCLUDE [record-scope](../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../includes/record-scope.md)]
 
 ## Syntax
 **Distinct**( *Table*, *Formula* )

@@ -115,7 +115,7 @@ A **Radio** control, with which users have decades of experience, is best used w
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Distinct**( *DataSource*, *ColumnName* )](../../functions/function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example
 1. Add a **Radio** control, name it **Pricing**, and set its **[Items](properties-core.md)** property to this formula:

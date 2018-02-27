@@ -121,7 +121,7 @@ Other elements include:
 
 **[Disable](../functions/function-enable-disable.md)** – Disables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
 
-**[Distinct](../functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
+**[Distinct](functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
 
 **[Download](../functions/function-param.md)** – Downloads a file from the web to the local device.
 
