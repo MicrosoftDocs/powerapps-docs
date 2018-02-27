@@ -76,13 +76,13 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 [**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## Example
-1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
+1. Add a **[Button](../maker/controls/control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(Revenue2015, {Product:"Europa", Revenue:27000}, {Product:"Ganymede", Revenue:26300}, {Product:"Callisto", Revenue:29200})**
    
     Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../maker/formula-reference.md)?
-2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.
+2. Press F5, click or tap the **[Button](../maker/controls/control-button.md)** control, and then press Esc to return to the default workspace.
 3. Add a **Pie chart** control, and set its **[Items](properties-core.md)** property to **Revenue2015**.
    
     The **Pie chart** control shows revenue data for each product in relation to the other products.

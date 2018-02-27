@@ -79,9 +79,9 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 3. Add a **[Text input](../controls/control-text-input.md)** control, and name it **RecordTitle**.
 
-4. Add a **[Button](../controls/control-button.md)** control, and move it under **RecordTitle**.
+4. Add a **[Button](controls/control-button.md)** control, and move it under **RecordTitle**.
 
-5. With the **[Button](../controls/control-button.md)** control selected, select **Flows** on the **Action** tab.
+5. With the **[Button](controls/control-button.md)** control selected, select **Flows** on the **Action** tab.
 
     ![Flows option on the Action tab](./media/using-logic-flows/action-tab.png)
 
@@ -101,6 +101,6 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
     ![OnSelect property that includes the flow](./media/using-logic-flows/open-preview.png)
 
-2. Type or paste text in **RecordTitle**, and then click or tap the **[Button](../controls/control-button.md)** control.
+2. Type or paste text in **RecordTitle**, and then click or tap the **[Button](controls/control-button.md)** control.
 
     A SharePoint item is created in the list you specified with the text you specified as the title. If the list was open when the flow ran, you might need to refresh your browser window to show the changes.

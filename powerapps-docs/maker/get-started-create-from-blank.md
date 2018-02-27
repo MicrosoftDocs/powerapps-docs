@@ -219,7 +219,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
       When the user clicks or taps the arrow, the **[Navigate](../functions/function-navigate.md)** function opens the **ViewScreen**.
 
-12. Add a **[Button](../controls/control-button.md)** control under the form, and set the button's **[Text](../controls/properties-core.md)** property to **"Save"**.
+12. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](../controls/properties-core.md)** property to **"Save"**.
 
      ![Add a save button](./media/get-started-create-from-blank/add-save-button.png)
 

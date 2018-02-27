@@ -23,9 +23,9 @@ ms.author: gregli
 Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might want to show the value in a **[Label](../controls/control-text-box.md)** control in red if the value is less than zero or in black otherwise. So you can set the **[Color](../controls/properties-color-border.md)** property of that control to this formula:
 <br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 
-In this context, what does it mean when the user selects a **[Button](../controls/control-button.md)** control?  No value has changed, so there is nothing new to calculate. Excel has no equivalent to a **[Button](../controls/control-button.md)** control.  
+In this context, what does it mean when the user selects a **[Button](controls/control-button.md)** control?  No value has changed, so there is nothing new to calculate. Excel has no equivalent to a **[Button](controls/control-button.md)** control.  
 
-By selecting a **[Button](../controls/control-button.md)** control, the user initiates a sequence of actions, or behaviors, that will change the state of the app:
+By selecting a **[Button](controls/control-button.md)** control, the user initiates a sequence of actions, or behaviors, that will change the state of the app:
 
 * Change the screen that's displayed: **[Back](../functions/function-navigate.md)** and **[Navigate](../functions/function-navigate.md)** functions.
 * Control a [signal](../functions/signals.md): **[Enable](../functions/function-enable-disable.md)** and **[Disable](../functions/function-enable-disable.md)** functions.

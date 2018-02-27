@@ -30,7 +30,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Barcode scanner](controls/control-barcodescanner.md)** – Scan a barcode by using a device that has a camera.
 
-**[Button](../controls/control-button.md)** – Interact with the app by clicking or tapping.
+**[Button](controls/control-button.md)** – Interact with the app by clicking or tapping.
 
 **[Camera](../controls/control-camera.md)** – Take and save photos in the app or to a data source.
 
@@ -121,7 +121,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[AllItems](../controls/control-gallery.md)** – All items in a gallery, including additional control values that are a part of the gallery's template.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
 
-**AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](../controls/control-button.md)** and **[Image](../controls/control-image.md)** controls.
+**AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.  Applies to **[Button](controls/control-button.md)** and **[Image](../controls/control-image.md)** controls.
 
 **[AutoHeight](../controls/properties-size-location.md)** – Whether a label automatically increases its height if its **[Text](../controls/properties-core.md)** property contains more characters than the control can show. Applies to the **[Label](../controls/control-text-box.md)** control.
 
@@ -368,7 +368,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Photo](../controls/control-camera.md)** – The image captured  when the user takes a picture.  Applies to the **[Camera](../controls/control-camera.md)** control.
 
-**[Pressed](../controls/control-button.md)** – *True* while a control is being pressed, *false* otherwise.  Applies to the **[Button](../controls/control-button.md)** control.
+**[Pressed](controls/control-button.md)** – *True* while a control is being pressed, *false* otherwise.  Applies to the **[Button](controls/control-button.md)** control.
 
 **[PressedBorderColor](../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.  Applies to many controls.
 

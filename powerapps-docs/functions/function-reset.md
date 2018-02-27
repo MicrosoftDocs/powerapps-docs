@@ -26,7 +26,7 @@ The **Reset** function resets a control to its **Default** property value.  Any 
 
 You cannot reset controls that are within a [**Gallery**](../controls/control-gallery.md) or [**Edit form**](../controls/control-form-detail.md) control from outside those controls.  You can reset controls from formulas on controls within the same gallery or form.  You can also reset all the controls within a form with the [**ResetForm**](function-form.md) function. 
 
-Using the **Reset** function is an alternative to toggling the **Reset** property of input controls and is generally preferred.  The **Reset** property may be a better choice if many controls need to be reset together from multiple formulas.  Toggling the **Reset** property can be done from a [**Button**](../controls/control-button.md) control with the formula **Reset = Button.Pressed** or from a variable with **Reset = MyVar** and toggling **MyVar** with the formula **Button.OnSelect = Set( MyVar, true ); Set( MyVar, false )**.    
+Using the **Reset** function is an alternative to toggling the **Reset** property of input controls and is generally preferred.  The **Reset** property may be a better choice if many controls need to be reset together from multiple formulas.  Toggling the **Reset** property can be done from a [**Button**](../maker/controls/control-button.md) control with the formula **Reset = Button.Pressed** or from a variable with **Reset = MyVar** and toggling **MyVar** with the formula **Button.OnSelect = Set( MyVar, true ); Set( MyVar, false )**.    
 
 Input controls are also reset when their **Default** property changes.
 

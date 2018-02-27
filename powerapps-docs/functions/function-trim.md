@@ -49,7 +49,7 @@ The following examples use a single-column collection, named **Spaces**, that co
 
 ![](media/function-trim/input-strings.png)
 
-To create this collection, set the **OnSelect** property of a **[Button](../controls/control-button.md)** control to this formula, open Preview mode, and then click or tap the button:
+To create this collection, set the **OnSelect** property of a **[Button](../maker/controls/control-button.md)** control to this formula, open Preview mode, and then click or tap the button:
 <br>**ClearCollect( Spaces, [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;", "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill", "Already&nbsp;trimmed", "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;", "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
 
 | Formula | Description | Result |

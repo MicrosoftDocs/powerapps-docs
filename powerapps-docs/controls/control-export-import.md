@@ -104,13 +104,13 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
-1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:
+1. Add a **[Button](../maker/controls/control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:
    <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
    
     Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
    
     Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../maker/formula-reference.md)?
-2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
+2. Press F5, click or tap the **[Button](../maker/controls/control-button.md)** control, and then press Esc.
 3. Add an **Export** control, and set its **Data** property to **Products**.
 4. Press F5, click or tap the **Export** control, and then specify the name of the file into which you want to export the data.
 5. Click or tap **Save**, then press Esc to return to the default workspace.

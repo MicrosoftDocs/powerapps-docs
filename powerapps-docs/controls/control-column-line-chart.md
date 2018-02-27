@@ -112,13 +112,13 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 [**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## Example
-1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
+1. Add a **[Button](../maker/controls/control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(Revenue, {Year:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Year:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Year:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
    
     Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../maker/formula-reference.md)?
-2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.
+2. Press F5, click or tap the **[Button](../maker/controls/control-button.md)** control, and then press Esc to return to the default workspace.
 3. Add a **Column chart** control or a **Line chart** control, set its **[Items](properties-core.md)** property to **Revenue**, and set its **NumberOfSeries** property to **3**.
    
     The control shows revenue data for each product over three years.

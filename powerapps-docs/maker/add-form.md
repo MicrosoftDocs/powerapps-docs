@@ -87,7 +87,7 @@ To show all fields in a record, add and configure a **[Display form](../controls
 
 2. Click or tap **Rename**, and then rename the form **EditForm**.
 
-3. Add a **[Button](../controls/control-button.md)** control, and set its **[Text](../controls/properties-core.md)** property to **Save**.
+3. Add a **[Button](controls/control-button.md)** control, and set its **[Text](../controls/properties-core.md)** property to **Save**.
 
     ![Add a save button](./media/add-form/save-button.png)  
 

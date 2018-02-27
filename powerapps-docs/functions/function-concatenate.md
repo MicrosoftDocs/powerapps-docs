@@ -42,7 +42,7 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 
 ## Examples
 #### Concat
-1. Add a **[Button](../controls/control-button.md)** control, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+1. Add a **[Button](../maker/controls/control-button.md)** control, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
    
     **Collect(Products, {String:"Violin", Wind:"Trombone", Percussion:"Bongos"}, {String:"Cello", Wind:"Trumpet", Percussion:"Tambourine"})**
 2. Press F5, click the button, and then press Esc to return to the design workspace.

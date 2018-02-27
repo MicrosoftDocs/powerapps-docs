@@ -1,0 +1,183 @@
+---
+title: 'Button control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the Button control
+services: ''
+suite: powerapps
+documentationcenter: na
+author: fikaradz
+manager: anneta
+editor: ''
+tags: ''
+
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 10/25/2016
+ms.author: fikaradz
+
+---
+# Button control in PowerApps
+A control that the user can click or tap to interact with the app.
+
+## Description
+Configure the **[OnSelect](../../controls/properties-core.md)** property of a **Button** control to run one or more formulas when the user clicks or taps the control.
+
+## Key properties
+**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+
+**[Text](../../controls/properties-core.md)** – Text that appears on a control or that the user types into a control.
+
+## Additional properties
+**[Align](../../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.
+
+**AutoDisableOnSelect** – Automatically disables the control while the **OnSelect** behavior is running.
+
+**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
+
+**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+
+**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
+
+**[FocusedBorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border when it has keyboard focus.
+
+**[Color](../../controls/properties-color-border.md)** – The color of text in a control.
+
+**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+
+**[DisabledBorderColor](../../controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+
+**[DisabledColor](../../controls/properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+
+**[DisabledFill](../../controls/properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+
+**[Fill](../../controls/properties-color-border.md)** – The background color of a control.
+
+**[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
+
+**[FontWeight](../../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+
+**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+
+**[HoverBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+
+**[HoverColor](../../controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+
+**[HoverFill](../../controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+
+**[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
+
+**[PaddingBottom](../../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
+
+**[PaddingLeft](../../controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
+
+**[PaddingRight](../../controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
+
+**[PaddingTop](../../controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+
+**Pressed** – *True* while a control is being pressed, *false* otherwise.
+
+**[PressedBorderColor](../../controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+
+**[PressedColor](../../controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+
+**[PressedFill](../../controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+
+**[RadiusBottomLeft](../../controls/properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
+
+**[RadiusBottomRight](../../controls/properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
+
+**[RadiusTopLeft](../../controls/properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
+
+**[RadiusTopRight](../../controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
+
+**[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
+
+**[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
+
+**[TabIndex](../../controls/properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+
+**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+
+**[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
+
+**[VerticalAlign](../../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
+
+**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+
+**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
+
+**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+
+**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+## Related functions
+**[Navigate( *ScreenName*, *ScreenTransitionValue* )](../../functions/function-navigate.md)**
+
+## Examples
+### Add a basic formula to a button
+1. Add a **[Text input](../../controls/control-text-input.md)** control, and name it **Source**.
+   
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+2. Add a **Button** control, set its **[Text](../../controls/properties-core.md)** property to "Add", and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
+   **UpdateContext({Total:Total + Value(Source.Text)})**
+   
+    Want more information about the **[UpdateContext](../../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
+3. Add a **[Label](../../controls/control-text-box.md)** control, set its **[Text](../../controls/properties-core.md)** property to **Total**, and then press **F5**.
+4. Clear the default text from **Source**, type a number in it, and then click or tap **Add**.
+   
+    The **[Label](../../controls/control-text-box.md)** control shows the number that you typed.
+5. Clear the number from **Source**, type another number in it, and then click or tap **Add**.
+   
+    The **[Label](../../controls/control-text-box.md)** control shows the sum of the two numbers that you typed.
+6. (optional) Repeat the previous step one or more times.
+7. To return to the default workspace, press Esc (or click or tap the close icon in the upper-right corner).
+
+### Configure a button with multiple formulas
+Add a formula that clears the **Text input** control between entries.
+
+1. Set the **[HintText](../../controls/control-text-input.md)** property of **Source** to "Enter a number".
+2. Set the **[OnSelect](../../controls/properties-core.md)** property of **Add** to this formula:
+   
+    **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
+   
+    > [!NOTE]
+> Separate multiple formulas with a semi-colon “**;**”.
+3. Set the **[Default](../../controls/properties-core.md)** property of **Source** to **ClearInput**.
+4. Press **F5**, and then test the app by adding several numbers together.
+
+### Add another button to reset the total
+Add a second button to clear the total between calculations.
+
+1. Add another **Button** control, set its **[Text](../../controls/properties-core.md)** property to "Clear", and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:
+   
+    **UpdateContext({Total:0})**
+2. Press **F5**, add several numbers together, and then click or tap **Clear** to reset the total.
+
+### Change a button's appearance
+#### Change a button's shape
+By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](../../controls/properties-size-location.md)**, **[Width](../../controls/properties-size-location.md)**, and **[Radius](../../controls/properties-size-location.md)** properties.
+
+> [!NOTE]
+> [Icons and Shapes](../../controls/control-shapes-icons.md) provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](../../controls/control-shapes-icons.md)** don’t have a **[Text](../../controls/properties-core.md)** property.
+
+1. Add a **Button** control, and set its **[Height](../../controls/properties-size-location.md)** and **[Width](../../controls/properties-size-location.md)** properties to **300** to make a large square button.
+2. Modify the **[RadiusTopLeft](../../controls/properties-size-location.md)**, **[RadiusTopRight](../../controls/properties-size-location.md)**, **[RadiusBottomLeft](../../controls/properties-size-location.md)**, and **[RadiusBottomRight](../../controls/properties-size-location.md)** properties to adjust the amount of curvature on each corner. Here are some examples of different shapes, each one starting from a 300 x 300 square button:
+   
+   * Set all four **[Radius](../../controls/properties-size-location.md)** values to **150** to create a circle.
+   * Set the values for **[RadiusTopLeft](../../controls/properties-size-location.md)** and **[RadiusBottomRight](../../controls/properties-size-location.md)** to **300** to create a leaf-shaped **Button**.
+   * Set the values for **[RadiusTopLeft](../../controls/properties-size-location.md)** and **[RadiusTopRight](../../controls/properties-size-location.md)** to **300**, and the values for **[RadiusBottomLeft](../../controls/properties-size-location.md)** and **[RadiusBottomRight](../../controls/properties-size-location.md)** to **100** to create a tab-shaped button.
+
+#### Change a button's color when you hover over it
+By default, the fill color of a **Button** control will dim by 20% when you hover over it with a mouse. You can adjust this behavior by changing the **[HoverFill](../../controls/properties-color-border.md)** property, which uses the **[ColorFade](../../functions/function-colors.md)** function. If you set the **[ColorFade](../../functions/function-colors.md)** formula to a positive percentage, the color becomes lighter when you hover over the button, while a negative percentage makes the color darker.
+
+* Change the **[ColorFade](../../functions/function-colors.md)** percentage in the **[HoverFill](../../controls/properties-color-border.md)** property of one of the buttons that you created, and observe the effects.
+
+You can also specify the color of a **Button** control by setting its **[HoverFill](../../controls/properties-color-border.md)** property to a formula that contains the **[ColorValue](../../functions/function-colors.md)** function instead of the **[ColorFade](../../functions/function-colors.md)** function, as in **ColorValue("Red")**.
+
+> [!NOTE]
+> The color value can be any CSS color definition, either a name or a hex value.
+
+* Replace the **[ColorFade](../../functions/function-colors.md)** function with a **[ColorValue](../../functions/function-colors.md)** function in one of the buttons that you created, and observe the effects.
+

@@ -115,14 +115,14 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
-1. Add a **[Button](control-button.md)** control, and set its **[Text](properties-core.md)** property to show **Collect**.
+1. Add a **[Button](../maker/controls/control-button.md)** control, and set its **[Text](properties-core.md)** property to show **Collect**.
    
     Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
-2. Set the **[OnSelect](properties-core.md)** property of the **[Button](control-button.md)** control to this formula:
+2. Set the **[OnSelect](properties-core.md)** property of the **[Button](../maker/controls/control-button.md)** control to this formula:
    <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
    
     Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../maker/formula-reference.md)?
-3. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
+3. Press F5, click or tap the **[Button](../maker/controls/control-button.md)** control, and then press Esc.
 4. Add a **Drop down** control, name it **Countries**, and set its **[Items](properties-core.md)** property to this formula:
    <br>**Distinct(CityPopulations, Country)**
 5. Add a **Text gallery** control in vertical/portrait orientation, and set its **[Items](properties-core.md)** property to this formula:

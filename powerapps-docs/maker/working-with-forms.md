@@ -209,7 +209,7 @@ Finally, we need to connect the **[Display form](../controls/control-form-detail
 
 Great!  We now turn to navigation: how a user opens the details screen from the gallery screen and opens the gallery screen from the details screen.
 
-* Add a **[Button](../controls/control-button.md)** control to the screen, set its **[Text](../controls/properties-core.md)** property to show **[Back](../functions/function-navigate.md)**, and set its **[OnSelect](../controls/properties-core.md)** property to **Back()**.
+* Add a **[Button](controls/control-button.md)** control to the screen, set its **[Text](../controls/properties-core.md)** property to show **[Back](../functions/function-navigate.md)**, and set its **[OnSelect](../controls/properties-core.md)** property to **Back()**.
    
     This formula returns the user back to the gallery when they finish viewing details.
 
@@ -249,14 +249,14 @@ These two properties are the same as the properties on the **[Display form](../c
 
 The **[Edit form](../controls/control-form-detail.md)** control goes further by offering the **[SubmitForm](../functions/function-form.md)** function to write back changes to the data source. You use this with a button or image control to save a user's changes.
 
-* Add a **[Button](../controls/control-button.md)** control, set its **[Text](../controls/properties-core.md)** property to show **Save**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
+* Add a **[Button](controls/control-button.md)** control, set its **[Text](../controls/properties-core.md)** property to show **Save**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
   **SubmitForm( Form1 )**
 
 ![Edit form for Ice Cream data source](./media/working-with-forms/edit-icecream-save.png)
 
 To add navigation to and from this screen:
 
-1. Add another **[Button](../controls/control-button.md)** control, set its **[Text](../controls/properties-core.md)** property to show **Cancel**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula: <br>**ResetForm( Form1 ); Back()**
+1. Add another **[Button](controls/control-button.md)** control, set its **[Text](../controls/properties-core.md)** property to show **Cancel**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula: <br>**ResetForm( Form1 ); Back()**
    
     This formula discards any unsaved edits and opens the previous screen.
    
@@ -283,7 +283,7 @@ When the user is ready to save the new record, **[SubmitForm](../functions/funct
 
 On the first screen, you'll add a **New** button:
 
-1. On the screen with the gallery, add a **[Button](../controls/control-button.md)** control.
+1. On the screen with the gallery, add a **[Button](controls/control-button.md)** control.
 2. Set the button's **[Text](../controls/properties-core.md)** property to **New** and its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
    **NewForm( Form1 ); Navigate( Screen3, None )**
    
@@ -320,7 +320,7 @@ In an app that PowerApps generates from data, the **[AutoHeight](../controls/con
 ## Refresh data
 The data source is refreshed whenever the user opens the app, but the user might want to refresh the records in the gallery without closing the app. Add a **Refresh** button so that the user can select it to manually refresh the data:
 
-1. On the screen with the **[Gallery](../controls/control-gallery.md)** control, add a **[Button](../controls/control-button.md)** control and set its **[Text](../controls/properties-core.md)** property to show **Refresh**.
+1. On the screen with the **[Gallery](../controls/control-gallery.md)** control, add a **[Button](controls/control-button.md)** control and set its **[Text](../controls/properties-core.md)** property to show **Refresh**.
 
 2. Set the **[OnSelect](../controls/properties-core.md)** property of this control to this formula:<br> **Refresh( 'Ice Cream' )**
 

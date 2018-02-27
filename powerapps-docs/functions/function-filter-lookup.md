@@ -85,7 +85,7 @@ The examples in the rest of this topic show the results of searching a list, nam
 
 ![](media/function-filter-lookup/customers.png)
 
-To create this data source as a collection, create a **[Button](../controls/control-button.md)** control and set its **OnSelect** property to this formula:
+To create this data source as a collection, create a **[Button](../maker/controls/control-button.md)** control and set its **OnSelect** property to this formula:
 
 **ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
 
