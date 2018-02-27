@@ -49,7 +49,7 @@ In addition to creating and managing connections in [powerapps.com](https://web.
 
 * Automatically generate an [app from data](app-from-sharepoint.md), such as a custom SharePoint list.
 * Update an existing app, or create one from scratch as [add a connection](add-data-connection.md) describes.
-* Open an app that another user created and [shared with you](../share-app.md).
+* Open an app that another user created and [shared with you](share-app.md).
 
 > [!NOTE]
 > If you want to use PowerApps Studio instead, open the **File** menu, and then click or tap **Connections**, [powerapps.com](https://web.powerapps.com) opens so that you can create and manage connections there.

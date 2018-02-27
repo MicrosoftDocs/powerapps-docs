@@ -19,7 +19,7 @@ ms.author: archanan
 
 ---
 # Share app resources
-Before you [share an app](../share-app.md), consider the types of resources on which it relies, such as one or more of the following:
+Before you [share an app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
 * a connection to a data source
 * an on-premises data gateway

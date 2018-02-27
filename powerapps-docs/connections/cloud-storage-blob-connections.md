@@ -77,7 +77,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 [Understand tables and records](../working-with-tables.md) provides more details and some examples.  
 
 ## Sharing your app
-You can share [your app](../share-app.md), [your resources](../maker/share-app-resources.md) such as connectors, and [your data](../maker/share-app-data.md) with others in your organization.
+You can share [your app](../maker/share-app.md), [your resources](../maker/share-app-resources.md) such as connectors, and [your data](../maker/share-app-data.md) with others in your organization.
 
 If you're sharing a folder in Dropbox, the shared folder must be attached to the user's Dropbox account.
 

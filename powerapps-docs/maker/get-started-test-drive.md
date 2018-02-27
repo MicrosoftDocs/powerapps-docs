@@ -99,7 +99,7 @@ You can customize this or any app in these ways, among others:
 
 ## Next steps
 1. Press Ctrl-S, give your app a name, and then click or tap **Save** to save your app to the cloud.
-2. [Share your app](../share-app.md) with other people in your organization.
+2. [Share your app](share-app.md) with other people in your organization.
 
     > [!NOTE]
 > Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.

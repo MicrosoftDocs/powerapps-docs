@@ -288,5 +288,5 @@ As you customize the app, test your changes by running the app in Preview mode, 
 
 ## Next steps
 * Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
-* [Share the app](../share-app.md) so that other people can run it.
+* [Share the app](share-app.md) so that other people can run it.
 * Learn more about [galleries](add-gallery.md), [forms](add-form.md), and [formulas](../working-with-formulas.md).

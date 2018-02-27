@@ -75,4 +75,4 @@ For more information on troubleshooting issues with gateways, or configuring the
 
 ## Next steps
 * Create an app that connects to an on-premises data source, such as [SQL Server](../connections/connection-azure-sqldatabase.md) or [SharePoint](../connections/connection-sharepoint-online.md).
-* [Share an app](../share-app.md) that connects to an on-premises data source.
+* [Share an app](share-app.md) that connects to an on-premises data source.

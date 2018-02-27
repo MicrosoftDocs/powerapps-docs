@@ -66,7 +66,7 @@ After you share an app with one or more users or security groups, how they can s
 ##### If you shared app with *User* permission
 The people you shared the app with will receive an email notification if you selected that check box in the app sharing screen. In the email, they can click or tap a link to run the app on [Dynamics 365](http://home.dynamics.com). Soon we will support universal links, which means if you have PowerApps Studio or PowerApps Mobile installed, the app will open in PowerApps Studio or PowerApps mobile.
 
-Users can also discover the app in AppSource on [Dynamics 365](http://home.dynamics.com) (for example, if you didn't send email). [Read more](maker/app-source.md) on how to users can get apps via AppSource.
+Users can also discover the app in AppSource on [Dynamics 365](http://home.dynamics.com) (for example, if you didn't send email). [Read more](app-source.md) on how to users can get apps via AppSource.
 
 ##### If you shared an app with *Contributor* permission
 The people you shared the app with will receive an email notification if you selected that check box in the app sharing screen. In the email, they can click or tap a link that opens the app directly for editing using PowerApps Studio for the web. There is also a link to run the app on [Dynamics 365](http://home.dynamics.com). Soon we will support universal links, which means if you have PowerApps Studio or PowerApps mobile installed, the app will open in PowerApps Studio or PowerApps Mobile.
@@ -92,9 +92,9 @@ Most apps rely on at least one of these types of resources:
 * an Excel workbook or other service
 * a flow
 
-Users and contributors need permissions to any data connections and gateways that the app uses. Some permissions come along implicitly with the app, but others must be explicitly granted. For more information, see [Share app resources](maker/share-app-resources.md).
+Users and contributors need permissions to any data connections and gateways that the app uses. Some permissions come along implicitly with the app, but others must be explicitly granted. For more information, see [Share app resources](share-app-resources.md).
 
-When you share an app that uses the Common Data Service, notice the information bar indicating that you must share the runtime permission to the Common Data Service separately. If you don’t have permission to do this, see your environment admin. [Read more](administrator/database-security.md) about security for the Common Data Service.
+When you share an app that uses the Common Data Service, notice the information bar indicating that you must share the runtime permission to the Common Data Service separately. If you don’t have permission to do this, see your environment admin. [Read more](../administrator/database-security.md) about security for the Common Data Service.
 
 ![App resources when sharing](./media/share-app/app-sharing-resources.png)
 

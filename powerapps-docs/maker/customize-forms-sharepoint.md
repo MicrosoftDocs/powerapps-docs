@@ -99,4 +99,4 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 ## Next steps
 * Press Ctrl-S to save your app so that you can run it from other devices.
-* [Share the app](../share-app.md) so that other people can run it.
+* [Share the app](share-app.md) so that other people can run it.

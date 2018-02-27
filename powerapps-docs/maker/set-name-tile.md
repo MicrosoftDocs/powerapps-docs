@@ -51,6 +51,6 @@ Follow one or more of these steps:
 On the **File** menu, click or tap **Save** to republish your app with the new settings.
 
 ## More resources
-* [Share an app](../share-app.md)
+* [Share an app](share-app.md)
 * [Delete an app](delete-app.md)
 * [Restore an app to a previous version](restore-an-app.md)

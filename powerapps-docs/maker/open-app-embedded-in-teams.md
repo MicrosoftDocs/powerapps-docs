@@ -58,7 +58,7 @@ Sign into PowerApps at [https://web.powerapps.com]([https://web.powerapps.com).
     ![](./media/open-app-embedded-in-teams/app-in-channel.png)
 
 > [!NOTE]
-> You must [share](../share-app.md) your own apps before you add them to Teams (sample apps are shared by default).
+> You must [share](share-app.md) your own apps before you add them to Teams (sample apps are shared by default).
 
 ## Open an app
 
