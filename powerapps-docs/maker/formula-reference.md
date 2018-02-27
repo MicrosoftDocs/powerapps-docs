@@ -42,7 +42,7 @@ Other elements include:
 
 **[AddColumns](../functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
 
-**[And](../functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](../functions/operators.md).
+**[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](../functions/operators.md).
 
 **[App](../functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
 
@@ -215,12 +215,12 @@ Other elements include:
 
 **[NewForm](functions/function-form.md)** – Resets a form control for creation of an item.
 
-**[Not](../functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the [**!** operator](../functions/operators.md).
+**[Not](functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the [**!** operator](../functions/operators.md).
 
 **[Now](../functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
 ## O
-**[Or](../functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](../functions/operators.md).
+**[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](../functions/operators.md).
 
 ## P
 **[Param](../functions/function-param.md)** – Provides access to parameters passed to the app when the user opened it.

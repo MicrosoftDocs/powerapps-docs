@@ -46,7 +46,7 @@ These lists will change over time. We're working to support more functions and o
 
 Within the **Filter** and **LookUp** functions, the following can be used with columns of the table to select the appropriate records:
 
-* **[And](../functions/function-logicals.md)** (including **[&&](../functions/operators.md)**), **[Or](../functions/function-logicals.md)** (including **[||](../functions/operators.md)**), **[Not](../functions/function-logicals.md)** (including **[!](../functions/operators.md)**)
+* **[And](functions/function-logicals.md)** (including **[&&](../functions/operators.md)**), **[Or](functions/function-logicals.md)** (including **[||](../functions/operators.md)**), **[Not](functions/function-logicals.md)** (including **[!](../functions/operators.md)**)
 * **[In](../functions/operators.md)**
 * **[=](../functions/operators.md)**, **[<>](../functions/operators.md)**, **[>=](../functions/operators.md)**, **[<=](../functions/operators.md)**, **[>](../functions/operators.md)**, **[<](../functions/operators.md)**
 * **[+](../functions/operators.md)**, **[-](../functions/operators.md)**

@@ -42,7 +42,7 @@ The **Search** function finds records in a table that contain a string in one of
 **Filter**( *Table*, *Formula1* [, *Formula2*, ... ] )
 
 * *Table* - Required. Table to search.
-* *Formula(s)* - Required. The formula by which each record of the table is evaluated. The function returns all records that result in **true**. You can reference columns within the table. If you supply more than one formula, the results of all formulas are combined with the **[And](../../functions/function-logicals.md)** function.
+* *Formula(s)* - Required. The formula by which each record of the table is evaluated. The function returns all records that result in **true**. You can reference columns within the table. If you supply more than one formula, the results of all formulas are combined with the **[And](function-logicals.md)** function.
 
 **Search**( *Table*, *SearchString*, *Column1* [, *Column2*, ... ] )
 
