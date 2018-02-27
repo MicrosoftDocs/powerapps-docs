@@ -145,8 +145,8 @@ For example:
 For more information, see the documentation for the **[Value](../functions/function-value.md)** and **[DateValue, TimeValue, and DateTimeValue](../functions/function-datevalue-timevalue.md)**  functions and [working with dates and times](show-text-dates-times.md).
 
 ### Calendar and Clock information
-The **[Calendar](../functions/function-clock-calendar.md)** and **[Clock](../functions/function-clock-calendar.md)** functions provide calendar and clock information for the user's current language.  
+The **[Calendar](functions/function-clock-calendar.md)** and **[Clock](functions/function-clock-calendar.md)** functions provide calendar and clock information for the user's current language.  
 
 Among other things, use these functions to provide a **Dropdown** control with a list of choices.  
 
-For more information, see the documentation for the **[Calendar](../functions/function-clock-calendar.md)** and **[Clock](../functions/function-clock-calendar.md)**  functions.
+For more information, see the documentation for the **[Calendar](functions/function-clock-calendar.md)** and **[Clock](functions/function-clock-calendar.md)**  functions.

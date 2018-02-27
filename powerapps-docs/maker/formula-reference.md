@@ -60,7 +60,7 @@ Other elements include:
 **[Blank](../functions/function-isblank-isempty.md)** – Returns a *blank* value that can be used to insert a NULL value in a data source.
 
 ## C
-**[Calendar](../functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.
+**[Calendar](functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.
 
 **[Char](functions/function-char.md)** – Translates a character code into a string.
 
@@ -68,7 +68,7 @@ Other elements include:
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
 
-**[Clock](../functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
+**[Clock](functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
 **[Coalesce](../functions/function-isblank-isempty.md)** – Replaces *blank* values while leaving non-*blank* values unchanged.
 
