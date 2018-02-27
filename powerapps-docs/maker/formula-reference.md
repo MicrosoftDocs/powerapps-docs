@@ -172,7 +172,7 @@ Other elements include:
 
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
-**[IsToday](../functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
+**[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
 ## L
 **[Language](functions/function-language.md)** – Returns the language tag of the current user.
@@ -217,7 +217,7 @@ Other elements include:
 
 **[Not](functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the [**!** operator](../functions/operators.md).
 
-**[Now](../functions/function-now-today-istoday.md)** – Returns the current date/time value.
+**[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
 ## O
 **[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](../functions/operators.md).
@@ -318,7 +318,7 @@ Other elements include:
 
 **[TimeZoneOffset](functions/function-dateadd-datediff.md)** – Returns the difference between UTC and the user's local time in minutes.
 
-**[Today](../functions/function-now-today-istoday.md)** – Returns the current date/time value.
+**[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
 **[Trim](../functions/function-trim.md)** – Removes extra spaces from the ends and interior of a string of text.
 
