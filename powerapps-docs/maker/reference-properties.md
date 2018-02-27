@@ -90,7 +90,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Shape](controls/control-shapes-icons.md)** – Display arrows and geometric shapes, such as rectangles.
 
-**[Slider](../controls/control-slider.md)** – Specify a value by dragging a handle.
+**[Slider](controls/control-slider.md)** – Specify a value by dragging a handle.
 
 **[Label](../controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency,
 
@@ -228,11 +228,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[GridStyle](controls/control-column-line-chart.md)** – Whether a column or line chart shows its x-axis, its y-axis, both, or neither.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### H
-**[HandleActiveFill](../controls/control-slider.md)** – The color of the handle for a slider as the user changes its value.  Applies to the **[Slider](../controls/control-slider.md)** control.
+**[HandleActiveFill](controls/control-slider.md)** – The color of the handle for a slider as the user changes its value.  Applies to the **[Slider](controls/control-slider.md)** control.
 
-**[HandleFill](../controls/control-slider.md)** – The color of the handle (the element that changes position) in a toggle or slider control.  Applies to the **[Slider](../controls/control-slider.md)** control.
+**[HandleFill](controls/control-slider.md)** – The color of the handle (the element that changes position) in a toggle or slider control.  Applies to the **[Slider](controls/control-slider.md)** control.
 
-**[HandleHoverFill](../controls/control-slider.md)** – The color of the handle in a slider when the user keeps the mouse pointer on it.  Applies to the **[Slider](../controls/control-slider.md)** control.
+**[HandleHoverFill](controls/control-slider.md)** – The color of the handle in a slider when the user keeps the mouse pointer on it.  Applies to the **[Slider](controls/control-slider.md)** control.
 
 **[Height](../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.  Applies to many controls.
 
@@ -274,7 +274,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[LastSubmit](controls/control-form-detail.md)** – The last successfully submitted record, including any server generated fields.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
-**Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](controls/control-gallery.md)** and **[Slider](../controls/control-slider.md)** controls.
+**Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](controls/control-gallery.md)** and **[Slider](controls/control-slider.md)** controls.
 
 **[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](controls/control-radio.md)**, **[Label](../controls/control-text-box.md)**, and **[Text input](../controls/control-text-input.md)** controls.
 
@@ -285,7 +285,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[MarkerSuffix](controls/control-column-line-chart.md)** – Text that appears after each value in a column chart for which the **[Markers](controls/control-column-line-chart.md)** property is set to **true**.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
-**Max** – The maximum value to which the user can set a slider or a rating.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
+**Max** – The maximum value to which the user can set a slider or a rating.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](controls/control-slider.md)** controls.
 
 **[MaxLength](../controls/control-text-input.md)** – The number of characters that the user can type into a text-input control.  Applies to the **[Text input](../controls/control-text-input.md)** control.
 
@@ -293,7 +293,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Mic](controls/control-microphone.md)** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.  Applies to the **[Microphone](controls/control-microphone.md)** control.
 
-**[Min](../controls/control-slider.md)** – The minimum value to which the user can set a slider.  Applies to the **[Slider](../controls/control-slider.md)** control.
+**[Min](controls/control-slider.md)** – The minimum value to which the user can set a slider.  Applies to the **[Slider](controls/control-slider.md)** control.
 
 **[MinimumBarWidth](controls/control-column-line-chart.md)** – The narrowest possible width of columns in a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
@@ -393,13 +393,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[RadiusTopRight](../controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.  Applies to many controls.
 
-**RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](../controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**RailFill** – The background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
-**RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](../controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
 **[RatingFill](controls/control-rating.md)** – The color of the stars in a rating control.  Applies to the **[Rating](controls/control-rating.md)** control.
 
-**ReadOnly** – Whether a user can change the value of a slider or rating control.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
+**ReadOnly** – Whether a user can change the value of a slider or rating control.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](controls/control-slider.md)** controls.
 
 **[Repeat](../controls/control-timer.md)** – Whether a timer automatically restarts when it finishes running.  Applies to the **[Timer](../controls/control-timer.md)** control.
 
@@ -432,7 +432,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ShowScrollbar](controls/control-gallery.md)** – Whether a scrollbar appears when the user hovers over a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
+**ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](controls/control-slider.md)** controls.
 
 **[Size](../controls/properties-text.md)** – The font size of the text that appears on a control.  Applies to many controls.
 
@@ -479,11 +479,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### V
 **Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](controls/control-form-detail.md)** controls.
 
-**[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](controls/control-radio.md)**, **[Slider](../controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
+**[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](controls/control-radio.md)**, **[Slider](controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
 
-**ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](../controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
-**ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](../controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
 **[VerticalAlign](../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.  Applies to many controls.
 

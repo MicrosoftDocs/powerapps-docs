@@ -84,7 +84,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 * [Show text](../../controls/control-text-box.md#show-data-in-a-gallery)
 * [Show images](control-image.md#show-a-set-of-images-from-a-data-source)
 * [Filter data by selecting a list option](control-drop-down.md#example)
-* [Filter data by adjusting a slider](../../controls/control-slider.md#example)
+* [Filter data by adjusting a slider](control-slider.md#example)
 
 ### Get data from the user
 * [Get text](../../controls/control-text-input.md#collect-data)

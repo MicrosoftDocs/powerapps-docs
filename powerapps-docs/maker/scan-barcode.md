@@ -113,4 +113,4 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 ## Next steps
 * [Connect the app to a data source](add-data-connection.md) and configure the **[Patch](../functions/function-patch.md)** function so that users can save results.
 * Add a **[Drop down](controls/control-drop-down.md)** control, and configure it so that users can choose which type of barcode they want to scan.
-* Add a **[Slider](../controls/control-slider.md)** control, and configure it so that users can adjust the scan rate or the height of the **Barcode** control.
+* Add a **[Slider](controls/control-slider.md)** control, and configure it so that users can adjust the scan rate or the height of the **Barcode** control.
