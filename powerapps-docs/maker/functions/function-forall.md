@@ -19,12 +19,12 @@ ms.author: gregli
 
 ---
 # ForAll function in PowerApps
-Calculates values and performs actions for all [records](../maker/working-with-tables.md#records) of a [table](../maker/working-with-tables.md).
+Calculates values and performs actions for all [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description
 The **ForAll** function evaluates a formula for all records of a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.
 
-[!INCLUDE [record-scope](../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../includes/record-scope.md)]
 
 ### Return value
 The result of each formula evaluation is returned in a table, in the same order as the input table.
@@ -34,9 +34,9 @@ If the result of the formula is a single value, the resulting table will be a si
 If the result of the formula is a *blank* value, then there will be no record in the result table for that input record.  In this case, there will be fewer records in the result table than the source table.
 
 ### Taking action
-The formula can include functions that take action, such as modifying the records of a data source with the **[Patch](function-patch.md)** and **[Collect](../maker/functions/function-clear-collect-clearcollect.md)** functions.  The formula can also call methods on connections.  Multiple actions can be performed per record by using the [**;** operator](operators.md). You can't modify the table that is the subject of the **ForAll** function.
+The formula can include functions that take action, such as modifying the records of a data source with the **[Patch](../../functions/function-patch.md)** and **[Collect](function-clear-collect-clearcollect.md)** functions.  The formula can also call methods on connections.  Multiple actions can be performed per record by using the [**;** operator](../../functions/operators.md). You can't modify the table that is the subject of the **ForAll** function.
 
-When writing your formula, keep in mind that records can be processed in any order and, when possible, in parallel.  The first record of the table may be processed after the last record.  Take care to avoid ordering dependencies.  For this reason, you can't use the **[UpdateContext](function-updatecontext.md)**, **[Clear](../maker/functions/function-clear-collect-clearcollect.md)**, and **[ClearCollect](../maker/functions/function-clear-collect-clearcollect.md)** functions within a **ForAll** function because they could easily be used to hold variables that would be susceptible to this effect.  You can use **[Collect](../maker/functions/function-clear-collect-clearcollect.md)**, but the order in which records are added is undefined.
+When writing your formula, keep in mind that records can be processed in any order and, when possible, in parallel.  The first record of the table may be processed after the last record.  Take care to avoid ordering dependencies.  For this reason, you can't use the **[UpdateContext](../../functions/function-updatecontext.md)**, **[Clear](function-clear-collect-clearcollect.md)**, and **[ClearCollect](function-clear-collect-clearcollect.md)** functions within a **ForAll** function because they could easily be used to hold variables that would be susceptible to this effect.  You can use **[Collect](function-clear-collect-clearcollect.md)**, but the order in which records are added is undefined.
 
 Several functions that modify data sources, including **Collect**, **Remove**, and **Update**, return the changed data source as their return value.  These return values can be large and consume significant resources if returned for every record of the **ForAll** table.  You may also find that these return values are not what you expect, because **ForAll** can operate in parallel and may separate the side effects of these functions from obtaining their result.  Fortunately, if the return value from **ForAll** is not actually used, which is often the case with data modification functions, then the return value will not be created and there are no resource or ordering concerns.  But if you are using the result of a **ForAll** and one of the functions that returns a data source, think carefully about how you structure the result and try it out first on small data sets.  
 
@@ -46,7 +46,7 @@ Many functions in PowerApps can process more than one value at a time through th
 Another consideration is that **ForAll** is not delegable while other functions may be, such as **Filter**.  
 
 ### Delegation
-[!INCLUDE [delegation-no-one](../includes/delegation-no-one.md)]
+[!INCLUDE [delegation-no-one](../../includes/delegation-no-one.md)]
 
 ## Syntax
 **ForAll**( *Table*, *Formula* )
@@ -56,7 +56,7 @@ Another consideration is that **ForAll** is not delegable while other functions 
 
 ## Examples
 ### Calculations
-The following examples use the **Squares** [data source](../maker/working-with-data-sources.md):
+The following examples use the **Squares** [data source](../working-with-data-sources.md):
 
 ![](media/function-forall/squares.png)
 
@@ -70,7 +70,7 @@ To create this data source as a collection, set the **OnSelect** property of a *
 | **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** |For all the records of the input table, raises the **Value** column to the third power.  The **Power** function does not support single-column tables. Therefore, **ForAll** must be used in this case. |<style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
 
 ### Using a connection
-The following examples use the **Expressions** [data source](../maker/working-with-data-sources.md):
+The following examples use the **Expressions** [data source](../working-with-data-sources.md):
 
 ![](media/function-forall/translate.png)
 
@@ -78,7 +78,7 @@ To create this data source as a collection, set the **OnSelect** property of a *
 
 * **ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )**
 
-This example also uses a [Microsoft Translator](../maker/connections/connection-microsoft-translator.md) connection.  To add this connection to your app, see the topic about how to [manage connections](../maker/add-manage-connections.md).
+This example also uses a [Microsoft Translator](../connections/connection-microsoft-translator.md) connection.  To add this connection to your app, see the topic about how to [manage connections](../add-manage-connections.md).
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -96,7 +96,7 @@ But before you make that copy, think carefully if it is really needed.  Many sit
 * Making a copy can consume a lot of computer memory, network bandwidth, and/or time.  
 * For most data sources, copying cannot be delegated, limiting how much data can be moved.      
 
-The following examples use the **Products** [data source](../maker/working-with-data-sources.md):
+The following examples use the **Products** [data source](../working-with-data-sources.md):
 
 ![](media/function-forall/prod.png)
 
@@ -115,7 +115,7 @@ Don't make that copy!  We can use the following formula anywhere we need:
 
 * **ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
 
-A [record scope](../maker/working-with-tables.md#record-scope) is created by the **Filter** and **AddColumns** functions to perform the comparison and subtraction operations, respectively, with the **'Quantity Requested'** and **'Quantity Available'** fields of each record.
+A [record scope](../working-with-tables.md#record-scope) is created by the **Filter** and **AddColumns** functions to perform the comparison and subtraction operations, respectively, with the **'Quantity Requested'** and **'Quantity Available'** fields of each record.
 
 In this example, the **Filter** function can be delegated.  This is important, as it can find all the products that meet the criteria, even if that is only a few records out of a table of millions.  At this time, **ShowColumns** and **AddColumns** cannot be delegated, so the actual number of products that needs to be ordered will be limited.  If you know the size of this result will always be relatively small, this approach is fine.
 
