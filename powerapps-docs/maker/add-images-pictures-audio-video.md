@@ -21,7 +21,7 @@ ms.author: sharik
 This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive for Business.
 
 ## Prerequisites
-[Sign up](signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
 
 ## Add media from a file or the cloud
 You can choose the kind of media file to add (for example, images, video, or audio).
@@ -42,7 +42,7 @@ You can choose the kind of media file to add (for example, images, video, or aud
 
     ![Select media type][8]
 
-6. If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
+6. If you added an image control, set its **[Image](../controls/properties-visual.md)** property to the file that you added:  
 
     ![Set image property](./media/add-images-pictures-audio-video/imageproperty.png)
 
@@ -124,9 +124,9 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 3. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
-4. In PowerApps, create a [blank app](get-started-create-from-blank.md).
+4. In PowerApps, create a [blank app](../get-started-create-from-blank.md).
 
-5. In your app, add the OneDrive for Business account as a [data source](maker/add-data-connection.md):
+5. In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 
    1. Click or tap the **View** tab, and then click or tap **Data sources**.
 
@@ -177,14 +177,14 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
     In **SavePen.xlsx**, the **Image** column specifies the path to the new images.
 
 ### Known limitations
-For information about how to share Excel data within your organization, [review these limitations](connections/cloud-storage-blob-connections.md#sharing-excel-tables).
+For information about how to share Excel data within your organization, [review these limitations](../connections/cloud-storage-blob-connections.md#sharing-excel-tables).
 
 ## For more information
 Be sure to test your app on different platforms, including in [a browser window](https://home.dynamics.com/) and on a phone.
 
 For information about more advanced scenarios that involve uploading multimedia directly to a different data source, see [image capture pro tips](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) and [custom connectors for image upload](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
 
-Another way to upload files to a data source is to use the [Patch](functions/function-patch.md) function.
+Another way to upload files to a data source is to use the [Patch](../functions/function-patch.md) function.
 
 [1]: ./media/add-images-pictures-audio-video/add-image-video-audio-file.png
 [3]: ./media/add-images-pictures-audio-video/add-intro-sound.png

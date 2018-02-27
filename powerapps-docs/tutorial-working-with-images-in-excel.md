@@ -95,7 +95,7 @@ When you set the Items property, the Excel table is automatically updated with a
 In the Excel table, the image path can also be the URL to an image. Download the [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
 ## Learn more
-[Add an image, a video, or a sound](add-images-pictures-audio-video.md)  
+[Add an image, a video, or a sound](maker/add-images-pictures-audio-video.md)  
 [Show data in a line, pie, or bar chart in your app](use-line-pie-bar-chart.md)  
 [Understand tables and records in PowerApps](working-with-tables.md)
 
