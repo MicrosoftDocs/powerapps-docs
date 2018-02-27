@@ -513,5 +513,5 @@ When you put the functions together in the formula, here's what happens:
 3. Now that the **Patch** function has the right ID, it updates the **PMAssigned** field to the value in **TextInput1.Text**.
 
 ## Next steps
-The next step in this tutorial series is to [create a Power BI report to analyze projects](../sharepoint-scenario-build-report.md).
+The next step in this tutorial series is to [create a Power BI report to analyze projects](sharepoint-scenario-build-report.md).
 
