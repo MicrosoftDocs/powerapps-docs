@@ -73,7 +73,7 @@ The examples in this section use a [data source](../maker/working-with-data-sour
 | **Sqrt(&nbsp;ValueTable&nbsp;)** |Returns the square root of each number in the table |![](media/function-numericals/values-sqrt.png) |
 
 ### Step-by-step example
-1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **Source**.
+1. Add a **[Text input](../maker/controls/control-text-input.md)** control, and name it **Source**.
 2. Add a **Label** control, and set its **[Text](../controls/properties-core.md)** property to this formula:
    <br>
    **Sqrt( Value( Source.Text ) )**

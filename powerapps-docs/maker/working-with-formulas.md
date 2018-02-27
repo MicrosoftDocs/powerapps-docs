@@ -83,7 +83,7 @@ In Excel, you type **=SUM(A1:A2)** into a cell to show the sum of whatever value
 
 ![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.png)
 
-In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the label from the previous procedure and two **[Text input](../controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
+In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the label from the previous procedure and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc1.png)
 

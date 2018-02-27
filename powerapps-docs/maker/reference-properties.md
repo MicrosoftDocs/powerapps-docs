@@ -94,7 +94,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Label](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency,
 
-**[Text input](../controls/control-text-input.md)** – Type text, numbers, and other data.
+**[Text input](controls/control-text-input.md)** – Type text, numbers, and other data.
 
 **[Timer](../controls/control-timer.md)** – Configure your app to respond after a certain amount of time passes.
 
@@ -157,7 +157,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ChevronFill](controls/control-drop-down.md)** – The color of the down arrow in a dropdown list.  Applies to the **[Drop down](controls/control-drop-down.md)** control.
 
-**[Clear](../controls/control-text-input.md)** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.  Applies to the **[Text input](../controls/control-text-input.md)** control.
+**[Clear](controls/control-text-input.md)** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
 **[Color](../controls/properties-color-border.md)** – The color of text in a control.  Applies to many controls.
 
@@ -236,7 +236,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Height](../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.  Applies to many controls.
 
-**[HintText](../controls/control-text-input.md)** – Light-grey text that appears in a text-input control if it's blank.  Applies to the **[Text input](../controls/control-text-input.md)** control.
+**[HintText](controls/control-text-input.md)** – Light-grey text that appears in a text-input control if it's blank.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
 **[HoverBorderColor](../controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.  Applies to many controls.
 
@@ -276,7 +276,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](controls/control-gallery.md)** and **[Slider](controls/control-slider.md)** controls.
 
-**[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](controls/control-radio.md)**, **[Label](controls/control-text-box.md)**, and **[Text input](../controls/control-text-input.md)** controls.
+**[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](controls/control-radio.md)**, **[Label](controls/control-text-box.md)**, and **[Text input](controls/control-text-input.md)** controls.
 
 **[Loop](controls/control-audio-video.md)** – Whether an audio or video clip automatically starts over as soon as it finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -287,7 +287,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Max** – The maximum value to which the user can set a slider or a rating.  Applies to **[Rating](controls/control-rating.md)** and **[Slider](controls/control-slider.md)** controls.
 
-**[MaxLength](../controls/control-text-input.md)** – The number of characters that the user can type into a text-input control.  Applies to the **[Text input](../controls/control-text-input.md)** control.
+**[MaxLength](controls/control-text-input.md)** – The number of characters that the user can type into a text-input control.  Applies to the **[Text input](controls/control-text-input.md)** control.
 
 **Media** – An identifier for the clip that an audio or video control plays.  Applies to **[Add picture](controls/control-add-picture.md)**, **[Audio](controls/control-audio-video.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -301,7 +301,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 * **[Edit form](controls/control-form-detail.md)** control – The control is in **Edit** or **New** mode.
 * **[Pen input](controls/control-pen-input.md)** control – The control is in **Draw**, **Erase**, or **Select** mode.
-* **[Text input](../controls/control-text-input.md)** control – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
+* **[Text input](controls/control-text-input.md)** control – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
 
 ### N
 **[NavigationStep](controls/control-gallery.md)** – How far a gallery scrolls if its **[ShowNavigation](controls/control-gallery.md)** property is set to **true** and the user selects a navigation arrow at either end of that gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.

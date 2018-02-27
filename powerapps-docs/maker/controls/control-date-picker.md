@@ -22,7 +22,7 @@ ms.author: fikaradz
 A control that the user can click or tap to specify a date.
 
 ## Description
-If you add a **Date Picker** control instead of a **[Text input](../../controls/control-text-input.md)** control, you help ensure that the user specifies a date in the correct format.
+If you add a **Date Picker** control instead of a **[Text input](control-text-input.md)** control, you help ensure that the user specifies a date in the correct format.
 
 ## Key properties
 **DefaultDate** – The initial value of a date control unless the user changes it.

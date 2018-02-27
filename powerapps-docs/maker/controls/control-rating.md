@@ -75,16 +75,16 @@ In this control, the user can indicate, for example, how much they liked somethi
 1. Add a **Rating** control, and name it **Quantitative**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Text input](../../controls/control-text-input.md)** control, name it **Qualitative**, and move it below the **Rating** control.
-3. Set the **[Default](../../controls/properties-core.md)** property of the **[Text input](../../controls/control-text-input.md)** control to **""**, and set its **HintText** to this formula:
+2. Add a **[Text input](control-text-input.md)** control, name it **Qualitative**, and move it below the **Rating** control.
+3. Set the **[Default](../../controls/properties-core.md)** property of the **[Text input](control-text-input.md)** control to **""**, and set its **HintText** to this formula:
    <br>**If(Quantitative.Value > 3, "What did you especially like?", "How might we do better?")**
    
     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 4. Press F5, and then click or tap either four or five stars in the **Rating** control.
    
-    The hint text in the **[Text input](../../controls/control-text-input.md)** control changes to reflect the high rating.
+    The hint text in the **[Text input](control-text-input.md)** control changes to reflect the high rating.
 5. Click or tap fewer than four stars in **Quantitative**.
    
-    The hint text in the **[Text input](../../controls/control-text-input.md)** control changes to reflect the low rating.
+    The hint text in the **[Text input](control-text-input.md)** control changes to reflect the low rating.
 6. To return to the default workspace, press Esc.
 

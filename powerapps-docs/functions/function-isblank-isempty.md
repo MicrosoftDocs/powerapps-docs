@@ -22,7 +22,7 @@ ms.author: gregli
 Tests whether a value is blank or a [table](../maker/working-with-tables.md) contains no [records](../maker/working-with-tables.md#records), and provides a way to create *blank* values.
 
 ## Overview
-*Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  Some data sources can store and return NULL values, which are represented in PowerApps as *blank*.
+*Blank* is a placeholder for "no value" or "unknown value." A **[Text input](../maker/controls/control-text-input.md)** control is *blank* if the user hasn't typed any characters in it. The same control is no longer *blank* as soon as the user types a character in it.  Some data sources can store and return NULL values, which are represented in PowerApps as *blank*.
 
 > [!NOTE]
 > At this time, storing *blank* values is supported only for local collections. We know that many data sources support *blank* (NULL) values, and we're working to lift this limitation.

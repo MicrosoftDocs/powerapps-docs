@@ -53,7 +53,7 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
     The label shows **Violin Cello**.
 
 #### Concatenate
-1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **AuthorName**.
+1. Add a **[Text input](../maker/controls/control-text-input.md)** control, and name it **AuthorName**.
 2. Add a **[Label](../maker/controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to this formula:<br>
    **Concatenate("By ", AuthorName.Text)**
 3. Type your name in **AuthorName**.

@@ -25,9 +25,9 @@ Provides the display and editing experience for a single field of a **[Display f
 ## Description
 **[Display form](control-form-detail.md)** and **[Edit form](control-form-detail.md)** controls act as containers for displaying and viewing entire records. Each container can hold a set of **Card** controls that display individual fields or provide a way to update those fields. Each card has a **DataField** property that specifies which field of the record it works on.  
 
-Predefined cards are defined for different data types and user experiences.  For example, there may be a card to edit a number field with a **[Text input](../../controls/control-text-input.md)** control, which is great for use with the keyboard. Another card might support editing a number by using a **[Slider](control-slider.md)** control instead. With the form control selected, you can, in the right-hand pane, easily select a card based on a field.
+Predefined cards are defined for different data types and user experiences.  For example, there may be a card to edit a number field with a **[Text input](control-text-input.md)** control, which is great for use with the keyboard. Another card might support editing a number by using a **[Slider](control-slider.md)** control instead. With the form control selected, you can, in the right-hand pane, easily select a card based on a field.
 
-Cards themselves contain controls. The controls of a card make up the experience for displaying and editing a single field. For example, a number card may consist of a **[Label](control-text-box.md)** control to provide the display name of the field and a **[Text input](../../controls/control-text-input.md)** control to provide an editor for the value of the field. The card may also have a **[Label](control-text-box.md)** control that shows any validation errors that occur and a **[Label](control-text-box.md)** control for the common asterisk to indicate that a field is required.
+Cards themselves contain controls. The controls of a card make up the experience for displaying and editing a single field. For example, a number card may consist of a **[Label](control-text-box.md)** control to provide the display name of the field and a **[Text input](control-text-input.md)** control to provide an editor for the value of the field. The card may also have a **[Label](control-text-box.md)** control that shows any validation errors that occur and a **[Label](control-text-box.md)** control for the common asterisk to indicate that a field is required.
 
 You can customize the controls of a predefined card by resizing it, moving it, hiding it, adding controls to it, and making other changes. You can also start with an entirely blank card, a "custom card", to which you add controls from scratch.
 
@@ -52,7 +52,7 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 **DisplayMode** – Values can be **Edit, View,** or **Disabled**. Configures whether the control inside the card allows user input (**Edit**), only displays data (**View**) or is disabled (**Disabled**).  
 
 * Allows a single card to be used in both edit and view forms, by configuring this property, which is tied to the Form's behavior by default.
-* In **View** mode, child controls such as **[Text input](../../controls/control-text-input.md)**, **[Drop down](control-drop-down.md)**, **[Date Picker](control-date-picker.md)** will only display the text value and will not render any interactive elements or decorations.
+* In **View** mode, child controls such as **[Text input](control-text-input.md)**, **[Drop down](control-drop-down.md)**, **[Date Picker](control-date-picker.md)** will only display the text value and will not render any interactive elements or decorations.
 
 **DisplayName** – The user friendly name for a field in a data source.
 

@@ -134,7 +134,7 @@ As with a **[Display form](controls/control-form-detail.md)** control, an **[Edi
 
 ![Edit card and card controls selected in the authoring experience](./media/working-with-forms/afd-edit-card-controls.png)
 
-In the previous image, the selected card shows the **AssetID** field and  contains a **[Text input](../controls/control-text-input.md)** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **[Label](controls/control-text-box.md)** control, which is read-only.) The **[Text input](../controls/control-text-input.md)** control has a **[Default](../controls/properties-core.md)** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
+In the previous image, the selected card shows the **AssetID** field and  contains a **[Text input](controls/control-text-input.md)** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **[Label](controls/control-text-box.md)** control, which is read-only.) The **[Text input](controls/control-text-input.md)** control has a **[Default](../controls/properties-core.md)** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
 
 In the right-hand pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
 

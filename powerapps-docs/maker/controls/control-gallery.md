@@ -87,7 +87,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 * [Filter data by adjusting a slider](control-slider.md#example)
 
 ### Get data from the user
-* [Get text](../../controls/control-text-input.md#collect-data)
+* [Get text](control-text-input.md#collect-data)
 * [Get images](control-add-picture.md#add-images-to-an-image-gallery-control)
 * [Get photos](control-camera.md#example)
 * [Get sounds](control-microphone.md#example)

@@ -68,7 +68,7 @@ In the following examples, a **Slider** control (named **Slider1**) has a value 
 | **Switch( Slider1.Value, 20, "Result1", 10, "Result2", 0, "Result3", "DefaultResult" )** |The slider's value doesn't match any value to be checked.  A *DefaultResult* was provided, so it's returned. |"DefaultResult" |
 
 ### Branching in behavior formulas
-In these examples, a **[Text input](../controls/control-text-input.md)** control named **FirstName** has the value "John" typed into it.
+In these examples, a **[Text input](../maker/controls/control-text-input.md)** control named **FirstName** has the value "John" typed into it.
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -77,7 +77,7 @@ In these examples, a **[Text input](../controls/control-text-input.md)** control
 | **Switch( FirstName.Text, "Carlos", Navigate(&nbsp;Screen1, ScreenTransition.None ), "Kirstin", Navigate( Screen2, ScreenTransition.None ), "John", Navigate( Screen3, ScreenTransition.None ) )** |The value of **FirstName.Text** is compared against "Carlos", "Kirstin", and "John" in that order. A match is found with "John", so the app navigates to **Screen3**. |**true**<br><br>The display is changed to **Screen3**. |
 
 ### Step by step
-1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **Text1** if it doesn't have that name by default.
+1. Add a **[Text input](../maker/controls/control-text-input.md)** control, and name it **Text1** if it doesn't have that name by default.
 2. In **Text1**, type **30**.
 3. Add a **Label** control, and set its **[Text](../controls/properties-core.md)** property to this formula:<br>
    **If( Value(Text1.Text) < 20, "Order MANY more!", Value(Text1.Text) < 40, "Order more!", Text1.Text )**

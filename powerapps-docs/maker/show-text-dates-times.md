@@ -54,7 +54,7 @@ Here are some examples.
    * **DateDiff**, which calculates the number of days, quarters, or years between two dates.
    * **Today**, which calculates the current day as a value.
    * **DateValue**, which converts a literal string, as shown between double quotation marks, to a value on which calculations can be performed.
-3. Add a **[Text input](../controls/control-text-input.md)** control named **BirthDate**, and move it under **ShowText**.
+3. Add a **[Text input](controls/control-text-input.md)** control named **BirthDate**, and move it under **ShowText**.
 
 4. In **BirthDate**, type the month and the day of your birth (for example, **05/18**).
 
@@ -78,7 +78,7 @@ Convert dates and times from strings of text to values, which you can format in 
 > 
 > 
 
-1. Add a **[Text input](../controls/control-text-input.md)** control named **ArrivalDateTime**, and type a date and time in this format:
+1. Add a **[Text input](controls/control-text-input.md)** control named **ArrivalDateTime**, and type a date and time in this format:
    <br>**5/10/85 6:15 AM**
 2. Add a **[Label](controls/control-text-box.md)** control named **ShowDate**, and set its **[Text](../controls/properties-core.md)** property to this formula:
    <br>**DateTimeValue(ArrivalDateTime.Text)**
@@ -124,7 +124,7 @@ Convert dates and times from strings of text to values, which you can format in 
 
 ## Format a date by using DateValue
 
-1. Add a **[Text input](../controls/control-text-input.md)** control named **ArrivalDate**, and then type a date in it (for example, **5/10/85**).
+1. Add a **[Text input](controls/control-text-input.md)** control named **ArrivalDate**, and then type a date in it (for example, **5/10/85**).
 
 2. Add a **[Label](controls/control-text-box.md)** control named **FormatDate**, and set its **[Text](../controls/properties-core.md)** property to this formula:
    <br>**DateValue(ArrivalDate.Text)**
@@ -145,7 +145,7 @@ Convert dates and times from strings of text to values, which you can format in 
 
 ## Format a time using DateTimeValue
 
-1. Add a **[Text input](../controls/control-text-input.md)** control named **ArrivalTime**, and then type **6:15 AM** in it.
+1. Add a **[Text input](controls/control-text-input.md)** control named **ArrivalTime**, and then type **6:15 AM** in it.
 
 2. Add a **[Label](controls/control-text-box.md)** control named **ShowTime**.
 
@@ -165,7 +165,7 @@ Convert dates and times from strings of text to values, which you can format in 
 
 ## Show the time between dates
 
-1. Add two **[Text input](../controls/control-text-input.md)** controls named **Start** and **End**.
+1. Add two **[Text input](controls/control-text-input.md)** controls named **Start** and **End**.
 
 2. Type **4/1/2015** in **Start**, and type **1/1/2016** in **End**.
 
@@ -181,7 +181,7 @@ Convert dates and times from strings of text to values, which you can format in 
 
 ## Identify a date before or after another date
 
-1. Add a **[Text input](../controls/control-text-input.md)** control named **Start**, and type **5/10/1985** in it.
+1. Add a **[Text input](controls/control-text-input.md)** control named **Start**, and type **5/10/1985** in it.
 
 2. Add a **[Label](controls/control-text-box.md)** control named **DateAdd**, and set its **[Text](../controls/properties-core.md)** property to this formula:
    <br>**DateAdd(DateValue(Start.Text), 3)**
@@ -220,7 +220,7 @@ Convert dates and times from strings of text to values, which you can format in 
    
     **Wednesday, January 1, 2014** is listed by default. Select different values in the **[Drop down](controls/control-drop-down.md)** controls to change the date in the **[Label](controls/control-text-box.md)** control.
 
-You may need to convert data that you didn't expect. If you add **[Text input](../controls/control-text-input.md)** controls instead of **[Drop down](controls/control-drop-down.md)** controls, a user may enter an incorrect date, such as May 45. The **[Date](../functions/function-date-time.md)** function handles atypical data in the following ways:
+You may need to convert data that you didn't expect. If you add **[Text input](controls/control-text-input.md)** controls instead of **[Drop down](controls/control-drop-down.md)** controls, a user may enter an incorrect date, such as May 45. The **[Date](../functions/function-date-time.md)** function handles atypical data in the following ways:
 
 * If a year value is between 0 and 1899 (inclusive), the function adds that value to 1900 to calculate the year.
 * If a year value is between 1900 and 9999 (inclusive), the function uses that value as the year.

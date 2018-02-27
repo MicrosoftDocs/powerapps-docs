@@ -41,14 +41,14 @@ Several fields of this data source aren't being shown, but you can show or hide 
 ![](./media/working-with-cards/add-security-code.png)
 
 ## Customize a card
-Cards comprise other controls. In an **Edit form** control, the user enters data in a standard **[Text input](../controls/control-text-input.md)** control that you add from the **Insert** tab.  
+Cards comprise other controls. In an **Edit form** control, the user enters data in a standard **[Text input](controls/control-text-input.md)** control that you add from the **Insert** tab.  
 
 Let's walk through an example of how to change a card's appearance by manipulating controls in it.
 
 1. First, let's return to the card that we inserted most recently, for the **SecurityCode** field. Select this card by clicking or tapping it once:
    
     ![](./media/working-with-cards/select-security-code.png)
-2. Select the **[Text input](../controls/control-text-input.md)** control inside the card by clicking or tapping the input control itself.
+2. Select the **[Text input](controls/control-text-input.md)** control inside the card by clicking or tapping the input control itself.
    
     ![](./media/working-with-cards/select-text-input.png)
 3. Move this control within the card by dragging the selection box, and resize the control by dragging the handles along the edge of the selection box:

@@ -38,7 +38,7 @@ Excel doesn't have variables. The value of a cell that contains a formula change
 ### PowerApps
 Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas.
 
-For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](../controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](../controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
+For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](../controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
 ![](media/working-with-variables/recalc1.png)
 
@@ -207,7 +207,7 @@ How collections work:
 
 Let's recreate our adding machine by using a collection:
 
-1. Add a **[Text input](../controls/control-text-input.md)** control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
+1. Add a **[Text input](controls/control-text-input.md)** control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
 
 2. Set the **[Text](../controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to **"Clear"**.
 

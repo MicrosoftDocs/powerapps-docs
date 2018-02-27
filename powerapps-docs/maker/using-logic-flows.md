@@ -77,7 +77,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 2. On the **Blank app** tile, select **Phone layout**.
 
-3. Add a **[Text input](../controls/control-text-input.md)** control, and name it **RecordTitle**.
+3. Add a **[Text input](controls/control-text-input.md)** control, and name it **RecordTitle**.
 
 4. Add a **[Button](controls/control-button.md)** control, and move it under **RecordTitle**.
 

@@ -117,7 +117,7 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 
 ## Examples
 ### Add a basic formula to a button
-1. Add a **[Text input](../../controls/control-text-input.md)** control, and name it **Source**.
+1. Add a **[Text input](control-text-input.md)** control, and name it **Source**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Add a **Button** control, set its **[Text](../../controls/properties-core.md)** property to "Add", and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
@@ -137,7 +137,7 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 ### Configure a button with multiple formulas
 Add a formula that clears the **Text input** control between entries.
 
-1. Set the **[HintText](../../controls/control-text-input.md)** property of **Source** to "Enter a number".
+1. Set the **[HintText](control-text-input.md)** property of **Source** to "Enter a number".
 2. Set the **[OnSelect](../../controls/properties-core.md)** property of **Add** to this formula:
    
     **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**

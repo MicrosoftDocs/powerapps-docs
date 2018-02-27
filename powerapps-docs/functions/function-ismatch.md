@@ -24,7 +24,7 @@ Tests whether a text string matches a pattern.
 ## Description
 The **IsMatch** function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a [regular expression](#regular-expressions).  
 
-Use **IsMatch** to validate what a user has typed in a **[Text input](../controls/control-text-input.md)** control. For example, you can confirm whether the user has entered a valid email address before the result is saved to your data source. If the entry doesn't match your criteria, add other controls that prompt the user to correct the entry.
+Use **IsMatch** to validate what a user has typed in a **[Text input](../maker/controls/control-text-input.md)** control. For example, you can confirm whether the user has entered a valid email address before the result is saved to your data source. If the entry doesn't match your criteria, add other controls that prompt the user to correct the entry.
 
 By default, **IsMatch** performs a case-sensitive match for the entire text string. You can modify this behavior by specifying one or more [**MatchOptions**](#match-options).
 

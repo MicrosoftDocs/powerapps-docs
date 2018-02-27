@@ -65,7 +65,7 @@ Each formula returns a single-column table that contains the converted strings.
 | **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Converts any first letter of a word that's lowercase to uppercase, and converts any other letter that's uppercase to lowercase. |![](media/function-lower-upper-proper/people-table-proper.png) |
 
 ### Step-by-step example
-1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **Source**.
+1. Add a **[Text input](../maker/controls/control-text-input.md)** control, and name it **Source**.
 2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this function:<br>**Proper(Source.Text)**
 3. Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**
 

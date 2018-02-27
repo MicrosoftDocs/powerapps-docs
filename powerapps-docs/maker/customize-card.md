@@ -50,7 +50,7 @@ In this procedure, you'll replace a **[Toggle](../controls/control-toggle.md)** 
     For information about which types of SharePoint columns support which types of cards, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 
 ## Unlock and customize a card
-In this procedure, you'll unlock a card and then replace a **[Text input](../controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md)** control.
+In this procedure, you'll unlock a card and then replace a **[Text input](controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md)** control.
 
 1. In **EditScreen1**, click or tap the **Quantity** card.
 
