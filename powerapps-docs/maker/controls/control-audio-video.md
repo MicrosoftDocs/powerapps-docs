@@ -50,9 +50,9 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[Image](../../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
+**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
-**[ImagePosition](../../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+**[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
 **OnEnd** – How an app responds when an audio or video clip finishes playing.
 

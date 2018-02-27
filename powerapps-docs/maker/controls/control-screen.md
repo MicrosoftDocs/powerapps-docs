@@ -25,12 +25,12 @@ A UI element that contains one or more other controls in an app.
 Most apps have multiple **Screen** controls that contain **[Label](control-text-box.md)** controls, **[Button](control-button.md)** controls, and other controls that show data and support navigation.
 
 ## Key properties
-**[BackgroundImage](../../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.
+**[BackgroundImage](properties-visual.md)** – The name of an image file that appears in the background of a screen.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 ## Additional properties
-**[ImagePosition](../../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+**[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
 **OnHidden** – The behavior of an app when the user navigates away from a screen.
 

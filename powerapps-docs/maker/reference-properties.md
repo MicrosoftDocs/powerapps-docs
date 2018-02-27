@@ -107,7 +107,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Core](controls/properties-core.md)** – Configure whether the user can see and interact with a control.
 
-**[Image](../controls/properties-visual.md)** – Configure what image is shown and how it fills the control.
+**[Image](controls/properties-visual.md)** – Configure what image is shown and how it fills the control.
 
 **[Size and location](controls/properties-size-location.md)** – Configure how big a control (or an element of a control) is and where it is in relation to the screen it's on.
 
@@ -130,7 +130,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Timer](controls/control-timer.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
 ### B
-**[BackgroundImage](../controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
+**[BackgroundImage](controls/properties-visual.md)** – The name of an image file that appears in the background of a screen.  Applies to the **[Screen](controls/control-screen.md)** control.
 
 **[BorderColor](controls/properties-color-border.md)** – The color of a control's border.  Applies to many controls.
 
@@ -247,9 +247,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[HTMLText](controls/control-html-text.md)** – Text that appears in an HTML text control and that may contain HTML tags.  Applies to the **[HTML text](controls/control-html-text.md)** control.
 
 ### I
-**[Image](../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](controls/control-image.md)**, **[Microphone](controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
+**[Image](controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.  Applies to **[Audio](controls/control-audio-video.md)**, **[Image](controls/control-image.md)**, **[Microphone](controls/control-microphone.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
-**[ImagePosition](../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
+**[ImagePosition](controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.  Applies to many controls.
 
 **[Input](controls/control-pen-input.md)** – Input.  Applies to the **[Pen input](controls/control-pen-input.md)** control.
 

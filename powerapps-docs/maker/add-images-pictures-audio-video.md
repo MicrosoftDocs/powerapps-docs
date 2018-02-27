@@ -42,7 +42,7 @@ You can choose the kind of media file to add (for example, images, video, or aud
 
     ![Select media type][8]
 
-6. If you added an image control, set its **[Image](../controls/properties-visual.md)** property to the file that you added:  
+6. If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
 
     ![Set image property](./media/add-images-pictures-audio-video/imageproperty.png)
 

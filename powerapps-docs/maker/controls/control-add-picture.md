@@ -116,7 +116,7 @@ These properties apply to the inner label control that by default says "Tap or c
 4. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **MyPix**.
 5. Press F5, and then click or tap the **[Button](control-button.md)** control.
    
-    The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Image gallery** control, set the **[ImagePosition](../../controls/properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
+    The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Image gallery** control, set the **[ImagePosition](properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
 6. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **[Button](control-button.md)** control that you added.
    
     The second image appears in the **Image gallery** control.

@@ -25,7 +25,7 @@ A control that shows an image from, for example, a local file or a data source.
 If you add one or more **Image** controls to your app, you can show individual images that aren't part of a data set, or you can incorporate images from records in data sources.
 
 ## Key properties
-**[Image](../../controls/properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
+**[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
 ## Additional properties
 **ApplyEXIFOrientation** – Whether to automatically apply the orientation specified in the EXIF data embedded with the image.
@@ -60,7 +60,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **[HoverFill](properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
 
-**[ImagePosition](../../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
+**[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
 **ImageRotation** – How to rotate the image before displaying it.  Values can be none, clockwise (CW) 90 degrees, counter-clockwise (CCW) 90 degrees and clockwise 180 degrees.
 
