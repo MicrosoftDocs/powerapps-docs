@@ -116,5 +116,5 @@ In this procedure, you'll configure **BrowseScreen1** to show the first and last
 ## Next steps
 * Test your app in Preview mode by clicking **BrowseScreen1** in the left navigation bar and then pressing F5 or clicking ![Preview mode](./media/connection-dynamics-crmonline/runpowerapp.png) near the upper-right corner.
 * [Share your app](../share-app.md).
-* [Add a second data source](../add-data-connection.md).
+* [Add a second data source](../maker/add-data-connection.md).
 

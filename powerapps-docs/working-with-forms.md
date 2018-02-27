@@ -153,7 +153,7 @@ To follow the rest of this topic exactly, create a SharePoint list named "Ice Cr
 
 ![Ice cream SharePoint list](./media/working-with-forms/sharepointlist-icecream.png)
 
-* Create an app from blank, for phones, and [connect it to your data source](add-data-connection.md).
+* Create an app from blank, for phones, and [connect it to your data source](maker/add-data-connection.md).
   
     > [!NOTE]
 > Tablet apps are very similar, but you may want a different [screen layout](#screen-design) to make the most of the extra screen space.

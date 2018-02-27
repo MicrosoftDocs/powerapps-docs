@@ -19,9 +19,9 @@ ms.author: archanan
 
 ---
 # Add a data connection in PowerApps
-In PowerApps, add a data connection to an existing app or to an app that you're building from scratch. In this topic, you use PowerApps Studio, but you can also use [powerapps.com](https://web.powerapps.com), as the [Manage connections](add-manage-connections.md) topic describes.
+In PowerApps, add a data connection to an existing app or to an app that you're building from scratch. In this topic, you use PowerApps Studio, but you can also use [powerapps.com](https://web.powerapps.com), as the [Manage connections](../add-manage-connections.md) topic describes.
 
-Your app's data connection can connect to SharePoint, Salesforce, OneDrive, or [one of many other data sources](connections-list.md).
+Your app's data connection can connect to SharePoint, Salesforce, OneDrive, or [one of many other data sources](../connections-list.md).
 
 Your [next step](#next-steps) after this article is to display and manage data from that data source in your app, as in these examples:
 
@@ -30,7 +30,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 * Connect to SQL Server, and update a table from your app.
 
 ## Prerequisites
-[Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
 ## Background on data connections
 Most PowerApps apps use external information called **Data Sources** that is stored in cloud services. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connectors**.
@@ -39,7 +39,7 @@ The most common data sources are tables, which you can use to retrieve and store
 
 Data sources other than tables include email, calendars, Twitter, and notifications.
 
-Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it's easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](working-with-forms.md).
+Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../controls/control-form-detail.md)**, and **[Edit form](../controls/control-form-detail.md)** controls, it's easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](../working-with-forms.md).
 
 ## Add a connection
 1. Click or tap **New** on the **File** menu (near the left edge).
@@ -66,7 +66,7 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 
 7. Click or tap **Create** to both create the connection and add it to your app.
 
-    Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/connection-azure-sqldatabase.md) require additional information before you can use them.
+    Some connectors, such as **Microsoft Translator**, require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](../connections/connection-sharepoint-online.md) and [SQL Server](../connections/connection-azure-sqldatabase.md) require additional information before you can use them.
 
 ## View or change a data source
 If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control that has an **Item** property. For example, you might be working on an app that someone else created, or you might want to remind yourself of a data source that you configured a while ago.
@@ -86,5 +86,5 @@ If you're updating an app, you might need to identify or change the source of da
 3. To change the data source, click or tap the down arrow next to the data source, and then choose or create another source.
 
 ## Next steps
-* To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
-* For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connections/connection-office365-outlook.md), [Twitter](connections/connection-twitter.md), and [Microsoft Translator](connections/connection-microsoft-translator.md).
+* To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](../add-gallery.md), and [add a form](../add-form.md).
+* For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](../connections/connection-office365-outlook.md), [Twitter](../connections/connection-twitter.md), and [Microsoft Translator](../connections/connection-microsoft-translator.md).

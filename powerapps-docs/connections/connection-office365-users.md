@@ -30,7 +30,7 @@ This topic shows you how to add Office 365 Users as a connection, add Office 365
 [!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
 
 ## Add a connection
-1. [Add a data connection](../add-data-connection.md) and select **Office 365 Users**:  
+1. [Add a data connection](../maker/add-data-connection.md) and select **Office 365 Users**:  
    
     ![Connect to Office 365](./media/connection-office365-users/add-office.png)
 2. Select **Connect**, and if prompted to sign in, enter your work account.

@@ -92,7 +92,7 @@ An app from a template opens in the default workspace, where you'll spend most o
 You can customize this or any app in these ways, among others:
 
 * [change the screen size, orientation, or both](set-aspect-ratio-portrait-landscape.md)
-* [add another data source](add-data-connection.md)
+* [add another data source](maker/add-data-connection.md)
 * [add one or more screens](add-screen-context-variables.md)
 * [add and configure more controls](maker/add-configure-controls.md)
 * [change how the app behaves](working-with-formulas.md)

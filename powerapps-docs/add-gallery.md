@@ -36,7 +36,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 3. In the **Welcome to PowerApps Studio** dialog box, click or tap **Skip**.
 
-4. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
+4. [Add a connection](maker/add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
 5. (optional) Add a **Gallery** control to the default screen by clicking or tapping the **Insert** tab, clicking or tapping **Gallery**, and then clicking or tapping a **Gallery** control that's empty (blank) or that contains a default set of controls.
 

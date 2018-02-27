@@ -47,7 +47,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 
 5. Add a connection to the **FlooringEstimates** table in the Excel file.
 
-    For more information, see [Add a connection](add-data-connection.md).
+    For more information, see [Add a connection](maker/add-data-connection.md).
 
 ## Add data to a gallery
 1. On the **Insert** tab, click or tap **Gallery**, and then click or tap **Flexible height**.

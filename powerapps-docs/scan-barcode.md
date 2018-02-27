@@ -111,6 +111,6 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
     If the numerical component doesn't appear, try a different option in the **BarcodeType** list. If the correct data still doesn't appear, type the correct number in the **Input text** control.
 
 ## Next steps
-* [Connect the app to a data source](add-data-connection.md) and configure the **[Patch](functions/function-patch.md)** function so that users can save results.
+* [Connect the app to a data source](maker/add-data-connection.md) and configure the **[Patch](functions/function-patch.md)** function so that users can save results.
 * Add a **[Drop down](controls/control-drop-down.md)** control, and configure it so that users can choose which type of barcode they want to scan.
 * Add a **[Slider](controls/control-slider.md)** control, and configure it so that users can adjust the scan rate or the height of the **Barcode** control.

@@ -48,7 +48,7 @@ Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/
 In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you also create connections when you do these tasks:
 
 * Automatically generate an [app from data](app-from-sharepoint.md), such as a custom SharePoint list.
-* Update an existing app, or create one from scratch as [add a connection](add-data-connection.md) describes.
+* Update an existing app, or create one from scratch as [add a connection](maker/add-data-connection.md) describes.
 * Open an app that another user created and [shared with you](share-app.md).
 
 > [!NOTE]
@@ -75,7 +75,7 @@ In addition to creating and managing connections in [powerapps.com](https://web.
    * [SharePoint](connections/connection-sharepoint-online.md)
    * [SQL Server](connections/connection-azure-sqldatabase.md)
 
-The new connector appears under **Connections**, and you can [add it to an app](add-data-connection.md).
+The new connector appears under **Connections**, and you can [add it to an app](maker/add-data-connection.md).
 
 ## Update or delete a connection
 In the list of connections, find the connection that you want to update or delete, and then click or tap the ellipsis (3-dots-symbol) on the right of the connection.

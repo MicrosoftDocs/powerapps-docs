@@ -126,7 +126,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 4. In PowerApps, create a [blank app](get-started-create-from-blank.md).
 
-5. In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
+5. In your app, add the OneDrive for Business account as a [data source](maker/add-data-connection.md):
 
    1. Click or tap the **View** tab, and then click or tap **Data sources**.
 
