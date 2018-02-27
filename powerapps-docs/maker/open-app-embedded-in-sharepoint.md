@@ -21,10 +21,10 @@ ms.author: sharik
 # Open app from a SharePoint Online list
 You can open an existing app inside SharePoint Online and manage a list.
 
-For information about what types of SharePoint data PowerApps supports, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
+For information about what types of SharePoint data PowerApps supports, see [Known issues](../connections/connection-sharepoint-online.md#known-issues).
 
 ## Prerequisites
-[Create an app in the SharePoint interface](maker/generate-app-from-sharepoint-list-interface.md).
+[Create an app in the SharePoint interface](generate-app-from-sharepoint-list-interface.md).
 
 ## Open the app
 1. Open your SharePoint Online list, and select an app from the list.
