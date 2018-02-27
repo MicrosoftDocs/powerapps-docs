@@ -30,10 +30,10 @@ For example, your data should look similar to the following:
 You can create and use these charts within PowerApps. Let's get started.
 
 ## Prerequisites
-* [Sign up](maker/signup-for-powerapps.md) for PowerApps, and then [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
-* Create an app from a [template](maker/get-started-test-drive.md), from [data](maker/get-started-create-from-data.md), or from [scratch](maker/get-started-create-from-blank.md).
-* Learn how to [configure a control](maker/add-configure-controls.md) in PowerApps.
-* Download [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), which contains sample data as an XML file. Follow the steps in this topic to import it directly into your app. As an alternative, decompress the .zip file, open the XML file in Excel, and save it to a [cloud-storage account](connections/cloud-storage-blob-connections.md).
+* [Sign up](signup-for-powerapps.md) for PowerApps, and then [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
+* Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
+* Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+* Download [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), which contains sample data as an XML file. Follow the steps in this topic to import it directly into your app. As an alternative, decompress the .zip file, open the XML file in Excel, and save it to a [cloud-storage account](../connections/cloud-storage-blob-connections.md).
 
 ## Import the sample data
 In these steps, we import the sample data into a collection, named **ProductRevenue**.
@@ -42,7 +42,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
     ![][11]  
 
-2. Set the control's **[OnSelect](controls/properties-core.md)** property to the following function:  
+2. Set the control's **[OnSelect](../controls/properties-core.md)** property to the following function:  
 
    ```Collect(ProductRevenue, Import1.Data)```
 
@@ -71,7 +71,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
     ![][10]
 
-4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression: `ProductRevenue.Revenue2014`
+4. Set the **[Items](../controls/properties-core.md)** property of the pie chart to this expression: `ProductRevenue.Revenue2014`
 
     ![][2]  
 
@@ -86,7 +86,7 @@ Now, let's use this ProductRevenue collection in a bar chart:
 
 2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
 
-3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
+3. Select the middle of the column chart. Set the **[Items](../controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
 
     ![][12]  
 
