@@ -186,7 +186,7 @@ Yes, this functionality is available from the PowerApps admin center. See [Envir
 Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md#delete-your-environment) for more details.
 
 ### As an Environment Admin, can I view and manage all resources (apps, flows, APIs, etc.) for an environment?
-Yes, the ability to view the apps and flows for an environment is available from the PowerApps admin center. See [View Apps](admin-view-apps.md) for more details.
+Yes, the ability to view the apps and flows for an environment is available from the PowerApps admin center. See [View Apps](administrator/admin-view-apps.md) for more details.
 
 ### Which license includes Common Data Service?
 PowerApps Plan 2.  See [PowerApps pricing page][3] for details on all the plans that include this license.
