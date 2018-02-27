@@ -131,7 +131,7 @@ Collections are a special kind of data source.  They're local to the app and not
 * You can use the **[SaveData](functions/function-savedata-loaddata.md)** and **[LoadData](functions/function-savedata-loaddata.md)** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
 * You can use the **[Export](controls/control-export-import.md)** and **[Import](controls/control-export-import.md)** controls to save and reload a copy of the collection to a file that the user can interact with.  
 
-For more information on working with a collection as a data source, see [create and update a collection](create-update-collection.md).
+For more information on working with a collection as a data source, see [create and update a collection](maker/create-update-collection.md).
 
 Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
 

@@ -63,7 +63,7 @@ The formula clears both collections, then collects data from each table into the
 
 * Call this formula somewhere in your app to load the data.
 * View all collections in your app by navigating to **File** > **Collections**.
-* For more information, see [Create and update a collection in your app](create-update-collection.md).
+* For more information, see [Create and update a collection in your app](maker/create-update-collection.md).
 
 Now if you want to access the **Title** field, use **SiteInspectorCollect.Title** in your formula.
 
