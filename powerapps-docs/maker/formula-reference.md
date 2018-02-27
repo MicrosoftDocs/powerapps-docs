@@ -119,7 +119,7 @@ Other elements include:
 
 **[Degrees](../functions/function-trig.md)** - Converts radians to degrees.
 
-**[Disable](../functions/function-enable-disable.md)** – Disables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
+**[Disable](functions/function-enable-disable.md)** – Disables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
 
 **[Distinct](functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
 
@@ -130,7 +130,7 @@ Other elements include:
 ## E
 **[EditForm](../functions/function-form.md)** – Resets a form control for editing of an item.
 
-**[Enable](../functions/function-enable-disable.md)** – Enables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
+**[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
 
 **[EndsWith](../functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
