@@ -40,7 +40,7 @@ Other elements include:
 
 **[Acot](../functions/function-trig.md)** – Returns the arccotangent of a number, in radians.
 
-**[AddColumns](../functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
+**[AddColumns](functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
 
 **[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](../functions/operators.md).
 
@@ -125,7 +125,7 @@ Other elements include:
 
 **[Download](functions/function-param.md)** – Downloads a file from the web to the local device.
 
-**[DropColumns](../functions/function-table-shaping.md)** – Returns a table with one or more columns removed.
+**[DropColumns](functions/function-table-shaping.md)** – Returns a table with one or more columns removed.
 
 ## E
 **[EditForm](functions/function-form.md)** – Resets a form control for editing of an item.
@@ -248,7 +248,7 @@ Other elements include:
 
 **[RemoveIf](functions/function-remove-removeif.md)** – Removes records from a data source based on a condition.
 
-**[RenameColumns](../functions/function-table-shaping.md)** – Renames columns of a table.
+**[RenameColumns](functions/function-table-shaping.md)** – Renames columns of a table.
 
 **[Replace](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
 
@@ -277,7 +277,7 @@ Other elements include:
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
-**[ShowColumns](../functions/function-table-shaping.md)** – Returns a table with only selected columns.
+**[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
 **[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
 

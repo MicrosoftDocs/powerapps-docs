@@ -29,7 +29,7 @@ In your app, you'll use [formulas](working-with-formulas.md) to create, update, 
 You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in PowerApps return a table that reflects the other arguments that you specify. For example, you might create a formula:
 
 * to update a record in a table by specifying that table as one of multiple arguments for the **[Patch](functions/function-patch.md)** function
-* to add, remove, and rename columns in a table by specifying that table as an argument for the **[AddColumns](../functions/function-table-shaping.md)**, **[DropColumns](../functions/function-table-shaping.md)**, or **[RenameColumns](../functions/function-table-shaping.md)** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
+* to add, remove, and rename columns in a table by specifying that table as an argument for the **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, or **[RenameColumns](functions/function-table-shaping.md)** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
 
 ## Elements of a table
 ![](media/working-with-tables/elements-of-a-table.png)
@@ -122,15 +122,15 @@ Many functions in PowerApps take the name of a table as an argument, create a se
 * **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Right](functions/function-left-mid-right.md)**, **[Replace](functions/function-replace-substitute.md)**, **[Substitute](functions/function-replace-substitute.md)**, **[Trim](../functions/function-trim.md)**, **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Proper](functions/function-lower-upper-proper.md)** - String manipulations on each record of a single-column table, resulting in a single-column table of strings.
 * **[Len](functions/function-len.md)** - For a column of strings, returns a single-column table that contains the length of each string.
 * **[Concatenate](functions/function-concatenate.md)** - Concatenates multiple columns of strings, resulting in a single-column table of strings.
-* **[AddColumns](../functions/function-table-shaping.md)**, **[DropColumns](../functions/function-table-shaping.md)**, **[RenameColumns](../functions/function-table-shaping.md)**, **[ShowColumns](../functions/function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
+* **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
 * **[Distinct](functions/function-distinct.md)** - Removes duplicates records.
 * **[Shuffle](functions/function-shuffle.md)** - Shuffles records into a random order.
 * **[HashTags](functions/function-hashtags.md)** - Searches for hashtags in a string.
 * **[Errors](functions/function-errors.md)** - Provides error information when you work with a data source.
 
-You can run a function on a table that contains multiple columns, even if the function requires a single column as an argument. To extract a single column from a multi-column table, use the **[ShowColumns](../functions/function-table-shaping.md)** function as an argument for the function that you want to use, as in this example:<br>**Lower( ShowColumns( Products, "Name" ) )**
+You can run a function on a table that contains multiple columns, even if the function requires a single column as an argument. To extract a single column from a multi-column table, use the **[ShowColumns](functions/function-table-shaping.md)** function as an argument for the function that you want to use, as in this example:<br>**Lower( ShowColumns( Products, "Name" ) )**
 
-This formula creates a single-column table that contains all the data from the **Name** column of the **Products** table but converts any uppercase letters to lowercase letters. If you specify a table as an argument for the **[AddColumns](../functions/function-table-shaping.md)**, **[RenameColumns](../functions/function-table-shaping.md)**, or **[DropColumns](../functions/function-table-shaping.md)** function, you can completely reshape that table however you want.
+This formula creates a single-column table that contains all the data from the **Name** column of the **Products** table but converts any uppercase letters to lowercase letters. If you specify a table as an argument for the **[AddColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, or **[DropColumns](functions/function-table-shaping.md)** function, you can completely reshape that table however you want.
 
 If you specify a data source as an argument for one of these functions, it will modify the records of that data source and, in general, return the data source's new value as a table.
 
