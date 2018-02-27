@@ -70,7 +70,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Line chart](controls/control-column-line-chart.md)** – Show values as data points relative to two axes.
 
-**[List box](../controls/control-list-box.md)** – Select one or more items in a list.
+**[List box](controls/control-list-box.md)** – Select one or more items in a list.
 
 **[Microphone](../controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
@@ -263,7 +263,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **ItemColorSet** – The color of each data point in a chart.  Applies to **[Column chart](controls/control-column-line-chart.md)**, **[Line chart](controls/control-column-line-chart.md)**, and **[Pie chart](../controls/control-pie-chart.md)** controls.
 
-**[ItemPaddingLeft](../controls/control-list-box.md)** – The distance between text in a listbox and its left edge.  Applies to the **[List Box](../controls/control-list-box.md)** control.
+**[ItemPaddingLeft](controls/control-list-box.md)** – The distance between text in a listbox and its left edge.  Applies to the **[List Box](controls/control-list-box.md)** control.
 
 **[Items](../controls/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.  Applies to many controls.
 
@@ -276,7 +276,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).  Applies to **[Gallery](controls/control-gallery.md)** and **[Slider](../controls/control-slider.md)** controls.
 
-**[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](../controls/control-list-box.md)**, **[Radio](../controls/control-radio.md)**, **[Label](../controls/control-text-box.md)**, and **[Text input](../controls/control-text-input.md)** controls.
+**[LineHeight](../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.  Applies to **[List Box](controls/control-list-box.md)**, **[Radio](../controls/control-radio.md)**, **[Label](../controls/control-text-box.md)**, and **[Text input](../controls/control-text-input.md)** controls.
 
 **[Loop](controls/control-audio-video.md)** – Whether an audio or video clip automatically starts over as soon as it finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -412,13 +412,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[SelectedDate](controls/control-date-picker.md)** – The date currently selected in a date control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
-**[SelectionColor](../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](../controls/control-list-box.md)**, and **[Pen input](../controls/control-pen-input.md)** controls.
+**[SelectionColor](../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](controls/control-list-box.md)**, and **[Pen input](../controls/control-pen-input.md)** controls.
 
-**[SelectionFill](../controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](controls/control-drop-down.md)** and **[List Box](../controls/control-list-box.md)** controls.
+**[SelectionFill](../controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](controls/control-drop-down.md)** and **[List Box](controls/control-list-box.md)** controls.
 
 **[SelectionThickness](../controls/control-pen-input.md)** – The thickness of the selection tool for a pen-input control.  Applies to the **[Pen input](../controls/control-pen-input.md)** control.
 
-**[SelectMultiple](../controls/control-list-box.md)** – Whether a user can select more than one item in a listbox.  Applies to the **[List Box](../controls/control-list-box.md)** control.
+**[SelectMultiple](controls/control-list-box.md)** – Whether a user can select more than one item in a listbox.  Applies to the **[List Box](controls/control-list-box.md)** control.
 
 **[SeriesAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a column or line chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
