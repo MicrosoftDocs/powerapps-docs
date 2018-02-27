@@ -39,7 +39,7 @@ The most common data sources are tables, which you can use to retrieve and store
 
 Data sources other than tables include email, calendars, Twitter, and notifications.
 
-Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../controls/control-form-detail.md)**, and **[Edit form](../controls/control-form-detail.md)** controls, it's easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](../working-with-forms.md).
+Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../controls/control-form-detail.md)**, and **[Edit form](../controls/control-form-detail.md)** controls, it's easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](working-with-forms.md).
 
 ## Add a connection
 1. Click or tap **New** on the **File** menu (near the left edge).

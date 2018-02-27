@@ -43,7 +43,7 @@ The commonest type of data source is the table, which you can use to retrieve an
 
 There are other kinds of data sources that are not tables, such as email, calendars, twitter, and (coming soon) notifications.
 
-Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../controls/control-form-detail.md)**, and **[Edit form](../controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](../working-with-forms.md).
+Using the **[Gallery](../controls/control-gallery.md)**, **[Display form](../controls/control-form-detail.md)**, and **[Edit form](../controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](working-with-forms.md).
 
 In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you also create connections when you do these tasks:
 

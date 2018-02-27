@@ -29,7 +29,7 @@ The default generated form consists of the following controls and their correspo
 
 * **FormScreen1** - This is the [screen](../controls/control-screen.md) that contains the form.
 
-* **SharePointForm1** - This is the [form](../working-with-forms.md) that's used to create, show, or edit the list item.
+* **SharePointForm1** - This is the [form](working-with-forms.md) that's used to create, show, or edit the list item.
 
     * **Data Source** - The list for which the form has been customized.
 

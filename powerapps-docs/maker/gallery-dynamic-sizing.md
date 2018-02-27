@@ -102,4 +102,4 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 Apply the same concept if you want to add more controls: set each control's **Y** property based on the **Y** and **Height** properties of the control above it.
 
 ## Next steps
-Learn more about how to work with a [gallery](../working-with-forms.md) control and [formulas](../working-with-formulas.md).
+Learn more about how to work with a [gallery](working-with-forms.md) control and [formulas](../working-with-formulas.md).

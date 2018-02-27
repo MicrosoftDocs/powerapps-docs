@@ -25,7 +25,7 @@ You can interact with cards most easily in the right-hand pane after you select 
 
 ![](./media/working-with-cards/first-screen.png)
 
-To get started with cards, see [add a form](add-form.md) and [understand data forms](../working-with-forms.md). The remainder of this topic goes into more detail about how cards work and how you can customize or even create your own.
+To get started with cards, see [add a form](add-form.md) and [understand data forms](working-with-forms.md). The remainder of this topic goes into more detail about how cards work and how you can customize or even create your own.
 
 ## Predefined cards
 PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
