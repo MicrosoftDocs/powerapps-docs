@@ -32,7 +32,7 @@ The **Power** function returns a number raised to a power.  It is equivalent to 
 
 The **Sqrt** function returns the number that, when multiplied by itself, equals its argument.
 
-If you pass a single number, the return value is a single result based on the function called.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of results, one result for each record in the argument's table. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.  
+If you pass a single number, the return value is a single result based on the function called.  If you pass a single-column [table](../maker/working-with-tables.md) that contains numbers, the return value is a single-column table of results, one result for each record in the argument's table. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../maker/working-with-tables.md) describes.  
 
 If an argument would result in an undefined valued, the result is *blank*.  This can happen, for example, with square roots and logarithms of negative numbers.
 

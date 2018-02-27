@@ -19,10 +19,10 @@ ms.author: gregli
 
 ---
 # Concat and Concatenate functions in PowerApps
-Concatenates individual strings of text and strings in [tables](../working-with-tables.md).
+Concatenates individual strings of text and strings in [tables](../maker/working-with-tables.md).
 
 ## Description
-The **Concat** function concatenates the result of a formula applied across all the [records](../working-with-tables.md#records) of a table, resulting in a single string. Use this function to summarize the strings of a table, just as the **[Sum](function-aggregates.md)** function does for numbers.
+The **Concat** function concatenates the result of a formula applied across all the [records](../maker/working-with-tables.md#records) of a table, resulting in a single string. Use this function to summarize the strings of a table, just as the **[Sum](function-aggregates.md)** function does for numbers.
 
 [!INCLUDE [record-scope](../includes/record-scope.md)]
 

@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Update and UpdateIf functions in PowerApps
-Updates [records](../working-with-tables.md#records) in a [data source](../maker/working-with-data-sources.md).
+Updates [records](../maker/working-with-tables.md#records) in a [data source](../maker/working-with-data-sources.md).
 
 ## Description
 ### Update function
@@ -27,7 +27,7 @@ Use the **Update** function to replace an entire record in a data source. In con
 
 For a [collection](../maker/working-with-data-sources.md#collections), the entire record must match. Collections allow duplicate records, so multiple records might match. You can use the **All** argument to update all copies of a record; otherwise, only one copy of the record is updated.
 
-If the data source generates a column's value automatically, the value of that [column](../working-with-tables.md#columns) must be reaffirmed.
+If the data source generates a column's value automatically, the value of that [column](../maker/working-with-tables.md#columns) must be reaffirmed.
 
 ### UpdateIf function
 Use the **UpdateIf** function to modify one or more values in one or more records that match one or more conditions. The condition can be any formula that results in a **true** or **false** and can reference columns of the data source by name. The function evaluates the condition for each record and modifies any record for which the result is **true**.  
@@ -36,7 +36,7 @@ To specify a modification, use a change record that contains new property values
 
 Similar to **UpdateIf**, you can also use the **[Patch](function-patch.md)** function to change specific columns of a record without affecting other columns.
 
-Both **Update** and **UpdateIf** return the modified data source as a [table](../working-with-tables.md). You must use either function in a [behavior formula](../maker/working-with-formulas-in-depth.md).
+Both **Update** and **UpdateIf** return the modified data source as a [table](../maker/working-with-tables.md). You must use either function in a [behavior formula](../maker/working-with-formulas-in-depth.md).
 
 ### Delegation
 [!INCLUDE [delegation-no](../includes/delegation-no.md)]

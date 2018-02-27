@@ -97,5 +97,5 @@ In the Excel table, the image path can also be the URL to an image. Download the
 ## Learn more
 [Add an image, a video, or a sound](add-images-pictures-audio-video.md)  
 [Show data in a line, pie, or bar chart in your app](use-line-pie-bar-chart.md)  
-[Understand tables and records in PowerApps](../working-with-tables.md)
+[Understand tables and records in PowerApps](working-with-tables.md)
 

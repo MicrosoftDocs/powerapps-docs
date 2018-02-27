@@ -37,7 +37,7 @@ The **VarP** function calculates the variance of its arguments.
 You can supply the values for these functions as:
 
 * Separate arguments. For example, **Sum( 1, 2, 3 )** returns 6.
-* A [table](../working-with-tables.md) and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each [record](../working-with-tables.md#records).  
+* A [table](../maker/working-with-tables.md) and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each [record](../maker/working-with-tables.md#records).  
 
 [!INCLUDE [record-scope](../includes/record-scope.md)]
 

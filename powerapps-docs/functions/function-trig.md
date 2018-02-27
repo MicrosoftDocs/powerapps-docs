@@ -50,7 +50,7 @@ The **Pi** function returns the transcendental number &pi;, which begins 3.14159
 The **Radians** function converts degrees to radians.  
 
 ### Notes
-If you pass a single number to these functions, the return value is a single result.  If you pass a single-column [table](../working-with-tables.md) that contains numbers, the return value is a single-column table of results, one result for each record in the argument's table. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.  
+If you pass a single number to these functions, the return value is a single result.  If you pass a single-column [table](../maker/working-with-tables.md) that contains numbers, the return value is a single-column table of results, one result for each record in the argument's table. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../maker/working-with-tables.md) describes.  
 
 If an argument would result in an undefined value, the result is *blank*.  This can happen, for example, when using inverse functions with arguments that are out of range.
 

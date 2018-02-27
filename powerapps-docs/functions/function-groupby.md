@@ -19,10 +19,10 @@ ms.author: gregli
 
 ---
 # GroupBy and Ungroup functions in PowerApps
-Groups and ungroups [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
+Groups and ungroups [records](../maker/working-with-tables.md#records) of a [table](../maker/working-with-tables.md).
 
 ## Description
-The **GroupBy** function returns a table with records grouped together based on the values in one or more [columns](../working-with-tables.md#columns). Records in the same group are placed into a single record, with a column added that holds a nested table of the remaining columns.   
+The **GroupBy** function returns a table with records grouped together based on the values in one or more [columns](../maker/working-with-tables.md#columns). Records in the same group are placed into a single record, with a column added that holds a nested table of the remaining columns.   
 
 The **Ungroup** function reverses the **GroupBy** process. This function returns a table, breaking into separate records any records that were grouped together.
 
@@ -40,7 +40,7 @@ You can also aggregate results based on a grouping:
 
 **Ungroup** tries to preserve the original order of the records that were fed to **GroupBy**.  This isn't always possible (for example, if the original table contains *blank* records).
 
-A table is a value in PowerApps, just like a string or a number. You can specify a table as an argument for a function, and a function can return a table. **GroupBy** and **Ungroup** don't modify a table; instead they take a table as an argument and return a different table. See [working with tables](../working-with-tables.md) for more details.
+A table is a value in PowerApps, just like a string or a number. You can specify a table as an argument for a function, and a function can return a table. **GroupBy** and **Ungroup** don't modify a table; instead they take a table as an argument and return a different table. See [working with tables](../maker/working-with-tables.md) for more details.
 
 ## Syntax
 **GroupBy**( *Table*, *ColumnName1* [, *ColumnName2*, ... ], *GroupColumnName* )

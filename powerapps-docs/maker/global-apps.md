@@ -71,8 +71,8 @@ Some [separators and operators](../functions/operators.md) will shift based on t
 The change in the PowerApps list separator is consistent with that happens to the Excel list separator.  It impacts:
 
 * Arguments in function calls.
-* Fields in a [record](../working-with-tables.md#elements-of-a-table).
-* Records in a [Value table](../working-with-tables.md#inline-syntax).
+* Fields in a [record](working-with-tables.md#elements-of-a-table).
+* Records in a [Value table](working-with-tables.md#inline-syntax).
 
 For example, consider the following formula in "en-US":
 

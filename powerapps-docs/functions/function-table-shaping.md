@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # AddColumns, DropColumns, RenameColumns, and ShowColumns functions in PowerApps
-Shapes a [table](../working-with-tables.md) by adding, dropping, renaming, and selecting its [columns](../working-with-tables.md#columns).
+Shapes a [table](../maker/working-with-tables.md) by adding, dropping, renaming, and selecting its [columns](../maker/working-with-tables.md#columns).
 
 ## Overview
 These functions shape a table by adjusting its columns:
@@ -28,7 +28,7 @@ These functions shape a table by adjusting its columns:
 * Add a calculated column to a table (for example, a **Total Price** column that shows the results of multiplying **Quantity** by **Unit Price**).
 * Rename a column to something more meaningful, for display to users or for use in formulas.
 
-A table is a value in PowerApps, just like a string or a number.  You can specify a table as an argument in a formula, and functions can return a table as a result. The functions that this topic describes don't modify a table. Instead they take a table as an argument and return a new table with a transform applied.  See [working with tables](../working-with-tables.md) for more details.  
+A table is a value in PowerApps, just like a string or a number.  You can specify a table as an argument in a formula, and functions can return a table as a result. The functions that this topic describes don't modify a table. Instead they take a table as an argument and return a new table with a transform applied.  See [working with tables](../maker/working-with-tables.md) for more details.  
 
 You can't modify the columns of a [data source](../maker/working-with-data-sources.md) by using these functions. You must modify the data at its source. You can add columns to a [collection](../maker/working-with-data-sources.md#collections) with the **[Collect](function-clear-collect-clearcollect.md)** function.  See [working with data sources](../maker/working-with-data-sources.md) for more details.  
 

@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Validate function in PowerApps
-The **Validate** function checks whether the value of a single [column](../working-with-tables.md#columns) or a complete [record](../working-with-tables.md#records) is valid for a [data source](../maker/working-with-data-sources.md).  
+The **Validate** function checks whether the value of a single [column](../maker/working-with-tables.md#columns) or a complete [record](../maker/working-with-tables.md#records) is valid for a [data source](../maker/working-with-data-sources.md).  
 
 ## Description
 Before a user submits a data change, you can provide immediate feedback on the validity of that submission, resulting in a better user experience.

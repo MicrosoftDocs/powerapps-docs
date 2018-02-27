@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # ForAll function in PowerApps
-Calculates values and performs actions for all [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
+Calculates values and performs actions for all [records](../maker/working-with-tables.md#records) of a [table](../maker/working-with-tables.md).
 
 ## Description
 The **ForAll** function evaluates a formula for all records of a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.
@@ -115,7 +115,7 @@ Don't make that copy!  We can use the following formula anywhere we need:
 
 * **ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
 
-A [record scope](../working-with-tables.md#record-scope) is created by the **Filter** and **AddColumns** functions to perform the comparison and subtraction operations, respectively, with the **'Quantity Requested'** and **'Quantity Available'** fields of each record.
+A [record scope](../maker/working-with-tables.md#record-scope) is created by the **Filter** and **AddColumns** functions to perform the comparison and subtraction operations, respectively, with the **'Quantity Requested'** and **'Quantity Available'** fields of each record.
 
 In this example, the **Filter** function can be delegated.  This is important, as it can find all the products that meet the criteria, even if that is only a few records out of a table of millions.  At this time, **ShowColumns** and **AddColumns** cannot be delegated, so the actual number of products that needs to be ordered will be limited.  If you know the size of this result will always be relatively small, this approach is fine.
 

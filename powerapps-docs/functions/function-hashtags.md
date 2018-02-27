@@ -29,7 +29,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 * underscores
 * currency symbols (such as $)
 
-**HashTags** returns a one-column [table](../working-with-tables.md) that contains the hashtags in the string.  If the string contains no hashtags, the function returns a one-column table that's [empty](function-isblank-isempty.md).
+**HashTags** returns a one-column [table](../maker/working-with-tables.md) that contains the hashtags in the string.  If the string contains no hashtags, the function returns a one-column table that's [empty](function-isblank-isempty.md).
 
 ## Syntax
 **HashTags**( *String* )

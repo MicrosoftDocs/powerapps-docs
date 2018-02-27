@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Collect, Clear, and ClearCollect functions in PowerApps
-Creates and clears [collections](../maker/working-with-data-sources.md#collections) and adds [records](../working-with-tables.md#records) to any [data source](../maker/working-with-data-sources.md).
+Creates and clears [collections](../maker/working-with-data-sources.md#collections) and adds [records](../maker/working-with-tables.md#records) to any [data source](../maker/working-with-data-sources.md).
 
 ## Description
 ### Collect
@@ -27,9 +27,9 @@ The **Collect** function adds records to a data source. The items to be added ca
 
 * A single value: The value is placed in the **[Value](function-value.md)** field of a new record.  All other properties are left [blank](function-isblank-isempty.md).
 * A record: Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
-* A [table](../working-with-tables.md): Each record of the table is added as a separate record of the data source as described above. The table is not added as a nested table to a record. To accomplish this, wrap the table in a record first.
+* A [table](../maker/working-with-tables.md): Each record of the table is added as a separate record of the data source as described above. The table is not added as a nested table to a record. To accomplish this, wrap the table in a record first.
 
-When used with a collection, additional [columns](../working-with-tables.md#columns) will be created as needed. The columns for other data sources are fixed by the data source and new columns cannot be added.  
+When used with a collection, additional [columns](../maker/working-with-tables.md#columns) will be created as needed. The columns for other data sources are fixed by the data source and new columns cannot be added.  
 
 If the data source doesn't already exist, a collection is created.
 

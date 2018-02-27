@@ -74,7 +74,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 > [!NOTE]
 > The first box is actually an image control. If you don't have an image in your Excel table, then you can delete the image control, and add a label in its place. [Add and configure controls](../maker/add-configure-controls.md) is a good resource.
 
-[Understand tables and records](../working-with-tables.md) provides more details and some examples.  
+[Understand tables and records](../maker/working-with-tables.md) provides more details and some examples.  
 
 ## Sharing your app
 You can share [your app](../maker/share-app.md), [your resources](../maker/share-app-resources.md) such as connectors, and [your data](../maker/share-app-data.md) with others in your organization.
@@ -98,7 +98,7 @@ To share data in an Excel file:
 ## Helpful links
 See all the [available connections](../maker/connections-list.md).  
 Learn how to [add connections](../maker/add-manage-connections.md) and [add a data source](../maker/add-data-connection.md) to your apps.  
-[Understand tables and records](../working-with-tables.md) with tabular data sources.  
+[Understand tables and records](../maker/working-with-tables.md) with tabular data sources.  
 Some additional gallery resources include [Show a list of items](../maker/add-gallery.md) and [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md).
 
 <!--Icon references-->

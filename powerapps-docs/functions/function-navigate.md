@@ -44,7 +44,7 @@ In the first argument, specify the name of the screen to display.
 | **ScreenTransition.None** |The old screen is quickly replaced with the new screen. |
 | **ScreenTransition.UnCover** |The old screen slides out of view, uncovering the new screen. |
 
-You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](../working-with-tables.md#records) that contains the context-variable name as a [column](../working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
+You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](../maker/working-with-tables.md#records) that contains the context-variable name as a [column](../maker/working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
 
 Set the **[OnHidden](../controls/control-screen.md)** property of the old screen, the **[OnVisible](../controls/control-screen.md)** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 

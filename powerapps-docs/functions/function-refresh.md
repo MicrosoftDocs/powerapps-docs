@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Refresh function in PowerApps
-Refreshes the [records](../working-with-tables.md#records) of a [data source](../maker/working-with-data-sources.md).
+Refreshes the [records](../maker/working-with-tables.md#records) of a [data source](../maker/working-with-data-sources.md).
 
 ## Description
 The **Refresh** function retrieves a fresh copy of a data source.  You'll see changes that other users made.

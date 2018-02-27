@@ -19,10 +19,10 @@ ms.author: gregli
 
 ---
 # First, FirstN, Last, and LastN functions in PowerApps
-Returns a table's first or last set of [records](../working-with-tables.md#records).
+Returns a table's first or last set of [records](../maker/working-with-tables.md#records).
 
 ## Description
-The **First** function returns the first record of a [table](../working-with-tables.md).
+The **First** function returns the first record of a [table](../maker/working-with-tables.md).
 
 The **FirstN** function returns the first set of records of a table; the second argument specifies the number of records to return.
 

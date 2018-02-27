@@ -30,7 +30,7 @@ The **Lower**, **Upper**, and **Proper** functions convert the case of letters i
 
 All three functions ignore characters that aren't letters.
 
-If you pass a single string, the return value is the converted version of that string.  If you pass a single-column [table](../working-with-tables.md) that contains strings, the return value is a single-column table of converted strings. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.
+If you pass a single string, the return value is the converted version of that string.  If you pass a single-column [table](../maker/working-with-tables.md) that contains strings, the return value is a single-column table of converted strings. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../maker/working-with-tables.md) describes.
 
 ## Syntax
 **Lower**( *String* )<br>**Upper**( *String* )<br>**Proper**( *String* )
@@ -52,7 +52,7 @@ The examples in this section use a text-input control, named **Author**, as thei
 | **Proper(&nbsp;Author.Text&nbsp;)** |Converts the first letter of each word to uppercase if it's lowercase, and converts any other uppercase letters to lowercase. |"E. E. Cummings" |
 
 ### Single-column table
-The examples in this section convert strings from the **Address** [column](../working-with-tables.md#columns) of the **People** data source, which contains this data:
+The examples in this section convert strings from the **Address** [column](../maker/working-with-tables.md#columns) of the **People** data source, which contains this data:
 
 ![](media/function-lower-upper-proper/people-table.png)
 

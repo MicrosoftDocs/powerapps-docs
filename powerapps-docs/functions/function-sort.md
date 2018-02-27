@@ -19,12 +19,12 @@ ms.author: gregli
 
 ---
 # Sort and SortByColumns functions in PowerApps
-Sorts a [table](../working-with-tables.md).
+Sorts a [table](../maker/working-with-tables.md).
 
 ## Description
 The **Sort** function sorts a table based on a formula.  
 
-The formula is evaluated for each [record](../working-with-tables.md#records) of the table, and the results are used to sort the table.  The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
+The formula is evaluated for each [record](../maker/working-with-tables.md#records) of the table, and the results are used to sort the table.  The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
 
 [!INCLUDE [record-scope](../includes/record-scope.md)]
 
@@ -38,7 +38,7 @@ You can combine **SortByColumns** with a **[Drop down](../controls/control-drop-
 
 In addition to sorting ascending or descending, **SortByColumns** can sort based on a single column table of values.  For example, you can sort record based on the name of a day of the week by supplying **[ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]** as the sort order.  All records which have **Monday"** will come first, followed by **Tuesday**, and so on.  Records found that do not appear in the sort table are put at the end of the list.
 
-[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../working-with-tables.md) for more details.
+[Tables](../maker/working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../maker/working-with-tables.md) for more details.
 
 [!INCLUDE [delegation](../includes/delegation.md)]
 

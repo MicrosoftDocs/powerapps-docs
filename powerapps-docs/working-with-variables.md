@@ -60,7 +60,7 @@ Now, if the result of our calculation in **TextBox1.Text** is negative, the numb
 You can use formulas for a wide variety of scenarios:
 
 * By using your device's GPS, a map control can display your current location with a formula that uses **Location.Latitude** and **Location.Longitude**.  As you move, the map will automatically track your location.
-* Other users can update [data sources](maker/working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated to reflect the updated data. Furthering the example, you might set a gallery's **[Items](controls/properties-core.md)** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
+* Other users can update [data sources](maker/working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated to reflect the updated data. Furthering the example, you might set a gallery's **[Items](controls/properties-core.md)** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](maker/working-with-tables.md#records).
 
 ### Benefits
 Using formulas to build apps has many advantages:
@@ -92,7 +92,7 @@ How global variables work:
 
 * You set the value of the global variable with the **[Set](functions/function-set.md)** function.  **Set( MyVar, 1 )** sets the global variable **MyVar** to a value of **1**.
 * You use the global variable by referencing the name used with the **Set** function.  In this case, **MyVar** will return **1**.
-* Global variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
+* Global variables can hold any value, including strings, numbers, records, and [tables](maker/working-with-tables.md).
 
 Let's rebuild our adding machine by using a global variable:
 
@@ -151,7 +151,7 @@ How context variables work:
 * You create and update context variables with records. In other programming tools, you commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead. When you use a context variable, use its name directly.  
 * You can also set a context variable when a screen is displayed, by using the **[Navigate](functions/function-navigate.md)** function. If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
 * Except for **[Navigate](functions/function-navigate.md)**, context variables are limited to the context of a single screen, which is where they get their name.  You can't use or set them outside of this context.
-* Context variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
+* Context variables can hold any value, including strings, numbers, records, and [tables](maker/working-with-tables.md).
 
 Let's rebuild our adding machine by using a context variable:
 

@@ -23,7 +23,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 
 | Symbol | Type | Syntax | Description |
 | --- | --- | --- | --- |
-| **.** |Property Selector |**Slider1.Value<br>Color.Red<br>Acceleration.X** |Extracts a property from a [table](../working-with-tables.md), control, [signal](signals.md), or enumeration.  For backwards compatibility, **!** may also be used. |
+| **.** |Property Selector |**Slider1.Value<br>Color.Red<br>Acceleration.X** |Extracts a property from a [table](../maker/working-with-tables.md), control, [signal](signals.md), or enumeration.  For backwards compatibility, **!** may also be used. |
 | **.**<br>[or **,** [depending on the language](../maker/global-apps.md)] |Decimal separator |**1.23**<br>[or **1,23** depending on the language] |Separator between whole and fractional parts of a number.  The character is dependent on the language. |
 | **( )** |Parentheses |**Filter(T, A &lt; 10)**<br><br>**(1 + 2) * 3** |Enforces precedence order, and groups sub-expressions in a larger expression |
 | **+** |Arithmetic operators |**1 + 2** |Addition |
@@ -48,7 +48,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 | **in** |&nbsp; |**&quot;The&quot; in &quot;The keyboard and the monitor...&quot;** |Substring test (case-insensitive) |
 | **@** |[Disambiguation operator](#disambiguation-operator) |**MyTable[@fieldname]** |Field disambiguation |
 | **@** |&nbsp; |**[@MyVariable]** |Global disambiguation |
-| **,**<br>[or **;** [depending on the language](../maker/global-apps.md)] |List separator |**If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]**<br>[or **If( X < 10; "Low"; "Good" )<br>{ FirstName: "Jane"; LastName: "Doe" }<br>[ 1; 2; 3 ]** ] |Separates: <ul><li>arguments in function calls</li><li>fields in a [record](../working-with-tables.md#elements-of-a-table)</li><li>records in a [Value table](../working-with-tables.md#inline-syntax)</li></ul>.  This characters is dependent on the language. |
+| **,**<br>[or **;** [depending on the language](../maker/global-apps.md)] |List separator |**If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]**<br>[or **If( X < 10; "Low"; "Good" )<br>{ FirstName: "Jane"; LastName: "Doe" }<br>[ 1; 2; 3 ]** ] |Separates: <ul><li>arguments in function calls</li><li>fields in a [record](../maker/working-with-tables.md#elements-of-a-table)</li><li>records in a [Value table](../maker/working-with-tables.md#inline-syntax)</li></ul>.  This characters is dependent on the language. |
 | **;**<br>[or **;;** [depending on the language](../maker/global-apps.md)] |Formula chaining |**Collect(T, A); Navigate(S1, &quot;&quot;)**<br>[or **Collect(T; A);; Navigate(S1; &quot;&quot;)**] |Separate invocations of functions in behavior properties.  The chaining operator is dependent on the language. |
 | **Parent** |[Parent operator](#parent-operator) |**Parent.Fill** |Access to properties of a control container |
 | **ThisItem** |[ThisItem operator](#thisitem-operator) |**ThisItem.FirstName** |Access to fields of a Gallery or form control |
@@ -69,7 +69,7 @@ You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](
 ## ThisItem operator
 You can show data in **[Gallery](../controls/control-gallery.md)**, **[Edit form](../controls/control-form-detail.md)**, or **[Display form](../controls/control-form-detail.md)** controls by binding it to a table or a collection.  These controls are a container for other cards and controls.  Each card or control within the container can access the bound data through the **[ThisItem](operators.md#thisitem-operator)** operator.   
 
-You use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [column](../working-with-tables.md#columns) of data that each card or control within the outer control. For example, that operator in the product gallery for [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+You use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [column](../maker/working-with-tables.md#columns) of data that each card or control within the outer control. For example, that operator in the product gallery for [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
 
 For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
@@ -81,10 +81,10 @@ Any control in PowerApps can be referenced by name from anywhere within the app.
 Controls on this screen have another option. They can use a relative reference: **Parent.Fill**. The **[Parent](operators.md#parent-operator)** operator refers to the control that hosts this control, making available all of its properties. Using **[Parent](operators.md#parent-operator)** is helpful because it doesn't depend on the name of the control. You can copy and paste a container control without needing to adjust any references within the container. This operator also makes the relationship between child and parent controls clearer when reading formulas.
 
 ## Disambiguation operator
-Some functions create [record scopes](../working-with-tables.md#record-scope) for accessing the fields of table while processing each record, such as **Filter**, **AddColumns**, and **Sum**.  Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the **@** disambiguation operator:
+Some functions create [record scopes](../maker/working-with-tables.md#record-scope) for accessing the fields of table while processing each record, such as **Filter**, **AddColumns**, and **Sum**.  Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the **@** disambiguation operator:
 
 * To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.  
 * To access global values, such as data sources, collections, and context variables, use the pattern **[@*ObjectName*]** (without a table designation).
 
-For more information and examples, see the discussion on [record scopes](../working-with-tables.md#record-scope).
+For more information and examples, see the discussion on [record scopes](../maker/working-with-tables.md#record-scope).
 

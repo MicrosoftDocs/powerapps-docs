@@ -19,7 +19,7 @@ ms.author: gregli
 
 ---
 # Filter, Search, and LookUp functions in PowerApps
-Finds one or more [records](../working-with-tables.md#records) in a [table](../working-with-tables.md).
+Finds one or more [records](../maker/working-with-tables.md#records) in a [table](../maker/working-with-tables.md).
 
 ## Description
 The **Filter** function finds records in a table that satisfy a formula.  Use **Filter** to find a set of records that match one or more criteria and to discard those that don't.
@@ -34,7 +34,7 @@ The **Search** function finds records in a table that contain a string in one of
 
 **Filter** and **Search** return a table that contains the same columns as the original table and the records that match the criteria. **LookUp** returns only the first record found, after applying a formula to reduce the record to a single value. If no records are found, **Filter** and **Search** return an [empty](function-isblank-isempty.md) table, and **LookUp** returns *blank*.  
 
-[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number. They can be passed to and returned from functions.  **Filter**, **Search**, and **LookUp** don't modify a table. Instead, they take a table as an argument and return a table, a record, or a single value from it. See [working with tables](../working-with-tables.md) for more details.
+[Tables](../maker/working-with-tables.md) are a value in PowerApps, just like a string or number. They can be passed to and returned from functions.  **Filter**, **Search**, and **LookUp** don't modify a table. Instead, they take a table as an argument and return a table, a record, or a single value from it. See [working with tables](../maker/working-with-tables.md) for more details.
 
 [!INCLUDE [delegation](../includes/delegation.md)]
 

@@ -45,10 +45,10 @@ Tables that are internal to a PowerApps app are fixed values, just as a number o
 
 External tables are stored in a data source for later retrieval and sharing.  PowerApps provides "connections" to read and write stored data.  Within a connection, you can access multiple tables of information.  You'll select which tables to use in your app, and each will become a separate *data source*.  
 
-To learn more, [Working with tables](../working-with-tables.md) goes into more detail about internal tables, but it is also applicable to external tables residing in a cloud service.
+To learn more, [Working with tables](working-with-tables.md) goes into more detail about internal tables, but it is also applicable to external tables residing in a cloud service.
 
 ## Working with tables
-You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](../../working-with-tables.md#records), [columns](../../working-with-tables.md#columns), and properties that you can use in formulas. In addition:
+You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](../working-with-tables.md#records), [columns](../working-with-tables.md#columns), and properties that you can use in formulas. In addition:
 
 * The data source has the same column names and data types as the underlying table in the connection.
   

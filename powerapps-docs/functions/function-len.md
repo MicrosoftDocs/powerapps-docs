@@ -22,7 +22,7 @@ ms.author: gregli
 Returns the length of a string of text.
 
 ## Description
-If you specify a single string as the argument, the return value is the length as a number.  If you specify a single-column [table](../working-with-tables.md) that contains strings, the return value is a single-column table that contains the length of each string. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.
+If you specify a single string as the argument, the return value is the length as a number.  If you specify a single-column [table](../maker/working-with-tables.md) that contains strings, the return value is a single-column table that contains the length of each string. If you have a multi-column table, you can shape it into a single-column table, as [working with tables](../maker/working-with-tables.md) describes.
 
 If you specify an [empty](function-isblank-isempty.md) string, **Len** returns 0.
 
@@ -51,6 +51,6 @@ For the first example in this section, the data source is named **People** and c
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |In the **Address** [column](../working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
+| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |In the **Address** [column](../maker/working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
 | **Len( [ "Hello", "to the", "World", "" ] )** |In the **[Value](function-value.md)** column of the inline table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |![](media/function-len/people-table-len-inline.png) |
 

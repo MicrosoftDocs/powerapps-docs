@@ -19,14 +19,14 @@ ms.author: gregli
 
 ---
 # Patch function in PowerApps
-Modifies or creates one or more [records](../working-with-tables.md#records) in a [data source](../maker/working-with-data-sources.md), or merges records outside of a data source.
+Modifies or creates one or more [records](../maker/working-with-tables.md#records) in a [data source](../maker/working-with-data-sources.md), or merges records outside of a data source.
 
 Use the **Patch** function to modify records in complex situations, such as when you perform updates that require no user interaction or use forms that span multiple screens.
 
 In less complex situations, you can use the **Edit form** control to update records in a data source more easily. When you add an **Edit form** control, you provide users with a form to fill in and then save the changes to a data source. For more information, see [Understand data forms](../maker/working-with-forms.md).
 
 ## Overview
-Use the **Patch** function to modify one or more records of a data source.  The values of specific [fields](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties. For example, this formula changes the phone number for a customer named Contoso:
+Use the **Patch** function to modify one or more records of a data source.  The values of specific [fields](../maker/working-with-tables.md#elements-of-a-table) are modified without affecting other properties. For example, this formula changes the phone number for a customer named Contoso:
 
 **Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: “1-212-555-1234” } )**
 
@@ -87,7 +87,7 @@ Specify two or more records that you want to merge. Records are processed in ord
 
 ## Examples
 #### Modify or create a record (in a data source)
-In these examples, you'll modify or create a record in a data source, named **IceCream**, that contains the data in this [table](../working-with-tables.md) and automatically generates the values in the **ID** [column](../working-with-tables.md#columns):
+In these examples, you'll modify or create a record in a data source, named **IceCream**, that contains the data in this [table](../maker/working-with-tables.md) and automatically generates the values in the **ID** [column](../maker/working-with-tables.md#columns):
 
 ![](media/function-patch/icecream.png)
 

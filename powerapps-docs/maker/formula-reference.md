@@ -40,7 +40,7 @@ Other elements include:
 
 **[Acot](../functions/function-trig.md)** – Returns the arccotangent of a number, in radians.
 
-**[AddColumns](../functions/function-table-shaping.md)** – Returns a table with [columns](../working-with-tables.md#columns) added.
+**[AddColumns](../functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
 
 **[And](../functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](../functions/operators.md).
 
@@ -66,7 +66,7 @@ Other elements include:
 
 **[Clear](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
-**[ClearCollect](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](../working-with-tables.md#records).
+**[ClearCollect](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
 
 **[Clock](../functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 

@@ -29,7 +29,7 @@ Context variables are scoped to a screen, which means that you can't build a for
 PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Context variables don't offer this benefit and can make your app harder to create and understand.  Before you use a context variable, review [working with variables](../working-with-variables.md).
 
 ## Description
-To create or update a context variable, pass a single [record](../working-with-tables.md#records) to the **UpdateContext** function. In each record, specify the name of a [column](../working-with-tables.md#columns), which defines or matches the name of the variable, and the value to which you want to set that variable.
+To create or update a context variable, pass a single [record](../maker/working-with-tables.md#records) to the **UpdateContext** function. In each record, specify the name of a [column](../maker/working-with-tables.md#columns), which defines or matches the name of the variable, and the value to which you want to set that variable.
 
 * If you specify the name of a variable that you've previously defined, **UpdateContext** sets the value of the variable to the value that you specify.
 * If you specify the name of a variable that doesn't yet exist, **UpdateContext** creates a variable with that name and sets the value of that variable to the value that you specify.
