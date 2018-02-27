@@ -70,7 +70,7 @@ For this example, we'll be working with the **IceCream** data source:
 
 ![](media/function-errors/icecream.png)
 
-Through the app, a user loads the Chocolate record into a data-entry form and then changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](../working-with-variables.md#create-a-context-variable) **EditRecord**:
+Through the app, a user loads the Chocolate record into a data-entry form and then changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](../maker/working-with-variables.md#create-a-context-variable) **EditRecord**:
 
 * **UpdateContext( { EditRecord: First( Filter( IceCream, Flavor = "Chocolate" ) ) } )**
 

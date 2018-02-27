@@ -53,7 +53,7 @@ Within the **Filter** and **LookUp** functions, the following can be used with c
 * **[TrimEnds](../functions/function-trim.md)**
 * **[IsBlank](../functions/function-isblank-isempty.md)**
 * **[StartsWith](../functions/function-startswith.md)**
-* Constant values that are the same across all records, such as control properties and [global and context variables](../working-with-variables.md).
+* Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
 
 Portions of your formula that evaluate to a constant value for all records can also be used.  For example, **Left( Language(), 2 )** does not depend on any columns of the record and therefore returns the same value for all records.  It is effectively a constant.  Use of context variables, collections, and signals may not be constant and therefore will prevent **Filter** and **LookUp** from being delegated.  
 
@@ -66,7 +66,7 @@ Some notable items missing from the above list:
 * String manipulation functions: **[Lower](../functions/function-lower-upper-proper.md)**, **[Upper](../functions/function-lower-upper-proper.md)**, **[Left](../functions/function-left-mid-right.md)**, **[Mid](../functions/function-left-mid-right.md)**, **[Len](../functions/function-left-mid-right.md)**, ...
 * Signals: **[Location](../functions/signals.md)**, **[Acceleration](../functions/signals.md)**, **[Compass](../functions/signals.md)**, ...
 * Volatiles: **[Now](../functions/function-now-today-istoday.md)**, **[Today](../functions/function-now-today-istoday.md)**, **[Rand](../functions/function-rand.md)**, ...
-* [Collections](../working-with-variables.md)
+* [Collections](working-with-variables.md)
 
 ### Sorting functions
 **[Sort](../functions/function-sort.md)** and **[SortByColumns](../functions/function-sort.md)** can be delegated.  

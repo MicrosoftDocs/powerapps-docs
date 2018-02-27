@@ -19,14 +19,14 @@ ms.author: gregli
 
 ---
 # UpdateContext function in PowerApps
-Creates or updates [context variables](../working-with-variables.md#create-a-context-variable) of the current screen.
+Creates or updates [context variables](../maker/working-with-variables.md#create-a-context-variable) of the current screen.
 
 ## Overview
 Use the **UpdateContext** function to create a context variable, which temporarily holds a piece of information, such as the number of times the user has selected a button or the result of a data operation.
 
 Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable.  Use the [**Set** function](function-set.md) to work with global variables that are available throughout your app.  
 
-PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Context variables don't offer this benefit and can make your app harder to create and understand.  Before you use a context variable, review [working with variables](../working-with-variables.md).
+PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Context variables don't offer this benefit and can make your app harder to create and understand.  Before you use a context variable, review [working with variables](../maker/working-with-variables.md).
 
 ## Description
 To create or update a context variable, pass a single [record](../maker/working-with-tables.md#records) to the **UpdateContext** function. In each record, specify the name of a [column](../maker/working-with-tables.md#columns), which defines or matches the name of the variable, and the value to which you want to set that variable.

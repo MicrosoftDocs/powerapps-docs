@@ -33,7 +33,7 @@ When used with a collection, additional [columns](../maker/working-with-tables.m
 
 If the data source doesn't already exist, a collection is created.
 
-Collections are sometimes used to hold global variables or make a temporary copy of a data source. PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
+Collections are sometimes used to hold global variables or make a temporary copy of a data source. PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../maker/working-with-variables.md).
 
 You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
