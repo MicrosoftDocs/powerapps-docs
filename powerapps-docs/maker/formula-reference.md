@@ -123,7 +123,7 @@ Other elements include:
 
 **[Distinct](functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
 
-**[Download](../functions/function-param.md)** – Downloads a file from the web to the local device.
+**[Download](functions/function-param.md)** – Downloads a file from the web to the local device.
 
 **[DropColumns](../functions/function-table-shaping.md)** – Returns a table with one or more columns removed.
 
@@ -181,7 +181,7 @@ Other elements include:
 
 **[LastN](functions/function-first-last.md)** – Returns the last set of records (N records) of a table.
 
-**[Launch](../functions/function-param.md)** – Launches a web address or an app.
+**[Launch](functions/function-param.md)** – Launches a web address or an app.
 
 **[Left](functions/function-left-mid-right.md)** – Returns the left-most portion of a string.
 
@@ -223,7 +223,7 @@ Other elements include:
 **[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](../functions/operators.md).
 
 ## P
-**[Param](../functions/function-param.md)** – Provides access to parameters passed to the app when the user opened it.
+**[Param](functions/function-param.md)** – Provides access to parameters passed to the app when the user opened it.
 
 **[Parent](../../functions/operators.md#parent-operator)** – Provides access to a container control's properties.
 
