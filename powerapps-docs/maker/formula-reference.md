@@ -136,7 +136,7 @@ Other elements include:
 
 **[Errors](../functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
-**[EncodeUrl](../functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
+**[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 
 **[Exit](../functions/function-exit.md)** – Exits the currently running app.
 
@@ -231,7 +231,7 @@ Other elements include:
 
 **[Pi](../functions/function-trig.md)** – Returns the number &pi;.
 
-**[PlainText](../functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
+**[PlainText](functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
 
 **[Power](../functions/function-numericals.md)** – Returns a number raised to a power.  You can also use the [**^** operator](../functions/operators.md).
 
