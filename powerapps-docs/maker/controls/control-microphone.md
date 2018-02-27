@@ -100,5 +100,5 @@ If you add this control, the user can update a data source with one or more soun
 6. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
 7. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 
-Use the **[SaveData](../../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
+Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
 

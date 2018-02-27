@@ -25,7 +25,7 @@ One of the most common scenarios you face as a mobile app developer is enabling 
 * Launch the PowerApps mobile app when offline.
 * Run apps you develop when offline.
 * Determine when an app is offline, online, or in a metered connection by using the [Connection](../functions/signals.md#connection) signal object.
-* Use [collections](../maker/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../functions/function-savedata-loaddata.md) for basic data storage when offline.
+* Use [collections](../maker/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../maker/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
 ## How to build offline capable apps
 The first thing to think about in offline scenarios is how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../maker/connections-list.md) that the platform provides, such as SharePoint, Office 365, and the Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
@@ -43,12 +43,12 @@ At a high level, the app does the following:
 1. On app startup (based on the first screen's **OnVisible** property):
    
    * If the device is online, we access the Twitter connector directly to fetch data, and populate a collection with that data.
-   * If the device is offline, we load the data from a local cache file using [LoadData](../functions/function-savedata-loaddata.md).
+   * If the device is offline, we load the data from a local cache file using [LoadData](../maker/functions/function-savedata-loaddata.md).
    * We enable the user to submit tweets - if online we post directly to Twitter and refresh the local cache.
 2. Every 5 minutes, if online:
    
    * We post any tweets that we have in the local cache.
-   * We refresh the local cache and save it using [SaveData](../functions/function-savedata-loaddata.md).
+   * We refresh the local cache and save it using [SaveData](../maker/functions/function-savedata-loaddata.md).
 
 ### Step 1: Create a new phone app
 1. Open PowerApps Studio.

@@ -85,5 +85,5 @@ If you add this control, the user can update a data source with one or more phot
 6. Take as many photos as you want, and then return to the default workspace by pressing Esc.
 7. (optional) Set the **OnSelect** property of the **Image** control in the **Image gallery** control to **Remove(MyPix, ThisItem)**, press F5, and then click or tap a photo to remove it.
 
-Use the **[SaveData](../../functions/function-savedata-loaddata.md)** function to save the photos locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
+Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the photos locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
 

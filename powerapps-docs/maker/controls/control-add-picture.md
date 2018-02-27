@@ -122,5 +122,5 @@ These properties apply to the inner label control that by default says "Tap or c
     The second image appears in the **Image gallery** control.
 7. (optional) Repeat the previous step one or more times, and then return to the default workspace by pressing Esc.
 
-Use the **[SaveData](../../functions/function-savedata-loaddata.md)** function to save the images locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
+Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the images locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
 

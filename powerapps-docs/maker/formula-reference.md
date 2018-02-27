@@ -189,7 +189,7 @@ Other elements include:
 
 **[Ln](functions/function-numericals.md)** – Returns the natural log.
 
-**[LoadData](../functions/function-savedata-loaddata.md)** – Loads a collection from PowerApps private storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from PowerApps private storage.
 
 **[Location](../functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
@@ -269,7 +269,7 @@ Other elements include:
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
-**[SaveData](../functions/function-savedata-loaddata.md)** – Saves a collection to PowerApps private storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to PowerApps private storage.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
