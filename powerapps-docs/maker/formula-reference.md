@@ -170,7 +170,7 @@ Other elements include:
 
 **[IsMatch](functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
 
-**[IsNumeric](../functions/function-isnumeric.md)** – Checks for a numeric value.
+**[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
 
 **[IsToday](../functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 

@@ -22,7 +22,7 @@ ms.author: gregli
 Tests whether a value is numeric.
 
 ## Description
-The **IsNumeric** function tests whether a value is numeric.  Other kinds of values include Boolean, string, [table](../maker/working-with-tables.md), and [record](../maker/working-with-tables.md#records).
+The **IsNumeric** function tests whether a value is numeric.  Other kinds of values include Boolean, string, [table](../working-with-tables.md), and [record](../working-with-tables.md#records).
 
 The return value is a Boolean **true** or **false**.
 
