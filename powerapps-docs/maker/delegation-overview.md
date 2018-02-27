@@ -60,7 +60,7 @@ Portions of your formula that evaluate to a constant value for all records can a
 Some notable items missing from the above list:
 
 * **[If](functions/function-if.md)**
-* **[*](../functions/operators.md)**, **[/](../functions/operators.md)**, **[Mod](../functions/function-mod.md)**
+* **[*](../functions/operators.md)**, **[/](../functions/operators.md)**, **[Mod](functions/function-mod.md)**
 * **[Concatenate](functions/function-concatenate.md)** (including **[&](../functions/operators.md)**)
 * **[ExactIn](../functions/operators.md)**
 * String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...

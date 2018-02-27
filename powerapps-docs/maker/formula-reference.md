@@ -206,7 +206,7 @@ Other elements include:
 
 **[Minute](functions/function-datetime-parts.md)** – Retrieves the minute portion of a date/time value.  
 
-**[Mod](../functions/function-mod.md)** – Returns the remainder after a dividend is divided by a divisor.
+**[Mod](functions/function-mod.md)** – Returns the remainder after a dividend is divided by a divisor.
 
 **[Month](functions/function-datetime-parts.md)** – Retrieves the month portion of a date/time value.
 
