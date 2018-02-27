@@ -40,7 +40,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Column chart](controls/control-column-line-chart.md)** – Show values as vertical bars relative to two axes.
 
-**[Column](../controls/control-column.md)** - Provides the display experience for a single field in a [**Data table**](../controls/control-data-table.md) control.
+**[Column](controls/control-column.md)** - Provides the display experience for a single field in a [**Data table**](../controls/control-data-table.md) control.
 
 **[Combo box](../controls/control-combo-box.md)** - Allows users to make selections from provided choices. Supports search and multi-select.
 
