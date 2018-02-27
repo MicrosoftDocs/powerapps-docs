@@ -39,7 +39,7 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 * The return value from the **Blank** function.
 * A control property has no formula set for it.
 * No value is typed into a text-input control, or no selection is made in a listbox. You can use **IsBlank** to provide feedback that a field is required.
-* A string that contains no characters has a **[Len](../../functions/function-len.md)** of 0.
+* A string that contains no characters has a **[Len](function-len.md)** of 0.
 * An error occurred in a function. Often, one of the arguments to the function wasn't valid. Many functions return *blank* if the value of an argument is *blank*.
 * Connected [data sources](../working-with-data-sources.md), such as SQL Server, may use "null" values. These values appear as *blank* in PowerApps.
 * The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.

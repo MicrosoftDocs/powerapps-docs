@@ -30,7 +30,7 @@ The **Left**, **Mid**, and **Right** functions return a portion of a string.
 
 If you specify a single string as an argument, the function returns the portion that you requested of the string. If you specify a single-column [table](../working-with-tables.md) that contains strings, the function returns a single-column table of the portions that you requested of those strings. If you specify a multi-column table, you can shape it into a single-column table, as [working with tables](../working-with-tables.md) describes.
 
-If the starting position is negative or beyond the end of the string, **Mid** returns *blank*.  You can check the length of a string by using the **[Len](../../functions/function-len.md)** function. If you request more characters than the string contains, the function returns as many characters as possible.
+If the starting position is negative or beyond the end of the string, **Mid** returns *blank*.  You can check the length of a string by using the **[Len](function-len.md)** function. If you request more characters than the string contains, the function returns as many characters as possible.
 
 ## Syntax
 **Left**( *String*, *NumberOfCharacters* )<br>**Mid**( *String*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *String*, *NumberOfCharacters* )

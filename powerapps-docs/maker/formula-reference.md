@@ -185,7 +185,7 @@ Other elements include:
 
 **[Left](functions/function-left-mid-right.md)** – Returns the left-most portion of a string.
 
-**[Len](../functions/function-len.md)** – Returns the length of a string.
+**[Len](functions/function-len.md)** – Returns the length of a string.
 
 **[Ln](../functions/function-numericals.md)** – Returns the natural log.
 
