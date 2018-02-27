@@ -36,25 +36,25 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
 **Tile** – The name of the Power BI tile you want to display.
 
 ## Additional properties
-**[BorderColor](properties-color-border.md)** – The color of a control's border.
+**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control. Default behavior takes the user to the Power BI report associated with the tile.
+**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control. Default behavior takes the user to the Power BI report associated with the tile.
 
-**[Visible](properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
 
-**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
 1. Add a **Power BI tile** control from the **Insert** tab, **Controls** menu.  
@@ -62,7 +62,7 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
    
     The control renders the Power BI tile.
    
-    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
    
    Don't have have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 
