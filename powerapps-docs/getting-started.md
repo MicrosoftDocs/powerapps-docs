@@ -53,7 +53,7 @@ For ideas on how to improve your app further, you can open a sample app to get a
 ## Create an app from scratch
 After you've generated an app or two automatically and gained some experience with customization, you can create an app from scratch. By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
 
-For more information, see [Create an app from scratch](get-started-create-from-blank.md).
+For more information, see [Create an app from scratch](maker/get-started-create-from-blank.md).
 
 ## Share and run an app
 When you finish your app and save it to the cloud, you can then share it with others in your organization. You control the level of permissions on your app - you decide which users or groups can run the app, and whether they can also customize it or share it with additional people in the organization.

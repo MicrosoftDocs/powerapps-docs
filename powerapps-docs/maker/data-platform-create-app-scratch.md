@@ -36,5 +36,5 @@ When you build an app from the Common Data Service, you don't need to create a c
 9. Click or tap the Common Data Service that you want to use.
 10. In the list of entities, select the check box for one or more entities that you want to use, and then click or tap **Connect**.
 
-The entities that you specified appear in the list of data sources, and you can build your app as [Create an app from scratch](../get-started-create-from-blank.md) describes.
+The entities that you specified appear in the list of data sources, and you can build your app as [Create an app from scratch](get-started-create-from-blank.md) describes.
 

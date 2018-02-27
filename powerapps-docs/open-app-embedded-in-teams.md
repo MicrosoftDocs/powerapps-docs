@@ -91,4 +91,4 @@ To remove the app from the channel, choose the **Product Showcase** tab > **Remo
 In this quickstart, you added the Product Showcase sample app to a Teams channel, and then opened the app from that channel. To learn more about PowerApps, continue to the PowerApps tutorials.
 
 > [!div class="nextstepaction"]
-> [PowerApps Tutorials](get-started-create-from-blank.md)
+> [PowerApps Tutorials](maker/get-started-create-from-blank.md)

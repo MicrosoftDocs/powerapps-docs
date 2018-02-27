@@ -124,7 +124,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 3. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
-4. In PowerApps, create a [blank app](../get-started-create-from-blank.md).
+4. In PowerApps, create a [blank app](get-started-create-from-blank.md).
 
 5. In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 

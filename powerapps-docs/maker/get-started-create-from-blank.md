@@ -19,10 +19,10 @@ ms.author: sharik
 
 ---
 # Create an app from scratch
-Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
+Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](../get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
 
 > [!NOTE]
-> This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](maker/create-app-browser.md).
+> This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
 
 By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records:
 
@@ -50,12 +50,12 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     For more information, see [Create an Excel table in a worksheet](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-3. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
+3. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](../connections/cloud-storage-blob-connections.md), such as OneDrive.
 
 4. If you're new to PowerApps:
 
-   * Learn how to [add a control and set its properties](maker/add-configure-controls.md), which determine how the control appears and behaves.
-   * Learn how to [add and rename a screen](maker/add-screen-context-variables.md).
+   * Learn how to [add a control and set its properties](add-configure-controls.md), which determine how the control appears and behaves.
+   * Learn how to [add and rename a screen](add-screen-context-variables.md).
 
 ## Create a blank app, and connect to data
 1. In PowerApps Studio, click or tap **New** on the **File menu** (near the left edge of the screen).
@@ -104,7 +104,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
 
-    A screen is added with several default controls, such as a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
+    A screen is added with several default controls, such as a search box and a **[Gallery](../controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
 
 2. Click or tap anywhere in the gallery except an arrow, such as directly under the search box.
 
@@ -114,11 +114,11 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Select gallery](./media/get-started-create-from-blank/select-layout.png)
 
-4. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
+4. In the property list, click or tap **[Items](../controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
 
     **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer_x0020_1"), "Volunteer_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-    If you're not sure where the property list is, see [Add and configure controls](maker/add-configure-controls.md).
+    If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md).
 
     > [!NOTE]
 > For Excel or SharePoint data sources that contain column names with spaces, PowerApps shows the spaces as **"\_x0020\_"**. In this example, the column **"Volunteer 1"** appears in a formula as **"Volunteer_x0020_1"**.
@@ -131,7 +131,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     The sort button can sort the records based on data in the **Volunteer 1** column. If a user clicks or taps that button, the sort order toggles between ascending and descending.
 
-    That formula contains the **Sort**, **If**, **IsBlank**, **Filter**, and **Text** functions. For more information about these and other functions, see the [formula reference](maker/formula-reference.md)
+    That formula contains the **Sort**, **If**, **IsBlank**, **Filter**, and **Text** functions. For more information about these and other functions, see the [formula reference](formula-reference.md)
 
 5. Type an **i** in the search box, and click or tap the sort button once (or an odd number of times).
 
@@ -139,13 +139,13 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
 
-    More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](maker/formula-reference.md)
+    More information about the **[Sort](../functions/function-sort.md)**, **[Filter](../functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
 
-6. Select the **[Label](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
+6. Select the **[Label](../controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
 
     ![Select title bar](./media/get-started-create-from-blank/select-title-bar.png)
 
-7. In the property list, click or tap **[Text](controls/properties-core.md)**, copy this text, and then paste it in the formula bar.<br>
+7. In the property list, click or tap **[Text](../controls/properties-core.md)**, copy this text, and then paste it in the formula bar.<br>
    **"View Records"**
 
     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
@@ -159,7 +159,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add and rename screen](./media/get-started-create-from-blank/add-screen.png)
 
-3. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Label](controls/control-text-box.md)**.
+3. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Label](../controls/control-text-box.md)**.
 
 4. Configure the **Label** control that you just added:
 
@@ -189,7 +189,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     The form is named **Form1** by default unless you already added and removed a form. In that case, rename the form to **Form1**.
 
-3. Set **[DataSource](controls/control-form-detail.md)** property of **Form1** to **Schedule**.
+3. Set **[DataSource](../controls/control-form-detail.md)** property of **Form1** to **Schedule**.
 
 4. Set the **Item** property of **Form1** to this expression:
    <br>**BrowseGallery1.Selected**
@@ -202,9 +202,9 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
 
-7. Add a **[Label](controls/control-text-box.md)** control in the new card.
+7. Add a **[Label](../controls/control-text-box.md)** control in the new card.
 
-8. Set the **[AutoHeight](controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](controls/properties-core.md)** property to this formula:
+8. Set the **[AutoHeight](../controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](../controls/properties-core.md)** property to this formula:
    <br>**Form1.Error**
 
     The label will show any errors from the form.
@@ -213,29 +213,29 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 10. On the **Insert** tab, click or tap **Icons**, click or tap the option to add a **Back arrow**, and then move the arrow to the lower-left corner of the screen.
 
-11. Set the arrow's **[OnSelect](controls/properties-core.md)** property to this formula:
+11. Set the arrow's **[OnSelect](../controls/properties-core.md)** property to this formula:
 
      **ResetForm(Form1);Navigate(ViewScreen,ScreenTransition.None)**
 
-      When the user clicks or taps the arrow, the **[Navigate](functions/function-navigate.md)** function opens the **ViewScreen**.
+      When the user clicks or taps the arrow, the **[Navigate](../functions/function-navigate.md)** function opens the **ViewScreen**.
 
-12. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](controls/properties-core.md)** property to **"Save"**.
+12. Add a **[Button](../controls/control-button.md)** control under the form, and set the button's **[Text](../controls/properties-core.md)** property to **"Save"**.
 
      ![Add a save button](./media/get-started-create-from-blank/add-save-button.png)
 
-13. Set the **[OnSelect](controls/properties-core.md)** property of the button to this formula::
+13. Set the **[OnSelect](../controls/properties-core.md)** property of the button to this formula::
 
     **SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
 
-    When the user clicks or taps the button, the **[SubmitForm](functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.
+    When the user clicks or taps the button, the **[SubmitForm](../functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.
 
-14. At the bottom of the screen, add another button, set its **[Text](controls/properties-core.md)** property to **"Remove"**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
+14. At the bottom of the screen, add another button, set its **[Text](../controls/properties-core.md)** property to **"Remove"**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
 
     **Remove(Schedule,BrowseGallery1.Selected);<br>If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
 
-    When the user clicks or taps this button, the **[Remove](functions/function-remove-removeif.md)** function removes the record, and the **ViewScreen** reappears.
+    When the user clicks or taps this button, the **[Remove](../functions/function-remove-removeif.md)** function removes the record, and the **ViewScreen** reappears.
 
-15. Set the **[Visible](controls/properties-core.md)** property of the **Remove** button to this formula:
+15. Set the **[Visible](../controls/properties-core.md)** property of the **Remove** button to this formula:
     <br>**Form1.Mode=FormMode.Edit**
 
     This step hides the **Remove** button when the user is creating a record.
@@ -253,7 +253,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
 
-3. Set the **[OnSelect](controls/properties-core.md)** property of that arrow to this formula:
+3. Set the **[OnSelect](../controls/properties-core.md)** property of that arrow to this formula:
 
     **Navigate(ChangeScreen,ScreenTransition.None)**
 
@@ -261,7 +261,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add record](./media/get-started-create-from-blank/add-record.png)
 
-5. Set the **[OnSelect](controls/properties-core.md)** property of the selected icon to this formula:
+5. Set the **[OnSelect](../controls/properties-core.md)** property of the selected icon to this formula:
 
     **NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**`
 
@@ -288,5 +288,5 @@ As you customize the app, test your changes by running the app in Preview mode, 
 
 ## Next steps
 * Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
-* [Share the app](share-app.md) so that other people can run it.
-* Learn more about [galleries](maker/add-gallery.md), [forms](maker/add-form.md), and [formulas](working-with-formulas.md).
+* [Share the app](../share-app.md) so that other people can run it.
+* Learn more about [galleries](add-gallery.md), [forms](add-form.md), and [formulas](../working-with-formulas.md).

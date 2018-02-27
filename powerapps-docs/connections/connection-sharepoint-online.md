@@ -64,7 +64,7 @@ Open PowerApps by taking *either* of these steps:
 
     **Note:** If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery) later in this topic.
 
-* Build your own app from scratch by [connecting to SharePoint](../connect-to-sharepoint.md), reviewing the concepts in [Create an app from scratch](../get-started-create-from-blank.md), and applying them to SharePoint instead of Excel.
+* Build your own app from scratch by [connecting to SharePoint](../connect-to-sharepoint.md), reviewing the concepts in [Create an app from scratch](../maker/get-started-create-from-blank.md), and applying them to SharePoint instead of Excel.
 
 ## Add a SharePoint list to an existing app
 1. In PowerApps Studio, open the app that you want to update.

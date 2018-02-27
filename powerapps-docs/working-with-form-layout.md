@@ -26,7 +26,7 @@ In PowerApps, you can easily create forms that are attractive and efficient to u
 In this tutorial, we'll walk through the steps to create this form. We'll also look at some advanced topics, such as dynamic sizing of fields to fill available space.
 
 ## Before you start
-If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
+If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](maker/get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
 
 ## Add a gallery
 1. Create a tablet app from scratch.

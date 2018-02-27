@@ -27,7 +27,7 @@ Use this connection to easily build apps that read, update, and delete data from
 
 •    Dynamics AX Update 2 and later
 
-For information about how to create an app, see [Generate an app automatically](../get-started-create-from-data.md) or [Create an app from scratch](../get-started-create-from-blank.md). These topics are written for Excel, but the same principles apply to Dynamics AX.
+For information about how to create an app, see [Generate an app automatically](../get-started-create-from-data.md) or [Create an app from scratch](../maker/get-started-create-from-blank.md). These topics are written for Excel, but the same principles apply to Dynamics AX.
 
 For information about how to add data from Dynamics AX to an existing app, see [Add a data connection](../maker/add-data-connection.md).
 

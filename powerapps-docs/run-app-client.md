@@ -81,4 +81,4 @@ To close an app, use your finger to swipe from the left edge of the app to the r
 In this quickstart, you learned how to run a canvas-based app on a mobile device. To learn more about PowerApps, continue to the PowerApps tutorials.
 
 > [!div class="nextstepaction"]
-> [PowerApps Tutorials](get-started-create-from-blank.md)
+> [PowerApps Tutorials](maker/get-started-create-from-blank.md)

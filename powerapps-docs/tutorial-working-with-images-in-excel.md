@@ -46,7 +46,7 @@ In this tutorial, we:
 3. Name the Excel file **SavePen.xlsx**, and save the file to your cloud storage account (OneDrive for Business, Dropbox, and so on).
 
 ## Create an app with the pen control
-1. In PowerApps, create a [blank app](get-started-create-from-blank.md).
+1. In PowerApps, create a [blank app](maker/get-started-create-from-blank.md).
 2. In your app, add the cloud storage account as a [data source](maker/add-data-connection.md). Once added as a data source, add **SavePen.xlsx** as a connection, and then select the **Drawings** table:  
    ![Connect](./media/tutorial-working-with-images-in-excel/savepen.png)  
    

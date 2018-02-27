@@ -42,7 +42,7 @@ Standard connectors behave differently depending on the type of data source they
 
     [Generate an app from Excel data](../get-started-create-from-data.md)
 
-    [Create an app from scratch](../get-started-create-from-blank.md)
+    [Create an app from scratch](get-started-create-from-blank.md)
 
     > [!NOTE]
 > To connect to data in Excel, the workbook must be hosted in a cloud-storage service like OneDrive. For more information, see [Connect to cloud-storage from PowerApps](../connections/cloud-storage-blob-connections.md).

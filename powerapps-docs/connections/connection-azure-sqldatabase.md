@@ -83,7 +83,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
        > [!NOTE]
 > If you don't have a gateway, [install one](../maker/gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
 5. Click or tap **Create** to create the connection.
-6. Create an app by using techniques that are similar to those that [Create an app from scratch](../get-started-create-from-blank.md) describes.
+6. Create an app by using techniques that are similar to those that [Create an app from scratch](../maker/get-started-create-from-blank.md) describes.
 
 ## Update an existing app
 1. In PowerApps Studio, open the app that you want to update.

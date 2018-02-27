@@ -59,4 +59,4 @@ To close an app, sign out of the Dynamics 365 Home page, or open another app.
 In this quickstart, you learned how to run a canvas-based or model-driven app in a web browser. To learn more about PowerApps, continue to the PowerApps tutorials.
 
 > [!div class="nextstepaction"]
-> [PowerApps Tutorials](get-started-create-from-blank.md)
+> [PowerApps Tutorials](maker/get-started-create-from-blank.md)
