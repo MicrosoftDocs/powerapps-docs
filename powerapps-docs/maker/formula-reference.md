@@ -320,9 +320,9 @@ Other elements include:
 
 **[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
-**[Trim](../functions/function-trim.md)** – Removes extra spaces from the ends and interior of a string of text.
+**[Trim](functions/function-trim.md)** – Removes extra spaces from the ends and interior of a string of text.
 
-**[TrimEnds](../functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
+**[TrimEnds](functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
 
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
