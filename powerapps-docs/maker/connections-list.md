@@ -32,7 +32,7 @@ The following table has links to more information about our most popular connect
 | ![Office 365 Users](./media/connections-list/office365.png) |[**Office 365 Users**](../connections/connection-office365-users.md) |&nbsp; |![Dropbox](./media/connections-list/dropbox.png) |[**Dropbox**](../connections/cloud-storage-blob-connections.md) |
 
 ## Types of connectors
-PowerApps has two types of connectors: *standard connectors* like the ones listed above, and *custom connectors*. If you're connecting to a data source that PowerApps supports with a standard connector, use that connector. If you need to connect to another source, like a service that you've built, see [Register and use custom connectors](../register-custom-api.md).
+PowerApps has two types of connectors: *standard connectors* like the ones listed above, and *custom connectors*. If you're connecting to a data source that PowerApps supports with a standard connector, use that connector. If you need to connect to another source, like a service that you've built, see [Register and use custom connectors](../developer/register-custom-api.md).
 
 Standard connectors behave differently depending on the type of data source they connect to and how data is returned by that data source:
 
