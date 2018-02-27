@@ -120,7 +120,7 @@ When you are creating reports from large data sources (perhaps millions of recor
 
 You do **not** want to bring those millions of Customers into your app, and then choose the ones you want. What you want is to have that choosing happen inside the cloud service where your table is stored, and only send the chosen records over the network.
 
-Many, but not all, functions that you can use to choose records can be *delegated*, which means that they are run inside the cloud service. You can learn how to do this by reading about [Delegation](delegation-overview.md).
+Many, but not all, functions that you can use to choose records can be *delegated*, which means that they are run inside the cloud service. You can learn how to do this by reading about [Delegation](maker/delegation-overview.md).
 
 ## Collections
 Collections are a special kind of data source.  They're local to the app and not backed by a connection to a service in the cloud, so the information can not be shared across devices for the same user or between users.  They operate like any other data source, with a few exceptions:

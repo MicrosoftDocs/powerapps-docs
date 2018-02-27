@@ -19,7 +19,7 @@ ms.author: archanan
 
 ---
 # Delegable data sources
-As outlined in detail in the [Understand delegation](../delegation-overview.md) article, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the app for processing locally.
+As outlined in detail in the [Understand delegation](delegation-overview.md) article, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the app for processing locally.
 
 Delegation is supported for tabular data sources only. This list identifies tabular data sources and whether they support delegation, with details in the next section.
 
@@ -39,7 +39,7 @@ This document lists the current state of supported delegation per data source.
 
 ## Prerequisites
 
-* Familiarize yourself with the [Understand delegation](../delegation-overview.md) article
+* Familiarize yourself with the [Understand delegation](delegation-overview.md) article
 
 ## List of data sources and supported delegation
 This list of data sources and delegable functions and predicates will be updated periodically to reflect the current status of delegation support in PowerApps.

@@ -5,5 +5,5 @@ However, delegation may not always be possible. Data sources vary on what functi
 
 If delegation is not possible, PowerApps will pull down only a small set of records to work on locally. Filter and sort functions will operate on a reduced set of records. What is available in the **[Gallery](../controls/control-gallery.md)** may not be the complete story, which could be confusing to users. 
 
-See the [delegation overview](../delegation-overview.md) for more information.
+See the [delegation overview](../maker/delegation-overview.md) for more information.
 
