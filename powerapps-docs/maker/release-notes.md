@@ -46,8 +46,8 @@ For information about known limitations, see [Common issues and resolutions](com
 * Act on data right from your Power BI report or dashboard by integrating a [PowerApps custom visual (preview release)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), which pulls contextual data from your Power BI report.
 
 ## Dec. 8
-1. [Condition templates](../working-with-rules.md) for rules infer common properties of a control (such as **Text** or **Value**).
-2. Stop displaying the [**Defining actions** confirmation dialog box](../working-with-rules.md) when defining rule actions.
+1. [Condition templates](working-with-rules.md) for rules infer common properties of a control (such as **Text** or **Value**).
+2. Stop displaying the [**Defining actions** confirmation dialog box](working-with-rules.md) when defining rule actions.
 
 ## Nov. 13
 1. Select multiple values for the same field in SharePoint lists.
@@ -55,16 +55,16 @@ For information about known limitations, see [Common issues and resolutions](com
 3. [Customize SharePoint list forms](customize-list-form.md) using PowerApps.
 
 ## Nov. 10
-* [Rename rules](../working-with-rules.md) in an app and show rules when the selected control is in the rule condition.
+* [Rename rules](working-with-rules.md) in an app and show rules when the selected control is in the rule condition.
 
 ## Oct. 30
-1. [Show all rules](../working-with-rules.md) in an app, not just those for the selected control.
+1. [Show all rules](working-with-rules.md) in an app, not just those for the selected control.
 2. Add icons that app creators requested the most.
 3. Improved performance of apps on Android and iOS devices.
 
 ## Sept. 20
 1. After you [save an app](save-publish-app.md) for the first time, additional changes are saved every two minutes automatically by default.
-2. Easily [create rules](../working-with-rules.md) for conditional formatting without writing expressions - just set your condition and then design the results right on the PowerApps canvas.
+2. Easily [create rules](working-with-rules.md) for conditional formatting without writing expressions - just set your condition and then design the results right on the PowerApps canvas.
 3. More easily configure forms, galleries, and data tables with a full-height data pane that pops out when a control is added.
 4. Get contextual quick-tips to help you create an app, whether starting from a blank app, a template, a data source, or SharePoint.
 

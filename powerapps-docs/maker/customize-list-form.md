@@ -47,7 +47,7 @@ PowerApps offers many ways to customize your form. Here are some examples:
 * [Format the text](../controls/properties-text.md)
 * [Add images](add-images-pictures-audio-video.md) or [charts](use-line-pie-bar-chart.md)
 * [Add custom data validation](../functions/function-validate.md)
-* [Add rules](../working-with-rules.md)
+* [Add rules](working-with-rules.md)
 * [Create additional views](https://powerapps.microsoft.com/blog/separate-custom-forms/)
 
 To illustrate, let's say your form has an **AccountID** field that you don't want visible.
