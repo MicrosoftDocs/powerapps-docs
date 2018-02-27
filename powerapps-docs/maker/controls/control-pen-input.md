@@ -36,7 +36,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -44,7 +44,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **Input** – Input.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
@@ -54,9 +54,9 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -72,16 +72,16 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 1. Add a **Pen input** control, name it **MyDoodles**, and set its **ShowControls** property to **true**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Button](control-button.md)** control, move it below **MyDoodles**, and set the **[Text](../../controls/properties-core.md)** property of the **[Button](control-button.md)** control to show **Add**.
-3. Set the **[OnSelect](../../controls/properties-core.md)** property of the **[Button](control-button.md)** control to this formula:<br>
+2. Add a **[Button](control-button.md)** control, move it below **MyDoodles**, and set the **[Text](properties-core.md)** property of the **[Button](control-button.md)** control to show **Add**.
+3. Set the **[OnSelect](properties-core.md)** property of the **[Button](control-button.md)** control to this formula:<br>
    **Collect(Doodles, {Sketch:MyDoodles.Image})**
 4. Add an **Image gallery** control, move it below the **[Button](control-button.md)** control, and shrink the width of the **Image gallery** control until it shows three items.
-5. Set the **[Items](../../controls/properties-core.md)** property of the **Image gallery** control to **Doodles**, and then  press F5.
+5. Set the **[Items](properties-core.md)** property of the **Image gallery** control to **Doodles**, and then  press F5.
 6. Draw an image in **MyDoodles**, and then click or tap the **[Button](control-button.md)** control.
    
     The image that you drew appears in the **Image gallery** control.
 7. (optional) In the **Pen input** control, click or tap the icon to clear the image that you drew, draw another image, and then click or tap the **[Button](control-button.md)** control.
-8. In the **Image gallery** control, set the **[OnSelect](../../controls/properties-core.md)** property of the **[Image](control-image.md)** control to this formula:<br>
+8. In the **Image gallery** control, set the **[OnSelect](properties-core.md)** property of the **[Image](control-image.md)** control to this formula:<br>
    **Remove(Doodles, ThisItem)**
 9. Remove a drawing by clicking or tapping it in the **Image gallery** control.
 

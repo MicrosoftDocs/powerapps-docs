@@ -55,7 +55,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
     ![Add gallery](./media/gallery-dynamic-sizing/add-flexible.png)
 2. Resize the gallery to take up the entire screen.
 
-3. Set the gallery's **[Items](../controls/properties-core.md)** property to **FlooringEstimates**.
+3. Set the gallery's **[Items](controls/properties-core.md)** property to **FlooringEstimates**.
 
 ## Show the product names
 1. In the upper-left corner of the gallery, click or tap the pencil icon to select the gallery template.
@@ -94,7 +94,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 3. Ensure that the **Image** property of the **Image** control is set to this expression:<br>
     **ThisItem.Image**
 
-4. Set the **[Y](../controls/properties-core.md)** property of the **Image** control based on the position and the size of the **OverviewText** box, as in this expression:
+4. Set the **[Y](controls/properties-core.md)** property of the **Image** control based on the position and the size of the **OverviewText** box, as in this expression:
    <br>**OverviewText.Y + OverviewText.Height + 5**
 
     ![Final app](./media/gallery-dynamic-sizing/final-app.png)

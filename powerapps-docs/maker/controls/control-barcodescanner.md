@@ -38,11 +38,11 @@ If you add this control, the user can update a data source with one or more phot
 
 **Contrast** – How easily the user can distinguish between similar colors in an image.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OnStream** – How the app responds when the **Stream** property is updated.
 
@@ -52,9 +52,9 @@ If you add this control, the user can update a data source with one or more phot
 
 **StreamRate** – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 

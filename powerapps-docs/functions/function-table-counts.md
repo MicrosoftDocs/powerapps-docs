@@ -51,17 +51,17 @@ Each of these functions returns a number.
 
 ## Example
 1. Import or create a [collection](../maker/working-with-data-sources.md#collections) named **Inventory**, as the first subprocedure in [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
-2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
+2. Add a label, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
    
     **CountIf(Inventory, UnitsInStock < 30)**
    
     The label shows **2** because two products (Ganymede and Callisto) have fewer than 30 units in stock.
-3. Add another label, and set its **[Text](../controls/properties-core.md)** property to this formula:
+3. Add another label, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
    
     **CountA(Inventory.UnitsInStock)**
    
     The label shows **5**, the number of non-empty cells in the **UnitsInStock** column.
-4. Add another label, and set its **[Text](../controls/properties-core.md)** property to this formula:
+4. Add another label, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
    
     **CountRows(Inventory)**
    

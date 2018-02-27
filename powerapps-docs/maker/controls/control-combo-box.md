@@ -32,7 +32,7 @@ When searching for items to select, for each item you can choose to show a singl
 To use **Combo box** as a people picker, choose the **Person** template from the Layout settings in the Data pane and configure the related data properties to be shown for the person below.
 
 ## Key properties
-**[Items](../../controls/properties-core.md)** – The source of data from which selections can be made.
+**[Items](properties-core.md)** – The source of data from which selections can be made.
 
 **DefaultItems** – The initial selected item(s) before the user interacts with the control.
 
@@ -49,11 +49,11 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[Default](../../controls/properties-core.md)** – The initial selection before it is changed by the user in single-select mode.
+**[Default](properties-core.md)** – The initial selection before it is changed by the user in single-select mode.
 
 **DisplayFields** – List of fields shown for each item returned by the search.  Easiest to configure via the Data pane in the Properties option tab.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -63,9 +63,9 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **OnNavigate** – How the app responds when the user clicks on an item.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 

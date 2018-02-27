@@ -74,7 +74,7 @@ The examples in this section use a [data source](../maker/working-with-data-sour
 
 ### Step-by-step example
 1. Add a **[Text input](../maker/controls/control-text-input.md)** control, and name it **Source**.
-2. Add a **Label** control, and set its **[Text](../controls/properties-core.md)** property to this formula:
+2. Add a **Label** control, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
    <br>
    **Sqrt( Value( Source.Text ) )**
 3. Type a number into **Source**, and confirm that the **Label** control shows the square root of the number that you typed.

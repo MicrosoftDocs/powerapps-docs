@@ -35,11 +35,11 @@ These properties apply to the outer control.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **Error** - If there is a problem uploading an image, this property will contain an appropriate error string.
 
@@ -53,13 +53,13 @@ These properties apply to the outer control.
 
 **Media** – An identifier for the clip that an audio or video control plays.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -74,7 +74,7 @@ These properties apply to the inner label control that by default says "Tap or c
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Font](../../controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -84,7 +84,7 @@ These properties apply to the inner label control that by default says "Tap or c
 
 **[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
 
-**[OnChange](../../controls/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
 **[Padding](../../controls/properties-size-location.md)** – The distance between the text on an import or export button and the edges of that button.
 
@@ -94,7 +94,7 @@ These properties apply to the inner label control that by default says "Tap or c
 
 **[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[Text](../../controls/properties-core.md)** – Text that appears on a control or that the user types into a control.
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 **[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
 
@@ -109,11 +109,11 @@ These properties apply to the inner label control that by default says "Tap or c
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
-3. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](../../controls/properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
+3. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
    **Collect(MyPix, AddMediaButton1.Media)**
    
     Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-4. Add an **Image gallery** control, and set its **[Items](../../controls/properties-core.md)** property to **MyPix**.
+4. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **MyPix**.
 5. Press F5, and then click or tap the **[Button](control-button.md)** control.
    
     The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Image gallery** control, set the **[ImagePosition](../../controls/properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.

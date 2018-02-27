@@ -33,7 +33,7 @@ By selecting a **[Button](controls/control-button.md)** control, the user initia
 * Update a [context variable](working-with-variables.md#create-a-context-variable):  **[UpdateContext](../functions/function-updatecontext.md)** function.
 * Create, update, or remove items in a [collection](working-with-data-sources.md#collections):  **[Collect](../functions/function-clear-collect-clearcollect.md)**, **[Clear](../functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** functions.
 
-Because these functions change the state of the app, they can't be automatically recalculated. You can use them in the formulas for the **[OnSelect](../controls/properties-core.md)**, **[OnVisible](controls/control-screen.md)**, **[OnHidden](controls/control-screen.md)**, and other **On...** properties, which are called behavior formulas.
+Because these functions change the state of the app, they can't be automatically recalculated. You can use them in the formulas for the **[OnSelect](controls/properties-core.md)**, **[OnVisible](controls/control-screen.md)**, **[OnHidden](controls/control-screen.md)**, and other **On...** properties, which are called behavior formulas.
 
 ### More than one action
 Use semicolons to create a list of actions to perform. For example, you might want to update a context variable and then return to the previous screen:

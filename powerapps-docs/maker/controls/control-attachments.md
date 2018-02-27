@@ -25,7 +25,7 @@ A control that allows users to download files to their device.  Upload functiona
 An **Attachments** control lets you open files stored on a data source.
 
 ## Key properties
-**[Items](../../controls/properties-core.md)** – The source describing the files that can be downloaded.
+**[Items](properties-core.md)** – The source describing the files that can be downloaded.
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
@@ -33,7 +33,7 @@ An **Attachments** control lets you open files stored on a data source.
 
 **OnRemove** – How the app responds when the user deletes an existing attachment.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user clicks on an attachment.
+**[OnSelect](properties-core.md)** – How the app responds when the user clicks on an attachment.
 
 ## Additional properties
 **AddAttachmentText** – The label text for the button used to add a new attachment.
@@ -44,13 +44,13 @@ An **Attachments** control lets you open files stored on a data source.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **NoAttachmentsText** – Instructional text shown to the user when there are no attachments to show.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control is visible or hidden.
+**[Visible](properties-core.md)** – Whether a control is visible or hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 

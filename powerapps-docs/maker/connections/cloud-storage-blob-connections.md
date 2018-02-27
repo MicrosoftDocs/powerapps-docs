@@ -55,7 +55,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 
 ## Using the Excel data in your app
 1. On the **Insert** tab, select **Gallery**, and then select a **With text** gallery control.
-2. Set the **[Items](../../controls/properties-core.md)** property of the gallery to your Excel table. For example, if your Excel table is named **Table1**, then set it to Table1:  
+2. Set the **[Items](../controls/properties-core.md)** property of the gallery to your Excel table. For example, if your Excel table is named **Table1**, then set it to Table1:  
    
     ![Items property](./media/cloud-storage-blob-connections/itemsproperty.png)  
    

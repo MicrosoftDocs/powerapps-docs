@@ -33,7 +33,7 @@ You can customize the controls of a predefined card by resizing it, moving it, h
 
 Predefined cards are *locked* by default. In a locked card, you can modify only certain properties of the card or the controls within the card, and you can't delete a locked card. You can show the card lock and unlock it on the **View** tab of the **Advanced** view. If a property is locked and can't be modified, it appears with a lock icon next to its name. Unlocking a card is an advanced activity and should be done with care, because automatic formula generation will no longer occur for the card, and you can't relock a card.
 
-Within the form's container, the **ThisItem** record is available and contains all the fields of the record.  For example, the card's **[Default](../../controls/properties-core.md)** property is often set to **ThisItem**.*FieldName*.
+Within the form's container, the **ThisItem** record is available and contains all the fields of the record.  For example, the card's **[Default](properties-core.md)** property is often set to **ThisItem**.*FieldName*.
 
 You can use the **Parent** reference to configure a control to reference the properties of a card.  For example, a control should use **Parent.Default** to read the initial state of the field from the data source. By using **Parent** instead of directly accessing the information that you want, the card is better encapsulated, and you can change it to a different field without breaking internal formulas.
 
@@ -45,9 +45,9 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 * Specify the name as a single static string that's enclosed in double quotation marks (for example, **"Name"**), not a formula.
 * Unbind a card by setting its **DataField** property *blank*. The **Valid** and **Update** properties are ignored for unbound cards.
 
-**[Default](../../controls/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-* For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **[Default](../../controls/properties-core.md)** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
+* For each control in a card, set this property to **Parent.Default** to refer to the default value of the field according to the data source. For example, set a slider's **[Default](properties-core.md)** property to **Parent.Default** to ensure that the user starts with a generic value for that slider.
 
 **DisplayMode** – Values can be **Edit, View,** or **Disabled**. Configures whether the control inside the card allows user input (**Edit**), only displays data (**View**) or is disabled (**Disabled**).  
 
@@ -90,7 +90,7 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 
 **Valid** – Whether a **Card** or **[Edit form](control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). For a **[Card](control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
 

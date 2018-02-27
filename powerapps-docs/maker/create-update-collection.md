@@ -36,7 +36,7 @@ The following steps show you how to create a collection within your app using th
    ![][1]  
 3. In the top left corner, select **Text1**, and rename the control to **Destination**:  
    ![][2]  
-4. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **[OnSelect](../controls/properties-core.md)** property is listed. Set it to the following function:  
+4. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **[OnSelect](controls/properties-core.md)** property is listed. Set it to the following function:  
    
     ```Collect(Destinations, Destination!Text)```
    
@@ -63,7 +63,7 @@ Now, let's bind the Destinations collection to a listbox:
 1. Go back to your designer.
 2. On the **Insert** tab, select **Controls**, and then select **ListBox**:  
    ![][22]  
-3. Move the listbox so you can easily see it. Set its **[Items](../controls/properties-core.md)** property to the following expression:  
+3. Move the listbox so you can easily see it. Set its **[Items](controls/properties-core.md)** property to the following expression:  
    ```Destinations!Value```  <br/>
    
     When you do this, the listbox is automatically populated with the items you previously entered in the Destinations collection:  
@@ -84,7 +84,7 @@ The following steps show you how to create a collection within your app using th
    
     > [!NOTE]
 > You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
-6. On the **Insert** tab, select **Button**. Set its **[OnSelect](../controls/properties-core.md)** property to the following function:  
+6. On the **Insert** tab, select **Button**. Set its **[OnSelect](controls/properties-core.md)** property to the following function:  
    ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
    
     It should look like the following:  
@@ -94,7 +94,7 @@ The following steps show you how to create a collection within your app using th
 > You can use this same function to add additional columns to this collection. For example, you can add another text-input control for Country to add a Countries column:
    
     `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
-7. Rename the button control **AddCityStateButton**, and set its **[Text](../controls/properties-core.md)** property to **Add City and State**:  
+7. Rename the button control **AddCityStateButton**, and set its **[Text](controls/properties-core.md)** property to **Add City and State**:  
    ![][12]  
 
 In these steps, you added a **Cities** column and a **States** column to the **Destinations** collection. The button control adds these new text items to your collection. Now, see what you created:
@@ -127,13 +127,13 @@ There are a few sections in this walk-through. When complete, you'll know how to
 1. Go back to your designer.
 2. On the **Insert** tab, select **Gallery**, scroll down to **Custom Galleries**, and then select **Portrait**:    
    ![][16]  
-3. Rename the gallery to **PriceGallery** and set the **[Items](../controls/properties-core.md)** property to **PriceList**:  
+3. Rename the gallery to **PriceGallery** and set the **[Items](controls/properties-core.md)** property to **PriceList**:  
    ![][18]  
 4. Move the PriceList gallery below the **Import Data** control. Select the gallery borders and use click-and-drag to resize the gallery so three squares are shown.
 5. In the gallery, select the first square, and add three labels (**Insert** tab > **Label**).
 6. Resize and arrange the labels in a row near the top of the first square. Your gallery looks similar to the following:  
    ![][19]
-7. Set the **[Text](../controls/properties-core.md)** property of each label to the following expression:  
+7. Set the **[Text](controls/properties-core.md)** property of each label to the following expression:  
    
    | Label | Set Text property to |
    | --- | --- |
@@ -147,9 +147,9 @@ There are a few sections in this walk-through. When complete, you'll know how to
 
 ### Add the quantity slider and update the collection
 1. On the **Insert** menu, select **Controls**, and select **Slider**. Rename the slider to **OrderQty**, and move it under the gallery.
-2. Add a button, set its **[Text](../controls/properties-core.md)** property to **Add**, and move it under the **OrderQty** slider. Your app looks similar to the following:  
+2. Add a button, set its **[Text](controls/properties-core.md)** property to **Add**, and move it under the **OrderQty** slider. Your app looks similar to the following:  
    ![][20]
-3. Set the **[OnSelect](../controls/properties-core.md)** property of the **Add** button to the following expression:  
+3. Set the **[OnSelect](controls/properties-core.md)** property of the **Add** button to the following expression:  
    
     ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
    
@@ -173,9 +173,9 @@ Now, see what you created:
    ![][21]
 
 > [!TIP]
-> To remove all items from the order list, add a button, set its **[Text](../controls/properties-core.md)** property to **Clear**, and set its **[OnSelect](../controls/properties-core.md)** property to the following expression:  
+> To remove all items from the order list, add a button, set its **[Text](controls/properties-core.md)** property to **Clear**, and set its **[OnSelect](controls/properties-core.md)** property to the following expression:  
 > ```Clear(OrderList);SaveData(OrderList, "orderfile")```  
-> To remove one item at a time, show the **OrderList** collection in a gallery, and then set the **[OnSelect](../controls/properties-core.md)** property of a label in that gallery to the following expression:  
+> To remove one item at a time, show the **OrderList** collection in a gallery, and then set the **[OnSelect](controls/properties-core.md)** property of a label in that gallery to the following expression:  
 > ```Remove(OrderList, ThisItem);SaveData(OrderList, "orderfile")```
 > 
 > 

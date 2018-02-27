@@ -81,7 +81,7 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 | **Clear( IceCream )** |Removes all records from the **IceCream** collection. |![](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** data source has also been modified. |
 
 ### Step by step
-1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
+1. Add a button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
    
     This function creates a collection that's named **Products** that contains a row for each of three product names.
 2. Press F5, click the button, and then press the Esc key to return to the design workspace.

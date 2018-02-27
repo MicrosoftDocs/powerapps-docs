@@ -38,13 +38,13 @@ If you add this control, the user can update a data source with one or more soun
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -60,7 +60,7 @@ If you add this control, the user can update a data source with one or more soun
 
 **[ImagePosition](../../controls/properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OnStart** – How the app responds when the user starts to record with a microphone control.
 
@@ -70,11 +70,11 @@ If you add this control, the user can update a data source with one or more soun
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -93,12 +93,12 @@ If you add this control, the user can update a data source with one or more soun
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
    
     Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-2. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](../../controls/properties-core.md)** property for the **Custom gallery** control to **MySounds**.
+2. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.
 3. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
 4. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.
 5. In the **Custom gallery** control, click or tap the play button in the **[Audio](control-audio-video.md)** control to play back your recording.
 6. Add as many recordings as you want, and then return to the default workspace by pressing Esc.
-7. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](../../controls/properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
+7. (optional) In the template for the **Custom gallery** control, add a **[Button](control-button.md)** control, set its **[OnSelect](properties-core.md)** property to **Remove(MySounds, ThisItem)**, press F5, and then remove a recording by clicking or tapping the corresponding **Button** control.
 
 Use the **[SaveData](../../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../../functions/function-patch.md)** function to update a data source.
 

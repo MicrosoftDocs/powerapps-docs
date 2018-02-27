@@ -38,11 +38,11 @@ If you add this control, the user can update a data source with one or more phot
 
 **Contrast** – How easily the user can distinguish between similar colors in an image.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OnStream** – How the app responds when the **Stream** property is updated.
 
@@ -52,9 +52,9 @@ If you add this control, the user can update a data source with one or more phot
 
 **StreamRate** – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -69,7 +69,7 @@ If you add this control, the user can update a data source with one or more phot
 
 ## Example
 ### Add photos to an Image gallery control
-1. Add a **Camera** control, name it **MyCamera**, and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
+1. Add a **Camera** control, name it **MyCamera**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(MyPix, MyCamera.Photo)**
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
@@ -77,7 +77,7 @@ If you add this control, the user can update a data source with one or more phot
     Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, and then take a photo by clicking or tapping **MyCamera**.
 3. Add an **[Image gallery](control-gallery.md)** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
-4. Set the **[Items](../../controls/properties-core.md)** property of the **Image gallery** control to this expression:<br>**MyPix.Url**.
+4. Set the **[Items](properties-core.md)** property of the **Image gallery** control to this expression:<br>**MyPix.Url**.
 5. Set the **[Image](../../controls/properties-visual.md)** property of the **Image** control in the gallery to this expression:<br>
    **ThisItem.Url**
    

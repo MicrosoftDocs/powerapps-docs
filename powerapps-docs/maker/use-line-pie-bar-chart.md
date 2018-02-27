@@ -42,7 +42,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
     ![][11]  
 
-2. Set the control's **[OnSelect](../controls/properties-core.md)** property to the following function:  
+2. Set the control's **[OnSelect](controls/properties-core.md)** property to the following function:  
 
    ```Collect(ProductRevenue, Import1.Data)```
 
@@ -71,7 +71,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
     ![][10]
 
-4. Set the **[Items](../controls/properties-core.md)** property of the pie chart to this expression: `ProductRevenue.Revenue2014`
+4. Set the **[Items](controls/properties-core.md)** property of the pie chart to this expression: `ProductRevenue.Revenue2014`
 
     ![][2]  
 
@@ -86,7 +86,7 @@ Now, let's use this ProductRevenue collection in a bar chart:
 
 2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
 
-3. Select the middle of the column chart. Set the **[Items](../controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
+3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
 
     ![][12]  
 

@@ -25,11 +25,11 @@ A control that the user can select or clear to set its value to **true** or **fa
 The user can specify a Boolean value by using this familiar control, which has been used in GUIs for decades.
 
 ## Key properties
-**[Default](../../controls/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-**[Text](../../controls/properties-core.md)** – Text that appears on a control or that the user types into a control.
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
-**[Value](../../controls/properties-core.md)** – The value of an input control.
+**[Value](properties-core.md)** – The value of an input control.
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -48,13 +48,13 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -74,7 +74,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
 
@@ -92,19 +92,19 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 
 **[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
 
 **[VerticalAlign](../../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -116,15 +116,15 @@ The user can specify a Boolean value by using this familiar control, which has b
 [**If**( *Condition*, *Result* )](../../functions/function-if.md)
 
 ## Example
-1. Add a **Check box** control, name it **chkReserve**, and set its **[Text](../../controls/properties-core.md)** property to show **Reserve now**.
+1. Add a **Check box** control, name it **chkReserve**, and set its **[Text](properties-core.md)** property to show **Reserve now**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Date picker](control-date-picker.md)** control, and set its **[Visible](../../controls/properties-core.md)** property to this formula:
+2. Add a **[Date picker](control-date-picker.md)** control, and set its **[Visible](properties-core.md)** property to this formula:
    <br>**If(chkReserve.Value = true, true)**
    
     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-3. Press F5, click or tap **chkReserve** to set its **[Value](../../controls/properties-core.md)** property to **true**, and then click or tap **chkReserve** again to set its **[Value](../../controls/properties-core.md)** property to **false**.
+3. Press F5, click or tap **chkReserve** to set its **[Value](properties-core.md)** property to **true**, and then click or tap **chkReserve** again to set its **[Value](properties-core.md)** property to **false**.
    
-    The **[Date Picker](control-date-picker.md)** control appears when the **[Value](../../controls/properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
+    The **[Date Picker](control-date-picker.md)** control appears when the **[Value](properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
 4. To return to the default workspace, press Esc.
 

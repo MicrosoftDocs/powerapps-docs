@@ -42,13 +42,13 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control. Default behavior takes the user to the Power BI report associated with the tile.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control. Default behavior takes the user to the Power BI report associated with the tile.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 

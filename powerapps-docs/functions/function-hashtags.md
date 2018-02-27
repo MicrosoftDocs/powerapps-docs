@@ -41,7 +41,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 1. Add a **[Text input](../maker/controls/control-text-input.md)** control, name it **Tweet**, and type this sentence into it:
    
     **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#@")**
-2. Add a vertical custom gallery, and set its **[Items](../controls/properties-core.md)** property to this function:
+2. Add a vertical custom gallery, and set its **[Items](../maker/controls/properties-core.md)** property to this function:
    
     **HashTags(Tweet.Text)**
 3. Add a **[Label](../maker/controls/control-text-box.md)** control to the gallery template.

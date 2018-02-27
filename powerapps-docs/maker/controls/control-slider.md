@@ -25,13 +25,13 @@ A control with which the user can specify a value by dragging a handle.
 The user can indicate a value, between a minimum and a maximum value that you specify, by dragging the handle of a slider left-right or up-down, depending on the direction that you choose.
 
 ## Key properties
-**[Default](../../controls/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **Max** – The maximum value to which the user can set a slider or a rating.
 
 **Min** – The minimum value to which the user can set a slider.
 
-**[Value](../../controls/properties-core.md)** – The value of an input control.
+**[Value](properties-core.md)** – The value of an input control.
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -42,9 +42,9 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **HandleActiveFill** – The color of the handle for a slider as the user changes its value.
 
@@ -58,9 +58,9 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
-**[OnChange](../../controls/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
@@ -70,19 +70,19 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **ReadOnly** – Whether a user can change the value of a slider or rating control.
 
-**[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
 **ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -94,7 +94,7 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 [**Sum**( *Value1*, *Value2* )](../../functions/function-aggregates.md)
 
 ## Example
-1. Add a button, and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:
+1. Add a button, and set its **[OnSelect](properties-core.md)** property to this formula:
    <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
@@ -103,9 +103,9 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 2. Press F5, select the button, and then press Esc.
 3. Add a slider, move it below the button, and name the slider **MinPopulation**.
 4. Set the slider's **Max** property to **5000000** and its **Min** property to **1000000**.
-5. Add a text gallery in vertical/portrait orientation, move it below the slider, and set the gallery's **[Items](../../controls/properties-core.md)** property to this formula:<br>
+5. Add a text gallery in vertical/portrait orientation, move it below the slider, and set the gallery's **[Items](properties-core.md)** property to this formula:<br>
    **Filter(CityPopulations, Population > MinPopulation)**
-6. In the first item of the gallery, set the **[Text](../../controls/properties-core.md)** property of the top label to **ThisItem.City**, and set the **[Text](../../controls/properties-core.md)** property of the bottom label to this formula:<br> **Text(ThisItem.Population, "##,###")**
+6. In the first item of the gallery, set the **[Text](properties-core.md)** property of the top label to **ThisItem.City**, and set the **[Text](properties-core.md)** property of the bottom label to this formula:<br> **Text(ThisItem.Population, "##,###")**
 7. Press F5, and then adjust **MinPopulation** to show only those cities that have a population that's greater than the value that you specify.
 8. To return to the default workspace, press Esc.
 

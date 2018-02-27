@@ -94,13 +94,13 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
     ![Final Gallery](./media/add-gallery/final-gallery.png)
 
 ## Filter the Gallery control
-The **[Items](../controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so that the **Gallery** control shows only those items for which the product name contains the text in **TextSearchBox1**.
+The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so that the **Gallery** control shows only those items for which the product name contains the text in **TextSearchBox1**.
 
 ![Text search box](./media/add-gallery/text-search-box.png)
 
 1. Select the **Gallery** control by clicking or tapping near the bottom of that control.
 
-2. On the **Advanced** tab, set the **[Items](../controls/properties-core.md)** property of the **Gallery** control to this formula:
+2. On the **Advanced** tab, set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
     **If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
@@ -111,11 +111,11 @@ The **[Items](../controls/properties-core.md)** property of a **Gallery** contro
     The **Gallery** control shows only those items that meet the filter criterion.
 
 ## Sort the Gallery control
-The **[Items](../controls/properties-core.md)** property of a **Gallery** control determines the order in which it shows items. In this procedure, you configure that property so that the **Gallery** control shows the order of items as set by **ImageSortUpDown1**.
+The **[Items](controls/properties-core.md)** property of a **Gallery** control determines the order in which it shows items. In this procedure, you configure that property so that the **Gallery** control shows the order of items as set by **ImageSortUpDown1**.
 
 ![Image for sorting](./media/add-gallery/image-sorting.png)
 
-1. Set the **[Items](../controls/properties-core.md)** property of the **Gallery** control to this formula:
+1. Set the **[Items](controls/properties-core.md)** property of the **Gallery** control to this formula:
 
     **Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 

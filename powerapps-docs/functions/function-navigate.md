@@ -22,7 +22,7 @@ ms.author: gregli
 Changes which screen is displayed.
 
 ## Overview
-Most apps contain multiple screens.  Use the **Back** and **Navigate** function to change which screen is displayed. For example, set the **[OnSelect](../controls/properties-core.md)** property of a button to a formula that includes a **Navigate** function if you want to show a different screen when a user selects that button. In that formula, you can specify a visual transition, such as **Fade**, to control how one screen changes to another.  
+Most apps contain multiple screens.  Use the **Back** and **Navigate** function to change which screen is displayed. For example, set the **[OnSelect](../maker/controls/properties-core.md)** property of a button to a formula that includes a **Navigate** function if you want to show a different screen when a user selects that button. In that formula, you can specify a visual transition, such as **Fade**, to control how one screen changes to another.  
 
 **Back** and **Navigate** change only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on another screen. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and see how it affects what happens in the new screen.  The user can then navigate back to the original screen and see that the slider has retained its value.
 
@@ -70,10 +70,10 @@ You can use these functions only within a [behavior formula](../maker/working-wi
 | **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Displays the **Details** screen with a **Fade** transition. Updates the value of the **ID** context variable to **12**, and updates the value of the **Shade** context variable to **Color.Red**. |The current screen fades away to show the **Details** screen. The context variable **ID** on the **Details** screen is set to **12**, and the context variable **Shade** is set to **Color.Red**. If you set the **Fill** property of a control on the **Details** screen to **Shade**, that control would display as red. |
 
 ### Step-by-step
-1. Name the default screen **DefaultScreen**, add a label to it, and set the **[Text](../controls/properties-core.md)** property of that label so that it shows **Default**.
+1. Name the default screen **DefaultScreen**, add a label to it, and set the **[Text](../maker/controls/properties-core.md)** property of that label so that it shows **Default**.
 2. Add a screen, and name it **AddlScreen**.
-3. Add a label to **AddlScreen**, and set the **[Text](../controls/properties-core.md)** property of the label so that it shows **Addl**.
-4. Add a button to **AddlScreen**, and set its **[OnSelect](../controls/properties-core.md)** property to this function:<br>**Navigate(DefaultScreen, ScreenTransition.Fade)**
+3. Add a label to **AddlScreen**, and set the **[Text](../maker/controls/properties-core.md)** property of the label so that it shows **Addl**.
+4. Add a button to **AddlScreen**, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this function:<br>**Navigate(DefaultScreen, ScreenTransition.Fade)**
 5. From the **AddlScreen**, press F5, and then select the button.<br>**DefaultScreen** appears.
 
 [Another example](../maker/add-screen-context-variables.md)

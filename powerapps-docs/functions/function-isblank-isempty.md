@@ -72,7 +72,7 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 > At this time, the following example only works for local collections.  We know that many data sources support *blank* (NULL) values and We are working to lift this limitation.
 
 1. Create an app from scratch, and add a **Button** control.
-2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
+2. Set the button's **[OnSelect](../maker/controls/properties-core.md)** property to this formula:
    
     **ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )**
 3. Preview your app, click or tap the button that you added, and then close Preview.  
@@ -106,14 +106,14 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 ### IsBlank
 1. Create an app from scratch, add a text-input control, and name it **FirstName**.
-2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
+2. Add a label, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
    
     **If( IsBlank( FirstName.Text ), "First Name is a required field." )**
    
-    By default, the **[Text](../controls/properties-core.md)** property of a text-input control is set to **"Text input"**. Because the property contains a value, it isn't blank, and the label doesn't display any message.
+    By default, the **[Text](../maker/controls/properties-core.md)** property of a text-input control is set to **"Text input"**. Because the property contains a value, it isn't blank, and the label doesn't display any message.
 3. Remove all the characters from the text-input control, including any spaces.
    
-    Because the **[Text](../controls/properties-core.md)** property no longer contains any characters, it's *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
+    Because the **[Text](../maker/controls/properties-core.md)** property no longer contains any characters, it's *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 
 For information about how to perform validation by using other tools, see the **[Validate](function-validate.md)** function and [working with data sources](../maker/working-with-data-sources.md).  
 
@@ -130,7 +130,7 @@ Other examples:
 
 ### IsEmpty
 1. Create an app from scratch, and add a **Button** control.
-2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
+2. Set the button's **[OnSelect](../maker/controls/properties-core.md)** property to this formula:
    
     **Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
 3. Preview your app, click or tap the button that you added, and then close Preview.  
@@ -140,7 +140,7 @@ Other examples:
     ![](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
    
     This collection has two records and isn't empty. **IsEmpty( IceCream )** returns **false**, and **CountRows( IceCream )** returns **2**.
-4. Add a second button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+4. Add a second button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:
    
     **Clear( IceCream )**
 5. Preview your app, click or tap the second button, and then close Preview.  

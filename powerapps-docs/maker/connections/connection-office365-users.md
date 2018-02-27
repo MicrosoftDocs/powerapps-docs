@@ -40,7 +40,7 @@ The Office 365 Users connection has been created and added to your app. Now, it'
 ## Use the connection in your app
 ### Show information about the current user
 1. On the **Insert** menu, select **Label**
-2. In the function bar, set its **[Text](../../controls/properties-core.md)** property to any of the following formulas:
+2. In the function bar, set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
    
     `Office365Users.MyProfile().Department`  
     `Office365Users.MyProfile().DisplayName`  
@@ -61,7 +61,7 @@ The label shows the information that you entered about the current user.
    
     ![Rename control](./media/connection-office365-users/renameinfoabout.png)
 2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*.
-3. Add a **Label** (**Insert** menu), and set its **[Text](../../controls/properties-core.md)** property to any of the following formulas:
+3. Add a **Label** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
    
    * To show information about another user:  
      
@@ -103,7 +103,7 @@ If you create a contact and select that contact in the browse screen of the app,
 ### Show the direct reports of another user
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **InfoAbout**.
 2. In **InfoAbout**, enter the email address of a user in your organization. For example, enter *yourManagersName*@*yourCompany.com*
-3. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../../controls/properties-core.md)** property to the following formula:
+3. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
    
     `Office365Users.DirectReports(InfoAbout.Text)`
    
@@ -117,7 +117,7 @@ If you create a contact and select that contact in the browse screen of the app,
 
 ### Search for users
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
-2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../../controls/properties-core.md)** property to the following formula:
+2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
    
     `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
    

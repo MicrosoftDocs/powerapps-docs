@@ -80,7 +80,7 @@ In this procedure, you'll add and configure a **Label** control, but you can app
 
     ![A label with custom text](./media/add-configure-controls/change-text-directly.png)
 
-     You can also modify this text by setting the **[Text](../controls/properties-core.md)** property of this control, as this topic describes later.
+     You can also modify this text by setting the **[Text](controls/properties-core.md)** property of this control, as this topic describes later.
 
 ## Configure a control from the toolbar
 By configuring a control from the toolbar, you can specify a wider variety of options than you can by configuring a control directly.
@@ -155,17 +155,17 @@ Each change that you made earlier in this topic updated the value of a [property
 
 * When you resized the control, you changed its **[Width](../controls/properties-size-location.md)** property.
 * When you moved the control, you changed its **[X](../controls/properties-size-location.md)** and **[Y](../controls/properties-size-location.md)** properties.
-* When you changed the text that the control displays, you changed its **[Text](../controls/properties-core.md)** property.
+* When you changed the text that the control displays, you changed its **[Text](controls/properties-core.md)** property.
 
 Instead of configuring a control directly, in the **Properties** tab, or from the toolbar, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
 
-1. With the remaining **Label** control selected, click or tap **[Text](../controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
+1. With the remaining **Label** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
 
     ![A literal string in a label](./media/add-configure-controls/text-literal.png)
 
     When you surround a string of text with quotation marks, you specify that it should be treated exactly as you typed it. As an alternative, you can set the value of a property to a formula.
 
-2. With the **Label** control selected, click or tap **[Text](../controls/properties-core.md)** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
+2. With the **Label** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
 
     The control shows the current date.
 
@@ -185,7 +185,7 @@ In this procedure, you'll add a check box and then configure the label that you 
 
     ![Insert check box](./media/add-configure-controls/insert-check-box.png)
 
-3. Move the **Check box** control so that it appears below the **Label** control, and set the **[Text](../controls/properties-core.md)** property of the **Check box** control so that **Show text** appears.
+3. Move the **Check box** control so that it appears below the **Label** control, and set the **[Text](controls/properties-core.md)** property of the **Check box** control so that **Show text** appears.
 
     ![Configure check box](./media/add-configure-controls/configure-check-box.png)
 

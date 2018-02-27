@@ -50,10 +50,10 @@ This topic shows you how to create the Microsoft Translator connection, use the 
    
     ![Rename](./media/connection-microsoft-translator/renametosource.png)
 2. Add a **Drop down** list (**Insert** menu > **Controls**), rename it to **TargetLang**, and move it below **Source**.
-3. Set the **[Items](../../controls/properties-core.md)** property of **TargetLang** to the following formula:  
+3. Set the **[Items](../controls/properties-core.md)** property of **TargetLang** to the following formula:  
    
     `MicrosoftTranslator.Languages()`
-4. Add a label, move it below **TargetLang**, and set its **[Text](../../controls/properties-core.md)** property to the following formula:  
+4. Add a label, move it below **TargetLang**, and set its **[Text](../controls/properties-core.md)** property to the following formula:  
    
     `MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
 5. Type some text into **Source**, and select a language in **TargetLang**. The label shows the text that you entered in the language you chose:  
@@ -63,7 +63,7 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 ### Speak translated text
 If you haven't already, follow the steps in the previous section to translate some text. These next steps use the same controls.
 
-1. Set the **[Items](../../controls/properties-core.md)** property of the **TargetLang** drop-down list to the following formula:  
+1. Set the **[Items](../controls/properties-core.md)** property of the **TargetLang** drop-down list to the following formula:  
    
     `MicrosoftTranslator.SpeechLanguages()`
 2. Rename the second label (not the **Source** box) to **Target**.
@@ -78,7 +78,7 @@ If you haven't already, follow the steps in the previous section to translate so
 ### Detect the source language
 These next steps use the same **Source** text input and **Target** text controls. You can create new controls if you prefer, just update the names in the formula.
 
-1. Select the **Target** text control, and set the **[Text](../../controls/properties-core.md)** property to the following formula:  
+1. Select the **Target** text control, and set the **[Text](../controls/properties-core.md)** property to the following formula:  
    
     `MicrosoftTranslator.Detect(Source.Text).Name`
 2. Type some text into **Source**.

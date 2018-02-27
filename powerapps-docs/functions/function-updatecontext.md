@@ -77,12 +77,12 @@ Every context variable is scoped to a screen. If you want to define a context va
 
 ### Step-by-step example
 1. Name the default screen **Source**, add another screen, and name it **Target**.
-2. On the **Source** screen, add two buttons, and set their **[Text](../controls/properties-core.md)** properties so that one says **English** and the other says **Spanish**.
-3. Set the **[OnSelect](../controls/properties-core.md)** property of the **English** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"English"})**
-4. Set the **[OnSelect](../controls/properties-core.md)** property of the **Spanish** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Spanish"})**
-5. On the **Target** screen, add a label, and set its **[Text](../controls/properties-core.md)** property to this expression:<br>**If(Language="English", "Hello!", "Hola!")**
+2. On the **Source** screen, add two buttons, and set their **[Text](../maker/controls/properties-core.md)** properties so that one says **English** and the other says **Spanish**.
+3. Set the **[OnSelect](../maker/controls/properties-core.md)** property of the **English** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"English"})**
+4. Set the **[OnSelect](../maker/controls/properties-core.md)** property of the **Spanish** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Spanish"})**
+5. On the **Target** screen, add a label, and set its **[Text](../maker/controls/properties-core.md)** property to this expression:<br>**If(Language="English", "Hello!", "Hola!")**
 6. On the **Target** screen, select **Shapes** on the **Insert** tab, and then select the Back arrow.
-7. Set the Back arrow's **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**Navigate(Source, ScreenTransition.Fade)**
+7. Set the Back arrow's **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>**Navigate(Source, ScreenTransition.Fade)**
 8. From the **Source** screen, press F5, and then select the button for either language.
    
     On the **Target** screen, the label appears in the language that corresponds to the button that you selected.

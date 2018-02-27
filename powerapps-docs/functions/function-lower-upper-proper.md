@@ -66,6 +66,6 @@ Each formula returns a single-column table that contains the converted strings.
 
 ### Step-by-step example
 1. Add a **[Text input](../maker/controls/control-text-input.md)** control, and name it **Source**.
-2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this function:<br>**Proper(Source.Text)**
+2. Add a label, and set its **[Text](../maker/controls/properties-core.md)** property to this function:<br>**Proper(Source.Text)**
 3. Press F5, and then type **WE ARE THE BEST!** into the **Source** box.<br>The label shows **We Are The Best!**
 

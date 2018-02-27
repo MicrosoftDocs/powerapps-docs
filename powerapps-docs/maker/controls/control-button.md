@@ -22,12 +22,12 @@ ms.author: fikaradz
 A control that the user can click or tap to interact with the app.
 
 ## Description
-Configure the **[OnSelect](../../controls/properties-core.md)** property of a **Button** control to run one or more formulas when the user clicks or taps the control.
+Configure the **[OnSelect](properties-core.md)** property of a **Button** control to run one or more formulas when the user clicks or taps the control.
 
 ## Key properties
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
-**[Text](../../controls/properties-core.md)** – Text that appears on a control or that the user types into a control.
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 ## Additional properties
 **[Align](../../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.
@@ -44,13 +44,13 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -98,13 +98,13 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
 
 **[VerticalAlign](../../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -120,11 +120,11 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 1. Add a **[Text input](control-text-input.md)** control, and name it **Source**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **Button** control, set its **[Text](../../controls/properties-core.md)** property to "Add", and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
+2. Add a **Button** control, set its **[Text](properties-core.md)** property to "Add", and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **UpdateContext({Total:Total + Value(Source.Text)})**
    
     Want more information about the **[UpdateContext](../../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
-3. Add a **[Label](control-text-box.md)** control, set its **[Text](../../controls/properties-core.md)** property to **Total**, and then press **F5**.
+3. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to **Total**, and then press **F5**.
 4. Clear the default text from **Source**, type a number in it, and then click or tap **Add**.
    
     The **[Label](control-text-box.md)** control shows the number that you typed.
@@ -138,19 +138,19 @@ Configure the **[OnSelect](../../controls/properties-core.md)** property of a **
 Add a formula that clears the **Text input** control between entries.
 
 1. Set the **[HintText](control-text-input.md)** property of **Source** to "Enter a number".
-2. Set the **[OnSelect](../../controls/properties-core.md)** property of **Add** to this formula:
+2. Set the **[OnSelect](properties-core.md)** property of **Add** to this formula:
    
     **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
    
     > [!NOTE]
 > Separate multiple formulas with a semi-colon “**;**”.
-3. Set the **[Default](../../controls/properties-core.md)** property of **Source** to **ClearInput**.
+3. Set the **[Default](properties-core.md)** property of **Source** to **ClearInput**.
 4. Press **F5**, and then test the app by adding several numbers together.
 
 ### Add another button to reset the total
 Add a second button to clear the total between calculations.
 
-1. Add another **Button** control, set its **[Text](../../controls/properties-core.md)** property to "Clear", and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:
+1. Add another **Button** control, set its **[Text](properties-core.md)** property to "Clear", and set its **[OnSelect](properties-core.md)** property to this formula:
    
     **UpdateContext({Total:0})**
 2. Press **F5**, add several numbers together, and then click or tap **Clear** to reset the total.
@@ -160,7 +160,7 @@ Add a second button to clear the total between calculations.
 By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](../../controls/properties-size-location.md)**, **[Width](../../controls/properties-size-location.md)**, and **[Radius](../../controls/properties-size-location.md)** properties.
 
 > [!NOTE]
-> [Icons and Shapes](control-shapes-icons.md) provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](../../controls/properties-core.md)** property.
+> [Icons and Shapes](control-shapes-icons.md) provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](properties-core.md)** property.
 
 1. Add a **Button** control, and set its **[Height](../../controls/properties-size-location.md)** and **[Width](../../controls/properties-size-location.md)** properties to **300** to make a large square button.
 2. Modify the **[RadiusTopLeft](../../controls/properties-size-location.md)**, **[RadiusTopRight](../../controls/properties-size-location.md)**, **[RadiusBottomLeft](../../controls/properties-size-location.md)**, and **[RadiusBottomRight](../../controls/properties-size-location.md)** properties to adjust the amount of curvature on each corner. Here are some examples of different shapes, each one starting from a 300 x 300 square button:

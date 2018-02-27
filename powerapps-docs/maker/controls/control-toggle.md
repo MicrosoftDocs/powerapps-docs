@@ -25,9 +25,9 @@ A control that the user can turn on or off by moving its handle.
 A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 ## Key properties
-**[Default](../../controls/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-**[Value](../../controls/properties-core.md)** – The value of an input control.
+**[Value](properties-core.md)** – The value of an input control.
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -38,9 +38,9 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **FalseFill** – The toggle fill color when the toggle is off.
 
@@ -54,11 +54,11 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[OnChange](../../controls/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
 **OnCheck** – How an app responds when the value of a checkbox or a toggle changes to **true**.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OnUncheck** – How an app responds when the value of a checkbox or a toggle changes to **false**.
 
@@ -68,7 +68,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **RailHoverFill** – When you hover on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **false** or the color of the line to the right of the handle in a slider control.
 
-**[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
 **ShowLabel** – Whether a text label is shown beside the toggle control.
 
@@ -76,7 +76,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **TextPosition** – Whether the label is to the left or the right of the toggle control.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **TrueFill** – Toggle fill color when the toggle is on.
 
@@ -88,7 +88,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **ValueHoverFill** – When you keep the mouse pointer on a toggle control or a slider, the background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -103,7 +103,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 1. Add a toggle, and name it **MemberDiscount**.
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a label, and set its **[Text](../../controls/properties-core.md)** property to this formula:
+2. Add a label, and set its **[Text](properties-core.md)** property to this formula:
    <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
 
     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?

@@ -44,7 +44,7 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 
 **ClosedCaptionsUrl** – Video control only.  URL of closed captions file in WebVTT format.  Both video and captions URLs must be HTTPS. Server hosting both video and captions file needs to be CORS enabled.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -62,7 +62,7 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 
 **Paused** – *True* if a media playback control is currently paused, *false* otherwise.
 
-**[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
 **Start** – Whether an audio or video clip plays.
 
@@ -70,9 +70,9 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 
 **Time** – A media control's current position.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 

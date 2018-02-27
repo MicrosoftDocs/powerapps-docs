@@ -32,7 +32,7 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 
 * The **Data** property is available for an **Export** control but not an **Import** control.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 ## Additional properties
 **[Align](../../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.
@@ -45,13 +45,13 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -89,13 +89,13 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 
 **[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[Text](../../controls/properties-core.md)** – Text that appears on a control or that the user types into a control.
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 **[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
 
 **[VerticalAlign](../../controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -104,7 +104,7 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 **[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
-1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:
    <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
@@ -114,7 +114,7 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 3. Add an **Export** control, and set its **Data** property to **Products**.
 4. Press F5, click or tap the **Export** control, and then specify the name of the file into which you want to export the data.
 5. Click or tap **Save**, then press Esc to return to the default workspace.
-6. In a new or existing app, add an **Import** control, name it **MyData**, and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
+6. In a new or existing app, add an **Import** control, name it **MyData**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(ImportedProducts, MyData.Data)**
 7. Press F5, click or tap **MyData**, click or tap the file that you exported, and then click or tap **Open**.
 8. Press Esc, click or tap **Collections** on the **File** menu, and confirm that the current app has the data that you exported.

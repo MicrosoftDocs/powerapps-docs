@@ -25,9 +25,9 @@ A list in which the user can select one or multiple items.
 A **List Box** control always shows all available choices (unlike a **[Drop down](control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
 
 ## Key properties
-**[Default](../../controls/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-**[Items](../../controls/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
+**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 [!INCLUDE [long-items](../../includes/long-items.md)]
 
@@ -42,13 +42,13 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -70,9 +70,9 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[LineHeight](../../controls/properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-**[OnChange](../../controls/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **[PaddingBottom](../../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -88,7 +88,7 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
 
@@ -102,11 +102,11 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -118,21 +118,21 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 [**Distinct**( *DataSource*, *ColumnName* )](../../functions/function-distinct.md)
 
 ## Example
-1. Add a **List box** control, name it **CategoryList**, and set its **[Items](../../controls/properties-core.md)** property to this formula:<br>
+1. Add a **List box** control, name it **CategoryList**, and set its **[Items](properties-core.md)** property to this formula:<br>
    **["Carpet","Hardwood","Tile"]**
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
    
     ![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
 2. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
-3. Set the **[Items](../../controls/properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+3. Set the **[Items](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
    
    * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
    * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
    * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
      
      ![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
-4. Set the **[Visible](../../controls/properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+4. Set the **[Visible](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
    
    * CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
    * HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**

@@ -51,7 +51,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * No data appears if you use the **FirstN** function in the **Items** property.
 
 ## Key properties
-* [**Items**](../../controls/properties-core.md) – The source of data that appears in the **Data table** control.
+* [**Items**](properties-core.md) – The source of data that appears in the **Data table** control.
 * **Selected** – The selected row in the **Data table** control.
 
 ## Other properties
@@ -74,7 +74,7 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * **SelectedColor** – The color of the text in the selected row.
 * **SelectedFill** – The background color of the selected row.
 * [**Size**](../../controls/properties-text.md) – The default font size for all data rows.
-* [**Visible**](../../controls/properties-core.md) – A value that determines whether the **Data table** control appears or is hidden.
+* [**Visible**](properties-core.md) – A value that determines whether the **Data table** control appears or is hidden.
 * [**Width**](../../controls/properties-size-location.md) – The distance between the **Data table** control's left and right edges.
 * [**X**](../../controls/properties-size-location.md) – The distance between the left edge of the **Data table** control and the left edge of its parent container (or the left edge of the screen if there is no parent container).
 * [**Y**](../../controls/properties-size-location.md) – The distance between the top edge of the **Data table** control and the top edge of its parent container (or the top edge of the screen if there is no parent container).

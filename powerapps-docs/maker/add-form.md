@@ -30,7 +30,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 * If you're using an existing app, [add a screen](add-screen-context-variables.md) to it.
 
 ## Add a form, and show data
-1. Add a **[Drop down](controls/control-drop-down.md)** control, name it **ChooseProduct**, and set its **[Items](../controls/properties-core.md)** property to this value:
+1. Add a **[Drop down](controls/control-drop-down.md)** control, name it **ChooseProduct**, and set its **[Items](controls/properties-core.md)** property to this value:
 
     **FlooringEstimates.Name**
 
@@ -87,11 +87,11 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
 2. Click or tap **Rename**, and then rename the form **EditForm**.
 
-3. Add a **[Button](controls/control-button.md)** control, and set its **[Text](../controls/properties-core.md)** property to **Save**.
+3. Add a **[Button](controls/control-button.md)** control, and set its **[Text](controls/properties-core.md)** property to **Save**.
 
     ![Add a save button](./media/add-form/save-button.png)  
 
-4. Set the **[OnSelect](../controls/properties-core.md)** property of the **Save** button to this formula:
+4. Set the **[OnSelect](controls/properties-core.md)** property of the **Save** button to this formula:
 
    **SubmitForm(EditForm)**
 

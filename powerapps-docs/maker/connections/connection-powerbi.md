@@ -33,7 +33,7 @@ This topic shows you how to use the Power BI connection in an app, and lists the
 ## Use the Power BI connection in your app
 ### List the alerts that you've set up in the Power BI service
 1. On the **Insert** menu, select **Gallery**, and add any of the **Text galleries**.
-2. To show the current user's alerts, set the [Items](../../controls/properties-core.md) property of the gallery to the following formula:
+2. To show the current user's alerts, set the [Items](../controls/properties-core.md) property of the gallery to the following formula:
    
    `PowerBI.GetAlerts()`
 
@@ -44,7 +44,7 @@ To view the status of the alert, call the CheckAlertStatus function with the ale
 
 The alert ID can be passed in either as a literal string (e.g. "1234") or as a reference to a gallery section populated using the GetAlerts() call (e.g. Gallery1.Selected.alertId)
 
-To proceed, add a label, and then set its [Text](../../controls/properties-core.md) property to one of these formulas:
+To proceed, add a label, and then set its [Text](../controls/properties-core.md) property to one of these formulas:
 
 * `PowerBI.CheckAlertStatus( /* alert ID that you received from GetAlert */ ).alertTitle`
 * `PowerBI.CheckAlertStatus( /* alert ID that you received from GetAlert */ ).currentTileValue`

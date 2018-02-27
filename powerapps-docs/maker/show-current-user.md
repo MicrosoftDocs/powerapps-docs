@@ -41,7 +41,7 @@ Basically, you can use this anywhere users would benefit from a form or labels t
 3. On the **Insert** tab, click or tap **Text**, and then click or tap **Label**:  
    
     ![][4]
-4. Set the **[Text](../controls/properties-core.md)** property to this formula:
+4. Set the **[Text](controls/properties-core.md)** property to this formula:
    <br>**User().FullName**
    
    ![][6]
@@ -49,7 +49,7 @@ Basically, you can use this anywhere users would benefit from a form or labels t
    When you do this, the label is automatically populated with your full name. Move the label so it's below the image control, similar to the following:
    
    ![][5]
-5. Add another label, and set its **[Text](../controls/properties-core.md)** property to this formula:
+5. Add another label, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**User().Email**  
    
     ![][8]

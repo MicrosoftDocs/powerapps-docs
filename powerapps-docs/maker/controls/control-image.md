@@ -42,11 +42,11 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **CalculateOriginalDimensions** – Enables the **OriginalHeight** and **OriginalWidth** properties.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -64,7 +64,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **ImageRotation** – How to rotate the image before displaying it.  Values can be none, clockwise (CW) 90 degrees, counter-clockwise (CCW) 90 degrees and clockwise 180 degrees.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **OriginalHeight** – Original height of an image, enabled with the **CalculateOriginalDimensions** property.
 
@@ -90,11 +90,11 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **[RadiusTopRight](../../controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **Transparency** – The degree to which controls behind an image remain visible.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -109,7 +109,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 ### Show an image from a local file
 1. On the **Content** tab, click or tap **Media**, and then click or tap **Browse**.
 2. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
-3. Add an **Image** control, and set its **[Items](../../controls/properties-core.md)** property to the name of the file that you added.
+3. Add an **Image** control, and set its **[Items](properties-core.md)** property to the name of the file that you added.
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 
@@ -122,7 +122,7 @@ If you add one or more **Image** controls to your app, you can show individual i
     If **Add data source** doesn't appear in the right-hand pane, click or tap a screen in the left navigation bar.
 3. Click or tap **Add static data to your app**, click or tap the Excel file that you downloaded, and then click or tap **Open**.
 4. Select the **Flooring Estimates** check box, and then click or tap **Connect**.
-5. Add a **Gallery** control with images, and set its **[Items](../../controls/properties-core.md)** property to **FlooringEstimates**.
+5. Add a **Gallery** control with images, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 

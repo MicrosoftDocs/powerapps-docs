@@ -27,9 +27,9 @@ A **Gallery** control can show multiple records from a data source, and each rec
 Predefined Gallery templates for showing images, text as well as a gallery with variable height items are available.
 
 ## Key properties
-**[Default](../../controls/properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.
+**[Default](properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.
 
-**[Items](../../controls/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
+**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **Selected** – The selected item.
 
@@ -42,7 +42,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -66,7 +66,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **Transition** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 

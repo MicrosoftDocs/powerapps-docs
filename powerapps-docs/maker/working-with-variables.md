@@ -38,11 +38,11 @@ Excel doesn't have variables. The value of a cell that contains a formula change
 ### PowerApps
 Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas.
 
-For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](../controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
+For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
 ![](media/working-with-variables/recalc1.png)
 
-Notice that the **TextBox1** control is selected, showing its **[Text](../controls/properties-core.md)** formula in the formula bar at the top of the screen.  Here we find the formula **TextInput1 + TextInput2**.  This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of the **TextInput1**:
+Notice that the **TextBox1** control is selected, showing its **[Text](controls/properties-core.md)** formula in the formula bar at the top of the screen.  Here we find the formula **TextInput1 + TextInput2**.  This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of the **TextInput1**:
 
 ![](media/working-with-variables/recalc2.png)
 
@@ -60,14 +60,14 @@ Now, if the result of our calculation in **TextBox1.Text** is negative, the numb
 You can use formulas for a wide variety of scenarios:
 
 * By using your device's GPS, a map control can display your current location with a formula that uses **Location.Latitude** and **Location.Longitude**.  As you move, the map will automatically track your location.
-* Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated to reflect the updated data. Furthering the example, you might set a gallery's **[Items](../controls/properties-core.md)** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
+* Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated to reflect the updated data. Furthering the example, you might set a gallery's **[Items](controls/properties-core.md)** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
 
 ### Benefits
 Using formulas to build apps has many advantages:
 
 * If you know Excel, you know PowerApps. The model and formula language are the same.
 * If you've used other programming tools, think about how much code would be required to accomplish these examples.  In Visual Basic, you'd need to write an event handler for the change event on each text-input control.  The code to perform the calculation in each of these is redundant and could get out of sync, or you'd need to write a common subroutine.  In PowerApps, you accomplished all of that with a single, one-line formula.
-* To understand where **TextBox1**'s text is coming from, you know exactly where to look: the formula in the **[Text](../controls/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
+* To understand where **TextBox1**'s text is coming from, you know exactly where to look: the formula in the **[Text](controls/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
 * If the user changes a slider control and then changes their mind, they can change the slider back to its original value.  And it's as if nothing had ever changed: the app shows the same control values as it did before.  There are no ramifications for experimenting and asking "what if," just as there are none in Excel.  
 
 In general, if you can achieve an effect by using a formula, you'll be better off. Let the formula engine in PowerApps work for you.  
@@ -98,21 +98,21 @@ Let's rebuild our adding machine by using a global variable:
 
 1. Add a text-input control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
 
-2. Set the **[Text](../controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
+2. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
 
-3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **Set( RunningTotal, RunningTotal + Text1 )**
    
     The first time a user selects the **Add** button and **[Set](../functions/function-set.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
    
     ![](media/working-with-variables/global-variable-1.png)
-4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **Set( RunningTotal, 0 )**
    
     ![](media/working-with-variables/global-variable-2.png)
-5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to **RunningTotal**.
+5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
    
     This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
    
@@ -157,23 +157,23 @@ Let's rebuild our adding machine by using a context variable:
 
 1. Add a text-input control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
 
-2. Set the **[Text](../controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
+2. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to  **"Clear"**.
 
-3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**
    
     The first time a user selects the **Add** button and **[UpdateContext](../functions/function-updatecontext.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
    
     ![](media/working-with-variables/context-variable-1.png)
-4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **UpdateContext( { RunningTotal: 0 } )**
    
     Again, **[UpdateContext](../functions/function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
    
     ![](media/working-with-variables/context-variable-2.png)
-5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to **RunningTotal**.
+5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
    
     This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
    
@@ -209,21 +209,21 @@ Let's recreate our adding machine by using a collection:
 
 1. Add a **[Text input](controls/control-text-input.md)** control, named **TextInput1**, and two buttons, named **Button1** and **Button2**.
 
-2. Set the **[Text](../controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to **"Clear"**.
+2. Set the **[Text](controls/properties-core.md)** property of **Button1** to **"Add"**, and set the **Text** property of **Button2** to **"Clear"**.
 
-3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **Collect( PaperTape, TextInput1.Text )**
    
     This formula will add the new value to the end of the collection.  Since we are adding a single value, **Collect** will automatically place it in a single column table with the column name **Value** which we will use later.
    
     ![](media/working-with-variables/papertape-1.png)
-4. To clear our paper tape when the user selects the **Clear** button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+4. To clear our paper tape when the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **Clear( PaperTape )**
    
     ![](media/working-with-variables/papertape-2.png)
-5. To display the running total, add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
+5. To display the running total, add a label, and set its **[Text](controls/properties-core.md)** property to this formula:
    
     **Sum( PaperTape, Value )**
    
@@ -232,7 +232,7 @@ Let's recreate our adding machine by using a collection:
    
     ![](media/working-with-variables/papertape-run-1.png)
 7. To return to the default workspace, press the Esc key.
-8. To display the paper tape, insert a **Data table** control, and set its **[Items](../controls/properties-core.md)** property to this formula:
+8. To display the paper tape, insert a **Data table** control, and set its **[Items](controls/properties-core.md)** property to this formula:
    
     **PaperTape**
    

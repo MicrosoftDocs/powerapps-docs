@@ -79,7 +79,7 @@ In these examples, a **[Text input](../maker/controls/control-text-input.md)** c
 ### Step by step
 1. Add a **[Text input](../maker/controls/control-text-input.md)** control, and name it **Text1** if it doesn't have that name by default.
 2. In **Text1**, type **30**.
-3. Add a **Label** control, and set its **[Text](../controls/properties-core.md)** property to this formula:<br>
+3. Add a **Label** control, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:<br>
    **If( Value(Text1.Text) < 20, "Order MANY more!", Value(Text1.Text) < 40, "Order more!", Text1.Text )**
    
     The **Label** control shows **Order more!** because the value of **Text1** is more than 20 but less than 40.

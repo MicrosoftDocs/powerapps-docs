@@ -38,11 +38,11 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -50,7 +50,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[HoverBorderColor](properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **[PaddingBottom](../../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -62,9 +62,9 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -76,7 +76,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 [**Find**( *FindString*, *WithinString* )](../../functions/function-find.md)
 
 ## Example
-1. Add a **[Label](control-text-box.md)** control, name it **Source**, and set its **[Text](../../controls/properties-core.md)** property to this string:
+1. Add a **[Label](control-text-box.md)** control, name it **Source**, and set its **[Text](properties-core.md)** property to this string:
 
 \<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization. \<p>
 

@@ -88,7 +88,7 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 
 ### Step by step
 1. Import or create a collection named **Inventory** as the first subprocedure in [Show text and images in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
-2. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+2. Add a button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:
    
     **ClearCollect(Inventory2, RenameColumns(Inventory, "ProductName", "JacketID"))**
 3. Press F5, select the button that you just created, and then press Esc to return to the design workspace.

@@ -36,11 +36,11 @@ You can also create a single-column table with the **[ value1, value2, ... ]** s
 * *Record(s)* - Required. The records to add to the table.
 
 ## Examples
-* Set the **[Items](../controls/properties-core.md)** property of a listbox to this formula:
+* Set the **[Items](../maker/controls/properties-core.md)** property of a listbox to this formula:
   <br>**Table({Color:"red"}, {Color:"green"}, {Color:"blue"})**
   
     The listbox shows each color as an option.
-* Add a text gallery, and set its **[Items](../controls/properties-core.md)** property to this function:<br>
+* Add a text gallery, and set its **[Items](../maker/controls/properties-core.md)** property to this function:<br>
   **Table({Item:"Violin123", Location:"France", Owner:"Fabrikam"}, {Item:"Violin456", Location:"Chile"})**
   
     The gallery shows two records, both of which contain the name and location of an item. Only one record contains the name of the owner.

@@ -114,7 +114,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Select gallery](./media/get-started-create-from-blank/select-layout.png)
 
-4. In the property list, click or tap **[Items](../controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
+4. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
 
     **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer_x0020_1"), "Volunteer_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
@@ -145,7 +145,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Select title bar](./media/get-started-create-from-blank/select-title-bar.png)
 
-7. In the property list, click or tap **[Text](../controls/properties-core.md)**, copy this text, and then paste it in the formula bar.<br>
+7. In the property list, click or tap **[Text](controls/properties-core.md)**, copy this text, and then paste it in the formula bar.<br>
    **"View Records"**
 
     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
@@ -204,7 +204,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 7. Add a **[Label](controls/control-text-box.md)** control in the new card.
 
-8. Set the **[AutoHeight](controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](../controls/properties-core.md)** property to this formula:
+8. Set the **[AutoHeight](controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](controls/properties-core.md)** property to this formula:
    <br>**Form1.Error**
 
     The label will show any errors from the form.
@@ -213,29 +213,29 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 10. On the **Insert** tab, click or tap **Icons**, click or tap the option to add a **Back arrow**, and then move the arrow to the lower-left corner of the screen.
 
-11. Set the arrow's **[OnSelect](../controls/properties-core.md)** property to this formula:
+11. Set the arrow's **[OnSelect](controls/properties-core.md)** property to this formula:
 
      **ResetForm(Form1);Navigate(ViewScreen,ScreenTransition.None)**
 
       When the user clicks or taps the arrow, the **[Navigate](../functions/function-navigate.md)** function opens the **ViewScreen**.
 
-12. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](../controls/properties-core.md)** property to **"Save"**.
+12. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](controls/properties-core.md)** property to **"Save"**.
 
      ![Add a save button](./media/get-started-create-from-blank/add-save-button.png)
 
-13. Set the **[OnSelect](../controls/properties-core.md)** property of the button to this formula::
+13. Set the **[OnSelect](controls/properties-core.md)** property of the button to this formula::
 
     **SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
 
     When the user clicks or taps the button, the **[SubmitForm](../functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.
 
-14. At the bottom of the screen, add another button, set its **[Text](../controls/properties-core.md)** property to **"Remove"**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+14. At the bottom of the screen, add another button, set its **[Text](controls/properties-core.md)** property to **"Remove"**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
     **Remove(Schedule,BrowseGallery1.Selected);<br>If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
 
     When the user clicks or taps this button, the **[Remove](../functions/function-remove-removeif.md)** function removes the record, and the **ViewScreen** reappears.
 
-15. Set the **[Visible](../controls/properties-core.md)** property of the **Remove** button to this formula:
+15. Set the **[Visible](controls/properties-core.md)** property of the **Remove** button to this formula:
     <br>**Form1.Mode=FormMode.Edit**
 
     This step hides the **Remove** button when the user is creating a record.
@@ -253,7 +253,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
 
-3. Set the **[OnSelect](../controls/properties-core.md)** property of that arrow to this formula:
+3. Set the **[OnSelect](controls/properties-core.md)** property of that arrow to this formula:
 
     **Navigate(ChangeScreen,ScreenTransition.None)**
 
@@ -261,7 +261,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add record](./media/get-started-create-from-blank/add-record.png)
 
-5. Set the **[OnSelect](../controls/properties-core.md)** property of the selected icon to this formula:
+5. Set the **[OnSelect](controls/properties-core.md)** property of the selected icon to this formula:
 
     **NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**`
 

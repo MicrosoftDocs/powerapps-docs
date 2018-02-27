@@ -47,13 +47,13 @@ Create an app with multiple screens, and add ways for users to navigate between 
 
 3. With the arrow still selected, click or tap the **Action** tab, and then click or tap **Navigate**.
 
-    The **[OnSelect](../controls/properties-core.md)** property for the arrow is automatically set to a **Navigate** function.  
+    The **[OnSelect](controls/properties-core.md)** property for the arrow is automatically set to a **Navigate** function.  
 
     ![OnSelect property set to Navigate function](./media/add-screen-context-variables/onselect-default.png)
 
     When a user clicks or taps the arrow, the **Target** screen fades in.
 
-4. On the **Target** screen, add a **Back arrow**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+4. On the **Target** screen, add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
    <br>**Navigate(Source, ScreenTransition.Fade)**
 
 5. Open Preview mode (![](./media/add-screen-context-variables/preview.png) or press F5), and then switch between the screens by clicking or tapping the arrows that you added.

@@ -25,7 +25,7 @@ A control with which users can indicate a value between 1 and a maximum number t
 In this control, the user can indicate, for example, how much they liked something by selecting a certain number of stars.
 
 ## Key properties
-**[Default](../../controls/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **Max** – The maximum value to which the user can set a slider or a rating.
 
@@ -38,29 +38,29 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 **[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnChange](../../controls/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **RatingFill** – The color of the stars in a rating control.
 
 **ReadOnly** – Whether a user can change the value of a slider or rating control.
 
-**[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -76,7 +76,7 @@ In this control, the user can indicate, for example, how much they liked somethi
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Add a **[Text input](control-text-input.md)** control, name it **Qualitative**, and move it below the **Rating** control.
-3. Set the **[Default](../../controls/properties-core.md)** property of the **[Text input](control-text-input.md)** control to **""**, and set its **HintText** to this formula:
+3. Set the **[Default](properties-core.md)** property of the **[Text input](control-text-input.md)** control to **""**, and set its **HintText** to this formula:
    <br>**If(Quantitative.Value > 3, "What did you especially like?", "How might we do better?")**
    
     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?

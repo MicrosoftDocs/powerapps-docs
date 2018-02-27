@@ -48,18 +48,18 @@ This screen features these key formulas:
 
 | Control | Supported behavior | Formula |
 | --- | --- | --- |
-| **BrowseGallery1** |Display records from the **Assets** data source. |The **[Items](../controls/properties-core.md)** property of the gallery is set to a formula that's based on the **Assets** data source. |
-| **ImageNewItem1** |Display the **Edit and Create** screen with each field set to a default value, so that the user can easily create a record. |The **[OnSelect](../controls/properties-core.md)** property of the image is set to this formula:<br> **NewForm( EditForm1 );<br>Navigate( EditScreen1, None )** |
-| **NextArrow1** (in the gallery) |Display the **Details** screen to view many or all fields of the currently selected record. |The **[OnSelect](../controls/properties-core.md)** property of the arrow is set to this formula:<br>**Navigate( DetailScreen1, None )** |
+| **BrowseGallery1** |Display records from the **Assets** data source. |The **[Items](controls/properties-core.md)** property of the gallery is set to a formula that's based on the **Assets** data source. |
+| **ImageNewItem1** |Display the **Edit and Create** screen with each field set to a default value, so that the user can easily create a record. |The **[OnSelect](controls/properties-core.md)** property of the image is set to this formula:<br> **NewForm( EditForm1 );<br>Navigate( EditScreen1, None )** |
+| **NextArrow1** (in the gallery) |Display the **Details** screen to view many or all fields of the currently selected record. |The **[OnSelect](controls/properties-core.md)** property of the arrow is set to this formula:<br>**Navigate( DetailScreen1, None )** |
 
 The primary control on this screen, **BrowseGallery1**, covers most of the area of the screen. The user can scroll through the gallery to find a specific record to display more fields or to update.
 
-Set the **[Items](../controls/properties-core.md)** property of a gallery to show records from a data source in it. For example, set that property to **Assets** to show records from a data source of that name.
+Set the **[Items](controls/properties-core.md)** property of a gallery to show records from a data source in it. For example, set that property to **Assets** to show records from a data source of that name.
 
 > [!NOTE]
-> In a generated app, **[Items](../controls/properties-core.md)** is set to a significantly more complicated formula by default so that the user can sort and search for records. You'll learn how to build that formula later in this topic; the simpler version is enough for now.
+> In a generated app, **[Items](controls/properties-core.md)** is set to a significantly more complicated formula by default so that the user can sort and search for records. You'll learn how to build that formula later in this topic; the simpler version is enough for now.
 
-Instead of finding a record to display or edit, the user can create a record by selecting the "+" symbol above the gallery. Create this effect by adding an **[Image](controls/control-image.md)** control, showing a "+" symbol in it, and setting its **[OnSelect](../controls/properties-core.md)** property to this formula:
+Instead of finding a record to display or edit, the user can create a record by selecting the "+" symbol above the gallery. Create this effect by adding an **[Image](controls/control-image.md)** control, showing a "+" symbol in it, and setting its **[OnSelect](controls/properties-core.md)** property to this formula:
 <br>**NewForm( EditForm1 ); Navigate( EditScreen1, None )**
 
 This formula opens the **Edit and Create** screen, which features an **[Edit form](controls/control-form-detail.md)** control named **EditForm1**. The formula also switches that form into **New** mode, in which the form shows default values from the data source so that the user can easily create a record from scratch.
@@ -68,9 +68,9 @@ To examine any control that appears in **BrowseGallery1**, select that control i
 
 ![Browse screen controls](./media/working-with-forms/afd-browse-gallery-controls.png)
 
-In this example, the control's **[Text](../controls/properties-core.md)** property is set to **ThisItem.AssignedTo**, which is a field in the **Assets** data source. The **[Text](../controls/properties-core.md)** property of the other three **[Label](controls/control-text-box.md)** controls in the gallery are set to similar formulas, and each control shows a different field in the data source.  
+In this example, the control's **[Text](controls/properties-core.md)** property is set to **ThisItem.AssignedTo**, which is a field in the **Assets** data source. The **[Text](controls/properties-core.md)** property of the other three **[Label](controls/control-text-box.md)** controls in the gallery are set to similar formulas, and each control shows a different field in the data source.  
 
-Select the **[Shape](controls/control-shapes-icons.md)** control (the arrow), and confirm that its **[OnSelect](../controls/properties-core.md)** property is set to this formula:
+Select the **[Shape](controls/control-shapes-icons.md)** control (the arrow), and confirm that its **[OnSelect](controls/properties-core.md)** property is set to this formula:
 <br>**Navigate( DetailScreen1, None )**
 
 If the user finds a record in **BrowseGallery1**, the user can select the arrow for that record to show more information about it in **DetailScreen1**. By selecting an arrow, the user changes the value of the **Selected** property of **BrowseGallery1**. In this app, that property determines which record appears in not only **DetailScreen1** but also, if the user decides to update the record, the **Edit and Create** screen.
@@ -85,9 +85,9 @@ This screen features these key formulas:
 | **DetailForm1** |Displays a record in the **Assets** data source |Set the **[DataSource](controls/control-form-detail.md)** property to **Assets**. |
 | **DetailForm1** |Determines which record to display. In a generated app, displays the record that the user selected in the gallery. |Set the **[Item](controls/control-form-detail.md)** property of this control to this value:<br>**BrowseGallery1.Selected** |
 | **[Card](controls/control-card.md)** controls |In a **[Display form](controls/control-form-detail.md)** control, displays a single field in a record. |Set the **[DataField](controls/control-card.md)** property to the name of a field, enclosed in double quotation marks (for example, **"Name"**). |
-| **ImageBackArrow1** |When the user selects this control, opens **BrowseScreen1**. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**Back()** |
-| **ImageDelete1** |When the user selects this control, deletes a record. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**Remove( Assets, BrowseGallery1.Selected )** |
-| **ImageEdit1** |When the user selects this control, opens the **Edit and Create** screen to the current record. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**Navigate( EditScreen1, None )** |
+| **ImageBackArrow1** |When the user selects this control, opens **BrowseScreen1**. |Set the **[OnSelect](controls/properties-core.md)** property to this formula:<br>**Back()** |
+| **ImageDelete1** |When the user selects this control, deletes a record. |Set the **[OnSelect](controls/properties-core.md)** property to this formula:<br>**Remove( Assets, BrowseGallery1.Selected )** |
+| **ImageEdit1** |When the user selects this control, opens the **Edit and Create** screen to the current record. |Set the **[OnSelect](controls/properties-core.md)** property to this formula:<br>**Navigate( EditScreen1, None )** |
 
 At the top of the screen, three images sit outside of **DetailForm1** and act as buttons, orchestrating between the three screens of the app.
 
@@ -97,7 +97,7 @@ At the top of the screen, three images sit outside of **DetailForm1** and act as
 
 ![Detail card and card controls selected in the authoring experience](./media/working-with-forms/afd-detail-card-controls.png)
 
-The **[DataField](controls/control-card.md)** property of a **[Card](controls/control-card.md)** control determines which field the card displays. In this case, that property is set to **AssetID**. The card contains a **[Label](controls/control-text-box.md)** control for which the **[Text](../controls/properties-core.md)** property is set to **Parent.Default**. This control shows the **Default** value for the card, which is set through the **[DataField](controls/control-card.md)** property.
+The **[DataField](controls/control-card.md)** property of a **[Card](controls/control-card.md)** control determines which field the card displays. In this case, that property is set to **AssetID**. The card contains a **[Label](controls/control-text-box.md)** control for which the **[Text](controls/properties-core.md)** property is set to **Parent.Default**. This control shows the **Default** value for the card, which is set through the **[DataField](controls/control-card.md)** property.
 
 In a generated app, **[Card](controls/control-card.md)** controls are locked by default. When a card is locked, you can't modify some properties, such as **[DataField](controls/control-card.md)**, and the formula bar is unavailable for those properties. This restriction helps ensure that your customizations don't break the basic functionality of the generated app. However, you can change some properties of a card and its controls in the right-hand pane:
 
@@ -115,11 +115,11 @@ This screen features these key formulas:
 | **EditForm1** |Displays a record in the **Assets** data source. |Set the **[DataSource](controls/control-form-detail.md)** property to **Assets**. |
 | **EditForm1** |Determines which record to display. In a generated app, displays the record that the user selected in **BrowseScreen1**. |Set the **[Item](controls/control-form-detail.md)** property to this value:<br>**BrowseGallery1.Selected** |
 | **[Card](controls/control-card.md)** controls |In a **[Edit form](controls/control-form-detail.md)** control, provides controls so that the user can edit one or more fields in a record. |Set the **[DataField](controls/control-card.md)** property to the name of a field, enclosed in double quotation marks (for example, **"Name"**). |
-| **ImageCancel1** |When the user selects this control, discards any changes in progress, and opens the **Details** screen. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**ResetForm( EditForm1 ); Back()** |
-| **ImageAccept1** |When the user selects this control, submits changes to the data source. |Set the **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**SubmitForm( EditForm1 )** |
+| **ImageCancel1** |When the user selects this control, discards any changes in progress, and opens the **Details** screen. |Set the **[OnSelect](controls/properties-core.md)** property to this formula:<br>**ResetForm( EditForm1 ); Back()** |
+| **ImageAccept1** |When the user selects this control, submits changes to the data source. |Set the **[OnSelect](controls/properties-core.md)** property to this formula:<br>**SubmitForm( EditForm1 )** |
 | **EditForm1** |If changes are accepted, returns to the previous screen. |Set the **[OnSuccess](controls/control-form-detail.md)** property to this formula:<br>**Back()** |
 | **EditForm1** |If changes aren't accepted, remain on the current screen so that the user can fix any issues and try to submit again. |Leave the **[OnFailure](controls/control-form-detail.md)** property blank. |
-| **LblFormError1** |If changes aren't accepted, shows an error message. |Set the **[Text](../controls/properties-core.md)** property to this value:<br>**EditForm1.Error** |
+| **LblFormError1** |If changes aren't accepted, shows an error message. |Set the **[Text](controls/properties-core.md)** property to this value:<br>**EditForm1.Error** |
 
 As in the **Details** screen, a form control, named **EditForm1**, dominates the **Edit and Create** screen. In addition, the **[Item](controls/control-form-detail.md)** property of **EditForm1** is set to **BrowseGallery1.Selected**, so the form displays the record that the user selected in **BrowseScreen1**. While the **Details** screen shows each field as read-only, the user can update the value of one or more fields by using the controls in **EditForm1**. It also uses the **[DataSource](controls/control-form-detail.md)** property to access metadata about this data source, such as the user-friendly display name for each field and the location where changes should be saved.
 
@@ -134,7 +134,7 @@ As with a **[Display form](controls/control-form-detail.md)** control, an **[Edi
 
 ![Edit card and card controls selected in the authoring experience](./media/working-with-forms/afd-edit-card-controls.png)
 
-In the previous image, the selected card shows the **AssetID** field and  contains a **[Text input](controls/control-text-input.md)** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **[Label](controls/control-text-box.md)** control, which is read-only.) The **[Text input](controls/control-text-input.md)** control has a **[Default](../controls/properties-core.md)** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
+In the previous image, the selected card shows the **AssetID** field and  contains a **[Text input](controls/control-text-input.md)** control so that the user can edit the value of that field. (In contrast, the detail screen shows the same field in a **[Label](controls/control-text-box.md)** control, which is read-only.) The **[Text input](controls/control-text-input.md)** control has a **[Default](controls/properties-core.md)** property, which is set to **Parent.Default**. If the user were creating a record instead of editing one, that control would show an initial value that the user can change for the new record.
 
 In the right-hand pane, you can show or hide each card, rearrange them, or configure them to show fields in different types of controls.
 
@@ -166,8 +166,8 @@ Get a quick piece of information from a record by finding it in a gallery on a b
 1. Add a **Vertical** gallery, and change the layout to **Title** only.
    
     ![Gallery connected to Ice Cream data source](./media/working-with-forms/new-gallery.png)
-2. Set the gallery's **[Items](../controls/properties-core.md)** property to **Ice Cream**.
-3. Set the **[Text](../controls/properties-core.md)** property of the first label in the gallery to **ThisItem.Title** if it's set to something else.
+2. Set the gallery's **[Items](controls/properties-core.md)** property to **Ice Cream**.
+3. Set the **[Text](controls/properties-core.md)** property of the first label in the gallery to **ThisItem.Title** if it's set to something else.
    
     The label now shows the value in the **Title** field for each record.
    
@@ -209,7 +209,7 @@ Finally, we need to connect the **[Display form](controls/control-form-detail.md
 
 Great!  We now turn to navigation: how a user opens the details screen from the gallery screen and opens the gallery screen from the details screen.
 
-* Add a **[Button](controls/control-button.md)** control to the screen, set its **[Text](../controls/properties-core.md)** property to show **[Back](../functions/function-navigate.md)**, and set its **[OnSelect](../controls/properties-core.md)** property to **Back()**.
+* Add a **[Button](controls/control-button.md)** control to the screen, set its **[Text](controls/properties-core.md)** property to show **[Back](../functions/function-navigate.md)**, and set its **[OnSelect](controls/properties-core.md)** property to **Back()**.
    
     This formula returns the user back to the gallery when they finish viewing details.
 
@@ -219,7 +219,7 @@ Now, let's return to the **[Gallery](controls/control-gallery.md)** control and 
 
 1. Switch to the first screen, which is hosting our **[Gallery](controls/control-gallery.md)** control, and select the arrow in the first item in the gallery.
 
-2. Set the **[OnSelect](../controls/properties-core.md)** property of the shape to this formula:
+2. Set the **[OnSelect](controls/properties-core.md)** property of the shape to this formula:
    <br>**Navigate( Screen2, None )**
    
     ![Display form for Ice Cream data source with back button](./media/working-with-forms/gallery-icecream-nav-new.png)
@@ -249,14 +249,14 @@ These two properties are the same as the properties on the **[Display form](cont
 
 The **[Edit form](controls/control-form-detail.md)** control goes further by offering the **[SubmitForm](../functions/function-form.md)** function to write back changes to the data source. You use this with a button or image control to save a user's changes.
 
-* Add a **[Button](controls/control-button.md)** control, set its **[Text](../controls/properties-core.md)** property to show **Save**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
+* Add a **[Button](controls/control-button.md)** control, set its **[Text](controls/properties-core.md)** property to show **Save**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
   **SubmitForm( Form1 )**
 
 ![Edit form for Ice Cream data source](./media/working-with-forms/edit-icecream-save.png)
 
 To add navigation to and from this screen:
 
-1. Add another **[Button](controls/control-button.md)** control, set its **[Text](../controls/properties-core.md)** property to show **Cancel**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula: <br>**ResetForm( Form1 ); Back()**
+1. Add another **[Button](controls/control-button.md)** control, set its **[Text](controls/properties-core.md)** property to show **Cancel**, and set its **[OnSelect](controls/properties-core.md)** property to this formula: <br>**ResetForm( Form1 ); Back()**
    
     This formula discards any unsaved edits and opens the previous screen.
    
@@ -266,7 +266,7 @@ To add navigation to and from this screen:
     When updates are successfully saved, the previous screen (in this case, the details screen) opens automatically.
    
     ![Edit form with added "OnSuccess" rule](./media/working-with-forms/edit-icecream-onsuccess.png)
-3. On the **Display** screen, add a button, set its **[Text](../controls/properties-core.md)** property to show **Edit**, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br> **Navigate( Screen3, None )**
+3. On the **Display** screen, add a button, set its **[Text](controls/properties-core.md)** property to show **Edit**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br> **Navigate( Screen3, None )**
    
     ![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-edit.png)
 
@@ -284,7 +284,7 @@ When the user is ready to save the new record, **[SubmitForm](../functions/funct
 On the first screen, you'll add a **New** button:
 
 1. On the screen with the gallery, add a **[Button](controls/control-button.md)** control.
-2. Set the button's **[Text](../controls/properties-core.md)** property to **New** and its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
+2. Set the button's **[Text](controls/properties-core.md)** property to **New** and its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
    **NewForm( Form1 ); Navigate( Screen3, None )**
    
     This formula switches the **[Edit form](controls/control-form-detail.md)** control on **Screen3** to **New** mode and opens that screen so that the user can fill it in.
@@ -294,8 +294,8 @@ On the first screen, you'll add a **New** button:
 When the Edit and Create screen opens, the form is empty, ready for the user to add an item. When the user selects the **Save** button, the **[SubmitForm](../functions/function-form.md)** function ensures that a record is created instead of being updated. If the user selects the **Cancel** button, the **[ResetForm](../functions/function-form.md)** function switches the form back to **Edit** mode, and the **[Back](../functions/function-navigate.md)** function opens the screen for browsing the gallery.
 
 ## Delete a record
-1. On the **Display** screen, add a button, and set its **[Text](../controls/properties-core.md)** property to show **Delete**..
-2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
+1. On the **Display** screen, add a button, and set its **[Text](controls/properties-core.md)** property to show **Delete**..
+2. Set the button's **[OnSelect](controls/properties-core.md)** property to this formula:
    <br>**Remove( 'Ice Cream', Gallery1.Selected ); Back()**
    
     ![Display form with added "Edit" button](./media/working-with-forms/viewform-icecream-remove.png)
@@ -307,7 +307,7 @@ If **[SubmitForm](../functions/function-form.md)** fails for any reason, the **E
 
 1. On the Edit and Create screen, add a **[Label](controls/control-text-box.md)** control, and move it just below the **Save** button. Any error will be easy to see after the user selects this control to save changes.
 
-2. Set the **[Text](../controls/properties-core.md)** property of the **[Label](controls/control-text-box.md)** control to show **Form1.Error**.
+2. Set the **[Text](controls/properties-core.md)** property of the **[Label](controls/control-text-box.md)** control to show **Form1.Error**.
 
     ![Display form with added "Edit" button](./media/working-with-forms/edit-icecream-error.png)
 
@@ -320,9 +320,9 @@ In an app that PowerApps generates from data, the **[AutoHeight](controls/contro
 ## Refresh data
 The data source is refreshed whenever the user opens the app, but the user might want to refresh the records in the gallery without closing the app. Add a **Refresh** button so that the user can select it to manually refresh the data:
 
-1. On the screen with the **[Gallery](controls/control-gallery.md)** control, add a **[Button](controls/control-button.md)** control and set its **[Text](../controls/properties-core.md)** property to show **Refresh**.
+1. On the screen with the **[Gallery](controls/control-gallery.md)** control, add a **[Button](controls/control-button.md)** control and set its **[Text](controls/properties-core.md)** property to show **Refresh**.
 
-2. Set the **[OnSelect](../controls/properties-core.md)** property of this control to this formula:<br> **Refresh( 'Ice Cream' )**
+2. Set the **[OnSelect](controls/properties-core.md)** property of this control to this formula:<br> **Refresh( 'Ice Cream' )**
 
     ![Refresh the data source](./media/working-with-forms/browse-icecream-refresh.png)
 
@@ -331,12 +331,12 @@ In the app that PowerApps generated from data, we neglected to discuss two contr
 
 ![Sorting and searching controls on browse screen](./media/working-with-forms/afd-browse-search-sort.png)
 
-When the user selects the sort button, the sort order of the gallery reverses. To create this behavior, we use a *context variable* to track the direction in which the gallery is sorted. When the user selects the button, the variable is updated, and the direction reverses. The **[OnSelect](../controls/properties-core.md)** property of the sort button is set to this formula:
+When the user selects the sort button, the sort order of the gallery reverses. To create this behavior, we use a *context variable* to track the direction in which the gallery is sorted. When the user selects the button, the variable is updated, and the direction reverses. The **[OnSelect](controls/properties-core.md)** property of the sort button is set to this formula:
 **UpdateContext( {SortDescending1: !SortDescending1} )**
 
 The **[UpdateContext](../functions/function-updatecontext.md)** function creates the **SortDescending1** context variable if it doesn't already exist. The function will read the value of the variable and set it to the logical opposite by using the **!** operator. If the value is *true*, it becomes *false*. If the value is *false*, it becomes *true*.
 
-The formula for the **[Items](../controls/properties-core.md)** property of the **[Gallery](controls/control-gallery.md)** control uses this context variable, along with the text in the **TextSearchBox1** control:
+The formula for the **[Items](controls/properties-core.md)** property of the **[Gallery](controls/control-gallery.md)** control uses this context variable, along with the text in the **TextSearchBox1** control:
 
     Gallery1.Items = Sort( If( IsBlank(TextSearchBox1.Text),
                                Assets,
@@ -357,7 +357,7 @@ Let's break this down:
   * The expression searches for an instance of the string in **TextSearchBox1** within the **ApproverEmail** field.  Again, if you change the fields that appear in the gallery, you'll also need to update this argument.
   * If **TextSearchBox1** is empty, the user wants to show all records, and the **[Filter](../functions/function-filter-lookup.md)** function is bypassed.
 
-This is but one example; you can craft your own formula for the **[Items](../controls/properties-core.md)** property, depending on the needs of your app, by composing **[Filter](../functions/function-filter-lookup.md)**, **[Sort](../functions/function-sort.md)**, and other functions and operators together.    
+This is but one example; you can craft your own formula for the **[Items](controls/properties-core.md)** property, depending on the needs of your app, by composing **[Filter](../functions/function-filter-lookup.md)**, **[Sort](../functions/function-sort.md)**, and other functions and operators together.    
 
 ## Screen design
 So far, we haven't discussed other ways to distribute controls across screens. That's because you have many options, and the best selection depends on your specific app's needs.
@@ -366,6 +366,6 @@ Because real estate on phone screens is so limited, you probably want to browse,
 
 On a tablet, you can browse, display, and edit/create on two or even one screen. For the latter, no **[Navigate](../functions/function-navigate.md)** or **[Back](../functions/function-navigate.md)** function would be required.
 
-If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](../controls/properties-core.md)** property of the gallery to this formula:<br>
+If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](controls/properties-core.md)** property of the gallery to this formula:<br>
 **EditForm.Unsaved**
 

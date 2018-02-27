@@ -42,11 +42,11 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 
 ## Examples
 #### Concat
-1. Add a **[Button](../maker/controls/control-button.md)** control, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
+1. Add a **[Button](../maker/controls/control-button.md)** control, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:
    
     **Collect(Products, {String:"Violin", Wind:"Trombone", Percussion:"Bongos"}, {String:"Cello", Wind:"Trumpet", Percussion:"Tambourine"})**
 2. Press F5, click the button, and then press Esc to return to the design workspace.
-3. Add a **[Label](../maker/controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to this formula:
+3. Add a **[Label](../maker/controls/control-text-box.md)** control, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:
    
     **Concat(Products, String & " ")**
    
@@ -54,7 +54,7 @@ The **Concatenate** function concatenates a mix of individual strings and a sing
 
 #### Concatenate
 1. Add a **[Text input](../maker/controls/control-text-input.md)** control, and name it **AuthorName**.
-2. Add a **[Label](../maker/controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to this formula:<br>
+2. Add a **[Label](../maker/controls/control-text-box.md)** control, and set its **[Text](../maker/controls/properties-core.md)** property to this formula:<br>
    **Concatenate("By ", AuthorName.Text)**
 3. Type your name in **AuthorName**.
    

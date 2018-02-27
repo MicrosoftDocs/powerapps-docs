@@ -25,9 +25,9 @@ A box in which the user can type text, numbers, and other data.
 The user can specify data by typing into a text-input control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way.
 
 ## Key properties
-**[Default](../../controls/properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-**[Text](../../controls/properties-core.md)** – Text that appears on a control or that the user types into a control.
+**[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 ## Additional properties
 **[Align](../../controls/properties-text.md)** – The location of text in relation to the horizontal center of its control.
@@ -46,13 +46,13 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **DelayOutput** – When set to true, user input is registered after half a second delay.  Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -80,9 +80,9 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **Mode** – The control is in **SingleLine**, **MultiLine**, or **Password** mode.
 
-**[OnChange](../../controls/properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **[PaddingBottom](../../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -106,7 +106,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[RadiusTopRight](../../controls/properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
-**[Reset](../../controls/properties-core.md)** – Whether a control reverts to its default value.
+**[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 
@@ -114,11 +114,11 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
-**[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **[Underline](../../controls/properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -134,18 +134,18 @@ The user can specify data by typing into a text-input control. Depending on how 
 1. Add two text-input controls, and name them **inputFirst** and **inputLast**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a button, set its **[Text](../../controls/properties-core.md)** property to **Add**, and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
+2. Add a button, set its **[Text](properties-core.md)** property to **Add**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
    
     Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-3. Add a text gallery in portrait/vertical orientation, set its **[Items](../../controls/properties-core.md)** property to **Names**, and set the **[Text](../../controls/properties-core.md)** property of **Subtitle1** to **ThisItem.FirstName**.
+3. Add a text gallery in portrait/vertical orientation, set its **[Items](properties-core.md)** property to **Names**, and set the **[Text](properties-core.md)** property of **Subtitle1** to **ThisItem.FirstName**.
 4. (optional) In the template gallery, delete the bottom label, named **Body1**, and set the **[TemplateSize](control-gallery.md)** property of the gallery to **80**.
 5. Press F5, type a string of text into **inputFirst** and **inputLast**, and then click or tap the **Add** button.
 6. (optional) Add more names to the collection, and then press Esc to return to the default workspace.
 
 ### Prompt for a password
 1. Add a text-input control, name it **inputPassword**, and set its **Mode** property to **Password**.
-2. Add a label, and set its **[Text](../../controls/properties-core.md)** property to this formula:<br>
+2. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
    **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
    
     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
@@ -154,5 +154,5 @@ The user can specify data by typing into a text-input control. Depending on how 
     When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
 4. To return to the default workspace, press Esc.
 5. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
-6. (optional) Add a button, configure its **[Text](../../controls/properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
+6. (optional) Add a button, configure its **[Text](properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
 

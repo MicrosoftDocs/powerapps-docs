@@ -84,12 +84,12 @@ For the following examples, we'll use the **IceCream** [data source](../maker/wo
 ### Step by step
 To run these examples yourself, create the **IceCream** data source as a [collection](../maker/working-with-data-sources.md#collections):
 
-1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
+1. Add a button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
 2. Preview the app, select the button, and then press Esc to return to the default workspace.
 3. Select **Collections** on the **File** menu to display the collection that you just created, and then press Esc to return to the default workspace.
 
 #### Sort
-1. Add another button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
+1. Add another button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>
    **ClearCollect( SortByFlavor, Sort( IceCream, Flavor ) )**
    
      The previous formula creates a second collection, named **SortByFlavor**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted alphabetically by the **Flavor** column in ascending order.
@@ -98,7 +98,7 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 4. Repeat the last three steps, but change the name of the collection that you want to create, and replace the **Sort** formula with a different formula from the table of examples earlier in this section that uses **Sort**.
 
 #### SortByColumns
-1. Add another button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
+1. Add another button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>
    **ClearCollect( SortByQuantity, SortByColumns( IceCream, "Quantity", Ascending, "Flavor", Descending ) )**
    
      The previous formula creates a third collection, named **SortByQuantity**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted numerically by the **Quanity** column in ascending order, and then by the **Flavor** column in descending order.

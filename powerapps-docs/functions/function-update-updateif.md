@@ -71,7 +71,7 @@ In these examples, you'll replace or modify records in a data source that's name
 1. Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
 2. Name the gallery **ProductGallery**.
 3. Add a slider named **UnitsSold**, and set its **Max** property to this expression:<br>**ProductGallery.Selected.UnitsInStock**
-4. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**UpdateIf(Inventory, ProductName = ProductGallery.Selected.ProductName, {UnitsInStock:UnitsInStock-UnitsSold.Value})**
+4. Add a button, and set its **[OnSelect](../maker/controls/properties-core.md)** property to this formula:<br>**UpdateIf(Inventory, ProductName = ProductGallery.Selected.ProductName, {UnitsInStock:UnitsInStock-UnitsSold.Value})**
 5. Press F5, select a product in the gallery, specify a value with the slider, and then select the button.
    
     The number of units in stock for the product you specified decreases by the amount that you specified.

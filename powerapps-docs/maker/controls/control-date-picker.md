@@ -47,13 +47,13 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **EndYear** – The latest year to which the user can set value of a date-picker control.
 
@@ -67,7 +67,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[Italic](../../controls/properties-text.md)** – Whether the text in a control is italic.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **[PaddingBottom](../../controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
@@ -83,7 +83,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -98,7 +98,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 1. Add a **Date Picker** control, and name it **Deadline**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Label](control-text-box.md)** control, and set its **[Text](../../controls/properties-core.md)** property to this formula:
+2. Add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to this formula:
    <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
    
     Want more information about the **[DateDiff](../../functions/function-dateadd-datediff.md)** function or [other functions](../formula-reference.md)?

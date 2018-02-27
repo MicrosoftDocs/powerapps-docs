@@ -57,11 +57,11 @@ Some of these operators are dependent on the language of the author.  See [Globa
 You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../maker/working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
 1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../maker/show-images-text-gallery-sort-filter.md) describes.
-2. Set the **[Items](../controls/properties-core.md)** property of the gallery to this formula:
+2. Set the **[Items](../maker/controls/properties-core.md)** property of the gallery to this formula:
    <br>**Filter(Inventory, "E" in ProductName)**
    
     The gallery shows all products except Callisto because the name of that product is the only one that doesn't contain the letter you specified.
-3. Change the **[Items](../controls/properties-core.md)** property of the gallery to this formula:
+3. Change the **[Items](../maker/controls/properties-core.md)** property of the gallery to this formula:
    <br>**Filter(Inventory, "E" exactin ProductName)**
    
     The gallery shows only Europa because only its name contains the letter that you specified in the case that you specified.

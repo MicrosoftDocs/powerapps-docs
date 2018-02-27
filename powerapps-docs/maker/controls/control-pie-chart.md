@@ -25,7 +25,7 @@ A control that shows relative values in comparison to each other.
 Add a **Pie chart** control if you want to show relative data from a table that contains labels in the leftmost column and values in the second column from the left.
 
 ## Key properties
-**[Items](../../controls/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
+**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **ShowLabels** – Whether a pie chart shows the value that's associated with each of its wedges.
 
@@ -38,9 +38,9 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](../../controls/properties-core.md)** property is set to **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **Explode** – The distance between wedges in a pie chart.
 
@@ -58,13 +58,13 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 
 **LabelPosition** – The location of labels in a pie chart relative to its wedges.
 
-**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **[PressedBorderColor](properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
 
 **[Size](../../controls/properties-text.md)** – The font size of the text that appears on a control.
 
-**[Visible](../../controls/properties-core.md)** – Whether a control appears or is hidden.
+**[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
@@ -76,14 +76,14 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 [**Max**( *DataSource*, *ColumnName* )](../../functions/function-aggregates.md)
 
 ## Example
-1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](../../controls/properties-core.md)** property to this formula:<br>
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(Revenue2015, {Product:"Europa", Revenue:27000}, {Product:"Ganymede", Revenue:26300}, {Product:"Callisto", Revenue:29200})**
    
     Don't know how to [add and configure a control](../add-configure-controls.md)?
    
     Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.
-3. Add a **Pie chart** control, and set its **[Items](../../controls/properties-core.md)** property to **Revenue2015**.
+3. Add a **Pie chart** control, and set its **[Items](properties-core.md)** property to **Revenue2015**.
    
     The **Pie chart** control shows revenue data for each product in relation to the other products.
 
