@@ -204,7 +204,7 @@ Convert dates and times from strings of text to values, which you can format in 
 
 ## Calculate dates based on years, months, and days
 
-1. Add three **[Drop down](../controls/control-drop-down.md)** controls named **Year**, **Month**, and **Day**.
+1. Add three **[Drop down](controls/control-drop-down.md)** controls named **Year**, **Month**, and **Day**.
 
 2. Set the **[Items](../controls/properties-core.md)** property of **Year** to this formula:
    <br>**Table({Year:"2014"}, {Year:"2015"}, {Year:"2016"})**
@@ -218,9 +218,9 @@ Convert dates and times from strings of text to values, which you can format in 
 5. Add a **[Label](../controls/control-text-box.md)** control, and set its **[Text](../controls/properties-core.md)** property to this formula:
    <br>**Text(Date(Value(Year.Selected.Value), Value(Month.Selected.Value), Value(Day.Selected.Value)), DateTimeFormat.LongDate)**
    
-    **Wednesday, January 1, 2014** is listed by default. Select different values in the **[Drop down](../controls/control-drop-down.md)** controls to change the date in the **[Label](../controls/control-text-box.md)** control.
+    **Wednesday, January 1, 2014** is listed by default. Select different values in the **[Drop down](controls/control-drop-down.md)** controls to change the date in the **[Label](../controls/control-text-box.md)** control.
 
-You may need to convert data that you didn't expect. If you add **[Text input](../controls/control-text-input.md)** controls instead of **[Drop down](../controls/control-drop-down.md)** controls, a user may enter an incorrect date, such as May 45. The **[Date](../functions/function-date-time.md)** function handles atypical data in the following ways:
+You may need to convert data that you didn't expect. If you add **[Text input](../controls/control-text-input.md)** controls instead of **[Drop down](controls/control-drop-down.md)** controls, a user may enter an incorrect date, such as May 45. The **[Date](../functions/function-date-time.md)** function handles atypical data in the following ways:
 
 * If a year value is between 0 and 1899 (inclusive), the function adds that value to 1900 to calculate the year.
 * If a year value is between 1900 and 9999 (inclusive), the function uses that value as the year.
@@ -247,5 +247,5 @@ You may need to convert data that you didn't expect. If you add **[Text input](.
    
     The **[Label](../controls/control-text-box.md)** control shows **3:45 PM**.
    
-    You can add entries to **Hour** and **Minute** so that users can select from a bigger range of hours and a more precise number of minutes. You can also add a third **[Drop down](../controls/control-drop-down.md)** control so that users can specify seconds. If you add a third list, set the **[Text](../controls/properties-core.md)** property of the **[Label](../controls/control-text-box.md)** control to the following expression:<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)**
+    You can add entries to **Hour** and **Minute** so that users can select from a bigger range of hours and a more precise number of minutes. You can also add a third **[Drop down](controls/control-drop-down.md)** control so that users can specify seconds. If you add a third list, set the **[Text](../controls/properties-core.md)** property of the **[Label](../controls/control-text-box.md)** control to the following expression:<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)**
 

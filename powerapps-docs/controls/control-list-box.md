@@ -22,7 +22,7 @@ ms.author: fikaradz
 A list in which the user can select one or multiple items.
 
 ## Description
-A **List Box** control always shows all available choices (unlike a **[Drop down](control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
+A **List Box** control always shows all available choices (unlike a **[Drop down](../maker/controls/control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
 
 ## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
@@ -124,15 +124,15 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
     Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
    
     ![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
-2. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
-3. Set the **[Items](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+2. Add three **[Drop down](../maker/controls/control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.
+3. Set the **[Items](properties-core.md)** property of each **[Drop down](../maker/controls/control-drop-down.md)** control to one of these values:
    
    * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
    * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
    * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
      
      ![Flooring names in dropdown lists](./media/control-list-box/flooring-names.png)
-4. Set the **[Visible](properties-core.md)** property of each **[Drop down](control-drop-down.md)** control to one of these values:
+4. Set the **[Visible](properties-core.md)** property of each **[Drop down](../maker/controls/control-drop-down.md)** control to one of these values:
    
    * CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
    * HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
@@ -141,7 +141,7 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
      Want more information about the **[If](../functions/function-if.md)** function or [other functions](../maker/formula-reference.md)?
 5. Press F5, and then choose one or more items in **CategoryList**.
    
-    The appropriate **[Drop down](control-drop-down.md)** control or controls appear based on your choice or choices.
+    The appropriate **[Drop down](../maker/controls/control-drop-down.md)** control or controls appear based on your choice or choices.
    
     ![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
 6. (optional) Press Esc to return to the default workspace.

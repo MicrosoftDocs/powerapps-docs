@@ -34,7 +34,7 @@ The **SortByColumns** function can also be used to sort a table based on one or 
 
 The parameter list for **SortByColumns** provides the names of the columns to sort by and the sort direction per column.  Sorting is performed in the order of the parameters (sorted first by the first column, then the second, and so on).  Column names are specified as strings, requiring double quotes if directly included in the parameter list.  For example, **SortByColumns( CustomerTable, "LastName" )**.
 
-You can combine **SortByColumns** with a **[Drop down](../controls/control-drop-down.md)** or **[List box](../controls/control-list-box.md)** control to enable users to select which column to sort by.
+You can combine **SortByColumns** with a **[Drop down](../maker/controls/control-drop-down.md)** or **[List box](../controls/control-list-box.md)** control to enable users to select which column to sort by.
 
 In addition to sorting ascending or descending, **SortByColumns** can sort based on a single column table of values.  For example, you can sort record based on the name of a day of the week by supplying **[ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]** as the sort order.  All records which have **Monday"** will come first, followed by **Tuesday**, and so on.  Records found that do not appear in the sort table are put at the end of the list.
 

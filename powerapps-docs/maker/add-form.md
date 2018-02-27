@@ -30,7 +30,7 @@ To show all fields in a record, add and configure a **[Display form](../controls
 * If you're using an existing app, [add a screen](add-screen-context-variables.md) to it.
 
 ## Add a form, and show data
-1. Add a **[Drop down](../controls/control-drop-down.md)** control, name it **ChooseProduct**, and set its **[Items](../controls/properties-core.md)** property to this value:
+1. Add a **[Drop down](controls/control-drop-down.md)** control, name it **ChooseProduct**, and set its **[Items](../controls/properties-core.md)** property to this value:
 
     **FlooringEstimates.Name**
 

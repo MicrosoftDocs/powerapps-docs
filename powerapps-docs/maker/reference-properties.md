@@ -50,7 +50,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Display form](../controls/control-form-detail.md)** – Display records in a data source using a form.
 
-**[Drop down](../controls/control-drop-down.md)** – Show the first item in a list until a chevron is selected.
+**[Drop down](controls/control-drop-down.md)** – Show the first item in a list until a chevron is selected.
 
 **[Edit form](../controls/control-form-detail.md)** – Edit and create records in a data source using a form.
 
@@ -153,9 +153,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[CheckmarkFill](controls/control-check-box.md)** – The color of the checkmark in a checkbox control.  Applies to the **[Check box](controls/control-check-box.md)** control.
 
-**[ChevronBackground](../controls/control-drop-down.md)** – The color behind the down arrow in a dropdown list.  Applies to the **[Drop down](../controls/control-drop-down.md)** control.
+**[ChevronBackground](controls/control-drop-down.md)** – The color behind the down arrow in a dropdown list.  Applies to the **[Drop down](controls/control-drop-down.md)** control.
 
-**[ChevronFill](../controls/control-drop-down.md)** – The color of the down arrow in a dropdown list.  Applies to the **[Drop down](../controls/control-drop-down.md)** control.
+**[ChevronFill](controls/control-drop-down.md)** – The color of the down arrow in a dropdown list.  Applies to the **[Drop down](controls/control-drop-down.md)** control.
 
 **[Clear](../controls/control-text-input.md)** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.  Applies to the **[Text input](../controls/control-text-input.md)** control.
 
@@ -408,13 +408,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Reset](../controls/properties-core.md)** – Whether a control reverts to its default value.  Applies to many controls.  Also see the **[Reset](../functions/function-reset.md)** function.
 
 ### S
-**Selected** – The selected item.  Applies to **[Drop down](../controls/control-drop-down.md)** and **[Gallery](../controls/control-gallery.md)** controls.
+**Selected** – The selected item.  Applies to **[Drop down](controls/control-drop-down.md)** and **[Gallery](../controls/control-gallery.md)** controls.
 
 **[SelectedDate](controls/control-date-picker.md)** – The date currently selected in a date control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
-**[SelectionColor](../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](../controls/control-drop-down.md)**, **[List Box](../controls/control-list-box.md)**, and **[Pen input](../controls/control-pen-input.md)** controls.
+**[SelectionColor](../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](controls/control-drop-down.md)**, **[List Box](../controls/control-list-box.md)**, and **[Pen input](../controls/control-pen-input.md)** controls.
 
-**[SelectionFill](../controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](../controls/control-drop-down.md)** and **[List Box](../controls/control-list-box.md)** controls.
+**[SelectionFill](../controls/properties-color-border.md)** – The background color of a selected item or items in a list or a selected area of a pen control.  Applies to **[Drop down](controls/control-drop-down.md)** and **[List Box](../controls/control-list-box.md)** controls.
 
 **[SelectionThickness](../controls/control-pen-input.md)** – The thickness of the selection tool for a pen-input control.  Applies to the **[Pen input](../controls/control-pen-input.md)** control.
 

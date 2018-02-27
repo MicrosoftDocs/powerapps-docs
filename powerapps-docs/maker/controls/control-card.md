@@ -52,7 +52,7 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 **DisplayMode** – Values can be **Edit, View,** or **Disabled**. Configures whether the control inside the card allows user input (**Edit**), only displays data (**View**) or is disabled (**Disabled**).  
 
 * Allows a single card to be used in both edit and view forms, by configuring this property, which is tied to the Form's behavior by default.
-* In **View** mode, child controls such as **[Text input](../../controls/control-text-input.md)**, **[Drop down](../../controls/control-drop-down.md)**, **[Date Picker](control-date-picker.md)** will only display the text value and will not render any interactive elements or decorations.
+* In **View** mode, child controls such as **[Text input](../../controls/control-text-input.md)**, **[Drop down](control-drop-down.md)**, **[Date Picker](control-date-picker.md)** will only display the text value and will not render any interactive elements or decorations.
 
 **DisplayName** – The user friendly name for a field in a data source.
 
