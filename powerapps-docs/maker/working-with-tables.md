@@ -170,7 +170,7 @@ You've taken the **Selected** property, which is a record, and extracted the **H
 
 You can also use a record as a general-purpose container for related named values.
 
-* If you build a formula around the **[UpdateContext](../functions/function-updatecontext.md)** and **[Navigate](functions/function-navigate.md)** functions, use a record to gather the [context variables](working-with-variables.md#create-a-context-variable) that you want to update.
+* If you build a formula around the **[UpdateContext](functions/function-updatecontext.md)** and **[Navigate](functions/function-navigate.md)** functions, use a record to gather the [context variables](working-with-variables.md#create-a-context-variable) that you want to update.
 * Use the **[Updates](controls/control-form-detail.md)** property on an **[Edit form](controls/control-form-detail.md)** control to gather the changes that have been made by the user in a form.
 * Use the **[Patch](functions/function-patch.md)** function to update a data source but also to merge records.
 

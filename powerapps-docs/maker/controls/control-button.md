@@ -123,7 +123,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 2. Add a **Button** control, set its **[Text](properties-core.md)** property to "Add", and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **UpdateContext({Total:Total + Value(Source.Text)})**
    
-    Want more information about the **[UpdateContext](../../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[UpdateContext](../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
 3. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to **Total**, and then press **F5**.
 4. Clear the default text from **Source**, type a number in it, and then click or tap **Add**.
    

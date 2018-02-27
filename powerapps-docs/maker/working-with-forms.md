@@ -334,7 +334,7 @@ In the app that PowerApps generated from data, we neglected to discuss two contr
 When the user selects the sort button, the sort order of the gallery reverses. To create this behavior, we use a *context variable* to track the direction in which the gallery is sorted. When the user selects the button, the variable is updated, and the direction reverses. The **[OnSelect](controls/properties-core.md)** property of the sort button is set to this formula:
 **UpdateContext( {SortDescending1: !SortDescending1} )**
 
-The **[UpdateContext](../functions/function-updatecontext.md)** function creates the **SortDescending1** context variable if it doesn't already exist. The function will read the value of the variable and set it to the logical opposite by using the **!** operator. If the value is *true*, it becomes *false*. If the value is *false*, it becomes *true*.
+The **[UpdateContext](functions/function-updatecontext.md)** function creates the **SortDescending1** context variable if it doesn't already exist. The function will read the value of the variable and set it to the logical opposite by using the **!** operator. If the value is *true*, it becomes *false*. If the value is *false*, it becomes *true*.
 
 The formula for the **[Items](controls/properties-core.md)** property of the **[Gallery](controls/control-gallery.md)** control uses this context variable, along with the text in the **TextSearchBox1** control:
 

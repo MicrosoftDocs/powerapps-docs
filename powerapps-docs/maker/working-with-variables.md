@@ -147,7 +147,7 @@ Let's look at how our adding machine would be created using a context variable i
 
 How context variables work:
 
-* You create and set context variables by using the **[UpdateContext](../functions/function-updatecontext.md)** function.  If a context variable doesn't already exist when first updated, it will be created with a default value of *blank*.
+* You create and set context variables by using the **[UpdateContext](functions/function-updatecontext.md)** function.  If a context variable doesn't already exist when first updated, it will be created with a default value of *blank*.
 * You create and update context variables with records. In other programming tools, you commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead. When you use a context variable, use its name directly.  
 * You can also set a context variable when a screen is displayed, by using the **[Navigate](../functions/function-navigate.md)** function. If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
 * Except for **[Navigate](../functions/function-navigate.md)**, context variables are limited to the context of a single screen, which is where they get their name.  You can't use or set them outside of this context.
@@ -163,14 +163,14 @@ Let's rebuild our adding machine by using a context variable:
    
     **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**
    
-    The first time a user selects the **Add** button and **[UpdateContext](../functions/function-updatecontext.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
+    The first time a user selects the **Add** button and **[UpdateContext](functions/function-updatecontext.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
    
     ![](media/working-with-variables/context-variable-1.png)
 4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **UpdateContext( { RunningTotal: 0 } )**
    
-    Again, **[UpdateContext](../functions/function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
+    Again, **[UpdateContext](functions/function-updatecontext.md)** is used with the formula **UpdateContext( { RunningTotal: 0 } )**.
    
     ![](media/working-with-variables/context-variable-2.png)
 5. Add a **[Label](controls/control-text-box.md)** control, and set its **[Text](controls/properties-core.md)** property to **RunningTotal**.
