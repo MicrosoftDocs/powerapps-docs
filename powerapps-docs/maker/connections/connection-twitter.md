@@ -27,7 +27,7 @@ You can display this information in a label on your app. For example, you can ad
 
 This topic shows you how to create the Twitter connection, use the Twitter connection in an app, and lists the available functions.
 
-[!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## Connect to Twitter
 1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
@@ -50,11 +50,11 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 1. On the **Insert** menu, select **Gallery**, and add any of the **With text** galleries.
 2. Let's show some timelines:  
    
-   * To show the current user's timeline, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formulas:
+   * To show the current user's timeline, set the **[Items](../../controls/properties-core.md)** property of the gallery to the following formulas:
      
        `Twitter.HomeTimeline().TweetText`  
        `Twitter.HomeTimeline({maxResults:3}).TweetText`  
-   * To show another user's timeline, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
+   * To show another user's timeline, set the **[Items](../../controls/properties-core.md)** property of the gallery to the following formula:  
      
        `Twitter.UserTimeline( *TwitterHandle* ).TweetText`
      
@@ -79,11 +79,11 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 ### Show followers
 1. Using a **With text** gallery, let's show some followers:  
    
-   * To show the current user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
+   * To show the current user's followers, set the **[Items](../../controls/properties-core.md)** property of the gallery to the following formula:  
      
        `Twitter.MyFollowers()`  
        `Twitter.MyFollowers({maxResults:3})`
-   * To show the another user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
+   * To show the another user's followers, set the **[Items](../../controls/properties-core.md)** property of the gallery to the following formula:  
      
        `Twitter.Followers( *TwitterHandle* )`
      
@@ -108,11 +108,11 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 ### Show followed users
 1. Using a **With text** gallery, let's show some followed users:  
    
-   * To show which users the current user is following, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
+   * To show which users the current user is following, set the **[Items](../../controls/properties-core.md)** property of the gallery to the following formula:  
      
        `Twitter.MyFollowing()`  
        `Twitter.MyFollowing({maxResults:3})`
-   * To show which users another user is following, set the **[Items](../controls/properties-core.md)** property of the gallery to to the following formula:
+   * To show which users another user is following, set the **[Items](../../controls/properties-core.md)** property of the gallery to to the following formula:
      
        `Twitter.Following( *TwitterHandle* )`
      
@@ -131,7 +131,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
     The gallery now shows the values of the properties you chose.
 
 ### Show information about a user
-Add a label, and then set its **[Text](../controls/properties-core.md)** property to one of these formulas:  
+Add a label, and then set its **[Text](../../controls/properties-core.md)** property to one of these formulas:  
 
 * `twitter.User( *TwitterHandle* ).Description`
 * `twitter.User( *TwitterHandle* ).FullName`
@@ -147,7 +147,7 @@ Enter a Twitter handle in double quotation marks or an equivalent value. For exa
 Or, you can use an input text control to type in a Twitter handle, just as we have throughout this topic.
 
 ### Search tweets
-1. Using a **With text** gallery, set its **[Items](../controls/properties-core.md)** property to the following formula:  
+1. Using a **With text** gallery, set its **[Items](../../controls/properties-core.md)** property to the following formula:  
    
     `Twitter.SearchTweet( *SearchTerm* ).TweetText`
    
@@ -168,7 +168,7 @@ Or, you can use an input text control to type in a Twitter handle, just as we ha
 
 ### Send a tweet
 1. Add a text input control, and then rename it **MyTweet**.
-2. Add a button, and then set its **[OnSelect](../controls/properties-core.md)** property to the following formula:  
+2. Add a button, and then set its **[OnSelect](../../controls/properties-core.md)** property to the following formula:  
     `Twitter.Tweet({tweetText: MyTweet.Text})`
 3. Press F5, or select the Preview button (![](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
 4. Press Esc to return to the default workspace.
@@ -375,6 +375,6 @@ When a new tweet appears: Triggers a workflow when a new tweet is posted which m
 | value |array |No | |
 
 ## Helpful links
-See all the [available connections](../maker/connections-list.md).  
-Learn how to [add connections](../maker/add-manage-connections.md) to your apps.
+See all the [available connections](../connections-list.md).  
+Learn how to [add connections](../add-manage-connections.md) to your apps.
 

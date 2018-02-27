@@ -47,7 +47,7 @@ Standard connectors behave differently depending on the type of data source they
     > [!NOTE]
 > To connect to data in Excel, the workbook must be hosted in a cloud-storage service like OneDrive. For more information, see [Connect to cloud-storage from PowerApps](connections/cloud-storage-blob-connections.md).
 
-* Other connectors work with function-based data sources, such as Twitter, Facebook, and Office 365 Outlook. When working with these data sources, data is returned to PowerApps based on calling specific functions in the underlying service. For example, with the Twitter connector you call `Twitter.MyFollowers()` to return a list of your followers. You can still use this data in a form or gallery, but it requires a little more work than tabular data. For more information, see [Connect to Twitter from PowerApps](../connections/connection-twitter.md).
+* Other connectors work with function-based data sources, such as Twitter, Facebook, and Office 365 Outlook. When working with these data sources, data is returned to PowerApps based on calling specific functions in the underlying service. For example, with the Twitter connector you call `Twitter.MyFollowers()` to return a list of your followers. You can still use this data in a form or gallery, but it requires a little more work than tabular data. For more information, see [Connect to Twitter from PowerApps](connections/connection-twitter.md).
 
 ## All connectors
 The following table lists all our connectors. For more information about each connector, see the [Microsoft Connector Reference](https://docs.microsoft.com/connectors/). Premium connectors require PowerApps Plan 1 or Plan 2. For more information, see [PowerApps Plans](https://powerapps.microsoft.com/pricing/).
