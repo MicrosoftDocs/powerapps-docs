@@ -279,7 +279,7 @@ Other elements include:
 
 **[ShowColumns](../functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
-**[Shuffle](../functions/function-shuffle.md)** – Randomly reorders the records of a table.
+**[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
 
 **[Sin](../functions/function-trig.md)** – Returns the sine of an angle specified in radians.
 

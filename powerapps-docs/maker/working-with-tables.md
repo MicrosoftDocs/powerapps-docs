@@ -124,7 +124,7 @@ Many functions in PowerApps take the name of a table as an argument, create a se
 * **[Concatenate](functions/function-concatenate.md)** - Concatenates multiple columns of strings, resulting in a single-column table of strings.
 * **[AddColumns](../functions/function-table-shaping.md)**, **[DropColumns](../functions/function-table-shaping.md)**, **[RenameColumns](../functions/function-table-shaping.md)**, **[ShowColumns](../functions/function-table-shaping.md)** - Column manipulation of the table, resulting in a new table with different columns.
 * **[Distinct](functions/function-distinct.md)** - Removes duplicates records.
-* **[Shuffle](../functions/function-shuffle.md)** - Shuffles records into a random order.
+* **[Shuffle](functions/function-shuffle.md)** - Shuffles records into a random order.
 * **[HashTags](functions/function-hashtags.md)** - Searches for hashtags in a string.
 * **[Errors](functions/function-errors.md)** - Provides error information when you work with a data source.
 
