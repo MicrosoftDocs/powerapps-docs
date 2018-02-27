@@ -24,7 +24,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ## Controls
 **[Add picture](controls/control-add-picture.md)** – Load images from the local device, for upload to a data source.
 
-**[Attachments](../controls/control-attachments.md)** – Download and upload files from the local device to a data source.
+**[Attachments](controls/control-attachments.md)** – Download and upload files from the local device to a data source.
 
 **[Audio](../controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 

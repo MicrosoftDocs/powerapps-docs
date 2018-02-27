@@ -25,7 +25,7 @@ A control that allows users to download files to their device.  Upload functiona
 An **Attachments** control lets you open files stored on a data source.
 
 ## Key properties
-**[Items](properties-core.md)** – The source describing the files that can be downloaded.
+**[Items](../../controls/properties-core.md)** – The source describing the files that can be downloaded.
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
@@ -33,30 +33,30 @@ An **Attachments** control lets you open files stored on a data source.
 
 **OnRemove** – How the app responds when the user deletes an existing attachment.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user clicks on an attachment.
+**[OnSelect](../../controls/properties-core.md)** – How the app responds when the user clicks on an attachment.
 
 ## Additional properties
 **AddAttachmentText** – The label text for the button used to add a new attachment.
 
-**[BorderColor](properties-color-border.md)** – The color of a control's border.
+**[BorderColor](../../controls/properties-color-border.md)** – The color of a control's border.
 
-**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[BorderStyle](../../controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+**[BorderThickness](../../controls/properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](../../controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Height](../../controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **NoAttachmentsText** – Instructional text shown to the user when there are no attachments to show.
 
-**[Visible](properties-core.md)** – Whether a control is visible or hidden.
+**[Visible](../../controls/properties-core.md)** – Whether a control is visible or hidden.
 
-**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+**[Width](../../controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or screen, if no parent container).
+**[X](../../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or screen, if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or screen, if no parent container).
+**[Y](../../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or screen, if no parent container).
 
 
 ## Example
@@ -70,4 +70,4 @@ An **Attachments** control lets you open files stored on a data source.
 
     The Attachments field associated with the SharePoint list will appear in the form.
 
-Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
+Don't know how to [add and configure a control](../add-configure-controls.md)?
