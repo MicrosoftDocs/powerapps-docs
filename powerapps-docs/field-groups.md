@@ -61,7 +61,7 @@ Deleting a field group isn't currently supported.
 2. There is an Excel icon next to each field group. The Excel icon is enabled only if the field group has fields.
 3. Click the Excel icon for the field group that you want to open in Excel. A workbook is generated containing the entity field list, the Excel Add-in, and a pointer to your environment.
 4. Open the generated workbook that's provided by the browser.
-5. After the workbook is open, enable editing. The Excel Add-in will then read the data into the workbook. For more information, see [Open entity data in Excel](data-platform-interactive-excel.md).
+5. After the workbook is open, enable editing. The Excel Add-in will then read the data into the workbook. For more information, see [Open entity data in Excel](maker/data-platform-interactive-excel.md).
 
 ## Field group usage
 The default field groups help speed up application authoring and customization. Some places where you can currently see field groups in action are:
