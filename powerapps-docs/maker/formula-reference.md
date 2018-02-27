@@ -82,9 +82,9 @@ Other elements include:
 
 **[Compass](../functions/signals.md)** – Returns your compass heading.
 
-**[Concat](../functions/function-concatenate.md)** – Concatenates strings in a data source.  
+**[Concat](functions/function-concatenate.md)** – Concatenates strings in a data source.  
 
-**[Concatenate](../functions/function-concatenate.md)** – Concatenates strings.
+**[Concatenate](functions/function-concatenate.md)** – Concatenates strings.
 
 **[Connection](../functions/signals.md)** – Returns information about your network connection.
 

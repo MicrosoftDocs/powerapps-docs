@@ -26,7 +26,7 @@ The **Split** function breaks a text string into a table of substrings.  Use **S
 
 A separator string is used to break the text string apart.  The separator can be zero, one, or more characters that are matched as a whole in the text string.  Using a zero length or *blank* string results in each character being broken out individually.  The matched separator characters are not returned in the result.  If no separator match is found then the entire text string is returned as a single result.
 
-Use the **[Concat](function-concatenate.md)** function to recombine the string (without the separators).  
+Use the **[Concat](../maker/functions/function-concatenate.md)** function to recombine the string (without the separators).  
 
 ## Syntax
 **Split**( *Text*, *Separator* )
