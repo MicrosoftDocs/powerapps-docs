@@ -31,7 +31,7 @@ For information about how to create an app, see [Generate an app automatically](
 
 For information about how to add data from Dynamics AX to an existing app, see [Add a data connection](../maker/add-data-connection.md).
 
-See the [list of available connections](../connections-list.md), and learn how to [manage connections](../maker/add-manage-connections.md) in PowerApps.
+See the [list of available connections](../maker/connections-list.md), and learn how to [manage connections](../maker/add-manage-connections.md) in PowerApps.
 
 ### Next steps
 * Learn how to [show data from a data source](../maker/add-gallery.md).

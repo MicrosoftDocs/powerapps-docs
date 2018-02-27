@@ -19,7 +19,7 @@ ms.author: anneta
 
 ---
 # Scan a barcode in Microsoft PowerApps
-Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](connections-list.md).
+Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](maker/connections-list.md).
 
 If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 

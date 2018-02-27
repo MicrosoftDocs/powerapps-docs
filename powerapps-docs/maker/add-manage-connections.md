@@ -21,7 +21,7 @@ ms.author: archanan
 # Manage your connections in PowerApps
 In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, delete a connection, or update its credentials.
 
-Your app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and many other [data sources](../connections-list.md).
+Your app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and many other [data sources](connections-list.md).
 
 Your next step after this article is to display and manage data from the data source in your app, as in these examples:
 

@@ -22,7 +22,7 @@ ms.author: mblythe
 If you want to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service, the PowerApps Community Plan is the right plan for you. The PowerApps Community Plan gives you a free development environment for individual use, where you can:
 
 * Learn to build business apps and workflows with the full functionality of PowerApps and Microsoft Flow.
-* Connect to any data source by using our 100+ [out of the box connectors](connections-list.md) or by creating your own [custom connectors](register-custom-api.md).
+* Connect to any data source by using our 100+ [out of the box connectors](maker/connections-list.md) or by creating your own [custom connectors](register-custom-api.md).
 * Explore how you can use [the Common Data Service](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
 * Export the solutions you create in your individual environment, and [list them on AppSource](dev-appsource-test-drive.md) so your customers can test-drive them.
 

@@ -24,7 +24,7 @@ Welcome to PowerApps! PowerApps is a service that lets you build business apps t
 If you're new to app building, PowerApps provides templates and sample data that you can use to quickly build an app, and then you can customize the app to better suit your needs. With some experience and creativity, you'll soon be developing your own apps from scratch. If you're a seasoned developer, you can take advantage of the advanced functionality and truly innovate. If you can imagine it, you can build it!
 
 ## Generate an app automatically
-It's easy to automatically generate an app in PowerApps. All you need to do is specify where you want your data to come from. Data is stored in a [data source](connections-list.md), and you can use data from a variety of data sources. Here are some common ones:
+It's easy to automatically generate an app in PowerApps. All you need to do is specify where you want your data to come from. Data is stored in a [data source](maker/connections-list.md), and you can use data from a variety of data sources. Here are some common ones:
 
 * Common Data Service (included with PowerApps) - a powerful way to store your business data
 * SharePoint

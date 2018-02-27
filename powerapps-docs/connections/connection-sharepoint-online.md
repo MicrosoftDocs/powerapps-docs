@@ -137,4 +137,4 @@ To show data from any of these types of columns in a gallery, use the formula ba
 ## Next steps
 * Learn how to [show data from a data source](../maker/add-gallery.md).
 * Learn how to [view details and create or update records](../maker/add-form.md).
-* See other types of [data sources](../connections-list.md) to which you can connect.
+* See other types of [data sources](../maker/connections-list.md) to which you can connect.

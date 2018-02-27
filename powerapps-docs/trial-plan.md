@@ -26,7 +26,7 @@ Sign up for the PowerApps Plan 2 Trial to get all functionality free for 90 days
   
     ![](./media/trial-plan/premium-connectors.png)
   
-    In the [complete list of connectors](connections-list.md), premium connectors appear with a badge:
+    In the [complete list of connectors](maker/connections-list.md), premium connectors appear with a badge:
   
     ![](./media/trial-plan/premium-badge.png)
 * **Access to the PowerApps admin center**, in which you can manage your environments, databases, user permissions, and data policies.  [Learn more](introduction-to-the-admin-center.md)

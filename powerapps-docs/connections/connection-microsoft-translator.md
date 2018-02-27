@@ -161,6 +161,6 @@ Text to speech: Converts a given text into speech as an audio stream in wave for
 None.
 
 ## Helpful links
-See all the [available connections](../connections-list.md).  
+See all the [available connections](../maker/connections-list.md).  
 Learn how to [add connections](../maker/add-manage-connections.md) to your apps.
 
