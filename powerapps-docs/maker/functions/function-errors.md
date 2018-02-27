@@ -38,7 +38,7 @@ The **Errors** function returns a [table](../working-with-tables.md) of errors t
 
 | ErrorKind | Description |
 | --- | --- |
-| ErrorKind.Conflict |Another change was made to the same record, resulting in a change conflict.  Use the **[Refresh](../../functions/function-refresh.md)** function to reload the record and try the change again. |
+| ErrorKind.Conflict |Another change was made to the same record, resulting in a change conflict.  Use the **[Refresh](function-refresh.md)** function to reload the record and try the change again. |
 | ErrorKind.ConstraintViolation |One or more constraints have been violated. |
 | ErrorKind.CreatePermission |An attempt was made to create a record, and the current user doesn't have permission to create records. |
 | ErrorKind.DeletePermission |An attempt was made to delete a record, and the current user doesn't have permission to delete records. |

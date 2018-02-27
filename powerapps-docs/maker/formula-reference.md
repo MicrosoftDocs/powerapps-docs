@@ -242,7 +242,7 @@ Other elements include:
 
 **[Rand](functions/function-rand.md)** – Returns a pseudo-random number.
 
-**[Refresh](../functions/function-refresh.md)** – Refreshes the records of a data source.
+**[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
 **[Remove](../functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
 

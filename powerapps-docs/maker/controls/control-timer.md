@@ -105,7 +105,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Refresh**( *DataSource* )](../../functions/function-refresh.md)
+[**Refresh**( *DataSource* )](../functions/function-refresh.md)
 
 ## Examples
 ### Show a countdown

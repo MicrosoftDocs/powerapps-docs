@@ -54,7 +54,7 @@ You can use table data sources the same way that you use an internal PowerApps t
   
     > [!NOTE]
 > For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
-* The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](../functions/function-refresh.md)** function.
+* The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](functions/function-refresh.md)** function.
 * As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
   * Records can be created with the **[Patch](functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  
   * Records can be modified with the **[Patch](functions/function-patch.md)**, **[Update](../functions/function-update-updateif.md)**, and **[UpdateIf](../functions/function-update-updateif.md)** functions.
@@ -73,7 +73,7 @@ The diagram above shows the flow of information when an app reads the informatio
 
 * The information is stored and shared through a storage service (in this case, a SharePoint list of an Office 365 site).
 * A connection makes this information available to the app.  The connection takes care of authentication of the user to access the information.
-* When the app is started or the **[Refresh](../functions/function-refresh.md)** function is pressed, information is drawn from the connection into a data source in the app for local use.
+* When the app is started or the **[Refresh](functions/function-refresh.md)** function is pressed, information is drawn from the connection into a data source in the app for local use.
 * Formulas are used to read the information and expose it in controls that the user can see. You can display the records of a data source by using a gallery on a screen and wiring the **[Items](controls/properties-core.md)** property to the data source: **Gallery.Items = DataSource**.  You wire controls within the gallery, to the gallery, using the controls' **[Default](controls/properties-core.md)** property.  
 * The data source is also a table.  So you can use **[Filter](functions/function-filter-lookup.md)**, **[Sort](../functions/function-sort.md)**, **[AddColumns](../functions/function-table-shaping.md)**, and other functions to refine and augment the data source before using it as a whole.  You can also use the **[Lookup](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, and other functions to work with individual records.
 

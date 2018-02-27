@@ -96,7 +96,7 @@ Derived from the **Mode** property based and cannot be set independently:
 
 | ErrorKind | Description |
 | --- | --- |
-| **ErrorKind.Conflict** |Another user changed the same record, resulting in a change conflict. Execute the **[Refresh](../../functions/function-refresh.md)** function to reload the record, and try the change again. |
+| **ErrorKind.Conflict** |Another user changed the same record, resulting in a change conflict. Execute the **[Refresh](../functions/function-refresh.md)** function to reload the record, and try the change again. |
 | **ErrorKind.None** |The error is of an unknown kind. |
 | **ErrorKind.Sync** |The data source reported an error. Check the **Error** property for more information. |
 | **ErrorKind.Validation** |A general validation issue was detected. |
