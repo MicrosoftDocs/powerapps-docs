@@ -63,7 +63,7 @@ Some data sources can detect when two people try to update the same record at th
 ### Layout
 By default, cards are placed in a single column for phone apps and three columns for tablet apps. You can specify how many columns a form has and whether cards should snap to them as you configure the form. These settings aren't exposed as properties because they're used only to set the **X**, **Y**, and **Width** properties of the cards.
 
-For more information, see [Understand data form layout](../working-with-form-layout.md).
+For more information, see [Understand data form layout](../maker/working-with-form-layout.md).
 
 ## Key properties
 **DataSource** – The data source that contains the record that the user will show, edit, or create.

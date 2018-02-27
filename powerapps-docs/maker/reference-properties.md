@@ -492,7 +492,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### W
 **[Width](../controls/properties-size-location.md)** – The distance between a control's left and right edges.  Applies to many controls.
 
-**[WidthFit](../controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space of a container control such as an **[Edit form](../controls/control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](../working-with-form-layout.md).
+**[WidthFit](../controls/properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space of a container control such as an **[Edit form](../controls/control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](working-with-form-layout.md).
 
 **[Wrap](../controls/control-text-box.md)** – Whether text that's too long to fit in a label wraps to the next line.  Applies to the **[Label](../controls/control-text-box.md)** control.
 

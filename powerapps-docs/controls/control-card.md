@@ -75,7 +75,7 @@ See [Understand data cards](../maker/working-with-cards.md) for examples of how 
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[WidthFit](properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space in a container control such as an **[Edit form](control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](../working-with-form-layout.md).
+**[WidthFit](properties-size-location.md)** – Whether a control automatically grows horizontally to fill any empty space in a container control such as an **[Edit form](control-form-detail.md)** control. If multiple cards have this property set to **true**, the space is divided between them. For more information, see [Understand data form layout](../maker/working-with-form-layout.md).
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -97,5 +97,5 @@ See [Understand data cards](../maker/working-with-cards.md) for examples of how 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). For a **[Card](control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
 
 ## Examples
-See [Understand data cards](../maker/working-with-cards.md) and [Understand data form layout](../working-with-form-layout.md) for examples.
+See [Understand data cards](../maker/working-with-cards.md) and [Understand data form layout](../maker/working-with-form-layout.md) for examples.
 
