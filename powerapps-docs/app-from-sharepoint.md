@@ -1,83 +1,59 @@
 ---
-title: Generate an app to manage data in a SharePoint list | Microsoft Docs
-description: Generate a three-screen app to manage data in a SharePoint list, whether the site is on-premises or in the cloud.
+title: Create an app from SharePoint | Microsoft Docs
+description: Use PowerApps to automatically create an app using a SharePoint list, hosted on-premises or in the cloud
 services: ''
 suite: powerapps
 documentationcenter: na
 author: skjerland
 manager: anneta
-editor: ''
-tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
+ms.topic: quickstart
+ms.custom: mvc 
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 06/05/2017
-ms.author: sharik
+ms.date: 01/22/2018
+ms.author: mandia
 
 ---
-# Generate an app to manage data in a SharePoint list
+# Quickstart: Create an app using SharePoint
+
+This quickstart shows how to automatically create your first app using a SharePoint Online list within PowerApps. In this article, you create a new app, select an existing SharePoint Online list, and then see what you created. Every generated app automatically includes screens to browse records, show record details, and create or update records. This is a quick way to get a working app using your SharePoint data. You can also customize the app.
+
+To follow this quickstart, you need a SharePoint Online URL that also has a SharePoint list.
+
+If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=). 
+
+## Sign in to PowerApps 
+
+Open a web browser, and go to [https://web.powerapps.com]([https://web.powerapps.com). Sign in with your account. 
+
+## Choose a site and list
+
+1. In the left menu, select **Apps**, and then select **Create an app**. 
+
+2. In **Start with your data**, select **SharePoint**. You may have to select **Connect directly (cloud services)**, and **Create** the connection. 
+
+3. Enter the URL to your SharePoint site,and select **Go**. For example, enter  something like `https://microsoft.sharepoint.com/teams/TeamName`.  
+
+4. **Choose a list**, and **Connect**. It may take a few minutes to create your app.
+
+    ![Choose your SharePoint list](./media/app-from-sharepoint/select-sharepoint-list-connect.png)
 
 
+## View your app    
+In PowerApps Studio, select **See a preview of this app**. Play the app. Select the different options, and use the arrows to navigate within your app. You can also sort the list, and add new items to the list. 
 
-In PowerApps, generate a three-screen app automatically to manage data in a SharePoint list, whether the site is on-premises or in the cloud.
+![Preview your app](./media/app-from-sharepoint/sharepoint-list-app.png)
 
-By default, every generated app has a screen for browsing records, a screen for showing details of a record, and a screen for creating or updating records. The initial layout and content for each screen is automatically determined, but you'll probably need to customize the app to suit your needs.
+## Clean up your resources
+Apps aren't saved until you save them. If you want to keep this app, then save it (Ctrl + S). If you don't want to save this app, then close it using `Ctrl + F4`, or go to the **File** menu, and select **Close**. 
 
-If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
-
-As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
-
-> [!NOTE]
-> If any column name contains a space, PowerApps will show it as **"\_x0020\_"**. For example **"Column Name"** will display as **"Column_x0020_Name"**.
-
-## Specify a SharePoint app
-1. If you haven't already created a [connection to SharePoint](connect-to-sharepoint.md), create one.
-2. Open PowerApps in *either* of these ways:
-   
-   * [Install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in using the same credentials that you used to sign up. Near the left edge, click or tap **New**.
-     
-       ![New option on the File menu](./media/app-from-sharepoint/file-menu.png)
-   * [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
-     
-       For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](create-app-browser.md).
-3. Under **Start with your data**, click or tap **Phone layout** on the SharePoint tile.
-   
-    ![](./media/app-from-sharepoint/sharepoint-tile.png)
-
-## Specify a site and a list
-1. Under **Connect to a SharePoint site**, type or paste the URL to the site that contains the list that you want to use, and then click or tap **Go**.
-   
-    > [!NOTE]
-> Don't include a specific list in the URL.
-   
-    ![](./media/app-from-sharepoint/specify-site.png)
-2. Under **Choose a list**, click or tap the name of the list that you want to use.
-   
-    You can sort the list names alphabetically by clicking or tapping the sort button.
-   
-    ![](./media/app-from-sharepoint/sort-button.png)
-   
-    You can also type or paste at least one letter in the search box to show only those list names that contain the text that you specify.
-   
-    ![](./media/app-from-sharepoint/choose-list.png)
-   
-    Not all types of lists appear by default. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the list name in the box that contains **Enter custom list name**.
-   
-    ![](./media/app-from-sharepoint/custom-list.png)
-3. Click or tap **Connect** to generate the app.
-   
-    ![Connect button](./media/app-from-sharepoint/connect-button.png)
-4. If you're prompted to take the intro tour, click or tap **Next** to get familiar with key areas of the PowerApps interface (or click or tap **Skip**).
-   
-    ![Opening screen of the intro tour](./media/app-from-sharepoint/quick-tour.png)
-   
-    You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
+To remove the SharePoint connection, go to the **File** menu, and select **Connections**. In the list, select your connection, and then **Delete**.
 
 ## Next steps
-* To save the app that you've just generated, press Ctrl-S.
-* To customize the browse screen (which appears by default), see [Customize a layout](customize-layout-sharepoint.md).
-* To customize the details or edit screens, see [Customize a form](customize-forms-sharepoint.md).
+In this quick start, you created an app using existing data in a SharePoint list. To get more hands-on experience creating apps, use one of our templates.
 
+> [!div class="nextstepaction"]
+> [Create and run an app from a template](get-started-test-drive.md)

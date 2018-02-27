@@ -1,134 +1,57 @@
 ---
-title: Generate an app using a Common Data Service database | Microsoft Docs
-description: Generate an app to add, update, and delete records.
+title: Create an app using Common Data Service | Microsoft Docs
+description: Use PowerApps to automatically create an app using a common data service (CDS) database to add, update, or delete records
 services: powerapps
 documentationcenter: na
 author: kfend
-manager: kfend
-editor: ''
-tags: ''
+manager: anneta
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
+ms.topic: quickstart
+ms.custom: mvc
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/06/2016
-ms.author: kfend
+ms.date: 01/22/2018
+ms.author: mandia
 
 ---
-# Generate an app by using a Common Data Service database
-You can automatically generate an app to manage data that is stored in Common Data Service. You can manage data in one of the many standard entities that are built into the model, or in a custom entity that you or someone else in your organization creates.
+# Quickstart: Create an app using Common Data Service
 
-If you're unfamiliar with Common Data Service, see [Understand entities](data-platform-intro.md).
+This quickstart shows how to automatically create your first app using a Common Data Service database within PowerApps. In this article, you create a new app, select a Common Data Service entity, and then see what you created. Every generated app automatically includes screens to browse records, show record details, and create or update records. This is a quick way to get a working app using Common Data Service. You can also customize the app. 
 
-This topic describes how to automatically generate an app that is based on a single entity that you specify. For information about how to build an app that is based on more than one entity, see [Build an app from scratch](data-platform-create-app-scratch.md).
+This app can access data in standard entities that are built-in, or in a custom entity that you or someone in your organization creates. [Understand entities](data-platform-intro.md) is a good resource to get acquainted with Common Data Service. 
 
-By default, every app that Microsoft PowerApps generates has three screens:
+To follow this quickstart, you need to create a [Common Data Service database](create-database.md). Be sure you **Create a database** to get sample data.
 
-* The browse screen shows a subset of one or more fields, a search bar, and a sort button that lets users easily find a specific record.
-* The details screen shows more or all fields for a specific record.
-* The edit screen provides UI elements that let users create or update a record and save their changes.
+If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=).
 
-> [!NOTE]
-> When you generate an app from Common Data Service, you don't have to create a connection from PowerApps, as you do for data sources such as SharePoint, Dynamics 365, and Salesforce. You must specify only the entity that you want to show, manage, or show and manage in the app.
+## Sign in to PowerApps
 
-## Generate an app
-1. Create a Common Data Service database. For more information, see [Create a Common Data Service database](create-database.md).
+Open a web browser, and go to [https://web.powerapps.com]([https://web.powerapps.com). Sign in with your account.
 
-2. In PowerApps Studio for Windows, click or tap **New** on the **File** menu (near the left edge).
+## Choose the entity
 
-3. Under **Start with your data**, on the **Common Data Service** tile, click or tap **Phone layout**.
+1. In the left menu, select **Apps**, and then select **Create an app**.
 
-4. Under **Choose an entity**, click or tap the **Contact** entity.
+2. In **Start with your data**, select **Common Data Service**. You may be asked to **Create**.
+ 
+3. **Choose an entity**, such as **Account**, and **Connect**. It may take a few minutes to create your app.
 
-5. Click or tap **Connect** to automatically generate an app.
+    ![Select the Account entity](./media/data-platform-create-app/cds-choose-entity-connect.png)
 
-    At this point, you may be prompted to take an introductory tour. You can also take the tour later by clicking or tapping the question mark near the upper-right corner, and then clicking or tapping **Take the intro tour**.
+## View your app   
+In PowerApps Studio, select **See a preview of this app**. Play the app. Select the different accounts, and use the arrows to navigate within your app. You can also sort the list, and add new items to the list.
 
-6. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
+![Preview your app](./media/data-platform-create-app/cds-database-app.png)
 
-    ![Toggle the views](./media/data-platform-create-app/toggle-view.png)
+## Clean up your resources
+Apps aren't saved until you save them. If you want to keep this app, then save it (Ctrl + S). If you don't want to save this app, then close it using `Ctrl + F4`, or go to the **File** menu, and select **Close**. 
 
-## Customize the browse screen
-1. In the right pane, click or tap the layout that shows just a heading.
-
-    ![Select a layout](./media/data-platform-create-app/choose-gallery-layout.png)
-
-2. Under the search box, click or tap the **Label** control to select it.
-
-    ![Select a label](./media/data-platform-create-app/select-textbox.png)
-
-3. In the right pane, select **Surname of Given name** in the dropdown list
-
-    The **Label** control that you selected shows data from that field.
-
-4. In the browse screen, select the gallery by clicking or tapping any name except the top name.
-
-    A selection box surrounds the gallery.
-
-    ![Select the gallery](./media/data-platform-create-app/select-gallery.png)
-
-5. Copy the following formula by selecting it and then pressing Ctrl+C.
-
-    **SortByColumns(Search(Contact, TextSearchBox1.Text, "Name_Surname"), "Name_Surname", If(SortDescending1, Descending, Ascending))**
-
-6. Near the upper-left corner, make sure that the property list shows **Items**.
-
-7. In the formula bar, select the default formula.
-
-    ![Default value of the Items property](./media/data-platform-create-app/default-items.png)
-
-8. Press Delete to delete the default formula, and then paste the formula that you copied. The names in the gallery are sorted alphabetically.
-
-## Test the browse screen
-1. Open Preview mode by pressing F5, or by clicking or tapping the **Play** button near the upper-right corner.
-
-2. Scroll through all the records by using a touchscreen or a mouse wheel, or by pointing to the gallery with a mouse so that the scroll bar appears.
-
-3. Near the upper-right corner, click or tap the sort button one or more times to change order that the names are listed in.
-
-    ![Change the sort order](./media/data-platform-create-app/sort-button.png)
-
-4. In the search box, type a letter to show only names that contain that letter.
-
-5. Remove all text from the search box, and then click or tap the arrow to the right of the first name in the list.
-
-    The details screen opens and shows more information about the contact you selected.
-
-6. Return to the design workspace by pressing Esc, or by clicking or tapping the **Close** button near the upper-right corner, under the title bar.
-
-## Customize the other screens
-1. If **DetailScreen** isn't showing, click or tap the middle thumbnail in the left navigation bar.
-
-2. Near the top of **DetailScreen**, click or tap **Full name**  to show options for customizing the form on that screen.
-
-3. In the right pane, click or tap the eye button for **Name_MiddleName** to hide that field.
-
-4. In the right pane, click or tap the eye button for **Name_Surname** to show that field.
-
-5. In the right pane, drag **Name_Surname** up, and drop it just under **Name_GivenName**.
-
-    The **DetailScreen** reflects your changes.
-
-6. In the left navigation bar, click or tap the bottom thumbnail to show **EditScreen**, and then repeat the previous steps in this procedure so that **EditScreen** matches **DetailScreen**.
-
-## Test the app
-1. In the left navigation bar, click or tap the top thumbnail image to open the browse screen.
-
-2. Open Preview mode by pressing F5, or by clicking or tapping the **Play** button near the upper-right corner.
-
-3. In the upper-right corner of the browse screen, click or tap the plus sign button (**+**) to create a record.
-
-4. Add text in the **Given name** and **Surname** fields, and then click or tap the check mark button to save your new record and return to the browse screen.
-
-5. Find the record that you just created, and then click or tap the arrow to the right of it to show the record on the details screen.
-
-6. In upper-right corner, click or tap the pencil button to show the record on the edit screen.
-
-7. Change the data in the **Given name** field, and then click or tap the check mark button to save your changes.
-
-8. Near the upper-right corner, click or tap the trash-can button to delete the record that you created and updated.
+To remove the Common Data Service database (and entities), go to the **File** menu, and select **Connections**. In the list, select your Common Data Service, and then **Delete**.
 
 ## Next steps
-[Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
+In this quick start, you created an app using existing data in a Common Data Service database. To get more hands-on experience creating apps, use one of our templates.
+
+> [!div class="nextstepaction"]
+> [Create and run an app from a template](get-started-test-drive.md)
