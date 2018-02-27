@@ -252,7 +252,7 @@ Other elements include:
 
 **[Replace](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
 
-**[Reset](../functions/function-reset.md)** – Resets an input control to its default value, discarding any user changes.
+**[Reset](functions/function-reset.md)** – Resets an input control to its default value, discarding any user changes.
 
 **[ResetForm](functions/function-form.md)** – Resets a form control for editing of an existing item.
 

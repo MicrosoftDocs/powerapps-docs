@@ -54,7 +54,7 @@ The **EditForm** function changes the Form control's mode to **FormMode.Edit**. 
 The **NewForm** function changes the Form control's mode to **FormMode.New**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are ignored, and the default values of the Form's **[DataSource](../controls/control-form-detail.md)** property populate the form. If the **SubmitForm** function runs when the form is in this mode, a record is created, not changed.
 
 ### ResetForm
-The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode. The **[OnReset](../controls/control-form-detail.md)** behavior of the form control also runs.  You can also reset individual controls with the **[Reset](../../functions/function-reset.md)** function but only from within the form.
+The **ResetForm** function resets the contents of a form to their initial values, before the user made any changes. If the form is in **FormMode.New** mode, the form is reset to **FormMode.Edit** mode. The **[OnReset](../controls/control-form-detail.md)** behavior of the form control also runs.  You can also reset individual controls with the **[Reset](function-reset.md)** function but only from within the form.
 
 ### ViewForm
 The **ViewForm** function changes the Form control's mode to **FormMode.View**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are used to populate the form.  The **SubmitForm** and **RestForm** functions have no effect when in this mode.
