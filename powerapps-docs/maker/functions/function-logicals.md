@@ -22,7 +22,7 @@ ms.author: gregli
 Boolean logic functions, commonly used to manipulate the results of comparisons and tests.
 
 ## Description
-The **And** function returns **true** if all of its arguments are **true**.  The **&&** [operator](../../functions/operators.md) is equivalent to **And**.
+The **And** function returns **true** if all of its arguments are **true**.  The **&&** [operator](operators.md) is equivalent to **And**.
 
 The **Or** function returns **true** if any of its arguments are **true**.  The **||** operator is equivalent to **Or**.
 

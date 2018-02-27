@@ -28,7 +28,7 @@ The **Exp** function returns *e* raised to the power of its argument.  The trans
 
 The **Ln** function returns the natural logarithm (base *e*) of its argument.
 
-The **Power** function returns a number raised to a power.  It is equivalent to using the [**^** operator](../../functions/operators.md).
+The **Power** function returns a number raised to a power.  It is equivalent to using the [**^** operator](operators.md).
 
 The **Sqrt** function returns the number that, when multiplied by itself, equals its argument.
 

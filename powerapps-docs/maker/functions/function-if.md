@@ -39,7 +39,7 @@ You can use both of these functions in [behavior formulas](../working-with-formu
 ## Syntax
 **If**( *Condition*, *ThenResult* [, *DefaultResult* ] )<br>**If**( *Condition1*, *ThenResult1* [, *Condition2*, *ThenResult2*, ... [ , *DefaultResult* ] ] )
 
-* *Condition(s)* - Required. Formula(s) to test for **true**. Such formulas commonly contain comparison [operators](../../functions/operators.md) (such as **<**, **>**, and **=**) and test functions such as **[IsBlank](function-isblank-isempty.md)** and **[IsEmpty](function-isblank-isempty.md)**.
+* *Condition(s)* - Required. Formula(s) to test for **true**. Such formulas commonly contain comparison [operators](operators.md) (such as **<**, **>**, and **=**) and test functions such as **[IsBlank](function-isblank-isempty.md)** and **[IsEmpty](function-isblank-isempty.md)**.
 * *ThenResult(s)* - Required. The corresponding value to return for a condition that evaluates to **true**.
 * *DefaultResult* - Optional. The value to return if no condition evaluates to **true**.  If you don't specify this argument, *blank* is returned.
 

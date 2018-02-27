@@ -37,7 +37,7 @@ The key to using **IsMatch** is in describing the pattern to match. You describe
 * Predefined patterns, such as **Letter**, **MultipleDigits**, or **Email**. (The **Match** enum defines these patterns.)
 * Regular expressions codes, such as **"\d+\s+\d+"** or **"[a-z]+"**.
 
-Combine these elements by using the [string concatenation operator **&**](../../functions/operators.md). For example, **"abc" & Digit & "\s+"** is a valid pattern that matches the characters "a", "b", and "c", followed by a digit from 0 to 9, followed by at least one whitespace character.
+Combine these elements by using the [string concatenation operator **&**](operators.md). For example, **"abc" & Digit & "\s+"** is a valid pattern that matches the characters "a", "b", and "c", followed by a digit from 0 to 9, followed by at least one whitespace character.
 
 ### Ordinary characters
 The simplest pattern is a sequence of ordinary characters to be matched exactly.
@@ -63,7 +63,7 @@ In the pattern language, certain characters are reserved for special purposes. T
 For example, you can match "Hello?" by using the pattern **"Hello\\?"** with a backslash before the question mark.
 
 ### Predefined patterns
-Predefined patterns provide a simple way to match one of a set of characters, or a sequence of multiple characters. Use the [string concatenation operator **&**](../../functions/operators.md) to combine your own text strings with members of the **Match** enum:
+Predefined patterns provide a simple way to match one of a set of characters, or a sequence of multiple characters. Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
 
 | Match Enum | Description | Regular Expression |
 | --- | --- | --- |

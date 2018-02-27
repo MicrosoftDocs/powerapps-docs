@@ -43,7 +43,7 @@ As the examples later in this topic show, global variables can hold several kind
 
 A global variable holds its value until the app is closed.  Once closed, the global variable's value will be lost and must be recreated when the app is loaded again.
 
-Global variables cannot use the same name as an existing collection or control.  It can use the same name as a context variable.  To disambiguate between the two, use the [disambiguation operator](../../functions/operators.md#disambiguation-operator).
+Global variables cannot use the same name as an existing collection or control.  It can use the same name as a context variable.  To disambiguate between the two, use the [disambiguation operator](operators.md#disambiguation-operator).
 
 **Set** has no return value, and you can use it only within a [behavior formula](../working-with-formulas-in-depth.md).
 

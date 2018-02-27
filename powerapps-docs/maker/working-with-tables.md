@@ -42,7 +42,7 @@ In a formula, you can refer to a record by itself, outside of a table's context,
 ### Fields
 A field is an individual piece of information in a record. You can visualize this sort of field as a value in a column for a particular record.
 
-Just as with a control, you refer to a field of a record by using the **.** [operator](../functions/operators.md) on the record.  For example, **First(Products).Name** returns the **Name** field for the first record in the **Products** table.
+Just as with a control, you refer to a field of a record by using the **.** [operator](functions/operators.md) on the record.  For example, **First(Products).Name** returns the **Name** field for the first record in the **Products** table.
 
 A field can contain another record or table, as the example for the **[GroupBy](functions/function-groupby.md)** function shows. You can nest as many levels of records and tables as you want.
 
@@ -232,7 +232,7 @@ Finally, we can reduce the result table to just the columns that we desire:
 Note that in the above, we used double quotes (") in some places and single quotes (') in other places.  Single quotes are required when referencing the value of an object, such as a field or table, in which the name of the object contains a space.  Double quotes are used when we are not referencing the value of an object but instead talking about it, especially in situations in which the object does not yet exist, as in the case of **AddColumns**.  
 
 ### Disambiguation
-Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](../functions/operators.md) operator:
+Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](functions/operators.md) operator:
 
 * To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.  
 * To access global values, such as data sources, collections, and context variables, use the pattern **[@*ObjectName*]** (without a table designation).

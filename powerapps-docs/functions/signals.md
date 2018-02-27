@@ -22,7 +22,7 @@ ms.author: gregli
 Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.  
 
 ## Description and syntax
-All signals return a [record](../maker/working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](operators.md).
+All signals return a [record](../maker/working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](../maker/functions/operators.md).
 
 ### Acceleration
 The **Acceleration** signal returns the device's acceleration in three dimensions relative to the device's screen. Acceleration is measured in *g* units of 9.81 m/second<sup>2</sup> or 32.2 ft/second<sup>2</sup> (the acceleration that the Earth imparts to objects at its surface due to gravity).

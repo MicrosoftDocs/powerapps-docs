@@ -61,7 +61,7 @@ You can use whatever names you like for:
 * Context variable names
 
 ### Formula separators and chaining operator
-Some [separators and operators](../functions/operators.md) will shift based on the decimal separator of the author's language:
+Some [separators and operators](functions/operators.md) will shift based on the decimal separator of the author's language:
 
 | Author's language decimal separator | PowerApps decimal separator | PowerApps list separator | PowerApps chaining operator |
 | --- | --- | --- | --- |

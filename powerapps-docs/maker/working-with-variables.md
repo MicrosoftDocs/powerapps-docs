@@ -140,7 +140,7 @@ All variables are created implicitly when used in **Set**, **UpdateContext**, **
 
 All variables are held in memory while the app is running.  After the app closes, the values held in the variables are lost.  You can store the contents of a variable in a Data Source using **Patch** or **Collect** functions, or in the case of collections you can store to the local device with the **SaveData** function.  When the app is first loaded, all variables will have the *blank* value.
 
-You use the variables name to read its value.  For example, once defined with **Set( MyColor, Red )** you can simply use **MyVar** anywhere a color value can be used and it will be replaced with the **Red**.  It is possible to have a global variable or collection with the same name as a context variable.  In this case, the context variable will take precedence.  You can still reference the global variable or collection using the [disambiguation operator](../functions/operators.md#disambiguation-operator) **@[MyColor]**.
+You use the variables name to read its value.  For example, once defined with **Set( MyColor, Red )** you can simply use **MyVar** anywhere a color value can be used and it will be replaced with the **Red**.  It is possible to have a global variable or collection with the same name as a context variable.  In this case, the context variable will take precedence.  You can still reference the global variable or collection using the [disambiguation operator](functions/operators.md#disambiguation-operator) **@[MyColor]**.
 
 ## Create a context variable
 Let's look at how our adding machine would be created using a context variable instead of a global variable.    
