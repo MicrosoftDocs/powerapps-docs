@@ -73,7 +73,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Find**( *FindString*, *WithinString* )](../../functions/function-find.md)
+[**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
 
 ## Example
 1. Add a **[Label](control-text-box.md)** control, name it **Source**, and set its **[Text](properties-core.md)** property to this string:

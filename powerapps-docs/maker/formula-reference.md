@@ -145,7 +145,7 @@ Other elements include:
 ## F
 **[Filter](functions/function-filter-lookup.md)** – Returns a filtered table based on one or more criteria.
 
-**[Find](../functions/function-find.md)** – Checks whether one string appears within another and returns the location.
+**[Find](functions/function-find.md)** – Checks whether one string appears within another and returns the location.
 
 **[First](../functions/function-first-last.md)** – Returns the first record of a table.
 

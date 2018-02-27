@@ -22,7 +22,7 @@ ms.author: gregli
 Finds a string of text, if it exists, within another string.
 
 ## Description
-The **Find** function looks for a string within another string and is case sensitive. To ignore case, first use the **[Lower](function-lower-upper-proper.md)** function on the arguments.
+The **Find** function looks for a string within another string and is case sensitive. To ignore case, first use the **[Lower](../../functions/function-lower-upper-proper.md)** function on the arguments.
 
 **Find** returns the starting position of the string that was found.  Position 1 is the first character of the string. **Find** returns *blank* if the string in which you're searching doesn't contain the string for which you're searching.
 
