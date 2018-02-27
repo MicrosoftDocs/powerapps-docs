@@ -30,10 +30,10 @@ This topic shows you how to add Office 365 Outlook as a connection, add Office 3
 > [!IMPORTANT]
 > As of this writing, the calendar operation doesn't support recurring events.
 
-[!INCLUDE [connection-requirements](../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
 
 ## Connect to Office 365 Outlook
-1. [Add a data connection](../maker/add-data-connection.md) and select **Office 365 Outlook**:  
+1. [Add a data connection](../add-data-connection.md) and select **Office 365 Outlook**:  
    
     ![Connect to Office 365](./media/connection-office365-outlook/add-office.png)
 2. Select **Connect**, and if prompted to sign in, enter your work account.
@@ -42,7 +42,7 @@ The Office 365 Outlook connection has been created and added to your app. Now, i
 
 ## Show messages
 1. On the **Insert** menu, select **Gallery**, and then select a **Text gallery** control.
-2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
+2. Set its **[Items](../../controls/properties-core.md)** property to the following formula:  
    
     `Office365.GetEmails({fetchOnlyUnread:false})`
    
@@ -68,10 +68,10 @@ The Office 365 Outlook connection has been created and added to your app. Now, i
    * **inputTo**
    * **inputSubject**
    * **inputBody**
-4. On the **Insert** menu, select **Controls**, and then select **Button**. Set its **[OnSelect](../controls/properties-core.md)** property to the following formula:  
+4. On the **Insert** menu, select **Controls**, and then select **Button**. Set its **[OnSelect](../../controls/properties-core.md)** property to the following formula:  
    
     `Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text)`
-5. Move the button so that it appears under all the other controls, and set its **[Text](../controls/properties-core.md)** property to **"Send email"**.
+5. Move the button so that it appears under all the other controls, and set its **[Text](../../controls/properties-core.md)** property to **"Send email"**.
 6. Press F5, or select the Preview button (![Preview button](./media/connection-office365-outlook/preview.png)). Type in a valid email address in **inputTo**, and type whatever you want in the other two **Text input** controls.
 7. Select **Send email** to send the message. Press Esc to return to the default workspace.
 
@@ -97,7 +97,7 @@ In this example, an audio file will be sent in addition to the photo:
 
 ## Delete a message
 1. On the **Insert** menu, select **Gallery**, and then select a **Text gallery** control.
-2. Set its **[Items](../controls/properties-core.md)** property to the following formula:  
+2. Set its **[Items](../../controls/properties-core.md)** property to the following formula:  
    
     `Office365.GetEmails({fetchOnlyUnread:false})`
    
@@ -126,6 +126,6 @@ This section uses the same controls as [Delete a message](connection-office365-o
 
 ## Helpful links
 * For a list of all functions and their parameters, see the [Office 365 Outlook reference](https://docs.microsoft.com/connectors/office365connector/).
-* See all the [available connections](../maker/connections-list.md).  
-* Learn how to [manage your connections](../maker/add-manage-connections.md).
+* See all the [available connections](../connections-list.md).  
+* Learn how to [manage your connections](../add-manage-connections.md).
 
