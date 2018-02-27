@@ -52,7 +52,7 @@ Within the **Filter** and **LookUp** functions, the following can be used with c
 * **[+](../functions/operators.md)**, **[-](../functions/operators.md)**
 * **[TrimEnds](../functions/function-trim.md)**
 * **[IsBlank](functions/function-isblank-isempty.md)**
-* **[StartsWith](../functions/function-startswith.md)**
+* **[StartsWith](functions/function-startswith.md)**
 * Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
 
 Portions of your formula that evaluate to a constant value for all records can also be used.  For example, **Left( Language(), 2 )** does not depend on any columns of the record and therefore returns the same value for all records.  It is effectively a constant.  Use of context variables, collections, and signals may not be constant and therefore will prevent **Filter** and **LookUp** from being delegated.  

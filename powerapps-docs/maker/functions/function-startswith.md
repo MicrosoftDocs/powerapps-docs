@@ -28,7 +28,7 @@ The **StartsWith** function tests whether one text string begins with another.
 
 For both functions, the tests are case insensitive.  The return value of both is a Boolean **true** or **false**.  
 
-Use **EndsWith** and **StartsWith** with the **[Filter](../maker/functions/function-filter-lookup.md)** function to search the data within your app. You can also use the **[in](operators.md#in-and-exactin-operators)** operator or the **[Search](../maker/functions/function-filter-lookup.md)** function to look anywhere within text strings, not just at the beginning or end.  Your choice of functions will depend on the needs of your app and which function can be [delegated](../maker/delegation-overview.md) for your particular data source.  If one of these functions can't be delegated, a blue dot will appear at authoring time to warn you of this limitation.
+Use **EndsWith** and **StartsWith** with the **[Filter](function-filter-lookup.md)** function to search the data within your app. You can also use the **[in](../../functions/../../functions/operators.md#in-and-exactin-operators)** operator or the **[Search](function-filter-lookup.md)** function to look anywhere within text strings, not just at the beginning or end.  Your choice of functions will depend on the needs of your app and which function can be [delegated](../delegation-overview.md) for your particular data source.  If one of these functions can't be delegated, a blue dot will appear at authoring time to warn you of this limitation.
 
 ## Syntax
 **EndsWith**( *Text*, *EndText* )
@@ -63,11 +63,11 @@ The examples in the rest of this topic show the results of searching a **Custome
 
 ![](media/function-startswith/customers.png)
 
-To create this data source as a collection, create a **[Button](../maker/controls/control-button.md)** control and set its **OnSelect** property to this formula:
+To create this data source as a collection, create a **[Button](../controls/control-button.md)** control and set its **OnSelect** property to this formula:
 
 **ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
 
-As in this example, you can show a list of records in a [**Gallery control**](../maker/controls/control-gallery.md) at the bottom of a screen. Near the top of the screen, you can add a [**Text input**](../maker/controls/control-text-input.md) control, named **SearchInput**, so that users can specify which records interest them.
+As in this example, you can show a list of records in a [**Gallery control**](../controls/control-gallery.md) at the bottom of a screen. Near the top of the screen, you can add a [**Text input**](../controls/control-text-input.md) control, named **SearchInput**, so that users can specify which records interest them.
 
 ![](media/function-startswith/customers-ux-unfiltered.png)
 
@@ -87,7 +87,7 @@ You can expand your search to include the **Company** column as well as the **Na
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Filters the **Customers** data source for records in which either the **Name** column or the  **Company** column starts with the search string (for example, **co**).  The [**&#124;&#124;** operator](operators.md) is *true* if either **StartsWith** function is *true*. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-startswith.png) |
+| **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Filters the **Customers** data source for records in which either the **Name** column or the  **Company** column starts with the search string (for example, **co**).  The [**&#124;&#124;** operator](../../functions/operators.md) is *true* if either **StartsWith** function is *true*. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-startswith.png) |
 | **Filter( Customers, SearchInput.Text in Name &#124;&#124; SearchInput.Text in Company )** |Filters the **Customers** data source for records in which either the **Name** column or the **Company** column contains the search string (for example, **co**) anywhere within it. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
 | **Search( Customers, SearchInput.Text, "Name", "Company" )** |Similar to using the **in** operator, the **Search** function searches the **Customers** data source for records in which either the **Name** column or the **Company** column contains the search string (for example, **co**) anywhere within it. The **Search** function is easier to read and write than **Filter** if you want to specify multiple columns and multiple **in** operators. Note that you must enclose the names of the columns in double quotation marks. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
 

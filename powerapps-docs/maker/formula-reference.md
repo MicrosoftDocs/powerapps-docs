@@ -132,7 +132,7 @@ Other elements include:
 
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](../functions/signals.md)** for reading the GPS.
 
-**[EndsWith](../functions/function-startswith.md)** – Checks whether a text string ends with another text string.
+**[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
@@ -291,7 +291,7 @@ Other elements include:
 
 **[Sqrt](functions/function-numericals.md)** – Returns the square root of a number.
 
-**[StartsWith](../functions/function-startswith.md)** – Checks if a text string begins with another text string.
+**[StartsWith](functions/function-startswith.md)** – Checks if a text string begins with another text string.
 
 **[StdevP](functions/function-aggregates.md)** – Returns the standard deviation of its arguments.  
 
