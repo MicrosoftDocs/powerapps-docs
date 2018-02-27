@@ -68,7 +68,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 
     ![Specify your credentials](./media/connect-to-sharepoint/specify-credentials.png)
 
-3. If you don't have an on-premises data gateway installed, [install one](gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+3. If you don't have an on-premises data gateway installed, [install one](maker/gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
 
     ![Install a gateway](./media/connect-to-sharepoint/install-gateway.png)
 

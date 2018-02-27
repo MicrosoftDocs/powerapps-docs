@@ -30,7 +30,7 @@ List tables, and create, read, update and delete table rows in an Oracle databas
 ### Install an on-premises data gateway
 To install a gateway, follow the steps in [this tutorial](../maker/gateway-management.md).
 
-An on-premises data gateway acts as a bridge, providing quick and secure data transfer between on-premises data (data that isn't in the cloud) and the Power BI, Microsoft Flow, Logic Apps, and PowerApps services. You can use the same gateway with multiple services and multiple data sources. For more information, see [Understand gateways](../gateway-reference.md).
+An on-premises data gateway acts as a bridge, providing quick and secure data transfer between on-premises data (data that isn't in the cloud) and the Power BI, Microsoft Flow, Logic Apps, and PowerApps services. You can use the same gateway with multiple services and multiple data sources. For more information, see [Understand gateways](../maker/gateway-reference.md).
 
 ### Install Oracle client
 On the same computer as the on-premises data gateway, install the [64-bit ODAC 12c Release 4 (12.1.0.2.4) for Windows x64](http://www.oracle.com/technetwork/database/windows/downloads/index-090165.html). Otherwise, an error will appear if you try to create or use the connection, as the list of known issues describes.

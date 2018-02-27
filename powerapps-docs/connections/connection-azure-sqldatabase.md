@@ -58,7 +58,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
        ![Connect to an on-premises database](./media/connection-azure-sqldatabase/connect-onprem.png)
      
        > [!NOTE]
-> If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap **Refresh gateway list**.
+> If you don't have a gateway, [install one](../maker/gateway-reference.md), and then click or tap **Refresh gateway list**.
 6. Click or tap **Connect**.
 7. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
    
@@ -81,7 +81,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
        ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
      
        > [!NOTE]
-> If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
+> If you don't have a gateway, [install one](../maker/gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
 5. Click or tap **Create** to create the connection.
 6. Create an app by using techniques that are similar to those that [Create an app from scratch](../get-started-create-from-blank.md) describes.
 
@@ -102,7 +102,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
        ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
      
        > [!NOTE]
-> If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap the circular icon to refresh the list.
+> If you don't have a gateway, [install one](../maker/gateway-reference.md), and then click or tap the circular icon to refresh the list.
 6. Click or tap **Connect**.
 7. Under **Choose a dataset**, click or tap an option.
 8. Under **Choose a table**, select one or more checkboxes, and then click or tap **Connect**.

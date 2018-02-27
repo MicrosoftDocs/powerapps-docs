@@ -91,7 +91,7 @@ Open PowerApps by taking *either* of these steps:
 
        ![Specify credentials](./media/connection-sharepoint-online/specify-creds.png)
 
-       **Note:** If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
+       **Note:** If you don't have an on-premises data gateway installed, [install one](../maker/gateway-reference.md), and then click or tap the icon to refresh the list of gateways.
 
        Under **Choose a gateway**, click or tap the gateway that you want to use.
 

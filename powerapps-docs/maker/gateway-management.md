@@ -45,7 +45,7 @@ With a gateway, you can connect to on-premises data over these connections:
 
     ![Gateways Install](./media/gateway-management/no-gateway-installed.png)
 
-    For details about how to install a gateway, see [Understand on-premises data gateways](../gateway-reference.md).
+    For details about how to install a gateway, see [Understand on-premises data gateways](gateway-reference.md).
 
 ## View and manage gateway permissions
 1. In the left navigation bar of [powerapps.com](https://web.powerapps.com), click or tap **Gateways**, and then click or tap a gateway.
@@ -71,7 +71,7 @@ For **Can use** and **Can use + share** permission levels, select the data sourc
 For more information about how to manage a connection, see [Manage your connections](add-manage-connections.md).
 
 ## Troubleshooting and Advanced Configuration
-For more information on troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](../gateway-reference.md).
+For more information on troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](gateway-reference.md).
 
 ## Next steps
 * Create an app that connects to an on-premises data source, such as [SQL Server](../connections/connection-azure-sqldatabase.md) or [SharePoint](../connections/connection-sharepoint-online.md).
