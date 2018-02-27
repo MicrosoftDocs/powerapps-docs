@@ -70,5 +70,5 @@ When the alerts fires, Power BI sends email to the creator of the alert, and we'
 We will see this flow run when we [run through the scenario end-to-end](../sharepoint-scenario-summary.md). Now we'll move on to the last task in this scenario - embedding a Power BI report into SharePoint.
 
 ## Next steps
-The next step in this tutorial series is to [embed the Power BI project report in SharePoint Online](../sharepoint-scenario-embed-report.md).
+The next step in this tutorial series is to [embed the Power BI project report in SharePoint Online](sharepoint-scenario-embed-report.md).
 
