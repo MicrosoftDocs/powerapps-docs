@@ -38,7 +38,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Check box](controls/control-check-box.md)** – Select or clear an option to specify **true** or **false**.
 
-**[Column chart](../controls/control-column-line-chart.md)** – Show values as vertical bars relative to two axes.
+**[Column chart](controls/control-column-line-chart.md)** – Show values as vertical bars relative to two axes.
 
 **[Column](../controls/control-column.md)** - Provides the display experience for a single field in a [**Data table**](../controls/control-data-table.md) control.
 
@@ -68,7 +68,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Import](../controls/control-export-import.md)** – Import data from elsewhere in PowerApps.
 
-**[Line chart](../controls/control-column-line-chart.md)** – Show values as data points relative to two axes.
+**[Line chart](controls/control-column-line-chart.md)** – Show values as data points relative to two axes.
 
 **[List box](../controls/control-list-box.md)** – Select one or more items in a list.
 
@@ -225,7 +225,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[FontWeight](../controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.  Applies to many controls.
 
 ### G
-**[GridStyle](../controls/control-column-line-chart.md)** – Whether a column or line chart shows its x-axis, its y-axis, both, or neither.  Applies to **[Column chart](../controls/control-column-line-chart.md)** and **[Line chart](../controls/control-column-line-chart.md)** controls.
+**[GridStyle](controls/control-column-line-chart.md)** – Whether a column or line chart shows its x-axis, its y-axis, both, or neither.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### H
 **[HandleActiveFill](../controls/control-slider.md)** – The color of the handle for a slider as the user changes its value.  Applies to the **[Slider](../controls/control-slider.md)** control.
@@ -261,13 +261,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[ItemBorderThickness](../controls/control-pie-chart.md)** – The thickness of the border around each wedge in a pie chart.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
 
-**ItemColorSet** – The color of each data point in a chart.  Applies to **[Column chart](../controls/control-column-line-chart.md)**, **[Line chart](../controls/control-column-line-chart.md)**, and **[Pie chart](../controls/control-pie-chart.md)** controls.
+**ItemColorSet** – The color of each data point in a chart.  Applies to **[Column chart](controls/control-column-line-chart.md)**, **[Line chart](controls/control-column-line-chart.md)**, and **[Pie chart](../controls/control-pie-chart.md)** controls.
 
 **[ItemPaddingLeft](../controls/control-list-box.md)** – The distance between text in a listbox and its left edge.  Applies to the **[List Box](../controls/control-list-box.md)** control.
 
 **[Items](../controls/properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.  Applies to many controls.
 
-**[ItemsGap](../controls/control-column-line-chart.md)** – The distance between columns in a column chart.  Applies to the **[Column chart](../controls/control-column-line-chart.md)** control.
+**[ItemsGap](controls/control-column-line-chart.md)** – The distance between columns in a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
 ### L
 **[LabelPosition](../controls/control-pie-chart.md)** – The location of labels in a pie chart relative to its wedges.  Applies to the **[Pie chart](../controls/control-pie-chart.md)** control.
@@ -281,9 +281,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Loop](controls/control-audio-video.md)** – Whether an audio or video clip automatically starts over as soon as it finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
 ### M
-**[Markers](../controls/control-column-line-chart.md)** – Whether a column or line chart shows the value of each data point.  Applies to **[Column chart](../controls/control-column-line-chart.md)** and **[Line chart](../controls/control-column-line-chart.md)** controls.
+**[Markers](controls/control-column-line-chart.md)** – Whether a column or line chart shows the value of each data point.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
-**[MarkerSuffix](../controls/control-column-line-chart.md)** – Text that appears after each value in a column chart for which the **[Markers](../controls/control-column-line-chart.md)** property is set to **true**.  Applies to the **[Column chart](../controls/control-column-line-chart.md)** control.
+**[MarkerSuffix](controls/control-column-line-chart.md)** – Text that appears after each value in a column chart for which the **[Markers](controls/control-column-line-chart.md)** property is set to **true**.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
 **Max** – The maximum value to which the user can set a slider or a rating.  Applies to **[Rating](../controls/control-rating.md)** and **[Slider](../controls/control-slider.md)** controls.
 
@@ -295,7 +295,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Min](../controls/control-slider.md)** – The minimum value to which the user can set a slider.  Applies to the **[Slider](../controls/control-slider.md)** control.
 
-**[MinimumBarWidth](../controls/control-column-line-chart.md)** – The narrowest possible width of columns in a column chart.  Applies to the **[Column chart](../controls/control-column-line-chart.md)** control.
+**[MinimumBarWidth](controls/control-column-line-chart.md)** – The narrowest possible width of columns in a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
 **Mode** – The meaning of this property is dependent on the control:
 
@@ -306,7 +306,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### N
 **[NavigationStep](../controls/control-gallery.md)** – How far a gallery scrolls if its **[ShowNavigation](../controls/control-gallery.md)** property is set to **true** and the user selects a navigation arrow at either end of that gallery.  Applies to the **[Gallery](../controls/control-gallery.md)** control.
 
-**[NumberOfSeries](../controls/control-column-line-chart.md)** – How many columns of data are reflected in a column or line chart.  Applies to **[Column chart](../controls/control-column-line-chart.md)** and **[Line chart](../controls/control-column-line-chart.md)** controls.
+**[NumberOfSeries](controls/control-column-line-chart.md)** – How many columns of data are reflected in a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### O
 **[OnChange](../controls/properties-core.md)** – The behavior of an app when the user changes the value of a control (for example, by adjusting a slider).  Applies to many controls.
@@ -420,9 +420,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[SelectMultiple](../controls/control-list-box.md)** – Whether a user can select more than one item in a listbox.  Applies to the **[List Box](../controls/control-list-box.md)** control.
 
-**[SeriesAxisMax](../controls/control-column-line-chart.md)** – The maximum value of the y-axis for a column or line chart.  Applies to the **[Column chart](../controls/control-column-line-chart.md)** control.
+**[SeriesAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a column or line chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
-**[SeriesAxisMin](../controls/control-column-line-chart.md)** – A number that determines the minimum value of the y-axis for a column chart.  Applies to the **[Column chart](../controls/control-column-line-chart.md)** control.
+**[SeriesAxisMin](controls/control-column-line-chart.md)** – A number that determines the minimum value of the y-axis for a column chart.  Applies to the **[Column chart](controls/control-column-line-chart.md)** control.
 
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.  Applies to **[Audio](controls/control-audio-video.md)**, **[PDF viewer](../controls/control-pdf-viewer.md)**, **[Pen input](../controls/control-pen-input.md)**, and **[Video](controls/control-audio-video.md)** controls.
 
@@ -501,16 +501,16 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### X
 **[X](../controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple columns, this property determines the column in which the card appears.
 
-**[XLabelAngle](../controls/control-column-line-chart.md)** – The angle of the labels below the x-axis of a column or line chart.  Applies to **[Column chart](../controls/control-column-line-chart.md)** and **[Line chart](../controls/control-column-line-chart.md)** controls.
+**[XLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels below the x-axis of a column or line chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### Y
 **[Y](../controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container). Applies to many controls. For a **[Card](controls/control-card.md)** control in a container that has multiple rows, this property determines the row in which the card appears.
 
-**[YAxisMax](../controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Line chart](../controls/control-column-line-chart.md)** control.
+**[YAxisMax](controls/control-column-line-chart.md)** – The maximum value of the y-axis for a line chart.  Applies to the **[Line chart](controls/control-column-line-chart.md)** control.
 
-**[YAxisMin](../controls/control-column-line-chart.md)** – The minimum value of the y-axis for a line chart.  Applies to the **[Line chart](../controls/control-column-line-chart.md)** control.
+**[YAxisMin](controls/control-column-line-chart.md)** – The minimum value of the y-axis for a line chart.  Applies to the **[Line chart](controls/control-column-line-chart.md)** control.
 
-**[YLabelAngle](../controls/control-column-line-chart.md)** – The angle of the labels next to the y-axis of a line or column chart.  Applies to **[Column chart](../controls/control-column-line-chart.md)** and **[Line chart](../controls/control-column-line-chart.md)** controls.
+**[YLabelAngle](controls/control-column-line-chart.md)** – The angle of the labels next to the y-axis of a line or column chart.  Applies to **[Column chart](controls/control-column-line-chart.md)** and **[Line chart](controls/control-column-line-chart.md)** controls.
 
 ### Z
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.  Applies to **[Camera](controls/control-camera.md)** and **[PDF viewer](../controls/control-pdf-viewer.md)** controls.
