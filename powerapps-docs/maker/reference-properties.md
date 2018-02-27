@@ -46,7 +46,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Data table](controls/control-data-table.md)** - Show data in a tabular format.
 
-**[Date picker](../controls/control-date-picker.md)** – Specify a date by clicking or tapping.
+**[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
 
 **[Display form](../controls/control-form-detail.md)** – Display records in a data source using a form.
 
@@ -176,7 +176,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Default](../controls/properties-core.md)** – The initial value of a control before it is changed by the user.  Applies to many controls.
 
-**[DefaultDate](../controls/control-date-picker.md)** – The initial value of a date control before it is changed by the user.  Applies to the **[Date Picker](../controls/control-date-picker.md)** control.
+**[DefaultDate](controls/control-date-picker.md)** – The initial value of a date control before it is changed by the user.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
 **[DefaultMode](../controls/control-form-detail.md)** – The initial mode of a form control, either **Edit**, **New**, or **View**.  Applies to the **[Edit form](../controls/control-form-detail.md)** control.
 
@@ -199,7 +199,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Duration](../controls/control-timer.md)** – How long a timer runs.  Applies to the **[Timer](../controls/control-timer.md)** control.
 
 ### E
-**[EndYear](../controls/control-date-picker.md)** – The latest year to which the user can set value of a date-picker control.  Applies to the **[Date Picker](../controls/control-date-picker.md)** control.
+**[EndYear](controls/control-date-picker.md)** – The latest year to which the user can set value of a date-picker control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
 **Error** – The meaning of this property is dependent on the control:
 
@@ -410,7 +410,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### S
 **Selected** – The selected item.  Applies to **[Drop down](../controls/control-drop-down.md)** and **[Gallery](../controls/control-gallery.md)** controls.
 
-**[SelectedDate](../controls/control-date-picker.md)** – The date currently selected in a date control.  Applies to the **[Date Picker](../controls/control-date-picker.md)** control.
+**[SelectedDate](controls/control-date-picker.md)** – The date currently selected in a date control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
 **[SelectionColor](../controls/properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.  Applies to **[Drop down](../controls/control-drop-down.md)**, **[List Box](../controls/control-list-box.md)**, and **[Pen input](../controls/control-pen-input.md)** controls.
 
@@ -442,7 +442,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[StartTime](controls/control-audio-video.md)** – The time after the start of an audio or video clip when the clip starts to play.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
-**[StartYear](../controls/control-date-picker.md)** – The earliest year to which the user can set the value of a date-picker control.  Applies to the **[Date Picker](../controls/control-date-picker.md)** control.
+**[StartYear](controls/control-date-picker.md)** – The earliest year to which the user can set the value of a date-picker control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 
 **[Stream](controls/control-camera.md)** – Automatically updated image based on the **[StreamRate](controls/control-camera.md)** property.  Applies to the **[Camera](controls/control-camera.md)** control.
 

@@ -119,12 +119,12 @@ The user can specify a Boolean value by using this familiar control, which has b
 1. Add a **Check box** control, name it **chkReserve**, and set its **[Text](../../controls/properties-core.md)** property to show **Reserve now**.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Date picker](../../controls/control-date-picker.md)** control, and set its **[Visible](../../controls/properties-core.md)** property to this formula:
+2. Add a **[Date picker](control-date-picker.md)** control, and set its **[Visible](../../controls/properties-core.md)** property to this formula:
    <br>**If(chkReserve.Value = true, true)**
    
     Want more information about the **[If](../../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, click or tap **chkReserve** to set its **[Value](../../controls/properties-core.md)** property to **true**, and then click or tap **chkReserve** again to set its **[Value](../../controls/properties-core.md)** property to **false**.
    
-    The **[Date Picker](../../controls/control-date-picker.md)** control appears when the **[Value](../../controls/properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
+    The **[Date Picker](control-date-picker.md)** control appears when the **[Value](../../controls/properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
 4. To return to the default workspace, press Esc.
 
