@@ -106,7 +106,7 @@ The **Apps** page previously allowed you to switch between tile view and list vi
 
 ![Apps list view](./media/intro-maker-portal/listview2.png)
 
-Please note that the list view shows only apps in the selected environment. To view apps in a different environment, switch to it by using the environment switcher in the header. [Learn more about switching environments](../working-with-environments.md).
+Please note that the list view shows only apps in the selected environment. To view apps in a different environment, switch to it by using the environment switcher in the header. [Learn more about switching environments](working-with-environments.md).
 
 ## What's new?
 
