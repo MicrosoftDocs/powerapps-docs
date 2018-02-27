@@ -36,7 +36,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Card](controls/control-card.md)** – Display and edit an individual field of a record in a **[Edit form](../controls/control-form-detail.md)** or **[Display form](../controls/control-form-detail.md)** control.
 
-**[Check box](../controls/control-check-box.md)** – Select or clear an option to specify **true** or **false**.
+**[Check box](controls/control-check-box.md)** – Select or clear an option to specify **true** or **false**.
 
 **[Column chart](../controls/control-column-line-chart.md)** – Show values as vertical bars relative to two axes.
 
@@ -145,13 +145,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Camera](controls/control-camera.md)** – On a device that has more than one camera, the numeric ID of the camera that the app uses.  Applies to the **[Camera](controls/control-camera.md)** control.
 
-**[CheckboxBackgroundFill](../controls/control-check-box.md)** – The background color of the box that surrounds the checkmark in a checkbox control.  Applies to the **[Check box](../controls/control-check-box.md)** control.
+**[CheckboxBackgroundFill](controls/control-check-box.md)** – The background color of the box that surrounds the checkmark in a checkbox control.  Applies to the **[Check box](controls/control-check-box.md)** control.
 
-**[CheckboxBorderColor](../controls/control-check-box.md)** – The color of the border that surrounds the checkmark in a checkbox control.  Applies to the **[Check box](../controls/control-check-box.md)** control.
+**[CheckboxBorderColor](controls/control-check-box.md)** – The color of the border that surrounds the checkmark in a checkbox control.  Applies to the **[Check box](controls/control-check-box.md)** control.
 
-**[CheckboxSize](../controls/control-check-box.md)** – The width and height of the box that surrounds the checkmark in a checkbox control.  Applies to the **[Check box](../controls/control-check-box.md)** control.
+**[CheckboxSize](controls/control-check-box.md)** – The width and height of the box that surrounds the checkmark in a checkbox control.  Applies to the **[Check box](controls/control-check-box.md)** control.
 
-**[CheckmarkFill](../controls/control-check-box.md)** – The color of the checkmark in a checkbox control.  Applies to the **[Check box](../controls/control-check-box.md)** control.
+**[CheckmarkFill](controls/control-check-box.md)** – The color of the checkmark in a checkbox control.  Applies to the **[Check box](controls/control-check-box.md)** control.
 
 **[ChevronBackground](../controls/control-drop-down.md)** – The color behind the down arrow in a dropdown list.  Applies to the **[Drop down](../controls/control-drop-down.md)** control.
 
@@ -311,7 +311,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### O
 **[OnChange](../controls/properties-core.md)** – The behavior of an app when the user changes the value of a control (for example, by adjusting a slider).  Applies to many controls.
 
-**OnCheck** – The behavior of an app when the value of a checkbox or a toggle changes to **true**.  Applies to **[Check box](../controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**OnCheck** – The behavior of an app when the value of a checkbox or a toggle changes to **true**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
 **[OnEnd](controls/control-audio-video.md)** – The behavior of an app when an audio or video clip finishes playing.  Applies to **[Audio](controls/control-audio-video.md)** and **[Video](controls/control-audio-video.md)** controls.
 
@@ -339,7 +339,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[OnTimerStart](../controls/control-timer.md)** – The behavior of an app when a timer starts to run.  Applies to the **[Timer](../controls/control-timer.md)** control.
 
-**OnUncheck** – The behavior of an app when the value of a checkbox or a toggle changes to **false**.  Applies to **[Check box](../controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
+**OnUncheck** – The behavior of an app when the value of a checkbox or a toggle changes to **false**.  Applies to **[Check box](controls/control-check-box.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
 **[OnVisible](../controls/control-screen.md)** – The behavior of an app the user navigates to a screen.  Applies to the **[Screen](../controls/control-screen.md)** control.
 
@@ -479,7 +479,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### V
 **Valid** – Whether a **[Card](controls/control-card.md)** or **[Edit form](../controls/control-form-detail.md)** control contains valid entries, ready to be submitted to the data source.  Applies to **[Card](controls/control-card.md)** and **[Edit form](../controls/control-form-detail.md)** controls.
 
-**[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](../controls/control-check-box.md)**, **[Radio](../controls/control-radio.md)**, **[Slider](../controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
+**[Value](../controls/properties-core.md)** – The value of an input control.  Applies to **[Check box](controls/control-check-box.md)**, **[Radio](../controls/control-radio.md)**, **[Slider](../controls/control-slider.md)**, and **[Toggle](../controls/control-toggle.md)** controls.
 
 **ValueFill** – The background color of the rectangle in a toggle control when its value is **true** or the color of the line to the left of the handle in a slider control.  Applies to **[Slider](../controls/control-slider.md)** and **[Toggle](../controls/control-toggle.md)** controls.
 
