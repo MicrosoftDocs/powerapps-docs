@@ -30,7 +30,7 @@ In this tutorial, you show data about flooring products in a **Flexible height**
 
 **Suggested reading**
 
-If you've never added controls to a gallery, follow the steps in [Show a list of items](maker/add-gallery.md) before you proceed in this topic.
+If you've never added controls to a gallery, follow the steps in [Show a list of items](add-gallery.md) before you proceed in this topic.
 
 ## Add data to a blank app
 1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains names, overviews, and links to images of flooring products.
@@ -47,7 +47,7 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 
 5. Add a connection to the **FlooringEstimates** table in the Excel file.
 
-    For more information, see [Add a connection](maker/add-data-connection.md).
+    For more information, see [Add a connection](add-data-connection.md).
 
 ## Add data to a gallery
 1. On the **Insert** tab, click or tap **Gallery**, and then click or tap **Flexible height**.
@@ -55,14 +55,14 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
     ![Add gallery](./media/gallery-dynamic-sizing/add-flexible.png)
 2. Resize the gallery to take up the entire screen.
 
-3. Set the gallery's **[Items](controls/properties-core.md)** property to **FlooringEstimates**.
+3. Set the gallery's **[Items](../controls/properties-core.md)** property to **FlooringEstimates**.
 
 ## Show the product names
 1. In the upper-left corner of the gallery, click or tap the pencil icon to select the gallery template.
 
     ![Pencil icon](./media/gallery-dynamic-sizing/edit-template.png)
 
-2. With the gallery template selected, add a **[Label](controls/control-text-box.md)** control to it.
+2. With the gallery template selected, add a **[Label](../controls/control-text-box.md)** control to it.
 
 3. Set the **Text** property of the **Label** control to this expression:<br>
    **ThisItem.Name**
@@ -89,12 +89,12 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 
     You can add controls to the template more easily as you build the app, and this change won't affect how the app looks when it runs.
 
-2. With the gallery template selected, add an **[Image](controls/control-image.md)** control, and move it below the **OverviewText** box.
+2. With the gallery template selected, add an **[Image](../controls/control-image.md)** control, and move it below the **OverviewText** box.
 
 3. Ensure that the **Image** property of the **Image** control is set to this expression:<br>
     **ThisItem.Image**
 
-4. Set the **[Y](controls/properties-core.md)** property of the **Image** control based on the position and the size of the **OverviewText** box, as in this expression:
+4. Set the **[Y](../controls/properties-core.md)** property of the **Image** control based on the position and the size of the **OverviewText** box, as in this expression:
    <br>**OverviewText.Y + OverviewText.Height + 5**
 
     ![Final app](./media/gallery-dynamic-sizing/final-app.png)
@@ -102,4 +102,4 @@ If you've never added controls to a gallery, follow the steps in [Show a list of
 Apply the same concept if you want to add more controls: set each control's **Y** property based on the **Y** and **Height** properties of the control above it.
 
 ## Next steps
-Learn more about how to work with a [gallery](working-with-forms.md) control and [formulas](working-with-formulas.md).
+Learn more about how to work with a [gallery](../working-with-forms.md) control and [formulas](../working-with-formulas.md).
