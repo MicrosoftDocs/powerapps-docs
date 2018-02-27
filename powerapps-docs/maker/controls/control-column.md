@@ -18,10 +18,10 @@ ms.author: kfend
 
 ---
 # Column control in PowerApps
-Provides the display experience for a single field in a [**Data table**](../../controls/control-data-table.md) control.
+Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.
 
 ## Description
-The [**Data table**](../../controls/control-data-table.md) control shows a dataset in a tabular format, and each column in that tabular format is represented by a **Column** control. The **Column** control provides properties that the app maker can use to customize the appearance and behavior of the column.
+The [**Data table**](control-data-table.md) control shows a dataset in a tabular format, and each column in that tabular format is represented by a **Column** control. The **Column** control provides properties that the app maker can use to customize the appearance and behavior of the column.
 
 ## Capabilities
 ### Now available

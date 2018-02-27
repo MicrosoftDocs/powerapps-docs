@@ -51,37 +51,37 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
 * No data appears if you use the **FirstN** function in the **Items** property.
 
 ## Key properties
-* [**Items**](properties-core.md) – The source of data that appears in the **Data table** control.
+* [**Items**](../../controls/properties-core.md) – The source of data that appears in the **Data table** control.
 * **Selected** – The selected row in the **Data table** control.
 
 ## Other properties
-* [**BorderColor**](properties-color-border.md) – The color of the **Data table** control's border.
-* [**BorderStyle**](properties-color-border.md) – The style of the **Data table** control's border. The options are **Solid**, **Dashed**, **Dotted**, and **None**.
-* [**BorderThickness**](properties-color-border.md) – The thickness of the **Data table** control's border.
-* [**Color**](properties-color-border.md) – The default text color for all data rows.
-* [**Fill**](properties-color-border.md) – The default background color for all data rows.
-* [**Font**](properties-text.md) - The default font for all data rows.
-* [**FontWeight**](properties-text.md) – The default font weight for all data rows.
+* [**BorderColor**](../../controls/properties-color-border.md) – The color of the **Data table** control's border.
+* [**BorderStyle**](../../controls/properties-color-border.md) – The style of the **Data table** control's border. The options are **Solid**, **Dashed**, **Dotted**, and **None**.
+* [**BorderThickness**](../../controls/properties-color-border.md) – The thickness of the **Data table** control's border.
+* [**Color**](../../controls/properties-color-border.md) – The default text color for all data rows.
+* [**Fill**](../../controls/properties-color-border.md) – The default background color for all data rows.
+* [**Font**](../../controls/properties-text.md) - The default font for all data rows.
+* [**FontWeight**](../../controls/properties-text.md) – The default font weight for all data rows.
 * **HeadingColor** – The text color for the column headings.
 * **HeadingFill** – The background color of the column headings.
 * **HeadingFont** – The font of the column headings.
 * **HeadingFontWeight** – The font weight of the column headings.
 * **HeadingSize** – The font size of the column headings.
-* [**Height**](properties-size-location.md) – The distance between the **Data table** control's top and bottom edges.
-* [**HoverColor**](properties-color-border.md) – The text color for the row that the mouse pointer is pointing at.
-* [**HoverFill**](properties-color-border.md) – The background color of the row that the mouse pointer is pointing at.
+* [**Height**](../../controls/properties-size-location.md) – The distance between the **Data table** control's top and bottom edges.
+* [**HoverColor**](../../controls/properties-color-border.md) – The text color for the row that the mouse pointer is pointing at.
+* [**HoverFill**](../../controls/properties-color-border.md) – The background color of the row that the mouse pointer is pointing at.
 * **NoDataText** – The message that the user receives when there are no records to show in the **Data table** control.
 * **SelectedColor** – The color of the text in the selected row.
 * **SelectedFill** – The background color of the selected row.
-* [**Size**](properties-text.md) – The default font size for all data rows.
-* [**Visible**](properties-core.md) – A value that determines whether the **Data table** control appears or is hidden.
-* [**Width**](properties-size-location.md) – The distance between the **Data table** control's left and right edges.
-* [**X**](properties-size-location.md) – The distance between the left edge of the **Data table** control and the left edge of its parent container (or the left edge of the screen if there is no parent container).
-* [**Y**](properties-size-location.md) – The distance between the top edge of the **Data table** control and the top edge of its parent container (or the top edge of the screen if there is no parent container).
+* [**Size**](../../controls/properties-text.md) – The default font size for all data rows.
+* [**Visible**](../../controls/properties-core.md) – A value that determines whether the **Data table** control appears or is hidden.
+* [**Width**](../../controls/properties-size-location.md) – The distance between the **Data table** control's left and right edges.
+* [**X**](../../controls/properties-size-location.md) – The distance between the left edge of the **Data table** control and the left edge of its parent container (or the left edge of the screen if there is no parent container).
+* [**Y**](../../controls/properties-size-location.md) – The distance between the top edge of the **Data table** control and the top edge of its parent container (or the top edge of the screen if there is no parent container).
 
 ## Related functions
-* [**Filter(DataSource, Formula)**](../functions/function-filter-lookup.md)(*DataSource*, *Formula*)
-* [**Search(DataSource, SearchString, Column)**](../functions/function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
+* [**Filter(DataSource, Formula)**](../../functions/function-filter-lookup.md)(*DataSource*, *Formula*)
+* [**Search(DataSource, SearchString, Column)**](../../functions/function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
 
 ## Examples
 ### Basic usage
