@@ -103,7 +103,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Remove**( *DataSource*, ThisItem )](../../functions/function-remove-removeif.md)
+[**Remove**( *DataSource*, ThisItem )](../functions/function-remove-removeif.md)
 
 ## Examples
 ### Show an image from a local file

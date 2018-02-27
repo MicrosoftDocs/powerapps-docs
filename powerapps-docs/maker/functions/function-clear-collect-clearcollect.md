@@ -42,9 +42,9 @@ You can also use the **[Patch](function-patch.md)** function to create records i
 ### Clear
 The **Clear** function deletes all the records of a collection.  The columns of the collection will remain.
 
-Note that **Clear** only operates on collections and not other data sources.  You can use **[RemoveIf](../../functions/function-remove-removeif.md)( *DataSource*, true )** for this purpose.  Use caution as this will remove all records from the data source's storage and can affect other users.
+Note that **Clear** only operates on collections and not other data sources.  You can use **[RemoveIf](function-remove-removeif.md)( *DataSource*, true )** for this purpose.  Use caution as this will remove all records from the data source's storage and can affect other users.
 
-You can use the **[Remove](../../functions/function-remove-removeif.md)** function to selectively remove records.
+You can use the **[Remove](function-remove-removeif.md)** function to selectively remove records.
 
 **Clear** has no return value.  It can only be used in a behavior formula.
 

@@ -136,7 +136,7 @@ If you specify a data source as an argument for one of these functions, it will 
 
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** - Creates, clears, and adds to a collection.
 * **[Update](../functions/function-update-updateif.md)**, **[UpdateIf](../functions/function-update-updateif.md)** - Updates records that match one or more criteria that you specify.
-* **[Remove](../functions/function-remove-removeif.md)**, **[RemoveIf](../functions/function-remove-removeif.md)** - Deletes records that match one or more criteria that you specify.
+* **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** - Deletes records that match one or more criteria that you specify.
 
 The following controls have properties that are tables:
 

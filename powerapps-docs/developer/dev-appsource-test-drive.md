@@ -84,7 +84,7 @@ UpdateIf(SiteInspectorCollect,ID=record.ID,
     {Title:TitleEditText.Text,SubTitle:SubTitleEditText.Text,Description:DescriptionEditText.Text)
 ```
 
-**To delete a row from a collection**, use [RemoveIf( DataSource, Condition [, ...] )](../functions/function-remove-removeif.md):
+**To delete a row from a collection**, use [RemoveIf( DataSource, Condition [, ...] )](../maker/functions/function-remove-removeif.md):
 
 ```
 RemoveIf(SiteInspectorCollect,ID=record.ID)

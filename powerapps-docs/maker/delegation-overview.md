@@ -87,7 +87,7 @@ All other functions do not support delegation, including these notable functions
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
-* **[CountIf](../functions/function-table-counts.md)**, **[RemoveIf](../functions/function-remove-removeif.md)**, **[UpdateIf](../functions/function-update-updateif.md)**
+* **[CountIf](../functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](../functions/function-update-updateif.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
 
 A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:

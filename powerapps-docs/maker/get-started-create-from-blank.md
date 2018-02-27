@@ -233,7 +233,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     **Remove(Schedule,BrowseGallery1.Selected);<br>If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
 
-    When the user clicks or taps this button, the **[Remove](../functions/function-remove-removeif.md)** function removes the record, and the **ViewScreen** reappears.
+    When the user clicks or taps this button, the **[Remove](functions/function-remove-removeif.md)** function removes the record, and the **ViewScreen** reappears.
 
 15. Set the **[Visible](controls/properties-core.md)** property of the **Remove** button to this formula:
     <br>**Form1.Mode=FormMode.Edit**

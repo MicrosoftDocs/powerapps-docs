@@ -244,9 +244,9 @@ Other elements include:
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
-**[Remove](../functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
+**[Remove](functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
 
-**[RemoveIf](../functions/function-remove-removeif.md)** – Removes records from a data source based on a condition.
+**[RemoveIf](functions/function-remove-removeif.md)** – Removes records from a data source based on a condition.
 
 **[RenameColumns](../functions/function-table-shaping.md)** – Renames columns of a table.
 

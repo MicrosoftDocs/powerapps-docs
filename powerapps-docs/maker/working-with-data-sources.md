@@ -58,7 +58,7 @@ You can use table data sources the same way that you use an internal PowerApps t
 * As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
   * Records can be created with the **[Patch](functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  
   * Records can be modified with the **[Patch](functions/function-patch.md)**, **[Update](../functions/function-update-updateif.md)**, and **[UpdateIf](../functions/function-update-updateif.md)** functions.
-  * Records can be removed with the **[Remove](../functions/function-remove-removeif.md)** and **[RemoveIf](../functions/function-remove-removeif.md)** functions.
+  * Records can be removed with the **[Remove](functions/function-remove-removeif.md)** and **[RemoveIf](functions/function-remove-removeif.md)** functions.
   * Errors when working with a data source are available through the **[Errors](functions/function-errors.md)** function.
 * The **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](functions/function-defaults.md)**, and **[Validate](../functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
 
@@ -127,7 +127,7 @@ Collections are a special kind of data source.  They're local to the app and not
 
 * Collections can be created dynamically with the **[Collect](functions/function-clear-collect-clearcollect.md)** function.  They don't need to be established ahead of time, as connection-based data sources do.
 * The columns of a collection can be modified at any time using the **[Collect](functions/function-clear-collect-clearcollect.md)** function.
-* Collections allow duplicate records.  More than one copy of the same record can exist in a collection.  Functions such as **[Remove](../functions/function-remove-removeif.md)** will operate on the first match they find, unless the **All** argument is supplied.
+* Collections allow duplicate records.  More than one copy of the same record can exist in a collection.  Functions such as **[Remove](functions/function-remove-removeif.md)** will operate on the first match they find, unless the **All** argument is supplied.
 * You can use the **[SaveData](../functions/function-savedata-loaddata.md)** and **[LoadData](../functions/function-savedata-loaddata.md)** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
 * You can use the **[Export](controls/control-export-import.md)** and **[Import](controls/control-export-import.md)** controls to save and reload a copy of the collection to a file that the user can interact with.  
 
