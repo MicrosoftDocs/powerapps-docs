@@ -28,7 +28,7 @@ This function returns a [record](../working-with-tables.md#records) that contain
 
 Data sources vary in how much default information they provide, including not providing any at all.  When you work with a [collection](../working-with-data-sources.md#collections) or another data source that doesn't support default values, the **Defaults** function will return an [empty](function-isblank-isempty.md) record.
 
-You can combine the **Defaults** function with the **[Patch](../../functions/function-patch.md)** function to [create a record](../working-with-data-sources.md).
+You can combine the **Defaults** function with the **[Patch](function-patch.md)** function to [create a record](../working-with-data-sources.md).
 
 ## Syntax
 **Defaults**( *DataSource* )

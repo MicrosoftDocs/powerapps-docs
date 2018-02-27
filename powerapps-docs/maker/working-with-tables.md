@@ -28,7 +28,7 @@ In your app, you'll use [formulas](working-with-formulas.md) to create, update, 
 
 You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in PowerApps return a table that reflects the other arguments that you specify. For example, you might create a formula:
 
-* to update a record in a table by specifying that table as one of multiple arguments for the **[Patch](../functions/function-patch.md)** function
+* to update a record in a table by specifying that table as one of multiple arguments for the **[Patch](functions/function-patch.md)** function
 * to add, remove, and rename columns in a table by specifying that table as an argument for the **[AddColumns](../functions/function-table-shaping.md)**, **[DropColumns](../functions/function-table-shaping.md)**, or **[RenameColumns](../functions/function-table-shaping.md)** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
 
 ## Elements of a table
@@ -172,7 +172,7 @@ You can also use a record as a general-purpose container for related named value
 
 * If you build a formula around the **[UpdateContext](../functions/function-updatecontext.md)** and **[Navigate](functions/function-navigate.md)** functions, use a record to gather the [context variables](working-with-variables.md#create-a-context-variable) that you want to update.
 * Use the **[Updates](controls/control-form-detail.md)** property on an **[Edit form](controls/control-form-detail.md)** control to gather the changes that have been made by the user in a form.
-* Use the **[Patch](../functions/function-patch.md)** function to update a data source but also to merge records.
+* Use the **[Patch](functions/function-patch.md)** function to update a data source but also to merge records.
 
 In these cases, the record was never a part of a table.
 
@@ -181,7 +181,7 @@ Functions that return records:
 
 * **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first or last record or records of the table.
 * **[Lookup](functions/function-filter-lookup.md)** - Returns the first record from a table that matches one or more criteria.
-* **[Patch](../functions/function-patch.md)** - Updates a data source or merges records.
+* **[Patch](functions/function-patch.md)** - Updates a data source or merges records.
 * **[Defaults](functions/function-defaults.md)** - Returns the default values for a data source.
 
 Properties that return records:

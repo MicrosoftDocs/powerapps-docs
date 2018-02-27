@@ -65,7 +65,7 @@ If you add this control, the user can update a data source with one or more phot
 **Zoom** – The percentage by which an image from a barcode scanner is magnified or the view of a file in a PDF viewer.
 
 ## Related functions
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## Example
 ### Add photos to an Image gallery control

@@ -500,7 +500,7 @@ This is the second optional section on PowerApps formulas. In the first deep-div
 
 What does this formula do? When you select an item in the gallery and click the **OK** button, the formula updates the **Project Details** list, setting the **PMAssigned** column to the value that you specify in the text input. The formula uses functions to do its work:
 
-* The [**Patch** function](../functions/function-patch.md) modifies one or more records of a data source.
+* The [**Patch** function](functions/function-patch.md) modifies one or more records of a data source.
 
 * The [**LookUp** function](functions/function-filter-lookup.md) finds the first record in a table that satisfies a formula.
 

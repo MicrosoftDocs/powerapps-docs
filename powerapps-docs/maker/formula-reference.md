@@ -227,7 +227,7 @@ Other elements include:
 
 **[Parent](../../functions/operators.md#parent-operator)** – Provides access to a container control's properties.
 
-**[Patch](../functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
+**[Patch](functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
 
 **[Pi](../functions/function-trig.md)** – Returns the number &pi;.
 

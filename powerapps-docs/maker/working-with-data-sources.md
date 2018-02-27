@@ -23,7 +23,7 @@ Most PowerApps apps use external information stored in cloud services called **D
 
 This article discusses the different kinds of data sources, and how to work with table data sources.
 
-It is easy to create an app that does basic reading and writing to a data source. But sometimes you want more control over how data flows in and out of your app.  This article describes how the **[Patch](../functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](../functions/function-validate.md)**, and **[Errors](functions/function-errors.md)** functions provide more control.
+It is easy to create an app that does basic reading and writing to a data source. But sometimes you want more control over how data flows in and out of your app.  This article describes how the **[Patch](functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](../functions/function-validate.md)**, and **[Errors](functions/function-errors.md)** functions provide more control.
 
 ## Kinds of data sources
 Data sources can be connected to a cloud service, or they can be local to an app.
@@ -56,8 +56,8 @@ You can use table data sources the same way that you use an internal PowerApps t
 > For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 * The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](../functions/function-refresh.md)** function.
 * As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
-  * Records can be created with the **[Patch](../functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  
-  * Records can be modified with the **[Patch](../functions/function-patch.md)**, **[Update](../functions/function-update-updateif.md)**, and **[UpdateIf](../functions/function-update-updateif.md)** functions.
+  * Records can be created with the **[Patch](functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  
+  * Records can be modified with the **[Patch](functions/function-patch.md)**, **[Update](../functions/function-update-updateif.md)**, and **[UpdateIf](../functions/function-update-updateif.md)** functions.
   * Records can be removed with the **[Remove](../functions/function-remove-removeif.md)** and **[RemoveIf](../functions/function-remove-removeif.md)** functions.
   * Errors when working with a data source are available through the **[Errors](functions/function-errors.md)** function.
 * The **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](functions/function-defaults.md)**, and **[Validate](../functions/function-validate.md)** functions provide information about the data source that you can use to optimize the user experience.
@@ -91,7 +91,7 @@ The diagram above shows the flow of information to update a data source:
 * A button or an image control on the screen enables the user to save changes to the record.  The **[OnSelect](controls/properties-core.md)** formula of the control calls the **[SubmitForm](functions/function-form.md)** function to do this work.  **[SubmitForm](functions/function-form.md)** reads all the **[Update](controls/control-card.md)** properties of the cards and uses this to write back to the data source.
 * Sometimes there will be issues.  A network connection may be down, or a validation check is made by the service that the app didn't know about.  The **Error** and **[ErrorKind](controls/control-form-detail.md)** properties of the form control makes this information available, so you can display it to the user.  
 
-For more fine grained control over the process, you can also use the **[Patch](../functions/function-patch.md)** and **[Errors](functions/function-errors.md)** function.  The **[Edit form](controls/control-form-detail.md)** control exposes an **[Updates](controls/control-form-detail.md)** property so that you can read the values of the fields within the form.  You can also use this property to call a custom connector on a connection, completely bypassing the **Patch** and **SubmitForm** functions.
+For more fine grained control over the process, you can also use the **[Patch](functions/function-patch.md)** and **[Errors](functions/function-errors.md)** function.  The **[Edit form](controls/control-form-detail.md)** control exposes an **[Updates](controls/control-form-detail.md)** property so that you can read the values of the fields within the form.  You can also use this property to call a custom connector on a connection, completely bypassing the **Patch** and **SubmitForm** functions.
 
 ### Validation
 Before making a change to a record, the app should do what it can to make sure the change will be acceptable.  There are two reasons for this:
@@ -105,13 +105,13 @@ PowerApps offers two tools for validation:
 * The **[Validate](../functions/function-validate.md)** function uses this same information to check the value of a single column or of an entire record.
 
 ### Error handling
-Great, you've validated your record.  Time to update that record with **[Patch](../functions/function-patch.md)**!
+Great, you've validated your record.  Time to update that record with **[Patch](functions/function-patch.md)**!
 
 But, alas, there may still be a problem.  The network is down, validation at the service failed, or the user doesn't have the right permissions, just to name a few of the possible errors your app may encounter.  It needs to respond appropriately to error situations, providing feedback to the user and a means for them to make it right.  
 
 When errors occur with a data source, your app automatically records the error information and makes it available through the **[Errors](functions/function-errors.md)** function.  Errors are associated with the records that had the problems.  If the problem is something the user can fix, such as a validation problem, they can resubmit the record, and the errors will be cleared.
 
-If an error occurs when a record is created with **[Patch](../functions/function-patch.md)** or **[Collect](functions/function-clear-collect-clearcollect.md)**, there is no record to associate any errors with.  In this case, *blank* will be returned by **[Patch](../functions/function-patch.md)** and can be used as the record argument to **[Errors](functions/function-errors.md)**.  Creation errors are cleared with the next operation.
+If an error occurs when a record is created with **[Patch](functions/function-patch.md)** or **[Collect](functions/function-clear-collect-clearcollect.md)**, there is no record to associate any errors with.  In this case, *blank* will be returned by **[Patch](functions/function-patch.md)** and can be used as the record argument to **[Errors](functions/function-errors.md)**.  Creation errors are cleared with the next operation.
 
 The **[Errors](functions/function-errors.md)** function returns a table of error information.  This information can include the column information, if the error can be attributed to a particular column.  Use column-level error messages in label controls that are close to where the column is located on the edit screen.  Use record-level error messages where the **Column** in the error table is *blank*, in a location close to the **Save** button for the entire record.  
 

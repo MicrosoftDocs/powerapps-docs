@@ -26,7 +26,7 @@ The **Revert** function refreshes an entire data source or a single record in th
 
 For the records reverted, **Revert** also clears any errors from the [table](../maker/working-with-tables.md) that the **[Errors](../maker/functions/function-errors.md)** function returned.
 
-If the **[Errors](../maker/functions/function-errors.md)** function reports a conflict after a **[Patch](function-patch.md)** or other data operation, **Revert** the record to start with the conflicting version and reapply the change.
+If the **[Errors](../maker/functions/function-errors.md)** function reports a conflict after a **[Patch](../maker/functions/function-patch.md)** or other data operation, **Revert** the record to start with the conflicting version and reapply the change.
 
 **Revert** has no return value. You can use it only in a [behavior formula](../maker/working-with-formulas-in-depth.md).
 
@@ -43,7 +43,7 @@ In this example, you'll revert the data source named **IceCream**, which starts 
 
 A user on another device changes the **Quantity** property of the **Strawberry** record to **400**.  At about the same time, you change the same property of the same record to **500**, not knowing about the other change.
 
-You use the **[Patch](function-patch.md)** function to update the record:<br>
+You use the **[Patch](../maker/functions/function-patch.md)** function to update the record:<br>
 **Patch( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ), { Quantity: 500 } )**
 
 You check the **[Errors](../maker/functions/function-errors.md)** table and find an error:

@@ -85,5 +85,5 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
    **Remove(Doodles, ThisItem)**
 9. Remove a drawing by clicking or tapping it in the **Image gallery** control.
 
-Use the **[SaveData](../../functions/function-savedata-loaddata.md)** function to save your drawings locally or the **[Patch](../../functions/function-patch.md)** function to save them to a data source.
+Use the **[SaveData](../../functions/function-savedata-loaddata.md)** function to save your drawings locally or the **[Patch](../functions/function-patch.md)** function to save them to a data source.
 

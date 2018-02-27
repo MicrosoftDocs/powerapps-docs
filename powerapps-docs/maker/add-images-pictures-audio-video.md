@@ -184,7 +184,7 @@ Be sure to test your app on different platforms, including in [a browser window]
 
 For information about more advanced scenarios that involve uploading multimedia directly to a different data source, see [image capture pro tips](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) and [custom connectors for image upload](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
 
-Another way to upload files to a data source is to use the [Patch](../functions/function-patch.md) function.
+Another way to upload files to a data source is to use the [Patch](functions/function-patch.md) function.
 
 [1]: ./media/add-images-pictures-audio-video/add-image-video-audio-file.png
 [3]: ./media/add-images-pictures-audio-video/add-intro-sound.png

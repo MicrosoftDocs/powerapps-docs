@@ -35,7 +35,7 @@ If the data source doesn't already exist, a collection is created.
 
 Collections are sometimes used to hold global variables or make a temporary copy of a data source. PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
 
-You can also use the **[Patch](../../functions/function-patch.md)** function to create records in a data source.
+You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
 **Collect** returns the modified data source as a table.  **Collect** can only be used in a [behavior formula](../working-with-formulas-in-depth.md).
 
