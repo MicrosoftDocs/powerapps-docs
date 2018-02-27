@@ -33,7 +33,7 @@ Every environment can have zero or one Common Data Service databases, which prov
 
 When you create an app in an environment, that app is only permitted to connect to the data sources that are also deployed in that same environment, including connections, gateways, flows, and Common Data Service databases.  For example, let’s consider a scenario where you have created two environments named ‘Test’ and ‘Dev’ and created a Common Data Service database in each of the environments. If you create an app in the ‘Test’ environment, it will only be permitted to connect to the ‘Test’ database, it won't be able to connect to the ‘Dev’ database.
 
-There is also a process to move resources between environments. For more information, see [Migrate resources](environment-and-tenant-migration.md).
+There is also a process to move resources between environments. For more information, see [Migrate resources](administrator/environment-and-tenant-migration.md).
 
 ![](./media/environments-overview/Environments.png)
 
