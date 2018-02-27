@@ -21,7 +21,7 @@ ms.author: sharik
 # Create a connection to SharePoint from PowerApps
 Create a connection to either SharePoint Online or on-premises SharePoint so that you can generate an app automatically or build one from scratch.
 
-If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
+If you're unfamiliar with PowerApps, see [Introduction to PowerApps](maker/getting-started.md).
 
 As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 

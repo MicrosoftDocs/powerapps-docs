@@ -23,7 +23,7 @@ Customize a **Display form** control and an **Edit form** control so that they s
 
 Each form comprises one or more cards, each of which shows data from a particular column in the data source. By following the steps in this topic, you can specify which cards appear in a form, move cards up and down within a form, and configure how data from each column appears within a card.
 
-If you're unfamiliar with PowerApps, see [Introduction to PowerApps](../getting-started.md).
+If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
 ## Prerequisites
 You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
