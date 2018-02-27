@@ -21,7 +21,7 @@ ms.author: kfend
 You can create and update one or more custom fields in any entity. When you create a custom field, you specify a set of properties, such as the field's name, its display name, and the type of data that it will contain. For more information, see [Enity field data types](https://docs.microsoft.com/common-data-service/entity-reference/field-data-types) and [Entity field properties](https://docs.microsoft.com/common-data-service/entity-reference/field-properties).
 
 > [!NOTE]
-> Every entity has [system fields](maker/data-platform-create-entity.md#system-fields-and-the-record-title-field), such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](maker/data-platform-intro.md#standard-entities) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
+> Every entity has [system fields](data-platform-create-entity.md#system-fields-and-the-record-title-field), such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](data-platform-intro.md#standard-entities) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
 
@@ -29,7 +29,7 @@ You can create and update one or more custom fields in any entity. When you crea
 
 2. Click or tap an entity, and then click or tap **Add field** near the top of the screen.
 
-3. Under **Display name**, specify the string of text that will identify the field to users. For more information, see [Create an app](maker/data-platform-create-app.md).
+3. Under **Display name**, specify the string of text that will identify the field to users. For more information, see [Create an app](data-platform-create-app.md).
 
 4. Under **Name**, specify the string of text that you will use to refer to the field in, for example, a formula when you build an app.
    
@@ -39,7 +39,7 @@ You can create and update one or more custom fields in any entity. When you crea
 5. Under **Type**, specify the type of data that the field will contain, such as **Text** or **Number**.
    
     > [!IMPORTANT]
-    > Specify this property carefully, because you might not be able to change it after the field contains data. For information about the types of data that you can specify, see [Understand entities](maker/data-platform-intro.md#custom-fields).
+    > Specify this property carefully, because you might not be able to change it after the field contains data. For information about the types of data that you can specify, see [Understand entities](data-platform-intro.md#custom-fields).
 
 6. If you're prompted, specify additional information for the data type that you specified.
 
@@ -86,9 +86,9 @@ As you create and modify fields, keep these points in mind:
   * You require unique values, but two or more records contain the same value in that field.
 
 ## Next steps
-* [Define relationships between entities](maker/data-platform-entity-lookup.md)
-* [Create an app using entities](maker/data-platform-create-app.md)
-* [Create an app from scratch using a Common Data Service database](maker/data-platform-create-app-scratch.md)
+* [Define relationships between entities](data-platform-entity-lookup.md)
+* [Create an app using entities](data-platform-create-app.md)
+* [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
 
 ## Privacy notice
 With the Microsoft PowerApps common data model we collect and store custom entity and field names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The entity and field names that Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

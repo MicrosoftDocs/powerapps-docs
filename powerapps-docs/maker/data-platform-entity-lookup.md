@@ -50,7 +50,7 @@ If entity A has a lookup relation to entity B:
 > [!NOTE]
 > If entity B is a standard entity with a parent relationship to entity A and you delete a record from entity A, all matched records in entity B are also deleted.
 
-For information about how to delete a field, see [Manage fields](../data-platform-manage-fields.md).
+For information about how to delete a field, see [Manage fields](data-platform-manage-fields.md).
 
 ## Next steps
 * [Generate an app by using a Common Data Service database](data-platform-create-app.md)
