@@ -56,7 +56,7 @@ Environment Makers can also distribute the apps they build in an environment to 
 
 Users or groups assigned to these environment roles are not automatically given access to the environment’s database (if it exists) and must be given access separately by a Database owner. For more information, see [Configure database security](administrator/database-security.md).
 
-Users or security groups can be assigned to either of these two roles by an Environment Admin from the [PowerApps admin center][1]. For more information, see [Environment Administration](environments-administration.md).
+Users or security groups can be assigned to either of these two roles by an Environment Admin from the [PowerApps admin center][1]. For more information, see [Environment Administration](administrator/environments-administration.md).
 
 ![](./media/environments-overview/EnvironmentRoles.png)
 
@@ -64,7 +64,7 @@ Users or security groups can be assigned to either of these two roles by an Envi
 A single default environment is automatically created by PowerApps for each tenant and shared by all users in that tenant. Whenever a new user signs up for PowerApps, they are automatically added to the Maker role of the default environment. The default environment is created in the closest region to the default region of the AAD tenant.
 
 > [!NOTE]
-> No users will be added to the Environment Admin role of the default environment automatically. For more informaton, see [Environment Administration](environments-administration.md).
+> No users will be added to the Environment Admin role of the default environment automatically. For more informaton, see [Environment Administration](administrator/environments-administration.md).
 > 
 > 
 
@@ -100,7 +100,7 @@ Your license determines whether you can create environments.
 Each user can create up to two  environments.
 
 ### Where can environments be created?
-You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, they you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can be participate in as a member of the Environment Admin or Environment Maker role. For more information, see [Environment Administration](environments-administration.md).
+You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, they you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can be participate in as a member of the Environment Admin or Environment Maker role. For more information, see [Environment Administration](administrator/environments-administration.md).
 
 ![](./media/environments-overview/CreateEnvironmentDialog.png)
 
@@ -126,7 +126,7 @@ Two weeks after PowerApps enters general availability (GA), environments that co
 ## Managing environments for your organization
 With the introduction of environments, we are also launching the PowerApps admin center, where you can manage all of the environments that you have created or to which you have been added to the Environment Admin role. From the Admin center, you can perform all administrative actions on an environment, including the following:
 
-* Add or remove a user or group from either the Environment Admin or Environment Maker role.  For more information, see [Environment Administration](environments-administration.md).
+* Add or remove a user or group from either the Environment Admin or Environment Maker role.  For more information, see [Environment Administration](administrator/environments-administration.md).
 * Provision a Common Data Service database for the environment. For more information, see [Create a Common Data Service database](administrator/create-database.md).
 * Set Data Loss Prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
 * Set database security policies (as open or restricted by database roles). For more information, see [Configure database security](administrator/database-security.md).

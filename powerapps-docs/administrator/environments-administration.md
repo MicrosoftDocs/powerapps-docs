@@ -59,8 +59,8 @@ Then enter the following info:
 | Property | Description |
 | --- | --- |
 | Environment name |Enter the name of your environment. |
-| Region |Choose the location to host your environment. We recommend using a location closest to your users. For example, if your app users are in London, choose a Europe location. If your app users are in New York, choose the U.S. See [Supported regions](regions-overview.md) for a list of supported environment regions. |
-| Create a database for this environment |Select this check box to create a Common Data Service database for this environment. A database can be configured to either be open to all users in the environment or restricted to database roles. For more information, see [Configure database security](administrator/database-security.md). |
+| Region |Choose the location to host your environment. We recommend using a location closest to your users. For example, if your app users are in London, choose a Europe location. If your app users are in New York, choose the U.S. See [Supported regions](../regions-overview.md) for a list of supported environment regions. |
+| Create a database for this environment |Select this check box to create a Common Data Service database for this environment. A database can be configured to either be open to all users in the environment or restricted to database roles. For more information, see [Configure database security](database-security.md). |
 
 ![](./media/environment-admin/new-environment-updated.png)
 
@@ -117,7 +117,7 @@ If an environment doesn't already have a database, an Environment Admin can crea
    
     ![](./media/environment-admin/database-tab-success.png)
 
-After you create a database, choose a security model. For more information, see [Configure database security](administrator/database-security.md).
+After you create a database, choose a security model. For more information, see [Configure database security](database-security.md).
 
 ## Manage security for your environments
 
@@ -132,9 +132,9 @@ In an environment, all the users in the Azure AD tenant are users of that enviro
   
     * View and manage all resources created within an environment.
   
-    * Set data loss prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
+    * Set data loss prevention policies. For more information, see [Data loss prevention policies](../prevent-data-loss.md).
 
-* The **Environment Maker** role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow. Environment Makers can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users, security groups, or all users in the organization. For more information, see [Share an app in PowerApps](share-app.md).
+* The **Environment Maker** role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow. Environment Makers can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users, security groups, or all users in the organization. For more information, see [Share an app in PowerApps](../share-app.md).
 
 To assign a user or a security group to an environment role, an Environment Admin can take these steps in the [PowerApps admin center][1]:
 
@@ -153,12 +153,12 @@ To assign a user or a security group to an environment role, an Environment Admi
 To remove all permissions for a user or a group, click or tap the **x** icon for that user or group.
 
 > [!NOTE]
-> Users or groups assigned to these environment roles are not automatically given access to the environment’s database (if it exists) and must be given access separately by a Database owner. For more information, see [Configure database security](administrator/database-security.md).  
+> Users or groups assigned to these environment roles are not automatically given access to the environment’s database (if it exists) and must be given access separately by a Database owner. For more information, see [Configure database security](database-security.md).  
 > 
 > 
 
 ### Database security
-The ability to create and modify a database schema and to connect to the data stored within a database that is provisioned in your environment is controlled by the database's user roles and permission sets. You can manage the user roles and permission sets for your environment's database from the **User roles** and **Permission sets** section of the **Security** tab. For more information, see [Configure database security](administrator/database-security.md).
+The ability to create and modify a database schema and to connect to the data stored within a database that is provisioned in your environment is controlled by the database's user roles and permission sets. You can manage the user roles and permission sets for your environment's database from the **User roles** and **Permission sets** section of the **Security** tab. For more information, see [Configure database security](database-security.md).
 
 ![](./media/environment-admin/database-security.png)
 
@@ -168,7 +168,7 @@ The ability to create and modify a database schema and to connect to the data st
 > 
 
 ## Data policies
-An organization's data must be protected so that it isn't shared with audiences that should not have access to it. To protect this data, you can create and enforce policies that define which consumer services and connector-specific business data can be shared with. Policies that define how data can be shared are referred to as data loss prevention (DLP) policies. You can manage the DLP policies for your environments  from the **Data Policies** section of the [PowerApps admin center][1].  For more information, see [Data loss prevention policies](prevent-data-loss.md).
+An organization's data must be protected so that it isn't shared with audiences that should not have access to it. To protect this data, you can create and enforce policies that define which consumer services and connector-specific business data can be shared with. Policies that define how data can be shared are referred to as data loss prevention (DLP) policies. You can manage the DLP policies for your environments  from the **Data Policies** section of the [PowerApps admin center][1].  For more information, see [Data loss prevention policies](../prevent-data-loss.md).
 
 ![](./media/environment-admin/data-policies.png)
 
@@ -186,7 +186,7 @@ Yes, this functionality is available from the PowerApps admin center. See [Envir
 Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md#delete-your-environment) for more details.
 
 ### As an Environment Admin, can I view and manage all resources (apps, flows, APIs, etc.) for an environment?
-Yes, the ability to view the apps and flows for an environment is available from the PowerApps admin center. See [View Apps](administrator/admin-view-apps.md) for more details.
+Yes, the ability to view the apps and flows for an environment is available from the PowerApps admin center. See [View Apps](admin-view-apps.md) for more details.
 
 ### Which license includes Common Data Service?
 PowerApps Plan 2.  See [PowerApps pricing page][3] for details on all the plans that include this license.

@@ -30,7 +30,7 @@ When you sign up and first sign in to powerapps.com, you will likely land in a d
 
 ![Default environment](./media/working-with-environments/env-dropdown.png)
 
-The *Default environment* is accessible to everyone. You can start creating apps in this environment and share your apps with other users. You may also have access to other environments, such as those you [create yourself](environments-administration.md) or those created by others but you have access to. You can switch environments by clicking the environment dropdown in the upper-right corner and selecting a different environment. In this example, I am switching from *Default environment* to *Environment 1*.
+The *Default environment* is accessible to everyone. You can start creating apps in this environment and share your apps with other users. You may also have access to other environments, such as those you [create yourself](administrator/environments-administration.md) or those created by others but you have access to. You can switch environments by clicking the environment dropdown in the upper-right corner and selecting a different environment. In this example, I am switching from *Default environment* to *Environment 1*.
 
 ![Switch environment](./media/working-with-environments/switch-env.png)
 
