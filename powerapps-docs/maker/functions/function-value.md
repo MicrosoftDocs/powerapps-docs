@@ -24,7 +24,7 @@ Converts a string of text to a number.
 ## Description
 The **Value** function converts a string of text that contains number characters to a number value. Use this function when you need to perform calculations on numbers that were entered as text by a user.
 
-Different languages interpret **,** and **.** differently.  By default, the text is interpreted in the language of the current user.  You can specify the language to use with a language tag, using the same language tags that are returned by the **[Language](../maker/functions/function-language.md)** function.
+Different languages interpret **,** and **.** differently.  By default, the text is interpreted in the language of the current user.  You can specify the language to use with a language tag, using the same language tags that are returned by the **[Language](function-language.md)** function.
 
 Notes on the format of the string:
 
@@ -34,7 +34,7 @@ Notes on the format of the string:
 
 If the number is not in a proper format, **Value** will return *blank*.
 
-To convert date and time values, use the [**DateValue**](../maker/functions/function-datevalue-timevalue.md), [**TimeValue**](../maker/functions/function-datevalue-timevalue.md), or [**DateTimeValue**](../maker/functions/function-datevalue-timevalue.md) functions.
+To convert date and time values, use the [**DateValue**](function-datevalue-timevalue.md), [**TimeValue**](function-datevalue-timevalue.md), or [**DateTimeValue**](function-datevalue-timevalue.md) functions.
 
 ## Syntax
 **Value**( *String* [, *LanguageTag* ] )

@@ -43,7 +43,7 @@ See the **[Date](function-date-time.md)** and **[Time](function-date-time.md)** 
 
 Also see [working with dates and times](../show-text-dates-times.md) for more information.
 
-To convert numbers, see the **[Value](../../functions/function-value.md)** function.
+To convert numbers, see the **[Value](function-value.md)** function.
 
 ## Syntax
 **DateValue**( *String* [, *Language* ])<br>**DateTimeValue**( *String* [, *Language* ])<br>**TimeValue**( *String* [, *Language* ])

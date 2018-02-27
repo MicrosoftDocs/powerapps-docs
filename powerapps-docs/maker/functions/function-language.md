@@ -39,7 +39,7 @@ PowerApps uses the [IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47)
 
 To see the list of supported language tags, type **Value( "1", )** in the formula bar or advanced view and scroll through the list of locales suggested for the second argument.  
 
-The **[Text](function-text.md)** and **[Value](../../functions/function-value.md)** functions also use language tags.  Use these functions for translating to and from text strings in a globally aware manner.  When passing a language tag to these functions and the region would not make a difference, you can use just the language portion of the tag.
+The **[Text](function-text.md)** and **[Value](function-value.md)** functions also use language tags.  Use these functions for translating to and from text strings in a globally aware manner.  When passing a language tag to these functions and the region would not make a difference, you can use just the language portion of the tag.
 
 ## Syntax
 **Language**()

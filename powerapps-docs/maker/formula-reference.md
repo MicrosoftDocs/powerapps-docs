@@ -340,7 +340,7 @@ Other elements include:
 ## V
 **[Validate](functions/function-validate.md)** – Checks whether the value of a single column or a complete record is valid for a data source.
 
-**[Value](../functions/function-value.md)** – Converts a string to a number.
+**[Value](functions/function-value.md)** – Converts a string to a number.
 
 **[VarP](functions/function-aggregates.md)** – Returns the variance of its arguments.  
 

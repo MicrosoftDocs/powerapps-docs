@@ -25,7 +25,7 @@ Creates and clears [collections](../working-with-data-sources.md#collections) an
 ### Collect
 The **Collect** function adds records to a data source. The items to be added can be:
 
-* A single value: The value is placed in the **[Value](../../functions/function-value.md)** field of a new record.  All other properties are left [blank](function-isblank-isempty.md).
+* A single value: The value is placed in the **[Value](function-value.md)** field of a new record.  All other properties are left [blank](function-isblank-isempty.md).
 * A record: Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
 * A [table](../working-with-tables.md): Each record of the table is added as a separate record of the data source as described above. The table is not added as a nested table to a record. To accomplish this, wrap the table in a record first.
 
