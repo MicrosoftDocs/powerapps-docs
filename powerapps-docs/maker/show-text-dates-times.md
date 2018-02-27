@@ -220,7 +220,7 @@ Convert dates and times from strings of text to values, which you can format in 
    
     **Wednesday, January 1, 2014** is listed by default. Select different values in the **[Drop down](controls/control-drop-down.md)** controls to change the date in the **[Label](controls/control-text-box.md)** control.
 
-You may need to convert data that you didn't expect. If you add **[Text input](controls/control-text-input.md)** controls instead of **[Drop down](controls/control-drop-down.md)** controls, a user may enter an incorrect date, such as May 45. The **[Date](../functions/function-date-time.md)** function handles atypical data in the following ways:
+You may need to convert data that you didn't expect. If you add **[Text input](controls/control-text-input.md)** controls instead of **[Drop down](controls/control-drop-down.md)** controls, a user may enter an incorrect date, such as May 45. The **[Date](functions/function-date-time.md)** function handles atypical data in the following ways:
 
 * If a year value is between 0 and 1899 (inclusive), the function adds that value to 1900 to calculate the year.
 * If a year value is between 1900 and 9999 (inclusive), the function uses that value as the year.

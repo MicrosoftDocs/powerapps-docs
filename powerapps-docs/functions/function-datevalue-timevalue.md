@@ -39,7 +39,7 @@ Dates must be in one of these formats:
 * DD Mon YYYY
 * Month DD, YYYY
 
-See the **[Date](function-date-time.md)** and **[Time](function-date-time.md)** functions to convert from numeric components date, month, and year, and hour, minute, and second.
+See the **[Date](../maker/functions/function-date-time.md)** and **[Time](../maker/functions/function-date-time.md)** functions to convert from numeric components date, month, and year, and hour, minute, and second.
 
 Also see [working with dates and times](../maker/show-text-dates-times.md) for more information.
 

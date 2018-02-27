@@ -103,7 +103,7 @@ Other elements include:
 ## D
 **[DataSourceInfo](functions/function-datasourceinfo.md)** – Provides information about a data source.
 
-**[Date](../functions/function-date-time.md)** – Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
+**[Date](functions/function-date-time.md)** – Returns a date/time value, based on **Year**, **Month**, and **Day** values.  
 
 **[DateAdd](../functions/function-dateadd-datediff.md)** – Adds days, months, quarters, or years to a date/time value.
 
@@ -312,7 +312,7 @@ Other elements include:
 
 **[ThisItem](../../functions/operators.md#thisitem-operator)** – When in a gallery or form, returns the data for the current item from the container.
 
-**[Time](../functions/function-date-time.md)** – Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
+**[Time](functions/function-date-time.md)** – Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
 
 **[TimeValue](../functions/function-datevalue-timevalue.md)** – Converts a time-only string to a date/time value.
 
