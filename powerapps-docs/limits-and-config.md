@@ -33,7 +33,7 @@ These limits apply to each single outgoing request:
 > The retry value may vary. For certain error conditions, it doesn't make sense to retry.
 
 ## IP addresses
-Requests from PowerApps use IP addresses that depend on the region of the [environment](environments-overview.md) that the app is in. We don't publish fully qualified domain names available for PowerApps scenarios.
+Requests from PowerApps use IP addresses that depend on the region of the [environment](administrator/environments-overview.md) that the app is in. We don't publish fully qualified domain names available for PowerApps scenarios.
 
 Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this topic.
 

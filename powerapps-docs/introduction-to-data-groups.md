@@ -62,6 +62,6 @@ In this walk-through, we will change the default data group from the **no busine
 
 ## Next steps
 * [Learn more about data loss prevention (DLP) policies](prevent-data-loss.md)
-* [Learn more about environments](environments-overview.md)
+* [Learn more about environments](administrator/environments-overview.md)
 * [Learn more about Microsoft PowerApps](getting-started.md)
 

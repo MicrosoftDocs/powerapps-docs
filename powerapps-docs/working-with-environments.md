@@ -19,7 +19,7 @@ ms.author: litran
 
 ---
 # Working with environments and Microsoft PowerApps
-With PowerApps, you can work in different environments and easily switch among them. For an overview of environments, see [Environments overview](environments-overview.md), which explains in detail why you use environments and how you can create and manage them. The scope of this article will cover the following topics on environment:
+With PowerApps, you can work in different environments and easily switch among them. For an overview of environments, see [Environments overview](administrator/environments-overview.md), which explains in detail why you use environments and how you can create and manage them. The scope of this article will cover the following topics on environment:
 
 * how to switch the environment on powerapps.com
 * how to an create app in the right environment
@@ -72,4 +72,4 @@ To switch environments in PowerApps Studio for Windows or PowerApps Studio for w
 
 ![Studio switch environment](./media/working-with-environments/studio-switch-env.PNG)
 
-For more information about environments, see [this overview](environments-overview.md).
+For more information about environments, see [this overview](administrator/environments-overview.md).

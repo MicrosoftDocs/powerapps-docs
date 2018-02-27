@@ -46,7 +46,7 @@ ms.author: sharik
 
 5. **Custom connectors and the Common Data Service**
 
-   If an app created using PowerApps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../environments-overview.md).
+   If an app created using PowerApps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../administrator/environments-overview.md).
 
 6. **Running an app on Windows 8.1**
 

@@ -71,7 +71,7 @@ Admins can use the search feature from the Admin center to find specific DLP pol
 > Admins should publish all DLP policies so that users in the organization are aware of the policies prior to creating PowerApps.
 
 #### Makers
-If you don't have admin permissions and you wish to learn more about the DLP policies in your organization, contact your administrator. You can also learn more from the [maker environments topic](environments-overview.md)  
+If you don't have admin permissions and you wish to learn more about the DLP policies in your organization, contact your administrator. You can also learn more from the [maker environments topic](administrator/environments-overview.md)  
 
 > [!NOTE]
 > Only admins can edit or delete DLP policies.  

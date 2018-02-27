@@ -30,7 +30,7 @@ When you sign up and first sign in to powerapps.com, you will notice the site's 
 
 ![Header Waffle](./media/intro-maker-portal/waffle.png)
 
-Near the right edge of the header, you'll first see an environment dropdown, where you can quickly switch between environments. **Default environment** is likely selected by default. [Learn more about environments](environments-overview.md).
+Near the right edge of the header, you'll first see an environment dropdown, where you can quickly switch between environments. **Default environment** is likely selected by default. [Learn more about environments](administrator/environments-overview.md).
 
 ![Header Environment](./media/intro-maker-portal/environment.png)
 
