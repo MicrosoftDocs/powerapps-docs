@@ -74,7 +74,7 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-**[TabIndex](../../controls/properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
 **[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 

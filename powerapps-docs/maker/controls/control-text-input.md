@@ -112,7 +112,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Strikethrough](../../controls/properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](../../controls/properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
 **[Tooltip](../../controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 

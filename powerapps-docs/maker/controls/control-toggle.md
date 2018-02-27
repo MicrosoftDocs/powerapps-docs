@@ -72,7 +72,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **ShowLabel** – Whether a text label is shown beside the toggle control.
 
-**[TabIndex](../../controls/properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
 
 **TextPosition** – Whether the label is to the left or the right of the toggle control.
 
