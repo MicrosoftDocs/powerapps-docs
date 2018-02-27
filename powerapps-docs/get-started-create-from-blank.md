@@ -54,7 +54,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 4. If you're new to PowerApps:
 
-   * Learn how to [add a control and set its properties](add-configure-controls.md), which determine how the control appears and behaves.
+   * Learn how to [add a control and set its properties](maker/add-configure-controls.md), which determine how the control appears and behaves.
    * Learn how to [add and rename a screen](add-screen-context-variables.md).
 
 ## Create a blank app, and connect to data
@@ -118,7 +118,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer_x0020_1"), "Volunteer_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-    If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md).
+    If you're not sure where the property list is, see [Add and configure controls](maker/add-configure-controls.md).
 
     > [!NOTE]
 > For Excel or SharePoint data sources that contain column names with spaces, PowerApps shows the spaces as **"\_x0020\_"**. In this example, the column **"Volunteer 1"** appears in a formula as **"Volunteer_x0020_1"**.

@@ -26,7 +26,7 @@ You can add rules to a variety of controls. In this topic, you'll add a rule to 
 ## Add a rule
 1. Select a control (or add a control and leave it selected).
 
-    For this topic, [add a label and a slider](add-configure-controls.md), set the label's **Text** property to **Slider1.Value**, and then select the slider.
+    For this topic, [add a label and a slider](maker/add-configure-controls.md), set the label's **Text** property to **Slider1.Value**, and then select the slider.
 
 1. In the right-hand panel, click or tap **Rules**, and then click or tap **New rule**.
 

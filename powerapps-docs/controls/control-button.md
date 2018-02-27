@@ -119,7 +119,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 ### Add a basic formula to a button
 1. Add a **[Text input](control-text-input.md)** control, and name it **Source**.
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Add a **Button** control, set its **[Text](properties-core.md)** property to "Add", and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **UpdateContext({Total:Total + Value(Source.Text)})**
    

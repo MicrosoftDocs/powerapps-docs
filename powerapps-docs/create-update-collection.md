@@ -25,7 +25,7 @@ You can create and use collections within PowerApps. Let's get started.
 ### Prerequisites
 * [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 * Create an app or open an existing app in PowerApps.
-* Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+* Learn how to [configure a control](maker/add-configure-controls.md) in PowerApps.
 * These steps use the [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
 ## Create a single-column collection

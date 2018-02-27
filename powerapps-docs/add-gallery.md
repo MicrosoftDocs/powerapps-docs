@@ -22,7 +22,7 @@ ms.author: sharik
 Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
 
 ## Prerequisites
-* Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
+* Learn how to [add and configure a control](maker/add-configure-controls.md) in PowerApps.
 
 * Set up the sample data:
     1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.

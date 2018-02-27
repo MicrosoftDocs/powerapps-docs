@@ -117,7 +117,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 ## Example
 1. Add a **[Button](control-button.md)** control, and set its **[Text](properties-core.md)** property to show **Collect**.
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Set the **[OnSelect](properties-core.md)** property of the **[Button](control-button.md)** control to this formula:
    <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
    

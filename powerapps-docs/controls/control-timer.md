@@ -111,7 +111,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 ### Show a countdown
 1. Add a timer, and name it **Countdown**.
 
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Set the timer's **Duration** property to **10000** and its **Repeat** and **Autostart** properties to **true**.
 3. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
 4. Add a label, and set its **[Text](properties-core.md)** property to this formula:
@@ -125,7 +125,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 ### Animate a control
 1. Add a timer, and name it **FadeIn**.
 
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Set the timer's **Duration** property to **5000** and its **Repeat** and **Autostart** properties to **true**.
 3. (optional) Make the timer easier to read by setting its **[Height](properties-size-location.md)** property to **160**, its **[Width](properties-size-location.md)** property to **600**, and its **[Size](properties-text.md)** property to **60**.
 4. Add a label, set its **[Text](properties-core.md)** property to show **Welcome!** and set its **[Color](properties-color-border.md)** property to this formula:

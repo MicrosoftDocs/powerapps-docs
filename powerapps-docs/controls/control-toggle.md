@@ -102,7 +102,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 ## Example
 1. Add a toggle, and name it **MemberDiscount**.
 
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Add a label, and set its **[Text](properties-core.md)** property to this formula:
    <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
 

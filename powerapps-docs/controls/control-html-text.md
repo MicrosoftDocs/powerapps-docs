@@ -80,7 +80,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 \<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization. \<p>
 
-Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 
 1. Add an **HTML text** control, and set its **HTMLText** property to this value:<br>
    **Source.Text**

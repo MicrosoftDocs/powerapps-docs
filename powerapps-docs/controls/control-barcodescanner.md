@@ -71,7 +71,7 @@ If you add this control, the user can update a data source with one or more phot
 ### Add photos to an Image gallery control
 1. Add a **barcode scanner** control, name it **Mybarcode scanner**
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Add a **Label** control and set its output to the Barcode's value.  
 3. Scan a barcode of the type set under BarcodeType property.
 4. The label is going to display the scanned barcode.

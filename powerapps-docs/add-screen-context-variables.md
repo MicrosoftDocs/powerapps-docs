@@ -22,7 +22,7 @@ ms.author: sharik
 Create an app with multiple screens, and add ways for users to navigate between them.
 
 ## Prerequisites
-* Learn how to [configure a control](add-configure-controls.md).
+* Learn how to [configure a control](maker/add-configure-controls.md).
 * Create or open an app.
 
 ## Add and rename a screen

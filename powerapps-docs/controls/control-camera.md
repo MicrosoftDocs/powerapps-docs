@@ -72,7 +72,7 @@ If you add this control, the user can update a data source with one or more phot
 1. Add a **Camera** control, name it **MyCamera**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(MyPix, MyCamera.Photo)**
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, and then take a photo by clicking or tapping **MyCamera**.

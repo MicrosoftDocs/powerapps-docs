@@ -111,7 +111,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 2. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
 3. Add an **Image** control, and set its **[Items](properties-core.md)** property to the name of the file that you added.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
 
     The **Image** control shows the image that you specified.
 
@@ -124,6 +124,6 @@ If you add one or more **Image** controls to your app, you can show individual i
 4. Select the **Flooring Estimates** check box, and then click or tap **Connect**.
 5. Add a **Gallery** control with images, and set its **[Items](properties-core.md)** property to **FlooringEstimates**.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
 
     The **Gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.

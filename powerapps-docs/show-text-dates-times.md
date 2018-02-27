@@ -26,7 +26,7 @@ For example, add data from users about stock trades or client meetings, data fro
 
 * [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 * Create an app or open an existing app in PowerApps.
-* Learn how to [configure a control](add-configure-controls.md) in PowerApps.
+* Learn how to [configure a control](maker/add-configure-controls.md) in PowerApps.
 
 ## Show text in a Label control
 Show text in a **[Label](controls/control-text-box.md)** control by setting the value of its **[Text](controls/properties-core.md)** property. Set this property by typing directly into the control or by typing an expression in the formula bar.

@@ -79,7 +79,7 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(Revenue2015, {Product:"Europa", Revenue:27000}, {Product:"Ganymede", Revenue:26300}, {Product:"Callisto", Revenue:29200})**
    
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.

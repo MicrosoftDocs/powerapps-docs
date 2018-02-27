@@ -81,4 +81,4 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
     A functional **Combo box** will appear in your app.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?.
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?.

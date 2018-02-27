@@ -70,4 +70,4 @@ An **Attachments** control lets you open files stored on a data source.
 
     The Attachments field associated with the SharePoint list will appear in the form.
 
-Don't know how to [add and configure a control](../add-configure-controls.md)?
+Don't know how to [add and configure a control](../maker/add-configure-controls.md)?

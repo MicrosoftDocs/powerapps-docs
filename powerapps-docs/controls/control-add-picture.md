@@ -107,7 +107,7 @@ These properties apply to the inner label control that by default says "Tap or c
 ### Add images to an Image gallery control
 1. Add an **Add picture** control, and then triple-click it.
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
 3. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
    **Collect(MyPix, AddMediaButton1.Media)**

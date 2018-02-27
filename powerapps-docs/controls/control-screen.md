@@ -50,7 +50,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 1. Add a **[Radio](control-radio.md)** control, name it **ScreenFills**, and set its **[Items](properties-core.md)** property to this value:<br>
    **["Red", "Green"]**
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Name the default **Screen** control **Source**, add another **Screen** control, and name it **Target**.
 3. On **Source**, add a **[Shape](control-shapes-icons.md)** control (such as an arrow), and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Navigate(Target, ScreenTransition.Fade)**

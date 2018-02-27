@@ -133,7 +133,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 ### Collect data
 1. Add two text-input controls, and name them **inputFirst** and **inputLast**.
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Add a button, set its **[Text](properties-core.md)** property to **Add**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
    

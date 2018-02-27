@@ -120,7 +120,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 **Q:** Are the customization features for customizing a list form the same as those for customizing a standalone app?
 
-**A:** Yes. You can [add and configure controls](add-configure-controls.md), [connect to available data sources](add-data-connection.md), or [add your own data sources](register-custom-api.md), just like you can with standalone apps.
+**A:** Yes. You can [add and configure controls](maker/add-configure-controls.md), [connect to available data sources](add-data-connection.md), or [add your own data sources](register-custom-api.md), just like you can with standalone apps.
 
 **Q:** Can I create customized list forms in an environment other than the default environment in my organization?
 

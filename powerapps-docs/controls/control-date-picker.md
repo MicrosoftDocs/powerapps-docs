@@ -97,7 +97,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 ## Example
 1. Add a **Date Picker** control, and name it **Deadline**.
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to this formula:
    <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
    

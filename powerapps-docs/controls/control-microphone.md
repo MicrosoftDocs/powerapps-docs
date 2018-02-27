@@ -90,7 +90,7 @@ If you add this control, the user can update a data source with one or more soun
 1. Add a **Microphone**, name it **MyMic**, and set its **OnStop** property to this formula:<br>
    **Collect(MySounds, MyMic.Audio)**
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.

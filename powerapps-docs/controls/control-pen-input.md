@@ -71,7 +71,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 ### Create a set of images
 1. Add a **Pen input** control, name it **MyDoodles**, and set its **ShowControls** property to **true**.
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Add a **[Button](control-button.md)** control, move it below **MyDoodles**, and set the **[Text](properties-core.md)** property of the **[Button](control-button.md)** control to show **Add**.
 3. Set the **[OnSelect](properties-core.md)** property of the **[Button](control-button.md)** control to this formula:<br>
    **Collect(Doodles, {Sketch:MyDoodles.Image})**

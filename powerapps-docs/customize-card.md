@@ -25,7 +25,7 @@ For an overview, see [Understand data cards](working-with-cards.md).
 
 ## Prerequisites
 
-* Learn how to [add and configure controls](add-configure-controls.md).
+* Learn how to [add and configure controls](maker/add-configure-controls.md).
 * You can review this topic for general concepts only. To follow it exactly (step by step), follow the steps in these topics:
 
   1. [Create an app from SharePoint](app-from-sharepoint.md).

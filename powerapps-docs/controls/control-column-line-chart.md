@@ -115,7 +115,7 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(Revenue, {Year:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Year:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Year:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
    
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.

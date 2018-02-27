@@ -23,7 +23,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
 ## Prerequisites
 
-* Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
+* Learn how to [add and configure a control](maker/add-configure-controls.md) in PowerApps.
 * Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 * Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 * In a new or existing app, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
@@ -35,7 +35,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
     **FlooringEstimates.Name**
 
     > [!NOTE]
-> If you're not sure how to add a control, rename it, or set a property, see [Add and configure controls](add-configure-controls.md).
+> If you're not sure how to add a control, rename it, or set a property, see [Add and configure controls](maker/add-configure-controls.md).
 
     The list shows names of flooring products from the data source.
 

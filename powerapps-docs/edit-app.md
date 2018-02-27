@@ -68,5 +68,5 @@ In addition, this message appears if you open an app for editing and then try to
 ![](./media/edit-app/applock-selfuser.png)
 
 ## Next Steps
-Learn more about how to add a [screen](add-screen-context-variables.md), a [control](add-configure-controls.md) or a [data connection](add-data-connection.md).
+Learn more about how to add a [screen](add-screen-context-variables.md), a [control](maker/add-configure-controls.md) or a [data connection](add-data-connection.md).
 

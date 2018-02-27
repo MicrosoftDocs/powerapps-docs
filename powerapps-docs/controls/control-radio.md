@@ -121,7 +121,7 @@ A **Radio** control, with which users have decades of experience, is best used w
 1. Add a **Radio** control, name it **Pricing**, and set its **[Items](properties-core.md)** property to this formula:
    <br>**["Standard", "Premium"]**
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
 2. Add a **[Label](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](properties-core.md)** property of the **[Label](control-text-box.md)** control to this formula:
    <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
    

@@ -89,7 +89,7 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 2. Browse to the file you want to use, click or tap it, and then click or tap **Open**.
 3. Press Esc to return to the default workspace, add an **Audio** or **Video** control, and set its **Media** property to the file that you added.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
 4. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
 
     > [!TIP]

@@ -22,7 +22,7 @@ ms.author: sharik
 Add a variety of UI elements to your app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
 
 ## Prerequisites
-1. [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+1. [Sign up](../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
 2. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge).
 
@@ -53,7 +53,7 @@ On the **Insert** tab, click or tap any of these categories, and then click or t
 **Icons**
 
 > [!TIP]
-> If you need more space for controls, [add another screen](add-screen-context-variables.md).
+> If you need more space for controls, [add another screen](../add-screen-context-variables.md).
 
 ## Configure a control directly
 In this procedure, you'll add and configure a **Label** control, but you can apply many of the same principles to other controls.
@@ -72,15 +72,15 @@ In this procedure, you'll add and configure a **Label** control, but you can app
 
     ![A resized label](./media/add-configure-controls/shorter-text-box.png)
 
-     You can also resize a control by modifying its **[Height](controls/properties-size-location.md)**, **[Width](controls/properties-size-location.md)**, or both properties, as this topic describes later.
+     You can also resize a control by modifying its **[Height](../controls/properties-size-location.md)**, **[Width](../controls/properties-size-location.md)**, or both properties, as this topic describes later.
 
-3. Move the **Label** control by dragging the selection box itself (or by modifying the **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)**, or both properties, as this topic describes later).
+3. Move the **Label** control by dragging the selection box itself (or by modifying the **[X](../controls/properties-size-location.md)**, **[Y](../controls/properties-size-location.md)**, or both properties, as this topic describes later).
 
 4. Triple-click the text that appears in the **Label** control, and then type **Hello, world**.
 
     ![A label with custom text](./media/add-configure-controls/change-text-directly.png)
 
-     You can also modify this text by setting the **[Text](controls/properties-core.md)** property of this control, as this topic describes later.
+     You can also modify this text by setting the **[Text](../controls/properties-core.md)** property of this control, as this topic describes later.
 
 ## Configure a control from the toolbar
 By configuring a control from the toolbar, you can specify a wider variety of options than you can by configuring a control directly.
@@ -151,28 +151,28 @@ By using the **Properties** tab, you can configure a control without writing a f
 ## Configure a control in the formula bar
 By using the formula bar, you can set properties that you can't set directly, in the **Properties** tab, or from the toolbar. For example, you can set a tooltip that appears when a user points to the control but doesn't click or tap it. You can also specify complicated formulas that increase the power of your app.
 
-Each change that you made earlier in this topic updated the value of a [property](reference-properties.md) for the control that you configured.
+Each change that you made earlier in this topic updated the value of a [property](../reference-properties.md) for the control that you configured.
 
-* When you resized the control, you changed its **[Width](controls/properties-size-location.md)** property.
-* When you moved the control, you changed its **[X](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties.
-* When you changed the text that the control displays, you changed its **[Text](controls/properties-core.md)** property.
+* When you resized the control, you changed its **[Width](../controls/properties-size-location.md)** property.
+* When you moved the control, you changed its **[X](../controls/properties-size-location.md)** and **[Y](../controls/properties-size-location.md)** properties.
+* When you changed the text that the control displays, you changed its **[Text](../controls/properties-core.md)** property.
 
 Instead of configuring a control directly, in the **Properties** tab, or from the toolbar, you can also update the value of a property by selecting it in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
 
-1. With the remaining **Label** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
+1. With the remaining **Label** control selected, click or tap **[Text](../controls/properties-core.md)** in the property list, and then type **"My Company Name"** (including the quotation marks) in the formula bar.
 
     ![A literal string in a label](./media/add-configure-controls/text-literal.png)
 
     When you surround a string of text with quotation marks, you specify that it should be treated exactly as you typed it. As an alternative, you can set the value of a property to a formula.
 
-2. With the **Label** control selected, click or tap **[Text](controls/properties-core.md)** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
+2. With the **Label** control selected, click or tap **[Text](../controls/properties-core.md)** in the property list, and then type **Today()** (without quotation marks) in the formula bar.
 
     The control shows the current date.
 
     ![Today function](./media/add-configure-controls/today-function.png)
 
     > [!TIP]
-> You can [format dates and times](show-text-dates-times.md) in various ways, in addition to performing calculations on them.
+> You can [format dates and times](../show-text-dates-times.md) in various ways, in addition to performing calculations on them.
 
 ## Configure two controls to interact with each other
 In this procedure, you'll add a check box and then configure the label that you already have to appear only when the check box is selected.
@@ -185,7 +185,7 @@ In this procedure, you'll add a check box and then configure the label that you 
 
     ![Insert check box](./media/add-configure-controls/insert-check-box.png)
 
-3. Move the **Check box** control so that it appears below the **Label** control, and set the **[Text](controls/properties-core.md)** property of the **Check box** control so that **Show text** appears.
+3. Move the **Check box** control so that it appears below the **Label** control, and set the **[Text](../controls/properties-core.md)** property of the **Check box** control so that **Show text** appears.
 
     ![Configure check box](./media/add-configure-controls/configure-check-box.png)
 
@@ -203,7 +203,7 @@ In this procedure, you'll add a check box and then configure the label that you 
 
     **If(MyCheckbox.Value = true, true, false)**
 
-    This **[If function](functions/function-if.md)** states that the label should appear only when the check box is selected. Because the check box is cleared, the **Label** control disappears (except for the selection box).
+    This **[If function](../functions/function-if.md)** states that the label should appear only when the check box is selected. Because the check box is cleared, the **Label** control disappears (except for the selection box).
 
     ![Visible formula](./media/add-configure-controls/visible-formula.png)
 
@@ -217,7 +217,7 @@ In this procedure, you'll add a check box and then configure the label that you 
 
     ![Label disappears when the check box is cleared](./media/add-configure-controls/hide-text.png)
 
-This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](formula-reference.md) from simple to complex.
+This example is basic, but you can configure the behavior and appearance of your app by building one or more [formulas](../formula-reference.md) from simple to complex.
 
 ## Rename a screen or a control
 By renaming a screen or control, you can build formulas that are easier to read and maintain.

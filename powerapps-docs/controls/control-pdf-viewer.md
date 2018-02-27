@@ -98,4 +98,4 @@ If the PDF document resides on a server with restrictive CORS settings, you may 
 
     The control shows the PDF file.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?

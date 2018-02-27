@@ -62,7 +62,7 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
    
     The control renders the Power BI tile.
    
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
    
    Don't have have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 

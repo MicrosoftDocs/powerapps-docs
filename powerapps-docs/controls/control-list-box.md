@@ -121,7 +121,7 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 1. Add a **List box** control, name it **CategoryList**, and set its **[Items](properties-core.md)** property to this formula:<br>
    **["Carpet","Hardwood","Tile"]**
    
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+    Don't know how to [add, name, and configure a control](../maker/add-configure-controls.md)?
    
     ![Flooring categories in listbox](./media/control-list-box/category-listbox.png)
 2. Add three **[Drop down](control-drop-down.md)** controls, move them under **CategoryList**, and name them **CarpetList**, **HardwoodList**, and **TileList**.

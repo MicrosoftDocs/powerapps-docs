@@ -22,7 +22,7 @@ Create an app automatically in which users can show, add, or delete images from 
 
 ## Prerequisites
 
-* Familiarity with [adding and configuring controls](add-configure-controls.md).
+* Familiarity with [adding and configuring controls](maker/add-configure-controls.md).
 * Familiarity with [configuring Excel data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370?ui=en-US&rs=en-US&ad=US).
 * A [PowerApps connection](add-data-connection.md) to a cloud-storage account (such as Dropbox, OneDrive, or Google Drive) in which you can store an Excel file.
 

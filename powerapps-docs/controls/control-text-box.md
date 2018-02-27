@@ -115,7 +115,7 @@ A label shows data that you specify as a literal string of text, which appears e
 ### Show a literal string
 * Add a label, and set its **[Text](properties-core.md)** property to **"Hello, world"** (including the double quotation marks).
   
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+    Don't know how to [add and configure a control](../maker/add-configure-controls.md)?
 
 ### Show the result of a formula
 * Add a label, and set its **[Text](properties-core.md)** property to a formula such as this one:<br>
