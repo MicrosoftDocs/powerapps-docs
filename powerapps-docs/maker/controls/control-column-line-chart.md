@@ -117,7 +117,7 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
    
     Don't know how to [add and configure a control](../add-configure-controls.md)?
    
-    Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.
 3. Add a **Column chart** control or a **Line chart** control, set its **[Items](properties-core.md)** property to **Revenue**, and set its **NumberOfSeries** property to **3**.
    

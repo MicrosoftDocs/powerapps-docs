@@ -65,7 +65,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
-[**Collect**( *CollectionName*, *DatatoCollect* )](../../functions/function-clear-collect-clearcollect.md)
+[**Collect**( *CollectionName*, *DatatoCollect* )](../functions/function-clear-collect-clearcollect.md)
 
 ## Example
 ### Create a set of images

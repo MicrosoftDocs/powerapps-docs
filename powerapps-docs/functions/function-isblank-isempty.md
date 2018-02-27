@@ -149,7 +149,7 @@ Other examples:
    
     ![](media/function-isblank-isempty/icecream-clear.png)
    
-    The **[Clear](function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty collection. **IsEmpty( IceCream )** returns **true**, and **CountRows( IceCream )** returns **0**.
+    The **[Clear](../maker/functions/function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty collection. **IsEmpty( IceCream )** returns **true**, and **CountRows( IceCream )** returns **0**.
 
 You can also use **IsEmpty** to test whether a calculated table is empty, as these examples show:
 

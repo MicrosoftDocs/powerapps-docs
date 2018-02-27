@@ -81,7 +81,7 @@ Add a **Pie chart** control if you want to show relative data from a table that 
    
     Don't know how to [add and configure a control](../add-configure-controls.md)?
    
-    Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc to return to the default workspace.
 3. Add a **Pie chart** control, and set its **[Items](properties-core.md)** property to **Revenue2015**.
    

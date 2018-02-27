@@ -32,7 +32,7 @@ Use the **RemoveIf** function to remove a record or records based on a condition
 
 **Remove** and **RemoveIf** return the modified data source as a [table](../maker/working-with-tables.md). You can use both functions only in [behavior formulas](../maker/working-with-formulas-in-depth.md).
 
-You can also use the **[Clear](function-clear-collect-clearcollect.md)** function to remove all of the records in a data source.
+You can also use the **[Clear](../maker/functions/function-clear-collect-clearcollect.md)** function to remove all of the records in a data source.
 
 ### Delegation
 [!INCLUDE [delegation-no](../includes/delegation-no.md)]

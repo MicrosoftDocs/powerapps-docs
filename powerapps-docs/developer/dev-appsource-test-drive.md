@@ -70,7 +70,7 @@ Now if you want to access the **Title** field, use **SiteInspectorCollect.Title*
 ### Step 3: Add, update, and delete data in your app
 You've seen how to read data directly and from a collection; now we'll show you how to add, update, and delete data in a collection:
 
-**To add a row to a collection**, use [Collect( DataSource, Item, ... )](../functions/function-clear-collect-clearcollect.md):
+**To add a row to a collection**, use [Collect( DataSource, Item, ... )](../maker/functions/function-clear-collect-clearcollect.md):
 
 ```
 Collect(SiteInspectorCollect,{ID:Value(Max(SiteInspectorCollect, ID)+1),

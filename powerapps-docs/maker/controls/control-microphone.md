@@ -92,7 +92,7 @@ If you add this control, the user can update a data source with one or more soun
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
    
-    Want more information about the **[Collect](../../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
+    Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.
 3. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
 4. Press F5, click or tap **MyMic** to start recording, and then click or tap it again to stop recording.

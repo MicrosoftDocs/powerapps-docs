@@ -64,15 +64,15 @@ Other elements include:
 
 **[Char](functions/function-char.md)** – Translates a character code into a string.
 
-**[Clear](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
+**[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
-**[ClearCollect](../functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
+**[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
 
 **[Clock](../functions/function-clock-calendar.md)** – Retrieves information about the clock for the current locale.
 
 **[Coalesce](../functions/function-isblank-isempty.md)** – Replaces *blank* values while leaving non-*blank* values unchanged.
 
-**[Collect](../functions/function-clear-collect-clearcollect.md)** – Creates a collection or adds data to a data source.
+**[Collect](functions/function-clear-collect-clearcollect.md)** – Creates a collection or adds data to a data source.
 
 **[Color](../functions/function-colors.md)** – Sets a property to a built-in color value.
 

@@ -51,7 +51,7 @@ The return value of **Patch** is the record that you modified or created.  If yo
 
 When you update a data source, one or more issues may arise. Use the **[Errors](function-errors.md)** function to identify and examine issues, as [Working with Data Sources](../maker/working-with-data-sources.md) describes.
 
-Related functions include the **[Update](function-update-updateif.md)** function, which you can use to replace an entire record, and the **[Collect](function-clear-collect-clearcollect.md)** function, which you can use to create a record.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
+Related functions include the **[Update](function-update-updateif.md)** function, which you can use to replace an entire record, and the **[Collect](../maker/functions/function-clear-collect-clearcollect.md)** function, which you can use to create a record.  You can use the **[UpdateIf](function-update-updateif.md)** function to modify specific properties of multiple records based on a condition.
 
 ### Modify or create a set of records in a data source
 **Patch** can also be used to create or modify multiple records with a single call.

@@ -56,7 +56,7 @@ You can use table data sources the same way that you use an internal PowerApps t
 > For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 * The data source is loaded from the service automatically when the app is loaded.  You can force the data to refresh by using the **[Refresh](../functions/function-refresh.md)** function.
 * As users run an app, they can create, modify, and delete records and push those changes back to the underlying table in the service.
-  * Records can be created with the **[Patch](../functions/function-patch.md)** and **[Collect](../functions/function-clear-collect-clearcollect.md)** functions.  
+  * Records can be created with the **[Patch](../functions/function-patch.md)** and **[Collect](functions/function-clear-collect-clearcollect.md)** functions.  
   * Records can be modified with the **[Patch](../functions/function-patch.md)**, **[Update](../functions/function-update-updateif.md)**, and **[UpdateIf](../functions/function-update-updateif.md)** functions.
   * Records can be removed with the **[Remove](../functions/function-remove-removeif.md)** and **[RemoveIf](../functions/function-remove-removeif.md)** functions.
   * Errors when working with a data source are available through the **[Errors](../functions/function-errors.md)** function.
@@ -111,7 +111,7 @@ But, alas, there may still be a problem.  The network is down, validation at the
 
 When errors occur with a data source, your app automatically records the error information and makes it available through the **[Errors](../functions/function-errors.md)** function.  Errors are associated with the records that had the problems.  If the problem is something the user can fix, such as a validation problem, they can resubmit the record, and the errors will be cleared.
 
-If an error occurs when a record is created with **[Patch](../functions/function-patch.md)** or **[Collect](../functions/function-clear-collect-clearcollect.md)**, there is no record to associate any errors with.  In this case, *blank* will be returned by **[Patch](../functions/function-patch.md)** and can be used as the record argument to **[Errors](../functions/function-errors.md)**.  Creation errors are cleared with the next operation.
+If an error occurs when a record is created with **[Patch](../functions/function-patch.md)** or **[Collect](functions/function-clear-collect-clearcollect.md)**, there is no record to associate any errors with.  In this case, *blank* will be returned by **[Patch](../functions/function-patch.md)** and can be used as the record argument to **[Errors](../functions/function-errors.md)**.  Creation errors are cleared with the next operation.
 
 The **[Errors](../functions/function-errors.md)** function returns a table of error information.  This information can include the column information, if the error can be attributed to a particular column.  Use column-level error messages in label controls that are close to where the column is located on the edit screen.  Use record-level error messages where the **Column** in the error table is *blank*, in a location close to the **Save** button for the entire record.  
 
@@ -125,8 +125,8 @@ Many, but not all, functions that you can use to choose records can be *delegate
 ## Collections
 Collections are a special kind of data source.  They're local to the app and not backed by a connection to a service in the cloud, so the information can not be shared across devices for the same user or between users.  They operate like any other data source, with a few exceptions:
 
-* Collections can be created dynamically with the **[Collect](../functions/function-clear-collect-clearcollect.md)** function.  They don't need to be established ahead of time, as connection-based data sources do.
-* The columns of a collection can be modified at any time using the **[Collect](../functions/function-clear-collect-clearcollect.md)** function.
+* Collections can be created dynamically with the **[Collect](functions/function-clear-collect-clearcollect.md)** function.  They don't need to be established ahead of time, as connection-based data sources do.
+* The columns of a collection can be modified at any time using the **[Collect](functions/function-clear-collect-clearcollect.md)** function.
 * Collections allow duplicate records.  More than one copy of the same record can exist in a collection.  Functions such as **[Remove](../functions/function-remove-removeif.md)** will operate on the first match they find, unless the **All** argument is supplied.
 * You can use the **[SaveData](../functions/function-savedata-loaddata.md)** and **[LoadData](../functions/function-savedata-loaddata.md)** functions to save and reload a copy of the collection.  The information is stored in a private location that other users, apps, or devices can't access.
 * You can use the **[Export](controls/control-export-import.md)** and **[Import](controls/control-export-import.md)** controls to save and reload a copy of the collection to a file that the user can interact with.  
