@@ -20,7 +20,7 @@ ms.author: mblythe
 ---
 # Generate an app to handle project requests
 > [!NOTE]
-> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
+> This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](../sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
 Now that the SharePoint lists are in place, we can build and customize our first app. PowerApps is integrated with SharePoint, so it's easy to generate a basic *three screen app* directly from a list. This app allows you to view summary and detailed information for each list item, update existing list items, and create new list items. If you create an app directly from a list, the app appears as a *view* for that list. You can then run that app in a browser, as well as on a mobile phone.
 
@@ -142,10 +142,10 @@ This section is optional, but it will help you understand more about how formula
 
 But what does this formula do? It determines the source of data that appears in the gallery, filters the data based on any text entered in the search box, and sorts the results based on the sort button in the app. The formula uses *functions* to do its work. Functions take parameters (i.e. input), perform an operation (like filtering), and return a value (i.e. output):
 
-* The [**SortByColumns** function](functions/function-sort.md) sorts a table based on one or more columns.
-* The [**Filter** function](functions/function-filter-lookup.md) finds the records in a table that satisfy a formula that you specify.
-* The [**StartsWith** function](functions/function-startswith.md) tests whether one text string begins with another.
-* The [**If** function](functions/function-if.md) returns one value if a condition is true, and returns another value if the same condition is false.
+* The [**SortByColumns** function](../functions/function-sort.md) sorts a table based on one or more columns.
+* The [**Filter** function](../functions/function-filter-lookup.md) finds the records in a table that satisfy a formula that you specify.
+* The [**StartsWith** function](../functions/function-startswith.md) tests whether one text string begins with another.
+* The [**If** function](../functions/function-if.md) returns one value if a condition is true, and returns another value if the same condition is false.
 
 When you put the functions together in the formula, here's what happens:
 
@@ -165,8 +165,8 @@ When you put the functions together in the formula, here's what happens:
 
 4. Now the **SortByColumns** function can sort the gallery. In this case, it sorts based on the **Title** field, but this can be a different field than the one you search on.
 
-If you stuck with us up to this point, we hope you have a better sense of how this formula works, and how you can combine functions and other elements to drive the behavior your apps require. For more information, see [Formula reference for PowerApps](maker/formula-reference.md).
+If you stuck with us up to this point, we hope you have a better sense of how this formula works, and how you can combine functions and other elements to drive the behavior your apps require. For more information, see [Formula reference for PowerApps](formula-reference.md).
 
 ## Next steps
-The next step in this tutorial series is to [Create a flow to manage project approvals](maker/sharepoint-scenario-approval-flow.md).
+The next step in this tutorial series is to [Create a flow to manage project approvals](sharepoint-scenario-approval-flow.md).
 

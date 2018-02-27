@@ -185,5 +185,5 @@ As noted in the introduction to this tutorial series, we included two sample app
     ![Connect to SharePoint Online](./media/sharepoint-scenario-setup/01-03-08-connect.png)
 
 ## Next steps
-The next step in this tutorial series is to [generate an app to handle project requests](sharepoint-scenario-generate-app.md).
+The next step in this tutorial series is to [generate an app to handle project requests](maker/sharepoint-scenario-generate-app.md).
 
