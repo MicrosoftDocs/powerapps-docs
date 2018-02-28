@@ -283,62 +283,62 @@
         {
         "source_path": "powerapps-docs/connections/cloud-storage-blob-connections.md",
         "redirect_url": "/powerapps/maker/connections/cloud-storage-blob-connections",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-azure-sqldatabase.md",
         "redirect_url": "/powerapps/maker/connections/connection-azure-sqldatabase",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-dynamicsax.md",
         "redirect_url": "/powerapps/maker/connections/connection-dynamicsax",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-dynamics-crmonline.md",
         "redirect_url": "/powerapps/maker/connections/connection-dynamics-crmonline",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-excel.md",
         "redirect_url": "/powerapps/maker/connections/connection-excel",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-microsoft-translator.md",
         "redirect_url": "/powerapps/maker/connections/connection-microsoft-translator",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-office365-outlook.md",
         "redirect_url": "/powerapps/maker/connections/connection-office365-outlook",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-office365-users.md",
         "redirect_url": "/powerapps/maker/connections/connection-office365-users",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-oracledb.md",
         "redirect_url": "/powerapps/maker/connections/connection-oracledb",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-powerbi.md",
         "redirect_url": "/powerapps/maker/connections/connection-powerbi",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-sharepoint-online.md",
         "redirect_url": "/powerapps/maker/connections/connection-sharepoint-online",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-twitter.md",
         "redirect_url": "/powerapps/maker/connections/connection-twitter",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections-list.md",
