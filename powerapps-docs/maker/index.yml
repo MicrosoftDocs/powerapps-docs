@@ -1,6 +1,6 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Microsoft PowerApps docs
+title: PowerApps maker docs
 metadata:
   title: Microsoft PowerApps docs, videos, reference, and more
   description: Get started creating, customizing, and sharing apps in PowerApps by using the resources here.
@@ -25,7 +25,7 @@ sections:
     className: cardsM
     columns: 2
     items:
-    - href: guided-learning
+    - href: ../guided-learning
       html: <p>Take the Guided Learning tour</p>
       image:
         src: https://docs.microsoft.com/media/common/i_overview.svg
