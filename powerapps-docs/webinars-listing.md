@@ -15,7 +15,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 1/29/2018
+ms.date: 2/23/2018
 ms.author: v-malyng
 
 ---
@@ -23,29 +23,14 @@ ms.author: v-malyng
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
-<br>by Audrie Gordon
-<br>*January 31st, 10:00AM PST, 1:00PM EST*
-
-Join this webinar to see how PowerApps and Teams work together to create more powerful business solutions in a snap! We'll show you how to leverage PowerApps within your Teams channels, and give you some new ideas on how to leverage these products together for improved team collaboration.
-
-[Click here to watch on January 31st](https://www.youtube.com/watch?v=obBQk-aSElI)
-
-**Connector Series | The Power of Office Graph with PowerApps**
-<br>by Audrie Gordon
-<br>*February 5th, 10:00AM PST, 1:00PM EST*
-
-Audrie Gordon, Sr Program Manager of the PowerApps team, shows how to leverage PowerApps with Office Graph technologies. We will customize one of our templates and maximize the impact of Office Group for a typical business scenario.
-
-[Click here to watch on February 5th](https://www.youtube.com/watch?v=AOGGyoElGaQ)
-
 **Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard**
-<br>by Audrie Gordon
-<br>*February 19th, 10:00AM PST, 1:00PM EST*
+<br>by Brian Blanchard & Audrie Gordon
+<br>*February 26th, 10:00AM PST, 1:00PM EST*
 
 Brian Blanchard from Microsoft Retail Stores demonstrates how he build apps for his team to manage server patching schedules. He will share both the desktop and mobile version which they use today to expedite and simplify the patching process. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
 
-[Click here to watch on February 19th](https://www.youtube.com/watch?v=QAe0oBecowU)
+[Click here to watch on February 26th](https://www.youtube.com/watch?v=QAe0oBecowU)
+
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
@@ -143,6 +128,14 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Working with Connectors: Using the Planner Connector**
 <br> by Audrie Gordon
 [Watch Now](https://www.youtube.com/watch?v=NBPL9Uw7qzg)
+
+**Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=obBQk-aSElI)
+
+**Connector Series | The Power of Office Graph with PowerApps**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=AOGGyoElGaQ)
 
 ### App Designer Topics ###
 **Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
