@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #80def9;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: none;
+        stroke: #556a8a;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 3.83 2.88;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 3.87 2.9;
+      }
+    </style>
+  </defs>
+  <title>i_template</title>
+  <g id="ICONS-64x">
+    <rect class="cls-1" x="35" y="28" width="29" height="36"/>
+    <path class="cls-1" d="M33,26H56V20.37L35.88,1H11a1,1,0,0,0-1,1V62a1,1,0,0,0,1,1H33Z"/>
+    <polygon class="cls-2" points="56 21 35 21 35 1 56 21"/>
+    <path class="cls-3" d="M56,26V20.37L35.88,1H11a1,1,0,0,0-1,1V62a1,1,0,0,0,1,1H33"/>
+    <polyline class="cls-3" points="35 1 35 21 56 21"/>
+    <g>
+      <polyline class="cls-3" points="63 61 63 63 61 63"/>
+      <line class="cls-4" x1="58.13" y1="63" x2="39.44" y2="63"/>
+      <polyline class="cls-3" points="38 63 36 63 36 61"/>
+      <line class="cls-5" x1="36" y1="58.1" x2="36" y2="32.45"/>
+      <polyline class="cls-3" points="36 31 36 29 38 29"/>
+      <line class="cls-4" x1="40.88" y1="29" x2="59.56" y2="29"/>
+      <polyline class="cls-3" points="61 29 63 29 63 31"/>
+      <line class="cls-5" x1="63" y1="33.9" x2="63" y2="59.55"/>
+    </g>
+  </g>
+</svg>
