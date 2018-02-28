@@ -28,7 +28,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 ## Prerequisites
 You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
 
-1. [Create a connection](../connect-to-sharepoint.md) from PowerApps to SharePoint.
+1. [Create a connection](connect-to-sharepoint.md) from PowerApps to SharePoint.
 
 2. Create the SharePoint list that [Customize a layout](customize-layout-sharepoint.md) describes.
 
