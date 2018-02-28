@@ -1,244 +1,244 @@
 - name: Get started
   items:
   - name: Introduction
-    href: getting-started.md
+    href: maker/getting-started.md
   - name: Sign up (for users)
-    href: signup-for-powerapps.md
+    href: maker/signup-for-powerapps.md
   - name: Sign up for the Community Plan
-    href: dev-community-plan.md
+    href: maker/dev-community-plan.md
   - name: Purchase (for administrators)
-    href: signup-for-powerapps-admin.md
+    href: administrator/signup-for-powerapps-admin.md
   - name: Work with environments
-    href: working-with-environments.md
+    href: maker/working-with-environments.md
   - name: What's new
-    href: release-notes.md
+    href: maker/release-notes.md
   - name: Common issues and resolutions
-    href: common-issues-and-resolutions.md
+    href: maker/common-issues-and-resolutions.md
   - name: Upcoming and recent webinars
-    href: webinars-listing.md
+    href: maker/webinars-listing.md
 - name: Run an existing app
   items:
   - name: Use an app in a browser
-    href: run-app-browser.md
+    href: maker/run-app-browser.md
   - name: Use an app on a phone or tablet
-    href: run-app-client.md
+    href: maker/run-app-client.md
   - name: Get more apps from AppSource
-    href: app-source.md
+    href: maker/app-source.md
   - name: Open an app in SharePoint
-    href: open-app-embedded-in-sharepoint.md
+    href: maker/open-app-embedded-in-sharepoint.md
   - name: Open an app in Teams
-    href: open-app-embedded-in-teams.md
+    href: maker/open-app-embedded-in-teams.md
   - name: Use a sample app
-    href: open-and-run-a-sample-app.md
+    href: maker/open-and-run-a-sample-app.md
   - name: Use a template
-    href: get-started-test-drive.md
+    href: maker/get-started-test-drive.md
 - name: Start with a SharePoint list
   items:
   - name: Create an app from SharePoint
-    href: generate-app-from-sharepoint-list-interface.md
+    href: maker/generate-app-from-sharepoint-list-interface.md
   - name: Create an app from PowerApps
-    href: app-from-sharepoint.md
+    href: maker/app-from-sharepoint.md
   - name: Customize a list form with PowerApps
-    href: customize-list-form.md
+    href: maker/customize-list-form.md
   - name: Understand SharePoint forms integration
-    href: sharepoint-form-integration.md
+    href: maker/sharepoint-form-integration.md
   - name: Create a connection
-    href: connect-to-sharepoint.md
+    href: maker/connect-to-sharepoint.md
   - name: Customize a gallery layout
-    href: customize-layout-sharepoint.md
+    href: maker/customize-layout-sharepoint.md
   - name: Customize a PowerApps form
-    href: customize-forms-sharepoint.md
+    href: maker/customize-forms-sharepoint.md
   - name: Customize a card
-    href: customize-card.md
+    href: maker/customize-card.md
   - name: Connect lists using lookups
-    href: sharepoint-lookup-fields.md
+    href: maker/sharepoint-lookup-fields.md
 - name: Start with another data source
   items:
   - name: Create an app from an entity
-    href: data-platform-create-app.md
+    href: maker/data-platform-create-app.md
   - name: Create an app from Excel data
-    href: get-started-create-from-data.md
+    href: maker/get-started-create-from-data.md
   - name: Get started with formulas
-    href: working-with-formulas.md
+    href: maker/working-with-formulas.md
   - name: Build an app from scratch
-    href: get-started-create-from-blank.md
+    href: maker/get-started-create-from-blank.md
 - name: Customize an app
   items:
   - name: Add and configure a control
-    href: add-configure-controls.md
+    href: maker/add-configure-controls.md
   - name: Add a screen
-    href: add-screen-context-variables.md
+    href: maker/add-screen-context-variables.md
   - name: Add a data connection
-    href: add-data-connection.md
+    href: maker/add-data-connection.md
   - name: Show a list of items
-    href: add-gallery.md
+    href: maker/add-gallery.md
   - name: Show items of different heights
-    href: gallery-dynamic-sizing.md
+    href: maker/gallery-dynamic-sizing.md
   - name: Add a form
-    href: add-form.md
+    href: maker/add-form.md
   - name: Show the current user
-    href: show-current-user.md
+    href: maker/show-current-user.md
   - name: Add a list control
-    href: add-list-box-drop-down-list-radio-button.md
+    href: maker/add-list-box-drop-down-list-radio-button.md
   - name: Add a chart
-    href: use-line-pie-bar-chart.md
+    href: maker/use-line-pie-bar-chart.md
   - name: Add multimedia
-    href: add-images-pictures-audio-video.md
+    href: maker/add-images-pictures-audio-video.md
   - name: Scan a barcode
-    href: scan-barcode.md
+    href: maker/scan-barcode.md
   - name: Add a flow
-    href: using-logic-flows.md
+    href: maker/using-logic-flows.md
   - name: Add a scrolling screen
-    href: add-scrolling-screen.md
+    href: maker/add-scrolling-screen.md
   - name: Build a global app
-    href: global-apps.md
+    href: maker/global-apps.md
 - name: Manage your app
   items:
   - name: Introduction to powerapps.com
-    href: intro-maker-portal.md
+    href: maker/intro-maker-portal.md
   - name: Edit an app
-    href: edit-app.md
+    href: maker/edit-app.md
   - name: Change screen size and orientation
-    href: set-aspect-ratio-portrait-landscape.md
+    href: maker/set-aspect-ratio-portrait-landscape.md
   - name: Change app name and tile
-    href: set-name-tile.md
+    href: maker/set-name-tile.md
   - name: Save and publish an app
-    href: save-publish-app.md
+    href: maker/save-publish-app.md
   - name: Share an app
-    href: share-app.md
+    href: maker/share-app.md
   - name: Delete an app
-    href: delete-app.md
+    href: maker/delete-app.md
   - name: Restore your app to a previous version
-    href: restore-an-app.md
+    href: maker/restore-an-app.md
 - name: Connect to data
   items:
   - name: Connectors overview
-    href: connections-list.md
+    href: maker/connections-list.md
   - name: Manage data connections
-    href: add-manage-connections.md
+    href: maker/add-manage-connections.md
   - name: Delegation
-    href: delegation-overview.md
+    href: maker/delegation-overview.md
   - name: Delegable data sources
-    href: delegation-list.md
+    href: maker/delegation-list.md
   - name: Manage gateways
-    href: gateway-management.md
+    href: maker/gateway-management.md
   - name: Understand gateways
-    href: gateway-reference.md
+    href: maker/gateway-reference.md
 - name: Manage data in entities
   items:
   - name: Understand entities
-    href: data-platform-intro.md
+    href: maker/data-platform-intro.md
   - name: Create a custom entity
-    href: data-platform-create-entity.md
+    href: maker/data-platform-create-entity.md
   - name: Create a custom entity from data
-    href: data-platform-cds-newentity-pq.md
+    href: maker/data-platform-cds-newentity-pq.md
   - name: Manage fields
-    href: data-platform-manage-fields.md
+    href: maker/data-platform-manage-fields.md
   - name: Use field groups
-    href: field-groups.md
+    href: maker/field-groups.md
   - name: Create custom picklists
-    href: custom-picklists.md
+    href: maker/custom-picklists.md
   - name: Create a relationship
-    href: data-platform-entity-lookup.md
+    href: maker/data-platform-entity-lookup.md
   - name: Create an app with an entity
-    href: data-platform-create-app.md
+    href: maker/data-platform-create-app.md
   - name: Delete a custom entity
-    href: data-platform-delete-entity.md
+    href: maker/data-platform-delete-entity.md
   - name: Import or export data
-    href: data-platform-export-data.md
+    href: maker/data-platform-export-data.md
   - name: Manage data in Excel
-    href: data-platform-interactive-excel.md
+    href: maker/data-platform-interactive-excel.md
   - name: Samples and resources
-    href: samples-resources.md
+    href: maker/samples-resources.md
 - name: Integrate with other technologies
   items:
   - name: Integrate with SharePoint Online
     items:
     - name: SharePoint Online integration overview
-      href: sharepoint-scenario-intro.md
+      href: maker/sharepoint-scenario-intro.md
     - name: Set up SharePoint Online lists
-      href: sharepoint-scenario-setup.md
+      href: maker/sharepoint-scenario-setup.md
     - name: Generate an app
-      href: sharepoint-scenario-generate-app.md
+      href: maker/sharepoint-scenario-generate-app.md
     - name: Create a flow for approvals
-      href: sharepoint-scenario-approval-flow.md
+      href: maker/sharepoint-scenario-approval-flow.md
     - name: Create an app from scratch
-      href: sharepoint-scenario-build-app.md
+      href: maker/sharepoint-scenario-build-app.md
     - name: Create a Power BI report
-      href: sharepoint-scenario-build-report.md
+      href: maker/sharepoint-scenario-build-report.md
     - name: Publish the Power BI report
-      href: sharepoint-scenario-publish-report.md
+      href: maker/sharepoint-scenario-publish-report.md
     - name: Embed the Power BI report
-      href: sharepoint-scenario-embed-report.md
+      href: maker/sharepoint-scenario-embed-report.md
     - name: Create a flow for alerts
-      href: sharepoint-scenario-alerts-flow.md
+      href: maker/sharepoint-scenario-alerts-flow.md
     - name: Walk through the completed scenario
-      href: sharepoint-scenario-summary.md
+      href: maker/sharepoint-scenario-summary.md
   - name: Integrate with Cognitive Services
-    href: cognitive-services-api.md
+    href: maker/cognitive-services-api.md
 - name: Develop for PowerApps
   items:
   - name: PowerApps for enterprise developers, partners, and ISVs
-    href: dev-enterprise-intro.md
+    href: developer/dev-enterprise-intro.md
   - name: Build and certify custom connectors
-    href: register-custom-api.md
+    href: developer/register-custom-api.md
   - name: Integrate with websites and other technologies
-    href: embed-apps-dev.md
+    href: developer/embed-apps-dev.md
   - name: Develop offline-capable apps
-    href: offline-apps.md
+    href: developer/offline-apps.md
   - name: Let customers test drive your apps
-    href: dev-appsource-test-drive.md
+    href: developer/dev-appsource-test-drive.md
 - name: Administration and ALM
   items:
   - name: PowerApps in your organization Q&A
-    href: signup-question-and-answer.md
+    href: administrator/signup-question-and-answer.md
   - name: Pricing information
-    href: pricing-billing-skus.md
+    href: administrator/pricing-billing-skus.md
   - name: Trial plan 
-    href: trial-plan.md
+    href: administrator/trial-plan.md
   - name: Introduction to the admin center
-    href: introduction-to-the-admin-center.md
+    href: administrator/introduction-to-the-admin-center.md
   - name: Environments overview
-    href: environments-overview.md
+    href: administrator/environments-overview.md
   - name: Administer environments
-    href: environments-administration.md
+    href: administrator/environments-administration.md
   - name: Set a policy to help prevent data loss
-    href: prevent-data-loss.md
+    href: administrator/prevent-data-loss.md
   - name: Introduction to data groups
-    href: introduction-to-data-groups.md
+    href: administrator/introduction-to-data-groups.md
   - name: Create a database
-    href: create-database.md
+    href: administrator/create-database.md
   - name: Configure database security
-    href: database-security.md
+    href: administrator/database-security.md
   - name: Move an app between tenants or environments
-    href: environment-and-tenant-migration.md
+    href: administrator/environment-and-tenant-migration.md
   - name: Export and import resources
-    href: export-import-packages.md
+    href: administrator/export-import-packages.md
   - name: Regions overview
-    href: regions-overview.md
+    href: administrator/regions-overview.md
   - name: Identify PowerApps users in your org
-    href: admin-view-user-licenses.md
+    href: administrator/admin-view-user-licenses.md
 - name: Reference
   items:
   - name: Formula reference
-    href: formula-reference.md
+    href: maker/formula-reference.md
   - name: Controls reference
-    href: reference-properties.md
+    href: maker/reference-properties.md
   - name: Understand tables and records
-    href: working-with-tables.md
+    href: maker/working-with-tables.md
   - name: Understand data forms
-    href: working-with-forms.md
+    href: maker/working-with-forms.md
   - name: Understand data form layout
-    href: working-with-form-layout.md
+    href: maker/working-with-form-layout.md
   - name: Understand data cards
-    href: working-with-cards.md
+    href: maker/working-with-cards.md
   - name: Understand variables
-    href: working-with-variables.md
+    href: maker/working-with-variables.md
   - name: Understand formulas
-    href: working-with-formulas-in-depth.md
+    href: maker/working-with-formulas-in-depth.md
   - name: Understand dates/times
-    href: show-text-dates-times.md
+    href: maker/show-text-dates-times.md
   - name: Understand data sources
-    href: working-with-data-sources.md
+    href: maker/working-with-data-sources.md
   - name: Limits and configuration
-    href: limits-and-config.md
+    href: maker/limits-and-config.md
