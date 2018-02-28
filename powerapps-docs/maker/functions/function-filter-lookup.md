@@ -26,7 +26,7 @@ The **Filter** function finds records in a table that satisfy a formula.  Use **
 
 The **LookUp** function finds the first record in a table that satisfies a formula.  Use **LookUp** to find a single record that matches one or more criteria.
 
-For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  Besides the normal formula [operators](operators.md), you can use the **[in](../../functions/operators.md#in-and-exactin-operators)** and **[exactin](../../functions/operators.md#in-and-exactin-operators)** operators for substring matches.
+For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  Besides the normal formula [operators](operators.md), you can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators for substring matches.
 
 [!INCLUDE [record-scope](../../includes/record-scope.md)]
 

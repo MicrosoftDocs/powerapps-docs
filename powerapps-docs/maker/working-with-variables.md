@@ -149,8 +149,8 @@ How context variables work:
 
 * You create and set context variables by using the **[UpdateContext](functions/function-updatecontext.md)** function.  If a context variable doesn't already exist when first updated, it will be created with a default value of *blank*.
 * You create and update context variables with records. In other programming tools, you commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead. When you use a context variable, use its name directly.  
-* You can also set a context variable when a screen is displayed, by using the **[Navigate](../functions/function-navigate.md)** function. If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
-* Except for **[Navigate](../functions/function-navigate.md)**, context variables are limited to the context of a single screen, which is where they get their name.  You can't use or set them outside of this context.
+* You can also set a context variable when a screen is displayed, by using the **[Navigate](functions/function-navigate.md)** function. If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
+* Except for **[Navigate](functions/function-navigate.md)**, context variables are limited to the context of a single screen, which is where they get their name.  You can't use or set them outside of this context.
 * Context variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
 
 Let's rebuild our adding machine by using a context variable:
@@ -202,8 +202,8 @@ Finally, let's look at creating our adding machine with a collection.  Since a c
 
 How collections work:
 
-* Create and set collections by using the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](../functions/function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
-* A collection is a kind of data source and, therefore, a table. To access a single value in a collection, use the **[First](functions/function-first-last.md)** function, and extract one field from the resulting record. If you used a single value with **[ClearCollect](../functions/function-clear-collect-clearcollect.md)**, this will be the **Value** field, as in this example:<br>**First(** *VariableName* **).Value**
+* Create and set collections by using the **[ClearCollect](functions/function-clear-collect-clearcollect.md)** function.  You can use the **[Collect](functions/function-clear-collect-clearcollect.md)** function instead, but it will effectively require another variable instead of replacing the old one.  
+* A collection is a kind of data source and, therefore, a table. To access a single value in a collection, use the **[First](functions/function-first-last.md)** function, and extract one field from the resulting record. If you used a single value with **[ClearCollect](functions/function-clear-collect-clearcollect.md)**, this will be the **Value** field, as in this example:<br>**First(** *VariableName* **).Value**
 
 Let's recreate our adding machine by using a collection:
 

@@ -28,7 +28,7 @@ Formulas combine many elements.  Listed below are:
 
 Other elements include:
 
-* [All operators](../functions/operators.md)
+* [All operators](functions/operators.md)
 * [Controls and their properties](reference-properties.md)
 
 ## A
@@ -42,7 +42,7 @@ Other elements include:
 
 **[AddColumns](functions/function-table-shaping.md)** – Returns a table with [columns](working-with-tables.md#columns) added.
 
-**[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](../functions/operators.md).
+**[And](functions/function-logicals.md)** – Boolean logic AND.  Returns **true** if all arguments are **true**.  You can also use the [**&&** operator](functions/operators.md).
 
 **[App](functions/signals.md)** – Returns information about the currently running app, such as which screen is currently displayed.
 
@@ -215,12 +215,12 @@ Other elements include:
 
 **[NewForm](functions/function-form.md)** – Resets a form control for creation of an item.
 
-**[Not](functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the [**!** operator](../functions/operators.md).
+**[Not](functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the [**!** operator](functions/operators.md).
 
 **[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
 ## O
-**[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](../functions/operators.md).
+**[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](functions/operators.md).
 
 ## P
 **[Param](functions/function-param.md)** – Provides access to parameters passed to the app when the user opened it.
@@ -233,7 +233,7 @@ Other elements include:
 
 **[PlainText](functions/function-encode-decode.md)** – Removes HTML and XML tags from a string.
 
-**[Power](functions/function-numericals.md)** – Returns a number raised to a power.  You can also use the [**^** operator](../functions/operators.md).
+**[Power](functions/function-numericals.md)** – Returns a number raised to a power.  You can also use the [**^** operator](functions/operators.md).
 
 **[Proper](functions/function-lower-upper-proper.md)** – Converts the first letter of each word in a string to uppercase, and converts the rest to lowercase.
 

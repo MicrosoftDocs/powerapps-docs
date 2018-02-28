@@ -48,7 +48,7 @@ External tables are stored in a data source for later retrieval and sharing.  Po
 To learn more, [Working with tables](working-with-tables.md) goes into more detail about internal tables, but it is also applicable to external tables residing in a cloud service.
 
 ## Working with tables
-You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](../working-with-tables.md#records), [columns](../working-with-tables.md#columns), and properties that you can use in formulas. In addition:
+You can use table data sources the same way that you use an internal PowerApps table.  Just like an internal table, each data source has [records](working-with-tables.md#records), [columns](working-with-tables.md#columns), and properties that you can use in formulas. In addition:
 
 * The data source has the same column names and data types as the underlying table in the connection.
   
@@ -133,5 +133,5 @@ Collections are a special kind of data source.  They're local to the app and not
 
 For more information on working with a collection as a data source, see [create and update a collection](create-update-collection.md).
 
-Collections are commonly used to hold global state for the app.  See [working with variables](../working-with-variables.md) for the options available for managing state.
+Collections are commonly used to hold global state for the app.  See [working with variables](working-with-variables.md) for the options available for managing state.
 
