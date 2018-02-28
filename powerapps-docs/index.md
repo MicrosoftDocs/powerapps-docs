@@ -16,7 +16,7 @@ description: Microsoft PowerApps Documentation
                         <a href="#home-all"></a>
                         <ul id="home-all" class="cardsM cols cols2">
                             <li>
-                                <a href="maker">
+                                <a href="./maker/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -34,8 +34,27 @@ description: Microsoft PowerApps Documentation
                                     </div>
                                 </a>
                             </li>
+                                                       <li>
+                                <a href="./guided-learning/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/hubs/powerbi/pbi-guided-learning.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Guided learning</h3>
+                                                    <p>Start your learning journey through PowerApps with this sequenced collection of courses.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <li>
-                                <a href="administrator">
+                                <a href="./administrator/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -54,7 +73,7 @@ description: Microsoft PowerApps Documentation
                                 </a>
                             </li>
                             <li>
-                                <a href="developer">
+                                <a href="./developer/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -66,25 +85,6 @@ description: Microsoft PowerApps Documentation
                                                 <div class="cardText">
                                                     <h3>PowerApps for developers</h3>
                                                     <p>PowerApps developers can...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="guided-learning">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/hubs/powerbi/pbi-guided-learning.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Guided learning</h3>
-                                                    <p>Start your learning journey through PowerApps with this sequenced collection of courses.</p>
                                                 </div>
                                             </div>
                                         </div>
