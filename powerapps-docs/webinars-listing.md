@@ -15,7 +15,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 2/23/2018
+ms.date: 2/28/2018
 ms.author: v-malyng
 
 ---
@@ -23,14 +23,22 @@ ms.author: v-malyng
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard**
+**Connector Series | Project Online (PWA)**
+<br>by Audrie Gordon
+<br>*March 12th, 9:00AM PST, 12:00PM EST*
+
+In this connector series demonstration we will walkthrough usage of the Project Online (aka PWA) connector options. Feel free to join in and to bring your questions regarding building apps which leverage portfolio management tools and Project Online.
+
+[Click here to watch on March 12th](https://www.youtube.com/watch?v=oncGxlmFqy8)
+
+
+**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard (Part 2)**
 <br>by Brian Blanchard & Audrie Gordon
-<br>*February 26th, 10:00AM PST, 1:00PM EST*
+<br>*March 19th, 9:00AM PST, 12:00PM EST*
 
-Brian Blanchard from Microsoft Retail Stores demonstrates how he build apps for his team to manage server patching schedules. He will share both the desktop and mobile version which they use today to expedite and simplify the patching process. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
+This is part two of Brian Blanchard's demonstration on how he built an app for his team to manage server patching schedules. He will share the behind the scenes details of both the Azure Automation set-up and advanced workflows in Microsoft Flow. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
 
-[Click here to watch on February 26th](https://www.youtube.com/watch?v=QAe0oBecowU)
-
+[Click here to watch on March 19th](https://www.youtube.com/watch?v=oncGxlmFqy8)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
@@ -136,6 +144,11 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Connector Series | The Power of Office Graph with PowerApps**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=AOGGyoElGaQ)
+
+**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard**
+<br>by Brian Blanchard & Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=QAe0oBecowU)
+
 
 ### App Designer Topics ###
 **Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
