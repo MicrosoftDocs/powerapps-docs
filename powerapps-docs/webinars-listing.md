@@ -15,7 +15,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 2/23/2018
+ms.date: 2/28/2018
 ms.author: v-malyng
 
 ---
@@ -23,14 +23,40 @@ ms.author: v-malyng
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard**
+**Connector Series | Project Online (PWA)**
+<br>by Audrie Gordon
+<br>*March 12th, 9:00AM PST, 12:00PM EST*
+
+In this connector series demonstration we will walkthrough usage of the Project Online (aka PWA) connector options. Feel free to join in and to bring your questions regarding building apps which leverage portfolio management tools and Project Online.
+
+[Click here to watch on March 12th](https://www.youtube.com/watch?v=oncGxlmFqy8)
+
+
+**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard (Part 2)**
 <br>by Brian Blanchard & Audrie Gordon
-<br>*February 26th, 10:00AM PST, 1:00PM EST*
+<br>*March 19th, 9:00AM PST, 12:00PM EST*
 
-Brian Blanchard from Microsoft Retail Stores demonstrates how he build apps for his team to manage server patching schedules. He will share both the desktop and mobile version which they use today to expedite and simplify the patching process. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
+This is part two of Brian Blanchard's demonstration on how he built an app for his team to manage server patching schedules. He will share the behind the scenes details of both the Azure Automation set-up and advanced workflows in Microsoft Flow. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
 
-[Click here to watch on February 26th](https://www.youtube.com/watch?v=QAe0oBecowU)
+[Click here to watch on March 19th](https://www.youtube.com/watch?v=oncGxlmFqy8)
 
+**Deep Dive | Click-Through PowerApps Analytics by Vivek Bavishi**
+<br>by Vivek Bavishi & Audrie Gordon
+<br>*April 17th, 9:00AM PST, 12:00PM EST*
+
+Vivek Bavishi from the International PowerApps Champions group, joins Audrie Gordon from the PowerApps team, to walkthrough a simple approach for creating your own click-through analytics using PowerApps and Flow. Extend your reporting options to include statistics which will raise visibility into how your app consumers navigate your applications, enabling you to use data to validate assumptions on app usage and design! If you're a serious app maker, you don't want to miss Vivek's presentation.
+
+[Click here to watch on April 17th](https://www.youtube.com/watch?v=OM-rlhKJFTA)
+
+**Connector Series | The Advantages of Leveraging the Common Data Service**
+<br>by Audrie Gordon
+<br>*April 23rd, 9:00AM PST, 12:00PM EST*
+
+Have you started exploring the Common Data Service (aka CDS)? Are you up-to-speed on the advantages of a common data schema across your business applications? Have you heard all the buzz on what's new and exciting in that space?
+
+This webinar will dive into the advantages of leveraging the Common Data Service across all Microsoft Cloud Subscriptions (for Office 365, Azure, and Dynamics 365 app enablement). Come to this live webinar to catch a glimpse at where we're going with CDS, and how powerful it will be to model your apps using this platform. Can't wait to show you a few of the endless possibilities!
+
+[Click here to watch on April 23rd](https://www.youtube.com/watch?v=JY8r46HnHoI)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
@@ -136,6 +162,11 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Connector Series | The Power of Office Graph with PowerApps**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=AOGGyoElGaQ)
+
+**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard**
+<br>by Brian Blanchard & Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=QAe0oBecowU)
+
 
 ### App Designer Topics ###
 **Look behind the curtain with one of the PowerApps Developers - A closer look at templates: Marie Hoeger**
