@@ -4,6 +4,7 @@ In the first Guided Learning topic you read about the main parts of PowerApps. N
 * **PowerApps Studio** - build powerful apps with easy to use visual tools
 * **PowerApps Mobile** - run apps on Windows, iOS, and Android devices
 * **PowerApps admin center** - administer PowerApps environments and other components
+* **The Common Data Service for Apps** - integrate business data using the common data model
 
 We don't expect you to take a ton of time just to learn what PowerApps *is*, but we think it's helpful to flesh things out a bit more.
 
@@ -33,6 +34,11 @@ If you build apps, this is where you spend most of your time. You learn from the
 The **PowerApps admin center** is the centralized place to administer PowerApps for an organization. This is where you define different **environments**, which house apps, data connections, and other elements. The admin center is also where you create Common Data Service databases, and manage permissions and data policies.
 
 ![PowerApps admin center](./media/learning-powerapps-parts/powerapps-admin-center.png)
+
+### Microsoft Common Data Service for Apps
+The **Common Data Service for Apps** makes it easy to integrate business data from multiple sources. The service features a **common data model** that includes many **entities** common to apps and business processes. The service stores the data in a scalable and reliable way, and makes the data available so that multiple applications can use it. The applications can be apps that you build in PowerApps, Dynamics 365, other Microsoft applications, or third party applications. The image below shows a portion of an entity in web.powerapps.com.
+
+![PowerApps contact entity](./media/learning-powerapps-parts/powerapps-contact.png)
 
 In the next topic we'll learn about the set of related technologies that PowerApps works with to make a powerful ecosystem for app development.
 
