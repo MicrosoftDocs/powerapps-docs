@@ -19,6 +19,15 @@
     - name: Let customers test drive your apps
       href: dev-appsource-test-drive.md
   - name: Model-driven apps (for preview)
+    expanded: true
     items:
-    - name: Model-driven developer
-      href: _placeholder02.md
+    - name: Introduction to model apps for developers
+      href: model-apps-developers.md
+    - name: Understand what developers can do with model apps
+      href: what-developers-can-do-with-model-apps.md
+    - name: Introduction to solutions
+      href: introduction-solutions.md
+    - name: Apply Business Logic with code
+      href: apply-business-logic-with-code.md
+    - name: Use Web Services
+      href: use-web-services.md                    
