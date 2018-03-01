@@ -37,6 +37,7 @@
       "uhfHeaderId": "MSDocsHeader-MSPowerApps",
       "contributors_to_exclude": ["openpublishingbuild","sudeepku","v-thepet"],
       "breadcrumb_path": "breadcrumb/toc.yml",
+      "extendBreadcrumb": true,
       "searchScope": ["PowerApps"],
       "titleSuffix": "PowerApps"
       
