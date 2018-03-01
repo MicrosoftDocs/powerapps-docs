@@ -58,7 +58,6 @@ This webinar will dive into the advantages of leveraging the Common Data Service
 
 [Click here to watch on April 23rd](https://www.youtube.com/watch?v=JY8r46HnHoI)
 
-
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
 
