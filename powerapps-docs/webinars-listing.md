@@ -40,6 +40,25 @@ This is part two of Brian Blanchard's demonstration on how he built an app for h
 
 [Click here to watch on March 19th](https://www.youtube.com/watch?v=oncGxlmFqy8)
 
+**Deep Dive | Click-Through PowerApps Analytics by Vivek Bavishi**
+<br>by Vivek Bavishi & Audrie Gordon
+<br>*April 17th, 9:00AM PST, 12:00PM EST*
+
+Vivek Bavishi from the International PowerApps Champions group, joins Audrie Gordon from the PowerApps team, to walkthrough a simple approach for creating your own click-through analytics using PowerApps and Flow. Extend your reporting options to include statistics which will raise visibility into how your app consumers navigate your applications, enabling you to use data to validate assumptions on app usage and design! If you're a serious app maker, you don't want to miss Vivek's presentation.
+
+[Click here to watch on April 17th](https://www.youtube.com/watch?v=OM-rlhKJFTA)
+
+**Connector Series | The Advantages of Leveraging the Common Data Service**
+<br>by Audrie Gordon
+<br>*April 23rd, 9:00AM PST, 12:00PM EST*
+
+Have you started exploring the Common Data Service (aka CDS)? Are you up-to-speed on the advantages of a common data schema across your business applications? Have you heard all the buzz on what's new and exciting in that space?
+
+This webinar will dive into the advantages of leveraging the Common Data Service across all Microsoft Cloud Subscriptions (for Office 365, Azure, and Dynamics 365 app enablement). Come to this live webinar to catch a glimpse at where we're going with CDS, and how powerful it will be to model your apps using this platform. Can't wait to show you a few of the endless possibilities!
+
+[Click here to watch on April 23rd](https://www.youtube.com/watch?v=JY8r46HnHoI)
+
+
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
 
