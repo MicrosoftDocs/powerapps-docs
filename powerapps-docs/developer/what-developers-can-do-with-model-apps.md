@@ -35,7 +35,7 @@ More information:
 
 The PowerApps platform is designed so that people with a wide range of skills can extend it to build functionality that they need. This allows for rapid application development to meet the needs for change as the business requirements change.
 
-![Diagram showing simple to sophisticated extensions](../media/dev-model-apps/simple-to-sophisticated.png)
+![Diagram showing simple to sophisticated extensions](media/dev-model-apps/simple-to-sophisticated.png)
 
 This diagram illustrates how the combination of canvas and model apps can be used together by people with a wide range of skills.
 
