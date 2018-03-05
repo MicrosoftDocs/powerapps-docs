@@ -48,7 +48,7 @@ Sign in to the Admin center at [https://home.dynamics.com]([https://admin.powera
 6. Click **Save policy**.
 
     ![](./media/create-dlp-policy/save-policy.png)
-7. The Secure Data Access for Contoso policy is created and appears in the list of data loss prevention policies. 
+7. The Secure Data Access for Contoso policy is created and appears in the list of data loss prevention policies.
 ## Next steps
 In this quickstart, you learned how to run a canvas-based or model-driven app in a web browser. To learn more about PowerApps, continue to the PowerApps tutorials.
 
