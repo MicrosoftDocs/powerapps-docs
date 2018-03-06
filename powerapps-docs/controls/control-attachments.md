@@ -19,15 +19,25 @@ ms.author: fikaradz
 
 ---
 # Attachments control in PowerApps
-A control that allows users to download files to their device.  Upload functionality will be coming soon.
+A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list.
+
+## Limitations
+The attachment control has the following temporary limitations:
+1. Attachment upload only works with SharePoint list data sources.  Support for other data sources will be introduced incrementally, starting with CDS.
+
+1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form.   Note that in order to save the file additions and deletions to the back end, the end user must save the form.
+
+1. You can only upload files up to 10 MB in size.  
 
 ## Description
-An **Attachments** control lets you open files stored on a data source.
+An **Attachments** control lets you open files stored on a data source as well as add and delete files from a SharePoint list.
 
 ## Key properties
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.
 
 **MaxAttachments** – The maximum number of files the control will accept.
+
+**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 10 MB.
 
 **OnAttach** – How the app responds when the user adds a new file attachment.
 
@@ -36,7 +46,9 @@ An **Attachments** control lets you open files stored on a data source.
 **[OnSelect](properties-core.md)** – How the app responds when the user clicks on an attachment.
 
 ## Additional properties
-**AddAttachmentText** – The label text for the button used to add a new attachment.
+**AccessibleLabel** – The label announced by screen readers.
+
+**AddAttachmentText** – The label text for the link used to add a new attachment.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -44,11 +56,13 @@ An **Attachments** control lets you open files stored on a data source.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**NoAttachmentsText** – Instructional text shown to the user when there are no attachments to show.
+**MaxAttachmentsText** – The text that replaces the "Attach file" link when the control contains the maximum number of files allowed.
+
+**NoAttachmentsText** – Informational text shown to the user when there are no files attached.
 
 **[Visible](properties-core.md)** – Whether a control is visible or hidden.
 
