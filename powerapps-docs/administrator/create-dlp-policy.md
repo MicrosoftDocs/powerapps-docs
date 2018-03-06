@@ -29,7 +29,7 @@ To follow this quickstart, the following items are required:
 * Either Environment Admin or Tenant Admin permissions, and permissions to at least one environment. For more information, see [Environments administration in PowerApps](administrator/environments-administration.md).
 
 ## Sign in to the PowerApps Admin center
-Sign in to the Admin center at [https://home.dynamics.com]([https://admin.powerapps.com).
+Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
 
 ## Create a DLP policy
 1. In the navigation pane, click or tap **Data policies**, and then click or tap **New policy**.
