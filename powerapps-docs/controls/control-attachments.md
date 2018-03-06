@@ -21,7 +21,7 @@ ms.author: fikaradz
 # Attachments control in PowerApps
 A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list.
 
-# Limitations
+## Limitations
 The attachment control has the following temporary limitations:
 1. Attachment upload only works with SharePoint list data sources.  Support for other data sources will be introduced incrementally, starting with CDS.
 
