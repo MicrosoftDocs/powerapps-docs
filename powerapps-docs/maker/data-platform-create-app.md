@@ -53,4 +53,4 @@ To keep this app, save it by pressing Ctrl + S. Otherwise, press Ctrl + F4 (or o
 In this quickstart, you created an app to manage sample data in an entity of a Common Data Service database. The first screen of the app contains a gallery, which you can customize to better suit your needs. 
 
 > [!div class="nextstepaction"]
-> [Customize a gallery](customize-layout-sharepoint)
+> [Customize a gallery](customize-layout-sharepoint.md)
