@@ -18,15 +18,17 @@ ms.date: 10/25/2016
 ms.author: fikaradz
 
 ---
-# PDF viewer control in PowerApps
-A control that shows the content of a PDF file.
+# PDF viewer control (experimental) in PowerApps
+An experimental control that shows the content of a PDF file.
 
 ## Description
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Limitations
 Note that due to the security architecture of PowerApps, PDF Viewer only supports HTTPS links and not HTTP.  
-If the PDF document resides on a server with restrictive CORS settings, you may not be able to view it within your app.  In case the document cannot be opened in PowerApps, the option to open the document in an external browser is presented to the end user.
+If the PDF document resides on a server with restrictive CORS settings, you may not be able to view it within your app.  To resolve this issue, the server that hosts PDF documents needs to permit cross origin requests (CORS) coming from powerapps.com.
+
+In case the document cannot be opened in PowerApps, the option to open the document in an external browser is presented to the end user.  This option is also available in the control menu for all external documents.
 
 ## Key properties
 **Document** – The URL, enclosed in double-quotation marks, of a PDF file.

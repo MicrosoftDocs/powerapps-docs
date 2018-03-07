@@ -28,7 +28,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Audio](controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
-**[Barcode scanner](controls/control-barcodescanner.md)** – Scan a barcode by using a device that has a camera.
+**[Barcode scanner (experimental)](controls/control-barcodescanner.md)** – Scan a barcode by using a device that has a camera.
 
 **[Button](controls/control-button.md)** – Interact with the app by clicking or tapping.
 
@@ -74,7 +74,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Microphone](controls/control-microphone.md)** – Record and save sounds in the app or to a data source.
 
-**[PDF viewer](controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
+**[PDF viewer (experimental)](controls/control-pdf-viewer.md)** – Show the content of a PDF file on the Internet.
 
 **[Pen input](controls/control-pen-input.md)** – Draw an image or text, and save it in the app or to a data source.
 
