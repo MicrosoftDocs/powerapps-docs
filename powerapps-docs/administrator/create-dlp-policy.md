@@ -26,7 +26,7 @@ In this quickstart, you'll learn how to create a DLP policy that prevents data t
 ## Prerequisites
 To follow this quickstart, the following items are required:
 * Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
-* Either Environment Admin or Tenant Admin permissions, and permissions to at least one environment. For more information, see [Environments administration in PowerApps](administrator/environments-administration.md).
+* Either Environment Admin or Tenant Admin permissions, and permissions to at least one environment. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Sign in to the PowerApps Admin center
 Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
@@ -52,8 +52,11 @@ Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powe
     ![](./media/create-dlp-policy/save-policy.png)
 
 The Secure Data Access for Contoso policy is created and appears in the list of data loss prevention policies. Since the Twitter connector resides in the **No business data allowed** data group, this policy ensures that the Common Data Service and SharePoint do not share their data with Twitter.
+
+It's good practice for administrators to share a list of DLP policies with their organization so that users are aware of the policies prior to creating apps.
+
 ## Next steps
-In this quickstart, you learned how to create a DLP policy to prevent important business data from being accidentally published to connectors such as Twitter. To learn more about DLP policies, check out the how-to article on how to manage them.
+In this quickstart, you learned how to create a DLP policy to prevent important business data from being accidentally published to connectors such as Twitter. To learn more about DLP policies, check out the article about how to manage them.
 
 > [!div class="nextstepaction"]
 > [Manage data loss prevention (DLP) policies](prevent-data-loss.md)
