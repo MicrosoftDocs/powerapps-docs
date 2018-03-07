@@ -104,6 +104,6 @@ Only tenant and environment admins can create and modify DLP policies. Learn mor
 
 ## Next steps
 * [Learn more about environments](environments-administration.md)  
-* [Learn more about Microsoft PowerApps](../maker/getting-started.md)  
+* [Learn more about Microsoft PowerApps](../canvas-apps/getting-started.md)  
 * [Learn more about the admin center](introduction-to-the-admin-center.md)  
 

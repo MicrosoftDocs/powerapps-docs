@@ -52,7 +52,7 @@ Environments have two built-in roles that provide access to permissions within a
 
 * The Environment Maker role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow.
 
-Environment Makers can also distribute the apps they build in an environment to other users in your organization by sharing the app with individual users, security groups, or to all users in the organization. For more information, see [Share an app in PowerApps](../maker/share-app.md).
+Environment Makers can also distribute the apps they build in an environment to other users in your organization by sharing the app with individual users, security groups, or to all users in the organization. For more information, see [Share an app in PowerApps](../canvas-apps/share-app.md).
 
 Users or groups assigned to these environment roles are not automatically given access to the environment’s database (if it exists) and must be given access separately by a Database owner. For more information, see [Configure database security](database-security.md).
 
@@ -79,7 +79,7 @@ An environment will show up in your picker if you meet one of the following cond
 
 * You are a member of the Environment Admin role for the environment.
 * You are a member of the Environment Maker role for the environment.
-* You are not an Environment Admin or Environment Maker of the environment, but you have been given ‘Contributor’ access to at least one app within the environment. For more information, see [share an app](../maker/share-app.md). In this case, you will not be able to create apps in this environment. You will only be able to modify the existing apps that have been shared with you.
+* You are not an Environment Admin or Environment Maker of the environment, but you have been given ‘Contributor’ access to at least one app within the environment. For more information, see [share an app](../canvas-apps/share-app.md). In this case, you will not be able to create apps in this environment. You will only be able to modify the existing apps that have been shared with you.
 
 ![](./media/environments-overview/EnvironmentPicker.png)
 

@@ -36,7 +36,7 @@ Users can sign up by going to [powerapps.microsoft.com](https://powerapps.micros
 
 When a user in your organization signs up for PowerApps, that user is assigned a PowerApps license automatically.
 
-See [Self-service sign up for PowerApps](../maker/signup-for-powerapps.md) for more details.
+See [Self-service sign up for PowerApps](../canvas-apps/signup-for-powerapps.md) for more details.
 
 ### How can users in my organization gain access to PowerApps?
 Users within your organization can gain access to PowerApps in three different ways:
