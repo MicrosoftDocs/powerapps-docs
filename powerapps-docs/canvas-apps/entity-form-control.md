@@ -18,7 +18,7 @@ ms.author: aneesa
 
 ---
 # Use the Entity form control
-Create apps faster by using the **Entity form** control to add rich forms for a [Common Data Service entity](../guided-learning/manage-data.yml#step-2).
+Create apps faster by using the **Entity form** control to add rich forms for a Common Data Service entity.
 
 For an introduction to the **Entity form** control, see this blog post: [New entity form control (experimental feature) for Common Data Service](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
 
@@ -82,7 +82,7 @@ You can use these  shared functions with either the **Entity form** control or t
 Now that you have an overview of the various properties and functions, let’s look at them in action.
 
 > [!NOTE]
-> If you don’t have access to a Common Data Service database, [create one](../guided-learning/manage-data.yml#step-1) before you start to follow these steps.
+> If you don’t have access to a Common Data Service database, create one before you start to follow these steps.
 
 ## Display a list of records
 The next five procedures provide a single, end-to-end example of how to use **Entity form** controls. In this procedure, add a form that shows a list of sales orders.  
@@ -125,7 +125,7 @@ The next five procedures provide a single, end-to-end example of how to use **En
       
       ![](media/entity-form-control/entityform-tutorial-01-08.png)   
       
-      In the **Common Data Service**, you can [modify field groups](field-groups.md) for custom entities (but not [standard entities](../guided-learning/manage-data.yml#step-2)) to change the fields that appear on the corresponding forms that the **Entity form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity form** control to display the corresponding form.
+      In the **Common Data Service**, you can [modify field groups](../common-data-service/field-groups.md) for custom entities (but not standard entities) to change the fields that appear on the corresponding forms that the **Entity form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity form** control to display the corresponding form.
 
 ## Display the details of a record
 Let’s add another **Entity form** control to display the details of the sales order that’s selected in the list that you created earlier.  

@@ -58,7 +58,7 @@ Sign into PowerApps at [https://web.powerapps.com]([https://web.powerapps.com).
     ![](./media/open-app-embedded-in-teams/app-in-channel.png)
 
 > [!NOTE]
-> You must [share](share-app.md) your own apps before you add them to Teams (sample apps are shared by default).
+> You must [share](../canvas-apps/share-app.md) your own apps before you add them to Teams (sample apps are shared by default).
 
 ## Open an app
 
@@ -91,4 +91,4 @@ To remove the app from the channel, choose the **Product Showcase** tab > **Remo
 In this quickstart, you added the Product Showcase sample app to a Teams channel, and then opened the app from that channel. To learn more about PowerApps, continue to the PowerApps tutorials.
 
 > [!div class="nextstepaction"]
-> [PowerApps Tutorials](get-started-create-from-blank.md)
+> [PowerApps Tutorials](../canvas-apps/get-started-create-from-blank.md)

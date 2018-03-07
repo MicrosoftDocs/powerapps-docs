@@ -19,6 +19,9 @@
   - name: Create a model-driven app
     href: _placeholder03.md
 - name: Tutorials
+  items:
+  - name: Create an app from scratch
+    href: data-platform-create-app-scratch.md
 - name: Samples
 - name: Concepts
   items:

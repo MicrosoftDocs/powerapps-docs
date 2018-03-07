@@ -32,7 +32,7 @@ If you're new to PowerApps (or have only generated apps automatically), you'll w
 1. Create a tablet app from scratch.
    
     Everything discussed in this topic also applies to phone layouts, but phone apps often have only one vertical column.
-2. Add the **Sales order** entity in the [Common Data Service](data-platform-intro.md) as a data source for the app.
+2. Add the **Sales order** entity in the [Common Data Service](../common-data-service/data-platform-intro.md) as a data source for the app.
    
     Outside of this tutorial, you can use any data source, including SharePoint lists and Excel tables.
 3. Add a vertical **Gallery** control, and set its **Items** property to **'Sales order'**.

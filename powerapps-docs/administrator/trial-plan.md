@@ -21,7 +21,7 @@ ms.author: manasma
 # Plan 2 Trial for PowerApps
 Sign up for the PowerApps Plan 2 Trial to get all functionality free for 90 days. This trial offers more capacity and premium features in addition to the PowerApps functionality that you get from many [Office 365 and Dynamics 365 plans](pricing-billing-skus.md). Premium features include:
 
-* **Access to the Common Data Service**, which is a secure business data platform built into PowerApps. This service comes with hundreds of standard business entities, so all your apps can share the same definition of “customer,” “product,” “lead,” and more. [Learn more](../canvas-apps/data-platform-intro.md)
+* **Access to the Common Data Service**, which is a secure business data platform built into PowerApps. This service comes with hundreds of standard business entities, so all your apps can share the same definition of “customer,” “product,” “lead,” and more. [Learn more](../common-data-service/data-platform-intro.md)
 * **Access to premium connections** such as Salesforce, DB2, Zendesk, and the Common Data Service. With many Office 365 and Dynamics 365 plans, you can connect to data sources such as Office 365, Dynamics 365, Dropbox, and Twitter. With the Plan 2 Trial, you can also connect to data through premium connectors such as these:
   
     ![](./media/trial-plan/premium-connectors.png)

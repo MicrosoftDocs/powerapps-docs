@@ -63,8 +63,8 @@ You can run your own apps - and any apps shared with you - on Windows, iOS, Andr
 For more information, check out the following topics:
 
 * [Share an app in PowerApps](share-app.md)
-* [Use PowerApps in a web browser](run-app-browser.md)
-* [Use PowerApps on a phone or tablet](run-app-client.md)
+* [Use PowerApps in a web browser](../user/run-app-browser.md)
+* [Use PowerApps on a phone or tablet](../user/run-app-client.md)
 
 ## Get help and support
 If you have a question about PowerApps, there are several ways to get help:

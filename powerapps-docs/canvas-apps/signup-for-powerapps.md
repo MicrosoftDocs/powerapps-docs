@@ -94,7 +94,7 @@ If you already have access to PowerApps through Office 365, Dynamics 365, or Pow
 If you already have access to PowerApps as a user of Office 365, Dynamics 365, or PowerApps Plan 1, you can try PowerApps Plan 2 for free. To start a 90-day free trial of Plan 2, sign into PowerApps, and then try one of these PowerApps Plan 2 features:
 
 * [Create and manage instances](../administrator/signup-for-powerapps-admin.md) of the Common Data Service.
-* [Model your data](data-platform-intro.md) using the Common Data Service.
+* [Model your data](../common-data-service/data-platform-intro.md) using the Common Data Service.
 * [Create and manage environments](../administrator/environments-administration.md) from the [PowerApps admin center][5].
 * [Manage an on-premises data gateway](gateway-management.md) in PowerApps.  
 

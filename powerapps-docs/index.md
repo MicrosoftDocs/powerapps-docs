@@ -73,7 +73,7 @@ description: Microsoft PowerApps Documentation
                                 </a>
                             </li>
                             <li>
-                                <a href="./developer/index.yml">
+                                <a href="./model-driven-apps/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

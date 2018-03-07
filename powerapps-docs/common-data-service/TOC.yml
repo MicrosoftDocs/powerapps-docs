@@ -14,8 +14,6 @@
     href: custom-picklists.md
   - name: Create a relationship
     href: data-platform-entity-lookup.md
-  - name: Create an app with an entity
-    href: data-platform-create-app.md
   - name: Delete a custom entity
     href: data-platform-delete-entity.md
   - name: Import or export data
