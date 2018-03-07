@@ -43,7 +43,14 @@ For instructions on how to create a DLP policy, see [Quickstart: Create a data l
 ### Delete a DLP policy
 1. In the list of data loss prevention policies, click or tap the trash can icon next to the policy you want to delete.
 
+<<<<<<< HEAD
     ![Sign in](./media/prevent-data-loss/3-delete.png)  
 4. In the confirmation dialog box, click or tap **Delete**.
+=======
+## Next steps
+* [Learn more about environments](environments-administration.md)  
+* [Learn more about Microsoft PowerApps](../canvas-apps/getting-started.md)  
+* [Learn more about the admin center](introduction-to-the-admin-center.md)  
+>>>>>>> b10d25c7494fff8680e97cef2e341f842a53e3b8
 
     The policy is deleted and no longer appears in the list of data loss prevention policies.

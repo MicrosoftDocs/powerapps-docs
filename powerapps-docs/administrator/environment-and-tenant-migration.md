@@ -38,7 +38,7 @@ When you export an app, the dependent resources for your app will also get expor
 | Connections |No |If an app depends on a connection (such as a SQL connection w/ credentials), we do not currently support exporting the connection or credentials as a part of the package. <p></p> If you have an app that relies on a shared connection (like SQL), your only current option is to manually re-create that connection with the appropriate credentials in your target environment and select that connection when you import the package. |
 | CDS Custom Roles and Permission Sets |No |Exporting custom CDS roles and/or permission sets is not currently supported, so the only option today is to manually re-create these entities in your target environment. |
 | Gateways |No |Gateways are only supported in the default (and {tenant name} (from preview) ) environments, so export/migration is not supported. |
-| CDS data rows |No |Export rows from CDS entities is not current supported, so the only option today to manually [export and import](../maker/data-platform-export-data.md) data after your CDS schema changes have been applied in a new environment. |
+| CDS data rows |No |Export rows from CDS entities is not current supported, so the only option today to manually [export and import](../common-data-service/data-platform-export-data.md) data after your CDS schema changes have been applied in a new environment. |
 
 ## How do I get access to packaging for my app?
 The ability to export an app is available to any user with "Can edit" permission to the app.

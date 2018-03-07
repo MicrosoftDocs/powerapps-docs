@@ -1,0 +1,13 @@
+- name: PowerApps Users
+  items:
+  - name: Run an app
+    expanded: true
+    items:
+    - name: In a browser
+      href: run-app-browser.md
+    - name: On a phone (canvas)
+      href: run-app-client.md
+    - name: On a phone (model-driven)
+      href: _placeholder01.md
+    - name: In Teams
+      href: open-app-embedded-in-teams.md
