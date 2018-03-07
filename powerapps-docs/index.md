@@ -16,7 +16,7 @@ description: Microsoft PowerApps Documentation
                         <a href="#home-all"></a>
                         <ul id="home-all" class="cardsM cols cols2">
                             <li>
-                                <a href="./maker/index.yml">
+                                <a href="./canvas-apps/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

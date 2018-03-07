@@ -84,5 +84,5 @@ You can export and import entities, and picklists as follows:
 * **Custom picklists** – Custom picklists are moved across environments.
 
 ## Data
-You can't move database data as part of the export and import of resources. To move data, you can use Microsoft Excel. For more information, see [Import or export data](../maker/data-platform-export-data.md).
+You can't move database data as part of the export and import of resources. To move data, you can use Microsoft Excel. For more information, see [Import or export data](../canvas-apps/data-platform-export-data.md).
 
