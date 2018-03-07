@@ -1,0 +1,24 @@
+- name: Overview
+  href: index.yml
+  items:
+  - name: About PowerApps development
+    href: _placeholder01.md
+- name: Developer content (MVC folders TBD)
+  items:
+  - name: Canvas apps
+    expanded: true
+    items:
+    - name: PowerApps for enterprise developers, partners, and ISVs
+      href: dev-enterprise-intro.md
+    - name: Build and certify custom connectors
+      href: register-custom-api.md
+    - name: Integrate with websites and other technologies
+      href: embed-apps-dev.md
+    - name: Develop offline-capable apps
+      href: offline-apps.md
+    - name: Let customers test drive your apps
+      href: dev-appsource-test-drive.md
+  - name: Model-driven apps (for preview)
+    items:
+    - name: Model-driven developer
+      href: _placeholder02.md

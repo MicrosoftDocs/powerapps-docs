@@ -24,7 +24,7 @@ If you choose to notify users via email, everyone you shared the app with receiv
 We're not going to get into detail about permissions and licensing, but we want to cover a couple of basics related to sharing:
 
 * Users and contributors need permissions to any data connections and gateways that a shared app uses. Some permissions come along implicitly with the app, but others must be explicitly granted.
-* If the app uses Common Data Service entities, users and contributors need access to the Common Data Service database. Contributors also need a PowerApps "P2" license if they work directly with entities.
+* If the app uses Common Data Service for Apps entities, users and contributors need access to the Common Data Service for Apps database. Contributors also need a PowerApps "P2" license if they work directly with entities.
 
 Sharing apps is easy, and it's a great way to take an app that you find useful and make it available to people across your organization. In the next topic we'll explain how to control which version of an app is active when you use and share the app.
 
