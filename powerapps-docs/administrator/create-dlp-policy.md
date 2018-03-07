@@ -1,5 +1,5 @@
 ---
-title: Quickstart: Create a data loss prevention (DLP) policy | Microsoft Docs
+title: Quickstart to create a data loss prevention (DLP) policy | Microsoft Docs
 description: In this quickstart, you learn how to create a data loss prevention (DLP) policy
 services: ''
 suite: powerapps
