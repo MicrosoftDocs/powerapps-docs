@@ -39,7 +39,7 @@ To add a lookup relation to an entity, create a relation under the **Relationshi
 5. Click or tap **Save** to commit the changes. A lookup field with the same name will be automatically created.
 
 ## Use a lookup field in an app
-If you [create an app automatically](data-platform-create-app.md) from an entity that contains a lookup field, it appears as a **Drop down** control that contains data from the **primary key** field of the referred entity in a collapsed state. To see two fields in the drop down when it is expanded, you must add the PrimaryId field and a second field of your choice to the **Default Lookup** field group of the related entity of the lookup relation.
+If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from an entity that contains a lookup field, it appears as a **Drop down** control that contains data from the **primary key** field of the referred entity in a collapsed state. To see two fields in the drop down when it is expanded, you must add the PrimaryId field and a second field of your choice to the **Default Lookup** field group of the related entity of the lookup relation.
 
 ## Delete a record with a lookup relation
 If entity A has a lookup relation to entity B:
@@ -53,6 +53,6 @@ If entity A has a lookup relation to entity B:
 For information about how to delete a field, see [Manage fields](data-platform-manage-fields.md).
 
 ## Next steps
-* [Generate an app by using a Common Data Service database](data-platform-create-app.md)
-* [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
+* [Generate an app by using a Common Data Service database](../canvas-apps/data-platform-create-app.md)
+* [Create an app from scratch using a Common Data Service database](../canvas-apps/data-platform-create-app-scratch.md)
 
