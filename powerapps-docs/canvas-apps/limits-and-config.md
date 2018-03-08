@@ -1,11 +1,11 @@
 ---
-title: Limits and configuration | Microsoft Docs
-description: Limits and configuration values for PowerApps
+title: System requirements, limits, and configuration values | Microsoft Docs
+description: System requirements, limits, and configuration values for PowerApps
 services: ''
 suite: PowerApps
 documentationcenter: na
 author: skjerland
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,14 +14,28 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/06/2017
+ms.date: 03/07/2018
 ms.author: sharik
 
 ---
-# Limits and configuration in Microsoft PowerApps
-This topic contains information about the current limits and configuration details for PowerApps.
+# System requirements, limits, and configuration values
+This topic contains device platform and browser requirements, as well as current limits and configuration values for PowerApps.
 
-## Requests
+## Supported device platforms
+* iOS 9.3 or later (recommended: iOS 10 or later with at least 2GB of RAM)
+* Android 5 or later (recommended: Android 7 or later with at least 4GB of RAM)
+* Windows 7 SP1 or later (recommended: Windows 10 Fall Creators Update with at least 8 GB of RAM)
+
+## Supported web browsers
+| **Browser** | **Operating system** |
+| --- | --- |
+| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS <br>iOS 8 or later<br>Android |
+| Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
+| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
+| Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android <br>macOS |
+| Apple Safari (latest version) |macOS <br> iOS 8 or later |
+
+## Request limits
 These limits apply to each single outgoing request:
 
 | Name | Limit |
@@ -65,4 +79,3 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | *.azureedge.net |https |WebAuth |
 | *.blob.core.windows.net |https |Blob storage |
 | vortex.data.microsoft.com |https |Telemetry |
-
