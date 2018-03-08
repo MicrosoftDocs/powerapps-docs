@@ -6,6 +6,15 @@
     tocHref: /powerapps/
     topicHref: /powerapps/
     items:
+    - name: Maker
+      tocHref: /powerapps/maker/
+      topicHref: /powerapps/maker/
+    - name: Developer
+      tocHref: /powerapps/developer/
+      topicHref: /powerapps/developer/
+    - name: Administrator
+      tocHref: /powerapps/administrator/
+      topicHref: /powerapps/administrator/
     - name: Guided Learning
       tocHref: /powerapps/guided-learning/
       topicHref: /powerapps/guided-learning/
