@@ -1,11 +1,11 @@
 ---
-title: Run a canvas-based app on a mobile device | Microsoft Docs
-description: Walkthrough of running a canvas-based app on a mobile device
+title: Quickstart to run a canvas-based app on a mobile device | Microsoft Docs
+description: In this quickstart, you learn how to run a canvas app on a mobile device
 services: ''
 suite: powerapps
 documentationcenter: na
 author: skjerland
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,14 +14,14 @@ ms.devlang: na
 ms.topic: quickstart
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/24/2018
+ms.date: 03/07/2018
 ms.author: sharik
 
 ---
-# Quickstart: Run a canvas-based app on a mobile device
-When you create a canvas-based or model-driven app, or an app creator shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas-based app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
+# Quickstart: Run a canvas app on a mobile device
+When you create an app, or an app creator shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
-To follow this quickstart, if you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download PowerApps from the Windows Store, the App Store, or Google Play onto an iPhone, iPad, or Android device running a [supported operating system](../canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas-based app that you built, or that someone else built and shared with you.
+To follow this quickstart, if you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download PowerApps from the Windows Store, the App Store, or Google Play onto an iPhone, iPad, or Android device running a [supported operating system](../canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you built or that someone else built and shared with you.
 
 ## Open PowerApps and sign in
 Open PowerApps on your mobile device and sign in using your Azure Active Directory credentials.
@@ -58,7 +58,7 @@ If you know the name of the app you want to run, you can tap the search icon at 
 If you filtered your apps, it will search the filtered list.
 
 ## Run an app
-To run a canvas-based app on a mobile device, tap the app tile. If someone else created an app and shared it with you in an email, you can run the app by tapping the link in the email.
+To run a canvas app on a mobile device, tap the app tile. If someone else created a canvas app and shared it with you in an email, you can run the app by tapping the link in the email.
 
 If this is the first time you're using PowerApps, a screen shows the swipe gesture to close the app.
 
@@ -78,7 +78,7 @@ If you've downloaded an app and used it at least once, you can pin it to the hom
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
 ## Next steps
-In this quickstart, you learned how to run a canvas-based app on a mobile device. To learn more about PowerApps, continue to the PowerApps tutorials.
+In this quickstart, you learned how to run a canvas app on a mobile device. To learn more about PowerApps, continue to the PowerApps tutorials.
 
 > [!div class="nextstepaction"]
 > [PowerApps Tutorials](../canvas-apps/get-started-create-from-blank.md)
