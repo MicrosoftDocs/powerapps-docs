@@ -14,7 +14,7 @@ description: Microsoft PowerApps Documentation
                 <ul id="home">
                     <li>
                         <a href="#home-all"></a>
-                        <ul id="home-all" class="cardsM cols cols2">
+                        <ul id="home-all" class="cardsM cols cols3">
                             <li>
                                 <a href="./canvas-apps/getting-started.md">
                                     <div class="cardSize">
@@ -65,25 +65,6 @@ description: Microsoft PowerApps Documentation
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Administer PowerApps</h3>
-                                                    <p>You can...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./canvas-apps/getting-started.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/index/powerapps-logo.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Develop for PowerApps</h3>
                                                     <p>You can...</p>
                                                 </div>
                                             </div>
