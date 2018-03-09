@@ -19,21 +19,31 @@ ms.author: sharik
 
 ---
 # System requirements, limits, and configuration values
-This topic contains device platform and browser requirements, as well as current limits and configuration values for PowerApps.
+This topic contains device platform and web browser requirements, as well as limits and configuration values for PowerApps.
 
-## Supported device platforms
-* iOS 9.3 or later (recommended: iOS 10 or later with at least 2GB of RAM)
-* Android 5 or later (recommended: Android 7 or later with at least 4GB of RAM)
-* Windows 7 SP1 or later (recommended: Windows 10 Fall Creators Update with at least 8 GB of RAM)
+## Supported platforms for running apps using the PowerApps app
+| **Minimum required** | **Recommended** |
+| --- | --- |
+| iOS 9.3 or later |iOS 10 or later with at least 2GB of RAM |
+| Android 5 or later |Android 7 or later with at least 4GB of RAM |
+| Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
-## Supported web browsers
+## Supported browsers for running apps
 | **Browser** | **Operating system** |
 | --- | --- |
-| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS <br>iOS 8 or later<br>Android |
+| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>Android 5 or later <br>iOS 8 or later<br>macOS |
 | Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
 | Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
-| Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android <br>macOS |
-| Apple Safari (latest version) |macOS <br> iOS 8 or later |
+| Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android 5 or later <br>iOS 8 or later <br>macOS |
+| Apple Safari (latest version) |iOS 8 or later <br>macOS |
+
+## Supported browsers for PowerApps Studio for web
+| **Browser** | **Operating system** |
+| --- | --- |
+| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS |
+| Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
+| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
+| Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br>macOS |
 
 ## Request limits
 These limits apply to each single outgoing request:
@@ -44,7 +54,7 @@ These limits apply to each single outgoing request:
 | Retry attempts |4 |
 
 > [!NOTE]
-> The retry value may vary. For certain error conditions, it doesn't make sense to retry.
+> The retry value may vary. For certain error conditions, it's not necessary to retry.
 
 ## IP addresses
 Requests from PowerApps use IP addresses that depend on the region of the [environment](../administrator/environments-overview.md) that the app is in. We don't publish fully qualified domain names available for PowerApps scenarios.
