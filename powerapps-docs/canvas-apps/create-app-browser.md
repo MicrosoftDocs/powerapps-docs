@@ -22,7 +22,6 @@ ms.author: sharik
 Create and edit apps in PowerApps Studio for web, which opens in a browser window on Windows or other platforms.
 
 ## Prerequisites
-
 * [Sign up](signup-for-powerapps.md) for PowerApps.
 * Make sure you're using a [supported browser](limits-and-config.md#supported-browsers-for-powerapps-studio-for-web).
 
@@ -33,11 +32,6 @@ Create and edit apps in PowerApps Studio for web, which opens in a browser windo
     ![New app in left navigation bar](./media/create-app-browser/left-nav.png)
 
 PowerApps Studio for web opens in a new tab in your browser, where you can create and edit apps in the same way as you can in PowerApps Studio for Windows.
-
-## Next steps
-* Automatically generate an app from your data in, for example, [Excel](get-started-create-from-data.md) or [SharePoint](app-from-sharepoint.md).
-* Learn how to [add a control and set properties](add-configure-controls.md) that determine how your app appears and behaves.
-* Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
 
 ## Known limitations
 1. **Create a connection.**
@@ -55,3 +49,8 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 5. **Copy a control across two sessions.**
 
     You can't copy controls from one session of PowerApps Studio for web to another session of PowerApps Studio for web.
+
+## Next steps
+* Automatically generate an app from your data in, for example, [Excel](get-started-create-from-data.md) or [SharePoint](app-from-sharepoint.md).
+* Learn how to [add a control and set properties](add-configure-controls.md) that determine how your app appears and behaves.
+* Unleash your creativity by [creating an app from scratch](get-started-create-from-blank.md).
