@@ -40,7 +40,7 @@
       href: app-analytics.md
     - name: View apps in your org # not in TOC previously
       href: admin-view-apps.md
-    - name: Crete a DLP policy # not in TOC previously
+    - name: Create a DLP policy # not in TOC previously
       href: create-dlp-policy.md
   - name: Model-driven apps (post-preview)
     items:
