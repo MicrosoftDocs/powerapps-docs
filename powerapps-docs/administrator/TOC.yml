@@ -12,13 +12,13 @@
       href: signup-question-and-answer.md
     - name: Pricing information
       href: pricing-billing-skus.md
-    - name: Trial plan 
+    - name: Trial plan
       href: trial-plan.md
     - name: Environments overview
       href: environments-overview.md
     - name: Administer environments
       href: environments-administration.md
-    - name: Set a policy to help prevent data loss
+    - name: Manage DLP policies
       href: prevent-data-loss.md
     - name: Introduction to data groups
       href: introduction-to-data-groups.md
@@ -40,6 +40,8 @@
       href: app-analytics.md
     - name: View apps in your org # not in TOC previously
       href: admin-view-apps.md
+    - name: Create a DLP policy # not in TOC previously
+      href: create-dlp-policy.md
   - name: Model-driven apps (post-preview)
     items:
     - name: Model-driven admin

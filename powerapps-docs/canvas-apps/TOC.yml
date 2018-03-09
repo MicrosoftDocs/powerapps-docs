@@ -187,9 +187,9 @@
     href: formula-reference.md # lives in root, move to formulas?
   - name: Controls reference
     href: reference-properties.md # lives in root, move to controls?
-  - name: Connectors reference 
+  - name: Connectors reference
     href: connections-list.md # lives in root, move to connectors? Is this OK as a referenc topic (vs. in how-to section)
-  - name: Limits and configuration
+  - name: System requirements, limits, and configuration
     href: limits-and-config.md
 - name: Resources # currently all content from old Get Started, except for intro topic. We can relocate as appropriate
   items:
