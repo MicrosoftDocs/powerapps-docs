@@ -28,7 +28,7 @@ The **LookUp** function finds the first record in a table that satisfies a formu
 
 For both, the formula is evaluated for each record of the table.  Records that result in *true* are included in the result.  Besides the normal formula [operators](operators.md), you can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators for substring matches.
 
-[!INCLUDE [record-scope](../../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 The **Search** function finds records in a table that contain a string in one of their columns. The string may occur anywhere within the column; for example, searching for "rob" or "bert" would find a match in a column that contains "Robert". Searching is case-insensitive. Unlike **Filter** and **LookUp**, the **Search** function uses a single string to match instead of a formula.
 
@@ -36,7 +36,7 @@ The **Search** function finds records in a table that contain a string in one of
 
 [Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number. They can be passed to and returned from functions.  **Filter**, **Search**, and **LookUp** don't modify a table. Instead, they take a table as an argument and return a table, a record, or a single value from it. See [working with tables](../working-with-tables.md) for more details.
 
-[!INCLUDE [delegation](../../includes/delegation.md)]
+[!INCLUDE [delegation](../../../includes/delegation.md)]
 
 ## Syntax
 **Filter**( *Table*, *Formula1* [, *Formula2*, ... ] )

@@ -25,7 +25,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
 | --- | --- | --- | --- | --- | --- |
 | ![Icon](./media/cloud-storage-blob-connections/blobicon.png) |![API Icon][boxicon] |![API Icon][dropboxicon] |![API Icon][googledriveicon] |![API Icon][onedriveicon] |![API Icon][onedriveforbusinessicon] |
 
-[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 * An Excel file with the data [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664):
   

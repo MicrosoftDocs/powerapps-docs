@@ -28,7 +28,7 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 > [!NOTE]
 > This connector is limited to 150 calls per user per day.
 
-[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Microsoft Translator
 1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  

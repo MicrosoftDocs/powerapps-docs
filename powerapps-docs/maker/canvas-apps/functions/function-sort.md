@@ -26,7 +26,7 @@ The **Sort** function sorts a table based on a formula.
 
 The formula is evaluated for each [record](../working-with-tables.md#records) of the table, and the results are used to sort the table.  The formula must result in a number, a string, or a Boolean value; it can't result in a table or a record.
 
-[!INCLUDE [record-scope](../../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 To sort first by one column and then by another, you embed a **Sort** formula within another. For example, you can use this formula to sort a **Contacts** table first by a **LastName** column and then by a **FirstName** column:  **Sort( Sort( Contacts, LastName ), FirstName )**
 
@@ -40,7 +40,7 @@ In addition to sorting ascending or descending, **SortByColumns** can sort based
 
 [Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../working-with-tables.md) for more details.
 
-[!INCLUDE [delegation](../../includes/delegation.md)]
+[!INCLUDE [delegation](../../../includes/delegation.md)]
 
 ## Syntax
 **Sort**( *Table*, *Formula* [, *SortOrder* ] )

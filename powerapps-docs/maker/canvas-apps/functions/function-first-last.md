@@ -32,7 +32,7 @@ The **LastN** function returns the last set of records of a table; the second ar
 
 **First** and **Last** return a single record.  **FirstN** and **LastN** return a table, even if you specify only a single record.
 
-[!INCLUDE [delegation-no](../../includes/delegation-no.md)]
+[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
 
 ## Syntax
 **First**( *Table* )<br>**Last**( *Table* )

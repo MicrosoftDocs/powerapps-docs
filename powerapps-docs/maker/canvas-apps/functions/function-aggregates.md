@@ -39,7 +39,7 @@ You can supply the values for these functions as:
 * Separate arguments. For example, **Sum( 1, 2, 3 )** returns 6.
 * A [table](../working-with-tables.md) and a formula to operate over that table.  The aggregate will be calculated on the values of the formula for each [record](../working-with-tables.md#records).  
 
-[!INCLUDE [record-scope](../../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 These functions operate on numeric values only. Other types of values, such as strings or records, are ignored. Use the **[Value](function-value.md)** function to convert a string into a number.
 

@@ -27,7 +27,7 @@ In this tutorial, we:
 * Save the images created from the pen input control to an Excel file
 * Display images from an Excel file in your app
 
-[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+[!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 * Learn how to [add a data source](add-data-connection.md)
 
 ## Create the Excel file as a table

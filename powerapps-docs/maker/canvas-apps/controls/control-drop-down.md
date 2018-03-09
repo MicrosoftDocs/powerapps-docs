@@ -29,7 +29,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[!INCLUDE [long-items](../../includes/long-items.md)]
+[!INCLUDE [long-items](../../../includes/long-items.md)]
 
 **Selected** – The selected item.
 

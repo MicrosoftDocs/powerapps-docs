@@ -27,7 +27,7 @@ You can display this information in a label on your app. For example, you can ad
 
 This topic shows you how to create the Twitter connection, use the Twitter connection in an app, and lists the available functions.
 
-[!INCLUDE [connection-requirements](../../includes/connection-requirements.md)]
+[!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Twitter
 1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  

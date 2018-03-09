@@ -28,7 +28,7 @@ For example, you can use this feature to:
 
 Basically, you can use this anywhere users would benefit from a form or labels that are populated automatically
 
-[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+[!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## Show user details
 1. On the **Insert** tab, click or tap **Media**, and then click or tap **Image**.

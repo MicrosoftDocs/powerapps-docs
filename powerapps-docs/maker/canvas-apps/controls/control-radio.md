@@ -29,7 +29,7 @@ A **Radio** control, with which users have decades of experience, is best used w
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[!INCLUDE [long-items](../../includes/long-items.md)]
+[!INCLUDE [long-items](../../../includes/long-items.md)]
 
 **[Value](properties-core.md)** – The value of an input control.
 

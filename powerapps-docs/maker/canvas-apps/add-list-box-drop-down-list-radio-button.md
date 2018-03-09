@@ -20,7 +20,7 @@ ms.author: lonu
 # Add a list box, a drop-down list, or radio buttons
 PowerApps includes multi-select and single-select options, including a list box, a drop-down list, and radio buttons. In this topic, we add these controls and use a **Table** formula to build the lists. When an item is selected in the list, it updates other controls.
 
-[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+[!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## Add a list box
 1. On the **Insert** tab, select **Controls**, and then select **List box**:  

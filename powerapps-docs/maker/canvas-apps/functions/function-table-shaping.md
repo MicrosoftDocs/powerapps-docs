@@ -36,7 +36,7 @@ You can't modify the columns of a [data source](../working-with-data-sources.md)
 The **AddColumns** function adds a column to a table, and a formula defines the values in that column. Existing columns remain unmodified.
 
 The formula is evaluated for each record of the table.
-[!INCLUDE [record-scope](../../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 The **DropColumns** function excludes columns from a table.  All other columns remain unmodified. **DropColumns** excludes columns, and **ShowColumns** includes columns.
 
@@ -46,7 +46,7 @@ The **ShowColumns** function includes columns of a table and drops all other col
 
 For all these functions, the result is a new table with the transform applied.  The original table isn't modified.
 
-[!INCLUDE [delegation-no](../../includes/delegation-no.md)]
+[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
 
 ## Syntax
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )

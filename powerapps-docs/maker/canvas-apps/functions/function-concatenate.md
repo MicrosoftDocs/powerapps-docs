@@ -24,7 +24,7 @@ Concatenates individual strings of text and strings in [tables](../working-with-
 ## Description
 The **Concat** function concatenates the result of a formula applied across all the [records](../working-with-tables.md#records) of a table, resulting in a single string. Use this function to summarize the strings of a table, just as the **[Sum](function-aggregates.md)** function does for numbers.
 
-[!INCLUDE [record-scope](../../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 Use the **[Split](function-split.md)** function to split a string into a table of substrings.
 

@@ -23,7 +23,7 @@ Create a screen that users can scroll to show different items. For example, you 
 
 When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
 
-[!INCLUDE [app-customization-requirements](../includes/app-customization-requirements.md)]
+[!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## Create a scrolling screen
 1. On the **Home** tab, click or tap **New screen**:

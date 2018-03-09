@@ -29,7 +29,7 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[!INCLUDE [long-items](../../includes/long-items.md)]
+[!INCLUDE [long-items](../../../includes/long-items.md)]
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.

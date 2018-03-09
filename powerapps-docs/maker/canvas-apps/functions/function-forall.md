@@ -24,7 +24,7 @@ Calculates values and performs actions for all [records](../working-with-tables.
 ## Description
 The **ForAll** function evaluates a formula for all records of a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.
 
-[!INCLUDE [record-scope](../../includes/record-scope.md)]
+[!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 ### Return value
 The result of each formula evaluation is returned in a table, in the same order as the input table.
@@ -46,7 +46,7 @@ Many functions in PowerApps can process more than one value at a time through th
 Another consideration is that **ForAll** is not delegable while other functions may be, such as **Filter**.  
 
 ### Delegation
-[!INCLUDE [delegation-no-one](../../includes/delegation-no-one.md)]
+[!INCLUDE [delegation-no-one](../../../includes/delegation-no-one.md)]
 
 ## Syntax
 **ForAll**( *Table*, *Formula* )

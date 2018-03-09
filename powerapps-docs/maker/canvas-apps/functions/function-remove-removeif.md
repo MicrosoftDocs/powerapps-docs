@@ -35,7 +35,7 @@ Use the **RemoveIf** function to remove a record or records based on a condition
 You can also use the **[Clear](function-clear-collect-clearcollect.md)** function to remove all of the records in a data source.
 
 ### Delegation
-[!INCLUDE [delegation-no](../../includes/delegation-no.md)]
+[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
 
 ## Syntax
 **Remove**( *DataSource*, *Record1* [, *Record2*, ... ] [, **All** ] )
