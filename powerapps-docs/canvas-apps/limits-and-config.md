@@ -43,7 +43,6 @@ This topic contains device platform and web browser requirements, as well as lim
 | Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS |
 | Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
 | Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
-| Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br>macOS |
 
 ## Request limits
 These limits apply to each single outgoing request:
