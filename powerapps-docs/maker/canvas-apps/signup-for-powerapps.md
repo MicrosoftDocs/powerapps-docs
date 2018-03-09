@@ -21,7 +21,7 @@ ms.author: jamesol
 # Self-service signup for PowerApps
 Signing up for PowerApps as an individual is easy! This article walks you through the steps to get up and running with a free trial account for PowerApps.
 
-For administration information, see [Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](../administrator/signup-question-and-answer.md).
+For administration information, see [Purchase PowerApps for your organization](../../administrator/signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](../../administrator/signup-question-and-answer.md).
 
 > [!NOTE]
 > If you're in an organization, individual signup may be disabled. If you get an error indicating it's been turned off, see [Individual signup has been turned off](signup-for-powerapps.md#individual-signup-has-been-turned-off) (in this topic) for more information.
@@ -93,9 +93,9 @@ If you already have access to PowerApps through Office 365, Dynamics 365, or Pow
 ### Start a free trial from within PowerApps
 If you already have access to PowerApps as a user of Office 365, Dynamics 365, or PowerApps Plan 1, you can try PowerApps Plan 2 for free. To start a 90-day free trial of Plan 2, sign into PowerApps, and then try one of these PowerApps Plan 2 features:
 
-* [Create and manage instances](../administrator/signup-for-powerapps-admin.md) of the Common Data Service.
+* [Create and manage instances](../../administrator/signup-for-powerapps-admin.md) of the Common Data Service.
 * [Model your data](../common-data-service/data-platform-intro.md) using the Common Data Service.
-* [Create and manage environments](../administrator/environments-administration.md) from the [PowerApps admin center][5].
+* [Create and manage environments](../../administrator/environments-administration.md) from the [PowerApps admin center][5].
 * [Manage an on-premises data gateway](gateway-management.md) in PowerApps.  
 
 When you try any of these features, you will be prompted to start your free trial. Just select **Start my trial**.
@@ -113,7 +113,7 @@ To start your trial, you will need to consent to the terms of use by selecting *
 > Users who take advantage of this in-product PowerApps trial do not appear in the Office 365 admin portal as PowerApps Plan 2 trial users (unless they have another license to Office 365, Dynamics 365, or PowerApps).
 
 > [!NOTE]
-> If you're an IT administrator who wants to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6]. You'll need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.  [Learn more](../administrator/signup-for-powerapps-admin.md)
+> If you're an IT administrator who wants to acquire and deploy PowerApps trial licenses to multiple users in your organization without requiring individual users to accept terms, you can sign up for a [PowerApps Plan 2 subscription trial][6]. You'll need to be an Office 365 Global or Billing Admin or create a new tenant to sign up for an admin trial.  [Learn more](../../administrator/signup-for-powerapps-admin.md)
 
 ## Individual signup has been turned off
 When trying to sign up for PowerApps, you may encounter the following message.
@@ -135,8 +135,8 @@ In many cases, you can sign up for PowerApps by following the steps in this topi
 | **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.` |Your organization signs in to Office 365 and other Microsoft services with IDs other than email addresses. For example, your email address might be Nancy.Smith@contoso.com, but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to you for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
 
 ## See also
-[PowerApps in your organization Q&A](../administrator/signup-question-and-answer.md)  
-[Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md)  
+[PowerApps in your organization Q&A](../../administrator/signup-question-and-answer.md)  
+[Purchase PowerApps for your organization](../../administrator/signup-for-powerapps-admin.md)  
 More questions? [Try the PowerApps Community][7]
 
 <!--Reference links in article-->

@@ -50,5 +50,5 @@ For instructions on how to create a DLP policy, see [Quickstart: Create a data l
 
 ## Next steps
 * [Learn more about environments](environments-administration.md)
-* [Learn more about Microsoft PowerApps](../canvas-apps/getting-started.md)
+* [Learn more about Microsoft PowerApps](../maker/canvas-apps/getting-started.md)
 * [Learn more about the admin center](introduction-to-the-admin-center.md)

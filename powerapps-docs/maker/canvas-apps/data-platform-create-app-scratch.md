@@ -25,7 +25,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 
 
-1. Create a Common Data Service database. For more information, see [Create a Common Data Service database](../administrator/create-database.md).
+1. Create a Common Data Service database. For more information, see [Create a Common Data Service database](../../administrator/create-database.md).
 2. On [powerapps.com](https://web.powerapps.com), in the left navigation pane, click or tap **New app**.
 3. In the dialog box that appears, click or tap **PowerApps Studio for web**. (You can also click or tap **PowerApps Studio for Windows**, and then follow the instructions to install PowerApps Studio for Windows. Although the instructions that follow use PowerApps Studio for web, the instructions for the Microsoft Windows app are similar.)
 4. Under **Start with a blank canvas or template**, click or tap **Phone layout** on the **Blank app** tile.

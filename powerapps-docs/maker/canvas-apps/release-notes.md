@@ -69,5 +69,5 @@ For information about known limitations, see [Common issues and resolutions](com
 4. Get contextual quick-tips to help you create an app, whether starting from a blank app, a template, a data source, or SharePoint.
 
 ## Sept. 6
-1. For apps that you create, [track usage](../administrator/app-analytics.md) in an embedded dashboard from Power BI.
+1. For apps that you create, [track usage](../../administrator/app-analytics.md) in an embedded dashboard from Power BI.
 2. Use a delimiter to break a text string into parts by using the **[Split](functions/function-split.md)** function.
