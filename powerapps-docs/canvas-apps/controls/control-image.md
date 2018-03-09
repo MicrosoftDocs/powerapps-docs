@@ -107,9 +107,9 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 ## Examples
 ### Show an image from a local file
-1. On the **Content** tab, click or tap **Media**, and then click or tap **Browse**.
+1. On the **File** menu, click or tap **Media**, and then click or tap **Browse**.
 2. Click or tap the image file that you want to add, click or tap **Open**, and then press Esc to return to the default workspace.
-3. Add an **Image** control, and set its **[Items](properties-core.md)** property to the name of the file that you added.
+3. Add an **Image** control, and set its **Image** property to the name of the file that you added.
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 
