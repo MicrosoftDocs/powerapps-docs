@@ -1,7 +1,7 @@
 ---
 title: Quickstart to run a canvas-based app on a mobile device | Microsoft Docs
 description: In this quickstart, you learn how to run a canvas app on a mobile device
-services: ''
+services: 'powerapps'
 suite: powerapps
 documentationcenter: na
 author: skjerland
