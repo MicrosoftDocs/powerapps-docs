@@ -16,7 +16,7 @@ description: Microsoft PowerApps Documentation
                         <a href="#home-all"></a>
                         <ul id="home-all" class="cardsM cols cols3">
                             <li>
-                                <a href="./canvas-apps/getting-started.md">
+                                <a href="./user/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -26,7 +26,7 @@ description: Microsoft PowerApps Documentation
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Find and run apps in PowerApps</h3>
+                                                    <h3>Find and run apps</h3>
                                                     <p>You can...</p>
                                                 </div>
                                             </div>
@@ -35,7 +35,7 @@ description: Microsoft PowerApps Documentation
                                 </a>
                             </li>
                             <li>
-                                <a href="./canvas-apps/getting-started.md">
+                                <a href="./maker/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -45,7 +45,7 @@ description: Microsoft PowerApps Documentation
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Create apps in PowerApps</h3>
+                                                    <h3>Create apps</h3>
                                                     <p>You can...</p>
                                                 </div>
                                             </div>
@@ -54,7 +54,7 @@ description: Microsoft PowerApps Documentation
                                 </a>
                             </li>
                             <li>
-                                <a href="./canvas-apps/getting-started.md">
+                                <a href="./administrator/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

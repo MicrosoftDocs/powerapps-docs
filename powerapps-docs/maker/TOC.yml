@@ -1,0 +1,241 @@
+- name: Create apps
+  items:
+  - name: Overview
+    items:
+    - name: About creating apps
+      href: index.md
+    - name: Canvas apps
+      items:
+      - name: Overview
+        items:
+        - name: About canvas apps # check against MVC TOC guidance. We need an all-up scrub of TOC vs title vs H1 - for consistency and SEO
+          href: ./canvas-apps/getting-started.md
+      - name: Quickstarts
+        items:
+        - name: Create from a sample app # I don't think we have this one yet
+          href: ./canvas-apps/_placeholder02.md
+        - name: Create from Excel data
+          href: ./canvas-apps/get-started-create-from-data.md
+        - name: Create from SharePoint data
+          href: ./canvas-apps/app-from-sharepoint.md
+        - name: Create from Common Data Service for Apps
+          href: ./canvas-apps/data-platform-create-app.md
+      - name: Tutorials
+        items:
+        - name: Create an app from scratch
+          href: ./canvas-apps/data-platform-create-app-scratch.md
+      - name: Concepts
+        items:
+        - name: Tables and records
+          href: ./canvas-apps/working-with-tables.md
+        - name: Data forms
+          href: ./canvas-apps/working-with-forms.md
+        - name: Data form layout
+          href: ./canvas-apps/working-with-form-layout.md
+        - name: Data cards
+          href: ./canvas-apps/working-with-cards.md
+        - name: Variables
+          href: ./canvas-apps/working-with-variables.md
+        - name: Formulas
+          href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Dates and times
+          href: ./canvas-apps/show-text-dates-times.md
+        - name: Data sources
+          href: ./canvas-apps/working-with-data-sources.md
+        - name: Canvas app development
+          items:
+          - name: PowerApps for enterprise developers, partners, and ISVs
+            href: ./canvas-apps/dev-enterprise-intro.md
+          - name: Build and certify custom connectors
+            href: ./canvas-apps/register-custom-api.md
+          - name: Integrate with websites and other technologies
+            href: ./canvas-apps/embed-apps-dev.md
+          - name: Develop offline-capable apps
+            href: ./canvas-apps/offline-apps.md
+          - name: Let customers test drive your apps
+            href: ./canvas-apps/dev-appsource-test-drive.md
+      - name: How-to guides
+        items:
+        - name: Run an existing app # Moved running apps and embedding in Teams to quickstarts
+          items:
+          - name: Open an app in SharePoint
+            href: ./canvas-apps/open-app-embedded-in-sharepoint.md
+          - name: Use a sample app
+            href: ./canvas-apps/open-and-run-a-sample-app.md
+          - name: Use a template
+            href: ./canvas-apps/get-started-test-drive.md
+          - name: Get more apps from AppSource
+            href: ./canvas-apps/app-source.md
+        - name: Start with a SharePoint list # Moved SharePoint from PowerApps to quickstart
+          items:
+          - name: Create an app from SharePoint
+            href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
+          - name: Customize a list form with PowerApps
+            href: ./canvas-apps/customize-list-form.md
+          - name: Understand SharePoint forms integration
+            href: ./canvas-apps/sharepoint-form-integration.md
+          - name: Create a connection
+            href: ./canvas-apps/connect-to-sharepoint.md
+          - name: Customize a gallery layout
+            href: ./canvas-apps/customize-layout-sharepoint.md
+          - name: Customize a PowerApps form
+            href: ./canvas-apps/customize-forms-sharepoint.md
+          - name: Customize a card
+            href: ./canvas-apps/customize-card.md
+          - name: Connect lists using lookups
+            href: ./canvas-apps/sharepoint-lookup-fields.md
+        - name: Start with another data source # Moved Excel and CDS to quickstart
+          items:
+          - name: Get started with formulas
+            href: ./canvas-apps/working-with-formulas.md
+          - name: Build an app from scratch
+            href: ./canvas-apps/get-started-create-from-blank.md
+        - name: Customize an app
+          items:
+          - name: Add and configure a control
+            href: ./canvas-apps/add-configure-controls.md
+          - name: Add a screen
+            href: ./canvas-apps/add-screen-context-variables.md
+          - name: Add a data connection
+            href: ./canvas-apps/add-data-connection.md
+          - name: Show a list of items
+            href: ./canvas-apps/add-gallery.md
+          - name: Show items of different heights
+            href: ./canvas-apps/gallery-dynamic-sizing.md
+          - name: Add a form
+            href: ./canvas-apps/add-form.md
+          - name: Show the current user
+            href: ./canvas-apps/show-current-user.md
+          - name: Add a list control
+            href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
+          - name: Add a chart
+            href: ./canvas-apps/use-line-pie-bar-chart.md
+          - name: Add multimedia
+            href: ./canvas-apps/add-images-pictures-audio-video.md
+          - name: Scan a barcode
+            href: ./canvas-apps/scan-barcode.md
+          - name: Add a flow
+            href: ./canvas-apps/using-logic-flows.md
+          - name: Add a scrolling screen
+            href: ./canvas-apps/add-scrolling-screen.md
+          - name: Build a global app
+            href: ./canvas-apps/global-apps.md
+        - name: Manage your app
+          items:
+          - name: Introduction to powerapps.com
+            href: ./canvas-apps/intro-maker-portal.md
+          - name: Edit an app
+            href: ./canvas-apps/edit-app.md
+          - name: Change screen size and orientation
+            href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+          - name: Change app name and tile
+            href: ./canvas-apps/set-name-tile.md
+          - name: Save and publish an app
+            href: ./canvas-apps/save-publish-app.md
+          - name: Share an app
+            href: ./canvas-apps/share-app.md
+          - name: Delete an app
+            href: ./canvas-apps/delete-app.md
+          - name: Restore your app to a previous version
+            href: ./canvas-apps/restore-an-app.md
+        - name: Connect to data
+          items:
+          - name: Manage data connections
+            href: ./canvas-apps/add-manage-connections.md
+          - name: Delegation
+            href: ./canvas-apps/delegation-overview.md
+          - name: Delegable data sources
+            href: ./canvas-apps/delegation-list.md
+          - name: Manage gateways
+            href: ./canvas-apps/gateway-management.md
+          - name: Understand gateways
+            href: ./canvas-apps/gateway-reference.md
+        - name: Integrate with other technologies # already one TOC level too deep
+          items:
+          - name: SharePoint Online
+            items:
+            - name: SharePoint Online integration overview
+              href: ./canvas-apps/sharepoint-scenario-intro.md
+            - name: Set up SharePoint Online lists
+              href: ./canvas-apps/sharepoint-scenario-setup.md
+            - name: Generate an app
+              href: ./canvas-apps/sharepoint-scenario-generate-app.md
+            - name: Create a flow for approvals
+              href: ./canvas-apps/sharepoint-scenario-approval-flow.md
+            - name: Create an app from scratch
+              href: ./canvas-apps/sharepoint-scenario-build-app.md
+            - name: Create a Power BI report
+              href: ./canvas-apps/sharepoint-scenario-build-report.md
+            - name: Publish the Power BI report
+              href: ./canvas-apps/sharepoint-scenario-publish-report.md
+            - name: Embed the Power BI report
+              href: ./canvas-apps/sharepoint-scenario-embed-report.md
+            - name: Create a flow for alerts
+              href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
+            - name: Walk through the completed scenario
+              href: ./canvas-apps/sharepoint-scenario-summary.md
+          - name: Cognitive Services
+            href: ./canvas-apps/cognitive-services-api.md
+      - name: Reference
+        items:
+        - name: Formula reference
+          href: ./canvas-apps/formula-reference.md # lives in root, move to formulas?
+        - name: Controls reference
+          href: ./canvas-apps/reference-properties.md # lives in root, move to controls?
+        - name: Connectors reference
+          href: ./canvas-apps/connections-list.md # lives in root, move to connectors? Is this OK as a referenc topic (vs. in how-to section)
+        - name: System requirements, limits, and configuration
+          href: ./canvas-apps/limits-and-config.md
+      - name: Resources # currently all content from old Get Started, except for intro topic. We can relocate as appropriate
+        items:
+        - name: Sign up (for users)
+          href: ./canvas-apps/signup-for-powerapps.md
+        - name: Sign up for the Community Plan
+          href: ./canvas-apps/dev-community-plan.md
+        - name: Work with environments
+          href: ./canvas-apps/working-with-environments.md
+        - name: What's new
+          href: ./canvas-apps/release-notes.md
+        - name: Common issues and resolutions
+          href: ./canvas-apps/common-issues-and-resolutions.md
+        - name: Upcoming and recent webinars
+          href: ./canvas-apps/webinars-listing.md
+    - name: Model-driven apps
+      items:
+      - name: Overview
+        items:
+        - name: About model-driven apps
+          href: ./model-driven-apps/_placeholder01.md
+      - name: Another node
+        items:
+        - name: Another topic
+          href: ./model-driven-apps/_placeholder02.md
+
+    - name: Common Data Service for Apps
+      items:
+    - name: Overview
+      items:
+      - name: About the Common Data Service
+        href: ./common-data-service/data-platform-intro.md
+    - name: Another node
+      items:
+      - name: Create a custom entity
+        href: ./common-data-service/data-platform-create-entity.md
+      - name: Create a custom entity from data
+        href: ./common-data-service/data-platform-cds-newentity-pq.md
+      - name: Manage fields
+        href: ./common-data-service/data-platform-manage-fields.md
+      - name: Use field groups
+        href: ./common-data-service/field-groups.md
+      - name: Create custom picklists
+        href: ./common-data-service/custom-picklists.md
+      - name: Create a relationship
+        href: ./common-data-service/data-platform-entity-lookup.md
+      - name: Delete a custom entity
+        href: ./common-data-service/data-platform-delete-entity.md
+      - name: Import or export data
+        href: ./common-data-service/data-platform-export-data.md
+      - name: Manage data in Excel
+        href: ./common-data-service/data-platform-interactive-excel.md
+      - name: Samples and resources
+        href: ./common-data-service/samples-resources.md
