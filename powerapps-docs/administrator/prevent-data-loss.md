@@ -1,7 +1,7 @@
 ---
 title: Manage data loss prevention (DLP) policies | Microsoft Docs
-description: Walkthrough of how to manage data loss prevention policies for Microsoft PowerApps.
-services: ''
+description: Walkthrough of how to manage data loss prevention policies for PowerApps.
+services: 'powerapps'
 suite: powerapps
 documentationcenter: na
 author: SKjerland
@@ -26,31 +26,29 @@ To create, edit, or delete DLP policies, you must have either Environment Admin 
 
 For instructions on how to create a DLP policy, see [Quickstart: Create a data loss prevention (DLP) policy](create-dlp-policy.md).
 
-### Find a DLP policy
+## Find a DLP policy
 1. Sign in to the Admin center at [https://admin.poweraps.com]([https://admin.powerapps.com).
 2. In the navigation pane, click or tap **Data policies**. If you have a long list of policies, use the **Search** box to find specific DLP policies.
 
     ![](./media/prevent-data-loss/data-policies.png)
 
-### Edit a DLP policy
+## Edit a DLP policy
 1. In the list of data loss prevention policies, click or tap the pencil icon next to the policy you want to edit.
 
-    ![Sign in](./media/prevent-data-loss/3.png)  
+    ![Sign in](./media/prevent-data-loss/3.png)
 2. Make your changes, and then click or tap **Save Policy**.
 
-    To review the changes, find the DLP policy in the list of data loss prevention policies and click or tap it to review its properties.   
+    To review the changes, find the DLP policy in the list of data loss prevention policies and click or tap it to review its properties.
 
-### Delete a DLP policy
+## Delete a DLP policy
 1. In the list of data loss prevention policies, click or tap the trash can icon next to the policy you want to delete.
 
-<<<<<<< HEAD
-    ![Sign in](./media/prevent-data-loss/3-delete.png)  
+    ![Sign in](./media/prevent-data-loss/3-delete.png)
 4. In the confirmation dialog box, click or tap **Delete**.
-=======
-## Next steps
-* [Learn more about environments](environments-administration.md)  
-* [Learn more about Microsoft PowerApps](../canvas-apps/getting-started.md)  
-* [Learn more about the admin center](introduction-to-the-admin-center.md)  
->>>>>>> b10d25c7494fff8680e97cef2e341f842a53e3b8
 
     The policy is deleted and no longer appears in the list of data loss prevention policies.
+
+## Next steps
+* [Learn more about environments](environments-administration.md)
+* [Learn more about Microsoft PowerApps](../canvas-apps/getting-started.md)
+* [Learn more about the admin center](introduction-to-the-admin-center.md)
