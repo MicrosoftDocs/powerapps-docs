@@ -1,5 +1,4 @@
 ## Prerequisites
-* Access to [powerapps.com](https://web.powerapps.com), or install [PowerApps](http://aka.ms/powerappsinstall)
-* Add the [connection](../add-manage-connections.md)
-* Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
-
+* Access to [powerapps.com](https://web.powerapps.com) or install [PowerApps](http://aka.ms/powerappsinstall)
+* Add the [connection](../maker/canvas-apps/add-manage-connections.md)
+* Create an app from a [template](../maker/canvas-apps/get-started-test-drive.md), from [data](../maker/canvas-apps/get-started-create-from-data.md), or from [scratch](../maker/canvas-apps/get-started-create-from-blank.md)
