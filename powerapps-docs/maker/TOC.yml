@@ -1,15 +1,13 @@
 - name: Create apps
+  href: index.md
   items:
-  - name: Overview
-    items:
-    - name: About creating apps
-      href: index.md
+    - name: Sign up - trial and paid # Move sign up files from canvas to maker directory
+      href: ./canvas-apps/signup-for-powerapps.md
+    - name: Sign up - community plan
+      href: ./canvas-apps/dev-community-plan.md
 - name: Canvas apps
+  href: ./canvas-apps/getting-started.md
   items:
-  - name: Overview
-    items:
-    - name: About canvas apps # check against MVC TOC guidance. We need an all-up scrub of TOC vs title vs H1 - for consistency and SEO
-      href: ./canvas-apps/getting-started.md
   - name: Quickstarts
     items:
     - name: Create from a sample app # I don't think we have this one yet
@@ -188,10 +186,6 @@
       href: ./canvas-apps/limits-and-config.md
   - name: Resources # currently all content from old Get Started, except for intro topic. We can relocate as appropriate
     items:
-    - name: Sign up (for users)
-      href: ./canvas-apps/signup-for-powerapps.md
-    - name: Sign up for the Community Plan
-      href: ./canvas-apps/dev-community-plan.md
     - name: Work with environments
       href: ./canvas-apps/working-with-environments.md
     - name: What's new
@@ -201,40 +195,30 @@
     - name: Upcoming and recent webinars
       href: ./canvas-apps/webinars-listing.md
 - name: Model-driven apps
+  href: ./model-driven-apps/_placeholder01.md
   items:
-  - name: Overview
-    items:
-    - name: About model-driven apps
-      href: ./model-driven-apps/_placeholder01.md
-  - name: Another node
-    items:
-    - name: Another topic
-      href: ./model-driven-apps/_placeholder02.md
+  - name: A model-driven apps topic
+    href: ./model-driven-apps/_placeholder02.md
 - name: Common Data Service for Apps
+  href: ./common-data-service/data-platform-intro.md
   items:
-  - name: Overview
-    items:
-    - name: About the Common Data Service
-      href: ./common-data-service/data-platform-intro.md
-  - name: Another node
-    items:
-    - name: Create a custom entity
-      href: ./common-data-service/data-platform-create-entity.md
-    - name: Create a custom entity from data
-      href: ./common-data-service/data-platform-cds-newentity-pq.md
-    - name: Manage fields
-      href: ./common-data-service/data-platform-manage-fields.md
-    - name: Use field groups
-      href: ./common-data-service/field-groups.md
-    - name: Create custom picklists
-      href: ./common-data-service/custom-picklists.md
-    - name: Create a relationship
-      href: ./common-data-service/data-platform-entity-lookup.md
-    - name: Delete a custom entity
-      href: ./common-data-service/data-platform-delete-entity.md
-    - name: Import or export data
-      href: ./common-data-service/data-platform-export-data.md
-    - name: Manage data in Excel
-      href: ./common-data-service/data-platform-interactive-excel.md
-    - name: Samples and resources
-      href: ./common-data-service/samples-resources.md
+  - name: Create a custom entity
+    href: ./common-data-service/data-platform-create-entity.md
+  - name: Create a custom entity from data
+    href: ./common-data-service/data-platform-cds-newentity-pq.md
+  - name: Manage fields
+    href: ./common-data-service/data-platform-manage-fields.md
+  - name: Use field groups
+    href: ./common-data-service/field-groups.md
+  - name: Create custom picklists
+    href: ./common-data-service/custom-picklists.md
+  - name: Create a relationship
+    href: ./common-data-service/data-platform-entity-lookup.md
+  - name: Delete a custom entity
+    href: ./common-data-service/data-platform-delete-entity.md
+  - name: Import or export data
+    href: ./common-data-service/data-platform-export-data.md
+  - name: Manage data in Excel
+    href: ./common-data-service/data-platform-interactive-excel.md
+  - name: Samples and resources
+    href: ./common-data-service/samples-resources.md
