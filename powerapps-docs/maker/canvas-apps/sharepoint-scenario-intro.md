@@ -49,7 +49,7 @@ To complete the scenario, you need the following subscriptions and desktop tools
 Ideally, you have basic familiarity with each technology, but you can still complete the scenario if you're new to some of these technologies. Use the following content to get up to speed:
 
 * [Get started with SharePoint](https://support.office.com/article/Get-started-with-SharePoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261)
-* [PowerApps Guided Learning](../guided-learning/index.md)
+* [PowerApps Guided Learning](../../guided-learning/index.md)
 * [Microsoft Flow Guided Learning](https://docs.microsoft.com/flow/guided-learning/)
 * [Power BI Guided Learning](https://docs.microsoft.com/power-bi/guided-learning/)
 
