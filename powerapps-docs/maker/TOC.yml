@@ -1,5 +1,6 @@
 - name: Create apps
   href: index.md
+  expanded: true
   items:
     - name: Sign up - trial and paid # Move sign up files from canvas to maker directory
       href: ./canvas-apps/signup-for-powerapps.md

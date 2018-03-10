@@ -1,5 +1,5 @@
 - name: Administer PowerApps
-- href: index.md
+  href: index.md
 - name: Quickstarts
   items:
   - name: Admin center intro
