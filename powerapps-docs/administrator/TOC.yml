@@ -31,7 +31,7 @@
     href: export-import-packages.md
   - name: Regions overview
     href: regions-overview.md
-  - name: Identify PowerApps users in your org
+  - name: View active users in your org
     href: admin-view-user-licenses.md
   - name: Purchase PowerApps # moved from original get started location
     href: signup-for-powerapps-admin.md
