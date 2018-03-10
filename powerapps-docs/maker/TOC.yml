@@ -6,6 +6,8 @@
       href: ./canvas-apps/signup-for-powerapps.md
     - name: Sign up - community plan
       href: ./canvas-apps/dev-community-plan.md
+    - name: Trial plan
+      href: trial-plan.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
