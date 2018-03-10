@@ -1,8 +1,5 @@
 - name: Administer PowerApps
-- name: Overview
-  items:
-  - name: About PowerApps administration
-    href: index.md
+  href: index.md
 - name: Quickstarts
   items:
   - name: Admin center intro

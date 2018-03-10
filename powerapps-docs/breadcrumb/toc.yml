@@ -5,16 +5,3 @@
   - name: PowerApps
     tocHref: /powerapps/
     topicHref: /powerapps/
-    items:
-    - name: Run apps
-      tocHref: /powerapps/user/
-      topicHref: /powerapps/user/
-    - name: TEST
-      tocHref: /powerapps/maker/
-      topicHref: /powerapps/maker/
-    - name: Administer PowerApps
-      tocHref: /powerapps/administrator/
-      topicHref: /powerapps/administrator/
-    - name: Guided Learning
-      tocHref: /powerapps/guided-learning/
-      topicHref: /powerapps/guided-learning/
