@@ -3,7 +3,7 @@
   items:
   - name: About PowerApps administration
     href: index.md
-- name: Admin content (MVC folders for preview)
+- name: Quickstarts
   items:
   - name: Admin center intro
     href: introduction-to-the-admin-center.md

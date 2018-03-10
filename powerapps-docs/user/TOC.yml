@@ -1,4 +1,4 @@
-- name: Find and use apps
+- name: Find and run apps
 - name: Overview
   items:
   - name: About finding and using apps
