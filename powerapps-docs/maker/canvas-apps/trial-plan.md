@@ -59,5 +59,5 @@ If you still have access to PowerApps, you can continue to use it. Any data in t
 You can retain access to PowerApps and its features by following either of these steps:
 
 * When prompted, request to extend your trial for another 90 days.
-* Purchase a plan. You can view the available plans or visit the PowerApps pricing page. [Learn more](../administrator/signup-for-powerapps-admin.md) about how to purchase a plan.
+* Purchase a plan. You can view the available plans or visit the PowerApps pricing page. [Learn more](/administrator/signup-for-powerapps-admin.md) about how to purchase a plan.
 
