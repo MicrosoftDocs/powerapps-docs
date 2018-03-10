@@ -5,7 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: manasmamsft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
@@ -26,10 +26,10 @@ Sign up for the PowerApps Plan 2 Trial to get all functionality free for 90 days
   
     ![](./media/trial-plan/premium-connectors.png)
   
-    In the [complete list of connectors](../maker/canvas-apps/connections-list.md), premium connectors appear with a badge:
+    In the [complete list of connectors](connections-list.md), premium connectors appear with a badge:
   
     ![](./media/trial-plan/premium-badge.png)
-* **Access to the PowerApps admin center**, in which you can manage your environments, databases, user permissions, and data policies.  [Learn more](introduction-to-the-admin-center.md)
+* **Access to the PowerApps admin center**, in which you can manage your environments, databases, user permissions, and data policies.  [Learn more](../administrator/introduction-to-the-admin-center.md)
 
 For more information about additional functionality and capacity in the Plan 2 Trial, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
@@ -59,5 +59,5 @@ If you still have access to PowerApps, you can continue to use it. Any data in t
 You can retain access to PowerApps and its features by following either of these steps:
 
 * When prompted, request to extend your trial for another 90 days.
-* Purchase a plan. You can view the available plans or visit the PowerApps pricing page. [Learn more](signup-for-powerapps-admin.md) about how to purchase a plan.
+* Purchase a plan. You can view the available plans or visit the PowerApps pricing page. [Learn more](../administrators/signup-for-powerapps-admin.md) about how to purchase a plan.
 
