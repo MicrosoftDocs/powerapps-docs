@@ -9,7 +9,7 @@
     - name: Run apps
       tocHref: /powerapps/user/
       topicHref: /powerapps/user/
-    - name: TEST
+    - name: Create apps
       tocHref: /powerapps/maker/
       topicHref: /powerapps/maker/
     - name: Administer PowerApps
