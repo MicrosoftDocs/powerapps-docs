@@ -44,12 +44,12 @@ If you're not signed up for PowerApps, you can [sign up for free](https://web.po
 
 After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record.
 
-![Browse screen](./media/data-platform-create-app/browse screen.png)
+![Browse screen](./media/data-platform-create-app/browse-screen.png)
 
 To keep this app, save it by pressing Ctrl + S. Otherwise, press Ctrl + F4 (or open the **File** menu and then select **Close**).
 
 ## Next steps
-In this quickstart, you created an app to manage sample data in the Common Data Service for Apps. In this app, the browse screen shows a list of accounts, but you'll probably want to customize the list to show different types of data.
+In this quickstart, you created an app to manage sample data in the Common Data Service for Apps. By default, the browse screen shows a list of accounts, but you'll probably want to customize the list to show different types of data.
 
 > [!div class="nextstepaction"]
 > [Customize a gallery](customize-layout-sharepoint.md)
