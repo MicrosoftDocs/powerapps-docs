@@ -26,6 +26,8 @@ If you're not signed up for PowerApps, you can [sign up for free](https://web.po
 ## Generate an app
 1. Sign in to [PowerApps](https://web.powerapps.com).
 
+	![PowerApps home page](./media/data-platform-create-app/sign-in.png)
+
 1. Under **Make apps like these**, hover over **Start from data**, and then select **Make this app**.
 
 1. Under **Start with your data**, select the arrow that points to the right.
