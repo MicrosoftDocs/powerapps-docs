@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/13/2018
+ms.date: 03/05/2018
 ms.author: sharik
 
 ---
@@ -23,6 +23,10 @@ For information about known limitations, see [Common issues and resolutions](com
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
+
+## Mar. 5
+1. Add (and delete) [attachments](controls/control-attachments.md) to SharePoint lists.
+2. Open external [PDF](controls/control-pdf-viewer.md) files in a web browser. (Experimental feature)
 
 ## Feb. 12
 * The volume control for embedded [video](controls/control-audio-video.md) and [audio](controls/control-audio-video.md) playback is now inline. To mute playback, instead of clicking or tapping a button, users must now use the volume control to lower the volume.
@@ -51,7 +55,7 @@ For information about known limitations, see [Common issues and resolutions](com
 
 ## Nov. 13
 1. Select multiple values for the same field in SharePoint lists.
-2. [View and download attachment](controls/control-attachments.md) in SharePoint lists.
+2. [View and download attachments](controls/control-attachments.md) in SharePoint lists.
 3. [Customize SharePoint list forms](customize-list-form.md) using PowerApps.
 
 ## Nov. 10
@@ -61,13 +65,3 @@ For information about known limitations, see [Common issues and resolutions](com
 1. [Show all rules](working-with-rules.md) in an app, not just those for the selected control.
 2. Add icons that app creators requested the most.
 3. Improved performance of apps on Android and iOS devices.
-
-## Sept. 20
-1. After you [save an app](save-publish-app.md) for the first time, additional changes are saved every two minutes automatically by default.
-2. Easily [create rules](working-with-rules.md) for conditional formatting without writing expressions - just set your condition and then design the results right on the PowerApps canvas.
-3. More easily configure forms, galleries, and data tables with a full-height data pane that pops out when a control is added.
-4. Get contextual quick-tips to help you create an app, whether starting from a blank app, a template, a data source, or SharePoint.
-
-## Sept. 6
-1. For apps that you create, [track usage](../../administrator/app-analytics.md) in an embedded dashboard from Power BI.
-2. Use a delimiter to break a text string into parts by using the **[Split](functions/function-split.md)** function.
