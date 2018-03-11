@@ -30,33 +30,24 @@ If you're not signed up for PowerApps, you can [sign up for free](https://web.po
 
 1. Under **Make apps like these**, hover over **Start from data**, and then select **Make this app**.
 
+	![Option to create an app](./media/data-platform-create-app/sign-in.png)
+
 1. Under **Start with your data**, select the arrow that points to the right.
+
+	![Arrow icon](./media/data-platform-create-app/right-arrow.png)
 
 1. Under **Connections**, select your connection to the Common Data Service.
 
-1. Near the right edge, type **Accounts** in the search box. 
+1. Type **Accounts** in the search box (near the right edge), select **Accounts** under **Choose a table**, and then select **Connect**.
 
-1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
+	![Select an entity](./media/data-platform-create-app/select-entity.png)
 
-	After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record. In the next section, you'll customize this screen to make it easier to use.
-
-## Customize the browse screen
-1. Click or tap near the center of the list to select it.
-
-1. In the right-hand pane, select **Accounts** to open the **Data** pane.
-
-1. Under **Layout**, select the down arrow to show layout options, and then select the option that shows only a title.
-
-1. Select the first item in the list, and then select the down arrow in the **Data** pane to show a list of options for that element.
-
-1. In the list of options for the selected element, select **Account name (name)**.
-
-	The list shows the name of each account.
+	After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record.
 
 To keep this app, save it by pressing Ctrl + S. Otherwise, press Ctrl + F4 (or open the **File** menu and then select **Close**).
 
 ## Next steps
-In this quickstart, you created an app to manage sample data in an entity of a Common Data Service database. The first screen of the app contains a gallery, which you can customize to better suit your needs. 
+In this quickstart, you created an app to manage sample data in the Common Data Service for Apps. In this app, the browse screen shows a list of accounts, but you'll probably want to customize the list to show different types of data.
 
 > [!div class="nextstepaction"]
 > [Customize a gallery](customize-layout-sharepoint.md)
