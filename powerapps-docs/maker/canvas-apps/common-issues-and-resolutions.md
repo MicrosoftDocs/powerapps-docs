@@ -89,7 +89,7 @@ ms.author: sharik
 
 7. **Changing a Title field in an entity**
 
-    If you change the Title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](../../common-data-service/data-platform-entity-lookup.md).
+    If you change the Title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](../common-data-service/data-platform-entity-lookup.md).
 
 8. **Apps that connect to on-premises SharePoint**
 
