@@ -42,7 +42,9 @@ If you're not signed up for PowerApps, you can [sign up for free](https://web.po
 
 	![Select an entity](./media/data-platform-create-app/select-entity.png)
 
-	After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record.
+After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record.
+
+![Browse screen](./media/data-platform-create-app/browse screen.png)
 
 To keep this app, save it by pressing Ctrl + S. Otherwise, press Ctrl + F4 (or open the **File** menu and then select **Close**).
 
