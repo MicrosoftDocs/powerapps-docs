@@ -131,8 +131,10 @@ If your users might not have touch screens or mouse wheels, configure the **Gall
 
 1. On the **Gallery** tab, click or tap **Show scrollbar**, and confirm that the value of that property has changed to **true**. 
 
+	![Show scrollbar](./media/customize-layout-sharepoint/show-scrollbar.png)
+
 ## Next steps
-In this tutorial, you've customized the **Gallery** control and other controls on the default browse screen of a generated app. You can also customize the default screens for displaying details and creating or updating accounts. Those screens contain a **Display form** control and an **Edit form** control, and you can change (for example) which types of data they show and in which order.
+In this tutorial, you've customized the **Gallery** control and the title of the default browse screen of a generated app. You can also customize the default screens for displaying details and creating or updating accounts. Those screens contain a **Display form** control and an **Edit form** control, and you can change (for example) which types of data they show and in which order.
 
 > [!div class="nextstepaction"]
-> [Customize forms](customize-form-sharepoint.md)
+> [Customize forms](customize-forms-sharepoint.md)
