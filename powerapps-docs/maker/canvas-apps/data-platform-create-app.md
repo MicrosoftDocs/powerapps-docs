@@ -1,5 +1,5 @@
 ---
-title: Quickstart: Generate an app in PowerApps for the Common Data Service for Apps | Microsoft Docs
+title: Quickstart for generating an app in PowerApps for the Common Data Service for Apps | Microsoft Docs
 description: Automatically generate an app in PowerApps to manage data in the Common Data Service for Apps
 services: powerapps
 documentationcenter: na
@@ -17,7 +17,7 @@ ms.author: anneta
 ---
 # Quickstart: Generate an app in PowerApps for the Common Data Service for Apps
 
-In this quickstart, you'll use PowerApps to automatically generate your first app based on a database entity in the [Common Data Service with Apps](../common-data-service/data-platform-intro.md). You'll use the **Accounts** entity, and the app will contain three screens: one each for browsing accounts, showing details of an account, and creating or updating an account. The app will be designed for use on a mobile device, such as a phone, but you can use other methods to [create apps for use on tablets](data-platform-create-app-scratch.md) and other devices.
+In this quickstart, you'll use PowerApps to automatically generate your first app based on a list of sample accounts in the [Common Data Service with Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, shows details of a single account, and create, update, or delete an account.
 
 To follow this quickstart, you must create or switch to an [environment](working-with-environments.md) in which a database in the Common Data Service has been created and contains data.
 
@@ -32,11 +32,11 @@ If you're not signed up for PowerApps, you can [sign up for free](https://web.po
 
 1. Under **Start with your data**, select the arrow that points to the right.
 
-1. Under **Connections", select your connection to the Common Data Service.
+1. Under **Connections**, select your connection to the Common Data Service.
 
 1. Near the right edge, type **Accounts** in the search box. 
 
-1. Under **Choose a table**, select **Accounts**), and then select **Connect**.
+1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
 
 	After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record. In the next section, you'll customize this screen to make it easier to use.
 
