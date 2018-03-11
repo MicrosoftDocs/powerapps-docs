@@ -21,7 +21,7 @@ In this quickstart, you'll use PowerApps to automatically generate your first ap
 
 To follow this quickstart, you must switch to an [environment](working-with-environments.md) in which a database in the Common Data Service has been created and contains data. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
-If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com).
+If you don't have a license for PowerApps, you can [sign up for free](signup-for-powerapps.md).
 
 ## Generate an app
 1. Sign in to [PowerApps](https://web.powerapps.com).
@@ -46,7 +46,16 @@ After a few minutes, your app opens to the browse screen, which shows a list of 
 
 ![Browse screen](./media/data-platform-create-app/browse-screen.png)
 
-To save your work so far, press Ctrl + S. Otherwise, press Ctrl + F4 (or open the **File** menu and then select **Close**).
+## Save the app
+You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.
+
+1. Near the upper-left corner, click or tap the **File** tab.
+
+1. In the **App settings** page, set the app name to **AppGen**, change the background color to deep red, and change the icon to a checkmark.
+
+	![App settings page](./media/data-platform-create-app/app-settings.png)
+
+1. Near the left edge, click or tap **Save**.
 
 ## Next steps
 In this quickstart, you created an app to manage sample data about accounts in the Common Data Service for Apps. As a next step, you can configure the gallery on the browse screen to better suit your needs.
