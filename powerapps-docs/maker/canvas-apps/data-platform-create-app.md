@@ -19,7 +19,7 @@ ms.author: anneta
 
 In this quickstart, you'll use PowerApps to automatically generate your first app based on a list of sample accounts in the [Common Data Service with Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, shows details of a single account, and create, update, or delete an account.
 
-To follow this quickstart, you must create or switch to an [environment](working-with-environments.md) in which a database in the Common Data Service has been created and contains data.
+To follow this quickstart, you must switch to an [environment](working-with-environments.md) in which a database in the Common Data Service has been created and contains data. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
 If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com).
 
