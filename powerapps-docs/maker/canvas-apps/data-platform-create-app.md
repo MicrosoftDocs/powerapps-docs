@@ -17,7 +17,7 @@ ms.author: anneta
 ---
 # Quickstart: Generate an app in PowerApps for the Common Data Service for Apps
 
-In this quickstart, you'll use PowerApps to automatically generate your first app based on a list of sample accounts in the [Common Data Service with Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, shows details of a single account, and create, update, or delete an account.
+In this quickstart, you'll use PowerApps to automatically generate your first app based on a list of sample accounts in the [Common Data Service for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, shows details of a single account, and create, update, or delete an account.
 
 To follow this quickstart, you must switch to an [environment](working-with-environments.md) in which a database in the Common Data Service has been created and contains data. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
@@ -42,14 +42,14 @@ If you're not signed up for PowerApps, you can [sign up for free](https://web.po
 
 	![Select an entity](./media/data-platform-create-app/select-entity.png)
 
-After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record.
+After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record. By default, the list shows an image, an email address, a city, and an ID for that account, but you can customize the list, which is called a gallery, to show other types of data.
 
 ![Browse screen](./media/data-platform-create-app/browse-screen.png)
 
-To keep this app, save it by pressing Ctrl + S. Otherwise, press Ctrl + F4 (or open the **File** menu and then select **Close**).
+To save your work so far, press Ctrl + S. Otherwise, press Ctrl + F4 (or open the **File** menu and then select **Close**).
 
 ## Next steps
-In this quickstart, you created an app to manage sample data in the Common Data Service for Apps. By default, the browse screen shows a list of accounts, but you'll probably want to customize the list to show different types of data.
+In this quickstart, you created an app to manage sample data about accounts in the Common Data Service for Apps. As a next step, you can configure the gallery on the browse screen to better suit your needs.
 
 > [!div class="nextstepaction"]
 > [Customize a gallery](customize-layout-sharepoint.md)
