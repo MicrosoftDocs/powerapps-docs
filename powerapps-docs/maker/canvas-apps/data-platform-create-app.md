@@ -30,7 +30,7 @@ If you're not signed up for PowerApps, you can [sign up for free](https://web.po
 
 1. Under **Make apps like these**, hover over **Start from data**, and then select **Make this app**.
 
-	![Option to create an app](./media/data-platform-create-app/sign-in.png)
+	![Option to create an app](./media/data-platform-create-app/make-this-app.png)
 
 1. Under **Start with your data**, select the arrow that points to the right.
 
