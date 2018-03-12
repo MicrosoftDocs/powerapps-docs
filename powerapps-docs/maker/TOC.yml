@@ -3,18 +3,18 @@
   expanded: true
   items:
     - name: Sign up - trial and paid # Move sign up files from canvas to maker directory
-      href: ./canvas-apps/signup-for-powerapps.md
+      href: signup-for-powerapps.md
     - name: Sign up - community plan
-      href: ./canvas-apps/dev-community-plan.md
+      href: dev-community-plan.md
     - name: Trial plan
-      href: ./canvas-apps/trial-plan.md
+      href: trial-plan.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
   - name: Quickstarts
     items:
-    - name: Create from a sample app # I don't think we have this one yet
-      href: ./canvas-apps/_placeholder02.md
+    - name: Create from a sample app
+      href: ./canvas-apps/open-and-run-a-sample-app.md
     - name: Create from Excel data
       href: ./canvas-apps/get-started-create-from-data.md
     - name: Create from SharePoint data
@@ -57,16 +57,6 @@
         href: ./canvas-apps/dev-appsource-test-drive.md
   - name: How-to guides
     items:
-    - name: Run an existing app # Moved running apps and embedding in Teams to quickstarts
-      items:
-      - name: Open an app in SharePoint
-        href: ./canvas-apps/open-app-embedded-in-sharepoint.md
-      - name: Use a sample app
-        href: ./canvas-apps/open-and-run-a-sample-app.md
-      - name: Use a template
-        href: ./canvas-apps/get-started-test-drive.md
-      - name: Get more apps from AppSource
-        href: ./canvas-apps/app-source.md
     - name: Start with a SharePoint list # Moved SharePoint from PowerApps to quickstart
       items:
       - name: Create an app from SharePoint
@@ -91,6 +81,8 @@
         href: ./canvas-apps/working-with-formulas.md
       - name: Build an app from scratch
         href: ./canvas-apps/get-started-create-from-blank.md
+      - name: Use a template
+        href: ./canvas-apps/get-started-test-drive.md
     - name: Customize an app
       items:
       - name: Add and configure a control
