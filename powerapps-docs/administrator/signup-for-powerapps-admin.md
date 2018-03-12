@@ -90,7 +90,7 @@ These are coming soon but are not supported yet.
 
 ## See also
 [PowerApps in your organization Q&A](signup-question-and-answer.md)  
-[Self-service sign up for PowerApps](../canvas-apps/signup-for-powerapps.md)  
+[Self-service sign up for PowerApps](../maker/canvas-apps/signup-for-powerapps.md)  
 
 <!--Reference links in article-->
 [1]: http://go.microsoft.com/fwlink/p/?LinkId=715583

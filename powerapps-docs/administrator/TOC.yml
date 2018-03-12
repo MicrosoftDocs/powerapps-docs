@@ -1,46 +1,40 @@
-- name: Overview
-  href: index.yml
+- name: Administer PowerApps
+  href: index.md
+- name: Quickstarts
   items:
-  - name: About PowerApps administration
+  - name: Admin center intro
     href: introduction-to-the-admin-center.md
-- name: Admin content (MVC folders for preview)
-  items:
-  - name: Canvas apps
-    expanded: true
-    items:
-    - name: PowerApps in your organization Q&A
-      href: signup-question-and-answer.md
-    - name: Pricing information
-      href: pricing-billing-skus.md
-    - name: Trial plan 
-      href: trial-plan.md
-    - name: Environments overview
-      href: environments-overview.md
-    - name: Administer environments
-      href: environments-administration.md
-    - name: Set a policy to help prevent data loss
-      href: prevent-data-loss.md
-    - name: Introduction to data groups
-      href: introduction-to-data-groups.md
-    - name: Create a database
-      href: create-database.md
-    - name: Configure database security
-      href: database-security.md
-    - name: Move an app between tenants or environments
-      href: environment-and-tenant-migration.md
-    - name: Export and import resources
-      href: export-import-packages.md
-    - name: Regions overview
-      href: regions-overview.md
-    - name: Identify PowerApps users in your org
-      href: admin-view-user-licenses.md
-    - name: Purchase PowerApps # moved from original get started location
-      href: signup-for-powerapps-admin.md
-    - name: App analytics # not in TOC previously
-      href: app-analytics.md
-    - name: View apps in your org # not in TOC previously
-      href: admin-view-apps.md
-  - name: Model-driven apps (post-preview)
-    items:
-    - name: Model-driven admin
-      href: _placeholder02.md
+  - name: PowerApps in your organization Q&A
+    href: signup-question-and-answer.md
+  - name: Pricing information
+    href: pricing-billing-skus.md
+  - name: Trial plan
+    href: trial-plan.md
+  - name: Environments overview
+    href: environments-overview.md
+  - name: Administer environments
+    href: environments-administration.md
+  - name: Manage DLP policies
+    href: prevent-data-loss.md
+  - name: Introduction to data groups
+    href: introduction-to-data-groups.md
+  - name: Create a database
+    href: create-database.md
+  - name: Configure database security
+    href: database-security.md
+  - name: Move an app between tenants or environments
+    href: environment-and-tenant-migration.md
+  - name: Export and import resources
+    href: export-import-packages.md
+  - name: Regions overview
+    href: regions-overview.md
+  - name: Identify PowerApps users in your org
+    href: admin-view-user-licenses.md
+  - name: Purchase PowerApps # moved from original get started location
+    href: signup-for-powerapps-admin.md
+  - name: App analytics # not in TOC previously
+    href: app-analytics.md
+  - name: View apps in your org # not in TOC previously
+    href: admin-view-apps.md
+  - name: Create a DLP policy # not in TOC previously
+    href: create-dlp-policy.md

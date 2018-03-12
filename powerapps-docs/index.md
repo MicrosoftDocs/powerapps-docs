@@ -14,39 +14,20 @@ description: Microsoft PowerApps Documentation
                 <ul id="home">
                     <li>
                         <a href="#home-all"></a>
-                        <ul id="home-all" class="cardsM cols cols2">
+                        <ul id="home-all" class="cardsM cols cols3">
                             <li>
-                                <a href="./canvas-apps/index.yml">
+                                <a href="./user/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/hubs/powerbi/pbi-powerbi-logo.svg" alt="" />
+                                                        <img src="media/index/powerapps-logo.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>PowerApps for makers</h3>
-                                                    <p>PowerApps makers can...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                                                       <li>
-                                <a href="./guided-learning/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/hubs/powerbi/pbi-guided-learning.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Guided learning</h3>
-                                                    <p>Start your learning journey through PowerApps with this sequenced collection of courses.</p>
+                                                    <h3>Find and run apps</h3>
+                                                    <p>You can...</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -54,18 +35,18 @@ description: Microsoft PowerApps Documentation
                                 </a>
                             </li>
                             <li>
-                                <a href="./administrator/index.yml">
+                                <a href="./maker/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/hubs/powerbi/pbi-desktop.svg" alt="" />
+                                                        <img src="media/index/powerapps-logo.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>PowerApps for administrators</h3>
-                                                    <p>PowerApps administrators can...</p>
+                                                    <h3>Create apps</h3>
+                                                    <p>You can...</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,18 +54,18 @@ description: Microsoft PowerApps Documentation
                                 </a>
                             </li>
                             <li>
-                                <a href="./model-driven-apps/index.yml">
+                                <a href="./administrator/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/hubs/powerbi/pbi-developer.svg" alt="" />
+                                                        <img src="media/index/powerapps-logo.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>PowerApps for developers</h3>
-                                                    <p>PowerApps developers can...</p>
+                                                    <h3>Administer PowerApps</h3>
+                                                    <p>You can...</p>
                                                 </div>
                                             </div>
                                         </div>
