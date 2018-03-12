@@ -36,9 +36,15 @@ If you don't have a license for PowerApps, you can [sign up for free](signup-for
 
 1. Click or tap the phone icon to create a version of the app for mobile devices (or leave the tablet icon selected), and then click or tap **Make this app**.
 
-1. Click or tap **Make my own app**, specify the cloud-storage account where you want to store the fictitious data for this app, and then provide credentials for that account.
+1. In PowerApps Studio, click or tap **Make my own app** in the banner near the top-center of the screen.
+
+	![](./media/open-and-run-a-sample-app/banner.png)
+
+1. Specify the cloud-storage account where you want to store the fictitious data for this app, and then provide credentials for that account.
 
 1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).
+
+	![](./media/open-and-run-a-sample-app/open-preview.png)
 
 	Each sample represents a different scenario with a variety of screens and other controls. If you opened the Cost Estimator sample, you can use the default app to perform these tasks:
 
