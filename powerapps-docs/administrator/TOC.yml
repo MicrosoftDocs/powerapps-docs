@@ -1,9 +1,6 @@
 - name: Administer PowerApps
-- name: Overview
-  items:
-  - name: About PowerApps administration
-    href: index.md
-- name: Quickstarts
+  href: index.md
+- name: Concepts
   items:
   - name: Admin center intro
     href: introduction-to-the-admin-center.md
@@ -11,8 +8,6 @@
     href: signup-question-and-answer.md
   - name: Pricing information
     href: pricing-billing-skus.md
-  - name: Trial plan
-    href: trial-plan.md
   - name: Environments overview
     href: environments-overview.md
   - name: Administer environments

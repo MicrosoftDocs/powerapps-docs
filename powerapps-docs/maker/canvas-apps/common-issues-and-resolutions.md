@@ -5,7 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: skjerland
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,12 +14,16 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/24/2018
+ms.date: 03/05/2018
 ms.author: sharik
 
 ---
 # Common issues and resolutions for PowerApps
 ## Recently added/changed
+1. **Changing the layout of SharePoint forms**
+
+	While customizing a SharePoint list form in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
+
 1. **App won't work**
 
 	If an app you created stops working without warning, it might be because you haven't updated or re-published it in the last six months. To resolve this issue, update and/or re-publish your app to sync it with the latest version of PowerApps, and then make sure that you continue to update and/or re-publish the app within six months of last publishing it.

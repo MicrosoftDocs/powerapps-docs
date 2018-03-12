@@ -1,11 +1,11 @@
 ---
-title: Use a sample app | Microsoft Docs
-description: Step-by-step instructions for using a sample app in powerapps.com.
+title: Use a sample app (quickstart) | Microsoft Docs
+description: Step-by-step instructions for creating a canvas app based on a sample in PowerApps
 services: ''
 suite: powerapps
 documentationcenter: na
-author: linhtranms
-manager: anneta
+author: AFTOwen
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,82 +14,57 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/25/2016
-ms.author: litran
+ms.date: 03/11/2018
+ms.author: anneta
 
 ---
-# Use a sample app
-In [powerapps.com](http://web.powerapps.com), use a sample app to explore design possibilities and discover concepts that you can apply as you develop your own apps. Each sample app uses fictitious data to showcase a real-world scenario.
+# Quickstart: Create a canvas app from a sample in PowerApps
+In this quickstart, you'll create a canvas app from a sample so that you can explore design possibilities and discover concepts that you can apply as you develop your own canvas apps.
 
-![](./media/open-and-run-a-sample-app/portal-home.png)
+Each sample showcases a real-world scenario but uses fictitious data. To store this data, you'll need a cloud-storage account, such as Dropbox, Google Drive, or OneDrive.
 
-In **Cost Estimator**, for example, you can create an appointment for estimating the cost of installing a flooring product in a room of a particular size. Capture details such as address and square footage, and calculate the price based on discounts and tax rates. Filter a list of appointments to show those for which estimates have been created, for which estimates haven't been created, or all appointments.
+If you don't have a license for PowerApps, you can [sign up for free](signup-for-powerapps.md).
 
-## Open the app
-1. Sign in to [powerapps.com](https://web.powerapps.com), and then click or tap **Cost Estimator** in the list of sample apps.
+## Open a sample app
+1. Sign in to [PowerApps](https://web.powerapps.com).
 
-    ![](./media/open-and-run-a-sample-app/app-tile.png)
-2. Click or tap **Open for phone** to show the app as it would look on a phone, and then click or tap **Allow** to give consent to use your device's camera.
+	![](./media/open-and-run-a-sample-app/sign-in.png)
 
-    The app contains sample data for creating appointments and estimating the cost of installing a specific flooring product in a room of a particular size.
+1. In the list of sample apps, hover over a sample app (such as **Cost Estimator**) with your mouse.
 
-    ![](./media/open-and-run-a-sample-app/cost_estimator_home.png)
+	![](./media/open-and-run-a-sample-app/sample-tile.png)
 
-## Make and view an appointment
-1. Click or tap **+** to make an appointment for an estimate.
+1. Click or tap the phone icon to create a version of the app for mobile devices (or leave the tablet icon selected), and then click or tap **Make this app**.
 
-    ![](./media/open-and-run-a-sample-app/cost_estimator_add.png)
-2. Provide details, and then click or tap **Save job**.
+1. In PowerApps Studio, click or tap **Make my own app** in the banner near the top-center of the screen.
 
-    ![](./media/open-and-run-a-sample-app/cost_estimator_new.png)
+	![](./media/open-and-run-a-sample-app/banner.png)
 
-    The appointment that you created appears in the list of appointments.
+1. Specify the cloud-storage account where you want to store the fictitious data for this app, and then provide credentials for that account.
 
-    ![](./media/open-and-run-a-sample-app/new_job_added.png)
-3. Click or tap an appointment, such as the one you created, to view its details, including a map of the location. You can delete an appointment by clicking or tapping the trash-can icon in the upper-right corner.
+1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).
 
-    ![](./media/open-and-run-a-sample-app/job_details.png)
+	![](./media/open-and-run-a-sample-app/open-preview.png)
 
-## Create an estimate
-1. On the details page of an appointment, click or tap **Begin Estimate**.
+	Each sample represents a different scenario with a variety of screens and other controls. If you opened the Cost Estimator sample, you can use the default app to perform these tasks:
 
-    ![](./media/open-and-run-a-sample-app/begin_estimate.png)
-2. Provide required information about the room, such as its **Name**, **Length**, and **Width**, and then click or tap **Select flooring style**.
+	- Create an appointment for estimating the cost of installing a flooring product in a room of a particular size.
+	- Capture details such as address and square footage, and calculate the price based on discounts and tax rates.
+	- Filter a list of appointments to show those for which estimates have been created, for which estimates haven't been created, or all appointments.
+	
+1. When you finish exploring the app, close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-right corner, under the title bar for PowerApps).
 
-    ![](./media/open-and-run-a-sample-app/dimensions.png)
+## Save the app
+1. Near the upper-left corner, click or tap the **File** tab.
 
-    A list of categories for flooring products appears.
+1. In the **App settings** page, review the default settings.
 
-    ![](./media/open-and-run-a-sample-app/select_flooring_type.png)
-3. Click or tap **Carpet**, and then click or tap **Caserta Sky Grey**.
+	![](./media/open-and-run-a-sample-app/app-settings.png)
 
-    ![](./media/open-and-run-a-sample-app/carpet.png)
-4. If you're using the app on a device that has a camera, click or tap **Add photos**.
+1. Near the left edge, click or tap **Save**. 
 
-    ![](./media/open-and-run-a-sample-app/add_photos.png)
-5. Take one or more photos, and then click or tap **Done**.
+## Next steps
+In this quickstart, you created your own app based on a sample that uses fictitious data stored in your cloud account. For more help learning how to create an app, you can also automatically generate an app based on data in other sources such as the Common Data Service for Apps, SharePoint, or Excel.
 
-    ![](./media/open-and-run-a-sample-app/take_photos.png)
-
-## Finish and submit an estimate
-1. Click or tap **Review Estimate**.
-
-    ![](./media/open-and-run-a-sample-app/review_estimate.png)
-2. (optional) Specify a **Price adjustment** and a **Tax** rate.
-3. Add a signature, and then click or tap **Submit estimate**.
-
-    ![](./media/open-and-run-a-sample-app/submit_estimate.png)
-
-    If your browser settings allow, your default mail client opens with a message that contains the estimate information.
-
-    ![](./media/open-and-run-a-sample-app/email.png)
-
-    In PowerApps, the screen indicates that an estimate has been sent.
-
-    ![](./media/open-and-run-a-sample-app/done.png)
-4. Click or tap **Done** to return to the list of appointments.
-
-    The appointment for the estimate that you just completed appears in green, which indicates that it's closed.
-
-    ![](./media/open-and-run-a-sample-app/estimate_done.png)
-5. (optional) Click or tap the filter icon in the upper-left corner, and then filter the list by status (open or closed) or show all appointments.
+> [!div class="nextstepaction"]
+> [Generate an app](data-platform-create-app.md)
