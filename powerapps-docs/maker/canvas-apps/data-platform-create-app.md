@@ -21,7 +21,7 @@ In this quickstart, you'll use PowerApps to automatically generate your first ap
 
 To follow this quickstart, you must switch to an [environment](working-with-environments.md) in which a database in the Common Data Service has been created and contains data. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
-If you don't have a license for PowerApps, you can [sign up for free](signup-for-powerapps.md).
+If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Generate an app
 1. Sign in to [PowerApps](https://web.powerapps.com).
