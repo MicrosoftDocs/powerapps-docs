@@ -1,6 +1,6 @@
 ---
-title: Use Web Services with model apps | Microsoft Docs
-description: Learn how developers can use web services with model apps.
+title: Use Common Data Service for Apps Web Services| Microsoft Docs
+description: Learn how developers can use Common Data Service for Apps web services.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -17,7 +17,7 @@ ms.date: 02/26/2018
 ms.author: jdaly
 ---
 
-# Use Web Services with model apps
+# Use Common Data Service for Apps Web Services
 
 The Common Data Service for Apps provides two web services you can use to interact with data. Choose the one which best matches the requirement and your skills. More information: [Developer Guide: Choose your development style for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/choose-development-style)
 
