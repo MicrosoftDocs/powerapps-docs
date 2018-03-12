@@ -1,9 +1,4 @@
-- name: Model-driven apps
-  href: index.yml
-  items:
-  - name: About model-driven apps
-    href: _placeholder01.md
-  - name: Model-driven apps for developers
-    href: model-apps-developers.md
-  - name: Understand what developers can do with model apps
-    href: what-developers-can-do-with-model-apps.md 
+- name: Model-driven apps for developers
+  href: model-apps-developers.md
+- name: Understand what developers can do with model apps
+  href: what-developers-can-do-with-model-apps.md 
