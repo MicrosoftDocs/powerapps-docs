@@ -238,7 +238,7 @@
       - name: Entity Relationships Data Model
         href: ../common-data-service/data-model-relationships.md
       - name: Entity Reference
-        href: ../common-data-service/reference/entities
+        href: ../common-data-service/reference/entities/toc.yml
     - name: Apply Business Logic with code
       href: ../common-data-service/apply-business-logic-with-code.md
     - name: Use Common Data Service for Apps Web Services
