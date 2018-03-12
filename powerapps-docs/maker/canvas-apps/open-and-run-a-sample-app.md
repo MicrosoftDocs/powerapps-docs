@@ -21,12 +21,12 @@ ms.author: anneta
 # Quickstart: Create a canvas app from a sample in PowerApps
 In this quickstart, you'll create a canvas app from a sample so that you can explore design possibilities and discover concepts that you can apply as you develop your own canvas apps.
 
-Each sample showcases a real-world scenario but uses fictitious data. To store this fictitious data, you'll need a cloud-storage account, such as Dropbox, Google Drive, or OneDrive.
+Each sample showcases a real-world scenario but uses fictitious data. To store this data, you'll need a cloud-storage account, such as Dropbox, Google Drive, or OneDrive.
 
 If you don't have a license for PowerApps, you can [sign up for free](signup-for-powerapps.md).
 
 ## Open a sample app
-1. Sign in to [powerapps.com](https://web.powerapps.com).
+1. Sign in to [PowerApps](https://web.powerapps.com).
 
 	![](./media/open-and-run-a-sample-app/sign-in.png)
 
