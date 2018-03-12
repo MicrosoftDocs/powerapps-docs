@@ -229,7 +229,7 @@
     - name: Introduction to solutions
       href: ../common-data-service/introduction-solutions.md
     - name: Common Data Service for Apps Data Model
-      href: ../common-data-service/introduction-solutions.md
+      href: ../common-data-service/data-model.md
       items: 
       - name: Entity data model
         href: ../common-data-service/data-model-entities.md
