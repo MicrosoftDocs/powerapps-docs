@@ -1,5 +1,5 @@
 ---
-title: Create an app in PowerApps for the Common Data Service for Apps | Microsoft Docs
+title: Quickstart for generating an app in PowerApps for the Common Data Service for Apps | Microsoft Docs
 description: Automatically generate an app in PowerApps to manage data in the Common Data Service for Apps
 services: powerapps
 documentationcenter: na
@@ -11,46 +11,54 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/22/2018
+ms.date: 03/10/2018
 ms.author: anneta
 
 ---
-# Quickstart: Create an app in PowerApps for the Common Data Service for Apps
+# Quickstart: Generate an app in PowerApps for the Common Data Service for Apps
 
-This quickstart shows how to automatically create your first app using a Common Data Service database within PowerApps. In this article, you select an entity, create an app, and then see what you created. Every generated app automatically includes screens to browse records, show record details, and create or update records. This is a quick way to get a working app using the Common Data Service. You can also customize the app.
+In this quickstart, you'll use PowerApps to automatically generate your first app based on a list of sample accounts in the [Common Data Service for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, shows details of a single account, and create, update, or delete an account.
 
-This app can access data in a standard entity, which is built in, or in a custom entity, which you or someone in your organization creates. [Understand entities](../common-data-service/data-platform-intro.md) is a good resource to get acquainted with the Common Data Service.
+To follow this quickstart, you must switch to an [environment](working-with-environments.md) in which a database in the Common Data Service has been created and contains data. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
-To follow this quickstart, you must create or switch to an environment in which a [database in the Common Data Service](../../administrator/create-database.md) has been created and contains sample data.
+If you don't have a license for PowerApps, you can [sign up for free](signup-for-powerapps.md).
 
-If you're not signed up for PowerApps, you can [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=).
+## Generate an app
+1. Sign in to [PowerApps](https://web.powerapps.com).
 
-## Sign in to PowerApps
+	![PowerApps home page](./media/data-platform-create-app/sign-in.png)
 
-Sign in to [PowerApps](https://web.powerapps.com). 
+1. Under **Make apps like these**, hover over **Start from data**, and then select **Make this app**.
 
-## Choose an entity
+	![Option to create an app](./media/data-platform-create-app/make-this-app.png)
 
-1. In the left menu, select **Apps**, and then select **Create an app**.
+1. Under **Start with your data**, select the arrow that points to the right.
 
-2. Under **Start with your data**, select **Common Data Service**. You may be asked to **Create**.
+	![Arrow icon](./media/data-platform-create-app/right-arrow.png)
 
-3. Under **Choose an entity** select an entity (such as **Account**), and then select **Connect**.
+1. Under **Connections**, select your connection to the Common Data Service.
 
-	Your app may take a few minutes to create.
+1. Type **Accounts** in the search box (near the right edge), select **Accounts** under **Choose a table**, and then select **Connect**.
 
-    ![Select the Account entity](./media/data-platform-create-app/cds-choose-entity-connect.png)
+	![Select an entity](./media/data-platform-create-app/select-entity.png)
 
-## View your app   
-In PowerApps Studio, select **See a preview of this app**. Play the app. Select the different accounts, and use the arrows to navigate within your app. You can also sort the list and add items to it.
+After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record. By default, the list shows an image, an email address, a city, and an ID for that account, but you can customize the list, which is called a gallery, to show other types of data.
 
-![Preview your app](./media/data-platform-create-app/cds-database-app.png)
+![Browse screen](./media/data-platform-create-app/browse-screen.png)
 
-## Clean up your resources
-To keep this app, save it by pressing Ctrl + S. Otherwise, press Ctrl + F4 (or open the **File** menu and then select **Close**).
+## Save the app
+You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.
+
+1. Near the upper-left corner, click or tap the **File** tab.
+
+1. In the **App settings** page, set the app name to **AppGen**, change the background color to deep red, and change the icon to a checkmark.
+
+	![App settings page](./media/data-platform-create-app/app-settings.png)
+
+1. Near the left edge, click or tap **Save**.
 
 ## Next steps
-In this quickstart, you created an app to manage sample data in an entity of a Common Data Service database. The first screen of the app contains a gallery, which you can customize to better suit your needs. 
+In this quickstart, you created an app to manage sample data about accounts in the Common Data Service for Apps. As a next step, you can configure the gallery on the browse screen to better suit your needs.
 
 > [!div class="nextstepaction"]
 > [Customize a gallery](customize-layout-sharepoint.md)
