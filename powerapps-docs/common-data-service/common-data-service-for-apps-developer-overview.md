@@ -1,6 +1,6 @@
 ---
-title: Model apps for developers| Microsoft Docs
-description: Learn how developers can add value to model apps.
+title: Common Data Service for Apps Developer Overview | Microsoft Docs
+description: Learn how developers can add value using the Common Data Service for apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -13,11 +13,11 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/20/2018
+ms.date: 03/11/2018
 ms.author: jdaly
 ---
-# Introduction to model apps for developers
-PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are model apps built using the new Common Data Service for Apps. The Common Data Service for Apps now contains the core functionality of the Dynamics 365 Customer Engagement  applications. With model apps, you can build apps that use the same extensibility capabilities as those applications or extend those applications.
+# Common Data Service for Apps Developer Overview
+PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the new Common Data Service for Apps. The Common Data Service for Apps now contains the core functionality of the Dynamics 365 Customer Engagement platform.
 
 ## Get a developer instance
 The first thing to do is get an environment you can experiment with as you learn.
@@ -27,13 +27,13 @@ The first thing to do is get an environment you can experiment with as you learn
 - TODO: Describe next steps to get set up for full ISV licensing
 
 ## Get Started
-If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience building model apps. There are some new designers available to you, but generally the concepts are the same.
+If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience to customize and extend the Common Data Service for Apps.
 
-If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working with model apps.
-- [Understand what developers can do with model apps](what-developers-can-do-with-model-apps.md)
-- [Introduction to solutions](introduction-solutions.md)
-- [Apply Business Logic with code](apply-business-logic-with-code.md)
-- [Use Web Services](use-web-services.md)
+If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working the Common Data Service for apps.
+
+> [!NOTE]
+> Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps for developers](../model-driven-apps/model-driven-apps-developer-overview.md)
+> Content in this section will refer only to extensions developers can do at the service level. 
 
 > [!NOTE]
 > Because the Common Data Service for Apps in this preview release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
@@ -41,7 +41,7 @@ If you are new to the Dynamics 365 Customer Engagement applications, the followi
 
 ## Tools and resources for developers
 
-Developers will use the following tools and resources when working with model apps.
+Developers will use the following tools and resources when working with solutions using the common data service for apps.
 
 ### Tools available for download from NuGet
 
@@ -138,34 +138,25 @@ More information: [Developer Guide: Extend Dynamics 365 Customer Engagement for 
 
 
 
-### Community Tools
+### Community Tools for Common Data Service for apps
 
 The Dynamics 365 community creates tools! Many of the most popular ones are distributed via in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service for Apps, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
 
-The following is a selected list of community tools distributed via the XrmToolBox
+The following is a selected list of community tools distributed via the XrmToolBox that you can use with the Common Data Service for Apps.
 
 |Tool  |Description  |
 |---------|---------|
 |[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)|Used to rename/delete/or change the type of an attribute.|
 |[Early Bound Generator](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGenerator/)|Generates Early Bound Entities/Option Sets/Actions. Uses CrmSvcUtil from the SDK, and shows command line used to create the classes.|
-|[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/)|Exports and Imports translations with contextual information|
 |[Export to Excel](https://www.xrmtoolbox.com/plugins/Ryr.XrmToolBox.ExportToExcel/)|Easily export records from the selected view/fetchxml to Excel.|
 |[FetchXML Builder](https://www.xrmtoolbox.com/plugins/Cinteros.Xrm.FetchXmlBuilder/)|Create and test FetchXml Queries|
-|[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)|Manage custom entities icons in a single screen|
 |[Metadata Browser](https://www.xrmtoolbox.com/plugins/MsCrmTools.MetadataBrowser/)|Browse metadata from your Dynamics CRM organization|
 |[Plugin Trace Viewer](https://www.xrmtoolbox.com/plugins/Cinteros.XrmToolBox.PluginTraceViewer/)|Investigate the Plug-in Trace Log with easy filtering and display possibilities|
-|[Ribbon Workbench 2016](https://www.xrmtoolbox.com/plugins/RibbonWorkbench2016/)|Edit the Dynamics CRM Ribbon or Command Bar from inside the XrmToolbox|
 |[User Settings Utility](https://www.xrmtoolbox.com/plugins/MsCrmTools.UserSettingsUtility/)|Manage users personal settings in bulk|
-|[View Designer](https://www.xrmtoolbox.com/plugins/Cinteros.XrmToolBox.ViewDesigner/)|Easy UI to design view layouts and alter queries using FetchXML Builder|
-|[View Layout Replicator](https://www.xrmtoolbox.com/plugins/MsCrmTools.ViewLayoutReplicator/)|Apply same layout to multiple views of the same entity in a single operation|
-|[WebResources Manager](https://www.xrmtoolbox.com/plugins/MsCrmTools.WebResourcesManager/)|Manage your web resources easily|
+
 
 Another tool that is not distributed via the XrmToolBox is Jason Lattimer's [CRM REST Builder](https://github.com/jlattimer/CRMRESTBuilder). This tool generates JavaScript code for use with the Web API.
 
 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
-
-
-
-

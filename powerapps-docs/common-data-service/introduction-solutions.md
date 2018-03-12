@@ -19,7 +19,9 @@ ms.author: jdaly
 # Introduction to solutions
 
 *Solutions* are how customizers and developers author, package, and maintain units of software that extend the Common Data Service for Apps. Customizers and developers distribute solutions so that organizations can use the Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
+
 Every customization that you make to the Common Data Service for Apps is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
+
 If you intend to transport customizations or extensions between different Common Data Service for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
 
 ## Unmanaged and managed solutions
@@ -56,6 +58,47 @@ Your choice of solution publisher is important in case you want to publish an up
 
 More information: [Developer Guide: Maintain managed solutions > Create managed solution updates](/dynamics365/customer-engagement/developer/maintain-managed-solutions#create-managed-solution-updates)
 
+## Create a solution publisher and solution 
+
+To create a  solution publisher and a solution you need to navigate to the Dynamics 365 Customization area.
+
+From [powerapps.com](https://web.powerapps.com)
+
+1. Select the *Waffle* icon at the top left corner
+2. In the fly out, select **All apps**.
+3. Look for the **Dynamics 365 - custom app**.
+ You may want to click the elipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
+4. Click the **Dynamics 365 - custom app** and select it.
+5. Navigate to **Settings** > **Customization** > **Customizations**.
+
+From [home.dynamics.com](http://home.dynamics.com/)
+
+1. Look for the **Dynamics 365 - custom** tile and click it.
+2. Navigate to **Settings** > **Customization** > **Customizations**.
+
+### Create a solution publisher
+
+1. From the customizations area, select **Publishers**.
+2. Click **New**.
+3. In the publisher form enter a **Display Name**. A **Name** value will be generated based on the display name. You can accept the generated value or specify a new one.
+4. In the **prefix** field, specify the customization prefix that should be appended to any custom schema items you add when developing your solution. The default value is `new`. Choose a value that represents your organization and will help people identify which components installed in their system came from your solution.
+5. An **Option Value Prefix** value will be generated based on your choice for customization prefix. This is a value that will be appended to any values for option set options you add to attributes in your solution. This value will help identify any options you add to your solution.
+6. In the **Contact Details** section of the form, you may add any contact information you want to provide for people who install your solution.
+7. Click **Save and Close** when you are done.
+
+### Create a solution
+
+1. From the customizations area, select **Solutions**.
+2. Click **New**.
+3. In the solution form enter a **Display Name**. A **Name** value will be generated based on the display name. You can accept the generated value or specify a new one.
+4. In the **Publisher** field look up the publisher you created in [Create a solution publisher](#create-a-solution-publisher)
+5. In the **Version** field select an appropriate version for your solution, such as 1.0.0.0.
+6. Click **Save** when you are done.
+
+> [!IMPORTANT]
+> Whenever you create a new solution component that will be included in this solution, use this solution, or another solution associated with the same solution publisher to add it.
+> Solution components created in the context of a solution associated to a different solution publisher can be added to this solution, but they may have inconsistent customization prefix values set.
+
 ## Solution layering
 
 It is possible for two managed solutions to be installed which contradict each other or for some customizations applied to the environment to override a managed solution. How does this work?
@@ -63,8 +106,8 @@ It is possible for two managed solutions to be installed which contradict each o
 It works because Common Data Service for Apps evaluates managed solutions by the order in which they are installed and any customizations that are not in a managed solution are evaluated last.
 
 The following diagram introduces how managed solutions and unmanaged customizations interact to control what is included at runtime in the application.
-<!-- TODO: update this diagram with a modern look -->
-![Diagram showing solution layering](media/dev-model-apps/solution-layering.png)
+
+![Diagram showing solution layering](media/solution-layering.png)
 
 In this example, default behavior defined in the system solution is overridden or appended by managed solutions. Any unmanaged customizations can then override or append customizations that are then visible in the application.
 
@@ -103,3 +146,7 @@ A solution file is a single binary file that does not lend itself to source code
 The *SolutionPackager* tool resolves the problem of source code control and team development of solution files. The tool identifies individual components in the compressed solution file and extracts them out to individual files. The tool can also re-create a solution file by packing the files that had been previously extracted. This enables multiple people to work independently on a single solution and extract their changes into a common location. Because each component in the solution file is broken into multiple files, it becomes possible to merge customizations without overwriting prior changes. A secondary use of the SolutionPackager tool is that it can be invoked from an automated build process to generate a compressed solution file from previously extracted component files without needing an active Dynamics 365 instance.
 
 More information: [Developer Guide: Solution tools for team development](/dynamics365/customer-engagement/developer/solution-tools-team-development)
+
+### See also
+
+[Common Data Service for Apps Developer Overview](common-data-service-for-apps-developer-overview.md)
