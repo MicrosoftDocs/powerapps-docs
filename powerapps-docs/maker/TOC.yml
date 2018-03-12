@@ -224,20 +224,20 @@
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
   - name: Developer Overview
-    href: ./common-data-service/common-data-service-for-apps-developer-overview.md
+    href: ../common-data-service/common-data-service-for-apps-developer-overview.md
     items:
     - name: Introduction to solutions
-      href: ./common-data-service/introduction-solutions.md
+      href: ../common-data-service/introduction-solutions.md
     - name: Common Data Service for Apps Data Model
-      href: ./common-data-service/introduction-solutions.md
+      href: ../common-data-service/introduction-solutions.md
       items: 
       - name: Entity data model
-        href: ./common-data-service/data-model-entities.md
+        href: ../common-data-service/data-model-entities.md
       - name: Attribute data model
-        href: ./common-data-service/data-model-attributes.md
+        href: ../common-data-service/data-model-attributes.md
       - name: Entity Relationships Data Model
-        href: ./common-data-service/data-model-relationships.md
+        href: ../common-data-service/data-model-relationships.md
     - name: Apply Business Logic with code
-      href: ./common-data-service/apply-business-logic-with-code.md
+      href: ../common-data-service/apply-business-logic-with-code.md
     - name: Use Common Data Service for Apps Web Services
-      href: ./common-data-service/use-web-services.md                   
+      href: ../common-data-service/use-web-services.md                   
