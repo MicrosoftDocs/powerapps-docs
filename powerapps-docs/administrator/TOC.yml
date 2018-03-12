@@ -38,5 +38,5 @@
     href: environment-and-tenant-migration.md
   - name: Export and import resources
     href: export-import-packages.md
-  - name: App analytics # not in TOC previously
+  - name: View app analytics reports # not in TOC previously
     href: app-analytics.md
