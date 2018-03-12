@@ -19,12 +19,6 @@ ms.author: jdaly
 # Common Data Service for Apps Developer Overview
 PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the new Common Data Service for Apps. The Common Data Service for Apps now contains the core functionality of the Dynamics 365 Customer Engagement platform.
 
-## Get a developer instance
-The first thing to do is get an environment you can experiment with as you learn.
-
-- TODO: Link to how to get an instance
-- TODO: Describe the developer licence
-- TODO: Describe next steps to get set up for full ISV licensing
 
 ## Get Started
 If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience to customize and extend the Common Data Service for Apps.
@@ -35,8 +29,16 @@ If you are new to the Dynamics 365 Customer Engagement applications, the followi
 > Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps for developers](../model-driven-apps/model-driven-apps-developer-overview.md)
 > Content in this section will refer only to extensions developers can do at the service level. 
 
+- [Introduction to solutions](introduction-solutions.md)
+- [Common Data Service for Apps Data Model](data-model.md)
+    - [Entity data model](data-model-entities.md)
+    - [Attribute data model](data-model-attributes.md)
+    - [Entity Relationships Data Model](data-model-relationships.md)
+- [Apply Business Logic with code](apply-business-logic-with-code.md)
+- [Use Common Data Service for Apps Web Services](use-web-services.md)
+
 > [!NOTE]
-> Because the Common Data Service for Apps in this preview release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
+> Because the Common Data Service for Apps in this release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
 
 
 ## Tools and resources for developers
