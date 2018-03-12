@@ -16,8 +16,6 @@ ms.workload: na
 ms.date: 10/20/2017
 ms.author: kfend
 
-<-- Clay testing -->
-
 ---
 # Understand entities in the Common Data Service
 
