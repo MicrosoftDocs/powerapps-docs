@@ -2,9 +2,9 @@
   href: index.md
   expanded: true
   items:
-    - name: Sign up - trial and paid # Move sign up files from canvas to maker directory
+    - name: Sign up for a 30-day trial version
       href: signup-for-powerapps.md
-    - name: Sign up - community plan
+    - name: Sign up for the PowerApps Community Plan
       href: dev-community-plan.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
