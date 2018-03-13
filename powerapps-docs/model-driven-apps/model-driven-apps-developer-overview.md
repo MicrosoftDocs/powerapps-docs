@@ -17,14 +17,10 @@ ms.date: 03/11/2018
 ms.author: jdaly
 ---
 # Model-driven apps Developer Overview
+
 PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are model-driven apps built using the new Common Data Service for Apps. The Common Data Service for Apps now contains the core functionality of the Dynamics 365 Customer Engagement  applications. With model-driven apps, you can build apps that use the same extensibility capabilities as those applications.
 
-## Get a developer instance
-The first thing to do is get an environment you can experiment with as you learn.
-
-- TODO: Link to how to get an instance
-- TODO: Describe the developer licence
-- TODO: Describe next steps to get set up for full ISV licensing
+Model-driven apps are primarly a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code begin with learning how to build a model-driven app. 
 
 ## Get Started
 If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience building model-driven apps. There are some new designers available to you, but generally the concepts are the same.
@@ -35,7 +31,7 @@ If you are already experienced with the Dynamics 365 Customer Engagement apps, y
 
 If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help developers get started working with model-driven apps.
  
-- TODO
+- [Overview of building a model-driven app](model-driven-app-overview.md)
 
 
 
