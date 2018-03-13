@@ -1,5 +1,5 @@
 ---
-title: Quickstart for generating an app in PowerApps for the Common Data Service for Apps | Microsoft Docs
+title: Generate an app in PowerApps for the Common Data Service for Apps (quickstart)| Microsoft Docs
 description: Automatically generate an app in PowerApps to manage data in the Common Data Service for Apps
 services: powerapps
 documentationcenter: na
@@ -15,9 +15,9 @@ ms.date: 03/10/2018
 ms.author: anneta
 
 ---
-# Quickstart: Generate an app in PowerApps for the Common Data Service for Apps
+# Quickstart for generating an app in PowerApps for the Common Data Service for Apps
 
-In this quickstart, you'll use PowerApps to automatically generate your first app based on a list of sample accounts in the [Common Data Service for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, shows details of a single account, and create, update, or delete an account.
+In this quickstart, you'll use PowerApps to automatically generate your first app based on a list of sample accounts in the [Common Data Service for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
 To follow this quickstart, you must switch to an [environment](working-with-environments.md) in which a database in the Common Data Service has been created and contains data. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
@@ -42,7 +42,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 	![Select an entity](./media/data-platform-create-app/select-entity.png)
 
-After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating a record. By default, the list shows an image, an email address, a city, and an ID for that account, but you can customize the list, which is called a gallery, to show other types of data.
+After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating an account. By default, the list shows an image, an email address, a city, and an ID for that account, but you can customize the list, which is called a gallery, to show other types of data.
 
 ![Browse screen](./media/data-platform-create-app/browse-screen.png)
 
@@ -58,7 +58,7 @@ You'll probably want to make more changes before you use this app or share it wi
 1. Near the left edge, click or tap **Save**.
 
 ## Next steps
-In this quickstart, you created an app to manage sample data about accounts in the Common Data Service for Apps. As a next step, you can configure the gallery on the browse screen to better suit your needs.
+In this quickstart, you created an app to manage sample data about accounts in the Common Data Service for Apps. As a next step, customize the default browse screen to better suit your needs.
 
 > [!div class="nextstepaction"]
-> [Customize a gallery](customize-layout-sharepoint.md)
+> [Customize a default browse screen](customize-layout-sharepoint.md)
