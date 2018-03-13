@@ -44,7 +44,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. Under **Connect to a SharePoint site**, type or paste the URL for your SharePoint Online site, and then select **Go**.
 
-    For example, specify something like this example:<br>`https://microsoft.sharepoint.com/teams/TeamName`
+    Include only the site URL (not the name of the list), as in this example:<br>`https://microsoft.sharepoint.com/teams/Contoso`
 
 1. Under **Choose a list**, select **SimpleApp**, and then select **Connect**.
 
