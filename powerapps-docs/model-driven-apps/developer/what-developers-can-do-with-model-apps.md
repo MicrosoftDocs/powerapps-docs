@@ -27,14 +27,14 @@ If you are an ISV, you can sell the model-driven applications you create using [
 Your apps will be distributed as solutions or as packages containing one or more solutions and other assets. If your app requires multiple solutions or other assets, you will use the *Package Deployer* to create an installable package containing your application so that it can be deployed to the customers environment when they want to try or buy your application.
 
 More information: 
-- [Introduction to solutions](../common-data-service/introduction-solutions.md)
+- [Introduction to solutions](../../common-data-service/developer/introduction-solutions.md)
 - [Publish your app on AppSource](/dynamics365/customer-engagement/developer/publish-app-appsource)
 
 ## Achieve many requirements without code
 
 The PowerApps platform is designed so that people with a wide range of skills can extend it to build functionality that they need. This allows for rapid application development to meet the needs for change as the business requirements change.
 
-![Diagram showing simple to sophisticated extensions](media/dev-model-apps/simple-to-sophisticated.png)
+![Diagram showing simple to sophisticated extensions](../media/dev-model-apps/simple-to-sophisticated.png)
 
 This diagram illustrates how the combination of canvas and model apps can be used together by people with a wide range of skills.
 
@@ -50,7 +50,7 @@ Model apps provide designers to achieve the following:
 |---------|---------|
 |Schema modification|You will usually use the PowerApps Portal or solution explorer tools to create entities to store data. Use these same tools to create attributes on entities and relationships between them.<br />More information:<br />TODO: [Add link to PowerApps portal doc on schema customization]<br />[Customization Guide: Customize entities, relationships, and fields](/dynamics365/customer-engagement/customize/customize-entities-relationships-fields)<br /><br />There are also a complete set of metadata APIs that allow you to perform the same operations with code if you need to.|
 |Security Model|An extensible security model protects the data model to apply role, record and field level, as well as hierarchical security. All other aspects of the Common Data Service for Apps platform and user experience are driven by the data and security model. In this way, users only see and have access to the data and actions they need. <br />More information: <br />[Administrator Guide: Manage security, users, and teams](/dynamics365/customer-engagement/admin/manage-security-users-and-teams)<br />[Customization Guide: Manage access to apps by using security roles](/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)<br />[Developer Guide: Security model of Customer Engagement](/dynamics365/customer-engagement/developer/security-dev/security-model)|
-|Business logic|There are several different kinds of process designers that can apply business logic both on the server and on the client.<br />One of these options is *custom actions* which creates a new message you can use with code.<br />More information:  [Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)<br /><br />If the designers cannot meet your requirement, as a developer you have other options. <br />More Information: <br />[Apply Business Logic with code](../common-data-service/apply-business-logic-with-code.md)|
+|Business logic|There are several different kinds of process designers that can apply business logic both on the server and on the client.<br />One of these options is *custom actions* which creates a new message you can use with code.<br />More information:  [Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)<br /><br />If the designers cannot meet your requirement, as a developer you have other options. <br />More Information: <br />[Apply Business Logic with code](../../common-data-service/developer/apply-business-logic-with-code.md)|
 |Custom app experiences|Model apps are experiences that are tailored for specific groups of users. You create them using the app designer. With an app, you define which entities are included in the app together with specific dashboards, forms, views, charts and business processes. Each app contains a subset of the available entities and can be further limited to only be available to members of security roles you define. If a user participates in multiple roles within an organization, they can choose to run the app which is tailored for the work they are doing.<br />More information: [Customization Guide: Design custom business apps by using the app designer](/dynamics365/customer-engagement/customize/design-custom-business-apps-using-app-designer)|
 |Custom themes, forms, charts, and dashboards|Use designers to apply all the changes to the way the application looks and the assets available for users to work with. <br />More information in the [Customization Guide](/dynamics365/customer-engagement/customize/): <br />[Create a theme](/dynamics365/customer-engagement/customize/change-color-scheme-add-logo-match-organizations-brand)<br />[Create and design forms](/dynamics365/customer-engagement/customize/create-design-forms)<br />[Understand views (lists)](/dynamics365/customer-engagement/customize/create-edit-views)<br />[Create or edit dashboards](/dynamics365/customer-engagement/customize/create-edit-dashboards)<br />[Create or edit a system chart](/dynamics365/customer-engagement/customize/create-edit-system-chart)|
 
@@ -75,7 +75,7 @@ Mobile model apps download metadata about your data model, security configuratio
 More information: [Phones and tablets : Overview of Dynamics 365 for phones and tablets](/dynamics365/customer-engagement/mobile-app/overview)
 
 Canvas apps also provide highly tailored mobile experiences that can be rapidly created without code.
-More information: [Quickstart: Run a canvas-based app on a mobile device](../run-app-client.md)
+More information: [Quickstart: Run a canvas app on a mobile device](../../user/run-app-client.md)
 
 ## Provide Business intelligence
 
@@ -97,7 +97,7 @@ More information:
 
 Model apps are included within solutions, but not every solution contains a model app. You can use the solution framework to compose individual modules that can provide layers of shared functionality that is used by multiple model apps. This provides a flexible way to distribute and maintain functionality that you provide.
 
-More information: [Modular solutions](../common-data-service/introduction-solutions.md#modular-solutions)
+More information: [Modular solutions](../../common-data-service/developer/introduction-solutions.md#modular-solutions)
 
 ## Use web development skills with Web Resources
 

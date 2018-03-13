@@ -26,19 +26,8 @@ If you are already experienced with the Dynamics 365 Customer Engagement apps, y
 If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working the Common Data Service for apps.
 
 > [!NOTE]
-> Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps for developers](../model-driven-apps/model-driven-apps-developer-overview.md)
-> Content in this section will refer only to extensions developers can do at the service level. 
-
-- [Introduction to solutions](introduction-solutions.md)
-- [Common Data Service for Apps Entities](entities.md)
-    - [Entity Metadata](entity-metadata.md)
-    - [Attribute Metadata](entity-attribute-metadata.md)
-    - [Entity Relationships Metadata](entity-relationship-metadata.md)
-- [Apply Business Logic with code](apply-business-logic-with-code.md)
-- [Use Common Data Service for Apps Web Services](use-web-services.md)
-
-> [!NOTE]
-> Because the Common Data Service for Apps in this release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
+> - Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps Developer Overview](../../model-driven-apps/developer/model-driven-apps-developer-overview.md). Content in this section will refer only to extensions developers can do at the service level. 
+> - Because the Common Data Service for Apps in this release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Developer Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
 
 
 ## Tools and resources for developers

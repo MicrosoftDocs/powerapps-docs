@@ -107,7 +107,7 @@ It works because Common Data Service for Apps evaluates managed solutions by the
 
 The following diagram introduces how managed solutions and unmanaged customizations interact to control what is included at runtime in the application.
 
-![Diagram showing solution layering](media/solution-layering.png)
+![Diagram showing solution layering](../media/solution-layering.png)
 
 In this example, default behavior defined in the system solution is overridden or appended by managed solutions. Any unmanaged customizations can then override or append customizations that are then visible in the application.
 
