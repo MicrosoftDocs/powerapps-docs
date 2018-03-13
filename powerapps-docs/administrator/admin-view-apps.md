@@ -1,36 +1,53 @@
 ---
-title: View app details | Microsoft Docs
-description: Administrators can download a list of apps in an environment
-services: ''
+title: Quickstart to download a list of apps created in your organization | Microsoft Docs
+description: In this quickstart, you learn how to download a list of apps created in your organization
+services: 'powerapps'
 suite: powerapps
 documentationcenter: na
-author: manasmamsft
-manager: anneta
+author: skjerland
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
+ms.topic: quickstart
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 08/14/2017
-ms.author: manasma
+ms.date: 03/21/2018
+ms.author: sharik
 
 ---
-# View PowerApps created in your organization
-As an environment admin, you can now download a list of apps being created in the environment from the [PowerApps admin center][1]. If you are an Office 365 Global admin or an Azure Active Directory tenant admin, you can download the list of apps for all the environments in your organization. The list contains the app name, the creator of the app, any connectors that the app uses to connect to data sources, and other information.
+# Quickstart: Download a list of apps created in your organization
+If you have Environment Admin permissions, PowerApps lets you download a list of apps created in the environment that you're administering. If you have Office 365 Global Admin permissions or Azure Active Directory Tenant Admin permissions, PowerApps lets you download a list of apps created in all of the environments in your organization.
 
-### Download the list of apps
-1. In the PowerApps admin center, click on **Environments** near the left edge and select the environment for which want to view the list of apps:
-   
+In this quickstart, you'll learn how to download a list of apps created in a single environment to a .csv file, and then view that list in Excel.
+
+## Prerequisites
+ To follow this quickstart, the following items are required:
+ * Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
+ * PowerApps Environment Admin or Tenant Admin permissions, Office 365 Global Admin permissions, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
+
+## Sign in to the PowerApps Admin center
+Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
+
+## Download the list of apps
+1. In the navigation pane, click or tap **Environments**, and then click or tap the environment for which you want to download the list of apps.
+
     ![File and Share](./media/admin-view-apps/environment.png)
-2. Visit **Resources** from the horizontal navigation and select **Apps**. Download the list of apps by clicking the **Download the list of apps** button as shown below:
-   
-    ![File and Share](./media/admin-view-apps/resources-app.png)
-3. Wait a few minutes for the .csv file to download, and then open it in Excel.
-   ![File and Share](./media/admin-view-apps/excel-view.png)
-   
-   <!--Reference links in article-->
+2. On the **Resources** tab, click or tap **Apps**, and then click or tap **Download the list of apps**.
 
-[1]:https://admin.powerapps.com
+    ![File and Share](./media/admin-view-apps/resources-app.png)
+
+The list of apps is downloaded into a .csv file. This process could take several minutes. Make sure that you don't close the window before the list completely downloads or you may have to restart the process.
+
+## View the list
+After the .csv file is created, open it in Excel. The list contains the app name, the creator of the app, any connectors that the app uses to connect to data sources, and other information.
+
+![File and Share](./media/admin-view-apps/excel-view.png)
+
+## Next steps
+In this quickstart, you learned how to download and view a list of apps created in an environment within your organization. Next, learn how to manage the apps created in your organization.
+
+> [!div class="nextstepaction"]
+> [Manage apps created in your organization](admin-manage-apps.md)
