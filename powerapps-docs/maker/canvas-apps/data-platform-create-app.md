@@ -42,7 +42,9 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 	![Select an entity](./media/data-platform-create-app/select-entity.png)
 
-After a few minutes, your app opens to the browse screen, which shows a list of accounts, a search bar above that list, and icons for refreshing the list, sorting the list, and creating an account. By default, the list shows an image, an email address, a city, and an ID for that account, but you can customize the list, which is called a gallery, to show other types of data.
+After a few minutes, your app opens to the browse screen, which shows a list of accounts. Near the top of the screen, a title bar shows icons for refreshing the list, sorting the list, and creating an account. Under the title bar, a search box provides the option to filter the list based on text that you type or paste. 
+
+By default, the list shows an image, an email address, a city, and an ID for that account. But you can customize the list, which is called a gallery, to show other types of data.
 
 ![Browse screen](./media/data-platform-create-app/browse-screen.png)
 

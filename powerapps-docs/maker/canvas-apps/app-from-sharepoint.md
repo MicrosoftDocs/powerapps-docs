@@ -21,11 +21,11 @@ In this quickstart, you'll use PowerApps to automatically generate your first ap
 
 You can learn concepts and techniques from this quickstart if you have any list in SharePoint. To follow this quickstart exactly, create a list, named **SimpleApp**, that contains a column named **Title**, in a SharePoint Online site. In the list, create entries for **Vanilla**, **Chocolate**, and **Strawberry**.
 
-You can create a list that's far more comple with many columns of various types, such as numbers and currency. The principles of generating an app won't change. You can also generate apps from lists in an on-premises SharePoint site if you [connect to the site](connect-to-sharepoint.md) through a data gateway.
+You can create a list that's far more complex with many columns of various types, such as text, dates, numbers, and currency. The principles of generating an app won't change. You can also generate an app from a list in an on-premises SharePoint site if you [connect to the site](connect-to-sharepoint.md) through a data gateway.
 
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
-## Choose a site and list
+## Generate an app
 1. Sign in to [PowerApps](https://web.powerapps.com).
 
 	![PowerApps home page](./media/app-from-sharepoint/sign-in.png)
@@ -44,11 +44,11 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. Under **Connect to a SharePoint site**, type or paste the URL for your SharePoint Online site, and then select **Go**.
 
-    For example, specify something like: `https://microsoft.sharepoint.com/teams/TeamName`
+    For example, specify something like this example:<br>`https://microsoft.sharepoint.com/teams/TeamName`
 
 1. Under **Choose a list**, select **SimpleApp**, and then select **Connect**.
 
-After a few minutes, your app opens to the browse screen, which shows the items that you created in your list, a search bar above that list, and icons for refreshing the list, sorting the list, and creating an item. If your list has data in more columns than just **Title**, the app will show that data.
+After a few minutes, your app opens to the browse screen, which shows the items that you created in your list. If your list has data in more columns than just **Title**, the app will show that data. Near the top of the screen, a title bar shows icons for refreshing the list, sorting the list, and creating an item in the list. Under the title bar, a search box provides the option to filter the list based on text that you type or paste. 
 
 ![Browse screen](./media/app-from-sharepoint/browse-screen.png)
 
