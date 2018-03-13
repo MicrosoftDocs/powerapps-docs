@@ -90,11 +90,11 @@ When this dialog box appears, select **Start**, and then start to use [PowerApps
 * **Access to the Common Data Service**, which is a secure business data platform built into PowerApps. This service comes with hundreds of standard business entities, so all your apps can share the same definition of “customer,” “product,” “lead,” and more. [Learn more](./common-data-service/data-platform-intro.md)
 * **Access to premium connections** such as Salesforce, DB2, Zendesk, and the Common Data Service. With many Office 365 and Dynamics 365 plans, you can connect to data sources such as Office 365, Dynamics 365, Dropbox, and Twitter. With the trial license, you can also connect to data through premium connectors such as these:
   
-    ![](./media/trial-plan/premium-connectors.png)
+    ![](./media/signup-for-powerapps/premium-connectors.png)
   
     In the [complete list of connectors](./canvas-apps/connections-list.md), premium connectors appear with a badge:
   
-    ![](./media/trial-plan/premium-badge.png)
+    ![](./media/signup-for-powerapps/premium-badge.png)
 * **Access to the PowerApps admin center**, in which you can manage your environments, databases, user permissions, and data policies. [Learn more](../administrator/introduction-to-the-admin-center.md)
 
 For more information about the functionality and capacity in the trial license, see the [pricing page](https://powerapps.microsoft.com/pricing/).
@@ -113,11 +113,11 @@ After 30 days, you'll be prompted to request an extension of the trial or purcha
 
 * If you have access to PowerApps through Office 365, Dynamics 365, or a PowerApps Plan 1 license, you can still use PowerApps, but you might lose access to the Common Data Service, premium connectors, the admin center, and other Plan 2 features. For example, this screen might appear if you try to create a premium connection:
   
-    ![](./media/trial-plan/premium-trial-expired.png)
+    ![](./media/signup-for-powerapps/premium-trial-expired.png)
 
 * If your only access to PowerApps is through the trial (for which you signed up on the [PowerApps site](http://powerapps.microsoft.com/) or the [pricing page](http://powerapps.microsoft.com/pricing)), this screen will appear if you try to access PowerApps:
   
-    ![](./media/trial-plan/extend-screen.png)
+    ![](./media/signup-for-powerapps/extend-screen.png)
 
 ### How many days are left before my trial expires?
 You'll soon be able to see how many days are left before your trial expires.
