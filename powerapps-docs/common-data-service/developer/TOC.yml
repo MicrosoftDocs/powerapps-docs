@@ -1,19 +1,19 @@
 - name: Developer Overview
-  href: ../common-data-service-for-apps-developer-overview.md
+  href: common-data-service-for-apps-developer-overview.md
 - name: Introduction to solutions
-  href: ../introduction-solutions.md
+  href: introduction-solutions.md
 - name: Common Data Service for Apps Data Entities
-  href: ../entities.md
+  href: entities.md
   items: 
   - name: Entity Metadata
-    href: ../entity-metadata.md
+    href: entity-metadata.md
   - name: Attribute Metadata 
-    href: ../entity-attribute-metadata.md
+    href: entity-attribute-metadata.md
   - name: Entity Relationships Metadata
-    href: ../entity-relationship-metadata.md
+    href: entity-relationship-metadata.md
   - name: Entity Reference
     href: ../reference/entities/toc.yml
 - name: Apply Business Logic with code
-  href: ../apply-business-logic-with-code.md
+  href: apply-business-logic-with-code.md
 - name: Use Common Data Service for Apps Web Services
-  href: ../use-web-services.md
+  href: use-web-services.md
