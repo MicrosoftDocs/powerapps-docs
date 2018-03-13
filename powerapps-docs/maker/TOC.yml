@@ -3,28 +3,48 @@
   expanded: true
   items:
     - name: Sign up - trial and paid # Move sign up files from canvas to maker directory
-      href: ./canvas-apps/signup-for-powerapps.md
+      href: signup-for-powerapps.md
     - name: Sign up - community plan
-      href: ./canvas-apps/dev-community-plan.md
+      href: dev-community-plan.md
+    - name: FAQ for trial plan
+      href: trial-plan.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
   - name: Quickstarts
     items:
-    - name: Create from a sample app # I don't think we have this one yet
-      href: ./canvas-apps/_placeholder02.md
-    - name: Create from Excel data
-      href: ./canvas-apps/get-started-create-from-data.md
-    - name: Create from SharePoint data
-      href: ./canvas-apps/app-from-sharepoint.md
-    - name: Create from Common Data Service for Apps
-      href: ./canvas-apps/data-platform-create-app.md
+    - name: Open a sample app
+      href: ./canvas-apps/open-and-run-a-sample-app.md
+    - name: Generate an app
+      items:
+      - name: From the Common Data Service for Apps
+        href: ./canvas-apps/data-platform-create-app.md
+      - name: From SharePoint
+        href: ./canvas-apps/app-from-sharepoint.md
+      - name: From Excel
+        href: ./canvas-apps/get-started-create-from-data.md
+    - name: Create an app from within SharePoint
+      href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
+    - name: Customize a SharePoint list form
+      href: ./canvas-apps/customize-list-form.md
   - name: Tutorials
     items:
+    - name: Customize a generated app
+      items:
+      - name: Customize a browse screen
+        href: ./canvas-apps/customize-layout-sharepoint.md
+      - name: Customize a form
+        href: ./canvas-apps/customize-forms-sharepoint.md
+      - name: Customize a card
+        href: ./canvas-apps/customize-card.md
     - name: Create an app from scratch
       href: ./canvas-apps/data-platform-create-app-scratch.md
+    - name: Share an app
+      href: ./canvas-apps/share-app.md
   - name: Concepts
     items:
+    - name: Get started with formulas
+      href: ./canvas-apps/working-with-formulas.md
     - name: Tables and records
       href: ./canvas-apps/working-with-tables.md
     - name: Data forms
@@ -41,7 +61,9 @@
       href: ./canvas-apps/show-text-dates-times.md
     - name: Data sources
       href: ./canvas-apps/working-with-data-sources.md
-    - name: Canvas app development
+    - name: Understand SharePoint forms integration
+      href: ./canvas-apps/sharepoint-form-integration.md
+    - name: Canvas-app development
       items:
       - name: PowerApps for enterprise developers, partners, and ISVs
         href: ./canvas-apps/dev-enterprise-intro.md
@@ -55,40 +77,10 @@
         href: ./canvas-apps/dev-appsource-test-drive.md
   - name: How-to guides
     items:
-    - name: Run an existing app # Moved running apps and embedding in Teams to quickstarts
-      items:
-      - name: Open an app in SharePoint
-        href: ./canvas-apps/open-app-embedded-in-sharepoint.md
-      - name: Use a sample app
-        href: ./canvas-apps/open-and-run-a-sample-app.md
-      - name: Use a template
-        href: ./canvas-apps/get-started-test-drive.md
-      - name: Get more apps from AppSource
-        href: ./canvas-apps/app-source.md
-    - name: Start with a SharePoint list # Moved SharePoint from PowerApps to quickstart
-      items:
-      - name: Create an app from SharePoint
-        href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
-      - name: Customize a list form with PowerApps
-        href: ./canvas-apps/customize-list-form.md
-      - name: Understand SharePoint forms integration
-        href: ./canvas-apps/sharepoint-form-integration.md
-      - name: Create a connection
-        href: ./canvas-apps/connect-to-sharepoint.md
-      - name: Customize a gallery layout
-        href: ./canvas-apps/customize-layout-sharepoint.md
-      - name: Customize a PowerApps form
-        href: ./canvas-apps/customize-forms-sharepoint.md
-      - name: Customize a card
-        href: ./canvas-apps/customize-card.md
-      - name: Connect lists using lookups
-        href: ./canvas-apps/sharepoint-lookup-fields.md
-    - name: Start with another data source # Moved Excel and CDS to quickstart
-      items:
-      - name: Get started with formulas
-        href: ./canvas-apps/working-with-formulas.md
-      - name: Build an app from scratch
-        href: ./canvas-apps/get-started-create-from-blank.md
+    - name: Create an app from a template
+      href: ./canvas-apps/get-started-test-drive.md
+    - name: Build an Excel app from scratch
+      href: ./canvas-apps/get-started-create-from-blank.md
     - name: Customize an app
       items:
       - name: Add and configure a control
@@ -107,6 +99,8 @@
         href: ./canvas-apps/show-current-user.md
       - name: Add a list control
         href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
+      - name: Connect lists using lookups
+        href: ./canvas-apps/sharepoint-lookup-fields.md
       - name: Add a chart
         href: ./canvas-apps/use-line-pie-bar-chart.md
       - name: Add multimedia
@@ -131,8 +125,6 @@
         href: ./canvas-apps/set-name-tile.md
       - name: Save and publish an app
         href: ./canvas-apps/save-publish-app.md
-      - name: Share an app
-        href: ./canvas-apps/share-app.md
       - name: Delete an app
         href: ./canvas-apps/delete-app.md
       - name: Restore your app to a previous version
@@ -141,6 +133,8 @@
       items:
       - name: Manage data connections
         href: ./canvas-apps/add-manage-connections.md
+      - name: Connect to SharePoint
+        href: ./canvas-apps/connect-to-sharepoint.md
       - name: Delegation
         href: ./canvas-apps/delegation-overview.md
       - name: Delegable data sources
@@ -182,7 +176,7 @@
     - name: Controls reference
       href: ./canvas-apps/reference-properties.md # lives in root, move to controls?
     - name: Connectors reference
-      href: ./canvas-apps/connections-list.md # lives in root, move to connectors? Is this OK as a referenc topic (vs. in how-to section)
+      href: ./canvas-apps/connections-list.md # lives in root, move to connectors? Is this OK as a reference topic (vs. in how-to section)
     - name: System requirements, limits, and configuration
       href: ./canvas-apps/limits-and-config.md
   - name: Resources # currently all content from old Get Started, except for intro topic. We can relocate as appropriate

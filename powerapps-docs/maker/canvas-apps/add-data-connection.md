@@ -30,7 +30,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 * Connect to SQL Server, and update a table from your app.
 
 ## Prerequisites
-[Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 
 ## Background on data connections
 Most PowerApps apps use external information called **Data Sources** that is stored in cloud services. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connectors**.

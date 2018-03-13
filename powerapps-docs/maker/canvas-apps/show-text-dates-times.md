@@ -24,7 +24,7 @@ For example, add data from users about stock trades or client meetings, data fro
 
 ## Prerequisites
 
-* [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 * Create an app or open an existing app in PowerApps.
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 

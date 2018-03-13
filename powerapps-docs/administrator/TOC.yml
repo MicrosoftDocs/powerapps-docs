@@ -2,22 +2,34 @@
   href: index.md
 - name: Quickstarts
   items:
+  - name: Create a DLP policy # not in TOC previously
+    href: create-dlp-policy.md
+  - name: View active users in your org
+    href: admin-view-user-licenses.md
+  - name: View apps in your org # not in TOC previously
+    href: admin-view-apps.md
+- name: Concepts
+  items:
   - name: Admin center intro
     href: introduction-to-the-admin-center.md
   - name: PowerApps in your organization Q&A
     href: signup-question-and-answer.md
   - name: Pricing information
     href: pricing-billing-skus.md
-  - name: Trial plan
-    href: trial-plan.md
   - name: Environments overview
     href: environments-overview.md
   - name: Administer environments
     href: environments-administration.md
-  - name: Manage DLP policies
-    href: prevent-data-loss.md
   - name: Introduction to data groups
     href: introduction-to-data-groups.md
+  - name: Regions overview
+    href: regions-overview.md
+- name: How-to guides
+  items:
+  - name: Purchase PowerApps # moved from original get started location
+    href: signup-for-powerapps-admin.md
+  - name: Manage DLP policies
+    href: prevent-data-loss.md
   - name: Create a database
     href: create-database.md
   - name: Configure database security
@@ -26,15 +38,5 @@
     href: environment-and-tenant-migration.md
   - name: Export and import resources
     href: export-import-packages.md
-  - name: Regions overview
-    href: regions-overview.md
-  - name: Identify PowerApps users in your org
-    href: admin-view-user-licenses.md
-  - name: Purchase PowerApps # moved from original get started location
-    href: signup-for-powerapps-admin.md
-  - name: App analytics # not in TOC previously
+  - name: View app analytics reports # not in TOC previously
     href: app-analytics.md
-  - name: View apps in your org # not in TOC previously
-    href: admin-view-apps.md
-  - name: Create a DLP policy # not in TOC previously
-    href: create-dlp-policy.md

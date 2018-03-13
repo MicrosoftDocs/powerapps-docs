@@ -66,7 +66,7 @@ After you share an app with one or more users or security groups, how they can s
 ##### If you shared app with *User* permission
 The people you shared the app with will receive an email notification if you selected that check box in the app sharing screen. In the email, they can click or tap a link to run the app on [Dynamics 365](http://home.dynamics.com). Soon we will support universal links, which means if you have PowerApps Studio or PowerApps Mobile installed, the app will open in PowerApps Studio or PowerApps mobile.
 
-Users can also discover the app in AppSource on [Dynamics 365](http://home.dynamics.com) (for example, if you didn't send email). [Read more](app-source.md) on how to users can get apps via AppSource.
+Users can also discover the app in AppSource on [Dynamics 365](http://home.dynamics.com) (for example, if you didn't send email). [Read more](../../user/app-source.md) on how to users can get apps via AppSource.
 
 ##### If you shared an app with *Contributor* permission
 The people you shared the app with will receive an email notification if you selected that check box in the app sharing screen. In the email, they can click or tap a link that opens the app directly for editing using PowerApps Studio for the web. There is also a link to run the app on [Dynamics 365](http://home.dynamics.com). Soon we will support universal links, which means if you have PowerApps Studio or PowerApps mobile installed, the app will open in PowerApps Studio or PowerApps Mobile.
