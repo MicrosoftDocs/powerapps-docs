@@ -30,10 +30,10 @@ If you are new to the Dynamics 365 Customer Engagement applications, the followi
 > Content in this section will refer only to extensions developers can do at the service level. 
 
 - [Introduction to solutions](introduction-solutions.md)
-- [Common Data Service for Apps Data Model](data-model.md)
-    - [Entity data model](data-model-entities.md)
-    - [Attribute data model](data-model-attributes.md)
-    - [Entity Relationships Data Model](data-model-relationships.md)
+- [Common Data Service for Apps Entities](entities.md)
+    - [Entity Metadata](entity-metadata.md)
+    - [Attribute Metadata](entity-attribute-metadata.md)
+    - [Entity Relationships Metadata](entity-relationship-metadata.md)
 - [Apply Business Logic with code](apply-business-logic-with-code.md)
 - [Use Common Data Service for Apps Web Services](use-web-services.md)
 

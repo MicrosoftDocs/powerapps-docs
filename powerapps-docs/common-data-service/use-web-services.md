@@ -81,7 +81,7 @@ Some examples:
 - The number of options available in an optionset attribute can change. Rather than hard-code the values in your environment, consider whether different options are present. You can query the system to determine whether the current environment has different options.
 - The display name for an entity can be changed. The default display name for the account entity is *Account*. This could be changed to *Company*. If you want to display a message to a user and refer to the name of an entity, you should not hard-code this but instead use the value that matches what the user is accustomed to seeing and use the display name retrieved from the entity metadata instead.
 
-Developing a good working understanding of the metadata in the system can help you understand how the Common Data Service for Apps platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. 
+Developing a good working understanding of the metadata in the system can help you understand how the Common Data Service for Apps platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. 
 
 More information: [Developer Documentation : Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
 

@@ -1,6 +1,6 @@
 ---
-title: Attribute data model | Microsoft Docs
-description: Learn about the data model for attributes in the Common Data Service for Apps.
+title: Attribute Metadata | Microsoft Docs
+description: Learn about the attribute metadata use in the Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,7 +16,7 @@ ms.workload: na
 ms.date: 03/12/2018
 ms.author: jdaly
 ---
-# Attribute data model
+# Attribute Metadata
 
 Entities include a collection of attributes that represent the data that can be included within each record. Developers need to understand the different types of attributes and how to work with them. 
 

@@ -1,6 +1,6 @@
 ---
-title: Entity Data model | Microsoft Docs
-description: Learn about the data model for entities in the Common Data Service for Apps.
+title: Entity Metadata | Microsoft Docs
+description: Learn about the entity metadata use in the Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -17,7 +17,7 @@ ms.date: 03/12/2018
 ms.author: jdaly
 ---
 
-# Entity data model
+# Entity Metadata
 
 Each entity provides the capability to store structured data. For developers, entities represent the classes you will use when working with data in the Common Data Service.
 

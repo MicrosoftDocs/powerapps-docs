@@ -1,6 +1,6 @@
 ---
 title: Apply Business Logic with code | Microsoft Docs
-description: Learn how developers can use code to apply business logic to model apps.
+description: Learn how developers can use code to apply business logic in the Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -64,7 +64,7 @@ Within the form designer there are properties to associate JavaScript web resour
 
 There is a complete set of client APIs you can use to interact with data and visual elements in the form or grid. There are also API to interact with data on the server using the Web API.
 
-Client scripting is powerful because it allows you to provide the most responsive interaction with the user in the form. It is popular because many developers know JavaScript. But it is important to use it appropriately. Scripts should compliment business rule enforced on the server rather than replace them. Logic applied via a script in the model app will not be applied to data entered via a canvas app or any other means where data can be modified. Performance can be impacted as more scripts are added.
+Client scripting is powerful because it allows you to provide the most responsive interaction with the user in the form. It is popular because many developers know JavaScript. But it is important to use it appropriately. Scripts should compliment business rule enforced on the server rather than replace them. Logic applied via a script in the model-driven app will not be applied to data entered via a canvas app or any other means where data can be modified. Performance can be impacted as more scripts are added.
 
 > [!IMPORTANT]
 > Interacting directly with the DOM of the page or any undocumented APIs is not supported. The DOM generated for the page may change with different implementations over time. Undocumented APIs may change or be removed without notice. Any of these kinds of changes will cause your script to break.
