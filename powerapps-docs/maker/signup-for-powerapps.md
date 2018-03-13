@@ -19,7 +19,7 @@ ms.author: anneta
 
 ---
 # Sign up for a free license to try PowerApps
-To create an app in PowerApps, you need one of several types of licenses that offer different levels of functionality. You already have a license for PowerApps if your organization has purchased any of several versions of Office 365 or Dynamics 365, or your organization purchased PowerApps Plan 1 or Plan 2 licenses for its members.
+To create an app in PowerApps, you need one of several types of licenses that offer different levels of functionality. You already have a license for PowerApps if your organization has purchased any of several versions of Office 365 or Dynamics 365 for you, or your organization purchased PowerApps Plan 1 or Plan 2 licenses for you.
 
 > [!NOTE]
 > If you're an administrator, see [Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](../administrator/signup-question-and-answer.md).
