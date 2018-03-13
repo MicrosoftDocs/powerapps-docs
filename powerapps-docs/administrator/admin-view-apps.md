@@ -42,7 +42,7 @@ Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powe
 The list of apps is downloaded into a .csv file. This process could take several minutes. Make sure that you don't close the window before the list completely downloads or you may have to restart the process.
 
 ## View the list
-After the .csv file is created, open it in Excel. The list contains the app name, the creator of the app, any connectors that the app uses to connect to data sources, and other information.
+After the .csv file is created, open it in Excel. The list contains the app display name, the owner of the app, any connectors that the app uses to connect to data sources, and other information.
 
 ![File and Share](./media/admin-view-apps/excel-view.png)
 
