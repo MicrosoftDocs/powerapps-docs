@@ -19,12 +19,12 @@ ms.author: jdaly
 
 # Use Common Data Service for Apps Web Services
 
-The Common Data Service for Apps provides two web services you can use to interact with data. Choose the one which best matches the requirement and your skills. More information: [Developer Guide: Choose your development style for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/choose-development-style)
+The Common Data Service for Apps provides two web services you can use to interact with data. Choose the one which best matches the requirement and your skills. More information: [Dynamics 365 Customer Engagement Developer Guide: Choose your development style for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/choose-development-style)
 
 ## Web API
 The Web API is an OData v4 RESTful endpoint. Use this for any programming language that supports HTTP requests and authentication using OAuth 2.0.
 
-More information: [Developer Guide: Use the Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)
+More information: [Dynamics 365 Customer Engagement Developer Guide: Use the Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)
 
 ## Organization Service
 
@@ -33,7 +33,7 @@ The Organization service is a core part of the Common Data Service for Apps plat
 > [!NOTE]
 > It is possible for developers to use the SOAP endpoint of the organization service without using the .NET SDK assemblies, but the RESTful nature of the Web API makes it a much superior alternative.
 
-More information: [Developer Guide: Use the Dynamics 365 Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)
+More information: [Dynamics 365 Customer Engagement Developer Guide: Use the Dynamics 365 Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)
 
 ## About the web services and the platform
 
@@ -53,8 +53,8 @@ Each Common Data Service for Apps user may be able to access multiple Common Dat
 
 A Discovery service is accessed through either the Web API or the Organization Service.
 
-- For the Web API see: [Developer Guide: Discover the URL for your organization using the Web API](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)
-- For the Organization Service see: [Developer Guide: Discover the URL for your organization using the Organization Service](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
+- For the Web API see: [Dynamics 365 Customer Engagement Developer Guide: Discover the URL for your organization using the Web API](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)
+- For the Organization Service see: [Dynamics 365 Customer Engagement Developer Guide: Discover the URL for your organization using the Organization Service](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
 
 ## Use Custom Actions
 
@@ -67,9 +67,9 @@ The unique value of custom actions is that the specific operations they contain 
 When a custom action is defined in an environment, a new OData v4 Action is available using the Web API and within the organization service the custom action can be invoked using the [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest) directly or by using a strongly typed class generated using the *Code Generation tool (CrmSvcUtil.exe)*.
 
 More information: 
-- [Customization Guide: Actions overview](/dynamics365/customer-engagement/customize/actions)
-- [Developer Guide: Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions)
-- [Developer Guide: Use Web API actions > Use a custom action](/dynamics365/customer-engagement/developer/webapi/use-web-api-actions#use-a-custom-action)
+- [Dynamics 365 Customer Engagement Customization Guide: Actions overview](/dynamics365/customer-engagement/customize/actions)
+- [Dynamics 365 Customer Engagement Developer Guide: Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions)
+- [Dynamics 365 Customer Engagement Developer Guide: Use Web API actions > Use a custom action](/dynamics365/customer-engagement/developer/webapi/use-web-api-actions#use-a-custom-action)
 
 ## Metadata Services
 
@@ -83,8 +83,8 @@ Some examples:
 
 Developing a good working understanding of the metadata in the system can help you understand how the Common Data Service for Apps platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. 
 
-More information: [Developer Documentation : Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
+More information: [Dynamics 365 Customer Engagement Developer Guide: Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
 
 For more information about working with metadata programmatically see:
-- [Developer Guide: Use the Web API with metadata](/dynamics365/customer-engagement/developer/webapi/use-web-api-metadata)
-- [Developer Guide: Use the Organization service with Dynamics 365 metadata](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)
+- [Dynamics 365 Customer Engagement Developer Guide: Use the Web API with metadata](/dynamics365/customer-engagement/developer/webapi/use-web-api-metadata)
+- [Dynamics 365 Customer Engagement Developer Guide: Use the Organization service with Dynamics 365 metadata](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)

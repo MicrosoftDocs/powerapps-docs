@@ -133,7 +133,7 @@ For example, `PostComment`, `PostLike`, and `PostRole` are each children of the 
 Each alternate key definition describes one or more attributes in combination that will uniquely identify an entity instance. Alternate keys are typically only applied for integration with external systems. You can define alternate keys to uniquely identify a record. This is valuable if you are integrating data with a system that doesn’t support GUID unique identifier keys. You can define a single field value or combination of field values to uniquely identify an entity. Adding an alternate key will enforce a uniqueness constraint on these attributes. You will not be able to create or update another entity record to have the same values.
 
 More information: 
- - [Dynamics 365 Customization Guide: Define alternate keys to reference Dynamics 365 records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
+ - [Dynamics 365 Customer Engagement Customization Guide: Define alternate keys to reference Dynamics 365 records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
  - [Dynamics 365 Customer Engagement Developer Guide: Define alternate keys for an entity and Developer Guide: Synchronize Dynamics 365 data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
 
 ## Entity States

@@ -29,7 +29,7 @@ When you look at the solution explorer or the three relationship collections in 
 The `EntityMetadata` `ManyToOneRelationships` collection contains [OneToManyRelationshipMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.onetomanyrelationshipmetadata)types. One-to-Many relationships exist between entities and refer to each entity as either a *Primary Entity* or *Related Entity*. The related entity, sometimes called the *child entity*, has a lookup attribute that allows storing a reference to a record from the primary entity, sometimes called the *parent entity*. A Many-to-One relationship is just a One-to-Many relationship viewed from the related entity.
 
 More information:
-- [Dynamics 365 Customization Guide: Create and edit relationships between entities](/dynamics365/customer-engagement/customize/create-edit-entity-relationships)
+- [Dynamics 365 Customer Engagement Customization Guide: Create and edit relationships between entities](/dynamics365/customer-engagement/customize/create-edit-entity-relationships)
 - [Dynamics 365 Customer Engagement Developer Guide: Customize entity relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 ## Cascade Configuration
@@ -38,7 +38,7 @@ When a one-to-many entity relationship exists, there are cascading behaviors tha
 
 More information:
 
-- [Dynamics 365 Customization Guide: Create 1:N (one-to-many) or N:1 (many-to-one) relationships > Relationship behavior](/dynamics365/customer-engagement/customize/create-and-edit-1n-relationships#relationship-behavior)
+- [Dynamics 365 Customer Engagement Customization Guide: Create 1:N (one-to-many) or N:1 (many-to-one) relationships > Relationship behavior](/dynamics365/customer-engagement/customize/create-and-edit-1n-relationships#relationship-behavior)
 - [Dynamics 365 Customer Engagement Developer Guide: Entity relationship behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)
 
 

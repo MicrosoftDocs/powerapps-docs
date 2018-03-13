@@ -18,7 +18,7 @@ ms.author: jdaly
 ---
 # Apply Business Logic with code
 
-Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
+Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Dynamics 365 Customer Engagement Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
 When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.
 
@@ -26,7 +26,7 @@ When a declarative process doesn’t meet a requirement, as a developer you have
 
 You can write a .NET assembly to provide new options within the process designer. This method provides a new option for people using the workflow designer to apply a condition or perform a new action. A workflow extension can then be re-used by people who are not developers to apply the logic in your code.
 
-More information: [Developer Guide: Custom workflow activities (workflow assemblies)](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies)
+More information: [Dynamics 365 Customer Engagement Developer Guide: Custom workflow activities (workflow assemblies)](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies)
 
 ## Create a plug-in
 
@@ -53,12 +53,12 @@ When you register the plugin to run synchronously for an event, you have options
 > [!NOTE]
 > Synchronous plug-ins have constraints on the amount of system resources they can use. If a plug-in exceeds thresholds or becomes unresponsive an exception will be thrown cancelling the operation.
 
-More information: [Developer Guide: Write plug-ins to extend business processes](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)
+More information: [Dynamics 365 Customer Engagement Developer Guide: Write plug-ins to extend business processes](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)
 
 ## Create a form or grid event handler
 
 > [!NOTE]
-> Before you create event handlers, consider if Business Rules can be applied to meet your requirements. More information: [Customization Guide: Create business rules and recommendations to apply logic in a form](/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
+> Before you create event handlers, consider if Business Rules can be applied to meet your requirements. More information: [Dynamics 365 Customer Engagement Customization Guide: Create business rules and recommendations to apply logic in a form](/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
 Within the form designer there are properties to associate JavaScript web resource libraries to the form and then to associate specific functions in those libraries to events that occur.
 
@@ -68,4 +68,4 @@ Client scripting is powerful because it allows you to provide the most responsiv
 
 > [!IMPORTANT]
 > Interacting directly with the DOM of the page or any undocumented APIs is not supported. The DOM generated for the page may change with different implementations over time. Undocumented APIs may change or be removed without notice. Any of these kinds of changes will cause your script to break.
-More information: [Developer Guide: Client scripting in Customer Engagement using JavaScript](/dynamics365/customer-engagement/developer/clientapi/client-scripting)
+More information: [Dynamics 365 Customer Engagement Developer Guide: Client scripting in Customer Engagement using JavaScript](/dynamics365/customer-engagement/developer/clientapi/client-scripting)
