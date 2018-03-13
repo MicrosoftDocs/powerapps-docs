@@ -39,6 +39,8 @@
         href: ./canvas-apps/customize-card.md
     - name: Create an app from scratch
       href: ./canvas-apps/data-platform-create-app-scratch.md
+    - name: Share an app
+      href: ./canvas-apps/share-app.md
   - name: Concepts
     items:
     - name: Get started with formulas
@@ -75,10 +77,10 @@
         href: ./canvas-apps/dev-appsource-test-drive.md
   - name: How-to guides
     items:
-    - name: Build an Excel app from scratch
-      href: ./canvas-apps/get-started-create-from-blank.md
     - name: Create an app from a template
       href: ./canvas-apps/get-started-test-drive.md
+    - name: Build an Excel app from scratch
+      href: ./canvas-apps/get-started-create-from-blank.md
     - name: Customize an app
       items:
       - name: Add and configure a control
@@ -123,8 +125,6 @@
         href: ./canvas-apps/set-name-tile.md
       - name: Save and publish an app
         href: ./canvas-apps/save-publish-app.md
-      - name: Share an app
-        href: ./canvas-apps/share-app.md
       - name: Delete an app
         href: ./canvas-apps/delete-app.md
       - name: Restore your app to a previous version
