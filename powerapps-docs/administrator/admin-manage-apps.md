@@ -1,6 +1,6 @@
 ---
-title: View and manage apps created in your organization | Microsoft Docs
-description: Walkthrough of how to view and manage apps created in your organization
+title: Manage apps created in your organization | Microsoft Docs
+description: Walkthrough of how to manage apps created in your organization
 services: 'powerapps'
 suite: powerapps
 documentationcenter: na
