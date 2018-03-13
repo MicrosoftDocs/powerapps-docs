@@ -26,7 +26,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 As of this writing, PowerApps supports custom lists but not libraries. In addition, you can show data in some types of columns, such as **Choice** and **Picture**, but you can't update that data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
 
 ## Specify a SharePoint connection
-1. If you haven't already signed up, [sign up for PowerApps](signup-for-powerapps.md).
+1. If you haven't already signed up, [sign up for PowerApps](../signup-for-powerapps.md).
 
 2. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
 

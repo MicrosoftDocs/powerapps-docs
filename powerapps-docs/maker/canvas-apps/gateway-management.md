@@ -31,7 +31,7 @@ With a gateway, you can connect to on-premises data over these connections:
 * DB2
 
 ## Prerequisites
-* The user name and password that you used to [sign up](signup-for-powerapps.md) for PowerApps.
+* The user name and password that you used to [sign up](../signup-for-powerapps.md) for PowerApps.
 * Administrative permissions on a gateway. (You have these permissions by default for each gateway that you install, and an administrator of another gateway can grant you these permissions for that gateway.)
 * A license that supports accessing on-premises data using an on-premises gateway. For more information, see the “Connectivity” section of the [pricing page](https://powerapps.microsoft.com/pricing/).
 * Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).

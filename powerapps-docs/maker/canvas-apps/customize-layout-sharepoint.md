@@ -31,7 +31,7 @@ In this tutorial, you'll customize the default browse screen, including the gall
 
 This tutorial starts with an app generated from the [Common Data Service for Apps](../common-data-service/data-platform-intro.md), but the same concepts apply to apps generated from SharePoint, Excel, and other data sources. 
 
-If you don't have a license for PowerApps, you can [sign up for free](signup-for-powerapps.md).
+If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Prerequisites
 Before you start this tutorial, [generate an app](data-platform-create-app.md) from the Common Data Service for Apps.

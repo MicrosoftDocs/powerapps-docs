@@ -35,7 +35,7 @@ As this topic describes, combine these controls with formulas to create the over
 
 ## Prerequisites
 
-* [Sign up](signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Explore a generated app
