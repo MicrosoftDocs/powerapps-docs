@@ -11,7 +11,7 @@
     - name: Attribute Metadata 
       href: ../entity-attribute-metadata.md
     - name: Entity Relationships Metadata
-      href: ../common-data-service/entity-relationship-metadata.md
+      href: ../entity-relationship-metadata.md
     - name: Entity Reference
       href: ../reference/entities/toc.yml
   - name: Apply Business Logic with code
