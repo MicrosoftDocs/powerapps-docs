@@ -30,7 +30,7 @@ Each entity has a unique name defined when it is created. This name is presented
 |`CollectionSchemaName`|A plural form of the Schema name. i.e. Accounts|
 |`LogicalName`|All lower-case version of the schema name. i.e. account|
 |`LogicalCollectionName`|All lower-case version of the collection schema name. i.e. accounts|
-|`EntitySetName`|Used to identify collections with the Web API. By default, it is the same as the logical collection name.<br />It is possible to change the Entity Set name by programmatically updating the metadata. But this should only be done before any Web API code is written for the entity. More information: [Dynamics 365 Developer Guide: Web API types and operations > Change the name of an entity set](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#change-the-name-of-an-entity-set)|
+|`EntitySetName`|Used to identify collections with the Web API. By default, it is the same as the logical collection name.<br />It is possible to change the Entity Set name by programmatically updating the metadata. But this should only be done before any Web API code is written for the entity. More information: [Dynamics 365 Customer Engagement Developer Guide: Web API types and operations > Change the name of an entity set](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#change-the-name-of-an-entity-set)|
 
 > [!NOTE]
 > When you create a custom entity, the name you choose will be prepended with the customization prefix value of the solution publisher associated with the solution that the entity was created within. Other than the entity set name, you cannot change the names of an entity after it is created.
@@ -119,7 +119,7 @@ You can create custom activity entities that behave the same way.
 This entity is used to add structure to activity entity `PartyListType` attributes that include references to other entities. You will use this entity when setting values for activity entity attributes like `Email.to` or `PhoneCall.from`. Within the `ActivityParty` entity, you set the `ParticipationTypeMask` attribute to define the role that the reference is playing. Roles include `Sender`, `ToRecipient`, `Organizer` and more.
 
 You can query the `ActivityParty` entity, but you cannot create, retrieve, update, or delete an activity party outside of the activity that it is related to.
-More information: [Dynamics 365 Developer Guide: ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
+More information: [Dynamics 365 Customer Engagement Developer Guide: ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
 
 
 ### Child entities
@@ -134,7 +134,7 @@ Each alternate key definition describes one or more attributes in combination th
 
 More information: 
  - [Dynamics 365 Customization Guide: Define alternate keys to reference Dynamics 365 records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
- - [Dynamics 365 Developer Guide: Define alternate keys for an entity and Developer Guide: Synchronize Dynamics 365 data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
+ - [Dynamics 365 Customer Engagement Developer Guide: Define alternate keys for an entity and Developer Guide: Synchronize Dynamics 365 data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
 
 ## Entity States
 
@@ -164,6 +164,6 @@ The set of valid state codes for an entity is not customizable, but the status c
 
 For custom entities, you can define additional criteria for valid transitions between statuses. 
 More information: 
-- [Dynamics 365 Developer Guide: Customize entity attribute metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
-- [Dynamics 365 Developer Guide: Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions).
+- [Dynamics 365 Customer Engagement Developer Guide: Customize entity attribute metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
+- [Dynamics 365 Customer Engagement Developer Guide: Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions).
 
