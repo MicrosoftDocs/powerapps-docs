@@ -27,7 +27,7 @@ If you want to build skills and learn more about PowerApps, Microsoft Flow, and 
 * Export the solutions you create in your individual environment, and [list them on AppSource](./canvas-apps/dev-appsource-test-drive.md) so your customers can test-drive them.
 
 ## Who can sign up for the PowerApps Community Plan?
-Anyone with a [work or school account](trial-plan#what-email-address-can-i-use) can sign up for the PowerApps Community Plan. But we especially recommend this plan if you:
+Anyone with a [work or school account](trial-plan.md#what-email-address-can-i-use) can sign up for the PowerApps Community Plan. But we especially recommend this plan if you:
 
 * Want to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service.
 * Are interested in building business apps and workflows to distribute on AppSource.
