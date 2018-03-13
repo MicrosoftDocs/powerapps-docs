@@ -41,8 +41,7 @@ Each attribute also has two properties that can display localized values. These 
 |Name |Description  |
 |---------|---------|
 |`DisplayName`|Typically, the same as the schema name, but can include spaces. i.e. **Account Number**|
-|`Description`|A short sentence describing the attribute or providing guidance to the user. i.e. *Type an ID number or code for the account to quickly search and identify the account in system views.*<br />
-In model-driven apps, this information will appear when users hover over the field for this attribute in a form.|
+|`Description`|A short sentence describing the attribute or providing guidance to the user. i.e. *Type an ID number or code for the account to quickly search and identify the account in system views.*<br />In model-driven apps, this information will appear when users hover over the field for this attribute in a form.|
 
 
 These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Dynamics 365 Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
@@ -54,11 +53,11 @@ The `AttributeTypeName` property describes the type of an attribute. This proper
 In the following table:
 
 - These types are grouped by category for comparison.
-- For each `AttributeTypeDisplayName` value, the corresponding .NET assembly AttributeMetadata derived class is included where available. There is not a 1:1 relationship between these types and the `AttributeTypeDisplayName` label.
+- For each `AttributeTypeDisplayName` value, the corresponding .NET assembly [AttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata) derived class is included where available. There is not a 1:1 relationship between these types and the `AttributeTypeDisplayName` label.
 - Those attribute types that can be created as custom attributes include the corresponding label displayed in the UI.
 
 
-|Category  |AttributeTypeDisplayName / <br />AttributeMetadata Type  |Can Create / <br /> Label  |Description  |
+|Category|AttributeTypeDisplayName/<br />AttributeMetadata Type|Can Create/<br />Label|Description  |
 |---------|---------|---------|---------|
 |Categorization|`BooleanType`<br />[BooleanAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|Yes<br />**Two Options**|Contains the selected option value from two options that usually indicate a true or false value.<br />More information: [Option Sets](#option-sets)|
 |Categorization|`EntityNameType`<br />[EntityNameAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitynameattributemetadata)|No|Contains an option value that corresponds to an entity in the system. For internal use only.|

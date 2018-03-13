@@ -1,5 +1,5 @@
 ---
-title: Entity Relationships Metadata | Microsoft Docs
+title: Entity Relationship Metadata | Microsoft Docs
 description: Learn about the entity relationship metadata used in the Common Data Service for Apps.
 services: ''
 suite: powerapps
@@ -17,7 +17,7 @@ ms.date: 03/12/2018
 ms.author: jdaly
 ---
 
-# Entity Relationships Metadata
+# Entity Relationship Metadata
 
 When you look at the solution explorer or the three relationship collections in the `EntityMetadata`, you might think that there are three types of entity relationships. Actually, there are only two, as shown in the following table.
 
