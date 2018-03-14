@@ -1,6 +1,6 @@
 ---
-title: [TODO] - title | Microsoft Docs
-description: [TODO] - description 
+title: TODO - title | Microsoft Docs
+description: TODO - description 
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -22,7 +22,7 @@ ms.author: mblythe
 
 [TODO] - introduction
 
-If you don't have a PowerApps subscription, [create a free account](signup-for-powerapps.md) before you begin.
+If you don't have a PowerApps subscription, [create a free account](../signup-for-powerapps.md) before you begin.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -37,12 +37,12 @@ In this tutorial, you learn how to:
 ## Prerequisites
 
 * A [Power BI subscription](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi), with the [Opportunity Analysis Sample](https://docs.microsoft.com/power-bi/sample-opportunity-analysis#get-the-content-pack-for-this-sample) installed
-* A [PowerApps subscription](signup-for-powerapps.md) with Common Data Service for Apps (CDS), with sample data installed
+* A [PowerApps subscription](../signup-for-powerapps.md) with Common Data Service for Apps (CDS), with sample data installed
 * A [PowerApps environment](../../administrator/environments-overview.md) in which you have permissions to modify CDS entities
 * An understanding of the following:
     * [Editing Power BI reports](https://docs.microsoft.com/power-bi/service-the-report-editor-take-a-tour)
-    * [Creating apps in PowerApps](data-platform-create-app-scratch)
-    * [Working with the Common Data Service for Apps](../common-data-service/data-platform-intro)
+    * [Creating apps in PowerApps](data-platform-create-app-scratch.md)
+    * [Working with the Common Data Service for Apps](../common-data-service/data-platform-intro.md)
 
 ## Import the PowerApps custom visual
 [TODO] - possible section intro
