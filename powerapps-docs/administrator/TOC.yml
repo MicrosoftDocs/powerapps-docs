@@ -2,6 +2,8 @@
   href: index.md
 - name: Quickstarts
   items:
+  - name: Create an environment # not in TOC previously
+    href: create-environment.md
   - name: Create a DLP policy # not in TOC previously
     href: create-dlp-policy.md
   - name: View active users in your org
