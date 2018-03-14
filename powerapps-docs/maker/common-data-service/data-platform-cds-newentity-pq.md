@@ -35,7 +35,7 @@ You can also filter, transform, and combine data before you load it into a new o
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Prerequisites
-To follow this topic, you must switch to an [environment](working-with-environments.md) in which you can create entities.
+To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create entities.
 
 ## Specify the source data
 
@@ -75,9 +75,8 @@ To follow this topic, you must switch to an [environment](working-with-environme
 
     ![List of standard and custom entities](./media/data-platform-cds-newentity-pq/entity-list.png)
 
- 
-
-> [!WARNING] If you use Power Query to add data to an existing entity, all data that the entity previously contained will be overwritten.
+> [!WARNING]
+> If you use Power Query to add data to an existing entity, all data that the entity previously contained will be overwritten.
 
 If you click or tap **Existing entity**, you can specify an entity into which you add data from the **Customers** table. You could, for example, add the data to the **Account** entity with which the Common Data Service ships. Under **Source column**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Accounts** entity.
 
