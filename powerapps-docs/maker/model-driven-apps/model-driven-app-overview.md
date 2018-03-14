@@ -139,6 +139,5 @@ For more information about model-driven app development, see these topics.
 [Create a solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-solution)
 
 ## Next steps
-Start building your app by
-[creating a custom entity](create-custom-entity.md)
+[Create a custom entity in PowerApps](../common-data-service/create-custom-entity.md)
 
