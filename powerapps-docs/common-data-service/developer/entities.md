@@ -60,7 +60,7 @@ The Entity metadata includes the following information:
 
 |Data  |Description  |
 |---------|---------|
-|Entity Properties|Each entity has nearly 100 properties that describe how it is identified and what can be done with it.  More information: [Entity Metadatal](entity-metadata.md)|
+|Entity Properties|Each entity has nearly 100 properties that describe how it is identified and what can be done with it.  More information: [Entity Metadata](entity-metadata.md)|
 |Attributes|The entity Attributes property is a collection of attributes. Each attribute has around 50 properties to describe how it is identified, the type of data it contains, how it is formatted, and what can be done with it. More information: [Attribute Metadata](entity-attribute-metadata.md)|
 |Relationships|Three of the entity properties are collections of relationships between entities. These collections contain different types of relationships: Many-To-Many, Many-To-One, and One-To-Many. More information: [Entity Relationships Metadata](entity-relationship-metadata.md)|
 |Privileges|One of the entity properties is a collection of between 0 and 8 privileges that identity the kinds of data operations that can be performed on that entity with a unique identifier associated with each one. These operations include: *Append*, *AppendTo*, *Assign*, *Create*, *Delete*, *Read*, *Share*, and *Write*.|

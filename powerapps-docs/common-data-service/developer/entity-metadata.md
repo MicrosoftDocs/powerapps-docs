@@ -119,7 +119,9 @@ You can create custom activity entities that behave the same way.
 This entity is used to add structure to activity entity `PartyListType` attributes that include references to other entities. You will use this entity when setting values for activity entity attributes like `Email.to` or `PhoneCall.from`. Within the `ActivityParty` entity, you set the `ParticipationTypeMask` attribute to define the role that the reference is playing. Roles include `Sender`, `ToRecipient`, `Organizer` and more.
 
 You can query the `ActivityParty` entity, but you cannot create, retrieve, update, or delete an activity party outside of the activity that it is related to.
-More information: [Dynamics 365 Customer Engagement Developer Guide: ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
+More information: 
+- [Dynamics 365 Customer Engagement Developer Guide: ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
+- [ActivityParty Entity Reference](../reference/entities/activityparty.md)
 
 
 ### Child entities

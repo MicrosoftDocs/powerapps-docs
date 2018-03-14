@@ -220,4 +220,6 @@
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
   - name: For Developers
-    href: ../common-data-service/developer/TOC.yml         
+    href: ../common-data-service/developer/TOC.yml
+- name: Common Data Model
+  href: ./common-data-model/overview.md    
