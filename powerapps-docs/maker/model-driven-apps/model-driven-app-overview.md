@@ -18,7 +18,7 @@ ms.date: 03/21/2018
 ms.author: matp
 
 ---
-# Preview feature: Overview of building a model-driven app
+# Overview of building a model-driven app
 
 Model-driven app design is a no-code or low-code component-focused approach to app development. Unlike canvas app development where the designer has complete control over app layout, with model-driven apps much of the layout is determined for you and largely designated by the components you add to the app. 
 

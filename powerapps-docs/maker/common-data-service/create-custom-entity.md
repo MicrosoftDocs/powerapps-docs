@@ -18,7 +18,7 @@ ms.date: 03/21/2018
 ms.author: matp
 
 ---
-# Preview feature: Create a custom entity in PowerApps
+# Create a custom entity in PowerApps
 
 With [!INCLUDE [powerapps](../../includes/powerapps.md)] you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. [!INCLUDE [powerapps](../../includes/powerapps.md)] app development includes adding standard "out-of-box entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
 
@@ -62,22 +62,24 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
   - **Data type**. *Option Set*
   - **Option set**. *New*
 5. Create the option set
+
     a. Select **Add new item**.
     b. Replace **New option** with *Dog*.
     c. Select **Add new item**.
     d  Replace **New option** with *Cat*.
     e. Select **Save**.
+
     ![New option set](../../media/create-custom-entity/optionset-add-items.png)
-7. Select **Searchable**, and then select **Done**.
-8. On the entity designer toolbar select **Add field**. On the **Field properties** pane, enter or select the following values, and then select **Done**.
+6. Select **Searchable**, and then select **Done**.
+7. On the entity designer toolbar select **Add field**. On the **Field properties** pane, enter or select the following values, and then select **Done**.
   - **Display name**. *Breed*
   - **Data type**. *Text*
   - **Searchable**. *Yes*
-9. On the entity designer toolbar select **Add field**. 
-10. On the **Field properties** pane, enter or select the following values, and then select **Done**. 
+8. On the entity designer toolbar select **Add field**. 
+9. On the **Field properties** pane, enter or select the following values, and then select **Done**. 
   -	**Display name**. *Appointment date*
   - **Data type**. *Date and time*
-11. Select **Save Entity**.
+10. Select **Save Entity**.
 
 ## Add a relationship
 
