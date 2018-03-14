@@ -2,12 +2,10 @@
   href: index.md
   expanded: true
   items:
-    - name: Sign up - trial and paid # Move sign up files from canvas to maker directory
+    - name: Sign up for a 30-day trial version
       href: signup-for-powerapps.md
-    - name: Sign up - community plan
+    - name: Sign up for the PowerApps Community Plan
       href: dev-community-plan.md
-    - name: FAQ for trial plan
-      href: trial-plan.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
@@ -23,10 +21,10 @@
         href: ./canvas-apps/app-from-sharepoint.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
-    - name: Create an app from within SharePoint
-      href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
     - name: Customize a SharePoint list form
       href: ./canvas-apps/customize-list-form.md
+    - name: Create an app from within SharePoint
+      href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
   - name: Tutorials
     items:
     - name: Customize a generated app
