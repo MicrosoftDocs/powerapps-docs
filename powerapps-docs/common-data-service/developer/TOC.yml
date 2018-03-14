@@ -11,8 +11,8 @@
     href: entity-attribute-metadata.md
   - name: Entity Relationships Metadata
     href: entity-relationship-metadata.md
-  - name: Entity Reference
-    href: ../reference/entities/toc.yml
+  # - name: Entity Reference
+  #   href: ../reference/entities/toc.yml
 - name: Apply Business Logic with code
   href: apply-business-logic-with-code.md
 - name: Use Common Data Service for Apps Web Services
