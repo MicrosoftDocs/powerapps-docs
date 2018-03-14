@@ -1,4 +1,8 @@
 - name: Overview
-  href: model-driven-apps-developer-overview.md
-- name: What developers can do with model apps
-  href: what-developers-can-do-with-model-apps.md
+  href: overview.md
+- name: Use web resources
+  href: web-resources.md  
+- name: Client scripting
+  href: client-scripting.md
+- name: Customize commands
+  href: customize-commands.md

@@ -149,4 +149,4 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Solution to
 
 ### See also
 
-[Common Data Service for Apps Developer Overview](common-data-service-for-apps-developer-overview.md)
+[Common Data Service for Apps Developer Overview](overview.md)

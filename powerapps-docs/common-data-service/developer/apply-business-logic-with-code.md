@@ -55,17 +55,3 @@ When you register the plugin to run synchronously for an event, you have options
 
 More information: [Dynamics 365 Customer Engagement Developer Guide: Write plug-ins to extend business processes](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)
 
-## Create a form or grid event handler
-
-> [!NOTE]
-> Before you create event handlers, consider if Business Rules can be applied to meet your requirements. More information: [Dynamics 365 Customer Engagement Customization Guide: Create business rules and recommendations to apply logic in a form](/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
-
-Within the form designer there are properties to associate JavaScript web resource libraries to the form and then to associate specific functions in those libraries to events that occur.
-
-There is a complete set of client APIs you can use to interact with data and visual elements in the form or grid. There are also API to interact with data on the server using the Web API.
-
-Client scripting is powerful because it allows you to provide the most responsive interaction with the user in the form. It is popular because many developers know JavaScript. But it is important to use it appropriately. Scripts should compliment business rule enforced on the server rather than replace them. Logic applied via a script in the model-driven app will not be applied to data entered via a canvas app or any other means where data can be modified. Performance can be impacted as more scripts are added.
-
-> [!IMPORTANT]
-> Interacting directly with the DOM of the page or any undocumented APIs is not supported. The DOM generated for the page may change with different implementations over time. Undocumented APIs may change or be removed without notice. Any of these kinds of changes will cause your script to break.
-More information: [Dynamics 365 Customer Engagement Developer Guide: Client scripting in Customer Engagement using JavaScript](/dynamics365/customer-engagement/developer/clientapi/client-scripting)
