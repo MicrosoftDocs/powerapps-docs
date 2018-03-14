@@ -222,4 +222,4 @@
   - name: For Developers
     href: ../common-data-service/developer/TOC.yml
 - name: Common Data Model
-  href: ./common-data-model/overview.md    
+  href: ../common-data-model/overview.md    
