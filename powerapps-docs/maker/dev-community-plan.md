@@ -113,7 +113,7 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 **A:** No, you can only have one individual environment, which is created for you by PowerApps when you sign up for the Community Plan.
 
-**Q:** What's the difference between PowerApps Plan 2 Trial and PowerApps Community Plan; and which one should I sign-up for?
+**Q:** What's the difference between PowerApps Plan 2 Trial and PowerApps Community Plan; and which one should I sign up for?
 
 **A:** Both PowerApps Plan 2 Trial and PowerApps Community Plan are free, but are created for different purposes:
 
@@ -121,9 +121,9 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 **PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
 
-**Q:** Can I sign-up with my personal account?
+**Q:** Can I sign up with my personal account?
 
-**A:** No, you can only sign-up with your [work or school account](signup-for-powerapps.md#faq). We currently do not support signing up with a personal account.
+**A:** No, you can only sign up with your [work or school account](signup-for-powerapps.md#faq). We currently do not support signing up with a personal account.
 
 **Q:** Can I delete my individual environment?
 
