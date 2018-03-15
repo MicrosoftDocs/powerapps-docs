@@ -1,5 +1,5 @@
 ---
-title: "SLAItem Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "SLAItem Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SLAItem entity."
 
 services: ''

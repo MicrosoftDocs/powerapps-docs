@@ -1,5 +1,5 @@
 ---
-title: "Territory Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "Territory Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the Territory entity."
 
 services: ''

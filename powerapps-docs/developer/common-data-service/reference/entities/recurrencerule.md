@@ -1,5 +1,5 @@
 ---
-title: "RecurrenceRule Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "RecurrenceRule Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the RecurrenceRule entity."
 
 services: ''

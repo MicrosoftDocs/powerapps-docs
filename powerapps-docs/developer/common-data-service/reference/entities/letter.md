@@ -1,5 +1,5 @@
 ---
-title: "Letter Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "Letter Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the Letter entity."
 
 services: ''

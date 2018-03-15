@@ -1,5 +1,5 @@
 ---
-title: "msdyn_odatav4ds Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "msdyn_odatav4ds Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_odatav4ds entity."
 
 services: ''

@@ -1,5 +1,5 @@
 ---
-title: "IsvConfig Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "IsvConfig Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the IsvConfig entity."
 
 services: ''

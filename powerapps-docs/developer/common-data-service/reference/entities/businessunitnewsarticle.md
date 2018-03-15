@@ -1,5 +1,5 @@
 ---
-title: "BusinessUnitNewsArticle Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "BusinessUnitNewsArticle Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the BusinessUnitNewsArticle entity."
 
 services: ''

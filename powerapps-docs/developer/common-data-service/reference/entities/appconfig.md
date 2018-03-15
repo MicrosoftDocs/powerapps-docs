@@ -1,5 +1,5 @@
 ---
-title: "AppConfig Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "AppConfig Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the AppConfig entity."
 
 services: ''

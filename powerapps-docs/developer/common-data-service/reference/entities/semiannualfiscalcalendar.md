@@ -1,5 +1,5 @@
 ---
-title: "SemiAnnualFiscalCalendar Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "SemiAnnualFiscalCalendar Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SemiAnnualFiscalCalendar entity."
 
 services: ''

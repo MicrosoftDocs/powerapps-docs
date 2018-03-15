@@ -1,5 +1,5 @@
 ---
-title: "MailboxTrackingFolder Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "MailboxTrackingFolder Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the MailboxTrackingFolder entity."
 
 services: ''

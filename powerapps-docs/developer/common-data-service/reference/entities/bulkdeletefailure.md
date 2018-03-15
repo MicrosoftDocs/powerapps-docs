@@ -1,5 +1,5 @@
 ---
-title: "BulkDeleteFailure Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "BulkDeleteFailure Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the BulkDeleteFailure entity."
 
 services: ''

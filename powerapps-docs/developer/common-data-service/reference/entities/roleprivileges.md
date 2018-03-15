@@ -1,5 +1,5 @@
 ---
-title: "RolePrivileges Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "RolePrivileges Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the RolePrivileges entity."
 
 services: ''

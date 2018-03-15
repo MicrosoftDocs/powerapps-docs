@@ -1,5 +1,5 @@
 ---
-title: "DuplicateRecord Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "DuplicateRecord Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the DuplicateRecord entity."
 
 services: ''

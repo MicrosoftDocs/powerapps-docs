@@ -1,5 +1,5 @@
 ---
-title: "SdkMessageFilter Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "SdkMessageFilter Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageFilter entity."
 
 services: ''

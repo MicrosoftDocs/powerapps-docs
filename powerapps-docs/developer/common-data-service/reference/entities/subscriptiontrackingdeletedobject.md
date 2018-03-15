@@ -1,5 +1,5 @@
 ---
-title: "SubscriptionTrackingDeletedObject Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "SubscriptionTrackingDeletedObject Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SubscriptionTrackingDeletedObject entity."
 
 services: ''

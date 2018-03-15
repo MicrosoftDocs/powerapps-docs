@@ -20,7 +20,7 @@ ms.author: jdaly
 ---
 # About the Entity Reference
 
-Use this reference to understand the available operations that can be performed for specific entities, the default attributes attributes of each entity and the relationships between entities.
+Use this reference to understand the available operations that can be performed for specific entities, the default attributes of each entity and the relationships between entities.
 
 > [!NOTE]
 > This reference includes only entities where:

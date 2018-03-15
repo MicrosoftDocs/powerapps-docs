@@ -1,5 +1,5 @@
 ---
-title: "ReportVisibility Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "ReportVisibility Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ReportVisibility entity."
 
 services: ''

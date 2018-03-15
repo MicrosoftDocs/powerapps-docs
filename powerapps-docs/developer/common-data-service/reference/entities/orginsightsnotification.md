@@ -1,5 +1,5 @@
 ---
-title: "OrgInsightsNotification Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "OrgInsightsNotification Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the OrgInsightsNotification entity."
 
 services: ''

@@ -1,5 +1,5 @@
 ---
-title: "Category Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "Category Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the Category entity."
 
 services: ''

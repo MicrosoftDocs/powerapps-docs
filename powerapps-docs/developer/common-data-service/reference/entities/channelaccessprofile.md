@@ -1,5 +1,5 @@
 ---
-title: "ChannelAccessProfile Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "ChannelAccessProfile Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ChannelAccessProfile entity."
 
 services: ''

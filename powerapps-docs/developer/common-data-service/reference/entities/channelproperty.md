@@ -1,5 +1,5 @@
 ---
-title: "ChannelProperty Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "ChannelProperty Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ChannelProperty entity."
 
 services: ''
