@@ -66,7 +66,7 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
     a. Select **Add new item**.
     b. Replace **New option** with *Dog*.
     c. Select **Add new item**.
-    d  Replace **New option** with *Cat*.
+    d. d  Replace **New option** with *Cat*.
     e. Select **Save**.
 
     ![New option set](media/create-custom-entity/optionset-add-items.png)

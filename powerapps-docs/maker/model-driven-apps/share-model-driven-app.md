@@ -47,7 +47,7 @@ The [!INCLUDE [powerapps](../../includes/powerapps.md)] environment includes [pr
 
 Because the environment that will maintain the pet grooming records is also used for other apps that the Contoso business runs, a custom security role specific to the pet grooming app will be created. Additionally, two different sets of access privileges are required.
 - Pet grooming technicians only need to read, update, and attach other records so their security role will have read, write, and append privileges. 
-- Pet grooming schedulers need all the privileges that pet grooming technicians have, plus the ability to create, append To, delete, and share, so their security role will have create, read, write, append, delete, assign, assign to, and share privileges.
+- Pet grooming schedulers need all the privileges that pet grooming technicians have, plus the ability to create, append to, delete, and share, so their security role will have create, read, write, append, delete, assign, append to, and share privileges.
 
 For more information about access and scope privileges, see [Security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
