@@ -54,7 +54,7 @@ For more information about access and scope privileges, see [Security roles](htt
 ## Create a custom security role
 1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site, select **Apps** > **…**> **Share link**.
 2. From the **Share this app** dialog, under **Create a security role** select **Security Settings**.
-3. On the **Settings** page, select **New**. 
+3. On the **Settings** page, select **New**.  
 
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
 5. Select the **Custom Entities** tab, and then locate the custom entity that you want. For this example, the custom entity named **Pet** is used. 
