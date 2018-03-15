@@ -112,14 +112,15 @@ Notice that when you add a relationship, a field with the data type **Lookup** i
 
 Skip this step if you only want to use the Pet entity in a canvas app. 
 
-1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] left navigation pane, select **Advanced**.
-2. On the left navigation of the solution window, select **Entities**, expand **Pet**, and then select **Forms**.
-3. Select **Information** next to the **Main** form type to open the form editor.
+1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] left navigation pane, select **Model-driven**.
+2. On the left navigation pane, select **Advanced**.
+3. On the left navigation of the solution window, select **Entities**, expand **Pet**, and then select **Forms**.
+4. Select **Information** next to the **Main** form type to open the form editor.
     ![Edit main form](media/create-custom-entity/main-form-edit.png)
-4. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** fields located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
+5. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** fields located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
     ![Select fields for main form](media/create-custom-entity/main-form-edit2.png) 
-5. Select **Save and Close**.
-6. On the solution window, select **Publish All Customizations**.
+6. Select **Save and Close**.
+7. On the solution window, select **Publish All Customizations**.
     ![Publish all customizations](media/create-custom-entity/publish-all-customizations.png)
 
 ## Add the custom entity to an app
