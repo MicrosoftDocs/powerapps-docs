@@ -109,9 +109,11 @@ The solution explorer is a comprehensive tool used for advanced model-driven app
 
 ![Solution explorer](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png)
 
-To open solution explorer, select the **Advanced** tab from the left pane of [!INCLUDE [powerapps](../../includes/powerapps.md)]. 
+To open solution explorer, select **Model-driven** on the left pane of [!INCLUDE [powerapps](../../includes/powerapps.md)].
 
-![Advanced tab](media/model-driven-app-overview/advanced.png)
+  ![Select Model-driven](media/model-driven-app-overview/app-type-picker-mod.png)
+
+Then select the **Advanced** tab. 
 
 ## Model-driven app development resources
 For more information about model-driven app development, see these topics.
