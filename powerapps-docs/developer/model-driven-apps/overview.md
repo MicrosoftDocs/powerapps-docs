@@ -26,11 +26,11 @@ Model-driven apps are primarly a no-code or low-code component focused approach 
 If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience building model-driven apps. There are some new designers available to you, but generally the concepts are the same.
 
 > [!NOTE]
-> Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the service level, see [Common Data Service for Apps Developer Overview](../../common-data-service/developer/overview.md).
+> Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the service level, see [Common Data Service for Apps Developer Overview](../common-data-service/overview.md).
 > Content in this section will refer only to extensions developers can do that apply to the experience for users of model-drven apps. 
 
 If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help developers get started working with model-driven apps.
- <!-- This isn't in my fork Matt P is adding - [Overview of building a model-driven app](../model-driven-app-overview.md) -->
+ <!-- TODO This isn't in my fork Matt P is adding - [Overview of building a model-driven app](../model-driven-app-overview.md) -->
 
 > [!NOTE]
 > Because the Common Data Service for Apps in this preview release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Dynamics 365 Customer Engagement Developer Guide](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
