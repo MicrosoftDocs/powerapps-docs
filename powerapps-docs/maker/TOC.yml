@@ -190,13 +190,17 @@
 - name: Model-driven apps
   href: ./model-driven-apps/_placeholder01.md
   items:
-  - name: A model-driven apps topic
-    href: ./model-driven-apps/_placeholder02.md
+  - name: Overview of building a model-driven app
+    href: ./model-driven-apps/model-driven-app-overview.md
+  - name: Share a model-driven app
+    href: ./model-driven-apps/share-model-driven-app.md
+  - name: Run a model-driven app on a mobile device
+    href: ./model-driven-apps/run-app-client-model-driven.md
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
   - name: Create a custom entity
-    href: ./common-data-service/data-platform-create-entity.md
+    href: ./common-data-service/create-custom-entity.md
   - name: Create a custom entity from data
     href: ./common-data-service/data-platform-cds-newentity-pq.md
   - name: Manage fields
