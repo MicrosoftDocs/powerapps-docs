@@ -2,6 +2,8 @@
   href: index.md
 - name: Quickstarts
   items:
+  - name: Create an environment # not in TOC previously
+    href: create-environment.md
   - name: Create a DLP policy # not in TOC previously
     href: create-dlp-policy.md
   - name: View active users in your org
@@ -18,8 +20,6 @@
     href: pricing-billing-skus.md
   - name: Environments overview
     href: environments-overview.md
-  - name: Administer environments
-    href: environments-administration.md
   - name: Introduction to data groups
     href: introduction-to-data-groups.md
   - name: Regions overview
@@ -34,6 +34,10 @@
     href: create-database.md
   - name: Configure database security
     href: database-security.md
+  - name: Administer environments
+    href: environments-administration.md
+  - name: Manage apps in your org # not in TOC previously
+    href: admin-manage-apps.md
   - name: Move an app between tenants or environments
     href: environment-and-tenant-migration.md
   - name: Export and import resources

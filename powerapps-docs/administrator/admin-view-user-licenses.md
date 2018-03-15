@@ -52,7 +52,7 @@ If a user has left the organization, the list will show **Unknown** in the **Use
 To add user licenses, open the [Office 365 admin center](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 ## Next steps
-In this quickstart, you learned how to download and view a list of active users in your organization. To learn what else you can do with PowerApps, continue to the PowerApps tutorials.
+In this quickstart, you learned how to download and view a list of active users in your organization. To learn how to download and view a list of apps created in your organization, continue to the next quickstart.
 
 > [!div class="nextstepaction"]
-> [PowerApps Tutorials](../maker/canvas-apps/get-started-create-from-blank.md)
+> [Download a list of apps created in your organization](admin-view-apps.md)
