@@ -28,7 +28,7 @@ If you're new to app building, PowerApps provides templates and sample data that
 ## Generate an app automatically
 In PowerApps, you can easily generate an app automatically from these data sources, among others:
 
-* [the Common Data Service for Apps](data-platform-create-app.md)
+* [Common Data Service for Apps](data-platform-create-app.md)
 * [SharePoint](app-from-sharepoint.md)
 * [Excel](get-started-create-from-data.md)
 * [SQL Server](connections/connection-azure-sqldatabase.md)
