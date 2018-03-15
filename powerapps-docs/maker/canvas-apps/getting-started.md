@@ -28,13 +28,12 @@ If you're new to app building, PowerApps provides templates and sample data that
 ## Generate an app automatically
 In PowerApps, you can easily generate an app automatically from these data sources, among others:
 
-* [Generate an app from the Common Data Service](data-platform-create-app.md)
-* [Generate an app from SharePoint](generate-app-from-sharepoint-list-interface.md)
-* [Generate an app in PowerApps to manage data in a SharePoint list](app-from-sharepoint.md)
-* [Generate an app from Excel](get-started-create-from-data.md)
-* [Generate an app from SQL Server](connections/connection-azure-sqldatabase.md)
-* [Generate an app from Salesforce](add-manage-connections.md)
-* [Generate an app from Dynamics 365](connections/connection-dynamics-crmonline.md)
+* [the Common Data Service for Apps](data-platform-create-app.md)
+* [SharePoint](app-from-sharepoint.md)
+* [Excel](get-started-create-from-data.md)
+* [SQL Server](connections/connection-azure-sqldatabase.md)
+* [Salesforce](add-manage-connections.md)
+* [Dynamics 365](connections/connection-dynamics-crmonline.md)
 
 You can also [generate an app from a template](get-started-test-drive.md). Each template is based on fictitious data in a cloud account, such as Dropbox. Explore specific screens and UI elements (called [controls](reference-properties.md)) to understand how they're configured, and experiment with customization to discover techniques that you can apply to your own apps.
 
@@ -55,9 +54,9 @@ You can run your own apps - and any apps shared with you - on Windows, iOS, Andr
 
 For more information, check out the following topics:
 
-* [Share an app in PowerApps](share-app.md)
-* [Use PowerApps in a web browser](../../user/run-app-browser.md)
-* [Use PowerApps on a phone or tablet](../../user/run-app-client.md)
+* [Share an app with others](share-app.md)
+* [Run apps in a web browser](../../user/run-app-browser.md)
+* [Run apps on a phone or tablet](../../user/run-app-client.md)
 
 ## Get help and support
 If you have a question about PowerApps, you can get help in several ways:
