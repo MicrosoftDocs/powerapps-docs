@@ -41,14 +41,12 @@ You can also [generate an app from a template](get-started-test-drive.md). Each 
 ## Customize an app
 When you generate an app automatically, PowerApps designs the default interface around your data, but you can customize the app's appearance and behavior based on your users' workflows. For example, you might want to change which types of data appear, how they're sorted, or even whether users specify a number by typing it or adjusting a slider. You can add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls to optimize your app's performance.
 
-For ideas on how to improve your app even further, you can open a sample app to get a sense of what you can do with some creativity and a bit of experience. For more information, see [Use a sample app](open-and-run-a-sample-app.md).
+For ideas on how to improve your app even further, you can [open a sample app](open-and-run-a-sample-app.md) to get a sense of what you can do with some creativity and a bit of experience.
 
 ![Sample apps](./media/getting-started/sample-apps.png)
 
 ## Create an app from scratch
-After you've generated an app or two automatically and gained some experience with customization, you can create an app from scratch. By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
-
-For more information, see [Create an app from scratch](get-started-create-from-blank.md).
+After you've generated an app or two automatically and gained some experience with customization, you can [create an app from scratch](get-started-create-from-blank.md). By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
 
 ## Share and run an app
 When you finish your app and save it to the cloud, you can then share it with others in your organization. You control the level of permissions on your app - you decide which users or groups can run the app, and whether they can also customize it or share it with additional people in the organization.
@@ -62,15 +60,15 @@ For more information, check out the following topics:
 * [Use PowerApps on a phone or tablet](../../user/run-app-client.md)
 
 ## Get help and support
-If you have a question about PowerApps, there are several ways to get help:
+If you have a question about PowerApps, you can get help in several ways:
 
-* Explore the step-by-step and reference topics in the navigation pane on the left.
+* Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
 * Work through the self-paced [Guided Learning courses](https://docs.microsoft.com/powerapps/guided-learning/).
-* Read and post in the [PowerApps Community](https://aka.ms/powerapps-community). This is a place where anyone who uses PowerApps can post a question and others can answer. Before you post a question, search the community to see if your question has already been asked and answered.
+* Read and post in the [PowerApps Community](https://aka.ms/powerapps-community), where anyone who uses PowerApps can post a question and others can answer. Before you post a question, search the community to see whether your question has already been answered.
 * Check out the [upcoming webinars](webinars-listing.md#upcoming-webinars), which can help you leverage the features and functions of PowerApps. You can also access [past webinars](webinars-listing.md#past-webinars) on demand.
-* Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a PowerApps administrator for your organization, you can also open a support ticket in the [admin portal](https://portal.office.com/Support/Support.aspx).
+* Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a PowerApps administrator for your organization, you can also open a support ticket in the [PowerApps admin center](https://portal.office.com/Support/Support.aspx).
 
-In addition, we want your help to make PowerApps great!
+In addition, we want your help to make PowerApps even better!
 
-* To submit an idea for how we can make PowerApps better, go to [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas) and tell us about it.
-* To report an issue that you're having with PowerApps, go to the [PowerApps Forum](https://powerusers.microsoft.com/t5/General-Discussion/bd-p/PowerAppsForum1) and provide details so we can look into it.
+* To submit an idea for how we can improve PowerApps, go to [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas), and tell us about it.
+* To report an issue that you're having with PowerApps, go to the [PowerApps Forum](https://powerusers.microsoft.com/t5/General-Discussion/bd-p/PowerAppsForum1), and provide details so that we can look into it.
