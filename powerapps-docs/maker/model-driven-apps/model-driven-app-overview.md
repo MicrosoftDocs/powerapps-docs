@@ -22,7 +22,7 @@ ms.author: matp
 
 Model-driven app design is a no-code or low-code component-focused approach to app development. Unlike canvas app development where the designer has complete control over app layout, with model-driven apps much of the layout is determined for you and largely designated by the components you add to the app. 
 
-![Sample model-driven app](../../media/model-driven-app-overview/model-app-sample.png)
+![Sample model-driven app](media/model-driven-app-overview/model-app-sample.png)
 
 > [!IMPORTANT]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
@@ -49,7 +49,7 @@ Defining and enforcing consistent business processes is a key aspect of model-dr
 ### Composing the app
 After modeling data and defining processes, you build your app by selecting and configuring the components you need using the app designer.
 
-![App designer](../../media/model-driven-app-overview/app-designer.png)
+![App designer](media/model-driven-app-overview/app-designer.png)
 
 ## Model-driven app components and designers
 A well designed model-driven app consists of a several components the designer selects to build the appearance and functionality of the finished app. The components and component properties that designers use to make up an app become the metadata. 
@@ -76,7 +76,7 @@ These components determine how users interact with the app.
 |Form     | A set of data-entry fields for a given entity that matches the items that your organization tracks for the entity. For example, a set of data-entry fields that where user’s input relevant information to track a customer’s previous orders along with specific requested reorder dates.        | Form designer        |
 |View     | Views define how a list of records for a specific entity is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer       |
 
-![App designer and form designer](../../media/model-driven-app-overview/app-and-form-designers.png)
+![App designer and form designer](media/model-driven-app-overview/app-and-form-designers.png)
 
 ### Logic
 Determines the business processes, rules, and automation the app will have. [!INCLUDE [powerapps](../../includes/powerapps.md)] makers use a designer that is specific to the type of process or rule. 
@@ -90,7 +90,7 @@ Determines the business processes, rules, and automation the app will have. [!IN
 |Business rule     | Used to apply rule or recommendation logic to a form, such as to set field requirements, hide fields, or validate data. App designers use a simple interface to implement and maintain fast-changing and commonly used rules.         |  Business rule designer       |
 |Flow     | Flow is a cloud-based service that lets you create automated workflows between apps and services to get notifications, synchronize files, collect data, and more.        | Microsoft Flow        |
 
-![Workflow, action, and business process flow designers](../../media/model-driven-app-overview/designer-mash.png)
+![Workflow, action, and business process flow designers](media/model-driven-app-overview/designer-mash.png)
 
 ### Visualizations
 Determines what type of data visualizations and reporting the app will have available.
@@ -102,16 +102,16 @@ Determines what type of data visualizations and reporting the app will have avai
 |Dashboard     | Functions as a palate for one or more graphic visualizations that provide an overview of actionable business data.        | Dashboard designer        |
 |Embedded Power BI     | Add embedded Power BI tiles and dashboards to your app. Power BI is a cloud-based service that provides business intelligence insight.        |  Combination of chart designer, dashboard designer, and Power BI       |
 
-![Sample dashboard](../../media/model-driven-app-overview/dashboard-designer.png)
+![Sample dashboard](media/model-driven-app-overview/dashboard-designer.png)
 
 ### Advanced model-driven app making
 The solution explorer is a comprehensive tool used for advanced model-driven app building. Within the solution explorer you can navigate through a hierarchy that consists of all app components using the navigation pane on the left side of the tool.
 
-![Solution explorer](../../media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png)
+![Solution explorer](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png)
 
 To open solution explorer, select the **Advanced** tab from the left pane of [!INCLUDE [powerapps](../../includes/powerapps.md)]. 
 
-![Advanced tab](../../media/model-driven-app-overview/advanced.png)
+![Advanced tab](media/model-driven-app-overview/advanced.png)
 
 ## Model-driven app development resources
 For more information about model-driven app development, see these topics.

@@ -58,17 +58,17 @@ For more information about access and scope privileges, see [Security roles](htt
 
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
 5. Select the **Custom Entities** tab, and then locate the custom entity that you want. For this example, the custom entity named **Pet** is used. 
-6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](../../media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
+6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
 
-![New security role](../../media/share-model-driven-app/custom-security-role.png)
+![New security role](media/share-model-driven-app/custom-security-role.png)
 
-7. Because the pet grooming app also has a relationship with the account entity, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](../../media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
+7. Because the pet grooming app also has a relationship with the account entity, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
 8. Select **Save and Close**. 
 9. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 
 10. Select the **Custom Entities** tab, and then locate the **Pet** entity. 
-11. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](../../media/share-model-driven-app/organizational-scope-privilege.png) has been selected:
+11. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected:
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
-12. Because the pet grooming app also has a relationship with the account entity and schedulers must be able to create and modify account records select the **Core Records** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope](../../media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
+12. Because the pet grooming app also has a relationship with the account entity and schedulers must be able to create and modify account records select the **Core Records** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
 13. Select **Save and Close**.
 
@@ -80,7 +80,7 @@ Security roles control a user’s access to data through a set of access levels 
 2. In the list that is displayed, select the pet groomers.
 3. Select **Manage Roles**.
 
-![Manage roles](../../media/share-model-driven-app/select-users-for-security-roles.png)
+![Manage roles](media/share-model-driven-app/select-users-for-security-roles.png)
 
 4. In the **Manage User Roles** dialog box, select the **Pet Grooming Technicians** security role that you created earlier, and then select **OK**.
 
@@ -96,18 +96,19 @@ Security roles control a user’s access to data through a set of access levels 
 2. From the **Share this app** dialog box, under **Add the security role to your app** select **My Apps**.
 3. In the lower-right corner of the app tile of the Contoso Pet Grooming app, select **More options (...)**, and then select **Manage Roles**.
 
-    ![Manage roles for the app](../../media/share-model-driven-app/manage-roles.png)
+    ![Manage roles for the app](media/share-model-driven-app/manage-roles.png)
 
 4. In the **Roles** section, you can choose whether to give app access to all security roles or selected roles. Select the **Pet Grooming Schedulers** and **Pet Grooming Technicians** roles you created earlier.
 
-    ![Select security roles for the app](../../media/share-model-driven-app/app-security-roles.png)
+    ![Select security roles for the app](media/share-model-driven-app/app-security-roles.png)
 
 5. Select **Save**.
  
 ## Share the link to your app
 1. In the lower-right corner of the app tile of the **Contoso Pet Grooming** app, select **More options (...)**, and then select **Open in App Designer**.
 2. In the right pane of the app designer, select **Properties**, next to **Web URL** select the copy app URL icon.
-    ![Copy app URL](../../media/share-model-driven-app/app-designer-copy-web-url.png)
+    
+    ![Copy app URL](media/share-model-driven-app/app-designer-copy-web-url.png)
  3. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
 
 ## About predefined security roles

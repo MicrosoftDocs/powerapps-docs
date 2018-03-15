@@ -42,7 +42,7 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
 ## Create a custom entity
 
 1. On the left navigation pane under **Common Data Service**, select **Entities** and then select **New entity**.
-    ![New entity](../../media/create-custom-entity/create-new-entity.png)
+    ![New entity](media/create-custom-entity/create-new-entity.png)
 2. In the right pane, enter the following values, and then select **Next**.
   - **Display name**: *Pet* 
   - **Description**: *Pets serviced in the grooming facility.*
@@ -55,7 +55,7 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
   - Change the **Display name** from **Primary name** to *Pet Name*
   -	Select **Searchable**
 
-    ![Change primary field](../../media/create-custom-entity/primary-field.png)
+    ![Change primary field](media/create-custom-entity/primary-field.png)
 3. Select **Done**.
 4. On the entity designer toolbar select **Add** field. On the **Field properties** pane, enter or select the following values and options.
   - **Display name**. *Species*
@@ -69,7 +69,7 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
     d  Replace **New option** with *Cat*.
     e. Select **Save**.
 
-    ![New option set](../../media/create-custom-entity/optionset-add-items.png)
+    ![New option set](media/create-custom-entity/optionset-add-items.png)
 6. Select **Searchable**, and then select **Done**.
 7. On the entity designer toolbar select **Add field**. On the **Field properties** pane, enter or select the following values, and then select **Done**.
   - **Display name**. *Breed*
@@ -88,7 +88,7 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
 3. Select **Save Entity**.
 
 Notice that when you add a relationship, a field with the data type **Lookup** is automatically added to your list of fields on the **Fields** tab.
-    ![Account lookup field](../../media/create-custom-entity/account-lookup-field.png)
+    ![Account lookup field](media/create-custom-entity/account-lookup-field.png)
 
 ## Customize a view
 
@@ -100,7 +100,7 @@ Notice that when you add a relationship, a field with the data type **Lookup** i
   - Species
 3. Select the **Created On** column, select **Remove**, and then select **OK** to confirm the column removal.
 4. To arrange the columns, select the column you want to move and then use the <- and -> arrow buttons until your view looks like this.
-    ![Active pets view](../../media/create-custom-entity/active-pets-view.png)
+    ![Active pets view](media/create-custom-entity/active-pets-view.png)
 5. On the view designer toolbar, select **Save and Close**.  
 6. Select **Save Entity**.
 
@@ -111,22 +111,22 @@ Skip this step if you only want to use the Pet entity in a canvas app.
 1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] left navigation pane, select **Advanced**.
 2. On the left navigation of the solution window, select **Entities**, expand **Pet**, and then select **Forms**.
 3. Select **Information** next to the **Main** form type to open the form editor.
-    ![Edit main form](../../media/create-custom-entity/main-form-edit.png)
+    ![Edit main form](media/create-custom-entity/main-form-edit.png)
 4. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** fields located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
-    ![Select fields for main form](../../media/create-custom-entity/main-form-edit2.png) 
+    ![Select fields for main form](media/create-custom-entity/main-form-edit2.png) 
 5. Select **Save and Close**.
 6. On the solution window, select **Publish All Customizations**.
-    ![Publish all customizations](../../media/create-custom-entity/publish-all-customizations.png)
+    ![Publish all customizations](media/create-custom-entity/publish-all-customizations.png)
 
 ## Add the custom entity to an app
 
 Now your entity is ready to be used to build an app, such as this canvas app that uses a phone layout.
 
-![Example canvas app](../../media/create-custom-entity/pet-grooming-canvas-app.png)
+![Example canvas app](media/create-custom-entity/pet-grooming-canvas-app.png)
 
 Or added to a model-driven app.
 
-![Example model-driven app](../../media/create-custom-entity/pet-grooming-model-app.png)
+![Example model-driven app](media/create-custom-entity/pet-grooming-model-app.png)
 
 ## Next steps
 

@@ -36,4 +36,4 @@ If you haven’t already, share the app and the app URL. Learn more: [Preview fe
 2.	If your account is associated with more than one app, a list of available apps appears. Select the app you want to run. 
 3.	The app appears on your mobile device, such as a phone.
 
-   ![Unified Interface app running on a phone](../../media/run-app-client-model-driven/unified-client-on-phone.png)
+   ![Unified Interface app running on a phone](media/run-app-client-model-driven/unified-client-on-phone.png)
