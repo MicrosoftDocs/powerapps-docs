@@ -121,7 +121,7 @@ This entity is used to add structure to activity entity `PartyListType` attribut
 You can query the `ActivityParty` entity, but you cannot create, retrieve, update, or delete an activity party outside of the activity that it is related to.
 More information: 
 - [Dynamics 365 Customer Engagement Developer Guide: ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
-- [ActivityParty Entity Reference](../reference/entities/activityparty.md)
+<!-- - [ActivityParty Entity Reference](../reference/entities/activityparty.md) -->
 
 
 ### Child entities
