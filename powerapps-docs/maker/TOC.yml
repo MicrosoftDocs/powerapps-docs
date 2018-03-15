@@ -219,3 +219,7 @@
     href: ./common-data-service/data-platform-interactive-excel.md
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
+  - name: For Developers
+    href: ../developer/common-data-service/TOC.yml
+- name: Common Data Model
+  href: ../common-data-model/overview.md    
