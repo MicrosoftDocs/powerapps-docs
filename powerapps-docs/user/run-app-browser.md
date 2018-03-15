@@ -29,7 +29,7 @@ Sign in to Dynamics 365 at [https://home.dynamics.com]([https://home.dynamics.co
 ## Find an app on the Home page
 The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You can also filter the list to show only apps created by a specific source, such as PowerApps. To do this, click or tap **Filter** and then select the source.
 
-If you've recently installed the app, it might not immediately appear in the list of apps. Click or tap **Sync** to show all of your apps. This process may take up to a minute.
+If you've recently installed the app, it might not immediately appear in the list of apps. Click or tap **Sync** to show all your apps. This process may take up to a minute.
 
 ![](./media/run-app-browser/dynamics-365-home.png)
 
