@@ -195,7 +195,7 @@
   - name: A model-driven apps topic
     href: ./model-driven-apps/_placeholder02.md
   - name: For Developers
-    href: ../model-driven-apps/developer/TOC.yml       
+    href: ../developer/model-driven-apps/TOC.yml       
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
@@ -220,6 +220,6 @@
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
   - name: For Developers
-    href: ../common-data-service/developer/TOC.yml
+    href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
   href: ../common-data-model/overview.md    
