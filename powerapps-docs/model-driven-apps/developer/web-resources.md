@@ -1,0 +1,28 @@
+---
+title: Use web resources | Microsoft Docs
+description: Learn how developers use web resources within model-driven apps.
+services: ''
+suite: powerapps
+documentationcenter: na
+author: JimDaly
+manager: faisalmo
+editor: ''
+tags: ''
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 03/13/2018
+ms.author: jdaly
+---
+
+# Use web resources
+
+There is a virtual folder called `webresources` within each Common Data Service for Apps instance where you can upload HTML, JS, CSS, and image files and access each of them by name in your browser. These files can refer to each other using relative path names. This provides all the building blocks you need to make web applications using files that are processed within the authenticated session of your browser. Using only client-side code with AJAX techniques, you can create rich applications that can run within a browser window or within an IFrame in a form or dashboard. 
+
+Most commonly, you will use JavaScript web resources to add event handler functions to forms and commands.
+
+More information:
+- [Client scripting with model-driven apps](client-scripting.md)
+- [Dynamics 365 Customer Engagement Developer Guide: Web resources](/dynamics365/customer-engagement/developer/web-resources)
