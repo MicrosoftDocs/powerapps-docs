@@ -2,7 +2,6 @@ The following technologies are often used with PowerApps to build and share robu
 
 * **Microsoft Flow** - create automated workflows between your favorite apps and services
 * **Data sources, connections and connectors, and gateways** - bring cloud and on-premises data into your apps
-* **Common Data Services** - integrate business data using the common data model
 * **Microsoft Dynamics 365** - run all your business apps in the web
 * **Microsoft AppSource** - share your apps into this centralized place for Microsoft and our many partners
 
@@ -15,11 +14,6 @@ The following technologies are often used with PowerApps to build and share robu
 There are many **data sources** that you might care about, and PowerApps uses **connectors** to make **connections** to these data sources. Some of the most popular data sources are shown below—many of them are cloud services, like Salesforce. Connectors might not feel like the coolest part of app development, but they are essential to working with data that you, your colleagues, and your customers care about. For data that is stored on-premises rather than in the cloud, you use a **gateway** to provide a reliable connection between PowerApps and your data source. The gateway sits on an on-premises computer and communicates with PowerApps.
 
 ![PowerApps data sources and connectors](./media/learning-powerapps-parts/powerapps-data.png)
-
-### Microsoft Common Data Service
-The **Common Data Service** makes it easy to integrate business data from multiple sources. The service features a **common data model** that includes many **entities** common to apps and business processes: entities like Contact, Product, and Sales Order. The service stores the data in a scalable and reliable way, and makes the data available so that multiple applications can use it. The applications can be apps that you build in PowerApps, other Microsoft applications, or third party applications. The image below shows a portion of the **Contact** entity in web.powerapps.com.
-
-![PowerApps contact entity](./media/learning-powerapps-parts/powerapps-contact.png)
 
 ### Microsoft Dynamics 365
 **Dynamics 365** is a cloud service with purpose-built apps that enable you to address specific business needs like sales automation, operations, or customer service. In PowerApps, you share apps into AppSource, then users you share with view and run those apps in Dynamics 365, as well as on mobile devices. The advantage of having the apps in Dynamics 365 is that you have **one place to run all your business apps** - from creators in your organization, from Microsoft, and from third parties.

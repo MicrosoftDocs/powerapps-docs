@@ -45,11 +45,3 @@ This brings us to the end of exploring the generated app, and taking a look behi
 Before moving on to the next section, we want to loop back to SharePoint and show you how the app is now integrated with the list experience. As you can see **FlooringApp** now functions as a *view* of the list, and you launch the app by clicking **Open**. This provides a simple way to manage your lists with a friendly customized experience.
 
 ![App as view of Sharepoint list](./media/learning-spo-app-explore-formulas/list-view.png)
-
-Now that you've gone through the SharePoint app section, you have a choice about where to go next:
-
-* [Manage apps](https://docs.microsoft.com/powerapps/guided-learning/manage-apps#step-1)
-* [Create and customize an app from the Common Data Service](https://docs.microsoft.com/powerapps/guided-learning/create-app-cds#step-1)
-
-The management section shows you how to share and version apps, and introduces environments, which are containers for apps, data, and other resources. We recommend that everyone go through the management section at some point, but the Common Data Service section has some great information too, including more app customizations. 
-
