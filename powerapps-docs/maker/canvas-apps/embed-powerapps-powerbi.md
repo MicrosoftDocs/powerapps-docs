@@ -1,6 +1,6 @@
 ---
-title: TODO - title | Microsoft Docs
-description: TODO - description 
+title: Embed a new app in a Power BI Report | Microsoft Docs
+description: Embed an app that uses the same data source and can be filtered like other report items 
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -14,13 +14,13 @@ ms.devlang: na
 ms.topic: tutorial
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/13/2018
+ms.date: 03/15/2018
 ms.author: mblythe
 ---
 
-# Embed an app in Power BI
+# Tutorial: Embed a new app in a Power BI Report
 
-[TODO] - introduction
+Power BI enables you to extend its capabilities by adding *custom visuals* to a report. In this tutorial, you use the PowerApps custom visual to create a new app that is embedded in a sample report. This app interacts with other items in that report.
 
 If you don't have a PowerApps subscription, [create a free account](../signup-for-powerapps.md) before you begin.
 
@@ -28,24 +28,17 @@ In this tutorial, you learn how to:
 > [!div class="checklist"]
 > * Import the PowerApps custom visual into a Power BI report
 > * Create a new app that uses data from the report
-> * Add related data from the Common Data Service for Apps 
-> * Use the app to filter data and take action in the report
-> * [TODO] - possibly tweak the 4th entry and add others if necessary (same at the end of the article)
-
-[TODO] - possibly add full screen of completed report here.
+> * View the app in the report
 
 ## Prerequisites
 
+* [Google Chrome](https://www.google.com/chrome/browser/) or [Microsoft Edge](https://www.microsoft.com/windows/microsoft-edge) browser
 * A [Power BI subscription](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi), with the [Opportunity Analysis Sample](https://docs.microsoft.com/power-bi/sample-opportunity-analysis#get-the-content-pack-for-this-sample) installed
-* A [PowerApps subscription](../signup-for-powerapps.md) with Common Data Service for Apps (CDS), with sample data installed
-* A [PowerApps environment](../../administrator/environments-overview.md) in which you have permissions to modify CDS entities
-* An understanding of the following:
-    * [Editing Power BI reports](https://docs.microsoft.com/power-bi/service-the-report-editor-take-a-tour)
-    * [Creating apps in PowerApps](data-platform-create-app-scratch.md)
-    * [Working with the Common Data Service for Apps](../common-data-service/data-platform-intro.md)
+* An understanding of how to [create apps in PowerApps](data-platform-create-app-scratch.md) and how to [edit Power BI reports](https://docs.microsoft.com/power-bi/service-the-report-editor-take-a-tour)
 
 ## Import the PowerApps custom visual
-[TODO] - possible section intro
+
+The first step is to import the PowerApps custom visual so that you can use it in the sample report.
 
 1. In the Opportunity Analysis Sample report, click or tap the **Upcoming Opportunities** tab.
 
@@ -62,7 +55,7 @@ In this tutorial, you learn how to:
 5. Save the report.
 
 ## Create a new app
-[TODO] - possible section intro
+Now you add the custom visual to your report and create a new app based on data in the report. When you create the app, it launches PowerApps Studio with a live data connection between PowerApps and Power BI.
 
 1. Move and resize some of the report tiles to make space for an app.
 
@@ -80,7 +73,9 @@ In this tutorial, you learn how to:
 
     In PowerApps Studio, you see that a basic app is created, with a *gallery* that shows one of the fields you selected in Power BI.
 
-5.  Resize the gallery so it takes up only half of the screen. In the left pane, click or tap **Screen1**, then set the screen's **Fill** property to "LightBlue".
+5.  Resize the gallery so it takes up only half of the screen. 
+
+6. In the left pane, click or tap **Screen1**, then set the screen's **Fill** property to "LightBlue" (so it shows up better in the report).
 
     ![App with resized gallery](media/embed-powerapps-powerbi/app-gallery.png)
 
@@ -90,55 +85,19 @@ In this tutorial, you learn how to:
 
 7. Save the app with the name "Opportunities". 
 
-8. Back in the Power BI report, select **Jan** in the slicer, which filters the whole report, including the data in the app. 
 
-    ![Filtered report](media/embed-powerapps-powerbi/filtered-report.png)
+## View the app in the report
+The app is now available in the report, and it interacts with other visuals because it shares the same data source.
 
-    Notice that the opportunity count in the app matches the count in the upper left of the report.
- 
-## Add related data
-[TODO] - possible section intro
+In the Power BI report, select **Jan** in the slicer, which filters the whole report, including the data in the app.
 
-### Modify the Activity entity
+![Filtered report](media/embed-powerapps-powerbi/filtered-report.png)
 
-1. In [web.powerapps.com](https://web.powerapps.com), on the left menu, click or tap **Common Data Service** > **Entities**.  
+Notice that the opportunity count in the app matches the count in the upper left of the report. You can select other items in the report, and the data in the app updates.
 
-2. At the bottom of the screen, click or tap **remove the filter** to show all entities.
-
-3. Click or tap the **Activity** entity.
-
-4. Click or tap **Add field**, enter values for the new field, then click or tap **Done**.
-
-    ![Add entity field](media/embed-powerapps-powerbi/add-entity-field.png)
-
-    | Option       | Value            |   |   |   |
-    |--------------|------------------|---|---|---|
-    | Display name | Opportunity Name |   |   |   |
-    | Data type    | Text             |   |   |   |
-    |              |                  |   |   |   |
-
-5. Click or tap **Save Entity**.
-
-6. [TODO] - add data to the entity (error on save right now)
-
-### Connect to the entity from the app
-[TODO] - possible section intro
-
-[TODO] - step by step
-
-[TODO] - add to later steps:
-
-`"Product code: " & Gallery1.Selected.'Product Code'`
-`"Sales stage: " & Gallery1.Selected.'Sales Stage'`
-
-
-## Use the app in the report
-[TODO] - possible section intro
-
-[TODO] - step by step
 
 ## Clean up resources
-[TODO] - does the sample count against your PBI quota? (probably not a big deal either way).
+If you don't want to use the Opportunity Analysis Sample anymore, you can delete the dashboard, report, and dataset.
 
 
 ## Next steps
@@ -146,10 +105,9 @@ In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Import the PowerApps custom visual into a Power BI report
 > * Create a new app that uses data from the report
-> * Add related data from the Common Data Service for Apps 
-> * Use the app to filter data and take action in the report
+> * View the app in the report
 
 Advance to the next article to learn more
 > [!div class="nextstepaction"]
-> [Next steps button]() [TODO] - add a link to the next logical article
+> [PowerApps custom visual for Power BI](powerapps-custom-visual.md)
 
