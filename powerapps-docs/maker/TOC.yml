@@ -39,6 +39,8 @@
       href: ./canvas-apps/data-platform-create-app-scratch.md
     - name: Share an app
       href: ./canvas-apps/share-app.md
+    - name: Embed an app in Power BI
+      href: ./canvas-apps/embed-powerapps-powerbi.md
   - name: Concepts
     items:
     - name: Get started with formulas
@@ -61,6 +63,8 @@
       href: ./canvas-apps/working-with-data-sources.md
     - name: Understand SharePoint forms integration
       href: ./canvas-apps/sharepoint-form-integration.md
+    - name: PowerApps custom visual for Power BI
+      href: ./canvas-apps/powerapps-custom-visual.md
     - name: Canvas-app development
       items:
       - name: PowerApps for enterprise developers, partners, and ISVs

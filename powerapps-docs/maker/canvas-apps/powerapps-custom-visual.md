@@ -78,7 +78,7 @@ The PowerApps custom visual is currently available in preview and has some limit
 - If you change the data fields associated with the visual, you must edit the app from the Power BI service to make sure that the changes are propagated to PowerApps. If you don't do this, you will see unexpected behavior in the app.
 - The PowerApps custom visual cannot trigger a refresh of the Power BI report or Power BI data source. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately. Changes are reflected on the next scheduled refresh.
 - The PowerApps custom visual cannot filter the data or send any data back to the report.
-- You will need to share the PowerApps app separately from your report. Learn about [sharing apps in PowerApps](share-apps.md).
+- You will need to share the PowerApps app separately from your report. Learn about [sharing apps in PowerApps](share-app.md).
 - PowerApps custom visual is currently not supported on Power BI mobile app.
 
 Please join the conversation in the [PowerApps community](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) as we would love to hear from you about how you are using this capability and what you would like to see added in the future.
