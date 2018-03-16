@@ -21,7 +21,7 @@ ms.author: sharik
 # Quickstart: Create an environment
 An environment is a space to store, manage, and share your organization’s business data, apps, and flows. It also serves as a container to separate apps that may have different roles, security requirements, or target audiences. PowerApps automatically creates a single default environment for each tenant, which is shared by all users in that tenant.
 
-Every environment can have zero or one Common Data Service database, which provides storage for apps. When users create an app in an environment, that app is only permitted to connect to the data sources deployed in that same environment, including connections, gateways, flows, and Common Data Service databases. How you choose to leverage environments depends on your organization and the apps you're trying to build. For more information, see [Environments overview](environments-overview.md).
+Every environment can have zero or one Common Data Service database, which provides storage for apps. When users create an app in an environment, that app can connect to any data source, including connections, gateways, and flows. However, the app is only permitted to connect to the Common Data Service databases in that same environment. How you choose to leverage environments depends on your organization and the apps you're trying to build. For more information, see [Environments overview](environments-overview.md).
 
 In this quickstart, you'll learn how to create an environment and a database for that environment.
 

@@ -12,10 +12,6 @@
     href: admin-view-apps.md
 - name: Concepts
   items:
-  - name: Admin center intro
-    href: introduction-to-the-admin-center.md
-  - name: PowerApps in your organization Q&A
-    href: signup-question-and-answer.md
   - name: Pricing information
     href: pricing-billing-skus.md
   - name: Environments overview
@@ -24,6 +20,8 @@
     href: introduction-to-data-groups.md
   - name: Regions overview
     href: regions-overview.md
+  - name: PowerApps in your organization Q&A
+    href: signup-question-and-answer.md
 - name: How-to guides
   items:
   - name: Purchase PowerApps # moved from original get started location
@@ -32,15 +30,9 @@
     href: prevent-data-loss.md
   - name: Create a database
     href: create-database.md
-  - name: Configure database security
-    href: database-security.md
   - name: Administer environments
     href: environments-administration.md
   - name: Manage apps in your org # not in TOC previously
     href: admin-manage-apps.md
   - name: Move an app between tenants or environments
     href: environment-and-tenant-migration.md
-  - name: Export and import resources
-    href: export-import-packages.md
-  - name: View app analytics reports # not in TOC previously
-    href: app-analytics.md
