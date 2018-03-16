@@ -29,8 +29,8 @@ Like entities, each attribute has a unique name defined when it is created. This
 
 |Name |Description  |
 |---------|---------|
-|SchemaName|Typically, a Pascal cased version of the logical name. i.e. `AccountNumber`|
-|LogicalName|All lower-case name. i.e.  `accountnumber`|
+|`SchemaName`|Typically, a Pascal cased version of the logical name. i.e. `AccountNumber`|
+|`LogicalName`|All lower-case name. i.e.  `accountnumber`|
 
 When you create a custom attribute, the name you choose will be prepended with the customization prefix value of the solution publisher associated with the solution that the attribute was created within.
 
@@ -49,6 +49,9 @@ These are the localizable values that are used to refer to the attributes in an 
 ## Attribute Types
 
 The `AttributeTypeName` property describes the type of an attribute. This property contains a value of type `AttributeTypeDisplayName` which provides a label for each the different types of attributes that exist. 
+
+> [!NOTE]
+> Don't be confused by the `AttributeType` property. The values in this older property are mostly aligned with `AttributeTypeName` except that it shows `ImageType` attributes as `Virtual`. You should refer to the `AttributeTypeName` property rather than the `AttributeType` property.
 
 In the following table:
 
@@ -183,7 +186,7 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Create auto
 
 ## Option Sets
 
-Those attributes which display a set of options can reference a set of options defined by the attribute or they can reference a separate set of options that can be shared by more than one attribute. This is particularly useful when values in one attribute also apply to other attributes. By referencing a common set of options, the options can be maintained in one place.
+Those attributes which display a set of options can reference a set of options defined by the attribute or they can reference a separate set of options that can be shared by more than one attribute. This is particularly useful when values in one attribute also apply to other attributes. By referencing a common set of options, the options can be maintained in one place. Those option sets that can be shared are *global* option sets. Those defined within the attribute are *local* option sets.
 
 Each of these attribute inherit from [EnumAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata) and include an [OptionSet Property](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata.optionset). This property contains the [OptionSetMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata) that includes the options within the [Options property](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata.options). 
 

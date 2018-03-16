@@ -19,7 +19,7 @@ ms.author: jdaly
 
 # Common Data Model Overview
 
-The Common Data Model (CDM) provides a library of entities that represent commonly used concepts and activities across a variety of business and application domains. Out-of-the-box, CDM offers well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Product, as well as interactions with vendors, workers, and customers, such as activities, cases, and service level agreements. 
+The **Common Data Model** (CDM) provides a library of entities that represent commonly used concepts and activities across a variety of business and application domains. CDM offers well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Product, as well as interactions and relationships between vendors, workers, and customers, such as activities, and service level agreements. 
 
 With CDM at the center of the Common Data Service for Apps and the Common Data Service for Analytics, packaged applications and analytical solutions can work with well-defined entity shapes and share data, irrespective where data is originally coming from or mastered. At the same time, bespoke line of business apps and customized analytical solutions can leverage the same entities and share data, and thereby support the specific needs of your business requirements. The Common Data Model simplifies the challenges of data management and data semantics.
 
