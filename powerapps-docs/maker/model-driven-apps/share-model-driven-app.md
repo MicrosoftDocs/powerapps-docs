@@ -52,8 +52,8 @@ Because the environment that will maintain the pet grooming records is also used
 For more information about access and scope privileges, see [Security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
 ## Create a custom security role
-1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site, select **Apps** > **…**> **Share link**.
-2. From the **Share this app** dialog, under **Create a security role** select **Security Settings**.
+1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site, select **Model-driven** > **Apps** > **…**> **Share link**.
+2. From the **Share this app** dialog, under **Create a security role** select **Security Setting**.
 3. On the **Settings** page, select **New**.  
 
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
@@ -76,7 +76,7 @@ For more information about access and scope privileges, see [Security roles](htt
 Security roles control a user’s access to data through a set of access levels and permissions. The combination of access levels and permissions that are included in a specific security role sets limits on the user’s view of data and on the user’s interactions with that data.
 
 ### Assign a security role to Pet Grooming Technicians
-1. From the **Share this app** dialog, under **Assign users to a security role** select **Security Users**.
+1. From the **Share this app** dialog, under **Assign users to the security role** select **Security Users**.
 2. In the list that is displayed, select the pet groomers.
 3. Select **Manage Roles**.
 
@@ -92,9 +92,9 @@ Security roles control a user’s access to data through a set of access levels 
 
 
 ## Add security roles to the app
-1. Next, one or more security roles need to be assigned to the app. Users will have access to apps based on the security roles they're assigned to.
-2. From the **Share this app** dialog box, under **Add the security role to your app** select **My Apps**.
-3. In the lower-right corner of the app tile of the Contoso Pet Grooming app, select **More options (...)**, and then select **Manage Roles**.
+Next, one or more security roles need to be assigned to the app. Users will have access to apps based on the security roles they're assigned to.
+1. From the **Share this app** dialog box, under **Add the security role to your app** select **My Apps**.
+2. In the lower-right corner of the app tile of the Contoso Pet Grooming app, select **More options (...)**, and then select **Manage Roles**.
 
     ![Manage roles for the app](media/share-model-driven-app/manage-roles.png)
 
@@ -105,11 +105,16 @@ Security roles control a user’s access to data through a set of access levels 
 5. Select **Save**.
  
 ## Share the link to your app
-1. In the lower-right corner of the app tile of the **Contoso Pet Grooming** app, select **More options (...)**, and then select **Open in App Designer**.
-2. In the right pane of the app designer, select **Properties**, next to **Web URL** select the copy app URL icon.
+1. From the **Share this app** dialog box, under **Share the link to your app directly with users** copy the URL that is displayed.
+ 
+2. Select **Close**.
+3. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
+
+![Share the link](media/share-model-driven-app/share-model-driven-URL.PNG)
+
+You can also find the app URL on the **Properties** tab in app designer. 
     
-    ![Copy app URL](media/share-model-driven-app/app-designer-copy-web-url.png)
- 3. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
+![Copy app URL](media/share-model-driven-app/app-designer-copy-web-url.png)
 
 ## About predefined security roles
 These predefined roles are available with a [!INCLUDE [powerapps](../../includes/powerapps.md)] environment.
