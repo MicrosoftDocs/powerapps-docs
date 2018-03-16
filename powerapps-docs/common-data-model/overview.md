@@ -35,7 +35,7 @@ The Common Data Model is fully extensible - you can add fields to any of the ent
 The Common Data Model and Common Data Service provide a rich and productive development platform through the following features:
 
 - **Common Data Model** – The Common Data Model simplifies the challenges of data management by unifying data in a known form with structural and semantic consistency across applications and deployments. The public CDM GitHub repository ([https://github.com/Microsoft/CDM](https://github.com/Microsoft/CDM)) will be continuously enhanced with entities from customer relationship management, marketing, product services, finance & operations, additional vertical industry data models, and cross-spanning sources such as surveys, search engines, product telemetry, and more.
-- **Data integration** – You can quickly and easily import data from your existing systems using a built-in browser-based Power Query experience for seamlessly and visually transforming and combining data from cloud and on-premises sources. <!-- TODO add link -->
+- **Data integration** – You can quickly and easily import data from your existing systems using a built-in browser-based Power Query experience for seamlessly and visually transforming and combining data from cloud and on-premises sources. See [Add data to an entity in the Common Data Service by using Power Query](../maker/common-data-service/data-platform-cds-newentity-pq.md)
  
      The data import includes mapping to standard entities of the Common Data Model, as well as defining, mapping, and loading as new entities. Data integration & mapping templates accelerate connecting to common data sources such as Salesforce.com; these data mapping templates are fully customizable and extensible. 
  
