@@ -1,9 +1,10 @@
 {
     "redirections": [
 		{
-		"source_path": "powerapps-docs/index.yml"
-		"redirect_url": "/powerapps/index"
-		}
+		"source_path": "powerapps-docs/index.yml",
+        "redirect_url": "/powerapps/index",
+        "redirect_document_id": true
+		},
         {
         "source_path": "powerapps-docs/postman-collection.md",
         "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/define-postman-collection",
@@ -1202,6 +1203,7 @@
         {
         "source_path": "powerapps-docs/working-with-variables.md",
         "redirect_url": "/powerapps/maker/canvas-apps/working-with-variables",
+        "redirect_document_id": true
         },
 		        {
         "source_path": "powerapps-docs/custom-picklists.md",
