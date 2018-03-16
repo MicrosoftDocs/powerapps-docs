@@ -22,7 +22,7 @@ description: Microsoft PowerApps Documentation
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="media/index/powerapps-logo.svg" alt="" />
+                                                        <img src="media/index/user.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -41,7 +41,7 @@ description: Microsoft PowerApps Documentation
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="media/index/powerapps-logo.svg" alt="" />
+                                                        <img src="media/index/maker.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -60,7 +60,7 @@ description: Microsoft PowerApps Documentation
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="media/index/powerapps-logo.svg" alt="" />
+                                                        <img src="media/index/admin.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
