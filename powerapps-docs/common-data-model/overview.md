@@ -4,8 +4,8 @@ description: Learn how the common data model connects the Common Data Service fo
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
-manager: faisalmo
+author: RobertBruckner
+manager: lmollico
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -42,4 +42,4 @@ The Common Data Service for Apps provides several key capabilities over the Comm
 <!-- - **Build model-driven apps and canvas apps with PowerApp**s: For information about creating apps with the Common Data Service and PowerApps, see [Overview of building a model-driven app](../model-driven-app-overview.md). Link will be broken until Matt P merges his PR -->
 - **Automate business processes with Flow**: For information about creating a flow that uses the Common Data Service, see [Create a flow that uses the Common Data Service](/flow/common-data-model-intro).
 - **Security**: The Common Data Service manages access to data in the database and conforms to the security models of the enterprise. For more information, see [Security concepts](/dynamics365/customer-engagement/admin/security-concepts).
-- <!-- TODO: Need a better link here if there isn't a corresponding topic in the PA site -->
+<!-- TODO: Need a better link here if there isn't a corresponding topic in the PA site -->
