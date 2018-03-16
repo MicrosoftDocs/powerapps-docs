@@ -24,17 +24,17 @@ Power BI enables data insights and better decision-making, while PowerApps enabl
 
 # Using the PowerApps custom visual
 
-Let's look at the steps required to use the PowerApps custom visual in your Power BI report. You can also go through a simple [step-by-step tutorial](embed-powerapps-powerbi.md) and check out out our [video](https://aka.ms/powerappscustomvisualvideo).
+Let's look at the steps required to use the PowerApps custom visual in your Power BI report.
 
 1. Get the custom visual from [AppSource](https://appsource.microsoft.com/product/power-bi-visuals/WA104381378?tab=Overview) or directly import it in the Power BI service.
 
     ![Custom visual in marketplace](./media/powerapps-custom-visual/powerapps-store.png) 
 
-1. Add the PowerApps visual to your report and set the data fields associated with it.
+1. Add the PowerApps visual to your report, and set the data fields associated with it.
 
     ![Select report data](./media/powerapps-custom-visual/add-visual-set-data.png)
 
-1. Now, you have the option to create a new app or use an existing app. 
+1. You have the option to choose an existing app or create a new one. 
 
     ![New or existing app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
     
@@ -44,7 +44,7 @@ Let's look at the steps required to use the PowerApps custom visual in your Powe
 
     ![New app](./media/powerapps-custom-visual/new-app.png)
 
-1. Now in PowerApps Studio, you can use the data fields you set in step 2. The PowerBIIntegration object acts like any other PowerApps read-only data source or collection. You can use the object to populate any control, or join and filter with other data sources.
+1. Now in PowerApps Studio, you can use the data fields you set in step 2. `The PowerBIIntegration` object acts like any other PowerApps read-only data source or collection. You can use the object to populate any control, or join and filter with other data sources.
 
     ![Custom formula](./media/powerapps-custom-visual/custom-formula.png)
 
@@ -55,11 +55,9 @@ Let's look at the steps required to use the PowerApps custom visual in your Powe
 1. After you have completed building or making changes to your app, save and publish the app in PowerApps to see your app in the Power BI report.
 
     > [!Note] 
-    > If you are editing an existing app, the current version of visual will not reload the app when a newer version in published from PowerApps. You will have to save your report and reload the browser page to see the latest version of the app.
+    > If you are editing an existing app, the current version of visual will not reload the app when a newer version is published from PowerApps. You will have to save your report and reload the browser page to see the latest version of the app.
 
-1. Once you are satisfied with your changes, make sure to share the PowerApps app with users of your report and then save your report.
-
-    If you want to again edit the app, click or tap **More options** and then select **Edit** from the PowerApps visual.
+1. Once you are satisfied with your changes, make sure to share the PowerApps app with users of your report and then save your report. If you want to edit the app again, click or tap **More options** and then select **Edit** from the PowerApps visual.
 
 1. And with that, you have created a report in which your users can take actions as they gain insights from your data.
 
@@ -84,4 +82,7 @@ The PowerApps custom visual is currently available in preview and has some limit
 Please join the conversation in the [PowerApps community](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) as we would love to hear from you about how you are using this capability and what you would like to see added in the future.
 
 
+## Next steps
 
+Go through a simple [step-by-step tutorial](embed-powerapps-powerbi.md)
+Check out out our [video](https://aka.ms/powerappscustomvisualvideo)

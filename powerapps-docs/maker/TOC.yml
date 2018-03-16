@@ -63,7 +63,7 @@
       href: ./canvas-apps/working-with-data-sources.md
     - name: Understand SharePoint forms integration
       href: ./canvas-apps/sharepoint-form-integration.md
-    - name: PowerApps custom visual for Power BI
+    - name: PowerApps custom visual
       href: ./canvas-apps/powerapps-custom-visual.md
     - name: Canvas-app development
       items:
